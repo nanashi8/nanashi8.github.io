@@ -57,7 +57,9 @@ struct QuizResultsByCSVView: View {
         // 1) 結果から参照されたCSV名を集める
         var names = Set<String>()
         for r in scoreStore.results {
-            if let n = r.settings.selectedCSV, !n.isEmpty { names.insert(n) }
+            if let n = r.settings.selectedCSV, !n.isEmpty {
+                names.insert(n)
+            }
         }
         // 2) ファイルシステム上に存在するCSVも加える
         for n in FileUtils.listCSVFilesInDocuments() { names.insert(n) }

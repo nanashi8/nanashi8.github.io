@@ -1,217 +1,174 @@
-// CSVManagerView.swift
-// CSVマネージャー画面
-// - 何を: CSVのインポート（Filesから）、エクスポート（共有/保存）、ドキュメント内CSVの項目ごとの編集を提供します。
-// - なぜ: 誤操作を防ぎつつ、安全にデータを取り込み・配布・編集できるようにするため（コピー機能は廃止）。
+//
+//  CSVManagerView.swift
+//  SimpleWord
+//
+//  Created by automated-recovery on 2025/10/15.
+//
 
 import SwiftUI
-import UniformTypeIdentifiers
 
+// 問題集管理画面
+// - 目的: CSV のインポート・エクスポート・一覧表示・削除を行うための画面
+// - 備考: バンドル(Resources)とアプリの Documents ディレクトリを走査して .csv を一覧表示します。
+//         バンドル内ファイルは読み取り専用なため削除は行いません。インポート/エクスポートは別タスクで実装予定。
 struct CSVManagerView: View {
-    @EnvironmentObject var quizSettings: QuizSettings
-    @State private var bundleFiles: [String] = []
-    @State private var docFiles: [String] = []
+    // 表示用のCSVファイル名リスト
+    @State private var csvFiles: [String] = []
+    // ファイル名 -> URL のマップ（削除やエクスポート時に参照する）
+    @State private var fileURLs: [String: URL] = [:]
 
-    // Import / Export states
-    @State private var showImporter: Bool = false
-    @State private var exportDocument: CSVDocument? = nil
-    @State private var isExporting: Bool = false
-
-    // Alerts
-    @State private var showingAlert: Bool = false
-    @State private var alertMessage: String = ""
-
-    // ホイール選択用のインデックス
-    @State private var selectedEditIndex: Int = 0
-    @State private var selectedSampleIndex: Int = 0
-
-    // 編集用の一時URL
-    @State private var editURL: URL? = nil
-    @State private var showEditor: Bool = false
+    @State private var showingImporter: Bool = false
+    @State private var showingExporter: Bool = false
 
     var body: some View {
         List {
-            // 編集するCSV（Documents + Bundle を含む）
-            Section(header: SectionHeader(systemImage: "pencil", title: "編集するCSV")) {
-                let editable = (docFiles + bundleFiles).removingDuplicates()
-                if editable.isEmpty {
-                    Text("編集可能なCSVがありません")
+            // 利用可能なCSV一覧
+            Section(header: Text("利用可能なCSV")) {
+                if csvFiles.isEmpty {
+                    Text("Resources または Documents フォルダからCSVを読み込んでください")
                         .foregroundColor(.secondary)
                 } else {
-                    Picker("CSV", selection: $selectedEditIndex) {
-                        ForEach(editable.indices, id: \.self) { i in
-                            Text(editable[i]).tag(i)
+                    ForEach(csvFiles, id: \.self) { name in
+                        HStack(spacing: 12) {
+                            Image(systemName: "doc.text")
+                                .imageScale(.medium)
+                            Text(name)
+                            Spacer()
                         }
+                        .contentShape(Rectangle())
                     }
-                    .pickerStyle(.wheel)
-                    .frame(height: 140)
-
-                    // 編集を開く
-                    Button {
-                        let name = editable[selectedEditIndex]
-                        // Documents に存在するか?
-                        if docFiles.contains(name), let dir = FileUtils.documentsDirectory {
-                            editURL = dir.appendingPathComponent(name)
-                            showEditor = true
-                        } else {
-                            // bundle 側ならコピーしてから開く
-                            let base = name.replacingOccurrences(of: ".csv", with: "")
-                            do {
-                                let url = try FileUtils.copyBundleCSVToDocuments(named: base)
-                                editURL = url
-                                // refresh docFiles so next time it's listed as doc
-                                refresh()
-                                showEditor = true
-                            } catch {
-                                alertMessage = "バンドルからドキュメントへのコピーに失敗しました: \(error.localizedDescription)"
-                                showingAlert = true
-                            }
-                        }
-                    } label: {
-                        Label("編集を開く", systemImage: "square.and.pencil")
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .sheet(isPresented: $showEditor) {
-                        if let url = editURL {
-                            NavigationStack {
-                                CSVItemListEditorView(fileURL: url)
-                            }
-                        } else {
-                            EmptyView()
-                        }
-                    }
+                    .onDelete(perform: deleteCSV)
                 }
             }
 
-            // インポート
-            Section(header: SectionHeader(systemImage: "square.and.arrow.down", title: "インポートするCSVを選択")) {
-                Button {
-                    showImporter = true
-                } label: {
-                    Label("ファイルから読み込む", systemImage: "folder.badge.plus")
+            // 操作セクション
+            Section {
+                Button(action: { showingImporter.toggle() }) {
+                    Label("インポート", systemImage: "square.and.arrow.down")
                 }
-            }
-
-            // サンプルCSV（ホイール選択してエクスポート）
-            Section(header: SectionHeader(systemImage: "shippingbox", title: "エクスポートするCSVを選択")) {
-                if bundleFiles.isEmpty {
-                    Text("バンドル内にCSVがありません")
-                        .foregroundColor(.secondary)
-                } else {
-                    Picker("CSV", selection: $selectedSampleIndex) {
-                        ForEach(bundleFiles.indices, id: \.self) { i in
-                            Text(bundleFiles[i]).tag(i)
-                        }
-                    }
-                    .pickerStyle(.wheel)
-                    .frame(height: 140)
-
-                    if bundleFiles.indices.contains(selectedSampleIndex) {
-                        let name = bundleFiles[selectedSampleIndex]
-                        Button {
-                            exportBundleCSV(named: name)
-                        } label: {
-                            Label("エクスポート", systemImage: "square.and.arrow.up")
-                        }
-                        .buttonStyle(.bordered)
-                    }
+                Button(action: { showingExporter.toggle() }) {
+                    Label("エクスポート", systemImage: "square.and.arrow.up")
                 }
             }
         }
-        .listStyle(.insetGrouped)
-        .navigationTitle("CSVマネージャー")
-        .navigationBarTitleDisplayMode(.inline)
+        .listStyle(InsetGroupedListStyle())
+        .navigationTitle("問題集管理")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: refresh) { Image(systemName: "arrow.clockwise") }
+                EditButton()
             }
         }
-        .onAppear(perform: refresh)
-        .fileImporter(isPresented: $showImporter, allowedContentTypes: [UTType.commaSeparatedText]) { res in
-            switch res {
-            case .success(let url):
-                do {
-                    let dest = try FileUtils.importCSVFromURL(url)
-                    alertMessage = "インポートしました: \(dest.lastPathComponent)"
-                    showingAlert = true
-                    refresh()
-                } catch {
-                    alertMessage = "インポート失敗: \(error.localizedDescription)"
-                    showingAlert = true
+        .onAppear(perform: loadCSVFiles)
+        // 将来的なインポーター/エクスポーター表示用のプレースホルダ
+        .sheet(isPresented: $showingImporter) {
+            // 簡易インポーター説明
+            NavigationView {
+                VStack(spacing: 16) {
+                    Text("CSV をインポートする処理をここに実装します。ファイルピッカー経由で Documents に保存する想定です。")
+                        .padding()
+                    Spacer()
                 }
-            case .failure(let err):
-                alertMessage = "インポート失敗: \(err.localizedDescription)"
-                showingAlert = true
+                .navigationTitle("CSV インポート")
+                .toolbar { ToolbarItem(placement: .cancellationAction) { Button("閉じる") { showingImporter = false } } }
             }
         }
-        .fileExporter(isPresented: $isExporting, document: exportDocument, contentType: .commaSeparatedText, defaultFilename: exportDocument?.suggestedName) { result in
-            switch result {
-            case .success:
-                alertMessage = "エクスポートしました"
-            case .failure(let err):
-                alertMessage = "エクスポート失敗: \(err.localizedDescription)"
+        .sheet(isPresented: $showingExporter) {
+            NavigationView {
+                VStack(spacing: 16) {
+                    Text("CSV をエクスポートする処理をここに実装します。Documents のファイルを外部に書き出す想定です。")
+                        .padding()
+                    Spacer()
+                }
+                .navigationTitle("CSV エクスポート")
+                .toolbar { ToolbarItem(placement: .cancellationAction) { Button("閉じる") { showingExporter = false } } }
             }
-            showingAlert = true
-            exportDocument = nil
-        }
-        .alert(alertMessage, isPresented: $showingAlert) { Button("OK", role: .cancel) {} }
-    }
-
-    private func refresh() {
-        bundleFiles = FileUtils.listBundleCSVFiles()
-        docFiles = FileUtils.listCSVFilesInDocuments()
-        // 補正: 選択インデックスの範囲
-        // combine docs+bundle for edit picker
-        let editable = (docFiles + bundleFiles).removingDuplicates()
-        if !editable.indices.contains(selectedEditIndex) { selectedEditIndex = 0 }
-        if !bundleFiles.indices.contains(selectedSampleIndex) { selectedSampleIndex = 0 }
-    }
-
-    private func exportDocCSV(named name: String) {
-        guard let dir = FileUtils.documentsDirectory else { return }
-        let url = dir.appendingPathComponent(name)
-        do {
-            let data = try Data(contentsOf: url)
-            exportDocument = CSVDocument(data: data, suggestedName: name)
-            isExporting = true
-        } catch {
-            alertMessage = "読み込み失敗: \(error.localizedDescription)"
-            showingAlert = true
         }
     }
 
-    private func exportBundleCSV(named name: String) {
-        let base = name.replacingOccurrences(of: ".csv", with: "")
-        guard let url = Bundle.main.url(forResource: base, withExtension: "csv") else {
-            alertMessage = "バンドル内に見つかりません"
-            showingAlert = true
-            return
+    // MARK: - 内部処理
+
+    /// 画面表示時に利用可能なCSV一覧を読み込む
+    /// - バンドル（Resources）内の csv と、アプリの Documents ディレクトリ内の csv を結合して表示します
+    private func loadCSVFiles() {
+        var foundFiles: [String] = []
+        var urlsMap: [String: URL] = [:]
+
+        // 1) バンドル内の csv (読み取り専用)
+        if let bundleURLs = Bundle.main.urls(forResourcesWithExtension: "csv", subdirectory: nil) {
+            for url in bundleURLs {
+                let name = url.lastPathComponent
+                foundFiles.append(name)
+                urlsMap[name] = url
+            }
         }
-        do {
-            let data = try Data(contentsOf: url)
-            exportDocument = CSVDocument(data: data, suggestedName: name)
-            isExporting = true
-        } catch {
-            alertMessage = "読み込み失敗: \(error.localizedDescription)"
-            showingAlert = true
+
+        // 2) Documents ディレクトリ内の csv (読み書き可能)
+        let fm = FileManager.default
+        if let docsURL = fm.urls(for: .documentDirectory, in: .userDomainMask).first {
+            do {
+                let docContents = try fm.contentsOfDirectory(at: docsURL, includingPropertiesForKeys: nil)
+                for url in docContents where url.pathExtension.lowercased() == "csv" {
+                    let name = url.lastPathComponent
+                    // 重複があれば Documents 側を優先して上書き
+                    if !foundFiles.contains(name) {
+                        foundFiles.append(name)
+                    }
+                    urlsMap[name] = url
+                }
+            } catch {
+                // エラーは UI 上で特別扱いしない（ログ出力）
+                #if DEBUG
+                print("CSVManagerView: Documents の読み込みに失敗しました: \(error)")
+                #endif
+            }
         }
+
+        // UI 更新はメインスレッドで
+        DispatchQueue.main.async {
+            self.csvFiles = foundFiles.sorted()
+            self.fileURLs = urlsMap
+        }
+    }
+
+    /// CSV を削除する（Documents 内のファイルのみ実際に削除する）
+    /// - Parameter offsets: 削除するインデックス集合
+    private func deleteCSV(at offsets: IndexSet) {
+        // 削除対象の名前を取得
+        // IndexSet の要素型は Int だが、コンパイラがクロージャの戻り型を推論できない場面があるため
+        // 明示的に型を指定して String? を返すクロージャにする
+        let namesToDelete: [String] = offsets.compactMap { (idx: Int) -> String? in
+            guard idx < csvFiles.count else { return nil }
+            return csvFiles[idx]
+        }
+
+        let fm = FileManager.default
+        for name in namesToDelete {
+            if let url = fileURLs[name] {
+                // Documents 内にあるファイルかどうかをチェックしてから削除
+                if url.isFileURL && url.path.contains("/Documents/") {
+                    do {
+                        try fm.removeItem(at: url)
+                        #if DEBUG
+                        print("CSVManagerView: Deleted file at \(url)")
+                        #endif
+                    } catch {
+                        #if DEBUG
+                        print("CSVManagerView: ファイル削除に失敗しました(\(error))")
+                        #endif
+                    }
+                }
+            }
+        }
+
+        // UI 側のリストを更新
+        loadCSVFiles()
     }
 }
 
-#Preview {
-    NavigationStack {
-        CSVManagerView()
-            .environmentObject(QuizSettings())
-    }
-}
-
-// Helper to remove duplicates while preserving order
-fileprivate extension Array where Element: Hashable {
-    func removingDuplicates() -> [Element] {
-        var seen = Set<Element>()
-        var out: [Element] = []
-        for e in self {
-            if !seen.contains(e) { seen.insert(e); out.append(e) }
+struct CSVManagerView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            CSVManagerView()
         }
-        return out
     }
 }

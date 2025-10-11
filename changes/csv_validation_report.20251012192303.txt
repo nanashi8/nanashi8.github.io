@@ -1,0 +1,76 @@
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学古典単語.csv
+  Header cols: 7
+  Header MISMATCH
+    Expected: 語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+    Found:    語句,読み,意味（日本語）,語源等解説,関連語と意味,関連分野,難易度
+  Total data rows: 15
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 15
+    Samples: line2:中級; line3:中級; line4:初級; line5:中級; line6:中級; line7:上級; line8:中級; line9:初級; line10:初級; line11:中級; line12:中級; line13:上級; line14:中級; line15:中級; line16:中級
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 0
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英会話.csv
+  Header cols: 7
+  Header MISMATCH
+    Expected: 語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+    Found:    フレーズ,読み（カタカナ）,意味（日本語）,語源等解説（日本語）,関連語（英語）と意味（日本語）,シチュエーション（日本語）,難易度
+  Total data rows: 156
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 0
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 0
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英単語.csv
+  Header cols: 7
+  Header OK
+  Total data rows: 265
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 0
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 0
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv
+  Header cols: 7
+  Header MISMATCH
+    Expected: 語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+    Found:    語句,読み（カタカナ）,意味（日本語）,語源等解説や覚え方（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+  Total data rows: 450
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 0
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 0
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学古典単語.csv
+  Header cols: 7
+  Header MISMATCH
+    Expected: 語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+    Found:    語句,読み,意味（日本語）,語源等解説,関連語と意味,関連分野,難易度
+  Total data rows: 88
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 0
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 1
+    かしこし: lines [16, 60]
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.csv
+  Header cols: 7
+  Header MISMATCH
+    Expected: 語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+    Found:    フレーズ,読み（カタカナ）,意味（日本語）,語源等解説（日本語）,関連語と意味,シチュエーション（日本語）,難易度
+  Total data rows: 214
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 0
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 0
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.bak.csv
+  Header cols: 7
+  Header MISMATCH
+    Expected: 語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+    Found:    フレーズ,読み（カタカナ）,意味（日本語）,語源等解説（日本語）,関連語と意味,シチュエーション（日本語）,難易度
+  Total data rows: 50
+  Missing 語句 rows: 0
+  Rows with invalid 難易度: 0
+  Rows with too few columns: 0
+  Duplicate 語句 keys: 0

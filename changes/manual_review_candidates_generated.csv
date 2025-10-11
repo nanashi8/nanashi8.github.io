@@ -1,0 +1,47 @@
+file,row,key,old_related,new_related,report
+SimpleWord/SimpleWord/Resources/中学英会話.csv,2,Hello!,感情・思考・認知,感情,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,14,I like reading.,文化・芸術・娯楽,文化・芸術,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,27,How much is this?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,28,Do you take credit cards?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,29,I'd like to buy this.,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,30,Can I try this on?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,34,Can I get a receipt?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,48,I like sports.,日常,スポーツ・遊び,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,52,Can you help me with my homework?,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,66,Where is the science lab?,物理・状態,科学・物理,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,74,I need to ask my parents first,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,75,Please set the table,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,76,Turn off the lights please,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,78,Can you babysit this weekend?,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,80,Can you help me cook dinner?,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,81,What's for dinner tonight?,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,82,Can you pass the salt?,家族・人間関係,家族・住居,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,87,I need to see a doctor,医療・健康,健康・身体,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,93,Can I have a sick note?,医療・健康,健康・身体,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,101,Where is the supermarket?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,102,How much is this apple?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,103,Do you have this in a different size?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,104,Can I try the shoes?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,105,Do you accept returns?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,106,Could I have a bag please?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,107,Is there a student discount?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,120,Two tickets please.,天体・天気,地理・天気,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,137,Can I get a refund for this product?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,148,Do you offer curbside pickup?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英会話.csv,153,Do you have a size small?,商業・買い物,買い物・商業,Tools/reports/中学英会話_canonical_map_diff.txt
+
+SimpleWord/SimpleWord/Resources/中学英単語.csv,12,whale,物理・状態,科学・物理,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,49,house,家族・人間関係,家族・住居,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,56,map,天体・天気,地理・天気,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,59,market,商業・買い物,買い物・商業,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,60,shop,商業・買い物,買い物・商業,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,62,bank,商業・買い物,買い物・商業,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,63,hospital,医療・健康,健康・身体,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,66,computer,日常,テクノロジー,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,69,music,文化・芸術・娯楽,文化・芸術,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,70,movie,文化・芸術・娯楽,文化・芸術,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,73,family,家族・人間関係,家族・住居,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,78,happy,感情・思考・認知,感情,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,79,sad,感情・思考・認知,感情,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,91,star,文化・芸術・娯楽,文化・芸術,Tools/reports/中学英単語_canonical_map_diff.txt
+SimpleWord/SimpleWord/Resources/中学英単語.csv,96,start,文化・芸術・娯楽,文化・芸術,Tools/reports/中学英単語_canonical_map_diff.txt

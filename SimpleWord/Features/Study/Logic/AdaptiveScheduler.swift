@@ -50,26 +50,61 @@ final class AdaptiveScheduler {
     func scheduleNextBatch(itemIDs: [UUID], count: Int) -> [UUID] {
         // シンプルで決定的な選択を行う。queueで同期してrepoの一貫性を確保。
         return queue.sync {
+            let now = Date()
             let records = itemIDs.map { id -> (UUID, StudyRecord) in
                 return (id, repo.load(id: id))
             }
 
-            // 優先度スコアを計算: 小さい interval と少ない totalAttempts を高優先度に
+            // 学習プロファイル（全体傾向）を取得して忘却傾向や交互傾向を利用
+            let profile = analytics.computeProfile(from: repo.loadAll())
+            let globalForgetting = profile.forgettingFactor
+            let globalAlternationBoost = profile.alternationBoost
+
+            // 優先度スコアを計算: 既存の要素に加えて ease と想起確率を反映する
             let scored: [(UUID, Double)] = records.map { (id, rec) in
-                // interval (秒) -> inverse priority
-                let invInterval = 1.0 / max(rec.interval, 1.0)
-                // attempts の重み（少ない方を優先）
+                // 期日差分（秒）
+                let dueDelta = now.timeIntervalSince(rec.nextDueAt)
+                let dueFactor = 1.0 + max(0.0, dueDelta) / 3600.0
+
+                // 正答率が低ければ優先度UP
+                let accFactor = 1.0 + (1.0 - rec.smoothedAccuracy) * 1.5
+
+                // interval の逆数（短い interval = 高優先）
+                let intervalFactor = 1.0 / max(rec.interval, 1.0)
+
+                // attempts の補正（少ないほど優先）
                 let attemptScore = 1.0 / max(Double(rec.totalAttempts + 1), 1.0)
-                // 未習得はボーナス
-                let masteredBonus = rec.mastered ? 0.2 : 1.0
-                // alternation や wrongStreak がある場合は多少優先
-                let troubleFactor = 1.0 + Double(rec.wrongStreak) * 0.1 + Double(rec.alternationCount) * 0.05
-                let score = invInterval * 0.6 + attemptScore * 0.3
-                let final = score * troubleFactor * masteredBonus
+
+                // トラブル補正
+                let troubleFactor = 1.0 + Double(rec.wrongStreak) * 0.15 + Double(rec.alternationCount) * 0.05
+
+                // 習熟済みペナルティ
+                let masteredPenalty = rec.mastered ? 0.25 : 1.0
+
+                // 個別容易度による補正: ease が高い（簡単）ほど優先度を下げる
+                let easeFactor = 1.0 / max(rec.ease, 1.1)
+
+                // 想起確率の簡易推定（経過時間と間隔から指数減衰で推定）
+                let timeSinceLast = rec.lastSeenAt != nil ? now.timeIntervalSince(rec.lastSeenAt!) : rec.interval
+                let recallEstimate = exp(-timeSinceLast / max(rec.interval, 1.0))
+
+                // グローバルな忘却傾向に基づくブースト（忘れやすければ優先度UP）
+                let forgettingBoost = 1.0 + (1.1 - globalForgetting)
+
+                // 交互傾向ブースト
+                let alternationBoost = 1.0 + globalAlternationBoost
+
+                // 最終スコアの組み合わせ: 既存の寄与を保ちつつ新要素で補正
+                var final = dueFactor * accFactor * intervalFactor * attemptScore * troubleFactor * masteredPenalty
+                final *= easeFactor
+                final *= (1.0 + (1.0 - recallEstimate)) // 想起されにくいものは優先度UP
+                final *= forgettingBoost
+                final *= alternationBoost
+
                 return (id, final)
             }
 
-            // スコア降順でソートして上位countを返す。ただし件数不足はそのまま返す
+            // スコア降順でソートして上位countを返す
             let sorted = scored.sorted { $0.1 > $1.1 }.map { $0.0 }
             if sorted.isEmpty { return [] }
             return Array(sorted.prefix(max(0, min(count, sorted.count))))

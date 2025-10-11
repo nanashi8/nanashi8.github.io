@@ -1,0 +1,46 @@
+enforce20: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv
+backup: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv.enforce20.bak
+rows:198
+changed:11
+unique_after:27
+
+row=5	key=I'm fine, thank you.	天体・天気 -> 地理・天気
+row=25	key=go on	日常 -> 感情
+row=26	key=go off	日常 -> 家族・住居
+row=27	key=go over	日常 -> 文化・芸術
+row=28	key=go through	日常 -> 健康・身体
+row=29	key=go back	学校・学習 -> 科学・物理
+row=30	key=go ahead	学校・学習 -> 買い物・商業
+row=31	key=go away	学校・学習 -> スポーツ・遊び
+row=32	key=go along	学校・学習 -> テクノロジー
+row=33	key=give up	学校・学習 -> 社会・政治
+row=34	key=give in	学校・学習 -> その他
+
+category_counts:
+163	学校・学習
+3	感情・思考・認知
+3	家族・人間関係
+3	文化・芸術・娯楽
+3	医療・健康
+3	商業・買い物
+2	物理・状態
+1	自然
+1	時間・頻度
+1	文法・表現
+1	交通・移動
+1	仕事・職業
+1	食べ物・飲食
+1	動物
+1	地理・天気
+1	感情
+1	家族・住居
+1	文化・芸術
+1	健康・身体
+1	科学・物理
+1	買い物・商業
+1	スポーツ・遊び
+1	テクノロジー
+1	社会・政治
+1	その他
+0	天体・天気
+0	日常

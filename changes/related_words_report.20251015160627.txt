@@ -1,0 +1,141 @@
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学古典単語.csv
+  total rows: 15
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: をかし:趣がある;もののあはれ:人間の情趣
+    line3: めでたし:喜ばしい;おもしろし:面白い
+    line4: たいそう:とても;はなはだ:非常に
+    line5: あした:朝;けさ:今朝
+    line6: いかに:どのように;なにとか:なんとかして
+    line7: いとど:ますます;かなし:悲しい
+    line8: かえって:逆に;むしろ:どちらかといえば
+    line9: き:過去;かな:詠嘆
+    line10: けり:詠嘆;や:疑問・反語
+    line11: げん:しるし;きざし:兆し
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学歴史.csv
+  total rows: 117
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: 古墳文化・律令以前の統合過程
+    line3: 十七条憲法(604);遣隋使
+    line4: 推古朝の改革
+    line5: 皇位と律令国家の成立過程
+    line6: 律令制・班田収授法
+    line7: 仏教の公的受容;東大寺
+    line8: 平城京・聖武天皇
+    line9: 藤原氏の政権形成
+    line10: 国風文化の成立
+    line11: 平安文学・枕草子
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英会話.csv
+  total rows: 156
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ
+    line3: What's up?:調子はどう？
+    line4: Good:良い
+    line5: Glad to meet you:会えて嬉しい
+    line6: I'm Ken:私はケンです
+    line7: Where do you live?:どこに住んでいますか
+    line8: I'm from Osaka:大阪出身です
+    line9: What's your age?:年齢は？
+    line10: I'm thirteen:13歳です
+    line11: What's your job?:仕事は？
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英単語.csv
+  total rows: 308
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: fruit:果物
+    line3: chick:ひな; feather:羽
+    line4: kitten:子猫
+    line5: puppy:子犬
+    line6: mice:複数形
+    line7: bunny:ひな
+    line8: goose:がちょう
+    line9: toad:ヒキガエル
+    line10: tiger:トラ
+    line11: hawk:タカ
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英単語.template.csv
+  total rows: 1
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: fruit:果物
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv
+  total rows: 198
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: put: 置く・設置する・与える: （服を）着る; on: 上・接触（装着や起動）: （服を）着る
+    line3: put: 置く・設置する・与える: 延期する; off: 離脱・停止: 延期する
+    line4: put: 置く・設置する・与える: 消す; out: 外側・除去・完了: 消す
+    line5: I'm fine: （意味未設定）: 元気です; thank you.: （意味未設定）: 元気です
+    line6: put: 置く・設置する・与える: 掲示する; up: 上・完了・増加: 掲示する
+    line7: put: 置く・設置する・与える: 片付ける; away: 離れて・放棄: 片付ける
+    line8: put: 置く・設置する・与える: 元に戻す; back: 戻る・復帰: 元に戻す
+    line9: put: 置く・設置する・与える: （電話を）つなぐ; through: 通じて: （電話を）つなぐ
+    line10: get: 得る・到達する・起きる: 起きる; up: 上・完了・増加: 起きる
+    line11: get: 得る・到達する・起きる: 降りる; off: 離脱・停止: 降りる
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学古典単語.csv
+  total rows: 388
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: いみじ:非常に
+    line3: かなしい:悲しい
+    line4: おもしろい:面白い
+    line5: やっぱり:同意
+    line6: すぐ:即時
+    line7: なぜ:理由
+    line8: どう:方法
+    line9: かならず:確信
+    line10: あさ:朝
+    line11: あさはやく:早朝
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.bak.csv
+  total rows: 50
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ
+    line3: What's up?:調子はどう？
+    line4: Good:良い
+    line5: Glad to meet you:会えて嬉しい
+    line6: I'm Ken:私はケンです
+    line7: Where do you live?:どこに住んでいますか
+    line8: I'm from Osaka:大阪出身です
+    line9: What's your age?:年齢は？
+    line10: I'm thirteen:13歳です
+    line11: What's your job?:仕事は？
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.csv
+  total rows: 214
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ
+    line3: What's up?:調子はどう？
+    line4: Good:良い
+    line5: Glad to meet you:会えて嬉しい
+    line6: I'm Ken:私はケンです
+    line7: Where do you live?:どこに住んでいますか
+    line8: I'm from Osaka:大阪出身です
+    line9: What's your age?:年齢は？
+    line10: I'm thirteen:13歳です
+    line11: What's your job?:仕事は？
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.template.csv
+  total rows: 1
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ

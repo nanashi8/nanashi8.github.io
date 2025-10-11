@@ -33,7 +33,7 @@ public final class CSVLoader {
             // ヘッダ候補語（英語・日本語）
             let headerCandidates = ["term", "word", "question", "meaning", "reading", "etymology",
                                     "語句", "意味", "読み", "読み方", "単語", "語源等解説", "関連語", "関連分野", "難易度",
-                                    "フレーズ", "読み（カタカナ）", "意味（日本語）", "語源等解説（日本語）", "関連語と意味", "関連分野（日本語）", "シチュエーション"]
+                                    "フレーズ", "読み（カタカナ）", "意味（日本語）", "和訳", "語源等解説（日本語）", "関連語と意味", "関連分野（日本語）", "シチュエーション"]
             var found = false
             for key in headerCandidates {
                 if lower.contains(key) { found = true; break }
@@ -49,8 +49,18 @@ public final class CSVLoader {
 
         // map lowercased header name -> index for convenience
         var headerIndexMap: [String: Int] = [:]
+        // normalize header keys to be tolerant to spaces, full-width parentheses, and punctuation
+        func normalizeHeaderKey(_ s: String) -> String {
+            var t = s.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+            // remove common punctuation and full-width parentheses
+            let removeChars = CharacterSet(charactersIn: "()（）\"' 　,、・")
+            t = t.components(separatedBy: removeChars).joined()
+            // collapse multiple spaces
+            t = t.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
+            return t
+        }
         for (i, h) in headerFields.enumerated() {
-            headerIndexMap[h.lowercased()] = i
+            headerIndexMap[normalizeHeaderKey(h)] = i
         }
 
         let hasHeader = !headerFields.isEmpty
@@ -70,7 +80,15 @@ public final class CSVLoader {
             }
             func valueFor(names: [String]) -> String? {
                 for name in names {
-                    if let idx = headerIndexMap[name.lowercased()], idx < parts.count {
+                    let key = normalizeHeaderKey(name)
+                    if let idx = headerIndexMap[key], idx < parts.count {
+                        return unquote(parts[idx])
+                    }
+                }
+                // fallback: try substring match on normalized keys
+                for name in names {
+                    let key = normalizeHeaderKey(name)
+                    for (hKey, idx) in headerIndexMap where hKey.contains(key) && idx < parts.count {
                         return unquote(parts[idx])
                     }
                 }
@@ -80,7 +98,8 @@ public final class CSVLoader {
             // Improved header-based extractor: try multiple synonyms (including Japanese)
             func valueForHeader(names: [String]) -> String? {
                 for name in names {
-                    if let idx = headerIndexMap[name.lowercased()], idx < parts.count {
+                    let key = normalizeHeaderKey(name)
+                    if let idx = headerIndexMap[key], idx < parts.count {
                         return unquote(parts[idx])
                     }
                 }
@@ -90,7 +109,8 @@ public final class CSVLoader {
             // extract basic fields: prefer header-based extraction, otherwise fallback to positional
             let term = (valueFor(names: ["term", "word", "question", "語句", "単語", "フレーズ"]) ?? (parts.count > 0 ? unquote(parts[0]) : ""))
             let reading = (valueFor(names: ["reading", "読み", "読み方", "読み（カタカナ）"]) ?? (parts.count > 1 ? unquote(parts[1]) : ""))
-            let meaning = (valueFor(names: ["meaning", "definition", "translation", "意味", "意味（日本語）"]) ?? (parts.count > 2 ? unquote(parts[2]) : ""))
+            // support header "和訳" as well as existing synonyms
+            let meaning = (valueFor(names: ["meaning", "definition", "translation", "意味", "和訳", "意味（日本語）"]) ?? (parts.count > 2 ? unquote(parts[2]) : ""))
             let etymology = (valueFor(names: ["etymology", "語源等解説", "語源", "解説", "語源等解説（日本語）"]) ?? (parts.count > 3 ? unquote(parts[3]) : ""))
 
             // relatedWords: try many header names; if header exists but none match, leave empty (do not positional-fallback into wrong column)

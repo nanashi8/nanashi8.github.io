@@ -1,0 +1,309 @@
+語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+apple,アップル,りんご,丸く甘い果物。見た目（赤）で結びつけると記憶しやすい。,fruit:果物,食べ物,1
+bird,バード,とり,古英語 'brid' に由来する一般名詞。羽やさえずりをイメージして覚える。,chick:ひな; feather:羽,動物,1
+cat,キャット,ねこ,家庭で親しまれる小動物。kitten（子猫）とセットで覚える。,kitten:子猫,動物,1
+dog,ドッグ,いぬ,人になつく代表的なペット。puppy（子犬）と合わせて覚える。,puppy:子犬,動物,1
+mouse,マウス,ねずみ,小さな哺乳類。computer mouseと用法の違いを押さえる。,mice:複数形,自然,1
+rabbit,ラビット,うさぎ,長い耳と跳ねる動作でイメージしやすい。bunnyは親しみ語。,bunny:ひな,自然,1
+duck,ダック,あひる,水辺の鳥。鳴き声（quack）で覚えると定着しやすい。,goose:がちょう,自然,1
+frog,フロッグ,かえる,跳ねるイメージで覚える。toadと比較して種の違いを学ぶ。,toad:ヒキガエル,自然,1
+lion,ライオン,ライオン,強いイメージ（百獣の王）で覚える。tigerと対比すると理解が深まる。,tiger:トラ,自然,2
+eagle,イーグル,わし,猛禽類の代表。大きな翼と鋭い目でイメージする。,hawk:タカ,自然,2
+whale,ホエール,くじら,大型の海洋哺乳類。大きさを想像して記憶する。,dolphin:イルカ,科学,2
+shark,シャーク,サメ,海の捕食者。鋭い歯のイメージで覚える。,whale:くじら,日常,2
+fish,フィッシュ,さかな,水中の一般語。swim（泳ぐ）とセットで学ぶ。,shrimp:えび,動物,1
+chicken,チキン,にわとり・鶏肉,家禽と食材の両方で使う語。chickはひな。,egg:卵,食べ物,1
+cow,カウ,うし,農場の家畜。milkやbeefと関連付けて覚える。,beef:牛肉,日常,1
+pig,ピッグ,ぶた,家畜の一種。pork（豚肉）との語彙関係を押さえる。,hog:ブタ,日常,1
+horse,ホース,うま,乗る・仕事に使われる動物。rideと結びつけて覚える。,pony:子馬,日常,1
+bee,ビー,はち,花と蜜の関係で覚えると良い。honeyとセットで学ぶ。,honey:はちみつ,自然,1
+ant,アント,あり,小さな昆虫。働き者のイメージで覚える。,nest:巣,自然,1
+tree,ツリー,き,植物の代表。leafやrootと合わせて学ぶ。,leaf:葉,自然,1
+flower,フラワー,はな,色や形で視覚的に覚えやすい語。petalと合わせて学ぶ。,petal:花びら,自然,1
+leaf,リーフ,は,植物の一部分。green（緑）と結びつけると定着。,branch:枝,自然,1
+grass,グラス,くさ,地面を覆う植物。lawn（芝生）と合わせて学ぶ。,park:公園,日常,1
+fruit,フルーツ,くだもの,appleなどのグループ語。味や色で分類して覚える。,apple:りんご,食べ物,1
+vegetable,ベジタブル,やさい,食材グループ。cookingと関連づけて学ぶ。,carrot:にんじん,日常,1
+rice,ライス,ごはん・米,日本の食習慣と結びつけて覚える。,meal:食事,日常,1
+bread,ブレッド,パン,小麦由来の主食。toastとセットで覚える。,butter:バター,日常,1
+meat,ミート,にく,肉類の総称。beefやporkと合わせて学ぶ。,beef:牛肉,日常,1
+egg,エッグ,たまご,栄養豊富な食品。breakfastと関連して覚える。,omelet:オムレツ,日常,1
+milk,ミルク,ぎゅうにゅう,飲料としての基礎語。cerealと合わせて学ぶ。,cheese:チーズ,日常,1
+water,ウォーター,みず,生命に不可欠な語。drinkやriverと結びつけて覚える。,river:川,日常,1
+juice,ジュース,ジュース,果汁を元にした飲み物。orangeと結びつけて学ぶ。,orange:オレンジ,食べ物,1
+tea,ティー,おちゃ,hot drinkの代表。文化的背景も話題にすると覚えやすい。,coffee:コーヒー,食べ物,1
+coffee,コーヒー,コーヒー,豆を焙煎して抽出する飲料。cafeと関連づけて学ぶ。,drink:飲み物,食べ物,1
+breakfast,ブレックファスト,あさごはん,朝の食事。morningとセットで例文を作る。,lunch:昼ごはん,日常,1
+lunch,ランチ,ひるごはん,昼の食事。school lunchなど実用例を想起すると良い。,dinner:夕ごはん,日常,1
+dinner,ディナー,ゆうごはん,夜の主要な食事。supperとの違いを短く補足して学ぶ。,supper:夕食,食べ物,1
+school,スクール,がっこう,学ぶ場としての語。classやstudentと合わせて覚える。,teacher:先生,学校,1
+teacher,ティーチャー,せんせい,teach（教える）に由来する職業語。roleを意識して覚える。,student:学生,学校,1
+student,スチューデント,がくせい,学ぶ人。classやhomeworkと実例で定着。,pupil:生徒,学校,1
+book,ブック,ほん,読む物の総称。titleやauthorと合わせて学ぶ。,novel:小説,学校,1
+pen,ペン,ぺん,書く道具。pencilやeraserと合わせて覚える。,pencil:えんぴつ,日常,1
+pencil,ペンシル,えんぴつ,書く道具。eraserとセットで覚える。,eraser:消しゴム,日常,1
+notebook,ノート,ノート,書き留める道具。lessonと合わせて使うと実践的。,paper:紙,日常,1
+desk,デスク,つくえ,教室の家具。chairと合わせて覚える。,chair:いす,学校,1
+chair,チェア,いす,座る家具。tableと対で学ぶ。,table:テーブル,学校,1
+room,ルーム,へや,建物内の区画を表す語。bedroomやclassroomと派生語を学ぶ。,kitchen:台所,日常,1
+house,ハウス,いえ,homeとbuildingの違いを意識して学ぶ。,apartment:アパート,家族,1
+car,カー,くるま,移動手段の語。driveやbusと合わせて学ぶ。,bus:バス,交通,1
+bus,バス,バス,公共交通の語。trainと比較して覚える。,train:電車,交通,1
+train,トレイン,でんしゃ,鉄道の乗り物。stationやplatformと合わせて学ぶ。,station:駅,交通,1
+plane,プレーン,ひこうき,空を飛ぶ乗り物。airportやflightとセットで学ぶ。,airport:空港,日常,1
+airport,エアポート,くうこう,旅行語彙の中心。flightと結びつける。,flight:フライト,交通,1
+ticket,チケット,きっぷ・チケット,入場や乗車に使う語。buyやfareと合わせて学ぶ。,fare:運賃,日常,1
+map,マップ,ちず,場所を示す図。routeやdirectionと合わせて学ぶ。,route:経路,地理,1
+city,シティ,まち,大きな町を指す語。townと対比して学ぶ。,town:まち,日常,1
+village,ビレッジ,むら,小さな町の語。ruralとurbanの違いも補足して覚える。,farm:農場,日常,1
+market,マーケット,いちば,買い物の場として実例を想起して覚える。,shop:店,買い物,1
+shop,ショップ,みせ,店を表す語。buyやsellと合わせて例文を作る。,cashier:レジ,買い物,1
+restaurant,レストラン,レストラン,食事を提供する場所。menuと合わせて学ぶ。,menu:メニュー,食べ物,1
+bank,バンク,ぎんこう,金融関連語。accountやloanと合わせて学ぶ。,money:おかね,買い物,1
+hospital,ホスピタル,びょういん,医療施設。doctorやnurseと合わせて学ぶ。,clinic:診療所,健康,1
+police,ポリス,けいさつ,治安関連の語。officerと結びつけて覚える。,officer:警官,職業,1
+firefighter,ファイアファイター,しょうぼうし,緊急時に働く職業。rescueと関連して学ぶ。,rescue:救助,職業,2
+computer,コンピューター,コンピュータ,情報処理機器の語。laptopと比較して学ぶ。,laptop:ノートPC,テクノロジー,2
+phone,フォン,でんわ,電話する（call）とセットで実用フレーズを練習。,call:電話する,日常,1
+camera,カメラ,カメラ,写真を撮る機器。photoやpictureと合わせて学ぶ。,photo:写真,日常,1
+music,ミュージック,おんがく,歌や楽器と結びつけて文化語彙を広げる。,song:歌,文化,1
+movie,ムービー,えいが,映画を観る行為とセットで学ぶ。,cinema:映画館,文化,1
+library,ライブラリ,としょかん,本を借りる場所。studyと結びつけて学ぶ。,shelf:本棚,日常,1
+friend,フレンド,ともだち,人間関係語。helpやplayと合わせて会話例を作る。,pal:仲間,日常,1
+family,ファミリー,かぞく,親族語をまとめて学ぶと定着しやすい。,mother:母,家族,1
+mother,マザー,おかあさん,親族語の代表。fatherやchildと合わせて学ぶ。,father:おとうさん,日常,1
+father,ファーザー,おとうさん,親族語の代表。sonやdaughterと合わせて学ぶ。,son:むすこ,日常,1
+sister,シスター,しまい,兄弟姉妹語の一つ。brotherとペアで学ぶ。,brother:きょうだい,日常,1
+brother,ブラザー,きょうだい,兄弟姉妹語。sisterと合わせて学ぶ。,sister:しまい,日常,1
+happy,ハッピー,しあわせ,良い感情を表す語。sadと対比して覚える。,smile:笑顔,感情,1
+sad,サッド,かなしい,負の感情を表す語。happyと対比して学ぶ。,cry:泣く,感情,1
+angry,アングリー,おこる,強い不快感を表す語。calmと対比して学ぶ。,calm:落ち着いた,日常,2
+cold,コールド,さむい,温度表現。hotと対比して例文で学ぶ。,hot:あつい,自然,1
+hot,ホット,あつい,温度や感情を表す語。coldと対比して覚える。,cold:さむい,日常,1
+warm,ウォーム,あたたかい,温度や雰囲気を表す語。coolと合わせて学ぶ。,cool:すずしい,日常,1
+summer,サマー,なつ,季節語。weatherと合わせて例文を作ると定着。,winter:ふゆ,日常,1
+spring,スプリング,はる,季節語。flowerと合わせて学ぶ。,autumn:あき,日常,1
+autumn,オータム,あき,英国英語ではautumn、USではfallも使うことを補足して覚える。,leaf:葉,日常,1
+rain,レイン,あめ,天気語。umbrellaとセットで覚える。,umbrella:傘,日常,1
+snow,スノー,ゆき,冬の天候語。slip（すべる）など具体場面で覚える。,slide:滑る,日常,1
+sun,サン,たいよう,昼を照らす天体。dayと合わせて学ぶ。,moon:月,自然,1
+moon,ムーン,つき,夜の天体。tide（潮）と関連づけて学ぶ。,star:星,自然,1
+star,スター,ほし,夜空の星。constellationと合わせて学ぶ。,sky:空,文化,1
+light,ライト,ひかり/あかるい,光や明るさを表す語。darkと対比して学ぶ。,dark:暗い,自然,1
+dark,ダーク,くらい,光の反対概念として理解すると覚えやすい。,light:明るい,日常,1
+open,オープン,あける・あいている,状態と動作の両方で使う語。closeと対比して学ぶ。,close:閉める,文法,1
+close,クローズ,しめる・しまっている,openの対義語。doorやwindowと合わせて学ぶ。,open:開ける,文法,1
+start,スタート,はじめる,beginと類義。スポーツや機械での使用例で覚える。,begin:始める,文化,1
+finish,フィニッシュ,おえる,endと合わせて学ぶと理解が深まる。,complete:完了する,文法,1
+use,ユーズ,つかう,道具や機能を使う場面で具体例を作って覚える。,apply:適用する,日常,1
+make,メイク,つくる,createと類義。make a cakeなど具体例で定着。,create:作る,日常,1
+have,ハブ,もつ/ある,所有を表す基本動詞。have lunchなど句で覚える。,own:所有する,文法,1
+get,ゲット,える/手に入れる,receiveやobtainと合わせて学ぶ。get a presentなどで例文作成。,receive:受け取る,日常,1
+see,シー,みる,視覚に関する動詞。watchやlookと使い分けを学ぶ。,watch:見る,日常,1
+hear,ヒア,きく,聴覚に関する動詞。listenとの違いを例で押さえる。,listen:聞く,日常,1
+say,セイ,いう,tellとの違いを例文で理解して使い分けを学ぶ。,tell:伝える,文法,1
+speak,スピーク,はなす,話す一般表現。talkと比較して学ぶ。,talk:話す,文法,1
+write,ライト,かく,書く行為。readやstudyと合わせて学ぶ。,read:読む,学校,1
+read,リード,よむ,読む行為。bookやstoryと結びつけて覚える。,study:勉強する,学校,1
+listen,リッスン,きく,hearとの使い分けを意識して学ぶ。,hear:聞く,文法,1
+learn,ラーン,まなぶ,studyやpracticeと組み合わせて覚える。,study:勉強する,学校,1
+think,シンク,かんがえる,考える場面の例文を多く作ると定着しやすい。,believe:信じる,文法,1
+know,ノウ,しっている,情報を保持する語。know howと合わせて学ぶ。,understand:理解する,文法,1
+like,ライク,すきである,好みを表す語。I like〜の例で使い方を学ぶ。,love:大好き,文法,1
+love,ラブ,あいする,強い好意を表す。familyやfriendと結びつけて覚える。,like:好き,文法,1
+want,ウォント,ほしい/したい,needとの違いを例文で確認して使い分ける。,need:必要,日常,1
+need,ニード,ひつようである,必要性を表す語。mustとの違いを学ぶ。,must:〜しなければならない,日常,2
+can,キャン,〜できる,助動詞の基礎。Can you〜? の練習で定着させる。,may:〜かもしれない,文法,1
+will,ウィル,〜だろう/〜するつもり,未来を表す助動詞。I will〜の形で練習する。,shall:〜しよう,文法,1
+may,メイ,〜かもしれない/〜してよい,許可や可能性を表す表現。May I〜? の練習が有効。,might:〜かもしれない,文法,2
+must,マスト,〜しなければならない,強い必要性を表す語。have toと比較して学ぶ。,have to:〜しなければならない,日常,2
+able,エイブル,できる,能力や可能性を表す形容詞。,can:〜できる,文法,1
+about,アバウト,〜について/およそ,前置詞・副詞で広く使われる語。,around:〜の周り,文法,1
+above,アバブ,〜の上に/上記の,位置や程度を表す語。,below:下に,文法,1
+across,アクロス,〜を横切って,場所の移動を表す前置詞/副詞。,through:〜を通って,文法,1
+act,アクト,行動する/〜を演じる,動詞と名詞で用法が分かれる。,action:行動,文法,1
+action,アクション,行動/作用,動詞actの名詞形。movieのジャンルとしても使う。,act:行為,日常,1
+actor,アクター,俳優,映画や舞台で演じる人。,actress:女優,文化,2
+add,アド,加える,数や物を足す基本動詞。,plus:足す,学校,1
+address,アドレス,住所/話しかける,名詞と動詞で意味が変わる語。,location:場所,日常,2
+adult,アダルト,大人,年齢や社会的立場を表す語。,child:子ども,日常,1
+after,アフター,〜の後で,時間の順序を示す前置詞/副詞。,before:〜の前に,文法,1
+afternoon,アフタヌーン,午後,time of dayの語彙として覚える。,evening:夕方,日常,1
+again,アゲイン,もう一度,繰り返しを表す副詞。repeatと合わせて学ぶ。,once more:もう一度,文法,1
+against,アゲインスト,〜に反対して/〜に寄りかかって,対立や接触を表す前置詞。,for:〜のために,文法,2
+age,エイジ,年齢/時代,数詞とともに使う場面が多い。,year:年,日常,1
+ago,アゴ,〜前に,過去のある時点を示す副詞。,before:以前に,文法,1
+agree,アグリー,同意する,意見の一致を表す動詞。agree with〜で使う。,disagree:反対する,文法,1
+ahead,アヘッド,前方に/先に,位置や時間の前方を表す副詞。,behind:後ろに,文法,1
+air,エアー,空気/航空,weatherやflightの語彙と結びつけて学ぶ。,wind:風,自然,1
+airport,エアポート,空港,既存語と重複の確認用（既に存在するが用例の補足として保持） ,flight:フライト,交通,1
+allow,アロウ,許す,permitと類義。allow 人 to doの構文で学ぶ。,permit:許可する,文法,2
+almost,オールモスト,ほとんど,程度を表す副詞。nearlyやaboutと比較して学ぶ。,nearly:ほとんど,文法,1
+alone,アローン,ひとりで,独立を表す語。by oneselfと同義的に使う。,lonely:さびしい,感情,1
+along,アロング,〜に沿って/〜と一緒に,場所や伴同行動を示す語。,together:一緒に,文法,1
+already,オールレディ,すでに,完了の表現でよく使う副詞。,yet:まだ,文法,1
+also,オールソー,〜もまた,追加情報を示す副詞。tooと類義。,too:〜も,文法,1
+although,オールゾウ,〜だけれども,譲歩を表す接続詞。butと違い文の結びつけ方を学ぶ。,but:しかし,文法,2
+always,オールウェイズ,いつも,頻度を表す副詞。oftenやusuallyと比較して学ぶ。,often:しばしば,文法,1
+among,アマング,〜の中で,複数の中の一つを示す前置詞。,between:〜の間に,文法,2
+amount,アマウント,量/合計,数や量を表す語として使い分けを学ぶ。,total:合計,数学,2
+ancient,エインシェント,古代の,歴史や文化語彙として扱う。,old:古い,歴史,2
+announce,アナウンス,発表する,publicに知らせる動詞。announce that〜の構文で学ぶ。,report:報告する,文化,2
+answer,アンサー,答える/答え,questionに対する返答を表す基本語。,reply:返事,学校,1
+any,エニ,どれでも/いくらかの,不特定を表す語。anybody;anythingの派生語と合わせる。,some:いくつか,文法,1
+anything,エニシング,何でも,anyの代名詞用法として学ぶ。,nothing:何も〜ない,文法,1
+anyone,エニワン,誰でも,不特定の人物を指す語。anybodyと同義。,someone:誰か,文法,1
+appear,アピアー,現れる,come into viewやseemとの違いを例で学ぶ。,disappear:消える,文法,2
+appear,アピアー,見える/〜のように見える,見た目の変化を表す用法を補足。,seem:〜のようだ,文法,2
+apply,アップライ,申し込む/適用する,apply forとapply toの構文差を学ぶ。,use:使う,文法,2
+area,エリア,地域/面積,場所や範囲を示す語でmapと結びつけて学ぶ。,region:地域,地理,1
+arm,アーム,うで/武装,身体部位と道具の両義を持つ語。,leg:あし,自然,1
+army,アーミー,軍隊,歴史や社会科の語彙として扱う。,soldier:兵士,歴史,2
+around,アラウンド,〜の周りに/およそ,場所や数値の近似で使う。,about:〜について,文法,1
+arrive,アライブ,到着する,reachと似た意味。arrive at/inの使い分けを学ぶ。,reach:到達する,文法,1
+art,アート,美術/技術,文化的語彙として幅広く扱う。,craft:技術,文化,1
+article,アーティクル,記事/冠詞,新聞語彙と文法の冠詞を含めて学ぶ。,a/an/the:冠詞,学校,2
+artist,アーティスト,芸術家,職業語としてartistとmusicianを比較して学ぶ。,painter:画家,文化,2
+ask,アスク,たずねる/頼む,ask for/ask aboutの句動詞を例で学ぶ。,question:質問する,文法,1
+assist,アシスト,手伝う,helpの類義語でフォーマルな場面が多い。,help:助ける,職業,2
+attention,アテンション,注意,pay attention to〜で用法を学ぶ。,notice:気づく,学校,2
+attract,アトラクト,引きつける,interestやdrawと関連づけて学ぶ。,interest:興味,文化,2
+autumn,オータム,秋,既存語との重複有。USではfallの語も紹介。,fall:秋,日常,1
+avoid,アボイド,避ける,stay away fromと合わせて学ぶ。,escape:逃れる,安全,2
+baby,ベイビー,赤ちゃん,年齢や家族関係語と合わせて学ぶ。,infant:乳児,日常,1
+back,バック,戻る/後ろ,動詞・副詞・名詞で多義を学ぶ。,behind:後ろ,文法,1
+bad,バッド,悪い,goodの対義語として例文で学習。,good:良い,感情,1
+bag,バッグ,かばん,持ち物語彙として覚える。,box:箱,日常,1
+ball,ボール,球/ボール,スポーツ語彙と結びつけて覚える。,game:ゲーム,体育,1
+band,バンド,バンド/帯,音楽や物の束として使われる語。,group:グループ,文化,2
+base,ベース,基礎/本拠地,数学やスポーツの基礎語彙として学ぶ。,foundation:基礎,学校,2
+basic,ベーシック,基本的な,基本語彙として重要。simpleと対比して学ぶ。,fundamental:基本,学校,2
+basket,バスケット,かご,体育（basketball）や買い物で用例を作る。,basketball:バスケ,日常,1
+bath,バス,風呂/入浴,hygiene関連語として扱う。,shower:シャワー,日常,1
+beach,ビーチ,海辺,leisure語彙としてtravelと合わせて学ぶ。,sea:海,日常,1
+bear,ベア,熊/耐える,動物語としてのbearと「我慢する」の動詞の使い分けに注意。,endure:耐える,自然,2
+beat,ビート,打つ/勝つ,音や運動、試合での用法を例で学ぶ。,win:勝つ,体育,2
+beautiful,ビューティフル,美しい,形容詞語彙。appearanceと結びつけて学ぶ。,pretty:かわいい,感情,1
+because,ビコーズ,なぜなら,理由を表す接続詞。because ofとの違いを学ぶ。,so:だから,文法,1
+become,ビカム,〜になる,変化を表す基本動詞。getと比較して学ぶ。,turn into:〜になる,文法,2
+bed,ベッド,ベッド/寝具,daily routine語彙として扱う。,sleep:眠る,日常,1
+bedroom,ベッドルーム,寝室,room語彙の派生として学ぶ。,house:家,日常,1
+begin,ビギン,始める,startと類義で用例を比較して学ぶ。,start:始める,文法,1
+behind,ビハインド,後ろに/遅れて,aheadとの対比で理解する。,ahead:先に,文法,1
+believe,ビリーブ,信じる,thinkと似るが確信を伴うことが多い。,trust:信頼する,感情,2
+bell,ベル,ベル/鐘,school bellなど具体例で学ぶ。,ring:鳴る,日常,1
+belong,ビロング,所属する,belong to〜の構文で所有・所属を表す。,own:所有する,文法,2
+below,ビロウ,下に/以下,aboveとの対比で位置関係を学ぶ。,above:上に,文法,1
+best,ベスト,最高の/最も,比較級・最上級の学習と合わせて覚える。,better:より良い,文法,1
+better,ベター,より良い,比較級。goodの比較級であることを押さえる。,best:最良,文法,1
+between,ビトウィーン,〜の間に,amongとの使い分け（2つか複数）を学ぶ。,among:〜の中で,文法,2
+bicycle,バイシクル,自転車,transportation語彙の一つ。bikeと短縮形の紹介。,bike:自転車,交通,1
+big,ビッグ,大きい,smallと対比して学ぶ。,large:大きい,自然,1
+bill,ビル,勘定/紙幣,買い物やお金のやり取りで使う語。,fee:料金,日常,2
+bird,バード,鳥,既存の重複語。確認用に保持。,feather:羽,動物,1
+birthday,バースデー,たんじょうび,行事語彙としてfamilyとあわせて学ぶ。,present:プレゼント,日常,1
+black,ブラック,黒い,color語彙としてwhiteと対比して学ぶ。,white:白い,文化,1
+blind,ブラインド,目の見えない/見えない,障がいに関する語として配慮を付けて学ぶ。,deaf:耳が聞こえない,健康,2
+block,ブロック,区域/ふさぐ,building blocksなど具体例で学ぶ。,area:地域,日常,2
+blood,ブラッド,血液,biology語彙として学ぶ。,vein:静脈,科学,2
+blue,ブルー,青い,color語彙。skyやseaと合わせて覚える。,green:緑,自然,1
+board,ボード,板/掲示板/乗る,多義語。blackboardやon boardの表現で学ぶ。,table:テーブル,学校,2
+boat,ボート,ボート/小船,transportation語彙として学ぶ。,ship:船,交通,1
+body,ボディ,からだ,parts of the bodyの学習と合わせる。,head:頭,自然,1
+book,ブック,本,既存語。確認と補強用。,novel:小説,学校,1
+borrow,ボロー,借りる,lendとの相互関係を例で学ぶ。,lend:貸す,日常,2
+both,ボウス,両方,twoとともに使うと理解が深まる。,either:どちらか,文法,1
+bottle,ボトル,びん,drink容器として覚える。,cup:コップ,日常,1
+bottom,ボトム,底/下部,topとの対比で位置語彙を学ぶ。,top:上,文法,1
+bounce,バウンス,跳ねる,ballなどの動詞用法で学ぶ。,jump:跳ぶ,体育,2
+bring,ブリング,持ってくる,takeとの違いを例で学ぶ。,take:持っていく,日常,1
+brother,ブラザー,兄弟,既存の重複語。確認用。,sister:姉妹,日常,1
+brown,ブラウン,茶色,color語彙。hairやbagと合わせて使う。,black:黒,文化,1
+brush,ブラッシュ,磨く/ブラシ,toothbrushなどの日常用品語彙と結びつける。,comb:櫛,日常,1
+build,ビルド,建てる,construction語彙として使う。,make:作る,学校,2
+building,ビルディング,建物,city語彙と合わせて学ぶ。,house:家,日常,1
+busy,ビジー,忙しい,time managementの語彙と合わせて学ぶ。,free:暇な,日常,1
+baby,ベイビー,赤ちゃん,既に追加済みが重複する可能性あり。確認用。,infant:乳児,日常,1
+call,コール,呼ぶ/電話する,phoneと一緒に使う例文で学ぶ。,phone:電話,日常,1
+calm,カーム,落ち着いた,angryと対比して学ぶ。,angry:怒っている,感情,2
+camera,カメラ,カメラ,既存語。補強用。,photo:写真,日常,1
+camp,キャンプ,キャンプ/野営,outdoor活動語彙として扱う。,tent:テント,日常,1
+cancel,キャンセル,取り消す,予定変更の表現として使う。,postpone:延期する,日常,2
+capital,キャピタル,首都/大文字,geographyとgrammarの両方で出現する語。,capital city:首都,学校,2
+captain,キャプテン,隊長/船長,職業語としての用法とスポーツの役割で学ぶ。,leader:リーダー,職業,2
+carpet,カーペット,じゅうたん,household語彙として扱う。,floor:床,日常,1
+carry,キャリー,運ぶ,bringやtakeと関連して学ぶ。,transport:運ぶ,日常,1
+case,ケース,場合/箱,legalやeveryday useで幅広く使われる語。,example:例,学校,2
+catch,キャッチ,捕まえる/間に合う,catch a ballやcatch a busで例文を作る。,throw:投げる,体育,1
+cause,コーズ,原因/〜を引き起こす,reasonとcauseの使い分けを学ぶ。,effect:結果,科学,2
+celebrate,セレブレイト,祝う,partyやfestivalと関連づけて学ぶ。,party:パーティー,文化,2
+center,センター,中心,placeやpositionの語彙で使う。,middle:中央,文法,1
+century,センチュリー,100年,history語彙として年代を学ぶ。,year:年,歴史,2
+certain,サートン,確かな/ある,ある〜という意味での用法を学ぶ。,sure:確信している,文法,2
+chair,チェア,いす,既存語で補強。,table:テーブル,学校,1
+challenge,チャレンジ,挑戦/課題,difficultyやproblemと合わせて学ぶ。,task:課題,学校,2
+chance,チャンス,機会/可能性,opportunityと類義で違いを比較する。,opportunity:好機,日常,2
+change,チェンジ,変える/変化,money changeやclothes changeなど具体例で学ぶ。,turn:変わる,日常,1
+character,キャラクター,性格/登場人物,storyやpersonalityの語彙と合わせて学ぶ。,personality:性格,学校,2
+charge,チャージ,請求する/充電する,電気や料金の用法で意味の違いを学ぶ。,fee:料金,日常,2
+cheap,チープ,安い,expensiveと対比して学ぶ。,expensive:高い,買い物,1
+check,チェック,確かめる/小切手,verifyやlook overの用法で学ぶ。,verify:確認する,学校,1
+cheese,チーズ,チーズ,既存語として補強。,milk:牛乳,食べ物,1
+choice,チョイス,選択,chooseとの関係を理解して使う。,select:選ぶ,学校,2
+choose,チューズ,選ぶ,decision作成の場面で多く使われる。,pick:選ぶ,文法,1
+circle,サークル,円/輪,shape語彙としてgeometryの基礎で使う。,round:丸い,学校,1
+city,シティ,町,既存語補強。,town:町,日常,1
+claim,クレイム,主張する/要求する,argumentやask forの場面で使う。,state:述べる,学校,2
+class,クラス,授業/クラス,school語彙の中心語。lessonと合わせて学ぶ。,lesson:授業,学校,1
+clean,クリーン,きれいな/掃除する,dirtyとの対比で使う。,dirty:汚い,日常,1
+clear,クリア,明らかな/晴れた,unclearとの対比で理解する。,obvious:明白な,文法,2
+climb,クライム,登る,mountainやstairsと合わせて学習。,descend:下る,体育,2
+clock,クロック,時計,時間語彙と結びつけて学ぶ。,watch:腕時計,日常,1
+close,クローズ,閉める/近い,openと対比して学ぶ。既存語補強。,open:開ける,文法,1
+cloth,クロス,布,material語彙として扱う。,fabric:生地,日常,2
+cloud,クラウド,雲,weatherの学習で使う。,sky:空,自然,1
+club,クラブ,クラブ/部,school clubなどの語彙で覚える。,team:チーム,学校,1
+coach,コーチ,指導者,スポーツやtransportのcoach（長距離バス）との用法差に注意。,trainer:トレーナー,体育,2
+coast,コースト,海岸,geography語彙として学ぶ。,shore:岸,自然,2
+coffee,コーヒー,コーヒー,既存語補強。,tea:お茶,食べ物,1
+cold,コールド,寒い,既存語補強。,hot:暑い,自然,1
+collect,コレクト,集める,collect stampsなどの趣味語彙で学ぶ。,gather:集める,日常,2
+color,カラー,色,colourのUS/UK表記差を学ぶ。,colour:色,文化,1
+column,カラム,欄/柱,新聞や表の構成語彙として学ぶ。,row:行,学校,2
+come,カム,来る,goとの対比やcome backなど句動詞で学ぶ。,go:行く,文法,1
+comfort,カムフォート,快適さ/慰める,feel betterの表現と合わせて学ぶ。,console:慰める,感情,2
+command,コマンド,命令する/命令,orderと類義。指示系統の語彙として学ぶ。,order:命令,学校,2
+comment,コメント,意見/コメントする,expressやsayと結びつけて使う。,mention:言及する,学校,2
+common,コモン,一般的な,rareとの対比で理解する。,ordinary:普通の,文法,1
+company,カンパニー,会社,business語彙として学ぶ。,corporation:会社,職業,1
+compare,コンペア,比較する,compare A with Bの構文で学ぶ。,contrast:対比する,学校,2
+complete,コンプリート,完了する/完全な,finishと同義的に使う場面を学ぶ。,finish:終える,文法,1
+concert,コンサート,コンサート,musicイベント語彙として学ぶ。,music:音楽,文化,1
+condition,コンディション,状態/条件,if節と合わせて条件表現を学ぶ。,state:状態,学校,2
+connect,コネクト,つなぐ,linkやjoinと合わせて学ぶ。,join:参加する,テクノロジー,2
+consider,コンシダー,考慮する,think aboutと比較して使い方を学ぶ。,think:考える,学校,2
+contain,コンテイン,含む,includeとの違いを例で説明して学ぶ。,include:含む,文法,2
+continue,コンティニュー,続ける,keep onと類義で用例を比較する。,keep:続ける,文法,1
+control,コントロール,制御する/支配,manageやhandleと合わせて学ぶ。,manage:管理する,職業,2
+conversation,コンバセーション,会話,dialogueと同義的に使う場面を学ぶ。,dialogue:対話,学校,2
+cook,クック,料理する/コック,kitchenでの動詞語彙として学ぶ。,chef:料理人,日常,1
+cool,クール,涼しい/かっこいい,temperatureとスラング的意味を分けて学ぶ。,warm:暖かい,日常,1
+copy,コピー,写す/写し,duplicateやimitateと合わせて学ぶ。,duplicate:複製,学校,2
+corner,コーナー,角/隅,directionやplaceの語彙として学ぶ。,edge:端,日常,1
+correct,コレクト,正しい/訂正する,wrongと対比して使う。,wrong:間違い,学校,1
+cost,コスト,費用/かかる,priceやfeeと合わせて学ぶ。,price:価格,買い物,1
+could,クッド,〜できた/〜かもしれない,canの過去形・丁寧表現として学ぶ。,can:〜できる,文法,2
+count,カウント,数える,numberやtotalと合わせて学ぶ。,calculate:計算する,数学,1
+country,カントリー,国,cityと対比して地理語彙を学ぶ。,nation:国,地理,1
+course,コース,コース/講座,school courseやmeal courseでの使い分けを学ぶ。,class:授業,学校,2
+court,コート,法廷/コート,sports courtやlaw courtで意味の違いを学ぶ。,field:フィールド,体育,2
+cover,カバー,覆う/扱う,book coverやcover a topicの用法で学ぶ。,protect:守る,文法,2
+create,クリエイト,作り出す,makeと類義だが創造性を強調する語として学ぶ。,make:作る,学校,2
+culture,カルチャー,文化,societyやtraditionと合わせて学ぶ。,tradition:伝統,文化,2
+cup,カップ,カップ/杯,drinkの器として学ぶ。,glass:グラス,日常,1
+current,カレント,現在の/流れ,presentやmodernと合わせて学ぶ。,present:現在,学校,2
+curtain,カーテン,カーテン,room語彙として扱う。,blind:ブラインド,日常,1
+curve,カーブ,曲線/曲がる,roadやshapeの語彙として学ぶ。,line:線,数学,2
+custom,カスタム,習慣/慣習,cultureと合わせて学ぶ。,tradition:伝統,文化,2
+cut,カット,切る/減らす,knifeやscissorsと合わせて例文を作る。,slice:切る,日常,1
+cycle,サイクル,周期/自転車,repeatやbicycleと関連づけて学ぶ。,bicycle:自転車,学校,2

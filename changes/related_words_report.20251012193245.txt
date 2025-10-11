@@ -1,0 +1,152 @@
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学古典単語.csv
+  total rows: 15
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: をかし:趣がある;もののあはれ:人間の情趣
+    line3: めでたし:喜ばしい;おもしろし:面白い
+    line4: たいそう:とても;はなはだ:非常に
+    line5: あした:朝;けさ:今朝
+    line6: いかに:どのように;なにとか:なんとかして
+    line7: いとど:ますます;かなし:悲しい
+    line8: かえって:逆に;むしろ:どちらかといえば
+    line9: き:過去;かな:詠嘆
+    line10: けり:詠嘆;や:疑問・反語
+    line11: げん:しるし;きざし:兆し
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英会話.csv
+  total rows: 156
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ
+    line3: What's up?:調子はどう？
+    line4: Good:良い
+    line5: Glad to meet you:会えて嬉しい
+    line6: I'm Ken:私はケンです
+    line7: Where do you live?:どこに住んでいますか
+    line8: I'm from Osaka:大阪出身です
+    line9: What's your age?:年齢は？
+    line10: I'm thirteen:13歳です
+    line11: What's your job?:仕事は？
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英単語.csv
+  total rows: 265
+  empty / missing related-words: 75
+    lines: 4,5,9,10,11,13,16,18,19,23,25,26,30,31,32,33,35,39,40,41,42,50,51,52,54,56,57,58,59,60,61,62,63,68,71,73,74,75,77,78,81,84,86,89,92,94,95,97,98,99,100,101,102,104,105,107,108,109,110,111,112,114,115,116,117,118,120,122,125,126,127,128,130,137,139
+  likely-bad-format (no Japanese or missing translations): 190
+    line2: zoo;pet;wild
+    line3: zoo;pet;wild
+    line6: zoo;pet;wild
+    line7: zoo;pet;wild
+    line8: do;action;practice
+    line12: eat;meal;restaurant
+    line14: study;teacher;class
+    line15: eat;meal;restaurant
+    line17: zoo;pet;wild
+    line20: zoo;pet;wild
+    line21: study;teacher;class
+    line22: study;teacher;class
+    line24: map;travel;city
+    line27: do;action;practice
+    line28: zoo;pet;wild
+    line29: do;action;practice
+    line34: do;action;practice
+    line36: do;action;practice
+    line37: zoo;pet;wild
+    line38: do;action;practice
+    line43: eat;meal;restaurant
+    line44: map;travel;city
+    line45: study;teacher;class
+    line46: do;action;practice
+    line47: zoo;pet;wild
+    line48: do;action;practice
+    line49: map;travel;city
+    line53: sky;weather;season
+    line55: study;teacher;class
+    line64: do;action;practice
+    line65: zoo;pet;wild
+    line66: do;action;practice
+    line67: study;teacher;class
+    line69: zoo;pet;wild
+    line70: do;action;practice
+    line72: eat;meal;restaurant
+    line76: zoo;pet;wild
+    line79: study;teacher;class
+    line80: do;action;practice
+    line82: sky;weather;season
+    line83: zoo;pet;wild
+    line85: study;teacher;class
+    line87: study;teacher;class
+    line88: do;action;practice
+    line90: map;travel;city
+    line91: study;teacher;class
+    line93: do;action;practice
+    line96: study;teacher;class
+    line103: eat;meal;restaurant
+    line106: do;action;practice
+  sample ok (first 10):
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv
+  total rows: 450
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: put: 置く・設置する・与える: （服を）着る; on: 上・接触（装着や起動）: （服を）着る
+    line3: put: 置く・設置する・与える: 延期する; off: 離脱・停止: 延期する
+    line4: put: 置く・設置する・与える: 消す; out: 外側・除去・完了: 消す
+    line5: I'm fine: （意味未設定）: 元気です; thank you.: （意味未設定）: 元気です
+    line6: put: 置く・設置する・与える: 掲示する; up: 上・完了・増加: 掲示する
+    line7: put: 置く・設置する・与える: 片付ける; away: 離れて・放棄: 片付ける
+    line8: put: 置く・設置する・与える: 元に戻す; back: 戻る・復帰: 元に戻す
+    line9: put: 置く・設置する・与える: （電話を）つなぐ; through: 通じて: （電話を）つなぐ
+    line10: get: 得る・到達する・起きる: 起きる; up: 上・完了・増加: 起きる
+    line11: get: 得る・到達する・起きる: 降りる; off: 離脱・停止: 降りる
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学古典単語.csv
+  total rows: 87
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: いみじ:非常に
+    line3: かなしい:悲しい
+    line4: おもしろい:面白い
+    line5: やっぱり:同意
+    line6: すぐ:即時
+    line7: なぜ:理由
+    line8: どう:方法
+    line9: かならず:確信
+    line10: あさ:朝
+    line11: あさはやく:早朝
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.bak.csv
+  total rows: 50
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ
+    line3: What's up?:調子はどう？
+    line4: Good:良い
+    line5: Glad to meet you:会えて嬉しい
+    line6: I'm Ken:私はケンです
+    line7: Where do you live?:どこに住んでいますか
+    line8: I'm from Osaka:大阪出身です
+    line9: What's your age?:年齢は？
+    line10: I'm thirteen:13歳です
+    line11: What's your job?:仕事は？
+
+File: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.csv
+  total rows: 214
+  empty / missing related-words: 0
+  likely-bad-format (no Japanese or missing translations): 0
+  sample ok (first 10):
+    line2: Hi:やあ
+    line3: What's up?:調子はどう？
+    line4: Good:良い
+    line5: Glad to meet you:会えて嬉しい
+    line6: I'm Ken:私はケンです
+    line7: Where do you live?:どこに住んでいますか
+    line8: I'm from Osaka:大阪出身です
+    line9: What's your age?:年齢は？
+    line10: I'm thirteen:13歳です
+    line11: What's your job?:仕事は？

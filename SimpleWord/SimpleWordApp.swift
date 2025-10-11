@@ -20,6 +20,8 @@ struct SimpleWordApp: App {
     @StateObject var scoreStore = ScoreStore()
     @StateObject var wordScoreStore = WordScoreStore()
     @StateObject var currentCSV = CurrentCSV.shared
+    // 追加: 外観マネージャをアプリ全体に提供
+    @StateObject var appearanceManager = AppearanceManager()
 
     var body: some Scene {
         WindowGroup {
@@ -29,6 +31,10 @@ struct SimpleWordApp: App {
                 .environmentObject(scoreStore)
                 .environmentObject(wordScoreStore)
                 .environmentObject(currentCSV)
+                // 追加: 外観設定を環境に注入
+                .environmentObject(appearanceManager)
+                // 追加: 選択された外観をアプリ全体に適用
+                .preferredColorScheme(appearanceManager.appearance.colorScheme)
         }
     }
 }
