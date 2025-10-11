@@ -74,140 +74,145 @@ struct QuizView: View {
             let iconColor: Color = answered ? .white : .primary
             let textFont: Font = answered ? .body.weight(.semibold) : .body
 
-            Button(action: { onSelect(choice.id) }) {
-                SectionCard(backgroundColor: bgColor) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack(spacing: 12) {
-                            Text(choice.label)
-                                .foregroundColor(textColor)
-                                .font(textFont)
-                                .lineLimit(2)
-                            Spacer()
-                            if let s = selectedID {
-                                if let ca = correctAnswerID, choice.id == ca {
-                                    Image(systemName: "checkmark.circle.fill")
-                                        .foregroundColor(iconColor)
-                                } else if choice.id == s {
-                                    Image(systemName: "xmark.circle.fill")
-                                        .foregroundColor(iconColor)
-                                }
+            //Button(action: { onSelect(choice.id) }) {
+            SectionCard(backgroundColor: bgColor) {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack(spacing: 12) {
+                        Text(choice.label)
+                            .foregroundColor(textColor)
+                            .font(textFont)
+                            .lineLimit(2)
+                        Spacer()
+                        if let s = selectedID {
+                            if let ca = correctAnswerID, choice.id == ca {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundColor(iconColor)
+                            } else if choice.id == s {
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundColor(iconColor)
                             }
                         }
+                    }
 
-                        if answered {
-                            let explainItem = choice.item
-                            let isExpanded = expandedIDs.contains(choice.id)
-                            VStack(alignment: .leading, spacing: 6) {
-                                Text("語句: \(explainItem.term)")
+                    if answered {
+                        let explainItem = choice.item
+                        let isExpanded = expandedIDs.contains(choice.id)
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("語句: \(explainItem.term)")
+                                .font(.caption)
+                                .foregroundColor(textColorStrong)
+                            if !explainItem.reading.isEmpty {
+                                Text("読み: \(explainItem.reading)")
                                     .font(.caption)
-                                    .foregroundColor(textColorStrong)
-                                if !explainItem.reading.isEmpty {
-                                    Text("読み: \(explainItem.reading)")
+                                    .foregroundColor(textColorFaint)
+                            }
+
+                            if !explainItem.etymology.isEmpty {
+                                if isExpanded {
+                                    Text(explainItem.etymology)
+                                        .font(.caption)
+                                        .foregroundColor(textColorFaint)
+                                } else {
+                                    let preview = String(explainItem.etymology.prefix(160))
+                                    Text(preview + (explainItem.etymology.count > 160 ? "…" : ""))
                                         .font(.caption)
                                         .foregroundColor(textColorFaint)
                                 }
+                            }
 
-                                if !explainItem.etymology.isEmpty {
-                                    if isExpanded {
-                                        Text(explainItem.etymology)
-                                            .font(.caption)
-                                            .foregroundColor(textColorFaint)
-                                    } else {
-                                        let preview = String(explainItem.etymology.prefix(160))
-                                        Text(preview + (explainItem.etymology.count > 160 ? "…" : ""))
-                                            .font(.caption)
-                                            .foregroundColor(textColorFaint)
-                                    }
-                                }
-
-                                if isExpanded {
-                                    if !explainItem.relatedWords.isEmpty {
-                                        VStack(alignment: .leading, spacing: 6) {
-                                            SectionHeader(systemImage: "tag", title: "関連語")
-                                            VStack(alignment: .leading, spacing: 8) {
-                                                ForEach(explainItem.relatedWords, id: \.self) { rw in
-                                                    if let found = lookup(rw) {
-                                                        NavigationLink {
-                                                            QuestionDetailView(item: found)
-                                                        } label: {
-                                                            VStack(alignment: .leading, spacing: 2) {
-                                                                Text(found.term)
-                                                                    .font(.subheadline)
-                                                                    .bold()
-                                                                    .foregroundColor(textColor)
-                                                                if !found.reading.isEmpty {
-                                                                    Text(found.reading)
-                                                                        .font(.caption)
-                                                                        .foregroundColor(textColorFaint)
-                                                                }
-                                                                if !found.meaning.isEmpty {
-                                                                    Text(found.meaning)
-                                                                        .font(.caption2)
-                                                                        .foregroundColor(textColorFaint)
-                                                                }
-                                                            }
-                                                            .padding(.vertical, 6)
-                                                        }
-                                                        .buttonStyle(.plain)
-                                                    } else {
+                            if isExpanded {
+                                if !explainItem.relatedWords.isEmpty {
+                                    VStack(alignment: .leading, spacing: 6) {
+                                        SectionHeader(systemImage: "tag", title: "関連語")
+                                        VStack(alignment: .leading, spacing: 8) {
+                                            ForEach(explainItem.relatedWords, id: \.self) { rw in
+                                                if let found = lookup(rw) {
+                                                    NavigationLink {
+                                                        QuestionDetailView(item: found)
+                                                    } label: {
                                                         VStack(alignment: .leading, spacing: 2) {
-                                                            Text(rw)
+                                                            Text(found.term)
                                                                 .font(.subheadline)
+                                                                .bold()
                                                                 .foregroundColor(textColor)
-                                                            Text("(詳細情報なし)")
-                                                                .font(.caption2)
-                                                                .foregroundColor(textColorFaint)
+                                                            if !found.reading.isEmpty {
+                                                                Text(found.reading)
+                                                                    .font(.caption)
+                                                                    .foregroundColor(textColorFaint)
+                                                            }
+                                                            if !found.meaning.isEmpty {
+                                                                Text(found.meaning)
+                                                                    .font(.caption2)
+                                                                    .foregroundColor(textColorFaint)
+                                                            }
                                                         }
                                                         .padding(.vertical, 6)
                                                     }
+                                                    .buttonStyle(.plain)
+                                                } else {
+                                                    VStack(alignment: .leading, spacing: 2) {
+                                                        Text(rw)
+                                                            .font(.subheadline)
+                                                            .foregroundColor(textColor)
+                                                        Text("(詳細情報なし)")
+                                                            .font(.caption2)
+                                                            .foregroundColor(textColorFaint)
+                                                    }
+                                                    .padding(.vertical, 6)
                                                 }
                                             }
                                         }
                                     }
+                                }
 
-                                    if !explainItem.relatedFields.isEmpty {
-                                        HStack(spacing: 6) {
-                                            Text("分野:")
-                                                .font(.caption2)
-                                                .foregroundColor(textColorFaint)
-                                            ForEach(explainItem.relatedFields, id: \.self) { f in
-                                                TagCapsule(label: f)
-                                            }
-                                        }
-                                    }
-
-                                    if !explainItem.difficulty.isEmpty {
-                                        HStack(spacing: 6) {
-                                            Text("難易度:")
-                                                .font(.caption2)
-                                                .foregroundColor(textColorFaint)
-                                            DifficultyBadge(text: explainItem.difficulty)
+                                if !explainItem.relatedFields.isEmpty {
+                                    HStack(spacing: 6) {
+                                        Text("分野:")
+                                            .font(.caption2)
+                                            .foregroundColor(textColorFaint)
+                                        ForEach(explainItem.relatedFields, id: \.self) { f in
+                                            TagCapsule(label: f)
                                         }
                                     }
                                 }
 
-                                Button(action: {
-                                    withAnimation {
-                                        if isExpanded {
-                                            expandedIDs.remove(choice.id)
-                                        } else {
-                                            expandedIDs.insert(choice.id)
-                                        }
+                                if !explainItem.difficulty.isEmpty {
+                                    HStack(spacing: 6) {
+                                        Text("難易度:")
+                                            .font(.caption2)
+                                            .foregroundColor(textColorFaint)
+                                        DifficultyBadge(text: explainItem.difficulty)
                                     }
-                                }) {
-                                    Text(isExpanded ? "閉じる" : "もっと見る")
-                                        .font(.caption2)
-                                        .foregroundColor(textColor)
                                 }
-                                .buttonStyle(.plain)
                             }
+
+                            Button(action: {
+                                withAnimation {
+                                    if isExpanded {
+                                        expandedIDs.remove(choice.id)
+                                    } else {
+                                        expandedIDs.insert(choice.id)
+                                    }
+                                }
+                            }) {
+                                Text(isExpanded ? "閉じる" : "もっと見る")
+                                    .font(.caption2)
+                                    .foregroundColor(textColor)
+                            }
+                            .buttonStyle(.plain)
                         }
                     }
-                    .contentShape(Rectangle()) // ensure the tappable area includes padding
+                }
+                .contentShape(Rectangle()) // ensure the tappable area includes padding
+            }
+            .onTapGesture {
+                // only allow selection when not already answered
+                if selectedID == nil {
+                    onSelect(choice.id)
                 }
             }
-            .buttonStyle(.plain)
-            .disabled(selectedID != nil)
+            //.buttonStyle(.plain)
+            //.disabled(selectedID != nil)
         }
     }
 
