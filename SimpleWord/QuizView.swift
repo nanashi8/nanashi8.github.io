@@ -1042,7 +1042,7 @@ struct QuizView: View {
     @ViewBuilder
     private var dontKnowCardView: some View {
         if let dkID = dontKnowChoiceID {
-            DontKnowView(id: dkID,
+            DontKnowCardView(id: dkID,
                          selectedID: selectedID,
                          correctAnswerID: correctAnswerID,
                          onSelect: { id in

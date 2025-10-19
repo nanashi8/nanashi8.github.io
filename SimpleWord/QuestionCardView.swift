@@ -60,15 +60,15 @@ struct QuestionCardView: View {
 #Preview {
     let store = WordScoreStore()
     
-    return VStack(spacing: 20) {
+    VStack(spacing: 20) {
         QuestionCardView(
             item: QuestionItem(
                 term: "apple",
                 reading: "アップル",
                 meaning: "りんご",
                 etymology: "古英語のæppelに由来",
-                relatedWords: [],
-                relatedFields: ["食べ物"],
+                relatedWordsCSV: "",
+                relatedFieldsCSV: "食べ物",
                 difficulty: "初級"
             )
         )
@@ -80,8 +80,8 @@ struct QuestionCardView: View {
                 reading: "フォトシンセシス",
                 meaning: "光合成",
                 etymology: "ギリシャ語のphos（光）とsynthesis（合成）から",
-                relatedWords: [],
-                relatedFields: ["生物学"],
+                relatedWordsCSV: "",
+                relatedFieldsCSV: "生物学",
                 difficulty: "上級"
             )
         )
