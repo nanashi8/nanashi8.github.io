@@ -1,171 +1,494 @@
-# SimpleWord - AI 作業効率化ガイド
+# 大規模リファクタリングプロンプト（Git統合版）
 
-**最終更新: 2025-10-19**
+## ⚠️ 重要な前提
+このプロンプトは、500行以上の大規模ファイルをリファクタリングする際に使用します。
+通常のリファクタリングは `refactor-component.md` を使用してください。
 
-## 最近の主要な更新（2025-10-19）
-- Workspace Instructions に `.copilot/` への参照を全面的に追加
-- アニメーション・カード分離の実装パターンを明記
-- 作業規模別（小・中・大）の参照フローを明確化
-- トラブルシューティング導線を整備
-- 仕様書を「復元ガイド」から「編集ガイド」に全面改訂
+**必読**: 
+- `参考資料/大規模リファクタリング実現方策.md`
+- `.copilot/prompts/ai-git-workflow.md`（Git統合ワークフロー）
+- `.copilot/prompts/version-management.md`（バージョン管理）
+
+## 使用タイミング
+- ファイルが500行を超え、複数の責務が複雑に絡み合っている
+- 30個以上の @State 変数を持つ
+- リファクタリング失敗のリスクが高い
 
 ---
 
-## GitHub Copilot Chat Settings との連携
+## 事前準備（必須）
 
-### 1. Copilot Instructions (Global)
-**場所**: `~/.github/copilot-instructions.md` (グローバル設定)
-**用途**: すべてのプロジェクトに適用される基本的なコーディング規約
-**内容例**:
-- コーディングスタイル（インデント、命名規則）
-- 言語固有のベストプラクティス
-- セキュリティガイドライン
+### チェックリスト
 
-### 2. Copilot Instructions (Current Workspace)
-**場所**: `.github/instructions/CustumInstruction.instructions.md`
-**用途**: このプロジェクト固有のルールと設計原則
-**内容**:
-- プロジェクト概要
-- アーキテクチャ原則（Feature-First, 責務分離）
-- Swift コーディング規約
-- **`.copilot/` への参照を含める**
+作業を開始する前に、以下をすべて完了すること：
 
-### 3. Custom Instructions
-**用途**: セッション単位の特定タスクに対する指示
-**使用例**:
-- 「QuizView のリファクタリング中は `.copilot/components/` を優先参照」
-- 「バグ修正時は `.copilot/changelog.md` で履歴確認」
+- [ ] `参考資料/大規模リファクタリング実現方策.md` を読んだ
+- [ ] `参考資料/リファクタリング失敗分析_20251019.md` を読んだ
+- [ ] `.copilot/prompts/ai-git-workflow.md` を読んだ
+- [ ] 現在のコードが動作することを確認した
+- [ ] ユーザーに作業時間（2-3時間）の承認を得た
 
-### 4. Prompt Files
-**場所**: `.copilot/prompts/` (任意)
-**用途**: 繰り返し使用するタスク用のプロンプトテンプレート
-**例**:
-- `refactor-component.md` - コンポーネント分割用
-- `add-feature.md` - 新機能追加用
-- `fix-bug.md` - バグ修正用
+### 🆕 Git統合ワークフロー
 
-## `.copilot/` ディレクトリ構成
+**このリファクタリングでは、AIが自動的にGit操作を行います：**
+
+✅ **AIが自動実行すること:**
+1. Gitブランチ作成（`refactor-quiz-view-YYYYMMDD`）
+2. 初期コミット（作業開始マーカー）
+3. 各ステップでのコミット（チェックポイント作成）
+4. ビルド・テスト確認
+5. 問題発生時の自動ロールバック（5秒）
+6. changelog.md の更新
+7. バージョンタグの作成（完了時）
+
+📋 **あなたがすること:**
+- 自然言語で指示するだけ
+- 問題が起きたら「中断してロールバック」と指示
+- 各Phase完了後に動作確認
+
+詳細は `.copilot/prompts/ai-git-workflow.md` を参照。
+
+---
+
+## プロンプト0: 事前準備（Git統合版）
 
 ```
-.copilot/
-├── README.md                    # このファイル（全体ガイド）
-├── structure-map.md             # アーキテクチャマップ
-├── quick-ref.md                 # クイックリファレンス
-├── changelog.md                 # 変更履歴
-├── task-template.md             # タスク分割テンプレート
-├── components/                  # コンポーネント仕様書
-│   ├── QuizStatisticsView.md
-│   ├── QuestionCardView.md
-│   ├── ChoiceCardView.md
-│   ├── DontKnowCardView.md
-│   └── QuizNavigationButtonsView.md
-└── prompts/                     # プロンプトテンプレート（任意）
-    ├── refactor-component.md
-    ├── add-feature.md
-    └── fix-bug.md
+# タスク
+QuizView.swift の大規模リファクタリングを開始する前に、事前準備を完了してください。
+Git統合ワークフローを使用します。
+
+# Git操作（AIが自動実行）
+
+## 1. 現在の状態を確認
+```bash
+git status
+git log --oneline -5
 ```
 
-## トークン効率化戦略
+## 2. 作業ブランチを作成
+```bash
+BRANCH_NAME="refactor-quiz-view-$(date +%Y%m%d)"
+git checkout -b "$BRANCH_NAME"
+git commit --allow-empty -m "開始: QuizView大規模リファクタリング
 
-### レベル1: 小規模変更（単一ファイル、100行以内）
-```
-1. quick-ref.md を参照
-2. 直接実装
-3. changelog.md に記録
-```
-**トークン使用量**: 低
+事前準備フェーズ:
+- テストコード作成
+- 依存関係マップ作成
+- 現状確認
 
-### レベル2: 中規模変更（複数ファイル、または新機能追加）
-```
-1. structure-map.md で影響範囲確認
-2. 関連する components/*.md を参照
-3. task-template.md で段階的実装
-4. changelog.md に記録
-```
-**トークン使用量**: 中
-
-### レベル3: 大規模リファクタリング（500行以上、高リスク）
-```
-⚠️ 必読: 参考資料/大規模リファクタリング実現方策.md
-
-1. 参考資料/リファクタリング失敗分析_20251019.md で過去の失敗を確認
-2. prompts/large-scale-refactoring.md のプロンプト0（事前準備）を実行
-3. テスト作成、Git ブランチ作成、依存関係マップ作成
-4. Phase 1から段階的に実施（1ステップ = 1ファイル変更）
-5. 各ステップで必ず: ビルド → テスト → 動作確認 → Git コミット
-6. 問題発生時は即座にロールバック
-7. changelog.md に詳細記録
-```
-**トークン使用量**: 非常に高（慎重な段階的アプローチが必須）
-**所要時間**: 2-3時間以上
-**リスク**: 高（事前準備を徹底すること）
-
-## AI への指示方法
-
-### 作業開始時の基本フロー
-```markdown
-1. 「`.copilot/structure-map.md` を確認してください」
-2. 「影響範囲を特定し、関連する `.copilot/components/` の仕様を確認してください」
-3. 「`.copilot/task-template.md` に従って段階的に実装してください」
-4. 「完了後、`.copilot/changelog.md` に変更を記録してください」
+目標: QuizView.swift (1,100行) を300行に削減"
 ```
 
-### タスク別の指示例
+# 実施内容
 
-#### 新機能追加
+## 3. 現状確認
+- QuizView.swift の行数を確認
+- @State 変数の数を確認
+- @EnvironmentObject の数を確認
+- 主要メソッドをリストアップ
+
+## 4. テストの作成
+- SimpleWordTests/QuizViewTests.swift を作成
+- 以下のテストケースを実装：
+  * testQuizStartsWithFirstQuestion
+  * testCorrectAnswerUpdatesScore
+  * testIncorrectAnswerDoesNotUpdatePassedCount
+  * testGeneratesCorrectNumberOfChoices
+  * testGiveUpMarksAsIncorrect
+- テストを実行して全て green であることを確認
+
+## 5. 依存関係マップ作成
+- 参考資料/QuizView依存関係マップ.md を作成
+- 以下を列挙：
+  * すべての @State 変数
+  * すべての @EnvironmentObject
+  * すべての子コンポーネント
+  * すべてのメソッドと責務
+
+## 6. Gitコミット
+```bash
+git add SimpleWordTests/QuizViewTests.swift 参考資料/QuizView依存関係マップ.md
+xcodebuild test -scheme SimpleWord 2>&1 | tail -10
+git commit -m "✅ 事前準備完了: テストと依存関係マップ作成
+
+作成ファイル:
+- QuizViewTests.swift: 5つのテストケース
+- QuizView依存関係マップ.md: 完全な依存関係図
+
+テスト結果: ✅ 全て通過 (0 failures)
+次のステップ: Phase 1, Step 1.1"
 ```
-「`.copilot/structure-map.md` で影響範囲を確認し、
-新しいコンポーネント仕様を `.copilot/components/` に作成してから実装してください」
+
+# 完了条件
+- [ ] 現状確認完了（行数、変数数をレポート）
+- [ ] テスト作成完了、全て green
+- [ ] 依存関係マップ作成完了
+- [ ] Gitブランチ作成完了
+- [ ] 初期コミット完了
+
+# 完了後
+上記がすべて完了したら、次のメッセージを表示：
+
+「✅ 事前準備が完了しました。
+
+**Gitブランチ:** {ブランチ名}
+**初期コミット:** {コミットID}
+**テスト:** 全て green (0 failures)
+
+Phase 1, Step 1.1 を開始する準備ができています。
+続行する場合は「Phase 1, Step 1.1 を実行してください」と指示してください。」
 ```
 
-#### バグ修正
+---
+
+## Phase 1: 最小限の抽出（1ステップずつ）
+
+### プロンプト1.1: QuizEngine スケルトン作成（Git統合版）
+
 ```
-「`.copilot/changelog.md` で関連する過去の変更を確認し、
-`.copilot/quick-ref.md` のパターンに従って修正してください」
+# タスク
+Phase 1, Step 1.1: QuizEngine クラスの最小限のスケルトンを作成してください。
+Git統合ワークフローを使用します。
+
+# 実施内容
+
+## 1. ファイル作成
+```bash
+mkdir -p SimpleWord/Features/Quiz
+cat > SimpleWord/Features/Quiz/QuizEngine.swift << 'EOF'
+// SimpleWord/Features/Quiz/QuizEngine.swift
+// 出題ロジックを管理するエンジンクラス（Phase 1: スケルトン）
+
+import Foundation
+import Combine
+
+final class QuizEngine: ObservableObject {
+    
+    // 依存する Store
+    private let quizSettings: QuizSettings
+    private let scoreStore: ScoreStore
+    private let wordScoreStore: WordScoreStore
+    private let currentCSV: CurrentCSV
+    
+    init(
+        quizSettings: QuizSettings,
+        scoreStore: ScoreStore,
+        wordScoreStore: WordScoreStore,
+        currentCSV: CurrentCSV
+    ) {
+        self.quizSettings = quizSettings
+        self.scoreStore = scoreStore
+        self.wordScoreStore = wordScoreStore
+        self.currentCSV = currentCSV
+        
+        print("✅ QuizEngine initialized")
+    }
+    
+    func start() {
+        print("✅ QuizEngine.start() called")
+    }
+}
+EOF
 ```
 
-#### リファクタリング
+## 2. Xcode プロジェクトに追加
+xcodeproj gem を使って自動追加（または手動で追加を指示）
+
+## 3. ビルド確認
+```bash
+xcodebuild clean build -scheme SimpleWord -destination 'platform=iOS Simulator,name=iPhone 17' 2>&1 | tail -5
 ```
-「`.copilot/structure-map.md` の分割推奨に従い、
-Phase 1 から順に `.copilot/task-template.md` を使って段階的に実装してください」
+
+期待結果: ** BUILD SUCCEEDED **
+
+## 4. Gitコミット
+```bash
+git add SimpleWord/Features/Quiz/QuizEngine.swift SimpleWord.xcodeproj/project.pbxproj
+git commit -m "✅ Phase1, Step1.1完了: QuizEngineスケルトン作成
+
+作成内容:
+- QuizEngine.swift を新規作成
+- 最小限の実装（print文のみ）
+- Xcodeプロジェクトに追加
+
+ビルド: ✅ 成功
+テスト: ✅ 全て通過 (0 failures)
+影響範囲: 新規ファイルのみ
+次のステップ: Phase 1, Step 1.2"
 ```
 
-## ファイルの更新頻度
+# 完了条件
+- [ ] QuizEngine.swift が作成された
+- [ ] Xcode プロジェクトに追加された
+- [ ] ビルド成功（BUILD SUCCEEDED）
+- [ ] テスト全て green（0 failures）
+- [ ] Git コミット完了
 
-| ファイル | 更新頻度 | 更新タイミング |
-|---------|---------|--------------|
-| README.md | 低 | 構成変更時 |
-| structure-map.md | 低 | 大規模リファクタリング時 |
-| quick-ref.md | 中 | 新パターン追加時 |
-| changelog.md | 高 | 毎変更時 |
-| task-template.md | 低 | ワークフロー変更時 |
-| components/*.md | 中 | コンポーネント分割・変更時 |
-| prompts/*.md | 低 | 新しいタスクタイプ追加時 |
+# ロールバック条件
+以下の場合は即座にロールバック：
+- ビルドエラーが解決できない（5分以上かかる）
+- テストが red になった
+- Xcode プロジェクトへの追加に失敗した
 
-## ベストプラクティス
+ロールバックコマンド:
+```bash
+git reset --hard HEAD~1
+```
 
-### ✅ 推奨
-- 変更前に必ず関連ファイルを確認
-- 小さな変更でも changelog に記録
-- 新しいパターンが出たら quick-ref に追加
-- コンポーネント分割時は仕様書を先に作成
+# 完了後
+「✅ Phase 1, Step 1.1 が完了しました。
 
-### ❌ 非推奨
-- `.copilot/` を参照せずに大規模変更
-- changelog の更新を忘れる
-- 仕様書なしでコンポーネントを分割
-- structure-map と実装の不整合を放置
+**コミット:** {コミットID}
+**ビルド:** 成功
+**テスト:** 全て green
 
-## メンテナンス
+次は Step 1.2（QuizEngine の初期化）です。
+続行する場合は「Step 1.2 を実行してください」と指示してください。」
+```
 
-### 月次レビュー
-- [ ] changelog から頻繁な変更箇所を特定
-- [ ] structure-map の分割計画を更新
-- [ ] quick-ref に新パターンを追加
-- [ ] 使われていないコンポーネント仕様を削除
+---
 
-### リリース前チェック
-- [ ] 全ての変更が changelog に記録されている
-- [ ] structure-map が現在の実装と一致している
-- [ ] コンポーネント仕様が最新である
-- [ ] 不要なファイルを削除
+### プロンプト1.2: QuizView で QuizEngine を初期化（Git統合版）
+
+```
+# タスク
+Phase 1, Step 1.2: QuizView で QuizEngine を初期化し、呼び出せるようにしてください。
+Git統合ワークフローを使用します。
+
+# 重要な制約
+- QuizView の既存ロジックは一切変更しない
+- QuizEngine.start() は print するだけ（ロジック移行はまだ）
+- 既存の start() メソッドは削除しない
+
+# 実施内容
+
+## 1. QuizView に quizEngine プロパティを追加
+
+```swift
+struct QuizView: View {
+    
+    @EnvironmentObject var quizSettings: QuizSettings
+    @EnvironmentObject var scoreStore: ScoreStore
+    @EnvironmentObject var wordScoreStore: WordScoreStore
+    @EnvironmentObject var currentCSV: CurrentCSV
+    
+    // 🆕 QuizEngine を追加
+    @State private var quizEngine: QuizEngine?
+    
+    // ...existing code...
+}
+```
+
+## 2. onAppear で QuizEngine を初期化
+
+```swift
+.onAppear {
+    // 🆕 QuizEngine を初期化（最初の1回のみ）
+    if quizEngine == nil {
+        quizEngine = QuizEngine(
+            quizSettings: quizSettings,
+            scoreStore: scoreStore,
+            wordScoreStore: wordScoreStore,
+            currentCSV: currentCSV
+        )
+        // テスト呼び出し
+        quizEngine?.start()
+    }
+    
+    // ...既存の onAppear 処理は維持...
+}
+```
+
+## 3. ビルド確認
+```bash
+xcodebuild clean build -scheme SimpleWord 2>&1 | tail -5
+```
+
+期待結果: ** BUILD SUCCEEDED **
+
+## 4. 実行確認
+1. シミュレータでアプリを起動
+2. クイズ画面を開く
+3. Xcode のコンソールで確認：
+   - "✅ QuizEngine initialized"
+   - "✅ QuizEngine.start() called"
+
+## 5. Gitコミット
+```bash
+git add SimpleWord/QuizView.swift
+git commit -m "✅ Phase1, Step1.2完了: QuizEngineの初期化
+
+変更内容:
+- QuizView に quizEngine プロパティ追加
+- onAppear で初期化
+- start() 呼び出し（テスト用）
+
+ビルド: ✅ 成功
+テスト: ✅ 全て通過
+実行確認: ✅ コンソールにログ表示確認
+影響範囲: QuizView.swift のみ
+次のステップ: Phase 1, Step 1.3"
+```
+
+# 完了条件
+- [ ] QuizView に quizEngine プロパティが追加された
+- [ ] onAppear で初期化されている
+- [ ] ビルド成功
+- [ ] 実行確認OK（コンソールにログ表示）
+- [ ] テスト全て green
+- [ ] Git コミット完了
+
+# ロールバック条件
+以下の場合は即座にロールバック：
+- ビルドエラーが解決できない
+- 実行時エラーが発生
+- UI が表示されない
+- コンソールにログが表示されない
+
+ロールバックコマンド:
+```bash
+git reset --hard HEAD~1
+```
+
+# 完了後
+「✅ Phase 1, Step 1.2 が完了しました。
+
+**コミット:** {コミットID}
+**実行確認:** コンソールにログ表示確認
+
+次は Step 1.3（start() ロジックの移行）です。
+⚠️ ここから既存ロジックを変更します。より慎重に進めます。
+続行する場合は「Step 1.3 を実行してください」と指示してください。」
+```
+
+---
+
+## 🚨 重要な原則（Git統合版）
+
+### 🚫 やってはいけないこと
+
+1. **一度に複数のファイルを作成・変更しない**
+   - 1ステップ = 1ファイル変更が原則
+   - 問題の切り分けが困難になる
+
+2. **ビルド確認なしで次のステップに進まない**
+   - 必ず `xcodebuild clean build` を実行
+   - BUILD SUCCEEDED を確認してから次へ
+
+3. **Gitコミットせずに次のステップに進まない**
+   - 各ステップで必ずコミット
+   - チェックポイントを作る
+
+4. **エラーが出たら深追いしない**
+   - 5分以内に解決できない場合は即座にロールバック
+   - `git reset --hard HEAD~1` で前の状態に戻る
+
+### ✅ 必ずやること
+
+1. **各ステップでGitコミット**
+   - コミットメッセージに結果を詳細に記載
+   - いつでもロールバックできる状態を維持
+
+2. **ビルド → テスト → 実行確認 → コミット のサイクル**
+   - この順番を必ず守る
+   - 1つでも失敗したらロールバック
+
+3. **コミットメッセージに詳細を記載**
+   - 何を変更したか
+   - ビルド・テスト結果
+   - 次のステップ
+
+4. **問題発生時は即座にロールバック**
+   ```bash
+   git reset --hard HEAD~1
+   xcodebuild clean build  # 元の状態を確認
+   ```
+
+---
+
+## 📊 完了後のバージョニング
+
+### リファクタリング完了時
+
+全Phase（1-3）が完了したら、バージョンタグを作成します：
+
+```bash
+# 変更規模: 大規模機能（MAJOR +1）
+# v0.9.0 → v1.0.0
+
+git tag -a "v1.0.0" -m "v1.0.0: QuizView大規模リファクタリング完了
+
+Phase 1-3 完了:
+- QuizEngine 抽出
+- QuestionSelector 抽出
+- ScoreUpdater 抽出
+
+成果:
+- QuizView: 1,100行 → 300行
+- テスト: 全て通過
+- ビルド: 成功
+
+所要時間: 6時間
+影響ファイル: 10ファイル"
+```
+
+詳細は `.copilot/prompts/version-management.md` を参照。
+
+---
+
+## 📚 関連ドキュメント
+
+- `参考資料/大規模リファクタリング実現方策.md` - 詳細な手順書
+- `参考資料/リファクタリング失敗分析_20251019.md` - 失敗から学んだ教訓
+- `.copilot/prompts/ai-git-workflow.md` - Git統合ワークフロー
+- `.copilot/prompts/version-management.md` - バージョン管理ルール
+- `.copilot/structure-map.md` - プロジェクト構造
+- `.copilot/changelog.md` - 変更履歴
+
+---
+
+## 🎯 次のステップ
+
+事前準備が完了したら、AIエージェントに以下のように指示してください：
+
+```
+「プロンプト0（事前準備）をGit統合ワークフローで実行してください」
+```
+
+事前準備が完了したら：
+
+```
+「Phase 1, Step 1.1 をGit統合ワークフローで実行してください」
+```
+
+各ステップが完了したら：
+
+```
+「Step 1.2 を実行してください」
+```
+
+問題が発生したら：
+
+```
+「中断してロールバックしてください」
+```
+
+---
+
+## 🎓 まとめ
+
+**Git統合版リファクタリングの特徴:**
+- **AIが自動的にGit操作**（ブランチ作成、コミット、ロールバック）
+- **各ステップでチェックポイント**（5秒で前の状態に戻れる）
+- **バージョン管理と統合**（完了時に自動タグ作成）
+
+**開発者の負担:**
+- Gitコマンドを覚える必要なし
+- 自然言語で指示するだけ
+- 問題が起きたら「中断してロールバック」
+
+**AIの責任:**
+- Git操作を全て自動実行
+- ビルド・テスト確認を必ず実施
+- 問題発生時は自動ロールバックと原因分析
+- バージョンタグを自動作成
