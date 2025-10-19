@@ -1,264 +1,120 @@
-# 新機能追加プロンプト
+# SimpleWord AI Workflow Guide
 
-## 使用タイミング
-- 新しい画面や機能を追加する時
-- 既存機能を拡張する時
-- 新しいデータモデルを追加する時
+最終更新: 2025年10月19日
 
-## ステップ1: 要件の明確化
+---
 
-```
-以下を明確にしてください：
-1. 何を実現したいか（目的）
-2. どのような画面・UIが必要か
-3. どのようなデータを扱うか
-4. 既存のどの機能と連携するか
-```
+## 🤖 AI自動化システムの完全ガイド
 
-## ステップ2: 影響範囲の調査
+このガイドは、AIが**完全自動で作業を実行**するための仕組みをまとめたものです。
+
+---
+
+## ⚡ 最重要: 自動バージョン管理
+
+### トリガーフレーズ（これを言うだけ！）
 
 ```
-`.copilot/structure-map.md` を確認し、以下を特定してください：
-1. 影響を受ける既存ファイル
-2. 利用できる既存コンポーネント
-3. 新規作成が必要なファイル
-4. 変更が必要な @EnvironmentObject
+✅ "バージョン管理してください"
+✅ "バージョン管理して"
+✅ "バージョニングしてください"
+✅ "新しいバージョンを作成"
+✅ "リリース準備"
+✅ "ブランチを切って"
 ```
 
-## ステップ3: 設計
+### AIが自動で実行する内容（全9ステップ）
 
-### データモデル設計
-```
-必要なデータ構造を設計：
-- struct/class名
-- プロパティとその型
-- Codable/Identifiable の必要性
-- デフォルト値
-```
+1. **分析** → 変更行数、ファイル数を自動計算
+2. **判定** → バージョン番号を自動決定
+3. **ブランチ作成** → 命名規則に従って自動作成
+4. **コミット** → 意味のあるメッセージで自動コミット
+5. **タグ付け** → バージョンタグを自動作成
+6. **ドキュメント生成** → `.copilot/versions/` に自動生成
+7. **Changelog更新** → 変更履歴を自動追記
+8. **ビルドテスト** → Xcodeビルドを自動実行
+9. **レポート表示** → 完了サマリーを美しく表示
 
-### UI設計
-```
-画面構成を設計：
-- メインView
-- サブコンポーネント
-- 再利用できる既存コンポーネント
-- 新規作成が必要なコンポーネント
-```
+**詳細**: `.copilot/AI-TRIGGER-GUIDE.md`
 
-### 状態管理設計
-```
-状態の持ち方を決定：
-- @State: View内部の状態
-- @EnvironmentObject: アプリ全体で共有
-- @ObservedObject/@StateObject: ViewModel
-- UserDefaults/FileManager: 永続化
-```
+---
 
-## ステップ4: 実装計画
+## 📋 作業規模別ワークフロー
 
-```
-`.copilot/task-template.md` を使用して、以下の順で実装計画を立ててください：
+### 小規模変更（100行以内）
+1. `.copilot/quick-ref.md` で実装パターン確認
+2. コードを実装
+3. 「バージョン管理してください」
 
-### Phase 1: データモデル
-1. データ構造の定義
-2. サンプルデータの作成
-3. 単体テスト（必要に応じて）
+### 中規模変更（新機能）
+1. `.copilot/structure-map.md` で影響範囲確認
+2. `.copilot/prompts/add-feature.md` の手順に従う
+3. コードを実装
+4. 「バージョン管理してください」
 
-### Phase 2: ビジネスロジック
-1. データ読み込み処理
-2. データ変換・加工処理
-3. 永続化処理（必要に応じて）
+### 大規模変更（リファクタリング）
+1. `.copilot/structure-map.md` で全体像把握
+2. `.copilot/prompts/refactor-component.md` の手順に従う
+3. 複数フェーズに分割して実装
+4. 各フェーズ完了時に「バージョン管理してください」
 
-### Phase 3: UI実装
-1. プロトタイプ（静的データ表示）
-2. 実データとの接続
-3. インタラクション実装
-4. アニメーション・エフェクト
+---
 
-### Phase 4: 統合
-1. 既存画面からのナビゲーション
-2. 既存データとの連携
-3. エラーハンドリング
-```
+## 📚 ドキュメント体系
 
-## ステップ5: 非推奨構文チェック（必須）
+### レベル1: クイックリファレンス
+- `.copilot/quick-ref.md` - よく使う実装パターン
+- `.copilot/AI-TRIGGER-GUIDE.md` - 自動化ガイド
 
-**実装前に必ず確認:**
-1. `.copilot/deprecated-patterns.md` を確認
-2. `.copilot/quick-ref.md` の非推奨セクションを確認
-3. iOS 17以降の非推奨構文を使用しない
+### レベル2: アーキテクチャ
+- `.copilot/structure-map.md` - 全体構造マップ
+- `.copilot/changelog.md` - 変更履歴
 
-**特に注意すべきパターン:**
-```swift
-// ❌ 絶対に使用禁止
-.onChange(of: value) { _ in }
-.onChange(of: value) { newValue in }
+### レベル3: 作業手順
+- `.copilot/prompts/add-feature.md` - 新機能追加
+- `.copilot/prompts/fix-bug.md` - バグ修正
+- `.copilot/prompts/refactor-component.md` - リファクタリング
+- `.copilot/prompts/auto-versioning.md` - 自動バージョン管理
 
-// ✅ 必ず使用
-.onChange(of: value) { }
-.onChange(of: value) { oldValue, newValue in }
-```
+### レベル4: バージョン履歴
+- `.copilot/versions/v*.md` - 各バージョンの詳細
 
-## ステップ6: 段階的実装
+---
 
-### Phase 1: データモデル
-```swift
-// 1. 新しいファイル作成: [ModelName].swift
-struct [ModelName]: Identifiable, Codable {
-    let id: UUID
-    // ... プロパティ
-    
-    init(...) {
-        // ... 初期化
-    }
-}
+## 📊 バージョン判定ルール
 
-// 2. サンプルデータ
-extension [ModelName] {
-    static let sample = [ModelName](...)
-}
-```
+| 変更行数 | バージョンタイプ | 例 |
+|---------|----------------|-----|
+| 1000行以上 | メジャー | v0.5.0 → v1.0.0 |
+| 100-999行 | マイナー | v1.0.0 → v1.1.0 |
+| 1-99行 | パッチ | v1.1.0 → v1.1.1 |
 
-### Phase 2: ビジネスロジック
-```swift
-// 1. ViewModel または Store 作成
-class [FeatureName]Store: ObservableObject {
-    @Published var items: [ModelName] = []
-    
-    func load() {
-        // データ読み込み
-    }
-    
-    func save() {
-        // データ保存
-    }
-}
+---
 
-// 2. App.swift に登録
-@StateObject private var [featureName]Store = [FeatureName]Store()
-
-.environmentObject([featureName]Store)
-```
-
-### Phase 3: UI実装
-```swift
-// 1. メインView作成
-struct [FeatureName]View: View {
-    @EnvironmentObject var store: [FeatureName]Store
-    
-    var body: some View {
-        // プロトタイプ実装
-    }
-}
-
-// 2. プレビュー追加
-#Preview {
-    [FeatureName]View()
-        .environmentObject([FeatureName]Store())
-}
-
-// 3. 段階的に機能追加
-```
-
-### Phase 4: 統合
-```swift
-// 既存のナビゲーションに追加
-NavigationLink(destination: [FeatureName]View()) {
-    Text("新機能")
-}
-```
-
-## ステップ6: テストと検証
+## 🌿 ブランチ命名規則
 
 ```
-以下を確認してください：
-- [ ] データの読み込み・保存が正常に動作する
-- [ ] UI が仕様通りに表示される
-- [ ] インタラクションが期待通りに動作する
-- [ ] エラーケースが適切に処理される
-- [ ] 既存機能に影響がない
-- [ ] パフォーマンスに問題がない
+v{バージョン}_{タイプ}/{説明}
+
+例:
+✅ v1.2.0_feature/quizview-complete
+✅ v1.2.1_bugfix/fix-crash
+✅ v1.3.0_refactor/improve-performance
 ```
 
-## ステップ7: ドキュメント更新
+---
 
+## 🎯 まとめ
+
+### ユーザーがすること
 ```
-以下を更新してください：
-1. `.copilot/structure-map.md` に新機能を追加
-2. `.copilot/changelog.md` に実装記録を追加
-3. 新しいパターンがあれば `.copilot/quick-ref.md` に追加
-4. 新しいコンポーネントの仕様書を `.copilot/components/` に作成
-```
-
-## 例: 単語帳機能の追加
-
-### Phase 1: データモデル
-```swift
-// WordSet.swift
-struct WordSet: Identifiable, Codable {
-    let id: UUID
-    var name: String
-    var words: [QuestionItem]
-    var createdAt: Date
-}
+1. コードを書く
+2. 「バージョン管理してください」と言う
 ```
 
-### Phase 2: ビジネスロジック
-```swift
-// WordSetStore.swift
-class WordSetStore: ObservableObject {
-    @Published var wordSets: [WordSet] = []
-    
-    func addWordSet(_ wordSet: WordSet) { ... }
-    func removeWordSet(id: UUID) { ... }
-    func load() { ... }
-    func save() { ... }
-}
+### AIがすること
+```
+すべて自動実行！
 ```
 
-### Phase 3: UI実装
-```swift
-// WordSetListView.swift
-struct WordSetListView: View {
-    @EnvironmentObject var store: WordSetStore
-    
-    var body: some View {
-        List(store.wordSets) { wordSet in
-            NavigationLink(destination: WordSetDetailView(wordSet: wordSet)) {
-                Text(wordSet.name)
-            }
-        }
-    }
-}
-```
-
-### Phase 4: 統合
-```swift
-// ContentView.swift に追加
-NavigationLink(destination: WordSetListView()) {
-    Label("単語帳", systemImage: "book")
-}
-```
-
-## チェックリスト
-
-- [ ] 要件を明確にした
-- [ ] structure-map.md で影響範囲を確認した
-- [ ] データモデルを設計した
-- [ ] UI設計を行った
-- [ ] 状態管理方法を決定した
-- [ ] 段階的に実装した
-- [ ] 各Phaseでテストした
-- [ ] 既存機能への影響を確認した
-- [ ] ドキュメントを更新した
-
-## トラブルシューティング
-
-### Preview が動作しない
-→ 必要な @EnvironmentObject を Preview に渡してください
-
-### データが保存されない
-→ save() メソッドが適切なタイミングで呼ばれているか確認してください
-
-### ナビゲーションが動作しない
-→ NavigationStack/NavigationView で囲まれているか確認してください
+**完全自動化！ユーザーは何もする必要がありません！** 🎉

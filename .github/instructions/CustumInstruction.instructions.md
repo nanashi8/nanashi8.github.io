@@ -1,116 +1,124 @@
 ---
 applyTo: "**/*"
 ---
-# Project Overview
-このプロジェクトは語句を効率的に学習するためのクイズアプリケーション（Swift/SwiftUI）。
+# SimpleWord Project Instructions
 
-## 主要機能
-- **適応型学習**: ユーザーの習熟度に応じた出題制御（AdaptiveScheduler）
-- **視覚的フィードバック**: 合格数・総出題数の光るエフェクト（スプリングアニメーション）
-- **バッチ学習**: 段階的な学習進行管理
-- **明確なUI**: 問題カード・選択肢カード・分からないカードの独立表示
+最終更新: 2025年10月19日
 
 ---
 
-# Architecture Principles
-- **Feature-First / Vertical Slice Architecture** を採用
+## 🎯 プロジェクト概要
+
+語句を効率的に学習するためのクイズアプリケーション（Swift/SwiftUI）。
+適応型学習、バッチ管理、視覚的フィードバックを備えた本格的な学習アプリ。
+
+### 主要機能
+- **適応型学習**: ユーザーの習熟度に応じた出題制御（WordScoreStore連携）
+- **バッチ学習**: 段階的な学習進行管理、繰り返し出題
+- **視覚的フィードバック**: 合格数・総出題数の光るエフェクト
+- **タイマー機能**: 制限時間、カウントダウン表示
+- **音声再生**: AVSpeechSynthesizerによる発音
+- **自動遷移**: 回答後の自動次問題移行
+
+### 現在のバージョン
+**v1.2.0** - QuizView完全実装完了（264行）
+
+---
+
+## 🤖 AI自動化システム - 最重要
+
+### ⚡ バージョン管理の完全自動化
+
+**トリガーフレーズ**（これを言うだけで全自動実行）:
+```
+✅ "バージョン管理してください"
+✅ "バージョン管理して"
+✅ "バージョニングしてください"
+```
+
+**自動実行内容**:
+1. 変更内容の分析（変更行数、ファイル数）
+2. バージョン番号の自動決定（1000行以上=メジャー、100行以上=マイナー）
+3. ブランチの自動作成（`v{version}_{type}/{description}`形式）
+4. コミットとタグの自動作成
+5. ドキュメントの自動生成
+6. Changelog・Structure Mapの自動更新
+7. ビルドテストの自動実行
+8. 完了レポートの表示
+
+**詳細**: `.copilot/AI-TRIGGER-GUIDE.md`
+
+---
+
+## 🏗️ Architecture Principles
+
+- **Feature-First / Vertical Slice Architecture**
 - **責務分離**: View / Model / Store / Service を明確に分離
-- **単一実装**: 過度なラッパー・多段継承を避け、単一の実装・管理点に集約
-- **既存優先**: 既存の設計・コード・パッケージを優先利用（再発明を避ける）
-- **実用性優先**: オーバーエンジニアリングを避け、容易性・可読性・保守性・拡張性を重視
+- **単一実装**: 過度なラッパー・多段継承を避ける
+- **既存優先**: 既存コード・パッケージを優先利用
+- **実用性優先**: 容易性・可読性・保守性・拡張性を重視
 
 ---
 
-# Swift Coding Standards
-- Swift公式ガイドに従い、可読性と明瞭性を最優先
+## 📝 Swift Coding Standards
+
 - インデントはスペース4つ
 - 命名は説明的に、必要な型情報を明示
-- 関数には日本語コメントで意図を補足
-- Swiftファイル（.swift）はSwift言語のみで記述（他言語・独自記法の混入を防止）
+- 日本語コメントで意図を補足
+- Viewファイルは項目の内容が分かる日本語コメント
+- Swiftファイル（.swift）はSwift言語のみで記述
 
 ---
 
-# AI Work Efficiency System
-**重要: 作業開始前に必ず `.copilot/` ディレクトリを参照すること**
+## 📂 AI Work Efficiency System
 
-## 作業規模別の参照フロー
+**作業開始前に必ず `.copilot/` ディレクトリを参照**
 
-### 小規模変更（単一ファイル、100行以内）
+### 作業規模別フロー
+
+#### 小規模変更（100行以内）
 1. `.copilot/quick-ref.md` で実装パターン確認
-2. 直接実装
-3. `.copilot/changelog.md` に記録
+2. 実装
+3. 「バージョン管理してください」← AI自動実行
 
-### 中規模変更（複数ファイル、新機能）
+#### 中規模変更（新機能）
 1. `.copilot/structure-map.md` で影響範囲確認
 2. `.copilot/prompts/add-feature.md` の手順に従う
-3. 関連する `.copilot/components/*.md` を参照
-4. `.copilot/changelog.md` に記録
+3. 実装
+4. 「バージョン管理してください」← AI自動実行
 
-### 大規模変更（リファクタリング）
+#### 大規模変更（リファクタリング）
 1. `.copilot/structure-map.md` で全体像把握
 2. `.copilot/prompts/refactor-component.md` の手順に従う
-3. `.copilot/task-template.md` で作業を複数フェーズに分割
-4. `.copilot/structure-map.md` を更新
-5. `.copilot/changelog.md` に詳細記録
+3. フェーズ分割して実装
+4. 各フェーズ完了時に「バージョン管理してください」← AI自動実行
 
 ---
 
-# 重要な実装パターン
+## 📚 参考資料
 
-## アニメーション（合格数・総出題数）
-```swift
-// 値変更前に保存 → 変更 → 変化検出してアニメーション
-let oldValue = currentValue
-currentValue += 1
-if currentValue > oldValue {
-    shouldAnimate = true
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-        self.shouldAnimate = false
-    }
-}
-```
-
-## カード分離パターン
-問題カード・選択肢カード・分からないカードは独立したセクションとして表示。
-各セクションに「選択肢」「その他」などのラベルを付ける。
-
-## 状態管理
-- @EnvironmentObject: QuizSettings, ScoreStore, WordScoreStore, CurrentCSV
-- @State: View内部の一時的な状態
-- UserDefaults: 永続化が必要な設定
+- **AI作業ガイド**: `.copilot/README.md`
+- **自動化ガイド**: `.copilot/AI-TRIGGER-GUIDE.md`
+- **アーキテクチャ**: `.copilot/structure-map.md`
+- **実装パターン**: `.copilot/quick-ref.md`
+- **変更履歴**: `.copilot/changelog.md`
 
 ---
 
-# トラブルシューティング
-問題発生時は以下を確認：
-1. `.copilot/changelog.md` で最近の変更履歴を確認
-2. `.copilot/prompts/fix-bug.md` の手順に従う
-3. 該当する `docs/仕様書/*.md` を参照
+## 🚫 禁止事項
+
+- `.copilot/` を参照せずに大規模変更
+- `changelog.md` 更新忘れ
+- `structure-map.md` との不整合放置
+- 非推奨構文の使用
 
 ---
 
-# 必須の作業ルール
+## 🎯 セッション開始時の推奨宣言
 
-## 禁止事項
-- `.copilot/` を参照せずに大規模変更を行う
-- changelog.md の更新を忘れる
-- 仕様書（`docs/仕様書/`）なしでコンポーネントを分割
-- structure-map.md と実装の不整合を放置
-
----
-
-# 参考資料
-- AI作業ガイド: `.copilot/README.md`
-- アーキテクチャ: `.copilot/structure-map.md`
-- 実装パターン: `.copilot/quick-ref.md`
-- 編集ガイド: `docs/仕様書/00_編集ガイド.md`
-
----
-
-# セッション開始時の推奨宣言
 ```
 「.copilot/structure-map.md を確認してください」
-「小規模変更です。quick-ref.md を参照してください」
-「新機能追加です。prompts/add-feature.md の手順に従ってください」
-「完了後、changelog.md に今回の変更を記録してください」
+「バージョン管理してください」← 最も重要！
 ```
+
+**「バージョン管理してください」と言うだけで、すべてが自動化されています！**
