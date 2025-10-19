@@ -16,6 +16,13 @@ struct QuizView: View {
     // 選択肢関連の状態（簡易実装: 現在表示中の問題に対する選択を保持）
     @State private var selectedChoiceID: UUID? = nil
 
+    // 単純な選択肢モデル
+    private struct Choice: Identifiable, Hashable {
+        let id: UUID
+        let text: String
+        let isCorrect: Bool
+    }
+
     var body: some View {
         // NavigationView は呼び出し元（ContentView）の NavigationView と競合するため除去
         VStack(spacing: 12) {
@@ -45,7 +52,7 @@ struct QuizView: View {
 
                 VStack(spacing: 10) {
                     // 選択肢カード群
-                    ForEach(choices, id: \.(id)) { c in
+                    ForEach(choices) { c in
                         ChoiceCardView(
                             id: c.id,
                             text: c.text,
@@ -96,7 +103,7 @@ struct QuizView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: loadSampleIfNeeded)
         // currentIndex が変わったら選択状態をリセットする
-        .onChange(of: currentIndex) { _ in
+        .onChange(of: currentIndex) {
             selectedChoiceID = nil
         }
         .padding(.top)
@@ -117,7 +124,7 @@ struct QuizView: View {
     }
 
     // 単純な選択肢生成: 正答に item.meaning、他は関連語や他問題の意味から拝借
-    private func makeChoices(for item: QuestionItem) -> [(id: UUID, text: String, isCorrect: Bool)] {
+    private func makeChoices(for item: QuestionItem) -> [Choice] {
         var pool: [String] = []
         pool.append(contentsOf: item.relatedWords)
         pool.append(contentsOf: items.map { $0.meaning })
@@ -136,7 +143,7 @@ struct QuizView: View {
         let insertIndex = Int.random(in: 0...options.count)
         options.insert(item.meaning, at: insertIndex)
 
-        return options.map { text in (UUID(), text, text == item.meaning) }
+        return options.map { text in Choice(id: UUID(), text: text, isCorrect: text == item.meaning) }
     }
 
     private func loadSampleIfNeeded() {

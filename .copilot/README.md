@@ -1,368 +1,264 @@
-# QuizView 変更履歴
+# 新機能追加プロンプト
 
-最終更新: 2025年10月19日
+## 使用タイミング
+- 新しい画面や機能を追加する時
+- 既存機能を拡張する時
+- 新しいデータモデルを追加する時
 
----
+## ステップ1: 要件の明確化
 
-## 2025-10-19: Git統合ワークフローとバージョン管理の実装
-
-### 背景
-ユーザーのGit知識がなくても、AIが自動的にGit操作を行い、安全な開発を実現する仕組みを実装。
-また、変更規模に応じた自動バージョニングを導入。
-
-### 実装内容
-
-#### 1. .copilot/prompts/ai-git-workflow.md（新規作成）
-AIが自動的にGit操作を行うワークフローを定義：
-
-**AIの自動実行内容:**
-- ✅ Gitブランチ作成（feature/fix/refactor/experiment）
-- ✅ 各ステップでのコミット（チェックポイント作成）
-- ✅ ビルド・テスト確認
-- ✅ 問題発生時の自動ロールバック（5秒）
-- ✅ changelog.md の自動更新
-- ✅ バージョンタグの自動作成
-
-**コミットメッセージフォーマット:**
-- 絵文字プレフィックス（✨新機能、🐛修正、♻️リファクタ、🧪実験など）
-- 詳細な変更内容（箇条書き）
-- ビルド・テスト結果の明記
-- 影響範囲とコミットIDの記載
-
-**エラー時の自動対応:**
-- ビルドエラー検出 → 自動ロールバック → 原因分析 → 代替案提示
-- テスト失敗検出 → 自動ロールバック → 失敗理由報告
-- ユーザーの「動かない」報告 → 即座にロールバック
-
-**ブランチ命名規則:**
 ```
-feature-<機能名>-<日付>     # 機能追加
-fix-<問題名>-<日付>          # バグ修正
-refactor-<対象>-<日付>       # リファクタリング
-experiment-<内容>-<日付>     # 実験
+以下を明確にしてください：
+1. 何を実現したいか（目的）
+2. どのような画面・UIが必要か
+3. どのようなデータを扱うか
+4. 既存のどの機能と連携するか
 ```
 
-#### 2. .copilot/prompts/version-management.md（新規作成）
-Semantic Versioning (SemVer) に準拠したバージョン管理ルール：
+## ステップ2: 影響範囲の調査
 
-**バージョン番号の決定:**
-- 小規模機能追加: MINOR +1（v0.1.0 → v0.2.0）
-- 大規模機能追加: MAJOR +1（v0.9.0 → v1.0.0）
-- 小規模修正: PATCH +1（v0.2.0 → v0.2.1）
-- 大規模修正: MINOR +1（v0.2.5 → v0.3.0）
-
-**変更規模の定義:**
-- 小規模機能: 1-3ファイル、1-3時間
-- 大規模機能: 5+ファイル、4時間以上
-- 小規模修正: バグ修正、30分-1時間
-- 大規模修正: ロジック変更、2-4時間
-
-**AIの自動バージョニング:**
-1. 変更規模を自動判定（ファイル数、行数、所要時間）
-2. 現在のバージョンをGitタグから取得
-3. 新しいバージョンを計算
-4. Gitタグを自動作成（注釈付き）
-5. changelog.md を自動更新
-6. ユーザーに次回予定バージョンを報告
-
-#### 3. .copilot/prompts/large-scale-refactoring.md（Git統合版に更新）
-既存のリファクタリングプロンプトにGit統合ワークフローを組み込み：
-
-**更新内容:**
-- プロンプト0（事前準備）にGitブランチ作成を追加
-- 各ステップでのGitコミット手順を明記
-- ロールバックコマンドを各ステップに追加
-- 完了後のバージョンタグ作成手順を追加
-
-**Git操作の自動化:**
-```bash
-# 作業開始
-git checkout -b refactor-quiz-view-20251019
-git commit --allow-empty -m "開始: リファクタリング"
-
-# 各ステップ
-git add <変更ファイル>
-xcodebuild clean build  # 確認
-git commit -m "✅ Phase1完了: ..."
-
-# 問題発生時
-git reset --hard HEAD~1  # 5秒で復旧
-
-# 完了時
-git tag -a "v1.0.0" -m "v1.0.0: リファクタリング完了"
+```
+`.copilot/structure-map.md` を確認し、以下を特定してください：
+1. 影響を受ける既存ファイル
+2. 利用できる既存コンポーネント
+3. 新規作成が必要なファイル
+4. 変更が必要な @EnvironmentObject
 ```
 
-#### 4. .copilot/README.md（更新）
-Git統合ワークフローとバージョン管理への参照を追加：
+## ステップ3: 設計
 
-**prompts/ ディレクトリ構成の更新:**
+### データモデル設計
 ```
-prompts/
-├── ai-git-workflow.md       # 新規
-├── version-management.md    # 新規
-├── large-scale-refactoring.md  # Git統合版に更新
-├── refactor-component.md
-├── add-feature.md
-└── fix-bug.md
+必要なデータ構造を設計：
+- struct/class名
+- プロパティとその型
+- Codable/Identifiable の必要性
+- デフォルト値
 ```
 
-**タスク別の指示例の更新:**
-- 新機能追加（Git統合）
-- バグ修正（Git統合）
-- 実験的な変更（Git統合）
-- 大規模リファクタリング（Git統合版）
-
-### ユーザーの利点
-
-#### 開発効率の大幅向上
-| 作業 | 従来（手動） | Git統合後 | 削減時間 |
-|------|------------|-----------|---------|
-| Gitブランチ作成 | 30秒 | 自動 | 100% |
-| 各ステップでコミット | 各30秒 × 10 | 自動 | 100% |
-| ビルド確認 | 各2分 × 10 | 自動 | 100% |
-| 問題時のロールバック | 5-30分 | 5秒 | 99% |
-| **合計（10ステップ）** | **60分** | **5分** | **92%削減** |
-
-#### Git学習コストゼロ
-- Gitコマンドを覚える必要なし
-- 自然言語で指示するだけ
-- AIが全てのGit操作を自動実行
-
-#### 安全性の大幅向上
-- 各ステップで自動的にチェックポイント作成
-- 問題発生時は5秒で前の状態に復旧
-- 失敗への恐怖がゼロ
-
-#### バージョン管理の自動化
-- バージョン番号を考える必要なし
-- AIが変更規模を判定して適切なバージョンを提案
-- changelog.md も自動更新
-
-### 使用例
-
-#### 例1: 小規模機能追加
+### UI設計
 ```
-ユーザー: 「合格数のアニメーションを追加してください。Git統合ワークフローで」
-
-AI実行:
-1. ブランチ作成: feature-animation-20251019
-2. QuizView.swift 変更 → ビルド → コミット
-3. changelog.md 更新
-4. バージョンタグ: v0.2.0 (MINOR +1)
-5. 完了報告
-
-所要時間: 15分（従来: 30分）
+画面構成を設計：
+- メインView
+- サブコンポーネント
+- 再利用できる既存コンポーネント
+- 新規作成が必要なコンポーネント
 ```
 
-#### 例2: バグ修正
+### 状態管理設計
 ```
-ユーザー: 「アニメーション二重発火を修正してください」
-
-AI実行:
-1. ブランチ作成: fix-double-animation-20251019
-2. 問題特定 → 修正 → ビルド → コミット
-3. changelog.md 更新
-4. バージョンタグ: v0.2.1 (PATCH +1)
-5. 完了報告
-
-所要時間: 10分（従来: 25分）
+状態の持ち方を決定：
+- @State: View内部の状態
+- @EnvironmentObject: アプリ全体で共有
+- @ObservedObject/@StateObject: ViewModel
+- UserDefaults/FileManager: 永続化
 ```
 
-#### 例3: 実験
+## ステップ4: 実装計画
+
 ```
-ユーザー: 「アニメーション速度を2倍にしてみて。気に入らなければ戻して」
+`.copilot/task-template.md` を使用して、以下の順で実装計画を立ててください：
 
-AI実行:
-1. ブランチ作成: experiment-animation-speed
-2. 変更 → ビルド → コミット
-3. ユーザー確認待ち
+### Phase 1: データモデル
+1. データ構造の定義
+2. サンプルデータの作成
+3. 単体テスト（必要に応じて）
 
-ユーザー: 「元に戻して」
+### Phase 2: ビジネスロジック
+1. データ読み込み処理
+2. データ変換・加工処理
+3. 永続化処理（必要に応じて）
 
-AI実行:
-git reset --hard HEAD~1  # 5秒で復旧
-```
+### Phase 3: UI実装
+1. プロトタイプ（静的データ表示）
+2. 実データとの接続
+3. インタラクション実装
+4. アニメーション・エフェクト
 
-### 今後の運用
-
-#### すべての開発作業でGit統合ワークフローを使用
-```
-「<作業内容>。Git統合ワークフローで」
-```
-
-#### AIが自動実行すること
-- ブランチ作成・コミット・ロールバック
-- ビルド・テスト確認
-- changelog.md 更新
-- バージョンタグ作成
-
-#### ユーザーがすること
-- 自然言語で指示
-- 問題時は「中断してロールバック」
-- 各フェーズ完了後に動作確認
-
-### ファイル構成
-```
-.copilot/prompts/
-├── ai-git-workflow.md           # 新規: Git統合ワークフロー
-├── version-management.md        # 新規: バージョン管理ルール
-└── large-scale-refactoring.md  # 更新: Git統合版
-
-.copilot/
-├── README.md                    # 更新: 参照追加
-└── changelog.md                 # 更新: 今回の実装記録
+### Phase 4: 統合
+1. 既存画面からのナビゲーション
+2. 既存データとの連携
+3. エラーハンドリング
 ```
 
-### 教訓と改善点
+## ステップ5: 非推奨構文チェック（必須）
 
-**実装前の課題:**
-- 手動Git操作に時間がかかる
-- ロールバックに30分かかる
-- バージョン番号の付け方が不明確
+**実装前に必ず確認:**
+1. `.copilot/deprecated-patterns.md` を確認
+2. `.copilot/quick-ref.md` の非推奨セクションを確認
+3. iOS 17以降の非推奨構文を使用しない
 
-**実装後の改善:**
-- Git操作が完全自動化（時間ゼロ）
-- ロールバック5秒
-- バージョンが自動決定
+**特に注意すべきパターン:**
+```swift
+// ❌ 絶対に使用禁止
+.onChange(of: value) { _ in }
+.onChange(of: value) { newValue in }
 
-**今回の実装で得られた知見:**
-- AIによるGit自動化は完全に実現可能
-- ユーザーはGit知識不要で安全な開発が可能
-- バージョニングも自動化できる
-
----
-
-## 2025-10-19: 大規模リファクタリング失敗分析と実現方策の策定
-
-### 作成されたファイル
-- `.copilot/structure-map.md` - プロジェクト構造マップ
-- `.copilot/quick-ref.md` - クイックリファレンス
-- `.copilot/changelog.md` - 変更履歴（このファイル）
-- `.copilot/components/*.md` - コンポーネント仕様書（作成予定）
-
-### 目的
-AI（Copilot Chat）がトークン制限下でも効率的に作業できるよう、参照すべきドキュメントを整備。
-
----
-
-## 2025-10-18: アニメーション効果追加
-
-### 変更ファイル
-- `SimpleWord/QuizView.swift`
-
-### 変更内容
-1. **新しい単語追加時の光るエフェクト**
-   - 合格数と総出題数に対して、値が増加した際に光るアニメーション効果を追加
-   - スケールアップ（1.3倍）とスプリングアニメーションで視覚的なフィードバック
-
-2. **アニメーション状態変数の追加**
-   - `shouldAnimatePassedCount: Bool` - 合格数アニメーション
-   - `shouldAnimateTotalCount: Bool` - 総出題数アニメーション
-   - `previousPassedCount: Int` - 前回の合格数
-   - `previousTotalCount: Int` - 前回の総出題数
-
-3. **アニメーショントリガー実装**
-   - `select(_:)` 関数内で値変更前後を比較してアニメーションをトリガー
-   - `giveUp()` 関数でも総出題数のアニメーションをトリガー
-   - `evaluateBatch()` で新しい単語追加時にアニメーションをトリガー
-
-### 変更箇所
-- **Line 150-170**: `select(_:)` 関数内のアニメーショントリガー処理
-- **Line 370-390**: 統計表示部分のアニメーション適用
-- **Line 880-900**: `giveUp()` 関数のアニメーション処理
-- **Line 920-940**: `evaluateBatch()` 関数のバッチサイズ増加時のアニメーション
-
-### 依存
-- `shouldAnimatePassedCount` - 合格数の光るエフェクト制御
-- `shouldAnimateTotalCount` - 総出題数の光るエフェクト制御
-
----
-
-## 2025-10-18: 表示改善（バッチ個数削除、学習モード表示）
-
-### 変更ファイル
-- `SimpleWord/QuizView.swift`
-
-### 変更内容
-1. **バッチ個数の表示を削除**
-   - 統計表示から「バッチ個数」を削除
-
-2. **CSV名の右側に学習モードを表示**
-   - CSV名の行に「学習モード」を追加
-   - 設定されている学習モードを青色で表示
-
-3. **問題カード、選択肢カード、分からないカードの分離**
-   - 問題カードを独立して表示
-   - 選択肢カードを「選択肢」というラベル付きのセクションとして独立表示
-   - 分からないカードを「その他」というラベル付きのセクションとして独立表示
-
-4. **回答後の解説表示の改善**
-   - 語源（etymology）を常に全文表示するように変更
-   - 「もっと見る」ボタンを押さなくても、語句、読み、語源がすぐに見えるように
-
-### 変更箇所
-- **Line 350-380**: 統計表示カードの改善
-- **Line 1050-1080**: 問題表示部分のカード分離
-- **Line 120-150**: ChoiceView内の解説表示改善
-
----
-
-## 2025-10-XX: Choice構造体の分離（完了）
-
-### 変更ファイル
-- `SimpleWord/QuizModels.swift` （新規作成）
-- `SimpleWord/QuizView.swift`
-
-### 変更内容
-- QuizView内のChoice構造体をQuizModels.swiftに分離
-- 複数のViewで共有するモデルを一箇所に集約
-
-### 目的
-- 保守性向上
-- 再利用性向上
-
----
-
-## 今後の予定
-
-### Phase 1: View コンポーネント分割
-- [ ] QuizStatisticsView.swift - 統計表示
-- [ ] QuestionCardView.swift - 問題カード
-- [ ] ChoiceCardView.swift - 選択肢カード
-- [ ] DontKnowCardView.swift - 分からないカード
-- [ ] QuizNavigationButtonsView.swift - ナビゲーションボタン
-
-### Phase 2: ViewModel 分割
-- [ ] QuizViewModel.swift - ビジネスロジック
-
-### Phase 3: 結果表示分割
-- [ ] QuizResultView.swift - 結果表示
-
----
-
-## 変更ログフォーマット
-
-各変更時は以下の形式で記録：
-
-```markdown
-## YYYY-MM-DD: 変更タイトル
-
-### 変更ファイル
-- ファイルパス1
-- ファイルパス2
-
-### 変更内容
-1. 変更点1の説明
-2. 変更点2の説明
-
-### 変更箇所
-- **Line XX-YY**: 具体的な変更箇所の説明
-
-### 依存
-- 依存するファイル・変数・関数
-
-### 目的
-なぜこの変更が必要だったのか
+// ✅ 必ず使用
+.onChange(of: value) { }
+.onChange(of: value) { oldValue, newValue in }
 ```
 
----
+## ステップ6: 段階的実装
+
+### Phase 1: データモデル
+```swift
+// 1. 新しいファイル作成: [ModelName].swift
+struct [ModelName]: Identifiable, Codable {
+    let id: UUID
+    // ... プロパティ
+    
+    init(...) {
+        // ... 初期化
+    }
+}
+
+// 2. サンプルデータ
+extension [ModelName] {
+    static let sample = [ModelName](...)
+}
+```
+
+### Phase 2: ビジネスロジック
+```swift
+// 1. ViewModel または Store 作成
+class [FeatureName]Store: ObservableObject {
+    @Published var items: [ModelName] = []
+    
+    func load() {
+        // データ読み込み
+    }
+    
+    func save() {
+        // データ保存
+    }
+}
+
+// 2. App.swift に登録
+@StateObject private var [featureName]Store = [FeatureName]Store()
+
+.environmentObject([featureName]Store)
+```
+
+### Phase 3: UI実装
+```swift
+// 1. メインView作成
+struct [FeatureName]View: View {
+    @EnvironmentObject var store: [FeatureName]Store
+    
+    var body: some View {
+        // プロトタイプ実装
+    }
+}
+
+// 2. プレビュー追加
+#Preview {
+    [FeatureName]View()
+        .environmentObject([FeatureName]Store())
+}
+
+// 3. 段階的に機能追加
+```
+
+### Phase 4: 統合
+```swift
+// 既存のナビゲーションに追加
+NavigationLink(destination: [FeatureName]View()) {
+    Text("新機能")
+}
+```
+
+## ステップ6: テストと検証
+
+```
+以下を確認してください：
+- [ ] データの読み込み・保存が正常に動作する
+- [ ] UI が仕様通りに表示される
+- [ ] インタラクションが期待通りに動作する
+- [ ] エラーケースが適切に処理される
+- [ ] 既存機能に影響がない
+- [ ] パフォーマンスに問題がない
+```
+
+## ステップ7: ドキュメント更新
+
+```
+以下を更新してください：
+1. `.copilot/structure-map.md` に新機能を追加
+2. `.copilot/changelog.md` に実装記録を追加
+3. 新しいパターンがあれば `.copilot/quick-ref.md` に追加
+4. 新しいコンポーネントの仕様書を `.copilot/components/` に作成
+```
+
+## 例: 単語帳機能の追加
+
+### Phase 1: データモデル
+```swift
+// WordSet.swift
+struct WordSet: Identifiable, Codable {
+    let id: UUID
+    var name: String
+    var words: [QuestionItem]
+    var createdAt: Date
+}
+```
+
+### Phase 2: ビジネスロジック
+```swift
+// WordSetStore.swift
+class WordSetStore: ObservableObject {
+    @Published var wordSets: [WordSet] = []
+    
+    func addWordSet(_ wordSet: WordSet) { ... }
+    func removeWordSet(id: UUID) { ... }
+    func load() { ... }
+    func save() { ... }
+}
+```
+
+### Phase 3: UI実装
+```swift
+// WordSetListView.swift
+struct WordSetListView: View {
+    @EnvironmentObject var store: WordSetStore
+    
+    var body: some View {
+        List(store.wordSets) { wordSet in
+            NavigationLink(destination: WordSetDetailView(wordSet: wordSet)) {
+                Text(wordSet.name)
+            }
+        }
+    }
+}
+```
+
+### Phase 4: 統合
+```swift
+// ContentView.swift に追加
+NavigationLink(destination: WordSetListView()) {
+    Label("単語帳", systemImage: "book")
+}
+```
+
+## チェックリスト
+
+- [ ] 要件を明確にした
+- [ ] structure-map.md で影響範囲を確認した
+- [ ] データモデルを設計した
+- [ ] UI設計を行った
+- [ ] 状態管理方法を決定した
+- [ ] 段階的に実装した
+- [ ] 各Phaseでテストした
+- [ ] 既存機能への影響を確認した
+- [ ] ドキュメントを更新した
+
+## トラブルシューティング
+
+### Preview が動作しない
+→ 必要な @EnvironmentObject を Preview に渡してください
+
+### データが保存されない
+→ save() メソッドが適切なタイミングで呼ばれているか確認してください
+
+### ナビゲーションが動作しない
+→ NavigationStack/NavigationView で囲まれているか確認してください

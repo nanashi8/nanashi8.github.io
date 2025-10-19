@@ -5,6 +5,7 @@
 
 import Foundation
 import Combine
+@testable import SimpleWord
 
 // 学習モード: 通常 / 復習 / 補習（補修）
 public enum LearningMode: String, Codable, CaseIterable, Identifiable {

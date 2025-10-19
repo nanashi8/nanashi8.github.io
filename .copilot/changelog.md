@@ -1,6 +1,128 @@
 # QuizView 変更履歴
 
-最終更新: 2025年10月18日
+最終更新: 2025年10月19日
+
+---
+
+## 2025-10-19: 非推奨構文対策システムの実装
+
+### 目的
+iOS 17の`onChange`非推奨警告を修正し、今後の非推奨構文を自動検出・防止する仕組みを構築。
+
+### 実装した対策
+
+#### 1. ドキュメント整備
+- **`.copilot/deprecated-patterns.md`** (新規作成)
+  - 非推奨パターンの一覧と正しい書き方
+  - iOS 17以降の`onChange`構文ルール
+  - チェックリストと検出方法
+  
+- **`.copilot/quick-ref.md`** (更新)
+  - 非推奨パターンセクションを追加
+  - 実装時の即座な参照用
+
+- **`.copilot/prompts/code-review.md`** (新規作成)
+  - コード生成・修正後のレビュー手順
+  - 自動検証コマンド
+  - 優先度別の対応ガイド
+
+#### 2. 自動チェックツール
+- **`.swiftlint.yml`** (新規作成)
+  - カスタムルールで非推奨構文を自動検出
+  - `onChange`の古い構文をエラーとして検出
+  - `NavigationView`の使用を警告
+
+- **`.git/hooks/pre-commit`** (新規作成)
+  - コミット前に非推奨構文を自動チェック
+  - エラーがある場合はコミットを中止
+  - 実行権限付与済み
+
+- **`.github/workflows/code-quality.yml`** (新規作成)
+  - GitHub ActionsでCI/CD時に自動チェック
+  - SwiftLintの実行
+  - ビルド警告の検出
+
+#### 3. 実際の修正
+- **`SimpleWord/QuizView.swift`** (修正)
+  - `onChange(of: currentIndex) { _ in }` → `onChange(of: currentIndex) { }`
+  - iOS 17の新しい構文に対応
+
+### 効果
+1. **即時効果**: iOS 17の非推奨警告を完全に解消
+2. **予防効果**: 今後のコード生成時に非推奨構文を自動的に回避
+3. **検出効果**: コミット前・CI/CD時に自動検出
+4. **教育効果**: AIモデルが参照すべきルールを明文化
+
+### AIへの指示
+今後のコード生成時は以下を必ず実行：
+1. `.copilot/deprecated-patterns.md` を確認
+2. `.copilot/quick-ref.md` の非推奨セクションを参照
+3. コード生成後に `.copilot/prompts/code-review.md` のチェックリストを実行
+
+
+---
+
+## 2025-10-19: QuizView レイアウト復元
+
+### 目的
+- 分割後に簡素化されてしまった `QuizView` を、分割前のレイアウト（問題カード・選択肢群・「分からない」カード・前へ/次へ・進捗）に近い形で復元し、リファクタ後のコンポーネント構造で動作するようにする。
+
+### 変更ファイル
+- `SimpleWord/QuizView.swift` （更新）
+- `SimpleWord/ChoiceCardView.swift` （新規追加）
+
+### 変更内容（概要）
+1. `QuizView` に選択肢表示ロジックを復元（簡易版）し、`ChoiceCardView` と `DontKnowCardView` を組み合わせて表示するようにした。
+2. 進捗表示（"問題: X/Y"）を追加し、問題移動時に選択状態をリセットする処理を追加。
+3. 選択肢の生成は現在は簡易的なダミー実装（既存データから候補を作成）になっているため、将来的に `QuizEngine` に置き換えることを推奨。
+
+### 注意事項 / 次のステップ
+- 選択後のスコア更新やアニメーションは未実装（必要なら続けて実装します）。
+- 実機またはシミュレータでの動作確認を行ってください（Xcode でのビルドを推奨）。
+
+---
+
+## 今後の予定
+
+### Phase 1: View コンポーネント分割
+- [ ] QuizStatisticsView.swift - 統計表示
+- [ ] QuestionCardView.swift - 問題カード
+- [ ] ChoiceCardView.swift - 選択肢カード
+- [ ] DontKnowCardView.swift - 分からないカード
+- [ ] QuizNavigationButtonsView.swift - ナビゲーションボタン
+
+### Phase 2: ViewModel 分割
+- [ ] QuizViewModel.swift - ビジネスロジック
+
+### Phase 3: 結果表示分割
+- [ ] QuizResultView.swift - 結果表示
+
+---
+
+## 変更ログフォーマット
+
+各変更時は以下の形式で記録：
+
+```markdown
+## YYYY-MM-DD: 変更タイトル
+
+### 変更ファイル
+- ファイルパス1
+- ファイルパス2
+
+### 変更内容
+1. 変更点1の説明
+2. 変更点2の説明
+
+### 変更箇所
+- **Line XX-YY**: 具体的な変更箇所の説明
+
+### 依存
+- 依存するファイル・変数・関数
+
+### 目的
+なぜこの変更が必要だったのか
+```
 
 ---
 
@@ -93,68 +215,3 @@ AI（Copilot Chat）がトークン制限下でも効率的に作業できるよ
 - 保守性向上
 - 再利用性向上
 
----
-
-## 2025-10-19: QuizView レイアウト復元
-
-### 目的
-- 分割後に簡素化されてしまった `QuizView` を、分割前のレイアウト（問題カード・選択肢群・「分からない」カード・前へ/次へ・進捗）に近い形で復元し、リファクタ後のコンポーネント構造で動作するようにする。
-
-### 変更ファイル
-- `SimpleWord/QuizView.swift` （更新）
-- `SimpleWord/ChoiceCardView.swift` （新規追加）
-
-### 変更内容（概要）
-1. `QuizView` に選択肢表示ロジックを復元（簡易版）し、`ChoiceCardView` と `DontKnowCardView` を組み合わせて表示するようにした。
-2. 進捗表示（"問題: X/Y"）を追加し、問題移動時に選択状態をリセットする処理を追加。
-3. 選択肢の生成は現在は簡易的なダミー実装（既存データから候補を作成）になっているため、将来的に `QuizEngine` に置き換えることを推奨。
-
-### 注意事項 / 次のステップ
-- 選択後のスコア更新やアニメーションは未実装（必要なら続けて実装します）。
-- 実機またはシミュレータでの動作確認を行ってください（Xcode でのビルドを推奨）。
-
----
-
-## 今後の予定
-
-### Phase 1: View コンポーネント分割
-- [ ] QuizStatisticsView.swift - 統計表示
-- [ ] QuestionCardView.swift - 問題カード
-- [ ] ChoiceCardView.swift - 選択肢カード
-- [ ] DontKnowCardView.swift - 分からないカード
-- [ ] QuizNavigationButtonsView.swift - ナビゲーションボタン
-
-### Phase 2: ViewModel 分割
-- [ ] QuizViewModel.swift - ビジネスロジック
-
-### Phase 3: 結果表示分割
-- [ ] QuizResultView.swift - 結果表示
-
----
-
-## 変更ログフォーマット
-
-各変更時は以下の形式で記録：
-
-```markdown
-## YYYY-MM-DD: 変更タイトル
-
-### 変更ファイル
-- ファイルパス1
-- ファイルパス2
-
-### 変更内容
-1. 変更点1の説明
-2. 変更点2の説明
-
-### 変更箇所
-- **Line XX-YY**: 具体的な変更箇所の説明
-
-### 依存
-- 依存するファイル・変数・関数
-
-### 目的
-なぜこの変更が必要だったのか
-```
-
----

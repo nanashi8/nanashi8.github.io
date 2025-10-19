@@ -1,246 +1,305 @@
-# 新機能追加プロンプト
+# バグ修正プロンプト
 
 ## 使用タイミング
-- 新しい画面や機能を追加する時
-- 既存機能を拡張する時
-- 新しいデータモデルを追加する時
+- アプリがクラッシュする時
+- 期待通りに動作しない時
+- UIが正しく表示されない時
+- データが保存されない時
 
-## ステップ1: 要件の明確化
+## ステップ1: 問題の特定
 
 ```
 以下を明確にしてください：
-1. 何を実現したいか（目的）
-2. どのような画面・UIが必要か
-3. どのようなデータを扱うか
-4. 既存のどの機能と連携するか
+1. 何が起きているか（現象）
+2. 何が期待されるか（期待値）
+3. いつ発生するか（再現手順）
+4. エラーメッセージ（あれば）
 ```
 
-## ステップ2: 影響範囲の調査
+## ステップ2: 関連コードの調査
+
+```
+`.copilot/changelog.md` を確認し、以下を特定してください：
+1. 最近変更された関連ファイル
+2. 同じ箇所の過去の修正履歴
+3. 関連する機能の変更履歴
+```
 
 ```
 `.copilot/structure-map.md` を確認し、以下を特定してください：
-1. 影響を受ける既存ファイル
-2. 利用できる既存コンポーネント
-3. 新規作成が必要なファイル
-4. 変更が必要な @EnvironmentObject
+1. 問題が発生しているファイル
+2. 依存している他のファイル
+3. 影響を受ける可能性のあるコンポーネント
 ```
 
-## ステップ3: 設計
+## ステップ3: 原因の仮説
 
-### データモデル設計
-```
-必要なデータ構造を設計：
-- struct/class名
-- プロパティとその型
-- Codable/Identifiable の必要性
-- デフォルト値
-```
+### よくある原因パターン
 
-### UI設計
+#### 1. 状態管理の問題
 ```
-画面構成を設計：
-- メインView
-- サブコンポーネント
-- 再利用できる既存コンポーネント
-- 新規作成が必要なコンポーネント
+チェック項目：
+- [ ] @State/@Published の更新が UI に反映されていない
+- [ ] @Binding が正しく渡されていない
+- [ ] @EnvironmentObject が見つからない
+- [ ] 非同期更新が DispatchQueue.main で行われていない
 ```
 
-### 状態管理設計
+#### 2. データフローの問題
 ```
-状態の持ち方を決定：
-- @State: View内部の状態
-- @EnvironmentObject: アプリ全体で共有
-- @ObservedObject/@StateObject: ViewModel
-- UserDefaults/FileManager: 永続化
-```
-
-## ステップ4: 実装計画
-
-```
-`.copilot/task-template.md` を使用して、以下の順で実装計画を立ててください：
-
-### Phase 1: データモデル
-1. データ構造の定義
-2. サンプルデータの作成
-3. 単体テスト（必要に応じて）
-
-### Phase 2: ビジネスロジック
-1. データ読み込み処理
-2. データ変換・加工処理
-3. 永続化処理（必要に応じて）
-
-### Phase 3: UI実装
-1. プロトタイプ（静的データ表示）
-2. 実データとの接続
-3. インタラクション実装
-4. アニメーション・エフェクト
-
-### Phase 4: 統合
-1. 既存画面からのナビゲーション
-2. 既存データとの連携
-3. エラーハンドリング
+チェック項目：
+- [ ] nil チェックが不足している
+- [ ] 配列の範囲外アクセス
+- [ ] 型変換の失敗
+- [ ] データの読み込み順序の問題
 ```
 
-## ステップ5: 段階的実装
+#### 3. UI レイアウトの問題
+```
+チェック項目：
+- [ ] 制約の競合
+- [ ] フレームサイズの計算ミス
+- [ ] アニメーションのタイミング
+- [ ] 条件分岐の誤り
+```
 
-### Phase 1: データモデル
+#### 4. ライフサイクルの問題
+```
+チェック項目：
+- [ ] onAppear が複数回呼ばれる
+- [ ] onDisappear でクリーンアップしていない
+- [ ] タイマーやObserverが解放されていない
+- [ ] メモリリーク
+```
+
+## ステップ4: デバッグ手法
+
+### 1. ログ出力
 ```swift
-// 1. 新しいファイル作成: [ModelName].swift
-struct [ModelName]: Identifiable, Codable {
-    let id: UUID
-    // ... プロパティ
-    
-    init(...) {
-        // ... 初期化
-    }
-}
-
-// 2. サンプルデータ
-extension [ModelName] {
-    static let sample = [ModelName](...)
-}
+// 重要な箇所にログを追加
+print("🔍 [関数名] 変数名: \(変数)")
+print("⚠️ [関数名] エラー: \(error)")
 ```
 
-### Phase 2: ビジネスロジック
-```swift
-// 1. ViewModel または Store 作成
-class [FeatureName]Store: ObservableObject {
-    @Published var items: [ModelName] = []
-    
-    func load() {
-        // データ読み込み
-    }
-    
-    func save() {
-        // データ保存
-    }
-}
-
-// 2. App.swift に登録
-@StateObject private var [featureName]Store = [FeatureName]Store()
-
-.environmentObject([featureName]Store)
+### 2. ブレークポイント
+```
+1. Xcode で該当行にブレークポイントを設置
+2. 実行して変数の値を確認
+3. ステップ実行で処理の流れを追跡
 ```
 
-### Phase 3: UI実装
+### 3. Preview デバッグ
 ```swift
-// 1. メインView作成
-struct [FeatureName]View: View {
-    @EnvironmentObject var store: [FeatureName]Store
-    
-    var body: some View {
-        // プロトタイプ実装
-    }
-}
-
-// 2. プレビュー追加
 #Preview {
-    [FeatureName]View()
-        .environmentObject([FeatureName]Store())
+    // 問題が起きる状態を再現
+    let store = QuizSettings()
+    store.someValue = problemValue
+    
+    return QuizView()
+        .environmentObject(store)
 }
-
-// 3. 段階的に機能追加
 ```
 
-### Phase 4: 統合
+### 4. 単純化テスト
 ```swift
-// 既存のナビゲーションに追加
-NavigationLink(destination: [FeatureName]View()) {
-    Text("新機能")
+// 問題箇所を最小限のコードで再現
+struct TestView: View {
+    var body: some View {
+        // 問題が起きる最小限のコード
+    }
 }
 ```
 
-## ステップ6: テストと検証
+## ステップ5: 修正実装
+
+### パターン1: nil 安全性の追加
+```swift
+// Before
+let item = items[index]
+
+// After
+guard index < items.count else { return }
+let item = items[index]
+```
+
+### パターン2: 非同期処理の修正
+```swift
+// Before
+someAsyncFunction { result in
+    self.data = result  // ❌ メインスレッドでない可能性
+}
+
+// After
+someAsyncFunction { result in
+    DispatchQueue.main.async {
+        self.data = result  // ✅ メインスレッドで更新
+    }
+}
+```
+
+### パターン3: 状態更新の修正
+```swift
+// Before
+func updateValue() {
+    value = newValue
+    // アニメーションが動作しない
+}
+
+// After
+func updateValue() {
+    withAnimation {
+        value = newValue  // ✅ アニメーション付きで更新
+    }
+}
+```
+
+### パターン4: メモリリークの修正
+```swift
+// Before
+class ViewModel: ObservableObject {
+    var timer: Timer?
+    
+    func start() {
+        timer = Timer.scheduledTimer(...)  // ❌ 解放されない
+    }
+}
+
+// After
+class ViewModel: ObservableObject {
+    var timer: Timer?
+    
+    func start() {
+        timer = Timer.scheduledTimer(...)
+    }
+    
+    deinit {
+        timer?.invalidate()  // ✅ 解放時にクリーンアップ
+    }
+}
+```
+
+## ステップ6: 修正後の非推奨構文チェック（必須）
+
+**修正実装時に非推奨構文を使用していないか確認:**
+
+### 1. 非推奨パターンの確認
+```bash
+# 修正したファイルで非推奨構文をチェック
+grep "\.onChange(of:.*) { _ in" [修正したファイル]
+```
+
+### 2. よくある間違い
+```swift
+// ❌ バグ修正時に古い構文を使ってしまう例
+.onChange(of: selectedValue) { _ in
+    updateUI()  // 非推奨！
+}
+
+// ✅ 正しい修正
+.onChange(of: selectedValue) {
+    updateUI()
+}
+```
+
+### 3. 参照ドキュメント
+- `.copilot/deprecated-patterns.md` - 非推奨パターン一覧
+- `.copilot/quick-ref.md` - 正しい書き方の参照
+
+## ステップ7: 検証
 
 ```
 以下を確認してください：
-- [ ] データの読み込み・保存が正常に動作する
-- [ ] UI が仕様通りに表示される
-- [ ] インタラクションが期待通りに動作する
-- [ ] エラーケースが適切に処理される
-- [ ] 既存機能に影響がない
-- [ ] パフォーマンスに問題がない
+- [ ] 問題が解決した（再現手順で確認）
+- [ ] 他の機能に影響がない
+- [ ] エッジケースでも動作する
+- [ ] パフォーマンスが劣化していない
+```
+
+### エッジケースの確認
+```
+- [ ] 空のデータ
+- [ ] 大量のデータ
+- [ ] 極端な値（0, 負の数, 最大値）
+- [ ] 特殊文字・絵文字
+- [ ] ダークモード/ライトモード
+- [ ] 異なる画面サイズ
 ```
 
 ## ステップ7: ドキュメント更新
 
 ```
-以下を更新してください：
-1. `.copilot/structure-map.md` に新機能を追加
-2. `.copilot/changelog.md` に実装記録を追加
-3. 新しいパターンがあれば `.copilot/quick-ref.md` に追加
-4. 新しいコンポーネントの仕様書を `.copilot/components/` に作成
+`.copilot/changelog.md` に以下を記録してください：
+
+## 2025-XX-XX: [バグ修正タイトル]
+- ファイル: [ファイル名]
+- 問題: [問題の説明]
+- 原因: [根本原因]
+- 修正: [修正内容]
+- 影響範囲: [影響を受ける機能]
 ```
 
-## 例: 単語帳機能の追加
+## 実例: アニメーションが動作しないバグ
 
-### Phase 1: データモデル
+### 問題
+```
+合格数と総出題数の変化時に光るエフェクトが表示されない
+```
+
+### 調査
+```
+1. changelog.md 確認 → 最近アニメーション機能を追加
+2. QuizView.swift 確認 → shouldAnimate フラグが存在
+3. ログ追加 → フラグが true になっていない
+```
+
+### 原因
+```
+prepareBatch() 内でアニメーションをトリガーしているが、
+その直後に batchCorrect = 0 でリセットされるため、
+値の変化が検出されていない
+```
+
+### 修正
 ```swift
-// WordSet.swift
-struct WordSet: Identifiable, Codable {
-    let id: UUID
-    var name: String
-    var words: [QuestionItem]
-    var createdAt: Date
+// Before (prepareBatch内)
+let newPassedCount = batchCorrect  // この時点で0
+if newPassedCount > previousPassedCount { ... }
+self.batchCorrect = 0  // すぐリセット
+
+// After (select関数内)
+let oldBatchCorrect = batchCorrect
+batchCorrect += 1
+if batchCorrect > oldBatchCorrect {  // 変化を検出
+    shouldAnimatePassedCount = true
 }
 ```
 
-### Phase 2: ビジネスロジック
-```swift
-// WordSetStore.swift
-class WordSetStore: ObservableObject {
-    @Published var wordSets: [WordSet] = []
-    
-    func addWordSet(_ wordSet: WordSet) { ... }
-    func removeWordSet(id: UUID) { ... }
-    func load() { ... }
-    func save() { ... }
-}
+### 検証
 ```
-
-### Phase 3: UI実装
-```swift
-// WordSetListView.swift
-struct WordSetListView: View {
-    @EnvironmentObject var store: WordSetStore
-    
-    var body: some View {
-        List(store.wordSets) { wordSet in
-            NavigationLink(destination: WordSetDetailView(wordSet: wordSet)) {
-                Text(wordSet.name)
-            }
-        }
-    }
-}
-```
-
-### Phase 4: 統合
-```swift
-// ContentView.swift に追加
-NavigationLink(destination: WordSetListView()) {
-    Label("単語帳", systemImage: "book")
-}
+- [x] 正解時にアニメーションが表示される
+- [x] 誤答時は総出題数のみアニメーション
+- [x] 既存の正答率計算に影響なし
 ```
 
 ## チェックリスト
 
-- [ ] 要件を明確にした
-- [ ] structure-map.md で影響範囲を確認した
-- [ ] データモデルを設計した
-- [ ] UI設計を行った
-- [ ] 状態管理方法を決定した
-- [ ] 段階的に実装した
-- [ ] 各Phaseでテストした
-- [ ] 既存機能への影響を確認した
-- [ ] ドキュメントを更新した
+- [ ] 問題を明確に特定した
+- [ ] changelog.md で関連する変更履歴を確認した
+- [ ] 原因の仮説を立てた
+- [ ] デバッグ手法を使って原因を特定した
+- [ ] 修正を実装した
+- [ ] 問題が解決したことを確認した
+- [ ] エッジケースも確認した
+- [ ] 他の機能に影響がないことを確認した
+- [ ] changelog.md に記録した
 
 ## トラブルシューティング
 
-### Preview が動作しない
-→ 必要な @EnvironmentObject を Preview に渡してください
+### 修正しても問題が再発する
+→ 根本原因を修正できていない可能性。別の仮説を立ててください
 
-### データが保存されない
-→ save() メソッドが適切なタイミングで呼ばれているか確認してください
+### 他の機能が壊れた
+→ 修正の影響範囲が広すぎる。より局所的な修正を検討してください
 
-### ナビゲーションが動作しない
-→ NavigationStack/NavigationView で囲まれているか確認してください
+### 再現しない
+→ 環境依存の問題の可能性。デバイス、OS、設定を確認してください
