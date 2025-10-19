@@ -69,9 +69,79 @@ QuizView (1,100行超)
 
 ---
 
-## QuizView の現在の構造
+## QuizView v1.2.0 完全実装 (2025-10-19)
 
-### @State 変数（約30個）
+### ファイル構成
+```
+SimpleWord/
+├── QuizView.swift (264行) ✅ 完全実装
+│   ├── QuizOption (fileprivate) - 選択肢モデル
+│   ├── State管理 - 問題、選択肢、スコア、バッチ、UI
+│   ├── View構成
+│   │   ├── quizContentView
+│   │   ├── statsView
+│   │   ├── progressView
+│   │   ├── choicesSection
+│   │   └── finishedView
+│   └── ロジック
+│       ├── start(), prepareBatch(), prepareNextQuestion()
+│       ├── generateChoices(), handleChoice()
+│       └── startTimer(), restart()
+├── QuestionCardView.swift - 問題表示
+├── ChoiceCardView.swift - 選択肢表示
+├── DontKnowCardView.swift - 分からないカード
+└── QuizStatisticsView.swift - 統計表示
+```
+
+### 実装された全機能
+1. ✅ 適応型学習（WordScoreStore連携）
+2. ✅ バッチ管理（繰り返し、段階的進行）
+3. ✅ アニメーション（光るエフェクト）
+4. ✅ タイマー機能（制限時間、カウントダウン）
+5. ✅ 音声再生（AVSpeechSynthesizer）
+6. ✅ 自動遷移（設定による制御）
+7. ✅ CSV統合（CSVLoader）
+8. ✅ 完了画面（結果サマリー）
+
+### ビルド状態
+- ✅ BUILD SUCCEEDED
+- ✅ エラーなし
+- ✅ 警告なし
+
+---
+
+## 新しいアーキテクチャ (v1.1.0~)
+
+### Features/Quiz/ ディレクトリ構造
+```
+Features/Quiz/
+├── Models/
+│   └── QuizState.swift         # 状態管理モデル (NEW)
+├── Logic/
+│   └── QuizEngine.swift        # ビジネスロジック (NEW)
+└── Views/
+    └── (今後追加予定)
+```
+
+### QuizState モデル
+- `QuestionState`: 問題管理（items, pool, currentItem等）
+- `ChoiceState`: 選択肢管理（choices, selectedID等）
+- `ScoreState`: スコア管理（score, questionCount等）
+- `BatchState`: バッチ管理（batchSize, remediationMode等）
+- `UIState`: UI状態（アニメーション、タイマー）
+
+### QuizEngine サービス
+- `loadItems()`: CSV読み込み
+- `prepareBatch()`: バッチ準備
+- `prepareNextQuestion()`: 問題準備
+- `generateChoices()`: 選択肢生成
+- `processAnswer()`: 回答処理
+
+---
+
+## QuizView の現在の構造 (v1.0.0 - 暫定)
+
+### @State 変数（簡易実装）
 - `items: [QuestionItem]` - 全問題アイテム
 - `order: [QuestionItem]` - シャッフルされた全アイテム順序
 - `pool: [QuestionItem]` - 現在のバッチで繰り返し分を含む出題プール
