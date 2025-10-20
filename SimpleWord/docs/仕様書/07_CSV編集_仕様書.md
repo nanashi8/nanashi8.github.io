@@ -123,7 +123,7 @@ func generateCSVString(from items: [QuestionItem]) -> String {
     var lines: [String] = []
     
     // ヘッダー
-    lines.append("term,reading,meaning,etymology,relatedWords,relatedFields,difficulty")
+    lines.append("語句,読み（ひらがな）,意味,語源等解説（日本語）,関連語と意味,関連分野,難易度")
     
     // データ行
     for item in items {

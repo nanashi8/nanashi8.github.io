@@ -112,8 +112,9 @@ struct CSVItemListEditorView: View {
     }
 
     private func load() {
+        // URL からの直接ロードは CSVLoader の機能を使用
+        let loader = CSVLoader()
         do {
-            let loader = CSVLoader()
             let loaded = try loader.load(from: fileURL)
             self.items = loaded
             self.errorMessage = nil

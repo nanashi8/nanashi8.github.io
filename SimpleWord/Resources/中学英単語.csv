@@ -1,118 +1,118 @@
-語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
-apple,アップル,りんご,丸く甘い果物。見た目（赤）で結びつけると記憶しやすい。,fruit:果物,食べ物,1
-bird,バード,とり,古英語 'brid' に由来する一般名詞。羽やさえずりをイメージして覚える。,chick:ひな; feather:羽,動物,1
-cat,キャット,ねこ,家庭で親しまれる小動物。kitten（子猫）とセットで覚える。,kitten:子猫,動物,1
-dog,ドッグ,いぬ,人になつく代表的なペット。puppy（子犬）と合わせて覚える。,puppy:子犬,動物,1
-mouse,マウス,ねずみ,小さな哺乳類。computer mouseと用法の違いを押さえる。,mice:複数形,自然,1
-rabbit,ラビット,うさぎ,長い耳と跳ねる動作でイメージしやすい。bunnyは親しみ語。,bunny:ひな,自然,1
-duck,ダック,あひる,水辺の鳥。鳴き声（quack）で覚えると定着しやすい。,goose:がちょう,自然,1
-frog,フロッグ,かえる,跳ねるイメージで覚える。toadと比較して種の違いを学ぶ。,toad:ヒキガエル,自然,1
-lion,ライオン,ライオン,強いイメージ（百獣の王）で覚える。tigerと対比すると理解が深まる。,tiger:トラ,自然,2
-eagle,イーグル,わし,猛禽類の代表。大きな翼と鋭い目でイメージする。,hawk:タカ,自然,2
-whale,ホエール,くじら,大型の海洋哺乳類。大きさを想像して記憶する。,dolphin:イルカ,科学,2
-shark,シャーク,サメ,海の捕食者。鋭い歯のイメージで覚える。,whale:くじら,日常,2
-fish,フィッシュ,さかな,水中の一般語。swim（泳ぐ）とセットで学ぶ。,shrimp:えび,動物,1
-chicken,チキン,にわとり・鶏肉,家禽と食材の両方で使う語。chickはひな。,egg:卵,食べ物,1
-cow,カウ,うし,農場の家畜。milkやbeefと関連付けて覚える。,beef:牛肉,日常,1
-pig,ピッグ,ぶた,家畜の一種。pork（豚肉）との語彙関係を押さえる。,hog:ブタ,日常,1
-horse,ホース,うま,乗る・仕事に使われる動物。rideと結びつけて覚える。,pony:子馬,日常,1
-bee,ビー,はち,花と蜜の関係で覚えると良い。honeyとセットで学ぶ。,honey:はちみつ,自然,1
-ant,アント,あり,小さな昆虫。働き者のイメージで覚える。,nest:巣,自然,1
-tree,ツリー,き,植物の代表。leafやrootと合わせて学ぶ。,leaf:葉,自然,1
-flower,フラワー,はな,色や形で視覚的に覚えやすい語。petalと合わせて学ぶ。,petal:花びら,自然,1
-leaf,リーフ,は,植物の一部分。green（緑）と結びつけると定着。,branch:枝,自然,1
-grass,グラス,くさ,地面を覆う植物。lawn（芝生）と合わせて学ぶ。,park:公園,日常,1
-fruit,フルーツ,くだもの,appleなどのグループ語。味や色で分類して覚える。,apple:りんご,食べ物,1
-vegetable,ベジタブル,やさい,食材グループ。cookingと関連づけて学ぶ。,carrot:にんじん,日常,1
-rice,ライス,ごはん・米,日本の食習慣と結びつけて覚える。,meal:食事,日常,1
-bread,ブレッド,パン,小麦由来の主食。toastとセットで覚える。,butter:バター,日常,1
-meat,ミート,にく,肉類の総称。beefやporkと合わせて学ぶ。,beef:牛肉,日常,1
-egg,エッグ,たまご,栄養豊富な食品。breakfastと関連して覚える。,omelet:オムレツ,日常,1
-milk,ミルク,ぎゅうにゅう,飲料としての基礎語。cerealと合わせて学ぶ。,cheese:チーズ,日常,1
-water,ウォーター,みず,生命に不可欠な語。drinkやriverと結びつけて覚える。,river:川,日常,1
-juice,ジュース,ジュース,果汁を元にした飲み物。orangeと結びつけて学ぶ。,orange:オレンジ,食べ物,1
-tea,ティー,おちゃ,hot drinkの代表。文化的背景も話題にすると覚えやすい。,coffee:コーヒー,食べ物,1
-coffee,コーヒー,コーヒー,豆を焙煎して抽出する飲料。cafeと関連づけて学ぶ。,drink:飲み物,食べ物,1
-breakfast,ブレックファスト,あさごはん,朝の食事。morningとセットで例文を作る。,lunch:昼ごはん,日常,1
-lunch,ランチ,ひるごはん,昼の食事。school lunchなど実用例を想起すると良い。,dinner:夕ごはん,日常,1
-dinner,ディナー,ゆうごはん,夜の主要な食事。supperとの違いを短く補足して学ぶ。,supper:夕食,食べ物,1
-school,スクール,がっこう,学ぶ場としての語。classやstudentと合わせて覚える。,teacher:先生,学校,1
-teacher,ティーチャー,せんせい,teach（教える）に由来する職業語。roleを意識して覚える。,student:学生,学校,1
-student,スチューデント,がくせい,学ぶ人。classやhomeworkと実例で定着。,pupil:生徒,学校,1
-book,ブック,ほん,読む物の総称。titleやauthorと合わせて学ぶ。,novel:小説,学校,1
-pen,ペン,ぺん,書く道具。pencilやeraserと合わせて覚える。,pencil:えんぴつ,日常,1
-pencil,ペンシル,えんぴつ,書く道具。eraserとセットで覚える。,eraser:消しゴム,日常,1
-notebook,ノート,ノート,書き留める道具。lessonと合わせて使うと実践的。,paper:紙,日常,1
-desk,デスク,つくえ,教室の家具。chairと合わせて覚える。,chair:いす,学校,1
-chair,チェア,いす,座る家具。tableと対で学ぶ。,table:テーブル,学校,1
-room,ルーム,へや,建物内の区画を表す語。bedroomやclassroomと派生語を学ぶ。,kitchen:台所,日常,1
-house,ハウス,いえ,homeとbuildingの違いを意識して学ぶ。,apartment:アパート,家族,1
-car,カー,くるま,移動手段の語。driveやbusと合わせて学ぶ。,bus:バス,交通,1
-bus,バス,バス,公共交通の語。trainと比較して覚える。,train:電車,交通,1
-train,トレイン,でんしゃ,鉄道の乗り物。stationやplatformと合わせて学ぶ。,station:駅,交通,1
-plane,プレーン,ひこうき,空を飛ぶ乗り物。airportやflightとセットで学ぶ。,airport:空港,日常,1
-airport,エアポート,くうこう,旅行語彙の中心。flightと結びつける。,flight:フライト,交通,1
-ticket,チケット,きっぷ・チケット,入場や乗車に使う語。buyやfareと合わせて学ぶ。,fare:運賃,日常,1
-map,マップ,ちず,場所を示す図。routeやdirectionと合わせて学ぶ。,route:経路,地理,1
-city,シティ,まち,大きな町を指す語。townと対比して学ぶ。,town:まち,日常,1
-village,ビレッジ,むら,小さな町の語。ruralとurbanの違いも補足して覚える。,farm:農場,日常,1
-market,マーケット,いちば,買い物の場として実例を想起して覚える。,shop:店,買い物,1
-shop,ショップ,みせ,店を表す語。buyやsellと合わせて例文を作る。,cashier:レジ,買い物,1
-restaurant,レストラン,レストラン,食事を提供する場所。menuと合わせて学ぶ。,menu:メニュー,食べ物,1
-bank,バンク,ぎんこう,金融関連語。accountやloanと合わせて学ぶ。,money:おかね,買い物,1
-hospital,ホスピタル,びょういん,医療施設。doctorやnurseと合わせて学ぶ。,clinic:診療所,健康,1
-police,ポリス,けいさつ,治安関連の語。officerと結びつけて覚える。,officer:警官,職業,1
-firefighter,ファイアファイター,しょうぼうし,緊急時に働く職業。rescueと関連して学ぶ。,rescue:救助,職業,2
-computer,コンピューター,コンピュータ,情報処理機器の語。laptopと比較して学ぶ。,laptop:ノートPC,テクノロジー,2
-phone,フォン,でんわ,電話する（call）とセットで実用フレーズを練習。,call:電話する,日常,1
-camera,カメラ,カメラ,写真を撮る機器。photoやpictureと合わせて学ぶ。,photo:写真,日常,1
-music,ミュージック,おんがく,歌や楽器と結びつけて文化語彙を広げる。,song:歌,文化,1
-movie,ムービー,えいが,映画を観る行為とセットで学ぶ。,cinema:映画館,文化,1
-library,ライブラリ,としょかん,本を借りる場所。studyと結びつけて学ぶ。,shelf:本棚,日常,1
-friend,フレンド,ともだち,人間関係語。helpやplayと合わせて会話例を作る。,pal:仲間,日常,1
-family,ファミリー,かぞく,親族語をまとめて学ぶと定着しやすい。,mother:母,家族,1
-mother,マザー,おかあさん,親族語の代表。fatherやchildと合わせて学ぶ。,father:おとうさん,日常,1
-father,ファーザー,おとうさん,親族語の代表。sonやdaughterと合わせて学ぶ。,son:むすこ,日常,1
-sister,シスター,しまい,兄弟姉妹語の一つ。brotherとペアで学ぶ。,brother:きょうだい,日常,1
-brother,ブラザー,きょうだい,兄弟姉妹語。sisterと合わせて学ぶ。,sister:しまい,日常,1
-happy,ハッピー,しあわせ,良い感情を表す語。sadと対比して覚える。,smile:笑顔,感情,1
-sad,サッド,かなしい,負の感情を表す語。happyと対比して学ぶ。,cry:泣く,感情,1
-angry,アングリー,おこる,強い不快感を表す語。calmと対比して学ぶ。,calm:落ち着いた,日常,2
-cold,コールド,さむい,温度表現。hotと対比して例文で学ぶ。,hot:あつい,自然,1
-hot,ホット,あつい,温度や感情を表す語。coldと対比して覚える。,cold:さむい,日常,1
-warm,ウォーム,あたたかい,温度や雰囲気を表す語。coolと合わせて学ぶ。,cool:すずしい,日常,1
-summer,サマー,なつ,季節語。weatherと合わせて例文を作ると定着。,winter:ふゆ,日常,1
-spring,スプリング,はる,季節語。flowerと合わせて学ぶ。,autumn:あき,日常,1
-autumn,オータム,あき,英国英語ではautumn、USではfallも使うことを補足して覚える。,leaf:葉,日常,1
-rain,レイン,あめ,天気語。umbrellaとセットで覚える。,umbrella:傘,日常,1
-snow,スノー,ゆき,冬の天候語。slip（すべる）など具体場面で覚える。,slide:滑る,日常,1
-sun,サン,たいよう,昼を照らす天体。dayと合わせて学ぶ。,moon:月,自然,1
-moon,ムーン,つき,夜の天体。tide（潮）と関連づけて学ぶ。,star:星,自然,1
-star,スター,ほし,夜空の星。constellationと合わせて学ぶ。,sky:空,文化,1
-light,ライト,ひかり/あかるい,光や明るさを表す語。darkと対比して学ぶ。,dark:暗い,自然,1
-dark,ダーク,くらい,光の反対概念として理解すると覚えやすい。,light:明るい,日常,1
-open,オープン,あける・あいている,状態と動作の両方で使う語。closeと対比して学ぶ。,close:閉める,文法,1
-close,クローズ,しめる・しまっている,openの対義語。doorやwindowと合わせて学ぶ。,open:開ける,文法,1
-start,スタート,はじめる,beginと類義。スポーツや機械での使用例で覚える。,begin:始める,文化,1
-finish,フィニッシュ,おえる,endと合わせて学ぶと理解が深まる。,complete:完了する,文法,1
-use,ユーズ,つかう,道具や機能を使う場面で具体例を作って覚える。,apply:適用する,日常,1
-make,メイク,つくる,createと類義。make a cakeなど具体例で定着。,create:作る,日常,1
-have,ハブ,もつ/ある,所有を表す基本動詞。have lunchなど句で覚える。,own:所有する,文法,1
-get,ゲット,える/手に入れる,receiveやobtainと合わせて学ぶ。get a presentなどで例文作成。,receive:受け取る,日常,1
-see,シー,みる,視覚に関する動詞。watchやlookと使い分けを学ぶ。,watch:見る,日常,1
-hear,ヒア,きく,聴覚に関する動詞。listenとの違いを例で押さえる。,listen:聞く,日常,1
-say,セイ,いう,tellとの違いを例文で理解して使い分けを学ぶ。,tell:伝える,文法,1
-speak,スピーク,はなす,話す一般表現。talkと比較して学ぶ。,talk:話す,文法,1
-write,ライト,かく,書く行為。readやstudyと合わせて学ぶ。,read:読む,学校,1
-read,リード,よむ,読む行為。bookやstoryと結びつけて覚える。,study:勉強する,学校,1
-listen,リッスン,きく,hearとの使い分けを意識して学ぶ。,hear:聞く,文法,1
-learn,ラーン,まなぶ,studyやpracticeと組み合わせて覚える。,study:勉強する,学校,1
-think,シンク,かんがえる,考える場面の例文を多く作ると定着しやすい。,believe:信じる,文法,1
-know,ノウ,しっている,情報を保持する語。know howと合わせて学ぶ。,understand:理解する,文法,1
-like,ライク,すきである,好みを表す語。I like〜の例で使い方を学ぶ。,love:大好き,文法,1
-love,ラブ,あいする,強い好意を表す。familyやfriendと結びつけて覚える。,like:好き,文法,1
-want,ウォント,ほしい/したい,needとの違いを例文で確認して使い分ける。,need:必要,日常,1
-need,ニード,ひつようである,必要性を表す語。mustとの違いを学ぶ。,must:〜しなければならない,日常,2
+語句,発音,和訳,語源等解説,関連語と意味,関連分野,難易度
+apple,アップル,リンゴ,古英語æppel←西ゲルマン語*aplaz。印欧祖語*h₂ébōl（リンゴ）。同語源：pineapple（パイナップル）,fruit:果物,食べ物,1
+bird,バード,鳥,古英語brid（ヒナ鳥）←bridd。後に成鳥も指すように意味拡大。同語源：birdcage（鳥カゴ）,chick:ヒナ; feather:羽,動物,1
+cat,キャット,猫,後期ラテン語cattus（家猫）。エジプトから地中海へ広がった飼い猫文化とともに伝播。同語源：kitten（子猫）,kitten:子猫,動物,1
+dog,ドッグ,犬,古英語docga。語源不詳だが古くからある語。同語源：hotdog（ホットドッグ）,puppy:子犬,動物,1
+mouse,マウス,ネズミ,古英語mūs←印欧祖語*muh₂s（小さなネズミ）。同語源：muscle（筋肉＝小さなネズミ）,mice:複数形,動物,1
+rabbit,ラビット,ウサギ,中期英語rabet←古フランス語。野ウサギhareとの区別で飼いウサギを指す。同語源：bunny（ウサギちゃん）,bunny:ウサギちゃん,動物,1
+duck,ダック,アヒル,古英語dūce（潜る鳥）←動詞dūcan（潜る）。水に潜る習性から命名。同語源：duckling（アヒルの子）,goose:ガチョウ,動物,1
+frog,フロッグ,カエル,古英語frogga。擬音語的起源の可能性。印欧諸語で類似形アリ。同語源：tadpole（オタマジャクシ）,toad:ヒキガエル,動物,1
+lion,ライオン,ライオン,ギリシャ語leōn←セム語系labi（ライオン）。アフリカから地中海経由で伝播した語。同語源：lioness（雌ライオン）,tiger:トラ,動物,2
+eagle,イーグル,ワシ,古フランス語aigle←ラテン語aquila（鷲）。印欧祖語*h₂eḱ-（鋭い）と関連。同語源：eaglet（子鷲）,hawk:タカ,動物,2
+whale,ホエール,クジラ,古英語hwæl←ゲルマン祖語*hwalaz。大きな海獣を指す古い語。同語源：narwhal（イッカク）,dolphin:イルカ,動物,2
+shark,シャーク,サメ,語源不詳。1560年代に船乗りが使い始めた新しい語。マヤ語xocから説アリ。,whale:クジラ,動物,2
+fish,フィッシュ,魚,古英語fisc←印欧祖語*peysk-（魚）。グリムの法則でp→f変化。同語源：fishing（釣り）、fisherman（漁師）,shrimp:えび,動物,1
+chicken,チキン,にわ鳥・鶏肉,古英語cicen（ヒナ鳥）←西ゲルマン語。擬音語起源。生鳥と食肉の両方を指す。,egg:卵,食べ物,1
+cow,カウ,牛,古英語cū←印欧祖語*gʷōus（牛）。多くの印欧語で類似形（ラテン語bōs等）。,beef:牛肉,動物,1
+pig,ピッグ,ブタ,中期英語pigge。語源不詳の新しい語。古英語swīn（豚）を置き換え。食肉はpork。,hog:ブタ,動物,1
+horse,ホース,馬,古英語hors←ゲルマン祖語*hrussą。印欧祖語*ḱers-（走る）と関連か。,pony:子馬,動物,1
+bee,ビー,ハチ,古英語bēo←西ゲルマン語*bijōn。擬音語起源の可能性。蜂蜜honey生産者。,honey:ハチみつ,動物,1
+ant,アント,アリ,古英語ǣmette←西ゲルマン語*āmaitijǭ。「切り取るもの」の意。噛む動作から。,nest:巣,動物,1
+tree,ツリー,木,古英語trēo←印欧祖語*drew-（堅いもの）。同語源：Christmas tree（クリスマスツリー）、treetop（梢）,leaf:葉,自然,1
+flower,フラワー,花,古フランス語flour（花・最良の部分）←ラテン語flōs（花）。同語源：flour（小麦粉）、flourish（繁栄する）,petal:花びら,自然,1
+leaf,リーフ,葉,古英語lēaf←西ゲルマン語*laubaz。印欧祖語*lewbʰ-（剥がす）。同語源：leaves（複数形）、leaflet（小冊子）,branch:枝,自然,1
+grass,グラス,草,古英語græs←ゲルマン祖語*grasam。印欧祖語*gʰreh₁-（成長）。同語源：green（緑）、grassland（草原）,park:公園,自然,1
+fruit,フルーツ,果物,古フランス語fruit←ラテン語frūctus（享受するもの）。同語源：fruity（果物の）、fruitful（実り多い）,apple:リンゴ,食べ物,1
+vegetable,ベジタブル,野菜,古フランス語←ラテン語vegetābilis（生き生きした）。同語源：vegetarian（菜食主義者）、vegetation（植生）,carrot:ニンジン,食べ物,1
+rice,ライス,ご飯・米,古フランス語ris←イタリア語riso←ギリシャ語oryza←インド語vrīhi。アジア原産の穀物。,meal:食事,食べ物,1
+bread,ブレッド,パン,古英語brēad（断片・パン種）←ゲルマン祖語*braudą。同語源：breadcrumb（パン粉）、gingerbread（生姜パン）,butter:バター,食べ物,1
+meat,ミート,肉,古英語mete（食べ物一般）←ゲルマン祖語*matiz。同語源：meatball（ミートボール）、minced meat（ひき肉）,beef:牛肉,食べ物,1
+egg,エッグ,卵,古ノルド語egg←印欧祖語*h₂ōwyóm（鳥の卵）。同語源：eggshell（卵の殻）、eggplant（茄子）,omelet:オムレツ,食べ物,1
+milk,ミルク,牛乳,古英語meolc←印欧祖語*h₂melǵ-（搾る）。同語源：milkshake（ミルクセーキ）、milky（乳白色の）,cheese:チーズ,食べ物,1
+water,ウォーター,水,古英語wæter←印欧祖語*wódr̥（水）。同語源：waterfall（滝）、watermelon（スイカ）、underwater（水中の）,river:川,自然,1
+juice,ジュース,ジュース,古フランス語jus（液体・スープ）←ラテン語jūs（スープ・肉汁）。同語源：juicy（汁気の多い）,orange:オレンジ,食べ物,1
+tea,ティー,お茶,福建語te（茶）。17世紀オランダ経由で伝来。同語源：teapot（急須）、teacup（茶碗）,coffee:コーヒー,食べ物,1
+coffee,コーヒー,コーヒー,トルコ語kahve←アラビア語qahwa（コーヒー）。同語源：café（カフェ）、caffeine（カフェイン）,drink:飲み物,食べ物,1
+breakfast,ブレックファスト,あさご飯,break（破る）+ fast（断食）の合成語。朝食で夜間の断食を破る意。15世紀頃から使用。,lunch:昼ご飯,食べ物,1
+lunch,ランチ,ひるご飯,16世紀スペイン語lonja（薄切り肉）説アリ。lump（塊）から説も。昼の軽食を指す語として発展。,dinner:夕ご飯,食べ物,1
+dinner,ディナー,ゆうご飯,古フランス語disner←ラテン語disjejūnāre。dis（否定）+ jejūnus（空腹）で断食を破る食事。,supper:夕食,食べ物,1
+school,スクール,学校,ギリシャ語skholē（余暇・講義）←ラテン語schola→古英語scōl。学問は余暇に行うもの。,teacher:先生,学校,1
+teacher,ティーチャー,先生,teach（教える）+ -er（人）。古英語tǣcan（示す）←ゲルマン祖語*taikijaną（印を示す）。,student:学生,学校,1
+student,スチューデント,学生,ラテン語studens（熱心に取り組む）。studēre（熱中する）の現在分詞形から。study（勉強）と同源。,pupil:生徒,学校,1
+book,ブック,本,古英語bōc←ゲルマン祖語*bōks。beech（ブナ）と同源。ブナ材の板に文字を刻んだことから。,novel:小説,学校,1
+pen,ペン,ペン,ラテン語penna（羽根）。羽根ペン（quill pen）から金属ペンへ。羽根で書いた歴史の名残。,pencil:えんぴつ,学校,1
+pencil,ペンシル,鉛筆,ラテン語penicillus（小さな尾）の縮小形。細い筆・先端の意。黒鉛を使うpencilは16世紀から。,eraser:消しゴム,学校,1
+notebook,ノート,ノート,note（メモ）+ book（本）の合成語。note←ラテン語nota（印・記号）。メモ帳の意。,paper:紙,学校,1
+desk,デスク,机,,中世ラテン語desca（テーブル・板）←ラテン語discus（円盤）。書き物用の台の意。,chair:いす,学校,1
+chair,チェア,椅子,古フランス語chaiere←ラテン語cathedra（座席）←ギリシャ語kathedra（腰掛け）。cathedral（大聖堂）と同源。,table:テーブル,日常,1
+room,ルーム,部屋,古英語rūm（空間）←ゲルマン祖語*rūmaz。空いた場所・余地の意から部屋へ。,kitchen:台所,日常,1
+house,ハウス,家,古英語hūs←印欧祖語*(s)kews-（覆う）。覆われた場所の意。hide（隠す）と遠い親戚。,apartment:アパート,家族,1
+car,カー,車,ラテン語carrus（荷車）←ガリア語karros。鉄道車両carriage、cart（荷車）と同源。,bus:バス,交通,1
+bus,バス,バス,omnibus（万人のための）の短縮形。ラテン語omnis（全て）+ -bus（ために）。乗合馬車から。,train:電車,交通,1
+train,トレイン,電車,古フランス語trainer（引く）←ラテン語trahere（引っ張る）。機関車が客車を引く様から。,station:駅,交通,1
+plane,プレーン,飛行機,airplane の短縮形。plane←ラテン語plānus（平らな）。翼の平面から。,airport:空港,交通,1
+airport,エアポート,空港,air（空）+ port（港）の合成語。port←ラテン語portus（港）。空の港の意。1919年頃から使用。,flight:フライト,交通,1
+ticket,チケット,切符・チケット,古フランス語estiquet（札）←中期オランダ語steken（突き刺す）。札を刺して掲示したことから。,fare:運賃,交通,1
+map,マップ,地図,中世ラテン語mappa（布・世界地図）←ラテン語mappa（布巾）。布に描いた地図から。,route:経路,地理,1
+city,シティ,町,古フランス語cité←ラテン語cīvitās（市民権・都市）。cīvis（市民）から。citizenship（市民権）と同源。,town:まち,地理,1
+village,ビレッジ,村,古フランス語village←ラテン語vīlla（農場・別荘）。villa（別荘）と同源。小さな集落の意。,farm:農場,地理,1
+market,マーケット,市場,古英語market←ラテン語mercātus（交易・市場）。mercārī（取引する）から。merchant（商人）と同源。,shop:店,買い物,1
+shop,ショップ,店,古英語sceoppa（仮小屋・屋台）←中期低地ドイツ語schoppe。商品を並べる仮設店舗から。,cashier:レジ,買い物,1
+restaurant,レストラン,レストラン,フランス語restaurer（回復させる）←ラテン語restaurāre。疲れを回復させる場所の意。1765年パリで命名。,menu:メニュー,食べ物,1
+bank,バンク,銀行,イタリア語banca（両替商の台）←ゲルマン祖語*bankiz（ベンチ）。両替商が使った台から。,money:おかね,買い物,1
+hospital,ホスピタル,病院,古フランス語hospital←ラテン語hospitāle（客人の家）。hospes（客人・主人）から。hospitable（親切な）と同源。,clinic:診療所,健康,1
+police,ポリス,警察,フランス語police←ラテン語polītīa←ギリシャ語politeia（市民政府）。polis（都市国家）から。,officer:警官,職業,1
+firefighter,ファイアファイター,しょうぼ牛,fire（火）+ fighter（戦う人）の合成語。古英語fȳr + fight。火災と戦う職業人の意。,rescue:救助,職業,2
+computer,コンピューター,コンピュータ,ラテン語computāre（計算する）。com（共に）+ putāre（数える・考える）。1640年代は「計算する人」。,laptop:ノートPC,テクノロジー,2
+phone,フォン,電話,telephone（電話）の短縮形。ギリシャ語phōnē（音・声）。1880年代から単独使用。,call:電話する,テクノロジー,1
+camera,カメラ,カメラ,ラテン語camera obscūra（暗い部屋）。camera（部屋・丸天井）から。1840年代に写真機の意。,photo:写真,テクノロジー,1
+music,ミュージック,音楽,古フランス語musique←ラテン語mūsica←ギリシャ語mousikē（ムーサの技芸）。Muse（芸術の女神）から。,song:歌,文化,1
+movie,ムービー,映画,moving picture（動く絵）の短縮形。move←ラテン語movēre（動かす）。1912年頃から使用。motion（動き）と同源。,cinema:映画館,文化,1
+library,ライブラリ,図書館,古フランス語librarie←ラテン語librāria（書物の場所）。liber（本）から。liberate（解放する）と語源上の関連。,shelf:本棚,学校,1
+friend,フレンド,友達,古英語frēond（愛する者）←frēon（愛する）の現在分詞。同語源：friendly（友好的）、friendship（友情）,pal:仲間,家族,1
+family,ファミリー,家族,ラテン語familia（家族・召使い）←famulus（召使い）。同語源：familiar（親しい）、familiarize（慣れさせる）,mother:母,家族,1
+mother,マザー,お母さん,古英語mōdor←印欧祖語*méh₂tēr（母）。同語源：maternal（母の）、maternity（母性）、mom（ママ）,father:おとうさん,家族,1
+father,ファーザー,お父さん,古英語fæder←印欧祖語*ph₂tḗr（父）。グリムの法則でp→f変化。同語源：paternal（父の）、dad（パパ）,son:むすこ,家族,1
+sister,シスター,姉妹,古英語sweostor←印欧祖語*swésōr（姉妹）。多くの印欧語で類似形（ラテン語soror等）。,brother:きょうだい,家族,1
+brother,ブラザー,兄弟,古英語brōþor←印欧祖語*bʰréh₂tēr（兄弟）。ラテン語frāter（兄弟）と同源。同語源：fraternity（兄弟愛）,sister:しまい,家族,1
+happy,ハッピー,幸せ,中期英語hap（幸運）+ -y（形容詞化）。hap←古ノルド語happ（幸運・偶然）。同語源：happen（起こる）、happiness（幸福）,smile:笑顔,感情,1
+sad,サッド,悲しい,古英語sæd（満ち足りた・重い）←印欧祖語*seh₂-（満たす）。意味が「重い」→「深刻な」→「悲しい」へ変化。同語源：sadness（悲しみ）,cry:泣く,感情,1
+angry,アングリー,怒る,古ノルド語angr（悩み・苦痛）+ -y。anger（怒り）の形容詞形。同語源：anger（怒り）、angst（不安）,calm:落ち着いた,感情,2
+cold,コールド,寒い,古英語cald←ゲルマン祖語*kaldaz。印欧祖語*gel-（凍る）。同語源：coldness（寒さ）、cool（涼しい）,hot:あつい,自然,1
+hot,ホット,暑い,古英語hāt←ゲルマン祖語*haitaz。印欧祖語*kay-（熱）。同語源：heat（熱）、heated（熱した）,cold:さむい,自然,1
+warm,ウォーム,温かい,古英語wearm←印欧祖語*gʷʰer-（熱い）。ラテン語formus（温かい）と同源。同語源：warmth（暖かさ）、warming（温暖化）,cool:すずしい,自然,1
+summer,サマー,夏,古英語sumor←印欧祖語*sem-（夏・年）。サンスクリット語samā（年・季節）と同源。同語源：summertime（夏季）,winter:ふゆ,時間,1
+spring,スプリング,春,古英語springan（跳ねる・湧き出る）から。植物が跳ねるように芽吹く季節。同語源：springtime（春季）、spring water（湧き水）,autumn:あき,時間,1
+autumn,オータム,秋,ラテン語autumnus（秋）←エトルリア語。収穫の季節。米語fall（葉が落ちる）も使用。,leaf:葉,時間,1
+rain,レイン,雨,古英語regn←印欧祖語*Hréǵ-（湿った）。irrigate（灌漑する）と遠い親戚。同語源：rainy（雨の）、rainbow（虹）,umbrella:傘,自然,1
+snow,スノー,雪,古英語snāw←印欧祖語*snóygʷʰos（雪）。ラテン語nix（雪）と同源。同語源：snowy（雪の）、snowman（雪だるま）,slide:滑る,自然,1
+sun,サン,太陽,古英語sunne←印欧祖語*sóh₂wl̥（太陽）。ラテン語sōl（太陽）と同源。同語源：solar（太陽の）、Sunday（日曜日）、sunshine（日光）,moon:月,自然,1
+moon,ムーン,月,古英語mōna←印欧祖語*mḗh₁n̥s（月）。ラテン語mēnsis（月）と同源。同語源：month（月）、Monday（月曜日）、moonlight（月光）,star:星,自然,1
+star,スター,星,古英語steorra←印欧祖語*h₂stḗr（星）。ラテン語stella（星）と同源。同語源：starry（星の多い）、starlight（星の光）、asteroid（小惑星）,sky:空,自然,1
+light,ライト,光/あかるい,古英語lēoht（光）←印欧祖語*lewk-（光る）。ラテン語lūx（光）と同源。同語源：lightning（稲妻）、lighter（ライター）,dark:暗い,自然,1
+dark,ダーク,暗い,古英語deorc。語源不詳。ゲルマン語特有の語。同語源：darkness（闇）、darken（暗くする）,light:明るい,自然,1
+open,オープン,開ける・あいている,古英語openian←西ゲルマン語*opanōn。印欧祖語*upo（下から・上へ）と関連。同語源：opening（開くこと）、opener（栓抜き）,close:閉める,日常,1
+close,クローズ,閉める・しまっている,古フランス語clos←ラテン語claudere（閉じる）。同語源：closed（閉じた）、closing（閉店）、conclude（結論する）、include（含む）,open:開ける,日常,1
+start,スタート,始める,古英語styrtan（跳ねる・飛び出す）。突然動き出す意から始まるの意へ。同語源：starter（スターター）、starting（始まり）、startle（驚かす）,begin:始める,時間,1
+finish,フィニッシュ,終える,古フランス語finiss-（終える）←ラテン語fīnīre（終わらせる）。fīnis（終わり・境界）から。同語源：finished（完了した）、final（最終の）、finite（有限の）,complete:完了する,時間,1
+use,ユーズ,使う,古フランス語user←ラテン語ūsus（使用）。ūtī（使う）の完了分詞。同語源：useful（役に立つ）、user（使用者）、utility（有用性）、usual（普通の）,apply:適用する,日常,1
+make,メイク,作る,古英語macian←西ゲルマン語*makōną。印欧祖語*mag-（こねる）。同語源：maker（作る人）、remake（作り直す）、handmade（手作りの）,create:作る,日常,1
+have,ハブ,持つ/ある,古英語habban←印欧祖語*keh₂p-（つかむ）。ラテン語capere（つかむ）と同源。同語源：behave（ふるまう）、capture（捕らえる）,own:所有する,日常,1
+get,ゲット,得る/手に入れる,古ノルド語geta（得る・推測する）←ゲルマン祖語*getaną。同語源：forget（忘れる）、beget（生む）、gotten（得た）,receive:受け取る,日常,1
+see,シー,見る,視覚に関する動詞。watchやlookと使い分けを学ぶ。,watch:見る,日常,1
+hear,ヒア,聞く,聴覚に関する動詞。listenとの違いを例で押さえる。,listen:聞く,日常,1
+say,セイ,言う,tellとの違いを例文で理解して使い分けを学ぶ。,tell:伝える,文法,1
+speak,スピーク,話す,話す一般表現。talkと比較して学ぶ。,talk:話す,文法,1
+write,ライト,書く,書く行為。readやstudyと合わせて学ぶ。,read:読む,学校,1
+read,リード,読む,読む行為。bookやstoryと結びつけて覚える。,study:勉強する,学校,1
+listen,リッスン,聞く,hearとの使い分けを意識して学ぶ。,hear:聞く,文法,1
+learn,ラーン,学ぶ,studyやpracticeと組み合わせて覚える。,study:勉強する,学校,1
+think,シンク,考える,考える場面の例文を多く作ると定着しやすい。,believe:信じる,文法,1
+know,ノウ,知っている,情報を保持する語。know howと合わせて学ぶ。,understand:理解する,文法,1
+like,ライク,好きである,好みを表す語。I like〜の例で使い方を学ぶ。,love:大好き,文法,1
+love,ラブ,愛する,強い好意を表す。familyやfriendと結びつけて覚える。,like:好き,文法,1
+want,ウォント,欲しい/したい,needとの違いを例文で確認して使い分ける。,need:必要,日常,1
+need,ニード,必要である,必要性を表す語。mustとの違いを学ぶ。,must:〜しなければならない,日常,2
 can,キャン,〜できる,助動詞の基礎。Can you〜? の練習で定着させる。,may:〜かもしれない,文法,1
 will,ウィル,〜だろう/〜するつもり,未来を表す助動詞。I will〜の形で練習する。,shall:〜しよう,文法,1
 may,メイ,〜かもしれない/〜してよい,許可や可能性を表す表現。May I〜? の練習が有効。,might:〜かもしれない,文法,2
@@ -139,7 +139,7 @@ air,エアー,空気/航空,weatherやflightの語彙と結びつけて学ぶ。
 airport,エアポート,空港,既存語と重複の確認用（既に存在するが用例の補足として保持） ,flight:フライト,交通,1
 allow,アロウ,許す,permitと類義。allow 人 to doの構文で学ぶ。,permit:許可する,文法,2
 almost,オールモスト,ほとんど,程度を表す副詞。nearlyやaboutと比較して学ぶ。,nearly:ほとんど,文法,1
-alone,アローン,ひとりで,独立を表す語。by oneselfと同義的に使う。,lonely:さびしい,感情,1
+alone,アローン,ひ鳥で,独立を表す語。by oneselfと同義的に使う。,lonely:寂しい,感情,1
 along,アロング,〜に沿って/〜と一緒に,場所や伴同行動を示す語。,together:一緒に,文法,1
 already,オールレディ,すでに,完了の表現でよく使う副詞。,yet:まだ,文法,1
 also,オールソー,〜もまた,追加情報を示す副詞。tooと類義。,too:〜も,文法,1
@@ -178,12 +178,12 @@ ball,ボール,球/ボール,スポーツ語彙と結びつけて覚える。,ga
 band,バンド,バンド/帯,音楽や物の束として使われる語。,group:グループ,文化,2
 base,ベース,基礎/本拠地,数学やスポーツの基礎語彙として学ぶ。,foundation:基礎,学校,2
 basic,ベーシック,基本的な,基本語彙として重要。simpleと対比して学ぶ。,fundamental:基本,学校,2
-basket,バスケット,かご,体育（basketball）や買い物で用例を作る。,basketball:バスケ,日常,1
+basket,バスケット,カゴ,体育（basketball）や買い物で用例を作る。,basketball:バスケ,日常,1
 bath,バス,風呂/入浴,hygiene関連語として扱う。,shower:シャワー,日常,1
 beach,ビーチ,海辺,leisure語彙としてtravelと合わせて学ぶ。,sea:海,日常,1
 bear,ベア,熊/耐える,動物語としてのbearと「我慢する」の動詞の使い分けに注意。,endure:耐える,自然,2
 beat,ビート,打つ/勝つ,音や運動、試合での用法を例で学ぶ。,win:勝つ,スポーツ,2
-beautiful,ビューティフル,美しい,形容詞語彙。appearanceと結びつけて学ぶ。,pretty:かわいい,感情,1
+beautiful,ビューティフル,美しい,形容詞語彙。appearanceと結びつけて学ぶ。,pretty:可愛い,感情,1
 because,ビコーズ,なぜなら,理由を表す接続詞。because ofとの違いを学ぶ。,so:だから,文法,1
 become,ビカム,〜になる,変化を表す基本動詞。getと比較して学ぶ。,turn into:〜になる,文法,2
 bed,ベッド,ベッド/寝具,daily routine語彙として扱う。,sleep:眠る,日常,1
@@ -223,7 +223,7 @@ brush,ブラッシュ,磨く/ブラシ,toothbrushなどの日常用品語彙と�
 build,ビルド,建てる,construction語彙として使う。,make:作る,学校,2
 building,ビルディング,建物,city語彙と合わせて学ぶ。,house:家,日常,1
 busy,ビジー,忙しい,time managementの語彙と合わせて学ぶ。,free:暇な,日常,1
-baby,ベイビー,赤ちゃん,既に追加済みが重複する可能性あり。確認用。,infant:乳児,日常,1
+baby,ベイビー,赤ちゃん,既に追加済みが重複する可能性アリ。確認用。,infant:乳児,日常,1
 call,コール,呼ぶ/電話する,phoneと一緒に使う例文で学ぶ。,phone:電話,日常,1
 calm,カーム,落ち着いた,angryと対比して学ぶ。,angry:怒っている,感情,2
 camera,カメラ,カメラ,既存語。補強用。,photo:写真,日常,1
@@ -240,7 +240,7 @@ celebrate,セレブレイト,祝う,partyやfestivalと関連づけて学ぶ。,
 center,センター,中心,placeやpositionの語彙で使う。,middle:中央,文法,1
 century,センチュリー,100年,history語彙として年代を学ぶ。,year:年,文化,2
 certain,サートン,確かな/ある,ある〜という意味での用法を学ぶ。,sure:確信している,文法,2
-chair,チェア,いす,既存語で補強。,table:テーブル,学校,1
+chair,チェア,椅子,既存語で補強。,table:テーブル,学校,1
 challenge,チャレンジ,挑戦/課題,difficultyやproblemと合わせて学ぶ。,task:課題,学校,2
 chance,チャンス,機会/可能性,opportunityと類義で違いを比較する。,opportunity:好機,日常,2
 change,チェンジ,変える/変化,money changeやclothes changeなど具体例で学ぶ。,turn:変わる,日常,1

@@ -8,6 +8,7 @@ import SwiftUI
 struct QuizSettingsView: View {
     @EnvironmentObject var quizSettings: QuizSettings
     @EnvironmentObject var currentCSV: CurrentCSV
+    @EnvironmentObject var wordScoreStore: WordScoreStore
     @EnvironmentObject var appearanceManager: AppearanceManager
     // 追加: カラースキームに応じてカード背景色を切り替える
     @Environment(\.colorScheme) private var colorScheme
@@ -74,13 +75,14 @@ struct QuizSettingsView: View {
         SwiftUI.Form(content: {
              // 現在の設定（要約カード）
              Section {
+                 // 現在の設定を見やすくまとめて表示するカード
                  SectionCard(backgroundColor: cardBackground) {
-                     VStack(alignment: .leading, spacing: 8) {
+                     VStack(alignment: .leading, spacing: 10) {
                          HStack(alignment: .firstTextBaseline) {
                              Text("現在の設定")
                                  .font(.headline)
                              Spacer()
-                             // show one or more difficulty badges
+                             // 難易度バッジがある場合は右上に表示
                              if !quizSettings.difficulties.isEmpty {
                                  HStack(spacing: 6) {
                                      ForEach(quizSettings.difficulties, id: \.self) { d in
@@ -89,39 +91,72 @@ struct QuizSettingsView: View {
                                  }
                              }
                          }
-                         HStack(alignment: .top, spacing: 8) {
-                             Text("CSV:")
-                                 .font(.caption)
-                                 .foregroundColor(.secondary)
-                             Text(currentCSV.name ?? "(未設定)")
-                                 .font(.caption)
-                         }
-                         VStack(alignment: .leading, spacing: 4) {
-                             Text("分野:")
-                                 .font(.caption)
-                                 .foregroundColor(.secondary)
-                             ScrollView(.horizontal, showsIndicators: false) {
-                                 HStack(spacing: 6) {
-                                     ForEach(quizSettings.fields, id: \.self) { f in
-                                         TagCapsule(label: f)
-                                     }
-                                 }
+
+                         // 設定の要約リスト（まとまりごとに改行して表示）
+                         VStack(alignment: .leading, spacing: 8) {
+                             // グループ: 一般
+                             VStack(alignment: .leading, spacing: 4) {
+                                 Text("一般")
+                                     .font(.subheadline)
+                                     .bold()
+                                 Text("CSV: \(currentCSV.name ?? "(未設定)")")
+                                     .font(.caption)
+                                 Text("分野: \(quizSettings.fields.isEmpty ? "全て" : quizSettings.fields.joined(separator: ", "))")
+                                     .font(.caption)
+                                 Text("難易度: \(quizSettings.difficulties.isEmpty ? "全て" : quizSettings.difficulties.joined(separator: ", "))")
+                                     .font(.caption)
                              }
-                         }
-                         HStack(spacing: 12) {
-                             Text("繰り返し: \(quizSettings.repeatCount)回")
-                                 .font(.caption)
-                             Text("合格率: \(Int(quizSettings.threshold * 100))%")
-                                 .font(.caption)
-                         }
-                         HStack(spacing: 12) {
-                             Text("出題数: \(quizSettings.questionsPerBatch)問")
-                                 .font(.caption)
-                         }
-                         // 追加: 現在の外観
-                         HStack(spacing: 12) {
-                             Text("外観: \(appearanceManager.appearance.displayName)")
-                                 .font(.caption)
+
+                             Divider()
+
+                             // グループ: 出題設定
+                             VStack(alignment: .leading, spacing: 4) {
+                                 Text("出題設定")
+                                     .font(.subheadline)
+                                     .bold()
+                                 HStack(spacing: 12) {
+                                     Text("出題数: \(quizSettings.questionsPerBatch)問")
+                                         .font(.caption)
+                                     Text("選択肢: \(quizSettings.numberOfChoices)")
+                                         .font(.caption)
+                                     Text("繰り返し: \(quizSettings.repeatCount)回")
+                                         .font(.caption)
+                                 }
+                                 Text("合格率: \(Int(quizSettings.threshold * 100))%")
+                                     .font(.caption)
+                             }
+
+                             Divider()
+
+                             // グループ: 挙動
+                             VStack(alignment: .leading, spacing: 4) {
+                                 Text("挙動")
+                                     .font(.subheadline)
+                                     .bold()
+                                 HStack(spacing: 12) {
+                                     Text("ランダム: \(quizSettings.isRandomOrder ? "有効" : "無効")")
+                                         .font(.caption)
+                                     Text("音声: \(quizSettings.isSpeechEnabled ? "有効" : "無効")")
+                                         .font(.caption)
+                                 }
+                                 Text("タイマー: \(quizSettings.isTimerEnabled ? "有効 (\(quizSettings.timeLimit)秒)" : "無効")")
+                                     .font(.caption)
+                                 Text("学習モード: \(quizSettings.learningMode.displayName)")
+                                     .font(.caption)
+                                 Text("自動進行: \(quizSettings.model.autoAdvance ? "有効" : "無効")")
+                                     .font(.caption)
+                             }
+
+                             Divider()
+
+                             // グループ: 外観
+                             VStack(alignment: .leading, spacing: 4) {
+                                 Text("外観")
+                                     .font(.subheadline)
+                                     .bold()
+                                 Text(appearanceManager.appearance.displayName)
+                                     .font(.caption)
+                             }
                          }
                      }
                  }
@@ -163,6 +198,8 @@ struct QuizSettingsView: View {
                                      // set current CSV to selected
                                      let name = editable[selectedCSVIndex]
                                      currentCSV.name = name
+                                     // WordScoreStoreを切り替え
+                                     wordScoreStore.switchToCSV(name)
                                      // update available options immediately
                                      buildAvailableOptions()
                                  }) {
@@ -458,10 +495,11 @@ struct QuizSettingsView: View {
      private func buildAvailableOptions() {
          var fieldsSet = Set<String>()
          var diffsSet = Set<String>()
-         let loader = CSVLoader()
 
-         func process(url: URL) {
-             if let arr = try? loader.load(from: url) {
+         func process(fileName: String) {
+             let base = fileName.replacingOccurrences(of: ".csv", with: "")
+             let repository = QuestionItemRepository(fileName: base)
+             if case .success(let arr) = repository.fetch() {
                  for it in arr {
                      for f in it.relatedFields where !f.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { fieldsSet.insert(f) }
                      if !it.difficulty.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { diffsSet.insert(it.difficulty) }
@@ -470,29 +508,14 @@ struct QuizSettingsView: View {
          }
 
          if let sel = currentCSV.name, !sel.isEmpty {
-             // try Documents first
-             if let dir = FileUtils.documentsDirectory {
-                 let url = dir.appendingPathComponent(sel)
-                 if FileManager.default.fileExists(atPath: url.path) { process(url: url); self.availableFields = ["全て"] + fieldsSet.sorted(); self.availableDifficulties = ["全て"] + diffsSet.sorted();
-                     // adjust wheel indices
-                     fieldWheelIndex = min(fieldWheelIndex, max(0, availableFields.count - 1))
-                     difficultyWheelIndex = min(difficultyWheelIndex, max(0, availableDifficulties.count - 1))
-                     return }
-             }
-             // bundle fallback
-             let base = sel.replacingOccurrences(of: ".csv", with: "")
-             if let url = Bundle.main.url(forResource: base, withExtension: "csv") { process(url: url) }
+             process(fileName: sel)
          } else {
              // no selection: aggregate from all CSVs
              for name in FileUtils.listCSVFilesInDocuments() {
-                 if let dir = FileUtils.documentsDirectory {
-                     let url = dir.appendingPathComponent(name)
-                     process(url: url)
-                 }
+                 process(fileName: name)
              }
              for name in FileUtils.listBundleCSVFiles() {
-                 let base = name.replacingOccurrences(of: ".csv", with: "")
-                 if let url = Bundle.main.url(forResource: base, withExtension: "csv") { process(url: url) }
+                 process(fileName: name)
              }
          }
 

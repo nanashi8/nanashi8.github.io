@@ -14,7 +14,7 @@ struct SimpleWordTests {
     @Test func csvRelatedFieldsParsing() async throws {
         // CSV ローダーがヘッダ行を尊重し、JPヘッダ「関連語」「関連分野」を正しく解釈できることを検証する
         // 自己完結のため、一時CSVを生成して読み込む
-        let header = "語句,読み,意味,語源等解説,関連語,関連分野,難易度"
+        let header = "語句,読み（ひらがな）,意味,語源等解説（日本語）,関連語と意味,関連分野,難易度"
         let row = "put on,プット オン,身に着ける,phrasal verb,put;on,学校;日常生活,初級"
         let csv = header + "\n" + row + "\n"
 
@@ -47,7 +47,7 @@ struct SimpleWordTests {
     @Test func csvParsesEmptyRelatedFieldsWhenHeaderMissing() async throws {
         // 目的: ヘッダに「関連分野」列が無い場合、relatedFields は空配列([])になることを検証する
         // ポイント: ヘッダ検出は日本語カラム名（語句/意味/読み）を含めば有効になる想定
-        let header = "語句,読み,意味,語源等解説,関連語,難易度"
+        let header = "語句,読み（ひらがな）,意味,語源等解説（日本語）,関連語と意味,難易度"
         let row = "look after,ルック アフター,〜の世話をする,look + after,care for;take care,初級"
         let csv = header + "\n" + row + "\n"
 
