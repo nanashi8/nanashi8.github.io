@@ -16,32 +16,43 @@ public struct CSVQuestionLoader {
             return []
         }
 
-        // まずは拡張子なしで検索し、見つからなければ拡張子ありも試す
-        let baseName = csvName.hasSuffix(".csv") ? String(csvName.dropLast(4)) : csvName
-        let bundle = Bundle.main
+        // URL 解決（Documents を優先し、見つからなければ Bundle を探索）
+        guard let csvURL = resolveCSVURL(named: csvName) else { return [] }
+        guard let raw = try? String(contentsOf: csvURL, encoding: .utf8) else { return [] }
+        return parseCSV(raw)
+    }
 
-        var url: URL? = bundle.url(forResource: baseName, withExtension: "csv")
-        if url == nil {
-            // 直接拡張子付きで探す
-            url = bundle.url(forResource: csvName, withExtension: nil)
-        }
-        if url == nil {
-            // 最終手段: バンドルの Resources を列挙して最後が一致するものを探す
-            if let resources = bundle.resourceURL, let enumerator = FileManager.default.enumerator(at: resources, includingPropertiesForKeys: nil) {
-                for case let fileURL as URL in enumerator {
-                    if fileURL.lastPathComponent == csvName || fileURL.lastPathComponent == "\(baseName).csv" {
-                        url = fileURL
-                        break
-                    }
-                }
+    /// CSV 名から URL を解決する（Documents -> Bundle の順）
+    private static func resolveCSVURL(named name: String) -> URL? {
+        let filename = name
+        // Documents 内を優先
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let docURL = dir.appendingPathComponent(filename)
+            if FileManager.default.fileExists(atPath: docURL.path) {
+                return docURL
+            }
+            // .csv なしで指定された場合も試す
+            if !filename.hasSuffix(".csv") {
+                let docURL2 = dir.appendingPathComponent("\(filename).csv")
+                if FileManager.default.fileExists(atPath: docURL2.path) { return docURL2 }
             }
         }
 
-        guard let csvURL = url, let raw = try? String(contentsOf: csvURL, encoding: .utf8) else {
-            return []
-        }
+        // Bundle 内を探索
+        let baseName = filename.hasSuffix(".csv") ? String(filename.dropLast(4)) : filename
+        let bundle = Bundle.main
+        if let url = bundle.url(forResource: baseName, withExtension: "csv") { return url }
+        if let url = bundle.url(forResource: filename, withExtension: nil) { return url }
 
-        return parseCSV(raw)
+        // リソース列挙で最終探索
+        if let resources = bundle.resourceURL, let enumerator = FileManager.default.enumerator(at: resources, includingPropertiesForKeys: nil) {
+            for case let fileURL as URL in enumerator {
+                if fileURL.lastPathComponent == filename || fileURL.lastPathComponent == "\(baseName).csv" {
+                    return fileURL
+                }
+            }
+        }
+        return nil
     }
 
     // MARK: - CSV Parsing
@@ -98,21 +109,34 @@ public struct CSVQuestionLoader {
         var map: [String: Int] = [:]
         for (i, raw) in headerCols.enumerated() {
             let key = raw.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-            // いくつかの可能なヘッダ名を正規化
+            // いくつかの可能なヘッダ名を正規化（英語/日本語）
             switch key {
-            case "term", "word", "japanese", "lemma": map["term"] = i
-            case "reading", "yomi": map["reading"] = i
-            case "meaning", "meaning_jp", "translation": map["meaning"] = i
-            case "etymology", "note", "explain": map["etymology"] = i
-            case "relatedwords", "related_words", "related_words_csv": map["relatedwords"] = i
-            case "relatedfields", "related_fields", "related_fields_csv": map["relatedfields"] = i
-            case "difficulty", "level": map["difficulty"] = i
+            // term
+            case "term", "word", "japanese", "lemma", "語句":
+                map["term"] = i
+            // reading
+            case "reading", "yomi", "発音（カタカナ）", "発音(カタカナ)":
+                map["reading"] = i
+            // meaning
+            case "meaning", "meaning_jp", "translation", "和訳":
+                map["meaning"] = i
+            // etymology / note
+            case "etymology", "note", "explain", "語源等解説（日本語）", "語源等解説(日本語)":
+                map["etymology"] = i
+            // related words
+            case "relatedwords", "related_words", "related_words_csv", "関連語（英語）と意味（日本語）", "関連語(英語)と意味(日本語)":
+                map["relatedwords"] = i
+            // related fields / category
+            case "relatedfields", "related_fields", "related_fields_csv", "関連分野（日本語）", "関連分野(日本語)", "分野", "カテゴリ", "カテゴリー":
+                map["relatedfields"] = i
+            // difficulty / level
+            case "difficulty", "level", "難易度":
+                map["difficulty"] = i
             default:
                 // unknown header - ignore
                 break
             }
         }
-
         return map
     }
 
@@ -121,20 +145,24 @@ public struct CSVQuestionLoader {
         var result: [String] = []
         var current = ""
         var inQuotes = false
-        var chars = Array(line)
+        let chars = Array(line)
+
+        // 明示的に Character を定義して比較することで、シングルクオートや文字列リテラル比較による lint 警告を避ける
+        let quoteChar = Character("\"")
+        let commaChar = Character(",")
 
         var i = 0
         while i < chars.count {
             let ch = chars[i]
-            if ch == '"' {
-                if inQuotes && i + 1 < chars.count && chars[i + 1] == '"' {
-                    // エスケープされた引用符
-                    current.append('"')
+            if ch == quoteChar {
+                if inQuotes && i + 1 < chars.count && chars[i + 1] == quoteChar {
+                    // エスケープされた引用符: Character を追加
+                    current.append(quoteChar)
                     i += 1
                 } else {
                     inQuotes.toggle()
                 }
-            } else if ch == ',' && !inQuotes {
+            } else if ch == commaChar && !inQuotes {
                 result.append(current.trimmingCharacters(in: .whitespacesAndNewlines))
                 current = ""
             } else {
