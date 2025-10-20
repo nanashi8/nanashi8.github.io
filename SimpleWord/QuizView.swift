@@ -10,6 +10,7 @@
 // - なぜ: 語句学習のメイン画面として、適応型学習とバッチ管理を実現するため
 
 import SwiftUI
+import Combine
 
 struct QuizView: View {
     // 単語スコアは環境オブジェクトで注入される想定
@@ -49,9 +50,16 @@ struct QuizView: View {
         .navigationTitle("クイズ")
         .navigationBarTitleDisplayMode(.inline)
         // 遷移時はまず選択中の CSV を読み込む
-        .onAppear(perform: loadContent)
+        .onAppear {
+            debugLog("🎯 QuizView が表示されました")
+            loadContent()
+        }
         // CurrentCSV が変化したら再ロードする
-        .onReceive(CurrentCSV.shared.$name) { _ in
+        .onReceive(currentCSV.$name) { _ in
+            loadContent()
+        }
+        // QuizSettings の選択CSVが変わった場合にも再ロードする（起動時の選択反映用）
+        .onReceive(quizSettings.$model.map { $0.selectedCSV }.eraseToAnyPublisher()) { _ in
             loadContent()
         }
         .onChange(of: currentIndex) { _, _ in
@@ -76,10 +84,37 @@ struct QuizView: View {
             Text("問題データがありません")
                 .font(.headline)
 
-            Text("CSV管理で問題集を追加してください")
+            Text("出題設定で問題集を選択するか、CSV管理で問題集を追加してください")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
+                .padding(.horizontal)
+            
+            // デバッグ情報
+            VStack(alignment: .leading, spacing: 4) {
+                Text("現在のCSV: \(currentCSV.name ?? "未選択")")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Text("設定CSV: \(quizSettings.model.selectedCSV ?? "未選択")")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.top, 8)
+            
+            // 出題設定へのナビゲーションボタン
+            NavigationLink {
+                QuizSettingsView()
+            } label: {
+                Label("出題設定を開く", systemImage: "gearshape")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.accentColor)
+                    .cornerRadius(12)
+            }
+            .padding(.horizontal)
+            .padding(.top, 8)
         }
         .padding()
     }
@@ -219,6 +254,39 @@ struct QuizView: View {
         .cornerRadius(12)
     }
 
+    // MARK: - Debug Helper
+    
+    /// デバッグログ出力（DEBUGビルドのみ）
+    private func debugLog(_ message: String) {
+        #if DEBUG
+        print(message)
+        #endif
+    }
+    
+    // MARK: - Animation Helper
+    
+    /// アニメーション種別
+    private enum AnimationType {
+        case totalCount
+        case passedCount
+    }
+    
+    /// アニメーションをトリガー（1.2秒間光る）
+    private func triggerAnimation(for type: AnimationType) {
+        switch type {
+        case .totalCount:
+            shouldAnimateTotalCount = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                self.shouldAnimateTotalCount = false
+            }
+        case .passedCount:
+            shouldAnimatePassedCount = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                self.shouldAnimatePassedCount = false
+            }
+        }
+    }
+
     // MARK: - Actions
 
     /// 選択肢が選ばれた時の処理
@@ -298,17 +366,11 @@ struct QuizView: View {
     /// 統計を更新
     private func updateStatistics(correct: Bool) {
         totalCount += 1
-        shouldAnimateTotalCount = true
+        triggerAnimation(for: .totalCount)
 
         if correct {
             passedCount += 1
-            shouldAnimatePassedCount = true
-        }
-
-        // アニメーションを一定時間後にリセット
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            shouldAnimatePassedCount = false
-            shouldAnimateTotalCount = false
+            triggerAnimation(for: .passedCount)
         }
     }
 
@@ -364,21 +426,42 @@ struct QuizView: View {
 
     /// CSVまたはサンプルデータをロードする
     private func loadContent() {
+        debugLog("📚 loadContent開始")
+        
+        // 統計をリセット
+        self.currentIndex = 0
+        self.totalCount = 0
+        self.passedCount = 0
+        
         // 1) 選択されている CSV をロード
-        let name = CurrentCSV.shared.name
-        if let loaded = name.flatMap({ CSVQuestionLoader.loadQuestions(csvName: $0) }), !loaded.isEmpty {
-            // 出題設定に基づいてフィルタリング
-            let filtered = applyQuizSettings(to: loaded)
-            self.items = filtered
-            // 統計をリセット
-            self.currentIndex = 0
-            self.totalCount = 0
-            self.passedCount = 0
-            return
+        // 優先順: CurrentCSV.name -> QuizSettings.model.selectedCSV
+        let name = currentCSV.name ?? quizSettings.model.selectedCSV
+        debugLog("📝 選択されたCSV: \(name ?? "nil")")
+        
+        if let csvName = name, !csvName.isEmpty {
+            let loaded = CSVQuestionLoader.loadQuestions(csvName: csvName)
+            debugLog("📖 ロードされた問題数: \(loaded.count)")
+            
+            if !loaded.isEmpty {
+                // 出題設定に基づいてフィルタリング
+                let filtered = applyQuizSettings(to: loaded)
+                debugLog("🔍 フィルタ後の問題数: \(filtered.count)")
+                
+                // フィルタ結果が空になる可能性があるため、その場合はフィルタ前の loaded をフォールバックとして使う
+                if filtered.isEmpty {
+                    self.items = loaded
+                    debugLog("✅ フィルタ前のデータを使用: \(loaded.count)問")
+                } else {
+                    self.items = filtered
+                    debugLog("✅ フィルタ後のデータを使用: \(filtered.count)問")
+                }
+                return
+            }
         }
 
-        // 2) CSV が指定されていない、または読み込み失敗した場合はサンプルデータをフォールバック
-        loadSampleIfNeeded()
+        // 2) CSV が指定されていない、または読み込み失敗した場合はサンプルデータをロード
+        debugLog("🎲 サンプルデータをロード")
+        loadSampleData()
     }
 
     /// 出題設定を適用してフィルタリング・ソート
@@ -418,9 +501,7 @@ struct QuizView: View {
     }
 
     /// サンプルデータをロード
-    private func loadSampleIfNeeded() {
-        guard items.isEmpty else { return }
-
+    private func loadSampleData() {
         items = [
             QuestionItem(
                 term: "apple",
@@ -473,10 +554,11 @@ struct QuizView: View {
 
 // MARK: - Preview
 #Preview {
+    let currentCSV = CurrentCSV.shared
     NavigationView {
         QuizView()
             .environmentObject(WordScoreStore())
-            .environmentObject(CurrentCSV.shared)
-            .environmentObject(QuizSettings())
+            .environmentObject(currentCSV)
+            .environmentObject(QuizSettings(currentCSV: currentCSV))
     }
 }

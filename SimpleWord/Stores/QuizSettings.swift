@@ -256,6 +256,9 @@ public final class QuizSettings: ObservableObject {
     private let legacyKey = "QuizSettingsStore_v1"
 
     private var cancellables: Set<AnyCancellable> = []
+    
+    // CurrentCSV への参照（外部から注入される）
+    private var currentCSV: CurrentCSV?
 
     // 互換性ラッパー: 既存ビューが古いプロパティ名で参照しているため computed properties を追加
     // fields / difficulties / repeatCount / threshold / questionsPerBatch / autoAdvance などを提供する
@@ -305,10 +308,12 @@ public final class QuizSettings: ObservableObject {
     // backing store for appearance (デフォルトは .system)
     private var appearanceBacking: Appearance = .system
 
-    public init() {
+    public init(currentCSV: CurrentCSV? = nil) {
         // 初期化順序: Swift のルールに従い、self を使う前に全ての stored properties を初期化する
         // model は一旦デフォルトで初期化しておく（後で実際の CSV 名に基づいた model に差し替える）
         self.model = QuizSettingsModel.default()
+        // CurrentCSV を注入（nilの場合は後で .shared を使う）
+        self.currentCSV = currentCSV
 
         // 1) 新フォーマットの読み込み
         if let data = UserDefaults.standard.data(forKey: storageKey) {
@@ -340,7 +345,8 @@ public final class QuizSettings: ObservableObject {
              persistStorage()
          }
         // 3) 現在のCSV名に応じて model を構築
-        let currentName = CurrentCSV.shared.name ?? "__default__"
+        let csv = self.currentCSV ?? CurrentCSV.shared
+        let currentName = csv.name ?? "__default__"
         self.model = Self.buildModel(for: currentName, from: storage)
 
         // initialize appearance backing from model if possible
@@ -351,7 +357,7 @@ public final class QuizSettings: ObservableObject {
         self.learningMode = self.model.learningMode
 
         // 4) CSV名の変更を監視し、アクティブモデルを切り替える
-        CurrentCSV.shared.$name
+        csv.$name
             .sink { [weak self] newName in
                 guard let self = self else { return }
                 let key = newName ?? "__default__"
@@ -366,7 +372,8 @@ public final class QuizSettings: ObservableObject {
 
     // 現在の model を storage に書き戻す（現在のCSV名のバケットに）
     private func persistActiveModel() {
-        let key = CurrentCSV.shared.name ?? "__default__"
+        let csv = self.currentCSV ?? CurrentCSV.shared
+        let key = csv.name ?? "__default__"
         let per = PerCSVSettings(
             selectedFields: model.selectedFields,
             difficulties: model.difficulties,
@@ -389,7 +396,8 @@ public final class QuizSettings: ObservableObject {
 
     public func save() {
         // model.selectedCSV は表示用なので、CurrentCSV から決定
-        model.selectedCSV = CurrentCSV.shared.name
+        let csv = self.currentCSV ?? CurrentCSV.shared
+        model.selectedCSV = csv.name
         // Sync learningMode into model before persisting so that snapshot results include it
         model.learningMode = learningMode
         persistActiveModel()

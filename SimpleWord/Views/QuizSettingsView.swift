@@ -519,10 +519,11 @@ fileprivate extension Array where Element: Hashable {
 // PreviewProviderを使ってプレビューを提供する（#Preview の代替）
 struct QuizSettingsView_Previews: PreviewProvider {
     static var previews: some View {
+        let currentCSV = CurrentCSV.shared
         NavigationStack {
             QuizSettingsView()
-                .environmentObject(QuizSettings())
-                .environmentObject(CurrentCSV.shared)
+                .environmentObject(QuizSettings(currentCSV: currentCSV))
+                .environmentObject(currentCSV)
                 .environmentObject(AppearanceManager())
         }
     }

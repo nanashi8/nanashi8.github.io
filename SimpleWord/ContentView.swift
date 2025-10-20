@@ -21,7 +21,7 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     // 見出し（クイックアクセス）は廃止しました
@@ -29,9 +29,7 @@ struct ContentView: View {
 
                     VStack(spacing: 12) {
                         // 1) クイズをはじめる
-                        NavigationLink {
-                            QuizView()
-                        } label: {
+                        NavigationLink(destination: QuizView()) {
                             SectionCard {
                                 HStack(spacing: 12) {
                                     Image(systemName: "questionmark.circle")
@@ -40,6 +38,7 @@ struct ContentView: View {
                                     VStack(alignment: .leading, spacing: 4) {
                                         Text("クイズをはじめる")
                                             .font(.headline)
+                                            .foregroundColor(.primary)
                                         Text("選んだCSVから出題します")
                                             .font(.caption)
                                             .foregroundColor(.secondary)
@@ -51,7 +50,6 @@ struct ContentView: View {
                             }
                             .padding(.horizontal)
                         }
-                        .buttonStyle(.plain)
 
                         // 2) 単語リスト（ナビゲーター）は廃止済み
 

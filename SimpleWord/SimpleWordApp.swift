@@ -15,13 +15,14 @@ import CoreData
 @main
 struct SimpleWordApp: App {
     let persistenceController = PersistenceController.shared
-    // add stores
-    @StateObject var quizSettings = QuizSettings()
-    @StateObject var scoreStore = ScoreStore()
-    @StateObject var wordScoreStore = WordScoreStore()
-    @StateObject var currentCSV = CurrentCSV.shared
+    // CurrentCSVを最初に初期化
+    @StateObject private var currentCSV = CurrentCSV.shared
+    // add stores - currentCSVを注入
+    @StateObject private var quizSettings = QuizSettings(currentCSV: CurrentCSV.shared)
+    @StateObject private var scoreStore = ScoreStore()
+    @StateObject private var wordScoreStore = WordScoreStore()
     // 追加: 外観マネージャをアプリ全体に提供
-    @StateObject var appearanceManager = AppearanceManager()
+    @StateObject private var appearanceManager = AppearanceManager()
 
     var body: some Scene {
         WindowGroup {

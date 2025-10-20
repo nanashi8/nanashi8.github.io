@@ -113,9 +113,11 @@ public final class QuizSettings: ObservableObject {
     private let legacyKey = "QuizSettingsStore_v1"
 
     private var cancellables: Set<AnyCancellable> = []
+    private var currentCSV: CurrentCSV?
 
-    public init() {
+    public init(currentCSV: CurrentCSV? = nil) {
         self.model = QuizSettingsModel.default()
+        self.currentCSV = currentCSV
 
         if let data = UserDefaults.standard.data(forKey: storageKey) {
             if let decoded = try? JSONDecoder().decode([String: PerCSVSettings].self, from: data) {
@@ -143,10 +145,11 @@ public final class QuizSettings: ObservableObject {
             persistStorage()
         }
 
-        let currentName = CurrentCSV.shared.name ?? "__default__"
+        let csv = self.currentCSV ?? CurrentCSV.shared
+        let currentName = csv.name ?? "__default__"
         self.model = Self.buildModel(for: currentName, from: storage)
 
-        CurrentCSV.shared.$name
+        csv.$name
             .sink { [weak self] newName in
                 guard let self = self else { return }
                 let key = newName ?? "__default__"
@@ -157,7 +160,8 @@ public final class QuizSettings: ObservableObject {
     }
 
     private func persistActiveModel() {
-        let key = CurrentCSV.shared.name ?? "__default__"
+        let csv = self.currentCSV ?? CurrentCSV.shared
+        let key = csv.name ?? "__default__"
         let per = PerCSVSettings(
             selectedFields: model.selectedFields,
             difficulties: model.difficulties,
@@ -179,7 +183,8 @@ public final class QuizSettings: ObservableObject {
     }
 
     public func save() {
-        model.selectedCSV = CurrentCSV.shared.name
+        let csv = self.currentCSV ?? CurrentCSV.shared
+        model.selectedCSV = csv.name
         persistActiveModel()
     }
 
