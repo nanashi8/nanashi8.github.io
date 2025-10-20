@@ -1,6 +1,6 @@
 # SimpleWord アーキテクチャマップ
 
-最終更新: 2025年10月18日
+最終更新: 2025年10月20日
 
 ## プロジェクト概要
 語句を効率的に学習するためのクイズアプリケーション。直感的に操作できる分かりやすい画面レイアウトで、軽快かつ安定した動作を目指す。
@@ -69,12 +69,16 @@ QuizView (1,100行超)
 
 ---
 
-## QuizView v1.2.0 完全実装 (2025-10-19)
+## QuizView v1.6.0 完全実装 (2025-10-20) ✨
 
 ### ファイル構成
 ```
 SimpleWord/
-├── QuizView.swift (264行) ✅ 完全実装
+├── Features/
+│   └── Quiz/
+│       └── Views/
+│           └── FlowLayout.swift (88行) ✅ 新規作成
+├── QuizView.swift (434行) ✅ 大幅改修
 │   ├── QuizOption (fileprivate) - 選択肢モデル
 │   ├── State管理 - 問題、選択肢、スコア、バッチ、UI
 │   ├── View構成
@@ -82,10 +86,12 @@ SimpleWord/
 │   │   ├── statsView
 │   │   ├── progressView
 │   │   ├── choicesSection
+│   │   ├── explanationSection ✨ 新規追加
 │   │   └── finishedView
 │   └── ロジック
 │       ├── start(), prepareBatch(), prepareNextQuestion()
 │       ├── generateChoices(), handleChoice()
+│       ├── applyQuizSettings() ✨ 新規追加
 │       └── startTimer(), restart()
 ├── QuestionCardView.swift - 問題表示
 ├── ChoiceCardView.swift - 選択肢表示
@@ -99,6 +105,8 @@ SimpleWord/
 3. ✅ アニメーション（光るエフェクト）
 4. ✅ タイマー機能（制限時間、カウントダウン）
 5. ✅ 音声再生（AVSpeechSynthesizer）
+6. ✅ 出題設定適用（分野・難易度・出題数フィルタリング）✨ v1.6.0
+7. ✅ 回答後の解説表示（語源・関連語・類義語・対義語・例文）✨ v1.6.0
 6. ✅ 自動遷移（設定による制御）
 7. ✅ CSV統合（CSVLoader）
 8. ✅ 完了画面（結果サマリー）
