@@ -102,101 +102,44 @@ struct QuizView: View {
             return
         }
 
-        var allItems: [QuestionItem] = []
-        var resolvedCSVURL: URL? = nil
-
-        // QuestionItemRepository を使用してCSVを読み込む
-        let base = csvName.replacingOccurrences(of: ".csv", with: "")
-        let repository = QuestionItemRepository(fileName: base)
+        let dataLoader = QuizDataLoader()
         
-        switch repository.fetch() {
-        case .success(let items):
-            allItems = items
-        case .failure(let error):
-            print("CSV load error: \(error.localizedDescription)")
-            allItems = []
-        }
+        do {
+            let result = try dataLoader.loadQuizData(
+                csvName: csvName,
+                fields: quizSettings.fields,
+                difficulties: quizSettings.difficulties,
+                numberOfQuestions: quizSettings.numberOfQuestions,
+                isRandomOrder: quizSettings.isRandomOrder
+            )
+            
+            self.items = result.items
+            self.order = result.order
+            self.csvHeaderLabels = result.headerLabels
+            
+            // 問題集に対応する学習結果を読み込む
+            wordScoreStore.switchToCSV(csvName)
 
-        // resolvedCSVURL の設定（Documents優先、次にBundle）
-        if let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let csvURL = documentsURL.appendingPathComponent(csvName.hasSuffix(".csv") ? csvName : "\(csvName).csv")
-            if FileManager.default.fileExists(atPath: csvURL.path) {
-                resolvedCSVURL = csvURL
+            // 出題数とバッチサイズの設定
+            let totalQuestions = result.order.count
+            let batchSize = min(quizSettings.questionsPerBatch, totalQuestions)
+
+            // セッションの開始または復元
+            if sessionStore.canResumeSession(csvName: csvName) {
+                // 既存のセッションを継続
+                print("セッションを復元: スコア=\(sessionStore.score), 問題数=\(sessionStore.questionCount)")
+            } else {
+                // 新しいセッションを開始
+                sessionStore.startSession(csvName: csvName, batchSize: batchSize, totalQuestions: totalQuestions)
             }
-        }
-        if resolvedCSVURL == nil {
-            resolvedCSVURL = Bundle.main.url(forResource: base, withExtension: "csv")
-        }
 
-        // ここで resolvedCSVURL が決まっている可能性があるので、ヘッダを読み取ってラベルマップを作成する
-        if let url = resolvedCSVURL {
-            let parser = CSVHeaderParser()
-            csvHeaderLabels = parser.parseHeader(from: url)
-        } else {
-            csvHeaderLabels = [:]
-        }
-
-        if allItems.isEmpty {
-            errorMessage = "CSVファイル '\(csvName)' が見つからないか、読み込みに失敗しました。"
             isLoading = false
-            return
-        }
-
-        // フィルタリング
-        let filtered = applyFilters(to: allItems)
-        if filtered.isEmpty {
-            errorMessage = "フィルタ条件に一致する問題がありません。\n出題設定を確認してください。"
+            prepareBatch()
+            
+        } catch {
+            errorMessage = error.localizedDescription
             isLoading = false
-            return
         }
-
-        self.items = filtered
-
-        // 問題集に対応する学習結果を読み込む
-        wordScoreStore.switchToCSV(csvName)
-
-        // 出題数とバッチサイズの設定
-        let totalQuestions = quizSettings.numberOfQuestions > 0 ? min(quizSettings.numberOfQuestions, items.count) : items.count
-        let batchSize = min(quizSettings.questionsPerBatch, totalQuestions)
-
-        // セッションの開始または復元
-        if sessionStore.canResumeSession(csvName: csvName) {
-            // 既存のセッションを継続
-            print("セッションを復元: スコア=\(sessionStore.score), 問題数=\(sessionStore.questionCount)")
-        } else {
-            // 新しいセッションを開始
-            sessionStore.startSession(csvName: csvName, batchSize: batchSize, totalQuestions: totalQuestions)
-        }
-
-        // 出題順序の決定
-        if quizSettings.isRandomOrder {
-            order = items.shuffled().prefix(totalQuestions).map { $0 }
-        } else {
-            order = Array(items.prefix(totalQuestions))
-        }
-
-        isLoading = false
-        prepareBatch()
-    }
-
-    private func applyFilters(to items: [QuestionItem]) -> [QuestionItem] {
-        var result = items
-
-        // 分野フィルタ
-        if !quizSettings.fields.isEmpty {
-            result = result.filter { item in
-                !Set(item.relatedFields).isDisjoint(with: quizSettings.fields)
-            }
-        }
-
-        // 難易度フィルタ
-        if !quizSettings.difficulties.isEmpty {
-            result = result.filter { item in
-                quizSettings.difficulties.contains(item.difficulty)
-            }
-        }
-
-        return result
     }
 
     // MARK: - バッチ準備
@@ -240,24 +183,15 @@ struct QuizView: View {
         guard let item = currentItem else { return }
 
         // 選択肢の生成
-        // 正解のラベルは item.meaning
-        let correctChoice = QuizChoice(id: UUID(), label: item.meaning, explanation: item.etymology, isCorrect: true, item: item)
-        correctAnswerID = correctChoice.id
-
-        var incorrectChoices: [QuizChoice] = []
-        let otherItems = items.filter { $0.id != item.id }.shuffled()
-
-        for otherItem in otherItems.prefix(max(0, configuredNumberOfChoices - 1)) {
-            let choice = QuizChoice(id: UUID(), label: otherItem.meaning, explanation: otherItem.etymology, isCorrect: false, item: otherItem)
-            incorrectChoices.append(choice)
-        }
-
-        // 必要に応じて選択肢を補う（候補が不足する場合）
-        while incorrectChoices.count < max(0, configuredNumberOfChoices - 1) {
-            incorrectChoices.append(QuizChoice(id: UUID(), label: "(候補不足)", explanation: nil, isCorrect: false, item: nil))
-        }
-
-        choices = ([correctChoice] + incorrectChoices).shuffled()
+        let generator = QuizQuestionGenerator()
+        let result = generator.generateChoices(
+            correctItem: item,
+            allItems: items,
+            numberOfChoices: configuredNumberOfChoices
+        )
+        
+        choices = result.choices
+        correctAnswerID = result.correctAnswerID
 
         // 履歴に追加
         if historyIndex >= 0 && historyIndex < history.count - 1 {
@@ -279,36 +213,11 @@ struct QuizView: View {
         }
 
         // 通常の選択肢
-        let oldQuestionCount = sessionStore.questionCount
-        let oldBatchCorrect = sessionStore.batchCorrect
-
         selectedChoiceID = id
-
         let wasCorrect = (id == correctAnswerID)
         
-        // セッションストアに記録
-        sessionStore.recordAnswer(correct: wasCorrect)
-
-        // アニメーション判定
-        if sessionStore.questionCount > oldQuestionCount {
-            shouldAnimateTotalCount = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                self.shouldAnimateTotalCount = false
-            }
-        }
-
-        if sessionStore.batchCorrect > oldBatchCorrect {
-            shouldAnimatePassedCount = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                self.shouldAnimatePassedCount = false
-            }
-        }
-
-        // スコア記録
-        if let item = currentItem {
-            // 単語スコアストアへ記録（既存 API を使用）
-            wordScoreStore.recordResult(itemID: item.id, correct: wasCorrect)
-        }
+        // 回答処理とアニメーション
+        processAnswer(isCorrect: wasCorrect)
 
         // 自動進行
         if wasCorrect && autoAdvanceEnabled {
@@ -320,25 +229,46 @@ struct QuizView: View {
 
     private func giveUp() {
         guard selectedChoiceID == nil else { return }
-
-        let oldQuestionCount = sessionStore.questionCount
-
         selectedChoiceID = dontKnowID
         
-        // セッションストアに不正解として記録
-        sessionStore.recordAnswer(correct: false)
+        // 回答処理とアニメーション（不正解として）
+        processAnswer(isCorrect: false)
+    }
+    
+    /// 回答を処理してアニメーションを設定
+    private func processAnswer(isCorrect: Bool) {
+        let answerHandler = QuizAnswerHandler()
+        let result = answerHandler.handleAnswer(
+            isCorrect: isCorrect,
+            sessionStore: sessionStore
+        )
 
-        // アニメーション判定
-        if sessionStore.questionCount > oldQuestionCount {
+        // アニメーション設定
+        setAnimation(
+            totalCount: result.shouldAnimateTotalCount,
+            passedCount: result.shouldAnimatePassedCount
+        )
+
+        // スコア記録
+        if let item = currentItem {
+            wordScoreStore.recordResult(itemID: item.id, correct: isCorrect)
+        }
+    }
+    
+    /// アニメーションを設定
+    private func setAnimation(totalCount: Bool, passedCount: Bool) {
+        if totalCount {
             shouldAnimateTotalCount = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                 self.shouldAnimateTotalCount = false
             }
         }
 
-        // スコア記録（不正解として）
-        if let item = currentItem {
-            wordScoreStore.recordResult(itemID: item.id, correct: false)
+        if passedCount {
+            shouldAnimatePassedCount = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                self.shouldAnimatePassedCount = false
+            }
         }
     }
 
@@ -361,22 +291,15 @@ struct QuizView: View {
             correctAnswerID = nil
 
             // 選択肢を再生成
-            let correctChoice = QuizChoice(id: UUID(), label: previousItem.meaning, explanation: previousItem.etymology, isCorrect: true, item: previousItem)
-            correctAnswerID = correctChoice.id
-
-            var incorrectChoices: [QuizChoice] = []
-            let otherItems = items.filter { $0.id != previousItem.id }.shuffled()
-
-            for otherItem in otherItems.prefix(max(0, configuredNumberOfChoices - 1)) {
-                let choice = QuizChoice(id: UUID(), label: otherItem.meaning, explanation: otherItem.etymology, isCorrect: false, item: otherItem)
-                incorrectChoices.append(choice)
-            }
-
-            while incorrectChoices.count < max(0, configuredNumberOfChoices - 1) {
-                incorrectChoices.append(QuizChoice(id: UUID(), label: "(候補不足)", explanation: nil, isCorrect: false, item: nil))
-            }
-
-            choices = ([correctChoice] + incorrectChoices).shuffled()
+            let generator = QuizQuestionGenerator()
+            let result = generator.generateChoices(
+                correctItem: previousItem,
+                allItems: items,
+                numberOfChoices: configuredNumberOfChoices
+            )
+            
+            choices = result.choices
+            correctAnswerID = result.correctAnswerID
         }
     }
 
@@ -408,12 +331,6 @@ struct QuizView: View {
         scoreStore.addResult(result)
     }
 
-    // MARK: - ヘルパー
-
-    private func determineLearningMode() -> String {
-        // model に含まれる学習モードを返す
-        quizSettings.model.learningMode.displayName
-    }
 }
 
 // MARK: - Preview
