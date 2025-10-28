@@ -100,7 +100,7 @@ struct QuizParametersView: View {
                 timeLimit: .constant(30),
                 numberOfChoices: .constant(4),
                 isSpeechEnabled: .constant(true),
-                learningMode: .constant(.standard),
+                learningMode: .constant(.normal),
                 autoAdvance: .constant(false),
                 cardBackground: Color(uiColor: .secondarySystemBackground)
             )

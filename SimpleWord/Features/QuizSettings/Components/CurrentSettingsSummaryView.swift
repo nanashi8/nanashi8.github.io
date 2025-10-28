@@ -135,7 +135,7 @@ struct CurrentSettingsSummaryView: View {
             isSpeechEnabled: true,
             isTimerEnabled: true,
             timeLimit: 30,
-            learningMode: .standard,
+            learningMode: .normal,
             autoAdvance: false,
             appearance: .system,
             cardBackground: Color(uiColor: .secondarySystemBackground)
