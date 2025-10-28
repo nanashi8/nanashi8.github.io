@@ -14,7 +14,7 @@ import SwiftUI
 struct QuizStatisticsView: View {
     let csvName: String
     let learningMode: String
-    let accuracy: Int
+    let accuracy: Double
     let passedCount: Int
     let totalCount: Int
     let batchSize: Int
@@ -43,7 +43,7 @@ struct QuizStatisticsView: View {
                 
                 // 統計情報
                 HStack(spacing: 12) {
-                    Text("正答率: \(accuracy)%")
+                    Text("正答率: \(String(format: "%.1f", accuracy))%")
                         .font(.caption)
                         .foregroundColor(.secondary)
                     
@@ -79,7 +79,7 @@ struct QuizStatisticsView: View {
         QuizStatisticsView(
             csvName: "中学英単語.csv",
             learningMode: "標準モード",
-            accuracy: 85,
+            accuracy: 85.0,
             passedCount: 8,
             totalCount: 10,
             batchSize: 10,
@@ -90,7 +90,7 @@ struct QuizStatisticsView: View {
         QuizStatisticsView(
             csvName: "高校単語.csv",
             learningMode: "集中モード",
-            accuracy: 92,
+            accuracy: 92.5,
             passedCount: 15,
             totalCount: 18,
             batchSize: 20,
