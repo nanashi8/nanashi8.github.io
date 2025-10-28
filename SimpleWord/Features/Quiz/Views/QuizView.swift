@@ -7,40 +7,18 @@ import SwiftUI
 
 /// クイズ画面の実装
 struct QuizView: View {
+    // MARK: - Properties
+    
     // 環境オブジェクト
     @EnvironmentObject var wordScoreStore: WordScoreStore
     @EnvironmentObject var currentCSV: CurrentCSV
     @EnvironmentObject var quizSettings: QuizSettings
     @EnvironmentObject var scoreStore: ScoreStore
+    
+    // 状態管理
+    @StateObject private var state = QuizViewState()
     @StateObject private var sessionStore = QuizSessionStore.shared
-
-    // データ状態
-    @State private var items: [QuestionItem] = []           // 全問題（フィルタ済み）
-    @State private var order: [QuestionItem] = []           // 出題順序
-    @State private var pool: [QuestionItem] = []            // 現在バッチのプール
-    @State private var currentItem: QuestionItem? = nil     // 現在の問題
-
-    // UI状態
-    @State private var choices: [QuizChoice] = []           // 選択肢
-    @State private var selectedChoiceID: UUID? = nil
-    @State private var correctAnswerID: UUID? = nil
-    @State private var dontKnowID: UUID = UUID()
-
-    // アニメーション状態
-    @State private var shouldAnimatePassedCount: Bool = false   // 合格数アニメ
-    @State private var shouldAnimateTotalCount: Bool = false    // 総出題数アニメ
-
-    // ローディング・エラー状態
-    @State private var isLoading: Bool = true
-    @State private var errorMessage: String? = nil
-
-    // 学習履歴
-    @State private var history: [UUID] = []                 // 出題履歴（戻る機能用）
-    @State private var historyIndex: Int = -1               // 履歴内の現在位置
-
-    // CSVのヘッダ表示用マップ: 論理キー(term,reading,meaning,etymology,relatedfields,difficulty) -> 表示ヘッダ
-    @State private var csvHeaderLabels: [String: String] = [:]
-
+    
     @Environment(\.dismiss) private var dismiss
 
     // QuizSettings の容易な参照: model に含まれる値を使う
@@ -54,33 +32,33 @@ struct QuizView: View {
 
     var body: some View {
         Group {
-            if isLoading {
+            if state.isLoading {
                 QuizLoadingView()
-            } else if let error = errorMessage {
+            } else if let error = state.errorMessage {
                 QuizErrorView(message: error, onDismiss: { dismiss() })
-            } else if items.isEmpty {
+            } else if state.items.isEmpty {
                 QuizEmptyView(onDismiss: { dismiss() })
             } else {
                 QuizContentView(
-                    currentItem: currentItem,
-                    choices: choices,
-                    csvHeaderLabels: csvHeaderLabels,
+                    currentItem: state.currentItem,
+                    choices: state.choices,
+                    csvHeaderLabels: state.csvHeaderLabels,
                     csvName: currentCSV.name ?? "",
                     learningMode: learningModeDisplayName,
                     accuracy: Double(sessionStore.calculateAccuracy()),
                     passedCount: sessionStore.batchCorrect,
                     totalCount: sessionStore.questionCount,
                     batchSize: sessionStore.batchSize,
-                    canGoPrevious: historyIndex > 0,
-                    canGoNext: selectedChoiceID != nil,
+                    canGoPrevious: state.historyIndex > 0,
+                    canGoNext: state.selectedChoiceID != nil,
                     onPrevious: { goToPreviousQuestion() },
                     onNext: { goToNextQuestion() },
-                    selectedChoiceID: selectedChoiceID,
-                    correctAnswerID: correctAnswerID,
-                    dontKnowID: dontKnowID,
+                    selectedChoiceID: state.selectedChoiceID,
+                    correctAnswerID: state.correctAnswerID,
+                    dontKnowID: state.dontKnowID,
                     onSelect: { id in handleChoiceSelection(id) },
-                    shouldAnimatePassedCount: $shouldAnimatePassedCount,
-                    shouldAnimateTotalCount: $shouldAnimateTotalCount
+                    shouldAnimatePassedCount: $state.shouldAnimatePassedCount,
+                    shouldAnimateTotalCount: $state.shouldAnimateTotalCount
                 )
                 .environmentObject(wordScoreStore)
             }
@@ -97,8 +75,8 @@ struct QuizView: View {
 
     private func loadCSVAndStart() {
         guard let csvName = currentCSV.name else {
-            errorMessage = "CSVファイルが選択されていません。"
-            isLoading = false
+            state.errorMessage = "CSVファイルが選択されていません。"
+            state.isLoading = false
             return
         }
 
@@ -113,9 +91,9 @@ struct QuizView: View {
                 isRandomOrder: quizSettings.isRandomOrder
             )
             
-            self.items = result.items
-            self.order = result.order
-            self.csvHeaderLabels = result.headerLabels
+            state.items = result.items
+            state.order = result.order
+            state.csvHeaderLabels = result.headerLabels
             
             // 問題集に対応する学習結果を読み込む
             wordScoreStore.switchToCSV(csvName)
@@ -133,33 +111,33 @@ struct QuizView: View {
                 sessionStore.startSession(csvName: csvName, batchSize: batchSize, totalQuestions: totalQuestions)
             }
 
-            isLoading = false
+            state.isLoading = false
             prepareBatch()
             
         } catch {
-            errorMessage = error.localizedDescription
-            isLoading = false
+            state.errorMessage = error.localizedDescription
+            state.isLoading = false
         }
     }
 
     // MARK: - バッチ準備
 
     private func prepareBatch() {
-        guard !order.isEmpty else {
-            errorMessage = "出題する問題がありません。"
+        guard !state.order.isEmpty else {
+            state.errorMessage = "出題する問題がありません。"
             return
         }
 
         let batchManager = QuizBatchManager()
-        pool = batchManager.prepareBatch(
-            from: items,
-            order: order,
+        state.pool = batchManager.prepareBatch(
+            from: state.items,
+            order: state.order,
             batchSize: sessionStore.batchSize,
             repeatCount: quizSettings.repeatCount
         )
 
-        guard !pool.isEmpty else {
-            errorMessage = "出題する問題がありません。"
+        guard !state.pool.isEmpty else {
+            state.errorMessage = "出題する問題がありません。"
             return
         }
 
@@ -169,52 +147,52 @@ struct QuizView: View {
     // MARK: - 問題準備
 
     private func prepareQuestion() {
-        guard !pool.isEmpty else {
+        guard !state.pool.isEmpty else {
             // バッチ完了
             completeBatch()
             return
         }
 
-        currentItem = pool.removeFirst()
-        selectedChoiceID = nil
-        correctAnswerID = nil
-        dontKnowID = UUID()
+        state.currentItem = state.pool.removeFirst()
+        state.selectedChoiceID = nil
+        state.correctAnswerID = nil
+        state.dontKnowID = UUID()
 
-        guard let item = currentItem else { return }
+        guard let item = state.currentItem else { return }
 
         // 選択肢の生成
         let generator = QuizQuestionGenerator()
         let result = generator.generateChoices(
             correctItem: item,
-            allItems: items,
+            allItems: state.items,
             numberOfChoices: configuredNumberOfChoices
         )
         
-        choices = result.choices
-        correctAnswerID = result.correctAnswerID
+        state.choices = result.choices
+        state.correctAnswerID = result.correctAnswerID
 
         // 履歴に追加
-        if historyIndex >= 0 && historyIndex < history.count - 1 {
-            history = Array(history.prefix(historyIndex + 1))
+        if state.historyIndex >= 0 && state.historyIndex < state.history.count - 1 {
+            state.history = Array(state.history.prefix(state.historyIndex + 1))
         }
-        history.append(item.id)
-        historyIndex = history.count - 1
+        state.history.append(item.id)
+        state.historyIndex = state.history.count - 1
     }
 
     // MARK: - 回答処理
 
     private func handleChoiceSelection(_ id: UUID) {
-        guard selectedChoiceID == nil else { return }
+        guard state.selectedChoiceID == nil else { return }
 
         // 分からないボタンの処理
-        if id == dontKnowID {
+        if id == state.dontKnowID {
             giveUp()
             return
         }
 
         // 通常の選択肢
-        selectedChoiceID = id
-        let wasCorrect = (id == correctAnswerID)
+        state.selectedChoiceID = id
+        let wasCorrect = (id == state.correctAnswerID)
         
         // 回答処理とアニメーション
         processAnswer(isCorrect: wasCorrect)
@@ -228,8 +206,8 @@ struct QuizView: View {
     }
 
     private func giveUp() {
-        guard selectedChoiceID == nil else { return }
-        selectedChoiceID = dontKnowID
+        guard state.selectedChoiceID == nil else { return }
+        state.selectedChoiceID = state.dontKnowID
         
         // 回答処理とアニメーション（不正解として）
         processAnswer(isCorrect: false)
@@ -250,7 +228,7 @@ struct QuizView: View {
         )
 
         // スコア記録
-        if let item = currentItem {
+        if let item = state.currentItem {
             wordScoreStore.recordResult(itemID: item.id, correct: isCorrect)
         }
     }
@@ -258,16 +236,16 @@ struct QuizView: View {
     /// アニメーションを設定
     private func setAnimation(totalCount: Bool, passedCount: Bool) {
         if totalCount {
-            shouldAnimateTotalCount = true
+            state.shouldAnimateTotalCount = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                self.shouldAnimateTotalCount = false
+                self.state.shouldAnimateTotalCount = false
             }
         }
 
         if passedCount {
-            shouldAnimatePassedCount = true
+            state.shouldAnimatePassedCount = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                self.shouldAnimatePassedCount = false
+                self.state.shouldAnimatePassedCount = false
             }
         }
     }
@@ -279,27 +257,27 @@ struct QuizView: View {
     }
 
     private func goToPreviousQuestion() {
-        guard historyIndex > 0 else { return }
+        guard state.historyIndex > 0 else { return }
 
-        historyIndex -= 1
-        let previousID = history[historyIndex]
+        state.historyIndex -= 1
+        let previousID = state.history[state.historyIndex]
 
         // 前の問題を再表示
-        if let previousItem = items.first(where: { $0.id == previousID }) {
-            currentItem = previousItem
-            selectedChoiceID = nil
-            correctAnswerID = nil
+        if let previousItem = state.items.first(where: { $0.id == previousID }) {
+            state.currentItem = previousItem
+            state.selectedChoiceID = nil
+            state.correctAnswerID = nil
 
             // 選択肢を再生成
             let generator = QuizQuestionGenerator()
             let result = generator.generateChoices(
                 correctItem: previousItem,
-                allItems: items,
+                allItems: state.items,
                 numberOfChoices: configuredNumberOfChoices
             )
             
-            choices = result.choices
-            correctAnswerID = result.correctAnswerID
+            state.choices = result.choices
+            state.correctAnswerID = result.correctAnswerID
         }
     }
 
@@ -311,9 +289,9 @@ struct QuizView: View {
         
         sessionStore.completeBatch()
 
-        if order.count > sessionStore.batchSize {
+        if state.order.count > sessionStore.batchSize {
             // 次のバッチがある
-            order = Array(order.dropFirst(sessionStore.batchSize))
+            state.order = Array(state.order.dropFirst(sessionStore.batchSize))
             prepareBatch()
         } else {
             // 全問題完了
