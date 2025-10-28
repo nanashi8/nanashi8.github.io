@@ -67,7 +67,7 @@ struct QuizView: View {
                     csvHeaderLabels: csvHeaderLabels,
                     csvName: currentCSV.name ?? "",
                     learningMode: learningModeDisplayName,
-                    accuracy: sessionStore.calculateAccuracy(),
+                    accuracy: Double(sessionStore.calculateAccuracy()),
                     passedCount: sessionStore.batchCorrect,
                     totalCount: sessionStore.questionCount,
                     batchSize: sessionStore.batchSize,
@@ -107,8 +107,8 @@ struct QuizView: View {
         do {
             let result = try dataLoader.loadQuizData(
                 csvName: csvName,
-                fields: quizSettings.fields,
-                difficulties: quizSettings.difficulties,
+                fields: Set(quizSettings.fields),
+                difficulties: Set(quizSettings.difficulties),
                 numberOfQuestions: quizSettings.numberOfQuestions,
                 isRandomOrder: quizSettings.isRandomOrder
             )

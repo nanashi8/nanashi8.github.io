@@ -108,14 +108,14 @@ struct QuizContentView: View {
 #Preview {
     QuizContentView(
         currentItem: QuestionItem(
-            id: UUID(),
             term: "apple",
             reading: "アップル",
             meaning: "りんご",
             etymology: "果物の一種",
-            relatedWords: "fruit, banana",
-            relatedFields: ["食べ物"],
-            difficulty: "初級"
+            relatedWordsCSV: "fruit, banana",
+            relatedFieldsCSV: "食べ物",
+            difficulty: "初級",
+            id: UUID()
         ),
         choices: [
             QuizChoice(
