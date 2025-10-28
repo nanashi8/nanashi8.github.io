@@ -30,13 +30,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B90E17F92EB072C400BF0317 /* Exceptions for "Common" folder in "SimpleWord" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Data/Legacy/LEGACY_ADAPTERS_DELETED.txt,
-			);
-			target = B971E19A2E931D1900F9FFA3 /* SimpleWord */;
-		};
 		B971E1C12E931D1C00F9FFA3 /* Exceptions for "SimpleWord" folder in "SimpleWord" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -49,28 +42,8 @@
 				"docs/作成要領/中学英単語作成要領.md",
 				"docs/作成要領/中学古典単語作成要領.md",
 				"docs/作成要領/中学歴史作成要領.md",
-				"docs/参考資料/.copilot作業経路ガイド.md",
-				"docs/参考資料/AIとのやり取り_INDEX.md",
-				"docs/参考資料/AIとのやり取り_クイックリファレンス.md",
-				"docs/参考資料/AIとのやり取り_ケーススタディ集.md",
 				"docs/参考資料/README.md",
-				"docs/参考資料/アーカイブ/AI作業効率化ファイル構成ガイド.md",
-				"docs/参考資料/アーカイブ/Copilot動作の仕組み_完全図解.md",
-				"docs/参考資料/アーカイブ/GitHub Actions と CI_CD 入門ガイド.md",
-				"docs/参考資料/アーカイブ/README.md",
-				"docs/参考資料/アーカイブ/クイックスタートガイド_Git統合版.md",
-				"docs/参考資料/アーカイブ/リファクタリング失敗分析_20251019.md",
-				"docs/参考資料/アーカイブ/横断検索と補修モード診断ガイド.md",
-				"docs/参考資料/アーカイブ/機能復元ガイド_v1.md",
-				"docs/参考資料/アーカイブ/大規模リファクタリング実現方策.md",
-				"docs/参考資料/クイックスタートガイド.md",
-				"docs/参考資料/ファイル分割ガイド.md",
-				"docs/参考資料/機能復元ガイド_v2.md",
-				"docs/参考資料/効率的なやり取りテンプレート集.md",
 				"docs/仕様書/00_編集ガイド.md",
-				"docs/仕様書/01_クイズ機能_仕様書_v2.md",
-				"docs/仕様書/01_クイズ機能_仕様書.md",
-				"docs/仕様書/02_出題設定_仕様書_v2.md",
 				"docs/仕様書/02_出題設定_仕様書.md",
 				"docs/仕様書/03_問題集管理_CSV_仕様書.md",
 				"docs/仕様書/04_ナビゲーター機能_仕様書.md",
@@ -84,10 +57,7 @@
 				"docs/仕様書/11_学習モード推奨_仕様書.md",
 				"docs/仕様書/12_クイズUIコンポーネント_仕様書.md",
 				"docs/仕様書/99_ファイル索引.md",
-				Persistence/PERSISTENCE_DELETED.txt,
-				Resources/fix_csv.py,
 				Resources/xcode.csv,
-				"Resources/中学英単語.csv.backup.20251028110810",
 				Tools/fix_chu_english_conv.py,
 			);
 			target = B971E19A2E931D1900F9FFA3 /* SimpleWord */;
@@ -120,9 +90,6 @@
 		};
 		B9ED844E2EAE388F00293197 /* Common */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B90E17F92EB072C400BF0317 /* Exceptions for "Common" folder in "SimpleWord" target */,
-			);
 			path = Common;
 			sourceTree = "<group>";
 		};

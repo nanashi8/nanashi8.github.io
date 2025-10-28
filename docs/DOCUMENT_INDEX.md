@@ -68,10 +68,11 @@ SimpleWord/docs/仕様書/
 
 機能開発時に参照すべきドキュメント：
 
-1. **docs/CUSTOM_INSTRUCTIONS.md** - コーディング規約
-2. **docs/PROMPT_TEMPLATES.md** - プロンプトテンプレート
-3. **.copilot/quick-ref.md** - 実装パターン集
-4. **該当する機能の仕様書** - SimpleWord/docs/仕様書/
+1. **docs/ARCHITECTURE_GUIDE.md** - アーキテクチャガイド（配置判断）
+2. **docs/CUSTOM_INSTRUCTIONS.md** - コーディング規約
+3. **docs/PROMPT_TEMPLATES.md** - プロンプトテンプレート
+4. **.copilot/quick-ref.md** - 実装パターン集
+5. **該当する機能の仕様書** - SimpleWord/docs/仕様書/
 
 ### バグ修正
 
