@@ -10,6 +10,7 @@
 // - なぜ: 変数宣言の削減、テスタビリティの向上、再利用性の確保
 
 import SwiftUI
+import Combine
 
 /// QuizView の UI 状態を一元管理するクラス
 class QuizViewState: ObservableObject {

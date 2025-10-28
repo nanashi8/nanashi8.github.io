@@ -1,7 +1,0 @@
-Normalization summary
-('/Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学古典単語.csv', 'ok', {'rows': 349, 'changed': 175, 'wrong_rows': 0, 'backup': '/Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学古典単語.csv.backup.20251017091157.csv'})
-('/Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学古典単語.csv', 'ok', {'rows': 352, 'changed': 0, 'wrong_rows': 0, 'backup': '/Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学古典単語.csv.backup.20251017091157.csv'})
-('/Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英単語.csv', 'ok', {'rows': 102, 'changed': 0, 'wrong_rows': 0, 'backup': '/Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学英単語.csv.backup.20251017091157.csv'})
-
-Change CSV:
-/Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/related_field_changes_all.20251017091157.csv
