@@ -33,6 +33,7 @@ public struct QuestionItemParser {
                 relatedWordsCSV: relatedWordsCSV,
                 relatedFieldsCSV: relatedFieldsCSV,
                 difficulty: difficulty,
+                rawColumns: columns,  // 生のCSV列データを保存
                 id: UUID()
             )
         }
@@ -59,6 +60,7 @@ public struct QuestionItemParser {
                 relatedWordsCSV: relatedWordsCSV,
                 relatedFieldsCSV: relatedFieldsCSV,
                 difficulty: difficulty,
+                rawColumns: columns,  // 生のCSV列データを保存
                 id: UUID()
             )
         }
