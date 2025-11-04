@@ -15,9 +15,12 @@ struct QuizQuestionGenerator {
         numberOfChoices: Int
     ) -> (choices: [QuizChoice], correctAnswerID: UUID) {
         // 正解の選択肢を作成
+        // 固定列3（rawColumns[2]）を使用して選択肢テキストを取得
+        let correctChoiceLabel = getChoiceLabel(from: correctItem)
+        
         let correctChoice = QuizChoice(
             id: UUID(),
-            label: correctItem.meaning,
+            label: correctChoiceLabel,
             explanation: correctItem.etymology,
             isCorrect: true,
             item: correctItem
@@ -29,9 +32,12 @@ struct QuizQuestionGenerator {
         let otherItems = allItems.filter { $0.id != correctItem.id }.shuffled()
 
         for otherItem in otherItems.prefix(max(0, numberOfChoices - 1)) {
+            // 固定列3（rawColumns[2]）を使用して選択肢テキストを取得
+            let choiceLabel = getChoiceLabel(from: otherItem)
+            
             let choice = QuizChoice(
                 id: UUID(),
-                label: otherItem.meaning,
+                label: choiceLabel,
                 explanation: otherItem.etymology,
                 isCorrect: false,
                 item: otherItem
@@ -56,5 +62,19 @@ struct QuizQuestionGenerator {
         let allChoices = ([correctChoice] + incorrectChoices).shuffled()
         
         return (choices: allChoices, correctAnswerID: correctAnswerID)
+    }
+    
+    // MARK: - Private Methods
+    
+    /// QuestionItemから選択肢ラベルを取得（固定列3を使用）
+    /// - Parameter item: QuestionItem
+    /// - Returns: 選択肢ラベル
+    private func getChoiceLabel(from item: QuestionItem) -> String {
+        // rawColumnsが存在し、列3（インデックス2）が存在する場合はそれを使用
+        if item.rawColumns.count >= 3 {
+            return item.rawColumns[2]
+        }
+        // フォールバック: rawColumnsがない場合はmeaningフィールドを使用
+        return item.meaning
     }
 }
