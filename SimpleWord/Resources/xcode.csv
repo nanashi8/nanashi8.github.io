@@ -1,4 +1,4 @@
-語句,発音,和訳,語源等解説,関連語と意味,関連分野,難易度
+語句,発音（カタカナ）,和訳,語源等解説（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
 var,ヴァー,変数宣言,variable（変数）の略。ラテン語variābilis（変わりやすい）←variāre（変える）。値を変更できる入れ物。同語源：variable（変数）、variation（変化）,let:定数宣言; variable:変数; mutable:可変,Swift基礎,1
 let,レット,定数宣言,「させる」の意。値を定数に代入する。一度代入したら変更不可。不変性を保証。同語源：letter（文字）,var:変数宣言; constant:定数; immutable:不変,Swift基礎,1
 func,ファンク,関数定義,function（関数）の略。ラテン語functiō（遂行）←fungī（果たす）。特定の役割を果たすコードのまとまり。同語源：functional（関数型）,function:関数; method:メソッド; return:返り値,関数・メソッド,1

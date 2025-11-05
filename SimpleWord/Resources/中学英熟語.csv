@@ -1,0 +1,301 @@
+語句,発音（カタカナ）,和訳,語源等解説や覚え方（日本語）,関連語（英語）と意味（日本語）,関連分野（日本語）,難易度
+get up,ゲット アップ,起きる,get（得る）+ up（上へ）で「起き上がる」,wake up:目を覚ます,日常,1
+go to bed,ゴー トゥ ベッド,寝る,bed（ベッド）へ行くことから「就寝する」,sleep:眠る,日常,1
+look for,ルック フォー,探す,look（見る）+ for（～を求めて）で「～を探す」,search for:捜索する,日常,1
+look at,ルック アット,見る,look（見る）+ at（～を）で「～を見る」,watch:注視する,日常,1
+look after,ルック アフター,世話する,look（見る）+ after（～の後を）で「面倒を見る」,take care of:世話をする,家族,2
+take care of,テイク ケア オブ,世話する,care（世話）を take（する）ことから,look after:面倒を見る,家族,2
+put on,プット オン,着る,put（置く）+ on（身に）で「身につける」,wear:着ている,日常,1
+take off,テイク オフ,脱ぐ,take（取る）+ off（離して）で「脱ぐ」,remove:取り除く,日常,1
+turn on,ターン オン,つける,turn（回す）+ on（入れる）で電気などを「つける」,switch on:スイッチを入れる,日常,1
+turn off,ターン オフ,消す,turn（回す）+ off（切る）で電気などを「消す」,switch off:スイッチを切る,日常,1
+come back,カム バック,帰ってくる,come（来る）+ back（戻って）で「戻ってくる」,return:戻る,日常,1
+go back,ゴー バック,戻る,go（行く）+ back（後ろへ）で「戻る」,return:帰る,日常,1
+sit down,シット ダウン,座る,sit（座る）+ down（下に）で「着席する」,take a seat:席につく,学校,1
+stand up,スタンド アップ,立つ,stand（立つ）+ up（上へ）で「起立する」,rise:立ち上がる,学校,1
+listen to,リスン トゥ,聞く,listen（聴く）+ to（～に）で「～を聴く」,hear:聞こえる,学校,1
+wait for,ウェイト フォー,待つ,wait（待つ）+ for（～を）で「～を待つ」,expect:期待する,日常,1
+talk to,トーク トゥ,話す,talk（話す）+ to（～に）で「～に話しかける」,speak to:～と話す,日常,1
+think about,シンク アバウト,考える,think（考える）+ about（～について）で「～について考える」,consider:熟考する,学校,2
+look forward to,ルック フォワード トゥ,楽しみにする,forward（前方へ）を見ることから「期待する」,expect:期待する,感情,2
+be interested in,ビー インタレステッド イン,興味がある,interest（興味）を持っていることから,be curious about:好奇心がある,感情,2
+be good at,ビー グッド アット,得意である,good（上手）at（～において）で「～が得意」,excel at:秀でている,学校,1
+be afraid of,ビー アフレイド オブ,恐れる,afraid（恐れて）of（～を）で「～を恐れる」,fear:恐怖,感情,2
+take part in,テイク パート イン,参加する,part（部分）をtakeすることから「一部となる」,participate in:関与する,学校,2
+get on,ゲット オン,乗る,get（得る）+ on（上に）で乗り物に「乗る」,board:乗車する,交通,1
+get off,ゲット オフ,降りる,get（得る）+ off（離れて）で乗り物から「降りる」,alight:降車する,交通,1
+turn right,ターン ライト,右に曲がる,turn（曲がる）+ right（右へ）で「右折する」,go right:右へ行く,交通,1
+turn left,ターン レフト,左に曲がる,turn（曲がる）+ left（左へ）で「左折する」,go left:左へ行く,交通,1
+go straight,ゴー ストレイト,まっすぐ行く,go（行く）+ straight（まっすぐ）で「直進する」,continue straight:直進を続ける,交通,1
+come from,カム フロム,出身である,come（来る）+ from（～から）で「～から来る」,be from:～出身,日常,1
+grow up,グロウ アップ,成長する,grow（成長する）+ up（上へ）で「育つ」,mature:成熟する,家族,2
+good morning,グッド モーニング,おはよう,挨拶の定番,hello:こんにちは,日常,1
+good night,グッド ナイト,おやすみ,挨拶（夜）,goodbye:さようなら,日常,1
+see you,シー ユー,またね,別れの挨拶,bye:バイバイ,日常,1
+how are you,ハウ アー ユー,元気ですか,相手の調子を尋ねる定型表現,how do you do:はじめまして,日常,1
+nice to meet you,ナイス トゥ ミート ユー,はじめまして,初対面の挨拶,pleased to meet you:お会いできてうれしい,日常,1
+get down,Get Down,得る/なる 下へ,get + down の結合でできる慣用表現。動作の停止・解除,get:得る/なる,日常,1
+get in,Get In,得る/なる 中に,get + in の結合でできる慣用表現。内への動作,get:得る/なる,日常,1
+get out,Get Out,得る/なる 外へ,get + out の結合でできる慣用表現。外への動作,get:得る/なる,日常,1
+get back,Get Back,得る/なる 戻る,get + back の結合でできる慣用表現。復帰・逆戻り,get:得る/なる,日常,1
+get away,Get Away,得る/なる 離れて,get + away の結合でできる慣用表現。離脱を示す,get:得る/なる,日常,1
+get over,Get Over,得る/なる 越えて/再度,get + over の結合でできる慣用表現。完了や繰り返し,get:得る/なる,日常,1
+get about,Get About,得る/なる 約/～について,get + about の結合でできる慣用表現。おおよその意や話題,get:得る/なる,日常,1
+get after,Get After,得る/なる 後に/世話,get + after の結合でできる慣用表現。時の後続や世話を表す,get:得る/なる,日常,1
+get for,Get For,得る/なる ～のために/目的,get + for の結合でできる慣用表現。目的を示す,get:得る/なる,日常,1
+get with,Get With,得る/なる ～と一緒に,get + with の結合でできる慣用表現。同行や付帯,get:得る/なる,日常,1
+get into,Get Into,得る/なる ～の中へ,get + into の結合でできる慣用表現。内部への移動,get:得る/なる,日常,1
+get through,Get Through,得る/なる 通して,get + through の結合でできる慣用表現。貫通・通過,get:得る/なる,日常,1
+get away from,Get Away From,得る/なる ～から離れて,get + away from の結合でできる慣用表現。起点からの離脱,get:得る/なる,日常,1
+get around,Get Around,得る/なる 周りに/だいたい,get + around の結合でできる慣用表現。周辺やおおむね,get:得る/なる,日常,1
+get across,Get Across,得る/なる 横切って,get + across の結合でできる慣用表現。横断,get:得る/なる,日常,1
+get along,Get Along,得る/なる 沿って,get + along の結合でできる慣用表現。沿って移動,get:得る/なる,日常,1
+get throughout,Get Throughout,得る/なる 全体に,get + throughout の結合でできる慣用表現。全域を通じて,get:得る/なる,日常,1
+go up,Go Up,行く 上へ,go + up の結合でできる慣用表現。動作の完了,go:行く,日常,1
+go down,Go Down,行く 下へ,go + down の結合でできる慣用表現。動作の停止・解除,go:行く,日常,1
+go on,Go On,行く ～の上に/作動,go + on の結合でできる慣用表現。作動や継続を示す,go:行く,日常,1
+go off,Go Off,行く ～から離れて/停止,go + off の結合でできる慣用表現。停止や除去を示す,go:行く,日常,1
+go in,Go In,行く 中に,go + in の結合でできる慣用表現。内への動作,go:行く,日常,1
+go out,Go Out,行く 外へ,go + out の結合でできる慣用表現。外への動作,go:行く,日常,1
+go away,Go Away,行く 離れて,go + away の結合でできる慣用表現。離脱を示す,go:行く,日常,1
+go over,Go Over,行く 越えて/再度,go + over の結合でできる慣用表現。完了や繰り返し,go:行く,日常,1
+go about,Go About,行く 約/～について,go + about の結合でできる慣用表現。おおよその意や話題,go:行く,日常,1
+go after,Go After,行く 後に/世話,go + after の結合でできる慣用表現。時の後続や世話を表す,go:行く,日常,1
+go for,Go For,行く ～のために/目的,go + for の結合でできる慣用表現。目的を示す,go:行く,日常,1
+go with,Go With,行く ～と一緒に,go + with の結合でできる慣用表現。同行や付帯,go:行く,日常,1
+go into,Go Into,行く ～の中へ,go + into の結合でできる慣用表現。内部への移動,go:行く,日常,1
+go through,Go Through,行く 通して,go + through の結合でできる慣用表現。貫通・通過,go:行く,日常,1
+go away from,Go Away From,行く ～から離れて,go + away from の結合でできる慣用表現。起点からの離脱,go:行く,日常,1
+go around,Go Around,行く 周りに/だいたい,go + around の結合でできる慣用表現。周辺やおおむね,go:行く,日常,1
+go across,Go Across,行く 横切って,go + across の結合でできる慣用表現。横断,go:行く,日常,1
+go along,Go Along,行く 沿って,go + along の結合でできる慣用表現。沿って移動,go:行く,日常,1
+go throughout,Go Throughout,行く 全体に,go + throughout の結合でできる慣用表現。全域を通じて,go:行く,日常,1
+look up,Look Up,見る 上へ,look + up の結合でできる慣用表現。動作の完了,look:見る,日常,1
+look down,Look Down,見る 下へ,look + down の結合でできる慣用表現。動作の停止・解除,look:見る,日常,1
+look on,Look On,見る ～の上に/作動,look + on の結合でできる慣用表現。作動や継続を示す,look:見る,日常,1
+look off,Look Off,見る ～から離れて/停止,look + off の結合でできる慣用表現。停止や除去を示す,look:見る,日常,1
+look in,Look In,見る 中に,look + in の結合でできる慣用表現。内への動作,look:見る,日常,1
+look out,Look Out,見る 外へ,look + out の結合でできる慣用表現。外への動作,look:見る,日常,1
+look back,Look Back,見る 戻る,look + back の結合でできる慣用表現。復帰・逆戻り,look:見る,日常,1
+look away,Look Away,見る 離れて,look + away の結合でできる慣用表現。離脱を示す,look:見る,日常,1
+look over,Look Over,見る 越えて/再度,look + over の結合でできる慣用表現。完了や繰り返し,look:見る,日常,1
+look about,Look About,見る 約/～について,look + about の結合でできる慣用表現。おおよその意や話題,look:見る,日常,1
+look with,Look With,見る ～と一緒に,look + with の結合でできる慣用表現。同行や付帯,look:見る,日常,1
+look into,Look Into,見る ～の中へ,look + into の結合でできる慣用表現。内部への移動,look:見る,日常,1
+look through,Look Through,見る 通して,look + through の結合でできる慣用表現。貫通・通過,look:見る,日常,1
+look away from,Look Away From,見る ～から離れて,look + away from の結合でできる慣用表現。起点からの離脱,look:見る,日常,1
+look around,Look Around,見る 周りに/だいたい,look + around の結合でできる慣用表現。周辺やおおむね,look:見る,日常,1
+look across,Look Across,見る 横切って,look + across の結合でできる慣用表現。横断,look:見る,日常,1
+look along,Look Along,見る 沿って,look + along の結合でできる慣用表現。沿って移動,look:見る,日常,1
+look throughout,Look Throughout,見る 全体に,look + throughout の結合でできる慣用表現。全域を通じて,look:見る,日常,1
+take up,Take Up,取る 上へ,take + up の結合でできる慣用表現。動作の完了,take:取る,日常,1
+take down,Take Down,取る 下へ,take + down の結合でできる慣用表現。動作の停止・解除,take:取る,日常,1
+take on,Take On,取る ～の上に/作動,take + on の結合でできる慣用表現。作動や継続を示す,take:取る,日常,1
+take in,Take In,取る 中に,take + in の結合でできる慣用表現。内への動作,take:取る,日常,1
+take out,Take Out,取る 外へ,take + out の結合でできる慣用表現。外への動作,take:取る,日常,1
+take back,Take Back,取る 戻る,take + back の結合でできる慣用表現。復帰・逆戻り,take:取る,日常,1
+take away,Take Away,取る 離れて,take + away の結合でできる慣用表現。離脱を示す,take:取る,日常,1
+take over,Take Over,取る 越えて/再度,take + over の結合でできる慣用表現。完了や繰り返し,take:取る,日常,1
+take about,Take About,取る 約/～について,take + about の結合でできる慣用表現。おおよその意や話題,take:取る,日常,1
+take after,Take After,取る 後に/世話,take + after の結合でできる慣用表現。時の後続や世話を表す,take:取る,日常,1
+take for,Take For,取る ～のために/目的,take + for の結合でできる慣用表現。目的を示す,take:取る,日常,1
+take with,Take With,取る ～と一緒に,take + with の結合でできる慣用表現。同行や付帯,take:取る,日常,1
+take into,Take Into,取る ～の中へ,take + into の結合でできる慣用表現。内部への移動,take:取る,日常,1
+take through,Take Through,取る 通して,take + through の結合でできる慣用表現。貫通・通過,take:取る,日常,1
+take away from,Take Away From,取る ～から離れて,take + away from の結合でできる慣用表現。起点からの離脱,take:取る,日常,1
+take around,Take Around,取る 周りに/だいたい,take + around の結合でできる慣用表現。周辺やおおむね,take:取る,日常,1
+take across,Take Across,取る 横切って,take + across の結合でできる慣用表現。横断,take:取る,日常,1
+take along,Take Along,取る 沿って,take + along の結合でできる慣用表現。沿って移動,take:取る,日常,1
+take throughout,Take Throughout,取る 全体に,take + throughout の結合でできる慣用表現。全域を通じて,take:取る,日常,1
+put up,Put Up,置く 上へ,put + up の結合でできる慣用表現。動作の完了,put:置く,日常,1
+put down,Put Down,置く 下へ,put + down の結合でできる慣用表現。動作の停止・解除,put:置く,日常,1
+put off,Put Off,置く ～から離れて/停止,put + off の結合でできる慣用表現。停止や除去を示す,put:置く,日常,1
+put in,Put In,置く 中に,put + in の結合でできる慣用表現。内への動作,put:置く,日常,1
+put out,Put Out,置く 外へ,put + out の結合でできる慣用表現。外への動作,put:置く,日常,1
+put back,Put Back,置く 戻る,put + back の結合でできる慣用表現。復帰・逆戻り,put:置く,日常,1
+put away,Put Away,置く 離れて,put + away の結合でできる慣用表現。離脱を示す,put:置く,日常,1
+put over,Put Over,置く 越えて/再度,put + over の結合でできる慣用表現。完了や繰り返し,put:置く,日常,1
+put about,Put About,置く 約/～について,put + about の結合でできる慣用表現。おおよその意や話題,put:置く,日常,1
+put after,Put After,置く 後に/世話,put + after の結合でできる慣用表現。時の後続や世話を表す,put:置く,日常,1
+put for,Put For,置く ～のために/目的,put + for の結合でできる慣用表現。目的を示す,put:置く,日常,1
+put with,Put With,置く ～と一緒に,put + with の結合でできる慣用表現。同行や付帯,put:置く,日常,1
+put into,Put Into,置く ～の中へ,put + into の結合でできる慣用表現。内部への移動,put:置く,日常,1
+put through,Put Through,置く 通して,put + through の結合でできる慣用表現。貫通・通過,put:置く,日常,1
+put away from,Put Away From,置く ～から離れて,put + away from の結合でできる慣用表現。起点からの離脱,put:置く,日常,1
+put around,Put Around,置く 周りに/だいたい,put + around の結合でできる慣用表現。周辺やおおむね,put:置く,日常,1
+put across,Put Across,置く 横切って,put + across の結合でできる慣用表現。横断,put:置く,日常,1
+put along,Put Along,置く 沿って,put + along の結合でできる慣用表現。沿って移動,put:置く,日常,1
+put throughout,Put Throughout,置く 全体に,put + throughout の結合でできる慣用表現。全域を通じて,put:置く,日常,1
+turn up,Turn Up,回す 上へ,turn + up の結合でできる慣用表現。動作の完了,turn:回す,日常,1
+turn down,Turn Down,回す 下へ,turn + down の結合でできる慣用表現。動作の停止・解除,turn:回す,日常,1
+turn in,Turn In,回す 中に,turn + in の結合でできる慣用表現。内への動作,turn:回す,日常,1
+turn out,Turn Out,回す 外へ,turn + out の結合でできる慣用表現。外への動作,turn:回す,日常,1
+turn back,Turn Back,回す 戻る,turn + back の結合でできる慣用表現。復帰・逆戻り,turn:回す,日常,1
+turn away,Turn Away,回す 離れて,turn + away の結合でできる慣用表現。離脱を示す,turn:回す,日常,1
+turn over,Turn Over,回す 越えて/再度,turn + over の結合でできる慣用表現。完了や繰り返し,turn:回す,日常,1
+turn about,Turn About,回す 約/～について,turn + about の結合でできる慣用表現。おおよその意や話題,turn:回す,日常,1
+turn after,Turn After,回す 後に/世話,turn + after の結合でできる慣用表現。時の後続や世話を表す,turn:回す,日常,1
+turn for,Turn For,回す ～のために/目的,turn + for の結合でできる慣用表現。目的を示す,turn:回す,日常,1
+turn with,Turn With,回す ～と一緒に,turn + with の結合でできる慣用表現。同行や付帯,turn:回す,日常,1
+turn into,Turn Into,回す ～の中へ,turn + into の結合でできる慣用表現。内部への移動,turn:回す,日常,1
+turn through,Turn Through,回す 通して,turn + through の結合でできる慣用表現。貫通・通過,turn:回す,日常,1
+turn away from,Turn Away From,回す ～から離れて,turn + away from の結合でできる慣用表現。起点からの離脱,turn:回す,日常,1
+turn around,Turn Around,回す 周りに/だいたい,turn + around の結合でできる慣用表現。周辺やおおむね,turn:回す,日常,1
+turn across,Turn Across,回す 横切って,turn + across の結合でできる慣用表現。横断,turn:回す,日常,1
+turn along,Turn Along,回す 沿って,turn + along の結合でできる慣用表現。沿って移動,turn:回す,日常,1
+turn throughout,Turn Throughout,回す 全体に,turn + throughout の結合でできる慣用表現。全域を通じて,turn:回す,日常,1
+come up,Come Up,来る 上へ,come + up の結合でできる慣用表現。動作の完了,come:来る,日常,1
+come down,Come Down,来る 下へ,come + down の結合でできる慣用表現。動作の停止・解除,come:来る,日常,1
+come on,Come On,来る ～の上に/作動,come + on の結合でできる慣用表現。作動や継続を示す,come:来る,日常,1
+come off,Come Off,来る ～から離れて/停止,come + off の結合でできる慣用表現。停止や除去を示す,come:来る,日常,1
+come in,Come In,来る 中に,come + in の結合でできる慣用表現。内への動作,come:来る,日常,1
+come out,Come Out,来る 外へ,come + out の結合でできる慣用表現。外への動作,come:来る,日常,1
+come away,Come Away,来る 離れて,come + away の結合でできる慣用表現。離脱を示す,come:来る,日常,1
+come over,Come Over,来る 越えて/再度,come + over の結合でできる慣用表現。完了や繰り返し,come:来る,日常,1
+come about,Come About,来る 約/～について,come + about の結合でできる慣用表現。おおよその意や話題,come:来る,日常,1
+come after,Come After,来る 後に/世話,come + after の結合でできる慣用表現。時の後続や世話を表す,come:来る,日常,1
+come for,Come For,来る ～のために/目的,come + for の結合でできる慣用表現。目的を示す,come:来る,日常,1
+come with,Come With,来る ～と一緒に,come + with の結合でできる慣用表現。同行や付帯,come:来る,日常,1
+come into,Come Into,来る ～の中へ,come + into の結合でできる慣用表現。内部への移動,come:来る,日常,1
+come through,Come Through,来る 通して,come + through の結合でできる慣用表現。貫通・通過,come:来る,日常,1
+come away from,Come Away From,来る ～から離れて,come + away from の結合でできる慣用表現。起点からの離脱,come:来る,日常,1
+come around,Come Around,来る 周りに/だいたい,come + around の結合でできる慣用表現。周辺やおおむね,come:来る,日常,1
+come across,Come Across,来る 横切って,come + across の結合でできる慣用表現。横断,come:来る,日常,1
+come along,Come Along,来る 沿って,come + along の結合でできる慣用表現。沿って移動,come:来る,日常,1
+come throughout,Come Throughout,来る 全体に,come + throughout の結合でできる慣用表現。全域を通じて,come:来る,日常,1
+give up,Give Up,与える 上へ,give + up の結合でできる慣用表現。動作の完了,give:与える,日常,2
+give down,Give Down,与える 下へ,give + down の結合でできる慣用表現。動作の停止・解除,give:与える,日常,2
+give on,Give On,与える ～の上に/作動,give + on の結合でできる慣用表現。作動や継続を示す,give:与える,日常,2
+give off,Give Off,与える ～から離れて/停止,give + off の結合でできる慣用表現。停止や除去を示す,give:与える,日常,2
+give in,Give In,与える 中に,give + in の結合でできる慣用表現。内への動作,give:与える,日常,2
+give out,Give Out,与える 外へ,give + out の結合でできる慣用表現。外への動作,give:与える,日常,2
+give back,Give Back,与える 戻る,give + back の結合でできる慣用表現。復帰・逆戻り,give:与える,日常,2
+give away,Give Away,与える 離れて,give + away の結合でできる慣用表現。離脱を示す,give:与える,日常,2
+give over,Give Over,与える 越えて/再度,give + over の結合でできる慣用表現。完了や繰り返し,give:与える,日常,2
+give about,Give About,与える 約/～について,give + about の結合でできる慣用表現。おおよその意や話題,give:与える,日常,2
+give after,Give After,与える 後に/世話,give + after の結合でできる慣用表現。時の後続や世話を表す,give:与える,日常,2
+give for,Give For,与える ～のために/目的,give + for の結合でできる慣用表現。目的を示す,give:与える,日常,2
+give with,Give With,与える ～と一緒に,give + with の結合でできる慣用表現。同行や付帯,give:与える,日常,2
+give into,Give Into,与える ～の中へ,give + into の結合でできる慣用表現。内部への移動,give:与える,日常,2
+give through,Give Through,与える 通して,give + through の結合でできる慣用表現。貫通・通過,give:与える,日常,2
+give away from,Give Away From,与える ～から離れて,give + away from の結合でできる慣用表現。起点からの離脱,give:与える,日常,2
+give around,Give Around,与える 周りに/だいたい,give + around の結合でできる慣用表現。周辺やおおむね,give:与える,日常,2
+give across,Give Across,与える 横切って,give + across の結合でできる慣用表現。横断,give:与える,日常,2
+give along,Give Along,与える 沿って,give + along の結合でできる慣用表現。沿って移動,give:与える,日常,2
+give throughout,Give Throughout,与える 全体に,give + throughout の結合でできる慣用表現。全域を通じて,give:与える,日常,2
+set up,Set Up,置く/設定する 上へ,set + up の結合でできる慣用表現。動作の完了,set:置く/設定する,日常,2
+set down,Set Down,置く/設定する 下へ,set + down の結合でできる慣用表現。動作の停止・解除,set:置く/設定する,日常,2
+set on,Set On,置く/設定する ～の上に/作動,set + on の結合でできる慣用表現。作動や継続を示す,set:置く/設定する,日常,2
+set off,Set Off,置く/設定する ～から離れて/停止,set + off の結合でできる慣用表現。停止や除去を示す,set:置く/設定する,日常,2
+set in,Set In,置く/設定する 中に,set + in の結合でできる慣用表現。内への動作,set:置く/設定する,日常,2
+set out,Set Out,置く/設定する 外へ,set + out の結合でできる慣用表現。外への動作,set:置く/設定する,日常,2
+set back,Set Back,置く/設定する 戻る,set + back の結合でできる慣用表現。復帰・逆戻り,set:置く/設定する,日常,2
+set away,Set Away,置く/設定する 離れて,set + away の結合でできる慣用表現。離脱を示す,set:置く/設定する,日常,2
+set over,Set Over,置く/設定する 越えて/再度,set + over の結合でできる慣用表現。完了や繰り返し,set:置く/設定する,日常,2
+set about,Set About,置く/設定する 約/～について,set + about の結合でできる慣用表現。おおよその意や話題,set:置く/設定する,日常,2
+set after,Set After,置く/設定する 後に/世話,set + after の結合でできる慣用表現。時の後続や世話を表す,set:置く/設定する,日常,2
+set for,Set For,置く/設定する ～のために/目的,set + for の結合でできる慣用表現。目的を示す,set:置く/設定する,日常,2
+set with,Set With,置く/設定する ～と一緒に,set + with の結合でできる慣用表現。同行や付帯,set:置く/設定する,日常,2
+set into,Set Into,置く/設定する ～の中へ,set + into の結合でできる慣用表現。内部への移動,set:置く/設定する,日常,2
+set through,Set Through,置く/設定する 通して,set + through の結合でできる慣用表現。貫通・通過,set:置く/設定する,日常,2
+set away from,Set Away From,置く/設定する ～から離れて,set + away from の結合でできる慣用表現。起点からの離脱,set:置く/設定する,日常,2
+set around,Set Around,置く/設定する 周りに/だいたい,set + around の結合でできる慣用表現。周辺やおおむね,set:置く/設定する,日常,2
+set across,Set Across,置く/設定する 横切って,set + across の結合でできる慣用表現。横断,set:置く/設定する,日常,2
+set along,Set Along,置く/設定する 沿って,set + along の結合でできる慣用表現。沿って移動,set:置く/設定する,日常,2
+set throughout,Set Throughout,置く/設定する 全体に,set + throughout の結合でできる慣用表現。全域を通じて,set:置く/設定する,日常,2
+bring up,Bring Up,持ってくる 上へ,bring + up の結合でできる慣用表現。動作の完了,bring:持ってくる,日常,2
+bring down,Bring Down,持ってくる 下へ,bring + down の結合でできる慣用表現。動作の停止・解除,bring:持ってくる,日常,2
+bring on,Bring On,持ってくる ～の上に/作動,bring + on の結合でできる慣用表現。作動や継続を示す,bring:持ってくる,日常,2
+bring off,Bring Off,持ってくる ～から離れて/停止,bring + off の結合でできる慣用表現。停止や除去を示す,bring:持ってくる,日常,2
+bring in,Bring In,持ってくる 中に,bring + in の結合でできる慣用表現。内への動作,bring:持ってくる,日常,2
+bring out,Bring Out,持ってくる 外へ,bring + out の結合でできる慣用表現。外への動作,bring:持ってくる,日常,2
+bring back,Bring Back,持ってくる 戻る,bring + back の結合でできる慣用表現。復帰・逆戻り,bring:持ってくる,日常,2
+bring away,Bring Away,持ってくる 離れて,bring + away の結合でできる慣用表現。離脱を示す,bring:持ってくる,日常,2
+bring over,Bring Over,持ってくる 越えて/再度,bring + over の結合でできる慣用表現。完了や繰り返し,bring:持ってくる,日常,2
+bring about,Bring About,持ってくる 約/～について,bring + about の結合でできる慣用表現。おおよその意や話題,bring:持ってくる,日常,2
+bring after,Bring After,持ってくる 後に/世話,bring + after の結合でできる慣用表現。時の後続や世話を表す,bring:持ってくる,日常,2
+bring for,Bring For,持ってくる ～のために/目的,bring + for の結合でできる慣用表現。目的を示す,bring:持ってくる,日常,2
+bring with,Bring With,持ってくる ～と一緒に,bring + with の結合でできる慣用表現。同行や付帯,bring:持ってくる,日常,2
+bring into,Bring Into,持ってくる ～の中へ,bring + into の結合でできる慣用表現。内部への移動,bring:持ってくる,日常,2
+bring through,Bring Through,持ってくる 通して,bring + through の結合でできる慣用表現。貫通・通過,bring:持ってくる,日常,2
+bring away from,Bring Away From,持ってくる ～から離れて,bring + away from の結合でできる慣用表現。起点からの離脱,bring:持ってくる,日常,2
+bring around,Bring Around,持ってくる 周りに/だいたい,bring + around の結合でできる慣用表現。周辺やおおむね,bring:持ってくる,日常,2
+bring across,Bring Across,持ってくる 横切って,bring + across の結合でできる慣用表現。横断,bring:持ってくる,日常,2
+bring along,Bring Along,持ってくる 沿って,bring + along の結合でできる慣用表現。沿って移動,bring:持ってくる,日常,2
+bring throughout,Bring Throughout,持ってくる 全体に,bring + throughout の結合でできる慣用表現。全域を通じて,bring:持ってくる,日常,2
+call up,Call Up,呼ぶ/電話する 上へ,call + up の結合でできる慣用表現。動作の完了,call:呼ぶ/電話する,日常,1
+call down,Call Down,呼ぶ/電話する 下へ,call + down の結合でできる慣用表現。動作の停止・解除,call:呼ぶ/電話する,日常,1
+call on,Call On,呼ぶ/電話する ～の上に/作動,call + on の結合でできる慣用表現。作動や継続を示す,call:呼ぶ/電話する,日常,1
+call off,Call Off,呼ぶ/電話する ～から離れて/停止,call + off の結合でできる慣用表現。停止や除去を示す,call:呼ぶ/電話する,日常,1
+call in,Call In,呼ぶ/電話する 中に,call + in の結合でできる慣用表現。内への動作,call:呼ぶ/電話する,日常,1
+call out,Call Out,呼ぶ/電話する 外へ,call + out の結合でできる慣用表現。外への動作,call:呼ぶ/電話する,日常,1
+call back,Call Back,呼ぶ/電話する 戻る,call + back の結合でできる慣用表現。復帰・逆戻り,call:呼ぶ/電話する,日常,1
+call away,Call Away,呼ぶ/電話する 離れて,call + away の結合でできる慣用表現。離脱を示す,call:呼ぶ/電話する,日常,1
+call over,Call Over,呼ぶ/電話する 越えて/再度,call + over の結合でできる慣用表現。完了や繰り返し,call:呼ぶ/電話する,日常,1
+call about,Call About,呼ぶ/電話する 約/～について,call + about の結合でできる慣用表現。おおよその意や話題,call:呼ぶ/電話する,日常,1
+call after,Call After,呼ぶ/電話する 後に/世話,call + after の結合でできる慣用表現。時の後続や世話を表す,call:呼ぶ/電話する,日常,1
+call for,Call For,呼ぶ/電話する ～のために/目的,call + for の結合でできる慣用表現。目的を示す,call:呼ぶ/電話する,日常,1
+call with,Call With,呼ぶ/電話する ～と一緒に,call + with の結合でできる慣用表現。同行や付帯,call:呼ぶ/電話する,日常,1
+call into,Call Into,呼ぶ/電話する ～の中へ,call + into の結合でできる慣用表現。内部への移動,call:呼ぶ/電話する,日常,1
+call through,Call Through,呼ぶ/電話する 通して,call + through の結合でできる慣用表現。貫通・通過,call:呼ぶ/電話する,日常,1
+call away from,Call Away From,呼ぶ/電話する ～から離れて,call + away from の結合でできる慣用表現。起点からの離脱,call:呼ぶ/電話する,日常,1
+call around,Call Around,呼ぶ/電話する 周りに/だいたい,call + around の結合でできる慣用表現。周辺やおおむね,call:呼ぶ/電話する,日常,1
+call across,Call Across,呼ぶ/電話する 横切って,call + across の結合でできる慣用表現。横断,call:呼ぶ/電話する,日常,1
+call along,Call Along,呼ぶ/電話する 沿って,call + along の結合でできる慣用表現。沿って移動,call:呼ぶ/電話する,日常,1
+call throughout,Call Throughout,呼ぶ/電話する 全体に,call + throughout の結合でできる慣用表現。全域を通じて,call:呼ぶ/電話する,日常,1
+find up,Find Up,見つける 上へ,find + up の結合でできる慣用表現。動作の完了,find:見つける,日常,1
+find down,Find Down,見つける 下へ,find + down の結合でできる慣用表現。動作の停止・解除,find:見つける,日常,1
+find on,Find On,見つける ～の上に/作動,find + on の結合でできる慣用表現。作動や継続を示す,find:見つける,日常,1
+find off,Find Off,見つける ～から離れて/停止,find + off の結合でできる慣用表現。停止や除去を示す,find:見つける,日常,1
+find in,Find In,見つける 中に,find + in の結合でできる慣用表現。内への動作,find:見つける,日常,1
+find out,Find Out,見つける 外へ,find + out の結合でできる慣用表現。外への動作,find:見つける,日常,1
+find back,Find Back,見つける 戻る,find + back の結合でできる慣用表現。復帰・逆戻り,find:見つける,日常,1
+find away,Find Away,見つける 離れて,find + away の結合でできる慣用表現。離脱を示す,find:見つける,日常,1
+find over,Find Over,見つける 越えて/再度,find + over の結合でできる慣用表現。完了や繰り返し,find:見つける,日常,1
+find about,Find About,見つける 約/～について,find + about の結合でできる慣用表現。おおよその意や話題,find:見つける,日常,1
+find after,Find After,見つける 後に/世話,find + after の結合でできる慣用表現。時の後続や世話を表す,find:見つける,日常,1
+find for,Find For,見つける ～のために/目的,find + for の結合でできる慣用表現。目的を示す,find:見つける,日常,1
+find with,Find With,見つける ～と一緒に,find + with の結合でできる慣用表現。同行や付帯,find:見つける,日常,1
+find into,Find Into,見つける ～の中へ,find + into の結合でできる慣用表現。内部への移動,find:見つける,日常,1
+find through,Find Through,見つける 通して,find + through の結合でできる慣用表現。貫通・通過,find:見つける,日常,1
+find away from,Find Away From,見つける ～から離れて,find + away from の結合でできる慣用表現。起点からの離脱,find:見つける,日常,1
+find around,Find Around,見つける 周りに/だいたい,find + around の結合でできる慣用表現。周辺やおおむね,find:見つける,日常,1
+find across,Find Across,見つける 横切って,find + across の結合でできる慣用表現。横断,find:見つける,日常,1
+find along,Find Along,見つける 沿って,find + along の結合でできる慣用表現。沿って移動,find:見つける,日常,1
+find throughout,Find Throughout,見つける 全体に,find + throughout の結合でできる慣用表現。全域を通じて,find:見つける,日常,1
+keep up,Keep Up,保つ/持ち続ける 上へ,keep + up の結合でできる慣用表現。動作の完了,keep:保つ/持ち続ける,日常,2
+keep down,Keep Down,保つ/持ち続ける 下へ,keep + down の結合でできる慣用表現。動作の停止・解除,keep:保つ/持ち続ける,日常,2
+keep on,Keep On,保つ/持ち続ける ～の上に/作動,keep + on の結合でできる慣用表現。作動や継続を示す,keep:保つ/持ち続ける,日常,2
+keep off,Keep Off,保つ/持ち続ける ～から離れて/停止,keep + off の結合でできる慣用表現。停止や除去を示す,keep:保つ/持ち続ける,日常,2
+keep in,Keep In,保つ/持ち続ける 中に,keep + in の結合でできる慣用表現。内への動作,keep:保つ/持ち続ける,日常,2
+keep out,Keep Out,保つ/持ち続ける 外へ,keep + out の結合でできる慣用表現。外への動作,keep:保つ/持ち続ける,日常,2
+keep back,Keep Back,保つ/持ち続ける 戻る,keep + back の結合でできる慣用表現。復帰・逆戻り,keep:保つ/持ち続ける,日常,2
+keep away,Keep Away,保つ/持ち続ける 離れて,keep + away の結合でできる慣用表現。離脱を示す,keep:保つ/持ち続ける,日常,2
+keep over,Keep Over,保つ/持ち続ける 越えて/再度,keep + over の結合でできる慣用表現。完了や繰り返し,keep:保つ/持ち続ける,日常,2
+keep about,Keep About,保つ/持ち続ける 約/～について,keep + about の結合でできる慣用表現。おおよその意や話題,keep:保つ/持ち続ける,日常,2
+keep after,Keep After,保つ/持ち続ける 後に/世話,keep + after の結合でできる慣用表現。時の後続や世話を表す,keep:保つ/持ち続ける,日常,2
+keep for,Keep For,保つ/持ち続ける ～のために/目的,keep + for の結合でできる慣用表現。目的を示す,keep:保つ/持ち続ける,日常,2
+keep with,Keep With,保つ/持ち続ける ～と一緒に,keep + with の結合でできる慣用表現。同行や付帯,keep:保つ/持ち続ける,日常,2
+keep into,Keep Into,保つ/持ち続ける ～の中へ,keep + into の結合でできる慣用表現。内部への移動,keep:保つ/持ち続ける,日常,2
+keep through,Keep Through,保つ/持ち続ける 通して,keep + through の結合でできる慣用表現。貫通・通過,keep:保つ/持ち続ける,日常,2
+keep away from,Keep Away From,保つ/持ち続ける ～から離れて,keep + away from の結合でできる慣用表現。起点からの離脱,keep:保つ/持ち続ける,日常,2
+keep around,Keep Around,保つ/持ち続ける 周りに/だいたい,keep + around の結合でできる慣用表現。周辺やおおむね,keep:保つ/持ち続ける,日常,2
+keep across,Keep Across,保つ/持ち続ける 横切って,keep + across の結合でできる慣用表現。横断,keep:保つ/持ち続ける,日常,2
+keep along,Keep Along,保つ/持ち続ける 沿って,keep + along の結合でできる慣用表現。沿って移動,keep:保つ/持ち続ける,日常,2
+keep throughout,Keep Throughout,保つ/持ち続ける 全体に,keep + throughout の結合でできる慣用表現。全域を通じて,keep:保つ/持ち続ける,日常,2
+make up,Make Up,作る 上へ,make + up の結合でできる慣用表現。動作の完了,make:作る,日常,2
+make down,Make Down,作る 下へ,make + down の結合でできる慣用表現。動作の停止・解除,make:作る,日常,2
+make on,Make On,作る ～の上に/作動,make + on の結合でできる慣用表現。作動や継続を示す,make:作る,日常,2
+make off,Make Off,作る ～から離れて/停止,make + off の結合でできる慣用表現。停止や除去を示す,make:作る,日常,2
+make in,Make In,作る 中に,make + in の結合でできる慣用表現。内への動作,make:作る,日常,2
+make out,Make Out,作る 外へ,make + out の結合でできる慣用表現。外への動作,make:作る,日常,2
+make back,Make Back,作る 戻る,make + back の結合でできる慣用表現。復帰・逆戻り,make:作る,日常,2
+make away,Make Away,作る 離れて,make + away の結合でできる慣用表現。離脱を示す,make:作る,日常,2
+make over,Make Over,作る 越えて/再度,make + over の結合でできる慣用表現。完了や繰り返し,make:作る,日常,2
+make about,Make About,作る 約/～について,make + about の結合でできる慣用表現。おおよその意や話題,make:作る,日常,2
+make after,Make After,作る 後に/世話,make + after の結合でできる慣用表現。時の後続や世話を表す,make:作る,日常,2
+make for,Make For,作る ～のために/目的,make + for の結合でできる慣用表現。目的を示す,make:作る,日常,2
+make with,Make With,作る ～と一緒に,make + with の結合でできる慣用表現。同行や付帯,make:作る,日常,2
+make into,Make Into,作る ～の中へ,make + into の結合でできる慣用表現。内部への移動,make:作る,日常,2
+make through,Make Through,作る 通して,make + through の結合でできる慣用表現。貫通・通過,make:作る,日常,2
+make away from,Make Away From,作る ～から離れて,make + away from の結合でできる慣用表現。起点からの離脱,make:作る,日常,2
