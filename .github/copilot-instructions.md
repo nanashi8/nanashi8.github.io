@@ -1,24 +1,53 @@
 # SimpleWord プロジェクト固有指示
 
-**最終更新**: 2025年11月5日  
+**最終更新**: 2025年11月6日  
 **バージョン**: v1.17.0
+
+---
+
+## 📋 概要
+
+SimpleWordは、適応型学習システムを搭載した単語・歴史学習アプリです。CSV形式のデータを読み込み、4択クイズ形式で学習を進めます。
 
 ---
 
 ## 技術スタック
 
-- Swift 専用（Objective-C は使用しない）
-- SwiftUI + Combine
-- Xcode プロジェクト（15.0以上）
-- iOS 16.0以上
+- **言語**: Swift 専用（Objective-C は使用しない）
+- **UIフレームワーク**: SwiftUI + Combine
+- **開発環境**: Xcode 15.0以上
+- **対応OS**: iOS 16.0以上
+- **ビルドターゲット**: iPhone / iPad
 
 ---
 
 ## アーキテクチャ
 
-- Feature-First / Vertical Slice Architecture を採用
-- 各 Feature は `Features/` 配下に配置
-- View と ViewModel は責務を分離し、別ファイルで管理
+- **設計パターン**: Feature-First / Vertical Slice Architecture を採用
+- **機能配置**: 各 Feature は `Features/` 配下に配置
+- **責務分離**: View と ViewModel は責務を分離し、別ファイルで管理
+- **共通コンポーネント**: UI部品は `Views/Components/` に配置
+
+### ディレクトリ構造
+```
+SimpleWord/
+├── Features/              # 機能別モジュール（垂直分割）
+│   ├── Quiz/             # クイズ機能
+│   ├── QuizSettings/     # クイズ設定
+│   ├── Results/          # 結果表示
+│   ├── WordList/         # 単語リスト
+│   ├── CSVEditor/        # CSV編集
+│   ├── Filters/          # フィルタ機能
+│   └── Navigator/        # ナビゲーション
+├── Views/                # 共通ビュー
+│   └── Components/       # 再利用可能なUI部品
+│       └── Cards/        # カードコンポーネント
+├── Common/               # 共通コンポーネント
+│   ├── Models/           # データモデル
+│   ├── Extensions/       # 拡張機能
+│   └── Utility/          # ユーティリティ
+└── Stores/               # グローバル状態管理
+```
 
 ---
 
@@ -54,7 +83,7 @@
 
 ### CSV種類の判定ロジック
 
-**ファイル**: `SimpleWord/QuizComponents/ChoiceCardView.swift`
+**ファイル**: `SimpleWord/Views/Components/Cards/ChoiceCardView.swift`
 
 **CSV種類の定義**:
 ```swift
