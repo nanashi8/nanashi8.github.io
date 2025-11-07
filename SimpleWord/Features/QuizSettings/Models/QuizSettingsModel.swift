@@ -12,7 +12,7 @@
 import Foundation
 
 /// クイズ設定のデータモデル
-public struct QuizSettingsModel: Codable, Equatable {
+public struct QuizSettingsModel: Codable, Equatable, Sendable {
     // MARK: - 基本設定
     
     /// 現在のCSV名（表示用）

@@ -3,7 +3,7 @@
 // - なぜ: アプリ本体のモデルと分離し、安全にIDマップを管理するため。
 
 import Foundation
-import CoreData
+@preconcurrency import CoreData
 
 /// Core Data スタック（WordIdMap 用）。
 /// 既存の xcdatamodeld に干渉しないよう、コードで独立したモデル/ストアを構築します。

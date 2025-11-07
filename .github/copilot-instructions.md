@@ -1,8 +1,8 @@
 # GitHub Copilot 指示ファイル
 
 **作成日**: 2025年10月28日  
-**最終更新**: 2025年11月7日  
-**対応内容**: CSV種類別に最適化された選択肢カード詳細表示の実装、ファイル配置規約、ファイル命名規則
+**最終更新**: 2025年11月8日  
+**対応内容**: CSV種類別に最適化された選択肢カード詳細表示の実装、ファイル配置規約、ファイル命名規則、セキュリティとパフォーマンス要件の統合
 
 ---
 
@@ -459,3 +459,356 @@ case .english:
 ---
 
 **以上、CSV種類別の最適な表示順序の実装が完了しました！** 🎉
+
+---
+
+## 🔒 セキュリティとパフォーマンス設計原則（必須）
+
+**重要**: 本プロジェクトではセキュアで高パフォーマンスなコードを実現するため、以下の原則を厳守してください。
+
+### 📚 完全なガイドライン
+
+**詳細は以下のドキュメントを参照**:
+- **[docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md](../docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** - 完全なガイドライン
+
+### 必須要件（14項目）
+
+#### 1. Swift 6.0の使用と並行性
+```swift
+// ✅ actorでデータ競合を防止
+actor QuizSessionStore {
+    private var sessions: [String: QuizSession] = [:]
+    func addSession(_ session: QuizSession) {
+        sessions[session.id] = session
+    }
+}
+
+// ✅ @MainActorでUI更新を保証
+@MainActor
+class QuizViewModel: ObservableObject {
+    @Published var currentQuestion: QuestionItem?
+}
+```
+
+#### 2. 雑な例外処理を禁止
+```swift
+// ❌ 禁止: エラーを無視
+try? loadData()
+
+// ✅ 必須: 適切なエラーハンドリング
+do {
+    let data = try loadData()
+    return try parseCSV(data: data)
+} catch let error as CSVError {
+    logger.error("CSV読み込みエラー: \(error.localizedDescription)")
+    throw error
+}
+```
+
+#### 3. 可変引数を使用しない
+```swift
+// ❌ 禁止: 可変引数（型安全性が失われる）
+func processItems(_ items: Any...) { }
+
+// ✅ 必須: 明示的な配列またはジェネリクス
+func processItems(_ items: [QuestionItem]) { }
+func processItems<T: Identifiable>(_ items: [T]) { }
+```
+
+#### 4. 任意のコード実行・SQL文実行の禁止
+```swift
+// ❌ 禁止: 任意のコマンド実行
+// Process.launch()等で任意のコマンド実行
+
+// ✅ 必須: 明示的な関数呼び出し
+enum QuizCommand {
+    case start
+    case submit(answerId: Int)
+}
+
+// ✅ 必須: CoreDataのタイプセーフなAPI（SQL文の直接実行禁止）
+let request: NSFetchRequest<QuizSessionEntity> = QuizSessionEntity.fetchRequest()
+request.predicate = NSPredicate(format: "userId == %@", userId)
+```
+
+#### 5. ログに内部情報・個人情報を出力しない
+```swift
+// ❌ 禁止: 個人情報をログに出力
+logger.debug("ユーザーID: \(userId), メール: \(email)")
+
+// ✅ 必須: 個人情報をマスク
+extension String {
+    func masked() -> String {
+        guard count > 4 else { return "****" }
+        let start = prefix(2)
+        let end = suffix(2)
+        return "\(start)***\(end)"
+    }
+}
+logger.debug("ユーザーID: \(userId.masked())")  // "ab***xy"
+```
+
+#### 6. 時刻はタイムゾーンを設定する
+```swift
+// ❌ 禁止: タイムゾーン未指定
+let formatter = DateFormatter()
+formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+// ✅ 必須: タイムゾーンを明示
+let formatter = DateFormatter()
+formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+formatter.timeZone = TimeZone(identifier: "Asia/Tokyo")!
+formatter.locale = Locale(identifier: "ja_JP")
+
+// ✅ 推奨: ISO8601形式を使用
+let isoFormatter = ISO8601DateFormatter()
+isoFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+```
+
+#### 7. 浮動小数点の丸め方を統一する
+```swift
+// ❌ 禁止: 丸め方が不明確
+let rounded = Int(score)
+
+// ✅ 必須: 明示的な丸め方
+extension Double {
+    func rounded(toPlaces places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+
+let score = 85.6789
+let roundedScore = score.rounded(toPlaces: 2)  // 85.68（四捨五入）
+
+// ✅ 金額など正確性が必要な場合はDecimal型
+let price = Decimal(string: "1234.56")!
+```
+
+#### 8. ライブラリの警告を無視しない
+```swift
+// ❌ 禁止: 警告を放置
+@available(iOS 15, *)  // iOS 16以降なのに放置
+
+// ✅ 必須: 警告に対応
+@available(iOS 16.0, *)
+func newAPIFeature() { }
+
+func compatibleFeature() {
+    if #available(iOS 16.0, *) {
+        newAPIFeature()
+    } else {
+        legacyFeature()
+    }
+}
+```
+
+#### 9. 同期・非同期が機能停止を引き起こさない
+```swift
+// ❌ 禁止: メインスレッドで重い同期処理
+@MainActor
+func loadAndProcessData() {
+    let data = loadDataSync()  // UIをブロックする
+}
+
+// ✅ 必須: 非同期処理を適切に分離
+class DataLoader {
+    func loadData() async throws -> Data {
+        return try await URLSession.shared.data(from: url).0
+    }
+    
+    func processData(_ data: Data) -> [QuestionItem] {
+        return parseCSV(data: data)  // 同期処理
+    }
+}
+```
+
+#### 10. リソースを解放する
+```swift
+// ❌ 禁止: リソースリーク
+class FileProcessor {
+    var fileHandle: FileHandle?
+    func process() {
+        fileHandle = try? FileHandle(forReadingFrom: url)
+        // closeを呼び忘れる
+    }
+}
+
+// ✅ 必須: deferでリソースを確実に解放
+func processFile(at url: URL) throws {
+    let fileHandle = try FileHandle(forReadingFrom: url)
+    defer {
+        try? fileHandle.close()  // 必ず実行される
+    }
+    let data = fileHandle.readDataToEndOfFile()
+}
+
+// ✅ 必須: メモリ集約的な処理でautoreleasepool
+func processManyItems(_ items: [QuestionItem]) {
+    for item in items {
+        autoreleasepool {
+            let processed = processItem(item)
+            saveToDatabase(processed)
+        }
+    }
+}
+```
+
+#### 11. ハードコードしない
+```swift
+// ❌ 禁止: ハードコード
+let maxBatchSize = 20
+let apiEndpoint = "https://example.com/api"
+
+// ✅ 必須: 設定ファイルで管理
+struct AppConfig {
+    static let shared = AppConfig()
+    let maxBatchSize: Int
+    let defaultDifficulty: Int
+    
+    private init() {
+        // Info.plistから読み込む
+        if let path = Bundle.main.path(forResource: "Config", ofType: "plist"),
+           let config = NSDictionary(contentsOfFile: path) {
+            self.maxBatchSize = config["MaxBatchSize"] as? Int ?? 20
+            self.defaultDifficulty = config["DefaultDifficulty"] as? Int ?? 1
+        } else {
+            self.maxBatchSize = 20
+            self.defaultDifficulty = 1
+        }
+    }
+}
+```
+
+#### 12. 遅いコードを書かない
+```swift
+// ❌ 禁止: O(n²)の不要なループ
+func findDuplicates(_ items: [QuestionItem]) -> [QuestionItem] {
+    var duplicates: [QuestionItem] = []
+    for i in 0..<items.count {
+        for j in (i+1)..<items.count {
+            if items[i].id == items[j].id {
+                duplicates.append(items[i])
+            }
+        }
+    }
+    return duplicates
+}
+
+// ✅ 必須: O(n)で処理
+func findDuplicates(_ items: [QuestionItem]) -> [QuestionItem] {
+    var seen = Set<String>()
+    var duplicates: [QuestionItem] = []
+    for item in items {
+        if seen.contains(item.id) {
+            duplicates.append(item)
+        } else {
+            seen.insert(item.id)
+        }
+    }
+    return duplicates
+}
+
+// ✅ 必須: 辞書で高速検索（O(1)）
+let itemsDict = items.toDictionary()
+let item = itemsDict[id]  // O(1)
+```
+
+#### 13. 一般乱数を使用しない
+```swift
+// ❌ 禁止: 予測可能な乱数（セキュリティ用途）
+let random = Int.random(in: 0..<100)
+
+// ✅ 必須: セキュアな乱数生成（セキュリティ用途）
+import CryptoKit
+func generateSecureRandomID() -> String {
+    let bytes = (0..<16).map { _ in UInt8.random(in: 0...255) }
+    return bytes.map { String(format: "%02x", $0) }.joined()
+}
+
+// ✅ 許可: クイズの選択肢シャッフルには SystemRandomNumberGenerator で十分
+func shuffleChoices(_ choices: [String]) -> [String] {
+    var rng = SystemRandomNumberGenerator()
+    return choices.shuffled(using: &rng)
+}
+```
+
+#### 14. ログ出力でパフォーマンスを落とさない
+```swift
+// ❌ 禁止: 重い処理をログに含める
+logger.debug("全アイテム: \(items.map { $0.description }.joined())")
+
+// ✅ 必須: ログレベルをチェック
+if logger.isLoggingEnabled(for: .debug) {
+    let itemsDescription = items.map { $0.description }.joined()
+    logger.debug("全アイテム: \(itemsDescription)")
+}
+
+// ✅ 推奨: OSLogを使用（効率的）
+import OSLog
+let logger = Logger(subsystem: "com.example.SimpleWord", category: "QuizSession")
+logger.debug("セッション開始: \(sessionId, privacy: .public)")
+```
+
+### ✅ AI実装時のチェックリスト
+
+コードを生成する際は、以下を必ず確認してください：
+
+#### Swift 6.0と並行性
+- [ ] actorを適切に使用している
+- [ ] async/awaitを正しく使用している
+- [ ] @MainActorでUI更新を保護している
+- [ ] 同期・非同期の混在で停止が発生しない
+
+#### エラー処理
+- [ ] try?/try!を安易に使用していない
+- [ ] エラーを適切に伝播している
+- [ ] カスタムエラー型を定義している
+
+#### セキュリティ
+- [ ] 可変引数を使用していない
+- [ ] 任意のコード実行の可能性がない
+- [ ] SQL文の直接実行をしていない
+- [ ] 個人情報・内部情報をログに出力していない
+
+#### 時刻とロケール
+- [ ] タイムゾーンを明示的に設定している
+- [ ] ロケールを明示的に設定している
+
+#### 数値演算
+- [ ] 浮動小数点の丸め方を明示している
+- [ ] オーバーフローチェックをしている
+
+#### リソース管理
+- [ ] deferでリソースを確実に解放している
+- [ ] メモリ効率的な処理をしている
+
+#### パフォーマンス
+- [ ] 計算量がO(n)またはO(n log n)以下
+- [ ] 不要な配列コピーを避けている
+- [ ] 辞書やSetを適切に活用している
+
+#### その他
+- [ ] ハードコードを避けている
+- [ ] ライブラリの警告に対応している
+- [ ] セキュアな乱数を使用している（必要な場合）
+- [ ] ログ出力が効率的
+
+### 🚨 絶対禁止事項
+
+以下は**絶対に実装してはいけません**：
+
+1. ❌ try?/try!による雑なエラー無視
+2. ❌ 可変引数の使用
+3. ❌ 任意のコマンド実行（Process.launch()等）
+4. ❌ SQL文の直接実行（CoreDataのみ使用）
+5. ❌ 個人情報・内部情報のログ出力
+6. ❌ タイムゾーン未指定の時刻処理
+7. ❌ O(n²)以上の不要な計算量
+8. ❌ ハードコードされた設定値
+9. ❌ リソースリーク
+10. ❌ ライブラリの警告の放置
+
+---
+
+**これらの原則を守ることで、セキュアで高パフォーマンスなアプリケーションを実現します。**

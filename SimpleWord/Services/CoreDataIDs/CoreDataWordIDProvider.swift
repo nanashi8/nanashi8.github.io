@@ -3,7 +3,7 @@
 // - なぜ: CSV間で同一語を同じIDで扱い、学習履歴を安定して紐づけるため。
 
 import Foundation
-import CoreData
+@preconcurrency import CoreData
 import CryptoKit
 
 /// Core Data 版の ID 取得サービス。
@@ -42,11 +42,22 @@ final class CoreDataWordIDProvider {
     private func getOrCreateUUID(hashKey: String, sourceId: String?) -> UUID {
         var result = UUID()
         context.performAndWait {
-            if let u = fetchWord(hashKey: hashKey)?.uuid, let parsed = UUID(uuidString: u) {
-                updateLastSeen(hashKey: hashKey)
-                result = parsed
-                return
+            let req = NSFetchRequest<WordIdMap>(entityName: "WordIdMap")
+            req.predicate = NSPredicate(format: "hashKey == %@", hashKey)
+            req.fetchLimit = 1
+            let existing = try? context.fetch(req).first
+            
+            if let existingMap = existing {
+                let uuidString = existingMap.uuid
+                if let parsed = UUID(uuidString: uuidString) {
+                    // lastSeenを更新
+                    existingMap.lastSeen = Date()
+                    try? context.save()
+                    result = parsed
+                    return
+                }
             }
+            
             let uuid = UUID()
             let now = Date()
             let m = WordIdMap(context: context)
@@ -59,9 +70,14 @@ final class CoreDataWordIDProvider {
                 try context.save()
             } catch {
                 context.rollback()
-                if let u = fetchWord(hashKey: hashKey)?.uuid, let parsed = UUID(uuidString: u) {
-                    result = parsed
-                    return
+                // 再度チェック
+                let existing2 = try? context.fetch(req).first
+                if let existingMap2 = existing2 {
+                    let uuidString = existingMap2.uuid
+                    if let parsed = UUID(uuidString: uuidString) {
+                        result = parsed
+                        return
+                    }
                 }
                 NSLog("WordID create save error: \(error)")
             }
@@ -73,26 +89,18 @@ final class CoreDataWordIDProvider {
     private func fetchUUID(hashKey: String) -> UUID? {
         var result: UUID?
         context.performAndWait {
-            if let u = fetchWord(hashKey: hashKey)?.uuid {
-                result = UUID(uuidString: u)
-                updateLastSeen(hashKey: hashKey)
+            let req = NSFetchRequest<WordIdMap>(entityName: "WordIdMap")
+            req.predicate = NSPredicate(format: "hashKey == %@", hashKey)
+            req.fetchLimit = 1
+            if let existing = try? context.fetch(req).first {
+                let uuidString = existing.uuid
+                result = UUID(uuidString: uuidString)
+                // lastSeenを更新
+                existing.lastSeen = Date()
+                try? context.save()
             }
         }
         return result
-    }
-
-    private func fetchWord(hashKey: String) -> WordIdMap? {
-        let req = NSFetchRequest<WordIdMap>(entityName: "WordIdMap")
-        req.predicate = NSPredicate(format: "hashKey == %@", hashKey)
-        req.fetchLimit = 1
-        return try? context.fetch(req).first
-    }
-
-    private func updateLastSeen(hashKey: String) {
-        if let obj = fetchWord(hashKey: hashKey) {
-            obj.lastSeen = Date()
-            try? context.save()
-        }
     }
 
     private func sha256Hex(of text: String) -> String {

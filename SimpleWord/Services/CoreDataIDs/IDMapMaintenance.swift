@@ -3,7 +3,7 @@
 // - なぜ: 初回遅延の低減、不要データの整理、バックアップしやすさ向上のため。
 
 import Foundation
-import CoreData
+@preconcurrency import CoreData
 
 /// ID マップ（WordIdMap）の保守ユーティリティ。
 /// - 何を: 統計取得、プリウォーム（CSVからID事前生成）、エクスポート、古いレコードのパージ
@@ -26,10 +26,7 @@ final class IDMapMaintenance {
     /// 登録件数や期間の概況を返す
     func stats() -> Stats {
         let ctx = stack.container.viewContext
-        var count = 0
-        var earliest: Date? = nil
-        var latest: Date? = nil
-        ctx.performAndWait {
+        let result = ctx.performAndWait { () -> Stats in
             let req = NSFetchRequest<NSDictionary>(entityName: "WordIdMap")
             req.resultType = .dictionaryResultType
 
@@ -52,11 +49,12 @@ final class IDMapMaintenance {
 
             req.propertiesToFetch = [countExpr, minExpr, maxExpr]
             let dict = (try? ctx.fetch(req).first) ?? [:]
-            count = (dict["count"] as? NSNumber)?.intValue ?? 0
-            earliest = dict["minCreated"] as? Date
-            latest = dict["maxCreated"] as? Date
+            let count = (dict["count"] as? NSNumber)?.intValue ?? 0
+            let earliest = dict["minCreated"] as? Date
+            let latest = dict["maxCreated"] as? Date
+            return Stats(count: count, earliest: earliest, latest: latest)
         }
-        return Stats(count: count, earliest: earliest, latest: latest)
+        return result
     }
 
     // MARK: - Prewarm
@@ -130,10 +128,12 @@ final class IDMapMaintenance {
     /// マッピング全件をCSVとして書き出す
     func exportAll(to url: URL) throws {
         let ctx = stack.container.viewContext
-        var rows: [String] = []
-        rows.append("hashKey,uuid,sourceId,createdAt,lastSeen")
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        
+        var rows: [String] = []
+        rows.append("hashKey,uuid,sourceId,createdAt,lastSeen")
+        
         try ctx.performAndWait {
             let req = NSFetchRequest<WordIdMap>(entityName: "WordIdMap")
             req.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]

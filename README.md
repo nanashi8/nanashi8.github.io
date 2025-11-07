@@ -1,91 +1,192 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-import csv
-from pathlib import Path
+# SimpleWord - 適応型学習クイズアプリ
 
-base = Path('/Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources')
-# Use Japanese filenames only — English-named CSVs have been removed
-inputs = {
-    '高校単語.csv': '高校単語.csv',
-    'サンプル単語.csv': 'サンプル単語.csv',
-}
+**バージョン**: 2.0  
+**最終更新**: 2025-11-08  
+**プラットフォーム**: iOS 16.0+  
+**言語**: Swift 6.0  
 
-mapping = {
-    'English': '英語',
-    'Logic': '論理',
-    'Science': '理科',
-    'Math': '数学',
-    'Geography': '地理',
-    'CS': '情報',
-    'Economics': '経済',
-    'History': '歴史',
-    'Arts': '芸術',
-    'Social': '社会',
-    'Debate': '討論',
-    'Law': '法律',
-    'Biology': '生物',
-    'Physics': '物理',
-    'Chemistry': '化学',
-    'Engineering': '工学',
-    'Design': 'デザイン',
-    'Education': '教育',
-    'Music': '音楽',
-    'Life': '生活',
-    'PE': '体育',
-    'Shop': '実習',
-    'Transport': '交通',
-    'Safety': '安全',
-    'Vocabulary': '語彙',
-    'Study': '学習',
-    'Grammar': '文法',
-    'Forensics': '法科学',
-    'Library': '図書',
-    'Urban': '都市',
-    'Marketing': 'マーケティング',
-    'Statistics': '統計',
-}
+---
 
-for in_name, out_name in inputs.items():
-    in_path = base / in_name
-    out_path = base / out_name
-    if not in_path.exists():
-        print('input not found:', in_path)
-        continue
-    rows = []
-    with in_path.open('r', encoding='utf-8', newline='') as f:
-        reader = csv.reader(f)
-        for row in reader:
-            rows.append(row)
-    if not rows:
-        print('empty file:', in_path)
-        continue
-    # find relatedFields index (case-insensitive)
-    header = rows[0]
-    rf_idx = None
-    for i,h in enumerate(header):
-        if h.strip().lower() == 'relatedfields':
-            rf_idx = i
-            break
-    if rf_idx is None:
-        print('relatedFields not found in', in_name)
-        continue
-    out_rows = [header]
-    for row in rows[1:]:
-        if len(row) <= rf_idx:
-            out_rows.append(row)
-            continue
-        rf = row[rf_idx]
-        parts = [p.strip() for p in rf.split(';') if p.strip() != '']
-        new_parts = []
-        for p in parts:
-            new_parts.append(mapping.get(p, p))
-        row2 = list(row)
-        row2[rf_idx] = ';'.join(new_parts)
-        out_rows.append(row2)
-    # write out
-    with out_path.open('w', encoding='utf-8', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerows(out_rows)
-    print('wrote', out_path)
+## 📱 概要
 
-print('done')
+SimpleWordは、適応型学習アルゴリズムを活用した4択クイズアプリです。ユーザーの習熟度に応じて最適な問題を出題し、効率的な学習をサポートします。
+
+### 主な機能
+
+- **適応型学習**: 忘却曲線に基づく最適なタイミングでの復習
+- **CSV対応**: 中学歴史、古典単語、英会話など複数のCSVフォーマットに対応
+- **詳細なフィードバック**: 回答後に語源や関連情報を表示
+- **成績管理**: 学習進捗と統計の可視化
+
+---
+
+## 🚀 クイックスタート
+
+### 必要環境
+
+- macOS 14.0以上
+- Xcode 15.0以上
+- Swift 6.0
+
+### ビルドと実行
+
+```bash
+# リポジトリをクローン
+git clone <repository-url>
+cd quiz-app-1
+
+# Xcodeでプロジェクトを開く
+open SimpleWord.xcodeproj
+
+# Xcode でビルド（⌘+B）して実行（⌘+R）
+```
+
+---
+
+## 📚 ドキュメント
+
+### 🔰 初めての方
+
+1. **[プロジェクト概要](docs/01_仕様書/01-01_プロジェクト概要.md)** - プロジェクト全体の理解
+2. **[アーキテクチャ仕様](docs/01_仕様書/01-02_アーキテクチャ仕様.md)** - システム構造
+3. **[開発環境セットアップ](docs/02_実装ガイド/02-01_開発環境セットアップ.md)** - 環境構築
+
+### 💻 開発者向け
+
+- **[グローバルコーディング規約](docs/02_実装ガイド/02-01_グローバルコーディング規約.md)** - 基本方針と原則
+- **[グローバルコーディング規約](docs/02_実装ガイド/02-01_グローバルコーディング規約.md)** - 基本方針と原則
+- **[コーディング規約](docs/02_実装ガイド/02-02_コーディング規約.md)** - コードスタイルとルール
+- **[セキュリティとパフォーマンス設計方針](docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** ⭐ **必読**
+- **[ディレクトリ構造](docs/02_実装ガイド/02-04_ディレクトリ構造.md)** - ファイル構成
+- **[新規機能追加ガイド](docs/03_開発ガイド/03-01_新規機能追加ガイド.md)** - 開発フロー
+
+### 📖 完全なドキュメント
+
+すべてのドキュメントは **[ドキュメントインデックス](docs/00_INDEX.md)** から参照できます。
+
+---
+
+## 🔒 セキュリティとパフォーマンス
+
+本プロジェクトでは、以下の14の必須要件を厳守しています：
+
+1. ✅ **Swift 6.0の使用と並行性** - actor、async/await、@MainActorの活用
+2. ✅ **適切なエラー処理** - try?/try!の禁止
+3. ✅ **型安全性** - 可変引数の禁止
+4. ✅ **コード実行の制限** - 任意のコマンド・SQL実行の禁止
+5. ✅ **ログの安全性** - 個人情報・内部情報の保護
+6. ✅ **時刻処理** - タイムゾーンとロケールの明示
+7. ✅ **数値演算** - 浮動小数点の丸め方の統一
+8. ✅ **警告への対応** - すべての警告の解決
+9. ✅ **並行性の安全性** - デッドロックの防止
+10. ✅ **リソース管理** - 確実なリソース解放
+11. ✅ **設定管理** - ハードコードの禁止
+12. ✅ **パフォーマンス** - 効率的なアルゴリズム
+13. ✅ **乱数生成** - セキュリティ用途での適切な乱数使用
+14. ✅ **ログのパフォーマンス** - OSLogの活用
+
+詳細は **[セキュリティとパフォーマンス設計方針](docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** を参照してください。
+
+---
+
+## 🏗️ アーキテクチャ
+
+### Feature-First Architecture
+
+機能ごとに垂直分割し、自己完結したモジュール構成を採用しています。
+
+```
+SimpleWord/
+├── Features/           # 機能モジュール
+│   ├── Quiz/          # クイズ機能
+│   ├── Study/         # 学習機能
+│   └── Settings/      # 設定機能
+├── Common/            # 共通コンポーネント
+│   ├── Models/        # データモデル
+│   ├── Extensions/    # 拡張機能
+│   └── Utility/       # ユーティリティ
+├── Services/          # サービス層
+│   ├── CSVLoader/     # CSV読み込み
+│   └── Scheduler/     # 適応型スケジューラ
+└── Resources/         # リソース
+    └── *.csv          # CSVデータ
+```
+
+### 主要コンポーネント
+
+- **QuizSession**: クイズセッション管理
+- **AdaptiveScheduler**: 適応型学習アルゴリズム
+- **CSVDataSource**: CSV読み込みとパース
+- **QuizStore**: 状態管理
+
+---
+
+## 🧪 テスト
+
+### テストの実行
+
+```bash
+# Xcodeでテストを実行
+⌘+U
+
+# コマンドラインでテストを実行
+xcodebuild test -scheme SimpleWord -destination 'platform=iOS Simulator,name=iPhone 15'
+```
+
+### テストカバレッジ
+
+- **CSV読み込み**: `SimpleWordTests/CSVFixedColumnChoiceGenerationTests.swift`
+- **クイズ問題生成**: `SimpleWordTests/QuizQuestionGeneratorTests.swift`
+
+---
+
+## 📦 依存関係
+
+このプロジェクトは外部ライブラリに依存せず、Swiftの標準ライブラリとAppleのフレームワークのみを使用しています。
+
+- SwiftUI - UI実装
+- Combine - リアクティブプログラミング
+- CoreData - データ永続化
+- OSLog - ログ出力
+
+---
+
+## 🤝 貢献
+
+### コーディングルール
+
+コードを書く前に、必ず以下のドキュメントを確認してください：
+
+1. **[グローバルコーディング規約](docs/02_実装ガイド/02-01_グローバルコーディング規約.md)** - 基本方針
+2. **[コーディング規約](docs/02_実装ガイド/02-02_コーディング規約.md)** - 詳細ルール
+3. **[セキュリティとパフォーマンス設計方針](docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** ⭐ **必読**
+4. **[新規機能追加ガイド](docs/03_開発ガイド/03-01_新規機能追加ガイド.md)**
+
+### プルリクエスト
+
+1. 機能ブランチを作成
+2. テストを追加
+3. コーディング規約に従う
+4. ドキュメントを更新
+5. プルリクエストを作成
+
+---
+
+## 📝 ライセンス
+
+このプロジェクトは MIT ライセンスの下で公開されています。
+
+---
+
+## 📞 サポート
+
+質問や問題がある場合は、以下をご確認ください：
+
+- **[ドキュメントインデックス](docs/00_INDEX.md)** - 完全なドキュメント
+- **[FAQ](docs/03_開発ガイド/03-05_FAQ.md)** - よくある質問
+- **Issues** - GitHubのIssuesで報告
+
+---
+
+**SimpleWord開発チーム**  
+**最終更新**: 2025-11-08
