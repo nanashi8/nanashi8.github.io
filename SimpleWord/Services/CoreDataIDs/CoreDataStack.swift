@@ -8,12 +8,12 @@ import Foundation
 /// Core Data スタック（WordIdMap 用）。
 /// 既存の xcdatamodeld に干渉しないよう、コードで独立したモデル/ストアを構築します。
 /// SQLite は Application Support/"SimpleWord/WordIDs.sqlite" に作成します。
-final class CoreDataStack {
+final class CoreDataStack: Sendable {
     static let shared = CoreDataStack()
 
     let container: NSPersistentContainer
 
-    private init() {
+    nonisolated private init() {
         let model = CoreDataStack.makeModel()
         container = NSPersistentContainer(name: "SimpleWordWordIDs", managedObjectModel: model)
 
@@ -38,7 +38,7 @@ final class CoreDataStack {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 
-    private static func makeModel() -> NSManagedObjectModel {
+nonisolated     private static func makeModel() -> NSManagedObjectModel {
         let model = NSManagedObjectModel()
 
         let entity = NSEntityDescription()

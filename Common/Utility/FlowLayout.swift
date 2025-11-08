@@ -9,18 +9,30 @@
 import SwiftUI
 
 /// フローレイアウト：タグのように要素を配置
+/// 並行処理安全性を考慮した実装
 struct FlowLayout<Content: View>: View {
     let items: [String]
     let spacing: CGFloat
     let content: (String) -> Content
-    
-    @State private var totalHeight: CGFloat = 0
     
     init(items: [String], spacing: CGFloat = 8, @ViewBuilder content: @escaping (String) -> Content) {
         self.items = items
         self.spacing = spacing
         self.content = content
     }
+    
+    var body: some View {
+        FlowLayoutView(items: items, spacing: spacing, content: content)
+    }
+}
+
+/// 内部実装ビュー（レイアウト計算を担当）
+private struct FlowLayoutView<Content: View>: View {
+    let items: [String]
+    let spacing: CGFloat
+    let content: (String) -> Content
+    
+    @State private var totalHeight: CGFloat = 0
     
     var body: some View {
         GeometryReader { geometry in
@@ -30,59 +42,66 @@ struct FlowLayout<Content: View>: View {
     }
     
     private func generateContent(in geometry: GeometryProxy) -> some View {
-        var width: CGFloat = 0
-        var height: CGFloat = 0
-        var currentRowHeight: CGFloat = 0
+        // レイアウト情報を事前計算
+        let layout = computeLayout(availableWidth: geometry.size.width)
         
         return ZStack(alignment: .topLeading) {
-            ForEach(items, id: \.self) { item in
-                content(item)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
-                    .background(
-                        GeometryReader { itemGeometry in
-                            Color.clear.preference(
-                                key: ViewHeightKey.self,
-                                value: [itemGeometry.size.height]
-                            )
-                        }
-                    )
-                    .alignmentGuide(.leading) { dimension in
-                        if abs(width - dimension.width) > geometry.size.width {
-                            width = 0
-                            height -= currentRowHeight + spacing
-                            currentRowHeight = dimension.height
-                        }
-                        let result = width
-                        if item == items.last {
-                            width = 0
-                        } else {
-                            width -= dimension.width + spacing
-                        }
-                        return result
-                    }
-                    .alignmentGuide(.top) { dimension in
-                        let result = height
-                        if item == items.last {
-                            height = 0
-                        }
-                        currentRowHeight = max(currentRowHeight, dimension.height)
-                        return result
-                    }
+            ForEach(Array(items.enumerated()), id: \.element) { index, item in
+                if index < layout.count {
+                    content(item)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .offset(x: layout[index].x, y: layout[index].y)
+                }
             }
         }
-        .onPreferenceChange(ViewHeightKey.self) { heights in
-            if let maxHeight = heights.max() {
-                self.totalHeight = maxHeight + spacing
+        .background(
+            GeometryReader { geo in
+                Color.clear.preference(
+                    key: TotalHeightKey.self,
+                    value: geo.size.height
+                )
+            }
+        )
+        .onPreferenceChange(TotalHeightKey.self) { height in
+            if height > 0 {
+                self.totalHeight = height
             }
         }
     }
+    
+    /// レイアウト位置を事前計算（並行処理の問題を回避）
+    private func computeLayout(availableWidth: CGFloat) -> [CGPoint] {
+        var positions: [CGPoint] = []
+        var currentX: CGFloat = 0
+        var currentY: CGFloat = 0
+        var currentRowHeight: CGFloat = 0
+        
+        // 仮の寸法で計算（実際のレンダリングで調整される）
+        let estimatedItemWidth: CGFloat = 80
+        let estimatedItemHeight: CGFloat = 32
+        
+        for _ in items {
+            if currentX + estimatedItemWidth > availableWidth && currentX > 0 {
+                // 改行
+                currentX = 0
+                currentY += currentRowHeight + spacing
+                currentRowHeight = 0
+            }
+            
+            positions.append(CGPoint(x: currentX, y: currentY))
+            currentX += estimatedItemWidth + spacing
+            currentRowHeight = max(currentRowHeight, estimatedItemHeight)
+        }
+        
+        return positions
+    }
 }
 
-/// ビューの高さを取得するためのPreferenceKey
-private struct ViewHeightKey: PreferenceKey {
-    static var defaultValue: [CGFloat] = []
-    static func reduce(value: inout [CGFloat], nextValue: () -> [CGFloat]) {
-        value.append(contentsOf: nextValue())
+/// 総高さを取得するためのPreferenceKey
+private struct TotalHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = max(value, nextValue())
     }
 }

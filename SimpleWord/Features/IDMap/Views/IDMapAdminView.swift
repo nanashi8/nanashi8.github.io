@@ -69,14 +69,15 @@ struct IDMapAdminView: View {
 
     private func refreshStats() {
         isBusy = true
-        DispatchQueue.global(qos: .userInitiated).async {
-            let s = IDMapMaintenance.shared.stats()
+        Task.detached {
+            let maintenance = await MainActor.run { IDMapMaintenance.shared }
+            let s = maintenance.stats()
             let df = DateFormatter()
             df.dateStyle = .short; df.timeStyle = .short
             let earliest = s.earliest.map { df.string(from: $0) } ?? "-"
             let latest = s.latest.map { df.string(from: $0) } ?? "-"
             let text = "count: \(s.count)\nfirst: \(earliest)\nlast: \(latest)"
-            DispatchQueue.main.async {
+            await MainActor.run {
                 self.statsText = text
                 self.message = "Stats refreshed"
                 self.isBusy = false
@@ -86,9 +87,10 @@ struct IDMapAdminView: View {
 
     private func prewarmAll() {
         isBusy = true
-        DispatchQueue.global(qos: .userInitiated).async {
-            let total = IDMapMaintenance.shared.prewarmAllKnownCSVs()
-            DispatchQueue.main.async {
+        Task.detached {
+            let maintenance = await MainActor.run { IDMapMaintenance.shared }
+            let total = maintenance.prewarmAllKnownCSVs()
+            await MainActor.run {
                 self.message = "Prewarmed rows: \(total)"
                 self.refreshStats()
                 self.isBusy = false
@@ -98,24 +100,25 @@ struct IDMapAdminView: View {
 
     private func exportAll() {
         isBusy = true
-        DispatchQueue.global(qos: .userInitiated).async {
+        Task.detached {
             let filename = "WordIDs_" + ISO8601DateFormatter().string(from: Date()).replacingOccurrences(of: ":", with: "-") + ".csv"
             if let dir = FileUtils.documentsDirectory {
                 let url = dir.appendingPathComponent(filename)
                 do {
-                    try IDMapMaintenance.shared.exportAll(to: url)
-                    DispatchQueue.main.async {
+                    let maintenance = await MainActor.run { IDMapMaintenance.shared }
+                    try maintenance.exportAll(to: url)
+                    await MainActor.run {
                         self.message = "Exported: \(filename)"
                         self.isBusy = false
                     }
                 } catch {
-                    DispatchQueue.main.async {
+                    await MainActor.run {
                         self.message = "Export failed: \(error.localizedDescription)"
                         self.isBusy = false
                     }
                 }
             } else {
-                DispatchQueue.main.async {
+                await MainActor.run {
                     self.message = "Documents directory not available"
                     self.isBusy = false
                 }
@@ -126,16 +129,17 @@ struct IDMapAdminView: View {
     private func purgeOld() {
         isBusy = true
         let days = purgeDays
-        DispatchQueue.global(qos: .userInitiated).async {
+        Task.detached {
             do {
-                let removed = try IDMapMaintenance.shared.purgeOlderThan(days: days)
-                DispatchQueue.main.async {
+                let maintenance = await MainActor.run { IDMapMaintenance.shared }
+                let removed = try maintenance.purgeOlderThan(days: days)
+                await MainActor.run {
                     self.message = "Purged: \(removed) records"
                     self.refreshStats()
                     self.isBusy = false
                 }
             } catch {
-                DispatchQueue.main.async {
+                await MainActor.run {
                     self.message = "Purge failed: \(error.localizedDescription)"
                     self.isBusy = false
                 }

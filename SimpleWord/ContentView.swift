@@ -131,7 +131,8 @@ struct ContentView: View {
                         }
                         .buttonStyle(.plain)
 
-                        // 6) IDマップ管理
+                        // 6) IDマップ管理（開発者用機能のため非表示）
+                        /*
                         NavigationLink {
                             IDMapAdminView()
                         } label: {
@@ -155,6 +156,7 @@ struct ContentView: View {
                             .padding(.horizontal)
                         }
                         .buttonStyle(.plain)
+                        */
                     }
 
                     Spacer(minLength: 12)
