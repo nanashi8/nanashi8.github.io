@@ -1,5 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+CSVファイルのrelatedFieldsカテゴリを英語から日本語に変換するスクリプト
+
+使用方法:
+    python translate_relatedfields_categories.py
+
+入力ファイル:
+    - 高校単語.csv
+    - サンプル単語.csv
+
+出力:
+    元のファイルに上書き保存
+"""
+
 import csv
 from pathlib import Path
 

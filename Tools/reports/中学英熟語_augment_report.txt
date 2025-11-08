@@ -1,0 +1,10 @@
+augment: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv
+backup: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学英熟語.csv.augment.bak
+rows:198 changed:3
+unique_after:6
+196	学校・学習
+1	日常
+1	動物
+1	地理・天気
+1	交通・移動
+1	食べ物・飲食
