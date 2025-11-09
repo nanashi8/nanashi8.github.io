@@ -1,0 +1,17 @@
+{
+  "name": "quiz-app-web",
+  "version": "1.0.0",
+  "description": "SimpleWord - Web版プロトタイプ（英単語クイズアプリ）",
+  "scripts": {
+    "deploy": "gh-pages -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanashi8/quiz-app.git"
+  },
+  "author": "nanashi8",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
