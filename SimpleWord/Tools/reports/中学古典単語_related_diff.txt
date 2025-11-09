@@ -1,0 +1,22 @@
+Report: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学古典単語.csv
+Backup used: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources/中学古典単語.csv.preaugment.bak
+
+Key	Old Related	New Related
+あはれ	日常	日常;食べ物・飲食;自然
+をかし	日常	日常;学校・学習;動物
+いと	文法・表現;日常	文法・表現;日常;植物
+つとめて	日常;時間・頻度	日常;時間・頻度;天体・天気
+いかで	文法・表現;日常	文法・表現;日常;文化・芸術・娯楽
+うたて	日常	日常;家族・人間関係;感情・思考・認知
+なかなか	文法・表現;日常	文法・表現;日常;物理・状態
+けり	文法・表現;日常	文法・表現;日常;方角・場所・地理
+かな	文法・表現;日常	文法・表現;日常
+しるし	日常	日常;交通・移動
+いとけなし	日常	日常;住居・建物
+はべり	日常	日常;仕事・職業
+つれづれ	日常	日常;医療・健康
+ののしる	日常	日常;公共・サービス
+あやし	日常	日常;商業・買い物
+
+Total rows compared: 15
+Rows with changed related fields: 14

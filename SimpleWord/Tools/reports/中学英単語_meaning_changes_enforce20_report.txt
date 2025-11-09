@@ -1,0 +1,48 @@
+enforce20: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学英単語_meaning_changes.csv
+backup: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学英単語_meaning_changes.csv.enforce20.bak
+rows:102
+changed:11
+unique_after:29
+
+row=57	key=village	天体・天気 -> 地理・天気
+row=31	key=market	商業・買い物 -> 買い物・商業
+row=29	key=play	日常 -> スポーツ・遊び
+row=46	key=speaks	日常 -> 感情
+row=48	key=finish	日常 -> 家族・住居
+row=56	key=two	日常 -> 文化・芸術
+row=67	key=brown	日常 -> 健康・身体
+row=74	key=say	日常 -> 科学・物理
+row=79	key=shoes	日常 -> テクノロジー
+row=87	key=shorts	日常 -> 社会・政治
+row=88	key=tshirt	日常 -> その他
+
+category_counts:
+30	文法・表現;日常
+16	動物
+10	文法・表現
+10	食べ物・飲食
+5	方角・場所・地理
+5	日常
+2	感情・思考・認知
+2	家族・人間関係
+2	文化・芸術・娯楽
+2	医療・健康
+2	物理・状態
+1	自然
+1	時間・頻度
+1	交通・移動
+1	仕事・職業
+1	学校・学習
+1	地理・天気
+1	買い物・商業
+1	スポーツ・遊び
+1	感情
+1	家族・住居
+1	文化・芸術
+1	健康・身体
+1	科学・物理
+1	テクノロジー
+1	社会・政治
+1	その他
+0	商業・買い物
+0	天体・天気
