@@ -190,3 +190,62 @@ xcodebuild test -scheme SimpleWord -destination 'platform=iOS Simulator,name=iPh
 
 **SimpleWord開発チーム**  
 **最終更新**: 2025-11-08
+
+---
+
+## 🌐 Web版プロトタイプ
+
+quiz-app の Web版プロトタイプを GitHub Pages で公開しています。
+
+### 公開 URL
+
+**デモサイト**: https://nanashi8.github.io/quiz-app/
+
+### デプロイ方法
+
+#### 自動デプロイ（推奨）
+
+`web-prototype` ブランチに push すると、GitHub Actions が自動的に gh-pages にデプロイします。
+
+```bash
+git checkout web-prototype
+git add docs/
+git commit -m "Update web prototype"
+git push origin web-prototype
+```
+
+数分後、Actions タブでデプロイ状況を確認できます。
+
+#### 手動デプロイ
+
+```bash
+# web-prototype ブランチに切り替え
+git checkout web-prototype
+
+# 依存関係をインストール
+npm ci
+
+# ローカルで確認（オプション）
+python3 -m http.server 8000 --directory docs
+
+# デプロイ実行
+npm run deploy
+```
+
+### ロールバック
+
+誤ったデプロイを元に戻す場合：
+
+```bash
+git checkout gh-pages
+git log --oneline
+git reset --hard <previous-commit-id>
+git push origin gh-pages --force
+```
+
+### 詳細なデプロイ手順
+
+完全なデプロイ手順、トラブルシューティング、ベストプラクティスについては以下を参照してください：
+
+**[デプロイ手順とベストプラクティス](.github/instructions/DEPLOY_INSTRUCTIONS.md)**
+
