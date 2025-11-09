@@ -6,7 +6,8 @@
 import Foundation
 import Combine
 
-public struct QuizResult: Codable, Identifiable {
+/// クイズ結果（Sendable準拠）
+public struct QuizResult: Codable, Identifiable, Sendable {
     public let id: UUID
     public let date: Date
     public let total: Int
@@ -22,12 +23,15 @@ public struct QuizResult: Codable, Identifiable {
     }
 }
 
+/// クイズ結果ストア（MainActorで並行性を保証）
+@MainActor
 public final class ScoreStore: ObservableObject {
     @Published public private(set) var results: [QuizResult] = []
     private let key = "QuizResults_v1"
 
     public init() {
-        if let data = UserDefaults.standard.data(forKey: key), let decoded = try? JSONDecoder().decode([QuizResult].self, from: data) {
+        if let data = UserDefaults.standard.data(forKey: key),
+           let decoded = try? JSONDecoder().decode([QuizResult].self, from: data) {
             self.results = decoded
         }
     }

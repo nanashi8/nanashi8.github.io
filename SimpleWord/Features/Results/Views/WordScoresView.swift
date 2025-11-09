@@ -141,16 +141,23 @@ struct WordScoresView: View {
 
     // 指定CSVの単語情報を読み込む
     private func loadItemsForCSV(_ csvName: String) {
-        DispatchQueue.global(qos: .userInitiated).async {
+        Task {
             var map: [UUID: QuestionItem] = [:]
             let base = csvName.replacingOccurrences(of: ".csv", with: "")
-            let repository = QuestionItemRepository(fileName: base)
             
-            if case .success(let arr) = repository.fetch() {
+            let repository = await MainActor.run {
+                QuestionItemRepository(fileName: base)
+            }
+            
+            let result = await MainActor.run {
+                repository.fetch()
+            }
+            
+            if case .success(let arr) = result {
                 for it in arr { map[it.id] = it }
             }
             
-            DispatchQueue.main.async {
+            await MainActor.run {
                 self.itemsByID = map
             }
         }

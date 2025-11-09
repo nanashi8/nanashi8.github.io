@@ -5,11 +5,12 @@
 
 import Foundation
 
+@MainActor
 public final class FileWatcher {
     private var source: DispatchSourceFileSystemObject?
     private var fileDescriptor: Int32 = -1
 
-    public init?(url: URL, onChange: @escaping () -> Void) {
+    public init?(url: URL, onChange: @escaping @MainActor () -> Void) {
         // URL がファイルならそのパスで FD を作る
         let path = url.path
         fileDescriptor = open(path, O_EVTONLY)
@@ -24,7 +25,9 @@ public final class FileWatcher {
             pending = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                 pending = false
-                onChange()
+                Task { @MainActor in
+                    onChange()
+                }
             }
         }
         src.setCancelHandler { [fd = fileDescriptor] in
@@ -34,9 +37,11 @@ public final class FileWatcher {
         // self.source already set above
     }
 
-    public func invalidate() {
-        source?.cancel()
-        source = nil
+    nonisolated public func invalidate() {
+        Task { @MainActor in
+            source?.cancel()
+            source = nil
+        }
     }
 
     deinit {

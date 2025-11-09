@@ -8,19 +8,19 @@ import CryptoKit
 
 enum FileUtils {
     // アプリのドキュメントディレクトリURL
-    static var documentsDirectory: URL? {
+    nonisolated static var documentsDirectory: URL? {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
     }
 
     // Bundle 内の CSV ファイル一覧（ファイル名のみ）
-    static func listBundleCSVFiles() -> [String] {
+    nonisolated static func listBundleCSVFiles() -> [String] {
         // Bundle.pathsForResources(ofType:inDirectory:) を使って列挙
         guard let paths = Bundle.main.paths(forResourcesOfType: "csv", inDirectory: nil) as [String]? else { return [] }
         return paths.map { URL(fileURLWithPath: $0).lastPathComponent }
     }
 
     // Documents 内の .csv ファイル一覧（ファイル名のみ）
-    static func listCSVFilesInDocuments() -> [String] {
+    nonisolated static func listCSVFilesInDocuments() -> [String] {
         guard let dir = documentsDirectory else { return [] }
         do {
             let files = try FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil)
@@ -31,13 +31,13 @@ enum FileUtils {
     }
 
     // Bundle 内の CSV を文字列で読み込む（編集前に確認する際に利用）
-    static func readBundleCSVText(named name: String) -> String? {
+    nonisolated static func readBundleCSVText(named name: String) -> String? {
         guard let url = Bundle.main.url(forResource: name, withExtension: "csv") else { return nil }
         return try? String(contentsOf: url, encoding: .utf8)
     }
 
     // Documents に空の CSV ファイルを新規作成（ヘッダ行を追加）
-    static func createCSVInDocuments(named name: String) throws -> URL {
+    nonisolated static func createCSVInDocuments(named name: String) throws -> URL {
         guard let dir = documentsDirectory else { throw NSError(domain: "FileUtils", code: 1, userInfo: [NSLocalizedDescriptionKey: "Documents not available"]) }
         var filename = name
         if !filename.hasSuffix(".csv") { filename += ".csv" }
@@ -50,7 +50,7 @@ enum FileUtils {
         return url
     }
 
-    static func deleteCSVInDocuments(named name: String) throws {
+    nonisolated static func deleteCSVInDocuments(named name: String) throws {
         guard let dir = documentsDirectory else { return }
         var filename = name
         if !filename.hasSuffix(".csv") { filename += ".csv" }
@@ -58,7 +58,7 @@ enum FileUtils {
         try FileManager.default.removeItem(at: url)
     }
 
-    static func renameCSVInDocuments(oldName: String, newName: String) throws {
+    nonisolated static func renameCSVInDocuments(oldName: String, newName: String) throws {
         guard let dir = documentsDirectory else { return }
         var oldFile = oldName
         if !oldFile.hasSuffix(".csv") { oldFile += ".csv" }
@@ -70,7 +70,7 @@ enum FileUtils {
     }
 
     // Bundle にあるリソース（例: 高校単語.csv）を Documents にコピーして編集可能にする
-    static func copyBundleCSVToDocuments(named resourceName: String) throws -> URL {
+    nonisolated static func copyBundleCSVToDocuments(named resourceName: String) throws -> URL {
         guard let bundleURL = Bundle.main.url(forResource: resourceName, withExtension: "csv") else {
             throw NSError(domain: "FileUtils", code: 3, userInfo: [NSLocalizedDescriptionKey: "Resource not found in bundle"])
         }
@@ -85,14 +85,14 @@ enum FileUtils {
     }
 
     // CSV を文字列として保存
-    static func saveCSVText(_ text: String, to url: URL) throws {
+    nonisolated static func saveCSVText(_ text: String, to url: URL) throws {
         try text.write(to: url, atomically: true, encoding: .utf8)
     }
 
     // MARK: - New: Unique name generator for Documents
     /// Documentsに同名ファイルがある場合に、重複しないファイル名を返す
     /// 例: words.csv -> words_yyyyMMdd_HHmmss.csv（タイムスタンプ）
-    static func uniqueDocumentsFilename(original: String, now: Date = Date()) -> String {
+    nonisolated static func uniqueDocumentsFilename(original: String, now: Date = Date()) -> String {
         guard let dir = documentsDirectory else { return original }
         let fm = FileManager.default
         let base = (original as NSString).deletingPathExtension
@@ -117,7 +117,7 @@ enum FileUtils {
     // MARK: - New: Import CSV from external URL into Documents
     /// ファイルURLからDocumentsへCSVをインポート（同名は自動リネーム）
     @discardableResult
-    static func importCSVFromURL(_ url: URL) throws -> URL {
+    nonisolated static func importCSVFromURL(_ url: URL) throws -> URL {
         guard let dir = documentsDirectory else {
             throw NSError(domain: "FileUtils", code: 10, userInfo: [NSLocalizedDescriptionKey: "Documents not available"]) }
         let originalName = url.lastPathComponent
@@ -130,7 +130,7 @@ enum FileUtils {
 
     // MARK: - ID injection helpers
     /// CSV のヘッダに id カラムが存在するかを判定する（大文字小文字を無視）
-    static func csvHasID(at url: URL) -> Bool {
+    nonisolated static func csvHasID(at url: URL) -> Bool {
         guard let text = try? String(contentsOf: url, encoding: .utf8) else { return false }
         let lines = text.components(separatedBy: .newlines)
         guard let header = lines.first?.trimmingCharacters(in: .whitespacesAndNewlines), !header.isEmpty else { return false }
@@ -140,7 +140,7 @@ enum FileUtils {
 
     /// CSV に id 列を追加して上書き保存する（既に id があれば何もしない）。バックアップ (.bak) を作成。
     /// - Parameter random: true のときランダム UUID を採用、false のとき term+meaning から決定論的 UUID を生成
-    static func injectIDs(toCSVAt url: URL, random: Bool = false) throws {
+    nonisolated static func injectIDs(toCSVAt url: URL, random: Bool = false) throws {
         let text = try String(contentsOf: url, encoding: .utf8)
         var lines = text.components(separatedBy: .newlines)
         guard !lines.isEmpty else { return }
@@ -196,7 +196,7 @@ enum FileUtils {
     // MARK: - New: Write QuestionItems to CSV file
     /// QuestionItem配列をCSVとして保存（固定ヘッダ順）
     /// 列: term,reading,meaning,etymology,relatedWords,relatedFields,difficulty
-    static func writeQuestionItems(_ items: [QuestionItem], to url: URL) throws {
+    nonisolated static func writeQuestionItems(_ items: [QuestionItem], to url: URL) throws {
         var lines: [String] = []
         lines.append("term,reading,meaning,etymology,relatedWords,relatedFields,difficulty")
         for it in items {
@@ -216,7 +216,7 @@ enum FileUtils {
     }
 
     // simple CSV helpers (handles quoted fields and escaped quotes)
-    private static func splitCSVLine(_ line: String) -> [String] {
+    nonisolated private static func splitCSVLine(_ line: String) -> [String] {
         var fields: [String] = []
         var current = ""
         var insideQuotes = false
@@ -250,7 +250,7 @@ enum FileUtils {
         return fields
     }
 
-    private static func joinCSVLine(_ fields: [String]) -> String {
+    nonisolated private static func joinCSVLine(_ fields: [String]) -> String {
         return fields.map { field in
             if field.contains(",") || field.contains("\"") || field.contains("\n") {
                 let escaped = field.replacingOccurrences(of: "\"", with: "\"\"")
@@ -261,7 +261,7 @@ enum FileUtils {
         }.joined(separator: ",")
     }
 
-    private static func unquote(_ s: String) -> String {
+    nonisolated private static func unquote(_ s: String) -> String {
         var str = s.trimmingCharacters(in: .whitespacesAndNewlines)
         if str.hasPrefix("\"") && str.hasSuffix("\"") && str.count >= 2 {
             str.removeFirst()
@@ -271,7 +271,7 @@ enum FileUtils {
         return str
     }
 
-    private static func deterministicUUID(from input: String) -> UUID {
+    nonisolated private static func deterministicUUID(from input: String) -> UUID {
         let digest = SHA256.hash(data: Data(input.utf8))
         let bytes = Array(digest.prefix(16))
         return UUID(uuid: (

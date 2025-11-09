@@ -7,8 +7,8 @@ import Foundation
 import Combine
 
 /// 単語成績の永続化ストア（問題集別に管理）
-/// - シンプルに UserDefaults に JSON エンコードで保存する
-/// - ObservableObject で UI に反映される
+/// - @MainActorで並行性を保証
+@MainActor
 public final class WordScoreStore: ObservableObject {
     /// 現在アクティブな問題集の UUID -> WordScore
     @Published private(set) var scores: [UUID: WordScore] = [:]
@@ -20,7 +20,6 @@ public final class WordScoreStore: ObservableObject {
     private var allScores: [String: [UUID: WordScore]] = [:]
     
     private let userDefaultsKey = "SimpleWord.WordScoreStore.v2"
-    private let saveQueue = DispatchQueue(label: "SimpleWord.WordScoreStore.saveQueue", qos: .background)
 
     public init() {
         loadAll()
@@ -30,13 +29,13 @@ public final class WordScoreStore: ObservableObject {
     public func switchToCSV(_ csvName: String) {
         currentCSVName = csvName
         scores = allScores[csvName] ?? [:]
-        print("WordScoreStore: 問題集 '\(csvName)' の学習結果を読み込みました（\(scores.count) 件）")
+        Logger.log("問題集 '\(csvName)' の学習結果を読み込みました（\(scores.count) 件）", level: .info)
     }
 
     /// 指定単語に対する結果を記録する
     public func recordResult(itemID: UUID, correct: Bool) {
         guard let csvName = currentCSVName else {
-            print("WordScoreStore: 問題集が選択されていないため、記録できません")
+            Logger.log("問題集が選択されていないため、記録できません", level: .warning)
             return
         }
         
@@ -44,7 +43,7 @@ public final class WordScoreStore: ObservableObject {
         entry.record(correct: correct)
         scores[itemID] = entry
         allScores[csvName] = scores
-        saveAsync()
+        save()
     }
 
     /// 指定単語の現在のスコアを返す（無ければ初期値）
@@ -55,14 +54,14 @@ public final class WordScoreStore: ObservableObject {
     /// 現在の問題集の学習結果をリセット
     public func resetCurrentCSV() {
         guard let csvName = currentCSVName else {
-            print("WordScoreStore: 問題集が選択されていないため、リセットできません")
+            Logger.log("問題集が選択されていないため、リセットできません", level: .warning)
             return
         }
         
         scores.removeAll()
         allScores[csvName] = nil
-        saveAsync()
-        print("WordScoreStore: 問題集 '\(csvName)' の学習結果をリセットしました")
+        save()
+        Logger.log("問題集 '\(csvName)' の学習結果をリセットしました", level: .info)
     }
     
     /// 指定した問題集の学習結果をリセット
@@ -71,8 +70,8 @@ public final class WordScoreStore: ObservableObject {
         if currentCSVName == csvName {
             scores.removeAll()
         }
-        saveAsync()
-        print("WordScoreStore: 問題集 '\(csvName)' の学習結果をリセットしました")
+        save()
+        Logger.log("問題集 '\(csvName)' の学習結果をリセットしました", level: .info)
     }
 
     /// 全データをリセット
@@ -80,21 +79,18 @@ public final class WordScoreStore: ObservableObject {
         scores.removeAll()
         allScores.removeAll()
         currentCSVName = nil
-        saveAsync()
-        print("WordScoreStore: 全問題集の学習結果をリセットしました")
+        save()
+        Logger.log("全問題集の学習結果をリセットしました", level: .info)
     }
 
     // MARK: - Persistence
-    private func saveAsync() {
-        let snapshot = allScores
-        saveQueue.async { [weak self] in
-            guard let self = self else { return }
-            do {
-                let data = try JSONEncoder().encode(snapshot)
-                UserDefaults.standard.set(data, forKey: self.userDefaultsKey)
-            } catch {
-                print("WordScoreStore save error: \(error)")
-            }
+    
+    private func save() {
+        do {
+            let data = try JSONEncoder().encode(allScores)
+            UserDefaults.standard.set(data, forKey: userDefaultsKey)
+        } catch {
+            Logger.log("WordScoreStore save error: \(error)", level: .error)
         }
     }
 
@@ -106,12 +102,10 @@ public final class WordScoreStore: ObservableObject {
         }
         do {
             let decoded = try JSONDecoder().decode([String: [UUID: WordScore]].self, from: data)
-            DispatchQueue.main.async {
-                self.allScores = decoded
-                print("WordScoreStore: \(decoded.count) 個の問題集データを読み込みました")
-            }
+            allScores = decoded
+            Logger.log("\(decoded.count) 個の問題集データを読み込みました", level: .info)
         } catch {
-            print("WordScoreStore load error: \(error)")
+            Logger.log("WordScoreStore load error: \(error)", level: .error)
             // 読み込み失敗時はv1からの移行を試みる
             migrateFromV1()
         }
@@ -124,15 +118,15 @@ public final class WordScoreStore: ObservableObject {
         
         do {
             let v1Scores = try JSONDecoder().decode([UUID: WordScore].self, from: data)
-            print("WordScoreStore: v1形式のデータを検出しました（\(v1Scores.count) 件）")
+            Logger.log("v1形式のデータを検出しました（\(v1Scores.count) 件）", level: .info)
             
             // v1のデータは問題集名が不明なため、"_migrated"という特別な名前で保存
             allScores["_migrated"] = v1Scores
-            saveAsync()
+            save()
             
-            print("WordScoreStore: v1データを '_migrated' として移行しました")
+            Logger.log("v1データを '_migrated' として移行しました", level: .info)
         } catch {
-            print("WordScoreStore v1 migration error: \(error)")
+            Logger.log("WordScoreStore v1 migration error: \(error)", level: .error)
         }
     }
 }

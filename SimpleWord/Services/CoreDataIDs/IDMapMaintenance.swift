@@ -3,18 +3,23 @@
 // - なぜ: 初回遅延の低減、不要データの整理、バックアップしやすさ向上のため。
 
 import Foundation
-import CoreData
+@preconcurrency import CoreData
 
 /// ID マップ（WordIdMap）の保守ユーティリティ。
 /// - 何を: 統計取得、プリウォーム（CSVからID事前生成）、エクスポート、古いレコードのパージ
 /// - なぜ: UIの初回遅延を減らし、不要なマップを整理し、バックアップを取りやすくするため
-final class IDMapMaintenance {
+final class IDMapMaintenance: Sendable {
     static let shared = IDMapMaintenance()
-    private init() {}
-
-    private let stack = CoreDataStack.shared
-    private let keyBuilder = WordKeyBuilder.shared
-    private let idProvider = CoreDataWordIDProvider.shared
+    
+    private let stack: CoreDataStack
+    private let keyBuilder: WordKeyBuilder
+    private let idProvider: CoreDataWordIDProvider
+    
+    private init() {
+        self.stack = CoreDataStack.shared
+        self.keyBuilder = WordKeyBuilder.shared
+        self.idProvider = CoreDataWordIDProvider.shared
+    }
 
     // MARK: - Stats
     struct Stats {
@@ -24,12 +29,9 @@ final class IDMapMaintenance {
     }
 
     /// 登録件数や期間の概況を返す
-    func stats() -> Stats {
+    nonisolated func stats() -> Stats {
         let ctx = stack.container.viewContext
-        var count = 0
-        var earliest: Date? = nil
-        var latest: Date? = nil
-        ctx.performAndWait {
+        let result = ctx.performAndWait { () -> Stats in
             let req = NSFetchRequest<NSDictionary>(entityName: "WordIdMap")
             req.resultType = .dictionaryResultType
 
@@ -52,17 +54,18 @@ final class IDMapMaintenance {
 
             req.propertiesToFetch = [countExpr, minExpr, maxExpr]
             let dict = (try? ctx.fetch(req).first) ?? [:]
-            count = (dict["count"] as? NSNumber)?.intValue ?? 0
-            earliest = dict["minCreated"] as? Date
-            latest = dict["maxCreated"] as? Date
+            let count = (dict["count"] as? NSNumber)?.intValue ?? 0
+            let earliest = dict["minCreated"] as? Date
+            let latest = dict["maxCreated"] as? Date
+            return Stats(count: count, earliest: earliest, latest: latest)
         }
-        return Stats(count: count, earliest: earliest, latest: latest)
+        return result
     }
 
     // MARK: - Prewarm
     /// 指定CSVを読み、安定キーからIDを発行してマップに反映（存在すれば更新のみ）。
     @discardableResult
-    func prewarm(fromCSV url: URL) throws -> Int {
+    nonisolated func prewarm(fromCSV url: URL) throws -> Int {
         let text = try String(contentsOf: url, encoding: .utf8)
         let lines = text.components(separatedBy: .newlines)
         guard !lines.isEmpty else { return 0 }
@@ -105,7 +108,7 @@ final class IDMapMaintenance {
 
     /// バンドル/ドキュメントにある既知CSVを一括プリウォーム
     @discardableResult
-    func prewarmAllKnownCSVs() -> Int {
+    nonisolated func prewarmAllKnownCSVs() -> Int {
         var total = 0
         // Bundle
         let bundleFiles = FileUtils.listBundleCSVFiles()
@@ -128,20 +131,22 @@ final class IDMapMaintenance {
 
     // MARK: - Export
     /// マッピング全件をCSVとして書き出す
-    func exportAll(to url: URL) throws {
+    nonisolated func exportAll(to url: URL) throws {
         let ctx = stack.container.viewContext
-        var rows: [String] = []
-        rows.append("hashKey,uuid,sourceId,createdAt,lastSeen")
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        
         try ctx.performAndWait {
+            var rows: [String] = []
+            rows.append("hashKey,uuid,sourceId,createdAt,lastSeen")
+            
             let req = NSFetchRequest<WordIdMap>(entityName: "WordIdMap")
             req.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
             let all = try ctx.fetch(req)
             for m in all {
                 let created = formatter.string(from: m.createdAt)
                 let seen = formatter.string(from: m.lastSeen)
-                rows.append(joinCSVLine([
+                rows.append(self.joinCSVLine([
                     m.hashKey,
                     m.uuid,
                     m.sourceId ?? "",
@@ -149,37 +154,37 @@ final class IDMapMaintenance {
                     seen
                 ]))
             }
+            
+            let text = rows.joined(separator: "\n")
+            try text.write(to: url, atomically: true, encoding: .utf8)
         }
-        let text = rows.joined(separator: "\n")
-        try text.write(to: url, atomically: true, encoding: .utf8)
     }
 
     // MARK: - Purge
     /// 指定日数より古い lastSeen を持つレコードを削除
     @discardableResult
-    func purgeOlderThan(days: Int) throws -> Int {
+    nonisolated func purgeOlderThan(days: Int) throws -> Int {
         let cutoff = Calendar.current.date(byAdding: .day, value: -abs(days), to: Date()) ?? Date.distantPast
         return try purge(before: cutoff)
     }
 
     @discardableResult
-    func purge(before cutoff: Date) throws -> Int {
+    nonisolated func purge(before cutoff: Date) throws -> Int {
         let ctx = stack.container.newBackgroundContext()
         ctx.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-        var removed = 0
-        try ctx.performAndWait {
+        return try ctx.performAndWait {
             let req = NSFetchRequest<NSManagedObjectID>(entityName: "WordIdMap")
             req.resultType = .managedObjectIDResultType
             req.predicate = NSPredicate(format: "lastSeen < %@", cutoff as NSDate)
             let ids = try ctx.fetch(req)
             for oid in ids { if let obj = try? ctx.existingObject(with: oid) { ctx.delete(obj) } }
-            if ctx.hasChanges { try ctx.save(); removed = ids.count }
+            if ctx.hasChanges { try ctx.save(); return ids.count }
+            return 0
         }
-        return removed
     }
 
     // MARK: - Local CSV helpers (既存実装と整合)
-    private func splitCSVLine(_ line: String) -> [String] {
+    nonisolated private func splitCSVLine(_ line: String) -> [String] {
         var items: [String] = []
         var current = ""
         var insideQuotes = false
@@ -204,7 +209,7 @@ final class IDMapMaintenance {
         return items
     }
 
-    private func joinCSVLine(_ fields: [String]) -> String {
+    nonisolated private func joinCSVLine(_ fields: [String]) -> String {
         return fields.map { f in
             if f.contains(",") || f.contains("\"") || f.contains("\n") {
                 let escaped = f.replacingOccurrences(of: "\"", with: "\"\"")
@@ -213,7 +218,7 @@ final class IDMapMaintenance {
         }.joined(separator: ",")
     }
 
-    private func unquote(_ s: String) -> String {
+    nonisolated private func unquote(_ s: String) -> String {
         var str = s.trimmingCharacters(in: .whitespacesAndNewlines)
         if str.hasPrefix("\"") && str.hasSuffix("\"") && str.count >= 2 { str.removeFirst(); str.removeLast() }
         str = str.replacingOccurrences(of: "\"\"", with: "\"")
