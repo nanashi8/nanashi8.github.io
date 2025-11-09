@@ -12,11 +12,7 @@
 import Foundation
 
 /// 学習モード: 通常 / 復習 / 補習
-<<<<<<< HEAD
 public enum LearningMode: String, Codable, CaseIterable, Identifiable, Sendable {
-=======
-public enum LearningMode: String, Codable, CaseIterable, Identifiable {
->>>>>>> docs/organize-documentation
     public var id: String { rawValue }
     
     case normal = "normal"          // 通常モード
