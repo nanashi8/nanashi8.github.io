@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleWord - Web版プロトタイプ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- ホーム画面 -->
+        <div id="home-screen" class="screen active">
+            <header>
+                <h1>SimpleWord ホーム</h1>
+                <p class="subtitle">英単語クイズアプリ（Web版プロトタイプ）</p>
+            </header>
+
+            <main class="menu-cards">
+                <div class="card" onclick="startQuiz()">
+                    <div class="card-icon">❓</div>
+                    <div class="card-content">
+                        <h2>クイズをはじめる</h2>
+                        <p>選んだ問題セットから出題します</p>
+                    </div>
+                    <div class="card-arrow">›</div>
+                </div>
+
+                <div class="card" onclick="showSettings()">
+                    <div class="card-icon">⚙️</div>
+                    <div class="card-content">
+                        <h2>出題設定</h2>
+                        <p>分野・難易度・回数を設定</p>
+                    </div>
+                    <div class="card-arrow">›</div>
+                </div>
+
+                <div class="card disabled">
+                    <div class="card-icon">📝</div>
+                    <div class="card-content">
+                        <h2>問題集管理</h2>
+                        <p>インポート・エクスポート・編集</p>
+                    </div>
+                    <div class="card-arrow">›</div>
+                </div>
+
+                <div class="card disabled">
+                    <div class="card-icon">📊</div>
+                    <div class="card-content">
+                        <h2>学習結果</h2>
+                        <p>単語別・セット別の成績</p>
+                    </div>
+                    <div class="card-arrow">›</div>
+                </div>
+            </main>
+
+            <footer>
+                <p>Web版プロトタイプ - <a href="https://github.com/nanashi8/quiz-app" target="_blank">GitHub</a></p>
+            </footer>
+        </div>
+
+        <!-- クイズ画面 -->
+        <div id="quiz-screen" class="screen">
+            <header>
+                <button class="back-btn" onclick="showHome()">‹ 戻る</button>
+                <h1>クイズ</h1>
+                <div class="quiz-progress">
+                    <span id="current-question">1</span> / <span id="total-questions">10</span>
+                </div>
+            </header>
+
+            <main class="quiz-content">
+                <div class="question-card">
+                    <div class="question-number">問題 <span id="question-num">1</span></div>
+                    <div class="question-text" id="question-text">Loading...</div>
+                </div>
+
+                <div class="choices" id="choices">
+                    <!-- 選択肢は JavaScript で生成 -->
+                </div>
+
+                <div class="quiz-result hidden" id="quiz-result">
+                    <div class="result-icon" id="result-icon">✓</div>
+                    <div class="result-text" id="result-text">正解！</div>
+                    <button class="btn-next" onclick="nextQuestion()">次へ</button>
+                </div>
+            </main>
+
+            <div class="quiz-stats">
+                <div class="stat">
+                    <span class="stat-label">正解</span>
+                    <span class="stat-value" id="correct-count">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">不正解</span>
+                    <span class="stat-value" id="incorrect-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 設定画面 -->
+        <div id="settings-screen" class="screen">
+            <header>
+                <button class="back-btn" onclick="showHome()">‹ 戻る</button>
+                <h1>出題設定</h1>
+            </header>
+
+            <main class="settings-content">
+                <div class="setting-item">
+                    <label for="question-count">出題数</label>
+                    <select id="question-count">
+                        <option value="5">5問</option>
+                        <option value="10" selected>10問</option>
+                        <option value="20">20問</option>
+                        <option value="50">50問</option>
+                    </select>
+                </div>
+
+                <div class="setting-item">
+                    <label for="difficulty">難易度</label>
+                    <select id="difficulty">
+                        <option value="easy">かんたん</option>
+                        <option value="normal" selected>ふつう</option>
+                        <option value="hard">むずかしい</option>
+                    </select>
+                </div>
+
+                <button class="btn-primary" onclick="showHome()">保存</button>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+# SwiftLint設定ファイル
+# 非推奨構文の自動検出と警告
+
+# 無効化するルール
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+
+# 警告として扱うルール
+opt_in_rules:
+  - empty_count
+  - empty_string
+  - explicit_init
+  - first_where
+  - contains_over_first_not_nil
+
+# 除外するパス
+excluded:
+  - Pods
+  - SimpleWordTests
+  - SimpleWordUITests
+  - Tools
+  - changes
+  - 参考資料
+
+# インデント設定
+indentation: 4
+
+# カスタムルール
+custom_rules:
+  # iOS 17非推奨: onChange の1パラメータクロージャ
+  deprecated_onChange_single_param:
+    name: "Deprecated onChange syntax"
+    regex: '\.onChange\(of:\s*\w+\)\s*\{\s*_\s+in'
+    message: "Use iOS 17+ onChange syntax: .onChange(of:) { } or .onChange(of:) { old, new in }"
+    severity: error
+  
+  deprecated_onChange_named_param:
+    name: "Deprecated onChange syntax with named parameter"
+    regex: '\.onChange\(of:\s*\w+\)\s*\{\s*\w+\s+in'
+    message: "Use iOS 17+ onChange syntax: .onChange(of:) { } or .onChange(of:) { old, new in }"
+    severity: warning
+  
+  # NavigationView の使用を警告（将来対応用）
+  navigationview_usage:
+    name: "NavigationView is deprecated in iOS 16+"
+    regex: 'NavigationView\s*\{'
+    message: "Consider using NavigationStack (iOS 16+) instead of NavigationView"
+    severity: warning
+  
+  # 日本語コメントの推奨
+  missing_japanese_comment:
+    name: "Japanese comment recommended"
+    regex: '(func|class|struct|enum)\s+\w+'
+    message: "Consider adding Japanese comments for clarity"
+    severity: warning
+    
+  # GeometryReader の過度な使用を警告
+  excessive_geometry_reader:
+    name: "Avoid excessive GeometryReader usage"
+    regex: 'GeometryReader\s*\{\s*\w+\s+in\s*VStack'
+    message: "Consider if GeometryReader is necessary. Use SwiftUI layout system when possible."
+    severity: warning
+
+# 型本文の長さ
+type_body_length:
+  warning: 300
+  error: 500
+
+# 関数本文の長さ
+function_body_length:
+  warning: 100
+  error: 200
+
+# ファイルの長さ
+file_length:
+  warning: 500
+  error: 1000
+
+# ネストの深さ
+nesting:
+  type_level: 2
+  function_level: 3
+
+# 識別子の長さ
+identifier_name:
+  min_length: 1
+  max_length: 60
+  excluded:
+    - id
+    - ID
+    - url
+    - URL
+    - csv
+    - CSV
+
+# 型名の規則
+type_name:
+  min_length: 3
+  max_length: 60
+  excluded:
+    - ID
+
+# 強制アンラップの警告
+force_unwrapping: warning
+
+# 強制キャストの警告
+force_cast: warning
+
+# 強制tryの警告
+force_try: warning
+
+# クラスのfinal属性を推奨
+# final_class: warning
+
+# レポーター設定
+reporter: "xcode"
