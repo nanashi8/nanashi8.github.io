@@ -2,7 +2,7 @@ name: Swift Code Quality Check
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, v1.17.0_major/refactor-and-cleanup ]
   pull_request:
     branches: [ main, develop ]
 
@@ -34,6 +34,7 @@ jobs:
         echo "🔍 Checking for deprecated onChange syntax..."
         if grep -r "\.onChange(of:.*) { _ in" SimpleWord/; then
           echo "❌ ERROR: Found deprecated onChange syntax with underscore parameter"
+          echo "Use .onChange(of:) { oldValue, newValue in } instead"
           exit 1
         else
           echo "✅ No deprecated onChange syntax found"
@@ -44,10 +45,48 @@ jobs:
         echo "🔍 Checking for NavigationView usage..."
         if grep -r "NavigationView" SimpleWord/; then
           echo "⚠️  WARNING: NavigationView is deprecated in iOS 16+"
-          echo "Consider migrating to NavigationStack when iOS 15 support is dropped"
+          echo "Consider migrating to NavigationStack (iOS 16+ requirement)"
         else
           echo "✅ No NavigationView usage found"
         fi
+    
+    - name: Check for Objective-C usage
+      run: |
+        echo "🔍 Checking for Objective-C files..."
+        if find SimpleWord/ -name "*.m" -o -name "*.mm" | grep -q .; then
+          echo "❌ ERROR: Found Objective-C files (.m, .mm)"
+          echo "This project is Swift-only"
+          exit 1
+        else
+          echo "✅ No Objective-C files found"
+        fi
+  
+  architecture-check:
+    name: Architecture Compliance Check
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Check Feature-First structure
+      run: |
+        echo "🔍 Checking Feature-First architecture compliance..."
+        
+        # Check if Features directory exists
+        if [ ! -d "SimpleWord/Features" ]; then
+          echo "❌ ERROR: Features/ directory not found"
+          exit 1
+        fi
+        
+        # Check for files outside Features that should be inside
+        echo "Checking for misplaced View files..."
+        if find SimpleWord/ -maxdepth 1 -name "*View.swift" | grep -q .; then
+          echo "⚠️  WARNING: Found View files at root level"
+          echo "Consider moving to appropriate Feature directory"
+        fi
+        
+        echo "✅ Architecture check completed"
   
   build:
     name: Build Project
@@ -78,3 +117,4 @@ jobs:
         else
           echo "✅ No deprecation warnings found"
         fi
+

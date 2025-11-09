@@ -1,192 +1,379 @@
-# SimpleWord - 適応型学習クイズアプリ
+# SimpleWord#!/usr/bin/env python3
 
-**バージョン**: 2.0  
-**最終更新**: 2025-11-08  
-**プラットフォーム**: iOS 16.0+  
-**言語**: Swift 6.0  
+# -*- coding: utf-8 -*-
+
+**効率的な語彙学習のための適応型クイズアプリ**import csv
+
+from pathlib import Path
+
+最終更新: 2025年11月5日  
+
+バージョン: v1.17.0base = Path('/Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources')
+
+# Use Japanese filenames only — English-named CSVs have been removed
+
+---inputs = {
+
+    '高校単語.csv': '高校単語.csv',
+
+## 📱 アプリ概要    'サンプル単語.csv': 'サンプル単語.csv',
+
+}
+
+SimpleWordは、CSV形式の単語リストから問題を生成し、ユーザーの習熟度に応じて適応的に出題する学習支援アプリケーションです。
+
+mapping = {
+
+### 主な機能    'English': '英語',
+
+    'Logic': '論理',
+
+- **4択クイズ**: 直感的な選択式問題    'Science': '理科',
+
+- **適応型学習**: ユーザーの正答率に基づく出題調整    'Math': '数学',
+
+- **バッチ学習**: 段階的な学習進行    'Geography': '地理',
+
+- **補修モード**: 苦手な単語を集中学習    'CS': '情報',
+
+- **音声読み上げ**: 問題の音声出力    'Economics': '経済',
+
+- **タイマー機能**: 制限時間設定    'History': '歴史',
+
+- **成績管理**: CSV別・単語別の詳細な成績記録    'Arts': '芸術',
+
+- **CSV種類別最適表示**: 歴史・古典・英語など、科目に応じた情報表示    'Social': '社会',
+
+    'Debate': '討論',
+
+---    'Law': '法律',
+
+    'Biology': '生物',
+
+## 🏗️ アーキテクチャ    'Physics': '物理',
+
+    'Chemistry': '化学',
+
+### Feature-First / Vertical Slice Architecture    'Engineering': '工学',
+
+    'Design': 'デザイン',
+
+機能ごとに独立したフォルダ構成を採用しています。    'Education': '教育',
+
+    'Music': '音楽',
+
+```    'Life': '生活',
+
+SimpleWord/    'PE': '体育',
+
+├── SimpleWordApp.swift        # アプリエントリポイント    'Shop': '実習',
+
+├── ContentView.swift          # メインビュー    'Transport': '交通',
+
+├── Features/                  # 機能別実装    'Safety': '安全',
+
+│   ├── Quiz/                 # クイズ機能    'Vocabulary': '語彙',
+
+│   │   ├── Views/            # UI    'Study': '学習',
+
+│   │   ├── Logic/            # ビジネスロジック    'Grammar': '文法',
+
+│   │   └── Domain/           # ドメインモデル    'Forensics': '法科学',
+
+│   └── Study/                # 適応型学習    'Library': '図書',
+
+│       ├── Logic/            # スケジューラー    'Urban': '都市',
+
+│       ├── Domain/           # 学習記録    'Marketing': 'マーケティング',
+
+│       └── Data/             # リポジトリ    'Statistics': '統計',
+
+├── Models/                   # 共通データモデル}
+
+├── Stores/                   # 状態管理
+
+├── Utils/                    # ユーティリティfor in_name, out_name in inputs.items():
+
+└── Views/                    # 共通ビュー    in_path = base / in_name
+
+```    out_path = base / out_name
+
+    if not in_path.exists():
+
+### 技術スタック        print('input not found:', in_path)
+
+        continue
+
+- **言語**: Swift（Objective-C不使用）    rows = []
+
+- **フレームワーク**: SwiftUI + Combine    with in_path.open('r', encoding='utf-8', newline='') as f:
+
+- **IDE**: Xcode 15.0以上        reader = csv.reader(f)
+
+- **対応OS**: iOS 16.0以上        for row in reader:
+
+            rows.append(row)
+
+---    if not rows:
+
+        print('empty file:', in_path)
+
+## 📊 データ管理        continue
+
+    # find relatedFields index (case-insensitive)
+
+### CSV仕様    header = rows[0]
+
+    rf_idx = None
+
+- **列構成**: 7列固定    for i,h in enumerate(header):
+
+  1. 語句/年号        if h.strip().lower() == 'relatedfields':
+
+  2. 読み/発音/登場人物            rf_idx = i
+
+  3. **意味/和訳/史実名**（選択肢生成に使用）            break
+
+  4. 語源/解説    if rf_idx is None:
+
+  5. 関連語        print('relatedFields not found in', in_name)
+
+  6. 関連分野        continue
+
+  7. 難易度    out_rows = [header]
+
+    for row in rows[1:]:
+
+- **重要**: 列3のデータ品質が選択肢の正確性に直結        if len(row) <= rf_idx:
+
+- 列数の整合性チェック必須            out_rows.append(row)
+
+- `QuestionItem.rawColumns`に生データを保存            continue
+
+        rf = row[rf_idx]
+
+### 対応CSV種類        parts = [p.strip() for p in rf.split(';') if p.strip() != '']
+
+        new_parts = []
+
+- 中学歴史        for p in parts:
+
+- 中学古典単語            new_parts.append(mapping.get(p, p))
+
+- 中学英単語・英熟語・英会話        row2 = list(row)
+
+- その他（カスタムCSV）        row2[rf_idx] = ';'.join(new_parts)
+
+        out_rows.append(row2)
+
+詳細: `docs/01_仕様書/01-04_CSV仕様.md`    # write out
+
+    with out_path.open('w', encoding='utf-8', newline='') as f:
+
+---        writer = csv.writer(f)
+
+        writer.writerows(out_rows)
+
+## 🚀 開発ガイド    print('wrote', out_path)
+
+
+
+### 開発環境セットアップprint('done')
+
+
+1. **プロジェクトを開く**
+   ```bash
+   cd /path/to/quiz-app
+   open SimpleWord.xcodeproj
+   ```
+
+2. **ビルド・実行**
+   - Xcode で `Cmd + R`
+
+3. **CSVファイルの配置**
+   - `SimpleWord/Resources/` にCSVファイルを配置
+
+### AI支援開発
+
+このプロジェクトはGitHub Copilotによる開発支援を前提としています。
+
+#### 重要ドキュメント
+
+1. **Copilot Instructions** (⭐ 最重要)
+   - `.github/copilot-instructions.md`
+   - プロジェクト固有の開発ルール
+
+2. **Custom Instructions**
+   - `.github/instructions/CustumInstruction.instructions.md`
+   - CSV種類別表示実装レポート
+
+3. **エラー解決プロトコル**
+   - `docs/03_開発ガイド/03-05_エラー対応プロトコル.md`
+   - エラー修正の必須手順
 
 ---
 
-## 📱 概要
+## 📖 ドキュメント体系
 
-SimpleWordは、適応型学習アルゴリズムを活用した4択クイズアプリです。ユーザーの習熟度に応じて最適な問題を出題し、効率的な学習をサポートします。
+### 📋 インデックス
 
-### 主な機能
+- **[ドキュメントインデックス](docs/00_INDEX.md)** - 全体ナビゲーション
 
-- **適応型学習**: 忘却曲線に基づく最適なタイミングでの復習
-- **CSV対応**: 中学歴史、古典単語、英会話など複数のCSVフォーマットに対応
-- **詳細なフィードバック**: 回答後に語源や関連情報を表示
-- **成績管理**: 学習進捗と統計の可視化
+### 📚 カテゴリ別
 
----
+#### 01_仕様書
+- `01-01_プロジェクト概要.md` - プロジェクト全体像
+- `01-02_アーキテクチャ仕様.md` - システム構造
+- `01-03_データモデル仕様.md` - データ構造
+- `01-04_CSV仕様.md` - CSV形式とヘッダ定義
+- `01-05_クイズ機能仕様.md` - クイズ機能詳細
+- `01-06_適応型学習仕様.md` - 学習アルゴリズム
+- `01-07_成績管理仕様.md` - 成績表示と統計
+- `01-08_UI_UX仕様.md` - ユーザーインターフェース
 
-## 🚀 クイックスタート
+#### 02_実装ガイド
+- `02-01_開発環境セットアップ.md` - 環境構築
+- `02-02_コーディング規約.md` - コーディングルール
+- `02-03_ディレクトリ構造.md` - ファイル配置
+- `02-04_依存関係管理.md` - ライブラリ管理
+- `02-05_ビルドと実行.md` - ビルド手順
+- `02-06_テスト戦略.md` - テスト方法
+- `02-07_デプロイ手順.md` - リリース手順
 
-### 必要環境
+#### 03_開発ガイド
+- `03-01_新規機能追加ガイド.md` - 機能追加手順
+- `03-02_バグ修正ガイド.md` - バグ修正プロセス
+- `03-03_リファクタリングガイド.md` - リファクタ方法
+- `03-04_AI活用ガイド.md` - Copilot活用法
+- `03-05_エラー対応プロトコル.md` - エラー対応手順
+- `03-06_プロンプトテンプレート.md` - AI用プロンプト集
 
-- macOS 14.0以上
-- Xcode 15.0以上
-- Swift 6.0
-
-### ビルドと実行
-
-```bash
-# リポジトリをクローン
-git clone <repository-url>
-cd quiz-app-1
-
-# Xcodeでプロジェクトを開く
-open SimpleWord.xcodeproj
-
-# Xcode でビルド（⌘+B）して実行（⌘+R）
-```
-
----
-
-## 📚 ドキュメント
-
-### 🔰 初めての方
-
-1. **[プロジェクト概要](docs/01_仕様書/01-01_プロジェクト概要.md)** - プロジェクト全体の理解
-2. **[アーキテクチャ仕様](docs/01_仕様書/01-02_アーキテクチャ仕様.md)** - システム構造
-3. **[開発環境セットアップ](docs/02_実装ガイド/02-01_開発環境セットアップ.md)** - 環境構築
-
-### 💻 開発者向け
-
-- **[グローバルコーディング規約](docs/02_実装ガイド/02-01_グローバルコーディング規約.md)** - 基本方針と原則
-- **[グローバルコーディング規約](docs/02_実装ガイド/02-01_グローバルコーディング規約.md)** - 基本方針と原則
-- **[コーディング規約](docs/02_実装ガイド/02-02_コーディング規約.md)** - コードスタイルとルール
-- **[セキュリティとパフォーマンス設計方針](docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** ⭐ **必読**
-- **[ディレクトリ構造](docs/02_実装ガイド/02-04_ディレクトリ構造.md)** - ファイル構成
-- **[新規機能追加ガイド](docs/03_開発ガイド/03-01_新規機能追加ガイド.md)** - 開発フロー
-
-### 📖 完全なドキュメント
-
-すべてのドキュメントは **[ドキュメントインデックス](docs/00_INDEX.md)** から参照できます。
-
----
-
-## 🔒 セキュリティとパフォーマンス
-
-本プロジェクトでは、以下の14の必須要件を厳守しています：
-
-1. ✅ **Swift 6.0の使用と並行性** - actor、async/await、@MainActorの活用
-2. ✅ **適切なエラー処理** - try?/try!の禁止
-3. ✅ **型安全性** - 可変引数の禁止
-4. ✅ **コード実行の制限** - 任意のコマンド・SQL実行の禁止
-5. ✅ **ログの安全性** - 個人情報・内部情報の保護
-6. ✅ **時刻処理** - タイムゾーンとロケールの明示
-7. ✅ **数値演算** - 浮動小数点の丸め方の統一
-8. ✅ **警告への対応** - すべての警告の解決
-9. ✅ **並行性の安全性** - デッドロックの防止
-10. ✅ **リソース管理** - 確実なリソース解放
-11. ✅ **設定管理** - ハードコードの禁止
-12. ✅ **パフォーマンス** - 効率的なアルゴリズム
-13. ✅ **乱数生成** - セキュリティ用途での適切な乱数使用
-14. ✅ **ログのパフォーマンス** - OSLogの活用
-
-詳細は **[セキュリティとパフォーマンス設計方針](docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** を参照してください。
-
----
-
-## 🏗️ アーキテクチャ
-
-### Feature-First Architecture
-
-機能ごとに垂直分割し、自己完結したモジュール構成を採用しています。
-
-```
-SimpleWord/
-├── Features/           # 機能モジュール
-│   ├── Quiz/          # クイズ機能
-│   ├── Study/         # 学習機能
-│   └── Settings/      # 設定機能
-├── Common/            # 共通コンポーネント
-│   ├── Models/        # データモデル
-│   ├── Extensions/    # 拡張機能
-│   └── Utility/       # ユーティリティ
-├── Services/          # サービス層
-│   ├── CSVLoader/     # CSV読み込み
-│   └── Scheduler/     # 適応型スケジューラ
-└── Resources/         # リソース
-    └── *.csv          # CSVデータ
-```
-
-### 主要コンポーネント
-
-- **QuizSession**: クイズセッション管理
-- **AdaptiveScheduler**: 適応型学習アルゴリズム
-- **CSVDataSource**: CSV読み込みとパース
-- **QuizStore**: 状態管理
+#### 04_レポート
+- `04-01_変更履歴.md` - 変更履歴
+- `04-02_CSV実装レポート/` - CSV関連レポート
+- `04-03_機能実装レポート/` - 機能実装レポート
+- `04-04_バグ修正レポート/` - バグ修正記録
 
 ---
 
 ## 🧪 テスト
 
-### テストの実行
+### テスト実行
 
 ```bash
-# Xcodeでテストを実行
-⌘+U
+# 単体テスト
+Cmd + U
 
-# コマンドラインでテストを実行
+# 特定のテストクラス
 xcodebuild test -scheme SimpleWord -destination 'platform=iOS Simulator,name=iPhone 15'
 ```
 
-### テストカバレッジ
+### テストガイド
 
-- **CSV読み込み**: `SimpleWordTests/CSVFixedColumnChoiceGenerationTests.swift`
-- **クイズ問題生成**: `SimpleWordTests/QuizQuestionGeneratorTests.swift`
-
----
-
-## 📦 依存関係
-
-このプロジェクトは外部ライブラリに依存せず、Swiftの標準ライブラリとAppleのフレームワークのみを使用しています。
-
-- SwiftUI - UI実装
-- Combine - リアクティブプログラミング
-- CoreData - データ永続化
-- OSLog - ログ出力
+詳細: `TEST_GUIDE.md`
 
 ---
 
-## 🤝 貢献
+## 📋 コーディング規約
 
-### コーディングルール
+### 命名規則
 
-コードを書く前に、必ず以下のドキュメントを確認してください：
+- View: `〇〇View.swift`
+- ViewModel: `〇〇ViewModel.swift`
+- Model: `〇〇Model.swift`
 
-1. **[グローバルコーディング規約](docs/02_実装ガイド/02-01_グローバルコーディング規約.md)** - 基本方針
-2. **[コーディング規約](docs/02_実装ガイド/02-02_コーディング規約.md)** - 詳細ルール
-3. **[セキュリティとパフォーマンス設計方針](docs/02_実装ガイド/02-03_セキュリティとパフォーマンス設計方針.md)** ⭐ **必読**
-4. **[新規機能追加ガイド](docs/03_開発ガイド/03-01_新規機能追加ガイド.md)**
+### ファイル分割基準
 
-### プルリクエスト
+- **View**: 200〜300行で分割検討
+- **ViewModel**: 300〜400行で分割検討
+- **原則**: 1ファイル1責務
 
-1. 機能ブランチを作成
-2. テストを追加
-3. コーディング規約に従う
-4. ドキュメントを更新
-5. プルリクエストを作成
+### 分割パターン
 
----
+- **View部品化**: `Components/` に分離
+- **ロジック分離**: `Services/` に分離
+- **Model分離**: `Models/` に分離
 
-## 📝 ライセンス
-
-このプロジェクトは MIT ライセンスの下で公開されています。
+詳細: `docs/02_実装ガイド/02-02_コーディング規約.md`
 
 ---
 
-## 📞 サポート
+## 📦 プロジェクト構成
 
-質問や問題がある場合は、以下をご確認ください：
-
-- **[ドキュメントインデックス](docs/00_INDEX.md)** - 完全なドキュメント
-- **[FAQ](docs/03_開発ガイド/03-05_FAQ.md)** - よくある質問
-- **Issues** - GitHubのIssuesで報告
+```
+quiz-app/
+├── .github/                   # GitHub設定
+│   ├── copilot-instructions.md
+│   └── instructions/
+├── docs/                      # ドキュメント
+│   ├── 00_INDEX.md
+│   ├── 01_仕様書/
+│   ├── 02_実装ガイド/
+│   ├── 03_開発ガイド/
+│   ├── 04_レポート/
+│   └── 99_アーカイブ/
+├── SimpleWord/                # アプリ本体
+│   ├── Features/
+│   ├── Models/
+│   ├── Stores/
+│   ├── Utils/
+│   ├── Views/
+│   └── Resources/
+├── SimpleWordTests/           # テスト
+├── Tools/                     # 開発ツール
+├── README.md                  # 本ファイル
+├── CHANGELOG.md               # 変更履歴
+└── TEST_GUIDE.md              # テストガイド
+```
 
 ---
 
-**SimpleWord開発チーム**  
-**最終更新**: 2025-11-08
+## 🎯 目的別ガイド
+
+### プロジェクトを初めて見る方
+
+1. `README.md`（本ファイル）- 概要把握
+2. `docs/01_仕様書/01-01_プロジェクト概要.md` - 詳細理解
+3. `docs/01_仕様書/01-02_アーキテクチャ仕様.md` - 構造理解
+4. `docs/02_実装ガイド/02-01_開発環境セットアップ.md` - 環境構築
+
+### 機能を理解したい方
+
+- クイズ機能: `docs/01_仕様書/01-05_クイズ機能仕様.md`
+- 適応型学習: `docs/01_仕様書/01-06_適応型学習仕様.md`
+- CSV管理: `docs/01_仕様書/01-04_CSV仕様.md`
+- 成績管理: `docs/01_仕様書/01-07_成績管理仕様.md`
+
+### 開発を始める方
+
+1. 開発環境セットアップ
+2. コーディング規約確認
+3. ディレクトリ構造理解
+4. 新規機能追加ガイド参照
+
+### バグ修正を行う方
+
+1. バグ修正ガイド参照
+2. エラー対応プロトコル確認
+3. テスト戦略確認
+4. 該当機能の仕様書確認
+
+---
+
+## 📄 ライセンス
+
+このプロジェクトは個人学習用です。
+
+---
+
+## 🙏 謝辞
+
+- CSV形式の単語データ提供者
+- GitHub Copilot開発チーム
+- SwiftUIコミュニティ
+
+---
+
+**最終更新**: 2025年11月5日  
+**バージョン**: v1.17.0  
+**ブランチ**: v1.17.0_major/refactor-and-cleanup
