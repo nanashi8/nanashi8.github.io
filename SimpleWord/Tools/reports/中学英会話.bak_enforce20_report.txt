@@ -1,0 +1,39 @@
+enforce20: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.bak.csv
+backup: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/Resources/中学英会話.bak.csv.enforce20.bak
+rows:50
+changed:11
+unique_after:20
+
+row=2	key=Hello!	日常 -> 自然
+row=3	key=How are you?	日常 -> 動物
+row=4	key=I'm fine, thank you.	日常 -> 感情
+row=5	key=Nice to meet you.	日常 -> 家族・住居
+row=6	key=My name is Ken.	日常 -> 文法・表現
+row=7	key=Where are you from?	日常 -> 仕事・職業
+row=8	key=I'm from Tokyo.	日常 -> 健康・身体
+row=9	key=How old are you?	日常 -> 科学・物理
+row=10	key=I'm twelve years old.	日常 -> 地理・天気
+row=11	key=What do you do?	日常 -> 社会・政治
+row=13	key=Do you have any hobbies?	日常 -> その他
+
+category_counts:
+21	日常
+5	買い物・商業
+4	交通・移動
+4	食べ物・飲食
+1	学校・学習
+1	文化・芸術
+1	時間・頻度
+1	テクノロジー
+1	スポーツ・遊び
+1	自然
+1	動物
+1	感情
+1	家族・住居
+1	文法・表現
+1	仕事・職業
+1	健康・身体
+1	科学・物理
+1	地理・天気
+1	社会・政治
+1	その他

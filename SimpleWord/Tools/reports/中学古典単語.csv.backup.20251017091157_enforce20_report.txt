@@ -1,0 +1,56 @@
+enforce20: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学古典単語.csv.backup.20251017091157.csv
+backup: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/changes/中学古典単語.csv.backup.20251017091157.csv.enforce20.bak
+rows:352
+changed:15
+unique_after:33
+
+row=150	key=むべ	文法 -> 食べ物・飲食
+row=14	key=あやし	その他 -> 日常
+row=75	key=ひとびと	その他 -> 学校・学習
+row=131	key=とが	その他 -> 家族・住居
+row=161	key=あなかしこ	その他 -> 交通・移動
+row=164	key=あまやかす	その他 -> 時間・頻度
+row=175	key=えん	その他 -> 文法・表現
+row=200	key=ぬすむ	その他 -> 文化・芸術
+row=201	key=ねんず	その他 -> 仕事・職業
+row=216	key=やぶる	その他 -> 健康・身体
+row=222	key=をさむ	その他 -> 科学・物理
+row=231	key=おおせ	その他 -> 地理・天気
+row=240	key=きみがよ	その他 -> 買い物・商業
+row=248	key=せうし	その他 -> スポーツ・遊び
+row=249	key=たぐひ	その他 -> 社会・政治
+
+category_counts:
+152	感情
+123	文法
+16	時間
+12	文化
+12	自然
+8	その他
+2	家族
+2	学校
+1	交通
+1	職業
+1	科学
+1	買い物
+1	スポーツ
+1	テクノロジー
+1	食べ物
+1	動物
+1	地理
+1	健康
+1	食べ物・飲食
+1	日常
+1	学校・学習
+1	家族・住居
+1	交通・移動
+1	時間・頻度
+1	文法・表現
+1	文化・芸術
+1	仕事・職業
+1	健康・身体
+1	科学・物理
+1	地理・天気
+1	買い物・商業
+1	スポーツ・遊び
+1	社会・政治
