@@ -440,6 +440,43 @@
             margin-top: 0;
         }
 
+        /* デバッグパネル */
+        .debug-panel {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-height: 40vh;
+            background: rgba(0,0,0,0.85);
+            color: #fff;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 12px;
+            overflow-y: auto;
+            padding: 8px 10px;
+            display: none;
+            z-index: 9999;
+        }
+        .debug-panel.show { display: block; }
+        .debug-row { margin: 2px 0; white-space: pre-wrap; word-break: break-word; }
+        .debug-row.time { color: #9ef; }
+        .debug-row.log { color: #eef; }
+        .debug-row.warn { color: #ffca28; }
+        .debug-row.error { color: #ff5252; }
+        .debug-controls {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .debug-btn {
+            background: #333;
+            color: #fff;
+            border: 1px solid #666;
+            border-radius: 6px;
+            padding: 6px 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
         /* レスポンシブ - スマホ最適化 */
         @media (max-width: 600px) {
             h1 {
@@ -514,6 +551,8 @@
                         📤 ファイル
                     </label>
                     <input type="file" id="fileInput" accept=".csv" onchange="loadLocalFile(event)">
+                    <button class="file-input-label" style="background:#6c757d;border-color:#6c757d;" onclick="runSelfTest()">🔎 自己診断</button>
+                    <button class="file-input-label" style="background:#343a40;border-color:#343a40;" onclick="toggleDebugPanel()">🐞 デバッグ</button>
                 </div>
                 <div id="fileInfo" class="file-info" style="display: none;"></div>
             </div>
@@ -614,6 +653,16 @@
         </div>
     </div>
 
+    <!-- デバッグパネル -->
+    <div id="debugPanel" class="debug-panel">
+        <div class="debug-controls">
+            <button class="debug-btn" onclick="clearDebugLog()">Clear</button>
+            <button class="debug-btn" onclick="copyDebugLog()">Copy</button>
+            <span style="opacity:.8">Console Capture</span>
+        </div>
+        <div id="debugLog"></div>
+    </div>
+
     <script>
         // グローバル変数
         let questions = [];
@@ -636,6 +685,60 @@
                 content.classList.remove('active');
             });
             document.getElementById(tabName + '-tab').classList.add('active');
+        }
+
+        // ===== デバッグパネル機能 =====
+        const debugPanel = () => document.getElementById('debugPanel');
+        const debugLogEl = () => document.getElementById('debugLog');
+        let debugEnabled = false;
+
+        function toggleDebugPanel() {
+            debugEnabled = !debugEnabled;
+            debugPanel().classList.toggle('show', debugEnabled);
+        }
+        function clearDebugLog() {
+            if (debugLogEl()) debugLogEl().innerHTML = '';
+        }
+        function copyDebugLog() {
+            const text = Array.from(debugLogEl().querySelectorAll('.debug-row')).map(r => r.textContent).join('\n');
+            navigator.clipboard.writeText(text).catch(()=>{});
+        }
+        function appendDebug(type, msg) {
+            if (!debugEnabled) return;
+            const row = document.createElement('div');
+            row.className = `debug-row ${type}`;
+            const time = new Date().toLocaleTimeString();
+            row.textContent = `[${time}] ${type.toUpperCase()}: ${msg}`;
+            debugLogEl().appendChild(row);
+            debugLogEl().scrollTop = debugLogEl().scrollHeight;
+        }
+        // consoleラッピング
+        ['log','warn','error'].forEach(k => {
+            const original = console[k];
+            console[k] = function(...args) {
+                original.apply(console, args);
+                try { appendDebug(k, args.map(a => (typeof a==='object'? JSON.stringify(a): a)).join(' ')); } catch(e) {}
+            };
+        });
+
+        // 自己診断: 流れを強制検証
+        function runSelfTest() {
+            appendDebug('log','=== SelfTest開始 ===');
+            const select = document.getElementById('csvSelect');
+            if (!select.value) {
+                appendDebug('warn','問題集未選択: basic-englishを仮選択');
+                select.value = 'data/basic-english.csv';
+            }
+            loadSelectedCSV().then(()=>{
+                appendDebug('log',`questions配列長: ${questions.length}`);
+                if (questions.length>0) {
+                    appendDebug('log','最初の問題: '+ JSON.stringify(questions[0]));
+                    showQuestion();
+                    appendDebug('log','showQuestion後DOM questionText='+document.getElementById('questionText').textContent);
+                } else {
+                    appendDebug('error','SelfTest: questionsが空');
+                }
+            }).catch(e=> appendDebug('error','SelfTest失敗 '+e));
         }
 
         // CSVパーサー (quiz-app互換の7列形式に対応)
