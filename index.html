@@ -700,10 +700,12 @@
 
         // 選択されたCSVファイルを読み込み
         async function loadSelectedCSV() {
+            console.log('loadSelectedCSV: セレクト変更検知');
             const select = document.getElementById('csvSelect');
             const filePath = select.value;
 
             if (!filePath) {
+                console.log('loadSelectedCSV: filePath空のためresetQuiz');
                 resetQuiz();
                 return;
             }
@@ -724,6 +726,7 @@
                 }
 
                 showFileInfo(`${select.options[select.selectedIndex].text} を読み込みました (${questions.length}問)`);
+                console.log('loadSelectedCSV: startQuiz呼び出し');
                 startQuiz();
             } catch (error) {
                 console.error('CSVの読み込みエラー:', error);
@@ -768,6 +771,7 @@
 
         // クイズ開始
         function startQuiz() {
+            console.log('startQuiz: 質問数=', questions.length);
             currentQuestion = 0;
             correctAnswers = 0;
             totalQuestions = 0;
@@ -775,6 +779,13 @@
 
             const emptyState = document.getElementById('emptyState');
             const quizArea = document.getElementById('quizArea');
+            
+            // タブをクイズに切り替え（念のため）
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('quiz-tab').classList.add('active');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            const quizBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.textContent.includes('クイズ'));
+            if (quizBtn) quizBtn.classList.add('active');
             
             emptyState.style.display = 'none';
             quizArea.style.display = 'flex';
