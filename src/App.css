@@ -1,0 +1,467 @@
+.app {
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* iPhone Safari対応 */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.header {
+  text-align: center;
+  padding: 15px 10px 10px;
+  flex-shrink: 0;
+}
+
+.header h1 {
+  color: #667eea;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+/* タブメニュー */
+.tab-menu {
+  display: flex;
+  gap: 0;
+  background: #f8f9fa;
+  flex-shrink: 0;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #f8f9fa;
+  color: #666;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+  touch-action: manipulation;
+}
+
+.tab-btn.active {
+  background: white;
+  color: #667eea;
+  border-bottom-color: #667eea;
+  font-weight: 600;
+}
+
+/* タブコンテンツ */
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ファイル選択 */
+.file-selector {
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.file-select-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.file-select-group select {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.file-upload-label {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95em;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.file-upload-label:hover {
+  background: #5568d3;
+}
+
+/* スコアボード */
+.score-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+.score-item {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.score-label {
+  display: block;
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.score-value {
+  display: block;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+.score-value.correct {
+  color: #28a745;
+}
+
+/* 問題カード */
+.question-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.question-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.question-number {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.question-text {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+}
+
+.question-hint {
+  text-align: center;
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.choice-btn {
+  padding: 16px;
+  font-size: 1.1em;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.choice-btn:hover:not(:disabled) {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.choice-btn:disabled {
+  cursor: not-allowed;
+}
+
+.choice-btn.correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: 600;
+}
+
+.choice-btn.incorrect {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.result {
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.result.correct {
+  background: #d4edda;
+  color: #155724;
+  border: 2px solid #28a745;
+}
+
+.result.incorrect {
+  background: #f8d7da;
+  color: #721c24;
+  border: 2px solid #dc3545;
+}
+
+.next-btn {
+  padding: 16px;
+  font-size: 1.1em;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: auto;
+  /* iPhone Safari対応 */
+  margin-bottom: calc(20px + env(safe-area-inset-bottom));
+  touch-action: manipulation;
+}
+
+.next-btn:hover {
+  background: #5568d3;
+}
+
+/* 空の状態 */
+.empty-state {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  font-size: 1.1em;
+  padding: 40px 20px;
+}
+
+/* 問題作成フォーム */
+.create-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.question-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 14px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  touch-action: manipulation;
+}
+
+.add-btn:hover {
+  background: #218838;
+}
+
+/* 問題リスト */
+.question-list {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.list-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.list-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.download-btn,
+.template-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 600;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.download-btn {
+  background: #667eea;
+  color: white;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.download-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.template-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.template-btn:hover {
+  background: #5a6268;
+}
+
+.question-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.question-item-content {
+  flex: 1;
+}
+
+.question-item-word {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.question-item-details {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: background 0.2s;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.2em;
+  }
+
+  .question-text {
+    font-size: 1.6em;
+  }
+
+  .score-board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-actions {
+    flex-direction: column;
+  }
+
+  .download-btn,
+  .template-btn {
+    width: 100%;
+  }
+}
