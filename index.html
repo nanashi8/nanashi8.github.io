@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英単語3択クイズ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .score-board {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .score-item {
+            text-align: center;
+        }
+
+        .score-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .score-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .question-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .question-number {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .question-hint {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .choices {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .choice-btn {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .choice-btn:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: translateX(5px);
+        }
+
+        .choice-btn.correct {
+            background: #4caf50;
+            color: white;
+            border-color: #4caf50;
+        }
+
+        .choice-btn.incorrect {
+            background: #f44336;
+            color: white;
+            border-color: #f44336;
+        }
+
+        .choice-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        .next-btn {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: none;
+        }
+
+        .next-btn:hover {
+            background: #5568d3;
+        }
+
+        .next-btn.show {
+            display: block;
+        }
+
+        .result {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            display: none;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        .result.correct {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .result.incorrect {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .question-text {
+                font-size: 2em;
+            }
+
+            .choice-btn {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 英単語3択クイズ</h1>
+        
+        <div class="score-board">
+            <div class="score-item">
+                <div class="score-label">問題数</div>
+                <div class="score-value" id="questionCount">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">正解数</div>
+                <div class="score-value" id="correctCount">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">正答率</div>
+                <div class="score-value" id="accuracy">0%</div>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <div class="question-number" id="questionNumber">第1問</div>
+            <div class="question-text" id="questionText">Loading...</div>
+            <div class="question-hint" id="questionHint"></div>
+        </div>
+
+        <div class="choices" id="choices">
+            <!-- 選択肢がここに動的に追加されます -->
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <button class="next-btn" id="nextBtn">次の問題へ →</button>
+    </div>
+
+    <script>
+        // 英単語問題データ
+        const questions = [
+            { word: "apple", meaning: "りんご", choices: ["りんご", "バナナ", "オレンジ"], hint: "果物" },
+            { word: "cat", meaning: "猫", choices: ["猫", "犬", "鳥"], hint: "動物" },
+            { word: "book", meaning: "本", choices: ["本", "ペン", "ノート"], hint: "文房具" },
+            { word: "water", meaning: "水", choices: ["水", "お茶", "ジュース"], hint: "飲み物" },
+            { word: "happy", meaning: "幸せな", choices: ["幸せな", "悲しい", "怒っている"], hint: "感情" },
+            { word: "run", meaning: "走る", choices: ["走る", "歩く", "飛ぶ"], hint: "動作" },
+            { word: "big", meaning: "大きい", choices: ["大きい", "小さい", "長い"], hint: "サイズ" },
+            { word: "red", meaning: "赤", choices: ["赤", "青", "緑"], hint: "色" },
+            { word: "school", meaning: "学校", choices: ["学校", "病院", "図書館"], hint: "場所" },
+            { word: "love", meaning: "愛", choices: ["愛", "憎しみ", "恐怖"], hint: "感情" },
+            { word: "car", meaning: "車", choices: ["車", "電車", "飛行機"], hint: "乗り物" },
+            { word: "music", meaning: "音楽", choices: ["音楽", "絵画", "映画"], hint: "芸術" },
+            { word: "friend", meaning: "友達", choices: ["友達", "敵", "先生"], hint: "人間関係" },
+            { word: "beautiful", meaning: "美しい", choices: ["美しい", "醜い", "普通の"], hint: "外見" },
+            { word: "eat", meaning: "食べる", choices: ["食べる", "飲む", "眠る"], hint: "動作" },
+            { word: "house", meaning: "家", choices: ["家", "公園", "駅"], hint: "場所" },
+            { word: "dog", meaning: "犬", choices: ["犬", "猫", "馬"], hint: "動物" },
+            { word: "sun", meaning: "太陽", choices: ["太陽", "月", "星"], hint: "天体" },
+            { word: "tree", meaning: "木", choices: ["木", "花", "草"], hint: "植物" },
+            { word: "smile", meaning: "笑顔", choices: ["笑顔", "涙", "怒り"], hint: "表情" }
+        ];
+
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let totalQuestions = 0;
+        let answered = false;
+
+        // 配列をシャッフルする関数
+        function shuffle(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        // 問題を表示
+        function showQuestion() {
+            answered = false;
+            const question = questions[currentQuestion];
+            
+            document.getElementById('questionNumber').textContent = `第${currentQuestion + 1}問`;
+            document.getElementById('questionText').textContent = question.word;
+            document.getElementById('questionHint').textContent = `(${question.hint})`;
+            document.getElementById('result').classList.remove('show', 'correct', 'incorrect');
+            document.getElementById('nextBtn').classList.remove('show');
+
+            // 選択肢をシャッフル
+            const shuffledChoices = shuffle(question.choices);
+            const choicesContainer = document.getElementById('choices');
+            choicesContainer.innerHTML = '';
+
+            shuffledChoices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'choice-btn';
+                btn.textContent = choice;
+                btn.onclick = () => checkAnswer(choice, question.meaning);
+                choicesContainer.appendChild(btn);
+            });
+        }
+
+        // 解答をチェック
+        function checkAnswer(selected, correct) {
+            if (answered) return;
+            
+            answered = true;
+            totalQuestions++;
+
+            const buttons = document.querySelectorAll('.choice-btn');
+            const resultDiv = document.getElementById('result');
+
+            buttons.forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent === correct) {
+                    btn.classList.add('correct');
+                }
+                if (btn.textContent === selected && selected !== correct) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            if (selected === correct) {
+                correctAnswers++;
+                resultDiv.textContent = '🎉 正解！';
+                resultDiv.classList.add('show', 'correct');
+            } else {
+                resultDiv.textContent = `❌ 不正解。正解は「${correct}」です。`;
+                resultDiv.classList.add('show', 'incorrect');
+            }
+
+            updateScore();
+            document.getElementById('nextBtn').classList.add('show');
+        }
+
+        // スコアを更新
+        function updateScore() {
+            document.getElementById('questionCount').textContent = totalQuestions;
+            document.getElementById('correctCount').textContent = correctAnswers;
+            const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            document.getElementById('accuracy').textContent = `${accuracy}%`;
+        }
+
+        // 次の問題へ
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentQuestion = (currentQuestion + 1) % questions.length;
+            showQuestion();
+        });
+
+        // 初期化
+        showQuestion();
+        updateScore();
+    </script>
+</body>
+</html>
