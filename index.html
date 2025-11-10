@@ -3,26 +3,1215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>動作確認テスト</title>
+    <title>英単語3択クイズ - CSV対応版</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            /* iPhoneのSafariのツールバー対策 */
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .container {
+            background: white;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* iPhoneのSafariのツールバー対策 */
+            padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            padding: 15px 10px 10px;
+            font-size: 1.4em;
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        /* タブメニュー */
+        .tab-menu {
+            display: flex;
+            gap: 0;
+            background: #f8f9fa;
+            flex-shrink: 0;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 0.95em;
+            color: #666;
+            transition: all 0.2s;
+            touch-action: manipulation;
+        }
+
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            font-weight: bold;
+            background: white;
+        }
+
+        .tab-content {
+            display: none;
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ファイル選択エリア - コンパクト化 */
+        .file-selector {
+            background: #f8f9fa;
+            padding: 10px;
+            flex-shrink: 0;
+        }
+
+        .file-select-group {
+            display: flex;
+            gap: 5px;
+        }
+
+        select, .file-input-label {
+            padding: 10px 8px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+
+        select {
+            flex: 1;
+            background: white;
+            min-width: 0;
+        }
+
+        .file-input-label {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            white-space: nowrap;
+            padding: 10px 12px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-info {
+            margin-top: 5px;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        /* スコアボード - コンパクト化 */
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            padding: 8px;
+            background: #f8f9fa;
+            flex-shrink: 0;
+        }
+
+        .score-item {
+            text-align: center;
+        }
+
+        .score-label {
+            font-size: 0.75em;
+            color: #666;
+            margin-bottom: 2px;
+        }
+
+        .score-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* 問題カード - コンパクト化 */
+        .question-card {
+            background: #f8f9fa;
+            padding: 15px 10px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .question-number {
+            color: #999;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+        }
+
+        .question-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .question-hint {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        /* 選択肢 - タップしやすく */
+        .choices {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px 10px;
+            flex-shrink: 0;
+        }
+
+        .choice-btn {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 18px 15px;
+            border-radius: 10px;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .choice-btn:active {
+            transform: scale(0.98);
+        }
+
+        .choice-btn.correct {
+            background: #4caf50;
+            color: white;
+            border-color: #4caf50;
+        }
+
+        .choice-btn.incorrect {
+            background: #f44336;
+            color: white;
+            border-color: #f44336;
+        }
+
+        .choice-btn:disabled {
+            cursor: not-allowed;
+        }
+
+        /* ボタン - タップしやすく */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn.secondary {
+            background: #6c757d;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .next-btn {
+            display: none;
+            margin: 10px 10px 20px;
+            flex-shrink: 0;
+            /* iPhoneのSafariのブックマークバー/ツールバー対策 */
+            margin-bottom: calc(20px + env(safe-area-inset-bottom));
+        }
+
+        .next-btn.show {
+            display: block;
+        }
+
+        /* 結果表示 - コンパクト化 */
+        .result {
+            text-align: center;
+            padding: 12px 10px;
+            margin: 0 10px;
+            border-radius: 10px;
+            font-size: 1em;
+            display: none;
+            flex-shrink: 0;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        .result.correct {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .result.incorrect {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        /* 問題作成フォーム - コンパクト化 */
+        .create-form {
+            background: #f8f9fa;
+            padding: 15px 10px;
+            flex-shrink: 0;
+        }
+
+        .create-form h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 3px;
+            color: #333;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.95em;
+            touch-action: manipulation;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .form-actions button {
+            flex: 1;
+            padding: 12px;
+            font-size: 0.95em;
+        }
+
+        /* 問題リスト - スクロール可能 */
+        .question-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .question-list h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            color: #333;
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 5px 0;
+            z-index: 1;
+        }
+
+        .question-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .question-item-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .question-item-word {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1em;
+        }
+
+        .question-item-meaning {
+            color: #666;
+            margin-top: 3px;
+            font-size: 0.85em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .question-item-delete {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85em;
+            flex-shrink: 0;
+            touch-action: manipulation;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        /* クイズエリア - 1画面に収める */
+        #quizArea {
+            display: none;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        #quizArea.show {
+            display: flex;
+        }
+
+        #emptyState {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 下部ボタンエリア */
+        .bottom-actions {
+            padding: 10px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+
+        .bottom-actions .form-actions {
+            margin-top: 0;
+        }
+
+        /* デバッグパネル */
+        .debug-panel {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-height: 50vh;
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 13px;
+            overflow-y: auto;
+            padding: 10px 12px;
+            display: block; /* 最初から表示 */
+            z-index: 9999;
+            border-top: 3px solid #667eea;
+        }
+        .debug-panel.show { display: block; }
+        .debug-row { margin: 3px 0; white-space: pre-wrap; word-break: break-word; line-height: 1.4; }
+        .debug-row.time { color: #9ef; }
+        .debug-row.log { color: #ddd; }
+        .debug-row.warn { 
+            color: #ffca28; 
+            background: rgba(255, 202, 40, 0.1);
+            padding: 2px 4px;
+            border-left: 3px solid #ffca28;
+        }
+        .debug-row.error { 
+            color: #ff5252; 
+            background: rgba(255, 82, 82, 0.15);
+            padding: 2px 4px;
+            border-left: 3px solid #ff5252;
+            font-weight: bold;
+        }
+        .debug-controls {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .debug-btn {
+            background: #333;
+            color: #fff;
+            border: 1px solid #666;
+            border-radius: 6px;
+            padding: 6px 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        /* レスポンシブ - スマホ最適化 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.2em;
+                padding: 12px 10px 8px;
+            }
+
+            .question-text {
+                font-size: 1.8em;
+            }
+
+            .tab-btn {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            .score-label {
+                font-size: 0.7em;
+            }
+
+            .score-value {
+                font-size: 1.1em;
+            }
+
+            .choice-btn {
+                padding: 16px 12px;
+                font-size: 1em;
+            }
+
+            .btn {
+                padding: 14px;
+                font-size: 1em;
+            }
+        }
+
+        /* PWA風のタップハイライト削除 */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        input, textarea {
+            -webkit-user-select: text;
+            user-select: text;
+        }
+    </style>
     <script>
-        alert('🔴 HEAD内スクリプト - v06');
-        
-        // DOMが読み込まれた後に実行
+        // Safari対応: DOMContentLoadedで初期化
         document.addEventListener('DOMContentLoaded', function() {
-            alert('🟢 DOMContentLoaded - v06');
-            
-            // 緑のメッセージを追加
-            const msg = document.createElement('p');
-            msg.style.color = 'green';
-            msg.style.fontWeight = 'bold';
-            msg.textContent = '✅ JavaScriptは正常に動作しています！ (HEAD内から実行)';
-            document.body.appendChild(msg);
-        });
-    </script>
+            console.log('DOMContentLoaded fired');
 </head>
-<body style="padding:20px; font-family:sans-serif;">
-    <h1>🎯 英単語3択クイズ - 動作確認中</h1>
-    <p>このメッセージが表示されれば、HTMLは正しく読み込まれています。</p>
-    <button onclick="alert('ボタンクリック成功！')">クリックテスト</button>
+<body>
+    <div class="container">
+        <h1>🎯 英単語3択クイズ</h1>
+
+        <!-- タブメニュー -->
+        <div class="tab-menu">
+            <button class="tab-btn active" onclick="switchTab('quiz', event)">クイズ</button>
+            <button class="tab-btn" onclick="switchTab('create', event)">問題作成</button>
+        </div>
+
+        <!-- クイズタブ -->
+        <div id="quiz-tab" class="tab-content active">
+            <!-- ファイル選択 -->
+            <div class="file-selector">
+                <div class="file-select-group">
+                    <select id="csvSelect" onchange="loadSelectedCSV()">
+                        <option value="">問題集を選択</option>
+                        <option value="data/basic-english.csv">基本英単語</option>
+                        <option value="data/animals.csv">動物</option>
+                        <option value="data/food.csv">食べ物</option>
+                    </select>
+                    <label for="fileInput" class="file-input-label">
+                        📤 ファイル
+                    </label>
+                    <input type="file" id="fileInput" accept=".csv" onchange="loadLocalFile(event)">
+                    <button class="file-input-label" style="background:#6c757d;border-color:#6c757d;" onclick="runSelfTest()">🔎 自己診断</button>
+                    <button class="file-input-label" style="background:#343a40;border-color:#343a40;" onclick="toggleDebugPanel()">🐞 デバッグ</button>
+                </div>
+                <div id="fileInfo" class="file-info" style="display: none;"></div>
+            </div>
+
+            <!-- スコアボード -->
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-label">問題数</div>
+                    <div class="score-value" id="questionCount">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">正解</div>
+                    <div class="score-value" id="correctCount">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">正答率</div>
+                    <div class="score-value" id="accuracy">0%</div>
+                </div>
+            </div>
+
+            <!-- 問題表示エリア -->
+            <div id="quizArea">
+                <div class="question-card">
+                    <div class="question-number" id="questionNumber">第1問</div>
+                    <div class="question-text" id="questionText">-</div>
+                    <div class="question-hint" id="questionHint"></div>
+                </div>
+
+                <div class="choices" id="choices"></div>
+
+                <div class="result" id="result"></div>
+
+                <button class="btn next-btn" id="nextBtn" onclick="nextQuestion()">次の問題へ →</button>
+            </div>
+
+            <div id="emptyState" class="empty-state">
+                <p>📚 問題集を選択してクイズを開始</p>
+            </div>
+        </div>
+
+        <!-- 問題作成タブ -->
+        <div id="create-tab" class="tab-content">
+            <div class="create-form">
+                <h3>✏️ 問題を追加</h3>
+                <div class="form-group">
+                    <label for="termInput">語句 *</label>
+                    <input type="text" id="termInput" placeholder="apple" required>
+                </div>
+                <div class="form-group">
+                    <label for="readingInput">読み</label>
+                    <input type="text" id="readingInput" placeholder="アップル">
+                </div>
+                <div class="form-group">
+                    <label for="meaningInput">意味 *</label>
+                    <input type="text" id="meaningInput" placeholder="りんご" required>
+                </div>
+                <div class="form-group">
+                    <label for="etymologyInput">語源等解説</label>
+                    <input type="text" id="etymologyInput" placeholder="果物の一種">
+                </div>
+                <div class="form-group">
+                    <label for="relatedWordsInput">関連語</label>
+                    <input type="text" id="relatedWordsInput" placeholder="fruit;banana">
+                </div>
+                <div class="form-group">
+                    <label for="relatedFieldsInput">関連分野</label>
+                    <input type="text" id="relatedFieldsInput" placeholder="食べ物;果物">
+                </div>
+                <div class="form-group">
+                    <label for="difficultyInput">難易度</label>
+                    <select id="difficultyInput">
+                        <option value="1">1 (初級)</option>
+                        <option value="2" selected>2 (中級)</option>
+                        <option value="3">3 (上級)</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button class="btn" onclick="addQuestion()">追加</button>
+                    <button class="btn secondary" onclick="clearForm()">クリア</button>
+                </div>
+            </div>
+
+            <div class="question-list">
+                <h3>作成した問題 (<span id="questionListCount">0</span>問)</h3>
+                <div id="questionListContainer"></div>
+            </div>
+
+            <div class="bottom-actions">
+                <div class="form-actions">
+                    <button class="btn" onclick="downloadCSV()" id="downloadBtn" disabled>
+                        💾 CSV保存
+                    </button>
+                    <button class="btn secondary" onclick="downloadTemplate()">
+                        📄 テンプレート
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- デバッグパネル -->
+    <div id="debugPanel" class="debug-panel">
+        <div class="debug-controls">
+            <button class="debug-btn" onclick="clearDebugLog()">Clear</button>
+            <button class="debug-btn" onclick="copyDebugLog()">Copy</button>
+            <span style="opacity:.8">Console Capture</span>
+        </div>
+        <div id="debugLog"></div>
+    </div>
+
+                    // ===== エラーキャッチャー =====
+                    window.addEventListener('error', function(e) {
+                        const msg = `FATAL ERROR: ${e.message} at ${e.filename}:${e.lineno}:${e.colno}`;
+                        alert(msg); // 画面中央にアラート表示
+                        document.body.innerHTML = `<div style="padding:20px;background:red;color:white;font-size:16px;font-family:monospace;white-space:pre-wrap;">${msg}\n\nStack: ${e.error?.stack || 'N/A'}</div>` + document.body.innerHTML;
+                    });
+                    
+                    // スクリプト読み込み確認
+                    console.log('✅ Script loaded at:', new Date().toISOString());
+                    
+                    // グローバル変数
+                    let questions = [];
+                    let currentQuestion = 0;
+                    let correctAnswers = 0;
+                    let totalQuestions = 0;
+                    let answered = false;
+                    let createdQuestions = [];
+            
+                    // タブ切り替え
+                    function switchTab(tabName, event) {
+                        // タブボタンのアクティブ状態を切り替え
+                        document.querySelectorAll('.tab-btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        if (event && event.target) {
+                            event.target.classList.add('active');
+                        }
+            
+                        // タブコンテンツの表示を切り替え
+                        document.querySelectorAll('.tab-content').forEach(content => {
+                            content.classList.remove('active');
+                        });
+                        document.getElementById(tabName + '-tab').classList.add('active');
+                    }
+            
+                    // ===== デバッグパネル機能 =====
+                    const debugPanel = () => document.getElementById('debugPanel');
+                    const debugLogEl = () => document.getElementById('debugLog');
+                    let debugEnabled = true; // 最初から表示
+            
+                    function toggleDebugPanel() {
+                        alert('toggleDebugPanel が呼ばれました');
+                        debugEnabled = !debugEnabled;
+                        const panel = debugPanel();
+                        if (!panel) {
+                            alert('ERROR: debugPanel要素が見つかりません！');
+                            return;
+                        }
+                        panel.classList.toggle('show', debugEnabled);
+                        alert('デバッグパネル表示: ' + debugEnabled);
+                    }
+                    
+                    // ページ読み込み時に自動表示
+                // デバッグパネル初期化（既にDOMContentLoaded内）
+                debugPanel().classList.add('show');
+                appendDebug('log', 'デバッグパネル起動 - エラーがあればここに赤字で表示されます');
+                
+                    function clearDebugLog() {
+                        if (debugLogEl()) debugLogEl().innerHTML = '';
+                    }
+                    function copyDebugLog() {
+                        const text = Array.from(debugLogEl().querySelectorAll('.debug-row')).map(r => r.textContent).join('\n');
+                        navigator.clipboard.writeText(text).catch(()=>{});
+                    }
+                    function appendDebug(type, msg) {
+                        const row = document.createElement('div');
+                        row.className = `debug-row ${type}`;
+                        const time = new Date().toLocaleTimeString();
+                        row.textContent = `[${time}] ${type.toUpperCase()}: ${msg}`;
+                        if (debugLogEl()) {
+                            debugLogEl().appendChild(row);
+                            debugLogEl().scrollTop = debugLogEl().scrollHeight;
+                        }
+                    }
+                    // consoleラッピング
+                    ['log','warn','error'].forEach(k => {
+                        const original = console[k];
+                        console[k] = function(...args) {
+                            original.apply(console, args);
+                            try { appendDebug(k, args.map(a => (typeof a==='object'? JSON.stringify(a): a)).join(' ')); } catch(e) {}
+                        };
+                    });
+            
+                    // 自己診断: 流れを強制検証
+                    function runSelfTest() {
+                        alert('runSelfTest が呼ばれました！');
+                        appendDebug('log','=== SelfTest開始 ===');
+                        const select = document.getElementById('csvSelect');
+                        if (!select) {
+                            alert('ERROR: csvSelect要素が見つかりません');
+                            return;
+                        }
+                        if (!select.value) {
+                            appendDebug('warn','問題集未選択: basic-englishを仮選択');
+                            select.value = 'data/basic-english.csv';
+                        }
+                        alert('CSV選択: ' + select.value + ' / loadSelectedCSV呼び出し開始');
+                        loadSelectedCSV().then(()=>{
+                            appendDebug('log',`questions配列長: ${questions.length}`);
+                            if (questions.length>0) {
+                                appendDebug('log','最初の問題: '+ JSON.stringify(questions[0]));
+                                showQuestion();
+                                appendDebug('log','showQuestion後DOM questionText='+document.getElementById('questionText').textContent);
+                            } else {
+                                appendDebug('error','SelfTest: questionsが空');
+                            }
+                        }).catch(e=> appendDebug('error','SelfTest失敗 '+e));
+                    }
+            
+                    // CSVパーサー (quiz-app互換の7列形式に対応)
+                    // 形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
+                    function parseCSV(csvText) {
+                        const lines = csvText.trim().split('\n').filter(line => {
+                            const trimmed = line.trim();
+                            return trimmed && !trimmed.startsWith('//') && !trimmed.startsWith('#');
+                        });
+                        
+                        const data = [];
+                        let startIndex = 0;
+            
+                        // ヘッダー行を検出してスキップ
+                        if (lines.length > 0) {
+                            const firstLine = lines[0].trim();
+                            if (firstLine.includes('語句') || 
+                                firstLine.includes('term') ||
+                                firstLine.includes('読み') ||
+                                firstLine.includes('reading') ||
+                                firstLine.includes('意味') ||
+                                firstLine.includes('meaning')) {
+                                startIndex = 1; // ヘッダーをスキップ
+                            }
+                        }
+            
+                        for (let i = startIndex; i < lines.length; i++) {
+                            const line = lines[i].trim();
+                            if (!line) continue;
+            
+                            const columns = line.split(',').map(col => col.trim());
+            
+                            // 7列形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
+                            if (columns.length >= 3) {
+                                const term = columns[0] || '';  // 語句
+                                const reading = columns[1] || '';  // 読み
+                                const meaning = columns[2] || '';  // 意味 (正解)
+                                const etymology = columns[3] || '';  // 語源等解説
+                                const relatedWords = columns[4] || '';  // 関連語
+                                const relatedFields = columns[5] || '';  // 関連分野
+                                const difficulty = columns[6] || '';  // 難易度
+            
+                                if (term && meaning) {
+                                    data.push({
+                                        word: term,
+                                        meaning: meaning,
+                                        reading: reading,
+                                        etymology: etymology,
+                                        relatedWords: relatedWords,
+                                        relatedFields: relatedFields,
+                                        difficulty: difficulty,
+                                        // 選択肢生成用
+                                        choices: [],
+                                        hint: relatedFields || etymology.substring(0, 30)
+                                    });
+                                }
+                            }
+                        }
+            
+                        return data;
+                    }
+            
+                    // 選択されたCSVファイルを読み込み
+                    async function loadSelectedCSV() {
+                        console.log('loadSelectedCSV: セレクト変更検知');
+                        const select = document.getElementById('csvSelect');
+                        const filePath = select.value;
+            
+                        if (!filePath) {
+                            console.log('loadSelectedCSV: filePath空のためresetQuiz');
+                            resetQuiz();
+                            return;
+                        }
+            
+                        try {
+                            const response = await fetch(filePath);
+                            const csvText = await response.text();
+                            console.log('CSV読み込み成功:', filePath);
+                            console.log('CSV内容（最初の200文字）:', csvText.substring(0, 200));
+                            
+                            questions = parseCSV(csvText);
+                            console.log('パース結果:', questions.length, '問');
+                            console.log('最初の問題:', questions[0]);
+            
+                            if (questions.length === 0) {
+                                alert('問題データが見つかりませんでした');
+                                return;
+                            }
+            
+                            showFileInfo(`${select.options[select.selectedIndex].text} を読み込みました (${questions.length}問)`);
+                            console.log('loadSelectedCSV: startQuiz呼び出し');
+                            startQuiz();
+                        } catch (error) {
+                            console.error('CSVの読み込みエラー:', error);
+                            alert('ファイルの読み込みに失敗しました');
+                        }
+                    }
+            
+                    // ローカルファイルを読み込み
+                    function loadLocalFile(event) {
+                        const file = event.target.files[0];
+                        if (!file) return;
+            
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            try {
+                                questions = parseCSV(e.target.result);
+            
+                                if (questions.length === 0) {
+                                    alert('問題データが見つかりませんでした');
+                                    return;
+                                }
+            
+                                // セレクトボックスをリセット
+                                document.getElementById('csvSelect').value = '';
+            
+                                showFileInfo(`${file.name} を読み込みました (${questions.length}問)`);
+                                startQuiz();
+                            } catch (error) {
+                                console.error('CSVの解析エラー:', error);
+                                alert('ファイルの解析に失敗しました');
+                            }
+                        };
+                        reader.readAsText(file);
+                    }
+            
+                    // ファイル情報を表示
+                    function showFileInfo(message) {
+                        const fileInfo = document.getElementById('fileInfo');
+                        fileInfo.textContent = message;
+                        fileInfo.style.display = 'block';
+                    }
+            
+                    // クイズ開始
+                    function startQuiz() {
+                        console.log('startQuiz: 質問数=', questions.length);
+                        currentQuestion = 0;
+                        correctAnswers = 0;
+                        totalQuestions = 0;
+                        answered = false;
+            
+                        const emptyState = document.getElementById('emptyState');
+                        const quizArea = document.getElementById('quizArea');
+                        
+                        // タブをクイズに切り替え（念のため）
+                        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                        document.getElementById('quiz-tab').classList.add('active');
+                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                        const quizBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.textContent.includes('クイズ'));
+                        if (quizBtn) quizBtn.classList.add('active');
+                        
+                        emptyState.style.display = 'none';
+                        quizArea.style.display = 'flex';
+            
+                        updateScore();
+                        showQuestion();
+                    }
+            
+                    // クイズリセット
+                    function resetQuiz() {
+                        questions = [];
+                        const emptyState = document.getElementById('emptyState');
+                        const quizArea = document.getElementById('quizArea');
+                        
+                        emptyState.style.display = 'flex';
+                        quizArea.style.display = 'none';
+                        document.getElementById('fileInfo').style.display = 'none';
+                    }
+            
+                    // 配列をシャッフル
+                    function shuffle(array) {
+                        const newArray = [...array];
+                        for (let i = newArray.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                        }
+                        return newArray;
+                    }
+            
+                    // 問題を表示
+                    function showQuestion() {
+                        console.log('showQuestion呼び出し: 問題数=', questions.length, '現在の問題=', currentQuestion);
+                        
+                        if (questions.length === 0) {
+                            console.error('問題データが空です');
+                            return;
+                        }
+            
+                        answered = false;
+                        const question = questions[currentQuestion];
+                        console.log('表示する問題:', question);
+            
+                        document.getElementById('questionNumber').textContent = `第${currentQuestion + 1}問`;
+                        document.getElementById('questionText').textContent = question.word;
+                        document.getElementById('questionHint').textContent = question.hint ? `(${question.hint})` : '';
+                        document.getElementById('result').classList.remove('show', 'correct', 'incorrect');
+                        document.getElementById('nextBtn').classList.remove('show');
+            
+                        // 選択肢を動的に生成（他の問題から誤答を2つ選ぶ）
+                        const correctAnswer = question.meaning;
+                        const wrongAnswers = [];
+                        
+                        // 他の問題から誤答を収集
+                        const otherQuestions = questions.filter((q, index) => index !== currentQuestion);
+                        const shuffledOthers = shuffle(otherQuestions);
+                        
+                        for (let i = 0; i < shuffledOthers.length && wrongAnswers.length < 2; i++) {
+                            const wrongAnswer = shuffledOthers[i].meaning;
+                            if (wrongAnswer !== correctAnswer && !wrongAnswers.includes(wrongAnswer)) {
+                                wrongAnswers.push(wrongAnswer);
+                            }
+                        }
+                        
+                        // 誤答が足りない場合はダミーを追加
+                        while (wrongAnswers.length < 2) {
+                            wrongAnswers.push(`選択肢${wrongAnswers.length + 1}`);
+                        }
+                        
+                        // 選択肢をシャッフル
+                        const choices = shuffle([correctAnswer, ...wrongAnswers]);
+                        console.log('生成された選択肢:', choices);
+                        
+                        const choicesContainer = document.getElementById('choices');
+                        choicesContainer.innerHTML = '';
+            
+                        choices.forEach((choice) => {
+                            const btn = document.createElement('button');
+                            btn.className = 'choice-btn';
+                            btn.textContent = choice;
+                            btn.onclick = () => checkAnswer(choice, question.meaning);
+                            choicesContainer.appendChild(btn);
+                        });
+                        
+                        console.log('問題表示完了');
+                    }
+            
+                    // 解答をチェック
+                    function checkAnswer(selected, correct) {
+                        if (answered) return;
+            
+                        answered = true;
+                        totalQuestions++;
+            
+                        const buttons = document.querySelectorAll('.choice-btn');
+                        const resultDiv = document.getElementById('result');
+            
+                        buttons.forEach(btn => {
+                            btn.disabled = true;
+                            if (btn.textContent === correct) {
+                                btn.classList.add('correct');
+                            }
+                            if (btn.textContent === selected && selected !== correct) {
+                                btn.classList.add('incorrect');
+                            }
+                        });
+            
+                        if (selected === correct) {
+                            correctAnswers++;
+                            resultDiv.textContent = '🎉 正解！';
+                            resultDiv.classList.add('show', 'correct');
+                        } else {
+                            resultDiv.textContent = `❌ 不正解。正解は「${correct}」です。`;
+                            resultDiv.classList.add('show', 'incorrect');
+                        }
+            
+                        updateScore();
+                        document.getElementById('nextBtn').classList.add('show');
+                    }
+            
+                    // スコアを更新
+                    function updateScore() {
+                        document.getElementById('questionCount').textContent = totalQuestions;
+                        document.getElementById('correctCount').textContent = correctAnswers;
+                        const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+                        document.getElementById('accuracy').textContent = `${accuracy}%`;
+                    }
+            
+                    // 次の問題へ
+                    function nextQuestion() {
+                        currentQuestion = (currentQuestion + 1) % questions.length;
+                        showQuestion();
+                    }
+            
+                    // === 問題作成機能 ===
+            
+                    // 問題を追加 (quiz-app互換の7列形式)
+                    function addQuestion() {
+                        const term = document.getElementById('termInput').value.trim();
+                        const reading = document.getElementById('readingInput').value.trim();
+                        const meaning = document.getElementById('meaningInput').value.trim();
+                        const etymology = document.getElementById('etymologyInput').value.trim();
+                        const relatedWords = document.getElementById('relatedWordsInput').value.trim();
+                        const relatedFields = document.getElementById('relatedFieldsInput').value.trim();
+                        const difficulty = document.getElementById('difficultyInput').value;
+            
+                        if (!term || !meaning) {
+                            alert('語句と意味は必須項目です');
+                            return;
+                        }
+            
+                        const question = {
+                            term,
+                            reading,
+                            meaning,
+                            etymology,
+                            relatedWords,
+                            relatedFields,
+                            difficulty
+                        };
+            
+                        createdQuestions.push(question);
+                        updateQuestionList();
+                        clearForm();
+                    }
+            
+                    // フォームをクリア
+                    function clearForm() {
+                        document.getElementById('termInput').value = '';
+                        document.getElementById('readingInput').value = '';
+                        document.getElementById('meaningInput').value = '';
+                        document.getElementById('etymologyInput').value = '';
+                        document.getElementById('relatedWordsInput').value = '';
+                        document.getElementById('relatedFieldsInput').value = '';
+                        document.getElementById('difficultyInput').value = '2';
+                        document.getElementById('termInput').focus();
+                    }
+            
+                    // 問題リストを更新
+                    function updateQuestionList() {
+                        const container = document.getElementById('questionListContainer');
+                        const count = document.getElementById('questionListCount');
+                        const downloadBtn = document.getElementById('downloadBtn');
+            
+                        count.textContent = createdQuestions.length;
+                        downloadBtn.disabled = createdQuestions.length === 0;
+            
+                        if (createdQuestions.length === 0) {
+                            container.innerHTML = '<div class="empty-state"><p>まだ問題が作成されていません</p></div>';
+                            return;
+                        }
+            
+                        container.innerHTML = createdQuestions.map((q, index) => `
+                            <div class="question-item">
+                                <div class="question-item-content">
+                                    <div class="question-item-word">${q.term}</div>
+                                    <div class="question-item-meaning">
+                                        意味: ${q.meaning}
+                                        ${q.reading ? ` / 読み: ${q.reading}` : ''}
+                                        ${q.relatedFields ? ` / 分野: ${q.relatedFields}` : ''}
+                                    </div>
+                                </div>
+                                <button class="question-item-delete" onclick="deleteQuestion(${index})">削除</button>
+                            </div>
+                        `).join('');
+                    }
+            
+                    // 問題を削除
+                    function deleteQuestion(index) {
+                        if (confirm('この問題を削除しますか？')) {
+                            createdQuestions.splice(index, 1);
+                            updateQuestionList();
+                        }
+                    }
+            
+                    // CSVとしてダウンロード (quiz-app互換の7列形式)
+                    function downloadCSV() {
+                        if (createdQuestions.length === 0) {
+                            alert('ダウンロードする問題がありません');
+                            return;
+                        }
+            
+                        // CSV形式に変換 (quiz-app互換)
+                        // 形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
+                        let csvContent = '語句,読み,意味,語源等解説,関連語,関連分野,難易度\n';
+                        createdQuestions.forEach(q => {
+                            csvContent += `${q.term},${q.reading},${q.meaning},${q.etymology},${q.relatedWords},${q.relatedFields},${q.difficulty}\n`;
+                        });
+            
+                        // ダウンロード
+                        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                        const link = document.createElement('a');
+                        const url = URL.createObjectURL(blob);
+                        const timestamp = new Date().toISOString().slice(0, 10);
+                        
+                        link.setAttribute('href', url);
+                        link.setAttribute('download', `quiz-${timestamp}.csv`);
+                        link.style.visibility = 'hidden';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+            
+                    // テンプレートをダウンロード (quiz-app互換)
+                    function downloadTemplate() {
+                        const templateContent = `語句,読み,意味,語源等解説,関連語,関連分野,難易度
+            apple,アップル,りんご,果物の一種,fruit;banana,食べ物;果物,1
+            cat,キャット,猫,動物,dog;pet,動物,1`;
+            
+                        const blob = new Blob([templateContent], { type: 'text/csv;charset=utf-8;' });
+                        const link = document.createElement('a');
+                        const url = URL.createObjectURL(blob);
+                        
+                        link.setAttribute('href', url);
+                        link.setAttribute('download', 'template.csv');
+                        link.style.visibility = 'hidden';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+            cat,猫,猫,犬,鳥,動物`;
+            
+                        const blob = new Blob([templateContent], { type: 'text/csv;charset=utf-8;' });
+                        const link = document.createElement('a');
+                        const url = URL.createObjectURL(blob);
+                        
+                        link.setAttribute('href', url);
+                        link.setAttribute('download', 'template.csv');
+                        link.style.visibility = 'hidden';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+            
+                    // 初期化
+                    updateQuestionList();
+        }); // end DOMContentLoaded
+    </script>
 </body>
 </html>
