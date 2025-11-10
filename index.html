@@ -446,22 +446,34 @@
             left: 0;
             right: 0;
             bottom: 0;
-            max-height: 40vh;
-            background: rgba(0,0,0,0.85);
+            max-height: 50vh;
+            background: rgba(0,0,0,0.9);
             color: #fff;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: 12px;
+            font-size: 13px;
             overflow-y: auto;
-            padding: 8px 10px;
-            display: none;
+            padding: 10px 12px;
+            display: block; /* 最初から表示 */
             z-index: 9999;
+            border-top: 3px solid #667eea;
         }
         .debug-panel.show { display: block; }
-        .debug-row { margin: 2px 0; white-space: pre-wrap; word-break: break-word; }
+        .debug-row { margin: 3px 0; white-space: pre-wrap; word-break: break-word; line-height: 1.4; }
         .debug-row.time { color: #9ef; }
-        .debug-row.log { color: #eef; }
-        .debug-row.warn { color: #ffca28; }
-        .debug-row.error { color: #ff5252; }
+        .debug-row.log { color: #ddd; }
+        .debug-row.warn { 
+            color: #ffca28; 
+            background: rgba(255, 202, 40, 0.1);
+            padding: 2px 4px;
+            border-left: 3px solid #ffca28;
+        }
+        .debug-row.error { 
+            color: #ff5252; 
+            background: rgba(255, 82, 82, 0.15);
+            padding: 2px 4px;
+            border-left: 3px solid #ff5252;
+            font-weight: bold;
+        }
         .debug-controls {
             display: flex;
             gap: 6px;
@@ -690,12 +702,18 @@
         // ===== デバッグパネル機能 =====
         const debugPanel = () => document.getElementById('debugPanel');
         const debugLogEl = () => document.getElementById('debugLog');
-        let debugEnabled = false;
+        let debugEnabled = true; // 最初から表示
 
         function toggleDebugPanel() {
             debugEnabled = !debugEnabled;
             debugPanel().classList.toggle('show', debugEnabled);
         }
+        
+        // ページ読み込み時に自動表示
+        window.addEventListener('DOMContentLoaded', () => {
+            debugPanel().classList.add('show');
+            appendDebug('log', 'デバッグパネル起動 - エラーがあればここに赤字で表示されます');
+        });
         function clearDebugLog() {
             if (debugLogEl()) debugLogEl().innerHTML = '';
         }
@@ -704,13 +722,14 @@
             navigator.clipboard.writeText(text).catch(()=>{});
         }
         function appendDebug(type, msg) {
-            if (!debugEnabled) return;
             const row = document.createElement('div');
             row.className = `debug-row ${type}`;
             const time = new Date().toLocaleTimeString();
             row.textContent = `[${time}] ${type.toUpperCase()}: ${msg}`;
-            debugLogEl().appendChild(row);
-            debugLogEl().scrollTop = debugLogEl().scrollHeight;
+            if (debugLogEl()) {
+                debugLogEl().appendChild(row);
+                debugLogEl().scrollTop = debugLogEl().scrollHeight;
+            }
         }
         // consoleラッピング
         ['log','warn','error'].forEach(k => {
