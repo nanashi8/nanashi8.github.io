@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>英単語3択クイズ</title>
+    <title>英単語3択クイズ - CSV対応版</title>
     <style>
         * {
             margin: 0;
@@ -15,9 +15,6 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
         }
 
@@ -25,8 +22,9 @@
             background: white;
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
+            margin: 0 auto;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
@@ -37,6 +35,108 @@
             font-size: 2em;
         }
 
+        /* タブメニュー */
+        .tab-menu {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 1em;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            font-weight: bold;
+        }
+
+        .tab-btn:hover {
+            color: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ファイル選択エリア */
+        .file-selector {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .file-selector h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .file-select-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        select, .file-input-label {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        select:hover, .file-input-label:hover {
+            border-color: #667eea;
+        }
+
+        select {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+        }
+
+        .file-input-label {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            display: inline-block;
+        }
+
+        .file-input-label:hover {
+            background: #5568d3;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-info {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* スコアボード */
         .score-board {
             display: flex;
             justify-content: space-between;
@@ -62,6 +162,7 @@
             color: #667eea;
         }
 
+        /* 問題カード */
         .question-card {
             background: #f8f9fa;
             padding: 30px;
@@ -88,6 +189,7 @@
             font-size: 0.95em;
         }
 
+        /* 選択肢 */
         .choices {
             display: flex;
             flex-direction: column;
@@ -105,7 +207,7 @@
             text-align: left;
         }
 
-        .choice-btn:hover {
+        .choice-btn:hover:not(:disabled) {
             border-color: #667eea;
             background: #f0f4ff;
             transform: translateX(5px);
@@ -127,7 +229,8 @@
             cursor: not-allowed;
         }
 
-        .next-btn {
+        /* ボタン */
+        .btn {
             width: 100%;
             padding: 15px;
             background: #667eea;
@@ -138,17 +241,35 @@
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s ease;
-            display: none;
         }
 
-        .next-btn:hover {
+        .btn:hover {
             background: #5568d3;
+        }
+
+        .btn.secondary {
+            background: #6c757d;
+        }
+
+        .btn.secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .next-btn {
+            display: none;
+            margin-top: 20px;
         }
 
         .next-btn.show {
             display: block;
         }
 
+        /* 結果表示 */
         .result {
             text-align: center;
             padding: 20px;
@@ -172,6 +293,98 @@
             color: #c62828;
         }
 
+        /* 問題作成フォーム */
+        .create-form {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .form-actions button {
+            flex: 1;
+        }
+
+        /* 問題リスト */
+        .question-list {
+            margin-top: 20px;
+        }
+
+        .question-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question-item-content {
+            flex: 1;
+        }
+
+        .question-item-word {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .question-item-meaning {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .question-item-delete {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .question-item-delete:hover {
+            background: #d32f2f;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        /* レスポンシブ */
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -188,74 +401,278 @@
             .choice-btn {
                 padding: 15px;
             }
+
+            .tab-btn {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            .file-select-group {
+                flex-direction: column;
+            }
+
+            select {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🎯 英単語3択クイズ</h1>
-        
-        <div class="score-board">
-            <div class="score-item">
-                <div class="score-label">問題数</div>
-                <div class="score-value" id="questionCount">0</div>
+
+        <!-- タブメニュー -->
+        <div class="tab-menu">
+            <button class="tab-btn active" onclick="switchTab('quiz')">クイズ</button>
+            <button class="tab-btn" onclick="switchTab('create')">問題作成</button>
+        </div>
+
+        <!-- クイズタブ -->
+        <div id="quiz-tab" class="tab-content active">
+            <!-- ファイル選択 -->
+            <div class="file-selector">
+                <h3>📁 問題集を選択</h3>
+                <div class="file-select-group">
+                    <select id="csvSelect" onchange="loadSelectedCSV()">
+                        <option value="">-- 問題集を選択 --</option>
+                        <option value="data/basic-english.csv">基本英単語 (20問)</option>
+                        <option value="data/animals.csv">動物 (15問)</option>
+                        <option value="data/food.csv">食べ物 (15問)</option>
+                    </select>
+                    <label for="fileInput" class="file-input-label">
+                        📤 ローカルファイル
+                    </label>
+                    <input type="file" id="fileInput" accept=".csv" onchange="loadLocalFile(event)">
+                </div>
+                <div id="fileInfo" class="file-info" style="display: none;"></div>
             </div>
-            <div class="score-item">
-                <div class="score-label">正解数</div>
-                <div class="score-value" id="correctCount">0</div>
+
+            <!-- スコアボード -->
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-label">問題数</div>
+                    <div class="score-value" id="questionCount">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">正解数</div>
+                    <div class="score-value" id="correctCount">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">正答率</div>
+                    <div class="score-value" id="accuracy">0%</div>
+                </div>
             </div>
-            <div class="score-item">
-                <div class="score-label">正答率</div>
-                <div class="score-value" id="accuracy">0%</div>
+
+            <!-- 問題表示エリア -->
+            <div id="quizArea" style="display: none;">
+                <div class="question-card">
+                    <div class="question-number" id="questionNumber">第1問</div>
+                    <div class="question-text" id="questionText">-</div>
+                    <div class="question-hint" id="questionHint"></div>
+                </div>
+
+                <div class="choices" id="choices"></div>
+
+                <div class="result" id="result"></div>
+
+                <button class="btn next-btn" id="nextBtn" onclick="nextQuestion()">次の問題へ →</button>
+            </div>
+
+            <div id="emptyState" class="empty-state">
+                <p>📚 上から問題集を選択してクイズを開始してください</p>
             </div>
         </div>
 
-        <div class="question-card">
-            <div class="question-number" id="questionNumber">第1問</div>
-            <div class="question-text" id="questionText">Loading...</div>
-            <div class="question-hint" id="questionHint"></div>
+        <!-- 問題作成タブ -->
+        <div id="create-tab" class="tab-content">
+            <div class="create-form">
+                <h3>✏️ 新しい問題を追加</h3>
+                <div class="form-group">
+                    <label for="wordInput">英単語 *</label>
+                    <input type="text" id="wordInput" placeholder="例: apple" required>
+                </div>
+                <div class="form-group">
+                    <label for="meaningInput">正解の日本語 *</label>
+                    <input type="text" id="meaningInput" placeholder="例: りんご" required>
+                </div>
+                <div class="form-group">
+                    <label for="choice2Input">不正解の選択肢1 *</label>
+                    <input type="text" id="choice2Input" placeholder="例: バナナ" required>
+                </div>
+                <div class="form-group">
+                    <label for="choice3Input">不正解の選択肢2 *</label>
+                    <input type="text" id="choice3Input" placeholder="例: オレンジ" required>
+                </div>
+                <div class="form-group">
+                    <label for="hintInput">ヒント（省略可）</label>
+                    <input type="text" id="hintInput" placeholder="例: 果物">
+                </div>
+                <div class="form-actions">
+                    <button class="btn" onclick="addQuestion()">➕ 問題を追加</button>
+                    <button class="btn secondary" onclick="clearForm()">🔄 クリア</button>
+                </div>
+            </div>
+
+            <div class="question-list">
+                <h3>📝 作成した問題 (<span id="questionListCount">0</span>問)</h3>
+                <div id="questionListContainer"></div>
+            </div>
+
+            <div class="form-actions" style="margin-top: 20px;">
+                <button class="btn" onclick="downloadCSV()" id="downloadBtn" disabled>
+                    💾 CSVとしてダウンロード
+                </button>
+                <button class="btn secondary" onclick="downloadTemplate()">
+                    📄 テンプレートをダウンロード
+                </button>
+            </div>
         </div>
-
-        <div class="choices" id="choices">
-            <!-- 選択肢がここに動的に追加されます -->
-        </div>
-
-        <div class="result" id="result"></div>
-
-        <button class="next-btn" id="nextBtn">次の問題へ →</button>
     </div>
 
     <script>
-        // 英単語問題データ
-        const questions = [
-            { word: "apple", meaning: "りんご", choices: ["りんご", "バナナ", "オレンジ"], hint: "果物" },
-            { word: "cat", meaning: "猫", choices: ["猫", "犬", "鳥"], hint: "動物" },
-            { word: "book", meaning: "本", choices: ["本", "ペン", "ノート"], hint: "文房具" },
-            { word: "water", meaning: "水", choices: ["水", "お茶", "ジュース"], hint: "飲み物" },
-            { word: "happy", meaning: "幸せな", choices: ["幸せな", "悲しい", "怒っている"], hint: "感情" },
-            { word: "run", meaning: "走る", choices: ["走る", "歩く", "飛ぶ"], hint: "動作" },
-            { word: "big", meaning: "大きい", choices: ["大きい", "小さい", "長い"], hint: "サイズ" },
-            { word: "red", meaning: "赤", choices: ["赤", "青", "緑"], hint: "色" },
-            { word: "school", meaning: "学校", choices: ["学校", "病院", "図書館"], hint: "場所" },
-            { word: "love", meaning: "愛", choices: ["愛", "憎しみ", "恐怖"], hint: "感情" },
-            { word: "car", meaning: "車", choices: ["車", "電車", "飛行機"], hint: "乗り物" },
-            { word: "music", meaning: "音楽", choices: ["音楽", "絵画", "映画"], hint: "芸術" },
-            { word: "friend", meaning: "友達", choices: ["友達", "敵", "先生"], hint: "人間関係" },
-            { word: "beautiful", meaning: "美しい", choices: ["美しい", "醜い", "普通の"], hint: "外見" },
-            { word: "eat", meaning: "食べる", choices: ["食べる", "飲む", "眠る"], hint: "動作" },
-            { word: "house", meaning: "家", choices: ["家", "公園", "駅"], hint: "場所" },
-            { word: "dog", meaning: "犬", choices: ["犬", "猫", "馬"], hint: "動物" },
-            { word: "sun", meaning: "太陽", choices: ["太陽", "月", "星"], hint: "天体" },
-            { word: "tree", meaning: "木", choices: ["木", "花", "草"], hint: "植物" },
-            { word: "smile", meaning: "笑顔", choices: ["笑顔", "涙", "怒り"], hint: "表情" }
-        ];
-
+        // グローバル変数
+        let questions = [];
         let currentQuestion = 0;
         let correctAnswers = 0;
         let totalQuestions = 0;
         let answered = false;
+        let createdQuestions = [];
 
-        // 配列をシャッフルする関数
+        // タブ切り替え
+        function switchTab(tabName) {
+            // タブボタンのアクティブ状態を切り替え
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // タブコンテンツの表示を切り替え
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabName + '-tab').classList.add('active');
+        }
+
+        // CSVパーサー
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+            const headers = lines[0].split(',');
+            const data = [];
+
+            for (let i = 1; i < lines.length; i++) {
+                if (lines[i].trim() === '') continue;
+                
+                const values = lines[i].split(',');
+                const row = {};
+                
+                headers.forEach((header, index) => {
+                    row[header.trim()] = values[index] ? values[index].trim() : '';
+                });
+
+                // データをクイズ形式に変換
+                if (row.word && row.meaning) {
+                    data.push({
+                        word: row.word,
+                        meaning: row.meaning,
+                        choices: [
+                            row.choice1 || row.meaning,
+                            row.choice2 || '',
+                            row.choice3 || ''
+                        ].filter(c => c !== ''),
+                        hint: row.hint || ''
+                    });
+                }
+            }
+
+            return data;
+        }
+
+        // 選択されたCSVファイルを読み込み
+        async function loadSelectedCSV() {
+            const select = document.getElementById('csvSelect');
+            const filePath = select.value;
+
+            if (!filePath) {
+                resetQuiz();
+                return;
+            }
+
+            try {
+                const response = await fetch(filePath);
+                const csvText = await response.text();
+                questions = parseCSV(csvText);
+
+                if (questions.length === 0) {
+                    alert('問題データが見つかりませんでした');
+                    return;
+                }
+
+                showFileInfo(`${select.options[select.selectedIndex].text} を読み込みました (${questions.length}問)`);
+                startQuiz();
+            } catch (error) {
+                console.error('CSVの読み込みエラー:', error);
+                alert('ファイルの読み込みに失敗しました');
+            }
+        }
+
+        // ローカルファイルを読み込み
+        function loadLocalFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    questions = parseCSV(e.target.result);
+
+                    if (questions.length === 0) {
+                        alert('問題データが見つかりませんでした');
+                        return;
+                    }
+
+                    // セレクトボックスをリセット
+                    document.getElementById('csvSelect').value = '';
+
+                    showFileInfo(`${file.name} を読み込みました (${questions.length}問)`);
+                    startQuiz();
+                } catch (error) {
+                    console.error('CSVの解析エラー:', error);
+                    alert('ファイルの解析に失敗しました');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // ファイル情報を表示
+        function showFileInfo(message) {
+            const fileInfo = document.getElementById('fileInfo');
+            fileInfo.textContent = message;
+            fileInfo.style.display = 'block';
+        }
+
+        // クイズ開始
+        function startQuiz() {
+            currentQuestion = 0;
+            correctAnswers = 0;
+            totalQuestions = 0;
+            answered = false;
+
+            document.getElementById('emptyState').style.display = 'none';
+            document.getElementById('quizArea').style.display = 'block';
+
+            updateScore();
+            showQuestion();
+        }
+
+        // クイズリセット
+        function resetQuiz() {
+            questions = [];
+            document.getElementById('emptyState').style.display = 'block';
+            document.getElementById('quizArea').style.display = 'none';
+            document.getElementById('fileInfo').style.display = 'none';
+        }
+
+        // 配列をシャッフル
         function shuffle(array) {
             const newArray = [...array];
             for (let i = newArray.length - 1; i > 0; i--) {
@@ -267,12 +684,14 @@
 
         // 問題を表示
         function showQuestion() {
+            if (questions.length === 0) return;
+
             answered = false;
             const question = questions[currentQuestion];
-            
+
             document.getElementById('questionNumber').textContent = `第${currentQuestion + 1}問`;
             document.getElementById('questionText').textContent = question.word;
-            document.getElementById('questionHint').textContent = `(${question.hint})`;
+            document.getElementById('questionHint').textContent = question.hint ? `(${question.hint})` : '';
             document.getElementById('result').classList.remove('show', 'correct', 'incorrect');
             document.getElementById('nextBtn').classList.remove('show');
 
@@ -281,7 +700,7 @@
             const choicesContainer = document.getElementById('choices');
             choicesContainer.innerHTML = '';
 
-            shuffledChoices.forEach((choice, index) => {
+            shuffledChoices.forEach((choice) => {
                 const btn = document.createElement('button');
                 btn.className = 'choice-btn';
                 btn.textContent = choice;
@@ -293,7 +712,7 @@
         // 解答をチェック
         function checkAnswer(selected, correct) {
             if (answered) return;
-            
+
             answered = true;
             totalQuestions++;
 
@@ -332,14 +751,134 @@
         }
 
         // 次の問題へ
-        document.getElementById('nextBtn').addEventListener('click', () => {
+        function nextQuestion() {
             currentQuestion = (currentQuestion + 1) % questions.length;
             showQuestion();
-        });
+        }
+
+        // === 問題作成機能 ===
+
+        // 問題を追加
+        function addQuestion() {
+            const word = document.getElementById('wordInput').value.trim();
+            const meaning = document.getElementById('meaningInput').value.trim();
+            const choice2 = document.getElementById('choice2Input').value.trim();
+            const choice3 = document.getElementById('choice3Input').value.trim();
+            const hint = document.getElementById('hintInput').value.trim();
+
+            if (!word || !meaning || !choice2 || !choice3) {
+                alert('必須項目を入力してください（ヒント以外）');
+                return;
+            }
+
+            const question = {
+                word,
+                meaning,
+                choice1: meaning,
+                choice2,
+                choice3,
+                hint
+            };
+
+            createdQuestions.push(question);
+            updateQuestionList();
+            clearForm();
+        }
+
+        // フォームをクリア
+        function clearForm() {
+            document.getElementById('wordInput').value = '';
+            document.getElementById('meaningInput').value = '';
+            document.getElementById('choice2Input').value = '';
+            document.getElementById('choice3Input').value = '';
+            document.getElementById('hintInput').value = '';
+            document.getElementById('wordInput').focus();
+        }
+
+        // 問題リストを更新
+        function updateQuestionList() {
+            const container = document.getElementById('questionListContainer');
+            const count = document.getElementById('questionListCount');
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            count.textContent = createdQuestions.length;
+            downloadBtn.disabled = createdQuestions.length === 0;
+
+            if (createdQuestions.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>まだ問題が作成されていません</p></div>';
+                return;
+            }
+
+            container.innerHTML = createdQuestions.map((q, index) => `
+                <div class="question-item">
+                    <div class="question-item-content">
+                        <div class="question-item-word">${q.word}</div>
+                        <div class="question-item-meaning">
+                            正解: ${q.meaning} / 選択肢: ${q.choice2}, ${q.choice3}
+                            ${q.hint ? ` / ヒント: ${q.hint}` : ''}
+                        </div>
+                    </div>
+                    <button class="question-item-delete" onclick="deleteQuestion(${index})">削除</button>
+                </div>
+            `).join('');
+        }
+
+        // 問題を削除
+        function deleteQuestion(index) {
+            if (confirm('この問題を削除しますか？')) {
+                createdQuestions.splice(index, 1);
+                updateQuestionList();
+            }
+        }
+
+        // CSVとしてダウンロード
+        function downloadCSV() {
+            if (createdQuestions.length === 0) {
+                alert('ダウンロードする問題がありません');
+                return;
+            }
+
+            // CSV形式に変換
+            let csvContent = 'word,meaning,choice1,choice2,choice3,hint\n';
+            createdQuestions.forEach(q => {
+                csvContent += `${q.word},${q.meaning},${q.choice1},${q.choice2},${q.choice3},${q.hint}\n`;
+            });
+
+            // ダウンロード
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            const timestamp = new Date().toISOString().slice(0, 10);
+            
+            link.setAttribute('href', url);
+            link.setAttribute('download', `quiz-questions-${timestamp}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // テンプレートをダウンロード
+        function downloadTemplate() {
+            const templateContent = `word,meaning,choice1,choice2,choice3,hint
+apple,りんご,りんご,バナナ,オレンジ,果物
+cat,猫,猫,犬,鳥,動物
+book,本,本,ペン,ノート,文房具`;
+
+            const blob = new Blob([templateContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'quiz-template.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
         // 初期化
-        showQuestion();
-        updateScore();
+        updateQuestionList();
     </script>
 </body>
 </html>

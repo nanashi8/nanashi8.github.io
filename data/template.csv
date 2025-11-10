@@ -1,0 +1,38 @@
+# CSVテンプレート - 英単語3択クイズ
+
+このファイルは、オリジナル問題集を作成するためのテンプレートです。
+
+## CSV形式
+
+```
+word,meaning,choice1,choice2,choice3,hint
+```
+
+## 各列の説明
+
+- **word**: 英単語（問題）
+- **meaning**: 正解の日本語訳
+- **choice1**: 選択肢1（正解の日本語訳と同じにしてください）
+- **choice2**: 選択肢2（不正解）
+- **choice3**: 選択肢3（不正解）
+- **hint**: ヒント（カテゴリなど）
+
+## 記入例
+
+```csv
+word,meaning,choice1,choice2,choice3,hint
+apple,りんご,りんご,バナナ,オレンジ,果物
+cat,猫,猫,犬,鳥,動物
+book,本,本,ペン,ノート,文房具
+```
+
+## ダウンロード用テンプレート
+
+以下のCSVをダウンロードして、Excelやテキストエディタで編集してください。
+
+```csv
+word,meaning,choice1,choice2,choice3,hint
+apple,りんご,りんご,バナナ,オレンジ,果物
+cat,猫,猫,犬,鳥,動物
+book,本,本,ペン,ノート,文房具
+```
