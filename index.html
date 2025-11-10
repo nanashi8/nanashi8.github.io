@@ -676,6 +676,17 @@
     </div>
 
     <script>
+        // ===== 最優先: エラーキャッチャー =====
+        window.addEventListener('error', function(e) {
+            const msg = `FATAL ERROR: ${e.message} at ${e.filename}:${e.lineno}:${e.colno}`;
+            alert(msg); // 画面中央にアラート表示
+            document.body.innerHTML = `<div style="padding:20px;background:red;color:white;font-size:16px;font-family:monospace;white-space:pre-wrap;">${msg}\n\nStack: ${e.error?.stack || 'N/A'}</div>` + document.body.innerHTML;
+        });
+        
+        // スクリプト読み込み確認
+        console.log('✅ Script loaded at:', new Date().toISOString());
+        alert('✅ JavaScriptが読み込まれました。このアラートが出ればスクリプトは動作しています。');
+        
         // グローバル変数
         let questions = [];
         let currentQuestion = 0;
@@ -705,8 +716,15 @@
         let debugEnabled = true; // 最初から表示
 
         function toggleDebugPanel() {
+            alert('toggleDebugPanel が呼ばれました');
             debugEnabled = !debugEnabled;
-            debugPanel().classList.toggle('show', debugEnabled);
+            const panel = debugPanel();
+            if (!panel) {
+                alert('ERROR: debugPanel要素が見つかりません！');
+                return;
+            }
+            panel.classList.toggle('show', debugEnabled);
+            alert('デバッグパネル表示: ' + debugEnabled);
         }
         
         // ページ読み込み時に自動表示
@@ -742,12 +760,18 @@
 
         // 自己診断: 流れを強制検証
         function runSelfTest() {
+            alert('runSelfTest が呼ばれました！');
             appendDebug('log','=== SelfTest開始 ===');
             const select = document.getElementById('csvSelect');
+            if (!select) {
+                alert('ERROR: csvSelect要素が見つかりません');
+                return;
+            }
             if (!select.value) {
                 appendDebug('warn','問題集未選択: basic-englishを仮選択');
                 select.value = 'data/basic-english.csv';
             }
+            alert('CSV選択: ' + select.value + ' / loadSelectedCSV呼び出し開始');
             loadSelectedCSV().then(()=>{
                 appendDebug('log',`questions配列長: ${questions.length}`);
                 if (questions.length>0) {
