@@ -641,28 +641,30 @@
         // CSVパーサー (quiz-app互換の7列形式に対応)
         // 形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
         function parseCSV(csvText) {
-            const lines = csvText.trim().split('\n');
+            const lines = csvText.trim().split('\n').filter(line => {
+                const trimmed = line.trim();
+                return trimmed && !trimmed.startsWith('//') && !trimmed.startsWith('#');
+            });
+            
             const data = [];
+            let startIndex = 0;
 
-            for (let i = 0; i < lines.length; i++) {
+            // ヘッダー行を検出してスキップ
+            if (lines.length > 0) {
+                const firstLine = lines[0].trim();
+                if (firstLine.includes('語句') || 
+                    firstLine.includes('term') ||
+                    firstLine.includes('読み') ||
+                    firstLine.includes('reading') ||
+                    firstLine.includes('意味') ||
+                    firstLine.includes('meaning')) {
+                    startIndex = 1; // ヘッダーをスキップ
+                }
+            }
+
+            for (let i = startIndex; i < lines.length; i++) {
                 const line = lines[i].trim();
-                
-                // 空行やコメント行をスキップ
-                if (!line || line.startsWith('//') || line.startsWith('#')) {
-                    continue;
-                }
-
-                // ヘッダー行を検出してスキップ
-                if (i === 0 && (
-                    line.includes('語句') || 
-                    line.includes('term') ||
-                    line.includes('読み') ||
-                    line.includes('reading') ||
-                    line.includes('意味') ||
-                    line.includes('meaning')
-                )) {
-                    continue;
-                }
+                if (!line) continue;
 
                 const columns = line.split(',').map(col => col.trim());
 
@@ -709,7 +711,12 @@
             try {
                 const response = await fetch(filePath);
                 const csvText = await response.text();
+                console.log('CSV読み込み成功:', filePath);
+                console.log('CSV内容（最初の200文字）:', csvText.substring(0, 200));
+                
                 questions = parseCSV(csvText);
+                console.log('パース結果:', questions.length, '問');
+                console.log('最初の問題:', questions[0]);
 
                 if (questions.length === 0) {
                     alert('問題データが見つかりませんでした');
@@ -799,10 +806,16 @@
 
         // 問題を表示
         function showQuestion() {
-            if (questions.length === 0) return;
+            console.log('showQuestion呼び出し: 問題数=', questions.length, '現在の問題=', currentQuestion);
+            
+            if (questions.length === 0) {
+                console.error('問題データが空です');
+                return;
+            }
 
             answered = false;
             const question = questions[currentQuestion];
+            console.log('表示する問題:', question);
 
             document.getElementById('questionNumber').textContent = `第${currentQuestion + 1}問`;
             document.getElementById('questionText').textContent = question.word;
@@ -832,6 +845,8 @@
             
             // 選択肢をシャッフル
             const choices = shuffle([correctAnswer, ...wrongAnswers]);
+            console.log('生成された選択肢:', choices);
+            
             const choicesContainer = document.getElementById('choices');
             choicesContainer.innerHTML = '';
 
@@ -842,6 +857,8 @@
                 btn.onclick = () => checkAnswer(choice, question.meaning);
                 choicesContainer.appendChild(btn);
             });
+            
+            console.log('問題表示完了');
         }
 
         // 解答をチェック
