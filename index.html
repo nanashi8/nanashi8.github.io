@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英単語3択クイズ - CSV対応版</title>
+    <script>
+        // ページ読み込み最初のテスト - これが出なければHTMLすら読み込まれていない
+        alert('🔴 HEAD内スクリプト実行 - バージョン: 2025-11-10-02');
+    </script>
     <style>
         * {
             margin: 0;
@@ -685,7 +689,7 @@
         
         // スクリプト読み込み確認
         console.log('✅ Script loaded at:', new Date().toISOString());
-        alert('✅ JavaScriptが読み込まれました。このアラートが出ればスクリプトは動作しています。');
+        alert('🟢 BODY内スクリプト実行 - バージョン: 2025-11-10-02 - JavaScriptは動作しています');
         
         // グローバル変数
         let questions = [];
