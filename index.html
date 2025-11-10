@@ -18,6 +18,8 @@
             overflow: hidden;
             padding: 0;
             margin: 0;
+            /* iPhoneのSafariのツールバー対策 */
+            padding-bottom: env(safe-area-inset-bottom);
         }
 
         .container {
@@ -27,6 +29,8 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            /* iPhoneのSafariのツールバー対策 */
+            padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
         }
 
         h1 {
@@ -250,8 +254,10 @@
 
         .next-btn {
             display: none;
-            margin: 10px 10px 15px;
+            margin: 10px 10px 20px;
             flex-shrink: 0;
+            /* iPhoneのSafariのブックマークバー/ツールバー対策 */
+            margin-bottom: calc(20px + env(safe-area-inset-bottom));
         }
 
         .next-btn.show {
@@ -553,24 +559,36 @@
             <div class="create-form">
                 <h3>✏️ 問題を追加</h3>
                 <div class="form-group">
-                    <label for="wordInput">英単語 *</label>
-                    <input type="text" id="wordInput" placeholder="apple" required>
+                    <label for="termInput">語句 *</label>
+                    <input type="text" id="termInput" placeholder="apple" required>
                 </div>
                 <div class="form-group">
-                    <label for="meaningInput">正解 *</label>
+                    <label for="readingInput">読み</label>
+                    <input type="text" id="readingInput" placeholder="アップル">
+                </div>
+                <div class="form-group">
+                    <label for="meaningInput">意味 *</label>
                     <input type="text" id="meaningInput" placeholder="りんご" required>
                 </div>
                 <div class="form-group">
-                    <label for="choice2Input">不正解1 *</label>
-                    <input type="text" id="choice2Input" placeholder="バナナ" required>
+                    <label for="etymologyInput">語源等解説</label>
+                    <input type="text" id="etymologyInput" placeholder="果物の一種">
                 </div>
                 <div class="form-group">
-                    <label for="choice3Input">不正解2 *</label>
-                    <input type="text" id="choice3Input" placeholder="オレンジ" required>
+                    <label for="relatedWordsInput">関連語</label>
+                    <input type="text" id="relatedWordsInput" placeholder="fruit;banana">
                 </div>
                 <div class="form-group">
-                    <label for="hintInput">ヒント</label>
-                    <input type="text" id="hintInput" placeholder="果物">
+                    <label for="relatedFieldsInput">関連分野</label>
+                    <input type="text" id="relatedFieldsInput" placeholder="食べ物;果物">
+                </div>
+                <div class="form-group">
+                    <label for="difficultyInput">難易度</label>
+                    <select id="difficultyInput">
+                        <option value="1">1 (初級)</option>
+                        <option value="2" selected>2 (中級)</option>
+                        <option value="3">3 (上級)</option>
+                    </select>
                 </div>
                 <div class="form-actions">
                     <button class="btn" onclick="addQuestion()">追加</button>
@@ -620,34 +638,58 @@
             document.getElementById(tabName + '-tab').classList.add('active');
         }
 
-        // CSVパーサー
+        // CSVパーサー (quiz-app互換の7列形式に対応)
+        // 形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
         function parseCSV(csvText) {
             const lines = csvText.trim().split('\n');
-            const headers = lines[0].split(',');
             const data = [];
 
-            for (let i = 1; i < lines.length; i++) {
-                if (lines[i].trim() === '') continue;
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
                 
-                const values = lines[i].split(',');
-                const row = {};
-                
-                headers.forEach((header, index) => {
-                    row[header.trim()] = values[index] ? values[index].trim() : '';
-                });
+                // 空行やコメント行をスキップ
+                if (!line || line.startsWith('//') || line.startsWith('#')) {
+                    continue;
+                }
 
-                // データをクイズ形式に変換
-                if (row.word && row.meaning) {
-                    data.push({
-                        word: row.word,
-                        meaning: row.meaning,
-                        choices: [
-                            row.choice1 || row.meaning,
-                            row.choice2 || '',
-                            row.choice3 || ''
-                        ].filter(c => c !== ''),
-                        hint: row.hint || ''
-                    });
+                // ヘッダー行を検出してスキップ
+                if (i === 0 && (
+                    line.includes('語句') || 
+                    line.includes('term') ||
+                    line.includes('読み') ||
+                    line.includes('reading') ||
+                    line.includes('意味') ||
+                    line.includes('meaning')
+                )) {
+                    continue;
+                }
+
+                const columns = line.split(',').map(col => col.trim());
+
+                // 7列形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
+                if (columns.length >= 3) {
+                    const term = columns[0] || '';  // 語句
+                    const reading = columns[1] || '';  // 読み
+                    const meaning = columns[2] || '';  // 意味 (正解)
+                    const etymology = columns[3] || '';  // 語源等解説
+                    const relatedWords = columns[4] || '';  // 関連語
+                    const relatedFields = columns[5] || '';  // 関連分野
+                    const difficulty = columns[6] || '';  // 難易度
+
+                    if (term && meaning) {
+                        data.push({
+                            word: term,
+                            meaning: meaning,
+                            reading: reading,
+                            etymology: etymology,
+                            relatedWords: relatedWords,
+                            relatedFields: relatedFields,
+                            difficulty: difficulty,
+                            // 選択肢生成用
+                            choices: [],
+                            hint: relatedFields || etymology.substring(0, 30)
+                        });
+                    }
                 }
             }
 
@@ -768,12 +810,32 @@
             document.getElementById('result').classList.remove('show', 'correct', 'incorrect');
             document.getElementById('nextBtn').classList.remove('show');
 
+            // 選択肢を動的に生成（他の問題から誤答を2つ選ぶ）
+            const correctAnswer = question.meaning;
+            const wrongAnswers = [];
+            
+            // 他の問題から誤答を収集
+            const otherQuestions = questions.filter((q, index) => index !== currentQuestion);
+            const shuffledOthers = shuffle(otherQuestions);
+            
+            for (let i = 0; i < shuffledOthers.length && wrongAnswers.length < 2; i++) {
+                const wrongAnswer = shuffledOthers[i].meaning;
+                if (wrongAnswer !== correctAnswer && !wrongAnswers.includes(wrongAnswer)) {
+                    wrongAnswers.push(wrongAnswer);
+                }
+            }
+            
+            // 誤答が足りない場合はダミーを追加
+            while (wrongAnswers.length < 2) {
+                wrongAnswers.push(`選択肢${wrongAnswers.length + 1}`);
+            }
+            
             // 選択肢をシャッフル
-            const shuffledChoices = shuffle(question.choices);
+            const choices = shuffle([correctAnswer, ...wrongAnswers]);
             const choicesContainer = document.getElementById('choices');
             choicesContainer.innerHTML = '';
 
-            shuffledChoices.forEach((choice) => {
+            choices.forEach((choice) => {
                 const btn = document.createElement('button');
                 btn.className = 'choice-btn';
                 btn.textContent = choice;
@@ -831,26 +893,29 @@
 
         // === 問題作成機能 ===
 
-        // 問題を追加
+        // 問題を追加 (quiz-app互換の7列形式)
         function addQuestion() {
-            const word = document.getElementById('wordInput').value.trim();
+            const term = document.getElementById('termInput').value.trim();
+            const reading = document.getElementById('readingInput').value.trim();
             const meaning = document.getElementById('meaningInput').value.trim();
-            const choice2 = document.getElementById('choice2Input').value.trim();
-            const choice3 = document.getElementById('choice3Input').value.trim();
-            const hint = document.getElementById('hintInput').value.trim();
+            const etymology = document.getElementById('etymologyInput').value.trim();
+            const relatedWords = document.getElementById('relatedWordsInput').value.trim();
+            const relatedFields = document.getElementById('relatedFieldsInput').value.trim();
+            const difficulty = document.getElementById('difficultyInput').value;
 
-            if (!word || !meaning || !choice2 || !choice3) {
-                alert('必須項目を入力してください（ヒント以外）');
+            if (!term || !meaning) {
+                alert('語句と意味は必須項目です');
                 return;
             }
 
             const question = {
-                word,
+                term,
+                reading,
                 meaning,
-                choice1: meaning,
-                choice2,
-                choice3,
-                hint
+                etymology,
+                relatedWords,
+                relatedFields,
+                difficulty
             };
 
             createdQuestions.push(question);
@@ -860,12 +925,14 @@
 
         // フォームをクリア
         function clearForm() {
-            document.getElementById('wordInput').value = '';
+            document.getElementById('termInput').value = '';
+            document.getElementById('readingInput').value = '';
             document.getElementById('meaningInput').value = '';
-            document.getElementById('choice2Input').value = '';
-            document.getElementById('choice3Input').value = '';
-            document.getElementById('hintInput').value = '';
-            document.getElementById('wordInput').focus();
+            document.getElementById('etymologyInput').value = '';
+            document.getElementById('relatedWordsInput').value = '';
+            document.getElementById('relatedFieldsInput').value = '';
+            document.getElementById('difficultyInput').value = '2';
+            document.getElementById('termInput').focus();
         }
 
         // 問題リストを更新
@@ -885,10 +952,11 @@
             container.innerHTML = createdQuestions.map((q, index) => `
                 <div class="question-item">
                     <div class="question-item-content">
-                        <div class="question-item-word">${q.word}</div>
+                        <div class="question-item-word">${q.term}</div>
                         <div class="question-item-meaning">
-                            正解: ${q.meaning} / 選択肢: ${q.choice2}, ${q.choice3}
-                            ${q.hint ? ` / ヒント: ${q.hint}` : ''}
+                            意味: ${q.meaning}
+                            ${q.reading ? ` / 読み: ${q.reading}` : ''}
+                            ${q.relatedFields ? ` / 分野: ${q.relatedFields}` : ''}
                         </div>
                     </div>
                     <button class="question-item-delete" onclick="deleteQuestion(${index})">削除</button>
@@ -904,17 +972,18 @@
             }
         }
 
-        // CSVとしてダウンロード
+        // CSVとしてダウンロード (quiz-app互換の7列形式)
         function downloadCSV() {
             if (createdQuestions.length === 0) {
                 alert('ダウンロードする問題がありません');
                 return;
             }
 
-            // CSV形式に変換
-            let csvContent = 'word,meaning,choice1,choice2,choice3,hint\n';
+            // CSV形式に変換 (quiz-app互換)
+            // 形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
+            let csvContent = '語句,読み,意味,語源等解説,関連語,関連分野,難易度\n';
             createdQuestions.forEach(q => {
-                csvContent += `${q.word},${q.meaning},${q.choice1},${q.choice2},${q.choice3},${q.hint}\n`;
+                csvContent += `${q.term},${q.reading},${q.meaning},${q.etymology},${q.relatedWords},${q.relatedFields},${q.difficulty}\n`;
             });
 
             // ダウンロード
@@ -931,10 +1000,23 @@
             document.body.removeChild(link);
         }
 
-        // テンプレートをダウンロード
+        // テンプレートをダウンロード (quiz-app互換)
         function downloadTemplate() {
-            const templateContent = `word,meaning,choice1,choice2,choice3,hint
-apple,りんご,りんご,バナナ,オレンジ,果物
+            const templateContent = `語句,読み,意味,語源等解説,関連語,関連分野,難易度
+apple,アップル,りんご,果物の一種,fruit;banana,食べ物;果物,1
+cat,キャット,猫,動物,dog;pet,動物,1`;
+
+            const blob = new Blob([templateContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'template.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 cat,猫,猫,犬,鳥,動物`;
 
             const blob = new Blob([templateContent], { type: 'text/csv;charset=utf-8;' });
