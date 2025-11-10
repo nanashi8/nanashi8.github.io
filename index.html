@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>動作確認テスト</title>
     <script>
-        alert('🔴 HEAD内スクリプト - v05');
+        alert('🔴 HEAD内スクリプト - v06');
+        
+        // DOMが読み込まれた後に実行
+        document.addEventListener('DOMContentLoaded', function() {
+            alert('🟢 DOMContentLoaded - v06');
+            
+            // 緑のメッセージを追加
+            const msg = document.createElement('p');
+            msg.style.color = 'green';
+            msg.style.fontWeight = 'bold';
+            msg.textContent = '✅ JavaScriptは正常に動作しています！ (HEAD内から実行)';
+            document.body.appendChild(msg);
+        });
     </script>
 </head>
 <body style="padding:20px; font-family:sans-serif;">
     <h1>🎯 英単語3択クイズ - 動作確認中</h1>
     <p>このメッセージが表示されれば、HTMLは正しく読み込まれています。</p>
     <button onclick="alert('ボタンクリック成功！')">クリックテスト</button>
-    
-    <script>
-        alert('🟢 BODY内スクリプト - v05');
-        document.body.innerHTML += '<p style="color:green; font-weight:bold;">✅ JavaScriptは正常に動作しています！</p>';
-    </script>
 </body>
 </html>
