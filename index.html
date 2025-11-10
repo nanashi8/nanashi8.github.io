@@ -548,8 +548,8 @@
 
         <!-- タブメニュー -->
         <div class="tab-menu">
-            <button class="tab-btn active" onclick="switchTab('quiz')">クイズ</button>
-            <button class="tab-btn" onclick="switchTab('create')">問題作成</button>
+            <button class="tab-btn active" onclick="switchTab('quiz', event)">クイズ</button>
+            <button class="tab-btn" onclick="switchTab('create', event)">問題作成</button>
         </div>
 
         <!-- クイズタブ -->
@@ -680,7 +680,10 @@
     </div>
 
     <script>
-        // ===== 最優先: エラーキャッチャー =====
+        // ===== 最優先: スクリプト実行確認 =====
+        alert('🟢 BODY内スクリプト開始 - バージョン: 2025-11-10-03');
+        
+        // ===== エラーキャッチャー =====
         window.addEventListener('error', function(e) {
             const msg = `FATAL ERROR: ${e.message} at ${e.filename}:${e.lineno}:${e.colno}`;
             alert(msg); // 画面中央にアラート表示
@@ -689,7 +692,6 @@
         
         // スクリプト読み込み確認
         console.log('✅ Script loaded at:', new Date().toISOString());
-        alert('🟢 BODY内スクリプト実行 - バージョン: 2025-11-10-02 - JavaScriptは動作しています');
         
         // グローバル変数
         let questions = [];
@@ -700,12 +702,14 @@
         let createdQuestions = [];
 
         // タブ切り替え
-        function switchTab(tabName) {
+        function switchTab(tabName, event) {
             // タブボタンのアクティブ状態を切り替え
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
 
             // タブコンテンツの表示を切り替え
             document.querySelectorAll('.tab-content').forEach(content => {
