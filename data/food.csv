@@ -1,0 +1,16 @@
+語句,読み,意味,語源等解説,関連語,関連分野,難易度
+bread,ブレッド,パン,小麦から作る食品,wheat;bakery,食べ物;主食,1
+rice,ライス,ご飯,米を炊いたもの,grain;meal,食べ物;主食,1
+milk,ミルク,牛乳,牛から採れる飲み物,cow;dairy,飲み物;乳製品,1
+coffee,コーヒー,コーヒー,豆から作る飲み物,cafe;drink,飲み物;嗜好品,2
+tea,ティー,お茶,葉から作る飲み物,green;hot,飲み物;嗜好品,1
+egg,エッグ,卵,鳥が産むもの,chicken;breakfast,食材;たんぱく質,1
+meat,ミート,肉,動物から採れる食材,beef;pork,食材;たんぱく質,1
+vegetable,ベジタブル,野菜,植物の食材,green;healthy,食材;植物,2
+fruit,フルーツ,果物,甘い植物の食材,sweet;healthy,食材;植物,1
+orange,オレンジ,オレンジ,柑橘類の果物,citrus;vitamin,果物;ビタミン,1
+banana,バナナ,バナナ,黄色い果物,yellow;sweet,果物;エネルギー,1
+grape,グレープ,ブドウ,房になる果物,wine;berry,果物;甘味,2
+strawberry,ストロベリー,イチゴ,赤い果物,red;sweet,果物;甘味,2
+tomato,トマト,トマト,赤い野菜,red;salad,野菜;サラダ,1
+potato,ポテト,ジャガイモ,土の中の野菜,starch;tuber,野菜;主食,1
