@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { QuizState } from './types';
+import { QuizState, Question } from './types';
 import { parseCSV } from './utils';
 import QuizView from './components/QuizView';
+import SpellingView from './components/SpellingView';
+import ReadingView from './components/ReadingView';
 import CreateView from './components/CreateView';
 import './App.css';
 
-type Tab = 'quiz' | 'create';
+type Tab = 'translation' | 'spelling' | 'reading' | 'create';
 
 function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('quiz');
+  const [activeTab, setActiveTab] = useState<Tab>('translation');
   const [quizState, setQuizState] = useState<QuizState>({
     questions: [],
     currentIndex: 0,
@@ -17,6 +19,9 @@ function App() {
     answered: false,
     selectedAnswer: null,
   });
+  
+  // 長文補習問題用の単語リスト
+  const [unknownWords, setUnknownWords] = useState<Question[]>([]);
 
   const handleLoadCSV = async (filePath: string) => {
     try {
@@ -29,8 +34,11 @@ function App() {
         return;
       }
 
+      // 長文補習問題も含める
+      const allQuestions = [...questions, ...unknownWords];
+
       setQuizState({
-        questions,
+        questions: allQuestions,
         currentIndex: 0,
         score: 0,
         totalAnswered: 0,
@@ -55,8 +63,11 @@ function App() {
           return;
         }
 
+        // 長文補習問題も含める
+        const allQuestions = [...questions, ...unknownWords];
+
         setQuizState({
-          questions,
+          questions: allQuestions,
           currentIndex: 0,
           score: 0,
           totalAnswered: 0,
@@ -93,6 +104,17 @@ function App() {
     }));
   };
 
+  // 長文から分からない単語を追加
+  const handleAddUnknownWords = (words: Question[]) => {
+    setUnknownWords((prev) => {
+      // 重複を避けて追加
+      const newWords = words.filter(
+        (word) => !prev.some((w) => w.word === word.word)
+      );
+      return [...prev, ...newWords];
+    });
+  };
+
   return (
     <div className="app">
       <header className="header">
@@ -101,10 +123,22 @@ function App() {
 
       <div className="tab-menu">
         <button
-          className={`tab-btn ${activeTab === 'quiz' ? 'active' : ''}`}
-          onClick={() => setActiveTab('quiz')}
+          className={`tab-btn ${activeTab === 'translation' ? 'active' : ''}`}
+          onClick={() => setActiveTab('translation')}
         >
-          クイズ
+          和訳
+        </button>
+        <button
+          className={`tab-btn ${activeTab === 'spelling' ? 'active' : ''}`}
+          onClick={() => setActiveTab('spelling')}
+        >
+          スペル
+        </button>
+        <button
+          className={`tab-btn ${activeTab === 'reading' ? 'active' : ''}`}
+          onClick={() => setActiveTab('reading')}
+        >
+          長文
         </button>
         <button
           className={`tab-btn ${activeTab === 'create' ? 'active' : ''}`}
@@ -115,7 +149,7 @@ function App() {
       </div>
 
       <div className="tab-content">
-        {activeTab === 'quiz' ? (
+        {activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}
             onLoadCSV={handleLoadCSV}
@@ -123,6 +157,14 @@ function App() {
             onAnswer={handleAnswer}
             onNext={handleNext}
           />
+        ) : activeTab === 'spelling' ? (
+          <SpellingView
+            questions={[...quizState.questions, ...unknownWords]}
+            onLoadCSV={handleLoadCSV}
+            onLoadLocalFile={handleLoadLocalFile}
+          />
+        ) : activeTab === 'reading' ? (
+          <ReadingView onAddUnknownWords={handleAddUnknownWords} />
         ) : (
           <CreateView />
         )}

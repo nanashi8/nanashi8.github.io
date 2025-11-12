@@ -103,3 +103,57 @@ export function generateChoices(
 
   return shuffle([correctAnswer, ...wrongAnswers]);
 }
+
+/**
+ * スペルクイズ用: 単語を虫食いにして、必要なアルファベットと選択肢を生成
+ */
+export function generateSpellingPuzzle(word: string): {
+  displayWord: string[];
+  missingIndices: number[];
+  letterChoices: string[];
+} {
+  if (!word || word.length === 0) {
+    return { displayWord: [], missingIndices: [], letterChoices: [] };
+  }
+
+  const wordUpper = word.toUpperCase();
+  const wordArray = wordUpper.split('');
+  
+  // 虫食いにする位置を決定（単語の長さに応じて）
+  const numBlanks = Math.min(Math.ceil(word.length / 2), 5);
+  const missingIndices: number[] = [];
+  
+  // ランダムに虫食い位置を選択
+  const availableIndices = Array.from({ length: word.length }, (_, i) => i);
+  const shuffledIndices = shuffle(availableIndices);
+  
+  for (let i = 0; i < numBlanks && i < shuffledIndices.length; i++) {
+    missingIndices.push(shuffledIndices[i]);
+  }
+  
+  missingIndices.sort((a, b) => a - b);
+  
+  // 正解のアルファベット
+  const correctLetters = missingIndices.map(idx => wordArray[idx]);
+  
+  // ダミーのアルファベット（重複しないように）
+  const allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const usedLetters = new Set(correctLetters);
+  const dummyLetters: string[] = [];
+  
+  const shuffledAll = shuffle(allLetters);
+  for (const letter of shuffledAll) {
+    if (!usedLetters.has(letter) && dummyLetters.length < 6) {
+      dummyLetters.push(letter);
+    }
+  }
+  
+  // 選択肢をシャッフル
+  const letterChoices = shuffle([...correctLetters, ...dummyLetters]);
+  
+  return {
+    displayWord: wordArray,
+    missingIndices,
+    letterChoices,
+  };
+}
