@@ -200,7 +200,7 @@ function ReadingView() {
               <div className="translation-text">
                 {currentPassage.phrases.map((phrase, idx) => (
                   <p key={idx}>
-                    <strong>{phrase.words.join(' ')}</strong> → {phrase.phraseMeaning}
+                    <strong>{phrase.segments.map(s => s.word).join(' ')}</strong> → {phrase.phraseMeaning}
                   </p>
                 ))}
               </div>
