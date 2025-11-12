@@ -62,3 +62,13 @@ export interface ReadingSegment {
   meaning: string; // 意味
   isUnknown: boolean; // 分からない単語としてマークされているか
 }
+
+// 問題集（単語セット）の型
+export interface QuestionSet {
+  id: string; // 一意のID
+  name: string; // 問題集の名前
+  questions: Question[]; // 問題リスト
+  createdAt: number; // 作成日時（タイムスタンプ）
+  isBuiltIn: boolean; // 組み込みサンプルかどうか（削除不可）
+  source?: string; // 作成元（例: "長文抽出", "CSV読み込み", "手動作成"）
+}

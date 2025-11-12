@@ -1,0 +1,99 @@
+[
+  {
+    "id": "passage1",
+    "title": "The Power of Learning",
+    "phrases": [
+      {
+        "words": ["Learning", "is", "a", "lifelong", "journey"],
+        "phraseMeaning": "学習は生涯の旅です",
+        "segments": [
+          { "word": "Learning", "meaning": "学習", "isUnknown": false },
+          { "word": "is", "meaning": "である", "isUnknown": false },
+          { "word": "a", "meaning": "一つの", "isUnknown": false },
+          { "word": "lifelong", "meaning": "生涯の", "isUnknown": false },
+          { "word": "journey", "meaning": "旅", "isUnknown": false }
+        ],
+        "isUnknown": false
+      },
+      {
+        "words": ["that", "enriches", "our", "minds"],
+        "phraseMeaning": "それは私たちの心を豊かにし",
+        "segments": [
+          { "word": "that", "meaning": "それは", "isUnknown": false },
+          { "word": "enriches", "meaning": "豊かにする", "isUnknown": false },
+          { "word": "our", "meaning": "私たちの", "isUnknown": false },
+          { "word": "minds", "meaning": "心", "isUnknown": false }
+        ],
+        "isUnknown": false
+      },
+      {
+        "words": ["and", "opens", "doors"],
+        "phraseMeaning": "そして扉を開きます",
+        "segments": [
+          { "word": "and", "meaning": "そして", "isUnknown": false },
+          { "word": "opens", "meaning": "開く", "isUnknown": false },
+          { "word": "doors", "meaning": "扉", "isUnknown": false }
+        ],
+        "isUnknown": false
+      },
+      {
+        "words": ["to", "new", "opportunities"],
+        "phraseMeaning": "新しい機会への",
+        "segments": [
+          { "word": "to", "meaning": "へ", "isUnknown": false },
+          { "word": "new", "meaning": "新しい", "isUnknown": false },
+          { "word": "opportunities", "meaning": "機会", "isUnknown": false }
+        ],
+        "isUnknown": false
+      }
+    ],
+    "translation": "学習は生涯の旅であり、私たちの心を豊かにし、新しい機会への扉を開きます。"
+  },
+  {
+    "id": "passage2",
+    "title": "Technology and Society",
+    "phrases": [
+      {
+        "words": ["Modern", "technology"],
+        "phraseMeaning": "現代の技術は",
+        "segments": [
+          { "word": "Modern", "meaning": "現代の", "isUnknown": false },
+          { "word": "technology", "meaning": "技術", "isUnknown": false }
+        ],
+        "isUnknown": false
+      },
+      {
+        "words": ["has", "transformed"],
+        "phraseMeaning": "変革してきました",
+        "segments": [
+          { "word": "has", "meaning": "have(助動詞)", "isUnknown": false },
+          { "word": "transformed", "meaning": "変革する", "isUnknown": false }
+        ],
+        "isUnknown": false
+      },
+      {
+        "words": ["how", "we", "communicate", "and", "work"],
+        "phraseMeaning": "私たちがコミュニケーションし働く方法を",
+        "segments": [
+          { "word": "how", "meaning": "どのように", "isUnknown": false },
+          { "word": "we", "meaning": "私たち", "isUnknown": false },
+          { "word": "communicate", "meaning": "コミュニケーションする", "isUnknown": false },
+          { "word": "and", "meaning": "と", "isUnknown": false },
+          { "word": "work", "meaning": "働く", "isUnknown": false }
+        ],
+        "isUnknown": false
+      },
+      {
+        "words": ["in", "unprecedented", "ways"],
+        "phraseMeaning": "前例のない方法で",
+        "segments": [
+          { "word": "in", "meaning": "で", "isUnknown": false },
+          { "word": "unprecedented", "meaning": "前例のない", "isUnknown": false },
+          { "word": "ways", "meaning": "方法", "isUnknown": false }
+        ],
+        "isUnknown": false
+      }
+    ],
+    "translation": "現代の技術は、私たちがコミュニケーションし、働く方法を前例のない方法で変革してきました。"
+  }
+]

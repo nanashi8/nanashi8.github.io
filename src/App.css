@@ -1092,3 +1092,204 @@
     font-size: 0.9em;
   }
 }
+
+/* ========== 問題集管理パネル ========== */
+.question-sets-panel {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-sets-panel h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.question-sets-toolbar {
+  margin-bottom: 0.75rem;
+}
+
+.btn-add-set {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-add-set:hover {
+  background: #5568d3;
+}
+
+.question-sets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.empty-message {
+  color: #999;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.question-set-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.2s;
+}
+
+.question-set-item.active {
+  background: #e3f2fd;
+  border: 2px solid #667eea;
+}
+
+.set-name-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+}
+
+.set-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.set-info {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+.delete-set-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition: transform 0.2s;
+}
+
+.delete-set-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ========== ReadingView ツールバー ========== */
+.reading-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-toolbar {
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-toolbar:hover {
+  background: #e0e0e0;
+}
+
+.btn-toolbar.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.passage-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.delete-btn-small {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  transition: transform 0.2s;
+}
+
+.delete-btn-small:hover {
+  transform: scale(1.2);
+}
+
+.passage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.btn-edit {
+  padding: 0.5rem 1rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-edit:hover {
+  background: #45a049;
+}
+
+.delete-phrase-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.delete-phrase-btn:hover {
+  transform: scale(1.2);
+}
+
+.btn-add-phrase {
+  width: 100%;
+  padding: 0.75rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-add-phrase:hover {
+  background: #5568d3;
+}
+

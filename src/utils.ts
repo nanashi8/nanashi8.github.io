@@ -157,3 +157,163 @@ export function generateSpellingPuzzle(word: string): {
     letterChoices,
   };
 }
+
+// ========== QuestionSet 管理関数 ==========
+
+import type { QuestionSet, ReadingPassage } from './types';
+
+const QUESTION_SETS_KEY = 'quizApp_questionSets';
+
+/**
+ * 問題集リストを localStorage に保存
+ */
+export function saveQuestionSets(sets: QuestionSet[]): void {
+  try {
+    localStorage.setItem(QUESTION_SETS_KEY, JSON.stringify(sets));
+  } catch (error) {
+    console.error('Failed to save question sets:', error);
+  }
+}
+
+/**
+ * 問題集リストを localStorage から読み込み
+ */
+export function loadQuestionSets(): QuestionSet[] {
+  try {
+    const data = localStorage.getItem(QUESTION_SETS_KEY);
+    if (!data) return [];
+    return JSON.parse(data) as QuestionSet[];
+  } catch (error) {
+    console.error('Failed to load question sets:', error);
+    return [];
+  }
+}
+
+/**
+ * 問題集を追加または更新
+ */
+export function saveQuestionSet(set: QuestionSet): void {
+  const sets = loadQuestionSets();
+  const index = sets.findIndex(s => s.id === set.id);
+  
+  if (index >= 0) {
+    sets[index] = set;
+  } else {
+    sets.push(set);
+  }
+  
+  saveQuestionSets(sets);
+}
+
+/**
+ * 問題集を削除（組み込みは削除不可）
+ */
+export function deleteQuestionSet(id: string): boolean {
+  const sets = loadQuestionSets();
+  const set = sets.find(s => s.id === id);
+  
+  if (set?.isBuiltIn) {
+    return false; // 組み込みは削除不可
+  }
+  
+  const filtered = sets.filter(s => s.id !== id);
+  saveQuestionSets(filtered);
+  return true;
+}
+
+/**
+ * 一意なIDを生成
+ */
+export function generateId(): string {
+  return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+}
+
+// ========== 長文データの JSON インポート/エクスポート ==========
+
+/**
+ * ReadingPassage 配列を JSON 文字列に変換
+ */
+export function exportPassagesJSON(passages: ReadingPassage[]): string {
+  return JSON.stringify(passages, null, 2);
+}
+
+/**
+ * JSON 文字列から ReadingPassage 配列をパース
+ */
+export function importPassagesJSON(jsonText: string): ReadingPassage[] {
+  try {
+    const parsed = JSON.parse(jsonText);
+    if (!Array.isArray(parsed)) {
+      throw new Error('Invalid format: expected array');
+    }
+    // 簡易バリデーション
+    for (const p of parsed) {
+      if (!p.id || !p.title || !Array.isArray(p.phrases)) {
+        throw new Error('Invalid passage structure');
+      }
+    }
+    return parsed as ReadingPassage[];
+  } catch (error) {
+    console.error('Failed to import passages:', error);
+    throw error;
+  }
+}
+
+/**
+ * ReadingPassage 配列を JSON ファイルとしてダウンロード
+ */
+export function downloadPassagesJSON(passages: ReadingPassage[], filename: string = 'passages.json'): void {
+  const json = exportPassagesJSON(passages);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.click();
+  
+  URL.revokeObjectURL(url);
+}
+
+/**
+ * 問題集を CSV 文字列に変換
+ */
+export function exportQuestionSetCSV(set: QuestionSet): string {
+  const header = '語句,読み,意味,語源等解説,関連語,関連分野,難易度';
+  const rows = set.questions.map(q => {
+    return [
+      q.word,
+      q.reading,
+      q.meaning,
+      q.etymology,
+      q.relatedWords,
+      q.relatedFields,
+      q.difficulty
+    ].map(field => {
+      // カンマやダブルクォートを含む場合はエスケープ
+      if (field.includes(',') || field.includes('"') || field.includes('\n')) {
+        return `"${field.replace(/"/g, '""')}"`;
+      }
+      return field;
+    }).join(',');
+  });
+  
+  return [header, ...rows].join('\n');
+}
+
+/**
+ * 問題集を CSV ファイルとしてダウンロード
+ */
+export function downloadQuestionSetCSV(set: QuestionSet): void {
+  const csv = exportQuestionSetCSV(set);
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `${set.name.replace(/[^a-zA-Z0-9]/g, '_')}.csv`;
+  link.click();
+  
+  URL.revokeObjectURL(url);
+}
+

@@ -1,6 +1,12 @@
-import { useState } from 'react';
-import { QuizState, Question } from './types';
-import { parseCSV } from './utils';
+import { useState, useEffect } from 'react';
+import { QuizState, Question, QuestionSet } from './types';
+import {
+  parseCSV,
+  loadQuestionSets,
+  saveQuestionSets,
+  deleteQuestionSet as utilDeleteQuestionSet,
+  generateId,
+} from './utils';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
@@ -19,10 +25,44 @@ function App() {
     answered: false,
     selectedAnswer: null,
   });
-  
-  // 長文補習問題用の単語リスト
+
+  // 問題集リスト管理
+  const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
+  const [selectedSetId, setSelectedSetId] = useState<string | null>(null);
   const [unknownWords, setUnknownWords] = useState<Question[]>([]);
 
+  // 初回読み込み: localStorage から問題集リストをロード
+  useEffect(() => {
+    const savedSets = loadQuestionSets();
+    setQuestionSets(savedSets);
+  }, []);
+
+  // 問題集が変更されたら localStorage に保存
+  useEffect(() => {
+    if (questionSets.length > 0) {
+      saveQuestionSets(questionSets);
+    }
+  }, [questionSets]);
+
+  // 選択中の問題集を選択して問題をロード
+  const handleSelectQuestionSet = (setId: string) => {
+    const set = questionSets.find((s) => s.id === setId);
+    if (!set) return;
+
+    setSelectedSetId(setId);
+    const allQuestions = [...set.questions, ...unknownWords];
+
+    setQuizState({
+      questions: allQuestions,
+      currentIndex: 0,
+      score: 0,
+      totalAnswered: 0,
+      answered: false,
+      selectedAnswer: null,
+    });
+  };
+
+  // CSV ファイルから問題集を作成
   const handleLoadCSV = async (filePath: string) => {
     try {
       const response = await fetch(filePath);
@@ -34,23 +74,28 @@ function App() {
         return;
       }
 
-      // 長文補習問題も含める
-      const allQuestions = [...questions, ...unknownWords];
+      // 新しい問題集として保存
+      const setName = prompt('問題集の名前を入力:', 'サンプル問題集');
+      if (!setName) return;
 
-      setQuizState({
-        questions: allQuestions,
-        currentIndex: 0,
-        score: 0,
-        totalAnswered: 0,
-        answered: false,
-        selectedAnswer: null,
-      });
+      const newSet: QuestionSet = {
+        id: generateId(),
+        name: setName,
+        questions,
+        createdAt: Date.now(),
+        isBuiltIn: false,
+        source: 'CSV読み込み',
+      };
+
+      setQuestionSets((prev) => [...prev, newSet]);
+      handleSelectQuestionSet(newSet.id);
     } catch (error) {
       console.error('CSVの読み込みエラー:', error);
       alert('ファイルの読み込みに失敗しました');
     }
   };
 
+  // ローカル CSV ファイルを読み込み
   const handleLoadLocalFile = (file: File) => {
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -63,23 +108,73 @@ function App() {
           return;
         }
 
-        // 長文補習問題も含める
-        const allQuestions = [...questions, ...unknownWords];
+        // 新しい問題集として保存
+        const setName = prompt('問題集の名前を入力:', file.name.replace('.csv', ''));
+        if (!setName) return;
 
-        setQuizState({
-          questions: allQuestions,
-          currentIndex: 0,
-          score: 0,
-          totalAnswered: 0,
-          answered: false,
-          selectedAnswer: null,
-        });
+        const newSet: QuestionSet = {
+          id: generateId(),
+          name: setName,
+          questions,
+          createdAt: Date.now(),
+          isBuiltIn: false,
+          source: 'ローカルCSV',
+        };
+
+        setQuestionSets((prev) => [...prev, newSet]);
+        handleSelectQuestionSet(newSet.id);
       } catch (error) {
         console.error('CSVの解析エラー:', error);
         alert('ファイルの解析に失敗しました');
       }
     };
     reader.readAsText(file);
+  };
+
+  // 問題集を削除
+  const handleDeleteSet = (id: string) => {
+    const set = questionSets.find((s) => s.id === id);
+    if (!set) return;
+
+    if (set.isBuiltIn) {
+      alert('組み込みの問題集は削除できません');
+      return;
+    }
+
+    if (!confirm(`問題集「${set.name}」を削除しますか?`)) return;
+
+    const success = utilDeleteQuestionSet(id);
+    if (success) {
+      setQuestionSets((prev) => prev.filter((s) => s.id !== id));
+      if (selectedSetId === id) {
+        setSelectedSetId(null);
+        setQuizState({
+          questions: [],
+          currentIndex: 0,
+          score: 0,
+          totalAnswered: 0,
+          answered: false,
+          selectedAnswer: null,
+        });
+      }
+    }
+  };
+
+  // 空の問題集を追加
+  const handleAddEmptySet = () => {
+    const name = prompt('新しい問題集の名前を入力:');
+    if (!name) return;
+
+    const newSet: QuestionSet = {
+      id: generateId(),
+      name,
+      questions: [],
+      createdAt: Date.now(),
+      isBuiltIn: false,
+      source: '手動作成',
+    };
+
+    setQuestionSets((prev) => [...prev, newSet]);
   };
 
   const handleAnswer = (answer: string, correct: string) => {
@@ -148,6 +243,54 @@ function App() {
         </button>
       </div>
 
+      {/* 問題集管理パネル（和訳・スペルタブのみ表示） */}
+      {(activeTab === 'translation' || activeTab === 'spelling') && (
+        <div className="question-sets-panel">
+          <h3>📚 問題集一覧</h3>
+          <div className="question-sets-toolbar">
+            <button onClick={handleAddEmptySet} className="btn-add-set">
+              ➕ 空の問題集を追加
+            </button>
+          </div>
+          <div className="question-sets-list">
+            {questionSets.length === 0 ? (
+              <p className="empty-message">
+                問題集がありません。CSV を読み込むか、空の問題集を追加してください。
+              </p>
+            ) : (
+              questionSets.map((set) => (
+                <div
+                  key={set.id}
+                  className={`question-set-item ${
+                    selectedSetId === set.id ? 'active' : ''
+                  }`}
+                >
+                  <button
+                    className="set-name-btn"
+                    onClick={() => handleSelectQuestionSet(set.id)}
+                  >
+                    <div className="set-name">{set.name}</div>
+                    <div className="set-info">
+                      {set.questions.length}問
+                      {set.source && ` • ${set.source}`}
+                    </div>
+                  </button>
+                  {!set.isBuiltIn && (
+                    <button
+                      className="delete-set-btn"
+                      onClick={() => handleDeleteSet(set.id)}
+                      title="削除"
+                    >
+                      🗑️
+                    </button>
+                  )}
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+      )}
+
       <div className="tab-content">
         {activeTab === 'translation' ? (
           <QuizView
@@ -159,7 +302,7 @@ function App() {
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
-            questions={[...quizState.questions, ...unknownWords]}
+            questions={quizState.questions}
             onLoadCSV={handleLoadCSV}
             onLoadLocalFile={handleLoadLocalFile}
           />
