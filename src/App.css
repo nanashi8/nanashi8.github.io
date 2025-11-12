@@ -78,6 +78,33 @@
   cursor: pointer;
 }
 
+/* iPhone / iOS: リキッドレンズ（テキスト拡大）の表示を抑制
+   - タップ時のハイライトとタッチコールアウトを無効化
+   - 一方で select/option の選択挙動は維持するため option では user-select を自動にする */
+select,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* 長押しでのコールアウトを抑制 */
+  -webkit-user-select: none;   /* テキスト選択（ルーペ）を抑制 */
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* select 要素自体はネイティブの選択UIを使うので、表示テキストは選択可能にする */
+select {
+  -webkit-appearance: menulist-button;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* option 内のテキストはブラウザ側で管理されるため自動にする */
+option {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
 .file-upload-label {
   padding: 10px 20px;
   background: #667eea;
