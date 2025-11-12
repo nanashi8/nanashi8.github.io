@@ -45,6 +45,7 @@ function QuizView({
             score={score}
             totalAnswered={totalAnswered}
             totalQuestions={questions.length}
+            currentIndex={currentIndex}
           />
           {currentQuestion && (
             <QuestionCard

@@ -138,16 +138,11 @@ function SpellingView({
             score={spellingState.score}
             totalAnswered={spellingState.totalAnswered}
             totalQuestions={spellingState.questions.length}
+            currentIndex={spellingState.currentIndex}
           />
 
           {currentQuestion && (
             <div className="spelling-card">
-              <div className="question-header">
-                <span className="question-number">
-                  問題 {spellingState.currentIndex + 1} / {spellingState.questions.length}
-                </span>
-              </div>
-
               <div className="meaning-display">
                 <div className="meaning-label">意味:</div>
                 <div className="meaning-text">{currentQuestion.meaning}</div>

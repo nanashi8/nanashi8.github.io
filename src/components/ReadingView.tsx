@@ -172,48 +172,58 @@ function ReadingView() {
         <div className="reading-content">
           <h3 className="passage-title">{currentPassage.title}</h3>
 
-          <div className="passage-instructions">
-            <p>💡 分からない単語をクリックしてマークし、「和訳を見る」を押してください</p>
-          </div>
+          {!showTranslation && (
+            <div className="passage-instructions">
+              <p>💡 分からない単語をタップして赤くマークしてください</p>
+            </div>
+          )}
 
-          {/* 長文本文（単語ごとにクリック可能） */}
-          <div className="passage-text">
+          {/* 長文本文：節・句ごとにカード化 */}
+          <div className="phrase-cards">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
-              <div key={phraseIdx} className="phrase-line">
-                {phrase.segments.map((segment, segIdx) => (
-                  <span
-                    key={segIdx}
-                    className={`word ${segment.isUnknown ? 'unknown' : ''} ${
-                      showTranslation ? 'disabled' : ''
-                    }`}
-                    onClick={() => handleWordClick(phraseIdx, segIdx)}
-                    title={showTranslation ? segment.meaning : ''}
-                  >
-                    {segment.word}
-                  </span>
-                ))}
+              <div key={phraseIdx} className="phrase-card">
+                {/* 英文の単語カード */}
+                <div className="phrase-words">
+                  {phrase.segments.map((segment, segIdx) => (
+                    <button
+                      key={segIdx}
+                      className={`word-card ${segment.isUnknown ? 'unknown' : ''} ${
+                        showTranslation ? 'disabled' : ''
+                      }`}
+                      onClick={() => handleWordClick(phraseIdx, segIdx)}
+                      disabled={showTranslation}
+                    >
+                      {segment.word}
+                    </button>
+                  ))}
+                </div>
+
+                {/* 和訳表示時：単語の意味と節・句の和訳 */}
+                {showTranslation && (
+                  <div className="phrase-translation">
+                    {/* 各単語の意味 */}
+                    <div className="word-meanings">
+                      {phrase.segments.map((segment, segIdx) => (
+                        <span key={segIdx} className="word-meaning">
+                          {segment.meaning}
+                        </span>
+                      ))}
+                    </div>
+                    {/* 節・句全体の和訳 */}
+                    <div className="phrase-meaning">
+                      <strong>→</strong> {phrase.phraseMeaning}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
 
-          {/* 和訳表示エリア */}
+          {/* 和訳表示時：全文の日本語訳 */}
           {showTranslation && (
-            <div className="translation-area">
-              <h4>📝 和訳</h4>
-              <div className="translation-text">
-                {currentPassage.phrases.map((phrase, idx) => (
-                  <p key={idx}>
-                    <strong>
-                      {phrase.words?.join(' ') || phrase.segments.map(s => s.word).join(' ')}
-                    </strong>{' '}
-                    → {phrase.phraseMeaning}
-                  </p>
-                ))}
-              </div>
-              <div className="full-translation">
-                <h5>全体の和訳:</h5>
-                <p>{currentPassage.translation}</p>
-              </div>
+            <div className="full-translation">
+              <h4>📝 全文の日本語訳</h4>
+              <p className="translation-text">{currentPassage.translation}</p>
             </div>
           )}
 
@@ -225,7 +235,7 @@ function ReadingView() {
               </button>
             ) : (
               <button className="btn-secondary" onClick={handleReset}>
-                🔄 リセット
+                🔄 リセットして最初から
               </button>
             )}
           </div>
