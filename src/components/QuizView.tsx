@@ -1,20 +1,22 @@
-import { QuizState } from '../types';
-import FileSelector from './FileSelector';
+import { QuizState, QuestionSet } from '../types';
+import QuestionSetSelector from './QuestionSetSelector';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 
 interface QuizViewProps {
   quizState: QuizState;
-  onLoadCSV: (filePath: string) => void;
-  onLoadLocalFile: (file: File) => void;
+  questionSets: QuestionSet[];
+  selectedSetId: string | null;
+  onSelectQuestionSet: (setId: string) => void;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
 }
 
 function QuizView({
   quizState,
-  onLoadCSV,
-  onLoadLocalFile,
+  questionSets,
+  selectedSetId,
+  onSelectQuestionSet,
   onAnswer,
   onNext,
 }: QuizViewProps) {
@@ -26,7 +28,12 @@ function QuizView({
 
   return (
     <div className="quiz-view">
-      <FileSelector onLoadCSV={onLoadCSV} onLoadLocalFile={onLoadLocalFile} />
+      <QuestionSetSelector
+        questionSets={questionSets}
+        selectedSetId={selectedSetId}
+        onSelect={onSelectQuestionSet}
+        label="📚 問題集を選択"
+      />
 
       {!hasQuestions ? (
         <div className="empty-state">

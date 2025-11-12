@@ -12,10 +12,18 @@ import ReadingView from './components/ReadingView';
 import QuestionEditorView from './components/QuestionEditorView';
 import './App.css';
 
-type Tab = 'translation' | 'spelling' | 'reading' | 'editor';
+type Tab = 'translation' | 'spelling' | 'reading' | 'settings';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
+  
+  // 問題集リスト管理
+  const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
+  
+  // 和訳・スペルタブで選択中の問題集ID
+  const [selectedQuizSetId, setSelectedQuizSetId] = useState<string | null>(null);
+  
+  // 和訳タブ用のクイズ状態
   const [quizState, setQuizState] = useState<QuizState>({
     questions: [],
     currentIndex: 0,
@@ -24,9 +32,6 @@ function App() {
     answered: false,
     selectedAnswer: null,
   });
-
-  // 問題集リスト管理
-  const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
 
   // 初回読み込み: localStorage から問題集リストをロード
   useEffect(() => {
@@ -110,6 +115,35 @@ function App() {
     reader.readAsText(file);
   };
 
+  // 問題集選択ハンドラ（和訳・スペル共通）
+  const handleSelectQuestionSet = (setId: string) => {
+    if (!setId) {
+      setSelectedQuizSetId(null);
+      setQuizState({
+        questions: [],
+        currentIndex: 0,
+        score: 0,
+        totalAnswered: 0,
+        answered: false,
+        selectedAnswer: null,
+      });
+      return;
+    }
+
+    const selectedSet = questionSets.find((s) => s.id === setId);
+    if (!selectedSet) return;
+
+    setSelectedQuizSetId(setId);
+    setQuizState({
+      questions: selectedSet.questions,
+      currentIndex: 0,
+      score: 0,
+      totalAnswered: 0,
+      answered: false,
+      selectedAnswer: null,
+    });
+  };
+
   const handleAnswer = (answer: string, correct: string) => {
     if (quizState.answered) return;
 
@@ -158,10 +192,10 @@ function App() {
           長文
         </button>
         <button
-          className={`tab-btn ${activeTab === 'editor' ? 'active' : ''}`}
-          onClick={() => setActiveTab('editor')}
+          className={`tab-btn ${activeTab === 'settings' ? 'active' : ''}`}
+          onClick={() => setActiveTab('settings')}
         >
-          問題編集
+          問題設定
         </button>
       </div>
 
@@ -169,21 +203,28 @@ function App() {
         {activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}
-            onLoadCSV={handleLoadCSV}
-            onLoadLocalFile={handleLoadLocalFile}
+            questionSets={questionSets}
+            selectedSetId={selectedQuizSetId}
+            onSelectQuestionSet={handleSelectQuestionSet}
             onAnswer={handleAnswer}
             onNext={handleNext}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
             questions={quizState.questions}
-            onLoadCSV={handleLoadCSV}
-            onLoadLocalFile={handleLoadLocalFile}
+            questionSets={questionSets}
+            selectedSetId={selectedQuizSetId}
+            onSelectQuestionSet={handleSelectQuestionSet}
           />
         ) : activeTab === 'reading' ? (
           <ReadingView />
         ) : (
-          <QuestionEditorView />
+          <QuestionEditorView
+            questionSets={questionSets}
+            onQuestionSetsChange={setQuestionSets}
+            onLoadCSV={handleLoadCSV}
+            onLoadLocalFile={handleLoadLocalFile}
+          />
         )}
       </div>
     </div>

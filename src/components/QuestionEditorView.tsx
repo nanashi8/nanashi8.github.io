@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Question, QuestionSet } from '../types';
 import {
-  loadQuestionSets,
   saveQuestionSets,
   deleteQuestionSet,
   generateId,
@@ -9,8 +8,19 @@ import {
   downloadQuestionSetCSV,
 } from '../utils';
 
-function QuestionEditorView() {
-  const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
+interface QuestionEditorViewProps {
+  questionSets: QuestionSet[];
+  onQuestionSetsChange: (sets: QuestionSet[]) => void;
+  onLoadCSV: (filePath: string) => void;
+  onLoadLocalFile: (file: File) => void;
+}
+
+function QuestionEditorView({
+  questionSets,
+  onQuestionSetsChange,
+  onLoadCSV: _onLoadCSV,
+  onLoadLocalFile: _onLoadLocalFile,
+}: QuestionEditorViewProps) {
   const [selectedSetId, setSelectedSetId] = useState<string | null>(null);
   const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
   const [isAddingNew, setIsAddingNew] = useState(false);
@@ -22,14 +32,21 @@ function QuestionEditorView() {
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'word' | 'difficulty' | 'date'>('word');
 
-  // 初回読み込み
+  // 初回読み込みは不要（親から受け取る）
+  // useEffect(() => {
+  //   const sets = loadQuestionSets();
+  //   onQuestionSetsChange(sets);
+  //   if (sets.length > 0) {
+  //     setSelectedSetId(sets[0].id);
+  //   }
+  // }, []);
+
+  // 最初の問題集を選択
   useEffect(() => {
-    const sets = loadQuestionSets();
-    setQuestionSets(sets);
-    if (sets.length > 0) {
-      setSelectedSetId(sets[0].id);
+    if (questionSets.length > 0 && !selectedSetId) {
+      setSelectedSetId(questionSets[0].id);
     }
-  }, []);
+  }, [questionSets, selectedSetId]);
 
   // 問題集が変更されたら保存
   useEffect(() => {
@@ -119,7 +136,7 @@ function QuestionEditorView() {
       source: '手動作成',
     };
 
-    setQuestionSets([...questionSets, newSet]);
+    onQuestionSetsChange([...questionSets, newSet]);
     setSelectedSetId(newSet.id);
   };
 
@@ -136,7 +153,7 @@ function QuestionEditorView() {
     if (!confirm(`問題集「${set.name}」を削除しますか？`)) return;
 
     deleteQuestionSet(id);
-    setQuestionSets(questionSets.filter((s) => s.id !== id));
+    onQuestionSetsChange(questionSets.filter((s) => s.id !== id));
     if (selectedSetId === id) {
       setSelectedSetId(questionSets[0]?.id || null);
     }
@@ -150,7 +167,7 @@ function QuestionEditorView() {
     const newName = prompt('新しい名前を入力:', set.name);
     if (!newName) return;
 
-    setQuestionSets(
+    onQuestionSetsChange(
       questionSets.map((s) => (s.id === id ? { ...s, name: newName } : s))
     );
   };
@@ -187,7 +204,7 @@ function QuestionEditorView() {
             source: 'CSV インポート',
           };
 
-          setQuestionSets([...questionSets, newSet]);
+          onQuestionSetsChange([...questionSets, newSet]);
           setSelectedSetId(newSet.id);
           alert(`${questions.length}個の問題をインポートしました`);
         } catch (error) {
@@ -205,6 +222,21 @@ function QuestionEditorView() {
     downloadQuestionSetCSV(currentSet);
   };
 
+  // CSVサンプルダウンロード
+  const handleDownloadSample = () => {
+    const sampleCSV = `語句,読み,意味,語源等解説,関連語,関連分野,難易度
+apple,アップル,りんご,ラテン語の malus から,fruit,食べ物,初級
+cat,キャット,ねこ,古英語の catt から,animal,動物,初級
+book,ブック,本,古英語の bōc から,reading,学習,初級`;
+    
+    const blob = new Blob([sampleCSV], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'sample-questions.csv';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  };
+
   // 問題を追加
   const handleAddQuestion = (question: Question) => {
     if (!currentSet) return;
@@ -215,7 +247,7 @@ function QuestionEditorView() {
       return;
     }
 
-    setQuestionSets(
+    onQuestionSetsChange(
       questionSets.map((s) =>
         s.id === currentSet.id
           ? { ...s, questions: [...s.questions, question] }
@@ -231,7 +263,7 @@ function QuestionEditorView() {
   const handleUpdateQuestion = (index: number, question: Question) => {
     if (!currentSet) return;
 
-    setQuestionSets(
+    onQuestionSetsChange(
       questionSets.map((s) =>
         s.id === currentSet.id
           ? {
@@ -249,7 +281,7 @@ function QuestionEditorView() {
   const handleDeleteQuestion = (index: number) => {
     if (!currentSet || !confirm('この問題を削除しますか？')) return;
 
-    setQuestionSets(
+    onQuestionSetsChange(
       questionSets.map((s) =>
         s.id === currentSet.id
           ? { ...s, questions: s.questions.filter((_, i) => i !== index) }
@@ -263,7 +295,7 @@ function QuestionEditorView() {
     if (!currentSet || selectedQuestions.size === 0) return;
     if (!confirm(`${selectedQuestions.size}個の問題を削除しますか？`)) return;
 
-    setQuestionSets(
+    onQuestionSetsChange(
       questionSets.map((s) =>
         s.id === currentSet.id
           ? {
@@ -301,7 +333,28 @@ function QuestionEditorView() {
 
   return (
     <div className="question-editor-view">
-      <h2>📝 問題編集</h2>
+      <h2>📝 問題設定</h2>
+
+      {/* CSV管理セクション */}
+      <div className="csv-management-section">
+        <h3>📄 CSV形式で問題集を管理</h3>
+        <div className="csv-actions">
+          <button onClick={handleDownloadSample} className="btn-secondary">
+            📥 サンプルCSVをダウンロード
+          </button>
+          <button onClick={handleImportCSV} className="btn-primary">
+            📂 CSVファイルから問題集を追加
+          </button>
+          {currentSet && (
+            <button onClick={handleExportCSV} className="btn-secondary">
+              💾 「{currentSet.name}」をCSVで保存
+            </button>
+          )}
+        </div>
+        <p className="csv-hint">
+          💡 サンプルCSVをダウンロードして編集後、「CSVファイルから問題集を追加」で読み込めます
+        </p>
+      </div>
 
       <div className="editor-layout">
         {/* 左サイドバー: 問題集一覧 */}

@@ -1913,3 +1913,234 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* 問題集選択セレクター */
+.question-set-selector {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.selector-label {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.question-set-select {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1em;
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.question-set-select:focus {
+  outline: none;
+  border-color: #5568d3;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* スペルタブ: カードタップ方式 */
+.user-word-display {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.user-word-label {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.user-word-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 4px;
+}
+
+.letter-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.letter-card {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  font-size: 2em;
+  font-weight: bold;
+  border: 3px solid #667eea;
+  border-radius: 12px;
+  background: white;
+  color: #667eea;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-card:hover:not(:disabled):not(.selected) {
+  background: #f0f4ff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+.letter-card.selected {
+  background: #667eea;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.letter-card.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.letter-card .selection-number {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: #ffc107;
+  color: #333;
+  border-radius: 50%;
+  font-size: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* CSV管理セクション */
+.csv-management-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.csv-management-section h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.csv-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.csv-hint {
+  font-size: 0.9em;
+  color: #666;
+  margin: 10px 0 0 0;
+}
+
+/* 長文選択 */
+.passage-selector {
+  margin-bottom: 20px;
+}
+
+.passage-select {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1em;
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+/* 小中学生向けの大きめのボタン */
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #f0f4ff;
+}
+
+/* タブのフォントサイズを大きく */
+.tab-btn {
+  font-size: 1.1em;
+  padding: 14px;
+}
+
+/* ヘッダーのタイトルを大きく */
+.header h1 {
+  font-size: 1.6em;
+}
+
+/* 問題文を大きく */
+.question-text {
+  font-size: 2.2em;
+}
+
+/* 選択肢ボタンを大きく */
+.choice-btn {
+  font-size: 1.2em;
+  padding: 18px;
+}
+
+@media (max-width: 768px) {
+  .letter-card {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8em;
+  }
+
+  .csv-actions {
+    flex-direction: column;
+  }
+
+  .csv-actions button {
+    width: 100%;
+  }
+}

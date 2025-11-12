@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react';
-import { Question, SpellingState } from '../types';
-import { generateSpellingPuzzle } from '../utils';
-import FileSelector from './FileSelector';
+import { Question, SpellingState, QuestionSet } from '../types';
+import QuestionSetSelector from './QuestionSetSelector';
 import ScoreBoard from './ScoreBoard';
 
 interface SpellingViewProps {
   questions: Question[];
-  onLoadCSV: (filePath: string) => void;
-  onLoadLocalFile: (file: File) => void;
+  questionSets: QuestionSet[];
+  selectedSetId: string | null;
+  onSelectQuestionSet: (setId: string) => void;
 }
 
-function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewProps) {
+function SpellingView({ 
+  questions, 
+  questionSets,
+  selectedSetId,
+  onSelectQuestionSet 
+}: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
     currentIndex: 0,
@@ -21,11 +26,10 @@ function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewPro
     correctWord: '',
   });
 
-  const [puzzle, setPuzzle] = useState<{
-    displayWord: string[];
-    missingIndices: number[];
-    letterChoices: string[];
-  }>({ displayWord: [], missingIndices: [], letterChoices: [] });
+  // シャッフルされたアルファベットカード
+  const [shuffledLetters, setShuffledLetters] = useState<string[]>([]);
+  // ユーザーが選択した順番のアルファベット
+  const [selectedSequence, setSelectedSequence] = useState<string[]>([]);
 
   // questionsが変更されたらスペルステートを初期化
   useEffect(() => {
@@ -42,47 +46,45 @@ function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewPro
     }
   }, [questions]);
 
-  // 現在の問題が変更されたらパズルを生成
+  // 現在の問題が変更されたらアルファベットをシャッフル
   useEffect(() => {
     if (spellingState.questions.length > 0) {
       const currentQuestion = spellingState.questions[spellingState.currentIndex];
-      const newPuzzle = generateSpellingPuzzle(currentQuestion.word);
-      setPuzzle(newPuzzle);
+      const word = currentQuestion.word.toUpperCase();
+      const letters = word.split('');
+      
+      // シャッフル
+      const shuffled = [...letters].sort(() => Math.random() - 0.5);
+      
+      setShuffledLetters(shuffled);
+      setSelectedSequence([]);
       setSpellingState((prev) => ({
         ...prev,
-        selectedLetters: new Array(newPuzzle.missingIndices.length).fill(null),
-        correctWord: currentQuestion.word.toUpperCase(),
+        correctWord: word,
         answered: false,
       }));
     }
   }, [spellingState.currentIndex, spellingState.questions]);
 
-  const handleLetterClick = (letter: string) => {
+  // カードをタップして選択
+  const handleLetterClick = (_letter: string, index: number) => {
     if (spellingState.answered) return;
+    
+    // まだ選択されていないカードのみ選択可能
+    if (selectedSequence.includes(`${index}`)) return;
 
-    // 次の空欄を探す
-    const nextEmptyIndex = spellingState.selectedLetters.findIndex((l) => l === null);
-    if (nextEmptyIndex === -1) return;
+    const newSequence = [...selectedSequence, `${index}`];
+    setSelectedSequence(newSequence);
 
-    const newSelectedLetters = [...spellingState.selectedLetters];
-    newSelectedLetters[nextEmptyIndex] = letter;
-
-    setSpellingState((prev) => ({
-      ...prev,
-      selectedLetters: newSelectedLetters,
-    }));
-
-    // 全ての空欄が埋まったら自動で答え合わせ
-    if (!newSelectedLetters.includes(null)) {
-      setTimeout(() => checkAnswer(newSelectedLetters), 300);
+    // 全てのカードが選択されたら自動で答え合わせ
+    if (newSequence.length === shuffledLetters.length) {
+      setTimeout(() => checkAnswer(newSequence), 300);
     }
   };
 
-  const checkAnswer = (selectedLetters: (string | null)[]) => {
-    const correctLetters = puzzle.missingIndices.map((idx) => puzzle.displayWord[idx]);
-    const isCorrect =
-      selectedLetters.length === correctLetters.length &&
-      selectedLetters.every((letter, i) => letter === correctLetters[i]);
+  const checkAnswer = (sequence: string[]) => {
+    const userWord = sequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
+    const isCorrect = userWord === spellingState.correctWord;
 
     setSpellingState((prev) => ({
       ...prev,
@@ -100,9 +102,9 @@ function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewPro
   };
 
   const handleReset = () => {
+    setSelectedSequence([]);
     setSpellingState((prev) => ({
       ...prev,
-      selectedLetters: new Array(puzzle.missingIndices.length).fill(null),
       answered: false,
     }));
   };
@@ -113,10 +115,18 @@ function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewPro
       : null;
 
   const hasQuestions = spellingState.questions.length > 0;
+  
+  // ユーザーが選択した単語
+  const userWord = selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
 
   return (
     <div className="spelling-view">
-      <FileSelector onLoadCSV={onLoadCSV} onLoadLocalFile={onLoadLocalFile} />
+      <QuestionSetSelector
+        questionSets={questionSets}
+        selectedSetId={selectedSetId}
+        onSelect={onSelectQuestionSet}
+        label="📚 問題集を選択"
+      />
 
       {!hasQuestions ? (
         <div className="empty-state">
@@ -150,51 +160,31 @@ function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewPro
                 </div>
               )}
 
-              <div className="word-blanks">
-                {puzzle.displayWord.map((letter, index) => {
-                  const missingIndex = puzzle.missingIndices.indexOf(index);
-                  const isMissing = missingIndex !== -1;
-
-                  if (isMissing) {
-                    const selectedLetter = spellingState.selectedLetters[missingIndex];
-                    const correctLetter = puzzle.displayWord[index];
-                    const isCorrect = selectedLetter === correctLetter;
-
-                    return (
-                      <div
-                        key={index}
-                        className={`letter-box blank ${
-                          spellingState.answered
-                            ? isCorrect
-                              ? 'correct'
-                              : 'incorrect'
-                            : ''
-                        }`}
-                      >
-                        {selectedLetter || '_'}
-                      </div>
-                    );
-                  } else {
-                    return (
-                      <div key={index} className="letter-box filled">
-                        {letter}
-                      </div>
-                    );
-                  }
-                })}
+              {/* ユーザーが選択中の単語表示 */}
+              <div className="user-word-display">
+                <div className="user-word-label">あなたの答え:</div>
+                <div className="user-word-text">
+                  {userWord || '（タップして並べてください）'}
+                </div>
               </div>
 
-              <div className="letter-choices">
-                {puzzle.letterChoices.map((letter, index) => {
-                  const isUsed = spellingState.selectedLetters.includes(letter);
+              {/* シャッフルされたアルファベットカード */}
+              <div className="letter-cards">
+                {shuffledLetters.map((letter, index) => {
+                  const isSelected = selectedSequence.includes(`${index}`);
+                  const selectionOrder = selectedSequence.indexOf(`${index}`) + 1;
+
                   return (
                     <button
                       key={index}
-                      className={`letter-btn ${isUsed ? 'used' : ''}`}
-                      onClick={() => handleLetterClick(letter)}
-                      disabled={spellingState.answered || isUsed}
+                      className={`letter-card ${isSelected ? 'selected' : ''} ${
+                        spellingState.answered ? 'disabled' : ''
+                      }`}
+                      onClick={() => handleLetterClick(letter, index)}
+                      disabled={spellingState.answered || isSelected}
                     >
                       {letter}
+                      {isSelected && <span className="selection-number">{selectionOrder}</span>}
                     </button>
                   );
                 })}
@@ -204,20 +194,10 @@ function SpellingView({ questions, onLoadCSV, onLoadLocalFile }: SpellingViewPro
                 <div className="result-display">
                   <div
                     className={`result-message ${
-                      spellingState.selectedLetters.every(
-                        (letter, i) =>
-                          letter === puzzle.displayWord[puzzle.missingIndices[i]]
-                      )
-                        ? 'correct'
-                        : 'incorrect'
+                      userWord === spellingState.correctWord ? 'correct' : 'incorrect'
                     }`}
                   >
-                    {spellingState.selectedLetters.every(
-                      (letter, i) =>
-                        letter === puzzle.displayWord[puzzle.missingIndices[i]]
-                    )
-                      ? '✅ 正解！'
-                      : '❌ 不正解'}
+                    {userWord === spellingState.correctWord ? '✅ 正解！' : '❌ 不正解'}
                   </div>
                   <div className="correct-answer">
                     正解: <strong>{spellingState.correctWord}</strong>
