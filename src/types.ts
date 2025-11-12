@@ -51,10 +51,10 @@ export interface ReadingPassage {
 }
 
 export interface ReadingPhrase {
-  words: string[]; // 文節内の単語リスト(例: ["Modern", "technology"])
+  words?: string[]; // 文節内の単語リスト(例: ["Modern", "technology"]) - オプショナル（segmentsから生成可能）
   phraseMeaning: string; // 文節全体の和訳(例: "現代の技術")
   segments: ReadingSegment[]; // 個別単語の詳細
-  isUnknown: boolean; // 文節全体が分からないとマークされているか
+  isUnknown?: boolean; // 文節全体が分からないとマークされているか - 旧バージョンとの互換性のため
 }
 
 export interface ReadingSegment {

@@ -157,6 +157,9 @@ function ReadingView() {
             setShowTranslation(false);
           }}
         >
+          <option value="" disabled>
+            -- 問題文を選択してください --
+          </option>
           {passages.map((passage) => (
             <option key={passage.id} value={passage.id}>
               {passage.title}
@@ -200,7 +203,10 @@ function ReadingView() {
               <div className="translation-text">
                 {currentPassage.phrases.map((phrase, idx) => (
                   <p key={idx}>
-                    <strong>{phrase.words.join(' ')}</strong> → {phrase.phraseMeaning}
+                    <strong>
+                      {phrase.words?.join(' ') || phrase.segments.map(s => s.word).join(' ')}
+                    </strong>{' '}
+                    → {phrase.phraseMeaning}
                   </p>
                 ))}
               </div>
