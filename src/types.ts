@@ -3,13 +3,12 @@
 
 export interface Question {
   word: string;        // 語句
-  reading: string;     // 読み
+  reading: string;     // 読み（国際基準アクセント記号をカタカナで正確に）
   meaning: string;     // 意味（正解）
-  etymology: string;   // 語源等解説
-  relatedWords: string; // 関連語
+  etymology: string;   // 語源等解説（小中学生向け派生語習得支援）
+  relatedWords: string; // 関連語（熟語・派生語と読みと意味）
   relatedFields: string; // 関連分野
   difficulty: string;  // 難易度
-  hint: string;        // ヒント（関連分野または語源から生成）
 }
 
 export interface QuizState {

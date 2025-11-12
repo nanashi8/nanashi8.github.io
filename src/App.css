@@ -161,21 +161,34 @@ option {
   gap: 8px 16px;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 12px;
   background: #f8f9fa;
   border-radius: 8px;
   margin-bottom: 12px;
   flex-shrink: 0;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .score-stat {
-  color: #555;
+  color: #666;
   white-space: nowrap;
+  font-size: 0.9em;
 }
 
 .score-stat strong {
   color: #333;
+  font-weight: 700;
+}
+
+.score-stat-large {
+  color: #333;
+  white-space: nowrap;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.score-stat-large strong {
+  color: #667eea;
   font-weight: 700;
 }
 
@@ -265,6 +278,124 @@ option {
   color: #721c24;
 }
 
+/* 読み表示 */
+.question-reading {
+  text-align: center;
+  font-size: 1.2em;
+  color: #667eea;
+  margin: -10px 0 20px 0;
+  font-weight: 500;
+}
+
+/* 回答結果カード（3つ横並び） */
+.result-cards {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  flex: 1;
+  min-width: 100px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-card.correct {
+  background: #d4edda;
+  color: #155724;
+  border: 3px solid #28a745;
+}
+
+.result-card.incorrect {
+  background: #f8d7da;
+  color: #721c24;
+  border: 3px solid #dc3545;
+}
+
+.result-card-btn {
+  flex: 1;
+  min-width: 100px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.result-card-btn:hover {
+  background: #f0f4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+.result-card-btn.next-btn {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.result-card-btn.next-btn:hover {
+  background: #5568d3;
+}
+
+.result-icon {
+  font-size: 1.1em;
+}
+
+/* 語源・関連語の表示エリア */
+.question-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.detail-item {
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+}
+
+.detail-item.etymology {
+  border-left: 4px solid #667eea;
+}
+
+.detail-item.related-words {
+  border-left: 4px solid #28a745;
+}
+
+.detail-label {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 0.95em;
+}
+
+.detail-content {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
+/* 旧スタイル（互換性維持） */
 .result {
   text-align: center;
   padding: 15px;
@@ -2402,6 +2533,41 @@ option {
     font-size: 0.85em;
     gap: 6px 12px;
     padding: 8px;
+  }
+
+  .score-stat-large {
+    font-size: 1em;
+  }
+
+  .result-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .result-card,
+  .result-card-btn {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .question-details {
+    padding: 12px;
+  }
+
+  .detail-item {
+    padding: 10px;
+  }
+
+  .detail-label {
+    font-size: 0.9em;
+  }
+
+  .detail-content {
+    font-size: 0.9em;
+  }
+
+  .question-reading {
+    font-size: 1.1em;
   }
 
   .letter-card {

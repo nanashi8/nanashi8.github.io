@@ -70,7 +70,6 @@ function ReadingView() {
             relatedWords: phrase.phraseMeaning,
             relatedFields: currentPassage.title,
             difficulty: '',
-            hint: phrase.phraseMeaning,
           });
         }
       });

@@ -616,7 +616,6 @@ function QuestionForm({
       relatedWords: '',
       relatedFields: '',
       difficulty: '',
-      hint: '',
     }
   );
 
@@ -628,7 +627,7 @@ function QuestionForm({
       return;
     }
 
-    onSave({ ...formData, hint: formData.relatedFields || formData.etymology });
+    onSave(formData);
   };
 
   return (

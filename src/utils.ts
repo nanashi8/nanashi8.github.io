@@ -56,7 +56,6 @@ export function parseCSV(csvText: string): Question[] {
           relatedWords,
           relatedFields,
           difficulty,
-          hint: relatedFields || etymology.substring(0, 30),
         });
       }
     }

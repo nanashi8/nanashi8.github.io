@@ -148,13 +148,6 @@ function SpellingView({
                 <div className="meaning-text">{currentQuestion.meaning}</div>
               </div>
 
-              {currentQuestion.hint && (
-                <div className="hint-display">
-                  <span className="hint-label">💡 ヒント:</span>
-                  <span className="hint-text">{currentQuestion.hint}</span>
-                </div>
-              )}
-
               {/* ユーザーが選択中の単語表示 */}
               <div className="user-word-display">
                 <div className="user-word-label">あなたの答え:</div>
