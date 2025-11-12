@@ -7,11 +7,7 @@ import {
   generateId,
 } from '../utils';
 
-interface ReadingViewProps {
-  onAddUnknownWords: (words: Question[]) => void;
-}
-
-function ReadingView({ onAddUnknownWords }: ReadingViewProps) {
+function ReadingView() {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -101,9 +97,8 @@ function ReadingView({ onAddUnknownWords }: ReadingViewProps) {
           source: `長文抽出: ${currentPassage.title}`,
         };
         saveQuestionSet(newSet);
-        onAddUnknownWords(unknownWords);
         alert(
-          `問題集「${setName}」を作成しました！\n${unknownWords.length}個の単語が和訳・スペルタブで復習できます。`
+          `問題集「${setName}」を作成しました!\n${unknownWords.length}個の単語が和訳・スペルタブで復習できます。`
         );
       }
     }
