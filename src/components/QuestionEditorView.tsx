@@ -430,6 +430,7 @@ function QuestionEditorView() {
                   value={difficultyFilter}
                   onChange={(e) => setDifficultyFilter(e.target.value)}
                   className="filter-select"
+                  aria-label="難易度でフィルタ"
                 >
                   <option value="all">すべての難易度</option>
                   <option value="初級">初級</option>
@@ -441,6 +442,7 @@ function QuestionEditorView() {
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
                   className="filter-select"
+                  aria-label="カテゴリでフィルタ"
                 >
                   <option value="all">すべてのカテゴリ</option>
                   {stats &&
@@ -454,6 +456,7 @@ function QuestionEditorView() {
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="filter-select"
+                  aria-label="並び替え"
                 >
                   <option value="word">単語順</option>
                   <option value="difficulty">難易度順</option>
@@ -496,6 +499,7 @@ function QuestionEditorView() {
                         checked={selectedQuestions.has(index)}
                         onChange={() => toggleQuestionSelection(index)}
                         className="question-checkbox"
+                        aria-label={`${question.word}を選択`}
                       />
                       <div className="question-content">
                         <div className="question-main">
@@ -651,8 +655,9 @@ function QuestionForm({
         </div>
 
         <div className="form-group">
-          <label>難易度</label>
+          <label htmlFor="difficulty-select">難易度</label>
           <select
+            id="difficulty-select"
             value={formData.difficulty}
             onChange={(e) => setFormData({ ...formData, difficulty: e.target.value })}
           >

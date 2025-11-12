@@ -157,8 +157,13 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
         </div>
 
         <div className="form-group">
-          <label>難易度</label>
-          <select name="difficulty" value={formData.difficulty} onChange={handleInputChange}>
+          <label htmlFor="create-difficulty-select">難易度</label>
+          <select
+            id="create-difficulty-select"
+            name="difficulty"
+            value={formData.difficulty}
+            onChange={handleInputChange}
+          >
             <option value="1">1 - 易しい</option>
             <option value="2">2 - 普通</option>
             <option value="3">3 - 難しい</option>
