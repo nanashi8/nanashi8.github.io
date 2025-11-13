@@ -5,7 +5,7 @@ import { saveQuestionSet, generateId } from '../utils';
 function ReadingView() {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
-  const [showTranslation, setShowTranslation] = useState(false);
+  const [phraseTranslations, setPhraseTranslations] = useState<boolean[]>([]);
   const [loading, setLoading] = useState(true);
 
   // 初回読み込み: public/data/passages.json から読み込み
@@ -17,6 +17,7 @@ function ReadingView() {
         setLoading(false);
         if (data.length > 0) {
           setSelectedPassageId(data[0].id);
+          setPhraseTranslations(new Array(data[0].phrases.length).fill(false));
         }
       })
       .catch((err) => {
@@ -30,7 +31,8 @@ function ReadingView() {
 
   // 単語クリック（分からない単語マーク）
   const handleWordClick = (phraseIndex: number, wordIndex: number) => {
-    if (showTranslation || !currentPassage) return;
+    const anyTranslationShown = phraseTranslations.some(shown => shown);
+    if (anyTranslationShown || !currentPassage) return;
 
     setPassages((prev) =>
       prev.map((passage) =>
@@ -53,9 +55,21 @@ function ReadingView() {
     );
   };
 
-  // 和訳表示（分からない単語を抽出して問題集として保存）
-  const handleShowTranslation = () => {
+  // フレーズごとの和訳表示
+  const handleShowPhraseTranslation = (phraseIndex: number) => {
+    setPhraseTranslations(prev => {
+      const newState = [...prev];
+      newState[phraseIndex] = true;
+      return newState;
+    });
+  };
+
+  // 全フレーズの和訳を表示（分からない単語を抽出して問題集として保存）
+  const handleShowAllTranslations = () => {
     if (!currentPassage) return;
+
+    // 全フレーズの和訳を表示
+    setPhraseTranslations(new Array(currentPassage.phrases.length).fill(true));
 
     // 分からない単語を収集
     const unknownWords: Question[] = [];
@@ -98,14 +112,12 @@ function ReadingView() {
         );
       }
     }
-
-    setShowTranslation(true);
   };
 
   // リセット
   const handleReset = () => {
-    setShowTranslation(false);
     if (currentPassage) {
+      setPhraseTranslations(new Array(currentPassage.phrases.length).fill(false));
       setPassages((prev) =>
         prev.map((passage) =>
           passage.id === currentPassage.id
@@ -152,8 +164,12 @@ function ReadingView() {
           className="passage-select"
           value={selectedPassageId || ''}
           onChange={(e) => {
-            setSelectedPassageId(e.target.value);
-            setShowTranslation(false);
+            const newPassageId = e.target.value;
+            setSelectedPassageId(newPassageId);
+            const newPassage = passages.find(p => p.id === newPassageId);
+            if (newPassage) {
+              setPhraseTranslations(new Array(newPassage.phrases.length).fill(false));
+            }
           }}
         >
           <option value="" disabled>
@@ -171,7 +187,7 @@ function ReadingView() {
         <div className="reading-content">
           <h3 className="passage-title">{currentPassage.title}</h3>
 
-          {!showTranslation && (
+          {!phraseTranslations.some(shown => shown) && (
             <div className="passage-instructions">
               <p>💡 分からない単語をタップして赤くマークしてください</p>
             </div>
@@ -187,27 +203,29 @@ function ReadingView() {
                     <button
                       key={segIdx}
                       className={`word-card ${segment.isUnknown ? 'unknown' : ''} ${
-                        showTranslation ? 'disabled' : ''
+                        phraseTranslations[phraseIdx] ? 'disabled' : ''
                       }`}
                       onClick={() => handleWordClick(phraseIdx, segIdx)}
-                      disabled={showTranslation}
+                      disabled={phraseTranslations[phraseIdx]}
                     >
-                      {segment.word}
+                      <span className="word-text">{segment.word}</span>
+                      {phraseTranslations[phraseIdx] && (
+                        <span className="word-meaning-inline">{segment.meaning}</span>
+                      )}
                     </button>
                   ))}
                 </div>
 
-                {/* 和訳表示時：単語の意味と節・句の和訳 */}
-                {showTranslation && (
+                {/* 和訳ボタンと和訳表示 */}
+                {!phraseTranslations[phraseIdx] ? (
+                  <button 
+                    className="phrase-translation-btn"
+                    onClick={() => handleShowPhraseTranslation(phraseIdx)}
+                  >
+                    和訳
+                  </button>
+                ) : (
                   <div className="phrase-translation">
-                    {/* 各単語の意味 */}
-                    <div className="word-meanings">
-                      {phrase.segments.map((segment, segIdx) => (
-                        <span key={segIdx} className="word-meaning">
-                          {segment.meaning}
-                        </span>
-                      ))}
-                    </div>
                     {/* 節・句全体の和訳 */}
                     <div className="phrase-meaning">
                       <strong>→</strong> {phrase.phraseMeaning}
@@ -218,8 +236,8 @@ function ReadingView() {
             ))}
           </div>
 
-          {/* 和訳表示時：全文の日本語訳 */}
-          {showTranslation && (
+          {/* 全文の日本語訳（全フレーズの和訳表示時） */}
+          {phraseTranslations.every(shown => shown) && (
             <div className="full-translation">
               <h4>📝 全文の日本語訳</h4>
               <p className="translation-text">{currentPassage.translation}</p>
@@ -228,9 +246,9 @@ function ReadingView() {
 
           {/* アクションボタン */}
           <div className="reading-actions">
-            {!showTranslation ? (
-              <button className="btn-primary" onClick={handleShowTranslation}>
-                ✅ 和訳を見る
+            {!phraseTranslations.some(shown => shown) ? (
+              <button className="btn-primary" onClick={handleShowAllTranslations}>
+                ✅ すべて和訳を見る
               </button>
             ) : (
               <button className="btn-secondary" onClick={handleReset}>

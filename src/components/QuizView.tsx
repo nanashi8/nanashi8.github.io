@@ -10,6 +10,7 @@ interface QuizViewProps {
   onSelectQuestionSet: (setId: string) => void;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
+  onPrevious: () => void;
 }
 
 function QuizView({
@@ -19,6 +20,7 @@ function QuizView({
   onSelectQuestionSet,
   onAnswer,
   onNext,
+  onPrevious,
 }: QuizViewProps) {
   const { questions, currentIndex, score, totalAnswered, answered, selectedAnswer } =
     quizState;
@@ -57,6 +59,7 @@ function QuizView({
               selectedAnswer={selectedAnswer}
               onAnswer={onAnswer}
               onNext={onNext}
+              onPrevious={onPrevious}
             />
           )}
         </>

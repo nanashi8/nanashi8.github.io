@@ -166,6 +166,15 @@ function App() {
     }));
   };
 
+  const handlePrevious = () => {
+    setQuizState((prev) => ({
+      ...prev,
+      currentIndex: prev.currentIndex > 0 ? prev.currentIndex - 1 : 0,
+      answered: false,
+      selectedAnswer: null,
+    }));
+  };
+
   return (
     <div className="app">
       <header className="header">
@@ -208,6 +217,7 @@ function App() {
             onSelectQuestionSet={handleSelectQuestionSet}
             onAnswer={handleAnswer}
             onNext={handleNext}
+            onPrevious={handlePrevious}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView

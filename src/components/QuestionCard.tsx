@@ -10,6 +10,7 @@ interface QuestionCardProps {
   selectedAnswer: string | null;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
+  onPrevious: () => void;
 }
 
 function QuestionCard({
@@ -20,6 +21,7 @@ function QuestionCard({
   selectedAnswer,
   onAnswer,
   onNext,
+  onPrevious,
 }: QuestionCardProps) {
   const choices = generateChoices(question.meaning, allQuestions, currentIndex);
 
@@ -33,11 +35,6 @@ function QuestionCard({
       return 'choice-btn incorrect';
     }
     return 'choice-btn';
-  };
-
-  const handleRetry = () => {
-    // リトライのためにページをリロードせず、次の問題に進んで戻る
-    onNext();
   };
 
   return (
@@ -56,7 +53,23 @@ function QuestionCard({
             onClick={() => onAnswer(choice, question.meaning)}
             disabled={answered}
           >
-            {choice}
+            <div className="choice-text">{choice}</div>
+            {answered && choice === question.meaning && (
+              <div className="choice-details">
+                {question.etymology && (
+                  <div className="choice-detail-item">
+                    <span className="detail-icon">📚</span>
+                    <span className="detail-text">{question.etymology}</span>
+                  </div>
+                )}
+                {question.relatedWords && (
+                  <div className="choice-detail-item">
+                    <span className="detail-icon">🔗</span>
+                    <span className="detail-text">{question.relatedWords}</span>
+                  </div>
+                )}
+              </div>
+            )}
           </button>
         ))}
       </div>
@@ -65,8 +78,12 @@ function QuestionCard({
         <>
           {/* 回答結果カード */}
           <div className="result-cards">
-            <button className="result-card-btn retry-btn" onClick={handleRetry}>
-              🔄 もう一度
+            <button 
+              className="result-card-btn prev-btn" 
+              onClick={onPrevious}
+              disabled={currentIndex === 0}
+            >
+              ← 前の問題へ
             </button>
             <div className={`result-card ${selectedAnswer === question.meaning ? 'correct' : 'incorrect'}`}>
               {selectedAnswer === question.meaning ? (
@@ -78,22 +95,6 @@ function QuestionCard({
             <button className="result-card-btn next-btn" onClick={onNext}>
               次の問題へ →
             </button>
-          </div>
-
-          {/* 語源・関連語の表示 */}
-          <div className="question-details">
-            {question.etymology && (
-              <div className="detail-item etymology">
-                <div className="detail-label">📚 語源・解説</div>
-                <div className="detail-content">{question.etymology}</div>
-              </div>
-            )}
-            {question.relatedWords && (
-              <div className="detail-item related-words">
-                <div className="detail-label">🔗 関連語・熟語</div>
-                <div className="detail-content">{question.relatedWords}</div>
-              </div>
-            )}
           </div>
         </>
       )}

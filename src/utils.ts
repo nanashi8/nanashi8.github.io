@@ -77,7 +77,7 @@ export function shuffle<T>(array: T[]): T[] {
 }
 
 /**
- * 選択肢を生成（正解1つ + 誤答2つ）
+ * 選択肢を生成（正解1つ + 誤答2つ + 「分からない」）
  */
 export function generateChoices(
   correctAnswer: string,
@@ -100,7 +100,9 @@ export function generateChoices(
     wrongAnswers.push(`選択肢${wrongAnswers.length + 1}`);
   }
 
-  return shuffle([correctAnswer, ...wrongAnswers]);
+  // 正解と誤答3つをシャッフルして、「分からない」を最後に追加
+  const shuffledFirst3 = shuffle([correctAnswer, ...wrongAnswers]);
+  return [...shuffledFirst3, '分からない'];
 }
 
 /**
