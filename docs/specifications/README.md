@@ -13,6 +13,7 @@
 5. **[04-question-creator.md](./04-question-creator.md)** - 問題作成タブ仕様
 6. **[05-data-structures.md](./05-data-structures.md)** - データ構造仕様
 7. **[06-styling.md](./06-styling.md)** - スタイリング仕様
+8. **[07-high-school-vocabulary.md](./07-high-school-vocabulary.md)** - 高校受験英単語集作成仕様 🆕
 
 ### 参考資料
 

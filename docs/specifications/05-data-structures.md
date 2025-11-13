@@ -11,12 +11,12 @@
 ```typescript
 export interface Question {
   word: string;         // 英単語・フレーズ
-  reading: string;      // 読み（ひらがな）
+  reading: string;      // アクセント記号を正確に表したカタカナ読み
   meaning: string;      // 日本語の意味
-  explanation: string;  // 語源や詳細な解説
-  relatedWords: string; // 関連語・類義語
-  category: string;     // カテゴリ・関連分野
-  difficulty: string;   // 難易度レベル
+  explanation: string;  // 中学生が語彙を増やすために役立つ、語源や語幹等の情報
+  relatedWords: string; // 関連語。例: "apple(ア́ップル): りんご, fruit(フル́ート): 果物"
+  category: string;     // 関連分野（下記リストから選択）
+  difficulty: string;   // 難易度レベル（初級, 中級, 上級）
 }
 ```
 
@@ -30,14 +30,38 @@ export interface Question {
 ```typescript
 {
   word: "apple",
-  reading: "アップル",
+  reading: "ア́ップル",
   meaning: "りんご",
-  explanation: "古英語æppelに由来。果物の一種",
-  relatedWords: "fruit, orange, banana",
+  explanation: "古英語の "æppel" が語源。派生: applesauce(ア́ップルソース): りんごソース / apple tree(ア́ップルツリー): りんごの木",
+  relatedWords: "fruit(フル́ート): 果物, pear(ペ́ア): 洋なし",
   category: "食べ物",
   difficulty: "初級"
 }
 ```
+
+**重要な仕様変更（2025-01-13）:**
+- `reading`: アクセント記号（́）を第一音節に必ず付与
+- `explanation`: 語源情報 + 派生語を「語句(読み): 意味」形式で含める
+- `relatedWords`: 「語句(読み): 意味」形式のトリプルで記述
+- 詳細は [`07-high-school-vocabulary.md`](./07-high-school-vocabulary.md) を参照
+
+## 🔖 カテゴリ（関連分野）一覧
+
+以下から選択してください（厳密一致）。
+
+- 学習, 伝達, 思考, 概念, 生活, 文化, 社会, 科学, 環境, 教育
+- 交通, 金融, 経済, 法律, 政治, 歴史, 地理, 健康, 人体, 人間関係
+- 生物, 自然, 食べ物, スポーツ, レジャー, 位置, 動作, 状態, 変化, 温度
+- 時間, 色, 価格, 手続き, 文法, 形容, 量, 頻度, 前置詞, 接続詞, 限定詞, 名詞, 副詞, 評価, 感情, 性質, 程度, 方向
+
+必要に応じて拡張する場合は、このリストに追加定義してからデータに反映してください。
+
+**CSV形式での記述:**
+```csv
+語句,読み,意味,語源等解説,関連語,関連分野,難易度
+apple,ア́ップル,りんご,古英語の "æppel" が語源。派生: applesauce(ア́ップルソース): りんごソース / apple tree(ア́ップルツリー): りんごの木,"fruit(フル́ート): 果物, pear(ペ́ア): 洋なし",食べ物,初級
+```
+
 
 ## 🎯 クイズ関連型
 
