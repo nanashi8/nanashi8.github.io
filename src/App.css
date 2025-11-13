@@ -80,10 +80,9 @@
 
 /* iPhone / iOS: リキッドレンズ（テキスト拡大）の表示を抑制
    - タップ時のハイライトとタッチコールアウトを無効化
-   - 一方で select/option の選択挙動は維持するため option では user-select を自動にする */
-select,
+   - select要素は除外してネイティブの選択UIを保持 */
 button,
-input,
+input:not([type="text"]),
 textarea {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none; /* 長押しでのコールアウトを抑制 */
@@ -92,11 +91,15 @@ textarea {
   touch-action: manipulation;
 }
 
-/* select 要素自体はネイティブの選択UIを使うので、表示テキストは選択可能にする */
+/* select要素は完全にネイティブの動作を許可 */
 select {
   -webkit-appearance: menulist-button;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); /* 薄くタップ反応を表示 */
+  -webkit-touch-callout: default;
   -webkit-user-select: auto;
   user-select: auto;
+  touch-action: auto; /* ネイティブのタッチ動作を許可 */
+  cursor: pointer;
 }
 
 /* option 内のテキストはブラウザ側で管理されるため自動にする */
