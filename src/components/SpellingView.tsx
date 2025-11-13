@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState, QuestionSet } from '../types';
 import QuestionSetSelector from './QuestionSetSelector';
 import ScoreBoard from './ScoreBoard';
+import { addQuizResult } from '../progressStorage';
+import { generateId } from '../utils';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -30,6 +32,10 @@ function SpellingView({
   const [shuffledLetters, setShuffledLetters] = useState<string[]>([]);
   // ユーザーが選択した順番のアルファベット
   const [selectedSequence, setSelectedSequence] = useState<string[]>([]);
+  
+  // 進捗追跡用
+  const quizStartTimeRef = useRef<number>(0);
+  const incorrectWordsRef = useRef<string[]>([]);
 
   // questionsが変更されたらスペルステートを初期化
   useEffect(() => {
@@ -43,6 +49,10 @@ function SpellingView({
         selectedLetters: [],
         correctWord: '',
       });
+      
+      // クイズ開始時刻を記録
+      quizStartTimeRef.current = Date.now();
+      incorrectWordsRef.current = [];
     }
   }, [questions]);
 
@@ -86,12 +96,48 @@ function SpellingView({
     const userWord = sequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
     const isCorrect = userWord === spellingState.correctWord;
 
-    setSpellingState((prev) => ({
-      ...prev,
-      answered: true,
-      score: isCorrect ? prev.score + 1 : prev.score,
-      totalAnswered: prev.totalAnswered + 1,
-    }));
+    // 間違えた単語を記録
+    if (!isCorrect && spellingState.questions[spellingState.currentIndex]) {
+      incorrectWordsRef.current.push(spellingState.questions[spellingState.currentIndex].word);
+    }
+
+    setSpellingState((prev) => {
+      const newState = {
+        ...prev,
+        answered: true,
+        score: isCorrect ? prev.score + 1 : prev.score,
+        totalAnswered: prev.totalAnswered + 1,
+      };
+      
+      // 全問題に回答したら進捗を保存
+      if (newState.totalAnswered === prev.questions.length && selectedSetId) {
+        const selectedSet = questionSets.find((s) => s.id === selectedSetId);
+        if (selectedSet) {
+          const timeSpent = Math.floor((Date.now() - quizStartTimeRef.current) / 1000);
+          const percentage = (newState.score / newState.totalAnswered) * 100;
+          
+          addQuizResult({
+            id: generateId(),
+            questionSetId: selectedSet.id,
+            questionSetName: selectedSet.name,
+            score: newState.score,
+            total: newState.totalAnswered,
+            percentage,
+            date: Date.now(),
+            timeSpent,
+            incorrectWords: incorrectWordsRef.current,
+            mode: 'spelling',
+          });
+          
+          // 完了メッセージ
+          setTimeout(() => {
+            alert(`スペルクイズ完了！\n正解: ${newState.score}/${newState.totalAnswered} (${percentage.toFixed(1)}%)\n成績タブで詳細を確認できます。`);
+          }, 500);
+        }
+      }
+      
+      return newState;
+    });
   };
 
   const handleNext = () => {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { QuizState, QuestionSet } from './types';
 import {
   parseCSV,
@@ -6,13 +6,15 @@ import {
   saveQuestionSets,
   generateId,
 } from './utils';
+import { addQuizResult } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
 import QuestionEditorView from './components/QuestionEditorView';
+import StatsView from './components/StatsView';
 import './App.css';
 
-type Tab = 'translation' | 'spelling' | 'reading' | 'settings';
+type Tab = 'translation' | 'spelling' | 'reading' | 'stats' | 'settings';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
@@ -32,6 +34,10 @@ function App() {
     answered: false,
     selectedAnswer: null,
   });
+
+  // 進捗追跡用
+  const quizStartTimeRef = useRef<number>(0);
+  const incorrectWordsRef = useRef<string[]>([]);
 
   // 初回読み込み: localStorage から問題集リストをロード
   useEffect(() => {
@@ -142,19 +148,60 @@ function App() {
       answered: false,
       selectedAnswer: null,
     });
+    
+    // クイズ開始時刻を記録
+    quizStartTimeRef.current = Date.now();
+    incorrectWordsRef.current = [];
   };
 
   const handleAnswer = (answer: string, correct: string) => {
     if (quizState.answered) return;
 
     const isCorrect = answer === correct;
-    setQuizState((prev) => ({
-      ...prev,
-      answered: true,
-      selectedAnswer: answer,
-      score: isCorrect ? prev.score + 1 : prev.score,
-      totalAnswered: prev.totalAnswered + 1,
-    }));
+    
+    // 間違えた単語を記録
+    if (!isCorrect && quizState.questions[quizState.currentIndex]) {
+      incorrectWordsRef.current.push(quizState.questions[quizState.currentIndex].word);
+    }
+    
+    setQuizState((prev) => {
+      const newState = {
+        ...prev,
+        answered: true,
+        selectedAnswer: answer,
+        score: isCorrect ? prev.score + 1 : prev.score,
+        totalAnswered: prev.totalAnswered + 1,
+      };
+      
+      // 全問題に回答したら進捗を保存
+      if (newState.totalAnswered === prev.questions.length && selectedQuizSetId) {
+        const selectedSet = questionSets.find((s) => s.id === selectedQuizSetId);
+        if (selectedSet) {
+          const timeSpent = Math.floor((Date.now() - quizStartTimeRef.current) / 1000);
+          const percentage = (newState.score / newState.totalAnswered) * 100;
+          
+          addQuizResult({
+            id: generateId(),
+            questionSetId: selectedSet.id,
+            questionSetName: selectedSet.name,
+            score: newState.score,
+            total: newState.totalAnswered,
+            percentage,
+            date: Date.now(),
+            timeSpent,
+            incorrectWords: incorrectWordsRef.current,
+            mode: 'translation',
+          });
+          
+          // 完了メッセージ
+          setTimeout(() => {
+            alert(`クイズ完了！\n正解: ${newState.score}/${newState.totalAnswered} (${percentage.toFixed(1)}%)\n成績タブで詳細を確認できます。`);
+          }, 500);
+        }
+      }
+      
+      return newState;
+    });
   };
 
   const handleNext = () => {
@@ -201,6 +248,12 @@ function App() {
           長文
         </button>
         <button
+          className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
+          onClick={() => setActiveTab('stats')}
+        >
+          成績
+        </button>
+        <button
           className={`tab-btn ${activeTab === 'settings' ? 'active' : ''}`}
           onClick={() => setActiveTab('settings')}
         >
@@ -228,6 +281,10 @@ function App() {
           />
         ) : activeTab === 'reading' ? (
           <ReadingView />
+        ) : activeTab === 'stats' ? (
+          <StatsView
+            questionSets={questionSets}
+          />
         ) : (
           <QuestionEditorView
             questionSets={questionSets}
