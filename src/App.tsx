@@ -47,8 +47,49 @@ function App() {
 
   // 初回読み込み: localStorage から問題集リストをロード
   useEffect(() => {
-    const savedSets = loadQuestionSets();
-    setQuestionSets(savedSets);
+    const loadInitialData = async () => {
+      const savedSets = loadQuestionSets();
+      
+      // 初回起動時（問題集が空）の場合、デフォルトCSVを読み込む
+      if (savedSets.length === 0) {
+        const defaultCSVs = [
+          { path: '/data/basic-english.csv', name: '基礎英単語' },
+          { path: '/data/animals.csv', name: '動物の英単語' },
+          { path: '/data/food.csv', name: '食べ物の英単語' },
+        ];
+        
+        const newSets: QuestionSet[] = [];
+        
+        for (const csv of defaultCSVs) {
+          try {
+            const response = await fetch(csv.path);
+            const csvText = await response.text();
+            const questions = parseCSV(csvText);
+            
+            if (questions.length > 0) {
+              newSets.push({
+                id: generateId(),
+                name: csv.name,
+                questions,
+                createdAt: Date.now(),
+                isBuiltIn: true,
+                source: 'デフォルト問題集',
+              });
+            }
+          } catch (error) {
+            console.error(`${csv.name}の読み込みに失敗:`, error);
+          }
+        }
+        
+        if (newSets.length > 0) {
+          setQuestionSets(newSets);
+        }
+      } else {
+        setQuestionSets(savedSets);
+      }
+    };
+    
+    loadInitialData();
   }, []);
 
   // 問題集が変更されたら localStorage に保存
