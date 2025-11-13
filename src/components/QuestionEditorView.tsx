@@ -13,6 +13,8 @@ interface QuestionEditorViewProps {
   onQuestionSetsChange: (sets: QuestionSet[]) => void;
   onLoadCSV: (filePath: string) => void;
   onLoadLocalFile: (file: File) => void;
+  autoAdvance: boolean;
+  onAutoAdvanceChange: (value: boolean) => void;
 }
 
 function QuestionEditorView({
@@ -20,6 +22,8 @@ function QuestionEditorView({
   onQuestionSetsChange,
   onLoadCSV: _onLoadCSV,
   onLoadLocalFile: _onLoadLocalFile,
+  autoAdvance,
+  onAutoAdvanceChange,
 }: QuestionEditorViewProps) {
   const [selectedSetId, setSelectedSetId] = useState<string | null>(null);
   const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
@@ -334,6 +338,23 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
   return (
     <div className="question-editor-view">
       <h2>📝 問題設定</h2>
+
+      {/* 基本設定セクション */}
+      <div className="settings-section">
+        <h3>⚙️ 基本設定</h3>
+        <div className="setting-item">
+          <label className="setting-label">
+            <input
+              type="checkbox"
+              checked={autoAdvance}
+              onChange={(e) => onAutoAdvanceChange(e.target.checked)}
+              className="setting-checkbox"
+            />
+            <span className="setting-text">正解したら自動で次の問題へ進む</span>
+          </label>
+          <p className="setting-hint">オンにすると、正解時に1.5秒後に自動で次の問題へ進みます</p>
+        </div>
+      </div>
 
       {/* CSV管理セクション */}
       <div className="csv-management-section">

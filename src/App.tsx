@@ -38,6 +38,12 @@ function App() {
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
   const incorrectWordsRef = useRef<string[]>([]);
+  
+  // 設定
+  const [autoAdvance, setAutoAdvance] = useState<boolean>(() => {
+    const saved = localStorage.getItem('quiz-auto-advance');
+    return saved ? JSON.parse(saved) : false;
+  });
 
   // 初回読み込み: localStorage から問題集リストをロード
   useEffect(() => {
@@ -51,6 +57,11 @@ function App() {
       saveQuestionSets(questionSets);
     }
   }, [questionSets]);
+  
+  // 自動進行設定の保存
+  useEffect(() => {
+    localStorage.setItem('quiz-auto-advance', JSON.stringify(autoAdvance));
+  }, [autoAdvance]);
 
   // CSV ファイルから問題集を作成
   const handleLoadCSV = async (filePath: string) => {
@@ -173,6 +184,13 @@ function App() {
         totalAnswered: prev.totalAnswered + 1,
       };
       
+      // 自動で次へ進む（正解時のみ）
+      if (autoAdvance && isCorrect) {
+        setTimeout(() => {
+          handleNext();
+        }, 1500);
+      }
+      
       // 全問題に回答したら進捗を保存
       if (newState.totalAnswered === prev.questions.length && selectedQuizSetId) {
         const selectedSet = questionSets.find((s) => s.id === selectedQuizSetId);
@@ -291,6 +309,8 @@ function App() {
             onQuestionSetsChange={setQuestionSets}
             onLoadCSV={handleLoadCSV}
             onLoadLocalFile={handleLoadLocalFile}
+            autoAdvance={autoAdvance}
+            onAutoAdvanceChange={setAutoAdvance}
           />
         )}
       </div>

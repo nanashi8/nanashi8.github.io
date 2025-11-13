@@ -236,6 +236,45 @@ function SpellingView({
                   <div className="correct-answer">
                     正解: <strong>{spellingState.correctWord}</strong>
                   </div>
+                  
+                  {/* 詳細情報の表示 */}
+                  <div className="question-details-spelling">
+                    {currentQuestion.reading && (
+                      <div className="detail-row">
+                        <span className="detail-label">読み:</span>
+                        <span className="detail-content">{currentQuestion.reading}</span>
+                      </div>
+                    )}
+                    <div className="detail-row">
+                      <span className="detail-label">意味:</span>
+                      <span className="detail-content">{currentQuestion.meaning}</span>
+                    </div>
+                    {currentQuestion.etymology && (
+                      <div className="detail-row">
+                        <span className="detail-label">📚 語源等解説:</span>
+                        <span className="detail-content">{currentQuestion.etymology}</span>
+                      </div>
+                    )}
+                    {currentQuestion.relatedWords && (
+                      <div className="detail-row">
+                        <span className="detail-label">🔗 関連語:</span>
+                        <span className="detail-content">{currentQuestion.relatedWords}</span>
+                      </div>
+                    )}
+                    {currentQuestion.relatedFields && (
+                      <div className="detail-row">
+                        <span className="detail-label">🏷️ 関連分野:</span>
+                        <span className="detail-content">{currentQuestion.relatedFields}</span>
+                      </div>
+                    )}
+                    {currentQuestion.difficulty && (
+                      <div className="detail-row">
+                        <span className="detail-label">難易度:</span>
+                        <span className="detail-content">{currentQuestion.difficulty}</span>
+                      </div>
+                    )}
+                  </div>
+                  
                   <div className="action-buttons">
                     <button className="btn-secondary" onClick={handleReset}>
                       もう一度

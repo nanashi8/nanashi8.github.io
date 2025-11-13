@@ -46,32 +46,59 @@ function QuestionCard({
       )}
 
       <div className="choices">
-        {choices.map((choice, idx) => (
-          <button
-            key={idx}
-            className={getButtonClass(choice)}
-            onClick={() => onAnswer(choice, question.meaning)}
-            disabled={answered}
-          >
-            <div className="choice-text">{choice}</div>
-            {answered && choice === question.meaning && (
-              <div className="choice-details">
-                {question.etymology && (
+        {choices.map((choice, idx) => {
+          // この選択肢に対応する問題を見つける
+          const choiceQuestion = allQuestions.find(q => q.meaning === choice) || question;
+          
+          return (
+            <button
+              key={idx}
+              className={getButtonClass(choice)}
+              onClick={() => onAnswer(choice, question.meaning)}
+              disabled={answered}
+            >
+              <div className="choice-text">{choice}</div>
+              {answered && (
+                <div className="choice-details">
                   <div className="choice-detail-item">
-                    <span className="detail-icon">📚</span>
-                    <span className="detail-text">{question.etymology}</span>
+                    <span className="detail-label">語句:</span>
+                    <span className="detail-text">{choiceQuestion.word}</span>
                   </div>
-                )}
-                {question.relatedWords && (
-                  <div className="choice-detail-item">
-                    <span className="detail-icon">🔗</span>
-                    <span className="detail-text">{question.relatedWords}</span>
-                  </div>
-                )}
-              </div>
-            )}
-          </button>
-        ))}
+                  {choiceQuestion.reading && (
+                    <div className="choice-detail-item">
+                      <span className="detail-label">読み:</span>
+                      <span className="detail-text">{choiceQuestion.reading}</span>
+                    </div>
+                  )}
+                  {choiceQuestion.etymology && (
+                    <div className="choice-detail-item">
+                      <span className="detail-label">📚 語源等:</span>
+                      <span className="detail-text">{choiceQuestion.etymology}</span>
+                    </div>
+                  )}
+                  {choiceQuestion.relatedWords && (
+                    <div className="choice-detail-item">
+                      <span className="detail-label">🔗 関連語:</span>
+                      <span className="detail-text">{choiceQuestion.relatedWords}</span>
+                    </div>
+                  )}
+                  {choiceQuestion.relatedFields && (
+                    <div className="choice-detail-item">
+                      <span className="detail-label">🏷️ 分野:</span>
+                      <span className="detail-text">{choiceQuestion.relatedFields}</span>
+                    </div>
+                  )}
+                  {choiceQuestion.difficulty && (
+                    <div className="choice-detail-item">
+                      <span className="detail-label">難易度:</span>
+                      <span className="detail-text">{choiceQuestion.difficulty}</span>
+                    </div>
+                  )}
+                </div>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       {answered && (
