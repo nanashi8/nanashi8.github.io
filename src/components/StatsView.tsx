@@ -11,15 +11,17 @@ import {
   QuizResult,
   UserProgress,
 } from '../progressStorage';
-import { QuestionSet } from '../types';
+import { QuestionSet, Question } from '../types';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
+  allQuestions: Question[];
+  categoryList: string[];
 }
 
-function StatsView({ questionSets }: StatsViewProps) {
+function StatsView({ questionSets, allQuestions, categoryList }: StatsViewProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
-  const [activeSection, setActiveSection] = useState<'overview' | 'history' | 'weakwords' | 'charts'>('overview');
+  const [activeSection, setActiveSection] = useState<'overview' | 'history' | 'radar' | 'weakwords' | 'charts'>('overview');
 
   useEffect(() => {
     loadProgressData();
@@ -98,6 +100,12 @@ function StatsView({ questionSets }: StatsViewProps) {
           onClick={() => setActiveSection('overview')}
         >
           概要
+        </button>
+        <button
+          className={activeSection === 'radar' ? 'active' : ''}
+          onClick={() => setActiveSection('radar')}
+        >
+          分野別
         </button>
         <button
           className={activeSection === 'history' ? 'active' : ''}
@@ -223,40 +231,218 @@ function StatsView({ questionSets }: StatsViewProps) {
         </div>
       )}
 
+      {/* 分野別レーダーチャート */}
+      {activeSection === 'radar' && (
+        <div className="stats-section">
+          <h3>📊 関連分野別の学習状況</h3>
+          <div className="radar-container">
+            <div className="radar-chart">
+              {(() => {
+                // 主要な分野から上位8つを選択
+                const majorCategories = ['動詞', '名詞', '形容詞', '評価', '動作', '概念', '社会', '自然'];
+                const categoryStats = majorCategories.map(category => {
+                  const categoryWords = allQuestions.filter(q => q.category === category);
+                  const results = getRecentResults(100).filter(r => r.category === category);
+                  const avgScore = results.length > 0
+                    ? results.reduce((sum, r) => sum + r.percentage, 0) / results.length
+                    : 0;
+                  return {
+                    category,
+                    score: avgScore,
+                    attempts: results.length,
+                    totalWords: categoryWords.length
+                  };
+                });
+
+                const maxScore = 100;
+                const centerX = 150;
+                const centerY = 150;
+                const radius = 120;
+                const angleStep = (Math.PI * 2) / categoryStats.length;
+
+                // レーダーチャート用の座標計算
+                const getPoint = (index: number, score: number) => {
+                  const angle = angleStep * index - Math.PI / 2;
+                  const r = (score / maxScore) * radius;
+                  return {
+                    x: centerX + r * Math.cos(angle),
+                    y: centerY + r * Math.sin(angle)
+                  };
+                };
+
+                // ポリゴンのパスを生成
+                const polygonPath = categoryStats
+                  .map((stat, index) => {
+                    const point = getPoint(index, stat.score);
+                    return `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`;
+                  })
+                  .join(' ') + ' Z';
+
+                // グリッドライン用
+                const gridLevels = [20, 40, 60, 80, 100];
+                const gridPaths = gridLevels.map(level => {
+                  return categoryStats
+                    .map((_, index) => {
+                      const point = getPoint(index, level);
+                      return `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`;
+                    })
+                    .join(' ') + ' Z';
+                });
+
+                return (
+                  <svg viewBox="0 0 300 300" className="radar-svg">
+                    {/* グリッド */}
+                    {gridPaths.map((path, i) => (
+                      <path
+                        key={i}
+                        d={path}
+                        fill="none"
+                        stroke="#e0e0e0"
+                        strokeWidth="1"
+                      />
+                    ))}
+                    
+                    {/* 軸 */}
+                    {categoryStats.map((_, index) => {
+                      const endPoint = getPoint(index, 100);
+                      return (
+                        <line
+                          key={index}
+                          x1={centerX}
+                          y1={centerY}
+                          x2={endPoint.x}
+                          y2={endPoint.y}
+                          stroke="#ddd"
+                          strokeWidth="1"
+                        />
+                      );
+                    })}
+
+                    {/* データポリゴン */}
+                    <path
+                      d={polygonPath}
+                      fill="rgba(102, 126, 234, 0.3)"
+                      stroke="#667eea"
+                      strokeWidth="2"
+                    />
+
+                    {/* データポイント */}
+                    {categoryStats.map((stat, index) => {
+                      const point = getPoint(index, stat.score);
+                      return (
+                        <circle
+                          key={index}
+                          cx={point.x}
+                          cy={point.y}
+                          r="4"
+                          fill="#667eea"
+                        />
+                      );
+                    })}
+
+                    {/* ラベル */}
+                    {categoryStats.map((stat, index) => {
+                      const angle = angleStep * index - Math.PI / 2;
+                      const labelRadius = radius + 30;
+                      const labelX = centerX + labelRadius * Math.cos(angle);
+                      const labelY = centerY + labelRadius * Math.sin(angle);
+                      return (
+                        <text
+                          key={index}
+                          x={labelX}
+                          y={labelY}
+                          textAnchor="middle"
+                          fontSize="12"
+                          fill="#333"
+                        >
+                          {stat.category}
+                        </text>
+                      );
+                    })}
+                  </svg>
+                );
+              })()}
+            </div>
+          </div>
+
+          <div className="category-stats-table">
+            <h4>分野別詳細</h4>
+            <table className="stats-table">
+              <thead>
+                <tr>
+                  <th>分野</th>
+                  <th>総語数</th>
+                  <th>学習回数</th>
+                  <th>平均正答率</th>
+                </tr>
+              </thead>
+              <tbody>
+                {categoryList.slice(0, 20).map(category => {
+                  const categoryWords = allQuestions.filter(q => q.category === category);
+                  const results = getRecentResults(100).filter(r => r.category === category);
+                  const avgScore = results.length > 0
+                    ? results.reduce((sum, r) => sum + r.percentage, 0) / results.length
+                    : 0;
+                  
+                  return (
+                    <tr key={category}>
+                      <td>{category}</td>
+                      <td>{categoryWords.length}語</td>
+                      <td>{results.length}回</td>
+                      <td>{avgScore > 0 ? `${avgScore.toFixed(1)}%` : '-'}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {/* 履歴セクション */}
       {activeSection === 'history' && (
         <div className="stats-section">
-          <h3>最近の学習履歴</h3>
-          <div className="history-list">
-            {getRecentResults(20).map((result: QuizResult) => {
-              const questionSet = questionSets.find(qs => qs.id === result.questionSetId);
-              const setName = questionSet?.name || result.questionSetName;
-              const date = new Date(result.date);
-              const modeEmoji = result.mode === 'translation' ? '🇯🇵' : result.mode === 'spelling' ? '✍️' : '📖';
-              
-              return (
-                <div key={result.id} className="history-item">
-                  <div className="history-header">
-                    <span className="history-mode">{modeEmoji}</span>
-                    <span className="history-setname">{setName}</span>
-                    <span className="history-date">{date.toLocaleString('ja-JP')}</span>
-                  </div>
-                  <div className="history-details">
-                    <span className="history-score">
-                      {result.score}/{result.total} ({result.percentage.toFixed(0)}%)
-                    </span>
-                    <span className="history-time">
-                      ⏱️ {Math.floor(result.timeSpent / 60)}分{result.timeSpent % 60}秒
-                    </span>
-                  </div>
-                  {result.incorrectWords.length > 0 && (
-                    <div className="history-incorrect">
-                      間違えた単語: {result.incorrectWords.join(', ')}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+          <h3>📋 最近の学習履歴</h3>
+          <div className="history-table-container">
+            <table className="stats-table history-table">
+              <thead>
+                <tr>
+                  <th>日時</th>
+                  <th>分野</th>
+                  <th>難易度</th>
+                  <th>モード</th>
+                  <th>問題数</th>
+                  <th>正解数</th>
+                  <th>正答率</th>
+                  <th>時間</th>
+                </tr>
+              </thead>
+              <tbody>
+                {getRecentResults(30).map((result: QuizResult) => {
+                  const date = new Date(result.date);
+                  const modeEmoji = result.mode === 'translation' ? '🇯🇵' : result.mode === 'spelling' ? '✍️' : '📖';
+                  const minutes = Math.floor(result.timeSpent / 60);
+                  const seconds = result.timeSpent % 60;
+                  const scoreClass = result.percentage >= 80 ? 'score-high' : result.percentage >= 60 ? 'score-mid' : 'score-low';
+                  
+                  return (
+                    <tr key={result.id}>
+                      <td>{date.toLocaleDateString('ja-JP')} {date.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}</td>
+                      <td>{result.category || '-'}</td>
+                      <td>{result.difficulty || '-'}</td>
+                      <td>{modeEmoji}</td>
+                      <td>{result.total}</td>
+                      <td>{result.score}</td>
+                      <td className={scoreClass}>{result.percentage.toFixed(0)}%</td>
+                      <td>{minutes}:{seconds.toString().padStart(2, '0')}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+            {getRecentResults(30).length === 0 && (
+              <p className="no-data">まだ学習履歴がありません</p>
+            )}
           </div>
         </div>
       )}
@@ -297,7 +483,6 @@ function StatsView({ questionSets }: StatsViewProps) {
                       className="chart-bar" 
                       data-height={barHeightPercent}
                       title={`${minutes}分`}
-                      style={{ '--bar-height': barHeightPercent } as React.CSSProperties}
                     ></div>
                   </div>
                   <div className="chart-label">{item.date.slice(5)}</div>

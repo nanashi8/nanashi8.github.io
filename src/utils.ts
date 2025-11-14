@@ -55,6 +55,7 @@ export function parseCSV(csvText: string): Question[] {
           etymology,
           relatedWords,
           relatedFields,
+          category: relatedFields, // categoryとして使用
           difficulty,
         });
       }

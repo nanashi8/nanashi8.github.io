@@ -3381,3 +3381,165 @@ option {
     padding: 10px 15px;
   }
 }
+
+/* フィルターセクション */
+.quiz-filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #555;
+}
+
+.select-input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.select-input:hover {
+  border-color: #667eea;
+}
+
+.select-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.start-btn {
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.start-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .quiz-filter-section {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+
+  .start-btn {
+    width: 100%;
+  }
+}
+
+/* レーダーチャート */
+.radar-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.radar-chart {
+  max-width: 400px;
+  width: 100%;
+}
+
+.radar-svg {
+  width: 100%;
+  height: auto;
+}
+
+.category-stats-table {
+  margin-top: 30px;
+}
+
+.category-stats-table h4 {
+  margin-bottom: 15px;
+  color: #667eea;
+}
+
+/* 履歴テーブル */
+.history-table-container {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 700px;
+}
+
+.history-table th {
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+.history-table td {
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.score-high {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.score-mid {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.score-low {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .radar-container {
+    padding: 15px;
+  }
+
+  .history-table {
+    font-size: 0.85em;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 8px 5px;
+  }
+}

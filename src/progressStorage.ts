@@ -11,6 +11,8 @@ export interface QuizResult {
   timeSpent: number; // 秒
   incorrectWords: string[];
   mode: 'translation' | 'spelling' | 'reading';
+  category?: string; // 関連分野
+  difficulty?: string; // 難易度レベル
 }
 
 // 単語ごとの学習進捗

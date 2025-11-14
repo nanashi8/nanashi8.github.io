@@ -21,14 +21,20 @@ export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
   
-  // 問題集リスト管理
-  const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
+  // 全問題データ（junior-high-entrance-words.csvから読み込み）
+  const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   
-  // 和訳・スペルタブで選択中の問題集ID
-  const [selectedQuizSetId, setSelectedQuizSetId] = useState<string | null>(null);
+  // 関連分野リスト
+  const [categoryList, setCategoryList] = useState<string[]>([]);
+  
+  // 選択中の関連分野
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   
   // 難易度フィルター
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>('all');
+  
+  // 問題集リスト管理（後方互換性のため残す）
+  const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
   
   // 適応的学習モード
   const [adaptiveMode, setAdaptiveMode] = useState<boolean>(() => {
@@ -57,59 +63,47 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
 
-  // 初回読み込み: localStorage から問題集リストをロード
+  // 初回読み込み: junior-high-entrance-words.csvを読み込み
   useEffect(() => {
     const loadInitialData = async () => {
-      const savedSets = loadQuestionSets();
-      
-      // 初回起動時（問題集が空）の場合、デフォルトCSVを読み込む
-      if (savedSets.length === 0) {
-        const defaultCSVs = [
-          { path: '/data/basic-english.csv', name: '基礎英単語' },
-          { path: '/data/animals.csv', name: '動物の英単語' },
-          { path: '/data/food.csv', name: '食べ物の英単語' },
-        ];
+      try {
+        const response = await fetch('/data/junior-high-entrance-words.csv');
+        const csvText = await response.text();
+        const questions = parseCSV(csvText);
         
-        const newSets: QuestionSet[] = [];
-        
-        for (const csv of defaultCSVs) {
-          try {
-            const response = await fetch(csv.path);
-            const csvText = await response.text();
-            const questions = parseCSV(csvText);
-            
-            if (questions.length > 0) {
-              newSets.push({
-                id: generateId(),
-                name: csv.name,
-                questions,
-                createdAt: Date.now(),
-                isBuiltIn: true,
-                source: 'デフォルト問題集',
-              });
-            }
-          } catch (error) {
-            console.error(`${csv.name}の読み込みに失敗:`, error);
-          }
+        if (questions.length > 0) {
+          setAllQuestions(questions);
+          
+          // 関連分野のリストを抽出
+          const categories = Array.from(new Set(questions.map(q => q.category || '').filter(c => c)));
+          setCategoryList(categories.sort());
+          
+          // 問題集形式で保存（後方互換性のため）
+          const mainSet: QuestionSet = {
+            id: 'main-set',
+            name: '中学受験英単語',
+            questions,
+            createdAt: Date.now(),
+            isBuiltIn: true,
+            source: 'junior-high-entrance-words.csv',
+          };
+          setQuestionSets([mainSet]);
         }
-        
-        if (newSets.length > 0) {
-          setQuestionSets(newSets);
-        }
-      } else {
-        setQuestionSets(savedSets);
+      } catch (error) {
+        console.error('英単語データの読み込みに失敗:', error);
+        alert('英単語データの読み込みに失敗しました');
       }
     };
     
     loadInitialData();
   }, []);
 
-  // 問題集が変更されたら localStorage に保存
-  useEffect(() => {
-    if (questionSets.length > 0) {
-      saveQuestionSets(questionSets);
-    }
-  }, [questionSets]);
+  // 問題集が変更されたら localStorage に保存（削除）
+  // useEffect(() => {
+  //   if (questionSets.length > 0) {
+  //     saveQuestionSets(questionSets);
+  //   }
+  // }, [questionSets]);
   
   // 自動進行設定の保存
   useEffect(() => {
@@ -121,18 +115,27 @@ function App() {
     localStorage.setItem('quiz-adaptive-mode', JSON.stringify(adaptiveMode));
   }, [adaptiveMode]);
 
-  // 難易度でフィルタリング
-  const filterQuestionsByDifficulty = (questions: Question[]): Question[] => {
-    if (selectedDifficulty === 'all') return questions;
+  // 関連分野と難易度でフィルタリング
+  const getFilteredQuestions = (): Question[] => {
+    let filtered = allQuestions;
     
-    const difficultyMap: Record<DifficultyLevel, string> = {
-      'all': '',
-      'beginner': '初級',
-      'intermediate': '中級',
-      'advanced': '上級'
-    };
+    // 関連分野でフィルター
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(q => q.category === selectedCategory);
+    }
     
-    return questions.filter(q => q.difficulty === difficultyMap[selectedDifficulty]);
+    // 難易度でフィルター
+    if (selectedDifficulty !== 'all') {
+      const difficultyMap: Record<DifficultyLevel, string> = {
+        'all': '',
+        'beginner': '初級',
+        'intermediate': '中級',
+        'advanced': '上級'
+      };
+      filtered = filtered.filter(q => q.difficulty === difficultyMap[selectedDifficulty]);
+    }
+    
+    return filtered;
   };
 
   // CSV ファイルから問題集を作成
@@ -204,28 +207,14 @@ function App() {
     reader.readAsText(file);
   };
 
-  // 問題集選択ハンドラ（和訳・スペル共通）
-  const handleSelectQuestionSet = (setId: string) => {
-    if (!setId) {
-      setSelectedQuizSetId(null);
-      setQuizState({
-        questions: [],
-        currentIndex: 0,
-        score: 0,
-        totalAnswered: 0,
-        answered: false,
-        selectedAnswer: null,
-      });
+  // クイズ開始ハンドラー
+  const handleStartQuiz = () => {
+    let filteredQuestions = getFilteredQuestions();
+    
+    if (filteredQuestions.length === 0) {
+      alert('指定された条件の問題が見つかりません');
       return;
     }
-
-    const selectedSet = questionSets.find((s) => s.id === setId);
-    if (!selectedSet) return;
-
-    setSelectedQuizSetId(setId);
-    
-    // 難易度でフィルタリング
-    let filteredQuestions = filterQuestionsByDifficulty(selectedSet.questions);
     
     // 適応的学習モードが有効な場合、出題順を最適化
     if (adaptiveMode && filteredQuestions.length > 0) {
@@ -247,35 +236,14 @@ function App() {
     incorrectWordsRef.current = [];
   };
 
+  // 関連分野変更ハンドラー
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+  };
+
   // 難易度変更ハンドラー
   const handleDifficultyChange = (level: DifficultyLevel) => {
     setSelectedDifficulty(level);
-    
-    // 現在問題集が選択されている場合は再フィルタリング
-    if (selectedQuizSetId) {
-      const selectedSet = questionSets.find((s) => s.id === selectedQuizSetId);
-      if (selectedSet) {
-        const difficultyMap: Record<DifficultyLevel, string> = {
-          'all': '',
-          'beginner': '初級',
-          'intermediate': '中級',
-          'advanced': '上級'
-        };
-        
-        const filteredQuestions = level === 'all' 
-          ? selectedSet.questions
-          : selectedSet.questions.filter(q => q.difficulty === difficultyMap[level]);
-        
-        setQuizState({
-          questions: filteredQuestions,
-          currentIndex: 0,
-          score: 0,
-          totalAnswered: 0,
-          answered: false,
-          selectedAnswer: null,
-        });
-      }
-    }
   };
 
   const handleAnswer = (answer: string, correct: string) => {
@@ -314,30 +282,29 @@ function App() {
       }
       
       // 全問題に回答したら進捗を保存
-      if (newState.totalAnswered === prev.questions.length && selectedQuizSetId) {
-        const selectedSet = questionSets.find((s) => s.id === selectedQuizSetId);
-        if (selectedSet) {
-          const timeSpent = Math.floor((Date.now() - quizStartTimeRef.current) / 1000);
-          const percentage = (newState.score / newState.totalAnswered) * 100;
-          
-          addQuizResult({
-            id: generateId(),
-            questionSetId: selectedSet.id,
-            questionSetName: selectedSet.name,
-            score: newState.score,
-            total: newState.totalAnswered,
-            percentage,
-            date: Date.now(),
-            timeSpent,
-            incorrectWords: incorrectWordsRef.current,
-            mode: 'translation',
-          });
-          
-          // 完了メッセージ
-          setTimeout(() => {
-            alert(`クイズ完了！\n正解: ${newState.score}/${newState.totalAnswered} (${percentage.toFixed(1)}%)\n成績タブで詳細を確認できます。`);
-          }, 500);
-        }
+      if (newState.totalAnswered === prev.questions.length) {
+        const timeSpent = Math.floor((Date.now() - quizStartTimeRef.current) / 1000);
+        const percentage = (newState.score / newState.totalAnswered) * 100;
+        
+        addQuizResult({
+          id: generateId(),
+          questionSetId: 'main-set',
+          questionSetName: '中学受験英単語',
+          score: newState.score,
+          total: newState.totalAnswered,
+          percentage,
+          date: Date.now(),
+          timeSpent,
+          incorrectWords: incorrectWordsRef.current,
+          mode: 'translation',
+          category: selectedCategory !== 'all' ? selectedCategory : undefined,
+          difficulty: selectedDifficulty !== 'all' ? selectedDifficulty : undefined,
+        });
+        
+        // 完了メッセージ
+        setTimeout(() => {
+          alert(`クイズ完了！\n正解: ${newState.score}/${newState.totalAnswered} (${percentage.toFixed(1)}%)\n成績タブで詳細を確認できます。`);
+        }, 500);
       }
       
       return newState;
@@ -418,11 +385,12 @@ function App() {
         {activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}
-            questionSets={questionSets}
-            selectedSetId={selectedQuizSetId}
-            onSelectQuestionSet={handleSelectQuestionSet}
+            categoryList={categoryList}
+            selectedCategory={selectedCategory}
+            onCategoryChange={handleCategoryChange}
             selectedDifficulty={selectedDifficulty}
             onDifficultyChange={handleDifficultyChange}
+            onStartQuiz={handleStartQuiz}
             onAnswer={handleAnswer}
             onNext={handleNext}
             onPrevious={handlePrevious}
@@ -431,17 +399,20 @@ function App() {
         ) : activeTab === 'spelling' ? (
           <SpellingView
             questions={quizState.questions}
-            questionSets={questionSets}
-            selectedSetId={selectedQuizSetId}
-            onSelectQuestionSet={handleSelectQuestionSet}
+            categoryList={categoryList}
+            selectedCategory={selectedCategory}
+            onCategoryChange={handleCategoryChange}
             selectedDifficulty={selectedDifficulty}
             onDifficultyChange={handleDifficultyChange}
+            onStartQuiz={handleStartQuiz}
           />
         ) : activeTab === 'reading' ? (
           <ReadingView />
         ) : activeTab === 'stats' ? (
           <StatsView
             questionSets={questionSets}
+            allQuestions={allQuestions}
+            categoryList={categoryList}
           />
         ) : (
           <QuestionEditorView

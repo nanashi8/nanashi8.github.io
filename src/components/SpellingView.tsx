@@ -1,26 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
-import { Question, SpellingState, QuestionSet } from '../types';
-import QuestionSetSelector, { DifficultyLevel } from './QuestionSetSelector';
+import { Question, SpellingState } from '../types';
+import { DifficultyLevel } from '../App';
 import ScoreBoard from './ScoreBoard';
 import { addQuizResult } from '../progressStorage';
 import { generateId } from '../utils';
 
 interface SpellingViewProps {
   questions: Question[];
-  questionSets: QuestionSet[];
-  selectedSetId: string | null;
-  onSelectQuestionSet: (setId: string) => void;
+  categoryList: string[];
+  selectedCategory: string;
+  onCategoryChange: (category: string) => void;
   selectedDifficulty: DifficultyLevel;
   onDifficultyChange: (level: DifficultyLevel) => void;
+  onStartQuiz: () => void;
 }
 
 function SpellingView({ 
   questions, 
-  questionSets,
-  selectedSetId,
-  onSelectQuestionSet,
+  categoryList,
+  selectedCategory,
+  onCategoryChange,
   selectedDifficulty,
-  onDifficultyChange
+  onDifficultyChange,
+  onStartQuiz
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
@@ -171,18 +173,49 @@ function SpellingView({
 
   return (
     <div className="spelling-view">
-      <QuestionSetSelector
-        questionSets={questionSets}
-        selectedSetId={selectedSetId}
-        onSelect={onSelectQuestionSet}
-        selectedDifficulty={selectedDifficulty}
-        onDifficultyChange={onDifficultyChange}
-        label="問題集を選択"
-      />
+      <div className="quiz-filter-section">
+        <div className="filter-group">
+          <label htmlFor="category-select">📚 関連分野:</label>
+          <select
+            id="category-select"
+            value={selectedCategory}
+            onChange={(e) => onCategoryChange(e.target.value)}
+            className="select-input"
+          >
+            <option value="all">全ての分野</option>
+            {categoryList.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="filter-group">
+          <label htmlFor="difficulty-select">⭐ 難易度:</label>
+          <select
+            id="difficulty-select"
+            value={selectedDifficulty}
+            onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
+            className="select-input"
+          >
+            <option value="all">全てのレベル</option>
+            <option value="beginner">初級</option>
+            <option value="intermediate">中級</option>
+            <option value="advanced">上級</option>
+          </select>
+        </div>
+
+        {!hasQuestions && (
+          <button onClick={onStartQuiz} className="start-btn">
+            🎯 クイズを開始
+          </button>
+        )}
+      </div>
 
       {!hasQuestions ? (
         <div className="empty-state">
-          <p>📂 上のメニューから問題集を選択してください</p>
+          <p>📖 条件を選択して「クイズを開始」ボタンを押してください</p>
         </div>
       ) : (
         <>

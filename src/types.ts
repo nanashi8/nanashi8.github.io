@@ -7,7 +7,8 @@ export interface Question {
   meaning: string;     // 意味（正解）
   etymology: string;   // 語源等解説（小中学生向け派生語習得支援）
   relatedWords: string; // 関連語（熟語・派生語と読みと意味）
-  relatedFields: string; // 関連分野
+  relatedFields: string; // 関連分野（表示用）
+  category?: string;   // 関連分野（フィルター用）
   difficulty: string;  // 難易度
 }
 
