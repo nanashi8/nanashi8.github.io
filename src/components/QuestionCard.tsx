@@ -1,6 +1,6 @@
 import { Question } from '../types';
 import { generateChoices } from '../utils';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface QuestionCardProps {
   question: Question;
@@ -30,6 +30,11 @@ function QuestionCard({
   const [userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   
+  // スワイプジェスチャー用
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+  const cardRef = useRef<HTMLDivElement>(null);
+  
   const toggleChoiceDetails = (index: number) => {
     setExpandedChoices(prev => {
       const newSet = new Set(prev);
@@ -41,6 +46,52 @@ function QuestionCard({
       return newSet;
     });
   };
+  
+  // スワイプジェスチャーのハンドラー
+  useEffect(() => {
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX.current = e.touches[0].clientX;
+    };
+    
+    const handleTouchMove = (e: TouchEvent) => {
+      touchEndX.current = e.touches[0].clientX;
+    };
+    
+    const handleTouchEnd = () => {
+      if (!answered) return; // 回答前はスワイプ無効
+      
+      const swipeDistance = touchStartX.current - touchEndX.current;
+      const minSwipeDistance = 50; // 最小スワイプ距離
+      
+      if (Math.abs(swipeDistance) > minSwipeDistance) {
+        if (swipeDistance > 0) {
+          // 左スワイプ → 次へ
+          handleNextClick();
+        } else {
+          // 右スワイプ → 前へ
+          if (currentIndex > 0) {
+            onPrevious();
+          }
+        }
+      }
+      
+      touchStartX.current = 0;
+      touchEndX.current = 0;
+    };
+    
+    const card = cardRef.current;
+    if (card) {
+      card.addEventListener('touchstart', handleTouchStart);
+      card.addEventListener('touchmove', handleTouchMove);
+      card.addEventListener('touchend', handleTouchEnd);
+      
+      return () => {
+        card.removeEventListener('touchstart', handleTouchStart);
+        card.removeEventListener('touchmove', handleTouchMove);
+        card.removeEventListener('touchend', handleTouchEnd);
+      };
+    }
+  }, [answered, currentIndex, onPrevious]); // handleNextClickは依存配列に含めない
 
   const getButtonClass = (choice: string) => {
     if (!answered) return 'choice-btn';
@@ -68,7 +119,8 @@ function QuestionCard({
   };
 
   return (
-    <div className="question-card">
+    <div className="question-card" ref={cardRef}>
+      <div className="question-number-badge">第{currentIndex + 1}問</div>
       <div className="question-header-row">
         <div className="question-main">
           <div className="question-text">{question.word}</div>
@@ -157,26 +209,34 @@ function QuestionCard({
 
       {answered && (
         <>
-          {/* 難易度評価スライダー（コンパクト版） */}
+          {/* 難易度評価ボタン（コンパクト版） */}
           {onDifficultyRate && (
-            <div className="difficulty-rating-compact">
+            <div className="difficulty-rating-buttons">
               <div className="rating-label-compact">
-                難易度評価 (1〜10):
+                この問題の難易度:
               </div>
-              <div className="rating-slider-container">
-                <input
-                  type="range"
-                  min="1"
-                  max="10"
-                  value={userRating || 5}
-                  onChange={(e) => handleRatingChange(Number(e.target.value))}
-                  className="rating-slider"
-                  aria-label="難易度評価スライダー"
-                  title="この問題の難易度を1〜10で評価"
-                />
-                <div className="rating-value">
-                  {userRating || 5}
-                </div>
+              <div className="rating-button-group">
+                <button 
+                  className={`rating-btn easy ${userRating === 3 ? 'active' : ''}`}
+                  onClick={() => handleRatingChange(3)}
+                  aria-label="簡単"
+                >
+                  😊 簡単
+                </button>
+                <button 
+                  className={`rating-btn medium ${userRating === 5 ? 'active' : ''}`}
+                  onClick={() => handleRatingChange(5)}
+                  aria-label="普通"
+                >
+                  😐 普通
+                </button>
+                <button 
+                  className={`rating-btn hard ${userRating === 8 ? 'active' : ''}`}
+                  onClick={() => handleRatingChange(8)}
+                  aria-label="難しい"
+                >
+                  😰 難しい
+                </button>
               </div>
             </div>
           )}
@@ -193,6 +253,11 @@ function QuestionCard({
             <button className="nav-btn next-btn" onClick={handleNextClick}>
               次へ →
             </button>
+          </div>
+          
+          {/* スワイプヒント */}
+          <div className="swipe-hint">
+            💡 左右にスワイプして問題を移動できます
           </div>
         </>
       )}
