@@ -318,3 +318,160 @@ export function downloadQuestionSetCSV(set: QuestionSet): void {
   URL.revokeObjectURL(url);
 }
 
+// ========== 適応的出題アルゴリズム ==========
+
+import { getAllWordProgress, getWordProgress } from './progressStorage';
+
+/**
+ * 適応的に出題する問題を選択
+ * - 新規単語: 30% (まだ学習していない or masteryLevel='new')
+ * - 復習単語: 50% (学習中 masteryLevel='learning')
+ * - 定着済み: 20% (習得済み masteryLevel='mastered')
+ */
+export function selectAdaptiveQuestions(
+  allQuestions: Question[],
+  count: number = 10
+): Question[] {
+  if (allQuestions.length === 0) return [];
+  
+  // 各単語の進捗を取得
+  const wordProgressMap = new Map<string, any>();
+  const allProgress = getAllWordProgress();
+  allProgress.forEach(wp => {
+    wordProgressMap.set(wp.word.toLowerCase(), wp);
+  });
+  
+  // 問題を習熟レベル別に分類
+  const newWords: Question[] = [];
+  const learningWords: Question[] = [];
+  const masteredWords: Question[] = [];
+  
+  allQuestions.forEach(q => {
+    const progress = wordProgressMap.get(q.word.toLowerCase());
+    
+    if (!progress || progress.masteryLevel === 'new') {
+      newWords.push(q);
+    } else if (progress.masteryLevel === 'learning') {
+      learningWords.push(q);
+    } else if (progress.masteryLevel === 'mastered') {
+      masteredWords.push(q);
+    }
+  });
+  
+  // 必要な各カテゴリの問題数を計算
+  const newCount = Math.ceil(count * 0.3);
+  const learningCount = Math.ceil(count * 0.5);
+  const masteredCount = Math.floor(count * 0.2);
+  
+  let selected: Question[] = [];
+  
+  // 1. 復習単語を優先（難易度スコアが高い順）
+  const learningWithScores = learningWords.map(q => {
+    const progress = wordProgressMap.get(q.word.toLowerCase());
+    return { question: q, score: progress?.difficultyScore || 50 };
+  });
+  learningWithScores.sort((a, b) => b.score - a.score);
+  
+  const selectedLearning = learningWithScores
+    .slice(0, Math.min(learningCount, learningWithScores.length))
+    .map(item => item.question);
+  selected.push(...selectedLearning);
+  
+  // 2. 新規単語（ランダム）
+  const shuffledNew = shuffle(newWords);
+  const selectedNew = shuffledNew.slice(0, Math.min(newCount, shuffledNew.length));
+  selected.push(...selectedNew);
+  
+  // 3. 定着済み単語（時々復習）
+  const shuffledMastered = shuffle(masteredWords);
+  const selectedMastered = shuffledMastered.slice(0, Math.min(masteredCount, shuffledMastered.length));
+  selected.push(...selectedMastered);
+  
+  // 不足分を補充
+  const remaining = count - selected.length;
+  if (remaining > 0) {
+    const allRemaining = [...newWords, ...learningWords, ...masteredWords].filter(
+      q => !selected.includes(q)
+    );
+    const shuffledRemaining = shuffle(allRemaining);
+    selected.push(...shuffledRemaining.slice(0, remaining));
+  }
+  
+  // 最終的にシャッフル
+  return shuffle(selected).slice(0, count);
+}
+
+/**
+ * 苦手単語のみを抽出（難易度スコア50以上）
+ */
+export function selectWeakQuestions(
+  allQuestions: Question[],
+  count: number = 10
+): Question[] {
+  const allProgress = getAllWordProgress();
+  const weakWords = allProgress
+    .filter(wp => wp.difficultyScore >= 50)
+    .sort((a, b) => b.difficultyScore - a.difficultyScore)
+    .map(wp => wp.word.toLowerCase());
+  
+  const weakQuestions = allQuestions.filter(q => 
+    weakWords.includes(q.word.toLowerCase())
+  );
+  
+  return shuffle(weakQuestions).slice(0, Math.min(count, weakQuestions.length));
+}
+
+/**
+ * 復習が必要な単語を選択（最終学習から24時間以上経過）
+ */
+export function selectReviewQuestions(
+  allQuestions: Question[],
+  count: number = 10,
+  hoursThreshold: number = 24
+): Question[] {
+  const now = Date.now();
+  const threshold = hoursThreshold * 60 * 60 * 1000;
+  
+  const allProgress = getAllWordProgress();
+  const needReviewWords = allProgress
+    .filter(wp => {
+      const timeSinceLastStudy = now - wp.lastStudied;
+      return wp.masteryLevel === 'learning' && timeSinceLastStudy >= threshold;
+    })
+    .sort((a, b) => b.difficultyScore - a.difficultyScore)
+    .map(wp => wp.word.toLowerCase());
+  
+  const reviewQuestions = allQuestions.filter(q => 
+    needReviewWords.includes(q.word.toLowerCase())
+  );
+  
+  return shuffle(reviewQuestions).slice(0, Math.min(count, reviewQuestions.length));
+}
+
+/**
+ * 指定した習熟レベルの単語のみを選択
+ */
+export function selectQuestionsByMasteryLevel(
+  allQuestions: Question[],
+  masteryLevel: 'new' | 'learning' | 'mastered',
+  count?: number
+): Question[] {
+  const allProgress = getAllWordProgress();
+  const targetWords = allProgress
+    .filter(wp => wp.masteryLevel === masteryLevel)
+    .map(wp => wp.word.toLowerCase());
+  
+  const filteredQuestions = allQuestions.filter(q => {
+    const progress = getWordProgress(q.word);
+    
+    // 進捗データがない場合は'new'として扱う
+    if (!progress && masteryLevel === 'new') {
+      return true;
+    }
+    
+    return targetWords.includes(q.word.toLowerCase());
+  });
+  
+  const shuffled = shuffle(filteredQuestions);
+  return count ? shuffled.slice(0, count) : shuffled;
+}

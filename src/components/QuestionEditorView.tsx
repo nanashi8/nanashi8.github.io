@@ -15,6 +15,8 @@ interface QuestionEditorViewProps {
   onLoadLocalFile: (file: File) => void;
   autoAdvance: boolean;
   onAutoAdvanceChange: (value: boolean) => void;
+  adaptiveMode?: boolean;
+  onAdaptiveModeChange?: (value: boolean) => void;
 }
 
 function QuestionEditorView({
@@ -24,6 +26,8 @@ function QuestionEditorView({
   onLoadLocalFile: _onLoadLocalFile,
   autoAdvance,
   onAutoAdvanceChange,
+  adaptiveMode,
+  onAdaptiveModeChange,
 }: QuestionEditorViewProps) {
   const [selectedSetId, setSelectedSetId] = useState<string | null>(null);
   const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
@@ -354,6 +358,23 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
           </label>
           <p className="setting-hint">オンにすると、正解時に1.5秒後に自動で次の問題へ進みます</p>
         </div>
+        
+        {onAdaptiveModeChange && (
+          <div className="setting-item">
+            <label className="setting-label">
+              <input
+                type="checkbox"
+                checked={adaptiveMode || false}
+                onChange={(e) => onAdaptiveModeChange(e.target.checked)}
+                className="setting-checkbox"
+              />
+              <span className="setting-text">適応的学習モード</span>
+            </label>
+            <p className="setting-hint">
+              学習履歴に基づいて出題順を最適化します（新規30%・復習50%・定着済み20%）
+            </p>
+          </div>
+        )}
       </div>
 
       {/* CSV管理セクション */}

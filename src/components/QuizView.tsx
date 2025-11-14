@@ -1,5 +1,5 @@
 import { QuizState, QuestionSet } from '../types';
-import QuestionSetSelector from './QuestionSetSelector';
+import QuestionSetSelector, { DifficultyLevel } from './QuestionSetSelector';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 
@@ -8,9 +8,12 @@ interface QuizViewProps {
   questionSets: QuestionSet[];
   selectedSetId: string | null;
   onSelectQuestionSet: (setId: string) => void;
+  selectedDifficulty: DifficultyLevel;
+  onDifficultyChange: (level: DifficultyLevel) => void;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
   onPrevious: () => void;
+  onDifficultyRate?: (rating: number) => void;
 }
 
 function QuizView({
@@ -18,9 +21,12 @@ function QuizView({
   questionSets,
   selectedSetId,
   onSelectQuestionSet,
+  selectedDifficulty,
+  onDifficultyChange,
   onAnswer,
   onNext,
   onPrevious,
+  onDifficultyRate,
 }: QuizViewProps) {
   const { questions, currentIndex, score, totalAnswered, answered, selectedAnswer } =
     quizState;
@@ -34,7 +40,9 @@ function QuizView({
         questionSets={questionSets}
         selectedSetId={selectedSetId}
         onSelect={onSelectQuestionSet}
-        label="📚 問題集を選択"
+        selectedDifficulty={selectedDifficulty}
+        onDifficultyChange={onDifficultyChange}
+        label="問題集を選択"
       />
 
       {!hasQuestions ? (
@@ -60,6 +68,7 @@ function QuizView({
               onAnswer={onAnswer}
               onNext={onNext}
               onPrevious={onPrevious}
+              onDifficultyRate={onDifficultyRate}
             />
           )}
         </>

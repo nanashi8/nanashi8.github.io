@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
-import { QuizState, QuestionSet } from './types';
+import { QuizState, QuestionSet, Question } from './types';
 import {
   parseCSV,
   loadQuestionSets,
   saveQuestionSets,
   generateId,
+  selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult } from './progressStorage';
+import { addQuizResult, updateWordProgress } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
@@ -15,6 +16,7 @@ import StatsView from './components/StatsView';
 import './App.css';
 
 type Tab = 'translation' | 'spelling' | 'reading' | 'stats' | 'settings';
+export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
@@ -24,6 +26,15 @@ function App() {
   
   // 和訳・スペルタブで選択中の問題集ID
   const [selectedQuizSetId, setSelectedQuizSetId] = useState<string | null>(null);
+  
+  // 難易度フィルター
+  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>('all');
+  
+  // 適応的学習モード
+  const [adaptiveMode, setAdaptiveMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem('quiz-adaptive-mode');
+    return saved ? JSON.parse(saved) : false;
+  });
   
   // 和訳タブ用のクイズ状態
   const [quizState, setQuizState] = useState<QuizState>({
@@ -37,6 +48,7 @@ function App() {
 
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
+  const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
   
   // 設定
@@ -103,6 +115,25 @@ function App() {
   useEffect(() => {
     localStorage.setItem('quiz-auto-advance', JSON.stringify(autoAdvance));
   }, [autoAdvance]);
+  
+  // 適応的学習モードの保存
+  useEffect(() => {
+    localStorage.setItem('quiz-adaptive-mode', JSON.stringify(adaptiveMode));
+  }, [adaptiveMode]);
+
+  // 難易度でフィルタリング
+  const filterQuestionsByDifficulty = (questions: Question[]): Question[] => {
+    if (selectedDifficulty === 'all') return questions;
+    
+    const difficultyMap: Record<DifficultyLevel, string> = {
+      'all': '',
+      'beginner': '初級',
+      'intermediate': '中級',
+      'advanced': '上級'
+    };
+    
+    return questions.filter(q => q.difficulty === difficultyMap[selectedDifficulty]);
+  };
 
   // CSV ファイルから問題集を作成
   const handleLoadCSV = async (filePath: string) => {
@@ -192,8 +223,17 @@ function App() {
     if (!selectedSet) return;
 
     setSelectedQuizSetId(setId);
+    
+    // 難易度でフィルタリング
+    let filteredQuestions = filterQuestionsByDifficulty(selectedSet.questions);
+    
+    // 適応的学習モードが有効な場合、出題順を最適化
+    if (adaptiveMode && filteredQuestions.length > 0) {
+      filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(20, filteredQuestions.length));
+    }
+    
     setQuizState({
-      questions: selectedSet.questions,
+      questions: filteredQuestions,
       currentIndex: 0,
       score: 0,
       totalAnswered: 0,
@@ -203,17 +243,58 @@ function App() {
     
     // クイズ開始時刻を記録
     quizStartTimeRef.current = Date.now();
+    questionStartTimeRef.current = Date.now();
     incorrectWordsRef.current = [];
+  };
+
+  // 難易度変更ハンドラー
+  const handleDifficultyChange = (level: DifficultyLevel) => {
+    setSelectedDifficulty(level);
+    
+    // 現在問題集が選択されている場合は再フィルタリング
+    if (selectedQuizSetId) {
+      const selectedSet = questionSets.find((s) => s.id === selectedQuizSetId);
+      if (selectedSet) {
+        const difficultyMap: Record<DifficultyLevel, string> = {
+          'all': '',
+          'beginner': '初級',
+          'intermediate': '中級',
+          'advanced': '上級'
+        };
+        
+        const filteredQuestions = level === 'all' 
+          ? selectedSet.questions
+          : selectedSet.questions.filter(q => q.difficulty === difficultyMap[level]);
+        
+        setQuizState({
+          questions: filteredQuestions,
+          currentIndex: 0,
+          score: 0,
+          totalAnswered: 0,
+          answered: false,
+          selectedAnswer: null,
+        });
+      }
+    }
   };
 
   const handleAnswer = (answer: string, correct: string) => {
     if (quizState.answered) return;
 
     const isCorrect = answer === correct;
+    const currentQuestion = quizState.questions[quizState.currentIndex];
     
-    // 間違えた単語を記録
-    if (!isCorrect && quizState.questions[quizState.currentIndex]) {
-      incorrectWordsRef.current.push(quizState.questions[quizState.currentIndex].word);
+    // 応答時間を計算
+    const responseTime = Date.now() - questionStartTimeRef.current;
+    
+    // 単語進捗を更新
+    if (currentQuestion) {
+      updateWordProgress(currentQuestion.word, isCorrect, responseTime);
+      
+      // 間違えた単語を記録
+      if (!isCorrect) {
+        incorrectWordsRef.current.push(currentQuestion.word);
+      }
     }
     
     setQuizState((prev) => {
@@ -270,6 +351,9 @@ function App() {
       answered: false,
       selectedAnswer: null,
     }));
+    
+    // 次の問題の開始時刻を記録
+    questionStartTimeRef.current = Date.now();
   };
 
   const handlePrevious = () => {
@@ -279,6 +363,16 @@ function App() {
       answered: false,
       selectedAnswer: null,
     }));
+  };
+  
+  // 難易度評価のハンドラー
+  const handleDifficultyRate = (rating: number) => {
+    const currentQuestion = quizState.questions[quizState.currentIndex];
+    if (currentQuestion) {
+      // 応答時間を再計算（評価時点での時間）
+      const responseTime = Date.now() - questionStartTimeRef.current;
+      updateWordProgress(currentQuestion.word, quizState.selectedAnswer === currentQuestion.meaning, responseTime, rating);
+    }
   };
 
   return (
@@ -327,9 +421,12 @@ function App() {
             questionSets={questionSets}
             selectedSetId={selectedQuizSetId}
             onSelectQuestionSet={handleSelectQuestionSet}
+            selectedDifficulty={selectedDifficulty}
+            onDifficultyChange={handleDifficultyChange}
             onAnswer={handleAnswer}
             onNext={handleNext}
             onPrevious={handlePrevious}
+            onDifficultyRate={handleDifficultyRate}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
@@ -337,6 +434,8 @@ function App() {
             questionSets={questionSets}
             selectedSetId={selectedQuizSetId}
             onSelectQuestionSet={handleSelectQuestionSet}
+            selectedDifficulty={selectedDifficulty}
+            onDifficultyChange={handleDifficultyChange}
           />
         ) : activeTab === 'reading' ? (
           <ReadingView />
@@ -352,6 +451,8 @@ function App() {
             onLoadLocalFile={handleLoadLocalFile}
             autoAdvance={autoAdvance}
             onAutoAdvanceChange={setAutoAdvance}
+            adaptiveMode={adaptiveMode}
+            onAdaptiveModeChange={setAdaptiveMode}
           />
         )}
       </div>

@@ -1,5 +1,6 @@
 import { Question } from '../types';
 import { generateChoices } from '../utils';
+import { useState } from 'react';
 
 interface QuestionCardProps {
   question: Question;
@@ -11,6 +12,7 @@ interface QuestionCardProps {
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
   onPrevious: () => void;
+  onDifficultyRate?: (rating: number) => void;
 }
 
 function QuestionCard({
@@ -22,8 +24,10 @@ function QuestionCard({
   onAnswer,
   onNext,
   onPrevious,
+  onDifficultyRate,
 }: QuestionCardProps) {
   const choices = generateChoices(question.meaning, allQuestions, currentIndex);
+  const [userRating, setUserRating] = useState<number | null>(null);
 
   const getButtonClass = (choice: string) => {
     if (!answered) return 'choice-btn';
@@ -35,6 +39,18 @@ function QuestionCard({
       return 'choice-btn incorrect';
     }
     return 'choice-btn';
+  };
+  
+  const handleRatingChange = (rating: number) => {
+    setUserRating(rating);
+    if (onDifficultyRate) {
+      onDifficultyRate(rating);
+    }
+  };
+  
+  const handleNextClick = () => {
+    setUserRating(null); // 次の問題へ行く前にリセット
+    onNext();
   };
 
   return (
@@ -103,6 +119,35 @@ function QuestionCard({
 
       {answered && (
         <>
+          {/* 難易度評価スライダー */}
+          {onDifficultyRate && (
+            <div className="difficulty-rating">
+              <div className="rating-label">
+                この問題の難易度を評価してください (1: 簡単 ↔ 10: 難しい)
+              </div>
+              <div className="rating-slider-container">
+                <input
+                  type="range"
+                  min="1"
+                  max="10"
+                  value={userRating || 5}
+                  onChange={(e) => handleRatingChange(Number(e.target.value))}
+                  className="rating-slider"
+                  aria-label="難易度評価スライダー"
+                  title="この問題の難易度を1〜10で評価"
+                />
+                <div className="rating-value">
+                  {userRating || 5}
+                </div>
+              </div>
+              <div className="rating-labels">
+                <span>簡単</span>
+                <span>普通</span>
+                <span>難しい</span>
+              </div>
+            </div>
+          )}
+          
           {/* 回答結果カード */}
           <div className="result-cards">
             <button 
@@ -119,7 +164,7 @@ function QuestionCard({
                 <span className="result-icon">❌ 不正解</span>
               )}
             </div>
-            <button className="result-card-btn next-btn" onClick={onNext}>
+            <button className="result-card-btn next-btn" onClick={handleNextClick}>
               次の問題へ →
             </button>
           </div>

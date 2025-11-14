@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState, QuestionSet } from '../types';
-import QuestionSetSelector from './QuestionSetSelector';
+import QuestionSetSelector, { DifficultyLevel } from './QuestionSetSelector';
 import ScoreBoard from './ScoreBoard';
 import { addQuizResult } from '../progressStorage';
 import { generateId } from '../utils';
@@ -10,13 +10,17 @@ interface SpellingViewProps {
   questionSets: QuestionSet[];
   selectedSetId: string | null;
   onSelectQuestionSet: (setId: string) => void;
+  selectedDifficulty: DifficultyLevel;
+  onDifficultyChange: (level: DifficultyLevel) => void;
 }
 
 function SpellingView({ 
   questions, 
   questionSets,
   selectedSetId,
-  onSelectQuestionSet 
+  onSelectQuestionSet,
+  selectedDifficulty,
+  onDifficultyChange
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
@@ -171,7 +175,9 @@ function SpellingView({
         questionSets={questionSets}
         selectedSetId={selectedSetId}
         onSelect={onSelectQuestionSet}
-        label="📚 問題集を選択"
+        selectedDifficulty={selectedDifficulty}
+        onDifficultyChange={onDifficultyChange}
+        label="問題集を選択"
       />
 
       {!hasQuestions ? (

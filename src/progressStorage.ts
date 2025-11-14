@@ -13,6 +13,21 @@ export interface QuizResult {
   mode: 'translation' | 'spelling' | 'reading';
 }
 
+// 単語ごとの学習進捗
+export interface WordProgress {
+  word: string; // 単語
+  correctCount: number; // 正解回数
+  incorrectCount: number; // 不正解回数
+  consecutiveCorrect: number; // 連続正解回数
+  consecutiveIncorrect: number; // 連続不正解回数
+  lastStudied: number; // 最終学習日時（タイムスタンプ）
+  totalResponseTime: number; // 累計応答時間（ミリ秒）
+  averageResponseTime: number; // 平均応答時間（ミリ秒）
+  difficultyScore: number; // 難易度スコア（0-100、高いほど苦手）
+  userDifficultyRating?: number; // ユーザーの主観的難易度評価（1-10）
+  masteryLevel: 'new' | 'learning' | 'mastered'; // 習熟レベル
+}
+
 export interface UserProgress {
   results: QuizResult[];
   statistics: {
@@ -34,6 +49,9 @@ export interface UserProgress {
       totalTimeSpent: number;
     };
   };
+  wordProgress: {
+    [word: string]: WordProgress; // 単語ごとの進捗データ
+  };
 }
 
 const PROGRESS_KEY = 'quiz-app-user-progress';
@@ -54,6 +72,7 @@ function initializeProgress(): UserProgress {
       studyDates: [],
     },
     questionSetStats: {},
+    wordProgress: {},
   };
 }
 
@@ -65,9 +84,12 @@ export function loadProgress(): UserProgress {
       return initializeProgress();
     }
     const progress = JSON.parse(data) as UserProgress;
-    // 古いデータ構造の場合は初期化
+    // 古いデータ構造の場合は初期化（wordProgressを追加）
     if (!progress.statistics || !progress.questionSetStats) {
       return initializeProgress();
+    }
+    if (!progress.wordProgress) {
+      progress.wordProgress = {};
     }
     return progress;
   } catch (error) {
@@ -278,4 +300,188 @@ export function getDailyStudyTime(days: number = 7): Array<{ date: string; timeS
   return Array.from(dailyTime.entries())
     .map(([date, timeSpent]) => ({ date, timeSpent }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+}
+
+// ========== 単語レベルの進捗管理 ==========
+
+// 単語進捗の初期化
+function initializeWordProgress(word: string): WordProgress {
+  return {
+    word,
+    correctCount: 0,
+    incorrectCount: 0,
+    consecutiveCorrect: 0,
+    consecutiveIncorrect: 0,
+    lastStudied: 0,
+    totalResponseTime: 0,
+    averageResponseTime: 0,
+    difficultyScore: 50, // 初期値は中間
+    masteryLevel: 'new',
+  };
+}
+
+// 単語の難易度スコアを計算（0-100、高いほど苦手）
+function calculateDifficultyScore(wordProgress: WordProgress): number {
+  const total = wordProgress.correctCount + wordProgress.incorrectCount;
+  if (total === 0) return 50; // 未学習は中間値
+  
+  const accuracy = wordProgress.correctCount / total;
+  const baseScore = (1 - accuracy) * 100; // 不正解率ベース
+  
+  // 連続不正解によるペナルティ（最大+20）
+  const consecutivePenalty = Math.min(wordProgress.consecutiveIncorrect * 5, 20);
+  
+  // 平均応答時間による調整（遅いほど難しい、最大+15）
+  const avgTime = wordProgress.averageResponseTime / 1000; // 秒に変換
+  const timePenalty = Math.min(avgTime > 5 ? (avgTime - 5) * 3 : 0, 15);
+  
+  // ユーザー評価の反映（評価がある場合）
+  const userRatingBonus = wordProgress.userDifficultyRating 
+    ? (wordProgress.userDifficultyRating - 5.5) * 5 // 1-10を-22.5〜+22.5に変換
+    : 0;
+  
+  const finalScore = baseScore + consecutivePenalty + timePenalty + userRatingBonus;
+  
+  return Math.max(0, Math.min(100, finalScore)); // 0-100の範囲に制限
+}
+
+// 習熟レベルを判定
+function determineMasteryLevel(wordProgress: WordProgress): 'new' | 'learning' | 'mastered' {
+  const total = wordProgress.correctCount + wordProgress.incorrectCount;
+  
+  if (total === 0) return 'new';
+  if (total < 3) return 'learning';
+  
+  const accuracy = wordProgress.correctCount / total;
+  
+  // 3回以上学習して正解率80%以上かつ連続2回以上正解で習得
+  if (total >= 3 && accuracy >= 0.8 && wordProgress.consecutiveCorrect >= 2) {
+    return 'mastered';
+  }
+  
+  return 'learning';
+}
+
+// 単語進捗を更新
+export function updateWordProgress(
+  word: string,
+  isCorrect: boolean,
+  responseTime: number, // ミリ秒
+  userRating?: number // 1-10のユーザー評価（オプション）
+): void {
+  const progress = loadProgress();
+  
+  if (!progress.wordProgress[word]) {
+    progress.wordProgress[word] = initializeWordProgress(word);
+  }
+  
+  const wordProgress = progress.wordProgress[word];
+  
+  // 基本統計を更新
+  if (isCorrect) {
+    wordProgress.correctCount++;
+    wordProgress.consecutiveCorrect++;
+    wordProgress.consecutiveIncorrect = 0;
+  } else {
+    wordProgress.incorrectCount++;
+    wordProgress.consecutiveIncorrect++;
+    wordProgress.consecutiveCorrect = 0;
+  }
+  
+  // 応答時間を更新
+  wordProgress.totalResponseTime += responseTime;
+  const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
+  wordProgress.averageResponseTime = wordProgress.totalResponseTime / totalAttempts;
+  
+  // ユーザー評価を記録（提供された場合）
+  if (userRating !== undefined) {
+    wordProgress.userDifficultyRating = userRating;
+  }
+  
+  // 最終学習日時を更新
+  wordProgress.lastStudied = Date.now();
+  
+  // 難易度スコアを再計算
+  wordProgress.difficultyScore = calculateDifficultyScore(wordProgress);
+  
+  // 習熟レベルを更新
+  wordProgress.masteryLevel = determineMasteryLevel(wordProgress);
+  
+  saveProgress(progress);
+}
+
+// 単語の進捗を取得
+export function getWordProgress(word: string): WordProgress | null {
+  const progress = loadProgress();
+  return progress.wordProgress[word] || null;
+}
+
+// すべての単語進捗を取得
+export function getAllWordProgress(): WordProgress[] {
+  const progress = loadProgress();
+  return Object.values(progress.wordProgress);
+}
+
+// 習熟レベル別に単語を取得
+export function getWordsByMasteryLevel(level: 'new' | 'learning' | 'mastered'): string[] {
+  const progress = loadProgress();
+  return Object.values(progress.wordProgress)
+    .filter(wp => wp.masteryLevel === level)
+    .map(wp => wp.word);
+}
+
+// 難易度スコアでソートされた単語リストを取得
+export function getWordsSortedByDifficulty(limit?: number): WordProgress[] {
+  const allWords = getAllWordProgress();
+  const sorted = allWords.sort((a, b) => b.difficultyScore - a.difficultyScore);
+  return limit ? sorted.slice(0, limit) : sorted;
+}
+
+// 苦手単語を取得（難易度スコア50以上）
+export function getWeakWordsAdvanced(limit: number = 20): WordProgress[] {
+  const allWords = getAllWordProgress();
+  return allWords
+    .filter(wp => wp.difficultyScore >= 50)
+    .sort((a, b) => b.difficultyScore - a.difficultyScore)
+    .slice(0, limit);
+}
+
+// 復習が必要な単語を取得（最終学習から一定時間経過）
+export function getWordsNeedingReview(hoursThreshold: number = 24): WordProgress[] {
+  const now = Date.now();
+  const threshold = hoursThreshold * 60 * 60 * 1000;
+  
+  const allWords = getAllWordProgress();
+  return allWords
+    .filter(wp => {
+      const timeSinceLastStudy = now - wp.lastStudied;
+      return wp.masteryLevel === 'learning' && timeSinceLastStudy >= threshold;
+    })
+    .sort((a, b) => b.difficultyScore - a.difficultyScore);
+}
+
+// 学習統計のサマリーを取得
+export function getWordProgressSummary(): {
+  total: number;
+  new: number;
+  learning: number;
+  mastered: number;
+  averageDifficulty: number;
+} {
+  const allWords = getAllWordProgress();
+  
+  const summary = {
+    total: allWords.length,
+    new: allWords.filter(wp => wp.masteryLevel === 'new').length,
+    learning: allWords.filter(wp => wp.masteryLevel === 'learning').length,
+    mastered: allWords.filter(wp => wp.masteryLevel === 'mastered').length,
+    averageDifficulty: 0,
+  };
+  
+  if (allWords.length > 0) {
+    const totalDifficulty = allWords.reduce((sum, wp) => sum + wp.difficultyScore, 0);
+    summary.averageDifficulty = totalDifficulty / allWords.length;
+  }
+  
+  return summary;
 }
