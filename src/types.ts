@@ -75,12 +75,13 @@ export interface QuestionSet {
   source?: string; // 作成元（例: "長文抽出", "CSV読み込み", "手動作成"）
 }
 
-// 90日学習プランの型
+// 学習プランの型（期間調整可能）
 export interface LearningSchedule {
   userId: string;
   startDate: number;
   currentDay: number;
-  totalDays: 90;
+  totalDays: number; // 30, 60, 90, 180など
+  planDurationMonths: number; // 1, 2, 3, 6ヶ月など
   phase: 1 | 2 | 3;
   
   dailyGoals: {

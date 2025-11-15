@@ -643,48 +643,180 @@ export function getPhraseTypeLabel(phraseType: string): string {
 import type { LearningSchedule, DailyStudyPlan } from './types';
 
 /**
- * 90日学習プランを生成
+ * 学習プランを生成（期間調整可能）
+ * @param allQuestions 全問題データ
+ * @param months 学習期間（月）: 1, 2, 3, 6
+ * @param startDate 開始日
  */
-export function generate90DayPlan(
+export function generateLearningPlan(
   allQuestions: Question[],
+  months: number = 3,
   startDate: number = Date.now()
 ): LearningSchedule {
+  const totalDays = months * 30; // 1ヶ月=30日として計算
+  const totalWords = allQuestions.length;
+  
+  // 1日あたりの新規学習単語数を計算
+  const dailyNewWords = Math.ceil(totalWords / totalDays);
+  const dailyReviewWords = Math.ceil(dailyNewWords * 1.5);
+  const dailyMinutes = Math.ceil((dailyNewWords + dailyReviewWords) * 0.5); // 1単語約0.5分
+  
+  // マイルストーンを動的に生成
+  const milestones = generateMilestones(totalDays, dailyNewWords);
+  
   const schedule: LearningSchedule = {
     userId: 'default',
     startDate,
     currentDay: 1,
-    totalDays: 90,
+    totalDays,
+    planDurationMonths: months,
     phase: 1,
     
     dailyGoals: {
-      newWords: 50,
-      reviewWords: 80,
-      timeMinutes: 55,
+      newWords: dailyNewWords,
+      reviewWords: dailyReviewWords,
+      timeMinutes: dailyMinutes,
     },
     
     weeklyProgress: [],
-    
-    milestones: [
-      { day: 7, title: '1週間継続！', wordsTarget: 280, achieved: false },
-      { day: 14, title: '2週間継続！', wordsTarget: 560, achieved: false },
-      { day: 21, title: '3週間継続！', wordsTarget: 840, achieved: false },
-      { day: 30, title: '1ヶ月達成！', wordsTarget: 1200, achieved: false },
-      { day: 45, title: '折り返し地点！', wordsTarget: 1800, achieved: false },
-      { day: 60, title: '2ヶ月達成！', wordsTarget: 2400, achieved: false },
-      { day: 75, title: 'ラストスパート！', wordsTarget: 3000, achieved: false },
-      { day: 90, title: '90日完走！', wordsTarget: 3600, achieved: false },
-    ],
+    milestones,
   };
   
   return schedule;
 }
 
 /**
- * フェーズ判定（1-3）
+ * マイルストーンを動的に生成
  */
-function getPhase(dayNumber: number): 1 | 2 | 3 {
-  if (dayNumber <= 28) return 1;
-  if (dayNumber <= 63) return 2;
+function generateMilestones(totalDays: number, dailyNewWords: number) {
+  const milestones = [];
+  
+  // 1週間ごと
+  if (totalDays >= 7) {
+    milestones.push({
+      day: 7,
+      title: '1週間継続！',
+      wordsTarget: dailyNewWords * 7,
+      achieved: false
+    });
+  }
+  
+  // 2週間
+  if (totalDays >= 14) {
+    milestones.push({
+      day: 14,
+      title: '2週間継続！',
+      wordsTarget: dailyNewWords * 14,
+      achieved: false
+    });
+  }
+  
+  // 3週間
+  if (totalDays >= 21) {
+    milestones.push({
+      day: 21,
+      title: '3週間継続！',
+      wordsTarget: dailyNewWords * 21,
+      achieved: false
+    });
+  }
+  
+  // 1ヶ月
+  if (totalDays >= 30) {
+    milestones.push({
+      day: 30,
+      title: '1ヶ月達成！',
+      wordsTarget: dailyNewWords * 30,
+      achieved: false
+    });
+  }
+  
+  // 中間地点
+  const halfDay = Math.floor(totalDays / 2);
+  if (totalDays >= 60 && halfDay > 30) {
+    milestones.push({
+      day: halfDay,
+      title: '折り返し地点！',
+      wordsTarget: dailyNewWords * halfDay,
+      achieved: false
+    });
+  }
+  
+  // 2ヶ月
+  if (totalDays >= 60) {
+    milestones.push({
+      day: 60,
+      title: '2ヶ月達成！',
+      wordsTarget: dailyNewWords * 60,
+      achieved: false
+    });
+  }
+  
+  // 75%地点
+  const threeQuarterDay = Math.floor(totalDays * 0.75);
+  if (totalDays >= 90 && threeQuarterDay > 60) {
+    milestones.push({
+      day: threeQuarterDay,
+      title: 'ラストスパート！',
+      wordsTarget: dailyNewWords * threeQuarterDay,
+      achieved: false
+    });
+  }
+  
+  // 3ヶ月
+  if (totalDays >= 90) {
+    milestones.push({
+      day: 90,
+      title: '3ヶ月達成！',
+      wordsTarget: dailyNewWords * 90,
+      achieved: false
+    });
+  }
+  
+  // 6ヶ月
+  if (totalDays >= 180) {
+    milestones.push({
+      day: 180,
+      title: '6ヶ月達成！',
+      wordsTarget: dailyNewWords * 180,
+      achieved: false
+    });
+  }
+  
+  // 最終日
+  if (!milestones.find(m => m.day === totalDays)) {
+    milestones.push({
+      day: totalDays,
+      title: `${Math.floor(totalDays / 30)}ヶ月完走！`,
+      wordsTarget: dailyNewWords * totalDays,
+      achieved: false
+    });
+  }
+  
+  return milestones.sort((a, b) => a.day - b.day);
+}
+
+/**
+ * 旧名称との互換性のためのエイリアス
+ */
+export function generate90DayPlan(
+  allQuestions: Question[],
+  startDate: number = Date.now()
+): LearningSchedule {
+  return generateLearningPlan(allQuestions, 3, startDate);
+}
+
+/**
+ * フェーズ判定（1-3）
+ * @param dayNumber 現在の日数
+ * @param totalDays 総日数
+ */
+function getPhase(dayNumber: number, totalDays: number = 90): 1 | 2 | 3 {
+  const phase1End = Math.floor(totalDays / 3);
+  const phase2End = Math.floor(totalDays * 2 / 3);
+  
+  if (dayNumber <= phase1End) return 1;
+  if (dayNumber <= phase2End) return 2;
   return 3;
 }
 
@@ -787,7 +919,7 @@ export function generateDailyPlan(
   allQuestions: Question[]
 ): DailyStudyPlan {
   const dayNumber = schedule.currentDay;
-  const phase = getPhase(dayNumber);
+  const phase = getPhase(dayNumber, schedule.totalDays);
   
   // 未学習の単語を取得
   const unlearnedWords = getUnlearnedWords(allQuestions);
@@ -796,15 +928,19 @@ export function generateDailyPlan(
   const reviewDueWords = getReviewDueWords(allQuestions);
   
   // 朝: 新規学習
-  const morningWords = selectNewWordsForPhase(unlearnedWords, phase, 15);
+  const morningCount = Math.ceil(schedule.dailyGoals.newWords * 0.3);
+  const morningWords = selectNewWordsForPhase(unlearnedWords, phase, morningCount);
   
   // 昼: 復習（苦手な単語優先）
-  const afternoonWords = selectWeakQuestions(reviewDueWords.length > 0 ? reviewDueWords : allQuestions, 20);
+  const afternoonCount = Math.ceil(schedule.dailyGoals.reviewWords * 0.4);
+  const afternoonWords = selectWeakQuestions(reviewDueWords.length > 0 ? reviewDueWords : allQuestions, afternoonCount);
   
   // 夜: 総合演習（新規+復習ミックス）
+  const eveningNewCount = Math.floor(morningCount * 0.3);
+  const eveningReviewCount = Math.ceil(schedule.dailyGoals.reviewWords * 0.3);
   const eveningWords = [
-    ...shuffle(morningWords).slice(0, 5),  // 今日学んだ単語
-    ...shuffle(reviewDueWords.length > 0 ? reviewDueWords : allQuestions).slice(0, 15), // 復習単語
+    ...shuffle(morningWords).slice(0, eveningNewCount),
+    ...shuffle(reviewDueWords.length > 0 ? reviewDueWords : allQuestions).slice(0, eveningReviewCount),
   ];
   
   return {
@@ -814,19 +950,19 @@ export function generateDailyPlan(
     
     morning: {
       newWords: morningWords,
-      duration: 20,
+      duration: Math.ceil(schedule.dailyGoals.timeMinutes * 0.35),
       mode: 'discovery',
     },
     
     afternoon: {
       reviewWords: afternoonWords,
-      duration: 15,
+      duration: Math.ceil(schedule.dailyGoals.timeMinutes * 0.3),
       mode: 'weakness',
     },
     
     evening: {
       mixedWords: shuffle(eveningWords),
-      duration: 20,
+      duration: Math.ceil(schedule.dailyGoals.timeMinutes * 0.35),
       mode: 'mixed',
     },
     
@@ -884,7 +1020,7 @@ export function calculateWeeklyAchievement(
   schedule: LearningSchedule
 ): number {
   const weekNumber = Math.ceil(schedule.currentDay / 7);
-  const targetPerWeek = 350; // 50語/日 × 7日
+  const targetPerWeek = schedule.dailyGoals.newWords * 7;
   
   const weekProgress = schedule.weeklyProgress.find(w => w.week === weekNumber);
   if (!weekProgress) return 0;
