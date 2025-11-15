@@ -2195,6 +2195,45 @@ option {
   color: #666;
 }
 
+.setting-sub-item {
+  margin: 10px 0 10px 30px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.setting-sub-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-sub-text {
+  font-size: 0.95em;
+  color: #555;
+  font-weight: 500;
+}
+
+.setting-select {
+  padding: 6px 12px;
+  font-size: 0.95em;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.setting-select:hover {
+  border-color: #4a90e2;
+}
+
+.setting-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
 .editor-layout {
   display: flex;
   flex: 1;

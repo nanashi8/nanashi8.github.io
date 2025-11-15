@@ -14,6 +14,8 @@ interface QuestionEditorViewProps {
   onLoadLocalFile: (file: File) => void;
   autoAdvance: boolean;
   onAutoAdvanceChange: (value: boolean) => void;
+  autoAdvanceDelay: number;
+  onAutoAdvanceDelayChange: (value: number) => void;
   adaptiveMode?: boolean;
   onAdaptiveModeChange?: (value: boolean) => void;
 }
@@ -25,6 +27,8 @@ function QuestionEditorView({
   onLoadLocalFile: _onLoadLocalFile,
   autoAdvance,
   onAutoAdvanceChange,
+  autoAdvanceDelay,
+  onAutoAdvanceDelayChange,
   adaptiveMode,
   onAdaptiveModeChange,
 }: QuestionEditorViewProps) {
@@ -191,7 +195,23 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
             />
             <span className="setting-text">正解したら自動で次の問題へ進む</span>
           </label>
-          <p className="setting-hint">オンにすると、正解時に1.5秒後に自動で次の問題へ進みます</p>
+          {autoAdvance && (
+            <div className="setting-sub-item">
+              <label className="setting-sub-label">
+                <span className="setting-sub-text">進むまでの時間:</span>
+                <select
+                  value={autoAdvanceDelay}
+                  onChange={(e) => onAutoAdvanceDelayChange(Number(e.target.value))}
+                  className="setting-select"
+                >
+                  <option value={0.5}>0.5秒</option>
+                  <option value={1.0}>1.0秒</option>
+                  <option value={1.5}>1.5秒</option>
+                </select>
+              </label>
+            </div>
+          )}
+          <p className="setting-hint">オンにすると、正解時に選択した時間後に自動で次の問題へ進みます</p>
         </div>
         
         {onAdaptiveModeChange && (

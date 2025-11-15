@@ -71,6 +71,11 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
 
+  const [autoAdvanceDelay, setAutoAdvanceDelay] = useState<number>(() => {
+    const saved = localStorage.getItem('quiz-auto-advance-delay');
+    return saved ? JSON.parse(saved) : 1.0;
+  });
+
   // 初回読み込み: junior-high-entrance-words.csvを読み込み
   useEffect(() => {
     const loadInitialData = async () => {
@@ -117,6 +122,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem('quiz-auto-advance', JSON.stringify(autoAdvance));
   }, [autoAdvance]);
+
+  useEffect(() => {
+    localStorage.setItem('quiz-auto-advance-delay', JSON.stringify(autoAdvanceDelay));
+  }, [autoAdvanceDelay]);
   
   // 適応的学習モードの保存
   useEffect(() => {
@@ -301,7 +310,7 @@ function App() {
       if (autoAdvance && isCorrect) {
         setTimeout(() => {
           handleNext();
-        }, 1500);
+        }, autoAdvanceDelay * 1000);
       }
       
       // 全問題に回答したら進捗を保存
@@ -449,6 +458,8 @@ function App() {
             onLoadLocalFile={handleLoadLocalFile}
             autoAdvance={autoAdvance}
             onAutoAdvanceChange={setAutoAdvance}
+            autoAdvanceDelay={autoAdvanceDelay}
+            onAutoAdvanceDelayChange={setAutoAdvanceDelay}
             adaptiveMode={adaptiveMode}
             onAdaptiveModeChange={setAdaptiveMode}
           />
