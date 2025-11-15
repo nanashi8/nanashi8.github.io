@@ -89,7 +89,7 @@ function App() {
           // 問題集形式で保存（後方互換性のため）
           const mainSet: QuestionSet = {
             id: 'main-set',
-            name: '中学受験英単語',
+            name: '高校受験英単語',
             questions,
             createdAt: Date.now(),
             isBuiltIn: true,
@@ -312,7 +312,7 @@ function App() {
         addQuizResult({
           id: generateId(),
           questionSetId: 'main-set',
-          questionSetName: '中学受験英単語',
+          questionSetName: '高校受験英単語',
           score: newState.score,
           total: newState.totalAnswered,
           percentage,
