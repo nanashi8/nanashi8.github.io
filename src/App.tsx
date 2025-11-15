@@ -11,12 +11,11 @@ import { addQuizResult, updateWordProgress } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
-import QuestionEditorView from './components/QuestionEditorView';
 import StatsView from './components/StatsView';
-import LearningPlanView from './components/LearningPlanView';
+import SettingsView from './components/SettingsView';
 import './App.css';
 
-type Tab = 'translation' | 'spelling' | 'reading' | 'plan' | 'stats' | 'settings';
+type Tab = 'translation' | 'spelling' | 'reading' | 'settings' | 'stats';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
@@ -397,12 +396,6 @@ function App() {
           読解
         </button>
         <button
-          className={`tab-btn ${activeTab === 'plan' ? 'active' : ''}`}
-          onClick={() => setActiveTab('plan')}
-        >
-          📅 90日プラン
-        </button>
-        <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
           onClick={() => setActiveTab('stats')}
         >
@@ -412,7 +405,7 @@ function App() {
           className={`tab-btn ${activeTab === 'settings' ? 'active' : ''}`}
           onClick={() => setActiveTab('settings')}
         >
-          問題設定
+          ⚙️ 設定
         </button>
       </div>
 
@@ -451,9 +444,24 @@ function App() {
           />
         ) : activeTab === 'reading' ? (
           <ReadingView />
-        ) : activeTab === 'plan' ? (
-          <LearningPlanView
+        ) : activeTab === 'stats' ? (
+          <StatsView
+            questionSets={questionSets}
             allQuestions={allQuestions}
+            categoryList={categoryList}
+          />
+        ) : (
+          <SettingsView
+            allQuestions={allQuestions}
+            categoryList={categoryList}
+            selectedCategory={selectedCategory}
+            onCategoryChange={handleCategoryChange}
+            selectedDifficulty={selectedDifficulty}
+            onDifficultyChange={handleDifficultyChange}
+            selectedWordPhraseFilter={selectedWordPhraseFilter}
+            onWordPhraseFilterChange={setSelectedWordPhraseFilter}
+            selectedPhraseTypeFilter={selectedPhraseTypeFilter}
+            onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
             onStartSession={(mode, questions) => {
               // セッションの単語でクイズを開始
               setQuizState({
@@ -469,25 +477,6 @@ function App() {
               incorrectWordsRef.current = [];
               setActiveTab('translation');
             }}
-          />
-        ) : activeTab === 'stats' ? (
-          <StatsView
-            questionSets={questionSets}
-            allQuestions={allQuestions}
-            categoryList={categoryList}
-          />
-        ) : (
-          <QuestionEditorView
-            questionSets={questionSets}
-            onQuestionSetsChange={setQuestionSets}
-            onLoadCSV={handleLoadCSV}
-            onLoadLocalFile={handleLoadLocalFile}
-            autoAdvance={autoAdvance}
-            onAutoAdvanceChange={setAutoAdvance}
-            autoAdvanceDelay={autoAdvanceDelay}
-            onAutoAdvanceDelayChange={setAutoAdvanceDelay}
-            adaptiveMode={adaptiveMode}
-            onAdaptiveModeChange={setAdaptiveMode}
           />
         )}
       </div>
