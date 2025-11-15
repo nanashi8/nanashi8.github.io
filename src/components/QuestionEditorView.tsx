@@ -5,7 +5,6 @@ import {
   deleteQuestionSet,
   generateId,
   parseCSV,
-  downloadQuestionSetCSV,
 } from '../utils';
 
 interface QuestionEditorViewProps {
@@ -160,12 +159,6 @@ function QuestionEditorView({
     input.click();
   };
 
-  // CSV エクスポート
-  const handleExportCSV = () => {
-    if (!currentSet) return;
-    downloadQuestionSetCSV(currentSet);
-  };
-
   // CSVサンプルダウンロード
   const handleDownloadSample = () => {
     const sampleCSV = `語句,読み,意味,語源等解説,関連語,関連分野,難易度
@@ -309,11 +302,6 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
                       {stats.total}問
                     </span>
                   )}
-                </div>
-                <div className="toolbar-right">
-                  <button onClick={handleExportCSV} className="btn-toolbar">
-                    💾 CSV 出力
-                  </button>
                 </div>
               </div>
 
