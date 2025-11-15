@@ -142,6 +142,49 @@ export function generateChoices(
 }
 
 /**
+ * 選択肢とそれに対応するQuestionオブジェクトを生成
+ */
+export function generateChoicesWithQuestions(
+  currentQuestion: Question,
+  allQuestions: Question[],
+  currentIndex: number
+): Array<{ text: string; question: Question | null }> {
+  const wrongQuestions: Question[] = [];
+  const otherQuestions = allQuestions.filter((_, idx) => idx !== currentIndex);
+  const shuffledOthers = shuffle(otherQuestions);
+
+  for (let i = 0; i < shuffledOthers.length && wrongQuestions.length < 2; i++) {
+    const wrongQuestion = shuffledOthers[i];
+    if (wrongQuestion.meaning !== currentQuestion.meaning && 
+        !wrongQuestions.some(q => q.meaning === wrongQuestion.meaning)) {
+      wrongQuestions.push(wrongQuestion);
+    }
+  }
+
+  // 誤答が足りない場合はダミーを追加
+  while (wrongQuestions.length < 2) {
+    wrongQuestions.push({
+      word: `ダミー${wrongQuestions.length + 1}`,
+      meaning: `選択肢${wrongQuestions.length + 1}`,
+      reading: '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      category: '',
+      difficulty: ''
+    });
+  }
+
+  // 正解と誤答をシャッフルして、「分からない」を最後に追加
+  const allChoices = [
+    { text: currentQuestion.meaning, question: currentQuestion },
+    ...wrongQuestions.map(q => ({ text: q.meaning, question: q }))
+  ];
+  const shuffledFirst3 = shuffle(allChoices);
+  return [...shuffledFirst3, { text: '分からない', question: null }];
+}
+
+/**
  * スペルクイズ用: 単語を虫食いにして、必要なアルファベットと選択肢を生成
  */
 export function generateSpellingPuzzle(word: string): {

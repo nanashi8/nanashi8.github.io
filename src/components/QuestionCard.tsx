@@ -1,5 +1,5 @@
 import { Question } from '../types';
-import { generateChoices, classifyPhraseType, getPhraseTypeLabel } from '../utils';
+import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } from '../utils';
 import { useState, useRef, useEffect } from 'react';
 
 interface QuestionCardProps {
@@ -26,7 +26,7 @@ function QuestionCard({
   onPrevious,
   onDifficultyRate,
 }: QuestionCardProps) {
-  const choices = generateChoices(question.meaning, allQuestions, currentIndex);
+  const choicesWithQuestions = generateChoicesWithQuestions(question, allQuestions, currentIndex);
   const [userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   
@@ -150,21 +150,20 @@ function QuestionCard({
       </div>
 
       <div className="choices">
-        {choices.map((choice, idx) => {
-          // この選択肢に対応する問題を見つける
-          const choiceQuestion = allQuestions.find(q => q.meaning === choice) || question;
+        {choicesWithQuestions.map((choice, idx) => {
           const isExpanded = expandedChoices.has(idx);
+          const choiceQuestion = choice.question;
           
           return (
             <div key={idx} className="choice-wrapper">
               <button
-                className={getButtonClass(choice)}
-                onClick={() => onAnswer(choice, question.meaning)}
+                className={getButtonClass(choice.text)}
+                onClick={() => onAnswer(choice.text, question.meaning)}
                 disabled={answered}
               >
-                <div className="choice-text">{choice}</div>
+                <div className="choice-text">{choice.text}</div>
               </button>
-              {answered && (
+              {answered && choiceQuestion && (
                 <div className="choice-controls">
                   <button 
                     className="toggle-details-btn"
