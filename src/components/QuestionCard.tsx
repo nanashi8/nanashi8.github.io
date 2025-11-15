@@ -119,7 +119,10 @@ function QuestionCard({
   };
 
   return (
-    <div className="question-card" ref={cardRef}>
+    <div 
+      className={`question-card ${answered ? (selectedAnswer === question.meaning ? 'answered-correct' : 'answered-incorrect') : ''}`}
+      ref={cardRef}
+    >
       <div className="question-number-badge">第{currentIndex + 1}問</div>
       <div className="question-header-row">
         <div className="question-main">
@@ -138,15 +141,6 @@ function QuestionCard({
             </div>
           )}
         </div>
-        {answered && (
-          <div className="result-indicator">
-            {selectedAnswer === question.meaning ? (
-              <span className="result-badge correct">✓</span>
-            ) : (
-              <span className="result-badge incorrect">✗</span>
-            )}
-          </div>
-        )}
       </div>
 
       <div className="choices">
