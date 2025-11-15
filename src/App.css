@@ -2936,6 +2936,36 @@ option {
   font-weight: bold;
 }
 
+/* やり直しボタンコンテナ */
+.spelling-reset-button-container {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.btn-reset-selection {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+}
+
+.btn-reset-selection:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
+}
+
+.btn-reset-selection:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+}
+
 /* スペルクイズの詳細情報表示 */
 .question-details-spelling {
   background: #f8f9fa;

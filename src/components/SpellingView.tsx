@@ -169,6 +169,11 @@ function SpellingView({
     }));
   };
 
+  // 選択中の選択をクリア（やり直し）
+  const handleClearSelection = () => {
+    setSelectedSequence([]);
+  };
+
   const currentQuestion =
     spellingState.questions.length > 0
       ? spellingState.questions[spellingState.currentIndex]
@@ -309,6 +314,15 @@ function SpellingView({
                   );
                 })}
               </div>
+
+              {/* 選択中のやり直しボタン */}
+              {!spellingState.answered && selectedSequence.length > 0 && (
+                <div className="spelling-reset-button-container">
+                  <button className="btn-reset-selection" onClick={handleClearSelection}>
+                    🔄 やり直す
+                  </button>
+                </div>
+              )}
 
               {spellingState.answered && (
                 <div className="result-display">
