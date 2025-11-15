@@ -4597,6 +4597,513 @@ option {
   font-size: 1.2em !important;
 }
 
+/* ========== 90日学習プラン ========== */
+
+/* プラン開始画面 */
+.learning-plan-start {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.plan-hero {
+  text-align: center;
+}
+
+.plan-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plan-description {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.plan-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 3em;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 1em;
+}
+
+.btn-start-plan {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-start-plan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.plan-details {
+  margin-top: 60px;
+  text-align: left;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.plan-details h3 {
+  font-size: 1.3em;
+  margin: 30px 0 15px 0;
+  color: #333;
+}
+
+.plan-details h3:first-child {
+  margin-top: 0;
+}
+
+.plan-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-details li {
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.plan-details li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+/* ダッシュボード */
+.learning-plan-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.day-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.day-number {
+  font-size: 3em;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.day-label {
+  font-size: 1.2em;
+  color: #999;
+}
+
+.phase-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phase-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.phase-badge.phase-1 {
+  background: #4CAF50;
+}
+
+.phase-badge.phase-2 {
+  background: #2196F3;
+}
+
+.phase-badge.phase-3 {
+  background: #9C27B0;
+}
+
+.phase-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+}
+
+.progress-bar-container {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  height: 30px;
+  background: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.5s ease;
+  border-radius: 15px;
+}
+
+.progress-bar.phase-1 {
+  background: linear-gradient(90deg, #4CAF50 0%, #81C784 100%);
+}
+
+.progress-bar.phase-2 {
+  background: linear-gradient(90deg, #2196F3 0%, #64B5F6 100%);
+}
+
+.progress-bar.phase-3 {
+  background: linear-gradient(90deg, #9C27B0 0%, #BA68C8 100%);
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  width: attr(data-progress);
+  height: 100%;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9em;
+}
+
+/* 統計サマリー */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.stat-value {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #999;
+  font-weight: 500;
+}
+
+/* 今日の学習プラン */
+.today-plan {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.today-plan h2 {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.session-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.session-card {
+  border-radius: 12px;
+  padding: 25px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.session-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.session-card.morning {
+  border-color: #FFA726;
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+}
+
+.session-card.afternoon {
+  border-color: #42A5F5;
+  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+.session-card.evening {
+  border-color: #AB47BC;
+  background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+}
+
+.session-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.session-icon {
+  font-size: 2.5em;
+}
+
+.session-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.session-info p {
+  color: #666;
+  font-size: 0.95em;
+}
+
+.btn-start-session {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-start-session:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-start-session:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* マイルストーン */
+.milestones {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.milestones h2 {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.milestone-list {
+  display: grid;
+  gap: 15px;
+}
+
+.milestone-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 40px;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  transition: all 0.2s;
+}
+
+.milestone-item.current {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.milestone-item.achieved {
+  border-color: #4CAF50;
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+}
+
+.milestone-item.passed {
+  opacity: 0.6;
+}
+
+.milestone-day {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.milestone-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.05em;
+}
+
+.milestone-target {
+  text-align: right;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.check-mark {
+  font-size: 1.5em;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* プランアクション */
+.plan-actions {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-reset-plan {
+  padding: 12px 30px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-reset-plan:hover {
+  border-color: #ff5252;
+  color: #ff5252;
+  background: #ffebee;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .day-counter {
+    justify-content: center;
+  }
+  
+  .phase-indicator {
+    justify-content: center;
+  }
+  
+  .stats-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .session-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .milestone-item {
+    grid-template-columns: 70px 1fr 80px 30px;
+    font-size: 0.9em;
+  }
+  
+  .plan-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .plan-hero h1 {
+    font-size: 2em;
+  }
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .stats-header h2 {

@@ -637,3 +637,258 @@ export function getPhraseTypeLabel(phraseType: string): string {
   };
   return labels[phraseType] || 'その他';
 }
+
+// ========== 90日学習プラン機能 ==========
+
+import type { LearningSchedule, DailyStudyPlan } from './types';
+
+/**
+ * 90日学習プランを生成
+ */
+export function generate90DayPlan(
+  allQuestions: Question[],
+  startDate: number = Date.now()
+): LearningSchedule {
+  const schedule: LearningSchedule = {
+    userId: 'default',
+    startDate,
+    currentDay: 1,
+    totalDays: 90,
+    phase: 1,
+    
+    dailyGoals: {
+      newWords: 50,
+      reviewWords: 80,
+      timeMinutes: 55,
+    },
+    
+    weeklyProgress: [],
+    
+    milestones: [
+      { day: 7, title: '1週間継続！', wordsTarget: 280, achieved: false },
+      { day: 14, title: '2週間継続！', wordsTarget: 560, achieved: false },
+      { day: 21, title: '3週間継続！', wordsTarget: 840, achieved: false },
+      { day: 30, title: '1ヶ月達成！', wordsTarget: 1200, achieved: false },
+      { day: 45, title: '折り返し地点！', wordsTarget: 1800, achieved: false },
+      { day: 60, title: '2ヶ月達成！', wordsTarget: 2400, achieved: false },
+      { day: 75, title: 'ラストスパート！', wordsTarget: 3000, achieved: false },
+      { day: 90, title: '90日完走！', wordsTarget: 3600, achieved: false },
+    ],
+  };
+  
+  return schedule;
+}
+
+/**
+ * フェーズ判定（1-3）
+ */
+function getPhase(dayNumber: number): 1 | 2 | 3 {
+  if (dayNumber <= 28) return 1;
+  if (dayNumber <= 63) return 2;
+  return 3;
+}
+
+/**
+ * 未学習の単語を取得
+ */
+function getUnlearnedWords(allQuestions: Question[]): Question[] {
+  const allProgress = getAllWordProgress();
+  const progressMap = new Map<string, any>();
+  
+  allProgress.forEach(wp => {
+    progressMap.set(wp.word.toLowerCase(), wp);
+  });
+  
+  return allQuestions.filter(q => {
+    const progress = progressMap.get(q.word.toLowerCase());
+    return !progress || progress.masteryLevel === 'new';
+  });
+}
+
+/**
+ * 復習が必要な単語を取得（忘却曲線ベース）
+ */
+function getReviewDueWords(allQuestions: Question[]): Question[] {
+  const now = Date.now();
+  const allProgress = getAllWordProgress();
+  const progressMap = new Map<string, any>();
+  
+  allProgress.forEach(wp => {
+    progressMap.set(wp.word.toLowerCase(), wp);
+  });
+  
+  return allQuestions.filter(q => {
+    const progress = progressMap.get(q.word.toLowerCase());
+    if (!progress) return false;
+    
+    const daysSinceLastStudy = (now - progress.lastStudied) / (1000 * 60 * 60 * 24);
+    
+    // 忘却曲線: 次回復習タイミング
+    let dueInterval: number;
+    
+    switch (progress.masteryLevel) {
+      case 'new':
+        dueInterval = 1;
+        break;
+      case 'learning':
+        dueInterval = Math.min(7, progress.consecutiveCorrect + 1);
+        break;
+      case 'mastered':
+        dueInterval = Math.min(30, progress.consecutiveCorrect * 2);
+        break;
+      default:
+        dueInterval = 1;
+    }
+    
+    return daysSinceLastStudy >= dueInterval;
+  });
+}
+
+/**
+ * フェーズに応じた新規単語の選択
+ */
+function selectNewWordsForPhase(
+  unlearnedWords: Question[],
+  phase: 1 | 2 | 3,
+  count: number
+): Question[] {
+  let filtered: Question[];
+  
+  switch (phase) {
+    case 1: // Phase 1: 初級中心
+      filtered = unlearnedWords.filter(q => q.difficulty === '初級');
+      if (filtered.length < count) {
+        // 初級が足りなければ中級も含める
+        filtered = [...filtered, ...unlearnedWords.filter(q => q.difficulty === '中級')];
+      }
+      break;
+      
+    case 2: // Phase 2: 初級+中級
+      const beginner = unlearnedWords.filter(q => q.difficulty === '初級');
+      const intermediate = unlearnedWords.filter(q => q.difficulty === '中級');
+      filtered = [...beginner, ...intermediate];
+      break;
+      
+    case 3: // Phase 3: 中級+上級
+      const mid = unlearnedWords.filter(q => q.difficulty === '中級');
+      const adv = unlearnedWords.filter(q => q.difficulty === '上級');
+      filtered = [...mid, ...adv];
+      break;
+  }
+  
+  return shuffle(filtered).slice(0, count);
+}
+
+/**
+ * 今日の学習プランを生成
+ */
+export function generateDailyPlan(
+  schedule: LearningSchedule,
+  allQuestions: Question[]
+): DailyStudyPlan {
+  const dayNumber = schedule.currentDay;
+  const phase = getPhase(dayNumber);
+  
+  // 未学習の単語を取得
+  const unlearnedWords = getUnlearnedWords(allQuestions);
+  
+  // 復習が必要な単語を取得（忘却曲線に基づく）
+  const reviewDueWords = getReviewDueWords(allQuestions);
+  
+  // 朝: 新規学習
+  const morningWords = selectNewWordsForPhase(unlearnedWords, phase, 15);
+  
+  // 昼: 復習（苦手な単語優先）
+  const afternoonWords = selectWeakQuestions(reviewDueWords.length > 0 ? reviewDueWords : allQuestions, 20);
+  
+  // 夜: 総合演習（新規+復習ミックス）
+  const eveningWords = [
+    ...shuffle(morningWords).slice(0, 5),  // 今日学んだ単語
+    ...shuffle(reviewDueWords.length > 0 ? reviewDueWords : allQuestions).slice(0, 15), // 復習単語
+  ];
+  
+  return {
+    date: schedule.startDate + (dayNumber - 1) * 24 * 60 * 60 * 1000,
+    dayNumber,
+    phase,
+    
+    morning: {
+      newWords: morningWords,
+      duration: 20,
+      mode: 'discovery',
+    },
+    
+    afternoon: {
+      reviewWords: afternoonWords,
+      duration: 15,
+      mode: 'weakness',
+    },
+    
+    evening: {
+      mixedWords: shuffle(eveningWords),
+      duration: 20,
+      mode: 'mixed',
+    },
+    
+    completed: false,
+    actualAccuracy: 0,
+  };
+}
+
+/**
+ * 学習進捗の計算
+ */
+export function calculateProgress(schedule: LearningSchedule): {
+  totalLearned: number;
+  totalReviewed: number;
+  averageAccuracy: number;
+  estimatedCompletion: number;
+} {
+  const allProgress = getAllWordProgress();
+  
+  const totalLearned = allProgress.filter(
+    wp => wp.masteryLevel !== 'new'
+  ).length;
+  
+  const totalReviewed = allProgress.reduce(
+    (sum, wp) => sum + wp.correctCount + wp.incorrectCount,
+    0
+  );
+  
+  const totalCorrect = allProgress.reduce(
+    (sum, wp) => sum + wp.correctCount,
+    0
+  );
+  
+  const averageAccuracy = totalReviewed > 0
+    ? (totalCorrect / totalReviewed) * 100
+    : 0;
+  
+  // 推定完了日数
+  const dailyAverage = totalLearned / schedule.currentDay;
+  const remaining = 4700 - totalLearned;
+  const estimatedDays = remaining / (dailyAverage || 50);
+  
+  return {
+    totalLearned,
+    totalReviewed,
+    averageAccuracy,
+    estimatedCompletion: Math.ceil(estimatedDays),
+  };
+}
+
+/**
+ * 今週の達成率を計算
+ */
+export function calculateWeeklyAchievement(
+  schedule: LearningSchedule
+): number {
+  const weekNumber = Math.ceil(schedule.currentDay / 7);
+  const targetPerWeek = 350; // 50語/日 × 7日
+  
+  const weekProgress = schedule.weeklyProgress.find(w => w.week === weekNumber);
+  if (!weekProgress) return 0;
+  
+  return (weekProgress.wordsLearned / targetPerWeek) * 100;
+}
+

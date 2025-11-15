@@ -13,9 +13,10 @@ import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
 import QuestionEditorView from './components/QuestionEditorView';
 import StatsView from './components/StatsView';
+import LearningPlanView from './components/LearningPlanView';
 import './App.css';
 
-type Tab = 'translation' | 'spelling' | 'reading' | 'stats' | 'settings';
+type Tab = 'translation' | 'spelling' | 'reading' | 'plan' | 'stats' | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
@@ -393,7 +394,13 @@ function App() {
           className={`tab-btn ${activeTab === 'reading' ? 'active' : ''}`}
           onClick={() => setActiveTab('reading')}
         >
-          長文
+          読解
+        </button>
+        <button
+          className={`tab-btn ${activeTab === 'plan' ? 'active' : ''}`}
+          onClick={() => setActiveTab('plan')}
+        >
+          📅 90日プラン
         </button>
         <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
@@ -444,6 +451,25 @@ function App() {
           />
         ) : activeTab === 'reading' ? (
           <ReadingView />
+        ) : activeTab === 'plan' ? (
+          <LearningPlanView
+            allQuestions={allQuestions}
+            onStartSession={(mode, questions) => {
+              // セッションの単語でクイズを開始
+              setQuizState({
+                questions,
+                currentIndex: 0,
+                score: 0,
+                totalAnswered: 0,
+                answered: false,
+                selectedAnswer: null,
+              });
+              quizStartTimeRef.current = Date.now();
+              questionStartTimeRef.current = Date.now();
+              incorrectWordsRef.current = [];
+              setActiveTab('translation');
+            }}
+          />
         ) : activeTab === 'stats' ? (
           <StatsView
             questionSets={questionSets}

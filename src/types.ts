@@ -74,3 +74,60 @@ export interface QuestionSet {
   isBuiltIn: boolean; // 組み込みサンプルかどうか（削除不可）
   source?: string; // 作成元（例: "長文抽出", "CSV読み込み", "手動作成"）
 }
+
+// 90日学習プランの型
+export interface LearningSchedule {
+  userId: string;
+  startDate: number;
+  currentDay: number;
+  totalDays: 90;
+  phase: 1 | 2 | 3;
+  
+  dailyGoals: {
+    newWords: number;
+    reviewWords: number;
+    timeMinutes: number;
+  };
+  
+  weeklyProgress: {
+    week: number;
+    wordsLearned: number;
+    wordsReviewed: number;
+    averageAccuracy: number;
+    completionRate: number;
+  }[];
+  
+  milestones: {
+    day: number;
+    title: string;
+    wordsTarget: number;
+    achieved: boolean;
+  }[];
+}
+
+export interface DailyStudyPlan {
+  date: number;
+  dayNumber: number;
+  phase: 1 | 2 | 3;
+  
+  morning: {
+    newWords: Question[];
+    duration: number;
+    mode: 'discovery';
+  };
+  
+  afternoon: {
+    reviewWords: Question[];
+    duration: number;
+    mode: 'weakness';
+  };
+  
+  evening: {
+    mixedWords: Question[];
+    duration: number;
+    mode: 'mixed';
+  };
+  
+  completed: boolean;
+  actualAccuracy: number;
+}
