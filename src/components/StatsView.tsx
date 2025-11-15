@@ -5,9 +5,6 @@ import {
   getStatsByMode,
   getWeakWords,
   getDailyStudyTime,
-  exportProgress,
-  importProgress,
-  clearProgress,
   QuizResult,
   UserProgress,
 } from '../progressStorage';
@@ -21,7 +18,7 @@ interface StatsViewProps {
 
 function StatsView({ questionSets, allQuestions, categoryList }: StatsViewProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
-  const [activeSection, setActiveSection] = useState<'overview' | 'history' | 'radar' | 'weakwords' | 'charts'>('overview');
+  const [activeSection, setActiveSection] = useState<'overview' | 'daily' | 'quiz' | 'category' | 'weak'>('overview');
 
   useEffect(() => {
     loadProgressData();
@@ -32,489 +29,484 @@ function StatsView({ questionSets, allQuestions, categoryList }: StatsViewProps)
     setProgress(data);
   };
 
-  const handleExport = () => {
-    try {
-      const json = exportProgress();
-      const blob = new Blob([json], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `quiz-progress-${new Date().toISOString().slice(0, 10)}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-      alert('成績データをエクスポートしました。');
-    } catch (error) {
-      alert('エクスポートに失敗しました。');
-    }
-  };
-
-  const handleImport = () => {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = '.json';
-    input.onchange = (e) => {
-      const file = (e.target as HTMLInputElement).files?.[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        try {
-          const json = event.target?.result as string;
-          if (importProgress(json)) {
-            loadProgressData();
-            alert('成績データをインポートしました。');
-          } else {
-            alert('インポートに失敗しました。ファイル形式を確認してください。');
-          }
-        } catch (error) {
-          alert('ファイルの読み込みに失敗しました。');
-        }
-      };
-      reader.readAsText(file);
-    };
-    input.click();
-  };
-
-  const handleClear = () => {
-    clearProgress();
-    loadProgressData();
-  };
-
   if (!progress) {
     return <div className="stats-view">読み込み中...</div>;
   }
 
   const stats = progress.statistics;
-  const translationStats = getStatsByMode('translation');
-  const spellingStats = getStatsByMode('spelling');
-  const readingStats = getStatsByMode('reading');
+  const recentResults = getRecentResults(50);
+  
+  // 日別の統計を計算
+  const getDailyStats = () => {
+    const dailyMap = new Map<string, { quizCount: number; totalScore: number; totalQuestions: number; correctAnswers: number }>();
+    
+    recentResults.forEach(result => {
+      const dateKey = new Date(result.date).toLocaleDateString('ja-JP');
+      const existing = dailyMap.get(dateKey) || { quizCount: 0, totalScore: 0, totalQuestions: 0, correctAnswers: 0 };
+      
+      dailyMap.set(dateKey, {
+        quizCount: existing.quizCount + 1,
+        totalScore: existing.totalScore + result.percentage,
+        totalQuestions: existing.totalQuestions + result.total,
+        correctAnswers: existing.correctAnswers + result.score
+      });
+    });
+    
+    return Array.from(dailyMap.entries())
+      .map(([date, data]) => ({
+        date,
+        quizCount: data.quizCount,
+        avgScore: data.totalScore / data.quizCount,
+        totalQuestions: data.totalQuestions,
+        correctAnswers: data.correctAnswers
+      }))
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 14); // 最近14日分
+  };
+
+  const dailyStats = getDailyStats();
+  
+  // 今日の学習状況を取得
+  const getTodayStats = () => {
+    const today = new Date().toLocaleDateString('ja-JP');
+    const todayResults = recentResults.filter(r => new Date(r.date).toLocaleDateString('ja-JP') === today);
+    
+    if (todayResults.length === 0) {
+      return { quizCount: 0, avgScore: 0, totalQuestions: 0, correctAnswers: 0, studyTime: 0 };
+    }
+    
+    return {
+      quizCount: todayResults.length,
+      avgScore: todayResults.reduce((sum, r) => sum + r.percentage, 0) / todayResults.length,
+      totalQuestions: todayResults.reduce((sum, r) => sum + r.total, 0),
+      correctAnswers: todayResults.reduce((sum, r) => sum + r.score, 0),
+      studyTime: todayResults.reduce((sum, r) => sum + r.timeSpent, 0)
+    };
+  };
+  
+  const todayStats = getTodayStats();
+  
+  // 今週の学習状況
+  const getWeekStats = () => {
+    const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    const weekResults = recentResults.filter(r => r.date >= weekAgo);
+    
+    if (weekResults.length === 0) {
+      return { quizCount: 0, avgScore: 0, studyDays: 0 };
+    }
+    
+    const uniqueDays = new Set(weekResults.map(r => new Date(r.date).toLocaleDateString('ja-JP')));
+    
+    return {
+      quizCount: weekResults.length,
+      avgScore: weekResults.reduce((sum, r) => sum + r.percentage, 0) / weekResults.length,
+      studyDays: uniqueDays.size
+    };
+  };
+  
+  const weekStats = getWeekStats();
 
   return (
     <div className="stats-view">
-      <h2>📊 学習成績</h2>
+      <div className="stats-header">
+        <h2>🎯 がんばり記録</h2>
+        <div className="streak-badge">
+          <span className="streak-flame">🔥</span>
+          <span className="streak-number">{stats.streakDays}</span>
+          <span className="streak-label">日連続</span>
+        </div>
+      </div>
 
       {/* タブナビゲーション */}
-      <div className="stats-tabs">
+      <div className="stats-tabs-new">
         <button
-          className={activeSection === 'overview' ? 'active' : ''}
+          className={`stats-tab-new ${activeSection === 'overview' ? 'active' : ''}`}
           onClick={() => setActiveSection('overview')}
         >
-          概要
+          <span className="tab-icon">🏠</span>
+          <span className="tab-label">ホーム</span>
         </button>
         <button
-          className={activeSection === 'radar' ? 'active' : ''}
-          onClick={() => setActiveSection('radar')}
+          className={`stats-tab-new ${activeSection === 'daily' ? 'active' : ''}`}
+          onClick={() => setActiveSection('daily')}
         >
-          分野別
+          <span className="tab-icon">📅</span>
+          <span className="tab-label">日別</span>
         </button>
         <button
-          className={activeSection === 'history' ? 'active' : ''}
-          onClick={() => setActiveSection('history')}
+          className={`stats-tab-new ${activeSection === 'quiz' ? 'active' : ''}`}
+          onClick={() => setActiveSection('quiz')}
         >
-          履歴
+          <span className="tab-icon">📝</span>
+          <span className="tab-label">クイズ別</span>
         </button>
         <button
-          className={activeSection === 'weakwords' ? 'active' : ''}
-          onClick={() => setActiveSection('weakwords')}
+          className={`stats-tab-new ${activeSection === 'category' ? 'active' : ''}`}
+          onClick={() => setActiveSection('category')}
         >
-          弱点単語
+          <span className="tab-icon">📊</span>
+          <span className="tab-label">分野別</span>
         </button>
         <button
-          className={activeSection === 'charts' ? 'active' : ''}
-          onClick={() => setActiveSection('charts')}
+          className={`stats-tab-new ${activeSection === 'weak' ? 'active' : ''}`}
+          onClick={() => setActiveSection('weak')}
         >
-          グラフ
+          <span className="tab-icon">💪</span>
+          <span className="tab-label">弱点克服</span>
         </button>
       </div>
 
-      {/* 概要セクション */}
+      {/* ホーム（概要）セクション */}
       {activeSection === 'overview' && (
-        <div className="stats-section">
-          <div className="stats-cards">
-            <div className="stat-card">
-              <div className="stat-label">総クイズ数</div>
-              <div className="stat-value">{stats.totalQuizzes}</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-label">総問題数</div>
-              <div className="stat-value">{stats.totalQuestions}</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-label">平均正答率</div>
-              <div className="stat-value">{stats.averageScore.toFixed(1)}%</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-label">最高スコア</div>
-              <div className="stat-value">{stats.bestScore.toFixed(0)}%</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-label">連続学習日数</div>
-              <div className="stat-value">{stats.streakDays}日 🔥</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-label">最終学習日</div>
-              <div className="stat-value">
-                {stats.lastStudyDate > 0
-                  ? new Date(stats.lastStudyDate).toLocaleDateString('ja-JP')
-                  : '-'}
+        <div className="stats-section-new">
+          {/* 今日の学習 */}
+          <div className="today-section">
+            <h3 className="section-title">
+              <span className="title-icon">☀️</span>
+              今日の学習
+            </h3>
+            {todayStats.quizCount > 0 ? (
+              <div className="today-cards">
+                <div className="today-card">
+                  <div className="today-card-icon">📚</div>
+                  <div className="today-card-value">{todayStats.quizCount}</div>
+                  <div className="today-card-label">クイズ</div>
+                </div>
+                <div className="today-card">
+                  <div className="today-card-icon">✨</div>
+                  <div className="today-card-value">{todayStats.avgScore.toFixed(0)}%</div>
+                  <div className="today-card-label">正答率</div>
+                </div>
+                <div className="today-card">
+                  <div className="today-card-icon">⏱️</div>
+                  <div className="today-card-value">{Math.floor(todayStats.studyTime / 60)}</div>
+                  <div className="today-card-label">分</div>
+                </div>
+                <div className="today-card">
+                  <div className="today-card-icon">✅</div>
+                  <div className="today-card-value">{todayStats.correctAnswers}/{todayStats.totalQuestions}</div>
+                  <div className="today-card-label">正解数</div>
+                </div>
+              </div>
+            ) : (
+              <div className="no-study-today">
+                <p className="no-study-message">今日はまだ学習していません</p>
+                <p className="no-study-encourage">さあ、クイズに挑戦しよう！ 💪</p>
+              </div>
+            )}
+          </div>
+
+          {/* 今週の学習 */}
+          <div className="week-section">
+            <h3 className="section-title">
+              <span className="title-icon">📈</span>
+              今週の学習（最近7日間）
+            </h3>
+            <div className="week-stats">
+              <div className="week-stat-item">
+                <div className="week-stat-label">学習日数</div>
+                <div className="week-stat-value">{weekStats.studyDays}<span className="week-stat-unit">日</span></div>
+              </div>
+              <div className="week-stat-item">
+                <div className="week-stat-label">クイズ回数</div>
+                <div className="week-stat-value">{weekStats.quizCount}<span className="week-stat-unit">回</span></div>
+              </div>
+              <div className="week-stat-item">
+                <div className="week-stat-label">平均正答率</div>
+                <div className="week-stat-value">{weekStats.avgScore.toFixed(0)}<span className="week-stat-unit">%</span></div>
               </div>
             </div>
           </div>
 
-          {/* モード別統計 */}
-          <div className="mode-stats">
-            <h3>モード別統計</h3>
-            <table className="stats-table">
-              <thead>
-                <tr>
-                  <th>モード</th>
-                  <th>クイズ数</th>
-                  <th>平均スコア</th>
-                  <th>最高スコア</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>🇯🇵 和訳クイズ</td>
-                  <td>{translationStats.totalQuizzes}</td>
-                  <td>{translationStats.averageScore.toFixed(1)}%</td>
-                  <td>{translationStats.bestScore.toFixed(0)}%</td>
-                </tr>
-                <tr>
-                  <td>✍️ スペルクイズ</td>
-                  <td>{spellingStats.totalQuizzes}</td>
-                  <td>{spellingStats.averageScore.toFixed(1)}%</td>
-                  <td>{spellingStats.bestScore.toFixed(0)}%</td>
-                </tr>
-                <tr>
-                  <td>📖 読解クイズ</td>
-                  <td>{readingStats.totalQuizzes}</td>
-                  <td>{readingStats.averageScore.toFixed(1)}%</td>
-                  <td>{readingStats.bestScore.toFixed(0)}%</td>
-                </tr>
-              </tbody>
-            </table>
+          {/* 全体の記録 */}
+          <div className="overall-section">
+            <h3 className="section-title">
+              <span className="title-icon">🏆</span>
+              全体の記録
+            </h3>
+            <div className="overall-stats">
+              <div className="overall-stat-card">
+                <div className="overall-stat-icon">📝</div>
+                <div className="overall-stat-content">
+                  <div className="overall-stat-value">{stats.totalQuizzes}</div>
+                  <div className="overall-stat-label">総クイズ数</div>
+                </div>
+              </div>
+              <div className="overall-stat-card">
+                <div className="overall-stat-icon">❓</div>
+                <div className="overall-stat-content">
+                  <div className="overall-stat-value">{stats.totalQuestions}</div>
+                  <div className="overall-stat-label">総問題数</div>
+                </div>
+              </div>
+              <div className="overall-stat-card">
+                <div className="overall-stat-icon">📊</div>
+                <div className="overall-stat-content">
+                  <div className="overall-stat-value">{stats.averageScore.toFixed(0)}%</div>
+                  <div className="overall-stat-label">平均正答率</div>
+                </div>
+              </div>
+              <div className="overall-stat-card">
+                <div className="overall-stat-icon">📆</div>
+                <div className="overall-stat-content">
+                  <div className="overall-stat-value">
+                    {stats.lastStudyDate > 0
+                      ? new Date(stats.lastStudyDate).toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' })
+                      : '-'}
+                  </div>
+                  <div className="overall-stat-label">最終学習日</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* 問題集別統計 */}
-          <div className="questionset-stats">
-            <h3>問題集別統計</h3>
-            <table className="stats-table">
-              <thead>
-                <tr>
-                  <th>問題集</th>
-                  <th>挑戦回数</th>
-                  <th>平均スコア</th>
-                  <th>最高スコア</th>
-                  <th>学習時間</th>
-                </tr>
-              </thead>
-              <tbody>
-                {Object.entries(progress.questionSetStats).map(([setId, setStats]) => {
-                  const questionSet = questionSets.find(qs => qs.id === setId);
-                  const setName = questionSet?.name || '削除済み問題集';
-                  const totalMinutes = Math.floor(setStats.totalTimeSpent / 60);
-                  
-                  return (
-                    <tr key={setId}>
-                      <td>{setName}</td>
-                      <td>{setStats.attempts}</td>
-                      <td>{setStats.averageScore.toFixed(1)}%</td>
-                      <td>{setStats.bestScore.toFixed(0)}%</td>
-                      <td>{totalMinutes}分</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+          {/* モード別の得意・苦手 */}
+          <div className="mode-section">
+            <h3 className="section-title">
+              <span className="title-icon">🎮</span>
+              モード別
+            </h3>
+            <div className="mode-cards">
+              {[
+                { mode: 'translation', emoji: '🇯🇵', name: '和訳クイズ', stats: getStatsByMode('translation') },
+                { mode: 'spelling', emoji: '✍️', name: 'スペルクイズ', stats: getStatsByMode('spelling') },
+                { mode: 'reading', emoji: '📖', name: '読解クイズ', stats: getStatsByMode('reading') }
+              ].map(({ mode, emoji, name, stats: modeStats }) => (
+                <div key={mode} className="mode-card">
+                  <div className="mode-card-header">
+                    <span className="mode-emoji">{emoji}</span>
+                    <span className="mode-name">{name}</span>
+                  </div>
+                  <div className="mode-card-stats">
+                    <div className="mode-stat">
+                      <span className="mode-stat-value">{modeStats.totalQuizzes}</span>
+                      <span className="mode-stat-label">回</span>
+                    </div>
+                    <div className="mode-stat-divider"></div>
+                    <div className="mode-stat">
+                      <span className="mode-stat-value">{modeStats.averageScore.toFixed(0)}%</span>
+                      <span className="mode-stat-label">正答率</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
 
-      {/* 分野別レーダーチャート */}
-      {activeSection === 'radar' && (
-        <div className="stats-section">
-          <h3>📊 関連分野別の学習状況</h3>
-          <div className="radar-container">
-            <div className="radar-chart">
-              {(() => {
-                // 主要な分野から上位8つを選択
-                const majorCategories = ['動詞', '名詞', '形容詞', '評価', '動作', '概念', '社会', '自然'];
-                const categoryStats = majorCategories.map(category => {
-                  const categoryWords = allQuestions.filter(q => q.category === category);
-                  const results = getRecentResults(100).filter(r => r.category === category);
-                  const avgScore = results.length > 0
-                    ? results.reduce((sum, r) => sum + r.percentage, 0) / results.length
-                    : 0;
-                  return {
-                    category,
-                    score: avgScore,
-                    attempts: results.length,
-                    totalWords: categoryWords.length
-                  };
-                });
-
-                const maxScore = 100;
-                const centerX = 150;
-                const centerY = 150;
-                const radius = 120;
-                const angleStep = (Math.PI * 2) / categoryStats.length;
-
-                // レーダーチャート用の座標計算
-                const getPoint = (index: number, score: number) => {
-                  const angle = angleStep * index - Math.PI / 2;
-                  const r = (score / maxScore) * radius;
-                  return {
-                    x: centerX + r * Math.cos(angle),
-                    y: centerY + r * Math.sin(angle)
-                  };
-                };
-
-                // ポリゴンのパスを生成
-                const polygonPath = categoryStats
-                  .map((stat, index) => {
-                    const point = getPoint(index, stat.score);
-                    return `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`;
-                  })
-                  .join(' ') + ' Z';
-
-                // グリッドライン用
-                const gridLevels = [20, 40, 60, 80, 100];
-                const gridPaths = gridLevels.map(level => {
-                  return categoryStats
-                    .map((_, index) => {
-                      const point = getPoint(index, level);
-                      return `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`;
-                    })
-                    .join(' ') + ' Z';
-                });
-
+      {/* 日別セクション */}
+      {activeSection === 'daily' && (
+        <div className="stats-section-new">
+          <h3 className="section-title">
+            <span className="title-icon">📅</span>
+            日別の学習記録
+          </h3>
+          {dailyStats.length > 0 ? (
+            <div className="daily-list">
+              {dailyStats.map((day, index) => {
+                const isToday = day.date === new Date().toLocaleDateString('ja-JP');
                 return (
-                  <svg viewBox="0 0 300 300" className="radar-svg">
-                    {/* グリッド */}
-                    {gridPaths.map((path, i) => (
-                      <path
-                        key={i}
-                        d={path}
-                        fill="none"
-                        stroke="#e0e0e0"
-                        strokeWidth="1"
-                      />
-                    ))}
-                    
-                    {/* 軸 */}
-                    {categoryStats.map((_, index) => {
-                      const endPoint = getPoint(index, 100);
-                      return (
-                        <line
-                          key={index}
-                          x1={centerX}
-                          y1={centerY}
-                          x2={endPoint.x}
-                          y2={endPoint.y}
-                          stroke="#ddd"
-                          strokeWidth="1"
-                        />
-                      );
-                    })}
-
-                    {/* データポリゴン */}
-                    <path
-                      d={polygonPath}
-                      fill="rgba(102, 126, 234, 0.3)"
-                      stroke="#667eea"
-                      strokeWidth="2"
-                    />
-
-                    {/* データポイント */}
-                    {categoryStats.map((stat, index) => {
-                      const point = getPoint(index, stat.score);
-                      return (
-                        <circle
-                          key={index}
-                          cx={point.x}
-                          cy={point.y}
-                          r="4"
-                          fill="#667eea"
-                        />
-                      );
-                    })}
-
-                    {/* ラベル */}
-                    {categoryStats.map((stat, index) => {
-                      const angle = angleStep * index - Math.PI / 2;
-                      const labelRadius = radius + 30;
-                      const labelX = centerX + labelRadius * Math.cos(angle);
-                      const labelY = centerY + labelRadius * Math.sin(angle);
-                      return (
-                        <text
-                          key={index}
-                          x={labelX}
-                          y={labelY}
-                          textAnchor="middle"
-                          fontSize="12"
-                          fill="#333"
-                        >
-                          {stat.category}
-                        </text>
-                      );
-                    })}
-                  </svg>
+                  <div key={index} className={`daily-item ${isToday ? 'today' : ''}`}>
+                    <div className="daily-date">
+                      {isToday && <span className="today-badge">今日</span>}
+                      <span className="date-text">{day.date}</span>
+                    </div>
+                    <div className="daily-stats-grid">
+                      <div className="daily-stat">
+                        <span className="daily-stat-icon">📚</span>
+                        <span className="daily-stat-value">{day.quizCount}回</span>
+                      </div>
+                      <div className="daily-stat">
+                        <span className="daily-stat-icon">✨</span>
+                        <span className="daily-stat-value">{day.avgScore.toFixed(0)}%</span>
+                      </div>
+                      <div className="daily-stat">
+                        <span className="daily-stat-icon">✅</span>
+                        <span className="daily-stat-value">{day.correctAnswers}/{day.totalQuestions}</span>
+                      </div>
+                    </div>
+                    <div className="daily-progress-bar">
+                      <div 
+                        className="daily-progress-fill"
+                        style={{ width: `${day.avgScore}%` }}
+                      ></div>
+                    </div>
+                  </div>
                 );
-              })()}
+              })}
             </div>
-          </div>
-
-          <div className="category-stats-table">
-            <h4>分野別詳細</h4>
-            <table className="stats-table">
-              <thead>
-                <tr>
-                  <th>分野</th>
-                  <th>総語数</th>
-                  <th>学習回数</th>
-                  <th>平均正答率</th>
-                </tr>
-              </thead>
-              <tbody>
-                {categoryList.slice(0, 20).map(category => {
-                  const categoryWords = allQuestions.filter(q => q.category === category);
-                  const results = getRecentResults(100).filter(r => r.category === category);
-                  const avgScore = results.length > 0
-                    ? results.reduce((sum, r) => sum + r.percentage, 0) / results.length
-                    : 0;
-                  
-                  return (
-                    <tr key={category}>
-                      <td>{category}</td>
-                      <td>{categoryWords.length}語</td>
-                      <td>{results.length}回</td>
-                      <td>{avgScore > 0 ? `${avgScore.toFixed(1)}%` : '-'}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          ) : (
+            <div className="no-data-message">
+              <p>まだ学習記録がありません</p>
+              <p className="encourage-text">クイズに挑戦して記録を作ろう！ 🚀</p>
+            </div>
+          )}
         </div>
       )}
 
-      {/* 履歴セクション */}
-      {activeSection === 'history' && (
-        <div className="stats-section">
-          <h3>📋 最近の学習履歴</h3>
-          <div className="history-table-container">
-            <table className="stats-table history-table">
-              <thead>
-                <tr>
-                  <th>日時</th>
-                  <th>分野</th>
-                  <th>難易度</th>
-                  <th>モード</th>
-                  <th>問題数</th>
-                  <th>正解数</th>
-                  <th>正答率</th>
-                  <th>時間</th>
-                </tr>
-              </thead>
-              <tbody>
-                {getRecentResults(30).map((result: QuizResult) => {
-                  const date = new Date(result.date);
-                  const modeEmoji = result.mode === 'translation' ? '🇯🇵' : result.mode === 'spelling' ? '✍️' : '📖';
-                  const minutes = Math.floor(result.timeSpent / 60);
-                  const seconds = result.timeSpent % 60;
-                  const scoreClass = result.percentage >= 80 ? 'score-high' : result.percentage >= 60 ? 'score-mid' : 'score-low';
-                  
-                  return (
-                    <tr key={result.id}>
-                      <td>{date.toLocaleDateString('ja-JP')} {date.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}</td>
-                      <td>{result.category || '-'}</td>
-                      <td>{result.difficulty || '-'}</td>
-                      <td>{modeEmoji}</td>
-                      <td>{result.total}</td>
-                      <td>{result.score}</td>
-                      <td className={scoreClass}>{result.percentage.toFixed(0)}%</td>
-                      <td>{minutes}:{seconds.toString().padStart(2, '0')}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-            {getRecentResults(30).length === 0 && (
-              <p className="no-data">まだ学習履歴がありません</p>
-            )}
-          </div>
+      {/* クイズ別セクション */}
+      {activeSection === 'quiz' && (
+        <div className="stats-section-new">
+          <h3 className="section-title">
+            <span className="title-icon">📝</span>
+            最近のクイズ結果
+          </h3>
+          {recentResults.length > 0 ? (
+            <div className="quiz-list">
+              {recentResults.slice(0, 20).map((result) => {
+                const date = new Date(result.date);
+                const modeEmoji = result.mode === 'translation' ? '🇯🇵' : result.mode === 'spelling' ? '✍️' : '📖';
+                const scoreClass = result.percentage >= 80 ? 'excellent' : result.percentage >= 60 ? 'good' : 'needswork';
+                
+                return (
+                  <div key={result.id} className="quiz-result-card">
+                    <div className="quiz-result-header">
+                      <span className="quiz-mode-emoji">{modeEmoji}</span>
+                      <span className="quiz-date">
+                        {date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric' })}
+                        {' '}
+                        {date.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}
+                      </span>
+                    </div>
+                    <div className="quiz-result-body">
+                      <div className={`quiz-score ${scoreClass}`}>
+                        <div className="quiz-score-value">{result.percentage.toFixed(0)}%</div>
+                        <div className="quiz-score-label">
+                          {result.score}/{result.total}問正解
+                        </div>
+                      </div>
+                      <div className="quiz-details">
+                        {result.category && (
+                          <span className="quiz-tag">{result.category}</span>
+                        )}
+                        {result.difficulty && (
+                          <span className="quiz-tag">{result.difficulty}</span>
+                        )}
+                        <span className="quiz-time">
+                          ⏱️ {Math.floor(result.timeSpent / 60)}:{(result.timeSpent % 60).toString().padStart(2, '0')}
+                        </span>
+                      </div>
+                    </div>
+                    {result.percentage >= 90 && result.percentage < 100 && (
+                      <div className="quiz-badge">🏅 すごい！</div>
+                    )}
+                    {result.percentage === 100 && (
+                      <div className="quiz-badge perfect">🎉 パーフェクト！</div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="no-data-message">
+              <p>まだクイズ結果がありません</p>
+              <p className="encourage-text">最初のクイズに挑戦しよう！ 💪</p>
+            </div>
+          )}
         </div>
       )}
 
-      {/* 弱点単語セクション */}
-      {activeSection === 'weakwords' && (
-        <div className="stats-section">
-          <h3>よく間違える単語 Top 20</h3>
-          <div className="weak-words-list">
-            {getWeakWords(20).map((item, index) => (
-              <div key={item.word} className="weak-word-item">
-                <span className="weak-word-rank">#{index + 1}</span>
-                <span className="weak-word-text">{item.word}</span>
-                <span className="weak-word-count">間違い: {item.mistakes}回</span>
-              </div>
-            ))}
-            {getWeakWords(20).length === 0 && (
-              <p className="no-data">まだデータがありません</p>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* グラフセクション */}
-      {activeSection === 'charts' && (
-        <div className="stats-section">
-          <h3>日別学習時間 (過去7日間)</h3>
-          <div className="chart-container">
-            {getDailyStudyTime(7).map((item) => {
-              const minutes = Math.floor(item.timeSpent / 60);
-              const maxMinutes = Math.max(...getDailyStudyTime(7).map(d => Math.floor(d.timeSpent / 60)), 1);
-              const barHeightPercent = (minutes / maxMinutes) * 100;
+      {/* 分野別セクション */}
+      {activeSection === 'category' && (
+        <div className="stats-section-new">
+          <h3 className="section-title">
+            <span className="title-icon">📊</span>
+            関連分野別の成績
+          </h3>
+          <div className="category-list">
+            {categoryList.map(category => {
+              const categoryWords = allQuestions.filter(q => q.category === category);
+              const results = getRecentResults(100).filter(r => r.category === category);
+              const avgScore = results.length > 0
+                ? results.reduce((sum, r) => sum + r.percentage, 0) / results.length
+                : 0;
+              
+              const getGrade = (score: number) => {
+                if (score >= 90) return { label: 'とても良い', emoji: '🌟', class: 'excellent' };
+                if (score >= 75) return { label: '良い', emoji: '😊', class: 'good' };
+                if (score >= 60) return { label: 'まあまあ', emoji: '🙂', class: 'ok' };
+                if (score > 0) return { label: 'がんばろう', emoji: '💪', class: 'needswork' };
+                return { label: '未学習', emoji: '📝', class: 'not-started' };
+              };
+              
+              const grade = getGrade(avgScore);
               
               return (
-                <div key={item.date} className="chart-bar-container">
-                  <div className="chart-bar-wrapper">
-                    <div 
-                      className="chart-bar" 
-                      data-height={barHeightPercent}
-                      title={`${minutes}分`}
-                    ></div>
+                <div key={category} className={`category-card ${grade.class}`}>
+                  <div className="category-header">
+                    <h4 className="category-name">{category}</h4>
+                    <span className="category-grade-emoji">{grade.emoji}</span>
                   </div>
-                  <div className="chart-label">{item.date.slice(5)}</div>
-                  <div className="chart-value">{minutes}分</div>
+                  <div className="category-body">
+                    <div className="category-progress-bar">
+                      <div 
+                        className="category-progress-fill"
+                        style={{ width: `${avgScore}%` }}
+                      ></div>
+                    </div>
+                    <div className="category-stats-row">
+                      <span className="category-stat">
+                        📖 {categoryWords.length}語
+                      </span>
+                      <span className="category-stat">
+                        ✨ {results.length}回
+                      </span>
+                      <span className="category-stat">
+                        {avgScore > 0 ? `${avgScore.toFixed(0)}%` : '-'}
+                      </span>
+                    </div>
+                    <div className="category-grade-label">{grade.label}</div>
+                  </div>
                 </div>
               );
             })}
-            {getDailyStudyTime(7).length === 0 && (
-              <p className="no-data">まだデータがありません</p>
-            )}
           </div>
         </div>
       )}
 
-      {/* データ管理ボタン */}
-      <div className="data-management">
-        <h3>データ管理</h3>
-        <div className="management-buttons">
-          <button onClick={handleExport} className="btn-export">
-            📥 データをエクスポート
-          </button>
-          <button onClick={handleImport} className="btn-import">
-            📤 データをインポート
-          </button>
-          <button onClick={handleClear} className="btn-clear">
-            🗑️ すべてのデータをクリア
-          </button>
+      {/* 弱点克服セクション */}
+      {activeSection === 'weak' && (
+        <div className="stats-section-new">
+          <h3 className="section-title">
+            <span className="title-icon">💪</span>
+            弱点を克服しよう
+          </h3>
+          {getWeakWords(15).length > 0 ? (
+            <>
+              <p className="weak-intro">よく間違える単語を復習して、苦手を克服しよう！</p>
+              <div className="weak-words-grid">
+                {getWeakWords(15).map((item, index) => (
+                  <div key={item.word} className="weak-word-card">
+                    <div className="weak-word-rank">
+                      {index + 1}
+                      {index === 0 && <span className="rank-badge">👑</span>}
+                    </div>
+                    <div className="weak-word-content">
+                      <div className="weak-word-text">{item.word}</div>
+                      <div className="weak-word-mistakes">
+                        {Array.from({ length: Math.min(item.mistakes, 5) }).map((_, i) => (
+                          <span key={i} className="mistake-dot">❌</span>
+                        ))}
+                        {item.mistakes > 5 && <span className="mistake-count">+{item.mistakes - 5}</span>}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="weak-encouragement">
+                <p>💡 これらの単語を集中して復習すると、成績がぐんと上がるよ！</p>
+              </div>
+            </>
+          ) : (
+            <div className="no-data-message">
+              <p>素晴らしい！ 🎉</p>
+              <p className="encourage-text">まだ苦手な単語がありません</p>
+            </div>
+          )}
         </div>
-        <p className="management-note">
-          ※ エクスポートしたデータは、別のデバイスやブラウザでインポートできます
-        </p>
-      </div>
+      )}
+
     </div>
   );
 }

@@ -3,17 +3,48 @@ import { Question } from './types';
 /**
  * CSVテキストをパースして問題配列に変換
  * quiz-app互換の7列形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
+ * 
+ * RFC 4180に準拠したCSVパーサー（引用符内のカンマを正しく処理）
  */
 export function parseCSV(csvText: string): Question[] {
-  const lines = csvText
-    .trim()
-    .split('\n')
-    .filter((line) => {
-      const trimmed = line.trim();
-      return trimmed && !trimmed.startsWith('//') && !trimmed.startsWith('#');
-    });
-
+  const lines = csvText.trim().split('\n');
   if (lines.length === 0) return [];
+
+  /**
+   * CSV行を正しくパースする関数（引用符で囲まれたフィールドに対応）
+   */
+  function parseCSVLine(line: string): string[] {
+    const result: string[] = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      const nextChar = line[i + 1];
+      
+      if (char === '"') {
+        if (inQuotes && nextChar === '"') {
+          // エスケープされた引用符
+          current += '"';
+          i++; // 次の引用符をスキップ
+        } else {
+          // 引用符の開始/終了
+          inQuotes = !inQuotes;
+        }
+      } else if (char === ',' && !inQuotes) {
+        // フィールドの区切り
+        result.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    
+    // 最後のフィールドを追加
+    result.push(current.trim());
+    
+    return result;
+  }
 
   let startIndex = 0;
 
@@ -34,9 +65,13 @@ export function parseCSV(csvText: string): Question[] {
 
   for (let i = startIndex; i < lines.length; i++) {
     const line = lines[i].trim();
-    if (!line) continue;
+    
+    // 空行やコメント行をスキップ
+    if (!line || line.startsWith('//') || line.startsWith('#')) {
+      continue;
+    }
 
-    const columns = line.split(',').map((col) => col.trim());
+    const columns = parseCSVLine(line);
 
     if (columns.length >= 3) {
       const word = columns[0] || '';
