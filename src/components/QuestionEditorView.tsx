@@ -490,28 +490,6 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
                 </div>
               </div>
 
-              {/* 統計情報 */}
-              {stats && (
-                <div className="stats-panel">
-                  <div className="stat-item">
-                    <strong>難易度:</strong>
-                    {Object.entries(stats.difficulties).map(([diff, count]) => (
-                      <span key={diff} className="stat-badge">
-                        {diff}: {count}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="stat-item">
-                    <strong>カテゴリ:</strong>
-                    {Object.entries(stats.categories).map(([cat, count]) => (
-                      <span key={cat} className="stat-badge">
-                        {cat}: {count}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
               {/* フィルタ・検索・ソート */}
               <div className="filter-panel">
                 <input

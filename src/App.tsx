@@ -17,6 +17,8 @@ import './App.css';
 
 type Tab = 'translation' | 'spelling' | 'reading' | 'stats' | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
+export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
+export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
@@ -32,6 +34,12 @@ function App() {
   
   // 難易度フィルター
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>('all');
+  
+  // 単語/熟語フィルター
+  const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<WordPhraseFilter>('all');
+  
+  // 熟語タイプフィルター
+  const [selectedPhraseTypeFilter, setSelectedPhraseTypeFilter] = useState<PhraseTypeFilter>('all');
   
   // 問題集リスト管理（後方互換性のため残す）
   const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
@@ -133,6 +141,21 @@ function App() {
         'advanced': '上級'
       };
       filtered = filtered.filter(q => q.difficulty === difficultyMap[selectedDifficulty]);
+    }
+    
+    // 単語/熟語でフィルター
+    if (selectedWordPhraseFilter === 'words-only') {
+      filtered = filtered.filter(q => !q.word.includes(' '));
+    } else if (selectedWordPhraseFilter === 'phrases-only') {
+      filtered = filtered.filter(q => q.word.includes(' '));
+      
+      // 熟語タイプでフィルター（熟語のみが選択されている場合）
+      if (selectedPhraseTypeFilter !== 'all') {
+        filtered = filtered.filter(q => {
+          const { classifyPhraseType } = require('./utils');
+          return classifyPhraseType(q.word) === selectedPhraseTypeFilter;
+        });
+      }
     }
     
     return filtered;
@@ -344,10 +367,6 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">
-        <h1>🎯 英単語3択クイズ</h1>
-      </header>
-
       <div className="tab-menu">
         <button
           className={`tab-btn ${activeTab === 'translation' ? 'active' : ''}`}
@@ -390,6 +409,10 @@ function App() {
             onCategoryChange={handleCategoryChange}
             selectedDifficulty={selectedDifficulty}
             onDifficultyChange={handleDifficultyChange}
+            selectedWordPhraseFilter={selectedWordPhraseFilter}
+            onWordPhraseFilterChange={setSelectedWordPhraseFilter}
+            selectedPhraseTypeFilter={selectedPhraseTypeFilter}
+            onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
             onStartQuiz={handleStartQuiz}
             onAnswer={handleAnswer}
             onNext={handleNext}
@@ -404,6 +427,10 @@ function App() {
             onCategoryChange={handleCategoryChange}
             selectedDifficulty={selectedDifficulty}
             onDifficultyChange={handleDifficultyChange}
+            selectedWordPhraseFilter={selectedWordPhraseFilter}
+            onWordPhraseFilterChange={setSelectedWordPhraseFilter}
+            selectedPhraseTypeFilter={selectedPhraseTypeFilter}
+            onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
             onStartQuiz={handleStartQuiz}
           />
         ) : activeTab === 'reading' ? (

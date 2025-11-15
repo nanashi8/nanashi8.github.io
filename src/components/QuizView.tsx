@@ -1,5 +1,5 @@
 import { QuizState } from '../types';
-import { DifficultyLevel } from '../App';
+import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 
@@ -10,6 +10,10 @@ interface QuizViewProps {
   onCategoryChange: (category: string) => void;
   selectedDifficulty: DifficultyLevel;
   onDifficultyChange: (level: DifficultyLevel) => void;
+  selectedWordPhraseFilter?: WordPhraseFilter;
+  onWordPhraseFilterChange?: (filter: WordPhraseFilter) => void;
+  selectedPhraseTypeFilter?: PhraseTypeFilter;
+  onPhraseTypeFilterChange?: (filter: PhraseTypeFilter) => void;
   onStartQuiz: () => void;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
@@ -24,6 +28,10 @@ function QuizView({
   onCategoryChange,
   selectedDifficulty,
   onDifficultyChange,
+  selectedWordPhraseFilter = 'all',
+  onWordPhraseFilterChange,
+  selectedPhraseTypeFilter = 'all',
+  onPhraseTypeFilterChange,
   onStartQuiz,
   onAnswer,
   onNext,
@@ -79,6 +87,40 @@ function QuizView({
               <option value="advanced">上級</option>
             </select>
           </div>
+
+          {onWordPhraseFilterChange && (
+            <div className="filter-group">
+              <label htmlFor="word-phrase-filter">📖 単語/熟語:</label>
+              <select
+                id="word-phrase-filter"
+                value={selectedWordPhraseFilter}
+                onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
+                className="select-input"
+              >
+                <option value="all">すべて</option>
+                <option value="words-only">単語のみ</option>
+                <option value="phrases-only">熟語のみ</option>
+              </select>
+            </div>
+          )}
+
+          {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
+            <div className="filter-group">
+              <label htmlFor="phrase-type-filter">🏷️ 熟語タイプ:</label>
+              <select
+                id="phrase-type-filter"
+                value={selectedPhraseTypeFilter}
+                onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
+                className="select-input"
+              >
+                <option value="all">すべて</option>
+                <option value="phrasal-verb">句動詞</option>
+                <option value="idiom">イディオム</option>
+                <option value="collocation">コロケーション</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+          )}
 
           {!hasQuestions && (
             <button onClick={onStartQuiz} className="start-btn">

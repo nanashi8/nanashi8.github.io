@@ -2,7 +2,7 @@
 // 語句,読み,意味,語源等解説,関連語,関連分野,難易度
 
 export interface Question {
-  word: string;        // 語句
+  word: string;        // 語句（単語 or 熟語、熟語の場合スペース含む）
   reading: string;     // 読み（国際基準アクセント記号をカタカナで正確に）
   meaning: string;     // 意味（正解）
   etymology: string;   // 語源等解説（小中学生向け派生語習得支援）
@@ -10,6 +10,8 @@ export interface Question {
   relatedFields: string; // 関連分野（表示用）
   category?: string;   // 関連分野（フィルター用）
   difficulty: string;  // 難易度
+  type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
+  isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
 }
 
 export interface QuizState {

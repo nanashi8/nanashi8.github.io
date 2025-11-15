@@ -1,6 +1,7 @@
 import { QuestionSet } from '../types';
 
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
+export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 
 interface QuestionSetSelectorProps {
   questionSets: QuestionSet[];
@@ -8,6 +9,8 @@ interface QuestionSetSelectorProps {
   onSelect: (setId: string) => void;
   selectedDifficulty: DifficultyLevel;
   onDifficultyChange: (level: DifficultyLevel) => void;
+  selectedWordPhraseFilter?: WordPhraseFilter;
+  onWordPhraseFilterChange?: (filter: WordPhraseFilter) => void;
   label?: string;
 }
 
@@ -17,6 +20,8 @@ function QuestionSetSelector({
   onSelect,
   selectedDifficulty,
   onDifficultyChange,
+  selectedWordPhraseFilter = 'all',
+  onWordPhraseFilterChange,
   label = '問題集を選択',
 }: QuestionSetSelectorProps) {
   const selectedSet = questionSets.find(set => set.id === selectedSetId);
@@ -26,6 +31,12 @@ function QuestionSetSelector({
     beginner: selectedSet.questions.filter(q => q.difficulty === '初級').length,
     intermediate: selectedSet.questions.filter(q => q.difficulty === '中級').length,
     advanced: selectedSet.questions.filter(q => q.difficulty === '上級').length,
+  } : null;
+  
+  // 単語/熟語の数をカウント
+  const wordPhraseCount = selectedSet ? {
+    words: selectedSet.questions.filter(q => !q.word.includes(' ')).length,
+    phrases: selectedSet.questions.filter(q => q.word.includes(' ')).length,
   } : null;
 
   return (
@@ -77,6 +88,32 @@ function QuestionSetSelector({
             </option>
           </select>
         </div>
+
+        {/* 単語/熟語フィルター選択 */}
+        {onWordPhraseFilterChange && (
+          <div className="selector-item">
+            <label htmlFor="word-phrase-filter" className="selector-label">
+              📖 単語/熟語
+            </label>
+            <select
+              id="word-phrase-filter"
+              className="selector-dropdown"
+              value={selectedWordPhraseFilter}
+              onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
+              disabled={!selectedSetId}
+            >
+              <option value="all">
+                すべて {wordPhraseCount ? `(${selectedSet!.questions.length}語)` : ''}
+              </option>
+              <option value="words-only">
+                単語のみ 📝 {wordPhraseCount ? `(${wordPhraseCount.words}語)` : ''}
+              </option>
+              <option value="phrases-only">
+                熟語のみ 🔗 {wordPhraseCount ? `(${wordPhraseCount.phrases}語)` : ''}
+              </option>
+            </select>
+          </div>
+        )}
       </div>
     </div>
   );

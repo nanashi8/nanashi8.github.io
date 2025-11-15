@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
-import { DifficultyLevel } from '../App';
+import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
 import { addQuizResult } from '../progressStorage';
 import { generateId } from '../utils';
@@ -12,6 +12,10 @@ interface SpellingViewProps {
   onCategoryChange: (category: string) => void;
   selectedDifficulty: DifficultyLevel;
   onDifficultyChange: (level: DifficultyLevel) => void;
+  selectedWordPhraseFilter?: WordPhraseFilter;
+  onWordPhraseFilterChange?: (filter: WordPhraseFilter) => void;
+  selectedPhraseTypeFilter?: PhraseTypeFilter;
+  onPhraseTypeFilterChange?: (filter: PhraseTypeFilter) => void;
   onStartQuiz: () => void;
 }
 
@@ -22,6 +26,10 @@ function SpellingView({
   onCategoryChange,
   selectedDifficulty,
   onDifficultyChange,
+  selectedWordPhraseFilter = 'all',
+  onWordPhraseFilterChange,
+  selectedPhraseTypeFilter = 'all',
+  onPhraseTypeFilterChange,
   onStartQuiz
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
@@ -206,6 +214,40 @@ function SpellingView({
           </select>
         </div>
 
+        {onWordPhraseFilterChange && (
+          <div className="filter-group">
+            <label htmlFor="word-phrase-filter">📖 単語/熟語:</label>
+            <select
+              id="word-phrase-filter"
+              value={selectedWordPhraseFilter}
+              onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
+              className="select-input"
+            >
+              <option value="all">すべて</option>
+              <option value="words-only">単語のみ</option>
+              <option value="phrases-only">熟語のみ</option>
+            </select>
+          </div>
+        )}
+
+        {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
+          <div className="filter-group">
+            <label htmlFor="phrase-type-filter">🏷️ 熟語タイプ:</label>
+            <select
+              id="phrase-type-filter"
+              value={selectedPhraseTypeFilter}
+              onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
+              className="select-input"
+            >
+              <option value="all">すべて</option>
+              <option value="phrasal-verb">句動詞</option>
+              <option value="idiom">イディオム</option>
+              <option value="collocation">コロケーション</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+        )}
+
         {!hasQuestions && (
           <button onClick={onStartQuiz} className="start-btn">
             🎯 クイズを開始
@@ -231,6 +273,11 @@ function SpellingView({
               <div className="meaning-display">
                 <div className="meaning-label">意味:</div>
                 <div className="meaning-text">{currentQuestion.meaning}</div>
+                {currentQuestion.word.includes(' ') && (
+                  <div className="phrase-hint">
+                    💡 ヒント: {currentQuestion.word.split(' ').length}つの単語で構成された熟語です
+                  </div>
+                )}
               </div>
 
               {/* ユーザーが選択中の単語表示 */}

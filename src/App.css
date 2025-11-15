@@ -359,6 +359,50 @@ option {
   line-height: 1.3;
 }
 
+.question-text.phrase-text {
+  color: #667eea;
+  font-size: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+.phrase-info {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.phrase-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.75em;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.phrase-type-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  font-size: 0.75em;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.phrase-hint {
+  background: #f0f7ff;
+  border-left: 3px solid #667eea;
+  padding: 8px 12px;
+  margin: 8px 0;
+  font-size: 0.9em;
+  color: #555;
+  border-radius: 4px;
+}
+
 .question-hint {
   text-align: center;
   color: #666;

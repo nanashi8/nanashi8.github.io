@@ -476,3 +476,86 @@ export function selectQuestionsByMasteryLevel(
   const shuffled = shuffle(filteredQuestions);
   return count ? shuffled.slice(0, count) : shuffled;
 }
+
+/**
+ * 熟語のタイプを分類する
+ * @param phrase - 分類する熟語（例: "look forward to", "break the ice"）
+ * @returns 'phrasal-verb' | 'idiom' | 'collocation' | 'other'
+ */
+export function classifyPhraseType(phrase: string): string {
+  // スペースがない場合は単語なので分類不要
+  if (!phrase.includes(' ')) {
+    return 'word';
+  }
+
+  const lowerPhrase = phrase.toLowerCase();
+  const words = lowerPhrase.split(' ');
+  
+  // 句動詞パターン: 動詞 + 前置詞/副詞
+  const commonVerbs = [
+    'get', 'go', 'come', 'take', 'make', 'put', 'look', 'turn', 'break', 
+    'bring', 'call', 'carry', 'check', 'figure', 'fill', 'find', 'give',
+    'hand', 'hang', 'hold', 'keep', 'knock', 'lay', 'let', 'pass', 'pick',
+    'pull', 'push', 'run', 'set', 'show', 'shut', 'sit', 'stand', 'stay',
+    'stick', 'take', 'talk', 'think', 'throw', 'try', 'work', 'write'
+  ];
+  
+  const particles = [
+    'up', 'down', 'in', 'out', 'on', 'off', 'away', 'back', 'over', 'through',
+    'around', 'across', 'along', 'about', 'after', 'for', 'from', 'into', 'to', 'with'
+  ];
+  
+  // 句動詞判定: 最初の単語が一般的な動詞で、後続に前置詞/副詞
+  if (words.length >= 2 && commonVerbs.includes(words[0])) {
+    const hasParticle = words.slice(1).some(w => particles.includes(w));
+    if (hasParticle) {
+      return 'phrasal-verb';
+    }
+  }
+  
+  // イディオムの特徴的パターン
+  const idiomPatterns = [
+    /^a .+ of$/,                    // a piece of, a drop in the bucket
+    /^the .+ (of|in)$/,             // the tip of the iceberg, the elephant in the room
+    /^(break|beat|hit|kick) (the|a)/, // break the ice, beat around the bush
+    /^(catch|have|take|make) (a|an|the)/, // catch one's eye, have a blast
+    /(eye|eyes|face|hand|tongue|ear|nose|heart|mind|bone)/i, // 身体部位を含むイディオム
+    /^once in a/,                   // once in a blue moon
+    /^(cost|pay|worth) (an|a)/,    // cost an arm and a leg
+    /^at .+ (heart|first|last|once)/, // at heart, at first sight
+  ];
+  
+  const isIdiom = idiomPatterns.some(pattern => pattern.test(lowerPhrase));
+  if (isIdiom) {
+    return 'idiom';
+  }
+  
+  // コロケーション判定: 前置詞句、形容詞+名詞、動詞+名詞など
+  const collocPatterns = [
+    /^(in|on|at|by|with|from|to) (the|a|an) /, // 前置詞句
+    /^(make|take|do|have|get) (a|an|the) /,    // 動詞+冠詞+名詞
+    /(strong|weak|heavy|light|high|low|good|bad|big|small) /i, // 形容詞+名詞
+  ];
+  
+  const isCollocation = collocPatterns.some(pattern => pattern.test(lowerPhrase));
+  if (isCollocation) {
+    return 'collocation';
+  }
+  
+  // それ以外
+  return 'other';
+}
+
+/**
+ * 熟語タイプの日本語ラベルを取得
+ */
+export function getPhraseTypeLabel(phraseType: string): string {
+  const labels: Record<string, string> = {
+    'word': '単語',
+    'phrasal-verb': '句動詞',
+    'idiom': 'イディオム',
+    'collocation': 'コロケーション',
+    'other': 'その他'
+  };
+  return labels[phraseType] || 'その他';
+}

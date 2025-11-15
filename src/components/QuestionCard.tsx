@@ -1,5 +1,5 @@
 import { Question } from '../types';
-import { generateChoices } from '../utils';
+import { generateChoices, classifyPhraseType, getPhraseTypeLabel } from '../utils';
 import { useState, useRef, useEffect } from 'react';
 
 interface QuestionCardProps {
@@ -123,9 +123,19 @@ function QuestionCard({
       <div className="question-number-badge">第{currentIndex + 1}問</div>
       <div className="question-header-row">
         <div className="question-main">
-          <div className="question-text">{question.word}</div>
+          <div className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''}`}>
+            {question.word}
+          </div>
           {question.reading && (
             <div className="question-reading">【{question.reading}】</div>
+          )}
+          {question.word.includes(' ') && (
+            <div className="phrase-info">
+              <span className="phrase-badge">📖 熟語</span>
+              <span className="phrase-type-badge">
+                {getPhraseTypeLabel(classifyPhraseType(question.word))}
+              </span>
+            </div>
           )}
         </div>
         {answered && (
