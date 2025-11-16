@@ -31,6 +31,9 @@ export interface WordProgress {
   responseTimes: number[]; // 応答時間の履歴（最新10件）
   category?: string; // カテゴリー
   difficulty?: string; // 難易度レベル
+  skippedCount?: number; // スキップ回数
+  lastSkipped?: number; // 最終スキップ日時（タイムスタンプ）
+  skipExcludeUntil?: number; // この日時まで出題除外（タイムスタンプ）
 }
 
 export interface UserProgress {
@@ -413,6 +416,53 @@ export function updateWordProgress(
   wordProgress.masteryLevel = determineMasteryLevel(wordProgress);
   
   saveProgress(progress);
+}
+
+// 単語のスキップを記録（スワイプでスキップされた場合）
+export function recordWordSkip(
+  word: string,
+  excludeDays: number = 7 // デフォルトで7日間除外
+): void {
+  const progress = loadProgress();
+  
+  if (!progress.wordProgress[word]) {
+    progress.wordProgress[word] = initializeWordProgress(word);
+  }
+  
+  const wordProgress = progress.wordProgress[word];
+  
+  // スキップ情報を更新
+  wordProgress.skippedCount = (wordProgress.skippedCount || 0) + 1;
+  wordProgress.lastSkipped = Date.now();
+  wordProgress.skipExcludeUntil = Date.now() + (excludeDays * 24 * 60 * 60 * 1000);
+  
+  // スキップが多い場合は除外期間を延長
+  if (wordProgress.skippedCount >= 3) {
+    // 3回以上スキップされた場合は14日間除外
+    wordProgress.skipExcludeUntil = Date.now() + (14 * 24 * 60 * 60 * 1000);
+  } else if (wordProgress.skippedCount >= 5) {
+    // 5回以上スキップされた場合は30日間除外
+    wordProgress.skipExcludeUntil = Date.now() + (30 * 24 * 60 * 60 * 1000);
+  }
+  
+  saveProgress(progress);
+}
+
+// 単語がスキップ除外期間中かチェック
+export function isWordSkipExcluded(word: string): boolean {
+  const progress = loadProgress();
+  const wordProgress = progress.wordProgress[word];
+  
+  if (!wordProgress || !wordProgress.skipExcludeUntil) {
+    return false;
+  }
+  
+  return Date.now() < wordProgress.skipExcludeUntil;
+}
+
+// スキップ除外期間中の単語を除外した問題リストを取得
+export function filterSkippedWords<T extends { word: string }>(questions: T[]): T[] {
+  return questions.filter(q => !isWordSkipExcluded(q.word));
 }
 
 // 単語の進捗を取得

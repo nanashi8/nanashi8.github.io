@@ -7,7 +7,7 @@ import {
   generateId,
   selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult, updateWordProgress } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
@@ -166,6 +166,9 @@ function App() {
         });
       }
     }
+    
+    // スキップされた単語を除外
+    filtered = filterSkippedWords(filtered);
     
     return filtered;
   };

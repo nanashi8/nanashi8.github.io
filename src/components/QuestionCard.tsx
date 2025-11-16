@@ -1,5 +1,6 @@
 import { Question } from '../types';
 import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } from '../utils';
+import { recordWordSkip } from '../progressStorage';
 import { useState, useRef, useEffect, useMemo } from 'react';
 
 interface QuestionCardProps {
@@ -63,14 +64,16 @@ function QuestionCard({
     };
     
     const handleTouchEnd = () => {
-      if (!answered) return; // 回答前はスワイプ無効
-      
       const swipeDistance = touchStartX.current - touchEndX.current;
       const minSwipeDistance = 50; // 最小スワイプ距離
       
       if (Math.abs(swipeDistance) > minSwipeDistance) {
         if (swipeDistance > 0) {
           // 左スワイプ → 次へ
+          if (!answered) {
+            // 回答前のスワイプはスキップとして記録
+            recordWordSkip(question.word, 7); // 7日間除外
+          }
           handleNextClick();
         } else {
           // 右スワイプ → 前へ
