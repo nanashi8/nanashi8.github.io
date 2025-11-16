@@ -19,15 +19,65 @@ interface StatsViewProps {
 function StatsView({ questionSets, allQuestions, categoryList }: StatsViewProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [activeSection, setActiveSection] = useState<'overview' | 'daily' | 'quiz' | 'category' | 'weak'>('overview');
+  const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
 
+  // リアルタイム更新（学習中のデータを即座に反映）
   useEffect(() => {
     loadProgressData();
+    
+    if (autoRefresh) {
+      // 5秒ごとにデータを再読み込み
+      const interval = setInterval(() => {
+        loadProgressData();
+      }, 5000);
+      
+      return () => clearInterval(interval);
+    }
+  }, [autoRefresh]);
+
+  // storageイベントをリッスン（他のタブでの変更を検知）
+  useEffect(() => {
+    const handleStorageChange = () => {
+      loadProgressData();
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
   const loadProgressData = () => {
     const data = loadProgress();
     setProgress(data);
   };
+
+  // 学習プランの進捗情報を取得
+  const getPlanProgress = () => {
+    try {
+      const planData = localStorage.getItem('learning-schedule-90days');
+      if (!planData) return null;
+      
+      const schedule = JSON.parse(planData);
+      const daysPassed = Math.floor((Date.now() - schedule.startDate) / (1000 * 60 * 60 * 24));
+      const currentDay = Math.min(daysPassed + 1, schedule.totalDays);
+      const progressPercent = Math.round((currentDay / schedule.totalDays) * 100);
+      
+      // 今日の目標を計算
+      const dailyTarget = Math.ceil(allQuestions.length / schedule.totalDays);
+      
+      return {
+        currentDay,
+        totalDays: schedule.totalDays,
+        progressPercent,
+        phase: schedule.phase,
+        dailyTarget,
+        planDurationMonths: schedule.planDurationMonths
+      };
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const planProgress = getPlanProgress();
 
   if (!progress) {
     return <div className="stats-view">読み込み中...</div>;
@@ -159,6 +209,45 @@ function StatsView({ questionSets, allQuestions, categoryList }: StatsViewProps)
       {/* ホーム（概要）セクション */}
       {activeSection === 'overview' && (
         <div className="stats-section-new">
+          {/* 学習プラン進捗 */}
+          {planProgress && (
+            <div className="plan-progress-section">
+              <h3 className="section-title">
+                <span className="title-icon">🎯</span>
+                学習プラン進捗
+              </h3>
+              <div className="plan-progress-card">
+                <div className="plan-stats-row">
+                  <div className="plan-stat">
+                    <div className="plan-stat-value">{planProgress.currentDay}/{planProgress.totalDays}</div>
+                    <div className="plan-stat-label">日目</div>
+                  </div>
+                  <div className="plan-stat">
+                    <div className="plan-stat-value">{planProgress.progressPercent}%</div>
+                    <div className="plan-stat-label">完了</div>
+                  </div>
+                  <div className="plan-stat">
+                    <div className="plan-stat-value">Phase {planProgress.phase}</div>
+                    <div className="plan-stat-label">現在</div>
+                  </div>
+                  <div className="plan-stat">
+                    <div className="plan-stat-value">{planProgress.dailyTarget}</div>
+                    <div className="plan-stat-label">語/日</div>
+                  </div>
+                </div>
+                <div className="plan-progress-bar">
+                  <div className="plan-progress-fill" data-progress={planProgress.progressPercent}></div>
+                </div>
+                {todayStats.quizCount > 0 && (
+                  <div className="daily-achievement">
+                    今日の達成: <strong>{todayStats.totalQuestions}</strong>語 
+                    ({Math.round((todayStats.totalQuestions / planProgress.dailyTarget) * 100)}%)
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+          
           {/* 今日の学習 */}
           <div className="today-section">
             <h3 className="section-title">

@@ -284,7 +284,10 @@ function App() {
   const handleAnswer = (answer: string, correct: string) => {
     if (quizState.answered) return;
 
-    const isCorrect = answer === correct;
+    // 安全な比較のため、両者をtrim()で正規化
+    const normalizedAnswer = answer.trim();
+    const normalizedCorrect = correct.trim();
+    const isCorrect = normalizedAnswer === normalizedCorrect;
     const currentQuestion = quizState.questions[quizState.currentIndex];
     
     // 応答時間を計算

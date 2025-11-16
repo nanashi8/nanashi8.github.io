@@ -4073,6 +4073,121 @@ option {
   font-size: 1.2em;
 }
 
+/* 学習プラン進捗セクション */
+.plan-progress-section {
+  margin-bottom: 30px;
+}
+
+.plan-progress-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.plan-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.plan-stat {
+  text-align: center;
+}
+
+.plan-stat-value {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.plan-stat-label {
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+.plan-progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.plan-progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.plan-progress-fill[data-progress="0"] { width: 0%; }
+.plan-progress-fill[data-progress="1"] { width: 1%; }
+.plan-progress-fill[data-progress="2"] { width: 2%; }
+.plan-progress-fill[data-progress="3"] { width: 3%; }
+.plan-progress-fill[data-progress="4"] { width: 4%; }
+.plan-progress-fill[data-progress="5"] { width: 5%; }
+.plan-progress-fill[data-progress="10"] { width: 10%; }
+.plan-progress-fill[data-progress="15"] { width: 15%; }
+.plan-progress-fill[data-progress="20"] { width: 20%; }
+.plan-progress-fill[data-progress="25"] { width: 25%; }
+.plan-progress-fill[data-progress="30"] { width: 30%; }
+.plan-progress-fill[data-progress="35"] { width: 35%; }
+.plan-progress-fill[data-progress="40"] { width: 40%; }
+.plan-progress-fill[data-progress="45"] { width: 45%; }
+.plan-progress-fill[data-progress="50"] { width: 50%; }
+.plan-progress-fill[data-progress="55"] { width: 55%; }
+.plan-progress-fill[data-progress="60"] { width: 60%; }
+.plan-progress-fill[data-progress="65"] { width: 65%; }
+.plan-progress-fill[data-progress="70"] { width: 70%; }
+.plan-progress-fill[data-progress="75"] { width: 75%; }
+.plan-progress-fill[data-progress="80"] { width: 80%; }
+.plan-progress-fill[data-progress="85"] { width: 85%; }
+.plan-progress-fill[data-progress="90"] { width: 90%; }
+.plan-progress-fill[data-progress="95"] { width: 95%; }
+.plan-progress-fill[data-progress="100"] { width: 100%; }
+
+.daily-achievement {
+  text-align: center;
+  font-size: 0.95em;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.daily-achievement strong {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .plan-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .plan-stat-value {
+    font-size: 1.5em;
+  }
+}
+
+/* 更新ボタン */
+.refresh-btn {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+}
+
 /* 今日の学習セクション */
 .today-section {
   margin-bottom: 30px;
