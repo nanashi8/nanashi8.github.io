@@ -453,6 +453,24 @@ function SpellingView({
                   )}
                 </div>
               )}
+
+              {/* 下部ナビゲーションボタン */}
+              <div className="bottom-nav-buttons">
+                <button 
+                  className="nav-btn prev-btn" 
+                  onClick={handlePrevious}
+                  disabled={spellingState.currentIndex === 0}
+                >
+                  ← 戻る
+                </button>
+                <button 
+                  className="nav-btn next-btn" 
+                  onClick={handleNext}
+                  disabled={spellingState.currentIndex >= spellingState.questions.length - 1}
+                >
+                  次へ →
+                </button>
+              </div>
             </div>
           )}
         </>
