@@ -131,8 +131,16 @@ function QuestionCard({
       className={`question-card ${answered ? (selectedAnswer === question.meaning ? 'answered-correct' : 'answered-incorrect') : ''}`}
       ref={cardRef}
     >
-      <div className="question-header-row">
-        <div className="question-main">
+      <div className="question-nav-row">
+        <button 
+          className="inline-nav-btn prev-inline-btn" 
+          onClick={onPrevious}
+          disabled={currentIndex === 0}
+          title="前へ"
+        >
+          ←
+        </button>
+        <div className="question-content-inline">
           <div className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''}`}>
             {question.word}
           </div>
@@ -148,6 +156,13 @@ function QuestionCard({
             </div>
           )}
         </div>
+        <button 
+          className="inline-nav-btn next-inline-btn" 
+          onClick={handleNextClick}
+          title="次へ"
+        >
+          →
+        </button>
       </div>
 
       <div className="choices">

@@ -55,18 +55,18 @@ function ScoreBoard({
       
       <div className="score-board-compact">
         <span className="score-stat-large">
-          正答率: <strong className="correct">{accuracy}%</strong>
+          正答率<strong className="correct">{accuracy}%</strong>
         </span>
         <span className="score-stat">
-          <strong>{score}</strong> / <strong>{totalAnswered}</strong>
+          回答数<strong>{totalAnswered}</strong>
+        </span>
+        <span className="score-stat-divider">/</span>
+        <span className="score-stat">
+          出題数<strong>{totalQuestions}</strong>
         </span>
         <span className="score-stat-divider">|</span>
         <span className="score-stat">
-          出題: <strong>{totalQuestions}</strong>
-        </span>
-        <span className="score-stat-divider">|</span>
-        <span className="score-stat">
-          新規: <strong>{newWordsCount}</strong>
+          新規数<strong>{newWordsCount}</strong>
         </span>
       </div>
       

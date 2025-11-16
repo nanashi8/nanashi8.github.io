@@ -206,21 +206,32 @@ option {
   color: #28a745;
 }
 
-/* 問題カードとサイドナビゲーションボタンのコンテナ */
-.question-with-nav {
-  display: flex;
-  align-items: stretch;
-  gap: 8px;
+/* 問題コンテナ */
+.question-container {
   flex: 1;
   overflow: hidden;
   padding: 15px;
 }
 
-.side-nav-btn {
+/* 問題ナビゲーション行（問題とボタンを横並び） */
+.question-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.question-content-inline {
+  flex: 1;
+  min-width: 0;
+}
+
+.inline-nav-btn {
   flex-shrink: 0;
-  width: 50px;
-  min-height: 200px;
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   font-size: 1.5em;
   font-weight: 700;
   border: 2px solid #667eea;
@@ -232,25 +243,26 @@ option {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
-.side-nav-btn:hover:not(:disabled) {
+.inline-nav-btn:hover:not(:disabled) {
   background: #f0f4ff;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.side-nav-btn:disabled {
+.inline-nav-btn:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-.side-nav-btn.next-side-btn {
+.inline-nav-btn.next-inline-btn {
   background: #667eea;
   color: white;
   border-color: #667eea;
 }
 
-.side-nav-btn.next-side-btn:hover:not(:disabled) {
+.inline-nav-btn.next-inline-btn:hover:not(:disabled) {
   background: #5568d3;
 }
 
@@ -282,7 +294,7 @@ option {
 .score-stat {
   color: #666;
   white-space: nowrap;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .score-stat strong {
@@ -293,7 +305,7 @@ option {
 .score-stat-large {
   color: #333;
   white-space: nowrap;
-  font-size: 1.2em;
+  font-size: 0.95em;
   font-weight: 600;
 }
 
@@ -367,19 +379,6 @@ option {
   font-size: 0.75em;
   font-weight: 600;
   z-index: 1;
-}
-
-/* 問題ヘッダー行：問題と正解/不正解バッジを横並び */
-.question-header-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-.question-main {
-  flex: 1;
 }
 
 .question-header {
@@ -705,7 +704,7 @@ option {
 }
 
 .nav-btn {
-  padding: 8px 14px;
+  padding: 12px 20px;
   border-radius: 8px;
   font-size: 0.9em;
   font-weight: 600;
@@ -717,6 +716,7 @@ option {
   touch-action: manipulation;
   white-space: nowrap;
   flex-shrink: 0;
+  min-height: 44px;
 }
 
 .nav-btn:hover:not(:disabled) {
@@ -5631,15 +5631,19 @@ option {
     align-items: flex-start;
   }
 
-  .side-nav-btn {
+  .question-container {
+    padding: 10px;
+  }
+
+  .inline-nav-btn {
     width: 40px;
-    min-height: 150px;
+    height: 40px;
     font-size: 1.2em;
   }
 
-  .question-with-nav {
-    padding: 10px;
-    gap: 6px;
+  .question-nav-row {
+    gap: 8px;
+    margin-top: 10px;
   }
 }
 
