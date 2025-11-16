@@ -46,6 +46,8 @@ function SpellingView({
   const [shuffledLetters, setShuffledLetters] = useState<string[]>([]);
   // ユーザーが選択した順番のアルファベット
   const [selectedSequence, setSelectedSequence] = useState<string[]>([]);
+  // 詳細表示の開閉状態
+  const [showDetails, setShowDetails] = useState<boolean>(false);
   
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
@@ -82,6 +84,7 @@ function SpellingView({
       
       setShuffledLetters(shuffled);
       setSelectedSequence([]);
+      setShowDetails(false);
       setSpellingState((prev) => ({
         ...prev,
         correctWord: word,
@@ -152,9 +155,18 @@ function SpellingView({
   };
 
   const handleNext = () => {
+    setShowDetails(false);
     setSpellingState((prev) => ({
       ...prev,
-      currentIndex: (prev.currentIndex + 1) % prev.questions.length,
+      currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
+    }));
+  };
+
+  const handlePrevious = () => {
+    setShowDetails(false);
+    setSpellingState((prev) => ({
+      ...prev,
+      currentIndex: prev.currentIndex > 0 ? prev.currentIndex - 1 : 0,
     }));
   };
 
@@ -166,9 +178,11 @@ function SpellingView({
     }));
   };
 
-  // 選択中の選択をクリア（やり直し）
-  const handleClearSelection = () => {
-    setSelectedSequence([]);
+  // 選択中の最後の1文字を削除
+  const handleBackspace = () => {
+    if (selectedSequence.length > 0) {
+      setSelectedSequence(prev => prev.slice(0, -1));
+    }
   };
 
   const currentQuestion =
@@ -272,22 +286,42 @@ function SpellingView({
 
           {currentQuestion && (
             <div className="spelling-card">
-              <div className="meaning-display">
-                <div className="meaning-label">意味:</div>
-                <div className="meaning-text">{currentQuestion.meaning}</div>
-                {currentQuestion.word.includes(' ') && (
-                  <div className="phrase-hint">
-                    💡 ヒント: {currentQuestion.word.split(' ').length}つの単語で構成された熟語です
+              <div className="question-nav-row">
+                <button 
+                  className="inline-nav-btn prev-inline-btn" 
+                  onClick={handlePrevious}
+                  disabled={spellingState.currentIndex === 0}
+                  title="前へ"
+                >
+                  ←
+                </button>
+                <div className="spelling-content-inline">
+                  <div className="meaning-display">
+                    <div className="meaning-label">意味:</div>
+                    <div className="meaning-text">{currentQuestion.meaning}</div>
+                    {currentQuestion.word.includes(' ') && (
+                      <div className="phrase-hint">
+                        💡 ヒント: {currentQuestion.word.split(' ').length}つの単語で構成された熟語です
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
 
-              {/* ユーザーが選択中の単語表示 */}
-              <div className="user-word-display">
-                <div className="user-word-label">あなたの答え:</div>
-                <div className="user-word-text">
-                  {userWord || '（タップして並べてください）'}
+                  {/* ユーザーが選択中の単語表示 */}
+                  <div className="user-word-display">
+                    <div className="user-word-label">あなたの答え:</div>
+                    <div className="user-word-text">
+                      {userWord || '（タップして並べてください）'}
+                    </div>
+                  </div>
                 </div>
+                <button 
+                  className="inline-nav-btn next-inline-btn" 
+                  onClick={handleNext}
+                  disabled={spellingState.currentIndex >= spellingState.questions.length - 1}
+                  title="次へ"
+                >
+                  →
+                </button>
               </div>
 
               {/* シャッフルされたアルファベットカード */}
@@ -312,11 +346,11 @@ function SpellingView({
                 })}
               </div>
 
-              {/* 選択中のやり直しボタン */}
+              {/* 1文字戻すボタン */}
               {!spellingState.answered && selectedSequence.length > 0 && (
                 <div className="spelling-reset-button-container">
-                  <button className="btn-reset-selection" onClick={handleClearSelection}>
-                    🔄 やり直す
+                  <button className="btn-reset-selection" onClick={handleBackspace}>
+                    ⌫ 1文字戻す
                   </button>
                 </div>
               )}
@@ -334,52 +368,53 @@ function SpellingView({
                     正解: <strong>{spellingState.correctWord}</strong>
                   </div>
                   
-                  {/* 詳細情報の表示 */}
-                  <div className="question-details-spelling">
-                    {currentQuestion.reading && (
-                      <div className="detail-row">
-                        <span className="detail-label">読み:</span>
-                        <span className="detail-content">{currentQuestion.reading}</span>
-                      </div>
-                    )}
-                    <div className="detail-row">
-                      <span className="detail-label">意味:</span>
-                      <span className="detail-content">{currentQuestion.meaning}</span>
-                    </div>
-                    {currentQuestion.etymology && (
-                      <div className="detail-row">
-                        <span className="detail-label">📚 語源等解説:</span>
-                        <span className="detail-content">{currentQuestion.etymology}</span>
-                      </div>
-                    )}
-                    {currentQuestion.relatedWords && (
-                      <div className="detail-row">
-                        <span className="detail-label">🔗 関連語:</span>
-                        <span className="detail-content">{currentQuestion.relatedWords}</span>
-                      </div>
-                    )}
-                    {currentQuestion.relatedFields && (
-                      <div className="detail-row">
-                        <span className="detail-label">🏷️ 関連分野:</span>
-                        <span className="detail-content">{currentQuestion.relatedFields}</span>
-                      </div>
-                    )}
-                    {currentQuestion.difficulty && (
-                      <div className="detail-row">
-                        <span className="detail-label">難易度:</span>
-                        <span className="detail-content">{currentQuestion.difficulty}</span>
-                      </div>
-                    )}
-                  </div>
+                  {/* 詳細を見るボタン */}
+                  <button 
+                    className="btn-toggle-details"
+                    onClick={() => setShowDetails(!showDetails)}
+                  >
+                    {showDetails ? '📖 詳細を閉じる' : '📖 詳細を見る'}
+                  </button>
                   
-                  <div className="action-buttons">
-                    <button className="btn-secondary" onClick={handleReset}>
-                      もう一度
-                    </button>
-                    <button className="btn-primary" onClick={handleNext}>
-                      次の問題
-                    </button>
-                  </div>
+                  {/* 詳細情報の表示（折りたたみ式） */}
+                  {showDetails && (
+                    <div className="question-details-spelling">
+                      {currentQuestion.reading && (
+                        <div className="detail-row">
+                          <span className="detail-label">読み:</span>
+                          <span className="detail-content">{currentQuestion.reading}</span>
+                        </div>
+                      )}
+                      <div className="detail-row">
+                        <span className="detail-label">意味:</span>
+                        <span className="detail-content">{currentQuestion.meaning}</span>
+                      </div>
+                      {currentQuestion.etymology && (
+                        <div className="detail-row">
+                          <span className="detail-label">📚 語源等解説:</span>
+                          <span className="detail-content">{currentQuestion.etymology}</span>
+                        </div>
+                      )}
+                      {currentQuestion.relatedWords && (
+                        <div className="detail-row">
+                          <span className="detail-label">🔗 関連語:</span>
+                          <span className="detail-content">{currentQuestion.relatedWords}</span>
+                        </div>
+                      )}
+                      {currentQuestion.relatedFields && (
+                        <div className="detail-row">
+                          <span className="detail-label">🏷️ 関連分野:</span>
+                          <span className="detail-content">{currentQuestion.relatedFields}</span>
+                        </div>
+                      )}
+                      {currentQuestion.difficulty && (
+                        <div className="detail-row">
+                          <span className="detail-label">難易度:</span>
+                          <span className="detail-content">{currentQuestion.difficulty}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
