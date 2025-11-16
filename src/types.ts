@@ -132,3 +132,82 @@ export interface DailyStudyPlan {
   completed: boolean;
   actualAccuracy: number;
 }
+
+// AI人格システムの型定義
+export type AIPersonality = 
+  | 'drill-sergeant'    // 鬼軍曹
+  | 'kind-teacher'      // 優しい先生
+  | 'analyst'           // 冷静な分析官
+  | 'enthusiastic-coach' // 熱血コーチ
+  | 'wise-sage';        // 賢者
+
+// AIコメント生成用のコンテキスト
+export interface CommentContext {
+  // 回答情報
+  isCorrect: boolean;
+  attemptCount: number;
+  responseTime: number; // ミリ秒
+  
+  // ストリーク
+  correctStreak: number;
+  incorrectStreak: number;
+  
+  // 単語情報
+  word: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  category: string;
+  
+  // ユーザーの状態
+  userAccuracy: number; // 全体正答率(0-100)
+  categoryAccuracy: number; // カテゴリー正答率(0-100)
+  isWeakCategory: boolean;
+  hasSeenBefore: boolean;
+  previousAttempts: number; // この単語の過去試行回数
+  
+  // 進捗情報
+  todayQuestions: number;
+  todayAccuracy: number;
+  planProgress: number; // プランとの進捗率(0-100)
+  
+  // 時間帯
+  timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+}
+
+// ユーザーの学習プロファイル
+export interface UserLearningProfile {
+  // 難易度別の基礎能力
+  difficultyMastery: {
+    beginner: number;    // 初級の平均正答率 (0-100)
+    intermediate: number; // 中級の平均正答率
+    advanced: number;     // 上級の平均正答率
+  };
+  
+  // カテゴリー別の得意度
+  categoryStrength: {
+    [category: string]: {
+      accuracyRate: number;      // 正答率(0-100)
+      learningSpeed: number;     // 習得速度(問題数/単語)
+      retentionRate: number;     // 定着率(0-100)
+      confidence: 'high' | 'medium' | 'low'; // 得意度判定
+      totalStudied: number;      // 学習した単語数
+      totalMastered: number;     // 習得済み単語数
+    };
+  };
+  
+  // 動的閾値
+  dynamicThresholds: {
+    masteryThreshold: number;    // 習得判定の閾値(60-90%)
+    reviewThreshold: number;     // 復習判定の閾値(40-70%)
+    priorityThreshold: number;   // 優先出題の閾値(50-80%)
+  };
+  
+  // 学習ペース
+  learningPace: {
+    dailyAverage: number;        // 1日平均問題数
+    preferredBatchSize: number;  // 好みのバッチサイズ
+    studyPattern: 'fast' | 'steady' | 'slow'; // 学習パターン
+  };
+  
+  // 最終更新日時
+  lastUpdated: number;
+}

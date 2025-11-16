@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import type { Question } from '../types';
+import type { Question, AIPersonality } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import LearningPlanView from './LearningPlanView';
+import { PERSONALITY_INFO } from '../aiCommentGenerator';
 
 interface SettingsViewProps {
   allQuestions: Question[];
@@ -38,10 +39,22 @@ function SettingsView({
     return saved ? parseInt(saved, 10) : 20;
   });
 
+  // AI人格の読み込み
+  const [aiPersonality, setAIPersonality] = useState<AIPersonality>(() => {
+    const saved = localStorage.getItem('aiPersonality');
+    return (saved as AIPersonality) || 'kind-teacher';
+  });
+
   // バッチサイズ変更時にlocalStorageに保存
   const handleBatchSizeChange = (newSize: number) => {
     setBatchSize(newSize);
     localStorage.setItem('batchSize', newSize.toString());
+  };
+
+  // AI人格変更時にlocalStorageに保存
+  const handlePersonalityChange = (personality: AIPersonality) => {
+    setAIPersonality(personality);
+    localStorage.setItem('aiPersonality', personality);
   };
 
   return (
@@ -207,6 +220,29 @@ function SettingsView({
           </div>
 
           <div className="settings-grid">
+            {/* AI人格選択 */}
+            <div className="setting-card">
+              <div className="setting-icon">🎭</div>
+              <div className="setting-content">
+                <h3>AIの人格</h3>
+                <p>学習を応援するAIの性格を選べます</p>
+                
+                <div className="personality-grid">
+                  {(Object.entries(PERSONALITY_INFO) as [AIPersonality, typeof PERSONALITY_INFO[AIPersonality]][]).map(([key, info]) => (
+                    <button
+                      key={key}
+                      className={`personality-card ${aiPersonality === key ? 'active' : ''}`}
+                      onClick={() => handlePersonalityChange(key)}
+                    >
+                      <div className="personality-avatar">{info.avatar}</div>
+                      <div className="personality-name">{info.name}</div>
+                      <div className="personality-desc">{info.description}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {/* バッチサイズ設定 */}
             <div className="setting-card">
               <div className="setting-icon">🎯</div>

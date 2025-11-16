@@ -5422,6 +5422,56 @@ option {
   font-size: 1.2em;
 }
 
+/* AI人格選択 */
+.personality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.personality-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.personality-card:hover {
+  border-color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.personality-card.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.personality-avatar {
+  font-size: 2.5em;
+  margin-bottom: 8px;
+}
+
+.personality-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.personality-desc {
+  font-size: 0.85em;
+  color: #666;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .settings-tabs {

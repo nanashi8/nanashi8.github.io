@@ -26,8 +26,11 @@ export interface WordProgress {
   totalResponseTime: number; // 累計応答時間（ミリ秒）
   averageResponseTime: number; // 平均応答時間（ミリ秒）
   difficultyScore: number; // 難易度スコア（0-100、高いほど苦手）
-  userDifficultyRating?: number; // ユーザーの主観的難易度評価（1-10）
+  userDifficultyRating?: number; // ユーザーの主観的難易度評価（1-3: 簡単/普通/難しい）
   masteryLevel: 'new' | 'learning' | 'mastered'; // 習熟レベル
+  responseTimes: number[]; // 応答時間の履歴（最新10件）
+  category?: string; // カテゴリー
+  difficulty?: string; // 難易度レベル
 }
 
 export interface UserProgress {
