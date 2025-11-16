@@ -102,7 +102,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
               {monthsOptions.map(months => {
                 const days = months * 30;
                 const dailyWords = Math.ceil(totalWords / days);
-                const dailyMinutes = Math.ceil((dailyWords + dailyWords * 1.5) * 0.5);
                 const isSelected = selectedMonths === months;
                 
                 return (
@@ -115,7 +114,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                     <div className="duration-stats">
                       <div>{days}日間</div>
                       <div>約{dailyWords}語/日</div>
-                      <div>約{dailyMinutes}分/日</div>
                     </div>
                   </button>
                 );
