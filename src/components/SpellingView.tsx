@@ -267,7 +267,7 @@ function SpellingView({
             score={spellingState.score}
             totalAnswered={spellingState.totalAnswered}
             totalQuestions={spellingState.questions.length}
-            currentIndex={spellingState.currentIndex}
+            questions={spellingState.questions}
           />
 
           {currentQuestion && (
