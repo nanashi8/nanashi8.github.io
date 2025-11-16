@@ -84,8 +84,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
   if (!schedule) {
     const monthsOptions = [1, 2, 3, 6];
     const totalWords = allQuestions.length;
-    const estimatedDailyWords = Math.ceil(totalWords / (selectedMonths * 30));
-    const estimatedDailyMinutes = Math.ceil((estimatedDailyWords + estimatedDailyWords * 1.5) * 0.5);
     
     return (
       <div className="learning-plan-start">
@@ -122,26 +120,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
             <p className="duration-note">
               ※ 選択期間に応じて1日の学習量が調整されます
             </p>
-          </div>
-          
-          <div className="plan-features">
-            <div className="feature-card">
-              <span className="feature-icon">📅</span>
-              <h3>1日{estimatedDailyMinutes}分</h3>
-              <p>朝・昼・夜の3セッション</p>
-            </div>
-            
-            <div className="feature-card">
-              <span className="feature-icon">🧠</span>
-              <h3>忘却曲線対応</h3>
-              <p>最適なタイミングで復習</p>
-            </div>
-            
-            <div className="feature-card">
-              <span className="feature-icon">📈</span>
-              <h3>段階的レベルアップ</h3>
-              <p>初級→中級→上級</p>
-            </div>
           </div>
           
           <button onClick={handleStartPlan} className="btn-start-plan">
