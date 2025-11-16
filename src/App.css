@@ -330,6 +330,7 @@ option {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  padding: 10px;
 }
 
 .quiz-content-wrapper {
