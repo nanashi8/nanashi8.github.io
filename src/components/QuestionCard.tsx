@@ -1,6 +1,6 @@
 import { Question } from '../types';
 import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } from '../utils';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 
 interface QuestionCardProps {
   question: Question;
@@ -26,7 +26,12 @@ function QuestionCard({
   onPrevious,
   onDifficultyRate,
 }: QuestionCardProps) {
-  const choicesWithQuestions = generateChoicesWithQuestions(question, allQuestions, currentIndex);
+  // 選択肢をuseMemoで固定（currentIndexが変わった時だけ再生成）
+  const choicesWithQuestions = useMemo(
+    () => generateChoicesWithQuestions(question, allQuestions, currentIndex),
+    [question.word, allQuestions, currentIndex]
+  );
+  
   const [userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   
