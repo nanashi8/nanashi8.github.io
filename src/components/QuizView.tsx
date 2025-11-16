@@ -18,6 +18,7 @@ interface QuizViewProps {
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
   onPrevious: () => void;
+  onSkip?: () => void;
   onDifficultyRate?: (rating: number) => void;
 }
 
@@ -36,6 +37,7 @@ function QuizView({
   onAnswer,
   onNext,
   onPrevious,
+  onSkip,
   onDifficultyRate,
 }: QuizViewProps) {
   const { questions, currentIndex, score, totalAnswered, answered, selectedAnswer } =
@@ -46,14 +48,6 @@ function QuizView({
 
   return (
     <div className="quiz-view">
-      {hasQuestions && (
-        <ScoreBoard
-          score={score}
-          totalAnswered={totalAnswered}
-          totalQuestions={questions.length}
-        />
-      )}
-      
       <div className="quiz-content-wrapper">
         <div className="quiz-filter-section">
           <div className="filter-group">
@@ -135,6 +129,17 @@ function QuizView({
           </div>
         ) : (
           <>
+            <ScoreBoard
+              score={score}
+              totalAnswered={totalAnswered}
+              totalQuestions={questions.length}
+              questions={questions}
+              currentIndex={currentIndex}
+              answered={answered}
+              onPrevious={onPrevious}
+              onNext={onNext}
+              onSkip={onSkip}
+            />
             {currentQuestion && (
               <QuestionCard
                 question={currentQuestion}

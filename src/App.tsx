@@ -7,7 +7,7 @@ import {
   generateId,
   selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ReadingView from './components/ReadingView';
@@ -367,6 +367,26 @@ function App() {
     }));
   };
   
+  // スキップハンドラー（回答前に次へボタンを押した場合）
+  const handleSkip = () => {
+    const currentQuestion = quizState.questions[quizState.currentIndex];
+    if (currentQuestion) {
+      // スキップ記録（7日間除外）
+      recordWordSkip(currentQuestion.word, 7);
+    }
+    
+    // 次の問題へ進む
+    setQuizState((prev) => ({
+      ...prev,
+      currentIndex: (prev.currentIndex + 1) % prev.questions.length,
+      answered: false,
+      selectedAnswer: null,
+    }));
+    
+    // 次の問題の開始時刻を記録
+    questionStartTimeRef.current = Date.now();
+  };
+  
   // 難易度評価のハンドラー
   const handleDifficultyRate = (rating: number) => {
     const currentQuestion = quizState.questions[quizState.currentIndex];
@@ -429,6 +449,7 @@ function App() {
             onAnswer={handleAnswer}
             onNext={handleNext}
             onPrevious={handlePrevious}
+            onSkip={handleSkip}
             onDifficultyRate={handleDifficultyRate}
           />
         ) : activeTab === 'spelling' ? (
