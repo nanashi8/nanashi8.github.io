@@ -48,11 +48,16 @@ export interface SpellingState {
 export interface ReadingPassage {
   id: string;
   title: string;
+  level?: string; // 難易度レベル（初級/中級/上級）
+  theme?: string; // テーマ
+  targetWordCount?: number; // 目標語数
+  actualWordCount?: number; // 実際の語数
   phrases: ReadingPhrase[]; // 文節ごとのグループ
-  translation: string; // 全体の和訳
+  translation?: string; // 全体の和訳（オプショナル）
 }
 
 export interface ReadingPhrase {
+  id?: number; // フレーズID（オプショナル）
   words?: string[]; // 文節内の単語リスト(例: ["Modern", "technology"]) - オプショナル（segmentsから生成可能）
   phraseMeaning: string; // 文節全体の和訳(例: "現代の技術")
   segments: ReadingSegment[]; // 個別単語の詳細

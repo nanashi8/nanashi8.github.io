@@ -10,7 +10,7 @@ import {
 import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
-import ReadingView from './components/ReadingView';
+import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import './App.css';
@@ -470,7 +470,33 @@ function App() {
             onStartQuiz={handleStartQuiz}
           />
         ) : activeTab === 'reading' ? (
-          <ReadingView />
+          <ComprehensiveReadingView 
+            onSaveUnknownWords={(words) => {
+              // 分からない単語を問題集として保存
+              const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, '長文から抽出した単語');
+              if (setName) {
+                const newSet: QuestionSet = {
+                  id: generateId(),
+                  name: setName,
+                  questions: words.map(w => ({
+                    word: w.word,
+                    reading: '',
+                    meaning: w.meaning,
+                    etymology: '',
+                    relatedWords: '',
+                    relatedFields: '',
+                    difficulty: ''
+                  })),
+                  createdAt: Date.now(),
+                  isBuiltIn: false,
+                  source: '長文読解'
+                };
+                const updatedSets = [...questionSets, newSet];
+                setQuestionSets(updatedSets);
+                saveQuestionSets(updatedSets);
+              }
+            }}
+          />
         ) : activeTab === 'stats' ? (
           <StatsView
             questionSets={questionSets}

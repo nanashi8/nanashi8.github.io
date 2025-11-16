@@ -1,0 +1,5368 @@
+{
+  "id": "beginner-3",
+  "title": "My Hobbies and Sports",
+  "level": "初級",
+  "theme": "スポーツ・趣味",
+  "targetWordCount": 750,
+  "actualWordCount": 710,
+  "phrases": [
+    {
+      "id": 1,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "act",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために行動するを使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "act",
+          "meaning": "行動する",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 2,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "apple",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとてもりんごです",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "apple",
+          "meaning": "りんご",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 3,
+      "words": [
+        "I",
+        "think",
+        "art",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は芸術が重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "art",
+          "meaning": "芸術",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 4,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "back",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が後ろに・戻ってをとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "back",
+          "meaning": "後ろに・戻って",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 5,
+      "words": [
+        "ball",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "ボールは多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "ball",
+          "meaning": "ボール",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 6,
+      "words": [
+        "In",
+        "addition,",
+        "this",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "さらに、これはとても便利です",
+      "segments": [
+        {
+          "word": "In",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "addition,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 7,
+      "words": [
+        "We",
+        "need",
+        "believe",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日信じるが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "believe",
+          "meaning": "信じる",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 8,
+      "words": [
+        "The",
+        "body",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その体・本体はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "body",
+          "meaning": "体・本体",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 9,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "camera",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校でカメラについて学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "camera",
+          "meaning": "カメラ",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 10,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "care",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は世話・注意が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "care",
+          "meaning": "世話・注意",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 11,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "carry",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと運ぶを勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "carry",
+          "meaning": "運ぶ",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 12,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 13,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "change",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために変える・変化を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "change",
+          "meaning": "変える・変化",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 14,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "climb",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても登るです",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "climb",
+          "meaning": "登る",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 15,
+      "words": [
+        "I",
+        "think",
+        "coffee",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私はコーヒーが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "coffee",
+          "meaning": "コーヒー",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 16,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "cold",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が寒い・冷たいをとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "cold",
+          "meaning": "寒い・冷たい",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 17,
+      "words": [
+        "come",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "来るは多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "come",
+          "meaning": "来る",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 18,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 19,
+      "words": [
+        "We",
+        "need",
+        "common",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日共通の・一般的なが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "common",
+          "meaning": "共通の・一般的な",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 20,
+      "words": [
+        "The",
+        "control",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その制御する・抑えるはとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "control",
+          "meaning": "制御する・抑える",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 21,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "cook",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で料理する・料理人について学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "cook",
+          "meaning": "料理する・料理人",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 22,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "course",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は進路・講座が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "course",
+          "meaning": "進路・講座",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 23,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "cover",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと覆う・表紙を勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "cover",
+          "meaning": "覆う・表紙",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 24,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 25,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "danger",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために危険を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "danger",
+          "meaning": "危険",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 26,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "dead",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても死んだ・非常にです",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "dead",
+          "meaning": "死んだ・非常に",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 27,
+      "words": [
+        "I",
+        "think",
+        "deliver",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は配達する・産むが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "deliver",
+          "meaning": "配達する・産む",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 28,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "die",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が死ぬをとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "die",
+          "meaning": "死ぬ",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 29,
+      "words": [
+        "difficult",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "難しいは多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "difficult",
+          "meaning": "難しい",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 30,
+      "words": [
+        "Also,",
+        "we",
+        "can",
+        "see",
+        "this",
+        "everywhere"
+      ],
+      "phraseMeaning": "また、私たちはこれをどこでも見ることができます",
+      "segments": [
+        {
+          "word": "Also,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "we",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "see",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "everywhere",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 31,
+      "words": [
+        "We",
+        "need",
+        "direct",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日直接の・向けるが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "direct",
+          "meaning": "直接の・向ける",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 32,
+      "words": [
+        "The",
+        "doctor",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その医者はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "doctor",
+          "meaning": "医者",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 33,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "draw",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で描く・引くについて学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "draw",
+          "meaning": "描く・引く",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 34,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "dream",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は夢・夢を見るが重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "dream",
+          "meaning": "夢・夢を見る",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 35,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "drink",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと飲む・飲み物を勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "drink",
+          "meaning": "飲む・飲み物",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 36,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 37,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "ear",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために耳を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ear",
+          "meaning": "耳",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 38,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "eat",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても食べるです",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "eat",
+          "meaning": "食べる",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 39,
+      "words": [
+        "I",
+        "think",
+        "enjoy",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は楽しむが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "enjoy",
+          "meaning": "楽しむ",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 40,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "exchange",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が交換する・為替をとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "exchange",
+          "meaning": "交換する・為替",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 41,
+      "words": [
+        "eye",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "目は多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "eye",
+          "meaning": "目",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 42,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 43,
+      "words": [
+        "We",
+        "need",
+        "face",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日顔・向くが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "face",
+          "meaning": "顔・向く",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 44,
+      "words": [
+        "The",
+        "famous",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その有名なはとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "famous",
+          "meaning": "有名な",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 45,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "fast",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で速い・断食するについて学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fast",
+          "meaning": "速い・断食する",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 46,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "finger",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は指が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "finger",
+          "meaning": "指",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 47,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "finish",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと終える・仕上げを勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "finish",
+          "meaning": "終える・仕上げ",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 48,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 49,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "fire",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために火・発砲する・解雇するを使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fire",
+          "meaning": "火・発砲する・解雇する",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 50,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "fish",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても魚です",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fish",
+          "meaning": "魚",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 51,
+      "words": [
+        "I",
+        "think",
+        "fit",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は合う・健康なが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fit",
+          "meaning": "合う・健康な",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 52,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "follow",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が従う・後に続くをとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "follow",
+          "meaning": "従う・後に続く",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 53,
+      "words": [
+        "food",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "食べ物は多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "food",
+          "meaning": "食べ物",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 54,
+      "words": [
+        "Also,",
+        "we",
+        "can",
+        "see",
+        "this",
+        "everywhere"
+      ],
+      "phraseMeaning": "また、私たちはこれをどこでも見ることができます",
+      "segments": [
+        {
+          "word": "Also,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "we",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "see",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "everywhere",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 55,
+      "words": [
+        "We",
+        "need",
+        "foot",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日足・フィートが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "foot",
+          "meaning": "足・フィート",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 56,
+      "words": [
+        "The",
+        "forward",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その前方へ・転送するはとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "forward",
+          "meaning": "前方へ・転送する",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 57,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "fun",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で楽しみについて学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fun",
+          "meaning": "楽しみ",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 58,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "game",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は遊び・試合が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "game",
+          "meaning": "遊び・試合",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 59,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "gas",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと気体・ガスを勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "gas",
+          "meaning": "気体・ガス",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 60,
+      "words": [
+        "In",
+        "addition,",
+        "this",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "さらに、これはとても便利です",
+      "segments": [
+        {
+          "word": "In",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "addition,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 61,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "glass",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるためにガラス・コップを使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "glass",
+          "meaning": "ガラス・コップ",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 62,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "go",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても行くです",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "go",
+          "meaning": "行く",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 63,
+      "words": [
+        "I",
+        "think",
+        "group",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は集団が重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "group",
+          "meaning": "集団",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 64,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "hand",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が手・渡すをとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "hand",
+          "meaning": "手・渡す",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 65,
+      "words": [
+        "hard",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "難しい・固いは多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "hard",
+          "meaning": "難しい・固い",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 66,
+      "words": [
+        "In",
+        "addition,",
+        "this",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "さらに、これはとても便利です",
+      "segments": [
+        {
+          "word": "In",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "addition,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 67,
+      "words": [
+        "We",
+        "need",
+        "head",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日頭・先頭が必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "head",
+          "meaning": "頭・先頭",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 68,
+      "words": [
+        "The",
+        "health",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その健康はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "health",
+          "meaning": "健康",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 69,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "heart",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で心・心臓について学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "heart",
+          "meaning": "心・心臓",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 70,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "hospital",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は病院が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "hospital",
+          "meaning": "病院",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 71,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "hot",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと熱い・辛いを勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "hot",
+          "meaning": "熱い・辛い",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 72,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 73,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "idea",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために考え・発想を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "idea",
+          "meaning": "考え・発想",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 74,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "inside",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても〜の内側に・中です",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "inside",
+          "meaning": "〜の内側に・中",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 75,
+      "words": [
+        "I",
+        "think",
+        "instead",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は代わりにが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "instead",
+          "meaning": "代わりに",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 76,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "interest",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が興味・利子をとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "interest",
+          "meaning": "興味・利子",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 77,
+      "words": [
+        "join",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "参加する・つなぐは多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "join",
+          "meaning": "参加する・つなぐ",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 78,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 79,
+      "words": [
+        "We",
+        "need",
+        "joke",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日冗談・冗談を言うが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "joke",
+          "meaning": "冗談・冗談を言う",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 80,
+      "words": [
+        "The",
+        "jump",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その跳ぶ・跳躍はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "jump",
+          "meaning": "跳ぶ・跳躍",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 81,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "kick",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で蹴る・蹴ることについて学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "kick",
+          "meaning": "蹴る・蹴ること",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 82,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "knee",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は膝が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "knee",
+          "meaning": "膝",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 83,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "leg",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと脚を勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "leg",
+          "meaning": "脚",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 84,
+      "words": [
+        "Also,",
+        "we",
+        "can",
+        "see",
+        "this",
+        "everywhere"
+      ],
+      "phraseMeaning": "また、私たちはこれをどこでも見ることができます",
+      "segments": [
+        {
+          "word": "Also,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "we",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "see",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "everywhere",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 85,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "life",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために人生・生命を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "人生・生命",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 86,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "lip",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても唇です",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "lip",
+          "meaning": "唇",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 87,
+      "words": [
+        "I",
+        "think",
+        "live",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は生きる・住むが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "live",
+          "meaning": "生きる・住む",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 88,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "lonely",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が寂しいをとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "lonely",
+          "meaning": "寂しい",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 89,
+      "words": [
+        "lose",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "失う・負けるは多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "lose",
+          "meaning": "失う・負ける",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 90,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 91,
+      "words": [
+        "We",
+        "need",
+        "luck",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日運が必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "luck",
+          "meaning": "運",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 92,
+      "words": [
+        "The",
+        "lunch",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その昼食はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "lunch",
+          "meaning": "昼食",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 93,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "make",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で作る・〜させるについて学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "make",
+          "meaning": "作る・〜させる",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 94,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "male",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は男性の・雄のが重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "male",
+          "meaning": "男性の・雄の",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 95,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "matter",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと問題・重要であるを勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "matter",
+          "meaning": "問題・重要である",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 96,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 97,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "meal",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために食事を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "meal",
+          "meaning": "食事",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 98,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "mean",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても意味する・意地悪なです",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "mean",
+          "meaning": "意味する・意地悪な",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 99,
+      "words": [
+        "I",
+        "think",
+        "meat",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は肉が重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "meat",
+          "meaning": "肉",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 100,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "member",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が会員・一員をとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "member",
+          "meaning": "会員・一員",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 101,
+      "words": [
+        "memory",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "記憶は多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "memory",
+          "meaning": "記憶",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 102,
+      "words": [
+        "In",
+        "addition,",
+        "this",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "さらに、これはとても便利です",
+      "segments": [
+        {
+          "word": "In",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "addition,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 103,
+      "words": [
+        "We",
+        "need",
+        "milk",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日牛乳が必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "milk",
+          "meaning": "牛乳",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 104,
+      "words": [
+        "The",
+        "mouth",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その口はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "mouth",
+          "meaning": "口",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 105,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "movie",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で映画について学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "movie",
+          "meaning": "映画",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 106,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "muscle",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生は筋肉が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "muscle",
+          "meaning": "筋肉",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 107,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "museum",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと博物館を勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "museum",
+          "meaning": "博物館",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 108,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 109,
+      "words": [
+        "We",
+        "can",
+        "use",
+        "music",
+        "to",
+        "help",
+        "us"
+      ],
+      "phraseMeaning": "私たちは私たちを助けるために音楽を使うことができます",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "music",
+          "meaning": "音楽",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "help",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 110,
+      "words": [
+        "This",
+        "is",
+        "very",
+        "neck",
+        "for",
+        "our",
+        "life"
+      ],
+      "phraseMeaning": "これは私たちの生活にとってとても首です",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "neck",
+          "meaning": "首",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "life",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 111,
+      "words": [
+        "I",
+        "think",
+        "net",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "私は網・正味のが重要だと思います",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "think",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "net",
+          "meaning": "網・正味の",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 112,
+      "words": [
+        "Many",
+        "people",
+        "like",
+        "noise",
+        "very",
+        "much"
+      ],
+      "phraseMeaning": "多くの人々が騒音をとても好きです",
+      "segments": [
+        {
+          "word": "Many",
+          "meaning": "多くの",
+          "isUnknown": false
+        },
+        {
+          "word": "people",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "like",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "noise",
+          "meaning": "騒音",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "much",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 113,
+      "words": [
+        "nose",
+        "helps",
+        "us",
+        "in",
+        "many",
+        "ways"
+      ],
+      "phraseMeaning": "鼻は多くの点で私たちを助けます",
+      "segments": [
+        {
+          "word": "nose",
+          "meaning": "鼻",
+          "isUnknown": false
+        },
+        {
+          "word": "helps",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ways",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 114,
+      "words": [
+        "For",
+        "example,",
+        "many",
+        "students",
+        "use",
+        "it"
+      ],
+      "phraseMeaning": "例えば、多くの生徒がそれを使います",
+      "segments": [
+        {
+          "word": "For",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "example,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "many",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "students",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "use",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 115,
+      "words": [
+        "We",
+        "need",
+        "nurse",
+        "every",
+        "day"
+      ],
+      "phraseMeaning": "私たちは毎日看護師・看護するが必要です",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "need",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "nurse",
+          "meaning": "看護師・看護する",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 116,
+      "words": [
+        "The",
+        "oil",
+        "is",
+        "very",
+        "useful"
+      ],
+      "phraseMeaning": "その油はとても便利です",
+      "segments": [
+        {
+          "word": "The",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "oil",
+          "meaning": "油",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "very",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "useful",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 117,
+      "words": [
+        "I",
+        "learned",
+        "about",
+        "opposite",
+        "at",
+        "school"
+      ],
+      "phraseMeaning": "私は学校で反対の・正反対について学びました",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "私は",
+          "isUnknown": false
+        },
+        {
+          "word": "learned",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "opposite",
+          "meaning": "反対の・正反対",
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 118,
+      "words": [
+        "My",
+        "teacher",
+        "said",
+        "orange",
+        "is",
+        "important"
+      ],
+      "phraseMeaning": "先生はオレンジ・オレンジ色が重要だと言いました",
+      "segments": [
+        {
+          "word": "My",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "teacher",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "said",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "orange",
+          "meaning": "オレンジ・オレンジ色",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 119,
+      "words": [
+        "We",
+        "should",
+        "study",
+        "order",
+        "more"
+      ],
+      "phraseMeaning": "私たちはもっと注文・命令・順序を勉強すべきです",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "should",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "study",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "order",
+          "meaning": "注文・命令・順序",
+          "isUnknown": false
+        },
+        {
+          "word": "more",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 120,
+      "words": [
+        "Also,",
+        "we",
+        "can",
+        "see",
+        "this",
+        "everywhere"
+      ],
+      "phraseMeaning": "また、私たちはこれをどこでも見ることができます",
+      "segments": [
+        {
+          "word": "Also,",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "we",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "see",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "this",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "everywhere",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 121,
+      "words": [
+        "This",
+        "is",
+        "important",
+        "for",
+        "our",
+        "future"
+      ],
+      "phraseMeaning": "これは私たちの未来にとって重要です",
+      "segments": [
+        {
+          "word": "This",
+          "meaning": "これは",
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": "です",
+          "isUnknown": false
+        },
+        {
+          "word": "important",
+          "meaning": "重要",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "にとって",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": "私たちの",
+          "isUnknown": false
+        },
+        {
+          "word": "future",
+          "meaning": "未来",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": 122,
+      "words": [
+        "We",
+        "must",
+        "work",
+        "together"
+      ],
+      "phraseMeaning": "私たちは協力しなければなりません",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "must",
+          "meaning": "なければなりません",
+          "isUnknown": false
+        },
+        {
+          "word": "work",
+          "meaning": "働く",
+          "isUnknown": false
+        },
+        {
+          "word": "together",
+          "meaning": "一緒に",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    }
+  ]
+}
