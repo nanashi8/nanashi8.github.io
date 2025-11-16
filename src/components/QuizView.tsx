@@ -134,11 +134,6 @@ function QuizView({
               totalAnswered={totalAnswered}
               totalQuestions={questions.length}
               questions={questions}
-              currentIndex={currentIndex}
-              answered={answered}
-              onPrevious={onPrevious}
-              onNext={onNext}
-              onSkip={onSkip}
             />
             <div className="question-container">
               {currentQuestion && (
