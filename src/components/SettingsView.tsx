@@ -12,8 +12,6 @@ function SettingsView({
   allQuestions,
   onStartSession,
 }: SettingsViewProps) {
-  const [activeSection, setActiveSection] = useState<'plan' | 'advanced'>('plan');
-  
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
     const saved = localStorage.getItem('batchSize');
@@ -38,36 +36,51 @@ function SettingsView({
     localStorage.setItem('aiPersonality', personality);
   };
 
+  // 学習記録のリセット
+  const handleResetProgress = () => {
+    if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
+      // 学習記録のみクリア（プランと設定は保持）
+      const keysToRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && (key.startsWith('quiz-result-') || key === 'progress-data')) {
+          keysToRemove.push(key);
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key));
+      alert('学習記録をリセットしました');
+      window.location.reload();
+    }
+  };
+
+  // 学習プランのリセット
+  const handleResetPlan = () => {
+    if (confirm('学習プランをリセットしますか？学習記録は保持されます。')) {
+      localStorage.removeItem('learning-schedule-90days');
+      alert('学習プランをリセットしました');
+      window.location.reload();
+    }
+  };
+
   return (
     <div className="settings-view">
-      {/* セクション選択タブ */}
-      <div className="settings-tabs">
-        <button
-          className={`settings-tab ${activeSection === 'plan' ? 'active' : ''}`}
-          onClick={() => setActiveSection('plan')}
-        >
-          🎯 学習プラン
-        </button>
-        <button
-          className={`settings-tab ${activeSection === 'advanced' ? 'active' : ''}`}
-          onClick={() => setActiveSection('advanced')}
-        >
-          ⚙️ 詳細設定
-        </button>
-      </div>
-
-      {/* 学習プランセクション */}
-      {activeSection === 'plan' && (
-        <div className="settings-section">
-          <LearningPlanView
-            allQuestions={allQuestions}
-            onStartSession={onStartSession}
-          />
+      <div className="settings-section">
+        <div className="section-header">
+          <h1>📚 学習プランナー</h1>
+          <p className="section-description">
+            あなたに合った学習プランを作成して、効率的に単語を習得しましょう！
+          </p>
         </div>
-      )}
 
-      {/* 詳細設定セクション */}
-      {activeSection === 'advanced' && (
+        {/* 学習プラン設定 */}
+        <LearningPlanView
+          allQuestions={allQuestions}
+          onStartSession={onStartSession}
+        />
+
+        <div className="settings-divider"></div>
+
+        {/* 詳細設定 */}
         <div className="settings-section">
           <div className="section-header">
             <h2>⚙️ 学習の詳細設定</h2>
@@ -140,28 +153,38 @@ function SettingsView({
               </div>
             </div>
 
-            {/* データリセット */}
+            {/* 学習記録リセット */}
             <div className="setting-card">
-              <div className="setting-icon">🗑️</div>
+              <div className="setting-icon">📊</div>
               <div className="setting-content">
                 <h3>学習記録のリセット</h3>
-                <p>すべての進捗データを削除して最初からやり直す</p>
+                <p>テスト結果や正答率などの記録を削除（プランは保持）</p>
                 <button
                   className="setting-button danger"
-                  onClick={() => {
-                    if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
-                      localStorage.clear();
-                      window.location.reload();
-                    }
-                  }}
+                  onClick={handleResetProgress}
                 >
-                  ⚠️ すべてリセット
+                  🗑️ 学習記録をリセット
+                </button>
+              </div>
+            </div>
+
+            {/* 学習プランリセット */}
+            <div className="setting-card">
+              <div className="setting-icon">📅</div>
+              <div className="setting-content">
+                <h3>学習プランのリセット</h3>
+                <p>学習プランを削除して新しく作り直す（記録は保持）</p>
+                <button
+                  className="setting-button danger"
+                  onClick={handleResetPlan}
+                >
+                  🔄 プランをリセット
                 </button>
               </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

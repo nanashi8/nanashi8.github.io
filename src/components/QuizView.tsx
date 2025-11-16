@@ -46,9 +46,45 @@ function QuizView({
   const hasQuestions = questions.length > 0;
   const currentQuestion = hasQuestions ? questions[currentIndex] : null;
 
+  // 学習プランの状態をチェック
+  const learningPlan = localStorage.getItem('learning-schedule-90days');
+  const hasPlan = !!learningPlan;
+  let planStatus = null;
+  if (hasPlan) {
+    try {
+      const schedule = JSON.parse(learningPlan);
+      const daysPassed = Math.floor((Date.now() - schedule.startDate) / (1000 * 60 * 60 * 24));
+      const currentDay = Math.min(daysPassed + 1, schedule.totalDays);
+      const progressPercent = Math.round((currentDay / schedule.totalDays) * 100);
+      planStatus = {
+        currentDay,
+        totalDays: schedule.totalDays,
+        progressPercent,
+        phase: schedule.phase,
+      };
+    } catch (e) {
+      console.error('Failed to parse learning plan:', e);
+    }
+  }
+
   return (
     <div className="quiz-view">
       <div className="quiz-content-wrapper">
+        {/* 学習プラン進行状況表示 */}
+        {hasPlan && planStatus && (
+          <div className="plan-progress-banner">
+            <div className="plan-progress-content">
+              <span className="plan-progress-icon">📚</span>
+              <div className="plan-progress-info">
+                <div className="plan-progress-title">学習プラン進行中</div>
+                <div className="plan-progress-detail">
+                  {planStatus.currentDay}日目 / {planStatus.totalDays}日 (Phase {planStatus.phase}) - {planStatus.progressPercent}%完了
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
         <div className="quiz-filter-section">
           <div className="filter-group">
             <label htmlFor="category-select">📚 関連分野:</label>

@@ -88,14 +88,13 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
     return (
       <div className="learning-plan-start">
         <div className="plan-hero">
-          <h1>🎯 学習マスタープラン</h1>
+          <h2>📅 学習プランを作成</h2>
           <p className="plan-description">
-            脳科学に基づいた学習プランで、<br/>
-            約{totalWords.toLocaleString()}語を効率的に習得！
+            全{totalWords.toLocaleString()}語を学習するプランを作成します
           </p>
           
           <div className="plan-duration-selector">
-            <h3>📅 学習期間を選択</h3>
+            <h3>学習期間を選択</h3>
             <div className="duration-buttons">
               {monthsOptions.map(months => {
                 const days = months * 30;
@@ -118,28 +117,25 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
               })}
             </div>
             <p className="duration-note">
-              ※ 選択期間に応じて1日の学習量が調整されます
+              💡 期間に応じて1日の学習量が自動調整されます
             </p>
           </div>
           
           <button onClick={handleStartPlan} className="btn-start-plan">
-            🚀 {selectedMonths}ヶ月プランを開始する
+            🚀 {selectedMonths}ヶ月プランを開始
           </button>
           
           <div className="plan-details">
-            <h3>📋 学習プランの詳細</h3>
+            <h3>📋 プランの進め方</h3>
             <ul>
-              <li><strong>Phase 1（最初の1/3）</strong>: 基礎固め期 - 初級単語を中心に</li>
-              <li><strong>Phase 2（中盤の1/3）</strong>: 応用拡大期 - 初級+中級単語</li>
-              <li><strong>Phase 3（最後の1/3）</strong>: 完成・定着期 - 中級+上級単語</li>
+              <li><strong>Phase 1（前半1/3）</strong>: 初級単語を中心に基礎を固める</li>
+              <li><strong>Phase 2（中盤1/3）</strong>: 初級・中級単語で応用力を身につける</li>
+              <li><strong>Phase 3（後半1/3）</strong>: 中級・上級単語で完成させる</li>
             </ul>
             
-            <h3>⏰ 1日の学習スケジュール</h3>
-            <ul>
-              <li><strong>朝（35%）</strong>: 新規単語を学習</li>
-              <li><strong>昼（30%）</strong>: 苦手な単語を復習</li>
-              <li><strong>夜（35%）</strong>: 総合演習（新規+復習）</li>
-            </ul>
+            <p className="plan-note">
+              ⚡ 学習状況に応じてプランは自動で最適化されます
+            </p>
           </div>
         </div>
       </div>

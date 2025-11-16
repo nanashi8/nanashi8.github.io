@@ -5236,6 +5236,68 @@ option {
   padding: 20px;
 }
 
+/* 学習プラン進行状況バナー */
+.plan-progress-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.plan-progress-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.plan-progress-icon {
+  font-size: 2em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.plan-progress-info {
+  flex: 1;
+}
+
+.plan-progress-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.plan-progress-detail {
+  font-size: 0.9em;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .plan-progress-banner {
+    padding: 12px 15px;
+  }
+  
+  .plan-progress-icon {
+    font-size: 1.5em;
+  }
+  
+  .plan-progress-title {
+    font-size: 1em;
+  }
+  
+  .plan-progress-detail {
+    font-size: 0.85em;
+  }
+}
+
+/* 設定セクション区切り線 */
+.settings-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #e0e7ff 20%, #e0e7ff 80%, transparent);
+  margin: 40px 0;
+}
+
 /* 設定タブ */
 .settings-tabs {
   display: flex;
