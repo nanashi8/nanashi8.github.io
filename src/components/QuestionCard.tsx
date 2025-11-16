@@ -128,7 +128,7 @@ function QuestionCard({
 
   return (
     <div 
-      className={`question-card ${answered ? (selectedAnswer === question.meaning ? 'answered-correct' : 'answered-incorrect') : ''}`}
+      className="question-card"
       ref={cardRef}
     >
       <div className="question-nav-row">

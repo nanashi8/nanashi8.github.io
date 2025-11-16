@@ -352,19 +352,6 @@ option {
   overflow-y: auto;
   position: relative;
   touch-action: pan-y; /* 縦スクロールを許可しつつ横スワイプを検出 */
-  transition: background-color 0.3s ease, border 0.3s ease;
-}
-
-/* 正解時のカード背景 */
-.question-card.answered-correct {
-  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
-  border: 2px solid #4caf50;
-}
-
-/* 不正解時のカード背景 */
-.question-card.answered-incorrect {
-  background: linear-gradient(135deg, #ffebee 0%, #ffffff 100%);
-  border: 2px solid #f44336;
 }
 
 /* 問題番号バッジ */
