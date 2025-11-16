@@ -635,6 +635,13 @@ option {
   margin-top: 12px;
 }
 
+/* 上部に配置されたナビゲーションボタン */
+.navigation-buttons-top {
+  margin-top: 0;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
 .nav-btn {
   padding: 10px 16px;
   border-radius: 8px;

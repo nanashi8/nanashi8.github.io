@@ -129,6 +129,23 @@ function QuestionCard({
       ref={cardRef}
     >
       <div className="question-number-badge">第{currentIndex + 1}問</div>
+      
+      {/* ナビゲーションボタン（上部） */}
+      {answered && (
+        <div className="navigation-buttons navigation-buttons-top">
+          <button 
+            className="nav-btn prev-btn" 
+            onClick={onPrevious}
+            disabled={currentIndex === 0}
+          >
+            ← 前へ
+          </button>
+          <button className="nav-btn next-btn" onClick={handleNextClick}>
+            次へ →
+          </button>
+        </div>
+      )}
+      
       <div className="question-header-row">
         <div className="question-main">
           <div className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''}`}>
