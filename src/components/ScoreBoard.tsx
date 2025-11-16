@@ -1,5 +1,5 @@
 import { Question } from '../types';
-import { loadProgress } from '../progressStorage';
+import { loadProgress, getMasteredWordsCount } from '../progressStorage';
 
 interface ScoreBoardProps {
   score: number;
@@ -24,6 +24,9 @@ function ScoreBoard({
     return !wordProgress || (wordProgress.correctCount === 0 && wordProgress.incorrectCount === 0);
   }).length;
 
+  // 定着単語数を計算（連続3回以上正解 または スキップされた単語）
+  const masteredCount = getMasteredWordsCount(questions.map(q => q.word));
+
   return (
     <div className="score-board-compact">
       <span className="score-stat-large">
@@ -37,6 +40,10 @@ function ScoreBoard({
         出題数<strong>{totalQuestions}</strong>
       </span>
       <span className="score-stat-divider">|</span>
+      <span className="score-stat">
+        定着数<strong>{masteredCount}</strong>
+      </span>
+      <span className="score-stat-divider">/</span>
       <span className="score-stat">
         新規数<strong>{newWordsCount}</strong>
       </span>

@@ -540,3 +540,50 @@ export function getWordProgressSummary(): {
   
   return summary;
 }
+
+/**
+ * 定着した単語数を取得
+ * 定着条件: 連続3回以上正解 または スキップされた単語
+ */
+export function getMasteredWordsCount(words: string[]): number {
+  const progress = loadProgress();
+  let masteredCount = 0;
+  
+  for (const word of words) {
+    const wordProgress = progress.wordProgress[word];
+    if (!wordProgress) continue;
+    
+    // 定着条件: 連続3回以上正解 または スキップされている
+    const isConsecutivelyCorrect = wordProgress.consecutiveCorrect >= 3;
+    const isSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
+    
+    if (isConsecutivelyCorrect || isSkipped) {
+      masteredCount++;
+    }
+  }
+  
+  return masteredCount;
+}
+
+/**
+ * 定着している単語のリストを取得
+ */
+export function getMasteredWords(words: string[]): string[] {
+  const progress = loadProgress();
+  const masteredWords: string[] = [];
+  
+  for (const word of words) {
+    const wordProgress = progress.wordProgress[word];
+    if (!wordProgress) continue;
+    
+    // 定着条件: 連続3回以上正解 または スキップされている
+    const isConsecutivelyCorrect = wordProgress.consecutiveCorrect >= 3;
+    const isSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
+    
+    if (isConsecutivelyCorrect || isSkipped) {
+      masteredWords.push(word);
+    }
+  }
+  
+  return masteredWords;
+}
