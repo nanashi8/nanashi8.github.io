@@ -477,15 +477,6 @@ function App() {
         ) : (
           <SettingsView
             allQuestions={allQuestions}
-            categoryList={categoryList}
-            selectedCategory={selectedCategory}
-            onCategoryChange={handleCategoryChange}
-            selectedDifficulty={selectedDifficulty}
-            onDifficultyChange={handleDifficultyChange}
-            selectedWordPhraseFilter={selectedWordPhraseFilter}
-            onWordPhraseFilterChange={setSelectedWordPhraseFilter}
-            selectedPhraseTypeFilter={selectedPhraseTypeFilter}
-            onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
             onStartSession={(mode, questions) => {
               // セッションの単語でクイズを開始
               setQuizState({
