@@ -265,11 +265,6 @@ function QuestionCard({
               </div>
             </div>
           )}
-          
-          {/* スワイプヒント */}
-          <div className="swipe-hint">
-            💡 左右にスワイプして問題を移動できます
-          </div>
         </>
       )}
     </div>
