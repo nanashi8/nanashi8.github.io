@@ -251,20 +251,6 @@ function QuestionCard({
             </div>
           )}
           
-          {/* ナビゲーションボタン */}
-          <div className="navigation-buttons">
-            <button 
-              className="nav-btn prev-btn" 
-              onClick={onPrevious}
-              disabled={currentIndex === 0}
-            >
-              ← 前へ
-            </button>
-            <button className="nav-btn next-btn" onClick={handleNextClick}>
-              次へ →
-            </button>
-          </div>
-          
           {/* スワイプヒント */}
           <div className="swipe-hint">
             💡 左右にスワイプして問題を移動できます

@@ -140,20 +140,37 @@ function QuizView({
               onNext={onNext}
               onSkip={onSkip}
             />
-            {currentQuestion && (
-              <QuestionCard
-                question={currentQuestion}
-                questionNumber={currentIndex + 1}
-                allQuestions={questions}
-                currentIndex={currentIndex}
-                answered={answered}
-                selectedAnswer={selectedAnswer}
-                onAnswer={onAnswer}
-                onNext={onNext}
-                onPrevious={onPrevious}
-                onDifficultyRate={onDifficultyRate}
-              />
-            )}
+            <div className="question-with-nav">
+              <button 
+                className="side-nav-btn prev-side-btn" 
+                onClick={onPrevious}
+                disabled={currentIndex === 0}
+                title="前へ"
+              >
+                ←
+              </button>
+              {currentQuestion && (
+                <QuestionCard
+                  question={currentQuestion}
+                  questionNumber={currentIndex + 1}
+                  allQuestions={questions}
+                  currentIndex={currentIndex}
+                  answered={answered}
+                  selectedAnswer={selectedAnswer}
+                  onAnswer={onAnswer}
+                  onNext={onNext}
+                  onPrevious={onPrevious}
+                  onDifficultyRate={onDifficultyRate}
+                />
+              )}
+              <button 
+                className="side-nav-btn next-side-btn" 
+                onClick={onSkip ? (answered ? onNext : onSkip) : onNext}
+                title="次へ"
+              >
+                →
+              </button>
+            </div>
           </>
         )}
       </div>
