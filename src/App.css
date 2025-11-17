@@ -41,6 +41,32 @@
   color: #e0e0e0;
 }
 
+.dark-mode .choice-btn:hover:not(:disabled) {
+  background: #333;
+  border-color: #667eea;
+}
+
+.dark-mode .choice-btn:active:not(:disabled) {
+  background: #3a3a3a;
+}
+
+.dark-mode .choice-details {
+  background: #333;
+}
+
+.dark-mode .toggle-details-btn-inline,
+.dark-mode .toggle-details-btn {
+  background: #333;
+  border-color: #555;
+  color: #667eea;
+}
+
+.dark-mode .toggle-details-btn-inline:hover,
+.dark-mode .toggle-details-btn:hover {
+  background: #3a3a3a;
+  border-color: #667eea;
+}
+
 .dark-mode .settings-container,
 .dark-mode .simple-setting-section {
   background: #2a2a2a;

@@ -102,17 +102,20 @@ function StatsView({ }: StatsViewProps) {
     const savedWordsData: number[] = [];
     const totalWordsData: number[] = [];
 
-    readingPassages.forEach(passage => {
-      const savedWords = passage.phrases?.reduce(
-        (count, phrase) => count + (phrase.segments?.filter(s => s.isUnknown).length || 0),
-        0
-      ) || 0;
-      const totalWords = passage.actualWordCount || 0;
+    if (Array.isArray(readingPassages)) {
+      readingPassages.forEach(passage => {
+        if (!passage) return;
+        const savedWords = passage.phrases?.reduce(
+          (count, phrase) => count + (phrase.segments?.filter(s => s.isUnknown).length || 0),
+          0
+        ) || 0;
+        const totalWords = passage.actualWordCount || 0;
 
-      labels.push(passage.title.replace(/パッセージ\d+:\s*/, '').substring(0, 15));
-      savedWordsData.push(savedWords);
-      totalWordsData.push(totalWords);
-    });
+        labels.push((passage.title || '').replace(/パッセージ\d+:\s*/, '').substring(0, 15));
+        savedWordsData.push(savedWords);
+        totalWordsData.push(totalWords);
+      });
+    }
 
     return { labels, savedWordsData, totalWordsData };
   };

@@ -290,11 +290,19 @@ function App() {
   // 関連分野変更ハンドラー
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
+    // フィルター変更時にクイズを再開（既に開始している場合）
+    if (quizState.questions.length > 0) {
+      handleStartQuiz();
+    }
   };
 
   // 難易度変更ハンドラー
   const handleDifficultyChange = (level: DifficultyLevel) => {
     setSelectedDifficulty(level);
+    // フィルター変更時にクイズを再開（既に開始している場合）
+    if (quizState.questions.length > 0) {
+      handleStartQuiz();
+    }
   };
 
   const handleAnswer = (answer: string, correct: string) => {

@@ -540,6 +540,7 @@ function removeFromReadingUnknownWords(word: string): void {
 }
 
 // 単語のスキップを記録（スワイプでスキップされた場合）
+// 連続正解時の定着単語と同じ扱いにする
 export function recordWordSkip(
   word: string,
   excludeDays: number = 7 // デフォルトで7日間除外
@@ -552,19 +553,16 @@ export function recordWordSkip(
   
   const wordProgress = progress.wordProgress[word];
   
-  // スキップ情報を更新
+  // スキップを定着と同じように扱う
+  wordProgress.consecutiveCorrect = 5; // 定着とみなす
+  wordProgress.masteryLevel = 'mastered';
+  wordProgress.lastReviewed = Date.now();
+  wordProgress.nextReviewDate = Date.now() + (30 * 24 * 60 * 60 * 1000); // 30日後
+  
+  // スキップ情報も記録（統計用）
   wordProgress.skippedCount = (wordProgress.skippedCount || 0) + 1;
   wordProgress.lastSkipped = Date.now();
   wordProgress.skipExcludeUntil = Date.now() + (excludeDays * 24 * 60 * 60 * 1000);
-  
-  // スキップが多い場合は除外期間を延長
-  if (wordProgress.skippedCount >= 3) {
-    // 3回以上スキップされた場合は14日間除外
-    wordProgress.skipExcludeUntil = Date.now() + (14 * 24 * 60 * 60 * 1000);
-  } else if (wordProgress.skippedCount >= 5) {
-    // 5回以上スキップされた場合は30日間除外
-    wordProgress.skipExcludeUntil = Date.now() + (30 * 24 * 60 * 60 * 1000);
-  }
   
   saveProgress(progress);
 }
