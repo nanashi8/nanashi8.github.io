@@ -5782,6 +5782,31 @@ option {
   color: #666;
 }
 
+/* シンプル設定セクション */
+.simple-setting-section {
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.simple-setting-section h3 {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reset-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reset-buttons .setting-button {
+  flex: 1;
+  min-width: 200px;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .settings-tabs {
@@ -5795,6 +5820,14 @@ option {
   .setting-card {
     flex-direction: column;
     text-align: center;
+  }
+  
+  .reset-buttons {
+    flex-direction: column;
+  }
+  
+  .reset-buttons .setting-button {
+    min-width: 100%;
   }
 }
 
