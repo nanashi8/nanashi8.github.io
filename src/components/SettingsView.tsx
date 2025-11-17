@@ -58,8 +58,8 @@ function SettingsView({
   });
 
   const totalWords = allQuestions.length;
-  const estimatedMonths = Math.ceil(totalWords / (batchSize * 30));
-  const estimatedMonthsText = estimatedMonths === 1 ? '約1ヶ月' : `約${estimatedMonths}ヶ月`;
+  const estimatedDays = Math.ceil(totalWords / batchSize);
+  const estimatedDaysText = `約${estimatedDays}日間`;
 
   return (
     <div className="settings-view">
@@ -83,7 +83,7 @@ function SettingsView({
               aria-label="1日の学習単語数"
             />
             <div className="slider-value">{batchSize}語 / {totalWords}語</div>
-            <div className="estimated-duration">{estimatedMonthsText}で完了予定（1日{batchSize}語ペース）</div>
+            <div className="estimated-duration">{estimatedDaysText}で完了予定（1日{batchSize}語ペース）</div>
           </div>
         </div>
 

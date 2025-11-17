@@ -47,14 +47,16 @@ function StatsView({ }: StatsViewProps) {
 
   // リアルタイム更新（学習中のデータを即座に反映）
   useEffect(() => {
-    loadProgressData();
+    const loadData = () => {
+      const data = loadProgress();
+      setProgress(data);
+    };
+    
+    loadData();
     
     if (autoRefresh) {
       // 5秒ごとにデータを再読み込み
-      const interval = setInterval(() => {
-        loadProgressData();
-      }, 5000);
-      
+      const interval = setInterval(loadData, 5000);
       return () => clearInterval(interval);
     }
   }, [autoRefresh]);

@@ -92,8 +92,10 @@ function QuestionCard({
         if (swipeDistance > 0) {
           // 左スワイプ → 次へ
           if (!answered) {
-            // 回答前のスワイプはスキップとして記録
+            // 回答前のスワイプはスキップとして記録（定着扱い）
             recordWordSkip(question.word, 7); // 7日間除外
+            // スコアボードに反映（正解扱い）
+            onAnswer(question.meaning, question.meaning);
           }
           handleNextClick();
         } else {
@@ -142,6 +144,12 @@ function QuestionCard({
   };
   
   const handleNextClick = () => {
+    // 回答前に次へボタンを押した場合はスキップ扱い
+    if (!answered) {
+      recordWordSkip(question.word, 7);
+      // スコアボードに反映（正解扱い）
+      onAnswer(question.meaning, question.meaning);
+    }
     setUserRating(null); // 次の問題へ行く前にリセット
     setExpandedChoices(new Set()); // 開閉状態をリセット
     onNext();

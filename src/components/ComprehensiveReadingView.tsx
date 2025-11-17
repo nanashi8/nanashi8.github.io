@@ -578,7 +578,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない熟語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word phrase-word">{phraseText}</div>
-                            {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
+                            {combinedMeaning && (
                               <div className="word-card-meaning">{combinedMeaning}</div>
                             )}
                           </div>
@@ -599,7 +599,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word">{segment.word}</div>
-                            {wordMeaningsVisible[phraseIdx] && meaning && (
+                            {meaning && (
                               <div className="word-card-meaning">{meaning}</div>
                             )}
                           </div>

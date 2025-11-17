@@ -49,9 +49,6 @@ function SpellingView({
   // 詳細表示の開閉状態
   const [showDetails, setShowDetails] = useState<boolean>(false);
   
-  // タイピング入力用の状態
-  const [typingInput, setTypingInput] = useState<string>('');
-  
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
@@ -109,10 +106,6 @@ function SpellingView({
 
     const newSequence = [...selectedSequence, `${index}`];
     setSelectedSequence(newSequence);
-    
-    // クリック選択をタイピング入力にも反映
-    const newWord = newSequence.map((i) => shuffledLetters[parseInt(i)]).join('');
-    setTypingInput(newWord);
 
     // 全てのカードが選択されたら自動で答え合わせ
     if (newSequence.length === shuffledLetters.length) {
@@ -192,7 +185,6 @@ function SpellingView({
   const handleNext = () => {
     setShowDetails(false);
     setSelectedSequence([]); // 選択シーケンスをクリア
-    setTypingInput(''); // タイピング入力をクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
@@ -205,7 +197,6 @@ function SpellingView({
   const handlePrevious = () => {
     setShowDetails(false);
     setSelectedSequence([]); // 選択シーケンスをクリア
-    setTypingInput(''); // タイピング入力をクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex > 0 ? prev.currentIndex - 1 : 0,
@@ -220,12 +211,6 @@ function SpellingView({
     if (selectedSequence.length > 0) {
       const newSequence = selectedSequence.slice(0, -1);
       setSelectedSequence(newSequence);
-      // タイピング入力も同期
-      const newWord = newSequence.map((i) => shuffledLetters[parseInt(i)]).join('');
-      setTypingInput(newWord);
-    } else if (typingInput.length > 0) {
-      // タイピング入力のみがある場合
-      setTypingInput(prev => prev.slice(0, -1));
     }
   };
 
@@ -236,8 +221,8 @@ function SpellingView({
 
   const hasQuestions = spellingState.questions.length > 0;
   
-  // ユーザーが選択した単語（クリックとタイピングの両方を統合）
-  const userWord = typingInput || selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
+  // ユーザーが選択した単語
+  const userWord = selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -410,62 +395,37 @@ function SpellingView({
                 </button>
               </div>
 
-              {/* タイピング入力フィールド（常に表示） */}
-              {!spellingState.answered && (
-                <div className="typing-input-container">
-                  <input
-                    type="text"
-                    className="typing-input"
-                    value={typingInput}
-                    onChange={(e) => {
-                      const value = e.target.value.toLowerCase();
-                      setTypingInput(value);
-                      // タイピング入力に対応するカードを選択状態にする
-                      const newSequence: string[] = [];
-                      for (let i = 0; i < value.length; i++) {
-                        const char = value[i];
-                        // シャッフルされた文字から未選択の同じ文字を探す
-                        const availableIndex = shuffledLetters.findIndex((letter, idx) => 
-                          letter === char && !newSequence.includes(`${idx}`)
-                        );
-                        if (availableIndex !== -1) {
-                          newSequence.push(`${availableIndex}`);
-                        }
-                      }
-                      setSelectedSequence(newSequence);
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' && (typingInput.trim() || selectedSequence.length > 0)) {
-                        if (typingInput.trim()) {
-                          checkTypingAnswer(typingInput.trim());
-                        } else {
-                          checkTypingAnswer(userWord);
-                        }
-                      } else if (e.key === 'Backspace' && typingInput.length === 0 && selectedSequence.length > 0) {
-                        // タイピング入力が空の時にBackspaceを押したら、最後に選択したカードを解除
-                        handleBackspace();
-                      }
-                    }}
-                    placeholder="スペルをタイピングまたは下のカードをクリック"
-                  />
-                  <button
-                    className="btn-submit-typing"
-                    onClick={() => {
-                      if (typingInput.trim()) {
-                        checkTypingAnswer(typingInput.trim());
-                      } else if (selectedSequence.length > 0) {
-                        checkTypingAnswer(userWord);
-                      }
-                    }}
-                    disabled={!typingInput.trim() && selectedSequence.length === 0}
-                  >
-                    回答する
-                  </button>
-                </div>
-              )}
-
               {/* シャッフルされたアルファベットカード（常に表示） */}
-              <div className="letter-cards">
+              <div 
+                className="letter-cards"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (!spellingState.answered) {
+                    // キーボード入力でカードを選択
+                    const key = e.key.toLowerCase();
+                    if (key.length === 1 && key >= 'a' && key <= 'z') {
+                      e.preventDefault();
+                      // 該当する未選択のカードを探す
+                      const availableIndex = shuffledLetters.findIndex((letter, idx) => 
+                        letter === key && !selectedSequence.includes(`${idx}`)
+                      );
+                      if (availableIndex !== -1) {
+                        handleLetterClick(key, availableIndex);
+                      }
+                    } else if (e.key === 'Backspace') {
+                      e.preventDefault();
+                      handleBackspace();
+                    } else if (e.key === 'Enter' && selectedSequence.length > 0) {
+                      e.preventDefault();
+                      checkTypingAnswer(userWord);
+                    }
+                  } else if (e.key === 'Enter') {
+                    // 回答後のEnterで次へ進む
+                    e.preventDefault();
+                    handleNext();
+                  }
+                }}
+              >
                 {shuffledLetters.map((letter, index) => {
                   const isSelected = selectedSequence.includes(`${index}`);
                   const selectionOrder = selectedSequence.indexOf(`${index}`) + 1;
