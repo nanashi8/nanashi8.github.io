@@ -1,51 +1,49 @@
-import { Question } from '../types';
-import { loadProgress, getMasteredWordsCount } from '../progressStorage';
+import { 
+  getTodayStats, 
+  getTotalAnsweredCount, 
+  getUniqueQuestionedWordsCount,
+  getTotalMasteredWordsCount 
+} from '../progressStorage';
 
 interface ScoreBoardProps {
-  score: number;
-  totalAnswered: number;
-  totalQuestions: number;
-  questions: Question[];
+  mode?: 'translation' | 'spelling' | 'reading'; // クイズモードを追加
 }
 
 function ScoreBoard({ 
-  score, 
-  totalAnswered, 
-  totalQuestions, 
-  questions
+  mode = 'translation' // デフォルトは和訳モード
 }: ScoreBoardProps) {
-  const accuracy =
-    totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+  // 本日の統計を取得
+  const { todayAccuracy, todayTotalAnswered } = getTodayStats(mode);
 
-  // 新規単語数を計算（学習履歴がない単語）
-  const progress = loadProgress();
-  const newWordsCount = questions.filter(q => {
-    const wordProgress = progress.wordProgress[q.word];
-    return !wordProgress || (wordProgress.correctCount === 0 && wordProgress.incorrectCount === 0);
-  }).length;
+  // 累計回答数を取得
+  const totalAnsweredCount = getTotalAnsweredCount(mode);
 
-  // 定着単語数を計算（連続3回以上正解 または スキップされた単語）
-  const masteredCount = getMasteredWordsCount(questions.map(q => q.word));
+  // 定着数を取得（全体から）
+  const masteredCount = getTotalMasteredWordsCount();
+
+  // 出題数を取得（重複除外、全4700問のうち実際に出題された数）
+  const uniqueQuestionedCount = getUniqueQuestionedWordsCount();
 
   return (
     <div className="score-board-compact">
       <span className="score-stat-large">
-        正答率<strong className="correct">{accuracy}%</strong>
+        本日正答率<strong className="correct">{todayAccuracy}%</strong>
       </span>
+      <span className="score-stat-divider">|</span>
       <span className="score-stat">
-        回答数<strong>{totalAnswered}</strong>
+        本日回答数<strong>{todayTotalAnswered}</strong>
       </span>
-      <span className="score-stat-divider">/</span>
+      <span className="score-stat-divider">|</span>
       <span className="score-stat">
-        出題数<strong>{totalQuestions}</strong>
+        累計回答数<strong>{totalAnsweredCount}</strong>
       </span>
       <span className="score-stat-divider">|</span>
       <span className="score-stat">
         定着数<strong>{masteredCount}</strong>
       </span>
-      <span className="score-stat-divider">/</span>
+      <span className="score-stat-divider">|</span>
       <span className="score-stat">
-        新規数<strong>{newWordsCount}</strong>
+        出題数<strong>{uniqueQuestionedCount}</strong>
       </span>
     </div>
   );

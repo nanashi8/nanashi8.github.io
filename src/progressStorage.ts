@@ -587,3 +587,94 @@ export function getMasteredWords(words: string[]): string[] {
   
   return masteredWords;
 }
+
+/**
+ * 本日の統計を取得（本日正答率、本日回答数）
+ * @param mode クイズモード（translation, spelling, reading）
+ */
+export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading'): {
+  todayCorrectCount: number;
+  todayTotalAnswered: number;
+  todayAccuracy: number;
+} {
+  const progress = loadProgress();
+  const today = new Date().setHours(0, 0, 0, 0);
+  const tomorrow = today + 24 * 60 * 60 * 1000;
+  
+  // 本日の結果をフィルタ
+  let todayResults = progress.results.filter(r => r.date >= today && r.date < tomorrow);
+  
+  // モード指定がある場合はフィルタ
+  if (mode) {
+    todayResults = todayResults.filter(r => r.mode === mode);
+  }
+  
+  const todayCorrectCount = todayResults.reduce((sum, r) => sum + r.score, 0);
+  const todayTotalAnswered = todayResults.reduce((sum, r) => sum + r.total, 0);
+  const todayAccuracy = todayTotalAnswered > 0 
+    ? Math.round((todayCorrectCount / todayTotalAnswered) * 100) 
+    : 0;
+  
+  return {
+    todayCorrectCount,
+    todayTotalAnswered,
+    todayAccuracy,
+  };
+}
+
+/**
+ * 累計回答数を取得
+ * @param mode クイズモード（translation, spelling, reading）
+ */
+export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'reading'): number {
+  const progress = loadProgress();
+  let results = progress.results;
+  
+  // モード指定がある場合はフィルタ
+  if (mode) {
+    results = results.filter(r => r.mode === mode);
+  }
+  
+  return results.reduce((sum, r) => sum + r.total, 0);
+}
+
+/**
+ * 出題された単語数を取得（重複を除く）
+ * @param mode クイズモード（translation, spelling, reading）
+ */
+export function getUniqueQuestionedWordsCount(mode?: 'translation' | 'spelling' | 'reading'): number {
+  const progress = loadProgress();
+  const uniqueWords = new Set<string>();
+  
+  // wordProgressから、実際に出題された単語を抽出
+  for (const [word, wordProgress] of Object.entries(progress.wordProgress)) {
+    const hasBeenAnswered = wordProgress.correctCount > 0 || wordProgress.incorrectCount > 0;
+    const hasBeenSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
+    
+    if (hasBeenAnswered || hasBeenSkipped) {
+      uniqueWords.add(word);
+    }
+  }
+  
+  return uniqueWords.size;
+}
+
+/**
+ * 定着した単語数を全体から取得（スキップ含む）
+ */
+export function getTotalMasteredWordsCount(): number {
+  const progress = loadProgress();
+  let masteredCount = 0;
+  
+  for (const wordProgress of Object.values(progress.wordProgress)) {
+    // 定着条件: 連続3回以上正解 または スキップされている
+    const isConsecutivelyCorrect = wordProgress.consecutiveCorrect >= 3;
+    const isSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
+    
+    if (isConsecutivelyCorrect || isSkipped) {
+      masteredCount++;
+    }
+  }
+  
+  return masteredCount;
+}

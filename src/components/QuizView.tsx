@@ -40,7 +40,7 @@ function QuizView({
   onSkip,
   onDifficultyRate,
 }: QuizViewProps) {
-  const { questions, currentIndex, score, totalAnswered, answered, selectedAnswer } =
+  const { questions, currentIndex, answered, selectedAnswer } =
     quizState;
 
   const hasQuestions = questions.length > 0;
@@ -165,10 +165,7 @@ function QuizView({
       ) : (
         <>
           <ScoreBoard
-            score={score}
-            totalAnswered={totalAnswered}
-            totalQuestions={questions.length}
-            questions={questions}
+            mode="translation"
           />
           <div className="question-container">
             {currentQuestion && (

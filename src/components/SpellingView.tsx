@@ -314,10 +314,7 @@ function SpellingView({
       ) : (
         <>
           <ScoreBoard
-            score={spellingState.score}
-            totalAnswered={spellingState.totalAnswered}
-            totalQuestions={spellingState.questions.length}
-            questions={spellingState.questions}
+            mode="spelling"
           />
 
           {currentQuestion && (
@@ -346,7 +343,7 @@ function SpellingView({
                   <div className="user-word-display">
                     <div className="user-word-label">あなたの答え:</div>
                     <div className="user-word-text">
-                      {userWord || '（タップして並べてください）'}
+                      {userWord || '（並び替え問題）'}
                     </div>
                   </div>
                 </div>
