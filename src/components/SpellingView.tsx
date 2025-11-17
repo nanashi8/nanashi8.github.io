@@ -344,21 +344,23 @@ function SpellingView({
                   ←
                 </button>
                 <div className="question-content-inline">
-                  <div className="meaning-display">
-                    <div className="meaning-label">意味:</div>
-                    <div className="meaning-text">{currentQuestion.meaning}</div>
-                    {currentQuestion.word.includes(' ') && (
-                      <div className="phrase-hint">
-                        💡 ヒント: {currentQuestion.word.split(' ').length}つの単語で構成された熟語です
-                      </div>
-                    )}
-                  </div>
+                  <div className="spelling-question-content">
+                    <div className="meaning-display">
+                      <div className="meaning-label">意味:</div>
+                      <div className="meaning-text">{currentQuestion.meaning}</div>
+                      {currentQuestion.word.includes(' ') && (
+                        <div className="phrase-hint">
+                          💡 ヒント: {currentQuestion.word.split(' ').length}つの単語で構成された熟語です
+                        </div>
+                      )}
+                    </div>
 
-                  {/* ユーザーが選択中の単語表示 */}
-                  <div className="user-word-display">
-                    <div className="user-word-label">あなたの答え:</div>
-                    <div className="user-word-text">
-                      {userWord || '（並び替え問題）'}
+                    {/* ユーザーが選択中の単語表示 */}
+                    <div className="user-word-display">
+                      <div className="user-word-label">あなたの答え:</div>
+                      <div className="user-word-text">
+                        {userWord || '（並び替え問題）'}
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1242,8 +1242,8 @@ option {
   padding: 10px;
 }
 
-/* スペルタブ用の縦並びレイアウト */
-.spelling-view .question-card .question-content-inline {
+/* スペルタブの問題コンテンツ - 縦並び */
+.spelling-question-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
