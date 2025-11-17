@@ -1,0 +1,431 @@
+{
+  "total": 4700,
+  "verbs": [
+    {
+      "word": "accept",
+      "reading": "アクセ́プト",
+      "meaning": "受け入れる"
+    },
+    {
+      "word": "act",
+      "reading": "ア́クト",
+      "meaning": "行動する"
+    },
+    {
+      "word": "agree",
+      "reading": "アグリ́ー",
+      "meaning": "同意する"
+    },
+    {
+      "word": "appear",
+      "reading": "アピア́ー",
+      "meaning": "現れる"
+    },
+    {
+      "word": "arrive",
+      "reading": "アライ́ヴ",
+      "meaning": "到着する"
+    },
+    {
+      "word": "break",
+      "reading": "ブレ́イク",
+      "meaning": "壊す・休憩する"
+    },
+    {
+      "word": "call",
+      "reading": "コ́ール",
+      "meaning": "呼ぶ・電話する"
+    },
+    {
+      "word": "camp",
+      "reading": "キャ́ンプ",
+      "meaning": "キャンプする"
+    },
+    {
+      "word": "check",
+      "reading": "チェ́ック",
+      "meaning": "確認する・小切手"
+    },
+    {
+      "word": "clean",
+      "reading": "クリ́ーン",
+      "meaning": "きれいにする・清潔な"
+    },
+    {
+      "word": "complete",
+      "reading": "コンプリー́ト",
+      "meaning": "完全な・完成する"
+    },
+    {
+      "word": "control",
+      "reading": "コントロ́ール",
+      "meaning": "制御する・抑える"
+    },
+    {
+      "word": "cook",
+      "reading": "ク́ック",
+      "meaning": "料理する・料理人"
+    },
+    {
+      "word": "correct",
+      "reading": "コレ́クト",
+      "meaning": "正しい・訂正する"
+    },
+    {
+      "word": "create",
+      "reading": "クリエ́イト",
+      "meaning": "創造する"
+    },
+    {
+      "word": "deliver",
+      "reading": "デリ́ヴァー",
+      "meaning": "配達する・産む"
+    },
+    {
+      "word": "describe",
+      "reading": "ディスクライ́ブ",
+      "meaning": "描写する・説明する"
+    },
+    {
+      "word": "develop",
+      "reading": "ディヴェ́ロップ",
+      "meaning": "発展させる"
+    },
+    {
+      "word": "discuss",
+      "reading": "ディスカ́ス",
+      "meaning": "議論する"
+    },
+    {
+      "word": "do",
+      "reading": "ドゥ́",
+      "meaning": "する"
+    }
+  ],
+  "pronouns": [
+    {
+      "word": "mine",
+      "reading": "マ́イン",
+      "meaning": "私のもの・鉱山"
+    },
+    {
+      "word": "our",
+      "reading": "ア́ワー",
+      "meaning": "私たちの"
+    },
+    {
+      "word": "she",
+      "reading": "シ́ー",
+      "meaning": "彼女は"
+    },
+    {
+      "word": "that",
+      "reading": "ザ́ット",
+      "meaning": "あれ・〜ということ"
+    },
+    {
+      "word": "their",
+      "reading": "ゼ́アー",
+      "meaning": "彼らの"
+    },
+    {
+      "word": "them",
+      "reading": "ゼ́ム",
+      "meaning": "彼らを"
+    },
+    {
+      "word": "these",
+      "reading": "ジ́ーズ",
+      "meaning": "これらの"
+    },
+    {
+      "word": "they",
+      "reading": "ゼ́イ",
+      "meaning": "彼らは"
+    },
+    {
+      "word": "I",
+      "reading": "ア́イ",
+      "meaning": "私は"
+    },
+    {
+      "word": "you",
+      "reading": "ユ́ー",
+      "meaning": "あなたは・あなたたちは"
+    },
+    {
+      "word": "he",
+      "reading": "ヒ́ー",
+      "meaning": "彼は"
+    },
+    {
+      "word": "she",
+      "reading": "シ́ー",
+      "meaning": "彼女は"
+    },
+    {
+      "word": "it",
+      "reading": "イ́ット",
+      "meaning": "それは"
+    },
+    {
+      "word": "we",
+      "reading": "ウィ́ー",
+      "meaning": "私たちは"
+    },
+    {
+      "word": "they",
+      "reading": "ゼ́イ",
+      "meaning": "彼ら・彼女らは"
+    },
+    {
+      "word": "my",
+      "reading": "マ́イ",
+      "meaning": "私の"
+    },
+    {
+      "word": "your",
+      "reading": "ユ́ア",
+      "meaning": "あなたの"
+    },
+    {
+      "word": "his",
+      "reading": "ヒ́ズ",
+      "meaning": "彼の"
+    },
+    {
+      "word": "her",
+      "reading": "ハ́ー",
+      "meaning": "彼女の・彼女を"
+    },
+    {
+      "word": "its",
+      "reading": "イ́ッツ",
+      "meaning": "それの"
+    },
+    {
+      "word": "our",
+      "reading": "ア́ワー",
+      "meaning": "私たちの"
+    },
+    {
+      "word": "their",
+      "reading": "ゼ́ア",
+      "meaning": "彼らの"
+    },
+    {
+      "word": "this",
+      "reading": "ジ́ス",
+      "meaning": "これ・この"
+    },
+    {
+      "word": "that",
+      "reading": "ザ́ット",
+      "meaning": "あれ・あの"
+    },
+    {
+      "word": "these",
+      "reading": "ジ́ーズ",
+      "meaning": "これら"
+    },
+    {
+      "word": "those",
+      "reading": "ゾ́ウズ",
+      "meaning": "あれら"
+    },
+    {
+      "word": "what",
+      "reading": "ワ́ット",
+      "meaning": "何"
+    },
+    {
+      "word": "who",
+      "reading": "フ́ー",
+      "meaning": "誰"
+    },
+    {
+      "word": "me",
+      "reading": "ミ́ー",
+      "meaning": "私を・私に"
+    },
+    {
+      "word": "him",
+      "reading": "ヒ́ム",
+      "meaning": "彼を・彼に"
+    },
+    {
+      "word": "us",
+      "reading": "ア́ス",
+      "meaning": "私たちを・私たちに"
+    },
+    {
+      "word": "them",
+      "reading": "ゼ́ム",
+      "meaning": "彼らを・彼らに"
+    }
+  ],
+  "adjectives": [
+    {
+      "word": "about",
+      "reading": "アバ́ウト",
+      "meaning": "〜について"
+    },
+    {
+      "word": "always",
+      "reading": "オ́ールウェイズ",
+      "meaning": "いつも"
+    },
+    {
+      "word": "any",
+      "reading": "エ́ニ",
+      "meaning": "いくつかの"
+    },
+    {
+      "word": "as",
+      "reading": "ア́ズ",
+      "meaning": "〜なので・〜のように"
+    },
+    {
+      "word": "bad",
+      "reading": "バ́ッド",
+      "meaning": "悪い"
+    },
+    {
+      "word": "because",
+      "reading": "ビコ́ーズ",
+      "meaning": "〜なので"
+    },
+    {
+      "word": "become",
+      "reading": "ビカ́ム",
+      "meaning": "〜になる"
+    },
+    {
+      "word": "best",
+      "reading": "ベ́スト",
+      "meaning": "最も良い"
+    },
+    {
+      "word": "better",
+      "reading": "ベ́ター",
+      "meaning": "より良い"
+    },
+    {
+      "word": "big",
+      "reading": "ビ́ッグ",
+      "meaning": "大きい"
+    },
+    {
+      "word": "black",
+      "reading": "ブラ́ック",
+      "meaning": "黒い"
+    },
+    {
+      "word": "blue",
+      "reading": "ブル́ー",
+      "meaning": "青い"
+    },
+    {
+      "word": "certain",
+      "reading": "サ́ーテン",
+      "meaning": "確かな・ある〜"
+    },
+    {
+      "word": "chair",
+      "reading": "チェ́ア",
+      "meaning": "いす"
+    },
+    {
+      "word": "cheap",
+      "reading": "チ́ープ",
+      "meaning": "安い"
+    },
+    {
+      "word": "clear",
+      "reading": "クリ́ア",
+      "meaning": "明確な・晴れた"
+    },
+    {
+      "word": "close",
+      "reading": "クロ́ーズ",
+      "meaning": "閉める・近い"
+    },
+    {
+      "word": "cold",
+      "reading": "コ́ールド",
+      "meaning": "寒い・冷たい"
+    },
+    {
+      "word": "common",
+      "reading": "コ́モン",
+      "meaning": "共通の・一般的な"
+    },
+    {
+      "word": "cool",
+      "reading": "ク́ール",
+      "meaning": "涼しい・格好いい"
+    }
+  ],
+  "adverbs": [
+    {
+      "word": "especially",
+      "reading": "エスペ́シャリ",
+      "meaning": "特に"
+    },
+    {
+      "word": "partly",
+      "reading": "パ́ートリ",
+      "meaning": "部分的に"
+    },
+    {
+      "word": "really",
+      "reading": "リ́アリ",
+      "meaning": "本当に"
+    },
+    {
+      "word": "undoubtedly",
+      "reading": "アンダ́ウティッドリ",
+      "meaning": "疑いなく・確かに"
+    },
+    {
+      "word": "wholly",
+      "reading": "ホ́ウリ",
+      "meaning": "完全に・全く"
+    },
+    {
+      "word": "accordingly",
+      "reading": "アコ́ーディングリ",
+      "meaning": "それに応じて"
+    },
+    {
+      "word": "actively",
+      "reading": "ア́クティヴリ",
+      "meaning": "活発に・積極的に"
+    },
+    {
+      "word": "bodily",
+      "reading": "ボ́ディリ",
+      "meaning": "身体の・肉体的に"
+    },
+    {
+      "word": "burly",
+      "reading": "バ́ーリ",
+      "meaning": "たくましい・がっしりした"
+    },
+    {
+      "word": "badly",
+      "reading": "バ́ッドリ",
+      "meaning": "ひどく・悪く"
+    },
+    {
+      "word": "eventually",
+      "reading": "イヴェ́ンチュアリ",
+      "meaning": "最終的に"
+    },
+    {
+      "word": "when pigs fly",
+      "reading": "ウェン ピッグズ フライ",
+      "meaning": "絶対にありえない"
+    }
+  ]
+}
