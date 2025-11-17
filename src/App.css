@@ -587,6 +587,11 @@ option {
   background: #f0f4ff;
 }
 
+.choice-btn:active:not(:disabled) {
+  background: #e0e8ff;
+  transform: scale(0.98);
+}
+
 .choice-btn:disabled {
   cursor: not-allowed;
 }
@@ -3048,6 +3053,11 @@ option {
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
 }
 
+.letter-card:active:not(:disabled):not(.selected) {
+  background: #e0e8ff;
+  transform: translateY(-1px);
+}
+
 .letter-card.selected {
   background: #667eea;
   color: white;
@@ -3455,9 +3465,9 @@ option {
   }
 
   .letter-card {
-    width: 55px;
-    height: 55px;
-    font-size: 1.5em;
+    width: 60px;
+    height: 60px;
+    font-size: 1.6em;
   }
 
   .question-text {
@@ -3916,6 +3926,9 @@ option {
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+  min-height: 48px; /* iOS タップ領域確保 */
 }
 
 .start-btn:hover {
@@ -3925,6 +3938,7 @@ option {
 
 .start-btn:active {
   transform: translateY(0);
+  background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
 }
 
 @media (max-width: 600px) {

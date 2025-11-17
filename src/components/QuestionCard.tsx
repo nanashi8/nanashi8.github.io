@@ -65,7 +65,7 @@ function QuestionCard({
     
     const handleTouchEnd = () => {
       const swipeDistance = touchStartX.current - touchEndX.current;
-      const minSwipeDistance = 50; // 最小スワイプ距離
+      const minSwipeDistance = 80; // iOSブラウザジェスチャーとの競合回避のため増加
       
       if (Math.abs(swipeDistance) > minSwipeDistance) {
         if (swipeDistance > 0) {
