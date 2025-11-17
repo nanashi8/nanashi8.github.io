@@ -7,7 +7,7 @@ import {
   generateId,
   selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords } from './progressStorage';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -249,6 +249,22 @@ function App() {
     if (filteredQuestions.length === 0) {
       alert('指定された条件の問題が見つかりません');
       return;
+    }
+    
+    // 当日の誤答単語を取得
+    const todayIncorrect = getTodayIncorrectWords();
+    
+    // 誤答単語がある場合、優先的に出題
+    if (todayIncorrect.length > 0) {
+      const incorrectQuestions = filteredQuestions.filter(q => 
+        todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
+      );
+      const correctQuestions = filteredQuestions.filter(q => 
+        !todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
+      );
+      
+      // 誤答問題を前に、正解済み問題を後ろに配置
+      filteredQuestions = [...incorrectQuestions, ...correctQuestions];
     }
     
     // 適応的学習モードが有効な場合、出題順を最適化

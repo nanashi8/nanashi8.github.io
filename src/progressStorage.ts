@@ -241,6 +241,75 @@ export function getRecentResults(limit: number = 10): QuizResult[] {
   return progress.results.slice(-limit).reverse();
 }
 
+// 分野別の統計を取得
+export function getStatsByCategory(): Map<string, { correctCount: number; totalCount: number; accuracy: number }> {
+  const progress = loadProgress();
+  const categoryStats = new Map<string, { correctCount: number; totalCount: number }>();
+  
+  progress.results.forEach(result => {
+    if (result.category) {
+      const existing = categoryStats.get(result.category) || { correctCount: 0, totalCount: 0 };
+      categoryStats.set(result.category, {
+        correctCount: existing.correctCount + result.score,
+        totalCount: existing.totalCount + result.total
+      });
+    }
+  });
+  
+  const statsWithAccuracy = new Map<string, { correctCount: number; totalCount: number; accuracy: number }>();
+  categoryStats.forEach((stats, category) => {
+    statsWithAccuracy.set(category, {
+      correctCount: stats.correctCount,
+      totalCount: stats.totalCount,
+      accuracy: stats.totalCount > 0 ? (stats.correctCount / stats.totalCount) * 100 : 0
+    });
+  });
+  
+  return statsWithAccuracy;
+}
+
+// 難易度別の統計を取得
+export function getStatsByDifficulty(): Map<string, { correctCount: number; totalCount: number; accuracy: number }> {
+  const progress = loadProgress();
+  const difficultyStats = new Map<string, { correctCount: number; totalCount: number }>();
+  
+  progress.results.forEach(result => {
+    if (result.difficulty) {
+      const existing = difficultyStats.get(result.difficulty) || { correctCount: 0, totalCount: 0 };
+      difficultyStats.set(result.difficulty, {
+        correctCount: existing.correctCount + result.score,
+        totalCount: existing.totalCount + result.total
+      });
+    }
+  });
+  
+  const statsWithAccuracy = new Map<string, { correctCount: number; totalCount: number; accuracy: number }>();
+  difficultyStats.forEach((stats, difficulty) => {
+    statsWithAccuracy.set(difficulty, {
+      correctCount: stats.correctCount,
+      totalCount: stats.totalCount,
+      accuracy: stats.totalCount > 0 ? (stats.correctCount / stats.totalCount) * 100 : 0
+    });
+  });
+  
+  return statsWithAccuracy;
+}
+
+// 当日の誤答単語を取得
+export function getTodayIncorrectWords(): string[] {
+  const progress = loadProgress();
+  const today = new Date().toLocaleDateString('ja-JP');
+  const incorrectWords = new Set<string>();
+  
+  progress.results.forEach(result => {
+    if (new Date(result.date).toLocaleDateString('ja-JP') === today) {
+      result.incorrectWords.forEach(word => incorrectWords.add(word));
+    }
+  });
+  
+  return Array.from(incorrectWords);
+}
+
 // 進捗データのエクスポート
 export function exportProgress(): string {
   const progress = loadProgress();
