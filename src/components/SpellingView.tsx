@@ -171,18 +171,26 @@ function SpellingView({
 
   const handleNext = () => {
     setShowDetails(false);
+    setSelectedSequence([]); // 選択シーケンスをクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
+      answered: false, // 回答状態をリセット
     }));
+    // 次の問題の開始時刻を記録
+    questionStartTimeRef.current = Date.now();
   };
 
   const handlePrevious = () => {
     setShowDetails(false);
+    setSelectedSequence([]); // 選択シーケンスをクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex > 0 ? prev.currentIndex - 1 : 0,
+      answered: false, // 回答状態をリセット
     }));
+    // 問題の開始時刻を記録
+    questionStartTimeRef.current = Date.now();
   };
 
   const handleReset = () => {
