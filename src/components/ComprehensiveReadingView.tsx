@@ -1,10 +1,20 @@
 import { useState, useEffect } from 'react';
-import { ReadingPassage } from '../types';
+import { ReadingPassage, Question } from '../types';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
 interface ComprehensiveReadingViewProps {
   onSaveUnknownWords?: (words: { word: string; meaning: string }[]) => void;
+}
+
+interface WordPopup {
+  word: string;
+  meaning: string;
+  reading: string;
+  etymology: string;
+  relatedWords: string;
+  x: number;
+  y: number;
 }
 
 function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingViewProps) {
@@ -14,6 +24,44 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
+  const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
+
+  // 単語集データの読み込み
+  useEffect(() => {
+    fetch('/data/junior-high-entrance-words.csv')
+      .then((res) => res.text())
+      .then((csvText) => {
+        const lines = csvText.split('\n');
+        const dictionary = new Map<string, Question>();
+        
+        // ヘッダー行をスキップして処理
+        lines.slice(1).forEach((line) => {
+          if (!line.trim()) return;
+          
+          // CSVをパース（簡易版）
+          const row = line.split(',').map(cell => cell.trim());
+          
+          if (row.length >= 7) {
+            const word = row[0].toLowerCase().trim();
+            dictionary.set(word, {
+              word: row[0],
+              reading: row[1],
+              meaning: row[2],
+              etymology: row[3],
+              relatedWords: row[4],
+              relatedFields: row[5],
+              difficulty: row[6],
+            });
+          }
+        });
+        
+        setWordDictionary(dictionary);
+      })
+      .catch((err) => {
+        console.error('Error loading word dictionary:', err);
+      });
+  }, []);
 
   // データ読み込み
   useEffect(() => {
@@ -53,8 +101,45 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   };
 
+  // 単語をクリックして辞書から意味を表示
+  const handleWordClick = (word: string, event: React.MouseEvent<HTMLSpanElement>) => {
+    // 既存のポップアップを閉じる
+    if (wordPopup && wordPopup.word === word) {
+      setWordPopup(null);
+      return;
+    }
+
+    // 単語を正規化（小文字、記号除去）
+    const normalizedWord = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
+    const wordInfo = wordDictionary.get(normalizedWord);
+
+    if (wordInfo) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      setWordPopup({
+        word: wordInfo.word,
+        meaning: wordInfo.meaning,
+        reading: wordInfo.reading,
+        etymology: wordInfo.etymology,
+        relatedWords: wordInfo.relatedWords,
+        x: rect.left + window.scrollX,
+        y: rect.bottom + window.scrollY + 5,
+      });
+    } else {
+      setWordPopup({
+        word: word,
+        meaning: '辞書に見つかりませんでした',
+        reading: '',
+        etymology: '',
+        relatedWords: '',
+        x: event.clientX + window.scrollX,
+        y: event.clientY + window.scrollY + 5,
+      });
+    }
+  };
+
   // 単語を「分からない」としてマーク
-  const handleMarkUnknown = (phraseIndex: number, segmentIndex: number) => {
+  const handleMarkUnknown = (phraseIndex: number, segmentIndex: number, event: React.MouseEvent) => {
+    event.stopPropagation(); // ポップアップ表示を防ぐ
     if (!currentPassage) return;
 
     setPassages(prev =>
@@ -236,6 +321,43 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         </div>
       </div>
 
+      {/* 単語ポップアップ */}
+      {wordPopup && (
+        <>
+          <div className="word-popup-overlay" onClick={() => setWordPopup(null)} />
+          <div 
+            className="word-popup"
+            style={{ 
+              left: `${wordPopup.x}px`, 
+              top: `${wordPopup.y}px` 
+            }}
+          >
+            <button 
+              className="popup-close" 
+              onClick={() => setWordPopup(null)}
+              title="閉じる"
+            >
+              ✕
+            </button>
+            <div className="popup-word">{wordPopup.word}</div>
+            {wordPopup.reading && (
+              <div className="popup-reading">{wordPopup.reading}</div>
+            )}
+            <div className="popup-meaning">{wordPopup.meaning}</div>
+            {wordPopup.etymology && (
+              <div className="popup-etymology">
+                <strong>語源:</strong> {wordPopup.etymology}
+              </div>
+            )}
+            {wordPopup.relatedWords && (
+              <div className="popup-related">
+                <strong>関連語:</strong> {wordPopup.relatedWords}
+              </div>
+            )}
+          </div>
+        </>
+      )}
+
       {/* パッセージ本文 */}
       {currentPassage && (
         <div className="passage-content">
@@ -250,8 +372,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     <span
                       key={segIdx}
                       className={`word-segment ${segment.isUnknown ? 'unknown' : ''}`}
-                      onClick={() => handleMarkUnknown(phraseIdx, segIdx)}
-                      title={segment.isUnknown ? 'クリックで解除' : 'クリックで「分からない」としてマーク'}
+                      onClick={(e) => handleWordClick(segment.word, e)}
+                      onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
+                      title="クリック: 単語の意味を表示 / ダブルクリック: 分からない単語としてマーク"
                     >
                       {segment.word}
                     </span>
@@ -491,6 +614,97 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
         .error-container {
           color: #dc3545;
+        }
+
+        /* 単語ポップアップのスタイル */
+        .word-popup-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: transparent;
+          z-index: 999;
+        }
+
+        .word-popup {
+          position: absolute;
+          background: white;
+          border: 2px solid #007bff;
+          border-radius: 8px;
+          padding: 16px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          z-index: 1000;
+          max-width: 400px;
+          min-width: 250px;
+        }
+
+        .popup-close {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background: #f8f9fa;
+          border: none;
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 1;
+          color: #666;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .popup-close:hover {
+          background: #e9ecef;
+          color: #000;
+        }
+
+        .popup-word {
+          font-size: 20px;
+          font-weight: bold;
+          color: #007bff;
+          margin-bottom: 4px;
+          padding-right: 30px;
+        }
+
+        .popup-reading {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 8px;
+        }
+
+        .popup-meaning {
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 12px;
+          padding: 8px;
+          background: #f0f8ff;
+          border-radius: 4px;
+        }
+
+        .popup-etymology {
+          font-size: 13px;
+          color: #555;
+          margin-bottom: 8px;
+          padding: 6px;
+          background: #f8f9fa;
+          border-radius: 4px;
+        }
+
+        .popup-related {
+          font-size: 13px;
+          color: #555;
+          padding: 6px;
+          background: #f8f9fa;
+          border-radius: 4px;
+        }
+
+        .popup-etymology strong,
+        .popup-related strong {
+          color: #007bff;
         }
       `}</style>
     </div>
