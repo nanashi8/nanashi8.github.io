@@ -73,6 +73,151 @@
   color: #e0e0e0;
 }
 
+.dark-mode .quiz-view,
+.dark-mode .question-card {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .question-text {
+  color: #e0e0e0;
+}
+
+.dark-mode .question-text.phrase-text {
+  color: #8b9ef5;
+}
+
+.dark-mode .score-board,
+.dark-mode .score-item {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .score-label {
+  color: #b0b0b0;
+}
+
+.dark-mode .score-value {
+  color: #e0e0e0;
+}
+
+.dark-mode .result-display {
+  background: #2a2a2a;
+}
+
+.dark-mode .result-message.correct {
+  background: #1e4d2b;
+  color: #7ddb9b;
+  border-color: #28a745;
+}
+
+.dark-mode .result-message.incorrect {
+  background: #4d1e23;
+  color: #f0a0a8;
+  border-color: #dc3545;
+}
+
+.dark-mode .correct-answer {
+  color: #e0e0e0;
+}
+
+.dark-mode .stats-view {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .stats-view h2 {
+  color: #8b9ef5;
+}
+
+.dark-mode .stats-view h3 {
+  color: #b0b0b0;
+}
+
+.dark-mode .stats-tabs button {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #b0b0b0;
+}
+
+.dark-mode .stats-tabs button.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.dark-mode .stats-tabs button:hover:not(.active) {
+  background: #333;
+  border-color: #555;
+}
+
+.dark-mode .filter-group label {
+  color: #b0b0b0;
+}
+
+.dark-mode .select-input,
+.dark-mode .selector-dropdown {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .select-input:hover,
+.dark-mode .selector-dropdown:hover {
+  border-color: #667eea;
+}
+
+.dark-mode .word-card {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .word-card-word {
+  color: #e0e0e0;
+}
+
+.dark-mode .word-card-meaning {
+  color: #b0b0b0;
+}
+
+.dark-mode .word-card:hover {
+  background: #333;
+  border-color: #667eea;
+}
+
+.dark-mode .word-card:active {
+  background: #3a3a3a;
+}
+
+.dark-mode .word-card.unknown {
+  background: #4d3d1a;
+  border-color: #ffc107;
+}
+
+.dark-mode .word-popup {
+  background: #2a2a2a;
+  border-color: #667eea;
+  color: #e0e0e0;
+}
+
+.dark-mode .word-popup-word {
+  color: #8b9ef5;
+}
+
+.dark-mode .word-popup-close {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .word-popup-close:hover {
+  background: #444;
+}
+
+.dark-mode .selector-label {
+  color: #b0b0b0;
+}
+
 .header {
   text-align: center;
   padding: 15px 10px 10px;

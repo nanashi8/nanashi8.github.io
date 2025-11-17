@@ -49,6 +49,9 @@ function SpellingView({
   // 詳細表示の開閉状態
   const [showDetails, setShowDetails] = useState<boolean>(false);
   
+  // letter-cardsのrefを追加
+  const letterCardsRef = useRef<HTMLDivElement>(null);
+  
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
@@ -96,6 +99,13 @@ function SpellingView({
       questionStartTimeRef.current = Date.now();
     }
   }, [spellingState.currentIndex, spellingState.questions]);
+
+  // letter-cardsに自動フォーカス
+  useEffect(() => {
+    if (!spellingState.answered && letterCardsRef.current) {
+      letterCardsRef.current.focus();
+    }
+  }, [spellingState.answered, spellingState.currentIndex]);
 
   // カードをタップして選択
   const handleLetterClick = (_letter: string, index: number) => {
@@ -398,6 +408,7 @@ function SpellingView({
               {/* シャッフルされたアルファベットカード（常に表示） */}
               <div 
                 className="letter-cards"
+                ref={letterCardsRef}
                 tabIndex={0}
                 onKeyDown={(e) => {
                   if (!spellingState.answered) {

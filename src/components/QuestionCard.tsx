@@ -37,6 +37,7 @@ function QuestionCard({
   const [userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   const [aiComment, setAiComment] = useState<string>('');
+  const [attemptCount, setAttemptCount] = useState<number>(0);
   
   // スワイプジェスチャー用
   const touchStartX = useRef<number>(0);
@@ -65,14 +66,14 @@ function QuestionCard({
         word: question.word,
         userAnswer: selectedAnswer,
         correctAnswer: question.meaning,
-        attemptNumber: 1,
+        attemptNumber: attemptCount + 1,
         timeSpent: 0,
       });
       setAiComment(comment);
     } else {
       setAiComment('');
     }
-  }, [answered, selectedAnswer, question]);
+  }, [answered, selectedAnswer, question, attemptCount]);
   
   // スワイプジェスチャーのハンドラー
   useEffect(() => {
@@ -152,6 +153,7 @@ function QuestionCard({
     }
     setUserRating(null); // 次の問題へ行く前にリセット
     setExpandedChoices(new Set()); // 開閉状態をリセット
+    setAttemptCount(0); // 試行回数をリセット
     onNext();
   };
 
@@ -186,14 +188,6 @@ function QuestionCard({
         </button>
       </div>
 
-      {/* AIコメント行 - 問題と選択肢の間に配置 */}
-      {answered && aiComment && (
-        <div className="ai-comment-bar">
-          <span className="ai-comment-icon">💬</span>
-          <span className="ai-comment-text">{aiComment}</span>
-        </div>
-      )}
-
       <div className="choices">
         {choicesWithQuestions.map((choice, idx) => {
           const isExpanded = expandedChoices.has(idx);
@@ -205,6 +199,10 @@ function QuestionCard({
                 className={getButtonClass(choice.text)}
                 onClick={() => {
                   if (!answered) {
+                    const isCorrect = choice.text === question.meaning;
+                    if (!isCorrect) {
+                      setAttemptCount(prev => prev + 1);
+                    }
                     onAnswer(choice.text, question.meaning);
                   }
                 }}
@@ -268,6 +266,14 @@ function QuestionCard({
           );
         })}
       </div>
+
+      {/* AIコメント行 - 選択肢の下に配置 */}
+      {answered && aiComment && (
+        <div className="ai-comment-bar">
+          <span className="ai-comment-icon">💬</span>
+          <span className="ai-comment-text">{aiComment}</span>
+        </div>
+      )}
 
       {answered && (
         <>
