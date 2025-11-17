@@ -487,13 +487,56 @@ export function updateWordProgress(
   // 1発100%（初回で正解）の場合、定着として扱い7日間出題除外
   if (totalAttempts === 1 && isCorrect) {
     wordProgress.skipExcludeUntil = Date.now() + (7 * 24 * 60 * 60 * 1000);
+    // 定着したので長文読解の保存リストから削除
+    removeFromReadingUnknownWords(word);
   }
   // 連続3回以上正解の場合も同様に14日間除外
   else if (wordProgress.consecutiveCorrect >= 3) {
     wordProgress.skipExcludeUntil = Date.now() + (14 * 24 * 60 * 60 * 1000);
+    // 定着したので長文読解の保存リストから削除
+    removeFromReadingUnknownWords(word);
   }
   
   saveProgress(progress);
+}
+
+/**
+ * 定着した単語を長文読解の保存リストから削除
+ */
+function removeFromReadingUnknownWords(word: string): void {
+  // LocalStorageから長文読解データを取得
+  const readingDataKey = 'reading-passages-data';
+  const storedData = localStorage.getItem(readingDataKey);
+  
+  if (!storedData) return;
+  
+  try {
+    const passages = JSON.parse(storedData);
+    let modified = false;
+    
+    // 全パッセージの全フレーズの全セグメントをチェック
+    passages.forEach((passage: any) => {
+      if (passage.phrases) {
+        passage.phrases.forEach((phrase: any) => {
+          if (phrase.segments) {
+            phrase.segments.forEach((segment: any) => {
+              if (segment.word.toLowerCase() === word.toLowerCase() && segment.isUnknown) {
+                segment.isUnknown = false;
+                modified = true;
+              }
+            });
+          }
+        });
+      }
+    });
+    
+    // 変更があった場合のみ保存
+    if (modified) {
+      localStorage.setItem(readingDataKey, JSON.stringify(passages));
+    }
+  } catch (err) {
+    console.error('長文読解データの更新エラー:', err);
+  }
 }
 
 // 単語のスキップを記録（スワイプでスキップされた場合）
@@ -812,4 +855,119 @@ export function getDifficultyStatsForRadar(mode: 'translation' | 'spelling' | 'r
   }
   
   return { labels, answeredData, correctData };
+}
+
+/**
+ * 分野別・難易度別の統計を取得（レーダーチャート用）
+ * @param mode クイズモード
+ */
+export function getCategoryDifficultyStats(mode: 'translation' | 'spelling'): {
+  labels: string[];
+  accuracyData: { beginner: number[]; intermediate: number[]; advanced: number[] };
+  progressData: { beginner: number[]; intermediate: number[]; advanced: number[] };
+} {
+  const progress = loadProgress();
+  
+  // 分野別・難易度別の統計マップ
+  const statsMap = new Map<string, {
+    beginner: { correct: number; total: number; mastered: number; totalWords: number };
+    intermediate: { correct: number; total: number; mastered: number; totalWords: number };
+    advanced: { correct: number; total: number; mastered: number; totalWords: number };
+  }>();
+
+  // 結果から分野別・難易度別に集計
+  progress.results
+    .filter(r => r.mode === mode && r.category && r.difficulty)
+    .forEach(result => {
+      const category = result.category!;
+      const difficulty = result.difficulty!;
+      
+      if (!statsMap.has(category)) {
+        statsMap.set(category, {
+          beginner: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
+          intermediate: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
+          advanced: { correct: 0, total: 0, mastered: 0, totalWords: 0 }
+        });
+      }
+      
+      const stats = statsMap.get(category)!;
+      const difficultyKey = difficulty === '初級' ? 'beginner' : difficulty === '中級' ? 'intermediate' : 'advanced';
+      
+      stats[difficultyKey].correct += result.score;
+      stats[difficultyKey].total += result.total;
+    });
+
+  // wordProgressから定着数を計算
+  Object.entries(progress.wordProgress).forEach(([word, wordProg]) => {
+    if (!wordProg.category || !wordProg.difficulty) return;
+    
+    const category = wordProg.category;
+    const difficulty = wordProg.difficulty;
+    
+    if (!statsMap.has(category)) {
+      statsMap.set(category, {
+        beginner: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
+        intermediate: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
+        advanced: { correct: 0, total: 0, mastered: 0, totalWords: 0 }
+      });
+    }
+    
+    const stats = statsMap.get(category)!;
+    const difficultyKey = difficulty === '初級' ? 'beginner' : difficulty === '中級' ? 'intermediate' : 'advanced';
+    
+    stats[difficultyKey].totalWords += 1;
+    
+    // 定着判定
+    const totalAttempts = wordProg.correctCount + wordProg.incorrectCount;
+    const isFirstTimeCorrect = totalAttempts === 1 && wordProg.correctCount === 1;
+    const isConsecutivelyCorrect = wordProg.consecutiveCorrect >= 3;
+    const isSkipped = wordProg.skippedCount && wordProg.skippedCount > 0;
+    
+    if (isFirstTimeCorrect || isConsecutivelyCorrect || isSkipped) {
+      stats[difficultyKey].mastered += 1;
+    }
+  });
+
+  // ソート順で分野を並べる
+  const categoryOrder = ['動物', '植物', '自然', '天気', '時間', '場所', '学校', '家族', '食べ物', '身体', 
+    '感情', '行動', '状態', '数字', '色', '形', '方向', '位置', 'その他'];
+  
+  const labels: string[] = [];
+  const accuracyBeginner: number[] = [];
+  const accuracyIntermediate: number[] = [];
+  const accuracyAdvanced: number[] = [];
+  const progressBeginner: number[] = [];
+  const progressIntermediate: number[] = [];
+  const progressAdvanced: number[] = [];
+
+  categoryOrder.forEach(category => {
+    const stats = statsMap.get(category);
+    if (stats && (stats.beginner.total > 0 || stats.intermediate.total > 0 || stats.advanced.total > 0)) {
+      labels.push(category);
+      
+      // 正答率（%）
+      accuracyBeginner.push(stats.beginner.total > 0 ? (stats.beginner.correct / stats.beginner.total) * 100 : 0);
+      accuracyIntermediate.push(stats.intermediate.total > 0 ? (stats.intermediate.correct / stats.intermediate.total) * 100 : 0);
+      accuracyAdvanced.push(stats.advanced.total > 0 ? (stats.advanced.correct / stats.advanced.total) * 100 : 0);
+      
+      // 進捗率（定着数/総単語数 %）
+      progressBeginner.push(stats.beginner.totalWords > 0 ? (stats.beginner.mastered / stats.beginner.totalWords) * 100 : 0);
+      progressIntermediate.push(stats.intermediate.totalWords > 0 ? (stats.intermediate.mastered / stats.intermediate.totalWords) * 100 : 0);
+      progressAdvanced.push(stats.advanced.totalWords > 0 ? (stats.advanced.mastered / stats.advanced.totalWords) * 100 : 0);
+    }
+  });
+
+  return {
+    labels,
+    accuracyData: {
+      beginner: accuracyBeginner,
+      intermediate: accuracyIntermediate,
+      advanced: accuracyAdvanced
+    },
+    progressData: {
+      beginner: progressBeginner,
+      intermediate: progressIntermediate,
+      advanced: progressAdvanced
+    }
+  };
 }

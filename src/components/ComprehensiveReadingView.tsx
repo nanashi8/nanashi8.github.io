@@ -29,6 +29,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
 
+  // passagesが更新されたらLocalStorageに保存
+  useEffect(() => {
+    if (passages.length > 0) {
+      const readingDataKey = 'reading-passages-data';
+      localStorage.setItem(readingDataKey, JSON.stringify(passages));
+    }
+  }, [passages]);
+
   // フレーズグループ化の型定義
   type PhraseGroup = {
     type: 'phrase' | 'word';
@@ -133,6 +141,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // データ読み込み
   useEffect(() => {
+    // まずLocalStorageから保存済みデータを確認
+    const readingDataKey = 'reading-passages-data';
+    const storedData = localStorage.getItem(readingDataKey);
+    
     fetch('/data/reading-passages-comprehensive.json')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load passages');
@@ -145,7 +157,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         }
         
         // データを変換: words配列からsegments配列を生成（存在しない場合）
-        const processedData = data.map(passage => ({
+        let processedData = data.map(passage => ({
           ...passage,
           phrases: passage.phrases?.map(phrase => ({
             ...phrase,
@@ -156,6 +168,32 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             })) || []
           })) || []
         }));
+        
+        // LocalStorageに保存済みデータがあればマージ
+        if (storedData) {
+          try {
+            const savedPassages = JSON.parse(storedData);
+            processedData = processedData.map(passage => {
+              const saved = savedPassages.find((p: ReadingPassage) => p.id === passage.id);
+              if (saved) {
+                // 保存済みのisUnknown状態をマージ
+                return {
+                  ...passage,
+                  phrases: passage.phrases.map((phrase, pIdx) => ({
+                    ...phrase,
+                    segments: phrase.segments.map((seg, sIdx) => ({
+                      ...seg,
+                      isUnknown: saved.phrases?.[pIdx]?.segments?.[sIdx]?.isUnknown || false
+                    }))
+                  }))
+                };
+              }
+              return passage;
+            });
+          } catch (err) {
+            console.error('LocalStorageデータの読み込みエラー:', err);
+          }
+        }
         
         setPassages(processedData);
         setLoading(false);

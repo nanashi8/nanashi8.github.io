@@ -4,11 +4,13 @@ import {
   getStatsByCategory,
   getStatsByDifficulty,
   getDifficultyStatsForRadar,
+  getCategoryDifficultyStats,
   UserProgress,
 } from '../progressStorage';
 import { QuestionSet, Question, ReadingPassage } from '../types';
 import ScoreRadarChart from './ScoreRadarChart';
 import ReadingRadarChart from './ReadingRadarChart';
+import CategoryRadarChart from './CategoryRadarChart';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -59,6 +61,10 @@ function StatsView({ }: StatsViewProps) {
   // レーダーチャート用のデータを取得
   const translationRadar = getDifficultyStatsForRadar('translation');
   const spellingRadar = getDifficultyStatsForRadar('spelling');
+  
+  // 分野別・難易度別のデータを取得
+  const translationCategoryStats = getCategoryDifficultyStats('translation');
+  const spellingCategoryStats = getCategoryDifficultyStats('spelling');
 
   // 長文読解用のレーダーチャートデータを生成
   const [readingPassages, setReadingPassages] = useState<ReadingPassage[]>([]);
@@ -102,21 +108,43 @@ function StatsView({ }: StatsViewProps) {
 
       {/* レーダーチャート - 和訳クイズ */}
       <div className="stats-section-new">
-        <ScoreRadarChart
-          labels={translationRadar.labels}
-          answeredData={translationRadar.answeredData}
-          correctData={translationRadar.correctData}
-          title="和訳クイズ - 難易度別成績"
+        <CategoryRadarChart
+          labels={translationCategoryStats.labels}
+          accuracyData={translationCategoryStats.accuracyData}
+          progressData={translationCategoryStats.progressData}
+          title="和訳クイズ - 分野別正答率"
+          chartType="accuracy"
+        />
+      </div>
+
+      <div className="stats-section-new">
+        <CategoryRadarChart
+          labels={translationCategoryStats.labels}
+          accuracyData={translationCategoryStats.accuracyData}
+          progressData={translationCategoryStats.progressData}
+          title="和訳クイズ - 分野別進捗率（定着数/総単語数）"
+          chartType="progress"
         />
       </div>
 
       {/* レーダーチャート - スペルクイズ */}
       <div className="stats-section-new">
-        <ScoreRadarChart
-          labels={spellingRadar.labels}
-          answeredData={spellingRadar.answeredData}
-          correctData={spellingRadar.correctData}
-          title="スペルクイズ - 難易度別成績"
+        <CategoryRadarChart
+          labels={spellingCategoryStats.labels}
+          accuracyData={spellingCategoryStats.accuracyData}
+          progressData={spellingCategoryStats.progressData}
+          title="スペルクイズ - 分野別正答率"
+          chartType="accuracy"
+        />
+      </div>
+
+      <div className="stats-section-new">
+        <CategoryRadarChart
+          labels={spellingCategoryStats.labels}
+          accuracyData={spellingCategoryStats.accuracyData}
+          progressData={spellingCategoryStats.progressData}
+          title="スペルクイズ - 分野別進捗率（定着数/総単語数）"
+          chartType="progress"
         />
       </div>
 
