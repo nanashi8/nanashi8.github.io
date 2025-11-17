@@ -5461,9 +5461,15 @@ option {
 
 /* ========== 設定画面スタイル ========== */
 .settings-view {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.settings-container {
+  width: 100%;
+  max-width: 900px;
 }
 
 /* 学習プラン進行状況バナー */
@@ -5724,6 +5730,14 @@ option {
   font-weight: 600;
   color: #667eea;
   margin-top: 10px;
+}
+
+.estimated-duration {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #764ba2;
+  margin-top: 8px;
 }
 
 /* 設定ボタン */

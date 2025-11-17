@@ -82,41 +82,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
   };
   
   if (!schedule) {
-    const monthsOptions = [1, 2, 3, 6];
-    const totalWords = allQuestions.length;
-    
-    return (
-      <div className="learning-plan-start">
-        <div className="plan-hero">
-          <h2>📅 学習期間を選択</h2>
-          
-          <div className="plan-duration-selector">
-            <div className="duration-cards">
-              {monthsOptions.map(months => {
-                const days = months * 30;
-                const dailyWords = Math.ceil(totalWords / days);
-                const isSelected = selectedMonths === months;
-                
-                return (
-                  <button
-                    key={months}
-                    className={`duration-card ${isSelected ? 'selected' : ''}`}
-                    onClick={() => setSelectedMonths(months)}
-                  >
-                    <div className="duration-months">{months}ヶ月</div>
-                    <div className="duration-daily">約{dailyWords}語/日</div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-          
-          <button onClick={handleStartPlan} className="btn-start-plan">
-            🚀 開始する
-          </button>
-        </div>
-      </div>
-    );
+    return null; // 学習プラン作成UIを非表示にする
   }
   
   const phaseNames = ['基礎固め期', '応用拡大期', '完成・定着期'];

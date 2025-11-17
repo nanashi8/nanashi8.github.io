@@ -36,15 +36,37 @@ function SettingsView({
     localStorage.setItem('aiPersonality', personality);
   };
 
+  const totalWords = allQuestions.length;
+  const estimatedMonths = Math.ceil(totalWords / (batchSize * 30));
+  const estimatedMonthsText = estimatedMonths === 1 ? '約1ヶ月' : `約${estimatedMonths}ヶ月`;
+
   return (
     <div className="settings-view">
-      <div className="settings-section">
+      <div className="settings-container">
         <div className="section-header">
           <h1>📚 学習プランナー</h1>
-          <p className="section-description">
-            期間と1日の語数、AIの人格を設定してください
-          </p>
         </div>
+
+        {/* 1日の学習単語数 */}
+        <div className="simple-setting-section">
+          <h3>🎯 1日の学習単語数</h3>
+          <div className="slider-container">
+            <input
+              type="range"
+              min="10"
+              max="100"
+              step="5"
+              value={batchSize}
+              onChange={(e) => handleBatchSizeChange(Number(e.target.value))}
+              className="setting-slider"
+              aria-label="1日の学習単語数"
+            />
+            <div className="slider-value">{batchSize}語</div>
+            <div className="estimated-duration">{estimatedMonthsText}で完了予定</div>
+          </div>
+        </div>
+
+        <div className="settings-divider"></div>
 
         {/* 学習プラン設定 */}
         <LearningPlanView
@@ -69,26 +91,6 @@ function SettingsView({
                 <div className="personality-desc">{info.description}</div>
               </button>
             ))}
-          </div>
-        </div>
-
-        <div className="settings-divider"></div>
-
-        {/* 1日の学習単語数 */}
-        <div className="simple-setting-section">
-          <h3>🎯 1日の学習単語数</h3>
-          <div className="slider-container">
-            <input
-              type="range"
-              min="10"
-              max="100"
-              step="5"
-              value={batchSize}
-              onChange={(e) => handleBatchSizeChange(Number(e.target.value))}
-              className="setting-slider"
-              aria-label="1日の学習単語数"
-            />
-            <div className="slider-value">{batchSize}語</div>
           </div>
         </div>
 
