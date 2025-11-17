@@ -3,9 +3,12 @@ import {
   loadProgress,
   getStatsByCategory,
   getStatsByDifficulty,
+  getDifficultyStatsForRadar,
   UserProgress,
 } from '../progressStorage';
-import { QuestionSet, Question } from '../types';
+import { QuestionSet, Question, ReadingPassage } from '../types';
+import ScoreRadarChart from './ScoreRadarChart';
+import ReadingRadarChart from './ReadingRadarChart';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -53,11 +56,81 @@ function StatsView({ }: StatsViewProps) {
   const categoryStats = getStatsByCategory();
   const difficultyStats = getStatsByDifficulty();
 
+  // レーダーチャート用のデータを取得
+  const translationRadar = getDifficultyStatsForRadar('translation');
+  const spellingRadar = getDifficultyStatsForRadar('spelling');
+
+  // 長文読解用のレーダーチャートデータを生成
+  const [readingPassages, setReadingPassages] = useState<ReadingPassage[]>([]);
+  
+  useEffect(() => {
+    fetch('/data/reading-passages-comprehensive.json')
+      .then(res => res.json())
+      .then((data: ReadingPassage[]) => {
+        setReadingPassages(data);
+      })
+      .catch(err => console.error('長文パッセージの読み込みエラー:', err));
+  }, []);
+
+  const generateReadingRadarData = () => {
+    const labels: string[] = [];
+    const savedWordsData: number[] = [];
+    const totalWordsData: number[] = [];
+
+    readingPassages.forEach(passage => {
+      const savedWords = passage.phrases?.reduce(
+        (count, phrase) => count + (phrase.segments?.filter(s => s.isUnknown).length || 0),
+        0
+      ) || 0;
+      const totalWords = passage.actualWordCount || 0;
+
+      labels.push(passage.title.replace(/パッセージ\d+:\s*/, '').substring(0, 15));
+      savedWordsData.push(savedWords);
+      totalWordsData.push(totalWords);
+    });
+
+    return { labels, savedWordsData, totalWordsData };
+  };
+
+  const readingRadar = generateReadingRadarData();
+
   return (
     <div className="stats-view">
       <div className="stats-header">
         <h2>📊 成績</h2>
       </div>
+
+      {/* レーダーチャート - 和訳クイズ */}
+      <div className="stats-section-new">
+        <ScoreRadarChart
+          labels={translationRadar.labels}
+          answeredData={translationRadar.answeredData}
+          correctData={translationRadar.correctData}
+          title="和訳クイズ - 難易度別成績"
+        />
+      </div>
+
+      {/* レーダーチャート - スペルクイズ */}
+      <div className="stats-section-new">
+        <ScoreRadarChart
+          labels={spellingRadar.labels}
+          answeredData={spellingRadar.answeredData}
+          correctData={spellingRadar.correctData}
+          title="スペルクイズ - 難易度別成績"
+        />
+      </div>
+
+      {/* レーダーチャート - 長文読解 */}
+      {readingPassages.length > 0 && (
+        <div className="stats-section-new">
+          <ReadingRadarChart
+            labels={readingRadar.labels}
+            savedWordsData={readingRadar.savedWordsData}
+            totalWordsData={readingRadar.totalWordsData}
+            title="長文読解 - パッセージ別保存単語数"
+          />
+        </div>
+      )}
 
       {/* 分野別の成績 */}
       <div className="stats-section-new">
