@@ -2,6 +2,7 @@ import { Question } from '../types';
 import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } from '../utils';
 import { recordWordSkip } from '../progressStorage';
 import { useState, useRef, useEffect, useMemo } from 'react';
+import { generateAIComment } from '../aiCommentGenerator';
 
 interface QuestionCardProps {
   question: Question;
@@ -35,6 +36,7 @@ function QuestionCard({
   
   const [userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
+  const [aiComment, setAiComment] = useState<string>('');
   
   // スワイプジェスチャー用
   const touchStartX = useRef<number>(0);
@@ -52,6 +54,25 @@ function QuestionCard({
       return newSet;
     });
   };
+
+  // 回答時にAIコメントを生成
+  useEffect(() => {
+    if (answered && selectedAnswer) {
+      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as any;
+      const isCorrect = selectedAnswer === question.meaning;
+      const comment = generateAIComment(personality, {
+        isCorrect,
+        word: question.word,
+        userAnswer: selectedAnswer,
+        correctAnswer: question.meaning,
+        attemptNumber: 1,
+        timeSpent: 0,
+      });
+      setAiComment(comment);
+    } else {
+      setAiComment('');
+    }
+  }, [answered, selectedAnswer, question]);
   
   // スワイプジェスチャーのハンドラー
   useEffect(() => {
@@ -157,6 +178,14 @@ function QuestionCard({
         </button>
       </div>
 
+      {/* AIコメント行 - 問題と選択肢の間に配置 */}
+      {answered && aiComment && (
+        <div className="ai-comment-bar">
+          <span className="ai-comment-icon">💬</span>
+          <span className="ai-comment-text">{aiComment}</span>
+        </div>
+      )}
+
       <div className="choices">
         {choicesWithQuestions.map((choice, idx) => {
           const isExpanded = expandedChoices.has(idx);
@@ -166,8 +195,12 @@ function QuestionCard({
             <div key={idx} className="choice-wrapper">
               <button
                 className={getButtonClass(choice.text)}
-                onClick={() => onAnswer(choice.text, question.meaning)}
-                disabled={answered}
+                onClick={() => {
+                  if (!answered) {
+                    onAnswer(choice.text, question.meaning);
+                  }
+                }}
+                disabled={false}
               >
                 <div className="choice-content">
                   <div className="choice-text">{choice.text}</div>

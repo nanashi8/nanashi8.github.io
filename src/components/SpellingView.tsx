@@ -51,7 +51,6 @@ function SpellingView({
   
   // タイピング入力用の状態
   const [typingInput, setTypingInput] = useState<string>('');
-  const [inputMode, setInputMode] = useState<'click' | 'typing'>('click');
   
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
@@ -110,6 +109,10 @@ function SpellingView({
 
     const newSequence = [...selectedSequence, `${index}`];
     setSelectedSequence(newSequence);
+    
+    // クリック選択をタイピング入力にも反映
+    const newWord = newSequence.map((i) => shuffledLetters[parseInt(i)]).join('');
+    setTypingInput(newWord);
 
     // 全てのカードが選択されたら自動で答え合わせ
     if (newSequence.length === shuffledLetters.length) {
@@ -189,6 +192,7 @@ function SpellingView({
   const handleNext = () => {
     setShowDetails(false);
     setSelectedSequence([]); // 選択シーケンスをクリア
+    setTypingInput(''); // タイピング入力をクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
@@ -201,6 +205,7 @@ function SpellingView({
   const handlePrevious = () => {
     setShowDetails(false);
     setSelectedSequence([]); // 選択シーケンスをクリア
+    setTypingInput(''); // タイピング入力をクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex > 0 ? prev.currentIndex - 1 : 0,
@@ -213,7 +218,14 @@ function SpellingView({
   // 選択中の最後の1文字を削除
   const handleBackspace = () => {
     if (selectedSequence.length > 0) {
-      setSelectedSequence(prev => prev.slice(0, -1));
+      const newSequence = selectedSequence.slice(0, -1);
+      setSelectedSequence(newSequence);
+      // タイピング入力も同期
+      const newWord = newSequence.map((i) => shuffledLetters[parseInt(i)]).join('');
+      setTypingInput(newWord);
+    } else if (typingInput.length > 0) {
+      // タイピング入力のみがある場合
+      setTypingInput(prev => prev.slice(0, -1));
     }
   };
 
@@ -224,10 +236,8 @@ function SpellingView({
 
   const hasQuestions = spellingState.questions.length > 0;
   
-  // ユーザーが選択した単語（クリックモード）またはタイピング入力
-  const userWord = inputMode === 'typing' 
-    ? typingInput 
-    : selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
+  // ユーザーが選択した単語（クリックとタイピングの両方を統合）
+  const userWord = typingInput || selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -380,32 +390,13 @@ function SpellingView({
                     <div className="user-word-display">
                       <div className="user-word-label">あなたの答え:</div>
                       <div className="user-word-text">
-                        {inputMode === 'typing' ? typingInput : userWord || '（クリックまたはタイピングで入力）'}
+                        {userWord || '（クリックまたはタイピングで入力）'}
                       </div>
                     </div>
 
-                    {/* 入力モード切り替え */}
-                    <div className="input-mode-toggle">
-                      <button
-                        className={`mode-btn ${inputMode === 'click' ? 'active' : ''}`}
-                        onClick={() => {
-                          setInputMode('click');
-                          setTypingInput('');
-                          setSelectedSequence([]);
-                        }}
-                      >
-                        🖱️ クリック
-                      </button>
-                      <button
-                        className={`mode-btn ${inputMode === 'typing' ? 'active' : ''}`}
-                        onClick={() => {
-                          setInputMode('typing');
-                          setSelectedSequence([]);
-                          setTypingInput('');
-                        }}
-                      >
-                        ⌨️ タイピング
-                      </button>
+                    {/* 入力モード説明 */}
+                    <div className="input-mode-info">
+                      💡 クリックとタイピングの両方で入力できます
                     </div>
                   </div>
                 </div>
@@ -419,35 +410,48 @@ function SpellingView({
                 </button>
               </div>
 
-              {/* タイピングモードの入力フィールド */}
-              {inputMode === 'typing' && !spellingState.answered && (
+              {/* タイピング入力フィールド（常に表示） */}
+              {!spellingState.answered && (
                 <div className="typing-input-container">
                   <input
                     type="text"
                     className="typing-input"
                     value={typingInput}
-                    onChange={(e) => setTypingInput(e.target.value.toLowerCase())}
+                    onChange={(e) => {
+                      const value = e.target.value.toLowerCase();
+                      setTypingInput(value);
+                      // タイピング入力もselectedSequenceに反映
+                      setSelectedSequence(value.split('').map((_, i) => i.toString()));
+                    }}
                     onKeyDown={(e) => {
-                      if (e.key === 'Enter' && typingInput.trim()) {
-                        checkTypingAnswer(typingInput.trim());
+                      if (e.key === 'Enter' && (typingInput.trim() || selectedSequence.length > 0)) {
+                        if (typingInput.trim()) {
+                          checkTypingAnswer(typingInput.trim());
+                        } else {
+                          checkTypingAnswer(userWord);
+                        }
                       }
                     }}
-                    placeholder="スペルを入力してEnterキー"
-                    autoFocus
+                    placeholder="スペルをタイピングまたは下のカードをクリック"
                   />
                   <button
                     className="btn-submit-typing"
-                    onClick={() => checkTypingAnswer(typingInput.trim())}
-                    disabled={!typingInput.trim()}
+                    onClick={() => {
+                      if (typingInput.trim()) {
+                        checkTypingAnswer(typingInput.trim());
+                      } else if (selectedSequence.length > 0) {
+                        checkTypingAnswer(userWord);
+                      }
+                    }}
+                    disabled={!typingInput.trim() && selectedSequence.length === 0}
                   >
                     回答する
                   </button>
                 </div>
               )}
 
-              {/* シャッフルされたアルファベットカード（クリックモードのみ表示） */}
-              {inputMode === 'click' && (
-                <div className="letter-cards">
+              {/* シャッフルされたアルファベットカード（常に表示） */}
+              <div className="letter-cards">
                 {shuffledLetters.map((letter, index) => {
                   const isSelected = selectedSequence.includes(`${index}`);
                   const selectionOrder = selectedSequence.indexOf(`${index}`) + 1;
@@ -467,10 +471,9 @@ function SpellingView({
                   );
                 })}
               </div>
-              )}
 
-              {/* 1文字戻すボタン（クリックモードのみ） */}
-              {inputMode === 'click' && !spellingState.answered && selectedSequence.length > 0 && (
+              {/* 1文字戻すボタン */}
+              {!spellingState.answered && selectedSequence.length > 0 && (
                 <div className="spelling-reset-button-container">
                   <button className="btn-reset-selection" onClick={handleBackspace}>
                     ⌫ 1文字戻す

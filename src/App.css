@@ -6021,6 +6021,17 @@ option {
   font-weight: 600;
 }
 
+/* 入力モード説明 */
+.input-mode-info {
+  text-align: center;
+  font-size: 0.9em;
+  color: #667eea;
+  margin: 8px 0;
+  padding: 8px;
+  background: #f0f4ff;
+  border-radius: 6px;
+}
+
 .personality-desc {
   font-size: 0.85em;
   color: #666;
