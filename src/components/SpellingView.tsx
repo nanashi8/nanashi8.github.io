@@ -420,8 +420,19 @@ function SpellingView({
                     onChange={(e) => {
                       const value = e.target.value.toLowerCase();
                       setTypingInput(value);
-                      // タイピング入力もselectedSequenceに反映
-                      setSelectedSequence(value.split('').map((_, i) => i.toString()));
+                      // タイピング入力に対応するカードを選択状態にする
+                      const newSequence: string[] = [];
+                      for (let i = 0; i < value.length; i++) {
+                        const char = value[i];
+                        // シャッフルされた文字から未選択の同じ文字を探す
+                        const availableIndex = shuffledLetters.findIndex((letter, idx) => 
+                          letter === char && !newSequence.includes(`${idx}`)
+                        );
+                        if (availableIndex !== -1) {
+                          newSequence.push(`${availableIndex}`);
+                        }
+                      }
+                      setSelectedSequence(newSequence);
                     }}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter' && (typingInput.trim() || selectedSequence.length > 0)) {
@@ -430,6 +441,9 @@ function SpellingView({
                         } else {
                           checkTypingAnswer(userWord);
                         }
+                      } else if (e.key === 'Backspace' && typingInput.length === 0 && selectedSequence.length > 0) {
+                        // タイピング入力が空の時にBackspaceを押したら、最後に選択したカードを解除
+                        handleBackspace();
                       }
                     }}
                     placeholder="スペルをタイピングまたは下のカードをクリック"
@@ -463,7 +477,7 @@ function SpellingView({
                         spellingState.answered ? 'disabled' : ''
                       }`}
                       onClick={() => handleLetterClick(letter, index)}
-                      disabled={spellingState.answered || isSelected}
+                      disabled={spellingState.answered}
                     >
                       {letter}
                       {isSelected && <span className="selection-number">{selectionOrder}</span>}
