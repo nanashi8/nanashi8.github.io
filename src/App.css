@@ -1242,16 +1242,8 @@ option {
   padding: 10px;
 }
 
-.spelling-card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 20px;
-}
-
 /* スペルタブ用の縦並びレイアウト */
-.spelling-card .question-content-inline {
+.spelling-view .question-card .question-content-inline {
   display: flex;
   flex-direction: column;
   gap: 10px;

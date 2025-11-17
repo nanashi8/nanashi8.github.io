@@ -333,7 +333,7 @@ function SpellingView({
           />
 
           {currentQuestion && (
-            <div className="spelling-card">
+            <div className="question-card">
               <div className="question-nav-row">
                 <button 
                   className="inline-nav-btn prev-inline-btn" 
