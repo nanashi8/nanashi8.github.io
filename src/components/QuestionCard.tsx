@@ -125,6 +125,45 @@ function QuestionCard({
     }
   }, [answered, currentIndex, onPrevious]); // handleNextClickは依存配列に含めない
 
+  // キーボード入力ハンドラー
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // 1-4キー: 選択肢を選択（回答前のみ）
+      if (!answered && ['1', '2', '3', '4'].includes(e.key)) {
+        const index = parseInt(e.key) - 1;
+        if (index < choicesWithQuestions.length) {
+          e.preventDefault();
+          const choice = choicesWithQuestions[index].text;
+          const isCorrect = choice === question.meaning;
+          if (!isCorrect) {
+            setAttemptCount(prev => prev + 1);
+          }
+          onAnswer(choice, question.meaning);
+        }
+      }
+      // スペースキー: スキップ（回答前のみ）
+      else if (!answered && e.key === ' ') {
+        e.preventDefault();
+        recordWordSkip(question.word, 7);
+        onAnswer(question.meaning, question.meaning);
+      }
+      // Enterキー: 次へ進む（回答後）またはスキップ（回答前）
+      else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (!answered) {
+          recordWordSkip(question.word, 7);
+          onAnswer(question.meaning, question.meaning);
+        }
+        handleNextClick();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [answered, choicesWithQuestions, question, onAnswer, attemptCount]);
+
   const getButtonClass = (choice: string) => {
     if (!answered) return 'choice-btn';
     

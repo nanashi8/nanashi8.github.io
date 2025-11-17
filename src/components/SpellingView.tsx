@@ -100,12 +100,16 @@ function SpellingView({
     }
   }, [spellingState.currentIndex, spellingState.questions]);
 
-  // letter-cardsに自動フォーカス
+  // letter-cardsに自動フォーカス（問題変更時とマウント時）
   useEffect(() => {
     if (!spellingState.answered && letterCardsRef.current) {
-      letterCardsRef.current.focus();
+      // タイマーで確実にフォーカス
+      const timer = setTimeout(() => {
+        letterCardsRef.current?.focus();
+      }, 100);
+      return () => clearTimeout(timer);
     }
-  }, [spellingState.answered, spellingState.currentIndex]);
+  }, [spellingState.answered, spellingState.currentIndex, spellingState.questions.length]);
 
   // カードをタップして選択
   const handleLetterClick = (_letter: string, index: number) => {
@@ -202,6 +206,27 @@ function SpellingView({
     }));
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();
+  };
+
+  const handleSkip = () => {
+    const currentQuestion = spellingState.questions[spellingState.currentIndex];
+    if (!currentQuestion) return;
+
+    // スキップ処理（定着扱い）
+    recordWordSkip(currentQuestion.word, 7);
+    
+    // スコアに反映（正解扱い）
+    setSpellingState((prev) => ({
+      ...prev,
+      score: prev.score + 1,
+      totalAnswered: prev.totalAnswered + 1,
+      answered: true,
+    }));
+
+    // 次の問題へ
+    setTimeout(() => {
+      handleNext();
+    }, 500);
   };
 
   const handlePrevious = () => {
@@ -426,6 +451,10 @@ function SpellingView({
                     } else if (e.key === 'Backspace') {
                       e.preventDefault();
                       handleBackspace();
+                    } else if (e.key === ' ') {
+                      // スペースキー: スキップ
+                      e.preventDefault();
+                      handleSkip();
                     } else if (e.key === 'Enter' && selectedSequence.length > 0) {
                       e.preventDefault();
                       checkTypingAnswer(userWord);
@@ -457,11 +486,16 @@ function SpellingView({
                 })}
               </div>
 
-              {/* 1文字戻すボタン */}
-              {!spellingState.answered && selectedSequence.length > 0 && (
+              {/* 1文字戻すボタンとスキップボタン */}
+              {!spellingState.answered && (
                 <div className="spelling-reset-button-container">
-                  <button className="btn-reset-selection" onClick={handleBackspace}>
-                    ⌫ 1文字戻す
+                  {selectedSequence.length > 0 && (
+                    <button className="btn-reset-selection" onClick={handleBackspace}>
+                      ⌫ 1文字戻す
+                    </button>
+                  )}
+                  <button className="btn-skip-word" onClick={handleSkip}>
+                    ⏭️ 分からない (スペースキー)
                   </button>
                 </div>
               )}
