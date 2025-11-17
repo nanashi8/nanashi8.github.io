@@ -27,3 +27,10 @@ dist-ssr
 *.backup
 *.old-vanilla
 *.working
+
+# Analysis and proofreading scripts
+analyze_*.py
+proofread_*.py
+list_passages.py
+regenerate_*.py
+corrections_*.json
