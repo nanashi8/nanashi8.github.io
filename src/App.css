@@ -5966,3 +5966,56 @@ option {
   color: #666;
   font-size: 0.95em;
 }
+
+/* Comprehensive Reading View - Word Cards */
+.word-card {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 4px;
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.word-card:hover {
+  background: #e7f3ff;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.word-card:active {
+  transform: translateY(0);
+  background: #d0e7ff;
+}
+
+.word-card.unknown {
+  background: #fff3cd;
+  border-color: #ffc107;
+  font-weight: 600;
+}
+
+.word-card.unknown:hover {
+  background: #ffe69c;
+  border-color: #ffb300;
+}
+
+.phrase-english {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+}

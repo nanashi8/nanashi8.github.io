@@ -120,7 +120,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   };
 
   // 単語をクリックして辞書から意味を表示
-  const handleWordClick = (word: string, event: React.MouseEvent<HTMLSpanElement>) => {
+  const handleWordClick = (word: string, event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    
     // 既存のポップアップを閉じる
     if (wordPopup && wordPopup.word === word) {
       setWordPopup(null);
@@ -143,20 +146,24 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         y: rect.bottom + window.scrollY + 5,
       });
     } else {
+      // 辞書にない単語は表示しない（エラーメッセージを出さない）
+      console.warn(`Word not found in dictionary: ${normalizedWord}`);
+      const rect = event.currentTarget.getBoundingClientRect();
       setWordPopup({
         word: word,
         meaning: '辞書に見つかりませんでした',
         reading: '',
         etymology: '',
         relatedWords: '',
-        x: event.clientX + window.scrollX,
-        y: event.clientY + window.scrollY + 5,
+        x: rect.left + window.scrollX,
+        y: rect.bottom + window.scrollY + 5,
       });
     }
   };
 
   // 単語を「分からない」としてマーク
   const handleMarkUnknown = (phraseIndex: number, segmentIndex: number, event: React.MouseEvent) => {
+    event.preventDefault();
     event.stopPropagation(); // ポップアップ表示を防ぐ
     if (!currentPassage) return;
 
@@ -412,18 +419,18 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="passage-body">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
               <div key={phrase.id} className="phrase-block">
-                {/* 英文 */}
+                {/* 英文 - 単語をカード形式で表示 */}
                 <div className="phrase-english">
                   {phrase.segments?.map((segment, segIdx) => (
-                    <span
+                    <div
                       key={segIdx}
-                      className={`word-segment ${segment.isUnknown ? 'unknown' : ''}`}
+                      className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
                       onClick={(e) => handleWordClick(segment.word, e)}
                       onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
-                      title="クリック: 単語の意味を表示 / ダブルクリック: 分からない単語としてマーク"
+                      title="タップ: 単語の意味を表示 / ダブルタップ: 分からない単語としてマーク"
                     >
                       {segment.word}
-                    </span>
+                    </div>
                   )) || <span>セグメントがありません</span>}
                 </div>
 
