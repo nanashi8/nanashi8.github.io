@@ -330,6 +330,8 @@ function SpellingView({
         <>
           <ScoreBoard
             mode="spelling"
+            currentScore={spellingState.score}
+            totalAnswered={spellingState.totalAnswered}
           />
 
           {currentQuestion && (

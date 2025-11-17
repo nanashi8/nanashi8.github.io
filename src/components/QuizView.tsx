@@ -166,6 +166,8 @@ function QuizView({
         <>
           <ScoreBoard
             mode="translation"
+            currentScore={quizState.score}
+            totalAnswered={quizState.totalAnswered}
           />
           <div className="question-container">
             {currentQuestion && (
