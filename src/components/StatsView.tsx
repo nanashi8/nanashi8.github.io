@@ -64,17 +64,13 @@ function StatsView({ }: StatsViewProps) {
   // storageイベントをリッスン（他のタブでの変更を検知）
   useEffect(() => {
     const handleStorageChange = () => {
-      loadProgressData();
+      const data = loadProgress();
+      setProgress(data);
     };
     
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
-
-  const loadProgressData = () => {
-    const data = loadProgress();
-    setProgress(data);
-  };
 
   if (!progress) {
     return <div className="stats-view">読み込み中...</div>;
