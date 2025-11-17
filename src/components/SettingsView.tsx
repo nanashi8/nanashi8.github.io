@@ -36,32 +36,6 @@ function SettingsView({
     localStorage.setItem('aiPersonality', personality);
   };
 
-  // 学習記録のリセット
-  const handleResetProgress = () => {
-    if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
-      // 学習記録のみクリア（プランと設定は保持）
-      const keysToRemove = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key && (key.startsWith('quiz-result-') || key === 'progress-data')) {
-          keysToRemove.push(key);
-        }
-      }
-      keysToRemove.forEach(key => localStorage.removeItem(key));
-      alert('学習記録をリセットしました');
-      window.location.reload();
-    }
-  };
-
-  // 学習プランのリセット
-  const handleResetPlan = () => {
-    if (confirm('学習プランをリセットしますか？学習記録は保持されます。')) {
-      localStorage.removeItem('learning-schedule-90days');
-      alert('学習プランをリセットしました');
-      window.location.reload();
-    }
-  };
-
   return (
     <div className="settings-view">
       <div className="settings-section">
@@ -118,26 +92,7 @@ function SettingsView({
           </div>
         </div>
 
-        <div className="settings-divider"></div>
 
-        {/* リセットボタン */}
-        <div className="simple-setting-section">
-          <h3>🔄 リセット</h3>
-          <div className="reset-buttons">
-            <button
-              className="setting-button danger"
-              onClick={handleResetProgress}
-            >
-              学習記録をリセット
-            </button>
-            <button
-              className="setting-button danger"
-              onClick={handleResetPlan}
-            >
-              プランをリセット
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

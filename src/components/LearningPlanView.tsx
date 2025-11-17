@@ -88,14 +88,10 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
     return (
       <div className="learning-plan-start">
         <div className="plan-hero">
-          <h2>📅 学習プランを作成</h2>
-          <p className="plan-description">
-            全{totalWords.toLocaleString()}語を学習するプランを作成します
-          </p>
+          <h2>📅 学習期間を選択</h2>
           
           <div className="plan-duration-selector">
-            <h3>学習期間を選択</h3>
-            <div className="duration-buttons">
+            <div className="duration-cards">
               {monthsOptions.map(months => {
                 const days = months * 30;
                 const dailyWords = Math.ceil(totalWords / days);
@@ -104,39 +100,20 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                 return (
                   <button
                     key={months}
-                    className={`duration-option ${isSelected ? 'selected' : ''}`}
+                    className={`duration-card ${isSelected ? 'selected' : ''}`}
                     onClick={() => setSelectedMonths(months)}
                   >
-                    <div className="duration-label">{months}ヶ月</div>
-                    <div className="duration-stats">
-                      <div>{days}日間</div>
-                      <div>約{dailyWords}語/日</div>
-                    </div>
+                    <div className="duration-months">{months}ヶ月</div>
+                    <div className="duration-daily">約{dailyWords}語/日</div>
                   </button>
                 );
               })}
             </div>
-            <p className="duration-note">
-              💡 期間に応じて1日の学習量が自動調整されます
-            </p>
           </div>
           
           <button onClick={handleStartPlan} className="btn-start-plan">
-            🚀 {selectedMonths}ヶ月プランを開始
+            🚀 開始する
           </button>
-          
-          <div className="plan-details">
-            <h3>📋 プランの進め方</h3>
-            <ul>
-              <li><strong>Phase 1（前半1/3）</strong>: 初級単語を中心に基礎を固める</li>
-              <li><strong>Phase 2（中盤1/3）</strong>: 初級・中級単語で応用力を身につける</li>
-              <li><strong>Phase 3（後半1/3）</strong>: 中級・上級単語で完成させる</li>
-            </ul>
-            
-            <p className="plan-note">
-              ⚡ 学習状況に応じてプランは自動で最適化されます
-            </p>
-          </div>
         </div>
       </div>
     );
@@ -285,12 +262,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
         </div>
       </div>
       
-      {/* リセットボタン */}
-      <div className="plan-actions">
-        <button onClick={handleResetPlan} className="btn-reset-plan">
-          🔄 プランをリセット
-        </button>
-      </div>
     </div>
   );
 }

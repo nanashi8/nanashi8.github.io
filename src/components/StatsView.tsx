@@ -20,6 +20,31 @@ function StatsView({ }: StatsViewProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
 
+  // 学習記録のリセット
+  const handleResetProgress = () => {
+    if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
+      const keysToRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && (key.startsWith('quiz-result-') || key === 'progress-data')) {
+          keysToRemove.push(key);
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key));
+      alert('学習記録をリセットしました');
+      window.location.reload();
+    }
+  };
+
+  // 学習プランのリセット
+  const handleResetPlan = () => {
+    if (confirm('学習プランをリセットしますか？学習記録は保持されます。')) {
+      localStorage.removeItem('learning-schedule-90days');
+      alert('学習プランをリセットしました');
+      window.location.reload();
+    }
+  };
+
   // リアルタイム更新（学習中のデータを即座に反映）
   useEffect(() => {
     loadProgressData();
@@ -242,6 +267,21 @@ function StatsView({ }: StatsViewProps) {
           />
           <span>自動更新（5秒ごと）</span>
         </label>
+        
+        <div className="stats-reset-section">
+          <button
+            className="btn-reset-progress"
+            onClick={handleResetProgress}
+          >
+            🗑️ 学習記録をリセット
+          </button>
+          <button
+            className="btn-reset-plan"
+            onClick={handleResetPlan}
+          >
+            🔄 プランをリセット
+          </button>
+        </div>
       </div>
     </div>
   );

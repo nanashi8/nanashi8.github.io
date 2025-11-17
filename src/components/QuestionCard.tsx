@@ -147,14 +147,6 @@ function QuestionCard({
           {question.reading && (
             <div className="question-reading">【{question.reading}】</div>
           )}
-          {question.word.includes(' ') && (
-            <div className="phrase-info">
-              <span className="phrase-badge">📖 熟語</span>
-              <span className="phrase-type-badge">
-                {getPhraseTypeLabel(classifyPhraseType(question.word))}
-              </span>
-            </div>
-          )}
         </div>
         <button 
           className="inline-nav-btn next-inline-btn" 
@@ -164,6 +156,14 @@ function QuestionCard({
           →
         </button>
       </div>
+
+      {/* AIコメント行 - 問題と選択肢の間に配置 */}
+      {answered && aiComment && (
+        <div className="ai-comment-bar">
+          <span className="ai-comment-icon">💬</span>
+          <span className="ai-comment-text">{aiComment}</span>
+        </div>
+      )}
 
       <div className="choices">
         {choicesWithQuestions.map((choice, idx) => {
