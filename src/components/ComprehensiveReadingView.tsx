@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ReadingPassage, Question } from '../types';
+import { ReadingPassage, Question, ReadingSegment } from '../types';
+import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -27,6 +28,72 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [error, setError] = useState<string | null>(null);
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
+
+  // フレーズグループ化の型定義
+  type PhraseGroup = {
+    type: 'phrase' | 'word';
+    words: string[];
+    segments: ReadingSegment[];
+    isUnknown: boolean;
+  };
+
+  // セグメントをフレーズグループに変換する関数
+  const groupSegmentsByPhrases = (segments: ReadingSegment[]): PhraseGroup[] => {
+    const groups: PhraseGroup[] = [];
+    let i = 0;
+
+    while (i < segments.length) {
+      // 3単語フレーズをチェック
+      if (i + 2 < segments.length) {
+        const threeWords = [
+          segments[i].word.toLowerCase(),
+          segments[i + 1].word.toLowerCase(),
+          segments[i + 2].word.toLowerCase()
+        ].join(' ');
+        
+        if (commonPhrases.includes(threeWords)) {
+          groups.push({
+            type: 'phrase',
+            words: [segments[i].word, segments[i + 1].word, segments[i + 2].word],
+            segments: [segments[i], segments[i + 1], segments[i + 2]],
+            isUnknown: segments[i].isUnknown || segments[i + 1].isUnknown || segments[i + 2].isUnknown
+          });
+          i += 3;
+          continue;
+        }
+      }
+
+      // 2単語フレーズをチェック
+      if (i + 1 < segments.length) {
+        const twoWords = [
+          segments[i].word.toLowerCase(),
+          segments[i + 1].word.toLowerCase()
+        ].join(' ');
+        
+        if (twoWordPhrases.includes(twoWords)) {
+          groups.push({
+            type: 'phrase',
+            words: [segments[i].word, segments[i + 1].word],
+            segments: [segments[i], segments[i + 1]],
+            isUnknown: segments[i].isUnknown || segments[i + 1].isUnknown
+          });
+          i += 2;
+          continue;
+        }
+      }
+
+      // 単一単語
+      groups.push({
+        type: 'word',
+        words: [segments[i].word],
+        segments: [segments[i]],
+        isUnknown: segments[i].isUnknown
+      });
+      i += 1;
+    }
+
+    return groups;
+  };
 
   // 単語集データの読み込み
   useEffect(() => {
@@ -420,27 +487,87 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="passage-body">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
               <div key={phrase.id} className="phrase-block">
-                {/* 英文 - 単語をカード形式で表示（意味も含む） */}
+                {/* 英文 - 単語/フレーズをカード形式で表示（意味も含む） */}
                 <div className="phrase-english">
-                  {phrase.segments?.map((segment, segIdx) => {
-                    const wordData = wordDictionary.get(segment.word.toLowerCase().replace(/[.,!?;:]$/, ''));
-                    const meaning = wordData?.meaning || segment.meaning || '';
-                    
-                    return (
-                      <div
-                        key={segIdx}
-                        className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
-                        onClick={(e) => handleWordClick(segment.word, e)}
-                        onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
-                        title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
-                      >
-                        <div className="word-card-word">{segment.word}</div>
-                        {wordMeaningsVisible[phraseIdx] && meaning && (
-                          <div className="word-card-meaning">{meaning}</div>
-                        )}
-                      </div>
-                    );
-                  }) || <span>セグメントがありません</span>}
+                  {(() => {
+                    const groups = groupSegmentsByPhrases(phrase.segments || []);
+                    return groups.map((group, groupIdx) => {
+                      if (group.type === 'phrase') {
+                        // フレーズカード
+                        const phraseText = group.words.join(' ');
+                        const phraseMeanings = group.segments
+                          .map(seg => {
+                            const wordData = wordDictionary.get(seg.word.toLowerCase().replace(/[.,!?;:]$/, ''));
+                            return wordData?.meaning || seg.meaning || '';
+                          })
+                          .filter(m => m);
+                        const combinedMeaning = phraseMeanings.join('・');
+
+                        return (
+                          <div
+                            key={`group-${groupIdx}`}
+                            className={`word-card phrase-card ${group.isUnknown ? 'unknown' : ''}`}
+                            onClick={(e) => handleWordClick(phraseText, e)}
+                            onDoubleClick={(e) => {
+                              e.stopPropagation();
+                              // フレーズ内の全セグメントのisUnknownをトグル
+                              const newValue = !group.isUnknown;
+                              const updated = currentPassage.phrases.map((p, pIdx) => {
+                                if (pIdx === phraseIdx) {
+                                  const newSegments = [...p.segments];
+                                  // このグループのセグメントを更新
+                                  let segmentOffset = 0;
+                                  for (let i = 0; i < groupIdx; i++) {
+                                    segmentOffset += groups[i].segments.length;
+                                  }
+                                  for (let i = 0; i < group.segments.length; i++) {
+                                    newSegments[segmentOffset + i] = {
+                                      ...newSegments[segmentOffset + i],
+                                      isUnknown: newValue
+                                    };
+                                  }
+                                  return { ...p, segments: newSegments };
+                                }
+                                return p;
+                              });
+                              setPassages(passages.map(passage =>
+                                passage.id === currentPassage.id
+                                  ? { ...passage, phrases: updated }
+                                  : passage
+                              ));
+                            }}
+                            title="タップ: 詳細を表示 / ダブルタップ: 分からない熟語としてマーク（再度タップで解除）"
+                          >
+                            <div className="word-card-word phrase-word">{phraseText}</div>
+                            {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
+                              <div className="word-card-meaning">{combinedMeaning}</div>
+                            )}
+                          </div>
+                        );
+                      } else {
+                        // 単語カード
+                        const segment = group.segments[0];
+                        const segIdx = phrase.segments.findIndex(s => s === segment);
+                        const wordData = wordDictionary.get(segment.word.toLowerCase().replace(/[.,!?;:]$/, ''));
+                        const meaning = wordData?.meaning || segment.meaning || '';
+
+                        return (
+                          <div
+                            key={`group-${groupIdx}`}
+                            className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
+                            onClick={(e) => handleWordClick(segment.word, e)}
+                            onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
+                            title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
+                          >
+                            <div className="word-card-word">{segment.word}</div>
+                            {wordMeaningsVisible[phraseIdx] && meaning && (
+                              <div className="word-card-meaning">{meaning}</div>
+                            )}
+                          </div>
+                        );
+                      }
+                    });
+                  })()}
                 </div>
 
                 {/* 和訳（表示/非表示） */}

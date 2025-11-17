@@ -6031,6 +6031,27 @@ option {
   border-color: #ffb300;
 }
 
+/* フレーズカード用のスタイル */
+.word-card.phrase-card {
+  background: #e8f4f8;
+  border-color: #6fb3d2;
+  min-width: auto;
+}
+
+.word-card.phrase-card:hover {
+  background: #d4ebf7;
+  border-color: #4a9aba;
+}
+
+.word-card.phrase-card.unknown {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.word-card.phrase-card .phrase-word {
+  white-space: nowrap;
+}
+
 .phrase-english {
   display: flex;
   flex-wrap: wrap;
