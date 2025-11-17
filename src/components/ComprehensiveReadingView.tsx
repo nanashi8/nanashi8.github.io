@@ -21,6 +21,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
   const [phraseTranslations, setPhraseTranslations] = useState<boolean[]>([]);
+  const [wordMeaningsVisible, setWordMeaningsVisible] = useState<boolean[]>([]);
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>('all');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -94,6 +95,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         if (processedData.length > 0) {
           setSelectedPassageId(processedData[0].id);
           setPhraseTranslations(new Array(processedData[0].phrases?.length || 0).fill(false));
+          setWordMeaningsVisible(new Array(processedData[0].phrases?.length || 0).fill(false));
         }
       })
       .catch((err) => {
@@ -116,6 +118,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     const passage = passages.find(p => p.id === passageId);
     if (passage) {
       setPhraseTranslations(new Array(passage.phrases?.length || 0).fill(false));
+      setWordMeaningsVisible(new Array(passage.phrases?.length || 0).fill(false));
     }
   };
 
@@ -190,18 +193,29 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     );
   };
 
-  // 個別フレーズの訳を表示
+  // 個別フレーズの訳を表示（2段階）
   const handleShowPhraseTranslation = (phraseIndex: number) => {
-    setPhraseTranslations(prev => {
-      const newState = [...prev];
-      newState[phraseIndex] = true;
-      return newState;
-    });
+    // 最初のクリック: 単語の意味を表示
+    if (!wordMeaningsVisible[phraseIndex]) {
+      setWordMeaningsVisible(prev => {
+        const newState = [...prev];
+        newState[phraseIndex] = true;
+        return newState;
+      });
+    } else if (!phraseTranslations[phraseIndex]) {
+      // 2回目のクリック: フレーズ全体の訳を表示
+      setPhraseTranslations(prev => {
+        const newState = [...prev];
+        newState[phraseIndex] = true;
+        return newState;
+      });
+    }
   };
 
   // 全訳を表示
   const handleShowAllTranslations = () => {
     if (!currentPassage) return;
+    setWordMeaningsVisible(new Array(currentPassage.phrases.length).fill(true));
     setPhraseTranslations(new Array(currentPassage.phrases.length).fill(true));
   };
 
@@ -251,6 +265,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       )
     );
     setPhraseTranslations(new Array(currentPassage.phrases.length).fill(false));
+    setWordMeaningsVisible(new Array(currentPassage.phrases.length).fill(false));
   };
 
   if (loading) {
@@ -336,20 +351,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </select>
         </div>
 
-        {/* 統計情報 */}
-        {currentPassage && (
-          <div className="passage-stats">
-            <span className="stat-badge">{currentPassage.level}</span>
-            <span className="stat-badge">{currentPassage.actualWordCount}語</span>
-            <span className="stat-badge">テーマ: {currentPassage.theme}</span>
-            {unknownCount > 0 && (
-              <span className="stat-badge unknown-count">
-                分からない単語: {unknownCount}
-              </span>
-            )}
-          </div>
-        )}
-
         {/* 操作ボタン */}
         <div className="action-buttons">
           <button 
@@ -431,10 +432,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                         className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
                         onClick={(e) => handleWordClick(segment.word, e)}
                         onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
-                        title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク"
+                        title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
                       >
                         <div className="word-card-word">{segment.word}</div>
-                        {meaning && (
+                        {wordMeaningsVisible[phraseIdx] && meaning && (
                           <div className="word-card-meaning">{meaning}</div>
                         )}
                       </div>
@@ -459,7 +460,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     className="show-translation-btn"
                     onClick={() => handleShowPhraseTranslation(phraseIdx)}
                   >
-                    訳を表示 ▼
+                    {!wordMeaningsVisible[phraseIdx] ? '単語の意味を表示 ▼' : 'フレーズの訳を表示 ▼'}
                   </button>
                 )}
               </div>
@@ -587,21 +588,23 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         }
 
         .passage-body {
-          line-height: 2;
+          line-height: 1.5;
+          font-family: 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', YuMincho, serif;
         }
 
         .phrase-block {
-          margin-bottom: 25px;
-          padding: 15px;
-          background: #f8f9fa;
-          border-left: 4px solid #007bff;
-          border-radius: 4px;
+          margin-bottom: 8px;
+          padding: 8px 12px;
+          background: #ffffff;
+          border-left: 3px solid #007bff;
+          border-radius: 2px;
         }
 
         .phrase-english {
-          font-size: 18px;
-          line-height: 1.8;
-          margin-bottom: 10px;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 6px;
+          font-family: 'Times New Roman', 'Georgia', serif;
         }
 
         .word-segment {
