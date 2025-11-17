@@ -76,7 +76,7 @@ function SpellingView({
   useEffect(() => {
     if (spellingState.questions.length > 0) {
       const currentQuestion = spellingState.questions[spellingState.currentIndex];
-      const word = currentQuestion.word.toUpperCase();
+      const word = currentQuestion.word.toLowerCase();
       const letters = word.split('');
       
       // シャッフル
