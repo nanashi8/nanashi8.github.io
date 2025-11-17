@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
-import { addQuizResult } from '../progressStorage';
+import { addQuizResult, updateWordProgress } from '../progressStorage';
 import { generateId } from '../utils';
 
 interface SpellingViewProps {
@@ -51,6 +51,7 @@ function SpellingView({
   
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
+  const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
 
   // questionsが変更されたらスペルステートを初期化
@@ -90,6 +91,9 @@ function SpellingView({
         correctWord: word,
         answered: false,
       }));
+      
+      // 問題開始時刻を記録
+      questionStartTimeRef.current = Date.now();
     }
   }, [spellingState.currentIndex, spellingState.questions]);
 
@@ -112,10 +116,19 @@ function SpellingView({
   const checkAnswer = (sequence: string[]) => {
     const userWord = sequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
     const isCorrect = userWord === spellingState.correctWord;
+    const currentQuestion = spellingState.questions[spellingState.currentIndex];
+
+    // 応答時間を計算
+    const responseTime = Date.now() - questionStartTimeRef.current;
+
+    // 単語進捗を更新
+    if (currentQuestion) {
+      updateWordProgress(currentQuestion.word, isCorrect, responseTime);
+    }
 
     // 間違えた単語を記録
-    if (!isCorrect && spellingState.questions[spellingState.currentIndex]) {
-      incorrectWordsRef.current.push(spellingState.questions[spellingState.currentIndex].word);
+    if (!isCorrect && currentQuestion) {
+      incorrectWordsRef.current.push(currentQuestion.word);
     }
 
     setSpellingState((prev) => {
@@ -126,23 +139,25 @@ function SpellingView({
         totalAnswered: prev.totalAnswered + 1,
       };
       
-      // 全問題に回答したら進捗を保存
-      if (newState.totalAnswered === prev.questions.length) {
-        const timeSpent = Math.floor((Date.now() - quizStartTimeRef.current) / 1000);
-        const percentage = (newState.score / newState.totalAnswered) * 100;
-        
+      // 回答ごとに小さなQuizResultを記録（統計用）
+      if (currentQuestion) {
         addQuizResult({
           id: generateId(),
-          questionSetId: 'spelling-quiz',
+          questionSetId: 'spelling-quiz-single',
           questionSetName: 'スペルクイズ',
-          score: newState.score,
-          total: newState.totalAnswered,
-          percentage,
+          score: isCorrect ? 1 : 0,
+          total: 1,
+          percentage: isCorrect ? 100 : 0,
           date: Date.now(),
-          timeSpent,
-          incorrectWords: incorrectWordsRef.current,
+          timeSpent: Math.floor(responseTime / 1000),
+          incorrectWords: isCorrect ? [] : [currentQuestion.word],
           mode: 'spelling',
         });
+      }
+      
+      // 全問題に回答したら完了メッセージを表示
+      if (newState.totalAnswered === prev.questions.length) {
+        const percentage = (newState.score / newState.totalAnswered) * 100;
         
         // 完了メッセージ
         setTimeout(() => {

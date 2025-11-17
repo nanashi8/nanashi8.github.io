@@ -415,6 +415,15 @@ export function updateWordProgress(
   // 習熟レベルを更新
   wordProgress.masteryLevel = determineMasteryLevel(wordProgress);
   
+  // 1発100%（初回で正解）の場合、定着として扱い7日間出題除外
+  if (totalAttempts === 1 && isCorrect) {
+    wordProgress.skipExcludeUntil = Date.now() + (7 * 24 * 60 * 60 * 1000);
+  }
+  // 連続3回以上正解の場合も同様に14日間除外
+  else if (wordProgress.consecutiveCorrect >= 3) {
+    wordProgress.skipExcludeUntil = Date.now() + (14 * 24 * 60 * 60 * 1000);
+  }
+  
   saveProgress(progress);
 }
 
@@ -667,11 +676,17 @@ export function getTotalMasteredWordsCount(): number {
   let masteredCount = 0;
   
   for (const wordProgress of Object.values(progress.wordProgress)) {
-    // 定着条件: 連続3回以上正解 または スキップされている
+    const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
+    
+    // 定着条件:
+    // 1. 1発100%（初回で正解）
+    // 2. 連続3回以上正解
+    // 3. スキップされている
+    const isFirstTimeCorrect = totalAttempts === 1 && wordProgress.correctCount === 1;
     const isConsecutivelyCorrect = wordProgress.consecutiveCorrect >= 3;
     const isSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
     
-    if (isConsecutivelyCorrect || isSkipped) {
+    if (isFirstTimeCorrect || isConsecutivelyCorrect || isSkipped) {
       masteredCount++;
     }
   }

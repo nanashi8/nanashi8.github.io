@@ -297,6 +297,22 @@ function App() {
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime);
       
+      // 回答ごとに小さなQuizResultを記録（統計用）
+      addQuizResult({
+        id: generateId(),
+        questionSetId: 'main-set-single',
+        questionSetName: '高校受験英単語',
+        score: isCorrect ? 1 : 0,
+        total: 1,
+        percentage: isCorrect ? 100 : 0,
+        date: Date.now(),
+        timeSpent: Math.floor(responseTime / 1000),
+        incorrectWords: isCorrect ? [] : [currentQuestion.word],
+        mode: 'translation',
+        category: selectedCategory !== 'all' ? selectedCategory : undefined,
+        difficulty: selectedDifficulty !== 'all' ? selectedDifficulty : undefined,
+      });
+      
       // 間違えた単語を記録
       if (!isCorrect) {
         incorrectWordsRef.current.push(currentQuestion.word);
@@ -319,25 +335,9 @@ function App() {
         }, autoAdvanceDelay * 1000);
       }
       
-      // 全問題に回答したら進捗を保存
+      // 全問題に回答したら完了メッセージを表示
       if (newState.totalAnswered === prev.questions.length) {
-        const timeSpent = Math.floor((Date.now() - quizStartTimeRef.current) / 1000);
         const percentage = (newState.score / newState.totalAnswered) * 100;
-        
-        addQuizResult({
-          id: generateId(),
-          questionSetId: 'main-set',
-          questionSetName: '高校受験英単語',
-          score: newState.score,
-          total: newState.totalAnswered,
-          percentage,
-          date: Date.now(),
-          timeSpent,
-          incorrectWords: incorrectWordsRef.current,
-          mode: 'translation',
-          category: selectedCategory !== 'all' ? selectedCategory : undefined,
-          difficulty: selectedDifficulty !== 'all' ? selectedDifficulty : undefined,
-        });
         
         // 完了メッセージ
         setTimeout(() => {
