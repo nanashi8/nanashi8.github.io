@@ -1250,15 +1250,14 @@ option {
   margin-bottom: 20px;
 }
 
-/* スペルタブのインラインナビゲーション */
-.spelling-content-inline {
-  flex: 1;
+/* スペルタブ用の縦並びレイアウト */
+.spelling-card .question-content-inline {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-width: 0;
 }
 
+/* スペルタブの意味表示 */
 .meaning-display {
   text-align: center;
   margin: 0;

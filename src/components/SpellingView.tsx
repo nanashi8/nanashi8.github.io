@@ -343,7 +343,7 @@ function SpellingView({
                 >
                   ←
                 </button>
-                <div className="spelling-content-inline">
+                <div className="question-content-inline">
                   <div className="meaning-display">
                     <div className="meaning-label">意味:</div>
                     <div className="meaning-text">{currentQuestion.meaning}</div>
