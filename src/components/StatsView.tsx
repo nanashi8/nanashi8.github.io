@@ -19,6 +19,7 @@ interface StatsViewProps {
 function StatsView({ }: StatsViewProps) {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
+  const [readingPassages, setReadingPassages] = useState<ReadingPassage[]>([]);
 
   // 学習記録のリセット
   const handleResetProgress = () => {
@@ -72,6 +73,16 @@ function StatsView({ }: StatsViewProps) {
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
+  // 長文読解用のパッセージデータを読み込み
+  useEffect(() => {
+    fetch('/data/reading-passages-comprehensive.json')
+      .then(res => res.json())
+      .then((data: ReadingPassage[]) => {
+        setReadingPassages(data);
+      })
+      .catch(err => console.error('長文パッセージの読み込みエラー:', err));
+  }, []);
+
   if (!progress) {
     return <div className="stats-view">読み込み中...</div>;
   }
@@ -84,17 +95,6 @@ function StatsView({ }: StatsViewProps) {
   const spellingCategoryStats = getCategoryDifficultyStats('spelling');
 
   // 長文読解用のレーダーチャートデータを生成
-  const [readingPassages, setReadingPassages] = useState<ReadingPassage[]>([]);
-  
-  useEffect(() => {
-    fetch('/data/reading-passages-comprehensive.json')
-      .then(res => res.json())
-      .then((data: ReadingPassage[]) => {
-        setReadingPassages(data);
-      })
-      .catch(err => console.error('長文パッセージの読み込みエラー:', err));
-  }, []);
-
   const generateReadingRadarData = () => {
     const labels: string[] = [];
     const savedWordsData: number[] = [];
