@@ -193,14 +193,6 @@ function SpellingView({
     questionStartTimeRef.current = Date.now();
   };
 
-  const handleReset = () => {
-    setSelectedSequence([]);
-    setSpellingState((prev) => ({
-      ...prev,
-      answered: false,
-    }));
-  };
-
   // 選択中の最後の1文字を削除
   const handleBackspace = () => {
     if (selectedSequence.length > 0) {

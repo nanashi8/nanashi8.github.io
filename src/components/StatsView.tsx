@@ -3,12 +3,10 @@ import {
   loadProgress,
   getStatsByCategory,
   getStatsByDifficulty,
-  getDifficultyStatsForRadar,
   getCategoryDifficultyStats,
   UserProgress,
 } from '../progressStorage';
 import { QuestionSet, Question, ReadingPassage } from '../types';
-import ScoreRadarChart from './ScoreRadarChart';
 import ReadingRadarChart from './ReadingRadarChart';
 import CategoryRadarChart from './CategoryRadarChart';
 
@@ -58,10 +56,6 @@ function StatsView({ }: StatsViewProps) {
   const categoryStats = getStatsByCategory();
   const difficultyStats = getStatsByDifficulty();
 
-  // レーダーチャート用のデータを取得
-  const translationRadar = getDifficultyStatsForRadar('translation');
-  const spellingRadar = getDifficultyStatsForRadar('spelling');
-  
   // 分野別・難易度別のデータを取得
   const translationCategoryStats = getCategoryDifficultyStats('translation');
   const spellingCategoryStats = getCategoryDifficultyStats('spelling');

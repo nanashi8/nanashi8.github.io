@@ -34,3 +34,7 @@ proofread_*.py
 list_passages.py
 regenerate_*.py
 corrections_*.json
+
+# Planning and temporary files
+CHANGES_PLAN.js
+CHANGES_PLAN.ts
