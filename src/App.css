@@ -6063,3 +6063,51 @@ option {
   border-radius: 2px;
   line-height: 1.4;
 }
+
+/* レーダーチャート用のスタイル */
+.radar-chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  text-align: center;
+  color: #333;
+  margin: 0 0 20px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.chart-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.score-board-radar {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.current-session-info {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.current-session-info p {
+  margin: 0;
+  color: #495057;
+  font-weight: 500;
+}
+
+.reading-stats-section {
+  margin-bottom: 20px;
+}

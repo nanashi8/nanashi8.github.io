@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
+import ReadingRadarChart from './ReadingRadarChart';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -380,8 +381,41 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     0
   ) || 0;
 
+  // パッセージ別のレーダーチャート用データを生成
+  const generateRadarData = () => {
+    const labels: string[] = [];
+    const savedWordsData: number[] = [];
+    const totalWordsData: number[] = [];
+
+    passages.forEach(passage => {
+      const savedWords = passage.phrases?.reduce(
+        (count, phrase) => count + phrase.segments.filter(s => s.isUnknown).length,
+        0
+      ) || 0;
+      const totalWords = passage.actualWordCount || 0;
+
+      labels.push(passage.title.replace(/パッセージ\d+:\s*/, ''));
+      savedWordsData.push(savedWords);
+      totalWordsData.push(totalWords);
+    });
+
+    return { labels, savedWordsData, totalWordsData };
+  };
+
+  const radarData = generateRadarData();
+
   return (
     <div className="comprehensive-reading-view">
+      {/* レーダーチャート表示 */}
+      <div className="reading-stats-section">
+        <ReadingRadarChart
+          labels={radarData.labels}
+          savedWordsData={radarData.savedWordsData}
+          totalWordsData={radarData.totalWordsData}
+          title="パッセージ別 - 保存単語数 / 全単語数"
+        />
+      </div>
+
       <div className="reading-header">
         <h2>📖 長文読解</h2>
         
