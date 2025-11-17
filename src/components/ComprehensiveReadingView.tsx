@@ -71,16 +71,34 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         return res.json();
       })
       .then((data: ReadingPassage[]) => {
-        setPassages(data);
+        console.log('Loaded passages:', data); // デバッグ用
+        if (!Array.isArray(data) || data.length === 0) {
+          throw new Error('No passages available');
+        }
+        
+        // データを変換: words配列からsegments配列を生成（存在しない場合）
+        const processedData = data.map(passage => ({
+          ...passage,
+          phrases: passage.phrases?.map(phrase => ({
+            ...phrase,
+            segments: phrase.segments || phrase.words?.map(word => ({
+              word,
+              meaning: '', // 意味は後で単語辞書から取得
+              isUnknown: false
+            })) || []
+          })) || []
+        }));
+        
+        setPassages(processedData);
         setLoading(false);
-        if (data.length > 0) {
-          setSelectedPassageId(data[0].id);
-          setPhraseTranslations(new Array(data[0].phrases.length).fill(false));
+        if (processedData.length > 0) {
+          setSelectedPassageId(processedData[0].id);
+          setPhraseTranslations(new Array(processedData[0].phrases?.length || 0).fill(false));
         }
       })
       .catch((err) => {
         console.error('Error loading passages:', err);
-        setError('パッセージの読み込みに失敗しました');
+        setError('パッセージの読み込みに失敗しました: ' + err.message);
         setLoading(false);
       });
   }, []);
@@ -97,7 +115,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     setSelectedPassageId(passageId);
     const passage = passages.find(p => p.id === passageId);
     if (passage) {
-      setPhraseTranslations(new Array(passage.phrases.length).fill(false));
+      setPhraseTranslations(new Array(passage.phrases?.length || 0).fill(false));
     }
   };
 
@@ -240,7 +258,35 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     return <div className="empty-container">パッセージが見つかりません</div>;
   }
 
-  const unknownCount = currentPassage?.phrases.reduce(
+  // フィルターされた結果が空の場合
+  if (filteredPassages.length === 0) {
+    return (
+      <div className="comprehensive-reading-view">
+        <div className="reading-header">
+          <h2>📖 長文読解</h2>
+          <div className="filter-controls">
+            <label htmlFor="difficulty-filter">難易度: </label>
+            <select 
+              id="difficulty-filter"
+              value={difficultyFilter} 
+              onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
+              title="難易度を選択"
+            >
+              <option value="all">全て</option>
+              <option value="初級">初級 (500-800語)</option>
+              <option value="中級">中級 (800-3000語)</option>
+              <option value="上級">上級 (3000語)</option>
+            </select>
+          </div>
+        </div>
+        <div className="empty-container">
+          選択した難易度のパッセージが見つかりません。別の難易度を選択してください。
+        </div>
+      </div>
+    );
+  }
+
+  const unknownCount = currentPassage?.phrases?.reduce(
     (count, phrase) => count + phrase.segments.filter(s => s.isUnknown).length,
     0
   ) || 0;
@@ -359,7 +405,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       )}
 
       {/* パッセージ本文 */}
-      {currentPassage && (
+      {currentPassage && currentPassage.phrases && currentPassage.phrases.length > 0 && (
         <div className="passage-content">
           <h3 className="passage-title">{currentPassage.title}</h3>
           
@@ -368,7 +414,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               <div key={phrase.id} className="phrase-block">
                 {/* 英文 */}
                 <div className="phrase-english">
-                  {phrase.segments.map((segment, segIdx) => (
+                  {phrase.segments?.map((segment, segIdx) => (
                     <span
                       key={segIdx}
                       className={`word-segment ${segment.isUnknown ? 'unknown' : ''}`}
@@ -378,7 +424,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     >
                       {segment.word}
                     </span>
-                  ))}
+                  )) || <span>セグメントがありません</span>}
                 </div>
 
                 {/* 和訳（表示/非表示） */}
@@ -386,7 +432,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   <div className="phrase-translation visible">
                     <div className="translation-text">{phrase.phraseMeaning}</div>
                     <div className="word-meanings">
-                      {phrase.segments.filter(s => s.meaning).map((seg, idx) => (
+                      {phrase.segments?.filter(s => s.meaning).map((seg, idx) => (
                         <span key={idx} className="word-meaning-pair">
                           <strong>{seg.word}</strong>: {seg.meaning}
                         </span>
