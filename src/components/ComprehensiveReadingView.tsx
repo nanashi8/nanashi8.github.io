@@ -419,19 +419,27 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="passage-body">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
               <div key={phrase.id} className="phrase-block">
-                {/* 英文 - 単語をカード形式で表示 */}
+                {/* 英文 - 単語をカード形式で表示（意味も含む） */}
                 <div className="phrase-english">
-                  {phrase.segments?.map((segment, segIdx) => (
-                    <div
-                      key={segIdx}
-                      className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
-                      onClick={(e) => handleWordClick(segment.word, e)}
-                      onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
-                      title="タップ: 単語の意味を表示 / ダブルタップ: 分からない単語としてマーク"
-                    >
-                      {segment.word}
-                    </div>
-                  )) || <span>セグメントがありません</span>}
+                  {phrase.segments?.map((segment, segIdx) => {
+                    const wordData = wordDictionary.get(segment.word.toLowerCase().replace(/[.,!?;:]$/, ''));
+                    const meaning = wordData?.meaning || segment.meaning || '';
+                    
+                    return (
+                      <div
+                        key={segIdx}
+                        className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
+                        onClick={(e) => handleWordClick(segment.word, e)}
+                        onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
+                        title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク"
+                      >
+                        <div className="word-card-word">{segment.word}</div>
+                        {meaning && (
+                          <div className="word-card-meaning">{meaning}</div>
+                        )}
+                      </div>
+                    );
+                  }) || <span>セグメントがありません</span>}
                 </div>
 
                 {/* 和訳（表示/非表示） */}

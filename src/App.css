@@ -5969,8 +5969,10 @@ option {
 
 /* Comprehensive Reading View - Word Cards */
 .word-card {
-  display: inline-block;
-  padding: 6px 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px;
   margin: 4px;
   background: #f8f9fa;
   border: 2px solid #dee2e6;
@@ -5982,8 +5984,25 @@ option {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
+  min-width: 60px;
+}
+
+.word-card-word {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.word-card-meaning {
+  font-size: 0.85em;
+  color: #666;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 120px;
+  word-wrap: break-word;
 }
 
 .word-card:hover {

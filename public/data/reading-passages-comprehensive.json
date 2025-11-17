@@ -19,7 +19,7 @@
           "our",
           "time"
         ],
-        "phraseMeaning": "持続可能性は私たちの時代の決定的な課題です"
+        "phraseMeaning": "持続可能性は現代の最も重要な課題です"
       },
       {
         "id": "phrase-2",
@@ -48,7 +48,7 @@
           "urgent",
           "action"
         ],
-        "phraseMeaning": "気候変動資源枯渇汚染は緊急の行動を必要とします"
+        "phraseMeaning": "気候変動資源枯渇汚染は早急な対応を必要とします"
       },
       {
         "id": "phrase-4",
@@ -61,7 +61,7 @@
           "not",
           "optional"
         ],
-        "phraseMeaning": "持続可能な社会を築くことは選択肢ではありません"
+        "phraseMeaning": "持続可能な社会を築くことは避けられません"
       },
       {
         "id": "phrase-5",
@@ -95,7 +95,7 @@
           "generations",
           "ability"
         ],
-        "phraseMeaning": "将来の世代の能力を損なうことなく"
+        "phraseMeaning": "未来の世代の能力を犠牲にすることなく"
       },
       {
         "id": "phrase-8",
@@ -109,7 +109,7 @@
           "and",
           "consume"
         ],
-        "phraseMeaning": "これは生産と消費の方法を変革することを必要とします"
+        "phraseMeaning": "これは生産と消費の方法を変革が必要です"
       },
       {
         "id": "phrase-9",
@@ -120,7 +120,7 @@
           "economic",
           "models"
         ],
-        "phraseMeaning": "新しい経済モデルを要求します"
+        "phraseMeaning": "新しい経済の仕組みを求めています"
       },
       {
         "id": "phrase-10",
@@ -133,7 +133,7 @@
           "collective",
           "action"
         ],
-        "phraseMeaning": "個人的および集団的行動を求めます"
+        "phraseMeaning": "個人的および社会全体の行動を求めます"
       },
       {
         "id": "phrase-11",
@@ -147,7 +147,7 @@
           "we",
           "face"
         ],
-        "phraseMeaning": "気候変動は私たちが直面する最大の脅威です"
+        "phraseMeaning": "気候変動は私たちが直面する最大の危機です"
       },
       {
         "id": "phrase-12",
@@ -365,7 +365,7 @@
           "clean",
           "energy"
         ],
-        "phraseMeaning": "クリーンエネルギーに移行しなければなりません"
+        "phraseMeaning": "クリーンエネルギーーに移行しなければなりません"
       },
       {
         "id": "phrase-30",
@@ -389,7 +389,7 @@
           "the",
           "future"
         ],
-        "phraseMeaning": "再生可能エネルギーは未来への希望を提供します"
+        "phraseMeaning": "再生可能エネルギーーは未来への希望を提供します"
       },
       {
         "id": "phrase-32",
@@ -402,7 +402,7 @@
           "the",
           "sun"
         ],
-        "phraseMeaning": "太陽光発電は太陽からエネルギーを利用します"
+        "phraseMeaning": "太陽光発電は太陽からエネルギーーを利用します"
       },
       {
         "id": "phrase-33",
@@ -478,7 +478,7 @@
           "energy",
           "source"
         ],
-        "phraseMeaning": "風力発電は別のクリーンエネルギー源です"
+        "phraseMeaning": "風力発電は別のクリーンエネルギーー源です"
       },
       {
         "id": "phrase-39",
@@ -491,7 +491,7 @@
           "moving",
           "air"
         ],
-        "phraseMeaning": "風力タービンは動く空気からエネルギーを捕らえます"
+        "phraseMeaning": "風力タービンは動く空気からエネルギーーを捕らえます"
       },
       {
         "id": "phrase-40",
@@ -587,7 +587,7 @@
           "the",
           "Earth"
         ],
-        "phraseMeaning": "地熱エネルギーは地球からの熱を利用します"
+        "phraseMeaning": "地熱エネルギーーは地球からの熱を利用します"
       },
       {
         "id": "phrase-48",
@@ -623,7 +623,7 @@
           "organic",
           "materials"
         ],
-        "phraseMeaning": "バイオマスエネルギーは有機材料から来ます"
+        "phraseMeaning": "バイオマスエネルギーーは有機材料から来ます"
       },
       {
         "id": "phrase-51",
@@ -636,7 +636,7 @@
           "agricultural",
           "waste"
         ],
-        "phraseMeaning": "農業廃棄物からエネルギーを生成できます"
+        "phraseMeaning": "農業廃棄物からエネルギーーを生成できます"
       },
       {
         "id": "phrase-52",
@@ -661,7 +661,7 @@
           "energy",
           "sources"
         ],
-        "phraseMeaning": "鍵はエネルギー源を多様化することです"
+        "phraseMeaning": "鍵はエネルギーー源を多様化することです"
       },
       {
         "id": "phrase-54",
@@ -708,7 +708,7 @@
           "entire",
           "civilization"
         ],
-        "phraseMeaning": "一緒に再生可能エネルギーは私たちの文明全体を動かすことができます"
+        "phraseMeaning": "一緒に再生可能エネルギーーは、私たちの文明全体を動かすことができます"
       },
       {
         "id": "phrase-58",
@@ -984,7 +984,7 @@
           "of",
           "buy"
         ],
-        "phraseMeaning": "ツールライブラリーは人々が買う代わりに借りることを可能にします"
+        "phraseMeaning": "ツールライブラリーは、人々が買う代わりに借りることを可能にします"
       },
       {
         "id": "phrase-81",
@@ -1832,7 +1832,7 @@
           "of",
           "energy"
         ],
-        "phraseMeaning": "建物は膨大な量のエネルギーを消費します"
+        "phraseMeaning": "建物は膨大な量のエネルギーーを消費します"
       },
       {
         "id": "phrase-152",
@@ -1864,7 +1864,7 @@
           "wastes",
           "energy"
         ],
-        "phraseMeaning": "貧弱な断熱はエネルギーを無駄にします"
+        "phraseMeaning": "貧弱な断熱はエネルギーーを無駄にします"
       },
       {
         "id": "phrase-155",
@@ -1908,7 +1908,7 @@
           "energy",
           "efficiency"
         ],
-        "phraseMeaning": "エネルギー効率のために設計されています"
+        "phraseMeaning": "エネルギーー効率のために設計されています"
       },
       {
         "id": "phrase-159",
@@ -1945,7 +1945,7 @@
           "of",
           "energy"
         ],
-        "phraseMeaning": "LED照明はエネルギーの一部を使用します"
+        "phraseMeaning": "LED照明はエネルギーーの一部を使用します"
       },
       {
         "id": "phrase-162",
@@ -1982,7 +1982,7 @@
           "they",
           "consume"
         ],
-        "phraseMeaning": "一部の建物は消費するより多くのエネルギーを生産します"
+        "phraseMeaning": "一部の建物は消費するより多くのエネルギーーを生産します"
       },
       {
         "id": "phrase-165",
@@ -2431,7 +2431,7 @@
           "uses",
           "energy"
         ],
-        "phraseMeaning": "長距離で食べ物を輸送することはエネルギーを使います"
+        "phraseMeaning": "長距離で食べ物を輸送することはエネルギーーを使います"
       },
       {
         "id": "phrase-204",
@@ -2715,7 +2715,7 @@
           "it",
           "compete"
         ],
-        "phraseMeaning": "再生可能エネルギーを支援することはそれが競争するのを助けます"
+        "phraseMeaning": "再生可能エネルギーーを支援することはそれが競争するのを助けます"
       },
       {
         "id": "phrase-229",
@@ -2760,7 +2760,7 @@
           "energy",
           "efficiency"
         ],
-        "phraseMeaning": "建築基準はエネルギー効率を要求します"
+        "phraseMeaning": "建築基準はエネルギーー効率を求めています"
       },
       {
         "id": "phrase-233",
@@ -3080,7 +3080,7 @@
           "energy",
           "audits"
         ],
-        "phraseMeaning": "エネルギー監査を実施できます"
+        "phraseMeaning": "エネルギーー監査を実施できます"
       },
       {
         "id": "phrase-261",
@@ -3348,7 +3348,7 @@
           "energy",
           "works"
         ],
-        "phraseMeaning": "再生可能エネルギーは機能します"
+        "phraseMeaning": "再生可能エネルギーーは機能します"
       },
       {
         "id": "phrase-287",
@@ -3425,7 +3425,7 @@
           "growing",
           "exponentially"
         ],
-        "phraseMeaning": "再生可能エネルギーは指数関数的に成長しています"
+        "phraseMeaning": "再生可能エネルギーーは指数関数的に成長しています"
       },
       {
         "id": "phrase-294",
@@ -3619,7 +3619,7 @@
           "future",
           "generations"
         ],
-        "phraseMeaning": "私たち自身と将来の世代のために"
+        "phraseMeaning": "私たち自身と未来の世代のために"
       },
       {
         "id": "phrase-311",
@@ -3738,7 +3738,7 @@
           "renewable",
           "energy"
         ],
-        "phraseMeaning": "グリーン水素は再生可能エネルギーを貯蔵します"
+        "phraseMeaning": "グリーン水素は再生可能エネルギーーを貯蔵します"
       },
       {
         "id": "phrase-322",
@@ -3799,7 +3799,7 @@
           "more",
           "energy"
         ],
-        "phraseMeaning": "先進的なバッテリーはより多くのエネルギーを貯蔵します"
+        "phraseMeaning": "先進的なバッテリーはより多くのエネルギーーを貯蔵します"
       },
       {
         "id": "phrase-327",
@@ -3848,7 +3848,7 @@
           "renewable",
           "energy"
         ],
-        "phraseMeaning": "グリッドスケールバッテリーは再生可能エネルギーのバランスを取ります"
+        "phraseMeaning": "グリッドスケールバッテリーは、再生可能エネルギーーのバランスを取ります"
       },
       {
         "id": "phrase-331",
@@ -4152,7 +4152,7 @@
           "energy",
           "sources"
         ],
-        "phraseMeaning": "分散エネルギー源を統合します"
+        "phraseMeaning": "分散エネルギーー源を統合します"
       },
       {
         "id": "phrase-357",
@@ -4178,7 +4178,7 @@
           "return",
           "energy"
         ],
-        "phraseMeaning": "電気自動車はエネルギーを保存し返すことができます"
+        "phraseMeaning": "電気自動車はエネルギーーを保存し返すことができます"
       },
       {
         "id": "phrase-359",
@@ -4189,7 +4189,7 @@
           "energy",
           "systems"
         ],
-        "phraseMeaning": "これは回復力のあるエネルギーシステムを作ります"
+        "phraseMeaning": "これは回復力のあるエネルギーーシステムを作ります"
       },
       {
         "id": "phrase-360",
@@ -4203,7 +4203,7 @@
           "energy",
           "trading"
         ],
-        "phraseMeaning": "ブロックチェーン技術はピアツーピアエネルギー取引を可能にします"
+        "phraseMeaning": "ブロックチェーン技術は、ピアツーピアエネルギーー取引を可能にします"
       },
       {
         "id": "phrase-361",
@@ -4274,7 +4274,7 @@
           "is",
           "cheapest"
         ],
-        "phraseMeaning": "接続された機器はエネルギーが最も安いときに稼働します"
+        "phraseMeaning": "接続された機器はエネルギーーが最も安いときに稼働します"
       },
       {
         "id": "phrase-367",
@@ -4306,7 +4306,7 @@
           "energy",
           "demand"
         ],
-        "phraseMeaning": "AIはエネルギー需要を予測します"
+        "phraseMeaning": "AIはエネルギーー需要を予測します"
       },
       {
         "id": "phrase-370",
@@ -4460,7 +4460,7 @@
           "surge",
           "energy"
         ],
-        "phraseMeaning": "高潮のエネルギーを吸収します"
+        "phraseMeaning": "高潮のエネルギーーを吸収します"
       },
       {
         "id": "phrase-384",
@@ -4591,7 +4591,7 @@
           "plastic",
           "waste"
         ],
-        "phraseMeaning": "海洋クリーンアッププロジェクトはプラスチック廃棄物を除去します"
+        "phraseMeaning": "海洋クリーンアッププロジェクトは、プラスチック廃棄物を除去します"
       },
       {
         "id": "phrase-396",
@@ -4738,7 +4738,7 @@
           "and",
           "efficiency"
         ],
-        "phraseMeaning": "投資家は再生可能エネルギーと効率に資金を提供します"
+        "phraseMeaning": "投資家は再生可能エネルギーーと効率に資金を提供します"
       },
       {
         "id": "phrase-409",
@@ -4799,7 +4799,7 @@
           "fuel",
           "companies"
         ],
-        "phraseMeaning": "ダイベストメントキャンペーンは化石燃料企業をターゲットにします"
+        "phraseMeaning": "ダイベストメントキャンペーンは、化石燃料企業をターゲットにします"
       },
       {
         "id": "phrase-414",
@@ -4915,7 +4915,7 @@
           "local",
           "jobs"
         ],
-        "phraseMeaning": "エネルギー効率の仕事は地元の雇用を創出します"
+        "phraseMeaning": "エネルギーー効率の仕事は地元の雇用を創出します"
       },
       {
         "id": "phrase-424",
@@ -5175,7 +5175,7 @@
           "energy",
           "use"
         ],
-        "phraseMeaning": "エネルギー使用を減らすために競争します"
+        "phraseMeaning": "エネルギーー使用を減らすために競争します"
       },
       {
         "id": "phrase-447",
@@ -5548,7 +5548,7 @@
           "renewable",
           "energy"
         ],
-        "phraseMeaning": "グリーン水素は再生可能エネルギーを貯蔵します"
+        "phraseMeaning": "グリーン水素は再生可能エネルギーーを貯蔵します"
       },
       {
         "id": "phrase-482",
@@ -5609,7 +5609,7 @@
           "more",
           "energy"
         ],
-        "phraseMeaning": "先進的なバッテリーはより多くのエネルギーを貯蔵します"
+        "phraseMeaning": "先進的なバッテリーはより多くのエネルギーーを貯蔵します"
       },
       {
         "id": "phrase-487",
@@ -5658,7 +5658,7 @@
           "renewable",
           "energy"
         ],
-        "phraseMeaning": "グリッドスケールバッテリーは再生可能エネルギーのバランスを取ります"
+        "phraseMeaning": "グリッドスケールバッテリーは、再生可能エネルギーーのバランスを取ります"
       },
       {
         "id": "phrase-491",
@@ -5962,7 +5962,7 @@
           "energy",
           "sources"
         ],
-        "phraseMeaning": "分散エネルギー源を統合します"
+        "phraseMeaning": "分散エネルギーー源を統合します"
       },
       {
         "id": "phrase-517",
@@ -5988,7 +5988,7 @@
           "return",
           "energy"
         ],
-        "phraseMeaning": "電気自動車はエネルギーを保存し返すことができます"
+        "phraseMeaning": "電気自動車はエネルギーーを保存し返すことができます"
       },
       {
         "id": "phrase-519",
@@ -5999,7 +5999,7 @@
           "energy",
           "systems"
         ],
-        "phraseMeaning": "これは回復力のあるエネルギーシステムを作ります"
+        "phraseMeaning": "これは回復力のあるエネルギーーシステムを作ります"
       },
       {
         "id": "phrase-520",
@@ -6013,7 +6013,7 @@
           "energy",
           "trading"
         ],
-        "phraseMeaning": "ブロックチェーン技術はピアツーピアエネルギー取引を可能にします"
+        "phraseMeaning": "ブロックチェーン技術は、ピアツーピアエネルギーー取引を可能にします"
       },
       {
         "id": "phrase-521",
@@ -6084,7 +6084,7 @@
           "is",
           "cheapest"
         ],
-        "phraseMeaning": "接続された機器はエネルギーが最も安いときに稼働します"
+        "phraseMeaning": "接続された機器はエネルギーーが最も安いときに稼働します"
       },
       {
         "id": "phrase-527",
@@ -6116,7 +6116,7 @@
           "energy",
           "demand"
         ],
-        "phraseMeaning": "AIはエネルギー需要を予測します"
+        "phraseMeaning": "AIはエネルギーー需要を予測します"
       },
       {
         "id": "phrase-530",
@@ -6270,7 +6270,7 @@
           "surge",
           "energy"
         ],
-        "phraseMeaning": "高潮のエネルギーを吸収します"
+        "phraseMeaning": "高潮のエネルギーーを吸収します"
       },
       {
         "id": "phrase-544",
@@ -6401,7 +6401,7 @@
           "plastic",
           "waste"
         ],
-        "phraseMeaning": "海洋クリーンアッププロジェクトはプラスチック廃棄物を除去します"
+        "phraseMeaning": "海洋クリーンアッププロジェクトは、プラスチック廃棄物を除去します"
       },
       {
         "id": "phrase-556",
@@ -6548,7 +6548,7 @@
           "and",
           "efficiency"
         ],
-        "phraseMeaning": "投資家は再生可能エネルギーと効率に資金を提供します"
+        "phraseMeaning": "投資家は再生可能エネルギーーと効率に資金を提供します"
       },
       {
         "id": "phrase-569",
@@ -6609,7 +6609,7 @@
           "fuel",
           "companies"
         ],
-        "phraseMeaning": "ダイベストメントキャンペーンは化石燃料企業をターゲットにします"
+        "phraseMeaning": "ダイベストメントキャンペーンは、化石燃料企業をターゲットにします"
       },
       {
         "id": "phrase-574",
@@ -6725,7 +6725,7 @@
           "local",
           "jobs"
         ],
-        "phraseMeaning": "エネルギー効率の仕事は地元の雇用を創出します"
+        "phraseMeaning": "エネルギーー効率の仕事は地元の雇用を創出します"
       },
       {
         "id": "phrase-584",
@@ -6985,7 +6985,7 @@
           "energy",
           "use"
         ],
-        "phraseMeaning": "エネルギー使用を減らすために競争します"
+        "phraseMeaning": "エネルギーー使用を減らすために競争します"
       },
       {
         "id": "phrase-607",
@@ -7358,7 +7358,7 @@
           "renewable",
           "energy"
         ],
-        "phraseMeaning": "グリーン水素は再生可能エネルギーを貯蔵します"
+        "phraseMeaning": "グリーン水素は再生可能エネルギーーを貯蔵します"
       },
       {
         "id": "phrase-642",
@@ -7419,7 +7419,7 @@
           "more",
           "energy"
         ],
-        "phraseMeaning": "先進的なバッテリーはより多くのエネルギーを貯蔵します"
+        "phraseMeaning": "先進的なバッテリーはより多くのエネルギーーを貯蔵します"
       },
       {
         "id": "phrase-647",
@@ -7468,7 +7468,7 @@
           "renewable",
           "energy"
         ],
-        "phraseMeaning": "グリッドスケールバッテリーは再生可能エネルギーのバランスを取ります"
+        "phraseMeaning": "グリッドスケールバッテリーは、再生可能エネルギーーのバランスを取ります"
       },
       {
         "id": "phrase-651",
@@ -7772,7 +7772,7 @@
           "energy",
           "sources"
         ],
-        "phraseMeaning": "分散エネルギー源を統合します"
+        "phraseMeaning": "分散エネルギーー源を統合します"
       },
       {
         "id": "phrase-677",
@@ -7798,7 +7798,7 @@
           "return",
           "energy"
         ],
-        "phraseMeaning": "電気自動車はエネルギーを保存し返すことができます"
+        "phraseMeaning": "電気自動車はエネルギーーを保存し返すことができます"
       },
       {
         "id": "phrase-679",
@@ -7809,7 +7809,7 @@
           "energy",
           "systems"
         ],
-        "phraseMeaning": "これは回復力のあるエネルギーシステムを作ります"
+        "phraseMeaning": "これは回復力のあるエネルギーーシステムを作ります"
       },
       {
         "id": "phrase-680",
@@ -7823,7 +7823,7 @@
           "energy",
           "trading"
         ],
-        "phraseMeaning": "ブロックチェーン技術はピアツーピアエネルギー取引を可能にします"
+        "phraseMeaning": "ブロックチェーン技術は、ピアツーピアエネルギーー取引を可能にします"
       },
       {
         "id": "phrase-681",
@@ -7894,7 +7894,7 @@
           "is",
           "cheapest"
         ],
-        "phraseMeaning": "接続された機器はエネルギーが最も安いときに稼働します"
+        "phraseMeaning": "接続された機器はエネルギーーが最も安いときに稼働します"
       },
       {
         "id": "phrase-687",
@@ -7926,7 +7926,7 @@
           "energy",
           "demand"
         ],
-        "phraseMeaning": "AIはエネルギー需要を予測します"
+        "phraseMeaning": "AIはエネルギーー需要を予測します"
       },
       {
         "id": "phrase-690",
@@ -8080,7 +8080,7 @@
           "surge",
           "energy"
         ],
-        "phraseMeaning": "高潮のエネルギーを吸収します"
+        "phraseMeaning": "高潮のエネルギーーを吸収します"
       },
       {
         "id": "phrase-704",
@@ -8211,7 +8211,7 @@
           "plastic",
           "waste"
         ],
-        "phraseMeaning": "海洋クリーンアッププロジェクトはプラスチック廃棄物を除去します"
+        "phraseMeaning": "海洋クリーンアッププロジェクトは、プラスチック廃棄物を除去します"
       },
       {
         "id": "phrase-716",
@@ -8358,7 +8358,7 @@
           "and",
           "efficiency"
         ],
-        "phraseMeaning": "投資家は再生可能エネルギーと効率に資金を提供します"
+        "phraseMeaning": "投資家は再生可能エネルギーーと効率に資金を提供します"
       },
       {
         "id": "phrase-729",
@@ -8419,7 +8419,7 @@
           "fuel",
           "companies"
         ],
-        "phraseMeaning": "ダイベストメントキャンペーンは化石燃料企業をターゲットにします"
+        "phraseMeaning": "ダイベストメントキャンペーンは、化石燃料企業をターゲットにします"
       },
       {
         "id": "phrase-734",
@@ -8535,7 +8535,7 @@
           "local",
           "jobs"
         ],
-        "phraseMeaning": "エネルギー効率の仕事は地元の雇用を創出します"
+        "phraseMeaning": "エネルギーー効率の仕事は地元の雇用を創出します"
       },
       {
         "id": "phrase-744",
@@ -8795,7 +8795,7 @@
           "energy",
           "use"
         ],
-        "phraseMeaning": "エネルギー使用を減らすために競争します"
+        "phraseMeaning": "エネルギーー使用を減らすために競争します"
       },
       {
         "id": "phrase-767",
@@ -9142,7 +9142,7 @@
           "provides",
           "tools"
         ],
-        "phraseMeaning": "テクノロジーがツールを提供します"
+        "phraseMeaning": "テクノロジーーがツールを提供します"
       },
       {
         "id": "phrase-800",
@@ -9203,7 +9203,7 @@
           "from",
           "leaders"
         ],
-        "phraseMeaning": "彼らはリーダーに行動を要求します"
+        "phraseMeaning": "彼らはリーダーに行動を求めています"
       },
       {
         "id": "phrase-806",
@@ -9263,7 +9263,7 @@
           "demand",
           "it"
         ],
-        "phraseMeaning": "消費者はそれを要求します"
+        "phraseMeaning": "消費者はそれを求めています"
       },
       {
         "id": "phrase-812",
@@ -9613,7 +9613,7 @@
           "and",
           "video"
         ],
-        "phraseMeaning": "コンピュータビジョンは画像と動画を解釈します"
+        "phraseMeaning": "コンピュータービジョンは画像と動画を解釈します"
       },
       {
         "id": "phrase-12",
@@ -12093,7 +12093,7 @@
           "science",
           "students"
         ],
-        "phraseMeaning": "コンピュータサイエンスの学生だけでなく"
+        "phraseMeaning": "コンピューターサイエンスの学生だけでなく"
       },
       {
         "id": "phrase-243",
@@ -12535,7 +12535,7 @@
           "improves",
           "efficiency"
         ],
-        "phraseMeaning": "エネルギー管理におけるAIは効率を向上させます"
+        "phraseMeaning": "エネルギーー管理におけるAIは効率を向上させます"
       },
       {
         "id": "phrase-283",
@@ -12765,7 +12765,7 @@
           "ethics",
           "courses"
         ],
-        "phraseMeaning": "コンピュータサイエンスプログラムは倫理コースを追加します"
+        "phraseMeaning": "コンピューターサイエンスプログラムは倫理コースを追加します"
       },
       {
         "id": "phrase-305",
@@ -13139,7 +13139,7 @@
           "massive",
           "energy"
         ],
-        "phraseMeaning": "大規模モデルの訓練は大量のエネルギーを使用します"
+        "phraseMeaning": "大規模モデルの訓練は大量のエネルギーーを使用します"
       },
       {
         "id": "phrase-341",
@@ -13193,7 +13193,7 @@
           "for",
           "computation"
         ],
-        "phraseMeaning": "計算に再生可能エネルギーを使用します"
+        "phraseMeaning": "計算に再生可能エネルギーーを使用します"
       },
       {
         "id": "phrase-346",
@@ -13204,7 +13204,7 @@
           "energy",
           "use"
         ],
-        "phraseMeaning": "エネルギー使用を測定し報告します"
+        "phraseMeaning": "エネルギーー使用を測定し報告します"
       },
       {
         "id": "phrase-347",
@@ -13494,7 +13494,7 @@
           "our",
           "time"
         ],
-        "phraseMeaning": "これは私たちの時代の大きな課題です"
+        "phraseMeaning": "これは現代の大きな課題です"
       },
       {
         "id": "phrase-375",
@@ -13879,7 +13879,7 @@
           "use",
           "AI"
         ],
-        "phraseMeaning": "脳コンピュータインターフェースはAIを使用します"
+        "phraseMeaning": "脳コンピューターインターフェースはAIを使用します"
       },
       {
         "id": "phrase-412",
@@ -13940,7 +13940,7 @@
           "computers",
           "cannot"
         ],
-        "phraseMeaning": "古典的コンピュータができない問題を解決します"
+        "phraseMeaning": "古典的コンピューターができない問題を解決します"
       },
       {
         "id": "phrase-418",
@@ -14119,7 +14119,7 @@
           "computer",
           "interaction"
         ],
-        "phraseMeaning": "人間とコンピュータの相互作用を改善できます"
+        "phraseMeaning": "人間とコンピューターの相互作用を改善できます"
       },
       {
         "id": "phrase-436",
@@ -15067,7 +15067,7 @@
           "Islam",
           "Hinduism"
         ],
-        "phraseMeaning": "主要な世界の宗教にはキリスト教イスラム教ヒンドゥー教が含まれます"
+        "phraseMeaning": "主要な世界の宗教には、キリスト教イスラム教ヒンドゥー教が含まれます"
       },
       {
         "id": "phrase-32",
@@ -17188,7 +17188,7 @@
           "and",
           "innovation"
         ],
-        "phraseMeaning": "若者はエネルギーと革新をもたらします"
+        "phraseMeaning": "若者はエネルギーーと革新をもたらします"
       },
       {
         "id": "phrase-235",
@@ -18014,7 +18014,7 @@
           "these",
           "inequities"
         ],
-        "phraseMeaning": "正義はこれらの不公平に対処することを要求します"
+        "phraseMeaning": "正義はこれらの不公平に対処することを求めています"
       },
       {
         "id": "phrase-314",
@@ -29489,7 +29489,7 @@
           "healthy",
           "land"
         ],
-        "phraseMeaning": "私たちはきれいな空気、新鮮な水、健康な土地に依存しています",
+        "phraseMeaning": "私たちはきれいな空気、新鮮な水、そして健康な土地に依存しています",
         "segments": [
           {
             "word": "We",
@@ -29556,7 +29556,7 @@
           "problems",
           "today"
         ],
-        "phraseMeaning": "しかし私たちの惑星は今日多くの環境問題に直面しています",
+        "phraseMeaning": "しかし地球は今、日多くの環境問題に直面しています",
         "segments": [
           {
             "word": "However",
@@ -29616,7 +29616,7 @@
           "and",
           "plants"
         ],
-        "phraseMeaning": "これらの問題は人間だけでなく動物や植物にも影響します",
+        "phraseMeaning": "これらの問題は人、間だけでなく動物や植物にも影響します",
         "segments": [
           {
             "word": "These",
@@ -29688,7 +29688,7 @@
           "take",
           "action"
         ],
-        "phraseMeaning": "私たちはこれらの問題を理解し行動を起こさなければなりません",
+        "phraseMeaning": "私たちはこ、れらの問題を理解し行動を起こさなければなりません",
         "segments": [
           {
             "word": "We",
@@ -30014,7 +30014,7 @@
           "us",
           "sick"
         ],
-        "phraseMeaning": "汚染された空気を吸うと私たちは病気になることがあります",
+        "phraseMeaning": "汚染された空気を吸うと私たちは病、気になることがあります",
         "segments": [
           {
             "word": "When",
@@ -30139,7 +30139,7 @@
           "heart",
           "disease"
         ],
-        "phraseMeaning": "大気汚染は呼吸器疾患や心臓病を引き起こす可能性があります",
+        "phraseMeaning": "大気汚染は呼、吸器疾患や心臓病を引き起こす可能性があります",
         "segments": [
           {
             "word": "Air",
@@ -30204,7 +30204,7 @@
           "wear",
           "masks"
         ],
-        "phraseMeaning": "一部の都市では空気がとても悪く人々はマスクを着用します",
+        "phraseMeaning": "一部の都市では空、気がとても悪く人々はマスクを着用します",
         "segments": [
           {
             "word": "In",
@@ -30394,7 +30394,7 @@
           "for",
           "life"
         ],
-        "phraseMeaning": "きれいな水は生命に不可欠です",
+        "phraseMeaning": "きれいな水は生命に欠かせません",
         "segments": [
           {
             "word": "Clean",
@@ -30905,7 +30905,7 @@
           "harm",
           "humans"
         ],
-        "phraseMeaning": "小さなプラスチック片を食べる魚は人間にも害を及ぼす可能性があります",
+        "phraseMeaning": "小さなプラスチック片を食べる魚は人、間にも害を及ぼす可能性があります",
         "segments": [
           {
             "word": "Fish",
@@ -31194,7 +31194,7 @@
           "and",
           "cities"
         ],
-        "phraseMeaning": "人々は農場や都市のためのスペースを作るために木を切り倒します",
+        "phraseMeaning": "人々は農、場や都市のためのスペースを作るために木を切り倒します",
         "segments": [
           {
             "word": "People",
@@ -31329,7 +31329,7 @@
           "our",
           "planet"
         ],
-        "phraseMeaning": "しかし森林は私たちの惑星の肺です",
+        "phraseMeaning": "しかし森林は地球の肺です",
         "segments": [
           {
             "word": "But",
@@ -32562,7 +32562,7 @@
           "these",
           "problems"
         ],
-        "phraseMeaning": "良いニュースは私たちがこれらの問題を解決するのを助けることができるということです",
+        "phraseMeaning": "良いニュースは私、たちがこれらの問題を解決するのを助けることができるということです",
         "segments": [
           {
             "word": "The",
@@ -33192,7 +33192,7 @@
           "new",
           "products"
         ],
-        "phraseMeaning": "リサイクルとは古い材料を新しい製品に変えることを意味します",
+        "phraseMeaning": "リサイクルとは古、い材料を新しい製品に変えることを意味します",
         "segments": [
           {
             "word": "Recycle",
@@ -33490,7 +33490,7 @@
           "the",
           "planet"
         ],
-        "phraseMeaning": "歩くことと自転車に乗ることは惑星にとってずっと良いです",
+        "phraseMeaning": "歩くことと自転車に乗ることは惑、星にとってずっと良いです",
         "segments": [
           {
             "word": "Walking",
@@ -33828,7 +33828,7 @@
           "less",
           "pollution"
         ],
-        "phraseMeaning": "これらの車はガソリンを燃やさないので汚染が少ないです",
+        "phraseMeaning": "これらの車はガ、ソリンを燃やさないので汚染が少ないです",
         "segments": [
           {
             "word": "These",
@@ -33959,7 +33959,7 @@
           "and",
           "gas"
         ],
-        "phraseMeaning": "私たちの電気のほとんどは石炭とガスを燃やすことから来ます",
+        "phraseMeaning": "私たちの電気のほとんどは石、炭とガスを燃やすことから来ます",
         "segments": [
           {
             "word": "Most",
@@ -34061,7 +34061,7 @@
           "less",
           "fuel"
         ],
-        "phraseMeaning": "より少ない電気を使えば発電所はより少ない燃料を燃やします",
+        "phraseMeaning": "より少ない電気を使えば発電所はよ、り少ない燃料を燃やします",
         "segments": [
           {
             "word": "If",
@@ -34131,7 +34131,7 @@
           "using",
           "them"
         ],
-        "phraseMeaning": "使っていないときはコンピューターやテレビを消すことができます",
+        "phraseMeaning": "使っていないときはコ、ンピューターやテレビを消すことができます",
         "segments": [
           {
             "word": "We",
@@ -34317,7 +34317,7 @@
           "clean",
           "energy"
         ],
-        "phraseMeaning": "ソーラーパネルと風力タービンはクリーンエネルギーを提供します",
+        "phraseMeaning": "ソーラーパネルと風力タービンはク、リーンエネルギーを提供します",
         "segments": [
           {
             "word": "Solar",
@@ -35239,7 +35239,7 @@
           "healthy",
           "planet"
         ],
-        "phraseMeaning": "私たちの子供や孫はきれいで健康な惑星を受け取る権利があります",
+        "phraseMeaning": "私たちの子供や孫はき、れいで健康な惑星を受け取る権利があります",
         "segments": [
           {
             "word": "Our",
@@ -35766,7 +35766,7 @@
           "this",
           "pollution"
         ],
-        "phraseMeaning": "地元の農家から食べ物を買うことはこの汚染を減らします",
+        "phraseMeaning": "地元の農家から食べ物を買うことはこ、の汚染を減らします",
         "segments": [
           {
             "word": "Buying",
@@ -37124,7 +37124,7 @@
           "is",
           "essential"
         ],
-        "phraseMeaning": "国際協力は不可欠です",
+        "phraseMeaning": "国際協力は欠かせません",
         "segments": [
           {
             "word": "International",
@@ -37212,7 +37212,7 @@
           "other",
           "countries"
         ],
-        "phraseMeaning": "ある国の汚染は他の国々に影響を与える可能性があります",
+        "phraseMeaning": "ある国の汚染は他、の国々に影響を与える可能性があります",
         "segments": [
           {
             "word": "Pollution",
@@ -37269,7 +37269,7 @@
           "these",
           "problems"
         ],
-        "phraseMeaning": "国々はこれらの問題を解決するために協力しなければなりません",
+        "phraseMeaning": "国々はこ、れらの問題を解決するために協力しなければなりません",
         "segments": [
           {
             "word": "Countries",
@@ -37877,7 +37877,7 @@
           "energy",
           "sources"
         ],
-        "phraseMeaning": "科学者たちは新しいクリーンエネルギー源を開発しています",
+        "phraseMeaning": "科学者たちは新、しいクリーンエネルギー源を開発しています",
         "segments": [
           {
             "word": "Scientists",
@@ -38061,7 +38061,7 @@
           "environmental",
           "impact"
         ],
-        "phraseMeaning": "新しいアプリは人々が環境への影響を追跡するのを助けます",
+        "phraseMeaning": "新しいアプリは人、々が環境への影響を追跡するのを助けます",
         "segments": [
           {
             "word": "New",
@@ -38224,7 +38224,7 @@
           "our",
           "planet"
         ],
-        "phraseMeaning": "海は私たちの惑星のほとんどを覆っています",
+        "phraseMeaning": "海は地球のほとんどを覆っています",
         "segments": [
           {
             "word": "Oceans",
@@ -40071,7 +40071,7 @@
           "amazing",
           "progress"
         ],
-        "phraseMeaning": "過去百年で私たちは驚くべき進歩を見てきました",
+        "phraseMeaning": "過去百年で私たちは驚くべき進歩を遂げてきました",
         "segments": [
           {
             "word": "In",
@@ -40140,7 +40140,7 @@
           "everyday",
           "life"
         ],
-        "phraseMeaning": "不可能に見えたことが今では日常生活の一部です",
+        "phraseMeaning": "不可能だと思われていたことが今では日常生活の一部です",
         "segments": [
           {
             "word": "Things",
@@ -40266,7 +40266,7 @@
           "our",
           "lives"
         ],
-        "phraseMeaning": "科学と技術がどのように私たちの生活を形作るか探りましょう",
+        "phraseMeaning": "科学と技術がどのように私たちの生活を形づくるか探りましょう",
         "segments": [
           {
             "word": "Let",
@@ -40386,7 +40386,7 @@
           "mobile",
           "phones"
         ],
-        "phraseMeaning": "わずか三十年前はほとんどの人が携帯電話を持っていませんでした",
+        "phraseMeaning": "わずか三十年前はほ、とんどの人が携帯電話を持っていませんでした",
         "segments": [
           {
             "word": "Just",
@@ -41267,7 +41267,7 @@
           "our",
           "pockets"
         ],
-        "phraseMeaning": "今ではポケットにもっと多くのコンピューティングパワーを持ち運びます",
+        "phraseMeaning": "今ではポ、ケットにもっと多くのコンピューティングパワーを持ち運びます",
         "segments": [
           {
             "word": "Now",
@@ -41425,7 +41425,7 @@
           "calculate",
           "numbers"
         ],
-        "phraseMeaning": "スプレッドシートはデータを整理し数字を計算するのを助けます",
+        "phraseMeaning": "スプレッドシートはデ、ータを整理し数字を計算するのを助けます",
         "segments": [
           {
             "word": "Spreadsheets",
@@ -41481,7 +41481,7 @@
           "ideas",
           "visually"
         ],
-        "phraseMeaning": "プレゼンテーションソフトウェアは視覚的にアイデアを共有するのを助けます",
+        "phraseMeaning": "プレゼンテーションソフトウェアは視、覚的にアイデアを共有するのを助けます",
         "segments": [
           {
             "word": "Presentation",
@@ -41964,7 +41964,7 @@
           "conditions",
           "early"
         ],
-        "phraseMeaning": "これらの道具はがんや他の深刻な状態を早期に検出するのを助けます",
+        "phraseMeaning": "これらの道具はが、んや他の深刻な状態を早期に検出するのを助けます",
         "segments": [
           {
             "word": "These",
@@ -42484,7 +42484,7 @@
           "diseases",
           "better"
         ],
-        "phraseMeaning": "科学者は病気をよりよく理解するために遺伝子を研究しています",
+        "phraseMeaning": "科学者は病、気をよりよく理解するために遺伝子を研究しています",
         "segments": [
           {
             "word": "Scientists",
@@ -42776,7 +42776,7 @@
           "distant",
           "planets"
         ],
-        "phraseMeaning": "今日宇宙機関はロボットを遠い惑星を探検するために送ります",
+        "phraseMeaning": "今日宇宙機関はロ、ボットを遠い惑星を探検するために送ります",
         "segments": [
           {
             "word": "Today",
@@ -43430,7 +43430,7 @@
           "other",
           "planets"
         ],
-        "phraseMeaning": "人類はいつか他の惑星にコロニーを設立するかもしれません",
+        "phraseMeaning": "人類はい、つか他の惑星にコロニーを設立するかもしれません",
         "segments": [
           {
             "word": "Humans",
@@ -43549,7 +43549,7 @@
           "distances",
           "comfortably"
         ],
-        "phraseMeaning": "車は私たちが長距離を快適に移動することを可能にします",
+        "phraseMeaning": "車は私、たちが長距離を快適に移動することを可能にします",
         "segments": [
           {
             "word": "Cars",
@@ -43874,7 +43874,7 @@
           "traffic",
           "accidents"
         ],
-        "phraseMeaning": "この技術は交通事故を減らすことができるかもしれません",
+        "phraseMeaning": "この技術は交、通事故を減らすことができるかもしれません",
         "segments": [
           {
             "word": "This",
@@ -45051,7 +45051,7 @@
           "for",
           "longer"
         ],
-        "phraseMeaning": "より良いバッテリーはより多くのエネルギーをより長く蓄えます",
+        "phraseMeaning": "より良いバッテリーはよ、り多くのエネルギーをより長く蓄えます",
         "segments": [
           {
             "word": "Better",
@@ -45461,7 +45461,7 @@
           "nuclear",
           "energy"
         ],
-        "phraseMeaning": "科学者は原子力エネルギーの未来について議論し続けています",
+        "phraseMeaning": "科学者は原、子力エネルギーの未来について議論し続けています",
         "segments": [
           {
             "word": "Scientists",
@@ -45523,7 +45523,7 @@
           "access",
           "information"
         ],
-        "phraseMeaning": "インターネットは情報へのアクセス方法を革命化しました",
+        "phraseMeaning": "インターネットは情、報へのアクセス方法を革命化しました",
         "segments": [
           {
             "word": "The",
@@ -45581,7 +45581,7 @@
           "and",
           "libraries"
         ],
-        "phraseMeaning": "インターネット以前は人々は本と図書館に頼っていました",
+        "phraseMeaning": "インターネット以前は人、々は本と図書館に頼っていました",
         "segments": [
           {
             "word": "Before",
@@ -45995,7 +45995,7 @@
           "to",
           "calculus"
         ],
-        "phraseMeaning": "教育ビデオは料理から微積分まであらゆることを教えます",
+        "phraseMeaning": "教育ビデオは料、理から微積分まであらゆることを教えます",
         "segments": [
           {
             "word": "Educational",
@@ -46057,7 +46057,7 @@
           "top",
           "universities"
         ],
-        "phraseMeaning": "オンラインコースはトップ大学から学ぶことを可能にします",
+        "phraseMeaning": "オンラインコースはト、ップ大学から学ぶことを可能にします",
         "segments": [
           {
             "word": "Online",
@@ -46203,7 +46203,7 @@
           "our",
           "world"
         ],
-        "phraseMeaning": "ロボットは私たちの世界でますます一般的になっています",
+        "phraseMeaning": "ロボットは私、たちの世界でますます一般的になっています",
         "segments": [
           {
             "word": "Robots",
@@ -46302,7 +46302,7 @@
           "without",
           "tiring"
         ],
-        "phraseMeaning": "これらのロボットは疲れることなく一日24時間働くことができます",
+        "phraseMeaning": "これらのロボットは疲、れることなく一日24時間働くことができます",
         "segments": [
           {
             "word": "These",
@@ -47107,7 +47107,7 @@
           "prototypes",
           "quickly"
         ],
-        "phraseMeaning": "デザイナーは3Dプリンターを使ってプロトタイプを素早くテストします",
+        "phraseMeaning": "デザイナーは3、Dプリンターを使ってプロトタイプを素早くテストします",
         "segments": [
           {
             "word": "Designers",
@@ -47163,7 +47163,7 @@
           "for",
           "patients"
         ],
-        "phraseMeaning": "医師は患者のためにカスタマイズされた義肢を印刷できます",
+        "phraseMeaning": "医師は患、者のためにカスタマイズされた義肢を印刷できます",
         "segments": [
           {
             "word": "Doctors",
@@ -47378,7 +47378,7 @@
           "housing",
           "quickly"
         ],
-        "phraseMeaning": "これは手頃な価格の住宅を素早く提供できるかもしれません",
+        "phraseMeaning": "これは手、頃な価格の住宅を素早く提供できるかもしれません",
         "segments": [
           {
             "word": "This",
@@ -47978,7 +47978,7 @@
           "world",
           "population"
         ],
-        "phraseMeaning": "これらの作物は増加する世界人口を養うのを助けることができます",
+        "phraseMeaning": "これらの作物は増、加する世界人口を養うのを助けることができます",
         "segments": [
           {
             "word": "These",
@@ -48626,7 +48626,7 @@
           "complex",
           "games"
         ],
-        "phraseMeaning": "AIシステムは今複雑なゲームで人間に勝つことができます",
+        "phraseMeaning": "AIシステムは今、複雑なゲームで人間に勝つことができます",
         "segments": [
           {
             "word": "AI",
@@ -48818,7 +48818,7 @@
           "by",
           "humans"
         ],
-        "phraseMeaning": "ロボットは現在人間が行う多くの仕事をするかもしれません",
+        "phraseMeaning": "ロボットは現、在人間が行う多くの仕事をするかもしれません",
         "segments": [
           {
             "word": "Robots",
@@ -48881,7 +48881,7 @@
           "creative",
           "work"
         ],
-        "phraseMeaning": "これは人々がより創造的な仕事をすることを可能にするかもしれません",
+        "phraseMeaning": "これは人、々がより創造的な仕事をすることを可能にするかもしれません",
         "segments": [
           {
             "word": "This",
@@ -48992,7 +48992,7 @@
           "digital",
           "experiences"
         ],
-        "phraseMeaning": "バーチャルリアリティは没入型のデジタル体験を作り出します",
+        "phraseMeaning": "バーチャルリアリティは没、入型のデジタル体験を作り出します",
         "segments": [
           {
             "word": "Virtual",
@@ -49345,7 +49345,7 @@
           "regular",
           "computers"
         ],
-        "phraseMeaning": "通常のコンピュータには不可能な問題を解決できるかもしれません",
+        "phraseMeaning": "通常のコンピュータには不、可能な問題を解決できるかもしれません",
         "segments": [
           {
             "word": "They",
@@ -49601,7 +49601,7 @@
           "and",
           "efficiency"
         ],
-        "phraseMeaning": "スマートホームは快適さと効率を高めるために技術を使います",
+        "phraseMeaning": "スマートホームは快、適さと効率を高めるために技術を使います",
         "segments": [
           {
             "word": "Smart",
@@ -49852,7 +49852,7 @@
           "watch",
           "entertainment"
         ],
-        "phraseMeaning": "ストリーミングサービスはエンターテインメントの視聴方法を変えました",
+        "phraseMeaning": "ストリーミングサービスはエ、ンターテインメントの視聴方法を変えました",
         "segments": [
           {
             "word": "Streaming",
@@ -50036,7 +50036,7 @@
           "of",
           "songs"
         ],
-        "phraseMeaning": "音楽ストリーミングは何百万もの曲へのアクセスを提供します",
+        "phraseMeaning": "音楽ストリーミングは何、百万もの曲へのアクセスを提供します",
         "segments": [
           {
             "word": "Music",
@@ -50308,7 +50308,7 @@
           "from",
           "anywhere"
         ],
-        "phraseMeaning": "オンラインショッピングはどこからでも製品を購入できます",
+        "phraseMeaning": "オンラインショッピングはど、こからでも製品を購入できます",
         "segments": [
           {
             "word": "Online",
@@ -50665,7 +50665,7 @@
           "together",
           "remotely"
         ],
-        "phraseMeaning": "オンライン協力ツールは生徒が遠隔で一緒に働くことを可能にします",
+        "phraseMeaning": "オンライン協力ツールは生、徒が遠隔で一緒に働くことを可能にします",
         "segments": [
           {
             "word": "Online",
@@ -51340,7 +51340,7 @@
           "are",
           "essential"
         ],
-        "phraseMeaning": "強力なセキュリティ対策が不可欠です",
+        "phraseMeaning": "強力なセキュリティ対策が欠かせません",
         "segments": [
           {
             "word": "Strong",
@@ -51478,7 +51478,7 @@
           "social",
           "relationships"
         ],
-        "phraseMeaning": "これは身体的健康と社会的関係を害する可能性があります",
+        "phraseMeaning": "これは身、体的健康と社会的関係を害する可能性があります",
         "segments": [
           {
             "word": "This",
@@ -51809,7 +51809,7 @@
           "our",
           "planet"
         ],
-        "phraseMeaning": "私たちの惑星を害しないようにしなければなりません",
+        "phraseMeaning": "地球を害しないようにしなければなりません",
         "segments": [
           {
             "word": "We",
@@ -51915,7 +51915,7 @@
           "control",
           "it"
         ],
-        "phraseMeaning": "技術は人類に奉仕すべきでそれを支配すべきではありません",
+        "phraseMeaning": "技術は人、類に奉仕すべきでそれを支配すべきではありません",
         "segments": [
           {
             "word": "Technology",
@@ -52682,7 +52682,7 @@
           "our",
           "dreams"
         ],
-        "phraseMeaning": "夢を追求するエネルギーを与えます",
+        "phraseMeaning": "夢を追い求めるエネルギーを与えます",
         "segments": [
           {
             "word": "It",
@@ -52739,7 +52739,7 @@
           "and",
           "friends"
         ],
-        "phraseMeaning": "家族や友人とつながるのを助けます",
+        "phraseMeaning": "家族や友人と交流するのを助けます",
         "segments": [
           {
             "word": "It",
@@ -52795,7 +52795,7 @@
           "healthy",
           "lifestyle"
         ],
-        "phraseMeaning": "多くの要因が健康的なライフスタイルに貢献します",
+        "phraseMeaning": "多くの要因が健康的なライフスタイルに役立ちます",
         "segments": [
           {
             "word": "Many",
@@ -53653,7 +53653,7 @@
           "vitamin",
           "A"
         ],
-        "phraseMeaning": "ニンジンのようなオレンジ色の野菜はビタミンAを含みます",
+        "phraseMeaning": "ニンジンのようなオレンジ色の野菜はビ、タミンAを含みます",
         "segments": [
           {
             "word": "Orange",
@@ -53894,7 +53894,7 @@
           "for",
           "life"
         ],
-        "phraseMeaning": "水は生命に不可欠です",
+        "phraseMeaning": "水は生命に欠かせません",
         "segments": [
           {
             "word": "Water",
@@ -54084,7 +54084,7 @@
           "and",
           "diabetes"
         ],
-        "phraseMeaning": "砂糖の取りすぎは肥満と糖尿病につながる可能性があります",
+        "phraseMeaning": "砂糖の取りすぎは肥、満と糖尿病につながる可能性があります",
         "segments": [
           {
             "word": "Too",
@@ -54560,7 +54560,7 @@
           "and",
           "teeth"
         ],
-        "phraseMeaning": "カルシウムは強い骨と歯に不可欠です",
+        "phraseMeaning": "カルシウムは強い骨と歯に欠かせません",
         "segments": [
           {
             "word": "Calcium",
@@ -55525,7 +55525,7 @@
           "maintaining",
           "health"
         ],
-        "phraseMeaning": "定期的な運動は健康維持に不可欠です",
+        "phraseMeaning": "定期的な運動は健康維持に欠かせません",
         "segments": [
           {
             "word": "Regular",
@@ -55807,7 +55807,7 @@
           "and",
           "cycling"
         ],
-        "phraseMeaning": "有酸素運動にはランニング水泳サイクリングが含まれます",
+        "phraseMeaning": "有酸素運動にはラ、ンニング水泳サイクリングが含まれます",
         "segments": [
           {
             "word": "Aerobic",
@@ -59265,7 +59265,7 @@
           "on",
           "timing"
         ],
-        "phraseMeaning": "昼寝はタイミングによって有益または有害になる可能性があります",
+        "phraseMeaning": "昼寝はタ、イミングによって有益または有害になる可能性があります",
         "segments": [
           {
             "word": "Naps",
@@ -59847,7 +59847,7 @@
           "and",
           "body"
         ],
-        "phraseMeaning": "しかし慢性的なストレスは心と体の両方を害する可能性があります",
+        "phraseMeaning": "しかし慢性的なストレスは心、と体の両方を害する可能性があります",
         "segments": [
           {
             "word": "But",
@@ -60214,7 +60214,7 @@
           "mental",
           "health"
         ],
-        "phraseMeaning": "社会的つながりは精神的健康に不可欠です",
+        "phraseMeaning": "社会的つながりは精神的健康に欠かせません",
         "segments": [
           {
             "word": "Social",
@@ -60374,7 +60374,7 @@
           "mental",
           "health"
         ],
-        "phraseMeaning": "他者を助けることは私たち自身の精神的健康も改善します",
+        "phraseMeaning": "他者を助けることは私、たち自身の精神的健康も改善します",
         "segments": [
           {
             "word": "Helping",
@@ -61477,7 +61477,7 @@
           "and",
           "motivation"
         ],
-        "phraseMeaning": "現実的な目標を設定することは方向性と動機を提供します",
+        "phraseMeaning": "現実的な目標を設定することは方、向性と動機を提供します",
         "segments": [
           {
             "word": "Setting",
@@ -63031,7 +63031,7 @@
           "cancer",
           "risk"
         ],
-        "phraseMeaning": "日光への過度の曝露は皮膚を損傷しがんのリスクを高めます",
+        "phraseMeaning": "日光への過度の曝露は皮、膚を損傷しがんのリスクを高めます",
         "segments": [
           {
             "word": "Too",
@@ -64828,7 +64828,7 @@
           "unhealthy",
           "choices"
         ],
-        "phraseMeaning": "仲間からの圧力は不健康な選択につながる可能性があります",
+        "phraseMeaning": "仲間からの圧力は不、健康な選択につながる可能性があります",
         "segments": [
           {
             "word": "Peer",
@@ -65337,7 +65337,7 @@
           "of",
           "driving"
         ],
-        "phraseMeaning": "運転する代わりに短い用事は歩いたり自転車に乗ったりします",
+        "phraseMeaning": "運転する代わりに短い用事は歩、いたり自転車に乗ったりします",
         "segments": [
           {
             "word": "Walk",
@@ -65397,7 +65397,7 @@
           "feel",
           "overwhelming"
         ],
-        "phraseMeaning": "健康的な変化をすることは圧倒されるように感じることがあります",
+        "phraseMeaning": "健康的な変化をすることは圧、倒されるように感じることがあります",
         "segments": [
           {
             "word": "Making",
@@ -68025,7 +68025,7 @@
           "we",
           "love"
         ],
-        "phraseMeaning": "健康的な習慣は私たちが愛することをすることを可能にします",
+        "phraseMeaning": "健康的な習慣は私、たちが愛することをすることを可能にします",
         "segments": [
           {
             "word": "Healthy",
@@ -69839,7 +69839,7 @@
           "modern",
           "life"
         ],
-        "phraseMeaning": "他の文化を理解することは現代生活で不可欠です"
+        "phraseMeaning": "他の文化を理解することは現代生活で欠かせません"
       },
       {
         "id": "phrase-4",
@@ -69995,7 +69995,7 @@
           "than",
           "another"
         ],
-        "phraseMeaning": "どの文化も他より良いまたは悪いということはありません"
+        "phraseMeaning": "どの文化も他より良いまたは悪、いということはありません"
       },
       {
         "id": "phrase-16",
@@ -70033,7 +70033,7 @@
           "our",
           "lives"
         ],
-        "phraseMeaning": "この多様性を理解することは私たちの生活を豊かにします"
+        "phraseMeaning": "この多様性を理解することは私、たちの生活を豊かにします"
       },
       {
         "id": "phrase-19",
@@ -70390,7 +70390,7 @@
           "on",
           "holidays"
         ],
-        "phraseMeaning": "メキシコでは家族が休日に特別な食事のために集まります"
+        "phraseMeaning": "メキシコでは家、族が休日に特別な食事のために集まります"
       },
       {
         "id": "phrase-47",
@@ -70711,7 +70711,7 @@
           "and",
           "Buddhism"
         ],
-        "phraseMeaning": "主要な世界の宗教にはキリスト教イスラム教ヒンドゥー教仏教が含まれます"
+        "phraseMeaning": "主要な世界の宗教にはキ、リスト教イスラム教ヒンドゥー教仏教が含まれます"
       },
       {
         "id": "phrase-71",
@@ -70757,7 +70757,7 @@
           "moral",
           "decisions"
         ],
-        "phraseMeaning": "道徳的決定を導きます"
+        "phraseMeaning": "道徳的選択を導きます"
       },
       {
         "id": "phrase-75",
@@ -70807,7 +70807,7 @@
           "peaceful",
           "coexistence"
         ],
-        "phraseMeaning": "宗教的寛容は平和な共存に不可欠です"
+        "phraseMeaning": "宗教的寛容は平和な共存に欠かせません"
       },
       {
         "id": "phrase-79",
@@ -70995,7 +70995,7 @@
           "well",
           "academically"
         ],
-        "phraseMeaning": "それでもフィンランドの生徒は学業的に非常によく成績を上げます"
+        "phraseMeaning": "それでもフィンランドの生徒は学、業的に非常によく成績を上げます"
       },
       {
         "id": "phrase-94",
@@ -71315,7 +71315,7 @@
           "complex",
           "polyrhythms"
         ],
-        "phraseMeaning": "アフリカのドラミングは複雑なポリリズムを持っています"
+        "phraseMeaning": "アフリカのドラミングは複、雑なポリリズムを持っています"
       },
       {
         "id": "phrase-120",
@@ -71401,7 +71401,7 @@
           "ancient",
           "stories"
         ],
-        "phraseMeaning": "アボリジニのオーストラリア芸術は古代の物語を語ります"
+        "phraseMeaning": "アボリジニのオーストラリア芸術は古、代の物語を語ります"
       },
       {
         "id": "phrase-127",
@@ -71429,7 +71429,7 @@
           "global",
           "audiences"
         ],
-        "phraseMeaning": "今日のアーティストは世界的な聴衆に語りかける作品を作ります"
+        "phraseMeaning": "今日のアーティストは世、界的な聴衆に語りかける作品を作ります"
       },
       {
         "id": "phrase-129",
@@ -71487,7 +71487,7 @@
           "about",
           "groups"
         ],
-        "phraseMeaning": "ステレオタイプはグループについての単純化された信念です"
+        "phraseMeaning": "ステレオタイプはグ、ループについての単純化された信念です"
       },
       {
         "id": "phrase-134",
@@ -71565,7 +71565,7 @@
           "own",
           "standards"
         ],
-        "phraseMeaning": "自文化中心主義は自分の基準で他の文化を判断することです"
+        "phraseMeaning": "自文化中心主義は自、分の基準で他の文化を判断することです"
       },
       {
         "id": "phrase-140",
@@ -71602,7 +71602,7 @@
           "own",
           "context"
         ],
-        "phraseMeaning": "これは文化をそれ自身の文脈で理解することを意味します"
+        "phraseMeaning": "これは文、化をそれ自身の文脈で理解することを意味します"
       },
       {
         "id": "phrase-143",
@@ -71825,7 +71825,7 @@
           "human",
           "experiences"
         ],
-        "phraseMeaning": "違いにもかかわらず私たちは多くの人間の経験を共有します"
+        "phraseMeaning": "違いにもかかわらず私たちは多、くの人間の経験を共有します"
       },
       {
         "id": "phrase-162",
@@ -72043,7 +72043,7 @@
           "is",
           "essential"
         ],
-        "phraseMeaning": "私たちの相互接続された世界では文化的理解は不可欠です"
+        "phraseMeaning": "私たちの相互接続された世界では文、化的理解は欠かせません"
       },
       {
         "id": "phrase-179",
@@ -72212,7 +72212,7 @@
           "communication",
           "easier"
         ],
-        "phraseMeaning": "テクノロジーは異文化コミュニケーションをより簡単にします"
+        "phraseMeaning": "テクノロジーは異、文化コミュニケーションをより簡単にします"
       },
       {
         "id": "phrase-193",
@@ -72635,7 +72635,7 @@
           "is",
           "essential"
         ],
-        "phraseMeaning": "現地の法律と習慣を尊重することは不可欠です"
+        "phraseMeaning": "現地の法律と習慣を尊重することは欠かせません"
       },
       {
         "id": "phrase-227",
@@ -72648,7 +72648,7 @@
           "one",
           "identity"
         ],
-        "phraseMeaning": "統合は自分のアイデンティティを失うことを意味しません"
+        "phraseMeaning": "統合は自、分のアイデンティティを失うことを意味しません"
       },
       {
         "id": "phrase-228",
@@ -72783,7 +72783,7 @@
           "be",
           "universal"
         ],
-        "phraseMeaning": "当たり前だと思っていたことは普遍的ではないかもしれません"
+        "phraseMeaning": "当たり前だと思っていたことは普、遍的ではないかもしれません"
       },
       {
         "id": "phrase-238",
@@ -72831,7 +72831,7 @@
           "restoration",
           "projects"
         ],
-        "phraseMeaning": "観光客からのお金は修復プロジェクトに資金を提供します"
+        "phraseMeaning": "観光客からのお金は修、復プロジェクトに資金を提供します"
       },
       {
         "id": "phrase-242",
@@ -72855,7 +72855,7 @@
           "fragile",
           "sites"
         ],
-        "phraseMeaning": "あまりに多くの訪問者は壊れやすい場所を損傷する可能性があります"
+        "phraseMeaning": "あまりに多くの訪問者は壊、れやすい場所を損傷する可能性があります"
       },
       {
         "id": "phrase-244",
@@ -72880,7 +72880,7 @@
           "tourist",
           "entertainment"
         ],
-        "phraseMeaning": "伝統は観光客の娯楽のためだけに演じられるかもしれません"
+        "phraseMeaning": "伝統は観、光客の娯楽のためだけに演じられるかもしれません"
       },
       {
         "id": "phrase-246",
@@ -73089,7 +73089,7 @@
           "and",
           "communities"
         ],
-        "phraseMeaning": "このサービスはボランティアとコミュニティの両方を変えます"
+        "phraseMeaning": "このサービスはボ、ランティアとコミュニティの両方を変えます"
       },
       {
         "id": "phrase-263",
@@ -73102,7 +73102,7 @@
           "global",
           "networks"
         ],
-        "phraseMeaning": "ソーシャルメディアは若者がグローバルなネットワークを形成することを可能にします"
+        "phraseMeaning": "ソーシャルメディアは若、者がグローバルなネットワークを形成することを可能にします"
       },
       {
         "id": "phrase-264",
@@ -73253,7 +73253,7 @@
           "in",
           "another"
         ],
-        "phraseMeaning": "ある場所で適切なことが別の場所では気分を害するかもしれません"
+        "phraseMeaning": "ある場所で適切なことが別の場所では気、分を害するかもしれません"
       },
       {
         "id": "phrase-277",
@@ -73336,7 +73336,7 @@
           "costly",
           "mistakes"
         ],
-        "phraseMeaning": "これらの違いを理解することは高くつく間違いを防ぎます"
+        "phraseMeaning": "これらの違いを理解することは高、くつく間違いを防ぎます"
       },
       {
         "id": "phrase-284",
@@ -73508,7 +73508,7 @@
           "individual",
           "people"
         ],
-        "phraseMeaning": "すべての文化の背後には個々の人がいることを覚えています"
+        "phraseMeaning": "すべての文化の背後には個、々の人がいることを覚えています"
       },
       {
         "id": "phrase-298",
@@ -74085,7 +74085,7 @@
           "unintentional",
           "offense"
         ],
-        "phraseMeaning": "これらのシンボルを理解することは意図しない不快感を防ぎます"
+        "phraseMeaning": "これらのシンボルを理解することは意、図しない不快感を防ぎます"
       },
       {
         "id": "phrase-346",
@@ -74202,7 +74202,7 @@
           "native",
           "speakers"
         ],
-        "phraseMeaning": "しかし非ネイティブスピーカーには誤解されることがあります"
+        "phraseMeaning": "しかし非ネイティブスピーカーには誤、解されることがあります"
       },
       {
         "id": "phrase-355",
@@ -74278,7 +74278,7 @@
           "at",
           "them"
         ],
-        "phraseMeaning": "疑わしい時は人々と一緒に笑い彼らを笑わないでください"
+        "phraseMeaning": "疑わしい時は人、々と一緒に笑い彼らを笑わないでください"
       },
       {
         "id": "phrase-361",
@@ -74571,7 +74571,7 @@
           "peaceful",
           "world"
         ],
-        "phraseMeaning": "より平和な世界に貢献します"
+        "phraseMeaning": "より平和な世界に役立ちます"
       },
       {
         "id": "phrase-386",
@@ -74631,7 +74631,7 @@
           "important",
           "decisions"
         ],
-        "phraseMeaning": "キャリアを選ぶことは人生で最も重要な決定の一つです"
+        "phraseMeaning": "キャリアを選ぶことは人生で最も重要な選択の一つです"
       },
       {
         "id": "phrase-2",
@@ -74645,7 +74645,7 @@
           "and",
           "happiness"
         ],
-        "phraseMeaning": "あなたのキャリアはライフスタイル収入幸福に影響します"
+        "phraseMeaning": "あなたのキャリアはラ、イフスタイル収入幸福に影響します"
       },
       {
         "id": "phrase-3",
@@ -74656,7 +74656,7 @@
           "you",
           "become"
         ],
-        "phraseMeaning": "それはあなたが誰になるかを形作ります"
+        "phraseMeaning": "それはあなた自身を形作ります"
       },
       {
         "id": "phrase-4",
@@ -74956,7 +74956,7 @@
           "career",
           "satisfaction"
         ],
-        "phraseMeaning": "あなたの価値観はキャリアの満足度を決定します"
+        "phraseMeaning": "あなたの価値観はキャリアの満足度を選択します"
       },
       {
         "id": "phrase-29",
@@ -75110,7 +75110,7 @@
           "in",
           "learning"
         ],
-        "phraseMeaning": "教育テクノロジー専門家は学習にテクノロジーを統合します"
+        "phraseMeaning": "教育テクノロジー専門家は学、習にテクノロジーを統合します"
       },
       {
         "id": "phrase-42",
@@ -75144,7 +75144,7 @@
           "and",
           "programs"
         ],
-        "phraseMeaning": "ソフトウェア開発者はアプリケーションとプログラムを作ります"
+        "phraseMeaning": "ソフトウェア開発者はア、プリケーションとプログラムを作ります"
       },
       {
         "id": "phrase-45",
@@ -75155,7 +75155,7 @@
           "large",
           "datasets"
         ],
-        "phraseMeaning": "データサイエンティストは大規模なデータセットを分析します"
+        "phraseMeaning": "データサイエンティストは大、規模なデータセットを分析します"
       },
       {
         "id": "phrase-46",
@@ -75166,7 +75166,7 @@
           "digital",
           "information"
         ],
-        "phraseMeaning": "サイバーセキュリティ専門家はデジタル情報を保護します"
+        "phraseMeaning": "サイバーセキュリティ専門家はデ、ジタル情報を保護します"
       },
       {
         "id": "phrase-47",
@@ -75192,7 +75192,7 @@
           "offer",
           "flexibility"
         ],
-        "phraseMeaning": "テクノロジーの仕事はしばしば良い給料と柔軟性を提供します"
+        "phraseMeaning": "テクノロジーの仕事はし、ばしば良い給料と柔軟性を提供します"
       },
       {
         "id": "phrase-49",
@@ -75284,7 +75284,7 @@
           "visual",
           "content"
         ],
-        "phraseMeaning": "グラフィックデザイナーは視覚的なコンテンツを作ります"
+        "phraseMeaning": "グラフィックデザイナーは視、覚的なコンテンツを作ります"
       },
       {
         "id": "phrase-57",
@@ -75456,7 +75456,7 @@
           "is",
           "essential"
         ],
-        "phraseMeaning": "データリテラシーは不可欠です"
+        "phraseMeaning": "データリテラシーは欠かせません"
       },
       {
         "id": "phrase-72",
@@ -75549,7 +75549,7 @@
           "most",
           "workplaces"
         ],
-        "phraseMeaning": "チームワークはほとんどの職場で不可欠です"
+        "phraseMeaning": "チームワークはほとんどの職場で欠かせません"
       },
       {
         "id": "phrase-80",
@@ -75641,7 +75641,7 @@
           "informed",
           "decisions"
         ],
-        "phraseMeaning": "情報に基づいた決定を下します"
+        "phraseMeaning": "情報に基づいた選択を下します"
       },
       {
         "id": "phrase-88",
@@ -76212,7 +76212,7 @@
           "wind",
           "turbines"
         ],
-        "phraseMeaning": "再生可能エネルギー技術者はソーラーパネルと風力タービンを設置します"
+        "phraseMeaning": "再生可能エネルギー技術者はソ、ーラーパネルと風力タービンを設置します"
       },
       {
         "id": "phrase-136",
@@ -76263,7 +76263,7 @@
           "immersive",
           "experiences"
         ],
-        "phraseMeaning": "バーチャルリアリティデザイナーは没入型体験を作ります"
+        "phraseMeaning": "バーチャルリアリティデザイナーは没、入型体験を作ります"
       },
       {
         "id": "phrase-140",
@@ -76290,7 +76290,7 @@
           "DNA",
           "tests"
         ],
-        "phraseMeaning": "遺伝カウンセラーは人々がDNA検査を理解するのを助けます"
+        "phraseMeaning": "遺伝カウンセラーは人、々がDNA検査を理解するのを助けます"
       },
       {
         "id": "phrase-142",
@@ -76316,7 +76316,7 @@
           "environmental",
           "impact"
         ],
-        "phraseMeaning": "持続可能性コンサルタントは企業が環境への影響を減らすのを助けます"
+        "phraseMeaning": "持続可能性コンサルタントは企、業が環境への影響を減らすのを助けます"
       },
       {
         "id": "phrase-144",
@@ -76342,7 +76342,7 @@
           "online",
           "presence"
         ],
-        "phraseMeaning": "ソーシャルメディアマネージャーはオンラインプレゼンスを扱います"
+        "phraseMeaning": "ソーシャルメディアマネージャーはオ、ンラインプレゼンスを扱います"
       },
       {
         "id": "phrase-146",
@@ -76368,7 +76368,7 @@
           "digital",
           "marketing"
         ],
-        "phraseMeaning": "今ではすべての企業がデジタルマーケティングを必要とします"
+        "phraseMeaning": "今ではす、べての企業がデジタルマーケティングを必要とします"
       },
       {
         "id": "phrase-148",
@@ -76914,7 +76914,7 @@
           "earning",
           "money"
         ],
-        "phraseMeaning": "あなたのキャリアはただお金を稼ぐことだけではありません"
+        "phraseMeaning": "あなたのキャリアはた、だお金を稼ぐことだけではありません"
       },
       {
         "id": "phrase-195",
@@ -77143,7 +77143,7 @@
           "more",
           "hours"
         ],
-        "phraseMeaning": "高給の仕事はより多くの時間を必要とするかもしれません"
+        "phraseMeaning": "高給の仕事はよ、り多くの時間を必要とするかもしれません"
       },
       {
         "id": "phrase-215",
@@ -77660,7 +77660,7 @@
           "for",
           "professionals"
         ],
-        "phraseMeaning": "LinkedInはプロフェッショナルにとって不可欠です"
+        "phraseMeaning": "LinkedInはプ、ロフェッショナルにとって欠かせません"
       },
       {
         "id": "phrase-260",
@@ -77965,7 +77965,7 @@
           "is",
           "essential"
         ],
-        "phraseMeaning": "準備は不可欠です"
+        "phraseMeaning": "準備は欠かせません"
       },
       {
         "id": "phrase-288",
@@ -78790,7 +78790,7 @@
           "and",
           "portfolio"
         ],
-        "phraseMeaning": "サイドプロジェクトはスキルとポートフォリオを構築します"
+        "phraseMeaning": "サイドプロジェクトはス、キルとポートフォリオを構築します"
       },
       {
         "id": "phrase-363",
@@ -78961,7 +78961,7 @@
           "to",
           "groups"
         ],
-        "phraseMeaning": "リーダーはグループにコミュニケーションしなければなりません"
+        "phraseMeaning": "リーダーはグ、ループにコミュニケーションしなければなりません"
       },
       {
         "id": "phrase-378",
@@ -78973,7 +78973,7 @@
           "leadership",
           "opportunities"
         ],
-        "phraseMeaning": "このスキルを発展させることはリーダーシップの機会を開きます"
+        "phraseMeaning": "このスキルを発展させることはリ、ーダーシップの機会を開きます"
       },
       {
         "id": "phrase-379",
@@ -79049,7 +79049,7 @@
           "determines",
           "productivity"
         ],
-        "phraseMeaning": "時間管理は生産性を決定します"
+        "phraseMeaning": "時間管理は生産性を選択します"
       },
       {
         "id": "phrase-386",
@@ -79652,7 +79652,7 @@
           "suit",
           "you"
         ],
-        "phraseMeaning": "紙の上では完璧に見える仕事があなたに合わないかもしれません"
+        "phraseMeaning": "紙の上では完、璧に見える仕事があなたに合わないかもしれません"
       },
       {
         "id": "phrase-441",
@@ -79685,7 +79685,7 @@
           "perform",
           "better"
         ],
-        "phraseMeaning": "多様性を受け入れる企業はより良いパフォーマンスを示します"
+        "phraseMeaning": "多様性を受け入れる企業はよ、り良いパフォーマンスを示します"
       },
       {
         "id": "phrase-444",
@@ -79880,7 +79880,7 @@
           "career",
           "changes"
         ],
-        "phraseMeaning": "多くの人々はキャリア変更後により大きな充実感を見つけます"
+        "phraseMeaning": "多くの人々はキ、ャリア変更後により大きな充実感を見つけます"
       },
       {
         "id": "phrase-461",
@@ -79915,7 +79915,7 @@
           "different",
           "people"
         ],
-        "phraseMeaning": "成功は異なる人々にとって異なることを意味することを覚えていてください"
+        "phraseMeaning": "成功は異、なる人々にとって異なることを意味することを覚えていてください"
       },
       {
         "id": "phrase-464",
@@ -79931,7 +79931,7 @@
           "their",
           "field"
         ],
-        "phraseMeaning": "ある人にとってはそれは分野のトップに到達することです"
+        "phraseMeaning": "ある人にとってはそ、れは分野のトップに到達することです"
       },
       {
         "id": "phrase-465",
