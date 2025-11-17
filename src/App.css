@@ -482,10 +482,42 @@ option {
   width: 100%;
 }
 
-.choice-text {
+.choice-content {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.choice-text {
+  flex: 1;
   font-size: 1em;
   line-height: 1.4;
+}
+
+.toggle-details-btn-inline {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f8f9fa;
+  color: #667eea;
+  cursor: pointer;
+  transition: all 0.2s;
+  touch-action: manipulation;
+  font-weight: 600;
+  min-width: 32px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-details-btn-inline:hover {
+  background: #e7eaff;
+  border-color: #667eea;
 }
 
 .choice-controls {
@@ -521,6 +553,7 @@ option {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 6px;
 }
 
 .choice-detail-item {
