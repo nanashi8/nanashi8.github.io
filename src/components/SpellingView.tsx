@@ -49,6 +49,10 @@ function SpellingView({
   // 詳細表示の開閉状態
   const [showDetails, setShowDetails] = useState<boolean>(false);
   
+  // タイピング入力用の状態
+  const [typingInput, setTypingInput] = useState<string>('');
+  const [inputMode, setInputMode] = useState<'click' | 'typing'>('click');
+  
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
@@ -118,6 +122,19 @@ function SpellingView({
     const isCorrect = userWord === spellingState.correctWord;
     const currentQuestion = spellingState.questions[spellingState.currentIndex];
 
+    processAnswer(userWord, isCorrect, currentQuestion);
+  };
+
+  // タイピング入力用の答え合わせ
+  const checkTypingAnswer = (input: string) => {
+    const isCorrect = input === spellingState.correctWord;
+    const currentQuestion = spellingState.questions[spellingState.currentIndex];
+
+    processAnswer(input, isCorrect, currentQuestion);
+  };
+
+  // 共通の答え合わせ処理
+  const processAnswer = (userWord: string, isCorrect: boolean, currentQuestion: Question | null) => {
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
 
@@ -207,8 +224,10 @@ function SpellingView({
 
   const hasQuestions = spellingState.questions.length > 0;
   
-  // ユーザーが選択した単語
-  const userWord = selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
+  // ユーザーが選択した単語（クリックモード）またはタイピング入力
+  const userWord = inputMode === 'typing' 
+    ? typingInput 
+    : selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -361,8 +380,32 @@ function SpellingView({
                     <div className="user-word-display">
                       <div className="user-word-label">あなたの答え:</div>
                       <div className="user-word-text">
-                        {userWord || '（並び替え問題）'}
+                        {inputMode === 'typing' ? typingInput : userWord || '（クリックまたはタイピングで入力）'}
                       </div>
+                    </div>
+
+                    {/* 入力モード切り替え */}
+                    <div className="input-mode-toggle">
+                      <button
+                        className={`mode-btn ${inputMode === 'click' ? 'active' : ''}`}
+                        onClick={() => {
+                          setInputMode('click');
+                          setTypingInput('');
+                          setSelectedSequence([]);
+                        }}
+                      >
+                        🖱️ クリック
+                      </button>
+                      <button
+                        className={`mode-btn ${inputMode === 'typing' ? 'active' : ''}`}
+                        onClick={() => {
+                          setInputMode('typing');
+                          setSelectedSequence([]);
+                          setTypingInput('');
+                        }}
+                      >
+                        ⌨️ タイピング
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -376,8 +419,35 @@ function SpellingView({
                 </button>
               </div>
 
-              {/* シャッフルされたアルファベットカード */}
-              <div className="letter-cards">
+              {/* タイピングモードの入力フィールド */}
+              {inputMode === 'typing' && !spellingState.answered && (
+                <div className="typing-input-container">
+                  <input
+                    type="text"
+                    className="typing-input"
+                    value={typingInput}
+                    onChange={(e) => setTypingInput(e.target.value.toLowerCase())}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && typingInput.trim()) {
+                        checkTypingAnswer(typingInput.trim());
+                      }
+                    }}
+                    placeholder="スペルを入力してEnterキー"
+                    autoFocus
+                  />
+                  <button
+                    className="btn-submit-typing"
+                    onClick={() => checkTypingAnswer(typingInput.trim())}
+                    disabled={!typingInput.trim()}
+                  >
+                    回答する
+                  </button>
+                </div>
+              )}
+
+              {/* シャッフルされたアルファベットカード（クリックモードのみ表示） */}
+              {inputMode === 'click' && (
+                <div className="letter-cards">
                 {shuffledLetters.map((letter, index) => {
                   const isSelected = selectedSequence.includes(`${index}`);
                   const selectionOrder = selectedSequence.indexOf(`${index}`) + 1;
@@ -397,9 +467,10 @@ function SpellingView({
                   );
                 })}
               </div>
+              )}
 
-              {/* 1文字戻すボタン */}
-              {!spellingState.answered && selectedSequence.length > 0 && (
+              {/* 1文字戻すボタン（クリックモードのみ） */}
+              {inputMode === 'click' && !spellingState.answered && selectedSequence.length > 0 && (
                 <div className="spelling-reset-button-container">
                   <button className="btn-reset-selection" onClick={handleBackspace}>
                     ⌫ 1文字戻す
@@ -409,15 +480,9 @@ function SpellingView({
 
               {spellingState.answered && (
                 <div className="result-display">
-                  <div
-                    className={`result-message ${
-                      userWord === spellingState.correctWord ? 'correct' : 'incorrect'
-                    }`}
-                  >
-                    {userWord === spellingState.correctWord ? '✅ 正解！' : '❌ 不正解'}
-                  </div>
                   <div className="correct-answer">
-                    正解: <strong>{spellingState.correctWord}</strong>
+                    {userWord === spellingState.correctWord ? '✅ 正解: ' : '❌ 不正解 - 正解: '}
+                    <strong>{spellingState.correctWord}</strong>
                   </div>
                   
                   {/* 詳細を見るボタン */}

@@ -5,6 +5,46 @@
   flex-direction: column;
   /* iPhone Safari対応 */
   padding-bottom: env(safe-area-inset-bottom);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ダークモード */
+.dark-mode {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .app {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .tab-menu {
+  background: #2a2a2a;
+}
+
+.dark-mode .tab-btn {
+  background: #2a2a2a;
+  color: #b0b0b0;
+}
+
+.dark-mode .tab-btn.active {
+  background: #1a1a1a;
+  color: #667eea;
+}
+
+.dark-mode .question-card,
+.dark-mode .choice-btn,
+.dark-mode .letter-card {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .settings-container,
+.dark-mode .simple-setting-section {
+  background: #2a2a2a;
+  color: #e0e0e0;
 }
 
 .header {
@@ -5865,6 +5905,120 @@ option {
   color: #333;
   font-size: 1em;
   margin-bottom: 5px;
+}
+
+.personality-desc {
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* テーマ切り替えボタン */
+.theme-toggle {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.theme-btn {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  background: white;
+  color: #333;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.theme-btn:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.theme-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* タイピング入力 */
+.typing-input-container {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.typing-input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1.1em;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+}
+
+.typing-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn-submit-typing {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit-typing:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit-typing:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 入力モード切り替え */
+.input-mode-toggle {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.mode-btn {
+  padding: 8px 16px;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  background: white;
+  color: #666;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mode-btn:hover {
+  border-color: #667eea;
+}
+
+.mode-btn.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+  font-weight: 600;
 }
 
 .personality-desc {

@@ -36,6 +36,27 @@ function SettingsView({
     localStorage.setItem('aiPersonality', personality);
   };
 
+  // ダークモードの読み込み
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved ? JSON.parse(saved) : false;
+  });
+
+  // ダークモード変更時にlocalStorageに保存
+  const handleDarkModeChange = (enabled: boolean) => {
+    setDarkMode(enabled);
+    localStorage.setItem('darkMode', JSON.stringify(enabled));
+    document.documentElement.classList.toggle('dark-mode', enabled);
+  };
+
+  // 初回レンダリング時にdark-modeクラスを適用
+  useState(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark-mode');
+    }
+    return darkMode;
+  });
+
   const totalWords = allQuestions.length;
   const estimatedMonths = Math.ceil(totalWords / (batchSize * 30));
   const estimatedMonthsText = estimatedMonths === 1 ? '約1ヶ月' : `約${estimatedMonths}ヶ月`;
@@ -91,6 +112,27 @@ function SettingsView({
                 <div className="personality-desc">{info.description}</div>
               </button>
             ))}
+          </div>
+        </div>
+
+        <div className="settings-divider"></div>
+
+        {/* ダークモード切り替え */}
+        <div className="simple-setting-section">
+          <h3>🌙 表示モード</h3>
+          <div className="theme-toggle">
+            <button
+              className={`theme-btn ${!darkMode ? 'active' : ''}`}
+              onClick={() => handleDarkModeChange(false)}
+            >
+              ☀️ ライトモード
+            </button>
+            <button
+              className={`theme-btn ${darkMode ? 'active' : ''}`}
+              onClick={() => handleDarkModeChange(true)}
+            >
+              🌙 ダークモード
+            </button>
           </div>
         </div>
 
