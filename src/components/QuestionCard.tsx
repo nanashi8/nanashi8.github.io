@@ -157,14 +157,6 @@ function QuestionCard({
         </button>
       </div>
 
-      {/* AIコメント行 - 問題と選択肢の間に配置 */}
-      {answered && aiComment && (
-        <div className="ai-comment-bar">
-          <span className="ai-comment-icon">💬</span>
-          <span className="ai-comment-text">{aiComment}</span>
-        </div>
-      )}
-
       <div className="choices">
         {choicesWithQuestions.map((choice, idx) => {
           const isExpanded = expandedChoices.has(idx);
