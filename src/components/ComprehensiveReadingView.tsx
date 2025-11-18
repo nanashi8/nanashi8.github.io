@@ -290,55 +290,55 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const getLemma = (word: string): string => {
     const normalized = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
     
-    // まず元の形で検索
-    if (wordDictionary.has(normalized)) return normalized;
+    // まず元の形で検索（両方の辞書）
+    if (wordDictionary.has(normalized) || readingDictionary.has(normalized)) return normalized;
     
     // -s, -es の除去（三単現、複数形）
     if (normalized.endsWith('es')) {
       const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
     }
     if (normalized.endsWith('s')) {
       const base = normalized.slice(0, -1);
-      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
     }
     
     // -ed の除去（過去形、過去分詞）
     if (normalized.endsWith('ed')) {
       const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base)) return base;
-      if (wordDictionary.has(base + 'e')) return base + 'e';
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+      if (wordDictionary.has(base + 'e') || readingDictionary.has(base + 'e')) return base + 'e';
       if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
         const deduped = base.slice(0, -1);
-        if (wordDictionary.has(deduped)) return deduped;
+        if (wordDictionary.has(deduped) || readingDictionary.has(deduped)) return deduped;
       }
     }
     
     // -ing の除去（現在分詞、動名詞）
     if (normalized.endsWith('ing')) {
       const base = normalized.slice(0, -3);
-      if (wordDictionary.has(base)) return base;
-      if (wordDictionary.has(base + 'e')) return base + 'e';
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+      if (wordDictionary.has(base + 'e') || readingDictionary.has(base + 'e')) return base + 'e';
       if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
         const deduped = base.slice(0, -1);
-        if (wordDictionary.has(deduped)) return deduped;
+        if (wordDictionary.has(deduped) || readingDictionary.has(deduped)) return deduped;
       }
     }
     
     // -ly の除去（副詞）
     if (normalized.endsWith('ly')) {
       const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
     }
     
     // -er, -est の除去（比較級、最上級）
     if (normalized.endsWith('er')) {
       const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
     }
     if (normalized.endsWith('est')) {
       const base = normalized.slice(0, -3);
-      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
     }
     
     return normalized;
@@ -879,12 +879,45 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         <div className="full-text-display">
           <h3>📄 全文</h3>
           <div className="full-text-content">
-            {currentPassage.phrases.map((phrase, idx) => (
-              <span key={idx}>
-                {phrase.words?.join(' ') || phrase.segments?.map(s => s.word).join(' ')}
-                {idx < currentPassage.phrases.length - 1 ? ' ' : ''}
-              </span>
-            ))}
+            {(() => {
+              // 単語を適切に結合（句読点の前のスペースを削除）
+              let fullText = '';
+              currentPassage.phrases.forEach((phrase, idx) => {
+                const words = phrase.words || phrase.segments?.map(s => s.word) || [];
+                words.forEach((word, wordIdx) => {
+                  // 句読点の場合は前のスペースを入れない
+                  if (['.', ',', '!', '?', ':', ';'].includes(word)) {
+                    fullText += word;
+                  } else {
+                    // 最初の単語以外は前にスペースを入れる
+                    if (fullText.length > 0 && !fullText.endsWith(' ')) {
+                      fullText += ' ';
+                    }
+                    fullText += word;
+                  }
+                });
+              });
+
+              // 段落に分割（ピリオドの後で改行）
+              const sentences = fullText.split(/\.\s+/).filter(s => s.trim());
+              const paragraphs: string[] = [];
+              let currentParagraph = '';
+              
+              sentences.forEach((sentence, idx) => {
+                currentParagraph += sentence + '.';
+                // 約3-5文ごとに段落を分ける
+                if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
+                  paragraphs.push(currentParagraph.trim());
+                  currentParagraph = '';
+                }
+              });
+
+              return paragraphs.map((para, idx) => (
+                <p key={idx} className="paragraph">
+                  {para}
+                </p>
+              ));
+            })()}
           </div>
         </div>
       )}
@@ -894,11 +927,39 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         <div className="full-translation-display">
           <h3>📝 全訳</h3>
           <div className="full-translation-content">
-            {currentPassage.phrases.map((phrase, idx) => (
-              <div key={idx} className="translation-line">
-                {phrase.phraseMeaning}
-              </div>
-            ))}
+            {(() => {
+              // フレーズの意味を文章として結合
+              let fullTranslation = '';
+              currentPassage.phrases.forEach((phrase, idx) => {
+                const meaning = phrase.phraseMeaning || '';
+                if (meaning) {
+                  fullTranslation += meaning;
+                }
+              });
+
+              // 句点で段落分割
+              const sentences = fullTranslation.split(/[。！？]/).filter(s => s.trim());
+              const paragraphs: string[] = [];
+              let currentParagraph = '';
+              
+              sentences.forEach((sentence, idx) => {
+                const trimmed = sentence.trim();
+                if (trimmed) {
+                  currentParagraph += trimmed + '。';
+                  // 約3-5文ごとに段落を分ける
+                  if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
+                    paragraphs.push(currentParagraph);
+                    currentParagraph = '';
+                  }
+                }
+              });
+
+              return paragraphs.map((para, idx) => (
+                <p key={idx} className="paragraph-ja">
+                  {para}
+                </p>
+              ));
+            })()}
           </div>
         </div>
       )}
@@ -1307,6 +1368,31 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           line-height: 1.8;
           color: #333;
           font-family: 'Times New Roman', 'Georgia', serif;
+        }
+
+        .full-text-content .paragraph {
+          margin-bottom: 1.5em;
+          text-indent: 2em;
+          text-align: justify;
+        }
+
+        .full-text-content .paragraph:first-child {
+          margin-top: 0;
+        }
+
+        .full-translation-content {
+          font-size: 1.05em;
+          line-height: 2;
+          color: #333;
+        }
+
+        .full-translation-content .paragraph-ja {
+          margin-bottom: 1.5em;
+          text-indent: 1em;
+        }
+
+        .full-translation-content .paragraph-ja:first-child {
+          margin-top: 0;
         }
 
         .full-translation-content {
