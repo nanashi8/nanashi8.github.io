@@ -34,6 +34,8 @@ export interface WordProgress {
   skippedCount?: number; // スキップ回数
   lastSkipped?: number; // 最終スキップ日時（タイムスタンプ）
   skipExcludeUntil?: number; // この日時まで出題除外（タイムスタンプ）
+  needsVerification?: boolean; // AI学習アシスタント: 検証が必要
+  verificationReason?: string; // AI学習アシスタント: 検証が必要な理由
 }
 
 export interface UserProgress {
@@ -561,10 +563,10 @@ function removeFromReadingUnknownWords(word: string): void {
 }
 
 // 単語のスキップを記録（スワイプでスキップされた場合）
-// 連続正解時の定着単語と同じ扱いにする
+// AI学習アシスタント: 後日検証するため一時的に除外
 export function recordWordSkip(
   word: string,
-  excludeDays: number = 7 // デフォルトで7日間除外
+  excludeDays: number = 30 // 30日後に検証
 ): void {
   const progress = loadProgress();
   
@@ -574,16 +576,19 @@ export function recordWordSkip(
   
   const wordProgress = progress.wordProgress[word];
   
-  // スキップを定着と同じように扱う
-  wordProgress.consecutiveCorrect = 5; // 定着とみなす
+  // スキップを記録（後日検証するため、暫定的に定着扱い）
+  wordProgress.consecutiveCorrect = 3; // 暫定定着
   wordProgress.masteryLevel = 'mastered';
   wordProgress.lastReviewed = Date.now();
-  wordProgress.nextReviewDate = Date.now() + (30 * 24 * 60 * 60 * 1000); // 30日後
+  wordProgress.nextReviewDate = Date.now() + (excludeDays * 24 * 60 * 60 * 1000);
   
-  // スキップ情報も記録（統計用）
+  // スキップ情報を記録
   wordProgress.skippedCount = (wordProgress.skippedCount || 0) + 1;
   wordProgress.lastSkipped = Date.now();
   wordProgress.skipExcludeUntil = Date.now() + (excludeDays * 24 * 60 * 60 * 1000);
+  
+  // AI学習アシスタント: スキップグループに追加（後で検証）
+  // この処理はlearningAssistant.tsで行う
   
   saveProgress(progress);
 }

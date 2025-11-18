@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
-import { addQuizResult, updateWordProgress, recordWordSkip } from '../progressStorage';
+import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress } from '../progressStorage';
+import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
 
 interface SpellingViewProps {
@@ -153,6 +154,18 @@ function SpellingView({
     // 単語進捗を更新
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime);
+      
+      // AI学習アシスタント: スキップした単語の検証
+      const progress = loadProgress();
+      const wordProgress = progress.wordProgress[currentQuestion.word];
+      
+      if (wordProgress && wordProgress.skippedCount && wordProgress.skippedCount > 0) {
+        if (isCorrect) {
+          handleSkippedWordCorrect(currentQuestion.word);
+        } else {
+          handleSkippedWordIncorrect(currentQuestion.word);
+        }
+      }
     }
 
     // 間違えた単語を記録
@@ -214,8 +227,11 @@ function SpellingView({
     const currentQuestion = spellingState.questions[spellingState.currentIndex];
     if (!currentQuestion) return;
 
-    // スキップ処理（定着扱い）
-    recordWordSkip(currentQuestion.word, 7);
+    // スキップ処理（30日間除外、AI学習アシスタントが後日検証）
+    recordWordSkip(currentQuestion.word, 30);
+    
+    // AI学習アシスタント: スキップグループに追加
+    addToSkipGroup(currentQuestion.word);
     
     // スコアに反映（正解扱い）
     setSpellingState((prev) => ({

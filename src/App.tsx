@@ -7,7 +7,8 @@ import {
   generateId,
   selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress } from './progressStorage';
+import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect, prioritizeVerificationWords, generateAssistantMessage } from './learningAssistant';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -321,6 +322,20 @@ function App() {
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime);
       
+      // AI学習アシスタント: スキップした単語の検証
+      const progress = loadProgress();
+      const wordProgress = progress.wordProgress[currentQuestion.word];
+      
+      if (wordProgress && wordProgress.skippedCount && wordProgress.skippedCount > 0) {
+        // この単語は以前スキップされていた
+        if (isCorrect) {
+          handleSkippedWordCorrect(currentQuestion.word);
+        } else {
+          handleSkippedWordIncorrect(currentQuestion.word);
+          console.log('🤔 AI学習アシスタント: スキップした単語が不正解でした。同時期の単語を再確認します。');
+        }
+      }
+      
       // 回答ごとに小さなQuizResultを記録（統計用）
       addQuizResult({
         id: generateId(),
@@ -398,8 +413,11 @@ function App() {
   const handleSkip = () => {
     const currentQuestion = quizState.questions[quizState.currentIndex];
     if (currentQuestion) {
-      // スキップ記録(7日間除外)
-      recordWordSkip(currentQuestion.word, 7);
+      // スキップ記録(30日間除外、AI学習アシスタントが後日検証)
+      recordWordSkip(currentQuestion.word, 30);
+      
+      // AI学習アシスタント: スキップグループに追加
+      addToSkipGroup(currentQuestion.word);
       
       // スキップでもスコアボードに反映(正解扱い)
       setQuizState((prev) => ({
