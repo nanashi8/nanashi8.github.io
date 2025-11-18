@@ -735,9 +735,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div 
             className="word-popup"
             style={{ 
-              left: `${wordPopup.x}px`, 
-              top: `${wordPopup.y}px` 
-            }}
+              '--popup-x': `${wordPopup.x}px`, 
+              '--popup-y': `${wordPopup.y}px` 
+            } as React.CSSProperties}
           >
             <button 
               className="popup-close" 
@@ -1291,6 +1291,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
         .word-popup {
           position: absolute;
+          left: var(--popup-x, 0);
+          top: var(--popup-y, 0);
           background: white;
           border: 2px solid #007bff;
           border-radius: 8px;

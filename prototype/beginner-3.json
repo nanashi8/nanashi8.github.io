@@ -260,9 +260,15 @@
         "started",
         "junior",
         "high",
-        "school"
+        "school",
+        "I",
+        "practice",
+        "with",
+        "my",
+        "teammates",
+        "."
       ],
-      "phraseMeaning": "中学校に入学したときに",
+      "phraseMeaning": "中学校に入学したときにチームメイトと練習します",
       "segments": [
         {
           "word": "when",
@@ -293,22 +299,7 @@
           "word": "school",
           "meaning": "school",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-8",
-      "words": [
-        "I",
-        "practice",
-        "with",
-        "my",
-        "teammates",
-        "."
-      ],
-      "phraseMeaning": "チームメイトと練習します",
-      "segments": [
+        },
         {
           "word": "I",
           "meaning": "I",
@@ -1089,9 +1080,15 @@
         "was",
         "seven",
         "years",
-        "old"
+        "old",
+        "I",
+        "practice",
+        "for",
+        "one",
+        "hour",
+        "."
       ],
-      "phraseMeaning": "7歳のときに",
+      "phraseMeaning": "7歳のときに1時間練習します",
       "segments": [
         {
           "word": "when",
@@ -1122,22 +1119,7 @@
           "word": "old",
           "meaning": "古い",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-28",
-      "words": [
-        "I",
-        "practice",
-        "for",
-        "one",
-        "hour",
-        "."
-      ],
-      "phraseMeaning": "1時間練習します",
-      "segments": [
+        },
         {
           "word": "I",
           "meaning": "I",
@@ -1410,9 +1392,15 @@
       "id": "phrase-35",
       "words": [
         "every",
-        "week"
+        "week",
+        "I",
+        "enjoy",
+        "reading",
+        "mystery",
+        "stories",
+        "."
       ],
-      "phraseMeaning": "毎週",
+      "phraseMeaning": "毎週ミステリー小説を読むのが楽しいです",
       "segments": [
         {
           "word": "every",
@@ -1423,23 +1411,7 @@
           "word": "week",
           "meaning": "週",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-36",
-      "words": [
-        "I",
-        "enjoy",
-        "reading",
-        "mystery",
-        "stories",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "ミステリー小説を読むのが楽しいです",
-      "segments": [
+        },
         {
           "word": "I",
           "meaning": "I",
@@ -3103,7 +3075,8 @@
         "What",
         "are",
         "your",
-        "hobbies?"
+        "hobbies",
+        "?"
       ],
       "phraseMeaning": "あなたの趣味は何ですか?",
       "segments": [

@@ -6932,10 +6932,22 @@
         "can",
         "boost",
         "alertness",
-        ".",
-        ","
+        ",",
+        "but",
+        "long",
+        "naps",
+        "or",
+        "naps",
+        "late",
+        "in",
+        "the",
+        "day",
+        "disrupt",
+        "night",
+        "sleep",
+        "."
       ],
-      "phraseMeaning": "二十分の短い昼寝は注意力を高めることができます",
+      "phraseMeaning": "二十分の短い昼寝は注意力を高めることができますが、長い昼寝や日中遅くの昼寝は夜の睡眠を妨げます",
       "segments": [
         {
           "word": "Short",
@@ -14507,10 +14519,15 @@
         "commitment",
         "and",
         "effort",
-        ".",
-        ","
+        ",",
+        "but",
+        "the",
+        "rewards",
+        "are",
+        "enormous",
+        "."
       ],
-      "phraseMeaning": "健康的に生きることには献身と努力が必要です",
+      "phraseMeaning": "健康的に生きることには献身と努力が必要ですが、報酬は莫大です",
       "segments": [
         {
           "word": "Living",
@@ -17036,10 +17053,17 @@
         "room",
         "for",
         "improvement",
-        ".",
-        ","
+        ",",
+        "but",
+        "there",
+        "is",
+        "also",
+        "room",
+        "for",
+        "enjoyment",
+        "."
       ],
-      "phraseMeaning": "常に改善の余地があります",
+      "phraseMeaning": "常に改善の余地がありますが、楽しみの余地もあります",
       "segments": [
         {
           "word": "There",
@@ -17564,7 +17588,6 @@
         "will",
         "thank",
         "you",
-        ".",
         "."
       ],
       "phraseMeaning": "あなたの体と心は感謝するでしょう",

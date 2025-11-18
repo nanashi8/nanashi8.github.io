@@ -4582,7 +4582,9 @@
       "id": "phrase-85",
       "words": [
         "Coal",
+        ",",
         "oil",
+        ",",
         "and",
         "natural",
         "gas",
@@ -4591,10 +4593,18 @@
         "of",
         "our",
         "energy",
-        ".",
-        ","
+        ",",
+        "but",
+        "these",
+        "fuels",
+        "cause",
+        "pollution",
+        "and",
+        "climate",
+        "change",
+        "."
       ],
-      "phraseMeaning": "石炭石油天然ガスがエネルギーのほとんどを提供しました",
+      "phraseMeaning": "石炭、石油、天然ガスがエネルギーのほとんどを提供しましたが、これらの燃料は汚染と気候変動を引き起こします",
       "segments": [
         {
           "word": "Coal",
@@ -4645,6 +4655,46 @@
           "word": "energy",
           "meaning": "energy",
           "isUnknown": false
+        },
+        {
+          "word": "but",
+          "meaning": "しかし",
+          "isUnknown": false
+        },
+        {
+          "word": "these",
+          "meaning": "これらの",
+          "isUnknown": false
+        },
+        {
+          "word": "fuels",
+          "meaning": "fuels",
+          "isUnknown": false
+        },
+        {
+          "word": "cause",
+          "meaning": "cause",
+          "isUnknown": false
+        },
+        {
+          "word": "pollution",
+          "meaning": "pollution",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": "そして",
+          "isUnknown": false
+        },
+        {
+          "word": "climate",
+          "meaning": "climate",
+          "isUnknown": false
+        },
+        {
+          "word": "change",
+          "meaning": "change",
+          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -4652,17 +4702,16 @@
     {
       "id": "phrase-86",
       "words": [
-        "But",
-        "these",
-        "fuels",
-        "cause",
-        "pollution",
-        "and",
-        "climate",
-        "change",
+        "Renewable",
+        "energy",
+        "sources",
+        "offer",
+        "a",
+        "cleaner",
+        "alternative",
         "."
       ],
-      "phraseMeaning": "しかしこれらの燃料は汚染と気候変動を引き起こします",
+      "phraseMeaning": "再生可能エネルギー源はよりクリーンな代替案を提供します",
       "segments": [
         {
           "word": "But",
@@ -9055,10 +9104,17 @@
         "more",
         "creative",
         "work",
-        ".",
-        ","
+        ",",
+        "but",
+        "it",
+        "also",
+        "raises",
+        "concerns",
+        "about",
+        "employment",
+        "."
       ],
-      "phraseMeaning": "これは人々がより創造的な仕事をすることを可能にするかもしれません",
+      "phraseMeaning": "これは人々がより創造的な仕事をすることを可能にするかもしれませんが、雇用についての懸念も提起します",
       "segments": [
         {
           "word": "This",
@@ -11881,10 +11937,17 @@
         "bring",
         "new",
         "possibilities",
-        ".",
-        ","
+        ",",
+        "but",
+        "with",
+        "great",
+        "power",
+        "comes",
+        "great",
+        "responsibility",
+        "."
       ],
-      "phraseMeaning": "新しい発見は新しい可能性をもたらすでしょう",
+      "phraseMeaning": "新しい発見は新しい可能性をもたらすでしょうが、大きな力には大きな責任が伴います",
       "segments": [
         {
           "word": "New",
@@ -12723,7 +12786,6 @@
         "wisdom",
         "and",
         "hope",
-        ".",
         "."
       ],
       "phraseMeaning": "知恵と希望を持って未来を受け入れましょう",

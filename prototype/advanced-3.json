@@ -286,22 +286,15 @@
         "perceive",
         "the",
         "world",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "私たちが世界を認識する方法に影響を与えます"
-    },
-    {
-      "id": "phrase-25",
-      "words": [
-        "But",
+        ",",
+        "but",
         "many",
         "languages",
         "are",
         "endangered",
         "."
       ],
-      "phraseMeaning": "しかし多くの言語が危機に瀕しています"
+      "phraseMeaning": "私たちが世界を認識する方法に影響を与えますが、多くの言語が危機に瀕しています"
     },
     {
       "id": "phrase-26",
@@ -593,21 +586,14 @@
         "enriches",
         "daily",
         "life",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "これは日常生活を豊かにします"
-    },
-    {
-      "id": "phrase-51",
-      "words": [
-        "But",
+        ",",
+        "but",
         "integration",
         "takes",
         "work",
         "."
       ],
-      "phraseMeaning": "しかし統合には努力が必要です"
+      "phraseMeaning": "これは日常生活を豊かにしますが、統合には努力が必要です"
     },
     {
       "id": "phrase-52",
@@ -685,14 +671,7 @@
         "education",
         "and",
         "policy",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "教育と政策を通じて"
-    },
-    {
-      "id": "phrase-59",
-      "words": [
+        ",",
         "And",
         "examining",
         "our",
@@ -700,7 +679,7 @@
         "biases",
         "."
       ],
-      "phraseMeaning": "そして自分自身のバイアスを検証します"
+      "phraseMeaning": "教育と政策を通じてが、そして自分自身のバイアスを検証します"
     },
     {
       "id": "phrase-60",
@@ -820,21 +799,14 @@
         "has",
         "been",
         "made",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "進歩が行われました"
-    },
-    {
-      "id": "phrase-70",
-      "words": [
-        "But",
+        ",",
+        "but",
         "much",
         "work",
         "remains",
         "."
       ],
-      "phraseMeaning": "しかし多くの仕事が残っています"
+      "phraseMeaning": "進歩が行われましたが、多くの仕事が残っています"
     },
     {
       "id": "phrase-71",
@@ -1070,15 +1042,8 @@
         "and",
         "influence",
         "policy",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "市民は投票し政策に影響を与えます"
-    },
-    {
-      "id": "phrase-91",
-      "words": [
-        "But",
+        ",",
+        "but",
         "can",
         "be",
         "slow",
@@ -1086,7 +1051,7 @@
         "contentious",
         "."
       ],
-      "phraseMeaning": "しかし遅く論争的である可能性があります"
+      "phraseMeaning": "市民は投票し政策に影響を与えますが、遅く論争的である可能性があります"
     },
     {
       "id": "phrase-92",
@@ -1095,21 +1060,14 @@
         "systems",
         "claim",
         "efficiency",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "権威主義システムは効率を主張します"
-    },
-    {
-      "id": "phrase-93",
-      "words": [
-        "But",
+        ",",
+        "but",
         "often",
         "suppress",
         "freedoms",
         "."
       ],
-      "phraseMeaning": "しかししばしば自由を抑圧します"
+      "phraseMeaning": "権威主義システムは効率を主張しますが、しばしば自由を抑圧します"
     },
     {
       "id": "phrase-94",
@@ -1755,15 +1713,8 @@
         "experiences",
         "and",
         "ideas",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "経験とアイデアを共有します"
-    },
-    {
-      "id": "phrase-152",
-      "words": [
-        "But",
+        ",",
+        "but",
         "algorithms",
         "can",
         "create",
@@ -1771,7 +1722,7 @@
         "chambers",
         "."
       ],
-      "phraseMeaning": "しかしアルゴリズムはエコーチェンバーを作る可能性があります"
+      "phraseMeaning": "経験とアイデアを共有しますが、アルゴリズムはエコーチェンバーを作る可能性があります"
     },
     {
       "id": "phrase-153",
@@ -1988,22 +1939,15 @@
         "interest",
         "in",
         "stability",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "これは安定性における相互利益を生み出します"
-    },
-    {
-      "id": "phrase-172",
-      "words": [
-        "But",
+        ",",
+        "but",
         "can",
         "also",
         "create",
         "vulnerabilities",
         "."
       ],
-      "phraseMeaning": "しかし脆弱性も生み出す可能性があります"
+      "phraseMeaning": "これは安定性における相互利益を生み出しますが、脆弱性も生み出す可能性があります"
     },
     {
       "id": "phrase-173",
@@ -2100,21 +2044,14 @@
         "services",
         "and",
         "integration",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "サービスと統合を提供します"
-    },
-    {
-      "id": "phrase-182",
-      "words": [
-        "But",
+        ",",
+        "but",
         "refugees",
         "also",
         "contribute",
         "."
       ],
-      "phraseMeaning": "しかし難民も貢献します"
+      "phraseMeaning": "サービスと統合を提供しますが、難民も貢献します"
     },
     {
       "id": "phrase-183",
@@ -2457,15 +2394,8 @@
         "learn",
         "from",
         "this",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "現代社会はこれから学ぶことができます"
-    },
-    {
-      "id": "phrase-214",
-      "words": [
-        "But",
+        ",",
+        "but",
         "indigenous",
         "rights",
         "are",
@@ -2473,7 +2403,7 @@
         "violated",
         "."
       ],
-      "phraseMeaning": "しかし先住民の権利はしばしば侵害されます"
+      "phraseMeaning": "現代社会はこれから学ぶことができますが、先住民の権利はしばしば侵害されます"
     },
     {
       "id": "phrase-215",
@@ -2897,15 +2827,8 @@
         "opportunities",
         "and",
         "services",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "都市は機会とサービスを提供します"
-    },
-    {
-      "id": "phrase-251",
-      "words": [
-        "But",
+        ",",
+        "but",
         "can",
         "be",
         "expensive",
@@ -2913,7 +2836,7 @@
         "stressful",
         "."
       ],
-      "phraseMeaning": "しかし高価でストレスが多い可能性があります"
+      "phraseMeaning": "都市は機会とサービスを提供しますが、高価でストレスが多い可能性があります"
     },
     {
       "id": "phrase-252",
@@ -2924,21 +2847,14 @@
         "space",
         "and",
         "nature",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "農村地域はスペースと自然を提供します"
-    },
-    {
-      "id": "phrase-253",
-      "words": [
-        "But",
+        ",",
+        "but",
         "may",
         "lack",
         "infrastructure",
         "."
       ],
-      "phraseMeaning": "しかしインフラが不足している可能性があります"
+      "phraseMeaning": "農村地域はスペースと自然を提供しますが、インフラが不足している可能性があります"
     },
     {
       "id": "phrase-254",
@@ -3171,21 +3087,14 @@
         "architecture",
         "pushes",
         "boundaries",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "現代建築は境界を押し広げます"
-    },
-    {
-      "id": "phrase-275",
-      "words": [
-        "But",
+        ",",
+        "but",
         "should",
         "respect",
         "context",
         "."
       ],
-      "phraseMeaning": "しかし文脈を尊重すべきです"
+      "phraseMeaning": "現代建築は境界を押し広げますが、文脈を尊重すべきです"
     },
     {
       "id": "phrase-276",
@@ -3220,22 +3129,15 @@
         "makes",
         "literature",
         "accessible",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "翻訳は文学をアクセス可能にします"
-    },
-    {
-      "id": "phrase-279",
-      "words": [
-        "But",
+        ",",
+        "but",
         "something",
         "is",
         "always",
         "lost",
         "."
       ],
-      "phraseMeaning": "しかし何かは常に失われます"
+      "phraseMeaning": "翻訳は文学をアクセス可能にしますが、何かは常に失われます"
     },
     {
       "id": "phrase-280",
@@ -3349,21 +3251,14 @@
         "to",
         "better",
         "solutions",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "異なる視点がより良い解決策につながります"
-    },
-    {
-      "id": "phrase-290",
-      "words": [
-        "But",
+        ",",
+        "but",
         "requires",
         "inclusive",
         "culture",
         "."
       ],
-      "phraseMeaning": "しかし包括的な文化が必要です"
+      "phraseMeaning": "異なる視点がより良い解決策につながりますが、包括的な文化が必要です"
     },
     {
       "id": "phrase-291",
@@ -3781,21 +3676,14 @@
         "ensure",
         "democratic",
         "participation",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "投票権は民主的参加を保証します"
-    },
-    {
-      "id": "phrase-328",
-      "words": [
-        "But",
+        ",",
+        "but",
         "some",
         "face",
         "barriers",
         "."
       ],
-      "phraseMeaning": "しかし一部は障壁に直面します"
+      "phraseMeaning": "投票権は民主的参加を保証しますが、一部は障壁に直面します"
     },
     {
       "id": "phrase-329",
@@ -4598,14 +4486,7 @@
         "immigrants",
         "maintain",
         "culture",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "移民は文化を維持すべきか"
-    },
-    {
-      "id": "phrase-401",
-      "words": [
+        ",",
         "Or",
         "adopt",
         "host",
@@ -4613,7 +4494,7 @@
         "fully",
         "."
       ],
-      "phraseMeaning": "または受け入れ国の文化を完全に採用すべきか"
+      "phraseMeaning": "移民は文化を維持すべきかが、または受け入れ国の文化を完全に採用すべきか"
     },
     {
       "id": "phrase-402",
@@ -5616,22 +5497,15 @@
         "Could",
         "reduce",
         "poverty",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "貧困を減らす可能性があります"
-    },
-    {
-      "id": "phrase-494",
-      "words": [
-        "But",
+        ",",
+        "but",
         "funding",
         "and",
         "effects",
         "uncertain",
         "."
       ],
-      "phraseMeaning": "しかし資金と効果は不確実です"
+      "phraseMeaning": "貧困を減らす可能性がありますが、資金と効果は不確実です"
     },
     {
       "id": "phrase-495",
@@ -6557,14 +6431,7 @@
         "world",
         "is",
         "possible",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "より良い世界が可能だと信じます"
-    },
-    {
-      "id": "phrase-580",
-      "words": [
+        ",",
         "And",
         "working",
         "to",
@@ -6572,7 +6439,7 @@
         "it",
         "."
       ],
-      "phraseMeaning": "そしてそれを作るために働きます"
+      "phraseMeaning": "より良い世界が可能だと信じますが、そしてそれを作るために働きます"
     },
     {
       "id": "phrase-581",
@@ -6789,7 +6656,6 @@
       "id": "phrase-600",
       "words": [
         "Together",
-        ".",
         "."
       ],
       "phraseMeaning": "一緒に"

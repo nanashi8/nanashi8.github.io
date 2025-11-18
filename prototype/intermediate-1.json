@@ -5698,9 +5698,14 @@
         "small",
         "changes",
         "together",
+        ",",
+        "the",
+        "impact",
+        "becomes",
+        "enormous",
         "."
       ],
-      "phraseMeaning": "何百万人もの人々が一緒に小さな変化を起こすとき",
+      "phraseMeaning": "何百万人もの人々が一緒に小さな変化を起こすとき、その影響は莫大になります",
       "segments": [
         {
           "word": "When",
@@ -5741,23 +5746,9 @@
           "word": "together",
           "meaning": "together",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-97",
-      "words": [
-        "The",
-        "impact",
-        "becomes",
-        "enormous",
-        "."
-      ],
-      "phraseMeaning": "その影響は莫大になります",
-      "segments": [
+        },
         {
-          "word": "The",
+          "word": "the",
           "meaning": "その",
           "isUnknown": false
         },
@@ -5780,7 +5771,7 @@
       "isUnknown": false
     },
     {
-      "id": "phrase-98",
+      "id": "phrase-97",
       "words": [
         "We",
         "have",
@@ -5814,6 +5805,88 @@
         {
           "word": "Earth",
           "meaning": "Earth",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-98",
+      "words": [
+        "We",
+        "must",
+        "take",
+        "care",
+        "of",
+        "it",
+        "for",
+        "ourselves",
+        "and",
+        "for",
+        "future",
+        "generations",
+        "."
+      ],
+      "phraseMeaning": "私たち自身のため、そして将来の世代のためにそれを大切にしなければなりません",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": "私たちは",
+          "isUnknown": false
+        },
+        {
+          "word": "must",
+          "meaning": "しなければならない",
+          "isUnknown": false
+        },
+        {
+          "word": "take",
+          "meaning": "take",
+          "isUnknown": false
+        },
+        {
+          "word": "care",
+          "meaning": "care",
+          "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": "の",
+          "isUnknown": false
+        },
+        {
+          "word": "it",
+          "meaning": "それは",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "のために",
+          "isUnknown": false
+        },
+        {
+          "word": "ourselves",
+          "meaning": "ourselves",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": "そして",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "のために",
+          "isUnknown": false
+        },
+        {
+          "word": "future",
+          "meaning": "future",
+          "isUnknown": false
+        },
+        {
+          "word": "generations",
+          "meaning": "generations",
           "isUnknown": false
         }
       ],
@@ -5945,6 +6018,7 @@
         "deserve",
         "a",
         "clean",
+        ",",
         "healthy",
         "planet",
         "."
@@ -6705,6 +6779,7 @@
         "When",
         "food",
         "rots",
+        ",",
         "it",
         "produces",
         "methane",
@@ -9093,8 +9168,7 @@
         "from",
         "the",
         "atmosphere",
-        ".",
-        ","
+        "."
       ],
       "phraseMeaning": "大気から二酸化炭素を吸収します",
       "segments": [
@@ -10335,9 +10409,16 @@
         "determination",
         "and",
         "cooperation",
+        ",",
+        "we",
+        "can",
+        "create",
+        "a",
+        "better",
+        "world",
         "."
       ],
-      "phraseMeaning": "決意と協力があれば",
+      "phraseMeaning": "決意と協力があれば、より良い世界を作ることができます",
       "segments": [
         {
           "word": "With",
@@ -10358,25 +10439,9 @@
           "word": "cooperation",
           "meaning": "cooperation",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-186",
-      "words": [
-        "We",
-        "can",
-        "create",
-        "a",
-        "better",
-        "world",
-        "."
-      ],
-      "phraseMeaning": "より良い世界を作ることができます",
-      "segments": [
+        },
         {
-          "word": "We",
+          "word": "we",
           "meaning": "私たちは",
           "isUnknown": false
         },
@@ -10409,7 +10474,7 @@
       "isUnknown": false
     },
     {
-      "id": "phrase-187",
+      "id": "phrase-186",
       "words": [
         "A",
         "world",
@@ -10461,7 +10526,7 @@
       "isUnknown": false
     },
     {
-      "id": "phrase-188",
+      "id": "phrase-187",
       "words": [
         "A",
         "world",
@@ -10513,7 +10578,7 @@
       "isUnknown": false
     },
     {
-      "id": "phrase-189",
+      "id": "phrase-188",
       "words": [
         "A",
         "world",
@@ -10523,6 +10588,50 @@
         "."
       ],
       "phraseMeaning": "森林が繁栄する世界",
+      "segments": [
+        {
+          "word": "A",
+          "meaning": "一つの",
+          "isUnknown": false
+        },
+        {
+          "word": "world",
+          "meaning": "世界",
+          "isUnknown": false
+        },
+        {
+          "word": "where",
+          "meaning": "どこ",
+          "isUnknown": false
+        },
+        {
+          "word": "forests",
+          "meaning": "forests",
+          "isUnknown": false
+        },
+        {
+          "word": "thrive",
+          "meaning": "thrive",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-189",
+      "words": [
+        "A",
+        "world",
+        "where",
+        "all",
+        "creatures",
+        "can",
+        "live",
+        "in",
+        "harmony",
+        "."
+      ],
+      "phraseMeaning": "すべての生き物が調和して生きることができる世界",
       "segments": [
         {
           "word": "A",
@@ -10747,7 +10856,6 @@
         "never",
         "give",
         "up",
-        ".",
         "."
       ],
       "phraseMeaning": "今日始めて決してあきらめないようにしましょう",

@@ -1880,15 +1880,8 @@
         "useful",
         "starting",
         "points",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "文化的一般化は有用な出発点になることができます"
-    },
-    {
-      "id": "phrase-138",
-      "words": [
-        "But",
+        ",",
+        "but",
         "we",
         "must",
         "remain",
@@ -1897,7 +1890,7 @@
         "exceptions",
         "."
       ],
-      "phraseMeaning": "しかし例外に対してオープンでいなければなりません"
+      "phraseMeaning": "文化的一般化は有用な出発点になることができますが、例外に対してオープンでいなければなりません"
     },
     {
       "id": "phrase-139",
@@ -2457,15 +2450,8 @@
         "interesting",
         "and",
         "rich",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "私たちの違いは人生を面白く豊かにします"
-    },
-    {
-      "id": "phrase-181",
-      "words": [
-        "But",
+        ",",
+        "but",
         "our",
         "similarities",
         "are",
@@ -2475,7 +2461,7 @@
         "differences",
         "."
       ],
-      "phraseMeaning": "しかし私たちの類似性は違いより大きいです"
+      "phraseMeaning": "私たちの違いは人生を面白く豊かにしますが、私たちの類似性は違いより大きいです"
     },
     {
       "id": "phrase-182",
@@ -3895,15 +3881,8 @@
         "about",
         "all",
         "cultures",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "誰もがすべての文化についてすべてを知ることはできません"
-    },
-    {
-      "id": "phrase-289",
-      "words": [
-        "But",
+        ",",
+        "but",
         "we",
         "can",
         "always",
@@ -3911,7 +3890,7 @@
         "more",
         "."
       ],
-      "phraseMeaning": "しかし常にもっと学ぶことができます"
+      "phraseMeaning": "誰もがすべての文化についてすべてを知ることはできませんが、常にもっと学ぶことができます"
     },
     {
       "id": "phrase-290",
@@ -4801,15 +4780,8 @@
         "humor",
         "builds",
         "bonds",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "ユーモアを共有することは絆を築きます"
-    },
-    {
-      "id": "phrase-358",
-      "words": [
-        "But",
+        ",",
+        "but",
         "be",
         "careful",
         "with",
@@ -4820,7 +4792,7 @@
         "religion",
         "."
       ],
-      "phraseMeaning": "しかし文化や宗教についてのジョークには注意してください"
+      "phraseMeaning": "ユーモアを共有することは絆を築きますが、文化や宗教についてのジョークには注意してください"
     },
     {
       "id": "phrase-359",
@@ -5203,7 +5175,6 @@
         "at",
         "a",
         "time",
-        ".",
         "."
       ],
       "phraseMeaning": "一度に一つのつながりで"

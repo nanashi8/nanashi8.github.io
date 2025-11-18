@@ -1566,21 +1566,14 @@
         "standards",
         "would",
         "help",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "グローバル基準が役立つでしょう"
-    },
-    {
-      "id": "phrase-134",
-      "words": [
-        "But",
+        ",",
+        "but",
         "difficult",
         "to",
         "achieve",
         "."
       ],
-      "phraseMeaning": "しかし達成するのは困難です"
+      "phraseMeaning": "グローバル基準が役立つでしょうが、達成するのは困難です"
     },
     {
       "id": "phrase-135",
@@ -1773,15 +1766,8 @@
         "ideas",
         "or",
         "variations",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "アイデアやバリエーションを生成します"
-    },
-    {
-      "id": "phrase-152",
-      "words": [
-        "But",
+        ",",
+        "but",
         "humans",
         "make",
         "final",
@@ -1789,7 +1775,7 @@
         "choices",
         "."
       ],
-      "phraseMeaning": "しかし人間が最終的な芸術的選択を行います"
+      "phraseMeaning": "アイデアやバリエーションを生成しますが、人間が最終的な芸術的選択を行います"
     },
     {
       "id": "phrase-153",
@@ -2341,20 +2327,13 @@
         "reflect",
         "our",
         "values",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "AIは私たちの価値観を反映すべきです"
-    },
-    {
-      "id": "phrase-200",
-      "words": [
-        "But",
+        ",",
+        "but",
         "whose",
         "values",
         "."
       ],
-      "phraseMeaning": "しかし誰の価値観か"
+      "phraseMeaning": "AIは私たちの価値観を反映すべきですが、誰の価値観か"
     },
     {
       "id": "phrase-201",
@@ -3089,20 +3068,13 @@
         "flag",
         "for",
         "review",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "削除またはレビューのためにフラグを立てます"
-    },
-    {
-      "id": "phrase-263",
-      "words": [
-        "But",
+        ",",
+        "but",
         "mistakes",
         "happen",
         "."
       ],
-      "phraseMeaning": "しかし間違いが起こります"
+      "phraseMeaning": "削除またはレビューのためにフラグを立てますが、間違いが起こります"
     },
     {
       "id": "phrase-264",
@@ -3785,21 +3757,14 @@
         "Encourages",
         "innovation",
         "globally",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "世界的に革新を促進します"
-    },
-    {
-      "id": "phrase-323",
-      "words": [
-        "But",
+        ",",
+        "but",
         "also",
         "enables",
         "misuse",
         "."
       ],
-      "phraseMeaning": "しかし悪用も可能にします"
+      "phraseMeaning": "世界的に革新を促進しますが、悪用も可能にします"
     },
     {
       "id": "phrase-324",
@@ -4230,14 +4195,7 @@
         "quality",
         "of",
         "life",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "生活の質を改善します"
-    },
-    {
-      "id": "phrase-361",
-      "words": [
+        ",",
         "Or",
         "we",
         "can",
@@ -4246,7 +4204,7 @@
         "AI",
         "."
       ],
-      "phraseMeaning": "または有害なAIを作ることができます"
+      "phraseMeaning": "生活の質を改善しますが、または有害なAIを作ることができます"
     },
     {
       "id": "phrase-362",
@@ -4544,21 +4502,14 @@
         "assist",
         "human",
         "composers",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "人間の作曲家を支援できます"
-    },
-    {
-      "id": "phrase-388",
-      "words": [
+        ",",
         "Or",
         "generate",
         "background",
         "music",
         "."
       ],
-      "phraseMeaning": "またはバックグラウンドミュージックを生成します"
+      "phraseMeaning": "人間の作曲家を支援できますが、またはバックグラウンドミュージックを生成します"
     },
     {
       "id": "phrase-389",
@@ -5065,21 +5016,14 @@
         "human",
         "computer",
         "interaction",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "人間とコンピュータの相互作用を改善できます"
-    },
-    {
-      "id": "phrase-435",
-      "words": [
-        "But",
+        ",",
+        "but",
         "raises",
         "privacy",
         "concerns",
         "."
       ],
-      "phraseMeaning": "しかしプライバシーの懸念を引き起こします"
+      "phraseMeaning": "人間とコンピュータの相互作用を改善できますが、プライバシーの懸念を引き起こします"
     },
     {
       "id": "phrase-436",
@@ -5702,14 +5646,7 @@
         "open",
         "to",
         "risks",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "リスクに目を向けて"
-    },
-    {
-      "id": "phrase-492",
-      "words": [
+        ",",
         "And",
         "commitment",
         "to",
@@ -5717,7 +5654,7 @@
         "values",
         "."
       ],
-      "phraseMeaning": "そして人間の価値へのコミットメント"
+      "phraseMeaning": "リスクに目を向けてが、そして人間の価値へのコミットメント"
     },
     {
       "id": "phrase-493",
@@ -5728,7 +5665,6 @@
         "the",
         "AI",
         "future",
-        ".",
         "."
       ],
       "phraseMeaning": "一緒に私たちはAIの未来を形作ります"

@@ -348,18 +348,18 @@
     {
       "id": "phrase-26",
       "words": [
-        "Coal",
-        "oil",
+        "Coal,",
+        "oil,",
         "and",
         "natural",
         "gas",
+        "have",
         "powered",
         "our",
         "development",
-        ".",
-        ","
+        "."
       ],
-      "phraseMeaning": "石炭石油天然ガスが私たちの発展を動かしました"
+      "phraseMeaning": "石炭、石油、天然ガスが私たちの発展を動かしてきました"
     },
     {
       "id": "phrase-27",
@@ -4429,21 +4429,14 @@
         "have",
         "ethical",
         "concerns",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "一部の人々は倫理的懸念を持っています"
-    },
-    {
-      "id": "phrase-350",
-      "words": [
-        "But",
+        ",",
+        "but",
         "technology",
         "is",
         "improving",
         "."
       ],
-      "phraseMeaning": "しかし技術は改善しています"
+      "phraseMeaning": "一部の人々は倫理的懸念を持っていますが、技術は改善しています"
     },
     {
       "id": "phrase-351",
@@ -5777,22 +5770,15 @@
         "is",
         "being",
         "made",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "進歩が行われています"
-    },
-    {
-      "id": "phrase-460",
-      "words": [
-        "But",
+        ",",
+        "but",
         "we",
         "must",
         "move",
         "faster",
         "."
       ],
-      "phraseMeaning": "しかしもっと速く動かなければなりません"
+      "phraseMeaning": "進歩が行われていますが、もっと速く動かなければなりません"
     },
     {
       "id": "phrase-461",
@@ -6368,7 +6354,6 @@
         "us",
         "seize",
         "it",
-        ".",
         "."
       ],
       "phraseMeaning": "それをつかみましょう"
