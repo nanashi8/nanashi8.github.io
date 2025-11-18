@@ -1,5 +1,53 @@
 // 進捗・成績管理用のLocalStorageモジュール
 
+// LocalStorage容量制限対策
+const STORAGE_KEY = 'progress-data';
+const MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数
+
+// SafeなLocalStorage操作
+function safeSetItem(key: string, value: string): boolean {
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch (e) {
+    if (e instanceof DOMException && e.name === 'QuotaExceededError') {
+      console.warn('LocalStorage容量超過。古いデータを削除します。');
+      // 古い結果データを削除
+      cleanupOldResults();
+      try {
+        localStorage.setItem(key, value);
+        return true;
+      } catch (e2) {
+        console.error('データ削除後も保存失敗:', e2);
+        return false;
+      }
+    }
+    console.error('LocalStorage保存エラー:', e);
+    return false;
+  }
+}
+
+// 古い結果データを削除
+function cleanupOldResults(): void {
+  const data = loadProgress();
+  if (data.results.length > MAX_RESULTS_PER_MODE * 3) {
+    // モード別に最新N件のみ保持
+    const resultsByMode = {
+      translation: data.results.filter(r => r.mode === 'translation'),
+      spelling: data.results.filter(r => r.mode === 'spelling'),
+      reading: data.results.filter(r => r.mode === 'reading'),
+    };
+    
+    data.results = [
+      ...resultsByMode.translation.slice(-MAX_RESULTS_PER_MODE),
+      ...resultsByMode.spelling.slice(-MAX_RESULTS_PER_MODE),
+      ...resultsByMode.reading.slice(-MAX_RESULTS_PER_MODE),
+    ].sort((a, b) => a.date - b.date);
+    
+    console.log(`古い結果を削除: ${resultsByMode.translation.length + resultsByMode.spelling.length + resultsByMode.reading.length}件 → ${data.results.length}件`);
+  }
+}
+
 export interface QuizResult {
   id: string;
   questionSetId: string;
@@ -65,7 +113,9 @@ export interface UserProgress {
 }
 
 const PROGRESS_KEY = 'quiz-app-user-progress';
-const MAX_RESULTS = 1000; // 保存する最大結果数
+const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
+const MAX_WORD_PROGRESS = 2000; // 単語進捗の最大保存数
+const MAX_RESPONSE_TIMES = 3; // 応答時間履歴の最大保存数（容量削減）
 
 // 初期化
 function initializeProgress(): UserProgress {
@@ -101,6 +151,10 @@ export function loadProgress(): UserProgress {
     if (!progress.wordProgress) {
       progress.wordProgress = {};
     }
+    
+    // 起動時に自動圧縮を実行
+    compressProgressData(progress);
+    
     return progress;
   } catch (error) {
     console.error('進捗データの読み込みエラー:', error);
@@ -111,17 +165,86 @@ export function loadProgress(): UserProgress {
 // 進捗データの保存
 export function saveProgress(progress: UserProgress): void {
   try {
+    // データ圧縮: 古いデータを削除
+    compressProgressData(progress);
+    
     const data = JSON.stringify(progress);
-    localStorage.setItem(PROGRESS_KEY, data);
+    
+    // データサイズチェック（3MBを超える場合は警告）
+    const sizeInBytes = new Blob([data]).size;
+    const sizeInMB = sizeInBytes / (1024 * 1024);
+    
+    if (sizeInMB > 3) {
+      console.warn(`LocalStorageデータサイズ: ${sizeInMB.toFixed(2)}MB - 容量超過のリスクあり`);
+      // 緊急圧縮
+      emergencyCompress(progress);
+    }
+    
+    // safeSetItemを使用
+    const saved = safeSetItem(PROGRESS_KEY, JSON.stringify(progress));
+    if (!saved) {
+      alert('データの保存に失敗しました。ブラウザのストレージ容量が不足しています。\n成績タブから古いデータを削除してください。');
+    }
   } catch (error) {
     console.error('進捗データの保存に失敗:', error);
-    
-    // QuotaExceededErrorの場合のみ警告
-    if (error instanceof DOMException && error.name === 'QuotaExceededError') {
-      console.warn('LocalStorage容量超過。');
-      alert('データの保存に失敗しました。ブラウザのストレージ容量が不足しています。\n成績タブから古いデータを削除するか、ブラウザの設定でLocalStorageを増やしてください。');
-    }
   }
+}
+
+// データ圧縮: 古いデータを削除
+function compressProgressData(progress: UserProgress): void {
+  // 1. 古いクイズ結果を削除（最新500件のみ保持）
+  if (progress.results.length > MAX_RESULTS) {
+    progress.results.sort((a, b) => b.date - a.date);
+    progress.results = progress.results.slice(0, MAX_RESULTS);
+  }
+  
+  // 2. 単語進捗データを最適化
+  const wordEntries = Object.entries(progress.wordProgress);
+  if (wordEntries.length > MAX_WORD_PROGRESS) {
+    // 最終学習日が古い順にソート
+    wordEntries.sort((a, b) => b[1].lastStudied - a[1].lastStudied);
+    progress.wordProgress = Object.fromEntries(wordEntries.slice(0, MAX_WORD_PROGRESS));
+  }
+  
+  // 3. 応答時間履歴を圧縮
+  Object.values(progress.wordProgress).forEach(wp => {
+    if (wp.responseTimes && wp.responseTimes.length > MAX_RESPONSE_TIMES) {
+      wp.responseTimes = wp.responseTimes.slice(-MAX_RESPONSE_TIMES);
+    }
+  });
+}
+
+// 緊急圧縮: より積極的にデータを削減
+function emergencyCompress(progress: UserProgress): void {
+  console.log('緊急圧縮を開始...');
+  
+  // 1. クイズ結果を最新300件に削減
+  if (progress.results.length > 300) {
+    progress.results.sort((a, b) => b.date - a.date);
+    progress.results = progress.results.slice(0, 300);
+  }
+  
+  // 2. 単語進捗を最新2000件に削減
+  const wordEntries = Object.entries(progress.wordProgress);
+  if (wordEntries.length > 2000) {
+    wordEntries.sort((a, b) => b[1].lastStudied - a[1].lastStudied);
+    progress.wordProgress = Object.fromEntries(wordEntries.slice(0, 2000));
+  }
+  
+  // 3. 応答時間履歴を3件に削減
+  Object.values(progress.wordProgress).forEach(wp => {
+    if (wp.responseTimes && wp.responseTimes.length > 3) {
+      wp.responseTimes = wp.responseTimes.slice(-3);
+    }
+  });
+  
+  // 4. 学習日の記録を最新180日に削減
+  if (progress.statistics.studyDates.length > 180) {
+    progress.statistics.studyDates.sort((a, b) => b - a);
+    progress.statistics.studyDates = progress.statistics.studyDates.slice(0, 180);
+  }
+  
+  console.log('緊急圧縮完了');
 }
 
 // クイズ結果を追加
@@ -534,9 +657,20 @@ function removeFromReadingUnknownWords(word: string): void {
       }
     });
     
-    // 変更があった場合のみ保存
+    // 変更があった場合のみ保存（エラーハンドリング追加）
     if (modified) {
-      localStorage.setItem(readingDataKey, JSON.stringify(passages));
+      try {
+        localStorage.setItem(readingDataKey, JSON.stringify(passages));
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'QuotaExceededError') {
+          console.warn('長文読解データの保存に失敗（容量超過）。データを圧縮します。');
+          // 長文読解データは再読み込みで復元できるため、削除して再取得を促す
+          localStorage.removeItem(readingDataKey);
+          console.log('長文読解データを削除しました。次回読み込み時に再取得されます。');
+        } else {
+          throw error;
+        }
+      }
     }
   } catch (err) {
     console.error('長文読解データの更新エラー:', err);

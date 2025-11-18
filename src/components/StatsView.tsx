@@ -21,6 +21,32 @@ function StatsView({ }: StatsViewProps) {
   const [translationStats, setTranslationStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
   const [spellingStats, setSpellingStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
   const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
+  const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
+
+  // LocalStorageサイズを取得
+  const getStorageSize = () => {
+    try {
+      let totalSize = 0;
+      const details: { key: string; sizeMB: number }[] = [];
+      
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key) {
+          const value = localStorage.getItem(key);
+          if (value) {
+            const size = new Blob([value]).size;
+            totalSize += size;
+            details.push({ key, sizeMB: size / (1024 * 1024) });
+          }
+        }
+      }
+      
+      details.sort((a, b) => b.sizeMB - a.sizeMB);
+      setStorageInfo({ totalMB: totalSize / (1024 * 1024), details: details.slice(0, 5) });
+    } catch (error) {
+      console.error('ストレージサイズの取得エラー:', error);
+    }
+  };
 
   // データ読み込み
   const loadData = () => {
@@ -28,6 +54,7 @@ function StatsView({ }: StatsViewProps) {
     const spellingData = getStatsByModeDifficulty('spelling');
     setTranslationStats(translationData);
     setSpellingStats(spellingData);
+    getStorageSize();
   };
 
   // リアルタイム更新
@@ -174,6 +201,32 @@ function StatsView({ }: StatsViewProps) {
           ⚠️ すべての成績をリセット
         </button>
       </div>
+
+      {/* ストレージ情報 */}
+      {storageInfo && (
+        <div className="stats-section-storage">
+          <h3>💾 ストレージ使用量</h3>
+          <div className="storage-info">
+            <p className={storageInfo.totalMB > 4 ? 'storage-warning' : ''}>
+              <strong>合計:</strong> {storageInfo.totalMB.toFixed(2)} MB / 約 5-10 MB
+              {storageInfo.totalMB > 4 && ' ⚠️ 容量が不足しています'}
+            </p>
+            <details>
+              <summary>詳細を表示</summary>
+              <ul>
+                {storageInfo.details.map((item, idx) => (
+                  <li key={idx}>
+                    <code>{item.key}</code>: {item.sizeMB.toFixed(2)} MB
+                  </li>
+                ))}
+              </ul>
+              <p className="storage-note">
+                💡 ヒント: データが大きくなりすぎた場合は、古い成績を削除すると容量を節約できます。
+              </p>
+            </details>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

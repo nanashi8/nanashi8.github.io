@@ -33,11 +33,29 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [showFullText, setShowFullText] = useState(false);
   const [showFullTranslation, setShowFullTranslation] = useState(false);
 
-  // passagesが更新されたらLocalStorageに保存
+  // passagesが更新されたらLocalStorageに保存（エラーハンドリング追加）
   useEffect(() => {
     if (passages.length > 0) {
       const readingDataKey = 'reading-passages-data';
-      localStorage.setItem(readingDataKey, JSON.stringify(passages));
+      try {
+        localStorage.setItem(readingDataKey, JSON.stringify(passages));
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'QuotaExceededError') {
+          console.warn('長文読解データの保存に失敗（容量超過）');
+          // 既存のデータを削除して再試行
+          localStorage.removeItem(readingDataKey);
+          try {
+            localStorage.setItem(readingDataKey, JSON.stringify(passages));
+            console.log('古いデータを削除して再保存しました。');
+          } catch (retryError) {
+            console.error('再保存も失敗:', retryError);
+            // 長文読解データは次回読み込み時に再取得されるため、警告のみ
+            console.warn('長文読解の進捗は保存されませんでしたが、次回読み込み時に復元されます。');
+          }
+        } else {
+          console.error('長文読解データの保存エラー:', error);
+        }
+      }
     }
   }, [passages]);
 

@@ -21,6 +21,46 @@ export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
 
+// LocalStorageサイズを確認する関数
+function checkLocalStorageSize() {
+  try {
+    let totalSize = 0;
+    const details: { key: string; size: number }[] = [];
+    
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key) {
+        const value = localStorage.getItem(key);
+        if (value) {
+          const size = new Blob([value]).size;
+          totalSize += size;
+          details.push({ key, size });
+        }
+      }
+    }
+    
+    const totalMB = totalSize / (1024 * 1024);
+    console.log(`📊 LocalStorage使用量: ${totalMB.toFixed(2)}MB`);
+    
+    // 大きいデータをログ出力
+    details.sort((a, b) => b.size - a.size);
+    details.slice(0, 5).forEach(d => {
+      const sizeMB = d.size / (1024 * 1024);
+      console.log(`  - ${d.key}: ${sizeMB.toFixed(2)}MB`);
+    });
+    
+    // 警告表示（4MB以上で警告）
+    if (totalMB > 4) {
+      console.warn('⚠️ LocalStorageの使用量が多いため、古いデータを自動削除しています。');
+      // 進捗データを再読み込みして自動圧縮を実行
+      const progress = loadProgress();
+      console.log('自動圧縮が完了しました。');
+    }
+  } catch (error) {
+    console.error('LocalStorageサイズの確認エラー:', error);
+  }
+}
+
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
   
@@ -81,6 +121,9 @@ function App() {
   useEffect(() => {
     const loadInitialData = async () => {
       try {
+        // LocalStorageサイズの確認
+        checkLocalStorageSize();
+        
         const response = await fetch('/data/junior-high-entrance-words.csv');
         const csvText = await response.text();
         const questions = parseCSV(csvText);

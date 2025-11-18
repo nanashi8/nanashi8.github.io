@@ -6919,3 +6919,77 @@ option {
   background: #f44336;
   color: white;
 }
+
+/* ストレージ情報セクション */
+.stats-section-storage {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.stats-section-storage h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.storage-info {
+  font-size: 0.95em;
+}
+
+.storage-info p {
+  margin: 10px 0;
+}
+
+.storage-warning {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.storage-info details {
+  margin-top: 15px;
+}
+
+.storage-info summary {
+  cursor: pointer;
+  color: #1976d2;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 4px;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.storage-info summary:hover {
+  background: #e3f2fd;
+}
+
+.storage-info ul {
+  list-style: none;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.storage-info li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.storage-info li:last-child {
+  border-bottom: none;
+}
+
+.storage-note {
+  padding: 10px;
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
