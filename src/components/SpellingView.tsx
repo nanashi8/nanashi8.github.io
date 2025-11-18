@@ -468,8 +468,8 @@ function SpellingView({
                     } else if (e.key === 'Backspace') {
                       e.preventDefault();
                       handleBackspace();
-                    } else if (e.key === ' ' || e.key === 'Enter') {
-                      // スペースキーまたはEnterキー: 分からない（スキップ）
+                    } else if (e.key === ' ') {
+                      // スペースキー: 分からない（スキップ）
                       e.preventDefault();
                       handleSkip();
                     }
@@ -509,7 +509,7 @@ function SpellingView({
                     </button>
                   )}
                   <button className="btn-skip-word" onClick={handleSkip}>
-                    ⏭️ 分からない (スペースキー/Enterキー)
+                    ⏭️ 分からない (スペースキー)
                   </button>
                 </div>
               )}
