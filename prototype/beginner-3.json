@@ -19,27 +19,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "have",
-          "meaning": "",
+          "meaning": "持っている",
           "isUnknown": false
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": "多くの",
           "isUnknown": false
         },
         {
           "word": "hobbies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "hobbies",
           "isUnknown": false
         }
       ],
@@ -59,32 +54,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "like",
-          "meaning": "",
+          "meaning": "like",
           "isUnknown": false
         },
         {
           "word": "sports",
-          "meaning": "",
+          "meaning": "sports",
           "isUnknown": false
         },
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "music",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "music",
           "isUnknown": false
         }
       ],
@@ -105,37 +95,32 @@
       "segments": [
         {
           "word": "Let",
-          "meaning": "",
+          "meaning": "Let",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
+          "meaning": "me",
           "isUnknown": false
         },
         {
           "word": "tell",
-          "meaning": "",
+          "meaning": "tell",
           "isUnknown": false
         },
         {
           "word": "you",
-          "meaning": "",
+          "meaning": "あなたは",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "them",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "them",
           "isUnknown": false
         }
       ],
@@ -156,37 +141,32 @@
       "segments": [
         {
           "word": "First,",
-          "meaning": "",
+          "meaning": "First,",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "will",
-          "meaning": "",
+          "meaning": "でしょう",
           "isUnknown": false
         },
         {
           "word": "talk",
-          "meaning": "",
+          "meaning": "talk",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "sports",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "sports",
           "isUnknown": false
         }
       ],
@@ -206,32 +186,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "play",
-          "meaning": "",
+          "meaning": "play",
           "isUnknown": false
         },
         {
           "word": "soccer",
-          "meaning": "",
+          "meaning": "soccer",
           "isUnknown": false
         },
         {
           "word": "every",
-          "meaning": "",
+          "meaning": "every",
           "isUnknown": false
         },
         {
           "word": "weekend",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "weekend",
           "isUnknown": false
         }
       ],
@@ -251,32 +226,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "joined",
-          "meaning": "",
+          "meaning": "joined",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "soccer",
-          "meaning": "",
+          "meaning": "soccer",
           "isUnknown": false
         },
         {
           "word": "club",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "club",
           "isUnknown": false
         }
       ],
@@ -296,32 +266,32 @@
       "segments": [
         {
           "word": "when",
-          "meaning": "",
+          "meaning": "いつ",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "started",
-          "meaning": "",
+          "meaning": "started",
           "isUnknown": false
         },
         {
           "word": "junior",
-          "meaning": "",
+          "meaning": "junior",
           "isUnknown": false
         },
         {
           "word": "high",
-          "meaning": "",
+          "meaning": "high",
           "isUnknown": false
         },
         {
           "word": "school",
-          "meaning": "",
+          "meaning": "school",
           "isUnknown": false
         }
       ],
@@ -341,32 +311,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "practice",
-          "meaning": "",
+          "meaning": "practice",
           "isUnknown": false
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": "と一緒に",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "teammates",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "teammates",
           "isUnknown": false
         }
       ],
@@ -385,27 +350,22 @@
       "segments": [
         {
           "word": "after",
-          "meaning": "",
+          "meaning": "after",
           "isUnknown": false
         },
         {
           "word": "school",
-          "meaning": "",
+          "meaning": "school",
           "isUnknown": false
         },
         {
           "word": "every",
-          "meaning": "",
+          "meaning": "every",
           "isUnknown": false
         },
         {
           "word": "day",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "日",
           "isUnknown": false
         }
       ],
@@ -426,37 +386,32 @@
       "segments": [
         {
           "word": "We",
-          "meaning": "",
+          "meaning": "私たちは",
           "isUnknown": false
         },
         {
           "word": "have",
-          "meaning": "",
+          "meaning": "持っている",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "game",
-          "meaning": "",
+          "meaning": "game",
           "isUnknown": false
         },
         {
           "word": "this",
-          "meaning": "",
+          "meaning": "this",
           "isUnknown": false
         },
         {
           "word": "Saturday",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "Saturday",
           "isUnknown": false
         }
       ],
@@ -477,37 +432,32 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "am",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": "とても",
           "isUnknown": false
         },
         {
           "word": "excited",
-          "meaning": "",
+          "meaning": "excited",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "it",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "それは",
           "isUnknown": false
         }
       ],
@@ -526,27 +476,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "also",
-          "meaning": "",
+          "meaning": "also",
           "isUnknown": false
         },
         {
           "word": "like",
-          "meaning": "",
+          "meaning": "like",
           "isUnknown": false
         },
         {
           "word": "baseball",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "baseball",
           "isUnknown": false
         }
       ],
@@ -568,42 +513,37 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "often",
-          "meaning": "",
+          "meaning": "often",
           "isUnknown": false
         },
         {
           "word": "watch",
-          "meaning": "",
+          "meaning": "watch",
           "isUnknown": false
         },
         {
           "word": "baseball",
-          "meaning": "",
+          "meaning": "baseball",
           "isUnknown": false
         },
         {
           "word": "games",
-          "meaning": "",
+          "meaning": "games",
           "isUnknown": false
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": "の上に",
           "isUnknown": false
         },
         {
           "word": "TV",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "TV",
           "isUnknown": false
         }
       ],
@@ -624,37 +564,32 @@
       "segments": [
         {
           "word": "My",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "favorite",
-          "meaning": "",
+          "meaning": "favorite",
           "isUnknown": false
         },
         {
           "word": "team",
-          "meaning": "",
+          "meaning": "team",
           "isUnknown": false
         },
         {
           "word": "is",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "Giants",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "Giants",
           "isUnknown": false
         }
       ],
@@ -673,27 +608,22 @@
       "segments": [
         {
           "word": "Sometimes",
-          "meaning": "",
+          "meaning": "Sometimes",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "play",
-          "meaning": "",
+          "meaning": "play",
           "isUnknown": false
         },
         {
           "word": "catch",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "catch",
           "isUnknown": false
         }
       ],
@@ -714,37 +644,32 @@
       "segments": [
         {
           "word": "with",
-          "meaning": "",
+          "meaning": "と一緒に",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "father",
-          "meaning": "",
+          "meaning": "father",
           "isUnknown": false
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "park",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "park",
           "isUnknown": false
         }
       ],
@@ -763,27 +688,22 @@
       "segments": [
         {
           "word": "It",
-          "meaning": "",
+          "meaning": "それは",
           "isUnknown": false
         },
         {
           "word": "is",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": "とても",
           "isUnknown": false
         },
         {
           "word": "fun",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "fun",
           "isUnknown": false
         }
       ],
@@ -805,42 +725,37 @@
       "segments": [
         {
           "word": "Next,",
-          "meaning": "",
+          "meaning": "Next,",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "want",
-          "meaning": "",
+          "meaning": "want",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "talk",
-          "meaning": "",
+          "meaning": "talk",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "music",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "music",
           "isUnknown": false
         }
       ],
@@ -860,32 +775,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "love",
-          "meaning": "",
+          "meaning": "love",
           "isUnknown": false
         },
         {
           "word": "listening",
-          "meaning": "",
+          "meaning": "listening",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "music",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "music",
           "isUnknown": false
         }
       ],
@@ -904,27 +814,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "listen",
-          "meaning": "",
+          "meaning": "listen",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "music",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "music",
           "isUnknown": false
         }
       ],
@@ -946,42 +851,37 @@
       "segments": [
         {
           "word": "every",
-          "meaning": "",
+          "meaning": "every",
           "isUnknown": false
         },
         {
           "word": "day",
-          "meaning": "",
+          "meaning": "日",
           "isUnknown": false
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": "の上に",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "way",
-          "meaning": "",
+          "meaning": "方法",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "school",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "school",
           "isUnknown": false
         }
       ],
@@ -1003,42 +903,37 @@
       "segments": [
         {
           "word": "My",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "favorite",
-          "meaning": "",
+          "meaning": "favorite",
           "isUnknown": false
         },
         {
           "word": "singer",
-          "meaning": "",
+          "meaning": "singer",
           "isUnknown": false
         },
         {
           "word": "is",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "Japanese",
-          "meaning": "",
+          "meaning": "Japanese",
           "isUnknown": false
         },
         {
           "word": "artist",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "artist",
           "isUnknown": false
         }
       ],
@@ -1057,27 +952,22 @@
       "segments": [
         {
           "word": "Her",
-          "meaning": "",
+          "meaning": "彼女の",
           "isUnknown": false
         },
         {
           "word": "songs",
-          "meaning": "",
+          "meaning": "songs",
           "isUnknown": false
         },
         {
           "word": "are",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "beautiful",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "beautiful",
           "isUnknown": false
         }
       ],
@@ -1096,27 +986,22 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "make",
-          "meaning": "",
+          "meaning": "make",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
+          "meaning": "me",
           "isUnknown": false
         },
         {
           "word": "happy",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "happy",
           "isUnknown": false
         }
       ],
@@ -1136,32 +1021,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "also",
-          "meaning": "",
+          "meaning": "also",
           "isUnknown": false
         },
         {
           "word": "play",
-          "meaning": "",
+          "meaning": "play",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "piano",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "piano",
           "isUnknown": false
         }
       ],
@@ -1180,27 +1060,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "started",
-          "meaning": "",
+          "meaning": "started",
           "isUnknown": false
         },
         {
           "word": "learning",
-          "meaning": "",
+          "meaning": "learning",
           "isUnknown": false
         },
         {
           "word": "piano",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "piano",
           "isUnknown": false
         }
       ],
@@ -1220,32 +1095,32 @@
       "segments": [
         {
           "word": "when",
-          "meaning": "",
+          "meaning": "いつ",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "was",
-          "meaning": "",
+          "meaning": "でした",
           "isUnknown": false
         },
         {
           "word": "seven",
-          "meaning": "",
+          "meaning": "seven",
           "isUnknown": false
         },
         {
           "word": "years",
-          "meaning": "",
+          "meaning": "years",
           "isUnknown": false
         },
         {
           "word": "old",
-          "meaning": "",
+          "meaning": "古い",
           "isUnknown": false
         }
       ],
@@ -1265,32 +1140,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "practice",
-          "meaning": "",
+          "meaning": "practice",
           "isUnknown": false
         },
         {
           "word": "for",
-          "meaning": "",
+          "meaning": "のために",
           "isUnknown": false
         },
         {
           "word": "one",
-          "meaning": "",
+          "meaning": "one",
           "isUnknown": false
         },
         {
           "word": "hour",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "hour",
           "isUnknown": false
         }
       ],
@@ -1309,27 +1179,22 @@
       "segments": [
         {
           "word": "every",
-          "meaning": "",
+          "meaning": "every",
           "isUnknown": false
         },
         {
           "word": "day",
-          "meaning": "",
+          "meaning": "日",
           "isUnknown": false
         },
         {
           "word": "after",
-          "meaning": "",
+          "meaning": "after",
           "isUnknown": false
         },
         {
           "word": "dinner",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "dinner",
           "isUnknown": false
         }
       ],
@@ -1351,42 +1216,37 @@
       "segments": [
         {
           "word": "Last",
-          "meaning": "",
+          "meaning": "最後の",
           "isUnknown": false
         },
         {
           "word": "month,",
-          "meaning": "",
+          "meaning": "month,",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "played",
-          "meaning": "",
+          "meaning": "played",
           "isUnknown": false
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "concert",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "concert",
           "isUnknown": false
         }
       ],
@@ -1405,27 +1265,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "was",
-          "meaning": "",
+          "meaning": "でした",
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": "とても",
           "isUnknown": false
         },
         {
           "word": "nervous",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "nervous",
           "isUnknown": false
         }
       ],
@@ -1445,32 +1300,27 @@
       "segments": [
         {
           "word": "but",
-          "meaning": "",
+          "meaning": "しかし",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "did",
-          "meaning": "",
+          "meaning": "した",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "best",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "best",
           "isUnknown": false
         }
       ],
@@ -1490,32 +1340,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "like",
-          "meaning": "",
+          "meaning": "like",
           "isUnknown": false
         },
         {
           "word": "reading",
-          "meaning": "",
+          "meaning": "reading",
           "isUnknown": false
         },
         {
           "word": "books",
-          "meaning": "",
+          "meaning": "books",
           "isUnknown": false
         },
         {
           "word": "too",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "too",
           "isUnknown": false
         }
       ],
@@ -1535,32 +1380,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "go",
-          "meaning": "",
+          "meaning": "go",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "library",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "library",
           "isUnknown": false
         }
       ],
@@ -1576,12 +1416,12 @@
       "segments": [
         {
           "word": "every",
-          "meaning": "",
+          "meaning": "every",
           "isUnknown": false
         },
         {
           "word": "week",
-          "meaning": "",
+          "meaning": "週",
           "isUnknown": false
         }
       ],
@@ -1602,37 +1442,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "enjoy",
-          "meaning": "",
+          "meaning": "enjoy",
           "isUnknown": false
         },
         {
           "word": "reading",
-          "meaning": "",
+          "meaning": "reading",
           "isUnknown": false
         },
         {
           "word": "mystery",
-          "meaning": "",
+          "meaning": "mystery",
           "isUnknown": false
         },
         {
           "word": "stories",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
+          "meaning": "stories",
           "isUnknown": false
         }
       ],
@@ -1650,22 +1480,17 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "adventure",
-          "meaning": "",
+          "meaning": "adventure",
           "isUnknown": false
         },
         {
           "word": "stories",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "stories",
           "isUnknown": false
         }
       ],
@@ -1688,47 +1513,42 @@
       "segments": [
         {
           "word": "My",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "favorite",
-          "meaning": "",
+          "meaning": "favorite",
           "isUnknown": false
         },
         {
           "word": "book",
-          "meaning": "",
+          "meaning": "book",
           "isUnknown": false
         },
         {
           "word": "is",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "young",
-          "meaning": "",
+          "meaning": "young",
           "isUnknown": false
         },
         {
           "word": "detective",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "detective",
           "isUnknown": false
         }
       ],
@@ -1748,32 +1568,22 @@
       "segments": [
         {
           "word": "Reading",
-          "meaning": "",
+          "meaning": "Reading",
           "isUnknown": false
         },
         {
           "word": "helps",
-          "meaning": "",
+          "meaning": "helps",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
+          "meaning": "me",
           "isUnknown": false
         },
         {
           "word": "relax",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
+          "meaning": "relax",
           "isUnknown": false
         }
       ],
@@ -1792,27 +1602,22 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "learn",
-          "meaning": "",
+          "meaning": "learn",
           "isUnknown": false
         },
         {
           "word": "new",
-          "meaning": "",
+          "meaning": "新しい",
           "isUnknown": false
         },
         {
           "word": "things",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "things",
           "isUnknown": false
         }
       ],
@@ -1833,37 +1638,32 @@
       "segments": [
         {
           "word": "Another",
-          "meaning": "",
+          "meaning": "Another",
           "isUnknown": false
         },
         {
           "word": "hobby",
-          "meaning": "",
+          "meaning": "hobby",
           "isUnknown": false
         },
         {
           "word": "of",
-          "meaning": "",
+          "meaning": "の",
           "isUnknown": false
         },
         {
           "word": "mine",
-          "meaning": "",
+          "meaning": "mine",
           "isUnknown": false
         },
         {
           "word": "is",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "drawing",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "drawing",
           "isUnknown": false
         }
       ],
@@ -1883,32 +1683,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "like",
-          "meaning": "",
+          "meaning": "like",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "draw",
-          "meaning": "",
+          "meaning": "draw",
           "isUnknown": false
         },
         {
           "word": "pictures",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "pictures",
           "isUnknown": false
         }
       ],
@@ -1926,22 +1721,22 @@
       "segments": [
         {
           "word": "of",
-          "meaning": "",
+          "meaning": "の",
           "isUnknown": false
         },
         {
           "word": "animals",
-          "meaning": "",
+          "meaning": "animals",
           "isUnknown": false
         },
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "nature",
-          "meaning": "",
+          "meaning": "nature",
           "isUnknown": false
         }
       ],
@@ -1961,32 +1756,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "use",
-          "meaning": "",
+          "meaning": "use",
           "isUnknown": false
         },
         {
           "word": "colored",
-          "meaning": "",
+          "meaning": "colored",
           "isUnknown": false
         },
         {
           "word": "pencils",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
+          "meaning": "pencils",
           "isUnknown": false
         }
       ],
@@ -2004,22 +1789,17 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "sometimes",
-          "meaning": "",
+          "meaning": "sometimes",
           "isUnknown": false
         },
         {
           "word": "watercolors",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "watercolors",
           "isUnknown": false
         }
       ],
@@ -2041,42 +1821,37 @@
       "segments": [
         {
           "word": "Last",
-          "meaning": "",
+          "meaning": "最後の",
           "isUnknown": false
         },
         {
           "word": "year,",
-          "meaning": "",
+          "meaning": "year,",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "picture",
-          "meaning": "",
+          "meaning": "picture",
           "isUnknown": false
         },
         {
           "word": "won",
-          "meaning": "",
+          "meaning": "won",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "prize",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "prize",
           "isUnknown": false
         }
       ],
@@ -2095,27 +1870,27 @@
       "segments": [
         {
           "word": "at",
-          "meaning": "",
+          "meaning": "で",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "school",
-          "meaning": "",
+          "meaning": "school",
           "isUnknown": false
         },
         {
           "word": "art",
-          "meaning": "",
+          "meaning": "art",
           "isUnknown": false
         },
         {
           "word": "competition",
-          "meaning": "",
+          "meaning": "competition",
           "isUnknown": false
         }
       ],
@@ -2134,27 +1909,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "was",
-          "meaning": "",
+          "meaning": "でした",
           "isUnknown": false
         },
         {
           "word": "so",
-          "meaning": "",
+          "meaning": "だから",
           "isUnknown": false
         },
         {
           "word": "happy",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "happy",
           "isUnknown": false
         }
       ],
@@ -2174,32 +1944,27 @@
       "segments": [
         {
           "word": "On",
-          "meaning": "",
+          "meaning": "の上に",
           "isUnknown": false
         },
         {
           "word": "weekends,",
-          "meaning": "",
+          "meaning": "weekends,",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "spend",
-          "meaning": "",
+          "meaning": "spend",
           "isUnknown": false
         },
         {
           "word": "time",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "時間",
           "isUnknown": false
         }
       ],
@@ -2217,22 +1982,17 @@
       "segments": [
         {
           "word": "with",
-          "meaning": "",
+          "meaning": "と一緒に",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "friends",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "friends",
           "isUnknown": false
         }
       ],
@@ -2252,32 +2012,27 @@
       "segments": [
         {
           "word": "We",
-          "meaning": "",
+          "meaning": "私たちは",
           "isUnknown": false
         },
         {
           "word": "go",
-          "meaning": "",
+          "meaning": "go",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "movies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "movies",
           "isUnknown": false
         }
       ],
@@ -2297,32 +2052,27 @@
       "segments": [
         {
           "word": "or",
-          "meaning": "",
+          "meaning": "または",
           "isUnknown": false
         },
         {
           "word": "play",
-          "meaning": "",
+          "meaning": "play",
           "isUnknown": false
         },
         {
           "word": "video",
-          "meaning": "",
+          "meaning": "video",
           "isUnknown": false
         },
         {
           "word": "games",
-          "meaning": "",
+          "meaning": "games",
           "isUnknown": false
         },
         {
           "word": "together",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "together",
           "isUnknown": false
         }
       ],
@@ -2341,27 +2091,22 @@
       "segments": [
         {
           "word": "Sometimes",
-          "meaning": "",
+          "meaning": "Sometimes",
           "isUnknown": false
         },
         {
           "word": "we",
-          "meaning": "",
+          "meaning": "私たちは",
           "isUnknown": false
         },
         {
           "word": "go",
-          "meaning": "",
+          "meaning": "go",
           "isUnknown": false
         },
         {
           "word": "shopping",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "shopping",
           "isUnknown": false
         }
       ],
@@ -2381,32 +2126,27 @@
       "segments": [
         {
           "word": "We",
-          "meaning": "",
+          "meaning": "私たちは",
           "isUnknown": false
         },
         {
           "word": "talk",
-          "meaning": "",
+          "meaning": "talk",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "our",
-          "meaning": "",
+          "meaning": "私たちの",
           "isUnknown": false
         },
         {
           "word": "hobbies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "hobbies",
           "isUnknown": false
         }
       ],
@@ -2425,27 +2165,22 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "share",
-          "meaning": "",
+          "meaning": "share",
           "isUnknown": false
         },
         {
           "word": "our",
-          "meaning": "",
+          "meaning": "私たちの",
           "isUnknown": false
         },
         {
           "word": "interests",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "interests",
           "isUnknown": false
         }
       ],
@@ -2466,37 +2201,32 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "want",
-          "meaning": "",
+          "meaning": "want",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "try",
-          "meaning": "",
+          "meaning": "try",
           "isUnknown": false
         },
         {
           "word": "new",
-          "meaning": "",
+          "meaning": "新しい",
           "isUnknown": false
         },
         {
           "word": "hobbies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "hobbies",
           "isUnknown": false
         }
       ],
@@ -2516,32 +2246,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "am",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "interested",
-          "meaning": "",
+          "meaning": "interested",
           "isUnknown": false
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
           "word": "photography",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "photography",
           "isUnknown": false
         }
       ],
@@ -2560,27 +2285,22 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "asked",
-          "meaning": "",
+          "meaning": "asked",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "parents",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "parents",
           "isUnknown": false
         }
       ],
@@ -2600,32 +2320,32 @@
       "segments": [
         {
           "word": "for",
-          "meaning": "",
+          "meaning": "のために",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "camera",
-          "meaning": "",
+          "meaning": "camera",
           "isUnknown": false
         },
         {
           "word": "for",
-          "meaning": "",
+          "meaning": "のために",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "birthday",
-          "meaning": "",
+          "meaning": "birthday",
           "isUnknown": false
         }
       ],
@@ -2645,32 +2365,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "want",
-          "meaning": "",
+          "meaning": "want",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "take",
-          "meaning": "",
+          "meaning": "take",
           "isUnknown": false
         },
         {
           "word": "pictures",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "pictures",
           "isUnknown": false
         }
       ],
@@ -2687,17 +2402,17 @@
       "segments": [
         {
           "word": "of",
-          "meaning": "",
+          "meaning": "の",
           "isUnknown": false
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": "beautiful",
           "isUnknown": false
         },
         {
           "word": "places",
-          "meaning": "",
+          "meaning": "places",
           "isUnknown": false
         }
       ],
@@ -2715,22 +2430,17 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "special",
-          "meaning": "",
+          "meaning": "special",
           "isUnknown": false
         },
         {
           "word": "moments",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "moments",
           "isUnknown": false
         }
       ],
@@ -2751,37 +2461,32 @@
       "segments": [
         {
           "word": "Hobbies",
-          "meaning": "",
+          "meaning": "Hobbies",
           "isUnknown": false
         },
         {
           "word": "are",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": "とても",
           "isUnknown": false
         },
         {
           "word": "important",
-          "meaning": "",
+          "meaning": "important",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "me",
           "isUnknown": false
         }
       ],
@@ -2801,32 +2506,22 @@
       "segments": [
         {
           "word": "They",
-          "meaning": "",
+          "meaning": "彼らは",
           "isUnknown": false
         },
         {
           "word": "help",
-          "meaning": "",
+          "meaning": "help",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
+          "meaning": "me",
           "isUnknown": false
         },
         {
           "word": "relax",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
+          "meaning": "relax",
           "isUnknown": false
         }
       ],
@@ -2845,27 +2540,22 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "forget",
-          "meaning": "",
+          "meaning": "forget",
           "isUnknown": false
         },
         {
           "word": "about",
-          "meaning": "",
+          "meaning": "について",
           "isUnknown": false
         },
         {
           "word": "stress",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "stress",
           "isUnknown": false
         }
       ],
@@ -2884,27 +2574,22 @@
       "segments": [
         {
           "word": "They",
-          "meaning": "",
+          "meaning": "彼らは",
           "isUnknown": false
         },
         {
           "word": "also",
-          "meaning": "",
+          "meaning": "also",
           "isUnknown": false
         },
         {
           "word": "help",
-          "meaning": "",
+          "meaning": "help",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "me",
           "isUnknown": false
         }
       ],
@@ -2921,17 +2606,17 @@
       "segments": [
         {
           "word": "make",
-          "meaning": "",
+          "meaning": "make",
           "isUnknown": false
         },
         {
           "word": "new",
-          "meaning": "",
+          "meaning": "新しい",
           "isUnknown": false
         },
         {
           "word": "friends",
-          "meaning": "",
+          "meaning": "friends",
           "isUnknown": false
         }
       ],
@@ -2949,22 +2634,17 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "meet",
-          "meaning": "",
+          "meaning": "meet",
           "isUnknown": false
         },
         {
           "word": "people",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "人々",
           "isUnknown": false
         }
       ],
@@ -2984,32 +2664,27 @@
       "segments": [
         {
           "word": "who",
-          "meaning": "",
+          "meaning": "誰",
           "isUnknown": false
         },
         {
           "word": "have",
-          "meaning": "",
+          "meaning": "持っている",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "same",
-          "meaning": "",
+          "meaning": "same",
           "isUnknown": false
         },
         {
           "word": "interests",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "interests",
           "isUnknown": false
         }
       ],
@@ -3031,42 +2706,37 @@
       "segments": [
         {
           "word": "In",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "future,",
-          "meaning": "",
+          "meaning": "future,",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "want",
-          "meaning": "",
+          "meaning": "want",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "continue",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "continue",
           "isUnknown": false
         }
       ],
@@ -3083,17 +2753,17 @@
       "segments": [
         {
           "word": "all",
-          "meaning": "",
+          "meaning": "全て",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "hobbies",
-          "meaning": "",
+          "meaning": "hobbies",
           "isUnknown": false
         }
       ],
@@ -3113,32 +2783,27 @@
       "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "hope",
-          "meaning": "",
+          "meaning": "hope",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "get",
-          "meaning": "",
+          "meaning": "get",
           "isUnknown": false
         },
         {
           "word": "better",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "better",
           "isUnknown": false
         }
       ],
@@ -3157,27 +2822,22 @@
       "segments": [
         {
           "word": "at",
-          "meaning": "",
+          "meaning": "で",
           "isUnknown": false
         },
         {
           "word": "soccer",
-          "meaning": "",
+          "meaning": "soccer",
           "isUnknown": false
         },
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "piano",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "piano",
           "isUnknown": false
         }
       ],
@@ -3196,27 +2856,22 @@
       "segments": [
         {
           "word": "Maybe",
-          "meaning": "",
+          "meaning": "Maybe",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "I",
           "isUnknown": false
         },
         {
           "word": "will",
-          "meaning": "",
+          "meaning": "でしょう",
           "isUnknown": false
         },
         {
           "word": "become",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "become",
           "isUnknown": false
         }
       ],
@@ -3234,22 +2889,22 @@
       "segments": [
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "professional",
-          "meaning": "",
+          "meaning": "professional",
           "isUnknown": false
         },
         {
           "word": "soccer",
-          "meaning": "",
+          "meaning": "soccer",
           "isUnknown": false
         },
         {
           "word": "player",
-          "meaning": "",
+          "meaning": "player",
           "isUnknown": false
         }
       ],
@@ -3268,27 +2923,22 @@
       "segments": [
         {
           "word": "or",
-          "meaning": "",
+          "meaning": "または",
           "isUnknown": false
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "piano",
-          "meaning": "",
+          "meaning": "piano",
           "isUnknown": false
         },
         {
           "word": "teacher",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "teacher",
           "isUnknown": false
         }
       ],
@@ -3307,27 +2957,22 @@
       "segments": [
         {
           "word": "Everyone",
-          "meaning": "",
+          "meaning": "Everyone",
           "isUnknown": false
         },
         {
           "word": "should",
-          "meaning": "",
+          "meaning": "すべきだ",
           "isUnknown": false
         },
         {
           "word": "have",
-          "meaning": "",
+          "meaning": "持っている",
           "isUnknown": false
         },
         {
           "word": "hobbies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "hobbies",
           "isUnknown": false
         }
       ],
@@ -3348,37 +2993,27 @@
       "segments": [
         {
           "word": "Hobbies",
-          "meaning": "",
+          "meaning": "Hobbies",
           "isUnknown": false
         },
         {
           "word": "make",
-          "meaning": "",
+          "meaning": "make",
           "isUnknown": false
         },
         {
           "word": "life",
-          "meaning": "",
+          "meaning": "人生",
           "isUnknown": false
         },
         {
           "word": "more",
-          "meaning": "",
+          "meaning": "もっと",
           "isUnknown": false
         },
         {
           "word": "interesting",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
+          "meaning": "interesting",
           "isUnknown": false
         }
       ],
@@ -3395,17 +3030,12 @@
       "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "enjoyable",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "enjoyable",
           "isUnknown": false
         }
       ],
@@ -3424,27 +3054,22 @@
       "segments": [
         {
           "word": "They",
-          "meaning": "",
+          "meaning": "彼らは",
           "isUnknown": false
         },
         {
           "word": "give",
-          "meaning": "",
+          "meaning": "give",
           "isUnknown": false
         },
         {
           "word": "us",
-          "meaning": "",
+          "meaning": "us",
           "isUnknown": false
         },
         {
           "word": "something",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "something",
           "isUnknown": false
         }
       ],
@@ -3463,27 +3088,22 @@
       "segments": [
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "look",
-          "meaning": "",
+          "meaning": "look",
           "isUnknown": false
         },
         {
           "word": "forward",
-          "meaning": "",
+          "meaning": "forward",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         }
       ],
@@ -3503,32 +3123,22 @@
       "segments": [
         {
           "word": "What",
-          "meaning": "",
+          "meaning": "何",
           "isUnknown": false
         },
         {
           "word": "are",
-          "meaning": "",
+          "meaning": "です",
           "isUnknown": false
         },
         {
           "word": "your",
-          "meaning": "",
+          "meaning": "あなたの",
           "isUnknown": false
         },
         {
           "word": "hobbies?",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "hobbies?",
           "isUnknown": false
         }
       ],

@@ -42,11 +42,6 @@
           "word": "day",
           "meaning": "日",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -99,11 +94,6 @@
           "word": "family",
           "meaning": "家族",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -138,7 +128,7 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
@@ -149,11 +139,6 @@
         {
           "word": "day",
           "meaning": "日",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -185,7 +170,7 @@
         },
         {
           "word": "up",
-          "meaning": "",
+          "meaning": "up",
           "isUnknown": false
         },
         {
@@ -195,22 +180,17 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "morning",
           "meaning": "朝",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -230,7 +210,7 @@
       "segments": [
         {
           "word": "The",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
@@ -251,11 +231,6 @@
         {
           "word": "brightly",
           "meaning": "明るく",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -290,17 +265,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "kitchen",
           "meaning": "台所",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -342,11 +312,6 @@
           "word": "breakfast",
           "meaning": "朝食を",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -380,11 +345,6 @@
         {
           "word": "me",
           "meaning": "私",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -420,11 +380,6 @@
           "word": "said",
           "meaning": "言いました",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -459,11 +414,6 @@
           "word": "me",
           "meaning": "私を",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -481,7 +431,7 @@
       "segments": [
         {
           "word": "Of",
-          "meaning": "",
+          "meaning": "の",
           "isUnknown": false
         },
         {
@@ -497,11 +447,6 @@
         {
           "word": "answered",
           "meaning": "答えました",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -542,17 +487,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "table",
           "meaning": "テーブルを",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -612,11 +552,6 @@
           "word": "it",
           "meaning": "それ",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -669,11 +604,6 @@
           "word": "down",
           "meaning": "降りて",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -707,11 +637,6 @@
         {
           "word": "together",
           "meaning": "一緒に",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -765,11 +690,6 @@
           "word": "milk",
           "meaning": "牛乳を",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -787,7 +707,7 @@
       "segments": [
         {
           "word": "The",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
@@ -803,11 +723,6 @@
         {
           "word": "delicious",
           "meaning": "おいしそうに",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -849,11 +764,6 @@
           "word": "said",
           "meaning": "言いました",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -894,7 +804,7 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
@@ -905,11 +815,6 @@
         {
           "word": "out",
           "meaning": "外に",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -956,17 +861,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "park",
           "meaning": "公園",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -999,7 +899,7 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
@@ -1025,11 +925,6 @@
         {
           "word": "trees",
           "meaning": "木々",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1064,11 +959,6 @@
         {
           "word": "everywhere",
           "meaning": "いたるところに",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1109,17 +999,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "playground",
           "meaning": "遊び場",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1151,7 +1036,7 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
@@ -1166,17 +1051,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "swings",
           "meaning": "ブランコ",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1218,11 +1098,6 @@
           "word": "parents",
           "meaning": "両親",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1262,11 +1137,6 @@
         {
           "word": "things",
           "meaning": "こと",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1320,11 +1190,6 @@
           "word": "work",
           "meaning": "仕事",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1358,17 +1223,12 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "company",
           "meaning": "会社",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1403,11 +1263,6 @@
         {
           "word": "busy",
           "meaning": "忙しい",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1461,11 +1316,6 @@
           "word": "us",
           "meaning": "私たち",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1505,11 +1355,6 @@
         {
           "word": "that",
           "meaning": "そのこと",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1557,11 +1402,6 @@
           "word": "together",
           "meaning": "一緒に",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1607,11 +1447,6 @@
         {
           "word": "juice",
           "meaning": "ジュースを",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1659,11 +1494,6 @@
           "word": "morning",
           "meaning": "朝",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1692,11 +1522,6 @@
           "word": "great",
           "meaning": "素晴らしい",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1716,12 +1541,12 @@
       "segments": [
         {
           "word": "In",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
@@ -1742,11 +1567,6 @@
         {
           "word": "pictures",
           "meaning": "写真を",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1790,7 +1610,7 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": "の中に",
           "isUnknown": false
         },
         {
@@ -1805,17 +1625,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "camera",
           "meaning": "カメラ",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1845,11 +1660,6 @@
           "word": "laughed",
           "meaning": "笑いました",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1878,7 +1688,7 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
@@ -1889,11 +1699,6 @@
         {
           "word": "moment",
           "meaning": "瞬間",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1930,7 +1735,7 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
@@ -1946,11 +1751,6 @@
         {
           "word": "evening",
           "meaning": "夕方",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1971,7 +1771,7 @@
       "segments": [
         {
           "word": "The",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
@@ -1997,11 +1797,6 @@
         {
           "word": "pink",
           "meaning": "ピンク色に",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2030,11 +1825,6 @@
         {
           "word": "beautiful",
           "meaning": "美しく",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2070,11 +1860,6 @@
           "word": "home",
           "meaning": "家に",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2108,11 +1893,6 @@
         {
           "word": "carefully",
           "meaning": "注意深く",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2167,16 +1947,6 @@
           "word": "tired",
           "meaning": "疲れて",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2217,11 +1987,6 @@
           "word": "happy",
           "meaning": "幸せ",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2251,7 +2016,7 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
@@ -2267,11 +2032,6 @@
         {
           "word": "together",
           "meaning": "一緒に",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2313,11 +2073,6 @@
           "word": "pizza",
           "meaning": "ピザを",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2358,11 +2113,6 @@
           "word": "minutes",
           "meaning": "分",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2396,17 +2146,12 @@
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "table",
           "meaning": "テーブル",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2448,11 +2193,6 @@
           "word": "stories",
           "meaning": "話を",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2486,17 +2226,12 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "joke",
           "meaning": "冗談を",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2531,11 +2266,6 @@
         {
           "word": "again",
           "meaning": "また",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2576,17 +2306,12 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "movie",
           "meaning": "映画を",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2622,7 +2347,7 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
@@ -2633,11 +2358,6 @@
         {
           "word": "adventure",
           "meaning": "冒険",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2656,7 +2376,7 @@
       "segments": [
         {
           "word": "The",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
@@ -2672,11 +2392,6 @@
         {
           "word": "exciting",
           "meaning": "ワクワクするもの",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2716,12 +2431,7 @@
         },
         {
           "word": "much",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "多くの",
           "isUnknown": false
         }
       ],
@@ -2769,11 +2479,6 @@
           "word": "parents",
           "meaning": "両親に",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2798,7 +2503,7 @@
         },
         {
           "word": "you",
-          "meaning": "",
+          "meaning": "あなたは",
           "isUnknown": false
         },
         {
@@ -2819,11 +2524,6 @@
         {
           "word": "said",
           "meaning": "言いました",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2858,11 +2558,6 @@
         {
           "word": "me",
           "meaning": "私を",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2922,11 +2617,6 @@
           "word": "said",
           "meaning": "言いました",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2979,11 +2669,6 @@
           "word": "happy",
           "meaning": "幸せな",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -3024,11 +2709,6 @@
           "word": "day",
           "meaning": "一日",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -3063,11 +2743,6 @@
           "word": "important",
           "meaning": "大切",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -3099,12 +2774,12 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "へ",
           "isUnknown": false
         },
         {
           "word": "have",
-          "meaning": "",
+          "meaning": "持っている",
           "isUnknown": false
         },
         {
@@ -3125,11 +2800,6 @@
         {
           "word": "this",
           "meaning": "この",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -3171,22 +2841,12 @@
         },
         {
           "word": "a",
-          "meaning": "",
+          "meaning": "一つの",
           "isUnknown": false
         },
         {
           "word": "smile",
           "meaning": "笑顔",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],

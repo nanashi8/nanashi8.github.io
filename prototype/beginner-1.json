@@ -132,11 +132,6 @@
           "word": "nervous",
           "meaning": "緊張した",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -215,11 +210,6 @@
         {
           "word": "school",
           "meaning": "学校",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -405,11 +395,6 @@
           "word": "smile",
           "meaning": "笑う",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -489,11 +474,6 @@
           "word": "me",
           "meaning": "私",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -540,11 +520,6 @@
           "word": "said",
           "meaning": "言った",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -584,11 +559,6 @@
         {
           "word": "Yuki",
           "meaning": "ユキ",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -702,11 +672,6 @@
           "word": "first",
           "meaning": "最初に",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -813,11 +778,6 @@
           "word": "common",
           "meaning": "共通の",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -859,16 +819,6 @@
           "word": "books",
           "meaning": "本",
           "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -897,11 +847,6 @@
           "word": "tennis",
           "meaning": "テニス",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -929,11 +874,6 @@
         {
           "word": "time",
           "meaning": "時間",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -995,11 +935,6 @@
         {
           "word": "friends",
           "meaning": "友達",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1067,11 +1002,6 @@
         {
           "word": "me",
           "meaning": "私",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1164,11 +1094,6 @@
           "word": "clubs",
           "meaning": "クラブ",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1242,16 +1167,6 @@
         {
           "word": "popular",
           "meaning": "人気の",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1380,11 +1295,6 @@
           "word": "to",
           "meaning": "〜すること",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1452,11 +1362,6 @@
           "word": "class",
           "meaning": "授業",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1518,11 +1423,6 @@
           "word": "friendly",
           "meaning": "親しみやすい",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1557,16 +1457,6 @@
         {
           "word": "slowly",
           "meaning": "ゆっくり",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1607,11 +1497,6 @@
         {
           "word": "understand",
           "meaning": "理解する",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1673,11 +1558,6 @@
         {
           "word": "themselves",
           "meaning": "彼ら自身",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1747,16 +1627,6 @@
           "word": "up",
           "meaning": "上へ",
           "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1790,11 +1660,6 @@
         {
           "word": "English",
           "meaning": "英語",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -1875,11 +1740,6 @@
           "word": "best",
           "meaning": "最善",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1941,11 +1801,6 @@
           "word": "finished",
           "meaning": "終わった",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -1991,11 +1846,6 @@
         {
           "word": "better",
           "meaning": "より良い",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2043,11 +1893,6 @@
           "word": "day",
           "meaning": "日",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2094,11 +1939,6 @@
           "word": "together",
           "meaning": "一緒に",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2138,11 +1978,6 @@
         {
           "word": "classes",
           "meaning": "授業",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2216,11 +2051,6 @@
         {
           "word": "tomorrow",
           "meaning": "明日",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2361,11 +2191,6 @@
           "word": "said",
           "meaning": "言った",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2446,16 +2271,6 @@
           "word": "Yuki",
           "meaning": "ユキ",
           "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2534,11 +2349,6 @@
         {
           "word": "school",
           "meaning": "学校",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
@@ -2820,11 +2630,6 @@
           "word": "to",
           "meaning": "〜に",
           "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2877,16 +2682,6 @@
         {
           "word": "come",
           "meaning": "来る",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
           "isUnknown": false
         }
       ],
