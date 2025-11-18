@@ -740,7 +740,9 @@
       "id": "phrase-14",
       "words": [
         "Rice",
+        ",",
         "bread",
+        ",",
         "and",
         "pasta",
         "are",
@@ -850,8 +852,11 @@
       "id": "phrase-16",
       "words": [
         "Meat",
+        ",",
         "fish",
+        ",",
         "eggs",
+        ",",
         "and",
         "beans",
         "provide",
@@ -4336,7 +4341,9 @@
       "id": "phrase-82",
       "words": [
         "Soccer",
+        ",",
         "basketball",
+        ",",
         "and",
         "volleyball",
         "are",
