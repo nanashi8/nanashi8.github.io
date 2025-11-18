@@ -93,12 +93,11 @@ function QuestionCard({
         if (swipeDistance > 0) {
           // 左スワイプ → 次へ
           if (!answered) {
-            // 回答前のスワイプはスキップとして記録（定着扱い）
-            recordWordSkip(question.word, 7); // 7日間除外
-            // スコアボードに反映（正解扱い）
-            onAnswer(question.meaning, question.meaning);
+            // 回答前のスワイプはスキップ（handleSkipが呼ばれる）
+            onNext();
+          } else {
+            handleNextClick();
           }
-          handleNextClick();
         } else {
           // 右スワイプ → 前へ
           if (currentIndex > 0) {
@@ -141,20 +140,19 @@ function QuestionCard({
           onAnswer(choice, question.meaning);
         }
       }
-      // スペースキー: スキップ（回答前のみ）- 4キーと同じ動作
+      // スペースキー: スキップ（回答前のみ）
       else if (!answered && e.key === ' ') {
         e.preventDefault();
-        recordWordSkip(question.word, 7);
-        onAnswer(question.meaning, question.meaning);
+        onNext(); // handleSkipが呼ばれる
       }
       // Enterキー: 次へ進む（回答後）またはスキップ（回答前）
       else if (e.key === 'Enter') {
         e.preventDefault();
-        if (!answered) {
-          recordWordSkip(question.word, 7);
-          onAnswer(question.meaning, question.meaning);
+        if (answered) {
+          handleNextClick();
+        } else {
+          onNext(); // handleSkipが呼ばれる
         }
-        handleNextClick();
       }
     };
 
@@ -184,12 +182,6 @@ function QuestionCard({
   };
   
   const handleNextClick = () => {
-    // 回答前に次へボタンを押した場合はスキップ扱い
-    if (!answered) {
-      recordWordSkip(question.word, 7);
-      // スコアボードに反映（正解扱い）
-      onAnswer(question.meaning, question.meaning);
-    }
     setUserRating(null); // 次の問題へ行く前にリセット
     setExpandedChoices(new Set()); // 開閉状態をリセット
     setAttemptCount(0); // 試行回数をリセット
