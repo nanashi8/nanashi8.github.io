@@ -28,6 +28,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [error, setError] = useState<string | null>(null);
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
+  const [showFullText, setShowFullText] = useState(false);
+  const [showFullTranslation, setShowFullTranslation] = useState(false);
 
   // passagesが更新されたらLocalStorageに保存
   useEffect(() => {
@@ -466,18 +468,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   };
 
-  // 全文を表示（和訳を非表示）
-  const handleShowFullText = () => {
-    if (!currentPassage) return;
-    setWordMeaningsVisible(new Array(currentPassage.phrases.length).fill(false));
-    setPhraseTranslations(new Array(currentPassage.phrases.length).fill(false));
+  // 全文を表示トグル
+  const handleToggleFullText = () => {
+    setShowFullText(prev => !prev);
   };
 
-  // 全訳を表示
-  const handleShowAllTranslations = () => {
-    if (!currentPassage) return;
-    setWordMeaningsVisible(new Array(currentPassage.phrases.length).fill(true));
-    setPhraseTranslations(new Array(currentPassage.phrases.length).fill(true));
+  // 全訳を表示トグル
+  const handleToggleFullTranslation = () => {
+    setShowFullTranslation(prev => !prev);
   };
 
   // 分からない単語を保存
@@ -616,16 +614,16 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         {/* 操作ボタン */}
         <div className="action-buttons">
           <button 
-            onClick={handleShowFullText}
+            onClick={handleToggleFullText}
             className="btn-info"
           >
-            📄 全文を表示
+            {showFullText ? '📄 全文を非表示' : '📄 全文を表示'}
           </button>
           <button 
-            onClick={handleShowAllTranslations}
+            onClick={handleToggleFullTranslation}
             className="btn-primary"
           >
-            📝 全訳を表示
+            {showFullTranslation ? '📝 全訳を非表示' : '📝 全訳を表示'}
           </button>
           <button 
             onClick={handleSaveUnknownWords}
@@ -737,7 +735,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない熟語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word phrase-word">{phraseText}</div>
-                            {combinedMeaning && (
+                            {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
                               <div className="word-card-meaning">{combinedMeaning}</div>
                             )}
                           </div>
@@ -772,7 +770,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word">{segment.word}</div>
-                            {meaning && (
+                            {wordMeaningsVisible[phraseIdx] && meaning && (
                               <div className="word-card-meaning">{meaning}</div>
                             )}
                           </div>
@@ -802,6 +800,35 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     {!wordMeaningsVisible[phraseIdx] ? '単語の意味を表示 ▼' : 'フレーズの訳を表示 ▼'}
                   </button>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 全文表示エリア */}
+      {showFullText && currentPassage && (
+        <div className="full-text-display">
+          <h3>📄 全文</h3>
+          <div className="full-text-content">
+            {currentPassage.phrases.map((phrase, idx) => (
+              <span key={idx}>
+                {phrase.words?.join(' ') || phrase.segments?.map(s => s.word).join(' ')}
+                {idx < currentPassage.phrases.length - 1 ? ' ' : ''}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 全訳表示エリア */}
+      {showFullTranslation && currentPassage && (
+        <div className="full-translation-display">
+          <h3>📝 全訳</h3>
+          <div className="full-translation-content">
+            {currentPassage.phrases.map((phrase, idx) => (
+              <div key={idx} className="translation-line">
+                {phrase.phraseMeaning}
               </div>
             ))}
           </div>
@@ -1108,6 +1135,39 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         .popup-etymology strong,
         .popup-related strong {
           color: #007bff;
+        }
+
+        .full-text-display, .full-translation-display {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          margin-top: 20px;
+        }
+
+        .full-text-display h3, .full-translation-display h3 {
+          margin: 0 0 15px 0;
+          color: #667eea;
+        }
+
+        .full-text-content {
+          font-size: 1.1em;
+          line-height: 1.8;
+          color: #333;
+          font-family: 'Times New Roman', 'Georgia', serif;
+        }
+
+        .full-translation-content {
+          font-size: 1em;
+          line-height: 1.8;
+          color: #333;
+        }
+
+        .translation-line {
+          margin-bottom: 10px;
+          padding: 8px;
+          background: #f8f9fa;
+          border-radius: 4px;
         }
       `}</style>
     </div>
