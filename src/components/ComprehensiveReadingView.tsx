@@ -27,6 +27,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
+  const [readingDictionary, setReadingDictionary] = useState<Map<string, any>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
   const [showFullText, setShowFullText] = useState(false);
   const [showFullTranslation, setShowFullTranslation] = useState(false);
@@ -107,6 +108,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 単語集データの読み込み
   useEffect(() => {
+    // メイン辞書（CSV）の読み込み
     fetch('/data/junior-high-entrance-words.csv')
       .then((res) => res.text())
       .then((csvText) => {
@@ -139,10 +141,32 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       .catch((err) => {
         console.error('Error loading word dictionary:', err);
       });
+    
+    // 長文読解専用辞書（JSON）の読み込み
+    fetch('/data/reading-passages-dictionary.json')
+      .then((res) => res.json())
+      .then((dictData) => {
+        const readingDict = new Map<string, any>();
+        
+        Object.entries(dictData).forEach(([word, info]: [string, any]) => {
+          readingDict.set(word.toLowerCase(), info);
+        });
+        
+        setReadingDictionary(readingDict);
+        console.log(`長文読解辞書: ${readingDict.size}単語を読み込みました`);
+      })
+      .catch((err) => {
+        console.error('Error loading reading dictionary:', err);
+      });
   }, []);
 
-  // データ読み込み
+  // データ読み込み（辞書が読み込まれた後に実行）
   useEffect(() => {
+    // 辞書がまだ読み込まれていない場合は待機
+    if (wordDictionary.size === 0) {
+      return;
+    }
+    
     // まずLocalStorageから保存済みデータを確認
     const readingDataKey = 'reading-passages-data';
     const storedData = localStorage.getItem(readingDataKey);
@@ -170,32 +194,41 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             // words配列からsegmentsを生成
             const segments: ReadingSegment[] = [];
             phrase.words?.forEach((word, idx) => {
-              // 単語を追加
-              segments.push({
-                word,
-                meaning: '', // 意味は後で単語辞書から取得
-                isUnknown: false
-              });
-              
-              // 句読点を検出して追加
-              // 単語の末尾に句読点がある場合
+              // 句読点を検出
               const punctuationMatch = word.match(/([.,!?;:])$/);
+              
               if (punctuationMatch) {
                 // 句読点が単語に含まれている場合は分離
                 const cleanWord = word.replace(/[.,!?;:]$/, '');
                 const punctuation = punctuationMatch[1];
                 
-                // 前の要素を更新（句読点なしの単語）
-                segments[segments.length - 1] = {
+                // 単語辞書から意味を取得（句読点なしの単語）
+                const lemma = getLemma(cleanWord);
+                const wordData = wordDictionary.get(lemma);
+                const meaning = wordData?.meaning || '';
+                
+                // 単語を追加（句読点なし）
+                segments.push({
                   word: cleanWord,
-                  meaning: '',
+                  meaning,
                   isUnknown: false
-                };
+                });
                 
                 // 句読点を独立した要素として追加
                 segments.push({
                   word: punctuation,
                   meaning: '',
+                  isUnknown: false
+                });
+              } else {
+                // 句読点がない通常の単語
+                const lemma = getLemma(word);
+                const wordData = wordDictionary.get(lemma);
+                const meaning = wordData?.meaning || '';
+                
+                segments.push({
+                  word,
+                  meaning,
                   isUnknown: false
                 });
               }
@@ -247,7 +280,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         setError('パッセージの読み込みに失敗しました: ' + err.message);
         setLoading(false);
       });
-  }, []);
+  }, [wordDictionary]); // 辞書が読み込まれたら再実行
 
   const currentPassage = passages.find((p) => p.id === selectedPassageId);
 
@@ -311,13 +344,31 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 単語の意味を辞書から取得
   const getMeaning = (word: string, existingMeaning?: string): string => {
+    // existingMeaningがあればそれを使用
     if (existingMeaning && existingMeaning.trim()) {
       return existingMeaning;
     }
     
+    // 辞書から取得
     const lemma = getLemma(word);
+    
+    // メイン辞書をチェック
     const wordData = wordDictionary.get(lemma);
-    return wordData?.meaning || '';
+    if (wordData?.meaning) {
+      return wordData.meaning;
+    }
+    
+    // 長文読解辞書をチェック
+    const readingWord = readingDictionary.get(lemma);
+    if (readingWord?.meaning) {
+      return readingWord.meaning;
+    }
+    
+    // どちらもない場合は'-'を返す（句読点の場合は空文字列）
+    if (/^[.,!?;:]$/.test(word)) {
+      return '';
+    }
+    return '-';
   };
 
   // 難易度でフィルタリングされたパッセージ
@@ -415,8 +466,23 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         y: rect.bottom + window.scrollY + 5,
       });
     } else {
-      // 辞書にない場合でもポップアップは表示しない
-      console.warn(`Word not found in dictionary: ${normalizedWord}`);
+      // 長文読解辞書もチェック
+      const readingWord = readingDictionary.get(baseForm || normalizedWord);
+      if (readingWord) {
+        const rect = event.currentTarget.getBoundingClientRect();
+        setWordPopup({
+          word: readingWord.word,
+          meaning: readingWord.meaning,
+          reading: readingWord.reading || '',
+          etymology: readingWord.etymology || '',
+          relatedWords: readingWord.relatedWords || '',
+          x: rect.left + window.scrollX,
+          y: rect.bottom + window.scrollY + 5,
+        });
+      } else {
+        // 辞書にない場合でもポップアップは表示しない
+        console.warn(`Word not found in dictionary: ${normalizedWord}`);
+      }
     }
   };
 
@@ -735,8 +801,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない熟語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word phrase-word">{phraseText}</div>
-                            {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
-                              <div className="word-card-meaning">{combinedMeaning}</div>
+                            {wordMeaningsVisible[phraseIdx] && (
+                              <div className="word-card-meaning">{combinedMeaning || '-'}</div>
                             )}
                           </div>
                         );
@@ -770,7 +836,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word">{segment.word}</div>
-                            {wordMeaningsVisible[phraseIdx] && meaning && (
+                            {wordMeaningsVisible[phraseIdx] && (
                               <div className="word-card-meaning">{meaning}</div>
                             )}
                           </div>
@@ -916,6 +982,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           background: #0056b3;
         }
 
+        .btn-info {
+          background: #17a2b8;
+          color: white;
+        }
+
+        .btn-info:hover {
+          background: #138496;
+        }
+
         .btn-success {
           background: #28a745;
           color: white;
@@ -971,6 +1046,81 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           line-height: 1.6;
           margin-bottom: 6px;
           font-family: 'Times New Roman', 'Georgia', serif;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          align-items: flex-start;
+        }
+
+        .word-card {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 6px 10px;
+          margin: 2px;
+          background: #f8f9fa;
+          border: 1px solid #dee2e6;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: all 0.2s;
+          min-width: 60px;
+        }
+
+        .word-card:hover {
+          background: #e7f3ff;
+          border-color: #007bff;
+        }
+
+        .word-card.unknown {
+          background: #ffc107;
+          color: #000;
+          border-color: #ff9800;
+          font-weight: bold;
+        }
+
+        .word-card.phrase-card {
+          background: #e8f5e9;
+          border-color: #4caf50;
+        }
+
+        .word-card.phrase-card:hover {
+          background: #c8e6c9;
+        }
+
+        .word-card.punctuation-card {
+          min-width: 20px;
+          background: transparent;
+          border: none;
+          cursor: default;
+          padding: 2px 4px;
+        }
+
+        .word-card.punctuation-card:hover {
+          background: transparent;
+          border: none;
+        }
+
+        .word-card-word {
+          font-size: 16px;
+          font-weight: 500;
+          color: #333;
+          text-align: center;
+        }
+
+        .phrase-card .word-card-word {
+          font-size: 15px;
+          color: #2e7d32;
+        }
+
+        .word-card-meaning {
+          font-size: 12px;
+          color: #666;
+          margin-top: 4px;
+          text-align: center;
+          padding: 2px 4px;
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 2px;
+          min-height: 16px;
         }
 
         .word-segment {
