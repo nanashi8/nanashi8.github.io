@@ -2,7 +2,7 @@ import { Question } from '../types';
 import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } from '../utils';
 import { recordWordSkip } from '../progressStorage';
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { generateAIComment } from '../aiCommentGenerator';
+import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 
 interface QuestionCardProps {
   question: Question;
@@ -64,10 +64,21 @@ function QuestionCard({
       const comment = generateAIComment(personality, {
         isCorrect,
         word: question.word,
-        userAnswer: selectedAnswer,
-        correctAnswer: question.meaning,
-        attemptNumber: attemptCount + 1,
-        timeSpent: 0,
+        difficulty: 'intermediate', // TODO: 実際の難易度を渡す
+        category: '', // TODO: 実際のカテゴリーを渡す
+        attemptCount: attemptCount + 1,
+        responseTime: 0, // TODO: 実際の回答時間を計測
+        correctStreak: 0, // TODO: 実際のストリーク数
+        incorrectStreak: 0,
+        userAccuracy: 0, // TODO: 実際の正答率
+        categoryAccuracy: 0,
+        isWeakCategory: false,
+        hasSeenBefore: false,
+        previousAttempts: 0,
+        todayQuestions: 0,
+        todayAccuracy: 0,
+        planProgress: 0,
+        timeOfDay: getTimeOfDay(),
       });
       setAiComment(comment);
     } else {

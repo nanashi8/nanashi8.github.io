@@ -21,8 +21,11 @@ class DrillSergeantCommentGenerator {
         parts.push("速い！");
       }
       parts.push("よし！");
+    } else if (ctx.attemptCount === 2) {
+      parts.push("2回目で正解か。");
     } else {
       parts.push(`${ctx.attemptCount}回目で正解か。`);
+      parts.push("もっと早く決めろ！");
     }
     
     // 難易度による追加コメント
@@ -122,16 +125,19 @@ class KindTeacherCommentGenerator {
     // 基本の肯定
     parts.push("正解です！");
     
-    // 具体的な褒め言葉
+    // 具体的な褒め言葉（正解した時のみ呼ばれるので、isCorrect条件は不要）
     if (ctx.attemptCount === 1) {
       if (ctx.responseTime < 3000) {
         parts.push("素早い判断でしたね ✨");
       } else {
         parts.push("しっかり考えられましたね");
       }
-    } else {
+    } else if (ctx.attemptCount === 2) {
       parts.push("2回目で正解できました");
       parts.push("落ち着いて考えられましたね");
+    } else if (ctx.attemptCount >= 3) {
+      parts.push(`${ctx.attemptCount}回目で正解できました`);
+      parts.push("粘り強く取り組めましたね");
     }
     
     // 難易度による励まし
@@ -289,8 +295,11 @@ class EnthusiasticCoachCommentGenerator {
     
     if (ctx.attemptCount === 1) {
       parts.push("一発で決めた！");
-    } else {
+    } else if (ctx.attemptCount === 2) {
       parts.push("立て直したな！");
+    } else {
+      parts.push(`${ctx.attemptCount}回目で決めた！`);
+      parts.push("もっと早く行こう！");
     }
     
     if (ctx.correctStreak >= 5) {
