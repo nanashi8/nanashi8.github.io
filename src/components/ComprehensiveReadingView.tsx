@@ -159,14 +159,51 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         // データを変換: words配列からsegments配列を生成（存在しない場合）
         let processedData = data.map(passage => ({
           ...passage,
-          phrases: passage.phrases?.map(phrase => ({
-            ...phrase,
-            segments: phrase.segments || phrase.words?.map(word => ({
-              word,
-              meaning: '', // 意味は後で単語辞書から取得
-              isUnknown: false
-            })) || []
-          })) || []
+          phrases: passage.phrases?.map(phrase => {
+            if (phrase.segments && phrase.segments.length > 0) {
+              // segmentsが既に存在する場合はそのまま使用
+              return phrase;
+            }
+            
+            // words配列からsegmentsを生成
+            const segments: ReadingSegment[] = [];
+            phrase.words?.forEach((word, idx) => {
+              // 単語を追加
+              segments.push({
+                word,
+                meaning: '', // 意味は後で単語辞書から取得
+                isUnknown: false
+              });
+              
+              // 句読点を検出して追加
+              // 単語の末尾に句読点がある場合
+              const punctuationMatch = word.match(/([.,!?;:])$/);
+              if (punctuationMatch) {
+                // 句読点が単語に含まれている場合は分離
+                const cleanWord = word.replace(/[.,!?;:]$/, '');
+                const punctuation = punctuationMatch[1];
+                
+                // 前の要素を更新（句読点なしの単語）
+                segments[segments.length - 1] = {
+                  word: cleanWord,
+                  meaning: '',
+                  isUnknown: false
+                };
+                
+                // 句読点を独立した要素として追加
+                segments.push({
+                  word: punctuation,
+                  meaning: '',
+                  isUnknown: false
+                });
+              }
+            });
+            
+            return {
+              ...phrase,
+              segments
+            };
+          }) || []
         }));
         
         // LocalStorageに保存済みデータがあればマージ
@@ -240,7 +277,60 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
     // 単語を正規化（小文字、記号除去）
     const normalizedWord = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
-    const wordInfo = wordDictionary.get(normalizedWord);
+    
+    // 原形変換を試みる
+    const tryLemmatization = (word: string): string | null => {
+      // まず元の形で検索
+      if (wordDictionary.has(word)) return word;
+      
+      // -s, -es の除去（三単現、複数形）
+      if (word.endsWith('es') && wordDictionary.has(word.slice(0, -2))) {
+        return word.slice(0, -2);
+      }
+      if (word.endsWith('s') && wordDictionary.has(word.slice(0, -1))) {
+        return word.slice(0, -1);
+      }
+      
+      // -ed の除去（過去形、過去分詞）
+      if (word.endsWith('ed')) {
+        const base = word.slice(0, -2);
+        if (wordDictionary.has(base)) return base;
+        if (wordDictionary.has(base + 'e')) return base + 'e'; // loved -> love
+        if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+          const deduped = base.slice(0, -1);
+          if (wordDictionary.has(deduped)) return deduped; // stopped -> stop
+        }
+      }
+      
+      // -ing の除去（現在分詞、動名詞）
+      if (word.endsWith('ing')) {
+        const base = word.slice(0, -3);
+        if (wordDictionary.has(base)) return base;
+        if (wordDictionary.has(base + 'e')) return base + 'e'; // making -> make
+        if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+          const deduped = base.slice(0, -1);
+          if (wordDictionary.has(deduped)) return deduped; // running -> run
+        }
+      }
+      
+      // -ly の除去（副詞）
+      if (word.endsWith('ly') && wordDictionary.has(word.slice(0, -2))) {
+        return word.slice(0, -2);
+      }
+      
+      // -er, -est の除去（比較級、最上級）
+      if (word.endsWith('er') && wordDictionary.has(word.slice(0, -2))) {
+        return word.slice(0, -2);
+      }
+      if (word.endsWith('est') && wordDictionary.has(word.slice(0, -3))) {
+        return word.slice(0, -3);
+      }
+      
+      return null;
+    };
+
+    const baseForm = tryLemmatization(normalizedWord);
+    const wordInfo = baseForm ? wordDictionary.get(baseForm) : null;
 
     if (wordInfo) {
       const rect = event.currentTarget.getBoundingClientRect();
@@ -254,18 +344,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         y: rect.bottom + window.scrollY + 5,
       });
     } else {
-      // 辞書にない単語は表示しない（エラーメッセージを出さない）
+      // 辞書にない場合でもポップアップは表示しない
       console.warn(`Word not found in dictionary: ${normalizedWord}`);
-      const rect = event.currentTarget.getBoundingClientRect();
-      setWordPopup({
-        word: word,
-        meaning: '辞書に見つかりませんでした',
-        reading: '',
-        etymology: '',
-        relatedWords: '',
-        x: rect.left + window.scrollX,
-        y: rect.bottom + window.scrollY + 5,
-      });
     }
   };
 
@@ -587,6 +667,21 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                         // 単語カード
                         const segment = group.segments[0];
                         const segIdx = phrase.segments.findIndex(s => s === segment);
+                        const isPunctuation = /^[.,!?;:]$/.test(segment.word);
+                        
+                        // 句読点の場合
+                        if (isPunctuation) {
+                          return (
+                            <div
+                              key={`group-${groupIdx}`}
+                              className="word-card punctuation-card"
+                            >
+                              <div className="word-card-word">{segment.word}</div>
+                            </div>
+                          );
+                        }
+                        
+                        // 通常の単語カード
                         const wordData = wordDictionary.get(segment.word.toLowerCase().replace(/[.,!?;:]$/, ''));
                         const meaning = wordData?.meaning || segment.meaning || '';
 

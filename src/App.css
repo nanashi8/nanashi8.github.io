@@ -195,6 +195,15 @@
   border-color: #ffc107;
 }
 
+.dark-mode .punctuation-card {
+  background: transparent !important;
+  border: none !important;
+}
+
+.dark-mode .punctuation-card .word-card-word {
+  color: #999;
+}
+
 .dark-mode .word-popup {
   background: #2a2a2a;
   border-color: #667eea;
@@ -6545,6 +6554,29 @@ option {
 .word-card:active {
   transform: translateY(0);
   background: #d0e7ff;
+}
+
+.punctuation-card {
+  min-width: 20px !important;
+  padding: 4px 4px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: default !important;
+  margin: 2px 1px !important;
+}
+
+.punctuation-card:hover {
+  background: transparent !important;
+  border: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.punctuation-card .word-card-word {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0;
 }
 
 .word-card.unknown {
