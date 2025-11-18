@@ -249,6 +249,75 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   const currentPassage = passages.find((p) => p.id === selectedPassageId);
 
+  // 原形変換を試みる関数（辞書検索用）
+  const getLemma = (word: string): string => {
+    const normalized = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
+    
+    // まず元の形で検索
+    if (wordDictionary.has(normalized)) return normalized;
+    
+    // -s, -es の除去（三単現、複数形）
+    if (normalized.endsWith('es')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base)) return base;
+    }
+    if (normalized.endsWith('s')) {
+      const base = normalized.slice(0, -1);
+      if (wordDictionary.has(base)) return base;
+    }
+    
+    // -ed の除去（過去形、過去分詞）
+    if (normalized.endsWith('ed')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base + 'e')) return base + 'e';
+      if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+        const deduped = base.slice(0, -1);
+        if (wordDictionary.has(deduped)) return deduped;
+      }
+    }
+    
+    // -ing の除去（現在分詞、動名詞）
+    if (normalized.endsWith('ing')) {
+      const base = normalized.slice(0, -3);
+      if (wordDictionary.has(base)) return base;
+      if (wordDictionary.has(base + 'e')) return base + 'e';
+      if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+        const deduped = base.slice(0, -1);
+        if (wordDictionary.has(deduped)) return deduped;
+      }
+    }
+    
+    // -ly の除去（副詞）
+    if (normalized.endsWith('ly')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base)) return base;
+    }
+    
+    // -er, -est の除去（比較級、最上級）
+    if (normalized.endsWith('er')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base)) return base;
+    }
+    if (normalized.endsWith('est')) {
+      const base = normalized.slice(0, -3);
+      if (wordDictionary.has(base)) return base;
+    }
+    
+    return normalized;
+  };
+
+  // 単語の意味を辞書から取得
+  const getMeaning = (word: string, existingMeaning?: string): string => {
+    if (existingMeaning && existingMeaning.trim()) {
+      return existingMeaning;
+    }
+    
+    const lemma = getLemma(word);
+    const wordData = wordDictionary.get(lemma);
+    return wordData?.meaning || '';
+  };
+
   // 難易度でフィルタリングされたパッセージ
   const filteredPassages = difficultyFilter === 'all'
     ? passages
@@ -397,6 +466,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   };
 
+  // 全文を表示（和訳を非表示）
+  const handleShowFullText = () => {
+    if (!currentPassage) return;
+    setWordMeaningsVisible(new Array(currentPassage.phrases.length).fill(false));
+    setPhraseTranslations(new Array(currentPassage.phrases.length).fill(false));
+  };
+
   // 全訳を表示
   const handleShowAllTranslations = () => {
     if (!currentPassage) return;
@@ -540,6 +616,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         {/* 操作ボタン */}
         <div className="action-buttons">
           <button 
+            onClick={handleShowFullText}
+            className="btn-info"
+          >
+            📄 全文を表示
+          </button>
+          <button 
             onClick={handleShowAllTranslations}
             className="btn-primary"
           >
@@ -615,10 +697,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                         // フレーズカード
                         const phraseText = group.words.join(' ');
                         const phraseMeanings = group.segments
-                          .map(seg => {
-                            const wordData = wordDictionary.get(seg.word.toLowerCase().replace(/[.,!?;:]$/, ''));
-                            return wordData?.meaning || seg.meaning || '';
-                          })
+                          .map(seg => getMeaning(seg.word, seg.meaning))
                           .filter(m => m);
                         const combinedMeaning = phraseMeanings.join('・');
 
@@ -682,8 +761,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                         }
                         
                         // 通常の単語カード
-                        const wordData = wordDictionary.get(segment.word.toLowerCase().replace(/[.,!?;:]$/, ''));
-                        const meaning = wordData?.meaning || segment.meaning || '';
+                        const meaning = getMeaning(segment.word, segment.meaning);
 
                         return (
                           <div

@@ -3497,6 +3497,15 @@ option {
   background: #5568d3;
 }
 
+.btn-info {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background: #138496;
+}
+
 .btn-secondary {
   background: #f8f9fa;
   color: #666;
