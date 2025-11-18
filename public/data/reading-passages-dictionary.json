@@ -32430,20 +32430,19 @@
   },
   "tomorrow's": {
     "word": "tomorrow's",
-    "reading": "-",
-    "meaning": "-",
-    "etymology": "",
-    "relatedWords": "",
-    "category": "その他",
-    "difficulty": "長文専用",
+    "reading": "トゥモローズ",
+    "meaning": "明日の、未来の（所有格）",
+    "etymology": "tomorrow + 's（所有格）",
+    "relatedWords": "tomorrow, future, next day",
+    "category": "時間・数量",
+    "difficulty": "初級",
     "levels": [
-      "Advanced"
+      "beginner",
+      "intermediate"
     ],
-    "passages": [
-      "advanced-2.json"
-    ],
-    "source": "auto",
-    "baseWord": null
+    "passages": [],
+    "source": "auto-generated",
+    "baseWord": "tomorrow"
   },
   "pressing": {
     "word": "pressing",
@@ -36472,20 +36471,18 @@
   },
   "life's": {
     "word": "life's",
-    "reading": "-",
-    "meaning": "-",
-    "etymology": "",
-    "relatedWords": "",
-    "category": "その他",
-    "difficulty": "長文専用",
+    "reading": "ライフス",
+    "meaning": "人生の、生命の（所有格）",
+    "etymology": "life + 's（所有格）",
+    "relatedWords": "life, living, existence",
+    "category": "人・社会",
+    "difficulty": "中級",
     "levels": [
-      "Advanced"
+      "advanced"
     ],
-    "passages": [
-      "advanced-3.json"
-    ],
-    "source": "auto",
-    "baseWord": null
+    "passages": [],
+    "source": "auto-generated",
+    "baseWord": "life"
   },
   "purpose": {
     "word": "purpose",
@@ -46779,20 +46776,20 @@
   },
   "didn't": {
     "word": "didn't",
-    "reading": "-",
-    "meaning": "-",
-    "etymology": "",
-    "relatedWords": "",
-    "category": "その他",
-    "difficulty": "長文専用",
+    "reading": "ディドゥントゥ",
+    "meaning": "しなかった（did notの短縮形）",
+    "etymology": "did not の短縮形",
+    "relatedWords": "did not, do not, don't",
+    "category": "言語基本",
+    "difficulty": "初級",
     "levels": [
       "beginner"
     ],
     "passages": [
       "beginner-1"
     ],
-    "source": "auto",
-    "baseWord": null
+    "source": "auto-generated",
+    "baseWord": "did not"
   },
   "felt": {
     "word": "felt",
@@ -51649,20 +51646,20 @@
   },
   "earth's": {
     "word": "Earth's",
-    "reading": "-",
-    "meaning": "Earth's（固有名詞）",
-    "etymology": "",
-    "relatedWords": "",
-    "category": "その他",
-    "difficulty": "長文専用",
+    "reading": "アースズ",
+    "meaning": "地球の（所有格）",
+    "etymology": "Earth + 's（所有格）",
+    "relatedWords": "Earth, planet, world",
+    "category": "自然・環境",
+    "difficulty": "中級",
     "levels": [
-      "中級"
+      "intermediate"
     ],
     "passages": [
       "intermediate-1"
     ],
-    "source": "auto",
-    "baseWord": null
+    "source": "auto-generated",
+    "baseWord": "Earth"
   },
   "called": {
     "word": "called",
@@ -52504,20 +52501,21 @@
   },
   "everyone's": {
     "word": "everyone's",
-    "reading": "-",
-    "meaning": "-",
-    "etymology": "",
-    "relatedWords": "",
-    "category": "その他",
-    "difficulty": "長文専用",
+    "reading": "エヴリワンズ",
+    "meaning": "みんなの（所有格）",
+    "etymology": "everyone + 's（所有格）",
+    "relatedWords": "everyone, everybody, all",
+    "category": "人・社会",
+    "difficulty": "初級",
     "levels": [
-      "中級"
+      "beginner",
+      "intermediate"
     ],
     "passages": [
       "intermediate-1"
     ],
-    "source": "auto",
-    "baseWord": null
+    "source": "auto-generated",
+    "baseWord": "everyone"
   },
   "wait": {
     "word": "wait",
