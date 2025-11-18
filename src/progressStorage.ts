@@ -116,29 +116,10 @@ export function saveProgress(progress: UserProgress): void {
   } catch (error) {
     console.error('進捗データの保存に失敗:', error);
     
-    // QuotaExceededErrorの場合、古いデータを削除して再試行
+    // QuotaExceededErrorの場合のみ警告
     if (error instanceof DOMException && error.name === 'QuotaExceededError') {
-      console.warn('LocalStorage容量超過。古いデータを削除します。');
-      
-      // 30日以上前の結果を削除
-      const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
-      progress.results = progress.results.filter(r => r.date >= thirtyDaysAgo);
-      
-      // 最大結果数を制限（最新500件のみ保持）
-      if (progress.results.length > 500) {
-        progress.results = progress.results
-          .sort((a, b) => b.date - a.date)
-          .slice(0, 500);
-      }
-      
-      try {
-        const data = JSON.stringify(progress);
-        localStorage.setItem(PROGRESS_KEY, data);
-        console.log('古いデータを削除して保存に成功しました。');
-      } catch (retryError) {
-        console.error('再試行も失敗しました:', retryError);
-        alert('データの保存に失敗しました。ブラウザのストレージ容量が不足しています。');
-      }
+      console.warn('LocalStorage容量超過。');
+      alert('データの保存に失敗しました。ブラウザのストレージ容量が不足しています。\n成績タブから古いデータを削除するか、ブラウザの設定でLocalStorageを増やしてください。');
     }
   }
 }
