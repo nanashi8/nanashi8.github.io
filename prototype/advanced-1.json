@@ -4,7 +4,7 @@
   "level": "上級",
   "theme": "持続可能な社会",
   "targetWordCount": 3500,
-  "actualWordCount": 4481,
+  "actualWordCount": 2786,
   "phrases": [
     {
       "id": "phrase-1",
@@ -87,24 +87,17 @@
         "meets",
         "present",
         "needs",
-        "."
-      ],
-      "phraseMeaning": "持続可能な社会は現在のニーズを満たします"
-    },
-    {
-      "id": "phrase-7",
-      "words": [
-        "Without",
+        "without",
         "compromising",
         "future",
-        "generations",
+        "generations'",
         "ability",
         "."
       ],
-      "phraseMeaning": "将来の世代の能力を損なうことなく"
+      "phraseMeaning": "持続可能な社会は、将来の世代の能力を損なうことなく現在のニーズを満たします"
     },
     {
-      "id": "phrase-8",
+      "id": "phrase-7",
       "words": [
         "This",
         "requires",
@@ -119,7 +112,7 @@
       "phraseMeaning": "これは生産と消費の方法を変革することを必要とします"
     },
     {
-      "id": "phrase-9",
+      "id": "phrase-8",
       "words": [
         "It",
         "demands",
@@ -131,7 +124,7 @@
       "phraseMeaning": "新しい経済モデルを要求します"
     },
     {
-      "id": "phrase-10",
+      "id": "phrase-9",
       "words": [
         "It",
         "calls",
@@ -145,7 +138,7 @@
       "phraseMeaning": "個人的および集団的行動を求めます"
     },
     {
-      "id": "phrase-11",
+      "id": "phrase-10",
       "words": [
         "Climate",
         "change",
@@ -160,7 +153,7 @@
       "phraseMeaning": "気候変動は私たちが直面する最大の脅威です"
     },
     {
-      "id": "phrase-12",
+      "id": "phrase-11",
       "words": [
         "Global",
         "temperatures",
@@ -172,7 +165,7 @@
       "phraseMeaning": "地球の気温は急速に上昇しています"
     },
     {
-      "id": "phrase-13",
+      "id": "phrase-12",
       "words": [
         "The",
         "last",
@@ -187,7 +180,7 @@
       "phraseMeaning": "過去10年は記録上最も暑かったです"
     },
     {
-      "id": "phrase-14",
+      "id": "phrase-13",
       "words": [
         "Extreme",
         "weather",
@@ -201,7 +194,7 @@
       "phraseMeaning": "極端な気象現象がより頻繁になっています"
     },
     {
-      "id": "phrase-15",
+      "id": "phrase-14",
       "words": [
         "Hurricanes",
         "droughts",
@@ -214,7 +207,7 @@
       "phraseMeaning": "ハリケーン干ばつ洪水山火事が激化しています"
     },
     {
-      "id": "phrase-16",
+      "id": "phrase-15",
       "words": [
         "Sea",
         "levels",
@@ -225,7 +218,7 @@
       "phraseMeaning": "海面が上昇しています"
     },
     {
-      "id": "phrase-17",
+      "id": "phrase-16",
       "words": [
         "Coastal",
         "cities",
@@ -237,7 +230,7 @@
       "phraseMeaning": "沿岸都市は洪水のリスクに直面しています"
     },
     {
-      "id": "phrase-18",
+      "id": "phrase-17",
       "words": [
         "Small",
         "island",
@@ -250,7 +243,7 @@
       "phraseMeaning": "小さな島国は完全に消える可能性があります"
     },
     {
-      "id": "phrase-19",
+      "id": "phrase-18",
       "words": [
         "Ice",
         "caps",
@@ -263,7 +256,7 @@
       "phraseMeaning": "氷冠と氷河が溶けています"
     },
     {
-      "id": "phrase-20",
+      "id": "phrase-19",
       "words": [
         "This",
         "disrupts",
@@ -276,7 +269,7 @@
       "phraseMeaning": "これは何百万人もの水供給を混乱させます"
     },
     {
-      "id": "phrase-21",
+      "id": "phrase-20",
       "words": [
         "Ecosystems",
         "are",
@@ -286,7 +279,7 @@
       "phraseMeaning": "生態系が崩壊しています"
     },
     {
-      "id": "phrase-22",
+      "id": "phrase-21",
       "words": [
         "Species",
         "extinction",
@@ -298,7 +291,7 @@
       "phraseMeaning": "種の絶滅率が加速しています"
     },
     {
-      "id": "phrase-23",
+      "id": "phrase-22",
       "words": [
         "Coral",
         "reefs",
@@ -312,7 +305,7 @@
       "phraseMeaning": "サンゴ礁が海洋酸性化で死んでいます"
     },
     {
-      "id": "phrase-24",
+      "id": "phrase-23",
       "words": [
         "Forests",
         "that",
@@ -326,7 +319,7 @@
       "phraseMeaning": "気候を調節する森林が破壊されています"
     },
     {
-      "id": "phrase-25",
+      "id": "phrase-24",
       "words": [
         "The",
         "main",
@@ -340,7 +333,7 @@
       "phraseMeaning": "主な原因は温室効果ガスの排出です"
     },
     {
-      "id": "phrase-26",
+      "id": "phrase-25",
       "words": [
         "Burning",
         "fossil",
@@ -353,7 +346,7 @@
       "phraseMeaning": "化石燃料を燃やすと二酸化炭素が放出されます"
     },
     {
-      "id": "phrase-27",
+      "id": "phrase-26",
       "words": [
         "Coal",
         "oil",
@@ -369,7 +362,7 @@
       "phraseMeaning": "石炭石油天然ガスが私たちの発展を動かしました"
     },
     {
-      "id": "phrase-28",
+      "id": "phrase-27",
       "words": [
         "But",
         "their",
@@ -384,7 +377,7 @@
       "phraseMeaning": "しかし今やその使用は地球を破壊しています"
     },
     {
-      "id": "phrase-29",
+      "id": "phrase-28",
       "words": [
         "We",
         "must",
@@ -397,7 +390,7 @@
       "phraseMeaning": "クリーンエネルギーに移行しなければなりません"
     },
     {
-      "id": "phrase-30",
+      "id": "phrase-29",
       "words": [
         "This",
         "transition",
@@ -409,7 +402,7 @@
       "phraseMeaning": "この移行はすでに始まっています"
     },
     {
-      "id": "phrase-31",
+      "id": "phrase-30",
       "words": [
         "Renewable",
         "energy",
@@ -423,7 +416,7 @@
       "phraseMeaning": "再生可能エネルギーは未来への希望を提供します"
     },
     {
-      "id": "phrase-32",
+      "id": "phrase-31",
       "words": [
         "Solar",
         "power",
@@ -437,7 +430,7 @@
       "phraseMeaning": "太陽光発電は太陽からエネルギーを利用します"
     },
     {
-      "id": "phrase-33",
+      "id": "phrase-32",
       "words": [
         "Solar",
         "panels",
@@ -450,7 +443,7 @@
       "phraseMeaning": "ソーラーパネルは日光を電気に変換します"
     },
     {
-      "id": "phrase-34",
+      "id": "phrase-33",
       "words": [
         "Costs",
         "have",
@@ -461,7 +454,7 @@
       "phraseMeaning": "コストは劇的に下がりました"
     },
     {
-      "id": "phrase-35",
+      "id": "phrase-34",
       "words": [
         "Solar",
         "is",
@@ -477,7 +470,7 @@
       "phraseMeaning": "太陽光は今や多くの場所で石炭より安いです"
     },
     {
-      "id": "phrase-36",
+      "id": "phrase-35",
       "words": [
         "Homes",
         "and",
@@ -490,7 +483,7 @@
       "phraseMeaning": "家庭と企業はソーラーパネルを設置します"
     },
     {
-      "id": "phrase-37",
+      "id": "phrase-36",
       "words": [
         "Large",
         "solar",
@@ -505,7 +498,7 @@
       "phraseMeaning": "大規模な太陽光発電所は都市全体に電力を供給します"
     },
     {
-      "id": "phrase-38",
+      "id": "phrase-37",
       "words": [
         "Wind",
         "power",
@@ -519,7 +512,7 @@
       "phraseMeaning": "風力発電は別のクリーンエネルギー源です"
     },
     {
-      "id": "phrase-39",
+      "id": "phrase-38",
       "words": [
         "Wind",
         "turbines",
@@ -533,7 +526,7 @@
       "phraseMeaning": "風力タービンは動く空気からエネルギーを捕らえます"
     },
     {
-      "id": "phrase-40",
+      "id": "phrase-39",
       "words": [
         "Offshore",
         "wind",
@@ -546,7 +539,7 @@
       "phraseMeaning": "洋上風力発電所は特に効果的です"
     },
     {
-      "id": "phrase-41",
+      "id": "phrase-40",
       "words": [
         "Ocean",
         "winds",
@@ -559,7 +552,7 @@
       "phraseMeaning": "海の風は強く一貫しています"
     },
     {
-      "id": "phrase-42",
+      "id": "phrase-41",
       "words": [
         "Countries",
         "like",
@@ -574,7 +567,7 @@
       "phraseMeaning": "デンマークのような国は風力から電力の大部分を生成します"
     },
     {
-      "id": "phrase-43",
+      "id": "phrase-42",
       "words": [
         "Hydroelectric",
         "power",
@@ -586,7 +579,7 @@
       "phraseMeaning": "水力発電は流れる水を使います"
     },
     {
-      "id": "phrase-44",
+      "id": "phrase-43",
       "words": [
         "Dams",
         "generate",
@@ -598,7 +591,7 @@
       "phraseMeaning": "ダムは川から電気を生成します"
     },
     {
-      "id": "phrase-45",
+      "id": "phrase-44",
       "words": [
         "This",
         "is",
@@ -610,7 +603,7 @@
       "phraseMeaning": "これは成熟した技術です"
     },
     {
-      "id": "phrase-46",
+      "id": "phrase-45",
       "words": [
         "Many",
         "countries",
@@ -623,7 +616,7 @@
       "phraseMeaning": "多くの国は水力発電に大きく依存しています"
     },
     {
-      "id": "phrase-47",
+      "id": "phrase-46",
       "words": [
         "Geothermal",
         "energy",
@@ -637,7 +630,7 @@
       "phraseMeaning": "地熱エネルギーは地球からの熱を利用します"
     },
     {
-      "id": "phrase-48",
+      "id": "phrase-47",
       "words": [
         "It",
         "is",
@@ -649,7 +642,7 @@
       "phraseMeaning": "それは信頼性が高く一定です"
     },
     {
-      "id": "phrase-49",
+      "id": "phrase-48",
       "words": [
         "Iceland",
         "uses",
@@ -663,7 +656,7 @@
       "phraseMeaning": "アイスランドは暖房と電気のために地熱を使用します"
     },
     {
-      "id": "phrase-50",
+      "id": "phrase-49",
       "words": [
         "Biomass",
         "energy",
@@ -676,7 +669,7 @@
       "phraseMeaning": "バイオマスエネルギーは有機材料から来ます"
     },
     {
-      "id": "phrase-51",
+      "id": "phrase-50",
       "words": [
         "We",
         "can",
@@ -690,7 +683,7 @@
       "phraseMeaning": "農業廃棄物からエネルギーを生成できます"
     },
     {
-      "id": "phrase-52",
+      "id": "phrase-51",
       "words": [
         "Biofuels",
         "can",
@@ -703,7 +696,7 @@
       "phraseMeaning": "バイオ燃料は車両でガソリンを置き換えることができます"
     },
     {
-      "id": "phrase-53",
+      "id": "phrase-52",
       "words": [
         "The",
         "key",
@@ -717,7 +710,7 @@
       "phraseMeaning": "鍵はエネルギー源を多様化することです"
     },
     {
-      "id": "phrase-54",
+      "id": "phrase-53",
       "words": [
         "Different",
         "regions",
@@ -730,7 +723,7 @@
       "phraseMeaning": "異なる地域には異なる再生可能資源があります"
     },
     {
-      "id": "phrase-55",
+      "id": "phrase-54",
       "words": [
         "Sunny",
         "areas",
@@ -742,7 +735,7 @@
       "phraseMeaning": "日当たりの良い地域は太陽光に焦点を当てます"
     },
     {
-      "id": "phrase-56",
+      "id": "phrase-55",
       "words": [
         "Windy",
         "regions",
@@ -754,7 +747,7 @@
       "phraseMeaning": "風の強い地域は風力を開発します"
     },
     {
-      "id": "phrase-57",
+      "id": "phrase-56",
       "words": [
         "Together",
         "renewables",
@@ -768,7 +761,7 @@
       "phraseMeaning": "一緒に再生可能エネルギーは私たちの文明全体を動かすことができます"
     },
     {
-      "id": "phrase-58",
+      "id": "phrase-57",
       "words": [
         "Our",
         "current",
@@ -780,7 +773,7 @@
       "phraseMeaning": "私たちの現在の経済は線形です"
     },
     {
-      "id": "phrase-59",
+      "id": "phrase-58",
       "words": [
         "We",
         "take",
@@ -795,7 +788,7 @@
       "phraseMeaning": "資源を取り製品を作りそれらを捨てます"
     },
     {
-      "id": "phrase-60",
+      "id": "phrase-59",
       "words": [
         "This",
         "take",
@@ -809,7 +802,7 @@
       "phraseMeaning": "この取る作る廃棄するモデルは持続不可能です"
     },
     {
-      "id": "phrase-61",
+      "id": "phrase-60",
       "words": [
         "It",
         "depletes",
@@ -820,7 +813,7 @@
       "phraseMeaning": "有限の資源を枯渇させます"
     },
     {
-      "id": "phrase-62",
+      "id": "phrase-61",
       "words": [
         "It",
         "creates",
@@ -832,7 +825,7 @@
       "phraseMeaning": "山のような廃棄物を作ります"
     },
     {
-      "id": "phrase-63",
+      "id": "phrase-62",
       "words": [
         "We",
         "need",
@@ -844,7 +837,7 @@
       "phraseMeaning": "循環経済が必要です"
     },
     {
-      "id": "phrase-64",
+      "id": "phrase-63",
       "words": [
         "In",
         "a",
@@ -858,7 +851,7 @@
       "phraseMeaning": "循環経済では何も無駄になりません"
     },
     {
-      "id": "phrase-65",
+      "id": "phrase-64",
       "words": [
         "Products",
         "are",
@@ -872,7 +865,7 @@
       "phraseMeaning": "製品は耐久性と修理のために設計されます"
     },
     {
-      "id": "phrase-66",
+      "id": "phrase-65",
       "words": [
         "When",
         "products",
@@ -887,7 +880,7 @@
       "phraseMeaning": "製品が寿命を終えると材料はリサイクルされます"
     },
     {
-      "id": "phrase-67",
+      "id": "phrase-66",
       "words": [
         "These",
         "materials",
@@ -901,7 +894,7 @@
       "phraseMeaning": "これらの材料は新製品の投入物になります"
     },
     {
-      "id": "phrase-68",
+      "id": "phrase-67",
       "words": [
         "The",
         "cycle",
@@ -912,7 +905,7 @@
       "phraseMeaning": "サイクルは無期限に続きます"
     },
     {
-      "id": "phrase-69",
+      "id": "phrase-68",
       "words": [
         "This",
         "mimics",
@@ -923,7 +916,7 @@
       "phraseMeaning": "これは自然の生態系を模倣します"
     },
     {
-      "id": "phrase-70",
+      "id": "phrase-69",
       "words": [
         "In",
         "nature",
@@ -936,7 +929,7 @@
       "phraseMeaning": "自然には廃棄物はありません"
     },
     {
-      "id": "phrase-71",
+      "id": "phrase-70",
       "words": [
         "One",
         "organism",
@@ -949,7 +942,7 @@
       "phraseMeaning": "ある生物の廃棄物は別の生物の食物です"
     },
     {
-      "id": "phrase-72",
+      "id": "phrase-71",
       "words": [
         "We",
         "can",
@@ -964,7 +957,7 @@
       "phraseMeaning": "同じように産業システムを設計できます"
     },
     {
-      "id": "phrase-73",
+      "id": "phrase-72",
       "words": [
         "Companies",
         "are",
@@ -976,7 +969,7 @@
       "phraseMeaning": "企業は循環原則を採用しています"
     },
     {
-      "id": "phrase-74",
+      "id": "phrase-73",
       "words": [
         "Some",
         "offer",
@@ -989,7 +982,7 @@
       "phraseMeaning": "一部は製品をサービスとして提供します"
     },
     {
-      "id": "phrase-75",
+      "id": "phrase-74",
       "words": [
         "Instead",
         "of",
@@ -1004,7 +997,7 @@
       "phraseMeaning": "電球を売る代わりに照明を売ります"
     },
     {
-      "id": "phrase-76",
+      "id": "phrase-75",
       "words": [
         "They",
         "maintain",
@@ -1016,7 +1009,7 @@
       "phraseMeaning": "所有権と責任を維持します"
     },
     {
-      "id": "phrase-77",
+      "id": "phrase-76",
       "words": [
         "This",
         "incentivizes",
@@ -1028,7 +1021,7 @@
       "phraseMeaning": "これは耐久性のある製品を作ることを奨励します"
     },
     {
-      "id": "phrase-78",
+      "id": "phrase-77",
       "words": [
         "Sharing",
         "economy",
@@ -1040,7 +1033,7 @@
       "phraseMeaning": "シェアリングエコノミープラットフォームは消費を減らします"
     },
     {
-      "id": "phrase-79",
+      "id": "phrase-78",
       "words": [
         "Car",
         "sharing",
@@ -1052,7 +1045,7 @@
       "phraseMeaning": "カーシェアリングは必要な車両を減らします"
     },
     {
-      "id": "phrase-80",
+      "id": "phrase-79",
       "words": [
         "Tool",
         "libraries",
@@ -1067,7 +1060,7 @@
       "phraseMeaning": "ツールライブラリーは人々が買う代わりに借りることを可能にします"
     },
     {
-      "id": "phrase-81",
+      "id": "phrase-80",
       "words": [
         "Repair",
         "cafes",
@@ -1080,7 +1073,7 @@
       "phraseMeaning": "修理カフェは壊れたアイテムを修理するのを助けます"
     },
     {
-      "id": "phrase-82",
+      "id": "phrase-81",
       "words": [
         "This",
         "extends",
@@ -1091,7 +1084,7 @@
       "phraseMeaning": "これは製品の寿命を延ばします"
     },
     {
-      "id": "phrase-83",
+      "id": "phrase-82",
       "words": [
         "Right",
         "to",
@@ -1104,7 +1097,7 @@
       "phraseMeaning": "修理する権利法が出現しています"
     },
     {
-      "id": "phrase-84",
+      "id": "phrase-83",
       "words": [
         "Manufacturers",
         "must",
@@ -1117,7 +1110,7 @@
       "phraseMeaning": "製造業者は部品と説明書を提供しなければなりません"
     },
     {
-      "id": "phrase-85",
+      "id": "phrase-84",
       "words": [
         "This",
         "fights",
@@ -1128,7 +1121,7 @@
       "phraseMeaning": "これは計画的陳腐化と戦います"
     },
     {
-      "id": "phrase-86",
+      "id": "phrase-85",
       "words": [
         "Industrial",
         "symbiosis",
@@ -1140,7 +1133,7 @@
       "phraseMeaning": "産業共生は異なる産業をつなぎます"
     },
     {
-      "id": "phrase-87",
+      "id": "phrase-86",
       "words": [
         "One",
         "factory",
@@ -1154,7 +1147,7 @@
       "phraseMeaning": "ある工場の廃棄物は別の工場の原材料になります"
     },
     {
-      "id": "phrase-88",
+      "id": "phrase-87",
       "words": [
         "This",
         "reduces",
@@ -1168,7 +1161,7 @@
       "phraseMeaning": "これは廃棄物と資源採取の両方を減らします"
     },
     {
-      "id": "phrase-89",
+      "id": "phrase-88",
       "words": [
         "Agriculture",
         "must",
@@ -1180,7 +1173,7 @@
       "phraseMeaning": "農業も持続可能にならなければなりません"
     },
     {
-      "id": "phrase-90",
+      "id": "phrase-89",
       "words": [
         "Industrial",
         "farming",
@@ -1192,7 +1185,7 @@
       "phraseMeaning": "工業的農業は環境を損傷します"
     },
     {
-      "id": "phrase-91",
+      "id": "phrase-90",
       "words": [
         "It",
         "uses",
@@ -1205,7 +1198,7 @@
       "phraseMeaning": "過度の農薬と肥料を使用します"
     },
     {
-      "id": "phrase-92",
+      "id": "phrase-91",
       "words": [
         "These",
         "chemicals",
@@ -1218,7 +1211,7 @@
       "phraseMeaning": "これらの化学物質は水と土壌を汚染します"
     },
     {
-      "id": "phrase-93",
+      "id": "phrase-92",
       "words": [
         "They",
         "harm",
@@ -1231,7 +1224,7 @@
       "phraseMeaning": "有益な昆虫と野生生物に害を与えます"
     },
     {
-      "id": "phrase-94",
+      "id": "phrase-93",
       "words": [
         "Monoculture",
         "farming",
@@ -1243,7 +1236,7 @@
       "phraseMeaning": "単一栽培農業は土壌栄養素を枯渇させます"
     },
     {
-      "id": "phrase-95",
+      "id": "phrase-94",
       "words": [
         "It",
         "makes",
@@ -1258,7 +1251,7 @@
       "phraseMeaning": "作物を害虫と病気に対して脆弱にします"
     },
     {
-      "id": "phrase-96",
+      "id": "phrase-95",
       "words": [
         "Organic",
         "farming",
@@ -1270,7 +1263,7 @@
       "phraseMeaning": "有機農業は代替案を提供します"
     },
     {
-      "id": "phrase-97",
+      "id": "phrase-96",
       "words": [
         "It",
         "avoids",
@@ -1281,7 +1274,7 @@
       "phraseMeaning": "合成化学物質を避けます"
     },
     {
-      "id": "phrase-98",
+      "id": "phrase-97",
       "words": [
         "It",
         "uses",
@@ -1294,7 +1287,7 @@
       "phraseMeaning": "自然な害虫駆除方法を使います"
     },
     {
-      "id": "phrase-99",
+      "id": "phrase-98",
       "words": [
         "Crop",
         "rotation",
@@ -1306,7 +1299,7 @@
       "phraseMeaning": "輪作は土壌の健康を維持します"
     },
     {
-      "id": "phrase-100",
+      "id": "phrase-99",
       "words": [
         "Composting",
         "returns",
@@ -1319,7 +1312,7 @@
       "phraseMeaning": "堆肥化は栄養素を土壌に戻します"
     },
     {
-      "id": "phrase-101",
+      "id": "phrase-100",
       "words": [
         "Organic",
         "food",
@@ -1332,7 +1325,7 @@
       "phraseMeaning": "有機食品は消費者にとってより健康的です"
     },
     {
-      "id": "phrase-102",
+      "id": "phrase-101",
       "words": [
         "It",
         "is",
@@ -1346,7 +1339,7 @@
       "phraseMeaning": "農業労働者にとっても良いです"
     },
     {
-      "id": "phrase-103",
+      "id": "phrase-102",
       "words": [
         "Regenerative",
         "agriculture",
@@ -1357,7 +1350,7 @@
       "phraseMeaning": "再生農業はさらに進みます"
     },
     {
-      "id": "phrase-104",
+      "id": "phrase-103",
       "words": [
         "It",
         "actively",
@@ -1370,7 +1363,7 @@
       "phraseMeaning": "土壌と生態系を積極的に改善します"
     },
     {
-      "id": "phrase-105",
+      "id": "phrase-104",
       "words": [
         "Cover",
         "crops",
@@ -1381,7 +1374,7 @@
       "phraseMeaning": "被覆作物は侵食を防ぎます"
     },
     {
-      "id": "phrase-106",
+      "id": "phrase-105",
       "words": [
         "No",
         "till",
@@ -1394,7 +1387,7 @@
       "phraseMeaning": "不耕起農業は土壌構造を保存します"
     },
     {
-      "id": "phrase-107",
+      "id": "phrase-106",
       "words": [
         "Integrating",
         "livestock",
@@ -1406,7 +1399,7 @@
       "phraseMeaning": "家畜を統合することは自然な放牧を模倣します"
     },
     {
-      "id": "phrase-108",
+      "id": "phrase-107",
       "words": [
         "Animals",
         "fertilize",
@@ -1417,7 +1410,7 @@
       "phraseMeaning": "動物は自然に畑を肥やします"
     },
     {
-      "id": "phrase-109",
+      "id": "phrase-108",
       "words": [
         "This",
         "approach",
@@ -1431,7 +1424,7 @@
       "phraseMeaning": "このアプローチは土壌に炭素を隔離できます"
     },
     {
-      "id": "phrase-110",
+      "id": "phrase-109",
       "words": [
         "It",
         "helps",
@@ -1446,7 +1439,7 @@
       "phraseMeaning": "食料を生産しながら気候変動と戦うのを助けます"
     },
     {
-      "id": "phrase-111",
+      "id": "phrase-110",
       "words": [
         "Urban",
         "agriculture",
@@ -1460,7 +1453,7 @@
       "phraseMeaning": "都市農業は都市に食料生産をもたらします"
     },
     {
-      "id": "phrase-112",
+      "id": "phrase-111",
       "words": [
         "Rooftop",
         "gardens",
@@ -1472,7 +1465,7 @@
       "phraseMeaning": "屋上庭園は未使用のスペースを使います"
     },
     {
-      "id": "phrase-113",
+      "id": "phrase-112",
       "words": [
         "Vertical",
         "farms",
@@ -1485,7 +1478,7 @@
       "phraseMeaning": "垂直農場は建物で食料を育てます"
     },
     {
-      "id": "phrase-114",
+      "id": "phrase-113",
       "words": [
         "This",
         "reduces",
@@ -1496,7 +1489,7 @@
       "phraseMeaning": "これは輸送排出を減らします"
     },
     {
-      "id": "phrase-115",
+      "id": "phrase-114",
       "words": [
         "Fresh",
         "produce",
@@ -1508,7 +1501,7 @@
       "phraseMeaning": "新鮮な農産物がより速く消費者に届きます"
     },
     {
-      "id": "phrase-116",
+      "id": "phrase-115",
       "words": [
         "Community",
         "gardens",
@@ -1519,7 +1512,7 @@
       "phraseMeaning": "コミュニティガーデンは地域を強化します"
     },
     {
-      "id": "phrase-117",
+      "id": "phrase-116",
       "words": [
         "People",
         "connect",
@@ -1531,7 +1524,7 @@
       "phraseMeaning": "人々は食料生産とつながります"
     },
     {
-      "id": "phrase-118",
+      "id": "phrase-117",
       "words": [
         "They",
         "learn",
@@ -1544,7 +1537,7 @@
       "phraseMeaning": "食べ物がどこから来るか学びます"
     },
     {
-      "id": "phrase-119",
+      "id": "phrase-118",
       "words": [
         "Transportation",
         "accounts",
@@ -1556,7 +1549,7 @@
       "phraseMeaning": "交通は重要な排出を占めます"
     },
     {
-      "id": "phrase-120",
+      "id": "phrase-119",
       "words": [
         "Cars",
         "trucks",
@@ -1570,7 +1563,7 @@
       "phraseMeaning": "車トラック飛行機は化石燃料を燃やします"
     },
     {
-      "id": "phrase-121",
+      "id": "phrase-120",
       "words": [
         "We",
         "must",
@@ -1586,7 +1579,7 @@
       "phraseMeaning": "人と物をどう動かすかを変革しなければなりません"
     },
     {
-      "id": "phrase-122",
+      "id": "phrase-121",
       "words": [
         "Electric",
         "vehicles",
@@ -1598,7 +1591,7 @@
       "phraseMeaning": "電気自動車が主流になっています"
     },
     {
-      "id": "phrase-123",
+      "id": "phrase-122",
       "words": [
         "They",
         "produce",
@@ -1610,7 +1603,7 @@
       "phraseMeaning": "排気管からの排出はありません"
     },
     {
-      "id": "phrase-124",
+      "id": "phrase-123",
       "words": [
         "As",
         "electricity",
@@ -1625,7 +1618,7 @@
       "phraseMeaning": "電力網がクリーンになるにつれてEVはよりグリーンになります"
     },
     {
-      "id": "phrase-125",
+      "id": "phrase-124",
       "words": [
         "Battery",
         "technology",
@@ -1637,7 +1630,7 @@
       "phraseMeaning": "バッテリー技術は急速に改善しています"
     },
     {
-      "id": "phrase-126",
+      "id": "phrase-125",
       "words": [
         "Range",
         "is",
@@ -1650,7 +1643,7 @@
       "phraseMeaning": "航続距離は増加しコストは減少しています"
     },
     {
-      "id": "phrase-127",
+      "id": "phrase-126",
       "words": [
         "Charging",
         "infrastructure",
@@ -1661,7 +1654,7 @@
       "phraseMeaning": "充電インフラは拡大しています"
     },
     {
-      "id": "phrase-128",
+      "id": "phrase-127",
       "words": [
         "Soon",
         "EVs",
@@ -1676,7 +1669,7 @@
       "phraseMeaning": "間もなくEVはガソリン車より安くなります"
     },
     {
-      "id": "phrase-129",
+      "id": "phrase-128",
       "words": [
         "Public",
         "transportation",
@@ -1691,7 +1684,7 @@
       "phraseMeaning": "公共交通機関は自家用車より効率的です"
     },
     {
-      "id": "phrase-130",
+      "id": "phrase-129",
       "words": [
         "Buses",
         "and",
@@ -1706,7 +1699,7 @@
       "phraseMeaning": "バスと電車は一度に多くの人を運びます"
     },
     {
-      "id": "phrase-131",
+      "id": "phrase-130",
       "words": [
         "This",
         "reduces",
@@ -1718,7 +1711,7 @@
       "phraseMeaning": "これは一人当たりの排出を減らします"
     },
     {
-      "id": "phrase-132",
+      "id": "phrase-131",
       "words": [
         "Cities",
         "are",
@@ -1732,7 +1725,7 @@
       "phraseMeaning": "都市はより良い交通システムに投資しています"
     },
     {
-      "id": "phrase-133",
+      "id": "phrase-132",
       "words": [
         "Light",
         "rail",
@@ -1746,7 +1739,7 @@
       "phraseMeaning": "ライトレールと地下鉄は人々を素早く動かします"
     },
     {
-      "id": "phrase-134",
+      "id": "phrase-133",
       "words": [
         "Dedicated",
         "bus",
@@ -1758,7 +1751,7 @@
       "phraseMeaning": "専用バスレーンはサービスを改善します"
     },
     {
-      "id": "phrase-135",
+      "id": "phrase-134",
       "words": [
         "Cycling",
         "and",
@@ -1772,7 +1765,7 @@
       "phraseMeaning": "自転車と徒歩は最もグリーンな選択肢です"
     },
     {
-      "id": "phrase-136",
+      "id": "phrase-135",
       "words": [
         "They",
         "produce",
@@ -1783,7 +1776,7 @@
       "phraseMeaning": "ゼロ排出を生み出します"
     },
     {
-      "id": "phrase-137",
+      "id": "phrase-136",
       "words": [
         "They",
         "also",
@@ -1794,7 +1787,7 @@
       "phraseMeaning": "健康も改善します"
     },
     {
-      "id": "phrase-138",
+      "id": "phrase-137",
       "words": [
         "Cities",
         "are",
@@ -1808,7 +1801,7 @@
       "phraseMeaning": "都市は広範な自転車レーンネットワークを構築しています"
     },
     {
-      "id": "phrase-139",
+      "id": "phrase-138",
       "words": [
         "Bike",
         "sharing",
@@ -1821,7 +1814,7 @@
       "phraseMeaning": "自転車シェアリングプログラムはサイクリングを利用可能にします"
     },
     {
-      "id": "phrase-140",
+      "id": "phrase-139",
       "words": [
         "Walkable",
         "neighborhoods",
@@ -1833,7 +1826,7 @@
       "phraseMeaning": "歩きやすい地域は車依存を減らします"
     },
     {
-      "id": "phrase-141",
+      "id": "phrase-140",
       "words": [
         "Mixed",
         "use",
@@ -1849,7 +1842,7 @@
       "phraseMeaning": "複合用途開発は家を店と仕事の近くに置きます"
     },
     {
-      "id": "phrase-142",
+      "id": "phrase-141",
       "words": [
         "People",
         "can",
@@ -1863,7 +1856,7 @@
       "phraseMeaning": "人々は運転せずに日常のニーズを満たすことができます"
     },
     {
-      "id": "phrase-143",
+      "id": "phrase-142",
       "words": [
         "This",
         "creates",
@@ -1875,7 +1868,7 @@
       "phraseMeaning": "これはより住みやすい都市を作ります"
     },
     {
-      "id": "phrase-144",
+      "id": "phrase-143",
       "words": [
         "High",
         "speed",
@@ -1889,7 +1882,7 @@
       "phraseMeaning": "高速鉄道は短距離フライトを置き換えることができます"
     },
     {
-      "id": "phrase-145",
+      "id": "phrase-144",
       "words": [
         "Trains",
         "are",
@@ -1905,7 +1898,7 @@
       "phraseMeaning": "電車は500マイル未満の距離でより効率的です"
     },
     {
-      "id": "phrase-146",
+      "id": "phrase-145",
       "words": [
         "They",
         "offer",
@@ -1922,7 +1915,7 @@
       "phraseMeaning": "快適さと都心から都心への旅行を提供します"
     },
     {
-      "id": "phrase-147",
+      "id": "phrase-146",
       "words": [
         "For",
         "freight",
@@ -1935,7 +1928,7 @@
       "phraseMeaning": "貨物輸送はよりクリーンにならなければなりません"
     },
     {
-      "id": "phrase-148",
+      "id": "phrase-147",
       "words": [
         "Ships",
         "currently",
@@ -1947,7 +1940,7 @@
       "phraseMeaning": "船は現在汚い燃料を燃やします"
     },
     {
-      "id": "phrase-149",
+      "id": "phrase-148",
       "words": [
         "Hydrogen",
         "and",
@@ -1961,7 +1954,7 @@
       "phraseMeaning": "水素とアンモニア燃料が開発されています"
     },
     {
-      "id": "phrase-150",
+      "id": "phrase-149",
       "words": [
         "Optimizing",
         "shipping",
@@ -1973,7 +1966,7 @@
       "phraseMeaning": "輸送ルートを最適化することは排出を減らします"
     },
     {
-      "id": "phrase-151",
+      "id": "phrase-150",
       "words": [
         "Buildings",
         "consume",
@@ -1986,7 +1979,7 @@
       "phraseMeaning": "建物は膨大な量のエネルギーを消費します"
     },
     {
-      "id": "phrase-152",
+      "id": "phrase-151",
       "words": [
         "Heating",
         "cooling",
@@ -1999,7 +1992,7 @@
       "phraseMeaning": "暖房冷房照明は電力を必要とします"
     },
     {
-      "id": "phrase-153",
+      "id": "phrase-152",
       "words": [
         "Traditional",
         "buildings",
@@ -2010,7 +2003,7 @@
       "phraseMeaning": "伝統的な建物は非効率です"
     },
     {
-      "id": "phrase-154",
+      "id": "phrase-153",
       "words": [
         "Poor",
         "insulation",
@@ -2021,7 +2014,7 @@
       "phraseMeaning": "貧弱な断熱はエネルギーを無駄にします"
     },
     {
-      "id": "phrase-155",
+      "id": "phrase-154",
       "words": [
         "Old",
         "windows",
@@ -2032,7 +2025,7 @@
       "phraseMeaning": "古い窓は熱を漏らします"
     },
     {
-      "id": "phrase-156",
+      "id": "phrase-155",
       "words": [
         "Inefficient",
         "appliances",
@@ -2044,7 +2037,7 @@
       "phraseMeaning": "非効率な機器は過剰な電力を消費します"
     },
     {
-      "id": "phrase-157",
+      "id": "phrase-156",
       "words": [
         "Green",
         "buildings",
@@ -2056,7 +2049,7 @@
       "phraseMeaning": "グリーンビルディングはこれらの問題に対処します"
     },
     {
-      "id": "phrase-158",
+      "id": "phrase-157",
       "words": [
         "They",
         "are",
@@ -2069,7 +2062,7 @@
       "phraseMeaning": "エネルギー効率のために設計されています"
     },
     {
-      "id": "phrase-159",
+      "id": "phrase-158",
       "words": [
         "Thick",
         "insulation",
@@ -2083,7 +2076,7 @@
       "phraseMeaning": "厚い断熱材は暖房と冷房のニーズを減らします"
     },
     {
-      "id": "phrase-160",
+      "id": "phrase-159",
       "words": [
         "Triple",
         "pane",
@@ -2096,7 +2089,7 @@
       "phraseMeaning": "三重窓ガラスは熱伝達を最小限にします"
     },
     {
-      "id": "phrase-161",
+      "id": "phrase-160",
       "words": [
         "LED",
         "lighting",
@@ -2109,7 +2102,7 @@
       "phraseMeaning": "LED照明はエネルギーの一部を使用します"
     },
     {
-      "id": "phrase-162",
+      "id": "phrase-161",
       "words": [
         "Smart",
         "thermostats",
@@ -2121,7 +2114,7 @@
       "phraseMeaning": "スマートサーモスタットは温度制御を最適化します"
     },
     {
-      "id": "phrase-163",
+      "id": "phrase-162",
       "words": [
         "Solar",
         "panels",
@@ -2134,7 +2127,7 @@
       "phraseMeaning": "屋根のソーラーパネルは電気を生成します"
     },
     {
-      "id": "phrase-164",
+      "id": "phrase-163",
       "words": [
         "Some",
         "buildings",
@@ -2149,7 +2142,7 @@
       "phraseMeaning": "一部の建物は消費するより多くのエネルギーを生産します"
     },
     {
-      "id": "phrase-165",
+      "id": "phrase-164",
       "words": [
         "These",
         "net",
@@ -2165,7 +2158,7 @@
       "phraseMeaning": "これらのネットポジティブビルディングは余剰を電力網に売ります"
     },
     {
-      "id": "phrase-166",
+      "id": "phrase-165",
       "words": [
         "Green",
         "roofs",
@@ -2179,7 +2172,7 @@
       "phraseMeaning": "グリーンルーフは断熱を提供し流出を減らします"
     },
     {
-      "id": "phrase-167",
+      "id": "phrase-166",
       "words": [
         "Plants",
         "absorb",
@@ -2189,7 +2182,7 @@
       "phraseMeaning": "植物は雨水を吸収します"
     },
     {
-      "id": "phrase-168",
+      "id": "phrase-167",
       "words": [
         "They",
         "cool",
@@ -2201,7 +2194,7 @@
       "phraseMeaning": "蒸発を通して建物を冷やします"
     },
     {
-      "id": "phrase-169",
+      "id": "phrase-168",
       "words": [
         "They",
         "create",
@@ -2213,7 +2206,7 @@
       "phraseMeaning": "野生生物の生息地を作ります"
     },
     {
-      "id": "phrase-170",
+      "id": "phrase-169",
       "words": [
         "Passive",
         "design",
@@ -2225,7 +2218,7 @@
       "phraseMeaning": "パッシブデザインは自然のシステムを使います"
     },
     {
-      "id": "phrase-171",
+      "id": "phrase-170",
       "words": [
         "Orientation",
         "maximizes",
@@ -2236,7 +2229,7 @@
       "phraseMeaning": "方向は自然光を最大化します"
     },
     {
-      "id": "phrase-172",
+      "id": "phrase-171",
       "words": [
         "Overhangs",
         "provide",
@@ -2248,7 +2241,7 @@
       "phraseMeaning": "軒は夏に日陰を提供します"
     },
     {
-      "id": "phrase-173",
+      "id": "phrase-172",
       "words": [
         "Thermal",
         "mass",
@@ -2261,7 +2254,7 @@
       "phraseMeaning": "熱容量は熱を蓄え放出します"
     },
     {
-      "id": "phrase-174",
+      "id": "phrase-173",
       "words": [
         "Natural",
         "ventilation",
@@ -2274,7 +2267,7 @@
       "phraseMeaning": "自然換気は空調のニーズを減らします"
     },
     {
-      "id": "phrase-175",
+      "id": "phrase-174",
       "words": [
         "Sustainable",
         "materials",
@@ -2286,7 +2279,7 @@
       "phraseMeaning": "持続可能な材料は環境への影響を減らします"
     },
     {
-      "id": "phrase-176",
+      "id": "phrase-175",
       "words": [
         "Bamboo",
         "grows",
@@ -2299,7 +2292,7 @@
       "phraseMeaning": "竹は早く成長し強いです"
     },
     {
-      "id": "phrase-177",
+      "id": "phrase-176",
       "words": [
         "Recycled",
         "steel",
@@ -2313,7 +2306,7 @@
       "phraseMeaning": "リサイクルされた鋼とコンクリートは資源採取を減らします"
     },
     {
-      "id": "phrase-178",
+      "id": "phrase-177",
       "words": [
         "Low",
         "VOC",
@@ -2327,7 +2320,7 @@
       "phraseMeaning": "低VOC塗料は室内空気質を改善します"
     },
     {
-      "id": "phrase-179",
+      "id": "phrase-178",
       "words": [
         "Retrofitting",
         "existing",
@@ -2340,7 +2333,7 @@
       "phraseMeaning": "既存の建物の改修も重要です"
     },
     {
-      "id": "phrase-180",
+      "id": "phrase-179",
       "words": [
         "Most",
         "buildings",
@@ -2354,7 +2347,7 @@
       "phraseMeaning": "2050年のほとんどの建物は今日すでに存在します"
     },
     {
-      "id": "phrase-181",
+      "id": "phrase-180",
       "words": [
         "Upgrading",
         "them",
@@ -2368,7 +2361,7 @@
       "phraseMeaning": "それらをアップグレードすることは取り壊しより効率的です"
     },
     {
-      "id": "phrase-182",
+      "id": "phrase-181",
       "words": [
         "Simple",
         "improvements",
@@ -2380,7 +2373,7 @@
       "phraseMeaning": "簡単な改善が大きな違いを生みます"
     },
     {
-      "id": "phrase-183",
+      "id": "phrase-182",
       "words": [
         "Individual",
         "choices",
@@ -2393,7 +2386,7 @@
       "phraseMeaning": "個々の選択が集合的に大きな影響を生み出します"
     },
     {
-      "id": "phrase-184",
+      "id": "phrase-183",
       "words": [
         "How",
         "we",
@@ -2405,7 +2398,7 @@
       "phraseMeaning": "私たちがどう消費するかが市場を形作ります"
     },
     {
-      "id": "phrase-185",
+      "id": "phrase-184",
       "words": [
         "Reducing",
         "consumption",
@@ -2417,7 +2410,7 @@
       "phraseMeaning": "消費を減らすことが最も効果的です"
     },
     {
-      "id": "phrase-186",
+      "id": "phrase-185",
       "words": [
         "Buy",
         "less",
@@ -2429,7 +2422,7 @@
       "phraseMeaning": "少なく買いますが質を選んでください"
     },
     {
-      "id": "phrase-187",
+      "id": "phrase-186",
       "words": [
         "Durable",
         "goods",
@@ -2440,7 +2433,7 @@
       "phraseMeaning": "耐久財は長持ちします"
     },
     {
-      "id": "phrase-188",
+      "id": "phrase-187",
       "words": [
         "They",
         "save",
@@ -2454,7 +2447,7 @@
       "phraseMeaning": "時間とともにお金と資源を節約します"
     },
     {
-      "id": "phrase-189",
+      "id": "phrase-188",
       "words": [
         "Avoid",
         "fast",
@@ -2464,7 +2457,7 @@
       "phraseMeaning": "ファストファッションを避けてください"
     },
     {
-      "id": "phrase-190",
+      "id": "phrase-189",
       "words": [
         "Cheap",
         "clothes",
@@ -2478,7 +2471,7 @@
       "phraseMeaning": "安い服は劣悪な条件で作られます"
     },
     {
-      "id": "phrase-191",
+      "id": "phrase-190",
       "words": [
         "They",
         "are",
@@ -2489,7 +2482,7 @@
       "phraseMeaning": "すぐに捨てられます"
     },
     {
-      "id": "phrase-192",
+      "id": "phrase-191",
       "words": [
         "Choose",
         "timeless",
@@ -2502,7 +2495,7 @@
       "phraseMeaning": "何年も持つ時代を超えたピースを選んでください"
     },
     {
-      "id": "phrase-193",
+      "id": "phrase-192",
       "words": [
         "Support",
         "ethical",
@@ -2512,7 +2505,7 @@
       "phraseMeaning": "倫理的なブランドをサポートしてください"
     },
     {
-      "id": "phrase-194",
+      "id": "phrase-193",
       "words": [
         "Reduce",
         "meat",
@@ -2522,7 +2515,7 @@
       "phraseMeaning": "肉の消費を減らしてください"
     },
     {
-      "id": "phrase-195",
+      "id": "phrase-194",
       "words": [
         "Livestock",
         "farming",
@@ -2535,7 +2528,7 @@
       "phraseMeaning": "家畜飼育は巨大な環境コストがあります"
     },
     {
-      "id": "phrase-196",
+      "id": "phrase-195",
       "words": [
         "It",
         "requires",
@@ -2550,7 +2543,7 @@
       "phraseMeaning": "広大な土地と水を必要とします"
     },
     {
-      "id": "phrase-197",
+      "id": "phrase-196",
       "words": [
         "It",
         "produces",
@@ -2562,7 +2555,7 @@
       "phraseMeaning": "重要な温室効果ガスを生産します"
     },
     {
-      "id": "phrase-198",
+      "id": "phrase-197",
       "words": [
         "Plant",
         "based",
@@ -2576,7 +2569,7 @@
       "phraseMeaning": "植物ベースの食事ははるかに低い影響を持ちます"
     },
     {
-      "id": "phrase-199",
+      "id": "phrase-198",
       "words": [
         "You",
         "do",
@@ -2590,7 +2583,7 @@
       "phraseMeaning": "ビーガンになる必要はありません"
     },
     {
-      "id": "phrase-200",
+      "id": "phrase-199",
       "words": [
         "Simply",
         "eating",
@@ -2602,7 +2595,7 @@
       "phraseMeaning": "単に肉を少なく食べることが助けになります"
     },
     {
-      "id": "phrase-201",
+      "id": "phrase-200",
       "words": [
         "Try",
         "meatless",
@@ -2612,7 +2605,7 @@
       "phraseMeaning": "ミートレスマンデーを試してください"
     },
     {
-      "id": "phrase-202",
+      "id": "phrase-201",
       "words": [
         "Choose",
         "local",
@@ -2624,7 +2617,7 @@
       "phraseMeaning": "地元の旬の食べ物を選んでください"
     },
     {
-      "id": "phrase-203",
+      "id": "phrase-202",
       "words": [
         "Transporting",
         "food",
@@ -2637,7 +2630,7 @@
       "phraseMeaning": "長距離で食べ物を輸送することはエネルギーを使います"
     },
     {
-      "id": "phrase-204",
+      "id": "phrase-203",
       "words": [
         "Out",
         "of",
@@ -2651,7 +2644,7 @@
       "phraseMeaning": "季節外れの農産物は加熱された温室を必要とします"
     },
     {
-      "id": "phrase-205",
+      "id": "phrase-204",
       "words": [
         "Local",
         "farmers",
@@ -2664,7 +2657,7 @@
       "phraseMeaning": "地元の農家市場は新鮮な選択肢を提供します"
     },
     {
-      "id": "phrase-206",
+      "id": "phrase-205",
       "words": [
         "Reduce",
         "food",
@@ -2674,7 +2667,7 @@
       "phraseMeaning": "食品廃棄物を減らしてください"
     },
     {
-      "id": "phrase-207",
+      "id": "phrase-206",
       "words": [
         "One",
         "third",
@@ -2688,7 +2681,7 @@
       "phraseMeaning": "生産される食品の3分の1が無駄になります"
     },
     {
-      "id": "phrase-208",
+      "id": "phrase-207",
       "words": [
         "Plan",
         "meals",
@@ -2702,7 +2695,7 @@
       "phraseMeaning": "買ったものを使うために食事を計画してください"
     },
     {
-      "id": "phrase-209",
+      "id": "phrase-208",
       "words": [
         "Store",
         "food",
@@ -2715,7 +2708,7 @@
       "phraseMeaning": "新鮮さを延ばすために適切に食品を保存してください"
     },
     {
-      "id": "phrase-210",
+      "id": "phrase-209",
       "words": [
         "Compost",
         "food",
@@ -2725,7 +2718,7 @@
       "phraseMeaning": "食品くずを堆肥にしてください"
     },
     {
-      "id": "phrase-211",
+      "id": "phrase-210",
       "words": [
         "Use",
         "reusable",
@@ -2735,7 +2728,7 @@
       "phraseMeaning": "再利用可能なアイテムを使ってください"
     },
     {
-      "id": "phrase-212",
+      "id": "phrase-211",
       "words": [
         "Bring",
         "your",
@@ -2748,7 +2741,7 @@
       "phraseMeaning": "店に自分のバッグを持って行ってください"
     },
     {
-      "id": "phrase-213",
+      "id": "phrase-212",
       "words": [
         "Use",
         "refillable",
@@ -2759,7 +2752,7 @@
       "phraseMeaning": "詰め替え可能な水筒を使ってください"
     },
     {
-      "id": "phrase-214",
+      "id": "phrase-213",
       "words": [
         "Choose",
         "products",
@@ -2771,7 +2764,7 @@
       "phraseMeaning": "最小限のパッケージの製品を選んでください"
     },
     {
-      "id": "phrase-215",
+      "id": "phrase-214",
       "words": [
         "Support",
         "companies",
@@ -2784,7 +2777,7 @@
       "phraseMeaning": "強力な持続可能性のコミットメントを持つ企業をサポートしてください"
     },
     {
-      "id": "phrase-216",
+      "id": "phrase-215",
       "words": [
         "Research",
         "brands",
@@ -2795,7 +2788,7 @@
       "phraseMeaning": "購入前にブランドを調査してください"
     },
     {
-      "id": "phrase-217",
+      "id": "phrase-216",
       "words": [
         "Your",
         "purchasing",
@@ -2808,7 +2801,7 @@
       "phraseMeaning": "あなたの購買力は投票です"
     },
     {
-      "id": "phrase-218",
+      "id": "phrase-217",
       "words": [
         "Companies",
         "respond",
@@ -2820,7 +2813,7 @@
       "phraseMeaning": "企業は消費者の需要に応答します"
     },
     {
-      "id": "phrase-219",
+      "id": "phrase-218",
       "words": [
         "Government",
         "policy",
@@ -2833,7 +2826,7 @@
       "phraseMeaning": "政府の政策は持続可能性に重要です"
     },
     {
-      "id": "phrase-220",
+      "id": "phrase-219",
       "words": [
         "Individual",
         "action",
@@ -2845,7 +2838,7 @@
       "phraseMeaning": "個人の行動だけでは不十分です"
     },
     {
-      "id": "phrase-221",
+      "id": "phrase-220",
       "words": [
         "We",
         "need",
@@ -2856,7 +2849,7 @@
       "phraseMeaning": "システム的な変化が必要です"
     },
     {
-      "id": "phrase-222",
+      "id": "phrase-221",
       "words": [
         "Carbon",
         "pricing",
@@ -2868,7 +2861,7 @@
       "phraseMeaning": "炭素価格設定は汚染を高価にします"
     },
     {
-      "id": "phrase-223",
+      "id": "phrase-222",
       "words": [
         "Carbon",
         "taxes",
@@ -2880,7 +2873,7 @@
       "phraseMeaning": "炭素税は排出に対して課金します"
     },
     {
-      "id": "phrase-224",
+      "id": "phrase-223",
       "words": [
         "Cap",
         "and",
@@ -2894,7 +2887,7 @@
       "phraseMeaning": "キャップアンドトレードシステムは総排出量を制限します"
     },
     {
-      "id": "phrase-225",
+      "id": "phrase-224",
       "words": [
         "Companies",
         "must",
@@ -2907,7 +2900,7 @@
       "phraseMeaning": "企業は汚染するために許可証を購入しなければなりません"
     },
     {
-      "id": "phrase-226",
+      "id": "phrase-225",
       "words": [
         "This",
         "creates",
@@ -2921,7 +2914,7 @@
       "phraseMeaning": "これは排出を減らすための経済的インセンティブを作ります"
     },
     {
-      "id": "phrase-227",
+      "id": "phrase-226",
       "words": [
         "Subsidies",
         "can",
@@ -2933,7 +2926,7 @@
       "phraseMeaning": "補助金はクリーン技術を加速できます"
     },
     {
-      "id": "phrase-228",
+      "id": "phrase-227",
       "words": [
         "Supporting",
         "renewable",
@@ -2946,7 +2939,7 @@
       "phraseMeaning": "再生可能エネルギーを支援することはそれが競争するのを助けます"
     },
     {
-      "id": "phrase-229",
+      "id": "phrase-228",
       "words": [
         "Incentives",
         "for",
@@ -2959,7 +2952,7 @@
       "phraseMeaning": "電気自動車へのインセンティブは採用を増やします"
     },
     {
-      "id": "phrase-230",
+      "id": "phrase-229",
       "words": [
         "Regulations",
         "set",
@@ -2970,7 +2963,7 @@
       "phraseMeaning": "規制は最低基準を設定します"
     },
     {
-      "id": "phrase-231",
+      "id": "phrase-230",
       "words": [
         "Emissions",
         "standards",
@@ -2983,7 +2976,7 @@
       "phraseMeaning": "車両の排出基準は汚染を減らします"
     },
     {
-      "id": "phrase-232",
+      "id": "phrase-231",
       "words": [
         "Building",
         "codes",
@@ -2995,7 +2988,7 @@
       "phraseMeaning": "建築基準はエネルギー効率を要求します"
     },
     {
-      "id": "phrase-233",
+      "id": "phrase-232",
       "words": [
         "Plastic",
         "bag",
@@ -3007,7 +3000,7 @@
       "phraseMeaning": "ビニール袋禁止は廃棄物を減らします"
     },
     {
-      "id": "phrase-234",
+      "id": "phrase-233",
       "words": [
         "International",
         "cooperation",
@@ -3018,7 +3011,7 @@
       "phraseMeaning": "国際協力は不可欠です"
     },
     {
-      "id": "phrase-235",
+      "id": "phrase-234",
       "words": [
         "Climate",
         "change",
@@ -3031,7 +3024,7 @@
       "phraseMeaning": "気候変動は地球規模の問題です"
     },
     {
-      "id": "phrase-236",
+      "id": "phrase-235",
       "words": [
         "No",
         "country",
@@ -3044,7 +3037,7 @@
       "phraseMeaning": "どの国も単独で解決できません"
     },
     {
-      "id": "phrase-237",
+      "id": "phrase-236",
       "words": [
         "The",
         "Paris",
@@ -3056,7 +3049,7 @@
       "phraseMeaning": "パリ協定は国々を統一します"
     },
     {
-      "id": "phrase-238",
+      "id": "phrase-237",
       "words": [
         "Countries",
         "commit",
@@ -3068,7 +3061,7 @@
       "phraseMeaning": "国々は排出を減らすことを約束します"
     },
     {
-      "id": "phrase-239",
+      "id": "phrase-238",
       "words": [
         "They",
         "report",
@@ -3081,7 +3074,7 @@
       "phraseMeaning": "進捗を報告し目標を強化します"
     },
     {
-      "id": "phrase-240",
+      "id": "phrase-239",
       "words": [
         "Developed",
         "nations",
@@ -3092,7 +3085,7 @@
       "phraseMeaning": "先進国は主導しなければなりません"
     },
     {
-      "id": "phrase-241",
+      "id": "phrase-240",
       "words": [
         "They",
         "caused",
@@ -3104,7 +3097,7 @@
       "phraseMeaning": "歴史的排出のほとんどを引き起こしました"
     },
     {
-      "id": "phrase-242",
+      "id": "phrase-241",
       "words": [
         "They",
         "have",
@@ -3116,7 +3109,7 @@
       "phraseMeaning": "行動する資源があります"
     },
     {
-      "id": "phrase-243",
+      "id": "phrase-242",
       "words": [
         "They",
         "should",
@@ -3129,7 +3122,7 @@
       "phraseMeaning": "発展途上国の移行を助けるべきです"
     },
     {
-      "id": "phrase-244",
+      "id": "phrase-243",
       "words": [
         "Climate",
         "finance",
@@ -3142,7 +3135,7 @@
       "phraseMeaning": "気候資金は適応と緩和を支援します"
     },
     {
-      "id": "phrase-245",
+      "id": "phrase-244",
       "words": [
         "Technology",
         "transfer",
@@ -3154,7 +3147,7 @@
       "phraseMeaning": "技術移転はクリーンな解決策を共有します"
     },
     {
-      "id": "phrase-246",
+      "id": "phrase-245",
       "words": [
         "Justice",
         "must",
@@ -3168,7 +3161,7 @@
       "phraseMeaning": "正義は気候行動の中心でなければなりません"
     },
     {
-      "id": "phrase-247",
+      "id": "phrase-246",
       "words": [
         "Vulnerable",
         "communities",
@@ -3182,7 +3175,7 @@
       "phraseMeaning": "脆弱なコミュニティは気候変動から最も苦しみます"
     },
     {
-      "id": "phrase-248",
+      "id": "phrase-247",
       "words": [
         "Yet",
         "they",
@@ -3196,7 +3189,7 @@
       "phraseMeaning": "しかし彼らは問題に最も少ししか貢献しませんでした"
     },
     {
-      "id": "phrase-249",
+      "id": "phrase-248",
       "words": [
         "Solutions",
         "must",
@@ -3208,7 +3201,7 @@
       "phraseMeaning": "解決策は不平等を悪化させてはなりません"
     },
     {
-      "id": "phrase-250",
+      "id": "phrase-249",
       "words": [
         "Green",
         "jobs",
@@ -3221,7 +3214,7 @@
       "phraseMeaning": "グリーンジョブは良い賃金を提供すべきです"
     },
     {
-      "id": "phrase-251",
+      "id": "phrase-250",
       "words": [
         "Communities",
         "must",
@@ -3233,7 +3226,7 @@
       "phraseMeaning": "コミュニティは計画に参加しなければなりません"
     },
     {
-      "id": "phrase-252",
+      "id": "phrase-251",
       "words": [
         "Education",
         "is",
@@ -3245,7 +3238,7 @@
       "phraseMeaning": "教育は持続可能性の基本です"
     },
     {
-      "id": "phrase-253",
+      "id": "phrase-252",
       "words": [
         "People",
         "must",
@@ -3257,7 +3250,7 @@
       "phraseMeaning": "人々は問題を理解しなければなりません"
     },
     {
-      "id": "phrase-254",
+      "id": "phrase-253",
       "words": [
         "They",
         "must",
@@ -3269,7 +3262,7 @@
       "phraseMeaning": "解決策が存在することを知らなければなりません"
     },
     {
-      "id": "phrase-255",
+      "id": "phrase-254",
       "words": [
         "Schools",
         "should",
@@ -3281,7 +3274,7 @@
       "phraseMeaning": "学校は環境科学を教えるべきです"
     },
     {
-      "id": "phrase-256",
+      "id": "phrase-255",
       "words": [
         "Students",
         "need",
@@ -3293,7 +3286,7 @@
       "phraseMeaning": "生徒は生態系を理解する必要があります"
     },
     {
-      "id": "phrase-257",
+      "id": "phrase-256",
       "words": [
         "They",
         "should",
@@ -3306,7 +3299,7 @@
       "phraseMeaning": "気候変動について学ぶべきです"
     },
     {
-      "id": "phrase-258",
+      "id": "phrase-257",
       "words": [
         "Education",
         "should",
@@ -3318,7 +3311,7 @@
       "phraseMeaning": "教育は行動志向であるべきです"
     },
     {
-      "id": "phrase-259",
+      "id": "phrase-258",
       "words": [
         "Students",
         "can",
@@ -3331,7 +3324,7 @@
       "phraseMeaning": "生徒は学校の庭に参加できます"
     },
     {
-      "id": "phrase-260",
+      "id": "phrase-259",
       "words": [
         "They",
         "can",
@@ -3343,7 +3336,7 @@
       "phraseMeaning": "エネルギー監査を実施できます"
     },
     {
-      "id": "phrase-261",
+      "id": "phrase-260",
       "words": [
         "They",
         "can",
@@ -3355,7 +3348,7 @@
       "phraseMeaning": "リサイクルプログラムを組織できます"
     },
     {
-      "id": "phrase-262",
+      "id": "phrase-261",
       "words": [
         "This",
         "builds",
@@ -3366,7 +3359,7 @@
       "phraseMeaning": "これは実践的なスキルを構築します"
     },
     {
-      "id": "phrase-263",
+      "id": "phrase-262",
       "words": [
         "It",
         "empowers",
@@ -3380,7 +3373,7 @@
       "phraseMeaning": "若者が変化を起こすことを可能にします"
     },
     {
-      "id": "phrase-264",
+      "id": "phrase-263",
       "words": [
         "Media",
         "has",
@@ -3392,7 +3385,7 @@
       "phraseMeaning": "メディアには情報を伝える責任があります"
     },
     {
-      "id": "phrase-265",
+      "id": "phrase-264",
       "words": [
         "Accurate",
         "climate",
@@ -3404,7 +3397,7 @@
       "phraseMeaning": "正確な気候報道は不可欠です"
     },
     {
-      "id": "phrase-266",
+      "id": "phrase-265",
       "words": [
         "False",
         "balance",
@@ -3416,7 +3409,7 @@
       "phraseMeaning": "偽のバランスは公衆を誤解させます"
     },
     {
-      "id": "phrase-267",
+      "id": "phrase-266",
       "words": [
         "Scientific",
         "consensus",
@@ -3427,7 +3420,7 @@
       "phraseMeaning": "科学的コンセンサスは明確です"
     },
     {
-      "id": "phrase-268",
+      "id": "phrase-267",
       "words": [
         "Media",
         "should",
@@ -3438,7 +3431,7 @@
       "phraseMeaning": "メディアはこれを反映すべきです"
     },
     {
-      "id": "phrase-269",
+      "id": "phrase-268",
       "words": [
         "Stories",
         "should",
@@ -3449,7 +3442,7 @@
       "phraseMeaning": "物語は解決策を強調すべきです"
     },
     {
-      "id": "phrase-270",
+      "id": "phrase-269",
       "words": [
         "Not",
         "just",
@@ -3459,7 +3452,7 @@
       "phraseMeaning": "問題だけでなく"
     },
     {
-      "id": "phrase-271",
+      "id": "phrase-270",
       "words": [
         "This",
         "inspires",
@@ -3471,7 +3464,7 @@
       "phraseMeaning": "これは希望と行動を鼓舞します"
     },
     {
-      "id": "phrase-272",
+      "id": "phrase-271",
       "words": [
         "Social",
         "movements",
@@ -3482,7 +3475,7 @@
       "phraseMeaning": "社会運動は変化を推進します"
     },
     {
-      "id": "phrase-273",
+      "id": "phrase-272",
       "words": [
         "Youth",
         "climate",
@@ -3494,7 +3487,7 @@
       "phraseMeaning": "若者の気候ストライキは意識を高めます"
     },
     {
-      "id": "phrase-274",
+      "id": "phrase-273",
       "words": [
         "They",
         "pressure",
@@ -3506,7 +3499,7 @@
       "phraseMeaning": "リーダーに行動するよう圧力をかけます"
     },
     {
-      "id": "phrase-275",
+      "id": "phrase-274",
       "words": [
         "Grassroots",
         "organizations",
@@ -3517,7 +3510,7 @@
       "phraseMeaning": "草の根組織はコミュニティを動員します"
     },
     {
-      "id": "phrase-276",
+      "id": "phrase-275",
       "words": [
         "They",
         "organize",
@@ -3529,7 +3522,7 @@
       "phraseMeaning": "抗議とキャンペーンを組織します"
     },
     {
-      "id": "phrase-277",
+      "id": "phrase-276",
       "words": [
         "They",
         "push",
@@ -3541,7 +3534,7 @@
       "phraseMeaning": "政策変更を押し進めます"
     },
     {
-      "id": "phrase-278",
+      "id": "phrase-277",
       "words": [
         "Everyone",
         "can",
@@ -3552,7 +3545,7 @@
       "phraseMeaning": "誰でも関与できます"
     },
     {
-      "id": "phrase-279",
+      "id": "phrase-278",
       "words": [
         "Join",
         "environmental",
@@ -3562,7 +3555,7 @@
       "phraseMeaning": "環境グループに参加してください"
     },
     {
-      "id": "phrase-280",
+      "id": "phrase-279",
       "words": [
         "Attend",
         "town",
@@ -3573,7 +3566,7 @@
       "phraseMeaning": "タウンホールミーティングに出席してください"
     },
     {
-      "id": "phrase-281",
+      "id": "phrase-280",
       "words": [
         "Contact",
         "elected",
@@ -3583,7 +3576,7 @@
       "phraseMeaning": "選出された役人に連絡してください"
     },
     {
-      "id": "phrase-282",
+      "id": "phrase-281",
       "words": [
         "Your",
         "voice",
@@ -3593,7 +3586,7 @@
       "phraseMeaning": "あなたの声は重要です"
     },
     {
-      "id": "phrase-283",
+      "id": "phrase-282",
       "words": [
         "The",
         "challenges",
@@ -3604,7 +3597,7 @@
       "phraseMeaning": "課題は巨大です"
     },
     {
-      "id": "phrase-284",
+      "id": "phrase-283",
       "words": [
         "But",
         "solutions",
@@ -3614,7 +3607,7 @@
       "phraseMeaning": "しかし解決策は存在します"
     },
     {
-      "id": "phrase-285",
+      "id": "phrase-284",
       "words": [
         "We",
         "have",
@@ -3627,7 +3620,7 @@
       "phraseMeaning": "必要な技術があります"
     },
     {
-      "id": "phrase-286",
+      "id": "phrase-285",
       "words": [
         "Renewable",
         "energy",
@@ -3637,7 +3630,7 @@
       "phraseMeaning": "再生可能エネルギーは機能します"
     },
     {
-      "id": "phrase-287",
+      "id": "phrase-286",
       "words": [
         "Sustainable",
         "practices",
@@ -3648,7 +3641,7 @@
       "phraseMeaning": "持続可能な実践は証明されています"
     },
     {
-      "id": "phrase-288",
+      "id": "phrase-287",
       "words": [
         "What",
         "we",
@@ -3660,7 +3653,7 @@
       "phraseMeaning": "必要なのは意志です"
     },
     {
-      "id": "phrase-289",
+      "id": "phrase-288",
       "words": [
         "Will",
         "to",
@@ -3672,7 +3665,7 @@
       "phraseMeaning": "有害なシステムを変える意志"
     },
     {
-      "id": "phrase-290",
+      "id": "phrase-289",
       "words": [
         "Will",
         "to",
@@ -3687,7 +3680,7 @@
       "phraseMeaning": "短期より長期を優先する意志"
     },
     {
-      "id": "phrase-291",
+      "id": "phrase-290",
       "words": [
         "Will",
         "to",
@@ -3698,7 +3691,7 @@
       "phraseMeaning": "一緒に働く意志"
     },
     {
-      "id": "phrase-292",
+      "id": "phrase-291",
       "words": [
         "Change",
         "is",
@@ -3709,7 +3702,7 @@
       "phraseMeaning": "変化はすでに起こっています"
     },
     {
-      "id": "phrase-293",
+      "id": "phrase-292",
       "words": [
         "Renewable",
         "energy",
@@ -3721,7 +3714,7 @@
       "phraseMeaning": "再生可能エネルギーは指数関数的に成長しています"
     },
     {
-      "id": "phrase-294",
+      "id": "phrase-293",
       "words": [
         "Electric",
         "vehicle",
@@ -3733,7 +3726,7 @@
       "phraseMeaning": "電気自動車の販売は急上昇しています"
     },
     {
-      "id": "phrase-295",
+      "id": "phrase-294",
       "words": [
         "More",
         "companies",
@@ -3746,7 +3739,7 @@
       "phraseMeaning": "より多くの企業がネットゼロにコミットしています"
     },
     {
-      "id": "phrase-296",
+      "id": "phrase-295",
       "words": [
         "Cities",
         "are",
@@ -3757,7 +3750,7 @@
       "phraseMeaning": "都市はよりグリーンになっています"
     },
     {
-      "id": "phrase-297",
+      "id": "phrase-296",
       "words": [
         "Young",
         "people",
@@ -3769,7 +3762,7 @@
       "phraseMeaning": "若者は行動を要求しています"
     },
     {
-      "id": "phrase-298",
+      "id": "phrase-297",
       "words": [
         "This",
         "momentum",
@@ -3780,7 +3773,7 @@
       "phraseMeaning": "この勢いは加速しなければなりません"
     },
     {
-      "id": "phrase-299",
+      "id": "phrase-298",
       "words": [
         "Every",
         "action",
@@ -3790,7 +3783,7 @@
       "phraseMeaning": "すべての行動がカウントされます"
     },
     {
-      "id": "phrase-300",
+      "id": "phrase-299",
       "words": [
         "Every",
         "choice",
@@ -3800,7 +3793,7 @@
       "phraseMeaning": "すべての選択が重要です"
     },
     {
-      "id": "phrase-301",
+      "id": "phrase-300",
       "words": [
         "Together",
         "we",
@@ -3814,7 +3807,7 @@
       "phraseMeaning": "一緒に持続可能な未来を築くことができます"
     },
     {
-      "id": "phrase-302",
+      "id": "phrase-301",
       "words": [
         "A",
         "future",
@@ -3826,7 +3819,7 @@
       "phraseMeaning": "自然が繁栄する未来"
     },
     {
-      "id": "phrase-303",
+      "id": "phrase-302",
       "words": [
         "Where",
         "people",
@@ -3840,7 +3833,7 @@
       "phraseMeaning": "人々が地球の境界内でよく生きる未来"
     },
     {
-      "id": "phrase-304",
+      "id": "phrase-303",
       "words": [
         "Where",
         "justice",
@@ -3855,7 +3848,7 @@
       "phraseMeaning": "正義と持続可能性が手を取り合う未来"
     },
     {
-      "id": "phrase-305",
+      "id": "phrase-304",
       "words": [
         "This",
         "future",
@@ -3866,7 +3859,7 @@
       "phraseMeaning": "この未来は可能です"
     },
     {
-      "id": "phrase-306",
+      "id": "phrase-305",
       "words": [
         "But",
         "only",
@@ -3879,7 +3872,7 @@
       "phraseMeaning": "しかし今行動する場合のみ"
     },
     {
-      "id": "phrase-307",
+      "id": "phrase-306",
       "words": [
         "The",
         "time",
@@ -3892,7 +3885,7 @@
       "phraseMeaning": "遅延の時は終わりました"
     },
     {
-      "id": "phrase-308",
+      "id": "phrase-307",
       "words": [
         "The",
         "time",
@@ -3905,7 +3898,7 @@
       "phraseMeaning": "行動の時は今です"
     },
     {
-      "id": "phrase-309",
+      "id": "phrase-308",
       "words": [
         "Let",
         "us",
@@ -3920,7 +3913,7 @@
       "phraseMeaning": "必要な持続可能な社会を築きましょう"
     },
     {
-      "id": "phrase-310",
+      "id": "phrase-309",
       "words": [
         "For",
         "ourselves",
@@ -3932,7 +3925,7 @@
       "phraseMeaning": "私たち自身と将来の世代のために"
     },
     {
-      "id": "phrase-311",
+      "id": "phrase-310",
       "words": [
         "The",
         "journey",
@@ -3946,7 +3939,7 @@
       "phraseMeaning": "旅は私たち一人一人から始まります"
     },
     {
-      "id": "phrase-312",
+      "id": "phrase-311",
       "words": [
         "Today",
         "."
@@ -3954,7 +3947,7 @@
       "phraseMeaning": "今日"
     },
     {
-      "id": "phrase-313",
+      "id": "phrase-312",
       "words": [
         "Innovation",
         "drives",
@@ -3965,7 +3958,7 @@
       "phraseMeaning": "革新は持続可能な解決策を推進します"
     },
     {
-      "id": "phrase-314",
+      "id": "phrase-313",
       "words": [
         "New",
         "technologies",
@@ -3976,7 +3969,7 @@
       "phraseMeaning": "新しい技術が常に出現します"
     },
     {
-      "id": "phrase-315",
+      "id": "phrase-314",
       "words": [
         "Carbon",
         "capture",
@@ -3989,7 +3982,7 @@
       "phraseMeaning": "炭素捕獲は大気からCO2を除去します"
     },
     {
-      "id": "phrase-316",
+      "id": "phrase-315",
       "words": [
         "Direct",
         "air",
@@ -4002,7 +3995,7 @@
       "phraseMeaning": "直接空気捕獲機は炭素をフィルターします"
     },
     {
-      "id": "phrase-317",
+      "id": "phrase-316",
       "words": [
         "Captured",
         "carbon",
@@ -4015,7 +4008,7 @@
       "phraseMeaning": "捕獲された炭素は地下に保存できます"
     },
     {
-      "id": "phrase-318",
+      "id": "phrase-317",
       "words": [
         "Or",
         "used",
@@ -4027,7 +4020,7 @@
       "phraseMeaning": "または製品を作るために使用されます"
     },
     {
-      "id": "phrase-319",
+      "id": "phrase-318",
       "words": [
         "This",
         "technology",
@@ -4039,7 +4032,7 @@
       "phraseMeaning": "この技術はまだ高価です"
     },
     {
-      "id": "phrase-320",
+      "id": "phrase-319",
       "words": [
         "But",
         "costs",
@@ -4050,7 +4043,7 @@
       "phraseMeaning": "しかしコストは下がっています"
     },
     {
-      "id": "phrase-321",
+      "id": "phrase-320",
       "words": [
         "Green",
         "hydrogen",
@@ -4062,7 +4055,7 @@
       "phraseMeaning": "グリーン水素は再生可能エネルギーを貯蔵します"
     },
     {
-      "id": "phrase-322",
+      "id": "phrase-321",
       "words": [
         "Electrolysis",
         "splits",
@@ -4076,7 +4069,7 @@
       "phraseMeaning": "電気分解は水を水素と酸素に分解します"
     },
     {
-      "id": "phrase-323",
+      "id": "phrase-322",
       "words": [
         "Using",
         "renewable",
@@ -4089,7 +4082,7 @@
       "phraseMeaning": "再生可能電力を使用することでグリーンになります"
     },
     {
-      "id": "phrase-324",
+      "id": "phrase-323",
       "words": [
         "Hydrogen",
         "can",
@@ -4103,7 +4096,7 @@
       "phraseMeaning": "水素は車両に燃料を供給し建物を暖めることができます"
     },
     {
-      "id": "phrase-325",
+      "id": "phrase-324",
       "words": [
         "It",
         "produces",
@@ -4116,7 +4109,7 @@
       "phraseMeaning": "燃焼時に水だけを生成します"
     },
     {
-      "id": "phrase-326",
+      "id": "phrase-325",
       "words": [
         "Advanced",
         "batteries",
@@ -4128,7 +4121,7 @@
       "phraseMeaning": "先進的なバッテリーはより多くのエネルギーを貯蔵します"
     },
     {
-      "id": "phrase-327",
+      "id": "phrase-326",
       "words": [
         "Lithium",
         "ion",
@@ -4141,7 +4134,7 @@
       "phraseMeaning": "リチウムイオン電池は電気自動車を動かします"
     },
     {
-      "id": "phrase-328",
+      "id": "phrase-327",
       "words": [
         "Solid",
         "state",
@@ -4155,7 +4148,7 @@
       "phraseMeaning": "固体電池はさらに優れた性能を提供します"
     },
     {
-      "id": "phrase-329",
+      "id": "phrase-328",
       "words": [
         "They",
         "charge",
@@ -4168,7 +4161,7 @@
       "phraseMeaning": "より速く充電しより長持ちします"
     },
     {
-      "id": "phrase-330",
+      "id": "phrase-329",
       "words": [
         "Grid",
         "scale",
@@ -4181,7 +4174,7 @@
       "phraseMeaning": "グリッドスケールバッテリーは再生可能エネルギーのバランスを取ります"
     },
     {
-      "id": "phrase-331",
+      "id": "phrase-330",
       "words": [
         "They",
         "store",
@@ -4195,7 +4188,7 @@
       "phraseMeaning": "余剰の太陽光と風力を保存します"
     },
     {
-      "id": "phrase-332",
+      "id": "phrase-331",
       "words": [
         "Release",
         "it",
@@ -4206,7 +4199,7 @@
       "phraseMeaning": "必要なときに放出します"
     },
     {
-      "id": "phrase-333",
+      "id": "phrase-332",
       "words": [
         "This",
         "solves",
@@ -4217,7 +4210,7 @@
       "phraseMeaning": "これは断続性の問題を解決します"
     },
     {
-      "id": "phrase-334",
+      "id": "phrase-333",
       "words": [
         "Precision",
         "agriculture",
@@ -4229,7 +4222,7 @@
       "phraseMeaning": "精密農業は技術を効率的に使用します"
     },
     {
-      "id": "phrase-335",
+      "id": "phrase-334",
       "words": [
         "Sensors",
         "monitor",
@@ -4242,7 +4235,7 @@
       "phraseMeaning": "センサーは土壌の水分と栄養素を監視します"
     },
     {
-      "id": "phrase-336",
+      "id": "phrase-335",
       "words": [
         "Drones",
         "survey",
@@ -4254,7 +4247,7 @@
       "phraseMeaning": "ドローンは上から畑を調査します"
     },
     {
-      "id": "phrase-337",
+      "id": "phrase-336",
       "words": [
         "This",
         "data",
@@ -4268,7 +4261,7 @@
       "phraseMeaning": "このデータは水と肥料の使用を最適化します"
     },
     {
-      "id": "phrase-338",
+      "id": "phrase-337",
       "words": [
         "Farmers",
         "apply",
@@ -4281,7 +4274,7 @@
       "phraseMeaning": "農家は必要な場所にのみ投入します"
     },
     {
-      "id": "phrase-339",
+      "id": "phrase-338",
       "words": [
         "This",
         "reduces",
@@ -4294,7 +4287,7 @@
       "phraseMeaning": "これは廃棄物と環境への影響を減らします"
     },
     {
-      "id": "phrase-340",
+      "id": "phrase-339",
       "words": [
         "Vertical",
         "farming",
@@ -4308,7 +4301,7 @@
       "phraseMeaning": "垂直農業は都市部で食料を育てます"
     },
     {
-      "id": "phrase-341",
+      "id": "phrase-340",
       "words": [
         "Multi",
         "level",
@@ -4322,7 +4315,7 @@
       "phraseMeaning": "多層屋内農場はLEDライトを使用します"
     },
     {
-      "id": "phrase-342",
+      "id": "phrase-341",
       "words": [
         "Hydroponics",
         "grows",
@@ -4334,7 +4327,7 @@
       "phraseMeaning": "水耕栽培は土壌なしで植物を育てます"
     },
     {
-      "id": "phrase-343",
+      "id": "phrase-342",
       "words": [
         "This",
         "uses",
@@ -4347,7 +4340,7 @@
       "phraseMeaning": "これは90パーセント少ない水を使用します"
     },
     {
-      "id": "phrase-344",
+      "id": "phrase-343",
       "words": [
         "Year",
         "round",
@@ -4359,7 +4352,7 @@
       "phraseMeaning": "年間を通しての生産が可能です"
     },
     {
-      "id": "phrase-345",
+      "id": "phrase-344",
       "words": [
         "No",
         "pesticides",
@@ -4373,7 +4366,7 @@
       "phraseMeaning": "制御された環境では農薬は必要ありません"
     },
     {
-      "id": "phrase-346",
+      "id": "phrase-345",
       "words": [
         "Lab",
         "grown",
@@ -4386,7 +4379,7 @@
       "phraseMeaning": "ラボで育てられた肉は家畜の影響を減らします"
     },
     {
-      "id": "phrase-347",
+      "id": "phrase-346",
       "words": [
         "Cells",
         "from",
@@ -4394,24 +4387,17 @@
         "grow",
         "into",
         "meat",
-        "."
-      ],
-      "phraseMeaning": "動物からの細胞が肉に成長します"
-    },
-    {
-      "id": "phrase-348",
-      "words": [
-        "Without",
+        "without",
         "raising",
         "and",
         "slaughtering",
         "animals",
         "."
       ],
-      "phraseMeaning": "動物を飼育し屠殺することなく"
+      "phraseMeaning": "動物からの細胞が、動物を飼育し屠殺することなく肉に成長します"
     },
     {
-      "id": "phrase-349",
+      "id": "phrase-347",
       "words": [
         "This",
         "uses",
@@ -4425,7 +4411,7 @@
       "phraseMeaning": "これははるかに少ない土地と水を使用します"
     },
     {
-      "id": "phrase-350",
+      "id": "phrase-348",
       "words": [
         "It",
         "produces",
@@ -4436,7 +4422,7 @@
       "phraseMeaning": "より少ない排出を生成します"
     },
     {
-      "id": "phrase-351",
+      "id": "phrase-349",
       "words": [
         "Some",
         "people",
@@ -4449,7 +4435,7 @@
       "phraseMeaning": "一部の人々は倫理的懸念を持っています"
     },
     {
-      "id": "phrase-352",
+      "id": "phrase-350",
       "words": [
         "But",
         "technology",
@@ -4460,7 +4446,7 @@
       "phraseMeaning": "しかし技術は改善しています"
     },
     {
-      "id": "phrase-353",
+      "id": "phrase-351",
       "words": [
         "Smart",
         "grids",
@@ -4472,7 +4458,7 @@
       "phraseMeaning": "スマートグリッドは電力配分を最適化します"
     },
     {
-      "id": "phrase-354",
+      "id": "phrase-352",
       "words": [
         "They",
         "use",
@@ -4487,7 +4473,7 @@
       "phraseMeaning": "デジタル技術と双方向通信を使用します"
     },
     {
-      "id": "phrase-355",
+      "id": "phrase-353",
       "words": [
         "They",
         "detect",
@@ -4500,7 +4486,7 @@
       "phraseMeaning": "停電を検出し電力を再ルーティングします"
     },
     {
-      "id": "phrase-356",
+      "id": "phrase-354",
       "words": [
         "They",
         "integrate",
@@ -4512,7 +4498,7 @@
       "phraseMeaning": "分散エネルギー源を統合します"
     },
     {
-      "id": "phrase-357",
+      "id": "phrase-355",
       "words": [
         "Homes",
         "with",
@@ -4526,7 +4512,7 @@
       "phraseMeaning": "ソーラーパネル付きの家は余剰を売ることができます"
     },
     {
-      "id": "phrase-358",
+      "id": "phrase-356",
       "words": [
         "Electric",
         "vehicles",
@@ -4540,7 +4526,7 @@
       "phraseMeaning": "電気自動車はエネルギーを保存し返すことができます"
     },
     {
-      "id": "phrase-359",
+      "id": "phrase-357",
       "words": [
         "This",
         "creates",
@@ -4552,7 +4538,7 @@
       "phraseMeaning": "これは回復力のあるエネルギーシステムを作ります"
     },
     {
-      "id": "phrase-360",
+      "id": "phrase-358",
       "words": [
         "Blockchain",
         "technology",
@@ -4567,7 +4553,7 @@
       "phraseMeaning": "ブロックチェーン技術はピアツーピアエネルギー取引を可能にします"
     },
     {
-      "id": "phrase-361",
+      "id": "phrase-359",
       "words": [
         "Neighbors",
         "can",
@@ -4580,7 +4566,7 @@
       "phraseMeaning": "隣人は直接売買できます"
     },
     {
-      "id": "phrase-362",
+      "id": "phrase-360",
       "words": [
         "This",
         "bypasses",
@@ -4591,7 +4577,7 @@
       "phraseMeaning": "これは伝統的な公益事業を迂回します"
     },
     {
-      "id": "phrase-363",
+      "id": "phrase-361",
       "words": [
         "Internet",
         "of",
@@ -4605,7 +4591,7 @@
       "phraseMeaning": "IoTデバイスは資源使用を監視します"
     },
     {
-      "id": "phrase-364",
+      "id": "phrase-362",
       "words": [
         "Smart",
         "meters",
@@ -4617,7 +4603,7 @@
       "phraseMeaning": "スマートメーターは電力消費を追跡します"
     },
     {
-      "id": "phrase-365",
+      "id": "phrase-363",
       "words": [
         "Smart",
         "irrigation",
@@ -4630,7 +4616,7 @@
       "phraseMeaning": "スマート灌漑システムは庭に効率的に水をやります"
     },
     {
-      "id": "phrase-366",
+      "id": "phrase-364",
       "words": [
         "Connected",
         "appliances",
@@ -4644,7 +4630,7 @@
       "phraseMeaning": "接続された機器はエネルギーが最も安いときに稼働します"
     },
     {
-      "id": "phrase-367",
+      "id": "phrase-365",
       "words": [
         "This",
         "data",
@@ -4657,7 +4643,7 @@
       "phraseMeaning": "このデータは人々が消費を減らすのを助けます"
     },
     {
-      "id": "phrase-368",
+      "id": "phrase-366",
       "words": [
         "Artificial",
         "intelligence",
@@ -4668,7 +4654,7 @@
       "phraseMeaning": "人工知能はシステムを最適化します"
     },
     {
-      "id": "phrase-369",
+      "id": "phrase-367",
       "words": [
         "AI",
         "predicts",
@@ -4679,7 +4665,7 @@
       "phraseMeaning": "AIはエネルギー需要を予測します"
     },
     {
-      "id": "phrase-370",
+      "id": "phrase-368",
       "words": [
         "It",
         "schedules",
@@ -4690,7 +4676,7 @@
       "phraseMeaning": "再生可能発電をスケジュールします"
     },
     {
-      "id": "phrase-371",
+      "id": "phrase-369",
       "words": [
         "It",
         "optimizes",
@@ -4702,7 +4688,7 @@
       "phraseMeaning": "建物の気候制御を最適化します"
     },
     {
-      "id": "phrase-372",
+      "id": "phrase-370",
       "words": [
         "Machine",
         "learning",
@@ -4714,7 +4700,7 @@
       "phraseMeaning": "機械学習は効率改善を見つけます"
     },
     {
-      "id": "phrase-373",
+      "id": "phrase-371",
       "words": [
         "It",
         "analyzes",
@@ -4727,7 +4713,7 @@
       "phraseMeaning": "膨大な量のデータを分析します"
     },
     {
-      "id": "phrase-374",
+      "id": "phrase-372",
       "words": [
         "Identifies",
         "patterns",
@@ -4739,7 +4725,7 @@
       "phraseMeaning": "人間が見逃すかもしれないパターンを特定します"
     },
     {
-      "id": "phrase-375",
+      "id": "phrase-373",
       "words": [
         "Nature",
         "based",
@@ -4751,7 +4737,7 @@
       "phraseMeaning": "自然ベースのソリューションは生態系を利用します"
     },
     {
-      "id": "phrase-376",
+      "id": "phrase-374",
       "words": [
         "Reforestation",
         "absorbs",
@@ -4762,7 +4748,7 @@
       "phraseMeaning": "再植林は二酸化炭素を吸収します"
     },
     {
-      "id": "phrase-377",
+      "id": "phrase-375",
       "words": [
         "Trees",
         "store",
@@ -4775,7 +4761,7 @@
       "phraseMeaning": "木は成長するにつれて炭素を蓄えます"
     },
     {
-      "id": "phrase-378",
+      "id": "phrase-376",
       "words": [
         "Forests",
         "also",
@@ -4789,7 +4775,7 @@
       "phraseMeaning": "森林は水を調節し侵食を防ぎます"
     },
     {
-      "id": "phrase-379",
+      "id": "phrase-377",
       "words": [
         "Wetlands",
         "filter",
@@ -4801,7 +4787,7 @@
       "phraseMeaning": "湿地は水から汚染物質をフィルターします"
     },
     {
-      "id": "phrase-380",
+      "id": "phrase-378",
       "words": [
         "They",
         "provide",
@@ -4813,7 +4799,7 @@
       "phraseMeaning": "野生生物の生息地を提供します"
     },
     {
-      "id": "phrase-381",
+      "id": "phrase-379",
       "words": [
         "They",
         "buffer",
@@ -4824,7 +4810,7 @@
       "phraseMeaning": "洪水に対する緩衝材となります"
     },
     {
-      "id": "phrase-382",
+      "id": "phrase-380",
       "words": [
         "Mangrove",
         "forests",
@@ -4835,7 +4821,7 @@
       "phraseMeaning": "マングローブ林は海岸線を保護します"
     },
     {
-      "id": "phrase-383",
+      "id": "phrase-381",
       "words": [
         "They",
         "absorb",
@@ -4847,7 +4833,7 @@
       "phraseMeaning": "高潮のエネルギーを吸収します"
     },
     {
-      "id": "phrase-384",
+      "id": "phrase-382",
       "words": [
         "They",
         "sequester",
@@ -4859,7 +4845,7 @@
       "phraseMeaning": "非常に効果的に炭素を隔離します"
     },
     {
-      "id": "phrase-385",
+      "id": "phrase-383",
       "words": [
         "Restoring",
         "degraded",
@@ -4871,7 +4857,7 @@
       "phraseMeaning": "劣化した生態系を回復することは誰にでも利益をもたらします"
     },
     {
-      "id": "phrase-386",
+      "id": "phrase-384",
       "words": [
         "It",
         "improves",
@@ -4881,7 +4867,7 @@
       "phraseMeaning": "生物多様性を改善します"
     },
     {
-      "id": "phrase-387",
+      "id": "phrase-385",
       "words": [
         "It",
         "enhances",
@@ -4892,7 +4878,7 @@
       "phraseMeaning": "生態系サービスを向上させます"
     },
     {
-      "id": "phrase-388",
+      "id": "phrase-386",
       "words": [
         "It",
         "supports",
@@ -4903,7 +4889,7 @@
       "phraseMeaning": "地元の生計を支援します"
     },
     {
-      "id": "phrase-389",
+      "id": "phrase-387",
       "words": [
         "Blue",
         "economy",
@@ -4916,7 +4902,7 @@
       "phraseMeaning": "ブルーエコノミーは海洋の持続可能性に焦点を当てます"
     },
     {
-      "id": "phrase-390",
+      "id": "phrase-388",
       "words": [
         "Oceans",
         "cover",
@@ -4929,7 +4915,7 @@
       "phraseMeaning": "海洋は地球の70パーセントを覆います"
     },
     {
-      "id": "phrase-391",
+      "id": "phrase-389",
       "words": [
         "They",
         "regulate",
@@ -4942,7 +4928,7 @@
       "phraseMeaning": "気候を調節し酸素を生成します"
     },
     {
-      "id": "phrase-392",
+      "id": "phrase-390",
       "words": [
         "Overfishing",
         "depletes",
@@ -4953,7 +4939,7 @@
       "phraseMeaning": "乱獲は海洋生物を枯渇させます"
     },
     {
-      "id": "phrase-393",
+      "id": "phrase-391",
       "words": [
         "Sustainable",
         "fishing",
@@ -4965,7 +4951,7 @@
       "phraseMeaning": "持続可能な漁業慣行は不可欠です"
     },
     {
-      "id": "phrase-394",
+      "id": "phrase-392",
       "words": [
         "Marine",
         "protected",
@@ -4977,7 +4963,7 @@
       "phraseMeaning": "海洋保護区は回復を可能にします"
     },
     {
-      "id": "phrase-395",
+      "id": "phrase-393",
       "words": [
         "Ocean",
         "cleanup",
@@ -4990,7 +4976,7 @@
       "phraseMeaning": "海洋クリーンアッププロジェクトはプラスチック廃棄物を除去します"
     },
     {
-      "id": "phrase-396",
+      "id": "phrase-394",
       "words": [
         "Millions",
         "of",
@@ -5003,7 +4989,7 @@
       "phraseMeaning": "何百万トンもが海洋を汚染しています"
     },
     {
-      "id": "phrase-397",
+      "id": "phrase-395",
       "words": [
         "This",
         "harms",
@@ -5016,7 +5002,7 @@
       "phraseMeaning": "これは海洋動物と生態系に害を与えます"
     },
     {
-      "id": "phrase-398",
+      "id": "phrase-396",
       "words": [
         "Innovative",
         "systems",
@@ -5028,7 +5014,7 @@
       "phraseMeaning": "革新的なシステムは浮遊プラスチックを収集します"
     },
     {
-      "id": "phrase-399",
+      "id": "phrase-397",
       "words": [
         "Prevention",
         "is",
@@ -5039,7 +5025,7 @@
       "phraseMeaning": "予防も重要です"
     },
     {
-      "id": "phrase-400",
+      "id": "phrase-398",
       "words": [
         "We",
         "must",
@@ -5052,7 +5038,7 @@
       "phraseMeaning": "プラスチックが海洋に入るのを止めなければなりません"
     },
     {
-      "id": "phrase-401",
+      "id": "phrase-399",
       "words": [
         "Better",
         "waste",
@@ -5065,7 +5051,7 @@
       "phraseMeaning": "陸上でのより良い廃棄物管理が役立ちます"
     },
     {
-      "id": "phrase-402",
+      "id": "phrase-400",
       "words": [
         "Reducing",
         "single",
@@ -5078,7 +5064,7 @@
       "phraseMeaning": "使い捨てプラスチックを減らすことが鍵です"
     },
     {
-      "id": "phrase-403",
+      "id": "phrase-401",
       "words": [
         "Biodegradable",
         "alternatives",
@@ -5090,7 +5076,7 @@
       "phraseMeaning": "生分解性の代替品が開発されています"
     },
     {
-      "id": "phrase-404",
+      "id": "phrase-402",
       "words": [
         "Materials",
         "that",
@@ -5102,7 +5088,7 @@
       "phraseMeaning": "自然に分解する材料"
     },
     {
-      "id": "phrase-405",
+      "id": "phrase-403",
       "words": [
         "Without",
         "leaving",
@@ -5113,7 +5099,7 @@
       "phraseMeaning": "有害な残留物を残さずに"
     },
     {
-      "id": "phrase-406",
+      "id": "phrase-404",
       "words": [
         "Economic",
         "incentives",
@@ -5125,7 +5111,7 @@
       "phraseMeaning": "経済的インセンティブは持続可能な行動を推進します"
     },
     {
-      "id": "phrase-407",
+      "id": "phrase-405",
       "words": [
         "Green",
         "bonds",
@@ -5137,7 +5123,7 @@
       "phraseMeaning": "グリーンボンドは環境プロジェクトに資金を提供します"
     },
     {
-      "id": "phrase-408",
+      "id": "phrase-406",
       "words": [
         "Investors",
         "fund",
@@ -5150,7 +5136,7 @@
       "phraseMeaning": "投資家は再生可能エネルギーと効率に資金を提供します"
     },
     {
-      "id": "phrase-409",
+      "id": "phrase-407",
       "words": [
         "This",
         "market",
@@ -5162,7 +5148,7 @@
       "phraseMeaning": "この市場は急速に成長しています"
     },
     {
-      "id": "phrase-410",
+      "id": "phrase-408",
       "words": [
         "ESG",
         "investing",
@@ -5177,7 +5163,7 @@
       "phraseMeaning": "ESG投資は環境社会ガバナンス要因を考慮します"
     },
     {
-      "id": "phrase-411",
+      "id": "phrase-409",
       "words": [
         "Companies",
         "with",
@@ -5191,7 +5177,7 @@
       "phraseMeaning": "強力なESGパフォーマンスを持つ企業は投資を引き付けます"
     },
     {
-      "id": "phrase-412",
+      "id": "phrase-410",
       "words": [
         "This",
         "pressures",
@@ -5203,7 +5189,7 @@
       "phraseMeaning": "これは企業に改善するよう圧力をかけます"
     },
     {
-      "id": "phrase-413",
+      "id": "phrase-411",
       "words": [
         "Divestment",
         "campaigns",
@@ -5216,7 +5202,7 @@
       "phraseMeaning": "ダイベストメントキャンペーンは化石燃料企業をターゲットにします"
     },
     {
-      "id": "phrase-414",
+      "id": "phrase-412",
       "words": [
         "Universities",
         "and",
@@ -5229,7 +5215,7 @@
       "phraseMeaning": "大学と機関は株式を売却します"
     },
     {
-      "id": "phrase-415",
+      "id": "phrase-413",
       "words": [
         "This",
         "sends",
@@ -5241,7 +5227,7 @@
       "phraseMeaning": "これは強力なメッセージを送ります"
     },
     {
-      "id": "phrase-416",
+      "id": "phrase-414",
       "words": [
         "It",
         "reduces",
@@ -5254,7 +5240,7 @@
       "phraseMeaning": "汚染産業への資金を減らします"
     },
     {
-      "id": "phrase-417",
+      "id": "phrase-415",
       "words": [
         "Sustainable",
         "finance",
@@ -5266,7 +5252,7 @@
       "phraseMeaning": "持続可能な金融は今や主流です"
     },
     {
-      "id": "phrase-418",
+      "id": "phrase-416",
       "words": [
         "Banks",
         "assess",
@@ -5277,7 +5263,7 @@
       "phraseMeaning": "銀行は気候リスクを評価します"
     },
     {
-      "id": "phrase-419",
+      "id": "phrase-417",
       "words": [
         "They",
         "factor",
@@ -5290,7 +5276,7 @@
       "phraseMeaning": "環境への影響を融資に組み込みます"
     },
     {
-      "id": "phrase-420",
+      "id": "phrase-418",
       "words": [
         "This",
         "shifts",
@@ -5302,7 +5288,7 @@
       "phraseMeaning": "これは資本を持続可能性に向けてシフトします"
     },
     {
-      "id": "phrase-421",
+      "id": "phrase-419",
       "words": [
         "Job",
         "creation",
@@ -5316,7 +5302,7 @@
       "phraseMeaning": "グリーンセクターでの雇用創出が急増しています"
     },
     {
-      "id": "phrase-422",
+      "id": "phrase-420",
       "words": [
         "Solar",
         "and",
@@ -5329,7 +5315,7 @@
       "phraseMeaning": "太陽光と風力産業は何百万人も雇用します"
     },
     {
-      "id": "phrase-423",
+      "id": "phrase-421",
       "words": [
         "Energy",
         "efficiency",
@@ -5342,7 +5328,7 @@
       "phraseMeaning": "エネルギー効率の仕事は地元の雇用を創出します"
     },
     {
-      "id": "phrase-424",
+      "id": "phrase-422",
       "words": [
         "Electric",
         "vehicle",
@@ -5353,7 +5339,7 @@
       "phraseMeaning": "電気自動車製造が拡大しています"
     },
     {
-      "id": "phrase-425",
+      "id": "phrase-423",
       "words": [
         "Green",
         "jobs",
@@ -5365,7 +5351,7 @@
       "phraseMeaning": "グリーンジョブはしばしば良い給料を払います"
     },
     {
-      "id": "phrase-426",
+      "id": "phrase-424",
       "words": [
         "They",
         "cannot",
@@ -5376,7 +5362,7 @@
       "phraseMeaning": "アウトソーシングできません"
     },
     {
-      "id": "phrase-427",
+      "id": "phrase-425",
       "words": [
         "Installing",
         "solar",
@@ -5388,7 +5374,7 @@
       "phraseMeaning": "ソーラーパネルの設置は地元で行われます"
     },
     {
-      "id": "phrase-428",
+      "id": "phrase-426",
       "words": [
         "Retrofitting",
         "buildings",
@@ -5400,7 +5386,7 @@
       "phraseMeaning": "建物の改修は地元の労働者を必要とします"
     },
     {
-      "id": "phrase-429",
+      "id": "phrase-427",
       "words": [
         "This",
         "creates",
@@ -5411,7 +5397,7 @@
       "phraseMeaning": "これは経済的機会を作ります"
     },
     {
-      "id": "phrase-430",
+      "id": "phrase-428",
       "words": [
         "Just",
         "transition",
@@ -5426,7 +5412,7 @@
       "phraseMeaning": "公正な移行は誰も取り残されないことを保証します"
     },
     {
-      "id": "phrase-431",
+      "id": "phrase-429",
       "words": [
         "Workers",
         "in",
@@ -5440,7 +5426,7 @@
       "phraseMeaning": "化石燃料産業の労働者は支援が必要です"
     },
     {
-      "id": "phrase-432",
+      "id": "phrase-430",
       "words": [
         "Retraining",
         "programs",
@@ -5452,7 +5438,7 @@
       "phraseMeaning": "再訓練プログラムは新しいスキルを教えます"
     },
     {
-      "id": "phrase-433",
+      "id": "phrase-431",
       "words": [
         "Income",
         "support",
@@ -5464,7 +5450,7 @@
       "phraseMeaning": "移行期間中の所得支援が役立ちます"
     },
     {
-      "id": "phrase-434",
+      "id": "phrase-432",
       "words": [
         "Communities",
         "dependent",
@@ -5477,7 +5463,7 @@
       "phraseMeaning": "石炭に依存するコミュニティは投資が必要です"
     },
     {
-      "id": "phrase-435",
+      "id": "phrase-433",
       "words": [
         "New",
         "industries",
@@ -5490,7 +5476,7 @@
       "phraseMeaning": "新しい産業は古いものを置き換えることができます"
     },
     {
-      "id": "phrase-436",
+      "id": "phrase-434",
       "words": [
         "With",
         "proper",
@@ -5502,7 +5488,7 @@
       "phraseMeaning": "適切な計画とサポートがあれば"
     },
     {
-      "id": "phrase-437",
+      "id": "phrase-435",
       "words": [
         "Behavioral",
         "change",
@@ -5516,7 +5502,7 @@
       "phraseMeaning": "行動変化は技術と同じくらい重要です"
     },
     {
-      "id": "phrase-438",
+      "id": "phrase-436",
       "words": [
         "Convenience",
         "drives",
@@ -5528,7 +5514,7 @@
       "phraseMeaning": "便利さが多くの持続不可能な選択を推進します"
     },
     {
-      "id": "phrase-439",
+      "id": "phrase-437",
       "words": [
         "Making",
         "sustainable",
@@ -5540,7 +5526,7 @@
       "phraseMeaning": "持続可能な選択肢をより簡単にすることが役立ちます"
     },
     {
-      "id": "phrase-440",
+      "id": "phrase-438",
       "words": [
         "Default",
         "settings",
@@ -5550,7 +5536,7 @@
       "phraseMeaning": "デフォルト設定が重要です"
     },
     {
-      "id": "phrase-441",
+      "id": "phrase-439",
       "words": [
         "Opt",
         "out",
@@ -5566,7 +5552,7 @@
       "phraseMeaning": "グリーンな選択肢にはオプトインではなくオプトアウト"
     },
     {
-      "id": "phrase-442",
+      "id": "phrase-440",
       "words": [
         "Social",
         "norms",
@@ -5577,7 +5563,7 @@
       "phraseMeaning": "社会的規範は行動に影響します"
     },
     {
-      "id": "phrase-443",
+      "id": "phrase-441",
       "words": [
         "When",
         "neighbors",
@@ -5590,7 +5576,7 @@
       "phraseMeaning": "隣人がソーラーを設置すると他の人も続きます"
     },
     {
-      "id": "phrase-444",
+      "id": "phrase-442",
       "words": [
         "Visible",
         "actions",
@@ -5601,7 +5587,7 @@
       "phraseMeaning": "目に見える行動は他者を鼓舞します"
     },
     {
-      "id": "phrase-445",
+      "id": "phrase-443",
       "words": [
         "Community",
         "challenges",
@@ -5613,7 +5599,7 @@
       "phraseMeaning": "コミュニティチャレンジは持続可能性を楽しくします"
     },
     {
-      "id": "phrase-446",
+      "id": "phrase-444",
       "words": [
         "Compete",
         "to",
@@ -5625,7 +5611,7 @@
       "phraseMeaning": "エネルギー使用を減らすために競争します"
     },
     {
-      "id": "phrase-447",
+      "id": "phrase-445",
       "words": [
         "Share",
         "tips",
@@ -5636,7 +5622,7 @@
       "phraseMeaning": "ヒントと成功を共有します"
     },
     {
-      "id": "phrase-448",
+      "id": "phrase-446",
       "words": [
         "Build",
         "collective",
@@ -5646,7 +5632,7 @@
       "phraseMeaning": "集団的な勢いを築きます"
     },
     {
-      "id": "phrase-449",
+      "id": "phrase-447",
       "words": [
         "Stories",
         "and",
@@ -5658,7 +5644,7 @@
       "phraseMeaning": "物語とナラティブは理解を形作ります"
     },
     {
-      "id": "phrase-450",
+      "id": "phrase-448",
       "words": [
         "We",
         "need",
@@ -5672,7 +5658,7 @@
       "phraseMeaning": "持続可能な未来の説得力のあるビジョンが必要です"
     },
     {
-      "id": "phrase-451",
+      "id": "phrase-449",
       "words": [
         "Not",
         "just",
@@ -5684,7 +5670,7 @@
       "phraseMeaning": "破滅と憂鬱だけでなく"
     },
     {
-      "id": "phrase-452",
+      "id": "phrase-450",
       "words": [
         "Show",
         "what",
@@ -5700,7 +5686,7 @@
       "phraseMeaning": "失うものだけでなく得るものを示します"
     },
     {
-      "id": "phrase-453",
+      "id": "phrase-451",
       "words": [
         "Cleaner",
         "air",
@@ -5711,7 +5697,7 @@
       "phraseMeaning": "よりきれいな空気と水"
     },
     {
-      "id": "phrase-454",
+      "id": "phrase-452",
       "words": [
         "Healthier",
         "lives",
@@ -5720,7 +5706,7 @@
       "phraseMeaning": "より健康的な生活"
     },
     {
-      "id": "phrase-455",
+      "id": "phrase-453",
       "words": [
         "Thriving",
         "communities",
@@ -5729,7 +5715,7 @@
       "phraseMeaning": "繁栄するコミュニティ"
     },
     {
-      "id": "phrase-456",
+      "id": "phrase-454",
       "words": [
         "Meaningful",
         "work",
@@ -5738,7 +5724,7 @@
       "phraseMeaning": "意味のある仕事"
     },
     {
-      "id": "phrase-457",
+      "id": "phrase-455",
       "words": [
         "Connection",
         "to",
@@ -5748,7 +5734,7 @@
       "phraseMeaning": "自然とのつながり"
     },
     {
-      "id": "phrase-458",
+      "id": "phrase-456",
       "words": [
         "This",
         "positive",
@@ -5760,7 +5746,7 @@
       "phraseMeaning": "このポジティブなビジョンは行動を動機づけます"
     },
     {
-      "id": "phrase-459",
+      "id": "phrase-457",
       "words": [
         "The",
         "transition",
@@ -5771,7 +5757,7 @@
       "phraseMeaning": "移行は進行中です"
     },
     {
-      "id": "phrase-460",
+      "id": "phrase-458",
       "words": [
         "Every",
         "country",
@@ -5785,7 +5771,7 @@
       "phraseMeaning": "すべての国すべての都市すべての人が重要です"
     },
     {
-      "id": "phrase-461",
+      "id": "phrase-459",
       "words": [
         "Progress",
         "is",
@@ -5797,7 +5783,7 @@
       "phraseMeaning": "進歩が行われています"
     },
     {
-      "id": "phrase-462",
+      "id": "phrase-460",
       "words": [
         "But",
         "we",
@@ -5809,7 +5795,7 @@
       "phraseMeaning": "しかしもっと速く動かなければなりません"
     },
     {
-      "id": "phrase-463",
+      "id": "phrase-461",
       "words": [
         "The",
         "window",
@@ -5822,7 +5808,7 @@
       "phraseMeaning": "行動の窓は閉じつつあります"
     },
     {
-      "id": "phrase-464",
+      "id": "phrase-462",
       "words": [
         "Yet",
         "it",
@@ -5833,7 +5819,7 @@
       "phraseMeaning": "しかしそれは開いたままです"
     },
     {
-      "id": "phrase-465",
+      "id": "phrase-463",
       "words": [
         "We",
         "can",
@@ -5848,7 +5834,7 @@
       "phraseMeaning": "私たちはまだ望む未来を築くことができます"
     },
     {
-      "id": "phrase-466",
+      "id": "phrase-464",
       "words": [
         "A",
         "sustainable",
@@ -5861,7 +5847,7 @@
       "phraseMeaning": "持続可能な社会は手の届くところにあります"
     },
     {
-      "id": "phrase-467",
+      "id": "phrase-465",
       "words": [
         "If",
         "we",
@@ -5874,7 +5860,7 @@
       "phraseMeaning": "それをつかむことを選択すれば"
     },
     {
-      "id": "phrase-468",
+      "id": "phrase-466",
       "words": [
         "The",
         "choice",
@@ -5885,7 +5871,7 @@
       "phraseMeaning": "選択は私たち次第です"
     },
     {
-      "id": "phrase-469",
+      "id": "phrase-467",
       "words": [
         "Let",
         "us",
@@ -5894,3983 +5880,64 @@
         "."
       ],
       "phraseMeaning": "賢く選びましょう"
+    },
+    {
+      "id": "phrase-468",
+      "words": [
+        "For",
+        "the",
+        "Earth",
+        "."
+      ],
+      "phraseMeaning": "地球のために"
+    },
+    {
+      "id": "phrase-469",
+      "words": [
+        "For",
+        "each",
+        "other",
+        "."
+      ],
+      "phraseMeaning": "お互いのために"
     },
     {
       "id": "phrase-470",
       "words": [
         "For",
         "the",
-        "Earth",
+        "future",
         "."
       ],
-      "phraseMeaning": "地球のために"
+      "phraseMeaning": "未来のために"
     },
     {
       "id": "phrase-471",
       "words": [
-        "For",
-        "each",
-        "other",
+        "Cells",
+        "from",
+        "animals",
+        "grow",
+        "into",
+        "meat",
         "."
       ],
-      "phraseMeaning": "お互いのために"
+      "phraseMeaning": "動物からの細胞が肉に成長します"
     },
     {
       "id": "phrase-472",
       "words": [
-        "For",
-        "the",
-        "future",
+        "Without",
+        "raising",
+        "and",
+        "slaughtering",
+        "animals",
         "."
       ],
-      "phraseMeaning": "未来のために"
+      "phraseMeaning": "動物を飼育し屠殺することなく"
     },
     {
       "id": "phrase-473",
-      "words": [
-        "Innovation",
-        "drives",
-        "sustainable",
-        "solutions",
-        "."
-      ],
-      "phraseMeaning": "革新は持続可能な解決策を推進します"
-    },
-    {
-      "id": "phrase-474",
-      "words": [
-        "New",
-        "technologies",
-        "emerge",
-        "constantly",
-        "."
-      ],
-      "phraseMeaning": "新しい技術が常に出現します"
-    },
-    {
-      "id": "phrase-475",
-      "words": [
-        "Carbon",
-        "capture",
-        "removes",
-        "CO2",
-        "from",
-        "atmosphere",
-        "."
-      ],
-      "phraseMeaning": "炭素捕獲は大気からCO2を除去します"
-    },
-    {
-      "id": "phrase-476",
-      "words": [
-        "Direct",
-        "air",
-        "capture",
-        "machines",
-        "filter",
-        "carbon",
-        "."
-      ],
-      "phraseMeaning": "直接空気捕獲機は炭素をフィルターします"
-    },
-    {
-      "id": "phrase-477",
-      "words": [
-        "Captured",
-        "carbon",
-        "can",
-        "be",
-        "stored",
-        "underground",
-        "."
-      ],
-      "phraseMeaning": "捕獲された炭素は地下に保存できます"
-    },
-    {
-      "id": "phrase-478",
-      "words": [
-        "Or",
-        "used",
-        "to",
-        "make",
-        "products",
-        "."
-      ],
-      "phraseMeaning": "または製品を作るために使用されます"
-    },
-    {
-      "id": "phrase-479",
-      "words": [
-        "This",
-        "technology",
-        "is",
-        "still",
-        "expensive",
-        "."
-      ],
-      "phraseMeaning": "この技術はまだ高価です"
-    },
-    {
-      "id": "phrase-480",
-      "words": [
-        "But",
-        "costs",
-        "are",
-        "falling",
-        "."
-      ],
-      "phraseMeaning": "しかしコストは下がっています"
-    },
-    {
-      "id": "phrase-481",
-      "words": [
-        "Green",
-        "hydrogen",
-        "stores",
-        "renewable",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "グリーン水素は再生可能エネルギーを貯蔵します"
-    },
-    {
-      "id": "phrase-482",
-      "words": [
-        "Electrolysis",
-        "splits",
-        "water",
-        "into",
-        "hydrogen",
-        "and",
-        "oxygen",
-        "."
-      ],
-      "phraseMeaning": "電気分解は水を水素と酸素に分解します"
-    },
-    {
-      "id": "phrase-483",
-      "words": [
-        "Using",
-        "renewable",
-        "electricity",
-        "makes",
-        "it",
-        "green",
-        "."
-      ],
-      "phraseMeaning": "再生可能電力を使用することでグリーンになります"
-    },
-    {
-      "id": "phrase-484",
-      "words": [
-        "Hydrogen",
-        "can",
-        "fuel",
-        "vehicles",
-        "and",
-        "heat",
-        "buildings",
-        "."
-      ],
-      "phraseMeaning": "水素は車両に燃料を供給し建物を暖めることができます"
-    },
-    {
-      "id": "phrase-485",
-      "words": [
-        "It",
-        "produces",
-        "only",
-        "water",
-        "when",
-        "burned",
-        "."
-      ],
-      "phraseMeaning": "燃焼時に水だけを生成します"
-    },
-    {
-      "id": "phrase-486",
-      "words": [
-        "Advanced",
-        "batteries",
-        "store",
-        "more",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "先進的なバッテリーはより多くのエネルギーを貯蔵します"
-    },
-    {
-      "id": "phrase-487",
-      "words": [
-        "Lithium",
-        "ion",
-        "batteries",
-        "power",
-        "electric",
-        "vehicles",
-        "."
-      ],
-      "phraseMeaning": "リチウムイオン電池は電気自動車を動かします"
-    },
-    {
-      "id": "phrase-488",
-      "words": [
-        "Solid",
-        "state",
-        "batteries",
-        "offer",
-        "even",
-        "better",
-        "performance",
-        "."
-      ],
-      "phraseMeaning": "固体電池はさらに優れた性能を提供します"
-    },
-    {
-      "id": "phrase-489",
-      "words": [
-        "They",
-        "charge",
-        "faster",
-        "and",
-        "last",
-        "longer",
-        "."
-      ],
-      "phraseMeaning": "より速く充電しより長持ちします"
-    },
-    {
-      "id": "phrase-490",
-      "words": [
-        "Grid",
-        "scale",
-        "batteries",
-        "balance",
-        "renewable",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "グリッドスケールバッテリーは再生可能エネルギーのバランスを取ります"
-    },
-    {
-      "id": "phrase-491",
-      "words": [
-        "They",
-        "store",
-        "excess",
-        "solar",
-        "and",
-        "wind",
-        "power",
-        "."
-      ],
-      "phraseMeaning": "余剰の太陽光と風力を保存します"
-    },
-    {
-      "id": "phrase-492",
-      "words": [
-        "Release",
-        "it",
-        "when",
-        "needed",
-        "."
-      ],
-      "phraseMeaning": "必要なときに放出します"
-    },
-    {
-      "id": "phrase-493",
-      "words": [
-        "This",
-        "solves",
-        "intermittency",
-        "problems",
-        "."
-      ],
-      "phraseMeaning": "これは断続性の問題を解決します"
-    },
-    {
-      "id": "phrase-494",
-      "words": [
-        "Precision",
-        "agriculture",
-        "uses",
-        "technology",
-        "efficiently",
-        "."
-      ],
-      "phraseMeaning": "精密農業は技術を効率的に使用します"
-    },
-    {
-      "id": "phrase-495",
-      "words": [
-        "Sensors",
-        "monitor",
-        "soil",
-        "moisture",
-        "and",
-        "nutrients",
-        "."
-      ],
-      "phraseMeaning": "センサーは土壌の水分と栄養素を監視します"
-    },
-    {
-      "id": "phrase-496",
-      "words": [
-        "Drones",
-        "survey",
-        "fields",
-        "from",
-        "above",
-        "."
-      ],
-      "phraseMeaning": "ドローンは上から畑を調査します"
-    },
-    {
-      "id": "phrase-497",
-      "words": [
-        "This",
-        "data",
-        "optimizes",
-        "water",
-        "and",
-        "fertilizer",
-        "use",
-        "."
-      ],
-      "phraseMeaning": "このデータは水と肥料の使用を最適化します"
-    },
-    {
-      "id": "phrase-498",
-      "words": [
-        "Farmers",
-        "apply",
-        "inputs",
-        "only",
-        "where",
-        "needed",
-        "."
-      ],
-      "phraseMeaning": "農家は必要な場所にのみ投入します"
-    },
-    {
-      "id": "phrase-499",
-      "words": [
-        "This",
-        "reduces",
-        "waste",
-        "and",
-        "environmental",
-        "impact",
-        "."
-      ],
-      "phraseMeaning": "これは廃棄物と環境への影響を減らします"
-    },
-    {
-      "id": "phrase-500",
-      "words": [
-        "Vertical",
-        "farming",
-        "grows",
-        "food",
-        "in",
-        "urban",
-        "areas",
-        "."
-      ],
-      "phraseMeaning": "垂直農業は都市部で食料を育てます"
-    },
-    {
-      "id": "phrase-501",
-      "words": [
-        "Multi",
-        "level",
-        "indoor",
-        "farms",
-        "use",
-        "LED",
-        "lights",
-        "."
-      ],
-      "phraseMeaning": "多層屋内農場はLEDライトを使用します"
-    },
-    {
-      "id": "phrase-502",
-      "words": [
-        "Hydroponics",
-        "grows",
-        "plants",
-        "without",
-        "soil",
-        "."
-      ],
-      "phraseMeaning": "水耕栽培は土壌なしで植物を育てます"
-    },
-    {
-      "id": "phrase-503",
-      "words": [
-        "This",
-        "uses",
-        "90",
-        "percent",
-        "less",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "これは90パーセント少ない水を使用します"
-    },
-    {
-      "id": "phrase-504",
-      "words": [
-        "Year",
-        "round",
-        "production",
-        "is",
-        "possible",
-        "."
-      ],
-      "phraseMeaning": "年間を通しての生産が可能です"
-    },
-    {
-      "id": "phrase-505",
-      "words": [
-        "No",
-        "pesticides",
-        "are",
-        "needed",
-        "in",
-        "controlled",
-        "environments",
-        "."
-      ],
-      "phraseMeaning": "制御された環境では農薬は必要ありません"
-    },
-    {
-      "id": "phrase-506",
-      "words": [
-        "Lab",
-        "grown",
-        "meat",
-        "reduces",
-        "livestock",
-        "impact",
-        "."
-      ],
-      "phraseMeaning": "ラボで育てられた肉は家畜の影響を減らします"
-    },
-    {
-      "id": "phrase-507",
-      "words": [
-        "Cells",
-        "from",
-        "animals",
-        "grow",
-        "into",
-        "meat",
-        "."
-      ],
-      "phraseMeaning": "動物からの細胞が肉に成長します"
-    },
-    {
-      "id": "phrase-508",
-      "words": [
-        "Without",
-        "raising",
-        "and",
-        "slaughtering",
-        "animals",
-        "."
-      ],
-      "phraseMeaning": "動物を飼育し屠殺することなく"
-    },
-    {
-      "id": "phrase-509",
-      "words": [
-        "This",
-        "uses",
-        "far",
-        "less",
-        "land",
-        "and",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "これははるかに少ない土地と水を使用します"
-    },
-    {
-      "id": "phrase-510",
-      "words": [
-        "It",
-        "produces",
-        "fewer",
-        "emissions",
-        "."
-      ],
-      "phraseMeaning": "より少ない排出を生成します"
-    },
-    {
-      "id": "phrase-511",
-      "words": [
-        "Some",
-        "people",
-        "have",
-        "ethical",
-        "concerns",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "一部の人々は倫理的懸念を持っています"
-    },
-    {
-      "id": "phrase-512",
-      "words": [
-        "But",
-        "technology",
-        "is",
-        "improving",
-        "."
-      ],
-      "phraseMeaning": "しかし技術は改善しています"
-    },
-    {
-      "id": "phrase-513",
-      "words": [
-        "Smart",
-        "grids",
-        "optimize",
-        "electricity",
-        "distribution",
-        "."
-      ],
-      "phraseMeaning": "スマートグリッドは電力配分を最適化します"
-    },
-    {
-      "id": "phrase-514",
-      "words": [
-        "They",
-        "use",
-        "digital",
-        "technology",
-        "and",
-        "two",
-        "way",
-        "communication",
-        "."
-      ],
-      "phraseMeaning": "デジタル技術と双方向通信を使用します"
-    },
-    {
-      "id": "phrase-515",
-      "words": [
-        "They",
-        "detect",
-        "outages",
-        "and",
-        "reroute",
-        "power",
-        "."
-      ],
-      "phraseMeaning": "停電を検出し電力を再ルーティングします"
-    },
-    {
-      "id": "phrase-516",
-      "words": [
-        "They",
-        "integrate",
-        "distributed",
-        "energy",
-        "sources",
-        "."
-      ],
-      "phraseMeaning": "分散エネルギー源を統合します"
-    },
-    {
-      "id": "phrase-517",
-      "words": [
-        "Homes",
-        "with",
-        "solar",
-        "panels",
-        "can",
-        "sell",
-        "excess",
-        "."
-      ],
-      "phraseMeaning": "ソーラーパネル付きの家は余剰を売ることができます"
-    },
-    {
-      "id": "phrase-518",
-      "words": [
-        "Electric",
-        "vehicles",
-        "can",
-        "store",
-        "and",
-        "return",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "電気自動車はエネルギーを保存し返すことができます"
-    },
-    {
-      "id": "phrase-519",
-      "words": [
-        "This",
-        "creates",
-        "resilient",
-        "energy",
-        "systems",
-        "."
-      ],
-      "phraseMeaning": "これは回復力のあるエネルギーシステムを作ります"
-    },
-    {
-      "id": "phrase-520",
-      "words": [
-        "Blockchain",
-        "technology",
-        "enables",
-        "peer",
-        "to",
-        "peer",
-        "energy",
-        "trading",
-        "."
-      ],
-      "phraseMeaning": "ブロックチェーン技術はピアツーピアエネルギー取引を可能にします"
-    },
-    {
-      "id": "phrase-521",
-      "words": [
-        "Neighbors",
-        "can",
-        "buy",
-        "and",
-        "sell",
-        "directly",
-        "."
-      ],
-      "phraseMeaning": "隣人は直接売買できます"
-    },
-    {
-      "id": "phrase-522",
-      "words": [
-        "This",
-        "bypasses",
-        "traditional",
-        "utilities",
-        "."
-      ],
-      "phraseMeaning": "これは伝統的な公益事業を迂回します"
-    },
-    {
-      "id": "phrase-523",
-      "words": [
-        "Internet",
-        "of",
-        "Things",
-        "devices",
-        "monitor",
-        "resource",
-        "use",
-        "."
-      ],
-      "phraseMeaning": "IoTデバイスは資源使用を監視します"
-    },
-    {
-      "id": "phrase-524",
-      "words": [
-        "Smart",
-        "meters",
-        "track",
-        "electricity",
-        "consumption",
-        "."
-      ],
-      "phraseMeaning": "スマートメーターは電力消費を追跡します"
-    },
-    {
-      "id": "phrase-525",
-      "words": [
-        "Smart",
-        "irrigation",
-        "systems",
-        "water",
-        "gardens",
-        "efficiently",
-        "."
-      ],
-      "phraseMeaning": "スマート灌漑システムは庭に効率的に水をやります"
-    },
-    {
-      "id": "phrase-526",
-      "words": [
-        "Connected",
-        "appliances",
-        "run",
-        "when",
-        "energy",
-        "is",
-        "cheapest",
-        "."
-      ],
-      "phraseMeaning": "接続された機器はエネルギーが最も安いときに稼働します"
-    },
-    {
-      "id": "phrase-527",
-      "words": [
-        "This",
-        "data",
-        "helps",
-        "people",
-        "reduce",
-        "consumption",
-        "."
-      ],
-      "phraseMeaning": "このデータは人々が消費を減らすのを助けます"
-    },
-    {
-      "id": "phrase-528",
-      "words": [
-        "Artificial",
-        "intelligence",
-        "optimizes",
-        "systems",
-        "."
-      ],
-      "phraseMeaning": "人工知能はシステムを最適化します"
-    },
-    {
-      "id": "phrase-529",
-      "words": [
-        "AI",
-        "predicts",
-        "energy",
-        "demand",
-        "."
-      ],
-      "phraseMeaning": "AIはエネルギー需要を予測します"
-    },
-    {
-      "id": "phrase-530",
-      "words": [
-        "It",
-        "schedules",
-        "renewable",
-        "generation",
-        "."
-      ],
-      "phraseMeaning": "再生可能発電をスケジュールします"
-    },
-    {
-      "id": "phrase-531",
-      "words": [
-        "It",
-        "optimizes",
-        "building",
-        "climate",
-        "control",
-        "."
-      ],
-      "phraseMeaning": "建物の気候制御を最適化します"
-    },
-    {
-      "id": "phrase-532",
-      "words": [
-        "Machine",
-        "learning",
-        "finds",
-        "efficiency",
-        "improvements",
-        "."
-      ],
-      "phraseMeaning": "機械学習は効率改善を見つけます"
-    },
-    {
-      "id": "phrase-533",
-      "words": [
-        "It",
-        "analyzes",
-        "vast",
-        "amounts",
-        "of",
-        "data",
-        "."
-      ],
-      "phraseMeaning": "膨大な量のデータを分析します"
-    },
-    {
-      "id": "phrase-534",
-      "words": [
-        "Identifies",
-        "patterns",
-        "humans",
-        "might",
-        "miss",
-        "."
-      ],
-      "phraseMeaning": "人間が見逃すかもしれないパターンを特定します"
-    },
-    {
-      "id": "phrase-535",
-      "words": [
-        "Nature",
-        "based",
-        "solutions",
-        "harness",
-        "ecosystems",
-        "."
-      ],
-      "phraseMeaning": "自然ベースのソリューションは生態系を利用します"
-    },
-    {
-      "id": "phrase-536",
-      "words": [
-        "Reforestation",
-        "absorbs",
-        "carbon",
-        "dioxide",
-        "."
-      ],
-      "phraseMeaning": "再植林は二酸化炭素を吸収します"
-    },
-    {
-      "id": "phrase-537",
-      "words": [
-        "Trees",
-        "store",
-        "carbon",
-        "as",
-        "they",
-        "grow",
-        "."
-      ],
-      "phraseMeaning": "木は成長するにつれて炭素を蓄えます"
-    },
-    {
-      "id": "phrase-538",
-      "words": [
-        "Forests",
-        "also",
-        "regulate",
-        "water",
-        "and",
-        "prevent",
-        "erosion",
-        "."
-      ],
-      "phraseMeaning": "森林は水を調節し侵食を防ぎます"
-    },
-    {
-      "id": "phrase-539",
-      "words": [
-        "Wetlands",
-        "filter",
-        "pollutants",
-        "from",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "湿地は水から汚染物質をフィルターします"
-    },
-    {
-      "id": "phrase-540",
-      "words": [
-        "They",
-        "provide",
-        "habitat",
-        "for",
-        "wildlife",
-        "."
-      ],
-      "phraseMeaning": "野生生物の生息地を提供します"
-    },
-    {
-      "id": "phrase-541",
-      "words": [
-        "They",
-        "buffer",
-        "against",
-        "floods",
-        "."
-      ],
-      "phraseMeaning": "洪水に対する緩衝材となります"
-    },
-    {
-      "id": "phrase-542",
-      "words": [
-        "Mangrove",
-        "forests",
-        "protect",
-        "coastlines",
-        "."
-      ],
-      "phraseMeaning": "マングローブ林は海岸線を保護します"
-    },
-    {
-      "id": "phrase-543",
-      "words": [
-        "They",
-        "absorb",
-        "storm",
-        "surge",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "高潮のエネルギーを吸収します"
-    },
-    {
-      "id": "phrase-544",
-      "words": [
-        "They",
-        "sequester",
-        "carbon",
-        "very",
-        "effectively",
-        "."
-      ],
-      "phraseMeaning": "非常に効果的に炭素を隔離します"
-    },
-    {
-      "id": "phrase-545",
-      "words": [
-        "Restoring",
-        "degraded",
-        "ecosystems",
-        "benefits",
-        "everyone",
-        "."
-      ],
-      "phraseMeaning": "劣化した生態系を回復することは誰にでも利益をもたらします"
-    },
-    {
-      "id": "phrase-546",
-      "words": [
-        "It",
-        "improves",
-        "biodiversity",
-        "."
-      ],
-      "phraseMeaning": "生物多様性を改善します"
-    },
-    {
-      "id": "phrase-547",
-      "words": [
-        "It",
-        "enhances",
-        "ecosystem",
-        "services",
-        "."
-      ],
-      "phraseMeaning": "生態系サービスを向上させます"
-    },
-    {
-      "id": "phrase-548",
-      "words": [
-        "It",
-        "supports",
-        "local",
-        "livelihoods",
-        "."
-      ],
-      "phraseMeaning": "地元の生計を支援します"
-    },
-    {
-      "id": "phrase-549",
-      "words": [
-        "Blue",
-        "economy",
-        "focuses",
-        "on",
-        "ocean",
-        "sustainability",
-        "."
-      ],
-      "phraseMeaning": "ブルーエコノミーは海洋の持続可能性に焦点を当てます"
-    },
-    {
-      "id": "phrase-550",
-      "words": [
-        "Oceans",
-        "cover",
-        "70",
-        "percent",
-        "of",
-        "Earth",
-        "."
-      ],
-      "phraseMeaning": "海洋は地球の70パーセントを覆います"
-    },
-    {
-      "id": "phrase-551",
-      "words": [
-        "They",
-        "regulate",
-        "climate",
-        "and",
-        "produce",
-        "oxygen",
-        "."
-      ],
-      "phraseMeaning": "気候を調節し酸素を生成します"
-    },
-    {
-      "id": "phrase-552",
-      "words": [
-        "Overfishing",
-        "depletes",
-        "marine",
-        "life",
-        "."
-      ],
-      "phraseMeaning": "乱獲は海洋生物を枯渇させます"
-    },
-    {
-      "id": "phrase-553",
-      "words": [
-        "Sustainable",
-        "fishing",
-        "practices",
-        "are",
-        "essential",
-        "."
-      ],
-      "phraseMeaning": "持続可能な漁業慣行は不可欠です"
-    },
-    {
-      "id": "phrase-554",
-      "words": [
-        "Marine",
-        "protected",
-        "areas",
-        "allow",
-        "recovery",
-        "."
-      ],
-      "phraseMeaning": "海洋保護区は回復を可能にします"
-    },
-    {
-      "id": "phrase-555",
-      "words": [
-        "Ocean",
-        "cleanup",
-        "projects",
-        "remove",
-        "plastic",
-        "waste",
-        "."
-      ],
-      "phraseMeaning": "海洋クリーンアッププロジェクトはプラスチック廃棄物を除去します"
-    },
-    {
-      "id": "phrase-556",
-      "words": [
-        "Millions",
-        "of",
-        "tons",
-        "pollute",
-        "our",
-        "oceans",
-        "."
-      ],
-      "phraseMeaning": "何百万トンもが海洋を汚染しています"
-    },
-    {
-      "id": "phrase-557",
-      "words": [
-        "This",
-        "harms",
-        "marine",
-        "animals",
-        "and",
-        "ecosystems",
-        "."
-      ],
-      "phraseMeaning": "これは海洋動物と生態系に害を与えます"
-    },
-    {
-      "id": "phrase-558",
-      "words": [
-        "Innovative",
-        "systems",
-        "collect",
-        "floating",
-        "plastic",
-        "."
-      ],
-      "phraseMeaning": "革新的なシステムは浮遊プラスチックを収集します"
-    },
-    {
-      "id": "phrase-559",
-      "words": [
-        "Prevention",
-        "is",
-        "also",
-        "crucial",
-        "."
-      ],
-      "phraseMeaning": "予防も重要です"
-    },
-    {
-      "id": "phrase-560",
-      "words": [
-        "We",
-        "must",
-        "stop",
-        "plastic",
-        "entering",
-        "oceans",
-        "."
-      ],
-      "phraseMeaning": "プラスチックが海洋に入るのを止めなければなりません"
-    },
-    {
-      "id": "phrase-561",
-      "words": [
-        "Better",
-        "waste",
-        "management",
-        "on",
-        "land",
-        "helps",
-        "."
-      ],
-      "phraseMeaning": "陸上でのより良い廃棄物管理が役立ちます"
-    },
-    {
-      "id": "phrase-562",
-      "words": [
-        "Reducing",
-        "single",
-        "use",
-        "plastics",
-        "is",
-        "key",
-        "."
-      ],
-      "phraseMeaning": "使い捨てプラスチックを減らすことが鍵です"
-    },
-    {
-      "id": "phrase-563",
-      "words": [
-        "Biodegradable",
-        "alternatives",
-        "are",
-        "being",
-        "developed",
-        "."
-      ],
-      "phraseMeaning": "生分解性の代替品が開発されています"
-    },
-    {
-      "id": "phrase-564",
-      "words": [
-        "Materials",
-        "that",
-        "break",
-        "down",
-        "naturally",
-        "."
-      ],
-      "phraseMeaning": "自然に分解する材料"
-    },
-    {
-      "id": "phrase-565",
-      "words": [
-        "Without",
-        "leaving",
-        "harmful",
-        "residues",
-        "."
-      ],
-      "phraseMeaning": "有害な残留物を残さずに"
-    },
-    {
-      "id": "phrase-566",
-      "words": [
-        "Economic",
-        "incentives",
-        "drive",
-        "sustainable",
-        "behavior",
-        "."
-      ],
-      "phraseMeaning": "経済的インセンティブは持続可能な行動を推進します"
-    },
-    {
-      "id": "phrase-567",
-      "words": [
-        "Green",
-        "bonds",
-        "finance",
-        "environmental",
-        "projects",
-        "."
-      ],
-      "phraseMeaning": "グリーンボンドは環境プロジェクトに資金を提供します"
-    },
-    {
-      "id": "phrase-568",
-      "words": [
-        "Investors",
-        "fund",
-        "renewable",
-        "energy",
-        "and",
-        "efficiency",
-        "."
-      ],
-      "phraseMeaning": "投資家は再生可能エネルギーと効率に資金を提供します"
-    },
-    {
-      "id": "phrase-569",
-      "words": [
-        "This",
-        "market",
-        "is",
-        "growing",
-        "rapidly",
-        "."
-      ],
-      "phraseMeaning": "この市場は急速に成長しています"
-    },
-    {
-      "id": "phrase-570",
-      "words": [
-        "ESG",
-        "investing",
-        "considers",
-        "environmental",
-        "social",
-        "and",
-        "governance",
-        "factors",
-        "."
-      ],
-      "phraseMeaning": "ESG投資は環境社会ガバナンス要因を考慮します"
-    },
-    {
-      "id": "phrase-571",
-      "words": [
-        "Companies",
-        "with",
-        "strong",
-        "ESG",
-        "performance",
-        "attract",
-        "investment",
-        "."
-      ],
-      "phraseMeaning": "強力なESGパフォーマンスを持つ企業は投資を引き付けます"
-    },
-    {
-      "id": "phrase-572",
-      "words": [
-        "This",
-        "pressures",
-        "companies",
-        "to",
-        "improve",
-        "."
-      ],
-      "phraseMeaning": "これは企業に改善するよう圧力をかけます"
-    },
-    {
-      "id": "phrase-573",
-      "words": [
-        "Divestment",
-        "campaigns",
-        "target",
-        "fossil",
-        "fuel",
-        "companies",
-        "."
-      ],
-      "phraseMeaning": "ダイベストメントキャンペーンは化石燃料企業をターゲットにします"
-    },
-    {
-      "id": "phrase-574",
-      "words": [
-        "Universities",
-        "and",
-        "institutions",
-        "sell",
-        "their",
-        "shares",
-        "."
-      ],
-      "phraseMeaning": "大学と機関は株式を売却します"
-    },
-    {
-      "id": "phrase-575",
-      "words": [
-        "This",
-        "sends",
-        "a",
-        "powerful",
-        "message",
-        "."
-      ],
-      "phraseMeaning": "これは強力なメッセージを送ります"
-    },
-    {
-      "id": "phrase-576",
-      "words": [
-        "It",
-        "reduces",
-        "funding",
-        "for",
-        "polluting",
-        "industries",
-        "."
-      ],
-      "phraseMeaning": "汚染産業への資金を減らします"
-    },
-    {
-      "id": "phrase-577",
-      "words": [
-        "Sustainable",
-        "finance",
-        "is",
-        "mainstream",
-        "now",
-        "."
-      ],
-      "phraseMeaning": "持続可能な金融は今や主流です"
-    },
-    {
-      "id": "phrase-578",
-      "words": [
-        "Banks",
-        "assess",
-        "climate",
-        "risks",
-        "."
-      ],
-      "phraseMeaning": "銀行は気候リスクを評価します"
-    },
-    {
-      "id": "phrase-579",
-      "words": [
-        "They",
-        "factor",
-        "environmental",
-        "impacts",
-        "into",
-        "lending",
-        "."
-      ],
-      "phraseMeaning": "環境への影響を融資に組み込みます"
-    },
-    {
-      "id": "phrase-580",
-      "words": [
-        "This",
-        "shifts",
-        "capital",
-        "toward",
-        "sustainability",
-        "."
-      ],
-      "phraseMeaning": "これは資本を持続可能性に向けてシフトします"
-    },
-    {
-      "id": "phrase-581",
-      "words": [
-        "Job",
-        "creation",
-        "in",
-        "green",
-        "sectors",
-        "is",
-        "booming",
-        "."
-      ],
-      "phraseMeaning": "グリーンセクターでの雇用創出が急増しています"
-    },
-    {
-      "id": "phrase-582",
-      "words": [
-        "Solar",
-        "and",
-        "wind",
-        "industries",
-        "employ",
-        "millions",
-        "."
-      ],
-      "phraseMeaning": "太陽光と風力産業は何百万人も雇用します"
-    },
-    {
-      "id": "phrase-583",
-      "words": [
-        "Energy",
-        "efficiency",
-        "work",
-        "creates",
-        "local",
-        "jobs",
-        "."
-      ],
-      "phraseMeaning": "エネルギー効率の仕事は地元の雇用を創出します"
-    },
-    {
-      "id": "phrase-584",
-      "words": [
-        "Electric",
-        "vehicle",
-        "manufacturing",
-        "expands",
-        "."
-      ],
-      "phraseMeaning": "電気自動車製造が拡大しています"
-    },
-    {
-      "id": "phrase-585",
-      "words": [
-        "Green",
-        "jobs",
-        "often",
-        "pay",
-        "well",
-        "."
-      ],
-      "phraseMeaning": "グリーンジョブはしばしば良い給料を払います"
-    },
-    {
-      "id": "phrase-586",
-      "words": [
-        "They",
-        "cannot",
-        "be",
-        "outsourced",
-        "."
-      ],
-      "phraseMeaning": "アウトソーシングできません"
-    },
-    {
-      "id": "phrase-587",
-      "words": [
-        "Installing",
-        "solar",
-        "panels",
-        "happens",
-        "locally",
-        "."
-      ],
-      "phraseMeaning": "ソーラーパネルの設置は地元で行われます"
-    },
-    {
-      "id": "phrase-588",
-      "words": [
-        "Retrofitting",
-        "buildings",
-        "requires",
-        "local",
-        "workers",
-        "."
-      ],
-      "phraseMeaning": "建物の改修は地元の労働者を必要とします"
-    },
-    {
-      "id": "phrase-589",
-      "words": [
-        "This",
-        "creates",
-        "economic",
-        "opportunity",
-        "."
-      ],
-      "phraseMeaning": "これは経済的機会を作ります"
-    },
-    {
-      "id": "phrase-590",
-      "words": [
-        "Just",
-        "transition",
-        "ensures",
-        "no",
-        "one",
-        "is",
-        "left",
-        "behind",
-        "."
-      ],
-      "phraseMeaning": "公正な移行は誰も取り残されないことを保証します"
-    },
-    {
-      "id": "phrase-591",
-      "words": [
-        "Workers",
-        "in",
-        "fossil",
-        "fuel",
-        "industries",
-        "need",
-        "support",
-        "."
-      ],
-      "phraseMeaning": "化石燃料産業の労働者は支援が必要です"
-    },
-    {
-      "id": "phrase-592",
-      "words": [
-        "Retraining",
-        "programs",
-        "teach",
-        "new",
-        "skills",
-        "."
-      ],
-      "phraseMeaning": "再訓練プログラムは新しいスキルを教えます"
-    },
-    {
-      "id": "phrase-593",
-      "words": [
-        "Income",
-        "support",
-        "during",
-        "transition",
-        "helps",
-        "."
-      ],
-      "phraseMeaning": "移行期間中の所得支援が役立ちます"
-    },
-    {
-      "id": "phrase-594",
-      "words": [
-        "Communities",
-        "dependent",
-        "on",
-        "coal",
-        "need",
-        "investment",
-        "."
-      ],
-      "phraseMeaning": "石炭に依存するコミュニティは投資が必要です"
-    },
-    {
-      "id": "phrase-595",
-      "words": [
-        "New",
-        "industries",
-        "can",
-        "replace",
-        "old",
-        "ones",
-        "."
-      ],
-      "phraseMeaning": "新しい産業は古いものを置き換えることができます"
-    },
-    {
-      "id": "phrase-596",
-      "words": [
-        "With",
-        "proper",
-        "planning",
-        "and",
-        "support",
-        "."
-      ],
-      "phraseMeaning": "適切な計画とサポートがあれば"
-    },
-    {
-      "id": "phrase-597",
-      "words": [
-        "Behavioral",
-        "change",
-        "is",
-        "as",
-        "important",
-        "as",
-        "technology",
-        "."
-      ],
-      "phraseMeaning": "行動変化は技術と同じくらい重要です"
-    },
-    {
-      "id": "phrase-598",
-      "words": [
-        "Convenience",
-        "drives",
-        "many",
-        "unsustainable",
-        "choices",
-        "."
-      ],
-      "phraseMeaning": "便利さが多くの持続不可能な選択を推進します"
-    },
-    {
-      "id": "phrase-599",
-      "words": [
-        "Making",
-        "sustainable",
-        "options",
-        "easier",
-        "helps",
-        "."
-      ],
-      "phraseMeaning": "持続可能な選択肢をより簡単にすることが役立ちます"
-    },
-    {
-      "id": "phrase-600",
-      "words": [
-        "Default",
-        "settings",
-        "matter",
-        "."
-      ],
-      "phraseMeaning": "デフォルト設定が重要です"
-    },
-    {
-      "id": "phrase-601",
-      "words": [
-        "Opt",
-        "out",
-        "rather",
-        "than",
-        "opt",
-        "in",
-        "for",
-        "green",
-        "choices",
-        "."
-      ],
-      "phraseMeaning": "グリーンな選択肢にはオプトインではなくオプトアウト"
-    },
-    {
-      "id": "phrase-602",
-      "words": [
-        "Social",
-        "norms",
-        "influence",
-        "behavior",
-        "."
-      ],
-      "phraseMeaning": "社会的規範は行動に影響します"
-    },
-    {
-      "id": "phrase-603",
-      "words": [
-        "When",
-        "neighbors",
-        "install",
-        "solar",
-        "others",
-        "follow",
-        "."
-      ],
-      "phraseMeaning": "隣人がソーラーを設置すると他の人も続きます"
-    },
-    {
-      "id": "phrase-604",
-      "words": [
-        "Visible",
-        "actions",
-        "inspire",
-        "others",
-        "."
-      ],
-      "phraseMeaning": "目に見える行動は他者を鼓舞します"
-    },
-    {
-      "id": "phrase-605",
-      "words": [
-        "Community",
-        "challenges",
-        "make",
-        "sustainability",
-        "fun",
-        "."
-      ],
-      "phraseMeaning": "コミュニティチャレンジは持続可能性を楽しくします"
-    },
-    {
-      "id": "phrase-606",
-      "words": [
-        "Compete",
-        "to",
-        "reduce",
-        "energy",
-        "use",
-        "."
-      ],
-      "phraseMeaning": "エネルギー使用を減らすために競争します"
-    },
-    {
-      "id": "phrase-607",
-      "words": [
-        "Share",
-        "tips",
-        "and",
-        "successes",
-        "."
-      ],
-      "phraseMeaning": "ヒントと成功を共有します"
-    },
-    {
-      "id": "phrase-608",
-      "words": [
-        "Build",
-        "collective",
-        "momentum",
-        "."
-      ],
-      "phraseMeaning": "集団的な勢いを築きます"
-    },
-    {
-      "id": "phrase-609",
-      "words": [
-        "Stories",
-        "and",
-        "narratives",
-        "shape",
-        "understanding",
-        "."
-      ],
-      "phraseMeaning": "物語とナラティブは理解を形作ります"
-    },
-    {
-      "id": "phrase-610",
-      "words": [
-        "We",
-        "need",
-        "compelling",
-        "visions",
-        "of",
-        "sustainable",
-        "futures",
-        "."
-      ],
-      "phraseMeaning": "持続可能な未来の説得力のあるビジョンが必要です"
-    },
-    {
-      "id": "phrase-611",
-      "words": [
-        "Not",
-        "just",
-        "doom",
-        "and",
-        "gloom",
-        "."
-      ],
-      "phraseMeaning": "破滅と憂鬱だけでなく"
-    },
-    {
-      "id": "phrase-612",
-      "words": [
-        "Show",
-        "what",
-        "we",
-        "gain",
-        "not",
-        "just",
-        "what",
-        "we",
-        "lose",
-        "."
-      ],
-      "phraseMeaning": "失うものだけでなく得るものを示します"
-    },
-    {
-      "id": "phrase-613",
-      "words": [
-        "Cleaner",
-        "air",
-        "and",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "よりきれいな空気と水"
-    },
-    {
-      "id": "phrase-614",
-      "words": [
-        "Healthier",
-        "lives",
-        "."
-      ],
-      "phraseMeaning": "より健康的な生活"
-    },
-    {
-      "id": "phrase-615",
-      "words": [
-        "Thriving",
-        "communities",
-        "."
-      ],
-      "phraseMeaning": "繁栄するコミュニティ"
-    },
-    {
-      "id": "phrase-616",
-      "words": [
-        "Meaningful",
-        "work",
-        "."
-      ],
-      "phraseMeaning": "意味のある仕事"
-    },
-    {
-      "id": "phrase-617",
-      "words": [
-        "Connection",
-        "to",
-        "nature",
-        "."
-      ],
-      "phraseMeaning": "自然とのつながり"
-    },
-    {
-      "id": "phrase-618",
-      "words": [
-        "This",
-        "positive",
-        "vision",
-        "motivates",
-        "action",
-        "."
-      ],
-      "phraseMeaning": "このポジティブなビジョンは行動を動機づけます"
-    },
-    {
-      "id": "phrase-619",
-      "words": [
-        "The",
-        "transition",
-        "is",
-        "underway",
-        "."
-      ],
-      "phraseMeaning": "移行は進行中です"
-    },
-    {
-      "id": "phrase-620",
-      "words": [
-        "Every",
-        "country",
-        "every",
-        "city",
-        "every",
-        "person",
-        "matters",
-        "."
-      ],
-      "phraseMeaning": "すべての国すべての都市すべての人が重要です"
-    },
-    {
-      "id": "phrase-621",
-      "words": [
-        "Progress",
-        "is",
-        "being",
-        "made",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "進歩が行われています"
-    },
-    {
-      "id": "phrase-622",
-      "words": [
-        "But",
-        "we",
-        "must",
-        "move",
-        "faster",
-        "."
-      ],
-      "phraseMeaning": "しかしもっと速く動かなければなりません"
-    },
-    {
-      "id": "phrase-623",
-      "words": [
-        "The",
-        "window",
-        "for",
-        "action",
-        "is",
-        "closing",
-        "."
-      ],
-      "phraseMeaning": "行動の窓は閉じつつあります"
-    },
-    {
-      "id": "phrase-624",
-      "words": [
-        "Yet",
-        "it",
-        "remains",
-        "open",
-        "."
-      ],
-      "phraseMeaning": "しかしそれは開いたままです"
-    },
-    {
-      "id": "phrase-625",
-      "words": [
-        "We",
-        "can",
-        "still",
-        "build",
-        "the",
-        "future",
-        "we",
-        "want",
-        "."
-      ],
-      "phraseMeaning": "私たちはまだ望む未来を築くことができます"
-    },
-    {
-      "id": "phrase-626",
-      "words": [
-        "A",
-        "sustainable",
-        "society",
-        "is",
-        "within",
-        "reach",
-        "."
-      ],
-      "phraseMeaning": "持続可能な社会は手の届くところにあります"
-    },
-    {
-      "id": "phrase-627",
-      "words": [
-        "If",
-        "we",
-        "choose",
-        "to",
-        "grasp",
-        "it",
-        "."
-      ],
-      "phraseMeaning": "それをつかむことを選択すれば"
-    },
-    {
-      "id": "phrase-628",
-      "words": [
-        "The",
-        "choice",
-        "is",
-        "ours",
-        "."
-      ],
-      "phraseMeaning": "選択は私たち次第です"
-    },
-    {
-      "id": "phrase-629",
-      "words": [
-        "Let",
-        "us",
-        "choose",
-        "wisely",
-        "."
-      ],
-      "phraseMeaning": "賢く選びましょう"
-    },
-    {
-      "id": "phrase-630",
-      "words": [
-        "For",
-        "the",
-        "Earth",
-        "."
-      ],
-      "phraseMeaning": "地球のために"
-    },
-    {
-      "id": "phrase-631",
-      "words": [
-        "For",
-        "each",
-        "other",
-        "."
-      ],
-      "phraseMeaning": "お互いのために"
-    },
-    {
-      "id": "phrase-632",
-      "words": [
-        "For",
-        "the",
-        "future",
-        "."
-      ],
-      "phraseMeaning": "未来のために"
-    },
-    {
-      "id": "phrase-633",
-      "words": [
-        "Innovation",
-        "drives",
-        "sustainable",
-        "solutions",
-        "."
-      ],
-      "phraseMeaning": "革新は持続可能な解決策を推進します"
-    },
-    {
-      "id": "phrase-634",
-      "words": [
-        "New",
-        "technologies",
-        "emerge",
-        "constantly",
-        "."
-      ],
-      "phraseMeaning": "新しい技術が常に出現します"
-    },
-    {
-      "id": "phrase-635",
-      "words": [
-        "Carbon",
-        "capture",
-        "removes",
-        "CO2",
-        "from",
-        "atmosphere",
-        "."
-      ],
-      "phraseMeaning": "炭素捕獲は大気からCO2を除去します"
-    },
-    {
-      "id": "phrase-636",
-      "words": [
-        "Direct",
-        "air",
-        "capture",
-        "machines",
-        "filter",
-        "carbon",
-        "."
-      ],
-      "phraseMeaning": "直接空気捕獲機は炭素をフィルターします"
-    },
-    {
-      "id": "phrase-637",
-      "words": [
-        "Captured",
-        "carbon",
-        "can",
-        "be",
-        "stored",
-        "underground",
-        "."
-      ],
-      "phraseMeaning": "捕獲された炭素は地下に保存できます"
-    },
-    {
-      "id": "phrase-638",
-      "words": [
-        "Or",
-        "used",
-        "to",
-        "make",
-        "products",
-        "."
-      ],
-      "phraseMeaning": "または製品を作るために使用されます"
-    },
-    {
-      "id": "phrase-639",
-      "words": [
-        "This",
-        "technology",
-        "is",
-        "still",
-        "expensive",
-        "."
-      ],
-      "phraseMeaning": "この技術はまだ高価です"
-    },
-    {
-      "id": "phrase-640",
-      "words": [
-        "But",
-        "costs",
-        "are",
-        "falling",
-        "."
-      ],
-      "phraseMeaning": "しかしコストは下がっています"
-    },
-    {
-      "id": "phrase-641",
-      "words": [
-        "Green",
-        "hydrogen",
-        "stores",
-        "renewable",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "グリーン水素は再生可能エネルギーを貯蔵します"
-    },
-    {
-      "id": "phrase-642",
-      "words": [
-        "Electrolysis",
-        "splits",
-        "water",
-        "into",
-        "hydrogen",
-        "and",
-        "oxygen",
-        "."
-      ],
-      "phraseMeaning": "電気分解は水を水素と酸素に分解します"
-    },
-    {
-      "id": "phrase-643",
-      "words": [
-        "Using",
-        "renewable",
-        "electricity",
-        "makes",
-        "it",
-        "green",
-        "."
-      ],
-      "phraseMeaning": "再生可能電力を使用することでグリーンになります"
-    },
-    {
-      "id": "phrase-644",
-      "words": [
-        "Hydrogen",
-        "can",
-        "fuel",
-        "vehicles",
-        "and",
-        "heat",
-        "buildings",
-        "."
-      ],
-      "phraseMeaning": "水素は車両に燃料を供給し建物を暖めることができます"
-    },
-    {
-      "id": "phrase-645",
-      "words": [
-        "It",
-        "produces",
-        "only",
-        "water",
-        "when",
-        "burned",
-        "."
-      ],
-      "phraseMeaning": "燃焼時に水だけを生成します"
-    },
-    {
-      "id": "phrase-646",
-      "words": [
-        "Advanced",
-        "batteries",
-        "store",
-        "more",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "先進的なバッテリーはより多くのエネルギーを貯蔵します"
-    },
-    {
-      "id": "phrase-647",
-      "words": [
-        "Lithium",
-        "ion",
-        "batteries",
-        "power",
-        "electric",
-        "vehicles",
-        "."
-      ],
-      "phraseMeaning": "リチウムイオン電池は電気自動車を動かします"
-    },
-    {
-      "id": "phrase-648",
-      "words": [
-        "Solid",
-        "state",
-        "batteries",
-        "offer",
-        "even",
-        "better",
-        "performance",
-        "."
-      ],
-      "phraseMeaning": "固体電池はさらに優れた性能を提供します"
-    },
-    {
-      "id": "phrase-649",
-      "words": [
-        "They",
-        "charge",
-        "faster",
-        "and",
-        "last",
-        "longer",
-        "."
-      ],
-      "phraseMeaning": "より速く充電しより長持ちします"
-    },
-    {
-      "id": "phrase-650",
-      "words": [
-        "Grid",
-        "scale",
-        "batteries",
-        "balance",
-        "renewable",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "グリッドスケールバッテリーは再生可能エネルギーのバランスを取ります"
-    },
-    {
-      "id": "phrase-651",
-      "words": [
-        "They",
-        "store",
-        "excess",
-        "solar",
-        "and",
-        "wind",
-        "power",
-        "."
-      ],
-      "phraseMeaning": "余剰の太陽光と風力を保存します"
-    },
-    {
-      "id": "phrase-652",
-      "words": [
-        "Release",
-        "it",
-        "when",
-        "needed",
-        "."
-      ],
-      "phraseMeaning": "必要なときに放出します"
-    },
-    {
-      "id": "phrase-653",
-      "words": [
-        "This",
-        "solves",
-        "intermittency",
-        "problems",
-        "."
-      ],
-      "phraseMeaning": "これは断続性の問題を解決します"
-    },
-    {
-      "id": "phrase-654",
-      "words": [
-        "Precision",
-        "agriculture",
-        "uses",
-        "technology",
-        "efficiently",
-        "."
-      ],
-      "phraseMeaning": "精密農業は技術を効率的に使用します"
-    },
-    {
-      "id": "phrase-655",
-      "words": [
-        "Sensors",
-        "monitor",
-        "soil",
-        "moisture",
-        "and",
-        "nutrients",
-        "."
-      ],
-      "phraseMeaning": "センサーは土壌の水分と栄養素を監視します"
-    },
-    {
-      "id": "phrase-656",
-      "words": [
-        "Drones",
-        "survey",
-        "fields",
-        "from",
-        "above",
-        "."
-      ],
-      "phraseMeaning": "ドローンは上から畑を調査します"
-    },
-    {
-      "id": "phrase-657",
-      "words": [
-        "This",
-        "data",
-        "optimizes",
-        "water",
-        "and",
-        "fertilizer",
-        "use",
-        "."
-      ],
-      "phraseMeaning": "このデータは水と肥料の使用を最適化します"
-    },
-    {
-      "id": "phrase-658",
-      "words": [
-        "Farmers",
-        "apply",
-        "inputs",
-        "only",
-        "where",
-        "needed",
-        "."
-      ],
-      "phraseMeaning": "農家は必要な場所にのみ投入します"
-    },
-    {
-      "id": "phrase-659",
-      "words": [
-        "This",
-        "reduces",
-        "waste",
-        "and",
-        "environmental",
-        "impact",
-        "."
-      ],
-      "phraseMeaning": "これは廃棄物と環境への影響を減らします"
-    },
-    {
-      "id": "phrase-660",
-      "words": [
-        "Vertical",
-        "farming",
-        "grows",
-        "food",
-        "in",
-        "urban",
-        "areas",
-        "."
-      ],
-      "phraseMeaning": "垂直農業は都市部で食料を育てます"
-    },
-    {
-      "id": "phrase-661",
-      "words": [
-        "Multi",
-        "level",
-        "indoor",
-        "farms",
-        "use",
-        "LED",
-        "lights",
-        "."
-      ],
-      "phraseMeaning": "多層屋内農場はLEDライトを使用します"
-    },
-    {
-      "id": "phrase-662",
-      "words": [
-        "Hydroponics",
-        "grows",
-        "plants",
-        "without",
-        "soil",
-        "."
-      ],
-      "phraseMeaning": "水耕栽培は土壌なしで植物を育てます"
-    },
-    {
-      "id": "phrase-663",
-      "words": [
-        "This",
-        "uses",
-        "90",
-        "percent",
-        "less",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "これは90パーセント少ない水を使用します"
-    },
-    {
-      "id": "phrase-664",
-      "words": [
-        "Year",
-        "round",
-        "production",
-        "is",
-        "possible",
-        "."
-      ],
-      "phraseMeaning": "年間を通しての生産が可能です"
-    },
-    {
-      "id": "phrase-665",
-      "words": [
-        "No",
-        "pesticides",
-        "are",
-        "needed",
-        "in",
-        "controlled",
-        "environments",
-        "."
-      ],
-      "phraseMeaning": "制御された環境では農薬は必要ありません"
-    },
-    {
-      "id": "phrase-666",
-      "words": [
-        "Lab",
-        "grown",
-        "meat",
-        "reduces",
-        "livestock",
-        "impact",
-        "."
-      ],
-      "phraseMeaning": "ラボで育てられた肉は家畜の影響を減らします"
-    },
-    {
-      "id": "phrase-667",
-      "words": [
-        "Cells",
-        "from",
-        "animals",
-        "grow",
-        "into",
-        "meat",
-        "."
-      ],
-      "phraseMeaning": "動物からの細胞が肉に成長します"
-    },
-    {
-      "id": "phrase-668",
-      "words": [
-        "Without",
-        "raising",
-        "and",
-        "slaughtering",
-        "animals",
-        "."
-      ],
-      "phraseMeaning": "動物を飼育し屠殺することなく"
-    },
-    {
-      "id": "phrase-669",
-      "words": [
-        "This",
-        "uses",
-        "far",
-        "less",
-        "land",
-        "and",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "これははるかに少ない土地と水を使用します"
-    },
-    {
-      "id": "phrase-670",
-      "words": [
-        "It",
-        "produces",
-        "fewer",
-        "emissions",
-        "."
-      ],
-      "phraseMeaning": "より少ない排出を生成します"
-    },
-    {
-      "id": "phrase-671",
-      "words": [
-        "Some",
-        "people",
-        "have",
-        "ethical",
-        "concerns",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "一部の人々は倫理的懸念を持っています"
-    },
-    {
-      "id": "phrase-672",
-      "words": [
-        "But",
-        "technology",
-        "is",
-        "improving",
-        "."
-      ],
-      "phraseMeaning": "しかし技術は改善しています"
-    },
-    {
-      "id": "phrase-673",
-      "words": [
-        "Smart",
-        "grids",
-        "optimize",
-        "electricity",
-        "distribution",
-        "."
-      ],
-      "phraseMeaning": "スマートグリッドは電力配分を最適化します"
-    },
-    {
-      "id": "phrase-674",
-      "words": [
-        "They",
-        "use",
-        "digital",
-        "technology",
-        "and",
-        "two",
-        "way",
-        "communication",
-        "."
-      ],
-      "phraseMeaning": "デジタル技術と双方向通信を使用します"
-    },
-    {
-      "id": "phrase-675",
-      "words": [
-        "They",
-        "detect",
-        "outages",
-        "and",
-        "reroute",
-        "power",
-        "."
-      ],
-      "phraseMeaning": "停電を検出し電力を再ルーティングします"
-    },
-    {
-      "id": "phrase-676",
-      "words": [
-        "They",
-        "integrate",
-        "distributed",
-        "energy",
-        "sources",
-        "."
-      ],
-      "phraseMeaning": "分散エネルギー源を統合します"
-    },
-    {
-      "id": "phrase-677",
-      "words": [
-        "Homes",
-        "with",
-        "solar",
-        "panels",
-        "can",
-        "sell",
-        "excess",
-        "."
-      ],
-      "phraseMeaning": "ソーラーパネル付きの家は余剰を売ることができます"
-    },
-    {
-      "id": "phrase-678",
-      "words": [
-        "Electric",
-        "vehicles",
-        "can",
-        "store",
-        "and",
-        "return",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "電気自動車はエネルギーを保存し返すことができます"
-    },
-    {
-      "id": "phrase-679",
-      "words": [
-        "This",
-        "creates",
-        "resilient",
-        "energy",
-        "systems",
-        "."
-      ],
-      "phraseMeaning": "これは回復力のあるエネルギーシステムを作ります"
-    },
-    {
-      "id": "phrase-680",
-      "words": [
-        "Blockchain",
-        "technology",
-        "enables",
-        "peer",
-        "to",
-        "peer",
-        "energy",
-        "trading",
-        "."
-      ],
-      "phraseMeaning": "ブロックチェーン技術はピアツーピアエネルギー取引を可能にします"
-    },
-    {
-      "id": "phrase-681",
-      "words": [
-        "Neighbors",
-        "can",
-        "buy",
-        "and",
-        "sell",
-        "directly",
-        "."
-      ],
-      "phraseMeaning": "隣人は直接売買できます"
-    },
-    {
-      "id": "phrase-682",
-      "words": [
-        "This",
-        "bypasses",
-        "traditional",
-        "utilities",
-        "."
-      ],
-      "phraseMeaning": "これは伝統的な公益事業を迂回します"
-    },
-    {
-      "id": "phrase-683",
-      "words": [
-        "Internet",
-        "of",
-        "Things",
-        "devices",
-        "monitor",
-        "resource",
-        "use",
-        "."
-      ],
-      "phraseMeaning": "IoTデバイスは資源使用を監視します"
-    },
-    {
-      "id": "phrase-684",
-      "words": [
-        "Smart",
-        "meters",
-        "track",
-        "electricity",
-        "consumption",
-        "."
-      ],
-      "phraseMeaning": "スマートメーターは電力消費を追跡します"
-    },
-    {
-      "id": "phrase-685",
-      "words": [
-        "Smart",
-        "irrigation",
-        "systems",
-        "water",
-        "gardens",
-        "efficiently",
-        "."
-      ],
-      "phraseMeaning": "スマート灌漑システムは庭に効率的に水をやります"
-    },
-    {
-      "id": "phrase-686",
-      "words": [
-        "Connected",
-        "appliances",
-        "run",
-        "when",
-        "energy",
-        "is",
-        "cheapest",
-        "."
-      ],
-      "phraseMeaning": "接続された機器はエネルギーが最も安いときに稼働します"
-    },
-    {
-      "id": "phrase-687",
-      "words": [
-        "This",
-        "data",
-        "helps",
-        "people",
-        "reduce",
-        "consumption",
-        "."
-      ],
-      "phraseMeaning": "このデータは人々が消費を減らすのを助けます"
-    },
-    {
-      "id": "phrase-688",
-      "words": [
-        "Artificial",
-        "intelligence",
-        "optimizes",
-        "systems",
-        "."
-      ],
-      "phraseMeaning": "人工知能はシステムを最適化します"
-    },
-    {
-      "id": "phrase-689",
-      "words": [
-        "AI",
-        "predicts",
-        "energy",
-        "demand",
-        "."
-      ],
-      "phraseMeaning": "AIはエネルギー需要を予測します"
-    },
-    {
-      "id": "phrase-690",
-      "words": [
-        "It",
-        "schedules",
-        "renewable",
-        "generation",
-        "."
-      ],
-      "phraseMeaning": "再生可能発電をスケジュールします"
-    },
-    {
-      "id": "phrase-691",
-      "words": [
-        "It",
-        "optimizes",
-        "building",
-        "climate",
-        "control",
-        "."
-      ],
-      "phraseMeaning": "建物の気候制御を最適化します"
-    },
-    {
-      "id": "phrase-692",
-      "words": [
-        "Machine",
-        "learning",
-        "finds",
-        "efficiency",
-        "improvements",
-        "."
-      ],
-      "phraseMeaning": "機械学習は効率改善を見つけます"
-    },
-    {
-      "id": "phrase-693",
-      "words": [
-        "It",
-        "analyzes",
-        "vast",
-        "amounts",
-        "of",
-        "data",
-        "."
-      ],
-      "phraseMeaning": "膨大な量のデータを分析します"
-    },
-    {
-      "id": "phrase-694",
-      "words": [
-        "Identifies",
-        "patterns",
-        "humans",
-        "might",
-        "miss",
-        "."
-      ],
-      "phraseMeaning": "人間が見逃すかもしれないパターンを特定します"
-    },
-    {
-      "id": "phrase-695",
-      "words": [
-        "Nature",
-        "based",
-        "solutions",
-        "harness",
-        "ecosystems",
-        "."
-      ],
-      "phraseMeaning": "自然ベースのソリューションは生態系を利用します"
-    },
-    {
-      "id": "phrase-696",
-      "words": [
-        "Reforestation",
-        "absorbs",
-        "carbon",
-        "dioxide",
-        "."
-      ],
-      "phraseMeaning": "再植林は二酸化炭素を吸収します"
-    },
-    {
-      "id": "phrase-697",
-      "words": [
-        "Trees",
-        "store",
-        "carbon",
-        "as",
-        "they",
-        "grow",
-        "."
-      ],
-      "phraseMeaning": "木は成長するにつれて炭素を蓄えます"
-    },
-    {
-      "id": "phrase-698",
-      "words": [
-        "Forests",
-        "also",
-        "regulate",
-        "water",
-        "and",
-        "prevent",
-        "erosion",
-        "."
-      ],
-      "phraseMeaning": "森林は水を調節し侵食を防ぎます"
-    },
-    {
-      "id": "phrase-699",
-      "words": [
-        "Wetlands",
-        "filter",
-        "pollutants",
-        "from",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "湿地は水から汚染物質をフィルターします"
-    },
-    {
-      "id": "phrase-700",
-      "words": [
-        "They",
-        "provide",
-        "habitat",
-        "for",
-        "wildlife",
-        "."
-      ],
-      "phraseMeaning": "野生生物の生息地を提供します"
-    },
-    {
-      "id": "phrase-701",
-      "words": [
-        "They",
-        "buffer",
-        "against",
-        "floods",
-        "."
-      ],
-      "phraseMeaning": "洪水に対する緩衝材となります"
-    },
-    {
-      "id": "phrase-702",
-      "words": [
-        "Mangrove",
-        "forests",
-        "protect",
-        "coastlines",
-        "."
-      ],
-      "phraseMeaning": "マングローブ林は海岸線を保護します"
-    },
-    {
-      "id": "phrase-703",
-      "words": [
-        "They",
-        "absorb",
-        "storm",
-        "surge",
-        "energy",
-        "."
-      ],
-      "phraseMeaning": "高潮のエネルギーを吸収します"
-    },
-    {
-      "id": "phrase-704",
-      "words": [
-        "They",
-        "sequester",
-        "carbon",
-        "very",
-        "effectively",
-        "."
-      ],
-      "phraseMeaning": "非常に効果的に炭素を隔離します"
-    },
-    {
-      "id": "phrase-705",
-      "words": [
-        "Restoring",
-        "degraded",
-        "ecosystems",
-        "benefits",
-        "everyone",
-        "."
-      ],
-      "phraseMeaning": "劣化した生態系を回復することは誰にでも利益をもたらします"
-    },
-    {
-      "id": "phrase-706",
-      "words": [
-        "It",
-        "improves",
-        "biodiversity",
-        "."
-      ],
-      "phraseMeaning": "生物多様性を改善します"
-    },
-    {
-      "id": "phrase-707",
-      "words": [
-        "It",
-        "enhances",
-        "ecosystem",
-        "services",
-        "."
-      ],
-      "phraseMeaning": "生態系サービスを向上させます"
-    },
-    {
-      "id": "phrase-708",
-      "words": [
-        "It",
-        "supports",
-        "local",
-        "livelihoods",
-        "."
-      ],
-      "phraseMeaning": "地元の生計を支援します"
-    },
-    {
-      "id": "phrase-709",
-      "words": [
-        "Blue",
-        "economy",
-        "focuses",
-        "on",
-        "ocean",
-        "sustainability",
-        "."
-      ],
-      "phraseMeaning": "ブルーエコノミーは海洋の持続可能性に焦点を当てます"
-    },
-    {
-      "id": "phrase-710",
-      "words": [
-        "Oceans",
-        "cover",
-        "70",
-        "percent",
-        "of",
-        "Earth",
-        "."
-      ],
-      "phraseMeaning": "海洋は地球の70パーセントを覆います"
-    },
-    {
-      "id": "phrase-711",
-      "words": [
-        "They",
-        "regulate",
-        "climate",
-        "and",
-        "produce",
-        "oxygen",
-        "."
-      ],
-      "phraseMeaning": "気候を調節し酸素を生成します"
-    },
-    {
-      "id": "phrase-712",
-      "words": [
-        "Overfishing",
-        "depletes",
-        "marine",
-        "life",
-        "."
-      ],
-      "phraseMeaning": "乱獲は海洋生物を枯渇させます"
-    },
-    {
-      "id": "phrase-713",
-      "words": [
-        "Sustainable",
-        "fishing",
-        "practices",
-        "are",
-        "essential",
-        "."
-      ],
-      "phraseMeaning": "持続可能な漁業慣行は不可欠です"
-    },
-    {
-      "id": "phrase-714",
-      "words": [
-        "Marine",
-        "protected",
-        "areas",
-        "allow",
-        "recovery",
-        "."
-      ],
-      "phraseMeaning": "海洋保護区は回復を可能にします"
-    },
-    {
-      "id": "phrase-715",
-      "words": [
-        "Ocean",
-        "cleanup",
-        "projects",
-        "remove",
-        "plastic",
-        "waste",
-        "."
-      ],
-      "phraseMeaning": "海洋クリーンアッププロジェクトはプラスチック廃棄物を除去します"
-    },
-    {
-      "id": "phrase-716",
-      "words": [
-        "Millions",
-        "of",
-        "tons",
-        "pollute",
-        "our",
-        "oceans",
-        "."
-      ],
-      "phraseMeaning": "何百万トンもが海洋を汚染しています"
-    },
-    {
-      "id": "phrase-717",
-      "words": [
-        "This",
-        "harms",
-        "marine",
-        "animals",
-        "and",
-        "ecosystems",
-        "."
-      ],
-      "phraseMeaning": "これは海洋動物と生態系に害を与えます"
-    },
-    {
-      "id": "phrase-718",
-      "words": [
-        "Innovative",
-        "systems",
-        "collect",
-        "floating",
-        "plastic",
-        "."
-      ],
-      "phraseMeaning": "革新的なシステムは浮遊プラスチックを収集します"
-    },
-    {
-      "id": "phrase-719",
-      "words": [
-        "Prevention",
-        "is",
-        "also",
-        "crucial",
-        "."
-      ],
-      "phraseMeaning": "予防も重要です"
-    },
-    {
-      "id": "phrase-720",
-      "words": [
-        "We",
-        "must",
-        "stop",
-        "plastic",
-        "entering",
-        "oceans",
-        "."
-      ],
-      "phraseMeaning": "プラスチックが海洋に入るのを止めなければなりません"
-    },
-    {
-      "id": "phrase-721",
-      "words": [
-        "Better",
-        "waste",
-        "management",
-        "on",
-        "land",
-        "helps",
-        "."
-      ],
-      "phraseMeaning": "陸上でのより良い廃棄物管理が役立ちます"
-    },
-    {
-      "id": "phrase-722",
-      "words": [
-        "Reducing",
-        "single",
-        "use",
-        "plastics",
-        "is",
-        "key",
-        "."
-      ],
-      "phraseMeaning": "使い捨てプラスチックを減らすことが鍵です"
-    },
-    {
-      "id": "phrase-723",
-      "words": [
-        "Biodegradable",
-        "alternatives",
-        "are",
-        "being",
-        "developed",
-        "."
-      ],
-      "phraseMeaning": "生分解性の代替品が開発されています"
-    },
-    {
-      "id": "phrase-724",
-      "words": [
-        "Materials",
-        "that",
-        "break",
-        "down",
-        "naturally",
-        "."
-      ],
-      "phraseMeaning": "自然に分解する材料"
-    },
-    {
-      "id": "phrase-725",
-      "words": [
-        "Without",
-        "leaving",
-        "harmful",
-        "residues",
-        "."
-      ],
-      "phraseMeaning": "有害な残留物を残さずに"
-    },
-    {
-      "id": "phrase-726",
-      "words": [
-        "Economic",
-        "incentives",
-        "drive",
-        "sustainable",
-        "behavior",
-        "."
-      ],
-      "phraseMeaning": "経済的インセンティブは持続可能な行動を推進します"
-    },
-    {
-      "id": "phrase-727",
-      "words": [
-        "Green",
-        "bonds",
-        "finance",
-        "environmental",
-        "projects",
-        "."
-      ],
-      "phraseMeaning": "グリーンボンドは環境プロジェクトに資金を提供します"
-    },
-    {
-      "id": "phrase-728",
-      "words": [
-        "Investors",
-        "fund",
-        "renewable",
-        "energy",
-        "and",
-        "efficiency",
-        "."
-      ],
-      "phraseMeaning": "投資家は再生可能エネルギーと効率に資金を提供します"
-    },
-    {
-      "id": "phrase-729",
-      "words": [
-        "This",
-        "market",
-        "is",
-        "growing",
-        "rapidly",
-        "."
-      ],
-      "phraseMeaning": "この市場は急速に成長しています"
-    },
-    {
-      "id": "phrase-730",
-      "words": [
-        "ESG",
-        "investing",
-        "considers",
-        "environmental",
-        "social",
-        "and",
-        "governance",
-        "factors",
-        "."
-      ],
-      "phraseMeaning": "ESG投資は環境社会ガバナンス要因を考慮します"
-    },
-    {
-      "id": "phrase-731",
-      "words": [
-        "Companies",
-        "with",
-        "strong",
-        "ESG",
-        "performance",
-        "attract",
-        "investment",
-        "."
-      ],
-      "phraseMeaning": "強力なESGパフォーマンスを持つ企業は投資を引き付けます"
-    },
-    {
-      "id": "phrase-732",
-      "words": [
-        "This",
-        "pressures",
-        "companies",
-        "to",
-        "improve",
-        "."
-      ],
-      "phraseMeaning": "これは企業に改善するよう圧力をかけます"
-    },
-    {
-      "id": "phrase-733",
-      "words": [
-        "Divestment",
-        "campaigns",
-        "target",
-        "fossil",
-        "fuel",
-        "companies",
-        "."
-      ],
-      "phraseMeaning": "ダイベストメントキャンペーンは化石燃料企業をターゲットにします"
-    },
-    {
-      "id": "phrase-734",
-      "words": [
-        "Universities",
-        "and",
-        "institutions",
-        "sell",
-        "their",
-        "shares",
-        "."
-      ],
-      "phraseMeaning": "大学と機関は株式を売却します"
-    },
-    {
-      "id": "phrase-735",
-      "words": [
-        "This",
-        "sends",
-        "a",
-        "powerful",
-        "message",
-        "."
-      ],
-      "phraseMeaning": "これは強力なメッセージを送ります"
-    },
-    {
-      "id": "phrase-736",
-      "words": [
-        "It",
-        "reduces",
-        "funding",
-        "for",
-        "polluting",
-        "industries",
-        "."
-      ],
-      "phraseMeaning": "汚染産業への資金を減らします"
-    },
-    {
-      "id": "phrase-737",
-      "words": [
-        "Sustainable",
-        "finance",
-        "is",
-        "mainstream",
-        "now",
-        "."
-      ],
-      "phraseMeaning": "持続可能な金融は今や主流です"
-    },
-    {
-      "id": "phrase-738",
-      "words": [
-        "Banks",
-        "assess",
-        "climate",
-        "risks",
-        "."
-      ],
-      "phraseMeaning": "銀行は気候リスクを評価します"
-    },
-    {
-      "id": "phrase-739",
-      "words": [
-        "They",
-        "factor",
-        "environmental",
-        "impacts",
-        "into",
-        "lending",
-        "."
-      ],
-      "phraseMeaning": "環境への影響を融資に組み込みます"
-    },
-    {
-      "id": "phrase-740",
-      "words": [
-        "This",
-        "shifts",
-        "capital",
-        "toward",
-        "sustainability",
-        "."
-      ],
-      "phraseMeaning": "これは資本を持続可能性に向けてシフトします"
-    },
-    {
-      "id": "phrase-741",
-      "words": [
-        "Job",
-        "creation",
-        "in",
-        "green",
-        "sectors",
-        "is",
-        "booming",
-        "."
-      ],
-      "phraseMeaning": "グリーンセクターでの雇用創出が急増しています"
-    },
-    {
-      "id": "phrase-742",
-      "words": [
-        "Solar",
-        "and",
-        "wind",
-        "industries",
-        "employ",
-        "millions",
-        "."
-      ],
-      "phraseMeaning": "太陽光と風力産業は何百万人も雇用します"
-    },
-    {
-      "id": "phrase-743",
-      "words": [
-        "Energy",
-        "efficiency",
-        "work",
-        "creates",
-        "local",
-        "jobs",
-        "."
-      ],
-      "phraseMeaning": "エネルギー効率の仕事は地元の雇用を創出します"
-    },
-    {
-      "id": "phrase-744",
-      "words": [
-        "Electric",
-        "vehicle",
-        "manufacturing",
-        "expands",
-        "."
-      ],
-      "phraseMeaning": "電気自動車製造が拡大しています"
-    },
-    {
-      "id": "phrase-745",
-      "words": [
-        "Green",
-        "jobs",
-        "often",
-        "pay",
-        "well",
-        "."
-      ],
-      "phraseMeaning": "グリーンジョブはしばしば良い給料を払います"
-    },
-    {
-      "id": "phrase-746",
-      "words": [
-        "They",
-        "cannot",
-        "be",
-        "outsourced",
-        "."
-      ],
-      "phraseMeaning": "アウトソーシングできません"
-    },
-    {
-      "id": "phrase-747",
-      "words": [
-        "Installing",
-        "solar",
-        "panels",
-        "happens",
-        "locally",
-        "."
-      ],
-      "phraseMeaning": "ソーラーパネルの設置は地元で行われます"
-    },
-    {
-      "id": "phrase-748",
-      "words": [
-        "Retrofitting",
-        "buildings",
-        "requires",
-        "local",
-        "workers",
-        "."
-      ],
-      "phraseMeaning": "建物の改修は地元の労働者を必要とします"
-    },
-    {
-      "id": "phrase-749",
-      "words": [
-        "This",
-        "creates",
-        "economic",
-        "opportunity",
-        "."
-      ],
-      "phraseMeaning": "これは経済的機会を作ります"
-    },
-    {
-      "id": "phrase-750",
-      "words": [
-        "Just",
-        "transition",
-        "ensures",
-        "no",
-        "one",
-        "is",
-        "left",
-        "behind",
-        "."
-      ],
-      "phraseMeaning": "公正な移行は誰も取り残されないことを保証します"
-    },
-    {
-      "id": "phrase-751",
-      "words": [
-        "Workers",
-        "in",
-        "fossil",
-        "fuel",
-        "industries",
-        "need",
-        "support",
-        "."
-      ],
-      "phraseMeaning": "化石燃料産業の労働者は支援が必要です"
-    },
-    {
-      "id": "phrase-752",
-      "words": [
-        "Retraining",
-        "programs",
-        "teach",
-        "new",
-        "skills",
-        "."
-      ],
-      "phraseMeaning": "再訓練プログラムは新しいスキルを教えます"
-    },
-    {
-      "id": "phrase-753",
-      "words": [
-        "Income",
-        "support",
-        "during",
-        "transition",
-        "helps",
-        "."
-      ],
-      "phraseMeaning": "移行期間中の所得支援が役立ちます"
-    },
-    {
-      "id": "phrase-754",
-      "words": [
-        "Communities",
-        "dependent",
-        "on",
-        "coal",
-        "need",
-        "investment",
-        "."
-      ],
-      "phraseMeaning": "石炭に依存するコミュニティは投資が必要です"
-    },
-    {
-      "id": "phrase-755",
-      "words": [
-        "New",
-        "industries",
-        "can",
-        "replace",
-        "old",
-        "ones",
-        "."
-      ],
-      "phraseMeaning": "新しい産業は古いものを置き換えることができます"
-    },
-    {
-      "id": "phrase-756",
-      "words": [
-        "With",
-        "proper",
-        "planning",
-        "and",
-        "support",
-        "."
-      ],
-      "phraseMeaning": "適切な計画とサポートがあれば"
-    },
-    {
-      "id": "phrase-757",
-      "words": [
-        "Behavioral",
-        "change",
-        "is",
-        "as",
-        "important",
-        "as",
-        "technology",
-        "."
-      ],
-      "phraseMeaning": "行動変化は技術と同じくらい重要です"
-    },
-    {
-      "id": "phrase-758",
-      "words": [
-        "Convenience",
-        "drives",
-        "many",
-        "unsustainable",
-        "choices",
-        "."
-      ],
-      "phraseMeaning": "便利さが多くの持続不可能な選択を推進します"
-    },
-    {
-      "id": "phrase-759",
-      "words": [
-        "Making",
-        "sustainable",
-        "options",
-        "easier",
-        "helps",
-        "."
-      ],
-      "phraseMeaning": "持続可能な選択肢をより簡単にすることが役立ちます"
-    },
-    {
-      "id": "phrase-760",
-      "words": [
-        "Default",
-        "settings",
-        "matter",
-        "."
-      ],
-      "phraseMeaning": "デフォルト設定が重要です"
-    },
-    {
-      "id": "phrase-761",
-      "words": [
-        "Opt",
-        "out",
-        "rather",
-        "than",
-        "opt",
-        "in",
-        "for",
-        "green",
-        "choices",
-        "."
-      ],
-      "phraseMeaning": "グリーンな選択肢にはオプトインではなくオプトアウト"
-    },
-    {
-      "id": "phrase-762",
-      "words": [
-        "Social",
-        "norms",
-        "influence",
-        "behavior",
-        "."
-      ],
-      "phraseMeaning": "社会的規範は行動に影響します"
-    },
-    {
-      "id": "phrase-763",
-      "words": [
-        "When",
-        "neighbors",
-        "install",
-        "solar",
-        "others",
-        "follow",
-        "."
-      ],
-      "phraseMeaning": "隣人がソーラーを設置すると他の人も続きます"
-    },
-    {
-      "id": "phrase-764",
-      "words": [
-        "Visible",
-        "actions",
-        "inspire",
-        "others",
-        "."
-      ],
-      "phraseMeaning": "目に見える行動は他者を鼓舞します"
-    },
-    {
-      "id": "phrase-765",
-      "words": [
-        "Community",
-        "challenges",
-        "make",
-        "sustainability",
-        "fun",
-        "."
-      ],
-      "phraseMeaning": "コミュニティチャレンジは持続可能性を楽しくします"
-    },
-    {
-      "id": "phrase-766",
-      "words": [
-        "Compete",
-        "to",
-        "reduce",
-        "energy",
-        "use",
-        "."
-      ],
-      "phraseMeaning": "エネルギー使用を減らすために競争します"
-    },
-    {
-      "id": "phrase-767",
-      "words": [
-        "Share",
-        "tips",
-        "and",
-        "successes",
-        "."
-      ],
-      "phraseMeaning": "ヒントと成功を共有します"
-    },
-    {
-      "id": "phrase-768",
-      "words": [
-        "Build",
-        "collective",
-        "momentum",
-        "."
-      ],
-      "phraseMeaning": "集団的な勢いを築きます"
-    },
-    {
-      "id": "phrase-769",
-      "words": [
-        "Stories",
-        "and",
-        "narratives",
-        "shape",
-        "understanding",
-        "."
-      ],
-      "phraseMeaning": "物語とナラティブは理解を形作ります"
-    },
-    {
-      "id": "phrase-770",
-      "words": [
-        "We",
-        "need",
-        "compelling",
-        "visions",
-        "of",
-        "sustainable",
-        "futures",
-        "."
-      ],
-      "phraseMeaning": "持続可能な未来の説得力のあるビジョンが必要です"
-    },
-    {
-      "id": "phrase-771",
-      "words": [
-        "Not",
-        "just",
-        "doom",
-        "and",
-        "gloom",
-        "."
-      ],
-      "phraseMeaning": "破滅と憂鬱だけでなく"
-    },
-    {
-      "id": "phrase-772",
-      "words": [
-        "Show",
-        "what",
-        "we",
-        "gain",
-        "not",
-        "just",
-        "what",
-        "we",
-        "lose",
-        "."
-      ],
-      "phraseMeaning": "失うものだけでなく得るものを示します"
-    },
-    {
-      "id": "phrase-773",
-      "words": [
-        "Cleaner",
-        "air",
-        "and",
-        "water",
-        "."
-      ],
-      "phraseMeaning": "よりきれいな空気と水"
-    },
-    {
-      "id": "phrase-774",
-      "words": [
-        "Healthier",
-        "lives",
-        "."
-      ],
-      "phraseMeaning": "より健康的な生活"
-    },
-    {
-      "id": "phrase-775",
-      "words": [
-        "Thriving",
-        "communities",
-        "."
-      ],
-      "phraseMeaning": "繁栄するコミュニティ"
-    },
-    {
-      "id": "phrase-776",
-      "words": [
-        "Meaningful",
-        "work",
-        "."
-      ],
-      "phraseMeaning": "意味のある仕事"
-    },
-    {
-      "id": "phrase-777",
-      "words": [
-        "Connection",
-        "to",
-        "nature",
-        "."
-      ],
-      "phraseMeaning": "自然とのつながり"
-    },
-    {
-      "id": "phrase-778",
-      "words": [
-        "This",
-        "positive",
-        "vision",
-        "motivates",
-        "action",
-        "."
-      ],
-      "phraseMeaning": "このポジティブなビジョンは行動を動機づけます"
-    },
-    {
-      "id": "phrase-779",
-      "words": [
-        "The",
-        "transition",
-        "is",
-        "underway",
-        "."
-      ],
-      "phraseMeaning": "移行は進行中です"
-    },
-    {
-      "id": "phrase-780",
-      "words": [
-        "Every",
-        "country",
-        "every",
-        "city",
-        "every",
-        "person",
-        "matters",
-        "."
-      ],
-      "phraseMeaning": "すべての国すべての都市すべての人が重要です"
-    },
-    {
-      "id": "phrase-781",
-      "words": [
-        "Progress",
-        "is",
-        "being",
-        "made",
-        ".",
-        ","
-      ],
-      "phraseMeaning": "進歩が行われています"
-    },
-    {
-      "id": "phrase-782",
-      "words": [
-        "But",
-        "we",
-        "must",
-        "move",
-        "faster",
-        "."
-      ],
-      "phraseMeaning": "しかしもっと速く動かなければなりません"
-    },
-    {
-      "id": "phrase-783",
-      "words": [
-        "The",
-        "window",
-        "for",
-        "action",
-        "is",
-        "closing",
-        "."
-      ],
-      "phraseMeaning": "行動の窓は閉じつつあります"
-    },
-    {
-      "id": "phrase-784",
-      "words": [
-        "Yet",
-        "it",
-        "remains",
-        "open",
-        "."
-      ],
-      "phraseMeaning": "しかしそれは開いたままです"
-    },
-    {
-      "id": "phrase-785",
-      "words": [
-        "We",
-        "can",
-        "still",
-        "build",
-        "the",
-        "future",
-        "we",
-        "want",
-        "."
-      ],
-      "phraseMeaning": "私たちはまだ望む未来を築くことができます"
-    },
-    {
-      "id": "phrase-786",
-      "words": [
-        "A",
-        "sustainable",
-        "society",
-        "is",
-        "within",
-        "reach",
-        "."
-      ],
-      "phraseMeaning": "持続可能な社会は手の届くところにあります"
-    },
-    {
-      "id": "phrase-787",
-      "words": [
-        "If",
-        "we",
-        "choose",
-        "to",
-        "grasp",
-        "it",
-        "."
-      ],
-      "phraseMeaning": "それをつかむことを選択すれば"
-    },
-    {
-      "id": "phrase-788",
-      "words": [
-        "The",
-        "choice",
-        "is",
-        "ours",
-        "."
-      ],
-      "phraseMeaning": "選択は私たち次第です"
-    },
-    {
-      "id": "phrase-789",
-      "words": [
-        "Let",
-        "us",
-        "choose",
-        "wisely",
-        "."
-      ],
-      "phraseMeaning": "賢く選びましょう"
-    },
-    {
-      "id": "phrase-790",
-      "words": [
-        "For",
-        "the",
-        "Earth",
-        "."
-      ],
-      "phraseMeaning": "地球のために"
-    },
-    {
-      "id": "phrase-791",
-      "words": [
-        "For",
-        "each",
-        "other",
-        "."
-      ],
-      "phraseMeaning": "お互いのために"
-    },
-    {
-      "id": "phrase-792",
-      "words": [
-        "For",
-        "the",
-        "future",
-        "."
-      ],
-      "phraseMeaning": "未来のために"
-    },
-    {
-      "id": "phrase-793",
       "words": [
         "Sustainability",
         "is",
@@ -9881,7 +5948,7 @@
       "phraseMeaning": "持続可能性は犠牲ではありません"
     },
     {
-      "id": "phrase-794",
+      "id": "phrase-474",
       "words": [
         "It",
         "is",
@@ -9893,7 +5960,7 @@
       "phraseMeaning": "未来への投資です"
     },
     {
-      "id": "phrase-795",
+      "id": "phrase-475",
       "words": [
         "Better",
         "quality",
@@ -9906,7 +5973,7 @@
       "phraseMeaning": "すべての人のためのより良い生活の質"
     },
     {
-      "id": "phrase-796",
+      "id": "phrase-476",
       "words": [
         "Cleaner",
         "environment",
@@ -9917,7 +5984,7 @@
       "phraseMeaning": "よりきれいな環境より健康な人々"
     },
     {
-      "id": "phrase-797",
+      "id": "phrase-477",
       "words": [
         "Stronger",
         "communities",
@@ -9928,7 +5995,7 @@
       "phraseMeaning": "より強いコミュニティ回復力のある経済"
     },
     {
-      "id": "phrase-798",
+      "id": "phrase-478",
       "words": [
         "This",
         "is",
@@ -9940,7 +6007,7 @@
       "phraseMeaning": "これは私たちの手の届くところにあります"
     },
     {
-      "id": "phrase-799",
+      "id": "phrase-479",
       "words": [
         "Technology",
         "provides",
@@ -9950,7 +6017,7 @@
       "phraseMeaning": "テクノロジーがツールを提供します"
     },
     {
-      "id": "phrase-800",
+      "id": "phrase-480",
       "words": [
         "Policy",
         "creates",
@@ -9960,7 +6027,7 @@
       "phraseMeaning": "政策が枠組みを作ります"
     },
     {
-      "id": "phrase-801",
+      "id": "phrase-481",
       "words": [
         "Individual",
         "action",
@@ -9971,7 +6038,7 @@
       "phraseMeaning": "個人の行動が勢いを築きます"
     },
     {
-      "id": "phrase-802",
+      "id": "phrase-482",
       "words": [
         "Together",
         "they",
@@ -9982,7 +6049,7 @@
       "phraseMeaning": "一緒に彼らは変革を生み出します"
     },
     {
-      "id": "phrase-803",
+      "id": "phrase-483",
       "words": [
         "Young",
         "people",
@@ -9994,7 +6061,7 @@
       "phraseMeaning": "若者が道をリードします"
     },
     {
-      "id": "phrase-804",
+      "id": "phrase-484",
       "words": [
         "With",
         "passion",
@@ -10005,7 +6072,7 @@
       "phraseMeaning": "情熱と緊急性を持って"
     },
     {
-      "id": "phrase-805",
+      "id": "phrase-485",
       "words": [
         "They",
         "demand",
@@ -10017,7 +6084,7 @@
       "phraseMeaning": "彼らはリーダーに行動を要求します"
     },
     {
-      "id": "phrase-806",
+      "id": "phrase-486",
       "words": [
         "They",
         "innovate",
@@ -10028,7 +6095,7 @@
       "phraseMeaning": "彼らは革新し組織します"
     },
     {
-      "id": "phrase-807",
+      "id": "phrase-487",
       "words": [
         "Their",
         "future",
@@ -10040,7 +6107,7 @@
       "phraseMeaning": "彼らの未来はそれにかかっています"
     },
     {
-      "id": "phrase-808",
+      "id": "phrase-488",
       "words": [
         "Businesses",
         "increasingly",
@@ -10051,7 +6118,7 @@
       "phraseMeaning": "企業はますます持続可能性を受け入れています"
     },
     {
-      "id": "phrase-809",
+      "id": "phrase-489",
       "words": [
         "Not",
         "just",
@@ -10062,7 +6129,7 @@
       "phraseMeaning": "倫理のためだけでなく"
     },
     {
-      "id": "phrase-810",
+      "id": "phrase-490",
       "words": [
         "But",
         "for",
@@ -10073,7 +6140,7 @@
       "phraseMeaning": "しかし競争上の優位のために"
     },
     {
-      "id": "phrase-811",
+      "id": "phrase-491",
       "words": [
         "Consumers",
         "demand",
@@ -10083,7 +6150,7 @@
       "phraseMeaning": "消費者はそれを要求します"
     },
     {
-      "id": "phrase-812",
+      "id": "phrase-492",
       "words": [
         "Investors",
         "reward",
@@ -10093,7 +6160,7 @@
       "phraseMeaning": "投資家はそれに報います"
     },
     {
-      "id": "phrase-813",
+      "id": "phrase-493",
       "words": [
         "Sustainability",
         "reports",
@@ -10104,7 +6171,7 @@
       "phraseMeaning": "持続可能性レポートは進歩を示します"
     },
     {
-      "id": "phrase-814",
+      "id": "phrase-494",
       "words": [
         "Transparency",
         "builds",
@@ -10114,7 +6181,7 @@
       "phraseMeaning": "透明性は信頼を築きます"
     },
     {
-      "id": "phrase-815",
+      "id": "phrase-495",
       "words": [
         "Accountability",
         "drives",
@@ -10124,7 +6191,7 @@
       "phraseMeaning": "説明責任は改善を推進します"
     },
     {
-      "id": "phrase-816",
+      "id": "phrase-496",
       "words": [
         "Governments",
         "at",
@@ -10137,7 +6204,7 @@
       "phraseMeaning": "すべてのレベルの政府が行動できます"
     },
     {
-      "id": "phrase-817",
+      "id": "phrase-497",
       "words": [
         "National",
         "policies",
@@ -10148,7 +6215,7 @@
       "phraseMeaning": "国家政策は方向性を設定します"
     },
     {
-      "id": "phrase-818",
+      "id": "phrase-498",
       "words": [
         "Local",
         "initiatives",
@@ -10159,7 +6226,7 @@
       "phraseMeaning": "地方の取り組みが解決策を実施します"
     },
     {
-      "id": "phrase-819",
+      "id": "phrase-499",
       "words": [
         "Cities",
         "lead",
@@ -10169,7 +6236,7 @@
       "phraseMeaning": "都市が革新をリードします"
     },
     {
-      "id": "phrase-820",
+      "id": "phrase-500",
       "words": [
         "Where",
         "most",
@@ -10180,7 +6247,7 @@
       "phraseMeaning": "ほとんどの人が住む場所"
     },
     {
-      "id": "phrase-821",
+      "id": "phrase-501",
       "words": [
         "Where",
         "impact",
@@ -10191,7 +6258,7 @@
       "phraseMeaning": "影響が最大の場所"
     },
     {
-      "id": "phrase-822",
+      "id": "phrase-502",
       "words": [
         "International",
         "cooperation",
@@ -10203,7 +6270,7 @@
       "phraseMeaning": "国際協力は世界的課題に対処します"
     },
     {
-      "id": "phrase-823",
+      "id": "phrase-503",
       "words": [
         "Climate",
         "change",
@@ -10215,7 +6282,7 @@
       "phraseMeaning": "気候変動は国境を知りません"
     },
     {
-      "id": "phrase-824",
+      "id": "phrase-504",
       "words": [
         "We",
         "succeed",
@@ -10228,20 +6295,7 @@
       "phraseMeaning": "一緒に成功するか一緒に失敗するか"
     },
     {
-      "id": "phrase-825",
-      "words": [
-        "The",
-        "time",
-        "for",
-        "action",
-        "is",
-        "now",
-        "."
-      ],
-      "phraseMeaning": "行動の時は今です"
-    },
-    {
-      "id": "phrase-826",
+      "id": "phrase-505",
       "words": [
         "Every",
         "year",
@@ -10251,7 +6305,7 @@
       "phraseMeaning": "毎年が重要です"
     },
     {
-      "id": "phrase-827",
+      "id": "phrase-506",
       "words": [
         "Every",
         "decision",
@@ -10261,7 +6315,7 @@
       "phraseMeaning": "すべての決定が重要です"
     },
     {
-      "id": "phrase-828",
+      "id": "phrase-507",
       "words": [
         "We",
         "can",
@@ -10273,7 +6327,7 @@
       "phraseMeaning": "私たちは持続可能な社会を作ることができます"
     },
     {
-      "id": "phrase-829",
+      "id": "phrase-508",
       "words": [
         "Where",
         "people",
@@ -10285,7 +6339,7 @@
       "phraseMeaning": "人々と地球が繁栄する場所"
     },
     {
-      "id": "phrase-830",
+      "id": "phrase-509",
       "words": [
         "This",
         "is",
@@ -10297,7 +6351,7 @@
       "phraseMeaning": "これは私たちの共有された責任です"
     },
     {
-      "id": "phrase-831",
+      "id": "phrase-510",
       "words": [
         "And",
         "our",
@@ -10308,7 +6362,7 @@
       "phraseMeaning": "そして私たちの最大の機会です"
     },
     {
-      "id": "phrase-832",
+      "id": "phrase-511",
       "words": [
         "Let",
         "us",

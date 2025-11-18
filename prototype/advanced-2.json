@@ -2,7 +2,7 @@
   "title": "AI and Future Society",
   "level": "Advanced",
   "targetWordCount": 3500,
-  "actualWordCount": 2271,
+  "actualWordCount": 2268,
   "phrases": [
     {
       "id": "phrase-1",
@@ -3604,16 +3604,6 @@
     {
       "id": "phrase-306",
       "words": [
-        "Consider",
-        "societal",
-        "impact",
-        "."
-      ],
-      "phraseMeaning": "社会的影響を考慮します"
-    },
-    {
-      "id": "phrase-307",
-      "words": [
         "Case",
         "studies",
         "of",
@@ -3624,7 +3614,7 @@
       "phraseMeaning": "AI失敗の事例研究"
     },
     {
-      "id": "phrase-308",
+      "id": "phrase-307",
       "words": [
         "Learn",
         "from",
@@ -3635,7 +3625,7 @@
       "phraseMeaning": "過去の間違いから学びます"
     },
     {
-      "id": "phrase-309",
+      "id": "phrase-308",
       "words": [
         "Public",
         "private",
@@ -3647,7 +3637,7 @@
       "phraseMeaning": "官民パートナーシップはAIを進歩させます"
     },
     {
-      "id": "phrase-310",
+      "id": "phrase-309",
       "words": [
         "Governments",
         "fund",
@@ -3658,7 +3648,7 @@
       "phraseMeaning": "政府は基礎研究に資金を提供します"
     },
     {
-      "id": "phrase-311",
+      "id": "phrase-310",
       "words": [
         "Companies",
         "develop",
@@ -3668,7 +3658,7 @@
       "phraseMeaning": "企業はアプリケーションを開発します"
     },
     {
-      "id": "phrase-312",
+      "id": "phrase-311",
       "words": [
         "Universities",
         "train",
@@ -3678,7 +3668,7 @@
       "phraseMeaning": "大学は人材を訓練します"
     },
     {
-      "id": "phrase-313",
+      "id": "phrase-312",
       "words": [
         "Collaboration",
         "accelerates",
@@ -3688,7 +3678,7 @@
       "phraseMeaning": "協力は進歩を加速します"
     },
     {
-      "id": "phrase-314",
+      "id": "phrase-313",
       "words": [
         "Shares",
         "knowledge",
@@ -3699,7 +3689,7 @@
       "phraseMeaning": "知識とリソースを共有します"
     },
     {
-      "id": "phrase-315",
+      "id": "phrase-314",
       "words": [
         "AI",
         "competitions",
@@ -3710,7 +3700,7 @@
       "phraseMeaning": "AIコンペティションは革新を推進します"
     },
     {
-      "id": "phrase-316",
+      "id": "phrase-315",
       "words": [
         "Challenges",
         "with",
@@ -3720,7 +3710,7 @@
       "phraseMeaning": "賞金付きチャレンジ"
     },
     {
-      "id": "phrase-317",
+      "id": "phrase-316",
       "words": [
         "Teams",
         "compete",
@@ -3732,7 +3722,7 @@
       "phraseMeaning": "チームは問題を解決するために競争します"
     },
     {
-      "id": "phrase-318",
+      "id": "phrase-317",
       "words": [
         "Best",
         "solutions",
@@ -3743,7 +3733,7 @@
       "phraseMeaning": "最良のソリューションが共有されます"
     },
     {
-      "id": "phrase-319",
+      "id": "phrase-318",
       "words": [
         "Open",
         "source",
@@ -3756,7 +3746,7 @@
       "phraseMeaning": "オープンソースAIツールはアクセスを民主化します"
     },
     {
-      "id": "phrase-320",
+      "id": "phrase-319",
       "words": [
         "Free",
         "libraries",
@@ -3767,7 +3757,7 @@
       "phraseMeaning": "無料のライブラリとフレームワーク"
     },
     {
-      "id": "phrase-321",
+      "id": "phrase-320",
       "words": [
         "Anyone",
         "can",
@@ -3779,7 +3769,7 @@
       "phraseMeaning": "誰でもAIアプリケーションを構築できます"
     },
     {
-      "id": "phrase-322",
+      "id": "phrase-321",
       "words": [
         "Not",
         "just",
@@ -3790,7 +3780,7 @@
       "phraseMeaning": "大企業だけでなく"
     },
     {
-      "id": "phrase-323",
+      "id": "phrase-322",
       "words": [
         "Encourages",
         "innovation",
@@ -3801,7 +3791,7 @@
       "phraseMeaning": "世界的に革新を促進します"
     },
     {
-      "id": "phrase-324",
+      "id": "phrase-323",
       "words": [
         "But",
         "also",
@@ -3812,7 +3802,7 @@
       "phraseMeaning": "しかし悪用も可能にします"
     },
     {
-      "id": "phrase-325",
+      "id": "phrase-324",
       "words": [
         "Dual",
         "use",
@@ -3822,7 +3812,7 @@
       "phraseMeaning": "デュアルユース技術"
     },
     {
-      "id": "phrase-326",
+      "id": "phrase-325",
       "words": [
         "Can",
         "be",
@@ -3836,7 +3826,7 @@
       "phraseMeaning": "良いことにも害にも使用できます"
     },
     {
-      "id": "phrase-327",
+      "id": "phrase-326",
       "words": [
         "AI",
         "alignment",
@@ -3848,7 +3838,7 @@
       "phraseMeaning": "AI整合性問題は根本的です"
     },
     {
-      "id": "phrase-328",
+      "id": "phrase-327",
       "words": [
         "Ensuring",
         "AI",
@@ -3861,7 +3851,7 @@
       "phraseMeaning": "AIの目標が人間の価値観と一致することを保証します"
     },
     {
-      "id": "phrase-329",
+      "id": "phrase-328",
       "words": [
         "As",
         "systems",
@@ -3873,7 +3863,7 @@
       "phraseMeaning": "システムがより自律的になるにつれて"
     },
     {
-      "id": "phrase-330",
+      "id": "phrase-329",
       "words": [
         "This",
         "becomes",
@@ -3884,7 +3874,7 @@
       "phraseMeaning": "これはより重要になります"
     },
     {
-      "id": "phrase-331",
+      "id": "phrase-330",
       "words": [
         "Inverse",
         "reinforcement",
@@ -3897,7 +3887,7 @@
       "phraseMeaning": "逆強化学習は人間の好みを推測します"
     },
     {
-      "id": "phrase-332",
+      "id": "phrase-331",
       "words": [
         "By",
         "observing",
@@ -3907,7 +3897,7 @@
       "phraseMeaning": "行動を観察することによって"
     },
     {
-      "id": "phrase-333",
+      "id": "phrase-332",
       "words": [
         "Rather",
         "than",
@@ -3918,7 +3908,7 @@
       "phraseMeaning": "明示的なプログラミングではなく"
     },
     {
-      "id": "phrase-334",
+      "id": "phrase-333",
       "words": [
         "AI",
         "transparency",
@@ -3930,7 +3920,7 @@
       "phraseMeaning": "AI透明性イニシアチブは開放性を促進します"
     },
     {
-      "id": "phrase-335",
+      "id": "phrase-334",
       "words": [
         "Companies",
         "disclose",
@@ -3942,7 +3932,7 @@
       "phraseMeaning": "企業はアルゴリズムがどのように機能するかを開示します"
     },
     {
-      "id": "phrase-336",
+      "id": "phrase-335",
       "words": [
         "What",
         "data",
@@ -3953,7 +3943,7 @@
       "phraseMeaning": "どのようなデータが使用されるか"
     },
     {
-      "id": "phrase-337",
+      "id": "phrase-336",
       "words": [
         "How",
         "decisions",
@@ -3964,7 +3954,7 @@
       "phraseMeaning": "決定がどのように行われるか"
     },
     {
-      "id": "phrase-338",
+      "id": "phrase-337",
       "words": [
         "This",
         "allows",
@@ -3976,7 +3966,7 @@
       "phraseMeaning": "これは精査と改善を可能にします"
     },
     {
-      "id": "phrase-339",
+      "id": "phrase-338",
       "words": [
         "The",
         "environmental",
@@ -3990,7 +3980,7 @@
       "phraseMeaning": "AIの環境コストは重大です"
     },
     {
-      "id": "phrase-340",
+      "id": "phrase-339",
       "words": [
         "Training",
         "large",
@@ -4003,7 +3993,7 @@
       "phraseMeaning": "大規模モデルの訓練は大量のエネルギーを使用します"
     },
     {
-      "id": "phrase-341",
+      "id": "phrase-340",
       "words": [
         "Data",
         "centers",
@@ -4014,7 +4004,7 @@
       "phraseMeaning": "データセンターは電力を消費します"
     },
     {
-      "id": "phrase-342",
+      "id": "phrase-341",
       "words": [
         "Carbon",
         "footprint",
@@ -4026,7 +4016,7 @@
       "phraseMeaning": "カーボンフットプリントは相当なものになる可能性があります"
     },
     {
-      "id": "phrase-343",
+      "id": "phrase-342",
       "words": [
         "Green",
         "AI",
@@ -4038,7 +4028,7 @@
       "phraseMeaning": "グリーンAIは効率に焦点を当てます"
     },
     {
-      "id": "phrase-344",
+      "id": "phrase-343",
       "words": [
         "Developing",
         "smaller",
@@ -4050,7 +4040,7 @@
       "phraseMeaning": "より小さくより効率的なモデルを開発します"
     },
     {
-      "id": "phrase-345",
+      "id": "phrase-344",
       "words": [
         "Using",
         "renewable",
@@ -4062,7 +4052,7 @@
       "phraseMeaning": "計算に再生可能エネルギーを使用します"
     },
     {
-      "id": "phrase-346",
+      "id": "phrase-345",
       "words": [
         "Measuring",
         "and",
@@ -4074,7 +4064,7 @@
       "phraseMeaning": "エネルギー使用を測定し報告します"
     },
     {
-      "id": "phrase-347",
+      "id": "phrase-346",
       "words": [
         "AI",
         "for",
@@ -4088,7 +4078,7 @@
       "phraseMeaning": "社会的善のためのAIは世界的課題に取り組みます"
     },
     {
-      "id": "phrase-348",
+      "id": "phrase-347",
       "words": [
         "Poverty",
         "disease",
@@ -4098,7 +4088,7 @@
       "phraseMeaning": "貧困病気不平等"
     },
     {
-      "id": "phrase-349",
+      "id": "phrase-348",
       "words": [
         "Uses",
         "technology",
@@ -4111,7 +4101,7 @@
       "phraseMeaning": "脆弱な人々を助けるために技術を使用します"
     },
     {
-      "id": "phrase-350",
+      "id": "phrase-349",
       "words": [
         "Improving",
         "access",
@@ -4122,7 +4112,7 @@
       "phraseMeaning": "サービスへのアクセスを改善します"
     },
     {
-      "id": "phrase-351",
+      "id": "phrase-350",
       "words": [
         "Education",
         "healthcare",
@@ -4133,7 +4123,7 @@
       "phraseMeaning": "教育医療金融包摂"
     },
     {
-      "id": "phrase-352",
+      "id": "phrase-351",
       "words": [
         "Many",
         "organizations",
@@ -4146,7 +4136,7 @@
       "phraseMeaning": "多くの組織がこの分野で働いています"
     },
     {
-      "id": "phrase-353",
+      "id": "phrase-352",
       "words": [
         "Nonprofits",
         "researchers",
@@ -4156,7 +4146,7 @@
       "phraseMeaning": "非営利組織研究者企業"
     },
     {
-      "id": "phrase-354",
+      "id": "phrase-353",
       "words": [
         "Collaboration",
         "is",
@@ -4166,7 +4156,7 @@
       "phraseMeaning": "協力が鍵です"
     },
     {
-      "id": "phrase-355",
+      "id": "phrase-354",
       "words": [
         "The",
         "future",
@@ -4180,7 +4170,7 @@
       "phraseMeaning": "AIの未来は私たち次第です"
     },
     {
-      "id": "phrase-356",
+      "id": "phrase-355",
       "words": [
         "Choices",
         "we",
@@ -4191,7 +4181,7 @@
       "phraseMeaning": "今日私たちが行う選択"
     },
     {
-      "id": "phrase-357",
+      "id": "phrase-356",
       "words": [
         "Shape",
         "tomorrow's",
@@ -4201,7 +4191,7 @@
       "phraseMeaning": "明日の世界を形作ります"
     },
     {
-      "id": "phrase-358",
+      "id": "phrase-357",
       "words": [
         "We",
         "can",
@@ -4213,7 +4203,7 @@
       "phraseMeaning": "有益なAIを作ることができます"
     },
     {
-      "id": "phrase-359",
+      "id": "phrase-358",
       "words": [
         "That",
         "enhances",
@@ -4224,7 +4214,7 @@
       "phraseMeaning": "人間の能力を向上させる"
     },
     {
-      "id": "phrase-360",
+      "id": "phrase-359",
       "words": [
         "Solves",
         "pressing",
@@ -4234,7 +4224,7 @@
       "phraseMeaning": "緊急の問題を解決します"
     },
     {
-      "id": "phrase-361",
+      "id": "phrase-360",
       "words": [
         "Improves",
         "quality",
@@ -4246,7 +4236,7 @@
       "phraseMeaning": "生活の質を改善します"
     },
     {
-      "id": "phrase-362",
+      "id": "phrase-361",
       "words": [
         "Or",
         "we",
@@ -4259,7 +4249,7 @@
       "phraseMeaning": "または有害なAIを作ることができます"
     },
     {
-      "id": "phrase-363",
+      "id": "phrase-362",
       "words": [
         "That",
         "increases",
@@ -4269,7 +4259,7 @@
       "phraseMeaning": "不平等を増加させる"
     },
     {
-      "id": "phrase-364",
+      "id": "phrase-363",
       "words": [
         "Concentrates",
         "power",
@@ -4278,7 +4268,7 @@
       "phraseMeaning": "権力を集中させる"
     },
     {
-      "id": "phrase-365",
+      "id": "phrase-364",
       "words": [
         "Threatens",
         "freedoms",
@@ -4287,7 +4277,7 @@
       "phraseMeaning": "自由を脅かす"
     },
     {
-      "id": "phrase-366",
+      "id": "phrase-365",
       "words": [
         "The",
         "choice",
@@ -4298,7 +4288,7 @@
       "phraseMeaning": "選択には知恵が必要です"
     },
     {
-      "id": "phrase-367",
+      "id": "phrase-366",
       "words": [
         "Foresight",
         "and",
@@ -4308,7 +4298,7 @@
       "phraseMeaning": "先見の明と勇気"
     },
     {
-      "id": "phrase-368",
+      "id": "phrase-367",
       "words": [
         "To",
         "prioritize",
@@ -4319,7 +4309,7 @@
       "phraseMeaning": "人間の福祉を優先するために"
     },
     {
-      "id": "phrase-369",
+      "id": "phrase-368",
       "words": [
         "Over",
         "profit",
@@ -4330,7 +4320,7 @@
       "phraseMeaning": "利益と権力を超えて"
     },
     {
-      "id": "phrase-370",
+      "id": "phrase-369",
       "words": [
         "To",
         "ensure",
@@ -4342,7 +4332,7 @@
       "phraseMeaning": "利益が共有されることを保証するために"
     },
     {
-      "id": "phrase-371",
+      "id": "phrase-370",
       "words": [
         "Not",
         "hoarded",
@@ -4354,7 +4344,7 @@
       "phraseMeaning": "少数に独占されない"
     },
     {
-      "id": "phrase-372",
+      "id": "phrase-371",
       "words": [
         "To",
         "preserve",
@@ -4365,7 +4355,7 @@
       "phraseMeaning": "人間の主体性を保つために"
     },
     {
-      "id": "phrase-373",
+      "id": "phrase-372",
       "words": [
         "In",
         "an",
@@ -4378,7 +4368,7 @@
       "phraseMeaning": "知的機械の時代において"
     },
     {
-      "id": "phrase-374",
+      "id": "phrase-373",
       "words": [
         "This",
         "is",
@@ -4393,7 +4383,7 @@
       "phraseMeaning": "これは私たちの時代の大きな課題です"
     },
     {
-      "id": "phrase-375",
+      "id": "phrase-374",
       "words": [
         "How",
         "we",
@@ -4406,7 +4396,7 @@
       "phraseMeaning": "私たちがどのように対応するかが私たちを定義します"
     },
     {
-      "id": "phrase-376",
+      "id": "phrase-375",
       "words": [
         "Let",
         "us",
@@ -4419,7 +4409,7 @@
       "phraseMeaning": "賢明によく選びましょう"
     },
     {
-      "id": "phrase-377",
+      "id": "phrase-376",
       "words": [
         "AI",
         "transforms",
@@ -4430,7 +4420,7 @@
       "phraseMeaning": "AIはエンターテインメント産業を変革します"
     },
     {
-      "id": "phrase-378",
+      "id": "phrase-377",
       "words": [
         "Personalized",
         "content",
@@ -4440,7 +4430,7 @@
       "phraseMeaning": "パーソナライズされたコンテンツ推奨"
     },
     {
-      "id": "phrase-379",
+      "id": "phrase-378",
       "words": [
         "Video",
         "games",
@@ -4454,7 +4444,7 @@
       "phraseMeaning": "ビデオゲームはリアルなキャラクターにAIを使用します"
     },
     {
-      "id": "phrase-380",
+      "id": "phrase-379",
       "words": [
         "Non",
         "player",
@@ -4468,7 +4458,7 @@
       "phraseMeaning": "ノンプレイヤーキャラクターはプレイヤーの行動に適応します"
     },
     {
-      "id": "phrase-381",
+      "id": "phrase-380",
       "words": [
         "Creating",
         "dynamic",
@@ -4478,7 +4468,7 @@
       "phraseMeaning": "ダイナミックな体験を作り出します"
     },
     {
-      "id": "phrase-382",
+      "id": "phrase-381",
       "words": [
         "Movie",
         "production",
@@ -4490,7 +4480,7 @@
       "phraseMeaning": "映画制作はAI効果を使用します"
     },
     {
-      "id": "phrase-383",
+      "id": "phrase-382",
       "words": [
         "De",
         "aging",
@@ -4501,7 +4491,7 @@
       "phraseMeaning": "俳優をデジタルで若返らせます"
     },
     {
-      "id": "phrase-384",
+      "id": "phrase-383",
       "words": [
         "Creating",
         "realistic",
@@ -4512,7 +4502,7 @@
       "phraseMeaning": "リアルなCGIキャラクターを作成します"
     },
     {
-      "id": "phrase-385",
+      "id": "phrase-384",
       "words": [
         "Automating",
         "tedious",
@@ -4523,7 +4513,7 @@
       "phraseMeaning": "退屈な編集作業を自動化します"
     },
     {
-      "id": "phrase-386",
+      "id": "phrase-385",
       "words": [
         "Music",
         "composition",
@@ -4536,7 +4526,7 @@
       "phraseMeaning": "音楽作曲AIはオリジナル作品を作成します"
     },
     {
-      "id": "phrase-387",
+      "id": "phrase-386",
       "words": [
         "In",
         "various",
@@ -4548,7 +4538,7 @@
       "phraseMeaning": "さまざまなスタイルとジャンルで"
     },
     {
-      "id": "phrase-388",
+      "id": "phrase-387",
       "words": [
         "Can",
         "assist",
@@ -4560,7 +4550,7 @@
       "phraseMeaning": "人間の作曲家を支援できます"
     },
     {
-      "id": "phrase-389",
+      "id": "phrase-388",
       "words": [
         "Or",
         "generate",
@@ -4571,7 +4561,7 @@
       "phraseMeaning": "またはバックグラウンドミュージックを生成します"
     },
     {
-      "id": "phrase-390",
+      "id": "phrase-389",
       "words": [
         "Journalism",
         "uses",
@@ -4584,7 +4574,7 @@
       "phraseMeaning": "ジャーナリズムはデータ分析にAIを使用します"
     },
     {
-      "id": "phrase-391",
+      "id": "phrase-390",
       "words": [
         "Automated",
         "article",
@@ -4597,7 +4587,7 @@
       "phraseMeaning": "ルーチンストーリーの自動記事生成"
     },
     {
-      "id": "phrase-392",
+      "id": "phrase-391",
       "words": [
         "Sports",
         "scores",
@@ -4609,7 +4599,7 @@
       "phraseMeaning": "スポーツスコア財務レポート天気"
     },
     {
-      "id": "phrase-393",
+      "id": "phrase-392",
       "words": [
         "Fact",
         "checking",
@@ -4621,7 +4611,7 @@
       "phraseMeaning": "ファクトチェックツールは情報を検証します"
     },
     {
-      "id": "phrase-394",
+      "id": "phrase-393",
       "words": [
         "Help",
         "combat",
@@ -4631,7 +4621,7 @@
       "phraseMeaning": "誤情報と戦うのを助けます"
     },
     {
-      "id": "phrase-395",
+      "id": "phrase-394",
       "words": [
         "Language",
         "translation",
@@ -4643,7 +4633,7 @@
       "phraseMeaning": "言語翻訳AIは障壁を破ります"
     },
     {
-      "id": "phrase-396",
+      "id": "phrase-395",
       "words": [
         "Real",
         "time",
@@ -4655,7 +4645,7 @@
       "phraseMeaning": "会話でのリアルタイム翻訳"
     },
     {
-      "id": "phrase-397",
+      "id": "phrase-396",
       "words": [
         "Document",
         "translation",
@@ -4666,7 +4656,7 @@
       "phraseMeaning": "大規模なドキュメント翻訳"
     },
     {
-      "id": "phrase-398",
+      "id": "phrase-397",
       "words": [
         "Not",
         "perfect",
@@ -4677,7 +4667,7 @@
       "phraseMeaning": "完璧ではないが改善しています"
     },
     {
-      "id": "phrase-399",
+      "id": "phrase-398",
       "words": [
         "Facilitates",
         "global",
@@ -4687,7 +4677,7 @@
       "phraseMeaning": "グローバルコミュニケーションを促進します"
     },
     {
-      "id": "phrase-400",
+      "id": "phrase-399",
       "words": [
         "Virtual",
         "reality",
@@ -4699,7 +4689,7 @@
       "phraseMeaning": "AIと組み合わせた仮想現実"
     },
     {
-      "id": "phrase-401",
+      "id": "phrase-400",
       "words": [
         "Creates",
         "immersive",
@@ -4710,7 +4700,7 @@
       "phraseMeaning": "没入的で応答性の高い環境を作成します"
     },
     {
-      "id": "phrase-402",
+      "id": "phrase-401",
       "words": [
         "Training",
         "simulations",
@@ -4722,7 +4712,7 @@
       "phraseMeaning": "危険な仕事のトレーニングシミュレーション"
     },
     {
-      "id": "phrase-403",
+      "id": "phrase-402",
       "words": [
         "Pilots",
         "surgeons",
@@ -4732,7 +4722,7 @@
       "phraseMeaning": "パイロット外科医消防士"
     },
     {
-      "id": "phrase-404",
+      "id": "phrase-403",
       "words": [
         "Practice",
         "without",
@@ -4744,7 +4734,7 @@
       "phraseMeaning": "実世界のリスクなしに練習します"
     },
     {
-      "id": "phrase-405",
+      "id": "phrase-404",
       "words": [
         "Augmented",
         "reality",
@@ -4756,7 +4746,7 @@
       "phraseMeaning": "拡張現実はデジタル情報を重ね合わせます"
     },
     {
-      "id": "phrase-406",
+      "id": "phrase-405",
       "words": [
         "On",
         "physical",
@@ -4766,7 +4756,7 @@
       "phraseMeaning": "物理世界に"
     },
     {
-      "id": "phrase-407",
+      "id": "phrase-406",
       "words": [
         "Navigation",
         "assistance",
@@ -4775,7 +4765,7 @@
       "phraseMeaning": "ナビゲーション支援"
     },
     {
-      "id": "phrase-408",
+      "id": "phrase-407",
       "words": [
         "Maintenance",
         "instructions",
@@ -4784,7 +4774,7 @@
       "phraseMeaning": "メンテナンス指示"
     },
     {
-      "id": "phrase-409",
+      "id": "phrase-408",
       "words": [
         "Educational",
         "content",
@@ -4793,7 +4783,7 @@
       "phraseMeaning": "教育コンテンツ"
     },
     {
-      "id": "phrase-410",
+      "id": "phrase-409",
       "words": [
         "Enhances",
         "real",
@@ -4804,7 +4794,7 @@
       "phraseMeaning": "実世界の体験を向上させます"
     },
     {
-      "id": "phrase-411",
+      "id": "phrase-410",
       "words": [
         "Brain",
         "computer",
@@ -4816,7 +4806,7 @@
       "phraseMeaning": "脳コンピュータインターフェースはAIを使用します"
     },
     {
-      "id": "phrase-412",
+      "id": "phrase-411",
       "words": [
         "Interpret",
         "neural",
@@ -4826,7 +4816,7 @@
       "phraseMeaning": "神経信号を解釈します"
     },
     {
-      "id": "phrase-413",
+      "id": "phrase-412",
       "words": [
         "Control",
         "devices",
@@ -4837,7 +4827,7 @@
       "phraseMeaning": "思考でデバイスを制御します"
     },
     {
-      "id": "phrase-414",
+      "id": "phrase-413",
       "words": [
         "Help",
         "paralyzed",
@@ -4848,7 +4838,7 @@
       "phraseMeaning": "麻痺した人々がコミュニケーションするのを助けます"
     },
     {
-      "id": "phrase-415",
+      "id": "phrase-414",
       "words": [
         "Early",
         "stage",
@@ -4859,7 +4849,7 @@
       "phraseMeaning": "初期段階だが有望です"
     },
     {
-      "id": "phrase-416",
+      "id": "phrase-415",
       "words": [
         "Quantum",
         "computing",
@@ -4871,7 +4861,7 @@
       "phraseMeaning": "量子コンピューティングはAIを後押しします"
     },
     {
-      "id": "phrase-417",
+      "id": "phrase-416",
       "words": [
         "Solve",
         "problems",
@@ -4883,7 +4873,7 @@
       "phraseMeaning": "古典的コンピュータができない問題を解決します"
     },
     {
-      "id": "phrase-418",
+      "id": "phrase-417",
       "words": [
         "Exponentially",
         "faster",
@@ -4893,7 +4883,7 @@
       "phraseMeaning": "指数関数的に高速な処理"
     },
     {
-      "id": "phrase-419",
+      "id": "phrase-418",
       "words": [
         "Could",
         "revolutionize",
@@ -4903,7 +4893,7 @@
       "phraseMeaning": "暗号化を革命化する可能性があります"
     },
     {
-      "id": "phrase-420",
+      "id": "phrase-419",
       "words": [
         "Drug",
         "discovery",
@@ -4914,7 +4904,7 @@
       "phraseMeaning": "創薬と最適化"
     },
     {
-      "id": "phrase-421",
+      "id": "phrase-420",
       "words": [
         "Edge",
         "AI",
@@ -4926,7 +4916,7 @@
       "phraseMeaning": "エッジAIはデータをローカルで処理します"
     },
     {
-      "id": "phrase-422",
+      "id": "phrase-421",
       "words": [
         "On",
         "device",
@@ -4938,7 +4928,7 @@
       "phraseMeaning": "クラウドではなくデバイス上で"
     },
     {
-      "id": "phrase-423",
+      "id": "phrase-422",
       "words": [
         "Faster",
         "response",
@@ -4948,7 +4938,7 @@
       "phraseMeaning": "より速い応答時間"
     },
     {
-      "id": "phrase-424",
+      "id": "phrase-423",
       "words": [
         "Better",
         "privacy",
@@ -4957,7 +4947,7 @@
       "phraseMeaning": "より良いプライバシー"
     },
     {
-      "id": "phrase-425",
+      "id": "phrase-424",
       "words": [
         "Works",
         "offline",
@@ -4966,7 +4956,7 @@
       "phraseMeaning": "オフラインで動作します"
     },
     {
-      "id": "phrase-426",
+      "id": "phrase-425",
       "words": [
         "Important",
         "for",
@@ -4977,7 +4967,7 @@
       "phraseMeaning": "自動運転車に重要です"
     },
     {
-      "id": "phrase-427",
+      "id": "phrase-426",
       "words": [
         "And",
         "IoT",
@@ -4987,7 +4977,7 @@
       "phraseMeaning": "そしてIoTデバイス"
     },
     {
-      "id": "phrase-428",
+      "id": "phrase-427",
       "words": [
         "Swarm",
         "intelligence",
@@ -4998,7 +4988,7 @@
       "phraseMeaning": "群知能は自然を模倣します"
     },
     {
-      "id": "phrase-429",
+      "id": "phrase-428",
       "words": [
         "Multiple",
         "simple",
@@ -5009,7 +4999,7 @@
       "phraseMeaning": "複数の単純なエージェントが調整します"
     },
     {
-      "id": "phrase-430",
+      "id": "phrase-429",
       "words": [
         "Like",
         "ants",
@@ -5020,7 +5010,7 @@
       "phraseMeaning": "アリやミツバチのように"
     },
     {
-      "id": "phrase-431",
+      "id": "phrase-430",
       "words": [
         "Collective",
         "behavior",
@@ -5032,7 +5022,7 @@
       "phraseMeaning": "集団行動は複雑な問題を解決します"
     },
     {
-      "id": "phrase-432",
+      "id": "phrase-431",
       "words": [
         "Used",
         "in",
@@ -5044,7 +5034,7 @@
       "phraseMeaning": "ロボット工学と最適化で使用されます"
     },
     {
-      "id": "phrase-433",
+      "id": "phrase-432",
       "words": [
         "Emotional",
         "AI",
@@ -5056,7 +5046,7 @@
       "phraseMeaning": "感情的AIは人間の感情を検出します"
     },
     {
-      "id": "phrase-434",
+      "id": "phrase-433",
       "words": [
         "From",
         "facial",
@@ -5068,7 +5058,7 @@
       "phraseMeaning": "表情と声から"
     },
     {
-      "id": "phrase-435",
+      "id": "phrase-434",
       "words": [
         "Could",
         "improve",
@@ -5081,7 +5071,7 @@
       "phraseMeaning": "人間とコンピュータの相互作用を改善できます"
     },
     {
-      "id": "phrase-436",
+      "id": "phrase-435",
       "words": [
         "But",
         "raises",
@@ -5092,7 +5082,7 @@
       "phraseMeaning": "しかしプライバシーの懸念を引き起こします"
     },
     {
-      "id": "phrase-437",
+      "id": "phrase-436",
       "words": [
         "Manipulation",
         "risks",
@@ -5101,7 +5091,7 @@
       "phraseMeaning": "操作のリスク"
     },
     {
-      "id": "phrase-438",
+      "id": "phrase-437",
       "words": [
         "AI",
         "in",
@@ -5113,7 +5103,7 @@
       "phraseMeaning": "メンタルヘルスサポートにおけるAI"
     },
     {
-      "id": "phrase-439",
+      "id": "phrase-438",
       "words": [
         "Chatbots",
         "provide",
@@ -5124,7 +5114,7 @@
       "phraseMeaning": "チャットボットは初期カウンセリングを提供します"
     },
     {
-      "id": "phrase-440",
+      "id": "phrase-439",
       "words": [
         "Available",
         "anytime",
@@ -5135,7 +5125,7 @@
       "phraseMeaning": "いつでも利用可能で偏見を減らします"
     },
     {
-      "id": "phrase-441",
+      "id": "phrase-440",
       "words": [
         "Monitor",
         "mood",
@@ -5147,7 +5137,7 @@
       "phraseMeaning": "気分を監視し専門家に警告します"
     },
     {
-      "id": "phrase-442",
+      "id": "phrase-441",
       "words": [
         "Not",
         "replacement",
@@ -5159,7 +5149,7 @@
       "phraseMeaning": "人間のセラピストの代替ではありません"
     },
     {
-      "id": "phrase-443",
+      "id": "phrase-442",
       "words": [
         "But",
         "valuable",
@@ -5169,7 +5159,7 @@
       "phraseMeaning": "しかし価値ある補完"
     },
     {
-      "id": "phrase-444",
+      "id": "phrase-443",
       "words": [
         "AI",
         "ethics",
@@ -5181,7 +5171,7 @@
       "phraseMeaning": "AI倫理委員会は組織を導きます"
     },
     {
-      "id": "phrase-445",
+      "id": "phrase-444",
       "words": [
         "Review",
         "projects",
@@ -5193,7 +5183,7 @@
       "phraseMeaning": "倫理的懸念のためにプロジェクトをレビューします"
     },
     {
-      "id": "phrase-446",
+      "id": "phrase-445",
       "words": [
         "Recommend",
         "changes",
@@ -5205,7 +5195,7 @@
       "phraseMeaning": "変更を推奨するか開発を停止します"
     },
     {
-      "id": "phrase-447",
+      "id": "phrase-446",
       "words": [
         "Composed",
         "of",
@@ -5216,7 +5206,7 @@
       "phraseMeaning": "多様な専門家で構成されます"
     },
     {
-      "id": "phrase-448",
+      "id": "phrase-447",
       "words": [
         "Public",
         "input",
@@ -5228,7 +5218,7 @@
       "phraseMeaning": "市民入力メカニズムは市民を関与させます"
     },
     {
-      "id": "phrase-449",
+      "id": "phrase-448",
       "words": [
         "Surveys",
         "town",
@@ -5240,7 +5230,7 @@
       "phraseMeaning": "調査タウンホールコメント期間"
     },
     {
-      "id": "phrase-450",
+      "id": "phrase-449",
       "words": [
         "Democratic",
         "participation",
@@ -5252,7 +5242,7 @@
       "phraseMeaning": "AIガバナンスにおける民主的参加"
     },
     {
-      "id": "phrase-451",
+      "id": "phrase-450",
       "words": [
         "Ensures",
         "diverse",
@@ -5262,7 +5252,7 @@
       "phraseMeaning": "多様な視点を保証します"
     },
     {
-      "id": "phrase-452",
+      "id": "phrase-451",
       "words": [
         "Long",
         "term",
@@ -5274,7 +5264,7 @@
       "phraseMeaning": "長期的AI安全性研究"
     },
     {
-      "id": "phrase-453",
+      "id": "phrase-452",
       "words": [
         "Prepares",
         "for",
@@ -5285,7 +5275,7 @@
       "phraseMeaning": "将来の課題に備えます"
     },
     {
-      "id": "phrase-454",
+      "id": "phrase-453",
       "words": [
         "Even",
         "speculative",
@@ -5295,7 +5285,7 @@
       "phraseMeaning": "推測的なものでさえ"
     },
     {
-      "id": "phrase-455",
+      "id": "phrase-454",
       "words": [
         "Better",
         "safe",
@@ -5306,7 +5296,7 @@
       "phraseMeaning": "安全第一"
     },
     {
-      "id": "phrase-456",
+      "id": "phrase-455",
       "words": [
         "AI",
         "testing",
@@ -5318,7 +5308,7 @@
       "phraseMeaning": "AIテストと検証フレームワーク"
     },
     {
-      "id": "phrase-457",
+      "id": "phrase-456",
       "words": [
         "Standardized",
         "methods",
@@ -5330,7 +5320,7 @@
       "phraseMeaning": "システムを評価する標準化された方法"
     },
     {
-      "id": "phrase-458",
+      "id": "phrase-457",
       "words": [
         "Before",
         "deployment",
@@ -5339,7 +5329,7 @@
       "phraseMeaning": "展開前に"
     },
     {
-      "id": "phrase-459",
+      "id": "phrase-458",
       "words": [
         "Industry",
         "standards",
@@ -5349,7 +5339,7 @@
       "phraseMeaning": "業界標準が出現しています"
     },
     {
-      "id": "phrase-460",
+      "id": "phrase-459",
       "words": [
         "AI",
         "incident",
@@ -5361,7 +5351,7 @@
       "phraseMeaning": "AIインシデントデータベースは失敗を追跡します"
     },
     {
-      "id": "phrase-461",
+      "id": "phrase-460",
       "words": [
         "Learn",
         "from",
@@ -5373,7 +5363,7 @@
       "phraseMeaning": "何が間違ったかから学びます"
     },
     {
-      "id": "phrase-462",
+      "id": "phrase-461",
       "words": [
         "Prevent",
         "repetition",
@@ -5382,7 +5372,7 @@
       "phraseMeaning": "繰り返しを防ぎます"
     },
     {
-      "id": "phrase-463",
+      "id": "phrase-462",
       "words": [
         "Share",
         "lessons",
@@ -5393,7 +5383,7 @@
       "phraseMeaning": "業界全体でレッスンを共有します"
     },
     {
-      "id": "phrase-464",
+      "id": "phrase-463",
       "words": [
         "Red",
         "teaming",
@@ -5405,7 +5395,7 @@
       "phraseMeaning": "レッドチーミングはAIのロバストネスをテストします"
     },
     {
-      "id": "phrase-465",
+      "id": "phrase-464",
       "words": [
         "Adversarial",
         "testing",
@@ -5416,7 +5406,7 @@
       "phraseMeaning": "専門家による敵対的テスト"
     },
     {
-      "id": "phrase-466",
+      "id": "phrase-465",
       "words": [
         "Try",
         "to",
@@ -5428,7 +5418,7 @@
       "phraseMeaning": "システムを失敗させようとします"
     },
     {
-      "id": "phrase-467",
+      "id": "phrase-466",
       "words": [
         "Identify",
         "vulnerabilities",
@@ -5437,7 +5427,7 @@
       "phraseMeaning": "脆弱性を特定します"
     },
     {
-      "id": "phrase-468",
+      "id": "phrase-467",
       "words": [
         "Before",
         "malicious",
@@ -5448,7 +5438,7 @@
       "phraseMeaning": "悪意のある攻撃者が行う前に"
     },
     {
-      "id": "phrase-469",
+      "id": "phrase-468",
       "words": [
         "AI",
         "impact",
@@ -5460,7 +5450,7 @@
       "phraseMeaning": "AI影響評価は結果を評価します"
     },
     {
-      "id": "phrase-470",
+      "id": "phrase-469",
       "words": [
         "Social",
         "economic",
@@ -5470,7 +5460,7 @@
       "phraseMeaning": "社会的経済的環境的"
     },
     {
-      "id": "phrase-471",
+      "id": "phrase-470",
       "words": [
         "Before",
         "major",
@@ -5480,7 +5470,7 @@
       "phraseMeaning": "主要な展開の前に"
     },
     {
-      "id": "phrase-472",
+      "id": "phrase-471",
       "words": [
         "Proactive",
         "rather",
@@ -5491,7 +5481,7 @@
       "phraseMeaning": "反応的ではなく積極的"
     },
     {
-      "id": "phrase-473",
+      "id": "phrase-472",
       "words": [
         "Continuous",
         "monitoring",
@@ -5502,7 +5492,7 @@
       "phraseMeaning": "展開後の継続的な監視"
     },
     {
-      "id": "phrase-474",
+      "id": "phrase-473",
       "words": [
         "Systems",
         "can",
@@ -5514,7 +5504,7 @@
       "phraseMeaning": "システムは漂流または劣化する可能性があります"
     },
     {
-      "id": "phrase-475",
+      "id": "phrase-474",
       "words": [
         "Data",
         "distributions",
@@ -5524,7 +5514,7 @@
       "phraseMeaning": "データ分布が変わります"
     },
     {
-      "id": "phrase-476",
+      "id": "phrase-475",
       "words": [
         "Regular",
         "audits",
@@ -5536,7 +5526,7 @@
       "phraseMeaning": "定期的な監査は継続的なパフォーマンスを保証します"
     },
     {
-      "id": "phrase-477",
+      "id": "phrase-476",
       "words": [
         "AI",
         "sunset",
@@ -5549,7 +5539,7 @@
       "phraseMeaning": "AIサンセット条項はシステムに期限を設けます"
     },
     {
-      "id": "phrase-478",
+      "id": "phrase-477",
       "words": [
         "Must",
         "be",
@@ -5561,7 +5551,7 @@
       "phraseMeaning": "レビューされ更新されなければなりません"
     },
     {
-      "id": "phrase-479",
+      "id": "phrase-478",
       "words": [
         "Prevents",
         "outdated",
@@ -5573,7 +5563,7 @@
       "phraseMeaning": "時代遅れのシステムが無期限に稼働するのを防ぎます"
     },
     {
-      "id": "phrase-480",
+      "id": "phrase-479",
       "words": [
         "Humans",
         "in",
@@ -5586,7 +5576,7 @@
       "phraseMeaning": "ループ内の人間が制御を維持します"
     },
     {
-      "id": "phrase-481",
+      "id": "phrase-480",
       "words": [
         "AI",
         "assists",
@@ -5598,7 +5588,7 @@
       "phraseMeaning": "AIは支援するが人間が決定します"
     },
     {
-      "id": "phrase-482",
+      "id": "phrase-481",
       "words": [
         "Especially",
         "for",
@@ -5609,7 +5599,7 @@
       "phraseMeaning": "特に重要な決定について"
     },
     {
-      "id": "phrase-483",
+      "id": "phrase-482",
       "words": [
         "Preserves",
         "accountability",
@@ -5618,7 +5608,7 @@
       "phraseMeaning": "説明責任を保持します"
     },
     {
-      "id": "phrase-484",
+      "id": "phrase-483",
       "words": [
         "Explainable",
         "AI",
@@ -5629,7 +5619,7 @@
       "phraseMeaning": "説明可能なAI研究が進歩します"
     },
     {
-      "id": "phrase-485",
+      "id": "phrase-484",
       "words": [
         "Making",
         "complex",
@@ -5640,7 +5630,7 @@
       "phraseMeaning": "複雑なモデルを解釈可能にします"
     },
     {
-      "id": "phrase-486",
+      "id": "phrase-485",
       "words": [
         "Various",
         "techniques",
@@ -5650,7 +5640,7 @@
       "phraseMeaning": "さまざまな技術が開発されました"
     },
     {
-      "id": "phrase-487",
+      "id": "phrase-486",
       "words": [
         "Essential",
         "for",
@@ -5662,7 +5652,7 @@
       "phraseMeaning": "信頼と採用に不可欠"
     },
     {
-      "id": "phrase-488",
+      "id": "phrase-487",
       "words": [
         "The",
         "AI",
@@ -5673,7 +5663,7 @@
       "phraseMeaning": "AIの旅は続きます"
     },
     {
-      "id": "phrase-489",
+      "id": "phrase-488",
       "words": [
         "New",
         "discoveries",
@@ -5684,7 +5674,7 @@
       "phraseMeaning": "毎日新しい発見"
     },
     {
-      "id": "phrase-490",
+      "id": "phrase-489",
       "words": [
         "Challenges",
         "and",
@@ -5694,7 +5684,7 @@
       "phraseMeaning": "課題と機会"
     },
     {
-      "id": "phrase-491",
+      "id": "phrase-490",
       "words": [
         "We",
         "must",
@@ -5705,7 +5695,7 @@
       "phraseMeaning": "慎重に進まなければなりません"
     },
     {
-      "id": "phrase-492",
+      "id": "phrase-491",
       "words": [
         "With",
         "eyes",
@@ -5718,7 +5708,7 @@
       "phraseMeaning": "リスクに目を向けて"
     },
     {
-      "id": "phrase-493",
+      "id": "phrase-492",
       "words": [
         "And",
         "commitment",
@@ -5730,7 +5720,7 @@
       "phraseMeaning": "そして人間の価値へのコミットメント"
     },
     {
-      "id": "phrase-494",
+      "id": "phrase-493",
       "words": [
         "Together",
         "we",
