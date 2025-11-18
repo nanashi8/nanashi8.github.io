@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
+import { recordWordSkip } from '../progressStorage';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 

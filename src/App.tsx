@@ -394,21 +394,46 @@ function App() {
     }));
   };
   
-  // スキップハンドラー（回答前に次へボタンを押した場合）
+  // スキップハンドラー(回答前に次へボタンを押した場合)
   const handleSkip = () => {
     const currentQuestion = quizState.questions[quizState.currentIndex];
     if (currentQuestion) {
-      // スキップ記録（7日間除外）
+      // スキップ記録(7日間除外)
       recordWordSkip(currentQuestion.word, 7);
+      
+      // スキップでもスコアボードに反映(正解扱い)
+      setQuizState((prev) => ({
+        ...prev,
+        score: prev.score + 1,
+        totalAnswered: prev.totalAnswered + 1,
+        currentIndex: (prev.currentIndex + 1) % prev.questions.length,
+        answered: false,
+        selectedAnswer: null,
+      }));
+      
+      // 回答を記録
+      addQuizResult({
+        id: generateId(),
+        questionSetId: 'translation-quiz-single',
+        questionSetName: '和訳クイズ',
+        score: 1, // スキップは正解扱い
+        total: 1,
+        percentage: 100,
+        date: Date.now(),
+        timeSpent: 0,
+        incorrectWords: [],
+        mode: 'translation',
+        difficulty: currentQuestion.difficulty,
+      });
+    } else {
+      // 問題がない場合は通常の次へ
+      setQuizState((prev) => ({
+        ...prev,
+        currentIndex: (prev.currentIndex + 1) % prev.questions.length,
+        answered: false,
+        selectedAnswer: null,
+      }));
     }
-    
-    // 次の問題へ進む
-    setQuizState((prev) => ({
-      ...prev,
-      currentIndex: (prev.currentIndex + 1) % prev.questions.length,
-      answered: false,
-      selectedAnswer: null,
-    }));
     
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
-import { addQuizResult, updateWordProgress } from '../progressStorage';
+import { addQuizResult, updateWordProgress, recordWordSkip } from '../progressStorage';
 import { generateId } from '../utils';
 
 interface SpellingViewProps {
@@ -224,6 +224,21 @@ function SpellingView({
       totalAnswered: prev.totalAnswered + 1,
       answered: true,
     }));
+
+    // スコアボードのために回答を記録
+    addQuizResult({
+      id: generateId(),
+      questionSetId: 'spelling-quiz-single',
+      questionSetName: 'スペルクイズ',
+      score: 1, // スキップは正解扱い
+      total: 1,
+      percentage: 100,
+      date: Date.now(),
+      timeSpent: 0,
+      incorrectWords: [],
+      mode: 'spelling',
+      difficulty: currentQuestion.difficulty,
+    });
 
     // 次の問題へ
     setTimeout(() => {
@@ -453,12 +468,8 @@ function SpellingView({
                     } else if (e.key === 'Backspace') {
                       e.preventDefault();
                       handleBackspace();
-                    } else if (e.key === ' ') {
-                      // スペースキー: 分からない（スキップ）
-                      e.preventDefault();
-                      handleSkip();
-                    } else if (e.key === 'Enter') {
-                      // Enterキー: 分からない（スキップ）
+                    } else if (e.key === ' ' || e.key === 'Enter') {
+                      // スペースキーまたはEnterキー: 分からない（スキップ）
                       e.preventDefault();
                       handleSkip();
                     }
@@ -498,7 +509,7 @@ function SpellingView({
                     </button>
                   )}
                   <button className="btn-skip-word" onClick={handleSkip}>
-                    ⏭️ 分からない (スペースキー)
+                    ⏭️ 分からない (スペースキー/Enterキー)
                   </button>
                 </div>
               )}

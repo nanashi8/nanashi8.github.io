@@ -141,18 +141,11 @@ function QuestionCard({
           onAnswer(choice, question.meaning);
         }
       }
-      // スペースキー: 「分からない」選択肢を選択（回答前のみ）
+      // スペースキー: スキップ（回答前のみ）- 4キーと同じ動作
       else if (!answered && e.key === ' ') {
         e.preventDefault();
-        // 最後の選択肢（「分からない」）を選択
-        if (choicesWithQuestions.length > 0) {
-          const lastChoice = choicesWithQuestions[choicesWithQuestions.length - 1].text;
-          const isCorrect = lastChoice === question.meaning;
-          if (!isCorrect) {
-            setAttemptCount(prev => prev + 1);
-          }
-          onAnswer(lastChoice, question.meaning);
-        }
+        recordWordSkip(question.word, 7);
+        onAnswer(question.meaning, question.meaning);
       }
       // Enterキー: 次へ進む（回答後）またはスキップ（回答前）
       else if (e.key === 'Enter') {
