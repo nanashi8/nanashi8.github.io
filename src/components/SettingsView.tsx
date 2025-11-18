@@ -37,24 +37,48 @@ function SettingsView({
   };
 
   // ダークモードの読み込み
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
+  const [darkMode, setDarkMode] = useState<'light' | 'dark' | 'system'>(() => {
     const saved = localStorage.getItem('darkMode');
-    return saved ? JSON.parse(saved) : false;
+    if (saved === 'system' || saved === 'light' || saved === 'dark') {
+      return saved;
+    }
+    // 旧形式（boolean）からの移行
+    if (saved === 'true') return 'dark';
+    if (saved === 'false') return 'light';
+    return 'system';
   });
 
+  // システムのダークモード設定を検出
+  const applyDarkMode = (mode: 'light' | 'dark' | 'system') => {
+    let isDark = false;
+    if (mode === 'system') {
+      isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } else {
+      isDark = mode === 'dark';
+    }
+    document.documentElement.classList.toggle('dark-mode', isDark);
+  };
+
   // ダークモード変更時にlocalStorageに保存
-  const handleDarkModeChange = (enabled: boolean) => {
-    setDarkMode(enabled);
-    localStorage.setItem('darkMode', JSON.stringify(enabled));
-    document.documentElement.classList.toggle('dark-mode', enabled);
+  const handleDarkModeChange = (mode: 'light' | 'dark' | 'system') => {
+    setDarkMode(mode);
+    localStorage.setItem('darkMode', mode);
+    applyDarkMode(mode);
   };
 
   // 初回レンダリング時にdark-modeクラスを適用
   useState(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark-mode');
-    }
-    return darkMode;
+    applyDarkMode(darkMode);
+    
+    // システム設定の変更を監視
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      if (darkMode === 'system') {
+        applyDarkMode('system');
+      }
+    };
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   });
 
   const totalWords = allQuestions.length;
@@ -120,22 +144,35 @@ function SettingsView({
         {/* ダークモード切り替え */}
         <div className="simple-setting-section">
           <h3>🌙 表示モード</h3>
-          <div className="theme-toggle">
+          <div className="theme-toggle-grid">
             <button
-              className={`theme-btn ${!darkMode ? 'active' : ''}`}
-              onClick={() => handleDarkModeChange(false)}
+              className={`theme-btn ${darkMode === 'light' ? 'active' : ''}`}
+              onClick={() => handleDarkModeChange('light')}
             >
-              ☀️ ライトモード
+              <div className="theme-icon">☀️</div>
+              <div className="theme-label">ライト</div>
             </button>
             <button
-              className={`theme-btn ${darkMode ? 'active' : ''}`}
-              onClick={() => handleDarkModeChange(true)}
+              className={`theme-btn ${darkMode === 'dark' ? 'active' : ''}`}
+              onClick={() => handleDarkModeChange('dark')}
             >
-              🌙 ダークモード
+              <div className="theme-icon">🌙</div>
+              <div className="theme-label">ダーク</div>
+            </button>
+            <button
+              className={`theme-btn ${darkMode === 'system' ? 'active' : ''}`}
+              onClick={() => handleDarkModeChange('system')}
+            >
+              <div className="theme-icon">💻</div>
+              <div className="theme-label">システム</div>
             </button>
           </div>
+          <div className="theme-description">
+            {darkMode === 'system' && '💡 デバイスの設定に自動的に合わせます'}
+            {darkMode === 'light' && '☀️ 明るい表示モード'}
+            {darkMode === 'dark' && '🌙 目に優しい暗い表示モード'}
+          </div>
         </div>
-
 
       </div>
     </div>

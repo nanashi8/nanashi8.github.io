@@ -81,7 +81,9 @@ function SpellingView({
     if (spellingState.questions.length > 0) {
       const currentQuestion = spellingState.questions[spellingState.currentIndex];
       const word = currentQuestion.word.toLowerCase();
-      const letters = word.split('');
+      // 熟語の場合、スペースを除いた文字列を使用
+      const wordWithoutSpaces = word.replace(/\s+/g, '');
+      const letters = wordWithoutSpaces.split('');
       
       // シャッフル
       const shuffled = [...letters].sort(() => Math.random() - 0.5);
@@ -91,7 +93,7 @@ function SpellingView({
       setShowDetails(false);
       setSpellingState((prev) => ({
         ...prev,
-        correctWord: word,
+        correctWord: wordWithoutSpaces,
         answered: false,
       }));
       
@@ -401,7 +403,7 @@ function SpellingView({
                       <div className="meaning-text">{currentQuestion.meaning}</div>
                       {currentQuestion.word.includes(' ') && (
                         <div className="phrase-hint">
-                          💡 ヒント: {currentQuestion.word.split(' ').length}つの単語で構成された熟語です
+                          💡 ヒント: 「{currentQuestion.word}」はスペースなしで入力してください
                         </div>
                       )}
                     </div>
@@ -452,12 +454,13 @@ function SpellingView({
                       e.preventDefault();
                       handleBackspace();
                     } else if (e.key === ' ') {
-                      // スペースキー: スキップ
+                      // スペースキー: 分からない（スキップ）
                       e.preventDefault();
                       handleSkip();
-                    } else if (e.key === 'Enter' && selectedSequence.length > 0) {
+                    } else if (e.key === 'Enter') {
+                      // Enterキー: 分からない（スキップ）
                       e.preventDefault();
-                      checkTypingAnswer(userWord);
+                      handleSkip();
                     }
                   } else if (e.key === 'Enter') {
                     // 回答後のEnterで次へ進む
@@ -504,7 +507,7 @@ function SpellingView({
                 <div className="result-display">
                   <div className="correct-answer">
                     {userWord === spellingState.correctWord ? '✅ 正解: ' : '❌ 不正解 - 正解: '}
-                    <strong>{spellingState.correctWord}</strong>
+                    <strong>{currentQuestion?.word || spellingState.correctWord}</strong>
                   </div>
                   
                   {/* 詳細を見るボタン */}

@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
 import {
-  loadProgress,
-  getStatsByCategory,
-  getStatsByDifficulty,
-  getCategoryDifficultyStats,
-  UserProgress,
+  getStatsByModeDifficulty,
+  resetStatsByModeDifficulty,
 } from '../progressStorage';
-import { QuestionSet, Question, ReadingPassage } from '../types';
-import ReadingRadarChart from './ReadingRadarChart';
-import CategoryRadarChart from './CategoryRadarChart';
+import { QuestionSet, Question } from '../types';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -16,13 +11,49 @@ interface StatsViewProps {
   categoryList: string[];
 }
 
-function StatsView({ }: StatsViewProps) {
-  const [progress, setProgress] = useState<UserProgress | null>(null);
-  const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
-  const [readingPassages, setReadingPassages] = useState<ReadingPassage[]>([]);
+interface DifficultyStats {
+  labels: string[];
+  accuracyData: number[];
+  retentionData: number[];
+}
 
-  // 学習記録のリセット
-  const handleResetProgress = () => {
+function StatsView({ }: StatsViewProps) {
+  const [translationStats, setTranslationStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
+  const [spellingStats, setSpellingStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
+  const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
+
+  // データ読み込み
+  const loadData = () => {
+    const translationData = getStatsByModeDifficulty('translation');
+    const spellingData = getStatsByModeDifficulty('spelling');
+    setTranslationStats(translationData);
+    setSpellingStats(spellingData);
+  };
+
+  // リアルタイム更新
+  useEffect(() => {
+    loadData();
+    
+    if (autoRefresh) {
+      const interval = setInterval(loadData, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [autoRefresh]);
+
+  // 難易度別リセット
+  const handleResetByDifficulty = (mode: 'translation' | 'spelling', difficulty: string) => {
+    const modeName = mode === 'translation' ? '和訳タブ' : 'スペルタブ';
+    const difficultyName = difficulty === 'beginner' ? '初級' : difficulty === 'intermediate' ? '中級' : '上級';
+    
+    if (confirm(`${modeName}の${difficultyName}の成績をリセットしますか？この操作は元に戻せません。`)) {
+      resetStatsByModeDifficulty(mode, difficulty);
+      alert('成績をリセットしました');
+      loadData();
+    }
+  };
+
+  // 全成績リセット
+  const handleResetAll = () => {
     if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
       const keysToRemove = [];
       for (let i = 0; i < localStorage.length; i++) {
@@ -37,253 +68,230 @@ function StatsView({ }: StatsViewProps) {
     }
   };
 
-  // 学習プランのリセット
-  const handleResetPlan = () => {
-    if (confirm('学習プランをリセットしますか？学習記録は保持されます。')) {
-      localStorage.removeItem('learning-schedule-90days');
-      alert('学習プランをリセットしました');
-      window.location.reload();
-    }
-  };
-
-  // リアルタイム更新（学習中のデータを即座に反映）
-  useEffect(() => {
-    const loadData = () => {
-      const data = loadProgress();
-      setProgress(data);
-    };
-    
-    loadData();
-    
-    if (autoRefresh) {
-      // 5秒ごとにデータを再読み込み
-      const interval = setInterval(loadData, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [autoRefresh]);
-
-  // storageイベントをリッスン（他のタブでの変更を検知）
-  useEffect(() => {
-    const handleStorageChange = () => {
-      const data = loadProgress();
-      setProgress(data);
-    };
-    
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
-  }, []);
-
-  // 長文読解用のパッセージデータを読み込み
-  useEffect(() => {
-    fetch('/data/reading-passages-comprehensive.json')
-      .then(res => res.json())
-      .then((data: ReadingPassage[]) => {
-        setReadingPassages(data);
-      })
-      .catch(err => console.error('長文パッセージの読み込みエラー:', err));
-  }, []);
-
-  if (!progress) {
-    return <div className="stats-view">読み込み中...</div>;
-  }
-
-  const categoryStats = getStatsByCategory();
-  const difficultyStats = getStatsByDifficulty();
-
-  // 分野別・難易度別のデータを取得
-  const translationCategoryStats = getCategoryDifficultyStats('translation');
-  const spellingCategoryStats = getCategoryDifficultyStats('spelling');
-
-  // 長文読解用のレーダーチャートデータを生成
-  const generateReadingRadarData = () => {
-    const labels: string[] = [];
-    const savedWordsData: number[] = [];
-    const totalWordsData: number[] = [];
-
-    if (Array.isArray(readingPassages)) {
-      readingPassages.forEach(passage => {
-        if (!passage) return;
-        const savedWords = passage.phrases?.reduce(
-          (count, phrase) => count + (phrase.segments?.filter(s => s.isUnknown).length || 0),
-          0
-        ) || 0;
-        const totalWords = passage.actualWordCount || 0;
-
-        labels.push((passage.title || '').replace(/パッセージ\d+:\s*/, '').substring(0, 15));
-        savedWordsData.push(savedWords);
-        totalWordsData.push(totalWords);
-      });
-    }
-
-    return { labels, savedWordsData, totalWordsData };
-  };
-
-  const readingRadar = generateReadingRadarData();
-
   return (
     <div className="stats-view">
       <div className="stats-header">
         <h2>📊 成績</h2>
-      </div>
-
-      {/* レーダーチャート - 和訳クイズ */}
-      <div className="stats-section-new">
-        <CategoryRadarChart
-          labels={translationCategoryStats.labels}
-          accuracyData={translationCategoryStats.accuracyData}
-          progressData={translationCategoryStats.progressData}
-          title="和訳クイズ - 分野別正答率"
-          chartType="accuracy"
-        />
-      </div>
-
-      <div className="stats-section-new">
-        <CategoryRadarChart
-          labels={translationCategoryStats.labels}
-          accuracyData={translationCategoryStats.accuracyData}
-          progressData={translationCategoryStats.progressData}
-          title="和訳クイズ - 分野別進捗率（定着数/総単語数）"
-          chartType="progress"
-        />
-      </div>
-
-      {/* レーダーチャート - スペルクイズ */}
-      <div className="stats-section-new">
-        <CategoryRadarChart
-          labels={spellingCategoryStats.labels}
-          accuracyData={spellingCategoryStats.accuracyData}
-          progressData={spellingCategoryStats.progressData}
-          title="スペルクイズ - 分野別正答率"
-          chartType="accuracy"
-        />
-      </div>
-
-      <div className="stats-section-new">
-        <CategoryRadarChart
-          labels={spellingCategoryStats.labels}
-          accuracyData={spellingCategoryStats.accuracyData}
-          progressData={spellingCategoryStats.progressData}
-          title="スペルクイズ - 分野別進捗率（定着数/総単語数）"
-          chartType="progress"
-        />
-      </div>
-
-      {/* レーダーチャート - 長文読解 */}
-      {readingPassages.length > 0 && (
-        <div className="stats-section-new">
-          <ReadingRadarChart
-            labels={readingRadar.labels}
-            savedWordsData={readingRadar.savedWordsData}
-            totalWordsData={readingRadar.totalWordsData}
-            title="長文読解 - パッセージ別保存単語数"
-          />
+        <div className="stats-controls">
+          <label>
+            <input
+              type="checkbox"
+              checked={autoRefresh}
+              onChange={(e) => setAutoRefresh(e.target.checked)}
+            />
+            自動更新
+          </label>
         </div>
-      )}
-
-      {/* 分野別の成績 */}
-      <div className="stats-section-new">
-        <h3 className="section-title">
-          <span className="title-icon">📚</span>
-          分野別の成績
-        </h3>
-        {categoryStats.size > 0 ? (
-          <div className="stats-table">
-            <div className="stats-table-header">
-              <div className="stats-table-cell">分野</div>
-              <div className="stats-table-cell">正答率</div>
-              <div className="stats-table-cell">回答数</div>
-            </div>
-            {Array.from(categoryStats.entries())
-              .sort((a, b) => b[1].totalCount - a[1].totalCount)
-              .map(([category, stats]) => (
-                <div key={category} className="stats-table-row">
-                  <div className="stats-table-cell stats-category-name">{category}</div>
-                  <div className="stats-table-cell stats-accuracy">
-                    {stats.accuracy.toFixed(1)}%
-                  </div>
-                  <div className="stats-table-cell stats-count">
-                    {stats.correctCount}/{stats.totalCount}
-                  </div>
-                </div>
-              ))}
-          </div>
-        ) : (
-          <div className="no-data-message">
-            <p>まだ学習記録がありません</p>
-            <p className="encourage-text">クイズに挑戦しよう！ 🚀</p>
-          </div>
-        )}
       </div>
 
-      {/* 難易度別の成績 */}
-      <div className="stats-section-new">
-        <h3 className="section-title">
-          <span className="title-icon">⭐</span>
-          難易度別の成績
-        </h3>
-        {difficultyStats.size > 0 ? (
-          <div className="stats-table">
-            <div className="stats-table-header">
-              <div className="stats-table-cell">難易度</div>
-              <div className="stats-table-cell">正答率</div>
-              <div className="stats-table-cell">回答数</div>
-            </div>
-            {Array.from(difficultyStats.entries())
-              .sort((a, b) => {
-                const order = { 'beginner': 1, 'intermediate': 2, 'advanced': 3 };
-                return (order[a[0] as keyof typeof order] || 999) - (order[b[0] as keyof typeof order] || 999);
-              })
-              .map(([difficulty, stats]) => {
-                const displayName = difficulty === 'beginner' ? '初級' : 
-                                  difficulty === 'intermediate' ? '中級' : 
-                                  difficulty === 'advanced' ? '上級' : difficulty;
-                return (
-                  <div key={difficulty} className="stats-table-row">
-                    <div className="stats-table-cell stats-difficulty-name">{displayName}</div>
-                    <div className="stats-table-cell stats-accuracy">
-                      {stats.accuracy.toFixed(1)}%
-                    </div>
-                    <div className="stats-table-cell stats-count">
-                      {stats.correctCount}/{stats.totalCount}
-                    </div>
-                  </div>
-                );
-              })}
-          </div>
-        ) : (
-          <div className="no-data-message">
-            <p>まだ学習記録がありません</p>
-            <p className="encourage-text">クイズに挑戦しよう！ 🚀</p>
-          </div>
-        )}
-      </div>
-
-      {/* 自動更新の設定 */}
-      <div className="stats-footer">
-        <label className="auto-refresh-toggle">
-          <input
-            type="checkbox"
-            checked={autoRefresh}
-            onChange={(e) => setAutoRefresh(e.target.checked)}
-          />
-          <span>自動更新（5秒ごと）</span>
-        </label>
+      {/* 和訳タブの統計 */}
+      <div className="stats-section-mode">
+        <h3>📖 和訳タブ</h3>
         
-        <div className="stats-reset-section">
-          <button
-            className="btn-reset-progress"
-            onClick={handleResetProgress}
-          >
-            🗑️ 学習記録をリセット
+        <div className="stats-charts-row">
+          {/* 正答率レーダーチャート */}
+          <div className="stats-chart-container">
+            <h4>難易度別 正答率</h4>
+            <SimpleRadarChart
+              labels={translationStats.labels}
+              data={translationStats.accuracyData}
+              maxValue={100}
+              color="rgba(102, 126, 234, 0.6)"
+            />
+          </div>
+
+          {/* 定着率レーダーチャート */}
+          <div className="stats-chart-container">
+            <h4>難易度別 定着率</h4>
+            <SimpleRadarChart
+              labels={translationStats.labels}
+              data={translationStats.retentionData}
+              maxValue={100}
+              color="rgba(76, 175, 80, 0.6)"
+            />
+          </div>
+        </div>
+
+        {/* リセットボタン */}
+        <div className="stats-reset-buttons">
+          <button onClick={() => handleResetByDifficulty('translation', 'beginner')} className="btn-reset-difficulty">
+            初級をリセット
           </button>
-          <button
-            className="btn-reset-plan"
-            onClick={handleResetPlan}
-          >
-            🔄 プランをリセット
+          <button onClick={() => handleResetByDifficulty('translation', 'intermediate')} className="btn-reset-difficulty">
+            中級をリセット
+          </button>
+          <button onClick={() => handleResetByDifficulty('translation', 'advanced')} className="btn-reset-difficulty">
+            上級をリセット
           </button>
         </div>
       </div>
+
+      {/* スペルタブの統計 */}
+      <div className="stats-section-mode">
+        <h3>✍️ スペルタブ</h3>
+        
+        <div className="stats-charts-row">
+          {/* 正答率レーダーチャート */}
+          <div className="stats-chart-container">
+            <h4>難易度別 正答率</h4>
+            <SimpleRadarChart
+              labels={spellingStats.labels}
+              data={spellingStats.accuracyData}
+              maxValue={100}
+              color="rgba(255, 152, 0, 0.6)"
+            />
+          </div>
+
+          {/* 定着率レーダーチャート */}
+          <div className="stats-chart-container">
+            <h4>難易度別 定着率</h4>
+            <SimpleRadarChart
+              labels={spellingStats.labels}
+              data={spellingStats.retentionData}
+              maxValue={100}
+              color="rgba(233, 30, 99, 0.6)"
+            />
+          </div>
+        </div>
+
+        {/* リセットボタン */}
+        <div className="stats-reset-buttons">
+          <button onClick={() => handleResetByDifficulty('spelling', 'beginner')} className="btn-reset-difficulty">
+            初級をリセット
+          </button>
+          <button onClick={() => handleResetByDifficulty('spelling', 'intermediate')} className="btn-reset-difficulty">
+            中級をリセット
+          </button>
+          <button onClick={() => handleResetByDifficulty('spelling', 'advanced')} className="btn-reset-difficulty">
+            上級をリセット
+          </button>
+        </div>
+      </div>
+
+      {/* 全体リセット */}
+      <div className="stats-section-reset">
+        <button onClick={handleResetAll} className="btn-reset-all">
+          ⚠️ すべての成績をリセット
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// シンプルなレーダーチャートコンポーネント
+function SimpleRadarChart({ labels, data, maxValue, color }: {
+  labels: string[];
+  data: number[];
+  maxValue: number;
+  color: string;
+}) {
+  const size = 300;
+  const center = size / 2;
+  const maxRadius = size / 2 - 40;
+  const numPoints = labels.length;
+  
+  if (numPoints === 0) {
+    return <div className="radar-chart-empty">データがありません</div>;
+  }
+
+  // 各頂点の座標を計算
+  const getPoint = (index: number, value: number) => {
+    const angle = (Math.PI * 2 * index) / numPoints - Math.PI / 2;
+    const radius = (value / maxValue) * maxRadius;
+    return {
+      x: center + radius * Math.cos(angle),
+      y: center + radius * Math.sin(angle)
+    };
+  };
+
+  // 背景のグリッド線
+  const gridLevels = [0.2, 0.4, 0.6, 0.8, 1.0];
+  const gridPaths = gridLevels.map(level => {
+    const points = Array.from({ length: numPoints }, (_, i) => {
+      const angle = (Math.PI * 2 * i) / numPoints - Math.PI / 2;
+      const radius = maxRadius * level;
+      return `${center + radius * Math.cos(angle)},${center + radius * Math.sin(angle)}`;
+    });
+    return points.join(' ');
+  });
+
+  // データのパス
+  const dataPoints = data.map((value, i) => getPoint(i, value));
+  const dataPath = dataPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x},${p.y}`).join(' ') + ' Z';
+
+  return (
+    <div className="radar-chart-container">
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+        {/* グリッド */}
+        {gridPaths.map((path, i) => (
+          <polygon
+            key={i}
+            points={path}
+            fill="none"
+            stroke="#ddd"
+            strokeWidth="1"
+          />
+        ))}
+
+        {/* 軸線 */}
+        {Array.from({ length: numPoints }, (_, i) => {
+          const angle = (Math.PI * 2 * i) / numPoints - Math.PI / 2;
+          return (
+            <line
+              key={i}
+              x1={center}
+              y1={center}
+              x2={center + maxRadius * Math.cos(angle)}
+              y2={center + maxRadius * Math.sin(angle)}
+              stroke="#ddd"
+              strokeWidth="1"
+            />
+          );
+        })}
+
+        {/* データエリア */}
+        <path
+          d={dataPath}
+          fill={color}
+          stroke={color.replace('0.6', '1')}
+          strokeWidth="2"
+        />
+
+        {/* データポイント */}
+        {dataPoints.map((point, i) => (
+          <circle
+            key={i}
+            cx={point.x}
+            cy={point.y}
+            r="4"
+            fill={color.replace('0.6', '1')}
+          />
+        ))}
+
+        {/* ラベル */}
+        {labels.map((label, i) => {
+          const angle = (Math.PI * 2 * i) / numPoints - Math.PI / 2;
+          const labelRadius = maxRadius + 25;
+          const x = center + labelRadius * Math.cos(angle);
+          const y = center + labelRadius * Math.sin(angle);
+          return (
+            <text
+              key={i}
+              x={x}
+              y={y}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="14"
+              fontWeight="bold"
+            >
+              {label}
+              <tspan x={x} dy="15" fontSize="12" fill="#666">
+                {data[i].toFixed(1)}%
+              </tspan>
+            </text>
+          );
+        })}
+      </svg>
     </div>
   );
 }

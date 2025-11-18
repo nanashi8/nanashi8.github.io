@@ -205,7 +205,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 // 単語辞書から意味を取得（句読点なしの単語）
                 const lemma = getLemma(cleanWord);
                 const wordData = wordDictionary.get(lemma);
-                const meaning = wordData?.meaning || '';
+                const readingWord = readingDictionary.get(lemma);
+                const meaning = wordData?.meaning || readingWord?.meaning || '';
                 
                 // 単語を追加（句読点なし）
                 segments.push({
@@ -224,7 +225,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 // 句読点がない通常の単語
                 const lemma = getLemma(word);
                 const wordData = wordDictionary.get(lemma);
-                const meaning = wordData?.meaning || '';
+                const readingWord = readingDictionary.get(lemma);
+                const meaning = wordData?.meaning || readingWord?.meaning || '';
                 
                 segments.push({
                   word,
