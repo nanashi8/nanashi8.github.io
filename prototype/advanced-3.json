@@ -20,10 +20,12 @@
       "id": "phrase-2",
       "words": [
         "Different",
-        "cultures",
-        "languages",
+        "cultures,",
+        "languages,",
         "and",
         "traditions",
+        "exist",
+        "everywhere",
         "."
       ],
       "phraseMeaning": "異なる文化言語そして伝統"
@@ -58,8 +60,7 @@
         "others",
         "requires",
         "effort",
-        ".",
-        ","
+        "."
       ],
       "phraseMeaning": "他者を理解するには努力が必要です"
     },
@@ -67,6 +68,7 @@
       "id": "phrase-6",
       "words": [
         "But",
+        "it",
         "brings",
         "tremendous",
         "rewards",

@@ -724,8 +724,8 @@
       "phraseMeaning": "次に、音楽について話したいです",
       "segments": [
         {
-          "word": "Next,",
-          "meaning": "Next,",
+          "word": "Next",
+          "meaning": "Next",
           "isUnknown": false
         },
         {
@@ -1561,8 +1561,7 @@
         "helps",
         "me",
         "relax",
-        ".",
-        ","
+        "."
       ],
       "phraseMeaning": "読書は私をリラックスさせてくれます",
       "segments": [
@@ -1715,7 +1714,8 @@
         "of",
         "animals",
         "and",
-        "nature"
+        "nature",
+        "."
       ],
       "phraseMeaning": "動物と自然の",
       "segments": [
@@ -1749,8 +1749,7 @@
         "use",
         "colored",
         "pencils",
-        ".",
-        ","
+        "."
       ],
       "phraseMeaning": "色鉛筆を使います",
       "segments": [
@@ -1825,8 +1824,8 @@
           "isUnknown": false
         },
         {
-          "word": "year,",
-          "meaning": "year,",
+          "word": "year",
+          "meaning": "year",
           "isUnknown": false
         },
         {
@@ -1864,7 +1863,8 @@
         "a",
         "school",
         "art",
-        "competition"
+        "competition",
+        "."
       ],
       "phraseMeaning": "学校の美術コンクールで",
       "segments": [
@@ -1938,6 +1938,9 @@
         "I",
         "spend",
         "time",
+        "with",
+        "my",
+        "friends",
         "."
       ],
       "phraseMeaning": "週末は時間を過ごします",
@@ -1948,8 +1951,8 @@
           "isUnknown": false
         },
         {
-          "word": "weekends,",
-          "meaning": "weekends,",
+          "word": "weekends",
+          "meaning": "weekends",
           "isUnknown": false
         },
         {
@@ -1975,8 +1978,7 @@
       "words": [
         "with",
         "my",
-        "friends",
-        "."
+        "friends"
       ],
       "phraseMeaning": "友達と",
       "segments": [
@@ -2279,6 +2281,12 @@
         "asked",
         "my",
         "parents",
+        "for",
+        "a",
+        "camera",
+        "for",
+        "my",
+        "birthday",
         "."
       ],
       "phraseMeaning": "両親に頼みました",
@@ -2302,6 +2310,36 @@
           "word": "parents",
           "meaning": "parents",
           "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "のために",
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": "一つの",
+          "isUnknown": false
+        },
+        {
+          "word": "camera",
+          "meaning": "camera",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": "のために",
+          "isUnknown": false
+        },
+        {
+          "word": "my",
+          "meaning": "私の",
+          "isUnknown": false
+        },
+        {
+          "word": "birthday",
+          "meaning": "birthday",
+          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2314,7 +2352,8 @@
         "camera",
         "for",
         "my",
-        "birthday"
+        "birthday",
+        "."
       ],
       "phraseMeaning": "誕生日にカメラを",
       "segments": [
@@ -2359,6 +2398,12 @@
         "to",
         "take",
         "pictures",
+        "of",
+        "beautiful",
+        "places",
+        "and",
+        "special",
+        "moments",
         "."
       ],
       "phraseMeaning": "写真を撮りたいです",
@@ -2387,6 +2432,36 @@
           "word": "pictures",
           "meaning": "pictures",
           "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": "の",
+          "isUnknown": false
+        },
+        {
+          "word": "beautiful",
+          "meaning": "beautiful",
+          "isUnknown": false
+        },
+        {
+          "word": "places",
+          "meaning": "places",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": "そして",
+          "isUnknown": false
+        },
+        {
+          "word": "special",
+          "meaning": "special",
+          "isUnknown": false
+        },
+        {
+          "word": "moments",
+          "meaning": "moments",
+          "isUnknown": false
         }
       ],
       "isUnknown": false
@@ -2413,34 +2488,6 @@
         {
           "word": "places",
           "meaning": "places",
-          "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-62",
-      "words": [
-        "and",
-        "special",
-        "moments",
-        "."
-      ],
-      "phraseMeaning": "そして特別な瞬間の",
-      "segments": [
-        {
-          "word": "and",
-          "meaning": "そして",
-          "isUnknown": false
-        },
-        {
-          "word": "special",
-          "meaning": "special",
-          "isUnknown": false
-        },
-        {
-          "word": "moments",
-          "meaning": "moments",
           "isUnknown": false
         }
       ],
@@ -2499,8 +2546,7 @@
         "help",
         "me",
         "relax",
-        ".",
-        ","
+        "."
       ],
       "phraseMeaning": "それらは私をリラックスさせてくれます",
       "segments": [
@@ -2568,6 +2614,9 @@
         "also",
         "help",
         "me",
+        "make",
+        "new",
+        "friends",
         "."
       ],
       "phraseMeaning": "それらはまた私を助けてくれます",
@@ -2591,19 +2640,7 @@
           "word": "me",
           "meaning": "me",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-67",
-      "words": [
-        "make",
-        "new",
-        "friends"
-      ],
-      "phraseMeaning": "新しい友達を作ることを",
-      "segments": [
+        },
         {
           "word": "make",
           "meaning": "make",
@@ -2623,7 +2660,7 @@
       "isUnknown": false
     },
     {
-      "id": "phrase-68",
+      "id": "phrase-67",
       "words": [
         "I",
         "meet",
@@ -2700,6 +2737,9 @@
         "want",
         "to",
         "continue",
+        "all",
+        "my",
+        "hobbies",
         "."
       ],
       "phraseMeaning": "将来、続けたいです",
@@ -2715,8 +2755,8 @@
           "isUnknown": false
         },
         {
-          "word": "future,",
-          "meaning": "future,",
+          "word": "future",
+          "meaning": "future",
           "isUnknown": false
         },
         {
@@ -2738,19 +2778,7 @@
           "word": "continue",
           "meaning": "continue",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-71",
-      "words": [
-        "all",
-        "my",
-        "hobbies"
-      ],
-      "phraseMeaning": "すべての趣味を",
-      "segments": [
+        },
         {
           "word": "all",
           "meaning": "全て",
@@ -2770,7 +2798,7 @@
       "isUnknown": false
     },
     {
-      "id": "phrase-72",
+      "id": "phrase-71",
       "words": [
         "I",
         "hope",
@@ -2850,6 +2878,14 @@
         "I",
         "will",
         "become",
+        "a",
+        "professional",
+        "soccer",
+        "player",
+        "or",
+        "a",
+        "piano",
+        "teacher",
         "."
       ],
       "phraseMeaning": "もしかしたらなるかもしれません",
@@ -2873,20 +2909,7 @@
           "word": "become",
           "meaning": "become",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-75",
-      "words": [
-        "a",
-        "professional",
-        "soccer",
-        "player"
-      ],
-      "phraseMeaning": "プロのサッカー選手に",
-      "segments": [
+        },
         {
           "word": "a",
           "meaning": "一つの",
@@ -2906,21 +2929,7 @@
           "word": "player",
           "meaning": "player",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-76",
-      "words": [
-        "or",
-        "a",
-        "piano",
-        "teacher",
-        "."
-      ],
-      "phraseMeaning": "またはピアノの先生に",
-      "segments": [
+        },
         {
           "word": "or",
           "meaning": "または",
@@ -2986,8 +2995,9 @@
         "life",
         "more",
         "interesting",
-        ".",
-        ","
+        "and",
+        "enjoyable",
+        "."
       ],
       "phraseMeaning": "趣味は人生をより面白くします",
       "segments": [
@@ -3015,19 +3025,7 @@
           "word": "interesting",
           "meaning": "interesting",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-79",
-      "words": [
-        "and",
-        "enjoyable",
-        "."
-      ],
-      "phraseMeaning": "そして楽しくします",
-      "segments": [
+        },
         {
           "word": "and",
           "meaning": "そして",
@@ -3048,6 +3046,10 @@
         "give",
         "us",
         "something",
+        "to",
+        "look",
+        "forward",
+        "to",
         "."
       ],
       "phraseMeaning": "それらは私たちに何かを与えてくれます",
@@ -3071,21 +3073,7 @@
           "word": "something",
           "meaning": "something",
           "isUnknown": false
-        }
-      ],
-      "isUnknown": false
-    },
-    {
-      "id": "phrase-81",
-      "words": [
-        "to",
-        "look",
-        "forward",
-        "to",
-        "."
-      ],
-      "phraseMeaning": "楽しみにするための",
-      "segments": [
+        },
         {
           "word": "to",
           "meaning": "へ",
@@ -3115,9 +3103,7 @@
         "What",
         "are",
         "your",
-        "hobbies?",
-        ".",
-        "."
+        "hobbies?"
       ],
       "phraseMeaning": "あなたの趣味は何ですか?",
       "segments": [
@@ -3137,8 +3123,8 @@
           "isUnknown": false
         },
         {
-          "word": "hobbies?",
-          "meaning": "hobbies?",
+          "word": "hobbies",
+          "meaning": "hobbies",
           "isUnknown": false
         }
       ],

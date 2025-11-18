@@ -353,8 +353,11 @@
     {
       "id": 9,
       "words": [
+        "\"",
         "Good",
-        "morning,",
+        "morning",
+        ",",
+        "\"",
         "she",
         "said",
         "."
@@ -367,8 +370,8 @@
           "isUnknown": false
         },
         {
-          "word": "morning,",
-          "meaning": "朝、",
+          "word": "morning",
+          "meaning": "朝",
           "isUnknown": false
         },
         {
@@ -391,7 +394,7 @@
         "you",
         "help",
         "me",
-        "."
+        "?"
       ],
       "phraseMeaning": "手伝ってくれる",
       "segments": [
@@ -421,8 +424,11 @@
     {
       "id": 11,
       "words": [
+        "\"",
         "Of",
-        "course,",
+        "course",
+        "!",
+        "\"",
         "I",
         "answered",
         "."
@@ -435,8 +441,8 @@
           "isUnknown": false
         },
         {
-          "word": "course,",
-          "meaning": "もちろん、",
+          "word": "course",
+          "meaning": "もちろん",
           "isUnknown": false
         },
         {
@@ -524,13 +530,13 @@
           "isUnknown": false
         },
         {
-          "word": "plates,",
-          "meaning": "皿、",
+          "word": "plates",
+          "meaning": "皿",
           "isUnknown": false
         },
         {
-          "word": "cups,",
-          "meaning": "カップ、",
+          "word": "cups",
+          "meaning": "カップ",
           "isUnknown": false
         },
         {
@@ -571,8 +577,8 @@
       "phraseMeaning": "まもなく、父と兄が降りてきました",
       "segments": [
         {
-          "word": "Soon,",
-          "meaning": "まもなく、",
+          "word": "Soon",
+          "meaning": "まもなく",
           "isUnknown": false
         },
         {
@@ -672,13 +678,13 @@
           "isUnknown": false
         },
         {
-          "word": "eggs,",
-          "meaning": "卵、",
+          "word": "eggs",
+          "meaning": "卵",
           "isUnknown": false
         },
         {
-          "word": "bread,",
-          "meaning": "パン、",
+          "word": "bread",
+          "meaning": "パン",
           "isUnknown": false
         },
         {
@@ -731,9 +737,13 @@
     {
       "id": 18,
       "words": [
+        "\"",
         "Thank",
-        "you,",
-        "Mom,",
+        "you",
+        ",",
+        "Mom",
+        "!",
+        "\"",
         "I",
         "said",
         "."
@@ -746,13 +756,13 @@
           "isUnknown": false
         },
         {
-          "word": "you,",
-          "meaning": "、",
+          "word": "you",
+          "meaning": "あなた",
           "isUnknown": false
         },
         {
-          "word": "Mom,",
-          "meaning": "お母さん、",
+          "word": "Mom",
+          "meaning": "お母さん",
           "isUnknown": false
         },
         {
@@ -784,11 +794,11 @@
       "segments": [
         {
           "word": "After",
-          "meaning": "後、",
+          "meaning": "後",
           "isUnknown": false
         },
         {
-          "word": "breakfast,",
+          "word": "breakfast",
           "meaning": "朝食の",
           "isUnknown": false
         },
@@ -1379,7 +1389,7 @@
           "isUnknown": false
         },
         {
-          "word": "noon,",
+          "word": "noon",
           "meaning": "正午",
           "isUnknown": false
         },
@@ -1550,8 +1560,8 @@
           "isUnknown": false
         },
         {
-          "word": "afternoon,",
-          "meaning": "午後、",
+          "word": "afternoon",
+          "meaning": "午後",
           "isUnknown": false
         },
         {
@@ -1903,19 +1913,19 @@
       "words": [
         "When",
         "we",
-        "arrived,",
+        "arrived",
+        ",",
         "we",
         "were",
         "all",
         "tired",
-        ".",
-        ","
+        "."
       ],
       "phraseMeaning": "到着したとき、私たちは皆疲れていました",
       "segments": [
         {
           "word": "When",
-          "meaning": "とき、",
+          "meaning": "とき",
           "isUnknown": false
         },
         {
@@ -1924,7 +1934,7 @@
           "isUnknown": false
         },
         {
-          "word": "arrived,",
+          "word": "arrived",
           "meaning": "到着した",
           "isUnknown": false
         },
@@ -2051,11 +2061,11 @@
       "segments": [
         {
           "word": "For",
-          "meaning": "に、",
+          "meaning": "に",
           "isUnknown": false
         },
         {
-          "word": "dinner,",
+          "word": "dinner",
           "meaning": "夕食",
           "isUnknown": false
         },
@@ -2286,11 +2296,11 @@
       "segments": [
         {
           "word": "After",
-          "meaning": "後、",
+          "meaning": "後",
           "isUnknown": false
         },
         {
-          "word": "dinner,",
+          "word": "dinner",
           "meaning": "夕食の",
           "isUnknown": false
         },
@@ -2452,11 +2462,11 @@
       "segments": [
         {
           "word": "Before",
-          "meaning": "前に、",
+          "meaning": "前に",
           "isUnknown": false
         },
         {
-          "word": "bed,",
+          "word": "bed",
           "meaning": "寝る",
           "isUnknown": false
         },
@@ -2486,10 +2496,13 @@
     {
       "id": 59,
       "words": [
+        "\"",
         "Thank",
         "you",
         "for",
-        "today,",
+        "today",
+        "!",
+        "\"",
         "I",
         "said",
         "."
@@ -2512,7 +2525,7 @@
           "isUnknown": false
         },
         {
-          "word": "today,",
+          "word": "today",
           "meaning": "今日",
           "isUnknown": false
         },
@@ -2566,12 +2579,15 @@
     {
       "id": 61,
       "words": [
+        "\"",
         "We",
         "love",
         "spending",
         "time",
         "with",
-        "you,",
+        "you",
+        ".",
+        "\"",
         "she",
         "said",
         "."
@@ -2604,8 +2620,8 @@
           "isUnknown": false
         },
         {
-          "word": "you,",
-          "meaning": "あなた、",
+          "word": "you",
+          "meaning": "あなた",
           "isUnknown": false
         },
         {
@@ -2814,7 +2830,6 @@
         "with",
         "a",
         "smile",
-        ".",
         "."
       ],
       "phraseMeaning": "私は笑顔で眠りにつきました",

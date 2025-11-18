@@ -144,7 +144,8 @@
         "so",
         "big",
         "and",
-        "different"
+        "different",
+        "."
       ],
       "phraseMeaning": "すべてがとても大きく違って見えた",
       "segments": [
@@ -222,7 +223,8 @@
         "I",
         "entered",
         "the",
-        "classroom"
+        "classroom",
+        ","
       ],
       "phraseMeaning": "教室に入ったとき",
       "segments": [
@@ -293,7 +295,8 @@
         "that",
         "I",
         "didn't",
-        "know"
+        "know",
+        "."
       ],
       "phraseMeaning": "私が知らない(生徒を)",
       "segments": [
@@ -327,7 +330,8 @@
         "felt",
         "a",
         "little",
-        "afraid"
+        "afraid",
+        ","
       ],
       "phraseMeaning": "私は少し怖かった",
       "segments": [
@@ -487,7 +491,7 @@
         "me",
         "and",
         "said",
-        "."
+        ","
       ],
       "phraseMeaning": "彼女は私を見て言った",
       "segments": [
@@ -527,7 +531,9 @@
     {
       "id": "phrase-14",
       "words": [
+        "\"",
         "Hello",
+        ",",
         "my",
         "name",
         "is",
@@ -570,7 +576,9 @@
         "Nice",
         "to",
         "meet",
-        "you"
+        "you",
+        "!",
+        "\""
       ],
       "phraseMeaning": "よろしくね",
       "segments": [
@@ -681,7 +689,8 @@
       "words": [
         "We",
         "started",
-        "talking"
+        "talking",
+        ","
       ],
       "phraseMeaning": "私たちは話し始めた",
       "segments": [
@@ -856,7 +865,7 @@
         "During",
         "lunch",
         "time",
-        "."
+        ","
       ],
       "phraseMeaning": "昼食時間の間",
       "segments": [
@@ -1101,7 +1110,8 @@
       "id": "phrase-30",
       "words": [
         "He",
-        "said"
+        "said",
+        ","
       ],
       "phraseMeaning": "彼は言った",
       "segments": [
@@ -1204,7 +1214,8 @@
         "I",
         "wanted",
         "to",
-        "join"
+        "join",
+        "."
       ],
       "phraseMeaning": "私が参加したいかどうかを",
       "segments": [
@@ -1240,7 +1251,8 @@
       "id": "phrase-34",
       "words": [
         "I",
-        "answered"
+        "answered",
+        ","
       ],
       "phraseMeaning": "私は答えた",
       "segments": [
@@ -1301,7 +1313,8 @@
       "id": "phrase-36",
       "words": [
         "After",
-        "lunch"
+        "lunch",
+        ","
       ],
       "phraseMeaning": "昼食の後",
       "segments": [
@@ -1369,8 +1382,11 @@
       "words": [
         "The",
         "teacher",
+        ",",
         "Mr",
-        "Sato"
+        ".",
+        "Sato",
+        ","
       ],
       "phraseMeaning": "先生のサトウ先生は",
       "segments": [
@@ -1431,9 +1447,7 @@
         "He",
         "spoke",
         "English",
-        "slowly",
-        ".",
-        ","
+        "slowly"
       ],
       "phraseMeaning": "彼は英語をゆっくり話した",
       "segments": [
@@ -1568,7 +1582,8 @@
         "it",
         "was",
         "my",
-        "turn"
+        "turn",
+        ","
       ],
       "phraseMeaning": "私の番になったとき",
       "segments": [
@@ -1669,7 +1684,8 @@
         "heart",
         "was",
         "beating",
-        "fast"
+        "fast",
+        ","
       ],
       "phraseMeaning": "私の心臓は速く鳴っていた",
       "segments": [
@@ -1857,7 +1873,7 @@
         "of",
         "the",
         "day",
-        "."
+        ","
       ],
       "phraseMeaning": "その日の終わりに",
       "segments": [
@@ -1947,8 +1963,7 @@
         "talked",
         "about",
         "our",
-        "classes",
-        "."
+        "classes"
       ],
       "phraseMeaning": "私たちは授業について話した",
       "segments": [
@@ -2059,7 +2074,8 @@
         "When",
         "I",
         "got",
-        "home"
+        "home",
+        ","
       ],
       "phraseMeaning": "家に着いたとき",
       "segments": [
@@ -2126,7 +2142,8 @@
         "my",
         "first",
         "day",
-        "was"
+        "was",
+        "."
       ],
       "phraseMeaning": "最初の日はどうだったかを",
       "segments": [
@@ -2165,7 +2182,7 @@
         "smiled",
         "and",
         "said",
-        "."
+        ","
       ],
       "phraseMeaning": "私は笑顔で言った",
       "segments": [
@@ -2195,9 +2212,11 @@
     {
       "id": "phrase-61",
       "words": [
+        "\"",
         "It",
         "was",
-        "wonderful"
+        "wonderful",
+        "!"
       ],
       "phraseMeaning": "素晴らしかったよ",
       "segments": [
@@ -2308,7 +2327,8 @@
         "junior",
         "high",
         "school",
-        "."
+        ".",
+        "\""
       ],
       "phraseMeaning": "私は本当に中学校を楽しむだろうと",
       "segments": [
@@ -2354,7 +2374,8 @@
       "id": "phrase-65",
       "words": [
         "That",
-        "night"
+        "night",
+        ","
       ],
       "phraseMeaning": "その夜",
       "segments": [
@@ -2454,7 +2475,8 @@
       "words": [
         "that",
         "happened",
-        "today"
+        "today",
+        "."
       ],
       "phraseMeaning": "今日起こった(こと)",
       "segments": [
@@ -2563,7 +2585,8 @@
         "as",
         "I",
         "had",
-        "thought"
+        "thought",
+        "."
       ],
       "phraseMeaning": "私が思っていたほど",
       "segments": [
@@ -2597,8 +2620,7 @@
         "am",
         "looking",
         "forward",
-        "to",
-        "."
+        "to"
       ],
       "phraseMeaning": "私は楽しみにしている",
       "segments": [
@@ -2640,7 +2662,6 @@
         "days",
         "to",
         "come",
-        ".",
         "."
       ],
       "phraseMeaning": "明日とこれから来るすべての日々を",
