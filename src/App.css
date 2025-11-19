@@ -325,6 +325,434 @@
   color: #b0b0b0;
 }
 
+/* 読解タブのダークモード */
+.dark-mode .reading-view {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-selector {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-selector h3 {
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-btn {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-btn:hover {
+  border-color: #667eea;
+  background: #333;
+}
+
+.dark-mode .passage-btn.active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.dark-mode .reading-content {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-title {
+  color: #8b9ef5;
+}
+
+.dark-mode .instructions {
+  background: #3a3a1a;
+  border-color: #ffc107;
+  color: #ffd54f;
+}
+
+.dark-mode .phrase-cards {
+  background: #1a1a1a;
+}
+
+.dark-mode .phrase-card {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .phrase-card:hover {
+  background: #333;
+}
+
+.dark-mode .phrase-toggle-btn {
+  background: #333;
+  border-color: #667eea;
+  color: #8b9ef5;
+}
+
+.dark-mode .phrase-toggle-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .phrase-meaning {
+  background: #1e3a5f;
+  color: #8bb8ff;
+  border-left-color: #667eea;
+}
+
+.dark-mode .phrase-translation-btn {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .phrase-translation-btn:hover {
+  background: #5568d3;
+}
+
+.dark-mode .full-translation {
+  background: #2a2a2a;
+  border-color: #667eea;
+  color: #e0e0e0;
+}
+
+.dark-mode .full-translation h4 {
+  color: #8b9ef5;
+}
+
+.dark-mode .word-meaning {
+  background: #333;
+  color: #b0b0b0;
+}
+
+/* フィルターセクションのダークモード */
+.dark-mode .quiz-filter-section {
+  background: #2a2a2a;
+}
+
+.dark-mode .filter-group {
+  color: #e0e0e0;
+}
+
+.dark-mode .start-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dark-mode .start-btn:hover {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+}
+
+/* スペルタブのダークモード */
+.dark-mode .spelling-view {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .user-word-display {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .user-word-label {
+  color: #b0b0b0;
+}
+
+.dark-mode .user-word-text {
+  color: #e0e0e0;
+}
+
+.dark-mode .input-mode-info {
+  color: #b0b0b0;
+}
+
+.dark-mode .meaning-display {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .meaning-label {
+  color: #b0b0b0;
+}
+
+.dark-mode .meaning-text {
+  color: #e0e0e0;
+}
+
+.dark-mode .phrase-hint {
+  background: #1e3a5f;
+  color: #8bb8ff;
+}
+
+.dark-mode .btn-reset-selection {
+  background: #ff9800;
+  color: white;
+}
+
+.dark-mode .btn-reset-selection:hover {
+  background: #f57c00;
+}
+
+.dark-mode .btn-skip-word {
+  background: #757575;
+  color: white;
+}
+
+.dark-mode .btn-skip-word:hover {
+  background: #616161;
+}
+
+.dark-mode .btn-toggle-details {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .btn-toggle-details:hover {
+  background: #5568d3;
+}
+
+.dark-mode .question-details-spelling {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .detail-row {
+  border-color: #444;
+}
+
+.dark-mode .detail-label {
+  color: #b0b0b0;
+}
+
+.dark-mode .detail-content {
+  color: #e0e0e0;
+}
+
+/* ボタン類の統一 */
+.dark-mode .btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .btn-primary:hover {
+  background: #5568d3;
+}
+
+.dark-mode .btn-secondary {
+  background: #2a2a2a;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.dark-mode .btn-secondary:hover {
+  background: #333;
+}
+
+/* 成績タブの追加スタイル */
+.dark-mode .stats-cards {
+  color: #e0e0e0;
+}
+
+.dark-mode .stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dark-mode .stats-table {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .stats-table thead {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .stats-table tbody tr {
+  border-color: #444;
+}
+
+.dark-mode .stats-table tbody tr:hover {
+  background: #333;
+}
+
+.dark-mode .stats-table td {
+  color: #e0e0e0;
+}
+
+.dark-mode .empty-state {
+  background: #2a2a2a;
+  color: #b0b0b0;
+}
+
+/* 設定タブの追加スタイル */
+.dark-mode .settings-view {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .section-header h1 {
+  color: #8b9ef5;
+}
+
+.dark-mode .setting-hint {
+  background: #2a2a2a;
+  border-left-color: #667eea;
+  color: #b0b0b0;
+}
+
+.dark-mode .plan-progress-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* その他の要素 */
+.dark-mode .quiz-view {
+  background: #1a1a1a;
+}
+
+.dark-mode .spelling-question-content {
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-instructions {
+  background: #3a3a1a;
+  border-color: #ffc107;
+  color: #ffd54f;
+}
+
+.dark-mode .word-cards {
+  background: #1a1a1a;
+}
+
+.dark-mode .word-card-inline {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .word-card-inline:hover:not(.disabled) {
+  background: #333;
+  border-color: #667eea;
+}
+
+.dark-mode .word-card-inline.unknown {
+  background: #4d3d1a;
+  border-color: #ffc107;
+  color: #ffd54f;
+}
+
+.dark-mode .word-cards-inline {
+  background: #1a1a1a;
+  border-color: #444;
+}
+
+.dark-mode .inline-nav-btn {
+  background: #2a2a2a;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.dark-mode .inline-nav-btn:hover:not(:disabled) {
+  background: #333;
+}
+
+.dark-mode .inline-nav-btn.next-inline-btn {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .inline-nav-btn.next-inline-btn:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.dark-mode .question-nav-row {
+  color: #e0e0e0;
+}
+
+.dark-mode .question-content-inline {
+  color: #e0e0e0;
+}
+
+.dark-mode .question-reading {
+  color: #8b9ef5;
+}
+
+.dark-mode .result-cards {
+  color: #e0e0e0;
+}
+
+.dark-mode .result-card {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .result-card-btn {
+  background: #2a2a2a;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.dark-mode .result-card-btn:hover {
+  background: #333;
+}
+
+.dark-mode .result-card-btn.next-btn {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .result-card-btn.next-btn:hover {
+  background: #5568d3;
+}
+
+.dark-mode .question-details {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .detail-item {
+  background: #1a1a1a;
+  border-color: #444;
+}
+
+.dark-mode .ai-comment-bar {
+  background: linear-gradient(135deg, #3a3a1a 0%, #2a2a1a 100%);
+  border-left-color: #ffc107;
+}
+
+.dark-mode .ai-comment-text {
+  color: #ffd54f;
+}
+
+.dark-mode .difficulty-rating-buttons {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .rating-label-compact {
+  color: #b0b0b0;
+}
+
+.dark-mode .rating-btn {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .rating-btn:hover:not(:disabled) {
+  background: #333;
+  border-color: #667eea;
+}
+
+.dark-mode .rating-btn.selected {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
 .header {
   text-align: center;
   padding: 15px 10px 10px;

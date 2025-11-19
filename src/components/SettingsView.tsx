@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Question, AIPersonality } from '../types';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
@@ -67,7 +67,7 @@ function SettingsView({
   };
 
   // 初回レンダリング時にdark-modeクラスを適用
-  useState(() => {
+  useEffect(() => {
     applyDarkMode(darkMode);
     
     // システム設定の変更を監視
@@ -79,7 +79,7 @@ function SettingsView({
     };
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
-  });
+  }, [darkMode]);
 
   const totalWords = allQuestions.length;
   const estimatedDays = Math.ceil(totalWords / batchSize);

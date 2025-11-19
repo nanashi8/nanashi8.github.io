@@ -117,6 +117,29 @@ function App() {
     return saved ? JSON.parse(saved) : 1.0;
   });
 
+  // ダークモード初期化
+  useEffect(() => {
+    const applyDarkMode = (mode: 'light' | 'dark' | 'system') => {
+      const isDark = mode === 'dark' || (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark-mode', isDark);
+    };
+
+    const savedDarkMode = localStorage.getItem('darkMode') as 'light' | 'dark' | 'system' | null;
+    const darkMode = savedDarkMode || 'system';
+    applyDarkMode(darkMode);
+
+    // システム設定の変更を監視
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      const currentMode = localStorage.getItem('darkMode') as 'light' | 'dark' | 'system' | null;
+      if (!currentMode || currentMode === 'system') {
+        applyDarkMode('system');
+      }
+    };
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   // 初回読み込み: junior-high-entrance-words.csvを読み込み
   useEffect(() => {
     const loadInitialData = async () => {
