@@ -4,6 +4,8 @@
 
 アプリケーション全体で使用されるTypeScript型定義とデータ構造の詳細仕様。
 
+**最終更新**: 2025年11月19日
+
 ## 📊 基本型定義
 
 ### Question型（基幹データ型）
@@ -13,11 +15,13 @@ export interface Question {
   word: string;         // 英単語・英熟語（単語 or 熟語）
   reading: string;      // アクセント記号を正確に表したカタカナ読み
   meaning: string;      // 日本語の意味
-  explanation: string;  // 中学生が語彙を増やすために役立つ、語源や語幹等の情報
+  etymology: string;    // 語源等解説（中学生が語彙を増やすために役立つ情報）
   relatedWords: string; // 関連語。例: "apple(ア́ップル): りんご, fruit(フル́ート): 果物"
-  category: string;     // 関連分野（下記リストから選択）
+  relatedFields: string; // 関連分野（表示用）
+  category?: string;    // 関連分野（フィルター用）
   difficulty: string;   // 難易度レベル（初級, 中級, 上級）
-  type?: 'word' | 'phrase';  // 単語か熟語か（オプショナル、将来の拡張用）
+  type?: 'word' | 'phrase';  // 単語か熟語か（オプショナル）
+  isPhraseOnly?: boolean;    // 複数単語から成る熟語かどうか
 }
 ```
 
