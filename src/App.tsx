@@ -7,7 +7,7 @@ import {
   generateId,
   selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress, addSessionHistory } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect, prioritizeVerificationWords, generateAssistantMessage } from './learningAssistant';
 import { 
   generateSpacedRepetitionSchedule, 
@@ -472,6 +472,24 @@ function App() {
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime);
       
+      // セッション履歴に追加
+      const wordProgress = loadProgress().wordProgress[currentQuestion.word];
+      let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';
+      
+      // 定着判定
+      if (wordProgress && wordProgress.masteryLevel === 'mastered') {
+        status = 'mastered';
+      } else if (!isCorrect && wordProgress && wordProgress.incorrectCount >= 2) {
+        // 2回以上間違えた場合は要復習
+        status = 'review';
+      }
+      
+      addSessionHistory({
+        status,
+        word: currentQuestion.word,
+        timestamp: Date.now()
+      }, 'translation');
+      
       // 言語学的関連性AI: 学習した単語を記録
       recentlyStudiedWordsRef.current.push(currentQuestion.word);
       // 最新10件のみ保持
@@ -508,9 +526,9 @@ function App() {
       }
       
       // AI学習アシスタント: スキップした単語の検証
-      const wordProgress = progress.wordProgress[currentQuestion.word];
+      const skipWordProgress = progress.wordProgress[currentQuestion.word];
       
-      if (wordProgress && wordProgress.skippedCount && wordProgress.skippedCount > 0) {
+      if (skipWordProgress && skipWordProgress.skippedCount && skipWordProgress.skippedCount > 0) {
         // この単語は以前スキップされていた
         if (isCorrect) {
           handleSkippedWordCorrect(currentQuestion.word);
@@ -551,12 +569,8 @@ function App() {
         totalAnswered: prev.totalAnswered + 1,
       };
       
-      // 自動で次へ進む（正解時のみ）
-      if (autoAdvance && isCorrect) {
-        setTimeout(() => {
-          handleNext();
-        }, autoAdvanceDelay * 1000);
-      }
+      // 自動で次へ進む機能を無効化（ユーザーが解答を確認できるように）
+      // autoAdvanceが有効でも、解答表示を確認してから手動で次へ進む
       
       // 全問題に回答したら完了メッセージを表示
       if (newState.totalAnswered === prev.questions.length) {

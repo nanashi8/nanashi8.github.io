@@ -6,6 +6,8 @@ import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 import { getRandomAlertMessage } from '../forgettingAlert';
 import { calculateGoalProgress } from '../goalSimulator';
 import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '../confusionPairs';
+import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
+import { getRelevantMistakeTip } from '../englishTrivia';
 
 interface QuestionCardProps {
   question: Question;
@@ -41,12 +43,24 @@ function QuestionCard({
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   const [aiComment, setAiComment] = useState<string>('');
   const [attemptCount, setAttemptCount] = useState<number>(0);
+  const [correctStreak, setCorrectStreak] = useState<number>(() => {
+    const saved = sessionStorage.getItem('currentCorrectStreak');
+    return saved ? parseInt(saved, 10) : 0;
+  });
   
   // スワイプジェスチャー用
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
   const cardRef = useRef<HTMLDivElement>(null);
   const isTouchingRef = useRef<boolean>(false);
+  
+  // 問題が変わった時にステートをリセット
+  useEffect(() => {
+    setUserRating(null);
+    setExpandedChoices(new Set());
+    setAiComment('');
+    setAttemptCount(0);
+  }, [currentIndex]);
   
   const toggleChoiceDetails = (index: number) => {
     setExpandedChoices(prev => {
@@ -129,6 +143,34 @@ function QuestionCard({
         }
       }
       
+      // 5. 教師間のやりとり（10%の確率で表示）
+      const interaction = generateTeacherInteraction(personality, isCorrect, correctStreak);
+      if (interaction) {
+        additionalComments.push(interaction.message);
+      }
+      
+      // 6. 連続正解時の特別リアクション
+      const streakReaction = getTeacherReactionToStreak(correctStreak);
+      if (streakReaction) {
+        additionalComments.push(streakReaction);
+      }
+      
+      // 7. 英語あるある・豆知識（8%の確率で表示）
+      const trivia = getRelevantMistakeTip(isCorrect);
+      if (trivia) {
+        additionalComments.push(trivia);
+      }
+      
+      // 連続正解数を更新
+      if (isCorrect) {
+        const newStreak = correctStreak + 1;
+        setCorrectStreak(newStreak);
+        sessionStorage.setItem('currentCorrectStreak', String(newStreak));
+      } else {
+        setCorrectStreak(0);
+        sessionStorage.setItem('currentCorrectStreak', '0');
+      }
+      
       // コメントを結合
       if (additionalComments.length > 0) {
         comment = `${comment} ${additionalComments[0]}`; // 最初の1つだけ表示
@@ -138,20 +180,33 @@ function QuestionCard({
     } else {
       setAiComment('');
     }
-  }, [answered, selectedAnswer, question, attemptCount]);
+  }, [answered, selectedAnswer, question, attemptCount, correctStreak]);
   
   // スワイプジェスチャーのハンドラー
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
+      // 選択肢ボタンや詳細トグルボタン上でのタッチは無視
+      const target = e.target as HTMLElement;
+      if (target.closest('.choice-btn') || target.closest('.toggle-details-btn') || 
+          target.closest('.rating-btn') || target.closest('.inline-nav-btn')) {
+        return;
+      }
       touchStartX.current = e.touches[0].clientX;
       isTouchingRef.current = true;
     };
     
     const handleTouchMove = (e: TouchEvent) => {
+      if (touchStartX.current === 0) return; // タッチ開始が記録されていない場合は無視
       touchEndX.current = e.touches[0].clientX;
     };
     
     const handleTouchEnd = () => {
+      if (touchStartX.current === 0) {
+        // タッチ開始が記録されていない場合は何もしない
+        isTouchingRef.current = false;
+        return;
+      }
+      
       const swipeDistance = touchStartX.current - touchEndX.current;
       const minSwipeDistance = 80; // iOSブラウザジェスチャーとの競合回避のため増加
       
@@ -181,8 +236,8 @@ function QuestionCard({
     
     const card = cardRef.current;
     if (card) {
-      card.addEventListener('touchstart', handleTouchStart);
-      card.addEventListener('touchmove', handleTouchMove);
+      card.addEventListener('touchstart', handleTouchStart, { passive: true });
+      card.addEventListener('touchmove', handleTouchMove, { passive: true });
       card.addEventListener('touchend', handleTouchEnd);
       
       return () => {
@@ -191,7 +246,7 @@ function QuestionCard({
         card.removeEventListener('touchend', handleTouchEnd);
       };
     }
-  }, [answered, currentIndex, onPrevious]); // handleNextClickは依存配列に含めない
+  }, [answered, currentIndex, onNext, onPrevious]); // handleNextClickを依存配列に追加
 
   // キーボード入力ハンドラー
   useEffect(() => {
@@ -298,37 +353,34 @@ function QuestionCard({
               <button
                 className={getButtonClass(choice.text)}
                 onClick={(e) => {
-                  if (isTouchingRef.current) {
+                  // 回答済みの場合は何もしない（disabled属性でもブロックされる）
+                  if (answered) {
                     e.preventDefault();
                     e.stopPropagation();
                     return;
                   }
-                  if (!answered) {
-                    const isCorrect = choice.text === question.meaning;
-                    if (!isCorrect) {
-                      setAttemptCount(prev => prev + 1);
-                    }
-                    onAnswer(choice.text, question.meaning);
+                  
+                  const isCorrect = choice.text === question.meaning;
+                  if (!isCorrect) {
+                    setAttemptCount(prev => prev + 1);
                   }
+                  onAnswer(choice.text, question.meaning);
                 }}
-                disabled={false}
+                disabled={answered}
               >
                 <div className="choice-content">
                   <div className="choice-text">{choice.text}</div>
-                  {answered && choiceQuestion && (
-                    <button 
-                      className="toggle-details-btn-inline"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleChoiceDetails(idx);
-                      }}
-                      title={isExpanded ? '詳細を閉じる' : '詳細を見る'}
-                    >
-                      {isExpanded ? '▲' : '▼'}
-                    </button>
-                  )}
                 </div>
               </button>
+              {answered && choiceQuestion && (
+                <button 
+                  className="toggle-details-btn"
+                  onClick={() => toggleChoiceDetails(idx)}
+                  title={isExpanded ? '詳細を閉じる' : '詳細を見る'}
+                >
+                  {isExpanded ? '▲ 詳細を閉じる' : '▼ 詳細を見る'}
+                </button>
+              )}
               {answered && choiceQuestion && isExpanded && (
                 <div className="choice-details">
                   <div className="choice-detail-item">

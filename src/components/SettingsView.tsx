@@ -92,25 +92,6 @@ function SettingsView({
           <h1>📚 学習プランナー</h1>
         </div>
 
-        {/* 1日の学習単語数 */}
-        <div className="simple-setting-section">
-          <h3>🎯 1日の学習単語数</h3>
-          <div className="slider-container">
-            <input
-              type="range"
-              min="10"
-              max={totalWords}
-              step="5"
-              value={batchSize}
-              onChange={(e) => handleBatchSizeChange(Number(e.target.value))}
-              className="setting-slider"
-              aria-label="1日の学習単語数"
-            />
-            <div className="slider-value">{batchSize}語 / {totalWords}語</div>
-            <div className="estimated-duration">{estimatedDaysText}で完了予定（1日{batchSize}語ペース）</div>
-          </div>
-        </div>
-
         {/* 学習プラン設定 */}
         <LearningPlanView
           allQuestions={allQuestions}

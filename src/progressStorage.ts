@@ -48,6 +48,59 @@ function cleanupOldResults(): void {
   }
 }
 
+// セッション履歴インジケーター用のデータ型
+export type SessionHistoryItem = {
+  status: 'correct' | 'incorrect' | 'review' | 'mastered';
+  word: string;
+  timestamp: number;
+};
+
+// セッション履歴をLocalStorageに保存（最大50件）
+const SESSION_HISTORY_KEY = 'session-history';
+const MAX_SESSION_HISTORY = 50;
+
+export function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling'): void {
+  try {
+    const key = `${SESSION_HISTORY_KEY}-${mode}`;
+    const stored = localStorage.getItem(key);
+    const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
+    
+    history.push(item);
+    
+    // 最新50件のみ保持
+    if (history.length > MAX_SESSION_HISTORY) {
+      history.shift();
+    }
+    
+    localStorage.setItem(key, JSON.stringify(history));
+  } catch (e) {
+    console.error('セッション履歴の保存エラー:', e);
+  }
+}
+
+export function getSessionHistory(mode: 'translation' | 'spelling', limit: number = 20): SessionHistoryItem[] {
+  try {
+    const key = `${SESSION_HISTORY_KEY}-${mode}`;
+    const stored = localStorage.getItem(key);
+    const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
+    
+    // 最新limit件を返す
+    return history.slice(-limit);
+  } catch (e) {
+    console.error('セッション履歴の取得エラー:', e);
+    return [];
+  }
+}
+
+export function clearSessionHistory(mode: 'translation' | 'spelling'): void {
+  try {
+    const key = `${SESSION_HISTORY_KEY}-${mode}`;
+    localStorage.removeItem(key);
+  } catch (e) {
+    console.error('セッション履歴のクリアエラー:', e);
+  }
+}
+
 export interface QuizResult {
   id: string;
   questionSetId: string;
@@ -549,6 +602,200 @@ function calculateDifficultyScore(wordProgress: WordProgress): number {
   return Math.max(0, Math.min(100, finalScore)); // 0-100の範囲に制限
 }
 
+/**
+ * 柔軟な定着判定システム
+ * 忘却曲線を考慮した高度な定着判定
+ * 連続正解回数に応じて指数関数的に除外期間を延長
+ */
+interface MasteryResult {
+  isMastered: boolean;
+  excludeDays: number; // 除外期間（日数）
+  reason: string; // 定着と判定した理由
+  confidence: number; // 判定の信頼度（0-1）
+  masteryLevel: number; // 習熟度レベル（1-7）
+}
+
+/**
+ * 間隔反復アルゴリズム（SM-2改良版）
+ * 連続正解回数に基づく指数関数的な復習間隔
+ * 
+ * 脳科学的根拠:
+ * - エビングハウスの忘却曲線: 復習ごとに記憶が強化され、忘却速度が低下
+ * - 間隔効果: 適切な間隔をあけた復習が最も効果的
+ * - 長期増強 (LTP): 繰り返し刺激で神経結合が強化される
+ * 
+ * 復習スケジュール:
+ * 1回目: 1日後
+ * 2回目: 3日後
+ * 3回目: 7日後   ← 短期記憶から長期記憶への移行
+ * 4回目: 14日後
+ * 5回目: 30日後  ← 長期記憶に定着
+ * 6回目: 90日後  ← 確実な長期記憶
+ * 7回目: 180日後 ← 半永久的記憶
+ * 8回目以降: 365日後 ← 年1回の確認で十分
+ */
+function calculateExponentialInterval(consecutiveCorrect: number): number {
+  // 連続正解回数に基づく指数関数的な間隔
+  const intervals = [
+    1,    // 0回: 即座に復習
+    1,    // 1回: 1日後
+    3,    // 2回: 3日後
+    7,    // 3回: 1週間後（短期→長期記憶の移行）
+    14,   // 4回: 2週間後
+    30,   // 5回: 1ヶ月後（長期記憶に定着）
+    90,   // 6回: 3ヶ月後（確実な長期記憶）
+    180,  // 7回: 6ヶ月後（半永久的記憶）
+    365   // 8回以上: 1年後（年次確認）
+  ];
+  
+  // 8回以上は365日固定
+  if (consecutiveCorrect >= intervals.length) {
+    return 365;
+  }
+  
+  return intervals[consecutiveCorrect] || 1;
+}
+
+function checkFlexibleMastery(
+  wordProgress: WordProgress,
+  isCorrect: boolean
+): MasteryResult {
+  const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
+  const accuracy = totalAttempts > 0 ? wordProgress.correctCount / totalAttempts : 0;
+  const { consecutiveCorrect, lastStudied } = wordProgress;
+  
+  // 経過時間の計算
+  const hoursSinceLastStudy = (Date.now() - lastStudied) / (1000 * 60 * 60);
+  const daysSinceLastStudy = hoursSinceLastStudy / 24;
+  
+  // === 確実な定着パターン ===
+  
+  // パターン1: 1発正解（即座定着）
+  if (totalAttempts === 1 && isCorrect) {
+    const excludeDays = calculateExponentialInterval(1);
+    return {
+      isMastered: true,
+      excludeDays,
+      reason: `1発正解（${excludeDays}日後に再確認）`,
+      confidence: 0.85,
+      masteryLevel: 1
+    };
+  }
+  
+  // パターン2: 連続正解（指数関数的な間隔延長）
+  if (consecutiveCorrect >= 2 && isCorrect) {
+    const excludeDays = calculateExponentialInterval(consecutiveCorrect);
+    const masteryLevel = Math.min(7, Math.floor(consecutiveCorrect / 1));
+    
+    let reason = '';
+    if (consecutiveCorrect >= 7) {
+      reason = `超長期記憶達成！（連続${consecutiveCorrect}回正解、${excludeDays}日後に年次確認）`;
+    } else if (consecutiveCorrect >= 5) {
+      reason = `長期記憶定着（連続${consecutiveCorrect}回正解、${excludeDays}日後に確認）`;
+    } else if (consecutiveCorrect >= 3) {
+      reason = `短期→長期記憶移行（連続${consecutiveCorrect}回正解、${excludeDays}日後に確認）`;
+    } else {
+      reason = `学習中（連続${consecutiveCorrect}回正解、${excludeDays}日後に復習）`;
+    }
+    
+    return {
+      isMastered: true,
+      excludeDays,
+      reason,
+      confidence: Math.min(0.99, 0.75 + consecutiveCorrect * 0.05),
+      masteryLevel
+    };
+  }
+  
+  // === 柔軟な定着パターン（忘却曲線考慮） ===
+  
+  // パターン3: 高精度安定型（正答率90%以上 + 連続2回正解）
+  if (totalAttempts >= 3 && accuracy >= 0.9 && consecutiveCorrect >= 2) {
+    const excludeDays = calculateExponentialInterval(consecutiveCorrect);
+    return {
+      isMastered: true,
+      excludeDays,
+      reason: `高精度安定型（正答率${Math.round(accuracy * 100)}%、${excludeDays}日後に確認）`,
+      confidence: 0.88,
+      masteryLevel: 2
+    };
+  }
+  
+  // パターン4: 長期記憶型（7日以上間隔をあけて連続2回正解）
+  // 間隔学習の効果を評価 → 通常より長い除外期間
+  if (consecutiveCorrect >= 2 && daysSinceLastStudy >= 7 && isCorrect) {
+    const baseInterval = calculateExponentialInterval(consecutiveCorrect);
+    const excludeDays = Math.floor(baseInterval * 1.5); // 1.5倍のボーナス
+    return {
+      isMastered: true,
+      excludeDays,
+      reason: `長期記憶型（7日間隔で正解、${excludeDays}日後に確認）`,
+      confidence: 0.92,
+      masteryLevel: 3
+    };
+  }
+  
+  // パターン5: 中期記憶型（3日以上間隔をあけて連続2回正解）
+  if (consecutiveCorrect >= 2 && daysSinceLastStudy >= 3 && isCorrect) {
+    const baseInterval = calculateExponentialInterval(consecutiveCorrect);
+    const excludeDays = Math.floor(baseInterval * 1.2); // 1.2倍のボーナス
+    return {
+      isMastered: true,
+      excludeDays,
+      reason: `中期記憶型（3日間隔で正解、${excludeDays}日後に確認）`,
+      confidence: 0.85,
+      masteryLevel: 2
+    };
+  }
+  
+  // パターン6: 短期完璧型（24時間以内に連続2回正解 + 正答率85%以上）
+  if (consecutiveCorrect >= 2 && daysSinceLastStudy <= 1 && accuracy >= 0.85 && totalAttempts >= 4) {
+    const excludeDays = calculateExponentialInterval(consecutiveCorrect);
+    return {
+      isMastered: true,
+      excludeDays,
+      reason: `短期完璧型（24時間内に連続正解、${excludeDays}日後に確認）`,
+      confidence: 0.80,
+      masteryLevel: 1
+    };
+  }
+  
+  // パターン7: 高回数安定型（5回以上挑戦 + 正答率80%以上 + 最近正解）
+  if (totalAttempts >= 5 && accuracy >= 0.8 && isCorrect) {
+    const excludeDays = Math.max(7, calculateExponentialInterval(2));
+    return {
+      isMastered: true,
+      excludeDays,
+      reason: `高回数安定型（${totalAttempts}回挑戦・正答率${Math.round(accuracy * 100)}%、${excludeDays}日後に確認）`,
+      confidence: 0.83,
+      masteryLevel: 2
+    };
+  }
+  
+  // パターン8: 次回定着予測型（連続2回正解 + 正答率75%以上）
+  if (consecutiveCorrect >= 2 && accuracy >= 0.75 && totalAttempts >= 3) {
+    if (isCorrect) {
+      const excludeDays = calculateExponentialInterval(consecutiveCorrect);
+      return {
+        isMastered: true,
+        excludeDays,
+        reason: `次回定着達成（${excludeDays}日後に確認）`,
+        confidence: 0.78,
+        masteryLevel: 1
+      };
+    }
+  }
+  
+  // === 未定着 ===
+  return {
+    isMastered: false,
+    excludeDays: 0,
+    reason: '未定着',
+    confidence: 1.0,
+    masteryLevel: 0
+  };
+}
+
 // 習熟レベルを判定
 function determineMasteryLevel(wordProgress: WordProgress): 'new' | 'learning' | 'mastered' {
   const total = wordProgress.correctCount + wordProgress.incorrectCount;
@@ -611,17 +858,18 @@ export function updateWordProgress(
   // 習熟レベルを更新
   wordProgress.masteryLevel = determineMasteryLevel(wordProgress);
   
-  // 1発100%（初回で正解）の場合、定着として扱い7日間出題除外
-  if (totalAttempts === 1 && isCorrect) {
-    wordProgress.skipExcludeUntil = Date.now() + (7 * 24 * 60 * 60 * 1000);
+  // 柔軟な定着判定システム
+  const masteryResult = checkFlexibleMastery(wordProgress, isCorrect);
+  
+  if (masteryResult.isMastered) {
+    wordProgress.skipExcludeUntil = Date.now() + masteryResult.excludeDays * 24 * 60 * 60 * 1000;
     // 定着したので長文読解の保存リストから削除
     removeFromReadingUnknownWords(word);
-  }
-  // 連続3回以上正解の場合も同様に14日間除外
-  else if (wordProgress.consecutiveCorrect >= 3) {
-    wordProgress.skipExcludeUntil = Date.now() + (14 * 24 * 60 * 60 * 1000);
-    // 定着したので長文読解の保存リストから削除
-    removeFromReadingUnknownWords(word);
+    
+    // デバッグ用: 定着理由をログ出力
+    if (masteryResult.reason !== '未定着') {
+      console.log(`✅ ${word} が定着: ${masteryResult.reason} (除外期間: ${masteryResult.excludeDays}日)`);
+    }
   }
   
   saveProgress(progress);
@@ -997,6 +1245,229 @@ export function getRetentionRateWithAI(): {
 }
 
 /**
+ * 学習中の単語の定着予測を取得
+ * 各単語があと何回正解すれば定着するかを計算
+ */
+export interface MasteryPrediction {
+  word: string;
+  currentStatus: string; // 現在の状態
+  remainingCorrectAnswers: number; // あと何回正解が必要か
+  confidence: number; // 予測の信頼度（0-100%）
+  nextMilestone: string; // 次のマイルストーン
+  estimatedDays: number; // 推定残り日数
+}
+
+export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
+  const progress = loadProgress();
+  const predictions: MasteryPrediction[] = [];
+  
+  Object.entries(progress.wordProgress).forEach(([word, wp]) => {
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    if (totalAttempts === 0) return; // 未学習はスキップ
+    
+    const accuracy = wp.correctCount / totalAttempts;
+    const { consecutiveCorrect } = wp;
+    
+    // すでに定着している単語はスキップ
+    const masteryResult = checkFlexibleMastery(wp, true);
+    if (masteryResult.isMastered) return;
+    
+    // 現在の状態を分析
+    let remainingCorrectAnswers = 0;
+    let nextMilestone = '';
+    let estimatedDays = 0;
+    let confidence = 0;
+    let currentStatus = '';
+    
+    // パターン1: 連続正解に近い
+    if (consecutiveCorrect === 2) {
+      remainingCorrectAnswers = 1;
+      nextMilestone = '連続3回正解で定着';
+      estimatedDays = 1;
+      confidence = 90;
+      currentStatus = `連続${consecutiveCorrect}回正解中`;
+    } else if (consecutiveCorrect === 1) {
+      remainingCorrectAnswers = 2;
+      nextMilestone = '連続3回正解で定着';
+      estimatedDays = 2;
+      confidence = 75;
+      currentStatus = `連続${consecutiveCorrect}回正解中`;
+    }
+    // パターン2: 高精度安定型に近い（正答率90%以上）
+    else if (accuracy >= 0.9 && consecutiveCorrect === 1 && totalAttempts >= 2) {
+      remainingCorrectAnswers = 1;
+      nextMilestone = '高精度安定型で定着（連続2回正解）';
+      estimatedDays = 1;
+      confidence = 85;
+      currentStatus = `正答率${Math.round(accuracy * 100)}%`;
+    }
+    // パターン3: 高回数安定型に近い
+    else if (totalAttempts >= 4 && accuracy >= 0.75) {
+      remainingCorrectAnswers = 1;
+      nextMilestone = '高回数安定型で定着（次回正解）';
+      estimatedDays = 1;
+      confidence = 80;
+      currentStatus = `${totalAttempts}回挑戦・正答率${Math.round(accuracy * 100)}%`;
+    }
+    // パターン4: 次回定着予測型
+    else if (consecutiveCorrect >= 2 && accuracy >= 0.7 && totalAttempts >= 3) {
+      remainingCorrectAnswers = 1;
+      nextMilestone = '次回定着達成';
+      estimatedDays = 1;
+      confidence = 75;
+      currentStatus = `連続${consecutiveCorrect}回正解・正答率${Math.round(accuracy * 100)}%`;
+    }
+    // パターン5: まだ遠い
+    else if (accuracy >= 0.6) {
+      const neededConsecutive = 3 - consecutiveCorrect;
+      remainingCorrectAnswers = Math.max(neededConsecutive, 2);
+      nextMilestone = `連続${3}回正解を目指す`;
+      estimatedDays = remainingCorrectAnswers;
+      confidence = 60;
+      currentStatus = `正答率${Math.round(accuracy * 100)}%`;
+    }
+    // パターン6: 苦手な単語
+    else {
+      remainingCorrectAnswers = 3;
+      nextMilestone = '基礎から復習';
+      estimatedDays = 5;
+      confidence = 40;
+      currentStatus = `要復習（正答率${Math.round(accuracy * 100)}%）`;
+    }
+    
+    predictions.push({
+      word,
+      currentStatus,
+      remainingCorrectAnswers,
+      confidence,
+      nextMilestone,
+      estimatedDays
+    });
+  });
+  
+  // 定着が近い順にソート（残り回答数 → 信頼度）
+  return predictions
+    .sort((a, b) => {
+      if (a.remainingCorrectAnswers !== b.remainingCorrectAnswers) {
+        return a.remainingCorrectAnswers - b.remainingCorrectAnswers;
+      }
+      return b.confidence - a.confidence;
+    })
+    .slice(0, limit);
+}
+
+/**
+ * 定着が近い単語の統計を取得
+ */
+export function getNearMasteryStats(): {
+  nearMasteryCount: number; // 定着まであと1回の単語数
+  learningCount: number; // 学習中の単語数
+  averageRemainingAnswers: number; // 平均残り回答数
+  longTermMemoryCount: number; // 長期記憶に達した単語数（連続5回以上）
+  superMemoryCount: number; // 超長期記憶に達した単語数（連続7回以上）
+} {
+  const progress = loadProgress();
+  let nearMasteryCount = 0;
+  let learningCount = 0;
+  let totalRemaining = 0;
+  let longTermMemoryCount = 0;
+  let superMemoryCount = 0;
+  
+  Object.values(progress.wordProgress).forEach(wp => {
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    if (totalAttempts === 0) return;
+    
+    const masteryResult = checkFlexibleMastery(wp, true);
+    if (masteryResult.isMastered) {
+      // 長期記憶のカウント
+      if (wp.consecutiveCorrect >= 7) {
+        superMemoryCount++;
+      } else if (wp.consecutiveCorrect >= 5) {
+        longTermMemoryCount++;
+      }
+      return;
+    }
+    
+    learningCount++;
+    
+    // あと1回で定着する条件をチェック
+    const { consecutiveCorrect } = wp;
+    const accuracy = wp.correctCount / totalAttempts;
+    
+    if (
+      consecutiveCorrect === 2 || // 連続2回正解
+      (accuracy >= 0.9 && consecutiveCorrect === 1 && totalAttempts >= 2) || // 高精度安定型
+      (totalAttempts >= 4 && accuracy >= 0.75) // 高回数安定型
+    ) {
+      nearMasteryCount++;
+      totalRemaining += 1;
+    } else {
+      totalRemaining += Math.max(1, 3 - consecutiveCorrect);
+    }
+  });
+  
+  return {
+    nearMasteryCount,
+    learningCount,
+    averageRemainingAnswers: learningCount > 0 ? Math.round(totalRemaining / learningCount * 10) / 10 : 0,
+    longTermMemoryCount,
+    superMemoryCount
+  };
+}
+
+/**
+ * 今日の学習計画情報を取得
+ * 要復習単語と確認予定単語を計算
+ */
+export interface DailyPlanInfo {
+  reviewWordsCount: number; // 要復習単語数（忘却曲線で復習が必要）
+  scheduledWordsCount: number; // 確認予定単語数（skipExcludeUntilが今日まで）
+  totalPlannedCount: number; // 合計学習予定数
+  reviewWords: string[]; // 要復習単語リスト
+  scheduledWords: string[]; // 確認予定単語リスト
+}
+
+export function getDailyPlanInfo(): DailyPlanInfo {
+  const progress = loadProgress();
+  const now = Date.now();
+  const today = new Date().setHours(0, 0, 0, 0);
+  const tomorrow = today + 24 * 60 * 60 * 1000;
+  
+  const reviewWords: string[] = [];
+  const scheduledWords: string[] = [];
+  
+  Object.entries(progress.wordProgress).forEach(([word, wp]) => {
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    if (totalAttempts === 0) return; // 未学習はスキップ
+    
+    // 定着済みでスキップ除外期間中かチェック
+    const isExcluded = wp.skipExcludeUntil && wp.skipExcludeUntil > now;
+    
+    if (isExcluded) {
+      // 除外期間が今日中に終了する単語 = 確認予定
+      if (wp.skipExcludeUntil && wp.skipExcludeUntil < tomorrow) {
+        scheduledWords.push(word);
+      }
+    } else {
+      // 除外されていない = 復習が必要
+      // 最終学習から24時間以上経過している場合
+      const hoursSinceLastStudy = (now - wp.lastStudied) / (1000 * 60 * 60);
+      if (hoursSinceLastStudy >= 24) {
+        reviewWords.push(word);
+      }
+    }
+  });
+  
+  return {
+    reviewWordsCount: reviewWords.length,
+    scheduledWordsCount: scheduledWords.length,
+    totalPlannedCount: reviewWords.length + scheduledWords.length,
+    reviewWords,
+    scheduledWords
+  };
+}
+
+/**
  * 難易度別の統計を取得（レーダーチャート用）
  * @param mode クイズモード
  */
@@ -1238,4 +1709,313 @@ export function resetStatsByModeDifficulty(mode: 'translation' | 'spelling', dif
   });
   
   saveProgress(progress);
+}
+
+/**
+ * 学習カレンダー用のデータを取得（過去N日分）
+ */
+export function getStudyCalendarData(days: number = 90): Array<{
+  date: string; // YYYY-MM-DD形式
+  count: number; // その日の回答数
+  accuracy: number; // その日の正答率
+}> {
+  const progress = loadProgress();
+  const now = new Date();
+  const calendarData: Array<{ date: string; count: number; accuracy: number }> = [];
+  
+  // 過去N日分の日付を生成
+  for (let i = days - 1; i >= 0; i--) {
+    const date = new Date(now);
+    date.setDate(date.getDate() - i);
+    const dateStr = date.toISOString().split('T')[0];
+    
+    // その日の結果を集計
+    const dayStart = new Date(date).setHours(0, 0, 0, 0);
+    const dayEnd = new Date(date).setHours(23, 59, 59, 999);
+    const dayResults = progress.results.filter(r => r.date >= dayStart && r.date <= dayEnd);
+    
+    const totalAnswered = dayResults.reduce((sum, r) => sum + r.total, 0);
+    const totalCorrect = dayResults.reduce((sum, r) => sum + r.score, 0);
+    const accuracy = totalAnswered > 0 ? (totalCorrect / totalAnswered) * 100 : 0;
+    
+    calendarData.push({
+      date: dateStr,
+      count: totalAnswered,
+      accuracy: accuracy,
+    });
+  }
+  
+  return calendarData;
+}
+
+/**
+ * 週次統計を取得
+ */
+export function getWeeklyStats(): {
+  studyDays: number; // 今週の学習日数
+  totalDays: number; // 今週の総日数（通常7）
+  totalAnswered: number; // 今週の総回答数
+  accuracy: number; // 今週の正答率
+  newMastered: number; // 今週新規定着した単語数
+  previousWeekAccuracy: number; // 先週の正答率（比較用）
+} {
+  const progress = loadProgress();
+  const now = new Date();
+  
+  // 今週の開始日（月曜日）を計算
+  const currentDay = now.getDay();
+  const mondayOffset = currentDay === 0 ? -6 : 1 - currentDay;
+  const weekStart = new Date(now);
+  weekStart.setDate(now.getDate() + mondayOffset);
+  weekStart.setHours(0, 0, 0, 0);
+  
+  const weekEnd = new Date(weekStart);
+  weekEnd.setDate(weekStart.getDate() + 7);
+  
+  // 先週の範囲
+  const lastWeekStart = new Date(weekStart);
+  lastWeekStart.setDate(weekStart.getDate() - 7);
+  const lastWeekEnd = new Date(weekStart);
+  
+  // 今週の結果
+  const thisWeekResults = progress.results.filter(r => 
+    r.date >= weekStart.getTime() && r.date < weekEnd.getTime()
+  );
+  
+  // 先週の結果
+  const lastWeekResults = progress.results.filter(r => 
+    r.date >= lastWeekStart.getTime() && r.date < lastWeekEnd.getTime()
+  );
+  
+  // 今週の学習日数
+  const studyDatesThisWeek = new Set<string>();
+  thisWeekResults.forEach(r => {
+    const date = new Date(r.date).toISOString().split('T')[0];
+    studyDatesThisWeek.add(date);
+  });
+  
+  // 今週の統計
+  const totalAnswered = thisWeekResults.reduce((sum, r) => sum + r.total, 0);
+  const totalCorrect = thisWeekResults.reduce((sum, r) => sum + r.score, 0);
+  const accuracy = totalAnswered > 0 ? (totalCorrect / totalAnswered) * 100 : 0;
+  
+  // 先週の統計
+  const lastWeekTotalAnswered = lastWeekResults.reduce((sum, r) => sum + r.total, 0);
+  const lastWeekTotalCorrect = lastWeekResults.reduce((sum, r) => sum + r.score, 0);
+  const previousWeekAccuracy = lastWeekTotalAnswered > 0 ? (lastWeekTotalCorrect / lastWeekTotalAnswered) * 100 : 0;
+  
+  // 今週新規定着した単語数
+  let newMastered = 0;
+  Object.values(progress.wordProgress).forEach(wp => {
+    if (wp.masteryLevel === 'mastered' && wp.lastStudied >= weekStart.getTime()) {
+      newMastered++;
+    }
+  });
+  
+  return {
+    studyDays: studyDatesThisWeek.size,
+    totalDays: 7,
+    totalAnswered,
+    accuracy,
+    newMastered,
+    previousWeekAccuracy,
+  };
+}
+
+/**
+ * 月次統計を取得
+ */
+export function getMonthlyStats(): {
+  studyDays: number; // 今月の学習日数
+  totalDays: number; // 今月の総日数
+  totalAnswered: number; // 今月の総回答数
+  accuracy: number; // 今月の正答率
+  newMastered: number; // 今月新規定着した単語数
+} {
+  const progress = loadProgress();
+  const now = new Date();
+  
+  // 今月の開始日
+  const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+  monthStart.setHours(0, 0, 0, 0);
+  
+  const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+  monthEnd.setHours(23, 59, 59, 999);
+  
+  // 今月の結果
+  const thisMonthResults = progress.results.filter(r => 
+    r.date >= monthStart.getTime() && r.date <= monthEnd.getTime()
+  );
+  
+  // 今月の学習日数
+  const studyDatesThisMonth = new Set<string>();
+  thisMonthResults.forEach(r => {
+    const date = new Date(r.date).toISOString().split('T')[0];
+    studyDatesThisMonth.add(date);
+  });
+  
+  // 今月の統計
+  const totalAnswered = thisMonthResults.reduce((sum, r) => sum + r.total, 0);
+  const totalCorrect = thisMonthResults.reduce((sum, r) => sum + r.score, 0);
+  const accuracy = totalAnswered > 0 ? (totalCorrect / totalAnswered) * 100 : 0;
+  
+  // 今月新規定着した単語数
+  let newMastered = 0;
+  Object.values(progress.wordProgress).forEach(wp => {
+    if (wp.masteryLevel === 'mastered' && wp.lastStudied >= monthStart.getTime()) {
+      newMastered++;
+    }
+  });
+  
+  const totalDays = monthEnd.getDate();
+  
+  return {
+    studyDays: studyDatesThisMonth.size,
+    totalDays,
+    totalAnswered,
+    accuracy,
+    newMastered,
+  };
+}
+
+/**
+ * 累積進捗データを取得（週別集計）
+ */
+export function getCumulativeProgressData(weeks: number = 12): Array<{
+  weekLabel: string; // 週のラベル（例: "11/01"）
+  cumulativeMastered: number; // 累積定着数
+  weeklyMastered: number; // その週の新規定着数
+  cumulativeAnswered: number; // 累積回答数
+  weeklyAnswered: number; // その週の回答数
+}> {
+  const progress = loadProgress();
+  const now = new Date();
+  const data: Array<{
+    weekLabel: string;
+    cumulativeMastered: number;
+    weeklyMastered: number;
+    cumulativeAnswered: number;
+    weeklyAnswered: number;
+  }> = [];
+  
+  let cumulativeMastered = 0;
+  let cumulativeAnswered = 0;
+  
+  for (let i = weeks - 1; i >= 0; i--) {
+    const weekEnd = new Date(now);
+    weekEnd.setDate(now.getDate() - (i * 7));
+    weekEnd.setHours(23, 59, 59, 999);
+    
+    const weekStart = new Date(weekEnd);
+    weekStart.setDate(weekEnd.getDate() - 6);
+    weekStart.setHours(0, 0, 0, 0);
+    
+    // その週の結果
+    const weekResults = progress.results.filter(r => 
+      r.date >= weekStart.getTime() && r.date <= weekEnd.getTime()
+    );
+    
+    const weeklyAnswered = weekResults.reduce((sum, r) => sum + r.total, 0);
+    cumulativeAnswered += weeklyAnswered;
+    
+    // その週の新規定着数
+    let weeklyMastered = 0;
+    Object.values(progress.wordProgress).forEach(wp => {
+      if (wp.masteryLevel === 'mastered' && 
+          wp.lastStudied >= weekStart.getTime() && 
+          wp.lastStudied <= weekEnd.getTime()) {
+        weeklyMastered++;
+      }
+    });
+    cumulativeMastered += weeklyMastered;
+    
+    const weekLabel = `${weekStart.getMonth() + 1}/${weekStart.getDate()}`;
+    
+    data.push({
+      weekLabel,
+      cumulativeMastered,
+      weeklyMastered,
+      cumulativeAnswered,
+      weeklyAnswered,
+    });
+  }
+  
+  return data;
+}
+
+/**
+ * 定着率のトレンドを取得
+ */
+export function getRetentionTrend(): {
+  last7Days: number;
+  last30Days: number;
+  allTime: number;
+} {
+  const progress = loadProgress();
+  const now = Date.now();
+  
+  const day7Ago = now - (7 * 24 * 60 * 60 * 1000);
+  const day30Ago = now - (30 * 24 * 60 * 60 * 1000);
+  
+  // 各期間の単語を集計
+  const words7Days = new Set<string>();
+  const mastered7Days = new Set<string>();
+  const words30Days = new Set<string>();
+  const mastered30Days = new Set<string>();
+  const wordsAllTime = new Set<string>();
+  const masteredAllTime = new Set<string>();
+  
+  progress.results.forEach(result => {
+    result.incorrectWords.forEach(word => {
+      wordsAllTime.add(word);
+      if (result.date >= day30Ago) {
+        words30Days.add(word);
+      }
+      if (result.date >= day7Ago) {
+        words7Days.add(word);
+      }
+    });
+  });
+  
+  Object.entries(progress.wordProgress).forEach(([word, wp]) => {
+    if (wp.masteryLevel === 'mastered') {
+      masteredAllTime.add(word);
+      if (wp.lastStudied >= day30Ago) {
+        mastered30Days.add(word);
+      }
+      if (wp.lastStudied >= day7Ago) {
+        mastered7Days.add(word);
+      }
+    }
+  });
+  
+  return {
+    last7Days: words7Days.size > 0 ? (mastered7Days.size / words7Days.size) * 100 : 0,
+    last30Days: words30Days.size > 0 ? (mastered30Days.size / words30Days.size) * 100 : 0,
+    allTime: wordsAllTime.size > 0 ? (masteredAllTime.size / wordsAllTime.size) * 100 : 0,
+  };
+}
+
+/**
+ * 克服した単語（最近定着した単語）を取得
+ */
+export function getRecentlyMasteredWords(days: number = 7, limit: number = 10): Array<{
+  word: string;
+  masteredDate: number;
+  totalAttempts: number;
+}> {
+  const progress = loadProgress();
+  const cutoff = Date.now() - (days * 24 * 60 * 60 * 1000);
+  
+  const words = Object.entries(progress.wordProgress)
+    .filter(([_, wp]) => wp.masteryLevel === 'mastered' && wp.lastStudied >= cutoff)
+    .map(([word, wp]) => ({
+      word,
+      masteredDate: wp.lastStudied,
+      totalAttempts: wp.correctCount + wp.incorrectCount,
+    }))
+    .sort((a, b) => b.masteredDate - a.masteredDate)
+    .slice(0, limit);
+  
+  return words;
 }

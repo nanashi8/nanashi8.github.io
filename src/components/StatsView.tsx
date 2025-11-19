@@ -2,6 +2,14 @@ import { useState, useEffect } from 'react';
 import {
   getStatsByModeDifficulty,
   resetStatsByModeDifficulty,
+  loadProgress,
+  getStudyCalendarData,
+  getWeeklyStats,
+  getMonthlyStats,
+  getCumulativeProgressData,
+  getRetentionTrend,
+  getWeakWords,
+  getRecentlyMasteredWords,
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
 
@@ -22,6 +30,16 @@ function StatsView({ }: StatsViewProps) {
   const [spellingStats, setSpellingStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
   const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
+  
+  // 新しい統計データ
+  const [calendarData, setCalendarData] = useState<Array<{ date: string; count: number; accuracy: number }>>([]);
+  const [weeklyStats, setWeeklyStats] = useState<any>(null);
+  const [monthlyStats, setMonthlyStats] = useState<any>(null);
+  const [cumulativeData, setCumulativeData] = useState<any[]>([]);
+  const [retentionTrend, setRetentionTrend] = useState<any>(null);
+  const [weakWords, setWeakWords] = useState<any[]>([]);
+  const [recentlyMastered, setRecentlyMastered] = useState<any[]>([]);
+  const [streakDays, setStreakDays] = useState<number>(0);
 
   // LocalStorageサイズを取得
   const getStorageSize = () => {
@@ -54,6 +72,19 @@ function StatsView({ }: StatsViewProps) {
     const spellingData = getStatsByModeDifficulty('spelling');
     setTranslationStats(translationData);
     setSpellingStats(spellingData);
+    
+    // 新しい統計データを読み込み
+    setCalendarData(getStudyCalendarData(90));
+    setWeeklyStats(getWeeklyStats());
+    setMonthlyStats(getMonthlyStats());
+    setCumulativeData(getCumulativeProgressData(12));
+    setRetentionTrend(getRetentionTrend());
+    setWeakWords(getWeakWords(10));
+    setRecentlyMastered(getRecentlyMasteredWords(7, 5));
+    
+    const progress = loadProgress();
+    setStreakDays(progress.statistics.streakDays);
+    
     getStorageSize();
   };
 
@@ -108,6 +139,146 @@ function StatsView({ }: StatsViewProps) {
             />
             自動更新
           </label>
+        </div>
+      </div>
+
+      {/* ダッシュボード */}
+      <div className="stats-dashboard">
+        <div className="dashboard-card">
+          <div className="dashboard-icon">🔥</div>
+          <div className="dashboard-content">
+            <div className="dashboard-label">連続学習日数</div>
+            <div className="dashboard-value">{streakDays}日</div>
+          </div>
+        </div>
+        
+        {weeklyStats && (
+          <div className="dashboard-card">
+            <div className="dashboard-icon">📅</div>
+            <div className="dashboard-content">
+              <div className="dashboard-label">今週の学習</div>
+              <div className="dashboard-value">{weeklyStats.studyDays}/{weeklyStats.totalDays}日</div>
+              <div className="dashboard-sub">{weeklyStats.totalAnswered}問回答</div>
+            </div>
+          </div>
+        )}
+        
+        {monthlyStats && (
+          <div className="dashboard-card">
+            <div className="dashboard-icon">📊</div>
+            <div className="dashboard-content">
+              <div className="dashboard-label">今月の進捗</div>
+              <div className="dashboard-value">{monthlyStats.studyDays}/{monthlyStats.totalDays}日</div>
+              <div className="dashboard-sub">定着+{monthlyStats.newMastered}語</div>
+            </div>
+          </div>
+        )}
+        
+        {retentionTrend && (
+          <div className="dashboard-card">
+            <div className="dashboard-icon">📈</div>
+            <div className="dashboard-content">
+              <div className="dashboard-label">定着率トレンド</div>
+              <div className="dashboard-value">{retentionTrend.allTime.toFixed(1)}%</div>
+              <div className="dashboard-sub">
+                7日: {retentionTrend.last7Days.toFixed(1)}% / 30日: {retentionTrend.last30Days.toFixed(1)}%
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 週次サマリー */}
+      {weeklyStats && (
+        <div className="stats-section-summary">
+          <h3>📅 今週の成果</h3>
+          <div className="weekly-summary">
+            <div className="summary-item">
+              <span className="summary-label">✅ 学習日数</span>
+              <span className="summary-value">{weeklyStats.studyDays}/7日</span>
+            </div>
+            <div className="summary-item">
+              <span className="summary-label">📝 総回答数</span>
+              <span className="summary-value">{weeklyStats.totalAnswered}問</span>
+            </div>
+            <div className="summary-item">
+              <span className="summary-label">🎯 正答率</span>
+              <span className="summary-value">
+                {weeklyStats.accuracy.toFixed(1)}%
+                {weeklyStats.previousWeekAccuracy > 0 && (
+                  <span className={weeklyStats.accuracy >= weeklyStats.previousWeekAccuracy ? 'trend-up' : 'trend-down'}>
+                    {' '}({weeklyStats.accuracy >= weeklyStats.previousWeekAccuracy ? '▲' : '▼'}
+                    {Math.abs(weeklyStats.accuracy - weeklyStats.previousWeekAccuracy).toFixed(1)}%)
+                  </span>
+                )}
+              </span>
+            </div>
+            <div className="summary-item">
+              <span className="summary-label">🌟 新規定着</span>
+              <span className="summary-value">{weeklyStats.newMastered}語</span>
+            </div>
+            {recentlyMastered.length > 0 && (
+              <div className="summary-item">
+                <span className="summary-label">💪 克服した単語</span>
+                <span className="summary-value">{recentlyMastered.length}語</span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 学習カレンダーヒートマップ */}
+      <div className="stats-section-calendar">
+        <h3>📆 学習カレンダー（過去12週間）</h3>
+        <CalendarHeatmap data={calendarData} />
+      </div>
+
+      {/* 累積成長グラフ */}
+      {cumulativeData.length > 0 && (
+        <div className="stats-section-growth">
+          <h3>📈 累積成長グラフ（週別）</h3>
+          <CumulativeGrowthChart data={cumulativeData} />
+        </div>
+      )}
+
+      {/* 苦手単語 & 克服した単語 */}
+      <div className="stats-section-words">
+        <div className="words-column">
+          <h3>😰 苦手単語トップ10</h3>
+          {weakWords.length > 0 ? (
+            <ul className="word-list">
+              {weakWords.map((w, idx) => (
+                <li key={idx} className="word-item weak">
+                  <span className="word-rank">#{idx + 1}</span>
+                  <span className="word-text">{w.word}</span>
+                  <span className="word-stats">
+                    ❌{w.mistakes}回
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="no-data">データがありません</p>
+          )}
+        </div>
+        
+        <div className="words-column">
+          <h3>🎉 最近克服した単語</h3>
+          {recentlyMastered.length > 0 ? (
+            <ul className="word-list">
+              {recentlyMastered.map((w, idx) => (
+                <li key={idx} className="word-item mastered">
+                  <span className="word-text">{w.word}</span>
+                  <span className="word-stats">
+                    {new Date(w.masteredDate).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}
+                    <span className="word-attempts">({w.totalAttempts}回)</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="no-data">データがありません</p>
+          )}
         </div>
       </div>
 
@@ -227,6 +398,189 @@ function StatsView({ }: StatsViewProps) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// カレンダーヒートマップコンポーネント
+function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; accuracy: number }> }) {
+  if (data.length === 0) {
+    return <div className="calendar-empty">データがありません</div>;
+  }
+
+  // 過去12週間のデータを週ごとにグループ化
+  const weeks: Array<Array<{ date: string; count: number; accuracy: number }>> = [];
+  for (let i = 0; i < data.length; i += 7) {
+    weeks.push(data.slice(i, i + 7));
+  }
+
+  // 色の濃さを決定
+  const getColorClass = (count: number) => {
+    if (count === 0) return 'calendar-color-0';
+    if (count < 10) return 'calendar-color-1';
+    if (count < 20) return 'calendar-color-2';
+    if (count < 30) return 'calendar-color-3';
+    return 'calendar-color-4';
+  };
+
+  return (
+    <div className="calendar-heatmap">
+      <div className="calendar-grid">
+        {weeks.map((week, weekIdx) => (
+          <div key={weekIdx} className="calendar-week">
+            {week.map((day, dayIdx) => {
+              const date = new Date(day.date);
+              const dayName = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
+              return (
+                <div
+                  key={dayIdx}
+                  className={`calendar-day ${getColorClass(day.count)}`}
+                  title={`${day.date} (${dayName}): ${day.count}問 (${day.accuracy.toFixed(0)}%)`}
+                >
+                  {day.count > 0 && <span className="calendar-day-count">{day.count}</span>}
+                </div>
+              );
+            })}
+          </div>
+        ))}
+      </div>
+      <div className="calendar-legend">
+        <span>少ない</span>
+        <div className="legend-box legend-box-color-1"></div>
+        <div className="legend-box legend-box-color-2"></div>
+        <div className="legend-box legend-box-color-3"></div>
+        <div className="legend-box legend-box-color-4"></div>
+        <div className="legend-box legend-box-color-5"></div>
+        <span>多い</span>
+      </div>
+    </div>
+  );
+}
+
+// 累積成長グラフコンポーネント
+function CumulativeGrowthChart({ data }: {
+  data: Array<{
+    weekLabel: string;
+    cumulativeMastered: number;
+    weeklyMastered: number;
+    cumulativeAnswered: number;
+    weeklyAnswered: number;
+  }>
+}) {
+  if (data.length === 0) {
+    return <div className="chart-empty">データがありません</div>;
+  }
+
+  const maxMastered = Math.max(...data.map(d => d.cumulativeMastered), 1);
+  const maxAnswered = Math.max(...data.map(d => d.cumulativeAnswered), 1);
+  
+  const chartWidth = 800;
+  const chartHeight = 300;
+  const padding = 40;
+  const plotWidth = chartWidth - padding * 2;
+  const plotHeight = chartHeight - padding * 2;
+
+  return (
+    <div className="cumulative-chart">
+      <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
+        {/* グリッド線 */}
+        {[0, 0.25, 0.5, 0.75, 1].map((ratio, idx) => {
+          const y = padding + plotHeight * (1 - ratio);
+          return (
+            <g key={idx}>
+              <line
+                x1={padding}
+                y1={y}
+                x2={chartWidth - padding}
+                y2={y}
+                stroke="#e0e0e0"
+                strokeWidth="1"
+              />
+              <text
+                x={padding - 10}
+                y={y}
+                textAnchor="end"
+                fontSize="10"
+                fill="#666"
+              >
+                {Math.round(maxMastered * ratio)}
+              </text>
+            </g>
+          );
+        })}
+
+        {/* 定着数の線グラフ */}
+        <polyline
+          points={data.map((d, i) => {
+            const x = padding + (plotWidth / (data.length - 1)) * i;
+            const y = padding + plotHeight * (1 - d.cumulativeMastered / maxMastered);
+            return `${x},${y}`;
+          }).join(' ')}
+          fill="none"
+          stroke="#ff6b35"
+          strokeWidth="3"
+        />
+
+        {/* データポイント */}
+        {data.map((d, i) => {
+          const x = padding + (plotWidth / (data.length - 1)) * i;
+          const y = padding + plotHeight * (1 - d.cumulativeMastered / maxMastered);
+          return (
+            <g key={i}>
+              <circle cx={x} cy={y} r="4" fill="#ff6b35" />
+              {i % 2 === 0 && (
+                <text
+                  x={x}
+                  y={chartHeight - padding + 20}
+                  textAnchor="middle"
+                  fontSize="10"
+                  fill="#666"
+                >
+                  {d.weekLabel}
+                </text>
+              )}
+            </g>
+          );
+        })}
+
+        {/* ラベル */}
+        <text
+          x={chartWidth / 2}
+          y={chartHeight - 5}
+          textAnchor="middle"
+          fontSize="12"
+          fill="#333"
+        >
+          週
+        </text>
+        <text
+          x={15}
+          y={chartHeight / 2}
+          textAnchor="middle"
+          fontSize="12"
+          fill="#333"
+          transform={`rotate(-90 15 ${chartHeight / 2})`}
+        >
+          累積定着数
+        </text>
+      </svg>
+      
+      <div className="chart-summary">
+        <div className="chart-summary-item">
+          <span className="summary-label">開始時:</span>
+          <span className="summary-value">{data[0]?.cumulativeMastered || 0}語</span>
+        </div>
+        <div className="chart-summary-item">
+          <span className="summary-label">現在:</span>
+          <span className="summary-value">{data[data.length - 1]?.cumulativeMastered || 0}語</span>
+        </div>
+        <div className="chart-summary-item">
+          <span className="summary-label">増加:</span>
+          <span className="summary-value">
+            +{(data[data.length - 1]?.cumulativeMastered || 0) - (data[0]?.cumulativeMastered || 0)}語
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

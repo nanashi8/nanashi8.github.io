@@ -2,6 +2,8 @@ import { QuizState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
+import DailyPlanBanner from './DailyPlanBanner';
+import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 
 interface QuizViewProps {
   quizState: QuizState;
@@ -69,6 +71,12 @@ function QuizView({
 
   return (
     <div className="quiz-view">
+      {/* 時間帯別AI挨拶 */}
+      <TimeBasedGreetingBanner />
+      
+      {/* 今日の学習プラン */}
+      <DailyPlanBanner mode="translation" />
+      
       {/* 学習プラン進行状況表示 */}
       {hasPlan && planStatus && (
         <div className="plan-progress-banner">
