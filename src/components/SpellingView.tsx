@@ -498,7 +498,8 @@ function SpellingView({
                     } else if (e.key === ' ') {
                       // スペースキー: 分からない（スキップ）
                       e.preventDefault();
-                      handleSkip();
+                        // スキップのみ実行、次へは自動遷移しない
+                        handleSkip();
                     }
                   } else if (e.key === 'Enter') {
                     // 回答後のEnterで次へ進む
@@ -536,7 +537,7 @@ function SpellingView({
                     </button>
                   )}
                   <button className="btn-skip-word" onClick={handleSkip}>
-                    ⏭️ 分からない (スペースキー)
+                      ⏭️ 分からない (スペースキー)
                   </button>
                 </div>
               )}
