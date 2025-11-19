@@ -159,32 +159,48 @@ function App() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  // 初回読み込み: junior-high-entrance-words.csvを読み込み
+  // 初回読み込み: junior-high-entrance-words.csvと高校受験英熟語を読み込み
   useEffect(() => {
     const loadInitialData = async () => {
       try {
         // LocalStorageサイズの確認
         checkLocalStorageSize();
         
-        const response = await fetch('/data/junior-high-entrance-words.csv');
-        const csvText = await response.text();
-        const questions = parseCSV(csvText);
+        // 単語データを読み込み
+        const wordsResponse = await fetch('/data/junior-high-entrance-words.csv');
+        const wordsText = await wordsResponse.text();
+        const wordsQuestions = parseCSV(wordsText);
         
-        if (questions.length > 0) {
-          setAllQuestions(questions);
+        // 熟語データを読み込み
+        let phrasesQuestions: Question[] = [];
+        try {
+          const phrasesResponse = await fetch('/data/junior-high-entrance-phrases.csv');
+          const phrasesText = await phrasesResponse.text();
+          phrasesQuestions = parseCSV(phrasesText);
+          console.log(`📚 高校受験英熟語を読み込みました: ${phrasesQuestions.length}個`);
+        } catch (error) {
+          console.warn('高校受験英熟語データの読み込みに失敗:', error);
+          // 熟語データの読み込みに失敗しても続行
+        }
+        
+        // 単語と熟語を結合
+        const allQuestions = [...wordsQuestions, ...phrasesQuestions];
+        
+        if (allQuestions.length > 0) {
+          setAllQuestions(allQuestions);
           
           // 関連分野のリストを抽出
-          const categories = Array.from(new Set(questions.map(q => q.category || '').filter(c => c)));
+          const categories = Array.from(new Set(allQuestions.map(q => q.category || '').filter(c => c)));
           setCategoryList(categories.sort());
           
           // 問題集形式で保存（後方互換性のため）
           const mainSet: QuestionSet = {
             id: 'main-set',
-            name: '高校受験英単語',
-            questions,
+            name: '高校受験英単語・熟語',
+            questions: allQuestions,
             createdAt: Date.now(),
             isBuiltIn: true,
-            source: 'junior-high-entrance-words.csv',
+            source: 'junior-high-entrance-words.csv + junior-high-entrance-phrases.csv',
           };
           setQuestionSets([mainSet]);
         }

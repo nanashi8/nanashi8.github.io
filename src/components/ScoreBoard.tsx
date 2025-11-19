@@ -5,6 +5,8 @@ import {
   getTotalMasteredWordsCount,
   getRetentionRateWithAI
 } from '../progressStorage';
+import { calculateGoalProgress, generateGoalMessage } from '../goalSimulator';
+import { getAlertSummary } from '../forgettingAlert';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading'; // クイズモードを追加
@@ -32,6 +34,13 @@ function ScoreBoard({
   // 定着率をAIで計算
   const { retentionRate, appearedCount } = getRetentionRateWithAI();
 
+  // 目標達成情報を取得
+  const goalProgress = calculateGoalProgress();
+  const goalMessage = generateGoalMessage(false);
+  
+  // 忘却アラートサマリーを取得
+  const alertSummary = getAlertSummary();
+
   // 現在のセッションの正答率を計算
   const currentAccuracy = totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0;
 
@@ -58,6 +67,32 @@ function ScoreBoard({
       <span className="score-stat">
         累計回答<strong>{totalAnsweredCount}</strong>
       </span>
+      
+      {/* 目標達成情報 */}
+      <span className="score-stat-divider">|</span>
+      <span className="score-stat-large goal-progress" title={goalMessage}>
+        {goalProgress.goal.icon} <strong className={goalProgress.overallProgress >= 80 ? 'goal-near' : 'goal-far'}>
+          {goalProgress.overallProgress}%
+        </strong>
+        <span className="score-stat-sub">
+          ({goalProgress.goal.name}
+          {goalProgress.estimatedDaysToAchieve > 0 && goalProgress.estimatedDaysToAchieve <= 30 && (
+            <> · あと{goalProgress.estimatedDaysToAchieve}日</>
+          )}
+          )
+        </span>
+      </span>
+      
+      {/* 忘却アラート */}
+      {alertSummary.todayReviewCount > 0 && (
+        <>
+          <span className="score-stat-divider">|</span>
+          <span className="score-stat alert-stat" title="今日復習すべき単語があります">
+            ⏰ <strong className="alert-count">{alertSummary.todayReviewCount}</strong>
+            <span className="score-stat-sub">要復習</span>
+          </span>
+        </>
+      )}
     </div>
   );
 }

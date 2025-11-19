@@ -1127,6 +1127,41 @@ option {
   margin: 0 4px;
 }
 
+/* 目標達成情報のスタイル */
+.goal-progress {
+  cursor: help;
+}
+
+.score-stat strong.goal-near {
+  color: #28a745;
+  font-weight: 700;
+}
+
+.score-stat strong.goal-far {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* アラート統計のスタイル */
+.alert-stat {
+  cursor: help;
+}
+
+.alert-count {
+  color: #ff6b35;
+  font-weight: 700;
+}
+
+/* ダークモード対応 */
+.dark-mode .goal-progress .score-stat-sub,
+.dark-mode .alert-stat .score-stat-sub {
+  color: #888;
+}
+
+.dark-mode .alert-count {
+  color: #ff8c5a;
+}
+
 /* クイズビュー */
 .quiz-view {
   display: flex;

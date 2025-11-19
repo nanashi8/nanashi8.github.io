@@ -883,13 +883,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 {phraseTranslations[phraseIdx] ? (
                   <div className="phrase-translation visible">
                     <div className="translation-text">{phrase.phraseMeaning}</div>
-                    <div className="word-meanings">
-                      {phrase.segments?.filter(s => s.meaning && s.meaning !== '-').map((seg, idx) => (
-                        <span key={idx} className="word-meaning-pair">
-                          <strong>{seg.word}</strong>: {seg.meaning}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 ) : (
                   <button

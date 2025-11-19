@@ -1,8 +1,8 @@
 {
   "sustainability": {
     "word": "Sustainability",
-    "reading": "-",
-    "meaning": "Sustainability（固有名詞）",
+    "reading": "サステナビリティ",
+    "meaning": "持続可能性",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -1540,8 +1540,8 @@
   },
   "ice": {
     "word": "Ice",
-    "reading": "-",
-    "meaning": "Ice（固有名詞）",
+    "reading": "アイス",
+    "meaning": "氷",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -1677,8 +1677,8 @@
   },
   "species": {
     "word": "Species",
-    "reading": "-",
-    "meaning": "Species（固有名詞）",
+    "reading": "スピーシーズ",
+    "meaning": "種（複数形）",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -2048,8 +2048,8 @@
   },
   "coal": {
     "word": "Coal",
-    "reading": "-",
-    "meaning": "Coal（固有名詞）",
+    "reading": "コール",
+    "meaning": "石炭",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -2381,8 +2381,8 @@
   },
   "renewable": {
     "word": "Renewable",
-    "reading": "-",
-    "meaning": "Renewable（固有名詞）",
+    "reading": "リニューアブル",
+    "meaning": "再生可能な",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -2449,8 +2449,8 @@
   },
   "solar": {
     "word": "Solar",
-    "reading": "-",
-    "meaning": "Solar（固有名詞）",
+    "reading": "ソーラー",
+    "meaning": "太陽の",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -3236,8 +3236,8 @@
   },
   "geothermal": {
     "word": "Geothermal",
-    "reading": "-",
-    "meaning": "Geothermal（固有名詞）",
+    "reading": "ジオサーマル",
+    "meaning": "地熱の",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -3344,8 +3344,8 @@
   },
   "biomass": {
     "word": "Biomass",
-    "reading": "-",
-    "meaning": "Biomass（固有名詞）",
+    "reading": "バイオマス",
+    "meaning": "バイオマス（生物資源）",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",
@@ -6397,8 +6397,8 @@
   },
   "electric": {
     "word": "Electric",
-    "reading": "-",
-    "meaning": "Electric（固有名詞）",
+    "reading": "エレクトリック",
+    "meaning": "電気の",
     "etymology": "",
     "relatedWords": "",
     "category": "その他",

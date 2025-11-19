@@ -3,6 +3,9 @@ import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } 
 import { recordWordSkip } from '../progressStorage';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
+import { getRandomAlertMessage } from '../forgettingAlert';
+import { calculateGoalProgress } from '../goalSimulator';
+import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '../confusionPairs';
 
 interface QuestionCardProps {
   question: Question;
@@ -62,16 +65,18 @@ function QuestionCard({
     if (answered && selectedAnswer) {
       const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as any;
       const isCorrect = selectedAnswer === question.meaning;
-      const comment = generateAIComment(personality, {
+      
+      // 基本のAIコメント
+      let comment = generateAIComment(personality, {
         isCorrect,
         word: question.word,
-        difficulty: 'intermediate', // TODO: 実際の難易度を渡す
-        category: '', // TODO: 実際のカテゴリーを渡す
+        difficulty: 'intermediate',
+        category: '',
         attemptCount: attemptCount + 1,
-        responseTime: 0, // TODO: 実際の回答時間を計測
-        correctStreak: 0, // TODO: 実際のストリーク数
+        responseTime: 0,
+        correctStreak: 0,
         incorrectStreak: 0,
-        userAccuracy: 0, // TODO: 実際の正答率
+        userAccuracy: 0,
         categoryAccuracy: 0,
         isWeakCategory: false,
         hasSeenBefore: false,
@@ -81,6 +86,54 @@ function QuestionCard({
         planProgress: 0,
         timeOfDay: getTimeOfDay(),
       });
+      
+      // 追加情報を付加
+      const additionalComments: string[] = [];
+      
+      // 1. 目標達成情報（正解時のみ、10%の確率で表示）
+      if (isCorrect && Math.random() < 0.1) {
+        const goalProgress = calculateGoalProgress();
+        if (goalProgress.estimatedDaysToAchieve > 0 && goalProgress.estimatedDaysToAchieve <= 30) {
+          if (goalProgress.overallProgress >= 90) {
+            additionalComments.push(`🎯 ${goalProgress.goal.name}まであと少し！`);
+          } else if (goalProgress.overallProgress >= 75) {
+            additionalComments.push(`📈 このペースなら${goalProgress.estimatedDaysToAchieve}日で${goalProgress.goal.name}達成です！`);
+          }
+        }
+      }
+      
+      // 2. 混同単語の警告（不正解時、混同ペアが存在する場合）
+      if (!isCorrect) {
+        const confusionPartners = getConfusionPartners(question.word);
+        if (confusionPartners.length > 0) {
+          additionalComments.push(`💡 「${question.word}」と「${confusionPartners.join(', ')}」を混同しやすいので注意！`);
+        }
+      }
+      
+      // 3. 混同グループのアドバイス（正解時、5%の確率で表示）
+      if (isCorrect && Math.random() < 0.05) {
+        const confusionGroups = analyzeConfusionPatterns();
+        const relevantGroup = confusionGroups.find(g => 
+          g.words.includes(question.word.toLowerCase()) && g.needsReview
+        );
+        if (relevantGroup) {
+          additionalComments.push(generateConfusionAdvice(relevantGroup));
+        }
+      }
+      
+      // 4. 忘却アラート（正解時、5%の確率で表示）
+      if (isCorrect && Math.random() < 0.05) {
+        const alertMessage = getRandomAlertMessage();
+        if (alertMessage) {
+          additionalComments.push(alertMessage);
+        }
+      }
+      
+      // コメントを結合
+      if (additionalComments.length > 0) {
+        comment = `${comment} ${additionalComments[0]}`; // 最初の1つだけ表示
+      }
+      
       setAiComment(comment);
     } else {
       setAiComment('');
