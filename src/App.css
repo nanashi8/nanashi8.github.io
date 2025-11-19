@@ -347,7 +347,7 @@
 
 .tab-btn {
   flex: 1;
-  padding: 12px;
+  padding: 15px 12px;
   border: none;
   background: #f8f9fa;
   color: #666;
@@ -356,6 +356,10 @@
   transition: all 0.2s;
   border-bottom: 3px solid transparent;
   touch-action: manipulation;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-btn.active {
@@ -371,6 +375,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 /* ファイル選択 */
@@ -496,14 +501,21 @@ option {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-bottom: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
   flex-shrink: 0;
 }
 
 .score-item {
   background: #f8f9fa;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   text-align: center;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .score-label {
@@ -663,7 +675,7 @@ option {
 .question-card {
   background: white;
   border-radius: 12px;
-  padding: 15px;
+  padding: 20px 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex: 1;
   display: flex;
@@ -790,7 +802,7 @@ option {
 .choices {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
+  gap: 12px;
   margin: 10px 0;
 }
 
@@ -798,7 +810,7 @@ option {
 @media (min-width: 480px) and (orientation: landscape), (min-width: 640px) {
   .choices {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 14px;
   }
 }
 
@@ -809,7 +821,7 @@ option {
 }
 
 .choice-btn {
-  padding: 12px;
+  padding: 16px;
   font-size: 1em;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -817,7 +829,7 @@ option {
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
-  min-height: 48px;
+  min-height: 56px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -841,7 +853,7 @@ option {
 
 .toggle-details-btn-inline {
   flex-shrink: 0;
-  padding: 4px 8px;
+  padding: 6px 10px;
   font-size: 0.9em;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -851,8 +863,8 @@ option {
   transition: all 0.2s;
   touch-action: manipulation;
   font-weight: 600;
-  min-width: 32px;
-  height: 28px;
+  min-width: 36px;
+  min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -871,7 +883,7 @@ option {
 }
 
 .toggle-details-btn {
-  padding: 8px 12px;
+  padding: 10px 14px;
   font-size: 0.85em;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -881,6 +893,7 @@ option {
   transition: all 0.2s;
   touch-action: manipulation;
   font-weight: 600;
+  min-height: 44px;
 }
 
 .toggle-details-btn:hover {
@@ -932,7 +945,8 @@ option {
 
 .choice-btn:active:not(:disabled) {
   background: #e0e8ff;
-  transform: scale(0.98);
+  transform: scale(0.97);
+  transition: transform 0.1s;
 }
 
 .choice-btn:disabled {
@@ -1253,6 +1267,11 @@ option {
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
 }
 
+.result-card-btn:active:not(:disabled) {
+  transform: scale(0.96);
+  transition: transform 0.1s;
+}
+
 .result-card-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -1556,6 +1575,11 @@ option {
     font-size: 1.2em;
   }
 
+  .tab-btn {
+    font-size: 0.9em;
+    padding: 12px 8px;
+  }
+
   .question-text {
     font-size: 1.6em;
   }
@@ -1563,6 +1587,7 @@ option {
   .score-board {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    padding: 10px;
   }
 
   .list-header {
@@ -1726,7 +1751,7 @@ option {
 }
 
 .passage-btn {
-  padding: 12px 15px;
+  padding: 14px 15px;
   border: 2px solid #e0e0e0;
   background: white;
   color: #333;
@@ -1736,6 +1761,7 @@ option {
   text-align: left;
   transition: all 0.2s;
   touch-action: manipulation;
+  min-height: 52px;
 }
 
 .passage-btn:hover {
@@ -1837,16 +1863,17 @@ option {
 /* 和訳ボタン（フレーズごと） */
 .phrase-translation-btn {
   margin-top: 10px;
-  padding: 8px 16px;
+  padding: 10px 18px;
   background: #667eea;
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 0.9em;
+  font-size: 0.95em;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
+  min-height: 44px;
 }
 
 .phrase-translation-btn:hover {
@@ -1991,7 +2018,7 @@ option {
 }
 
 .phrase-toggle-btn {
-  padding: 6px 12px;
+  padding: 8px 14px;
   border: 2px solid #667eea;
   background: #f0f3ff;
   color: #667eea;
@@ -2001,6 +2028,7 @@ option {
   font-weight: 600;
   transition: all 0.2s;
   touch-action: manipulation;
+  min-height: 44px;
 }
 
 .phrase-toggle-btn:hover:not(:disabled) {
@@ -2116,7 +2144,7 @@ option {
 }
 
 .word-card {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: 2px solid #e0e0e0;
   background: white;
   border-radius: 6px;
@@ -2126,6 +2154,10 @@ option {
   font-weight: 500;
   touch-action: manipulation;
   color: #333;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .word-card:hover:not(.disabled) {
@@ -3336,6 +3368,7 @@ option {
   background: #f8f9fa;
   border-radius: 10px;
   text-align: center;
+  min-height: 110px; /* ボックス縮小を防ぐ */
 }
 
 .user-word-label {
@@ -3389,7 +3422,8 @@ option {
 
 .letter-card:active:not(:disabled):not(.selected) {
   background: #e0e8ff;
-  transform: translateY(-1px);
+  transform: scale(0.95);
+  transition: transform 0.1s;
 }
 
 .letter-card.selected {
@@ -3431,7 +3465,7 @@ option {
 }
 
 .btn-reset-selection {
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 1em;
   background: #ff9800;
   color: white;
@@ -3441,6 +3475,8 @@ option {
   transition: all 0.2s;
   font-weight: 600;
   box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+  min-height: 48px;
+  touch-action: manipulation;
 }
 
 .btn-reset-selection:hover {
@@ -3450,17 +3486,25 @@ option {
 }
 
 .btn-reset-selection:active {
-  transform: translateY(0);
+  transform: scale(0.96);
+  transition: transform 0.1s;
   box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
 }
 
 .btn-skip-word {
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 1em;
   background: #9e9e9e;
   color: white;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(158, 158, 158, 0.3);
+  min-height: 48px;
+  touch-action: manipulation;
+}
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 600;
@@ -3474,7 +3518,8 @@ option {
 }
 
 .btn-skip-word:active {
-  transform: translateY(0);
+  transform: scale(0.96);
+  transition: transform 0.1s;
   box-shadow: 0 2px 4px rgba(158, 158, 158, 0.3);
 }
 
@@ -3661,13 +3706,14 @@ option {
 /* 小中学生向けの大きめのボタン */
 .btn-primary,
 .btn-secondary {
-  padding: 14px 28px;
+  padding: 16px 28px;
   font-size: 1.1em;
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
+  min-height: 56px;
 }
 
 .btn-primary {
@@ -3682,6 +3728,11 @@ option {
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
 }
 
+.btn-primary:active {
+  transform: scale(0.97);
+  transition: transform 0.1s;
+}
+
 .btn-secondary {
   background: white;
   color: #667eea;
@@ -3690,6 +3741,11 @@ option {
 
 .btn-secondary:hover {
   background: #f0f4ff;
+}
+
+.btn-secondary:active {
+  transform: scale(0.97);
+  transition: transform 0.1s;
 }
 
 /* タブのフォントサイズを大きく */
@@ -3716,9 +3772,9 @@ option {
 
 @media (max-width: 768px) {
   .letter-card {
-    width: 60px;
-    height: 60px;
-    font-size: 1.8em;
+    width: 64px;
+    height: 64px;
+    font-size: 1.9em;
   }
 
   .csv-actions {
@@ -3846,7 +3902,10 @@ option {
   }
 
   .choice-btn {
-    font-size: 1.1em;
+    font-size: 1.05em;
+    padding: 18px 16px;
+    min-height: 60px;
+  }
     padding: 16px;
   }
 
@@ -3885,7 +3944,7 @@ option {
 .stats-tabs button {
   flex: 1;
   min-width: 100px;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border: 2px solid #e0e0e0;
   background: white;
   color: #666;
@@ -3894,6 +3953,7 @@ option {
   font-size: 1em;
   transition: all 0.2s;
   touch-action: manipulation;
+  min-height: 52px;
 }
 
 .stats-tabs button.active {
@@ -4205,6 +4265,7 @@ option {
 
   .stats-cards {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .stat-value {
@@ -4217,7 +4278,7 @@ option {
 
   .stats-table th,
   .stats-table td {
-    padding: 8px;
+    padding: 10px 8px;
   }
 
   .chart-container {
@@ -4228,15 +4289,18 @@ option {
 
   .management-buttons {
     flex-direction: column;
+    gap: 10px;
   }
 
   .management-buttons button {
     width: 100%;
+    min-height: 48px;
   }
 
   .stats-tabs button {
-    font-size: 0.9em;
-    padding: 10px 15px;
+    font-size: 0.95em;
+    padding: 12px 15px;
+    min-height: 48px;
   }
 }
 
@@ -4308,13 +4372,17 @@ option {
 }
 
 .start-btn:active {
-  transform: translateY(0);
+  transform: scale(0.97);
+  transition: transform 0.1s;
   background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
 }
 
 @media (max-width: 600px) {
   .quiz-filter-section {
     flex-direction: column;
+    padding: 15px;
+    gap: 12px;
+    overflow: visible; /* はみ出し対策 */
   }
 
   .filter-group {
@@ -4323,6 +4391,7 @@ option {
 
   .start-btn {
     width: 100%;
+    margin-top: 5px;
   }
 }
 
@@ -6039,8 +6108,8 @@ option {
 
 .setting-slider {
   width: 100%;
-  height: 8px;
-  border-radius: 4px;
+  height: 10px;
+  border-radius: 5px;
   background: linear-gradient(to right, #e0e7ff, #667eea);
   outline: none;
   -webkit-appearance: none;
@@ -6050,8 +6119,8 @@ option {
 .setting-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #667eea;
   cursor: pointer;
@@ -6065,8 +6134,8 @@ option {
 }
 
 .setting-slider::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #667eea;
   cursor: pointer;
@@ -6098,7 +6167,7 @@ option {
 
 /* 設定ボタン */
 .setting-button {
-  padding: 12px 25px;
+  padding: 14px 25px;
   border: none;
   border-radius: 8px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -6108,6 +6177,8 @@ option {
   cursor: pointer;
   transition: all 0.3s;
   width: 100%;
+  min-height: 52px;
+  touch-action: manipulation;
 }
 
 .setting-button:hover:not(:disabled) {
@@ -6513,13 +6584,13 @@ option {
   }
 
   .inline-nav-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5em;
+    width: 56px;
+    height: 56px;
+    font-size: 1.6em;
   }
 
   .question-nav-row {
-    gap: 8px;
+    gap: 10px;
     margin-top: 10px;
   }
 }

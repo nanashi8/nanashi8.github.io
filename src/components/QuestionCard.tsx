@@ -43,6 +43,7 @@ function QuestionCard({
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
   const cardRef = useRef<HTMLDivElement>(null);
+  const isTouchingRef = useRef<boolean>(false);
   
   const toggleChoiceDetails = (index: number) => {
     setExpandedChoices(prev => {
@@ -90,6 +91,7 @@ function QuestionCard({
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
       touchStartX.current = e.touches[0].clientX;
+      isTouchingRef.current = true;
     };
     
     const handleTouchMove = (e: TouchEvent) => {
@@ -119,6 +121,9 @@ function QuestionCard({
       
       touchStartX.current = 0;
       touchEndX.current = 0;
+      setTimeout(() => {
+        isTouchingRef.current = false;
+      }, 300);
     };
     
     const card = cardRef.current;
@@ -239,7 +244,12 @@ function QuestionCard({
             <div key={idx} className="choice-wrapper">
               <button
                 className={getButtonClass(choice.text)}
-                onClick={() => {
+                onClick={(e) => {
+                  if (isTouchingRef.current) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return;
+                  }
                   if (!answered) {
                     const isCorrect = choice.text === question.meaning;
                     if (!isCorrect) {

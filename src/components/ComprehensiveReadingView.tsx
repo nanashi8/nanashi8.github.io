@@ -210,8 +210,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               return phrase;
             }
             
-            // words配列からsegmentsを生成
+            // words配列とwordMeaningsからsegmentsを生成
             const segments: ReadingSegment[] = [];
+            const wordMeanings = (phrase as any).wordMeanings || {}; // wordMeaningsオブジェクト（もしあれば）
+            
             phrase.words?.forEach((word, idx) => {
               // 句読点を検出
               const punctuationMatch = word.match(/([.,!?;:])$/);
@@ -221,11 +223,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 const cleanWord = word.replace(/[.,!?;:]$/, '');
                 const punctuation = punctuationMatch[1];
                 
-                // 単語辞書から意味を取得（句読点なしの単語）
-                const lemma = getLemma(cleanWord);
-                const wordData = wordDictionary.get(lemma);
-                const readingWord = readingDictionary.get(lemma);
-                const meaning = wordData?.meaning || readingWord?.meaning || '';
+                // まずwordMeaningsから取得を試みる
+                let meaning = wordMeanings[cleanWord] || '';
+                // wordMeaningsになければ辞書から取得
+                if (!meaning) {
+                  const lemma = getLemma(cleanWord);
+                  const wordData = wordDictionary.get(lemma);
+                  const readingWord = readingDictionary.get(lemma);
+                  meaning = wordData?.meaning || readingWord?.meaning || '';
+                }
+                // '-'は設定しない（空文字列にする）
+                if (meaning === '-') meaning = '';
                 
                 // 単語を追加（句読点なし）
                 segments.push({
@@ -242,10 +250,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 });
               } else {
                 // 句読点がない通常の単語
-                const lemma = getLemma(word);
-                const wordData = wordDictionary.get(lemma);
-                const readingWord = readingDictionary.get(lemma);
-                const meaning = wordData?.meaning || readingWord?.meaning || '';
+                // まずwordMeaningsから取得を試みる
+                let meaning = wordMeanings[word] || '';
+                // wordMeaningsになければ辞書から取得
+                if (!meaning) {
+                  const lemma = getLemma(word);
+                  const wordData = wordDictionary.get(lemma);
+                  const readingWord = readingDictionary.get(lemma);
+                  meaning = wordData?.meaning || readingWord?.meaning || '';
+                }
+                // '-'は設定しない（空文字列にする）
+                if (meaning === '-') meaning = '';
                 
                 segments.push({
                   word,
@@ -365,8 +380,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 単語の意味を辞書から取得
   const getMeaning = (word: string, existingMeaning?: string): string => {
-    // existingMeaningがあればそれを使用
-    if (existingMeaning && existingMeaning.trim()) {
+    // existingMeaningがあり、'-'でない場合はそれを使用
+    if (existingMeaning && existingMeaning.trim() && existingMeaning !== '-') {
       return existingMeaning;
     }
     
@@ -385,11 +400,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       return readingWord.meaning;
     }
     
-    // どちらもない場合は'-'を返す（句読点の場合は空文字列）
-    if (/^[.,!?;:]$/.test(word)) {
-      return '';
-    }
-    return '-';
+    // どちらもない場合は空文字列を返す（句読点や辞書にない単語）
+    return '';
   };
 
   // 難易度でフィルタリングされたパッセージ
@@ -783,7 +795,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                         const phraseText = group.words.join(' ');
                         const phraseMeanings = group.segments
                           .map(seg => getMeaning(seg.word, seg.meaning))
-                          .filter(m => m);
+                          .filter(m => m && m !== '-'); // '-'も除外
                         const combinedMeaning = phraseMeanings.join('・');
 
                         return (
@@ -822,8 +834,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない熟語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word phrase-word">{phraseText}</div>
-                            {wordMeaningsVisible[phraseIdx] && (
-                              <div className="word-card-meaning">{combinedMeaning || '-'}</div>
+                            {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
+                              <div className="word-card-meaning">{combinedMeaning}</div>
                             )}
                           </div>
                         );
@@ -857,7 +869,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
                           >
                             <div className="word-card-word">{segment.word}</div>
-                            {wordMeaningsVisible[phraseIdx] && (
+                            {wordMeaningsVisible[phraseIdx] && meaning && meaning !== '-' && (
                               <div className="word-card-meaning">{meaning}</div>
                             )}
                           </div>
@@ -872,7 +884,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   <div className="phrase-translation visible">
                     <div className="translation-text">{phrase.phraseMeaning}</div>
                     <div className="word-meanings">
-                      {phrase.segments?.filter(s => s.meaning).map((seg, idx) => (
+                      {phrase.segments?.filter(s => s.meaning && s.meaning !== '-').map((seg, idx) => (
                         <span key={idx} className="word-meaning-pair">
                           <strong>{seg.word}</strong>: {seg.meaning}
                         </span>

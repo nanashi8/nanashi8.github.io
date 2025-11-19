@@ -209,7 +209,7 @@ function ReadingView() {
                       disabled={phraseTranslations[phraseIdx]}
                     >
                       <span className="word-text">{segment.word}</span>
-                      {phraseTranslations[phraseIdx] && (
+                      {phraseTranslations[phraseIdx] && segment.meaning && segment.meaning !== '-' && (
                         <span className="word-meaning-inline">{segment.meaning}</span>
                       )}
                     </button>

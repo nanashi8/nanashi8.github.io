@@ -443,7 +443,7 @@ function SpellingView({
                     <div className="user-word-display">
                       <div className="user-word-label">あなたの答え:</div>
                       <div className="user-word-text">
-                        {userWord || '（クリックまたはタイピングで入力）'}
+                        {userWord || '（並び替え）'}
                       </div>
                     </div>
 
