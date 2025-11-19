@@ -62,7 +62,6 @@ function QuizView({
   // 学習数・要復習上限の設定
   const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
   const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
-  const [showSettings, setShowSettings] = useState<boolean>(false);
 
   const handleMaxStudyCountChange = (newCount: number) => {
     setMaxStudyCount(newCount);
@@ -187,57 +186,36 @@ function QuizView({
 
         {!hasQuestions && (
           <>
-            <button 
-              onClick={() => setShowSettings(!showSettings)} 
-              className="settings-toggle-btn"
-            >
-              ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
-            </button>
-            <button onClick={onStartQuiz} className="start-btn">
-              🎯 クイズを開始
-            </button>
-          </>
-        )}
-      </div>
-
-      {/* 学習設定パネル */}
-      {!hasQuestions && showSettings && (
-        <div className="study-settings-panel">
-          <h3>📊 学習設定</h3>
-          <div className="settings-row">
-            <div className="setting-item">
-              <label htmlFor="max-study-count">
-                学習数上限
-                <span className="setting-desc">1セッションあたりの最大学習数</span>
-              </label>
+            <div className="filter-group">
+              <label htmlFor="max-study-count">📊 学習数上限:</label>
               <input
                 id="max-study-count"
                 type="number"
                 min="1"
                 value={maxStudyCount}
                 onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-                className="setting-input"
+                className="select-input number-input"
               />
-              <span className="setting-unit">問</span>
+              <span className="filter-unit">問</span>
             </div>
-            <div className="setting-item">
-              <label htmlFor="max-review-count">
-                要復習上限
-                <span className="setting-desc">繰り返される復習問題の上限数</span>
-              </label>
+            <div className="filter-group">
+              <label htmlFor="max-review-count">🔄 要復習上限:</label>
               <input
                 id="max-review-count"
                 type="number"
                 min="0"
                 value={maxReviewCount}
                 onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-                className="setting-input"
+                className="select-input number-input"
               />
-              <span className="setting-unit">問</span>
+              <span className="filter-unit">問</span>
             </div>
-          </div>
-        </div>
-      )}
+            <button onClick={onStartQuiz} className="start-btn">
+              🎯 クイズを開始
+            </button>
+          </>
+        )}
+      </div>
 
       {!hasQuestions ? (
         <div className="empty-state">
