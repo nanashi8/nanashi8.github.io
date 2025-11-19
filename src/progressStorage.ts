@@ -101,6 +101,53 @@ export function clearSessionHistory(mode: 'translation' | 'spelling'): void {
   }
 }
 
+// 学習設定の型定義
+export interface StudySettings {
+  maxStudyCount: number; // 学習数上限（デフォルト: 20）
+  maxReviewCount: number; // 要復習上限（デフォルト: 10）
+}
+
+// デフォルト設定
+const DEFAULT_STUDY_SETTINGS: StudySettings = {
+  maxStudyCount: 20,
+  maxReviewCount: 10,
+};
+
+// 学習設定を取得
+export function getStudySettings(): StudySettings {
+  try {
+    const stored = localStorage.getItem('study-settings');
+    if (stored) {
+      const settings = JSON.parse(stored);
+      return {
+        maxStudyCount: settings.maxStudyCount ?? DEFAULT_STUDY_SETTINGS.maxStudyCount,
+        maxReviewCount: settings.maxReviewCount ?? DEFAULT_STUDY_SETTINGS.maxReviewCount,
+      };
+    }
+  } catch (e) {
+    console.error('学習設定の取得エラー:', e);
+  }
+  return { ...DEFAULT_STUDY_SETTINGS };
+}
+
+// 学習設定を保存
+export function saveStudySettings(settings: StudySettings): boolean {
+  try {
+    localStorage.setItem('study-settings', JSON.stringify(settings));
+    return true;
+  } catch (e) {
+    console.error('学習設定の保存エラー:', e);
+    return false;
+  }
+}
+
+// 学習設定を更新（部分更新対応）
+export function updateStudySettings(partialSettings: Partial<StudySettings>): boolean {
+  const currentSettings = getStudySettings();
+  const newSettings = { ...currentSettings, ...partialSettings };
+  return saveStudySettings(newSettings);
+}
+
 export interface QuizResult {
   id: string;
   questionSetId: string;

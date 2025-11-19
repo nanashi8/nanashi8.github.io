@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import type { Question, AIPersonality } from '../types';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
+import { getStudySettings, updateStudySettings } from '../progressStorage';
 
 interface SettingsViewProps {
   allQuestions: Question[];
@@ -12,6 +13,15 @@ function SettingsView({
   allQuestions,
   onStartSession,
 }: SettingsViewProps) {
+  // 学習数上限と要復習上限の設定
+  const [maxStudyCount, setMaxStudyCount] = useState<number>(() => {
+    return getStudySettings().maxStudyCount;
+  });
+  
+  const [maxReviewCount, setMaxReviewCount] = useState<number>(() => {
+    return getStudySettings().maxReviewCount;
+  });
+
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
     const saved = localStorage.getItem('batchSize');
@@ -28,6 +38,18 @@ function SettingsView({
   const handleBatchSizeChange = (newSize: number) => {
     setBatchSize(newSize);
     localStorage.setItem('batchSize', newSize.toString());
+  };
+
+  // 学習数上限の変更
+  const handleMaxStudyCountChange = (newCount: number) => {
+    setMaxStudyCount(newCount);
+    updateStudySettings({ maxStudyCount: newCount });
+  };
+
+  // 要復習上限の変更
+  const handleMaxReviewCountChange = (newCount: number) => {
+    setMaxReviewCount(newCount);
+    updateStudySettings({ maxReviewCount: newCount });
   };
 
   // AI人格変更時にlocalStorageに保存
@@ -97,6 +119,48 @@ function SettingsView({
           allQuestions={allQuestions}
           onStartSession={onStartSession}
         />
+
+        {/* 学習数・要復習上限設定 */}
+        <div className="simple-setting-section">
+          <h3>📊 学習数・要復習上限</h3>
+          <div className="study-limits-container">
+            <div className="limit-setting">
+              <label htmlFor="max-study-count">
+                学習数上限
+                <span className="limit-description">1セッションあたりの最大学習数</span>
+              </label>
+              <input
+                id="max-study-count"
+                type="number"
+                min="5"
+                max="100"
+                value={maxStudyCount}
+                onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+                className="limit-input"
+              />
+              <span className="limit-unit">問</span>
+            </div>
+            <div className="limit-setting">
+              <label htmlFor="max-review-count">
+                要復習上限
+                <span className="limit-description">繰り返される復習問題の上限数</span>
+              </label>
+              <input
+                id="max-review-count"
+                type="number"
+                min="0"
+                max="50"
+                value={maxReviewCount}
+                onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+                className="limit-input"
+              />
+              <span className="limit-unit">問</span>
+            </div>
+          </div>
+          <div className="limits-info">
+            💡 学習中に足りないと感じたら、いつでも変更できます。要復習上限は、記憶が定着していない語を無理に定着させようとしても効果が薄いため、生徒さんに合わせて調整してください。
+          </div>
+        </div>
 
         {/* AI人格選択 */}
         <div className="simple-setting-section">

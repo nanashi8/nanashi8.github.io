@@ -7,7 +7,7 @@ import {
   generateId,
   selectAdaptiveQuestions,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress, addSessionHistory } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect, prioritizeVerificationWords, generateAssistantMessage } from './learningAssistant';
 import { 
   generateSpacedRepetitionSchedule, 
@@ -346,6 +346,9 @@ function App() {
 
   // クイズ開始ハンドラー
   const handleStartQuiz = () => {
+    // 学習設定を取得
+    const studySettings = getStudySettings();
+    
     let filteredQuestions = getFilteredQuestions();
     
     if (filteredQuestions.length === 0) {
@@ -404,24 +407,42 @@ function App() {
     // 当日の誤答単語を取得
     const todayIncorrect = getTodayIncorrectWords();
     
-    // 誤答単語がある場合、優先的に出題
+    // 誤答単語を要復習上限に基づいて制限
+    let reviewQuestions: Question[] = [];
     if (todayIncorrect.length > 0) {
       const incorrectQuestions = filteredQuestions.filter(q => 
         todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
       );
+      
+      // 要復習上限を適用（0の場合は復習問題なし）
+      reviewQuestions = studySettings.maxReviewCount > 0 
+        ? incorrectQuestions.slice(0, studySettings.maxReviewCount)
+        : [];
+      
       const correctQuestions = filteredQuestions.filter(q => 
         !todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
       );
-
       
       // 誤答問題を前に、正解済み問題を後ろに配置
-      filteredQuestions = [...incorrectQuestions, ...correctQuestions];
+      filteredQuestions = [...reviewQuestions, ...correctQuestions];
+      
+      if (reviewQuestions.length > 0) {
+        console.log(`🔄 要復習問題: ${reviewQuestions.length}問（上限: ${studySettings.maxReviewCount}問）`);
+      }
     }
+    
+    // 学習数上限を適用（適応的学習モードの有無に関わらず）
+    const maxQuestions = studySettings.maxStudyCount;
     
     // 適応的学習モードが有効な場合、出題順を最適化
     if (adaptiveMode && filteredQuestions.length > 0) {
-      filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(20, filteredQuestions.length));
+      filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(maxQuestions, filteredQuestions.length));
+    } else {
+      // 通常モードでも学習数上限を適用
+      filteredQuestions = filteredQuestions.slice(0, maxQuestions);
     }
+    
+    console.log(`📚 学習数: ${filteredQuestions.length}問（上限: ${studySettings.maxStudyCount}問）`);
     
     setQuizState({
       questions: filteredQuestions,
@@ -684,7 +705,7 @@ function App() {
           className={`tab-btn ${activeTab === 'reading' ? 'active' : ''}`}
           onClick={() => setActiveTab('reading')}
         >
-          読解
+          長文読解
         </button>
         <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
