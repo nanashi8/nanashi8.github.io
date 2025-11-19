@@ -9,6 +9,18 @@ import {
 } from './utils';
 import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect, prioritizeVerificationWords, generateAssistantMessage } from './learningAssistant';
+import { 
+  generateSpacedRepetitionSchedule, 
+  SpacedRepetitionSchedule,
+  calculateMemoryRetention 
+} from './adaptiveLearningAI';
+import {
+  analyzeRadarChart,
+  prioritizeWeakCategoryQuestions,
+  saveImprovementProgress,
+  updateImprovementProgress,
+  getImprovementProgress
+} from './radarChartAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -105,6 +117,13 @@ function App() {
   const quizStartTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
+  
+  // 間隔反復スケジューラー用
+  const recentAnswersRef = useRef<Array<{ word: string; wasCorrect: boolean; timestamp: number }>>([]);
+  const spacedRepetitionScheduleRef = useRef<SpacedRepetitionSchedule[]>([]);
+  
+  // 言語学的関連性追跡用(最近学習した単語を記録)
+  const recentlyStudiedWordsRef = useRef<string[]>([]);
   
   // 設定
   const [autoAdvance, setAutoAdvance] = useState<boolean>(() => {
@@ -318,6 +337,54 @@ function App() {
       return;
     }
     
+    // レーダーチャートAI: 弱点分野を分析
+    const radarAnalysis = analyzeRadarChart(allQuestions, categoryList);
+    
+    // 改善進捗を更新
+    const improvementProgress = getImprovementProgress();
+    if (improvementProgress) {
+      updateImprovementProgress(radarAnalysis);
+      console.log(`📊 改善進捗: ${improvementProgress.currentDay}日目 - 全体進捗${improvementProgress.overallProgress.toFixed(1)}%`);
+    } else if (radarAnalysis.weakCategories.length > 0) {
+      // 初回の場合は改善プランを開始
+      saveImprovementProgress(radarAnalysis);
+      console.log('🎯 レーダーチャート改善プランを開始しました');
+    }
+    
+    // AI推奨メッセージをコンソールに表示
+    if (radarAnalysis.aiRecommendations.length > 0) {
+      console.log('🧠 AI学習アシスタント からの推奨:');
+      radarAnalysis.aiRecommendations.forEach(rec => console.log(`  ${rec}`));
+    }
+    
+    // 弱点分野からの出題を優先(AIが自動調整)
+    if (radarAnalysis.weakCategories.length > 0 && selectedCategory === 'all') {
+      filteredQuestions = prioritizeWeakCategoryQuestions(
+        filteredQuestions,
+        radarAnalysis.weakCategories,
+        Math.min(30, filteredQuestions.length)
+      );
+      console.log(`💡 弱点分野を優先出題: ${radarAnalysis.weakCategories.slice(0, 3).map(w => w.category).join(', ')}`);
+    }
+    
+    // 言語学的関連性による出題(最近学習した単語の関連語を優先)
+    if (recentlyStudiedWordsRef.current.length > 0 && selectedCategory === 'all') {
+      const relatedQuestions = selectRelatedQuestions(
+        recentlyStudiedWordsRef.current,
+        filteredQuestions,
+        Math.min(5, Math.floor(filteredQuestions.length * 0.3)) // 全体の30%程度を関連語にする
+      );
+      
+      if (relatedQuestions.length > 0) {
+        // 関連語を優先的に配置(最初の方に)
+        const nonRelatedQuestions = filteredQuestions.filter(q => 
+          !relatedQuestions.some(rq => rq.word === q.word)
+        );
+        filteredQuestions = [...relatedQuestions, ...nonRelatedQuestions];
+        console.log(`🔗 言語学的関連性: ${relatedQuestions.length}問の関連語を優先出題`);
+      }
+    }
+    
     // 当日の誤答単語を取得
     const todayIncorrect = getTodayIncorrectWords();
     
@@ -329,6 +396,7 @@ function App() {
       const correctQuestions = filteredQuestions.filter(q => 
         !todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
       );
+
       
       // 誤答問題を前に、正解済み問題を後ろに配置
       filteredQuestions = [...incorrectQuestions, ...correctQuestions];
@@ -388,8 +456,42 @@ function App() {
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime);
       
-      // AI学習アシスタント: スキップした単語の検証
+      // 言語学的関連性AI: 学習した単語を記録
+      recentlyStudiedWordsRef.current.push(currentQuestion.word);
+      // 最新10件のみ保持
+      if (recentlyStudiedWordsRef.current.length > 10) {
+        recentlyStudiedWordsRef.current = recentlyStudiedWordsRef.current.slice(-10);
+      }
+      
+      // 間隔反復スケジューラー: 回答履歴を記録
+      recentAnswersRef.current.push({
+        word: currentQuestion.word,
+        wasCorrect: isCorrect,
+        timestamp: Date.now()
+      });
+      
+      // 最新20件のみ保持（メモリ節約）
+      if (recentAnswersRef.current.length > 20) {
+        recentAnswersRef.current = recentAnswersRef.current.slice(-20);
+      }
+      
+      // スケジュールを生成
       const progress = loadProgress();
+      spacedRepetitionScheduleRef.current = generateSpacedRepetitionSchedule(
+        recentAnswersRef.current,
+        progress.wordProgress,
+        quizState.currentIndex,
+        quizState.questions.length
+      );
+      
+      // AI学習メッセージ（デバッグ用）
+      if (spacedRepetitionScheduleRef.current.length > 0) {
+        const latestSchedule = spacedRepetitionScheduleRef.current[spacedRepetitionScheduleRef.current.length - 1];
+        const retention = calculateMemoryRetention(currentQuestion.word, progress.wordProgress[currentQuestion.word]);
+        console.log(`🧠 AI学習: ${currentQuestion.word} - 定着度${retention.retentionScore.toFixed(1)}% - ${latestSchedule.reason} (${latestSchedule.nextQuestionIndex - quizState.currentIndex}問後に再出題)`);
+      }
+      
+      // AI学習アシスタント: スキップした単語の検証
       const wordProgress = progress.wordProgress[currentQuestion.word];
       
       if (wordProgress && wordProgress.skippedCount && wordProgress.skippedCount > 0) {

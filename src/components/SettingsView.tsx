@@ -111,15 +111,11 @@ function SettingsView({
           </div>
         </div>
 
-        <div className="settings-divider"></div>
-
         {/* 学習プラン設定 */}
         <LearningPlanView
           allQuestions={allQuestions}
           onStartSession={onStartSession}
         />
-
-        <div className="settings-divider"></div>
 
         {/* AI人格選択 */}
         <div className="simple-setting-section">
@@ -138,8 +134,6 @@ function SettingsView({
             ))}
           </div>
         </div>
-
-        <div className="settings-divider"></div>
 
         {/* ダークモード切り替え */}
         <div className="simple-setting-section">

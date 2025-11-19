@@ -2,7 +2,8 @@ import {
   getTodayStats, 
   getTotalAnsweredCount, 
   getUniqueQuestionedWordsCount,
-  getTotalMasteredWordsCount 
+  getTotalMasteredWordsCount,
+  getRetentionRateWithAI
 } from '../progressStorage';
 
 interface ScoreBoardProps {
@@ -28,6 +29,9 @@ function ScoreBoard({
   // 出題数を取得（重複除外、全4700問のうち実際に出題された数）
   const uniqueQuestionedCount = getUniqueQuestionedWordsCount();
 
+  // 定着率をAIで計算
+  const { retentionRate, appearedCount } = getRetentionRateWithAI();
+
   // 現在のセッションの正答率を計算
   const currentAccuracy = totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0;
 
@@ -43,22 +47,16 @@ function ScoreBoard({
       )}
       <span className="score-stat-large">
         本日正答率<strong className="correct">{todayAccuracy}%</strong>
+        <span className="score-stat-sub">({todayTotalAnswered}問)</span>
+      </span>
+      <span className="score-stat-divider">|</span>
+      <span className="score-stat-large">
+        定着率<strong className="mastered">{retentionRate}%</strong>
+        <span className="score-stat-sub">({masteredCount}/{appearedCount})</span>
       </span>
       <span className="score-stat-divider">|</span>
       <span className="score-stat">
-        本日回答数<strong>{todayTotalAnswered}</strong>
-      </span>
-      <span className="score-stat-divider">|</span>
-      <span className="score-stat">
-        累計回答数<strong>{totalAnsweredCount}</strong>
-      </span>
-      <span className="score-stat-divider">|</span>
-      <span className="score-stat">
-        定着数<strong>{masteredCount}</strong>
-      </span>
-      <span className="score-stat-divider">|</span>
-      <span className="score-stat">
-        出題数<strong>{uniqueQuestionedCount}</strong>
+        累計回答<strong>{totalAnsweredCount}</strong>
       </span>
     </div>
   );

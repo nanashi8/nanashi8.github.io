@@ -418,7 +418,8 @@ function SpellingView({
 
           {currentQuestion && (
             <div className="question-card">
-              <div className="question-nav-row">
+              {/* 意味表示とナビゲーションボタンの行 */}
+              <div className="question-nav-row meaning-row">
                 <button 
                   className="inline-nav-btn prev-inline-btn" 
                   onClick={handlePrevious}
@@ -427,31 +428,14 @@ function SpellingView({
                 >
                   ←
                 </button>
-                <div className="question-content-inline">
-                  <div className="spelling-question-content">
-                    <div className="meaning-display">
-                      <div className="meaning-label">意味:</div>
-                      <div className="meaning-text">{currentQuestion.meaning}</div>
-                      {currentQuestion.word.includes(' ') && (
-                        <div className="phrase-hint">
-                          💡 ヒント: 「{currentQuestion.word}」はスペースなしで入力してください
-                        </div>
-                      )}
+                <div className="meaning-display">
+                  <div className="meaning-label">意味:</div>
+                  <div className="meaning-text">{currentQuestion.meaning}</div>
+                  {currentQuestion.word.includes(' ') && (
+                    <div className="phrase-hint">
+                      💡 ヒント: 「{currentQuestion.word}」はスペースなしで入力してください
                     </div>
-
-                    {/* ユーザーが選択中の単語表示 */}
-                    <div className="user-word-display">
-                      <div className="user-word-label">あなたの答え:</div>
-                      <div className="user-word-text">
-                        {userWord || '（並び替え）'}
-                      </div>
-                    </div>
-
-                    {/* 入力モード説明 */}
-                    <div className="input-mode-info">
-                      💡 クリックとタイピングの両方で入力できます
-                    </div>
-                  </div>
+                  )}
                 </div>
                 <button 
                   className="inline-nav-btn next-inline-btn" 
@@ -461,6 +445,16 @@ function SpellingView({
                 >
                   →
                 </button>
+              </div>
+
+              {/* ユーザーの答え表示と入力モード説明 */}
+              <div className="question-content-inline">
+                <div className="user-word-display">
+                  <div className="user-word-label">あなたの答え:</div>
+                  <div className="user-word-text">
+                    {userWord || '（並び替え）'}
+                  </div>
+                </div>
               </div>
 
               {/* シャッフルされたアルファベットカード（常に表示） */}
