@@ -47628,5 +47628,4813 @@
     ],
     "source": "auto",
     "baseWord": "await"
+  },
+  "crises": {
+    "word": "crises",
+    "reading": "クライシーズ",
+    "meaning": "危機（複数形）",
+    "etymology": "crisisの複数形",
+    "relatedWords": "crisis(クライシス): 危機",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": "crisis"
+  },
+  "depletion": {
+    "word": "depletion",
+    "reading": "ディプリーション",
+    "meaning": "枯渇・消耗",
+    "etymology": "deplete(枯渇させる) + -tion(名詞化)",
+    "relatedWords": "deplete(ディプリート): 枯渇させる, depleted(ディプリーティッド): 枯渇した",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": "deplete"
+  },
+  "optional": {
+    "word": "optional",
+    "reading": "オプショナル",
+    "meaning": "任意の・選択できる",
+    "etymology": "option(選択) + -al(形容詞化)",
+    "relatedWords": "option(オプション): 選択肢, optionally(オプショナリー): 任意に",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": "option"
+  },
+  "wildfires": {
+    "word": "wildfire",
+    "reading": "ワイルドファイア",
+    "meaning": "山火事・野火",
+    "etymology": "wild（野生の）+ fire（火）",
+    "relatedWords": "fire(ファイア): 火, forest(フォレスト): 森",
+    "category": "自然・環境",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": "wildfire"
+  },
+  "intensify": {
+    "word": "intensify",
+    "reading": "インテンシファイ",
+    "meaning": "激化する・強める",
+    "etymology": "intense（強烈な）+ -fy（〜化する）",
+    "relatedWords": "intense(インテンス): 強烈な, intensity(インテンシティ): 強度",
+    "category": "状態・変化",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "melting": {
+    "word": "melt",
+    "reading": "メルト",
+    "meaning": "溶ける・溶かす",
+    "etymology": "古英語 meltan",
+    "relatedWords": "melting(メルティング): 溶けること（現在分詞）, melted(メルティッド): 溶けた（過去形）",
+    "category": "状態・変化",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "disrupt": {
+    "word": "disrupt",
+    "reading": "ディスラプト",
+    "meaning": "混乱させる・中断する",
+    "etymology": "ラテン語 disrumpere（破壊する）",
+    "relatedWords": "disruption(ディスラプション): 混乱, disruptive(ディスラプティブ): 破壊的な",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "extinction": {
+    "word": "extinction",
+    "reading": "イクスティンクション",
+    "meaning": "絶滅・消滅",
+    "etymology": "extinct（絶滅した）+ -ion（名詞化）",
+    "relatedWords": "extinct(イクスティンクト): 絶滅した, endanger(エンデンジャー): 危険にさらす",
+    "category": "自然・環境",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "reef": {
+    "word": "reef",
+    "reading": "リーフ",
+    "meaning": "岩礁・サンゴ礁",
+    "etymology": "オランダ語 rif",
+    "relatedWords": "coral reef(コーラル リーフ): サンゴ礁",
+    "category": "自然・環境",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "dioxide": {
+    "word": "dioxide",
+    "reading": "ダイオキサイド",
+    "meaning": "二酸化物",
+    "etymology": "di-（二つの）+ oxide（酸化物）",
+    "relatedWords": "carbon dioxide(カーボンダイオキサイド): 二酸化炭素, oxygen(オキシジェン): 酸素",
+    "category": "科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "sunlight": {
+    "word": "sunlight",
+    "reading": "サンライト",
+    "meaning": "日光・太陽光",
+    "etymology": "sun（太陽）+ light（光）",
+    "relatedWords": "sun(サン): 太陽, sunshine(サンシャイン): 日差し",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "dramatically": {
+    "word": "dramatically",
+    "reading": "ドラマティカリー",
+    "meaning": "劇的に・急激に",
+    "etymology": "dramatic（劇的な）+ -ly（副詞化）",
+    "relatedWords": "dramatic(ドラマティック): 劇的な, drama(ドラマ): 劇",
+    "category": "程度・様子",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": "dramatic"
+  },
+  "install": {
+    "word": "install",
+    "reading": "インストール",
+    "meaning": "設置する・取り付ける",
+    "etymology": "ラテン語 installare（配置する）",
+    "relatedWords": "installation(インストレーション): 設置, installer(インストーラー): 設置者",
+    "category": "行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "turbine": {
+    "word": "turbine",
+    "reading": "タービン",
+    "meaning": "タービン・発電機",
+    "etymology": "ラテン語 turbo（回転）",
+    "relatedWords": "wind turbine(ウィンド タービン): 風力タービン, generator(ジェネレーター): 発電機",
+    "category": "科学・技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "flow": {
+    "word": "flow",
+    "reading": "フロー",
+    "meaning": "流れる・流れ",
+    "etymology": "古英語 flowan",
+    "relatedWords": "flowing(フローイング): 流れている, river flow(リバー フロー): 川の流れ",
+    "category": "状態・変化",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "mature": {
+    "word": "mature",
+    "reading": "マチュア",
+    "meaning": "成熟した・大人の",
+    "etymology": "ラテン語 maturus（熟した）",
+    "relatedWords": "maturity(マチュリティ): 成熟, immature(イマチュア): 未熟な",
+    "category": "状態・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "heavily": {
+    "word": "heavily",
+    "reading": "ヘビリー",
+    "meaning": "重く・大量に",
+    "etymology": "heavy（重い）+ -ly（副詞化）",
+    "relatedWords": "heavy(ヘビー): 重い, weight(ウェイト): 重さ",
+    "category": "程度・様子",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": "heavy"
+  },
+  "hydropower": {
+    "word": "hydropower",
+    "reading": "ハイドロパワー",
+    "meaning": "水力発電",
+    "etymology": "hydro-（水の）+ power（力）",
+    "relatedWords": "hydro(ハイドロ): 水の, power(パワー): 力・電力",
+    "category": "科学・技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "tap": {
+    "word": "tap",
+    "reading": "タップ",
+    "meaning": "蛇口・軽くたたく",
+    "etymology": "古英語 tæppa",
+    "relatedWords": "faucet(フォーセット): 蛇口, water tap(ウォーター タップ): 水道の蛇口",
+    "category": "物・道具",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "organic": {
+    "word": "organic",
+    "reading": "オーガニック",
+    "meaning": "有機の・オーガニックの",
+    "etymology": "ギリシャ語 organikos（器官の）",
+    "relatedWords": "organism(オーガニズム): 生物, organize(オーガナイズ): 組織する",
+    "category": "科学・自然",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "diversify": {
+    "word": "diversify",
+    "reading": "ダイバーシファイ",
+    "meaning": "多様化する",
+    "etymology": "diverse（多様な）+ -fy（〜化する）",
+    "relatedWords": "diverse(ダイバース): 多様な, diversity(ダイバーシティ): 多様性",
+    "category": "状態・変化",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual",
+    "baseWord": null
+  },
+  "linear": {
+    "word": "linear",
+    "reading": "リニア",
+    "meaning": "直線的な・線形の",
+    "etymology": "ラテン語 linearis（線の）",
+    "relatedWords": "line(ライン): 線, nonlinear(ノンリニア): 非線形の",
+    "category": "形状・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "discard": {
+    "word": "discard",
+    "reading": "ディスカード",
+    "meaning": "捨てる・破棄する",
+    "etymology": "dis-（離れて）+ card（カード）",
+    "relatedWords": "dispose(ディスポーズ): 処分する, throw away(スロー アウェイ): 捨てる",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "unsustainable": {
+    "word": "unsustainable",
+    "reading": "アンサステイナブル",
+    "meaning": "持続不可能な",
+    "etymology": "un-（否定）+ sustainable（持続可能な）",
+    "relatedWords": "sustainable(サステイナブル): 持続可能な, sustain(サステイン): 維持する",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "deplete": {
+    "word": "deplete",
+    "reading": "ディプリート",
+    "meaning": "枯渇させる・使い果たす",
+    "etymology": "ラテン語 deplere（空にする）",
+    "relatedWords": "depletion(ディプリーション): 枯渇, depleted(ディプリーティッド): 枯渇した",
+    "category": "状態・変化",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "finite": {
+    "word": "finite",
+    "reading": "ファイナイト",
+    "meaning": "有限の・限りある",
+    "etymology": "ラテン語 finitus（限られた）",
+    "relatedWords": "infinite(インフィニット): 無限の, finish(フィニッシュ): 終わる",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "circular": {
+    "word": "circular",
+    "reading": "サーキュラー",
+    "meaning": "循環的な・円形の",
+    "etymology": "ラテン語 circularis（円の）",
+    "relatedWords": "circle(サークル): 円, circulate(サーキュレート): 循環する",
+    "category": "形状・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "durability": {
+    "word": "durability",
+    "reading": "デュラビリティ",
+    "meaning": "耐久性・持続性",
+    "etymology": "durable（耐久性のある）+ -ity（名詞化）",
+    "relatedWords": "durable(デュラブル): 耐久性のある, endure(エンデュア): 耐える",
+    "category": "性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "input": {
+    "word": "input",
+    "reading": "インプット",
+    "meaning": "入力・投入",
+    "etymology": "in（中へ）+ put（置く）",
+    "relatedWords": "output(アウトプット): 出力, import(インポート): 輸入",
+    "category": "行動・概念",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "indefinitely": {
+    "word": "indefinitely",
+    "reading": "インデフィニットリー",
+    "meaning": "無期限に・不定に",
+    "etymology": "indefinite（不定の）+ -ly（副詞化）",
+    "relatedWords": "indefinite(インデフィニット): 不定の, definite(デフィニット): 明確な",
+    "category": "時間・程度",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mimic": {
+    "word": "mimic",
+    "reading": "ミミック",
+    "meaning": "真似る・模倣する",
+    "etymology": "ギリシャ語 mimos（真似る人）",
+    "relatedWords": "imitate(イミテート): 模倣する, copy(コピー): 複製する",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "organism": {
+    "word": "organism",
+    "reading": "オーガニズム",
+    "meaning": "生物・有機体",
+    "etymology": "ギリシャ語 organon（器官）",
+    "relatedWords": "organic(オーガニック): 有機の, organize(オーガナイズ): 組織する",
+    "category": "生物・科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "bulb": {
+    "word": "bulb",
+    "reading": "バルブ",
+    "meaning": "電球・球根",
+    "etymology": "ラテン語 bulbus（球根）",
+    "relatedWords": "light bulb(ライト バルブ): 電球, lamp(ランプ): ランプ",
+    "category": "物・道具",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "ownership": {
+    "word": "ownership",
+    "reading": "オーナーシップ",
+    "meaning": "所有権・所有",
+    "etymology": "owner（所有者）+ -ship（状態）",
+    "relatedWords": "owner(オーナー): 所有者, own(オウン): 所有する",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "incentivize": {
+    "word": "incentivize",
+    "reading": "インセンティバイズ",
+    "meaning": "動機付ける・奨励する",
+    "etymology": "incentive（動機）+ -ize（〜化する）",
+    "relatedWords": "incentive(インセンティブ): 動機・奨励金, motivate(モチベート): 動機付ける",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "platform": {
+    "word": "platform",
+    "reading": "プラットフォーム",
+    "meaning": "基盤・プラットフォーム",
+    "etymology": "フランス語 plate-forme（平らな形）",
+    "relatedWords": "base(ベース): 基礎, foundation(ファンデーション): 基盤",
+    "category": "物・概念",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "borrow": {
+    "word": "borrow",
+    "reading": "ボロー",
+    "meaning": "借りる",
+    "etymology": "古英語 borgian",
+    "relatedWords": "lend(レンド): 貸す, loan(ローン): 貸付",
+    "category": "行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "cafe": {
+    "word": "cafe",
+    "reading": "カフェ",
+    "meaning": "カフェ・喫茶店",
+    "etymology": "フランス語 café（コーヒー）",
+    "relatedWords": "restaurant(レストラン): レストラン, coffee(コーヒー): コーヒー",
+    "category": "場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "broken": {
+    "word": "break",
+    "reading": "ブレイク",
+    "meaning": "壊す・壊れる",
+    "etymology": "古英語 brecan",
+    "relatedWords": "broken(ブロークン): 壊れた, fracture(フラクチャー): 骨折",
+    "category": "状態・変化",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "lifespan": {
+    "word": "lifespan",
+    "reading": "ライフスパン",
+    "meaning": "寿命・耐用年数",
+    "etymology": "life（生命）+ span（期間）",
+    "relatedWords": "lifetime(ライフタイム): 生涯, longevity(ロンジェビティ): 長寿",
+    "category": "時間・期間",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "instruction": {
+    "word": "instruction",
+    "reading": "インストラクション",
+    "meaning": "指示・説明",
+    "etymology": "ラテン語 instructio（配置）",
+    "relatedWords": "instruct(インストラクト): 指導する, instructor(インストラクター): 指導者",
+    "category": "行動・概念",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "obsolescence": {
+    "word": "obsolescence",
+    "reading": "オブソレッセンス",
+    "meaning": "陳腐化・旧式化",
+    "etymology": "obsolete（時代遅れの）+ -ence（名詞化）",
+    "relatedWords": "obsolete(オブソリート): 時代遅れの, outdated(アウトデイティッド): 古い",
+    "category": "状態",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "symbiosis": {
+    "word": "symbiosis",
+    "reading": "シンバイオシス",
+    "meaning": "共生",
+    "etymology": "ギリシャ語 symbiōsis（共に生きること）",
+    "relatedWords": "symbiotic(シンバイオティック): 共生の, cooperation(クーオペレーション): 協力",
+    "category": "生物・科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "raw": {
+    "word": "raw",
+    "reading": "ロー",
+    "meaning": "生の・未加工の",
+    "etymology": "古英語 hreaw",
+    "relatedWords": "cooked(クックト): 調理された, natural(ナチュラル): 自然の",
+    "category": "状態・性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "extraction": {
+    "word": "extraction",
+    "reading": "エクストラクション",
+    "meaning": "抽出・採取",
+    "etymology": "ラテン語 extractio（引き出すこと）",
+    "relatedWords": "extract(エクストラクト): 抽出する, mining(マイニング): 採掘",
+    "category": "行動・概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "damage": {
+    "word": "damage",
+    "reading": "ダメージ",
+    "meaning": "損害・傷害",
+    "etymology": "ラテン語 damnum（損失）",
+    "relatedWords": "harm(ハーム): 害, destroy(デストロイ): 破壊する",
+    "category": "状態・行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "excessive": {
+    "word": "excessive",
+    "reading": "エクセシブ",
+    "meaning": "過度の・過剰な",
+    "etymology": "ラテン語 excessus（超過）",
+    "relatedWords": "excess(エクセス): 過剰, extreme(エクストリーム): 極端な",
+    "category": "程度・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "pesticide": {
+    "word": "pesticide",
+    "reading": "ペスティサイド",
+    "meaning": "農薬・殺虫剤",
+    "etymology": "pest（害虫）+ -cide（殺すもの）",
+    "relatedWords": "pest(ペスト): 害虫, herbicide(ハービサイド): 除草剤",
+    "category": "科学・農業",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "fertilizer": {
+    "word": "fertilizer",
+    "reading": "ファーティライザー",
+    "meaning": "肥料",
+    "etymology": "fertile（肥沃な）+ -izer（〜するもの）",
+    "relatedWords": "fertile(ファータイル): 肥沃な, fertilize(ファータライズ): 肥やす",
+    "category": "農業・科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "insect": {
+    "word": "insect",
+    "reading": "インセクト",
+    "meaning": "昆虫",
+    "etymology": "ラテン語 insectum（切り込みのある）",
+    "relatedWords": "bug(バグ): 虫, butterfly(バタフライ): 蝶",
+    "category": "生物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "nutrient": {
+    "word": "nutrient",
+    "reading": "ニュートリエント",
+    "meaning": "栄養素",
+    "etymology": "ラテン語 nutriens（栄養を与える）",
+    "relatedWords": "nutrition(ニュートリション): 栄養, nourish(ナリッシュ): 栄養を与える",
+    "category": "科学・健康",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "pest": {
+    "word": "pest",
+    "reading": "ペスト",
+    "meaning": "害虫・害獣",
+    "etymology": "ラテン語 pestis（疫病）",
+    "relatedWords": "pesticide(ペスティサイド): 農薬, vermin(ヴァーミン): 害虫",
+    "category": "生物",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "synthetic": {
+    "word": "synthetic",
+    "reading": "シンセティック",
+    "meaning": "合成の・人工の",
+    "etymology": "ギリシャ語 synthetikos（組み合わせる）",
+    "relatedWords": "synthesis(シンセシス): 合成, artificial(アーティフィシャル): 人工の",
+    "category": "科学・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "rotation": {
+    "word": "rotation",
+    "reading": "ローテーション",
+    "meaning": "回転・輪作",
+    "etymology": "ラテン語 rotatio（回転）",
+    "relatedWords": "rotate(ローテート): 回転する, revolve(リボルブ): 回る",
+    "category": "運動・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "maintain": {
+    "word": "maintain",
+    "reading": "メインテイン",
+    "meaning": "維持する・保つ",
+    "etymology": "ラテン語 manu tenere（手で保つ）",
+    "relatedWords": "maintenance(メインテナンス): 維持・保守, sustain(サステイン): 持続する",
+    "category": "行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "erosion": {
+    "word": "erosion",
+    "reading": "イロージョン",
+    "meaning": "侵食・浸食",
+    "etymology": "ラテン語 erosio（侵食）",
+    "relatedWords": "erode(イロード): 侵食する, weathering(ウェザリング): 風化",
+    "category": "自然・科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "preserve": {
+    "word": "preserve",
+    "reading": "プリザーブ",
+    "meaning": "保存する・守る",
+    "etymology": "ラテン語 praeservare（前もって守る）",
+    "relatedWords": "conservation(コンサベーション): 保全, protect(プロテクト): 保護する",
+    "category": "行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "livestock": {
+    "word": "livestock",
+    "reading": "ライブストック",
+    "meaning": "家畜",
+    "etymology": "live（生きている）+ stock（蓄え）",
+    "relatedWords": "cattle(キャトル): 牛, farm animal(ファーム アニマル): 家畜動物",
+    "category": "農業・生物",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "fertilize": {
+    "word": "fertilize",
+    "reading": "ファータライズ",
+    "meaning": "肥やす・受精させる",
+    "etymology": "fertile（肥沃な）+ -ize（〜化する）",
+    "relatedWords": "fertilizer(ファーティライザー): 肥料, fertile(ファータイル): 肥沃な",
+    "category": "農業・生物",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "sequester": {
+    "word": "sequester",
+    "reading": "シークエスター",
+    "meaning": "隔離する・貯蔵する",
+    "etymology": "ラテン語 sequestrare（分離する）",
+    "relatedWords": "sequestration(シークエストレーション): 隔離, isolate(アイソレート): 隔離する",
+    "category": "行動・科学",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "unused": {
+    "word": "unused",
+    "reading": "アンユーズド",
+    "meaning": "未使用の・使われていない",
+    "etymology": "un-（否定）+ used（使われた）",
+    "relatedWords": "use(ユーズ): 使う, employed(エンプロイド): 使用される",
+    "category": "状態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "neighborhood": {
+    "word": "neighborhood",
+    "reading": "ネイバーフッド",
+    "meaning": "近隣・地域",
+    "etymology": "neighbor（隣人）+ -hood（状態）",
+    "relatedWords": "neighbor(ネイバー): 隣人, community(コミュニティ): 地域社会",
+    "category": "場所・社会",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "truck": {
+    "word": "truck",
+    "reading": "トラック",
+    "meaning": "トラック・貨物自動車",
+    "etymology": "ギリシャ語 trochos（車輪）",
+    "relatedWords": "vehicle(ビークル): 乗り物, cargo(カーゴ): 貨物",
+    "category": "交通・乗り物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mainstream": {
+    "word": "mainstream",
+    "reading": "メインストリーム",
+    "meaning": "主流・本流",
+    "etymology": "main（主要な）+ stream（流れ）",
+    "relatedWords": "main(メイン): 主要な, popular(ポピュラー): 人気のある",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "tailpipe": {
+    "word": "tailpipe",
+    "reading": "テールパイプ",
+    "meaning": "排気管・マフラー",
+    "etymology": "tail（尾）+ pipe（管）",
+    "relatedWords": "exhaust(イグゾースト): 排気, emission(エミッション): 排出",
+    "category": "交通・技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "grid": {
+    "word": "grid",
+    "reading": "グリッド",
+    "meaning": "送電網・格子",
+    "etymology": "古英語 gridiron（格子）",
+    "relatedWords": "network(ネットワーク): 網, power grid(パワー グリッド): 送電網",
+    "category": "技術・構造",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "infrastructure": {
+    "word": "infrastructure",
+    "reading": "インフラストラクチャー",
+    "meaning": "インフラ・社会基盤",
+    "etymology": "infra-（下の）+ structure（構造）",
+    "relatedWords": "foundation(ファンデーション): 基盤, facility(ファシリティ): 施設",
+    "category": "社会・技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "per": {
+    "word": "per",
+    "reading": "パー",
+    "meaning": "〜につき・〜ごとに",
+    "etymology": "ラテン語 per（〜を通じて）",
+    "relatedWords": "each(イーチ): それぞれ, every(エブリ): 毎",
+    "category": "前置詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "capita": {
+    "word": "capita",
+    "reading": "キャピタ",
+    "meaning": "人（per capitaで一人当たり）",
+    "etymology": "ラテン語 caput（頭）",
+    "relatedWords": "per capita(パー キャピタ): 一人当たり, capital(キャピタル): 首都・資本",
+    "category": "統計・経済",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "subway": {
+    "word": "subway",
+    "reading": "サブウェイ",
+    "meaning": "地下鉄",
+    "etymology": "sub-（下の）+ way（道）",
+    "relatedWords": "metro(メトロ): 地下鉄, underground(アンダーグラウンド): 地下",
+    "category": "交通",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "lane": {
+    "word": "lane",
+    "reading": "レーン",
+    "meaning": "車線・小道",
+    "etymology": "古英語 lane",
+    "relatedWords": "road(ロード): 道路, path(パス): 小道",
+    "category": "場所・交通",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "bike": {
+    "word": "bike",
+    "reading": "バイク",
+    "meaning": "自転車・バイク",
+    "etymology": "bicycle（自転車）の短縮形",
+    "relatedWords": "bicycle(バイシクル): 自転車, motorcycle(モーターサイクル): オートバイ",
+    "category": "交通・乗り物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "dependency": {
+    "word": "dependency",
+    "reading": "ディペンデンシー",
+    "meaning": "依存・従属",
+    "etymology": "depend（依存する）+ -ency（名詞化）",
+    "relatedWords": "depend(ディペンド): 依存する, independent(インディペンデント): 独立した",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "livable": {
+    "word": "livable",
+    "reading": "リバブル",
+    "meaning": "住みやすい・居住可能な",
+    "etymology": "live（住む）+ -able（可能な）",
+    "relatedWords": "live(リブ): 住む, habitable(ハビタブル): 居住可能な",
+    "category": "性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "dirty": {
+    "word": "dirty",
+    "reading": "ダーティ",
+    "meaning": "汚い・不潔な",
+    "etymology": "dirt（汚れ）+ -y（形容詞化）",
+    "relatedWords": "dirt(ダート): 汚れ, clean(クリーン): きれいな",
+    "category": "状態・性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "inefficient": {
+    "word": "inefficient",
+    "reading": "インエフィシェント",
+    "meaning": "非効率的な",
+    "etymology": "in-（否定）+ efficient（効率的な）",
+    "relatedWords": "efficient(エフィシェント): 効率的な, efficiency(エフィシェンシー): 効率",
+    "category": "性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "insulation": {
+    "word": "insulation",
+    "reading": "インサレーション",
+    "meaning": "断熱・絶縁",
+    "etymology": "insulate（絶縁する）+ -ion（名詞化）",
+    "relatedWords": "insulate(インサレート): 絶縁する, isolate(アイソレート): 隔離する",
+    "category": "建築・技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "waste": {
+    "word": "waste",
+    "reading": "ウェイスト",
+    "meaning": "無駄・廃棄物",
+    "etymology": "ラテン語 vastare（荒廃させる）",
+    "relatedWords": "garbage(ガービッジ): ごみ, trash(トラッシュ): ごみ",
+    "category": "環境・物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "window": {
+    "word": "window",
+    "reading": "ウィンドウ",
+    "meaning": "窓",
+    "etymology": "古ノルド語 vindauga（風の目）",
+    "relatedWords": "door(ドア): ドア, glass(グラス): ガラス",
+    "category": "建築・物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "leak": {
+    "word": "leak",
+    "reading": "リーク",
+    "meaning": "漏れる・漏出",
+    "etymology": "古ノルド語 leka",
+    "relatedWords": "leakage(リーケージ): 漏出, drip(ドリップ): したたる",
+    "category": "状態・行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "pane": {
+    "word": "pane",
+    "reading": "ペイン",
+    "meaning": "窓ガラス",
+    "etymology": "ラテン語 pannus（布）",
+    "relatedWords": "window pane(ウィンドウ ペイン): 窓ガラス, glass(グラス): ガラス",
+    "category": "建築・物",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "minimize": {
+    "word": "minimize",
+    "reading": "ミニマイズ",
+    "meaning": "最小化する・最小限にする",
+    "etymology": "minimum（最小）+ -ize（〜化する）",
+    "relatedWords": "minimum(ミニマム): 最小, minimize(ミニマイズ): 最小化する",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "thermostat": {
+    "word": "thermostat",
+    "reading": "サーモスタット",
+    "meaning": "温度調節器・サーモスタット",
+    "etymology": "thermo-（熱の）+ -stat（安定させるもの）",
+    "relatedWords": "temperature(テンペラチャー): 温度, control(コントロール): 制御",
+    "category": "技術・装置",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "optimize": {
+    "word": "optimize",
+    "reading": "オプティマイズ",
+    "meaning": "最適化する",
+    "etymology": "optimal（最適な）+ -ize（〜化する）",
+    "relatedWords": "optimal(オプティマル): 最適な, optimization(オプティマイゼーション): 最適化",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "runoff": {
+    "word": "runoff",
+    "reading": "ランオフ",
+    "meaning": "流出・雨水流出",
+    "etymology": "run（流れる）+ off（離れて）",
+    "relatedWords": "run(ラン): 流れる, drain(ドレイン): 排水",
+    "category": "環境・自然",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "rainwater": {
+    "word": "rainwater",
+    "reading": "レインウォーター",
+    "meaning": "雨水",
+    "etymology": "rain（雨）+ water（水）",
+    "relatedWords": "rain(レイン): 雨, water(ウォーター): 水",
+    "category": "環境・自然",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "evaporation": {
+    "word": "evaporation",
+    "reading": "エバポレーション",
+    "meaning": "蒸発",
+    "etymology": "evaporate（蒸発する）+ -ion（名詞化）",
+    "relatedWords": "evaporate(エバポレート): 蒸発する, vapor(ベイパー): 蒸気",
+    "category": "科学・自然",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "maximize": {
+    "word": "maximize",
+    "reading": "マキシマイズ",
+    "meaning": "最大化する",
+    "etymology": "maximum（最大）+ -ize（〜化する）",
+    "relatedWords": "maximum(マキシマム): 最大, maximal(マキシマル): 最大の",
+    "category": "行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mass": {
+    "word": "mass",
+    "reading": "マス",
+    "meaning": "質量・大量",
+    "etymology": "ラテン語 massa（塊）",
+    "relatedWords": "massive(マッシブ): 巨大な, weight(ウェイト): 重さ",
+    "category": "物理・量",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "ventilation": {
+    "word": "ventilation",
+    "reading": "ベンチレーション",
+    "meaning": "換気・通風",
+    "etymology": "ventilate（換気する）+ -ion（名詞化）",
+    "relatedWords": "ventilate(ベンチレート): 換気する, air(エア): 空気",
+    "category": "建築・技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "indoor": {
+    "word": "indoor",
+    "reading": "インドア",
+    "meaning": "屋内の・室内の",
+    "etymology": "in（中の）+ door（ドア）",
+    "relatedWords": "outdoor(アウトドア): 屋外の, inside(インサイド): 内側",
+    "category": "場所・性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "existing": {
+    "word": "existing",
+    "reading": "イグジスティング",
+    "meaning": "既存の・現存する",
+    "etymology": "exist（存在する）+ -ing（現在分詞）",
+    "relatedWords": "exist(イグジスト): 存在する, current(カレント): 現在の",
+    "category": "状態",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "demolition": {
+    "word": "demolition",
+    "reading": "デモリション",
+    "meaning": "解体・破壊",
+    "etymology": "ラテン語 demolitio（破壊）",
+    "relatedWords": "demolish(デモリッシュ): 解体する, destroy(デストロイ): 破壊する",
+    "category": "建築・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "improvement": {
+    "word": "improvement",
+    "reading": "インプルーブメント",
+    "meaning": "改善・改良",
+    "etymology": "improve（改善する）+ -ment（名詞化）",
+    "relatedWords": "improve(インプルーブ): 改善する, better(ベター): より良い",
+    "category": "抽象概念",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "massive": {
+    "word": "massive",
+    "reading": "マッシブ",
+    "meaning": "巨大な・大規模な",
+    "etymology": "ラテン語 massa（塊）",
+    "relatedWords": "mass(マス): 質量, huge(ヒュージ): 巨大な",
+    "category": "性質・サイズ",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "choose": {
+    "word": "choose",
+    "reading": "チューズ",
+    "meaning": "選ぶ・選択する",
+    "etymology": "古英語 ceosan",
+    "relatedWords": "choice(チョイス): 選択, select(セレクト): 選ぶ",
+    "category": "行動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "timeless": {
+    "word": "timeless",
+    "reading": "タイムレス",
+    "meaning": "時代を超えた・不変の",
+    "etymology": "time（時間）+ -less（〜がない）",
+    "relatedWords": "eternal(エターナル): 永遠の, classic(クラシック): 古典的な",
+    "category": "性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "ethical": {
+    "word": "ethical",
+    "reading": "エシカル",
+    "meaning": "倫理的な・道徳的な",
+    "etymology": "ギリシャ語 ethikos（習慣の）",
+    "relatedWords": "ethics(エシックス): 倫理, moral(モラル): 道徳的な",
+    "category": "抽象概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "huge": {
+    "word": "huge",
+    "reading": "ヒュージ",
+    "meaning": "巨大な・莫大な",
+    "etymology": "古フランス語 ahuge",
+    "relatedWords": "enormous(エノーマス): 巨大な, massive(マッシブ): 大規模な",
+    "category": "サイズ・程度",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "vegan": {
+    "word": "vegan",
+    "reading": "ビーガン",
+    "meaning": "完全菜食主義の・ビーガンの",
+    "etymology": "vegetarian（菜食主義者）の短縮形",
+    "relatedWords": "vegetarian(ベジタリアン): 菜食主義者, plant-based(プラントベースド): 植物性の",
+    "category": "食事・ライフスタイル",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "meatless": {
+    "word": "meatless",
+    "reading": "ミートレス",
+    "meaning": "肉を使わない・菜食の",
+    "etymology": "meat（肉）+ -less（〜がない）",
+    "relatedWords": "meat(ミート): 肉, vegetarian(ベジタリアン): 菜食主義者",
+    "category": "食事",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "seasonal": {
+    "word": "seasonal",
+    "reading": "シーズナル",
+    "meaning": "季節の・季節限定の",
+    "etymology": "season（季節）+ -al（形容詞化）",
+    "relatedWords": "season(シーズン): 季節, temporary(テンポラリー): 一時的な",
+    "category": "時間・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "farmer": {
+    "word": "farmer",
+    "reading": "ファーマー",
+    "meaning": "農家・農民",
+    "etymology": "farm（農場）+ -er（人）",
+    "relatedWords": "farm(ファーム): 農場, agriculture(アグリカルチャー): 農業",
+    "category": "職業・人",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "freshness": {
+    "word": "freshness",
+    "reading": "フレッシュネス",
+    "meaning": "新鮮さ",
+    "etymology": "fresh（新鮮な）+ -ness（名詞化）",
+    "relatedWords": "fresh(フレッシュ): 新鮮な, quality(クオリティ): 品質",
+    "category": "性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "scrap": {
+    "word": "scrap",
+    "reading": "スクラップ",
+    "meaning": "切れ端・残飯",
+    "etymology": "古ノルド語 skrap",
+    "relatedWords": "waste(ウェイスト): 廃棄物, leftover(レフトオーバー): 残り物",
+    "category": "物",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "reusable": {
+    "word": "reusable",
+    "reading": "リユーザブル",
+    "meaning": "再利用可能な",
+    "etymology": "re-（再び）+ use（使う）+ -able（可能な）",
+    "relatedWords": "reuse(リユース): 再利用する, recyclable(リサイクラブル): リサイクル可能な",
+    "category": "環境・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "refillable": {
+    "word": "refillable",
+    "reading": "リフィラブル",
+    "meaning": "詰め替え可能な",
+    "etymology": "re-（再び）+ fill（満たす）+ -able（可能な）",
+    "relatedWords": "refill(リフィル): 詰め替える, reusable(リユーザブル): 再利用可能な",
+    "category": "環境・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "bottle": {
+    "word": "bottle",
+    "reading": "ボトル",
+    "meaning": "瓶・ボトル",
+    "etymology": "ラテン語 butticula（小さな樽）",
+    "relatedWords": "container(コンテナー): 容器, jar(ジャー): 瓶",
+    "category": "物・容器",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "minimal": {
+    "word": "minimal",
+    "reading": "ミニマル",
+    "meaning": "最小限の・最小の",
+    "etymology": "minimum（最小）+ -al（形容詞化）",
+    "relatedWords": "minimum(ミニマム): 最小, minimize(ミニマイズ): 最小化する",
+    "category": "程度・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "purchasing": {
+    "word": "purchase",
+    "reading": "パーチェス",
+    "meaning": "購入する・購入",
+    "etymology": "古フランス語 porchacier（追求する）",
+    "relatedWords": "buy(バイ): 買う, shopping(ショッピング): 買い物",
+    "category": "行動・経済",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "crucial": {
+    "word": "crucial",
+    "reading": "クルーシャル",
+    "meaning": "重要な・決定的な",
+    "etymology": "ラテン語 crux（十字架）",
+    "relatedWords": "critical(クリティカル): 重大な, essential(エッセンシャル): 不可欠な",
+    "category": "重要性",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "insufficient": {
+    "word": "insufficient",
+    "reading": "インサフィシェント",
+    "meaning": "不十分な",
+    "etymology": "in-（否定）+ sufficient（十分な）",
+    "relatedWords": "sufficient(サフィシェント): 十分な, inadequate(インアデクエイト): 不適切な",
+    "category": "程度",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "systemic": {
+    "word": "systemic",
+    "reading": "システミック",
+    "meaning": "組織的な・体系的な",
+    "etymology": "system（体系）+ -ic（形容詞化）",
+    "relatedWords": "system(システム): 体系, systematic(システマティック): 体系的な",
+    "category": "性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "expensive": {
+    "word": "expensive",
+    "reading": "エクスペンシブ",
+    "meaning": "高価な・費用のかかる",
+    "etymology": "expense（費用）+ -ive（形容詞化）",
+    "relatedWords": "cheap(チープ): 安い, costly(コストリー): 高価な",
+    "category": "価格・性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "incentive": {
+    "word": "incentive",
+    "reading": "インセンティブ",
+    "meaning": "動機・奨励金",
+    "etymology": "ラテン語 incentivus（刺激する）",
+    "relatedWords": "motivation(モチベーション): 動機付け, reward(リワード): 報酬",
+    "category": "経済・心理",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "minimum": {
+    "word": "minimum",
+    "reading": "ミニマム",
+    "meaning": "最小・最低限",
+    "etymology": "ラテン語 minimus（最小の）",
+    "relatedWords": "minimal(ミニマル): 最小の, maximum(マキシマム): 最大",
+    "category": "程度・量",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "historical": {
+    "word": "historical",
+    "reading": "ヒストリカル",
+    "meaning": "歴史的な・史実の",
+    "etymology": "history（歴史）+ -ical（形容詞化）",
+    "relatedWords": "history(ヒストリー): 歴史, historic(ヒストリック): 歴史的に重要な",
+    "category": "時間・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mitigation": {
+    "word": "mitigation",
+    "reading": "ミティゲーション",
+    "meaning": "緩和・軽減",
+    "etymology": "mitigate（緩和する）+ -ion（名詞化）",
+    "relatedWords": "mitigate(ミティゲート): 緩和する, reduce(リデュース): 減らす",
+    "category": "行動・概念",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "central": {
+    "word": "central",
+    "reading": "セントラル",
+    "meaning": "中心的な・中央の",
+    "etymology": "ラテン語 centralis（中心の）",
+    "relatedWords": "center(センター): 中心, core(コア): 核心",
+    "category": "位置・性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "inequality": {
+    "word": "inequality",
+    "reading": "インイクオリティ",
+    "meaning": "不平等・不均等",
+    "etymology": "in-（否定）+ equality（平等）",
+    "relatedWords": "equality(イクオリティ): 平等, disparity(ディスパリティ): 格差",
+    "category": "社会・概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "healthcare": {
+    "word": "healthcare",
+    "reading": "ヘルスケア",
+    "meaning": "健康管理・医療",
+    "etymology": "health（健康）+ care（ケア）",
+    "relatedWords": "health(ヘルス): 健康, medical(メディカル): 医療の",
+    "category": "健康・医療",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "healthier": {
+    "word": "healthier",
+    "reading": "ヘルシアー",
+    "meaning": "より健康的な",
+    "etymology": "healthy（健康な）の比較級",
+    "relatedWords": "healthy(ヘルシー): 健康な, healthiest(ヘルシエスト): 最も健康な",
+    "category": "健康",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "unhealthy": {
+    "word": "unhealthy",
+    "reading": "アンヘルシー",
+    "meaning": "不健康な",
+    "etymology": "un-（否定）+ healthy（健康な）",
+    "relatedWords": "healthy(ヘルシー): 健康な, illness(イルネス): 病気",
+    "category": "健康",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "nutrition": {
+    "word": "nutrition",
+    "reading": "ニュートリション",
+    "meaning": "栄養・栄養学",
+    "etymology": "ラテン語 nutritio（養う）",
+    "relatedWords": "nutritious(ニュートリシャス): 栄養のある, diet(ダイエット): 食事",
+    "category": "健康・食事",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "nutritious": {
+    "word": "nutritious",
+    "reading": "ニュートリシャス",
+    "meaning": "栄養のある・栄養価の高い",
+    "etymology": "nutrition（栄養）+ -ous（形容詞化）",
+    "relatedWords": "nutrition(ニュートリション): 栄養, healthy(ヘルシー): 健康な",
+    "category": "健康・食事",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "illness": {
+    "word": "illness",
+    "reading": "イルネス",
+    "meaning": "病気",
+    "etymology": "ill（病気の）+ -ness（名詞化）",
+    "relatedWords": "disease(ディジーズ): 疾病, sick(シック): 病気の",
+    "category": "健康・医療",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "obesity": {
+    "word": "obesity",
+    "reading": "オビーシティ",
+    "meaning": "肥満",
+    "etymology": "ラテン語 obesitas（太った状態）",
+    "relatedWords": "obese(オビース): 肥満の, overweight(オーバーウェイト): 太り気味の",
+    "category": "健康",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "diabetes": {
+    "word": "diabetes",
+    "reading": "ダイアビーティーズ",
+    "meaning": "糖尿病",
+    "etymology": "ギリシャ語 diabetes（通り抜ける）",
+    "relatedWords": "disease(ディジーズ): 病気, insulin(インスリン): インスリン",
+    "category": "医療・病気",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "cancer": {
+    "word": "cancer",
+    "reading": "キャンサー",
+    "meaning": "がん・癌",
+    "etymology": "ラテン語 cancer（蟹）",
+    "relatedWords": "tumor(チューマー): 腫瘍, disease(ディジーズ): 病気",
+    "category": "医療・病気",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "therapy": {
+    "word": "therapy",
+    "reading": "セラピー",
+    "meaning": "治療・療法",
+    "etymology": "ギリシャ語 therapeia（治療）",
+    "relatedWords": "therapist(セラピスト): 療法士, treatment(トリートメント): 治療",
+    "category": "医療",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mental": {
+    "word": "mental",
+    "reading": "メンタル",
+    "meaning": "精神的な・心の",
+    "etymology": "ラテン語 mentalis（心の）",
+    "relatedWords": "mind(マインド): 心, psychological(サイコロジカル): 心理的な",
+    "category": "心理・健康",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "workout": {
+    "word": "workout",
+    "reading": "ワークアウト",
+    "meaning": "運動・トレーニング",
+    "etymology": "work（働く）+ out（外に）",
+    "relatedWords": "exercise(エクササイズ): 運動, training(トレーニング): 訓練",
+    "category": "運動・健康",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "yoga": {
+    "word": "yoga",
+    "reading": "ヨガ",
+    "meaning": "ヨガ",
+    "etymology": "サンスクリット語 yoga（結合）",
+    "relatedWords": "meditation(メディテーション): 瞑想, exercise(エクササイズ): 運動",
+    "category": "運動・健康",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "marathon": {
+    "word": "marathon",
+    "reading": "マラソン",
+    "meaning": "マラソン",
+    "etymology": "ギリシャの地名 Marathon",
+    "relatedWords": "race(レース): 競走, running(ランニング): 走ること",
+    "category": "運動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "stamina": {
+    "word": "stamina",
+    "reading": "スタミナ",
+    "meaning": "持久力・体力",
+    "etymology": "ラテン語 stamina（命の糸）",
+    "relatedWords": "endurance(エンデュランス): 持久力, energy(エナジー): エネルギー",
+    "category": "運動・体力",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "protein": {
+    "word": "protein",
+    "reading": "プロテイン",
+    "meaning": "タンパク質",
+    "etymology": "ギリシャ語 proteios（第一の）",
+    "relatedWords": "nutrient(ニュートリエント): 栄養素, carbohydrate(カーボハイドレート): 炭水化物",
+    "category": "栄養",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "vitamin": {
+    "word": "vitamin",
+    "reading": "ビタミン",
+    "meaning": "ビタミン",
+    "etymology": "ラテン語 vita（生命）+ amine（アミン）",
+    "relatedWords": "mineral(ミネラル): ミネラル, nutrient(ニュートリエント): 栄養素",
+    "category": "栄養",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "immune": {
+    "word": "immune",
+    "reading": "イミューン",
+    "meaning": "免疫の・免疫がある",
+    "etymology": "ラテン語 immunis（免除された）",
+    "relatedWords": "immunity(イミュニティ): 免疫, antibody(アンティボディ): 抗体",
+    "category": "医療・健康",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "hygiene": {
+    "word": "hygiene",
+    "reading": "ハイジーン",
+    "meaning": "衛生",
+    "etymology": "ギリシャ語 Hygieia（健康の女神）",
+    "relatedWords": "sanitation(サニテーション): 衛生設備, cleanliness(クリーンリネス): 清潔",
+    "category": "健康・衛生",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "classroom": {
+    "word": "classroom",
+    "reading": "クラスルーム",
+    "meaning": "教室",
+    "etymology": "class（クラス）+ room（部屋）",
+    "relatedWords": "class(クラス): 授業, school(スクール): 学校",
+    "category": "教育・場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "textbook": {
+    "word": "textbook",
+    "reading": "テキストブック",
+    "meaning": "教科書",
+    "etymology": "text（テキスト）+ book（本）",
+    "relatedWords": "book(ブック): 本, material(マテリアル): 教材",
+    "category": "教育",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "scholarship": {
+    "word": "scholarship",
+    "reading": "スカラーシップ",
+    "meaning": "奨学金・学問",
+    "etymology": "scholar（学者）+ -ship（状態）",
+    "relatedWords": "scholar(スカラー): 学者, student(スチューデント): 学生",
+    "category": "教育",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "literacy": {
+    "word": "literacy",
+    "reading": "リテラシー",
+    "meaning": "読み書き能力・リテラシー",
+    "etymology": "literate（読み書きできる）+ -cy（名詞化）",
+    "relatedWords": "literate(リテレート): 読み書きできる, education(エデュケーション): 教育",
+    "category": "教育・能力",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "online": {
+    "word": "online",
+    "reading": "オンライン",
+    "meaning": "オンラインの・インターネット上の",
+    "etymology": "on（上に）+ line（線）",
+    "relatedWords": "offline(オフライン): オフラインの, internet(インターネット): インターネット",
+    "category": "技術",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "offline": {
+    "word": "offline",
+    "reading": "オフライン",
+    "meaning": "オフラインの・インターネット接続がない",
+    "etymology": "off（離れて）+ line（線）",
+    "relatedWords": "online(オンライン): オンラインの, disconnected(ディスコネクテッド): 切断された",
+    "category": "技術",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "email": {
+    "word": "email",
+    "reading": "イーメール",
+    "meaning": "電子メール",
+    "etymology": "electronic（電子の）+ mail（郵便）",
+    "relatedWords": "message(メッセージ): メッセージ, internet(インターネット): インターネット",
+    "category": "技術・コミュニケーション",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "website": {
+    "word": "website",
+    "reading": "ウェブサイト",
+    "meaning": "ウェブサイト",
+    "etymology": "web（網）+ site（場所）",
+    "relatedWords": "internet(インターネット): インターネット, webpage(ウェブページ): ウェブページ",
+    "category": "技術",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "smartphone": {
+    "word": "smartphone",
+    "reading": "スマートフォン",
+    "meaning": "スマートフォン",
+    "etymology": "smart（賢い）+ phone（電話）",
+    "relatedWords": "phone(フォン): 電話, mobile(モバイル): 携帯の",
+    "category": "技術",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "discussion": {
+    "word": "discussion",
+    "reading": "ディスカッション",
+    "meaning": "議論・討論",
+    "etymology": "discuss（議論する）+ -ion（名詞化）",
+    "relatedWords": "discuss(ディスカス): 議論する, debate(ディベート): 討論",
+    "category": "コミュニケーション",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "interview": {
+    "word": "interview",
+    "reading": "インタビュー",
+    "meaning": "面接・インタビュー",
+    "etymology": "inter-（間）+ view（見る）",
+    "relatedWords": "conversation(カンバセーション): 会話, question(クエスチョン): 質問",
+    "category": "コミュニケーション",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "memorize": {
+    "word": "memorize",
+    "reading": "メモライズ",
+    "meaning": "暗記する・記憶する",
+    "etymology": "memory（記憶）+ -ize（動詞化）",
+    "relatedWords": "memory(メモリー): 記憶, remember(リメンバー): 覚えている",
+    "category": "学習・認知",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "curious": {
+    "word": "curious",
+    "reading": "キュリアス",
+    "meaning": "好奇心が強い・興味津々の",
+    "etymology": "ラテン語 curiosus（注意深い）",
+    "relatedWords": "curiosity(キュリオシティ): 好奇心, interested(インタレステッド): 興味がある",
+    "category": "性質・心理",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mentor": {
+    "word": "mentor",
+    "reading": "メンター",
+    "meaning": "指導者・助言者",
+    "etymology": "ギリシャ神話の人物 Mentor",
+    "relatedWords": "teacher(ティーチャー): 教師, guide(ガイド): 案内人",
+    "category": "人・教育",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "inspire": {
+    "word": "inspire",
+    "reading": "インスパイア",
+    "meaning": "励ます・鼓舞する",
+    "etymology": "ラテン語 inspirare（息を吹き込む）",
+    "relatedWords": "inspiration(インスピレーション): 刺激, motivate(モチベート): 動機付ける",
+    "category": "心理・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "motivated": {
+    "word": "motivated",
+    "reading": "モチベーテッド",
+    "meaning": "やる気のある・動機付けられた",
+    "etymology": "motivate（動機付ける）の過去分詞",
+    "relatedWords": "motivation(モチベーション): 動機, inspire(インスパイア): 励ます",
+    "category": "心理",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "passion": {
+    "word": "passion",
+    "reading": "パッション",
+    "meaning": "情熱・熱意",
+    "etymology": "ラテン語 passio（苦しみ）",
+    "relatedWords": "passionate(パッショネイト): 情熱的な, enthusiasm(エンスージアズム): 熱意",
+    "category": "心理",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "excellence": {
+    "word": "excellence",
+    "reading": "エクセレンス",
+    "meaning": "卓越・優秀さ",
+    "etymology": "ラテン語 excellentia（優れていること）",
+    "relatedWords": "excellent(エクセレント): 優れた, quality(クオリティ): 品質",
+    "category": "性質・評価",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "incredible": {
+    "word": "incredible",
+    "reading": "インクレディブル",
+    "meaning": "信じられない・素晴らしい",
+    "etymology": "in-（否定）+ credible（信じられる）",
+    "relatedWords": "amazing(アメイジング): 驚くべき, unbelievable(アンビリーバブル): 信じられない",
+    "category": "形容詞・評価",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "incredibly": {
+    "word": "incredibly",
+    "reading": "インクレディブリー",
+    "meaning": "信じられないほど・非常に",
+    "etymology": "incredible（信じられない）+ -ly（副詞化）",
+    "relatedWords": "extremely(エクストリームリー): 極めて, amazingly(アメイジングリー): 驚くほど",
+    "category": "副詞・程度",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "increasingly": {
+    "word": "increasingly",
+    "reading": "インクリーシングリー",
+    "meaning": "ますます・次第に",
+    "etymology": "increasing（増加する）+ -ly（副詞化）",
+    "relatedWords": "more(モア): より多く, gradually(グラデュアリー): 徐々に",
+    "category": "副詞・変化",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "widely": {
+    "word": "widely",
+    "reading": "ワイドリー",
+    "meaning": "広く・一般的に",
+    "etymology": "wide（広い）+ -ly（副詞化）",
+    "relatedWords": "broadly(ブロードリー): 広く, commonly(コモンリー): 一般的に",
+    "category": "副詞・範囲",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "easily": {
+    "word": "easily",
+    "reading": "イージリー",
+    "meaning": "簡単に・容易に",
+    "etymology": "easy（簡単な）+ -ly（副詞化）",
+    "relatedWords": "simply(シンプリー): 単に, effortlessly(エフォートレスリー): 楽々と",
+    "category": "副詞・様態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "carefully": {
+    "word": "carefully",
+    "reading": "ケアフリー",
+    "meaning": "注意深く・慎重に",
+    "etymology": "careful（注意深い）+ -ly（副詞化）",
+    "relatedWords": "cautiously(コーシャスリー): 用心深く, attentively(アテンティブリー): 注意深く",
+    "category": "副詞・様態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "truly": {
+    "word": "truly",
+    "reading": "トゥルーリー",
+    "meaning": "本当に・真に",
+    "etymology": "true（真実の）+ -ly（副詞化）",
+    "relatedWords": "really(リアリー): 本当に, genuinely(ジェニュインリー): 心から",
+    "category": "副詞・程度",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "fully": {
+    "word": "fully",
+    "reading": "フリー",
+    "meaning": "完全に・十分に",
+    "etymology": "full（いっぱいの）+ -ly（副詞化）",
+    "relatedWords": "completely(コンプリートリー): 完全に, entirely(エンタイアリー): 全く",
+    "category": "副詞・程度",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "highlight": {
+    "word": "highlight",
+    "reading": "ハイライト",
+    "meaning": "強調する・目立たせる",
+    "etymology": "high（高い）+ light（光）",
+    "relatedWords": "emphasize(エンファサイズ): 強調する, feature(フィーチャー): 特徴づける",
+    "category": "動詞・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "emphasize": {
+    "word": "emphasize",
+    "reading": "エンファサイズ",
+    "meaning": "強調する・重視する",
+    "etymology": "emphasis（強調）+ -ize（動詞化）",
+    "relatedWords": "stress(ストレス): 強調する, highlight(ハイライト): 強調する",
+    "category": "動詞・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "facilitate": {
+    "word": "facilitate",
+    "reading": "ファシリテート",
+    "meaning": "容易にする・促進する",
+    "etymology": "ラテン語 facilis（容易な）",
+    "relatedWords": "enable(イネーブル): 可能にする, help(ヘルプ): 助ける",
+    "category": "動詞・行動",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "evaluate": {
+    "word": "evaluate",
+    "reading": "イバリュエート",
+    "meaning": "評価する",
+    "etymology": "ラテン語 evaluare（価値を見出す）",
+    "relatedWords": "assess(アセス): 評価する, judge(ジャッジ): 判断する",
+    "category": "動詞・認知",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "implement": {
+    "word": "implement",
+    "reading": "インプリメント",
+    "meaning": "実施する・実装する",
+    "etymology": "ラテン語 implementum（道具）",
+    "relatedWords": "execute(エクゼキュート): 実行する, carry out(キャリーアウト): 遂行する",
+    "category": "動詞・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "navigate": {
+    "word": "navigate",
+    "reading": "ナビゲート",
+    "meaning": "航行する・操縦する",
+    "etymology": "ラテン語 navigare（船で行く）",
+    "relatedWords": "guide(ガイド): 案内する, steer(スティア): 操縦する",
+    "category": "動詞・移動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "investigate": {
+    "word": "investigate",
+    "reading": "インベスティゲート",
+    "meaning": "調査する・捜査する",
+    "etymology": "ラテン語 investigare（追跡する）",
+    "relatedWords": "research(リサーチ): 研究する, examine(イグザミン): 調べる",
+    "category": "動詞・認知",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mitigate": {
+    "word": "mitigate",
+    "reading": "ミティゲート",
+    "meaning": "緩和する・軽減する",
+    "etymology": "ラテン語 mitigare（和らげる）",
+    "relatedWords": "reduce(リデュース): 減らす, alleviate(アリビエイト): 緩和する",
+    "category": "動詞・行動",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "overwhelm": {
+    "word": "overwhelm",
+    "reading": "オーバーウェルム",
+    "meaning": "圧倒する・打ちのめす",
+    "etymology": "over（超えて）+ whelm（覆す）",
+    "relatedWords": "overpower(オーバーパワー): 圧倒する, crush(クラッシュ): 押しつぶす",
+    "category": "動詞・行動",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "profound": {
+    "word": "profound",
+    "reading": "プロファウンド",
+    "meaning": "深遠な・深い",
+    "etymology": "ラテン語 profundus（深い）",
+    "relatedWords": "deep(ディープ): 深い, intense(インテンス): 強烈な",
+    "category": "形容詞・性質",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "delicious": {
+    "word": "delicious",
+    "reading": "デリシャス",
+    "meaning": "おいしい",
+    "etymology": "ラテン語 deliciosus（快い）",
+    "relatedWords": "tasty(テイスティ): おいしい, yummy(ヤミー): おいしい",
+    "category": "形容詞・味",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "happiness": {
+    "word": "happiness",
+    "reading": "ハピネス",
+    "meaning": "幸せ・幸福",
+    "etymology": "happy（幸せな）+ -ness（名詞化）",
+    "relatedWords": "happy(ハッピー): 幸せな, joy(ジョイ): 喜び",
+    "category": "感情",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "sadness": {
+    "word": "sadness",
+    "reading": "サドネス",
+    "meaning": "悲しみ",
+    "etymology": "sad（悲しい）+ -ness（名詞化）",
+    "relatedWords": "sad(サッド): 悲しい, sorrow(ソロー): 悲しみ",
+    "category": "感情",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "excitement": {
+    "word": "excitement",
+    "reading": "エクサイトメント",
+    "meaning": "興奮・わくわく",
+    "etymology": "excite（興奮させる）+ -ment（名詞化）",
+    "relatedWords": "excited(エクサイテッド): 興奮した, thrill(スリル): スリル",
+    "category": "感情",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "kindness": {
+    "word": "kindness",
+    "reading": "カインドネス",
+    "meaning": "親切・優しさ",
+    "etymology": "kind（親切な）+ -ness（名詞化）",
+    "relatedWords": "kind(カインド): 親切な, generosity(ジェネロシティ): 寛大さ",
+    "category": "性質・感情",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "honest": {
+    "word": "honest",
+    "reading": "オネスト",
+    "meaning": "正直な・誠実な",
+    "etymology": "ラテン語 honestus（名誉ある）",
+    "relatedWords": "honesty(オネスティ): 正直さ, truthful(トゥルースフル): 真実を語る",
+    "category": "性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "brave": {
+    "word": "brave",
+    "reading": "ブレイブ",
+    "meaning": "勇敢な",
+    "etymology": "イタリア語 bravo（勇敢な）",
+    "relatedWords": "courage(カレッジ): 勇気, fearless(フィアレス): 恐れを知らない",
+    "category": "性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "dangerous": {
+    "word": "dangerous",
+    "reading": "デンジャラス",
+    "meaning": "危険な",
+    "etymology": "danger（危険）+ -ous（形容詞化）",
+    "relatedWords": "danger(デンジャー): 危険, risky(リスキー): 危険な",
+    "category": "性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "safety": {
+    "word": "safety",
+    "reading": "セーフティ",
+    "meaning": "安全",
+    "etymology": "safe（安全な）+ -ty（名詞化）",
+    "relatedWords": "safe(セーフ): 安全な, security(セキュリティ): 安全保障",
+    "category": "性質・状態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "emergency": {
+    "word": "emergency",
+    "reading": "エマージェンシー",
+    "meaning": "緊急事態・非常時",
+    "etymology": "emerge（現れる）+ -ency（名詞化）",
+    "relatedWords": "urgent(アージェント): 緊急の, crisis(クライシス): 危機",
+    "category": "状況",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "everyday": {
+    "word": "everyday",
+    "reading": "エブリデイ",
+    "meaning": "毎日の・日常の",
+    "etymology": "every（毎）+ day（日）",
+    "relatedWords": "daily(デイリー): 毎日の, routine(ルーティーン): 日課",
+    "category": "時間・頻度",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "weekend": {
+    "word": "weekend",
+    "reading": "ウィークエンド",
+    "meaning": "週末",
+    "etymology": "week（週）+ end（終わり）",
+    "relatedWords": "weekday(ウィークデイ): 平日, holiday(ホリデイ): 休日",
+    "category": "時間",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "birthday": {
+    "word": "birthday",
+    "reading": "バースデイ",
+    "meaning": "誕生日",
+    "etymology": "birth（誕生）+ day（日）",
+    "relatedWords": "birth(バース): 誕生, anniversary(アニバーサリー): 記念日",
+    "category": "時間・行事",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "holiday": {
+    "word": "holiday",
+    "reading": "ホリデイ",
+    "meaning": "休日・祝日",
+    "etymology": "holy（神聖な）+ day（日）",
+    "relatedWords": "vacation(バケーション): 休暇, festival(フェスティバル): 祭り",
+    "category": "時間・行事",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "hobby": {
+    "word": "hobby",
+    "reading": "ホビー",
+    "meaning": "趣味",
+    "etymology": "中英語 hoby（小さな馬）",
+    "relatedWords": "interest(インタレスト): 興味, pastime(パスタイム): 気晴らし",
+    "category": "活動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "club": {
+    "word": "club",
+    "reading": "クラブ",
+    "meaning": "クラブ・部活",
+    "etymology": "古ノルド語 klubba（こん棒）",
+    "relatedWords": "team(チーム): チーム, group(グループ): グループ",
+    "category": "組織・活動",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "teammate": {
+    "word": "teammate",
+    "reading": "チームメイト",
+    "meaning": "チームメイト・仲間",
+    "etymology": "team（チーム）+ mate（仲間）",
+    "relatedWords": "team(チーム): チーム, partner(パートナー): パートナー",
+    "category": "人・関係",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "friendship": {
+    "word": "friendship",
+    "reading": "フレンドシップ",
+    "meaning": "友情",
+    "etymology": "friend（友人）+ -ship（状態）",
+    "relatedWords": "friend(フレンド): 友人, relationship(リレーションシップ): 関係",
+    "category": "関係",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "busy": {
+    "word": "busy",
+    "reading": "ビジー",
+    "meaning": "忙しい",
+    "etymology": "古英語 bisig（忙しい）",
+    "relatedWords": "occupied(オキュパイド): 使用中の, hectic(ヘクティック): 多忙な",
+    "category": "状態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "tired": {
+    "word": "tired",
+    "reading": "タイアド",
+    "meaning": "疲れた",
+    "etymology": "tire（疲れる）の過去分詞",
+    "relatedWords": "exhausted(イグゾーステッド): 疲れ果てた, weary(ウィアリー): 疲れた",
+    "category": "状態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "comfortable": {
+    "word": "comfortable",
+    "reading": "コンフォータブル",
+    "meaning": "快適な・心地よい",
+    "etymology": "comfort（快適）+ -able（可能な）",
+    "relatedWords": "comfort(コンフォート): 快適, cozy(コージー): 居心地の良い",
+    "category": "性質・状態",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "came": {
+    "word": "came",
+    "reading": "ケイム",
+    "meaning": "来た（comeの過去形）",
+    "etymology": "come（来る）の過去形",
+    "relatedWords": "come(カム): 来る, arrived(アライブド): 到着した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "went": {
+    "word": "went",
+    "reading": "ウェント",
+    "meaning": "行った（goの過去形）",
+    "etymology": "go（行く）の過去形",
+    "relatedWords": "go(ゴー): 行く, left(レフト): 去った",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "saw": {
+    "word": "saw",
+    "reading": "ソー",
+    "meaning": "見た（seeの過去形）",
+    "etymology": "see（見る）の過去形",
+    "relatedWords": "see(シー): 見る, looked(ルックト): 見た",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "said": {
+    "word": "said",
+    "reading": "セッド",
+    "meaning": "言った（sayの過去形・過去分詞）",
+    "etymology": "say（言う）の過去形",
+    "relatedWords": "say(セイ): 言う, told(トールド): 伝えた",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "told": {
+    "word": "told",
+    "reading": "トールド",
+    "meaning": "伝えた（tellの過去形・過去分詞）",
+    "etymology": "tell（伝える）の過去形",
+    "relatedWords": "tell(テル): 伝える, said(セッド): 言った",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "took": {
+    "word": "took",
+    "reading": "トゥック",
+    "meaning": "取った（takeの過去形）",
+    "etymology": "take（取る）の過去形",
+    "relatedWords": "take(テイク): 取る, taken(テイクン): 取られた",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "got": {
+    "word": "got",
+    "reading": "ゴット",
+    "meaning": "得た・手に入れた（getの過去形・過去分詞）",
+    "etymology": "get（得る）の過去形",
+    "relatedWords": "get(ゲット): 得る, obtained(オブテインド): 獲得した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "made": {
+    "word": "made",
+    "reading": "メイド",
+    "meaning": "作った（makeの過去形・過去分詞）",
+    "etymology": "make（作る）の過去形",
+    "relatedWords": "make(メイク): 作る, created(クリエイテッド): 創造した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "found": {
+    "word": "found",
+    "reading": "ファウンド",
+    "meaning": "見つけた（findの過去形・過去分詞）",
+    "etymology": "find（見つける）の過去形",
+    "relatedWords": "find(ファインド): 見つける, discovered(ディスカバード): 発見した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "felt": {
+    "word": "felt",
+    "reading": "フェルト",
+    "meaning": "感じた（feelの過去形・過去分詞）",
+    "etymology": "feel（感じる）の過去形",
+    "relatedWords": "feel(フィール): 感じる, sensed(センスド): 感知した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "stood": {
+    "word": "stood",
+    "reading": "ストゥッド",
+    "meaning": "立った（standの過去形・過去分詞）",
+    "etymology": "stand（立つ）の過去形",
+    "relatedWords": "stand(スタンド): 立つ, risen(ライズン): 上がった",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "sat": {
+    "word": "sat",
+    "reading": "サット",
+    "meaning": "座った（sitの過去形・過去分詞）",
+    "etymology": "sit（座る）の過去形",
+    "relatedWords": "sit(シット): 座る, seated(シーテッド): 着席した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "brought": {
+    "word": "brought",
+    "reading": "ブロート",
+    "meaning": "持ってきた（bringの過去形・過去分詞）",
+    "etymology": "bring（持ってくる）の過去形",
+    "relatedWords": "bring(ブリング): 持ってくる, carried(キャリード): 運んだ",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "fought": {
+    "word": "fought",
+    "reading": "フォート",
+    "meaning": "戦った（fightの過去形・過去分詞）",
+    "etymology": "fight（戦う）の過去形",
+    "relatedWords": "fight(ファイト): 戦う, battled(バトルド): 戦闘した",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "won": {
+    "word": "won",
+    "reading": "ウォン",
+    "meaning": "勝った（winの過去形・過去分詞）",
+    "etymology": "win（勝つ）の過去形",
+    "relatedWords": "win(ウィン): 勝つ, defeated(ディフィーテッド): 負かした",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "lost": {
+    "word": "lost",
+    "reading": "ロスト",
+    "meaning": "失った・負けた（loseの過去形・過去分詞）",
+    "etymology": "lose（失う）の過去形",
+    "relatedWords": "lose(ルーズ): 失う, missing(ミッシング): 見つからない",
+    "category": "動詞・過去形",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "done": {
+    "word": "done",
+    "reading": "ダン",
+    "meaning": "した・完了した（doの過去分詞）",
+    "etymology": "do（する）の過去分詞",
+    "relatedWords": "do(ドゥ): する, finished(フィニッシュド): 終えた",
+    "category": "動詞・過去分詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "shown": {
+    "word": "shown",
+    "reading": "ショウン",
+    "meaning": "示された（showの過去分詞）",
+    "etymology": "show（示す）の過去分詞",
+    "relatedWords": "show(ショウ): 示す, displayed(ディスプレイド): 表示された",
+    "category": "動詞・過去分詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "grown": {
+    "word": "grown",
+    "reading": "グロウン",
+    "meaning": "成長した（growの過去分詞）",
+    "etymology": "grow（成長する）の過去分詞",
+    "relatedWords": "grow(グロウ): 成長する, developed(ディベロップド): 発達した",
+    "category": "動詞・過去分詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "spoken": {
+    "word": "spoken",
+    "reading": "スポークン",
+    "meaning": "話された（speakの過去分詞）",
+    "etymology": "speak（話す）の過去分詞",
+    "relatedWords": "speak(スピーク): 話す, talked(トークド): 話した",
+    "category": "動詞・過去分詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "fruit": {
+    "word": "fruit",
+    "reading": "フルーツ",
+    "meaning": "果物",
+    "etymology": "ラテン語 fructus（果実）",
+    "relatedWords": "apple(アップル): リンゴ, vegetable(ベジタブル): 野菜",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "cheese": {
+    "word": "cheese",
+    "reading": "チーズ",
+    "meaning": "チーズ",
+    "etymology": "ラテン語 caseus（チーズ）",
+    "relatedWords": "milk(ミルク): 牛乳, dairy(デアリー): 乳製品",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "pizza": {
+    "word": "pizza",
+    "reading": "ピザ",
+    "meaning": "ピザ",
+    "etymology": "イタリア語 pizza",
+    "relatedWords": "pasta(パスタ): パスタ, bread(ブレッド): パン",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "pasta": {
+    "word": "pasta",
+    "reading": "パスタ",
+    "meaning": "パスタ",
+    "etymology": "イタリア語 pasta（生地）",
+    "relatedWords": "noodle(ヌードル): 麺, spaghetti(スパゲッティ): スパゲッティ",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "tofu": {
+    "word": "tofu",
+    "reading": "トーフ",
+    "meaning": "豆腐",
+    "etymology": "日本語 豆腐",
+    "relatedWords": "soy(ソイ): 大豆, bean(ビーン): 豆",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "candy": {
+    "word": "candy",
+    "reading": "キャンディ",
+    "meaning": "キャンディ・飴",
+    "etymology": "アラビア語 qandi（砂糖）",
+    "relatedWords": "sweet(スイート): 甘い物, sugar(シュガー): 砂糖",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "snack": {
+    "word": "snack",
+    "reading": "スナック",
+    "meaning": "軽食・おやつ",
+    "etymology": "中オランダ語 snacken（かじる）",
+    "relatedWords": "meal(ミール): 食事, bite(バイト): 一口",
+    "category": "食べ物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "recipe": {
+    "word": "recipe",
+    "reading": "レシピ",
+    "meaning": "レシピ・調理法",
+    "etymology": "ラテン語 recipere（受け取る）",
+    "relatedWords": "cooking(クッキング): 料理, ingredient(イングリーディエント): 材料",
+    "category": "料理",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "ingredient": {
+    "word": "ingredient",
+    "reading": "イングリーディエント",
+    "meaning": "材料・成分",
+    "etymology": "ラテン語 ingredi（入る）",
+    "relatedWords": "component(コンポーネント): 構成要素, element(エレメント): 要素",
+    "category": "料理・化学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "white": {
+    "word": "white",
+    "reading": "ホワイト",
+    "meaning": "白い・白",
+    "etymology": "古英語 hwit（白い）",
+    "relatedWords": "black(ブラック): 黒, color(カラー): 色",
+    "category": "色",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "brown": {
+    "word": "brown",
+    "reading": "ブラウン",
+    "meaning": "茶色い・茶色",
+    "etymology": "古英語 brun（茶色の）",
+    "relatedWords": "color(カラー): 色, dark(ダーク): 暗い",
+    "category": "色",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "yellow": {
+    "word": "yellow",
+    "reading": "イエロー",
+    "meaning": "黄色い・黄色",
+    "etymology": "古英語 geolu（黄色の）",
+    "relatedWords": "gold(ゴールド): 金色, color(カラー): 色",
+    "category": "色",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "beauty": {
+    "word": "beauty",
+    "reading": "ビューティ",
+    "meaning": "美しさ・美",
+    "etymology": "ラテン語 bellus（美しい）",
+    "relatedWords": "beautiful(ビューティフル): 美しい, pretty(プリティ): かわいい",
+    "category": "性質",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "children": {
+    "word": "children",
+    "reading": "チルドレン",
+    "meaning": "子供たち（childの複数形）",
+    "etymology": "child（子供）の複数形",
+    "relatedWords": "child(チャイルド): 子供, kid(キッド): 子供",
+    "category": "人",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "clock": {
+    "word": "clock",
+    "reading": "クロック",
+    "meaning": "時計",
+    "etymology": "ラテン語 clocca（鐘）",
+    "relatedWords": "watch(ウォッチ): 腕時計, time(タイム): 時間",
+    "category": "物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "bridge": {
+    "word": "bridge",
+    "reading": "ブリッジ",
+    "meaning": "橋",
+    "etymology": "古英語 brycg（橋）",
+    "relatedWords": "road(ロード): 道路, connect(コネクト): つなぐ",
+    "category": "建造物",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "hall": {
+    "word": "hall",
+    "reading": "ホール",
+    "meaning": "ホール・広間",
+    "etymology": "古英語 heall（広間）",
+    "relatedWords": "room(ルーム): 部屋, building(ビルディング): 建物",
+    "category": "建造物・場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "hotel": {
+    "word": "hotel",
+    "reading": "ホテル",
+    "meaning": "ホテル",
+    "etymology": "フランス語 hôtel（宿）",
+    "relatedWords": "accommodation(アコモデーション): 宿泊施設, inn(イン): 旅館",
+    "category": "建造物・場所",
+    "difficulty": "初級",
+    "level": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "war": {
+    "word": "war",
+    "reading": "ウォー",
+    "meaning": "戦争",
+    "etymology": "古フランス語 werre（戦争）",
+    "relatedWords": "battle(バトル): 戦闘, conflict(コンフリクト): 紛争",
+    "category": "社会",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "death": {
+    "word": "death",
+    "reading": "デス",
+    "meaning": "死",
+    "etymology": "古英語 dēaþ（死）",
+    "relatedWords": "die(ダイ): 死ぬ, life(ライフ): 生命",
+    "category": "生命",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "biology": {
+    "word": "biology",
+    "reading": "バイオロジー",
+    "meaning": "生物学",
+    "etymology": "ギリシャ語 bios（生命）+ logia（学問）",
+    "relatedWords": "science(サイエンス): 科学, chemistry(ケミストリー): 化学",
+    "category": "科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "chemistry": {
+    "word": "chemistry",
+    "reading": "ケミストリー",
+    "meaning": "化学",
+    "etymology": "アラビア語 al-kīmiyā（錬金術）",
+    "relatedWords": "chemical(ケミカル): 化学物質, physics(フィジックス): 物理学",
+    "category": "科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "physics": {
+    "word": "physics",
+    "reading": "フィジックス",
+    "meaning": "物理学",
+    "etymology": "ギリシャ語 physis（自然）",
+    "relatedWords": "science(サイエンス): 科学, mathematics(マスマティクス): 数学",
+    "category": "科学",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "scientist": {
+    "word": "scientist",
+    "reading": "サイエンティスト",
+    "meaning": "科学者",
+    "etymology": "science（科学）+ -ist（人）",
+    "relatedWords": "researcher(リサーチャー): 研究者, expert(エキスパート): 専門家",
+    "category": "職業・人",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "researcher": {
+    "word": "researcher",
+    "reading": "リサーチャー",
+    "meaning": "研究者",
+    "etymology": "research（研究）+ -er（人）",
+    "relatedWords": "scientist(サイエンティスト): 科学者, scholar(スカラー): 学者",
+    "category": "職業・人",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "database": {
+    "word": "database",
+    "reading": "データベース",
+    "meaning": "データベース",
+    "etymology": "data（データ）+ base（基盤）",
+    "relatedWords": "data(データ): データ, information(インフォメーション): 情報",
+    "category": "技術",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "algorithm": {
+    "word": "algorithm",
+    "reading": "アルゴリズム",
+    "meaning": "アルゴリズム・計算手順",
+    "etymology": "アラビアの数学者 al-Khwarizmi",
+    "relatedWords": "process(プロセス): 過程, method(メソッド): 方法",
+    "category": "技術・数学",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "video": {
+    "word": "video",
+    "reading": "ビデオ",
+    "meaning": "動画・ビデオ",
+    "etymology": "ラテン語 video（私は見る）",
+    "relatedWords": "film(フィルム): 映画, movie(ムービー): 映画",
+    "category": "メディア・技術",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "reality": {
+    "word": "reality",
+    "reading": "リアリティ",
+    "meaning": "現実",
+    "etymology": "ラテン語 realis（実在の）",
+    "relatedWords": "real(リアル): 本物の, truth(トゥルース): 真実",
+    "category": "概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "belief": {
+    "word": "belief",
+    "reading": "ビリーフ",
+    "meaning": "信念・信仰",
+    "etymology": "古英語 geleafa（信仰）",
+    "relatedWords": "believe(ビリーブ): 信じる, faith(フェイス): 信仰",
+    "category": "概念・心理",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "freedom": {
+    "word": "freedom",
+    "reading": "フリーダム",
+    "meaning": "自由",
+    "etymology": "free（自由な）+ -dom（状態）",
+    "relatedWords": "free(フリー): 自由な, liberty(リバティ): 自由",
+    "category": "概念・権利",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "liberty": {
+    "word": "liberty",
+    "reading": "リバティ",
+    "meaning": "自由・解放",
+    "etymology": "ラテン語 libertas（自由）",
+    "relatedWords": "freedom(フリーダム): 自由, independence(インディペンデンス): 独立",
+    "category": "概念・権利",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "independence": {
+    "word": "independence",
+    "reading": "インディペンデンス",
+    "meaning": "独立・自立",
+    "etymology": "in-（否定）+ dependence（依存）",
+    "relatedWords": "independent(インディペンデント): 独立した, freedom(フリーダム): 自由",
+    "category": "概念・状態",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "fairness": {
+    "word": "fairness",
+    "reading": "フェアネス",
+    "meaning": "公平性・公正",
+    "etymology": "fair（公平な）+ -ness（名詞化）",
+    "relatedWords": "fair(フェア): 公平な, justice(ジャスティス): 正義",
+    "category": "概念・性質",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "equity": {
+    "word": "equity",
+    "reading": "エクイティ",
+    "meaning": "公平・衡平",
+    "etymology": "ラテン語 aequitas（公平）",
+    "relatedWords": "equal(イコール): 平等な, fairness(フェアネス): 公平性",
+    "category": "概念・社会",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "discrimination": {
+    "word": "discrimination",
+    "reading": "ディスクリミネーション",
+    "meaning": "差別",
+    "etymology": "discriminate（区別する）+ -ion（名詞化）",
+    "relatedWords": "prejudice(プレジュディス): 偏見, bias(バイアス): 偏り",
+    "category": "社会問題",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "prejudice": {
+    "word": "prejudice",
+    "reading": "プレジュディス",
+    "meaning": "偏見・先入観",
+    "etymology": "ラテン語 praejudicium（予断）",
+    "relatedWords": "bias(バイアス): 偏り, discrimination(ディスクリミネーション): 差別",
+    "category": "心理・社会",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "legacy": {
+    "word": "legacy",
+    "reading": "レガシー",
+    "meaning": "遺産・遺物",
+    "etymology": "ラテン語 legare（遺贈する）",
+    "relatedWords": "heritage(ヘリテージ): 遺産, inheritance(インヘリタンス): 相続",
+    "category": "概念",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "mystery": {
+    "word": "mystery",
+    "reading": "ミステリー",
+    "meaning": "謎・神秘",
+    "etymology": "ギリシャ語 mysterion（秘密）",
+    "relatedWords": "secret(シークレット): 秘密, puzzle(パズル): 謎",
+    "category": "概念",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "easier": {
+    "word": "easier",
+    "reading": "イージアー",
+    "meaning": "より簡単な（easyの比較級）",
+    "etymology": "easy（簡単な）の比較級",
+    "relatedWords": "easy(イージー): 簡単な, simple(シンプル): 単純な",
+    "category": "形容詞・比較級",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "earlier": {
+    "word": "earlier",
+    "reading": "アーリアー",
+    "meaning": "より早い・以前の（earlyの比較級）",
+    "etymology": "early（早い）の比較級",
+    "relatedWords": "early(アーリー): 早い, before(ビフォー): 前に",
+    "category": "形容詞・副詞・比較級",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "bigger": {
+    "word": "bigger",
+    "reading": "ビガー",
+    "meaning": "より大きい（bigの比較級）",
+    "etymology": "big（大きい）の比較級",
+    "relatedWords": "big(ビッグ): 大きい, large(ラージ): 大きい",
+    "category": "形容詞・比較級",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "biggest": {
+    "word": "biggest",
+    "reading": "ビゲスト",
+    "meaning": "最も大きい（bigの最上級）",
+    "etymology": "big（大きい）の最上級",
+    "relatedWords": "big(ビッグ): 大きい, largest(ラージェスト): 最大の",
+    "category": "形容詞・最上級",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "safer": {
+    "word": "safer",
+    "reading": "セーファー",
+    "meaning": "より安全な（safeの比較級）",
+    "etymology": "safe（安全な）の比較級",
+    "relatedWords": "safe(セーフ): 安全な, secure(セキュア): 安全な",
+    "category": "形容詞・比較級",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "powerful": {
+    "word": "powerful",
+    "reading": "パワフル",
+    "meaning": "強力な・力強い",
+    "etymology": "power（力）+ -ful（満ちた）",
+    "relatedWords": "power(パワー): 力, strong(ストロング): 強い",
+    "category": "形容詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "peaceful": {
+    "word": "peaceful",
+    "reading": "ピースフル",
+    "meaning": "平和な・穏やかな",
+    "etymology": "peace（平和）+ -ful（満ちた）",
+    "relatedWords": "peace(ピース): 平和, calm(カーム): 穏やかな",
+    "category": "形容詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "enjoyable": {
+    "word": "enjoyable",
+    "reading": "エンジョイアブル",
+    "meaning": "楽しい・愉快な",
+    "etymology": "enjoy（楽しむ）+ -able（可能な）",
+    "relatedWords": "fun(ファン): 楽しい, pleasant(プレザント): 快い",
+    "category": "形容詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "realistic": {
+    "word": "realistic",
+    "reading": "リアリスティック",
+    "meaning": "現実的な・写実的な",
+    "etymology": "real（現実の）+ -istic（形容詞化）",
+    "relatedWords": "real(リアル): 本物の, practical(プラクティカル): 実用的な",
+    "category": "形容詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "scary": {
+    "word": "scary",
+    "reading": "スケアリー",
+    "meaning": "怖い・恐ろしい",
+    "etymology": "scare（怖がらせる）+ -y（形容詞化）",
+    "relatedWords": "frightening(フライトニング): 恐ろしい, terrifying(テリファイング): 恐怖の",
+    "category": "形容詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "funny": {
+    "word": "funny",
+    "reading": "ファニー",
+    "meaning": "面白い・おかしい",
+    "etymology": "fun（楽しみ）+ -y（形容詞化）",
+    "relatedWords": "amusing(アミュージング): 面白い, humorous(ヒューモラス): ユーモアのある",
+    "category": "形容詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "tiny": {
+    "word": "tiny",
+    "reading": "タイニー",
+    "meaning": "とても小さい",
+    "etymology": "語源不明",
+    "relatedWords": "small(スモール): 小さい, little(リトル): 小さい",
+    "category": "形容詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "whole": {
+    "word": "whole",
+    "reading": "ホール",
+    "meaning": "全体の・完全な",
+    "etymology": "古英語 hal（完全な）",
+    "relatedWords": "entire(エンタイア): 全体の, complete(コンプリート): 完全な",
+    "category": "形容詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "multiple": {
+    "word": "multiple",
+    "reading": "マルチプル",
+    "meaning": "複数の・多数の",
+    "etymology": "ラテン語 multiplex（多重の）",
+    "relatedWords": "many(メニー): 多くの, several(セブラル): いくつかの",
+    "category": "形容詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "ongoing": {
+    "word": "ongoing",
+    "reading": "オンゴーイング",
+    "meaning": "進行中の・継続中の",
+    "etymology": "on（上に）+ going（進行）",
+    "relatedWords": "continuing(コンティニューイング): 継続する, current(カレント): 現在の",
+    "category": "形容詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "instantly": {
+    "word": "instantly",
+    "reading": "インスタントリー",
+    "meaning": "即座に・すぐに",
+    "etymology": "instant（即座の）+ -ly（副詞化）",
+    "relatedWords": "immediately(イミーディエイトリー): すぐに, quickly(クイックリー): 素早く",
+    "category": "副詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "importantly": {
+    "word": "importantly",
+    "reading": "インポータントリー",
+    "meaning": "重要なことに",
+    "etymology": "important（重要な）+ -ly（副詞化）",
+    "relatedWords": "significantly(シグニフィカントリー): 重要なことに, critically(クリティカリー): 決定的に",
+    "category": "副詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "versus": {
+    "word": "versus",
+    "reading": "バーサス",
+    "meaning": "対・〜に対して",
+    "etymology": "ラテン語 versus（〜に向かって）",
+    "relatedWords": "against(アゲインスト): 〜に対して, compared to(コンペアド・トゥ): 〜と比べて",
+    "category": "前置詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
+  },
+  "cannot": {
+    "word": "cannot",
+    "reading": "キャノット",
+    "meaning": "〜できない",
+    "etymology": "can（できる）+ not（否定）",
+    "relatedWords": "can't(キャント): できない, unable(アンエイブル): できない",
+    "category": "助動詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級",
+      "中級",
+      "上級"
+    ],
+    "passages": [
+      "advanced-1"
+    ],
+    "source": "manual"
   }
 }
