@@ -3933,11 +3933,6 @@ option {
   min-height: 48px;
   touch-action: manipulation;
 }
-  cursor: pointer;
-  transition: all 0.2s;
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(158, 158, 158, 0.3);
-}
 
 .btn-skip-word:hover {
   background: #757575;
@@ -4333,7 +4328,6 @@ option {
     font-size: 1.05em;
     padding: 18px 16px;
     min-height: 60px;
-  }
     padding: 16px;
   }
 
