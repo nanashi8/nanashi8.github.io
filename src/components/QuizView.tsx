@@ -1,9 +1,11 @@
+import { useState, useEffect } from 'react';
 import { QuizState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import DailyPlanBanner from './DailyPlanBanner';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
+import { getStudySettings, updateStudySettings } from '../progressStorage';
 
 interface QuizViewProps {
   quizState: QuizState;
@@ -22,6 +24,13 @@ interface QuizViewProps {
   onPrevious: () => void;
   onSkip?: () => void;
   onDifficultyRate?: (rating: number) => void;
+  onReviewFocus?: () => void;
+  sessionStats?: {
+    correct: number;
+    incorrect: number;
+    review: number;
+    mastered: number;
+  };
 }
 
 function QuizView({
@@ -41,12 +50,29 @@ function QuizView({
   onPrevious,
   onSkip,
   onDifficultyRate,
+  onReviewFocus,
+  sessionStats,
 }: QuizViewProps) {
   const { questions, currentIndex, answered, selectedAnswer } =
     quizState;
 
   const hasQuestions = questions.length > 0;
   const currentQuestion = hasQuestions ? questions[currentIndex] : null;
+
+  // 学習数・要復習上限の設定
+  const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
+  const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
+  const [showSettings, setShowSettings] = useState<boolean>(false);
+
+  const handleMaxStudyCountChange = (newCount: number) => {
+    setMaxStudyCount(newCount);
+    updateStudySettings({ maxStudyCount: newCount });
+  };
+
+  const handleMaxReviewCountChange = (newCount: number) => {
+    setMaxReviewCount(newCount);
+    updateStudySettings({ maxReviewCount: newCount });
+  };
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -160,11 +186,58 @@ function QuizView({
         )}
 
         {!hasQuestions && (
-          <button onClick={onStartQuiz} className="start-btn">
-            🎯 クイズを開始
-          </button>
+          <>
+            <button 
+              onClick={() => setShowSettings(!showSettings)} 
+              className="settings-toggle-btn"
+            >
+              ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
+            </button>
+            <button onClick={onStartQuiz} className="start-btn">
+              🎯 クイズを開始
+            </button>
+          </>
         )}
       </div>
+
+      {/* 学習設定パネル */}
+      {!hasQuestions && showSettings && (
+        <div className="study-settings-panel">
+          <h3>📊 学習設定</h3>
+          <div className="settings-row">
+            <div className="setting-item">
+              <label htmlFor="max-study-count">
+                学習数上限
+                <span className="setting-desc">1セッションあたりの最大学習数</span>
+              </label>
+              <input
+                id="max-study-count"
+                type="number"
+                min="1"
+                value={maxStudyCount}
+                onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+                className="setting-input"
+              />
+              <span className="setting-unit">問</span>
+            </div>
+            <div className="setting-item">
+              <label htmlFor="max-review-count">
+                要復習上限
+                <span className="setting-desc">繰り返される復習問題の上限数</span>
+              </label>
+              <input
+                id="max-review-count"
+                type="number"
+                min="0"
+                value={maxReviewCount}
+                onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+                className="setting-input"
+              />
+              <span className="setting-unit">問</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {!hasQuestions ? (
         <div className="empty-state">
@@ -176,6 +249,11 @@ function QuizView({
             mode="translation"
             currentScore={quizState.score}
             totalAnswered={quizState.totalAnswered}
+            sessionCorrect={sessionStats?.correct}
+            sessionIncorrect={sessionStats?.incorrect}
+            sessionReview={sessionStats?.review}
+            sessionMastered={sessionStats?.mastered}
+            onReviewFocus={onReviewFocus}
           />
           <div className="question-container">
             {currentQuestion && (

@@ -41,6 +41,21 @@
   color: #e0e0e0;
 }
 
+.dark-mode .letter-card.practice-mode {
+  background: #333;
+  border-color: #555;
+  color: #999;
+}
+
+.dark-mode .letter-card.practice-mode:hover {
+  background: #3a3a3a;
+}
+
+.dark-mode .letter-card.practice-mode.selected {
+  background: #555;
+  color: #bbb;
+}
+
 .dark-mode .choice-btn:hover:not(:disabled) {
   background: #333;
   border-color: #667eea;
@@ -507,6 +522,10 @@
 .dark-mode .phrase-hint {
   background: #1e3a5f;
   color: #8bb8ff;
+}
+
+.dark-mode .phrase-progress {
+  color: #4ade80;
 }
 
 .dark-mode .btn-reset-selection {
@@ -1161,9 +1180,31 @@ option {
   cursor: help;
 }
 
+.alert-stat.clickable {
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.alert-stat.clickable:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 107, 53, 0.1);
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: -4px -8px;
+}
+
+.alert-stat.clickable:active {
+  transform: scale(0.98);
+}
+
 .alert-count {
   color: #ff6b35;
   font-weight: 700;
+}
+
+/* ダークモード対応 */
+.dark-mode .alert-stat.clickable:hover {
+  background-color: rgba(255, 107, 53, 0.2);
 }
 
 /* 定着間近の統計スタイル */
@@ -1474,6 +1515,12 @@ option {
   font-size: 0.9em;
   color: #555;
   border-radius: 4px;
+}
+
+.phrase-progress {
+  color: #28a745;
+  font-weight: 600;
+  margin-left: 4px;
 }
 
 .question-hint {
@@ -4294,6 +4341,25 @@ option {
   opacity: 0.5;
 }
 
+.letter-card.practice-mode {
+  opacity: 0.5;
+  cursor: pointer;
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.letter-card.practice-mode:hover {
+  background: #e8e8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.letter-card.practice-mode.selected {
+  background: #999;
+  color: white;
+  opacity: 0.7;
+}
+
 .letter-card .selection-number {
   position: absolute;
   top: -8px;
@@ -5376,6 +5442,137 @@ option {
   .start-btn {
     width: 100%;
     margin-top: 5px;
+  }
+}
+
+/* 学習設定トグルボタン */
+.settings-toggle-btn {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-right: 10px;
+}
+
+.settings-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.settings-toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* 学習設定パネル */
+.study-settings-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.study-settings-panel h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.settings-row {
+  display: flex;
+  gap: 20px;
+}
+
+.setting-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-item label {
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.setting-desc {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #666;
+}
+
+.setting-input {
+  padding: 10px 12px;
+  font-size: 1em;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.setting-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.setting-unit {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ダークモード対応 */
+.dark-mode .settings-toggle-btn {
+  background: linear-gradient(135deg, #8b9ef5 0%, #9b7bc4 100%);
+}
+
+.dark-mode .study-settings-panel {
+  background: #2a2a2a;
+}
+
+.dark-mode .study-settings-panel h3 {
+  color: #e0e0e0;
+}
+
+.dark-mode .setting-item label {
+  color: #e0e0e0;
+}
+
+.dark-mode .setting-desc {
+  color: #b0b0b0;
+}
+
+.dark-mode .setting-input {
+  background: #333;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+.dark-mode .setting-input:focus {
+  border-color: #8b9ef5;
+}
+
+.dark-mode .setting-unit {
+  color: #b0b0b0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .settings-row {
+    flex-direction: column;
+  }
+  
+  .settings-toggle-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 

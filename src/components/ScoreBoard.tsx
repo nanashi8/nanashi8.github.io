@@ -20,6 +20,7 @@ interface ScoreBoardProps {
   sessionIncorrect?: number; // セッション内の不正解数
   sessionReview?: number; // セッション内の要復習数
   sessionMastered?: number; // セッション内の定着数
+  onReviewFocus?: () => void; // 要復習タップ時のコールバック
 }
 
 function ScoreBoard({ 
@@ -29,7 +30,8 @@ function ScoreBoard({
   sessionCorrect = 0,
   sessionIncorrect = 0,
   sessionReview = 0,
-  sessionMastered = 0
+  sessionMastered = 0,
+  onReviewFocus
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
 
@@ -154,7 +156,11 @@ function ScoreBoard({
       {alertSummary.todayReviewCount > 0 && (
         <>
           <span className="score-stat-divider">|</span>
-          <span className="score-stat alert-stat" title="今日復習すべき単語があります">
+          <span 
+            className={`score-stat alert-stat ${onReviewFocus ? 'clickable' : ''}`}
+            title={onReviewFocus ? "クリックして要復習問題に集中" : "今日復習すべき単語があります"}
+            onClick={onReviewFocus}
+          >
             ⏰ <strong className="alert-count">{alertSummary.todayReviewCount}</strong>
             <span className="score-stat-sub">要復習</span>
           </span>

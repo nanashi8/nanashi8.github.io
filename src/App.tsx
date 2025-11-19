@@ -103,6 +103,17 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
   
+  // 要復習集中モード
+  const [reviewFocusMode, setReviewFocusMode] = useState<boolean>(false);
+  
+  // セッション統計（和訳タブ用）
+  const [sessionStats, setSessionStats] = useState({
+    correct: 0,
+    incorrect: 0,
+    review: 0,
+    mastered: 0,
+  });
+  
   // 和訳タブ用のクイズ状態
   const [quizState, setQuizState] = useState<QuizState>({
     questions: [],
@@ -356,6 +367,22 @@ function App() {
       return;
     }
     
+    // 要復習集中モードの場合、要復習問題のみに絞る
+    if (reviewFocusMode) {
+      const todayIncorrect = getTodayIncorrectWords();
+      filteredQuestions = filteredQuestions.filter(q => 
+        todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
+      );
+      
+      if (filteredQuestions.length === 0) {
+        alert('要復習問題が見つかりません');
+        setReviewFocusMode(false); // モードをリセット
+        return;
+      }
+      
+      console.log(`🎯 要復習集中モード: ${filteredQuestions.length}問`);
+    }
+    
     // レーダーチャートAI: 弱点分野を分析
     const radarAnalysis = analyzeRadarChart(allQuestions, categoryList);
     
@@ -432,17 +459,22 @@ function App() {
     }
     
     // 学習数上限を適用（適応的学習モードの有無に関わらず）
-    const maxQuestions = studySettings.maxStudyCount;
+    // 要復習集中モードの場合は上限を適用しない
+    const maxQuestions = reviewFocusMode ? filteredQuestions.length : studySettings.maxStudyCount;
     
     // 適応的学習モードが有効な場合、出題順を最適化
-    if (adaptiveMode && filteredQuestions.length > 0) {
+    if (adaptiveMode && filteredQuestions.length > 0 && !reviewFocusMode) {
       filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(maxQuestions, filteredQuestions.length));
-    } else {
+    } else if (!reviewFocusMode) {
       // 通常モードでも学習数上限を適用
       filteredQuestions = filteredQuestions.slice(0, maxQuestions);
     }
     
-    console.log(`📚 学習数: ${filteredQuestions.length}問（上限: ${studySettings.maxStudyCount}問）`);
+    if (reviewFocusMode) {
+      console.log(`🎯 要復習集中モード: ${filteredQuestions.length}問`);
+    } else {
+      console.log(`📚 学習数: ${filteredQuestions.length}問（上限: ${studySettings.maxStudyCount}問）`);
+    }
     
     setQuizState({
       questions: filteredQuestions,
@@ -453,15 +485,31 @@ function App() {
       selectedAnswer: null,
     });
     
+    // セッション統計をリセット
+    setSessionStats({
+      correct: 0,
+      incorrect: 0,
+      review: 0,
+      mastered: 0,
+    });
+    
     // クイズ開始時刻を記録
     quizStartTimeRef.current = Date.now();
     questionStartTimeRef.current = Date.now();
     incorrectWordsRef.current = [];
   };
 
+  // 要復習集中モード切り替えハンドラー
+  const handleReviewFocus = () => {
+    setReviewFocusMode(true);
+    handleStartQuiz();
+  };
+
   // 関連分野変更ハンドラー
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
+    // 要復習集中モードを解除
+    setReviewFocusMode(false);
     // フィルター変更時にクイズを再開（既に開始している場合）
     if (quizState.questions.length > 0) {
       handleStartQuiz();
@@ -471,6 +519,8 @@ function App() {
   // 難易度変更ハンドラー
   const handleDifficultyChange = (level: DifficultyLevel) => {
     setSelectedDifficulty(level);
+    // 要復習集中モードを解除
+    setReviewFocusMode(false);
     // フィルター変更時にクイズを再開（既に開始している場合）
     if (quizState.questions.length > 0) {
       handleStartQuiz();
@@ -504,6 +554,15 @@ function App() {
         // 2回以上間違えた場合は要復習
         status = 'review';
       }
+      
+      // セッション統計を更新
+      setSessionStats(prev => ({
+        ...prev,
+        correct: prev.correct + (status === 'correct' ? 1 : 0),
+        incorrect: prev.incorrect + (status === 'incorrect' ? 1 : 0),
+        review: prev.review + (status === 'review' ? 1 : 0),
+        mastered: prev.mastered + (status === 'mastered' ? 1 : 0),
+      }));
       
       addSessionHistory({
         status,
@@ -648,6 +707,20 @@ function App() {
         selectedAnswer: null,
       }));
       
+      // セッション統計を更新（正解扱い）
+      setSessionStats((prev) => ({
+        ...prev,
+        correct: prev.correct + 1,
+        mastered: prev.mastered + 1, // スキップは定着扱い
+      }));
+      
+      // セッション履歴に記録
+      addSessionHistory({
+        status: 'correct',
+        word: currentQuestion.word,
+        timestamp: Date.now()
+      }, 'translation');
+      
       // 回答を記録
       addQuizResult({
         id: generateId(),
@@ -740,6 +813,8 @@ function App() {
             onPrevious={handlePrevious}
             onSkip={handleSkip}
             onDifficultyRate={handleDifficultyRate}
+            onReviewFocus={handleReviewFocus}
+            sessionStats={sessionStats}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView

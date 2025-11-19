@@ -4,7 +4,7 @@ import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
 import DailyPlanBanner from './DailyPlanBanner';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
-import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory } from '../progressStorage';
+import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
 
@@ -49,6 +49,35 @@ function SpellingView({
   const [shuffledLetters, setShuffledLetters] = useState<string[]>([]);
   // ユーザーが選択した順番のアルファベット
   const [selectedSequence, setSelectedSequence] = useState<string[]>([]);
+  // 熟語の場合の各単語（スペース区切り）
+  const [phraseWords, setPhraseWords] = useState<string[]>([]);
+  // 現在入力中の単語インデックス
+  const [currentWordIndex, setCurrentWordIndex] = useState<number>(0);
+  // 各単語の入力結果
+  const [completedWords, setCompletedWords] = useState<string[]>([]);
+  
+  // セッション統計
+  const [sessionStats, setSessionStats] = useState({
+    correct: 0,
+    incorrect: 0,
+    review: 0,
+    mastered: 0,
+  });
+  
+  // 学習数・要復習上限の設定
+  const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
+  const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
+  const [showSettings, setShowSettings] = useState<boolean>(false);
+
+  const handleMaxStudyCountChange = (newCount: number) => {
+    setMaxStudyCount(newCount);
+    updateStudySettings({ maxStudyCount: newCount });
+  };
+
+  const handleMaxReviewCountChange = (newCount: number) => {
+    setMaxReviewCount(newCount);
+    updateStudySettings({ maxReviewCount: newCount });
+  };
   
   // letter-cardsのrefを追加
   const letterCardsRef = useRef<HTMLDivElement>(null);
@@ -71,6 +100,14 @@ function SpellingView({
         correctWord: '',
       });
       
+      // セッション統計をリセット
+      setSessionStats({
+        correct: 0,
+        incorrect: 0,
+        review: 0,
+        mastered: 0,
+      });
+      
       // クイズ開始時刻を記録
       quizStartTimeRef.current = Date.now();
       incorrectWordsRef.current = [];
@@ -82,20 +119,43 @@ function SpellingView({
     if (spellingState.questions.length > 0) {
       const currentQuestion = spellingState.questions[spellingState.currentIndex];
       const word = currentQuestion.word.toLowerCase();
-      // 熟語の場合、スペースを除いた文字列を使用
-      const wordWithoutSpaces = word.replace(/\s+/g, '');
-      const letters = wordWithoutSpaces.split('');
       
-      // シャッフル
-      const shuffled = [...letters].sort(() => Math.random() - 0.5);
+      // 熟語かどうかを判定（スペースが含まれているか）
+      if (word.includes(' ')) {
+        // 熟語の場合：単語ごとに分割
+        const words = word.split(/\s+/);
+        setPhraseWords(words);
+        setCurrentWordIndex(0);
+        setCompletedWords([]);
+        
+        // 最初の単語をシャッフル
+        const firstWordLetters = words[0].split('');
+        const shuffled = [...firstWordLetters].sort(() => Math.random() - 0.5);
+        setShuffledLetters(shuffled);
+        
+        setSpellingState((prev) => ({
+          ...prev,
+          correctWord: word.replace(/\s+/g, ''),
+          answered: false,
+        }));
+      } else {
+        // 単語の場合：従来通り
+        setPhraseWords([]);
+        setCurrentWordIndex(0);
+        setCompletedWords([]);
+        
+        const letters = word.split('');
+        const shuffled = [...letters].sort(() => Math.random() - 0.5);
+        setShuffledLetters(shuffled);
+        
+        setSpellingState((prev) => ({
+          ...prev,
+          correctWord: word,
+          answered: false,
+        }));
+      }
       
-      setShuffledLetters(shuffled);
       setSelectedSequence([]);
-      setSpellingState((prev) => ({
-        ...prev,
-        correctWord: wordWithoutSpaces,
-        answered: false,
-      }));
       
       // 問題開始時刻を記録
       questionStartTimeRef.current = Date.now();
@@ -115,7 +175,17 @@ function SpellingView({
 
   // カードをタップして選択
   const handleLetterClick = (_letter: string, index: number) => {
-    if (spellingState.answered) return;
+    // 回答後は練習モード（選択のみ、答え合わせはしない）
+    if (spellingState.answered) {
+      // 選択/選択解除のトグル
+      if (selectedSequence.includes(`${index}`)) {
+        setSelectedSequence(selectedSequence.filter(idx => idx !== `${index}`));
+      } else {
+        const newSequence = [...selectedSequence, `${index}`];
+        setSelectedSequence(newSequence);
+      }
+      return;
+    }
     
     // まだ選択されていないカードのみ選択可能
     if (selectedSequence.includes(`${index}`)) return;
@@ -131,10 +201,43 @@ function SpellingView({
 
   const checkAnswer = (sequence: string[]) => {
     const userWord = sequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
-    const isCorrect = userWord === spellingState.correctWord;
     const currentQuestion = spellingState.questions[spellingState.currentIndex];
-
-    processAnswer(userWord, isCorrect, currentQuestion);
+    
+    // 熟語の場合：現在の単語が正しいか確認
+    if (phraseWords.length > 0) {
+      const currentTargetWord = phraseWords[currentWordIndex];
+      const isCorrect = userWord === currentTargetWord;
+      
+      if (isCorrect) {
+        // 正解：次の単語へ
+        const newCompletedWords = [...completedWords, userWord];
+        setCompletedWords(newCompletedWords);
+        
+        if (currentWordIndex < phraseWords.length - 1) {
+          // まだ次の単語がある：次の単語をシャッフル
+          const nextWordIndex = currentWordIndex + 1;
+          setCurrentWordIndex(nextWordIndex);
+          
+          const nextWordLetters = phraseWords[nextWordIndex].split('');
+          const shuffled = [...nextWordLetters].sort(() => Math.random() - 0.5);
+          setShuffledLetters(shuffled);
+          setSelectedSequence([]);
+        } else {
+          // 全ての単語が完成：最終判定
+          const fullUserWord = newCompletedWords.join('');
+          const isFullCorrect = fullUserWord === spellingState.correctWord;
+          processAnswer(fullUserWord, isFullCorrect, currentQuestion);
+        }
+      } else {
+        // 不正解：現在の単語が間違っている
+        const fullUserWord = [...completedWords, userWord].join('');
+        processAnswer(fullUserWord, false, currentQuestion);
+      }
+    } else {
+      // 単語の場合：従来通り
+      const isCorrect = userWord === spellingState.correctWord;
+      processAnswer(userWord, isCorrect, currentQuestion);
+    }
   };
 
   // タイピング入力用の答え合わせ
@@ -168,6 +271,15 @@ function SpellingView({
         // 2回以上間違えた場合は要復習
         status = 'review';
       }
+      
+      // セッション統計を更新
+      setSessionStats(prev => ({
+        ...prev,
+        correct: prev.correct + (status === 'correct' ? 1 : 0),
+        incorrect: prev.incorrect + (status === 'incorrect' ? 1 : 0),
+        review: prev.review + (status === 'review' ? 1 : 0),
+        mastered: prev.mastered + (status === 'mastered' ? 1 : 0),
+      }));
       
       addSessionHistory({
         status,
@@ -229,6 +341,8 @@ function SpellingView({
 
   const handleNext = () => {
     setSelectedSequence([]); // 選択シーケンスをクリア
+    setCurrentWordIndex(0); // 熟語のインデックスをリセット
+    setCompletedWords([]); // 完成した単語をクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
@@ -242,33 +356,56 @@ function SpellingView({
     const currentQuestion = spellingState.questions[spellingState.currentIndex];
     if (!currentQuestion) return;
 
+    // 応答時間を計算
+    const responseTime = Date.now() - questionStartTimeRef.current;
+
     // スキップ処理（30日間除外、AI学習アシスタントが後日検証）
     recordWordSkip(currentQuestion.word, 30);
     
     // AI学習アシスタント: スキップグループに追加
     addToSkipGroup(currentQuestion.word);
     
-    // スコアに反映（正解扱い）
+    // 単語進捗を更新（不正解として記録）
+    updateWordProgress(currentQuestion.word, false, responseTime);
+    
+    // 間違えた単語を記録
+    incorrectWordsRef.current.push(currentQuestion.word);
+    
+    // スコアに反映（不正解扱い）
     // 選択シーケンスをクリアして、正解を表示できるようにする
     setSelectedSequence([]);
+    setCurrentWordIndex(0); // 熟語のインデックスをリセット
+    setCompletedWords([]); // 完成した単語をクリア
     setSpellingState((prev) => ({
       ...prev,
-      score: prev.score + 1,
       totalAnswered: prev.totalAnswered + 1,
       answered: true,
     }));
 
-    // スコアボードのために回答を記録
+    // セッション統計を更新（不正解扱い）
+    setSessionStats((prev) => ({
+      ...prev,
+      incorrect: prev.incorrect + 1,
+    }));
+    
+    // セッション履歴に記録（不正解として）
+    addSessionHistory({
+      status: 'incorrect',
+      word: currentQuestion.word,
+      timestamp: Date.now()
+    }, 'spelling');
+
+    // スコアボードのために回答を記録（不正解として）
     addQuizResult({
       id: generateId(),
       questionSetId: 'spelling-quiz-single',
       questionSetName: 'スペルクイズ',
-      score: 1, // スキップは正解扱い
+      score: 0, // スキップは不正解扱い
       total: 1,
-      percentage: 100,
+      percentage: 0,
       date: Date.now(),
-      timeSpent: 0,
-      incorrectWords: [],
+      timeSpent: Math.floor(responseTime / 1000),
+      incorrectWords: [currentQuestion.word], // スキップした単語を記録
       mode: 'spelling',
       difficulty: currentQuestion.difficulty,
     });
@@ -276,6 +413,8 @@ function SpellingView({
 
   const handlePrevious = () => {
     setSelectedSequence([]); // 選択シーケンスをクリア
+    setCurrentWordIndex(0); // 熟語のインデックスをリセット
+    setCompletedWords([]); // 完成した単語をクリア
     setSpellingState((prev) => ({
       ...prev,
       currentIndex: prev.currentIndex > 0 ? prev.currentIndex - 1 : 0,
@@ -415,11 +554,58 @@ function SpellingView({
         )}
 
         {!hasQuestions && (
-          <button onClick={onStartQuiz} className="start-btn">
-            🎯 クイズを開始
-          </button>
+          <>
+            <button 
+              onClick={() => setShowSettings(!showSettings)} 
+              className="settings-toggle-btn"
+            >
+              ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
+            </button>
+            <button onClick={onStartQuiz} className="start-btn">
+              🎯 クイズを開始
+            </button>
+          </>
         )}
       </div>
+
+      {/* 学習設定パネル */}
+      {!hasQuestions && showSettings && (
+        <div className="study-settings-panel">
+          <h3>📊 学習設定</h3>
+          <div className="settings-row">
+            <div className="setting-item">
+              <label htmlFor="max-study-count-spelling">
+                学習数上限
+                <span className="setting-desc">1セッションあたりの最大学習数</span>
+              </label>
+              <input
+                id="max-study-count-spelling"
+                type="number"
+                min="1"
+                value={maxStudyCount}
+                onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+                className="setting-input"
+              />
+              <span className="setting-unit">問</span>
+            </div>
+            <div className="setting-item">
+              <label htmlFor="max-review-count-spelling">
+                要復習上限
+                <span className="setting-desc">繰り返される復習問題の上限数</span>
+              </label>
+              <input
+                id="max-review-count-spelling"
+                type="number"
+                min="0"
+                value={maxReviewCount}
+                onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+                className="setting-input"
+              />
+              <span className="setting-unit">問</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {!hasQuestions ? (
         <div className="empty-state">
@@ -431,6 +617,10 @@ function SpellingView({
             mode="spelling"
             currentScore={spellingState.score}
             totalAnswered={spellingState.totalAnswered}
+            sessionCorrect={sessionStats.correct}
+            sessionIncorrect={sessionStats.incorrect}
+            sessionReview={sessionStats.review}
+            sessionMastered={sessionStats.mastered}
           />
 
           {currentQuestion && (
@@ -450,7 +640,12 @@ function SpellingView({
                   <div className="meaning-text">{currentQuestion.meaning}</div>
                   {currentQuestion.word.includes(' ') && (
                     <div className="phrase-hint">
-                      💡 ヒント: 「{currentQuestion.word}」はスペースなしで入力してください
+                      💡 熟語({phraseWords.length}語): 単語ごとに入力してください
+                      {completedWords.length > 0 && (
+                        <span className="phrase-progress">
+                          {' '}(完成: {completedWords.join(' ')})
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -469,7 +664,15 @@ function SpellingView({
                 <div className="user-word-display">
                   <div className="user-word-label">あなたの答え:</div>
                   <div className="user-word-text">
-                    {userWord || '（並び替え）'}
+                    {phraseWords.length > 0 ? (
+                      <>
+                        {completedWords.join(' ')}
+                        {completedWords.length > 0 && ' '}
+                        {userWord || '（並び替え）'}
+                      </>
+                    ) : (
+                      userWord || '（並び替え）'
+                    )}
                   </div>
                 </div>
               </div>
@@ -516,10 +719,9 @@ function SpellingView({
                     <button
                       key={index}
                       className={`letter-card ${isSelected ? 'selected' : ''} ${
-                        spellingState.answered ? 'disabled' : ''
+                        spellingState.answered ? 'practice-mode' : ''
                       }`}
                       onClick={() => handleLetterClick(letter, index)}
-                      disabled={spellingState.answered}
                     >
                       {letter}
                       {isSelected && <span className="selection-number">{selectionOrder}</span>}
