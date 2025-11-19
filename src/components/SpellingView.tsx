@@ -20,6 +20,8 @@ interface SpellingViewProps {
   selectedPhraseTypeFilter?: PhraseTypeFilter;
   onPhraseTypeFilterChange?: (filter: PhraseTypeFilter) => void;
   onStartQuiz: () => void;
+  onReviewFocus?: () => void;
+  isReviewFocusMode?: boolean;
 }
 
 function SpellingView({ 
@@ -33,7 +35,9 @@ function SpellingView({
   onWordPhraseFilterChange,
   selectedPhraseTypeFilter = 'all',
   onPhraseTypeFilterChange,
-  onStartQuiz
+  onStartQuiz,
+  onReviewFocus,
+  isReviewFocusMode = false
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
@@ -67,6 +71,7 @@ function SpellingView({
   // 学習数・要復習上限の設定
   const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
   const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
+  const [showSettings, setShowSettings] = useState<boolean>(false);
 
   const handleMaxStudyCountChange = (newCount: number) => {
     setMaxStudyCount(newCount);
@@ -486,104 +491,117 @@ function SpellingView({
       )}
       
       <div className="quiz-filter-section">
-        <div className="filter-group">
-          <label htmlFor="category-select">📚 関連分野:</label>
-          <select
-            id="category-select"
-            value={selectedCategory}
-            onChange={(e) => onCategoryChange(e.target.value)}
-            className="select-input"
-          >
-            <option value="all">全ての分野</option>
-            {categoryList.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="filter-group">
-          <label htmlFor="difficulty-select">⭐ 難易度:</label>
-          <select
-            id="difficulty-select"
-            value={selectedDifficulty}
-            onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
-            className="select-input"
-          >
-            <option value="all">全てのレベル</option>
-            <option value="beginner">初級</option>
-            <option value="intermediate">中級</option>
-            <option value="advanced">上級</option>
-          </select>
-        </div>
-
-        {onWordPhraseFilterChange && (
-          <div className="filter-group">
-            <label htmlFor="word-phrase-filter">📖 単語/熟語:</label>
-            <select
-              id="word-phrase-filter"
-              value={selectedWordPhraseFilter}
-              onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
-              className="select-input"
-            >
-              <option value="all">すべて</option>
-              <option value="words-only">単語のみ</option>
-              <option value="phrases-only">熟語のみ</option>
-            </select>
-          </div>
-        )}
-
-        {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
-          <div className="filter-group">
-            <label htmlFor="phrase-type-filter">🏷️ 熟語タイプ:</label>
-            <select
-              id="phrase-type-filter"
-              value={selectedPhraseTypeFilter}
-              onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
-              className="select-input"
-            >
-              <option value="all">すべて</option>
-              <option value="phrasal-verb">句動詞</option>
-              <option value="idiom">イディオム</option>
-              <option value="collocation">コロケーション</option>
-              <option value="other">その他</option>
-            </select>
-          </div>
-        )}
-
         {!hasQuestions && (
           <>
-            <div className="filter-group">
-              <label htmlFor="max-study-count-spelling">📊 学習数上限:</label>
-              <input
-                id="max-study-count-spelling"
-                type="number"
-                min="1"
-                value={maxStudyCount}
-                onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-                className="select-input number-input"
-              />
-              <span className="filter-unit">問</span>
-            </div>
-            <div className="filter-group">
-              <label htmlFor="max-review-count-spelling">🔄 要復習上限:</label>
-              <input
-                id="max-review-count-spelling"
-                type="number"
-                min="0"
-                value={maxReviewCount}
-                onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-                className="select-input number-input"
-              />
-              <span className="filter-unit">問</span>
-            </div>
+            <button 
+              onClick={() => setShowSettings(!showSettings)} 
+              className="settings-toggle-btn"
+            >
+              ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
+            </button>
             <button onClick={onStartQuiz} className="start-btn">
               🎯 クイズを開始
             </button>
           </>
         )}
       </div>
+
+      {/* 学習設定パネル */}
+      {!hasQuestions && showSettings && (
+        <div className="study-settings-panel">
+          <h3>📊 学習設定</h3>
+          
+          <div className="filter-group">
+            <label htmlFor="category-select-spelling">📚 関連分野:</label>
+            <select
+              id="category-select-spelling"
+              value={selectedCategory}
+              onChange={(e) => onCategoryChange(e.target.value)}
+              className="select-input"
+            >
+              <option value="all">全ての分野</option>
+              {categoryList.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="difficulty-select-spelling">⭐ 難易度:</label>
+            <select
+              id="difficulty-select-spelling"
+              value={selectedDifficulty}
+              onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
+              className="select-input"
+            >
+              <option value="all">全てのレベル</option>
+              <option value="beginner">初級</option>
+              <option value="intermediate">中級</option>
+              <option value="advanced">上級</option>
+            </select>
+          </div>
+
+          {onWordPhraseFilterChange && (
+            <div className="filter-group">
+              <label htmlFor="word-phrase-filter-spelling">📖 単語/熟語:</label>
+              <select
+                id="word-phrase-filter-spelling"
+                value={selectedWordPhraseFilter}
+                onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
+                className="select-input"
+              >
+                <option value="all">すべて</option>
+                <option value="words-only">単語のみ</option>
+                <option value="phrases-only">熟語のみ</option>
+              </select>
+            </div>
+          )}
+
+          {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
+            <div className="filter-group">
+              <label htmlFor="phrase-type-filter-spelling">🏷️ 熟語タイプ:</label>
+              <select
+                id="phrase-type-filter-spelling"
+                value={selectedPhraseTypeFilter}
+                onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
+                className="select-input"
+              >
+                <option value="all">すべて</option>
+                <option value="phrasal-verb">句動詞</option>
+                <option value="idiom">イディオム</option>
+                <option value="collocation">コロケーション</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+          )}
+
+          <div className="filter-group">
+            <label htmlFor="max-study-count-spelling">📊 学習数上限:</label>
+            <input
+              id="max-study-count-spelling"
+              type="number"
+              min="1"
+              value={maxStudyCount}
+              onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+              className="select-input number-input-small"
+            />
+          </div>
+          
+          <div className="filter-group">
+            <label htmlFor="max-review-count-spelling">🔄 要復習上限:</label>
+            <input
+              id="max-review-count-spelling"
+              type="number"
+              min="0"
+              value={maxReviewCount}
+              onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+              className="select-input number-input-small"
+            />
+          </div>
+        </div>
+      )}
 
       {!hasQuestions ? (
         <div className="empty-state">
@@ -599,6 +617,8 @@ function SpellingView({
             sessionIncorrect={sessionStats.incorrect}
             sessionReview={sessionStats.review}
             sessionMastered={sessionStats.mastered}
+            onReviewFocus={onReviewFocus}
+            isReviewFocusMode={isReviewFocusMode}
           />
 
           {currentQuestion && (

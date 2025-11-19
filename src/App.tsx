@@ -103,8 +103,9 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
   
-  // 要復習集中モード
+  // 要復習集中モード（補修モード）
   const [reviewFocusMode, setReviewFocusMode] = useState<boolean>(false);
+  const [reviewQuestionPool, setReviewQuestionPool] = useState<Question[]>([]); // 補修モード用の問題プール
   
   // セッション統計（和訳タブ用）
   const [sessionStats, setSessionStats] = useState({
@@ -367,7 +368,7 @@ function App() {
       return;
     }
     
-    // 要復習集中モードの場合、要復習問題のみに絞る
+    // 要復習集中モード（補修モード）の場合、要復習問題のみに絞る
     if (reviewFocusMode) {
       const todayIncorrect = getTodayIncorrectWords();
       filteredQuestions = filteredQuestions.filter(q => 
@@ -377,10 +378,13 @@ function App() {
       if (filteredQuestions.length === 0) {
         alert('要復習問題が見つかりません');
         setReviewFocusMode(false); // モードをリセット
+        setReviewQuestionPool([]);
         return;
       }
       
-      console.log(`🎯 要復習集中モード: ${filteredQuestions.length}問`);
+      // 補修モード用の問題プールを設定（繰り返し出題用）
+      setReviewQuestionPool([...filteredQuestions]);
+      console.log(`🎯 補修モード開始: ${filteredQuestions.length}問を繰り返し出題`);
     }
     
     // レーダーチャートAI: 弱点分野を分析
@@ -471,7 +475,7 @@ function App() {
     }
     
     if (reviewFocusMode) {
-      console.log(`🎯 要復習集中モード: ${filteredQuestions.length}問`);
+      console.log(`🎯 補修モード: ${filteredQuestions.length}問を繰り返し出題中`);
     } else {
       console.log(`📚 学習数: ${filteredQuestions.length}問（上限: ${studySettings.maxStudyCount}問）`);
     }
@@ -499,17 +503,24 @@ function App() {
     incorrectWordsRef.current = [];
   };
 
-  // 要復習集中モード切り替えハンドラー
+  // 要復習集中モード（補修モード）切り替えハンドラー
   const handleReviewFocus = () => {
     setReviewFocusMode(true);
     handleStartQuiz();
+  };
+  
+  // スペルタブ用の補修モードハンドラー
+  const handleSpellingReviewFocus = () => {
+    setReviewFocusMode(true);
+    onStartQuiz();
   };
 
   // 関連分野変更ハンドラー
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    // 要復習集中モードを解除
+    // 補修モードを解除
     setReviewFocusMode(false);
+    setReviewQuestionPool([]);
     // フィルター変更時にクイズを再開（既に開始している場合）
     if (quizState.questions.length > 0) {
       handleStartQuiz();
@@ -519,8 +530,9 @@ function App() {
   // 難易度変更ハンドラー
   const handleDifficultyChange = (level: DifficultyLevel) => {
     setSelectedDifficulty(level);
-    // 要復習集中モードを解除
+    // 補修モードを解除
     setReviewFocusMode(false);
+    setReviewQuestionPool([]);
     // フィルター変更時にクイズを再開（既に開始している場合）
     if (quizState.questions.length > 0) {
       handleStartQuiz();
@@ -667,12 +679,27 @@ function App() {
   };
 
   const handleNext = () => {
-    setQuizState((prev) => ({
-      ...prev,
-      currentIndex: (prev.currentIndex + 1) % prev.questions.length,
-      answered: false,
-      selectedAnswer: null,
-    }));
+    setQuizState((prev) => {
+      const nextIndex = prev.currentIndex + 1;
+      
+      // 補修モードの場合、最後の問題に到達したら最初に戻る
+      if (reviewFocusMode && nextIndex >= prev.questions.length) {
+        console.log('🔄 補修モード: 問題を繰り返します');
+        return {
+          ...prev,
+          currentIndex: 0,
+          answered: false,
+          selectedAnswer: null,
+        };
+      }
+      
+      return {
+        ...prev,
+        currentIndex: nextIndex % prev.questions.length,
+        answered: false,
+        selectedAnswer: null,
+      };
+    });
     
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();
@@ -815,6 +842,7 @@ function App() {
             onDifficultyRate={handleDifficultyRate}
             onReviewFocus={handleReviewFocus}
             sessionStats={sessionStats}
+            isReviewFocusMode={reviewFocusMode}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
@@ -829,6 +857,8 @@ function App() {
             selectedPhraseTypeFilter={selectedPhraseTypeFilter}
             onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
             onStartQuiz={handleStartQuiz}
+            onReviewFocus={handleSpellingReviewFocus}
+            isReviewFocusMode={reviewFocusMode}
           />
         ) : activeTab === 'reading' ? (
           <ComprehensiveReadingView 

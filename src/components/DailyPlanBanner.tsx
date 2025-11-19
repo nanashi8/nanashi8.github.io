@@ -12,6 +12,10 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
     return saved ? parseInt(saved, 10) : 20;
   });
   const [showSettings, setShowSettings] = useState(false);
+  const [isVisible, setIsVisible] = useState(() => {
+    const saved = localStorage.getItem(`daily-plan-visible-${mode}`);
+    return saved !== 'false';
+  });
 
   useEffect(() => {
     const info = getDailyPlanInfo();
@@ -23,7 +27,21 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
     localStorage.setItem(`daily-plan-target-${mode}`, newTarget.toString());
   };
 
-  if (!planInfo) return null;
+  const toggleVisibility = () => {
+    const newVisibility = !isVisible;
+    setIsVisible(newVisibility);
+    localStorage.setItem(`daily-plan-visible-${mode}`, newVisibility.toString());
+  };
+
+  if (!planInfo || !isVisible) {
+    return isVisible === false ? (
+      <div className="daily-plan-collapsed">
+        <button onClick={toggleVisibility} className="daily-plan-expand-btn">
+          📅 今日の学習プランを表示
+        </button>
+      </div>
+    ) : null;
+  }
 
   const { reviewWordsCount, scheduledWordsCount, totalPlannedCount } = planInfo;
   
@@ -87,13 +105,22 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
             </div>
           )}
         </div>
-        <button 
-          className="daily-plan-settings-btn"
-          onClick={() => setShowSettings(!showSettings)}
-          aria-label="学習プラン設定"
-        >
-          ⚙️
-        </button>
+        <div className="daily-plan-actions">
+          <button 
+            className="daily-plan-settings-btn"
+            onClick={() => setShowSettings(!showSettings)}
+            aria-label="学習プラン設定"
+          >
+            ⚙️
+          </button>
+          <button 
+            className="daily-plan-close-btn"
+            onClick={toggleVisibility}
+            aria-label="閉じる"
+          >
+            ✕
+          </button>
+        </div>
       </div>
       
       {showSettings && (

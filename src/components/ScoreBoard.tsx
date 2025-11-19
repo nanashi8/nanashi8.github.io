@@ -21,6 +21,7 @@ interface ScoreBoardProps {
   sessionReview?: number; // セッション内の要復習数
   sessionMastered?: number; // セッション内の定着数
   onReviewFocus?: () => void; // 要復習タップ時のコールバック
+  isReviewFocusMode?: boolean; // 補修モード中かどうか
 }
 
 function ScoreBoard({ 
@@ -31,7 +32,8 @@ function ScoreBoard({
   sessionIncorrect = 0,
   sessionReview = 0,
   sessionMastered = 0,
-  onReviewFocus
+  onReviewFocus,
+  isReviewFocusMode = false
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
 
@@ -81,6 +83,13 @@ function ScoreBoard({
 
   return (
     <div className="score-board-compact">
+      {/* 補修モードインジケーター */}
+      {isReviewFocusMode && (
+        <div className="review-focus-indicator">
+          🎯 <strong>補修モード</strong> - 要復習問題を繰り返し出題中
+        </div>
+      )}
+      
       {totalAnswered > 0 && (
         <>
           <span className="score-stat-large">

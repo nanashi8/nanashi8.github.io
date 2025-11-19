@@ -391,9 +391,19 @@
   background: #1a1a1a;
 }
 
+.dark-mode .phrase-lines {
+  background: #1a1a1a;
+}
+
 .dark-mode .phrase-card {
   background: #2a2a2a;
   border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .phrase-line {
+  background: #2a2a2a;
+  border-left-color: #667eea;
   color: #e0e0e0;
 }
 
@@ -1113,6 +1123,36 @@ option {
   justify-content: center;
   flex: 1;
   font-size: 0.95em;
+  position: relative;
+  flex-direction: column;
+}
+
+/* 補修モードインジケーター */
+.review-focus-indicator {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.review-focus-indicator strong {
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.5);
+  }
 }
 
 .score-stat {
@@ -2589,6 +2629,8 @@ option {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
   /* モバイル最適化 */
   -webkit-overflow-scrolling: touch;
   touch-action: manipulation;
@@ -2601,18 +2643,23 @@ option {
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .passage-selector h3 {
   margin: 0 0 15px 0;
   color: #333;
   font-size: 1.1em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .passage-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .passage-btn {
@@ -2627,6 +2674,10 @@ option {
   transition: all 0.2s;
   touch-action: manipulation;
   min-height: 52px;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .passage-btn:hover {
@@ -2648,6 +2699,9 @@ option {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   /* モバイル最適化 */
   min-height: 0;
@@ -2658,6 +2712,9 @@ option {
   color: #667eea;
   margin: 0 0 20px 0;
   font-size: 1.3em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
 }
 
 .instructions {
@@ -2668,10 +2725,14 @@ option {
   margin-bottom: 20px;
   font-size: 0.9em;
   color: #856404;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .instructions p {
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .word-cards {
@@ -2683,6 +2744,8 @@ option {
   background: #f8f9fa;
   border-radius: 8px;
   line-height: 2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .word-card {
@@ -2698,10 +2761,16 @@ option {
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  flex-shrink: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .word-text {
   font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .word-meaning-inline {
@@ -2711,6 +2780,9 @@ option {
   border-top: 1px solid #e0e0e0;
   margin-top: 4px;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .word-card:hover:not(.disabled) {
@@ -2983,6 +3055,43 @@ option {
   border-top: 1px solid #e0e0e0;
 }
 
+/* 節・句を行ごとに表示する新スタイル */
+.phrase-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 15px 0;
+  max-height: 55vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phrase-line {
+  background: white;
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.phrase-words-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* 旧スタイルを維持（後方互換性） */
 .phrase-cards {
   display: flex;
@@ -3012,6 +3121,7 @@ option {
   transition: all 0.2s;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .phrase-card:hover {
@@ -3043,6 +3153,10 @@ option {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   /* iOSタッチ最適化 */
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -3073,6 +3187,9 @@ option {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 2px solid #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .word-meanings {
@@ -3080,6 +3197,8 @@ option {
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .word-meaning {
@@ -3088,6 +3207,9 @@ option {
   border-radius: 4px;
   font-size: 0.85em;
   color: #555;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .phrase-meaning {
@@ -3098,6 +3220,10 @@ option {
   background: #f8f9ff;
   border-radius: 6px;
   border-left: 4px solid #667eea;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 全文和訳 */
@@ -4775,20 +4901,25 @@ option {
   /* 読解タブの最適化 */
   .reading-view {
     padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .passage-selector {
     padding: 12px;
     margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .passage-select {
     padding: 12px;
     font-size: max(16px, 1em);
+    width: 100%;
   }
 
   .reading-content {
-    padding: 15px;
+    padding: 12px;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -4797,57 +4928,102 @@ option {
   .passage-title {
     font-size: 1.1em;
     margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .phrase-cards {
-    max-height: 50vh;
+    max-height: 55vh;
     gap: 10px;
-    padding: 10px;
+    padding: 8px;
     margin: 10px 0;
-    width: 100%;
-  }
-
-  .phrase-card {
-    padding: 12px;
     width: 100%;
     box-sizing: border-box;
   }
 
-  .phrase-words {
-    gap: 5px;
+  .phrase-lines {
+    max-height: 55vh;
+    gap: 12px;
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .phrase-line {
+    padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .phrase-words-row {
+    gap: 4px;
     margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .phrase-card {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .phrase-words {
+    gap: 4px;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .word-card {
-    padding: 8px 12px;
-    font-size: max(16px, 0.95em);
-    min-height: 44px;
+    padding: 8px 10px;
+    font-size: max(16px, 0.9em);
+    min-height: 40px;
+    flex-shrink: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .word-text {
     font-size: max(16px, 1em);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .word-meaning-inline {
-    font-size: max(14px, 0.8em);
+    font-size: max(14px, 0.75em);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .word-meanings {
     gap: 4px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .word-meaning {
-    padding: 3px 6px;
-    font-size: max(14px, 0.8em);
+    padding: 4px 6px;
+    font-size: max(14px, 0.75em);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
 
   .phrase-meaning {
-    font-size: max(15px, 0.9em);
-    padding: 8px 12px;
+    font-size: max(15px, 0.85em);
+    padding: 8px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .phrase-translation-btn {
-    padding: 12px 20px;
+    padding: 10px 16px;
     font-size: max(16px, 1em);
     min-height: 48px;
   }
@@ -5394,6 +5570,11 @@ option {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.number-input-small {
+  width: 80px;
+  text-align: center;
 }
 
 .start-btn {

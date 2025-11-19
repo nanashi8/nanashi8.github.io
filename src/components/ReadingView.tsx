@@ -193,12 +193,12 @@ function ReadingView() {
             </div>
           )}
 
-          {/* 長文本文：節・句ごとにカード化 */}
-          <div className="phrase-cards">
+          {/* 長文本文：節・句ごとに改行して表示 */}
+          <div className="phrase-lines">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
-              <div key={phraseIdx} className="phrase-card">
-                {/* 英文の単語カード */}
-                <div className="phrase-words">
+              <div key={phraseIdx} className="phrase-line">
+                {/* 英文の単語を横並びで表示 */}
+                <div className="phrase-words-row">
                   {phrase.segments.map((segment, segIdx) => (
                     <button
                       key={segIdx}
