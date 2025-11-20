@@ -28,6 +28,10 @@ import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import './App.css';
 
+// IndexedDB移行関連
+import { migrateToIndexedDB } from './dataMigration';
+import { initStorageStrategy } from './storageManager';
+
 type Tab = 'translation' | 'spelling' | 'reading' | 'settings' | 'stats';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
@@ -191,6 +195,13 @@ function App() {
   useEffect(() => {
     const loadInitialData = async () => {
       try {
+        // IndexedDB移行を実行（初回のみ）
+        console.log('🔄 データ移行チェック中...');
+        await migrateToIndexedDB();
+        
+        // ストレージ戦略を初期化
+        initStorageStrategy();
+        
         // LocalStorageサイズの確認
         checkLocalStorageSize();
         
@@ -501,7 +512,7 @@ function App() {
     }
   };
 
-  const handleAnswer = (answer: string, correct: string) => {
+  const handleAnswer = async (answer: string, correct: string) => {
     if (quizState.answered) return;
 
     // 安全な比較のため、両者をtrim()で正規化
@@ -515,10 +526,11 @@ function App() {
     
     // 単語進捗を更新
     if (currentQuestion) {
-      updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'translation');
+      await updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'translation');
       
       // セッション履歴に追加
-      const wordProgress = loadProgress().wordProgress[currentQuestion.word];
+      const progress = await loadProgress();
+      const wordProgress = progress.wordProgress[currentQuestion.word];
       let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';
       
       // 定着判定
@@ -564,10 +576,10 @@ function App() {
       }
       
       // スケジュールを生成
-      const progress = loadProgress();
+      const currentProgress = await loadProgress();
       spacedRepetitionScheduleRef.current = generateSpacedRepetitionSchedule(
         recentAnswersRef.current,
-        progress.wordProgress,
+        currentProgress.wordProgress,
         quizState.currentIndex,
         quizState.questions.length
       );
@@ -575,12 +587,12 @@ function App() {
       // AI学習メッセージ（デバッグ用）
       if (spacedRepetitionScheduleRef.current.length > 0) {
         const latestSchedule = spacedRepetitionScheduleRef.current[spacedRepetitionScheduleRef.current.length - 1];
-        const retention = calculateMemoryRetention(currentQuestion.word, progress.wordProgress[currentQuestion.word]);
+        const retention = calculateMemoryRetention(currentQuestion.word, currentProgress.wordProgress[currentQuestion.word]);
         console.log(`🧠 AI学習: ${currentQuestion.word} - 定着度${retention.retentionScore.toFixed(1)}% - ${latestSchedule.reason} (${latestSchedule.nextQuestionIndex - quizState.currentIndex}問後に再出題)`);
       }
       
       // AI学習アシスタント: スキップした単語の検証
-      const skipWordProgress = progress.wordProgress[currentQuestion.word];
+      const skipWordProgress = currentProgress.wordProgress[currentQuestion.word];
       
       if (skipWordProgress && skipWordProgress.skippedCount && skipWordProgress.skippedCount > 0) {
         // この単語は以前スキップされていた

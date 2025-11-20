@@ -1210,7 +1210,7 @@ option {
   align-items: center;
   gap: 12px;
   margin-bottom: 15px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* meaning-displayとボタンを横並びにする */
@@ -1285,33 +1285,36 @@ option {
 .score-board-compact {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: 8px 12px;
   align-items: center;
   justify-content: center;
   flex: 1;
-  font-size: 0.95em;
+  font-size: 1em;
   position: relative;
   flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* スコアボードタブナビゲーション */
 .score-board-tabs {
   display: flex;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .score-tab {
-  padding: 6px 16px;
+  padding: 8px 16px;
   background: #f5f5f5;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 0.9em;
+  font-size: 0.95em;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -1343,26 +1346,26 @@ option {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 4px;
     width: 100%;
-    margin-bottom: 12px;
-    padding: 8px;
+    margin-bottom: 4px;
+    padding: 3px;
     background: #f8f9fa;
-    border-radius: 8px;
+    border-radius: 4px;
   }
 
   .tab-nav-btn {
-    padding: 8px 12px;
+    padding: 3px 6px;
     background: #667eea;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: bold;
     transition: all 0.2s;
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 28px;
+    min-height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1491,17 +1494,17 @@ option {
 /* 基本統計グリッドレイアウト（デスクトップ） */
 .stats-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 6px;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 }
 
 .stat-card {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 16px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 6px 8px;
   text-align: center;
   transition: all 0.3s;
 }
@@ -1513,18 +1516,18 @@ option {
 }
 
 .stat-label {
-  font-size: 0.8em;
+  font-size: 0.65em;
   color: #666;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .stat-value {
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .stat-value strong {
@@ -1540,27 +1543,27 @@ option {
 }
 
 .stat-sub {
-  font-size: 0.8em;
+  font-size: 0.65em;
   color: #999;
 }
 
 /* モバイル版統計サブタブ */
 .stat-subtabs-mobile {
   display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 4px;
+  margin-bottom: 4px;
   width: 100%;
   justify-content: center;
 }
 
 .stat-subtab {
   flex: 1;
-  padding: 8px 12px;
+  padding: 3px 6px;
   background: #f5f5f5;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85em;
+  font-size: 0.7em;
   font-weight: 500;
   transition: all 0.2s;
 }
@@ -1579,31 +1582,31 @@ option {
 /* モバイル版統計コンテンツ */
 .stat-mobile-content {
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .stat-mobile-card {
   background: #f8f9fa;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 12px;
+  border-radius: 4px;
+  padding: 6px;
 }
 
 .stat-mobile-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  padding: 3px 0;
 }
 
 .stat-mobile-label {
-  font-size: 0.9em;
+  font-size: 0.7em;
   color: #666;
   font-weight: 500;
 }
 
 .stat-mobile-value {
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: 700;
   color: #333;
 }
@@ -1622,64 +1625,82 @@ option {
   margin: 4px 0;
 }
 
-/* スコアボードコンテンツエリア（高さ固定） */
+/* スコアボードコンテンツエリア */
 .score-board-content {
-  min-height: 180px;
-  max-height: 220px;
+  min-height: 80px;
+  max-height: 250px;
   overflow-y: auto;
-  padding: 12px 0;
+  padding: 12px 16px;
+  font-size: 1em;
+  width: 100%;
 }
 
-/* 学習プランタブ */
-.plan-tab-content {
+/* 統計テキストコンパクト表示 */
+.stats-text-compact {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 12px;
+  align-items: center;
+  line-height: 2;
+  font-size: 1em;
+  justify-content: center;
 }
 
-.plan-summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 8px;
-  padding: 10px;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  border-radius: 8px;
-  border: 1px solid #bae6fd;
-}
-
-.plan-item {
-  display: flex;
-  align-items: center;
+.stat-text-item {
+  display: inline-flex;
+  align-items: baseline;
   gap: 4px;
+}
+
+.stat-text-label {
+  color: #666;
   font-size: 0.9em;
 }
 
-.plan-icon {
-  font-size: 1.2em;
+.stat-text-value {
+  font-weight: 700;
+  font-size: 1.3em;
 }
 
-.plan-label {
+.stat-text-value.correct {
+  color: #28a745;
+}
+
+.stat-text-value.mastered {
+  color: #ff6b35;
+}
+
+.stat-text-sub {
+  color: #999;
   font-size: 0.85em;
-  color: #666;
 }
 
-.plan-value {
-  font-weight: 600;
-  font-size: 1.1em;
+.stat-text-divider {
+  color: #ddd;
+  margin: 0 4px;
 }
 
-.plan-divider {
-  color: #ccc;
-  font-weight: 300;
+/* 学習プランコンパクト */
+.plan-tab-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.highlight-danger { color: #ef4444; }
-.highlight-info { color: #3b82f6; }
-.highlight-success { color: #10b981; }
+.plan-text-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.95em;
+  line-height: 1.8;
+  justify-content: center;
+}
 
-/* プログレスバー */
-.plan-progress-bar {
+.plan-text-line span {
+  white-space: nowrap;
+}
+
+.plan-progress-compact {
   width: 100%;
   height: 24px;
   background: #e5e7eb;
@@ -1695,7 +1716,157 @@ option {
   align-items: center;
   justify-content: center;
   transition: width 0.3s ease;
-  min-width: 30px;
+  min-width: 40px;
+}
+
+.plan-progress-text {
+  color: white;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.plan-adjust-compact {
+  width: 100%;
+}
+
+.plan-slider {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+}
+
+/* 定着率内訳コンパクト */
+.retention-breakdown-container {
+  width: 100%;
+  margin-top: 0;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.retention-progress-bar {
+  width: 100%;
+  height: 48px;
+  background: #e9ecef;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.retention-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3em;
+  transition: all 0.3s ease;
+  cursor: help;
+}
+
+.retention-mastered {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.retention-learning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.retention-struggling {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.retention-text-summary {
+  margin-top: 8px;
+  font-size: 1em;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 履歴コンパクト */
+.history-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-text-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.history-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+.history-icon {
+  cursor: help;
+}
+
+.history-empty {
+  color: #999;
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+/* 目標コンパクト */
+.goals-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.95em;
+  line-height: 2;
+  justify-content: center;
+}
+
+.goals-compact span {
+  white-space: nowrap;
+}
+
+.goals-compact strong {
+  margin: 0 2px;
+  font-weight: 700;
+}
+
+.goal-divider {
+  color: #ddd;
+  margin: 0 4px;
+}
+
+.goal-sub {
+  color: #999;
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.goal-near {
+  color: #10b981;
+}
+
+.goal-far {
+  color: #3b82f6;
+}
+
+.alert-clickable {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.alert-clickable:hover {
+  color: #ef4444;
+  transform: scale(1.05);
 }
 
 .plan-progress-text {
@@ -1869,28 +2040,28 @@ option {
 /* 定着率の内訳（横長棒グラフ） */
 .retention-breakdown-container {
   width: 100%;
-  margin-top: 12px;
-  padding: 12px;
+  margin-top: 4px;
+  padding: 6px;
   background: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px solid #e0e0e0;
 }
 
 .retention-breakdown-label {
-  font-size: 0.9em;
+  font-size: 0.7em;
   font-weight: 600;
   color: #666;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .retention-progress-bar {
   width: 100%;
-  height: 32px;
+  height: 18px;
   background: #e9ecef;
-  border-radius: 16px;
+  border-radius: 9px;
   overflow: hidden;
   display: flex;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .retention-segment {
@@ -1899,7 +2070,7 @@ option {
   justify-content: center;
   color: white;
   font-weight: 600;
-  font-size: 0.85em;
+  font-size: 0.65em;
   transition: all 0.3s ease;
   cursor: help;
 }
@@ -2315,7 +2486,7 @@ option {
 .question-card {
   background: white;
   border-radius: 12px;
-  padding: 20px 15px;
+  padding: 10px 15px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex: 1;
   display: flex;
@@ -6515,17 +6686,14 @@ option {
   }
 }
 
-/* フィルターセクション */
-.quiz-filter-section {
+/* クイズコントロール（コンパクト版） */
+.quiz-controls {
   display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  align-items: flex-end;
-  flex-shrink: 0;
 }
 
 .filter-group {

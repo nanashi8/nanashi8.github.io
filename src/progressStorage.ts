@@ -1,4 +1,6 @@
-// 進捗・成績管理用のLocalStorageモジュール
+// 進捗・成績管理用のストレージモジュール（IndexedDB/LocalStorage統合）
+
+import { saveProgressData, loadProgressData } from './storageManager';
 
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
@@ -55,37 +57,72 @@ export type SessionHistoryItem = {
   timestamp: number;
 };
 
-// セッション履歴をLocalStorageに保存（最大50件）
+// セッション履歴をストレージに保存（IndexedDB/LocalStorage統合）
 const SESSION_HISTORY_KEY = 'session-history';
 const MAX_SESSION_HISTORY = 50;
 
-export function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling'): void {
+import { putToDB, queryByIndex, STORES, isIndexedDBSupported } from './indexedDBStorage';
+import { isMigrationCompleted } from './dataMigration';
+
+export async function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling'): Promise<void> {
+  const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
+  
   try {
-    const key = `${SESSION_HISTORY_KEY}-${mode}`;
-    const stored = localStorage.getItem(key);
-    const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
-    
-    history.push(item);
-    
-    // 最新50件のみ保持
-    if (history.length > MAX_SESSION_HISTORY) {
-      history.shift();
+    if (useIndexedDB) {
+      // IndexedDBに保存
+      await putToDB(STORES.SESSION_HISTORY, {
+        mode,
+        status: item.status,
+        word: item.word,
+        timestamp: item.timestamp
+      });
+    } else {
+      // LocalStorageにフォールバック
+      const key = `${SESSION_HISTORY_KEY}-${mode}`;
+      const stored = localStorage.getItem(key);
+      const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
+      
+      history.push(item);
+      
+      // 最新50件のみ保持
+      if (history.length > MAX_SESSION_HISTORY) {
+        history.shift();
+      }
+      
+      localStorage.setItem(key, JSON.stringify(history));
     }
-    
-    localStorage.setItem(key, JSON.stringify(history));
   } catch (e) {
     console.error('セッション履歴の保存エラー:', e);
   }
 }
 
-export function getSessionHistory(mode: 'translation' | 'spelling', limit: number = 20): SessionHistoryItem[] {
+export async function getSessionHistory(mode: 'translation' | 'spelling', limit: number = 20): Promise<SessionHistoryItem[]> {
+  const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
+  
   try {
-    const key = `${SESSION_HISTORY_KEY}-${mode}`;
-    const stored = localStorage.getItem(key);
-    const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
-    
-    // 最新limit件を返す
-    return history.slice(-limit);
+    if (useIndexedDB) {
+      // IndexedDBから検索
+      const results = await queryByIndex<any>(
+        STORES.SESSION_HISTORY,
+        'mode',
+        mode,
+        limit
+      );
+      
+      return results.map(r => ({
+        status: r.status,
+        word: r.word,
+        timestamp: r.timestamp
+      }));
+    } else {
+      // LocalStorageから読み込み
+      const key = `${SESSION_HISTORY_KEY}-${mode}`;
+      const stored = localStorage.getItem(key);
+      const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
+      
+      // 最新limit件を返す
+      return history.slice(-limit);
+    }
   } catch (e) {
     console.error('セッション履歴の取得エラー:', e);
     return [];
@@ -245,14 +282,18 @@ function initializeProgress(): UserProgress {
   };
 }
 
-// 進捗データの読み込み
-export function loadProgress(): UserProgress {
+// 進捗データの読み込み（IndexedDB対応）
+export async function loadProgress(): Promise<UserProgress> {
   try {
-    const data = localStorage.getItem(PROGRESS_KEY);
+    // ストレージマネージャーから読み込み
+    const data = await loadProgressData();
+    
     if (!data) {
       return initializeProgress();
     }
-    const progress = JSON.parse(data) as UserProgress;
+    
+    const progress = data as UserProgress;
+    
     // 古いデータ構造の場合は初期化（wordProgressを追加）
     if (!progress.statistics || !progress.questionSetStats) {
       return initializeProgress();
@@ -271,28 +312,59 @@ export function loadProgress(): UserProgress {
   }
 }
 
-// 進捗データの保存
-export function saveProgress(progress: UserProgress): void {
+// 同期版loadProgress（後方互換性のため - 内部でキャッシュを使用）
+let progressCache: UserProgress | null = null;
+export function loadProgressSync(): UserProgress {
+  if (progressCache) return progressCache;
+  
+  // LocalStorageから直接読み込み（フォールバック）
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) {
+      return initializeProgress();
+    }
+    const progress = JSON.parse(data) as UserProgress;
+    if (!progress.statistics || !progress.questionSetStats) {
+      return initializeProgress();
+    }
+    if (!progress.wordProgress) {
+      progress.wordProgress = {};
+    }
+    compressProgressData(progress);
+    progressCache = progress;
+    return progress;
+  } catch (error) {
+    console.error('進捗データの読み込みエラー:', error);
+    return initializeProgress();
+  }
+}
+
+// キャッシュを更新
+export function updateProgressCache(progress: UserProgress): void {
+  progressCache = progress;
+}
+
+// 進捗データの保存（IndexedDB対応）
+export async function saveProgress(progress: UserProgress): Promise<void> {
   try {
     // データ圧縮: 古いデータを削除
     compressProgressData(progress);
     
-    const data = JSON.stringify(progress);
+    // キャッシュを更新
+    updateProgressCache(progress);
     
-    // データサイズチェック（3MBを超える場合は警告）
-    const sizeInBytes = new Blob([data]).size;
-    const sizeInMB = sizeInBytes / (1024 * 1024);
-    
-    if (sizeInMB > 3) {
-      console.warn(`LocalStorageデータサイズ: ${sizeInMB.toFixed(2)}MB - 容量超過のリスクあり`);
-      // 緊急圧縮
-      emergencyCompress(progress);
+    // LocalStorageにも保存（フォールバック用）
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    } catch (e) {
+      console.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
     }
     
-    // safeSetItemを使用
-    const saved = safeSetItem(PROGRESS_KEY, JSON.stringify(progress));
+    // ストレージマネージャーで保存
+    const saved = await saveProgressData(progress);
+    
     if (!saved) {
-      alert('データの保存に失敗しました。ブラウザのストレージ容量が不足しています。\n成績タブから古いデータを削除してください。');
+      console.error('データの保存に失敗しました');
     }
   } catch (error) {
     console.error('進捗データの保存に失敗:', error);
@@ -357,14 +429,14 @@ function emergencyCompress(progress: UserProgress): void {
 }
 
 // クイズ結果を追加
-export function addQuizResult(result: QuizResult): void {
-  const progress = loadProgress();
+export async function addQuizResult(result: QuizResult): Promise<void> {
+  const progress = await loadProgress();
   progress.results.push(result);
   
   // 統計情報を更新
   updateStatistics(progress, result);
   
-  saveProgress(progress);
+  await saveProgress(progress);
 }
 
 // 統計情報の更新
@@ -999,14 +1071,14 @@ function determineMasteryLevel(wordProgress: WordProgress): 'new' | 'learning' |
 }
 
 // 単語進捗を更新
-export function updateWordProgress(
+export async function updateWordProgress(
   word: string,
   isCorrect: boolean,
   responseTime: number, // ミリ秒
   userRating?: number, // 1-10のユーザー評価（オプション）
   mode?: 'translation' | 'spelling' | 'reading' // モード情報
-): void {
-  const progress = loadProgress();
+): Promise<void> {
+  const progress = await loadProgress();
   
   if (!progress.wordProgress[word]) {
     progress.wordProgress[word] = initializeWordProgress(word);
@@ -1080,7 +1152,7 @@ export function updateWordProgress(
     }
   }
   
-  saveProgress(progress);
+  await saveProgress(progress);
 }
 
 /**

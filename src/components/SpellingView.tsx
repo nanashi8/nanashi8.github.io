@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
-import DailyPlanBanner from './DailyPlanBanner';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
@@ -463,9 +462,6 @@ function SpellingView({
       {/* 時間帯別AI挨拶 */}
       <TimeBasedGreetingBanner />
       
-      {/* 今日の学習プラン */}
-      <DailyPlanBanner mode="spelling" />
-      
       {/* 学習プラン進行状況表示 */}
       {hasPlan && planStatus && (
         <div className="plan-progress-banner">
@@ -481,21 +477,19 @@ function SpellingView({
         </div>
       )}
       
-      <div className="quiz-filter-section">
-        {!hasQuestions && (
-          <>
-            <button 
-              onClick={() => setShowSettings(!showSettings)} 
-              className="settings-toggle-btn"
-            >
-              ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
-            </button>
-            <button onClick={onStartQuiz} className="start-btn">
-              🎯 クイズ開始
-            </button>
-          </>
-        )}
-      </div>
+      {!hasQuestions && (
+        <div className="quiz-controls">
+          <button 
+            onClick={() => setShowSettings(!showSettings)} 
+            className="settings-toggle-btn"
+          >
+            ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
+          </button>
+          <button onClick={onStartQuiz} className="start-btn">
+            🎯 クイズ開始
+          </button>
+        </div>
+      )}
 
       {/* 学習設定パネル */}
       {!hasQuestions && showSettings && (

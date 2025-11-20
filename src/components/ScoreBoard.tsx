@@ -38,7 +38,7 @@ function ScoreBoard({
   isReviewFocusMode = false
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
-  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'goals' | 'history'>('stats');
+  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'breakdown' | 'goals' | 'history'>('stats');
   const [statSubTab, setStatSubTab] = useState<'accuracy' | 'retention' | 'total'>('accuracy');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const historyLimit = isMobile ? 10 : 20;
@@ -114,11 +114,11 @@ function ScoreBoard({
   // 現在のセッションの正答率を計算
   const currentAccuracy = totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0;
 
-  // タブの配列（学習プラン、統計、目標、履歴）
-  const tabs: Array<'plan' | 'stats' | 'goals' | 'history'> = 
+  // タブの配列（学習プラン、統計、学習状況、目標、履歴）
+  const tabs: Array<'plan' | 'stats' | 'breakdown' | 'goals' | 'history'> = 
     mode === 'translation' || mode === 'spelling' 
-      ? ['plan', 'stats', 'goals', 'history'] 
-      : ['plan', 'stats', 'goals'];
+      ? ['plan', 'stats', 'breakdown', 'goals', 'history'] 
+      : ['plan', 'stats', 'breakdown', 'goals'];
 
   // タブ切り替え関数
   const handlePrevTab = () => {
@@ -134,11 +134,12 @@ function ScoreBoard({
   };
 
   // タブ名の取得
-  const getTabName = (tab: 'plan' | 'stats' | 'goals' | 'history') => {
+  const getTabName = (tab: 'plan' | 'stats' | 'breakdown' | 'goals' | 'history') => {
     switch (tab) {
-      case 'plan': return '📋 学習プラン';
-      case 'stats': return '📊 基本統計';
-      case 'goals': return '🎯 目標・進捗';
+      case 'plan': return '📋 プラン';
+      case 'stats': return '📊 統計';
+      case 'breakdown': return '📈 学習状況';
+      case 'goals': return '🎯 目標';
       case 'history': return '📜 履歴';
     }
   };
@@ -152,19 +153,25 @@ function ScoreBoard({
             className={`score-tab ${activeTab === 'plan' ? 'active' : ''}`}
             onClick={() => setActiveTab('plan')}
           >
-            📋 学習プラン
+            📋 プラン
           </button>
           <button 
             className={`score-tab ${activeTab === 'stats' ? 'active' : ''}`}
             onClick={() => setActiveTab('stats')}
           >
-            📊 基本統計
+            📊 統計
+          </button>
+          <button 
+            className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+            onClick={() => setActiveTab('breakdown')}
+          >
+            📈 学習状況
           </button>
           <button 
             className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
             onClick={() => setActiveTab('goals')}
           >
-            🎯 目標・進捗
+            🎯 目標
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
@@ -210,50 +217,12 @@ function ScoreBoard({
       {/* 学習プランタブ */}
       {activeTab === 'plan' && (
         <div className="score-board-content">
-          <div className="plan-tab-content">
-            {/* プラン概要 */}
-            <div className="plan-summary">
-              <div className="plan-item">
-                <span className="plan-label">要復習:</span>
-                <span className="plan-count">{planInfo.reviewWordsCount}語</span>
-              </div>
-              <div className="plan-item">
-                <span className="plan-label">確認予定:</span>
-                <span className="plan-count">{planInfo.scheduledWordsCount}語</span>
-              </div>
-              <div className="plan-item">
-                <span className="plan-label">本日の目標:</span>
-                <span className="plan-count">{planTarget}語</span>
-              </div>
-            </div>
-
-            {/* 進捗バー */}
-            <div className="plan-progress-bar">
-              <div 
-                className="plan-progress-fill" 
-                style={{ width: `${Math.min(100, (totalAnswered / planTarget) * 100)}%` }}
-              />
-            </div>
-
-            {/* 推奨メッセージ */}
-            <div className="plan-recommendation">
-              {totalAnswered >= planTarget 
-                ? `🎉 本日の目標達成！ お疲れ様でした` 
-                : `💪 あと${planTarget - totalAnswered}語で目標達成`}
-            </div>
-
-            {/* 目標調整スライダー */}
-            <div className="plan-target-adjust">
-              <label>日次目標: {planTarget}語</label>
-              <input 
-                type="range" 
-                min="10" 
-                max="100" 
-                step="5" 
-                value={planTarget}
-                onChange={(e) => handlePlanTargetChange(parseInt(e.target.value))}
-                className="plan-slider"
-              />
+          <div className="plan-tab-compact">
+            <div className="plan-text-line">
+              <span>📋 要復習: <strong>{planInfo.reviewWordsCount}</strong></span>
+              <span>｜確認予定: <strong>{planInfo.scheduledWordsCount}</strong></span>
+              <span>｜目標: <strong>{planTarget}</strong></span>
+              <span>｜進捗: <strong>{totalAnswered}/{planTarget}</strong></span>
             </div>
           </div>
         </div>
@@ -262,296 +231,162 @@ function ScoreBoard({
       {/* 基本統計タブ */}
       {activeTab === 'stats' && (
         <div className="score-board-content">
-          {/* デスクトップ版: 横並びレイアウト */}
-          {!isMobile && (
-            <div className="stats-grid-container">
-              {/* 現在のスコア（セッション中のみ） */}
-              {totalAnswered > 0 && (
-                <div className="stat-card stat-current">
-                  <div className="stat-label">現在</div>
-                  <div className="stat-value">
-                    <strong className="correct">{currentScore}/{totalAnswered}</strong>
-                  </div>
-                  <div className="stat-sub">({currentAccuracy}%)</div>
+          <div className="stats-text-compact">
+            {totalAnswered > 0 && (
+              <span className="stat-text-item">
+                <span className="stat-text-label">現在:</span>
+                <strong className="stat-text-value correct">{currentScore}/{totalAnswered}</strong>
+                <span className="stat-text-sub">({currentAccuracy}%)</span>
+                <span className="stat-text-divider">｜</span>
+              </span>
+            )}
+            <span className="stat-text-item">
+              <span className="stat-text-label">本日:</span>
+              <strong className="stat-text-value correct">{todayAccuracy}%</strong>
+              <span className="stat-text-sub">({todayTotalAnswered}問)</span>
+            </span>
+            <span className="stat-text-divider">｜</span>
+            <span className="stat-text-item">
+              <span className="stat-text-label">定着率:</span>
+              <strong className="stat-text-value mastered">{retentionRate}%</strong>
+              <span className="stat-text-sub">({masteredCount}/{appearedCount})</span>
+            </span>
+            <span className="stat-text-divider">｜</span>
+            <span className="stat-text-item">
+              <span className="stat-text-label">累計:</span>
+              <strong className="stat-text-value">{totalAnsweredCount}問</strong>
+            </span>
+          </div>
+        </div>
+      )}
+      
+      {/* 学習状況タブ（詳細な定着率の内訳） */}
+      {activeTab === 'breakdown' && detailedStats.appearedWords > 0 && (
+        <div className="score-board-content">
+          <div className="retention-breakdown-container">
+            <div className="retention-progress-bar">
+              {detailedStats.masteredPercentage > 0 && (
+                <div 
+                  className="retention-segment retention-mastered"
+                  style={{ width: `${detailedStats.masteredPercentage}%` }}
+                  title={`🟢 完全定着: ${detailedStats.masteredCount}語 (${detailedStats.masteredPercentage}%)`}
+                >
+                  {detailedStats.masteredPercentage >= 10 && (
+                    <span>{detailedStats.masteredPercentage}%</span>
+                  )}
                 </div>
               )}
-              
-              {/* 本日の正答率 */}
-              <div className="stat-card stat-accuracy">
-                <div className="stat-label">本日正答率</div>
-                <div className="stat-value">
-                  <strong className="correct">{todayAccuracy}%</strong>
-                </div>
-                <div className="stat-sub">({todayTotalAnswered}問)</div>
-              </div>
-              
-              {/* 定着率 */}
-              <div className="stat-card stat-retention">
-                <div className="stat-label">定着率</div>
-                <div className="stat-value">
-                  <strong className="mastered">{retentionRate}%</strong>
-                </div>
-                <div className="stat-sub">({masteredCount}/{appearedCount})</div>
-              </div>
-              
-              {/* 累計回答 */}
-              <div className="stat-card stat-total">
-                <div className="stat-label">累計回答</div>
-                <div className="stat-value">
-                  <strong>{totalAnsweredCount}</strong>
-                </div>
-                <div className="stat-sub">問</div>
-              </div>
-            </div>
-          )}
-          
-          {/* モバイル版: タブ切り替え */}
-          {isMobile && (
-            <>
-              <div className="stat-subtabs-mobile">
-                <button 
-                  className={`stat-subtab ${statSubTab === 'accuracy' ? 'active' : ''}`}
-                  onClick={() => setStatSubTab('accuracy')}
+              {detailedStats.learningPercentage > 0 && (
+                <div 
+                  className="retention-segment retention-learning"
+                  style={{ width: `${detailedStats.learningPercentage}%` }}
+                  title={`🟡 学習中: ${detailedStats.learningCount}語 (${detailedStats.learningPercentage}%)`}
                 >
-                  正答率
-                </button>
-                <button 
-                  className={`stat-subtab ${statSubTab === 'retention' ? 'active' : ''}`}
-                  onClick={() => setStatSubTab('retention')}
+                  {detailedStats.learningPercentage >= 10 && (
+                    <span>{detailedStats.learningPercentage}%</span>
+                  )}
+                </div>
+              )}
+              {detailedStats.strugglingPercentage > 0 && (
+                <div 
+                  className="retention-segment retention-struggling"
+                  style={{ width: `${detailedStats.strugglingPercentage}%` }}
+                  title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${detailedStats.strugglingPercentage}%)`}
                 >
-                  定着率
-                </button>
-                <button 
-                  className={`stat-subtab ${statSubTab === 'total' ? 'active' : ''}`}
-                  onClick={() => setStatSubTab('total')}
-                >
-                  累計
-                </button>
-              </div>
-              
-              <div className="stat-mobile-content">
-                {statSubTab === 'accuracy' && (
-                  <div className="stat-mobile-card">
-                    {totalAnswered > 0 && (
-                      <>
-                        <div className="stat-mobile-item">
-                          <span className="stat-mobile-label">現在:</span>
-                          <span className="stat-mobile-value correct">
-                            {currentScore}/{totalAnswered} ({currentAccuracy}%)
-                          </span>
-                        </div>
-                        <div className="stat-mobile-divider"></div>
-                      </>
-                    )}
-                    <div className="stat-mobile-item">
-                      <span className="stat-mobile-label">本日正答率:</span>
-                      <span className="stat-mobile-value correct">
-                        {todayAccuracy}% ({todayTotalAnswered}問)
-                      </span>
-                    </div>
-                  </div>
-                )}
-                
-                {statSubTab === 'retention' && (
-                  <div className="stat-mobile-card">
-                    <div className="stat-mobile-item">
-                      <span className="stat-mobile-label">定着率:</span>
-                      <span className="stat-mobile-value mastered">
-                        {retentionRate}% ({masteredCount}/{appearedCount})
-                      </span>
-                    </div>
-                  </div>
-                )}
-                
-                {statSubTab === 'total' && (
-                  <div className="stat-mobile-card">
-                    <div className="stat-mobile-item">
-                      <span className="stat-mobile-label">累計回答:</span>
-                      <span className="stat-mobile-value">
-                        {totalAnsweredCount}問
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </>
-          )}
-          
-          {/* 詳細な定着率の内訳（横長棒グラフ） */}
-          {detailedStats.appearedWords > 0 && (
-            <div className="retention-breakdown-container">
-              <div className="retention-breakdown-label">
-                📊 学習状況の内訳
-              </div>
-              <div className="retention-progress-bar">
-                {detailedStats.masteredPercentage > 0 && (
-                  <div 
-                    className="retention-segment retention-mastered"
-                    data-percentage={detailedStats.masteredPercentage}
-                    title={`🟢 完全定着: ${detailedStats.masteredCount}語 (${detailedStats.masteredPercentage}%)`}
-                  >
-                    {detailedStats.masteredPercentage >= 15 && (
-                      <span className="retention-segment-label">
-                        🟢 {detailedStats.masteredPercentage}%
-                      </span>
-                    )}
-                  </div>
-                )}
-                {detailedStats.learningPercentage > 0 && (
-                  <div 
-                    className="retention-segment retention-learning"
-                    data-percentage={detailedStats.learningPercentage}
-                    title={`🟡 学習中: ${detailedStats.learningCount}語 (${detailedStats.learningPercentage}%)`}
-                  >
-                    {detailedStats.learningPercentage >= 15 && (
-                      <span className="retention-segment-label">
-                        🟡 {detailedStats.learningPercentage}%
-                      </span>
-                    )}
-                  </div>
-                )}
-                {detailedStats.strugglingPercentage > 0 && (
-                  <div 
-                    className="retention-segment retention-struggling"
-                    data-percentage={detailedStats.strugglingPercentage}
-                    title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${detailedStats.strugglingPercentage}%)`}
-                  >
-                    {detailedStats.strugglingPercentage >= 15 && (
-                      <span className="retention-segment-label">
-                        🔴 {detailedStats.strugglingPercentage}%
-                      </span>
-                    )}
-                  </div>
-                )}
-              </div>
-              <div className="retention-breakdown-details">
-                <span className="retention-detail-item retention-detail-mastered">
-                  🟢 完全定着 {detailedStats.masteredCount}語
-                </span>
-                <span className="retention-detail-item retention-detail-learning">
-                  🟡 学習中 {detailedStats.learningCount}語
-                </span>
-                <span className="retention-detail-item retention-detail-struggling">
-                  🔴 要復習 {detailedStats.strugglingCount}語
-                </span>
-              </div>
-              {detailedStats.weightedRetentionRate !== detailedStats.basicRetentionRate && (
-                <div className="retention-weighted-rate">
-                  💡 加重定着率: <strong>{detailedStats.weightedRetentionRate}%</strong>
-                  <span className="retention-weighted-hint">（学習中を半分評価）</span>
+                  {detailedStats.strugglingPercentage >= 10 && (
+                    <span>{detailedStats.strugglingPercentage}%</span>
+                  )}
                 </div>
               )}
             </div>
-          )}
+            <div className="retention-text-summary">
+              🟢{detailedStats.masteredCount} 🟡{detailedStats.learningCount} 🔴{detailedStats.strugglingCount}
+            </div>
+          </div>
         </div>
       )}
       
       {/* 目標・進捗タブ */}
       {activeTab === 'goals' && (
-        <div className="score-board-content goals-tab-content">
-          {/* 定着予測情報 */}
-          {nearMasteryStats.nearMasteryCount > 0 && (
-            <span className="score-stat near-mastery-stat" title={`あと1回正解で定着する単語が${nearMasteryStats.nearMasteryCount}個あります`}>
-              🎯 <strong className="near-mastery-count">{nearMasteryStats.nearMasteryCount}</strong>
-              <span className="score-stat-sub">定着間近</span>
+        <div className="score-board-content">
+          <div className="goals-compact">
+            {nearMasteryStats.nearMasteryCount > 0 && (
+              <span title={`あと1回正解で定着する単語が${nearMasteryStats.nearMasteryCount}個あります`}>
+                🎯<strong>{nearMasteryStats.nearMasteryCount}</strong>定着間近
+              </span>
+            )}
+            {nearMasteryStats.nearMasteryCount > 0 && <span className="goal-divider">｜</span>}
+            {nearMasteryStats.longTermMemoryCount > 0 && (
+              <span title={`連続5回以上正解で長期記憶に定着した単語が${nearMasteryStats.longTermMemoryCount}個あります`}>
+                🧠<strong>{nearMasteryStats.longTermMemoryCount}</strong>長期記憶
+              </span>
+            )}
+            {nearMasteryStats.longTermMemoryCount > 0 && <span className="goal-divider">｜</span>}
+            {nearMasteryStats.superMemoryCount > 0 && (
+              <span title={`連続7回以上正解で超長期記憶に定着した単語が${nearMasteryStats.superMemoryCount}個あります`}>
+                ✨<strong>{nearMasteryStats.superMemoryCount}</strong>完全定着
+              </span>
+            )}
+            {nearMasteryStats.superMemoryCount > 0 && <span className="goal-divider">｜</span>}
+            <span title={goalMessage}>
+              {goalProgress.goal.icon}<strong className={goalProgress.overallProgress >= 80 ? 'goal-near' : 'goal-far'}>
+                {goalProgress.overallProgress}%
+              </strong>
+              <span className="goal-sub">
+                {goalProgress.goal.name}
+                {goalProgress.estimatedDaysToAchieve > 0 && goalProgress.estimatedDaysToAchieve <= 30 && (
+                  <>·{goalProgress.estimatedDaysToAchieve}日</>
+                )}
+              </span>
             </span>
-          )}
-          
-          {nearMasteryStats.nearMasteryCount > 0 && (
-            <span className="score-stat-divider">|</span>
-          )}
-          
-          {/* 長期記憶達成 */}
-          {nearMasteryStats.longTermMemoryCount > 0 && (
-            <span className="score-stat long-term-memory-stat" title={`連続5回以上正解で長期記憶に定着した単語が${nearMasteryStats.longTermMemoryCount}個あります（30日〜90日間隔で復習）`}>
-              🧠 <strong className="long-term-count">{nearMasteryStats.longTermMemoryCount}</strong>
-              <span className="score-stat-sub">長期記憶</span>
-            </span>
-          )}
-          
-          {nearMasteryStats.longTermMemoryCount > 0 && (
-            <span className="score-stat-divider">|</span>
-          )}
-          
-          {/* 超長期記憶達成 */}
-          {nearMasteryStats.superMemoryCount > 0 && (
-            <span className="score-stat super-memory-stat" title={`連続7回以上正解で超長期記憶に定着した単語が${nearMasteryStats.superMemoryCount}個あります（半年〜1年間隔で復習）`}>
-              ✨ <strong className="super-memory-count">{nearMasteryStats.superMemoryCount}</strong>
-              <span className="score-stat-sub">完全定着</span>
-            </span>
-          )}
-          
-          {nearMasteryStats.superMemoryCount > 0 && (
-            <span className="score-stat-divider">|</span>
-          )}
-          
-          {/* 目標達成情報 */}
-          <span className="score-stat-large goal-progress" title={goalMessage}>
-            {goalProgress.goal.icon} <strong className={goalProgress.overallProgress >= 80 ? 'goal-near' : 'goal-far'}>
-              {goalProgress.overallProgress}%
-            </strong>
-            <span className="score-stat-sub">
-              ({goalProgress.goal.name}
-              {goalProgress.estimatedDaysToAchieve > 0 && goalProgress.estimatedDaysToAchieve <= 30 && (
-                <> · あと{goalProgress.estimatedDaysToAchieve}日</>
-              )}
-              )
-            </span>
-          </span>
-          
-          {/* 忘却アラート - 1個以上の場合に表示 */}
-          {alertSummary.todayReviewCount >= 1 && (
-            <span className="score-stat-divider">|</span>
-          )}
-          {alertSummary.todayReviewCount >= 1 && (
-            <span 
-              className={`score-stat alert-stat ${onReviewFocus ? 'clickable' : ''}`}
-              title={onReviewFocus ? "クリックして要復習問題に集中" : "今日復習すべき単語があります"}
-              onClick={onReviewFocus}
-            >
-              ⏰ <strong className="alert-count">{alertSummary.todayReviewCount}</strong>
-              <span className="score-stat-sub">要復習</span>
-            </span>
-          )}
+            {alertSummary.todayReviewCount >= 1 && (
+              <>
+                <span className="goal-divider">｜</span>
+                <span 
+                  className={onReviewFocus ? 'alert-clickable' : ''}
+                  title={onReviewFocus ? "クリックして要復習問題に集中" : "今日復習すべき単語があります"}
+                  onClick={onReviewFocus}
+                >
+                  ⏰<strong>{alertSummary.todayReviewCount}</strong>要復習
+                </span>
+              </>
+            )}
+          </div>
         </div>
       )}
       
       {/* 履歴タブ */}
       {activeTab === 'history' && (mode === 'translation' || mode === 'spelling') && (
-        <div className="score-board-content history-tab-content">
-          <div className="session-indicator">
-            <div className="session-stats">
-              <span className="session-label">今回:</span>
-              <span className="session-count">{totalAnswered}問</span>
+        <div className="score-board-content">
+          <div className="history-compact">
+            <div className="history-text-line">
+              <span>今回: <strong>{totalAnswered}問</strong></span>
               {totalAnswered > 0 && (
-                <span className="session-breakdown">
-                  {sessionCorrect > 0 && <span className="stat-correct">🟩{sessionCorrect}</span>}
-                  {sessionIncorrect > 0 && <span className="stat-incorrect">🟨{sessionIncorrect}</span>}
-                  {sessionReview > 0 && <span className="stat-review">🟧{sessionReview}</span>}
-                  {sessionMastered > 0 && <span className="stat-mastered">⭐️{sessionMastered}</span>}
-                </span>
+                <>
+                  {sessionCorrect > 0 && <span> 🟩{sessionCorrect}</span>}
+                  {sessionIncorrect > 0 && <span> 🟨{sessionIncorrect}</span>}
+                  {sessionReview > 0 && <span> 🟧{sessionReview}</span>}
+                  {sessionMastered > 0 && <span> ⭐{sessionMastered}</span>}
+                </>
               )}
             </div>
-            <div className="history-indicator">
-              <span className="history-label">履歴:</span>
-              <div className="history-items">
-                {history.length === 0 ? (
-                  <span className="history-empty">データなし</span>
-                ) : (
+            <div className="history-icons">
+              {history.length === 0 ? (
+                <span className="history-empty">履歴なし</span>
+              ) : (
                 history.map((item, idx) => (
                   <span
                     key={idx}
-                    className={`history-item history-${item.status}`}
-                    title={`${item.word} (${item.status === 'correct' ? '正解' : item.status === 'incorrect' ? '不正解' : item.status === 'review' ? '要復習' : '定着'})`}
+                    className="history-icon"
+                    title={`${item.word}`}
                   >
                     {item.status === 'correct' ? '🟩' : 
                      item.status === 'incorrect' ? '🟨' : 
-                     item.status === 'review' ? '🟧' : '⭐️'}
+                     item.status === 'review' ? '🟧' : '⭐'}
                   </span>
                 ))
               )}
             </div>
-          </div>
           </div>
         </div>
       )}
