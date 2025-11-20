@@ -9,7 +9,7 @@ import {
 } from './indexedDBStorage';
 
 const MIGRATION_FLAG_KEY = 'indexeddb-migration-completed';
-const MIGRATION_VERSION = '1.0';
+const MIGRATION_VERSION = '1.1'; // バージョンアップしてエラー修正版で再移行
 
 // 移行済みチェック
 export function isMigrationCompleted(): boolean {
@@ -36,14 +36,16 @@ function getLocalStorageData(key: string): any {
   try {
     const data = localStorage.getItem(key);
     if (!data) return null;
+    
+    // 文字列データは直接返す（JSONパースしない）
+    if (key.includes('lastLogin') || key.includes('Date') || key.includes('daily-plan') || key.includes('score-board')) {
+      return null; // これらは別の方法で処理
+    }
+    
     return JSON.parse(data);
   } catch (error) {
-    // lastLoginDate/lastLoginDataなど文字列データの場合は警告のみ
-    if (key.includes('lastLogin') || key.includes('Date')) {
-      console.warn(`${key} is not JSON format (expected - using raw string instead)`);
-    } else {
-      console.error(`Failed to get ${key} from localStorage:`, error);
-    }
+    // JSONパースエラーは警告のみ（文字列データの可能性）
+    console.warn(`${key} is not valid JSON (skipping)`);
     return null;
   }
 }
@@ -175,7 +177,7 @@ async function migrateDailyStats(): Promise<boolean> {
 // その他の設定データの移行
 async function migrateSettings(): Promise<boolean> {
   try {
-    // JSON形式のデータ
+    // JSON形式のデータのみ
     const jsonSettingsKeys = [
       'user-goal-level',
       'loginStreak',
@@ -191,9 +193,15 @@ async function migrateSettings(): Promise<boolean> {
 
     let migratedCount = 0;
     
-    // JSON形式の設定を移行
+    // JSON形式の設定を移行（文字列データは除外）
     for (const key of jsonSettingsKeys) {
       try {
+        // lastLoginで始まるキーはスキップ
+        if (key.includes('lastLogin')) {
+          console.warn(`Skipping ${key} from JSON migration`);
+          continue;
+        }
+        
         const value = getLocalStorageData(key);
         if (value !== null) {
           await putToDB(STORES.SETTINGS, value, key);
