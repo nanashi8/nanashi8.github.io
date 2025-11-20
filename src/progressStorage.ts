@@ -289,26 +289,48 @@ export async function loadProgress(): Promise<UserProgress> {
     const data = await loadProgressData();
     
     if (!data) {
-      return initializeProgress();
+      const initialized = initializeProgress();
+      updateProgressCache(initialized);
+      return initialized;
     }
     
     const progress = data as UserProgress;
     
-    // 古いデータ構造の場合は初期化（wordProgressを追加）
-    if (!progress.statistics || !progress.questionSetStats) {
-      return initializeProgress();
+    // データ構造の完全性チェック
+    if (!progress.statistics) {
+      progress.statistics = {
+        totalQuizzes: 0,
+        totalQuestions: 0,
+        totalCorrect: 0,
+        averageScore: 0,
+        bestScore: 0,
+        streakDays: 0,
+        lastStudyDate: 0,
+        studyDates: [],
+      };
+    }
+    if (!progress.questionSetStats) {
+      progress.questionSetStats = {};
     }
     if (!progress.wordProgress) {
       progress.wordProgress = {};
+    }
+    if (!progress.results) {
+      progress.results = [];
     }
     
     // 起動時に自動圧縮を実行
     compressProgressData(progress);
     
+    // キャッシュを更新
+    updateProgressCache(progress);
+    
     return progress;
   } catch (error) {
     console.error('進捗データの読み込みエラー:', error);
-    return initializeProgress();
+    const initialized = initializeProgress();
+    updateProgressCache(initialized);
+    return initialized;
   }
 }
 
