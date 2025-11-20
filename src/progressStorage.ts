@@ -2044,47 +2044,113 @@ export function resetStatsByModeDifficulty(mode: 'translation' | 'spelling', dif
   const progress = loadProgress();
   
   // 該当するクイズ結果を削除
+  const removedResults = progress.results.filter(r => 
+    r.mode === mode && r.difficulty === difficulty
+  );
   progress.results = progress.results.filter(r => 
     !(r.mode === mode && r.difficulty === difficulty)
   );
   
-  // 該当する単語の進捗をリセット
-  // モードと難易度に該当する単語の統計をリセット
-  const allQuestions = loadAllQuestions();
-  const targetWords = allQuestions
-    .filter(q => q.difficulty === difficulty)
-    .map(q => q.word);
+  // 削除された結果から単語リストを抽出
+  const affectedWords = new Set<string>();
+  removedResults.forEach(result => {
+    // 正解した単語
+    const totalWords = result.total;
+    const incorrectWords = result.incorrectWords || [];
+    
+    // すべての単語を収集（正解・不正解両方）
+    incorrectWords.forEach(word => affectedWords.add(word.toLowerCase()));
+    
+    // resultsには正解した単語のリストが無いので、
+    // questionSetから該当する問題セットの単語を取得する必要がある
+  });
   
-  targetWords.forEach(word => {
-    if (progress.wordProgress[word]) {
-      const wordStat = progress.wordProgress[word];
-      
+  // questionSetStatsから該当するセットを削除
+  Object.keys(progress.questionSetStats).forEach(setId => {
+    // セットIDに難易度が含まれているかチェック
+    if (setId.includes(difficulty)) {
+      delete progress.questionSetStats[setId];
+    }
+  });
+  
+  // 全単語の進捗データを見直し
+  Object.keys(progress.wordProgress).forEach(word => {
+    const wordStat = progress.wordProgress[word];
+    
+    // 該当難易度の単語かチェック
+    if (wordStat.difficulty === difficulty) {
       // モード別の統計をリセット
       if (mode === 'translation') {
-        // 和訳モードの統計をリセット
         wordStat.translationAttempts = 0;
         wordStat.translationCorrect = 0;
         wordStat.translationStreak = 0;
       } else if (mode === 'spelling') {
-        // スペルモードの統計をリセット
         wordStat.spellingAttempts = 0;
         wordStat.spellingCorrect = 0;
         wordStat.spellingStreak = 0;
       }
       
       // 全体の統計を再計算
-      wordStat.totalAttempts = (wordStat.translationAttempts || 0) + (wordStat.spellingAttempts || 0);
-      wordStat.correctCount = (wordStat.translationCorrect || 0) + (wordStat.spellingCorrect || 0);
+      const transAttempts = wordStat.translationAttempts || 0;
+      const transCorrect = wordStat.translationCorrect || 0;
+      const spellAttempts = wordStat.spellingAttempts || 0;
+      const spellCorrect = wordStat.spellingCorrect || 0;
+      
+      wordStat.totalAttempts = transAttempts + spellAttempts;
+      wordStat.correctCount = transCorrect + spellCorrect;
+      wordStat.incorrectCount = (transAttempts - transCorrect) + (spellAttempts - spellCorrect);
       wordStat.consecutiveCorrect = Math.max(wordStat.translationStreak || 0, wordStat.spellingStreak || 0);
       
       // 統計が0になった場合は削除
-      if (wordStat.totalAttempts === 0) {
+      if (wordStat.totalAttempts === 0 || wordStat.totalAttempts === undefined) {
         delete progress.wordProgress[word];
+      } else {
+        // masteryLevelを再評価
+        const accuracy = wordStat.totalAttempts > 0 
+          ? wordStat.correctCount / wordStat.totalAttempts 
+          : 0;
+        
+        if (wordStat.consecutiveCorrect >= 3 || accuracy >= 0.9) {
+          wordStat.masteryLevel = 'mastered';
+        } else if (wordStat.totalAttempts > 0) {
+          wordStat.masteryLevel = 'learning';
+        } else {
+          wordStat.masteryLevel = 'new';
+        }
+        
+        // difficultyScoreを再計算
+        wordStat.difficultyScore = calculateDifficultyScore(wordStat);
       }
     }
   });
   
+  // 全体統計を再計算
+  recalculateStatistics(progress);
+  
   saveProgress(progress);
+  
+  console.log(`${mode}モードの${difficulty}をリセット: ${removedResults.length}件の結果を削除`);
+}
+
+/**
+ * 全体統計を再計算
+ */
+function recalculateStatistics(progress: UserProgress): void {
+  const stats = progress.statistics;
+  
+  // resultsから統計を再計算
+  stats.totalQuizzes = progress.results.length;
+  stats.totalQuestions = progress.results.reduce((sum, r) => sum + r.total, 0);
+  stats.totalCorrect = progress.results.reduce((sum, r) => sum + r.score, 0);
+  stats.averageScore = stats.totalQuestions > 0 
+    ? Math.round((stats.totalCorrect / stats.totalQuestions) * 100) 
+    : 0;
+  stats.bestScore = progress.results.length > 0
+    ? Math.max(...progress.results.map(r => r.percentage))
+    : 0;
+  
+  // 連続学習日数の再計算は複雑なので、既存の値を保持
+  // （日付ベースの計算が必要）
 }
 
 // 全ての問題を読み込む補助関数
@@ -2098,6 +2164,48 @@ function loadAllQuestions(): Array<{ word: string; difficulty: string }> {
     console.error('Failed to load questions cache:', e);
   }
   return [];
+}
+
+/**
+ * すべての学習記録を完全にリセット
+ */
+export function resetAllProgress(): void {
+  // LocalStorageの全ての関連キーを削除
+  const keysToRemove: string[] = [];
+  
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key && (
+      key.startsWith('quiz-result-') ||
+      key === 'quiz-app-user-progress' ||
+      key === 'progress-data' ||
+      key.startsWith('session-history-') ||
+      key === 'session-history' ||
+      key === 'skipped-words' ||
+      key === 'skip-groups' ||
+      key === 'improvement-progress' ||
+      key === 'study-settings' ||
+      key === 'reading-passages-data' ||
+      key === 'all-questions-cache'
+    )) {
+      keysToRemove.push(key);
+    }
+  }
+  
+  // 一括削除
+  keysToRemove.forEach(key => {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      console.error(`Failed to remove ${key}:`, e);
+    }
+  });
+  
+  // 初期化データを保存
+  const initialProgress = initializeProgress();
+  saveProgress(initialProgress);
+  
+  console.log(`リセット完了: ${keysToRemove.length}個のキーを削除しました`);
 }
 
 /**

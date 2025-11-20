@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {
   getStatsByModeDifficulty,
   resetStatsByModeDifficulty,
+  resetAllProgress,
   loadProgress,
   getStudyCalendarData,
   getWeeklyStats,
@@ -117,26 +118,17 @@ function StatsView({ }: StatsViewProps) {
   // 全成績リセット
   const handleResetAll = () => {
     if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
-      const keysToRemove = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key && (
-          key.startsWith('quiz-result-') || 
-          key === 'progress-data' ||
-          key === 'session-history' ||
-          key === 'skipped-words' ||
-          key === 'skip-groups' ||
-          key === 'improvement-progress'
-        )) {
-          keysToRemove.push(key);
-        }
-      }
-      keysToRemove.forEach(key => localStorage.removeItem(key));
+      // resetAllProgressを使用して完全リセット
+      resetAllProgress();
       
       // UIを即座に更新
       setTranslationStats({ labels: [], accuracyData: [], retentionData: [] });
       setSpellingStats({ labels: [], accuracyData: [], retentionData: [] });
       setCalendarData([]);
+      setWeeklyStats(null);
+      setMonthlyStats(null);
+      setCumulativeData([]);
+      setRetentionTrend(null);
       setWeakWords([]);
       setOvercomeWords([]);
       setRecentlyMastered([]);
