@@ -9,6 +9,8 @@ import {
   getCumulativeProgressData,
   getRetentionTrend,
   getWeakWords,
+  getCurrentWeakWords,
+  getOvercomeWeakWords,
   getRecentlyMasteredWords,
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
@@ -38,6 +40,7 @@ function StatsView({ }: StatsViewProps) {
   const [cumulativeData, setCumulativeData] = useState<any[]>([]);
   const [retentionTrend, setRetentionTrend] = useState<any>(null);
   const [weakWords, setWeakWords] = useState<any[]>([]);
+  const [overcomeWords, setOvercomeWords] = useState<any[]>([]);
   const [recentlyMastered, setRecentlyMastered] = useState<any[]>([]);
   const [streakDays, setStreakDays] = useState<number>(0);
 
@@ -79,7 +82,8 @@ function StatsView({ }: StatsViewProps) {
     setMonthlyStats(getMonthlyStats());
     setCumulativeData(getCumulativeProgressData(12));
     setRetentionTrend(getRetentionTrend());
-    setWeakWords(getWeakWords(10));
+    setWeakWords(getCurrentWeakWords(10));
+    setOvercomeWords(getOvercomeWeakWords(10));
     setRecentlyMastered(getRecentlyMasteredWords(7, 5));
     
     const progress = loadProgress();
@@ -116,13 +120,30 @@ function StatsView({ }: StatsViewProps) {
       const keysToRemove = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && (key.startsWith('quiz-result-') || key === 'progress-data')) {
+        if (key && (
+          key.startsWith('quiz-result-') || 
+          key === 'progress-data' ||
+          key === 'session-history' ||
+          key === 'skipped-words' ||
+          key === 'skip-groups' ||
+          key === 'improvement-progress'
+        )) {
           keysToRemove.push(key);
         }
       }
       keysToRemove.forEach(key => localStorage.removeItem(key));
+      
+      // UIを即座に更新
+      setTranslationStats({ labels: [], accuracyData: [], retentionData: [] });
+      setSpellingStats({ labels: [], accuracyData: [], retentionData: [] });
+      setCalendarData([]);
+      setWeakWords([]);
+      setOvercomeWords([]);
+      setRecentlyMastered([]);
+      setStreakDays(0);
+      
       alert('学習記録をリセットしました');
-      window.location.reload();
+      loadData(); // データを再読み込み
     }
   };
 
@@ -244,7 +265,7 @@ function StatsView({ }: StatsViewProps) {
       {/* 苦手単語 & 克服した単語 */}
       <div className="stats-section-words">
         <div className="words-column">
-          <h3>😰 苦手単語トップ10</h3>
+          <h3>😰 苦手単語トップ10（要復習）</h3>
           {weakWords.length > 0 ? (
             <ul className="word-list">
               {weakWords.map((w, idx) => (
@@ -253,12 +274,36 @@ function StatsView({ }: StatsViewProps) {
                   <span className="word-text">{w.word}</span>
                   <span className="word-stats">
                     ❌{w.mistakes}回
+                    {w.recentAccuracy > 0 && (
+                      <span className="word-accuracy"> ({w.recentAccuracy}%)</span>
+                    )}
                   </span>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="no-data">データがありません</p>
+            <p className="no-data">苦手な単語はありません！🎉</p>
+          )}
+        </div>
+        
+        <div className="words-column">
+          <h3>✨ 克服した苦手単語</h3>
+          {overcomeWords.length > 0 ? (
+            <ul className="word-list">
+              {overcomeWords.map((w, idx) => (
+                <li key={idx} className="word-item overcome">
+                  <span className="word-text">{w.word}</span>
+                  <span className="word-stats overcome-stats">
+                    <span className="overcome-before">❌{w.totalMistakes}回</span>
+                    <span className="overcome-arrow">→</span>
+                    <span className="overcome-after">📈{w.recentAccuracy}%</span>
+                    <span className="overcome-badge">🎉</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="no-data">まだ克服した苦手単語はありません</p>
           )}
         </div>
         

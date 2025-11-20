@@ -38,10 +38,17 @@ function ScoreBoard({
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
   const [activeTab, setActiveTab] = useState<'stats' | 'goals' | 'history'>('stats');
-
-  // モバイル判定
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const historyLimit = isMobile ? 10 : 20;
+
+  // ウィンドウサイズ変更を監視
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // 履歴を取得（リアルタイム更新用）
   useEffect(() => {
@@ -90,31 +97,84 @@ function ScoreBoard({
   // 現在のセッションの正答率を計算
   const currentAccuracy = totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0;
 
+  // タブの配列（履歴タブはモードによって条件付き）
+  const tabs: Array<'stats' | 'goals' | 'history'> = 
+    mode === 'translation' || mode === 'spelling' 
+      ? ['stats', 'goals', 'history'] 
+      : ['stats', 'goals'];
+
+  // タブ切り替え関数
+  const handlePrevTab = () => {
+    const currentIndex = tabs.indexOf(activeTab);
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1;
+    setActiveTab(tabs[prevIndex]);
+  };
+
+  const handleNextTab = () => {
+    const currentIndex = tabs.indexOf(activeTab);
+    const nextIndex = currentIndex < tabs.length - 1 ? currentIndex + 1 : 0;
+    setActiveTab(tabs[nextIndex]);
+  };
+
+  // タブ名の取得
+  const getTabName = (tab: 'stats' | 'goals' | 'history') => {
+    switch (tab) {
+      case 'stats': return '📊 基本統計';
+      case 'goals': return '🎯 目標・進捗';
+      case 'history': return '📜 履歴';
+    }
+  };
+
   return (
     <div className="score-board-compact">
-      {/* タブナビゲーション */}
-      <div className="score-board-tabs">
-        <button 
-          className={`score-tab ${activeTab === 'stats' ? 'active' : ''}`}
-          onClick={() => setActiveTab('stats')}
-        >
-          📊 基本統計
-        </button>
-        <button 
-          className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
-          onClick={() => setActiveTab('goals')}
-        >
-          🎯 目標・進捗
-        </button>
-        {(mode === 'translation' || mode === 'spelling') && (
+      {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
+      {!isMobile && (
+        <div className="score-board-tabs">
           <button 
-            className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
-            onClick={() => setActiveTab('history')}
+            className={`score-tab ${activeTab === 'stats' ? 'active' : ''}`}
+            onClick={() => setActiveTab('stats')}
           >
-            📜 履歴
+            📊 基本統計
           </button>
-        )}
-      </div>
+          <button 
+            className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
+            onClick={() => setActiveTab('goals')}
+          >
+            🎯 目標・進捗
+          </button>
+          {(mode === 'translation' || mode === 'spelling') && (
+            <button 
+              className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
+              onClick={() => setActiveTab('history')}
+            >
+              📜 履歴
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* タブナビゲーション: モバイル版（左右ボタンで切り替え） */}
+      {isMobile && (
+        <div className="score-board-tabs-mobile">
+          <button 
+            className="tab-nav-btn tab-nav-prev"
+            onClick={handlePrevTab}
+            title="前のタブ"
+          >
+            ◀
+          </button>
+          <div className="current-tab-name">
+            {getTabName(activeTab)}
+          </div>
+          <button 
+            className="tab-nav-btn tab-nav-next"
+            onClick={handleNextTab}
+            title="次のタブ"
+          >
+            ▶
+          </button>
+        </div>
+      )}
 
       {/* 補修モードインジケーター */}
       {isReviewFocusMode && (

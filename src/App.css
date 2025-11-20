@@ -208,7 +208,11 @@
 }
 
 .dark-mode .word-card-meaning {
-  color: #b0b0b0;
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .dark-mode .word-card:hover {
@@ -362,8 +366,9 @@
 }
 
 .dark-mode .passage-selector {
-  background: #2a2a2a;
+  background: #1e1e1e;
   color: #e0e0e0;
+  border: 1px solid #444;
 }
 
 .dark-mode .passage-selector h3 {
@@ -372,7 +377,7 @@
 
 .dark-mode .passage-btn {
   background: #2a2a2a;
-  border-color: #444;
+  border-color: #555;
   color: #e0e0e0;
 }
 
@@ -385,6 +390,17 @@
   background: #667eea;
   border-color: #667eea;
   color: white;
+}
+
+.dark-mode .passage-select {
+  background: #2a2a2a;
+  border-color: #667eea;
+  color: #e0e0e0;
+}
+
+.dark-mode .passage-select option {
+  background: #2a2a2a;
+  color: #e0e0e0;
 }
 
 .dark-mode .reading-content {
@@ -467,7 +483,13 @@
 }
 
 .dark-mode .phrase-translation {
-  border-top-color: #444;
+  background: #1e1e1e;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+.dark-mode .translation-text {
+  color: #b8e986;
 }
 
 .dark-mode .word-meaning {
@@ -1198,6 +1220,72 @@ option {
 /* デスクトップでタブを非表示、全表示 */
 .score-tabs-mobile {
   display: none;
+}
+
+/* モバイル版タブナビゲーション（左右ボタン） */
+@media (max-width: 768px) {
+  .score-board-tabs {
+    display: none; /* モバイルではデスクトップ版を非表示 */
+  }
+
+  .score-tabs-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  .tab-nav-btn {
+    padding: 8px 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.2s;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .tab-nav-btn:hover {
+    background: #5568d3;
+    transform: scale(1.05);
+  }
+
+  .tab-nav-btn:active {
+    transform: scale(0.95);
+  }
+
+  .current-tab-name {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dark-mode .score-tabs-mobile {
+    background: #2a2a2a;
+  }
+
+  .dark-mode .current-tab-name {
+    color: #e0e0e0;
+  }
 }
 
 .score-tab-content {
@@ -3174,7 +3262,6 @@ option {
   font-size: max(16px, 0.95em);
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
   touch-action: manipulation;
   min-height: 44px;
   /* iOSタッチ最適化 */
@@ -3182,11 +3269,11 @@ option {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+  will-change: background;
 }
 
 .phrase-translation-btn:hover {
   background: #5568d3;
-  transform: translateY(-1px);
 }
 
 .word {
@@ -5273,83 +5360,111 @@ option {
     padding-bottom: calc(20px + env(safe-area-inset-bottom));
   }
 
-  /* 読解タブの最適化 */
+  /* 読解タブの最適化（中央寄せ、余白最小化） */
   .reading-view {
-    padding: 4px;
+    padding: 0;
+    margin: 0 auto;
     width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
   }
 
   .passage-selector {
     padding: 8px;
-    margin-bottom: 10px;
-    width: 100%;
+    margin: 0 auto 8px;
+    width: calc(100% - 8px);
+    max-width: 100%;
     box-sizing: border-box;
   }
 
   .passage-select {
-    padding: 12px;
-    font-size: max(16px, 1em);
+    padding: 10px;
+    font-size: max(16px, 0.95em);
     width: 100%;
   }
 
   .reading-content {
-    padding: 8px 4px;
+    padding: 4px;
+    margin: 0 auto;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
   .passage-title {
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 0 4px;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    text-align: center;
   }
 
   .phrase-cards {
-    max-height: 55vh;
-    gap: 10px;
-    padding: 8px;
-    margin: 10px 0;
+    max-height: 60vh;
+    gap: 8px;
+    padding: 4px;
+    margin: 8px auto;
     width: 100%;
     box-sizing: border-box;
   }
 
   .phrase-lines {
-    max-height: 55vh;
-    gap: 12px;
-    padding: 8px;
-    margin: 10px 0;
+    max-height: 60vh;
+    gap: 10px;
+    padding: 4px;
+    margin: 8px auto;
     width: 100%;
     box-sizing: border-box;
   }
 
   .phrase-line {
-    padding: 8px 4px;
+    padding: 6px 2px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .phrase-words-row {
-    gap: 4px;
-    margin-bottom: 8px;
+    gap: 3px;
+    margin-bottom: 6px;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
   }
 
   .phrase-card {
-    padding: 8px 4px;
+    padding: 6px 2px;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
   }
 
   .phrase-words {
-    gap: 4px;
-    margin-bottom: 8px;
+    gap: 3px;
+    margin-bottom: 6px;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
+  }
+
+  /* リセットボタンの表示修正 */
+  .reading-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reset-reading-btn {
+    flex-shrink: 0;
+    width: auto;
+    max-width: 100%;
+    padding: 8px 12px;
+    font-size: 0.85em;
+    white-space: nowrap;
   }
 
   .word-card {
@@ -8908,7 +9023,6 @@ option {
   border: 1px solid #dee2e6;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s;
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
@@ -8918,6 +9032,7 @@ option {
   font-weight: 500;
   min-width: 50px;
   font-family: 'Times New Roman', 'Georgia', serif;
+  will-change: transform, background;
 }
 
 .word-card-word {
@@ -8929,24 +9044,27 @@ option {
 }
 
 .word-card-meaning {
-  font-size: 0.75em;
-  color: #666;
+  font-size: 0.8em;
+  color: #444;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.3;
   max-width: 100px;
   word-wrap: break-word;
   font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  font-weight: 500;
+  background: rgba(102, 126, 234, 0.05);
+  padding: 3px 5px;
+  border-radius: 3px;
 }
 
 .word-card:hover {
   background: #e7f3ff;
   border-color: #667eea;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+  transform: translateY(-1px);
 }
 
 .word-card:active {
-  transform: translateY(0);
+  transform: none;
   background: #d0e7ff;
 }
 
@@ -9334,11 +9452,15 @@ option {
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9em;
-  transition: background 0.2s;
+  will-change: background;
 }
 
 .show-translation-btn:hover {
   background: #5568d3;
+}
+
+.show-translation-btn:active {
+  background: #4a5bc4;
 }
 
 /* 読解タブのダークモード */
@@ -9732,6 +9854,58 @@ option {
   border-left: 4px solid #4caf50;
 }
 
+.word-item.overcome {
+  border-left: 4px solid #ff9800;
+  background: linear-gradient(to right, #fff9e6 0%, #ffffff 100%);
+  animation: overcome-glow 2s ease-in-out infinite;
+}
+
+@keyframes overcome-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.4);
+  }
+}
+
+.overcome-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9em;
+}
+
+.overcome-before {
+  color: #f44336;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.overcome-arrow {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.overcome-after {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.overcome-badge {
+  font-size: 1.1em;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 .word-rank {
   font-weight: bold;
   color: #666;
@@ -9865,6 +10039,18 @@ option {
 
 .dark-mode .word-stats {
   color: #aaa;
+}
+
+.dark-mode .word-item.overcome {
+  background: linear-gradient(to right, #3a3000 0%, #2a2a2a 100%);
+}
+
+.dark-mode .overcome-before {
+  color: #f88;
+}
+
+.dark-mode .overcome-after {
+  color: #6f6;
 }
 
 /* ========== 時間帯別AI挨拶バナー ========== */

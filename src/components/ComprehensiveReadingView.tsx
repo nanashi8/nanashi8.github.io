@@ -892,7 +892,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     className="show-translation-btn"
                     onClick={() => handleShowPhraseTranslation(phraseIdx)}
                   >
-                    {!wordMeaningsVisible[phraseIdx] ? '単語の意味を表示 ▼' : 'フレーズの訳を表示 ▼'}
+                    {!wordMeaningsVisible[phraseIdx] ? '単語の意味を表示 ▼' : 'フレーズの意味を表示 ▼'}
                   </button>
                 )}
               </div>

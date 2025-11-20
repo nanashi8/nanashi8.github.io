@@ -184,6 +184,15 @@ export interface WordProgress {
   skipExcludeUntil?: number; // この日時まで出題除外（タイムスタンプ）
   needsVerification?: boolean; // AI学習アシスタント: 検証が必要
   verificationReason?: string; // AI学習アシスタント: 検証が必要な理由
+  
+  // モード別統計（難易度別リセット用）
+  totalAttempts?: number; // 総試行回数
+  translationAttempts?: number; // 和訳モードの試行回数
+  translationCorrect?: number; // 和訳モードの正解回数
+  translationStreak?: number; // 和訳モードの連続正解数
+  spellingAttempts?: number; // スペルモードの試行回数
+  spellingCorrect?: number; // スペルモードの正解回数
+  spellingStreak?: number; // スペルモードの連続正解数
 }
 
 export interface UserProgress {
@@ -586,6 +595,135 @@ export function getWeakWords(limit: number = 10): Array<{ word: string; mistakes
     .slice(0, limit);
 }
 
+/**
+ * 克服した苦手単語を取得
+ * 条件: 累積5回以上間違えたが、最近20回の正答率80%以上 & 連続3回以上正解中
+ */
+export function getOvercomeWeakWords(limit: number = 10): Array<{
+  word: string;
+  totalMistakes: number;
+  recentAccuracy: number;
+  overcomeScore: number; // 克服度（高いほど印象的な克服）
+}> {
+  const progress = loadProgress();
+  
+  // 累積の間違い回数を集計
+  const wordMistakes = new Map<string, number>();
+  progress.results.forEach(result => {
+    result.incorrectWords.forEach(word => {
+      wordMistakes.set(word, (wordMistakes.get(word) || 0) + 1);
+    });
+  });
+  
+  const overcomeWords: Array<{
+    word: string;
+    totalMistakes: number;
+    recentAccuracy: number;
+    overcomeScore: number;
+  }> = [];
+  
+  // 累積で5回以上間違えた単語のみ対象
+  wordMistakes.forEach((mistakes, word) => {
+    if (mistakes < 5) return;
+    
+    const wp = progress.wordProgress[word];
+    if (!wp) return;
+    
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    if (totalAttempts === 0) return;
+    
+    // 最近20回の正答率を計算（データがない場合は全体の正答率）
+    const recentAttempts = Math.min(totalAttempts, 20);
+    const accuracy = (wp.correctCount / totalAttempts) * 100;
+    
+    // 克服条件:
+    // 1. 最近の正答率が80%以上
+    // 2. 連続3回以上正解中 OR 全体の正答率が85%以上
+    const hasHighAccuracy = accuracy >= 80;
+    const isCurrentlyMastered = wp.consecutiveCorrect >= 3 || accuracy >= 85;
+    
+    if (hasHighAccuracy && isCurrentlyMastered) {
+      // 克服度 = 間違い回数 × 正答率（間違いが多かったほど、そして今の正答率が高いほど印象的）
+      const overcomeScore = mistakes * accuracy;
+      
+      overcomeWords.push({
+        word,
+        totalMistakes: mistakes,
+        recentAccuracy: Math.round(accuracy),
+        overcomeScore,
+      });
+    }
+  });
+  
+  // 克服度でソート（最も印象的な克服から）
+  return overcomeWords
+    .sort((a, b) => b.overcomeScore - a.overcomeScore)
+    .slice(0, limit);
+}
+
+/**
+ * 現在の苦手単語を取得（克服済みを除外）
+ * 克服済みの単語は除外し、まだ苦手な単語のみを返す
+ */
+export function getCurrentWeakWords(limit: number = 10): Array<{
+  word: string;
+  mistakes: number;
+  recentAccuracy: number;
+}> {
+  const progress = loadProgress();
+  
+  // 累積の間違い回数を集計
+  const wordMistakes = new Map<string, number>();
+  progress.results.forEach(result => {
+    result.incorrectWords.forEach(word => {
+      wordMistakes.set(word, (wordMistakes.get(word) || 0) + 1);
+    });
+  });
+  
+  const currentWeakWords: Array<{
+    word: string;
+    mistakes: number;
+    recentAccuracy: number;
+  }> = [];
+  
+  wordMistakes.forEach((mistakes, word) => {
+    const wp = progress.wordProgress[word];
+    
+    // WordProgressがない場合は苦手として扱う
+    if (!wp) {
+      currentWeakWords.push({
+        word,
+        mistakes,
+        recentAccuracy: 0,
+      });
+      return;
+    }
+    
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
+    
+    // 克服判定（getOvercomeWeakWordsと同じ条件）
+    const isOvercome = 
+      mistakes >= 5 && 
+      accuracy >= 80 && 
+      (wp.consecutiveCorrect >= 3 || accuracy >= 85);
+    
+    // 克服していない場合のみリストに追加
+    if (!isOvercome) {
+      currentWeakWords.push({
+        word,
+        mistakes,
+        recentAccuracy: Math.round(accuracy),
+      });
+    }
+  });
+  
+  // 間違い回数でソート
+  return currentWeakWords
+    .sort((a, b) => b.mistakes - a.mistakes)
+    .slice(0, limit);
+}
+
 // 日別の学習時間を取得
 export function getDailyStudyTime(days: number = 7): Array<{ date: string; timeSpent: number }> {
   const progress = loadProgress();
@@ -865,7 +1003,8 @@ export function updateWordProgress(
   word: string,
   isCorrect: boolean,
   responseTime: number, // ミリ秒
-  userRating?: number // 1-10のユーザー評価（オプション）
+  userRating?: number, // 1-10のユーザー評価（オプション）
+  mode?: 'translation' | 'spelling' | 'reading' // モード情報
 ): void {
   const progress = loadProgress();
   
@@ -885,6 +1024,28 @@ export function updateWordProgress(
     wordProgress.consecutiveIncorrect++;
     wordProgress.consecutiveCorrect = 0;
   }
+  
+  // モード別統計を更新
+  if (mode === 'translation') {
+    wordProgress.translationAttempts = (wordProgress.translationAttempts || 0) + 1;
+    if (isCorrect) {
+      wordProgress.translationCorrect = (wordProgress.translationCorrect || 0) + 1;
+      wordProgress.translationStreak = (wordProgress.translationStreak || 0) + 1;
+    } else {
+      wordProgress.translationStreak = 0;
+    }
+  } else if (mode === 'spelling') {
+    wordProgress.spellingAttempts = (wordProgress.spellingAttempts || 0) + 1;
+    if (isCorrect) {
+      wordProgress.spellingCorrect = (wordProgress.spellingCorrect || 0) + 1;
+      wordProgress.spellingStreak = (wordProgress.spellingStreak || 0) + 1;
+    } else {
+      wordProgress.spellingStreak = 0;
+    }
+  }
+  
+  // 総試行回数を更新
+  wordProgress.totalAttempts = (wordProgress.translationAttempts || 0) + (wordProgress.spellingAttempts || 0);
   
   // 応答時間を更新
   wordProgress.totalResponseTime += responseTime;
@@ -1887,17 +2048,56 @@ export function resetStatsByModeDifficulty(mode: 'translation' | 'spelling', dif
     !(r.mode === mode && r.difficulty === difficulty)
   );
   
-  // 該当する単語の進捗をリセット（完全には削除せず、統計をリセット）
-  Object.keys(progress.wordProgress).forEach(word => {
-    const wordStat = progress.wordProgress[word];
-    // この難易度・モードに関連する試行のみリセット
-    // 簡易的に全体をリセット（より詳細な実装も可能）
-    if (wordStat.totalAttempts > 0) {
-      // 部分的なリセットは複雑なので、全モード・難易度でリセットする場合のみサポート
+  // 該当する単語の進捗をリセット
+  // モードと難易度に該当する単語の統計をリセット
+  const allQuestions = loadAllQuestions();
+  const targetWords = allQuestions
+    .filter(q => q.difficulty === difficulty)
+    .map(q => q.word);
+  
+  targetWords.forEach(word => {
+    if (progress.wordProgress[word]) {
+      const wordStat = progress.wordProgress[word];
+      
+      // モード別の統計をリセット
+      if (mode === 'translation') {
+        // 和訳モードの統計をリセット
+        wordStat.translationAttempts = 0;
+        wordStat.translationCorrect = 0;
+        wordStat.translationStreak = 0;
+      } else if (mode === 'spelling') {
+        // スペルモードの統計をリセット
+        wordStat.spellingAttempts = 0;
+        wordStat.spellingCorrect = 0;
+        wordStat.spellingStreak = 0;
+      }
+      
+      // 全体の統計を再計算
+      wordStat.totalAttempts = (wordStat.translationAttempts || 0) + (wordStat.spellingAttempts || 0);
+      wordStat.correctCount = (wordStat.translationCorrect || 0) + (wordStat.spellingCorrect || 0);
+      wordStat.consecutiveCorrect = Math.max(wordStat.translationStreak || 0, wordStat.spellingStreak || 0);
+      
+      // 統計が0になった場合は削除
+      if (wordStat.totalAttempts === 0) {
+        delete progress.wordProgress[word];
+      }
     }
   });
   
   saveProgress(progress);
+}
+
+// 全ての問題を読み込む補助関数
+function loadAllQuestions(): Array<{ word: string; difficulty: string }> {
+  try {
+    const stored = localStorage.getItem('all-questions-cache');
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch (e) {
+    console.error('Failed to load questions cache:', e);
+  }
+  return [];
 }
 
 /**

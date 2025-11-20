@@ -251,7 +251,7 @@ function SpellingView({
 
     // 単語進捗を更新
     if (currentQuestion) {
-      updateWordProgress(currentQuestion.word, isCorrect, responseTime);
+      updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'spelling');
       
       // AI学習アシスタント: スキップした単語の検証
       const progress = loadProgress();
@@ -362,7 +362,7 @@ function SpellingView({
     addToSkipGroup(currentQuestion.word);
     
     // 単語進捗を更新（不正解として記録）
-    updateWordProgress(currentQuestion.word, false, responseTime);
+    updateWordProgress(currentQuestion.word, false, responseTime, undefined, 'spelling');
     
     // 間違えた単語を記録
     incorrectWordsRef.current.push(currentQuestion.word);

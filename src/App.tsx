@@ -7,7 +7,7 @@ import {
   selectAdaptiveQuestions,
   classifyPhraseType,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import { 
   generateSpacedRepetitionSchedule, 
@@ -78,6 +78,21 @@ function App() {
   
   // 全問題データ（junior-high-entrance-words.csvから読み込み）
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
+
+  // テスト用モジュール（開発環境のみ）
+  useEffect(() => {
+    // 開発環境かどうかをチェック（本番では無効化）
+    const isDevelopment = !window.location.hostname.includes('github.io');
+    if (isDevelopment) {
+      import('./tests/scoreBoardTests').then(() => {
+        console.log('✅ スコアボードテストモジュールを読み込みました');
+        console.log('   使い方: window.runScoreBoardTests()');
+        console.log('   または: window.checkCurrentScoreBoardDisplay("translation")');
+      }).catch(err => {
+        console.error('テストモジュールの読み込みエラー:', err);
+      });
+    }
+  }, []);
   
   // 関連分野リスト
   const [categoryList, setCategoryList] = useState<string[]>([]);
@@ -202,6 +217,17 @@ function App() {
         if (allQuestions.length > 0) {
           setAllQuestions(allQuestions);
           
+          // 難易度別リセット機能のために、全問題のキャッシュを保存
+          try {
+            const questionsCache = allQuestions.map(q => ({
+              word: q.word,
+              difficulty: q.difficulty || 'beginner'
+            }));
+            localStorage.setItem('all-questions-cache', JSON.stringify(questionsCache));
+          } catch (e) {
+            console.warn('Questions cache save failed:', e);
+          }
+          
           // 関連分野のリストを抽出
           const categories = Array.from(new Set(allQuestions.map(q => q.category || '').filter(c => c)));
           setCategoryList(categories.sort());
@@ -285,75 +311,6 @@ function App() {
     filtered = filterSkippedWords(filtered);
     
     return filtered;
-  };
-
-  // CSV ファイルから問題集を作成
-  const _handleLoadCSV = async (filePath: string) => {
-    try {
-      const response = await fetch(filePath);
-      const csvText = await response.text();
-      const questions = parseCSV(csvText);
-
-      if (questions.length === 0) {
-        alert('問題データが見つかりませんでした');
-        return;
-      }
-
-      // 新しい問題集として保存
-      const setName = prompt('問題集の名前を入力:', 'サンプル問題集');
-      if (!setName) return;
-
-      const newSet: QuestionSet = {
-        id: generateId(),
-        name: setName,
-        questions,
-        createdAt: Date.now(),
-        isBuiltIn: false,
-        source: 'CSV読み込み',
-      };
-
-      setQuestionSets((prev) => [...prev, newSet]);
-      alert(`問題集「${setName}」を追加しました`);
-    } catch (error) {
-      console.error('CSVの読み込みエラー:', error);
-      alert('ファイルの読み込みに失敗しました');
-    }
-  };
-
-  // ローカル CSV ファイルを読み込み
-  const _handleLoadLocalFile = (file: File) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const csvText = e.target?.result as string;
-        const questions = parseCSV(csvText);
-
-        if (questions.length === 0) {
-          alert('問題データが見つかりませんでした');
-          return;
-        }
-
-        // 新しい問題集として保存
-        const setName = prompt('問題集の名前を入力:', file.name.replace('.csv', ''));
-        if (!setName) return;
-
-        const newSet: QuestionSet = {
-          id: generateId(),
-          name: setName,
-          questions,
-          createdAt: Date.now(),
-          isBuiltIn: false,
-          source: 'ローカルCSV',
-        };
-
-        setQuestionSets((prev) => [...prev, newSet]);
-        alert(`問題集「${setName}」を追加しました`);
-      } catch (error) {
-        console.error('CSVの解析エラー:', error);
-        alert('ファイルの解析に失敗しました');
-      }
-    };
-    reader.readAsText(file);
   };
 
   // クイズ開始ハンドラー
@@ -558,7 +515,7 @@ function App() {
     
     // 単語進捗を更新
     if (currentQuestion) {
-      updateWordProgress(currentQuestion.word, isCorrect, responseTime);
+      updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'translation');
       
       // セッション履歴に追加
       const wordProgress = loadProgress().wordProgress[currentQuestion.word];
@@ -818,7 +775,7 @@ function App() {
     if (currentQuestion) {
       // 応答時間を再計算（評価時点での時間）
       const responseTime = Date.now() - questionStartTimeRef.current;
-      updateWordProgress(currentQuestion.word, quizState.selectedAnswer === currentQuestion.meaning, responseTime, rating);
+      updateWordProgress(currentQuestion.word, quizState.selectedAnswer === currentQuestion.meaning, responseTime, rating, 'translation');
     }
   };
 
@@ -933,7 +890,7 @@ function App() {
         ) : (
           <SettingsView
             allQuestions={allQuestions}
-            onStartSession={(mode, questions) => {
+            onStartSession={(_mode, questions) => {
               // セッションの単語でクイズを開始
               setQuizState({
                 questions,
