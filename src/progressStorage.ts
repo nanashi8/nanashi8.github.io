@@ -349,14 +349,27 @@ export function loadProgressSync(): UserProgress {
     }
     const progress = JSON.parse(data) as UserProgress;
     
-    // データ検証と補完
-    if (!progress.statistics || !progress.questionSetStats) {
-      const initialized = initializeProgress();
-      progressCache = initialized;
-      return initialized;
+    // データ構造の完全性チェックと補完
+    if (!progress.statistics) {
+      progress.statistics = {
+        totalQuizzes: 0,
+        totalQuestions: 0,
+        totalCorrect: 0,
+        averageScore: 0,
+        bestScore: 0,
+        streakDays: 0,
+        lastStudyDate: 0,
+        studyDates: [],
+      };
+    }
+    if (!progress.questionSetStats) {
+      progress.questionSetStats = {};
     }
     if (!progress.wordProgress) {
       progress.wordProgress = {};
+    }
+    if (!progress.results) {
+      progress.results = [];
     }
     if (!progress.results) {
       progress.results = [];
