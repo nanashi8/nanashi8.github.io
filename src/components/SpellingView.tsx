@@ -253,7 +253,7 @@ function SpellingView({
   };
 
   // 共通の答え合わせ処理
-  const processAnswer = (userWord: string, isCorrect: boolean, currentQuestion: Question | null) => {
+  const processAnswer = (_userWord: string, isCorrect: boolean, currentQuestion: Question | null) => {
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
 
@@ -712,13 +712,21 @@ function SpellingView({
                 {shuffledLetters.map((letter, index) => {
                   const isSelected = selectedSequence.includes(`${index}`);
                   const selectionOrder = selectedSequence.indexOf(`${index}`) + 1;
+                  
+                  // 回答後の正解・不正解クラスを追加
+                  let answerClass = '';
+                  if (spellingState.answered && isSelected) {
+                    const userWord = selectedSequence.map(i => shuffledLetters[parseInt(i)]).join('');
+                    const isCorrect = userWord === spellingState.correctWord;
+                    answerClass = isCorrect ? 'correct' : 'incorrect';
+                  }
 
                   return (
                     <button
                       key={index}
                       className={`letter-card ${isSelected ? 'selected' : ''} ${
                         spellingState.answered ? 'practice-mode' : ''
-                      }`}
+                      } ${answerClass}`}
                       onClick={() => handleLetterClick(letter, index)}
                     >
                       {letter}

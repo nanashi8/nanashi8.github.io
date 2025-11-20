@@ -1,6 +1,5 @@
 import { Question } from '../types';
-import { generateChoicesWithQuestions, classifyPhraseType, getPhraseTypeLabel } from '../utils';
-import { recordWordSkip } from '../progressStorage';
+import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 import { getRandomAlertMessage } from '../forgettingAlert';
@@ -43,7 +42,7 @@ function QuestionCard({
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   const [aiComment, setAiComment] = useState<string>('');
   const [attemptCount, setAttemptCount] = useState<number>(0);
-  const [correctStreak, setCorrectStreak] = useState<number>(() => {
+  const [, setCorrectStreak] = useState<number>(() => {
     const saved = sessionStorage.getItem('currentCorrectStreak');
     return saved ? parseInt(saved, 10) : 0;
   });
@@ -79,6 +78,9 @@ function QuestionCard({
     if (answered && selectedAnswer) {
       const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as any;
       const isCorrect = selectedAnswer === question.meaning;
+      
+      // 現在の連続正解数を取得
+      const currentStreak = parseInt(sessionStorage.getItem('currentCorrectStreak') || '0', 10);
       
       // 基本のAIコメント
       let comment = generateAIComment(personality, {
@@ -144,13 +146,13 @@ function QuestionCard({
       }
       
       // 5. 教師間のやりとり（10%の確率で表示）
-      const interaction = generateTeacherInteraction(personality, isCorrect, correctStreak);
+      const interaction = generateTeacherInteraction(personality, isCorrect, currentStreak);
       if (interaction) {
         additionalComments.push(interaction.message);
       }
       
       // 6. 連続正解時の特別リアクション
-      const streakReaction = getTeacherReactionToStreak(correctStreak);
+      const streakReaction = getTeacherReactionToStreak(currentStreak);
       if (streakReaction) {
         additionalComments.push(streakReaction);
       }
@@ -163,7 +165,7 @@ function QuestionCard({
       
       // 連続正解数を更新
       if (isCorrect) {
-        const newStreak = correctStreak + 1;
+        const newStreak = currentStreak + 1;
         setCorrectStreak(newStreak);
         sessionStorage.setItem('currentCorrectStreak', String(newStreak));
       } else {
@@ -180,7 +182,7 @@ function QuestionCard({
     } else {
       setAiComment('');
     }
-  }, [answered, selectedAnswer, question, attemptCount, correctStreak]);
+  }, [answered, selectedAnswer, question, attemptCount]);
   
   // スワイプジェスチャーのハンドラー
   useEffect(() => {

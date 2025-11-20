@@ -1,5 +1,6 @@
 // AI人格別の動的コメント生成システム
 import { AIPersonality, CommentContext } from './types';
+import { randomChoice, analyzeLearningPattern } from './aiCommentHelpers';
 
 // 時間帯を判定
 export function getTimeOfDay(): 'morning' | 'afternoon' | 'evening' | 'night' {
@@ -14,15 +15,16 @@ export function getTimeOfDay(): 'morning' | 'afternoon' | 'evening' | 'night' {
 class DrillSergeantCommentGenerator {
   generateCorrectComment(ctx: CommentContext): string {
     const parts: string[] = [];
+    const pattern = analyzeLearningPattern();
     
-    // 基本の肯定
+    // 基本の肯定（バリエーション追加）
     if (ctx.attemptCount === 1) {
       if (ctx.responseTime < 3000) {
-        parts.push("速い！");
+        parts.push(randomChoice(["速い！", "反応が鋭いぞ！", "即答だな！"]));
       }
-      parts.push("よし！");
+      parts.push(randomChoice(["よし！", "いいぞ！", "正解だ！"]));
     } else if (ctx.attemptCount === 2) {
-      parts.push("2回目で正解か。");
+      parts.push(randomChoice(["2回目で正解か。", "やっと正解したな。"]));
     } else {
       parts.push(`${ctx.attemptCount}回目で正解か。`);
       parts.push("もっと早く決めろ！");
@@ -30,23 +32,37 @@ class DrillSergeantCommentGenerator {
     
     // 難易度による追加コメント
     if (ctx.difficulty === 'advanced' && ctx.attemptCount === 1) {
-      parts.push("上級単語を一発で決めた！");
+      parts.push(randomChoice([
+        "上級単語を一発で決めた！",
+        "難しい単語もクリアだな！"
+      ]));
     } else if (ctx.difficulty === 'beginner' && ctx.attemptCount > 1) {
       parts.push("初級でもたつくな！");
     }
     
     // ストリークによる追加
-    if (ctx.correctStreak >= 5) {
+    if (ctx.correctStreak >= 10) {
+      parts.push(`驚異の${ctx.correctStreak}連続正解！`);
+      parts.push(randomChoice(["完全に波に乗ってるな！", "このまま突っ走れ！"]));
+    } else if (ctx.correctStreak >= 5) {
       parts.push(`${ctx.correctStreak}連続正解！`);
-      parts.push("調子が出てきたな！");
+      parts.push(randomChoice(["調子が出てきたな！", "いい流れだ！"]));
     } else if (ctx.correctStreak >= 3) {
       parts.push("3連続だ。");
+    }
+    
+    // 長期的成長の認識
+    if (pattern.recentImprovement && pattern.totalSessions >= 10) {
+      parts.push(randomChoice([
+        "最近の成長が著しいぞ！",
+        "前より確実に強くなってる！"
+      ]));
     }
     
     // 苦手カテゴリーの克服
     if (ctx.isWeakCategory && ctx.isCorrect) {
       parts.push(`苦手な${ctx.category}で正解！`);
-      parts.push("成長を感じるぞ！");
+      parts.push(randomChoice(["成長を感じるぞ！", "弱点を潰したな！"]));
     }
     
     // 今日の進捗

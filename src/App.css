@@ -56,6 +56,21 @@
   color: #bbb;
 }
 
+/* スペルタブ: 回答後の正解・不正解 */
+.dark-mode .letter-card.practice-mode.selected.correct {
+  background: #1e4620;
+  border-color: #28a745;
+  color: #a5d6a7;
+  opacity: 1;
+}
+
+.dark-mode .letter-card.practice-mode.selected.incorrect {
+  background: #4a1f1f;
+  border-color: #dc3545;
+  color: #ef9a9a;
+  opacity: 1;
+}
+
 .dark-mode .choice-btn:hover:not(:disabled) {
   background: #333;
   border-color: #667eea;
@@ -1127,6 +1142,27 @@ option {
   flex-direction: column;
 }
 
+/* デスクトップでタブを非表示、全表示 */
+.score-tabs-mobile {
+  display: none;
+}
+
+.score-tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop-only {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  justify-content: center;
+}
+
 /* 補修モードインジケーター */
 .review-focus-indicator {
   width: 100%;
@@ -1765,6 +1801,19 @@ option {
   background: #f8d7da;
   border-color: #dc3545;
   color: #721c24;
+}
+
+/* ダークモード: 解答後の選択肢 */
+.dark-mode .choice-btn.correct {
+  background: #1e4620;
+  border-color: #28a745;
+  color: #a5d6a7;
+}
+
+.dark-mode .choice-btn.incorrect {
+  background: #4a1f1f;
+  border-color: #dc3545;
+  color: #ef9a9a;
 }
 
 /* 読み表示 */
@@ -4486,6 +4535,21 @@ option {
   opacity: 0.7;
 }
 
+/* スペルタブ: 回答後の正解・不正解 */
+.letter-card.practice-mode.selected.correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  opacity: 1;
+}
+
+.letter-card.practice-mode.selected.incorrect {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+  opacity: 1;
+}
+
 .letter-card .selection-number {
   position: absolute;
   top: -8px;
@@ -5068,6 +5132,59 @@ option {
     font-size: max(14px, 0.85em);
     gap: 6px 12px;
     padding: 8px;
+  }
+
+  /* スコアボード タブ切り替え（モバイル） */
+  .score-tabs-mobile {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .score-tab {
+    flex: 1;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #666;
+    font-size: max(14px, 0.9em);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .score-tab.active {
+    border-bottom-color: #007bff;
+    color: #007bff;
+    font-weight: 600;
+  }
+
+  .dark-mode .score-tabs-mobile {
+    border-bottom-color: #444;
+  }
+
+  .dark-mode .score-tab {
+    color: #aaa;
+  }
+
+  .dark-mode .score-tab.active {
+    color: #4a9eff;
+    border-bottom-color: #4a9eff;
+  }
+
+  .score-tab-content {
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  .score-tab-content.active {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none !important;
   }
 
   .score-stat-large {
@@ -9297,6 +9414,12 @@ option {
   
   .calendar-grid {
     transform: scale(0.8);
+    transform-origin: center;
+  }
+  
+  .calendar-day {
+    width: 26px;
+    height: 26px;
   }
   
   .cumulative-chart svg {

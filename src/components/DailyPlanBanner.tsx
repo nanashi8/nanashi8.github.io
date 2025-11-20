@@ -45,9 +45,34 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
 
   const { reviewWordsCount, scheduledWordsCount, totalPlannedCount } = planInfo;
   
+  // 学習履歴があるかチェック
+  const hasStudyHistory = () => {
+    const progress = localStorage.getItem('progress-data');
+    if (!progress) return false;
+    
+    try {
+      const data = JSON.parse(progress);
+      // 過去の学習結果があるか、または単語の学習履歴があるか
+      const hasResults = data.results && data.results.length > 0;
+      const hasWordProgress = data.wordProgress && Object.keys(data.wordProgress).length > 0;
+      return hasResults || hasWordProgress;
+    } catch {
+      return false;
+    }
+  };
+  
   // 学習プラン提案
   const getRecommendation = () => {
     if (reviewWordsCount === 0 && scheduledWordsCount === 0) {
+      // 学習履歴がない場合は初回メッセージ
+      if (!hasStudyHistory()) {
+        return {
+          icon: '🎓',
+          message: '今日から学習を始めましょう！',
+          color: '#3b82f6'
+        };
+      }
+      // 学習履歴があり復習なしの場合
       return {
         icon: '✨',
         message: '素晴らしい！今日の復習はありません',

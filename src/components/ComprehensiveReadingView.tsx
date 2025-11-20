@@ -842,6 +842,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                       } else {
                         // 単語カード
                         const segment = group.segments[0];
+                        
+                        // 空の単語をスキップ
+                        if (!segment || !segment.word || segment.word.trim() === '') {
+                          return null;
+                        }
+                        
                         const segIdx = phrase.segments.findIndex(s => s === segment);
                         const isPunctuation = /^[.,!?;:]$/.test(segment.word);
                         
@@ -875,7 +881,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                           </div>
                         );
                       }
-                    });
+                    }).filter(Boolean);
                   })()}
                 </div>
 
