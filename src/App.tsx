@@ -7,7 +7,7 @@ import {
   selectAdaptiveQuestions,
   classifyPhraseType,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import { 
   generateSpacedRepetitionSchedule, 
@@ -197,10 +197,40 @@ function App() {
       try {
         // IndexedDB移行を実行（初回のみ）
         console.log('🔄 データ移行チェック中...');
-        await migrateToIndexedDB();
+        try {
+          await migrateToIndexedDB();
+        } catch (migrationError) {
+          console.error('Migration error (continuing):', migrationError);
+        }
         
         // ストレージ戦略を初期化
         initStorageStrategy();
+        
+        // 進捗データを明示的にロード・初期化
+        try {
+          const progress = await loadProgress();
+          updateProgressCache(progress);
+          console.log('✅ Progress data loaded successfully');
+        } catch (progressError) {
+          console.error('Progress load error (initializing):', progressError);
+          // 初期化データをキャッシュに設定
+          const initialProgress = {
+            results: [],
+            statistics: {
+              totalQuizzes: 0,
+              totalQuestions: 0,
+              totalCorrect: 0,
+              averageScore: 0,
+              bestScore: 0,
+              streakDays: 0,
+              lastStudyDate: 0,
+              studyDates: [],
+            },
+            questionSetStats: {},
+            wordProgress: {},
+          };
+          updateProgressCache(initialProgress);
+        }
         
         // LocalStorageサイズの確認
         checkLocalStorageSize();

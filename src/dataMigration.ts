@@ -163,19 +163,27 @@ async function migrateSettings(): Promise<boolean> {
     
     // JSON形式の設定を移行
     for (const key of jsonSettingsKeys) {
-      const value = getLocalStorageData(key);
-      if (value !== null) {
-        await putToDB(STORES.SETTINGS, value, key);
-        migratedCount++;
+      try {
+        const value = getLocalStorageData(key);
+        if (value !== null) {
+          await putToDB(STORES.SETTINGS, value, key);
+          migratedCount++;
+        }
+      } catch (error) {
+        console.warn(`Failed to migrate ${key}:`, error);
       }
     }
     
     // 文字列形式の設定を移行
     for (const key of rawSettingsKeys) {
-      const value = getLocalStorageRawData(key);
-      if (value !== null) {
-        await putToDB(STORES.SETTINGS, value, key);
-        migratedCount++;
+      try {
+        const value = getLocalStorageRawData(key);
+        if (value !== null) {
+          await putToDB(STORES.SETTINGS, value, key);
+          migratedCount++;
+        }
+      } catch (error) {
+        console.warn(`Failed to migrate ${key}:`, error);
       }
     }
 
@@ -185,16 +193,24 @@ async function migrateSettings(): Promise<boolean> {
       const planKey = `daily-plan-target-${mode}`;
       const goalKey = `score-board-goal-${mode}`;
       
-      const planValue = localStorage.getItem(planKey);
-      if (planValue) {
-        await putToDB(STORES.SETTINGS, planValue, planKey);
-        migratedCount++;
+      try {
+        const planValue = localStorage.getItem(planKey);
+        if (planValue) {
+          await putToDB(STORES.SETTINGS, planValue, planKey);
+          migratedCount++;
+        }
+      } catch (error) {
+        console.warn(`Failed to migrate ${planKey}:`, error);
       }
       
-      const goalValue = localStorage.getItem(goalKey);
-      if (goalValue) {
-        await putToDB(STORES.SETTINGS, goalValue, goalKey);
-        migratedCount++;
+      try {
+        const goalValue = localStorage.getItem(goalKey);
+        if (goalValue) {
+          await putToDB(STORES.SETTINGS, goalValue, goalKey);
+          migratedCount++;
+        }
+      } catch (error) {
+        console.warn(`Failed to migrate ${goalKey}:`, error);
       }
     }
 
