@@ -552,6 +552,78 @@
   border-color: #667eea;
 }
 
+/* 基本統計グリッド - ダークモード */
+.dark-mode .stat-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-color: #444;
+}
+
+.dark-mode .stat-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.dark-mode .stat-label {
+  color: #aaa;
+}
+
+.dark-mode .stat-value strong {
+  color: #e0e0e0;
+}
+
+.dark-mode .stat-value .correct {
+  color: #4ade80;
+}
+
+.dark-mode .stat-value .mastered {
+  color: #fb923c;
+}
+
+.dark-mode .stat-sub {
+  color: #777;
+}
+
+/* モバイル統計タブ - ダークモード */
+.dark-mode .stat-subtab {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .stat-subtab:hover {
+  background: #333;
+}
+
+.dark-mode .stat-subtab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dark-mode .stat-mobile-card {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .stat-mobile-label {
+  color: #aaa;
+}
+
+.dark-mode .stat-mobile-value {
+  color: #e0e0e0;
+}
+
+.dark-mode .stat-mobile-value.correct {
+  color: #4ade80;
+}
+
+.dark-mode .stat-mobile-value.mastered {
+  color: #fb923c;
+}
+
+.dark-mode .stat-mobile-divider {
+  background: #444;
+}
+
 /* スペルタブのダークモード */
 .dark-mode .spelling-view {
   background: #1a1a1a;
@@ -1375,6 +1447,140 @@ option {
   color: #ccc;
   font-weight: 300;
   margin: 0 4px;
+}
+
+/* 基本統計グリッドレイアウト（デスクトップ） */
+.stats-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
+}
+
+.stat-label {
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stat-value strong {
+  color: #333;
+}
+
+.stat-value .correct {
+  color: #28a745;
+}
+
+.stat-value .mastered {
+  color: #ff6b35;
+}
+
+.stat-sub {
+  font-size: 0.8em;
+  color: #999;
+}
+
+/* モバイル版統計サブタブ */
+.stat-subtabs-mobile {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.stat-subtab {
+  flex: 1;
+  padding: 8px 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.stat-subtab:hover {
+  background: #e8e8e8;
+}
+
+.stat-subtab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  font-weight: 600;
+}
+
+/* モバイル版統計コンテンツ */
+.stat-mobile-content {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.stat-mobile-card {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.stat-mobile-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.stat-mobile-label {
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 500;
+}
+
+.stat-mobile-value {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-mobile-value.correct {
+  color: #28a745;
+}
+
+.stat-mobile-value.mastered {
+  color: #ff6b35;
+}
+
+.stat-mobile-divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 4px 0;
 }
 
 /* 目標達成情報のスタイル */

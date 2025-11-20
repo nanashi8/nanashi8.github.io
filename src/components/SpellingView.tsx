@@ -361,13 +361,10 @@ function SpellingView({
     // AI学習アシスタント: スキップグループに追加
     addToSkipGroup(currentQuestion.word);
     
-    // 単語進捗を更新（不正解として記録）
-    updateWordProgress(currentQuestion.word, false, responseTime, undefined, 'spelling');
+    // 単語進捗を更新（正解として記録）
+    updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'spelling');
     
-    // 間違えた単語を記録
-    incorrectWordsRef.current.push(currentQuestion.word);
-    
-    // スコアに反映（不正解扱い）
+    // スコアに反映（正解扱い）
     // 選択シーケンスをクリアして、正解を表示できるようにする
     setSelectedSequence([]);
     setCurrentWordIndex(0); // 熟語のインデックスをリセット
@@ -375,33 +372,35 @@ function SpellingView({
     setSpellingState((prev) => ({
       ...prev,
       totalAnswered: prev.totalAnswered + 1,
+      score: prev.score + 1, // スキップは正解扱い
       answered: true,
     }));
 
-    // セッション統計を更新（不正解扱い）
+    // セッション統計を更新（正解扱い）
     setSessionStats((prev) => ({
       ...prev,
-      incorrect: prev.incorrect + 1,
+      correct: prev.correct + 1,
+      mastered: prev.mastered + 1, // スキップは定着扱い
     }));
     
-    // セッション履歴に記録（不正解として）
+    // セッション履歴に記録（正解として）
     addSessionHistory({
-      status: 'incorrect',
+      status: 'correct',
       word: currentQuestion.word,
       timestamp: Date.now()
     }, 'spelling');
 
-    // スコアボードのために回答を記録（不正解として）
+    // スコアボードのために回答を記録（正解として）
     addQuizResult({
       id: generateId(),
       questionSetId: 'spelling-quiz-single',
       questionSetName: 'スペルクイズ',
-      score: 0, // スキップは不正解扱い
+      score: 1, // スキップは正解扱い
       total: 1,
-      percentage: 0,
+      percentage: 100,
       date: Date.now(),
       timeSpent: Math.floor(responseTime / 1000),
-      incorrectWords: [currentQuestion.word], // スキップした単語を記録
+      incorrectWords: [], // スキップは正解扱いなので空配列
       mode: 'spelling',
       difficulty: currentQuestion.difficulty,
     });

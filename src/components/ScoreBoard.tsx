@@ -38,6 +38,7 @@ function ScoreBoard({
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
   const [activeTab, setActiveTab] = useState<'stats' | 'goals' | 'history'>('stats');
+  const [statSubTab, setStatSubTab] = useState<'accuracy' | 'retention' | 'total'>('accuracy');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const historyLimit = isMobile ? 10 : 20;
 
@@ -186,27 +187,120 @@ function ScoreBoard({
       {/* 基本統計タブ */}
       {activeTab === 'stats' && (
         <>
-          {totalAnswered > 0 && (
+          {/* デスクトップ版: 横並びレイアウト */}
+          {!isMobile && (
+            <div className="stats-grid-container">
+              {/* 現在のスコア（セッション中のみ） */}
+              {totalAnswered > 0 && (
+                <div className="stat-card stat-current">
+                  <div className="stat-label">現在</div>
+                  <div className="stat-value">
+                    <strong className="correct">{currentScore}/{totalAnswered}</strong>
+                  </div>
+                  <div className="stat-sub">({currentAccuracy}%)</div>
+                </div>
+              )}
+              
+              {/* 本日の正答率 */}
+              <div className="stat-card stat-accuracy">
+                <div className="stat-label">本日正答率</div>
+                <div className="stat-value">
+                  <strong className="correct">{todayAccuracy}%</strong>
+                </div>
+                <div className="stat-sub">({todayTotalAnswered}問)</div>
+              </div>
+              
+              {/* 定着率 */}
+              <div className="stat-card stat-retention">
+                <div className="stat-label">定着率</div>
+                <div className="stat-value">
+                  <strong className="mastered">{retentionRate}%</strong>
+                </div>
+                <div className="stat-sub">({masteredCount}/{appearedCount})</div>
+              </div>
+              
+              {/* 累計回答 */}
+              <div className="stat-card stat-total">
+                <div className="stat-label">累計回答</div>
+                <div className="stat-value">
+                  <strong>{totalAnsweredCount}</strong>
+                </div>
+                <div className="stat-sub">問</div>
+              </div>
+            </div>
+          )}
+          
+          {/* モバイル版: タブ切り替え */}
+          {isMobile && (
             <>
-              <span className="score-stat-large">
-                現在<strong className="correct">{currentScore}/{totalAnswered} ({currentAccuracy}%)</strong>
-              </span>
-              <span className="score-stat-divider">|</span>
+              <div className="stat-subtabs-mobile">
+                <button 
+                  className={`stat-subtab ${statSubTab === 'accuracy' ? 'active' : ''}`}
+                  onClick={() => setStatSubTab('accuracy')}
+                >
+                  正答率
+                </button>
+                <button 
+                  className={`stat-subtab ${statSubTab === 'retention' ? 'active' : ''}`}
+                  onClick={() => setStatSubTab('retention')}
+                >
+                  定着率
+                </button>
+                <button 
+                  className={`stat-subtab ${statSubTab === 'total' ? 'active' : ''}`}
+                  onClick={() => setStatSubTab('total')}
+                >
+                  累計
+                </button>
+              </div>
+              
+              <div className="stat-mobile-content">
+                {statSubTab === 'accuracy' && (
+                  <div className="stat-mobile-card">
+                    {totalAnswered > 0 && (
+                      <>
+                        <div className="stat-mobile-item">
+                          <span className="stat-mobile-label">現在:</span>
+                          <span className="stat-mobile-value correct">
+                            {currentScore}/{totalAnswered} ({currentAccuracy}%)
+                          </span>
+                        </div>
+                        <div className="stat-mobile-divider"></div>
+                      </>
+                    )}
+                    <div className="stat-mobile-item">
+                      <span className="stat-mobile-label">本日正答率:</span>
+                      <span className="stat-mobile-value correct">
+                        {todayAccuracy}% ({todayTotalAnswered}問)
+                      </span>
+                    </div>
+                  </div>
+                )}
+                
+                {statSubTab === 'retention' && (
+                  <div className="stat-mobile-card">
+                    <div className="stat-mobile-item">
+                      <span className="stat-mobile-label">定着率:</span>
+                      <span className="stat-mobile-value mastered">
+                        {retentionRate}% ({masteredCount}/{appearedCount})
+                      </span>
+                    </div>
+                  </div>
+                )}
+                
+                {statSubTab === 'total' && (
+                  <div className="stat-mobile-card">
+                    <div className="stat-mobile-item">
+                      <span className="stat-mobile-label">累計回答:</span>
+                      <span className="stat-mobile-value">
+                        {totalAnsweredCount}問
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
             </>
           )}
-          <span className="score-stat-large">
-            本日正答率<strong className="correct">{todayAccuracy}%</strong>
-            <span className="score-stat-sub">({todayTotalAnswered}問)</span>
-          </span>
-          <span className="score-stat-divider">|</span>
-          <span className="score-stat-large">
-            定着率<strong className="mastered">{retentionRate}%</strong>
-            <span className="score-stat-sub">({masteredCount}/{appearedCount})</span>
-          </span>
-          <span className="score-stat-divider">|</span>
-          <span className="score-stat">
-            累計回答<strong>{totalAnsweredCount}</strong>
-          </span>
           
           {/* 詳細な定着率の内訳（横長棒グラフ） */}
           {detailedStats.appearedWords > 0 && (
