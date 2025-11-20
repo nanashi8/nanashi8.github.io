@@ -31,6 +31,8 @@ import './App.css';
 // IndexedDB移行関連
 import { migrateToIndexedDB } from './dataMigration';
 import { initStorageStrategy } from './storageManager';
+import { initErrorLogger } from './errorLogger';
+import { ErrorBadge } from './components/ErrorLogPanel';
 
 type Tab = 'translation' | 'spelling' | 'reading' | 'settings' | 'stats';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
@@ -195,6 +197,10 @@ function App() {
   useEffect(() => {
     const loadInitialData = async () => {
       try {
+        // エラーロガーを初期化
+        initErrorLogger();
+        console.log('🔍 Error logging started');
+        
         // IndexedDB移行を実行（初回のみ）
         console.log('🔄 データ移行チェック中...');
         try {
@@ -967,6 +973,9 @@ function App() {
           />
         )}
       </div>
+      
+      {/* エラーログバッジ */}
+      <ErrorBadge />
     </div>
   );
 }
