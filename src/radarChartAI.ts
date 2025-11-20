@@ -9,7 +9,7 @@
  */
 
 import { Question } from './types';
-import { loadProgress } from './progressStorage';
+import { loadProgressSync } from './progressStorage';
 
 /**
  * レーダーチャート分析結果
@@ -63,7 +63,7 @@ export function analyzeRadarChart(
   allQuestions: Question[],
   categoryList: string[]
 ): RadarAnalysis {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const categoryStats = new Map<string, {
     correct: number;
     total: number;
@@ -386,7 +386,7 @@ export function prioritizeWeakCategoryQuestions(
     const categoryQuestions = questions.filter(q => q.category === weak.category);
     
     // ランダムに選択（既に定着している単語は除外）
-    const progress = loadProgress();
+    const progress = loadProgressSync();
     const unmastered = categoryQuestions.filter(q => {
       const wp = progress.wordProgress[q.word];
       if (!wp) return true; // 未学習

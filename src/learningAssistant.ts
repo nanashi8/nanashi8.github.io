@@ -1,6 +1,6 @@
 // AI学習アシスタント - スキップした単語の検証と復習管理
 
-import { loadProgress, saveProgress } from './progressStorage';
+import { loadProgressSync, saveProgress } from './progressStorage';
 
 // スキップグループ情報
 export interface SkipGroup {
@@ -71,7 +71,7 @@ export function addToSkipGroup(word: string): void {
  */
 export function handleSkippedWordIncorrect(word: string): void {
   const groups = loadSkipGroups();
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // この単語が含まれるグループを探す
   const group = groups.find(g => g.words.includes(word));
@@ -113,7 +113,7 @@ export function handleSkippedWordIncorrect(word: string): void {
  */
 export function handleSkippedWordCorrect(word: string): void {
   const groups = loadSkipGroups();
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // この単語が含まれるグループを探す
   const group = groups.find(g => g.words.includes(word));
@@ -147,7 +147,7 @@ export function handleSkippedWordCorrect(word: string): void {
  * 検証が必要な単語を取得
  */
 export function getWordsNeedingVerification(): string[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return Object.values(progress.wordProgress)
     .filter(wp => wp.needsVerification)
     .map(wp => wp.word);
@@ -184,7 +184,7 @@ export function prioritizeVerificationWords<T extends { word: string }>(
  * AI学習アシスタントのアドバイスメッセージを生成
  */
 export function generateAssistantMessage(word: string): string | null {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const wordProgress = progress.wordProgress[word];
   
   if (!wordProgress || !wordProgress.needsVerification) {

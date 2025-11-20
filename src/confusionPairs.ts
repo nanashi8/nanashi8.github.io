@@ -3,7 +3,7 @@
  * よく間違える単語ペアやグループを自動検出し、集中的に出題する
  */
 
-import { loadProgress, WordProgress } from './progressStorage';
+import { loadProgressSync, WordProgress } from './progressStorage';
 import { Question } from './types';
 
 /**
@@ -89,7 +89,7 @@ export function getConfusionPartners(word: string): string[] {
  * ユーザーの混同パターンを分析
  */
 export function analyzeConfusionPatterns(): ConfusionGroup[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const groups: ConfusionGroup[] = [];
   const processedWords = new Set<string>();
 
@@ -200,7 +200,7 @@ export function calculateGroupRetention(group: ConfusionGroup): {
   individualRetentions: { [word: string]: number };
   variance: number; // グループ内のばらつき
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const individualRetentions: { [word: string]: number } = {};
   const retentions: number[] = [];
 

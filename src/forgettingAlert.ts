@@ -4,7 +4,7 @@
  */
 
 import { calculateMemoryRetention } from './adaptiveLearningAI';
-import { loadProgress, WordProgress } from './progressStorage';
+import { loadProgressSync, WordProgress } from './progressStorage';
 import { analyzeConfusionPatterns, ConfusionGroup } from './confusionPairs';
 
 /**
@@ -48,7 +48,7 @@ export function getAllForgettingAlerts(): ForgettingAlert[] {
  * 単語別の忘却アラート
  */
 function getWordForgettingAlerts(): ForgettingAlert[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const alerts: ForgettingAlert[] = [];
   const now = Date.now();
 
@@ -115,7 +115,7 @@ function getWordForgettingAlerts(): ForgettingAlert[] {
 function getGroupForgettingAlerts(): ForgettingAlert[] {
   const confusionGroups = analyzeConfusionPatterns();
   const alerts: ForgettingAlert[] = [];
-  const progress = loadProgress();
+  const progress = loadProgressSync();
 
   confusionGroups
     .filter(g => g.needsReview)

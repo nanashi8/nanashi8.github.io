@@ -31,7 +31,7 @@ function safeSetItem(key: string, value: string): boolean {
 
 // 古い結果データを削除
 function cleanupOldResults(): void {
-  const data = loadProgress();
+  const data = loadProgressSync();
   if (data.results.length > MAX_RESULTS_PER_MODE * 3) {
     // モード別に最新N件のみ保持
     const resultsByMode = {
@@ -516,7 +516,7 @@ function calculateStreakDays(studyDates: number[]): number {
 
 // 特定期間の結果を取得
 export function getResultsByDateRange(startDate: number, endDate: number): QuizResult[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return progress.results.filter(r => r.date >= startDate && r.date <= endDate);
 }
 
@@ -526,7 +526,7 @@ export function getStatsByMode(mode: 'translation' | 'spelling' | 'reading'): {
   averageScore: number;
   bestScore: number;
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const modeResults = progress.results.filter(r => r.mode === mode);
   
   if (modeResults.length === 0) {
@@ -545,13 +545,13 @@ export function getStatsByMode(mode: 'translation' | 'spelling' | 'reading'): {
 
 // 最近の結果を取得
 export function getRecentResults(limit: number = 10): QuizResult[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return progress.results.slice(-limit).reverse();
 }
 
 // 分野別の統計を取得
 export function getStatsByCategory(): Map<string, { correctCount: number; totalCount: number; accuracy: number }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const categoryStats = new Map<string, { correctCount: number; totalCount: number }>();
   
   progress.results.forEach(result => {
@@ -578,7 +578,7 @@ export function getStatsByCategory(): Map<string, { correctCount: number; totalC
 
 // 難易度別の統計を取得
 export function getStatsByDifficulty(): Map<string, { correctCount: number; totalCount: number; accuracy: number }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const difficultyStats = new Map<string, { correctCount: number; totalCount: number }>();
   
   progress.results.forEach(result => {
@@ -605,7 +605,7 @@ export function getStatsByDifficulty(): Map<string, { correctCount: number; tota
 
 // 当日の誤答単語を取得
 export function getTodayIncorrectWords(): string[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const today = new Date().toLocaleDateString('ja-JP');
   const incorrectWords = new Set<string>();
   
@@ -620,7 +620,7 @@ export function getTodayIncorrectWords(): string[] {
 
 // 進捗データのエクスポート
 export function exportProgress(): string {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return JSON.stringify(progress, null, 2);
 }
 
@@ -652,7 +652,7 @@ export function clearProgress(): void {
 
 // 弱点単語を分析（間違えた回数が多い単語）
 export function getWeakWords(limit: number = 10): Array<{ word: string; mistakes: number }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const wordMistakes = new Map<string, number>();
   
   progress.results.forEach(result => {
@@ -677,7 +677,7 @@ export function getOvercomeWeakWords(limit: number = 10): Array<{
   recentAccuracy: number;
   overcomeScore: number; // 克服度（高いほど印象的な克服）
 }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // 累積の間違い回数を集計
   const wordMistakes = new Map<string, number>();
@@ -742,7 +742,7 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
   mistakes: number;
   recentAccuracy: number;
 }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // 累積の間違い回数を集計
   const wordMistakes = new Map<string, number>();
@@ -798,7 +798,7 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
 
 // 日別の学習時間を取得
 export function getDailyStudyTime(days: number = 7): Array<{ date: string; timeSpent: number }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = Date.now();
   const startDate = now - (days * 24 * 60 * 60 * 1000);
   
@@ -1211,7 +1211,7 @@ export function recordWordSkip(
   word: string,
   excludeDays: number = 30 // 30日後に検証
 ): void {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   if (!progress.wordProgress[word]) {
     progress.wordProgress[word] = initializeWordProgress(word);
@@ -1238,7 +1238,7 @@ export function recordWordSkip(
 
 // 単語がスキップ除外期間中かチェック
 export function isWordSkipExcluded(word: string): boolean {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const wordProgress = progress.wordProgress[word];
   
   if (!wordProgress || !wordProgress.skipExcludeUntil) {
@@ -1255,19 +1255,19 @@ export function filterSkippedWords<T extends { word: string }>(questions: T[]): 
 
 // 単語の進捗を取得
 export function getWordProgress(word: string): WordProgress | null {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return progress.wordProgress[word] || null;
 }
 
 // すべての単語進捗を取得
 export function getAllWordProgress(): WordProgress[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return Object.values(progress.wordProgress);
 }
 
 // 習熟レベル別に単語を取得
 export function getWordsByMasteryLevel(level: 'new' | 'learning' | 'mastered'): string[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   return Object.values(progress.wordProgress)
     .filter(wp => wp.masteryLevel === level)
     .map(wp => wp.word);
@@ -1334,7 +1334,7 @@ export function getWordProgressSummary(): {
  * 定着条件: 連続3回以上正解 または スキップされた単語
  */
 export function getMasteredWordsCount(words: string[]): number {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   let masteredCount = 0;
   
   for (const word of words) {
@@ -1357,7 +1357,7 @@ export function getMasteredWordsCount(words: string[]): number {
  * 定着している単語のリストを取得
  */
 export function getMasteredWords(words: string[]): string[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const masteredWords: string[] = [];
   
   for (const word of words) {
@@ -1385,7 +1385,7 @@ export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading'): {
   todayTotalAnswered: number;
   todayAccuracy: number;
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const today = new Date().setHours(0, 0, 0, 0);
   const tomorrow = today + 24 * 60 * 60 * 1000;
   
@@ -1415,7 +1415,7 @@ export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading'): {
  * @param mode クイズモード（translation, spelling, reading）
  */
 export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'reading'): number {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   let results = progress.results;
   
   // モード指定がある場合はフィルタ
@@ -1431,7 +1431,7 @@ export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'readi
  * @param mode クイズモード（translation, spelling, reading）
  */
 export function getUniqueQuestionedWordsCount(mode?: 'translation' | 'spelling' | 'reading'): number {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const uniqueWords = new Set<string>();
   
   // wordProgressから、実際に出題された単語を抽出
@@ -1451,7 +1451,7 @@ export function getUniqueQuestionedWordsCount(mode?: 'translation' | 'spelling' 
  * 定着した単語数を全体から取得（スキップ含む）
  */
 export function getTotalMasteredWordsCount(): number {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   let masteredCount = 0;
   
   for (const wordProgress of Object.values(progress.wordProgress)) {
@@ -1482,7 +1482,7 @@ export function getRetentionRateWithAI(): {
   masteredCount: number;
   appearedCount: number;
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const wordProgresses = Object.values(progress.wordProgress);
   const appearedWords = wordProgresses.filter(wp => 
     (wp.correctCount + wp.incorrectCount) > 0
@@ -1564,7 +1564,7 @@ export interface DetailedRetentionStats {
  * 詳細な定着率統計を計算
  */
 export function getDetailedRetentionStats(): DetailedRetentionStats {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const allWords = Object.values(progress.wordProgress);
   const appearedWords = allWords.filter(wp => 
     (wp.correctCount + wp.incorrectCount) > 0
@@ -1633,7 +1633,7 @@ export interface MasteryPrediction {
 }
 
 export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const predictions: MasteryPrediction[] = [];
   
   Object.entries(progress.wordProgress).forEach(([word, wp]) => {
@@ -1741,7 +1741,7 @@ export function getNearMasteryStats(): {
   longTermMemoryCount: number; // 長期記憶に達した単語数（連続5回以上）
   superMemoryCount: number; // 超長期記憶に達した単語数（連続7回以上）
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   let nearMasteryCount = 0;
   let learningCount = 0;
   let totalRemaining = 0;
@@ -1803,7 +1803,7 @@ export interface DailyPlanInfo {
 }
 
 export function getDailyPlanInfo(): DailyPlanInfo {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = Date.now();
   const today = new Date().setHours(0, 0, 0, 0);
   const tomorrow = today + 24 * 60 * 60 * 1000;
@@ -1851,7 +1851,7 @@ export function getDifficultyStatsForRadar(mode: 'translation' | 'spelling' | 'r
   answeredData: number[];
   correctData: number[];
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const difficultyMap = new Map<string, { answered: number; correct: number }>();
   
   // モードでフィルタして集計
@@ -1902,7 +1902,7 @@ export function getCategoryDifficultyStats(mode: 'translation' | 'spelling'): {
   accuracyData: { beginner: number[]; intermediate: number[]; advanced: number[] };
   progressData: { beginner: number[]; intermediate: number[]; advanced: number[] };
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // 分野別・難易度別の統計マップ
   const statsMap = new Map<string, {
@@ -2053,7 +2053,7 @@ export function getStatsByModeDifficulty(mode: 'translation' | 'spelling'): {
   accuracyData: number[];
   retentionData: number[];
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const difficulties = ['beginner', 'intermediate', 'advanced'];
   const labels = ['初級', '中級', '上級'];
   const accuracyData: number[] = [];
@@ -2113,7 +2113,7 @@ export function getStatsByModeDifficulty(mode: 'translation' | 'spelling'): {
  * モード別・難易度別のデータをリセット
  */
 export function resetStatsByModeDifficulty(mode: 'translation' | 'spelling', difficulty: string): void {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // 該当するクイズ結果を削除
   const removedResults = progress.results.filter(r => 
@@ -2288,7 +2288,7 @@ export function getStudyCalendarData(days: number = 90): Array<{
   count: number; // その日の回答数
   accuracy: number; // その日の正答率
 }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = new Date();
   const calendarData: Array<{ date: string; count: number; accuracy: number }> = [];
   
@@ -2328,7 +2328,7 @@ export function getWeeklyStats(): {
   newMastered: number; // 今週新規定着した単語数
   previousWeekAccuracy: number; // 先週の正答率（比較用）
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = new Date();
   
   // 今週の開始日（月曜日）を計算
@@ -2401,7 +2401,7 @@ export function getMonthlyStats(): {
   accuracy: number; // 今月の正答率
   newMastered: number; // 今月新規定着した単語数
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = new Date();
   
   // 今月の開始日
@@ -2457,7 +2457,7 @@ export function getCumulativeProgressData(weeks: number = 12): Array<{
   cumulativeAnswered: number; // 累積回答数
   weeklyAnswered: number; // その週の回答数
 }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = new Date();
   const data: Array<{
     weekLabel: string;
@@ -2520,7 +2520,7 @@ export function getRetentionTrend(): {
   last30Days: number;
   allTime: number;
 } {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const now = Date.now();
   
   const day7Ago = now - (7 * 24 * 60 * 60 * 1000);
@@ -2573,7 +2573,7 @@ export function getRecentlyMasteredWords(days: number = 7, limit: number = 10): 
   masteredDate: number;
   totalAttempts: number;
 }> {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const cutoff = Date.now() - (days * 24 * 60 * 60 * 1000);
   
   const words = Object.entries(progress.wordProgress)

@@ -3,7 +3,7 @@
  * TOEIC/英検レベルとの連動、達成予測計算
  */
 
-import { loadProgress, getTotalMasteredWordsCount } from './progressStorage';
+import { loadProgressSync, getTotalMasteredWordsCount } from './progressStorage';
 
 /**
  * 目標レベルの定義
@@ -136,7 +136,7 @@ export function setCurrentGoal(goalId: string): void {
  */
 export function calculateGoalProgress(goal?: GoalLevel): GoalProgress {
   const targetGoal = goal || getCurrentGoal();
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // 定着単語数を取得
   const currentWords = getTotalMasteredWordsCount();
@@ -201,7 +201,7 @@ function calculateEstimatedDays(
     return 0; // すでに達成
   }
   
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   
   // 過去7日間の学習ペースを計算
   const now = Date.now();
@@ -305,7 +305,7 @@ export function generateGoalMessage(includeEncouragement: boolean = true): strin
  * 現在のペースで達成できる目標を提案
  */
 export function suggestRealisticGoal(): GoalLevel {
-  const progress = loadProgress();
+  const progress = loadProgressSync();
   const masteredCount = getTotalMasteredWordsCount();
   
   // 現在の学習ペースを計算
