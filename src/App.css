@@ -10007,6 +10007,7 @@ option {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .btn-compact {
@@ -10019,6 +10020,9 @@ option {
   transition: all 0.2s;
   white-space: nowrap;
   min-height: 36px;
+  flex: 1 1 auto;
+  min-width: 120px;
+  max-width: 150px;
 }
 
 .btn-compact.btn-info {
