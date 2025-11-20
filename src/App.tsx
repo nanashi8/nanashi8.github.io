@@ -207,13 +207,24 @@ function App() {
         initStorageStrategy();
         
         // 進捗データを明示的にロード・初期化
+        let progressLoaded = false;
         try {
           const progress = await loadProgress();
-          updateProgressCache(progress);
-          console.log('✅ Progress data loaded successfully');
+          // データ検証
+          if (progress && progress.wordProgress && progress.statistics && progress.questionSetStats) {
+            updateProgressCache(progress);
+            console.log('✅ Progress data loaded successfully');
+            progressLoaded = true;
+          } else {
+            console.warn('⚠️ Progress data incomplete, reinitializing');
+          }
         } catch (progressError) {
-          console.error('Progress load error (initializing):', progressError);
-          // 初期化データをキャッシュに設定
+          console.error('Progress load error:', progressError);
+        }
+        
+        // ロード失敗または不完全な場合は初期化
+        if (!progressLoaded) {
+          console.log('🔧 Initializing fresh progress data');
           const initialProgress = {
             results: [],
             statistics: {
@@ -230,6 +241,12 @@ function App() {
             wordProgress: {},
           };
           updateProgressCache(initialProgress);
+          // LocalStorageにも保存
+          try {
+            localStorage.setItem('progress-data', JSON.stringify(initialProgress));
+          } catch (e) {
+            console.warn('Failed to save initial progress:', e);
+          }
         }
         
         // LocalStorageサイズの確認

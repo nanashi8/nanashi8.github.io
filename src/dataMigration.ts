@@ -38,8 +38,8 @@ function getLocalStorageData(key: string): any {
     if (!data) return null;
     return JSON.parse(data);
   } catch (error) {
-    // lastLoginDateなど文字列データの場合は警告のみ
-    if (key === 'lastLoginDate') {
+    // lastLoginDate/lastLoginDataなど文字列データの場合は警告のみ
+    if (key.includes('lastLogin') || key.includes('Date')) {
       console.warn(`${key} is not JSON format (expected - using raw string instead)`);
     } else {
       console.error(`Failed to get ${key} from localStorage:`, error);
@@ -63,10 +63,34 @@ async function migrateProgressData(): Promise<boolean> {
   try {
     const progressData = getLocalStorageData('progress-data');
     if (progressData) {
+      // データ検証と補完
+      if (!progressData.wordProgress) {
+        progressData.wordProgress = {};
+      }
+      if (!progressData.results) {
+        progressData.results = [];
+      }
+      if (!progressData.statistics) {
+        progressData.statistics = {
+          totalQuizzes: 0,
+          totalQuestions: 0,
+          totalCorrect: 0,
+          averageScore: 0,
+          bestScore: 0,
+          streakDays: 0,
+          lastStudyDate: 0,
+          studyDates: [],
+        };
+      }
+      if (!progressData.questionSetStats) {
+        progressData.questionSetStats = {};
+      }
+      
       await putToDB(STORES.PROGRESS, progressData, 'main');
-      console.log('📦 Progress data migrated:', Object.keys(progressData.words || {}).length, 'words');
+      console.log('📦 Progress data migrated:', Object.keys(progressData.wordProgress || {}).length, 'words');
       return true;
     }
+    console.log('ℹ️ No progress data to migrate');
     return false;
   } catch (error) {
     console.error('Progress data migration error:', error);
@@ -161,7 +185,8 @@ async function migrateSettings(): Promise<boolean> {
 
     // 文字列形式のデータ（JSON.parseしない）
     const rawSettingsKeys = [
-      'lastLoginDate'
+      'lastLoginDate',
+      'lastLoginData' // typo対策
     ];
 
     let migratedCount = 0;
