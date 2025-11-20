@@ -310,6 +310,7 @@ function ScoreBoard({
       {activeTab === 'goals' && (
         <div className="score-board-content">
           <div className="goals-compact">
+            {/* 定着段階の統計 */}
             {nearMasteryStats.nearMasteryCount > 0 && (
               <span title={`あと1回正解で定着する単語が${nearMasteryStats.nearMasteryCount}個あります`}>
                 🎯<strong>{nearMasteryStats.nearMasteryCount}</strong>定着間近
@@ -328,17 +329,53 @@ function ScoreBoard({
               </span>
             )}
             {nearMasteryStats.superMemoryCount > 0 && <span className="goal-divider">｜</span>}
-            <span title={goalMessage}>
-              {goalProgress.goal.icon}<strong className={goalProgress.overallProgress >= 80 ? 'goal-near' : 'goal-far'}>
-                {goalProgress.overallProgress}%
-              </strong>
-              <span className="goal-sub">
-                {goalProgress.goal.name}
-                {goalProgress.estimatedDaysToAchieve > 0 && goalProgress.estimatedDaysToAchieve <= 30 && (
-                  <>·{goalProgress.estimatedDaysToAchieve}日</>
-                )}
-              </span>
-            </span>
+            
+            {/* 達成済みまたは達成間近の目標のみ表示 */}
+            {(() => {
+              const allProgress = [
+                { id: 'eiken5', name: '英検5級', icon: '🌱', required: 600 },
+                { id: 'eiken4', name: '英検4級', icon: '🌿', required: 1300 },
+                { id: 'eiken3', name: '英検3級', icon: '🌳', required: 2100 },
+                { id: 'high-school', name: '高校入試', icon: '🎓', required: 2500 },
+                { id: 'eiken-pre2', name: '英検準2級', icon: '📚', required: 3600 }
+              ];
+              
+              const displayGoals = allProgress
+                .map(g => ({
+                  ...g,
+                  progress: Math.min(100, Math.round((masteredCount / g.required) * 100)),
+                  remaining: Math.max(0, g.required - masteredCount)
+                }))
+                .filter(g => g.progress >= 80 || (g.progress === 100 && masteredCount >= g.required));
+              
+              if (displayGoals.length === 0) {
+                // 次の目標を1つだけ表示
+                const nextGoal = allProgress.find(g => masteredCount < g.required);
+                if (nextGoal) {
+                  const remaining = nextGoal.required - masteredCount;
+                  return (
+                    <span title={`${nextGoal.name}レベルまであと${remaining}語`}>
+                      📋 次の目標: <strong>{nextGoal.name}</strong> (あと{remaining}語)
+                    </span>
+                  );
+                }
+              }
+              
+              return displayGoals.map((g, idx) => (
+                <span key={g.id}>
+                  {idx > 0 && <span className="goal-divider">｜</span>}
+                  <span title={g.progress === 100 ? `${g.name}レベル達成済み` : `${g.name}まであと${g.remaining}語`}>
+                    {g.icon}
+                    {g.progress === 100 ? (
+                      <><strong>{g.name}</strong> 達成済み</>
+                    ) : (
+                      <><strong>{g.name}</strong> {g.progress}% (あと{g.remaining}語)</>
+                    )}
+                  </span>
+                </span>
+              ));
+            })()}
+            
             {alertSummary.todayReviewCount >= 1 && (
               <>
                 <span className="goal-divider">｜</span>
