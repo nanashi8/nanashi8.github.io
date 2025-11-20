@@ -31,11 +31,22 @@ function setMigrationCompleted(): void {
   }
 }
 
-// LocalStorageからデータを取得
+// LocalStorageからデータを取得（JSON用）
 function getLocalStorageData(key: string): any {
   try {
     const data = localStorage.getItem(key);
-    return data ? JSON.parse(data) : null;
+    if (!data) return null;
+    return JSON.parse(data);
+  } catch (error) {
+    console.error(`Failed to get ${key} from localStorage:`, error);
+    return null;
+  }
+}
+
+// LocalStorageから生データ（文字列）を取得
+function getLocalStorageRawData(key: string): string | null {
+  try {
+    return localStorage.getItem(key);
   } catch (error) {
     console.error(`Failed to get ${key} from localStorage:`, error);
     return null;
@@ -135,17 +146,33 @@ async function migrateDailyStats(): Promise<boolean> {
 // その他の設定データの移行
 async function migrateSettings(): Promise<boolean> {
   try {
-    const settingsKeys = [
+    // JSON形式のデータ
+    const jsonSettingsKeys = [
       'user-goal-level',
-      'lastLoginDate',
       'loginStreak',
       'radar-improvement-progress',
       'skip-exclude-groups'
     ];
 
+    // 文字列形式のデータ（JSON.parseしない）
+    const rawSettingsKeys = [
+      'lastLoginDate'
+    ];
+
     let migratedCount = 0;
-    for (const key of settingsKeys) {
+    
+    // JSON形式の設定を移行
+    for (const key of jsonSettingsKeys) {
       const value = getLocalStorageData(key);
+      if (value !== null) {
+        await putToDB(STORES.SETTINGS, value, key);
+        migratedCount++;
+      }
+    }
+    
+    // 文字列形式の設定を移行
+    for (const key of rawSettingsKeys) {
+      const value = getLocalStorageRawData(key);
       if (value !== null) {
         await putToDB(STORES.SETTINGS, value, key);
         migratedCount++;

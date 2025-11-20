@@ -321,21 +321,33 @@ export function loadProgressSync(): UserProgress {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
     if (!data) {
-      return initializeProgress();
+      const initialized = initializeProgress();
+      progressCache = initialized;
+      return initialized;
     }
     const progress = JSON.parse(data) as UserProgress;
+    
+    // データ検証と補完
     if (!progress.statistics || !progress.questionSetStats) {
-      return initializeProgress();
+      const initialized = initializeProgress();
+      progressCache = initialized;
+      return initialized;
     }
     if (!progress.wordProgress) {
       progress.wordProgress = {};
     }
+    if (!progress.results) {
+      progress.results = [];
+    }
+    
     compressProgressData(progress);
     progressCache = progress;
     return progress;
   } catch (error) {
     console.error('進捗データの読み込みエラー:', error);
-    return initializeProgress();
+    const initialized = initializeProgress();
+    progressCache = initialized;
+    return initialized;
   }
 }
 
