@@ -244,14 +244,6 @@ function SpellingView({
     }
   };
 
-  // タイピング入力用の答え合わせ
-  const checkTypingAnswer = (input: string) => {
-    const isCorrect = input === spellingState.correctWord;
-    const currentQuestion = spellingState.questions[spellingState.currentIndex];
-
-    processAnswer(input, isCorrect, currentQuestion);
-  };
-
   // 共通の答え合わせ処理
   const processAnswer = (_userWord: string, isCorrect: boolean, currentQuestion: Question | null) => {
     // 応答時間を計算
@@ -500,7 +492,7 @@ function SpellingView({
               ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
             </button>
             <button onClick={onStartQuiz} className="start-btn">
-              🎯 クイズを開始
+              🎯 クイズ開始
             </button>
           </>
         )}
@@ -605,7 +597,7 @@ function SpellingView({
 
       {!hasQuestions ? (
         <div className="empty-state">
-          <p>📖 条件を選択して「クイズを開始」ボタンを押してください</p>
+          <p>📖 条件を選択して「クイズ開始」ボタンを押してください</p>
         </div>
       ) : (
         <>

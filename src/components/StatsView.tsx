@@ -597,6 +597,9 @@ function SimpleRadarChart({ labels, data, maxValue, color }: {
   const maxRadius = size / 2 - 40;
   const numPoints = labels.length;
   
+  // ダークモード判定
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  
   if (numPoints === 0) {
     return <div className="radar-chart-empty">データがありません</div>;
   }
@@ -635,7 +638,7 @@ function SimpleRadarChart({ labels, data, maxValue, color }: {
             key={i}
             points={path}
             fill="none"
-            stroke="#ddd"
+            stroke={isDarkMode ? "#555" : "#ddd"}
             strokeWidth="1"
           />
         ))}
@@ -650,7 +653,7 @@ function SimpleRadarChart({ labels, data, maxValue, color }: {
               y1={center}
               x2={center + maxRadius * Math.cos(angle)}
               y2={center + maxRadius * Math.sin(angle)}
-              stroke="#ddd"
+              stroke={isDarkMode ? "#555" : "#ddd"}
               strokeWidth="1"
             />
           );
@@ -690,9 +693,10 @@ function SimpleRadarChart({ labels, data, maxValue, color }: {
               dominantBaseline="middle"
               fontSize="14"
               fontWeight="bold"
+              fill={isDarkMode ? "#e0e0e0" : "#333"}
             >
               {label}
-              <tspan x={x} dy="15" fontSize="12" fill="#666">
+              <tspan x={x} dy="15" fontSize="12" fill={isDarkMode ? "#b0b0b0" : "#666"}>
                 {data[i].toFixed(1)}%
               </tspan>
             </text>

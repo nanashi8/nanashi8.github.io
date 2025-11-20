@@ -458,8 +458,11 @@ export function calculateRetentionRate(
     ? (masteredCount / appearedWords.length) * 100 
     : 0;
   
+  // 定着率は0-100%の範囲に制限
+  const normalizedRetentionRate = Math.min(100, Math.max(0, retentionRate));
+  
   return {
-    retentionRate: Math.round(retentionRate),
+    retentionRate: Math.round(normalizedRetentionRate),
     masteredCount,
     appearedCount: appearedWords.length
   };

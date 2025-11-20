@@ -1284,10 +1284,105 @@ export function getRetentionRateWithAI(): {
     ? (masteredCount / appearedWords.length) * 100 
     : 0;
   
+  // デバッグ: 異常な値の検出
+  if (retentionRate > 100) {
+    console.warn('⚠️ 定着率が100%を超えています:', {
+      retentionRate,
+      masteredCount,
+      appearedCount: appearedWords.length,
+      calculation: `(${masteredCount} / ${appearedWords.length}) * 100 = ${retentionRate}`
+    });
+  }
+  
+  // 定着率は0-100%の範囲に制限
+  const normalizedRetentionRate = Math.min(100, Math.max(0, retentionRate));
+  
   return {
-    retentionRate: Math.round(retentionRate),
+    retentionRate: Math.round(normalizedRetentionRate),
     masteredCount,
     appearedCount: appearedWords.length
+  };
+}
+
+/**
+ * 詳細な定着率統計（3段階分類）
+ */
+export interface DetailedRetentionStats {
+  // 基本統計
+  totalWords: number;
+  appearedWords: number;
+  
+  // 段階別カウント
+  masteredCount: number;      // 🟢 完全定着
+  learningCount: number;       // 🟡 学習中
+  strugglingCount: number;     // 🔴 要復習
+  
+  // 定着率（複数の指標）
+  basicRetentionRate: number;      // 基本定着率: 定着数/出題数 (0-100%)
+  weightedRetentionRate: number;   // 加重定着率: 学習中を0.5倍 (0-100%)
+  
+  // パーセンテージ（表示用）
+  masteredPercentage: number;
+  learningPercentage: number;
+  strugglingPercentage: number;
+}
+
+/**
+ * 詳細な定着率統計を計算
+ */
+export function getDetailedRetentionStats(): DetailedRetentionStats {
+  const progress = loadProgress();
+  const allWords = Object.values(progress.wordProgress);
+  const appearedWords = allWords.filter(wp => 
+    (wp.correctCount + wp.incorrectCount) > 0
+  );
+  
+  let masteredCount = 0;
+  let learningCount = 0;
+  let strugglingCount = 0;
+  
+  appearedWords.forEach(wp => {
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
+    
+    // 🟢 完全定着判定
+    const isDefinitelyMastered = 
+      (totalAttempts === 1 && wp.correctCount === 1) || // 1発正解
+      wp.consecutiveCorrect >= 3 || // 連続3回以上正解
+      (wp.consecutiveCorrect >= 2 && accuracy >= 80); // 連続2回 + 正答率80%以上
+    
+    if (isDefinitelyMastered) {
+      masteredCount++;
+    }
+    // 🟡 学習中（正答率50%以上だがまだ定着していない）
+    else if (accuracy >= 50) {
+      learningCount++;
+    }
+    // 🔴 要復習（正答率50%未満）
+    else {
+      strugglingCount++;
+    }
+  });
+  
+  const total = appearedWords.length;
+  
+  // 加重スコア計算（完全定着=1.0, 学習中=0.5, 要復習=0.0）
+  const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
+  
+  return {
+    totalWords: allWords.length,
+    appearedWords: total,
+    
+    masteredCount,
+    learningCount,
+    strugglingCount,
+    
+    basicRetentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    weightedRetentionRate: total > 0 ? Math.round((weightedScore / total) * 100) : 0,
+    
+    masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
+    strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
   };
 }
 
@@ -1681,7 +1776,44 @@ export function getCategoryDifficultyStats(mode: 'translation' | 'spelling'): {
 }
 
 /**
+ * 単語の難易度を自動判定する
+ * 基準: 語長、学習回数、正答率から総合的に判定
+ */
+function autoDetectWordDifficulty(word: string, stats: WordProgress): 'beginner' | 'intermediate' | 'advanced' {
+  // 1. 明示的な難易度設定があればそれを使用
+  if (stats.difficulty) {
+    return stats.difficulty as 'beginner' | 'intermediate' | 'advanced';
+  }
+  
+  const totalAttempts = stats.correctCount + stats.incorrectCount;
+  const accuracy = totalAttempts > 0 ? (stats.correctCount / totalAttempts) * 100 : 0;
+  
+  // 2. 語長ベースの初期判定
+  let baseScore = 0;
+  if (word.length <= 5) baseScore = 1; // 初級候補
+  else if (word.length <= 8) baseScore = 2; // 中級候補
+  else baseScore = 3; // 上級候補
+  
+  // 3. 学習パフォーマンスで調整
+  if (totalAttempts >= 3) {
+    if (accuracy < 50) {
+      // 正答率50%未満 = 難しい → レベルアップ
+      baseScore = Math.min(3, baseScore + 1);
+    } else if (accuracy > 90 && stats.consecutiveCorrect >= 3) {
+      // 正答率90%以上かつ連続3回以上正解 = 簡単 → レベルダウン
+      baseScore = Math.max(1, baseScore - 1);
+    }
+  }
+  
+  // 4. スコアを難易度に変換
+  if (baseScore === 1) return 'beginner';
+  if (baseScore === 2) return 'intermediate';
+  return 'advanced';
+}
+
+/**
  * モード別・難易度別の統計を取得
+ * 改善版: フィルタリング無しで単語を自動的に難易度別に分類
  */
 export function getStatsByModeDifficulty(mode: 'translation' | 'spelling'): {
   labels: string[];
@@ -1694,41 +1826,51 @@ export function getStatsByModeDifficulty(mode: 'translation' | 'spelling'): {
   const accuracyData: number[] = [];
   const retentionData: number[] = [];
 
+  // モードに関連する結果を取得
+  const modeResults = progress.results.filter(r => r.mode === mode);
+
   difficulties.forEach(difficulty => {
-    const results = progress.results.filter(r => r.mode === mode && r.difficulty === difficulty);
+    // この難易度の単語を自動分類
+    const difficultyWords = new Set<string>();
+    const masteredWords = new Set<string>();
+    let totalCorrect = 0;
+    let totalQuestions = 0;
     
-    if (results.length > 0) {
-      // 正答率
-      const totalCorrect = results.reduce((sum, r) => sum + r.score, 0);
-      const totalQuestions = results.reduce((sum, r) => sum + r.total, 0);
-      const accuracy = totalQuestions > 0 ? (totalCorrect / totalQuestions) * 100 : 0;
-      accuracyData.push(accuracy);
-
-      // 定着率（正答率85%以上の単語数 / 総出題単語数）
-      const masteredWords = new Set<string>();
-      const allWords = new Set<string>();
+    // 単語レベルで難易度を判定して分類
+    Object.entries(progress.wordProgress).forEach(([word, stats]) => {
+      const wordDifficulty = autoDetectWordDifficulty(word, stats);
+      const totalAttempts = stats.correctCount + stats.incorrectCount;
       
-      Object.entries(progress.wordProgress).forEach(([word, stats]) => {
-        // この難易度の問題で出題された単語かチェック
-        const wordResults = results.filter(r => 
-          r.incorrectWords?.includes(word) || 
-          (r.questionSetName?.includes(word))
-        );
+      // この難易度に該当し、かつこのモードで学習済みの単語
+      if (wordDifficulty === difficulty && totalAttempts > 0) {
+        difficultyWords.add(word);
         
-        if (wordResults.length > 0 || stats.totalAttempts > 0) {
-          allWords.add(word);
-          if (stats.accuracy >= 85 && stats.totalAttempts >= 3) {
-            masteredWords.add(word);
-          }
+        // 正答率計算
+        totalCorrect += stats.correctCount;
+        totalQuestions += totalAttempts;
+        
+        // 定着判定 (85%以上かつ3回以上)
+        const accuracy = totalAttempts > 0 ? (stats.correctCount / totalAttempts) * 100 : 0;
+        if (accuracy >= 85 && totalAttempts >= 3) {
+          masteredWords.add(word);
         }
-      });
-
-      const retention = allWords.size > 0 ? (masteredWords.size / allWords.size) * 100 : 0;
-      retentionData.push(retention);
-    } else {
-      accuracyData.push(0);
-      retentionData.push(0);
+      }
+    });
+    
+    // 明示的な難易度設定がある結果も追加考慮
+    const explicitResults = modeResults.filter(r => r.difficulty === difficulty);
+    if (explicitResults.length > 0) {
+      totalCorrect += explicitResults.reduce((sum, r) => sum + r.score, 0);
+      totalQuestions += explicitResults.reduce((sum, r) => sum + r.total, 0);
     }
+
+    // 正答率
+    const accuracy = totalQuestions > 0 ? (totalCorrect / totalQuestions) * 100 : 0;
+    accuracyData.push(accuracy);
+
+    // 定着率
+    const retention = difficultyWords.size > 0 ? (masteredWords.size / difficultyWords.size) * 100 : 0;
+    retentionData.push(Math.min(100, Math.max(0, retention)));
   });
 
   return { labels, accuracyData, retentionData };
@@ -2037,9 +2179,9 @@ export function getRetentionTrend(): {
   });
   
   return {
-    last7Days: words7Days.size > 0 ? (mastered7Days.size / words7Days.size) * 100 : 0,
-    last30Days: words30Days.size > 0 ? (mastered30Days.size / words30Days.size) * 100 : 0,
-    allTime: wordsAllTime.size > 0 ? (masteredAllTime.size / wordsAllTime.size) * 100 : 0,
+    last7Days: Math.min(100, Math.max(0, words7Days.size > 0 ? (mastered7Days.size / words7Days.size) * 100 : 0)),
+    last30Days: Math.min(100, Math.max(0, words30Days.size > 0 ? (mastered30Days.size / words30Days.size) * 100 : 0)),
+    allTime: Math.min(100, Math.max(0, wordsAllTime.size > 0 ? (masteredAllTime.size / wordsAllTime.size) * 100 : 0)),
   };
 }
 
