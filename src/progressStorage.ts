@@ -335,7 +335,9 @@ export async function loadProgress(): Promise<UserProgress> {
 }
 
 // 同期版loadProgress（後方互換性のため - 内部でキャッシュを使用）
-let progressCache: UserProgress | null = null;
+// 初期状態で空のキャッシュを設定（undefinedエラーを防ぐ）
+let progressCache: UserProgress | null = initializeProgress();
+
 export function loadProgressSync(): UserProgress {
   if (progressCache) return progressCache;
   
