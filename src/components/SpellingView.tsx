@@ -254,7 +254,7 @@ function SpellingView({
       
       // AI学習アシスタント: スキップした単語の検証
       const progress = loadProgress();
-      const wordProgress = progress.wordProgress[currentQuestion.word];
+      const wordProgress = progress.wordProgress?.[currentQuestion.word];
       
       // セッション履歴に追加
       let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';

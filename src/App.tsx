@@ -583,7 +583,7 @@ function App() {
       
       // セッション履歴に追加
       const progress = await loadProgress();
-      const wordProgress = progress.wordProgress[currentQuestion.word];
+      const wordProgress = progress.wordProgress?.[currentQuestion.word];
       let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';
       
       // 定着判定
@@ -640,12 +640,12 @@ function App() {
       // AI学習メッセージ（デバッグ用）
       if (spacedRepetitionScheduleRef.current.length > 0) {
         const latestSchedule = spacedRepetitionScheduleRef.current[spacedRepetitionScheduleRef.current.length - 1];
-        const retention = calculateMemoryRetention(currentQuestion.word, currentProgress.wordProgress[currentQuestion.word]);
+        const retention = calculateMemoryRetention(currentQuestion.word, currentProgress.wordProgress?.[currentQuestion.word]);
         console.log(`🧠 AI学習: ${currentQuestion.word} - 定着度${retention.retentionScore.toFixed(1)}% - ${latestSchedule.reason} (${latestSchedule.nextQuestionIndex - quizState.currentIndex}問後に再出題)`);
       }
       
       // AI学習アシスタント: スキップした単語の検証
-      const skipWordProgress = currentProgress.wordProgress[currentQuestion.word];
+      const skipWordProgress = currentProgress.wordProgress?.[currentQuestion.word];
       
       if (skipWordProgress && skipWordProgress.skippedCount && skipWordProgress.skippedCount > 0) {
         // この単語は以前スキップされていた
