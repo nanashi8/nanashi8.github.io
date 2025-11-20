@@ -283,7 +283,7 @@ export default function SettingsView({
         <div className="app-info">
           <div className="info-row">
             <span className="info-label">アプリ名:</span>
-            <span>英単語3択クイズ</span>
+            <span>英語学習アプリ</span>
           </div>
           <div className="info-row">
             <span className="info-label">バージョン:</span>
