@@ -7,7 +7,8 @@ import {
   getDetailedRetentionStats,
   getNearMasteryStats,
   getSessionHistory,
-  SessionHistoryItem
+  SessionHistoryItem,
+  getDailyPlanInfo
 } from '../progressStorage';
 import { calculateGoalProgress, generateGoalMessage } from '../goalSimulator';
 import { getAlertSummary } from '../forgettingAlert';
@@ -37,10 +38,16 @@ function ScoreBoard({
   isReviewFocusMode = false
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
-  const [activeTab, setActiveTab] = useState<'stats' | 'goals' | 'history'>('stats');
+  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'goals' | 'history'>('stats');
   const [statSubTab, setStatSubTab] = useState<'accuracy' | 'retention' | 'total'>('accuracy');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const historyLimit = isMobile ? 10 : 20;
+  
+  // 学習プラン目標設定
+  const [planTarget, setPlanTarget] = useState(() => {
+    const saved = localStorage.getItem(`daily-plan-target-${mode}`);
+    return saved ? parseInt(saved) : 20;
+  });
 
   // ウィンドウサイズ変更を監視
   useEffect(() => {
@@ -88,6 +95,15 @@ function ScoreBoard({
   // 定着予測統計を取得
   const nearMasteryStats = getNearMasteryStats();
 
+  // 学習プラン情報を取得
+  const planInfo = getDailyPlanInfo(mode);
+  
+  // 学習プラン目標変更ハンドラー
+  const handlePlanTargetChange = (value: number) => {
+    setPlanTarget(value);
+    localStorage.setItem(`daily-plan-target-${mode}`, value.toString());
+  };
+
   // 目標達成情報を取得
   const goalProgress = calculateGoalProgress();
   const goalMessage = generateGoalMessage(false);
@@ -98,11 +114,11 @@ function ScoreBoard({
   // 現在のセッションの正答率を計算
   const currentAccuracy = totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0;
 
-  // タブの配列（履歴タブはモードによって条件付き）
-  const tabs: Array<'stats' | 'goals' | 'history'> = 
+  // タブの配列（学習プラン、統計、目標、履歴）
+  const tabs: Array<'plan' | 'stats' | 'goals' | 'history'> = 
     mode === 'translation' || mode === 'spelling' 
-      ? ['stats', 'goals', 'history'] 
-      : ['stats', 'goals'];
+      ? ['plan', 'stats', 'goals', 'history'] 
+      : ['plan', 'stats', 'goals'];
 
   // タブ切り替え関数
   const handlePrevTab = () => {
@@ -118,8 +134,9 @@ function ScoreBoard({
   };
 
   // タブ名の取得
-  const getTabName = (tab: 'stats' | 'goals' | 'history') => {
+  const getTabName = (tab: 'plan' | 'stats' | 'goals' | 'history') => {
     switch (tab) {
+      case 'plan': return '📋 学習プラン';
       case 'stats': return '📊 基本統計';
       case 'goals': return '🎯 目標・進捗';
       case 'history': return '📜 履歴';
@@ -131,6 +148,12 @@ function ScoreBoard({
       {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
       {!isMobile && (
         <div className="score-board-tabs">
+          <button 
+            className={`score-tab ${activeTab === 'plan' ? 'active' : ''}`}
+            onClick={() => setActiveTab('plan')}
+          >
+            📋 学習プラン
+          </button>
           <button 
             className={`score-tab ${activeTab === 'stats' ? 'active' : ''}`}
             onClick={() => setActiveTab('stats')}
@@ -184,9 +207,61 @@ function ScoreBoard({
         </div>
       )}
       
+      {/* 学習プランタブ */}
+      {activeTab === 'plan' && (
+        <div className="score-board-content">
+          <div className="plan-tab-content">
+            {/* プラン概要 */}
+            <div className="plan-summary">
+              <div className="plan-item">
+                <span className="plan-label">要復習:</span>
+                <span className="plan-count">{planInfo.reviewWordsCount}語</span>
+              </div>
+              <div className="plan-item">
+                <span className="plan-label">確認予定:</span>
+                <span className="plan-count">{planInfo.scheduledWordsCount}語</span>
+              </div>
+              <div className="plan-item">
+                <span className="plan-label">本日の目標:</span>
+                <span className="plan-count">{planTarget}語</span>
+              </div>
+            </div>
+
+            {/* 進捗バー */}
+            <div className="plan-progress-bar">
+              <div 
+                className="plan-progress-fill" 
+                style={{ width: `${Math.min(100, (totalAnswered / planTarget) * 100)}%` }}
+              />
+            </div>
+
+            {/* 推奨メッセージ */}
+            <div className="plan-recommendation">
+              {totalAnswered >= planTarget 
+                ? `🎉 本日の目標達成！ お疲れ様でした` 
+                : `💪 あと${planTarget - totalAnswered}語で目標達成`}
+            </div>
+
+            {/* 目標調整スライダー */}
+            <div className="plan-target-adjust">
+              <label>日次目標: {planTarget}語</label>
+              <input 
+                type="range" 
+                min="10" 
+                max="100" 
+                step="5" 
+                value={planTarget}
+                onChange={(e) => handlePlanTargetChange(parseInt(e.target.value))}
+                className="plan-slider"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      
       {/* 基本統計タブ */}
       {activeTab === 'stats' && (
-        <>
+        <div className="score-board-content">
           {/* デスクトップ版: 横並びレイアウト */}
           {!isMobile && (
             <div className="stats-grid-container">
@@ -368,43 +443,46 @@ function ScoreBoard({
               )}
             </div>
           )}
-        </>
+        </div>
       )}
       
       {/* 目標・進捗タブ */}
       {activeTab === 'goals' && (
-        <>
+        <div className="score-board-content goals-tab-content">
           {/* 定着予測情報 */}
           {nearMasteryStats.nearMasteryCount > 0 && (
-            <>
-              <span className="score-stat near-mastery-stat" title={`あと1回正解で定着する単語が${nearMasteryStats.nearMasteryCount}個あります`}>
-                🎯 <strong className="near-mastery-count">{nearMasteryStats.nearMasteryCount}</strong>
-                <span className="score-stat-sub">定着間近</span>
-              </span>
-              <span className="score-stat-divider">|</span>
-            </>
+            <span className="score-stat near-mastery-stat" title={`あと1回正解で定着する単語が${nearMasteryStats.nearMasteryCount}個あります`}>
+              🎯 <strong className="near-mastery-count">{nearMasteryStats.nearMasteryCount}</strong>
+              <span className="score-stat-sub">定着間近</span>
+            </span>
+          )}
+          
+          {nearMasteryStats.nearMasteryCount > 0 && (
+            <span className="score-stat-divider">|</span>
           )}
           
           {/* 長期記憶達成 */}
           {nearMasteryStats.longTermMemoryCount > 0 && (
-            <>
-              <span className="score-stat long-term-memory-stat" title={`連続5回以上正解で長期記憶に定着した単語が${nearMasteryStats.longTermMemoryCount}個あります（30日〜90日間隔で復習）`}>
-                🧠 <strong className="long-term-count">{nearMasteryStats.longTermMemoryCount}</strong>
-                <span className="score-stat-sub">長期記憶</span>
-              </span>
-              <span className="score-stat-divider">|</span>
-            </>
+            <span className="score-stat long-term-memory-stat" title={`連続5回以上正解で長期記憶に定着した単語が${nearMasteryStats.longTermMemoryCount}個あります（30日〜90日間隔で復習）`}>
+              🧠 <strong className="long-term-count">{nearMasteryStats.longTermMemoryCount}</strong>
+              <span className="score-stat-sub">長期記憶</span>
+            </span>
+          )}
+          
+          {nearMasteryStats.longTermMemoryCount > 0 && (
+            <span className="score-stat-divider">|</span>
           )}
           
           {/* 超長期記憶達成 */}
           {nearMasteryStats.superMemoryCount > 0 && (
-            <>
-              <span className="score-stat super-memory-stat" title={`連続7回以上正解で超長期記憶に定着した単語が${nearMasteryStats.superMemoryCount}個あります（半年〜1年間隔で復習）`}>
-                ✨ <strong className="super-memory-count">{nearMasteryStats.superMemoryCount}</strong>
-                <span className="score-stat-sub">完全定着</span>
-              </span>
-              <span className="score-stat-divider">|</span>
-            </>
+            <span className="score-stat super-memory-stat" title={`連続7回以上正解で超長期記憶に定着した単語が${nearMasteryStats.superMemoryCount}個あります（半年〜1年間隔で復習）`}>
+              ✨ <strong className="super-memory-count">{nearMasteryStats.superMemoryCount}</strong>
+              <span className="score-stat-sub">完全定着</span>
+            </span>
+          )}
+          
+          {nearMasteryStats.superMemoryCount > 0 && (
+            <span className="score-stat-divider">|</span>
           )}
           
           {/* 目標達成情報 */}
@@ -423,42 +501,43 @@ function ScoreBoard({
           
           {/* 忘却アラート - 1個以上の場合に表示 */}
           {alertSummary.todayReviewCount >= 1 && (
-            <>
-              <span className="score-stat-divider">|</span>
-              <span 
-                className={`score-stat alert-stat ${onReviewFocus ? 'clickable' : ''}`}
-                title={onReviewFocus ? "クリックして要復習問題に集中" : "今日復習すべき単語があります"}
-                onClick={onReviewFocus}
-              >
-                ⏰ <strong className="alert-count">{alertSummary.todayReviewCount}</strong>
-                <span className="score-stat-sub">要復習</span>
-              </span>
-            </>
+            <span className="score-stat-divider">|</span>
           )}
-        </>
+          {alertSummary.todayReviewCount >= 1 && (
+            <span 
+              className={`score-stat alert-stat ${onReviewFocus ? 'clickable' : ''}`}
+              title={onReviewFocus ? "クリックして要復習問題に集中" : "今日復習すべき単語があります"}
+              onClick={onReviewFocus}
+            >
+              ⏰ <strong className="alert-count">{alertSummary.todayReviewCount}</strong>
+              <span className="score-stat-sub">要復習</span>
+            </span>
+          )}
+        </div>
       )}
       
       {/* 履歴タブ */}
       {activeTab === 'history' && (mode === 'translation' || mode === 'spelling') && (
-        <div className="session-indicator">
-          <div className="session-stats">
-            <span className="session-label">今回:</span>
-            <span className="session-count">{totalAnswered}問</span>
-            {totalAnswered > 0 && (
-              <span className="session-breakdown">
-                {sessionCorrect > 0 && <span className="stat-correct">🟩{sessionCorrect}</span>}
-                {sessionIncorrect > 0 && <span className="stat-incorrect">🟨{sessionIncorrect}</span>}
-                {sessionReview > 0 && <span className="stat-review">🟧{sessionReview}</span>}
-                {sessionMastered > 0 && <span className="stat-mastered">⭐️{sessionMastered}</span>}
-              </span>
-            )}
-          </div>
-          <div className="history-indicator">
-            <span className="history-label">履歴:</span>
-            <div className="history-items">
-              {history.length === 0 ? (
-                <span className="history-empty">データなし</span>
-              ) : (
+        <div className="score-board-content history-tab-content">
+          <div className="session-indicator">
+            <div className="session-stats">
+              <span className="session-label">今回:</span>
+              <span className="session-count">{totalAnswered}問</span>
+              {totalAnswered > 0 && (
+                <span className="session-breakdown">
+                  {sessionCorrect > 0 && <span className="stat-correct">🟩{sessionCorrect}</span>}
+                  {sessionIncorrect > 0 && <span className="stat-incorrect">🟨{sessionIncorrect}</span>}
+                  {sessionReview > 0 && <span className="stat-review">🟧{sessionReview}</span>}
+                  {sessionMastered > 0 && <span className="stat-mastered">⭐️{sessionMastered}</span>}
+                </span>
+              )}
+            </div>
+            <div className="history-indicator">
+              <span className="history-label">履歴:</span>
+              <div className="history-items">
+                {history.length === 0 ? (
+                  <span className="history-empty">データなし</span>
+                ) : (
                 history.map((item, idx) => (
                   <span
                     key={idx}
@@ -472,6 +551,7 @@ function ScoreBoard({
                 ))
               )}
             </div>
+          </div>
           </div>
         </div>
       )}
