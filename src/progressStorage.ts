@@ -335,11 +335,29 @@ export async function loadProgress(): Promise<UserProgress> {
 }
 
 // 同期版loadProgress（後方互換性のため - 内部でキャッシュを使用）
-// 初期状態で空のキャッシュを設定（undefinedエラーを防ぐ）
-let progressCache: UserProgress | null = initializeProgress();
+let progressCache: UserProgress | null = null;
+
+// 初期化を確実に行う関数
+function ensureProgressCache(): UserProgress {
+  if (!progressCache) {
+    progressCache = initializeProgress();
+    console.log('📦 Progress cache initialized with default data');
+  }
+  return progressCache;
+}
 
 export function loadProgressSync(): UserProgress {
-  if (progressCache) return progressCache;
+  if (progressCache) {
+    // キャッシュがあっても、statisticsが欠けていたら補完
+    if (!progressCache.statistics) {
+      console.warn('⚠️ Cache missing statistics, reinitializing');
+      progressCache = initializeProgress();
+    }
+    return progressCache;
+  }
+  
+  // キャッシュがない場合は初期化してから読み込み
+  ensureProgressCache();
   
   // LocalStorageから直接読み込み（フォールバック）
   try {
