@@ -3,9 +3,12 @@
 import { useState, useEffect } from 'react';
 import { errorLogger, ErrorLog } from '../errorLogger';
 
-export function ErrorLogPanel() {
+interface ErrorLogPanelProps {
+  onClose: () => void;
+}
+
+export function ErrorLogPanel({ onClose }: ErrorLogPanelProps) {
   const [logs, setLogs] = useState<ErrorLog[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // 1秒ごとにログを更新
@@ -17,11 +20,6 @@ export function ErrorLogPanel() {
   }, []);
 
   const errors = logs.filter(log => log.type === 'error');
-  const hasErrors = errors.length > 0;
-
-  if (!hasErrors && !isVisible) {
-    return null;
-  }
 
   return (
     <div style={{
@@ -69,7 +67,7 @@ export function ErrorLogPanel() {
             📋 コピー
           </button>
           <button
-            onClick={() => setIsVisible(false)}
+            onClick={onClose}
             style={{
               backgroundColor: 'transparent',
               color: 'white',
@@ -166,7 +164,7 @@ export function ErrorBadge() {
 
   return (
     <>
-      {showPanel && <ErrorLogPanel />}
+      {showPanel && <ErrorLogPanel onClose={() => setShowPanel(false)} />}
       {!showPanel && (
         <button
           onClick={() => setShowPanel(true)}
