@@ -371,7 +371,7 @@ function ScoreBoard({
               )}
             </div>
             <div className="history-icons">
-              {history.length === 0 ? (
+              {!Array.isArray(history) || history.length === 0 ? (
                 <span className="history-empty">履歴なし</span>
               ) : (
                 history.map((item, idx) => (
