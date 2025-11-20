@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定着率表示の改善 - Before/After 比較</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .panel {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .panel h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ddd;
+        }
+        
+        .before h2 {
+            color: #e74c3c;
+            border-color: #e74c3c;
+        }
+        
+        .after h2 {
+            color: #27ae60;
+            border-color: #27ae60;
+        }
+        
+        .display-box {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            line-height: 1.8;
+        }
+        
+        .stat-simple {
+            font-size: 24px;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .stat-detailed {
+            background: #fff;
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .word-list {
+            margin: 15px 0;
+        }
+        
+        .word-item {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .word-mastered {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        
+        .word-learning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .word-struggling {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+        
+        .word-unknown {
+            background: #e9ecef;
+            border-left: 4px solid #6c757d;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e9ecef;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 15px 0;
+            display: flex;
+        }
+        
+        .progress-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .progress-mastered {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+        
+        .progress-learning {
+            background: linear-gradient(135deg, #ffc107, #fd7e14);
+        }
+        
+        .progress-struggling {
+            background: linear-gradient(135deg, #dc3545, #e83e8c);
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .metric-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .action-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .action-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .action-item {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        
+        .example-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .example-section h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .word-table th,
+        .word-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .word-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .word-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .badge-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .badge-warning {
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .badge-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        /* 表の背景色用クラス */
+        .row-learning {
+            background: #fff3cd;
+        }
+        
+        .row-struggling {
+            background: #f8d7da;
+        }
+        
+        /* プログレスバーの幅設定 */
+        .width-50 { width: 50%; }
+        .width-30 { width: 30%; }
+        .width-20 { width: 20%; }
+        
+        /* テキストスタイル */
+        .text-large-blue {
+            font-size: 24px;
+            color: #667eea;
+        }
+        
+        .text-large-green {
+            font-size: 20px;
+            color: #27ae60;
+        }
+        
+        /* タイトルカラー */
+        .title-red {
+            color: #e74c3c;
+        }
+        
+        .title-green {
+            color: #27ae60;
+        }
+        
+        /* 特別なセクション */
+        .section-highlight {
+            background: #d4edda;
+            border: 2px solid #28a745;
+        }
+        
+        .section-highlight-title {
+            color: #155724;
+        }
+        
+        .section-highlight-text {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .section-highlight-confirm {
+            font-size: 24px;
+            color: #28a745;
+        }
+        
+        .section-highlight-list {
+            font-size: 16px;
+        }
+        
+        /* メトリックカードのバリエーション */
+        .metric-card-red {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+        
+        .metric-card-green {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+        
+        .metric-card-yellow {
+            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+        }
+        
+        .metric-card-pink {
+            background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+        }
+        
+        .section-highlight {
+            background: #d4edda;
+            border: 2px solid #28a745;
+        }
+        
+        .section-highlight-title {
+            color: #155724;
+        }
+        
+        .section-highlight-content {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .section-highlight-emphasis {
+            font-size: 24px;
+            color: #28a745;
+        }
+        
+        .section-highlight-list {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 定着率表示の改善 - Before/After 比較</h1>
+    
+    <div class="example-section">
+        <h3>📚 学習シナリオ：10個の英単語を学習</h3>
+        <table class="word-table">
+            <thead>
+                <tr>
+                    <th>単語</th>
+                    <th>学習履歴</th>
+                    <th>正解数</th>
+                    <th>不正解数</th>
+                    <th>連続正解</th>
+                    <th>正答率</th>
+                    <th>状態</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>challenge</strong></td>
+                    <td>○○</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>100%</td>
+                    <td><span class="badge badge-success">定着</span></td>
+                </tr>
+                <tr>
+                    <td><strong>environment</strong></td>
+                    <td>○○</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>100%</td>
+                    <td><span class="badge badge-success">定着</span></td>
+                </tr>
+                <tr>
+                    <td><strong>resource</strong></td>
+                    <td>○</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>100%</td>
+                    <td><span class="badge badge-success">1発正解</span></td>
+                </tr>
+                <tr>
+                    <td><strong>pollution</strong></td>
+                    <td>○</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>100%</td>
+                    <td><span class="badge badge-success">1発正解</span></td>
+                </tr>
+                <tr>
+                    <td><strong>climate</strong></td>
+                    <td>○</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>100%</td>
+                    <td><span class="badge badge-success">1発正解</span></td>
+                </tr>
+                <tr class="row-learning">
+                    <td><strong>important</strong></td>
+                    <td>○×○</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>67%</td>
+                    <td><span class="badge badge-warning">学習中</span></td>
+                </tr>
+                <tr class="row-learning">
+                    <td><strong>difficult</strong></td>
+                    <td>○×○</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>67%</td>
+                    <td><span class="badge badge-warning">学習中</span></td>
+                </tr>
+                <tr class="row-learning">
+                    <td><strong>necessary</strong></td>
+                    <td>×○×</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>33%</td>
+                    <td><span class="badge badge-warning">学習中</span></td>
+                </tr>
+                <tr class="row-struggling">
+                    <td><strong>achieve</strong></td>
+                    <td>××</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0%</td>
+                    <td><span class="badge badge-danger">要復習</span></td>
+                </tr>
+                <tr class="row-struggling">
+                    <td><strong>concern</strong></td>
+                    <td>××</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0%</td>
+                    <td><span class="badge badge-danger">要復習</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comparison-container">
+        <!-- BEFORE (現状) -->
+        <div class="panel before">
+            <h2>❌ 現状のシステム</h2>
+            
+            <div class="stat-simple">
+                定着率 50% (5/10)
+            </div>
+            
+            <h3>単語の分類</h3>
+            <div class="word-list">
+                <div class="word-item word-mastered">
+                    <span>✅ challenge</span>
+                    <span>定着</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>✅ environment</span>
+                    <span>定着</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>✅ resource</span>
+                    <span>定着</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>✅ pollution</span>
+                    <span>定着</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>✅ climate</span>
+                    <span>定着</span>
+                </div>
+                <div class="word-item word-unknown">
+                    <span>❌ important</span>
+                    <span>未定着</span>
+                </div>
+                <div class="word-item word-unknown">
+                    <span>❌ difficult</span>
+                    <span>未定着</span>
+                </div>
+                <div class="word-item word-unknown">
+                    <span>❌ necessary</span>
+                    <span>未定着</span>
+                </div>
+                <div class="word-item word-unknown">
+                    <span>❌ achieve</span>
+                    <span>未定着</span>
+                </div>
+                <div class="word-item word-unknown">
+                    <span>❌ concern</span>
+                    <span>未定着</span>
+                </div>
+            </div>
+            
+            <h3>問題点</h3>
+            <div class="display-box">
+❌ 2分類のみ（定着/未定着）
+
+❌ 学習中の努力が評価されない
+   important（67%）も
+   achieve（0%）も
+   同じ「未定着」扱い
+
+❌ 次のアクションが不明確
+   「あと何回正解すれば？」
+   → 答えが表示されない
+
+❌ 進捗が見えない
+   → モチベーション低下
+            </div>
+        </div>
+        
+        <!-- AFTER (改善案) -->
+        <div class="panel after">
+            <h2>✅ 改善案のシステム</h2>
+            
+            <div class="stat-detailed">
+                <div class="stat-row">
+                    <span><strong>基本定着率</strong></span>
+                    <span class="text-large-blue"><strong>50%</strong> (5/10語)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-segment progress-mastered width-50">
+                        🟢 50%
+                    </div>
+                    <div class="progress-segment progress-learning width-30">
+                        🟡 30%
+                    </div>
+                    <div class="progress-segment progress-struggling width-20">
+                        🔴 20%
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <span>加重定着率（学習中を半分評価）</span>
+                    <span class="text-large-green"><strong>65%</strong></span>
+                </div>
+            </div>
+            
+            <h3>単語の分類（3段階）</h3>
+            <div class="word-list">
+                <div class="word-item word-mastered">
+                    <span>🟢 challenge</span>
+                    <span>完全定着 (100%)</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>🟢 environment</span>
+                    <span>完全定着 (100%)</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>🟢 resource</span>
+                    <span>完全定着 (100%)</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>🟢 pollution</span>
+                    <span>完全定着 (100%)</span>
+                </div>
+                <div class="word-item word-mastered">
+                    <span>🟢 climate</span>
+                    <span>完全定着 (100%)</span>
+                </div>
+                <div class="word-item word-learning">
+                    <span>🟡 important</span>
+                    <span>学習中 (67%, あと1回)</span>
+                </div>
+                <div class="word-item word-learning">
+                    <span>🟡 difficult</span>
+                    <span>学習中 (67%, あと1回)</span>
+                </div>
+                <div class="word-item word-learning">
+                    <span>🟡 necessary</span>
+                    <span>学習中 (33%, あと2回)</span>
+                </div>
+                <div class="word-item word-struggling">
+                    <span>🔴 achieve</span>
+                    <span>要復習 (0%, 苦手)</span>
+                </div>
+                <div class="word-item word-struggling">
+                    <span>🔴 concern</span>
+                    <span>要復習 (0%, 苦手)</span>
+                </div>
+            </div>
+            
+            <div class="action-box">
+                <div class="action-title">⚠️ アクション推奨</div>
+                <div class="action-item">🔴 緊急復習: 2語（achieve, concern）</div>
+                <div class="action-item">🟡 もう少し練習: 3語（あと1-2回で定着）</div>
+                <div class="action-item">💡 あと3語定着で定着率80%達成！</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 定着率の計算比較 -->
+    <div class="example-section">
+        <h3>🔢 定着率の計算方法</h3>
+        
+        <div class="comparison-container">
+            <div>
+                <h4 class="title-red">現状の計算（1種類のみ）</h4>
+                <div class="display-box">
+定着数 = 5語
+出題数 = 10語
+
+定着率 = 5 ÷ 10 × 100% 
+      = <strong>50%</strong>
+
+問題点:
+・important（67%）と
+  achieve（0%）が
+  同じ「未定着」扱い
+・学習の進捗が反映されない
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="title-green">改善案の計算（3種類）</h4>
+                <div class="display-box">
+<strong>1. 基本定着率</strong>
+   5 ÷ 10 × 100% = <strong>50%</strong>
+
+<strong>2. 加重定着率（NEW!）</strong>
+   スコア = (5 × 1.0) + (3 × 0.5)
+         = 6.5
+   6.5 ÷ 10 × 100% = <strong>65%</strong>
+   
+   ※学習中の努力を評価
+
+<strong>3. 実効定着率（時間考慮）</strong>
+   忘却曲線を考慮した
+   長期的な記憶の質を評価
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- メトリクス比較 -->
+    <div class="example-section">
+        <h3>📊 表示される情報の違い</h3>
+        
+        <h4 class="title-red">現状：情報が少ない</h4>
+        <div class="metrics">
+            <div class="metric-card metric-card-red">
+                <div class="metric-label">定着率</div>
+                <div class="metric-value">50%</div>
+                <div class="metric-label">(5/10語)</div>
+            </div>
+        </div>
+        
+        <h4 class="title-green">改善案：多角的な情報</h4>
+        <div class="metrics">
+            <div class="metric-card metric-card-green">
+                <div class="metric-label">🟢 完全定着</div>
+                <div class="metric-value">50%</div>
+                <div class="metric-label">5語</div>
+            </div>
+            <div class="metric-card metric-card-yellow">
+                <div class="metric-label">🟡 学習中</div>
+                <div class="metric-value">30%</div>
+                <div class="metric-label">3語（あと少し！）</div>
+            </div>
+            <div class="metric-card metric-card-pink">
+                <div class="metric-label">🔴 要復習</div>
+                <div class="metric-value">20%</div>
+                <div class="metric-label">2語（優先復習）</div>
+            </div>
+        </div>
+        <div class="metrics">
+            <div class="metric-card">
+                <div class="metric-label">基本定着率</div>
+                <div class="metric-value">50%</div>
+                <div class="metric-label">現状と同じ計算</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">加重定着率</div>
+                <div class="metric-value">65%</div>
+                <div class="metric-label">努力を評価</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">実効定着率</div>
+                <div class="metric-value">47%</div>
+                <div class="metric-label">忘却を考慮</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- まとめ -->
+    <div class="example-section">
+        <h3>✨ 改善のメリット</h3>
+        
+        <table class="word-table">
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th class="title-red">現状</th>
+                    <th class="title-green">改善案</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>分類</strong></td>
+                    <td>2分類（定着/未定着）</td>
+                    <td>3分類（完全定着/学習中/要復習）</td>
+                </tr>
+                <tr>
+                    <td><strong>学習中の評価</strong></td>
+                    <td>❌ 評価されない</td>
+                    <td>✅ 半分評価（加重定着率）</td>
+                </tr>
+                <tr>
+                    <td><strong>次のアクション</strong></td>
+                    <td>❌ 不明確</td>
+                    <td>✅ 明確（「あと1回正解」など）</td>
+                </tr>
+                <tr>
+                    <td><strong>進捗の可視化</strong></td>
+                    <td>❌ 数字のみ</td>
+                    <td>✅ グラフ、色分け、詳細内訳</td>
+                </tr>
+                <tr>
+                    <td><strong>モチベーション</strong></td>
+                    <td>❌ 低下しやすい</td>
+                    <td>✅ 小さな進歩も評価</td>
+                </tr>
+                <tr>
+                    <td><strong>時間考慮</strong></td>
+                    <td>❌ なし</td>
+                    <td>✅ 実効定着率で忘却を反映</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="section-highlight">
+        <h3 class="section-highlight-title">💡 ユーザー様への回答</h3>
+        <div class="section-highlight-content">
+            <p><strong>「10問中5問定着、5問未定着 → 定着率50%」</strong></p>
+            <p class="section-highlight-emphasis">✅ <strong>この理解は完全に正しいです！</strong></p>
+            <p>ただし、改善案では：</p>
+            <ul class="section-highlight-list">
+                <li>✅ その5問の「未定着」をさらに細かく分類</li>
+                <li>✅ 学習中（もう少しで定着）と要復習（まだ覚えていない）を区別</li>
+                <li>✅ 具体的な「次の一手」を提示（「あと1回正解」など）</li>
+                <li>✅ 努力を評価する「加重定着率65%」も表示</li>
+            </ul>
+            <p><strong>同じ50%でも、より詳細で行動につながる情報を提供できます！</strong></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { QuizState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
 import ScoreBoard from './ScoreBoard';
@@ -130,7 +130,7 @@ function QuizView({
               ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
             </button>
             <button onClick={onStartQuiz} className="start-btn">
-              🎯 クイズを開始
+              🎯 クイズ開始
             </button>
           </>
         )}
@@ -235,7 +235,7 @@ function QuizView({
 
       {!hasQuestions ? (
         <div className="empty-state">
-          <p>📖 条件を選択して「クイズを開始」ボタンを押してください</p>
+          <p>📖 条件を選択して「クイズ開始」ボタンを押してください</p>
         </div>
       ) : (
         <>

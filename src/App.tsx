@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import { QuizState, QuestionSet, Question } from './types';
 import {
   parseCSV,
-  loadQuestionSets,
   saveQuestionSets,
   generateId,
   selectAdaptiveQuestions,
+  classifyPhraseType,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, recordWordSkip, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings } from './progressStorage';
-import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect, prioritizeVerificationWords, generateAssistantMessage } from './learningAssistant';
+import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings } from './progressStorage';
+import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import { 
   generateSpacedRepetitionSchedule, 
   SpacedRepetitionSchedule,
@@ -65,7 +65,7 @@ function checkLocalStorageSize() {
     if (totalMB > 4) {
       console.warn('⚠️ LocalStorageの使用量が多いため、古いデータを自動削除しています。');
       // 進捗データを再読み込みして自動圧縮を実行
-      const progress = loadProgress();
+      loadProgress();
       console.log('自動圧縮が完了しました。');
     }
   } catch (error) {
@@ -98,7 +98,7 @@ function App() {
   const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
   
   // 適応的学習モード
-  const [adaptiveMode, setAdaptiveMode] = useState<boolean>(() => {
+  const [adaptiveMode] = useState<boolean>(() => {
     const saved = localStorage.getItem('quiz-adaptive-mode');
     return saved ? JSON.parse(saved) : false;
   });
@@ -106,6 +106,7 @@ function App() {
   // 要復習集中モード（補修モード）
   const [reviewFocusMode, setReviewFocusMode] = useState<boolean>(false);
   const [reviewQuestionPool, setReviewQuestionPool] = useState<Question[]>([]); // 補修モード用の問題プール
+  const [reviewCorrectStreak, setReviewCorrectStreak] = useState<Map<string, number>>(new Map()); // 補修モードの連続正解数
   
   // セッション統計（和訳タブ用）
   const [sessionStats, setSessionStats] = useState({
@@ -138,12 +139,12 @@ function App() {
   const recentlyStudiedWordsRef = useRef<string[]>([]);
   
   // 設定
-  const [autoAdvance, setAutoAdvance] = useState<boolean>(() => {
+  const [autoAdvance] = useState<boolean>(() => {
     const saved = localStorage.getItem('quiz-auto-advance');
     return saved ? JSON.parse(saved) : false;
   });
 
-  const [autoAdvanceDelay, setAutoAdvanceDelay] = useState<number>(() => {
+  const [autoAdvanceDelay] = useState<number>(() => {
     const saved = localStorage.getItem('quiz-auto-advance-delay');
     return saved ? JSON.parse(saved) : 1.0;
   });
@@ -275,7 +276,6 @@ function App() {
       // 熟語タイプでフィルター（熟語のみが選択されている場合）
       if (selectedPhraseTypeFilter !== 'all') {
         filtered = filtered.filter(q => {
-          const { classifyPhraseType } = require('./utils');
           return classifyPhraseType(q.word) === selectedPhraseTypeFilter;
         });
       }
@@ -288,7 +288,7 @@ function App() {
   };
 
   // CSV ファイルから問題集を作成
-  const handleLoadCSV = async (filePath: string) => {
+  const _handleLoadCSV = async (filePath: string) => {
     try {
       const response = await fetch(filePath);
       const csvText = await response.text();
@@ -321,7 +321,7 @@ function App() {
   };
 
   // ローカル CSV ファイルを読み込み
-  const handleLoadLocalFile = (file: File) => {
+  const _handleLoadLocalFile = (file: File) => {
     const reader = new FileReader();
     reader.onload = (e) => {
       try {
@@ -418,6 +418,8 @@ function App() {
     }
     
     // 言語学的関連性による出題(最近学習した単語の関連語を優先)
+    // TODO: selectRelatedQuestions関数を実装する必要があります
+    /*
     if (recentlyStudiedWordsRef.current.length > 0 && selectedCategory === 'all') {
       const relatedQuestions = selectRelatedQuestions(
         recentlyStudiedWordsRef.current,
@@ -434,6 +436,7 @@ function App() {
         console.log(`🔗 言語学的関連性: ${relatedQuestions.length}問の関連語を優先出題`);
       }
     }
+    */
     
     // 当日の誤答単語を取得
     const todayIncorrect = getTodayIncorrectWords();
@@ -506,13 +509,15 @@ function App() {
   // 要復習集中モード（補修モード）切り替えハンドラー
   const handleReviewFocus = () => {
     setReviewFocusMode(true);
+    setReviewCorrectStreak(new Map()); // 連続正解数をリセット
     handleStartQuiz();
   };
   
   // スペルタブ用の補修モードハンドラー
   const handleSpellingReviewFocus = () => {
     setReviewFocusMode(true);
-    onStartQuiz();
+    setReviewCorrectStreak(new Map()); // 連続正解数をリセット
+    handleStartQuiz();
   };
 
   // 関連分野変更ハンドラー
@@ -650,6 +655,33 @@ function App() {
       if (!isCorrect) {
         incorrectWordsRef.current.push(currentQuestion.word);
       }
+      
+      // 補修モード: 連続正解数を更新
+      if (reviewFocusMode) {
+        const newStreak = new Map(reviewCorrectStreak);
+        if (isCorrect) {
+          const currentStreak = newStreak.get(currentQuestion.word) || 0;
+          newStreak.set(currentQuestion.word, currentStreak + 1);
+          
+          // 2回連続正解したら問題プールから除外
+          if (currentStreak + 1 >= 2) {
+            const newPool = reviewQuestionPool.filter(q => q.word !== currentQuestion.word);
+            setReviewQuestionPool(newPool);
+            console.log(`✅ ${currentQuestion.word} を補修対象から除外 (2回連続正解)`);
+            
+            // 問題プールが空になったら補修モード終了
+            if (newPool.length === 0) {
+              alert('🎉 すべての要復習問題をクリアしました！');
+              setReviewFocusMode(false);
+              setReviewCorrectStreak(new Map());
+            }
+          }
+        } else {
+          // 不正解の場合はリセット
+          newStreak.set(currentQuestion.word, 0);
+        }
+        setReviewCorrectStreak(newStreak);
+      }
     }
     
     setQuizState((prev) => {
@@ -680,13 +712,16 @@ function App() {
 
   const handleNext = () => {
     setQuizState((prev) => {
+      // 補修モードの場合、問題プールを使用
+      const currentQuestions = reviewFocusMode ? reviewQuestionPool : prev.questions;
       const nextIndex = prev.currentIndex + 1;
       
       // 補修モードの場合、最後の問題に到達したら最初に戻る
-      if (reviewFocusMode && nextIndex >= prev.questions.length) {
+      if (reviewFocusMode && nextIndex >= currentQuestions.length) {
         console.log('🔄 補修モード: 問題を繰り返します');
         return {
           ...prev,
+          questions: currentQuestions,
           currentIndex: 0,
           answered: false,
           selectedAnswer: null,
@@ -695,7 +730,8 @@ function App() {
       
       return {
         ...prev,
-        currentIndex: nextIndex % prev.questions.length,
+        questions: currentQuestions,
+        currentIndex: nextIndex % currentQuestions.length,
         answered: false,
         selectedAnswer: null,
       };

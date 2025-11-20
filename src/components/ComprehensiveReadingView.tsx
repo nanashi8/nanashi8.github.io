@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
-import { recordWordSkip } from '../progressStorage';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -746,10 +745,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="word-popup-overlay" onClick={() => setWordPopup(null)} />
           <div 
             className="word-popup"
-            style={{ 
-              '--popup-x': `${wordPopup.x}px`, 
-              '--popup-y': `${wordPopup.y}px` 
-            } as React.CSSProperties}
+            data-popup-x={wordPopup.x}
+            data-popup-y={wordPopup.y}
           >
             <button 
               className="popup-close" 

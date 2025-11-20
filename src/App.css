@@ -472,13 +472,13 @@
 
 .dark-mode .word-meaning {
   background: #2a3f5f;
-  color: #b0c4de;
+  color: #d4e3ff;
 }
 
 .dark-mode .phrase-meaning {
   background: #1e3a5f;
-  color: #8bb8ff;
-  border-left-color: #667eea;
+  color: #b8d4ff;
+  border-left-color: #8b9ef5;
 }
 
 .dark-mode .phrase-english {
@@ -490,8 +490,8 @@
 }
 
 .dark-mode .word-meaning {
-  background: #333;
-  color: #b0b0b0;
+  background: #2d3e50;
+  color: #d4e3ff;
 }
 
 /* フィルターセクションのダークモード */
@@ -510,6 +510,24 @@
 
 .dark-mode .start-btn:hover {
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+}
+
+/* スコアボードタブのダークモード */
+.dark-mode .score-tab {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .score-tab:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.dark-mode .score-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
 }
 
 /* スペルタブのダークモード */
@@ -966,6 +984,7 @@ textarea {
 /* select要素は完全にネイティブの動作を許可 */
 select {
   -webkit-appearance: menulist-button;
+  appearance: menulist-button;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); /* 薄くタップ反応を表示 */
   -webkit-touch-callout: default;
   -webkit-user-select: auto;
@@ -1142,6 +1161,40 @@ option {
   flex-direction: column;
 }
 
+/* スコアボードタブナビゲーション */
+.score-board-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.score-tab {
+  padding: 6px 16px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.score-tab:hover {
+  background: #e8e8e8;
+  border-color: #ccc;
+}
+
+.score-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  font-weight: 600;
+}
+
 /* デスクトップでタブを非表示、全表示 */
 .score-tabs-mobile {
   display: none;
@@ -1311,6 +1364,270 @@ option {
 .super-memory-count {
   color: #8b5cf6;
   font-weight: 700;
+}
+
+/* 定着率の内訳（横長棒グラフ） */
+.retention-breakdown-container {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.retention-breakdown-label {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.retention-progress-bar {
+  width: 100%;
+  height: 32px;
+  background: #e9ecef;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.retention-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+  cursor: help;
+}
+
+/* data属性からwidthを設定 */
+.retention-segment[data-percentage] {
+  width: calc(var(--percentage, 0) * 1%);
+}
+
+.retention-segment[data-percentage="0"] { width: 0%; }
+.retention-segment[data-percentage="1"] { width: 1%; }
+.retention-segment[data-percentage="2"] { width: 2%; }
+.retention-segment[data-percentage="3"] { width: 3%; }
+.retention-segment[data-percentage="4"] { width: 4%; }
+.retention-segment[data-percentage="5"] { width: 5%; }
+.retention-segment[data-percentage="6"] { width: 6%; }
+.retention-segment[data-percentage="7"] { width: 7%; }
+.retention-segment[data-percentage="8"] { width: 8%; }
+.retention-segment[data-percentage="9"] { width: 9%; }
+.retention-segment[data-percentage="10"] { width: 10%; }
+.retention-segment[data-percentage="11"] { width: 11%; }
+.retention-segment[data-percentage="12"] { width: 12%; }
+.retention-segment[data-percentage="13"] { width: 13%; }
+.retention-segment[data-percentage="14"] { width: 14%; }
+.retention-segment[data-percentage="15"] { width: 15%; }
+.retention-segment[data-percentage="16"] { width: 16%; }
+.retention-segment[data-percentage="17"] { width: 17%; }
+.retention-segment[data-percentage="18"] { width: 18%; }
+.retention-segment[data-percentage="19"] { width: 19%; }
+.retention-segment[data-percentage="20"] { width: 20%; }
+.retention-segment[data-percentage="21"] { width: 21%; }
+.retention-segment[data-percentage="22"] { width: 22%; }
+.retention-segment[data-percentage="23"] { width: 23%; }
+.retention-segment[data-percentage="24"] { width: 24%; }
+.retention-segment[data-percentage="25"] { width: 25%; }
+.retention-segment[data-percentage="26"] { width: 26%; }
+.retention-segment[data-percentage="27"] { width: 27%; }
+.retention-segment[data-percentage="28"] { width: 28%; }
+.retention-segment[data-percentage="29"] { width: 29%; }
+.retention-segment[data-percentage="30"] { width: 30%; }
+.retention-segment[data-percentage="31"] { width: 31%; }
+.retention-segment[data-percentage="32"] { width: 32%; }
+.retention-segment[data-percentage="33"] { width: 33%; }
+.retention-segment[data-percentage="34"] { width: 34%; }
+.retention-segment[data-percentage="35"] { width: 35%; }
+.retention-segment[data-percentage="36"] { width: 36%; }
+.retention-segment[data-percentage="37"] { width: 37%; }
+.retention-segment[data-percentage="38"] { width: 38%; }
+.retention-segment[data-percentage="39"] { width: 39%; }
+.retention-segment[data-percentage="40"] { width: 40%; }
+.retention-segment[data-percentage="41"] { width: 41%; }
+.retention-segment[data-percentage="42"] { width: 42%; }
+.retention-segment[data-percentage="43"] { width: 43%; }
+.retention-segment[data-percentage="44"] { width: 44%; }
+.retention-segment[data-percentage="45"] { width: 45%; }
+.retention-segment[data-percentage="46"] { width: 46%; }
+.retention-segment[data-percentage="47"] { width: 47%; }
+.retention-segment[data-percentage="48"] { width: 48%; }
+.retention-segment[data-percentage="49"] { width: 49%; }
+.retention-segment[data-percentage="50"] { width: 50%; }
+.retention-segment[data-percentage="51"] { width: 51%; }
+.retention-segment[data-percentage="52"] { width: 52%; }
+.retention-segment[data-percentage="53"] { width: 53%; }
+.retention-segment[data-percentage="54"] { width: 54%; }
+.retention-segment[data-percentage="55"] { width: 55%; }
+.retention-segment[data-percentage="56"] { width: 56%; }
+.retention-segment[data-percentage="57"] { width: 57%; }
+.retention-segment[data-percentage="58"] { width: 58%; }
+.retention-segment[data-percentage="59"] { width: 59%; }
+.retention-segment[data-percentage="60"] { width: 60%; }
+.retention-segment[data-percentage="61"] { width: 61%; }
+.retention-segment[data-percentage="62"] { width: 62%; }
+.retention-segment[data-percentage="63"] { width: 63%; }
+.retention-segment[data-percentage="64"] { width: 64%; }
+.retention-segment[data-percentage="65"] { width: 65%; }
+.retention-segment[data-percentage="66"] { width: 66%; }
+.retention-segment[data-percentage="67"] { width: 67%; }
+.retention-segment[data-percentage="68"] { width: 68%; }
+.retention-segment[data-percentage="69"] { width: 69%; }
+.retention-segment[data-percentage="70"] { width: 70%; }
+.retention-segment[data-percentage="71"] { width: 71%; }
+.retention-segment[data-percentage="72"] { width: 72%; }
+.retention-segment[data-percentage="73"] { width: 73%; }
+.retention-segment[data-percentage="74"] { width: 74%; }
+.retention-segment[data-percentage="75"] { width: 75%; }
+.retention-segment[data-percentage="76"] { width: 76%; }
+.retention-segment[data-percentage="77"] { width: 77%; }
+.retention-segment[data-percentage="78"] { width: 78%; }
+.retention-segment[data-percentage="79"] { width: 79%; }
+.retention-segment[data-percentage="80"] { width: 80%; }
+.retention-segment[data-percentage="81"] { width: 81%; }
+.retention-segment[data-percentage="82"] { width: 82%; }
+.retention-segment[data-percentage="83"] { width: 83%; }
+.retention-segment[data-percentage="84"] { width: 84%; }
+.retention-segment[data-percentage="85"] { width: 85%; }
+.retention-segment[data-percentage="86"] { width: 86%; }
+.retention-segment[data-percentage="87"] { width: 87%; }
+.retention-segment[data-percentage="88"] { width: 88%; }
+.retention-segment[data-percentage="89"] { width: 89%; }
+.retention-segment[data-percentage="90"] { width: 90%; }
+.retention-segment[data-percentage="91"] { width: 91%; }
+.retention-segment[data-percentage="92"] { width: 92%; }
+.retention-segment[data-percentage="93"] { width: 93%; }
+.retention-segment[data-percentage="94"] { width: 94%; }
+.retention-segment[data-percentage="95"] { width: 95%; }
+.retention-segment[data-percentage="96"] { width: 96%; }
+.retention-segment[data-percentage="97"] { width: 97%; }
+.retention-segment[data-percentage="98"] { width: 98%; }
+.retention-segment[data-percentage="99"] { width: 99%; }
+.retention-segment[data-percentage="100"] { width: 100%; }
+
+.retention-segment:hover {
+  filter: brightness(1.1);
+  transform: scaleY(1.05);
+}
+
+.retention-segment-label {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  white-space: nowrap;
+}
+
+.retention-mastered {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.retention-learning {
+  background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+}
+
+.retention-struggling {
+  background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+}
+
+.retention-breakdown-details {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.retention-detail-item {
+  font-size: 0.85em;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.retention-detail-mastered {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.retention-detail-learning {
+  background: rgba(255, 193, 7, 0.1);
+  color: #d39e00;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.retention-detail-struggling {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.retention-weighted-rate {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #667eea;
+}
+
+.retention-weighted-rate strong {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.retention-weighted-hint {
+  font-size: 0.85em;
+  color: #999;
+  margin-left: 4px;
+}
+
+/* ダークモード対応 */
+.dark-mode .retention-breakdown-container {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .retention-breakdown-label {
+  color: #b0b0b0;
+}
+
+.dark-mode .retention-progress-bar {
+  background: #1a1a1a;
+}
+
+.dark-mode .retention-detail-mastered {
+  background: rgba(40, 167, 69, 0.2);
+  color: #4ade80;
+  border-color: rgba(40, 167, 69, 0.4);
+}
+
+.dark-mode .retention-detail-learning {
+  background: rgba(255, 193, 7, 0.2);
+  color: #fbbf24;
+  border-color: rgba(255, 193, 7, 0.4);
+}
+
+.dark-mode .retention-detail-struggling {
+  background: rgba(220, 53, 69, 0.2);
+  color: #f87171;
+  border-color: rgba(220, 53, 69, 0.4);
+}
+
+.dark-mode .retention-weighted-rate {
+  color: #818cf8;
+}
+
+.dark-mode .retention-weighted-rate strong {
+  color: #818cf8;
+}
+
+.dark-mode .retention-weighted-hint {
+  color: #6b7280;
 }
 
 /* セッション履歴インジケーター */
@@ -1483,7 +1800,6 @@ option {
   overflow: hidden;
   padding: 10px;
   /* モバイル最適化 */
-  -webkit-overflow-scrolling: touch;
   touch-action: manipulation;
 }
 
@@ -1493,7 +1809,6 @@ option {
   display: flex;
   flex-direction: column;
   padding: 0;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* 問題カード */
@@ -2550,7 +2865,6 @@ option {
   height: 100%;
   overflow: hidden;
   /* モバイル最適化 */
-  -webkit-overflow-scrolling: touch;
   touch-action: manipulation;
 }
 
@@ -2681,7 +2995,6 @@ option {
   width: 100%;
   box-sizing: border-box;
   /* モバイル最適化 */
-  -webkit-overflow-scrolling: touch;
   touch-action: manipulation;
 }
 
@@ -2751,7 +3064,6 @@ option {
   overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
   /* モバイル最適化 */
   min-height: 0;
 }
@@ -3116,7 +3428,6 @@ option {
   padding: 12px;
   background: #f8f9fa;
   border-radius: 10px;
-  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   width: 100%;
   box-sizing: border-box;
@@ -3154,7 +3465,6 @@ option {
   background: #f8f9fa;
   border-radius: 10px;
   /* モバイルスクロール最適化 */
-  -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   width: 100%;
   box-sizing: border-box;
@@ -4857,6 +5167,7 @@ option {
   cursor: pointer;
   /* iOS Safari最適化 */
   -webkit-appearance: menulist-button;
+  appearance: menulist-button;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   -webkit-touch-callout: default;
   -webkit-user-select: auto;
@@ -4964,14 +5275,14 @@ option {
 
   /* 読解タブの最適化 */
   .reading-view {
-    padding: 8px;
+    padding: 4px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .passage-selector {
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 8px;
+    margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -4983,7 +5294,7 @@ option {
   }
 
   .reading-content {
-    padding: 12px;
+    padding: 8px 4px;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -5015,7 +5326,7 @@ option {
   }
 
   .phrase-line {
-    padding: 10px 12px;
+    padding: 8px 4px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -5028,7 +5339,7 @@ option {
   }
 
   .phrase-card {
-    padding: 10px;
+    padding: 8px 4px;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -5108,17 +5419,21 @@ option {
 
   .reading-actions {
     margin-top: 15px;
-    padding: 0 10px calc(15px + env(safe-area-inset-bottom)) 10px;
+    padding: 0 4px calc(15px + env(safe-area-inset-bottom)) 4px;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .btn-primary,
-  .btn-secondary {
+  .btn-secondary,
+  .btn-info,
+  .btn-success {
     width: 100%;
-    padding: 14px 16px;
+    padding: 16px 12px;
     font-size: max(16px, 1em);
-    min-height: 52px;
+    min-height: 54px;
+    white-space: normal;
+    line-height: 1.4;
   }
 
   .passage-instructions {
@@ -5132,6 +5447,44 @@ option {
     font-size: max(14px, 0.85em);
     gap: 6px 12px;
     padding: 8px;
+  }
+  
+  /* 定着率の内訳（モバイル） */
+  .retention-breakdown-container {
+    padding: 6px 8px;
+    margin-top: 8px;
+  }
+  
+  .retention-breakdown-label {
+    font-size: 0.85em;
+    margin-bottom: 4px;
+  }
+  
+  .retention-progress-bar {
+    height: 24px;
+  }
+  
+  .retention-segment {
+    font-size: 0.7em;
+  }
+  
+  .retention-breakdown-details {
+    gap: 6px;
+    margin-top: 4px;
+  }
+  
+  .retention-detail-item {
+    font-size: 0.7em;
+    padding: 2px 6px;
+  }
+  
+  .retention-weighted-rate {
+    font-size: 0.8em;
+    margin-top: 4px;
+  }
+  
+  .retention-weighted-hint {
+    font-size: 0.7em;
   }
 
   /* スコアボード タブ切り替え（モバイル） */
@@ -5672,6 +6025,7 @@ option {
   transition: all 0.2s;
   /* iOS Safari最適化 */
   -webkit-appearance: menulist-button;
+  appearance: menulist-button;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   -webkit-touch-callout: default;
   -webkit-user-select: auto;
@@ -5745,16 +6099,19 @@ option {
 
 /* 学習設定トグルボタン */
 .settings-toggle-btn {
-  padding: 12px 24px;
-  font-size: 1em;
+  padding: 10px 30px;
+  font-size: max(16px, 1.1em);
   font-weight: 600;
   color: white;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: all 0.2s;
   margin-right: 10px;
+  white-space: nowrap;
+  touch-action: manipulation;
+  min-height: 48px; /* iOS タップ領域確保 */
 }
 
 .settings-toggle-btn:hover {
@@ -5763,7 +6120,9 @@ option {
 }
 
 .settings-toggle-btn:active {
-  transform: translateY(0);
+  transform: scale(0.97);
+  transition: transform 0.1s;
+  background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
 }
 
 /* 学習設定パネル */
@@ -7495,6 +7854,7 @@ option {
   background: #e5e7eb;
   outline: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .target-slider::-webkit-slider-thumb {
@@ -7814,6 +8174,7 @@ option {
   background: linear-gradient(to right, #e0e7ff, #667eea);
   outline: none;
   -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -8908,6 +9269,13 @@ option {
   padding: 20px;
   overflow-y: auto;
   flex: 1;
+}
+
+/* モバイル版でpassage-contentの余白を削除 */
+@media (max-width: 600px) {
+  .passage-content {
+    padding: 8px 4px;
+  }
 }
 
 .passage-body {
