@@ -3,7 +3,7 @@ import {
   getStatsByModeDifficulty,
   resetStatsByModeDifficulty,
   resetAllProgress,
-  loadProgress,
+  loadProgressSync,
   getStudyCalendarData,
   getWeeklyStats,
   getMonthlyStats,
@@ -87,7 +87,7 @@ function StatsView({ }: StatsViewProps) {
     setOvercomeWords(getOvercomeWeakWords(10));
     setRecentlyMastered(getRecentlyMasteredWords(7, 5));
     
-    const progress = loadProgress();
+    const progress = loadProgressSync();
     setStreakDays(progress.statistics.streakDays);
     
     getStorageSize();
