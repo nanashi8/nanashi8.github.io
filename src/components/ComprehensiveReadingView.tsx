@@ -676,63 +676,66 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       <div className="reading-header">
         <h2>📖 長文読解</h2>
         
-        {/* 難易度フィルター */}
-        <div className="filter-controls">
-          <label htmlFor="difficulty-filter">難易度: </label>
-          <select 
-            id="difficulty-filter"
-            value={difficultyFilter} 
-            onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
-            title="難易度を選択"
-          >
-            <option value="all">全て</option>
-            <option value="初級">初級 (500-800語)</option>
-            <option value="中級">中級 (800-3000語)</option>
-            <option value="上級">上級 (3000語)</option>
-          </select>
+        {/* 難易度とパッセージを横並び */}
+        <div className="reading-selectors">
+          <div className="filter-controls">
+            <label htmlFor="difficulty-filter">難易度: </label>
+            <select 
+              id="difficulty-filter"
+              value={difficultyFilter} 
+              onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
+              title="難易度を選択"
+              className="compact-select"
+            >
+              <option value="all">全て</option>
+              <option value="初級">初級 (500-800語)</option>
+              <option value="中級">中級 (800-3000語)</option>
+              <option value="上級">上級 (3000語)</option>
+            </select>
+          </div>
+
+          <div className="passage-selector">
+            <label htmlFor="passage-select">パッセージ: </label>
+            <select 
+              id="passage-select"
+              value={selectedPassageId || ''} 
+              onChange={(e) => handleSelectPassage(e.target.value)}
+              title="パッセージを選択"
+              className="compact-select"
+            >
+              {filteredPassages.map(passage => (
+                <option key={passage.id} value={passage.id}>
+                  {passage.title} ({passage.level} - {passage.actualWordCount}語)
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
-        {/* パッセージ選択 */}
-        <div className="passage-selector">
-          <label htmlFor="passage-select">パッセージ: </label>
-          <select 
-            id="passage-select"
-            value={selectedPassageId || ''} 
-            onChange={(e) => handleSelectPassage(e.target.value)}
-            title="パッセージを選択"
-          >
-            {filteredPassages.map(passage => (
-              <option key={passage.id} value={passage.id}>
-                {passage.title} ({passage.level} - {passage.actualWordCount}語)
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* 操作ボタン */}
-        <div className="action-buttons">
+        {/* コンパクトな操作ボタン */}
+        <div className="action-buttons compact-buttons">
           <button 
             onClick={handleToggleFullText}
-            className="btn-info"
+            className="btn-compact btn-info"
           >
-            {showFullText ? '📄 全文を非表示' : '📄 全文を表示'}
+            {showFullText ? '📄 全文非表示' : '📄 全文表示'}
           </button>
           <button 
             onClick={handleToggleFullTranslation}
-            className="btn-primary"
+            className="btn-compact btn-primary"
           >
-            {showFullTranslation ? '📝 全訳を非表示' : '📝 全訳を表示'}
+            {showFullTranslation ? '📝 全訳非表示' : '📝 全訳表示'}
           </button>
           <button 
             onClick={handleSaveUnknownWords}
-            className="btn-success"
+            className="btn-compact btn-success"
             disabled={unknownCount === 0}
           >
-            💾 単語を保存 ({unknownCount})
+            💾 保存 ({unknownCount})
           </button>
           <button 
             onClick={handleReset}
-            className="btn-secondary"
+            className="btn-compact btn-secondary"
           >
             🔄 リセット
           </button>
