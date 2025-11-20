@@ -92,8 +92,26 @@ async function migrateProgressData(): Promise<boolean> {
       console.log('📦 Progress data migrated:', Object.keys(progressData.wordProgress || {}).length, 'words');
       return true;
     }
-    console.log('ℹ️ No progress data to migrate');
-    return false;
+    
+    // LocalStorageにデータがない場合は初期データを作成
+    console.log('ℹ️ No progress data to migrate, creating initial data');
+    const initialData = {
+      wordProgress: {},
+      results: [],
+      statistics: {
+        totalQuizzes: 0,
+        totalQuestions: 0,
+        totalCorrect: 0,
+        averageScore: 0,
+        bestScore: 0,
+        streakDays: 0,
+        lastStudyDate: 0,
+        studyDates: [],
+      },
+      questionSetStats: {},
+    };
+    await putToDB(STORES.PROGRESS, initialData, 'main');
+    return true;
   } catch (error) {
     console.error('Progress data migration error:', error);
     return false;
@@ -266,10 +284,16 @@ async function migrateSettings(): Promise<boolean> {
 async function verifyMigration(): Promise<boolean> {
   try {
     // 主要なデータが移行されたか確認
-    const progressData = await getFromDB(STORES.PROGRESS, 'main');
+    const progressData = await getFromDB(STORES.PROGRESS, 'main') as any;
     
     if (!progressData) {
-      console.warn('⚠️ Progress data verification failed');
+      console.warn('⚠️ Progress data verification failed - no data found');
+      return false;
+    }
+    
+    // wordProgressが存在し、オブジェクトであることを確認
+    if (!progressData.wordProgress || typeof progressData.wordProgress !== 'object') {
+      console.warn('⚠️ Progress data verification failed - invalid wordProgress');
       return false;
     }
 
