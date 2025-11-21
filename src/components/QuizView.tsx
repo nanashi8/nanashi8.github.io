@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { QuizState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
+import { ErrorPrediction } from '../errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import DailyPlanBanner from './DailyPlanBanner';
@@ -32,6 +33,7 @@ interface QuizViewProps {
     mastered: number;
   };
   isReviewFocusMode?: boolean;
+  errorPrediction?: ErrorPrediction;
 }
 
 function QuizView({
@@ -54,6 +56,7 @@ function QuizView({
   onReviewFocus,
   sessionStats,
   isReviewFocusMode = false,
+  errorPrediction,
 }: QuizViewProps) {
   const { questions, currentIndex, answered, selectedAnswer } =
     quizState;
@@ -258,6 +261,7 @@ function QuizView({
                 onNext={onSkip ? (answered ? onNext : onSkip) : onNext}
                 onPrevious={onPrevious}
                 onDifficultyRate={onDifficultyRate}
+                errorPrediction={errorPrediction}
               />
             )}
           </div>

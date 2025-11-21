@@ -1,4 +1,5 @@
 import { Question } from '../types';
+import { ErrorPrediction } from '../errorPredictionAI';
 import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
@@ -19,6 +20,7 @@ interface QuestionCardProps {
   onNext: () => void;
   onPrevious: () => void;
   onDifficultyRate?: (rating: number) => void;
+  errorPrediction?: ErrorPrediction;
 }
 
 function QuestionCard({
@@ -31,6 +33,7 @@ function QuestionCard({
   onNext,
   onPrevious,
   onDifficultyRate,
+  errorPrediction,
 }: QuestionCardProps) {
   // 選択肢をuseMemoで固定（currentIndexが変わった時だけ再生成）
   const choicesWithQuestions = useMemo(
@@ -319,6 +322,31 @@ function QuestionCard({
       className="question-card"
       ref={cardRef}
     >
+      {/* エラー予測AI: 警告表示 */}
+      {errorPrediction && errorPrediction.suggestedSupport.showWarning && !answered && (
+        <div className={`error-prediction-warning ${errorPrediction.warningLevel}`}>
+          <div className="warning-icon">
+            {errorPrediction.warningLevel === 'critical' ? '⚠️' :
+             errorPrediction.warningLevel === 'high' ? '🔔' : '💡'}
+          </div>
+          <div className="warning-content">
+            <div className="warning-message">{errorPrediction.suggestedSupport.warningMessage}</div>
+            {errorPrediction.suggestedSupport.hints.length > 0 && (
+              <div className="warning-hints">
+                {errorPrediction.suggestedSupport.hints.map((hint, i) => (
+                  <div key={i} className="hint">💡 {hint}</div>
+                ))}
+              </div>
+            )}
+            {errorPrediction.suggestedSupport.confidenceBooster && (
+              <div className="confidence-booster">
+                ✨ {errorPrediction.suggestedSupport.confidenceBooster}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+      
       <div className="question-nav-row">
         <button 
           className="inline-nav-btn prev-inline-btn" 

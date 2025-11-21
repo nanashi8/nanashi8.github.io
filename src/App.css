@@ -220,6 +220,11 @@
   border-color: #667eea;
 }
 
+.dark-mode .word-card.speaking {
+  background: #1a3a52;
+  border-color: #4c6ef5;
+}
+
 .dark-mode .word-card:active {
   background: #3a3a3a;
 }
@@ -3821,6 +3826,22 @@ option {
   border-color: #667eea;
   transform: translateY(-2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.word-card.speaking {
+  animation: speakPulse 0.6s ease-in-out;
+  border-color: #4c6ef5;
+  background: #e7f5ff;
+}
+
+@keyframes speakPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(76, 110, 245, 0.4);
+  }
 }
 
 .word-card.unknown {
@@ -9621,6 +9642,20 @@ option {
   color: #333;
   margin-bottom: 2px;
   font-family: 'Times New Roman', 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.speaker-icon {
+  font-size: 0.7em;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  margin-left: 2px;
+}
+
+.word-card:hover .speaker-icon {
+  opacity: 1;
 }
 
 .word-card-meaning {
@@ -10857,4 +10892,138 @@ option {
 
 .dark-mode .time-greeting-dismiss:hover {
   background: rgba(255, 255, 255, 0.25);
+}
+
+/* エラー予測AI: 警告表示 */
+.error-prediction-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #fff 100%);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+  animation: warningPulse 2s ease-in-out infinite;
+}
+
+.error-prediction-warning.medium {
+  background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+  border-color: #2196f3;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
+
+.error-prediction-warning.high {
+  background: linear-gradient(135deg, #ffe0b2 0%, #fff 100%);
+  border-color: #ff9800;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+}
+
+.error-prediction-warning.critical {
+  background: linear-gradient(135deg, #ffebee 0%, #fff 100%);
+  border-color: #f44336;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+}
+
+.error-prediction-warning .warning-icon {
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+.error-prediction-warning .warning-content {
+  flex: 1;
+}
+
+.error-prediction-warning .warning-message {
+  font-weight: 600;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.error-prediction-warning .warning-hints {
+  margin-top: 8px;
+}
+
+.error-prediction-warning .hint {
+  font-size: 0.85em;
+  color: #555;
+  margin: 4px 0;
+  padding-left: 4px;
+}
+
+.error-prediction-warning .confidence-booster {
+  margin-top: 8px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #667eea;
+}
+
+@keyframes warningPulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(255, 193, 7, 0.4);
+  }
+}
+
+.error-prediction-warning.high {
+  animation: warningPulseHigh 2s ease-in-out infinite;
+}
+
+@keyframes warningPulseHigh {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.5);
+  }
+}
+
+.error-prediction-warning.critical {
+  animation: warningPulseCritical 1.5s ease-in-out infinite;
+}
+
+@keyframes warningPulseCritical {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(244, 67, 54, 0.6);
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .error-prediction-warning {
+  background: linear-gradient(135deg, #4a4a2a 0%, #2a2a2a 100%);
+  border-color: #ffc107;
+}
+
+.dark-mode .error-prediction-warning.medium {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2a2a2a 100%);
+  border-color: #2196f3;
+}
+
+.dark-mode .error-prediction-warning.high {
+  background: linear-gradient(135deg, #5f3e1e 0%, #2a2a2a 100%);
+  border-color: #ff9800;
+}
+
+.dark-mode .error-prediction-warning.critical {
+  background: linear-gradient(135deg, #5f1e1e 0%, #2a2a2a 100%);
+  border-color: #f44336;
+}
+
+.dark-mode .error-prediction-warning .warning-message {
+  color: #e0e0e0;
+}
+
+.dark-mode .error-prediction-warning .hint {
+  color: #b0b0b0;
+}
+
+.dark-mode .error-prediction-warning .confidence-booster {
+  color: #8b9ff6;
 }

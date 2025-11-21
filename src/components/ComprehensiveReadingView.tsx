@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
+import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -422,6 +423,18 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const handleWordClick = (word: string, event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     event.stopPropagation();
+    
+    // 音声再生（ブラウザがサポートしている場合のみ）
+    if (isSpeechSynthesisSupported()) {
+      speakEnglish(word, { rate: 0.85 }); // 少しゆっくりめに発音
+      
+      // ビジュアルフィードバック
+      const element = event.currentTarget as HTMLElement;
+      element.classList.add('speaking');
+      setTimeout(() => {
+        element.classList.remove('speaking');
+      }, 600);
+    }
     
     // 既存のポップアップを閉じる
     if (wordPopup && wordPopup.word === word) {
@@ -872,9 +885,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
                             onClick={(e) => handleWordClick(segment.word, e)}
                             onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
-                            title="タップ: 詳細を表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
+                            title="タップ: 発音＆詳細表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
                           >
-                            <div className="word-card-word">{segment.word}</div>
+                            <div className="word-card-word">
+                              {segment.word}
+                              {isSpeechSynthesisSupported() && (
+                                <span className="speaker-icon" aria-label="音声あり">🔊</span>
+                              )}
+                            </div>
                             {wordMeaningsVisible[phraseIdx] && meaning && meaning !== '-' && (
                               <div className="word-card-meaning">{meaning}</div>
                             )}

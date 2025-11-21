@@ -30,6 +30,26 @@ import {
   CognitiveLoadMonitor,
   SessionResponse
 } from './cognitiveLoadAI';
+import {
+  analyzeErrorPatterns,
+  predictErrorRisk,
+  batchPredictErrors,
+  ErrorPrediction,
+  ErrorAnalysis
+} from './errorPredictionAI';
+import {
+  generateContextualSequence,
+  getRelatedWordsForReview,
+  ContextualSequence
+} from './contextualLearningAI';
+import {
+  recordSessionStats,
+  saveSessionToHistory,
+  loadSessionHistory,
+  generateLearningStyleProfile,
+  generateRecommendationMessage,
+  getTimeOfDay as getTimeOfDayStyle
+} from './learningStyleAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -167,6 +187,11 @@ function App() {
   // 認知負荷 AI: セッション内の応答を追跡
   const sessionResponsesRef = useRef<SessionResponse[]>([]);
   const cognitiveLoadRef = useRef<CognitiveLoadMonitor | null>(null);
+  
+  // エラー予測 AI: 誤答パターンと予測結果を追跡
+  const errorAnalysisRef = useRef<ErrorAnalysis | null>(null);
+  const errorPredictionsRef = useRef<Map<string, ErrorPrediction>>(new Map());
+  const recentAnswersRef = useRef<Array<{ word: string; wasCorrect: boolean; userAnswer?: string }>>([]);
   
   // 言語学的関連性追跡用(最近学習した単語を記録)
   const recentlyStudiedWordsRef = useRef<string[]>([]);
@@ -570,6 +595,32 @@ function App() {
         const message = generateFatigueMessage(currentLoad);
         console.log(`⚡ 認知負荷: ${currentLoad.fatigueLevel.toFixed(0)}% - ${message}`);
       }
+      
+      // 文脈学習AI: 意味的に関連する単語を近くに配置
+      const contextualSeq = generateContextualSequence(
+        filteredQuestions,
+        progress.wordProgress,
+        recentlyStudiedWordsRef.current
+      );
+      
+      // 文脈ベースの順序に並べ替え（優先度は維持）
+      const contextualOrder = new Map<string, number>();
+      contextualSeq.sequence.forEach((word, index) => {
+        contextualOrder.set(word, index);
+      });
+      
+      filteredQuestions = filteredQuestions.sort((a, b) => {
+        const orderA = contextualOrder.get(a.word) ?? 999;
+        const orderB = contextualOrder.get(b.word) ?? 999;
+        return orderA - orderB;
+      });
+      
+      console.log('🔗 文脈学習AI: 意味的クラスタリング完了');
+      console.log(`  クラスター数: ${contextualSeq.clusters.length}`);
+      if (contextualSeq.transitions.length > 0) {
+        const sample = contextualSeq.transitions[0];
+        console.log(`  例: ${sample.from} → ${sample.to} (${sample.reason})`);
+      }
     } else if (adaptiveMode && filteredQuestions.length > 0 && !reviewFocusMode) {
       // フォールバック: 従来の適応的学習
       filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(maxQuestions, filteredQuestions.length));
@@ -609,6 +660,35 @@ function App() {
     // 認知負荷AIのセッション応答をリセット
     sessionResponsesRef.current = [];
     cognitiveLoadRef.current = null;
+    
+    // エラー予測AI: セッション開始時にエラーパターンを分析
+    const progress = await loadProgress();
+    const errorAnalysis = analyzeErrorPatterns(
+      progress.wordProgress,
+      recentAnswersRef.current
+    );
+    errorAnalysisRef.current = errorAnalysis;
+    
+    // 全問題のエラーリスクを事前予測
+    const words = filteredQuestions.map(q => q.word);
+    const currentFatigue = (cognitiveLoadRef.current as CognitiveLoadMonitor | null)?.fatigueLevel ?? 0;
+    const predictions = batchPredictErrors(
+      words,
+      progress.wordProgress,
+      errorAnalysis,
+      currentFatigue,
+      0 // 開始時は直近エラー数0
+    );
+    errorPredictionsRef.current = predictions;
+    
+    console.log('🔮 エラー予測AI: 誤答リスク分析完了');
+    const highRisk = Array.from(predictions.values())
+      .filter(p => p.warningLevel === 'high' || p.warningLevel === 'critical')
+      .sort((a, b) => b.errorRisk - a.errorRisk);
+    if (highRisk.length > 0) {
+      console.log(`  高リスク問題: ${highRisk.length}問`);
+      console.log(`  最高リスク: ${highRisk[0].word} (${highRisk[0].errorRisk.toFixed(0)}% - ${highRisk[0].primaryPattern})`);
+    }
   };
 
   // 要復習集中モード（補修モード）切り替えハンドラー
@@ -686,6 +766,17 @@ function App() {
       // 休憩推奨をチェック
       if (currentLoad.breakRecommendation?.shouldBreak) {
         console.log(`💤 休憩推奨: ${currentLoad.breakRecommendation.reason}`);
+      }
+      
+      // エラー予測AI: 回答を記録
+      recentAnswersRef.current.push({
+        word: currentQuestion.word,
+        wasCorrect: isCorrect,
+        userAnswer: normalizedAnswer
+      });
+      // 最新50件のみ保持
+      if (recentAnswersRef.current.length > 50) {
+        recentAnswersRef.current = recentAnswersRef.current.slice(-50);
       }
     }
     
@@ -825,6 +916,40 @@ function App() {
       // 補修モードの場合、問題プールを使用
       const currentQuestions = reviewFocusMode ? reviewQuestionPool : prev.questions;
       const nextIndex = prev.currentIndex + 1;
+      
+      // セッション終了を検出（最終問題の後）
+      if (!reviewFocusMode && nextIndex >= currentQuestions.length) {
+        // 学習スタイルAI: セッション統計を記録
+        const sessionEndTime = Date.now();
+        const totalResponseTime = sessionResponsesRef.current.reduce((sum, r) => sum + r.responseTime, 0);
+        const avgResponseTime = sessionResponsesRef.current.length > 0 
+          ? totalResponseTime / sessionResponsesRef.current.length 
+          : 0;
+        
+        const currentFatigue = (cognitiveLoadRef.current as CognitiveLoadMonitor | null)?.fatigueLevel ?? 0;
+        
+        const newSessionStats = recordSessionStats(
+          quizStartTimeRef.current,
+          sessionEndTime,
+          prev.totalAnswered,
+          prev.score,
+          avgResponseTime,
+          currentFatigue,
+          sessionStats.correct + sessionStats.mastered,
+          sessionStats.review
+        );
+        
+        saveSessionToHistory(newSessionStats);
+        
+        // プロファイル生成と推奨メッセージ
+        const history = loadSessionHistory();
+        if (history.length >= 3) {
+          const profile = generateLearningStyleProfile('user', history);
+          const currentTime = getTimeOfDayStyle();
+          const message = generateRecommendationMessage(profile, currentTime);
+          console.log('📊 学習スタイルAI:', message);
+        }
+      }
       
       // 補修モードの場合、最後の問題に到達したら最初に戻る
       if (reviewFocusMode && nextIndex >= currentQuestions.length) {
@@ -989,6 +1114,9 @@ function App() {
             onReviewFocus={handleReviewFocus}
             sessionStats={sessionStats}
             isReviewFocusMode={reviewFocusMode}
+            errorPrediction={quizState.questions.length > 0 && quizState.currentIndex < quizState.questions.length
+              ? errorPredictionsRef.current.get(quizState.questions[quizState.currentIndex].word)
+              : undefined}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
