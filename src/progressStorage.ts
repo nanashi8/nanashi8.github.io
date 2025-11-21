@@ -1557,25 +1557,25 @@ export function getRetentionRateWithAI(): {
   
   let masteredCount = 0;
   
-  // AI学習エンジンを使用して定着度を計算
-  // adaptiveLearningAI.tsから関数をインポートして使用する想定
-  // ここでは簡易的な実装
+  // 定着度の判定条件を修正
   appearedWords.forEach(wp => {
     const totalAttempts = wp.correctCount + wp.incorrectCount;
     const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
     
-    // 簡易的な定着判定（本来はadaptiveLearningAI.calculateMemoryRetentionを使用）
-    const isDefinitelyMastered = 
-      (totalAttempts === 1 && wp.correctCount === 1) || // 1発100%
-      wp.consecutiveCorrect >= 3 || // 連続3回以上正解
-      (wp.skippedCount && wp.skippedCount > 0); // スキップ済み
+    // 定着の条件:
+    // 1. 連続3回以上正解（強い定着）
+    // 2. 5回以上挑戦して正答率80%以上かつ連続2回以上正解（安定した定着）
+    // 3. masteryLevel が 'mastered' の場合
+    const isStronglyMastered = wp.consecutiveCorrect >= 3;
     
-    const isLikelyMastered = 
-      totalAttempts >= 3 && 
+    const isStablyMastered = 
+      totalAttempts >= 5 && 
       accuracy >= 80 && 
       wp.consecutiveCorrect >= 2;
     
-    if (isDefinitelyMastered || isLikelyMastered) {
+    const isMarkedAsMastered = wp.masteryLevel === 'mastered';
+    
+    if (isStronglyMastered || isStablyMastered || isMarkedAsMastered) {
       masteredCount++;
     }
   });

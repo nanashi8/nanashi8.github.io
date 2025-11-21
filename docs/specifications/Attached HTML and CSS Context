@@ -1,6 +1,6 @@
 Attached HTML and CSS Context
 
-<div class="plan-text-line"><span>📋 要復習: <strong>47</strong></span><span>｜確認予定: <strong>0</strong></span><span>｜目標: <strong>20</strong></span><span>｜進捗: <strong>0/20</strong></span></div>
+<div class="daily-plan-banner plan-color-danger"><div class="daily-plan-header"><div class="daily-plan-icon">🔥</div><div class="daily-plan-content"><div class="daily-plan-title">今日の学習プラン</div><div class="daily-plan-message">要復習: 48語（無理せず20語ずつ進めよう）</div></div><div class="daily-plan-actions"><button class="daily-plan-settings-btn" aria-label="学習プラン設定">⚙️</button><button class="daily-plan-close-btn" aria-label="閉じる">✕</button></div></div></div>
 
 
 /* Matched Rule from user-agent */
@@ -30,20 +30,47 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
 }
 
 /* Matched Rule from regular */
-.plan-text-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 0.95em;
-  line-height: 1.8;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 12px;
-  column-gap: 12px;
-  font-size: 0.95em;
-  line-height: 1.8;
-  justify-content: center;
+.daily-plan-banner {
+  background: white;
+  border-left: 4px solid #10b981;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: white;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: rgb(16, 185, 129);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+  transition-behavior: normal;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+}
+
+/* Matched Rule from regular */
+.plan-color-danger {
+  border-left-color: #ef4444;
+  border-left-color: rgb(239, 68, 68);
 }
 
 /* Inherited from ancestor level 1 (user-agent) */
@@ -73,148 +100,6 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
 }
 
 /* Inherited from ancestor level 1 (regular) */
-.plan-tab-compact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  column-gap: 10px;
-}
-
-/* Inherited from ancestor level 2 (user-agent) */
-div {
-  display: block;
-}
-
-/* Inherited from ancestor level 2 (user-agent) */
-address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
-  unicode-bidi: isolate;
-}
-
-/* Inherited from ancestor level 2 (regular) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  box-sizing: border-box;
-}
-
-/* Inherited from ancestor level 2 (regular) */
-.score-board-content {
-  min-height: 80px;
-  max-height: 250px;
-  overflow-y: auto;
-  padding: 12px 16px;
-  font-size: 1em;
-  width: 100%;
-  min-height: 80px;
-  max-height: 250px;
-  overflow-y: auto;
-  padding-top: 12px;
-  padding-right: 16px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  font-size: 1em;
-  width: 100%;
-}
-
-/* Inherited from ancestor level 3 (user-agent) */
-div {
-  display: block;
-}
-
-/* Inherited from ancestor level 3 (user-agent) */
-address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
-  unicode-bidi: isolate;
-}
-
-/* Inherited from ancestor level 3 (regular) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  box-sizing: border-box;
-}
-
-/* Inherited from ancestor level 3 (regular) */
-.score-board-compact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  font-size: 1em;
-  position: relative;
-  flex-direction: column;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 8px;
-  column-gap: 12px;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0%;
-  font-size: 1em;
-  position: relative;
-  flex-direction: column;
-  max-width: 800px;
-  width: 100%;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-}
-
-/* Inherited from ancestor level 4 (user-agent) */
-div {
-  display: block;
-}
-
-/* Inherited from ancestor level 4 (user-agent) */
-address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
-  unicode-bidi: isolate;
-}
-
-/* Inherited from ancestor level 4 (regular) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  box-sizing: border-box;
-}
-
-/* Inherited from ancestor level 4 (regular) */
 .quiz-view {
   display: flex;
   flex-direction: column;
@@ -234,17 +119,17 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   touch-action: manipulation;
 }
 
-/* Inherited from ancestor level 5 (user-agent) */
+/* Inherited from ancestor level 2 (user-agent) */
 div {
   display: block;
 }
 
-/* Inherited from ancestor level 5 (user-agent) */
+/* Inherited from ancestor level 2 (user-agent) */
 address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
   unicode-bidi: isolate;
 }
 
-/* Inherited from ancestor level 5 (regular) */
+/* Inherited from ancestor level 2 (regular) */
 * {
   margin: 0;
   padding: 0;
@@ -260,7 +145,7 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   box-sizing: border-box;
 }
 
-/* Inherited from ancestor level 5 (regular) */
+/* Inherited from ancestor level 2 (regular) */
 .tab-content {
   flex: 1;
   overflow: hidden;
@@ -280,17 +165,17 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   padding-left: 10px;
 }
 
-/* Inherited from ancestor level 6 (user-agent) */
+/* Inherited from ancestor level 3 (user-agent) */
 div {
   display: block;
 }
 
-/* Inherited from ancestor level 6 (user-agent) */
+/* Inherited from ancestor level 3 (user-agent) */
 address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
   unicode-bidi: isolate;
 }
 
-/* Inherited from ancestor level 6 (regular) */
+/* Inherited from ancestor level 3 (regular) */
 * {
   margin: 0;
   padding: 0;
@@ -306,7 +191,7 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   box-sizing: border-box;
 }
 
-/* Inherited from ancestor level 6 (regular) */
+/* Inherited from ancestor level 3 (regular) */
 .app {
   background: white;
   min-height: 100vh;
@@ -334,17 +219,17 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   transition-property: background-color, color;
 }
 
-/* Inherited from ancestor level 7 (user-agent) */
+/* Inherited from ancestor level 4 (user-agent) */
 div {
   display: block;
 }
 
-/* Inherited from ancestor level 7 (user-agent) */
+/* Inherited from ancestor level 4 (user-agent) */
 address, blockquote, center, div, figure, figcaption, footer, form, header, hr, legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2, h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col, thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output, [dir="ltr" i], [dir="rtl" i], [dir="auto" i] {
   unicode-bidi: isolate;
 }
 
-/* Inherited from ancestor level 7 (regular) */
+/* Inherited from ancestor level 4 (regular) */
 * {
   margin: 0;
   padding: 0;
@@ -360,7 +245,7 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   box-sizing: border-box;
 }
 
-/* Inherited from ancestor level 7 (regular) */
+/* Inherited from ancestor level 4 (regular) */
 #root {
   width: 100%;
   min-height: 100vh;
@@ -368,7 +253,7 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   min-height: 100vh;
 }
 
-/* Inherited from ancestor level 8 (user-agent) */
+/* Inherited from ancestor level 5 (user-agent) */
 body {
   display: block;
   margin-top: 8px;
@@ -377,7 +262,7 @@ body {
   margin-left: 8px;
 }
 
-/* Inherited from ancestor level 8 (regular) */
+/* Inherited from ancestor level 5 (regular) */
 * {
   margin: 0;
   padding: 0;
@@ -393,7 +278,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Inherited from ancestor level 8 (regular) */
+/* Inherited from ancestor level 5 (regular) */
 body {
   margin: 0;
   min-height: 100vh;
@@ -419,17 +304,17 @@ body {
   touch-action: manipulation;
 }
 
-/* Inherited from ancestor level 9 (user-agent) */
+/* Inherited from ancestor level 6 (user-agent) */
 html {
   display: block;
 }
 
-/* Inherited from ancestor level 9 (user-agent) */
+/* Inherited from ancestor level 6 (user-agent) */
 :root {
   view-transition-name: root;
 }
 
-/* Inherited from ancestor level 9 (regular) */
+/* Inherited from ancestor level 6 (regular) */
 * {
   margin: 0;
   padding: 0;
@@ -445,7 +330,7 @@ html {
   box-sizing: border-box;
 }
 
-/* Inherited from ancestor level 9 (regular) */
+/* Inherited from ancestor level 6 (regular) */
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
