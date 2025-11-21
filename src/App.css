@@ -1698,9 +1698,9 @@ option {
 .plan-text-line {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  font-size: 0.95em;
-  line-height: 1.8;
+  gap: 4px 8px;
+  font-size: 1em;
+  line-height: 1.5;
   justify-content: center;
 }
 
