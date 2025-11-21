@@ -926,18 +926,26 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 className="nav-btn prev-btn"
                 onClick={handlePreviousPhrase}
                 disabled={currentPhraseIndex === 0}
+                title="前のフレーズ"
               >
-                ← 前のフレーズ
+                ←
               </button>
-              <div className="phrase-counter">
-                {currentPhraseIndex + 1} / {currentPassage.phrases.length}
-              </div>
+              {isSpeechSynthesisSupported() && (
+                <button
+                  className="phrase-speaker-btn-compact"
+                  onClick={(e) => handlePhraseSpeak(currentPhraseIndex, e)}
+                  title={`フレーズ全体を発音 (${currentPhraseIndex + 1}/${currentPassage.phrases.length})`}
+                >
+                  🔊
+                </button>
+              )}
               <button 
                 className="nav-btn next-btn"
                 onClick={handleNextPhrase}
                 disabled={currentPhraseIndex === currentPassage.phrases.length - 1}
+                title="次のフレーズ"
               >
-                次のフレーズ →
+                →
               </button>
             </div>
 
@@ -948,16 +956,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               
               return (
               <div key={phrase.id} className={`phrase-block ${phraseIdx === currentPhraseIndex ? 'current-phrase' : ''}`}>
-                {/* フレーズ全体の発音ボタン */}
-                {isSpeechSynthesisSupported() && (
-                  <button
-                    className="phrase-speaker-btn"
-                    onClick={(e) => handlePhraseSpeak(phraseIdx, e)}
-                    title="フレーズ全体を発音"
-                  >
-                    🔊 フレーズを発音
-                  </button>
-                )}
                 {/* 英文 - 単語/フレーズをカード形式で表示（意味も含む） */}
                 <div className="phrase-english">
                   {(() => {
