@@ -4503,6 +4503,12 @@ option {
   margin: 0;
 }
 
+.passage-instructions .hint-text {
+  margin-top: 6px;
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
 /* アクションボタン */
 .reading-actions {
   margin-top: 20px;
@@ -9985,10 +9991,16 @@ option {
 /* レーダーチャート用のスタイル */
 .radar-chart-container {
   background: white;
-  padding: 20px;
+  padding: 16px 18px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  margin: 0 0 16px 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .chart-title {
@@ -10000,8 +10012,18 @@ option {
 }
 
 .chart-wrapper {
-  max-width: 600px;
+  width: 100%;
+  max-width: 560px;
   margin: 0 auto;
+  aspect-ratio: 1 / 1; /* 正方形を維持 */
+  position: relative;
+}
+
+.chart-wrapper canvas, .chart-wrapper svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  display: block;
 }
 
 .score-board-radar {
@@ -10081,7 +10103,23 @@ option {
 .radar-chart-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+}
+
+@media (max-width: 600px) {
+  .radar-chart-container {
+    padding: 12px 12px;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .chart-title {
+    margin: 0 0 8px 0;
+    font-size: 1.05em;
+  }
+  .chart-wrapper {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .radar-chart-empty {
