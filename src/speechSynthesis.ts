@@ -88,6 +88,38 @@ export function stopSpeaking(): void {
 }
 
 /**
+ * 現在の発音を一時停止
+ */
+export function pauseSpeaking(): void {
+  if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+    window.speechSynthesis.pause();
+  }
+}
+
+/**
+ * 一時停止した発音を再開
+ */
+export function resumeSpeaking(): void {
+  if ('speechSynthesis' in window && window.speechSynthesis.paused) {
+    window.speechSynthesis.resume();
+  }
+}
+
+/**
+ * 発音中かどうか確認
+ */
+export function isSpeaking(): boolean {
+  return 'speechSynthesis' in window && window.speechSynthesis.speaking;
+}
+
+/**
+ * 一時停止中かどうか確認
+ */
+export function isPaused(): boolean {
+  return 'speechSynthesis' in window && window.speechSynthesis.paused;
+}
+
+/**
  * 利用可能な音声リストを取得（英語音声のみ）
  */
 export function getEnglishVoices(): SpeechSynthesisVoice[] {

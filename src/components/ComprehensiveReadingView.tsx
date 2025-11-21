@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
-import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -36,6 +36,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [readingStarted, setReadingStarted] = useState(false);
   const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [isFullTextSpeaking, setIsFullTextSpeaking] = useState(false);
+  const [isFullTextPaused, setIsFullTextPaused] = useState(false);
 
   // passagesが更新されたらLocalStorageに保存（エラーハンドリング追加）
   useEffect(() => {
@@ -182,6 +184,19 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         console.error('Error loading reading dictionary:', err);
       });
   }, []);
+
+  // 発音状態の監視
+  useEffect(() => {
+    const checkSpeechStatus = setInterval(() => {
+      if (isFullTextSpeaking && !isSpeaking() && !isPaused()) {
+        // 発音が終了した
+        setIsFullTextSpeaking(false);
+        setIsFullTextPaused(false);
+      }
+    }, 500); // 0.5秒ごとにチェック
+
+    return () => clearInterval(checkSpeechStatus);
+  }, [isFullTextSpeaking]);
 
   // データ読み込み（辞書が読み込まれた後に実行）
   useEffect(() => {
@@ -1059,19 +1074,52 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           {readingSubTab === 'fullText' && (
             <div className="full-text-display">
               <h3>📄 全文</h3>
-              <button
-                className="full-text-speaker-btn"
-                onClick={() => {
-                  const fullText = currentPassage.phrases
-                    .map(phrase => phrase.segments.map(s => s.word).join(' '))
-                    .join(' ')
-                    .replace(/\s+([.,!?;:])/g, '$1');
-                  speakEnglish(fullText);
-                }}
-                title="全文を発音"
-              >
-                🔊 全文を発音
-              </button>
+              <div className="full-text-controls">
+                <button
+                  className="full-text-speaker-btn"
+                  onClick={() => {
+                    const fullText = currentPassage.phrases
+                      .map(phrase => phrase.segments.map(s => s.word).join(' '))
+                      .join(' ')
+                      .replace(/\s+([.,!?;:])/g, '$1');
+                    speakEnglish(fullText);
+                    setIsFullTextSpeaking(true);
+                    setIsFullTextPaused(false);
+                  }}
+                  disabled={isFullTextSpeaking && !isFullTextPaused}
+                  title="全文を発音"
+                >
+                  🔊 発音
+                </button>
+                <button
+                  className="full-text-pause-btn"
+                  onClick={() => {
+                    if (isFullTextPaused) {
+                      resumeSpeaking();
+                      setIsFullTextPaused(false);
+                    } else {
+                      pauseSpeaking();
+                      setIsFullTextPaused(true);
+                    }
+                  }}
+                  disabled={!isFullTextSpeaking}
+                  title={isFullTextPaused ? "発音を再開" : "発音を一時停止"}
+                >
+                  {isFullTextPaused ? '▶️ 再開' : '⏸️ 一時停止'}
+                </button>
+                <button
+                  className="full-text-stop-btn"
+                  onClick={() => {
+                    stopSpeaking();
+                    setIsFullTextSpeaking(false);
+                    setIsFullTextPaused(false);
+                  }}
+                  disabled={!isFullTextSpeaking}
+                  title="発音を停止"
+                >
+                  ⏹️ 停止
+                </button>
+              </div>
               <div className="full-text-content">
                 {(() => {
                   // フレーズから自然な文章を構築
@@ -1129,7 +1177,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             <div className="full-translation-display">
               <div className="full-translation-content">
                 {(() => {
-                  let fullTranslation = '';
+                  // フレーズごとに訳を収集（文の区切りを保持）
+                  const translatedSentences: string[] = [];
+                  let currentSentence = '';
+                  
                   currentPassage.phrases.forEach((phrase, idx) => {
                     let meaning = phrase.phraseMeaning || '';
                     if (meaning) {
@@ -1139,46 +1190,48 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                       // 空になった場合はスキップ
                       if (!meaning) return;
                       
-                      // 既に句読点で終わっていない場合は追加
-                      if (!/[。！？、]$/.test(meaning)) {
-                        // 文の終わりっぽいフレーズには句点、それ以外は読点
-                        const phraseWords = phrase.segments
-                          .map(s => s.word)
-                          .join(' ')
-                          .trim();
-                        const isEndOfSentence = /[.!?]$/.test(phraseWords);
-                        
-                        // 次のフレーズがあるかチェック
-                        const hasNextPhrase = idx < currentPassage.phrases.length - 1;
-                        
+                      // 英文のフレーズが文の終わりかチェック
+                      const phraseWords = phrase.segments
+                        .map(s => s.word)
+                        .join(' ')
+                        .trim();
+                      const isEndOfSentence = /[.!?]$/.test(phraseWords);
+                      
+                      // 既に句読点で終わっていない場合
+                      if (!/[。！？]$/.test(meaning)) {
                         if (isEndOfSentence) {
-                          fullTranslation += meaning + '。';
-                        } else if (hasNextPhrase) {
-                          fullTranslation += meaning + '、';
+                          // 文の終わり
+                          currentSentence += meaning + '。';
+                          translatedSentences.push(currentSentence.trim());
+                          currentSentence = '';
                         } else {
-                          fullTranslation += meaning + '。';
+                          // 文の途中
+                          currentSentence += meaning + '、';
                         }
                       } else {
-                        fullTranslation += meaning;
+                        // 既に句読点がある場合
+                        currentSentence += meaning;
+                        if (isEndOfSentence) {
+                          translatedSentences.push(currentSentence.trim());
+                          currentSentence = '';
+                        }
                       }
                     }
                   });
-
-                  // 句点で段落分割
-                  const sentences = fullTranslation.split(/[。！？]/).filter(s => s.trim());
-                  const paragraphs: string[] = [];
-                  let currentParagraph = '';
                   
-                  sentences.forEach((sentence, idx) => {
-                    const trimmed = sentence.trim();
-                    if (trimmed) {
-                      currentParagraph += trimmed + '。';
-                      if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
-                        paragraphs.push(currentParagraph);
-                        currentParagraph = '';
-                      }
-                    }
-                  });
+                  // 残りの文があれば追加
+                  if (currentSentence.trim()) {
+                    translatedSentences.push(currentSentence.trim() + '。');
+                  }
+
+                  // 3〜5文ごとに段落を作成（全文タブと同じロジック）
+                  const paragraphs: string[] = [];
+                  const sentencesPerParagraph = Math.max(3, Math.ceil(translatedSentences.length / 3));
+                  
+                  for (let i = 0; i < translatedSentences.length; i += sentencesPerParagraph) {
+                    const paragraphSentences = translatedSentences.slice(i, i + sentencesPerParagraph);
+                    paragraphs.push(paragraphSentences.join(''));
+                  }
 
                   return paragraphs.map((para, idx) => (
                     <p key={idx} className="paragraph-ja">
