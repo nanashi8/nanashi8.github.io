@@ -68,9 +68,12 @@ npm run deploy
 
 2. **開発者ツールを開く** (F12)
 
-3. **コンソールで実行**:
+3. **動作確認**:
+   - Sentryダッシュボードの「Send a test event」を利用するか、ローカルでSDKのAPIを用いて明示的にイベントを送信してください。
    ```javascript
-   throw new Error("Sentryテスト");
+   // 例: SDKを使ったテスト送信（開発時のみ）
+   // import * as Sentry from "@sentry/react";
+   // Sentry.captureException(new Error("Sentryテスト（テスト用イベント）"));
    ```
 
 4. **Sentry Dashboard で確認**:
