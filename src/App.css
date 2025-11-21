@@ -1647,8 +1647,9 @@ option {
 .stats-text-compact {
   display: flex;
   flex-wrap: wrap;
+  gap: 4px 8px;
   align-items: center;
-  line-height: 1;
+  line-height: 1.5;
   font-size: 1em;
   justify-content: center;
 }
