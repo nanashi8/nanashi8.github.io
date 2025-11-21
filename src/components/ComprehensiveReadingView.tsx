@@ -1058,78 +1058,61 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           {/* 全文タブ: 英文のみを段落形式で表示 */}
           {readingSubTab === 'fullText' && (
             <div className="full-text-display">
+              <h3>📄 全文</h3>
+              <button
+                className="full-text-speaker-btn"
+                onClick={() => {
+                  const fullText = currentPassage.phrases
+                    .map(phrase => phrase.segments.map(s => s.word).join(' '))
+                    .join(' ')
+                    .replace(/\s+([.,!?;:])/g, '$1');
+                  speakEnglish(fullText);
+                }}
+                title="全文を発音"
+              >
+                🔊 全文を発音
+              </button>
               <div className="full-text-content">
                 {(() => {
+                  // フレーズから自然な文章を構築
                   let fullText = '';
-                  currentPassage.phrases.forEach((phrase, idx) => {
-                const words = phrase.words || phrase.segments?.map(s => s.word) || [];
-                words.forEach((word, wordIdx) => {
-                  // 句読点の場合は前のスペースを入れない
-                  if (['.', ',', '!', '?', ':', ';'].includes(word)) {
-                    fullText += word;
-                  } else {
-                    // 最初の単語以外は前にスペースを入れる
-                    if (fullText.length > 0 && !fullText.endsWith(' ')) {
-                      fullText += ' ';
-                    }
-                    fullText += word;
-                  }
-                });
-              });
-
-              // 段落に分割（ピリオドの後で改行）
-              const sentences = fullText.split(/\.\s+/).filter(s => s.trim());
-              const paragraphs: string[] = [];
-              let currentParagraph = '';
-              
-              sentences.forEach((sentence, idx) => {
-                currentParagraph += sentence + '.';
-                // 約3-5文ごとに段落を分ける
-                if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
-                  paragraphs.push(currentParagraph.trim());
-                  currentParagraph = '';
-                }
-              });
-
-              return paragraphs.map((para, idx) => (
-                <p key={idx} className="paragraph">
-                  {para}
-                </p>
-              ));
-            })()}
-          </div>
-        </div>
-          )}
-
-          {/* 全文タブ: 英文のみを段落形式で表示 */}
-          {readingSubTab === 'fullText' && (
-            <div className="full-text-display">
-              <div className="full-text-content">
-                {(() => {
-                  let fullText = '';
-                  currentPassage.phrases.forEach(phrase => {
-                    phrase.segments.forEach(seg => {
+                  currentPassage.phrases.forEach((phrase) => {
+                    phrase.segments.forEach((seg) => {
                       const word = seg.word.trim();
                       if (word && word !== '-') {
-                        if (fullText.length > 0 && !fullText.endsWith(' ') && !/^[.,!?;:]$/.test(word)) {
-                          fullText += ' ';
+                        // 句読点の前にスペースを入れない
+                        if (/^[.,!?;:]$/.test(word)) {
+                          fullText += word;
+                        } else {
+                          // 単語の前にスペースを追加（文頭以外）
+                          if (fullText.length > 0 && !fullText.endsWith(' ')) {
+                            fullText += ' ';
+                          }
+                          fullText += word;
                         }
-                        fullText += word;
                       }
                     });
                   });
 
-                  const sentences = fullText.split(/\.\s+/).filter(s => s.trim());
-                  const paragraphs: string[] = [];
-                  let currentParagraph = '';
+                  // ピリオド、感嘆符、疑問符で文を分割
+                  const sentences = fullText.split(/([.!?])\s+/).filter(s => s.trim());
                   
-                  sentences.forEach((sentence, idx) => {
-                    currentParagraph += sentence + '.';
-                    if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
-                      paragraphs.push(currentParagraph.trim());
-                      currentParagraph = '';
-                    }
-                  });
+                  // 文を再構築して段落に分ける
+                  const reconstructedSentences: string[] = [];
+                  for (let i = 0; i < sentences.length; i += 2) {
+                    const sentence = sentences[i];
+                    const punctuation = sentences[i + 1] || '';
+                    reconstructedSentences.push((sentence + punctuation).trim());
+                  }
+
+                  // 3〜5文ごとに段落を作成
+                  const paragraphs: string[] = [];
+                  const sentencesPerParagraph = Math.max(3, Math.ceil(reconstructedSentences.length / 3));
+                  
+                  for (let i = 0; i < reconstructedSentences.length; i += sentencesPerParagraph) {
+                    const paragraphSentences = reconstructedSentences.slice(i, i + sentencesPerParagraph);
+                    paragraphs.push(paragraphSentences.join(' '));
+                  }
 
                   return paragraphs.map((para, idx) => (
                     <p key={idx} className="paragraph-en">

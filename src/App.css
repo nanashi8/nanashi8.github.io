@@ -10734,13 +10734,21 @@ option {
 /* 全文・全訳の段落スタイル */
 .paragraph-en,
 .paragraph-ja {
-  margin-bottom: 1.2em;
+  margin-bottom: 1.5em;
   line-height: 1.8;
   font-size: 1.05em;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+
+.paragraph-en:first-child,
+.paragraph-ja:first-child {
+  text-indent: 0;
 }
 
 .paragraph-en {
   color: #1a1f36;
+  font-family: 'Times New Roman', 'Georgia', serif;
 }
 
 .paragraph-ja {
@@ -11038,6 +11046,33 @@ option {
   padding: 0;
   color: #1a1f36;
   font-weight: 600;
+}
+
+.full-text-speaker-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #4c6ef5 0%, #5f3d8a 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 40px;
+}
+
+.full-text-speaker-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 110, 245, 0.4);
+}
+
+.full-text-speaker-btn:active {
+  transform: scale(0.98);
+  background: linear-gradient(135deg, #3b5bdb 0%, #4e3270 100%);
 }
 
 .full-text-content {
