@@ -87,21 +87,16 @@ npm run deploy
 
 ## ステップ4: 動作確認
 
-### テストエラーを発生させる
+### テストイベントでの動作確認
 
-開発者ツールのコンソールで実行:
+動作確認は以下のいずれかの方法を推奨します（生のthrowは推奨しません）。
+
+- Sentryのダッシュボードから「Send a test event（テストイベント送信）」を利用する。
+- ローカルでデバッグし、SDKのAPIを使って明示的にイベントを送る（例）:
 ```javascript
-throw new Error("Sentryテスト");
-```
-
-または、一時的にコードに追加:
-```typescript
-// src/App.tsx の適当な場所に追加
-if (import.meta.env.PROD) {
-  setTimeout(() => {
-    throw new Error("Sentry接続テスト");
-  }, 3000);
-}
+// 開発時の一時的なテスト例（強制的な例外投出は避ける）
+// import * as Sentry from "@sentry/react";
+// Sentry.captureException(new Error("Sentryテスト（テスト用イベント）"));
 ```
 
 ### Sentryで確認
@@ -109,7 +104,7 @@ if (import.meta.env.PROD) {
 1. https://sentry.io/ にログイン
 2. Projects → nanashi8-quiz-app
 3. Issues タブを確認
-4. "Sentry接続テスト" というエラーが表示されればOK
+4. テストイベントが表示されればOK
 
 ---
 
