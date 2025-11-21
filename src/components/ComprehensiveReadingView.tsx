@@ -332,7 +332,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const filteredPassages = useMemo(
     () => difficultyFilter === 'all' 
       ? passages 
-      : passages.filter(p => p.difficulty === difficultyFilter),
+      : passages.filter(p => p.level === difficultyFilter),
     [passages, difficultyFilter]
   );
 
@@ -736,9 +736,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               title="難易度を選択"
             >
               <option value="all">全て</option>
-              <option value="初級">初級 (80-100語)</option>
-              <option value="中級">中級 (120-150語)</option>
-              <option value="上級">上級 (180-200語)</option>
+              <option value="初級">初級</option>
+              <option value="中級">中級</option>
+              <option value="上級">上級</option>
             </select>
           </div>
         </div>
@@ -797,9 +797,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                       className="compact-select"
                     >
                       <option value="all">全て</option>
-                      <option value="初級">初級 (80-100語)</option>
-                      <option value="中級">中級 (120-150語)</option>
-                      <option value="上級">上級 (180-200語)</option>
+                      <option value="初級">初級</option>
+                      <option value="中級">中級</option>
+                      <option value="上級">上級</option>
                     </select>
                   </div>
 
