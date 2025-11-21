@@ -10813,6 +10813,8 @@ option {
   color: #344054;
   white-space: nowrap;
   font-size: 0.95em;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .compact-select {
