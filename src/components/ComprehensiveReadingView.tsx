@@ -830,7 +830,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
       </div>
 
-      {/* 3タブ構造 + 操作ボタン（読解開始後に表示） */}
+      {/* 4タブ構造 + 操作ボタン（読解開始後に表示） */}
       {readingStarted && (
         <div className="reading-sub-tabs">
           <button
@@ -851,23 +851,29 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           >
             📝 全訳
           </button>
-          <div className="sub-tab-actions">
-            <button 
-              onClick={handleSaveUnknownWords}
-              className="btn-compact btn-success"
-              disabled={unknownCount === 0}
-              title="未知語を保存"
-            >
-              💾 保存 ({unknownCount})
-            </button>
-            <button 
-              onClick={handleReset}
-              className="btn-compact btn-secondary"
-              title="リセット"
-            >
-              🔄 リセット
-            </button>
-          </div>
+          <button
+            className="sub-tab-btn"
+            onClick={handleOpenSettings}
+            title="学習設定を開く"
+          >
+            ⚙️ 学習設定
+          </button>
+          <div className="sub-tab-divider"></div>
+          <button 
+            onClick={handleSaveUnknownWords}
+            className="sub-tab-btn sub-tab-action"
+            disabled={unknownCount === 0}
+            title="未知語を保存"
+          >
+            💾 保存 ({unknownCount})
+          </button>
+          <button 
+            onClick={handleReset}
+            className="sub-tab-btn sub-tab-action"
+            title="リセット"
+          >
+            🔄 リセット
+          </button>
         </div>
       )}
 

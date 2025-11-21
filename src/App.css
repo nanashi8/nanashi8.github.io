@@ -10629,12 +10629,11 @@ option {
   background: #5568d3;
 }
 
-/* 読解サブタブ（読解/全文/全訳） */
+/* 読解サブタブ（読解/全文/全訳/学習設定/保存/リセット） */
 .reading-sub-tabs {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 6px;
   padding: 8px 16px;
   background: #f9fafb;
   border-bottom: 2px solid #e5e7eb;
@@ -10676,17 +10675,30 @@ option {
   background: #667eea;
 }
 
-/* サブタブ内の操作ボタン */
-.sub-tab-actions {
-  display: flex;
-  gap: 6px;
-  margin-left: auto;
+/* 仕切り線 */
+.sub-tab-divider {
+  width: 1px;
+  height: 24px;
+  background: #d1d5db;
+  margin: 0 4px;
 }
 
-.sub-tab-actions .btn-compact {
-  padding: 6px 12px;
-  font-size: 0.85em;
-  white-space: nowrap;
+/* アクションボタン（保存・リセット） */
+.sub-tab-action {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.sub-tab-action:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.sub-tab-action:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 /* モバイル対応 */
@@ -10701,16 +10713,13 @@ option {
     font-size: 0.85em;
   }
 
-  .sub-tab-actions {
-    width: 100%;
-    justify-content: flex-end;
-    margin-left: 0;
-    margin-top: 4px;
+  .sub-tab-divider {
+    display: none;
   }
 
-  .sub-tab-actions .btn-compact {
-    padding: 5px 10px;
-    font-size: 0.8em;
+  /* モバイルでは2行レイアウト */
+  .sub-tab-action {
+    margin-left: auto;
   }
 }
 
