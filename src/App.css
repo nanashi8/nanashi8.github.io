@@ -1047,6 +1047,12 @@
   padding: 10px;
 }
 
+@media (max-width: 600px) {
+  .tab-content {
+    padding: 5px;
+  }
+}
+
 /* ファイル選択 */
 .file-selector {
   flex-shrink: 0;
@@ -1509,6 +1515,7 @@ option {
   gap: 6px;
   width: 100%;
   margin-bottom: 6px;
+  box-sizing: border-box;
 }
 
 .stat-card {
@@ -2484,12 +2491,73 @@ option {
   touch-action: manipulation;
 }
 
+@media (max-width: 600px) {
+  /* ==== 成績タブモバイル最適化 ==== */
+  .stats-view {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .stats-view h2,
+  .stats-view h3 {
+    margin: 8px 8px 4px;
+    padding: 0;
+    font-size: 1.05em;
+  }
+
+  .stats-cards,
+  .stats-grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+    gap: 4px;
+    padding: 4px 6px;
+    margin: 4px 0 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .stat-card {
+    padding: 4px 6px;
+    border-radius: 5px;
+    min-height: 60px;
+  }
+
+  .stat-label { font-size: 0.55em; margin-bottom: 2px; }
+  .stat-value { font-size: 1.1em; margin-bottom: 2px; }
+  .stat-sub { font-size: 0.55em; }
+
+  .stat-subtabs-mobile { gap: 3px; margin: 4px 0; }
+  .stat-subtab { padding: 2px 4px; font-size: 0.65em; }
+
+  .stat-mobile-card { padding: 4px; }
+  .stat-mobile-item { padding: 2px 0; }
+  .stat-mobile-label { font-size: 0.6em; }
+  .stat-mobile-value { font-size: 0.8em; }
+
+  .stats-text-compact { gap: 3px 6px; font-size: 0.9em; line-height: 1.35; padding: 4px 6px; }
+  .stat-text-label { font-size: 0.75em; }
+  .stat-text-value { font-size: 0.95em; }
+
+  .score-board-content { max-height: 200px; font-size: 0.95em; padding: 0 4px; }
+}
+
+
 .quiz-content-wrapper {
   flex: 1;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding: 0;
+}
+
+@media (max-width: 600px) {
+  .quiz-content-wrapper {
+    padding: 0 5px;
+  }
 }
 
 /* 問題カード */
@@ -3437,13 +3505,23 @@ option {
 
 /* レスポンシブ */
 @media (max-width: 600px) {
+  .header {
+    padding: 10px 8px 8px;
+  }
+
   .header h1 {
     font-size: 1.2em;
   }
 
   .tab-btn {
     font-size: max(15px, 0.9em);
-    padding: 12px 8px;
+    padding: 12px 6px;
+  }
+
+  .question-card {
+    padding: 8px 10px 15px;
+    margin: 0;
+    border-radius: 8px;
   }
 
   .question-text {
@@ -3452,8 +3530,54 @@ option {
 
   .score-board {
     grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 8px;
+    margin: 0;
+  }
+
+  .score-item {
+    padding: 8px 6px;
+  }
+
+  .choice-btn {
+    padding: 14px;
+    font-size: max(16px, 1em);
+    margin: 4px 8px;
+  }
+
+  .navigation-controls {
+    padding: 10px 8px;
     gap: 8px;
+  }
+
+  .nav-btn {
+    padding: 12px 16px;
+    font-size: max(15px, 0.95em);
+  }
+
+  .file-selector {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .category-select,
+  .difficulty-select {
     padding: 10px;
+    font-size: max(15px, 0.95em);
+  }
+
+  .score-item {
+    padding: 8px 6px;
+  }
+
+  /* スペルタブの最適化 */
+  .spelling-view {
+    padding: 0;
+  }
+
+  .spelling-question-content {
+    gap: 8px;
+    padding: 8px;
   }
 
   .list-header {
@@ -3472,13 +3596,18 @@ option {
 
   /* スペルタブの最適化 */
   .spelling-view {
+    padding: 0;
+  }
+
+  .spelling-question-content {
+    gap: 8px;
     padding: 8px;
   }
 
   .user-word-display {
-    height: 100px;
-    padding: 15px;
-    margin: 15px 0;
+    height: 90px;
+    padding: 12px;
+    margin: 10px 8px;
   }
 
   .user-word-label {
@@ -3487,12 +3616,13 @@ option {
 
   .user-word-text {
     font-size: max(28px, 1.8em);
-    height: 45px;
+    height: 40px;
     letter-spacing: 3px;
   }
 
   .meaning-display {
-    padding: 12px;
+    padding: 10px;
+    margin: 0 8px;
   }
 
   .meaning-label {
@@ -3503,9 +3633,32 @@ option {
     font-size: max(18px, 1.1em);
   }
 
+  .result-display {
+    margin: 10px 8px;
+  }
+
+  .result-message {
+    padding: 12px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  .correct-answer {
+    font-size: 1em;
+    margin: 0 8px 10px;
+    padding: 8px;
+  }
+
+  .question-details,
+  .question-details-spelling {
+    padding: 10px;
+    margin: 10px 8px;
+    font-size: 0.9em;
+  }
+
   .letter-cards {
-    gap: 10px;
-    margin: 15px 0;
+    gap: 8px;
+    margin: 10px 8px;
   }
 
   .letter-card {
@@ -3529,6 +3682,14 @@ option {
   .btn-toggle-details {
     font-size: max(16px, 1em);
     padding: 12px 20px;
+    margin: 4px 8px;
+  }
+
+  .btn-check-answer,
+  .btn-next-question {
+    padding: 14px 24px;
+    font-size: max(17px, 1.05em);
+    margin: 8px;
     min-height: 48px;
   }
 
@@ -3688,14 +3849,14 @@ option {
 
 /* 長文読解用スタイル */
 .reading-view {
-  padding: 10px;
+  /* 統一: quiz/spelling/reading 共通コンテナ仕様 */
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: hidden;
   width: 100%;
   box-sizing: border-box;
-  /* モバイル最適化 */
+  overflow: hidden; /* 内部スクロール領域のみ縦スクロール */
+  padding: 0; /* 余白は内側の要素で制御 */
   touch-action: manipulation;
 }
 
@@ -3710,19 +3871,22 @@ option {
   box-sizing: border-box;
 }
 
-.passage-selector h3 {
-  margin: 0 0 15px 0;
-  color: #333;
-  font-size: 1.1em;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+.passage-selector {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 0 0 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 .passage-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .passage-btn {
@@ -5984,10 +6148,7 @@ option {
 
 /* スマホ対応：ブラウザコンソールに被らないように調整 */
 @media (max-width: 600px) {
-  .tab-content {
-    padding: 10px;
-    padding-bottom: calc(20px + env(safe-area-inset-bottom));
-  }
+  /* .tab-content は上部で既に定義済み */
 
   /* 読解タブの最適化（中央寄せ、余白最小化） */
   .reading-view {
@@ -9714,6 +9875,15 @@ option {
   opacity: 0.6;
   transition: opacity 0.2s;
   margin-left: 2px;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.speaker-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .word-card:hover .speaker-icon {
@@ -10042,22 +10212,31 @@ option {
 
 /* 読解タブのスタイル */
 .comprehensive-reading-view {
+  /* 全画面表示に最適化 */
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #ffffff;
 }
 
 .reading-header {
-  padding: 15px;
-  background: #f8f9fa;
-  border-bottom: 2px solid #e0e0e0;
+  padding: 16px 20px;
+  background: #f5f7fa;
+  border-bottom: 2px solid #d0d5dd;
   flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .reading-header h2 {
-  margin: 0 0 12px 0;
-  color: #333;
+  margin: 0 0 14px 0;
+  color: #1a1f36;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 /* 難易度とパッセージを横並び */
@@ -10079,18 +10258,21 @@ option {
 
 .reading-selectors label {
   font-weight: 600;
-  color: #555;
+  color: #344054;
   white-space: nowrap;
+  font-size: 0.95em;
 }
 
 .compact-select {
   flex: 1;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  padding: 10px 14px;
+  border: 1.5px solid #d0d5dd;
+  border-radius: 8px;
   background: white;
   font-size: 0.95em;
   cursor: pointer;
+  color: #1a1f36;
+  transition: all 0.2s;
 }
 
 .compact-select:focus {
@@ -10170,12 +10352,21 @@ option {
   padding: 20px;
   overflow-y: auto;
   flex: 1;
+  background: #ffffff;
 }
 
-/* モバイル版でpassage-contentの余白を削除 */
+/* モバイル版でpassage-contentの余白を調整 */
 @media (max-width: 600px) {
   .passage-content {
-    padding: 8px 4px;
+    padding: 12px;
+  }
+  
+  .phrase-block {
+    padding: 14px;
+  }
+  
+  .reading-header {
+    padding: 12px 16px;
   }
 }
 
@@ -10185,35 +10376,73 @@ option {
 
 .phrase-block {
   margin-bottom: 20px;
-  padding: 15px;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1.5px solid #d0d5dd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s;
+}
+
+.phrase-speaker-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.phrase-speaker-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.phrase-speaker-btn:active {
+  transform: translateY(0);
+}
+
+.phrase-speaker-btn.speaking {
+  animation: speakPulse 0.6s ease-in-out;
+  background: linear-gradient(135deg, #4c6ef5 0%, #5f3d8a 100%);
 }
 
 .full-text-display {
   margin: 20px 0;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
+  padding: 22px;
+  background: #f5f7fa;
+  border-radius: 10px;
+  border: 1.5px solid #d0d5dd;
 }
 
 .full-text-display h3 {
-  margin: 0 0 15px 0;
-  color: #333;
+  margin: 0 0 16px 0;
+  color: #1a1f36;
+  font-weight: 600;
 }
 
 .full-text-content {
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.9;
+  color: #1a1f36;
+  font-size: 1.05em;
 }
 
 .full-translation-display {
   margin: 20px 0;
-  padding: 20px;
+  padding: 22px;
   background: #e8f5e9;
   border: 2px solid #4caf50;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.15);
 }
 
 .full-translation-display h3 {
@@ -10222,8 +10451,9 @@ option {
 }
 
 .full-translation-content {
-  line-height: 1.8;
+  line-height: 1.9;
   color: #1b5e20;
+  font-size: 1.05em;
 }
 
 .show-translation-btn {
@@ -11583,4 +11813,170 @@ option {
 .error-badge-count {
   font-size: 12px;
   font-weight: bold;
+}
+
+/* ===== モバイル版長文読解の最適化 ===== */
+@media (max-width: 600px) {
+  .comprehensive-reading-view {
+    font-size: 14px;
+  }
+
+  /* 読解タブ内部横幅統一 */
+  .passage-content,
+  .passage-body,
+  .phrase-block,
+  .phrase-english {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .phrase-english {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .phrase-block {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .word-card,
+  .word-card.phrase-card {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+  }
+
+  .reading-header {
+    padding: 10px;
+  }
+
+  .reading-header h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+
+  .reading-selectors {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .passage-selector,
+  .difficulty-selector {
+    width: 100%;
+  }
+
+  .compact-select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .passage-list {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .passage-item {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .passage-content {
+    padding: 0;
+  }
+
+  .passage-title {
+    font-size: 1.1em;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f4f8;
+    border-radius: 6px;
+  }
+
+  .passage-body {
+    margin-top: 0;
+  }
+
+  .phrase-block {
+    margin: 0 0 12px 0;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .phrase-speaker-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+  }
+
+  .phrase-english {
+    gap: 4px;
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+
+  .word-card {
+    padding: 6px 10px;
+    margin: 2px;
+    font-size: 0.95em;
+    min-width: auto;
+  }
+
+  .word-card-word {
+    font-size: 1em;
+  }
+
+  .word-card-meaning {
+    font-size: 0.75em;
+    max-width: none;
+    padding: 2px 4px;
+  }
+
+  .phrase-card {
+    padding: 8px 12px;
+  }
+
+  .phrase-word {
+    font-size: 1em;
+  }
+
+  .punctuation-card {
+    padding: 4px 2px !important;
+    min-width: 15px !important;
+  }
+
+  .phrase-translation {
+    padding: 8px;
+    font-size: 0.9em;
+    margin-top: 6px;
+  }
+
+  .show-translation-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
+
+  .full-text-display,
+  .full-translation-display {
+    margin: 10px;
+    padding: 12px;
+  }
+
+  .word-popup {
+    max-width: 90vw;
+    padding: 12px;
+  }
+
+  .popup-word {
+    font-size: 1.2em;
+  }
+
+  .popup-meaning {
+    font-size: 0.9em;
+  }
 }

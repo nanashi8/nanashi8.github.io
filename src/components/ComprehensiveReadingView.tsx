@@ -419,6 +419,29 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   };
 
+  // フレーズ全体を発音する
+  const handlePhraseSpeak = (phraseIdx: number, event: React.MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    if (!currentPassage || !isSpeechSynthesisSupported()) return;
+    
+    const phrase = currentPassage.phrases[phraseIdx];
+    const phraseText = phrase.segments
+      .filter(seg => seg.word && seg.word.trim() !== '')
+      .map(seg => seg.word)
+      .join(' ');
+    
+    speakEnglish(phraseText, { rate: 0.85 });
+    
+    // ビジュアルフィードバック
+    const element = event.currentTarget as HTMLElement;
+    element.classList.add('speaking');
+    setTimeout(() => {
+      element.classList.remove('speaking');
+    }, 600);
+  };
+
   // 単語をクリックして辞書から意味を表示
   const handleWordClick = (word: string, event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
@@ -798,6 +821,16 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="passage-body">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
               <div key={phrase.id} className="phrase-block">
+                {/* フレーズ全体の発音ボタン */}
+                {isSpeechSynthesisSupported() && (
+                  <button
+                    className="phrase-speaker-btn"
+                    onClick={(e) => handlePhraseSpeak(phraseIdx, e)}
+                    title="フレーズ全体を発音"
+                  >
+                    🔊 フレーズを発音
+                  </button>
+                )}
                 {/* 英文 - 単語/フレーズをカード形式で表示（意味も含む） */}
                 <div className="phrase-english">
                   {(() => {
@@ -816,7 +849,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             key={`group-${groupIdx}`}
                             className={`word-card phrase-card ${group.isUnknown ? 'unknown' : ''}`}
                             onClick={(e) => handleWordClick(phraseText, e)}
-                            onDoubleClick={(e) => {
+                            onContextMenu={(e) => {
+                              e.preventDefault();
                               e.stopPropagation();
                               // フレーズ内の全セグメントのisUnknownをトグル
                               const newValue = !group.isUnknown;
@@ -844,9 +878,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                                   : passage
                               ));
                             }}
-                            title="タップ: 詳細を表示 / ダブルタップ: 分からない熟語としてマーク（再度タップで解除）"
+                            title="タップ: 詳細表示 / 長押し: 分からない熟語としてマーク（再度長押しで解除）"
                           >
-                            <div className="word-card-word phrase-word">{phraseText}</div>
+                            <div className="word-card-word phrase-word">
+                              {phraseText}
+                            </div>
                             {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
                               <div className="word-card-meaning">{combinedMeaning}</div>
                             )}
@@ -884,14 +920,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             key={`group-${groupIdx}`}
                             className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
                             onClick={(e) => handleWordClick(segment.word, e)}
-                            onDoubleClick={(e) => handleMarkUnknown(phraseIdx, segIdx, e)}
-                            title="タップ: 発音＆詳細表示 / ダブルタップ: 分からない単語としてマーク（再度タップで解除）"
+                            onContextMenu={(e) => {
+                              e.preventDefault();
+                              handleMarkUnknown(phraseIdx, segIdx, e);
+                            }}
+                            title="タップ: 詳細表示 / 長押し: 分からない単語としてマーク（再度長押しで解除）"
                           >
                             <div className="word-card-word">
                               {segment.word}
-                              {isSpeechSynthesisSupported() && (
-                                <span className="speaker-icon" aria-label="音声あり">🔊</span>
-                              )}
                             </div>
                             {wordMeaningsVisible[phraseIdx] && meaning && meaning !== '-' && (
                               <div className="word-card-meaning">{meaning}</div>
