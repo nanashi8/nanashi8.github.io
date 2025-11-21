@@ -1147,13 +1147,26 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               <div className="full-translation-content">
                 {(() => {
                   let fullTranslation = '';
-                  currentPassage.phrases.forEach((phrase) => {
+                  currentPassage.phrases.forEach((phrase, idx) => {
                     const meaning = phrase.phraseMeaning || '';
                     if (meaning) {
-                      fullTranslation += meaning;
+                      // 既に句読点で終わっていない場合は追加
+                      if (!/[。！？、]$/.test(meaning)) {
+                        // 文の終わりっぽいフレーズには句点、それ以外は読点
+                        const isEndOfSentence = /[.!?]$/.test(
+                          phrase.segments
+                            .map(s => s.word)
+                            .join(' ')
+                            .trim()
+                        );
+                        fullTranslation += meaning + (isEndOfSentence ? '。' : '、');
+                      } else {
+                        fullTranslation += meaning;
+                      }
                     }
                   });
 
+                  // 句点で段落分割
                   const sentences = fullTranslation.split(/[。！？]/).filter(s => s.trim());
                   const paragraphs: string[] = [];
                   let currentParagraph = '';
