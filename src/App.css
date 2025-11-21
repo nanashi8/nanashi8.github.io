@@ -10901,10 +10901,17 @@ option {
 }
 
 /* ===== 統合コメント欄（警告・フィードバック共通） ===== */
+/* コメントバーコンテナ（固定高さ確保でレイアウトシフトを防止） */
+.comment-bar-container {
+  min-height: 80px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
 .unified-comment-bar {
   border-radius: 12px;
   padding: 12px 16px;
-  margin-bottom: 16px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
