@@ -1129,8 +1129,17 @@ function determineMasteryLevel(wordProgress: WordProgress): 'new' | 'learning' |
   
   const accuracy = wordProgress.correctCount / total;
   
-  // 3回以上学習して正解率80%以上かつ連続2回以上正解で習得
-  if (total >= 3 && accuracy >= 0.8 && wordProgress.consecutiveCorrect >= 2) {
+  // より柔軟な定着判定:
+  // 1. 5回以上学習して正解率85%以上 → 安定した定着
+  // 2. 3回以上学習して正解率90%以上 → 高い定着
+  // 3. 連続5回以上正解 → 強い定着
+  // 4. 10回以上学習して正解率75%以上かつ直近2回が正解 → 長期学習による定着
+  const isStableAccuracy = total >= 5 && accuracy >= 0.85;
+  const isHighAccuracy = total >= 3 && accuracy >= 0.90;
+  const isStrongStreak = wordProgress.consecutiveCorrect >= 5;
+  const isLongTermLearning = total >= 10 && accuracy >= 0.75 && wordProgress.consecutiveCorrect >= 2;
+  
+  if (isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
     return 'mastered';
   }
   
@@ -1203,7 +1212,13 @@ export async function updateWordProgress(
   wordProgress.difficultyScore = calculateDifficultyScore(wordProgress);
   
   // 習熟レベルを更新
+  const oldMasteryLevel = wordProgress.masteryLevel;
   wordProgress.masteryLevel = determineMasteryLevel(wordProgress);
+  
+  // デバッグ: 習熟レベルの変化をログ出力
+  if (oldMasteryLevel !== wordProgress.masteryLevel) {
+    console.log(`🔄 ${word}: ${oldMasteryLevel} → ${wordProgress.masteryLevel} (正解: ${wordProgress.correctCount}, 不正解: ${wordProgress.incorrectCount}, 連続: ${wordProgress.consecutiveCorrect})`);
+  }
   
   // 柔軟な定着判定システム
   const masteryResult = checkFlexibleMastery(wordProgress, isCorrect);
@@ -1557,25 +1572,24 @@ export function getRetentionRateWithAI(): {
   
   let masteredCount = 0;
   
-  // 定着度の判定条件を修正
+  // より現実的な定着判定（一度の間違いで失われない）
   appearedWords.forEach(wp => {
     const totalAttempts = wp.correctCount + wp.incorrectCount;
     const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
     
-    // 定着の条件:
-    // 1. 連続3回以上正解（強い定着）
-    // 2. 5回以上挑戦して正答率80%以上かつ連続2回以上正解（安定した定着）
-    // 3. masteryLevel が 'mastered' の場合
-    const isStronglyMastered = wp.consecutiveCorrect >= 3;
-    
-    const isStablyMastered = 
-      totalAttempts >= 5 && 
-      accuracy >= 80 && 
-      wp.consecutiveCorrect >= 2;
-    
+    // 定着の条件（いずれかを満たせば定着とみなす）:
+    // 1. masteryLevel が 'mastered' （システムが定着と判定）
+    // 2. 5回以上挑戦して正答率85%以上（安定した実績）
+    // 3. 3回以上挑戦して正答率90%以上（高い習熟度）
+    // 4. 連続5回以上正解（現在の強い定着状態）
+    // 5. 10回以上挑戦して正答率75%以上（長期的な学習実績）
     const isMarkedAsMastered = wp.masteryLevel === 'mastered';
+    const isStableAccuracy = totalAttempts >= 5 && accuracy >= 85;
+    const isHighAccuracy = totalAttempts >= 3 && accuracy >= 90;
+    const isStrongStreak = wp.consecutiveCorrect >= 5;
+    const isLongTermLearning = totalAttempts >= 10 && accuracy >= 75;
     
-    if (isStronglyMastered || isStablyMastered || isMarkedAsMastered) {
+    if (isMarkedAsMastered || isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
       masteredCount++;
     }
   });
@@ -1583,6 +1597,14 @@ export function getRetentionRateWithAI(): {
   const retentionRate = appearedWords.length > 0 
     ? (masteredCount / appearedWords.length) * 100 
     : 0;
+  
+  // デバッグ: 定着率の計算詳細をログ出力
+  console.log('📊 定着率計算:', {
+    出現単語数: appearedWords.length,
+    定着単語数: masteredCount,
+    定着率: `${Math.round(retentionRate)}%`,
+    計算式: `(${masteredCount} / ${appearedWords.length}) × 100`
+  });
   
   // デバッグ: 異常な値の検出
   if (retentionRate > 100) {
