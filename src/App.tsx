@@ -62,7 +62,6 @@ import './App.css';
 import { migrateToIndexedDB } from './dataMigration';
 import { initStorageStrategy } from './storageManager';
 import { initErrorLogger } from './errorLogger';
-import { ErrorBadge } from './components/ErrorLogPanel';
 
 type Tab = 'translation' | 'spelling' | 'reading' | 'settings' | 'stats';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
@@ -1215,9 +1214,6 @@ function App() {
           />
         )}
       </div>
-      
-      {/* エラーログバッジ */}
-      <ErrorBadge />
     </div>
   );
 }
