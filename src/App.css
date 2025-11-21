@@ -9333,6 +9333,43 @@ option {
   color: #d0d0d0;
 }
 
+/* プライバシーポリシーリンク */
+.privacy-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.privacy-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.privacy-link:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.privacy-note {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dark-mode .privacy-note {
+  color: #aaa;
+}
+
 .reset-buttons {
   display: flex;
   gap: 10px;
