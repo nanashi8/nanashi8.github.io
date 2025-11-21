@@ -81,12 +81,17 @@ export function ErrorBadge() {
   const [errorCount, setErrorCount] = useState(0);
   const [showPanel, setShowPanel] = useState(false);
 
+  // 本番ではエラーバッジ/パネルを表示しない
+  if (import.meta.env.PROD) {
+    return null;
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       const errors = errorLogger.getRecentErrors();
       setErrorCount(errors.length);
-      // エラーが発生したら自動的にパネルを表示
-      if (errors.length > 0 && !showPanel) {
+      // 開発時のみ自動表示
+      if (import.meta.env.DEV && errors.length > 0 && !showPanel) {
         setShowPanel(true);
       }
     }, 1000);

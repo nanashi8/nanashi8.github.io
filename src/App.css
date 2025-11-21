@@ -2650,9 +2650,9 @@ option {
 .choice-btn {
   padding: 16px;
   font-size: max(16px, 1em);
-  border: 2px solid #ddd;
+  border: 2px solid #c0c0c0;
   border-radius: 10px;
-  background: white;
+  background: #fafafa;
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -2669,6 +2669,7 @@ option {
   user-select: none;
   /* スクロール位置固定 */
   scroll-margin-top: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .choice-content {
@@ -2683,6 +2684,8 @@ option {
   flex: 1;
   font-size: 1em;
   line-height: 1.4;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
 .toggle-details-btn-inline {

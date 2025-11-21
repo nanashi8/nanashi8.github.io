@@ -25,6 +25,21 @@ if (import.meta.env.PROD) {
     
     // エラーフィルタリング（不要なエラーを除外）
     beforeSend(event, hint) {
+      // Sentry接続テスト用の擬似エラーは無視
+      const msg = event.message || event.exception?.values?.[0]?.value || '';
+      if (msg.includes('Sentry接続テスト') || msg.includes('Sentryテスト') || msg.includes('🎯 Sentry')) {
+        return null;
+      }
+      // エラーログUI（ErrorLogPanel/ErrorBadge）に起因するエラーは無視
+      const frames = event.exception?.values?.[0]?.stacktrace?.frames || [];
+      if (Array.isArray(frames)) {
+        const uiError = frames.some((f: any) => {
+          const fn = `${f.function || ''}`;
+          const file = `${f.filename || ''}`;
+          return fn.includes('ErrorLogPanel') || fn.includes('ErrorBadge') || file.includes('ErrorLogPanel') || file.includes('ErrorBadge');
+        });
+        if (uiError) return null;
+      }
       // LocalStorageエラーは無視（よくある非クリティカルエラー）
       if (event.exception?.values?.[0]?.value?.includes('localStorage')) {
         return null;
