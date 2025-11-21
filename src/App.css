@@ -10942,7 +10942,7 @@ option {
 }
 
 .passage-content {
-  padding: 20px;
+  padding: 0;
   overflow-y: auto;
   flex: 1;
   background: #ffffff;
@@ -10951,7 +10951,7 @@ option {
 /* モバイル版でpassage-contentの余白を調整 */
 @media (max-width: 600px) {
   .passage-content {
-    padding: 8px;
+    padding: 0;
   }
   
   .passage-body {
