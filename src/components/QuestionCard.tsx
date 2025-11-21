@@ -391,10 +391,13 @@ function QuestionCard({
               <button
                 className={getButtonClass(choice.text)}
                 onClick={(e) => {
-                  // 回答済みの場合は何もしない（disabled属性でもブロックされる）
                   if (answered) {
+                    // 回答済みの場合は詳細をトグル
                     e.preventDefault();
                     e.stopPropagation();
+                    if (choiceQuestion) {
+                      toggleChoiceDetails(idx);
+                    }
                     return;
                   }
                   
@@ -403,22 +406,20 @@ function QuestionCard({
                     setAttemptCount(prev => prev + 1);
                   }
                   onAnswer(choice.text, question.meaning);
+                  
+                  // 回答後に自動的に詳細を表示
+                  if (choiceQuestion) {
+                    setTimeout(() => {
+                      setExpandedChoices(new Set([idx]));
+                    }, 100);
+                  }
                 }}
-                disabled={answered}
+                disabled={false}
               >
                 <div className="choice-content">
                   <div className="choice-text">{choice.text}</div>
                 </div>
               </button>
-              {answered && choiceQuestion && (
-                <button 
-                  className="toggle-details-btn"
-                  onClick={() => toggleChoiceDetails(idx)}
-                  title={isExpanded ? '詳細を閉じる' : '詳細を見る'}
-                >
-                  {isExpanded ? '▲ 詳細を閉じる' : '▼ 詳細を見る'}
-                </button>
-              )}
               {answered && choiceQuestion && isExpanded && (
                 <div className="choice-details">
                   <div className="choice-detail-item">
