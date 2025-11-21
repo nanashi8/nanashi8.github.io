@@ -48,7 +48,7 @@ const GamificationPanel: React.FC<GamificationPanelProps> = ({ onClose }) => {
             {stats.level.currentXP} / {stats.level.requiredXP} XP
           </div>
           <div className="xp-bar">
-            <div className="xp-fill" style={{ width: `${xpProgress}%` }} />
+            <div className="xp-fill" data-width={Math.round(xpProgress)} />
           </div>
           <div className="xp-next">
             次のレベルまで {stats.level.requiredXP - stats.level.currentXP} XP
@@ -127,9 +127,7 @@ const GamificationPanel: React.FC<GamificationPanelProps> = ({ onClose }) => {
                 <div className="milestone-progress-bar">
                   <div
                     className="milestone-progress-fill"
-                    style={{
-                      width: `${(nextMilestone.current / nextMilestone.target) * 100}%`,
-                    }}
+                    data-width={Math.round((nextMilestone.current / nextMilestone.target) * 100)}
                   />
                 </div>
                 <div className="milestone-progress-text">
@@ -215,9 +213,7 @@ const GamificationPanel: React.FC<GamificationPanelProps> = ({ onClose }) => {
                 <div className="milestone-progress-bar">
                   <div
                     className="milestone-progress-fill"
-                    style={{
-                      width: `${Math.min((milestone.current / milestone.target) * 100, 100)}%`,
-                    }}
+                    data-width={Math.min(Math.round((milestone.current / milestone.target) * 100), 100)}
                   />
                 </div>
                 <div className="milestone-progress-text">

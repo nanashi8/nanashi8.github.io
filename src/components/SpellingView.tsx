@@ -244,7 +244,7 @@ function SpellingView({
   };
 
   // 共通の答え合わせ処理
-  const processAnswer = (_userWord: string, isCorrect: boolean, currentQuestion: Question | null) => {
+  const processAnswer = async (_userWord: string, isCorrect: boolean, currentQuestion: Question | null) => {
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
 
@@ -253,7 +253,7 @@ function SpellingView({
       updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'spelling');
       
       // AI学習アシスタント: スキップした単語の検証
-      const progress = loadProgress();
+      const progress = await loadProgress();
       const wordProgress = progress.wordProgress?.[currentQuestion.word];
       
       // セッション履歴に追加

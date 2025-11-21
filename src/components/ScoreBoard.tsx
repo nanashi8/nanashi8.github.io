@@ -268,7 +268,7 @@ function ScoreBoard({
               {detailedStats.masteredPercentage > 0 && (
                 <div 
                   className="retention-segment retention-mastered"
-                  style={{ width: `${detailedStats.masteredPercentage}%` }}
+                  data-percentage={Math.round(detailedStats.masteredPercentage)}
                   title={`🟢 完全定着: ${detailedStats.masteredCount}語 (${detailedStats.masteredPercentage}%)`}
                 >
                   {detailedStats.masteredPercentage >= 10 && (
@@ -279,7 +279,7 @@ function ScoreBoard({
               {detailedStats.learningPercentage > 0 && (
                 <div 
                   className="retention-segment retention-learning"
-                  style={{ width: `${detailedStats.learningPercentage}%` }}
+                  data-percentage={Math.round(detailedStats.learningPercentage)}
                   title={`🟡 学習中: ${detailedStats.learningCount}語 (${detailedStats.learningPercentage}%)`}
                 >
                   {detailedStats.learningPercentage >= 10 && (
@@ -290,7 +290,7 @@ function ScoreBoard({
               {detailedStats.strugglingPercentage > 0 && (
                 <div 
                   className="retention-segment retention-struggling"
-                  style={{ width: `${detailedStats.strugglingPercentage}%` }}
+                  data-percentage={Math.round(detailedStats.strugglingPercentage)}
                   title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${detailedStats.strugglingPercentage}%)`}
                 >
                   {detailedStats.strugglingPercentage >= 10 && (

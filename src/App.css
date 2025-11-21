@@ -11229,3 +11229,340 @@ option {
 .dark-mode .error-prediction-warning .confidence-booster {
   color: #8b9ff6;
 }
+
+/* Dynamic width styles using data attributes */
+.xp-fill[data-width],
+.milestone-progress-fill[data-width] {
+  width: calc(var(--width, 0) * 1%);
+}
+
+.xp-fill[data-width="0"],
+.milestone-progress-fill[data-width="0"] { width: 0%; }
+.xp-fill[data-width="1"],
+.milestone-progress-fill[data-width="1"] { width: 1%; }
+.xp-fill[data-width="2"],
+.milestone-progress-fill[data-width="2"] { width: 2%; }
+.xp-fill[data-width="3"],
+.milestone-progress-fill[data-width="3"] { width: 3%; }
+.xp-fill[data-width="4"],
+.milestone-progress-fill[data-width="4"] { width: 4%; }
+.xp-fill[data-width="5"],
+.milestone-progress-fill[data-width="5"] { width: 5%; }
+.xp-fill[data-width="6"],
+.milestone-progress-fill[data-width="6"] { width: 6%; }
+.xp-fill[data-width="7"],
+.milestone-progress-fill[data-width="7"] { width: 7%; }
+.xp-fill[data-width="8"],
+.milestone-progress-fill[data-width="8"] { width: 8%; }
+.xp-fill[data-width="9"],
+.milestone-progress-fill[data-width="9"] { width: 9%; }
+.xp-fill[data-width="10"],
+.milestone-progress-fill[data-width="10"] { width: 10%; }
+.xp-fill[data-width="11"],
+.milestone-progress-fill[data-width="11"] { width: 11%; }
+.xp-fill[data-width="12"],
+.milestone-progress-fill[data-width="12"] { width: 12%; }
+.xp-fill[data-width="13"],
+.milestone-progress-fill[data-width="13"] { width: 13%; }
+.xp-fill[data-width="14"],
+.milestone-progress-fill[data-width="14"] { width: 14%; }
+.xp-fill[data-width="15"],
+.milestone-progress-fill[data-width="15"] { width: 15%; }
+.xp-fill[data-width="16"],
+.milestone-progress-fill[data-width="16"] { width: 16%; }
+.xp-fill[data-width="17"],
+.milestone-progress-fill[data-width="17"] { width: 17%; }
+.xp-fill[data-width="18"],
+.milestone-progress-fill[data-width="18"] { width: 18%; }
+.xp-fill[data-width="19"],
+.milestone-progress-fill[data-width="19"] { width: 19%; }
+.xp-fill[data-width="20"],
+.milestone-progress-fill[data-width="20"] { width: 20%; }
+.xp-fill[data-width="21"],
+.milestone-progress-fill[data-width="21"] { width: 21%; }
+.xp-fill[data-width="22"],
+.milestone-progress-fill[data-width="22"] { width: 22%; }
+.xp-fill[data-width="23"],
+.milestone-progress-fill[data-width="23"] { width: 23%; }
+.xp-fill[data-width="24"],
+.milestone-progress-fill[data-width="24"] { width: 24%; }
+.xp-fill[data-width="25"],
+.milestone-progress-fill[data-width="25"] { width: 25%; }
+.xp-fill[data-width="26"],
+.milestone-progress-fill[data-width="26"] { width: 26%; }
+.xp-fill[data-width="27"],
+.milestone-progress-fill[data-width="27"] { width: 27%; }
+.xp-fill[data-width="28"],
+.milestone-progress-fill[data-width="28"] { width: 28%; }
+.xp-fill[data-width="29"],
+.milestone-progress-fill[data-width="29"] { width: 29%; }
+.xp-fill[data-width="30"],
+.milestone-progress-fill[data-width="30"] { width: 30%; }
+.xp-fill[data-width="31"],
+.milestone-progress-fill[data-width="31"] { width: 31%; }
+.xp-fill[data-width="32"],
+.milestone-progress-fill[data-width="32"] { width: 32%; }
+.xp-fill[data-width="33"],
+.milestone-progress-fill[data-width="33"] { width: 33%; }
+.xp-fill[data-width="34"],
+.milestone-progress-fill[data-width="34"] { width: 34%; }
+.xp-fill[data-width="35"],
+.milestone-progress-fill[data-width="35"] { width: 35%; }
+.xp-fill[data-width="36"],
+.milestone-progress-fill[data-width="36"] { width: 36%; }
+.xp-fill[data-width="37"],
+.milestone-progress-fill[data-width="37"] { width: 37%; }
+.xp-fill[data-width="38"],
+.milestone-progress-fill[data-width="38"] { width: 38%; }
+.xp-fill[data-width="39"],
+.milestone-progress-fill[data-width="39"] { width: 39%; }
+.xp-fill[data-width="40"],
+.milestone-progress-fill[data-width="40"] { width: 40%; }
+.xp-fill[data-width="41"],
+.milestone-progress-fill[data-width="41"] { width: 41%; }
+.xp-fill[data-width="42"],
+.milestone-progress-fill[data-width="42"] { width: 42%; }
+.xp-fill[data-width="43"],
+.milestone-progress-fill[data-width="43"] { width: 43%; }
+.xp-fill[data-width="44"],
+.milestone-progress-fill[data-width="44"] { width: 44%; }
+.xp-fill[data-width="45"],
+.milestone-progress-fill[data-width="45"] { width: 45%; }
+.xp-fill[data-width="46"],
+.milestone-progress-fill[data-width="46"] { width: 46%; }
+.xp-fill[data-width="47"],
+.milestone-progress-fill[data-width="47"] { width: 47%; }
+.xp-fill[data-width="48"],
+.milestone-progress-fill[data-width="48"] { width: 48%; }
+.xp-fill[data-width="49"],
+.milestone-progress-fill[data-width="49"] { width: 49%; }
+.xp-fill[data-width="50"],
+.milestone-progress-fill[data-width="50"] { width: 50%; }
+.xp-fill[data-width="51"],
+.milestone-progress-fill[data-width="51"] { width: 51%; }
+.xp-fill[data-width="52"],
+.milestone-progress-fill[data-width="52"] { width: 52%; }
+.xp-fill[data-width="53"],
+.milestone-progress-fill[data-width="53"] { width: 53%; }
+.xp-fill[data-width="54"],
+.milestone-progress-fill[data-width="54"] { width: 54%; }
+.xp-fill[data-width="55"],
+.milestone-progress-fill[data-width="55"] { width: 55%; }
+.xp-fill[data-width="56"],
+.milestone-progress-fill[data-width="56"] { width: 56%; }
+.xp-fill[data-width="57"],
+.milestone-progress-fill[data-width="57"] { width: 57%; }
+.xp-fill[data-width="58"],
+.milestone-progress-fill[data-width="58"] { width: 58%; }
+.xp-fill[data-width="59"],
+.milestone-progress-fill[data-width="59"] { width: 59%; }
+.xp-fill[data-width="60"],
+.milestone-progress-fill[data-width="60"] { width: 60%; }
+.xp-fill[data-width="61"],
+.milestone-progress-fill[data-width="61"] { width: 61%; }
+.xp-fill[data-width="62"],
+.milestone-progress-fill[data-width="62"] { width: 62%; }
+.xp-fill[data-width="63"],
+.milestone-progress-fill[data-width="63"] { width: 63%; }
+.xp-fill[data-width="64"],
+.milestone-progress-fill[data-width="64"] { width: 64%; }
+.xp-fill[data-width="65"],
+.milestone-progress-fill[data-width="65"] { width: 65%; }
+.xp-fill[data-width="66"],
+.milestone-progress-fill[data-width="66"] { width: 66%; }
+.xp-fill[data-width="67"],
+.milestone-progress-fill[data-width="67"] { width: 67%; }
+.xp-fill[data-width="68"],
+.milestone-progress-fill[data-width="68"] { width: 68%; }
+.xp-fill[data-width="69"],
+.milestone-progress-fill[data-width="69"] { width: 69%; }
+.xp-fill[data-width="70"],
+.milestone-progress-fill[data-width="70"] { width: 70%; }
+.xp-fill[data-width="71"],
+.milestone-progress-fill[data-width="71"] { width: 71%; }
+.xp-fill[data-width="72"],
+.milestone-progress-fill[data-width="72"] { width: 72%; }
+.xp-fill[data-width="73"],
+.milestone-progress-fill[data-width="73"] { width: 73%; }
+.xp-fill[data-width="74"],
+.milestone-progress-fill[data-width="74"] { width: 74%; }
+.xp-fill[data-width="75"],
+.milestone-progress-fill[data-width="75"] { width: 75%; }
+.xp-fill[data-width="76"],
+.milestone-progress-fill[data-width="76"] { width: 76%; }
+.xp-fill[data-width="77"],
+.milestone-progress-fill[data-width="77"] { width: 77%; }
+.xp-fill[data-width="78"],
+.milestone-progress-fill[data-width="78"] { width: 78%; }
+.xp-fill[data-width="79"],
+.milestone-progress-fill[data-width="79"] { width: 79%; }
+.xp-fill[data-width="80"],
+.milestone-progress-fill[data-width="80"] { width: 80%; }
+.xp-fill[data-width="81"],
+.milestone-progress-fill[data-width="81"] { width: 81%; }
+.xp-fill[data-width="82"],
+.milestone-progress-fill[data-width="82"] { width: 82%; }
+.xp-fill[data-width="83"],
+.milestone-progress-fill[data-width="83"] { width: 83%; }
+.xp-fill[data-width="84"],
+.milestone-progress-fill[data-width="84"] { width: 84%; }
+.xp-fill[data-width="85"],
+.milestone-progress-fill[data-width="85"] { width: 85%; }
+.xp-fill[data-width="86"],
+.milestone-progress-fill[data-width="86"] { width: 86%; }
+.xp-fill[data-width="87"],
+.milestone-progress-fill[data-width="87"] { width: 87%; }
+.xp-fill[data-width="88"],
+.milestone-progress-fill[data-width="88"] { width: 88%; }
+.xp-fill[data-width="89"],
+.milestone-progress-fill[data-width="89"] { width: 89%; }
+.xp-fill[data-width="90"],
+.milestone-progress-fill[data-width="90"] { width: 90%; }
+.xp-fill[data-width="91"],
+.milestone-progress-fill[data-width="91"] { width: 91%; }
+.xp-fill[data-width="92"],
+.milestone-progress-fill[data-width="92"] { width: 92%; }
+.xp-fill[data-width="93"],
+.milestone-progress-fill[data-width="93"] { width: 93%; }
+.xp-fill[data-width="94"],
+.milestone-progress-fill[data-width="94"] { width: 94%; }
+.xp-fill[data-width="95"],
+.milestone-progress-fill[data-width="95"] { width: 95%; }
+.xp-fill[data-width="96"],
+.milestone-progress-fill[data-width="96"] { width: 96%; }
+.xp-fill[data-width="97"],
+.milestone-progress-fill[data-width="97"] { width: 97%; }
+.xp-fill[data-width="98"],
+.milestone-progress-fill[data-width="98"] { width: 98%; }
+.xp-fill[data-width="99"],
+.milestone-progress-fill[data-width="99"] { width: 99%; }
+.xp-fill[data-width="100"],
+.milestone-progress-fill[data-width="100"] { width: 100%; }
+
+/* ErrorLogPanel styles */
+.error-log-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 500px;
+  max-height: 400px;
+  background-color: #fff;
+  border: 2px solid #dc3545;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 10000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-log-header {
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-log-copy-btn {
+  background-color: white;
+  color: #dc3545;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.error-log-close-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.error-log-content {
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 13px;
+  font-family: monospace;
+  background-color: #f8f9fa;
+  flex: 1;
+}
+
+.error-log-item {
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: white;
+  border-left: 3px solid #dc3545;
+  border-radius: 4px;
+}
+
+.error-log-time {
+  color: #6c757d;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.error-log-message {
+  color: #212529;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.error-log-stack-details {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.error-log-stack-summary {
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.error-log-stack-pre {
+  margin-top: 4px;
+  padding: 8px;
+  background-color: #f1f3f5;
+  border-radius: 4px;
+  overflow: auto;
+  font-size: 10px;
+}
+
+.error-log-footer {
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  font-size: 11px;
+  color: #6c757d;
+  text-align: center;
+}
+
+.error-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-badge-count {
+  font-size: 12px;
+  font-weight: bold;
+}
