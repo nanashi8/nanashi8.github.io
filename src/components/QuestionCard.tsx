@@ -322,17 +322,17 @@ function QuestionCard({
       className="question-card"
       ref={cardRef}
     >
-      {/* エラー予測AI: 警告表示 */}
-      {errorPrediction && errorPrediction.suggestedSupport.showWarning && !answered && (
-        <div className={`error-prediction-warning ${errorPrediction.warningLevel}`}>
-          <div className="warning-icon">
+      {/* 統合コメント欄: エラー予測警告（回答前）またはAIコメント（回答後） */}
+      {!answered && errorPrediction && errorPrediction.suggestedSupport.showWarning && (
+        <div className={`unified-comment-bar warning ${errorPrediction.warningLevel}`}>
+          <div className="comment-icon">
             {errorPrediction.warningLevel === 'critical' ? '⚠️' :
              errorPrediction.warningLevel === 'high' ? '🔔' : '💡'}
           </div>
-          <div className="warning-content">
-            <div className="warning-message">{errorPrediction.suggestedSupport.warningMessage}</div>
+          <div className="comment-content">
+            <div className="comment-message">{errorPrediction.suggestedSupport.warningMessage}</div>
             {errorPrediction.suggestedSupport.hints.length > 0 && (
-              <div className="warning-hints">
+              <div className="comment-hints">
                 {errorPrediction.suggestedSupport.hints.map((hint, i) => (
                   <div key={i} className="hint">💡 {hint}</div>
                 ))}
@@ -344,6 +344,14 @@ function QuestionCard({
               </div>
             )}
           </div>
+        </div>
+      )}
+      
+      {/* AIコメント（回答後） */}
+      {answered && aiComment && (
+        <div className="unified-comment-bar feedback">
+          <span className="comment-icon">💬</span>
+          <span className="comment-message">{aiComment}</span>
         </div>
       )}
       
@@ -453,14 +461,6 @@ function QuestionCard({
           );
         })}
       </div>
-
-      {/* AIコメント行 - 選択肢の下に配置 */}
-      {answered && aiComment && (
-        <div className="ai-comment-bar">
-          <span className="ai-comment-icon">💬</span>
-          <span className="ai-comment-text">{aiComment}</span>
-        </div>
-      )}
 
       {answered && (
         <>

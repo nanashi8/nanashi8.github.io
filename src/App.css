@@ -10894,6 +10894,165 @@ option {
   background: rgba(255, 255, 255, 0.25);
 }
 
+/* ===== 統合コメント欄（警告・フィードバック共通） ===== */
+.unified-comment-bar {
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.unified-comment-bar .comment-icon {
+  font-size: 1.6em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.unified-comment-bar .comment-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.unified-comment-bar .comment-message {
+  font-weight: 600;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* 警告タイプ（回答前） */
+.unified-comment-bar.warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #fff 100%);
+  border: 2px solid #ffc107;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+  animation: warningPulse 2s ease-in-out infinite;
+}
+
+.unified-comment-bar.warning.medium {
+  background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+  border-color: #2196f3;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
+
+.unified-comment-bar.warning.high {
+  background: linear-gradient(135deg, #ffe0b2 0%, #fff 100%);
+  border-color: #ff9800;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+  animation: warningPulseHigh 2s ease-in-out infinite;
+}
+
+.unified-comment-bar.warning.critical {
+  background: linear-gradient(135deg, #ffebee 0%, #fff 100%);
+  border-color: #f44336;
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+  animation: warningPulseCritical 1.5s ease-in-out infinite;
+}
+
+/* フィードバックタイプ（回答後） */
+.unified-comment-bar.feedback {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
+  border: 2px solid #667eea;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.15);
+}
+
+.unified-comment-bar .comment-hints {
+  margin-top: 8px;
+}
+
+.unified-comment-bar .hint {
+  font-size: 0.85em;
+  color: #555;
+  margin: 4px 0;
+  padding-left: 4px;
+}
+
+.unified-comment-bar .confidence-booster {
+  margin-top: 8px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #667eea;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes warningPulse {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(255, 193, 7, 0.4);
+  }
+}
+
+@keyframes warningPulseHigh {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.5);
+  }
+}
+
+@keyframes warningPulseCritical {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(244, 67, 54, 0.6);
+  }
+}
+
+/* ダークモード対応 */
+.dark-mode .unified-comment-bar.warning {
+  background: linear-gradient(135deg, #4a4a2a 0%, #2a2a2a 100%);
+  border-color: #ffc107;
+}
+
+.dark-mode .unified-comment-bar.warning.medium {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2a2a2a 100%);
+  border-color: #2196f3;
+}
+
+.dark-mode .unified-comment-bar.warning.high {
+  background: linear-gradient(135deg, #5f3e1e 0%, #2a2a2a 100%);
+  border-color: #ff9800;
+}
+
+.dark-mode .unified-comment-bar.warning.critical {
+  background: linear-gradient(135deg, #5f1e1e 0%, #2a2a2a 100%);
+  border-color: #f44336;
+}
+
+.dark-mode .unified-comment-bar.feedback {
+  background: linear-gradient(135deg, #2a3555 0%, #2a2a2a 100%);
+  border-color: #667eea;
+}
+
+.dark-mode .unified-comment-bar .comment-message {
+  color: #e0e0e0;
+}
+
+.dark-mode .unified-comment-bar .hint {
+  color: #b0b0b0;
+}
+
+.dark-mode .unified-comment-bar .confidence-booster {
+  color: #8b9ff6;
+}
+
 /* エラー予測AI: 警告表示 */
 .error-prediction-warning {
   background: linear-gradient(135deg, #fff3cd 0%, #fff 100%);

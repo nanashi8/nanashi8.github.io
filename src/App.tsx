@@ -50,6 +50,12 @@ import {
   generateRecommendationMessage,
   getTimeOfDay as getTimeOfDayStyle
 } from './learningStyleAI';
+import {
+  processSessionEnd,
+  getMotivationalMessage,
+  loadGamificationStats,
+  Feedback as GamificationFeedback
+} from './gamificationAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -416,6 +422,10 @@ function App() {
 
   // クイズ開始ハンドラー
   const handleStartQuiz = async () => {
+    // ゲーミフィケーションAI: モチベーションメッセージ表示
+    const motivationMsg = getMotivationalMessage();
+    console.log('🎮 ゲーミフィケーション:', motivationMsg);
+
     // 学習設定を取得
     const studySettings = getStudySettings();
     
@@ -949,6 +959,27 @@ function App() {
           const message = generateRecommendationMessage(profile, currentTime);
           console.log('📊 学習スタイルAI:', message);
         }
+
+        // ゲーミフィケーションAI: セッション終了処理
+        const sessionDurationMinutes = (sessionEndTime - quizStartTimeRef.current) / (1000 * 60);
+        const gamificationResult = processSessionEnd(
+          prev.score,
+          prev.totalAnswered,
+          avgResponseTime,
+          sessionDurationMinutes,
+          sessionStats.correct + sessionStats.mastered,
+          currentFatigue
+        );
+
+        // フィードバックメッセージをログ出力
+        console.log('🎮 ゲーミフィケーション結果:');
+        console.log(`  獲得XP: ${gamificationResult.xpGained}`);
+        if (gamificationResult.leveledUp) {
+          console.log(`  🎉 レベルアップ! Lv.${gamificationResult.newLevel}`);
+        }
+        gamificationResult.feedback.forEach(fb => {
+          console.log(`  ${fb.icon} ${fb.message}`);
+        });
       }
       
       // 補修モードの場合、最後の問題に到達したら最初に戻る
