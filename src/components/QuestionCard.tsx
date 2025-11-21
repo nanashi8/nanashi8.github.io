@@ -140,8 +140,8 @@ function QuestionCard({
         }
       }
       
-      // 4. 忘却アラート（正解時、5%の確率で表示）
-      if (isCorrect && Math.random() < 0.05) {
+      // 4. 忘却アラート（不正解時のみ、10%の確率で表示）
+      if (!isCorrect && Math.random() < 0.1) {
         const alertMessage = getRandomAlertMessage();
         if (alertMessage) {
           additionalComments.push(alertMessage);
