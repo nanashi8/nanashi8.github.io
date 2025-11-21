@@ -3,7 +3,6 @@ import { ErrorPrediction } from '../errorPredictionAI';
 import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
-import { getRandomAlertMessage } from '../forgettingAlert';
 import { calculateGoalProgress } from '../goalSimulator';
 import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '../confusionPairs';
 import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
@@ -121,7 +120,7 @@ function QuestionCard({
         }
       }
       
-      // 2. 混同単語の警告（不正解時、混同ペアが存在する場合）
+      // 2. 混同単語の警告（不正解時のみ、混同ペアが存在する場合）
       if (!isCorrect) {
         const confusionPartners = getConfusionPartners(question.word);
         if (confusionPartners.length > 0) {
@@ -129,8 +128,8 @@ function QuestionCard({
         }
       }
       
-      // 3. 混同グループのアドバイス（正解時、5%の確率で表示）
-      if (isCorrect && Math.random() < 0.05) {
+      // 3. 混同グループのアドバイス（不正解時のみ、5%の確率で表示）
+      if (!isCorrect && Math.random() < 0.05) {
         const confusionGroups = analyzeConfusionPatterns();
         const relevantGroup = confusionGroups.find(g => 
           g.words.includes(question.word.toLowerCase()) && g.needsReview
@@ -140,33 +139,27 @@ function QuestionCard({
         }
       }
       
-      // 4. 忘却アラート（不正解時のみ、10%の確率で表示）
-      if (!isCorrect && Math.random() < 0.1) {
-        const alertMessage = getRandomAlertMessage();
-        if (alertMessage) {
-          additionalComments.push(alertMessage);
-        }
-      }
-      
-      // 5. 教師間のやりとり（10%の確率で表示）
+      // 4. 教師間のやりとり（正解・不正解両方で10%の確率で表示）
       const interaction = generateTeacherInteraction(personality, isCorrect, currentStreak);
       if (interaction) {
         additionalComments.push(interaction.message);
       }
       
-      // 6. 連続正解時の特別リアクション
-      const streakReaction = getTeacherReactionToStreak(currentStreak);
-      if (streakReaction) {
-        additionalComments.push(streakReaction);
+      // 5. 連続正解時の特別リアクション（正解時のみ、特定の連続数で発火）
+      if (isCorrect) {
+        const streakReaction = getTeacherReactionToStreak(currentStreak + 1); // 次の連続数で判定
+        if (streakReaction) {
+          additionalComments.push(streakReaction);
+        }
       }
       
-      // 7. 英語あるある・豆知識（8%の確率で表示）
+      // 6. 英語あるある・豆知識（正解・不正解両方で8%の確率で表示）
       const trivia = getRelevantMistakeTip(isCorrect);
       if (trivia) {
         additionalComments.push(trivia);
       }
       
-      // 連続正解数を更新
+      // 連続正解数を更新（リアクション取得後に更新）
       if (isCorrect) {
         const newStreak = currentStreak + 1;
         setCorrectStreak(newStreak);
