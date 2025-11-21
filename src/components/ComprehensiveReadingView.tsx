@@ -442,6 +442,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     if (passage) {
       setPhraseTranslations(new Array(passage.phrases?.length || 0).fill(false));
       setWordMeaningsVisible(new Array(passage.phrases?.length || 0).fill(false));
+      setCurrentPhraseIndex(0); // フレーズインデックスをリセット
+      setReadingStarted(false); // 読解状態をリセット
     }
   }, [passages]);
 
