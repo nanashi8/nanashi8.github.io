@@ -2,9 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { errorLogger, ErrorLog } from '../errorLogger';
-
-// Error logging is disabled - set to true to re-enable
-const ENABLE_ERROR_LOGGING = false;
+import { ENABLE_ERROR_LOGGING } from '../config/errorLogging';
 
 interface ErrorLogPanelProps {
   onClose: () => void;

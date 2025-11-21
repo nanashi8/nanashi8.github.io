@@ -1,6 +1,5 @@
 // エラーログ収集システム
-// Note: Error logging is currently disabled. Set ENABLE_ERROR_LOGGING to true to re-enable.
-const ENABLE_ERROR_LOGGING = false;
+import { ENABLE_ERROR_LOGGING } from './config/errorLogging';
 
 export interface ErrorLog {
   timestamp: number;
@@ -177,7 +176,6 @@ export const errorLogger = new ErrorLogger();
 export function initErrorLogger(): void {
   // Error logging is disabled - initialization is skipped
   if (!ENABLE_ERROR_LOGGING) {
-    console.log('🔍 Error logger is disabled');
     return;
   }
   
