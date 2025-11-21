@@ -9,9 +9,6 @@ import {
 } from './utils';
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
-import { 
-  calculateMemoryRetention 
-} from './adaptiveLearningAI';
 import {
   analyzeRadarChart,
   prioritizeWeakCategoryQuestions,
@@ -26,6 +23,13 @@ import {
   WordLearningHistory,
   LearningAttempt
 } from './learningCurveAI';
+import {
+  calculateCognitiveLoad,
+  adjustDifficultyByCognitiveLoad,
+  generateFatigueMessage,
+  CognitiveLoadMonitor,
+  SessionResponse
+} from './cognitiveLoadAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -157,9 +161,12 @@ function App() {
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
   
-  // 学習曲線 AI: セッション内の学習履歴を追跡
-  const learningHistoriesRef = useRef<Map<string, WordLearningHistory>>(new Map());
+  // 学習曲線 AI: セッション内の進捗を追跡
   const sessionQuestionIndexRef = useRef<number>(0);
+  
+  // 認知負荷 AI: セッション内の応答を追跡
+  const sessionResponsesRef = useRef<SessionResponse[]>([]);
+  const cognitiveLoadRef = useRef<CognitiveLoadMonitor | null>(null);
   
   // 言語学的関連性追跡用(最近学習した単語を記録)
   const recentlyStudiedWordsRef = useRef<string[]>([]);
@@ -533,8 +540,17 @@ function App() {
       // 定着転換戦略を適用（苦手な単語を戦略的に配置）
       const optimizedSequence = planConsolidationSequence(priorities, maxQuestions);
       
+      // 認知負荷AIで優先度を調整
+      const currentLoad = calculateCognitiveLoad(sessionResponsesRef.current, quizStartTimeRef.current);
+      cognitiveLoadRef.current = currentLoad;
+      
+      const adjustedSequence = adjustDifficultyByCognitiveLoad(
+        optimizedSequence,
+        currentLoad
+      );
+      
       // 優先度順に並べ替え
-      const wordToPriority = new Map(optimizedSequence.map(p => [p.word, p]));
+      const wordToPriority = new Map(adjustedSequence.map(p => [p.word, p]));
       filteredQuestions = filteredQuestions
         .filter(q => wordToPriority.has(q.word))
         .sort((a, b) => {
@@ -545,9 +561,15 @@ function App() {
         .slice(0, maxQuestions);
       
       console.log('🧠 学習曲線AI: 最適な出題順序を決定');
-      console.log('  出題戦略:', optimizedSequence.slice(0, 5).map(p => 
+      console.log('  出題戦略:', adjustedSequence.slice(0, 5).map(p => 
         `${p.word}(${p.strategy}, 成功率${p.estimatedSuccessRate.toFixed(0)}%)`
       ).join(', '));
+      
+      // 認知負荷メッセージを表示
+      if (currentLoad.fatigueLevel > 40) {
+        const message = generateFatigueMessage(currentLoad);
+        console.log(`⚡ 認知負荷: ${currentLoad.fatigueLevel.toFixed(0)}% - ${message}`);
+      }
     } else if (adaptiveMode && filteredQuestions.length > 0 && !reviewFocusMode) {
       // フォールバック: 従来の適応的学習
       filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(maxQuestions, filteredQuestions.length));
@@ -583,6 +605,10 @@ function App() {
     quizStartTimeRef.current = Date.now();
     questionStartTimeRef.current = Date.now();
     incorrectWordsRef.current = [];
+    
+    // 認知負荷AIのセッション応答をリセット
+    sessionResponsesRef.current = [];
+    cognitiveLoadRef.current = null;
   };
 
   // 要復習集中モード（補修モード）切り替えハンドラー
@@ -634,6 +660,34 @@ function App() {
     
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
+    
+    // 認知負荷AI: セッション応答を記録
+    if (currentQuestion) {
+      const progress = await loadProgress();
+      const wordProgress = progress.wordProgress?.[currentQuestion.word];
+      
+      // 問題の難易度を推定（成功率の逆数）
+      const successRate = wordProgress 
+        ? (wordProgress.correctCount / (wordProgress.correctCount + wordProgress.incorrectCount)) 
+        : 0.5;
+      const difficulty = 1 - successRate;
+      
+      sessionResponsesRef.current.push({
+        timestamp: Date.now(),
+        wasCorrect: isCorrect,
+        responseTime,
+        questionDifficulty: difficulty
+      });
+      
+      // 認知負荷を計算して更新
+      const currentLoad = calculateCognitiveLoad(sessionResponsesRef.current, quizStartTimeRef.current);
+      cognitiveLoadRef.current = currentLoad;
+      
+      // 休憩推奨をチェック
+      if (currentLoad.breakRecommendation?.shouldBreak) {
+        console.log(`💤 休憩推奨: ${currentLoad.breakRecommendation.reason}`);
+      }
+    }
     
     // 単語進捗を更新
     if (currentQuestion) {

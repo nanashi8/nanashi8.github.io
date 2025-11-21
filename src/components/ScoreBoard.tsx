@@ -186,7 +186,7 @@ function ScoreBoard({
 
       {/* タブナビゲーション: モバイル版（左右ボタンで切り替え） */}
       {isMobile && (
-        <div className="score-board-tabs-mobile">
+        <div className="score-tabs-mobile">
           <button 
             className="tab-nav-btn tab-nav-prev"
             onClick={handlePrevTab}
