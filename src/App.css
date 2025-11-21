@@ -10632,23 +10632,27 @@ option {
 /* 読解サブタブ（読解/全文/全訳） */
 .reading-sub-tabs {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 8px 16px;
   background: #f9fafb;
   border-bottom: 2px solid #e5e7eb;
+  flex-wrap: wrap;
 }
 
 .sub-tab-btn {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: none;
   background: transparent;
   color: #6b7280;
-  font-size: 0.95em;
+  font-size: 0.9em;
   font-weight: 600;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.2s;
   position: relative;
+  white-space: nowrap;
 }
 
 .sub-tab-btn:hover {
@@ -10670,6 +10674,44 @@ option {
   right: 0;
   height: 2px;
   background: #667eea;
+}
+
+/* サブタブ内の操作ボタン */
+.sub-tab-actions {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.sub-tab-actions .btn-compact {
+  padding: 6px 12px;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+  .reading-sub-tabs {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+
+  .sub-tab-btn {
+    padding: 6px 10px;
+    font-size: 0.85em;
+  }
+
+  .sub-tab-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .sub-tab-actions .btn-compact {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
 }
 
 /* 全文・全訳の段落スタイル */
