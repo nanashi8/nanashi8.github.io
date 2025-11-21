@@ -274,7 +274,7 @@ function extractConfusionPatterns(attempts: LearningAttempt[]): ConfusionPattern
  * 予測モデルを構築
  */
 function buildPredictionModel(
-  wordProgress: WordProgress,
+  _wordProgress: WordProgress,
   attempts: LearningAttempt[],
   learningCurve: LearningCurveData
 ): PredictionModel {
