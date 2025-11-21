@@ -1667,7 +1667,7 @@ option {
 
 .stat-text-value {
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .stat-text-value.correct {
@@ -1729,7 +1729,7 @@ option {
 
 .plan-progress-text {
   color: white;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: 600;
 }
 
@@ -1769,7 +1769,7 @@ option {
   justify-content: center;
   color: white;
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 0.95em;
   transition: all 0.3s ease;
   cursor: help;
 }
@@ -1832,10 +1832,10 @@ option {
 .goals-compact {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 4px 8px;
   align-items: center;
-  font-size: 0.95em;
-  line-height: 2;
+  font-size: 1em;
+  line-height: 1.5;
   justify-content: center;
 }
 
