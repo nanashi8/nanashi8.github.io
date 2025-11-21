@@ -1232,9 +1232,11 @@ option {
 .question-content-inline {
   flex: 1;
   min-width: 0;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
 }
 
 .inline-nav-btn {
