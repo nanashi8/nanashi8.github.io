@@ -4063,7 +4063,8 @@ option {
 .passage-title {
   text-align: center;
   color: #667eea;
-  margin: 0 0 12px 0;
+  margin: 0;
+  padding: 0;
   font-size: 1.3em;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -11017,15 +11018,18 @@ option {
 }
 
 .full-text-display {
-  margin: 20px 0;
-  padding: 22px;
+  margin: 0;
+  padding: 16px;
   background: #f5f7fa;
-  border-radius: 10px;
-  border: 1.5px solid #d0d5dd;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .full-text-display h3 {
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
+  padding: 0;
   color: #1a1f36;
   font-weight: 600;
 }
@@ -11037,16 +11041,19 @@ option {
 }
 
 .full-translation-display {
-  margin: 20px 0;
-  padding: 22px;
+  margin: 0;
+  padding: 16px;
   background: #e8f5e9;
-  border: 2px solid #4caf50;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.15);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .full-translation-display h3 {
-  margin: 0 0 15px 0;
+  margin: 0 0 12px 0;
+  padding: 0;
   color: #2e7d32;
 }
 
