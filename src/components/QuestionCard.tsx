@@ -406,13 +406,6 @@ function QuestionCard({
                     setAttemptCount(prev => prev + 1);
                   }
                   onAnswer(choice.text, question.meaning);
-                  
-                  // 回答後に自動的に詳細を表示
-                  if (choiceQuestion) {
-                    setTimeout(() => {
-                      setExpandedChoices(new Set([idx]));
-                    }, 100);
-                  }
                 }}
                 disabled={false}
               >
