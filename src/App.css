@@ -10506,43 +10506,52 @@ option {
   font-weight: 600;
 }
 
-/* 学習設定・読解開始ボタン（サブタブと同じデザイン） */
+/* 学習設定・読解開始ボタン（大きいボタン・縦並び） */
 .reading-action-buttons {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: #f9fafb;
-  border-bottom: 2px solid #e5e7eb;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
 }
 
 .btn-settings,
 .btn-start-reading {
-  padding: 8px 16px;
-  border: none;
-  background: transparent;
-  color: #6b7280;
-  font-size: 0.9em;
+  padding: 10px 30px;
+  font-size: max(16px, 1.1em);
   font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 6px;
   transition: all 0.2s;
-  position: relative;
   white-space: nowrap;
+  touch-action: manipulation;
+  min-height: 48px;
+  width: 100%;
 }
 
 .btn-settings:hover,
 .btn-start-reading:hover {
-  background: #e5e7eb;
-  color: #374151;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-settings:active,
+.btn-start-reading:active {
+  transform: scale(0.97);
+  transition: transform 0.1s;
+  background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
 }
 
 .btn-start-reading:disabled {
-  background: #f9fafb;
-  color: #9ca3af;
+  background: #d1d5db;
   cursor: not-allowed;
   opacity: 0.6;
+  transform: none;
+  box-shadow: none;
 }
 
 /* モーダルオーバーレイ */
@@ -10702,14 +10711,11 @@ option {
 
 /* モバイル対応 */
 @media (max-width: 600px) {
-  .reading-action-buttons,
   .reading-sub-tabs {
     padding: 6px 8px;
     gap: 4px;
   }
 
-  .btn-settings,
-  .btn-start-reading,
   .sub-tab-btn {
     padding: 6px 10px;
     font-size: 0.85em;
