@@ -6,6 +6,7 @@ import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
+import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -744,7 +745,20 @@ function SpellingView({
                         ? '⏭️ スキップ - 正解: '
                         : '❌ 不正解 - 正解: '
                     }
-                    <strong>{currentQuestion?.word || spellingState.correctWord}</strong>
+                    <strong 
+                      className={isSpeechSynthesisSupported() ? 'clickable-word' : ''}
+                      onClick={() => {
+                        if (isSpeechSynthesisSupported() && currentQuestion) {
+                          speakEnglish(currentQuestion.word, { rate: 0.85 });
+                        }
+                      }}
+                      title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : undefined}
+                    >
+                      {currentQuestion?.word || spellingState.correctWord}
+                      {isSpeechSynthesisSupported() && (
+                        <span className="speaker-icon">🔊</span>
+                      )}
+                    </strong>
                   </div>
                   
                   {/* 詳細情報の表示（常に表示） */}
