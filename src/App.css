@@ -10913,21 +10913,13 @@ option {
 .unified-comment-bar {
   border-radius: 12px;
   padding: 12px 16px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  display: block;
   animation: slideIn 0.3s ease-out;
-}
-
-.unified-comment-bar .comment-icon {
-  font-size: 1.6em;
-  line-height: 1;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .unified-comment-bar .comment-content {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
 }
 
 .unified-comment-bar .comment-message {

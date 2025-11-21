@@ -319,10 +319,6 @@ function QuestionCard({
       <div className="comment-bar-container">
         {!answered && errorPrediction && errorPrediction.suggestedSupport.showWarning && (
           <div className={`unified-comment-bar warning ${errorPrediction.warningLevel}`}>
-            <div className="comment-icon">
-              {errorPrediction.warningLevel === 'critical' ? '⚠️' :
-               errorPrediction.warningLevel === 'high' ? '🔔' : '💡'}
-            </div>
             <div className="comment-content">
               <div className="comment-message">{errorPrediction.suggestedSupport.warningMessage}</div>
               {errorPrediction.suggestedSupport.hints.length > 0 && (
@@ -344,7 +340,6 @@ function QuestionCard({
         {/* AIコメント（回答後） */}
         {answered && aiComment && (
           <div className="unified-comment-bar feedback">
-            <span className="comment-icon">💬</span>
             <span className="comment-message">{aiComment}</span>
           </div>
         )}
