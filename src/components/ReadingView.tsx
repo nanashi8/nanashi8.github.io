@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { ReadingPassage, Question } from '../types';
 import { saveQuestionSet, generateId } from '../utils';
+import { speakEnglish, stopSpeaking } from '../speechSynthesis';
 
 function ReadingView() {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
   const [phraseTranslations, setPhraseTranslations] = useState<boolean[]>([]);
   const [loading, setLoading] = useState(true);
+  const [speakingPhraseIndex, setSpeakingPhraseIndex] = useState<number | null>(null);
 
   // 初回読み込み: public/data/passages.json から読み込み
   useEffect(() => {
@@ -114,6 +116,36 @@ function ReadingView() {
     }
   };
 
+  // フレーズの音声再生
+  const handleSpeakPhrase = (phraseIndex: number) => {
+    if (!currentPassage) return;
+    
+    const phrase = currentPassage.phrases[phraseIndex];
+    const phraseText = phrase.segments.map(seg => seg.word).join(' ');
+    
+    // 既に再生中の場合は停止
+    if (speakingPhraseIndex === phraseIndex) {
+      stopSpeaking();
+      setSpeakingPhraseIndex(null);
+      return;
+    }
+    
+    // 新しいフレーズを再生
+    stopSpeaking();
+    setSpeakingPhraseIndex(phraseIndex);
+    
+    speakEnglish(phraseText, {
+      rate: 0.85,
+      pitch: 1.0,
+      volume: 1.0
+    });
+    
+    // 再生終了後にstateをリセット
+    setTimeout(() => {
+      setSpeakingPhraseIndex(null);
+    }, phraseText.split(' ').length * 600); // 概算の再生時間
+  };
+
   // リセット
   const handleReset = () => {
     if (currentPassage) {
@@ -190,6 +222,7 @@ function ReadingView() {
           {!phraseTranslations.some(shown => shown) && (
             <div className="passage-instructions">
               <p>💡 分からない単語をタップして赤くマークしてください</p>
+              <p className="hint-text">🔊 各フレーズの発音ボタンで英語を聞けます</p>
             </div>
           )}
 
@@ -197,6 +230,17 @@ function ReadingView() {
           <div className="phrase-lines">
             {currentPassage.phrases.map((phrase, phraseIdx) => (
               <div key={phraseIdx} className="phrase-line">
+                {/* フレーズ音声ボタン */}
+                <button
+                  className={`phrase-speaker-btn ${
+                    speakingPhraseIndex === phraseIdx ? 'speaking' : ''
+                  }`}
+                  onClick={() => handleSpeakPhrase(phraseIdx)}
+                  title="フレーズを読み上げ"
+                >
+                  🔊 {speakingPhraseIndex === phraseIdx ? '停止' : '発音'}
+                </button>
+                
                 {/* 英文の単語を横並びで表示 */}
                 <div className="phrase-words-row">
                   {phrase.segments.map((segment, segIdx) => (
