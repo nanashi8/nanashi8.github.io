@@ -14,6 +14,12 @@ class ErrorLogger {
   private originalConsoleError: typeof console.error;
   private originalConsoleWarn: typeof console.warn;
   private originalConsoleLog: typeof console.log;
+  private ignorePatterns = [
+    'Sentry接続テスト',
+    'Sentryテスト',
+    '🎯 Sentry',
+    'ResizeObserver'
+  ];
 
   constructor() {
     this.originalConsoleError = console.error.bind(console);
@@ -59,6 +65,18 @@ class ErrorLogger {
       return String(arg);
     }).join(' ');
 
+    // 除外パターンのメッセージは無視
+    if (this.ignorePatterns.some(p => message.includes(p))) {
+      return;
+    }
+
+    // エラーウィンドウ自身に起因するものは無視（スタック/引数にコンポーネント名が含まれる場合）
+    const stackStr = args.find(arg => arg instanceof Error)?.stack || '';
+    if ((stackStr && (stackStr.includes('ErrorLogPanel') || stackStr.includes('ErrorBadge'))) ||
+        message.includes('ErrorLogPanel') || message.includes('ErrorBadge')) {
+      return;
+    }
+
     const log: ErrorLog = {
       timestamp: Date.now(),
       message,
@@ -84,6 +102,8 @@ class ErrorLogger {
   // グローバルエラーをキャプチャ
   captureGlobalErrors(): void {
     window.addEventListener('error', (event) => {
+      const msg = `${event.message}`;
+      if (this.ignorePatterns.some(p => msg.includes(p))) return;
       this.addLog('error', [
         `Uncaught Error: ${event.message}`,
         `at ${event.filename}:${event.lineno}:${event.colno}`,
@@ -92,6 +112,8 @@ class ErrorLogger {
     });
 
     window.addEventListener('unhandledrejection', (event) => {
+      const reasonStr = `${(event as any).reason || ''}`;
+      if (this.ignorePatterns.some(p => reasonStr.includes(p))) return;
       this.addLog('error', [
         'Unhandled Promise Rejection:',
         event.reason
