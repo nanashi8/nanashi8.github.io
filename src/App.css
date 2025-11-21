@@ -10505,45 +10505,43 @@ option {
   font-weight: 600;
 }
 
-/* 学習設定・読解開始ボタン */
+/* 学習設定・読解開始ボタン（サブタブと同じデザイン） */
 .reading-action-buttons {
   display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+  flex-wrap: wrap;
 }
 
 .btn-settings,
 .btn-start-reading {
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 8px;
-  font-size: 1em;
+  background: transparent;
+  color: #6b7280;
+  font-size: 0.9em;
   font-weight: 600;
   cursor: pointer;
+  border-radius: 6px;
   transition: all 0.2s;
+  position: relative;
+  white-space: nowrap;
 }
 
-.btn-settings {
-  background: #667eea;
-  color: white;
-}
-
-.btn-settings:hover {
-  background: #5568d3;
-}
-
-.btn-start-reading {
-  background: #10b981;
-  color: white;
-}
-
+.btn-settings:hover,
 .btn-start-reading:hover {
-  background: #059669;
+  background: #e5e7eb;
+  color: #374151;
 }
 
 .btn-start-reading:disabled {
-  background: #d1d5db;
+  background: #f9fafb;
+  color: #9ca3af;
   cursor: not-allowed;
+  opacity: 0.6;
 }
 
 /* モーダルオーバーレイ */
@@ -10703,11 +10701,14 @@ option {
 
 /* モバイル対応 */
 @media (max-width: 600px) {
+  .reading-action-buttons,
   .reading-sub-tabs {
     padding: 6px 8px;
     gap: 4px;
   }
 
+  .btn-settings,
+  .btn-start-reading,
   .sub-tab-btn {
     padding: 6px 10px;
     font-size: 0.85em;
