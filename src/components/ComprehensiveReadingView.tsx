@@ -1131,18 +1131,33 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 {(() => {
                   let fullTranslation = '';
                   currentPassage.phrases.forEach((phrase, idx) => {
-                    const meaning = phrase.phraseMeaning || '';
+                    let meaning = phrase.phraseMeaning || '';
                     if (meaning) {
+                      // [要修正]を削除
+                      meaning = meaning.replace(/\[要修正\]/g, '').trim();
+                      
+                      // 空になった場合はスキップ
+                      if (!meaning) return;
+                      
                       // 既に句読点で終わっていない場合は追加
                       if (!/[。！？、]$/.test(meaning)) {
                         // 文の終わりっぽいフレーズには句点、それ以外は読点
-                        const isEndOfSentence = /[.!?]$/.test(
-                          phrase.segments
-                            .map(s => s.word)
-                            .join(' ')
-                            .trim()
-                        );
-                        fullTranslation += meaning + (isEndOfSentence ? '。' : '、');
+                        const phraseWords = phrase.segments
+                          .map(s => s.word)
+                          .join(' ')
+                          .trim();
+                        const isEndOfSentence = /[.!?]$/.test(phraseWords);
+                        
+                        // 次のフレーズがあるかチェック
+                        const hasNextPhrase = idx < currentPassage.phrases.length - 1;
+                        
+                        if (isEndOfSentence) {
+                          fullTranslation += meaning + '。';
+                        } else if (hasNextPhrase) {
+                          fullTranslation += meaning + '、';
+                        } else {
+                          fullTranslation += meaning + '。';
+                        }
                       } else {
                         fullTranslation += meaning;
                       }
