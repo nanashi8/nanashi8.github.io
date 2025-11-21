@@ -247,6 +247,7 @@ function QuizView({
             sessionMastered={sessionStats?.mastered}
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
+            onShowSettings={() => setShowSettings(true)}
           />
           <div className="question-container">
             {currentQuestion && (

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
@@ -32,6 +32,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
   const [showFullText, setShowFullText] = useState(false);
   const [showFullTranslation, setShowFullTranslation] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [readingStarted, setReadingStarted] = useState(false);
+  const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 
   // passagesが更新されたらLocalStorageに保存（エラーハンドリング追加）
   useEffect(() => {
@@ -318,10 +322,22 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       });
   }, [wordDictionary]); // 辞書が読み込まれたら再実行
 
-  const currentPassage = passages.find((p) => p.id === selectedPassageId);
+  // 現在のパッセージをメモ化
+  const currentPassage = useMemo(
+    () => passages.find((p) => p.id === selectedPassageId),
+    [passages, selectedPassageId]
+  );
 
-  // 原形変換を試みる関数（辞書検索用）
-  const getLemma = (word: string): string => {
+  // フィルタリングされたパッセージをメモ化
+  const filteredPassages = useMemo(
+    () => difficultyFilter === 'all' 
+      ? passages 
+      : passages.filter(p => p.difficulty === difficultyFilter),
+    [passages, difficultyFilter]
+  );
+
+  // 原形変換をメモ化（辞書が変わらない限りキャッシュ）
+  const getLemma = useCallback((word: string): string => {
     const normalized = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
     
     // まず元の形で検索（両方の辞書）
@@ -376,10 +392,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
     
     return normalized;
-  };
+  }, [wordDictionary, readingDictionary]);
 
-  // 単語の意味を辞書から取得
-  const getMeaning = (word: string, existingMeaning?: string): string => {
+  // 単語の意味を辞書から取得（メモ化）
+  const getMeaning = useCallback((word: string, existingMeaning?: string): string => {
     // existingMeaningがあり、'-'でない場合はそれを使用
     if (existingMeaning && existingMeaning.trim() && existingMeaning !== '-') {
       return existingMeaning;
@@ -402,25 +418,50 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     
     // どちらもない場合は空文字列を返す（句読点や辞書にない単語）
     return '';
-  };
+  }, [getLemma, wordDictionary, readingDictionary]);
 
-  // 難易度でフィルタリングされたパッセージ
-  const filteredPassages = difficultyFilter === 'all'
-    ? passages
-    : passages.filter(p => p.level === difficultyFilter);
-
-  // パッセージ選択
-  const handleSelectPassage = (passageId: string) => {
+  // パッセージ選択（メモ化）
+  const handleSelectPassage = useCallback((passageId: string) => {
     setSelectedPassageId(passageId);
     const passage = passages.find(p => p.id === passageId);
     if (passage) {
       setPhraseTranslations(new Array(passage.phrases?.length || 0).fill(false));
       setWordMeaningsVisible(new Array(passage.phrases?.length || 0).fill(false));
     }
+  }, [passages]);
+
+  // 学習設定モーダル
+  const handleOpenSettings = () => {
+    setShowSettingsModal(true);
   };
 
-  // フレーズ全体を発音する
-  const handlePhraseSpeak = (phraseIdx: number, event: React.MouseEvent) => {
+  const handleCloseSettings = () => {
+    setShowSettingsModal(false);
+  };
+
+  // 読解開始
+  const handleStartReading = () => {
+    if (!selectedPassageId) {
+      alert('パッセージを選択してください');
+      return;
+    }
+    setReadingStarted(true);
+    setCurrentPhraseIndex(0); // 最初のフレーズから開始
+  };
+
+  // フレーズナビゲーション
+  const handlePreviousPhrase = () => {
+    setCurrentPhraseIndex(prev => Math.max(0, prev - 1));
+  };
+
+  const handleNextPhrase = () => {
+    if (currentPassage && currentPassage.phrases) {
+      setCurrentPhraseIndex(prev => Math.min(currentPassage.phrases.length - 1, prev + 1));
+    }
+  };
+
+  // フレーズ全体を発音する（メモ化）
+  const handlePhraseSpeak = useCallback((phraseIdx: number, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
     
@@ -440,24 +481,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     setTimeout(() => {
       element.classList.remove('speaking');
     }, 600);
-  };
+  }, [currentPassage]);
 
   // 単語をクリックして辞書から意味を表示
-  const handleWordClick = (word: string, event: React.MouseEvent<HTMLElement>) => {
+  const handleWordDoubleClick = (word: string, event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     event.stopPropagation();
     
-    // 音声再生（ブラウザがサポートしている場合のみ）
-    if (isSpeechSynthesisSupported()) {
-      speakEnglish(word, { rate: 0.85 }); // 少しゆっくりめに発音
-      
-      // ビジュアルフィードバック
-      const element = event.currentTarget as HTMLElement;
-      element.classList.add('speaking');
-      setTimeout(() => {
-        element.classList.remove('speaking');
-      }, 600);
-    }
+    // 発音は削除（フレーズ全体の発音のみ）
     
     // 既存のポップアップを閉じる
     if (wordPopup && wordPopup.word === word) {
@@ -602,14 +633,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   };
 
-  // 全文を表示トグル
+  // 全文を表示トグル（サブタブ切り替えに変更）
   const handleToggleFullText = () => {
-    setShowFullText(prev => !prev);
+    setReadingSubTab(prev => prev === 'fullText' ? 'reading' : 'fullText');
   };
 
-  // 全訳を表示トグル
+  // 全訳を表示トグル（サブタブ切り替えに変更）
   const handleToggleFullTranslation = () => {
-    setShowFullTranslation(prev => !prev);
+    setReadingSubTab(prev => prev === 'fullTranslation' ? 'reading' : 'fullTranslation');
   };
 
   // 分からない単語を保存
@@ -620,16 +651,19 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     currentPassage.phrases.forEach(phrase => {
       phrase.segments.forEach(segment => {
         if (segment.isUnknown && segment.word.trim() !== '') {
-          unknownWords.push({
-            word: segment.word,
-            meaning: segment.meaning,
-          });
+          // 重複を避ける
+          if (!unknownWords.some(w => w.word.toLowerCase() === segment.word.toLowerCase())) {
+            unknownWords.push({
+              word: segment.word,
+              meaning: segment.meaning,
+            });
+          }
         }
       });
     });
 
     if (unknownWords.length === 0) {
-      alert('分からない単語が選択されていません。\n単語をクリックしてマークしてください。');
+      alert('分からない単語が選択されていません。\n単語をタップしてマークしてください。');
       return;
     }
 
@@ -637,7 +671,22 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       onSaveUnknownWords(unknownWords);
     }
 
-    alert(`${unknownWords.length}個の単語を保存しました！`);
+    // 保存後、マークをクリア
+    setPassages(prev =>
+      prev.map(passage =>
+        passage.id === currentPassage.id
+          ? {
+              ...passage,
+              phrases: passage.phrases.map(phrase => ({
+                ...phrase,
+                segments: phrase.segments.map(seg => ({ ...seg, isUnknown: false })),
+              })),
+            }
+          : passage
+      )
+    );
+
+    alert(`${unknownWords.length}個の単語を「${currentPassage.title}」から保存しました！`);
   };
 
   // リセット
@@ -678,7 +727,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     return (
       <div className="comprehensive-reading-view">
         <div className="reading-header">
-          <h2>📖 長文読解</h2>
           <div className="filter-controls">
             <label htmlFor="difficulty-filter">難易度: </label>
             <select 
@@ -688,9 +736,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               title="難易度を選択"
             >
               <option value="all">全て</option>
-              <option value="初級">初級 (500-800語)</option>
-              <option value="中級">中級 (800-3000語)</option>
-              <option value="上級">上級 (3000語)</option>
+              <option value="初級">初級 (80-100語)</option>
+              <option value="中級">中級 (120-150語)</option>
+              <option value="上級">上級 (180-200語)</option>
             </select>
           </div>
         </div>
@@ -710,73 +758,169 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     <div className="comprehensive-reading-view">
 
       <div className="reading-header">
-        <h2>📖 長文読解</h2>
         
-        {/* 難易度とパッセージを横並び */}
-        <div className="reading-selectors">
-          <div className="filter-controls">
-            <label htmlFor="difficulty-filter">難易度: </label>
-            <select 
-              id="difficulty-filter"
-              value={difficultyFilter} 
-              onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
-              title="難易度を選択"
-              className="compact-select"
-            >
-              <option value="all">全て</option>
-              <option value="初級">初級 (500-800語)</option>
-              <option value="中級">中級 (800-3000語)</option>
-              <option value="上級">上級 (3000語)</option>
-            </select>
-          </div>
-
-          <div className="passage-selector">
-            <label htmlFor="passage-select">パッセージ: </label>
-            <select 
-              id="passage-select"
-              value={selectedPassageId || ''} 
-              onChange={(e) => handleSelectPassage(e.target.value)}
-              title="パッセージを選択"
-              className="compact-select"
-            >
-              {filteredPassages.map(passage => (
-                <option key={passage.id} value={passage.id}>
-                  {passage.title} ({passage.level} - {passage.actualWordCount}語)
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* コンパクトな操作ボタン */}
-        <div className="action-buttons compact-buttons">
+        {/* 学習設定・読解開始ボタン */}
+        <div className="reading-action-buttons">
           <button 
-            onClick={handleToggleFullText}
-            className="btn-compact btn-info"
+            onClick={handleOpenSettings}
+            className="btn-settings"
           >
-            {showFullText ? '📄 全文非表示' : '📄 全文表示'}
+            ⚙️ 学習設定
           </button>
           <button 
-            onClick={handleToggleFullTranslation}
-            className="btn-compact btn-primary"
+            onClick={handleStartReading}
+            className="btn-start-reading"
+            disabled={!selectedPassageId}
           >
-            {showFullTranslation ? '📝 全訳非表示' : '📝 全訳表示'}
-          </button>
-          <button 
-            onClick={handleSaveUnknownWords}
-            className="btn-compact btn-success"
-            disabled={unknownCount === 0}
-          >
-            💾 保存 ({unknownCount})
-          </button>
-          <button 
-            onClick={handleReset}
-            className="btn-compact btn-secondary"
-          >
-            🔄 リセット
+            📖 読解開始
           </button>
         </div>
+
+        {/* 難易度とパッセージを横並び（学習設定モーダル内に移動予定） */}
+        {showSettingsModal && (
+          <>
+            <div className="modal-overlay" onClick={handleCloseSettings} />
+            <div className="settings-modal">
+              <div className="modal-header">
+                <h3>学習設定</h3>
+                <button onClick={handleCloseSettings} className="modal-close">✕</button>
+              </div>
+              <div className="modal-body">
+                <div className="reading-selectors">
+                  <div className="filter-controls">
+                    <label htmlFor="difficulty-filter">難易度: </label>
+                    <select 
+                      id="difficulty-filter"
+                      value={difficultyFilter} 
+                      onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
+                      title="難易度を選択"
+                      className="compact-select"
+                    >
+                      <option value="all">全て</option>
+                      <option value="初級">初級 (80-100語)</option>
+                      <option value="中級">中級 (120-150語)</option>
+                      <option value="上級">上級 (180-200語)</option>
+                    </select>
+                  </div>
+
+                  <div className="passage-selector">
+                    <label htmlFor="passage-select">パッセージ: </label>
+                    <select 
+                      id="passage-select"
+                      value={selectedPassageId || ''} 
+                      onChange={(e) => handleSelectPassage(e.target.value)}
+                      title="パッセージを選択"
+                      className="compact-select"
+                    >
+                      {filteredPassages.map(passage => (
+                        <option key={passage.id} value={passage.id}>
+                          {passage.title} ({passage.level} - {passage.actualWordCount}語)
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-footer">
+                <button onClick={handleCloseSettings} className="btn-confirm">確定</button>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* 読解開始後に表示されるコンテンツ */}
+        {readingStarted && (
+          <>
+            <div className="reading-selectors">
+              <div className="filter-controls">
+                <label htmlFor="difficulty-filter">難易度: </label>
+                <select 
+                  id="difficulty-filter"
+                  value={difficultyFilter} 
+                  onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
+                  title="難易度を選択"
+                  className="compact-select"
+                >
+                  <option value="all">全て</option>
+                  <option value="初級">初級 (80-100語)</option>
+                  <option value="中級">中級 (120-150語)</option>
+                  <option value="上級">上級 (180-200語)</option>
+                </select>
+              </div>
+
+              <div className="passage-selector">
+                <label htmlFor="passage-select">パッセージ: </label>
+                <select 
+                  id="passage-select"
+                  value={selectedPassageId || ''} 
+                  onChange={(e) => handleSelectPassage(e.target.value)}
+                  title="パッセージを選択"
+                  className="compact-select"
+                >
+                  {filteredPassages.map(passage => (
+                    <option key={passage.id} value={passage.id}>
+                      {passage.title} ({passage.level} - {passage.actualWordCount}語)
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* コンパクトな操作ボタン */}
+            <div className="action-buttons compact-buttons">
+              <button 
+                onClick={handleToggleFullText}
+                className="btn-compact btn-info"
+              >
+                {readingSubTab === 'fullText' ? '📄 全文非表示' : '📄 全文表示'}
+              </button>
+              <button 
+                onClick={handleToggleFullTranslation}
+                className="btn-compact btn-primary"
+              >
+                {readingSubTab === 'fullTranslation' ? '📝 全訳非表示' : '📝 全訳表示'}
+              </button>
+              <button 
+                onClick={handleSaveUnknownWords}
+                className="btn-compact btn-success"
+                disabled={unknownCount === 0}
+              >
+                💾 保存 ({unknownCount})
+              </button>
+              <button 
+                onClick={handleReset}
+                className="btn-compact btn-secondary"
+              >
+                🔄 リセット
+              </button>
+            </div>
+          </>
+        )}
       </div>
+
+      {/* 3タブ構造（読解開始後に表示） */}
+      {readingStarted && (
+        <div className="reading-sub-tabs">
+          <button
+            className={`sub-tab-btn ${readingSubTab === 'reading' ? 'active' : ''}`}
+            onClick={() => setReadingSubTab('reading')}
+          >
+            📖 読解
+          </button>
+          <button
+            className={`sub-tab-btn ${readingSubTab === 'fullText' ? 'active' : ''}`}
+            onClick={() => setReadingSubTab('fullText')}
+          >
+            📄 全文
+          </button>
+          <button
+            className={`sub-tab-btn ${readingSubTab === 'fullTranslation' ? 'active' : ''}`}
+            onClick={() => setReadingSubTab('fullTranslation')}
+          >
+            📝 全訳
+          </button>
+        </div>
+      )}
 
       {/* 単語ポップアップ */}
       {wordPopup && (
@@ -814,13 +958,41 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       )}
 
       {/* パッセージ本文 */}
-      {currentPassage && currentPassage.phrases && currentPassage.phrases.length > 0 && (
+      {readingStarted && currentPassage && currentPassage.phrases && currentPassage.phrases.length > 0 && (
         <div className="passage-content">
           <h3 className="passage-title">{currentPassage.title}</h3>
           
-          <div className="passage-body">
-            {currentPassage.phrases.map((phrase, phraseIdx) => (
-              <div key={phrase.id} className="phrase-block">
+          {/* 読解タブ: フレーズ単位で表示 */}
+          {readingSubTab === 'reading' && (
+          <>
+            {/* フレーズナビゲーション */}
+            <div className="phrase-navigation">
+              <button 
+                className="nav-btn prev-btn"
+                onClick={handlePreviousPhrase}
+                disabled={currentPhraseIndex === 0}
+              >
+                ← 前のフレーズ
+              </button>
+              <div className="phrase-counter">
+                {currentPhraseIndex + 1} / {currentPassage.phrases.length}
+              </div>
+              <button 
+                className="nav-btn next-btn"
+                onClick={handleNextPhrase}
+                disabled={currentPhraseIndex === currentPassage.phrases.length - 1}
+              >
+                次のフレーズ →
+              </button>
+            </div>
+
+            <div className="passage-body">
+            {currentPassage.phrases.map((phrase, phraseIdx) => {
+              // 現在のフレーズのみ表示
+              if (phraseIdx !== currentPhraseIndex) return null;
+              
+              return (
+              <div key={phrase.id} className={`phrase-block ${phraseIdx === currentPhraseIndex ? 'current-phrase' : ''}`}>
                 {/* フレーズ全体の発音ボタン */}
                 {isSpeechSynthesisSupported() && (
                   <button
@@ -848,37 +1020,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                           <div
                             key={`group-${groupIdx}`}
                             className={`word-card phrase-card ${group.isUnknown ? 'unknown' : ''}`}
-                            onClick={(e) => handleWordClick(phraseText, e)}
-                            onContextMenu={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              // フレーズ内の全セグメントのisUnknownをトグル
-                              const newValue = !group.isUnknown;
-                              const updated = currentPassage.phrases.map((p, pIdx) => {
-                                if (pIdx === phraseIdx) {
-                                  const newSegments = [...p.segments];
-                                  // このグループのセグメントを更新
-                                  let segmentOffset = 0;
-                                  for (let i = 0; i < groupIdx; i++) {
-                                    segmentOffset += groups[i].segments.length;
-                                  }
-                                  for (let i = 0; i < group.segments.length; i++) {
-                                    newSegments[segmentOffset + i] = {
-                                      ...newSegments[segmentOffset + i],
-                                      isUnknown: newValue
-                                    };
-                                  }
-                                  return { ...p, segments: newSegments };
-                                }
-                                return p;
-                              });
-                              setPassages(passages.map(passage =>
-                                passage.id === currentPassage.id
-                                  ? { ...passage, phrases: updated }
-                                  : passage
-                              ));
-                            }}
-                            title="タップ: 詳細表示 / 長押し: 分からない熟語としてマーク（再度長押しで解除）"
+                            onDoubleClick={(e) => handleWordDoubleClick(phraseText, e)}
+                            title="ダブルタップ: 詳細表示"
                           >
                             <div className="word-card-word phrase-word">
                               {phraseText}
@@ -919,12 +1062,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                           <div
                             key={`group-${groupIdx}`}
                             className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
-                            onClick={(e) => handleWordClick(segment.word, e)}
-                            onContextMenu={(e) => {
+                            onClick={(e) => {
                               e.preventDefault();
                               handleMarkUnknown(phraseIdx, segIdx, e);
                             }}
-                            title="タップ: 詳細表示 / 長押し: 分からない単語としてマーク（再度長押しで解除）"
+                            onDoubleClick={(e) => handleWordDoubleClick(segment.word, e)}
+                            title="タップ: 保存対象マーク / ダブルタップ: 詳細表示"
                           >
                             <div className="word-card-word">
                               {segment.word}
@@ -953,20 +1096,19 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   </button>
                 )}
               </div>
-            ))}
+            );
+            })}
           </div>
-        </div>
-      )}
+          </>
+          )}
 
-      {/* 全文表示エリア */}
-      {showFullText && currentPassage && (
-        <div className="full-text-display">
-          <h3>📄 全文</h3>
-          <div className="full-text-content">
-            {(() => {
-              // 単語を適切に結合（句読点の前のスペースを削除）
-              let fullText = '';
-              currentPassage.phrases.forEach((phrase, idx) => {
+          {/* 全文タブ: 英文のみを段落形式で表示 */}
+          {readingSubTab === 'fullText' && (
+            <div className="full-text-display">
+              <div className="full-text-content">
+                {(() => {
+                  let fullText = '';
+                  currentPassage.phrases.forEach((phrase, idx) => {
                 const words = phrase.words || phrase.segments?.map(s => s.word) || [];
                 words.forEach((word, wordIdx) => {
                   // 句読点の場合は前のスペースを入れない
@@ -1004,47 +1146,85 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             })()}
           </div>
         </div>
-      )}
+          )}
 
-      {/* 全訳表示エリア */}
-      {showFullTranslation && currentPassage && (
-        <div className="full-translation-display">
-          <h3>📝 全訳</h3>
-          <div className="full-translation-content">
-            {(() => {
-              // フレーズの意味を文章として結合
-              let fullTranslation = '';
-              currentPassage.phrases.forEach((phrase, idx) => {
-                const meaning = phrase.phraseMeaning || '';
-                if (meaning) {
-                  fullTranslation += meaning;
-                }
-              });
+          {/* 全文タブ: 英文のみを段落形式で表示 */}
+          {readingSubTab === 'fullText' && (
+            <div className="full-text-display">
+              <div className="full-text-content">
+                {(() => {
+                  let fullText = '';
+                  currentPassage.phrases.forEach(phrase => {
+                    phrase.segments.forEach(seg => {
+                      const word = seg.word.trim();
+                      if (word && word !== '-') {
+                        if (fullText.length > 0 && !fullText.endsWith(' ') && !/^[.,!?;:]$/.test(word)) {
+                          fullText += ' ';
+                        }
+                        fullText += word;
+                      }
+                    });
+                  });
 
-              // 句点で段落分割
-              const sentences = fullTranslation.split(/[。！？]/).filter(s => s.trim());
-              const paragraphs: string[] = [];
-              let currentParagraph = '';
-              
-              sentences.forEach((sentence, idx) => {
-                const trimmed = sentence.trim();
-                if (trimmed) {
-                  currentParagraph += trimmed + '。';
-                  // 約3-5文ごとに段落を分ける
-                  if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
-                    paragraphs.push(currentParagraph);
-                    currentParagraph = '';
-                  }
-                }
-              });
+                  const sentences = fullText.split(/\.\s+/).filter(s => s.trim());
+                  const paragraphs: string[] = [];
+                  let currentParagraph = '';
+                  
+                  sentences.forEach((sentence, idx) => {
+                    currentParagraph += sentence + '.';
+                    if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
+                      paragraphs.push(currentParagraph.trim());
+                      currentParagraph = '';
+                    }
+                  });
 
-              return paragraphs.map((para, idx) => (
-                <p key={idx} className="paragraph-ja">
-                  {para}
-                </p>
-              ));
-            })()}
-          </div>
+                  return paragraphs.map((para, idx) => (
+                    <p key={idx} className="paragraph-en">
+                      {para}
+                    </p>
+                  ));
+                })()}
+              </div>
+            </div>
+          )}
+
+          {/* 全訳タブ: 日本語訳のみを段落形式で表示 */}
+          {readingSubTab === 'fullTranslation' && (
+            <div className="full-translation-display">
+              <div className="full-translation-content">
+                {(() => {
+                  let fullTranslation = '';
+                  currentPassage.phrases.forEach((phrase) => {
+                    const meaning = phrase.phraseMeaning || '';
+                    if (meaning) {
+                      fullTranslation += meaning;
+                    }
+                  });
+
+                  const sentences = fullTranslation.split(/[。！？]/).filter(s => s.trim());
+                  const paragraphs: string[] = [];
+                  let currentParagraph = '';
+                  
+                  sentences.forEach((sentence, idx) => {
+                    const trimmed = sentence.trim();
+                    if (trimmed) {
+                      currentParagraph += trimmed + '。';
+                      if ((idx + 1) % 4 === 0 || idx === sentences.length - 1) {
+                        paragraphs.push(currentParagraph);
+                        currentParagraph = '';
+                      }
+                    }
+                  });
+
+                  return paragraphs.map((para, idx) => (
+                    <p key={idx} className="paragraph-ja">
+                      {para}
+                    </p>
+                  ));
+                })()}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
