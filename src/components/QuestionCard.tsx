@@ -7,6 +7,7 @@ import { calculateGoalProgress } from '../goalSimulator';
 import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '../confusionPairs';
 import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
 import { getRelevantMistakeTip } from '../englishTrivia';
+import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
 
 interface QuestionCardProps {
   question: Question;
@@ -355,8 +356,19 @@ function QuestionCard({
           ←
         </button>
         <div className="question-content-inline">
-          <div className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''}`}>
+          <div 
+            className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+            onClick={() => {
+              if (isSpeechSynthesisSupported()) {
+                speakEnglish(question.word, { rate: 0.85 });
+              }
+            }}
+            title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : question.word}
+          >
             {question.word}
+            {isSpeechSynthesisSupported() && (
+              <span className="speaker-icon">🔊</span>
+            )}
           </div>
           {question.reading && (
             <div className="question-reading">【{question.reading}】</div>
