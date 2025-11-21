@@ -13,7 +13,6 @@ import {
 import { calculateGoalProgress, generateGoalMessage } from '../goalSimulator';
 import { getAlertSummary } from '../forgettingAlert';
 import { useState, useEffect } from 'react';
-import GamificationPanel from './GamificationPanel';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading'; // クイズモードを追加
@@ -39,7 +38,7 @@ function ScoreBoard({
   isReviewFocusMode = false
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
-  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'breakdown' | 'goals' | 'history' | 'gamification'>('stats');
+  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'breakdown' | 'goals' | 'history'>('stats');
   const [statSubTab, setStatSubTab] = useState<'accuracy' | 'retention' | 'total'>('accuracy');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const historyLimit = isMobile ? 10 : 20;
@@ -142,7 +141,6 @@ function ScoreBoard({
       case 'breakdown': return '📈 学習状況';
       case 'goals': return '🎯 目標';
       case 'history': return '📜 履歴';
-      case 'gamification': return '🎮 実績';
     }
   };
 
@@ -183,12 +181,6 @@ function ScoreBoard({
               📜 履歴
             </button>
           )}
-          <button 
-            className={`score-tab ${activeTab === 'gamification' ? 'active' : ''}`}
-            onClick={() => setActiveTab('gamification')}
-          >
-            🎮 実績
-          </button>
         </div>
       )}
 
@@ -433,13 +425,6 @@ function ScoreBoard({
               )}
             </div>
           </div>
-        </div>
-      )}
-
-      {/* ゲーミフィケーションタブ */}
-      {activeTab === 'gamification' && (
-        <div className="score-board-content">
-          <GamificationPanel />
         </div>
       )}
     </div>
