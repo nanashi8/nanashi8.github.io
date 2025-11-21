@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist-beta
 *.local
 .env.production
 
@@ -29,6 +30,9 @@ dist-ssr
 *.old-vanilla
 *.working
 
+# Python scripts (data generation and analysis)
+*.py
+
 # Analysis and proofreading scripts
 analyze_*.py
 proofread_*.py
@@ -39,3 +43,14 @@ corrections_*.json
 # Planning and temporary files
 CHANGES_PLAN.js
 CHANGES_PLAN.ts
+temp_*.json
+missing_*.txt
+remaining_*.txt
+word_analysis.json
+etymology_enhancement_needed.json
+generation_log.txt
+test_*.md
+
+# Prototype and vocabulary lists
+prototype/
+vocabulary_lists/
