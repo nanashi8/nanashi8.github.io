@@ -149,6 +149,24 @@ function SettingsView({
           </div>
         </div>
 
+        {/* プライバシーポリシー */}
+        <div className="simple-setting-section">
+          <h3>📋 プライバシー</h3>
+          <div className="privacy-links">
+            <a 
+              href="/privacy.html" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="privacy-link"
+            >
+              📄 プライバシーポリシー
+            </a>
+            <p className="privacy-note">
+              本アプリは個人情報を収集せず、学習データはブラウザ内にのみ保存されます。
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   );

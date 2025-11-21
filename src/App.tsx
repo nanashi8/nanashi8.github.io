@@ -115,15 +115,6 @@ function App() {
   // 全問題データ（junior-high-entrance-words.csvから読み込み）
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
-  // 🎯 Sentry接続テスト（本番環境のみ・確認後に削除）
-  useEffect(() => {
-    if (import.meta.env.PROD) {
-      setTimeout(() => {
-        throw new Error("🎯 Sentry接続テスト - 正常に動作しています");
-      }, 3000);
-    }
-  }, []);
-
   // テスト用モジュール（開発環境のみ）
   useEffect(() => {
     // 開発環境かどうかをチェック（本番では無効化）
