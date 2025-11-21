@@ -828,46 +828,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </>
         )}
 
-        {/* 読解開始後に表示されるコンテンツ */}
-        {readingStarted && (
-          <>
-            <div className="reading-selectors">
-              <div className="filter-controls">
-                <label htmlFor="difficulty-filter">難易度: </label>
-                <select 
-                  id="difficulty-filter"
-                  value={difficultyFilter} 
-                  onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
-                  title="難易度を選択"
-                  className="compact-select"
-                >
-                  <option value="all">全て</option>
-                  <option value="初級">初級 (80-100語)</option>
-                  <option value="中級">中級 (120-150語)</option>
-                  <option value="上級">上級 (180-200語)</option>
-                </select>
-              </div>
-
-              <div className="passage-selector">
-                <label htmlFor="passage-select">パッセージ: </label>
-                <select 
-                  id="passage-select"
-                  value={selectedPassageId || ''} 
-                  onChange={(e) => handleSelectPassage(e.target.value)}
-                  title="パッセージを選択"
-                  className="compact-select"
-                >
-                  {filteredPassages.map(passage => (
-                    <option key={passage.id} value={passage.id}>
-                      {passage.title} ({passage.level} - {passage.actualWordCount}語)
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-          </>
-        )}
       </div>
 
       {/* 3タブ構造 + 操作ボタン（読解開始後に表示） */}
