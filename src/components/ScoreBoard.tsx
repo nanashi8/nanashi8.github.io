@@ -24,6 +24,7 @@ interface ScoreBoardProps {
   sessionMastered?: number; // セッション内の定着数
   onReviewFocus?: () => void; // 要復習タップ時のコールバック
   isReviewFocusMode?: boolean; // 補修モード中かどうか
+  onShowSettings?: () => void; // 学習設定を開くコールバック
 }
 
 function ScoreBoard({ 
@@ -35,7 +36,8 @@ function ScoreBoard({
   sessionReview = 0,
   sessionMastered = 0,
   onReviewFocus,
-  isReviewFocusMode = false
+  isReviewFocusMode = false,
+  onShowSettings
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
   const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'breakdown' | 'goals' | 'history'>('stats');
@@ -196,6 +198,15 @@ function ScoreBoard({
           </button>
           <div className="current-tab-name">
             {getTabName(activeTab)}
+            {onShowSettings && (
+              <button 
+                className="settings-icon-btn"
+                onClick={onShowSettings}
+                title="学習設定"
+              >
+                ⚙️
+              </button>
+            )}
           </div>
           <button 
             className="tab-nav-btn tab-nav-next"
@@ -257,6 +268,16 @@ function ScoreBoard({
               <strong className="stat-text-value">{totalAnsweredCount}問</strong>
             </span>
           </div>
+          {onShowSettings && (
+            <div className="settings-return-btn-wrapper">
+              <button 
+                className="settings-return-btn"
+                onClick={onShowSettings}
+              >
+                ⚙️ 学習設定に戻る
+              </button>
+            </div>
+          )}
         </div>
       )}
       

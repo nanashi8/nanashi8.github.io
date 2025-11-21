@@ -605,6 +605,7 @@ function SpellingView({
             sessionMastered={sessionStats.mastered}
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
+            onShowSettings={() => setShowSettings(true)}
           />
 
           {currentQuestion && (

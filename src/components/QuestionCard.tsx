@@ -76,6 +76,23 @@ function QuestionCard({
     });
   };
 
+  // 不正解時に正解の選択肢の詳細も開く
+  useEffect(() => {
+    if (answered && selectedAnswer && selectedAnswer !== question.meaning) {
+      // 正解の選択肢のインデックスを見つけて開く
+      const correctIndex = choicesWithQuestions.findIndex(
+        choice => choice.text === question.meaning
+      );
+      if (correctIndex !== -1) {
+        setExpandedChoices(prev => {
+          const newSet = new Set(prev);
+          newSet.add(correctIndex);
+          return newSet;
+        });
+      }
+    }
+  }, [answered, selectedAnswer, question.meaning, choicesWithQuestions]);
+
   // 回答時にAIコメントを生成
   useEffect(() => {
     if (answered && selectedAnswer) {
@@ -358,8 +375,10 @@ function QuestionCard({
         <div className="question-content-inline">
           <div 
             className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
-            onClick={() => {
+            onClick={(e) => {
               if (isSpeechSynthesisSupported()) {
+                e.preventDefault();
+                e.stopPropagation();
                 speakEnglish(question.word, { rate: 0.85 });
               }
             }}

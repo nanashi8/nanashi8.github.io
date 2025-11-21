@@ -28,11 +28,39 @@ export function speakEnglish(
   // 発話オブジェクトを作成
   const utterance = new SpeechSynthesisUtterance(text);
   
+  // localStorageから設定を読み込み
+  const savedRate = localStorage.getItem('speechRate');
+  const savedGender = localStorage.getItem('voiceGender');
+  
   // オプションを設定
   utterance.lang = options.lang || 'en-US';
-  utterance.rate = options.rate || 0.9; // 少しゆっくりめ
+  utterance.rate = options.rate || (savedRate ? parseFloat(savedRate) : 0.85);
   utterance.pitch = options.pitch || 1.0;
   utterance.volume = options.volume || 1.0;
+
+  // 声の種類を設定
+  if (savedGender && savedGender !== 'system') {
+    const voices = window.speechSynthesis.getVoices();
+    const englishVoices = voices.filter(voice => voice.lang.startsWith('en-'));
+    
+    if (savedGender === 'female') {
+      const femaleVoice = englishVoices.find(v => 
+        v.name.toLowerCase().includes('female') || 
+        v.name.toLowerCase().includes('woman') ||
+        v.name.toLowerCase().includes('zira') ||
+        v.name.toLowerCase().includes('samantha')
+      );
+      if (femaleVoice) utterance.voice = femaleVoice;
+    } else if (savedGender === 'male') {
+      const maleVoice = englishVoices.find(v => 
+        v.name.toLowerCase().includes('male') || 
+        v.name.toLowerCase().includes('man') ||
+        v.name.toLowerCase().includes('david') ||
+        v.name.toLowerCase().includes('alex')
+      );
+      if (maleVoice) utterance.voice = maleVoice;
+    }
+  }
 
   // エラーハンドリング
   utterance.onerror = (event) => {

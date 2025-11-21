@@ -36,6 +36,29 @@ function SettingsView({
     localStorage.setItem('aiPersonality', personality);
   };
 
+  // 音声設定の読み込み
+  const [voiceGender, setVoiceGender] = useState<'female' | 'male' | 'system'>(() => {
+    const saved = localStorage.getItem('voiceGender');
+    return (saved === 'female' || saved === 'male' || saved === 'system') ? saved : 'system';
+  });
+
+  const [speechRate, setSpeechRate] = useState<number>(() => {
+    const saved = localStorage.getItem('speechRate');
+    return saved ? parseFloat(saved) : 0.85;
+  });
+
+  // 音声性別変更時にlocalStorageに保存
+  const handleVoiceGenderChange = (gender: 'female' | 'male' | 'system') => {
+    setVoiceGender(gender);
+    localStorage.setItem('voiceGender', gender);
+  };
+
+  // 発音速度変更時にlocalStorageに保存
+  const handleSpeechRateChange = (rate: number) => {
+    setSpeechRate(rate);
+    localStorage.setItem('speechRate', rate.toString());
+  };
+
   // ダークモードの読み込み
   const [darkMode, setDarkMode] = useState<'light' | 'dark' | 'system'>(() => {
     const saved = localStorage.getItem('darkMode');
@@ -146,6 +169,64 @@ function SettingsView({
             {darkMode === 'system' && '💡 デバイスの設定に自動的に合わせます'}
             {darkMode === 'light' && '☀️ 明るい表示モード'}
             {darkMode === 'dark' && '🌙 目に優しい暗い表示モード'}
+          </div>
+        </div>
+
+        {/* 音声設定 */}
+        <div className="simple-setting-section">
+          <h3>🔊 音声設定</h3>
+          
+          {/* 声の種類 */}
+          <div className="voice-setting-group">
+            <h4>🎤 声の種類</h4>
+            <div className="theme-toggle-grid">
+              <button
+                className={`theme-btn ${voiceGender === 'female' ? 'active' : ''}`}
+                onClick={() => handleVoiceGenderChange('female')}
+              >
+                <div className="theme-icon">👩</div>
+                <div className="theme-label">女性</div>
+              </button>
+              <button
+                className={`theme-btn ${voiceGender === 'male' ? 'active' : ''}`}
+                onClick={() => handleVoiceGenderChange('male')}
+              >
+                <div className="theme-icon">👨</div>
+                <div className="theme-label">男性</div>
+              </button>
+              <button
+                className={`theme-btn ${voiceGender === 'system' ? 'active' : ''}`}
+                onClick={() => handleVoiceGenderChange('system')}
+              >
+                <div className="theme-icon">💻</div>
+                <div className="theme-label">自動</div>
+              </button>
+            </div>
+          </div>
+
+          {/* 発音速度 */}
+          <div className="voice-setting-group">
+            <h4>⏱️ 発音速度</h4>
+            <div className="speech-rate-slider">
+              <input
+                type="range"
+                min="0.5"
+                max="1.5"
+                step="0.05"
+                value={speechRate}
+                onChange={(e) => handleSpeechRateChange(parseFloat(e.target.value))}
+                className="slider"
+                aria-label="発音速度"
+              />
+              <div className="slider-labels">
+                <span>遅い (0.5x)</span>
+                <span className="current-rate">{speechRate.toFixed(2)}x</span>
+                <span>速い (1.5x)</span>
+              </div>
+            </div>
+            <div className="theme-description">
+              💡 {speechRate < 0.8 ? 'ゆっくりと発音します' : speechRate > 1.1 ? '速めに発音します' : '標準的な速度で発音します'}
+            </div>
           </div>
         </div>
 

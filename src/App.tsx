@@ -1096,7 +1096,7 @@ function App() {
           className={`tab-btn ${activeTab === 'reading' ? 'active' : ''}`}
           onClick={() => setActiveTab('reading')}
         >
-          長文読解
+          長文
         </button>
         <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
@@ -1158,7 +1158,14 @@ function App() {
           <ComprehensiveReadingView 
             onSaveUnknownWords={(words) => {
               // 分からない単語を問題集として保存
-              const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, '長文から抽出した単語');
+              if (words.length === 0) return;
+              
+              // デフォルトの問題集名を生成（日時付き）
+              const now = new Date();
+              const dateStr = `${now.getMonth() + 1}/${now.getDate()}`;
+              const defaultName = `長文単語集 (${dateStr})`;
+              
+              const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, defaultName);
               if (setName) {
                 const newSet: QuestionSet = {
                   id: generateId(),
@@ -1179,6 +1186,7 @@ function App() {
                 const updatedSets = [...questionSets, newSet];
                 setQuestionSets(updatedSets);
                 saveQuestionSets(updatedSets);
+                alert(`問題集「${setName}」を保存しました！\n和訳・スペルタブで利用できます。`);
               }
             }}
           />
