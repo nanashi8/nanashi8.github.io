@@ -10,8 +10,6 @@ import {
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import { 
-  generateSpacedRepetitionSchedule, 
-  SpacedRepetitionSchedule,
   calculateMemoryRetention 
 } from './adaptiveLearningAI';
 import {
@@ -21,6 +19,13 @@ import {
   updateImprovementProgress,
   getImprovementProgress
 } from './radarChartAI';
+import {
+  analyzeLearningHistory,
+  calculateQuestionPriorities,
+  planConsolidationSequence,
+  WordLearningHistory,
+  LearningAttempt
+} from './learningCurveAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -152,9 +157,9 @@ function App() {
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
   const incorrectWordsRef = useRef<string[]>([]);
   
-  // 間隔反復スケジューラー用
-  const recentAnswersRef = useRef<Array<{ word: string; wasCorrect: boolean; timestamp: number }>>([]);
-  const spacedRepetitionScheduleRef = useRef<SpacedRepetitionSchedule[]>([]);
+  // 学習曲線 AI: セッション内の学習履歴を追跡
+  const learningHistoriesRef = useRef<Map<string, WordLearningHistory>>(new Map());
+  const sessionQuestionIndexRef = useRef<number>(0);
   
   // 言語学的関連性追跡用(最近学習した単語を記録)
   const recentlyStudiedWordsRef = useRef<string[]>([]);
@@ -378,7 +383,7 @@ function App() {
   };
 
   // クイズ開始ハンドラー
-  const handleStartQuiz = () => {
+  const handleStartQuiz = async () => {
     // 学習設定を取得
     const studySettings = getStudySettings();
     
@@ -490,8 +495,61 @@ function App() {
     // 要復習集中モードの場合は上限を適用しない
     const maxQuestions = reviewFocusMode ? filteredQuestions.length : studySettings.maxStudyCount;
     
-    // 適応的学習モードが有効な場合、出題順を最適化
-    if (adaptiveMode && filteredQuestions.length > 0 && !reviewFocusMode) {
+    // 学習曲線AI: 最適な出題順序を決定
+    if (!reviewFocusMode && filteredQuestions.length > 0) {
+      const progress = await loadProgress();
+      
+      // 学習履歴を構築
+      const learningHistories = new Map<string, WordLearningHistory>();
+      filteredQuestions.forEach(q => {
+        const wp = progress.wordProgress[q.word];
+        if (wp && wp.learningHistory && wp.learningHistory.length > 0) {
+          // LearningAttempt形式に変換
+          const attempts: LearningAttempt[] = wp.learningHistory.map(h => ({
+            timestamp: h.timestamp,
+            wasCorrect: h.wasCorrect,
+            responseTime: h.responseTime,
+            userAnswer: h.userAnswer,
+            confidenceLevel: h.responseTime < 2000 ? 'instant' : h.responseTime < 5000 ? 'hesitant' : 'guessed',
+            sessionContext: {
+              questionIndex: h.sessionIndex || 0,
+              previousQuestions: [],
+              sessionFatigue: 0
+            }
+          }));
+          
+          const history = analyzeLearningHistory(q.word, wp, attempts);
+          learningHistories.set(q.word, history);
+        }
+      });
+      
+      // 学習曲線AIで優先度を計算
+      const priorities = calculateQuestionPriorities(
+        filteredQuestions,
+        progress.wordProgress,
+        learningHistories
+      );
+      
+      // 定着転換戦略を適用（苦手な単語を戦略的に配置）
+      const optimizedSequence = planConsolidationSequence(priorities, maxQuestions);
+      
+      // 優先度順に並べ替え
+      const wordToPriority = new Map(optimizedSequence.map(p => [p.word, p]));
+      filteredQuestions = filteredQuestions
+        .filter(q => wordToPriority.has(q.word))
+        .sort((a, b) => {
+          const priorityA = wordToPriority.get(a.word)!.priority;
+          const priorityB = wordToPriority.get(b.word)!.priority;
+          return priorityB - priorityA;
+        })
+        .slice(0, maxQuestions);
+      
+      console.log('🧠 学習曲線AI: 最適な出題順序を決定');
+      console.log('  出題戦略:', optimizedSequence.slice(0, 5).map(p => 
+        `${p.word}(${p.strategy}, 成功率${p.estimatedSuccessRate.toFixed(0)}%)`
+      ).join(', '));
+    } else if (adaptiveMode && filteredQuestions.length > 0 && !reviewFocusMode) {
+      // フォールバック: 従来の適応的学習
       filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(maxQuestions, filteredQuestions.length));
     } else if (!reviewFocusMode) {
       // 通常モードでも学習数上限を適用
@@ -616,35 +674,11 @@ function App() {
         recentlyStudiedWordsRef.current = recentlyStudiedWordsRef.current.slice(-10);
       }
       
-      // 間隔反復スケジューラー: 回答履歴を記録
-      recentAnswersRef.current.push({
-        word: currentQuestion.word,
-        wasCorrect: isCorrect,
-        timestamp: Date.now()
-      });
-      
-      // 最新20件のみ保持（メモリ節約）
-      if (recentAnswersRef.current.length > 20) {
-        recentAnswersRef.current = recentAnswersRef.current.slice(-20);
-      }
-      
-      // スケジュールを生成
-      const currentProgress = await loadProgress();
-      spacedRepetitionScheduleRef.current = generateSpacedRepetitionSchedule(
-        recentAnswersRef.current,
-        currentProgress.wordProgress,
-        quizState.currentIndex,
-        quizState.questions.length
-      );
-      
-      // AI学習メッセージ（デバッグ用）
-      if (spacedRepetitionScheduleRef.current.length > 0) {
-        const latestSchedule = spacedRepetitionScheduleRef.current[spacedRepetitionScheduleRef.current.length - 1];
-        const retention = calculateMemoryRetention(currentQuestion.word, currentProgress.wordProgress?.[currentQuestion.word]);
-        console.log(`🧠 AI学習: ${currentQuestion.word} - 定着度${retention.retentionScore.toFixed(1)}% - ${latestSchedule.reason} (${latestSchedule.nextQuestionIndex - quizState.currentIndex}問後に再出題)`);
-      }
+      // 学習曲線 AI: 試行記録を追加（progressStorageで自動記録される）
+      sessionQuestionIndexRef.current++;
       
       // AI学習アシスタント: スキップした単語の検証
+      const currentProgress = await loadProgress();
       const skipWordProgress = currentProgress.wordProgress?.[currentQuestion.word];
       
       if (skipWordProgress && skipWordProgress.skippedCount && skipWordProgress.skippedCount > 0) {

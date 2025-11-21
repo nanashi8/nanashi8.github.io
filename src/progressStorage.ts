@@ -230,6 +230,15 @@ export interface WordProgress {
   spellingAttempts?: number; // スペルモードの試行回数
   spellingCorrect?: number; // スペルモードの正解回数
   spellingStreak?: number; // スペルモードの連続正解数
+  
+  // 学習曲線AI用の詳細履歴
+  learningHistory?: Array<{
+    timestamp: number;
+    wasCorrect: boolean;
+    responseTime: number;
+    userAnswer?: string;
+    sessionIndex?: number;
+  }>;
 }
 
 export interface UserProgress {
@@ -1207,6 +1216,22 @@ export async function updateWordProgress(
   
   // 最終学習日時を更新
   wordProgress.lastStudied = Date.now();
+  
+  // 学習履歴を記録（学習曲線AI用）最新20件を保持
+  if (!wordProgress.learningHistory) {
+    wordProgress.learningHistory = [];
+  }
+  wordProgress.learningHistory.push({
+    timestamp: Date.now(),
+    wasCorrect: isCorrect,
+    responseTime,
+    sessionIndex: 0 // App.tsxから渡すようにする
+  });
+  
+  // 最新20件のみ保持（容量削減）
+  if (wordProgress.learningHistory.length > 20) {
+    wordProgress.learningHistory = wordProgress.learningHistory.slice(-20);
+  }
   
   // 難易度スコアを再計算
   wordProgress.difficultyScore = calculateDifficultyScore(wordProgress);
