@@ -32,15 +32,12 @@ import {
 } from './cognitiveLoadAI';
 import {
   analyzeErrorPatterns,
-  predictErrorRisk,
   batchPredictErrors,
   ErrorPrediction,
   ErrorAnalysis
 } from './errorPredictionAI';
 import {
-  generateContextualSequence,
-  getRelatedWordsForReview,
-  ContextualSequence
+  generateContextualSequence
 } from './contextualLearningAI';
 import {
   recordSessionStats,
@@ -52,9 +49,7 @@ import {
 } from './learningStyleAI';
 import {
   processSessionEnd,
-  getMotivationalMessage,
-  loadGamificationStats,
-  Feedback as GamificationFeedback
+  getMotivationalMessage
 } from './gamificationAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';

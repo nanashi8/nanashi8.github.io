@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 import {
   loadGamificationStats,
   GamificationStats,
-  Badge,
-  Milestone,
-  XP_PER_LEVEL,
   getNextMilestone,
   getBadgeCompletionRate,
   BADGE_DEFINITIONS,
