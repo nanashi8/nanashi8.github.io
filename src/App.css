@@ -7115,6 +7115,14 @@ option {
   background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
 }
 
+.start-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
 @media (max-width: 600px) {
   .quiz-filter-section {
     flex-direction: column;
@@ -10509,49 +10517,11 @@ option {
 /* 学習設定・読解開始ボタン（大きいボタン・縦並び） */
 .reading-action-buttons {
   display: flex;
-  flex-direction: column;
   gap: 10px;
   padding: 10px;
   margin-bottom: 15px;
   justify-content: center;
-}
-
-.btn-settings,
-.btn-start-reading {
-  padding: 10px 30px;
-  font-size: max(16px, 1.1em);
-  font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-  touch-action: manipulation;
-  min-height: 48px;
-  width: 100%;
-}
-
-.btn-settings:hover,
-.btn-start-reading:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
-
-.btn-settings:active,
-.btn-start-reading:active {
-  transform: scale(0.97);
-  transition: transform 0.1s;
-  background: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
-}
-
-.btn-start-reading:disabled {
-  background: #d1d5db;
-  cursor: not-allowed;
-  opacity: 0.6;
-  transform: none;
-  box-shadow: none;
+  flex-wrap: wrap;
 }
 
 /* モーダルオーバーレイ */
