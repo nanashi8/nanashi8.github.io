@@ -10522,6 +10522,16 @@ option {
   max-width: 100%;
 }
 
+/* 和訳タブ・スペルタブの学習設定・クイズ開始ボタンサイズ（長文タブと統一） */
+.quiz-view .quiz-controls .settings-toggle-btn,
+.quiz-view .quiz-controls .start-btn,
+.spelling-view .quiz-controls .settings-toggle-btn,
+.spelling-view .quiz-controls .start-btn {
+  width: 495px;
+  height: 48px;
+  max-width: 100%;
+}
+
 /* モーダルオーバーレイ */
 .modal-overlay {
   position: fixed;
