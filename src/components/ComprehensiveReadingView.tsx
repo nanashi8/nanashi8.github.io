@@ -344,12 +344,23 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   );
 
   // フィルタリングされたパッセージをメモ化
-  const filteredPassages = useMemo(
-    () => difficultyFilter === 'all' 
+  const filteredPassages = useMemo(() => {
+    const filtered = difficultyFilter === 'all' 
       ? passages 
-      : passages.filter(p => p.level === difficultyFilter),
-    [passages, difficultyFilter]
-  );
+      : passages.filter(p => p.level === difficultyFilter);
+    
+    // 難易度順（初級→中級→上級）、語数順（少ない→多い）でソート
+    const levelOrder = { '初級': 1, '中級': 2, '上級': 3 };
+    return filtered.sort((a, b) => {
+      // まず難易度で比較
+      const levelA = levelOrder[a.level as keyof typeof levelOrder] || 999;
+      const levelB = levelOrder[b.level as keyof typeof levelOrder] || 999;
+      if (levelA !== levelB) return levelA - levelB;
+      
+      // 難易度が同じ場合は語数で比較
+      return (a.actualWordCount || 0) - (b.actualWordCount || 0);
+    });
+  }, [passages, difficultyFilter]);
 
   // 原形変換をメモ化（辞書が変わらない限りキャッシュ）
   const getLemma = useCallback((word: string): string => {
