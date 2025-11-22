@@ -61,169 +61,179 @@ const ENGLISH_COMMON_MISTAKES: EnglishTrivia[] = [
   }
 ];
 
-// 英語の面白い豆知識
+// 受験に役立つ英語知識
 const ENGLISH_FUN_FACTS: EnglishTrivia[] = [
   {
     type: 'fun-fact',
-    message: '🧙「"queue"という単語は5文字だが、最後の4文字を取っても発音は同じ"Q"なのじゃ。不思議じゃのう。」',
+    message: '🧙「接頭辞"re-"は「再び」の意味じゃ。return（戻る）、review（復習）、repeat（繰り返す）など、覚えやすいぞ。」',
     teacher: 'wise-sage'
   },
   {
     type: 'fun-fact',
-    message: '🤖「英語で最も長い単語は"pneumonoultramicroscopicsilicovolcanoconiosis"（45文字）。肺の病気の名称です。」',
+    message: '🤖「長文読解のコツ：最初と最後の段落、各段落の最初の文を読めば全体の流れがつかめます。」',
     teacher: 'analyst'
   },
   {
     type: 'fun-fact',
-    message: '😃「"bookkeeper"は、連続する同じ文字が3組もある珍しい単語なんですよ（oo, kk, ee）！」',
+    message: '😃「"however"（しかし）、"therefore"（したがって）、"moreover"（さらに）などの接続詞を覚えると、論理展開が見えやすくなりますよ！」',
     teacher: 'kind-teacher'
   },
   {
     type: 'fun-fact',
-    message: '😼「"set"は英語で最も意味の多い単語だ！動詞だけで430以上の意味があるぞ！すごいだろ！」',
+    message: '😼「接尾辞"-tion"をつけると動詞が名詞になるぞ！educate→education、communicate→communicationだ！」',
     teacher: 'enthusiastic-coach'
   },
   {
     type: 'fun-fact',
-    message: '🧙「"goodbye"の語源は"God be with you"なのじゃ。時を経て短くなったのじゃな。」',
+    message: '🧙「"compare A with B"（AとBを比較する）と"compare A to B"（AをBに例える）は意味が違うぞ。試験でよく出る。」',
     teacher: 'wise-sage'
   },
   {
     type: 'fun-fact',
-    message: '🤖「"rhythm"は母音がyしかない最長の英単語です。統計的に珍しいパターンです。」',
+    message: '🤖「同義語を増やすと表現力が上がります。important=significant=crucial、show=demonstrate=illustrate など。」',
     teacher: 'analyst'
   },
   {
     type: 'fun-fact',
-    message: '😃「"uncopyrightable"は、同じ文字を2回使わない最長の英単語（15文字）なんですよ！」',
+    message: '😃「接頭辞"un-"、"in-"、"dis-"は否定の意味。unhappy、impossible、disagreeなど、パターンで覚えましょう！」',
     teacher: 'kind-teacher'
   },
   {
     type: 'fun-fact',
-    message: '😈「"terrific"と"terrible"は語源が同じだが、意味は正反対だ！言葉は面白いものだな！」',
+    message: '😈「"not only A but also B"（AだけでなくBも）は頻出構文だ！セットで覚えろ！」',
     teacher: 'drill-sergeant'
   },
   {
     type: 'fun-fact',
-    message: '🧙「"month"には完全な韻を踏む単語が存在せぬ。"orange"、"silver"、"purple"も同様じゃ。」',
+    message: '🧙「"although"と"though"はほぼ同じ意味（〜だけれども）じゃが、thoughの方がカジュアルじゃな。」',
     teacher: 'wise-sage'
   },
   {
     type: 'fun-fact',
-    message: '😼「"I am"は英語で2番目に短い完全な文だ！1番短いのは"Go"だぞ！」',
+    message: '😼「接尾辞"-able"は「〜できる」の意味だ！readable（読める）、comfortable（快適な）って感じだぞ！」',
     teacher: 'enthusiastic-coach'
   }
 ];
 
-// 発音に関する豆知識
+// 受験に役立つ発音・読解知識
 const PRONUNCIATION_TIPS: EnglishTrivia[] = [
   {
     type: 'pronunciation',
-    message: '😃「"L"と"R"の発音の違い、難しいですよね。Lは舌先を上の歯の裏に、Rは舌をどこにも付けずに！」',
+    message: '😃「アクセント問題対策！2音節の名詞は最初にアクセント（PRESent）、動詞は後（preSENT）が多いですよ。」',
     teacher: 'kind-teacher'
   },
   {
     type: 'pronunciation',
-    message: '😈「"th"の発音！舌を噛め！"think"を"シンク"と言うな！正しく発音しろ！」',
+    message: '😈「同じスペルでも品詞で発音が変わる！record（名詞：レコード、動詞：記録する）に注意しろ！」',
     teacher: 'drill-sergeant'
   },
   {
     type: 'pronunciation',
-    message: '🤖「"schedule"はアメリカ英語では"スケジュール"、イギリス英語では"シェジュール"。地域差があります。」',
+    message: '🤖「黙字（silent letter）に注意。knife（k）、doubt（b）、receipt（p）など、つづりと発音の不一致があります。」',
     teacher: 'analyst'
   },
   {
     type: 'pronunciation',
-    message: '🧙「"salmon"の"l"、"Wednesday"の最初の"d"は発音せぬぞ。黙字じゃ。」',
+    message: '🧙「"-ed"の発音は3パターンじゃ。/t/（walked）、/d/（played）、/id/（wanted）。前の音で決まるぞ。」',
     teacher: 'wise-sage'
   },
   {
     type: 'pronunciation',
-    message: '😼「"water"のtはアメリカ英語だと"ワラー"みたいになるぞ！RとDの中間みたいな音だ！」',
+    message: '😼「複数形"-s"の発音も3パターンだ！/s/（cats）、/z/（dogs）、/iz/（buses）を区別しよう！」',
     teacher: 'enthusiastic-coach'
   },
   {
     type: 'pronunciation',
-    message: '😃「"comfortable"は3音節で"カムフタブル"。"コンフォータブル"じゃないですよ！」',
+    message: '😃「強勢の位置で意味が変わる語に注意！PHOtograph（写真）→phoTOgraphy（写真術）→photoGRAphic（写真の）」',
     teacher: 'kind-teacher'
   },
   {
     type: 'pronunciation',
-    message: '🤖「"colonel"は"kernel"と同じ発音です。スペルと発音の不一致の典型例です。」',
+    message: '🤖「リエゾン（音の連結）を知ると聞き取りが楽に。"an apple"は"アン・アップル"でなく"アナップル"です。」',
     teacher: 'analyst'
   }
 ];
 
-// 文化に関する豆知識
+// 受験に役立つ文化知識
 const CULTURAL_TIPS: EnglishTrivia[] = [
   {
     type: 'cultural',
-    message: '😃「"How are you?"と聞かれたら、本当に調子が悪くても"I\'m fine"と答えるのが普通ですよ。挨拶みたいなものです。」',
+    message: '😃「英文エッセイは結論を最初に書くのが基本。Introduction→Body→Conclusionの3部構成ですよ。」',
     teacher: 'kind-teacher'
   },
   {
     type: 'cultural',
-    message: '🧙「アメリカでは"thank you"と言われたら"You\'re welcome"じゃが、イギリスでは"No worries"もよく使うのじゃ。」',
+    message: '🧙「英語の論理展開は"主張→理由→具体例"が基本じゃ。For example, For instance を使いこなそう。」',
     teacher: 'wise-sage'
   },
   {
     type: 'cultural',
-    message: '🤖「"see you later"は実際に後で会う予定がなくても使います。別れの挨拶として機能します。」',
+    message: '🤖「学術的な文章では、contractions（短縮形）は使いません。don\'t→do not、it\'s→it is と書きます。」',
     teacher: 'analyst'
   },
   {
     type: 'cultural',
-    message: '😼「アメリカ人は"awesome"を超頻繁に使うぞ！ちょっと良いことでも"That\'s awesome!"だ！」',
+    message: '😼「意見を述べる表現！I think, In my opinion, From my perspective など、バリエーションを増やそう！」',
     teacher: 'enthusiastic-coach'
   },
   {
     type: 'cultural',
-    message: '😃「レストランで"I\'m good"と言うと「大丈夫です（要りません）」という意味になりますよ。」',
+    message: '😃「理由を述べる時は"because"だけじゃなく、"since"、"as"、"due to"なども使えますよ。」',
     teacher: 'kind-teacher'
   },
   {
     type: 'cultural',
-    message: '😈「"sorry"を連発するのは日本人の癖だ！必要ない時まで謝るな！堂々としろ！」',
+    message: '😈「受動態を使いこなせ！"The experiment was conducted"など、客観的な表現に必要だ！」',
     teacher: 'drill-sergeant'
   },
   {
     type: 'cultural',
-    message: '🧙「"bless you"はくしゃみをした人に言う言葉じゃ。中世の疫病の名残りじゃな。」',
+    message: '🧙「対比の表現："on the other hand"（一方で）、"in contrast"（対照的に）は論述問題で重宝するぞ。」',
     teacher: 'wise-sage'
   }
 ];
 
-// 語源に関する豆知識
+// 受験に役立つ語源知識
 const ETYMOLOGY_TIPS: EnglishTrivia[] = [
   {
     type: 'etymology',
-    message: '🧙「"breakfast"は"break"（破る）と"fast"（断食）からできた言葉じゃ。夜の断食を破る食事じゃな。」',
+    message: '🧙「"pre-"は「前」の意味じゃ。preview（予習・試写）、predict（予測する）、prepare（準備する）と覚えよう。」',
     teacher: 'wise-sage'
   },
   {
     type: 'etymology',
-    message: '🤖「"salary"の語源はラテン語の"salarium"（塩のお金）。ローマ兵士が塩で給料を受け取っていたことに由来します。」',
+    message: '🤖「"post-"は「後」。postpone（延期する）、postwar（戦後の）など。pre-とセットで覚えると効率的です。」',
     teacher: 'analyst'
   },
   {
     type: 'etymology',
-    message: '😃「"butterfly"の語源は諸説ありますが、バターのような黄色い蝶に由来するという説が有力ですよ。」',
+    message: '😃「"tele-"はギリシャ語で「遠い」という意味。telephone（電話）、television（テレビ）、telescope（望遠鏡）ですよ！」',
     teacher: 'kind-teacher'
   },
   {
     type: 'etymology',
-    message: '🧙「"quarantine"（隔離）は、イタリア語の"quaranta"（40）が語源じゃ。疫病の船を40日間隔離したことからじゃ。」',
+    message: '🧙「"bi-"は「2つ」の意味じゃ。bicycle（二輪車）、bilingual（2言語話せる）、biweekly（隔週の）じゃな。」',
     teacher: 'wise-sage'
   },
   {
     type: 'etymology',
-    message: '😼「"OK"の語源は諸説あるが、"oll korrect"（all correctのふざけたスペル）説が有力だぞ！」',
+    message: '😼「"auto-"は「自動・自己」だ！automatic（自動の）、autobiography（自伝）って感じだぞ！」',
     teacher: 'enthusiastic-coach'
   },
   {
     type: 'etymology',
-    message: '🤖「"robot"はチェコ語の"robota"（強制労働）が語源。1920年の戯曲で初めて使われました。」',
+    message: '🤖「"micro-"は「小さい」、"macro-"は「大きい」。microscope（顕微鏡）、macroeconomics（マクロ経済学）です。」',
     teacher: 'analyst'
+  },
+  {
+    type: 'etymology',
+    message: '😃「"sub-"は「下」の意味。subway（地下鉄）、submarine（潜水艦）、subtitle（字幕）ですよ！」',
+    teacher: 'kind-teacher'
+  },
+  {
+    type: 'etymology',
+    message: '🧙「"super-"は「上・超」じゃ。superior（優れた）、supernatural（超自然的な）、supervise（監督する）じゃな。」',
+    teacher: 'wise-sage'
   }
 ];
 
@@ -310,19 +320,19 @@ export function getRelevantMistakeTip(isCorrect: boolean): string | null {
   }
 }
 
-// 学習中の息抜き豆知識
+// 学習中の息抜き知識（受験に役立つ内容）
 export function getBreatherTrivia(): string {
   const breathers = [
-    '😃💡 ちょっと息抜き！"bookworm"は「本の虫」＝読書好きな人のことですよ。',
-    '😼💡 豆知識！"piece of cake"は「簡単なこと」という意味だぞ！ケーキ食べるように簡単ってことだ！',
-    '🧙💡 知っておるか？"It\'s raining cats and dogs"は土砂降りという意味じゃ。',
-    '🤖💡 データ：英語には17万語以上の単語が存在します。でも日常会話は3000語程度で十分です。',
-    '😈💡 覚えておけ！"break a leg"は「頑張って」という意味だ！足を折れって意味じゃないぞ！',
-    '😃💡 "couch potato"は「カウチポテト」＝テレビばかり見てゴロゴロしている人のことです。',
-    '🧙💡 "once in a blue moon"は「めったにない」という意味じゃ。青い月は滅多に見えぬからのう。',
-    '😼💡 "hit the books"は「勉強する」って意味だ！本を叩くんじゃないぞ！',
-    '🤖💡 興味深い事実："alphabet"はギリシャ文字の最初の2文字"alpha"と"beta"に由来します。',
-    '😃💡 "butterflies in my stomach"は緊張してドキドキする様子を表現する言葉ですよ。'
+    '😃💡 受験テク！同じ単語の繰り返しを避けるため、代名詞（it, they, this）や同義語に注目すると読解が楽になりますよ。',
+    '😼💡 覚え方！動詞+前置詞の熟語は、イメージで覚えるといいぞ！look up（上を見る→調べる）、give up（上げる→諦める）だ！',
+    '🧙💡 長文のコツ：設問を先に読んでから本文を読むと、何を探せばいいか分かって効率的じゃ。',
+    '🤖💡 統計データ：英検準2級レベルは約3,600語、2級は約5,100語が目安です。計画的に語彙を増やしましょう。',
+    '😈💡 時制の一致！主節が過去形なら従属節も過去形だ！"He said that he was tired"だぞ！',
+    '😃💡 整序問題のコツ！まず主語と動詞を見つけて、修飾語を後から付け足すと解きやすいですよ。',
+    '🧙💡 冠詞の使い分け："a/an"は初めて出る・特定できないもの、"the"は既出・特定できるものじゃ。',
+    '😼💡 リスニング対策！消去法が有効だ！明らかに違う選択肢を消していくと正解率が上がるぞ！',
+    '🤖💡 効率的学習法：単語は文脈の中で覚えると定着率が3倍以上高まります。例文ごと覚えましょう。',
+    '😃💡 比較表現："as...as"（同等）、"-er than"（比較級）、"the -est"（最上級）の3パターンをマスターしましょう！'
   ];
   
   return breathers[Math.floor(Math.random() * breathers.length)];

@@ -1,0 +1,23 @@
+=== Vocabulary Coverage Report ===
+Sources: BASE:2662
+Total vocab entries (expanded tokens): 2662
+
+[Per Passage]
+  - advanced-1.txt: tokens=590 match=550 coverage=20.66%
+  - advanced-2.txt: tokens=588 match=547 coverage=20.55%
+  - advanced-3.txt: tokens=46 match=27 coverage=1.01%
+  - beginner-1.txt: tokens=293 match=265 coverage=9.95%
+  - beginner-2.txt: tokens=309 match=275 coverage=10.33%
+  - beginner-3.txt: tokens=309 match=277 coverage=10.41%
+  - intermediate-1.txt: tokens=470 match=430 coverage=16.15%
+  - intermediate-2.txt: tokens=479 match=443 coverage=16.64%
+  - intermediate-3.txt: tokens=421 match=385 coverage=14.46%
+  - intermediate-4.txt: tokens=312 match=270 coverage=10.14%
+
+Total used vocab tokens: 2660
+Total unused vocab tokens: 2
+Overall coverage: 99.92%
+
+[Top 200 Unused Tokens]
+  affection​ate
+  o'clock

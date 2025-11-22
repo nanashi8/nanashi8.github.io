@@ -442,7 +442,7 @@
         "?",
         "\""
       ],
-      "phraseMeaning": "手伝ってくれる?",
+      "phraseMeaning": "手伝ってくれる",
       "segments": [
         {
           "word": "Can",
@@ -1442,7 +1442,7 @@
         "us",
         "."
       ],
-      "phraseMeaning": "でも私たちのために時間を作ってくれます",
+      "phraseMeaning": "しかし彼はまだ私たちのために時間を作ります",
       "segments": [
         {
           "word": "But",
@@ -1497,7 +1497,7 @@
         "that",
         "."
       ],
-      "phraseMeaning": "私はそれがとてもうれしいです",
+      "phraseMeaning": "私はそのことをうれしく思います",
       "segments": [
         {
           "word": "I",
@@ -1694,7 +1694,7 @@
         "great",
         "."
       ],
-      "phraseMeaning": "とてもおいしかったです",
+      "phraseMeaning": "それらは素晴らしい味でした",
       "segments": [
         {
           "word": "They",
@@ -1883,7 +1883,7 @@
         "moment",
         "."
       ],
-      "phraseMeaning": "楽しい瞬間でした",
+      "phraseMeaning": "それは面白い瞬間でした",
       "segments": [
         {
           "word": "It",
@@ -2210,7 +2210,7 @@
         "happy",
         "."
       ],
-      "phraseMeaning": "でも私たちは幸せでした",
+      "phraseMeaning": "しかし私たちは幸せでもありました",
       "segments": [
         {
           "word": "But",
@@ -2673,7 +2673,7 @@
         "exciting",
         "."
       ],
-      "phraseMeaning": "その映画はとてもワクワクしました",
+      "phraseMeaning": "その映画はワクワクするものでした",
       "segments": [
         {
           "word": "The",
@@ -2909,7 +2909,7 @@
         "said",
         "."
       ],
-      "phraseMeaning": "私たちはあなたと一緒に過ごす時間が大好きよ、と彼女は言いました",
+      "phraseMeaning": "私たちはあなたと時間を過ごすのが大好きよ、と彼女は言いました",
       "segments": [
         {
           "word": "We",
@@ -3113,7 +3113,7 @@
         "this",
         "."
       ],
-      "phraseMeaning": "こんな日がもっとあればいいなと思いました",
+      "phraseMeaning": "私はこのような日をもっと持ちたいです",
       "segments": [
         {
           "word": "I",

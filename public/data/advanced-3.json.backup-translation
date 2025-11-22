@@ -26,7 +26,7 @@
         "traditions",
         "."
       ],
-      "phraseMeaning": "異なる文化、言語、そして伝統",
+      "phraseMeaning": "異なる文化言語そして伝統",
       "segments": [
         {
           "word": "Different",
@@ -145,7 +145,7 @@
         "rewards",
         "."
       ],
-      "phraseMeaning": "しかしそれは大きな報酬をもたらします"
+      "phraseMeaning": "しかし大きな報酬をもたらします"
     },
     {
       "id": "phrase-7",
@@ -191,7 +191,7 @@
         "meaning",
         "."
       ],
-      "phraseMeaning": "食物、避難所、コミュニティ、意味",
+      "phraseMeaning": "食物避難所コミュニティ意味",
       "segments": [
         {
           "word": "Food",
@@ -677,7 +677,7 @@
         "Hinduism",
         "."
       ],
-      "phraseMeaning": "主要な世界の宗教にはキリスト教、イスラム教、ヒンドゥー教が含まれます",
+      "phraseMeaning": "主要な世界の宗教にはキリスト教イスラム教ヒンドゥー教が含まれます",
       "segments": [
         {
           "word": "Major",
@@ -741,7 +741,7 @@
         "others",
         "."
       ],
-      "phraseMeaning": "仏教、ユダヤ教、そして他の多く",
+      "phraseMeaning": "仏教ユダヤ教そして他の多く",
       "segments": [
         {
           "word": "Buddhism",
@@ -820,7 +820,7 @@
         "afterlife",
         "."
       ],
-      "phraseMeaning": "意味、目的、道徳、来世",
+      "phraseMeaning": "意味目的道徳来世",
       "segments": [
         {
           "word": "Meaning",
@@ -874,7 +874,7 @@
         "beliefs",
         "."
       ],
-      "phraseMeaning": "異なる実践、儀式、そして信念",
+      "phraseMeaning": "異なる実践儀式そして信念",
       "segments": [
         {
           "word": "Different",
@@ -938,7 +938,7 @@
         "community",
         "."
       ],
-      "phraseMeaning": "思いやり、正義、コミュニティ",
+      "phraseMeaning": "思いやり正義コミュニティ",
       "segments": [
         {
           "word": "Compassion",
@@ -1095,7 +1095,7 @@
         "festivals",
         "."
       ],
-      "phraseMeaning": "異なる食べ物、音楽、そして祭り"
+      "phraseMeaning": "異なる食べ物音楽そして祭り"
     },
     {
       "id": "phrase-50",
@@ -1142,7 +1142,7 @@
         "origin",
         "."
       ],
-      "phraseMeaning": "肌の色、民族、または出身に基づいて"
+      "phraseMeaning": "肌の色民族または出身に基づいて"
     },
     {
       "id": "phrase-54",
@@ -1544,7 +1544,7 @@
         "regimes",
         "."
       ],
-      "phraseMeaning": "民主主義、君主制、そして権威主義体制"
+      "phraseMeaning": "民主主義君主制そして権威主義体制"
     },
     {
       "id": "phrase-88",
@@ -1816,7 +1816,7 @@
         "destroyed",
         "."
       ],
-      "phraseMeaning": "失われた命、破壊されたコミュニティ"
+      "phraseMeaning": "失われた命破壊されたコミュニティ"
     },
     {
       "id": "phrase-112",
@@ -2006,7 +2006,7 @@
         "Organization",
         "."
       ],
-      "phraseMeaning": "国連、世界保健機関"
+      "phraseMeaning": "国連世界保健機関"
     },
     {
       "id": "phrase-129",
@@ -2378,7 +2378,7 @@
         "festivals",
         "."
       ],
-      "phraseMeaning": "展示、パフォーマンス、祭り"
+      "phraseMeaning": "展示パフォーマンス祭り"
     },
     {
       "id": "phrase-162",
@@ -2573,7 +2573,7 @@
         "poverty",
         "."
       ],
-      "phraseMeaning": "何百万人もが戦争、迫害、貧困から逃れます"
+      "phraseMeaning": "何百万人もが戦争迫害貧困から逃れます"
     },
     {
       "id": "phrase-179",
@@ -3130,7 +3130,7 @@
         "devices",
         "."
       ],
-      "phraseMeaning": "スクリーンリーダー、補聴器、移動装置"
+      "phraseMeaning": "スクリーンリーダー補聴器移動装置"
     },
     {
       "id": "phrase-228",
@@ -3493,7 +3493,7 @@
         "values",
         "."
       ],
-      "phraseMeaning": "歴史、地理、価値観"
+      "phraseMeaning": "歴史地理価値観"
     },
     {
       "id": "phrase-259",
@@ -3798,7 +3798,7 @@
         "advertising",
         "."
       ],
-      "phraseMeaning": "映画、テレビ、ニュース、広告において"
+      "phraseMeaning": "映画テレビニュース広告において"
     },
     {
       "id": "phrase-286",
@@ -4022,7 +4022,7 @@
         "disability",
         "."
       ],
-      "phraseMeaning": "人種、ジェンダー、階級、性的指向、障害"
+      "phraseMeaning": "人種ジェンダー階級性的指向障害"
     },
     {
       "id": "phrase-306",

@@ -40,7 +40,7 @@
         "predictions",
         "."
       ],
-      "phraseMeaning": "それらはパターンを特定し予測を行います"
+      "phraseMeaning": "パターンを特定し予測を行います"
     },
     {
       "id": "phrase-4",
@@ -1566,7 +1566,8 @@
         "standards",
         "would",
         "help",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "グローバル基準が役立つでしょう"
     },
@@ -1772,7 +1773,8 @@
         "ideas",
         "or",
         "variations",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "アイデアやバリエーションを生成します"
     },
@@ -2339,7 +2341,8 @@
         "reflect",
         "our",
         "values",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "AIは私たちの価値観を反映すべきです"
     },
@@ -3086,7 +3089,8 @@
         "flag",
         "for",
         "review",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "削除またはレビューのためにフラグを立てます"
     },
@@ -3791,7 +3795,8 @@
         "Encourages",
         "innovation",
         "globally",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "世界的に革新を促進します"
     },
@@ -4235,7 +4240,8 @@
         "quality",
         "of",
         "life",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "生活の質を改善します"
     },
@@ -4548,7 +4554,8 @@
         "assist",
         "human",
         "composers",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "人間の作曲家を支援できます"
     },
@@ -5068,7 +5075,8 @@
         "human",
         "computer",
         "interaction",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "人間とコンピュータの相互作用を改善できます"
     },
@@ -5704,7 +5712,8 @@
         "open",
         "to",
         "risks",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "リスクに目を向けて"
     },
@@ -5729,6 +5738,7 @@
         "the",
         "AI",
         "future",
+        ".",
         "."
       ],
       "phraseMeaning": "一緒に私たちはAIの未来を形作ります"

@@ -44,8 +44,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
   const [readingDictionary, setReadingDictionary] = useState<Map<string, any>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
-  const [showFullText, setShowFullText] = useState(false);
-  const [showFullTranslation, setShowFullTranslation] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [readingStarted, setReadingStarted] = useState(false);
   const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
@@ -247,7 +245,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             const segments: ReadingSegment[] = [];
             const wordMeanings = (phrase as any).wordMeanings || {}; // wordMeaningsオブジェクト（もしあれば）
             
-            phrase.words?.forEach((word, idx) => {
+            phrase.words?.forEach((word) => {
               // 句読点を検出
               const punctuationMatch = word.match(/([.,!?;:])$/);
               
@@ -336,17 +334,21 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           }
         }
         
-        // 難易度・語数順にソート
+        // 難易度・語数順にソート（難易度: 初級→中級→上級、同一難易度内: 語数少ない順）
         const levelOrder: Record<string, number> = { 
           '初級': 1, 'beginner': 1,
           '中級': 2, 'intermediate': 2,
-          '上級': 3, 'advanced': 3
+          '上級': 3, 'advanced': 3, 'Advanced': 3
         };
         const sortedData = processedData.sort((a, b) => {
-          const levelA = levelOrder[a.level] || 999;
-          const levelB = levelOrder[b.level] || 999;
+          const levelA = levelOrder[a.level || ''] || 999;
+          const levelB = levelOrder[b.level || ''] || 999;
           if (levelA !== levelB) return levelA - levelB;
-          return (a.actualWordCount || 0) - (b.actualWordCount || 0);
+
+          // 同じ難易度の場合は語数の少ない順（昇順）にする
+          const wordCountA = a.actualWordCount || 0;
+          const wordCountB = b.actualWordCount || 0;
+          return wordCountA - wordCountB; // 昇順
         });
         
         setPassages(sortedData);
@@ -381,16 +383,18 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     const levelOrder: Record<string, number> = { 
       '初級': 1, 'beginner': 1,
       '中級': 2, 'intermediate': 2,
-      '上級': 3, 'advanced': 3
+      '上級': 3, 'advanced': 3, 'Advanced': 3
     };
     return filtered.sort((a, b) => {
       // まず難易度で比較
-      const levelA = levelOrder[a.level] || 999;
-      const levelB = levelOrder[b.level] || 999;
+      const levelA = levelOrder[a.level || ''] || 999;
+      const levelB = levelOrder[b.level || ''] || 999;
       if (levelA !== levelB) return levelA - levelB;
-      
-      // 難易度が同じ場合は語数で比較
-      return (a.actualWordCount || 0) - (b.actualWordCount || 0);
+
+      // 難易度が同じ場合は語数の少ない順（昇順）にする
+      const wordCountA = a.actualWordCount || 0;
+      const wordCountB = b.actualWordCount || 0;
+      return wordCountA - wordCountB;
     });
   }, [passages, difficultyFilter]);
 
@@ -691,16 +695,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   };
 
-  // 全文を表示トグル（サブタブ切り替えに変更）
-  const handleToggleFullText = () => {
-    setReadingSubTab(prev => prev === 'fullText' ? 'reading' : 'fullText');
-  };
-
-  // 全訳を表示トグル（サブタブ切り替えに変更）
-  const handleToggleFullTranslation = () => {
-    setReadingSubTab(prev => prev === 'fullTranslation' ? 'reading' : 'fullTranslation');
-  };
-
   // 分からない単語を保存
   const handleSaveUnknownWords = () => {
     if (!currentPassage) return;
@@ -863,7 +857,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {passage.title} ({getLevelLabel(passage.level)} - {passage.actualWordCount}語)
+                  {passage.title} ({getLevelLabel(passage.level || '')} - {passage.actualWordCount}語)
                 </option>
               ))}
             </select>
@@ -1238,7 +1232,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   const translatedSentences: string[] = [];
                   let currentSentence = '';
                   
-                  currentPassage.phrases.forEach((phrase, idx) => {
+                  currentPassage.phrases.forEach((phrase) => {
                     let meaning = phrase.phraseMeaning || '';
                     if (meaning) {
                       // [要修正]を削除
@@ -1710,13 +1704,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           font-family: 'Times New Roman', 'Georgia', serif;
         }
 
-        .full-text-content .paragraph {
+        .full-text-content .paragraph-en {
           margin-bottom: 1.5em;
           text-indent: 2em;
-          text-align: justify;
+          text-align: left;
         }
 
-        .full-text-content .paragraph:first-child {
+        .full-text-content .paragraph-en:first-child {
           margin-top: 0;
         }
 
@@ -1729,16 +1723,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         .full-translation-content .paragraph-ja {
           margin-bottom: 1.5em;
           text-indent: 1em;
+          text-align: left;
         }
 
         .full-translation-content .paragraph-ja:first-child {
           margin-top: 0;
-        }
-
-        .full-translation-content {
-          font-size: 1em;
-          line-height: 1.8;
-          color: #333;
         }
 
         .translation-line {

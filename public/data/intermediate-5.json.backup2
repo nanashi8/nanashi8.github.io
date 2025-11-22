@@ -15,70 +15,13 @@
         "is",
         "one",
         "of",
-        "life's",
+        "life",
         "most",
         "important",
         "decisions",
         "."
       ],
-      "phraseMeaning": "キャリアを選ぶことは人生で最も重要な決定の一つです",
-      "segments": [
-        {
-          "word": "Choosing",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "a",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "career",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "is",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "one",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "of",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "life's",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "most",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "important",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "decisions",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "キャリアを選ぶことは人生で最も重要な決定の一つです"
     },
     {
       "id": "phrase-2",
@@ -87,70 +30,13 @@
         "career",
         "affects",
         "your",
-        "lifestyle,",
-        "income,",
+        "lifestyle",
+        "income",
         "and",
         "happiness",
         "."
       ],
-      "phraseMeaning": "あなたのキャリアはライフスタイル、収入、幸福に影響します",
-      "segments": [
-        {
-          "word": "Your",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "career",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "affects",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "your",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "lifestyle",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "income",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "happiness",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "あなたのキャリアはライフスタイル収入幸福に影響します"
     },
     {
       "id": "phrase-3",
@@ -226,7 +112,7 @@
         "prepare",
         "."
       ],
-      "phraseMeaning": "これらの変化を理解することはあなたが準備するのを助けます"
+      "phraseMeaning": "これらの変化を理解することは準備するのを助けます"
     },
     {
       "id": "phrase-9",
@@ -252,42 +138,11 @@
         "planning",
         "starts",
         "with",
-        "self-understanding",
+        "self",
+        "understanding",
         "."
       ],
-      "phraseMeaning": "キャリア計画は自己理解から始まります",
-      "segments": [
-        {
-          "word": "Career",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "planning",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "starts",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "with",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "self-understanding",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "キャリア計画は自己理解から始まります"
     },
     {
       "id": "phrase-11",

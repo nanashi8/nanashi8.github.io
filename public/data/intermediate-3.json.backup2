@@ -100,7 +100,7 @@
         "fully",
         "."
       ],
-      "phraseMeaning": "健康は人生を充実させてくれます",
+      "phraseMeaning": "健康は人生を完全に楽しむことを可能にします",
       "segments": [
         {
           "word": "Good",
@@ -163,7 +163,7 @@
         "dreams",
         "."
       ],
-      "phraseMeaning": "それは夢を追求するエネルギーを与えます",
+      "phraseMeaning": "夢を追求するエネルギーを与えます",
       "segments": [
         {
           "word": "It",
@@ -226,7 +226,7 @@
         "friends",
         "."
       ],
-      "phraseMeaning": "それは家族や友人とつながるのを助けます",
+      "phraseMeaning": "家族や友人とつながるのを助けます",
       "segments": [
         {
           "word": "It",
@@ -338,15 +338,15 @@
       "words": [
         "These",
         "include",
-        "nutrition,",
-        "exercise,",
-        "sleep,",
+        "nutrition",
+        "exercise",
+        "sleep",
         "and",
         "mental",
         "health",
         "."
       ],
-      "phraseMeaning": "これらには栄養、運動、睡眠、精神的健康が含まれます",
+      "phraseMeaning": "これらには栄養運動睡眠精神的健康が含まれます",
       "segments": [
         {
           "word": "These",
@@ -364,27 +364,12 @@
           "isUnknown": false
         },
         {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "exercise",
           "meaning": "",
           "isUnknown": false
         },
         {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "sleep",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
           "meaning": "",
           "isUnknown": false
         },
@@ -424,7 +409,7 @@
         "areas",
         "."
       ],
-      "phraseMeaning": "これらの重要な分野を見ていきましょう",
+      "phraseMeaning": "これらの重要な分野のそれぞれを探りましょう",
       "segments": [
         {
           "word": "Let",
@@ -612,7 +597,7 @@
         "activities",
         "."
       ],
-      "phraseMeaning": "それはすべての活動のためのエネルギーを提供します",
+      "phraseMeaning": "すべての活動のためのエネルギーを提供します",
       "segments": [
         {
           "word": "It",
@@ -669,7 +654,7 @@
         "repair",
         "."
       ],
-      "phraseMeaning": "それは成長と修復のための材料を供給します",
+      "phraseMeaning": "成長と修復のための材料を供給します",
       "segments": [
         {
           "word": "It",
@@ -828,7 +813,7 @@
         "sources",
         "."
       ],
-      "phraseMeaning": "米、パン、麺類などが良い供給源です",
+      "phraseMeaning": "米パン麺類は良い供給源です",
       "segments": [
         {
           "word": "Rice",
@@ -948,7 +933,7 @@
         "protein",
         "."
       ],
-      "phraseMeaning": "肉、魚、卵、豆類がタンパク質を提供します",
+      "phraseMeaning": "肉魚卵豆がタンパク質を提供します",
       "segments": [
         {
           "word": "Meat",
@@ -2106,7 +2091,7 @@
         "fiber",
         "."
       ],
-      "phraseMeaning": "全粒穀物、野菜、果物は繊維を含みます",
+      "phraseMeaning": "全粒穀物野菜果物は繊維を含みます",
       "segments": [
         {
           "word": "Whole",
@@ -2570,7 +2555,7 @@
         "iron",
         "."
       ],
-      "phraseMeaning": "赤身肉、豆類、濃い緑の葉物野菜は鉄を提供します",
+      "phraseMeaning": "赤身肉豆濃い緑の葉物野菜は鉄を提供します",
       "segments": [
         {
           "word": "Red",
@@ -6957,7 +6942,7 @@
         "helps",
         "."
       ],
-      "phraseMeaning": "読書、入浴、穏やかな音楽を聴くことが役立ちます",
+      "phraseMeaning": "読書入浴穏やかな音楽を聴くことが役立ちます",
       "segments": [
         {
           "word": "Reading",

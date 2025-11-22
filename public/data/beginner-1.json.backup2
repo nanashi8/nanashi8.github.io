@@ -101,7 +101,7 @@
         "nervous",
         "."
       ],
-      "phraseMeaning": "私は期待と緊張で胸がいっぱいだった",
+      "phraseMeaning": "私はワクワクもしたし緊張もした",
       "segments": [
         {
           "word": "I",
@@ -149,63 +149,72 @@
         "so",
         "big",
         "and",
-        "different",
+        "different"
+      ],
+      "phraseMeaning": "すべてがとても大きく違って見えた",
+      "segments": [
+        {
+          "word": "Everything",
+          "meaning": "すべて",
+          "isUnknown": false
+        },
+        {
+          "word": "seemed",
+          "meaning": "〜のように見えた",
+          "isUnknown": false
+        },
+        {
+          "word": "so",
+          "meaning": "とても",
+          "isUnknown": false
+        },
+        {
+          "word": "big",
+          "meaning": "大きい",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": "そして",
+          "isUnknown": false
+        },
+        {
+          "word": "different",
+          "meaning": "違う",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-5",
+      "words": [
         "from",
         "my",
         "elementary",
         "school",
         "."
       ],
-      "phraseMeaning": "すべてがとても大きく、小学校とは違って見えました。",
+      "phraseMeaning": "私の小学校とは",
       "segments": [
         {
-          "word": "Everything",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "seemed",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "so",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "big",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "different",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "from",
-          "meaning": "",
+          "meaning": "〜から",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "elementary",
-          "meaning": "",
+          "meaning": "小学校の",
           "isUnknown": false
         },
         {
           "word": "school",
-          "meaning": "",
+          "meaning": "学校",
           "isUnknown": false
         },
         {
@@ -223,93 +232,99 @@
         "I",
         "entered",
         "the",
-        "classroom",
-        ",",
-        "I",
-        "saw",
-        "many",
-        "students",
-        "that",
-        "I",
-        "didn't",
-        "know",
-        "."
+        "classroom"
       ],
-      "phraseMeaning": "教室に入ると、知らない生徒がたくさんいました。",
+      "phraseMeaning": "教室に入ったとき",
       "segments": [
         {
           "word": "When",
-          "meaning": "",
+          "meaning": "〜のとき",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "私が",
           "isUnknown": false
         },
         {
           "word": "entered",
-          "meaning": "",
+          "meaning": "入った",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "classroom",
-          "meaning": "",
+          "meaning": "教室",
           "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-7",
+      "words": [
+        "I",
+        "saw",
+        "many",
+        "students"
+      ],
+      "phraseMeaning": "たくさんの生徒を見た",
+      "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "私は",
           "isUnknown": false
         },
         {
           "word": "saw",
-          "meaning": "",
+          "meaning": "見た",
           "isUnknown": false
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": "多くの",
           "isUnknown": false
         },
         {
           "word": "students",
-          "meaning": "",
+          "meaning": "生徒たち",
           "isUnknown": false
-        },
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-8",
+      "words": [
+        "that",
+        "I",
+        "didn't",
+        "know"
+      ],
+      "phraseMeaning": "私が知らない(生徒を)",
+      "segments": [
         {
           "word": "that",
-          "meaning": "",
+          "meaning": "関係代名詞(その人は)",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "私が",
           "isUnknown": false
         },
         {
           "word": "didn't",
-          "meaning": "",
+          "meaning": "〜しなかった",
           "isUnknown": false
         },
         {
           "word": "know",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
+          "meaning": "知る",
           "isUnknown": false
         }
       ],
@@ -324,7 +339,7 @@
         "little",
         "afraid"
       ],
-      "phraseMeaning": "私は少し不安だった",
+      "phraseMeaning": "私は少し怖かった",
       "segments": [
         {
           "word": "I",
@@ -364,7 +379,7 @@
         "smile",
         "."
       ],
-      "phraseMeaning": "しかし笑顔を見せようと努めた",
+      "phraseMeaning": "しかし私は笑顔を作ろうとした",
       "segments": [
         {
           "word": "but",
@@ -492,7 +507,7 @@
         "me",
         "and",
         "said",
-        ","
+        "."
       ],
       "phraseMeaning": "彼女は私を見て言った",
       "segments": [
@@ -537,9 +552,7 @@
     {
       "id": "phrase-14",
       "words": [
-        "\"",
         "Hello",
-        ",",
         "my",
         "name",
         "is",
@@ -587,9 +600,7 @@
         "Nice",
         "to",
         "meet",
-        "you",
-        "!",
-        "\""
+        "you"
       ],
       "phraseMeaning": "よろしくね",
       "segments": [
@@ -705,41 +716,50 @@
       "words": [
         "We",
         "started",
-        "talking",
-        "and",
-        "found",
-        "out"
+        "talking"
       ],
-      "phraseMeaning": "私たちは話し始めて、わかりました",
+      "phraseMeaning": "私たちは話し始めた",
       "segments": [
         {
           "word": "We",
-          "meaning": "",
+          "meaning": "私たちは",
           "isUnknown": false
         },
         {
           "word": "started",
-          "meaning": "",
+          "meaning": "始めた",
           "isUnknown": false
         },
         {
           "word": "talking",
-          "meaning": "",
+          "meaning": "話すこと",
           "isUnknown": false
-        },
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-19",
+      "words": [
+        "and",
+        "found",
+        "out"
+      ],
+      "phraseMeaning": "そして分かった",
+      "segments": [
         {
           "word": "and",
-          "meaning": "",
+          "meaning": "そして",
           "isUnknown": false
         },
         {
           "word": "found",
-          "meaning": "",
+          "meaning": "見つけた",
           "isUnknown": false
         },
         {
           "word": "out",
-          "meaning": "",
+          "meaning": "外へ",
           "isUnknown": false
         }
       ],
@@ -809,7 +829,9 @@
         "both",
         "liked",
         "reading",
-        "books"
+        "books",
+        ",",
+        ","
       ],
       "phraseMeaning": "私たちは両方とも本を読むのが好きだった",
       "segments": [
@@ -859,7 +881,7 @@
         "tennis",
         "."
       ],
-      "phraseMeaning": "そしてテニスをすることも好きだった",
+      "phraseMeaning": "そしてテニスをすることが",
       "segments": [
         {
           "word": "and",
@@ -889,9 +911,10 @@
       "words": [
         "During",
         "lunch",
-        "time"
+        "time",
+        "."
       ],
-      "phraseMeaning": "昼食時間に",
+      "phraseMeaning": "昼食時間の間",
       "segments": [
         {
           "word": "During",
@@ -919,51 +942,59 @@
     {
       "id": "phrase-24",
       "words": [
-        ",",
         "Yuki",
         "introduced",
-        "me",
+        "me"
+      ],
+      "phraseMeaning": "ユキは私を紹介してくれた",
+      "segments": [
+        {
+          "word": "Yuki",
+          "meaning": "ユキ",
+          "isUnknown": false
+        },
+        {
+          "word": "introduced",
+          "meaning": "紹介した",
+          "isUnknown": false
+        },
+        {
+          "word": "me",
+          "meaning": "私",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-25",
+      "words": [
         "to",
         "her",
         "other",
         "friends",
         "."
       ],
-      "phraseMeaning": "ユキは私を他の友達に紹介してくれました。",
+      "phraseMeaning": "彼女の他の友達に",
       "segments": [
         {
-          "word": "Yuki",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "introduced",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "me",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "to",
-          "meaning": "",
+          "meaning": "〜に",
           "isUnknown": false
         },
         {
           "word": "her",
-          "meaning": "",
+          "meaning": "彼女の",
           "isUnknown": false
         },
         {
           "word": "other",
-          "meaning": "",
+          "meaning": "他の",
           "isUnknown": false
         },
         {
           "word": "friends",
-          "meaning": "",
+          "meaning": "友達",
           "isUnknown": false
         },
         {
@@ -1172,7 +1203,9 @@
         "club",
         "was",
         "very",
-        "popular"
+        "popular",
+        ",",
+        ","
       ],
       "phraseMeaning": "テニス部がとても人気だということを",
       "segments": [
@@ -1229,53 +1262,62 @@
       "words": [
         "and",
         "asked",
-        "me",
+        "me"
+      ],
+      "phraseMeaning": "そして私に尋ねた",
+      "segments": [
+        {
+          "word": "and",
+          "meaning": "そして",
+          "isUnknown": false
+        },
+        {
+          "word": "asked",
+          "meaning": "尋ねた",
+          "isUnknown": false
+        },
+        {
+          "word": "me",
+          "meaning": "私に",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-33",
+      "words": [
         "if",
         "I",
         "wanted",
         "to",
         "join"
       ],
-      "phraseMeaning": "そして参加したいか聞いてくれました",
+      "phraseMeaning": "私が参加したいかどうかを",
       "segments": [
         {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "asked",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "me",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "if",
-          "meaning": "",
+          "meaning": "〜かどうか",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "私が",
           "isUnknown": false
         },
         {
           "word": "wanted",
-          "meaning": "",
+          "meaning": "欲しかった",
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": "〜すること",
           "isUnknown": false
         },
         {
           "word": "join",
-          "meaning": "",
+          "meaning": "参加する",
           "isUnknown": false
         }
       ],
@@ -1351,8 +1393,26 @@
       "id": "phrase-36",
       "words": [
         "After",
-        "lunch",
-        ",",
+        "lunch"
+      ],
+      "phraseMeaning": "昼食の後",
+      "segments": [
+        {
+          "word": "After",
+          "meaning": "〜の後",
+          "isUnknown": false
+        },
+        {
+          "word": "lunch",
+          "meaning": "昼食",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-37",
+      "words": [
         "we",
         "had",
         "our",
@@ -1361,51 +1421,36 @@
         "class",
         "."
       ],
-      "phraseMeaning": "昼食後、最初の英語の授業がありました。",
+      "phraseMeaning": "私たちは最初の英語の授業があった",
       "segments": [
         {
-          "word": "After",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "lunch",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "we",
-          "meaning": "",
+          "meaning": "私たちは",
           "isUnknown": false
         },
         {
           "word": "had",
-          "meaning": "",
+          "meaning": "持った",
           "isUnknown": false
         },
         {
           "word": "our",
-          "meaning": "",
+          "meaning": "私たちの",
           "isUnknown": false
         },
         {
           "word": "first",
-          "meaning": "",
+          "meaning": "最初の",
           "isUnknown": false
         },
         {
           "word": "English",
-          "meaning": "",
+          "meaning": "英語",
           "isUnknown": false
         },
         {
           "word": "class",
-          "meaning": "",
+          "meaning": "授業",
           "isUnknown": false
         },
         {
@@ -1421,11 +1466,8 @@
       "words": [
         "The",
         "teacher",
-        ",",
         "Mr",
-        ".",
-        "Sato",
-        ","
+        "Sato"
       ],
       "phraseMeaning": "先生のサトウ先生は",
       "segments": [
@@ -1492,33 +1534,33 @@
         "spoke",
         "English",
         "slowly",
-        ",",
-        "so",
-        "that",
-        "everyone",
-        "could",
-        "understand",
-        "."
+        ".",
+        ","
       ],
-      "phraseMeaning": "彼はゆっくり英語を話したので、みんなが理解できました。",
+      "phraseMeaning": "彼は英語をゆっくり話した",
       "segments": [
         {
           "word": "He",
-          "meaning": "",
+          "meaning": "彼は",
           "isUnknown": false
         },
         {
           "word": "spoke",
-          "meaning": "",
+          "meaning": "話した",
           "isUnknown": false
         },
         {
           "word": "English",
-          "meaning": "",
+          "meaning": "英語",
           "isUnknown": false
         },
         {
           "word": "slowly",
+          "meaning": "ゆっくり",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
           "meaning": "",
           "isUnknown": false
         },
@@ -1526,30 +1568,45 @@
           "word": ",",
           "meaning": "",
           "isUnknown": false
-        },
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-41",
+      "words": [
+        "so",
+        "that",
+        "everyone",
+        "could",
+        "understand",
+        "."
+      ],
+      "phraseMeaning": "皆が理解できるように",
+      "segments": [
         {
           "word": "so",
-          "meaning": "",
+          "meaning": "だから",
           "isUnknown": false
         },
         {
           "word": "that",
-          "meaning": "",
+          "meaning": "〜するように",
           "isUnknown": false
         },
         {
           "word": "everyone",
-          "meaning": "",
+          "meaning": "皆",
           "isUnknown": false
         },
         {
           "word": "could",
-          "meaning": "",
+          "meaning": "〜できた",
           "isUnknown": false
         },
         {
           "word": "understand",
-          "meaning": "",
+          "meaning": "理解する",
           "isUnknown": false
         },
         {
@@ -1566,47 +1623,56 @@
         "He",
         "asked",
         "each",
-        "student",
+        "student"
+      ],
+      "phraseMeaning": "彼は各生徒に尋ねた",
+      "segments": [
+        {
+          "word": "He",
+          "meaning": "彼は",
+          "isUnknown": false
+        },
+        {
+          "word": "asked",
+          "meaning": "尋ねた",
+          "isUnknown": false
+        },
+        {
+          "word": "each",
+          "meaning": "各",
+          "isUnknown": false
+        },
+        {
+          "word": "student",
+          "meaning": "生徒",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-43",
+      "words": [
         "to",
         "introduce",
         "themselves",
         "."
       ],
-      "phraseMeaning": "彼は各生徒に自己紹介するように頼みました。",
+      "phraseMeaning": "自己紹介するように",
       "segments": [
         {
-          "word": "He",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "asked",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "each",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "student",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "to",
-          "meaning": "",
+          "meaning": "〜すること",
           "isUnknown": false
         },
         {
           "word": "introduce",
-          "meaning": "",
+          "meaning": "紹介する",
           "isUnknown": false
         },
         {
           "word": "themselves",
-          "meaning": "",
+          "meaning": "彼ら自身",
           "isUnknown": false
         },
         {
@@ -1624,56 +1690,66 @@
         "it",
         "was",
         "my",
-        "turn",
-        ",",
-        "I",
-        "stood",
-        "up"
+        "turn"
       ],
-      "phraseMeaning": "私の番になったとき、立ち上がり、",
+      "phraseMeaning": "私の番になったとき",
       "segments": [
         {
           "word": "When",
-          "meaning": "",
+          "meaning": "〜のとき",
           "isUnknown": false
         },
         {
           "word": "it",
-          "meaning": "",
+          "meaning": "それ",
           "isUnknown": false
         },
         {
           "word": "was",
-          "meaning": "",
+          "meaning": "だった",
           "isUnknown": false
         },
         {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "turn",
-          "meaning": "",
+          "meaning": "順番",
           "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-45",
+      "words": [
+        "I",
+        "stood",
+        "up",
+        ",",
+        ","
+      ],
+      "phraseMeaning": "私は立ち上がった",
+      "segments": [
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "私は",
           "isUnknown": false
         },
         {
           "word": "stood",
-          "meaning": "",
+          "meaning": "立った",
           "isUnknown": false
         },
         {
           "word": "up",
+          "meaning": "上へ",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
           "meaning": "",
           "isUnknown": false
         },
@@ -1733,7 +1809,7 @@
         "beating",
         "fast"
       ],
-      "phraseMeaning": "私の心臓は速く鼓動していた",
+      "phraseMeaning": "私の心臓は速く鳴っていた",
       "segments": [
         {
           "word": "My",
@@ -1814,47 +1890,56 @@
         "Everyone",
         "clapped",
         "their",
-        "hands",
+        "hands"
+      ],
+      "phraseMeaning": "皆が手を叩いた",
+      "segments": [
+        {
+          "word": "Everyone",
+          "meaning": "皆",
+          "isUnknown": false
+        },
+        {
+          "word": "clapped",
+          "meaning": "叩いた",
+          "isUnknown": false
+        },
+        {
+          "word": "their",
+          "meaning": "彼らの",
+          "isUnknown": false
+        },
+        {
+          "word": "hands",
+          "meaning": "手",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-50",
+      "words": [
         "when",
         "I",
         "finished",
         "."
       ],
-      "phraseMeaning": "私が終わると、みんなが拍手をしてくれました。",
+      "phraseMeaning": "私が終わったとき",
       "segments": [
         {
-          "word": "Everyone",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "clapped",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "their",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "hands",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "when",
-          "meaning": "",
+          "meaning": "〜のとき",
           "isUnknown": false
         },
         {
           "word": "I",
-          "meaning": "",
+          "meaning": "私が",
           "isUnknown": false
         },
         {
           "word": "finished",
-          "meaning": "",
+          "meaning": "終わった",
           "isUnknown": false
         },
         {
@@ -1924,7 +2009,8 @@
         "end",
         "of",
         "the",
-        "day"
+        "day",
+        "."
       ],
       "phraseMeaning": "その日の終わりに",
       "segments": [
@@ -2067,7 +2153,31 @@
       "words": [
         "and",
         "made",
-        "plans",
+        "plans"
+      ],
+      "phraseMeaning": "そして計画を立てた",
+      "segments": [
+        {
+          "word": "and",
+          "meaning": "そして",
+          "isUnknown": false
+        },
+        {
+          "word": "made",
+          "meaning": "作った",
+          "isUnknown": false
+        },
+        {
+          "word": "plans",
+          "meaning": "計画",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-56",
+      "words": [
         "to",
         "visit",
         "the",
@@ -2076,51 +2186,36 @@
         "tomorrow",
         "."
       ],
-      "phraseMeaning": "そして明日テニス部を見学する約束をしました。",
+      "phraseMeaning": "明日テニス部を訪れる(計画を)",
       "segments": [
         {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "made",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "plans",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "to",
-          "meaning": "",
+          "meaning": "〜するための",
           "isUnknown": false
         },
         {
           "word": "visit",
-          "meaning": "",
+          "meaning": "訪れる",
           "isUnknown": false
         },
         {
           "word": "the",
-          "meaning": "",
+          "meaning": "その",
           "isUnknown": false
         },
         {
           "word": "tennis",
-          "meaning": "",
+          "meaning": "テニス",
           "isUnknown": false
         },
         {
           "word": "club",
-          "meaning": "",
+          "meaning": "クラブ",
           "isUnknown": false
         },
         {
           "word": "tomorrow",
-          "meaning": "",
+          "meaning": "明日",
           "isUnknown": false
         },
         {
@@ -2137,58 +2232,61 @@
         "When",
         "I",
         "got",
-        "home",
-        ",",
+        "home"
+      ],
+      "phraseMeaning": "家に着いたとき",
+      "segments": [
+        {
+          "word": "When",
+          "meaning": "〜のとき",
+          "isUnknown": false
+        },
+        {
+          "word": "I",
+          "meaning": "私が",
+          "isUnknown": false
+        },
+        {
+          "word": "got",
+          "meaning": "着いた",
+          "isUnknown": false
+        },
+        {
+          "word": "home",
+          "meaning": "家",
+          "isUnknown": false
+        }
+      ],
+      "isUnknown": false
+    },
+    {
+      "id": "phrase-58",
+      "words": [
         "my",
         "mother",
         "asked",
         "me"
       ],
-      "phraseMeaning": "家に着くと、母が聞いてきました",
+      "phraseMeaning": "私の母が私に尋ねた",
       "segments": [
         {
-          "word": "When",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "I",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "got",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "home",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
           "word": "my",
-          "meaning": "",
+          "meaning": "私の",
           "isUnknown": false
         },
         {
           "word": "mother",
-          "meaning": "",
+          "meaning": "母",
           "isUnknown": false
         },
         {
           "word": "asked",
-          "meaning": "",
+          "meaning": "尋ねた",
           "isUnknown": false
         },
         {
           "word": "me",
-          "meaning": "",
+          "meaning": "私に",
           "isUnknown": false
         }
       ],
@@ -2240,7 +2338,7 @@
         "smiled",
         "and",
         "said",
-        ","
+        "."
       ],
       "phraseMeaning": "私は笑顔で言った",
       "segments": [
@@ -2275,11 +2373,9 @@
     {
       "id": "phrase-61",
       "words": [
-        "\"",
         "It",
         "was",
-        "wonderful",
-        "!"
+        "wonderful"
       ],
       "phraseMeaning": "素晴らしかったよ",
       "segments": [
@@ -2311,6 +2407,7 @@
         "friend",
         "named",
         "Yuki",
+        ",",
         ","
       ],
       "phraseMeaning": "私はユキという新しい友達ができたの",
@@ -2400,8 +2497,7 @@
         "junior",
         "high",
         "school",
-        ".",
-        "\""
+        "."
       ],
       "phraseMeaning": "私は本当に中学校を楽しむだろうと",
       "segments": [
@@ -2452,8 +2548,7 @@
       "id": "phrase-65",
       "words": [
         "That",
-        "night",
-        ","
+        "night"
       ],
       "phraseMeaning": "その夜",
       "segments": [
@@ -2696,7 +2791,8 @@
         "am",
         "looking",
         "forward",
-        "to"
+        "to",
+        "."
       ],
       "phraseMeaning": "私は楽しみにしている",
       "segments": [
@@ -2743,6 +2839,7 @@
         "days",
         "to",
         "come",
+        ".",
         "."
       ],
       "phraseMeaning": "明日とこれから来るすべての日々を",
