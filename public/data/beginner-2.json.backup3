@@ -393,11 +393,8 @@
     {
       "id": 9,
       "words": [
-        "\"",
         "Good",
-        "morning",
-        ",",
-        "\"",
+        "morning,",
         "she",
         "said",
         "."
@@ -439,10 +436,9 @@
         "you",
         "help",
         "me",
-        "?",
-        "\""
+        "."
       ],
-      "phraseMeaning": "手伝ってくれる?",
+      "phraseMeaning": "手伝ってくれる",
       "segments": [
         {
           "word": "Can",
@@ -475,11 +471,8 @@
     {
       "id": 11,
       "words": [
-        "\"",
         "Of",
-        "course",
-        ",",
-        "\"",
+        "course,",
         "I",
         "answered",
         "."
@@ -570,10 +563,8 @@
       "words": [
         "We",
         "put",
-        "plates",
-        ",",
-        "cups",
-        ",",
+        "plates,",
+        "cups,",
         "and",
         "spoons",
         "on",
@@ -633,8 +624,7 @@
     {
       "id": 14,
       "words": [
-        "Soon",
-        ",",
+        "Soon,",
         "my",
         "father",
         "and",
@@ -733,10 +723,8 @@
         "My",
         "mother",
         "brought",
-        "eggs",
-        ",",
-        "bread",
-        ",",
+        "eggs,",
+        "bread,",
         "and",
         "milk",
         "."
@@ -828,13 +816,9 @@
     {
       "id": 18,
       "words": [
-        "\"",
         "Thank",
-        "you",
-        ",",
-        "Mom",
-        ",",
-        "\"",
+        "you,",
+        "Mom,",
         "I",
         "said",
         "."
@@ -878,8 +862,7 @@
       "id": 19,
       "words": [
         "After",
-        "breakfast",
-        ",",
+        "breakfast,",
         "we",
         "decided",
         "to",
@@ -1442,7 +1425,7 @@
         "us",
         "."
       ],
-      "phraseMeaning": "でも私たちのために時間を作ってくれます",
+      "phraseMeaning": "しかし彼はまだ私たちのために時間を作ります",
       "segments": [
         {
           "word": "But",
@@ -1497,7 +1480,7 @@
         "that",
         "."
       ],
-      "phraseMeaning": "私はそれがとてもうれしいです",
+      "phraseMeaning": "私はそのことをうれしく思います",
       "segments": [
         {
           "word": "I",
@@ -1536,8 +1519,7 @@
       "id": 32,
       "words": [
         "At",
-        "noon",
-        ",",
+        "noon,",
         "we",
         "had",
         "lunch",
@@ -1694,7 +1676,7 @@
         "great",
         "."
       ],
-      "phraseMeaning": "とてもおいしかったです",
+      "phraseMeaning": "それらは素晴らしい味でした",
       "segments": [
         {
           "word": "They",
@@ -1724,8 +1706,7 @@
       "words": [
         "In",
         "the",
-        "afternoon",
-        ",",
+        "afternoon,",
         "we",
         "took",
         "pictures",
@@ -1883,7 +1864,7 @@
         "moment",
         "."
       ],
-      "phraseMeaning": "楽しい瞬間でした",
+      "phraseMeaning": "それは面白い瞬間でした",
       "segments": [
         {
           "word": "It",
@@ -2142,13 +2123,13 @@
       "words": [
         "When",
         "we",
-        "arrived",
-        ",",
+        "arrived,",
         "we",
         "were",
         "all",
         "tired",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "到着したとき、私たちは皆疲れていました",
       "segments": [
@@ -2210,7 +2191,7 @@
         "happy",
         "."
       ],
-      "phraseMeaning": "でも私たちは幸せでした",
+      "phraseMeaning": "しかし私たちは幸せでもありました",
       "segments": [
         {
           "word": "But",
@@ -2300,8 +2281,7 @@
       "id": 48,
       "words": [
         "For",
-        "dinner",
-        ",",
+        "dinner,",
         "we",
         "ordered",
         "pizza",
@@ -2565,8 +2545,7 @@
       "id": 54,
       "words": [
         "After",
-        "dinner",
-        ",",
+        "dinner,",
         "we",
         "watched",
         "a",
@@ -2673,7 +2652,7 @@
         "exciting",
         "."
       ],
-      "phraseMeaning": "その映画はとてもワクワクしました",
+      "phraseMeaning": "その映画はワクワクするものでした",
       "segments": [
         {
           "word": "The",
@@ -2752,8 +2731,7 @@
       "id": 58,
       "words": [
         "Before",
-        "bed",
-        ",",
+        "bed,",
         "I",
         "thanked",
         "my",
@@ -2803,13 +2781,10 @@
     {
       "id": 59,
       "words": [
-        "\"",
         "Thank",
         "you",
         "for",
-        "today",
-        ",",
-        "\"",
+        "today,",
         "I",
         "said",
         "."
@@ -2896,20 +2871,17 @@
     {
       "id": 61,
       "words": [
-        "\"",
         "We",
         "love",
         "spending",
         "time",
         "with",
-        "you",
-        ",",
-        "\"",
+        "you,",
         "she",
         "said",
         "."
       ],
-      "phraseMeaning": "私たちはあなたと一緒に過ごす時間が大好きよ、と彼女は言いました",
+      "phraseMeaning": "私たちはあなたと時間を過ごすのが大好きよ、と彼女は言いました",
       "segments": [
         {
           "word": "We",
@@ -3113,7 +3085,7 @@
         "this",
         "."
       ],
-      "phraseMeaning": "こんな日がもっとあればいいなと思いました",
+      "phraseMeaning": "私はこのような日をもっと持ちたいです",
       "segments": [
         {
           "word": "I",
@@ -3172,6 +3144,7 @@
         "with",
         "a",
         "smile",
+        ".",
         "."
       ],
       "phraseMeaning": "私は笑顔で眠りにつきました",

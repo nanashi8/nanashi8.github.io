@@ -40,9 +40,9 @@
       "id": "phrase-3",
       "words": [
         "Climate",
-        "change,",
+        "change",
         "resource",
-        "depletion,",
+        "depletion",
         "and",
         "pollution",
         "require",
@@ -50,69 +50,7 @@
         "action",
         "."
       ],
-      "phraseMeaning": "気候変動、資源の枯渇、汚染は緊急の行動を必要とします",
-      "segments": [
-        {
-          "word": "Climate",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "change",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "resource",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "depletion",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "pollution",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "require",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "urgent",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "action",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "気候変動、資源枯渇、汚染は緊急の行動を必要とします"
     },
     {
       "id": "phrase-4",
@@ -149,76 +87,21 @@
         "meets",
         "present",
         "needs",
-        "without",
+        "."
+      ],
+      "phraseMeaning": "持続可能な社会は現在のニーズを満たします"
+    },
+    {
+      "id": "phrase-7",
+      "words": [
+        "Without",
         "compromising",
         "future",
-        "generations'",
-        "ability."
+        "generations",
+        "ability",
+        "."
       ],
-      "phraseMeaning": "持続可能な社会は、将来世代の能力を損なうことなく現在のニーズを満たします。",
-      "segments": [
-        {
-          "word": "A",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "sustainable",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "society",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "meets",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "present",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "needs",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "without",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "compromising",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "future",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "generations'",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "ability",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ],
-      "isUnknown": false
+      "phraseMeaning": "将来の世代の能力を損なうことなく"
     },
     {
       "id": "phrase-8",
@@ -245,7 +128,7 @@
         "models",
         "."
       ],
-      "phraseMeaning": "それは新しい経済モデルを要求します"
+      "phraseMeaning": "新しい経済モデルを要求します"
     },
     {
       "id": "phrase-10",
@@ -259,7 +142,7 @@
         "action",
         "."
       ],
-      "phraseMeaning": "それは個人的および集団的行動を求めます"
+      "phraseMeaning": "個人的および集団的行動を求めます"
     },
     {
       "id": "phrase-11",
@@ -320,67 +203,15 @@
     {
       "id": "phrase-15",
       "words": [
-        "Hurricanes,",
-        "droughts,",
-        "floods,",
+        "Hurricanes",
+        "droughts",
+        "floods",
         "and",
         "wildfires",
         "intensify",
         "."
       ],
-      "phraseMeaning": "ハリケーン、干ばつ、洪水、山火事が激化しています",
-      "segments": [
-        {
-          "word": "Hurricanes",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "droughts",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "floods",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "wildfires",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "intensify",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "ハリケーン、干ばつ、洪水、山火事が激化しています"
     },
     {
       "id": "phrase-16",
@@ -532,61 +363,10 @@
         "powered",
         "our",
         "development",
-        "."
+        ".",
+        ","
       ],
-      "phraseMeaning": "石炭、石油、天然ガスが私たちの発展を動かしました",
-      "segments": [
-        {
-          "word": "Coal",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "oil",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "natural",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "gas",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "powered",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "our",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "development",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "石炭、石油、天然ガスが私たちの発展を動かしました"
     },
     {
       "id": "phrase-28",

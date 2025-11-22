@@ -40,7 +40,7 @@ function ScoreBoard({
   onShowSettings
 }: ScoreBoardProps) {
   const [history, setHistory] = useState<SessionHistoryItem[]>([]);
-  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'breakdown' | 'goals' | 'history'>('stats');
+  const [activeTab, setActiveTab] = useState<'plan' | 'stats' | 'breakdown' | 'goals' | 'history' | 'settings'>('stats');
   const [statSubTab, setStatSubTab] = useState<'accuracy' | 'retention' | 'total'>('accuracy');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const historyLimit = isMobile ? 10 : 20;
@@ -116,11 +116,11 @@ function ScoreBoard({
   // 現在のセッションの正答率を計算
   const currentAccuracy = totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0;
 
-  // タブの配列（学習プラン、統計、学習状況、目標、履歴）
-  const tabs: Array<'plan' | 'stats' | 'breakdown' | 'goals' | 'history'> = 
+  // タブの配列（学習プラン、統計、学習状況、目標、履歴、設定）
+  const tabs: Array<'plan' | 'stats' | 'breakdown' | 'goals' | 'history' | 'settings'> = 
     mode === 'translation' || mode === 'spelling' 
-      ? ['plan', 'stats', 'breakdown', 'goals', 'history'] 
-      : ['plan', 'stats', 'breakdown', 'goals'];
+      ? ['plan', 'stats', 'breakdown', 'goals', 'history', 'settings'] 
+      : ['plan', 'stats', 'breakdown', 'goals', 'settings'];
 
   // タブ切り替え関数
   const handlePrevTab = () => {
@@ -136,13 +136,14 @@ function ScoreBoard({
   };
 
   // タブ名の取得
-  const getTabName = (tab: 'plan' | 'stats' | 'breakdown' | 'goals' | 'history') => {
+  const getTabName = (tab: 'plan' | 'stats' | 'breakdown' | 'goals' | 'history' | 'settings') => {
     switch (tab) {
       case 'plan': return '📋 プラン';
       case 'stats': return '📊 統計';
       case 'breakdown': return '📈 学習状況';
       case 'goals': return '🎯 目標';
       case 'history': return '📜 履歴';
+      case 'settings': return '⚙️ 設定';
     }
   };
 
@@ -183,6 +184,15 @@ function ScoreBoard({
               📜 履歴
             </button>
           )}
+          <button 
+            className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
+            onClick={() => {
+              setActiveTab('settings');
+              if (onShowSettings) onShowSettings();
+            }}
+          >
+            ⚙️ 設定
+          </button>
         </div>
       )}
 
@@ -198,15 +208,6 @@ function ScoreBoard({
           </button>
           <div className="current-tab-name">
             {getTabName(activeTab)}
-            {onShowSettings && (
-              <button 
-                className="settings-icon-btn"
-                onClick={onShowSettings}
-                title="学習設定"
-              >
-                ⚙️
-              </button>
-            )}
           </div>
           <button 
             className="tab-nav-btn tab-nav-next"
@@ -268,16 +269,6 @@ function ScoreBoard({
               <strong className="stat-text-value">{totalAnsweredCount}問</strong>
             </span>
           </div>
-          {onShowSettings && (
-            <div className="settings-return-btn-wrapper">
-              <button 
-                className="settings-return-btn"
-                onClick={onShowSettings}
-              >
-                ⚙️ 学習設定に戻る
-              </button>
-            </div>
-          )}
         </div>
       )}
       
@@ -445,6 +436,15 @@ function ScoreBoard({
                 ))
               )}
             </div>
+          </div>
+        </div>
+      )}
+      
+      {/* 設定タブ */}
+      {activeTab === 'settings' && onShowSettings && (
+        <div className="score-board-content">
+          <div className="settings-tab-message">
+            <p>学習設定画面が表示されます</p>
           </div>
         </div>
       )}

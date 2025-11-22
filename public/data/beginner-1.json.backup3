@@ -101,7 +101,7 @@
         "nervous",
         "."
       ],
-      "phraseMeaning": "私は期待と緊張で胸がいっぱいだった",
+      "phraseMeaning": "私はワクワクもしたし緊張もした",
       "segments": [
         {
           "word": "I",
@@ -153,8 +153,7 @@
         "from",
         "my",
         "elementary",
-        "school",
-        "."
+        "school."
       ],
       "phraseMeaning": "すべてがとても大きく、小学校とは違って見えました。",
       "segments": [
@@ -223,8 +222,7 @@
         "I",
         "entered",
         "the",
-        "classroom",
-        ",",
+        "classroom,",
         "I",
         "saw",
         "many",
@@ -232,8 +230,7 @@
         "that",
         "I",
         "didn't",
-        "know",
-        "."
+        "know."
       ],
       "phraseMeaning": "教室に入ると、知らない生徒がたくさんいました。",
       "segments": [
@@ -324,7 +321,7 @@
         "little",
         "afraid"
       ],
-      "phraseMeaning": "私は少し不安だった",
+      "phraseMeaning": "私は少し怖かった",
       "segments": [
         {
           "word": "I",
@@ -364,7 +361,7 @@
         "smile",
         "."
       ],
-      "phraseMeaning": "しかし笑顔を見せようと努めた",
+      "phraseMeaning": "しかし私は笑顔を作ろうとした",
       "segments": [
         {
           "word": "but",
@@ -492,7 +489,7 @@
         "me",
         "and",
         "said",
-        ","
+        "."
       ],
       "phraseMeaning": "彼女は私を見て言った",
       "segments": [
@@ -537,9 +534,7 @@
     {
       "id": "phrase-14",
       "words": [
-        "\"",
         "Hello",
-        ",",
         "my",
         "name",
         "is",
@@ -587,9 +582,7 @@
         "Nice",
         "to",
         "meet",
-        "you",
-        "!",
-        "\""
+        "you"
       ],
       "phraseMeaning": "よろしくね",
       "segments": [
@@ -809,7 +802,9 @@
         "both",
         "liked",
         "reading",
-        "books"
+        "books",
+        ",",
+        ","
       ],
       "phraseMeaning": "私たちは両方とも本を読むのが好きだった",
       "segments": [
@@ -859,7 +854,7 @@
         "tennis",
         "."
       ],
-      "phraseMeaning": "そしてテニスをすることも好きだった",
+      "phraseMeaning": "そしてテニスをすることが",
       "segments": [
         {
           "word": "and",
@@ -889,9 +884,10 @@
       "words": [
         "During",
         "lunch",
-        "time"
+        "time",
+        "."
       ],
-      "phraseMeaning": "昼食時間に",
+      "phraseMeaning": "昼食時間の間",
       "segments": [
         {
           "word": "During",
@@ -919,15 +915,13 @@
     {
       "id": "phrase-24",
       "words": [
-        ",",
         "Yuki",
         "introduced",
         "me",
         "to",
         "her",
         "other",
-        "friends",
-        "."
+        "friends."
       ],
       "phraseMeaning": "ユキは私を他の友達に紹介してくれました。",
       "segments": [
@@ -1172,7 +1166,9 @@
         "club",
         "was",
         "very",
-        "popular"
+        "popular",
+        ",",
+        ","
       ],
       "phraseMeaning": "テニス部がとても人気だということを",
       "segments": [
@@ -1351,15 +1347,13 @@
       "id": "phrase-36",
       "words": [
         "After",
-        "lunch",
-        ",",
+        "lunch,",
         "we",
         "had",
         "our",
         "first",
         "English",
-        "class",
-        "."
+        "class."
       ],
       "phraseMeaning": "昼食後、最初の英語の授業がありました。",
       "segments": [
@@ -1421,11 +1415,8 @@
       "words": [
         "The",
         "teacher",
-        ",",
         "Mr",
-        ".",
-        "Sato",
-        ","
+        "Sato"
       ],
       "phraseMeaning": "先生のサトウ先生は",
       "segments": [
@@ -1491,14 +1482,12 @@
         "He",
         "spoke",
         "English",
-        "slowly",
-        ",",
+        "slowly,",
         "so",
         "that",
         "everyone",
         "could",
-        "understand",
-        "."
+        "understand."
       ],
       "phraseMeaning": "彼はゆっくり英語を話したので、みんなが理解できました。",
       "segments": [
@@ -1569,8 +1558,7 @@
         "student",
         "to",
         "introduce",
-        "themselves",
-        "."
+        "themselves."
       ],
       "phraseMeaning": "彼は各生徒に自己紹介するように頼みました。",
       "segments": [
@@ -1624,11 +1612,10 @@
         "it",
         "was",
         "my",
-        "turn",
-        ",",
+        "turn,",
         "I",
         "stood",
-        "up"
+        "up,"
       ],
       "phraseMeaning": "私の番になったとき、立ち上がり、",
       "segments": [
@@ -1733,7 +1720,7 @@
         "beating",
         "fast"
       ],
-      "phraseMeaning": "私の心臓は速く鼓動していた",
+      "phraseMeaning": "私の心臓は速く鳴っていた",
       "segments": [
         {
           "word": "My",
@@ -1817,8 +1804,7 @@
         "hands",
         "when",
         "I",
-        "finished",
-        "."
+        "finished."
       ],
       "phraseMeaning": "私が終わると、みんなが拍手をしてくれました。",
       "segments": [
@@ -1924,7 +1910,8 @@
         "end",
         "of",
         "the",
-        "day"
+        "day",
+        "."
       ],
       "phraseMeaning": "その日の終わりに",
       "segments": [
@@ -2073,8 +2060,7 @@
         "the",
         "tennis",
         "club",
-        "tomorrow",
-        "."
+        "tomorrow."
       ],
       "phraseMeaning": "そして明日テニス部を見学する約束をしました。",
       "segments": [
@@ -2137,8 +2123,7 @@
         "When",
         "I",
         "got",
-        "home",
-        ",",
+        "home,",
         "my",
         "mother",
         "asked",
@@ -2240,7 +2225,7 @@
         "smiled",
         "and",
         "said",
-        ","
+        "."
       ],
       "phraseMeaning": "私は笑顔で言った",
       "segments": [
@@ -2275,11 +2260,9 @@
     {
       "id": "phrase-61",
       "words": [
-        "\"",
         "It",
         "was",
-        "wonderful",
-        "!"
+        "wonderful"
       ],
       "phraseMeaning": "素晴らしかったよ",
       "segments": [
@@ -2311,6 +2294,7 @@
         "friend",
         "named",
         "Yuki",
+        ",",
         ","
       ],
       "phraseMeaning": "私はユキという新しい友達ができたの",
@@ -2400,8 +2384,7 @@
         "junior",
         "high",
         "school",
-        ".",
-        "\""
+        "."
       ],
       "phraseMeaning": "私は本当に中学校を楽しむだろうと",
       "segments": [
@@ -2452,8 +2435,7 @@
       "id": "phrase-65",
       "words": [
         "That",
-        "night",
-        ","
+        "night"
       ],
       "phraseMeaning": "その夜",
       "segments": [
@@ -2696,7 +2678,8 @@
         "am",
         "looking",
         "forward",
-        "to"
+        "to",
+        "."
       ],
       "phraseMeaning": "私は楽しみにしている",
       "segments": [
@@ -2743,6 +2726,7 @@
         "days",
         "to",
         "come",
+        ".",
         "."
       ],
       "phraseMeaning": "明日とこれから来るすべての日々を",

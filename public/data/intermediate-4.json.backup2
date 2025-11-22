@@ -77,44 +77,7 @@
         "opportunities",
         "."
       ],
-      "phraseMeaning": "それは新しい機会への扉を開きます",
-      "segments": [
-        {
-          "word": "It",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "opens",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "doors",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "to",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "new",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "opportunities",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "新しい機会への扉を開きます"
     },
     {
       "id": "phrase-6",
@@ -167,180 +130,39 @@
       "words": [
         "It",
         "includes",
-        "language,",
-        "customs,",
+        "language",
+        "customs",
         "and",
         "traditions",
         "."
       ],
-      "phraseMeaning": "それは言語、習慣、伝統を含みます",
-      "segments": [
-        {
-          "word": "It",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "includes",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "language",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "customs",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "traditions",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "言語習慣伝統を含みます"
     },
     {
       "id": "phrase-10",
       "words": [
         "It",
         "includes",
-        "food,",
-        "clothing,",
+        "food",
+        "clothing",
         "and",
         "art",
         "."
       ],
-      "phraseMeaning": "それは食べ物、衣服、芸術を含みます",
-      "segments": [
-        {
-          "word": "It",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "includes",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "food",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "clothing",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "art",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "食べ物衣服芸術を含みます"
     },
     {
       "id": "phrase-11",
       "words": [
         "It",
         "includes",
-        "beliefs,",
-        "values,",
+        "beliefs",
+        "values",
         "and",
         "behaviors",
         "."
       ],
-      "phraseMeaning": "それは信念、価値観、行動を含みます",
-      "segments": [
-        {
-          "word": "It",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "includes",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "beliefs",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "values",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "behaviors",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "信念価値観行動を含みます"
     },
     {
       "id": "phrase-12",
@@ -474,54 +296,12 @@
         "language",
         "reflects",
         "its",
-        "culture's",
+        "culture",
         "unique",
         "worldview",
         "."
       ],
-      "phraseMeaning": "各言語はその文化独自の世界観を反映します",
-      "segments": [
-        {
-          "word": "Each",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "language",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "reflects",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "its",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "culture's",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "unique",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "worldview",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "各言語はその文化独自の世界観を反映します"
     },
     {
       "id": "phrase-22",
@@ -613,66 +393,25 @@
         "When",
         "a",
         "language",
-        "dies,",
+        "dies",
         "we",
         "lose",
         "cultural",
-        "heritage."
+        "heritage",
+        "."
       ],
-      "phraseMeaning": "言語が死ぬと、文化遺産が失われます。",
-      "segments": [
-        {
-          "word": "When",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "a",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "language",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "dies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "we",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "lose",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "cultural",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "heritage",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
+      "phraseMeaning": "言語が死ぬと文化遺産を失います"
+    },
+    {
+      "id": "phrase-29",
+      "words": [
+        "Communication",
+        "goes",
+        "beyond",
+        "words",
+        "."
       ],
-      "isUnknown": false
+      "phraseMeaning": "コミュニケーションは言葉を超えます"
     },
     {
       "id": "phrase-30",

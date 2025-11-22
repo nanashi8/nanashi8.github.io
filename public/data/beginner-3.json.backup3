@@ -22,7 +22,7 @@
     {
       "id": "phrase-2",
       "words": ["I", "like", "sports", "and", "music", "."],
-      "phraseMeaning": "私はスポーツと音楽が好きです。",
+      "phraseMeaning": "スポーツと音楽が好きです。",
       "segments": [
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "like", "meaning": "", "isUnknown": false},
@@ -36,7 +36,7 @@
     {
       "id": "phrase-3",
       "words": ["Let", "me", "tell", "you", "about", "them", "."],
-      "phraseMeaning": "それらについて紹介しますね。",
+      "phraseMeaning": "それらについて話させてください。",
       "segments": [
         {"word": "Let", "meaning": "", "isUnknown": false},
         {"word": "me", "meaning": "", "isUnknown": false},
@@ -50,11 +50,10 @@
     },
     {
       "id": "phrase-4",
-      "words": ["First", ",", "I", "will", "talk", "about", "sports", "."],
+      "words": ["First,", "I", "will", "talk", "about", "sports", "."],
       "phraseMeaning": "まず、スポーツについて話します。",
       "segments": [
-        {"word": "First", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "First,", "meaning": "", "isUnknown": false},
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "will", "meaning": "", "isUnknown": false},
         {"word": "talk", "meaning": "", "isUnknown": false},
@@ -224,11 +223,10 @@
     },
     {
       "id": "phrase-15",
-      "words": ["Next", ",", "I", "want", "to", "talk", "about", "music", "."],
+      "words": ["Next,", "I", "want", "to", "talk", "about", "music", "."],
       "phraseMeaning": "次に、音楽について話したいです。",
       "segments": [
-        {"word": "Next", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "Next,", "meaning": "", "isUnknown": false},
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "want", "meaning": "", "isUnknown": false},
         {"word": "to", "meaning": "", "isUnknown": false},
@@ -359,12 +357,11 @@
     },
     {
       "id": "phrase-23",
-      "words": ["Last", "month", ",", "I", "played", "in", "a", "concert", "."],
+      "words": ["Last", "month,", "I", "played", "in", "a", "concert", "."],
       "phraseMeaning": "先月、コンサートで演奏しました。",
       "segments": [
         {"word": "Last", "meaning": "", "isUnknown": false},
-        {"word": "month", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "month,", "meaning": "", "isUnknown": false},
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "played", "meaning": "", "isUnknown": false},
         {"word": "in", "meaning": "", "isUnknown": false},
@@ -376,14 +373,13 @@
     },
     {
       "id": "phrase-24",
-      "words": ["I", "was", "very", "nervous", ",", "but", "I", "did", "my", "best", "."],
-      "phraseMeaning": "とても緊張しましたが、精一杯がんばりました。",
+      "words": ["I", "was", "very", "nervous,", "but", "I", "did", "my", "best", "."],
+      "phraseMeaning": "とても緊張しましたが、全力を尽くしました。",
       "segments": [
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "was", "meaning": "", "isUnknown": false},
         {"word": "very", "meaning": "", "isUnknown": false},
-        {"word": "nervous", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "nervous,", "meaning": "", "isUnknown": false},
         {"word": "but", "meaning": "", "isUnknown": false},
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "did", "meaning": "", "isUnknown": false},
@@ -525,12 +521,11 @@
     },
     {
       "id": "phrase-33",
-      "words": ["Last", "year", ",", "my", "picture", "won", "a", "prize", "at", "a", "school", "art", "competition", "."],
+      "words": ["Last", "year,", "my", "picture", "won", "a", "prize", "at", "a", "school", "art", "competition", "."],
       "phraseMeaning": "去年、学校の美術コンクールで私の絵が賞を取りました。",
       "segments": [
         {"word": "Last", "meaning": "", "isUnknown": false},
-        {"word": "year", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "year,", "meaning": "", "isUnknown": false},
         {"word": "my", "meaning": "", "isUnknown": false},
         {"word": "picture", "meaning": "", "isUnknown": false},
         {"word": "won", "meaning": "", "isUnknown": false},
@@ -560,12 +555,11 @@
     },
     {
       "id": "phrase-35",
-      "words": ["On", "weekends", ",", "I", "spend", "time", "with", "my", "friends", "."],
+      "words": ["On", "weekends,", "I", "spend", "time", "with", "my", "friends", "."],
       "phraseMeaning": "週末は友達と時間を過ごします。",
       "segments": [
         {"word": "On", "meaning": "", "isUnknown": false},
-        {"word": "weekends", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "weekends,", "meaning": "", "isUnknown": false},
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "spend", "meaning": "", "isUnknown": false},
         {"word": "time", "meaning": "", "isUnknown": false},
@@ -729,7 +723,7 @@
     {
       "id": "phrase-45",
       "words": ["They", "also", "help", "me", "make", "new", "friends", "."],
-      "phraseMeaning": "趣味を通じて新しい友達もできます。",
+      "phraseMeaning": "それらはまた私が新しい友達を作るのを助けてくれます。",
       "segments": [
         {"word": "They", "meaning": "", "isUnknown": false},
         {"word": "also", "meaning": "", "isUnknown": false},
@@ -761,13 +755,12 @@
     },
     {
       "id": "phrase-47",
-      "words": ["In", "the", "future", ",", "I", "want", "to", "continue", "all", "my", "hobbies", "."],
+      "words": ["In", "the", "future,", "I", "want", "to", "continue", "all", "my", "hobbies", "."],
       "phraseMeaning": "将来、すべての趣味を続けたいです。",
       "segments": [
         {"word": "In", "meaning": "", "isUnknown": false},
         {"word": "the", "meaning": "", "isUnknown": false},
-        {"word": "future", "meaning": "", "isUnknown": false},
-        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "future,", "meaning": "", "isUnknown": false},
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "want", "meaning": "", "isUnknown": false},
         {"word": "to", "meaning": "", "isUnknown": false},
@@ -782,7 +775,7 @@
     {
       "id": "phrase-48",
       "words": ["I", "hope", "to", "get", "better", "at", "soccer", "and", "piano", "."],
-      "phraseMeaning": "サッカーとピアノがもっと上手になりたいです。",
+      "phraseMeaning": "サッカーとピアノで上達したいです。",
       "segments": [
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "hope", "meaning": "", "isUnknown": false},
@@ -850,7 +843,7 @@
     {
       "id": "phrase-52",
       "words": ["They", "give", "us", "something", "to", "look", "forward", "to", "."],
-      "phraseMeaning": "趣味は私たちに楽しみを与えてくれます。",
+      "phraseMeaning": "それらは私たちに楽しみにすることを与えてくれます。",
       "segments": [
         {"word": "They", "meaning": "", "isUnknown": false},
         {"word": "give", "meaning": "", "isUnknown": false},

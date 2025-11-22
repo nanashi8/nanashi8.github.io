@@ -22,7 +22,7 @@
     {
       "id": "phrase-2",
       "words": ["I", "like", "sports", "and", "music", "."],
-      "phraseMeaning": "私はスポーツと音楽が好きです。",
+      "phraseMeaning": "スポーツと音楽が好きです。",
       "segments": [
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "like", "meaning": "", "isUnknown": false},
@@ -36,7 +36,7 @@
     {
       "id": "phrase-3",
       "words": ["Let", "me", "tell", "you", "about", "them", "."],
-      "phraseMeaning": "それらについて紹介しますね。",
+      "phraseMeaning": "それらについて話させてください。",
       "segments": [
         {"word": "Let", "meaning": "", "isUnknown": false},
         {"word": "me", "meaning": "", "isUnknown": false},
@@ -377,7 +377,7 @@
     {
       "id": "phrase-24",
       "words": ["I", "was", "very", "nervous", ",", "but", "I", "did", "my", "best", "."],
-      "phraseMeaning": "とても緊張しましたが、精一杯がんばりました。",
+      "phraseMeaning": "とても緊張しましたが、全力を尽くしました。",
       "segments": [
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "was", "meaning": "", "isUnknown": false},
@@ -729,7 +729,7 @@
     {
       "id": "phrase-45",
       "words": ["They", "also", "help", "me", "make", "new", "friends", "."],
-      "phraseMeaning": "趣味を通じて新しい友達もできます。",
+      "phraseMeaning": "それらはまた私が新しい友達を作るのを助けてくれます。",
       "segments": [
         {"word": "They", "meaning": "", "isUnknown": false},
         {"word": "also", "meaning": "", "isUnknown": false},
@@ -782,7 +782,7 @@
     {
       "id": "phrase-48",
       "words": ["I", "hope", "to", "get", "better", "at", "soccer", "and", "piano", "."],
-      "phraseMeaning": "サッカーとピアノがもっと上手になりたいです。",
+      "phraseMeaning": "サッカーとピアノで上達したいです。",
       "segments": [
         {"word": "I", "meaning": "", "isUnknown": false},
         {"word": "hope", "meaning": "", "isUnknown": false},
@@ -850,7 +850,7 @@
     {
       "id": "phrase-52",
       "words": ["They", "give", "us", "something", "to", "look", "forward", "to", "."],
-      "phraseMeaning": "趣味は私たちに楽しみを与えてくれます。",
+      "phraseMeaning": "それらは私たちに楽しみにすることを与えてくれます。",
       "segments": [
         {"word": "They", "meaning": "", "isUnknown": false},
         {"word": "give", "meaning": "", "isUnknown": false},

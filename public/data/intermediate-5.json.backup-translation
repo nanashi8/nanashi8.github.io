@@ -93,7 +93,7 @@
         "happiness",
         "."
       ],
-      "phraseMeaning": "あなたのキャリアはライフスタイル、収入、幸福に影響します",
+      "phraseMeaning": "あなたのキャリアはライフスタイル収入幸福に影響します",
       "segments": [
         {
           "word": "Your",
@@ -226,7 +226,7 @@
         "prepare",
         "."
       ],
-      "phraseMeaning": "これらの変化を理解することはあなたが準備するのを助けます"
+      "phraseMeaning": "これらの変化を理解することは準備するのを助けます"
     },
     {
       "id": "phrase-9",

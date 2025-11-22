@@ -20,7 +20,7 @@
         "us",
         "."
       ],
-      "phraseMeaning": "私たちみんなにとって環境はとても大切です",
+      "phraseMeaning": "私たちの環境は私たち全員にとってとても重要です",
       "segments": [
         {
           "word": "Our",
@@ -82,11 +82,9 @@
         "depend",
         "on",
         "clean",
-        "air",
-        ",",
+        "air,",
         "fresh",
-        "water",
-        ",",
+        "water,",
         "and",
         "healthy",
         "land",
@@ -241,7 +239,7 @@
         "plants",
         "."
       ],
-      "phraseMeaning": "これらの問題は人間だけでなく、動物や植物にも影響を与えます",
+      "phraseMeaning": "これらの問題は人間だけでなく動物や植物にも影響します",
       "segments": [
         {
           "word": "These",
@@ -319,7 +317,7 @@
         "action",
         "."
       ],
-      "phraseMeaning": "私たちはこれらの問題を理解し、行動しなければなりません",
+      "phraseMeaning": "私たちはこれらの問題を理解し行動を起こさなければなりません",
       "segments": [
         {
           "word": "We",
@@ -681,7 +679,7 @@
         "sick",
         "."
       ],
-      "phraseMeaning": "汚染された空気は私たちを病気にすることがあります",
+      "phraseMeaning": "汚染された空気を吸うと私たちは病気になることがあります",
       "segments": [
         {
           "word": "When",
@@ -754,7 +752,7 @@
         "risk",
         "."
       ],
-      "phraseMeaning": "特に子どもやお年寄りは影響を受けやすいです",
+      "phraseMeaning": "子供や高齢者は特に危険にさらされています",
       "segments": [
         {
           "word": "Children",
@@ -970,7 +968,7 @@
         "air",
         "."
       ],
-      "phraseMeaning": "私たちは空気汚染を減らす必要があります",
+      "phraseMeaning": "私たちは空気中の汚染物質の量を減らす必要があります",
       "segments": [
         {
           "word": "We",
@@ -1148,10 +1146,10 @@
         "cooking",
         "and",
         "washing",
-        ",",
-        "."
+        ".",
+        ","
       ],
-      "phraseMeaning": "飲水、料理、洗濯などに水を使います",
+      "phraseMeaning": "私たちは飲む、料理する、洗うために水を使います",
       "segments": [
         {
           "word": "We",
@@ -1334,7 +1332,7 @@
         "streams",
         "."
       ],
-      "phraseMeaning": "農家が使う農薬が小川に流れ込むこともあります",
+      "phraseMeaning": "農家は作物に使用する化学物質が小川に流れ込みます",
       "segments": [
         {
           "word": "Farmers",
@@ -1743,7 +1741,7 @@
         "bodies",
         "."
       ],
-      "phraseMeaning": "その魚を食べると、私たちの体にもプラスチックが入ってしまいます",
+      "phraseMeaning": "これらの魚を食べると私たちの体にプラスチックが入ります",
       "segments": [
         {
           "word": "When",
@@ -2058,8 +2056,8 @@
         "and",
         "making",
         "paper",
-        ",",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "彼らはまた建築や紙を作るために木材を使います",
       "segments": [
@@ -2134,7 +2132,7 @@
         "planet",
         "."
       ],
-      "phraseMeaning": "森林は地球の肺と言われています",
+      "phraseMeaning": "しかし森林は私たちの惑星の肺です",
       "segments": [
         {
           "word": "But",
@@ -2322,7 +2320,7 @@
         "animals",
         "."
       ],
-      "phraseMeaning": "森林は無数の動物の棲み家でもあります",
+      "phraseMeaning": "森林はまた無数の動物の家を提供します",
       "segments": [
         {
           "word": "Forests",
@@ -2587,7 +2585,7 @@
         "challenge",
         "."
       ],
-      "phraseMeaning": "気候変動は最も大きな環境問題です",
+      "phraseMeaning": "気候変動はおそらく最大の環境課題です",
       "segments": [
         {
           "word": "Climate",
@@ -2928,7 +2926,7 @@
         "warmer",
         "."
       ],
-      "phraseMeaning": "その結果、地球が温暖化します",
+      "phraseMeaning": "その結果、惑星は温かくなります",
       "segments": [
         {
           "word": "As",
@@ -9892,8 +9890,8 @@
         "from",
         "the",
         "atmosphere",
-        ",",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "大気から二酸化炭素を吸収します",
       "segments": [
@@ -11726,6 +11724,7 @@
         "never",
         "give",
         "up",
+        ".",
         "."
       ],
       "phraseMeaning": "今日始めて決してあきらめないようにしましょう",

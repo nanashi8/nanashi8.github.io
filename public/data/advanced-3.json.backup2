@@ -20,55 +20,13 @@
       "id": "phrase-2",
       "words": [
         "Different",
-        "cultures,",
-        "languages,",
+        "cultures",
+        "languages",
         "and",
         "traditions",
         "."
       ],
-      "phraseMeaning": "異なる文化、言語、そして伝統",
-      "segments": [
-        {
-          "word": "Different",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "cultures",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "languages",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "traditions",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "異なる文化言語そして伝統"
     },
     {
       "id": "phrase-3",
@@ -100,41 +58,10 @@
         "others",
         "requires",
         "effort",
-        "."
+        ".",
+        ","
       ],
-      "phraseMeaning": "他者を理解するには努力が必要です",
-      "segments": [
-        {
-          "word": "Understanding",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "others",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "requires",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "effort",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "他者を理解するには努力が必要です"
     },
     {
       "id": "phrase-6",
@@ -145,7 +72,7 @@
         "rewards",
         "."
       ],
-      "phraseMeaning": "しかしそれは大きな報酬をもたらします"
+      "phraseMeaning": "しかし大きな報酬をもたらします"
     },
     {
       "id": "phrase-7",
@@ -185,55 +112,13 @@
     {
       "id": "phrase-10",
       "words": [
-        "Food,",
-        "shelter,",
-        "community,",
+        "Food",
+        "shelter",
+        "community",
         "meaning",
         "."
       ],
-      "phraseMeaning": "食物、避難所、コミュニティ、意味",
-      "segments": [
-        {
-          "word": "Food",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "shelter",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "community",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "meaning",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "食物避難所コミュニティ意味"
     },
     {
       "id": "phrase-11",
@@ -363,87 +248,21 @@
         "for",
         "left",
         "and",
-        "right,",
-        "and",
-        "use",
+        "right",
+        "."
+      ],
+      "phraseMeaning": "他のものは左と右の単語を欠いています"
+    },
+    {
+      "id": "phrase-22",
+      "words": [
+        "Use",
         "cardinal",
         "directions",
-        "instead."
+        "instead",
+        "."
       ],
-      "phraseMeaning": "他の言語は左右の言葉がなく、方位を使います。",
-      "segments": [
-        {
-          "word": "Others",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "lack",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "words",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "for",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "left",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "right",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "use",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "cardinal",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "directions",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "instead",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ],
-      "isUnknown": false
+      "phraseMeaning": "代わりに基本方位を使用します"
     },
     {
       "id": "phrase-23",
@@ -465,51 +284,10 @@
         "perceive",
         "the",
         "world",
-        "."
+        ".",
+        ","
       ],
-      "phraseMeaning": "私たちが世界を認識する方法に影響を与えます",
-      "segments": [
-        {
-          "word": "Influences",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "how",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "we",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "perceive",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "the",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "world",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "私たちが世界を認識する方法に影響を与えます"
     },
     {
       "id": "phrase-25",
@@ -529,117 +307,34 @@
         "When",
         "a",
         "language",
-        "dies,",
+        "dies",
         "knowledge",
         "is",
-        "lost:",
-        "traditional",
+        "lost",
+        "."
+      ],
+      "phraseMeaning": "言語が死ぬと知識が失われます"
+    },
+    {
+      "id": "phrase-27",
+      "words": [
+        "Traditional",
         "ecological",
-        "wisdom,",
-        "cultural",
-        "practices,",
+        "wisdom",
+        "."
+      ],
+      "phraseMeaning": "伝統的な生態学的知恵"
+    },
+    {
+      "id": "phrase-28",
+      "words": [
+        "Cultural",
+        "practices",
         "and",
-        "stories."
+        "stories",
+        "."
       ],
-      "phraseMeaning": "言語が死ぬと、知識が失われます:伝統的な生態学的知恵、文化的慣習、そして物語。",
-      "segments": [
-        {
-          "word": "When",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "a",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "language",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "dies",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "knowledge",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "is",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "lost",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ":",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "traditional",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "ecological",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "wisdom",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "cultural",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "practices",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "stories",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ],
-      "isUnknown": false
+      "phraseMeaning": "文化的慣行と物語"
     },
     {
       "id": "phrase-29",
@@ -672,118 +367,24 @@
         "world",
         "religions",
         "include",
-        "Christianity,",
-        "Islam,",
+        "Christianity",
+        "Islam",
         "Hinduism",
         "."
       ],
-      "phraseMeaning": "主要な世界の宗教にはキリスト教、イスラム教、ヒンドゥー教が含まれます",
-      "segments": [
-        {
-          "word": "Major",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "world",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "religions",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "include",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "Christianity",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "Islam",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "Hinduism",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "主要な世界の宗教にはキリスト教イスラム教ヒンドゥー教が含まれます"
     },
     {
       "id": "phrase-32",
       "words": [
-        "Buddhism,",
-        "Judaism,",
+        "Buddhism",
+        "Judaism",
         "and",
         "many",
         "others",
         "."
       ],
-      "phraseMeaning": "仏教、ユダヤ教、そして他の多く",
-      "segments": [
-        {
-          "word": "Buddhism",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "Judaism",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "many",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "others",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "仏教ユダヤ教そして他の多く"
     },
     {
       "id": "phrase-33",
@@ -814,109 +415,25 @@
     {
       "id": "phrase-35",
       "words": [
-        "Meaning,",
-        "purpose,",
-        "morality,",
+        "Meaning",
+        "purpose",
+        "morality",
         "afterlife",
         "."
       ],
-      "phraseMeaning": "意味、目的、道徳、来世",
-      "segments": [
-        {
-          "word": "Meaning",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "purpose",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "morality",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "afterlife",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "意味目的道徳来世"
     },
     {
       "id": "phrase-36",
       "words": [
         "Different",
-        "practices,",
-        "rituals,",
+        "practices",
+        "rituals",
         "and",
         "beliefs",
         "."
       ],
-      "phraseMeaning": "異なる実践、儀式、そして信念",
-      "segments": [
-        {
-          "word": "Different",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "practices",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "rituals",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "and",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "beliefs",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "異なる実践儀式そして信念"
     },
     {
       "id": "phrase-37",
@@ -933,44 +450,12 @@
     {
       "id": "phrase-38",
       "words": [
-        "Compassion,",
-        "justice,",
+        "Compassion",
+        "justice",
         "community",
         "."
       ],
-      "phraseMeaning": "思いやり、正義、コミュニティ",
-      "segments": [
-        {
-          "word": "Compassion",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "justice",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ",",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": "community",
-          "meaning": "",
-          "isUnknown": false
-        },
-        {
-          "word": ".",
-          "meaning": "",
-          "isUnknown": false
-        }
-      ]
+      "phraseMeaning": "思いやり正義コミュニティ"
     },
     {
       "id": "phrase-39",
@@ -1095,7 +580,7 @@
         "festivals",
         "."
       ],
-      "phraseMeaning": "異なる食べ物、音楽、そして祭り"
+      "phraseMeaning": "異なる食べ物音楽そして祭り"
     },
     {
       "id": "phrase-50",
@@ -1104,7 +589,8 @@
         "enriches",
         "daily",
         "life",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "これは日常生活を豊かにします"
     },
@@ -1142,7 +628,7 @@
         "origin",
         "."
       ],
-      "phraseMeaning": "肌の色、民族、または出身に基づいて"
+      "phraseMeaning": "肌の色民族または出身に基づいて"
     },
     {
       "id": "phrase-54",
@@ -1195,7 +681,8 @@
         "education",
         "and",
         "policy",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "教育と政策を通じて"
     },
@@ -1329,7 +816,8 @@
         "has",
         "been",
         "made",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "進歩が行われました"
     },
@@ -1544,7 +1032,7 @@
         "regimes",
         "."
       ],
-      "phraseMeaning": "民主主義、君主制、そして権威主義体制"
+      "phraseMeaning": "民主主義君主制そして権威主義体制"
     },
     {
       "id": "phrase-88",
@@ -1816,7 +1304,7 @@
         "destroyed",
         "."
       ],
-      "phraseMeaning": "失われた命、破壊されたコミュニティ"
+      "phraseMeaning": "失われた命破壊されたコミュニティ"
     },
     {
       "id": "phrase-112",
@@ -2006,7 +1494,7 @@
         "Organization",
         "."
       ],
-      "phraseMeaning": "国連、世界保健機関"
+      "phraseMeaning": "国連世界保健機関"
     },
     {
       "id": "phrase-129",
@@ -2261,7 +1749,8 @@
         "experiences",
         "and",
         "ideas",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "経験とアイデアを共有します"
     },
@@ -2378,7 +1867,7 @@
         "festivals",
         "."
       ],
-      "phraseMeaning": "展示、パフォーマンス、祭り"
+      "phraseMeaning": "展示パフォーマンス祭り"
     },
     {
       "id": "phrase-162",
@@ -2493,7 +1982,8 @@
         "interest",
         "in",
         "stability",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "これは安定性における相互利益を生み出します"
     },
@@ -2573,7 +2063,7 @@
         "poverty",
         "."
       ],
-      "phraseMeaning": "何百万人もが戦争、迫害、貧困から逃れます"
+      "phraseMeaning": "何百万人もが戦争迫害貧困から逃れます"
     },
     {
       "id": "phrase-179",
@@ -2604,7 +2094,8 @@
         "services",
         "and",
         "integration",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "サービスと統合を提供します"
     },
@@ -2960,7 +2451,8 @@
         "learn",
         "from",
         "this",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "現代社会はこれから学ぶことができます"
     },
@@ -3130,7 +2622,7 @@
         "devices",
         "."
       ],
-      "phraseMeaning": "スクリーンリーダー、補聴器、移動装置"
+      "phraseMeaning": "スクリーンリーダー補聴器移動装置"
     },
     {
       "id": "phrase-228",
@@ -3399,7 +2891,8 @@
         "opportunities",
         "and",
         "services",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "都市は機会とサービスを提供します"
     },
@@ -3425,7 +2918,8 @@
         "space",
         "and",
         "nature",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "農村地域はスペースと自然を提供します"
     },
@@ -3493,7 +2987,7 @@
         "values",
         "."
       ],
-      "phraseMeaning": "歴史、地理、価値観"
+      "phraseMeaning": "歴史地理価値観"
     },
     {
       "id": "phrase-259",
@@ -3671,7 +3165,8 @@
         "architecture",
         "pushes",
         "boundaries",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "現代建築は境界を押し広げます"
     },
@@ -3717,7 +3212,8 @@
         "makes",
         "literature",
         "accessible",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "翻訳は文学をアクセス可能にします"
     },
@@ -3798,7 +3294,7 @@
         "advertising",
         "."
       ],
-      "phraseMeaning": "映画、テレビ、ニュース、広告において"
+      "phraseMeaning": "映画テレビニュース広告において"
     },
     {
       "id": "phrase-286",
@@ -3845,7 +3341,8 @@
         "to",
         "better",
         "solutions",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "異なる視点がより良い解決策につながります"
     },
@@ -4022,7 +3519,7 @@
         "disability",
         "."
       ],
-      "phraseMeaning": "人種、ジェンダー、階級、性的指向、障害"
+      "phraseMeaning": "人種ジェンダー階級性的指向障害"
     },
     {
       "id": "phrase-306",
@@ -4276,7 +3773,8 @@
         "ensure",
         "democratic",
         "participation",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "投票権は民主的参加を保証します"
     },
@@ -5092,7 +4590,8 @@
         "immigrants",
         "maintain",
         "culture",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "移民は文化を維持すべきか"
     },

@@ -50,7 +50,7 @@
         "action",
         "."
       ],
-      "phraseMeaning": "気候変動、資源の枯渇、汚染は緊急の行動を必要とします",
+      "phraseMeaning": "気候変動、資源枯渇、汚染は緊急の行動を必要とします",
       "segments": [
         {
           "word": "Climate",
@@ -245,7 +245,7 @@
         "models",
         "."
       ],
-      "phraseMeaning": "それは新しい経済モデルを要求します"
+      "phraseMeaning": "新しい経済モデルを要求します"
     },
     {
       "id": "phrase-10",
@@ -259,7 +259,7 @@
         "action",
         "."
       ],
-      "phraseMeaning": "それは個人的および集団的行動を求めます"
+      "phraseMeaning": "個人的および集団的行動を求めます"
     },
     {
       "id": "phrase-11",
@@ -532,7 +532,8 @@
         "powered",
         "our",
         "development",
-        "."
+        ".",
+        ","
       ],
       "phraseMeaning": "石炭、石油、天然ガスが私たちの発展を動かしました",
       "segments": [
