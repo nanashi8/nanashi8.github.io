@@ -10514,18 +10514,9 @@ option {
   font-weight: 600;
 }
 
-/* 学習設定・読解開始ボタン（大きいボタン・縦並び） */
-.reading-action-buttons {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  margin-bottom: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.reading-action-buttons .settings-toggle-btn,
-.reading-action-buttons .start-btn {
+/* 長文タブの学習設定・読解開始ボタンサイズ */
+.comprehensive-reading-view .quiz-controls .settings-toggle-btn,
+.comprehensive-reading-view .quiz-controls .start-btn {
   width: 495px;
   height: 48px;
   max-width: 100%;
