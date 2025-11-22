@@ -19,6 +19,20 @@ interface WordPopup {
   y: number;
 }
 
+// 難易度を日本語に変換
+function getLevelLabel(level: string): string {
+  const levelMap: Record<string, string> = {
+    'beginner': '初級',
+    'intermediate': '中級',
+    'advanced': '上級',
+    'Advanced': '上級',
+    '初級': '初級',
+    '中級': '中級',
+    '上級': '上級'
+  };
+  return levelMap[level] || level;
+}
+
 function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingViewProps) {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
@@ -835,7 +849,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {passage.title} ({passage.level} - {passage.actualWordCount}語)
+                  {passage.title} ({getLevelLabel(passage.level)} - {passage.actualWordCount}語)
                 </option>
               ))}
             </select>
@@ -1127,16 +1141,25 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               </div>
               <div className="full-text-content">
                 {(() => {
-                  // フレーズから自然な文章を構築
+                  // フレーズから自然な文章を構築（文法エラーを自動修正）
                   let fullText = '';
+                  let lastWasPeriod = true; // 最初は文頭なのでtrue
+                  
                   currentPassage.phrases.forEach((phrase) => {
                     phrase.segments.forEach((seg) => {
-                      const word = seg.word.trim();
+                      let word = seg.word.trim();
                       if (word && word !== '-') {
-                        // 句読点の前にスペースを入れない
+                        // 句読点の場合
                         if (/^[.,!?;:]$/.test(word)) {
                           fullText += word;
+                          lastWasPeriod = /^[.!?]$/.test(word);
                         } else {
+                          // 文頭の場合は大文字に変換
+                          if (lastWasPeriod && word.length > 0) {
+                            word = word.charAt(0).toUpperCase() + word.slice(1);
+                            lastWasPeriod = false;
+                          }
+                          
                           // 単語の前にスペースを追加（文頭以外）
                           if (fullText.length > 0 && !fullText.endsWith(' ')) {
                             fullText += ' ';
@@ -1150,7 +1173,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   // ピリオド、感嘆符、疑問符で文を分割
                   const sentences = fullText.split(/([.!?])\s+/).filter(s => s.trim());
                   
-                  // 文を再構築して段落に分ける
+                  // 文を再構築
                   const reconstructedSentences: string[] = [];
                   for (let i = 0; i < sentences.length; i += 2) {
                     const sentence = sentences[i];
@@ -1158,13 +1181,28 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     reconstructedSentences.push((sentence + punctuation).trim());
                   }
 
-                  // 3〜5文ごとに段落を作成
+                  // 意味のある段落に分ける（語数ベース）
                   const paragraphs: string[] = [];
-                  const sentencesPerParagraph = 4; // 4文ごとに段落分け
+                  let currentParagraph: string[] = [];
+                  let wordCount = 0;
+                  const targetWordsPerParagraph = 60; // 約60語/段落
                   
-                  for (let i = 0; i < reconstructedSentences.length; i += sentencesPerParagraph) {
-                    const paragraphSentences = reconstructedSentences.slice(i, i + sentencesPerParagraph);
-                    paragraphs.push(paragraphSentences.join(' '));
+                  reconstructedSentences.forEach((sentence, idx) => {
+                    const sentenceWordCount = sentence.split(/\s+/).length;
+                    currentParagraph.push(sentence);
+                    wordCount += sentenceWordCount;
+                    
+                    // 60語以上、または最後の文の場合に段落を確定
+                    if (wordCount >= targetWordsPerParagraph || idx === reconstructedSentences.length - 1) {
+                      paragraphs.push(currentParagraph.join(' '));
+                      currentParagraph = [];
+                      wordCount = 0;
+                    }
+                  });
+
+                  // 最後に残った文があれば段落に追加
+                  if (currentParagraph.length > 0) {
+                    paragraphs.push(currentParagraph.join(' '));
                   }
 
                   return paragraphs.map((para, idx) => (
