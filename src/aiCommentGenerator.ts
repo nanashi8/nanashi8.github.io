@@ -489,25 +489,25 @@ export function generateAIComment(
 // 人格情報の定義
 export const PERSONALITY_INFO = {
   'drill-sergeant': {
-    avatar: '🔥',
+    avatar: '🎖️',
     name: '鬼軍曹',
     description: '厳しく鍛える',
     tone: '厳しく、妥協なし、結果重視'
   },
   'kind-teacher': {
-    avatar: '😊',
+    avatar: '👩‍🏫',
     name: '優しい先生',
     description: '丁寧にサポート',
     tone: '優しく、丁寧、でも正確'
   },
   'analyst': {
-    avatar: '🤖',
+    avatar: '📊',
     name: '冷静な分析官',
     description: 'データで判断',
     tone: '感情なし、事実のみ、統計重視'
   },
   'enthusiastic-coach': {
-    avatar: '🏆',
+    avatar: '🔥',
     name: '熱血コーチ',
     description: '熱く応援',
     tone: '熱く、ポジティブ、挑戦的'
