@@ -32,7 +32,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
   const [showFullText, setShowFullText] = useState(false);
   const [showFullTranslation, setShowFullTranslation] = useState(false);
-  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
   const [readingStarted, setReadingStarted] = useState(false);
   const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -447,15 +447,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   }, [passages]);
 
-  // 学習設定モーダル
-  const handleOpenSettings = () => {
-    setShowSettingsModal(true);
-  };
-
-  const handleCloseSettings = () => {
-    setShowSettingsModal(false);
-  };
-
   // 学習設定に戻る
   const handleBackToSettings = () => {
     setReadingStarted(false);
@@ -781,15 +772,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   return (
     <div className="comprehensive-reading-view">
 
-      <div className="reading-header">
-        
-        {/* 学習設定・読解開始ボタン */}
-        <div className="reading-action-buttons">
+      {!readingStarted && (
+        <div className="quiz-controls">
           <button 
-            onClick={handleOpenSettings}
+            onClick={() => setShowSettings(!showSettings)} 
             className="settings-toggle-btn"
           >
-            ⚙️ 学習設定
+            ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
           </button>
           <button 
             onClick={handleStartReading}
@@ -799,60 +788,45 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📖 読解開始
           </button>
         </div>
+      )}
 
-        {/* 難易度とパッセージを横並び（学習設定モーダル内に移動予定） */}
-        {showSettingsModal && (
-          <>
-            <div className="modal-overlay" onClick={handleCloseSettings} />
-            <div className="settings-modal">
-              <div className="modal-header">
-                <h3>学習設定</h3>
-                <button onClick={handleCloseSettings} className="modal-close">✕</button>
-              </div>
-              <div className="modal-body">
-                <div className="reading-selectors">
-                  <div className="filter-controls">
-                    <label htmlFor="difficulty-filter">難易度: </label>
-                    <select 
-                      id="difficulty-filter"
-                      value={difficultyFilter} 
-                      onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
-                      title="難易度を選択"
-                      className="compact-select"
-                    >
-                      <option value="all">全て</option>
-                      <option value="初級">初級</option>
-                      <option value="中級">中級</option>
-                      <option value="上級">上級</option>
-                    </select>
-                  </div>
+      {/* 学習設定パネル */}
+      {!readingStarted && showSettings && (
+        <div className="study-settings-panel">
+          <h3>📊 学習設定</h3>
+          
+          <div className="filter-group">
+            <label htmlFor="difficulty-filter">⭐ 難易度:</label>
+            <select
+              id="difficulty-filter"
+              value={difficultyFilter}
+              onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
+              className="select-input"
+            >
+              <option value="all">全て</option>
+              <option value="初級">初級</option>
+              <option value="中級">中級</option>
+              <option value="上級">上級</option>
+            </select>
+          </div>
 
-                  <div className="passage-selector">
-                    <label htmlFor="passage-select">パッセージ: </label>
-                    <select 
-                      id="passage-select"
-                      value={selectedPassageId || ''} 
-                      onChange={(e) => handleSelectPassage(e.target.value)}
-                      title="パッセージを選択"
-                      className="compact-select"
-                    >
-                      {filteredPassages.map(passage => (
-                        <option key={passage.id} value={passage.id}>
-                          {passage.title} ({passage.level} - {passage.actualWordCount}語)
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div className="modal-footer">
-                <button onClick={handleCloseSettings} className="btn-confirm">確定</button>
-              </div>
-            </div>
-          </>
-        )}
-
-      </div>
+          <div className="filter-group">
+            <label htmlFor="passage-select">📖 パッセージ:</label>
+            <select
+              id="passage-select"
+              value={selectedPassageId || ''}
+              onChange={(e) => handleSelectPassage(e.target.value)}
+              className="select-input"
+            >
+              {filteredPassages.map(passage => (
+                <option key={passage.id} value={passage.id}>
+                  {passage.title} ({passage.level} - {passage.actualWordCount}語)
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      )}
 
       {/* 4タブ構造 + 操作ボタン（読解開始後に表示） */}
       {readingStarted && (
