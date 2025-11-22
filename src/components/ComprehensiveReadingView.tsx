@@ -350,11 +350,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       : passages.filter(p => p.level === difficultyFilter);
     
     // 難易度順（初級→中級→上級）、語数順（少ない→多い）でソート
-    const levelOrder = { '初級': 1, '中級': 2, '上級': 3 };
+    const levelOrder: Record<string, number> = { 
+      '初級': 1, 'beginner': 1,
+      '中級': 2, 'intermediate': 2,
+      '上級': 3, 'advanced': 3
+    };
     return filtered.sort((a, b) => {
       // まず難易度で比較
-      const levelA = levelOrder[a.level as keyof typeof levelOrder] || 999;
-      const levelB = levelOrder[b.level as keyof typeof levelOrder] || 999;
+      const levelA = levelOrder[a.level] || 999;
+      const levelB = levelOrder[b.level] || 999;
       if (levelA !== levelB) return levelA - levelB;
       
       // 難易度が同じ場合は語数で比較
