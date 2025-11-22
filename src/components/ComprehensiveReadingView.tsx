@@ -456,6 +456,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     setShowSettingsModal(false);
   };
 
+  // 学習設定に戻る
+  const handleBackToSettings = () => {
+    setReadingStarted(false);
+    setCurrentPhraseIndex(0);
+    setReadingSubTab('reading');
+  };
+
   // 読解開始
   const handleStartReading = () => {
     if (!selectedPassageId) {
@@ -780,13 +787,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         <div className="reading-action-buttons">
           <button 
             onClick={handleOpenSettings}
-            className="btn-settings"
+            className="settings-toggle-btn"
           >
             ⚙️ 学習設定
           </button>
           <button 
             onClick={handleStartReading}
-            className="btn-start-reading"
+            className="start-btn"
             disabled={!selectedPassageId}
           >
             📖 読解開始
@@ -870,10 +877,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button
             className="sub-tab-btn"
-            onClick={handleOpenSettings}
-            title="学習設定を開く"
+            onClick={handleBackToSettings}
+            title="学習設定に戻る"
           >
-            ⚙️ 学習設定
+            ⚙️ 学習設定に戻る
           </button>
           <div className="sub-tab-divider"></div>
           <button 
@@ -1034,9 +1041,16 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                             className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
                             onClick={(e) => {
                               e.preventDefault();
+                              e.stopPropagation();
                               handleMarkUnknown(phraseIdx, segIdx, e);
+                              return false;
                             }}
-                            onDoubleClick={(e) => handleWordDoubleClick(segment.word, e)}
+                            onDoubleClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              handleWordDoubleClick(segment.word, e);
+                              return false;
+                            }}
                             title="タップ: 保存対象マーク / ダブルタップ: 詳細表示"
                           >
                             <div className="word-card-word">
@@ -1157,7 +1171,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
                   // 3〜5文ごとに段落を作成
                   const paragraphs: string[] = [];
-                  const sentencesPerParagraph = Math.max(3, Math.ceil(reconstructedSentences.length / 3));
+                  const sentencesPerParagraph = 4; // 4文ごとに段落分け
                   
                   for (let i = 0; i < reconstructedSentences.length; i += sentencesPerParagraph) {
                     const paragraphSentences = reconstructedSentences.slice(i, i + sentencesPerParagraph);
@@ -1228,7 +1242,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
                   // 3〜5文ごとに段落を作成（全文タブと同じロジック）
                   const paragraphs: string[] = [];
-                  const sentencesPerParagraph = Math.max(3, Math.ceil(translatedSentences.length / 3));
+                  const sentencesPerParagraph = 4; // 4文ごとに段落分け
                   
                   for (let i = 0; i < translatedSentences.length; i += sentencesPerParagraph) {
                     const paragraphSentences = translatedSentences.slice(i, i + sentencesPerParagraph);
