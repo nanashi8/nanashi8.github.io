@@ -2,12 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import { errorLogger, ErrorLog } from '../errorLogger';
+import { ENABLE_ERROR_LOGGING } from '../config/errorLogging';
 
 interface ErrorLogPanelProps {
   onClose: () => void;
 }
 
 export function ErrorLogPanel({ onClose }: ErrorLogPanelProps) {
+  // Error logging is disabled - panel is hidden
+  if (!ENABLE_ERROR_LOGGING) {
+    return null;
+  }
+  
   const [logs, setLogs] = useState<ErrorLog[]>([]);
 
   useEffect(() => {
@@ -78,6 +84,11 @@ export function ErrorLogPanel({ onClose }: ErrorLogPanelProps) {
 
 // フローティングエラーバッジ（最小化表示）
 export function ErrorBadge() {
+  // Error logging is disabled - badge is hidden
+  if (!ENABLE_ERROR_LOGGING) {
+    return null;
+  }
+  
   const [errorCount, setErrorCount] = useState(0);
   const [showPanel, setShowPanel] = useState(false);
 

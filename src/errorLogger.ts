@@ -1,4 +1,5 @@
 // エラーログ収集システム
+import { ENABLE_ERROR_LOGGING } from './config/errorLogging';
 
 export interface ErrorLog {
   timestamp: number;
@@ -29,6 +30,11 @@ class ErrorLogger {
 
   // コンソールをインターセプト
   interceptConsole(): void {
+    // Error logging is disabled - console interception is skipped
+    if (!ENABLE_ERROR_LOGGING) {
+      return;
+    }
+    
     console.error = (...args: any[]) => {
       this.addLog('error', args);
       this.originalConsoleError(...args);
@@ -51,6 +57,11 @@ class ErrorLogger {
   }
 
   private addLog(type: 'error' | 'warn' | 'info', args: any[]): void {
+    // Error logging is disabled - logs are not stored
+    if (!ENABLE_ERROR_LOGGING) {
+      return;
+    }
+    
     const message = args.map(arg => {
       if (arg instanceof Error) {
         return arg.message;
@@ -101,6 +112,11 @@ class ErrorLogger {
 
   // グローバルエラーをキャプチャ
   captureGlobalErrors(): void {
+    // Error logging is disabled - global error capturing is skipped
+    if (!ENABLE_ERROR_LOGGING) {
+      return;
+    }
+    
     window.addEventListener('error', (event) => {
       const msg = `${event.message}`;
       if (this.ignorePatterns.some(p => msg.includes(p))) return;
@@ -180,6 +196,11 @@ export const errorLogger = new ErrorLogger();
 
 // 初期化
 export function initErrorLogger(): void {
+  // Error logging is disabled - initialization is skipped
+  if (!ENABLE_ERROR_LOGGING) {
+    return;
+  }
+  
   errorLogger.interceptConsole();
   errorLogger.captureGlobalErrors();
   console.log('🔍 Error logger initialized');
