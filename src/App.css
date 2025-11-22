@@ -10524,6 +10524,13 @@ option {
   flex-wrap: wrap;
 }
 
+.reading-action-buttons .settings-toggle-btn,
+.reading-action-buttons .start-btn {
+  width: 495px;
+  height: 48px;
+  max-width: 100%;
+}
+
 /* モーダルオーバーレイ */
 .modal-overlay {
   position: fixed;
@@ -10819,18 +10826,17 @@ option {
 /* 難易度とパッセージを横並び */
 .reading-selectors {
   display: flex;
+  flex-direction: column;
   gap: 15px;
   margin-bottom: 12px;
-  flex-wrap: wrap;
 }
 
 .reading-selectors .filter-controls,
 .reading-selectors .passage-selector {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
-  flex: 1;
-  min-width: 200px;
 }
 
 .reading-selectors label {
@@ -10839,11 +10845,10 @@ option {
   white-space: nowrap;
   font-size: 0.95em;
   text-align: left;
-  align-self: flex-start;
 }
 
 .compact-select {
-  flex: 1;
+  width: 100%;
   padding: 10px 14px;
   border: 1.5px solid #d0d5dd;
   border-radius: 8px;
