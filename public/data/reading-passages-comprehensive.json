@@ -51439,11 +51439,6 @@
             "word": "to",
             "meaning": "〜すること",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -51464,7 +51459,7 @@
         "phraseMeaning": "昼食の後",
         "segments": [
           {
-            "word": "After",
+            "word": "after",
             "meaning": "〜の後",
             "isUnknown": false
           },
@@ -52135,11 +52130,6 @@
             "word": "better",
             "meaning": "より良い",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -52162,7 +52152,7 @@
         "phraseMeaning": "その日の終わりに",
         "segments": [
           {
-            "word": "At",
+            "word": "at",
             "meaning": "〜に",
             "isUnknown": false
           },
@@ -52310,12 +52300,7 @@
             "isUnknown": false
           },
           {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
-          },
-          {
-            "word": "And",
+            "word": "and",
             "meaning": "そして",
             "isUnknown": false
           },
@@ -53688,11 +53673,6 @@
             "word": "me",
             "meaning": "私を",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -53715,7 +53695,7 @@
         "phraseMeaning": "もちろん、と私は答えました",
         "segments": [
           {
-            "word": "Of",
+            "word": "of",
             "meaning": "〜の",
             "isUnknown": false
           },
@@ -54115,11 +54095,6 @@
             "word": "said",
             "meaning": "言いました",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -54142,7 +54117,7 @@
         "phraseMeaning": "朝食の後、私たちは外出することに決めました",
         "segments": [
           {
-            "word": "After",
+            "word": "after",
             "meaning": "後、",
             "isUnknown": false
           },
@@ -54746,11 +54721,6 @@
             "word": "busy",
             "meaning": "忙しい",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -54773,7 +54743,7 @@
         "phraseMeaning": "しかし彼はまだ私たちのために時間を作ります",
         "segments": [
           {
-            "word": "But",
+            "word": "but",
             "meaning": "しかし",
             "isUnknown": false
           },
@@ -54877,11 +54847,6 @@
             "word": "that",
             "meaning": "そのこと",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ]
       },
@@ -54899,7 +54864,7 @@
         "phraseMeaning": "正午に、私たちは一緒に昼食を食べました",
         "segments": [
           {
-            "word": "At",
+            "word": "at",
             "meaning": "に",
             "isUnknown": false
           },
@@ -55077,11 +55042,6 @@
             "word": "great",
             "meaning": "素晴らしい",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -55105,7 +55065,7 @@
         "phraseMeaning": "午後、私たちは写真を撮りました",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -55732,11 +55692,6 @@
             "word": "together",
             "meaning": "一緒に",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -55762,7 +55717,7 @@
         "phraseMeaning": "夕食に、私たちはピザを注文しました",
         "segments": [
           {
-            "word": "For",
+            "word": "for",
             "meaning": "に、",
             "isUnknown": false
           },
@@ -56039,11 +55994,6 @@
             "word": "again",
             "meaning": "また",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -56068,7 +56018,7 @@
         "phraseMeaning": "夕食の後、私たちは映画を見ました",
         "segments": [
           {
-            "word": "After",
+            "word": "after",
             "meaning": "後、",
             "isUnknown": false
           },
@@ -56253,11 +56203,6 @@
             "word": "much",
             "meaning": "多くの",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -56283,7 +56228,7 @@
         "phraseMeaning": "寝る前に、私は両親に感謝しました",
         "segments": [
           {
-            "word": "Before",
+            "word": "before",
             "meaning": "前に、",
             "isUnknown": false
           },
@@ -57210,11 +57155,6 @@
             "word": "teammates",
             "meaning": "チームメイト",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -57238,7 +57178,7 @@
         "phraseMeaning": "毎日放課後に",
         "segments": [
           {
-            "word": "After",
+            "word": "after",
             "meaning": "後で",
             "isUnknown": false
           },
@@ -57586,11 +57526,6 @@
             "word": "catch",
             "meaning": "捕まえる",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -57611,7 +57546,7 @@
         "phraseMeaning": "公園で父と",
         "segments": [
           {
-            "word": "With",
+            "word": "with",
             "meaning": "〜と",
             "isUnknown": false
           },
@@ -58040,12 +57975,7 @@
             "isUnknown": false
           },
           {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
-          },
-          {
-            "word": "And",
+            "word": "and",
             "meaning": "そして",
             "isUnknown": false
           },
@@ -58420,11 +58350,6 @@
             "word": "nervous",
             "meaning": "緊張した",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -58448,7 +58373,7 @@
         "phraseMeaning": "でも全力を尽くしました",
         "segments": [
           {
-            "word": "But",
+            "word": "but",
             "meaning": "しかし",
             "isUnknown": false
           },
@@ -58946,11 +58871,6 @@
             "word": "pictures",
             "meaning": "写真",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -58973,7 +58893,7 @@
         "phraseMeaning": "動物と自然の",
         "segments": [
           {
-            "word": "Of",
+            "word": "of",
             "meaning": "〜の",
             "isUnknown": false
           },
@@ -59125,11 +59045,6 @@
             "word": "prize",
             "meaning": "賞",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -59155,7 +59070,7 @@
         "phraseMeaning": "学校の美術コンクールで",
         "segments": [
           {
-            "word": "At",
+            "word": "at",
             "meaning": "〜で",
             "isUnknown": false
           },
@@ -59219,11 +59134,6 @@
             "word": "happy",
             "meaning": "幸せな",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -59247,7 +59157,7 @@
         "phraseMeaning": "週末は時間を過ごします",
         "segments": [
           {
-            "word": "On",
+            "word": "on",
             "meaning": "〜の上に",
             "isUnknown": false
           },
@@ -59269,11 +59179,6 @@
           {
             "word": "time",
             "meaning": "時間",
-            "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
             "isUnknown": false
           }
         ],
@@ -59297,7 +59202,7 @@
         "phraseMeaning": "友達と",
         "segments": [
           {
-            "word": "With",
+            "word": "with",
             "meaning": "〜と",
             "isUnknown": false
           },
@@ -59360,11 +59265,6 @@
             "word": "movies",
             "meaning": "映画",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -59389,7 +59289,7 @@
         "phraseMeaning": "または一緒にゲームをします",
         "segments": [
           {
-            "word": "Or",
+            "word": "or",
             "meaning": "または",
             "isUnknown": false
           },
@@ -59516,12 +59416,7 @@
             "isUnknown": false
           },
           {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
-          },
-          {
-            "word": "And",
+            "word": "and",
             "meaning": "そして",
             "isUnknown": false
           },
@@ -59696,11 +59591,6 @@
             "word": "parents",
             "meaning": "両親",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -59721,7 +59611,7 @@
         "phraseMeaning": "誕生日にカメラを",
         "segments": [
           {
-            "word": "For",
+            "word": "for",
             "meaning": "〜のために",
             "isUnknown": false
           },
@@ -59799,11 +59689,6 @@
             "word": "pictures",
             "meaning": "写真",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -59829,7 +59714,7 @@
         "phraseMeaning": "美しい場所のそして特別な瞬間の",
         "segments": [
           {
-            "word": "Of",
+            "word": "of",
             "meaning": "〜の",
             "isUnknown": false
           },
@@ -60162,11 +60047,6 @@
             "word": "interests",
             "meaning": "興味",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -60190,7 +60070,7 @@
         "phraseMeaning": "将来、続けたいです",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -60310,11 +60190,6 @@
             "word": "better",
             "meaning": "より良い",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -60338,7 +60213,7 @@
         "phraseMeaning": "サッカーとピアノで",
         "segments": [
           {
-            "word": "At",
+            "word": "at",
             "meaning": "〜で",
             "isUnknown": false
           },
@@ -60652,11 +60527,6 @@
             "word": "something",
             "meaning": "何か",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -60679,7 +60549,7 @@
         "phraseMeaning": "楽しみにするための",
         "segments": [
           {
-            "word": "To",
+            "word": "to",
             "meaning": "〜へ",
             "isUnknown": false
           },
@@ -61710,11 +61580,6 @@
             "word": "disease",
             "meaning": "病気",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ]
       },
@@ -61731,7 +61596,7 @@
         "phraseMeaning": "一部の都市では空気がとても悪く人々はマスクを着用します",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -73257,11 +73122,6 @@
             "word": "worse",
             "meaning": "より悪い",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -73288,7 +73148,7 @@
         "phraseMeaning": "しかしまだ違いを生む時間があります",
         "segments": [
           {
-            "word": "But",
+            "word": "but",
             "meaning": "しかし",
             "isUnknown": false
           },
@@ -73382,11 +73242,6 @@
             "word": "hope",
             "meaning": "希望",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -73409,7 +73264,7 @@
         "phraseMeaning": "決意と協力があれば",
         "segments": [
           {
-            "word": "With",
+            "word": "with",
             "meaning": "〜と",
             "isUnknown": false
           },
@@ -74053,11 +73908,6 @@
             "word": "dramatically",
             "meaning": "劇的に",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -74090,7 +73940,7 @@
         "phraseMeaning": "過去百年で私たちは驚くべき進歩を見てきました",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -77277,11 +77127,6 @@
             "word": "universe",
             "meaning": "宇宙",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ]
       },
@@ -77297,7 +77142,7 @@
         "phraseMeaning": "1969年に人類は初めて月を歩きました",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -78082,11 +77927,6 @@
             "word": "tourism",
             "meaning": "観光",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -78114,7 +77954,7 @@
         "phraseMeaning": "将来普通の人々が宇宙に旅行するかもしれません",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -79490,11 +79330,6 @@
             "word": "world",
             "meaning": "世界",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -79519,7 +79354,7 @@
         "phraseMeaning": "長年私たちは化石燃料に頼ってきました",
         "segments": [
           {
-            "word": "For",
+            "word": "for",
             "meaning": "〜のために",
             "isUnknown": false
           },
@@ -80907,11 +80742,6 @@
             "word": "information",
             "meaning": "情報",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -80938,7 +80768,7 @@
         "phraseMeaning": "前にそのインターネット人々頼った",
         "segments": [
           {
-            "word": "Before",
+            "word": "before",
             "meaning": "前に",
             "isUnknown": false
           },
@@ -83040,11 +82870,6 @@
             "word": "research",
             "meaning": "研究",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ]
       },
@@ -83063,7 +82888,7 @@
         "phraseMeaning": "将来移植のために臓器全体を印刷するかもしれません",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "〜の中に",
             "isUnknown": false
           },
@@ -89139,11 +88964,6 @@
             "word": "risks",
             "meaning": "リスク",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ]
       },
@@ -89161,7 +88981,7 @@
         "phraseMeaning": "科学と技術を賢く使うことによってそして技術賢く。",
         "segments": [
           {
-            "word": "By",
+            "word": "by",
             "meaning": "〜によって",
             "isUnknown": false
           },
@@ -98737,11 +98557,6 @@
             "word": "life",
             "meaning": "人生",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ]
       },
@@ -98762,7 +98577,7 @@
         "phraseMeaning": "しかし慢性的なストレスは心と体の両方を害する可能性がありますそして体。",
         "segments": [
           {
-            "word": "But",
+            "word": "but",
             "meaning": "しかし",
             "isUnknown": false
           },
@@ -102897,11 +102712,6 @@
             "word": "indicator",
             "meaning": "指標",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "。",
-            "isUnknown": false
           }
         ],
         "isUnknown": false,
@@ -102933,7 +102743,7 @@
         "phraseMeaning": "喉が渇いたと感じる頃にはすでに脱水状態です",
         "segments": [
           {
-            "word": "By",
+            "word": "by",
             "meaning": "〜によって",
             "isUnknown": false
           },
@@ -113233,11 +113043,6 @@
             "word": "year",
             "meaning": "Year（固有名詞）",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -113256,7 +113061,7 @@
         "phraseMeaning": "中国では餃子は富と繁栄を象徴します",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "-",
             "isUnknown": false
           },
@@ -113289,11 +113094,6 @@
             "word": "prosperity",
             "meaning": "-",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -113308,7 +113108,7 @@
         "phraseMeaning": "[要修正]",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "-",
             "isUnknown": false
           },
@@ -115488,11 +115288,6 @@
             "word": "thinking",
             "meaning": "考える（現在分詞・動名詞）",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -115511,7 +115306,7 @@
         "phraseMeaning": "日本では生徒は規律と尊敬を学びます",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "-",
             "isUnknown": false
           },
@@ -115607,11 +115402,6 @@
             "word": "teamwork",
             "meaning": "-",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -115632,7 +115422,7 @@
         "phraseMeaning": "フィンランドでは学校は短い日と少ない宿題があります",
         "segments": [
           {
-            "word": "In",
+            "word": "in",
             "meaning": "-",
             "isUnknown": false
           },
@@ -125618,11 +125408,6 @@
             "word": "stories",
             "meaning": "物語・階（複数形）",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -125639,7 +125424,7 @@
         "phraseMeaning": "しかし",
         "segments": [
           {
-            "word": "But",
+            "word": "but",
             "meaning": "But（固有名詞）",
             "isUnknown": false
           },
@@ -135085,11 +134870,6 @@
             "word": "security",
             "meaning": "Security（固有名詞）",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -135103,7 +134883,7 @@
         "phraseMeaning": "しかし幸福は富以上のものから来ます",
         "segments": [
           {
-            "word": "But",
+            "word": "but",
             "meaning": "But（固有名詞）",
             "isUnknown": false
           },
@@ -142431,11 +142211,6 @@
             "word": "people",
             "meaning": "人々",
             "isUnknown": false
-          },
-          {
-            "word": ".",
-            "meaning": "-",
-            "isUnknown": false
           }
         ]
       },
@@ -142453,7 +142228,7 @@
         "phraseMeaning": "ある人にとってはそれは分野のトップに到達することです",
         "segments": [
           {
-            "word": "For",
+            "word": "for",
             "meaning": "〜のために・〜に対して",
             "isUnknown": false
           },
