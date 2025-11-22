@@ -336,12 +336,26 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           }
         }
         
-        setPassages(processedData);
+        // 難易度・語数順にソート
+        const levelOrder: Record<string, number> = { 
+          '初級': 1, 'beginner': 1,
+          '中級': 2, 'intermediate': 2,
+          '上級': 3, 'advanced': 3
+        };
+        const sortedData = processedData.sort((a, b) => {
+          const levelA = levelOrder[a.level] || 999;
+          const levelB = levelOrder[b.level] || 999;
+          if (levelA !== levelB) return levelA - levelB;
+          return (a.actualWordCount || 0) - (b.actualWordCount || 0);
+        });
+        
+        setPassages(sortedData);
         setLoading(false);
-        if (processedData.length > 0) {
-          setSelectedPassageId(processedData[0].id);
-          setPhraseTranslations(new Array(processedData[0].phrases?.length || 0).fill(false));
-          setWordMeaningsVisible(new Array(processedData[0].phrases?.length || 0).fill(false));
+        if (sortedData.length > 0) {
+          // 最初のパッセージ（一番簡単なもの）を選択
+          setSelectedPassageId(sortedData[0].id);
+          setPhraseTranslations(new Array(sortedData[0].phrases?.length || 0).fill(false));
+          setWordMeaningsVisible(new Array(sortedData[0].phrases?.length || 0).fill(false));
         }
       })
       .catch((err) => {
