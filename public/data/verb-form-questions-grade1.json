@@ -1,0 +1,294 @@
+{
+  "grade": 1,
+  "totalQuestions": 24,
+  "categories": [
+    {
+      "category": "三人称単数（-s/-es）",
+      "grammarPoint": "3rd-person-singular",
+      "questions": [
+        {
+          "id": "vf-g1-3sg-001",
+          "japanese": "彼は毎日サッカーをします",
+          "sentence": "He ____ soccer every day.",
+          "verb": "play",
+          "choices": ["play", "plays", "played", "playing"],
+          "correctAnswer": "plays",
+          "difficulty": "beginner",
+          "explanation": "主語がHe（三人称単数）で現在の習慣を表すため、動詞にsを付けます。",
+          "hint": "三人称単数現在形は動詞に-sを付ける"
+        },
+        {
+          "id": "vf-g1-3sg-002",
+          "japanese": "彼女は英語を勉強します",
+          "sentence": "She ____ English.",
+          "verb": "study",
+          "choices": ["study", "studies", "studied", "studying"],
+          "correctAnswer": "studies",
+          "difficulty": "beginner",
+          "explanation": "主語がShe（三人称単数）なので、studyのyをiに変えてesを付けます。",
+          "hint": "子音+yで終わる動詞は、yをiに変えてesを付ける"
+        },
+        {
+          "id": "vf-g1-3sg-003",
+          "japanese": "私の父は車を運転します",
+          "sentence": "My father ____ a car.",
+          "verb": "drive",
+          "choices": ["drive", "drives", "drove", "driving"],
+          "correctAnswer": "drives",
+          "difficulty": "beginner",
+          "explanation": "My father（三人称単数）が主語なので、動詞にsを付けます。",
+          "hint": "三人称単数現在形"
+        },
+        {
+          "id": "vf-g1-3sg-004",
+          "japanese": "トムは朝食を食べます",
+          "sentence": "Tom ____ breakfast.",
+          "verb": "have",
+          "choices": ["have", "has", "had", "having"],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "haveの三人称単数現在形は不規則でhasになります。",
+          "hint": "haveの三人称単数形は不規則"
+        },
+        {
+          "id": "vf-g1-3sg-005",
+          "japanese": "彼女はテニスが好きです",
+          "sentence": "She ____ tennis.",
+          "verb": "like",
+          "choices": ["like", "likes", "liked", "liking"],
+          "correctAnswer": "likes",
+          "difficulty": "beginner",
+          "explanation": "主語がShe（三人称単数）なので、動詞にsを付けます。",
+          "hint": "三人称単数現在形は-s"
+        },
+        {
+          "id": "vf-g1-3sg-006",
+          "japanese": "私の犬は速く走ります",
+          "sentence": "My dog ____ fast.",
+          "verb": "run",
+          "choices": ["run", "runs", "ran", "running"],
+          "correctAnswer": "runs",
+          "difficulty": "beginner",
+          "explanation": "My dog（三人称単数）が主語なので、動詞にsを付けます。",
+          "hint": "三人称単数現在形"
+        }
+      ]
+    },
+    {
+      "category": "過去形（規則動詞）",
+      "grammarPoint": "past-tense-regular",
+      "questions": [
+        {
+          "id": "vf-g1-past-reg-001",
+          "japanese": "私は昨日テレビを見ました",
+          "sentence": "I ____ TV yesterday.",
+          "verb": "watch",
+          "choices": ["watch", "watches", "watched", "watching"],
+          "correctAnswer": "watched",
+          "difficulty": "beginner",
+          "explanation": "yesterdayがあるので過去形。規則動詞はedを付けます。",
+          "hint": "過去を表す語があるので過去形"
+        },
+        {
+          "id": "vf-g1-past-reg-002",
+          "japanese": "彼女は先週英語を勉強しました",
+          "sentence": "She ____ English last week.",
+          "verb": "study",
+          "choices": ["study", "studies", "studied", "studying"],
+          "correctAnswer": "studied",
+          "difficulty": "beginner",
+          "explanation": "last weekがあるので過去形。studyはyをiに変えてedを付けます。",
+          "hint": "子音+yで終わる動詞は、yをiに変えてed"
+        },
+        {
+          "id": "vf-g1-past-reg-003",
+          "japanese": "私たちは公園でサッカーをしました",
+          "sentence": "We ____ soccer in the park.",
+          "verb": "play",
+          "choices": ["play", "plays", "played", "playing"],
+          "correctAnswer": "played",
+          "difficulty": "beginner",
+          "explanation": "過去の出来事なので過去形。playにedを付けます。",
+          "hint": "規則動詞の過去形は-ed"
+        },
+        {
+          "id": "vf-g1-past-reg-004",
+          "japanese": "彼は私を助けてくれました",
+          "sentence": "He ____ me.",
+          "verb": "help",
+          "choices": ["help", "helps", "helped", "helping"],
+          "correctAnswer": "helped",
+          "difficulty": "beginner",
+          "explanation": "過去の出来事なので過去形。helpにedを付けます。",
+          "hint": "過去形は-ed"
+        }
+      ]
+    },
+    {
+      "category": "過去形（不規則動詞）",
+      "grammarPoint": "past-tense-irregular",
+      "questions": [
+        {
+          "id": "vf-g1-past-irr-001",
+          "japanese": "私は昨日東京に行きました",
+          "sentence": "I ____ to Tokyo yesterday.",
+          "verb": "go",
+          "choices": ["go", "goes", "went", "gone"],
+          "correctAnswer": "went",
+          "difficulty": "beginner",
+          "explanation": "yesterdayがあるので過去形。goの過去形はwentです（不規則）。",
+          "hint": "goの過去形はwent"
+        },
+        {
+          "id": "vf-g1-past-irr-002",
+          "japanese": "彼女は朝食を食べました",
+          "sentence": "She ____ breakfast.",
+          "verb": "have",
+          "choices": ["have", "has", "had", "having"],
+          "correctAnswer": "had",
+          "difficulty": "beginner",
+          "explanation": "過去の出来事。haveの過去形はhadです（不規則）。",
+          "hint": "haveの過去形はhad"
+        },
+        {
+          "id": "vf-g1-past-irr-003",
+          "japanese": "私たちは昨夜良く眠りました",
+          "sentence": "We ____ well last night.",
+          "verb": "sleep",
+          "choices": ["sleep", "sleeps", "slept", "sleeping"],
+          "correctAnswer": "slept",
+          "difficulty": "intermediate",
+          "explanation": "last nightがあるので過去形。sleepの過去形はsleptです。",
+          "hint": "sleepの過去形はslept"
+        },
+        {
+          "id": "vf-g1-past-irr-004",
+          "japanese": "彼は野球をしました",
+          "sentence": "He ____ baseball.",
+          "verb": "play",
+          "choices": ["play", "plays", "played", "playing"],
+          "correctAnswer": "played",
+          "difficulty": "beginner",
+          "explanation": "過去の出来事。playは規則動詞なのでedを付けます。",
+          "hint": "規則動詞の過去形"
+        },
+        {
+          "id": "vf-g1-past-irr-005",
+          "japanese": "私は本を読みました",
+          "sentence": "I ____ a book.",
+          "verb": "read",
+          "choices": ["read", "reads", "red", "reading"],
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "readの過去形はreadで、つづりは同じですが発音が異なります（レッド）。",
+          "hint": "readの過去形はreadだが発音が変わる"
+        },
+        {
+          "id": "vf-g1-past-irr-006",
+          "japanese": "彼女は来ました",
+          "sentence": "She ____.",
+          "verb": "come",
+          "choices": ["come", "comes", "came", "coming"],
+          "correctAnswer": "came",
+          "difficulty": "beginner",
+          "explanation": "comeの過去形はcameです（不規則）。",
+          "hint": "comeの過去形はcame"
+        },
+        {
+          "id": "vf-g1-past-irr-007",
+          "japanese": "私たちは映画を見ました",
+          "sentence": "We ____ a movie.",
+          "verb": "see",
+          "choices": ["see", "sees", "saw", "seen"],
+          "correctAnswer": "saw",
+          "difficulty": "beginner",
+          "explanation": "seeの過去形はsawです（不規則）。",
+          "hint": "seeの過去形はsaw"
+        },
+        {
+          "id": "vf-g1-past-irr-008",
+          "japanese": "彼は走りました",
+          "sentence": "He ____.",
+          "verb": "run",
+          "choices": ["run", "runs", "ran", "running"],
+          "correctAnswer": "ran",
+          "difficulty": "beginner",
+          "explanation": "runの過去形はranです（不規則）。",
+          "hint": "runの過去形はran"
+        }
+      ]
+    },
+    {
+      "category": "現在進行形（be + -ing）",
+      "grammarPoint": "present-progressive",
+      "questions": [
+        {
+          "id": "vf-g1-prog-001",
+          "japanese": "彼は今勉強しています",
+          "sentence": "He ____ now.",
+          "verb": "study",
+          "choices": ["study", "studies", "studied", "is studying"],
+          "correctAnswer": "is studying",
+          "difficulty": "beginner",
+          "explanation": "nowがあるので現在進行形。be動詞 + -ingの形にします。",
+          "hint": "現在進行形はbe + -ing"
+        },
+        {
+          "id": "vf-g1-prog-002",
+          "japanese": "私たちは野球をしています",
+          "sentence": "We ____ baseball.",
+          "verb": "play",
+          "choices": ["play", "plays", "played", "are playing"],
+          "correctAnswer": "are playing",
+          "difficulty": "beginner",
+          "explanation": "今していることなので現在進行形。主語がWeなのでare playing。",
+          "hint": "We + are + -ing"
+        },
+        {
+          "id": "vf-g1-prog-003",
+          "japanese": "彼女はテレビを見ています",
+          "sentence": "She ____ TV.",
+          "verb": "watch",
+          "choices": ["watch", "watches", "watched", "is watching"],
+          "correctAnswer": "is watching",
+          "difficulty": "beginner",
+          "explanation": "今していることなので現在進行形。She + is + -ing。",
+          "hint": "She + is + -ing"
+        },
+        {
+          "id": "vf-g1-prog-004",
+          "japanese": "私は音楽を聴いています",
+          "sentence": "I ____ to music.",
+          "verb": "listen",
+          "choices": ["listen", "listens", "listened", "am listening"],
+          "correctAnswer": "am listening",
+          "difficulty": "beginner",
+          "explanation": "今していることなので現在進行形。I + am + -ing。",
+          "hint": "I + am + -ing"
+        },
+        {
+          "id": "vf-g1-prog-005",
+          "japanese": "彼らは走っています",
+          "sentence": "They ____.",
+          "verb": "run",
+          "choices": ["run", "runs", "ran", "are running"],
+          "correctAnswer": "are running",
+          "difficulty": "intermediate",
+          "explanation": "現在進行形。runは最後の子音を重ねてningとします。",
+          "hint": "短母音+子音で終わる動詞は子音を重ねる"
+        },
+        {
+          "id": "vf-g1-prog-006",
+          "japanese": "私の母は料理をしています",
+          "sentence": "My mother ____.",
+          "verb": "cook",
+          "choices": ["cook", "cooks", "cooked", "is cooking"],
+          "correctAnswer": "is cooking",
+          "difficulty": "beginner",
+          "explanation": "今していることなので現在進行形。My mother + is + -ing。",
+          "hint": "三人称単数 + is + -ing"
+        }
+      ]
+    }
+  ]
+}

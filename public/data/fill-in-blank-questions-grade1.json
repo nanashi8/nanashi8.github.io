@@ -1,0 +1,264 @@
+{
+  "grade": 1,
+  "totalQuestions": 24,
+  "categories": [
+    {
+      "category": "時の前置詞（at/on/in）",
+      "grammarPoint": "preposition-time",
+      "questions": [
+        {
+          "id": "fb-g1-prep-time-001",
+          "japanese": "私は7時に起きます",
+          "sentence": "I get up ____ 7 o'clock.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻の前にはatを使います。",
+          "hint": "時刻 → at"
+        },
+        {
+          "id": "fb-g1-prep-time-002",
+          "japanese": "私は月曜日に学校へ行きます",
+          "sentence": "I go to school ____ Monday.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日の前にはonを使います。",
+          "hint": "曜日 → on"
+        },
+        {
+          "id": "fb-g1-prep-time-003",
+          "japanese": "私は5月に生まれました",
+          "sentence": "I was born ____ May.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "月の前にはinを使います。",
+          "hint": "月 → in"
+        },
+        {
+          "id": "fb-g1-prep-time-004",
+          "japanese": "彼女は朝食べます",
+          "sentence": "She eats breakfast ____ the morning.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "morning/afternoon/eveningの前にはinを使います。",
+          "hint": "morning/afternoon/evening → in"
+        },
+        {
+          "id": "fb-g1-prep-time-005",
+          "japanese": "私は夜勉強します",
+          "sentence": "I study ____ night.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "nightの前にはatを使います（例外）。",
+          "hint": "nightは例外的にat"
+        },
+        {
+          "id": "fb-g1-prep-time-006",
+          "japanese": "彼は2020年に日本に来ました",
+          "sentence": "He came to Japan ____ 2020.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年の前にはinを使います。",
+          "hint": "年 → in"
+        },
+        {
+          "id": "fb-g1-prep-time-007",
+          "japanese": "私は日曜日の朝テニスをします",
+          "sentence": "I play tennis ____ Sunday morning.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "曜日+時間帯の前にはonを使います。",
+          "hint": "曜日+時間帯 → on"
+        },
+        {
+          "id": "fb-g1-prep-time-008",
+          "sentence": "I was born ____ March 15th.",
+          "japanese": "私は3月15日に生まれました",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "特定の日付の前にはonを使います。",
+          "hint": "日付 → on"
+        }
+      ]
+    },
+    {
+      "category": "場所の前置詞（at/on/in）",
+      "grammarPoint": "preposition-place",
+      "questions": [
+        {
+          "id": "fb-g1-prep-place-001",
+          "japanese": "私は駅にいます",
+          "sentence": "I am ____ the station.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "場所の一点を表すときはatを使います。",
+          "hint": "場所の一点 → at"
+        },
+        {
+          "id": "fb-g1-prep-place-002",
+          "japanese": "本は机の上にあります",
+          "sentence": "The book is ____ the desk.",
+          "choices": ["at", "on", "in", "under"],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "～の上にという意味でonを使います。",
+          "hint": "～の上に → on"
+        },
+        {
+          "id": "fb-g1-prep-place-003",
+          "japanese": "私は東京に住んでいます",
+          "sentence": "I live ____ Tokyo.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "都市や国などの広い場所にはinを使います。",
+          "hint": "都市・国 → in"
+        },
+        {
+          "id": "fb-g1-prep-place-004",
+          "japanese": "猫はテーブルの下にいます",
+          "sentence": "The cat is ____ the table.",
+          "choices": ["at", "on", "in", "under"],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "～の下にという意味でunderを使います。",
+          "hint": "～の下に → under"
+        },
+        {
+          "id": "fb-g1-prep-place-005",
+          "japanese": "彼女は学校にいます",
+          "sentence": "She is ____ school.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "建物の場所を表すときはatを使います。",
+          "hint": "建物の場所 → at"
+        },
+        {
+          "id": "fb-g1-prep-place-006",
+          "japanese": "私はバッグの中に鍵を入れました",
+          "sentence": "I put the key ____ my bag.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "～の中にという意味でinを使います。",
+          "hint": "～の中に → in"
+        },
+        {
+          "id": "fb-g1-prep-place-007",
+          "japanese": "写真は壁にかかっています",
+          "sentence": "The picture is ____ the wall.",
+          "choices": ["at", "on", "in", "under"],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "壁に接触している場合はonを使います。",
+          "hint": "壁に接触 → on"
+        },
+        {
+          "id": "fb-g1-prep-place-008",
+          "japanese": "私は日本に住んでいます",
+          "sentence": "I live ____ Japan.",
+          "choices": ["at", "on", "in", "to"],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "国の中にという意味でinを使います。",
+          "hint": "国 → in"
+        }
+      ]
+    },
+    {
+      "category": "その他重要前置詞",
+      "grammarPoint": "preposition-other",
+      "questions": [
+        {
+          "id": "fb-g1-prep-other-001",
+          "japanese": "私は母と買い物に行きました",
+          "sentence": "I went shopping ____ my mother.",
+          "choices": ["with", "by", "for", "to"],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "「～と一緒に」という意味でwithを使います。",
+          "hint": "～と一緒に → with"
+        },
+        {
+          "id": "fb-g1-prep-other-002",
+          "japanese": "このプレゼントはあなたのためです",
+          "sentence": "This present is ____ you.",
+          "choices": ["with", "by", "for", "to"],
+          "correctAnswer": "for",
+          "difficulty": "beginner",
+          "explanation": "「～のために」という意味でforを使います。",
+          "hint": "～のために → for"
+        },
+        {
+          "id": "fb-g1-prep-other-003",
+          "japanese": "私は電車で学校に行きます",
+          "sentence": "I go to school ____ train.",
+          "choices": ["with", "by", "for", "on"],
+          "correctAnswer": "by",
+          "difficulty": "beginner",
+          "explanation": "交通手段を表すときはbyを使います。",
+          "hint": "交通手段 → by"
+        },
+        {
+          "id": "fb-g1-prep-other-004",
+          "japanese": "私は3年間ここに住んでいます",
+          "sentence": "I have lived here ____ three years.",
+          "choices": ["for", "during", "since", "from"],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "期間を表すときはforを使います。",
+          "hint": "期間 → for"
+        },
+        {
+          "id": "fb-g1-prep-other-005",
+          "japanese": "私は2020年からここに住んでいます",
+          "sentence": "I have lived here ____ 2020.",
+          "choices": ["for", "during", "since", "from"],
+          "correctAnswer": "since",
+          "difficulty": "intermediate",
+          "explanation": "起点（いつから）を表すときはsinceを使います。",
+          "hint": "起点（いつから） → since"
+        },
+        {
+          "id": "fb-g1-prep-other-006",
+          "japanese": "私はペンで書きます",
+          "sentence": "I write ____ a pen.",
+          "choices": ["with", "by", "for", "in"],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "道具を表すときはwithを使います。",
+          "hint": "道具 → with"
+        },
+        {
+          "id": "fb-g1-prep-other-007",
+          "japanese": "宿題を5時までに終わらせなければなりません",
+          "sentence": "I must finish my homework ____ 5 o'clock.",
+          "choices": ["by", "until", "for", "at"],
+          "correctAnswer": "by",
+          "difficulty": "intermediate",
+          "explanation": "期限を表すときはbyを使います。",
+          "hint": "期限（～までに） → by"
+        },
+        {
+          "id": "fb-g1-prep-other-008",
+          "japanese": "彼女はコーヒーなしでは生きられません",
+          "sentence": "She can't live ____ coffee.",
+          "choices": ["with", "without", "by", "for"],
+          "correctAnswer": "without",
+          "difficulty": "beginner",
+          "explanation": "「～なしで」という意味でwithoutを使います。",
+          "hint": "～なしで → without"
+        }
+      ]
+    }
+  ]
+}
