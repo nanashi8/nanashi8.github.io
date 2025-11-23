@@ -40,6 +40,60 @@ function getLemma(word: string): string {
 }
 
 /**
+ * 長い文を接続詞で分割（20単語超の場合）
+ */
+function splitLongSentence(sentence: string): string[] {
+  const words = sentence.trim().split(/\s+/);
+  
+  // 20単語以下ならそのまま返す
+  if (words.length <= 20) {
+    return [sentence];
+  }
+  
+  // 接続詞パターン（大文字小文字両対応）
+  const conjunctionPattern = /\b(when|if|because|although|while|since|after|before|unless|until|as|though|whereas)\b/gi;
+  
+  // 接続詞で分割を試みる
+  const parts: string[] = [];
+  let currentPart = '';
+  let wordCount = 0;
+  
+  const sentenceWords = sentence.match(/\S+|\s+/g) || [];
+  
+  for (let i = 0; i < sentenceWords.length; i++) {
+    const token = sentenceWords[i];
+    
+    // 空白はスキップ
+    if (/^\s+$/.test(token)) {
+      currentPart += token;
+      continue;
+    }
+    
+    // 接続詞を検出（20単語以上の場合のみ分割）
+    if (wordCount >= 15 && conjunctionPattern.test(token)) {
+      // 現在のパートを保存
+      if (currentPart.trim()) {
+        parts.push(currentPart.trim());
+      }
+      // 新しいパートを開始（接続詞から）
+      currentPart = token;
+      wordCount = 1;
+    } else {
+      currentPart += token;
+      wordCount++;
+    }
+  }
+  
+  // 最後のパートを追加
+  if (currentPart.trim()) {
+    parts.push(currentPart.trim());
+  }
+  
+  // 分割できなかった場合は元の文を返す
+  return parts.length > 0 ? parts : [sentence];
+}
+
+/**
  * .txt パッセージを ReadingPassage 型に変換
  */
 export async function convertPassageToReadingFormat(
@@ -148,52 +202,57 @@ export async function convertPassageToReadingFormat(
         const sentences = paragraph.match(/[^.!?]+[.!?]+/g) || [paragraph];
         
         sentences.forEach((sentence) => {
-          // 単語に分割
-          const words = sentence.trim().split(/\s+/);
+          // 長い文を接続詞で分割
+          const subPhrases = splitLongSentence(sentence);
           
-          // セグメントを生成
-          const segments: ReadingSegment[] = words.map(word => {
-            // 句読点を検出
-            const punctuationMatch = word.match(/([.,!?;:—])$/);
+          subPhrases.forEach((subPhrase) => {
+            // 単語に分割
+            const words = subPhrase.trim().split(/\s+/);
             
-            if (punctuationMatch) {
-              const cleanWord = word.replace(/[.,!?;:—]$/, '');
-              const punctuation = punctuationMatch[1];
+            // セグメントを生成
+            const segments: ReadingSegment[] = words.map(word => {
+              // 句読点を検出
+              const punctuationMatch = word.match(/([.,!?;:—])$/);
               
-              const lemma = getLemma(cleanWord);
-              const wordData = wordDictionary.get(lemma);
-              const meaning = wordData?.meaning || '';
-              
-              return [
-                {
-                  word: cleanWord,
+              if (punctuationMatch) {
+                const cleanWord = word.replace(/[.,!?;:—]$/, '');
+                const punctuation = punctuationMatch[1];
+                
+                const lemma = getLemma(cleanWord);
+                const wordData = wordDictionary.get(lemma);
+                const meaning = wordData?.meaning || '';
+                
+                return [
+                  {
+                    word: cleanWord,
+                    meaning: meaning === '-' ? '' : meaning,
+                    isUnknown: false,
+                  },
+                  {
+                    word: punctuation,
+                    meaning: '',
+                    isUnknown: false,
+                  }
+                ];
+              } else {
+                const lemma = getLemma(word);
+                const wordData = wordDictionary.get(lemma);
+                const meaning = wordData?.meaning || '';
+                
+                return {
+                  word,
                   meaning: meaning === '-' ? '' : meaning,
                   isUnknown: false,
-                },
-                {
-                  word: punctuation,
-                  meaning: '',
-                  isUnknown: false,
-                }
-              ];
-            } else {
-              const lemma = getLemma(word);
-              const wordData = wordDictionary.get(lemma);
-              const meaning = wordData?.meaning || '';
-              
-              return {
-                word,
-                meaning: meaning === '-' ? '' : meaning,
-                isUnknown: false,
-              };
-            }
-          }).flat();
-          
-          phrases.push({
-            english: sentence.trim(),
-            japanese: '', // 翻訳は後で追加可能
-            words: words,
-            segments: segments,
+                };
+              }
+            }).flat();
+            
+            phrases.push({
+              english: subPhrase.trim(),
+              japanese: '', // 翻訳は後で追加可能
+              words: words,
+              segments: segments,
+            });
           });
         });
       }
