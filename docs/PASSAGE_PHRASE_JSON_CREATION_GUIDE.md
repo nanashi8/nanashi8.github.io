@@ -603,9 +603,213 @@ JSON:     passages-phrase-learning/intermediate-exchange-student-australia.json
 
 ---
 
-## 🔧 作成スクリプトの要件
+## 🚀 改行済みファイルからの高速変換（推奨）
+
+### 前提条件
+すでに**適切に改行された英文ファイル**がある場合（例: `public/data/passages/*.txt`）
+
+現在の21パッセージはすべて改行済みのため、この方法が最適です。
+
+### ファイル例
+```
+An Australian Student Visits Japan—Two Weeks of Cultural Exchange
+
+    When our teacher announced that our class would host an exchange student from Australia for two weeks, everyone felt excited.
+    "Her name is Emma," the teacher explained.
+    "She's the same age as you and wants to learn about Japanese culture and school life.
+    Please make her feel welcome."
+```
+
+**特徴:**
+- 各行が適切な長さ（5-20語程度）
+- 意味的なまとまりで改行
+- 会話文が自然に分割済み
+
+### 変換の利点
+✅ **各行 = 1フレーズ** として扱える  
+✅ 複雑な文分割ロジック不要  
+✅ 処理時間が大幅短縮（数分 → 数秒）  
+✅ 人間が確認済みの自然な区切り  
+✅ 20単語超の長文を避けやすい
+
+### 変換スクリプト例
+
+#### Step 1: 改行をフレーズ境界として読み込む
+```python
+def load_phrases_from_preformatted_file(filepath):
+    """改行済みファイルを行ごとに読み込み"""
+    with open(filepath, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    phrases = []
+    for line in lines:
+        line = line.strip()
+        
+        # 空行をスキップ
+        if not line:
+            continue
+        
+        # 見出し（末尾が — や : の行）をスキップ
+        if line.endswith('—') or (line.endswith(':') and len(line.split()) <= 5):
+            continue
+        
+        # 各行を1フレーズとして追加
+        phrases.append(line)
+    
+    return phrases
+```
+
+#### Step 2: 全訳ファイルと対応付け
+```python
+def align_with_translation(english_phrases, translation_file):
+    """全訳から対応する日本語を抽出"""
+    with open(translation_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    japanese_phrases = []
+    for line in lines:
+        line = line.strip()
+        
+        # 空行・見出しをスキップ（英文と同じルール）
+        if not line or line.endswith('—') or (line.endswith(':') and len(line) <= 20):
+            continue
+        
+        japanese_phrases.append(line)
+    
+    # フレーズ数が一致しない場合は警告
+    if len(japanese_phrases) != len(english_phrases):
+        print(f"⚠️  警告: フレーズ数不一致 (英語: {len(english_phrases)}, 日本語: {len(japanese_phrases)})")
+    
+    return japanese_phrases
+```
+
+#### Step 3: セグメント生成
+```python
+import json
+import re
+
+def create_segments_from_phrase(phrase, dictionary):
+    """フレーズを単語セグメントに分解"""
+    # 句読点を分離してトークン化
+    words = re.findall(r'\w+|[.,!?;:—"\']', phrase)
+    
+    segments = []
+    for word in words:
+        clean_word = word.lower()
+        meaning = dictionary.get(clean_word, "")
+        
+        segments.append({
+            "word": word,
+            "meaning": meaning
+        })
+    
+    return segments
+
+def load_dictionary(filepath):
+    """辞書JSON読み込み"""
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
+```
+
+#### Step 4: JSON生成
+```python
+def convert_preformatted_to_json(passage_file, translation_file, dictionary_file, output_file):
+    """改行済みファイルから直接JSON生成"""
+    
+    # 読み込み
+    english_phrases = load_phrases_from_preformatted_file(passage_file)
+    dictionary = load_dictionary(dictionary_file)
+    japanese_phrases = align_with_translation(english_phrases, translation_file)
+    
+    # フレーズデータ作成
+    phrases_data = []
+    for i, (en, ja) in enumerate(zip(english_phrases, japanese_phrases)):
+        segments = create_segments_from_phrase(en, dictionary)
+        
+        phrases_data.append({
+            "id": i + 1,
+            "english": en,
+            "japanese": ja,
+            "phraseMeaning": ja,
+            "segments": segments
+        })
+    
+    # パッセージID抽出（ファイル名から）
+    passage_id = passage_file.split('/')[-1].replace('.txt', '')
+    
+    # タイトル抽出（最初の行）
+    with open(passage_file, 'r', encoding='utf-8') as f:
+        first_line = f.readline().strip()
+    
+    # JSON出力
+    passage_data = {
+        "id": passage_id,
+        "title": first_line.replace('—', ' - '),
+        "level": "intermediate",  # 手動で変更
+        "theme": "",  # 手動で追加
+        "actualWordCount": sum(len([s for s in p["segments"] if s["word"] not in ".,!?;:—\""]) for p in phrases_data),
+        "phrases": phrases_data
+    }
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(passage_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ {len(phrases_data)} フレーズを生成しました")
+    print(f"   総単語数: {passage_data['actualWordCount']}")
+```
+
+### 実行例
+```bash
+cd /path/to/nanashi8.github.io
+
+python3 -c "
+import sys
+sys.path.append('scripts')
+
+# 上記の関数をすべて定義後
+
+convert_preformatted_to_json(
+    'public/data/passages/intermediate-exchange-student-australia.txt',
+    'public/data/passages-translations/intermediate-exchange-student-australia-ja.txt',
+    'public/data/dictionaries/reading-passages-dictionary.json',
+    'public/data/passages-phrase-learning/intermediate-exchange-student-australia.json'
+)
+"
+```
+
+### 検証
+```python
+# 生成したJSONを検証
+python3 << 'VALIDATE'
+import json
+
+with open('public/data/passages-phrase-learning/intermediate-exchange-student-australia.json', 'r') as f:
+    data = json.load(f)
+
+print(f"フレーズ数: {len(data['phrases'])}")
+print(f"総単語数: {data['actualWordCount']}")
+
+# フレーズ和訳の結合
+combined = "".join([p["japanese"] for p in data["phrases"]])
+print(f"結合和訳（最初100文字）: {combined[:100]}...")
+VALIDATE
+```
+
+### 注意点
+✅ **改行位置が適切か確認**: 20単語超の行は事前に分割  
+✅ **見出し行の除外**: タイトル・セクション名は自動スキップ  
+✅ **インデント処理**: `.strip()` で自動除去  
+✅ **会話文の確認**: `Speaker: "..."` 形式が1行になっているか  
+✅ **日英対応**: 全訳ファイルも同じ行分割が理想  
+
+---
+
+## 🔧 作成スクリプトの要件（汎用版）
 
 ### スクリプト: `scripts/convert_passage_to_phrase_json.py`
+
+**⚠️ 注意: 改行なしのベタ打ちファイル用（複雑）**  
+**改行済みファイルがあれば上記の高速変換を推奨**
 
 #### 入力ファイル
 1. 英文パッセージ（必須）
@@ -924,6 +1128,7 @@ grep -o '\S\+' passage.txt | awk 'BEGIN{count=0} /[.!?]/{if(count>40) print NR":
 | 2025-11-23 | 1.0.0 | 初版作成 |
 | 2025-11-23 | 1.1.0 | 会話形式処理の明確化、長文分割の必須化、トラブルシューティング追加 |
 | 2025-11-23 | 1.2.0 | 翻訳品質エラー事例の追加（並列構造、カタカナ、直訳、会話文） |
+| 2025-11-23 | 1.3.0 | 改行済みファイルからの高速変換方法を追加（将来の作業効率化） |
 
 ---
 
