@@ -1,0 +1,200 @@
+{
+  "id": "intermediate-exchange-student-australia",
+  "title": "An Australian Student Visits Japan—Two Weeks of Cultural Exchange",
+  "level": "intermediate",
+  "theme": "文化交流・学校生活",
+  "actualWordCount": 3200,
+  "phrases": [
+    {
+      "id": 1,
+      "english": "When our teacher announced that our class would host an exchange student from Australia for two weeks,",
+      "japanese": "先生が私たちのクラスでオーストラリアからの交換留学生を2週間受け入れると発表した時、",
+      "phraseMeaning": "先生が私たちのクラスでオーストラリアからの交換留学生を2週間受け入れると発表した時、",
+      "segments": [
+        {"word": "When", "meaning": "〜の時", "isUnknown": false},
+        {"word": "our", "meaning": "私たちの", "isUnknown": false},
+        {"word": "teacher", "meaning": "先生", "isUnknown": false},
+        {"word": "announced", "meaning": "発表した", "isUnknown": false},
+        {"word": "that", "meaning": "〜ということ", "isUnknown": false},
+        {"word": "our", "meaning": "私たちの", "isUnknown": false},
+        {"word": "class", "meaning": "クラス", "isUnknown": false},
+        {"word": "would", "meaning": "〜するだろう", "isUnknown": false},
+        {"word": "host", "meaning": "受け入れる", "isUnknown": false},
+        {"word": "an", "meaning": "1人の", "isUnknown": false},
+        {"word": "exchange", "meaning": "交換", "isUnknown": false},
+        {"word": "student", "meaning": "学生", "isUnknown": false},
+        {"word": "from", "meaning": "〜から", "isUnknown": false},
+        {"word": "Australia", "meaning": "オーストラリア", "isUnknown": false},
+        {"word": "for", "meaning": "〜の間", "isUnknown": false},
+        {"word": "two", "meaning": "2", "isUnknown": false},
+        {"word": "weeks", "meaning": "週", "isUnknown": false},
+        {"word": ",", "meaning": "", "isUnknown": false}
+      ],
+      "grammarPoint": "When節（時を表す接続詞）/ that節（接続詞）"
+    },
+    {
+      "id": 2,
+      "english": "everyone was excited.",
+      "japanese": "みんな興奮しました。",
+      "phraseMeaning": "みんな興奮しました。",
+      "segments": [
+        {"word": "everyone", "meaning": "みんな", "isUnknown": false},
+        {"word": "was", "meaning": "〜だった", "isUnknown": false},
+        {"word": "excited", "meaning": "興奮した", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false}
+      ]
+    },
+    {
+      "id": 3,
+      "english": "\"Her name is Emma,\"",
+      "japanese": "「彼女の名前はエマです」",
+      "phraseMeaning": "「彼女の名前はエマです」",
+      "segments": [
+        {"word": "\"", "meaning": "", "isUnknown": false},
+        {"word": "Her", "meaning": "彼女の", "isUnknown": false},
+        {"word": "name", "meaning": "名前", "isUnknown": false},
+        {"word": "is", "meaning": "です", "isUnknown": false},
+        {"word": "Emma", "meaning": "エマ", "isUnknown": false},
+        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "\"", "meaning": "", "isUnknown": false}
+      ]
+    },
+    {
+      "id": 4,
+      "english": "the teacher explained.",
+      "japanese": "と先生は説明しました。",
+      "phraseMeaning": "と先生は説明しました。",
+      "segments": [
+        {"word": "the", "meaning": "その", "isUnknown": false},
+        {"word": "teacher", "meaning": "先生", "isUnknown": false},
+        {"word": "explained", "meaning": "説明した", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false}
+      ]
+    },
+    {
+      "id": 5,
+      "english": "\"She's the same age as you and wants to experience Japanese school life.\"",
+      "japanese": "「彼女はあなたたちと同い年で、日本の学校生活を体験したいと思っています。」",
+      "phraseMeaning": "「彼女はあなたたちと同い年で、日本の学校生活を体験したいと思っています。」",
+      "segments": [
+        {"word": "\"", "meaning": "", "isUnknown": false},
+        {"word": "She's", "meaning": "彼女は", "isUnknown": false},
+        {"word": "the", "meaning": "その", "isUnknown": false},
+        {"word": "same", "meaning": "同じ", "isUnknown": false},
+        {"word": "age", "meaning": "年齢", "isUnknown": false},
+        {"word": "as", "meaning": "〜と同じ", "isUnknown": false},
+        {"word": "you", "meaning": "あなたたち", "isUnknown": false},
+        {"word": "and", "meaning": "そして", "isUnknown": false},
+        {"word": "wants", "meaning": "望む", "isUnknown": false},
+        {"word": "to", "meaning": "〜すること", "isUnknown": false},
+        {"word": "experience", "meaning": "体験する", "isUnknown": false},
+        {"word": "Japanese", "meaning": "日本の", "isUnknown": false},
+        {"word": "school", "meaning": "学校", "isUnknown": false},
+        {"word": "life", "meaning": "生活", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false},
+        {"word": "\"", "meaning": "", "isUnknown": false}
+      ],
+      "grammarPoint": "the same ... as ~（〜と同じ）/ want to 不定詞"
+    },
+    {
+      "id": 6,
+      "english": "I was chosen to be her buddy—someone to show her around and help her adjust.",
+      "japanese": "私は彼女のバディ（案内役で、彼女が慣れるのを手伝う人）に選ばれました。",
+      "phraseMeaning": "私は彼女のバディ（案内役で、彼女が慣れるのを手伝う人）に選ばれました。",
+      "segments": [
+        {"word": "I", "meaning": "私", "isUnknown": false},
+        {"word": "was", "meaning": "〜だった", "isUnknown": false},
+        {"word": "chosen", "meaning": "選ばれた", "isUnknown": false},
+        {"word": "to", "meaning": "〜するために", "isUnknown": false},
+        {"word": "be", "meaning": "〜である", "isUnknown": false},
+        {"word": "her", "meaning": "彼女の", "isUnknown": false},
+        {"word": "buddy", "meaning": "仲間", "isUnknown": false},
+        {"word": "—", "meaning": "", "isUnknown": false},
+        {"word": "someone", "meaning": "誰か", "isUnknown": false},
+        {"word": "to", "meaning": "〜するための", "isUnknown": false},
+        {"word": "show", "meaning": "見せる", "isUnknown": false},
+        {"word": "her", "meaning": "彼女に", "isUnknown": false},
+        {"word": "around", "meaning": "案内する", "isUnknown": false},
+        {"word": "and", "meaning": "そして", "isUnknown": false},
+        {"word": "help", "meaning": "助ける", "isUnknown": false},
+        {"word": "her", "meaning": "彼女が", "isUnknown": false},
+        {"word": "adjust", "meaning": "適応する", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false}
+      ],
+      "grammarPoint": "受動態（be chosen）/ 不定詞の形容詞的用法（someone to ...）"
+    },
+    {
+      "id": 7,
+      "english": "I felt both nervous and excited about this responsibility.",
+      "japanese": "この責任について、私は緊張と興奮の両方を感じました。",
+      "phraseMeaning": "この責任について、私は緊張と興奮の両方を感じました。",
+      "segments": [
+        {"word": "I", "meaning": "私", "isUnknown": false},
+        {"word": "felt", "meaning": "感じた", "isUnknown": false},
+        {"word": "both", "meaning": "両方", "isUnknown": false},
+        {"word": "nervous", "meaning": "緊張した", "isUnknown": false},
+        {"word": "and", "meaning": "と", "isUnknown": false},
+        {"word": "excited", "meaning": "興奮した", "isUnknown": false},
+        {"word": "about", "meaning": "〜について", "isUnknown": false},
+        {"word": "this", "meaning": "この", "isUnknown": false},
+        {"word": "responsibility", "meaning": "責任", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false}
+      ],
+      "grammarPoint": "both A and B（AとBの両方）"
+    },
+    {
+      "id": 8,
+      "english": "First Day—Meeting Emma",
+      "japanese": "初日―エマとの出会い",
+      "phraseMeaning": "初日―エマとの出会い",
+      "segments": [
+        {"word": "First", "meaning": "最初の", "isUnknown": false},
+        {"word": "Day", "meaning": "日", "isUnknown": false},
+        {"word": "—", "meaning": "", "isUnknown": false},
+        {"word": "Meeting", "meaning": "出会い", "isUnknown": false},
+        {"word": "Emma", "meaning": "エマ", "isUnknown": false}
+      ]
+    },
+    {
+      "id": 9,
+      "english": "On Monday morning, Emma arrived at our school.",
+      "japanese": "月曜日の朝、エマが私たちの学校に到着しました。",
+      "phraseMeaning": "月曜日の朝、エマが私たちの学校に到着しました。",
+      "segments": [
+        {"word": "On", "meaning": "〜に", "isUnknown": false},
+        {"word": "Monday", "meaning": "月曜日", "isUnknown": false},
+        {"word": "morning", "meaning": "朝", "isUnknown": false},
+        {"word": ",", "meaning": "", "isUnknown": false},
+        {"word": "Emma", "meaning": "エマ", "isUnknown": false},
+        {"word": "arrived", "meaning": "到着した", "isUnknown": false},
+        {"word": "at", "meaning": "〜に", "isUnknown": false},
+        {"word": "our", "meaning": "私たちの", "isUnknown": false},
+        {"word": "school", "meaning": "学校", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false}
+      ]
+    },
+    {
+      "id": 10,
+      "english": "She had long blonde hair and bright blue eyes that sparkled with curiosity.",
+      "japanese": "彼女は長いブロンドの髪と、好奇心で輝く明るい青い目を持っていました。",
+      "phraseMeaning": "彼女は長いブロンドの髪と、好奇心で輝く明るい青い目を持っていました。",
+      "segments": [
+        {"word": "She", "meaning": "彼女", "isUnknown": false},
+        {"word": "had", "meaning": "持っていた", "isUnknown": false},
+        {"word": "long", "meaning": "長い", "isUnknown": false},
+        {"word": "blonde", "meaning": "金髪の", "isUnknown": false},
+        {"word": "hair", "meaning": "髪", "isUnknown": false},
+        {"word": "and", "meaning": "と", "isUnknown": false},
+        {"word": "bright", "meaning": "明るい", "isUnknown": false},
+        {"word": "blue", "meaning": "青い", "isUnknown": false},
+        {"word": "eyes", "meaning": "目", "isUnknown": false},
+        {"word": "that", "meaning": "〜な", "isUnknown": false},
+        {"word": "sparkled", "meaning": "輝いた", "isUnknown": false},
+        {"word": "with", "meaning": "〜で", "isUnknown": false},
+        {"word": "curiosity", "meaning": "好奇心", "isUnknown": false},
+        {"word": ".", "meaning": "", "isUnknown": false}
+      ],
+      "grammarPoint": "関係代名詞that（先行詞eyes）"
+    }
+  ]
+}

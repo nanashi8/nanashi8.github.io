@@ -122,7 +122,38 @@ export async function convertPassageToReadingFormat(
 }
 
 /**
+ * フレーズ学習用JSONファイルを読み込み（新形式）
+ * public/data/passages-phrase-learning/*.json
+ */
+export async function loadPhraseLearningJSON(passageId: string): Promise<ReadingPassage | null> {
+  try {
+    const response = await fetch(`/data/passages-phrase-learning/${passageId}.json`);
+    if (!response.ok) {
+      return null; // ファイルが存在しない場合はnullを返す
+    }
+    
+    const data = await response.json();
+    
+    // JSONデータをそのまま返す（ReadingPassage型に準拠）
+    // phraseMeaning → japanese へのマッピング
+    const readingPassage: ReadingPassage = {
+      ...data,
+      phrases: data.phrases.map((phrase: any) => ({
+        ...phrase,
+        phraseMeaning: phrase.japanese || phrase.phraseMeaning, // japanese フィールドを優先
+      }))
+    };
+    
+    return readingPassage;
+  } catch (error) {
+    console.error(`Error loading phrase learning JSON for ${passageId}:`, error);
+    return null;
+  }
+}
+
+/**
  * 全パッセージを読み込んで ReadingPassage[] に変換
+ * 優先順位: 1) フレーズ学習JSON, 2) .txtファイル
  */
 export async function loadAllPassagesAsReadingFormat(
   wordDictionary: Map<string, any>
@@ -131,7 +162,14 @@ export async function loadAllPassagesAsReadingFormat(
   const passages: ReadingPassage[] = [];
 
   for (const meta of metadata) {
-    const passage = await convertPassageToReadingFormat(meta.id, wordDictionary);
+    // まずフレーズ学習JSONを試す
+    let passage = await loadPhraseLearningJSON(meta.id);
+    
+    // JSONがなければ従来の.txt変換を試す
+    if (!passage) {
+      passage = await convertPassageToReadingFormat(meta.id, wordDictionary);
+    }
+    
     if (passage) {
       passages.push(passage);
     }
