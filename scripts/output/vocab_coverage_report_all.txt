@@ -1,221 +1,224 @@
 === Vocabulary Coverage Report ===
-Sources: BASE:2662, INTERMEDIATE(+1579)
-Total vocab entries (expanded tokens): 3286
+Sources: BASE:2662, INTERMEDIATE(+1578)
+Total vocab entries (expanded tokens): 3281
 
 [Per Passage]
-  - advanced-1.txt: tokens=590 match=566 coverage=17.22%
-  - advanced-2.txt: tokens=588 match=563 coverage=17.13%
-  - advanced-3.txt: tokens=46 match=39 coverage=1.19%
-  - beginner-1.txt: tokens=293 match=279 coverage=8.49%
-  - beginner-2.txt: tokens=309 match=293 coverage=8.92%
-  - beginner-3.txt: tokens=309 match=292 coverage=8.89%
-  - intermediate-1.txt: tokens=470 match=448 coverage=13.63%
-  - intermediate-2.txt: tokens=479 match=460 coverage=14.00%
-  - intermediate-3.txt: tokens=421 match=402 coverage=12.23%
-  - intermediate-4.txt: tokens=312 match=292 coverage=8.89%
+  - advanced-family-gathering.txt: tokens=1229 match=577 coverage=17.59%
+  - advanced-health-statistics.txt: tokens=947 match=374 coverage=11.40%
+  - advanced-international-exchange.txt: tokens=1069 match=487 coverage=14.84%
+  - advanced-school-festival.txt: tokens=1285 match=587 coverage=17.89%
+  - advanced-summer-vacation-stories.txt: tokens=974 match=463 coverage=14.11%
+  - beginner-cafe-menu.txt: tokens=314 match=187 coverage=5.70%
+  - beginner-conversation-daily.txt: tokens=536 match=380 coverage=11.58%
+  - beginner-wildlife-park-guide.txt: tokens=553 match=268 coverage=8.17%
+  - intermediate-community-events.txt: tokens=599 match=291 coverage=8.87%
+  - intermediate-exchange-student-australia.txt: tokens=789 match=410 coverage=12.50%
+  - intermediate-homestay-america.txt: tokens=771 match=454 coverage=13.84%
+  - intermediate-school-events-year.txt: tokens=688 match=348 coverage=10.61%
+  - intermediate-school-news.txt: tokens=586 match=285 coverage=8.69%
 
-Total used vocab tokens: 2690
-Total unused vocab tokens: 596
-Overall coverage: 81.86%
+Total used vocab tokens: 1516
+Total unused vocab tokens: 1765
+Overall coverage: 46.21%
 
 [Top 200 Unused Tokens]
   a.m.
-  abroad
-  accident
-  according
-  action
-  actually
+  absent
+  absorb
+  abstract
+  absurd
+  abundance
+  academy
+  accelerate
+  accent
+  acceptable
+  acceptance
+  accessory
+  accidental
+  accompaniment
+  accompany
+  accord
+  accordance
+  accordingly
+  account
+  accuracy
+  accurate
+  accusation
+  accuse
+  accustomed
+  ache
+  acid
+  acquaint
+  acquaintance
+  acquire
+  acre
+  activate
+  actress
+  acute
+  adapt
+  adaptation
+  addict
+  addition
+  adequate
+  adhere
+  adjacent
+  adjective
+  adjust
+  administer
+  admirable
+  admiral
+  admiration
+  adolescent
+  adopt
+  adore
+  adorn
+  adult
+  advantage
+  advent
+  advertise
+  advertisement
+  advise
+  adviser
+  advocate
+  aerial
+  aesthetic
+  affair
+  affection
   affection​ate
+  affirm
+  afflict
+  affluent
+  afloat
   against
-  ahead
-  aid
-  airplane
-  airport
-  amazing
-  america
-  american
-  amount
+  agent
+  aggravate
+  aggregate
+  aggressive
+  agitate
+  agony
+  agreeable
+  agriculture
+  aircraft
+  aisle
+  alarm
+  alas
+  algebra
+  alien
+  align
+  alike
+  allege
+  allergic
+  allergy
+  alleviate
+  alliance
+  allowance
+  alloy
+  ally
+  alphabet
+  alter
+  alternate
+  alternative
+  although
+  altitude
+  altogether
+  aluminum
+  amateur
+  amaze
+  ambassador
+  ambiguous
+  ambition
+  ambulance
+  amend
+  amid
+  ammunition
+  ample
+  amplify
+  amuse
+  amusement
+  analogy
+  ancestor
+  anchor
+  anew
+  angel
+  angle
   angry
-  animated
-  announcement
-  anymore
-  anyone
-  anything
-  anyway
-  april
+  anguish
+  animate
+  ankle
+  anniversary
+  announce
+  annoy
+  ant
+  anticipate
+  antique
+  anxious
+  anybody
+  anyhow
+  apartment
+  apologize
+  apology
+  apparatus
+  apparent
+  appeal
+  appetite
+  applaud
+  appliance
+  applicable
+  applicant
+  apply
+  appoint
+  appointment
+  apprehension
+  apprentice
+  appropriate
+  approval
+  approve
+  approximate
   apron
+  apt
   aquarium
-  area
-  around
+  arbitrary
+  arc
+  arch
+  architect
+  archive
+  arctic
+  ardent
+  arduous
+  arena
+  argument
+  arise
+  aristocrat
+  arithmetic
+  arm
+  armor
+  arouse
+  arrangement
+  array
+  arrest
+  arrow
+  artist
+  artistic
+  ascend
+  ascertain
+  ashamed
   asian
-  august
-  australia
-  awesome
-  baby
-  bacon
-  badminton
-  baker
-  banana
-  baseball
-  basketball
-  bath
-  bathroom
-  beach
-  bean
-  beautiful
-  beauty
-  bedroom
-  bee
-  beef
-  beginner
-  behavior
-  beke
-  bench
-  beyond
-  bicycle
-  bike
-  birthday
-  bit
-  bomb
-  bookstore
-  bored
-  boring
-  born
-  borrow
-  bottle
-  bottom
-  bowl
-  brain
-  brazil
-  breakfast
-  bridge
-  bright
-  brown
-  brush
-  building
-  business
-  busy
-  bye
-  cabbage
-  cafe
-  cafeteria
-  cake
-  calligraphy
-  camping
-  canada
-  cancer
-  candy
-  cap
-  carefully
-  carrot
-  castle
-  certainly
-  challenge
-  chance
-  cheer
-  cheese
-  chef
-  chicken
-  china
-  chinese
-  choose
-  christmas
-  church
-  classmate
-  classroom
-  clearly
-  clock
-  cloudy
-  club
-  colorful
-  cookie
-  cooking
-  countryside
-  couple
-  courage
-  court
-  cousin
-  cow
-  creative
-  crowd
-  crowded
-  cucumber
-  cultural
-  culture
-  curry
-  curtain
-  custom
-  customer
-  cute
-  damage
-  dance
-  dancing
-  dangerous
-  deal
-  dear
-  death
-  debate
-  december
-  decision
-  decorate
-  decrease
-  delicious
-  delivery
-  dentist
-  depend
-  desigh
-  designer
-  dessert
-  destroy
-  development
-  dictionary
-  difference
-  dinner
-  direction
-  dirty
-  disagree
-  disappear
-  disaster
-  discover
-  discussion
-  disease
-  dish
-  display
-  dive
-  dollar
-  domestic
-  double
-  drama
-  drill
-  driver
-  drum
-  earn
-  earthquake
-  easily
-  effective
-  egg
-  eighteen
-  eighth
-  eighty
-  elderly
-  electricity
-  electronic
-  elementary
-  elephant
-  eleventh
-  emergency
-  empty
-  encourage
-  endangered
-  ending
-  energy
-  english
-  eraser
-  establish
-  european
-  evacuation
-  even
-  everybody
-  everything
-  everywhere
-  exactly
+  aside
+  aspect
+  aspiration
+  assault
+  assemble
+  assert
+  assess
+  assessment
+  asset
+  assign
+  assist
+  assistant
+  associate
+  assorted
+  assume
+  assumption
+  assurance
+  assure
+  astonish

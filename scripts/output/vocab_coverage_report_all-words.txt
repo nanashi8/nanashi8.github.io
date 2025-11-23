@@ -1,221 +1,232 @@
 === Vocabulary Coverage Report ===
-Sources: CUSTOM(all-words.csv):3283
-Total vocab entries (expanded tokens): 3283
+Sources: CUSTOM(all-words.csv):3281
+Total vocab entries (expanded tokens): 3281
 
 [Per Passage]
-  - advanced-1.txt: tokens=590 match=566 coverage=17.24%
-  - advanced-2.txt: tokens=588 match=563 coverage=17.15%
-  - advanced-3.txt: tokens=375 match=229 coverage=6.98%
-  - beginner-1.txt: tokens=293 match=279 coverage=8.50%
-  - beginner-2.txt: tokens=398 match=349 coverage=10.63%
-  - beginner-3.txt: tokens=399 match=344 coverage=10.48%
-  - intermediate-1.txt: tokens=470 match=448 coverage=13.65%
-  - intermediate-2.txt: tokens=479 match=460 coverage=14.01%
-  - intermediate-3.txt: tokens=421 match=402 coverage=12.24%
-  - intermediate-4.txt: tokens=312 match=292 coverage=8.89%
+  - advanced-environmental-issues.txt: tokens=1597 match=556 coverage=16.95%
+  - advanced-family-gathering.txt: tokens=1429 match=617 coverage=18.81%
+  - advanced-health-statistics.txt: tokens=1340 match=467 coverage=14.23%
+  - advanced-historical-figures.txt: tokens=1471 match=463 coverage=14.11%
+  - advanced-international-exchange.txt: tokens=1268 match=540 coverage=16.46%
+  - advanced-school-festival.txt: tokens=1436 match=623 coverage=18.99%
+  - advanced-summer-vacation-stories.txt: tokens=1207 match=512 coverage=15.60%
+  - advanced-technology-future.txt: tokens=1424 match=469 coverage=14.29%
+  - beginner-cafe-menu.txt: tokens=750 match=344 coverage=10.48%
+  - beginner-conversation-daily.txt: tokens=995 match=559 coverage=17.04%
+  - beginner-supermarket-shopping.txt: tokens=757 match=387 coverage=11.80%
+  - beginner-weather-seasons.txt: tokens=716 match=386 coverage=11.76%
+  - beginner-wildlife-park-guide.txt: tokens=1012 match=392 coverage=11.95%
+  - intermediate-career-day.txt: tokens=1116 match=486 coverage=14.81%
+  - intermediate-community-events.txt: tokens=1140 match=460 coverage=14.02%
+  - intermediate-exchange-student-australia.txt: tokens=1112 match=500 coverage=15.24%
+  - intermediate-homestay-america.txt: tokens=1099 match=550 coverage=16.76%
+  - intermediate-hospital-visit.txt: tokens=1127 match=478 coverage=14.57%
+  - intermediate-school-events-year.txt: tokens=1101 match=481 coverage=14.66%
+  - intermediate-school-news.txt: tokens=1137 match=469 coverage=14.29%
+  - intermediate-science-museum.txt: tokens=1156 match=497 coverage=15.15%
 
-Total used vocab tokens: 2817
-Total unused vocab tokens: 466
-Overall coverage: 85.81%
+Total used vocab tokens: 2069
+Total unused vocab tokens: 1212
+Overall coverage: 63.06%
 
 [Top 200 Unused Tokens]
   a.m.
-  accident
-  according
-  action
-  actually
+  accelerate
+  accent
+  acceptable
+  acceptance
+  accessory
+  accidental
+  accompaniment
+  accordance
+  accordingly
+  accusation
+  accuse
+  ache
+  acquaint
+  acquaintance
+  acre
+  actress
+  addict
+  addition
+  adjacent
+  adjective
+  adolescent
+  adore
+  adorn
+  advent
+  advertise
+  adviser
+  aerial
+  affair
+  affection
   affection​ate
-  against
-  ahead
-  aid
-  airport
+  affirm
+  afflict
+  afloat
+  agent
+  aggravate
+  agitate
+  agony
+  agreeable
+  alas
+  alien
+  alike
+  allege
+  allergic
+  allergy
+  alleviate
+  alliance
+  allowance
+  alloy
+  ally
+  alphabet
+  altitude
+  altogether
+  amateur
+  amaze
+  ambassador
+  ambiguous
+  amend
+  amid
+  ammunition
+  ample
+  amuse
+  amusement
+  analogy
+  ancestor
+  anew
+  angel
+  angle
   angry
-  anymore
-  anything
-  anyway
-  april
+  anguish
+  animate
+  anniversary
+  annoy
+  ant
+  antique
+  anybody
+  anyhow
+  apartment
+  apologize
+  apology
+  appetite
+  applaud
+  appliance
+  applicant
+  appoint
+  apprehension
+  apprentice
+  approve
+  approximate
   apron
-  asian
-  banana
-  baseball
+  apt
+  aquarium
+  arc
+  arch
+  archive
+  ardent
+  arduous
+  arena
+  aristocrat
+  armor
+  arouse
+  array
+  arrest
+  arrow
+  artist
+  ascend
+  ascertain
+  aspiration
+  assault
+  assert
+  assessment
+  assign
+  assistant
+  assorted
+  assumption
+  assurance
+  astonish
+  astonishment
+  astronaut
+  athlete
+  attach
+  attachment
+  attain
+  attendant
+  attic
+  attraction
+  auction
+  audible
+  audit
+  august
+  authorize
+  automobile
+  avail
+  avenue
+  avert
+  await
+  awe
+  awful
+  axis
+  bachelor
+  backward
+  badge
+  bag
+  balcony
+  balloon
+  ballot
+  ban
+  bang
+  bankrupt
+  banquet
+  barber
+  bargain
+  bark
+  barn
+  barrel
+  barren
+  basis
+  basket
   bath
-  bathroom
-  bean
-  beauty
+  battle
+  beard
+  beat
   bedroom
   bee
-  behavior
+  behalf
+  behave
+  belong
   bench
+  benevolent
+  bet
+  betray
+  bibliography
   bicycle
-  bike
-  bomb
-  boring
-  born
-  bottom
-  bowl
-  brain
-  bridge
-  brown
-  brush
-  building
-  business
-  busy
-  bye
-  cabbage
-  cafe
-  camping
-  canada
-  candy
-  cap
-  carrot
-  chance
-  cheer
-  chicken
-  choice
-  choose
-  christmas
-  classmate
-  classroom
-  clock
-  cloudy
-  cookie
-  couple
-  cow
-  culture
-  curtain
-  customer
-  dance
-  dangerous
-  dear
-  death
-  decision
-  delivery
-  dessert
-  destroy
-  dictionary
-  disagree
-  disappear
-  disaster
-  discover
-  disease
-  dish
-  dive
-  dollar
-  domestic
-  double
-  drama
-  drill
-  earn
-  earthquake
-  easily
-  egg
-  eighteen
-  eighth
-  eighty
-  electricity
-  elementary
-  elephant
-  eleventh
-  empty
-  encourage
-  ending
-  english
-  eraser
-  establish
-  european
-  everything
-  everywhere
-  exactly
-  exam
-  exception
-  excuse
-  expensive
-  expression
-  factory
-  fan
-  fantastic
-  farmer
-  favorite
-  feather
-  feature
-  february
-  fee
-  feed
-  feeling
-  fever
-  fiction
-  fifteen
-  fifth
-  fifty
-  file
-  finally
-  firework
-  fishing
-  flight
-  fold
-  football
-  foreigh
-  forever
-  fortunately
-  forty
-  fourteen
-  fourth
-  france
-  freedom
-  freely
-  fresh
-  friday
-  friendly
-  frog
-  funny
-  further
-  garbage
-  germany
-  gesture
-  giant
-  gift
-  glad
-  global
-  gold
-  goods
-  gorilla
-  graduate
-  grandfather
-  grandma
-  grandpa
-  grandparent
-  grapes
-  greatly
-  guest
-  guitar
-  hair
-  hall
-  hamberger
-  handle
-  headache
-  hello
-  heritage
-  hero
-  hers
-  herself
-  hi
-  hide
-  himself
-  hit
-  hobby
-  hole
-  holiday
-  hometown
-  hopeful
-  horror
-  host
-  hotel
-  hug
-  huge
-  hunt
-  hurt
-  husband
-  imagine
-  impossible
-  india
-  injure
+  bilateral
+  bind
+  bite
+  blame
+  bland
+  blank
+  blasphemy
+  blatant
+  bleak
+  blend
+  bless
+  blight
+  blind
+  bliss
+  bloat
+  block
+  blockade
+  blow
+  bluff
+  blunder
+  blunt
+  boast
+  boat
+  bodily
+  bog
+  bogus
+  boil

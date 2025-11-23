@@ -3,21 +3,222 @@ Sources: BASE:2662
 Total vocab entries (expanded tokens): 2662
 
 [Per Passage]
-  - advanced-1.txt: tokens=590 match=550 coverage=20.66%
-  - advanced-2.txt: tokens=588 match=547 coverage=20.55%
-  - advanced-3.txt: tokens=46 match=27 coverage=1.01%
-  - beginner-1.txt: tokens=293 match=265 coverage=9.95%
-  - beginner-2.txt: tokens=309 match=275 coverage=10.33%
-  - beginner-3.txt: tokens=309 match=277 coverage=10.41%
-  - intermediate-1.txt: tokens=470 match=430 coverage=16.15%
-  - intermediate-2.txt: tokens=479 match=443 coverage=16.64%
-  - intermediate-3.txt: tokens=421 match=385 coverage=14.46%
-  - intermediate-4.txt: tokens=312 match=270 coverage=10.14%
+  - advanced-family-gathering.txt: tokens=1229 match=431 coverage=16.19%
+  - advanced-health-statistics.txt: tokens=947 match=294 coverage=11.04%
+  - advanced-international-exchange.txt: tokens=1069 match=343 coverage=12.89%
+  - advanced-school-festival.txt: tokens=1285 match=461 coverage=17.32%
+  - advanced-summer-vacation-stories.txt: tokens=974 match=353 coverage=13.26%
+  - beginner-cafe-menu.txt: tokens=314 match=123 coverage=4.62%
+  - beginner-conversation-daily.txt: tokens=536 match=291 coverage=10.93%
+  - beginner-wildlife-park-guide.txt: tokens=553 match=199 coverage=7.48%
+  - intermediate-community-events.txt: tokens=599 match=194 coverage=7.29%
+  - intermediate-exchange-student-australia.txt: tokens=789 match=314 coverage=11.80%
+  - intermediate-homestay-america.txt: tokens=771 match=348 coverage=13.07%
+  - intermediate-school-events-year.txt: tokens=688 match=249 coverage=9.35%
+  - intermediate-school-news.txt: tokens=586 match=204 coverage=7.66%
 
-Total used vocab tokens: 2660
-Total unused vocab tokens: 2
-Overall coverage: 99.92%
+Total used vocab tokens: 1067
+Total unused vocab tokens: 1595
+Overall coverage: 40.08%
 
 [Top 200 Unused Tokens]
+  absent
+  absorb
+  abstract
+  absurd
+  abundance
+  academy
+  accelerate
+  accent
+  acceptable
+  acceptance
+  accessory
+  accidental
+  accompaniment
+  accompany
+  accord
+  accordance
+  accordingly
+  account
+  accuracy
+  accurate
+  accusation
+  accuse
+  accustomed
+  ache
+  acid
+  acquaint
+  acquaintance
+  acquire
+  acre
+  activate
+  actress
+  acute
+  adapt
+  adaptation
+  addict
+  addition
+  adequate
+  adhere
+  adjacent
+  adjective
+  adjust
+  administer
+  admirable
+  admiral
+  admiration
+  adolescent
+  adopt
+  adore
+  adorn
+  adult
+  advantage
+  advent
+  advertise
+  advertisement
+  advise
+  adviser
+  advocate
+  aerial
+  aesthetic
+  affair
+  affection
   affection​ate
-  o'clock
+  affirm
+  afflict
+  affluent
+  afloat
+  agent
+  aggravate
+  aggregate
+  aggressive
+  agitate
+  agony
+  agreeable
+  agriculture
+  aircraft
+  aisle
+  alarm
+  alas
+  algebra
+  alien
+  align
+  alike
+  allege
+  allergic
+  allergy
+  alleviate
+  alliance
+  allowance
+  alloy
+  ally
+  alphabet
+  alter
+  alternate
+  alternative
+  although
+  altitude
+  altogether
+  aluminum
+  amateur
+  amaze
+  ambassador
+  ambiguous
+  ambition
+  ambulance
+  amend
+  amid
+  ammunition
+  ample
+  amplify
+  amuse
+  amusement
+  analogy
+  ancestor
+  anchor
+  anew
+  angel
+  angle
+  anguish
+  animate
+  ankle
+  anniversary
+  announce
+  annoy
+  ant
+  anticipate
+  antique
+  anxious
+  anybody
+  anyhow
+  apartment
+  apologize
+  apology
+  apparatus
+  apparent
+  appeal
+  appetite
+  applaud
+  appliance
+  applicable
+  applicant
+  apply
+  appoint
+  appointment
+  apprehension
+  apprentice
+  appropriate
+  approval
+  approve
+  approximate
+  apt
+  arbitrary
+  arc
+  arch
+  architect
+  archive
+  arctic
+  ardent
+  arduous
+  arena
+  argument
+  arise
+  aristocrat
+  arithmetic
+  arm
+  armor
+  arouse
+  arrangement
+  array
+  arrest
+  arrow
+  artist
+  artistic
+  ascend
+  ascertain
+  ashamed
+  aside
+  aspect
+  aspiration
+  assault
+  assemble
+  assert
+  assess
+  assessment
+  asset
+  assign
+  assist
+  assistant
+  associate
+  assorted
+  assume
+  assumption
+  assurance
+  assure
+  astonish
+  astonishment
+  astronaut
+  astronomy
+  athlete
+  atom
+  atomic
