@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
+import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -221,7 +222,72 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     const readingDataKey = 'reading-passages-data';
     const storedData = localStorage.getItem(readingDataKey);
     
-    fetch('/data/reading-passages-comprehensive.json')
+    // 新しい .txt ベースのパッセージを優先的に読み込む
+    loadAllPassagesAsReadingFormat(wordDictionary)
+      .then((txtPassages) => {
+        if (txtPassages && txtPassages.length > 0) {
+          console.log('Loaded .txt passages:', txtPassages.length);
+          let processedData = txtPassages;
+          
+          // LocalStorageに保存済みデータがあればマージ
+          if (storedData) {
+            try {
+              const savedPassages = JSON.parse(storedData);
+              processedData = processedData.map(passage => {
+                const saved = savedPassages.find((p: ReadingPassage) => p.id === passage.id);
+                if (saved) {
+                  // 保存済みのisUnknown状態をマージ
+                  return {
+                    ...passage,
+                    phrases: passage.phrases.map((phrase, pIdx) => ({
+                      ...phrase,
+                      segments: phrase.segments.map((seg, sIdx) => ({
+                        ...seg,
+                        isUnknown: saved.phrases?.[pIdx]?.segments?.[sIdx]?.isUnknown || false
+                      }))
+                    }))
+                  };
+                }
+                return passage;
+              });
+            } catch (err) {
+              console.error('LocalStorageデータの読み込みエラー:', err);
+            }
+          }
+          
+          // 難易度・語数順にソート（難易度: 初級→中級→上級、同一難易度内: 語数少ない順）
+          const levelOrder: Record<string, number> = { 
+            '初級': 1, 'beginner': 1,
+            '中級': 2, 'intermediate': 2,
+            '上級': 3, 'advanced': 3, 'Advanced': 3
+          };
+          const sortedData = processedData.sort((a, b) => {
+            const levelA = levelOrder[a.level || ''] || 999;
+            const levelB = levelOrder[b.level || ''] || 999;
+            if (levelA !== levelB) return levelA - levelB;
+
+            const wordCountA = a.actualWordCount || 0;
+            const wordCountB = b.actualWordCount || 0;
+            return wordCountA - wordCountB;
+          });
+          
+          setPassages(sortedData);
+          setLoading(false);
+          if (sortedData.length > 0) {
+            setSelectedPassageId(sortedData[0].id);
+            setPhraseTranslations(new Array(sortedData[0].phrases?.length || 0).fill(false));
+            setWordMeaningsVisible(new Array(sortedData[0].phrases?.length || 0).fill(false));
+          }
+          return;
+        }
+        
+        // .txt パッセージが読み込めなかった場合、フォールバックとしてJSONを読み込む
+        throw new Error('No .txt passages available, falling back to JSON');
+      })
+      .catch(() => {
+        // フォールバック: 既存のJSONベースのパッセージを読み込む
+        console.log('Falling back to JSON passages');
+        fetch('/data/reading-passages-comprehensive.json')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load passages');
         return res.json();
@@ -365,6 +431,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         setError('パッセージの読み込みに失敗しました: ' + err.message);
         setLoading(false);
       });
+    });
   }, [wordDictionary]); // 辞書が読み込まれたら再実行
 
   // 現在のパッセージをメモ化
