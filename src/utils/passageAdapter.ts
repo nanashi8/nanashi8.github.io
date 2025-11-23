@@ -54,21 +54,31 @@ export async function convertPassageToReadingFormat(
   
   loaded.sections.forEach((section) => {
     section.paragraphs.forEach((paragraph) => {
-      // 文に分割（.!?で区切る）
-      const sentences = paragraph.match(/[^.!?]+[.!?]+/g) || [paragraph];
+      // 会話形式（Speaker: "..."）のパターンをチェック
+      const conversationMatch = paragraph.match(/^([^:]+):\s*"([^"]+)"$/);
       
-      sentences.forEach((sentence) => {
-        // 単語に分割
-        const words = sentence.trim().split(/\s+/);
+      if (conversationMatch) {
+        // 会話文の場合: 全体を1つのフレーズとして扱う
+        const fullText = paragraph.trim();
+        const words = fullText.split(/\s+/);
         
         // セグメントを生成
         const segments: ReadingSegment[] = words.map(word => {
-          // 句読点を検出
-          const punctuationMatch = word.match(/([.,!?;:—])$/);
+          // 引用符や句読点を検出
+          const punctuationMatch = word.match(/([.,!?;:—"])$/);
           
           if (punctuationMatch) {
-            const cleanWord = word.replace(/[.,!?;:—]$/, '');
+            const cleanWord = word.replace(/[.,!?;:—"]$/, '');
             const punctuation = punctuationMatch[1];
+            
+            if (!cleanWord) {
+              // 引用符のみの場合
+              return {
+                word: punctuation,
+                meaning: '',
+                isUnknown: false,
+              };
+            }
             
             const lemma = getLemma(cleanWord);
             const wordData = wordDictionary.get(lemma);
@@ -87,6 +97,34 @@ export async function convertPassageToReadingFormat(
               }
             ];
           } else {
+            // 先頭の引用符を処理
+            if (word.startsWith('"')) {
+              const cleanWord = word.substring(1);
+              if (!cleanWord) {
+                return {
+                  word: '"',
+                  meaning: '',
+                  isUnknown: false,
+                };
+              }
+              const lemma = getLemma(cleanWord);
+              const wordData = wordDictionary.get(lemma);
+              const meaning = wordData?.meaning || '';
+              
+              return [
+                {
+                  word: '"',
+                  meaning: '',
+                  isUnknown: false,
+                },
+                {
+                  word: cleanWord,
+                  meaning: meaning === '-' ? '' : meaning,
+                  isUnknown: false,
+                }
+              ];
+            }
+            
             const lemma = getLemma(word);
             const wordData = wordDictionary.get(lemma);
             const meaning = wordData?.meaning || '';
@@ -100,12 +138,65 @@ export async function convertPassageToReadingFormat(
         }).flat();
         
         phrases.push({
-          english: sentence.trim(),
+          english: fullText,
           japanese: '', // 翻訳は後で追加可能
           words: words,
           segments: segments,
         });
-      });
+      } else {
+        // 通常の文: .!?で区切る
+        const sentences = paragraph.match(/[^.!?]+[.!?]+/g) || [paragraph];
+        
+        sentences.forEach((sentence) => {
+          // 単語に分割
+          const words = sentence.trim().split(/\s+/);
+          
+          // セグメントを生成
+          const segments: ReadingSegment[] = words.map(word => {
+            // 句読点を検出
+            const punctuationMatch = word.match(/([.,!?;:—])$/);
+            
+            if (punctuationMatch) {
+              const cleanWord = word.replace(/[.,!?;:—]$/, '');
+              const punctuation = punctuationMatch[1];
+              
+              const lemma = getLemma(cleanWord);
+              const wordData = wordDictionary.get(lemma);
+              const meaning = wordData?.meaning || '';
+              
+              return [
+                {
+                  word: cleanWord,
+                  meaning: meaning === '-' ? '' : meaning,
+                  isUnknown: false,
+                },
+                {
+                  word: punctuation,
+                  meaning: '',
+                  isUnknown: false,
+                }
+              ];
+            } else {
+              const lemma = getLemma(word);
+              const wordData = wordDictionary.get(lemma);
+              const meaning = wordData?.meaning || '';
+              
+              return {
+                word,
+                meaning: meaning === '-' ? '' : meaning,
+                isUnknown: false,
+              };
+            }
+          }).flat();
+          
+          phrases.push({
+            english: sentence.trim(),
+            japanese: '', // 翻訳は後で追加可能
+            words: words,
+            segments: segments,
+          });
+        });
+      }
     });
   });
 
