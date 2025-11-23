@@ -34,6 +34,7 @@
 - [19-中学受験単語](./19-junior-high-vocabulary.md) - 中学受験頻出単語リスト
 - [20-中学受験フレーズ](./20-junior-high-phrases.md) - 中学受験頻出フレーズリスト
 - [21-長文読解パッセージ](./21-reading-passages.md) - 長文読解用パッセージデータ
+- [**NEW HORIZON文法問題ガイドライン**](./NEW_HORIZON_GRAMMAR_GUIDELINES.md) - 文並び替え問題の作成標準仕様
 
 ### 7. 開発ガイド
 - [22-開発環境セットアップ](./22-development-setup.md) - 開発環境の構築手順
