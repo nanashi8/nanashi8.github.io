@@ -1,0 +1,7 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "docs/PASSAGE_CREATION_GUIDELINES.md"
+    }
+  ]
+}
