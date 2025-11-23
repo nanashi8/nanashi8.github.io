@@ -15,7 +15,7 @@ import { getAlertSummary } from '../forgettingAlert';
 import { useState, useEffect } from 'react';
 
 interface ScoreBoardProps {
-  mode?: 'translation' | 'spelling' | 'reading'; // クイズモードを追加
+  mode?: 'translation' | 'spelling' | 'reading' | 'grammar'; // クイズモードを追加
   currentScore?: number; // 現在のスコア
   totalAnswered?: number; // 現在の回答数
   sessionCorrect?: number; // セッション内の正解数
