@@ -229,32 +229,42 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
 
     if (fromRemaining) {
       setRemainingWords(prev => prev.filter(w => w !== word));
-      setSelectedWords(prev => [...prev, word]);
+      setSelectedWords(prev => {
+        const newWords = [...prev, word];
+        
+        // 全ての単語を選択したら自動で判定
+        if (newWords.length === currentQuestion.words.length) {
+          setTimeout(() => {
+            setAnswered(true);
+            const userAnswer = newWords.join(' ');
+            const correctAnswer = currentQuestion.words.join(' ');
+            const isCorrect = userAnswer === correctAnswer;
+            
+            setTotalAnswered(prevTotal => prevTotal + 1);
+            
+            if (isCorrect) {
+              setScore(prevScore => prevScore + 1);
+              setSessionStats(prev => ({ ...prev, correct: prev.correct + 1 }));
+            } else {
+              setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
+            }
+          }, 100);
+        }
+        
+        return newWords;
+      });
     } else {
       setSelectedWords(prev => prev.filter(w => w !== word));
       setRemainingWords(prev => [...prev, word]);
     }
   };
 
-  // 並び替え問題の回答確定
-  const handleSubmit = () => {
-    if (!currentQuestion || !isSentenceOrdering) return;
-    if (selectedWords.length === 0) return;
-    
-    setAnswered(true);
-    
-    const userAnswer = selectedWords.join(' ');
-    const correctAnswer = currentQuestion.words.join(' ');
-    const isCorrect = userAnswer === correctAnswer;
-    
-    setTotalAnswered(prev => prev + 1);
-    
-    if (isCorrect) {
-      setScore(prev => prev + 1);
-      setSessionStats(prev => ({ ...prev, correct: prev.correct + 1 }));
-    } else {
-      setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
-    }
+  const handleRatingChange = (rating: number) => {
+    setUserRating(rating);
+  };
+
+  const toggleHint = () => {
+    setShowHint(!showHint);
   };
 
   const handleNext = () => {
@@ -277,26 +287,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       setShowHint(false);
       setUserRating(null);
     }
-  };
-
-  const handleRatingChange = (rating: number) => {
-    setUserRating(rating);
-  };
-
-  const toggleHint = () => {
-    setShowHint(!showHint);
-  };
-
-  const handleReset = () => {
-    if (isSentenceOrdering && currentQuestion && currentQuestion.words) {
-      const shuffled = [...currentQuestion.words].sort(() => Math.random() - 0.5);
-      setRemainingWords(shuffled);
-      setSelectedWords([]);
-    } else {
-      setSelectedAnswer(null);
-    }
-    setAnswered(false);
-    setShowHint(false);
   };
 
   const isCorrect = () => {
@@ -551,25 +541,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 </div>
               )}
 
-              {/* 並び替え問題の回答ボタン */}
-              {!answered && isSentenceOrdering && (
-                <div className="submit-area">
-                  <button 
-                    className="submit-button"
-                    onClick={handleSubmit}
-                    disabled={selectedWords.length === 0}
-                  >
-                    回答する
-                  </button>
-                  <button 
-                    className="reset-button"
-                    onClick={handleReset}
-                  >
-                    リセット
-                  </button>
-                </div>
-              )}
-
               {/* 結果表示 */}
               {answered && (
                 <>
@@ -595,7 +566,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                     </div>
                   ) : (
                     <>
-                      {!isCorrect() && currentQuestion.explanation && (
+                      {currentQuestion.explanation && (
                         <div className="explanation-box">
                           <div className="explanation">
                             <strong>解説:</strong><br />
