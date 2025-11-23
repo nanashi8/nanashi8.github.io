@@ -1,0 +1,780 @@
+{
+  "grade": 1,
+  "totalQuestions": 50,
+  "units": [
+    {
+      "unit": "Unit 0",
+      "title": "アルファベット・小学校英語の復習",
+      "questions": [
+        {
+          "id": "g1-u0-001",
+          "japanese": "こんにちは",
+          "words": [
+            "Hello"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "挨拶",
+          "wordCount": 1,
+          "hint": "基本的な挨拶"
+        },
+        {
+          "id": "g1-u0-002",
+          "japanese": "ありがとう",
+          "words": [
+            "Thank",
+            "you"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "挨拶",
+          "wordCount": 2,
+          "hint": "感謝の表現"
+        },
+        {
+          "id": "g1-u0-003",
+          "japanese": "私の名前はタロウです",
+          "words": [
+            "My",
+            "name",
+            "is",
+            "Taro"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "自己紹介",
+          "wordCount": 4,
+          "hint": "主語→述語の順"
+        },
+        {
+          "id": "g1-u0-004",
+          "japanese": "あなたの名前は何ですか",
+          "words": [
+            "What",
+            "is",
+            "your",
+            "name"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "疑問文",
+          "wordCount": 4,
+          "hint": "疑問詞を先頭に"
+        },
+        {
+          "id": "g1-u0-005",
+          "japanese": "いい天気ですね",
+          "words": [
+            "It",
+            "is",
+            "a",
+            "nice",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "天気の表現",
+          "wordCount": 5,
+          "hint": "It → is の順"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "title": "be動詞（I am / You are）",
+      "questions": [
+        {
+          "id": "g1-u1-001",
+          "japanese": "私は学生です",
+          "words": [
+            "I",
+            "am",
+            "a",
+            "student"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "be動詞（肯定文）",
+          "wordCount": 4,
+          "hint": "I → am の順"
+        },
+        {
+          "id": "g1-u1-002",
+          "japanese": "あなたは先生です",
+          "words": [
+            "You",
+            "are",
+            "a",
+            "teacher"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "be動詞（肯定文）",
+          "wordCount": 4,
+          "hint": "You → are の順"
+        },
+        {
+          "id": "g1-u1-003",
+          "japanese": "あなたは学生ですか",
+          "words": [
+            "Are",
+            "you",
+            "a",
+            "student"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "be動詞（疑問文）",
+          "wordCount": 4,
+          "hint": "Are を文頭に"
+        },
+        {
+          "id": "g1-u1-004",
+          "japanese": "私は先生ではありません",
+          "words": [
+            "I",
+            "am",
+            "not",
+            "a",
+            "teacher"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "be動詞（否定文）",
+          "wordCount": 5,
+          "hint": "am の後に not"
+        },
+        {
+          "id": "g1-u1-005",
+          "japanese": "私は日本出身です",
+          "words": [
+            "I",
+            "am",
+            "from",
+            "Japan"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "be動詞 + from",
+          "wordCount": 4,
+          "hint": "from の後に国名"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "title": "一般動詞（現在形）",
+      "questions": [
+        {
+          "id": "g1-u2-001",
+          "japanese": "私は音楽が好きです",
+          "words": [
+            "I",
+            "like",
+            "music"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞（肯定文）",
+          "wordCount": 3,
+          "hint": "主語→動詞の順"
+        },
+        {
+          "id": "g1-u2-002",
+          "japanese": "あなたはテニスをしますか",
+          "words": [
+            "Do",
+            "you",
+            "play",
+            "tennis"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞（疑問文）",
+          "wordCount": 4,
+          "hint": "Do を文頭に"
+        },
+        {
+          "id": "g1-u2-003",
+          "japanese": "私はサッカーをしません",
+          "words": [
+            "I",
+            "do",
+            "not",
+            "play",
+            "soccer"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞（否定文）",
+          "wordCount": 5,
+          "hint": "do not の後に動詞原形"
+        },
+        {
+          "id": "g1-u2-004",
+          "japanese": "あなたは英語を勉強しますか",
+          "words": [
+            "Do",
+            "you",
+            "study",
+            "English"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞（疑問文）",
+          "wordCount": 4,
+          "hint": "Do you → 動詞原形"
+        },
+        {
+          "id": "g1-u2-005",
+          "japanese": "私は毎日学校に行きます",
+          "words": [
+            "I",
+            "go",
+            "to",
+            "school",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞 + 頻度",
+          "wordCount": 6,
+          "hint": "時間は文末に"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "title": "三人称単数・複数形",
+      "questions": [
+        {
+          "id": "g1-u3-001",
+          "japanese": "彼は野球が好きです",
+          "words": [
+            "He",
+            "likes",
+            "baseball"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "三人称単数現在",
+          "wordCount": 3,
+          "hint": "He → likes (sをつける)"
+        },
+        {
+          "id": "g1-u3-002",
+          "japanese": "彼女は音楽を聞きます",
+          "words": [
+            "She",
+            "listens",
+            "to",
+            "music"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "三人称単数現在",
+          "wordCount": 4,
+          "hint": "She → listens (sをつける)"
+        },
+        {
+          "id": "g1-u3-003",
+          "japanese": "彼はサッカーをしますか",
+          "words": [
+            "Does",
+            "he",
+            "play",
+            "soccer"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "三人称単数疑問文",
+          "wordCount": 4,
+          "hint": "Does を文頭に、動詞は原形"
+        },
+        {
+          "id": "g1-u3-004",
+          "japanese": "彼女は英語を話しません",
+          "words": [
+            "She",
+            "does",
+            "not",
+            "speak",
+            "English"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "三人称単数否定文",
+          "wordCount": 5,
+          "hint": "does not の後は動詞原形"
+        },
+        {
+          "id": "g1-u3-005",
+          "japanese": "彼らは学生です",
+          "words": [
+            "They",
+            "are",
+            "students"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "複数形",
+          "wordCount": 3,
+          "hint": "students に s をつける"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "title": "疑問詞",
+      "questions": [
+        {
+          "id": "g1-u4-001",
+          "japanese": "あなたは何が好きですか",
+          "words": [
+            "What",
+            "do",
+            "you",
+            "like"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "What疑問文",
+          "wordCount": 4,
+          "hint": "What → do you → 動詞"
+        },
+        {
+          "id": "g1-u4-002",
+          "japanese": "あなたは誰ですか",
+          "words": [
+            "Who",
+            "are",
+            "you"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "Who疑問文",
+          "wordCount": 3,
+          "hint": "Who → are you"
+        },
+        {
+          "id": "g1-u4-003",
+          "japanese": "あなたはいつ起きますか",
+          "words": [
+            "When",
+            "do",
+            "you",
+            "get",
+            "up"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "When疑問文",
+          "wordCount": 5,
+          "hint": "When → do you の順"
+        },
+        {
+          "id": "g1-u4-004",
+          "japanese": "あなたはどこに住んでいますか",
+          "words": [
+            "Where",
+            "do",
+            "you",
+            "live"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "Where疑問文",
+          "wordCount": 4,
+          "hint": "Where → do you live"
+        },
+        {
+          "id": "g1-u4-005",
+          "japanese": "あなたはどうやって学校に行きますか",
+          "words": [
+            "How",
+            "do",
+            "you",
+            "go",
+            "to",
+            "school"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "How疑問文",
+          "wordCount": 6,
+          "hint": "How → do you の順"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "title": "canの文",
+      "questions": [
+        {
+          "id": "g1-u5-001",
+          "japanese": "私はピアノを弾けます",
+          "words": [
+            "I",
+            "can",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "can（能力）",
+          "wordCount": 5,
+          "hint": "can の後は動詞原形"
+        },
+        {
+          "id": "g1-u5-002",
+          "japanese": "あなたは泳げますか",
+          "words": [
+            "Can",
+            "you",
+            "swim"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "can（疑問文）",
+          "wordCount": 3,
+          "hint": "Can を文頭に"
+        },
+        {
+          "id": "g1-u5-003",
+          "japanese": "彼は英語を話せません",
+          "words": [
+            "He",
+            "cannot",
+            "speak",
+            "English"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "can（否定文）",
+          "wordCount": 4,
+          "hint": "cannot の後は動詞原形"
+        },
+        {
+          "id": "g1-u5-004",
+          "japanese": "私は自転車に乗れます",
+          "words": [
+            "I",
+            "can",
+            "ride",
+            "a",
+            "bike"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "can（能力）",
+          "wordCount": 5,
+          "hint": "can ride a bike"
+        },
+        {
+          "id": "g1-u5-005",
+          "japanese": "窓を開けてもいいですか",
+          "words": [
+            "Can",
+            "I",
+            "open",
+            "the",
+            "window"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "can（許可）",
+          "wordCount": 5,
+          "hint": "Can I → 動詞原形"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "title": "現在進行形",
+      "questions": [
+        {
+          "id": "g1-u6-001",
+          "japanese": "私は今勉強しています",
+          "words": [
+            "I",
+            "am",
+            "studying",
+            "now"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "現在進行形（肯定文）",
+          "wordCount": 4,
+          "hint": "am → -ing形"
+        },
+        {
+          "id": "g1-u6-002",
+          "japanese": "彼女は本を読んでいます",
+          "words": [
+            "She",
+            "is",
+            "reading",
+            "a",
+            "book"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "現在進行形（肯定文）",
+          "wordCount": 5,
+          "hint": "is → -ing形"
+        },
+        {
+          "id": "g1-u6-003",
+          "japanese": "あなたは何をしていますか",
+          "words": [
+            "What",
+            "are",
+            "you",
+            "doing"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "現在進行形（疑問文）",
+          "wordCount": 4,
+          "hint": "What → are you → -ing"
+        },
+        {
+          "id": "g1-u6-004",
+          "japanese": "彼はテレビを見ていません",
+          "words": [
+            "He",
+            "is",
+            "not",
+            "watching",
+            "TV"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "現在進行形（否定文）",
+          "wordCount": 5,
+          "hint": "is not → -ing形"
+        },
+        {
+          "id": "g1-u6-005",
+          "japanese": "彼らは公園でサッカーをしています",
+          "words": [
+            "They",
+            "are",
+            "playing",
+            "soccer",
+            "in",
+            "the",
+            "park"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "現在進行形 + 場所",
+          "wordCount": 7,
+          "hint": "場所は文末に"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 7",
+      "title": "命令文",
+      "questions": [
+        {
+          "id": "g1-u7-001",
+          "japanese": "ここに来なさい",
+          "words": [
+            "Come",
+            "here"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "命令文",
+          "wordCount": 2,
+          "hint": "動詞原形で始める"
+        },
+        {
+          "id": "g1-u7-002",
+          "japanese": "静かにしてください",
+          "words": [
+            "Please",
+            "be",
+            "quiet"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "丁寧な命令文",
+          "wordCount": 3,
+          "hint": "Please を文頭に"
+        },
+        {
+          "id": "g1-u7-003",
+          "japanese": "窓を開けないでください",
+          "words": [
+            "Please",
+            "do",
+            "not",
+            "open",
+            "the",
+            "window"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "否定命令文",
+          "wordCount": 6,
+          "hint": "do not → 動詞原形"
+        },
+        {
+          "id": "g1-u7-004",
+          "japanese": "早く起きなさい",
+          "words": [
+            "Get",
+            "up",
+            "early"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "命令文 + 副詞",
+          "wordCount": 3,
+          "hint": "動詞 → 副詞の順"
+        },
+        {
+          "id": "g1-u7-005",
+          "japanese": "なんて美しい花でしょう",
+          "words": [
+            "What",
+            "a",
+            "beautiful",
+            "flower"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "感嘆文",
+          "wordCount": 4,
+          "hint": "What → a → 形容詞 → 名詞"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 8",
+      "title": "過去形（規則動詞）",
+      "questions": [
+        {
+          "id": "g1-u8-001",
+          "japanese": "私は昨日テレビを見ました",
+          "words": [
+            "I",
+            "watched",
+            "TV",
+            "yesterday"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（規則動詞）",
+          "wordCount": 4,
+          "hint": "-ed をつける"
+        },
+        {
+          "id": "g1-u8-002",
+          "japanese": "彼女は音楽を聞きました",
+          "words": [
+            "She",
+            "listened",
+            "to",
+            "music"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（規則動詞）",
+          "wordCount": 4,
+          "hint": "listened to music"
+        },
+        {
+          "id": "g1-u8-003",
+          "japanese": "あなたは昨日何をしましたか",
+          "words": [
+            "What",
+            "did",
+            "you",
+            "do",
+            "yesterday"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（疑問文）",
+          "wordCount": 5,
+          "hint": "did の後は動詞原形"
+        },
+        {
+          "id": "g1-u8-004",
+          "japanese": "私は宿題をしませんでした",
+          "words": [
+            "I",
+            "did",
+            "not",
+            "do",
+            "my",
+            "homework"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（否定文）",
+          "wordCount": 6,
+          "hint": "did not → 動詞原形"
+        },
+        {
+          "id": "g1-u8-005",
+          "japanese": "私は先週公園で遊びました",
+          "words": [
+            "I",
+            "played",
+            "in",
+            "the",
+            "park",
+            "last",
+            "week"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形 + 時・場所",
+          "wordCount": 7,
+          "hint": "場所→時間の順"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 9",
+      "title": "過去形（不規則動詞）",
+      "questions": [
+        {
+          "id": "g1-u9-001",
+          "japanese": "私は昨日学校に行きました",
+          "words": [
+            "I",
+            "went",
+            "to",
+            "school",
+            "yesterday"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（不規則）",
+          "wordCount": 5,
+          "hint": "go → went"
+        },
+        {
+          "id": "g1-u9-002",
+          "japanese": "彼は朝食を食べました",
+          "words": [
+            "He",
+            "ate",
+            "breakfast"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（不規則）",
+          "wordCount": 3,
+          "hint": "eat → ate"
+        },
+        {
+          "id": "g1-u9-003",
+          "japanese": "私は昨夜友達に会いました",
+          "words": [
+            "I",
+            "met",
+            "my",
+            "friend",
+            "last",
+            "night"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（不規則）",
+          "wordCount": 6,
+          "hint": "meet → met"
+        },
+        {
+          "id": "g1-u9-004",
+          "japanese": "彼女は本を読みました",
+          "words": [
+            "She",
+            "read",
+            "a",
+            "book"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（不規則）",
+          "wordCount": 4,
+          "hint": "read は過去形も read"
+        },
+        {
+          "id": "g1-u9-005",
+          "japanese": "私は昨日映画を見ました",
+          "words": [
+            "I",
+            "saw",
+            "a",
+            "movie",
+            "yesterday"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形（不規則）",
+          "wordCount": 5,
+          "hint": "see → saw"
+        }
+      ]
+    }
+  ]
+}
