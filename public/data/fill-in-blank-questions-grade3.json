@@ -13,7 +13,7 @@
           "choices": ["Can", "Could", "May", "Should"],
           "correctAnswer": "Can",
           "difficulty": "advanced",
-          "explanation": "能力を尋ねる疑問文はCanを使います。",
+          "explanation": "Canは「～できる」という能力を表す助動詞です。現在の能力を尋ねる疑問文なので Can you ~? の形を使います。Couldは過去の能力や丁寧な依頼、Mayは許可、Shouldは助言を表すため、ここでは不適切です。",
           "hint": "能力 → Can"
         },
         {
@@ -23,7 +23,7 @@
           "choices": ["Can", "Must", "Should", "May"],
           "correctAnswer": "May",
           "difficulty": "advanced",
-          "explanation": "許可を求める丁寧な表現はMayを使います。Canも使えます。",
+          "explanation": "Mayは「～してもよい」という許可を求める丁寧な表現です。May I ~? は Can I ~? よりフォーマルで、特に目上の人に許可を求めるときに使います。Mustは義務、Shouldは助言を表すため不適切です。",
           "hint": "許可 → May/Can"
         },
         {
@@ -33,7 +33,7 @@
           "choices": ["can", "could", "may", "might"],
           "correctAnswer": "could",
           "difficulty": "advanced",
-          "explanation": "過去の能力はcouldを使います。",
+          "explanation": "Couldは canの過去形で、過去の能力「～できた」を表します。when he was youngという過去の時制と一致させる必要があります。現在の能力はcan、推量はmay/mightなので不適切です。",
           "hint": "過去の能力 → could"
         },
         {
@@ -43,7 +43,7 @@
           "choices": ["can", "could", "may", "must"],
           "correctAnswer": "may",
           "difficulty": "advanced",
-          "explanation": "推量（～かもしれない）はmay/mightを使います。",
+          "explanation": "May/mightは「～かもしれない」という推量を表します。確信度は約50%で、可能性を示します。Mustは「～に違いない」という強い確信、Canは能力を表すため不適切です。Mightも正解ですが、選択肢にありません。",
           "hint": "推量 → may/might"
         },
         {
@@ -53,7 +53,7 @@
           "choices": ["Can", "Must", "Should", "Will"],
           "correctAnswer": "Can",
           "difficulty": "advanced",
-          "explanation": "許可を求める表現です。CanまたはMayを使います。",
+          "explanation": "Can I ~? は「～してもいいですか」と許可を求める日常的な表現です。May I ~? はより丁寧ですが、友人同士ではCanを使うのが一般的です。Mustは義務、Shouldは助言、Willは未来・意志を表します。",
           "hint": "許可 → Can/May"
         },
         {
@@ -63,7 +63,7 @@
           "choices": ["can", "could", "may", "must"],
           "correctAnswer": "can",
           "difficulty": "advanced",
-          "explanation": "能力を表すcanを使います。",
+          "explanation": "Canは「～できる」という現在の能力を表します。She can speak Frenchで「彼女はフランス語を話す能力がある」という意味になります。Couldは過去形、May/mustは推量・義務なので文意に合いません。",
           "hint": "能力 → can"
         },
         {
@@ -73,7 +73,7 @@
           "choices": ["can", "could", "might", "must"],
           "correctAnswer": "might",
           "difficulty": "advanced",
-          "explanation": "推量を表すmightです。",
+          "explanation": "Mightは「～かもしれない」という推量を表し、mayより確信度が低い表現です。Mustは「～に違いない」という強い推量、Canは能力を表すため、ここでは不適切です。MayとMightはほぼ同じですが、Mightの方がやや可能性が低いニュアンスです。",
           "hint": "推量 → might"
         },
         {
@@ -83,7 +83,7 @@
           "choices": ["can't", "couldn't", "may not", "mustn't"],
           "correctAnswer": "couldn't",
           "difficulty": "advanced",
-          "explanation": "過去の能力の否定はcouldn'tを使います。",
+          "explanation": "Couldn'tは「～できなかった」という過去の能力の否定です。at that timeという過去の時制に合わせて過去形を使います。Can'tは現在形、May notは推量の否定、Mustn'tは禁止を表すため不適切です。",
           "hint": "過去の能力の否定 → couldn't"
         },
         {
@@ -93,7 +93,7 @@
           "choices": ["can", "could", "may", "must"],
           "correctAnswer": "may",
           "difficulty": "advanced",
-          "explanation": "否定の推量はmay notを使います。",
+          "explanation": "May notは「～しないかもしれない」という否定の推量を表します。Must notは「～してはいけない」という禁止になり意味が異なります。推量の否定はmay not / might notを使います。",
           "hint": "推量の否定 → may not"
         },
         {
@@ -103,7 +103,7 @@
           "choices": ["Can", "Must", "Should", "Will"],
           "correctAnswer": "Can",
           "difficulty": "advanced",
-          "explanation": "許可を求める表現です。",
+          "explanation": "Can I ~? は許可を求める表現です。観光地などで写真撮影の許可を求める際に使います。May I ~? も正解ですが、日常会話ではCanの方が一般的です。Mustは義務、Shouldは助言を表します。",
           "hint": "許可 → Can/May"
         },
         {
@@ -113,7 +113,7 @@
           "choices": ["can", "could", "might", "must"],
           "correctAnswer": "might",
           "difficulty": "advanced",
-          "explanation": "推量を表すmightです。",
+          "explanation": "Mightは「～かもしれない」という推量を表します。Canは「解く能力がある」、Mustは「解けるに違いない」という強い確信になります。可能性を示すにはmay/mightを使います。",
           "hint": "推量 → might"
         },
         {
@@ -123,7 +123,7 @@
           "choices": ["can", "could", "may", "might"],
           "correctAnswer": "could",
           "difficulty": "advanced",
-          "explanation": "過去の能力はcouldを使います。",
+          "explanation": "Couldは過去の能力を表します。when I was a childという過去の時制に合わせて、canの過去形couldを使います。過去のことを言う場合、canは使えません。必ずcouldにする必要があります。",
           "hint": "過去の能力 → could"
         }
       ]
@@ -139,7 +139,7 @@
           "choices": ["can", "may", "should", "might"],
           "correctAnswer": "should",
           "difficulty": "advanced",
-          "explanation": "「～すべき」という助言・忠告はshouldを使います。",
+          "explanation": "Shouldは「～すべき」という助言や忠告を表します。強制ではなく、相手の判断を尊重しながら提案する表現です。Mustは「～しなければならない」という強い義務になります。健康や生活習慣の助言にはshouldが適切です。",
           "hint": "～すべき → should"
         },
         {
@@ -149,7 +149,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "「～しなければならない」という義務・強制はmustを使います。",
+          "explanation": "Mustは「～しなければならない」という強い義務や必要性を表します。規則や法律など、従うことが必須の場合に使います。Shouldは助言なので、規則のような絶対的な義務には不十分です。なお、have toも同じ意味で使えます。",
           "hint": "～しなければならない → must"
         },
         {
@@ -159,7 +159,7 @@
           "choices": ["can", "may", "should", "might"],
           "correctAnswer": "should",
           "difficulty": "advanced",
-          "explanation": "助言を表すshouldです。",
+          "explanation": "Shouldは健康に関する助言に使います。You should see a doctorで「医者に診てもらった方がいい」という提案です。Mustだと「絶対に行かなければならない」という強制になり、やや強すぎます。",
           "hint": "助言 → should"
         },
         {
@@ -169,7 +169,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "義務を表すmustです。",
+          "explanation": "Mustは義務を表します。宿題は学生の義務なので、mustを使います。Shouldだと「した方がいい」という助言になり、義務の強さが弱まります。学校の規則など、守るべき義務にはmustが適切です。",
           "hint": "義務 → must"
         },
         {
@@ -179,7 +179,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "「～してはいけない」という禁止はmust notを使います。",
+          "explanation": "Must notは「～してはいけない」という禁止を表します。Should notは「～すべきでない」という助言、Cannot/May notは「～できない/許可されていない」です。禁煙の場所など、絶対的な禁止にはmust notを使います。",
           "hint": "禁止 → must not"
         },
         {
@@ -189,7 +189,7 @@
           "choices": ["can", "may", "should", "might"],
           "correctAnswer": "should",
           "difficulty": "advanced",
-          "explanation": "助言・忠告のshouldです。",
+          "explanation": "Shouldは「～すべき」という助言や提案を表します。We should study harderで「もっと勉強した方がいい」という自己への提案です。Mustだと強制的になりすぎます。",
           "hint": "～すべき → should"
         },
         {
@@ -199,7 +199,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "義務を表すmustです。",
+          "explanation": "Mustは義務を表します。時間厳守は社会的ルールなので、mustを使います。Be on timeは「時間通りである」という意味の重要な表現です。Shouldだと助言になり、義務の強さが弱まります。",
           "hint": "義務 → must"
         },
         {
@@ -209,7 +209,7 @@
           "choices": ["can", "may", "should", "might"],
           "correctAnswer": "should",
           "difficulty": "advanced",
-          "explanation": "助言のshouldです。",
+          "explanation": "Shouldは助言を表します。上達のためのアドバイスとして「もっと練習した方がいい」と提案しています。Mustだと強制的な命令になります。スポーツや勉強の助言にはshouldが適切です。",
           "hint": "助言 → should"
         },
         {
@@ -219,7 +219,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "義務・必要性を表すmustです。",
+          "explanation": "Mustは強い義務や必要性を表します。環境保護は地球規模の重要な課題なので、mustで強い義務感を表現します。Shouldだと「した方がいい」という助言になり、緊急性が伝わりません。",
           "hint": "義務 → must"
         },
         {
@@ -229,7 +229,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "禁止を表すmust notです。",
+          "explanation": "Must notは禁止を表します。Tell a lieは「嘘をつく」という意味です。道徳的に絶対にしてはいけないことにはmust notを使います。Should notだと「すべきでない」という助言になり、禁止の強さが弱まります。",
           "hint": "禁止 → must not"
         },
         {
@@ -239,7 +239,7 @@
           "choices": ["can", "may", "should", "might"],
           "correctAnswer": "should",
           "difficulty": "advanced",
-          "explanation": "健康への助言としてshouldを使います。",
+          "explanation": "Shouldは健康に関する助言を表します。栄養バランスの改善提案として「野菜をもっと食べた方がいい」と勧めています。Mustだと命令的になりすぎます。食事の助言にはshouldが自然です。",
           "hint": "助言 → should"
         },
         {
@@ -249,7 +249,7 @@
           "choices": ["can", "may", "should", "must"],
           "correctAnswer": "must",
           "difficulty": "advanced",
-          "explanation": "義務を表すmustです。",
+          "explanation": "Mustは法的義務を表します。Obeyは「従う・守る」という意味です。交通規則は法律で定められているため、mustで義務を表現します。Shouldだと助言になり、法的拘束力が伝わりません。",
           "hint": "義務 → must"
         }
       ]
@@ -265,7 +265,7 @@
           "choices": ["run", "runs", "running", "ran"],
           "correctAnswer": "running",
           "difficulty": "advanced",
-          "explanation": "名詞を修飾する現在分詞は「～している」という意味です。",
+          "explanation": "現在分詞（-ing形）は名詞を後ろから修飾して「～している」という意味を表します。The boy runningで「走っている少年」です。現在分詞は能動的な動作を表し、動作が進行中であることを示します。",
           "hint": "現在分詞 → -ing"
         },
         {
@@ -275,7 +275,7 @@
           "choices": ["break", "breaks", "breaking", "broken"],
           "correctAnswer": "broken",
           "difficulty": "advanced",
-          "explanation": "過去分詞は「～された」という受身の意味で名詞を修飾します。",
+          "explanation": "過去分詞は名詞を前から修飾して「～された」という受身の意味を表します。A broken windowで「壊された窓」です。Breakingだと「壊している窓」になり、窓が何かを壊していることになってしまいます。受身はbrokenを使います。",
           "hint": "過去分詞 → broken"
         },
         {
@@ -285,7 +285,7 @@
           "choices": ["cry", "cries", "crying", "cried"],
           "correctAnswer": "crying",
           "difficulty": "advanced",
-          "explanation": "現在分詞で「泣いている」と修飾します。",
+          "explanation": "現在分詞で名詞を後ろから修飾します。A baby cryingで「泣いている赤ちゃん」です。See + O + -ingの形で「Oが～しているのを見る」という知覚動詞の用法もありますが、ここでは分詞による名詞修飾です。",
           "hint": "～している → -ing"
         },
         {
@@ -295,7 +295,7 @@
           "choices": ["write", "writes", "writing", "written"],
           "correctAnswer": "written",
           "difficulty": "advanced",
-          "explanation": "過去分詞で「書かれた」と受身を表します。",
+          "explanation": "過去分詞で名詞を後ろから修飾し、受身の意味を表します。A book written in Englishで「英語で書かれた本」です。本は「書く」のではなく「書かれる」側なので過去分詞を使います。Writingだと「書いている本」になり意味が通りません。",
           "hint": "～された → 過去分詞"
         },
         {
@@ -305,7 +305,7 @@
           "choices": ["sit", "sits", "sitting", "sat"],
           "correctAnswer": "sitting",
           "difficulty": "advanced",
-          "explanation": "現在分詞で「座っている」と修飾します。",
+          "explanation": "現在分詞で名詞を後ろから修飾します。The woman sittingで「座っている女性」です。Over thereは「あそこに」という意味です。Sitsは動詞なので、ここでは使えません。分詞にすることで形容詞的に名詞を修飾できます。",
           "hint": "現在分詞 → -ing"
         },
         {
@@ -315,7 +315,7 @@
           "choices": ["use", "uses", "using", "used"],
           "correctAnswer": "used",
           "difficulty": "advanced",
-          "explanation": "過去分詞で「使われた」と修飾します。",
+          "explanation": "過去分詞で名詞を前から修飾し、受身を表します。A used stampで「使われた切手」です。切手は「使う」側ではなく「使われる」側なので過去分詞を使います。Usingだと「使っている切手」になり、意味が逆になります。",
           "hint": "過去分詞 → used"
         },
         {
@@ -325,7 +325,7 @@
           "choices": ["play", "plays", "playing", "played"],
           "correctAnswer": "playing",
           "difficulty": "advanced",
-          "explanation": "現在分詞で「弾いている」と修飾します。",
+          "explanation": "現在分詞で名詞を後ろから修飾します。The boy playing the guitarで「ギターを弾いている少年」です。現在分詞は目的語（the guitar）を伴うこともできます。Playsは動詞なので名詞修飾には使えません。",
           "hint": "～している → -ing"
         },
         {
@@ -335,7 +335,7 @@
           "choices": ["make", "makes", "making", "made"],
           "correctAnswer": "made",
           "difficulty": "advanced",
-          "explanation": "過去分詞で「作られた」と受身を表します。",
+          "explanation": "過去分詞で名詞を後ろから修飾し、受身を表します。A car made in Japanで「日本で作られた車」です。車は「作る」側ではなく「作られる」側なので過去分詞を使います。Made in ~は「～製」という意味でよく使われる表現です。",
           "hint": "～された → 過去分詞"
         },
         {
@@ -345,7 +345,7 @@
           "choices": ["sleep", "sleeps", "sleeping", "slept"],
           "correctAnswer": "sleeping",
           "difficulty": "advanced",
-          "explanation": "現在分詞で「眠っている」と修飾します。",
+          "explanation": "現在分詞で名詞を前から修飾します。That sleeping catで「あの眠っている猫」です。-ing形は名詞の前に置いて形容詞のように使うこともできます。Sleepsは動詞の三人称単数形なので、名詞修飾には使えません。",
           "hint": "現在分詞 → -ing"
         },
         {
@@ -355,7 +355,7 @@
           "choices": ["buy", "buys", "buying", "bought"],
           "correctAnswer": "bought",
           "difficulty": "advanced",
-          "explanation": "過去分詞で「買った」と修飾します。",
+          "explanation": "過去分詞で名詞を後ろから修飾します。The book bought yesterdayで「昨日買われた本」です。本は「買う」側ではなく「買われる」側なので過去分詞を使います。Buyの過去分詞はboughtです。Buyingだと「買っている本」になり意味が通りません。",
           "hint": "過去分詞 → bought"
         },
         {
@@ -365,7 +365,7 @@
           "choices": ["play", "plays", "playing", "played"],
           "correctAnswer": "playing",
           "difficulty": "advanced",
-          "explanation": "現在分詞で「遊んでいる」と修飾します。",
+          "explanation": "現在分詞で名詞を後ろから修飾します。Children playing in the parkで「公園で遊んでいる子供たち」です。Playing in the parkという句全体でchildrenを修飾しています。現在分詞は場所を示す前置詞句と一緒に使えます。",
           "hint": "現在分詞 → -ing"
         },
         {
@@ -375,7 +375,7 @@
           "choices": ["take", "takes", "taking", "taken"],
           "correctAnswer": "taken",
           "difficulty": "advanced",
-          "explanation": "過去分詞で「撮られた」と受身を表します。",
+          "explanation": "過去分詞で名詞を後ろから修飾し、受身を表します。A picture taken by my friendで「友達によって撮られた写真」です。By ~は「～によって」という動作主を示します。写真は「撮る」側ではなく「撮られる」側なので過去分詞takenを使います。",
           "hint": "～された → 過去分詞"
         }
       ]
@@ -391,7 +391,7 @@
           "choices": ["Because", "Although", "If", "When"],
           "correctAnswer": "Although",
           "difficulty": "advanced",
-          "explanation": "「～だけれども」という逆接の接続詞はalthoughを使います。",
+          "explanation": "Althoughは「～だけれども」という逆接の接続詞です。後に続く内容と対照的な状況を表します。雨なのに出かけたという意外な行動を表現しています。Becauseは理由、Ifは条件、Whenは時を表すため、ここでは不適切です。Thoughも同じ意味で使えます。",
           "hint": "～だけれども → although"
         },
         {
@@ -401,7 +401,7 @@
           "choices": ["If", "Unless", "Because", "When"],
           "correctAnswer": "Unless",
           "difficulty": "advanced",
-          "explanation": "「～しない限り」という意味のunlessを使います。",
+          "explanation": "Unlessは「～しない限り」という否定の条件を表します。Unless you hurry = If you don't hurryと同じ意味です。「急がなければ遅刻する」という警告を表現しています。Ifだと「急げば遅刻する」という逆の意味になってしまいます。",
           "hint": "～しない限り → unless"
         },
         {
@@ -411,7 +411,7 @@
           "choices": ["as soon as", "as long as", "even if", "so that"],
           "correctAnswer": "as soon as",
           "difficulty": "advanced",
-          "explanation": "「～するとすぐに」はas soon asを使います。",
+          "explanation": "As soon asは「～するとすぐに」という時を表す接続詞です。ある出来事の直後に別の出来事が起こることを表します。As long asは「～する限り」、Even ifは「たとえ～でも」、So thatは「～するために」という意味です。",
           "hint": "～するとすぐに → as soon as"
         },
         {
@@ -421,7 +421,7 @@
           "choices": ["Because", "Although", "If", "When"],
           "correctAnswer": "Although",
           "difficulty": "advanced",
-          "explanation": "逆接を表すalthoughです。",
+          "explanation": "Althoughは逆接を表します。忙しくて不親切になりがちなところ、それでも親切であるという意外性を表現しています。Becauseだと「忙しいから親切」という理由になり、論理的におかしくなります。Always kindは「いつも親切」という意味です。",
           "hint": "～だけれども → although"
         },
         {
@@ -431,7 +431,7 @@
           "choices": ["If", "Unless", "Because", "When"],
           "correctAnswer": "Unless",
           "difficulty": "advanced",
-          "explanation": "「～しない限り」という条件を表します。",
+          "explanation": "Unlessは否定の条件を表します。Unless you work hard = If you don't work hardです。「努力しない限り成功できない」という条件を示しています。Work hardは「一生懸命働く・努力する」、Succeedは「成功する」という意味の重要単語です。",
           "hint": "～しない限り → unless"
         },
         {
@@ -441,7 +441,7 @@
           "choices": ["as soon as", "as long as", "even if", "so that"],
           "correctAnswer": "as soon as",
           "difficulty": "advanced",
-          "explanation": "「～するとすぐに」の意味です。",
+          "explanation": "As soon asは「～するとすぐに」を表します。到着の直後に電話してほしいという依頼です。Get homeは「家に着く」という意味です。Call meは「私に電話する」で、電話番号を言わなくても「電話する」という行為を表せます。",
           "hint": "～するとすぐに → as soon as"
         },
         {
@@ -451,7 +451,7 @@
           "choices": ["Because", "Although", "If", "When"],
           "correctAnswer": "Although",
           "difficulty": "advanced",
-          "explanation": "逆接のalthoughです。",
+          "explanation": "Althoughは逆接を表します。疲れているのに働き続けたという意外な行動を表現しています。Keep -ingは「～し続ける」という継続を表す重要表現です。Becauseだと「疲れているから働き続けた」となり、論理的におかしくなります。",
           "hint": "～だけれども → although"
         },
         {
@@ -461,7 +461,7 @@
           "choices": ["as soon as", "as long as", "even if", "so that"],
           "correctAnswer": "as soon as",
           "difficulty": "advanced",
-          "explanation": "「～するとすぐに」という時を表す接続詞です。",
+          "explanation": "As soon asは「～するとすぐに」を表します。話が終わった直後に質問するよう促しています。Finish -ingは「～し終える」という意味です。Speakingは「話すこと」なので、finish speakingで「話し終える」となります。",
           "hint": "～するとすぐに → as soon as"
         },
         {
@@ -471,7 +471,7 @@
           "choices": ["if", "unless", "because", "when"],
           "correctAnswer": "unless",
           "difficulty": "advanced",
-          "explanation": "「～しない限り」という条件です。",
+          "explanation": "Unlessは「～しない限り」という否定の条件を表します。Unless the rain stops = If the rain doesn't stopです。雨が止むことが出発の条件であることを表しています。Leaveは「出発する」という意味です。",
           "hint": "～しない限り → unless"
         },
         {
@@ -481,7 +481,7 @@
           "choices": ["Because", "Although", "If", "When"],
           "correctAnswer": "Although",
           "difficulty": "advanced",
-          "explanation": "逆接を表すalthoughです。",
+          "explanation": "Althoughは逆接を表します。若いのに賢いという、年齢と知恵の対比を表現しています。Wiseは「賢い」という意味の形容詞です。Becauseだと「若いから賢い」となり、一般的な認識と矛盾します。",
           "hint": "～だけれども → although"
         },
         {
@@ -491,7 +491,7 @@
           "choices": ["as soon as", "as long as", "even if", "so that"],
           "correctAnswer": "as soon as",
           "difficulty": "advanced",
-          "explanation": "「～するとすぐに」です。",
+          "explanation": "As soon asは「～するとすぐに」を表します。ベルが鳴った直後に教室を出るよう指示しています。Ringは「鳴る」という意味で、ベルや電話に使います。Leave the classroomは「教室を出る」という意味です。",
           "hint": "～するとすぐに → as soon as"
         },
         {
@@ -501,7 +501,7 @@
           "choices": ["If", "Unless", "Because", "When"],
           "correctAnswer": "Unless",
           "difficulty": "advanced",
-          "explanation": "「～しない限り」という否定の条件です。",
+          "explanation": "Unlessは否定の条件を表します。Unless you study hard = If you don't study hardです。合格の必要条件が一生懸命勉強することだと示しています。Passは「合格する・通過する」、Study hardは「一生懸命勉強する」という重要表現です。",
           "hint": "～しない限り → unless"
         }
       ]
