@@ -32,14 +32,14 @@ const PASSAGE_FILES: PassageMetadata[] = [
   { id: 'beginner-wildlife', title: 'Wildlife Park Guide', level: 'beginner', topic: 'animals', wordCount: 1100, filePath: '/data/passages/beginner-wildlife-park-guide.txt' },
   
   // Intermediate (8 passages)
-  { id: 'intermediate-exchange-student', title: 'Exchange Student in Australia', level: 'intermediate', topic: 'culture-exchange', wordCount: 2100, filePath: '/data/passages/intermediate-exchange-student-australia.txt' },
-  { id: 'intermediate-homestay', title: 'Homestay in America', level: 'intermediate', topic: 'culture-exchange', wordCount: 1950, filePath: '/data/passages/intermediate-homestay-america.txt' },
-  { id: 'intermediate-career-day', title: 'Career Day at School', level: 'intermediate', topic: 'education-career', wordCount: 2200, filePath: '/data/passages/intermediate-career-day.txt' },
-  { id: 'intermediate-hospital', title: 'A Visit to the Hospital', level: 'intermediate', topic: 'health', wordCount: 2100, filePath: '/data/passages/intermediate-hospital-visit.txt' },
-  { id: 'intermediate-museum', title: 'Science Museum Experience', level: 'intermediate', topic: 'science-education', wordCount: 2250, filePath: '/data/passages/intermediate-science-museum.txt' },
-  { id: 'intermediate-sports', title: 'School Sports Day', level: 'intermediate', topic: 'sports-teamwork', wordCount: 1850, filePath: '/data/passages/intermediate-sports-day.txt' },
-  { id: 'intermediate-volunteer', title: 'Volunteer Experience', level: 'intermediate', topic: 'community-service', wordCount: 1900, filePath: '/data/passages/intermediate-volunteer-work.txt' },
-  { id: 'intermediate-club', title: 'After-School Club Activities', level: 'intermediate', topic: 'school-life', wordCount: 1800, filePath: '/data/passages/intermediate-club-activities.txt' },
+  { id: 'intermediate-exchange-student-australia', title: 'Exchange Student in Australia', level: 'intermediate', topic: 'culture-exchange', wordCount: 3238, filePath: '/data/passages/intermediate-exchange-student-australia.txt' },
+  { id: 'intermediate-homestay-america', title: 'Homestay in America', level: 'intermediate', topic: 'culture-exchange', wordCount: 3228, filePath: '/data/passages/intermediate-homestay-america.txt' },
+  { id: 'intermediate-career-day', title: 'Career Day at School', level: 'intermediate', topic: 'education-career', wordCount: 2953, filePath: '/data/passages/intermediate-career-day.txt' },
+  { id: 'intermediate-hospital-visit', title: 'A Visit to the Hospital', level: 'intermediate', topic: 'health', wordCount: 2809, filePath: '/data/passages/intermediate-hospital-visit.txt' },
+  { id: 'intermediate-science-museum', title: 'Science Museum Experience', level: 'intermediate', topic: 'science-education', wordCount: 3295, filePath: '/data/passages/intermediate-science-museum.txt' },
+  { id: 'intermediate-community-events', title: 'Community Events', level: 'intermediate', topic: 'community', wordCount: 2313, filePath: '/data/passages/intermediate-community-events.txt' },
+  { id: 'intermediate-school-events-year', title: 'A Year of School Events', level: 'intermediate', topic: 'school-life', wordCount: 2601, filePath: '/data/passages/intermediate-school-events-year.txt' },
+  { id: 'intermediate-school-news', title: 'School News', level: 'intermediate', topic: 'school-life', wordCount: 2142, filePath: '/data/passages/intermediate-school-news.txt' },
   
   // Advanced (8 passages)
   { id: 'advanced-environmental', title: 'Environmental Issues and Solutions', level: 'advanced', topic: 'environment', wordCount: 4200, filePath: '/data/passages/advanced-environmental-issues.txt' },
