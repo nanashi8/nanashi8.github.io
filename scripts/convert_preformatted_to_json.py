@@ -25,27 +25,42 @@ def load_dictionary(filepath):
 
 
 def split_long_sentence(sentence):
-    """20語を超える文を接続詞・関係詞で分割"""
+    """20語を超える文を接続詞・関係詞・前置詞句で分割"""
     words = sentence.split()
     if len(words) <= 20:
         return [sentence]
     
-    # 接続詞・関係詞のパターン（重要度順）
-    conjunctions = [
+    # 分割候補のパターン（優先度順）
+    
+    # 1. 従属接続詞（最優先）
+    subordinating_conjunctions = [
         'when', 'because', 'although', 'while', 'since',
-        'after', 'before', 'unless', 'until', 'if', 'as', 'though', 
-        'whereas', 'which', 'who', 'that', 'where'
+        'after', 'before', 'unless', 'until', 'if', 'though', 
+        'whereas', 'whenever', 'wherever'
     ]
     
-    # 接続詞で分割を試みる
-    for conj in conjunctions:
-        # 大文字小文字を区別しないパターン
-        pattern = r'\b' + conj + r'\b'
+    # 2. 関係詞
+    relative_pronouns = ['which', 'who', 'that', 'where', 'whose', 'whom']
+    
+    # 3. 前置詞（句の開始位置として）
+    prepositions = [
+        'with', 'without', 'by', 'during', 'through', 'throughout',
+        'among', 'between', 'within', 'beyond', 'despite', 'regarding',
+        'concerning', 'including', 'excluding', 'except', 'besides'
+    ]
+    
+    # 全候補リスト
+    all_split_points = subordinating_conjunctions + relative_pronouns + prepositions
+    
+    # 分割を試みる
+    for keyword in all_split_points:
+        # 大文字小文字を区別しないパターン（単語境界で）
+        pattern = r'\b' + keyword + r'\b'
         match = re.search(pattern, sentence, re.IGNORECASE)
         
         if match:
             split_pos = match.start()
-            # 接続詞の前で分割（接続詞は後半に含める）
+            # キーワードの前で分割（キーワードは後半に含める）
             before = sentence[:split_pos].rstrip(' ,')
             after = sentence[split_pos:].strip()
             

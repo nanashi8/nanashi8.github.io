@@ -47117,7 +47117,7 @@
     },
     {
       "id": 233,
-      "english": "Emma and I came from completely different backgrounds, but we found common ground through curiosity, respect, and genuine interest in each other's lives.",
+      "english": "Emma and I came from completely different backgrounds, but we found common ground,",
       "japanese": "』って聞くの。",
       "phraseMeaning": "』って聞くの。",
       "segments": [
@@ -47440,6 +47440,19 @@
           "isUnknown": false
         },
         {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 234,
+      "english": "through curiosity, respect, and genuine interest in each other's lives.",
+      "japanese": "でも私たちはまだ15歳よ！",
+      "phraseMeaning": "でも私たちはまだ15歳よ！",
+      "segments": [
+        {
           "word": "through",
           "meaning": {
             "word": "through",
@@ -47675,10 +47688,10 @@
       ]
     },
     {
-      "id": 234,
+      "id": 235,
       "english": "My English improved significantly during those two weeks.",
-      "japanese": "でも私たちはまだ15歳よ！",
-      "phraseMeaning": "でも私たちはまだ15歳よ！",
+      "japanese": "まだすべてを理解していなくても大丈夫なの」",
+      "phraseMeaning": "まだすべてを理解していなくても大丈夫なの」",
       "segments": [
         {
           "word": "My",
@@ -47799,10 +47812,10 @@
       ]
     },
     {
-      "id": 235,
+      "id": 236,
       "english": "But more importantly, I gained confidence in communicating across cultural boundaries.",
-      "japanese": "まだすべてを理解していなくても大丈夫なの」",
-      "phraseMeaning": "まだすべてを理解していなくても大丈夫なの」",
+      "japanese": "この会話で、自分の不確かさについて孤独ではないと感じました。",
+      "phraseMeaning": "この会話で、自分の不確かさについて孤独ではないと感じました。",
       "segments": [
         {
           "word": "But",
@@ -48037,10 +48050,10 @@
       ]
     },
     {
-      "id": 236,
+      "id": 237,
       "english": "Sometimes I felt like giving up when I couldn't express myself well, but Emma was always patient.",
-      "japanese": "この会話で、自分の不確かさについて孤独ではないと感じました。",
-      "phraseMeaning": "この会話で、自分の不確かさについて孤独ではないと感じました。",
+      "japanese": "別れと約束",
+      "phraseMeaning": "別れと約束",
       "segments": [
         {
           "word": "Sometimes",
@@ -48393,10 +48406,10 @@
       "grammarPoint": "When節"
     },
     {
-      "id": 237,
+      "id": 238,
       "english": "I realized that perfect language skills matter less than genuine effort and kindness.",
-      "japanese": "別れと約束",
-      "phraseMeaning": "別れと約束",
+      "japanese": "エマの最後の日、私たちのクラスはお別れパーティーを企画しました。",
+      "phraseMeaning": "エマの最後の日、私たちのクラスはお別れパーティーを企画しました。",
       "segments": [
         {
           "word": "I",
@@ -48744,10 +48757,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 238,
+      "id": 239,
       "english": "Deeper Reflections on Cultural Exchange",
-      "japanese": "エマの最後の日、私たちのクラスはお別れパーティーを企画しました。",
-      "phraseMeaning": "エマの最後の日、私たちのクラスはお別れパーティーを企画しました。",
+      "japanese": "写真、メッセージ、絵を入れたメモリーブックを作りました。",
+      "phraseMeaning": "写真、メッセージ、絵を入れたメモリーブックを作りました。",
       "segments": [
         {
           "word": "Deeper",
@@ -48812,10 +48825,10 @@
       ]
     },
     {
-      "id": 239,
+      "id": 240,
       "english": "Challenging Stereotypes and Assumptions",
-      "japanese": "写真、メッセージ、絵を入れたメモリーブックを作りました。",
-      "phraseMeaning": "写真、メッセージ、絵を入れたメモリーブックを作りました。",
+      "japanese": "みんなが励ましの言葉や面白いことを書きました。",
+      "phraseMeaning": "みんなが励ましの言葉や面白いことを書きました。",
       "segments": [
         {
           "word": "Challenging",
@@ -48921,10 +48934,10 @@
       ]
     },
     {
-      "id": 240,
+      "id": 241,
       "english": "Before Emma's arrival, I held numerous stereotypes about Australians—mostly gleaned from television, movies, and superficial media portrayals.",
-      "japanese": "みんなが励ましの言葉や面白いことを書きました。",
-      "phraseMeaning": "みんなが励ましの言葉や面白いことを書きました。",
+      "japanese": "「みなさん、本当にありがとう」とエマは感情的な声で言いました。",
+      "phraseMeaning": "「みなさん、本当にありがとう」とエマは感情的な声で言いました。",
       "segments": [
         {
           "word": "Before",
@@ -49230,10 +49243,10 @@
       ]
     },
     {
-      "id": 241,
+      "id": 242,
       "english": "I imagined all Australians spent time surfing at beaches, spoke with exaggerated accents, and encountered dangerous wildlife daily.",
-      "japanese": "「みなさん、本当にありがとう」とエマは感情的な声で言いました。",
-      "phraseMeaning": "「みなさん、本当にありがとう」とエマは感情的な声で言いました。",
+      "japanese": "「この2週間は信じられないほど素晴らしかったわ。",
+      "phraseMeaning": "「この2週間は信じられないほど素晴らしかったわ。",
       "segments": [
         {
           "word": "I",
@@ -49560,10 +49573,10 @@
       ]
     },
     {
-      "id": 242,
+      "id": 243,
       "english": "Emma's presence challenged these simplistic assumptions.",
-      "japanese": "「この2週間は信じられないほど素晴らしかったわ。",
-      "phraseMeaning": "「この2週間は信じられないほど素晴らしかったわ。",
+      "japanese": "たくさんのことを学んだの―日本についてだけじゃなく、友情、優しさ、そして世界を違う風に見ることについて」",
+      "phraseMeaning": "たくさんのことを学んだの―日本についてだけじゃなく、友情、優しさ、そして世界を違う風に見ることについて」",
       "segments": [
         {
           "word": "Emma's",
@@ -49643,10 +49656,10 @@
       ]
     },
     {
-      "id": 243,
+      "id": 244,
       "english": "Yes, she lived near beaches and enjoyed swimming, but her daily life resembled mine in fundamental ways.",
-      "japanese": "たくさんのことを学んだの―日本についてだけじゃなく、友情、優しさ、そして世界を違う風に見ることについて」",
-      "phraseMeaning": "たくさんのことを学んだの―日本についてだけじゃなく、友情、優しさ、そして世界を違う風に見ることについて」",
+      "japanese": "彼女は私の家族に特別な感謝のスピーチをしました。",
+      "phraseMeaning": "彼女は私の家族に特別な感謝のスピーチをしました。",
       "segments": [
         {
           "word": "Yes",
@@ -49972,10 +49985,10 @@
       ]
     },
     {
-      "id": 244,
-      "english": "She attended school, completed homework, spent time with family and friends, worried about exams, and contemplated her future—universal teenage experiences transcending national boundaries.",
-      "japanese": "彼女は私の家族に特別な感謝のスピーチをしました。",
-      "phraseMeaning": "彼女は私の家族に特別な感謝のスピーチをしました。",
+      "id": 245,
+      "english": "She attended school, completed homework, spent time,",
+      "japanese": "「あなたたちは私を娘のように迎えてくれました」と彼女は両親に言いました。",
+      "phraseMeaning": "「あなたたちは私を娘のように迎えてくれました」と彼女は両親に言いました。",
       "segments": [
         {
           "word": "She",
@@ -50097,6 +50110,19 @@
           },
           "isUnknown": false
         },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 246,
+      "english": "with family and friends, worried about exams, and contemplated her future—universal teenage experiences transcending national boundaries.",
+      "japanese": "「家から何千マイルも離れているのに家にいるように感じたわ。",
+      "phraseMeaning": "「家から何千マイルも離れているのに家にいるように感じたわ。",
+      "segments": [
         {
           "word": "with",
           "meaning": "",
@@ -50459,10 +50485,10 @@
       ]
     },
     {
-      "id": 245,
+      "id": 247,
       "english": "\"Do people really think all Australians surf constantly?\" Emma laughed when I confessed my initial misconceptions.",
-      "japanese": "「あなたたちは私を娘のように迎えてくれました」と彼女は両親に言いました。",
-      "phraseMeaning": "「あなたたちは私を娘のように迎えてくれました」と彼女は両親に言いました。",
+      "japanese": "あなたたちの寛大さを決して忘れません」",
+      "phraseMeaning": "あなたたちの寛大さを決して忘れません」",
       "segments": [
         {
           "word": "\"",
@@ -50778,10 +50804,10 @@
       "grammarPoint": "When節"
     },
     {
-      "id": 246,
+      "id": 248,
       "english": "\"I mean, some people do, but plenty of Australians have never surfed.",
-      "japanese": "「家から何千マイルも離れているのに家にいるように感じたわ。",
-      "phraseMeaning": "「家から何千マイルも離れているのに家にいるように感じたわ。",
+      "japanese": "母は涙を浮かべながら微笑みました。",
+      "phraseMeaning": "母は涙を浮かべながら微笑みました。",
       "segments": [
         {
           "word": "\"",
@@ -51067,10 +51093,10 @@
       ]
     },
     {
-      "id": 247,
+      "id": 249,
       "english": "It's like assuming all Japanese people practice martial arts or wear kimonos daily.\"",
-      "japanese": "あなたたちの寛大さを決して忘れません」",
-      "phraseMeaning": "あなたたちの寛大さを決して忘れません」",
+      "japanese": "「いつでも歓迎よ、エマ。",
+      "phraseMeaning": "「いつでも歓迎よ、エマ。",
       "segments": [
         {
           "word": "It's",
@@ -51359,10 +51385,10 @@
       ]
     },
     {
-      "id": 248,
+      "id": 250,
       "english": "Her point struck me profoundly.",
-      "japanese": "母は涙を浮かべながら微笑みました。",
-      "phraseMeaning": "母は涙を浮かべながら微笑みました。",
+      "japanese": "あなたは今や私たちの家族の一員なの」",
+      "phraseMeaning": "あなたは今や私たちの家族の一員なの」",
       "segments": [
         {
           "word": "Her",
@@ -51448,10 +51474,10 @@
       ]
     },
     {
-      "id": 249,
+      "id": 251,
       "english": "I'd felt frustrated when foreigners assumed all Japanese people ate sushi constantly or lived in traditional houses.",
-      "japanese": "「いつでも歓迎よ、エマ。",
-      "phraseMeaning": "「いつでも歓迎よ、エマ。",
+      "japanese": "エマと私はプレゼントを交換しました。",
+      "phraseMeaning": "エマと私はプレゼントを交換しました。",
       "segments": [
         {
           "word": "I'd",
@@ -51747,10 +51773,10 @@
       "grammarPoint": "When節"
     },
     {
-      "id": 250,
+      "id": 252,
       "english": "Yet I'd unconsciously applied similar reductive thinking to Emma's culture.",
-      "japanese": "あなたは今や私たちの家族の一員なの」",
-      "phraseMeaning": "あなたは今や私たちの家族の一員なの」",
+      "japanese": "彼女は小さなコアラのぬいぐるみとオーストラリアについての本をくれました。",
+      "phraseMeaning": "彼女は小さなコアラのぬいぐるみとオーストラリアについての本をくれました。",
       "segments": [
         {
           "word": "Yet",
@@ -51869,10 +51895,10 @@
       ]
     },
     {
-      "id": 251,
+      "id": 253,
       "english": "This realization taught me humility and the importance of approaching individuals as unique people rather than cultural representatives.",
-      "japanese": "エマと私はプレゼントを交換しました。",
-      "phraseMeaning": "エマと私はプレゼントを交換しました。",
+      "japanese": "「私のことを思い出してくれて、いつか訪ねてきてくれるように」と彼女は言いました。",
+      "phraseMeaning": "「私のことを思い出してくれて、いつか訪ねてきてくれるように」と彼女は言いました。",
       "segments": [
         {
           "word": "This",
@@ -52225,10 +52251,10 @@
       ]
     },
     {
-      "id": 252,
+      "id": 254,
       "english": "Emma also challenged my assumptions about Western cultures generally.",
-      "japanese": "彼女は小さなコアラのぬいぐるみとオーストラリアについての本をくれました。",
-      "phraseMeaning": "彼女は小さなコアラのぬいぐるみとオーストラリアについての本をくれました。",
+      "japanese": "私は伝統的な日本のデザインの美しいノートと、祭りでの私たちの写真を額に入れたものをあげました。",
+      "phraseMeaning": "私は伝統的な日本のデザインの美しいノートと、祭りでの私たちの写真を額に入れたものをあげました。",
       "segments": [
         {
           "word": "Emma",
@@ -52408,10 +52434,10 @@
       ]
     },
     {
-      "id": 253,
+      "id": 255,
       "english": "I'd imagined individualistic societies lacked strong family bonds or community connections.",
-      "japanese": "「私のことを思い出してくれて、いつか訪ねてきてくれるように」と彼女は言いました。",
-      "phraseMeaning": "「私のことを思い出してくれて、いつか訪ねてきてくれるように」と彼女は言いました。",
+      "japanese": "「日本での思い出のためよ」と私は説明しました。",
+      "phraseMeaning": "「日本での思い出のためよ」と私は説明しました。",
       "segments": [
         {
           "word": "I'd",
@@ -52601,10 +52627,10 @@
       ]
     },
     {
-      "id": 254,
+      "id": 256,
       "english": "But Emma described close family relationships, neighborhood friendships, and community events similar to those in Japan.",
-      "japanese": "私は伝統的な日本のデザインの美しいノートと、祭りでの私たちの写真を額に入れたものをあげました。",
-      "phraseMeaning": "私は伝統的な日本のデザインの美しいノートと、祭りでの私たちの写真を額に入れたものをあげました。",
+      "japanese": "私たちは空港で抱き合って別れを告げました。",
+      "phraseMeaning": "私たちは空港で抱き合って別れを告げました。",
       "segments": [
         {
           "word": "But",
@@ -52929,10 +52955,10 @@
       ]
     },
     {
-      "id": 255,
+      "id": 257,
       "english": "Cultural differences existed, certainly, but human needs for connection and belonging remain universal.",
-      "japanese": "「日本での思い出のためよ」と私は説明しました。",
-      "phraseMeaning": "「日本での思い出のためよ」と私は説明しました。",
+      "japanese": "二人とも少し泣いていました。",
+      "phraseMeaning": "二人とも少し泣いていました。",
       "segments": [
         {
           "word": "Cultural",
@@ -53222,10 +53248,10 @@
       ]
     },
     {
-      "id": 256,
+      "id": 258,
       "english": "\"Every culture emphasizes different values,\" Emma observed thoughtfully.",
-      "japanese": "私たちは空港で抱き合って別れを告げました。",
-      "phraseMeaning": "私たちは空港で抱き合って別れを告げました。",
+      "japanese": "「これは永遠の別れじゃないわ」とエマは約束しました。",
+      "phraseMeaning": "「これは永遠の別れじゃないわ」とエマは約束しました。",
       "segments": [
         {
           "word": "\"",
@@ -53361,10 +53387,10 @@
       ]
     },
     {
-      "id": 257,
+      "id": 259,
       "english": "\"But underneath, people everywhere want similar things—safety, belonging, purpose, love.",
-      "japanese": "二人とも少し泣いていました。",
-      "phraseMeaning": "二人とも少し泣いていました。",
+      "japanese": "「また訪ねに来るわ。",
+      "phraseMeaning": "「また訪ねに来るわ。",
       "segments": [
         {
           "word": "\"",
@@ -53663,10 +53689,10 @@
       ]
     },
     {
-      "id": 258,
+      "id": 260,
       "english": "We just pursue these goals through different cultural frameworks.\"",
-      "japanese": "「これは永遠の別れじゃないわ」とエマは約束しました。",
-      "phraseMeaning": "「これは永遠の別れじゃないわ」とエマは約束しました。",
+      "japanese": "いつかシドニー空港に着いたら、私があなたを待っているわ！",
+      "phraseMeaning": "いつかシドニー空港に着いたら、私があなたを待っているわ！",
       "segments": [
         {
           "word": "We",
@@ -53881,10 +53907,10 @@
       ]
     },
     {
-      "id": 259,
+      "id": 261,
       "english": "Learning to Navigate Cultural Misunderstandings",
-      "japanese": "「また訪ねに来るわ。",
-      "phraseMeaning": "「また訪ねに来るわ。",
+      "japanese": "オーストラリアに来たときにはたくさんの話を持ってきてね！",
+      "phraseMeaning": "オーストラリアに来たときにはたくさんの話を持ってきてね！",
       "segments": [
         {
           "word": "Learning",
@@ -53974,10 +54000,10 @@
       ]
     },
     {
-      "id": 260,
+      "id": 262,
       "english": "Despite good intentions, Emma and I occasionally experienced cultural misunderstandings requiring patient navigation.",
-      "japanese": "いつかシドニー空港に着いたら、私があなたを待っているわ！",
-      "phraseMeaning": "いつかシドニー空港に着いたら、私があなたを待っているわ！",
+      "japanese": "私の家族と一緒に滞在できるわ」",
+      "phraseMeaning": "私の家族と一緒に滞在できるわ」",
       "segments": [
         {
           "word": "Despite",
@@ -54236,10 +54262,10 @@
       ]
     },
     {
-      "id": 261,
+      "id": 263,
       "english": "Communication styles proved particularly challenging.",
-      "japanese": "オーストラリアに来たときにはたくさんの話を持ってきてね！",
-      "phraseMeaning": "オーストラリアに来たときにはたくさんの話を持ってきてね！",
+      "japanese": "「絶対に」と私は約束しました。",
+      "phraseMeaning": "「絶対に」と私は約束しました。",
       "segments": [
         {
           "word": "Communication",
@@ -54349,10 +54375,10 @@
       ]
     },
     {
-      "id": 262,
+      "id": 264,
       "english": "Australian directness sometimes startled me.",
-      "japanese": "私の家族と一緒に滞在できるわ」",
-      "phraseMeaning": "私の家族と一緒に滞在できるわ」",
+      "japanese": "「必ず」",
+      "phraseMeaning": "「必ず」",
       "segments": [
         {
           "word": "Australian",
@@ -54440,10 +54466,10 @@
       ]
     },
     {
-      "id": 263,
+      "id": 265,
       "english": "Emma would bluntly express opinions or disagreements that Japanese social norms might soften through indirect phrasing.",
-      "japanese": "「絶対に」と私は約束しました。",
-      "phraseMeaning": "「絶対に」と私は約束しました。",
+      "japanese": "lasting_impact",
+      "phraseMeaning": "lasting_impact",
       "segments": [
         {
           "word": "Emma",
@@ -54728,10 +54754,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 264,
+      "id": 266,
       "english": "Initially, I interpreted her directness as rudeness.",
-      "japanese": "「必ず」",
-      "phraseMeaning": "「必ず」",
+      "japanese": "エマが去ってから数週間が経ちましたが、私たちはメッセージやビデオ通話を通じて定期的に連絡を取り合っています。",
+      "phraseMeaning": "エマが去ってから数週間が経ちましたが、私たちはメッセージやビデオ通話を通じて定期的に連絡を取り合っています。",
       "segments": [
         {
           "word": "Initially",
@@ -54843,10 +54869,10 @@
       ]
     },
     {
-      "id": 265,
+      "id": 267,
       "english": "For instance, when trying traditional fermented soybeans (natto), she immediately grimaced and said, \"Oh, I don't like this.",
-      "japanese": "lasting_impact",
-      "phraseMeaning": "lasting_impact",
+      "japanese": "日々の経験を共有し、宿題を助け合い、言語交換を続けています。",
+      "phraseMeaning": "日々の経験を共有し、宿題を助け合い、言語交換を続けています。",
       "segments": [
         {
           "word": "For",
@@ -55203,10 +55229,10 @@
       "grammarPoint": "When節"
     },
     {
-      "id": 266,
+      "id": 268,
       "english": "Sorry, but it tastes really strange to me.\"",
-      "japanese": "エマが去ってから数週間が経ちましたが、私たちはメッセージやビデオ通話を通じて定期的に連絡を取り合っています。",
-      "phraseMeaning": "エマが去ってから数週間が経ちましたが、私たちはメッセージやビデオ通話を通じて定期的に連絡を取り合っています。",
+      "japanese": "この経験は世界に対する私の見方を変えました。",
+      "phraseMeaning": "この経験は世界に対する私の見方を変えました。",
       "segments": [
         {
           "word": "Sorry",
@@ -55388,10 +55414,10 @@
       ]
     },
     {
-      "id": 267,
+      "id": 269,
       "english": "In Japanese culture, we might say something like \"It's interesting\" or \"I'm not quite accustomed to this flavor yet\"—polite indirectness avoiding outright rejection.",
-      "japanese": "日々の経験を共有し、宿題を助け合い、言語交換を続けています。",
-      "phraseMeaning": "日々の経験を共有し、宿題を助け合い、言語交換を続けています。",
+      "japanese": "別の文化を本当に理解するためには、個人的なつながりが必要です。",
+      "phraseMeaning": "別の文化を本当に理解するためには、個人的なつながりが必要です。",
       "segments": [
         {
           "word": "In",
@@ -55803,10 +55829,10 @@
       ]
     },
     {
-      "id": 268,
+      "id": 270,
       "english": "Emma's frank response initially seemed impolite.",
-      "japanese": "この経験は世界に対する私の見方を変えました。",
-      "phraseMeaning": "この経験は世界に対する私の見方を変えました。",
+      "japanese": "エマの訪問前、私はオーストラリアをカンガルーとビーチがある遠い国だと思っていました。",
+      "phraseMeaning": "エマの訪問前、私はオーストラリアをカンガルーとビーチがある遠い国だと思っていました。",
       "segments": [
         {
           "word": "Emma's",
@@ -55865,10 +55891,10 @@
       ]
     },
     {
-      "id": 269,
+      "id": 271,
       "english": "However, after discussing our different communication styles, I understood Australian culture values honesty and straightforwardness.",
-      "japanese": "別の文化を本当に理解するためには、個人的なつながりが必要です。",
-      "phraseMeaning": "別の文化を本当に理解するためには、個人的なつながりが必要です。",
+      "japanese": "今、私はそれが独自の文化、夢、日常生活を持つ本物の人々がいる本物の場所だと理解しています。",
+      "phraseMeaning": "今、私はそれが独自の文化、夢、日常生活を持つ本物の人々がいる本物の場所だと理解しています。",
       "segments": [
         {
           "word": "However",
@@ -56187,10 +56213,10 @@
       ]
     },
     {
-      "id": 270,
+      "id": 272,
       "english": "Emma wasn't being rude—she was being authentically herself within her cultural framework.",
-      "japanese": "エマの訪問前、私はオーストラリアをカンガルーとビーチがある遠い国だと思っていました。",
-      "phraseMeaning": "エマの訪問前、私はオーストラリアをカンガルーとビーチがある遠い国だと思っていました。",
+      "japanese": "文化の違いは現実ですが、障壁ではなく、学びと成長の機会だということも学びました。",
+      "phraseMeaning": "文化の違いは現実ですが、障壁ではなく、学びと成長の機会だということも学びました。",
       "segments": [
         {
           "word": "Emma",
@@ -56436,10 +56462,10 @@
       ]
     },
     {
-      "id": 271,
+      "id": 273,
       "english": "She appreciated when I explained Japanese indirectness helped maintain social harmony and avoid conflict.",
-      "japanese": "今、私はそれが独自の文化、夢、日常生活を持つ本物の人々がいる本物の場所だと理解しています。",
-      "phraseMeaning": "今、私はそれが独自の文化、夢、日常生活を持つ本物の人々がいる本物の場所だと理解しています。",
+      "japanese": "この経験は驚きの発見に満ちていました。",
+      "phraseMeaning": "この経験は驚きの発見に満ちていました。",
       "segments": [
         {
           "word": "She",
@@ -56736,10 +56762,10 @@
       "grammarPoint": "When節"
     },
     {
-      "id": 272,
+      "id": 274,
       "english": "\"So when Japanese people say 'maybe' or 'that might be difficult,' they actually mean 'no'?\" Emma asked, fascinated.",
-      "japanese": "文化の違いは現実ですが、障壁ではなく、学びと成長の機会だということも学びました。",
-      "phraseMeaning": "文化の違いは現実ですが、障壁ではなく、学びと成長の機会だということも学びました。",
+      "japanese": "エマと私はまったく異なる背景から来ましたが、好奇心、尊重、そしてお互いの人生への純粋な興味を通じて共通の基盤を見つけました。",
+      "phraseMeaning": "エマと私はまったく異なる背景から来ましたが、好奇心、尊重、そしてお互いの人生への純粋な興味を通じて共通の基盤を見つけました。",
       "segments": [
         {
           "word": "\"",
@@ -57228,10 +57254,10 @@
       "grammarPoint": "When節 / that節"
     },
     {
-      "id": 273,
+      "id": 275,
       "english": "\"Often, yes,\" I confirmed.",
-      "japanese": "この経験は驚きの発見に満ちていました。",
-      "phraseMeaning": "この経験は驚きの発見に満ちていました。",
+      "japanese": "この2週間で私の英語は大幅に上達しました。",
+      "phraseMeaning": "この2週間で私の英語は大幅に上達しました。",
       "segments": [
         {
           "word": "\"",
@@ -57323,10 +57349,10 @@
       ]
     },
     {
-      "id": 274,
+      "id": 276,
       "english": "\"We give people ways to decline gracefully without explicit rejection.",
-      "japanese": "エマと私はまったく異なる背景から来ましたが、好奇心、尊重、そしてお互いの人生への純粋な興味を通じて共通の基盤を見つけました。",
-      "phraseMeaning": "エマと私はまったく異なる背景から来ましたが、好奇心、尊重、そしてお互いの人生への純粋な興味を通じて共通の基盤を見つけました。",
+      "japanese": "しかしもっと重要なことは、文化の境界を越えてコミュニケーションを取る自信を得たことです。",
+      "phraseMeaning": "しかしもっと重要なことは、文化の境界を越えてコミュニケーションを取る自信を得たことです。",
       "segments": [
         {
           "word": "\"",
@@ -57511,10 +57537,10 @@
       ]
     },
     {
-      "id": 275,
+      "id": 277,
       "english": "It prevents awkwardness.\"",
-      "japanese": "この2週間で私の英語は大幅に上達しました。",
-      "phraseMeaning": "この2週間で私の英語は大幅に上達しました。",
+      "japanese": "うまく表現できないときに諦めそうになったこともありましたが、エマはいつも辛抱強くいてくれました。",
+      "phraseMeaning": "うまく表現できないときに諦めそうになったこともありましたが、エマはいつも辛抱強くいてくれました。",
       "segments": [
         {
           "word": "It",
@@ -57594,10 +57620,10 @@
       ]
     },
     {
-      "id": 276,
+      "id": 278,
       "english": "\"That's so different!\" Emma marveled.",
-      "japanese": "しかしもっと重要なことは、文化の境界を越えてコミュニケーションを取る自信を得たことです。",
-      "phraseMeaning": "しかしもっと重要なことは、文化の境界を越えてコミュニケーションを取る自信を得たことです。",
+      "japanese": "完璧な言語スキルよりも、真摯な努力と優しさの方が重要だと気づきました。",
+      "phraseMeaning": "完璧な言語スキルよりも、真摯な努力と優しさの方が重要だと気づきました。",
       "segments": [
         {
           "word": "\"",
@@ -57695,10 +57721,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 277,
+      "id": 279,
       "english": "\"In Australia, people usually say what they mean directly.",
-      "japanese": "うまく表現できないときに諦めそうになったこともありましたが、エマはいつも辛抱強くいてくれました。",
-      "phraseMeaning": "うまく表現できないときに諦めそうになったこともありましたが、エマはいつも辛抱強くいてくれました。",
+      "japanese": "文化交流についてのより深い考察",
+      "phraseMeaning": "文化交流についてのより深い考察",
       "segments": [
         {
           "word": "\"",
@@ -57911,10 +57937,10 @@
       ]
     },
     {
-      "id": 278,
+      "id": 280,
       "english": "If we're not interested, we just say 'no thanks' politely.",
-      "japanese": "完璧な言語スキルよりも、真摯な努力と優しさの方が重要だと気づきました。",
-      "phraseMeaning": "完璧な言語スキルよりも、真摯な努力と優しさの方が重要だと気づきました。",
+      "japanese": "固定観念と思い込みへの挑戦",
+      "phraseMeaning": "固定観念と思い込みへの挑戦",
       "segments": [
         {
           "word": "If",
@@ -58144,10 +58170,10 @@
       "grammarPoint": "If節"
     },
     {
-      "id": 279,
+      "id": 281,
       "english": "But now I understand why Japanese communication seems indirect to outsiders.",
-      "japanese": "文化交流についてのより深い考察",
-      "phraseMeaning": "文化交流についてのより深い考察",
+      "japanese": "エマの到着前、私はオーストラリア人についてたくさんの固定観念を持っていました―主にテレビや映画、表面的なメディアの描写から得たものでした。",
+      "phraseMeaning": "エマの到着前、私はオーストラリア人についてたくさんの固定観念を持っていました―主にテレビや映画、表面的なメディアの描写から得たものでした。",
       "segments": [
         {
           "word": "But",
@@ -58365,10 +58391,10 @@
       ]
     },
     {
-      "id": 280,
+      "id": 282,
       "english": "It's not being unclear—it's being considerate.\"",
-      "japanese": "固定観念と思い込みへの挑戦",
-      "phraseMeaning": "固定観念と思い込みへの挑戦",
+      "japanese": "すべてのオーストラリア人はビーチでサーフィンをし、誇張されたアクセントで話し、毎日危険な野生動物に遭遇すると想像していました。",
+      "phraseMeaning": "すべてのオーストラリア人はビーチでサーフィンをし、誇張されたアクセントで話し、毎日危険な野生動物に遭遇すると想像していました。",
       "segments": [
         {
           "word": "It's",
@@ -58510,10 +58536,10 @@
       ]
     },
     {
-      "id": 281,
+      "id": 283,
       "english": "These discussions taught us both,",
-      "japanese": "エマの到着前、私はオーストラリア人についてたくさんの固定観念を持っていました―主にテレビや映画、表面的なメディアの描写から得たものでした。",
-      "phraseMeaning": "エマの到着前、私はオーストラリア人についてたくさんの固定観念を持っていました―主にテレビや映画、表面的なメディアの描写から得たものでした。",
+      "japanese": "エマの存在はこれらの単純な思い込みに挑戦しました。",
+      "phraseMeaning": "エマの存在はこれらの単純な思い込みに挑戦しました。",
       "segments": [
         {
           "word": "These",
@@ -58625,10 +58651,10 @@
       ]
     },
     {
-      "id": 282,
+      "id": 284,
       "english": "that cultural differences aren't right or wrong—they're simply different approaches to social interaction, each with merits and appropriate contexts.",
-      "japanese": "すべてのオーストラリア人はビーチでサーフィンをし、誇張されたアクセントで話し、毎日危険な野生動物に遭遇すると想像していました。",
-      "phraseMeaning": "すべてのオーストラリア人はビーチでサーフィンをし、誇張されたアクセントで話し、毎日危険な野生動物に遭遇すると想像していました。",
+      "japanese": "はい、彼女はビーチの近くに住んでいて水泳を楽しんでいました。",
+      "phraseMeaning": "はい、彼女はビーチの近くに住んでいて水泳を楽しんでいました。",
       "segments": [
         {
           "word": "that",
@@ -58995,10 +59021,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 283,
+      "id": 285,
       "english": "Discovering Shared Humanity Through Daily Routines",
-      "japanese": "エマの存在はこれらの単純な思い込みに挑戦しました。",
-      "phraseMeaning": "エマの存在はこれらの単純な思い込みに挑戦しました。",
+      "japanese": "しかし彼女の日常生活は根本的な部分で私のものと似ていました。",
+      "phraseMeaning": "しかし彼女の日常生活は根本的な部分で私のものと似ていました。",
       "segments": [
         {
           "word": "Discovering",
@@ -59121,10 +59147,10 @@
       ]
     },
     {
-      "id": 284,
+      "id": 286,
       "english": "Paradoxically, I discovered our shared humanity through mundane daily activities rather than grand cultural exchanges.",
-      "japanese": "はい、彼女はビーチの近くに住んでいて水泳を楽しんでいました。",
-      "phraseMeaning": "はい、彼女はビーチの近くに住んでいて水泳を楽しんでいました。",
+      "japanese": "学校に通い、宿題をこなし、家族や友達と時間を過ごし、試験を心配し、自分の将来について考える―国境を超えた普遍的なティーンエイジャーの経験でした。",
+      "phraseMeaning": "学校に通い、宿題をこなし、家族や友達と時間を過ごし、試験を心配し、自分の将来について考える―国境を超えた普遍的なティーンエイジャーの経験でした。",
       "segments": [
         {
           "word": "Paradoxically",
@@ -59430,10 +59456,10 @@
       ]
     },
     {
-      "id": 285,
+      "id": 287,
       "english": "Eating breakfast together, completing homework side-by-side, chatting about favorite music or television shows—these ordinary moments revealed our fundamental similarities.",
-      "japanese": "しかし彼女の日常生活は根本的な部分で私のものと似ていました。",
-      "phraseMeaning": "しかし彼女の日常生活は根本的な部分で私のものと似ていました。",
+      "japanese": "「人々は本当にすべてのオーストラリア人が常にサーフィンをしていると思っているの？",
+      "phraseMeaning": "「人々は本当にすべてのオーストラリア人が常にサーフィンをしていると思っているの？",
       "segments": [
         {
           "word": "Eating",
@@ -59923,10 +59949,10 @@
       ]
     },
     {
-      "id": 286,
+      "id": 288,
       "english": "Emma loved certain Japanese pop songs despite not understanding lyrics.",
-      "japanese": "学校に通い、宿題をこなし、家族や友達と時間を過ごし、試験を心配し、自分の将来について考える―国境を超えた普遍的なティーンエイジャーの経験でした。",
-      "phraseMeaning": "学校に通い、宿題をこなし、家族や友達と時間を過ごし、試験を心配し、自分の将来について考える―国境を超えた普遍的なティーンエイジャーの経験でした。",
+      "japanese": "」と私が最初の誤解を告白したとき、エマは笑いました。",
+      "phraseMeaning": "」と私が最初の誤解を告白したとき、エマは笑いました。",
       "segments": [
         {
           "word": "Emma",
@@ -60124,10 +60150,10 @@
       ]
     },
     {
-      "id": 287,
+      "id": 289,
       "english": "I enjoyed Australian music she introduced me to.",
-      "japanese": "「人々は本当にすべてのオーストラリア人が常にサーフィンをしていると思っているの？",
-      "phraseMeaning": "「人々は本当にすべてのオーストラリア人が常にサーフィンをしていると思っているの？",
+      "japanese": "「つまり、サーフィンをする人もいるけど、サーフィンをしたことのないオーストラリア人もたくさんいるわ。",
+      "phraseMeaning": "「つまり、サーフィンをする人もいるけど、サーフィンをしたことのないオーストラリア人もたくさんいるわ。",
       "segments": [
         {
           "word": "I",
@@ -60299,10 +60325,10 @@
       ]
     },
     {
-      "id": 288,
+      "id": 290,
       "english": "We both procrastinated on math homework.",
-      "japanese": "」と私が最初の誤解を告白したとき、エマは笑いました。",
-      "phraseMeaning": "」と私が最初の誤解を告白したとき、エマは笑いました。",
+      "japanese": "それは、すべての日本人が武道を練習したり、毎日着物を着ていると思い込むのと同じよ」",
+      "phraseMeaning": "それは、すべての日本人が武道を練習したり、毎日着物を着ていると思い込むのと同じよ」",
       "segments": [
         {
           "word": "We",
@@ -60411,10 +60437,10 @@
       ]
     },
     {
-      "id": 289,
+      "id": 291,
       "english": "We both felt anxious about future career decisions.",
-      "japanese": "「つまり、サーフィンをする人もいるけど、サーフィンをしたことのないオーストラリア人もたくさんいるわ。",
-      "phraseMeaning": "「つまり、サーフィンをする人もいるけど、サーフィンをしたことのないオーストラリア人もたくさんいるわ。",
+      "japanese": "彼女の指摘は私に深い印象を与えました。",
+      "phraseMeaning": "彼女の指摘は私に深い印象を与えました。",
       "segments": [
         {
           "word": "We",
@@ -60605,10 +60631,10 @@
       ]
     },
     {
-      "id": 290,
+      "id": 292,
       "english": "We both appreciated quiet moments enjoying tea and conversation.",
-      "japanese": "それは、すべての日本人が武道を練習したり、毎日着物を着ていると思い込むのと同じよ」",
-      "phraseMeaning": "それは、すべての日本人が武道を練習したり、毎日着物を着ていると思い込むのと同じよ」",
+      "japanese": "外国人がすべての日本人が常に寿司を食べたり、伝統的な家に住んでいると思い込むとき、私はフラストレーションを感じていました。",
+      "phraseMeaning": "外国人がすべての日本人が常に寿司を食べたり、伝統的な家に住んでいると思い込むとき、私はフラストレーションを感じていました。",
       "segments": [
         {
           "word": "We",
@@ -60794,10 +60820,10 @@
       ]
     },
     {
-      "id": 291,
+      "id": 293,
       "english": "One evening, Emma and I stayed up late talking about our families.",
-      "japanese": "彼女の指摘は私に深い印象を与えました。",
-      "phraseMeaning": "彼女の指摘は私に深い印象を与えました。",
+      "japanese": "しかし私は無意識にエマの文化に対して同様の還元的な考え方を適用していました。",
+      "phraseMeaning": "しかし私は無意識にエマの文化に対して同様の還元的な考え方を適用していました。",
       "segments": [
         {
           "word": "One",
@@ -61092,10 +61118,10 @@
       ]
     },
     {
-      "id": 292,
+      "id": 294,
       "english": "She described tensions with her younger brother, who constantly borrowed her belongings without permission.",
-      "japanese": "外国人がすべての日本人が常に寿司を食べたり、伝統的な家に住んでいると思い込むとき、私はフラストレーションを感じていました。",
-      "phraseMeaning": "外国人がすべての日本人が常に寿司を食べたり、伝統的な家に住んでいると思い込むとき、私はフラストレーションを感じていました。",
+      "japanese": "この気づきは私に謙虚さと、個人を文化的代表者としてではなく、ユニークな人として接することの重要性を教えてくれました。",
+      "phraseMeaning": "この気づきは私に謙虚さと、個人を文化的代表者としてではなく、ユニークな人として接することの重要性を教えてくれました。",
       "segments": [
         {
           "word": "She",
@@ -61326,10 +61352,10 @@
       ]
     },
     {
-      "id": 293,
+      "id": 295,
       "english": "I laughed, relating similar frustrations with my little sister.",
-      "japanese": "しかし私は無意識にエマの文化に対して同様の還元的な考え方を適用していました。",
-      "phraseMeaning": "しかし私は無意識にエマの文化に対して同様の還元的な考え方を適用していました。",
+      "japanese": "エマはまた、西洋文化全般に対する私の思い込みにも挑戦しました。",
+      "phraseMeaning": "エマはまた、西洋文化全般に対する私の思い込みにも挑戦しました。",
       "segments": [
         {
           "word": "I",
@@ -61473,10 +61499,10 @@
       ]
     },
     {
-      "id": 294,
+      "id": 296,
       "english": "\"See?\" Emma said, smiling.",
-      "japanese": "この気づきは私に謙虚さと、個人を文化的代表者としてではなく、ユニークな人として接することの重要性を教えてくれました。",
-      "phraseMeaning": "この気づきは私に謙虚さと、個人を文化的代表者としてではなく、ユニークな人として接することの重要性を教えてくれました。",
+      "japanese": "個人主義的な社会は強い家族の絆やコミュニティのつながりに欠けていると想像していました。",
+      "phraseMeaning": "個人主義的な社会は強い家族の絆やコミュニティのつながりに欠けていると想像していました。",
       "segments": [
         {
           "word": "\"",
@@ -61563,10 +61589,10 @@
       ]
     },
     {
-      "id": 295,
+      "id": 297,
       "english": "\"Annoying siblings are universal!\"",
-      "japanese": "エマはまた、西洋文化全般に対する私の思い込みにも挑戦しました。",
-      "phraseMeaning": "エマはまた、西洋文化全般に対する私の思い込みにも挑戦しました。",
+      "japanese": "しかしエマは日本のものと似た緊密な家族関係、近所付き合い、コミュニティイベントについて説明しました。",
+      "phraseMeaning": "しかしエマは日本のものと似た緊密な家族関係、近所付き合い、コミュニティイベントについて説明しました。",
       "segments": [
         {
           "word": "\"",
@@ -61649,10 +61675,10 @@
       ]
     },
     {
-      "id": 296,
+      "id": 298,
       "english": "We discussed friendships, peer pressure, academic stress, hopes and fears about growing up—discovering that teenage experiences transcend cultural boundaries.",
-      "japanese": "個人主義的な社会は強い家族の絆やコミュニティのつながりに欠けていると想像していました。",
-      "phraseMeaning": "個人主義的な社会は強い家族の絆やコミュニティのつながりに欠けていると想像していました。",
+      "japanese": "文化の違いは確かに存在しますが、つながりと帰属への人間の基本的な欲求は普遍的です。",
+      "phraseMeaning": "文化の違いは確かに存在しますが、つながりと帰属への人間の基本的な欲求は普遍的です。",
       "segments": [
         {
           "word": "We",
@@ -62047,10 +62073,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 297,
+      "id": 299,
       "english": "Wherever we lived, we navigated similar challenges and emotions.",
-      "japanese": "しかしエマは日本のものと似た緊密な家族関係、近所付き合い、コミュニティイベントについて説明しました。",
-      "phraseMeaning": "しかしエマは日本のものと似た緊密な家族関係、近所付き合い、コミュニティイベントについて説明しました。",
+      "japanese": "「どの文化も異なる価値を強調しているわ」とエマは思慮深く観察しました。",
+      "phraseMeaning": "「どの文化も異なる価値を強調しているわ」とエマは思慮深く観察しました。",
       "segments": [
         {
           "word": "Wherever",
@@ -62255,10 +62281,10 @@
       ]
     },
     {
-      "id": 298,
+      "id": 300,
       "english": "These conversations created deep bonds.",
-      "japanese": "文化の違いは確かに存在しますが、つながりと帰属への人間の基本的な欲求は普遍的です。",
-      "phraseMeaning": "文化の違いは確かに存在しますが、つながりと帰属への人間の基本的な欲求は普遍的です。",
+      "japanese": "「でも根底では、世界中の人々は同じようなものを望んでいるの―安全、帰属、目的、愛。",
+      "phraseMeaning": "「でも根底では、世界中の人々は同じようなものを望んでいるの―安全、帰属、目的、愛。",
       "segments": [
         {
           "word": "These",
@@ -62385,10 +62411,10 @@
       ]
     },
     {
-      "id": 299,
+      "id": 301,
       "english": "Emma wasn't just an Australian exchange student anymore—she was a genuine friend who understood my inner world,",
-      "japanese": "「どの文化も異なる価値を強調しているわ」とエマは思慮深く観察しました。",
-      "phraseMeaning": "「どの文化も異なる価値を強調しているわ」とエマは思慮深く観察しました。",
+      "japanese": "私たちはただ異なる文化的枠組みを通じてこれらの目標を追求しているだけなの」",
+      "phraseMeaning": "私たちはただ異なる文化的枠組みを通じてこれらの目標を追求しているだけなの」",
       "segments": [
         {
           "word": "Emma",
@@ -62712,10 +62738,10 @@
       ]
     },
     {
-      "id": 300,
+      "id": 302,
       "english": "because she inhabited a similar one, despite our different cultural contexts.",
-      "japanese": "「でも根底では、世界中の人々は同じようなものを望んでいるの―安全、帰属、目的、愛。",
-      "phraseMeaning": "「でも根底では、世界中の人々は同じようなものを望んでいるの―安全、帰属、目的、愛。",
+      "japanese": "文化的誤解をナビゲートすることを学ぶ",
+      "phraseMeaning": "文化的誤解をナビゲートすることを学ぶ",
       "segments": [
         {
           "word": "because",
@@ -62981,10 +63007,10 @@
       "grammarPoint": "Because節"
     },
     {
-      "id": 301,
+      "id": 303,
       "english": "Impact on Identity and Worldview",
-      "japanese": "私たちはただ異なる文化的枠組みを通じてこれらの目標を追求しているだけなの」",
-      "phraseMeaning": "私たちはただ異なる文化的枠組みを通じてこれらの目標を追求しているだけなの」",
+      "japanese": "良い意図にもかかわらず、エマと私は時折、忍耐強いナビゲーションを必要とする文化的誤解を経験しました。",
+      "phraseMeaning": "良い意図にもかかわらず、エマと私は時折、忍耐強いナビゲーションを必要とする文化的誤解を経験しました。",
       "segments": [
         {
           "word": "Impact",
@@ -63080,10 +63106,10 @@
       ]
     },
     {
-      "id": 302,
+      "id": 304,
       "english": "Hosting Emma profoundly influenced my sense of identity and place in the world.",
-      "japanese": "文化的誤解をナビゲートすることを学ぶ",
-      "phraseMeaning": "文化的誤解をナビゲートすることを学ぶ",
+      "japanese": "コミュニケーションスタイルは特に難しかったです。",
+      "phraseMeaning": "コミュニケーションスタイルは特に難しかったです。",
       "segments": [
         {
           "word": "Hosting",
@@ -63316,10 +63342,10 @@
       ]
     },
     {
-      "id": 303,
+      "id": 305,
       "english": "Before her visit, I'd thought of myself primarily as Japanese—defined by my nationality and cultural background.",
-      "japanese": "良い意図にもかかわらず、エマと私は時折、忍耐強いナビゲーションを必要とする文化的誤解を経験しました。",
-      "phraseMeaning": "良い意図にもかかわらず、エマと私は時折、忍耐強いナビゲーションを必要とする文化的誤解を経験しました。",
+      "japanese": "オーストラリアの率直さは時々私を驚かせました。",
+      "phraseMeaning": "オーストラリアの率直さは時々私を驚かせました。",
       "segments": [
         {
           "word": "Before",
@@ -63666,10 +63692,10 @@
       ]
     },
     {
-      "id": 304,
+      "id": 306,
       "english": "Emma's presence encouraged me to consider myself simultaneously as Japanese and as a global citizen.",
-      "japanese": "コミュニケーションスタイルは特に難しかったです。",
-      "phraseMeaning": "コミュニケーションスタイルは特に難しかったです。",
+      "japanese": "エマは、日本の社会規範が間接的な表現で柔らかくするかもしれない意見や反対意見を率直に表現しました。",
+      "phraseMeaning": "エマは、日本の社会規範が間接的な表現で柔らかくするかもしれない意見や反対意見を率直に表現しました。",
       "segments": [
         {
           "word": "Emma's",
@@ -63940,10 +63966,10 @@
       ]
     },
     {
-      "id": 305,
+      "id": 307,
       "english": "\"You're so Japanese,\" Emma would sometimes comment, observing how I bowed habitually, removed shoes automatically before entering buildings, or used both hands,",
-      "japanese": "オーストラリアの率直さは時々私を驚かせました。",
-      "phraseMeaning": "オーストラリアの率直さは時々私を驚かせました。",
+      "japanese": "最初、私は彼女の率直さを無礼だと解釈しました。",
+      "phraseMeaning": "最初、私は彼女の率直さを無礼だと解釈しました。",
       "segments": [
         {
           "word": "\"",
@@ -64382,10 +64408,10 @@
       ]
     },
     {
-      "id": 306,
+      "id": 308,
       "english": "when giving or receiving objects.",
-      "japanese": "エマは、日本の社会規範が間接的な表現で柔らかくするかもしれない意見や反対意見を率直に表現しました。",
-      "phraseMeaning": "エマは、日本の社会規範が間接的な表現で柔らかくするかもしれない意見や反対意見を率直に表現しました。",
+      "japanese": "例えば、伝統的な納豆を試したとき、彼女はすぐに顔をしかめて「ああ、これは好きじゃないわ。",
+      "phraseMeaning": "例えば、伝統的な納豆を試したとき、彼女はすぐに顔をしかめて「ああ、これは好きじゃないわ。",
       "segments": [
         {
           "word": "when",
@@ -64506,10 +64532,10 @@
       "grammarPoint": "When節"
     },
     {
-      "id": 307,
+      "id": 309,
       "english": "These behaviors were so ingrained I barely noticed them.",
-      "japanese": "最初、私は彼女の率直さを無礼だと解釈しました。",
-      "phraseMeaning": "最初、私は彼女の率直さを無礼だと解釈しました。",
+      "japanese": "ごめんなさい、でも本当に変な味がするわ」と言いました。",
+      "phraseMeaning": "ごめんなさい、でも本当に変な味がするわ」と言いました。",
       "segments": [
         {
           "word": "These",
@@ -64674,10 +64700,10 @@
       ]
     },
     {
-      "id": 308,
+      "id": 310,
       "english": "Yet Emma also pointed out qualities she considered universally human rather than specifically Japanese—my kindness, curiosity, sense of humor, creativity.",
-      "japanese": "例えば、伝統的な納豆を試したとき、彼女はすぐに顔をしかめて「ああ、これは好きじゃないわ。",
-      "phraseMeaning": "例えば、伝統的な納豆を試したとき、彼女はすぐに顔をしかめて「ああ、これは好きじゃないわ。",
+      "japanese": "日本文化では、「興味深いですね」や「この味にはまだ慣れていません」のように―露骨な拒絶を避ける丁寧な間接表現を言うかもしれません。",
+      "phraseMeaning": "日本文化では、「興味深いですね」や「この味にはまだ慣れていません」のように―露骨な拒絶を避ける丁寧な間接表現を言うかもしれません。",
       "segments": [
         {
           "word": "Yet",
@@ -65132,10 +65158,10 @@
       ]
     },
     {
-      "id": 309,
+      "id": 311,
       "english": "\"Those aren't just Japanese traits,\" she insisted.",
-      "japanese": "ごめんなさい、でも本当に変な味がするわ」と言いました。",
-      "phraseMeaning": "ごめんなさい、でも本当に変な味がするわ」と言いました。",
+      "japanese": "エマの率直な反応は最初失礼に見えました。",
+      "phraseMeaning": "エマの率直な反応は最初失礼に見えました。",
       "segments": [
         {
           "word": "\"",
@@ -65247,10 +65273,10 @@
       ]
     },
     {
-      "id": 310,
+      "id": 312,
       "english": "\"Those are Yuki traits.",
-      "japanese": "日本文化では、「興味深いですね」や「この味にはまだ慣れていません」のように―露骨な拒絶を避ける丁寧な間接表現を言うかもしれません。",
-      "phraseMeaning": "日本文化では、「興味深いですね」や「この味にはまだ慣れていません」のように―露骨な拒絶を避ける丁寧な間接表現を言うかもしれません。",
+      "japanese": "しかし、私たちの異なるコミュニケーションスタイルについて話し合った後、オーストラリア文化は正直さと率直さを重視することを理解しました。",
+      "phraseMeaning": "しかし、私たちの異なるコミュニケーションスタイルについて話し合った後、オーストラリア文化は正直さと率直さを重視することを理解しました。",
       "segments": [
         {
           "word": "\"",
@@ -65345,10 +65371,10 @@
       ]
     },
     {
-      "id": 311,
+      "id": 313,
       "english": "Your culture shapes you, but it doesn't entirely define you.\"",
-      "japanese": "エマの率直な反応は最初失礼に見えました。",
-      "phraseMeaning": "エマの率直な反応は最初失礼に見えました。",
+      "japanese": "エマは無礼だったのではなく、彼女の文化的枠組みの中で本物の自分でいただけでした。",
+      "phraseMeaning": "エマは無礼だったのではなく、彼女の文化的枠組みの中で本物の自分でいただけでした。",
       "segments": [
         {
           "word": "Your",
@@ -65609,10 +65635,10 @@
       ]
     },
     {
-      "id": 312,
+      "id": 314,
       "english": "This perspective liberated me.",
-      "japanese": "しかし、私たちの異なるコミュニケーションスタイルについて話し合った後、オーストラリア文化は正直さと率直さを重視することを理解しました。",
-      "phraseMeaning": "しかし、私たちの異なるコミュニケーションスタイルについて話し合った後、オーストラリア文化は正直さと率直さを重視することを理解しました。",
+      "japanese": "彼女は、私が日本の間接性が社会的調和を維持し、対立を避けるのに役立つと説明したときに感謝しました。",
+      "phraseMeaning": "彼女は、私が日本の間接性が社会的調和を維持し、対立を避けるのに役立つと説明したときに感謝しました。",
       "segments": [
         {
           "word": "This",
@@ -65688,10 +65714,10 @@
       ]
     },
     {
-      "id": 313,
+      "id": 315,
       "english": "I began understanding myself as shaped by Japanese culture while also possessing individual characteristics transcending cultural categories.",
-      "japanese": "エマは無礼だったのではなく、彼女の文化的枠組みの中で本物の自分でいただけでした。",
-      "phraseMeaning": "エマは無礼だったのではなく、彼女の文化的枠組みの中で本物の自分でいただけでした。",
+      "japanese": "「だから日本人が『たぶん』や『それは難しいかもしれません』と言うとき、実際には『いいえ』を意味しているの？",
+      "phraseMeaning": "「だから日本人が『たぶん』や『それは難しいかもしれません』と言うとき、実際には『いいえ』を意味しているの？",
       "segments": [
         {
           "word": "I",
@@ -65956,10 +65982,10 @@
       "grammarPoint": "While節"
     },
     {
-      "id": 314,
+      "id": 316,
       "english": "I could honor my cultural heritage while simultaneously connecting with people from completely different backgrounds.",
-      "japanese": "彼女は、私が日本の間接性が社会的調和を維持し、対立を避けるのに役立つと説明したときに感謝しました。",
-      "phraseMeaning": "彼女は、私が日本の間接性が社会的調和を維持し、対立を避けるのに役立つと説明したときに感謝しました。",
+      "japanese": "」とエマは興味深そうに尋ねました。",
+      "phraseMeaning": "」とエマは興味深そうに尋ねました。",
       "segments": [
         {
           "word": "I",
@@ -66250,10 +66276,10 @@
       "grammarPoint": "While節"
     },
     {
-      "id": 315,
+      "id": 317,
       "english": "I also developed more critical awareness of my own culture.",
-      "japanese": "「だから日本人が『たぶん』や『それは難しいかもしれません』と言うとき、実際には『いいえ』を意味しているの？",
-      "phraseMeaning": "「だから日本人が『たぶん』や『それは難しいかもしれません』と言うとき、実際には『いいえ』を意味しているの？",
+      "japanese": "「多くの場合、そうよ」と私は確認しました。",
+      "phraseMeaning": "「多くの場合、そうよ」と私は確認しました。",
       "segments": [
         {
           "word": "I",
@@ -66504,10 +66530,10 @@
       ]
     },
     {
-      "id": 316,
+      "id": 318,
       "english": "Seeing Japanese customs through Emma's foreign eyes highlighted aspects I'd previously accepted unquestioningly.",
-      "japanese": "」とエマは興味深そうに尋ねました。",
-      "phraseMeaning": "」とエマは興味深そうに尋ねました。",
+      "japanese": "「人々に露骨な拒絶なしに丁寧に断る方法を与えるの。",
+      "phraseMeaning": "「人々に露骨な拒絶なしに丁寧に断る方法を与えるの。",
       "segments": [
         {
           "word": "Seeing",
@@ -66722,10 +66748,10 @@
       ]
     },
     {
-      "id": 317,
+      "id": 319,
       "english": "Some customs now seemed arbitrary or limiting.",
-      "japanese": "「多くの場合、そうよ」と私は確認しました。",
-      "phraseMeaning": "「多くの場合、そうよ」と私は確認しました。",
+      "japanese": "気まずさを防ぐのよ」",
+      "phraseMeaning": "気まずさを防ぐのよ」",
       "segments": [
         {
           "word": "Some",
@@ -66894,10 +66920,10 @@
       ]
     },
     {
-      "id": 318,
+      "id": 320,
       "english": "Others I appreciated more deeply, understanding their underlying wisdom.",
-      "japanese": "「人々に露骨な拒絶なしに丁寧に断る方法を与えるの。",
-      "phraseMeaning": "「人々に露骨な拒絶なしに丁寧に断る方法を与えるの。",
+      "japanese": "「それはとても違うわ！",
+      "phraseMeaning": "「それはとても違うわ！",
       "segments": [
         {
           "word": "Others",
@@ -67135,10 +67161,10 @@
       ]
     },
     {
-      "id": 319,
+      "id": 321,
       "english": "For example, Emma questioned why Japanese society emphasized conformity and discouraged standing out.",
-      "japanese": "気まずさを防ぐのよ」",
-      "phraseMeaning": "気まずさを防ぐのよ」",
+      "japanese": "」とエマは驚嘆しました。",
+      "phraseMeaning": "」とエマは驚嘆しました。",
       "segments": [
         {
           "word": "For",
@@ -67381,10 +67407,10 @@
       ]
     },
     {
-      "id": 320,
+      "id": 322,
       "english": "\"Why is being different seen negatively?\" she asked.",
-      "japanese": "「それはとても違うわ！",
-      "phraseMeaning": "「それはとても違うわ！",
+      "japanese": "「オーストラリアでは、人々は通常、自分の意味することを直接言うの。",
+      "phraseMeaning": "「オーストラリアでは、人々は通常、自分の意味することを直接言うの。",
       "segments": [
         {
           "word": "\"",
@@ -67595,10 +67621,10 @@
       ]
     },
     {
-      "id": 321,
+      "id": 323,
       "english": "\"In Australia, we celebrate individuality and unique perspectives.\"",
-      "japanese": "」とエマは驚嘆しました。",
-      "phraseMeaning": "」とエマは驚嘆しました。",
+      "japanese": "興味がない場合は、ただ『いいえ、結構です』と丁寧に言うの。",
+      "phraseMeaning": "興味がない場合は、ただ『いいえ、結構です』と丁寧に言うの。",
       "segments": [
         {
           "word": "\"",
@@ -67758,10 +67784,10 @@
       ]
     },
     {
-      "id": 322,
+      "id": 324,
       "english": "Her question made me reflect.",
-      "japanese": "「オーストラリアでは、人々は通常、自分の意味することを直接言うの。",
-      "phraseMeaning": "「オーストラリアでは、人々は通常、自分の意味することを直接言うの。",
+      "japanese": "でも今、日本のコミュニケーションが外国人に間接的に見える理由がわかったわ。",
+      "phraseMeaning": "でも今、日本のコミュニケーションが外国人に間接的に見える理由がわかったわ。",
       "segments": [
         {
           "word": "Her",
@@ -67869,10 +67895,10 @@
       ]
     },
     {
-      "id": 323,
+      "id": 325,
       "english": "Japanese cultural emphasis on harmony and group cohesion created benefits—social stability, mutual support, collective achievement.",
-      "japanese": "興味がない場合は、ただ『いいえ、結構です』と丁寧に言うの。",
-      "phraseMeaning": "興味がない場合は、ただ『いいえ、結構です』と丁寧に言うの。",
+      "japanese": "不明確なのではなく、配慮しているのね」",
+      "phraseMeaning": "不明確なのではなく、配慮しているのね」",
       "segments": [
         {
           "word": "Japanese",
@@ -68229,10 +68255,10 @@
       ]
     },
     {
-      "id": 324,
+      "id": 326,
       "english": "But it also sometimes stifled individual expression and creativity.",
-      "japanese": "でも今、日本のコミュニケーションが外国人に間接的に見える理由がわかったわ。",
-      "phraseMeaning": "でも今、日本のコミュニケーションが外国人に間接的に見える理由がわかったわ。",
+      "japanese": "これらの議論は、文化の違いが正しいか間違っているかではなく、社会的交流への単に異なるアプローチであり、それぞれに利点と適切な文脈があることを私たち両方に教えてくれました。",
+      "phraseMeaning": "これらの議論は、文化の違いが正しいか間違っているかではなく、社会的交流への単に異なるアプローチであり、それぞれに利点と適切な文脈があることを私たち両方に教えてくれました。",
       "segments": [
         {
           "word": "But",
@@ -68440,10 +68466,10 @@
       ]
     },
     {
-      "id": 325,
+      "id": 327,
       "english": "Neither approach was absolutely superior; each involved trade-offs.",
-      "japanese": "不明確なのではなく、配慮しているのね」",
-      "phraseMeaning": "不明確なのではなく、配慮しているのね」",
+      "japanese": "日常の習慣を通じた共通の人間性の発見",
+      "phraseMeaning": "日常の習慣を通じた共通の人間性の発見",
       "segments": [
         {
           "word": "Neither",
@@ -68604,10 +68630,10 @@
       ]
     },
     {
-      "id": 326,
+      "id": 328,
       "english": "This nuanced understanding prevented me from romanticizing either culture while recognizing valuable elements in both.",
-      "japanese": "これらの議論は、文化の違いが正しいか間違っているかではなく、社会的交流への単に異なるアプローチであり、それぞれに利点と適切な文脈があることを私たち両方に教えてくれました。",
-      "phraseMeaning": "これらの議論は、文化の違いが正しいか間違っているかではなく、社会的交流への単に異なるアプローチであり、それぞれに利点と適切な文脈があることを私たち両方に教えてくれました。",
+      "japanese": "逆説的に、私は壮大な文化交流よりも平凡な日常活動を通じて私たちの共通の人間性を発見しました。",
+      "phraseMeaning": "逆説的に、私は壮大な文化交流よりも平凡な日常活動を通じて私たちの共通の人間性を発見しました。",
       "segments": [
         {
           "word": "This",
@@ -68865,10 +68891,10 @@
       "grammarPoint": "While節"
     },
     {
-      "id": 327,
+      "id": 329,
       "english": "I could appreciate Japanese social harmony without condemning Australian individualism, or vice versa.",
-      "japanese": "日常の習慣を通じた共通の人間性の発見",
-      "phraseMeaning": "日常の習慣を通じた共通の人間性の発見",
+      "japanese": "一緒に朝食を食べ、並んで宿題をし、好きな音楽やテレビ番組について話す―これらの何気ない瞬間が私たちの根本的な類似性を明らかにしました。",
+      "phraseMeaning": "一緒に朝食を食べ、並んで宿題をし、好きな音楽やテレビ番組について話す―これらの何気ない瞬間が私たちの根本的な類似性を明らかにしました。",
       "segments": [
         {
           "word": "I",
@@ -69122,10 +69148,10 @@
       ]
     },
     {
-      "id": 328,
+      "id": 330,
       "english": "This experience also influenced my thinking about the future.",
-      "japanese": "逆説的に、私は壮大な文化交流よりも平凡な日常活動を通じて私たちの共通の人間性を発見しました。",
-      "phraseMeaning": "逆説的に、私は壮大な文化交流よりも平凡な日常活動を通じて私たちの共通の人間性を発見しました。",
+      "japanese": "エマは歌詞を理解していないにもかかわらず、特定の日本のポップソングを愛していました。",
+      "phraseMeaning": "エマは歌詞を理解していないにもかかわらず、特定の日本のポップソングを愛していました。",
       "segments": [
         {
           "word": "This",
@@ -69377,10 +69403,10 @@
       ]
     },
     {
-      "id": 329,
+      "id": 331,
       "english": "I'm now seriously considering studying abroad or pursuing a career that involves international exchange.",
-      "japanese": "一緒に朝食を食べ、並んで宿題をし、好きな音楽やテレビ番組について話す―これらの何気ない瞬間が私たちの根本的な類似性を明らかにしました。",
-      "phraseMeaning": "一緒に朝食を食べ、並んで宿題をし、好きな音楽やテレビ番組について話す―これらの何気ない瞬間が私たちの根本的な類似性を明らかにしました。",
+      "japanese": "私は彼女が紹介してくれたオーストラリアの音楽を楽しみました。",
+      "phraseMeaning": "私は彼女が紹介してくれたオーストラリアの音楽を楽しみました。",
       "segments": [
         {
           "word": "I'm",
@@ -69676,10 +69702,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 330,
+      "id": 332,
       "english": "Meeting Emma showed me how rewarding it is to build bridges between cultures.",
-      "japanese": "エマは歌詞を理解していないにもかかわらず、特定の日本のポップソングを愛していました。",
-      "phraseMeaning": "エマは歌詞を理解していないにもかかわらず、特定の日本のポップソングを愛していました。",
+      "japanese": "私たちは両方とも数学の宿題を先延ばしにしました。",
+      "phraseMeaning": "私たちは両方とも数学の宿題を先延ばしにしました。",
       "segments": [
         {
           "word": "Meeting",
@@ -69935,10 +69961,10 @@
       ]
     },
     {
-      "id": 331,
+      "id": 333,
       "english": "Looking back, I'm grateful our teacher chose me as Emma's host buddy.",
-      "japanese": "私は彼女が紹介してくれたオーストラリアの音楽を楽しみました。",
-      "phraseMeaning": "私は彼女が紹介してくれたオーストラリアの音楽を楽しみました。",
+      "japanese": "私たちは両方とも将来のキャリア決定について不安を感じました。",
+      "phraseMeaning": "私たちは両方とも将来のキャリア決定について不安を感じました。",
       "segments": [
         {
           "word": "Looking",
@@ -70138,10 +70164,10 @@
       ]
     },
     {
-      "id": 332,
+      "id": 334,
       "english": "It was sometimes challenging—explaining Japanese customs, translating, navigating cultural misunderstandings.",
-      "japanese": "私たちは両方とも数学の宿題を先延ばしにしました。",
-      "phraseMeaning": "私たちは両方とも数学の宿題を先延ばしにしました。",
+      "japanese": "私たちは両方ともお茶を飲みながら会話を楽しむ静かな時間を大切にしました。",
+      "phraseMeaning": "私たちは両方ともお茶を飲みながら会話を楽しむ静かな時間を大切にしました。",
       "segments": [
         {
           "word": "It",
@@ -70364,10 +70390,10 @@
       ]
     },
     {
-      "id": 333,
+      "id": 335,
       "english": "But it was also incredibly rewarding.",
-      "japanese": "私たちは両方とも将来のキャリア決定について不安を感じました。",
-      "phraseMeaning": "私たちは両方とも将来のキャリア決定について不安を感じました。",
+      "japanese": "ある晩、エマと私は遅くまで起きて家族について話しました。",
+      "phraseMeaning": "ある晩、エマと私は遅くまで起きて家族について話しました。",
       "segments": [
         {
           "word": "But",
@@ -70535,10 +70561,10 @@
       ]
     },
     {
-      "id": 334,
+      "id": 336,
       "english": "Emma taught me that the world is smaller than I thought, yet more diverse and fascinating than I imagined.",
-      "japanese": "私たちは両方ともお茶を飲みながら会話を楽しむ静かな時間を大切にしました。",
-      "phraseMeaning": "私たちは両方ともお茶を飲みながら会話を楽しむ静かな時間を大切にしました。",
+      "japanese": "彼女は、許可なく常に彼女の持ち物を借りる弟との緊張について説明しました。",
+      "phraseMeaning": "彼女は、許可なく常に彼女の持ち物を借りる弟との緊張について説明しました。",
       "segments": [
         {
           "word": "Emma",
@@ -70950,10 +70976,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 335,
+      "id": 337,
       "english": "People everywhere share similar hopes and fears, yet express them in beautifully different ways.",
-      "japanese": "ある晩、エマと私は遅くまで起きて家族について話しました。",
-      "phraseMeaning": "ある晩、エマと私は遅くまで起きて家族について話しました。",
+      "japanese": "私は笑いながら、私の妹との同様のフラストレーションを共有しました。",
+      "phraseMeaning": "私は笑いながら、私の妹との同様のフラストレーションを共有しました。",
       "segments": [
         {
           "word": "People",
@@ -71279,10 +71305,10 @@
       ]
     },
     {
-      "id": 336,
+      "id": 338,
       "english": "And most importantly, she taught me that friendship transcends borders.",
-      "japanese": "彼女は、許可なく常に彼女の持ち物を借りる弟との緊張について説明しました。",
-      "phraseMeaning": "彼女は、許可なく常に彼女の持ち物を借りる弟との緊張について説明しました。",
+      "japanese": "「ほら？",
+      "phraseMeaning": "「ほら？",
       "segments": [
         {
           "word": "And",
@@ -71533,10 +71559,10 @@
       "grammarPoint": "that節"
     },
     {
-      "id": 337,
+      "id": 339,
       "english": "Language barriers, cultural differences, and geographical distance—none of these prevent genuine human connection.",
-      "japanese": "私は笑いながら、私の妹との同様のフラストレーションを共有しました。",
-      "phraseMeaning": "私は笑いながら、私の妹との同様のフラストレーションを共有しました。",
+      "japanese": "」とエマは微笑みながら言いました。",
+      "phraseMeaning": "」とエマは微笑みながら言いました。",
       "segments": [
         {
           "word": "Language",
@@ -71849,10 +71875,10 @@
       ]
     },
     {
-      "id": 338,
+      "id": 340,
       "english": "All it takes is openness, kindness, and willingness to understand each other.",
-      "japanese": "「ほら？",
-      "phraseMeaning": "「ほら？",
+      "japanese": "「うっとうしい兄弟は普遍的よ！",
+      "phraseMeaning": "「うっとうしい兄弟は普遍的よ！",
       "segments": [
         {
           "word": "All",
@@ -72179,10 +72205,10 @@
       ]
     },
     {
-      "id": 339,
+      "id": 341,
       "english": "Someday, I will visit Emma in Australia.",
-      "japanese": "」とエマは微笑みながら言いました。",
-      "phraseMeaning": "」とエマは微笑みながら言いました。",
+      "japanese": "」",
+      "phraseMeaning": "」",
       "segments": [
         {
           "word": "Someday",
@@ -72294,10 +72320,10 @@
       ]
     },
     {
-      "id": 340,
+      "id": 342,
       "english": "We'll explore Sydney together, and she'll show me her world just as I showed her mine.",
-      "japanese": "「うっとうしい兄弟は普遍的よ！",
-      "phraseMeaning": "「うっとうしい兄弟は普遍的よ！",
+      "japanese": "私たちは友情、仲間からのプレッシャー、学業のストレス、成長することへの希望と恐れについて話しました―ティーンエイジャーの経験が文化的境界を超えることを発見しました。",
+      "phraseMeaning": "私たちは友情、仲間からのプレッシャー、学業のストレス、成長することへの希望と恐れについて話しました―ティーンエイジャーの経験が文化的境界を超えることを発見しました。",
       "segments": [
         {
           "word": "We'll",
@@ -72603,10 +72629,10 @@
       ]
     },
     {
-      "id": 341,
+      "id": 343,
       "english": "Until then, we'll continue learning from each other, sharing our lives across the ocean, and maintaining the friendship,",
-      "japanese": "」",
-      "phraseMeaning": "」",
+      "japanese": "どこに住んでいても、私たちは同様の課題と感情をナビゲートしていました。",
+      "phraseMeaning": "どこに住んでいても、私たちは同様の課題と感情をナビゲートしていました。",
       "segments": [
         {
           "word": "Until",
@@ -73089,10 +73115,10 @@
       ]
     },
     {
-      "id": 342,
+      "id": 344,
       "english": "that began with those two magical weeks in October.",
-      "japanese": "私たちは友情、仲間からのプレッシャー、学業のストレス、成長することへの希望と恐れについて話しました―ティーンエイジャーの経験が文化的境界を超えることを発見しました。",
-      "phraseMeaning": "私たちは友情、仲間からのプレッシャー、学業のストレス、成長することへの希望と恐れについて話しました―ティーンエイジャーの経験が文化的境界を超えることを発見しました。",
+      "japanese": "これらの会話は深い絆を作りました。",
+      "phraseMeaning": "これらの会話は深い絆を作りました。",
       "segments": [
         {
           "word": "that",
