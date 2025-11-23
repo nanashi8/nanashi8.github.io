@@ -1,0 +1,350 @@
+{
+  "grade": 2,
+  "totalQuestions": 32,
+  "categories": [
+    {
+      "category": "接続詞（when/if/because）",
+      "grammarPoint": "conjunction",
+      "questions": [
+        {
+          "id": "fb-g2-conj-001",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": ["When", "If", "Because", "That"],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "「～したとき」はwhenを使います。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-conj-002",
+          "japanese": "もし明日雨が降れば、私は家にいます",
+          "sentence": "____ it rains tomorrow, I will stay home.",
+          "choices": ["When", "If", "Because", "That"],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "explanation": "「もし～なら」はifを使います。",
+          "hint": "もし～なら → if"
+        },
+        {
+          "id": "fb-g2-conj-003",
+          "japanese": "私は疲れているので、寝ます",
+          "sentence": "I will sleep ____ I am tired.",
+          "choices": ["when", "if", "because", "that"],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "explanation": "「なぜなら～だから」はbecauseを使います。",
+          "hint": "なぜなら → because"
+        },
+        {
+          "id": "fb-g2-conj-004",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": ["When", "If", "Because", "That"],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "「～したとき」を表すwhenを使います。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-conj-005",
+          "japanese": "彼女は忙しいので、来られません",
+          "sentence": "She can't come ____ she is busy.",
+          "choices": ["when", "if", "because", "that"],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "explanation": "理由を表すbecauseを使います。",
+          "hint": "理由 → because"
+        },
+        {
+          "id": "fb-g2-conj-006",
+          "japanese": "もし時間があれば、手伝います",
+          "sentence": "____ I have time, I will help you.",
+          "choices": ["When", "If", "Because", "That"],
+          "correctAnswer": "If",
+          "difficulty": "intermediate",
+          "explanation": "条件を表すifを使います。",
+          "hint": "もし～なら"
+        },
+        {
+          "id": "fb-g2-conj-007",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": ["when", "if", "because", "that"],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "「～ということ」を表すthatを使います。think thatの形です。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-conj-008",
+          "japanese": "雨が降っているので、傘を持っていきなさい",
+          "sentence": "Take an umbrella ____ it is raining.",
+          "choices": ["when", "if", "because", "that"],
+          "correctAnswer": "because",
+          "difficulty": "intermediate",
+          "explanation": "理由を表すbecauseを使います。",
+          "hint": "～なので"
+        }
+      ]
+    },
+    {
+      "category": "不定詞（to + 動詞）",
+      "grammarPoint": "infinitive",
+      "questions": [
+        {
+          "id": "fb-g2-inf-001",
+          "japanese": "私は泳ぐのが好きです",
+          "sentence": "I like ____ swim.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "「～すること」を表す不定詞は to + 動詞の原形です。",
+          "hint": "～すること → to + 動詞"
+        },
+        {
+          "id": "fb-g2-inf-002",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "want to ～で「～したい」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-inf-003",
+          "japanese": "私は何か食べるものが欲しい",
+          "sentence": "I want something ____ eat.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "「～するための」という形容詞的用法の不定詞です。",
+          "hint": "～するための → to"
+        },
+        {
+          "id": "fb-g2-inf-004",
+          "japanese": "彼女は医者になりたい",
+          "sentence": "She wants ____ be a doctor.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "want to ～で願望を表します。",
+          "hint": "～になりたい"
+        },
+        {
+          "id": "fb-g2-inf-005",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "「～するための」という形容詞的用法です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-inf-006",
+          "japanese": "彼は京都を訪れたい",
+          "sentence": "He wants ____ visit Kyoto.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "want to ～で「～したい」を表します。",
+          "hint": "want to + 動詞"
+        },
+        {
+          "id": "fb-g2-inf-007",
+          "japanese": "私たちは公園で遊びに行きました",
+          "sentence": "We went to the park ____ play.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "「～するために」という目的を表す副詞的用法です。",
+          "hint": "～するために → to"
+        },
+        {
+          "id": "fb-g2-inf-008",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": ["to", "for", "of", "at"],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "want to ～の形です。",
+          "hint": "～したい"
+        }
+      ]
+    },
+    {
+      "category": "動名詞（-ing形）",
+      "grammarPoint": "gerund",
+      "questions": [
+        {
+          "id": "fb-g2-ger-001",
+          "japanese": "私は本を読むことが好きです",
+          "sentence": "I enjoy ____ books.",
+          "choices": ["read", "reading", "to read", "reads"],
+          "correctAnswer": "reading",
+          "difficulty": "intermediate",
+          "explanation": "enjoyの後は動名詞（-ing形）を使います。",
+          "hint": "enjoy + -ing"
+        },
+        {
+          "id": "fb-g2-ger-002",
+          "japanese": "彼女は歌うのが好きです",
+          "sentence": "She likes ____ songs.",
+          "choices": ["sing", "singing", "to sing", "sings"],
+          "correctAnswer": "singing",
+          "difficulty": "intermediate",
+          "explanation": "「～すること」を表す動名詞を使います。likeの後はto不定詞も可能です。",
+          "hint": "～すること → -ing"
+        },
+        {
+          "id": "fb-g2-ger-003",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": ["swim", "swimming", "to swim", "swims"],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞atの後は動名詞を使います。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-ger-004",
+          "japanese": "私たちは話すのをやめました",
+          "sentence": "We stopped ____.",
+          "choices": ["talk", "talking", "to talk", "talks"],
+          "correctAnswer": "talking",
+          "difficulty": "intermediate",
+          "explanation": "stopの後は動名詞を使います。",
+          "hint": "stop + -ing"
+        },
+        {
+          "id": "fb-g2-ger-005",
+          "japanese": "彼女は料理することを楽しみます",
+          "sentence": "She enjoys ____.",
+          "choices": ["cook", "cooking", "to cook", "cooks"],
+          "correctAnswer": "cooking",
+          "difficulty": "intermediate",
+          "explanation": "enjoyの後は必ず動名詞です。",
+          "hint": "enjoy + -ing"
+        },
+        {
+          "id": "fb-g2-ger-006",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": ["listen", "listening", "to listen", "listens"],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "likeの後は動名詞またはto不定詞が使えます。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-ger-007",
+          "japanese": "彼はサッカーをすることに興味があります",
+          "sentence": "He is interested in ____ soccer.",
+          "choices": ["play", "playing", "to play", "plays"],
+          "correctAnswer": "playing",
+          "difficulty": "intermediate",
+          "explanation": "前置詞inの後は動名詞を使います。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-ger-008",
+          "japanese": "テレビを見るのはどうですか",
+          "sentence": "How about ____ TV?",
+          "choices": ["watch", "watching", "to watch", "watches"],
+          "correctAnswer": "watching",
+          "difficulty": "intermediate",
+          "explanation": "aboutは前置詞なので、後ろは動名詞になります。",
+          "hint": "How about + -ing?"
+        }
+      ]
+    },
+    {
+      "category": "受動態（be + 過去分詞）",
+      "grammarPoint": "passive-voice",
+      "questions": [
+        {
+          "id": "fb-g2-pass-001",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」です。主語がThis bookなのでisを使います。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-pass-002",
+          "japanese": "その手紙は昨日書かれました",
+          "sentence": "The letter ____ written yesterday.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "explanation": "過去の受動態なので、be動詞の過去形wasを使います。",
+          "hint": "過去の受動態 → was/were + 過去分詞"
+        },
+        {
+          "id": "fb-g2-pass-003",
+          "japanese": "これらの写真は彼によって撮られました",
+          "sentence": "These pictures ____ taken by him.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "主語がThese pictures（複数）で過去なので、wereを使います。",
+          "hint": "複数 + 過去 → were"
+        },
+        {
+          "id": "fb-g2-pass-004",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の事実を表す受動態で、主語がEnglishなのでisを使います。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-pass-005",
+          "japanese": "その車は日本で作られました",
+          "sentence": "The car ____ made in Japan.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "explanation": "過去の受動態で、主語がThe carなのでwasを使います。",
+          "hint": "過去の受動態"
+        },
+        {
+          "id": "fb-g2-pass-006",
+          "japanese": "これらの花は彼女によって植えられました",
+          "sentence": "These flowers ____ planted by her.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "主語が複数形で過去なので、wereを使います。",
+          "hint": "複数 + 過去"
+        },
+        {
+          "id": "fb-g2-pass-007",
+          "japanese": "その歌は多くの人に歌われています",
+          "sentence": "The song ____ sung by many people.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の受動態で、主語がThe songなのでisを使います。",
+          "hint": "現在の受動態"
+        },
+        {
+          "id": "fb-g2-pass-008",
+          "japanese": "そのドアは彼によって開けられました",
+          "sentence": "The door ____ opened by him.",
+          "choices": ["is", "are", "was", "were"],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "explanation": "過去の受動態なので、wasを使います。",
+          "hint": "過去の受動態"
+        }
+      ]
+    }
+  ]
+}

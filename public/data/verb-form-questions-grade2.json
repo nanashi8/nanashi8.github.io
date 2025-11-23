@@ -1,0 +1,294 @@
+{
+  "grade": 2,
+  "totalQuestions": 32,
+  "categories": [
+    {
+      "category": "不規則動詞の過去形",
+      "grammarPoint": "irregular-past-tense",
+      "questions": [
+        {
+          "id": "vf-g2-irr-001",
+          "japanese": "私は昨日映画を見ました",
+          "sentence": "I ____ a movie yesterday.",
+          "verb": "see",
+          "choices": ["see", "saw", "seen", "seeing"],
+          "correctAnswer": "saw",
+          "difficulty": "intermediate",
+          "explanation": "seeの過去形は不規則でsawになります。",
+          "hint": "see - saw - seen"
+        },
+        {
+          "id": "vf-g2-irr-002",
+          "japanese": "彼は朝食にパンを食べました",
+          "sentence": "He ____ bread for breakfast.",
+          "verb": "eat",
+          "choices": ["eat", "eats", "ate", "eaten"],
+          "correctAnswer": "ate",
+          "difficulty": "intermediate",
+          "explanation": "eatの過去形は不規則でateになります。",
+          "hint": "eat - ate - eaten"
+        },
+        {
+          "id": "vf-g2-irr-003",
+          "japanese": "私たちは公園へ行きました",
+          "sentence": "We ____ to the park.",
+          "verb": "go",
+          "choices": ["go", "goes", "went", "gone"],
+          "correctAnswer": "went",
+          "difficulty": "intermediate",
+          "explanation": "goの過去形は不規則でwentになります。",
+          "hint": "go - went - gone"
+        },
+        {
+          "id": "vf-g2-irr-004",
+          "japanese": "彼女は手紙を書きました",
+          "sentence": "She ____ a letter.",
+          "verb": "write",
+          "choices": ["write", "writes", "wrote", "written"],
+          "correctAnswer": "wrote",
+          "difficulty": "intermediate",
+          "explanation": "writeの過去形は不規則でwroteになります。",
+          "hint": "write - wrote - written"
+        },
+        {
+          "id": "vf-g2-irr-005",
+          "japanese": "彼は本を読みました",
+          "sentence": "He ____ a book.",
+          "verb": "read",
+          "choices": ["read", "reads", "red", "reading"],
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "readの過去形はスペルは同じですが、発音が[red]になります。",
+          "hint": "read - read(発音:red) - read"
+        },
+        {
+          "id": "vf-g2-irr-006",
+          "japanese": "私は新しい車を買いました",
+          "sentence": "I ____ a new car.",
+          "verb": "buy",
+          "choices": ["buy", "buys", "bought", "buying"],
+          "correctAnswer": "bought",
+          "difficulty": "intermediate",
+          "explanation": "buyの過去形は不規則でboughtになります。",
+          "hint": "buy - bought - bought"
+        },
+        {
+          "id": "vf-g2-irr-007",
+          "japanese": "彼女は歌を歌いました",
+          "sentence": "She ____ a song.",
+          "verb": "sing",
+          "choices": ["sing", "sings", "sang", "sung"],
+          "correctAnswer": "sang",
+          "difficulty": "intermediate",
+          "explanation": "singの過去形は不規則でsangになります。",
+          "hint": "sing - sang - sung"
+        },
+        {
+          "id": "vf-g2-irr-008",
+          "japanese": "私たちはバスに乗りました",
+          "sentence": "We ____ the bus.",
+          "verb": "take",
+          "choices": ["take", "takes", "took", "taken"],
+          "correctAnswer": "took",
+          "difficulty": "intermediate",
+          "explanation": "takeの過去形は不規則でtookになります。",
+          "hint": "take - took - taken"
+        }
+      ]
+    },
+    {
+      "category": "will（未来）",
+      "grammarPoint": "future-will",
+      "questions": [
+        {
+          "id": "vf-g2-will-001",
+          "japanese": "私は明日そこへ行くつもりです",
+          "sentence": "I ____ go there tomorrow.",
+          "verb": "will",
+          "choices": ["am", "will", "do", "can"],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "explanation": "未来のことを表すにはwillを使います。",
+          "hint": "未来 → will + 動詞の原形"
+        },
+        {
+          "id": "vf-g2-will-002",
+          "japanese": "彼は手伝ってくれるでしょう",
+          "sentence": "He ____ help you.",
+          "verb": "will",
+          "choices": ["is", "will", "does", "can"],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "explanation": "未来の推量を表すにはwillを使います。",
+          "hint": "will + 動詞の原形"
+        },
+        {
+          "id": "vf-g2-will-003",
+          "japanese": "明日は雨が降るでしょう",
+          "sentence": "It ____ rain tomorrow.",
+          "verb": "will",
+          "choices": ["is", "will", "does", "was"],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "explanation": "天気の予測にもwillを使います。",
+          "hint": "未来の予測 → will"
+        },
+        {
+          "id": "vf-g2-will-004",
+          "japanese": "私たちは来週会うでしょう",
+          "sentence": "We ____ meet next week.",
+          "verb": "will",
+          "choices": ["are", "will", "do", "can"],
+          "correctAnswer": "will",
+          "difficulty": "intermediate",
+          "explanation": "next weekは未来を表すので、willを使います。",
+          "hint": "next week → will"
+        }
+      ]
+    },
+    {
+      "category": "have to（義務）",
+      "grammarPoint": "obligation-have-to",
+      "questions": [
+        {
+          "id": "vf-g2-have-001",
+          "japanese": "私は宿題をしなければなりません",
+          "sentence": "I ____ do my homework.",
+          "verb": "have to",
+          "choices": ["must", "have to", "can", "will"],
+          "correctAnswer": "have to",
+          "difficulty": "intermediate",
+          "explanation": "義務を表すにはhave toを使います。",
+          "hint": "～しなければならない → have to"
+        },
+        {
+          "id": "vf-g2-have-002",
+          "japanese": "彼は早く起きなければなりません",
+          "sentence": "He ____ get up early.",
+          "verb": "has to",
+          "choices": ["must", "has to", "can", "will"],
+          "correctAnswer": "has to",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数ではhave toがhas toになります。",
+          "hint": "三人称単数 → has to"
+        },
+        {
+          "id": "vf-g2-have-003",
+          "japanese": "私たちは急がなければなりません",
+          "sentence": "We ____ hurry.",
+          "verb": "have to",
+          "choices": ["must", "have to", "can", "will"],
+          "correctAnswer": "have to",
+          "difficulty": "intermediate",
+          "explanation": "義務・必要性を表すhave toを使います。",
+          "hint": "～しなければならない"
+        },
+        {
+          "id": "vf-g2-have-004",
+          "japanese": "彼女は薬を飲まなければなりません",
+          "sentence": "She ____ take medicine.",
+          "verb": "has to",
+          "choices": ["must", "has to", "can", "will"],
+          "correctAnswer": "has to",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形ではhas toを使います。",
+          "hint": "she → has to"
+        }
+      ]
+    },
+    {
+      "category": "比較級・最上級",
+      "grammarPoint": "comparative-superlative",
+      "questions": [
+        {
+          "id": "vf-g2-comp-001",
+          "japanese": "彼は私より背が高い",
+          "sentence": "He is ____ than me.",
+          "verb": "tall",
+          "choices": ["tall", "taller", "tallest", "more tall"],
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "2つを比較するときは-erを付けます。",
+          "hint": "～より…（比較級） → -er"
+        },
+        {
+          "id": "vf-g2-comp-002",
+          "japanese": "これはあれより大きい",
+          "sentence": "This is ____ than that.",
+          "verb": "big",
+          "choices": ["big", "biger", "bigger", "biggest"],
+          "correctAnswer": "bigger",
+          "difficulty": "intermediate",
+          "explanation": "短母音+子音字で終わる語は、子音字を重ねて-erを付けます。",
+          "hint": "big → bigger"
+        },
+        {
+          "id": "vf-g2-comp-003",
+          "japanese": "彼女はクラスで一番背が高い",
+          "sentence": "She is the ____ in her class.",
+          "verb": "tall",
+          "choices": ["tall", "taller", "tallest", "most tall"],
+          "correctAnswer": "tallest",
+          "difficulty": "intermediate",
+          "explanation": "3つ以上の中で最もを表すときは-estを付けます。",
+          "hint": "最も～（最上級） → the -est"
+        },
+        {
+          "id": "vf-g2-comp-004",
+          "japanese": "これは3つの中で一番大きい",
+          "sentence": "This is the ____ of the three.",
+          "verb": "big",
+          "choices": ["big", "bigger", "bigest", "biggest"],
+          "correctAnswer": "biggest",
+          "difficulty": "intermediate",
+          "explanation": "bigの最上級は子音字を重ねてbiggestになります。",
+          "hint": "big → biggest"
+        },
+        {
+          "id": "vf-g2-comp-005",
+          "japanese": "英語は数学より簡単です",
+          "sentence": "English is ____ than math.",
+          "verb": "easy",
+          "choices": ["easy", "easier", "easyer", "easiest"],
+          "correctAnswer": "easier",
+          "difficulty": "intermediate",
+          "explanation": "子音+yで終わる語は、yをiに変えて-erを付けます。",
+          "hint": "easy → easier"
+        },
+        {
+          "id": "vf-g2-comp-006",
+          "japanese": "これは最も重要です",
+          "sentence": "This is the ____ important.",
+          "verb": "most",
+          "choices": ["more", "most", "much", "many"],
+          "correctAnswer": "most",
+          "difficulty": "intermediate",
+          "explanation": "長い形容詞の最上級はthe most + 形容詞です。",
+          "hint": "長い語 → the most + 形容詞"
+        },
+        {
+          "id": "vf-g2-comp-007",
+          "japanese": "彼は彼女よりよく走ります",
+          "sentence": "He runs ____ than her.",
+          "verb": "better",
+          "choices": ["good", "well", "better", "best"],
+          "correctAnswer": "better",
+          "difficulty": "advanced",
+          "explanation": "wellの比較級は不規則でbetterになります。",
+          "hint": "well → better → best"
+        },
+        {
+          "id": "vf-g2-comp-008",
+          "japanese": "彼女は4人の中で一番若い",
+          "sentence": "She is the ____ of the four.",
+          "verb": "young",
+          "choices": ["young", "younger", "youngest", "most young"],
+          "correctAnswer": "youngest",
+          "difficulty": "intermediate",
+          "explanation": "youngの最上級は-estを付けてyoungestになります。",
+          "hint": "young → youngest"
+        }
+      ]
+    }
+  ]
+}

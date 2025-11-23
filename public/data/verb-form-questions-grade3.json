@@ -1,0 +1,438 @@
+{
+  "grade": 3,
+  "totalQuestions": 36,
+  "categories": [
+    {
+      "category": "現在完了（継続）",
+      "grammarPoint": "present-perfect-continuous",
+      "questions": [
+        {
+          "id": "vf-g3-ppc-001",
+          "japanese": "私は3年間ここに住んでいます",
+          "sentence": "I ____ lived here for three years.",
+          "verb": "have",
+          "choices": ["am", "have", "has", "had"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "現在完了形は「have/has + 過去分詞」です。主語がIなのでhaveを使います。",
+          "hint": "現在完了 → have/has + 過去分詞"
+        },
+        {
+          "id": "vf-g3-ppc-002",
+          "japanese": "彼は10年間英語を勉強しています",
+          "sentence": "He ____ studied English for ten years.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "had"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "三人称単数なのでhasを使います。",
+          "hint": "三人称単数 → has + 過去分詞"
+        },
+        {
+          "id": "vf-g3-ppc-003",
+          "japanese": "私たちは2時間待っています",
+          "sentence": "We ____ waited for two hours.",
+          "verb": "have",
+          "choices": ["are", "have", "has", "had"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "現在完了形で継続を表します。",
+          "hint": "現在完了（継続）"
+        },
+        {
+          "id": "vf-g3-ppc-004",
+          "japanese": "彼女は子供の頃からピアノを弾いています",
+          "sentence": "She ____ played the piano since she was a child.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "had"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "sinceと共に使う現在完了形です。三人称単数なのでhas。",
+          "hint": "since ～ → has + 過去分詞"
+        },
+        {
+          "id": "vf-g3-ppc-005",
+          "japanese": "私は朝からずっと勉強しています",
+          "sentence": "I ____ studied since this morning.",
+          "verb": "have",
+          "choices": ["am", "have", "has", "had"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "sinceを使った現在完了形です。",
+          "hint": "since ～"
+        },
+        {
+          "id": "vf-g3-ppc-006",
+          "japanese": "彼らは5年間東京に住んでいます",
+          "sentence": "They ____ lived in Tokyo for five years.",
+          "verb": "have",
+          "choices": ["are", "have", "has", "had"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "for + 期間と共に使う現在完了形です。",
+          "hint": "for + 期間"
+        }
+      ]
+    },
+    {
+      "category": "現在完了（経験）",
+      "grammarPoint": "present-perfect-experience",
+      "questions": [
+        {
+          "id": "vf-g3-ppe-001",
+          "japanese": "私は京都を訪れたことがあります",
+          "sentence": "I ____ visited Kyoto.",
+          "verb": "have",
+          "choices": ["am", "have", "has", "did"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "経験を表す現在完了形です。",
+          "hint": "～したことがある → have/has + 過去分詞"
+        },
+        {
+          "id": "vf-g3-ppe-002",
+          "japanese": "彼は一度も飛行機に乗ったことがありません",
+          "sentence": "He ____ never taken a plane.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "did"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "neverは現在完了形と共に使い、「一度も～ない」を表します。",
+          "hint": "never + 現在完了"
+        },
+        {
+          "id": "vf-g3-ppe-003",
+          "japanese": "あなたは富士山に登ったことがありますか",
+          "sentence": "____ you ever climbed Mt. Fuji?",
+          "verb": "Have",
+          "choices": ["Do", "Have", "Has", "Did"],
+          "correctAnswer": "Have",
+          "difficulty": "advanced",
+          "explanation": "経験を尋ねる疑問文はHave you ever ～?です。",
+          "hint": "Have you ever ～?"
+        },
+        {
+          "id": "vf-g3-ppe-004",
+          "japanese": "彼女は3回そこへ行ったことがあります",
+          "sentence": "She ____ been there three times.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "was"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "回数を表す語句と共に使う現在完了形です。",
+          "hint": "～回 → 現在完了"
+        },
+        {
+          "id": "vf-g3-ppe-005",
+          "japanese": "私たちは彼に一度も会ったことがありません",
+          "sentence": "We ____ never met him.",
+          "verb": "have",
+          "choices": ["are", "have", "has", "did"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "neverと共に使う現在完了形です。",
+          "hint": "never + 現在完了"
+        },
+        {
+          "id": "vf-g3-ppe-006",
+          "japanese": "あなたはこの本を読んだことがありますか",
+          "sentence": "____ you read this book?",
+          "verb": "Have",
+          "choices": ["Do", "Have", "Has", "Did"],
+          "correctAnswer": "Have",
+          "difficulty": "advanced",
+          "explanation": "経験を尋ねる現在完了の疑問文です。",
+          "hint": "Have you ～?"
+        }
+      ]
+    },
+    {
+      "category": "現在完了（完了・結果）",
+      "grammarPoint": "present-perfect-completion",
+      "questions": [
+        {
+          "id": "vf-g3-ppr-001",
+          "japanese": "私はちょうど宿題を終えたところです",
+          "sentence": "I ____ just finished my homework.",
+          "verb": "have",
+          "choices": ["am", "have", "has", "did"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "justは現在完了形と共に使い、「ちょうど～したところ」を表します。",
+          "hint": "just + 現在完了"
+        },
+        {
+          "id": "vf-g3-ppr-002",
+          "japanese": "彼はもう昼食を食べました",
+          "sentence": "He ____ already eaten lunch.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "did"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "alreadyは現在完了形と共に使い、「もう～した」を表します。",
+          "hint": "already + 現在完了"
+        },
+        {
+          "id": "vf-g3-ppr-003",
+          "japanese": "彼女はちょうど到着したところです",
+          "sentence": "She ____ just arrived.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "did"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "justを使った現在完了形です。",
+          "hint": "just + 現在完了"
+        },
+        {
+          "id": "vf-g3-ppr-004",
+          "japanese": "私は財布をなくしてしまいました",
+          "sentence": "I ____ lost my wallet.",
+          "verb": "have",
+          "choices": ["am", "have", "has", "did"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "結果を表す現在完了形です。",
+          "hint": "現在完了（結果）"
+        },
+        {
+          "id": "vf-g3-ppr-005",
+          "japanese": "彼らはもう帰ってしまいました",
+          "sentence": "They ____ already gone home.",
+          "verb": "have",
+          "choices": ["are", "have", "has", "did"],
+          "correctAnswer": "have",
+          "difficulty": "advanced",
+          "explanation": "alreadyと共に使う現在完了形です。",
+          "hint": "already"
+        },
+        {
+          "id": "vf-g3-ppr-006",
+          "japanese": "バスはちょうど出発したところです",
+          "sentence": "The bus ____ just left.",
+          "verb": "has",
+          "choices": ["is", "have", "has", "did"],
+          "correctAnswer": "has",
+          "difficulty": "advanced",
+          "explanation": "justを使った現在完了形です。主語がThe busなのでhas。",
+          "hint": "just + has"
+        }
+      ]
+    },
+    {
+      "category": "関係代名詞（who/which/that）",
+      "grammarPoint": "relative-pronoun",
+      "questions": [
+        {
+          "id": "vf-g3-rel-001",
+          "japanese": "私には京都に住んでいる友達がいます",
+          "sentence": "I have a friend ____ lives in Kyoto.",
+          "verb": "who",
+          "choices": ["who", "which", "what", "where"],
+          "correctAnswer": "who",
+          "difficulty": "advanced",
+          "explanation": "人を先行詞とする関係代名詞はwhoを使います。",
+          "hint": "人 → who"
+        },
+        {
+          "id": "vf-g3-rel-002",
+          "japanese": "これは私が買った本です",
+          "sentence": "This is the book ____ I bought.",
+          "verb": "which/that",
+          "choices": ["who", "which", "what", "where"],
+          "correctAnswer": "which",
+          "difficulty": "advanced",
+          "explanation": "物を先行詞とする関係代名詞はwhich(またはthat)を使います。",
+          "hint": "物 → which/that"
+        },
+        {
+          "id": "vf-g3-rel-003",
+          "japanese": "私は英語を話す先生を知っています",
+          "sentence": "I know a teacher ____ speaks English.",
+          "verb": "who",
+          "choices": ["who", "which", "what", "where"],
+          "correctAnswer": "who",
+          "difficulty": "advanced",
+          "explanation": "人(a teacher)を先行詞とするのでwhoを使います。",
+          "hint": "人 → who"
+        },
+        {
+          "id": "vf-g3-rel-004",
+          "japanese": "これは日本で作られた車です",
+          "sentence": "This is a car ____ was made in Japan.",
+          "verb": "which/that",
+          "choices": ["who", "which", "what", "where"],
+          "correctAnswer": "which",
+          "difficulty": "advanced",
+          "explanation": "物(a car)を先行詞とするのでwhichを使います。",
+          "hint": "物 → which"
+        },
+        {
+          "id": "vf-g3-rel-005",
+          "japanese": "彼女は歌を歌う少女です",
+          "sentence": "She is a girl ____ sings songs.",
+          "verb": "who",
+          "choices": ["who", "which", "what", "where"],
+          "correctAnswer": "who",
+          "difficulty": "advanced",
+          "explanation": "人を先行詞とする関係代名詞です。",
+          "hint": "人 → who"
+        },
+        {
+          "id": "vf-g3-rel-006",
+          "japanese": "これは古い建物です",
+          "sentence": "This is a building ____ is old.",
+          "verb": "which/that",
+          "choices": ["who", "which", "what", "where"],
+          "correctAnswer": "which",
+          "difficulty": "advanced",
+          "explanation": "物(a building)を先行詞とします。",
+          "hint": "物 → which"
+        }
+      ]
+    },
+    {
+      "category": "間接疑問文",
+      "grammarPoint": "indirect-question",
+      "questions": [
+        {
+          "id": "vf-g3-ind-001",
+          "japanese": "彼がどこに住んでいるか知っていますか",
+          "sentence": "Do you know where he ____?",
+          "verb": "lives",
+          "choices": ["live", "lives", "does live", "is live"],
+          "correctAnswer": "lives",
+          "difficulty": "advanced",
+          "explanation": "間接疑問文では疑問詞の後は平叙文の語順になります。",
+          "hint": "間接疑問文 → 疑問詞 + 主語 + 動詞"
+        },
+        {
+          "id": "vf-g3-ind-002",
+          "japanese": "彼女が何を欲しがっているか分かりますか",
+          "sentence": "Do you know what she ____?",
+          "verb": "wants",
+          "choices": ["want", "wants", "does want", "is want"],
+          "correctAnswer": "wants",
+          "difficulty": "advanced",
+          "explanation": "間接疑問文では平叙文の語順です。",
+          "hint": "what + 主語 + 動詞"
+        },
+        {
+          "id": "vf-g3-ind-003",
+          "japanese": "いつ彼が来るか教えてください",
+          "sentence": "Please tell me when he ____.",
+          "verb": "will come",
+          "choices": ["come", "comes", "will come", "is come"],
+          "correctAnswer": "will come",
+          "difficulty": "advanced",
+          "explanation": "間接疑問文で未来のことはwillを使います。",
+          "hint": "when + 主語 + will"
+        },
+        {
+          "id": "vf-g3-ind-004",
+          "japanese": "なぜ彼女が泣いているか知っていますか",
+          "sentence": "Do you know why she ____ crying?",
+          "verb": "is",
+          "choices": ["am", "is", "are", "does"],
+          "correctAnswer": "is",
+          "difficulty": "advanced",
+          "explanation": "間接疑問文でも進行形を使えます。",
+          "hint": "why + 主語 + be動詞"
+        },
+        {
+          "id": "vf-g3-ind-005",
+          "japanese": "どうやってそこへ行けばいいか教えてください",
+          "sentence": "Please tell me how I ____ get there.",
+          "verb": "can",
+          "choices": ["am", "can", "do", "will"],
+          "correctAnswer": "can",
+          "difficulty": "advanced",
+          "explanation": "「どうやって～できるか」はhow ～ canを使います。",
+          "hint": "how + 主語 + can"
+        },
+        {
+          "id": "vf-g3-ind-006",
+          "japanese": "彼が誰なのか知っていますか",
+          "sentence": "Do you know who he ____?",
+          "verb": "is",
+          "choices": ["am", "is", "are", "does"],
+          "correctAnswer": "is",
+          "difficulty": "advanced",
+          "explanation": "間接疑問文の語順です。",
+          "hint": "who + 主語 + be動詞"
+        }
+      ]
+    },
+    {
+      "category": "仮定法",
+      "grammarPoint": "subjunctive",
+      "questions": [
+        {
+          "id": "vf-g3-subj-001",
+          "japanese": "もし私が鳥なら、あなたのところへ飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly to you.",
+          "verb": "were",
+          "choices": ["am", "is", "are", "were"],
+          "correctAnswer": "were",
+          "difficulty": "advanced",
+          "explanation": "仮定法過去では、be動詞は主語に関わらずwereを使います。",
+          "hint": "仮定法 → were"
+        },
+        {
+          "id": "vf-g3-subj-002",
+          "japanese": "もしお金があれば、新しい車を買うのに",
+          "sentence": "If I ____ money, I would buy a new car.",
+          "verb": "had",
+          "choices": ["have", "has", "had", "having"],
+          "correctAnswer": "had",
+          "difficulty": "advanced",
+          "explanation": "仮定法過去では動詞の過去形を使います。",
+          "hint": "仮定法 → 過去形"
+        },
+        {
+          "id": "vf-g3-subj-003",
+          "japanese": "もし時間があれば、手伝うのに",
+          "sentence": "If I ____ time, I would help you.",
+          "verb": "had",
+          "choices": ["have", "has", "had", "having"],
+          "correctAnswer": "had",
+          "difficulty": "advanced",
+          "explanation": "現在の事実に反する仮定なので、仮定法過去を使います。",
+          "hint": "仮定法過去"
+        },
+        {
+          "id": "vf-g3-subj-004",
+          "japanese": "もし私があなたなら、そうはしないでしょう",
+          "sentence": "If I ____ you, I wouldn't do that.",
+          "verb": "were",
+          "choices": ["am", "is", "are", "were"],
+          "correctAnswer": "were",
+          "difficulty": "advanced",
+          "explanation": "If I were you（もし私があなたなら）は仮定法の定型表現です。",
+          "hint": "If I were you"
+        },
+        {
+          "id": "vf-g3-subj-005",
+          "japanese": "もし雨が降らなければ、ピクニックに行くのに",
+          "sentence": "If it ____ rain, we would go on a picnic.",
+          "verb": "didn't",
+          "choices": ["don't", "doesn't", "didn't", "isn't"],
+          "correctAnswer": "didn't",
+          "difficulty": "advanced",
+          "explanation": "仮定法過去の否定文では、didn'tを使います。",
+          "hint": "仮定法の否定 → didn't"
+        },
+        {
+          "id": "vf-g3-subj-006",
+          "japanese": "もし彼女がここにいれば、幸せなのに",
+          "sentence": "If she ____ here, I would be happy.",
+          "verb": "were",
+          "choices": ["am", "is", "are", "were"],
+          "correctAnswer": "were",
+          "difficulty": "advanced",
+          "explanation": "仮定法過去のbe動詞はwereを使います。",
+          "hint": "仮定法 → were"
+        }
+      ]
+    }
+  ]
+}
