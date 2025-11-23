@@ -1,0 +1,510 @@
+{
+  "grade": 3,
+  "totalQuestions": 48,
+  "categories": [
+    {
+      "category": "助動詞（can/could/may/might）",
+      "grammarPoint": "modal-verbs-permission",
+      "questions": [
+        {
+          "id": "fib-g3-mod1-001",
+          "japanese": "あなたは泳ぐことができますか",
+          "sentence": "____ you swim?",
+          "choices": ["Can", "Could", "May", "Should"],
+          "correctAnswer": "Can",
+          "difficulty": "advanced",
+          "explanation": "能力を尋ねる疑問文はCanを使います。",
+          "hint": "能力 → Can"
+        },
+        {
+          "id": "fib-g3-mod1-002",
+          "japanese": "窓を開けてもいいですか",
+          "sentence": "____ I open the window?",
+          "choices": ["Can", "Must", "Should", "May"],
+          "correctAnswer": "May",
+          "difficulty": "advanced",
+          "explanation": "許可を求める丁寧な表現はMayを使います。Canも使えます。",
+          "hint": "許可 → May/Can"
+        },
+        {
+          "id": "fib-g3-mod1-003",
+          "japanese": "彼は昔ピアノを弾けました",
+          "sentence": "He ____ play the piano when he was young.",
+          "choices": ["can", "could", "may", "might"],
+          "correctAnswer": "could",
+          "difficulty": "advanced",
+          "explanation": "過去の能力はcouldを使います。",
+          "hint": "過去の能力 → could"
+        },
+        {
+          "id": "fib-g3-mod1-004",
+          "japanese": "明日は雨が降るかもしれません",
+          "sentence": "It ____ rain tomorrow.",
+          "choices": ["can", "could", "may", "must"],
+          "correctAnswer": "may",
+          "difficulty": "advanced",
+          "explanation": "推量（～かもしれない）はmay/mightを使います。",
+          "hint": "推量 → may/might"
+        },
+        {
+          "id": "fib-g3-mod1-005",
+          "japanese": "ペンを借りてもいいですか",
+          "sentence": "____ I borrow your pen?",
+          "choices": ["Can", "Must", "Should", "Will"],
+          "correctAnswer": "Can",
+          "difficulty": "advanced",
+          "explanation": "許可を求める表現です。CanまたはMayを使います。",
+          "hint": "許可 → Can/May"
+        },
+        {
+          "id": "fib-g3-mod1-006",
+          "japanese": "彼女はフランス語を話せます",
+          "sentence": "She ____ speak French.",
+          "choices": ["can", "could", "may", "must"],
+          "correctAnswer": "can",
+          "difficulty": "advanced",
+          "explanation": "能力を表すcanを使います。",
+          "hint": "能力 → can"
+        },
+        {
+          "id": "fib-g3-mod1-007",
+          "japanese": "彼は今頃家にいるかもしれません",
+          "sentence": "He ____ be at home now.",
+          "choices": ["can", "could", "might", "must"],
+          "correctAnswer": "might",
+          "difficulty": "advanced",
+          "explanation": "推量を表すmightです。",
+          "hint": "推量 → might"
+        },
+        {
+          "id": "fib-g3-mod1-008",
+          "japanese": "私はその時英語を話せませんでした",
+          "sentence": "I ____ speak English at that time.",
+          "choices": ["can't", "couldn't", "may not", "mustn't"],
+          "correctAnswer": "couldn't",
+          "difficulty": "advanced",
+          "explanation": "過去の能力の否定はcouldn'tを使います。",
+          "hint": "過去の能力の否定 → couldn't"
+        },
+        {
+          "id": "fib-g3-mod1-009",
+          "japanese": "彼女は来ないかもしれません",
+          "sentence": "She ____ not come.",
+          "choices": ["can", "could", "may", "must"],
+          "correctAnswer": "may",
+          "difficulty": "advanced",
+          "explanation": "否定の推量はmay notを使います。",
+          "hint": "推量の否定 → may not"
+        },
+        {
+          "id": "fib-g3-mod1-010",
+          "japanese": "ここで写真を撮ってもいいですか",
+          "sentence": "____ I take a picture here?",
+          "choices": ["Can", "Must", "Should", "Will"],
+          "correctAnswer": "Can",
+          "difficulty": "advanced",
+          "explanation": "許可を求める表現です。",
+          "hint": "許可 → Can/May"
+        },
+        {
+          "id": "fib-g3-mod1-011",
+          "japanese": "彼はその問題を解けるかもしれません",
+          "sentence": "He ____ solve the problem.",
+          "choices": ["can", "could", "might", "must"],
+          "correctAnswer": "might",
+          "difficulty": "advanced",
+          "explanation": "推量を表すmightです。",
+          "hint": "推量 → might"
+        },
+        {
+          "id": "fib-g3-mod1-012",
+          "japanese": "私は子供の頃、速く走れました",
+          "sentence": "I ____ run fast when I was a child.",
+          "choices": ["can", "could", "may", "might"],
+          "correctAnswer": "could",
+          "difficulty": "advanced",
+          "explanation": "過去の能力はcouldを使います。",
+          "hint": "過去の能力 → could"
+        }
+      ]
+    },
+    {
+      "category": "助動詞（should/must）",
+      "grammarPoint": "modal-verbs-obligation",
+      "questions": [
+        {
+          "id": "fib-g3-mod2-001",
+          "japanese": "あなたは早く寝るべきです",
+          "sentence": "You ____ go to bed early.",
+          "choices": ["can", "may", "should", "might"],
+          "correctAnswer": "should",
+          "difficulty": "advanced",
+          "explanation": "「～すべき」という助言・忠告はshouldを使います。",
+          "hint": "～すべき → should"
+        },
+        {
+          "id": "fib-g3-mod2-002",
+          "japanese": "私たちは規則に従わなければなりません",
+          "sentence": "We ____ follow the rules.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "「～しなければならない」という義務・強制はmustを使います。",
+          "hint": "～しなければならない → must"
+        },
+        {
+          "id": "fib-g3-mod2-003",
+          "japanese": "あなたは医者に診てもらうべきです",
+          "sentence": "You ____ see a doctor.",
+          "choices": ["can", "may", "should", "might"],
+          "correctAnswer": "should",
+          "difficulty": "advanced",
+          "explanation": "助言を表すshouldです。",
+          "hint": "助言 → should"
+        },
+        {
+          "id": "fib-g3-mod2-004",
+          "japanese": "学生は宿題をしなければなりません",
+          "sentence": "Students ____ do their homework.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "義務を表すmustです。",
+          "hint": "義務 → must"
+        },
+        {
+          "id": "fib-g3-mod2-005",
+          "japanese": "ここでタバコを吸ってはいけません",
+          "sentence": "You ____ not smoke here.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "「～してはいけない」という禁止はmust notを使います。",
+          "hint": "禁止 → must not"
+        },
+        {
+          "id": "fib-g3-mod2-006",
+          "japanese": "私たちはもっと勉強すべきです",
+          "sentence": "We ____ study harder.",
+          "choices": ["can", "may", "should", "might"],
+          "correctAnswer": "should",
+          "difficulty": "advanced",
+          "explanation": "助言・忠告のshouldです。",
+          "hint": "～すべき → should"
+        },
+        {
+          "id": "fib-g3-mod2-007",
+          "japanese": "あなたは時間を守らなければなりません",
+          "sentence": "You ____ be on time.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "義務を表すmustです。",
+          "hint": "義務 → must"
+        },
+        {
+          "id": "fib-g3-mod2-008",
+          "japanese": "彼はもっと練習すべきです",
+          "sentence": "He ____ practice more.",
+          "choices": ["can", "may", "should", "might"],
+          "correctAnswer": "should",
+          "difficulty": "advanced",
+          "explanation": "助言のshouldです。",
+          "hint": "助言 → should"
+        },
+        {
+          "id": "fib-g3-mod2-009",
+          "japanese": "私たちは環境を守らなければなりません",
+          "sentence": "We ____ protect the environment.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "義務・必要性を表すmustです。",
+          "hint": "義務 → must"
+        },
+        {
+          "id": "fib-g3-mod2-010",
+          "japanese": "あなたは嘘をついてはいけません",
+          "sentence": "You ____ not tell a lie.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "禁止を表すmust notです。",
+          "hint": "禁止 → must not"
+        },
+        {
+          "id": "fib-g3-mod2-011",
+          "japanese": "あなたはもっと野菜を食べるべきです",
+          "sentence": "You ____ eat more vegetables.",
+          "choices": ["can", "may", "should", "might"],
+          "correctAnswer": "should",
+          "difficulty": "advanced",
+          "explanation": "健康への助言としてshouldを使います。",
+          "hint": "助言 → should"
+        },
+        {
+          "id": "fib-g3-mod2-012",
+          "japanese": "私たちは交通規則を守らなければなりません",
+          "sentence": "We ____ obey traffic rules.",
+          "choices": ["can", "may", "should", "must"],
+          "correctAnswer": "must",
+          "difficulty": "advanced",
+          "explanation": "義務を表すmustです。",
+          "hint": "義務 → must"
+        }
+      ]
+    },
+    {
+      "category": "分詞（現在分詞・過去分詞）",
+      "grammarPoint": "participle",
+      "questions": [
+        {
+          "id": "fib-g3-part-001",
+          "japanese": "あの走っている少年を見てください",
+          "sentence": "Look at the boy ____ over there.",
+          "choices": ["run", "runs", "running", "ran"],
+          "correctAnswer": "running",
+          "difficulty": "advanced",
+          "explanation": "名詞を修飾する現在分詞は「～している」という意味です。",
+          "hint": "現在分詞 → -ing"
+        },
+        {
+          "id": "fib-g3-part-002",
+          "japanese": "これは壊れた窓です",
+          "sentence": "This is a ____ window.",
+          "choices": ["break", "breaks", "breaking", "broken"],
+          "correctAnswer": "broken",
+          "difficulty": "advanced",
+          "explanation": "過去分詞は「～された」という受身の意味で名詞を修飾します。",
+          "hint": "過去分詞 → broken"
+        },
+        {
+          "id": "fib-g3-part-003",
+          "japanese": "私は泣いている赤ちゃんを見ました",
+          "sentence": "I saw a baby ____.",
+          "choices": ["cry", "cries", "crying", "cried"],
+          "correctAnswer": "crying",
+          "difficulty": "advanced",
+          "explanation": "現在分詞で「泣いている」と修飾します。",
+          "hint": "～している → -ing"
+        },
+        {
+          "id": "fib-g3-part-004",
+          "japanese": "英語で書かれた本",
+          "sentence": "a book ____ in English",
+          "choices": ["write", "writes", "writing", "written"],
+          "correctAnswer": "written",
+          "difficulty": "advanced",
+          "explanation": "過去分詞で「書かれた」と受身を表します。",
+          "hint": "～された → 過去分詞"
+        },
+        {
+          "id": "fib-g3-part-005",
+          "japanese": "あそこに座っている女性は私の母です",
+          "sentence": "The woman ____ over there is my mother.",
+          "choices": ["sit", "sits", "sitting", "sat"],
+          "correctAnswer": "sitting",
+          "difficulty": "advanced",
+          "explanation": "現在分詞で「座っている」と修飾します。",
+          "hint": "現在分詞 → -ing"
+        },
+        {
+          "id": "fib-g3-part-006",
+          "japanese": "これは使われた切手です",
+          "sentence": "This is a ____ stamp.",
+          "choices": ["use", "uses", "using", "used"],
+          "correctAnswer": "used",
+          "difficulty": "advanced",
+          "explanation": "過去分詞で「使われた」と修飾します。",
+          "hint": "過去分詞 → used"
+        },
+        {
+          "id": "fib-g3-part-007",
+          "japanese": "私はギターを弾いている少年を知っています",
+          "sentence": "I know the boy ____ the guitar.",
+          "choices": ["play", "plays", "playing", "played"],
+          "correctAnswer": "playing",
+          "difficulty": "advanced",
+          "explanation": "現在分詞で「弾いている」と修飾します。",
+          "hint": "～している → -ing"
+        },
+        {
+          "id": "fib-g3-part-008",
+          "japanese": "日本で作られた車",
+          "sentence": "a car ____ in Japan",
+          "choices": ["make", "makes", "making", "made"],
+          "correctAnswer": "made",
+          "difficulty": "advanced",
+          "explanation": "過去分詞で「作られた」と受身を表します。",
+          "hint": "～された → 過去分詞"
+        },
+        {
+          "id": "fib-g3-part-009",
+          "japanese": "あの眠っている猫はかわいいです",
+          "sentence": "That ____ cat is cute.",
+          "choices": ["sleep", "sleeps", "sleeping", "slept"],
+          "correctAnswer": "sleeping",
+          "difficulty": "advanced",
+          "explanation": "現在分詞で「眠っている」と修飾します。",
+          "hint": "現在分詞 → -ing"
+        },
+        {
+          "id": "fib-g3-part-010",
+          "japanese": "私は昨日買った本を読みました",
+          "sentence": "I read the book ____ yesterday.",
+          "choices": ["buy", "buys", "buying", "bought"],
+          "correctAnswer": "bought",
+          "difficulty": "advanced",
+          "explanation": "過去分詞で「買った」と修飾します。",
+          "hint": "過去分詞 → bought"
+        },
+        {
+          "id": "fib-g3-part-011",
+          "japanese": "公園で遊んでいる子供たち",
+          "sentence": "children ____ in the park",
+          "choices": ["play", "plays", "playing", "played"],
+          "correctAnswer": "playing",
+          "difficulty": "advanced",
+          "explanation": "現在分詞で「遊んでいる」と修飾します。",
+          "hint": "現在分詞 → -ing"
+        },
+        {
+          "id": "fib-g3-part-012",
+          "sentence": "This is a picture ____ by my friend.",
+          "japanese": "これは私の友達によって撮られた写真です",
+          "choices": ["take", "takes", "taking", "taken"],
+          "correctAnswer": "taken",
+          "difficulty": "advanced",
+          "explanation": "過去分詞で「撮られた」と受身を表します。",
+          "hint": "～された → 過去分詞"
+        }
+      ]
+    },
+    {
+      "category": "接続詞応用（although/unless/as soon as）",
+      "grammarPoint": "advanced-conjunctions",
+      "questions": [
+        {
+          "id": "fib-g3-conj-001",
+          "japanese": "雨だったけれども、私たちは出かけました",
+          "sentence": "____ it was rainy, we went out.",
+          "choices": ["Because", "Although", "If", "When"],
+          "correctAnswer": "Although",
+          "difficulty": "advanced",
+          "explanation": "「～だけれども」という逆接の接続詞はalthoughを使います。",
+          "hint": "～だけれども → although"
+        },
+        {
+          "id": "fib-g3-conj-002",
+          "japanese": "急がないと、遅刻しますよ",
+          "sentence": "____ you hurry, you will be late.",
+          "choices": ["If", "Unless", "Because", "When"],
+          "correctAnswer": "Unless",
+          "difficulty": "advanced",
+          "explanation": "「～しない限り」という意味のunlessを使います。",
+          "hint": "～しない限り → unless"
+        },
+        {
+          "id": "fib-g3-conj-003",
+          "japanese": "彼が到着したらすぐに、会議を始めましょう",
+          "sentence": "Let's start the meeting ____ ____ ____ he arrives.",
+          "choices": ["as soon as", "as long as", "even if", "so that"],
+          "correctAnswer": "as soon as",
+          "difficulty": "advanced",
+          "explanation": "「～するとすぐに」はas soon asを使います。",
+          "hint": "～するとすぐに → as soon as"
+        },
+        {
+          "id": "fib-g3-conj-004",
+          "japanese": "彼は忙しいけれども、いつも親切です",
+          "sentence": "____ he is busy, he is always kind.",
+          "choices": ["Because", "Although", "If", "When"],
+          "correctAnswer": "Although",
+          "difficulty": "advanced",
+          "explanation": "逆接を表すalthoughです。",
+          "hint": "～だけれども → although"
+        },
+        {
+          "id": "fib-g3-conj-005",
+          "japanese": "努力しなければ、成功できません",
+          "sentence": "____ you work hard, you can't succeed.",
+          "choices": ["If", "Unless", "Because", "When"],
+          "correctAnswer": "Unless",
+          "difficulty": "advanced",
+          "explanation": "「～しない限り」という条件を表します。",
+          "hint": "～しない限り → unless"
+        },
+        {
+          "id": "fib-g3-conj-006",
+          "japanese": "家に着いたらすぐに、電話してください",
+          "sentence": "Please call me ____ ____ ____ you get home.",
+          "choices": ["as soon as", "as long as", "even if", "so that"],
+          "correctAnswer": "as soon as",
+          "difficulty": "advanced",
+          "explanation": "「～するとすぐに」の意味です。",
+          "hint": "～するとすぐに → as soon as"
+        },
+        {
+          "id": "fib-g3-conj-007",
+          "japanese": "疲れていたけれども、彼女は働き続けました",
+          "sentence": "____ she was tired, she kept working.",
+          "choices": ["Because", "Although", "If", "When"],
+          "correctAnswer": "Although",
+          "difficulty": "advanced",
+          "explanation": "逆接のalthoughです。",
+          "hint": "～だけれども → although"
+        },
+        {
+          "id": "fib-g3-conj-008",
+          "japanese": "彼が話し終わったらすぐに、質問してください",
+          "sentence": "Ask questions ____ ____ ____ he finishes speaking.",
+          "choices": ["as soon as", "as long as", "even if", "so that"],
+          "correctAnswer": "as soon as",
+          "difficulty": "advanced",
+          "explanation": "「～するとすぐに」という時を表す接続詞です。",
+          "hint": "～するとすぐに → as soon as"
+        },
+        {
+          "id": "fib-g3-conj-009",
+          "japanese": "雨が止まない限り、出発できません",
+          "sentence": "We can't leave ____ the rain stops.",
+          "choices": ["if", "unless", "because", "when"],
+          "correctAnswer": "unless",
+          "difficulty": "advanced",
+          "explanation": "「～しない限り」という条件です。",
+          "hint": "～しない限り → unless"
+        },
+        {
+          "id": "fib-g3-conj-010",
+          "japanese": "彼は若いけれども、賢いです",
+          "sentence": "____ he is young, he is wise.",
+          "choices": ["Because", "Although", "If", "When"],
+          "correctAnswer": "Although",
+          "difficulty": "advanced",
+          "explanation": "逆接を表すalthoughです。",
+          "hint": "～だけれども → although"
+        },
+        {
+          "id": "fib-g3-conj-011",
+          "japanese": "ベルが鳴ったらすぐに、教室を出てください",
+          "sentence": "Leave the classroom ____ ____ ____ the bell rings.",
+          "choices": ["as soon as", "as long as", "even if", "so that"],
+          "correctAnswer": "as soon as",
+          "difficulty": "advanced",
+          "explanation": "「～するとすぐに」です。",
+          "hint": "～するとすぐに → as soon as"
+        },
+        {
+          "id": "fib-g3-conj-012",
+          "japanese": "一生懸命勉強しない限り、合格できません",
+          "sentence": "____ you study hard, you won't pass.",
+          "choices": ["If", "Unless", "Because", "When"],
+          "correctAnswer": "Unless",
+          "difficulty": "advanced",
+          "explanation": "「～しない限り」という否定の条件です。",
+          "hint": "～しない限り → unless"
+        }
+      ]
+    }
+  ]
+}
