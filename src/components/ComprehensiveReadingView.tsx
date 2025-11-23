@@ -147,7 +147,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   // 単語集データの読み込み
   useEffect(() => {
     // メイン辞書（CSV）の読み込み
-    fetch('/data/junior-high-entrance-words.csv')
+    fetch('/data/vocabulary/junior-high-entrance-words.csv')
       .then((res) => res.text())
       .then((csvText) => {
         const lines = csvText.split('\n');
@@ -181,7 +181,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       });
     
     // 長文読解専用辞書（JSON）の読み込み
-    fetch('/data/reading-passages-dictionary.json')
+    fetch('/data/dictionaries/reading-passages-dictionary.json')
       .then((res) => res.json())
       .then((dictData) => {
         const readingDict = new Map<string, any>();

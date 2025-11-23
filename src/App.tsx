@@ -54,6 +54,7 @@ import {
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
+import GrammarQuizView from './components/GrammarQuizView';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import './App.css';
@@ -62,7 +63,7 @@ import './App.css';
 import { migrateToIndexedDB } from './dataMigration';
 import { initStorageStrategy } from './storageManager';
 
-type Tab = 'translation' | 'spelling' | 'reading' | 'settings' | 'stats';
+type Tab = 'translation' | 'spelling' | 'reading' | 'grammar' | 'settings' | 'stats';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
@@ -291,20 +292,43 @@ function App() {
         checkLocalStorageSize();
         
         // 単語データを読み込み
-        const wordsResponse = await fetch('/data/junior-high-entrance-words.csv');
+        const wordsResponse = await fetch('/data/vocabulary/junior-high-entrance-words.csv');
         const wordsText = await wordsResponse.text();
         const wordsQuestions = parseCSV(wordsText);
         
         // 熟語データを読み込み
         let phrasesQuestions: Question[] = [];
         try {
-          const phrasesResponse = await fetch('/data/junior-high-entrance-phrases.csv');
+          const phrasesResponse = await fetch('/data/vocabulary/junior-high-entrance-phrases.csv');
           const phrasesText = await phrasesResponse.text();
           phrasesQuestions = parseCSV(phrasesText);
           console.log(`📚 高校受験英熟語を読み込みました: ${phrasesQuestions.length}個`);
         } catch (error) {
           console.warn('高校受験英熟語データの読み込みに失敗:', error);
           // 熟語データの読み込みに失敗しても続行
+        }
+        
+        // 並び替え問題・文法問題のJSONファイルを読み込んでUnit情報を取得
+        const unitTitleMap = new Map<string, string>();
+        try {
+          // 各学年の並び替え問題を読み込み
+          for (const grade of [1, 2, 3]) {
+            try {
+              const response = await fetch(`/data/sentence-ordering-grade${grade}.json`);
+              const data = await response.json();
+              if (data.units) {
+                data.units.forEach((unit: { unit: string; title: string }) => {
+                  const key = `${grade}年-${unit.unit}`;
+                  unitTitleMap.set(unit.unit, `${unit.unit}: ${unit.title}`);
+                  unitTitleMap.set(key, `${grade}年 ${unit.unit}: ${unit.title}`);
+                });
+              }
+            } catch (err) {
+              console.warn(`Grade ${grade} sentence ordering data not found:`, err);
+            }
+          }
+        } catch (error) {
+          console.warn('Unit title mapping failed:', error);
         }
         
         // 単語と熟語を結合
@@ -326,7 +350,52 @@ function App() {
           
           // 関連分野のリストを抽出
           const categories = Array.from(new Set(allQuestions.map(q => q.category || '').filter(c => c)));
-          setCategoryList(categories.sort());
+          
+          // カテゴリ名をタイトル付きに変換
+          const categoriesWithTitles = categories.map(cat => {
+            // unitTitleMapにマッピングがあれば使用
+            if (unitTitleMap.has(cat)) {
+              return unitTitleMap.get(cat)!;
+            }
+            // マッピングがない場合はそのまま
+            return cat;
+          });
+          
+          // カテゴリを学年別・学習順にソート
+          const sortedCategories = categoriesWithTitles.sort((a, b) => {
+            // 学年パターンを抽出 (例: "1年 Unit 0: ...")
+            const gradeRegex = /(\d+)年\s+Unit\s+(\d+)/i;
+            const matchA = a.match(gradeRegex);
+            const matchB = b.match(gradeRegex);
+            
+            // 両方とも学年+Unit形式の場合
+            if (matchA && matchB) {
+              const gradeA = parseInt(matchA[1], 10);
+              const gradeB = parseInt(matchB[1], 10);
+              if (gradeA !== gradeB) {
+                return gradeA - gradeB; // 学年順
+              }
+              const unitA = parseInt(matchA[2], 10);
+              const unitB = parseInt(matchB[2], 10);
+              return unitA - unitB; // ユニット順
+            }
+            
+            // Unitパターンのみ (例: "Unit 0: ...")
+            const unitRegex = /Unit\s+(\d+)/i;
+            const unitMatchA = a.match(unitRegex);
+            const unitMatchB = b.match(unitRegex);
+            
+            if (unitMatchA && unitMatchB) {
+              const numA = parseInt(unitMatchA[1], 10);
+              const numB = parseInt(unitMatchB[1], 10);
+              return numA - numB;
+            }
+            
+            // それ以外は辞書順
+            return a.localeCompare(b, 'ja');
+          });
+          
+          setCategoryList(sortedCategories);
           
           // 問題集形式で保存（後方互換性のため）
           const mainSet: QuestionSet = {
@@ -1099,6 +1168,12 @@ function App() {
           長文
         </button>
         <button
+          className={`tab-btn ${activeTab === 'grammar' ? 'active' : ''}`}
+          onClick={() => setActiveTab('grammar')}
+        >
+          文法
+        </button>
+        <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
           onClick={() => setActiveTab('stats')}
         >
@@ -1190,6 +1265,8 @@ function App() {
               }
             }}
           />
+        ) : activeTab === 'grammar' ? (
+          <GrammarQuizView />
         ) : activeTab === 'stats' ? (
           <StatsView
             questionSets={questionSets}
