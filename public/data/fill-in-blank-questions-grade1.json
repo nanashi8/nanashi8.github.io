@@ -10,80 +10,120 @@
           "id": "fb-g1-prep-time-001",
           "japanese": "私は7時に起きます",
           "sentence": "I get up ____ 7 o'clock.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "at",
           "difficulty": "beginner",
-          "explanation": "時刻の前にはatを使います。",
+          "explanation": "時刻(○時○分)を表すときはatを使います。At 7 o'clockで「7時に」という意味です。時刻はピンポイントの時点なのでatです。Onは曜日・日付、Inは月・年・季節などの長い時間に使います。Get upは「起きる」という重要な句動詞です。",
           "hint": "時刻 → at"
         },
         {
           "id": "fb-g1-prep-time-002",
           "japanese": "私は月曜日に学校へ行きます",
           "sentence": "I go to school ____ Monday.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "on",
           "difficulty": "beginner",
-          "explanation": "曜日の前にはonを使います。",
+          "explanation": "曜日を表すときはonを使います。On Mondayで「月曜日に」です。曜日は特定の日なのでonです。Atは時刻、Inは月や年に使います。Go to schoolは「学校へ行く」という基本表現です。全ての曜日(Sunday, Monday, Tuesdayなど)の前にonを使います。",
           "hint": "曜日 → on"
         },
         {
           "id": "fb-g1-prep-time-003",
           "japanese": "私は5月に生まれました",
           "sentence": "I was born ____ May.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "in",
           "difficulty": "beginner",
-          "explanation": "月の前にはinを使います。",
+          "explanation": "月を表すときはinを使います。In Mayで「5月に」です。月は比較的長い期間なのでinです。Atは時刻、Onは曜日・日付に使います。Was bornは「生まれた」という受動態の重要表現です。全ての月(January, February, Marchなど)の前にinを使います。",
           "hint": "月 → in"
         },
         {
           "id": "fb-g1-prep-time-004",
           "japanese": "彼女は朝食べます",
           "sentence": "She eats breakfast ____ the morning.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "in",
           "difficulty": "beginner",
-          "explanation": "morning/afternoon/eveningの前にはinを使います。",
+          "explanation": "Morning, afternoon, eveningの前にはinを使います。In the morningで「朝に」という意味です。時間帯を表す場合はinを使います。ただし、nightだけは例外でat nightとなります。Eat breakfastは「朝食を食べる」という表現です。",
           "hint": "morning/afternoon/evening → in"
         },
         {
           "id": "fb-g1-prep-time-005",
           "japanese": "私は夜勉強します",
           "sentence": "I study ____ night.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "at",
           "difficulty": "intermediate",
-          "explanation": "nightの前にはatを使います（例外）。",
+          "explanation": "Nightは例外的にatを使います。At nightで「夜に」です。Morning, afternoon, eveningはinを使いますが、nightだけはatです。この例外をしっかり覚えましょう。Studyは「勉強する」という動詞です。",
           "hint": "nightは例外的にat"
         },
         {
           "id": "fb-g1-prep-time-006",
           "japanese": "彼は2020年に日本に来ました",
           "sentence": "He came to Japan ____ 2020.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "in",
           "difficulty": "beginner",
-          "explanation": "年の前にはinを使います。",
+          "explanation": "年を表すときはinを使います。In 2020で「2020年に」です。年は長い期間なのでinです。月や季節と同じルールです。Came to Japanは「日本に来た」でcomeの過去形を使っています。世紀(in the 21st century)もinを使います。",
           "hint": "年 → in"
         },
         {
           "id": "fb-g1-prep-time-007",
           "japanese": "私は日曜日の朝テニスをします",
           "sentence": "I play tennis ____ Sunday morning.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "on",
           "difficulty": "intermediate",
-          "explanation": "曜日+時間帯の前にはonを使います。",
+          "explanation": "曜日+時間帯(Sunday morning, Monday afternoonなど)の前にはonを使います。曜日が含まれているため、onが優先されます。In Sunday morningとは言いません。Play tennisは「テニスをする」という意味です。曜日が付く場合は常にonです。",
           "hint": "曜日+時間帯 → on"
         },
         {
           "id": "fb-g1-prep-time-008",
           "sentence": "I was born ____ March 15th.",
           "japanese": "私は3月15日に生まれました",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "on",
           "difficulty": "beginner",
-          "explanation": "特定の日付の前にはonを使います。",
+          "explanation": "特定の日付(○月○日)を表すときはonを使います。On March 15thで「3月15日に」です。日付は特定の日なのでonです。月だけならin Marchですが、日付が付くとon March 15thとなります。Was bornは「生まれた」という受動態です。",
           "hint": "日付 → on"
         }
       ]
@@ -96,167 +136,247 @@
           "id": "fb-g1-prep-place-001",
           "japanese": "私は駅にいます",
           "sentence": "I am ____ the station.",
-          "choices": ["at", "on", "in", "to"],
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "at",
           "difficulty": "beginner",
-          "explanation": "場所の一点を表すときはatを使います。",
-          "hint": "場所の一点 → at"
+          "explanation": "駅、空港、バス停などの地点を表すときはatを使います。At the stationで「駅に(で)」という意味です。Atは特定の地点を示します。Inは建物の中や広い場所、Onは表面に使います。Stationのような交通機関の場所はatです。",
+          "hint": "地点 → at"
         },
         {
           "id": "fb-g1-prep-place-002",
-          "japanese": "本は机の上にあります",
-          "sentence": "The book is ____ the desk.",
-          "choices": ["at", "on", "in", "under"],
+          "japanese": "猫は机の上にいます",
+          "sentence": "The cat is ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "on",
           "difficulty": "beginner",
-          "explanation": "～の上にという意味でonを使います。",
-          "hint": "～の上に → on"
+          "explanation": "表面や上に接しているときはonを使います。On the deskで「机の上に」です。Onは何かの上に接触している状態を表します。Inは中、Atは地点を表すため不適切です。壁や天井に接している場合もonを使います。",
+          "hint": "表面・上 → on"
         },
         {
           "id": "fb-g1-prep-place-003",
-          "japanese": "私は東京に住んでいます",
-          "sentence": "I live ____ Tokyo.",
-          "choices": ["at", "on", "in", "to"],
+          "japanese": "彼は東京に住んでいます",
+          "sentence": "He lives ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "in",
           "difficulty": "beginner",
-          "explanation": "都市や国などの広い場所にはinを使います。",
+          "explanation": "都市、国、地域などの広い場所を表すときはinを使います。In Tokyoで「東京に」です。Inは空間の中にいることを表します。Liveは「住む」という動詞で、前置詞inと一緒に使います。In Japan(日本に)、in the world(世界に)も同じくinです。",
           "hint": "都市・国 → in"
         },
         {
           "id": "fb-g1-prep-place-004",
-          "japanese": "猫はテーブルの下にいます",
-          "sentence": "The cat is ____ the table.",
-          "choices": ["at", "on", "in", "under"],
-          "correctAnswer": "under",
+          "japanese": "本はかばんの中にあります",
+          "sentence": "The book is ____ the bag.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
           "difficulty": "beginner",
-          "explanation": "～の下にという意味でunderを使います。",
-          "hint": "～の下に → under"
+          "explanation": "何かの内部や中にあるときはinを使います。In the bagで「かばんの中に」です。Inは容器や空間の内部を表します。Onだと表面、Atだと地点になり、意味が変わってしまいます。箱やポケットの中もinです。",
+          "hint": "中 → in"
         },
         {
           "id": "fb-g1-prep-place-005",
-          "japanese": "彼女は学校にいます",
-          "sentence": "She is ____ school.",
-          "choices": ["at", "on", "in", "to"],
+          "japanese": "私は学校にいます",
+          "sentence": "I am ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "at",
           "difficulty": "beginner",
-          "explanation": "建物の場所を表すときはatを使います。",
-          "hint": "建物の場所 → at"
+          "explanation": "学校、会社、家などの場所にいるときはatを使います。At schoolで「学校に(で)」です。Atは活動している場所を表します。In schoolだと「学校という建物の中」という物理的な位置になります。At homeは「家に」という慣用表現です。",
+          "hint": "場所 → at"
         },
         {
           "id": "fb-g1-prep-place-006",
-          "japanese": "私はバッグの中に鍵を入れました",
-          "sentence": "I put the key ____ my bag.",
-          "choices": ["at", "on", "in", "to"],
-          "correctAnswer": "in",
-          "difficulty": "beginner",
-          "explanation": "～の中にという意味でinを使います。",
-          "hint": "～の中に → in"
+          "japanese": "写真は壁にかかっています",
+          "sentence": "The picture is ____ the wall.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "壁や天井などの表面に接しているときはonを使います。On the wallで「壁に」です。壁に掛かっている、貼ってある場合はonです。In the wallだと「壁の中に埋まっている」という意味になってしまいます。絵画やポスターもonです。",
+          "hint": "壁 → on"
         },
         {
           "id": "fb-g1-prep-place-007",
-          "japanese": "写真は壁にかかっています",
-          "sentence": "The picture is ____ the wall.",
-          "choices": ["at", "on", "in", "under"],
-          "correctAnswer": "on",
+          "japanese": "彼女はバス停で待っています",
+          "sentence": "She is waiting ____ the bus stop.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
           "difficulty": "beginner",
-          "explanation": "壁に接触している場合はonを使います。",
-          "hint": "壁に接触 → on"
+          "explanation": "バス停、駅、空港などの地点を表すときはatを使います。At the bus stopで「バス停で」です。特定の場所で何かをしているときはatです。Wait atは「～で待つ」という重要表現です。交通機関の乗降場所はatを使います。",
+          "hint": "バス停 → at"
         },
         {
           "id": "fb-g1-prep-place-008",
-          "japanese": "私は日本に住んでいます",
-          "sentence": "I live ____ Japan.",
-          "choices": ["at", "on", "in", "to"],
+          "japanese": "彼は公園にいます",
+          "sentence": "He is ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
           "correctAnswer": "in",
           "difficulty": "beginner",
-          "explanation": "国の中にという意味でinを使います。",
-          "hint": "国 → in"
+          "explanation": "公園、庭園などの広い場所の中にいるときはinを使います。In the parkで「公園に(で)」です。公園は広い空間なのでinです。Atだと公園という地点を示すだけで、中にいる感じが出ません。森や建物の中もinを使います。",
+          "hint": "公園 → in"
         }
       ]
     },
     {
-      "category": "その他重要前置詞",
-      "grammarPoint": "preposition-other",
+      "category": "場所の前置詞応用（under/between/beside）",
+      "grammarPoint": "preposition-place-advanced",
       "questions": [
         {
-          "id": "fb-g1-prep-other-001",
-          "japanese": "私は母と買い物に行きました",
-          "sentence": "I went shopping ____ my mother.",
-          "choices": ["with", "by", "for", "to"],
-          "correctAnswer": "with",
+          "id": "fb-g1-prep-adv-001",
+          "japanese": "犬は机の下にいます",
+          "sentence": "The dog is ____ the desk.",
+          "choices": [
+            "under",
+            "on",
+            "in",
+            "at"
+          ],
+          "correctAnswer": "under",
           "difficulty": "beginner",
-          "explanation": "「～と一緒に」という意味でwithを使います。",
-          "hint": "～と一緒に → with"
+          "explanation": "何かの下にあるときはunderを使います。Under the deskで「机の下に」です。Underは真下の位置を表します。Onは上、Inは中なので意味が異なります。橋の下(under the bridge)、木の下(under the tree)も同じくunderです。",
+          "hint": "下 → under"
         },
         {
-          "id": "fb-g1-prep-other-002",
-          "japanese": "このプレゼントはあなたのためです",
-          "sentence": "This present is ____ you.",
-          "choices": ["with", "by", "for", "to"],
-          "correctAnswer": "for",
-          "difficulty": "beginner",
-          "explanation": "「～のために」という意味でforを使います。",
-          "hint": "～のために → for"
-        },
-        {
-          "id": "fb-g1-prep-other-003",
-          "japanese": "私は電車で学校に行きます",
-          "sentence": "I go to school ____ train.",
-          "choices": ["with", "by", "for", "on"],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "交通手段を表すときはbyを使います。",
-          "hint": "交通手段 → by"
-        },
-        {
-          "id": "fb-g1-prep-other-004",
-          "japanese": "私は3年間ここに住んでいます",
-          "sentence": "I have lived here ____ three years.",
-          "choices": ["for", "during", "since", "from"],
-          "correctAnswer": "for",
+          "id": "fb-g1-prep-adv-002",
+          "japanese": "銀行は郵便局と病院の間にあります",
+          "sentence": "The bank is ____ the post office and the hospital.",
+          "choices": [
+            "between",
+            "under",
+            "on",
+            "at"
+          ],
+          "correctAnswer": "between",
           "difficulty": "intermediate",
-          "explanation": "期間を表すときはforを使います。",
-          "hint": "期間 → for"
+          "explanation": "2つのものの間にあるときはbetweenを使います。Between A and Bで「AとBの間に」という重要表現です。3つ以上の場合はamongを使います。Betweenは2つの間、Amongは3つ以上の中という使い分けを覚えましょう。",
+          "hint": "2つの間 → between"
         },
         {
-          "id": "fb-g1-prep-other-005",
-          "japanese": "私は2020年からここに住んでいます",
-          "sentence": "I have lived here ____ 2020.",
-          "choices": ["for", "during", "since", "from"],
-          "correctAnswer": "since",
+          "id": "fb-g1-prep-adv-003",
+          "japanese": "彼女は私の隣に座っています",
+          "sentence": "She is sitting ____ me.",
+          "choices": [
+            "beside",
+            "between",
+            "under",
+            "on"
+          ],
+          "correctAnswer": "beside",
           "difficulty": "intermediate",
-          "explanation": "起点（いつから）を表すときはsinceを使います。",
-          "hint": "起点（いつから） → since"
+          "explanation": "何かの隣や横にあるときはbesideを使います。Beside meで「私の隣に」です。Besideは「～のそばに」という意味です。Next toも同じ意味で使えます。Betweenは「2つの間」なので、ここでは不適切です。",
+          "hint": "隣 → beside"
         },
         {
-          "id": "fb-g1-prep-other-006",
-          "japanese": "私はペンで書きます",
-          "sentence": "I write ____ a pen.",
-          "choices": ["with", "by", "for", "in"],
-          "correctAnswer": "with",
+          "id": "fb-g1-prep-adv-004",
+          "japanese": "ボールは椅子の下にあります",
+          "sentence": "The ball is ____ the chair.",
+          "choices": [
+            "under",
+            "on",
+            "between",
+            "at"
+          ],
+          "correctAnswer": "under",
           "difficulty": "beginner",
-          "explanation": "道具を表すときはwithを使います。",
-          "hint": "道具 → with"
+          "explanation": "何かの下にあるときはunderを使います。Under the chairで「椅子の下に」です。Underは下の位置関係を表す基本前置詞です。Onは「上に」、Betweenは「間に」なので位置が異なります。テーブルの下(under the table)も同じです。",
+          "hint": "下 → under"
         },
         {
-          "id": "fb-g1-prep-other-007",
-          "japanese": "宿題を5時までに終わらせなければなりません",
-          "sentence": "I must finish my homework ____ 5 o'clock.",
-          "choices": ["by", "until", "for", "at"],
-          "correctAnswer": "by",
+          "id": "fb-g1-prep-adv-005",
+          "japanese": "図書館は学校と駅の間にあります",
+          "sentence": "The library is ____ the school and the station.",
+          "choices": [
+            "between",
+            "beside",
+            "under",
+            "on"
+          ],
+          "correctAnswer": "between",
           "difficulty": "intermediate",
-          "explanation": "期限を表すときはbyを使います。",
-          "hint": "期限（～までに） → by"
+          "explanation": "2つの場所の間にあるときはbetweenを使います。Between A and Bは位置関係を表す重要表現です。学校と駅という2つの地点の間に図書館があることを示しています。地図上の位置関係を説明するときによく使います。",
+          "hint": "AとBの間 → between A and B"
         },
         {
-          "id": "fb-g1-prep-other-008",
-          "japanese": "彼女はコーヒーなしでは生きられません",
-          "sentence": "She can't live ____ coffee.",
-          "choices": ["with", "without", "by", "for"],
-          "correctAnswer": "without",
+          "id": "fb-g1-prep-adv-006",
+          "japanese": "彼は窓のそばに立っています",
+          "sentence": "He is standing ____ the window.",
+          "choices": [
+            "beside",
+            "under",
+            "between",
+            "in"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かのそばや隣にいるときはbesideを使います。Beside the windowで「窓のそばに」です。By the windowやnear the windowも似た意味で使えます。Besideは距離が近いことを表します。Stand beside ~で「～のそばに立つ」という表現です。",
+          "hint": "そば → beside"
+        },
+        {
+          "id": "fb-g1-prep-adv-007",
+          "japanese": "猫はベッドの下で眠っています",
+          "sentence": "The cat is sleeping ____ the bed.",
+          "choices": [
+            "under",
+            "on",
+            "beside",
+            "between"
+          ],
+          "correctAnswer": "under",
           "difficulty": "beginner",
-          "explanation": "「～なしで」という意味でwithoutを使います。",
-          "hint": "～なしで → without"
+          "explanation": "何かの下にあるときはunderを使います。Under the bedで「ベッドの下で」です。Onだと「ベッドの上」、Besideだと「ベッドの横」という意味になります。Sleep underは「～の下で眠る」という表現です。",
+          "hint": "下で → under"
+        },
+        {
+          "id": "fb-g1-prep-adv-008",
+          "japanese": "スーパーは銀行の隣にあります",
+          "sentence": "The supermarket is ____ the bank.",
+          "choices": [
+            "beside",
+            "under",
+            "between",
+            "in"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かの隣にあるときはbesideを使います。Beside the bankで「銀行の隣に」です。Next toも同じ意味で、どちらも「隣に」を表します。建物の位置関係を説明するときによく使う表現です。Near(近くに)よりも距離が近いニュアンスです。",
+          "hint": "隣に → beside"
         }
       ]
     }
