@@ -2355,8 +2355,17 @@ function loadAllQuestions(): Array<{ word: string; difficulty: string }> {
 /**
  * すべての学習記録を完全にリセット
  */
-export function resetAllProgress(): void {
-  // LocalStorageの全ての関連キーを削除
+export async function resetAllProgress(): Promise<void> {
+  // 1. IndexedDBの完全削除
+  try {
+    const { deleteDatabase } = await import('./indexedDBStorage');
+    await deleteDatabase();
+    console.log('✅ IndexedDB削除完了');
+  } catch (error) {
+    console.error('IndexedDB削除エラー:', error);
+  }
+
+  // 2. LocalStorageの全ての関連キーを削除
   const keysToRemove: string[] = [];
   
   for (let i = 0; i < localStorage.length; i++) {
@@ -2387,11 +2396,14 @@ export function resetAllProgress(): void {
     }
   });
   
-  // 初期化データを保存
+  // 3. 初期化データを保存
   const initialProgress = initializeProgress();
   saveProgress(initialProgress);
   
-  console.log(`リセット完了: ${keysToRemove.length}個のキーを削除しました`);
+  console.log(`✅ リセット完了: LocalStorage ${keysToRemove.length}個のキーを削除しました`);
+  
+  // 4. ページリロード（キャッシュクリア目的）
+  window.location.reload();
 }
 
 /**
