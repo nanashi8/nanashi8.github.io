@@ -39,6 +39,7 @@
 - [22-開発環境セットアップ](./22-development-setup.md) - 開発環境の構築手順
 - [23-デプロイメント](./23-deployment.md) - GitHub Pagesへのデプロイ手順
 - [24-テスト戦略](./24-testing-strategy.md) - テスト方針とテストケース
+- [**パッセージ作成ガイドライン**](./PASSAGE_CREATION_GUIDELINES.md) - 長文パッセージの作成・編集標準仕様
 
 ### 8. 変更履歴・レポート
 - [25-変更履歴](./25-changelog.md) - 機能追加・修正の履歴
