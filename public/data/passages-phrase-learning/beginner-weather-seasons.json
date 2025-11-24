@@ -122,7 +122,21 @@
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         }
       ]
@@ -163,7 +177,21 @@
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         }
       ]
@@ -176,7 +204,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -298,17 +340,59 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "ways",
-          "meaning": "",
+          "meaning": {
+            "word": "ways",
+            "reading": "ウェイズ",
+            "meaning": "方法（複数形）",
+            "etymology": "【名詞】way（方法）の複数形",
+            "relatedWords": "way(ウェイ): 方法, method(メソッド): 方法",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "way"
+          },
           "isUnknown": false
         },
         {
@@ -473,7 +557,21 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -648,7 +746,21 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -731,7 +843,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1160,7 +1286,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1232,7 +1372,21 @@
       "segments": [
         {
           "word": "Spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1383,7 +1537,21 @@
       "segments": [
         {
           "word": "Spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1456,12 +1624,40 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1558,7 +1754,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1656,7 +1866,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1930,7 +2154,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1955,7 +2193,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2134,12 +2386,40 @@
       "segments": [
         {
           "word": "In",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2239,7 +2519,21 @@
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2273,7 +2567,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2405,12 +2713,40 @@
         },
         {
           "word": "during",
-          "meaning": "",
+          "meaning": {
+            "word": "during",
+            "reading": "デュアリング",
+            "meaning": "〜の間",
+            "etymology": "【前置詞】時間的な期間を示す",
+            "relatedWords": "while(ホワイル): 〜の間に, throughout(スルーアウト): 〜の間中",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2534,7 +2870,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2617,7 +2967,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2852,7 +3216,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -2935,12 +3313,40 @@
       "segments": [
         {
           "word": "Spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         }
       ]
@@ -2953,12 +3359,40 @@
       "segments": [
         {
           "word": "Spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3128,7 +3562,21 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3193,7 +3641,21 @@
         },
         {
           "word": "while",
-          "meaning": "",
+          "meaning": {
+            "word": "while",
+            "reading": "ホワイル",
+            "meaning": "〜の間、〜する一方で",
+            "etymology": "【接続詞】時間的な同時性・対比を示す",
+            "relatedWords": "when(ウェン): 〜する時, as(アズ): 〜するにつれて",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3658,7 +4120,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3821,7 +4297,21 @@
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": {
+            "word": "beautiful",
+            "reading": "ビューティフル",
+            "meaning": "美しい",
+            "etymology": "【形容詞】beauty（美）+ -ful",
+            "relatedWords": "beauty(ビューティー): 美, beautifully(ビューティフリー): 美しく",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "beauty"
+          },
           "isUnknown": false
         },
         {
@@ -3831,7 +4321,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4065,7 +4569,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4179,12 +4697,40 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4401,7 +4947,21 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4687,7 +5247,21 @@
         },
         {
           "word": "later",
-          "meaning": "",
+          "meaning": {
+            "word": "later",
+            "reading": "レイター",
+            "meaning": "後で、後に",
+            "etymology": "【副詞】late（遅い）の比較級",
+            "relatedWords": "late(レイト): 遅く, latest(レイテスト): 最新の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "late"
+          },
           "isUnknown": false
         },
         {
@@ -5061,7 +5635,21 @@
       "segments": [
         {
           "word": "Spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -5641,7 +6229,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6299,7 +6901,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6481,7 +7097,21 @@
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6549,7 +7179,21 @@
         },
         {
           "word": "during",
-          "meaning": "",
+          "meaning": {
+            "word": "during",
+            "reading": "デュアリング",
+            "meaning": "〜の間",
+            "etymology": "【前置詞】時間的な期間を示す",
+            "relatedWords": "while(ホワイル): 〜の間に, throughout(スルーアウト): 〜の間中",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6572,7 +7216,21 @@
       "segments": [
         {
           "word": "On",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6851,7 +7509,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6951,12 +7623,40 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -7121,7 +7821,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -7206,7 +7920,21 @@
         },
         {
           "word": "healthy",
-          "meaning": "",
+          "meaning": {
+            "word": "healthy",
+            "reading": "ヘルシー",
+            "meaning": "健康な",
+            "etymology": "【形容詞】health（健康）+ -y",
+            "relatedWords": "health(ヘルス): 健康, unhealthy(アンヘルシー): 不健康な",
+            "category": "医療・健康",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "health"
+          },
           "isUnknown": false
         },
         {
@@ -7598,7 +8326,21 @@
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -7734,7 +8476,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -7768,7 +8524,21 @@
         },
         {
           "word": "spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -7904,7 +8674,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -8478,7 +9262,21 @@
         },
         {
           "word": "just",
-          "meaning": "",
+          "meaning": {
+            "word": "just",
+            "reading": "ジャスト",
+            "meaning": "ちょうど、ただ",
+            "etymology": "【副詞】強調・限定を示す",
+            "relatedWords": "only(オンリー): ただ〜だけ, merely(メアリー): 単に",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -8637,7 +9435,21 @@
         },
         {
           "word": "up",
-          "meaning": "",
+          "meaning": {
+            "word": "up",
+            "reading": "アップ",
+            "meaning": "上へ、上に",
+            "etymology": "【副詞/前置詞】上方向を示す",
+            "relatedWords": "down(ダウン): 下へ, upward(アップワード): 上向きに",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -8804,7 +9616,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -9020,7 +9846,21 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -9166,7 +10006,21 @@
         },
         {
           "word": "during",
-          "meaning": "",
+          "meaning": {
+            "word": "during",
+            "reading": "デュアリング",
+            "meaning": "〜の間",
+            "etymology": "【前置詞】時間的な期間を示す",
+            "relatedWords": "while(ホワイル): 〜の間に, throughout(スルーアウト): 〜の間中",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -9373,7 +10227,21 @@
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -9383,7 +10251,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -9521,7 +10403,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -9793,7 +10689,21 @@
       "segments": [
         {
           "word": "During",
-          "meaning": "",
+          "meaning": {
+            "word": "during",
+            "reading": "デュアリング",
+            "meaning": "〜の間",
+            "etymology": "【前置詞】時間的な期間を示す",
+            "relatedWords": "while(ホワイル): 〜の間に, throughout(スルーアウト): 〜の間中",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -10091,7 +11001,21 @@
         },
         {
           "word": "up",
-          "meaning": "",
+          "meaning": {
+            "word": "up",
+            "reading": "アップ",
+            "meaning": "上へ、上に",
+            "etymology": "【副詞/前置詞】上方向を示す",
+            "relatedWords": "down(ダウン): 下へ, upward(アップワード): 上向きに",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -10109,7 +11033,21 @@
       "segments": [
         {
           "word": "Farmers",
-          "meaning": "",
+          "meaning": {
+            "word": "farmers",
+            "reading": "ファーマーズ",
+            "meaning": "農家（複数形）",
+            "etymology": "【名詞】farmer（農家）の複数形",
+            "relatedWords": "farmer(ファーマー): 農家, farm(ファーム): 農場, farming(ファーミング): 農業",
+            "category": "職業",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "farmer"
+          },
           "isUnknown": false
         },
         {
@@ -10326,7 +11264,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -10451,7 +11403,21 @@
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -10487,7 +11453,21 @@
         },
         {
           "word": "around",
-          "meaning": "",
+          "meaning": {
+            "word": "around",
+            "reading": "アラウンド",
+            "meaning": "〜の周りに、約",
+            "etymology": "【前置詞/副詞】周囲・近似を示す",
+            "relatedWords": "round(ラウンド): 〜の周りに, about(アバウト): 約",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -10536,7 +11516,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -10632,7 +11626,21 @@
         },
         {
           "word": "around",
-          "meaning": "",
+          "meaning": {
+            "word": "around",
+            "reading": "アラウンド",
+            "meaning": "〜の周りに、約",
+            "etymology": "【前置詞/副詞】周囲・近似を示す",
+            "relatedWords": "round(ラウンド): 〜の周りに, about(アバウト): 約",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -10652,7 +11660,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -10866,7 +11888,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -11062,7 +12098,21 @@
         },
         {
           "word": "careful",
-          "meaning": "",
+          "meaning": {
+            "word": "careful",
+            "reading": "ケアフル",
+            "meaning": "注意深い",
+            "etymology": "【形容詞】care（注意）+ -ful",
+            "relatedWords": "care(ケア): 注意, carefully(ケアフリー): 注意深く, careless(ケアレス): 不注意な",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "care"
+          },
           "isUnknown": false
         },
         {
@@ -11101,7 +12151,21 @@
         },
         {
           "word": "too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -11546,12 +12610,40 @@
       "segments": [
         {
           "word": "On",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -11915,7 +13007,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12093,7 +13199,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12126,7 +13246,21 @@
         },
         {
           "word": "even",
-          "meaning": "",
+          "meaning": {
+            "word": "even",
+            "reading": "イーブン",
+            "meaning": "〜でさえ、さらに",
+            "etymology": "【副詞】強調を示す",
+            "relatedWords": "also(オールソー): また, too(トゥー): 〜も",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12395,7 +13529,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12496,7 +13644,21 @@
       "segments": [
         {
           "word": "Autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12613,7 +13775,21 @@
       "segments": [
         {
           "word": "Autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12809,7 +13985,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -12835,7 +14025,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -13092,7 +14296,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -13345,7 +14563,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -13364,7 +14596,21 @@
       "segments": [
         {
           "word": "Autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -13479,7 +14725,21 @@
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": {
+            "word": "beautiful",
+            "reading": "ビューティフル",
+            "meaning": "美しい",
+            "etymology": "【形容詞】beauty（美）+ -ful",
+            "relatedWords": "beauty(ビューティー): 美, beautifully(ビューティフリー): 美しく",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "beauty"
+          },
           "isUnknown": false
         },
         {
@@ -13574,7 +14834,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -13690,7 +14964,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -14038,7 +15326,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -14634,7 +15936,21 @@
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": {
+            "word": "beautiful",
+            "reading": "ビューティフル",
+            "meaning": "美しい",
+            "etymology": "【形容詞】beauty（美）+ -ful",
+            "relatedWords": "beauty(ビューティー): 美, beautifully(ビューティフリー): 美しく",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "beauty"
+          },
           "isUnknown": false
         },
         {
@@ -14735,12 +16051,40 @@
       "segments": [
         {
           "word": "Autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         }
       ]
@@ -14787,17 +16131,59 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -14865,7 +16251,21 @@
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -14955,7 +16355,21 @@
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -15038,7 +16452,21 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -15254,7 +16682,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -15370,7 +16812,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -15528,7 +16984,21 @@
         },
         {
           "word": "longer",
-          "meaning": "",
+          "meaning": {
+            "word": "longer",
+            "reading": "ロンガー",
+            "meaning": "より長い",
+            "etymology": "【形容詞】long（長い）の比較級",
+            "relatedWords": "long(ロング): 長い, longest(ロンゲスト): 最も長い, (比較級)long(ロング):長い(原級), longer(ロンガー):より長い(比較級), longest(ロンゲスト):最も長い(最上級)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "long"
+          },
           "isUnknown": false
         },
         {
@@ -15636,7 +17106,21 @@
         },
         {
           "word": "later",
-          "meaning": "",
+          "meaning": {
+            "word": "later",
+            "reading": "レイター",
+            "meaning": "後で、後に",
+            "etymology": "【副詞】late（遅い）の比較級",
+            "relatedWords": "late(レイト): 遅く, latest(レイテスト): 最新の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "late"
+          },
           "isUnknown": false
         },
         {
@@ -15729,7 +17213,21 @@
         },
         {
           "word": "autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -15766,7 +17264,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -16555,7 +18067,21 @@
       "segments": [
         {
           "word": "Autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -16789,7 +18315,21 @@
         },
         {
           "word": "off",
-          "meaning": "",
+          "meaning": {
+            "word": "off",
+            "reading": "オフ",
+            "meaning": "離れて、オフ",
+            "etymology": "【副詞/前置詞】離脱や分離を示す",
+            "relatedWords": "on(オン): 上に、off and on(オフアンドオン): 断続的に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -16917,7 +18457,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -16927,7 +18481,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -17323,7 +18891,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -17372,7 +18954,21 @@
         },
         {
           "word": "autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -18104,7 +19700,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -18234,7 +19844,21 @@
       "segments": [
         {
           "word": "Winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -18273,7 +19897,21 @@
         },
         {
           "word": "Cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -18306,7 +19944,21 @@
       "segments": [
         {
           "word": "Winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -18695,12 +20347,40 @@
       "segments": [
         {
           "word": "In",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -18944,7 +20624,21 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -19163,12 +20857,40 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -19386,7 +21108,21 @@
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -19613,7 +21349,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -19643,7 +21393,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -19833,12 +21597,40 @@
       "segments": [
         {
           "word": "Winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -19876,12 +21668,40 @@
       "segments": [
         {
           "word": "Winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -20072,7 +21892,21 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -20351,7 +22185,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -20436,12 +22284,40 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -20470,7 +22346,21 @@
         },
         {
           "word": "healthy",
-          "meaning": "",
+          "meaning": {
+            "word": "healthy",
+            "reading": "ヘルシー",
+            "meaning": "健康な",
+            "etymology": "【形容詞】health（健康）+ -y",
+            "relatedWords": "health(ヘルス): 健康, unhealthy(アンヘルシー): 不健康な",
+            "category": "医療・健康",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "health"
+          },
           "isUnknown": false
         },
         {
@@ -20694,7 +22584,21 @@
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": {
+            "word": "beautiful",
+            "reading": "ビューティフル",
+            "meaning": "美しい",
+            "etymology": "【形容詞】beauty（美）+ -ful",
+            "relatedWords": "beauty(ビューティー): 美, beautifully(ビューティフリー): 美しく",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "beauty"
+          },
           "isUnknown": false
         },
         {
@@ -20764,7 +22668,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -20894,7 +22812,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21131,7 +23063,21 @@
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21257,7 +23203,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21330,7 +23290,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21398,17 +23372,59 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21655,7 +23671,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21799,7 +23829,21 @@
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": {
+            "word": "beautiful",
+            "reading": "ビューティフル",
+            "meaning": "美しい",
+            "etymology": "【形容詞】beauty（美）+ -ful",
+            "relatedWords": "beauty(ビューティー): 美, beautifully(ビューティフリー): 美しく",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "beauty"
+          },
           "isUnknown": false
         },
         {
@@ -21831,7 +23875,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -21932,12 +23990,40 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -22175,12 +24261,40 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -22408,7 +24522,21 @@
       "segments": [
         {
           "word": "During",
-          "meaning": "",
+          "meaning": {
+            "word": "during",
+            "reading": "デュアリング",
+            "meaning": "〜の間",
+            "etymology": "【前置詞】時間的な期間を示す",
+            "relatedWords": "while(ホワイル): 〜の間に, throughout(スルーアウト): 〜の間中",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -22552,7 +24680,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -22582,7 +24724,21 @@
         },
         {
           "word": "anything",
-          "meaning": "",
+          "meaning": {
+            "word": "anything",
+            "reading": "エニシング",
+            "meaning": "何でも",
+            "etymology": "【代名詞】any（どんな）+ thing（もの）",
+            "relatedWords": "something(サムシング): 何か, nothing(ナシング): 何も〜ない, everything(エブリシング): すべて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -22821,7 +24977,21 @@
         },
         {
           "word": "during",
-          "meaning": "",
+          "meaning": {
+            "word": "during",
+            "reading": "デュアリング",
+            "meaning": "〜の間",
+            "etymology": "【前置詞】時間的な期間を示す",
+            "relatedWords": "while(ホワイル): 〜の間に, throughout(スルーアウト): 〜の間中",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -22899,7 +25069,21 @@
       "segments": [
         {
           "word": "Winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -23176,7 +25360,21 @@
       "segments": [
         {
           "word": "In",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -23626,7 +25824,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -23884,7 +26096,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -23936,7 +26162,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24145,7 +26385,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24184,7 +26438,21 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24378,7 +26646,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24401,7 +26683,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24650,7 +26946,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24790,7 +27100,21 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24800,7 +27124,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -24965,7 +27303,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -25449,7 +27801,21 @@
         },
         {
           "word": "seem",
-          "meaning": "",
+          "meaning": {
+            "word": "seem",
+            "reading": "シーム",
+            "meaning": "〜のように見える",
+            "etymology": "【動詞】外見や印象を示す",
+            "relatedWords": "seems(シームズ): 〜のように見える（三単現）, seemed(シームド): 〜のように見えた, seemingly(シーミングリー): 一見",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -25459,7 +27825,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -25498,7 +27878,21 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -25533,7 +27927,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -25581,7 +27989,21 @@
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -25726,7 +28148,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -26033,12 +28469,40 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -26144,7 +28608,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -26236,7 +28714,21 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -26380,7 +28872,21 @@
         },
         {
           "word": "severe",
-          "meaning": "",
+          "meaning": {
+            "word": "severe",
+            "reading": "シビア",
+            "meaning": "深刻な、厳しい",
+            "etymology": "【形容詞】程度が激しい",
+            "relatedWords": "severely(シビアリー): 深刻に, severity(シベリティ): 深刻さ",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -26841,7 +29347,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -26973,7 +29493,21 @@
         },
         {
           "word": "buildings",
-          "meaning": "",
+          "meaning": {
+            "word": "buildings",
+            "reading": "ビルディングズ",
+            "meaning": "建物（複数形）",
+            "etymology": "【名詞】building（建物）の複数形",
+            "relatedWords": "building(ビルディング): 建物, build(ビルド): 建てる, builder(ビルダー): 建設者",
+            "category": "場所",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "building"
+          },
           "isUnknown": false
         },
         {
@@ -27120,7 +29654,21 @@
         },
         {
           "word": "very",
-          "meaning": "",
+          "meaning": {
+            "word": "very",
+            "reading": "ベリー",
+            "meaning": "とても",
+            "etymology": "【副詞】程度を強調",
+            "relatedWords": "quite(クワイト): かなり, extremely(エクストリームリー): 極めて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -27256,7 +29804,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -27281,7 +29843,21 @@
         },
         {
           "word": "areas",
-          "meaning": "",
+          "meaning": {
+            "word": "areas",
+            "reading": "エリアズ",
+            "meaning": "地域、領域（複数形）",
+            "etymology": "【名詞】area（地域）の複数形",
+            "relatedWords": "area(エリア): 地域, regional(リージョナル): 地域の",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "area"
+          },
           "isUnknown": false
         },
         {
@@ -27582,7 +30158,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -27737,7 +30327,21 @@
         },
         {
           "word": "winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -27769,7 +30373,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -28011,7 +30629,21 @@
         },
         {
           "word": "too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -28046,7 +30678,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -28072,7 +30718,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -28309,7 +30969,21 @@
         },
         {
           "word": "too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -28803,7 +31477,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -28857,7 +31545,21 @@
         },
         {
           "word": "scientists",
-          "meaning": "",
+          "meaning": {
+            "word": "scientists",
+            "reading": "サイエンティスツ",
+            "meaning": "科学者（複数形）",
+            "etymology": "【名詞】scientist（科学者）の複数形",
+            "relatedWords": "scientist(サイエンティスト): 科学者, science(サイエンス): 科学, scientific(サイエンティフィック): 科学的な",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "scientist"
+          },
           "isUnknown": false
         },
         {
@@ -28952,7 +31654,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -29059,12 +31775,40 @@
         },
         {
           "word": "equipment",
-          "meaning": "",
+          "meaning": {
+            "word": "equipment",
+            "reading": "イクイップメント",
+            "meaning": "設備、装備",
+            "etymology": "【名詞】equip（装備する）+ -ment",
+            "relatedWords": "equip(イクイップ): 装備する, equipped(イクイップト): 装備された",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "equip"
+          },
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -29220,7 +31964,21 @@
         },
         {
           "word": "pressure",
-          "meaning": "",
+          "meaning": {
+            "word": "pressure",
+            "reading": "プレッシャー",
+            "meaning": "圧力、プレッシャー",
+            "etymology": "【名詞】押す力や精神的負担",
+            "relatedWords": "press(プレス): 押す, pressurize(プレッシャライズ): 加圧する",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "press"
+          },
           "isUnknown": false
         },
         {
@@ -29388,7 +32146,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -29445,7 +32217,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -29598,12 +32384,40 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -29613,7 +32427,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -30275,7 +33103,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -30688,7 +33530,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -30857,7 +33713,21 @@
         },
         {
           "word": "scientists",
-          "meaning": "",
+          "meaning": {
+            "word": "scientists",
+            "reading": "サイエンティスツ",
+            "meaning": "科学者（複数形）",
+            "etymology": "【名詞】scientist（科学者）の複数形",
+            "relatedWords": "scientist(サイエンティスト): 科学者, science(サイエンス): 科学, scientific(サイエンティフィック): 科学的な",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "scientist"
+          },
           "isUnknown": false
         },
         {
@@ -30913,7 +33783,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31056,7 +33940,21 @@
         },
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31128,7 +34026,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31299,7 +34211,21 @@
       "segments": [
         {
           "word": "On",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31521,7 +34447,21 @@
       "segments": [
         {
           "word": "On",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31717,17 +34657,59 @@
       "segments": [
         {
           "word": "In",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31776,17 +34758,59 @@
         },
         {
           "word": "up",
-          "meaning": "",
+          "meaning": {
+            "word": "up",
+            "reading": "アップ",
+            "meaning": "上へ、上に",
+            "etymology": "【副詞/前置詞】上方向を示す",
+            "relatedWords": "down(ダウン): 下へ, upward(アップワード): 上向きに",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -31827,7 +34851,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -32047,7 +35085,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -32073,7 +35125,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -32277,7 +35343,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -32626,12 +35706,40 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -32680,7 +35788,21 @@
       "segments": [
         {
           "word": "Farmers",
-          "meaning": "",
+          "meaning": {
+            "word": "farmers",
+            "reading": "ファーマーズ",
+            "meaning": "農家（複数形）",
+            "etymology": "【名詞】farmer（農家）の複数形",
+            "relatedWords": "farmer(ファーマー): 農家, farm(ファーム): 農場, farming(ファーミング): 農業",
+            "category": "職業",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "farmer"
+          },
           "isUnknown": false
         },
         {
@@ -32730,12 +35852,40 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -32903,7 +36053,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33035,7 +36199,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33076,7 +36254,21 @@
       "segments": [
         {
           "word": "Too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33111,7 +36303,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33218,12 +36424,40 @@
         },
         {
           "word": "while",
-          "meaning": "",
+          "meaning": {
+            "word": "while",
+            "reading": "ホワイル",
+            "meaning": "〜の間、〜する一方で",
+            "etymology": "【接続詞】時間的な同時性・対比を示す",
+            "relatedWords": "when(ウェン): 〜する時, as(アズ): 〜するにつれて",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33248,7 +36482,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33358,7 +36606,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33662,7 +36924,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33931,7 +37207,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -33962,12 +37252,40 @@
         },
         {
           "word": "warm",
-          "meaning": "",
+          "meaning": {
+            "word": "warm",
+            "reading": "ウォーム",
+            "meaning": "暖かい",
+            "etymology": "【形容詞】適度に高い温度",
+            "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34077,12 +37395,40 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34264,7 +37610,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34373,7 +37733,21 @@
         },
         {
           "word": "too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34414,7 +37788,21 @@
         },
         {
           "word": "cold",
-          "meaning": "",
+          "meaning": {
+            "word": "cold",
+            "reading": "コウルド",
+            "meaning": "寒い、冷たい",
+            "etymology": "【形容詞】低温の状態",
+            "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34433,7 +37821,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34526,7 +37928,21 @@
         },
         {
           "word": "scientists",
-          "meaning": "",
+          "meaning": {
+            "word": "scientists",
+            "reading": "サイエンティスツ",
+            "meaning": "科学者（複数形）",
+            "etymology": "【名詞】scientist（科学者）の複数形",
+            "relatedWords": "scientist(サイエンティスト): 科学者, science(サイエンス): 科学, scientific(サイエンティフィック): 科学的な",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "scientist"
+          },
           "isUnknown": false
         },
         {
@@ -34582,7 +37998,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34772,7 +38202,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -34894,7 +38338,21 @@
         },
         {
           "word": "pressure",
-          "meaning": "",
+          "meaning": {
+            "word": "pressure",
+            "reading": "プレッシャー",
+            "meaning": "圧力、プレッシャー",
+            "etymology": "【名詞】押す力や精神的負担",
+            "relatedWords": "press(プレス): 押す, pressurize(プレッシャライズ): 加圧する",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "press"
+          },
           "isUnknown": false
         },
         {
@@ -35091,7 +38549,21 @@
         },
         {
           "word": "showing",
-          "meaning": "",
+          "meaning": {
+            "word": "showing",
+            "reading": "ショウイング",
+            "meaning": "見せている",
+            "etymology": "【動詞】show（見せる）の現在分詞形",
+            "relatedWords": "show(ショウ): 見せる, showed(ショウド): 見せた, shown(ショウン): 見せられた",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "show"
+          },
           "isUnknown": false
         },
         {
@@ -35275,7 +38747,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -35368,12 +38854,40 @@
         },
         {
           "word": "recent",
-          "meaning": "",
+          "meaning": {
+            "word": "recent",
+            "reading": "リーセント",
+            "meaning": "最近の",
+            "etymology": "【形容詞】近い過去の",
+            "relatedWords": "recently(リーセントリー): 最近, recency(リーセンシー): 最近であること",
+            "category": "時間",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "decades",
-          "meaning": "",
+          "meaning": {
+            "word": "decades",
+            "reading": "デケイズ",
+            "meaning": "数十年（複数形）",
+            "etymology": "【名詞】decade（10年）の複数形",
+            "relatedWords": "decade(デケイド): 10年, century(センチュリー): 100年",
+            "category": "時間",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "decade"
+          },
           "isUnknown": false
         },
         {
@@ -35473,7 +38987,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -35483,7 +39011,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -35540,7 +39082,21 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -35615,7 +39171,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -35685,7 +39255,21 @@
         },
         {
           "word": "beyond",
-          "meaning": "",
+          "meaning": {
+            "word": "beyond",
+            "reading": "ビヨンド",
+            "meaning": "〜を超えて",
+            "etymology": "【前置詞/副詞】限界や境界を越えて",
+            "relatedWords": "above(アバブ): 〜の上に, over(オーバー): 〜の上を越えて",
+            "category": "言語基本",
+            "difficulty": "上級",
+            "levels": [
+              "上級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -35839,7 +39423,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -36074,7 +39672,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -36210,7 +39822,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -36334,7 +39960,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -36489,7 +40129,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -36738,7 +40392,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37021,12 +40689,40 @@
         },
         {
           "word": "severe",
-          "meaning": "",
+          "meaning": {
+            "word": "severe",
+            "reading": "シビア",
+            "meaning": "深刻な、厳しい",
+            "etymology": "【形容詞】程度が激しい",
+            "relatedWords": "severely(シビアリー): 深刻に, severity(シベリティ): 深刻さ",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37044,7 +40740,21 @@
       "segments": [
         {
           "word": "Farmers",
-          "meaning": "",
+          "meaning": {
+            "word": "farmers",
+            "reading": "ファーマーズ",
+            "meaning": "農家（複数形）",
+            "etymology": "【名詞】farmer（農家）の複数形",
+            "relatedWords": "farmer(ファーマー): 農家, farm(ファーム): 農場, farming(ファーミング): 農業",
+            "category": "職業",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "farmer"
+          },
           "isUnknown": false
         },
         {
@@ -37077,7 +40787,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37136,7 +40860,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37298,7 +41036,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37326,7 +41078,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37502,7 +41268,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37557,7 +41337,21 @@
       "segments": [
         {
           "word": "Weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37585,7 +41379,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -37816,7 +41624,21 @@
         },
         {
           "word": "rain",
-          "meaning": "",
+          "meaning": {
+            "word": "rain",
+            "reading": "レイン",
+            "meaning": "雨",
+            "etymology": "【名詞/動詞】降水",
+            "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -38320,7 +42142,21 @@
       "segments": [
         {
           "word": "Scientists",
-          "meaning": "",
+          "meaning": {
+            "word": "scientists",
+            "reading": "サイエンティスツ",
+            "meaning": "科学者（複数形）",
+            "etymology": "【名詞】scientist（科学者）の複数形",
+            "relatedWords": "scientist(サイエンティスト): 科学者, science(サイエンス): 科学, scientific(サイエンティフィック): 科学的な",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "scientist"
+          },
           "isUnknown": false
         },
         {
@@ -38358,7 +42194,21 @@
         },
         {
           "word": "noticed",
-          "meaning": "",
+          "meaning": {
+            "word": "noticed",
+            "reading": "ノーティスド",
+            "meaning": "気づいた",
+            "etymology": "【動詞】notice（気づく）の過去形・過去分詞",
+            "relatedWords": "notice(ノーティス): 気づく・通知, noticeable(ノーティサブル): 目立つ, (動詞活用)notice(ノーティス):気づく(原形), noticed(ノーティスド):気づいた(過去形), noticed(ノーティスド):気づかれた(過去分詞形), noticing(ノーティシング):気づくこと(現在分詞形), notices(ノーティシズ):気づく(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "notice"
+          },
           "isUnknown": false
         },
         {
@@ -38599,7 +42449,21 @@
         },
         {
           "word": "around",
-          "meaning": "",
+          "meaning": {
+            "word": "around",
+            "reading": "アラウンド",
+            "meaning": "〜の周りに、約",
+            "etymology": "【前置詞/副詞】周囲・近似を示す",
+            "relatedWords": "round(ラウンド): 〜の周りに, about(アバウト): 約",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -38638,7 +42502,21 @@
         },
         {
           "word": "world",
-          "meaning": "",
+          "meaning": {
+            "word": "world",
+            "reading": "ワールド",
+            "meaning": "世界",
+            "etymology": "【名詞】地球・全世界を示す",
+            "relatedWords": "worldwide(ワールドワイド): 世界中の, global(グローバル): 地球規模の",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -38826,7 +42704,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -38979,7 +42871,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -39096,7 +43002,21 @@
         },
         {
           "word": "severe",
-          "meaning": "",
+          "meaning": {
+            "word": "severe",
+            "reading": "シビア",
+            "meaning": "深刻な、厳しい",
+            "etymology": "【形容詞】程度が激しい",
+            "relatedWords": "severely(シビアリー): 深刻に, severity(シベリティ): 深刻さ",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -39243,7 +43163,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -39282,12 +43216,40 @@
       "segments": [
         {
           "word": "While",
-          "meaning": "",
+          "meaning": {
+            "word": "while",
+            "reading": "ホワイル",
+            "meaning": "〜の間、〜する一方で",
+            "etymology": "【接続詞】時間的な同時性・対比を示す",
+            "relatedWords": "when(ウェン): 〜する時, as(アズ): 〜するにつれて",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -39409,7 +43371,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -39519,7 +43495,21 @@
         },
         {
           "word": "decades",
-          "meaning": "",
+          "meaning": {
+            "word": "decades",
+            "reading": "デケイズ",
+            "meaning": "数十年（複数形）",
+            "etymology": "【名詞】decade（10年）の複数形",
+            "relatedWords": "decade(デケイド): 10年, century(センチュリー): 100年",
+            "category": "時間",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "decade"
+          },
           "isUnknown": false
         },
         {
@@ -39998,7 +43988,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -40684,7 +44688,21 @@
         },
         {
           "word": "while",
-          "meaning": "",
+          "meaning": {
+            "word": "while",
+            "reading": "ホワイル",
+            "meaning": "〜の間、〜する一方で",
+            "etymology": "【接続詞】時間的な同時性・対比を示す",
+            "relatedWords": "when(ウェン): 〜する時, as(アズ): 〜するにつれて",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -40928,7 +44946,21 @@
         },
         {
           "word": "severe",
-          "meaning": "",
+          "meaning": {
+            "word": "severe",
+            "reading": "シビア",
+            "meaning": "深刻な、厳しい",
+            "etymology": "【形容詞】程度が激しい",
+            "relatedWords": "severely(シビアリー): 深刻に, severity(シベリティ): 深刻さ",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -41004,7 +45036,21 @@
         },
         {
           "word": "impact",
-          "meaning": "",
+          "meaning": {
+            "word": "impact",
+            "reading": "インパクト",
+            "meaning": "影響、衝撃",
+            "etymology": "【名詞/動詞】強い影響や効果",
+            "relatedWords": "affect(アフェクト): 影響する, effect(エフェクト): 効果",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -41092,7 +45138,21 @@
         },
         {
           "word": "societies",
-          "meaning": "",
+          "meaning": {
+            "word": "societies",
+            "reading": "ソサエティーズ",
+            "meaning": "社会（複数形）",
+            "etymology": "【名詞】society（社会）の複数形",
+            "relatedWords": "society(ソサエティ): 社会, social(ソーシャル): 社会の",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "society"
+          },
           "isUnknown": false
         },
         {
@@ -41164,7 +45224,21 @@
         },
         {
           "word": "animal",
-          "meaning": "",
+          "meaning": {
+            "word": "animal",
+            "reading": "アニマル",
+            "meaning": "動物",
+            "etymology": "【名詞】生き物",
+            "relatedWords": "animals(アニマルズ): 動物（複数）, wildlife(ワイルドライフ): 野生生物",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -41226,7 +45300,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -41236,7 +45324,21 @@
         },
         {
           "word": "areas",
-          "meaning": "",
+          "meaning": {
+            "word": "areas",
+            "reading": "エリアズ",
+            "meaning": "地域、領域（複数形）",
+            "etymology": "【名詞】area（地域）の複数形",
+            "relatedWords": "area(エリア): 地域, regional(リージョナル): 地域の",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "area"
+          },
           "isUnknown": false
         },
         {
@@ -41296,7 +45398,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -41859,7 +45975,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -41963,7 +46093,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -42138,7 +46282,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -42178,12 +46336,40 @@
       "segments": [
         {
           "word": "While",
-          "meaning": "",
+          "meaning": {
+            "word": "while",
+            "reading": "ホワイル",
+            "meaning": "〜の間、〜する一方で",
+            "etymology": "【接続詞】時間的な同時性・対比を示す",
+            "relatedWords": "when(ウェン): 〜する時, as(アズ): 〜するにつれて",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "scientists",
-          "meaning": "",
+          "meaning": {
+            "word": "scientists",
+            "reading": "サイエンティスツ",
+            "meaning": "科学者（複数形）",
+            "etymology": "【名詞】scientist（科学者）の複数形",
+            "relatedWords": "scientist(サイエンティスト): 科学者, science(サイエンス): 科学, scientific(サイエンティフィック): 科学的な",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "scientist"
+          },
           "isUnknown": false
         },
         {
@@ -42261,12 +46447,40 @@
         },
         {
           "word": "event",
-          "meaning": "",
+          "meaning": {
+            "word": "event",
+            "reading": "イベント",
+            "meaning": "出来事、イベント",
+            "etymology": "【名詞】特定の出来事や行事",
+            "relatedWords": "eventually(イベンチュアリー): 最終的に, eventful(イベントフル): 多事な",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -42987,7 +47201,21 @@
         },
         {
           "word": "individual",
-          "meaning": "",
+          "meaning": {
+            "word": "individual",
+            "reading": "インディビジュアル",
+            "meaning": "個人の、個別の",
+            "etymology": "【形容詞/名詞】一人一人の",
+            "relatedWords": "individually(インディビジュアリー): 個別に, individuality(インディビジュアリティ): 個性",
+            "category": "一般名詞",
+            "difficulty": "上級",
+            "levels": [
+              "上級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -43331,7 +47559,21 @@
         },
         {
           "word": "industrial",
-          "meaning": "",
+          "meaning": {
+            "word": "industrial",
+            "reading": "インダストリアル",
+            "meaning": "産業の",
+            "etymology": "【形容詞】industry（産業）+ -al",
+            "relatedWords": "industry(インダストリー): 産業, industrialize(インダストリアライズ): 工業化する",
+            "category": "一般名詞",
+            "difficulty": "上級",
+            "levels": [
+              "上級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "industry"
+          },
           "isUnknown": false
         },
         {
@@ -43515,7 +47757,21 @@
       "segments": [
         {
           "word": "Individuals",
-          "meaning": "",
+          "meaning": {
+            "word": "individuals",
+            "reading": "インディビジュアルズ",
+            "meaning": "個人（複数形）",
+            "etymology": "【名詞】individual（個人）の複数形",
+            "relatedWords": "individual(インディビジュアル): 個人, individually(インディビジュアリー): 個別に",
+            "category": "一般名詞",
+            "difficulty": "上級",
+            "levels": [
+              "上級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "individual"
+          },
           "isUnknown": false
         },
         {
@@ -43599,7 +47855,21 @@
         },
         {
           "word": "conservation",
-          "meaning": "",
+          "meaning": {
+            "word": "conservation",
+            "reading": "コンサベーション",
+            "meaning": "保全、保護",
+            "etymology": "【名詞】conserve（保存する）+ -ation",
+            "relatedWords": "conserve(コンサーブ): 保存する, conservative(コンサバティブ): 保守的な",
+            "category": "自然・環境",
+            "difficulty": "上級",
+            "levels": [
+              "上級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "conserve"
+          },
           "isUnknown": false
         },
         {
@@ -43794,7 +48064,21 @@
         },
         {
           "word": "choices",
-          "meaning": "",
+          "meaning": {
+            "word": "choices",
+            "reading": "チョイシズ",
+            "meaning": "選択（複数形）",
+            "etymology": "【名詞】choice（選択）の複数形",
+            "relatedWords": "choice(チョイス): 選択, choose(チューズ): 選ぶ, chosen(チョウズン): 選ばれた",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "choice"
+          },
           "isUnknown": false
         },
         {
@@ -44236,7 +48520,21 @@
         },
         {
           "word": "recycling",
-          "meaning": "",
+          "meaning": {
+            "word": "recycling",
+            "reading": "リサイクリング",
+            "meaning": "リサイクル",
+            "etymology": "【名詞/動詞】recycle（再利用する）の現在分詞形",
+            "relatedWords": "recycle(リサイクル): 再利用する, recyclable(リサイクラブル): リサイクル可能な",
+            "category": "自然・環境",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "recycle"
+          },
           "isUnknown": false
         },
         {
@@ -44533,7 +48831,21 @@
         },
         {
           "word": "difference",
-          "meaning": "",
+          "meaning": {
+            "word": "difference",
+            "reading": "ディファレンス",
+            "meaning": "違い",
+            "etymology": "【名詞】differ（異なる）+ -ence",
+            "relatedWords": "different(ディファレント): 異なる, differ(ディファー): 異なる",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "differ"
+          },
           "isUnknown": false
         },
         {
@@ -44584,7 +48896,21 @@
         },
         {
           "word": "many",
-          "meaning": "",
+          "meaning": {
+            "word": "many",
+            "reading": "メニー",
+            "meaning": "多くの",
+            "etymology": "【形容詞】可算名詞の多数を示す",
+            "relatedWords": "much(マッチ): 多くの（不可算）, more(モア): より多くの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -45012,7 +49338,21 @@
       "segments": [
         {
           "word": "Spring",
-          "meaning": "",
+          "meaning": {
+            "word": "spring",
+            "reading": "スプリング",
+            "meaning": "春",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -45393,7 +49733,21 @@
       "segments": [
         {
           "word": "Autumn",
-          "meaning": "",
+          "meaning": {
+            "word": "autumn",
+            "reading": "オータム",
+            "meaning": "秋",
+            "etymology": "【名詞】一年の季節",
+            "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -45449,7 +49803,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -45488,7 +49856,21 @@
         },
         {
           "word": "beautiful",
-          "meaning": "",
+          "meaning": {
+            "word": "beautiful",
+            "reading": "ビューティフル",
+            "meaning": "美しい",
+            "etymology": "【形容詞】beauty（美）+ -ful",
+            "relatedWords": "beauty(ビューティー): 美, beautifully(ビューティフリー): 美しく",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "beauty"
+          },
           "isUnknown": false
         },
         {
@@ -45528,7 +49910,21 @@
       "segments": [
         {
           "word": "Winter",
-          "meaning": "",
+          "meaning": {
+            "word": "winter",
+            "reading": "ウィンター",
+            "meaning": "冬",
+            "etymology": "【名詞】一年の寒い季節",
+            "relatedWords": "summer(サマー): 夏, spring(スプリング): 春, autumn(オータム): 秋",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -45697,7 +50093,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -45849,7 +50259,21 @@
         },
         {
           "word": "weather",
-          "meaning": "",
+          "meaning": {
+            "word": "weather",
+            "reading": "ウェザー",
+            "meaning": "天気",
+            "etymology": "【名詞】気象状態を示す",
+            "relatedWords": "climate(クライメット): 気候, temperature(テンペラチャー): 気温",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -46092,12 +50516,40 @@
         },
         {
           "word": "world",
-          "meaning": "",
+          "meaning": {
+            "word": "world",
+            "reading": "ワールド",
+            "meaning": "世界",
+            "etymology": "【名詞】地球・全世界を示す",
+            "relatedWords": "worldwide(ワールドワイド): 世界中の, global(グローバル): 地球規模の",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "around",
-          "meaning": "",
+          "meaning": {
+            "word": "around",
+            "reading": "アラウンド",
+            "meaning": "〜の周りに、約",
+            "etymology": "【前置詞/副詞】周囲・近似を示す",
+            "relatedWords": "round(ラウンド): 〜の周りに, about(アバウト): 約",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
