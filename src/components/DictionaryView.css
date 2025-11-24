@@ -1,0 +1,22 @@
+.dictionary-view {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dictionary-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.dictionary-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.coming-soon {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-top: 20px;
+}
