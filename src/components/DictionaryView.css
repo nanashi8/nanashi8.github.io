@@ -20,3 +20,22 @@
   color: var(--text-secondary);
   margin-top: 20px;
 }
+
+/* ダークモード対応 */
+.dark-mode .dictionary-view {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .dictionary-container {
+  background: #2a2a2a;
+  border-radius: 12px;
+}
+
+.dark-mode .dictionary-container h2 {
+  color: #e0e0e0;
+}
+
+.dark-mode .coming-soon {
+  color: #aaa;
+}

@@ -580,6 +580,27 @@
   background: var(--bg-secondary);
 }
 
+.dark-mode .grammar-point {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dark-mode .grammar-point .tag {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .sentence-display {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .error-message {
+  background: #5a1e1e;
+  border-left-color: #ef4444;
+  color: #fecaca;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .question-nav-row {

@@ -13,8 +13,11 @@
   background: #1a1a1a;
   color: #e0e0e0;
   --text-color: #e0e0e0;
+  --text-secondary: #aaa;
   --bg-secondary: #2a2a2a;
   --border-color: #555;
+  --background: #1a1a1a;
+  --card-bg: #2a2a2a;
 }
 
 .dark-mode .app {
@@ -9873,6 +9876,181 @@ option {
   color: #aaa;
 }
 
+.dark-mode .study-settings-panel {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .error-log-panel {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .error-log-header {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .error-log-item {
+  background: #1a1a1a;
+  border-color: #555;
+}
+
+.dark-mode .error-log-message {
+  color: #ffcdd2;
+}
+
+.dark-mode .error-log-footer {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .daily-plan-header {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .daily-plan-message {
+  color: #e0e0e0;
+}
+
+.dark-mode .target-slider-container {
+  background: #1a1a1a;
+  border-color: #555;
+}
+
+.dark-mode .plan-recommendation-item {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .plan-recommendation-item.plan-success {
+  background: #1e4d2b;
+  color: #7ddb9b;
+}
+
+.dark-mode .selector-item {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .selector-item:hover {
+  background: #333;
+  border-color: #667eea;
+}
+
+.dark-mode .question-container {
+  background: #2a2a2a;
+}
+
+.dark-mode .loading-container,
+.dark-mode .error-container {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .feature-section {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .feature-item {
+  background: #1a1a1a;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+.dark-mode .feature-item:hover {
+  background: #333;
+}
+
+.dark-mode .cluster-header {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .related-word-button {
+  background: #2a2a2a;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.dark-mode .related-word-button:hover {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .question-item {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .question-item:hover {
+  background: #333;
+}
+
+.dark-mode .question-item-content {
+  color: #e0e0e0;
+}
+
+.dark-mode .question-item-word {
+  color: #667eea;
+}
+
+.dark-mode .question-item-details {
+  color: #aaa;
+}
+
+.dark-mode .time-greeting-message {
+  color: white;
+}
+
+.dark-mode .radar-chart-container {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .chart-wrapper {
+  background: #2a2a2a;
+}
+
+.dark-mode .review-focus-indicator {
+  background: #333;
+  color: #ffa726;
+}
+
+.dark-mode .stat-text-item {
+  color: #e0e0e0;
+}
+
+.dark-mode .retention-breakdown-container {
+  background: #1a1a1a;
+  border-color: #555;
+}
+
+.dark-mode .settings-tab-message {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.dark-mode .section-header {
+  color: #e0e0e0;
+}
+
+.dark-mode .legend-box {
+  border-color: #555;
+}
+
+.dark-mode .list-header {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .question-items {
+  background: #2a2a2a;
+}
+
 .reset-buttons {
   display: flex;
   gap: 10px;
@@ -11865,6 +12043,7 @@ option {
 
 .dark-mode .stats-section-calendar,
 .dark-mode .stats-section-growth,
+.dark-mode .stats-section-words,
 .dark-mode .words-column {
   background: #2a2a2a;
   border-color: #444;
@@ -11872,6 +12051,7 @@ option {
 
 .dark-mode .stats-section-calendar h3,
 .dark-mode .stats-section-growth h3,
+.dark-mode .stats-section-words h3,
 .dark-mode .words-column h3 {
   color: #e0e0e0;
 }
@@ -11919,6 +12099,47 @@ option {
 
 .dark-mode .overcome-after {
   color: #6f6;
+}
+
+.dark-mode .no-data {
+  color: #aaa;
+  background: #2a2a2a;
+}
+
+.dark-mode .privacy-link {
+  background: #388E3C;
+  color: white;
+}
+
+.dark-mode .privacy-link:hover {
+  background: #2E7D32;
+  box-shadow: 0 4px 12px rgba(56, 142, 60, 0.4);
+}
+
+.dark-mode .chart-container {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .chart-bar {
+  background: #667eea;
+}
+
+.dark-mode .chart-label {
+  color: #aaa;
+}
+
+.dark-mode .chart-value {
+  color: #e0e0e0;
+}
+
+.dark-mode .chart-wrapper {
+  background: #2a2a2a;
+}
+
+.dark-mode .weekly-summary {
+  background: #2a2a2a;
+  border-color: #444;
 }
 
 /* ========== 時間帯別AI挨拶バナー ========== */

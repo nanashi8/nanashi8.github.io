@@ -394,37 +394,66 @@
 }
 
 /* ダークモード対応 */
-@media (prefers-color-scheme: dark) {
-  .streak-card,
-  .stat-item,
-  .milestone-card,
-  .badge-item,
-  .badge-completion,
-  .badge-card {
-    background: rgba(255, 255, 255, 0.05);
-  }
+.dark-mode .gamification-panel {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
 
-  .close-button {
-    color: #aaa;
-  }
+.dark-mode .streak-card,
+.dark-mode .stat-item,
+.dark-mode .milestone-card,
+.dark-mode .badge-item,
+.dark-mode .badge-completion,
+.dark-mode .badge-card {
+  background: #2a2a2a;
+  border-color: #444;
+}
 
-  .close-button:hover {
-    color: #fff;
-  }
+.dark-mode .close-button {
+  color: #aaa;
+}
 
-  .stat-label,
-  .streak-label,
-  .milestone-description,
-  .milestone-progress-text,
-  .badge-earned,
-  .badge-card-description {
-    color: #aaa;
-  }
+.dark-mode .close-button:hover {
+  color: #fff;
+}
 
-  .milestone-progress-bar,
-  .xp-bar {
-    background: rgba(255, 255, 255, 0.1);
-  }
+.dark-mode .stat-label,
+.dark-mode .streak-label,
+.dark-mode .milestone-description,
+.dark-mode .milestone-progress-text,
+.dark-mode .badge-earned,
+.dark-mode .badge-card-description {
+  color: #aaa;
+}
+
+.dark-mode .stat-value,
+.dark-mode .streak-value,
+.dark-mode .milestone-title,
+.dark-mode .badge-item-name,
+.dark-mode .badge-card-name {
+  color: #e0e0e0;
+}
+
+.dark-mode .milestone-progress-bar,
+.dark-mode .xp-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .tabs-container button {
+  background: #2a2a2a;
+  color: #aaa;
+  border-color: #444;
+}
+
+.dark-mode .tabs-container button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.dark-mode .tabs-container button:hover:not(.active) {
+  background: #333;
+  color: #e0e0e0;
 }
 
 /* レスポンシブ対応 */
