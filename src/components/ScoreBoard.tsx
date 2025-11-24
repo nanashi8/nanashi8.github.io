@@ -164,12 +164,14 @@ function ScoreBoard({
           >
             📊 統計
           </button>
-          <button 
-            className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
-            onClick={() => setActiveTab('breakdown')}
-          >
-            📈 学習状況
-          </button>
+          {detailedStats.appearedWords > 0 && (
+            <button 
+              className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+              onClick={() => setActiveTab('breakdown')}
+            >
+              📈 学習状況
+            </button>
+          )}
           <button 
             className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
             onClick={() => setActiveTab('goals')}
@@ -188,6 +190,9 @@ function ScoreBoard({
             className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('settings');
+              if (onShowSettings) {
+                onShowSettings();
+              }
             }}
           >
             ⚙️ 設定
@@ -195,25 +200,59 @@ function ScoreBoard({
         </div>
       )}
 
-      {/* タブナビゲーション: モバイル版（左右ボタンで切り替え） */}
+      {/* タブナビゲーション: モバイル版（タブ型） */}
       {isMobile && (
-        <div className="score-tabs-mobile">
+        <div className="score-board-tabs score-board-tabs-mobile">
           <button 
-            className="tab-nav-btn tab-nav-prev"
-            onClick={handlePrevTab}
-            title="前のタブ"
+            className={`score-tab ${activeTab === 'plan' ? 'active' : ''}`}
+            onClick={() => setActiveTab('plan')}
+            title="プラン"
           >
-            ◀
+            📋
           </button>
-          <div className="current-tab-name">
-            {getTabName(activeTab)}
-          </div>
           <button 
-            className="tab-nav-btn tab-nav-next"
-            onClick={handleNextTab}
-            title="次のタブ"
+            className={`score-tab ${activeTab === 'stats' ? 'active' : ''}`}
+            onClick={() => setActiveTab('stats')}
+            title="統計"
           >
-            ▶
+            📊
+          </button>
+          {detailedStats.appearedWords > 0 && (
+            <button 
+              className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+              onClick={() => setActiveTab('breakdown')}
+              title="学習状況"
+            >
+              📈
+            </button>
+          )}
+          <button 
+            className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
+            onClick={() => setActiveTab('goals')}
+            title="目標"
+          >
+            🎯
+          </button>
+          {(mode === 'translation' || mode === 'spelling') && (
+            <button 
+              className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
+              onClick={() => setActiveTab('history')}
+              title="履歴"
+            >
+              📜
+            </button>
+          )}
+          <button 
+            className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
+            onClick={() => {
+              setActiveTab('settings');
+              if (onShowSettings) {
+                onShowSettings();
+              }
+            }}
+            title="設定"
+          >
+            ⚙️
           </button>
         </div>
       )}

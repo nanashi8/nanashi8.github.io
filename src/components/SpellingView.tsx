@@ -748,7 +748,8 @@ function SpellingView({
                     }
                     <strong 
                       className={isSpeechSynthesisSupported() ? 'clickable-word' : ''}
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.stopPropagation();
                         if (isSpeechSynthesisSupported() && currentQuestion) {
                           speakEnglish(currentQuestion.word, { rate: 0.85 });
                         }

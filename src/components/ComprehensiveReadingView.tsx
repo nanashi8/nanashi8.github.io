@@ -1490,6 +1490,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           font-size: 24px;
         }
 
+        .dark-mode .passage-title {
+          color: #ffffff;
+        }
+
         .passage-body {
           line-height: 1.5;
           font-family: 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', YuMincho, serif;

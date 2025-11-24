@@ -3026,14 +3026,14 @@ option {
 .dark-mode .choice-btn.correct {
   background: #1e5a28;
   border-color: #4ade80;
-  color: #d1fae5;
+  color: #ffffff;
   box-shadow: 0 0 12px rgba(74, 222, 128, 0.4);
 }
 
 .dark-mode .choice-btn.incorrect {
   background: #5a1e1e;
   border-color: #f87171;
-  color: #fecaca;
+  color: #ffffff;
   box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
 }
 
