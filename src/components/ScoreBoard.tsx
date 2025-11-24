@@ -188,7 +188,6 @@ function ScoreBoard({
             className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
             onClick={() => {
               setActiveTab('settings');
-              if (onShowSettings) onShowSettings();
             }}
           >
             ⚙️ 設定
