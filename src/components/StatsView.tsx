@@ -22,15 +22,7 @@ interface StatsViewProps {
   categoryList: string[];
 }
 
-interface DifficultyStats {
-  labels: string[];
-  accuracyData: number[];
-  retentionData: number[];
-}
-
 function StatsView({ }: StatsViewProps) {
-  const [translationStats, setTranslationStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
-  const [spellingStats, setSpellingStats] = useState<DifficultyStats>({ labels: [], accuracyData: [], retentionData: [] });
   const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
   
@@ -72,11 +64,6 @@ function StatsView({ }: StatsViewProps) {
 
   // データ読み込み
   const loadData = () => {
-    const translationData = getStatsByModeDifficulty('translation');
-    const spellingData = getStatsByModeDifficulty('spelling');
-    setTranslationStats(translationData);
-    setSpellingStats(spellingData);
-    
     // 新しい統計データを読み込み
     setCalendarData(getStudyCalendarData(90));
     setWeeklyStats(getWeeklyStats());
@@ -322,30 +309,6 @@ function StatsView({ }: StatsViewProps) {
       {/* 和訳タブの統計 */}
       <div className="stats-section-mode">
         <h3>📖 和訳タブ</h3>
-        
-        <div className="stats-charts-row">
-          {/* 正答率レーダーチャート */}
-          <div className="stats-chart-container">
-            <h4>難易度別 正答率</h4>
-            <SimpleRadarChart
-              labels={translationStats.labels}
-              data={translationStats.accuracyData}
-              maxValue={100}
-              color="rgba(102, 126, 234, 0.6)"
-            />
-          </div>
-
-          {/* 定着率レーダーチャート */}
-          <div className="stats-chart-container">
-            <h4>難易度別 定着率</h4>
-            <SimpleRadarChart
-              labels={translationStats.labels}
-              data={translationStats.retentionData}
-              maxValue={100}
-              color="rgba(76, 175, 80, 0.6)"
-            />
-          </div>
-        </div>
 
         {/* リセットボタン */}
         <div className="stats-reset-buttons">
@@ -364,30 +327,6 @@ function StatsView({ }: StatsViewProps) {
       {/* スペルタブの統計 */}
       <div className="stats-section-mode">
         <h3>✍️ スペルタブ</h3>
-        
-        <div className="stats-charts-row">
-          {/* 正答率レーダーチャート */}
-          <div className="stats-chart-container">
-            <h4>難易度別 正答率</h4>
-            <SimpleRadarChart
-              labels={spellingStats.labels}
-              data={spellingStats.accuracyData}
-              maxValue={100}
-              color="rgba(255, 152, 0, 0.6)"
-            />
-          </div>
-
-          {/* 定着率レーダーチャート */}
-          <div className="stats-chart-container">
-            <h4>難易度別 定着率</h4>
-            <SimpleRadarChart
-              labels={spellingStats.labels}
-              data={spellingStats.retentionData}
-              maxValue={100}
-              color="rgba(233, 30, 99, 0.6)"
-            />
-          </div>
-        </div>
 
         {/* リセットボタン */}
         <div className="stats-reset-buttons">
@@ -618,128 +557,6 @@ function CumulativeGrowthChart({ data }: {
           </span>
         </div>
       </div>
-    </div>
-  );
-}
-
-// シンプルなレーダーチャートコンポーネント
-function SimpleRadarChart({ labels, data, maxValue, color }: {
-  labels: string[];
-  data: number[];
-  maxValue: number;
-  color: string;
-}) {
-  const size = 300;
-  const center = size / 2;
-  const maxRadius = size / 2 - 40;
-  const numPoints = labels.length;
-  
-  // ダークモード判定
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  
-  if (numPoints === 0) {
-    return <div className="radar-chart-empty">データがありません</div>;
-  }
-
-  // 各頂点の座標を計算
-  const getPoint = (index: number, value: number) => {
-    const angle = (Math.PI * 2 * index) / numPoints - Math.PI / 2;
-    const radius = (value / maxValue) * maxRadius;
-    return {
-      x: center + radius * Math.cos(angle),
-      y: center + radius * Math.sin(angle)
-    };
-  };
-
-  // 背景のグリッド線
-  const gridLevels = [0.2, 0.4, 0.6, 0.8, 1.0];
-  const gridPaths = gridLevels.map(level => {
-    const points = Array.from({ length: numPoints }, (_, i) => {
-      const angle = (Math.PI * 2 * i) / numPoints - Math.PI / 2;
-      const radius = maxRadius * level;
-      return `${center + radius * Math.cos(angle)},${center + radius * Math.sin(angle)}`;
-    });
-    return points.join(' ');
-  });
-
-  // データのパス
-  const dataPoints = data.map((value, i) => getPoint(i, value));
-  const dataPath = dataPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x},${p.y}`).join(' ') + ' Z';
-
-  return (
-    <div className="radar-chart-container">
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-        {/* グリッド */}
-        {gridPaths.map((path, i) => (
-          <polygon
-            key={i}
-            points={path}
-            fill="none"
-            stroke={isDarkMode ? "#555" : "#ddd"}
-            strokeWidth="1"
-          />
-        ))}
-
-        {/* 軸線 */}
-        {Array.from({ length: numPoints }, (_, i) => {
-          const angle = (Math.PI * 2 * i) / numPoints - Math.PI / 2;
-          return (
-            <line
-              key={i}
-              x1={center}
-              y1={center}
-              x2={center + maxRadius * Math.cos(angle)}
-              y2={center + maxRadius * Math.sin(angle)}
-              stroke={isDarkMode ? "#555" : "#ddd"}
-              strokeWidth="1"
-            />
-          );
-        })}
-
-        {/* データエリア */}
-        <path
-          d={dataPath}
-          fill={color}
-          stroke={color.replace('0.6', '1')}
-          strokeWidth="2"
-        />
-
-        {/* データポイント */}
-        {dataPoints.map((point, i) => (
-          <circle
-            key={i}
-            cx={point.x}
-            cy={point.y}
-            r="4"
-            fill={color.replace('0.6', '1')}
-          />
-        ))}
-
-        {/* ラベル */}
-        {labels.map((label, i) => {
-          const angle = (Math.PI * 2 * i) / numPoints - Math.PI / 2;
-          const labelRadius = maxRadius + 25;
-          const x = center + labelRadius * Math.cos(angle);
-          const y = center + labelRadius * Math.sin(angle);
-          return (
-            <text
-              key={i}
-              x={x}
-              y={y}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fontSize="14"
-              fontWeight="bold"
-              fill={isDarkMode ? "#e0e0e0" : "#333"}
-            >
-              {label}
-              <tspan x={x} dy="15" fontSize="12" fill={isDarkMode ? "#b0b0b0" : "#666"}>
-                {data[i].toFixed(1)}%
-              </tspan>
-            </text>
-          );
-        })}
-      </svg>
     </div>
   );
 }
