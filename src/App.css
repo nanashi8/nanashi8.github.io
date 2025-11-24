@@ -618,21 +618,27 @@
 }
 
 /* スコアボードタブのダークモード */
-.dark-mode .score-tab {
-  background: #2a2a2a;
+.dark-mode .score-board-tabs {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
   border-color: #444;
+}
+
+.dark-mode .score-tab {
+  background: #333;
+  border-color: #555;
   color: #e0e0e0;
 }
 
 .dark-mode .score-tab:hover {
-  background: #333;
-  border-color: #555;
+  background: #3a3a3a;
+  border-color: #666;
 }
 
 .dark-mode .score-tab.active {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
 }
 
 /* 基本統計グリッド - ダークモード */
@@ -1394,34 +1400,44 @@ option {
 .score-board-tabs {
   display: flex;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 8px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .score-tab {
-  padding: 8px 16px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  padding: 10px 18px;
+  background: white;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 0.95em;
-  font-weight: 500;
+  font-size: 1em;
+  font-weight: 600;
   white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .score-tab:hover {
-  background: #e8e8e8;
-  border-color: #ccc;
+  background: #f8f9fa;
+  border-color: #adb5bd;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .score-tab.active {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border-color: #667eea;
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  transform: translateY(-2px);
 }
 
 /* デスクトップでタブを非表示、全表示 */
