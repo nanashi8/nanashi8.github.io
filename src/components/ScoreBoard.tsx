@@ -299,10 +299,13 @@ function ScoreBoard({
               <span className="stat-text-sub">({todayTotalAnswered}問)</span>
             </span>
             <span className="stat-text-divider">｜</span>
-            <span className="stat-text-item">
-              <span className="stat-text-label">定着率:</span>
+            <span 
+              className="stat-text-item"
+              title="学習した単語のうち、安定して正解できる単語の割合"
+            >
+              <span className="stat-text-label">定着:</span>
               <strong className="stat-text-value mastered">{retentionRate}%</strong>
-              <span className="stat-text-sub">({masteredCount}/{appearedCount})</span>
+              <span className="stat-text-sub">({masteredCount}語定着)</span>
             </span>
             <span className="stat-text-divider">｜</span>
             <span className="stat-text-item">
@@ -317,6 +320,15 @@ function ScoreBoard({
       {activeTab === 'breakdown' && detailedStats.appearedWords > 0 && (
         <div className="score-board-content">
           <div className="retention-breakdown-container">
+            <div className="retention-breakdown-header">
+              <div className="retention-title">📊 学習定着度の内訳</div>
+              <div className="retention-subtitle">
+                全{detailedStats.appearedWords}語中：
+                🟢完全定着 {detailedStats.masteredCount}語 
+                🟡学習中 {detailedStats.learningCount}語 
+                🔴要復習 {detailedStats.strugglingCount}語
+              </div>
+            </div>
             <div className="retention-progress-bar">
               {detailedStats.masteredPercentage > 0 && (
                 <div 
@@ -352,8 +364,16 @@ function ScoreBoard({
                 </div>
               )}
             </div>
-            <div className="retention-text-summary">
-              🟢{detailedStats.masteredCount} 🟡{detailedStats.learningCount} 🔴{detailedStats.strugglingCount}
+            <div className="retention-explanation">
+              <div className="retention-explanation-item">
+                <strong>🟢 完全定着:</strong> 正答率85%以上で安定
+              </div>
+              <div className="retention-explanation-item">
+                <strong>🟡 学習中:</strong> 正解もあるが不安定
+              </div>
+              <div className="retention-explanation-item">
+                <strong>🔴 要復習:</strong> 苦手・忘れかけ
+              </div>
             </div>
           </div>
         </div>
