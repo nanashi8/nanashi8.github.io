@@ -1904,6 +1904,42 @@ option {
   font-style: italic;
 }
 
+/* 設定タブメッセージ */
+.settings-tab-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.btn-back-to-settings {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-back-to-settings:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-back-to-settings:active {
+  transform: translateY(0);
+}
+
+.dark-mode .btn-back-to-settings {
+  background: linear-gradient(135deg, #4f5bd5, #6a3d8f);
+  color: #e0e0e0;
+}
+
+
 /* 目標コンパクト */
 .goals-compact {
   display: flex;

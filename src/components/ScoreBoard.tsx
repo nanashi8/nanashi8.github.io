@@ -444,7 +444,12 @@ function ScoreBoard({
       {activeTab === 'settings' && onShowSettings && (
         <div className="score-board-content">
           <div className="settings-tab-message">
-            <p>学習設定画面が表示されます</p>
+            <button 
+              onClick={onShowSettings}
+              className="btn-back-to-settings"
+            >
+              ⚙️ 学習設定に戻る
+            </button>
           </div>
         </div>
       )}
