@@ -1,0 +1,6698 @@
+{
+  "id": "beginner-cafe-menu",
+  "title": "Green Leaf Café - Menu & Information",
+  "level": "beginner",
+  "theme": "レストラン・メニュー",
+  "actualWordCount": 393,
+  "phrases": [
+    {
+      "id": 1,
+      "english": "Green Leaf Café—Menu & Information",
+      "japanese": "グリーンリーフカフェ―メニュー＆案内",
+      "phraseMeaning": "グリーンリーフカフェ―メニュー＆案内",
+      "segments": [
+        {
+          "word": "Green",
+          "meaning": {
+            "word": "green",
+            "reading": "グリ́ーン",
+            "meaning": "緑・未熟な",
+            "etymology": "古英語 \"grēne\"。【形態素】語幹: gre + -en（動詞化（〜にする））。派生: greenery(グリ́ーナリ): 緑地 / greenish(グリ́ーニッシュ): 緑がかった",
+            "relatedWords": "blue(ブル́ー): 青, plant(プラ́ント): 植物, (比較級)green(グリ́ーン):緑・未熟な(原級), greener(グリーンー):より緑(比較級), greenest(グリーンスト):最も緑(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Leaf",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Café",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "—",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Menu",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Information",
+          "meaning": {
+            "word": "information",
+            "reading": "インフォメ́イション",
+            "meaning": "情報",
+            "etymology": "ラテン語 \"informare\"(形作る)。【形態素】in-（中へ・否定） + 語根: form（形） + -ation（名詞化（行為・状態））。派生: inform(インフォ́ーム): 知らせる / informative(インフォ́ーマティヴ): 有益な",
+            "relatedWords": "data(デ́イタ): データ, news(ニ́ューズ): 知らせ",
+            "category": "学校・学習",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "english": "Welcome to Green Leaf Café!",
+      "japanese": "グリーンリーフカフェへようこそ！",
+      "phraseMeaning": "グリーンリーフカフェへようこそ！",
+      "segments": [
+        {
+          "word": "Welcome",
+          "meaning": {
+            "word": "welcome",
+            "reading": "ウェルカム",
+            "meaning": "歓迎する・ようこそ",
+            "etymology": "古英語 wilcuma（望ましい来訪者）← wil（望み）+ cuma（来る人）",
+            "relatedWords": [
+              "greet",
+              "receive",
+              "accept",
+              "invite"
+            ],
+            "category": "動詞・形容詞・名詞",
+            "difficulty": "初級",
+            "levels": [
+              "中学1年",
+              "英検4級"
+            ],
+            "passages": [
+              "Daily Life"
+            ],
+            "source": "batch15"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Green",
+          "meaning": {
+            "word": "green",
+            "reading": "グリ́ーン",
+            "meaning": "緑・未熟な",
+            "etymology": "古英語 \"grēne\"。【形態素】語幹: gre + -en（動詞化（〜にする））。派生: greenery(グリ́ーナリ): 緑地 / greenish(グリ́ーニッシュ): 緑がかった",
+            "relatedWords": "blue(ブル́ー): 青, plant(プラ́ント): 植物, (比較級)green(グリ́ーン):緑・未熟な(原級), greener(グリーンー):より緑(比較級), greenest(グリーンスト):最も緑(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Leaf",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Café",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "!",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "english": "We're open every weekday from 7 a.m.",
+      "japanese": "平日は午前7時から午後9時まで、週末は午前8時から午後10時まで営業しています。",
+      "phraseMeaning": "平日は午前7時から午後9時まで、週末は午前8時から午後10時まで営業しています。",
+      "segments": [
+        {
+          "word": "We're",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "open",
+          "meaning": {
+            "word": "open",
+            "reading": "オ́ウプン",
+            "meaning": "開ける・開いた",
+            "etymology": "古英語 \"open\"。派生: opening(オ́ウプニング): 開始 / open-minded(オ́ウプンマインデッド): 心の広い",
+            "relatedWords": "close(クロ́ウズ): 閉める, shut(シャ́ット): 閉じる, (動詞活用)open(オ́ウプン):開ける・開いた(原形), openned(オウプンド):開けた(過去形), openned(オウプンド):開けられた(過去分詞形), openning(オウプンイング):開けること(現在分詞形), opens(オウプンズ):開ける(三単現)",
+            "category": "日常生活",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": {
+            "word": "every",
+            "reading": "エ́ヴリ",
+            "meaning": "すべての",
+            "etymology": "古英語 \"ǣfre ǣlc\" の縮約。【形態素】語根: ver（真実） + -y（形容詞化（性質））。派生: everybody(エ́ヴリバディ): みんな / everything(エ́ヴリシング): すべてのこと",
+            "relatedWords": "all(オ́ール): 全ての, each(イ́ーチ): 各々の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "weekday",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "from",
+          "meaning": {
+            "word": "from",
+            "reading": "フロ́ム",
+            "meaning": "〜から",
+            "etymology": "古英語 \"fram\"。派生: from now on(フロ́ムナ́ウオン): 今後ずっと / from A to B(フロ́ムエ́ートゥビ́ー): AからBまで",
+            "relatedWords": "since(シ́ンス): 〜以来, out of(ア́ウトオブ): 〜から",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "7",
+          "meaning": {
+            "word": "7",
+            "reading": "-",
+            "meaning": "7（数字）",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": {
+            "word": "a",
+            "reading": "ア́(エ́イ)",
+            "meaning": "一つの",
+            "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
+            "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "english": "to 9 p.m., and weekends from 8 a.m.",
+      "japanese": "フレンドリーなスタッフがお客様をお待ちしております！",
+      "phraseMeaning": "フレンドリーなスタッフがお客様をお待ちしております！",
+      "segments": [
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "9",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "p",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "weekends",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "from",
+          "meaning": {
+            "word": "from",
+            "reading": "フロ́ム",
+            "meaning": "〜から",
+            "etymology": "古英語 \"fram\"。派生: from now on(フロ́ムナ́ウオン): 今後ずっと / from A to B(フロ́ムエ́ートゥビ́ー): AからBまで",
+            "relatedWords": "since(シ́ンス): 〜以来, out of(ア́ウトオブ): 〜から",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "8",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": {
+            "word": "a",
+            "reading": "ア́(エ́イ)",
+            "meaning": "一つの",
+            "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
+            "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "english": "to 10 p.m.",
+      "japanese": "朝食メニュー（午前11時まで）",
+      "phraseMeaning": "朝食メニュー（午前11時まで）",
+      "segments": [
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "10",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "p",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "english": "Our friendly staff looks forward to serving you!",
+      "japanese": "クラシック朝食セット - 8ドル\n• 卵2個（お好みの調理法で）\n• ベーコンまたはソーセージ\n• バターとジャムを添えたトースト\n• オレンジジュースまたはコーヒー",
+      "phraseMeaning": "クラシック朝食セット - 8ドル\n• 卵2個（お好みの調理法で）\n• ベーコンまたはソーセージ\n• バターとジャムを添えたトースト\n• オレンジジュースまたはコーヒー",
+      "segments": [
+        {
+          "word": "Our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "friendly",
+          "meaning": {
+            "word": "friendly",
+            "reading": "(フレ́ンドの派生)",
+            "meaning": "友達（副詞形）",
+            "etymology": "friendの派生形。【形態素】語幹: friend + -ly（副詞化（〜に・〜く））",
+            "relatedWords": "",
+            "category": "人・社会",
+            "difficulty": "長文専用",
+            "levels": [
+              "beginner"
+            ],
+            "passages": [
+              "beginner-1"
+            ],
+            "source": "auto",
+            "baseWord": "friend"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "staff",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "looks",
+          "meaning": {
+            "word": "looks",
+            "reading": "(ル́ックの派生)",
+            "meaning": "見る・外観（複数形）",
+            "etymology": "lookの派生形",
+            "relatedWords": "",
+            "category": "時間・数量",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-5"
+            ],
+            "source": "auto",
+            "baseWord": "look"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "forward",
+          "meaning": {
+            "word": "forward",
+            "reading": "フォ́ーワード",
+            "meaning": "前方へ・転送する",
+            "etymology": "古英語 \"forweard\"。派生: forwarder(フォ́ワーダー): 運送業者 / forward-looking(フォ́ーワードルッキング): 先見的な",
+            "relatedWords": "ahead(アヘ́ッド): 前方に, send(セ́ンド): 送る, (動詞活用)forward(フォ́ーワード):前方へ・転送する(原形), forwarded(フォーワードエド):前方へた(過去形), forwarded(フォーワードエド):前方へられた(過去分詞形), forwarding(フォーワードイング):前方へこと(現在分詞形), forwards(フォーワードズ):前方へ(三単現)",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "初級"
+            ],
+            "passages": [
+              "intermediate-5",
+              "beginner-1",
+              "beginner-3",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "serving",
+          "meaning": {
+            "word": "serving",
+            "reading": "(サ́ーヴの派生)",
+            "meaning": "仕える・出す（現在分詞・動名詞）",
+            "etymology": "serveの派生形。【形態素】語根: serv（保つ・仕える） + -ing（現在分詞・動名詞）",
+            "relatedWords": "",
+            "category": "食・健康",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": "serve"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "you",
+          "meaning": {
+            "word": "you",
+            "reading": "ユ́ー",
+            "meaning": "あなたは・あなたたちは",
+            "etymology": "古英語 \"eow\"。派生: yourself(ユアセ́ルフ): あなた自身",
+            "relatedWords": "your(ユ́ア): あなたの, yours(ユ́アーズ): あなたのもの, (代名詞)you(ユー):あなたは(主格), your(ユア):あなたの(所有形容詞), you(ユー):あなたを・あなたに(目的格), yours(ユアズ):あなたのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "!",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "english": "Breakfast Menu (Available until 11 a.m.)",
+      "japanese": "ヘルシーモーニングボウル - 7ドル\n• グラノーラ入りの新鮮なヨーグルト\n• バナナとイチゴのスライス\n• ハチミツかけ\n• ジュースをお選びください",
+      "phraseMeaning": "ヘルシーモーニングボウル - 7ドル\n• グラノーラ入りの新鮮なヨーグルト\n• バナナとイチゴのスライス\n• ハチミツかけ\n• ジュースをお選びください",
+      "segments": [
+        {
+          "word": "Breakfast",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Menu",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Available",
+          "meaning": {
+            "word": "available",
+            "reading": "アヴェ́イラブル",
+            "meaning": "利用できる・入手可能な",
+            "etymology": "avail(役立つ)の形容詞形。【形態素】語幹: avail + -able（形容詞化（可能））。派生: availability(アヴェイラビリティ): 入手可能性",
+            "relatedWords": "obtainable(オブテイナブル): 入手できる, accessible(アクセシブル): 利用しやすい, (動詞活用)available(アヴェ́イラブル):利用できる・入手可能な(原形), availabled(アヴェイラブルド):利用できた(過去形), availabled(アヴェイラブルド):利用できられた(過去分詞形), availabling(アヴェイラブルイング):利用できること(現在分詞形), availables(アヴェイラブルズ):利用できる(三単現), (比較級)available(アヴェ́イラブル):利用できる・入手可能な(原級), more available(モアアヴェイラブル):より利用できる(比較級), most available(モウストアヴェイラブル):最も利用できる(最上級)",
+            "category": "日常生活",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json",
+              "intermediate-5"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "until",
+          "meaning": {
+            "word": "until",
+            "reading": "アンティ́ル",
+            "meaning": "〜まで",
+            "etymology": "古ノルド語 \"und\"(まで)+till。【形態素】un-（否定（〜でない）） + 語幹: til。派生: not until(ノットアンティル): 〜して初めて",
+            "relatedWords": "till(ティ́ル): 〜まで, up to(アップトゥー): 〜まで",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "11",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": {
+            "word": "a",
+            "reading": "ア́(エ́イ)",
+            "meaning": "一つの",
+            "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
+            "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "english": "Classic Breakfast Set - $8\n• Two eggs (your choice of style)\n• Bacon or sausage\n• Toast,",
+      "japanese": "パンケーキスペシャル - 6ドル\n• ふわふわパンケーキ3枚\n• メープルシロップ\n• 季節のフルーツ（桃、イチゴ、またはバナナ）\n• コーヒーまたは紅茶",
+      "phraseMeaning": "パンケーキスペシャル - 6ドル\n• ふわふわパンケーキ3枚\n• メープルシロップ\n• 季節のフルーツ（桃、イチゴ、またはバナナ）\n• コーヒーまたは紅茶",
+      "segments": [
+        {
+          "word": "Classic",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Breakfast",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Set",
+          "meaning": {
+            "word": "set",
+            "reading": "セ́ット",
+            "meaning": "置く・セット",
+            "etymology": "古英語 \"settan\"。派生: setting(セ́ティング): 設定 / set up(セ́ットアップ): 設置する",
+            "relatedWords": "place(プレ́イス): 置く, put(プ́ット): 置く, (動詞活用)set(セ́ット):置く・セット(原形), set(セット):置いた(過去形), set(セット):置いた(過去分詞形), setting(セッティング):置くこと(現在分詞形), sets(セッツ):置く(三単現)",
+            "category": "運動・娯楽",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "8",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Two",
+          "meaning": {
+            "word": "two",
+            "reading": "トゥ́ー",
+            "meaning": "2",
+            "etymology": "古英語 \"twa\"。派生: twice(トゥワ́イス): 2回 / twofold(トゥーフォウルド): 2倍の",
+            "relatedWords": "one(ワン): 1, three(スリー): 3, second(セカンド): 2番目",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "eggs",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "your",
+          "meaning": {
+            "word": "your",
+            "reading": "ユ́ア",
+            "meaning": "あなたの",
+            "etymology": "古英語 \"eower\"。派生: yours(ユ́アーズ): あなたのもの",
+            "relatedWords": "you(ユー): あなたは, yourself(ユアセルフ): あなた自身",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "choice",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": {
+            "word": "of",
+            "reading": "オブ",
+            "meaning": "〜の",
+            "etymology": "古英語 of から",
+            "relatedWords": [],
+            "category": "前置詞",
+            "difficulty": "beginner",
+            "levels": [
+              "A1",
+              "A2"
+            ],
+            "passages": [
+              "reading"
+            ],
+            "source": "basic_missing"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "style",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Bacon",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "sausage",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Toast",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "english": "with butter and jam\n• Orange juice or coffee",
+      "japanese": "ランチスペシャル（午前11時から午後3時）",
+      "phraseMeaning": "ランチスペシャル（午前11時から午後3時）",
+      "segments": [
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "butter",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "jam",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Orange",
+          "meaning": {
+            "word": "orange",
+            "reading": "オ́レンジ",
+            "meaning": "オレンジ・オレンジ色",
+            "etymology": "アラビア語 \"naranj\"。派生: orangeade(オレンジェ́イド): オレンジ水 / orange juice(オ́レンジジュース): オレンジジュース",
+            "relatedWords": "fruit(フル́ート): 果物, lemon(レ́モン): レモン",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "juice",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "coffee",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "english": "Healthy Morning Bowl - $7\n• Fresh yogurt,",
+      "japanese": "シェフのパスタセレクション - 10ドル\n• トマトソースのスパゲッティ\n• 野菜入り麺スープ\n• サラダをお選びください\n• パン付き",
+      "phraseMeaning": "シェフのパスタセレクション - 10ドル\n• トマトソースのスパゲッティ\n• 野菜入り麺スープ\n• サラダをお選びください\n• パン付き",
+      "segments": [
+        {
+          "word": "Healthy",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Morning",
+          "meaning": {
+            "word": "morning",
+            "reading": "モ́ーニング",
+            "meaning": "朝",
+            "etymology": "中英語 \"morwening\"。【形態素】語幹: morn + -ing（現在分詞・動名詞）。派生: good morning(グッドモ́ーニング): おはよう / morning sickness(モ́ーニングシックネス): つわり",
+            "relatedWords": "afternoon(アフタヌ́ーン): 午後, evening(イ́ーヴニング): 夕方",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Bowl",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "7",
+          "meaning": {
+            "word": "7",
+            "reading": "-",
+            "meaning": "7（数字）",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "yogurt",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "english": "with granola\n• Banana slices and strawberry pieces\n• Honey drizzle\n• Choice of juice",
+      "japanese": "ステーキランチ - 15ドル\n• グリルステーキ（ミディアムがおすすめ）\n• ベイクドポテトまたはフライドポテト\n• 季節の野菜（ニンジン、豆、タマネギ）\n• 本日のスープ",
+      "phraseMeaning": "ステーキランチ - 15ドル\n• グリルステーキ（ミディアムがおすすめ）\n• ベイクドポテトまたはフライドポテト\n• 季節の野菜（ニンジン、豆、タマネギ）\n• 本日のスープ",
+      "segments": [
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "granola",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Banana",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "slices",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "strawberry",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "pieces",
+          "meaning": {
+            "word": "pieces",
+            "reading": "(ピ́ースの派生)",
+            "meaning": "一片・作品（複数形）",
+            "etymology": "pieceの派生形",
+            "relatedWords": "",
+            "category": "時間・数量",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "advanced-2.json"
+            ],
+            "source": "auto",
+            "baseWord": "piece"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Honey",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "drizzle",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Choice",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": {
+            "word": "of",
+            "reading": "オブ",
+            "meaning": "〜の",
+            "etymology": "古英語 of から",
+            "relatedWords": [],
+            "category": "前置詞",
+            "difficulty": "beginner",
+            "levels": [
+              "A1",
+              "A2"
+            ],
+            "passages": [
+              "reading"
+            ],
+            "source": "basic_missing"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "juice",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "english": "Pancake Special - $6\n• Three fluffy pancakes\n• Maple syrup\n• Seasonal fruit (peach, strawberry, or banana)\n• Coffee or tea",
+      "japanese": "ベジタリアンピザ - 9ドル\n• 新鮮なトマトとタマネギ\n• パプリカとマッシュルーム\n• モッツァレラチーズ\n• ガーデンサラダ付き",
+      "phraseMeaning": "ベジタリアンピザ - 9ドル\n• 新鮮なトマトとタマネギ\n• パプリカとマッシュルーム\n• モッツァレラチーズ\n• ガーデンサラダ付き",
+      "segments": [
+        {
+          "word": "Pancake",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Special",
+          "meaning": {
+            "word": "special",
+            "reading": "スペ́シャル",
+            "meaning": "特別な",
+            "etymology": "ラテン語 \"specialis\"(特定の)。【形態素】語根: spec（見る） + -al（形容詞化（関連））。派生: specially(スペ́シャリ): 特別に / specialty(スペ́シャルティ): 専門",
+            "relatedWords": "particular(パティ́キュラー): 特定の, ordinary(オ́ーディナリ): 普通の, (比較級)special(スペ́シャル):特別な(原級), more special(モアスペシャル):より特別な(比較級), most special(モウストスペシャル):最も特別な(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "初級"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-4",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "6",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Three",
+          "meaning": {
+            "word": "three",
+            "reading": "スリ́ー",
+            "meaning": "3",
+            "etymology": "古英語 \"threo\"。派生: third(サ́ード): 3番目 / triple(トリプル): 3倍",
+            "relatedWords": "two(トゥー): 2, four(フォー): 4, three times(スリータイムズ): 3回",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fluffy",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "pancakes",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Maple",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "syrup",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Seasonal",
+          "meaning": {
+            "word": "seasonal",
+            "reading": "シーズナル",
+            "meaning": "季節の・季節限定の",
+            "etymology": "season（季節）+ -al（形容詞化）。【形態素】語根: son（音） + -al（形容詞化（関連））",
+            "relatedWords": "season(シーズン): 季節, temporary(テンポラリー): 一時的な",
+            "category": "時間・性質",
+            "difficulty": "中級",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fruit",
+          "meaning": {
+            "word": "fruit",
+            "reading": "フルーツ",
+            "meaning": "果物",
+            "etymology": "ラテン語 fructus（果実）",
+            "relatedWords": "apple(アップル): リンゴ, vegetable(ベジタブル): 野菜",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "peach",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "strawberry",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "banana",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Coffee",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "tea",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "english": "Lunch Specials (11 a.m.",
+      "japanese": "スナック＆軽食（終日）",
+      "phraseMeaning": "スナック＆軽食（終日）",
+      "segments": [
+        {
+          "word": "Lunch",
+          "meaning": {
+            "word": "lunch",
+            "reading": "ラ́ンチ",
+            "meaning": "昼食",
+            "etymology": "スペイン語 \"lonja\"(スライス)起源説。派生: lunchtime(ラ́ンチタイム): 昼食時 / lunch box(ラ́ンチボックス): 弁当箱",
+            "relatedWords": "breakfast(ブレ́ックファスト): 朝食, dinner(ディ́ナー): 夕食",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Specials",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "11",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": {
+            "word": "a",
+            "reading": "ア́(エ́イ)",
+            "meaning": "一つの",
+            "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
+            "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "english": "to 3 p.m.)",
+      "japanese": "• クッキー盛り合わせ（チョコチップ、オートミール、またはピーナッツバター） - 4ドル\n• フレッシュフルーツボウル（バナナ、桃、イチゴ、メロン） - 5ドル\n• サンドイッチセレクション（チキン、ツナ、または野菜） - 6ドル\n• キッズ向けキャンディ - 2ドル",
+      "phraseMeaning": "• クッキー盛り合わせ（チョコチップ、オートミール、またはピーナッツバター） - 4ドル\n• フレッシュフルーツボウル（バナナ、桃、イチゴ、メロン） - 5ドル\n• サンドイッチセレクション（チキン、ツナ、または野菜） - 6ドル\n• キッズ向けキャンディ - 2ドル",
+      "segments": [
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "3",
+          "meaning": {
+            "word": "3",
+            "reading": "-",
+            "meaning": "3（数字）",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "p",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "m",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "english": "Chef's Pasta Selection - $10\n• Spaghetti,",
+      "japanese": "飲み物",
+      "phraseMeaning": "飲み物",
+      "segments": [
+        {
+          "word": "Chef's",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Pasta",
+          "meaning": {
+            "word": "pasta",
+            "reading": "パスタ",
+            "meaning": "パスタ",
+            "etymology": "イタリア語 pasta（生地）",
+            "relatedWords": "noodle(ヌードル): 麺, spaghetti(スパゲッティ): スパゲッティ",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Selection",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "10",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Spaghetti",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "english": "with tomato sauce\n• Noodle soup with vegetables\n• Choice of salad\n• Complimentary bread",
+      "japanese": "• フレッシュジュース（オレンジ、リンゴ、レモン、またはミックスベリー） - 3ドル\n• プレミアムコーヒー - 3ドル\n• 紅茶セレクション - 2.50ドル\n• スムージー（バナナ、イチゴ、またはミックスフルーツ） - 5ドル",
+      "phraseMeaning": "• フレッシュジュース（オレンジ、リンゴ、レモン、またはミックスベリー） - 3ドル\n• プレミアムコーヒー - 3ドル\n• 紅茶セレクション - 2.50ドル\n• スムージー（バナナ、イチゴ、またはミックスフルーツ） - 5ドル",
+      "segments": [
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "tomato",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "sauce",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Noodle",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "soup",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "vegetables",
+          "meaning": {
+            "word": "vegetables",
+            "reading": "(ヴェ́ジタブルの派生)",
+            "meaning": "野菜（複数形）",
+            "etymology": "vegetableの派生形",
+            "relatedWords": "",
+            "category": "食・健康",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": "vegetable"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Choice",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": {
+            "word": "of",
+            "reading": "オブ",
+            "meaning": "〜の",
+            "etymology": "古英語 of から",
+            "relatedWords": [],
+            "category": "前置詞",
+            "difficulty": "beginner",
+            "levels": [
+              "A1",
+              "A2"
+            ],
+            "passages": [
+              "reading"
+            ],
+            "source": "basic_missing"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "salad",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Complimentary",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "bread",
+          "meaning": {
+            "word": "bread",
+            "reading": "ブレ́ッド",
+            "meaning": "パン",
+            "etymology": "古英語 \"bread\"。派生: breadcrumb(ブレッドクラム): パン粉",
+            "relatedWords": "loaf(ロウフ): パン一斤, toast(トウスト): トースト",
+            "category": "食・健康",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "english": "Steak Lunch - $15\n• Grilled steak (medium recommended)\n• Baked potato or french fries\n• Seasonal vegetables (carrot, bean, onion)\n• Soup of the day",
+      "japanese": "食材について",
+      "phraseMeaning": "食材について",
+      "segments": [
+        {
+          "word": "Steak",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Lunch",
+          "meaning": {
+            "word": "lunch",
+            "reading": "ラ́ンチ",
+            "meaning": "昼食",
+            "etymology": "スペイン語 \"lonja\"(スライス)起源説。派生: lunchtime(ラ́ンチタイム): 昼食時 / lunch box(ラ́ンチボックス): 弁当箱",
+            "relatedWords": "breakfast(ブレ́ックファスト): 朝食, dinner(ディ́ナー): 夕食",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "15",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Grilled",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "steak",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "medium",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "recommended",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Baked",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "potato",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "french",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fries",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Seasonal",
+          "meaning": {
+            "word": "seasonal",
+            "reading": "シーズナル",
+            "meaning": "季節の・季節限定の",
+            "etymology": "season（季節）+ -al（形容詞化）。【形態素】語根: son（音） + -al（形容詞化（関連））",
+            "relatedWords": "season(シーズン): 季節, temporary(テンポラリー): 一時的な",
+            "category": "時間・性質",
+            "difficulty": "中級",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "vegetables",
+          "meaning": {
+            "word": "vegetables",
+            "reading": "(ヴェ́ジタブルの派生)",
+            "meaning": "野菜（複数形）",
+            "etymology": "vegetableの派生形",
+            "relatedWords": "",
+            "category": "食・健康",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": "vegetable"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "carrot",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "bean",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "onion",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Soup",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": {
+            "word": "of",
+            "reading": "オブ",
+            "meaning": "〜の",
+            "etymology": "古英語 of から",
+            "relatedWords": [],
+            "category": "前置詞",
+            "difficulty": "beginner",
+            "levels": [
+              "A1",
+              "A2"
+            ],
+            "passages": [
+              "reading"
+            ],
+            "source": "basic_missing"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "the",
+          "meaning": {
+            "word": "the",
+            "reading": "ザ́",
+            "meaning": "その・例の",
+            "etymology": "古英語 \"se\"(その)。派生: the more(ザモア): より一層",
+            "relatedWords": "a(ア): 一つの, this(ジス): この, that(ザット): あの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "day",
+          "meaning": {
+            "word": "day",
+            "reading": "デ́イ",
+            "meaning": "日・昼間",
+            "etymology": "古英語 \"dæg\"。派生: daytime(デ́イタイム): 昼間 / someday(サ́ムデイ): いつか",
+            "relatedWords": "night(ナ́イト): 夜, today(トゥデ́イ): 今日",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "初級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "english": "Vegetarian Pizza - $9\n• Fresh tomato and onion\n• Bell peppers and mushrooms\n• Mozzarella cheese\n• Garden salad included",
+      "japanese": "私たちは、健康的な食事は質の高い食材から始まると信じています。",
+      "phraseMeaning": "私たちは、健康的な食事は質の高い食材から始まると信じています。",
+      "segments": [
+        {
+          "word": "Vegetarian",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Pizza",
+          "meaning": {
+            "word": "pizza",
+            "reading": "ピザ",
+            "meaning": "ピザ",
+            "etymology": "イタリア語 pizza",
+            "relatedWords": "pasta(パスタ): パスタ, bread(ブレッド): パン",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "9",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "tomato",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "onion",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Bell",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "peppers",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "mushrooms",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Mozzarella",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "cheese",
+          "meaning": {
+            "word": "cheese",
+            "reading": "チーズ",
+            "meaning": "チーズ",
+            "etymology": "ラテン語 caseus（チーズ）",
+            "relatedWords": "milk(ミルク): 牛乳, dairy(デアリー): 乳製品",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Garden",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "salad",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "included",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "english": "Snacks & Light Bites (All Day)",
+      "japanese": "マネージャーが毎朝、地元の農家から新鮮な野菜を直接選んでいます。",
+      "phraseMeaning": "マネージャーが毎朝、地元の農家から新鮮な野菜を直接選んでいます。",
+      "segments": [
+        {
+          "word": "Snacks",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Light",
+          "meaning": {
+            "word": "light",
+            "reading": "ラ́イト",
+            "meaning": "光・軽い",
+            "etymology": "古英語 \"lēoht\"(光) / \"līht\"(軽い)。派生: lighting(ラ́イティング): 照明 / lighten(ラ́イトゥン): 明るくする",
+            "relatedWords": "bright(ブラ́イト): 明るい, heavy(ヘ́ヴィ): 重い, (比較級)light(ラ́イト):光・軽い(原級), lighter(ライトー):より光(比較級), lightest(ライトスト):最も光(最上級)",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-4",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Bites",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "All",
+          "meaning": {
+            "word": "all",
+            "reading": "オ́ール",
+            "meaning": "すべての",
+            "etymology": "古英語の \"eall\" が語源。",
+            "relatedWords": "every(エ́ヴリ): すべての, none(ナ́ン): 何もない",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Day",
+          "meaning": {
+            "word": "day",
+            "reading": "デ́イ",
+            "meaning": "日・昼間",
+            "etymology": "古英語 \"dæg\"。派生: daytime(デ́イタイム): 昼間 / someday(サ́ムデイ): いつか",
+            "relatedWords": "night(ナ́イト): 夜, today(トゥデ́イ): 今日",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "初級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "english": "• Cookie platter (chocolate chip, oatmeal, or peanut butter) - $4\n• Fresh fruit bowl (banana, peach, strawberry, melon) - $5\n• Sandwich selection (chicken, tuna, or vegetable) - $6\n• Candy selection for kids - $2",
+      "japanese": "肉類は、品質と新鮮さを保証する信頼できる業者から仕入れています。",
+      "phraseMeaning": "肉類は、品質と新鮮さを保証する信頼できる業者から仕入れています。",
+      "segments": [
+        {
+          "word": "Cookie",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "platter",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "chocolate",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "chip",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "oatmeal",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "peanut",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "butter",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "4",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fruit",
+          "meaning": {
+            "word": "fruit",
+            "reading": "フルーツ",
+            "meaning": "果物",
+            "etymology": "ラテン語 fructus（果実）",
+            "relatedWords": "apple(アップル): リンゴ, vegetable(ベジタブル): 野菜",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "bowl",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "banana",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "peach",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "strawberry",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "melon",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "5",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Sandwich",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "selection",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "chicken",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "tuna",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "vegetable",
+          "meaning": {
+            "word": "vegetable",
+            "reading": "ヴェ́ジタブル",
+            "meaning": "野菜",
+            "etymology": "ラテン語 \"vegetabilis\"(生気のある)。【形態素】語幹: veget + -able（形容詞化（可能））。派生: vegetarian(ヴェジテ́アリアン): 菜食主義者",
+            "relatedWords": "plant(プラ́ント): 植物, produce(プロ́デュース): 農産物",
+            "category": "食・健康",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "6",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Candy",
+          "meaning": {
+            "word": "candy",
+            "reading": "キャンディ",
+            "meaning": "キャンディ・飴",
+            "etymology": "アラビア語 qandi（砂糖）。【形態素】語幹: cand + -y（形容詞化（性質））",
+            "relatedWords": "sweet(スイート): 甘い物, sugar(シュガー): 砂糖",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "selection",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": {
+            "word": "for",
+            "reading": "フォ́ー",
+            "meaning": "〜のために・〜に対して",
+            "etymology": "古英語 \"for\"。派生: for example(フォ́ーエグザ́ンプル): 例えば / for a while(フォ́ーアワ́イル): しばらくの間",
+            "relatedWords": "to(トゥ́ー): 〜へ, because of(ビカ́ズオブ): 〜のために",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "kids",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "2",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "english": "Beverages",
+      "japanese": "シェフは15年以上の経験を持ち、一皿一皿を丁寧に作ります。",
+      "phraseMeaning": "シェフは15年以上の経験を持ち、一皿一皿を丁寧に作ります。",
+      "segments": [
+        {
+          "word": "Beverages",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "english": "• Fresh juice (orange, apple, lemon, or mixed berry) - $3\n• Premium coffee - $3\n• Tea selection - $2.50\n• Smoothies (banana, strawberry, or mixed fruit) - $5",
+      "japanese": "人工的な材料は使わず、自然な味を大切にしています。",
+      "phraseMeaning": "人工的な材料は使わず、自然な味を大切にしています。",
+      "segments": [
+        {
+          "word": "Fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "juice",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "orange",
+          "meaning": {
+            "word": "orange",
+            "reading": "オ́レンジ",
+            "meaning": "オレンジ・オレンジ色",
+            "etymology": "アラビア語 \"naranj\"。派生: orangeade(オレンジェ́イド): オレンジ水 / orange juice(オ́レンジジュース): オレンジジュース",
+            "relatedWords": "fruit(フル́ート): 果物, lemon(レ́モン): レモン",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "apple",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "lemon",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "mixed",
+          "meaning": {
+            "word": "Mixed",
+            "reading": "(ミ́ックスの派生)",
+            "meaning": "混ぜる・混合（過去形・過去分詞）",
+            "etymology": "mixの派生形。【形態素】語幹: mix + -ed（過去形・過去分詞）",
+            "relatedWords": "",
+            "category": "自然・環境",
+            "difficulty": "長文専用",
+            "levels": [
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "auto",
+            "baseWord": "mix"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "berry",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "3",
+          "meaning": {
+            "word": "3",
+            "reading": "-",
+            "meaning": "3（数字）",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Premium",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "coffee",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "3",
+          "meaning": {
+            "word": "3",
+            "reading": "-",
+            "meaning": "3（数字）",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Tea",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "selection",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "2",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "50",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Smoothies",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "banana",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "strawberry",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "mixed",
+          "meaning": {
+            "word": "Mixed",
+            "reading": "(ミ́ックスの派生)",
+            "meaning": "混ぜる・混合（過去形・過去分詞）",
+            "etymology": "mixの派生形。【形態素】語幹: mix + -ed（過去形・過去分詞）",
+            "relatedWords": "",
+            "category": "自然・環境",
+            "difficulty": "長文専用",
+            "levels": [
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "auto",
+            "baseWord": "mix"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fruit",
+          "meaning": {
+            "word": "fruit",
+            "reading": "フルーツ",
+            "meaning": "果物",
+            "etymology": "ラテン語 fructus（果実）",
+            "relatedWords": "apple(アップル): リンゴ, vegetable(ベジタブル): 野菜",
+            "category": "食べ物",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "5",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "english": "About Our Ingredients",
+      "japanese": "すべてが毎日新鮮に調理されます―前日の食材は決して使いません。",
+      "phraseMeaning": "すべてが毎日新鮮に調理されます―前日の食材は決して使いません。",
+      "segments": [
+        {
+          "word": "About",
+          "meaning": {
+            "word": "about",
+            "reading": "アバ́ウト",
+            "meaning": "〜について",
+            "etymology": "古英語の \"onbūtan\"(周りに)が語源。",
+            "relatedWords": "on(オ́ン): 〜の上に, of(オ́ヴ): 〜の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Ingredients",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "english": "We believe healthy food starts with quality ingredients.",
+      "japanese": "特別サービス",
+      "phraseMeaning": "特別サービス",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "believe",
+          "meaning": {
+            "word": "believe",
+            "reading": "ビリ́ーヴ",
+            "meaning": "信じる",
+            "etymology": "古英語の \"gelīfan\" が語源。\"lief\"(愛しい)に由来。派生: belief(ビリ́ーフ): 信念 / believable(ビリ́ーヴァブル): 信じられる",
+            "relatedWords": "trust(トラ́スト): 信頼する, doubt(ダ́ウト): 疑う, (動詞活用)believe(ビリ́ーヴ):信じる(原形), believed(ビリーヴド):信じた(過去形), believed(ビリーヴド):信じられた(過去分詞形), believing(ビリーヴイング):信じること(現在分詞形), believes(ビリーヴズ):信じる(三単現)",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-5"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "healthy",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "food",
+          "meaning": {
+            "word": "food",
+            "reading": "フ́ード",
+            "meaning": "食べ物",
+            "etymology": "古英語 \"fōda\"。派生: seafood(スィ́ーフード): 海産物 / fast food(フ́ァストフード): ファストフード",
+            "relatedWords": "meal(ミ́ール): 食事, dish(デ́ィッシュ): 料理",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-2",
+              "intermediate-4",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "starts",
+          "meaning": {
+            "word": "starts",
+            "reading": "(スタ́ートの派生)",
+            "meaning": "始める（複数形）",
+            "etymology": "startの派生形",
+            "relatedWords": "",
+            "category": "運動・娯楽",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-5"
+            ],
+            "source": "auto",
+            "baseWord": "start"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "quality",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ingredients",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "english": "Our manager personally selects fresh vegetables from local farmers every morning.",
+      "japanese": "予約サービス\n555-0123にお電話いただき、テーブルを予約してください。",
+      "phraseMeaning": "予約サービス\n555-0123にお電話いただき、テーブルを予約してください。",
+      "segments": [
+        {
+          "word": "Our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "manager",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "personally",
+          "meaning": {
+            "word": "personally",
+            "reading": "パーソナリー",
+            "meaning": "個人的に・自ら",
+            "etymology": "personal（個人的な）+ -ly（副詞語尾）。【形態素】語根: son（音） + -ly（副詞化（〜に・〜く））",
+            "relatedWords": [
+              "personal",
+              "individually",
+              "privately",
+              "directly"
+            ],
+            "category": "副詞",
+            "difficulty": "中級",
+            "levels": [
+              "中学2年",
+              "英検3級"
+            ],
+            "passages": [
+              "Communication"
+            ],
+            "source": "batch17"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "selects",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "vegetables",
+          "meaning": {
+            "word": "vegetables",
+            "reading": "(ヴェ́ジタブルの派生)",
+            "meaning": "野菜（複数形）",
+            "etymology": "vegetableの派生形",
+            "relatedWords": "",
+            "category": "食・健康",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": "vegetable"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "from",
+          "meaning": {
+            "word": "from",
+            "reading": "フロ́ム",
+            "meaning": "〜から",
+            "etymology": "古英語 \"fram\"。派生: from now on(フロ́ムナ́ウオン): 今後ずっと / from A to B(フロ́ムエ́ートゥビ́ー): AからBまで",
+            "relatedWords": "since(シ́ンス): 〜以来, out of(ア́ウトオブ): 〜から",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "local",
+          "meaning": {
+            "word": "local",
+            "reading": "ロ́ウカル",
+            "meaning": "地元の・局所的な",
+            "etymology": "ラテン語 \"locus\"(場所)。【形態素】語根: loc（場所） + -al（形容詞化（関連））。派生: locally(ロ́ウカリ): 地元で / localize(ロ́ウカライズ): 局所化する",
+            "relatedWords": "regional(リ́ージョナル): 地方の, native(ネ́イティヴ): 現地の, (比較級)local(ロ́ウカル):地元の・局所的な(原級), more local(モアロウカル):より地元の(比較級), most local(モウストロウカル):最も地元の(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "farmers",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": {
+            "word": "every",
+            "reading": "エ́ヴリ",
+            "meaning": "すべての",
+            "etymology": "古英語 \"ǣfre ǣlc\" の縮約。【形態素】語根: ver（真実） + -y（形容詞化（性質））。派生: everybody(エ́ヴリバディ): みんな / everything(エ́ヴリシング): すべてのこと",
+            "relatedWords": "all(オ́ール): 全ての, each(イ́ーチ): 各々の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "morning",
+          "meaning": {
+            "word": "morning",
+            "reading": "モ́ーニング",
+            "meaning": "朝",
+            "etymology": "中英語 \"morwening\"。【形態素】語幹: morn + -ing（現在分詞・動名詞）。派生: good morning(グッドモ́ーニング): おはよう / morning sickness(モ́ーニングシックネス): つわり",
+            "relatedWords": "afternoon(アフタヌ́ーン): 午後, evening(イ́ーヴニング): 夕方",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "english": "We source our meat from trusted suppliers who guarantee quality and freshness.",
+      "japanese": "特に混雑する週末はお勧めです。",
+      "phraseMeaning": "特に混雑する週末はお勧めです。",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "source",
+          "meaning": {
+            "word": "source",
+            "reading": "ソ́ース",
+            "meaning": "源・情報源",
+            "etymology": "ラテン語 \"surgere\"(湧き上がる)。派生: resource(リソ́ース): 資源 / source code(ソ́ースコウド): ソースコード",
+            "relatedWords": "origin(オ́リジン): 起源, spring(スプリ́ング): 泉",
+            "category": "科学・技術",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "advanced-2.json",
+              "advanced-3.json",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "meat",
+          "meaning": {
+            "word": "meat",
+            "reading": "ミ́ート",
+            "meaning": "肉",
+            "etymology": "古英語 \"mete\"(食べ物)。派生: meatball(ミ́ートボール): 肉団子 / red meat(レ́ッドミート): 赤身肉",
+            "relatedWords": "beef(ビ́ーフ): 牛肉, pork(ポ́ーク): 豚肉",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "from",
+          "meaning": {
+            "word": "from",
+            "reading": "フロ́ム",
+            "meaning": "〜から",
+            "etymology": "古英語 \"fram\"。派生: from now on(フロ́ムナ́ウオン): 今後ずっと / from A to B(フロ́ムエ́ートゥビ́ー): AからBまで",
+            "relatedWords": "since(シ́ンス): 〜以来, out of(ア́ウトオブ): 〜から",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "trusted",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "suppliers",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "who",
+          "meaning": {
+            "word": "who",
+            "reading": "フ́ー",
+            "meaning": "誰",
+            "etymology": "古英語 \"hwa\"。派生: whoever(フーエ́ヴァー): 誰でも",
+            "relatedWords": "whom(フーム): 誰を, whose(フーズ): 誰の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "guarantee",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "quality",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "freshness",
+          "meaning": {
+            "word": "freshness",
+            "reading": "フレッシュネス",
+            "meaning": "新鮮さ",
+            "etymology": "fresh（新鮮な）+ -ness（名詞化）。【形態素】語幹: fresh + -ness（名詞化（〜さ・〜性））",
+            "relatedWords": "fresh(フレッシュ): 新鮮な, quality(クオリティ): 品質",
+            "category": "性質",
+            "difficulty": "中級",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "english": "Our chef has over fifteen years of experience and creates each dish with care.",
+      "japanese": "スタッフが確実にご要望にお応えします。",
+      "phraseMeaning": "スタッフが確実にご要望にお応えします。",
+      "segments": [
+        {
+          "word": "Our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "chef",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "has",
+          "meaning": {
+            "word": "has",
+            "reading": "ハ́ズ",
+            "meaning": "持っている",
+            "etymology": "haveの三人称単数現在形。派生: hasn't(ハ́ズント): 持っていない",
+            "relatedWords": "have(ハヴ): 持っている, had(ハド): 持っていた, (動詞活用)has(ハ́ズ):持っている(原形), hassed(ハズド):持っていた(過去形), hassed(ハズド):持っていられた(過去分詞形), hassing(ハズイング):持っていること(現在分詞形), hases(ハズィズ):持っている(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "over",
+          "meaning": {
+            "word": "over",
+            "reading": "オ́ウヴァー",
+            "meaning": "〜の上に・終わって",
+            "etymology": "古英語 \"ofer\"。派生: overcome(オーヴァカ́ム): 克服する / all over(オ́ールオーヴァー): 至る所に",
+            "relatedWords": "above(アバ́ヴ): 上に, across(アクロ́ス): 横切って",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fifteen",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "years",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "of",
+          "meaning": {
+            "word": "of",
+            "reading": "オブ",
+            "meaning": "〜の",
+            "etymology": "古英語 of から",
+            "relatedWords": [],
+            "category": "前置詞",
+            "difficulty": "beginner",
+            "levels": [
+              "A1",
+              "A2"
+            ],
+            "passages": [
+              "reading"
+            ],
+            "source": "basic_missing"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "experience",
+          "meaning": {
+            "word": "experience",
+            "reading": "イクスピ́アリアンス",
+            "meaning": "経験",
+            "etymology": "ラテン語 \"experiri\"(試す)。【形態素】ex-（外へ・元） + 語幹: peri + -ence（名詞化（状態・行為））。派生: experienced(イクスピ́アリエンスト): 経験豊かな / experiment(イクスペ́リメント): 実験(同根)",
+            "relatedWords": "try(トラ́イ): 試みる, knowledge(ノ́リッジ): 知識",
+            "category": "場所・移動",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "intermediate-4",
+              "advanced-2.json",
+              "advanced-3.json",
+              "intermediate-5"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "creates",
+          "meaning": {
+            "word": "creates",
+            "reading": "(クリエ́イトの派生)",
+            "meaning": "創造する（複数形）",
+            "etymology": "createの派生形",
+            "relatedWords": "",
+            "category": "科学・技術",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": "create"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "each",
+          "meaning": {
+            "word": "each",
+            "reading": "イ́ーチ",
+            "meaning": "それぞれの",
+            "etymology": "古英語 \"ǣlc\"。派生: each other(イ́ーチア́ザー): 互いに / each time(イ́ーチタイム): 毎回",
+            "relatedWords": "every(エ́ヴリ): すべての, per(パ́ー): 〜ごとに",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "dish",
+          "meaning": {
+            "word": "dish",
+            "reading": "ディ́ッシュ",
+            "meaning": "皿・料理",
+            "etymology": "古英語 \"disc\"(皿)。派生: do the dishes(ドゥーザディッシズ): 皿洗いをする",
+            "relatedWords": "plate(プレイト): 皿, meal(ミール): 料理",
+            "category": "食・健康",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-4"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "care",
+          "meaning": {
+            "word": "care",
+            "reading": "ケ́ア",
+            "meaning": "世話・注意",
+            "etymology": "ラテン語の \"cura\"(配慮)が語源。派生: careful(ケ́アフル): 注意深い / carefree(ケ́アフリー): 気楽な",
+            "relatedWords": "take care(テ́イクケア): 気を付ける, caution(コー́ション): 注意",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "english": "We avoid using artificial ingredients and prefer natural flavors.",
+      "japanese": "テイクアウト可能\n店内で食事する時間がありませんか？",
+      "phraseMeaning": "テイクアウト可能\n店内で食事する時間がありませんか？",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "avoid",
+          "meaning": {
+            "word": "avoid",
+            "reading": "アヴォ́イド",
+            "meaning": "避ける",
+            "etymology": "古フランス語 \"esvuidier\"(空にする)。派生: avoidable(アヴォイダブル): 避けられる / avoidance(アヴォイダンス): 回避",
+            "relatedWords": "escape(エスケイプ): 逃れる, prevent(プリヴェント): 防ぐ, (動詞活用)avoid(アヴォ́イド):避ける(原形), avoided(アヴォイドエド):避けた(過去形), avoided(アヴォイドエド):避けられた(過去分詞形), avoiding(アヴォイドイング):避けること(現在分詞形), avoids(アヴォイドズ):避ける(三単現)",
+            "category": "食・健康",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "using",
+          "meaning": {
+            "word": "Using",
+            "reading": "(ア́スの派生)",
+            "meaning": "私たちを・私たちに（現在分詞・動名詞）",
+            "etymology": "usの派生形",
+            "relatedWords": "",
+            "category": "言語基本",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "advanced-2.json",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": "us"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "artificial",
+          "meaning": {
+            "word": "artificial",
+            "reading": "アーティフィ́シャル",
+            "meaning": "人工の・人為的な",
+            "etymology": "ラテン語 \"artificialis\"(技術的な)。【形態素】語幹: artifici + -al（形容詞化（関連））。派生: artificially(アーティフィシャリ): 人工的に / artificial intelligence(アーティフィシャルインテリジェンス): 人工知能",
+            "relatedWords": "synthetic(シンセ́ティック): 合成の, man-made(マンメイド): 人造の, (比較級)artificial(アーティフィ́シャル):人工の・人為的な(原級), more artificial(モアアーティフィシャル):より人工の(比較級), most artificial(モウストアーティフィシャル):最も人工の(最上級)",
+            "category": "人・社会",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "ingredients",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "prefer",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "natural",
+          "meaning": {
+            "word": "natural",
+            "reading": "ナ́チュラル",
+            "meaning": "自然な",
+            "etymology": "ラテン語 \"natura\"(生まれ)。【形態素】語根: nat（生まれる） + -al（形容詞化（関連））。派生: naturally(ナ́チュラリ): 自然に / supernatural(ス́ーパーナチュラル): 超自然的な",
+            "relatedWords": "normal(ノ́ーマル): 正常な, artificial(アーティフィ́シャル): 人工の, (比較級)natural(ナ́チュラル):自然な(原級), more natural(モアナチュラル):より自然な(比較級), most natural(モウストナチュラル):最も自然な(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "flavors",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "english": "Everything is prepared fresh daily—we never serve yesterday's food.",
+      "japanese": "問題ありません！",
+      "phraseMeaning": "問題ありません！",
+      "segments": [
+        {
+          "word": "Everything",
+          "meaning": {
+            "word": "Everything",
+            "reading": "-",
+            "meaning": "Everything（固有名詞）",
+            "etymology": "【形態素】語根: ver（真実） + -ing（現在分詞・動名詞）",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "intermediate-4",
+              "intermediate-5",
+              "beginner-1",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "is",
+          "meaning": {
+            "word": "is",
+            "reading": "イ́ズ",
+            "meaning": "〜です",
+            "etymology": "be動詞の三人称単数現在形。派生: isn't(イ́ズント): 〜ではない",
+            "relatedWords": "am(アム): です, are(アー): です, was(ワズ): でした, (動詞活用)is(イ́ズ):〜です(原形), ised(イズド):〜でした(過去形), ised(イズド):〜でされた(過去分詞形), ising(イズイング):〜ですこと(現在分詞形), ises(イズィズ):〜です(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "prepared",
+          "meaning": {
+            "word": "prepared",
+            "reading": "(プリペ́アーの派生)",
+            "meaning": "準備する（過去形・過去分詞）",
+            "etymology": "prepareの派生形。【形態素】pre-（前に・事前に） + 語幹: par + -ed（過去形・過去分詞）",
+            "relatedWords": "",
+            "category": "人・社会",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-5"
+            ],
+            "source": "auto",
+            "baseWord": "prepare"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "daily",
+          "meaning": {
+            "word": "daily",
+            "reading": "デ́イリー",
+            "meaning": "毎日の・日刊の",
+            "etymology": "古英語 \"dæglīc\"。【形態素】語幹: dai + -ly（副詞化（〜に・〜く））。派生: daily life(デ́イリーライフ): 日常生活 / daily newspaper(デ́イリーニ́ューズペーパー): 日刊紙",
+            "relatedWords": "everyday(エヴリデ́イ): 毎日の, weekly(ウィ́ークリー): 毎週の, (比較級)daily(デ́イリー):毎日の・日刊の(原級), more daily(モアデイリー):より毎日の(比較級), most daily(モウストデイリー):最も毎日の(最上級)",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "—",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "we",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "never",
+          "meaning": {
+            "word": "never",
+            "reading": "ネ́ヴァー",
+            "meaning": "決して〜ない",
+            "etymology": "古英語 \"nǣfre\"。【形態素】語根: ver（真実） + -er（人・もの（〜する人））。派生: never mind(ネ́ヴァーマインド): 気にしないで / nevermore(ネヴァモ́ー): 二度と〜ない",
+            "relatedWords": "ever(エ́ヴァー): いつか, always(オ́ールウェイズ): いつも, (比較級)never(ネ́ヴァー):決して〜ない(原級), neverrer(ネヴァーー):より決して〜ない(比較級), neverrest(ネヴァースト):最も決して〜ない(最上級)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner"
+            ],
+            "passages": [
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-5",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "serve",
+          "meaning": {
+            "word": "serve",
+            "reading": "サ́ーヴ",
+            "meaning": "仕える・出す",
+            "etymology": "ラテン語 \"servire\"(仕える)。派生: service(サ́ーヴィス): サービス / serving(サ́ーヴィング): 給仕",
+            "relatedWords": "help(ヘ́ルプ): 手伝う, provide(プロヴァ́イド): 提供する, (動詞活用)serve(サ́ーヴ):仕える・出す(原形), served(サーヴド):仕えた(過去形), served(サーヴド):仕えられた(過去分詞形), serving(サーヴイング):仕えること(現在分詞形), serves(サーヴズ):仕える(三単現)",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "yesterday's",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "food",
+          "meaning": {
+            "word": "food",
+            "reading": "フ́ード",
+            "meaning": "食べ物",
+            "etymology": "古英語 \"fōda\"。派生: seafood(スィ́ーフード): 海産物 / fast food(フ́ァストフード): ファストフード",
+            "relatedWords": "meal(ミ́ール): 食事, dish(デ́ィッシュ): 料理",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-2",
+              "intermediate-4",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "grammarPoint": "受動態"
+    },
+    {
+      "id": 30,
+      "english": "Special Services",
+      "japanese": "メニューのどの料理でもテイクアウトできます。",
+      "phraseMeaning": "メニューのどの料理でもテイクアウトできます。",
+      "segments": [
+        {
+          "word": "Special",
+          "meaning": {
+            "word": "special",
+            "reading": "スペ́シャル",
+            "meaning": "特別な",
+            "etymology": "ラテン語 \"specialis\"(特定の)。【形態素】語根: spec（見る） + -al（形容詞化（関連））。派生: specially(スペ́シャリ): 特別に / specialty(スペ́シャルティ): 専門",
+            "relatedWords": "particular(パティ́キュラー): 特定の, ordinary(オ́ーディナリ): 普通の, (比較級)special(スペ́シャル):特別な(原級), more special(モアスペシャル):より特別な(比較級), most special(モウストスペシャル):最も特別な(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "初級"
+            ],
+            "passages": [
+              "beginner-2",
+              "intermediate-4",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Services",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "english": "Reservation Service\nCall us at 555-0123 to reserve a table, especially on weekends when we get crowded.",
+      "japanese": "料理を温かく新鮮に保つ容器を提供します。",
+      "phraseMeaning": "料理を温かく新鮮に保つ容器を提供します。",
+      "segments": [
+        {
+          "word": "Reservation",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Service",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Call",
+          "meaning": {
+            "word": "call",
+            "reading": "コ́ール",
+            "meaning": "呼ぶ・電話する",
+            "etymology": "古英語の \"ceallian\" が語源。派生: caller(コ́ーラー): 発信者 / call back(コ́ールバ́ック): 折り返し電話する",
+            "relatedWords": "shout(シャ́ウト): 叫ぶ, phone(フ́ォウン): 電話する, (動詞活用)call(コ́ール):呼ぶ・電話する(原形), called(コールド):呼んだ(過去形), called(コールド):呼ばれた(過去分詞形), calling(コールイング):呼ぶこと(現在分詞形), calls(コールズ):呼ぶ(三単現)",
+            "category": "科学・技術",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "us",
+          "meaning": {
+            "word": "us",
+            "reading": "ア́ス",
+            "meaning": "私たちを・私たちに",
+            "etymology": "weの目的格。派生: with us(ウィズアス): 私たちと一緒に",
+            "relatedWords": "we(ウィー): 私たちは, our(アワー): 私たちの, ourselves(アワセルヴズ): 私たち自身",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "at",
+          "meaning": {
+            "word": "at",
+            "reading": "ア́ト",
+            "meaning": "〜で",
+            "etymology": "古英語の \"æt\" が語源(機能語)。派生: at least(ア́ットリースト): 少なくとも / at first(ア́ットファースト): 最初は",
+            "relatedWords": "in(イ́ン): 〜の中で, on(オ́ン): 〜の上で",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "555",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "0123",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "reserve",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": {
+            "word": "a",
+            "reading": "ア́(エ́イ)",
+            "meaning": "一つの",
+            "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
+            "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "table",
+          "meaning": {
+            "word": "table",
+            "reading": "テ́イブル",
+            "meaning": "テーブル・表",
+            "etymology": "ラテン語 \"tabula\"(板)。派生: tablecloth(テ́イブルクロス): テーブルクロス / table tennis(テ́イブルテニス): 卓球",
+            "relatedWords": "desk(デ́スク): 机, chart(チャ́ート): 図表",
+            "category": "日常生活",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner"
+            ],
+            "passages": [
+              "beginner-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "especially",
+          "meaning": {
+            "word": "especially",
+            "reading": "エスペ́シャリ",
+            "meaning": "特に",
+            "etymology": "ラテン語 \"species\"(種類)。【形態素】語根: spec（見る） + -ly（副詞化（〜に・〜く））。派生: especial(エスペ́シャル): 特別な / specialist(スペ́シャリスト): 専門家(同根)",
+            "relatedWords": "particularly(パティ́キュラリ): 特に, mainly(メ́インリ): 主に, (比較級)especially(エスペ́シャリ):特に(原級), more especially(モアエスペシャリ):より特に(比較級), most especially(モウストエスペシャリ):最も特に(最上級)",
+            "category": "場所・移動",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "on",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "weekends",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "when",
+          "meaning": {
+            "word": "when",
+            "reading": "ウェ́ン",
+            "meaning": "いつ",
+            "etymology": "古英語 \"hwænne\"。派生: whenever(ウェネ́ヴァー): いつでも",
+            "relatedWords": "while(ワイル): 〜する間, then(ゼン): その時, (動詞活用)when(ウェ́ン):いつ(原形), whenned(ウェンド):いった(過去形), whenned(ウェンド):いたれた(過去分詞形), whenning(ウェンイング):いつこと(現在分詞形), whens(ウェンズ):いつ(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "we",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "get",
+          "meaning": {
+            "word": "get",
+            "reading": "ゲ́ット",
+            "meaning": "得る・着く",
+            "etymology": "古英語/古ノルド語。派生: get up(ゲ́ットアッ́プ): 起きる / get to(ゲ́ットトゥ): 到着する",
+            "relatedWords": "obtain(オブテ́イン): 得る, receive(レシ́ーヴ): 受け取る, (動詞活用)get(ゲット):得る・手に入れる, got(ガット):得た, gotten(ガトゥン):得たことがある, gets(ゲッツ):得る(三単現)",
+            "category": "日常生活",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "beginner-3",
+              "advanced-2.json",
+              "intermediate-5",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "crowded",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "grammarPoint": "When節"
+    },
+    {
+      "id": 32,
+      "english": "Our staff will certainly accommodate your needs.",
+      "japanese": "イベントケータリング\nパーティーやビジネスミーティングを計画していますか？",
+      "phraseMeaning": "イベントケータリング\nパーティーやビジネスミーティングを計画していますか？",
+      "segments": [
+        {
+          "word": "Our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "staff",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "will",
+          "meaning": {
+            "word": "will",
+            "reading": "ウィ́ル",
+            "meaning": "〜するだろう",
+            "etymology": "古英語 \"willan\"(望む)。派生: won't(ウォ́ウント): 〜しないだろう",
+            "relatedWords": "would(ウッド): 〜するだろう, shall(シャル): 〜するつもりだ, (動詞活用)will(ウィ́ル):〜するだろう(原形), willed(ウィルド):〜するだろった(過去形), willed(ウィルド):〜するだろわれた(過去分詞形), willing(ウィルイング):〜するだろうこと(現在分詞形), wills(ウィルズ):〜するだろう(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "certainly",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "accommodate",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "your",
+          "meaning": {
+            "word": "your",
+            "reading": "ユ́ア",
+            "meaning": "あなたの",
+            "etymology": "古英語 \"eower\"。派生: yours(ユ́アーズ): あなたのもの",
+            "relatedWords": "you(ユー): あなたは, yourself(ユアセルフ): あなた自身",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "needs",
+          "meaning": {
+            "word": "needs",
+            "reading": "(ニ́ードの派生)",
+            "meaning": "必要とする・必要（複数形）",
+            "etymology": "needの派生形",
+            "relatedWords": "",
+            "category": "学校・学習",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ],
+            "source": "auto",
+            "baseWord": "need"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "english": "Takeout Available\nToo busy to dine in?",
+      "japanese": "カスタマイズされたメニューでケータリングサービスを提供しています。",
+      "phraseMeaning": "カスタマイズされたメニューでケータリングサービスを提供しています。",
+      "segments": [
+        {
+          "word": "Takeout",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Available",
+          "meaning": {
+            "word": "available",
+            "reading": "アヴェ́イラブル",
+            "meaning": "利用できる・入手可能な",
+            "etymology": "avail(役立つ)の形容詞形。【形態素】語幹: avail + -able（形容詞化（可能））。派生: availability(アヴェイラビリティ): 入手可能性",
+            "relatedWords": "obtainable(オブテイナブル): 入手できる, accessible(アクセシブル): 利用しやすい, (動詞活用)available(アヴェ́イラブル):利用できる・入手可能な(原形), availabled(アヴェイラブルド):利用できた(過去形), availabled(アヴェイラブルド):利用できられた(過去分詞形), availabling(アヴェイラブルイング):利用できること(現在分詞形), availables(アヴェイラブルズ):利用できる(三単現), (比較級)available(アヴェ́イラブル):利用できる・入手可能な(原級), more available(モアアヴェイラブル):より利用できる(比較級), most available(モウストアヴェイラブル):最も利用できる(最上級)",
+            "category": "日常生活",
+            "difficulty": "中級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json",
+              "intermediate-5"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Too",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "busy",
+          "meaning": {
+            "word": "busy",
+            "reading": "ビジー",
+            "meaning": "忙しい",
+            "etymology": "古英語 bisig（忙しい）。【形態素】語幹: bus + -y（形容詞化（性質））",
+            "relatedWords": "occupied(オキュパイド): 使用中の, hectic(ヘクティック): 多忙な",
+            "category": "状態",
+            "difficulty": "初級",
+            "levels": [
+              "初級",
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1"
+            ],
+            "source": "manual"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "dine",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "in",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "?",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "english": "No problem!",
+      "japanese": "イベントコーディネーターが完璧なセレクションを作成するためにお手伝いします。",
+      "phraseMeaning": "イベントコーディネーターが完璧なセレクションを作成するためにお手伝いします。",
+      "segments": [
+        {
+          "word": "No",
+          "meaning": {
+            "word": "no",
+            "reading": "ノ́ウ",
+            "meaning": "いいえ・少しも〜ない",
+            "etymology": "古英語 \"nā\"。派生: nobody(ノ́ウバディ): 誰も〜ない / no one(ノ́ウワン): 誰も〜ない",
+            "relatedWords": "yes(イェ́ス): はい, not(ノ́ット): 〜でない, (比較級)no(ノ́ウ):いいえ・少しも〜ない(原級), noer(ノウー):よりいいえ(比較級), noest(ノウスト):最もいいえ(最上級)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "problem",
+          "meaning": {
+            "word": "problem",
+            "reading": "プロ́ブレム",
+            "meaning": "問題",
+            "etymology": "ギリシャ語 \"problema\"(投げかけられたもの)。【形態素】pro-（前へ・賛成） + 語幹: blem。派生: problematic(プロブレマ́ティック): 問題のある / problem-solving(プロ́ブレムソルヴィング): 問題解決",
+            "relatedWords": "issue(イ́シュー): 問題, difficulty(ディ́フィカルティ): 困難",
+            "category": "科学・技術",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "advanced-2.json",
+              "intermediate-5",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "!",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "english": "Order anything from our menu for takeout.",
+      "japanese": "食事制限への対応\nアレルギーや食事制限については、スタッフにお知らせください。",
+      "phraseMeaning": "食事制限への対応\nアレルギーや食事制限については、スタッフにお知らせください。",
+      "segments": [
+        {
+          "word": "Order",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "anything",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "from",
+          "meaning": {
+            "word": "from",
+            "reading": "フロ́ム",
+            "meaning": "〜から",
+            "etymology": "古英語 \"fram\"。派生: from now on(フロ́ムナ́ウオン): 今後ずっと / from A to B(フロ́ムエ́ートゥビ́ー): AからBまで",
+            "relatedWords": "since(シ́ンス): 〜以来, out of(ア́ウトオブ): 〜から",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "menu",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": {
+            "word": "for",
+            "reading": "フォ́ー",
+            "meaning": "〜のために・〜に対して",
+            "etymology": "古英語 \"for\"。派生: for example(フォ́ーエグザ́ンプル): 例えば / for a while(フォ́ーアワ́イル): しばらくの間",
+            "relatedWords": "to(トゥ́ー): 〜へ, because of(ビカ́ズオブ): 〜のために",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "takeout",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "english": "We provide containers that keep food hot and fresh.",
+      "japanese": "ほとんどの料理をご要望に合わせて変更できます。",
+      "phraseMeaning": "ほとんどの料理をご要望に合わせて変更できます。",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "provide",
+          "meaning": {
+            "word": "provide",
+            "reading": "プロヴァ́イド",
+            "meaning": "提供する",
+            "etymology": "ラテン語 \"providere\"(前もって見る)。【形態素】pro-（前へ・賛成） + 語根: vid（見る）。派生: provider(プロヴァ́イダー): 提供者 / provision(プロヴィ́ジョン): 供給",
+            "relatedWords": "supply(サプラ́イ): 供給する, offer(オ́ファー): 提供する, (動詞活用)provide(プロヴァ́イド):提供する(原形), provided(プロヴァイドエド):提供した(過去形), provided(プロヴァイドエド):提供された(過去分詞形), providing(プロヴァイドイング):提供すること(現在分詞形), provides(プロヴァイドズ):提供する(三単現)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "containers",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "that",
+          "meaning": {
+            "word": "that",
+            "reading": "ザ́ット",
+            "meaning": "あれ・あの",
+            "etymology": "古英語 \"thæt\"。派生: that one(ザットワン): あれ",
+            "relatedWords": "this(ジス): これ, those(ゾウズ): あれら",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "keep",
+          "meaning": {
+            "word": "keep",
+            "reading": "キ́ープ",
+            "meaning": "保つ・飼う",
+            "etymology": "古英語 \"cēpan\"。派生: keeper(キ́ーパー): 番人 / keep on(キ́ープオ́ン): 続ける",
+            "relatedWords": "hold(ホ́ウルド): 保持する, maintain(メインテ́イン): 維持する, (動詞活用)keep(キ́ープ):保つ・飼う(原形), kept(ケプト):保った(過去形), kept(ケプト):保った(過去分詞形), keeping(キーピング):保つこと(現在分詞形), keeps(キープス):保つ(三単現)",
+            "category": "人・社会",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-1",
+              "intermediate-5",
+              "intermediate-4",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "food",
+          "meaning": {
+            "word": "food",
+            "reading": "フ́ード",
+            "meaning": "食べ物",
+            "etymology": "古英語 \"fōda\"。派生: seafood(スィ́ーフード): 海産物 / fast food(フ́ァストフード): ファストフード",
+            "relatedWords": "meal(ミ́ール): 食事, dish(デ́ィッシュ): 料理",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-2",
+              "intermediate-4",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "hot",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "fresh",
+          "meaning": {
+            "word": "Fresh",
+            "reading": "-",
+            "meaning": "Fresh（固有名詞）",
+            "etymology": "【形態素】語幹: fresh",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-3"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ],
+      "grammarPoint": "that節"
+    },
+    {
+      "id": 37,
+      "english": "Catering for Events\nPlanning a party or business meeting?",
+      "japanese": "ベジタリアンやグルテンフリーのオプションは常に用意しています。",
+      "phraseMeaning": "ベジタリアンやグルテンフリーのオプションは常に用意しています。",
+      "segments": [
+        {
+          "word": "Catering",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "for",
+          "meaning": {
+            "word": "for",
+            "reading": "フォ́ー",
+            "meaning": "〜のために・〜に対して",
+            "etymology": "古英語 \"for\"。派生: for example(フォ́ーエグザ́ンプル): 例えば / for a while(フォ́ーアワ́イル): しばらくの間",
+            "relatedWords": "to(トゥ́ー): 〜へ, because of(ビカ́ズオブ): 〜のために",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Events",
+          "meaning": {
+            "word": "events",
+            "reading": "(イヴェ́ントの派生)",
+            "meaning": "出来事・イベント（複数形）",
+            "etymology": "eventの派生形",
+            "relatedWords": "",
+            "category": "人・社会",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-1",
+              "intermediate-5",
+              "intermediate-4"
+            ],
+            "source": "auto",
+            "baseWord": "event"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Planning",
+          "meaning": {
+            "word": "planning",
+            "reading": "(プラ́ンの派生)",
+            "meaning": "計画・計画する（現在分詞・動名詞）",
+            "etymology": "planの派生形。【形態素】語幹: plann + -ing（現在分詞・動名詞）",
+            "relatedWords": "",
+            "category": "時間・数量",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-3",
+              "intermediate-5",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": "plan"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "a",
+          "meaning": {
+            "word": "a",
+            "reading": "ア́(エ́イ)",
+            "meaning": "一つの",
+            "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
+            "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "party",
+          "meaning": {
+            "word": "party",
+            "reading": "パ́ーティ",
+            "meaning": "パーティー・政党",
+            "etymology": "ラテン語 \"pars\"(部分)。【形態素】語幹: par + -ty（名詞化（性質））。派生: political party(ポリ́ティカルパーティ): 政党 / party member(パ́ーティメンバー): 党員",
+            "relatedWords": "celebration(セレブレ́イション): 祝賀, group(グル́ープ): 集団",
+            "category": "運動・娯楽",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-2.json"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "business",
+          "meaning": {
+            "word": "business",
+            "reading": "ビジネス",
+            "meaning": "事業・商売・仕事",
+            "etymology": "古英語 bisignis（忙しさ） ←  bisy（忙しい）。【形態素】語幹: busi + -ness（名詞化（〜さ・〜性））",
+            "relatedWords": [
+              "company",
+              "trade",
+              "commerce",
+              "enterprise"
+            ],
+            "category": "名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中学2年",
+              "英検3級"
+            ],
+            "passages": [
+              "Sustainable Society"
+            ],
+            "source": "batch15"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "meeting",
+          "meaning": {
+            "word": "Meeting",
+            "reading": "(ミ́ートの派生)",
+            "meaning": "会う・出会う（現在分詞・動名詞）",
+            "etymology": "meetの派生形。【形態素】語幹: meet + -ing（現在分詞・動名詞）",
+            "relatedWords": "",
+            "category": "人・社会",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-4"
+            ],
+            "source": "auto",
+            "baseWord": "meet"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "?",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "english": "We offer catering services with customized menus.",
+      "japanese": "お子様歓迎！",
+      "phraseMeaning": "お子様歓迎！",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "offer",
+          "meaning": {
+            "word": "offer",
+            "reading": "オ́ファー",
+            "meaning": "提供する・申し出",
+            "etymology": "ラテン語 \"offerre\"。【形態素】語根: fer（運ぶ） + -er（人・もの（〜する人））。派生: offering(オ́ファリング): 提供物 / special offer(スペ́シャルオファー): 特別提供",
+            "relatedWords": "provide(プロヴァ́イド): 提供する, give(ギ́ヴ): 与える, (動詞活用)offer(オ́ファー):提供する・申し出(原形), offerred(オファード):提供した(過去形), offerred(オファード):提供された(過去分詞形), offerring(オファーイング):提供すること(現在分詞形), offers(オファーズ):提供する(三単現)",
+            "category": "科学・技術",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-1",
+              "intermediate-4",
+              "intermediate-5",
+              "advanced-3.json"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "catering",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "services",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "customized",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "menus",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "english": "Our event coordinator will work with you to create the perfect selection.",
+      "japanese": "ご家族連れ大歓迎です！",
+      "phraseMeaning": "ご家族連れ大歓迎です！",
+      "segments": [
+        {
+          "word": "Our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "event",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "coordinator",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "will",
+          "meaning": {
+            "word": "will",
+            "reading": "ウィ́ル",
+            "meaning": "〜するだろう",
+            "etymology": "古英語 \"willan\"(望む)。派生: won't(ウォ́ウント): 〜しないだろう",
+            "relatedWords": "would(ウッド): 〜するだろう, shall(シャル): 〜するつもりだ, (動詞活用)will(ウィ́ル):〜するだろう(原形), willed(ウィルド):〜するだろった(過去形), willed(ウィルド):〜するだろわれた(過去分詞形), willing(ウィルイング):〜するだろうこと(現在分詞形), wills(ウィルズ):〜するだろう(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "work",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "with",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "you",
+          "meaning": {
+            "word": "you",
+            "reading": "ユ́ー",
+            "meaning": "あなたは・あなたたちは",
+            "etymology": "古英語 \"eow\"。派生: yourself(ユアセ́ルフ): あなた自身",
+            "relatedWords": "your(ユ́ア): あなたの, yours(ユ́アーズ): あなたのもの, (代名詞)you(ユー):あなたは(主格), your(ユア):あなたの(所有形容詞), you(ユー):あなたを・あなたに(目的格), yours(ユアズ):あなたのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "create",
+          "meaning": {
+            "word": "create",
+            "reading": "クリエ́イト",
+            "meaning": "創造する",
+            "etymology": "ラテン語 \"creare\"(生み出す)が語源。【形態素】語幹: cre + -ate（動詞化・形容詞化）。派生: creative(クリエ́イティブ): 創造的な / creature(クリー́チャー): 生き物",
+            "relatedWords": "make(メ́イク): 作る, produce(プロデュ́ース): 生み出す, (動詞活用)create(クリエ́イト):創造する(原形), created(クリエイトエド):創造した(過去形), created(クリエイトエド):創造された(過去分詞形), creating(クリエイティング):創造すること(現在分詞形), creates(クリエイトス):創造する(三単現)",
+            "category": "科学・技術",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "the",
+          "meaning": {
+            "word": "the",
+            "reading": "ザ́",
+            "meaning": "その・例の",
+            "etymology": "古英語 \"se\"(その)。派生: the more(ザモア): より一層",
+            "relatedWords": "a(ア): 一つの, this(ジス): この, that(ザット): あの",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "perfect",
+          "meaning": {
+            "word": "perfect",
+            "reading": "パ́ーフェクト",
+            "meaning": "完璧な",
+            "etymology": "ラテン語 \"perfectus\"(完成した)。派生: perfection(パフェ́クション): 完璧 / perfectly(パ́ーフェクトリ): 完璧に",
+            "relatedWords": "ideal(アイデ́ィアル): 理想的な, flawless(フロ́ーレス): 欠点のない, (比較級)perfect(パ́ーフェクト):完璧な(原級), more perfect(モアパーフェクト):より完璧な(比較級), most perfect(モウストパーフェクト):最も完璧な(最上級)",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "intermediate-3",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "selection",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "english": "Dietary Accommodations\nPlease inform our staff about any allergies or dietary restrictions.",
+      "japanese": "ほとんどの料理について、お子様用サイズを半額で提供しています。",
+      "phraseMeaning": "ほとんどの料理について、お子様用サイズを半額で提供しています。",
+      "segments": [
+        {
+          "word": "Dietary",
+          "meaning": {
+            "word": "Dietary",
+            "reading": "-",
+            "meaning": "Dietary（固有名詞）",
+            "etymology": "【形態素】語幹: diet + -ary（形容詞化（関連））",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-3.json"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Accommodations",
+          "meaning": {
+            "word": "Accommodations",
+            "reading": "-",
+            "meaning": "Accommodations（固有名詞）",
+            "etymology": "【形態素】語幹: accommodations",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-3.json"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Please",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "inform",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "our",
+          "meaning": {
+            "word": "our",
+            "reading": "ア́ワー",
+            "meaning": "私たちの",
+            "etymology": "古英語 \"ure\"。派生: ours(ア́ワーズ): 私たちのもの",
+            "relatedWords": "we(ウィー): 私たちは, us(アス): 私たちを",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "staff",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "about",
+          "meaning": {
+            "word": "about",
+            "reading": "アバ́ウト",
+            "meaning": "〜について",
+            "etymology": "古英語の \"onbūtan\"(周りに)が語源。",
+            "relatedWords": "on(オ́ン): 〜の上に, of(オ́ヴ): 〜の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "any",
+          "meaning": {
+            "word": "any",
+            "reading": "エ́ニ",
+            "meaning": "いくつかの",
+            "etymology": "古英語の \"ǣnig\" が語源。\"one\" から派生。",
+            "relatedWords": "some(サ́ム): いくつかの, no(ノ́ウ): 少しも〜ない",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced"
+            ],
+            "passages": [
+              "intermediate-4",
+              "intermediate-5",
+              "advanced-3.json",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "allergies",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "or",
+          "meaning": {
+            "word": "or",
+            "reading": "オ́ー",
+            "meaning": "または・さもないと",
+            "etymology": "古英語 \"oththe\"。派生: or else(オ́ーエ́ルス): さもないと / or so(オ́ーソウ): およそ\"",
+            "relatedWords": "and(ア́ンド): そして, either(イ́ーザー): どちらか",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "dietary",
+          "meaning": {
+            "word": "Dietary",
+            "reading": "-",
+            "meaning": "Dietary（固有名詞）",
+            "etymology": "【形態素】語幹: diet + -ary（形容詞化（関連））",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "levels": [
+              "Advanced"
+            ],
+            "passages": [
+              "advanced-3.json"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "restrictions",
+          "meaning": {
+            "word": "restrictions",
+            "reading": "リストリクションズ",
+            "meaning": "制限・規制（restrictionの複数形）",
+            "etymology": "restrict（制限する）+ -ion（名詞）+ -s（複数）。【形態素】re-（再び・戻って） + 語幹: strictions",
+            "relatedWords": [
+              "restriction",
+              "limitation",
+              "constraint",
+              "regulation"
+            ],
+            "category": "名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中学3年",
+              "英検準2級"
+            ],
+            "passages": [
+              "General"
+            ],
+            "source": "batch21"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "english": "We can modify most dishes to meet your needs.",
+      "japanese": "小さなお子様が楽しめるように、塗り絵とクレヨンも用意しています。",
+      "phraseMeaning": "小さなお子様が楽しめるように、塗り絵とクレヨンも用意しています。",
+      "segments": [
+        {
+          "word": "We",
+          "meaning": {
+            "word": "we",
+            "reading": "ウィ́ー",
+            "meaning": "私たちは",
+            "etymology": "古英語 \"we\"。派生: ourselves(アワセ́ルヴズ): 私たち自身",
+            "relatedWords": "us(ア́ス): 私たちを, our(ア́ワー): 私たちの, (代名詞)we(ウィー):私たちは(主格), our(アワー):私たちの(所有形容詞), us(アス):私たちを・私たちに(目的格), ours(アワーズ):私たちのもの(所有代名詞)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "beginner",
+              "初級",
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "can",
+          "meaning": {
+            "word": "can",
+            "reading": "キャ́ン",
+            "meaning": "〜できる・缶",
+            "etymology": "ラテン語 \"cannabis/canna\"(容器)とゲルマン系動詞の二系統。派生: canned(キャ́ンド): 缶詰の / cannot(キャノ́ット): 〜できない",
+            "relatedWords": "able(エ́イブル): 〜できる, tin(ティ́ン): 缶, (動詞活用)can(キャ́ン):〜できる・缶(原形), canned(キャンド):〜できた(過去形), canned(キャンド):〜できられた(過去分詞形), canning(キャンイング):〜できること(現在分詞形), cans(キャンズ):〜できる(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "modify",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "most",
+          "meaning": {
+            "word": "most",
+            "reading": "モ́ウスト",
+            "meaning": "最も多くの",
+            "etymology": "古英語 \"mǣst\"。派生: mostly(モ́ウストリ): 大部分は / at most(アットモ́ウスト): せいぜい",
+            "relatedWords": "majority(マジョ́リティ): 大多数, least(リ́ースト): 最も少ない",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "dishes",
+          "meaning": {
+            "word": "dishes",
+            "reading": "(ディ́ッシュの派生)",
+            "meaning": "皿・料理（複数形）",
+            "etymology": "dishの派生形。【形態素】dis-（否定・反対・分離） + 語幹: hes",
+            "relatedWords": "",
+            "category": "食・健康",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級"
+            ],
+            "passages": [
+              "intermediate-4"
+            ],
+            "source": "auto",
+            "baseWord": "dish"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "meet",
+          "meaning": {
+            "word": "meet",
+            "reading": "ミ́ート",
+            "meaning": "会う・出会う",
+            "etymology": "古英語 \"mētan\"。派生: meeting(ミ́ーティング): 会議 / meet with(ミ́ートウィズ): 〜に会う",
+            "relatedWords": "encounter(エンカ́ウンター): 出会う, see(スィ́ー): 会う, (動詞活用)meet(ミ́ート):会う・出会う(原形), met(メット):会った(過去形), met(メット):会った(過去分詞形), meeting(ミーティング):会うこと(現在分詞形), meets(ミーツ):会う(三単現)",
+            "category": "人・社会",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "beginner",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "beginner-1",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "your",
+          "meaning": {
+            "word": "your",
+            "reading": "ユ́ア",
+            "meaning": "あなたの",
+            "etymology": "古英語 \"eower\"。派生: yours(ユ́アーズ): あなたのもの",
+            "relatedWords": "you(ユー): あなたは, yourself(ユアセルフ): あなた自身",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級",
+              "初級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "needs",
+          "meaning": {
+            "word": "needs",
+            "reading": "(ニ́ードの派生)",
+            "meaning": "必要とする・必要（複数形）",
+            "etymology": "needの派生形",
+            "relatedWords": "",
+            "category": "学校・学習",
+            "difficulty": "長文専用",
+            "levels": [
+              "中級",
+              "Advanced",
+              "上級"
+            ],
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ],
+            "source": "auto",
+            "baseWord": "need"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    }
+  ]
+}

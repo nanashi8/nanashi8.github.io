@@ -14,7 +14,7 @@
           "choices": ["play", "plays", "played", "playing"],
           "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "主語がHe（三人称単数）で現在の習慣を表すため、動詞にsを付けます。",
+          "explanation": "三人称単数現在形は動詞に-sを付けます。主語がHe（彼＝三人称単数）で、every day（毎日）という現在の習慣を表すため、playにsを付けてplaysとします。I/You/We/Theyならplayのままですが、He/She/Itは必ず-sを付けるルールです。Playedは過去形、playingは進行形なので不適切です。",
           "hint": "三人称単数現在形は動詞に-sを付ける"
         },
         {
@@ -25,7 +25,7 @@
           "choices": ["study", "studies", "studied", "studying"],
           "correctAnswer": "studies",
           "difficulty": "beginner",
-          "explanation": "主語がShe（三人称単数）なので、studyのyをiに変えてesを付けます。",
+          "explanation": "子音+yで終わる動詞の三人称単数現在形は、yをiに変えて-esを付けます。Studyは「子音d + y」で終わるため、yをiに変えてstudiesとします。主語がShe（三人称単数）で現在の習慣なので三人称単数現在形が必要です。もしplayのように「母音a + y」で終わる動詞なら、そのまま-sを付けてplaysとなります。この違いを覚えましょう。",
           "hint": "子音+yで終わる動詞は、yをiに変えてesを付ける"
         },
         {
@@ -36,7 +36,7 @@
           "choices": ["drive", "drives", "drove", "driving"],
           "correctAnswer": "drives",
           "difficulty": "beginner",
-          "explanation": "My father（三人称単数）が主語なので、動詞にsを付けます。",
+          "explanation": "My father（私の父）は三人称単数なので、動詞に-sを付けます。Father、Mother、Tomなど特定の人物はすべて三人称単数です。現在の習慣を表すので現在形を使います。Driveにsを付けてdrivesが正解です。Droveは過去形、drivingは進行形なので文脈に合いません。三人称単数のときだけ動詞が変化することを意識しましょう。",
           "hint": "三人称単数現在形"
         },
         {
@@ -47,7 +47,7 @@
           "choices": ["have", "has", "had", "having"],
           "correctAnswer": "has",
           "difficulty": "intermediate",
-          "explanation": "haveの三人称単数現在形は不規則でhasになります。",
+          "explanation": "Haveの三人称単数現在形は不規則でhasになります。通常は動詞に-sを付けますが、haveだけは特別にhasという形に変わります。主語がTom（三人称単数）で現在の習慣なので、hasが正解です。Hadは過去形、havingは進行形です。Have、Do、Goなど頻出動詞の不規則変化は個別に覚える必要があります。Has breakfast（朝食を食べる）は重要表現です。",
           "hint": "haveの三人称単数形は不規則"
         },
         {
@@ -58,7 +58,7 @@
           "choices": ["like", "likes", "liked", "liking"],
           "correctAnswer": "likes",
           "difficulty": "beginner",
-          "explanation": "主語がShe（三人称単数）なので、動詞にsを付けます。",
+          "explanation": "主語がShe（三人称単数）で現在の状態を表すため、動詞に-sを付けます。Likeにsを付けてlikesが正解です。「好き」という状態は現在形で表現します。Likedは過去形「好きだった」、likingは進行形ですが、感情や状態を表す動詞は通常進行形にしません。I like / You like / We like / They likeに対して、He likes / She likes / It likesと三人称単数だけ形が変わります。",
           "hint": "三人称単数現在形は-s"
         },
         {
@@ -69,7 +69,7 @@
           "choices": ["run", "runs", "ran", "running"],
           "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "My dog（三人称単数）が主語なので、動詞にsを付けます。",
+          "explanation": "My dog（私の犬）は三人称単数（it扱い）なので、動詞に-sを付けます。動物や物はitで表すため三人称単数です。Runにsを付けてrunsが正解です。Ranは過去形、runningは進行形です。「速く走る」という習性や能力を表すので現在形を使います。Dogs run（複数）に対して、A dog runs（単数）と区別できるようにしましょう。Fastは「速く」という副詞です。",
           "hint": "三人称単数現在形"
         }
       ]
@@ -86,7 +86,7 @@
           "choices": ["watch", "watches", "watched", "watching"],
           "correctAnswer": "watched",
           "difficulty": "beginner",
-          "explanation": "yesterdayがあるので過去形。規則動詞はedを付けます。",
+          "explanation": "規則動詞の過去形は-edを付けます。Yesterday（昨日）という過去を表す語があるため過去形が必要です。Watchに-edを付けてwatchedとします。規則動詞は現在形に-edを付けるだけでOKです。Watchesは三人称単数現在形、watchingは進行形なので不適切です。過去を表す語（yesterday、last week、ago等）を見つけたら過去形を使うと覚えましょう。Watch TV（テレビを見る）は頻出表現です。",
           "hint": "過去を表す語があるので過去形"
         },
         {
@@ -97,7 +97,7 @@
           "choices": ["study", "studies", "studied", "studying"],
           "correctAnswer": "studied",
           "difficulty": "beginner",
-          "explanation": "last weekがあるので過去形。studyはyをiに変えてedを付けます。",
+          "explanation": "子音+yで終わる動詞の過去形は、yをiに変えて-edを付けます。Last week（先週）があるので過去形が必要です。Studyは「子音d + y」で終わるため、yをiに変えてstudiedとします。もしplayのように「母音a + y」で終わる動詞なら、そのまま-edを付けてplayedとなります。Studiesは三人称単数現在形、studyingは進行形です。Try→tried、cry→criedなども同じパターンです。",
           "hint": "子音+yで終わる動詞は、yをiに変えてed"
         },
         {
@@ -108,7 +108,7 @@
           "choices": ["play", "plays", "played", "playing"],
           "correctAnswer": "played",
           "difficulty": "beginner",
-          "explanation": "過去の出来事なので過去形。playにedを付けます。",
+          "explanation": "規則動詞の過去形は-edを付けます。過去の出来事を述べているので過去形が必要です。Playに-edを付けてplayedとします。主語がWeでもIでもHeでも、過去形は同じ形を使います（現在形のように主語によって変化しません）。Playsは三人称単数現在形、playingは進行形です。In the park（公園で）という場所を表す表現も覚えましょう。Play soccer（サッカーをする）は頻出表現です。",
           "hint": "規則動詞の過去形は-ed"
         },
         {
@@ -119,7 +119,7 @@
           "choices": ["help", "helps", "helped", "helping"],
           "correctAnswer": "helped",
           "difficulty": "beginner",
-          "explanation": "過去の出来事なので過去形。helpにedを付けます。",
+          "explanation": "規則動詞の過去形は-edを付けます。「助けてくれました」という過去の出来事なので過去形が必要です。Helpに-edを付けてhelpedとします。過去形は主語に関係なく同じ形です（I helped / You helped / He helped / They helped）。Helpsは三人称単数現在形、helpingは進行形です。Help me（私を助ける）という重要表現も覚えましょう。過去形の-edは[t]または[d]と発音されます。",
           "hint": "過去形は-ed"
         }
       ]
@@ -136,7 +136,7 @@
           "choices": ["go", "goes", "went", "gone"],
           "correctAnswer": "went",
           "difficulty": "beginner",
-          "explanation": "yesterdayがあるので過去形。goの過去形はwentです（不規則）。",
+          "explanation": "Goの過去形はwentという不規則変化です。Yesterday（昨日）があるので過去形が必要です。規則動詞はgo→goedとなりそうですが、実際はwentという全く違う形に変わります。これは頻出の不規則動詞なので暗記が必要です。Goesは三人称単数現在形、goneは過去分詞（現在完了で使用）です。Go to ～（～へ行く）は基本表現です。不規則動詞は個別に覚えるしかありません。",
           "hint": "goの過去形はwent"
         },
         {
@@ -147,7 +147,7 @@
           "choices": ["have", "has", "had", "having"],
           "correctAnswer": "had",
           "difficulty": "beginner",
-          "explanation": "過去の出来事。haveの過去形はhadです（不規則）。",
+          "explanation": "Haveの過去形はhadという不規則変化です。「食べました」という過去の出来事なので過去形が必要です。Have→havedではなく、hadという形に変わります。Hasは三人称単数現在形、havingは進行形です。過去形hadは主語に関係なく同じ形を使います（I had / She had / They had）。Have breakfast（朝食を食べる）は重要表現です。Haveは「持つ」以外に「食べる」の意味でも使います。",
           "hint": "haveの過去形はhad"
         },
         {
@@ -158,7 +158,7 @@
           "choices": ["sleep", "sleeps", "slept", "sleeping"],
           "correctAnswer": "slept",
           "difficulty": "intermediate",
-          "explanation": "last nightがあるので過去形。sleepの過去形はsleptです。",
+          "explanation": "Sleepの過去形はsleptという不規則変化です。Last night（昨夜）があるので過去形が必要です。Sleep→sleepedではなく、sleptという形に変わります。Eが1つ減ってtが付く変化パターンです。Keep→kept、feel→feltなども同じパターンです。Sleepsは三人称単数現在形、sleepingは進行形です。Sleep well（よく眠る）は頻出表現です。不規則動詞は似たパターンでグループ化して覚えると効率的です。",
           "hint": "sleepの過去形はslept"
         },
         {
@@ -169,7 +169,7 @@
           "choices": ["play", "plays", "played", "playing"],
           "correctAnswer": "played",
           "difficulty": "beginner",
-          "explanation": "過去の出来事。playは規則動詞なのでedを付けます。",
+          "explanation": "Playは規則動詞なので過去形は-edを付けます。「しました」という過去の出来事なので過去形が必要です。Playに-edを付けてplayedとします。不規則動詞のカテゴリーに入っていますが、実は規則動詞です（区別の練習問題）。Playsは三人称単数現在形、playingは進行形です。Play baseball（野球をする）はスポーツ名の前に冠詞を付けないルールです。規則動詞と不規則動詞の見分けが重要です。",
           "hint": "規則動詞の過去形"
         },
         {
@@ -180,7 +180,7 @@
           "choices": ["read", "reads", "red", "reading"],
           "correctAnswer": "read",
           "difficulty": "intermediate",
-          "explanation": "readの過去形はreadで、つづりは同じですが発音が異なります（レッド）。",
+          "explanation": "Readの過去形はreadで、綴りは現在形と同じですが発音が異なります。現在形read[ri:d]（リード）→過去形read[red]（レッド）と変化します。綴りが同じなので紛らわしいですが、文脈で判断します。過去を表す語がなくても「読みました」という日本語から過去形と分かります。Readsは三人称単数現在形、redは色の「赤」なので誤りです。Readingは進行形です。Read a book（本を読む）は基本表現です。",
           "hint": "readの過去形はreadだが発音が変わる"
         },
         {
@@ -191,7 +191,7 @@
           "choices": ["come", "comes", "came", "coming"],
           "correctAnswer": "came",
           "difficulty": "beginner",
-          "explanation": "comeの過去形はcameです（不規則）。",
+          "explanation": "Comeの過去形はcameという不規則変化です。「来ました」という過去の出来事なので過去形が必要です。Come→comedではなく、cameという形に変わります。Become→becameも同じパターンです。Comesは三人称単数現在形、comingは進行形です。Comeは「来る」という移動動詞で、go（行く）と対比して覚えましょう。Come-came-come（原形-過去形-過去分詞）と活用を覚えます。",
           "hint": "comeの過去形はcame"
         },
         {
@@ -202,7 +202,7 @@
           "choices": ["see", "sees", "saw", "seen"],
           "correctAnswer": "saw",
           "difficulty": "beginner",
-          "explanation": "seeの過去形はsawです（不規則）。",
+          "explanation": "Seeの過去形はsawという不規則変化です。「見ました」という過去の出来事なので過去形が必要です。See→seedではなく、sawという形に変わります。Seesは三人称単数現在形、seenは過去分詞（現在完了で使用）です。See a movie（映画を見る）はwatch a movieとも言えます。Seeは「見る」「会う」の意味があります。See-saw-seen（原形-過去形-過去分詞）と活用を覚えましょう。",
           "hint": "seeの過去形はsaw"
         },
         {
@@ -213,7 +213,7 @@
           "choices": ["run", "runs", "ran", "running"],
           "correctAnswer": "ran",
           "difficulty": "beginner",
-          "explanation": "runの過去形はranです（不規則）。",
+          "explanation": "Runの過去形はranという不規則変化です。「走りました」という過去の出来事なので過去形が必要です。Run→runedではなく、ranという形に変わります。母音が変化するパターン（u→a）です。Runsは三人称単数現在形、runningは進行形です。Run-ran-run（原形-過去形-過去分詞）と活用を覚えます。Come-came-comeと似たパターンですが、過去分詞がrunに戻ることに注意しましょう。",
           "hint": "runの過去形はran"
         }
       ]
@@ -230,7 +230,7 @@
           "choices": ["study", "studies", "studied", "is studying"],
           "correctAnswer": "is studying",
           "difficulty": "beginner",
-          "explanation": "nowがあるので現在進行形。be動詞 + -ingの形にします。",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。Now（今）があるので「今まさに～している」という現在進行形が必要です。主語がHe（三人称単数）なので、be動詞はisを使い、studyにingを付けてis studyingとします。現在形studiesは習慣、過去形studiedは過去の出来事を表すため不適切です。現在進行形は「今この瞬間の動作」を表します。Now、at the momentなどの語と一緒によく使われます。",
           "hint": "現在進行形はbe + -ing"
         },
         {
@@ -241,7 +241,7 @@
           "choices": ["play", "plays", "played", "are playing"],
           "correctAnswer": "are playing",
           "difficulty": "beginner",
-          "explanation": "今していることなので現在進行形。主語がWeなのでare playing。",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「今している」という現在進行形が必要です。主語がWe（複数）なので、be動詞はareを使い、playにingを付けてare playingとします。Playは現在形（習慣）、playsは三人称単数現在形、playedは過去形なので文脈に合いません。Be動詞は主語によって変わります（I am / You are / He is / We are / They are）。この使い分けが重要です。",
           "hint": "We + are + -ing"
         },
         {
@@ -252,7 +252,7 @@
           "choices": ["watch", "watches", "watched", "is watching"],
           "correctAnswer": "is watching",
           "difficulty": "beginner",
-          "explanation": "今していることなので現在進行形。She + is + -ing。",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「見ています」という現在進行形が必要です。主語がShe（三人称単数）なので、be動詞はisを使い、watchにingを付けてis watchingとします。Watchは現在形、watchesは三人称単数現在形、watchedは過去形です。Watch TV（テレビを見る）は頻出表現です。現在進行形は動作の最中を表すので、「今まさに見ている」という臨場感があります。",
           "hint": "She + is + -ing"
         },
         {
@@ -263,7 +263,7 @@
           "choices": ["listen", "listens", "listened", "am listening"],
           "correctAnswer": "am listening",
           "difficulty": "beginner",
-          "explanation": "今していることなので現在進行形。I + am + -ing。",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「聴いています」という現在進行形が必要です。主語がI（私）なので、be動詞はamを使い、listenにingを付けてam listeningとします。Listenは現在形、listensは三人称単数現在形、listenedは過去形です。Listen to ～（～を聴く）は前置詞toが必要な重要表現です。I am、You are、He isとbe動詞の使い分けを確実にしましょう。",
           "hint": "I + am + -ing"
         },
         {
@@ -274,7 +274,7 @@
           "choices": ["run", "runs", "ran", "are running"],
           "correctAnswer": "are running",
           "difficulty": "intermediate",
-          "explanation": "現在進行形。runは最後の子音を重ねてningとします。",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「走っています」という現在進行形が必要です。主語がThey（複数）なので、be動詞はareを使います。Runは「短母音 + 子音1つ」で終わるため、最後の子音nを重ねてrunningとします（run→running）。Runsは三人称単数現在形、ranは過去形です。Stop→stopping、swim→swimmingなども同じパターンです。子音を重ねるルールは重要です。",
           "hint": "短母音+子音で終わる動詞は子音を重ねる"
         },
         {
@@ -285,7 +285,7 @@
           "choices": ["cook", "cooks", "cooked", "is cooking"],
           "correctAnswer": "is cooking",
           "difficulty": "beginner",
-          "explanation": "今していることなので現在進行形。My mother + is + -ing。",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「料理をしています」という現在進行形が必要です。主語がMy mother（私の母＝三人称単数）なので、be動詞はisを使い、cookにingを付けてis cookingとします。Cookは現在形、cooksは三人称単数現在形、cookedは過去形です。現在進行形で「今まさに料理をしている最中」という動作の進行を表します。Be動詞の選択（is）が重要なポイントです。",
           "hint": "三人称単数 + is + -ing"
         }
       ]
