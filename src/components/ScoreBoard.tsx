@@ -76,6 +76,30 @@ function ScoreBoard({
     }
   }, [mode, historyLimit]);
 
+  // 定着率と統計データをstateで管理（リアルタイム更新用）
+  const [retentionData, setRetentionData] = useState(() => {
+    const { retentionRate, appearedCount } = getRetentionRateWithAI();
+    return { retentionRate, appearedCount };
+  });
+  
+  const [detailedStatsData, setDetailedStatsData] = useState(() => getDetailedRetentionStats());
+
+  // 定着率と詳細統計を定期的に更新（スキップや回答で変化を反映）
+  useEffect(() => {
+    const updateStats = () => {
+      const { retentionRate, appearedCount } = getRetentionRateWithAI();
+      setRetentionData({ retentionRate, appearedCount });
+      setDetailedStatsData(getDetailedRetentionStats());
+    };
+    
+    // 初回更新
+    updateStats();
+    
+    // 1秒ごとに更新（新しい回答やスキップがあった場合に反映）
+    const interval = setInterval(updateStats, 1000);
+    return () => clearInterval(interval);
+  }, [totalAnswered, sessionMastered]); // totalAnsweredやsessionMasteredが変わったら即座に更新
+
   // 本日の統計を取得
   const { todayAccuracy, todayTotalAnswered } = getTodayStats(mode);
 
@@ -88,11 +112,11 @@ function ScoreBoard({
   // 出題数を取得（重複除外、全4700問のうち実際に出題された数）
   const uniqueQuestionedCount = getUniqueQuestionedWordsCount();
 
-  // 定着率をAIで計算
-  const { retentionRate, appearedCount } = getRetentionRateWithAI();
+  // 定着率をstateから取得
+  const { retentionRate, appearedCount } = retentionData;
   
-  // 詳細な定着率統計を取得（3段階分類）
-  const detailedStats = getDetailedRetentionStats();
+  // 詳細な定着率統計をstateから取得
+  const detailedStats = detailedStatsData;
 
   // 定着予測統計を取得
   const nearMasteryStats = getNearMasteryStats();
