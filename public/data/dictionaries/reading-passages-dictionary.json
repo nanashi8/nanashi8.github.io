@@ -64220,5 +64220,2030 @@
     "passages": [],
     "source": "auto",
     "baseWord": "meter"
+  },
+  "relative": {
+    "word": "relative",
+    "reading": "レラティブ",
+    "meaning": "親戚、相対的な",
+    "etymology": "【名詞/形容詞】relate（関連する）+ -ive",
+    "relatedWords": "relatives(レラティブズ): 親戚（複数）, relation(リレーション): 関係・親族, related(リレイティド): 関連した",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "relate"
+  },
+  "relatives": {
+    "word": "relatives",
+    "reading": "レラティブズ",
+    "meaning": "親戚たち",
+    "etymology": "【名詞】relative（親戚）の複数形",
+    "relatedWords": "relative(レラティブ): 親戚, family(ファミリー): 家族, relation(リレーション): 親族",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "relative"
+  },
+  "grandma": {
+    "word": "grandma",
+    "reading": "グランマ",
+    "meaning": "おばあちゃん",
+    "etymology": "【名詞】grandmother の短縮形",
+    "relatedWords": "grandmother(グランマザー): 祖母, grandpa(グランパ): おじいちゃん, grandparents(グランペアレンツ): 祖父母",
+    "category": "家族",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "grandmother"
+  },
+  "grandpa": {
+    "word": "grandpa",
+    "reading": "グランパ",
+    "meaning": "おじいちゃん",
+    "etymology": "【名詞】grandfather の短縮形",
+    "relatedWords": "grandfather(グランファーザー): 祖父, grandma(グランマ): おばあちゃん",
+    "category": "家族",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "grandfather"
+  },
+  "grandfather": {
+    "word": "grandfather",
+    "reading": "グランファーザー",
+    "meaning": "祖父",
+    "etymology": "【名詞】grand（大きな）+ father（父）",
+    "relatedWords": "grandmother(グランマザー): 祖母, grandpa(グランパ): おじいちゃん",
+    "category": "家族",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "uncle": {
+    "word": "uncle",
+    "reading": "アンクル",
+    "meaning": "おじ",
+    "etymology": "【名詞】父または母の兄弟",
+    "relatedWords": "aunt(アント): おば, nephew(ネヒュー): 甥, niece(ニース): 姪",
+    "category": "家族",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "cousin": {
+    "word": "cousin",
+    "reading": "カズン",
+    "meaning": "いとこ",
+    "etymology": "【名詞】おじ・おばの子供",
+    "relatedWords": "relative(レラティブ): 親戚, family(ファミリー): 家族",
+    "category": "家族",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "healthy": {
+    "word": "healthy",
+    "reading": "ヘルシー",
+    "meaning": "健康な",
+    "etymology": "【形容詞】health（健康）+ -y",
+    "relatedWords": "health(ヘルス): 健康, unhealthy(アンヘルシー): 不健康な",
+    "category": "医療・健康",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "health"
+  },
+  "younger": {
+    "word": "younger",
+    "reading": "ヤンガー",
+    "meaning": "より若い",
+    "etymology": "【形容詞】young（若い）の比較級",
+    "relatedWords": "young(ヤング): 若い, youngest(ヤンゲスト): 最も若い, (比較級)young(ヤング):若い(原級), younger(ヤンガー):より若い(比較級), youngest(ヤンゲスト):最も若い(最上級)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "young"
+  },
+  "cold": {
+    "word": "cold",
+    "reading": "コウルド",
+    "meaning": "寒い、冷たい",
+    "etymology": "【形容詞】低温の状態",
+    "relatedWords": "hot(ホット): 暑い, warm(ウォーム): 暖かい, cool(クール): 涼しい",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "warm": {
+    "word": "warm",
+    "reading": "ウォーム",
+    "meaning": "暖かい",
+    "etymology": "【形容詞】適度に高い温度",
+    "relatedWords": "hot(ホット): 暑い, cold(コウルド): 寒い, warmth(ウォームス): 暖かさ",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "practical": {
+    "word": "practical",
+    "reading": "プラクティカル",
+    "meaning": "実用的な",
+    "etymology": "【形容詞】practice（実践）+ -al",
+    "relatedWords": "practice(プラクティス): 実践, practically(プラクティカリー): 実質的に",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "practice"
+  },
+  "specific": {
+    "word": "specific",
+    "reading": "スペシフィック",
+    "meaning": "特定の、具体的な",
+    "etymology": "【形容詞】明確で詳細な",
+    "relatedWords": "specifically(スペシフィカリー): 特に, specify(スペシファイ): 特定する",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "significant": {
+    "word": "significant",
+    "reading": "シグニフィカント",
+    "meaning": "重要な、かなりの",
+    "etymology": "【形容詞】signify（意味する）+ -ant",
+    "relatedWords": "significance(シグニフィカンス): 重要性, significantly(シグニフィカントリー): かなり",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "signify"
+  },
+  "current": {
+    "word": "current",
+    "reading": "カレント",
+    "meaning": "現在の、流れ",
+    "etymology": "【形容詞/名詞】現在進行中の",
+    "relatedWords": "currently(カレントリー): 現在, currency(カレンシー): 通貨",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "severe": {
+    "word": "severe",
+    "reading": "シビア",
+    "meaning": "深刻な、厳しい",
+    "etymology": "【形容詞】程度が激しい",
+    "relatedWords": "severely(シビアリー): 深刻に, severity(シベリティ): 深刻さ",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "careful": {
+    "word": "careful",
+    "reading": "ケアフル",
+    "meaning": "注意深い",
+    "etymology": "【形容詞】care（注意）+ -ful",
+    "relatedWords": "care(ケア): 注意, carefully(ケアフリー): 注意深く, careless(ケアレス): 不注意な",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "care"
+  },
+  "financial": {
+    "word": "financial",
+    "reading": "ファイナンシャル",
+    "meaning": "財政の、金融の",
+    "etymology": "【形容詞】finance（財政）+ -al",
+    "relatedWords": "finance(ファイナンス): 財政, financially(ファイナンシャリー): 財政的に",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "finance"
+  },
+  "industrial": {
+    "word": "industrial",
+    "reading": "インダストリアル",
+    "meaning": "産業の",
+    "etymology": "【形容詞】industry（産業）+ -al",
+    "relatedWords": "industry(インダストリー): 産業, industrialize(インダストリアライズ): 工業化する",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "industry"
+  },
+  "digital": {
+    "word": "digital",
+    "reading": "デジタル",
+    "meaning": "デジタルの",
+    "etymology": "【形容詞】digit（数字）+ -al",
+    "relatedWords": "digitalize(デジタライズ): デジタル化する, analog(アナログ): アナログの",
+    "category": "テクノロジー",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "digit"
+  },
+  "technological": {
+    "word": "technological",
+    "reading": "テクノロジカル",
+    "meaning": "技術的な",
+    "etymology": "【形容詞】technology（技術）+ -al",
+    "relatedWords": "technology(テクノロジー): 技術, technologically(テクノロジカリー): 技術的に",
+    "category": "テクノロジー",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "technology"
+  },
+  "grateful": {
+    "word": "grateful",
+    "reading": "グレイトフル",
+    "meaning": "感謝している",
+    "etymology": "【形容詞】grate（感謝する）+ -ful",
+    "relatedWords": "gratitude(グラティチュード): 感謝, gratefully(グレイトフリー): 感謝して",
+    "category": "感情",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "gratitude"
+  },
+  "crowded": {
+    "word": "crowded",
+    "reading": "クラウディド",
+    "meaning": "混雑した",
+    "etymology": "【形容詞】crowd（群衆）+ -ed",
+    "relatedWords": "crowd(クラウド): 群衆, overcrowded(オーバークラウディド): 超満員の",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "crowd"
+  },
+  "significantly": {
+    "word": "significantly",
+    "reading": "シグニフィカントリー",
+    "meaning": "かなり、著しく",
+    "etymology": "【副詞】significant（重要な）+ -ly",
+    "relatedWords": "significant(シグニフィカント): 重要な, significance(シグニフィカンス): 重要性",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "significant"
+  },
+  "merely": {
+    "word": "merely",
+    "reading": "メアリー",
+    "meaning": "単に、ただ",
+    "etymology": "【副詞】mere（単なる）+ -ly",
+    "relatedWords": "mere(メア): 単なる, just(ジャスト): ただ",
+    "category": "言語基本",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "mere"
+  },
+  "annually": {
+    "word": "annually",
+    "reading": "アニュアリー",
+    "meaning": "毎年",
+    "etymology": "【副詞】annual（年間の）+ -ly",
+    "relatedWords": "annual(アニュアル): 年間の, yearly(イヤリー): 毎年の",
+    "category": "時間",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "annual"
+  },
+  "definitely": {
+    "word": "definitely",
+    "reading": "デフィニトリー",
+    "meaning": "確かに、絶対に",
+    "etymology": "【副詞】definite（明確な）+ -ly",
+    "relatedWords": "definite(デフィニット): 明確な, definition(デフィニション): 定義",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "definite"
+  },
+  "finally": {
+    "word": "finally",
+    "reading": "ファイナリー",
+    "meaning": "ついに、最後に",
+    "etymology": "【副詞】final（最後の）+ -ly",
+    "relatedWords": "final(ファイナル): 最後の, finalize(ファイナライズ): 完成させる",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "final"
+  },
+  "emphasized": {
+    "word": "emphasized",
+    "reading": "エンファサイズド",
+    "meaning": "強調した",
+    "etymology": "【動詞】emphasize（強調する）の過去形・過去分詞",
+    "relatedWords": "emphasize(エンファサイズ): 強調する, emphasis(エンファシス): 強調, (動詞活用)emphasize(エンファサイズ):強調する(原形), emphasized(エンファサイズド):強調した(過去形), emphasized(エンファサイズド):強調された(過去分詞形), emphasizing(エンファサイジング):強調すること(現在分詞形), emphasizes(エンファサイジズ):強調する(三単現)",
+    "category": "言語基本",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "emphasize"
+  },
+  "demonstrated": {
+    "word": "demonstrated",
+    "reading": "デモンストレイティド",
+    "meaning": "実証した、示した",
+    "etymology": "【動詞】demonstrate（実証する）の過去形・過去分詞",
+    "relatedWords": "demonstrate(デモンストレイト): 実証する, demonstration(デモンストレーション): 実演, (動詞活用)demonstrate(デモンストレイト):実証する(原形), demonstrated(デモンストレイティド):実証した(過去形), demonstrated(デモンストレイティド):実証された(過去分詞形), demonstrating(デモンストレイティング):実証すること(現在分詞形), demonstrates(デモンストレイツ):実証する(三単現)",
+    "category": "言語基本",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "demonstrate"
+  },
+  "began": {
+    "word": "began",
+    "reading": "ビギャン",
+    "meaning": "始まった",
+    "etymology": "【動詞】begin（始まる）の過去形",
+    "relatedWords": "begin(ビギン): 始まる, beginning(ビギニング): 始まり, (動詞活用)begin(ビギン):始まる(原形), began(ビギャン):始まった(過去形), begun(ビガン):始まった(過去分詞形), beginning(ビギニング):始まること(現在分詞形), begins(ビギンズ):始まる(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "begin"
+  },
+  "discovered": {
+    "word": "discovered",
+    "reading": "ディスカバード",
+    "meaning": "発見した",
+    "etymology": "【動詞】discover（発見する）の過去形・過去分詞",
+    "relatedWords": "discover(ディスカバー): 発見する, discovery(ディスカバリー): 発見, (動詞活用)discover(ディスカバー):発見する(原形), discovered(ディスカバード):発見した(過去形), discovered(ディスカバード):発見された(過去分詞形), discovering(ディスカバリング):発見すること(現在分詞形), discovers(ディスカバーズ):発見する(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "discover"
+  },
+  "encouraged": {
+    "word": "encouraged",
+    "reading": "エンカレジド",
+    "meaning": "励ました、促した",
+    "etymology": "【動詞】encourage（励ます）の過去形・過去分詞",
+    "relatedWords": "encourage(エンカレジ): 励ます, encouragement(エンカレジメント): 励まし, (動詞活用)encourage(エンカレジ):励ます(原形), encouraged(エンカレジド):励ました(過去形), encouraged(エンカレジド):励まされた(過去分詞形), encouraging(エンカレジング):励ますこと(現在分詞形), encourages(エンカレジズ):励ます(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "encourage"
+  },
+  "suggested": {
+    "word": "suggested",
+    "reading": "サジェスティド",
+    "meaning": "提案した",
+    "etymology": "【動詞】suggest（提案する）の過去形・過去分詞",
+    "relatedWords": "suggest(サジェスト): 提案する, suggestion(サジェスチョン): 提案, (動詞活用)suggest(サジェスト):提案する(原形), suggested(サジェスティド):提案した(過去形), suggested(サジェスティド):提案された(過去分詞形), suggesting(サジェスティング):提案すること(現在分詞形), suggests(サジェスツ):提案する(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "suggest"
+  },
+  "observed": {
+    "word": "observed",
+    "reading": "オブザーブド",
+    "meaning": "観察した",
+    "etymology": "【動詞】observe（観察する）の過去形・過去分詞",
+    "relatedWords": "observe(オブザーブ): 観察する, observation(オブザベーション): 観察, (動詞活用)observe(オブザーブ):観察する(原形), observed(オブザーブド):観察した(過去形), observed(オブザーブド):観察された(過去分詞形), observing(オブザービング):観察すること(現在分詞形), observes(オブザーブズ):観察する(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "observe"
+  },
+  "tried": {
+    "word": "tried",
+    "reading": "トライド",
+    "meaning": "試みた",
+    "etymology": "【動詞】try（試みる）の過去形・過去分詞",
+    "relatedWords": "try(トライ): 試みる, trial(トライアル): 試み・裁判, (動詞活用)try(トライ):試みる(原形), tried(トライド):試みた(過去形), tried(トライド):試みられた(過去分詞形), trying(トライング):試みること(現在分詞形), tries(トライズ):試みる(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "try"
+  },
+  "spent": {
+    "word": "spent",
+    "reading": "スペント",
+    "meaning": "過ごした、使った",
+    "etymology": "【動詞】spend（過ごす・使う）の過去形・過去分詞",
+    "relatedWords": "spend(スペンド): 過ごす・使う, spending(スペンディング): 支出, (動詞活用)spend(スペンド):使う(原形), spent(スペント):使った(過去形), spent(スペント):使われた(過去分詞形), spending(スペンディング):使うこと(現在分詞形), spends(スペンズ):使う(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "spend"
+  },
+  "gave": {
+    "word": "gave",
+    "reading": "ゲイブ",
+    "meaning": "与えた",
+    "etymology": "【動詞】give（与える）の過去形",
+    "relatedWords": "give(ギブ): 与える, given(ギブン): 与えられた, (動詞活用)give(ギブ):与える(原形), gave(ゲイブ):与えた(過去形), given(ギブン):与えられた(過去分詞形), giving(ギビング):与えること(現在分詞形), gives(ギブズ):与える(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "give"
+  },
+  "heard": {
+    "word": "heard",
+    "reading": "ハード",
+    "meaning": "聞いた",
+    "etymology": "【動詞】hear（聞く）の過去形・過去分詞",
+    "relatedWords": "hear(ヒア): 聞く, hearing(ヒアリング): 聴覚・聴聞会, (動詞活用)hear(ヒア):聞く(原形), heard(ハード):聞いた(過去形), heard(ハード):聞かれた(過去分詞形), hearing(ヒアリング):聞くこと(現在分詞形), hears(ヒアーズ):聞く(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "hear"
+  },
+  "described": {
+    "word": "described",
+    "reading": "ディスクライブド",
+    "meaning": "説明した",
+    "etymology": "【動詞】describe（説明する）の過去形・過去分詞",
+    "relatedWords": "describe(ディスクライブ): 説明する, description(ディスクリプション): 説明, (動詞活用)describe(ディスクライブ):説明する(原形), described(ディスクライブド):説明した(過去形), described(ディスクライブド):説明された(過去分詞形), describing(ディスクライビング):説明すること(現在分詞形), describes(ディスクライブズ):説明する(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "describe"
+  },
+  "noticed": {
+    "word": "noticed",
+    "reading": "ノーティスド",
+    "meaning": "気づいた",
+    "etymology": "【動詞】notice（気づく）の過去形・過去分詞",
+    "relatedWords": "notice(ノーティス): 気づく・通知, noticeable(ノーティサブル): 目立つ, (動詞活用)notice(ノーティス):気づく(原形), noticed(ノーティスド):気づいた(過去形), noticed(ノーティスド):気づかれた(過去分詞形), noticing(ノーティシング):気づくこと(現在分詞形), notices(ノーティシズ):気づく(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "notice"
+  },
+  "visited": {
+    "word": "visited",
+    "reading": "ビジティド",
+    "meaning": "訪れた",
+    "etymology": "【動詞】visit（訪れる）の過去形・過去分詞",
+    "relatedWords": "visit(ビジット): 訪れる, visitor(ビジター): 訪問者, (動詞活用)visit(ビジット):訪れる(原形), visited(ビジティド):訪れた(過去形), visited(ビジティド):訪れられた(過去分詞形), visiting(ビジティング):訪れること(現在分詞形), visits(ビジッツ):訪れる(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "visit"
+  },
+  "proved": {
+    "word": "proved",
+    "reading": "プルーブド",
+    "meaning": "証明した",
+    "etymology": "【動詞】prove（証明する）の過去形・過去分詞",
+    "relatedWords": "prove(プルーブ): 証明する, proof(プルーフ): 証拠, (動詞活用)prove(プルーブ):証明する(原形), proved(プルーブド):証明した(過去形), proven(プルーブン):証明された(過去分詞形), proving(プルービング):証明すること(現在分詞形), proves(プルーブズ):証明する(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "prove"
+  },
+  "explains": {
+    "word": "explains",
+    "reading": "イクスプレインズ",
+    "meaning": "説明する（三人称単数現在形）",
+    "etymology": "【動詞】explain（説明する）の三人称単数現在形",
+    "relatedWords": "explain(イクスプレイン): 説明する, explained(イクスプレインド): 説明した, explanation(エクスプラネーション): 説明",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "explain"
+  },
+  "works": {
+    "word": "works",
+    "reading": "ワークス",
+    "meaning": "働く（三人称単数現在形）、作品",
+    "etymology": "【動詞/名詞】work（働く）の三人称単数現在形 または 複数名詞",
+    "relatedWords": "work(ワーク): 働く・仕事, worked(ワークト): 働いた, working(ワーキング): 働いている",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "work"
+  },
+  "added": {
+    "word": "added",
+    "reading": "アディド",
+    "meaning": "加えた",
+    "etymology": "【動詞】add（加える）の過去形・過去分詞",
+    "relatedWords": "add(アド): 加える, addition(アディション): 追加, (動詞活用)add(アド):加える(原形), added(アディド):加えた(過去形), added(アディド):加えられた(過去分詞形), adding(アディング):加えること(現在分詞形), adds(アズ):加える(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "add"
+  },
+  "agreed": {
+    "word": "agreed",
+    "reading": "アグリード",
+    "meaning": "同意した",
+    "etymology": "【動詞】agree（同意する）の過去形・過去分詞",
+    "relatedWords": "agree(アグリー): 同意する, agreement(アグリーメント): 合意, (動詞活用)agree(アグリー):同意する(原形), agreed(アグリード):同意した(過去形), agreed(アグリード):同意された(過去分詞形), agreeing(アグリーイング):同意すること(現在分詞形), agrees(アグリーズ):同意する(三単現)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "agree"
+  },
+  "seem": {
+    "word": "seem",
+    "reading": "シーム",
+    "meaning": "〜のように見える",
+    "etymology": "【動詞】外見や印象を示す",
+    "relatedWords": "seems(シームズ): 〜のように見える（三単現）, seemed(シームド): 〜のように見えた, seemingly(シーミングリー): 一見",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "experienced": {
+    "word": "experienced",
+    "reading": "イクスピアリエンスト",
+    "meaning": "経験した、経験豊富な",
+    "etymology": "【動詞/形容詞】experience（経験する）の過去形・過去分詞",
+    "relatedWords": "experience(イクスピアリエンス): 経験する・経験, experiencing(イクスピアリエンシング): 経験している, (動詞活用)experience(イクスピアリエンス):経験する(原形), experienced(イクスピアリエンスト):経験した(過去形), experienced(イクスピアリエンスト):経験された(過去分詞形), experiencing(イクスピアリエンシング):経験すること(現在分詞形), experiences(イクスピアリエンシズ):経験する(三単現)",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "experience"
+  },
+  "showing": {
+    "word": "showing",
+    "reading": "ショウイング",
+    "meaning": "見せている",
+    "etymology": "【動詞】show（見せる）の現在分詞形",
+    "relatedWords": "show(ショウ): 見せる, showed(ショウド): 見せた, shown(ショウン): 見せられた",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "show"
+  },
+  "visiting": {
+    "word": "visiting",
+    "reading": "ビジティング",
+    "meaning": "訪れている",
+    "etymology": "【動詞】visit（訪れる）の現在分詞形",
+    "relatedWords": "visit(ビジット): 訪れる, visited(ビジティド): 訪れた, visitor(ビジター): 訪問者",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "visit"
+  },
+  "encouraging": {
+    "word": "encouraging",
+    "reading": "エンカレジング",
+    "meaning": "励ましている、心強い",
+    "etymology": "【動詞/形容詞】encourage（励ます）の現在分詞形",
+    "relatedWords": "encourage(エンカレジ): 励ます, encouraged(エンカレジド): 励ました",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "encourage"
+  },
+  "animal": {
+    "word": "animal",
+    "reading": "アニマル",
+    "meaning": "動物",
+    "etymology": "【名詞】生き物",
+    "relatedWords": "animals(アニマルズ): 動物（複数）, wildlife(ワイルドライフ): 野生生物",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "way": {
+    "word": "way",
+    "reading": "ウェイ",
+    "meaning": "方法、道",
+    "etymology": "【名詞】方向や手段",
+    "relatedWords": "ways(ウェイズ): 方法（複数）, pathway(パスウェイ): 道",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "ways": {
+    "word": "ways",
+    "reading": "ウェイズ",
+    "meaning": "方法（複数形）",
+    "etymology": "【名詞】way（方法）の複数形",
+    "relatedWords": "way(ウェイ): 方法, method(メソッド): 方法",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "way"
+  },
+  "preparation": {
+    "word": "preparation",
+    "reading": "プレパレーション",
+    "meaning": "準備",
+    "etymology": "【名詞】prepare（準備する）+ -ation",
+    "relatedWords": "prepare(プリペア): 準備する, prepared(プリペアド): 準備された",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "prepare"
+  },
+  "academic": {
+    "word": "academic",
+    "reading": "アカデミック",
+    "meaning": "学問の、学術的な",
+    "etymology": "【形容詞】academy（学校）+ -ic",
+    "relatedWords": "academy(アカデミー): 学校, academically(アカデミカリー): 学術的に",
+    "category": "教育",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "academy"
+  },
+  "potential": {
+    "word": "potential",
+    "reading": "ポテンシャル",
+    "meaning": "可能性、潜在能力",
+    "etymology": "【名詞/形容詞】可能性のある",
+    "relatedWords": "potentially(ポテンシャリー): 潜在的に, potentiality(ポテンシャリティ): 可能性",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "drama": {
+    "word": "drama",
+    "reading": "ドラマ",
+    "meaning": "演劇、ドラマ",
+    "etymology": "【名詞】演劇作品",
+    "relatedWords": "dramatic(ドラマティック): 劇的な, dramatize(ドラマタイズ): 脚色する",
+    "category": "芸術",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "exhibit": {
+    "word": "exhibit",
+    "reading": "イグジビット",
+    "meaning": "展示、展示する",
+    "etymology": "【名詞/動詞】展示物または展示すること",
+    "relatedWords": "exhibition(エグジビション): 展覧会, exhibitor(イグジビター): 出展者",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "management": {
+    "word": "management",
+    "reading": "マネジメント",
+    "meaning": "管理、経営",
+    "etymology": "【名詞】manage（管理する）+ -ment",
+    "relatedWords": "manage(マネジ): 管理する, manager(マネジャー): 管理者",
+    "category": "職業",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "manage"
+  },
+  "individuals": {
+    "word": "individuals",
+    "reading": "インディビジュアルズ",
+    "meaning": "個人（複数形）",
+    "etymology": "【名詞】individual（個人）の複数形",
+    "relatedWords": "individual(インディビジュアル): 個人, individually(インディビジュアリー): 個別に",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "individual"
+  },
+  "issues": {
+    "word": "issues",
+    "reading": "イシューズ",
+    "meaning": "問題、課題（複数形）",
+    "etymology": "【名詞】issue（問題）の複数形",
+    "relatedWords": "issue(イシュー): 問題, problematic(プロブレマティック): 問題のある",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "issue"
+  },
+  "rain": {
+    "word": "rain",
+    "reading": "レイン",
+    "meaning": "雨",
+    "etymology": "【名詞/動詞】降水",
+    "relatedWords": "rainy(レイニー): 雨の, rainfall(レインフォール): 降雨量",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "equipment": {
+    "word": "equipment",
+    "reading": "イクイップメント",
+    "meaning": "設備、装備",
+    "etymology": "【名詞】equip（装備する）+ -ment",
+    "relatedWords": "equip(イクイップ): 装備する, equipped(イクイップト): 装備された",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "equip"
+  },
+  "items": {
+    "word": "items",
+    "reading": "アイテムズ",
+    "meaning": "品目、項目（複数形）",
+    "etymology": "【名詞】item（品目）の複数形",
+    "relatedWords": "item(アイテム): 品目, itemize(アイテマイズ): 項目別に記載する",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "item"
+  },
+  "generations": {
+    "word": "generations",
+    "reading": "ジェネレーションズ",
+    "meaning": "世代（複数形）",
+    "etymology": "【名詞】generation（世代）の複数形",
+    "relatedWords": "generation(ジェネレーション): 世代, generational(ジェネレーショナル): 世代の",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "generation"
+  },
+  "generation": {
+    "word": "generation",
+    "reading": "ジェネレーション",
+    "meaning": "世代",
+    "etymology": "【名詞】generate（生み出す）+ -ation",
+    "relatedWords": "generate(ジェネレイト): 生み出す, generator(ジェネレーター): 発電機",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "generate"
+  },
+  "area": {
+    "word": "area",
+    "reading": "エリア",
+    "meaning": "地域、領域",
+    "etymology": "【名詞】場所や範囲",
+    "relatedWords": "areas(エリアズ): 地域（複数）, regional(リージョナル): 地域の",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "house": {
+    "word": "house",
+    "reading": "ハウス",
+    "meaning": "家",
+    "etymology": "【名詞】住居",
+    "relatedWords": "home(ホーム): 家・故郷, household(ハウスホールド): 家族",
+    "category": "場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "differences": {
+    "word": "differences",
+    "reading": "ディファレンシズ",
+    "meaning": "違い（複数形）",
+    "etymology": "【名詞】difference（違い）の複数形",
+    "relatedWords": "difference(ディファレンス): 違い, different(ディファレント): 異なる, differ(ディファー): 異なる",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "difference"
+  },
+  "difference": {
+    "word": "difference",
+    "reading": "ディファレンス",
+    "meaning": "違い",
+    "etymology": "【名詞】differ（異なる）+ -ence",
+    "relatedWords": "different(ディファレント): 異なる, differ(ディファー): 異なる",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "differ"
+  },
+  "transportation": {
+    "word": "transportation",
+    "reading": "トランスポーテーション",
+    "meaning": "交通、輸送",
+    "etymology": "【名詞】transport（輸送する）+ -ation",
+    "relatedWords": "transport(トランスポート): 輸送する, transporter(トランスポーター): 輸送者",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "transport"
+  },
+  "society": {
+    "word": "society",
+    "reading": "ソサエティ",
+    "meaning": "社会",
+    "etymology": "【名詞】人々の組織や共同体",
+    "relatedWords": "social(ソーシャル): 社会の, socialize(ソーシャライズ): 社会化する",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "exploration": {
+    "word": "exploration",
+    "reading": "エクスプロレーション",
+    "meaning": "探検、探索",
+    "etymology": "【名詞】explore（探検する）+ -ation",
+    "relatedWords": "explore(エクスプロア): 探検する, explorer(エクスプローラー): 探検家",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "explore"
+  },
+  "supermarket": {
+    "word": "supermarket",
+    "reading": "スーパーマーケット",
+    "meaning": "スーパーマーケット",
+    "etymology": "【名詞】super（大きな）+ market（市場）",
+    "relatedWords": "market(マーケット): 市場, store(ストア): 店",
+    "category": "場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "facilities": {
+    "word": "facilities",
+    "reading": "ファシリティーズ",
+    "meaning": "施設（複数形）",
+    "etymology": "【名詞】facility（施設）の複数形",
+    "relatedWords": "facility(ファシリティ): 施設, facilitate(ファシリテイト): 促進する",
+    "category": "場所",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "facility"
+  },
+  "intelligence": {
+    "word": "intelligence",
+    "reading": "インテリジェンス",
+    "meaning": "知能、知性",
+    "etymology": "【名詞】知的能力",
+    "relatedWords": "intelligent(インテリジェント): 知的な, intelligently(インテリジェントリー): 知的に",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "spring": {
+    "word": "spring",
+    "reading": "スプリング",
+    "meaning": "春",
+    "etymology": "【名詞】一年の季節",
+    "relatedWords": "summer(サマー): 夏, autumn(オータム): 秋, winter(ウィンター): 冬",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "autumn": {
+    "word": "autumn",
+    "reading": "オータム",
+    "meaning": "秋",
+    "etymology": "【名詞】一年の季節",
+    "relatedWords": "fall(フォール): 秋（米語）, summer(サマー): 夏, winter(ウィンター): 冬",
+    "category": "自然・環境",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "mathematics": {
+    "word": "mathematics",
+    "reading": "マセマティクス",
+    "meaning": "数学",
+    "etymology": "【名詞】数の学問",
+    "relatedWords": "math(マス): 数学（略）, mathematical(マセマティカル): 数学的な, mathematician(マセマティシャン): 数学者",
+    "category": "教育",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "responsibility": {
+    "word": "responsibility",
+    "reading": "リスポンシビリティ",
+    "meaning": "責任",
+    "etymology": "【名詞】responsible（責任ある）+ -ity",
+    "relatedWords": "responsible(リスポンシブル): 責任ある, responsibly(リスポンシブリー): 責任を持って",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "responsible"
+  },
+  "perspective": {
+    "word": "perspective",
+    "reading": "パースペクティブ",
+    "meaning": "視点、見通し",
+    "etymology": "【名詞】物の見方",
+    "relatedWords": "perspectives(パースペクティブズ): 視点（複数）, perspectively(パースペクティブリー): 視点から",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "perspectives": {
+    "word": "perspectives",
+    "reading": "パースペクティブズ",
+    "meaning": "視点（複数形）",
+    "etymology": "【名詞】perspective（視点）の複数形",
+    "relatedWords": "perspective(パースペクティブ): 視点, viewpoint(ビューポイント): 見地",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "perspective"
+  },
+  "outcomes": {
+    "word": "outcomes",
+    "reading": "アウトカムズ",
+    "meaning": "結果（複数形）",
+    "etymology": "【名詞】outcome（結果）の複数形",
+    "relatedWords": "outcome(アウトカム): 結果, result(リザルト): 結果",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "outcome"
+  },
+  "medication": {
+    "word": "medication",
+    "reading": "メディケーション",
+    "meaning": "投薬、薬",
+    "etymology": "【名詞】medicate（投薬する）+ -ion",
+    "relatedWords": "medicate(メディケイト): 投薬する, medicine(メディスン): 薬",
+    "category": "医療・健康",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "medicate"
+  },
+  "decades": {
+    "word": "decades",
+    "reading": "デケイズ",
+    "meaning": "数十年（複数形）",
+    "etymology": "【名詞】decade（10年）の複数形",
+    "relatedWords": "decade(デケイド): 10年, century(センチュリー): 100年",
+    "category": "時間",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "decade"
+  },
+  "deaths": {
+    "word": "deaths",
+    "reading": "デス",
+    "meaning": "死（複数形）",
+    "etymology": "【名詞】death（死）の複数形",
+    "relatedWords": "death(デス): 死, die(ダイ): 死ぬ, dead(デッド): 死んだ",
+    "category": "医療・健康",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "death"
+  },
+  "buildings": {
+    "word": "buildings",
+    "reading": "ビルディングズ",
+    "meaning": "建物（複数形）",
+    "etymology": "【名詞】building（建物）の複数形",
+    "relatedWords": "building(ビルディング): 建物, build(ビルド): 建てる, builder(ビルダー): 建設者",
+    "category": "場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "building"
+  },
+  "diversity": {
+    "word": "diversity",
+    "reading": "ダイバーシティ",
+    "meaning": "多様性",
+    "etymology": "【名詞】diverse（多様な）+ -ity",
+    "relatedWords": "diverse(ダイバース): 多様な, diversify(ダイバーシファイ): 多様化する",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "diverse"
+  },
+  "restaurant": {
+    "word": "restaurant",
+    "reading": "レストラン",
+    "meaning": "レストラン",
+    "etymology": "【名詞】食事を提供する店",
+    "relatedWords": "dine(ダイン): 食事する, dining(ダイニング): 食事",
+    "category": "場所",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "reflections": {
+    "word": "reflections",
+    "reading": "リフレクションズ",
+    "meaning": "反省、考察（複数形）",
+    "etymology": "【名詞】reflection（反省）の複数形",
+    "relatedWords": "reflection(リフレクション): 反省, reflect(リフレクト): 反映する・振り返る",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "reflection"
+  },
+  "insurance": {
+    "word": "insurance",
+    "reading": "インシュランス",
+    "meaning": "保険",
+    "etymology": "【名詞】insure（保険をかける）+ -ance",
+    "relatedWords": "insure(インシュア): 保険をかける, ensure(エンシュア): 確実にする",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "insure"
+  },
+  "friendships": {
+    "word": "friendships",
+    "reading": "フレンドシップス",
+    "meaning": "友情（複数形）",
+    "etymology": "【名詞】friendship（友情）の複数形",
+    "relatedWords": "friendship(フレンドシップ): 友情, friend(フレンド): 友人, friendly(フレンドリー): 友好的な",
+    "category": "感情",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "friendship"
+  },
+  "lines": {
+    "word": "lines",
+    "reading": "ラインズ",
+    "meaning": "線、列（複数形）",
+    "etymology": "【名詞】line（線）の複数形",
+    "relatedWords": "line(ライン): 線, linear(リニア): 線形の",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "line"
+  },
+  "shirts": {
+    "word": "shirts",
+    "reading": "シャツ",
+    "meaning": "シャツ（複数形）",
+    "etymology": "【名詞】shirt（シャツ）の複数形",
+    "relatedWords": "shirt(シャツ): シャツ, t-shirt(ティーシャツ): Tシャツ",
+    "category": "衣類",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "shirt"
+  },
+  "december": {
+    "word": "december",
+    "reading": "ディセンバー",
+    "meaning": "12月",
+    "etymology": "【名詞】一年の12番目の月",
+    "relatedWords": "january(ジャニュアリー): 1月, february(フェブラリー): 2月",
+    "category": "時間",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "century": {
+    "word": "century",
+    "reading": "センチュリー",
+    "meaning": "世紀、100年",
+    "etymology": "【名詞】100年の期間",
+    "relatedWords": "decade(デケイド): 10年, millennium(ミレニアム): 1000年",
+    "category": "時間",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "numerous": {
+    "word": "numerous",
+    "reading": "ニューメラス",
+    "meaning": "多数の",
+    "etymology": "【形容詞】数が多い",
+    "relatedWords": "number(ナンバー): 数, numerically(ニューメリカリー): 数的に",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "number"
+  },
+  "improvements": {
+    "word": "improvements",
+    "reading": "インプルーブメンツ",
+    "meaning": "改善（複数形）",
+    "etymology": "【名詞】improvement（改善）の複数形",
+    "relatedWords": "improvement(インプルーブメント): 改善, improve(インプルーブ): 改善する",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "improvement"
+  },
+  "recycling": {
+    "word": "recycling",
+    "reading": "リサイクリング",
+    "meaning": "リサイクル",
+    "etymology": "【名詞/動詞】recycle（再利用する）の現在分詞形",
+    "relatedWords": "recycle(リサイクル): 再利用する, recyclable(リサイクラブル): リサイクル可能な",
+    "category": "自然・環境",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "recycle"
+  },
+  "monitoring": {
+    "word": "monitoring",
+    "reading": "モニタリング",
+    "meaning": "監視",
+    "etymology": "【名詞/動詞】monitor（監視する）の現在分詞形",
+    "relatedWords": "monitor(モニター): 監視する, monitored(モニタード): 監視された",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "monitor"
+  },
+  "societies": {
+    "word": "societies",
+    "reading": "ソサエティーズ",
+    "meaning": "社会（複数形）",
+    "etymology": "【名詞】society（社会）の複数形",
+    "relatedWords": "society(ソサエティ): 社会, social(ソーシャル): 社会の",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "society"
+  },
+  "dedication": {
+    "word": "dedication",
+    "reading": "デディケーション",
+    "meaning": "献身、専念",
+    "etymology": "【名詞】dedicate（捧げる）+ -ion",
+    "relatedWords": "dedicate(デディケイト): 捧げる, dedicated(デディケイティド): 専念した",
+    "category": "一般名詞",
+    "difficulty": "上級",
+    "levels": [
+      "上級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "dedicate"
+  },
+  "off": {
+    "word": "off",
+    "reading": "オフ",
+    "meaning": "離れて、オフ",
+    "etymology": "【副詞/前置詞】離脱や分離を示す",
+    "relatedWords": "on(オン): 上に、off and on(オフアンドオン): 断続的に",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "gatherings": {
+    "word": "gatherings",
+    "reading": "ギャザリングズ",
+    "meaning": "集まり（複数形）",
+    "etymology": "【名詞】gathering（集まり）の複数形",
+    "relatedWords": "gathering(ギャザリング): 集まり, gather(ギャザー): 集まる",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "gathering"
+  },
+  "anything": {
+    "word": "anything",
+    "reading": "エニシング",
+    "meaning": "何でも",
+    "etymology": "【代名詞】any（どんな）+ thing（もの）",
+    "relatedWords": "something(サムシング): 何か, nothing(ナシング): 何も〜ない, everything(エブリシング): すべて",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "idea": {
+    "word": "idea",
+    "reading": "アイディア",
+    "meaning": "考え、アイデア",
+    "etymology": "【名詞】思考や概念",
+    "relatedWords": "ideal(アイディアル): 理想的な, ideally(アイディアリー): 理想的には",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "recent": {
+    "word": "recent",
+    "reading": "リーセント",
+    "meaning": "最近の",
+    "etymology": "【形容詞】近い過去の",
+    "relatedWords": "recently(リーセントリー): 最近, recency(リーセンシー): 最近であること",
+    "category": "時間",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "basketball": {
+    "word": "basketball",
+    "reading": "バスケットボール",
+    "meaning": "バスケットボール",
+    "etymology": "【名詞】basket（かご）+ ball（ボール）",
+    "relatedWords": "baseball(ベースボール): 野球, football(フットボール): サッカー・フットボール",
+    "category": "スポーツ",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "committee": {
+    "word": "committee",
+    "reading": "コミッティー",
+    "meaning": "委員会",
+    "etymology": "【名詞】特定の目的のための集団",
+    "relatedWords": "commit(コミット): 委ねる, commitment(コミットメント): 約束",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "commit"
+  },
+  "classmates": {
+    "word": "classmates",
+    "reading": "クラスメイツ",
+    "meaning": "クラスメート（複数形）",
+    "etymology": "【名詞】class（クラス）+ mate（仲間）の複数形",
+    "relatedWords": "classmate(クラスメイト): クラスメート, teammate(チームメイト): チームメイト",
+    "category": "教育",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "classmate"
+  },
+  "nurse": {
+    "word": "nurse",
+    "reading": "ナース",
+    "meaning": "看護師",
+    "etymology": "【名詞】医療従事者",
+    "relatedWords": "nursing(ナーシング): 看護, doctor(ドクター): 医師",
+    "category": "職業",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "farmers": {
+    "word": "farmers",
+    "reading": "ファーマーズ",
+    "meaning": "農家（複数形）",
+    "etymology": "【名詞】farmer（農家）の複数形",
+    "relatedWords": "farmer(ファーマー): 農家, farm(ファーム): 農場, farming(ファーミング): 農業",
+    "category": "職業",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "farmer"
+  },
+  "treatments": {
+    "word": "treatments",
+    "reading": "トリートメンツ",
+    "meaning": "治療（複数形）",
+    "etymology": "【名詞】treatment（治療）の複数形",
+    "relatedWords": "treatment(トリートメント): 治療, treat(トリート): 治療する",
+    "category": "医療・健康",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "treatment"
+  },
+  "longer": {
+    "word": "longer",
+    "reading": "ロンガー",
+    "meaning": "より長い",
+    "etymology": "【形容詞】long（長い）の比較級",
+    "relatedWords": "long(ロング): 長い, longest(ロンゲスト): 最も長い, (比較級)long(ロング):長い(原級), longer(ロンガー):より長い(比較級), longest(ロンゲスト):最も長い(最上級)",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "long"
+  },
+  "lifestyle": {
+    "word": "lifestyle",
+    "reading": "ライフスタイル",
+    "meaning": "生活様式",
+    "etymology": "【名詞】life（生活）+ style（様式）",
+    "relatedWords": "life(ライフ): 生活, living(リビング): 生活すること",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "accidents": {
+    "word": "accidents",
+    "reading": "アクシデンツ",
+    "meaning": "事故（複数形）",
+    "etymology": "【名詞】accident（事故）の複数形",
+    "relatedWords": "accident(アクシデント): 事故, accidental(アクシデンタル): 偶然の",
+    "category": "一般名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "accident"
+  },
+  "myself": {
+    "word": "myself",
+    "reading": "マイセルフ",
+    "meaning": "私自身",
+    "etymology": "【代名詞】my（私の）+ self（自身）",
+    "relatedWords": "yourself(ユアセルフ): あなた自身, himself(ヒムセルフ): 彼自身, herself(ハーセルフ): 彼女自身",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "ourselves": {
+    "word": "ourselves",
+    "reading": "アワセルブズ",
+    "meaning": "私たち自身",
+    "etymology": "【代名詞】our（私たちの）+ selves（自身）",
+    "relatedWords": "myself(マイセルフ): 私自身, yourself(ユアセルフ): あなた自身, themselves(ゼムセルブズ): 彼ら自身",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "let's": {
+    "word": "let's",
+    "reading": "レッツ",
+    "meaning": "〜しましょう（let us の短縮形）",
+    "etymology": "【短縮形】let us",
+    "relatedWords": "let(レット): 〜させる, us(アス): 私たちを",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "you'll": {
+    "word": "you'll",
+    "reading": "ユール",
+    "meaning": "あなたは〜でしょう（you will の短縮形）",
+    "etymology": "【短縮形】you will",
+    "relatedWords": "you(ユー): あなた, will(ウィル): 〜でしょう",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "there's": {
+    "word": "there's",
+    "reading": "ゼアーズ",
+    "meaning": "〜がある/いる（there is / there has の短縮形）",
+    "etymology": "【短縮形】there is または there has",
+    "relatedWords": "there(ゼア): そこに, is(イズ): です",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "isn't": {
+    "word": "isn't",
+    "reading": "イズント",
+    "meaning": "〜ではない（is not の短縮形）",
+    "etymology": "【短縮形】is not",
+    "relatedWords": "is(イズ): です, not(ノット): 〜ない, aren't(アーント): 〜ではない",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "we'll": {
+    "word": "we'll",
+    "reading": "ウィール",
+    "meaning": "私たちは〜でしょう（we will の短縮形）",
+    "etymology": "【短縮形】we will",
+    "relatedWords": "we(ウィー): 私たち, will(ウィル): 〜でしょう",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "we've": {
+    "word": "we've",
+    "reading": "ウィーブ",
+    "meaning": "私たちは〜した（we have の短縮形）",
+    "etymology": "【短縮形】we have",
+    "relatedWords": "we(ウィー): 私たち, have(ハブ): 持っている・〜したことがある",
+    "category": "言語基本",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "we'd": {
+    "word": "we'd",
+    "reading": "ウィード",
+    "meaning": "私たちは〜でしょう（we would / we had の短縮形）",
+    "etymology": "【短縮形】we would または we had",
+    "relatedWords": "we(ウィー): 私たち, would(ウッド): 〜でしょう, had(ハド): 持っていた",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "year's": {
+    "word": "year's",
+    "reading": "イヤーズ",
+    "meaning": "年の（所有格）",
+    "etymology": "【名詞】year（年）の所有格",
+    "relatedWords": "year(イヤー): 年, years(イヤーズ): 年（複数）",
+    "category": "時間",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "year"
+  },
+  "emma's": {
+    "word": "emma's",
+    "reading": "エマズ",
+    "meaning": "エマの（所有格）",
+    "etymology": "【固有名詞】Emma の所有格",
+    "relatedWords": "emma(エマ): エマ（人名）",
+    "category": "固有名詞",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "emma"
+  },
+  "whether": {
+    "word": "whether",
+    "reading": "ウェザー",
+    "meaning": "〜かどうか",
+    "etymology": "【接続詞】選択を示す",
+    "relatedWords": "if(イフ): もし〜なら, or(オア): または",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "someday": {
+    "word": "someday",
+    "reading": "サムデイ",
+    "meaning": "いつか",
+    "etymology": "【副詞】some（いくつかの）+ day（日）",
+    "relatedWords": "sometime(サムタイム): いつか, somewhere(サムウェア): どこかで",
+    "category": "時間",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "among": {
+    "word": "among",
+    "reading": "アマング",
+    "meaning": "〜の間に、〜の中で",
+    "etymology": "【前置詞】複数のものの中を示す",
+    "relatedWords": "between(ビトゥイーン): 〜の間に（2つ）, midst(ミッドスト): 真ん中",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "such": {
+    "word": "such",
+    "reading": "サッチ",
+    "meaning": "そのような",
+    "etymology": "【形容詞/副詞】程度や種類を示す",
+    "relatedWords": "so(ソー): とても, like(ライク): 〜のような",
+    "category": "言語基本",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
+  },
+  "thousands": {
+    "word": "thousands",
+    "reading": "サウザンズ",
+    "meaning": "数千（複数形）",
+    "etymology": "【名詞】thousand（千）の複数形",
+    "relatedWords": "thousand(サウザンド): 千, hundreds(ハンドレッズ): 数百, millions(ミリオンズ): 数百万",
+    "category": "数",
+    "difficulty": "初級",
+    "levels": [
+      "初級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": "thousand"
+  },
+  "section": {
+    "word": "section",
+    "reading": "セクション",
+    "meaning": "セクション、部分",
+    "etymology": "【名詞】全体の一部分",
+    "relatedWords": "part(パート): 部分, segment(セグメント): 区分",
+    "category": "一般名詞",
+    "difficulty": "中級",
+    "levels": [
+      "中級"
+    ],
+    "passages": [],
+    "source": "auto",
+    "baseWord": null
   }
 }

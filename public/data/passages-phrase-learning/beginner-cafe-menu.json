@@ -116,7 +116,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -170,7 +184,21 @@
       "segments": [
         {
           "word": "We're",
-          "meaning": "",
+          "meaning": {
+            "word": "we're",
+            "reading": "ウィア",
+            "meaning": "私たちは〜です（we are の短縮形）",
+            "etymology": "【短縮形】we are",
+            "relatedWords": "we(ウィー): 私たち, are(アー): です",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -328,7 +356,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -346,7 +388,21 @@
       "segments": [
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -366,7 +422,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -495,7 +565,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -513,7 +597,21 @@
       "segments": [
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -533,7 +631,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -606,7 +718,21 @@
         },
         {
           "word": "staff",
-          "meaning": "",
+          "meaning": {
+            "word": "staff",
+            "reading": "スタッフ",
+            "meaning": "職員、スタッフ",
+            "etymology": "【名詞】組織で働く人々",
+            "relatedWords": "employee(エンプロイー): 従業員, worker(ワーカー): 労働者",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -657,7 +783,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -823,7 +963,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -1029,7 +1183,21 @@
       "segments": [
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1149,7 +1317,21 @@
       "segments": [
         {
           "word": "Healthy",
-          "meaning": "",
+          "meaning": {
+            "word": "healthy",
+            "reading": "ヘルシー",
+            "meaning": "健康な",
+            "etymology": "【形容詞】health（健康）+ -y",
+            "relatedWords": "health(ヘルス): 健康, unhealthy(アンヘルシー): 不健康な",
+            "category": "医療・健康",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "health"
+          },
           "isUnknown": false
         },
         {
@@ -1244,7 +1426,21 @@
       "segments": [
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1671,7 +1867,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -1689,7 +1899,21 @@
       "segments": [
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1725,7 +1949,21 @@
         },
         {
           "word": "m",
-          "meaning": "",
+          "meaning": {
+            "word": "m",
+            "reading": "エム",
+            "meaning": "メートル（長さの単位）",
+            "etymology": "【単位】meter の略",
+            "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
+            "category": "単位",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "meter"
+          },
           "isUnknown": false
         },
         {
@@ -1798,7 +2036,21 @@
       "segments": [
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -1823,7 +2075,21 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3297,7 +3563,21 @@
         },
         {
           "word": "healthy",
-          "meaning": "",
+          "meaning": {
+            "word": "healthy",
+            "reading": "ヘルシー",
+            "meaning": "健康な",
+            "etymology": "【形容詞】health（健康）+ -y",
+            "relatedWords": "health(ヘルス): 健康, unhealthy(アンヘルシー): 不健康な",
+            "category": "医療・健康",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "health"
+          },
           "isUnknown": false
         },
         {
@@ -3351,12 +3631,40 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "quality",
-          "meaning": "",
+          "meaning": {
+            "word": "quality",
+            "reading": "クォリティ",
+            "meaning": "質、品質",
+            "etymology": "【名詞】物の良し悪しの程度",
+            "relatedWords": "qualify(クォリファイ): 資格を得る, qualified(クォリファイド): 資格のある",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3552,7 +3860,21 @@
         },
         {
           "word": "farmers",
-          "meaning": "",
+          "meaning": {
+            "word": "farmers",
+            "reading": "ファーマーズ",
+            "meaning": "農家（複数形）",
+            "etymology": "【名詞】farmer（農家）の複数形",
+            "relatedWords": "farmer(ファーマー): 農家, farm(ファーム): 農場, farming(ファーミング): 農業",
+            "category": "職業",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "farmer"
+          },
           "isUnknown": false
         },
         {
@@ -3813,7 +4135,21 @@
         },
         {
           "word": "quality",
-          "meaning": "",
+          "meaning": {
+            "word": "quality",
+            "reading": "クォリティ",
+            "meaning": "質、品質",
+            "etymology": "【名詞】物の良し悪しの程度",
+            "relatedWords": "qualify(クォリファイ): 資格を得る, qualified(クォリファイド): 資格のある",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -3986,7 +4322,21 @@
         },
         {
           "word": "years",
-          "meaning": "",
+          "meaning": {
+            "word": "years",
+            "reading": "イヤーズ",
+            "meaning": "年（複数形）",
+            "etymology": "【名詞】year（年）の複数形",
+            "relatedWords": "year(イヤー): 年, yearly(イヤリー): 毎年の",
+            "category": "時間",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "year"
+          },
           "isUnknown": false
         },
         {
@@ -4149,7 +4499,21 @@
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4679,7 +5043,21 @@
         },
         {
           "word": "Services",
-          "meaning": "",
+          "meaning": {
+            "word": "services",
+            "reading": "サービシズ",
+            "meaning": "サービス、業務（複数形）",
+            "etymology": "【名詞】service（サービス）の複数形",
+            "relatedWords": "service(サービス): サービス, serve(サーブ): 提供する",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "service"
+          },
           "isUnknown": false
         }
       ]
@@ -4697,7 +5075,21 @@
         },
         {
           "word": "Service",
-          "meaning": "",
+          "meaning": {
+            "word": "service",
+            "reading": "サービス",
+            "meaning": "サービス、業務",
+            "etymology": "【名詞】人のために行う仕事",
+            "relatedWords": "serve(サーブ): 提供する, servant(サーバント): 使用人",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "serve"
+          },
           "isUnknown": false
         },
         {
@@ -4799,7 +5191,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4894,7 +5300,21 @@
         },
         {
           "word": "on",
-          "meaning": "",
+          "meaning": {
+            "word": "on",
+            "reading": "オン",
+            "meaning": "〜の上に、〜について",
+            "etymology": "【前置詞】接触・位置を示す",
+            "relatedWords": "onto(オントゥ): 〜の上へ, upon(アポン): 〜の上に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -4998,7 +5418,21 @@
         },
         {
           "word": "crowded",
-          "meaning": "",
+          "meaning": {
+            "word": "crowded",
+            "reading": "クラウディド",
+            "meaning": "混雑した",
+            "etymology": "【形容詞】crowd（群衆）+ -ed",
+            "relatedWords": "crowd(クラウド): 群衆, overcrowded(オーバークラウディド): 超満員の",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "crowd"
+          },
           "isUnknown": false
         },
         {
@@ -5051,7 +5485,21 @@
         },
         {
           "word": "staff",
-          "meaning": "",
+          "meaning": {
+            "word": "staff",
+            "reading": "スタッフ",
+            "meaning": "職員、スタッフ",
+            "etymology": "【名詞】組織で働く人々",
+            "relatedWords": "employee(エンプロイー): 従業員, worker(ワーカー): 労働者",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -5195,7 +5643,21 @@
         },
         {
           "word": "Too",
-          "meaning": "",
+          "meaning": {
+            "word": "too",
+            "reading": "トゥー",
+            "meaning": "〜も、あまりにも",
+            "etymology": "【副詞】追加・過度を示す",
+            "relatedWords": "also(オールソー): また, as well(アズウェル): 同様に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -5222,7 +5684,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -5232,7 +5708,21 @@
         },
         {
           "word": "in",
-          "meaning": "",
+          "meaning": {
+            "word": "in",
+            "reading": "イン",
+            "meaning": "〜の中に、〜で",
+            "etymology": "【前置詞】場所・時間を示す",
+            "relatedWords": "inside(インサイド): 内側に, into(イントゥ): 〜の中へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -5324,7 +5814,21 @@
         },
         {
           "word": "anything",
-          "meaning": "",
+          "meaning": {
+            "word": "anything",
+            "reading": "エニシング",
+            "meaning": "何でも",
+            "etymology": "【代名詞】any（どんな）+ thing（もの）",
+            "relatedWords": "something(サムシング): 何か, nothing(ナシング): 何も〜ない, everything(エブリシング): すべて",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -5975,12 +6479,40 @@
         },
         {
           "word": "services",
-          "meaning": "",
+          "meaning": {
+            "word": "services",
+            "reading": "サービシズ",
+            "meaning": "サービス、業務（複数形）",
+            "etymology": "【名詞】service（サービス）の複数形",
+            "relatedWords": "service(サービス): サービス, serve(サーブ): 提供する",
+            "category": "一般名詞",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": "service"
+          },
           "isUnknown": false
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6042,7 +6574,21 @@
         },
         {
           "word": "event",
-          "meaning": "",
+          "meaning": {
+            "word": "event",
+            "reading": "イベント",
+            "meaning": "出来事、イベント",
+            "etymology": "【名詞】特定の出来事や行事",
+            "relatedWords": "eventually(イベンチュアリー): 最終的に, eventful(イベントフル): 多事な",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6084,12 +6630,40 @@
         },
         {
           "word": "work",
-          "meaning": "",
+          "meaning": {
+            "word": "work",
+            "reading": "ワーク",
+            "meaning": "働く、機能する",
+            "etymology": "【動詞/名詞】労働・仕事を示す",
+            "relatedWords": "worker(ワーカー): 労働者, working(ワーキング): 働いている, (動詞活用)work(ワーク):働く(原形), worked(ワークト):働いた(過去形), worked(ワークト):働かれた(過去分詞形), working(ワーキング):働くこと(現在分詞形), works(ワークス):働く(三単現)",
+            "category": "一般名詞",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
           "word": "with",
-          "meaning": "",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6125,7 +6699,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6277,7 +6865,21 @@
         },
         {
           "word": "Please",
-          "meaning": "",
+          "meaning": {
+            "word": "please",
+            "reading": "プリーズ",
+            "meaning": "どうぞ、お願いします",
+            "etymology": "【間投詞/動詞】丁寧な依頼を示す",
+            "relatedWords": "pleasant(プレザント): 快い, pleasure(プレジャー): 喜び",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6321,7 +6923,21 @@
         },
         {
           "word": "staff",
-          "meaning": "",
+          "meaning": {
+            "word": "staff",
+            "reading": "スタッフ",
+            "meaning": "職員、スタッフ",
+            "etymology": "【名詞】組織で働く人々",
+            "relatedWords": "employee(エンプロイー): 従業員, worker(ワーカー): 労働者",
+            "category": "職業",
+            "difficulty": "中級",
+            "levels": [
+              "中級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
@@ -6600,7 +7216,21 @@
         },
         {
           "word": "to",
-          "meaning": "",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "levels": [
+              "初級"
+            ],
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
           "isUnknown": false
         },
         {
