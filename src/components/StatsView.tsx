@@ -207,46 +207,10 @@ function StatsView({ }: StatsViewProps) {
         </div>
       </div>
 
-      {/* 和訳タブの統計 */}
-      <div className="stats-section-mode">
-        <h3>📖 和訳タブ</h3>
-
-        {/* リセットボタン */}
-        <div className="stats-reset-buttons">
-          <button onClick={() => handleResetByDifficulty('translation', 'beginner')} className="btn-reset-difficulty">
-            初級をリセット
-          </button>
-          <button onClick={() => handleResetByDifficulty('translation', 'intermediate')} className="btn-reset-difficulty">
-            中級をリセット
-          </button>
-          <button onClick={() => handleResetByDifficulty('translation', 'advanced')} className="btn-reset-difficulty">
-            上級をリセット
-          </button>
-        </div>
-      </div>
-
-      {/* スペルタブの統計 */}
-      <div className="stats-section-mode">
-        <h3>✍️ スペルタブ</h3>
-
-        {/* リセットボタン */}
-        <div className="stats-reset-buttons">
-          <button onClick={() => handleResetByDifficulty('spelling', 'beginner')} className="btn-reset-difficulty">
-            初級をリセット
-          </button>
-          <button onClick={() => handleResetByDifficulty('spelling', 'intermediate')} className="btn-reset-difficulty">
-            中級をリセット
-          </button>
-          <button onClick={() => handleResetByDifficulty('spelling', 'advanced')} className="btn-reset-difficulty">
-            上級をリセット
-          </button>
-        </div>
-      </div>
-
       {/* 全体リセット */}
       <div className="stats-section-reset">
         <button onClick={handleResetAll} className="btn-reset-all">
-          ⚠️ すべての成績をリセット
+          成績をリセット
         </button>
       </div>
 
