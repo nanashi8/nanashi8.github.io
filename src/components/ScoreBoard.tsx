@@ -122,31 +122,6 @@ function ScoreBoard({
       ? ['plan', 'stats', 'breakdown', 'goals', 'history', 'settings'] 
       : ['plan', 'stats', 'breakdown', 'goals', 'settings'];
 
-  // タブ切り替え関数
-  const handlePrevTab = () => {
-    const currentIndex = tabs.indexOf(activeTab);
-    const prevIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1;
-    setActiveTab(tabs[prevIndex]);
-  };
-
-  const handleNextTab = () => {
-    const currentIndex = tabs.indexOf(activeTab);
-    const nextIndex = currentIndex < tabs.length - 1 ? currentIndex + 1 : 0;
-    setActiveTab(tabs[nextIndex]);
-  };
-
-  // タブ名の取得
-  const getTabName = (tab: 'plan' | 'stats' | 'breakdown' | 'goals' | 'history' | 'settings') => {
-    switch (tab) {
-      case 'plan': return '📋 プラン';
-      case 'stats': return '📊 統計';
-      case 'breakdown': return '📈 学習状況';
-      case 'goals': return '🎯 目標';
-      case 'history': return '📜 履歴';
-      case 'settings': return '⚙️ 設定';
-    }
-  };
-
   return (
     <div className="score-board-compact">
       {/* タブナビゲーション: デスクトップ版（全タブ表示） */}

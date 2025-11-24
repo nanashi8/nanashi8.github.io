@@ -1079,11 +1079,17 @@ function App() {
   const handleSkip = () => {
     const currentQuestion = quizState.questions[quizState.currentIndex];
     if (currentQuestion) {
+      // 応答時間を計算
+      const responseTime = Date.now() - questionStartTimeRef.current;
+      
       // スキップ記録(30日間除外、AI学習アシスタントが後日検証)
       recordWordSkip(currentQuestion.word, 30);
       
       // AI学習アシスタント: スキップグループに追加
       addToSkipGroup(currentQuestion.word);
+      
+      // 単語進捗を更新（正解として記録し、定着率をカウント）
+      updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'translation');
       
       // スキップでもスコアボードに反映(正解扱い)
       setQuizState((prev) => ({
