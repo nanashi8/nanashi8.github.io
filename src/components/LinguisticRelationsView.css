@@ -310,6 +310,131 @@
   line-height: 1.6;
 }
 
+/* ダークモード対応 */
+.dark-mode .linguistic-relations-view {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode .linguistic-relations-view h2 {
+  color: #e0e0e0;
+}
+
+.dark-mode .search-input {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .search-input:focus {
+  border-color: #667eea;
+}
+
+.dark-mode .word-list {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .word-button {
+  background-color: #1a1a1a;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+.dark-mode .word-button:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+.dark-mode .word-button.selected {
+  background-color: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.dark-mode .analysis-results h3 {
+  color: #8b9ef5;
+}
+
+.dark-mode .feature-section {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .feature-section h4 {
+  color: #e0e0e0;
+  border-bottom-color: #667eea;
+}
+
+.dark-mode .feature-item {
+  background: #1a1a1a;
+  border-color: #555;
+}
+
+.dark-mode .feature-item:hover {
+  background: #333;
+}
+
+.dark-mode .feature-label {
+  color: #aaa;
+}
+
+.dark-mode .feature-value {
+  color: #e0e0e0;
+}
+
+.dark-mode .clusters-section {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .cluster-header {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .cluster-name {
+  color: #667eea;
+}
+
+.dark-mode .cluster-size {
+  color: #aaa;
+}
+
+.dark-mode .related-word {
+  background: #1a1a1a;
+  border-color: #555;
+}
+
+.dark-mode .related-word:hover {
+  background: #333;
+}
+
+.dark-mode .related-word-button {
+  color: #667eea;
+}
+
+.dark-mode .related-word-button:hover {
+  color: #8b9ef5;
+}
+
+.dark-mode .relation-type {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .relation-strength {
+  color: #aaa;
+}
+
+.dark-mode .empty-state {
+  color: #aaa;
+}
+
+.dark-mode .empty-state p {
+  color: #aaa;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   .feature-grid {
