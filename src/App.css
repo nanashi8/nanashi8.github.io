@@ -37,7 +37,7 @@
 .dark-mode .choice-btn,
 .dark-mode .letter-card {
   background: #3a3a3a;
-  border-color: #555;
+  border-color: #777;
   color: #ffffff;
 }
 
@@ -75,8 +75,8 @@
 
 .dark-mode .choice-btn:hover:not(:disabled) {
   background: #4a4a4a;
-  border-color: #8899ff;
-  box-shadow: 0 0 8px rgba(136, 153, 255, 0.3);
+  border-color: #99aaff;
+  box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
   transform: translateY(-1px);
 }
 

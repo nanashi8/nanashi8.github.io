@@ -543,13 +543,13 @@
 .dark-mode .choice-button {
   background: #3a3a3a;
   color: #ffffff;
-  border-color: #555;
+  border-color: #777;
 }
 
 .dark-mode .choice-button:hover:not(:disabled) {
   background: #4a4a4a;
-  border-color: #8899ff;
-  box-shadow: 0 0 8px rgba(136, 153, 255, 0.3);
+  border-color: #99aaff;
+  box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
   transform: translateY(-1px);
 }
 
@@ -1032,13 +1032,13 @@
 .dark-mode .choice-button {
   background: #3a3a3a;
   color: #ffffff;
-  border-color: #555;
+  border-color: #777;
 }
 
 .dark-mode .choice-button:hover:not(:disabled) {
   background: #4a4a4a;
-  border-color: #8899ff;
-  box-shadow: 0 0 8px rgba(136, 153, 255, 0.3);
+  border-color: #99aaff;
+  box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
   transform: translateY(-1px);
 }
 
