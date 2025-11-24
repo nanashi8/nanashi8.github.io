@@ -333,36 +333,6 @@ function QuestionCard({
       className="question-card"
       ref={cardRef}
     >
-      {/* 統合コメント欄エリア（常に固定の高さを確保） */}
-      <div className="comment-bar-container">
-        {!answered && errorPrediction && errorPrediction.suggestedSupport.showWarning && (
-          <div className={`unified-comment-bar warning ${errorPrediction.warningLevel}`}>
-            <div className="comment-content">
-              <div className="comment-message">{errorPrediction.suggestedSupport.warningMessage}</div>
-              {errorPrediction.suggestedSupport.hints.length > 0 && (
-                <div className="comment-hints">
-                  {errorPrediction.suggestedSupport.hints.map((hint, i) => (
-                    <div key={i} className="hint">💡 {hint}</div>
-                  ))}
-                </div>
-              )}
-              {errorPrediction.suggestedSupport.confidenceBooster && (
-                <div className="confidence-booster">
-                  ✨ {errorPrediction.suggestedSupport.confidenceBooster}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-        
-        {/* AIコメント（回答後） */}
-        {answered && aiComment && (
-          <div className="unified-comment-bar feedback">
-            <span className="comment-message">{aiComment}</span>
-          </div>
-        )}
-      </div>
-      
       <div className="question-nav-row">
         <button 
           className="inline-nav-btn prev-inline-btn" 

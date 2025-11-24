@@ -1184,7 +1184,7 @@ function App() {
           className={`tab-btn ${activeTab === 'dictionary' ? 'active' : ''}`}
           onClick={() => setActiveTab('dictionary')}
         >
-          📚 辞書
+          辞書
         </button>
         <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
@@ -1196,7 +1196,7 @@ function App() {
           className={`tab-btn ${activeTab === 'settings' ? 'active' : ''}`}
           onClick={() => setActiveTab('settings')}
         >
-          ⚙️ 設定
+          設定
         </button>
       </div>
 

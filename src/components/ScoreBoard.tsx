@@ -120,7 +120,7 @@ function ScoreBoard({
   const tabs: Array<'plan' | 'stats' | 'breakdown' | 'goals' | 'history' | 'settings'> = 
     mode === 'translation' || mode === 'spelling' 
       ? ['plan', 'stats', 'breakdown', 'goals', 'history', 'settings'] 
-      : ['plan', 'stats', 'breakdown', 'goals', 'settings'];
+      : ['plan', 'stats', 'breakdown', 'settings'];
 
   return (
     <div className="score-board-compact">
@@ -147,12 +147,14 @@ function ScoreBoard({
               📈 学習状況
             </button>
           )}
-          <button 
-            className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
-            onClick={() => setActiveTab('goals')}
-          >
-            🎯 目標
-          </button>
+          {(mode === 'translation' || mode === 'spelling') && (
+            <button 
+              className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
+              onClick={() => setActiveTab('goals')}
+            >
+              🎯 目標
+            </button>
+          )}
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
               className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
@@ -170,7 +172,7 @@ function ScoreBoard({
               }
             }}
           >
-            ⚙️ 設定
+            設定
           </button>
         </div>
       )}
@@ -201,13 +203,15 @@ function ScoreBoard({
               📈
             </button>
           )}
-          <button 
-            className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
-            onClick={() => setActiveTab('goals')}
-            title="目標"
-          >
-            🎯
-          </button>
+          {(mode === 'translation' || mode === 'spelling') && (
+            <button 
+              className={`score-tab ${activeTab === 'goals' ? 'active' : ''}`}
+              onClick={() => setActiveTab('goals')}
+              title="目標"
+            >
+              🎯
+            </button>
+          )}
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
               className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
@@ -227,7 +231,7 @@ function ScoreBoard({
             }}
             title="設定"
           >
-            ⚙️
+            設
           </button>
         </div>
       )}
