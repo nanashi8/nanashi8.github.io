@@ -55,6 +55,7 @@ import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import GrammarQuizView from './components/GrammarQuizView';
+import DictionaryView from './components/DictionaryView';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import './App.css';
@@ -63,7 +64,7 @@ import './App.css';
 import { migrateToIndexedDB } from './dataMigration';
 import { initStorageStrategy } from './storageManager';
 
-type Tab = 'translation' | 'spelling' | 'reading' | 'grammar' | 'settings' | 'stats';
+type Tab = 'translation' | 'spelling' | 'grammar' | 'reading' | 'dictionary' | 'stats' | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
@@ -1162,16 +1163,22 @@ function App() {
           スペル
         </button>
         <button
+          className={`tab-btn ${activeTab === 'grammar' ? 'active' : ''}`}
+          onClick={() => setActiveTab('grammar')}
+        >
+          文法
+        </button>
+        <button
           className={`tab-btn ${activeTab === 'reading' ? 'active' : ''}`}
           onClick={() => setActiveTab('reading')}
         >
           長文
         </button>
         <button
-          className={`tab-btn ${activeTab === 'grammar' ? 'active' : ''}`}
-          onClick={() => setActiveTab('grammar')}
+          className={`tab-btn ${activeTab === 'dictionary' ? 'active' : ''}`}
+          onClick={() => setActiveTab('dictionary')}
         >
-          文法
+          📚 辞書
         </button>
         <button
           className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
@@ -1267,6 +1274,8 @@ function App() {
           />
         ) : activeTab === 'grammar' ? (
           <GrammarQuizView />
+        ) : activeTab === 'dictionary' ? (
+          <DictionaryView />
         ) : activeTab === 'stats' ? (
           <StatsView
             questionSets={questionSets}
