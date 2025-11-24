@@ -6726,39 +6726,67 @@ option {
   .score-tabs-mobile {
     display: flex;
     gap: 8px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   .score-tab {
-    flex: 1;
-    padding: 8px;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid transparent;
-    color: #666;
-    font-size: max(14px, 0.9em);
+    padding: 10px 18px;
+    background: white;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
+    font-size: max(14px, 1em);
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .score-tab:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
 
   .score-tab.active {
-    border-bottom-color: #007bff;
-    color: #007bff;
-    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
   }
 
   .dark-mode .score-tabs-mobile {
-    border-bottom-color: #444;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+    border-color: #444;
   }
 
   .dark-mode .score-tab {
-    color: #aaa;
+    background: #333;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .dark-mode .score-tab:hover {
+    background: #3a3a3a;
+    border-color: #666;
   }
 
   .dark-mode .score-tab.active {
-    color: #4a9eff;
-    border-bottom-color: #4a9eff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
   }
 
   .score-tab-content {
