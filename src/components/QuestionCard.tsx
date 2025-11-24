@@ -201,10 +201,11 @@ function QuestionCard({
   // スワイプジェスチャーのハンドラー
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
-      // 選択肢ボタンや詳細トグルボタン上でのタッチは無視
+      // 選択肢ボタンや詳細トグルボタン、question-text上でのタッチは無視
       const target = e.target as HTMLElement;
       if (target.closest('.choice-btn') || target.closest('.toggle-details-btn') || 
-          target.closest('.rating-btn') || target.closest('.inline-nav-btn')) {
+          target.closest('.rating-btn') || target.closest('.inline-nav-btn') ||
+          target.closest('.question-text')) {
         return;
       }
       touchStartX.current = e.touches[0].clientX;
