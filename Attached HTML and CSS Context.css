@@ -89,8 +89,8 @@ button, input:not([type=text]), textarea {
   flex: 1;
   padding: 15px 12px;
   border: none;
-  background: #f8f9fa;
-  color: #666;
+  background: var(--bg-secondary);
+  color: var(--text-color);
   cursor: pointer;
   font-size: 1em;
   transition: all .2s;
@@ -129,8 +129,8 @@ button, input:not([type=text]), textarea {
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
-  background-color: rgb(248, 249, 250);
-  color: rgb(102, 102, 102);
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
   cursor: pointer;
   font-size: 1em;
   transition-behavior: normal;
@@ -177,21 +177,9 @@ button, input:not([type=text]), textarea {
 
 /* Matched Rule from regular */
 .tab-btn.active {
-  background: #fff;
-  color: #667eea;
-  border-bottom-color: #667eea;
-  font-weight: 600;
-  background-image: initial;
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-repeat: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: rgb(255, 255, 255);
-  color: rgb(102, 126, 234);
-  border-bottom-color: rgb(102, 126, 234);
+  background: var(--bg-secondary);
+  color: var(--primary-color, #667eea);
+  border-bottom-color: var(--primary-color, #667eea);
   font-weight: 600;
 }
 
@@ -241,7 +229,7 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
 .tab-menu {
   display: flex;
   gap: 0;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   flex-shrink: 0;
   display: flex;
   row-gap: 0px;
@@ -254,7 +242,7 @@ address, blockquote, center, div, figure, figcaption, footer, form, header, hr, 
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
-  background-color: rgb(248, 249, 250);
+  background-color: var(--bg-secondary);
   flex-shrink: 0;
 }
 
