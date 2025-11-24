@@ -1903,6 +1903,23 @@ option {
   border: 1px solid #e0e0e0;
 }
 
+.retention-breakdown-header {
+  margin-bottom: 12px;
+}
+
+.retention-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.retention-subtitle {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
 .retention-progress-bar {
   width: 100%;
   height: 48px;
@@ -1911,6 +1928,7 @@ option {
   overflow: hidden;
   display: flex;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 12px;
 }
 
 .retention-segment {
@@ -1936,12 +1954,23 @@ option {
   background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
 }
 
-.retention-text-summary {
-  margin-top: 8px;
-  font-size: 1em;
-  color: #666;
-  text-align: center;
-  font-weight: 500;
+.retention-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9em;
+  color: #444;
+  padding: 8px 0;
+}
+
+.retention-explanation-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.retention-explanation-item strong {
+  min-width: 90px;
 }
 
 /* 履歴コンパクト */
@@ -2457,12 +2486,24 @@ option {
   border-color: #444;
 }
 
+.dark-mode .retention-title {
+  color: #e0e0e0;
+}
+
+.dark-mode .retention-subtitle {
+  color: #aaa;
+}
+
 .dark-mode .retention-breakdown-label {
   color: #b0b0b0;
 }
 
 .dark-mode .retention-progress-bar {
   background: #1a1a1a;
+}
+
+.dark-mode .retention-explanation {
+  color: #ccc;
 }
 
 .dark-mode .retention-detail-mastered {
