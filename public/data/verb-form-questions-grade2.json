@@ -11,10 +11,15 @@
           "japanese": "私は昨日映画を見ました",
           "sentence": "I ____ a movie yesterday.",
           "verb": "see",
-          "choices": ["see", "saw", "seen", "seeing"],
+          "choices": [
+            "see",
+            "saw",
+            "seen",
+            "seeing"
+          ],
           "correctAnswer": "saw",
           "difficulty": "intermediate",
-          "explanation": "seeの過去形は不規則でsawになります。",
+          "explanation": "See（見る）の過去形はsaw（ソー）という不規則変化です。Yesterday（昨日）があるので過去形が必要です。規則動詞ならsee→seeedとなりそうですが、実際はsawという全く異なる形に変わります。Seeは「見る」という視覚動詞で頻出です。Seen は過去分詞（現在完了で使用）、seeingは進行形です。See-saw-seen（原形-過去形-過去分詞）と活用を覚えましょう。See a movie（映画を見る）は重要表現です。不規則動詞は個別に暗記する必要がありますが、似たパターンでグループ化すると覚えやすくなります。",
           "hint": "see - saw - seen"
         },
         {
@@ -22,10 +27,15 @@
           "japanese": "彼は朝食にパンを食べました",
           "sentence": "He ____ bread for breakfast.",
           "verb": "eat",
-          "choices": ["eat", "eats", "ate", "eaten"],
+          "choices": [
+            "eat",
+            "eats",
+            "ate",
+            "eaten"
+          ],
           "correctAnswer": "ate",
           "difficulty": "intermediate",
-          "explanation": "eatの過去形は不規則でateになります。",
+          "explanation": "Eat（食べる）の過去形はate（エイト）という不規則変化です。「朝食にパンを食べました」という過去の出来事なので過去形が必要です。Eat→eatedではなく、ateという形に変わります。Eatenは過去分詞、eatingは進行形です。Eat-ate-eaten（原形-過去形-過去分詞）と活用を覚えます。For breakfast（朝食に）という前置詞forの用法も重要です。Eat bread（パンを食べる）のように、食べ物の前に冠詞を付けない場合もあります。母音が変化するパターン（eat→ate）の不規則動詞は多いです。",
           "hint": "eat - ate - eaten"
         },
         {
@@ -33,10 +43,15 @@
           "japanese": "私たちは公園へ行きました",
           "sentence": "We ____ to the park.",
           "verb": "go",
-          "choices": ["go", "goes", "went", "gone"],
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "gone"
+          ],
           "correctAnswer": "went",
           "difficulty": "intermediate",
-          "explanation": "goの過去形は不規則でwentになります。",
+          "explanation": "Go（行く）の過去形はwent（ウェント）という不規則変化です。「公園へ行きました」という過去の出来事なので過去形が必要です。Go→goedではなく、wentという全く異なる形に変わります。これは最も基本的な不規則動詞の1つです。Goneは過去分詞、goingは進行形です。Go-went-gone（原形-過去形-過去分詞）と活用を覚えましょう。Go to 〜（〜へ行く）は移動を表す基本表現です。Come（来る）→came（来た）とセットで覚えると効果的です。",
           "hint": "go - went - gone"
         },
         {
@@ -44,10 +59,15 @@
           "japanese": "彼女は手紙を書きました",
           "sentence": "She ____ a letter.",
           "verb": "write",
-          "choices": ["write", "writes", "wrote", "written"],
+          "choices": [
+            "write",
+            "writes",
+            "wrote",
+            "written"
+          ],
           "correctAnswer": "wrote",
           "difficulty": "intermediate",
-          "explanation": "writeの過去形は不規則でwroteになります。",
+          "explanation": "Write（書く）の過去形はwrote（ロウト）という不規則変化です。「手紙を書きました」という過去の出来事なので過去形が必要です。Write→writedではなく、wroteという形に変わります。Writtenは過去分詞、writingは進行形です。Write-wrote-written（原形-過去形-過去分詞）と活用を覚えます。Write a letter（手紙を書く）は重要表現です。Ride-rode-ridden（乗る）も同じ母音変化パターン（i→o→i）です。このパターンの動詞をまとめて覚えましょう。",
           "hint": "write - wrote - written"
         },
         {
@@ -55,10 +75,15 @@
           "japanese": "彼は本を読みました",
           "sentence": "He ____ a book.",
           "verb": "read",
-          "choices": ["read", "reads", "red", "reading"],
+          "choices": [
+            "read",
+            "reads",
+            "red",
+            "reading"
+          ],
           "correctAnswer": "read",
           "difficulty": "intermediate",
-          "explanation": "readの過去形はスペルは同じですが、発音が[red]になります。",
+          "explanation": "Read（読む）の過去形はread（レッド）で、綴りは現在形と同じですが発音が異なります。現在形read[ri:d]（リード）→過去形read[red]（レッド）と変化します。「本を読みました」という過去の出来事なので過去形が必要です。綴りが同じなので紛らわしいですが、文脈で判断します。Reads は三人称単数現在形、red（レッド）は色の「赤」なので誤りです。Reading は進行形です。Read-read[red]-read[red]（原形-過去形-過去分詞）と活用を覚えましょう。Read a book（本を読む）は基本表現です。発音の違いに注意が必要な特殊な不規則動詞です。",
           "hint": "read - read(発音:red) - read"
         },
         {
@@ -66,10 +91,15 @@
           "japanese": "私は新しい車を買いました",
           "sentence": "I ____ a new car.",
           "verb": "buy",
-          "choices": ["buy", "buys", "bought", "buying"],
+          "choices": [
+            "buy",
+            "buys",
+            "bought",
+            "buying"
+          ],
           "correctAnswer": "bought",
           "difficulty": "intermediate",
-          "explanation": "buyの過去形は不規則でboughtになります。",
+          "explanation": "Buy（買う）の過去形はbought（ボート）という不規則変化です。「新しい車を買いました」という過去の出来事なので過去形が必要です。Buy→buyedではなく、boughtという形に変わります。過去形と過去分詞が同じ形です。Buying は進行形です。Buy-bought-bought（原形-過去形-過去分詞）と活用を覚えます。Bring-brought-brought（持ってくる）、think-thought-thought（思う）も同じ-oughtパターンです。このグループをまとめて覚えると効率的です。Buy a car（車を買う）のように、1つのものには冠詞aを付けます。",
           "hint": "buy - bought - bought"
         },
         {
@@ -77,10 +107,15 @@
           "japanese": "彼女は歌を歌いました",
           "sentence": "She ____ a song.",
           "verb": "sing",
-          "choices": ["sing", "sings", "sang", "sung"],
+          "choices": [
+            "sing",
+            "sings",
+            "sang",
+            "sung"
+          ],
           "correctAnswer": "sang",
           "difficulty": "intermediate",
-          "explanation": "singの過去形は不規則でsangになります。",
+          "explanation": "Sing（歌う）の過去形はsang（サング）という不規則変化です。「歌を歌いました」という過去の出来事なので過去形が必要です。Sing→singedではなく、sangという形に変わります。母音がi→a→uと変化するパターンです。Sungは過去分詞、singingは進行形です。Sing-sang-sung（原形-過去形-過去分詞）と活用を覚えます。Ring-rang-rung（鳴る）、swim-swam-swum（泳ぐ）、begin-began-begun（始まる）も同じ母音変化パターンです。このグループは入試頻出なので確実に覚えましょう。Sing a song（歌を歌う）は基本表現です。",
           "hint": "sing - sang - sung"
         },
         {
@@ -88,10 +123,15 @@
           "japanese": "私たちはバスに乗りました",
           "sentence": "We ____ the bus.",
           "verb": "take",
-          "choices": ["take", "takes", "took", "taken"],
+          "choices": [
+            "take",
+            "takes",
+            "took",
+            "taken"
+          ],
           "correctAnswer": "took",
           "difficulty": "intermediate",
-          "explanation": "takeの過去形は不規則でtookになります。",
+          "explanation": "Take（取る・乗る）の過去形はtook（トゥック）という不規則変化です。「バスに乗りました」という過去の出来事なので過去形が必要です。Take→takedではなく、tookという形に変わります。Takenは過去分詞、takingは進行形です。Take-took-taken（原形-過去形-過去分詞）と活用を覚えます。Take the bus（バスに乗る）は重要表現で、交通機関にはtheを付けます。Takeは「取る」「連れて行く」「時間がかかる」など多義語です。Mistake-mistook-mistaken（間違える）も同じパターンです。母音がa→o→aと変化する規則性があります。",
           "hint": "take - took - taken"
         }
       ]
@@ -105,10 +145,15 @@
           "japanese": "私は明日そこへ行くつもりです",
           "sentence": "I ____ go there tomorrow.",
           "verb": "will",
-          "choices": ["am", "will", "do", "can"],
+          "choices": [
+            "am",
+            "will",
+            "do",
+            "can"
+          ],
           "correctAnswer": "will",
           "difficulty": "intermediate",
-          "explanation": "未来のことを表すにはwillを使います。",
+          "explanation": "未来のことを表すにはwill（ウィル）を使います。Tomorrow（明日）という未来を表す語があるので、未来形が必要です。Willの後ろは必ず動詞の原形（go）を使います。Will + 動詞の原形で「〜するつもりだ」「〜するだろう」という未来や意志を表します。主語が何であっても形は変わりません（I will / He will / They will）。Am、do、canは未来を表さないので不適切です。I will go（私は行くつもりだ）という基本文型です。疑問文はWill you go?（あなたは行きますか?）、否定文はI will not go（私は行きません）となります。",
           "hint": "未来 → will + 動詞の原形"
         },
         {
@@ -116,10 +161,15 @@
           "japanese": "彼は手伝ってくれるでしょう",
           "sentence": "He ____ help you.",
           "verb": "will",
-          "choices": ["is", "will", "does", "can"],
+          "choices": [
+            "is",
+            "will",
+            "does",
+            "can"
+          ],
           "correctAnswer": "will",
           "difficulty": "intermediate",
-          "explanation": "未来の推量を表すにはwillを使います。",
+          "explanation": "未来の推量を表すにはwillを使います。「手伝ってくれるでしょう」という未来の予測なので、willが必要です。Willの後ろは動詞の原形（help）を使います。Will help you（あなたを手伝うでしょう）という文型です。Is、does、canは未来の推量を表さないので不適切です。Willは「〜だろう」という話し手の予測・推量も表します。Help you（あなたを助ける）のように、動詞の後ろに目的語が来ます。He will help（彼は手伝うだろう）のように、主語が三人称単数でもwillの形は変わりません。",
           "hint": "will + 動詞の原形"
         },
         {
@@ -127,10 +177,15 @@
           "japanese": "明日は雨が降るでしょう",
           "sentence": "It ____ rain tomorrow.",
           "verb": "will",
-          "choices": ["is", "will", "does", "was"],
+          "choices": [
+            "is",
+            "will",
+            "does",
+            "was"
+          ],
           "correctAnswer": "will",
           "difficulty": "intermediate",
-          "explanation": "天気の予測にもwillを使います。",
+          "explanation": "天気の予測にもwillを使います。Tomorrow（明日）という未来を表す語があるので、will が必要です。It will rain（雨が降るでしょう）という天気予報の文型です。主語がIt（天候のit）の場合もwillを使います。Is、does、wasは未来を表さないので不適切です。天気の表現では主語にitを使うのが基本です（It is sunny / It was rainy）。Will + 動詞の原形で「〜だろう」という予測を表します。天気予報でよく使われる表現なので覚えましょう。",
           "hint": "未来の予測 → will"
         },
         {
@@ -138,10 +193,15 @@
           "japanese": "私たちは来週会うでしょう",
           "sentence": "We ____ meet next week.",
           "verb": "will",
-          "choices": ["are", "will", "do", "can"],
+          "choices": [
+            "are",
+            "will",
+            "do",
+            "can"
+          ],
           "correctAnswer": "will",
           "difficulty": "intermediate",
-          "explanation": "next weekは未来を表すので、willを使います。",
+          "explanation": "Next week（来週）という未来を表す語があるので、willが必要です。We will meet（私たちは会うでしょう）という未来の予定を表す文型です。Are、do、canは未来を表さないので不適切です。Will + 動詞の原形で未来の予定や意志を表します。主語がweでもwillの形は変わりません。Meet（会う）は自動詞として使うことも、他動詞として使うこともできます（meet someone = 誰かに会う）。Next week、next month、next yearなど、nextと共に使う時間表現を覚えましょう。",
           "hint": "next week → will"
         }
       ]
@@ -155,10 +215,15 @@
           "japanese": "私は宿題をしなければなりません",
           "sentence": "I ____ do my homework.",
           "verb": "have to",
-          "choices": ["must", "have to", "can", "will"],
+          "choices": [
+            "must",
+            "have to",
+            "can",
+            "will"
+          ],
           "correctAnswer": "have to",
           "difficulty": "intermediate",
-          "explanation": "義務を表すにはhave toを使います。",
+          "explanation": "義務や必要性を表すにはhave toを使います。「宿題をしなければなりません」という義務なので、have toが適切です。Have to + 動詞の原形で「〜しなければならない」という意味です。主語がI/You/We/Theyの場合はhave toを使います。Mustも義務を表しますが、have toの方が口語的で一般的です。Do my homework（宿題をする）は重要表現です。疑問文はDo I have to 〜?（〜しなければなりませんか?）、否定文はI don't have to 〜（〜する必要はない）となります。Don't have toは「〜する必要がない」、must notは「〜してはいけない」と意味が異なるので注意しましょう。",
           "hint": "～しなければならない → have to"
         },
         {
@@ -166,10 +231,15 @@
           "japanese": "彼は早く起きなければなりません",
           "sentence": "He ____ get up early.",
           "verb": "has to",
-          "choices": ["must", "has to", "can", "will"],
+          "choices": [
+            "must",
+            "has to",
+            "can",
+            "will"
+          ],
           "correctAnswer": "has to",
           "difficulty": "intermediate",
-          "explanation": "三人称単数ではhave toがhas toになります。",
+          "explanation": "三人称単数（He/She/It）の場合、have toはhas toになります。主語がHe（彼）なので、has toを使います。Has to + 動詞の原形で「〜しなければならない」という義務を表します。Get up early（早く起きる）は重要表現です。疑問文はDoes he have to 〜?（彼は〜しなければなりませんか?）、否定文はHe doesn't have to 〜（彼は〜する必要はない）となります。Has toのtoの後ろは必ず動詞の原形です。Mustは主語に関係なく形が変わりませんが、have toは主語によってhave/hasと変化します。",
           "hint": "三人称単数 → has to"
         },
         {
@@ -177,10 +247,15 @@
           "japanese": "私たちは急がなければなりません",
           "sentence": "We ____ hurry.",
           "verb": "have to",
-          "choices": ["must", "have to", "can", "will"],
+          "choices": [
+            "must",
+            "have to",
+            "can",
+            "will"
+          ],
           "correctAnswer": "have to",
           "difficulty": "intermediate",
-          "explanation": "義務・必要性を表すhave toを使います。",
+          "explanation": "義務や必要性を表すhave toを使います。「急がなければなりません」という必要性なので、have toが適切です。主語がWe（私たち）なので、have toを使います。Hurry（急ぐ）は重要動詞です。Have to + 動詞の原形で義務・必要性を表します。Can（できる）、will（〜だろう）は文脈に合いません。We have to hurry（私たちは急がなければならない）という緊急性を表す表現です。Mustとhave toはほぼ同じ意味ですが、mustの方が強い義務、have toの方が客観的な必要性を表す傾向があります。",
           "hint": "～しなければならない"
         },
         {
@@ -188,10 +263,15 @@
           "japanese": "彼女は薬を飲まなければなりません",
           "sentence": "She ____ take medicine.",
           "verb": "has to",
-          "choices": ["must", "has to", "can", "will"],
+          "choices": [
+            "must",
+            "has to",
+            "can",
+            "will"
+          ],
           "correctAnswer": "has to",
           "difficulty": "intermediate",
-          "explanation": "三人称単数現在形ではhas toを使います。",
+          "explanation": "三人称単数現在形なので、has toを使います。主語がShe（彼女）なので、has toが正解です。Has to + 動詞の原形で「〜しなければならない」という義務を表します。Take medicine（薬を飲む）は重要表現です。Mustも使えますが、has toの方が一般的です。She has to take（彼女は飲まなければならない）という文型です。疑問文はDoes she have to 〜?、否定文はShe doesn't have to 〜となります。医療・健康に関する表現として覚えましょう。",
           "hint": "she → has to"
         }
       ]
@@ -205,10 +285,15 @@
           "japanese": "彼は私より背が高い",
           "sentence": "He is ____ than me.",
           "verb": "tall",
-          "choices": ["tall", "taller", "tallest", "more tall"],
+          "choices": [
+            "tall",
+            "taller",
+            "tallest",
+            "more tall"
+          ],
           "correctAnswer": "taller",
           "difficulty": "intermediate",
-          "explanation": "2つを比較するときは-erを付けます。",
+          "explanation": "2つを比較するときは比較級を使います。Tall（背が高い）の比較級はtallerです。Than（〜より）があるので比較級が必要です。1音節の短い形容詞は-erを付けて比較級を作ります。He is taller than me（彼は私より背が高い）という比較文です。Tallestは最上級、more tallは誤った形です。比較級 + thanで「〜より…だ」という意味になります。Me（私を・私より）のように、thanの後ろには目的格を使います。Old-older、young-youngerなども同じパターンです。",
           "hint": "～より…（比較級） → -er"
         },
         {
@@ -216,10 +301,15 @@
           "japanese": "これはあれより大きい",
           "sentence": "This is ____ than that.",
           "verb": "big",
-          "choices": ["big", "biger", "bigger", "biggest"],
+          "choices": [
+            "big",
+            "biger",
+            "bigger",
+            "biggest"
+          ],
           "correctAnswer": "bigger",
           "difficulty": "intermediate",
-          "explanation": "短母音+子音字で終わる語は、子音字を重ねて-erを付けます。",
+          "explanation": "短母音 + 子音字で終わる語の比較級は、子音字を重ねて-erを付けます。Big（大きい）の比較級はbiggerです。Gを重ねてbiggerとします。Bigerは誤りです。This is bigger than that（これはあれより大きい）という比較文です。Hot-hotter、fat-fatterなども同じルールです。Than（〜より）と共に使います。最上級はbiggestで、gを重ねて-estを付けます。子音を重ねるルールは重要なので確実に覚えましょう。",
           "hint": "big → bigger"
         },
         {
@@ -227,10 +317,15 @@
           "japanese": "彼女はクラスで一番背が高い",
           "sentence": "She is the ____ in her class.",
           "verb": "tall",
-          "choices": ["tall", "taller", "tallest", "most tall"],
+          "choices": [
+            "tall",
+            "taller",
+            "tallest",
+            "most tall"
+          ],
           "correctAnswer": "tallest",
           "difficulty": "intermediate",
-          "explanation": "3つ以上の中で最もを表すときは-estを付けます。",
+          "explanation": "3つ以上の中で最もを表すときは最上級を使います。Tall（背が高い）の最上級はtallestで、-estを付けます。最上級の前には必ずtheを付けます（the tallest）。She is the tallest in her class（彼女はクラスで一番背が高い）という最上級の文です。Taller は比較級、most tallは誤った形です。In her class（クラスで）のように、範囲を表す前置詞inを使います。Of the three（3つの中で）のようにofで範囲を表すこともあります。最上級 + in/ofで「〜の中で最も…だ」という意味です。",
           "hint": "最も～（最上級） → the -est"
         },
         {
@@ -238,10 +333,15 @@
           "japanese": "これは3つの中で一番大きい",
           "sentence": "This is the ____ of the three.",
           "verb": "big",
-          "choices": ["big", "bigger", "bigest", "biggest"],
+          "choices": [
+            "big",
+            "bigger",
+            "bigest",
+            "biggest"
+          ],
           "correctAnswer": "biggest",
           "difficulty": "intermediate",
-          "explanation": "bigの最上級は子音字を重ねてbiggestになります。",
+          "explanation": "Bigの最上級はbiggestで、子音字gを重ねて-estを付けます。The biggest of the three（3つの中で一番大きい）という最上級の文です。Of the three（3つの中で）のように、ofで具体的な範囲を示します。Bigestはスペルミスです。最上級の前には必ずtheを付けます。Big-bigger-biggest（原級-比較級-最上級）と変化を覚えましょう。Hot-hotter-hottest、fat-fatter-fattestも同じパターンです。子音を重ねるルールが比較級と最上級の両方に適用されます。",
           "hint": "big → biggest"
         },
         {
@@ -249,10 +349,15 @@
           "japanese": "英語は数学より簡単です",
           "sentence": "English is ____ than math.",
           "verb": "easy",
-          "choices": ["easy", "easier", "easyer", "easiest"],
+          "choices": [
+            "easy",
+            "easier",
+            "easyer",
+            "easiest"
+          ],
           "correctAnswer": "easier",
           "difficulty": "intermediate",
-          "explanation": "子音+yで終わる語は、yをiに変えて-erを付けます。",
+          "explanation": "子音 + yで終わる語の比較級は、yをiに変えて-erを付けます。Easy（簡単な）の比較級はeasierです。Easyerは誤りです。English is easier than math（英語は数学より簡単です）という比較文です。Happy-happier、busy-busierなども同じルールです。子音 + yのパターンは、動詞の三人称単数（study-studies）や過去形（study-studied）と同じルールです。最上級はeasiestで、yをiに変えて-estを付けます。このルールは形容詞の変化で頻出なので確実に覚えましょう。",
           "hint": "easy → easier"
         },
         {
@@ -260,10 +365,15 @@
           "japanese": "これは最も重要です",
           "sentence": "This is the ____ important.",
           "verb": "most",
-          "choices": ["more", "most", "much", "many"],
+          "choices": [
+            "more",
+            "most",
+            "much",
+            "many"
+          ],
           "correctAnswer": "most",
           "difficulty": "intermediate",
-          "explanation": "長い形容詞の最上級はthe most + 形容詞です。",
+          "explanation": "長い形容詞（3音節以上）の最上級はthe most + 形容詞です。Important（重要な）は3音節なので、the most importantとします。Importantest のように-estは付けません。The most + 形容詞で「最も〜だ」という意味です。Beautiful-the most beautiful、difficult-the most difficultなども同じパターンです。比較級はmore important（より重要な）となります。長い形容詞はmore/mostを使い、短い形容詞は-er/-estを使うというルールを覚えましょう。",
           "hint": "長い語 → the most + 形容詞"
         },
         {
@@ -271,10 +381,15 @@
           "japanese": "彼は彼女よりよく走ります",
           "sentence": "He runs ____ than her.",
           "verb": "better",
-          "choices": ["good", "well", "better", "best"],
+          "choices": [
+            "good",
+            "well",
+            "better",
+            "best"
+          ],
           "correctAnswer": "better",
           "difficulty": "advanced",
-          "explanation": "wellの比較級は不規則でbetterになります。",
+          "explanation": "Well（よく・上手に）の比較級は不規則でbetterになります。Good（よい）の比較級もbetterです。He runs better than her（彼は彼女よりよく走ります）という比較文です。Goodは形容詞、wellは副詞ですが、比較級は同じbetterです。Gooder、wellerのような規則変化はしません。Good/well-better-best（原級-比較級-最上級）と活用を覚えます。不規則な比較変化は個別に暗記が必要です。Bad/badly-worse-worst（悪い）、many/much-more-most（多い）も重要な不規則変化です。",
           "hint": "well → better → best"
         },
         {
@@ -282,10 +397,15 @@
           "japanese": "彼女は4人の中で一番若い",
           "sentence": "She is the ____ of the four.",
           "verb": "young",
-          "choices": ["young", "younger", "youngest", "most young"],
+          "choices": [
+            "young",
+            "younger",
+            "youngest",
+            "most young"
+          ],
           "correctAnswer": "youngest",
           "difficulty": "intermediate",
-          "explanation": "youngの最上級は-estを付けてyoungestになります。",
+          "explanation": "Young（若い）の最上級はyoungestで、-estを付けます。She is the youngest of the four（彼女は4人の中で一番若い）という最上級の文です。最上級の前には必ずtheを付けます。Of the four（4人の中で）のように、ofで範囲を表します。Most youngは誤った形です。Old-oldest（最も年上の）と対比して覚えましょう。1音節や2音節の短い形容詞は-estで最上級を作ります。Young-younger-youngest（原級-比較級-最上級）と変化を覚えます。",
           "hint": "young → youngest"
         }
       ]
