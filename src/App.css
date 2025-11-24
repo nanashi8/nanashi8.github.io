@@ -3926,27 +3926,28 @@ option {
 }
 
 /* スペルタブの意味表示 */
-.meaning-display {
-  text-align: center;
-  margin: 0;
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  flex: 1;
-  min-width: 0;
-}
+  .meaning-display {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    flex: 1;
+    min-width: 0;
+  }
 
-.meaning-label {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 5px;
-}
+  .meaning-label {
+    font-size: 0.9em;
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
 
-.meaning-text {
-  font-size: max(19px, 1.2em);
-  font-weight: 600;
-  color: #333;
-}
+  /* slightly larger meaning text for readability */
+  .meaning-text {
+    font-size: max(22px, 1.3em);
+    font-weight: 600;
+    color: var(--text-color);
+  }
 
 .word-blanks {
   display: flex;
