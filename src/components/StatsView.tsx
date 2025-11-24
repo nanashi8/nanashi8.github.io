@@ -128,20 +128,6 @@ function StatsView({ }: StatsViewProps) {
 
   return (
     <div className="stats-view">
-      <div className="stats-header">
-        <h2>📊 成績</h2>
-        <div className="stats-controls">
-          <label>
-            <input
-              type="checkbox"
-              checked={autoRefresh}
-              onChange={(e) => setAutoRefresh(e.target.checked)}
-            />
-            自動更新
-          </label>
-        </div>
-      </div>
-
       {/* 学習カレンダーヒートマップ */}
       <div className="stats-section-calendar">
         <h3>📆 学習カレンダー（過去12週間）</h3>
