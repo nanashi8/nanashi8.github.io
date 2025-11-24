@@ -2903,7 +2903,7 @@ option {
   flex: 1;
   font-size: 1em;
   line-height: 1.4;
-  color: #2c3e50;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -3036,6 +3036,10 @@ option {
   border-color: #f87171;
   color: #ffffff;
   box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
+}
+
+.dark-mode .choice-text {
+  color: #ffffff;
 }
 
 /* 読み表示 */
