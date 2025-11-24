@@ -79,7 +79,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   const [showHint, setShowHint] = useState(false);
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
-  const [sessionStats, setSessionStats] = useState({ correct: 0, incorrect: 0 });
+  const [sessionStats, setSessionStats] = useState({ correct: 0, incorrect: 0, mastered: 0 });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [userRating, setUserRating] = useState<number | null>(null);
@@ -196,7 +196,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       setShowHint(false);
       setScore(0);
       setTotalAnswered(0);
-      setSessionStats({ correct: 0, incorrect: 0 });
+      setSessionStats({ correct: 0, incorrect: 0, mastered: 0 });
       setQuizStarted(true);
       setLoading(false);
     } catch (err: any) {
@@ -218,7 +218,13 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     
     if (isCorrect) {
       setScore(prev => prev + 1);
-      setSessionStats(prev => ({ ...prev, correct: prev.correct + 1 }));
+      // 連続3回正解で定着とみなす（簡易判定）
+      const isMastered = currentQuestion && score >= 2;
+      setSessionStats(prev => ({ 
+        ...prev, 
+        correct: prev.correct + 1,
+        mastered: isMastered ? prev.mastered + 1 : prev.mastered
+      }));
     } else {
       setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
     }
@@ -244,7 +250,13 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
             
             if (isCorrect) {
               setScore(prevScore => prevScore + 1);
-              setSessionStats(prev => ({ ...prev, correct: prev.correct + 1 }));
+              // 連続3回正解で定着とみなす（簡易判定）
+              const isMastered = score >= 2;
+              setSessionStats(prev => ({ 
+                ...prev, 
+                correct: prev.correct + 1,
+                mastered: isMastered ? prev.mastered + 1 : prev.mastered
+              }));
             } else {
               setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
             }
@@ -413,6 +425,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
             totalAnswered={totalAnswered}
             sessionCorrect={sessionStats.correct}
             sessionIncorrect={sessionStats.incorrect}
+            sessionMastered={sessionStats.mastered}
             onShowSettings={() => setShowSettings(true)}
           />
 
