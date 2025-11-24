@@ -1,138 +1,203 @@
 .app {
-  background: white;
+  background: var(--background);
+  color: var(--text-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   /* iPhone Safari対応 */
   padding-bottom: env(safe-area-inset-bottom);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-/* ダークモード */
+/* ============================================
+   ダークモード - 包括的カラーオーバーライド
+   ============================================ */
 .dark-mode {
-  background: #1a1a1a;
-  color: #e0e0e0;
+  color-scheme: dark;
+  
+  /* 基本カラー */
   --text-color: #e0e0e0;
-  --text-secondary: #aaa;
-  --bg-secondary: #2a2a2a;
-  --border-color: #555;
+  --text-secondary: #aaaaaa;
+  --text-tertiary: #888888;
   --background: #1a1a1a;
+  --bg-secondary: #2a2a2a;
+  --bg-tertiary: #333333;
+  --border-color: #555555;
+  --border-color-light: #444444;
+  
+  /* セマンティックカラー（ダークモード用） */
+  --success-color: #4ade80;
+  --success-bg: #1e5a28;
+  --success-bg-hover: #2d6a3a;
+  --success-border: #4ade80;
+  --success-text: #d1fae5;
+  --success-text-dark: #a7f3d0;
+  
+  --error-color: #f87171;
+  --error-bg: #5a1e1e;
+  --error-bg-hover: #6a2828;
+  --error-border: #f87171;
+  --error-text: #fecaca;
+  --error-text-dark: #fca5a5;
+  
+  --warning-color: #fbbf24;
+  --warning-bg: #78350f;
+  --warning-bg-hover: #92400e;
+  --warning-border: #fbbf24;
+  --warning-text: #fef3c7;
+  --warning-text-dark: #fde68a;
+  
+  --info-color: #60a5fa;
+  --info-bg: #1e3a5f;
+  --info-bg-hover: #2e4a6f;
+  --info-border: #60a5fa;
+  --info-text: #dbeafe;
+  --info-text-dark: #bfdbfe;
+  
+  /* カードとコンテナ */
   --card-bg: #2a2a2a;
+  --card-bg-hover: #3a3a3a;
+  --card-border: #444444;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  
+  /* ボタン */
+  --btn-primary-bg: #667eea;
+  --btn-primary-hover: #7a8ef0;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #4a4a4a;
+  --btn-secondary-hover: #5a5a5a;
+  --btn-secondary-text: #e0e0e0;
+  --btn-disabled-bg: #3a3a3a;
+  --btn-disabled-text: #666666;
+  
+  /* インタラクティブ要素 */
+  --link-color: #60a5fa;
+  --link-hover: #93c5fd;
+  --focus-ring: rgba(102, 126, 234, 0.4);
+  
+  /* オーバーレイと透明度 */
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+  --overlay-light: rgba(255, 255, 255, 0.1);
+  
+  /* シャドウ（ダークモード用） */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode .app {
-  background: #1a1a1a;
-  color: #e0e0e0;
+  background: var(--background);
+  color: var(--text-color);
 }
 
 .dark-mode .tab-menu {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .tab-btn {
-  background: #2a2a2a;
-  color: #b0b0b0;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
 .dark-mode .tab-btn.active {
-  background: #1a1a1a;
-  color: #667eea;
+  background: var(--background);
+  color: var(--btn-primary-bg);
 }
 
 .dark-mode .question-card,
 .dark-mode .choice-btn,
 .dark-mode .letter-card {
-  background: #3a3a3a;
-  border-color: #777;
-  color: #ffffff;
+  background: var(--card-bg-hover);
+  border-color: var(--card-border);
+  color: var(--text-color);
 }
 
 .dark-mode .letter-card.practice-mode {
-  background: #333;
-  border-color: #555;
-  color: #999;
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-tertiary);
 }
 
 .dark-mode .letter-card.practice-mode:hover {
-  background: #3a3a3a;
+  background: var(--card-bg-hover);
 }
 
 .dark-mode .letter-card.practice-mode.selected {
-  background: #555;
-  color: #bbb;
+  background: var(--border-color);
+  color: var(--text-secondary);
 }
 
 /* スペルタブ: 回答後の正解・不正解 */
 .dark-mode .letter-card.practice-mode.selected.correct {
-  background: #1e4620;
-  border-color: #28a745;
-  color: #c8e6c9;
+  background: var(--success-bg);
+  border-color: var(--success-color);
+  color: var(--success-text);
   opacity: 1;
   font-weight: 600;
 }
 
 .dark-mode .letter-card.practice-mode.selected.incorrect {
-  background: #4a1f1f;
-  border-color: #dc3545;
-  color: #ffcdd2;
+  background: var(--error-bg);
+  border-color: var(--error-color);
+  color: var(--error-text);
   opacity: 1;
   font-weight: 600;
 }
 
 .dark-mode .choice-btn:hover:not(:disabled) {
-  background: #4a4a4a;
-  border-color: #99aaff;
-  box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
+  background: var(--btn-secondary-bg);
+  border-color: var(--info-color);
+  box-shadow: 0 0 12px var(--focus-ring);
   transform: translateY(-1px);
 }
 
 .dark-mode .choice-btn:active:not(:disabled) {
-  background: #505050;
+  background: var(--btn-secondary-hover);
   transform: translateY(0);
 }
 
 .dark-mode .choice-details {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .toggle-details-btn-inline,
 .dark-mode .toggle-details-btn {
-  background: #333;
-  border-color: #555;
-  color: #667eea;
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--btn-primary-bg);
 }
 
 .dark-mode .toggle-details-btn-inline:hover,
 .dark-mode .toggle-details-btn:hover {
-  background: #3a3a3a;
-  border-color: #667eea;
+  background: var(--card-bg-hover);
+  border-color: var(--btn-primary-bg);
 }
 
 .dark-mode .settings-container,
 .dark-mode .simple-setting-section {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .quiz-view,
 .dark-mode .question-card {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .question-text {
-  color: #f5f5f5;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  text-shadow: 0 0 1px var(--overlay-light);
 }
 
 .dark-mode .question-text.phrase-text {
-  color: #a5b8ff;
-  text-shadow: 0 0 2px rgba(165, 184, 255, 0.3);
+  color: var(--info-color);
+  text-shadow: 0 0 2px var(--focus-ring);
 }
 
 .dark-mode .score-board,
 .dark-mode .score-item {
-  background: #333;
+  background: var(--bg-tertiary);
   color: #e0e0e0;
 }
 
@@ -693,33 +758,33 @@
 }
 
 .dark-mode .user-word-label {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .user-word-text {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .meaning-display {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .meaning-label {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .meaning-text {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .phrase-hint {
-  background: #1e3a5f;
-  color: #8bb8ff;
+  background: var(--info-bg);
+  color: var(--info-color);
 }
 
 .dark-mode .phrase-progress {
-  color: #4ade80;
+  color: var(--success-color);
 }
 
 .dark-mode .btn-reset-selection {
@@ -11778,11 +11843,11 @@ option {
 .legend-box-color-4 { background-color: #239a3b; }
 .legend-box-color-5 { background-color: #196127; }
 
-.dark-mode .legend-box-color-1 { background-color: #1a1a1a; }
-.dark-mode .legend-box-color-2 { background-color: #4a5f2a; }
-.dark-mode .legend-box-color-3 { background-color: #3a7d2f; }
-.dark-mode .legend-box-color-4 { background-color: #1e5a28; }
-.dark-mode .legend-box-color-5 { background-color: #144a1e; }
+.dark-mode .legend-box-color-1 { background-color: var(--background); }
+.dark-mode .legend-box-color-2 { background-color: var(--success-bg); }
+.dark-mode .legend-box-color-3 { background-color: var(--success-color); }
+.dark-mode .legend-box-color-4 { background-color: var(--success-text-dark); }
+.dark-mode .legend-box-color-5 { background-color: var(--success-bg-hover); }
 
 .calendar-empty {
   padding: 40px;
