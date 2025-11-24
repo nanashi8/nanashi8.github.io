@@ -3142,6 +3142,12 @@ option {
   margin: 12px 0 8px 0;
 }
 
+.dark-mode .difficulty-rating-compact {
+  background: #2a2a2a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
 /* ナビゲーションボタン：右寄せ配置 */
 .navigation-buttons {
   display: flex;
@@ -4712,12 +4718,21 @@ option {
   text-align: center;
 }
 
+.dark-mode .phrase-text {
+  color: #e0e0e0;
+}
+
 .phrase-meaning-old {
   font-size: 0.9em;
   color: #666;
   text-align: center;
   padding-top: 4px;
   border-top: 1px solid #e0e0e0;
+}
+
+.dark-mode .phrase-meaning-old {
+  color: #999;
+  border-top-color: #444;
 }
 
 .translation-section {
@@ -7987,9 +8002,19 @@ option {
   transition: transform 0.2s;
 }
 
+.dark-mode .category-card {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 .category-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dark-mode .category-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .category-card.excellent {
@@ -11466,10 +11491,18 @@ option {
   position: relative;
 }
 
+.dark-mode .calendar-day {
+  border-color: #555;
+}
+
 .calendar-day:hover {
   transform: scale(1.1);
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .calendar-day:hover {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
 }
 
 .calendar-day-count {
@@ -11478,24 +11511,48 @@ option {
   color: #333;
 }
 
+.dark-mode .calendar-day-count {
+  color: #e0e0e0;
+}
+
 .calendar-day.calendar-color-0 {
   background-color: #ebedf0;
+}
+
+.dark-mode .calendar-day.calendar-color-0 {
+  background-color: #1a1a1a;
 }
 
 .calendar-day.calendar-color-1 {
   background-color: #c6e48b;
 }
 
+.dark-mode .calendar-day.calendar-color-1 {
+  background-color: #4a5f2a;
+}
+
 .calendar-day.calendar-color-2 {
   background-color: #7bc96f;
+}
+
+.dark-mode .calendar-day.calendar-color-2 {
+  background-color: #3a7d2f;
 }
 
 .calendar-day.calendar-color-3 {
   background-color: #239a3b;
 }
 
+.dark-mode .calendar-day.calendar-color-3 {
+  background-color: #1e5a28;
+}
+
 .calendar-day.calendar-color-4 {
   background-color: #196127;
+}
+
+.dark-mode .calendar-day.calendar-color-4 {
+  background-color: #144a1e;
 }
 
 .calendar-legend {
@@ -11506,6 +11563,10 @@ option {
   color: #666;
 }
 
+.dark-mode .calendar-legend {
+  color: #999;
+}
+
 .legend-box {
   width: 15px;
   height: 15px;
@@ -11513,11 +11574,21 @@ option {
   border: 1px solid #d0d0d0;
 }
 
+.dark-mode .legend-box {
+  border-color: #555;
+}
+
 .legend-box-color-1 { background-color: #ebedf0; }
 .legend-box-color-2 { background-color: #c6e48b; }
 .legend-box-color-3 { background-color: #7bc96f; }
 .legend-box-color-4 { background-color: #239a3b; }
 .legend-box-color-5 { background-color: #196127; }
+
+.dark-mode .legend-box-color-1 { background-color: #1a1a1a; }
+.dark-mode .legend-box-color-2 { background-color: #4a5f2a; }
+.dark-mode .legend-box-color-3 { background-color: #3a7d2f; }
+.dark-mode .legend-box-color-4 { background-color: #1e5a28; }
+.dark-mode .legend-box-color-5 { background-color: #144a1e; }
 
 .calendar-empty {
   padding: 40px;
