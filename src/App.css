@@ -10805,33 +10805,34 @@ option {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 12px;
-  padding: 10px 12px;
-  background: #f9fafb;
-  border-radius: 8px;
-  margin-bottom: 12px;
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  margin-bottom: 16px;
 }
 
 .dark-mode .phrase-navigation {
-  background: #2a2a2a;
+  background: transparent;
 }
 
 .nav-btn {
-  padding: 14px 40px;
+  padding: 0;
   background: #667eea;
   color: white;
   border: none;
   border-radius: 10px;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.6em;
   cursor: pointer;
   transition: all 0.2s;
-  min-width: 100px;
+  width: 80px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .nav-btn:hover:not(:disabled) {
@@ -10867,19 +10868,20 @@ option {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 40px;
+  padding: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.6em;
   box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
   transition: all 0.2s;
-  min-width: 100px;
+  width: 80px;
   height: 60px;
   -webkit-tap-highlight-color: transparent;
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .phrase-speaker-btn-compact:hover {
