@@ -142,101 +142,16 @@ function StatsView({ }: StatsViewProps) {
         </div>
       </div>
 
-      {/* ダッシュボード */}
-      <div className="stats-dashboard">
-        <div className="dashboard-card">
-          <div className="dashboard-icon">🔥</div>
-          <div className="dashboard-content">
-            <div className="dashboard-label">連続学習日数</div>
-            <div className="dashboard-value">{streakDays}日</div>
-          </div>
-        </div>
-        
-        {weeklyStats && (
-          <div className="dashboard-card">
-            <div className="dashboard-icon">📅</div>
-            <div className="dashboard-content">
-              <div className="dashboard-label">今週の学習</div>
-              <div className="dashboard-value">{weeklyStats.studyDays}/{weeklyStats.totalDays}日</div>
-              <div className="dashboard-sub">{weeklyStats.totalAnswered}問回答</div>
-            </div>
-          </div>
-        )}
-        
-        {monthlyStats && (
-          <div className="dashboard-card">
-            <div className="dashboard-icon">📊</div>
-            <div className="dashboard-content">
-              <div className="dashboard-label">今月の進捗</div>
-              <div className="dashboard-value">{monthlyStats.studyDays}/{monthlyStats.totalDays}日</div>
-              <div className="dashboard-sub">定着+{monthlyStats.newMastered}語</div>
-            </div>
-          </div>
-        )}
-        
-        {retentionTrend && (
-          <div className="dashboard-card">
-            <div className="dashboard-icon">📈</div>
-            <div className="dashboard-content">
-              <div className="dashboard-label">定着率トレンド</div>
-              <div className="dashboard-value">{retentionTrend.allTime.toFixed(1)}%</div>
-              <div className="dashboard-sub">
-                7日: {retentionTrend.last7Days.toFixed(1)}% / 30日: {retentionTrend.last30Days.toFixed(1)}%
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* 週次サマリー */}
-      {weeklyStats && (
-        <div className="stats-section-summary">
-          <h3>📅 今週の成果</h3>
-          <div className="weekly-summary">
-            <div className="summary-item">
-              <span className="summary-label">✅ 学習日数</span>
-              <span className="summary-value">{weeklyStats.studyDays}/7日</span>
-            </div>
-            <div className="summary-item">
-              <span className="summary-label">📝 総回答数</span>
-              <span className="summary-value">{weeklyStats.totalAnswered}問</span>
-            </div>
-            <div className="summary-item">
-              <span className="summary-label">🎯 正答率</span>
-              <span className="summary-value">
-                {weeklyStats.accuracy.toFixed(1)}%
-                {weeklyStats.previousWeekAccuracy > 0 && (
-                  <span className={weeklyStats.accuracy >= weeklyStats.previousWeekAccuracy ? 'trend-up' : 'trend-down'}>
-                    {' '}({weeklyStats.accuracy >= weeklyStats.previousWeekAccuracy ? '▲' : '▼'}
-                    {Math.abs(weeklyStats.accuracy - weeklyStats.previousWeekAccuracy).toFixed(1)}%)
-                  </span>
-                )}
-              </span>
-            </div>
-            <div className="summary-item">
-              <span className="summary-label">🌟 新規定着</span>
-              <span className="summary-value">{weeklyStats.newMastered}語</span>
-            </div>
-            {recentlyMastered.length > 0 && (
-              <div className="summary-item">
-                <span className="summary-label">💪 克服した単語</span>
-                <span className="summary-value">{recentlyMastered.length}語</span>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
       {/* 学習カレンダーヒートマップ */}
       <div className="stats-section-calendar">
         <h3>📆 学習カレンダー（過去12週間）</h3>
         <CalendarHeatmap data={calendarData} />
       </div>
 
-      {/* 累積成長グラフ */}
+      {/* 成長グラフ */}
       {cumulativeData.length > 0 && (
         <div className="stats-section-growth">
-          <h3>📈 累積成長グラフ（週別）</h3>
+          <h3>📈 成長グラフ（週別）</h3>
           <CumulativeGrowthChart data={cumulativeData} />
         </div>
       )}
@@ -433,7 +348,7 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
   );
 }
 
-// 累積成長グラフコンポーネント
+// 成長グラフコンポーネント
 function CumulativeGrowthChart({ data }: {
   data: Array<{
     weekLabel: string;
@@ -458,103 +373,211 @@ function CumulativeGrowthChart({ data }: {
 
   return (
     <div className="cumulative-chart">
-      <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
-        {/* グリッド線 */}
-        {[0, 0.25, 0.5, 0.75, 1].map((ratio, idx) => {
-          const y = padding + plotHeight * (1 - ratio);
-          return (
-            <g key={idx}>
-              <line
-                x1={padding}
-                y1={y}
-                x2={chartWidth - padding}
-                y2={y}
-                stroke="#e0e0e0"
-                strokeWidth="1"
-              />
-              <text
-                x={padding - 10}
-                y={y}
-                textAnchor="end"
-                fontSize="10"
-                fill="#666"
-              >
-                {Math.round(maxMastered * ratio)}
-              </text>
-            </g>
-          );
-        })}
-
-        {/* 定着数の線グラフ */}
-        <polyline
-          points={data.map((d, i) => {
-            const x = padding + (plotWidth / (data.length - 1)) * i;
-            const y = padding + plotHeight * (1 - d.cumulativeMastered / maxMastered);
-            return `${x},${y}`;
-          }).join(' ')}
-          fill="none"
-          stroke="#ff6b35"
-          strokeWidth="3"
-        />
-
-        {/* データポイント */}
-        {data.map((d, i) => {
-          const x = padding + (plotWidth / (data.length - 1)) * i;
-          const y = padding + plotHeight * (1 - d.cumulativeMastered / maxMastered);
-          return (
-            <g key={i}>
-              <circle cx={x} cy={y} r="4" fill="#ff6b35" />
-              {i % 2 === 0 && (
+      {/* 問題数グラフ */}
+      <div className="chart-container">
+        <h4 className="chart-title">累積問題数</h4>
+        <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
+          {/* グリッド線 */}
+          {[0, 0.25, 0.5, 0.75, 1].map((ratio, idx) => {
+            const y = padding + plotHeight * (1 - ratio);
+            return (
+              <g key={idx}>
+                <line
+                  x1={padding}
+                  y1={y}
+                  x2={chartWidth - padding}
+                  y2={y}
+                  stroke="#e0e0e0"
+                  strokeWidth="1"
+                />
                 <text
-                  x={x}
-                  y={chartHeight - padding + 20}
-                  textAnchor="middle"
+                  x={padding - 10}
+                  y={y}
+                  textAnchor="end"
                   fontSize="10"
                   fill="#666"
                 >
-                  {d.weekLabel}
+                  {Math.round(maxAnswered * ratio)}
                 </text>
-              )}
-            </g>
-          );
-        })}
+              </g>
+            );
+          })}
 
-        {/* ラベル */}
-        <text
-          x={chartWidth / 2}
-          y={chartHeight - 5}
-          textAnchor="middle"
-          fontSize="12"
-          fill="#333"
-        >
-          週
-        </text>
-        <text
-          x={15}
-          y={chartHeight / 2}
-          textAnchor="middle"
-          fontSize="12"
-          fill="#333"
-          transform={`rotate(-90 15 ${chartHeight / 2})`}
-        >
-          累積定着数
-        </text>
-      </svg>
-      
-      <div className="chart-summary">
-        <div className="chart-summary-item">
-          <span className="summary-label">開始時:</span>
-          <span className="summary-value">{data[0]?.cumulativeMastered || 0}語</span>
+          {/* 問題数の線グラフ */}
+          <polyline
+            points={data.map((d, i) => {
+              const x = padding + (plotWidth / (data.length - 1)) * i;
+              const y = padding + plotHeight * (1 - d.cumulativeAnswered / maxAnswered);
+              return `${x},${y}`;
+            }).join(' ')}
+            fill="none"
+            stroke="#4a90e2"
+            strokeWidth="3"
+          />
+
+          {/* データポイント */}
+          {data.map((d, i) => {
+            const x = padding + (plotWidth / (data.length - 1)) * i;
+            const y = padding + plotHeight * (1 - d.cumulativeAnswered / maxAnswered);
+            return (
+              <g key={i}>
+                <circle cx={x} cy={y} r="4" fill="#4a90e2" />
+                {i % 2 === 0 && (
+                  <text
+                    x={x}
+                    y={chartHeight - padding + 20}
+                    textAnchor="middle"
+                    fontSize="10"
+                    fill="#666"
+                  >
+                    {d.weekLabel}
+                  </text>
+                )}
+              </g>
+            );
+          })}
+
+          {/* ラベル */}
+          <text
+            x={chartWidth / 2}
+            y={chartHeight - 5}
+            textAnchor="middle"
+            fontSize="12"
+            fill="#333"
+          >
+            週
+          </text>
+          <text
+            x={15}
+            y={chartHeight / 2}
+            textAnchor="middle"
+            fontSize="12"
+            fill="#333"
+            transform={`rotate(-90 15 ${chartHeight / 2})`}
+          >
+            累積問題数
+          </text>
+        </svg>
+        
+        <div className="chart-summary">
+          <div className="chart-summary-item">
+            <span className="summary-label">開始時:</span>
+            <span className="summary-value">{data[0]?.cumulativeAnswered || 0}問</span>
+          </div>
+          <div className="chart-summary-item">
+            <span className="summary-label">現在:</span>
+            <span className="summary-value">{data[data.length - 1]?.cumulativeAnswered || 0}問</span>
+          </div>
+          <div className="chart-summary-item">
+            <span className="summary-label">増加:</span>
+            <span className="summary-value">
+              +{(data[data.length - 1]?.cumulativeAnswered || 0) - (data[0]?.cumulativeAnswered || 0)}問
+            </span>
+          </div>
         </div>
-        <div className="chart-summary-item">
-          <span className="summary-label">現在:</span>
-          <span className="summary-value">{data[data.length - 1]?.cumulativeMastered || 0}語</span>
-        </div>
-        <div className="chart-summary-item">
-          <span className="summary-label">増加:</span>
-          <span className="summary-value">
-            +{(data[data.length - 1]?.cumulativeMastered || 0) - (data[0]?.cumulativeMastered || 0)}語
-          </span>
+      </div>
+
+      {/* 定着数グラフ */}
+      <div className="chart-container">
+        <h4 className="chart-title">累積定着数</h4>
+        <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
+          {/* グリッド線 */}
+          {[0, 0.25, 0.5, 0.75, 1].map((ratio, idx) => {
+            const y = padding + plotHeight * (1 - ratio);
+            return (
+              <g key={idx}>
+                <line
+                  x1={padding}
+                  y1={y}
+                  x2={chartWidth - padding}
+                  y2={y}
+                  stroke="#e0e0e0"
+                  strokeWidth="1"
+                />
+                <text
+                  x={padding - 10}
+                  y={y}
+                  textAnchor="end"
+                  fontSize="10"
+                  fill="#666"
+                >
+                  {Math.round(maxMastered * ratio)}
+                </text>
+              </g>
+            );
+          })}
+
+          {/* 定着数の線グラフ */}
+          <polyline
+            points={data.map((d, i) => {
+              const x = padding + (plotWidth / (data.length - 1)) * i;
+              const y = padding + plotHeight * (1 - d.cumulativeMastered / maxMastered);
+              return `${x},${y}`;
+            }).join(' ')}
+            fill="none"
+            stroke="#ff6b35"
+            strokeWidth="3"
+          />
+
+          {/* データポイント */}
+          {data.map((d, i) => {
+            const x = padding + (plotWidth / (data.length - 1)) * i;
+            const y = padding + plotHeight * (1 - d.cumulativeMastered / maxMastered);
+            return (
+              <g key={i}>
+                <circle cx={x} cy={y} r="4" fill="#ff6b35" />
+                {i % 2 === 0 && (
+                  <text
+                    x={x}
+                    y={chartHeight - padding + 20}
+                    textAnchor="middle"
+                    fontSize="10"
+                    fill="#666"
+                  >
+                    {d.weekLabel}
+                  </text>
+                )}
+              </g>
+            );
+          })}
+
+          {/* ラベル */}
+          <text
+            x={chartWidth / 2}
+            y={chartHeight - 5}
+            textAnchor="middle"
+            fontSize="12"
+            fill="#333"
+          >
+            週
+          </text>
+          <text
+            x={15}
+            y={chartHeight / 2}
+            textAnchor="middle"
+            fontSize="12"
+            fill="#333"
+            transform={`rotate(-90 15 ${chartHeight / 2})`}
+          >
+            累積定着数
+          </text>
+        </svg>
+        
+        <div className="chart-summary">
+          <div className="chart-summary-item">
+            <span className="summary-label">開始時:</span>
+            <span className="summary-value">{data[0]?.cumulativeMastered || 0}語</span>
+          </div>
+          <div className="chart-summary-item">
+            <span className="summary-label">現在:</span>
+            <span className="summary-value">{data[data.length - 1]?.cumulativeMastered || 0}語</span>
+          </div>
+          <div className="chart-summary-item">
+            <span className="summary-label">増加:</span>
+            <span className="summary-value">
+              +{(data[data.length - 1]?.cumulativeMastered || 0) - (data[0]?.cumulativeMastered || 0)}語
+            </span>
+          </div>
         </div>
       </div>
     </div>

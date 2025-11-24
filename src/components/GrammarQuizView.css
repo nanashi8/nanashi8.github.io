@@ -1,11 +1,5 @@
 /* GrammarQuizView専用のスタイル - App.cssの.quiz-viewスタイルを継承 */
 
-/* コメントバーエリア（和訳・スペルタブと統一） */
-.comment-bar-container {
-  min-height: 60px;
-  margin-bottom: 10px;
-}
-
 /* インラインナビゲーション行（和訳・スペルタブと統一） */
 .question-nav-row {
   display: flex;
