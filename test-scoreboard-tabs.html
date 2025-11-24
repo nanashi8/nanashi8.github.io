@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スコアボードタブ表示テスト</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .test-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .test-section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #667eea;
+      font-size: 1.2em;
+    }
+
+    .viewport-info {
+      padding: 10px;
+      background: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+
+    .status {
+      padding: 8px 12px;
+      border-radius: 4px;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+
+    .status.pass {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .status.fail {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .status.warning {
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+    }
+
+    /* スコアボードのスタイル（実際のCSSから） */
+    .score-board-compact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      font-size: 1em;
+      position: relative;
+      flex-direction: column;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .score-board-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 8px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 12px;
+      border: 2px solid #dee2e6;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .score-tab {
+      padding: 10px 18px;
+      background: white;
+      border: 2px solid #dee2e6;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1em;
+      font-weight: 600;
+      white-space: nowrap;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .score-tab:hover {
+      background: #f8f9fa;
+      border-color: #adb5bd;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .score-tab.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-color: #667eea;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .score-tabs-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .score-board-tabs {
+        display: none;
+      }
+
+      .score-tabs-mobile {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 12px;
+        border: 2px solid #dee2e6;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    .resize-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .resize-btn {
+      padding: 8px 16px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .resize-btn:hover {
+      background: #5568d3;
+      transform: translateY(-1px);
+    }
+
+    .resize-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ダークモード */
+    .dark-mode {
+      background: #1a1a1a;
+    }
+
+    .dark-mode .test-section {
+      background: #2a2a2a;
+      color: #e0e0e0;
+    }
+
+    .dark-mode h2 {
+      color: #8b9ef5;
+    }
+
+    .dark-mode .score-board-tabs {
+      background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+      border-color: #444;
+    }
+
+    .dark-mode .score-tab {
+      background: #333;
+      border-color: #555;
+      color: #e0e0e0;
+    }
+
+    .dark-mode .score-tab:hover {
+      background: #3a3a3a;
+      border-color: #666;
+    }
+
+    .dark-mode .score-tab.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-color: #667eea;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+    }
+
+    .toggle-dark {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌙 ダークモード切替</button>
+
+  <div class="test-container">
+    <h1>📊 スコアボードタブ表示テスト</h1>
+
+    <div class="test-section">
+      <h2>ビューポート情報</h2>
+      <div class="viewport-info">
+        <div>現在のウィンドウ幅: <strong id="current-width">0</strong>px</div>
+        <div>表示モード: <strong id="display-mode">デスクトップ</strong></div>
+        <div>タブコンテナ表示: <strong id="tabs-visible">未検出</strong></div>
+      </div>
+
+      <div class="resize-buttons">
+        <button class="resize-btn" onclick="resizeWindow(1920, 1080)">🖥️ デスクトップ (1920x1080)</button>
+        <button class="resize-btn" onclick="resizeWindow(1366, 768)">💻 ラップトップ (1366x768)</button>
+        <button class="resize-btn" onclick="resizeWindow(768, 1024)">📱 タブレット (768x1024)</button>
+        <button class="resize-btn" onclick="resizeWindow(375, 667)">📱 モバイル (375x667)</button>
+        <button class="resize-btn" onclick="resizeWindow(320, 568)">📱 小型モバイル (320x568)</button>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>デスクトップ版タブ (768px超)</h2>
+      <div class="score-board-compact">
+        <div class="score-board-tabs">
+          <button class="score-tab active">📋 プラン</button>
+          <button class="score-tab">📊 統計</button>
+          <button class="score-tab">📈 学習状況</button>
+          <button class="score-tab">🎯 目標</button>
+          <button class="score-tab">📜 履歴</button>
+          <button class="score-tab">設定</button>
+        </div>
+      </div>
+      <div id="desktop-status" class="status"></div>
+    </div>
+
+    <div class="test-section">
+      <h2>モバイル版タブ (768px以下)</h2>
+      <div class="score-board-compact">
+        <div class="score-board-tabs score-tabs-mobile">
+          <button class="score-tab active" title="プラン">📋</button>
+          <button class="score-tab" title="統計">📊</button>
+          <button class="score-tab" title="学習状況">📈</button>
+          <button class="score-tab" title="目標">🎯</button>
+          <button class="score-tab" title="履歴">📜</button>
+          <button class="score-tab" title="設定">設</button>
+        </div>
+      </div>
+      <div id="mobile-status" class="status"></div>
+    </div>
+
+    <div class="test-section">
+      <h2>テスト結果</h2>
+      <div id="test-results"></div>
+    </div>
+  </div>
+
+  <script>
+    function updateViewportInfo() {
+      const width = window.innerWidth;
+      const isMobile = width <= 768;
+      
+      document.getElementById('current-width').textContent = width;
+      document.getElementById('display-mode').textContent = isMobile ? 'モバイル' : 'デスクトップ';
+      
+      const desktopTabs = document.querySelector('.score-board-tabs:not(.score-tabs-mobile)');
+      const mobileTabs = document.querySelector('.score-tabs-mobile');
+      
+      const desktopVisible = desktopTabs && window.getComputedStyle(desktopTabs).display !== 'none';
+      const mobileVisible = mobileTabs && window.getComputedStyle(mobileTabs).display !== 'none';
+      
+      let visibleText = '';
+      if (desktopVisible && !mobileVisible) {
+        visibleText = '✅ デスクトップ版のみ';
+      } else if (!desktopVisible && mobileVisible) {
+        visibleText = '✅ モバイル版のみ';
+      } else if (desktopVisible && mobileVisible) {
+        visibleText = '⚠️ 両方表示（問題の可能性）';
+      } else {
+        visibleText = '❌ どちらも非表示（問題）';
+      }
+      
+      document.getElementById('tabs-visible').textContent = visibleText;
+      
+      // ステータス更新
+      const desktopStatus = document.getElementById('desktop-status');
+      const mobileStatus = document.getElementById('mobile-status');
+      
+      if (isMobile) {
+        if (!desktopVisible) {
+          desktopStatus.className = 'status pass';
+          desktopStatus.textContent = '✅ 正常: モバイルではデスクトップ版が非表示';
+        } else {
+          desktopStatus.className = 'status fail';
+          desktopStatus.textContent = '❌ エラー: モバイルでデスクトップ版が表示されています';
+        }
+        
+        if (mobileVisible) {
+          mobileStatus.className = 'status pass';
+          mobileStatus.textContent = '✅ 正常: モバイル版が表示されています';
+        } else {
+          mobileStatus.className = 'status fail';
+          mobileStatus.textContent = '❌ エラー: モバイル版が表示されていません';
+        }
+      } else {
+        if (desktopVisible) {
+          desktopStatus.className = 'status pass';
+          desktopStatus.textContent = '✅ 正常: デスクトップ版が表示されています';
+        } else {
+          desktopStatus.className = 'status fail';
+          desktopStatus.textContent = '❌ エラー: デスクトップ版が表示されていません';
+        }
+        
+        if (!mobileVisible) {
+          mobileStatus.className = 'status pass';
+          mobileStatus.textContent = '✅ 正常: デスクトップではモバイル版が非表示';
+        } else {
+          mobileStatus.className = 'status fail';
+          mobileStatus.textContent = '❌ エラー: デスクトップでモバイル版が表示されています';
+        }
+      }
+      
+      // テスト結果サマリー
+      runTests();
+    }
+
+    function runTests() {
+      const width = window.innerWidth;
+      const isMobile = width <= 768;
+      const results = [];
+      
+      const desktopTabs = document.querySelector('.score-board-tabs:not(.score-tabs-mobile)');
+      const mobileTabs = document.querySelector('.score-tabs-mobile');
+      
+      const desktopVisible = desktopTabs && window.getComputedStyle(desktopTabs).display !== 'none';
+      const mobileVisible = mobileTabs && window.getComputedStyle(mobileTabs).display !== 'none';
+      
+      // テスト1: 適切なタブが表示されているか
+      if (isMobile) {
+        results.push({
+          name: 'モバイル表示テスト',
+          pass: !desktopVisible && mobileVisible,
+          message: !desktopVisible && mobileVisible 
+            ? 'モバイル版のみが表示されています' 
+            : `デスクトップ版:${desktopVisible ? '表示' : '非表示'}, モバイル版:${mobileVisible ? '表示' : '非表示'}`
+        });
+      } else {
+        results.push({
+          name: 'デスクトップ表示テスト',
+          pass: desktopVisible && !mobileVisible,
+          message: desktopVisible && !mobileVisible 
+            ? 'デスクトップ版のみが表示されています' 
+            : `デスクトップ版:${desktopVisible ? '表示' : '非表示'}, モバイル版:${mobileVisible ? '表示' : '非表示'}`
+        });
+      }
+      
+      // テスト2: タブボタンが存在するか
+      const allTabs = document.querySelectorAll('.score-tab');
+      results.push({
+        name: 'タブボタン存在テスト',
+        pass: allTabs.length >= 6,
+        message: `${allTabs.length}個のタブボタンが検出されました（期待値: 6以上）`
+      });
+      
+      // テスト3: アクティブタブが存在するか
+      const activeTabs = document.querySelectorAll('.score-tab.active');
+      results.push({
+        name: 'アクティブタブテスト',
+        pass: activeTabs.length > 0,
+        message: `${activeTabs.length}個のアクティブタブが検出されました`
+      });
+      
+      // テスト4: スタイルが適用されているか
+      if (desktopVisible && desktopTabs) {
+        const computedStyle = window.getComputedStyle(desktopTabs);
+        const hasBackground = computedStyle.background !== 'none' && computedStyle.background !== '';
+        const hasBorder = computedStyle.borderWidth !== '0px';
+        
+        results.push({
+          name: 'デスクトップ版スタイルテスト',
+          pass: hasBackground && hasBorder,
+          message: `背景:${hasBackground ? '設定済' : '未設定'}, ボーダー:${hasBorder ? '設定済' : '未設定'}`
+        });
+      }
+      
+      if (mobileVisible && mobileTabs) {
+        const computedStyle = window.getComputedStyle(mobileTabs);
+        const hasBackground = computedStyle.background !== 'none' && computedStyle.background !== '';
+        const hasBorder = computedStyle.borderWidth !== '0px';
+        
+        results.push({
+          name: 'モバイル版スタイルテスト',
+          pass: hasBackground && hasBorder,
+          message: `背景:${hasBackground ? '設定済' : '未設定'}, ボーダー:${hasBorder ? '設定済' : '未設定'}`
+        });
+      }
+      
+      // 結果を表示
+      const resultsDiv = document.getElementById('test-results');
+      resultsDiv.innerHTML = results.map(result => `
+        <div class="status ${result.pass ? 'pass' : 'fail'}">
+          ${result.pass ? '✅' : '❌'} <strong>${result.name}:</strong> ${result.message}
+        </div>
+      `).join('');
+    }
+
+    function resizeWindow(width, height) {
+      // ブラウザウィンドウのリサイズはセキュリティ上制限されているため、
+      // 代わりにビューポートのシミュレーションを行う
+      alert(`実際のブラウザウィンドウのリサイズはできません。\nブラウザの開発者ツール（F12）でデバイスモードを使用して ${width}x${height} をテストしてください。`);
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // ページロード時とリサイズ時に更新
+    window.addEventListener('load', updateViewportInfo);
+    window.addEventListener('resize', updateViewportInfo);
+    
+    // 定期的に更新（CSSの遅延読み込み対策）
+    setInterval(updateViewportInfo, 1000);
+  </script>
+</body>
+</html>
