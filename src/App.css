@@ -1,6 +1,6 @@
 .app {
-  background: var(--background);
-  color: var(--text-color);
+  background: var(--background, #ffffff);
+  color: var(--text-color, #000000);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
