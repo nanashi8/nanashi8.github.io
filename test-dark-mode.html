@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ダークモードテスト - Quiz App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      border-bottom: 3px solid #667eea;
+      padding-bottom: 10px;
+    }
+    .test-section {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .test-section h2 {
+      color: #667eea;
+      margin-top: 0;
+    }
+    .test-result {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+    .success {
+      background: #d1fae5;
+      border: 1px solid #10b981;
+      color: #065f46;
+    }
+    .error {
+      background: #fee2e2;
+      border: 1px solid #ef4444;
+      color: #991b1b;
+    }
+    .info {
+      background: #e7f3ff;
+      border: 1px solid #2196f3;
+      color: #0056b3;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    .iframe-container {
+      margin: 20px 0;
+      border: 2px solid #667eea;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .test-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>🌓 ダークモード機能テスト</h1>
+    
+    <div class="test-section">
+      <h2>1. CSS変数の確認</h2>
+      <div class="test-controls">
+        <button onclick="checkCSSVariables()">CSS変数をチェック</button>
+      </div>
+      <div id="css-test-results"></div>
+    </div>
+
+    <div class="test-section">
+      <h2>2. ダークモードクラスの確認</h2>
+      <div class="test-controls">
+        <button onclick="checkDarkModeClass()">クラス状態をチェック</button>
+        <button onclick="toggleDarkMode()">ダークモード切替</button>
+      </div>
+      <div id="class-test-results"></div>
+    </div>
+
+    <div class="test-section">
+      <h2>3. localStorage確認</h2>
+      <div class="test-controls">
+        <button onclick="checkLocalStorage()">localStorage確認</button>
+        <button onclick="setLightMode()">ライトモード設定</button>
+        <button onclick="setDarkMode()">ダークモード設定</button>
+        <button onclick="setSystemMode()">システム設定</button>
+      </div>
+      <div id="storage-test-results"></div>
+    </div>
+
+    <div class="test-section">
+      <h2>4. 実際のアプリケーション</h2>
+      <p class="info">
+        下のフレームで実際にアプリを開き、設定タブからダークモードを切り替えてテストしてください。
+      </p>
+      <div class="iframe-container">
+        <iframe src="http://localhost:5173/" id="app-frame"></iframe>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>5. テスト結果サマリー</h2>
+      <button onclick="runAllTests()">全テストを実行</button>
+      <div id="summary-results"></div>
+    </div>
+  </div>
+
+  <script>
+    let testResults = [];
+
+    function addResult(section, message, type = 'info') {
+      const result = { section, message, type, timestamp: new Date().toISOString() };
+      testResults.push(result);
+      return result;
+    }
+
+    function displayResult(elementId, message, type = 'info') {
+      const element = document.getElementById(elementId);
+      const div = document.createElement('div');
+      div.className = `test-result ${type}`;
+      div.textContent = message;
+      element.appendChild(div);
+    }
+
+    function clearResults(elementId) {
+      document.getElementById(elementId).innerHTML = '';
+    }
+
+    function checkCSSVariables() {
+      clearResults('css-test-results');
+      
+      const frame = document.getElementById('app-frame');
+      const frameDoc = frame.contentDocument || frame.contentWindow.document;
+      const root = frameDoc.documentElement;
+      const styles = window.getComputedStyle(root);
+      
+      const varsToCheck = [
+        '--text-color',
+        '--background',
+        '--bg-secondary',
+        '--success-color',
+        '--error-color',
+        '--card-bg',
+        '--btn-primary-bg'
+      ];
+
+      let allFound = true;
+      varsToCheck.forEach(varName => {
+        const value = styles.getPropertyValue(varName).trim();
+        if (value) {
+          displayResult('css-test-results', `✓ ${varName}: ${value}`, 'success');
+          addResult('CSS Variables', `${varName} found: ${value}`, 'success');
+        } else {
+          displayResult('css-test-results', `✗ ${varName}: 未定義`, 'error');
+          addResult('CSS Variables', `${varName} not found`, 'error');
+          allFound = false;
+        }
+      });
+
+      if (allFound) {
+        displayResult('css-test-results', '✓ 全てのCSS変数が正しく定義されています', 'success');
+      }
+    }
+
+    function checkDarkModeClass() {
+      clearResults('class-test-results');
+      
+      const frame = document.getElementById('app-frame');
+      const frameDoc = frame.contentDocument || frame.contentWindow.document;
+      const root = frameDoc.documentElement;
+      
+      const hasDarkMode = root.classList.contains('dark-mode');
+      
+      if (hasDarkMode) {
+        displayResult('class-test-results', '✓ dark-modeクラスが適用されています', 'success');
+        addResult('Dark Mode Class', 'dark-mode class is active', 'success');
+      } else {
+        displayResult('class-test-results', 'ℹ dark-modeクラスは適用されていません（ライトモード）', 'info');
+        addResult('Dark Mode Class', 'dark-mode class is not active (light mode)', 'info');
+      }
+
+      // 背景色をチェック
+      const bgColor = window.getComputedStyle(frameDoc.body).backgroundColor;
+      displayResult('class-test-results', `背景色: ${bgColor}`, 'info');
+    }
+
+    function toggleDarkMode() {
+      const frame = document.getElementById('app-frame');
+      const frameDoc = frame.contentDocument || frame.contentWindow.document;
+      const root = frameDoc.documentElement;
+      
+      root.classList.toggle('dark-mode');
+      checkDarkModeClass();
+    }
+
+    function checkLocalStorage() {
+      clearResults('storage-test-results');
+      
+      try {
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode) {
+          displayResult('storage-test-results', `✓ darkMode: "${darkMode}"`, 'success');
+          addResult('LocalStorage', `darkMode value: ${darkMode}`, 'success');
+        } else {
+          displayResult('storage-test-results', 'ℹ darkMode設定が保存されていません', 'info');
+          addResult('LocalStorage', 'No darkMode value stored', 'info');
+        }
+      } catch (error) {
+        displayResult('storage-test-results', `✗ エラー: ${error.message}`, 'error');
+        addResult('LocalStorage', `Error: ${error.message}`, 'error');
+      }
+    }
+
+    function setLightMode() {
+      localStorage.setItem('darkMode', 'light');
+      displayResult('storage-test-results', '✓ ライトモードに設定しました', 'success');
+      displayResult('storage-test-results', 'ℹ ページをリロードして確認してください', 'info');
+    }
+
+    function setDarkMode() {
+      localStorage.setItem('darkMode', 'dark');
+      displayResult('storage-test-results', '✓ ダークモードに設定しました', 'success');
+      displayResult('storage-test-results', 'ℹ ページをリロードして確認してください', 'info');
+    }
+
+    function setSystemMode() {
+      localStorage.setItem('darkMode', 'system');
+      displayResult('storage-test-results', '✓ システム設定に設定しました', 'success');
+      displayResult('storage-test-results', 'ℹ ページをリロードして確認してください', 'info');
+    }
+
+    function runAllTests() {
+      clearResults('summary-results');
+      testResults = [];
+      
+      displayResult('summary-results', '🔍 テストを開始します...', 'info');
+      
+      setTimeout(() => {
+        checkCSSVariables();
+        checkDarkModeClass();
+        checkLocalStorage();
+        
+        setTimeout(() => {
+          const successCount = testResults.filter(r => r.type === 'success').length;
+          const errorCount = testResults.filter(r => r.type === 'error').length;
+          
+          displayResult('summary-results', `テスト完了: ✓ ${successCount} 成功, ✗ ${errorCount} 失敗`, 
+            errorCount > 0 ? 'error' : 'success');
+          
+          if (errorCount === 0) {
+            displayResult('summary-results', '✓ 全てのテストに合格しました！', 'success');
+          } else {
+            displayResult('summary-results', '⚠ 一部のテストに失敗しました', 'error');
+          }
+        }, 500);
+      }, 100);
+    }
+
+    // 初回ロード時に基本チェック
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        displayResult('summary-results', 'ℹ アプリケーションの読み込みを待っています...', 'info');
+        
+        const frame = document.getElementById('app-frame');
+        frame.addEventListener('load', () => {
+          displayResult('summary-results', '✓ アプリケーションが読み込まれました', 'success');
+          displayResult('summary-results', 'ℹ 各セクションのボタンをクリックしてテストを実行してください', 'info');
+        });
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

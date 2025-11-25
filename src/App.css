@@ -3180,7 +3180,7 @@ option {
 .question-reading {
   text-align: center;
   font-size: 1em;
-  color: #667eea;
+  color: var(--btn-primary-bg);
   margin: 0 0 10px 0;
   font-weight: 500;
 }
@@ -3197,8 +3197,8 @@ option {
 
 /* 難易度評価ボタン（コンパクト版） */
 .difficulty-rating-buttons {
-  background: #f8f9fa;
-  border: 1px solid #e0e6ed;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 12px;
   margin: 12px 0 8px 0;
@@ -3207,7 +3207,7 @@ option {
 .rating-label-compact {
   font-size: 0.85em;
   font-weight: 600;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -3221,9 +3221,9 @@ option {
 .rating-btn {
   flex: 1;
   padding: 10px 8px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
-  background: white;
+  background: var(--background);
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -3274,8 +3274,8 @@ option {
 
 /* 難易度評価スライダー（コンパクト版・旧版：互換性維持） */
 .difficulty-rating-compact {
-  background: #f8f9fa;
-  border: 1px solid #e0e6ed;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 12px;
   margin: 12px 0 8px 0;
@@ -3307,9 +3307,9 @@ option {
   border-radius: 8px;
   font-size: 0.9em;
   font-weight: 600;
-  border: 2px solid #667eea;
-  background: white;
-  color: #667eea;
+  border: 2px solid var(--btn-primary-bg);
+  background: var(--background);
+  color: var(--btn-primary-bg);
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -3319,7 +3319,7 @@ option {
 }
 
 .nav-btn:hover:not(:disabled) {
-  background: #f0f4ff;
+  background: var(--bg-tertiary);
 }
 
 .nav-btn:disabled {
@@ -3328,20 +3328,20 @@ option {
 }
 
 .nav-btn.next-btn {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
 }
 
 .nav-btn.next-btn:hover:not(:disabled) {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 /* スワイプヒント */
 .swipe-hint {
   text-align: center;
   font-size: 0.75em;
-  color: #999;
+  color: var(--text-tertiary);
   margin-top: 8px;
   padding: 6px;
   font-style: italic;
@@ -3349,8 +3349,8 @@ option {
 
 /* 難易度評価スライダー（従来版：互換性維持） */
 .difficulty-rating {
-  background: #f8f9fa;
-  border: 2px solid #e0e6ed;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
   margin: 20px 0;
@@ -3359,7 +3359,7 @@ option {
 .rating-label {
   font-size: 0.95em;
   font-weight: 600;
-  color: #444;
+  color: var(--text-color);
   margin-bottom: 15px;
   text-align: center;
 }
@@ -3419,7 +3419,7 @@ option {
 .rating-value {
   font-size: 1.5em;
   font-weight: 700;
-  color: #667eea;
+  color: var(--btn-primary-bg);
   min-width: 40px;
   text-align: center;
 }
@@ -3428,7 +3428,7 @@ option {
   display: flex;
   justify-content: space-between;
   font-size: 0.85em;
-  color: #666;
+  color: var(--text-secondary);
   padding: 0 5px;
 }
 
@@ -3466,9 +3466,9 @@ option {
   border-radius: 12px;
   font-size: 1.1em;
   font-weight: 600;
-  border: 2px solid #667eea;
-  background: white;
-  color: #667eea;
+  border: 2px solid var(--btn-primary-bg);
+  background: var(--background);
+  color: var(--btn-primary-bg);
   cursor: pointer;
   transition: all 0.2s;
   touch-action: manipulation;
@@ -3478,9 +3478,9 @@ option {
 }
 
 .result-card-btn:hover {
-  background: #f0f4ff;
+  background: var(--bg-tertiary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 8px var(--shadow-md);
 }
 
 .result-card-btn:active:not(:disabled) {
@@ -3495,24 +3495,24 @@ option {
 }
 
 .result-card-btn:disabled:hover {
-  background: white;
+  background: var(--background);
   transform: none;
   box-shadow: none;
 }
 
 .result-card-btn.prev-btn:disabled {
-  color: #999;
-  border-color: #ddd;
+  color: var(--text-tertiary);
+  border-color: var(--border-color);
 }
 
 .result-card-btn.next-btn {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
 }
 
 .result-card-btn.next-btn:hover {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 .result-icon {
@@ -3526,18 +3526,18 @@ option {
   gap: 12px;
   margin-top: 20px;
   padding: 15px;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 10px;
 }
 
 .detail-item {
   padding: 12px;
   border-radius: 8px;
-  background: white;
+  background: var(--background);
 }
 
 .detail-item.etymology {
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--btn-primary-bg);
 }
 
 .detail-item.related-words {
@@ -3546,13 +3546,13 @@ option {
 
 .detail-label {
   font-weight: 700;
-  color: #000;
+  color: var(--text-color);
   margin-bottom: 6px;
   font-size: 0.95em;
 }
 
 .detail-content {
-  color: #555;
+  color: var(--text-color);
   line-height: 1.6;
   font-size: 0.95em;
 }
@@ -3582,8 +3582,8 @@ option {
 .next-btn {
   padding: 16px;
   font-size: 1.1em;
-  background: #667eea;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -3596,7 +3596,7 @@ option {
 }
 
 .next-btn:hover {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 /* 空の状態 */
@@ -3606,7 +3606,7 @@ option {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1.1em;
   padding: 40px 20px;
 }
@@ -3622,10 +3622,10 @@ option {
 }
 
 .question-form {
-  background: white;
+  background: var(--background);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-sm);
 }
 
 .form-group {
@@ -3636,7 +3636,7 @@ option {
   display: block;
   margin-bottom: 6px;
   font-weight: 600;
-  color: #000;
+  color: var(--text-color);
   font-size: 0.95em;
 }
 
@@ -3645,10 +3645,12 @@ option {
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   font-size: 1em;
   font-family: inherit;
+  background: var(--background);
+  color: var(--text-color);
 }
 
 .form-group textarea {
@@ -3675,10 +3677,10 @@ option {
 
 /* 問題リスト */
 .question-list {
-  background: white;
+  background: var(--background);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-sm);
 }
 
 .list-header {
@@ -3692,7 +3694,7 @@ option {
 
 .list-header h3 {
   margin: 0;
-  color: #000;
+  color: var(--text-color);
 }
 
 .list-actions {
@@ -3713,16 +3715,16 @@ option {
 }
 
 .download-btn {
-  background: #667eea;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
 }
 
 .download-btn:hover:not(:disabled) {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 .download-btn:disabled {
-  background: #ccc;
+  background: var(--bg-tertiary);
   cursor: not-allowed;
 }
 
@@ -3746,7 +3748,7 @@ option {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   gap: 10px;
 }
@@ -3758,13 +3760,13 @@ option {
 .question-item-word {
   font-size: 1.1em;
   font-weight: 600;
-  color: #000;
+  color: var(--text-color);
   margin-bottom: 4px;
 }
 
 .question-item-details {
   font-size: 0.9em;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .delete-btn {
@@ -4997,7 +4999,7 @@ option {
 
 /* ========== 問題集管理パネル ========== */
 .question-sets-panel {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -5006,7 +5008,7 @@ option {
 .question-sets-panel h3 {
   margin: 0 0 0.75rem 0;
   font-size: 1.1rem;
-  color: #000;
+  color: var(--text-color);
 }
 
 .question-sets-toolbar {
@@ -5015,8 +5017,8 @@ option {
 
 .btn-add-set {
   padding: 0.5rem 1rem;
-  background: #667eea;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -5025,7 +5027,7 @@ option {
 }
 
 .btn-add-set:hover {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 .question-sets-list {
@@ -5037,7 +5039,7 @@ option {
 }
 
 .empty-message {
-  color: #999;
+  color: var(--text-tertiary);
   font-size: 0.9rem;
   text-align: center;
   padding: 1rem;
@@ -5047,15 +5049,15 @@ option {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: white;
+  background: var(--background);
   border-radius: 8px;
   padding: 0.5rem;
   transition: all 0.2s;
 }
 
 .question-set-item.active {
-  background: #e3f2fd;
-  border: 2px solid #667eea;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--btn-primary-bg);
 }
 
 .set-name-btn {
@@ -5072,13 +5074,13 @@ option {
 
 .set-name {
   font-weight: 600;
-  color: #333;
+  color: var(--text-color);
   font-size: 1rem;
 }
 
 .set-info {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-top: 0.2rem;
 }
 
@@ -5105,8 +5107,8 @@ option {
 
 .btn-toolbar {
   padding: 0.5rem 1rem;
-  background: #f0f0f0;
-  border: 2px solid #ddd;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
@@ -5114,13 +5116,13 @@ option {
 }
 
 .btn-toolbar:hover {
-  background: #e0e0e0;
+  background: var(--bg-tertiary);
 }
 
 .btn-toolbar.active {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
 }
 
 .passage-item {
@@ -5181,8 +5183,8 @@ option {
 .btn-add-phrase {
   width: 100%;
   padding: 0.75rem;
-  background: #667eea;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -5192,7 +5194,7 @@ option {
 }
 
 .btn-add-phrase:hover {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 /* ========================================
@@ -5310,7 +5312,7 @@ option {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 1rem;
   overflow-y: auto;
@@ -5319,7 +5321,7 @@ option {
 .editor-sidebar h3 {
   margin: 0 0 1rem 0;
   font-size: 1.2rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .sidebar-toolbar {
@@ -5329,8 +5331,8 @@ option {
 .btn-add-question-set {
   width: 100%;
   padding: 0.75rem;
-  background: #667eea;
-  color: white;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -5340,7 +5342,7 @@ option {
 }
 
 .btn-add-question-set:hover {
-  background: #5568d3;
+  background: var(--btn-primary-hover);
 }
 
 .question-sets-list {
@@ -5355,7 +5357,7 @@ option {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem;
-  background: white;
+  background: var(--background);
   border: 2px solid transparent;
   border-radius: 8px;
   cursor: pointer;
@@ -5363,14 +5365,14 @@ option {
 }
 
 .question-set-card:hover {
-  border-color: #667eea;
-  background: #f0f4ff;
+  border-color: var(--btn-primary-bg);
+  background: var(--bg-tertiary);
 }
 
 .question-set-card.active {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
 }
 
 .set-card-content {
