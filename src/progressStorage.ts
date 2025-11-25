@@ -786,9 +786,10 @@ export function getOvercomeWeakWords(limit: number = 10): Array<{
     
     // 克服条件:
     // 1. 最近の正答率が80%以上
-    // 2. 連続3回以上正解中 OR 全体の正答率が85%以上
+    // 2. 1発正解 OR 連続3回以上正解中 OR 全体の正答率が85%以上
     const hasHighAccuracy = accuracy >= 80;
-    const isCurrentlyMastered = wp.consecutiveCorrect >= 3 || accuracy >= 85;
+    const isFirstTimeCorrect = totalAttempts === 1 && wp.correctCount === 1;
+    const isCurrentlyMastered = isFirstTimeCorrect || wp.consecutiveCorrect >= 3 || accuracy >= 85;
     
     if (hasHighAccuracy && isCurrentlyMastered) {
       // 克服度 = 間違い回数 × 正答率（間違いが多かったほど、そして今の正答率が高いほど印象的）
@@ -851,10 +852,11 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
     const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
     
     // 克服判定（getOvercomeWeakWordsと同じ条件）
+    const isFirstTimeCorrect = totalAttempts === 1 && wp.correctCount === 1;
     const isOvercome = 
       mistakes >= 5 && 
       accuracy >= 80 && 
-      (wp.consecutiveCorrect >= 3 || accuracy >= 85);
+      (isFirstTimeCorrect || wp.consecutiveCorrect >= 3 || accuracy >= 85);
     
     // 克服していない場合のみリストに追加
     if (!isOvercome) {
@@ -1134,21 +1136,22 @@ function determineMasteryLevel(wordProgress: WordProgress): 'new' | 'learning' |
   const total = wordProgress.correctCount + wordProgress.incorrectCount;
   
   if (total === 0) return 'new';
-  if (total < 3) return 'learning';
   
   const accuracy = wordProgress.correctCount / total;
   
   // より柔軟な定着判定:
-  // 1. 5回以上学習して正解率85%以上 → 安定した定着
-  // 2. 3回以上学習して正解率90%以上 → 高い定着
-  // 3. 連続5回以上正解 → 強い定着
-  // 4. 10回以上学習して正解率75%以上かつ直近2回が正解 → 長期学習による定着
+  // 1. 初出で正解 → 即座に定着
+  // 2. 5回以上学習して正解率85%以上 → 安定した定着
+  // 3. 3回以上学習して正解率90%以上 → 高い定着
+  // 4. 連続5回以上正解 → 強い定着
+  // 5. 10回以上学習して正解率75%以上かつ直近2回が正解 → 長期学習による定着
+  const isOneShot = total === 1 && wordProgress.correctCount === 1;
   const isStableAccuracy = total >= 5 && accuracy >= 0.85;
   const isHighAccuracy = total >= 3 && accuracy >= 0.90;
   const isStrongStreak = wordProgress.consecutiveCorrect >= 5;
   const isLongTermLearning = total >= 10 && accuracy >= 0.75 && wordProgress.consecutiveCorrect >= 2;
   
-  if (isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
+  if (isOneShot || isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
     return 'mastered';
   }
   
@@ -1438,7 +1441,7 @@ export function getWordProgressSummary(): {
 
 /**
  * 定着した単語数を取得
- * 定着条件: 連続3回以上正解 または スキップされた単語
+ * 定着条件: 1発正解 または 連続3回以上正解 または スキップされた単語
  */
 export function getMasteredWordsCount(words: string[]): number {
   const progress = loadProgressSync();
@@ -1448,11 +1451,14 @@ export function getMasteredWordsCount(words: string[]): number {
     const wordProgress = progress.wordProgress[word];
     if (!wordProgress) continue;
     
-    // 定着条件: 連続3回以上正解 または スキップされている
+    const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
+    
+    // 定着条件: 1発正解 または 連続3回以上正解 または スキップされている
+    const isFirstTimeCorrect = totalAttempts === 1 && wordProgress.correctCount === 1;
     const isConsecutivelyCorrect = wordProgress.consecutiveCorrect >= 3;
     const isSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
     
-    if (isConsecutivelyCorrect || isSkipped) {
+    if (isFirstTimeCorrect || isConsecutivelyCorrect || isSkipped) {
       masteredCount++;
     }
   }
@@ -1471,11 +1477,14 @@ export function getMasteredWords(words: string[]): string[] {
     const wordProgress = progress.wordProgress[word];
     if (!wordProgress) continue;
     
-    // 定着条件: 連続3回以上正解 または スキップされている
+    const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
+    
+    // 定着条件: 1発正解 または 連続3回以上正解 または スキップされている
+    const isFirstTimeCorrect = totalAttempts === 1 && wordProgress.correctCount === 1;
     const isConsecutivelyCorrect = wordProgress.consecutiveCorrect >= 3;
     const isSkipped = wordProgress.skippedCount && wordProgress.skippedCount > 0;
     
-    if (isConsecutivelyCorrect || isSkipped) {
+    if (isFirstTimeCorrect || isConsecutivelyCorrect || isSkipped) {
       masteredWords.push(word);
     }
   }
