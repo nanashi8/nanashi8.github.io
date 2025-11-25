@@ -363,6 +363,12 @@ function QuestionCard({
           {question.reading && (
             <div className="question-reading">【{question.reading}】</div>
           )}
+          {question.difficulty && (
+            <div className={`difficulty-badge ${question.difficulty}`}>
+              {question.difficulty === 'beginner' ? '初級' : 
+               question.difficulty === 'intermediate' ? '中級' : '上級'}
+            </div>
+          )}
         </div>
         <button 
           className="inline-nav-btn next-inline-btn" 
