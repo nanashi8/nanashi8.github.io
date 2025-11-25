@@ -24,18 +24,18 @@
 /* ダークモード対応 */
 .dark-mode .dictionary-view {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .dictionary-container {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-radius: 12px;
 }
 
 .dark-mode .dictionary-container h2 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .coming-soon {
-  color: #aaa;
+  color: var(--text-secondary);
 }
