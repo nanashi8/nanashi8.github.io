@@ -6390,6 +6390,13 @@ option {
   color: var(--text-color);
 }
 
+.pronunciation-hint {
+  margin-left: 8px;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
 .action-buttons {
   display: flex;
   gap: 10px;
