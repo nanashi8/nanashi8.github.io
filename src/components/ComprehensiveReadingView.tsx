@@ -956,9 +956,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <button
             className="sub-tab-btn"
             onClick={handleBackToSettings}
-            title="学習設定に戻る"
+            title="設定"
           >
-            ⚙️ 学習設定に戻る
+            ⚙️ 設定
           </button>
           <div className="sub-tab-divider"></div>
           <button 
@@ -1172,10 +1172,18 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 <button
                   className="full-text-speaker-btn"
                   onClick={() => {
+                    // 話者部分（Student 1:, Mom:, etc.）と引用符を除外して発音
                     const fullText = currentPassage.phrases
-                      .map(phrase => phrase.segments.map(s => s.word).join(' '))
+                      .map(phrase => {
+                        const text = phrase.segments.map(s => s.word).join(' ');
+                        // 話者パターンを削除（Student 1:, Mom:, Teacher:, etc.）
+                        return text
+                          .replace(/^[A-Z][a-z]*(?:\s+\d+)?:\s*/, '')
+                          .replace(/"/g, ''); // 引用符を削除
+                      })
                       .join(' ')
                       .replace(/\s+([.,!?;:])/g, '$1');
+                    
                     speakEnglish(fullText);
                     setIsFullTextSpeaking(true);
                     setIsFullTextPaused(false);
@@ -1216,75 +1224,96 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               </div>
               <div className="full-text-content">
                 {(() => {
-                  // フレーズから自然な文章を構築（文法エラーを自動修正）
-                  let fullText = '';
-                  let lastWasPeriod = true; // 最初は文頭なのでtrue
+                  // パッセージのタイトルで判別: "Daily Conversation"を含む場合は会話形式として処理
+                  const isConversation = currentPassage.title.toLowerCase().includes('conversation');
                   
-                  currentPassage.phrases.forEach((phrase) => {
-                    phrase.segments.forEach((seg) => {
-                      let word = seg.word.trim();
-                      if (word && word !== '-') {
-                        // 句読点の場合
-                        if (/^[.,!?;:]$/.test(word)) {
-                          fullText += word;
-                          lastWasPeriod = /^[.!?]$/.test(word);
-                        } else {
-                          // 文頭の場合は大文字に変換
-                          if (lastWasPeriod && word.length > 0) {
-                            word = word.charAt(0).toUpperCase() + word.slice(1);
-                            lastWasPeriod = false;
+                  if (isConversation) {
+                    // 会話形式: フレーズ単位で処理（各フレーズが話者の発言単位）
+                    const lines: string[] = [];
+                    
+                    currentPassage.phrases.forEach((phrase) => {
+                      let lineText = phrase.segments.map(s => s.word).join(' ').trim();
+                      if (!lineText || lineText === '-') return;
+                      lineText = lineText.replace(/\s+([.,!?;:"])/g, '$1');
+                      lines.push(lineText);
+                    });
+                    
+                    return (
+                      <div>
+                        {lines.map((line, idx) => (
+                          <p key={idx} className="paragraph-en conversation-line">
+                            {line}
+                          </p>
+                        ))}
+                      </div>
+                    );
+                  } else {
+                    // 通常の長文形式: フレーズから文章を構築
+                    let fullText = '';
+                    let lastWasPeriod = true;
+                    
+                    currentPassage.phrases.forEach((phrase) => {
+                      phrase.segments.forEach((seg) => {
+                        let word = seg.word.trim();
+                        if (word && word !== '-') {
+                          if (/^[.,!?;:]$/.test(word)) {
+                            fullText += word;
+                            lastWasPeriod = /^[.!?]$/.test(word);
+                          } else {
+                            if (lastWasPeriod && word.length > 0) {
+                              word = word.charAt(0).toUpperCase() + word.slice(1);
+                              lastWasPeriod = false;
+                            }
+                            if (fullText.length > 0 && !fullText.endsWith(' ')) {
+                              fullText += ' ';
+                            }
+                            fullText += word;
                           }
-                          
-                          // 単語の前にスペースを追加（文頭以外）
-                          if (fullText.length > 0 && !fullText.endsWith(' ')) {
-                            fullText += ' ';
-                          }
-                          fullText += word;
                         }
+                      });
+                    });
+
+                    // 文を分割
+                    const sentences = fullText.split(/([.!?])\s+/).filter(s => s.trim());
+                    const reconstructedSentences: string[] = [];
+                    for (let i = 0; i < sentences.length; i += 2) {
+                      const sentence = sentences[i];
+                      const punctuation = sentences[i + 1] || '';
+                      reconstructedSentences.push((sentence + punctuation).trim());
+                    }
+
+                    // 語数ベースで段落分け
+                    const paragraphs: string[] = [];
+                    let currentParagraph: string[] = [];
+                    let wordCount = 0;
+                    const targetWordsPerParagraph = 60;
+                    
+                    reconstructedSentences.forEach((sentence, idx) => {
+                      const sentenceWordCount = sentence.split(/\s+/).length;
+                      currentParagraph.push(sentence);
+                      wordCount += sentenceWordCount;
+                      
+                      if (wordCount >= targetWordsPerParagraph || idx === reconstructedSentences.length - 1) {
+                        paragraphs.push(currentParagraph.join(' '));
+                        currentParagraph = [];
+                        wordCount = 0;
                       }
                     });
-                  });
 
-                  // ピリオド、感嘆符、疑問符で文を分割
-                  const sentences = fullText.split(/([.!?])\s+/).filter(s => s.trim());
-                  
-                  // 文を再構築
-                  const reconstructedSentences: string[] = [];
-                  for (let i = 0; i < sentences.length; i += 2) {
-                    const sentence = sentences[i];
-                    const punctuation = sentences[i + 1] || '';
-                    reconstructedSentences.push((sentence + punctuation).trim());
-                  }
-
-                  // 意味のある段落に分ける（語数ベース）
-                  const paragraphs: string[] = [];
-                  let currentParagraph: string[] = [];
-                  let wordCount = 0;
-                  const targetWordsPerParagraph = 60; // 約60語/段落
-                  
-                  reconstructedSentences.forEach((sentence, idx) => {
-                    const sentenceWordCount = sentence.split(/\s+/).length;
-                    currentParagraph.push(sentence);
-                    wordCount += sentenceWordCount;
-                    
-                    // 60語以上、または最後の文の場合に段落を確定
-                    if (wordCount >= targetWordsPerParagraph || idx === reconstructedSentences.length - 1) {
+                    if (currentParagraph.length > 0) {
                       paragraphs.push(currentParagraph.join(' '));
-                      currentParagraph = [];
-                      wordCount = 0;
                     }
-                  });
 
-                  // 最後に残った文があれば段落に追加
-                  if (currentParagraph.length > 0) {
-                    paragraphs.push(currentParagraph.join(' '));
+                    return (
+                      <div>
+                        {paragraphs.map((para, idx) => (
+                          <p key={idx} className="paragraph-en">
+                            {para}
+                          </p>
+                        ))}
+                      </div>
+                    );
                   }
-
-                  return paragraphs.map((para, idx) => (
-                    <p key={idx} className="paragraph-en">
-                      {para}
-                    </p>
-                  ));
                 })()}
               </div>
             </div>
@@ -1295,67 +1324,81 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             <div className="full-translation-display">
               <div className="full-translation-content">
                 {(() => {
-                  // フレーズごとに訳を収集（文の区切りを保持）
-                  const translatedSentences: string[] = [];
-                  let currentSentence = '';
+                  // パッセージのタイトルで判別: "Conversation"を含む場合は会話形式として処理
+                  const isConversation = currentPassage.title.toLowerCase().includes('conversation');
                   
-                  currentPassage.phrases.forEach((phrase) => {
-                    let meaning = phrase.phraseMeaning || '';
-                    if (meaning) {
+                  if (isConversation) {
+                    // 会話形式: フレーズ単位で処理（各フレーズが話者の発言単位）
+                    const lines: string[] = [];
+                    
+                    currentPassage.phrases.forEach((phrase) => {
+                      let meaning = phrase.phraseMeaning || '';
+                      
                       // [要修正]を削除
                       meaning = meaning.replace(/\[要修正\]/g, '').trim();
                       
-                      // 空になった場合はスキップ
-                      if (!meaning) return;
+                      // 空の場合はスキップ
+                      if (!meaning || meaning === '-') return;
                       
-                      // 英文のフレーズが文の終わりかチェック
-                      const phraseWords = phrase.segments
-                        .map(s => s.word)
-                        .join(' ')
-                        .trim();
-                      const isEndOfSentence = /[.!?]$/.test(phraseWords);
-                      
-                      // 既に句読点で終わっていない場合
-                      if (!/[。！？]$/.test(meaning)) {
-                        if (isEndOfSentence) {
-                          // 文の終わり
-                          currentSentence += meaning + '。';
-                          translatedSentences.push(currentSentence.trim());
-                          currentSentence = '';
+                      lines.push(meaning);
+                    });
+                    
+                    return lines.map((line, idx) => (
+                      <p key={idx} className="paragraph-ja conversation-line">
+                        {line}
+                      </p>
+                    ));
+                  } else {
+                    // 通常の長文形式: フレーズごとに訳を収集
+                    const translatedSentences: string[] = [];
+                    let currentSentence = '';
+                    
+                    currentPassage.phrases.forEach((phrase) => {
+                      let meaning = phrase.phraseMeaning || '';
+                      if (meaning) {
+                        meaning = meaning.replace(/\[要修正\]/g, '').trim();
+                        if (!meaning) return;
+                        
+                        const phraseWords = phrase.segments.map(s => s.word).join(' ').trim();
+                        const isEndOfSentence = /[.!?]$/.test(phraseWords);
+                        
+                        if (!/[。！？]$/.test(meaning)) {
+                          if (isEndOfSentence) {
+                            currentSentence += meaning + '。';
+                            translatedSentences.push(currentSentence.trim());
+                            currentSentence = '';
+                          } else {
+                            currentSentence += meaning + '、';
+                          }
                         } else {
-                          // 文の途中
-                          currentSentence += meaning + '、';
-                        }
-                      } else {
-                        // 既に句読点がある場合
-                        currentSentence += meaning;
-                        if (isEndOfSentence) {
-                          translatedSentences.push(currentSentence.trim());
-                          currentSentence = '';
+                          currentSentence += meaning;
+                          if (isEndOfSentence) {
+                            translatedSentences.push(currentSentence.trim());
+                            currentSentence = '';
+                          }
                         }
                       }
+                    });
+                    
+                    if (currentSentence.trim()) {
+                      translatedSentences.push(currentSentence.trim() + '。');
                     }
-                  });
-                  
-                  // 残りの文があれば追加
-                  if (currentSentence.trim()) {
-                    translatedSentences.push(currentSentence.trim() + '。');
-                  }
 
-                  // 3〜5文ごとに段落を作成（全文タブと同じロジック）
-                  const paragraphs: string[] = [];
-                  const sentencesPerParagraph = 4; // 4文ごとに段落分け
-                  
-                  for (let i = 0; i < translatedSentences.length; i += sentencesPerParagraph) {
-                    const paragraphSentences = translatedSentences.slice(i, i + sentencesPerParagraph);
-                    paragraphs.push(paragraphSentences.join(''));
-                  }
+                    // 4文ごとに段落分け
+                    const paragraphs: string[] = [];
+                    const sentencesPerParagraph = 4;
+                    
+                    for (let i = 0; i < translatedSentences.length; i += sentencesPerParagraph) {
+                      const paragraphSentences = translatedSentences.slice(i, i + sentencesPerParagraph);
+                      paragraphs.push(paragraphSentences.join(''));
+                    }
 
-                  return paragraphs.map((para, idx) => (
-                    <p key={idx} className="paragraph-ja">
-                      {para}
-                    </p>
-                  ));
+                    return paragraphs.map((para, idx) => (
+                      <p key={idx} className="paragraph-ja">
+                        {para}
+                      </p>
+                    ));
+                  }
                 })()}
               </div>
             </div>
@@ -1785,6 +1828,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           margin-top: 0;
         }
 
+        /* 会話形式の行スタイル */
+        .full-text-content .conversation-line {
+          text-indent: 0;
+          margin-bottom: 1em;
+          padding-left: 1em;
+          border-left: 3px solid #667eea;
+        }
+
         .full-translation-content {
           font-size: 1.05em;
           line-height: 2;
@@ -1799,6 +1850,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
         .full-translation-content .paragraph-ja:first-child {
           margin-top: 0;
+        }
+
+        /* 会話形式の日本語訳スタイル */
+        .full-translation-content .conversation-line {
+          text-indent: 0;
+          margin-bottom: 1em;
+          padding-left: 1em;
+          border-left: 3px solid #667eea;
         }
 
         .translation-line {

@@ -118,76 +118,106 @@ export async function convertPassageToReadingFormat(
         
         // セグメントを生成
         const segments: ReadingSegment[] = words.map(word => {
+          // 先頭の引用符を除去して処理
+          let processWord = word;
+          let leadingQuote = '';
+          if (processWord.startsWith('"')) {
+            leadingQuote = '"';
+            processWord = processWord.substring(1);
+          }
+          
+          // 略語パターン（Ms., Mr., Dr.など）をチェック
+          const abbreviationPattern = /^(Ms|Mr|Mrs|Dr|Prof|St|Ave|Inc|Ltd|etc)\.$|^[A-Z]\.$|^vs\.$|^e\.g\.$|^i\.e\.$/;
+          if (abbreviationPattern.test(processWord)) {
+            // 略語は分割せずそのまま1単語として扱う
+            const lemma = getLemma(processWord.replace(/\.$/, '')); // ピリオドなしで辞書検索
+            const wordData = wordDictionary.get(lemma);
+            const meaning = wordData?.meaning || '';
+            
+            const result: ReadingSegment[] = [];
+            if (leadingQuote) {
+              result.push({
+                word: leadingQuote,
+                meaning: '',
+                isUnknown: false,
+              });
+            }
+            result.push({
+              word: processWord,
+              meaning: meaning === '-' ? '' : meaning,
+              isUnknown: false,
+            });
+            return result;
+          }
+          
           // 引用符や句読点を検出
-          const punctuationMatch = word.match(/([.,!?;:—"])$/);
+          const punctuationMatch = processWord.match(/([.,!?;:—"])$/);
           
           if (punctuationMatch) {
-            const cleanWord = word.replace(/[.,!?;:—"]$/, '');
+            const cleanWord = processWord.replace(/[.,!?;:—"]$/, '');
             const punctuation = punctuationMatch[1];
             
             if (!cleanWord) {
               // 引用符のみの場合
-              return {
+              const result: ReadingSegment[] = [];
+              if (leadingQuote) {
+                result.push({
+                  word: leadingQuote,
+                  meaning: '',
+                  isUnknown: false,
+                });
+              }
+              result.push({
                 word: punctuation,
                 meaning: '',
                 isUnknown: false,
-              };
+              });
+              return result;
             }
             
             const lemma = getLemma(cleanWord);
             const wordData = wordDictionary.get(lemma);
             const meaning = wordData?.meaning || '';
             
-            return [
-              {
-                word: cleanWord,
-                meaning: meaning === '-' ? '' : meaning,
-                isUnknown: false,
-              },
-              {
-                word: punctuation,
+            const result: ReadingSegment[] = [];
+            if (leadingQuote) {
+              result.push({
+                word: leadingQuote,
                 meaning: '',
                 isUnknown: false,
-              }
-            ];
-          } else {
-            // 先頭の引用符を処理
-            if (word.startsWith('"')) {
-              const cleanWord = word.substring(1);
-              if (!cleanWord) {
-                return {
-                  word: '"',
-                  meaning: '',
-                  isUnknown: false,
-                };
-              }
-              const lemma = getLemma(cleanWord);
-              const wordData = wordDictionary.get(lemma);
-              const meaning = wordData?.meaning || '';
-              
-              return [
-                {
-                  word: '"',
-                  meaning: '',
-                  isUnknown: false,
-                },
-                {
-                  word: cleanWord,
-                  meaning: meaning === '-' ? '' : meaning,
-                  isUnknown: false,
-                }
-              ];
+              });
             }
-            
-            const lemma = getLemma(word);
+            result.push({
+              word: cleanWord,
+              meaning: meaning === '-' ? '' : meaning,
+              isUnknown: false,
+            });
+            result.push({
+              word: punctuation,
+              meaning: '',
+              isUnknown: false,
+            });
+            return result;
+          } else {
+            // 句読点なしの通常の単語
+            const lemma = getLemma(processWord);
             const wordData = wordDictionary.get(lemma);
             const meaning = wordData?.meaning || '';
             
-            return {
-              word,
+            const result: ReadingSegment[] = [];
+            if (leadingQuote) {
+              result.push({
+                word: leadingQuote,
+                meaning: '',
+                isUnknown: false,
+              });
+            }
+            result.push({
+              word: processWord,
               meaning: meaning === '-' ? '' : meaning,
               isUnknown: false,
-            };
+            });
+            return result;
           }
         }).flat();
         
@@ -211,12 +241,35 @@ export async function convertPassageToReadingFormat(
             
             // セグメントを生成
             const segments: ReadingSegment[] = words.map(word => {
+              // 略語パターン（Ms., Mr., Dr.など）をチェック
+              const abbreviationPattern = /^(Ms|Mr|Mrs|Dr|Prof|St|Ave|Inc|Ltd|etc)\.$|^[A-Z]\.$|^vs\.$|^e\.g\.$|^i\.e\.$/;
+              if (abbreviationPattern.test(word)) {
+                // 略語は分割せずそのまま1単語として扱う
+                const lemma = getLemma(word.replace(/\.$/, '')); // ピリオドなしで辞書検索
+                const wordData = wordDictionary.get(lemma);
+                const meaning = wordData?.meaning || '';
+                return {
+                  word: word,
+                  meaning: meaning === '-' ? '' : meaning,
+                  isUnknown: false,
+                };
+              }
+              
               // 句読点を検出
               const punctuationMatch = word.match(/([.,!?;:—])$/);
               
               if (punctuationMatch) {
                 const cleanWord = word.replace(/[.,!?;:—]$/, '');
                 const punctuation = punctuationMatch[1];
+                
+                // 空の場合（句読点のみ）
+                if (!cleanWord) {
+                  return {
+                    word: punctuation,
+                    meaning: '',
+                    isUnknown: false,
+                  };
+                }
                 
                 const lemma = getLemma(cleanWord);
                 const wordData = wordDictionary.get(lemma);
@@ -235,12 +288,13 @@ export async function convertPassageToReadingFormat(
                   }
                 ];
               } else {
+                // 句読点なしの通常の単語
                 const lemma = getLemma(word);
                 const wordData = wordDictionary.get(lemma);
                 const meaning = wordData?.meaning || '';
                 
                 return {
-                  word,
+                  word: word,
                   meaning: meaning === '-' ? '' : meaning,
                   isUnknown: false,
                 };

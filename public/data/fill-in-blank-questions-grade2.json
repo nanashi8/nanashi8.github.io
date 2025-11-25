@@ -1,11 +1,11 @@
 {
   "grade": 2,
-  "totalQuestions": 32,
-  "categories": [
+  "totalQuestions": 160,
+  "units": [
     {
-      "category": "接続詞（when/if/because）",
-      "grammarPoint": "conjunction",
-      "questions": [
+      "unit": "Unit 0",
+      "title": "1年生の復習",
+      "fillInBlank": [
         {
           "id": "fb-g2-conj-001",
           "japanese": "私が家に帰ったとき、母は料理していました",
@@ -52,6 +52,207 @@
           "hint": "なぜなら → because"
         },
         {
+          "id": "fb-g2-u0-004",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-005",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-006",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-007",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-008",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-009",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-010",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-011",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-012",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-013",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-014",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-015",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        },
+        {
+          "id": "fb-g2-u0-016",
+          "japanese": "私が家に帰ったとき、母は料理していました",
+          "sentence": "____ I got home, my mother was cooking.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」という時を表す接続詞です。過去のある時点で起こったことを説明します。Ifは条件「もし～なら」、Becauseは理由「～なので」を表すため不適切です。過去進行形(was cooking)と組み合わせて、そのときの状況を描写しています。",
+          "hint": "～したとき → when"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 1",
+      "title": "過去形の復習",
+      "fillInBlank": [
+        {
           "id": "fb-g2-conj-004",
           "japanese": "彼が来たとき、私たちは出発します",
           "sentence": "____ he comes, we will leave.",
@@ -97,6 +298,207 @@
           "hint": "もし～なら"
         },
         {
+          "id": "fb-g2-u1-004",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-005",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-006",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-007",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-008",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-009",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-010",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-011",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-012",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-013",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-014",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-015",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        },
+        {
+          "id": "fb-g2-u1-016",
+          "japanese": "彼が来たとき、私たちは出発します",
+          "sentence": "____ he comes, we will leave.",
+          "choices": [
+            "When",
+            "If",
+            "Because",
+            "That"
+          ],
+          "correctAnswer": "When",
+          "difficulty": "intermediate",
+          "explanation": "Whenは「～したとき」を表します。未来のことでもWhen節では現在形を使います(he comes)。「彼が来る」ことが確実な場合にWhenを使います。Ifだと「来るかどうか分からない」というニュアンスになります。主節でwillを使って未来の行動を表します。",
+          "hint": "～したとき"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 2",
+      "title": "未来形（be going to / will）",
+      "fillInBlank": [
+        {
           "id": "fb-g2-conj-007",
           "japanese": "私は彼が正しいと思います",
           "sentence": "I think ____ he is right.",
@@ -125,13 +527,7 @@
           "difficulty": "intermediate",
           "explanation": "Becauseは理由を表します。「傘を持っていく」という命令に対して「雨が降っている」という理由を説明しています。Take an umbrellaは命令文で「傘を持って行きなさい」という意味です。現在進行形(is raining)で今まさに降っている状況を表しています。",
           "hint": "～なので"
-        }
-      ]
-    },
-    {
-      "category": "不定詞（to + 動詞）",
-      "grammarPoint": "infinitive",
-      "questions": [
+        },
         {
           "id": "fb-g2-inf-001",
           "japanese": "私は泳ぐのが好きです",
@@ -147,6 +543,207 @@
           "explanation": "不定詞(to + 動詞の原形)は「～すること」という意味の名詞的用法を持ちます。Like to ~で「～することが好き」です。Likeの後ろには不定詞または動名詞(-ing)が来ます。前置詞forやofでは動詞の原形を続けられません。",
           "hint": "～すること → to + 動詞"
         },
+        {
+          "id": "fb-g2-u2-004",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-005",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-006",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-007",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-008",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-009",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-010",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-011",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-012",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-013",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-014",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-015",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        },
+        {
+          "id": "fb-g2-u2-016",
+          "japanese": "私は彼が正しいと思います",
+          "sentence": "I think ____ he is right.",
+          "choices": [
+            "when",
+            "if",
+            "because",
+            "that"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "Thatは「～ということ」を表す接続詞で、思考や発言の内容を導きます。Think thatで「～だと思う」という意味になります。日常会話ではthatを省略することも多いですが、文法的にはthatが正解です。WhenやIfは意味が通りません。",
+          "hint": "think that ～"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 3",
+      "title": "不定詞",
+      "fillInBlank": [
         {
           "id": "fb-g2-inf-002",
           "japanese": "彼は英語を勉強したい",
@@ -193,6 +790,207 @@
           "hint": "～になりたい"
         },
         {
+          "id": "fb-g2-u3-004",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-005",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-006",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-007",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-008",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-009",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-010",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-011",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-012",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-013",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-014",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-015",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        },
+        {
+          "id": "fb-g2-u3-016",
+          "japanese": "彼は英語を勉強したい",
+          "sentence": "He wants ____ study English.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~は「～したい」という願望を表す基本的な表現です。Wantの後ろは必ず不定詞(to + 動詞)になります。動名詞(-ing)は使えません。Study Englishは「英語を勉強する」という意味です。",
+          "hint": "want to ～"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 4",
+      "title": "動名詞",
+      "fillInBlank": [
+        {
           "id": "fb-g2-inf-005",
           "japanese": "私は図書館へ行く時間がありません",
           "sentence": "I don't have time ____ go to the library.",
@@ -238,6 +1036,207 @@
           "hint": "～するために → to"
         },
         {
+          "id": "fb-g2-u4-004",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-005",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-006",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-007",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-008",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-009",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-010",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-011",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-012",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-013",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-014",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-015",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        },
+        {
+          "id": "fb-g2-u4-016",
+          "japanese": "私は図書館へ行く時間がありません",
+          "sentence": "I don't have time ____ go to the library.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "不定詞の形容詞的用法で「～するための」を表します。Time to goで「行くための時間」です。Have time to ~は「～する時間がある」という重要表現です。Go to the libraryは「図書館へ行く」という意味です。",
+          "hint": "～するための時間"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 5",
+      "title": "接続詞（when / if / that / because）",
+      "fillInBlank": [
+        {
           "id": "fb-g2-inf-008",
           "japanese": "彼女は料理の仕方を学びたい",
           "sentence": "She wants ____ learn how to cook.",
@@ -251,13 +1250,7 @@
           "difficulty": "intermediate",
           "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
           "hint": "～したい"
-        }
-      ]
-    },
-    {
-      "category": "動名詞（-ing形）",
-      "grammarPoint": "gerund",
-      "questions": [
+        },
         {
           "id": "fb-g2-ger-001",
           "japanese": "私は本を読むことが好きです",
@@ -288,6 +1281,207 @@
           "explanation": "動名詞で「～すること」を表します。Likeは特別で、後ろに動名詞(singing)と不定詞(to sing)の両方が使えます。意味はほぼ同じですが、動名詞は一般的・習慣的な好みを、不定詞は特定の場面での好みを表すことが多いです。",
           "hint": "～すること → -ing"
         },
+        {
+          "id": "fb-g2-u5-004",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-005",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-006",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-007",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-008",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-009",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-010",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-011",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-012",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-013",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-014",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-015",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        },
+        {
+          "id": "fb-g2-u5-016",
+          "japanese": "彼女は料理の仕方を学びたい",
+          "sentence": "She wants ____ learn how to cook.",
+          "choices": [
+            "to",
+            "for",
+            "of",
+            "at"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "Want to ~の形です。How to cookは「料理の仕方・料理する方法」という意味で、how to + 動詞で「～の仕方」を表す重要表現です。Learnは「学ぶ」という意味の動詞です。",
+          "hint": "～したい"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 6",
+      "title": "比較級・最上級",
+      "fillInBlank": [
         {
           "id": "fb-g2-ger-003",
           "japanese": "彼は泳ぐのが上手です",
@@ -334,6 +1528,207 @@
           "hint": "enjoy + -ing"
         },
         {
+          "id": "fb-g2-u6-004",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-005",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-006",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-007",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-008",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-009",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-010",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-011",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-012",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-013",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-014",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-015",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        },
+        {
+          "id": "fb-g2-u6-016",
+          "japanese": "彼は泳ぐのが上手です",
+          "sentence": "He is good at ____.",
+          "choices": [
+            "swim",
+            "swimming",
+            "to swim",
+            "swims"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "前置詞(at)の後ろは必ず動名詞または名詞を使います。不定詞は使えません。Be good at -ingで「～するのが上手だ」という重要表現です。他にもbe interested in -ing, thank you for -ingなど、前置詞の後ろは動名詞になります。",
+          "hint": "前置詞 + -ing"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 7",
+      "title": "have to / must",
+      "fillInBlank": [
+        {
           "id": "fb-g2-ger-006",
           "japanese": "私は音楽を聞くのが好きです",
           "sentence": "I like ____ to music.",
@@ -377,13 +1772,208 @@
           "difficulty": "intermediate",
           "explanation": "Aboutは前置詞なので、後ろは動名詞になります。How about -ing?は「～するのはどうですか」という提案を表す重要表現です。Watch TVで「テレビを見る」です。What about -ing?も同じ意味で使えます。",
           "hint": "How about + -ing?"
+        },
+        {
+          "id": "fb-g2-u7-004",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-005",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-006",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-007",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-008",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-009",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-010",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-011",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-012",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-013",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-014",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-015",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
+        },
+        {
+          "id": "fb-g2-u7-016",
+          "japanese": "私は音楽を聞くのが好きです",
+          "sentence": "I like ____ to music.",
+          "choices": [
+            "listen",
+            "listening",
+            "to listen",
+            "listens"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "explanation": "Likeの後ろは動名詞または不定詞が使えます。両方正解ですが、ここでは動名詞を選びます。Listen to musicで「音楽を聞く」という重要表現です。Listenの後ろには必ず前置詞toが必要です(listen to ~で「～を聞く」)。",
+          "hint": "like + -ing / to不定詞"
         }
       ]
     },
     {
-      "category": "受動態（be + 過去分詞）",
-      "grammarPoint": "passive-voice",
-      "questions": [
+      "unit": "Unit 8",
+      "title": "There is/are",
+      "fillInBlank": [
         {
           "id": "fb-g2-pass-001",
           "japanese": "この本は多くの人に読まれています",
@@ -429,6 +2019,207 @@
           "explanation": "主語がThese pictures(複数)で過去なので、wereを使います。Takenはtakeの過去分詞で「撮られた」です。複数形の主語には複数形のbe動詞(are/were)が必要です。By himは「彼によって」という動作主を表します。",
           "hint": "複数 + 過去 → were"
         },
+        {
+          "id": "fb-g2-u8-004",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-005",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-006",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-007",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-008",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-009",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-010",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-011",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-012",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-013",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-014",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-015",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u8-016",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態は「be動詞 + 過去分詞」の形です。主語がThis book(単数)で現在の状態なのでisを使います。By ~は「～によって」という動作主を表します。能動態だとMany people read this bookとなります。受動態は動作を受ける側に焦点を当てる表現です。",
+          "hint": "be + 過去分詞"
+        }
+      ]
+    },
+    {
+      "unit": "Unit 9",
+      "title": "受動態",
+      "fillInBlank": [
         {
           "id": "fb-g2-pass-004",
           "japanese": "英語は世界中で話されています",
@@ -503,6 +2294,171 @@
           "difficulty": "intermediate",
           "explanation": "過去の受動態なので、wasを使います。主語がThe door(単数)で過去の出来事です。Openedはopenの過去分詞で「開けられた」です。Openは規則動詞なのでed を付けます。受動態では動作を受ける側(ドア)が主語になります。",
           "hint": "過去の受動態"
+        },
+        {
+          "id": "fb-g2-u9-006",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-007",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-008",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-009",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-010",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-011",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-012",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-013",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-014",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-015",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
+        },
+        {
+          "id": "fb-g2-u9-016",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken all over the world.",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "現在の一般的事実を表す受動態です。主語がEnglish(単数)なのでisを使います。Spokenはspeakの過去分詞で「話される」です。All over the worldは「世界中で」という重要表現です。言語名は単数扱いです。",
+          "hint": "現在の受動態 → is/are + 過去分詞"
         }
       ]
     }

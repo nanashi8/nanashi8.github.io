@@ -453,42 +453,6 @@ function QuestionCard({
           );
         })}
       </div>
-
-      {answered && (
-        <>
-          {/* 難易度評価ボタン（コンパクト版） */}
-          {onDifficultyRate && (
-            <div className="difficulty-rating-buttons">
-              <div className="rating-label-compact">
-                この問題の難易度:
-              </div>
-              <div className="rating-button-group">
-                <button 
-                  className={`rating-btn easy ${userRating === 3 ? 'active' : ''}`}
-                  onClick={() => handleRatingChange(3)}
-                  aria-label="簡単"
-                >
-                  😊 簡単
-                </button>
-                <button 
-                  className={`rating-btn medium ${userRating === 5 ? 'active' : ''}`}
-                  onClick={() => handleRatingChange(5)}
-                  aria-label="普通"
-                >
-                  😐 普通
-                </button>
-                <button 
-                  className={`rating-btn hard ${userRating === 8 ? 'active' : ''}`}
-                  onClick={() => handleRatingChange(8)}
-                  aria-label="難しい"
-                >
-                  😰 難しい
-                </button>
-              </div>
-            </div>
-          )}
-        </>
-      )}
     </div>
   );
 }
