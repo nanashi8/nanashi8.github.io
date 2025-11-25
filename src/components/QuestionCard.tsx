@@ -353,6 +353,17 @@ function QuestionCard({
                 speakEnglish(question.word, { rate: 0.85 });
               }
             }}
+            onTouchStart={(e) => {
+              if (isSpeechSynthesisSupported()) {
+                e.stopPropagation();
+              }
+            }}
+            onTouchEnd={(e) => {
+              if (isSpeechSynthesisSupported()) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+            }}
             title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : question.word}
           >
             {question.word}
