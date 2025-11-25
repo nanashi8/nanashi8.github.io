@@ -319,7 +319,9 @@ function App() {
               const data = await response.json();
               if (data.units) {
                 data.units.forEach((unit: { unit: string; title: string }) => {
-                  const key = `${grade}年-${unit.unit}`;
+                  // カテゴリ文字列は `"1年 Unit 0"` などの形式で来るため、
+                  // keyも同じフォーマットに合わせて保存する（ハイフン->スペース）
+                  const key = `${grade}年 ${unit.unit}`;
                   unitTitleMap.set(unit.unit, `${unit.unit}: ${unit.title}`);
                   unitTitleMap.set(key, `${grade}年 ${unit.unit}: ${unit.title}`);
                 });
