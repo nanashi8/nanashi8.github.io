@@ -362,17 +362,6 @@ function ScoreBoard({
                 </div>
               )}
             </div>
-            <div className="retention-explanation">
-              <div className="retention-explanation-item">
-                <strong>🟢 完全定着:</strong> 正答率85%以上で安定
-              </div>
-              <div className="retention-explanation-item">
-                <strong>🟡 学習中:</strong> 正解もあるが不安定
-              </div>
-              <div className="retention-explanation-item">
-                <strong>🔴 要復習:</strong> 苦手・忘れかけ
-              </div>
-            </div>
           </div>
         </div>
       )}

@@ -1,6 +1,6 @@
 {
   "grade": 2,
-  "totalQuestions": 60,
+  "totalQuestions": 170,
   "units": [
     {
       "unit": "Unit 0",
@@ -82,6 +82,445 @@
           "grammarPoint": "過去形 + 場所",
           "wordCount": 6,
           "hint": "動詞の過去形に注意"
+        },
+        {
+          "id": "so-g2-u0-006",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-007",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-008",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-009",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-010",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-011",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-012",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-013",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-014",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-015",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-016",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-017",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u0-001",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "g2-u0-002",
+          "japanese": "彼女は今本を読んでいます",
+          "words": [
+            "She",
+            "is",
+            "reading",
+            "a",
+            "book",
+            "now"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "現在進行形復習",
+          "wordCount": 6,
+          "hint": "be動詞 + 動詞-ing の形"
+        },
+        {
+          "id": "g2-u0-003",
+          "japanese": "あなたは昨日何をしましたか",
+          "words": [
+            "What",
+            "did",
+            "you",
+            "do",
+            "yesterday"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形復習",
+          "wordCount": 5,
+          "hint": "動詞の過去形に注意"
+        },
+        {
+          "id": "g2-u0-004",
+          "japanese": "私はピアノを弾けます",
+          "words": [
+            "I",
+            "can",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "can復習",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "g2-u0-005",
+          "japanese": "彼は公園でサッカーをしました",
+          "words": [
+            "He",
+            "played",
+            "soccer",
+            "in",
+            "the",
+            "park"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "過去形 + 場所",
+          "wordCount": 6,
+          "hint": "動詞の過去形に注意"
+        },
+        {
+          "id": "so-g2-u0-006",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-007",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-008",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-009",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-010",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-011",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-012",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-013",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-014",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-015",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-016",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u0-017",
+          "japanese": "私は毎日英語を勉強します",
+          "words": [
+            "I",
+            "study",
+            "English",
+            "every",
+            "day"
+          ],
+          "difficulty": "beginner",
+          "grammarPoint": "一般動詞復習",
+          "wordCount": 5,
+          "hint": "I から始める"
         }
       ]
     },
@@ -182,6 +621,411 @@
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形 + 理由",
           "wordCount": 8,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-007",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-008",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-009",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-010",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-011",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-012",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-013",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-014",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-015",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-016",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-017",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u1-001",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "g2-u1-002",
+          "japanese": "彼女は昨夜テレビを見ていました",
+          "words": [
+            "She",
+            "was",
+            "watching",
+            "TV",
+            "last",
+            "night"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形 + 時間",
+          "wordCount": 6,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "g2-u1-003",
+          "japanese": "あなたはそのとき何をしていましたか",
+          "words": [
+            "What",
+            "were",
+            "you",
+            "doing",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形（疑問文）",
+          "wordCount": 5,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "g2-u1-004",
+          "japanese": "彼は昨日の午後勉強していませんでした",
+          "words": [
+            "He",
+            "was",
+            "not",
+            "studying",
+            "yesterday",
+            "afternoon"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形（否定文）",
+          "wordCount": 6,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "g2-u1-005",
+          "japanese": "彼らは公園で遊んでいました",
+          "words": [
+            "They",
+            "were",
+            "playing",
+            "in",
+            "the",
+            "park"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形（複数主語）",
+          "wordCount": 6,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "g2-u1-006",
+          "japanese": "雨が降っていたので私は家にいました",
+          "words": [
+            "I",
+            "was",
+            "at",
+            "home",
+            "because",
+            "it",
+            "was",
+            "raining"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形 + 理由",
+          "wordCount": 8,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-007",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-008",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-009",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-010",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-011",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-012",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-013",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-014",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-015",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-016",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
+          "hint": "was/were + 動詞-ing の形"
+        },
+        {
+          "id": "so-g2-u1-017",
+          "japanese": "私はそのとき勉強していました",
+          "words": [
+            "I",
+            "was",
+            "studying",
+            "then"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "過去進行形",
+          "wordCount": 4,
           "hint": "was/were + 動詞-ing の形"
         }
       ]
@@ -290,6 +1134,505 @@
           "grammarPoint": "be going to + 時間",
           "wordCount": 9,
           "hint": "He から始める"
+        },
+        {
+          "id": "so-g2-u2-007",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-008",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-009",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-010",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-011",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-012",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-013",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-014",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-015",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-016",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-017",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u2-001",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "g2-u2-002",
+          "japanese": "彼女は来週京都を訪れるつもりです",
+          "words": [
+            "She",
+            "is",
+            "going",
+            "to",
+            "visit",
+            "Kyoto",
+            "next",
+            "week"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to + 時間",
+          "wordCount": 8,
+          "hint": "She から始める"
+        },
+        {
+          "id": "g2-u2-003",
+          "japanese": "明日は雨が降るでしょう",
+          "words": [
+            "It",
+            "will",
+            "rain",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "will（予測）",
+          "wordCount": 4,
+          "hint": "It から始める"
+        },
+        {
+          "id": "g2-u2-004",
+          "japanese": "私は将来医者になります",
+          "words": [
+            "I",
+            "will",
+            "be",
+            "a",
+            "doctor"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "will（意志）",
+          "wordCount": 5,
+          "hint": "I から始める"
+        },
+        {
+          "id": "g2-u2-005",
+          "japanese": "あなたは明日何をするつもりですか",
+          "words": [
+            "What",
+            "are",
+            "you",
+            "going",
+            "to",
+            "do",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to（疑問文）",
+          "wordCount": 7,
+          "hint": "What → 動詞 → 主語 の順"
+        },
+        {
+          "id": "g2-u2-006",
+          "japanese": "彼は来年アメリカに行くつもりです",
+          "words": [
+            "He",
+            "is",
+            "going",
+            "to",
+            "go",
+            "to",
+            "America",
+            "next",
+            "year"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to + 時間",
+          "wordCount": 9,
+          "hint": "He から始める"
+        },
+        {
+          "id": "so-g2-u2-007",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-008",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-009",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-010",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-011",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-012",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-013",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-014",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-015",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-016",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u2-017",
+          "japanese": "私は明日東京に行くつもりです",
+          "words": [
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "to",
+            "Tokyo",
+            "tomorrow"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "be going to",
+          "wordCount": 8,
+          "hint": "I から始める"
         }
       ]
     },
@@ -387,6 +1730,430 @@
           "difficulty": "intermediate",
           "grammarPoint": "must + be",
           "wordCount": 4,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-007",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-008",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-009",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-010",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-011",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-012",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-013",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-014",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-015",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-016",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-017",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u3-001",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "g2-u3-002",
+          "japanese": "私たちは早く起きるべきです",
+          "words": [
+            "We",
+            "should",
+            "get",
+            "up",
+            "early"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "should（助言）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "g2-u3-003",
+          "japanese": "ここで写真を撮ってもいいですか",
+          "words": [
+            "May",
+            "I",
+            "take",
+            "a",
+            "picture",
+            "here"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "may（許可）",
+          "wordCount": 6,
+          "hint": "May から始める"
+        },
+        {
+          "id": "g2-u3-004",
+          "japanese": "私は毎日勉強しなければなりません",
+          "words": [
+            "I",
+            "have",
+            "to",
+            "study",
+            "every",
+            "day"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "have to（義務）",
+          "wordCount": 6,
+          "hint": "I から始める"
+        },
+        {
+          "id": "g2-u3-005",
+          "japanese": "彼は医者に行くべきです",
+          "words": [
+            "He",
+            "should",
+            "go",
+            "to",
+            "the",
+            "doctor"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "should（助言）",
+          "wordCount": 6,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "g2-u3-006",
+          "japanese": "あなたは静かにしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "be",
+            "quiet"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must + be",
+          "wordCount": 4,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-007",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-008",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-009",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-010",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-011",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-012",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-013",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-014",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-015",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-016",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
+          "hint": "助動詞 + 動詞の原形"
+        },
+        {
+          "id": "so-g2-u3-017",
+          "japanese": "あなたは宿題をしなければなりません",
+          "words": [
+            "You",
+            "must",
+            "do",
+            "your",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "must（義務）",
+          "wordCount": 5,
           "hint": "助動詞 + 動詞の原形"
         }
       ]
@@ -494,6 +2261,460 @@
           "grammarPoint": "不定詞（副詞的用法）",
           "wordCount": 8,
           "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-007",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-008",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-009",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-010",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-011",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-012",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-013",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-014",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-015",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-016",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-017",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u4-001",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "g2-u4-002",
+          "japanese": "私は読むべき本があります",
+          "words": [
+            "I",
+            "have",
+            "a",
+            "book",
+            "to",
+            "read"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（形容詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "g2-u4-003",
+          "japanese": "私は友達に会うために公園に行きました",
+          "words": [
+            "I",
+            "went",
+            "to",
+            "the",
+            "park",
+            "to",
+            "see",
+            "my",
+            "friend"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（副詞的用法）",
+          "wordCount": 9,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "g2-u4-004",
+          "japanese": "彼女は歌手になりたいです",
+          "words": [
+            "She",
+            "wants",
+            "to",
+            "be",
+            "a",
+            "singer"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "g2-u4-005",
+          "japanese": "私は何か飲むものが欲しいです",
+          "words": [
+            "I",
+            "want",
+            "something",
+            "to",
+            "drink"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（形容詞的用法）",
+          "wordCount": 5,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "g2-u4-006",
+          "japanese": "彼は英語を勉強するために図書館に行きます",
+          "words": [
+            "He",
+            "goes",
+            "to",
+            "the",
+            "library",
+            "to",
+            "study",
+            "English"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（副詞的用法）",
+          "wordCount": 8,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-007",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-008",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-009",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-010",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-011",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-012",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-013",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-014",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-015",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-016",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u4-017",
+          "japanese": "私はピアノを弾きたいです",
+          "words": [
+            "I",
+            "want",
+            "to",
+            "play",
+            "the",
+            "piano"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞（名詞的用法）",
+          "wordCount": 6,
+          "hint": "to + 動詞の原形 の位置に注意"
         }
       ]
     },
@@ -585,6 +2806,424 @@
           "difficulty": "intermediate",
           "grammarPoint": "like + 動名詞",
           "wordCount": 4,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-007",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-008",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-009",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-010",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-011",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-012",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-013",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-014",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-015",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-016",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-017",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u5-001",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "g2-u5-002",
+          "japanese": "彼女は本を読むことを楽しみます",
+          "words": [
+            "She",
+            "enjoys",
+            "reading",
+            "books"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "enjoy + 動名詞",
+          "wordCount": 4,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "g2-u5-003",
+          "japanese": "私は宿題をし終えました",
+          "words": [
+            "I",
+            "finished",
+            "doing",
+            "my",
+            "homework"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "finish + 動名詞",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "g2-u5-004",
+          "japanese": "彼は泳ぐことが得意です",
+          "words": [
+            "He",
+            "is",
+            "good",
+            "at",
+            "swimming"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "前置詞 + 動名詞",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "g2-u5-005",
+          "japanese": "雨が降り始めました",
+          "words": [
+            "It",
+            "started",
+            "raining"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "start + 動名詞",
+          "wordCount": 3,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "g2-u5-006",
+          "japanese": "私はサッカーをすることが好きです",
+          "words": [
+            "I",
+            "like",
+            "playing",
+            "soccer"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "like + 動名詞",
+          "wordCount": 4,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-007",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-008",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-009",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-010",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-011",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-012",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-013",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-014",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-015",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-016",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
+          "hint": "動詞-ing形 の位置に注意"
+        },
+        {
+          "id": "so-g2-u5-017",
+          "japanese": "私は音楽を聞くことが好きです",
+          "words": [
+            "I",
+            "like",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞（目的語）",
+          "wordCount": 5,
           "hint": "動詞-ing形 の位置に注意"
         }
       ]
@@ -698,6 +3337,488 @@
           "grammarPoint": "while（同時）",
           "wordCount": 6,
           "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u6-007",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-008",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-009",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-010",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-011",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-012",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-013",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-014",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-015",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-016",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-017",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u6-001",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "g2-u6-002",
+          "japanese": "もし明日晴れたら私は公園に行きます",
+          "words": [
+            "If",
+            "it",
+            "is",
+            "sunny",
+            "tomorrow",
+            "I",
+            "will",
+            "go",
+            "to",
+            "the",
+            "park"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "if（条件）",
+          "wordCount": 11,
+          "hint": "If から始める"
+        },
+        {
+          "id": "g2-u6-003",
+          "japanese": "私は疲れていたので早く寝ました",
+          "words": [
+            "I",
+            "went",
+            "to",
+            "bed",
+            "early",
+            "because",
+            "I",
+            "was",
+            "tired"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "because（理由）",
+          "wordCount": 9,
+          "hint": "I から始める"
+        },
+        {
+          "id": "g2-u6-004",
+          "japanese": "私は彼が正しいと思います",
+          "words": [
+            "I",
+            "think",
+            "that",
+            "he",
+            "is",
+            "right"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "that（名詞節）",
+          "wordCount": 6,
+          "hint": "I から始める"
+        },
+        {
+          "id": "g2-u6-005",
+          "japanese": "雨が降っていましたが私は外出しました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "but",
+            "I",
+            "went",
+            "out"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "but（逆接）",
+          "wordCount": 7,
+          "hint": "It から始める"
+        },
+        {
+          "id": "g2-u6-006",
+          "japanese": "私は音楽を聞きながら勉強します",
+          "words": [
+            "I",
+            "study",
+            "while",
+            "listening",
+            "to",
+            "music"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "while（同時）",
+          "wordCount": 6,
+          "hint": "I から始める"
+        },
+        {
+          "id": "so-g2-u6-007",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-008",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-009",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-010",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-011",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-012",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-013",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-014",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-015",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-016",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
+        },
+        {
+          "id": "so-g2-u6-017",
+          "japanese": "私が帰宅したとき雨が降っていました",
+          "words": [
+            "It",
+            "was",
+            "raining",
+            "when",
+            "I",
+            "came",
+            "home"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "when（接続詞）",
+          "wordCount": 7,
+          "hint": "It で文をつなぐ"
         }
       ]
     },
@@ -821,6 +3942,425 @@
           "grammarPoint": "比較級",
           "wordCount": 5,
           "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-008",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-009",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-010",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-011",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-012",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-013",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-014",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-015",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-016",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-017",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u7-001",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "g2-u7-002",
+          "japanese": "この本はあの本より面白いです",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "more",
+            "interesting",
+            "than",
+            "that",
+            "one"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級（more）",
+          "wordCount": 8,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "g2-u7-003",
+          "japanese": "彼女はクラスで一番背が高いです",
+          "words": [
+            "She",
+            "is",
+            "the",
+            "tallest",
+            "in",
+            "the",
+            "class"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "最上級",
+          "wordCount": 7,
+          "hint": "She から始める"
+        },
+        {
+          "id": "g2-u7-004",
+          "japanese": "これは世界で最も美しい花です",
+          "words": [
+            "This",
+            "is",
+            "the",
+            "most",
+            "beautiful",
+            "flower",
+            "in",
+            "the",
+            "world"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "最上級（most）",
+          "wordCount": 9,
+          "hint": "This から始める"
+        },
+        {
+          "id": "g2-u7-005",
+          "japanese": "彼女は私と同じくらい速く走ります",
+          "words": [
+            "She",
+            "runs",
+            "as",
+            "fast",
+            "as",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "as ~ as",
+          "wordCount": 6,
+          "hint": "She から始める"
+        },
+        {
+          "id": "g2-u7-006",
+          "japanese": "東京は日本で最も大きい都市です",
+          "words": [
+            "Tokyo",
+            "is",
+            "the",
+            "biggest",
+            "city",
+            "in",
+            "Japan"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "最上級",
+          "wordCount": 7,
+          "hint": "Tokyo から始める"
+        },
+        {
+          "id": "g2-u7-007",
+          "japanese": "英語は数学より簡単です",
+          "words": [
+            "English",
+            "is",
+            "easier",
+            "than",
+            "math"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-008",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-009",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-010",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-011",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-012",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-013",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-014",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-015",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-016",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
+        },
+        {
+          "id": "so-g2-u7-017",
+          "japanese": "彼は私より背が高いです",
+          "words": [
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "比較級",
+          "wordCount": 5,
+          "hint": "比較級 + than の形"
         }
       ]
     },
@@ -929,6 +4469,484 @@
           "grammarPoint": "There are + many",
           "wordCount": 7,
           "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-007",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-008",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-009",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-010",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-011",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-012",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-013",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-014",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-015",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-016",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-017",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u8-001",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "g2-u8-002",
+          "japanese": "公園に子供たちがいます",
+          "words": [
+            "There",
+            "are",
+            "some",
+            "children",
+            "in",
+            "the",
+            "park"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There are（複数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "g2-u8-003",
+          "japanese": "冷蔵庫に牛乳がありますか",
+          "words": [
+            "Is",
+            "there",
+            "any",
+            "milk",
+            "in",
+            "the",
+            "fridge"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（疑問文）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "g2-u8-004",
+          "japanese": "テーブルの上にリンゴがいくつかあります",
+          "words": [
+            "There",
+            "are",
+            "some",
+            "apples",
+            "on",
+            "the",
+            "table"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There are + some",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "g2-u8-005",
+          "japanese": "この部屋に窓がありません",
+          "words": [
+            "There",
+            "is",
+            "no",
+            "window",
+            "in",
+            "this",
+            "room"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（否定文）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "g2-u8-006",
+          "japanese": "駅の近くにレストランがたくさんあります",
+          "words": [
+            "There",
+            "are",
+            "many",
+            "restaurants",
+            "near",
+            "the",
+            "station"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There are + many",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-007",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-008",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-009",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-010",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-011",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-012",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-013",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-014",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-015",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-016",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
+        },
+        {
+          "id": "so-g2-u8-017",
+          "japanese": "机の上に本があります",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "book",
+            "on",
+            "the",
+            "desk"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "There is（単数）",
+          "wordCount": 7,
+          "hint": "There is/are で始める"
         }
       ]
     },
@@ -1034,6 +5052,482 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態 + 頻度",
           "wordCount": 6,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-007",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-008",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-009",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-010",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-011",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-012",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-013",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-014",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-015",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-016",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-017",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        }
+      ],
+      "sentenceOrdering": [
+        {
+          "id": "g2-u9-001",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "g2-u9-002",
+          "japanese": "英語は世界中で話されています",
+          "words": [
+            "English",
+            "is",
+            "spoken",
+            "all",
+            "over",
+            "the",
+            "world"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "g2-u9-003",
+          "japanese": "この手紙は彼女によって書かれました",
+          "words": [
+            "This",
+            "letter",
+            "was",
+            "written",
+            "by",
+            "her"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（過去）",
+          "wordCount": 6,
+          "hint": "動詞の過去形に注意"
+        },
+        {
+          "id": "g2-u9-004",
+          "japanese": "この歌は若者に愛されています",
+          "words": [
+            "This",
+            "song",
+            "is",
+            "loved",
+            "by",
+            "young",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態 + by",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "g2-u9-005",
+          "japanese": "この教会は100年前に建てられました",
+          "words": [
+            "This",
+            "church",
+            "was",
+            "built",
+            "100",
+            "years",
+            "ago"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（過去）+ 時間",
+          "wordCount": 7,
+          "hint": "動詞の過去形に注意"
+        },
+        {
+          "id": "g2-u9-006",
+          "japanese": "この部屋は毎日掃除されます",
+          "words": [
+            "This",
+            "room",
+            "is",
+            "cleaned",
+            "every",
+            "day"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態 + 頻度",
+          "wordCount": 6,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-007",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-008",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-009",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-010",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-011",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-012",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-013",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-014",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-015",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-016",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
+          "hint": "be動詞 + 過去分詞 の形"
+        },
+        {
+          "id": "so-g2-u9-017",
+          "japanese": "この本は多くの人に読まれています",
+          "words": [
+            "This",
+            "book",
+            "is",
+            "read",
+            "by",
+            "many",
+            "people"
+          ],
+          "difficulty": "intermediate",
+          "grammarPoint": "受動態（現在）",
+          "wordCount": 7,
           "hint": "be動詞 + 過去分詞 の形"
         }
       ]

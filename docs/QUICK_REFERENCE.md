@@ -1,0 +1,464 @@
+# クイックリファレンス
+
+## 📚 作業タイプ別ドキュメント早見表
+
+このドキュメントは、各作業タイプから適切なガイドラインへ素早くナビゲートするための索引です。
+
+---
+
+## 🎨 UI開発・変更
+
+### 🚨 必読ドキュメント
+
+| ドキュメント | 用途 | 重要度 |
+|-------------|------|--------|
+| **[UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md)** | CSS変数使用規則・ライト/ダークモード対応 | ⭐⭐⭐ 最優先 |
+| [17-styling.md](./17-styling.md) | デザインシステム・スタイリング規則 | ⭐⭐ |
+| [18-dark-mode.md](./18-dark-mode.md) | ダークモード実装詳細 | ⭐⭐ |
+
+### ⚡ クイックチェック
+- [ ] すべての色がCSS変数（`var(--*)`）を使用
+- [ ] ハードコード色（`#fff`、`rgb()`等）ゼロ
+- [ ] ライトモード動作確認
+- [ ] ダークモード動作確認
+- [ ] レスポンシブ対応（デスクトップ/タブレット/モバイル）
+
+### 💡 よくある作業
+- **新規コンポーネント作成** → UI_DEVELOPMENT_GUIDELINES.md の実装方法セクション
+- **既存UIの色変更** → CSS変数リスト確認、直接色コード使用禁止
+- **ボタンスタイル** → `--btn-primary-*` 変数使用
+- **背景色** → `--background`、`--bg-secondary`、`--bg-tertiary`
+- **テキスト色** → `--text-color`、`--text-secondary`、`--text-tertiary`
+
+---
+
+## 📝 文法問題作成（NEW HORIZON準拠）
+
+### 🚨 必読ドキュメント
+
+| 問題タイプ | ドキュメント | 行数 | 重要度 |
+|-----------|-------------|------|--------|
+| **文並び替え** | **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](./NEW_HORIZON_GRAMMAR_GUIDELINES.md)** | 1,017行 | ⭐⭐⭐ |
+| **動詞変化** | **[NEW_HORIZON_VERB_FORM_GUIDELINES.md](./NEW_HORIZON_VERB_FORM_GUIDELINES.md)** | - | ⭐⭐⭐ |
+| **穴埋め** | **[NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md](./NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md)** | - | ⭐⭐⭐ |
+
+### ⚡ クイックチェック
+- [ ] 語数: 3-11語（ガイドライン遵守）
+- [ ] 単一の文法項目に焦点
+- [ ] NEW HORIZON教科書準拠
+- [ ] JSON構文エラーなし
+- [ ] totalQuestions更新済み
+
+### 💡 ファイル場所
+```
+public/data/
+├── sentence-ordering-grade1.json    # 1年生・文並び替え
+├── sentence-ordering-grade2.json    # 2年生・文並び替え
+├── sentence-ordering-grade3.json    # 3年生・文並び替え
+├── verb-form-questions-grade1.json  # 1年生・動詞変化
+├── verb-form-questions-grade2.json  # 2年生・動詞変化
+├── verb-form-questions-grade3.json  # 3年生・動詞変化
+├── fill-in-blank-questions-grade1.json  # 1年生・穴埋め
+├── fill-in-blank-questions-grade2.json  # 2年生・穴埋め
+└── fill-in-blank-questions-grade3.json  # 3年生・穴埋め
+```
+
+### 🔍 学年別文法カリキュラム概要
+
+| 学年 | 主要文法項目 |
+|-----|------------|
+| 1年 | be動詞、一般動詞、三人称単数、疑問詞、can、現在進行形 |
+| 2年 | 過去形、未来形、接続詞、比較級、受動態、不定詞 |
+| 3年 | 現在完了、関係代名詞、間接疑問、仮定法 |
+
+---
+
+## 📖 長文パッセージ作成（完全パイプライン）
+
+### 🚨 必読ドキュメント
+
+| ドキュメント | 用途 | 行数 | 重要度 |
+|-------------|------|------|--------|
+| **[PASSAGE_CREATION_GUIDELINES.md](./PASSAGE_CREATION_GUIDELINES.md)** | パッセージ作成標準 | 635行 | ⭐⭐⭐ |
+| **[PASSAGE_QUICKSTART.md](./PASSAGE_QUICKSTART.md)** | クイックスタート | 311行 | ⭐⭐⭐ |
+| [PASSAGE_QUALITY_GUIDE.md](./PASSAGE_QUALITY_GUIDE.md) | 品質基準 | - | ⭐⭐ |
+| [PASSAGE_PHRASE_JSON_CREATION_GUIDE.md](./PASSAGE_PHRASE_JSON_CREATION_GUIDE.md) | フレーズJSON作成 | - | ⭐⭐ |
+
+### 🚀 6つのPhaseパイプライン
+
+```
+Phase 1: 企画・準備 (5-10分)
+  ↓ カバー率確認・テンプレート準備
+  
+Phase 2: 執筆 (30-60分)
+  ↓ 自然な英語・4スペースインデント・Em dash
+  
+Phase 3: 品質チェック (10-15分)
+  ↓ 自動チェック・語彙カバレッジ確認
+  
+Phase 4: フレーズ分割・JSON化 (20-30分)
+  ↓ split_passages + 日本語訳追加
+  
+Phase 5: 統合・動作確認 (5-10分)
+  ↓ npm run dev で表示・辞書機能確認
+  
+Phase 6: コミット・デプロイ (5分)
+  ✓ 完了
+```
+
+### ⚡ Phase別クイックコマンド
+
+**Phase 1: 企画・準備**
+```bash
+# カバー率確認
+cd scripts && python3 vocab_coverage_report.py --vocab ../public/data/vocabulary/all-words.csv
+
+# テンプレート準備
+cp docs/templates/passage-template.txt public/data/passages/{level}-{topic}.txt
+```
+
+**Phase 2: 執筆**
+- [ ] 語数: Beginner 800-1500 / Intermediate 1500-2500 / Advanced 2500-4000
+- [ ] 段落インデント: 各段落の最初の行に4スペース（必須）
+- [ ] Em dash使用: — (not - or --)
+- [ ] 自然な文章（テンプレート感排除）
+
+**Phase 3: 品質チェック**
+```bash
+# 自動品質チェック
+cd scripts && python3 passage_quality_check.py ../public/data/passages/{level}-{topic}.txt
+
+# カバレッジ再確認
+python3 vocab_coverage_report.py --vocab ../public/data/vocabulary/all-words.csv
+```
+
+**Phase 4: フレーズ分割・JSON化**
+```bash
+# フレーズ分割
+cd scripts && python3 split_passages_into_phrases.py
+
+# JSONテンプレート生成
+python3 prepare_japanese_phrase_template.py \
+    --passage public/data/passages-for-phrase-work/{level}-{topic}.txt \
+    --output public/data/dictionaries/{level}-{topic}-template.json
+
+# 日本語訳追加後、JSON検証
+jq . public/data/dictionaries/{level}-{topic}.json
+```
+
+**Phase 5: 動作確認**
+```bash
+npm run dev
+# → 長文読解モードで確認
+```
+
+**Phase 6: デプロイ**
+```bash
+git add public/data/passages/{level}-{topic}.txt
+git add public/data/dictionaries/{level}-{topic}.json
+git commit -m "feat: Add {level}-{topic} passage"
+git push
+npm run build && npm run deploy
+```
+
+### ⚡ クイックチェック（各Phase完了時）
+
+- [ ] Phase 1: カバー率記録・テンプレート作成
+- [ ] Phase 2: 語数達成・4スペースインデント・Em dash
+- [ ] Phase 3: 品質チェック完了・エラーなし
+- [ ] Phase 4: フレーズ分割・JSON作成・検証完了
+- [ ] Phase 5: ローカル環境で動作確認
+- [ ] Phase 6: Git commit・デプロイ成功
+
+### 💡 ファイル場所
+
+```
+public/data/
+├── passages/                      # 最終パッセージ
+│   ├── beginner-*.txt
+│   ├── intermediate-*.txt
+│   └── advanced-*.txt
+├── passages-for-phrase-work/      # フレーズ分割版
+├── dictionaries/                  # パッセージ辞書JSON
+│   └── {level}-{topic}.json
+└── passage-sources/               # ソースファイル・下書き
+```
+
+### 📏 フォーマット例
+
+```
+Section Header
+
+    First line of paragraph with 4-space indentation.
+Second line with no indentation.
+Third line with no indentation.
+
+    New paragraph with 4-space indentation.
+Continuation lines have no indentation.
+```
+
+### 🎯 便利なコマンド
+
+```bash
+# 全パッセージ品質チェック
+cd scripts && python3 passage_quality_check.py --all
+
+# 未使用語彙確認
+cd scripts && cat output/vocab_unused_all-words.txt | head -100
+
+# フレーズカバレッジレポート
+cd scripts && python3 phrase_coverage_report.py
+```
+
+### 🎯 テンプレート
+
+`docs/templates/passage-template.txt` を使用
+
+---
+
+## 🐛 バグ修正
+
+### 📖 参照ドキュメント
+
+| ドキュメント | 用途 |
+|-------------|------|
+| [24-testing-strategy.md](./24-testing-strategy.md) | テスト戦略 |
+| 該当機能の仕様書（01-26） | 機能仕様確認 |
+| UI関連なら [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
+
+### ⚡ クイックチェック
+- [ ] バグ再現しない
+- [ ] 関連機能に影響なし
+- [ ] ガイドライン遵守（該当する場合）
+- [ ] `npm run build` エラーなし
+
+---
+
+## ✨ 新機能追加
+
+### 📖 参照ドキュメント
+
+| ドキュメント | 用途 |
+|-------------|------|
+| [01-project-overview.md](./01-project-overview.md) | プロジェクト全体像 |
+| 関連機能仕様書（02-14） | 既存機能との統合 |
+| [15-data-structures.md](./15-data-structures.md) | データ構造 |
+| [16-storage-strategy.md](./16-storage-strategy.md) | ストレージ戦略 |
+| [UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md) | UI実装規則 |
+
+### ⚡ クイックチェック
+- [ ] 機能仕様書作成/更新
+- [ ] UI実装ガイドライン遵守
+- [ ] データ構造ドキュメント更新
+- [ ] ライト/ダークモード対応
+- [ ] レスポンシブ対応
+- [ ] テスト完了
+- [ ] デプロイ成功
+
+---
+
+## 📊 データ追加（単語・フレーズ）
+
+### 📖 参照ドキュメント
+
+| ドキュメント | 用途 |
+|-------------|------|
+| [19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md) | 中学受験単語 |
+| [20-junior-high-phrases.md](./20-junior-high-phrases.md) | 中学受験フレーズ |
+| [15-data-structures.md](./15-data-structures.md) | データ構造 |
+
+### ⚡ クイックチェック
+- [ ] CSV形式正しい
+- [ ] 重複なし
+- [ ] カテゴリー・難易度適切
+- [ ] ローカル環境で動作確認済み
+
+### 💡 ファイル場所
+```
+public/data/
+├── junior-high-entrance-words.csv    # 単語データ
+└── junior-high-entrance-phrases.csv  # フレーズデータ
+```
+
+---
+
+## 🚀 デプロイ
+
+### 📖 参照ドキュメント
+
+| ドキュメント | 用途 |
+|-------------|------|
+| [23-deployment.md](./23-deployment.md) | デプロイ手順 |
+
+### ⚡ コマンド
+```bash
+# ビルド
+npm run build
+
+# プレビュー
+npm run preview
+
+# デプロイ
+npm run deploy
+# または
+gh-pages -d dist
+```
+
+### ⚡ クイックチェック
+- [ ] `npm run build` エラーなし
+- [ ] ローカルプレビューで動作確認
+- [ ] ライトモード確認
+- [ ] ダークモード確認
+- [ ] 主要機能動作確認
+- [ ] コンソールエラーなし
+
+---
+
+## 🔍 機能仕様書（01-26シリーズ）
+
+### 基本情報
+
+| 番号 | ドキュメント | 内容 |
+|-----|-------------|------|
+| 01 | [project-overview.md](./01-project-overview.md) | プロジェクト概要 |
+| 02 | [translation-quiz.md](./02-translation-quiz.md) | 和訳クイズ |
+| 03 | [spelling-quiz.md](./03-spelling-quiz.md) | スペルクイズ |
+| 04 | [reading-comprehension.md](./04-reading-comprehension.md) | 長文読解 |
+| 05 | [stats-analytics.md](./05-stats-analytics.md) | 統計・分析 |
+| 06 | [settings.md](./06-settings.md) | 設定画面 |
+
+### AI機能
+
+| 番号 | ドキュメント | 内容 |
+|-----|-------------|------|
+| 07 | [cognitive-load-ai.md](./07-cognitive-load-ai.md) | 認知負荷AI |
+| 08 | [error-prediction-ai.md](./08-error-prediction-ai.md) | エラー予測AI |
+| 09 | [contextual-learning-ai.md](./09-contextual-learning-ai.md) | 文脈学習AI |
+| 10 | [learning-style-ai.md](./10-learning-style-ai.md) | 学習スタイルAI |
+| 11 | [gamification-ai.md](./11-gamification-ai.md) | ゲーミフィケーションAI |
+| 12 | [learning-curve-ai.md](./12-learning-curve-ai.md) | 学習曲線AI |
+| 13 | [radar-chart-ai.md](./13-radar-chart-ai.md) | レーダーチャートAI |
+| 14 | [ai-comment-generator.md](./14-ai-comment-generator.md) | AIコメント生成 |
+
+### データ・開発
+
+| 番号 | ドキュメント | 内容 |
+|-----|-------------|------|
+| 15 | [data-structures.md](./15-data-structures.md) | データ構造 |
+| 16 | [storage-strategy.md](./16-storage-strategy.md) | ストレージ戦略 |
+| 17 | [styling.md](./17-styling.md) | スタイリング |
+| 18 | [dark-mode.md](./18-dark-mode.md) | ダークモード |
+| 19 | [junior-high-vocabulary.md](./19-junior-high-vocabulary.md) | 中学受験単語 |
+| 20 | [junior-high-phrases.md](./20-junior-high-phrases.md) | 中学受験フレーズ |
+| 21 | [reading-passages.md](./21-reading-passages.md) | 長文パッセージ |
+| 22 | [development-setup.md](./22-development-setup.md) | 開発環境 |
+| 23 | [deployment.md](./23-deployment.md) | デプロイ |
+| 24 | [testing-strategy.md](./24-testing-strategy.md) | テスト戦略 |
+| 25 | [changelog.md](./25-changelog.md) | 変更履歴 |
+| 26 | [final-report.md](./26-final-report.md) | 実装完了レポート |
+
+---
+
+## 📂 ディレクトリ構造早見表
+
+```
+nanashi8.github.io/
+├── docs/                          # ドキュメント
+│   ├── README.md                  # ドキュメント目次
+│   ├── AI_WORKFLOW_INSTRUCTIONS.md    # AIワークフロー
+│   ├── QUICK_REFERENCE.md         # このファイル
+│   ├── QUALITY_CHECKLIST.md       # 品質チェックリスト
+│   ├── 01-26-*.md                 # 機能仕様書
+│   ├── UI_DEVELOPMENT_GUIDELINES.md
+│   ├── NEW_HORIZON_*.md           # 文法問題ガイドライン
+│   ├── PASSAGE_*.md               # 長文作成ガイドライン
+│   └── templates/                 # テンプレート
+│
+├── src/                           # ソースコード
+│   ├── App.tsx                    # メインアプリ
+│   ├── App.css                    # スタイル（.dark-mode定義）
+│   ├── index.css                  # グローバルスタイル（CSS変数定義）
+│   └── components/                # コンポーネント
+│
+├── public/data/                   # データファイル
+│   ├── junior-high-entrance-words.csv        # 単語
+│   ├── junior-high-entrance-phrases.csv      # フレーズ
+│   ├── sentence-ordering-grade*.json         # 文並び替え
+│   ├── verb-form-questions-grade*.json       # 動詞変化
+│   ├── fill-in-blank-questions-grade*.json   # 穴埋め
+│   ├── passages/                  # 長文パッセージ
+│   └── dictionaries/              # パッセージ辞書
+│
+└── scripts/                       # Pythonスクリプト
+    └── *.py                       # データ処理スクリプト
+```
+
+---
+
+## 🎯 CSS変数クイックリファレンス
+
+### 基本色
+```css
+--text-color          /* メインテキスト */
+--text-secondary      /* サブテキスト */
+--text-tertiary       /* 補助テキスト */
+--background          /* メイン背景 */
+--bg-secondary        /* セカンダリ背景 */
+--bg-tertiary         /* ターシャリ背景 */
+--border-color        /* ボーダー */
+```
+
+### ボタン
+```css
+--btn-primary-bg      /* プライマリボタン背景 */
+--btn-primary-text    /* プライマリボタンテキスト */
+--btn-primary-hover   /* プライマリボタンホバー */
+--btn-secondary-bg    /* セカンダリボタン背景 */
+--btn-secondary-text  /* セカンダリボタンテキスト */
+```
+
+### セマンティック
+```css
+--success-color       /* 成功 */
+--error-color         /* エラー */
+--warning-color       /* 警告 */
+--info-color          /* 情報 */
+```
+
+### カード・影
+```css
+--card-bg             /* カード背景 */
+--card-border         /* カードボーダー */
+--shadow-sm           /* 小さい影 */
+--shadow-md           /* 中くらい影 */
+--shadow-lg           /* 大きい影 */
+```
+
+**完全リスト**: `src/index.css` 参照
+
+---
+
+## 🔗 関連リンク
+
+- [メインドキュメント目次](./README.md)
+- [AI開発ワークフロー](./AI_WORKFLOW_INSTRUCTIONS.md)
+- [品質チェックリスト](./QUALITY_CHECKLIST.md)
+- [デプロイURL](https://nanashi8.github.io/)
+- [GitHubリポジトリ](https://github.com/nanashi8/nanashi8.github.io)
+
+---
+
+## 🆘 トラブルシューティング早見表
+
+| 問題 | 確認事項 | 解決策 |
+|-----|---------|--------|
+| ビルドエラー | TypeScript型エラー | 該当ファイル修正 |
+| CSS変数未定義 | `src/index.css`確認 | 変数定義追加 |
+| ダークモード異常 | ハードコード色使用 | CSS変数に置換 |
+| デプロイ失敗 | `dist/`存在確認 | `npm run build` 再実行 |
+| JSON構文エラー | カンマ・括弧確認 | JSONバリデータ使用 |
+
+---
+
+**最終更新**: 2025年11月25日
+**バージョン**: 1.0.0
