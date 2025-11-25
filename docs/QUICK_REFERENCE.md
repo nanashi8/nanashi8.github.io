@@ -13,19 +13,49 @@
 | ドキュメント | 用途 | 重要度 |
 |-------------|------|--------|
 | **[UI_DEVELOPMENT_GUIDELINES.md](./UI_DEVELOPMENT_GUIDELINES.md)** | CSS変数使用規則・ライト/ダークモード対応 | ⭐⭐⭐ 最優先 |
+| **[DESIGN_SYSTEM_RULES.md](./DESIGN_SYSTEM_RULES.md)** | デザインルール・カラーシステム定義 | ⭐⭐⭐ 必読 |
 | [17-styling.md](./17-styling.md) | デザインシステム・スタイリング規則 | ⭐⭐ |
 | [18-dark-mode.md](./18-dark-mode.md) | ダークモード実装詳細 | ⭐⭐ |
 
 ### ⚡ クイックチェック
+
 - [ ] すべての色がCSS変数（`var(--*)`）を使用
 - [ ] ハードコード色（`#fff`、`rgb()`等）ゼロ
+- [ ] 自動デザインチェック実行済み
 - [ ] ライトモード動作確認
 - [ ] ダークモード動作確認
+- [ ] 両モードでコントラスト十分
 - [ ] レスポンシブ対応（デスクトップ/タブレット/モバイル）
 
+### 🔍 自動デザインチェックコマンド
+
+```bash
+# 直接色指定チェック（禁止）
+grep -rn "background.*#[0-9a-fA-F]\{6\}" src/**/*.css | grep -v "dark-mode"
+
+# 暗い色の直接使用チェック（警告）
+grep -rn "background.*#[0-4][0-9a-fA-F]\{5\}" src/**/*.css | grep -v "dark-mode"
+
+# white/black直接使用チェック（禁止）
+grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
+```
+
+### 🎨 カラーシステム基本
+
+**ライトモード:**
+
+- 文字色: `--text-color: #333333` (黒に近いダークグレー)
+- 背景色: `--background: #ffffff` (白)
+
+**ダークモード:**
+
+- 文字色: `--text-color: #e0e0e0` (白に近いライトグレー)
+- 背景色: `--background: #1a1a1a` (黒に近いダークグレー)
+
 ### 💡 よくある作業
+
 - **新規コンポーネント作成** → UI_DEVELOPMENT_GUIDELINES.md の実装方法セクション
-- **既存UIの色変更** → CSS変数リスト確認、直接色コード使用禁止
+- **既存UIの色変更** → DESIGN_SYSTEM_RULES.md でルール確認、CSS変数リスト参照
 - **ボタンスタイル** → `--btn-primary-*` 変数使用
 - **背景色** → `--background`、`--bg-secondary`、`--bg-tertiary`
 - **テキスト色** → `--text-color`、`--text-secondary`、`--text-tertiary`

@@ -37,9 +37,11 @@
 - [16-ストレージ戦略](./16-storage-strategy.md) - IndexedDB/LocalStorageの使い分け
 
 ### 5. UI/UXデザイン
+
 - [17-スタイリング](./17-styling.md) - デザインシステムとCSSガイドライン
 - [18-ダークモード](./18-dark-mode.md) - ダークモード実装の詳細
 - [**UI開発ガイドライン**](./UI_DEVELOPMENT_GUIDELINES.md) - ⚠️ 必読：CSS変数使用規則・ライトモード/ダークモード対応必須事項
+- [**デザインシステムルール**](./DESIGN_SYSTEM_RULES.md) - ⚠️ 必読：カラーシステム定義・自動チェック方法
 
 ### 6. データセット
 - [19-中学受験単語](./19-junior-high-vocabulary.md) - 中学受験頻出単語リスト
