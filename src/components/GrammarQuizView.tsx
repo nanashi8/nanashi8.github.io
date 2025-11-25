@@ -86,6 +86,10 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   const [error, setError] = useState<string | null>(null);
   const [userRating, setUserRating] = useState<number | null>(null);
 
+  // 難易度フィルター
+  type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
+  const [difficulty, setDifficulty] = useState<DifficultyLevel>('all');
+
   // 学習数上限の設定
   const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
   const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
