@@ -1225,6 +1225,7 @@ function App() {
             errorPrediction={quizState.questions.length > 0 && quizState.currentIndex < quizState.questions.length
               ? errorPredictionsRef.current.get(quizState.questions[quizState.currentIndex].word)
               : undefined}
+            onShowSettings={() => setActiveTab('settings')}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
@@ -1241,6 +1242,7 @@ function App() {
             onStartQuiz={handleStartQuiz}
             onReviewFocus={handleSpellingReviewFocus}
             isReviewFocusMode={reviewFocusMode}
+            onShowSettings={() => setActiveTab('settings')}
           />
         ) : activeTab === 'reading' ? (
           <ComprehensiveReadingView 
@@ -1279,7 +1281,7 @@ function App() {
             }}
           />
         ) : activeTab === 'grammar' ? (
-          <GrammarQuizView />
+          <GrammarQuizView onShowSettings={() => setActiveTab('settings')} />
         ) : activeTab === 'dictionary' ? (
           <DictionaryView />
         ) : activeTab === 'stats' ? (
