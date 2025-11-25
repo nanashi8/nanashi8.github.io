@@ -312,7 +312,7 @@
 
 /* ダークモード対応 */
 .dark-mode .linguistic-relations-view {
-  background: #1a1a1a;
+  background: var(--background);
   color: #e0e0e0;
 }
 
@@ -336,7 +336,7 @@
 }
 
 .dark-mode .word-button {
-  background-color: #1a1a1a;
+  background-color: var(--background);
   border-color: #555;
   color: #e0e0e0;
 }
@@ -367,7 +367,7 @@
 }
 
 .dark-mode .feature-item {
-  background: #1a1a1a;
+  background: var(--background);
   border-color: #555;
 }
 
@@ -402,7 +402,7 @@
 }
 
 .dark-mode .related-word {
-  background: #1a1a1a;
+  background: var(--background);
   border-color: #555;
 }
 
