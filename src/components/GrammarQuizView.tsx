@@ -453,29 +453,29 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   onChange={(e) => setGrade(e.target.value as Grade)}
                   className="select-input"
                 >
-                  <option value="all">全学年</option>
+                  <option value="all">全学年の内容</option>
                   <optgroup label="1年生">
-                    <option value="1">1年の内容全て</option>
+                    <option value="1">1年の内容</option>
                     {availableUnits
                       .filter(u => u.value.startsWith('g1-'))
                       .map(u => (
-                        <option key={u.value} value={u.value}>{u.label}</option>
+                        <option key={u.value} value={u.value}>1年_{u.label}</option>
                       ))}
                   </optgroup>
                   <optgroup label="2年生">
-                    <option value="2">2年の内容全て</option>
+                    <option value="2">2年の内容</option>
                     {availableUnits
                       .filter(u => u.value.startsWith('g2-'))
                       .map(u => (
-                        <option key={u.value} value={u.value}>{u.label}</option>
+                        <option key={u.value} value={u.value}>2年_{u.label}</option>
                       ))}
                   </optgroup>
                   <optgroup label="3年生">
-                    <option value="3">3年の内容全て</option>
+                    <option value="3">3年の内容</option>
                     {availableUnits
                       .filter(u => u.value.startsWith('g3-'))
                       .map(u => (
-                        <option key={u.value} value={u.value}>{u.label}</option>
+                        <option key={u.value} value={u.value}>3年_{u.label}</option>
                       ))}
                   </optgroup>
                 </select>
@@ -568,7 +568,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   onChange={(e) => setGrade(e.target.value as Grade)}
                   className="select-input"
                 >
-                  <option value="all">全学年</option>
+                  <option value="all">全学年の内容</option>
                   <option value="1">1年の内容</option>
                   <option value="2">2年の内容</option>
                   <option value="3">3年の内容</option>
