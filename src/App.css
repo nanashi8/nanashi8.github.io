@@ -1559,97 +1559,54 @@ option {
   display: none;
 }
 
-/* モバイル版タブナビゲーション（左右ボタン） */
+/* モバイル版タブナビゲーション */
 @media (max-width: 768px) {
   .score-board-tabs {
     display: none; /* モバイルではデスクトップ版を非表示 */
   }
 
-  .score-tabs-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px;
-    width: 100%;
-    margin-bottom: 4px;
-    padding: 3px;
-    background: #f8f9fa;
-    border-radius: 4px;
-  }
-
-  .tab-nav-btn {
-    padding: 3px 6px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    font-weight: bold;
-    transition: all 0.2s;
-    min-width: 28px;
-    min-height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .tab-nav-btn:hover {
-    background: #5568d3;
-    transform: scale(1.05);
-  }
-
-  .tab-nav-btn:active {
-    transform: scale(0.95);
-  }
-
-  .current-tab-name {
-    flex: 1;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1em;
-    color: var(--text-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .score-board-tabs-mobile {
+    display: flex; /* モバイルではタブを表示 */
     gap: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
-  .settings-icon-btn {
-    background: none;
-    border: none;
-    font-size: 1.1em;
+  .score-board-tabs-mobile .score-tab {
+    padding: 10px 18px;
+    background: white;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
     cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
     transition: all 0.2s;
-    opacity: 0.7;
+    font-size: max(14px, 1em);
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #333;
   }
 
-  .settings-icon-btn:hover {
-    opacity: 1;
-    background: rgba(102, 126, 234, 0.1);
+  .score-board-tabs-mobile .score-tab:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .settings-icon-btn:active {
-    transform: scale(0.95);
-  }
-
-  .dark-mode .settings-icon-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .dark-mode .score-tabs-mobile {
-    background: #2a2a2a;
-  }
-
-  .dark-mode .current-tab-name {
-    color: #e0e0e0;
+  .score-board-tabs-mobile .score-tab.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
   }
 }
 
@@ -6877,67 +6834,23 @@ option {
     font-size: 0.7em;
   }
 
-  /* スコアボード タブ切り替え（モバイル） */
-  .score-board-tabs-mobile {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 8px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 12px;
-    border: 2px solid #dee2e6;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .score-tab {
-    padding: 10px 18px;
-    background: var(--background);
-    border: 2px solid #dee2e6;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: max(14px, 1em);
-    font-weight: 600;
-    white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  .score-tab:hover {
-    background: #f8f9fa;
-    border-color: #adb5bd;
-    transform: translateY(-1px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .score-tab.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-color: #667eea;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-    transform: translateY(-2px);
-  }
-
   .dark-mode .score-board-tabs-mobile {
     background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
     border-color: #444;
   }
 
-  .dark-mode .score-tab {
+  .dark-mode .score-board-tabs-mobile .score-tab {
     background: #333;
-    border-color: var(--text-color);
+    border-color: #555;
     color: #e0e0e0;
   }
 
-  .dark-mode .score-tab:hover {
+  .dark-mode .score-board-tabs-mobile .score-tab:hover {
     background: #3a3a3a;
     border-color: #666;
   }
 
-  .dark-mode .score-tab.active {
+  .dark-mode .score-board-tabs-mobile .score-tab.active {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border-color: #667eea;
