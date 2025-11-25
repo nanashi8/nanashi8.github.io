@@ -58,7 +58,7 @@ interface QuizData {
   units?: Unit[];
 }
 
-type QuizType = 'verb-form' | 'fill-in-blank' | 'sentence-ordering';
+type QuizType = 'random' | 'verb-form' | 'fill-in-blank' | 'sentence-ordering';
 type Grade = 'all' | '1' | '2' | '3' | '1-all' | '2-all' | '3-all' | string; // 'g1-u0', 'g1-u1' など
 
 interface GrammarQuizViewProps {
@@ -201,24 +201,51 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       
       const allData: QuizData[] = [];
       
-      for (const g of gradesToLoad) {
-        let filename = '';
-        if (quizType === 'verb-form') {
-          filename = `verb-form-questions-grade${g}.json`;
-        } else if (quizType === 'fill-in-blank') {
-          filename = `fill-in-blank-questions-grade${g}.json`;
-        } else if (quizType === 'sentence-ordering') {
-          filename = `sentence-ordering-grade${g}.json`;
-        }
-        
-        try {
-          const res = await fetch(`/data/${filename}`);
-          if (res.ok) {
-            const data = await res.json();
-            allData.push(data);
+      // ランダムモードの場合は全ての問題タイプを読み込む
+      if (quizType === 'random') {
+        for (const g of gradesToLoad) {
+          const quizTypes = ['verb-form', 'fill-in-blank', 'sentence-ordering'];
+          for (const type of quizTypes) {
+            let filename = '';
+            if (type === 'verb-form') {
+              filename = `verb-form-questions-grade${g}.json`;
+            } else if (type === 'fill-in-blank') {
+              filename = `fill-in-blank-questions-grade${g}.json`;
+            } else if (type === 'sentence-ordering') {
+              filename = `sentence-ordering-grade${g}.json`;
+            }
+            
+            try {
+              const res = await fetch(`/data/${filename}`);
+              if (res.ok) {
+                const data = await res.json();
+                allData.push(data);
+              }
+            } catch (err) {
+              console.warn(`${filename} not found, skipping...`);
+            }
           }
-        } catch (err) {
-          console.warn(`${filename} not found, skipping...`);
+        }
+      } else {
+        for (const g of gradesToLoad) {
+          let filename = '';
+          if (quizType === 'verb-form') {
+            filename = `verb-form-questions-grade${g}.json`;
+          } else if (quizType === 'fill-in-blank') {
+            filename = `fill-in-blank-questions-grade${g}.json`;
+          } else if (quizType === 'sentence-ordering') {
+            filename = `sentence-ordering-grade${g}.json`;
+          }
+          
+          try {
+            const res = await fetch(`/data/${filename}`);
+            if (res.ok) {
+              const data = await res.json();
+              allData.push(data);
+            }
+          } catch (err) {
+            console.warn(`${filename} not found, skipping...`);
+          }
         }
       }
       
@@ -239,8 +266,19 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 return;
               }
               
+              // ランダムモードの場合は全ての問題タイプを収集
+              if (quizType === 'random') {
+                const validSentenceOrdering = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
+                questions.push(...validSentenceOrdering);
+                if (unit.verbForm) {
+                  questions.push(...unit.verbForm);
+                }
+                if (unit.fillInBlank) {
+                  questions.push(...unit.fillInBlank);
+                }
+              }
               // 問題形式に応じて問題を収集
-              if (quizType === 'sentence-ordering') {
+              else if (quizType === 'sentence-ordering') {
                 const validQuestions = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
                 questions.push(...validQuestions);
               } else if (quizType === 'verb-form' && unit.verbForm) {
@@ -258,7 +296,17 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
           // 新しいデータ構造（units内に3形式）
           if (data.units) {
             data.units.forEach(unit => {
-              if (quizType === 'sentence-ordering') {
+              // ランダムモードの場合は全ての問題タイプを収集
+              if (quizType === 'random') {
+                const validSentenceOrdering = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
+                questions.push(...validSentenceOrdering);
+                if (unit.verbForm) {
+                  questions.push(...unit.verbForm);
+                }
+                if (unit.fillInBlank) {
+                  questions.push(...unit.fillInBlank);
+                }
+              } else if (quizType === 'sentence-ordering') {
                 const validQuestions = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
                 questions.push(...validQuestions);
               } else if (quizType === 'verb-form' && unit.verbForm) {
@@ -439,6 +487,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   onChange={(e) => setQuizType(e.target.value as QuizType)}
                   className="select-input"
                 >
+                  <option value="random">ランダム</option>
                   <option value="verb-form">動詞変化</option>
                   <option value="fill-in-blank">穴埋め</option>
                   <option value="sentence-ordering">並び替え</option>
@@ -554,6 +603,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   onChange={(e) => setQuizType(e.target.value as QuizType)}
                   className="select-input"
                 >
+                  <option value="random">ランダム</option>
                   <option value="verb-form">動詞変化</option>
                   <option value="fill-in-blank">穴埋め</option>
                   <option value="sentence-ordering">並び替え</option>
