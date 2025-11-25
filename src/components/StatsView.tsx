@@ -109,8 +109,6 @@ function StatsView({ }: StatsViewProps) {
       resetAllProgress();
       
       // UIを即座に更新
-      setTranslationStats({ labels: [], accuracyData: [], retentionData: [] });
-      setSpellingStats({ labels: [], accuracyData: [], retentionData: [] });
       setCalendarData([]);
       setWeeklyStats(null);
       setMonthlyStats(null);
@@ -325,7 +323,6 @@ function CumulativeGrowthChart({ data }: {
     <div className="cumulative-chart">
       {/* 問題数グラフ */}
       <div className="chart-container">
-        <h4 className="chart-title">累積問題数</h4>
         <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
           {/* グリッド線 */}
           {[0, 0.25, 0.5, 0.75, 1].map((ratio, idx) => {
@@ -408,28 +405,10 @@ function CumulativeGrowthChart({ data }: {
             累積問題数
           </text>
         </svg>
-        
-        <div className="chart-summary">
-          <div className="chart-summary-item">
-            <span className="summary-label">開始時:</span>
-            <span className="summary-value">{data[0]?.cumulativeAnswered || 0}問</span>
-          </div>
-          <div className="chart-summary-item">
-            <span className="summary-label">現在:</span>
-            <span className="summary-value">{data[data.length - 1]?.cumulativeAnswered || 0}問</span>
-          </div>
-          <div className="chart-summary-item">
-            <span className="summary-label">増加:</span>
-            <span className="summary-value">
-              +{(data[data.length - 1]?.cumulativeAnswered || 0) - (data[0]?.cumulativeAnswered || 0)}問
-            </span>
-          </div>
-        </div>
       </div>
 
       {/* 定着数グラフ */}
       <div className="chart-container">
-        <h4 className="chart-title">累積定着数</h4>
         <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
           {/* グリッド線 */}
           {[0, 0.25, 0.5, 0.75, 1].map((ratio, idx) => {
@@ -512,23 +491,6 @@ function CumulativeGrowthChart({ data }: {
             累積定着数
           </text>
         </svg>
-        
-        <div className="chart-summary">
-          <div className="chart-summary-item">
-            <span className="summary-label">開始時:</span>
-            <span className="summary-value">{data[0]?.cumulativeMastered || 0}語</span>
-          </div>
-          <div className="chart-summary-item">
-            <span className="summary-label">現在:</span>
-            <span className="summary-value">{data[data.length - 1]?.cumulativeMastered || 0}語</span>
-          </div>
-          <div className="chart-summary-item">
-            <span className="summary-label">増加:</span>
-            <span className="summary-value">
-              +{(data[data.length - 1]?.cumulativeMastered || 0) - (data[0]?.cumulativeMastered || 0)}語
-            </span>
-          </div>
-        </div>
       </div>
     </div>
   );
