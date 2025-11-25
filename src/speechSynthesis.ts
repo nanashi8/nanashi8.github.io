@@ -3,6 +3,35 @@
  */
 
 /**
+ * 会話形式のテキストから話者名と記号を除去
+ * 例: 'Tom: "Hello, how are you?"' → 'Hello, how are you?'
+ * @param text 元のテキスト
+ * @returns クリーンアップされたテキスト
+ */
+export function cleanDialogueText(text: string): string {
+  // 会話形式のパターンをチェック: "話者名: "..." の形式
+  // パターン1: Speaker: "text" → text
+  // パターン2: Speaker: text → text
+  
+  // ": "..." 形式の場合
+  const quotedPattern = /^[^:]+:\s*[""](.+?)[""]$/;
+  const quotedMatch = text.match(quotedPattern);
+  if (quotedMatch) {
+    return quotedMatch[1].trim();
+  }
+  
+  // ": text 形式の場合（引用符なし）
+  const unquotedPattern = /^[^:]+:\s*(.+)$/;
+  const unquotedMatch = text.match(unquotedPattern);
+  if (unquotedMatch) {
+    return unquotedMatch[1].trim();
+  }
+  
+  // パターンに一致しない場合はそのまま返す
+  return text;
+}
+
+/**
  * 英単語を発音する
  * @param text 発音する英語テキスト
  * @param options オプション設定
@@ -22,11 +51,14 @@ export function speakEnglish(
     return;
   }
 
+  // 会話形式のテキストから話者名と記号を除去
+  const cleanedText = cleanDialogueText(text);
+
   // 既存の発話を停止
   window.speechSynthesis.cancel();
 
   // 発話オブジェクトを作成
-  const utterance = new SpeechSynthesisUtterance(text);
+  const utterance = new SpeechSynthesisUtterance(cleanedText);
   
   // localStorageから設定を読み込み
   const savedRate = localStorage.getItem('speechRate');
