@@ -34,7 +34,6 @@ interface QuizViewProps {
   };
   isReviewFocusMode?: boolean;
   errorPrediction?: ErrorPrediction;
-  onShowSettings?: () => void;
 }
 
 function QuizView({
@@ -58,7 +57,6 @@ function QuizView({
   sessionStats,
   isReviewFocusMode = false,
   errorPrediction,
-  onShowSettings,
 }: QuizViewProps) {
   const { questions, currentIndex, answered, selectedAnswer } =
     quizState;
@@ -249,8 +247,93 @@ function QuizView({
             sessionMastered={sessionStats?.mastered}
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
-            onShowSettings={onShowSettings}
+            onShowSettings={() => setShowSettings(true)}
           />
+          
+          {/* クイズ中の学習設定パネル */}
+          {showSettings && (
+            <div className="study-settings-panel">
+              <div className="settings-header">
+                <h3>📊 学習設定</h3>
+                <button 
+                  onClick={() => setShowSettings(false)} 
+                  className="close-settings-btn"
+                >
+                  ✕ 閉じる
+                </button>
+              </div>
+              
+              <div className="filter-group">
+                <label htmlFor="category-select-quiz">📚 関連分野:</label>
+                <select
+                  id="category-select-quiz"
+                  value={selectedCategory}
+                  onChange={(e) => onCategoryChange(e.target.value)}
+                  className="select-input"
+                >
+                  {categoryList.map((cat) => (
+                    <option key={cat} value={cat}>
+                      {cat}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="difficulty-select-quiz">⭐ 難易度:</label>
+                <select
+                  id="difficulty-select-quiz"
+                  value={selectedDifficulty}
+                  onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
+                  className="select-input"
+                >
+                  <option value="all">全てのレベル</option>
+                  <option value="beginner">初級</option>
+                  <option value="intermediate">中級</option>
+                  <option value="advanced">上級</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="word-phrase-filter-quiz">📝 単語・熟語:</label>
+                <select
+                  id="word-phrase-filter-quiz"
+                  value={selectedWordPhraseFilter}
+                  onChange={(e) => onWordPhraseFilterChange?.(e.target.value as WordPhraseFilter)}
+                  className="select-input"
+                >
+                  <option value="all">全て</option>
+                  <option value="words-only">単語のみ</option>
+                  <option value="phrases-only">熟語のみ</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="max-study-count-quiz">📊 学習数上限:</label>
+                <input
+                  id="max-study-count-quiz"
+                  type="number"
+                  min="1"
+                  value={maxStudyCount}
+                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+                  className="select-input number-input-small"
+                />
+              </div>
+              
+              <div className="filter-group">
+                <label htmlFor="max-review-count-quiz">🔄 要復習上限:</label>
+                <input
+                  id="max-review-count-quiz"
+                  type="number"
+                  min="0"
+                  value={maxReviewCount}
+                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+                  className="select-input number-input-small"
+                />
+              </div>
+            </div>
+          )}
+          
           <div className="question-container">
             {currentQuestion && (
               <QuestionCard
