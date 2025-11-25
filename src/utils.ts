@@ -80,7 +80,17 @@ export function parseCSV(csvText: string): Question[] {
       const etymology = columns[3] || '';
       const relatedWords = columns[4] || '';
       const relatedFields = columns[5] || '';
-      const difficulty = columns[6] || '';
+      const difficultyRaw = columns[6] || '';
+
+      // 難易度を日本語から英語に変換
+      let difficulty = '';
+      if (difficultyRaw.includes('初級') || difficultyRaw === 'beginner') {
+        difficulty = 'beginner';
+      } else if (difficultyRaw.includes('中級') || difficultyRaw === 'intermediate') {
+        difficulty = 'intermediate';
+      } else if (difficultyRaw.includes('上級') || difficultyRaw === 'advanced') {
+        difficulty = 'advanced';
+      }
 
       if (word && meaning) {
         questions.push({
