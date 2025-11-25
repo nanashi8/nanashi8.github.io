@@ -760,6 +760,11 @@ function SpellingView({
                       {isSpeechSynthesisSupported() && (
                         <span className="speaker-icon">🔊</span>
                       )}
+                      {currentQuestion?.reading && (
+                        <span className="pronunciation-hint">
+                          ({currentQuestion.reading})
+                        </span>
+                      )}
                     </strong>
                   </div>
                   
