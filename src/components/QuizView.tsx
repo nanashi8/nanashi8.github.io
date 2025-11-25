@@ -34,6 +34,7 @@ interface QuizViewProps {
   };
   isReviewFocusMode?: boolean;
   errorPrediction?: ErrorPrediction;
+  onShowSettings?: () => void;
 }
 
 function QuizView({
@@ -57,6 +58,7 @@ function QuizView({
   sessionStats,
   isReviewFocusMode = false,
   errorPrediction,
+  onShowSettings,
 }: QuizViewProps) {
   const { questions, currentIndex, answered, selectedAnswer } =
     quizState;
@@ -247,7 +249,7 @@ function QuizView({
             sessionMastered={sessionStats?.mastered}
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
-            onShowSettings={() => setShowSettings(true)}
+            onShowSettings={onShowSettings}
           />
           <div className="question-container">
             {currentQuestion && (

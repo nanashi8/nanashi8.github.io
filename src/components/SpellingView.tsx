@@ -22,6 +22,7 @@ interface SpellingViewProps {
   onStartQuiz: () => void;
   onReviewFocus?: () => void;
   isReviewFocusMode?: boolean;
+  onShowSettings?: () => void;
 }
 
 function SpellingView({ 
@@ -37,7 +38,8 @@ function SpellingView({
   onPhraseTypeFilterChange,
   onStartQuiz,
   onReviewFocus,
-  isReviewFocusMode = false
+  isReviewFocusMode = false,
+  onShowSettings
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
@@ -605,7 +607,7 @@ function SpellingView({
             sessionMastered={sessionStats.mastered}
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
-            onShowSettings={() => setShowSettings(true)}
+            onShowSettings={onShowSettings}
           />
 
           {currentQuestion && (
@@ -807,20 +809,12 @@ function SpellingView({
                     {currentQuestion.difficulty && (
                       <div className="detail-row">
                         <span className="detail-label">難易度:</span>
-                        <span className="detail-content">{currentQuestion.difficulty}</span>
+                        <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                          {currentQuestion.difficulty === 'beginner' ? '初級' : 
+                           currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
+                        </div>
                       </div>
                     )}
-                  </div>
-                  
-                  {/* 次へ進むボタン */}
-                  <div className="spelling-next-button-container">
-                    <button 
-                      className="btn-next-question"
-                      onClick={handleNext}
-                      disabled={spellingState.currentIndex >= spellingState.questions.length - 1}
-                    >
-                      {spellingState.currentIndex >= spellingState.questions.length - 1 ? '最後の問題です' : '次の問題へ →'}
-                    </button>
                   </div>
                 </div>
               )}
