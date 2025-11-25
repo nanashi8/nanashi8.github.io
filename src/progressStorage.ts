@@ -1604,17 +1604,19 @@ export function getRetentionRateWithAI(): {
     
     // 定着の条件（いずれかを満たせば定着とみなす）:
     // 1. masteryLevel が 'mastered' （システムが定着と判定）
-    // 2. 5回以上挑戦して正答率85%以上（安定した実績）
-    // 3. 3回以上挑戦して正答率90%以上（高い習熟度）
-    // 4. 連続5回以上正解（現在の強い定着状態）
-    // 5. 10回以上挑戦して正答率75%以上（長期的な学習実績）
+    // 2. 1発で正解（1回目で正解した単語は即座に定着とみなす）
+    // 3. 5回以上挑戦して正答率85%以上（安定した実績）
+    // 4. 3回以上挑戦して正答率90%以上（高い習熟度）
+    // 5. 連続5回以上正解（現在の強い定着状態）
+    // 6. 10回以上挑戦して正答率75%以上（長期的な学習実績）
     const isMarkedAsMastered = wp.masteryLevel === 'mastered';
+    const isOneShot = totalAttempts === 1 && wp.correctCount === 1;
     const isStableAccuracy = totalAttempts >= 5 && accuracy >= 85;
     const isHighAccuracy = totalAttempts >= 3 && accuracy >= 90;
     const isStrongStreak = wp.consecutiveCorrect >= 5;
     const isLongTermLearning = totalAttempts >= 10 && accuracy >= 75;
     
-    if (isMarkedAsMastered || isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
+    if (isMarkedAsMastered || isOneShot || isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
       masteredCount++;
     }
   });
