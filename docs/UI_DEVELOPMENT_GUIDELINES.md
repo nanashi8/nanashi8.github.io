@@ -6,29 +6,40 @@
 
 ## 必須要件
 
-### 1. ダークモード対応 🌓
+### 1. ライトモード・ダークモード対応 🌓
 
-**すべてのUI変更・新規コンポーネントは必ずダークモードに対応する必要があります。**
+**すべてのUI変更・新規コンポーネントは必ずライトモード・ダークモード両方に対応する必要があります。**
+
+#### ⚠️ 重要な原則
+
+**色の指定は必ずCSS変数を使用してください。直接色コード（`#ffffff`、`rgb()`、`white`など）を記述することは禁止です。**
+
+このプロジェクトでは、包括的なCSS変数システムを採用しており、ライトモード・ダークモードの切り替えは以下の仕組みで自動的に行われます：
+
+1. **ライトモード（デフォルト）**: `src/index.css`で定義された70+のCSS変数が適用
+2. **ダークモード**: `documentElement`に`.dark-mode`クラスが追加され、`src/App.css`の`.dark-mode`セレクタ内で定義された変数がオーバーライド
+3. **切り替え**: ユーザーが設定タブで切り替えると、全要素の色が自動的に変更
 
 #### 実装方法
 
 ```tsx
-// ✅ 推奨: CSS変数を使用
+// ✅ 正しい: CSS変数を使用
 const MyComponent = () => (
   <div style={{
-    backgroundColor: 'var(--bg-primary)',
-    color: 'var(--text-primary)',
+    backgroundColor: 'var(--background)',
+    color: 'var(--text-color)',
     borderColor: 'var(--border-color)'
   }}>
     コンテンツ
   </div>
 );
 
-// ❌ 非推奨: ハードコードされた色
+// ❌ 間違い: ハードコードされた色（絶対に使用禁止）
 const BadComponent = () => (
   <div style={{
-    backgroundColor: '#ffffff',
-    color: '#000000'
+    backgroundColor: '#ffffff',  // ダメ！
+    color: '#000000',            // ダメ！
+    borderColor: 'white'         // ダメ！
   }}>
     コンテンツ
   </div>
@@ -38,40 +49,95 @@ const BadComponent = () => (
 #### CSS変数の使用
 
 ```css
-/* グローバルCSS変数 (src/index.css) */
+/* 基本変数 (src/index.css で定義、.dark-mode で自動オーバーライド) */
+
+/* 背景色 */
+--background: ライトモード時は #ffffff、ダークモード時は #1a1a1a
+--bg-secondary: ライトモード時は #f8f9fa、ダークモード時は #2a2a2a
+--bg-tertiary: ライトモード時は #e9ecef、ダークモード時は #3a3a3a
+
+/* テキスト色 */
+--text-color: ライトモード時は #333333、ダークモード時は #e0e0e0
+--text-secondary: ライトモード時は #666666、ダークモード時は #b0b0b0
+--text-tertiary: ライトモード時は #999999、ダークモード時は #888888
+
+/* ボーダー */
+--border-color: ライトモード時は #dddddd、ダークモード時は #555555
+
+/* ボタン */
+--btn-primary-bg: ライトモード時は #667eea、ダークモード時は #8b9ef5
+--btn-primary-text: ライトモード時は #ffffff、ダークモード時は #ffffff
+--btn-primary-hover: ライトモード時は #5568d3、ダークモード時は #7a8de4
+
+/* セマンティックカラー */
+--success-color: #28a745（両モードで共通、必要に応じてオーバーライド）
+--error-color: #dc3545
+--warning-color: #ffc107
+--info-color: #17a2b8
+```
+
+#### 利用可能なCSS変数の完全リスト
+
+詳細は`src/index.css`を参照してください。主要な変数：
+
+**基本色**
+- `--text-color`: メインテキスト
+- `--text-secondary`: サブテキスト
+- `--text-tertiary`: 補助テキスト・プレースホルダー
+- `--background`: メイン背景
+- `--bg-secondary`: セカンダリ背景（カード等）
+- `--bg-tertiary`: ターシャリ背景（ホバー状態等）
+- `--border-color`: ボーダー・区切り線
+
+**ボタン**
+- `--btn-primary-bg`: プライマリボタン背景
+- `--btn-primary-text`: プライマリボタンテキスト
+- `--btn-primary-hover`: プライマリボタンホバー
+- `--btn-secondary-bg`: セカンダリボタン背景
+- `--btn-secondary-text`: セカンダリボタンテキスト
+
+**セマンティック**
+- `--success-color/bg/border/text`: 成功状態
+- `--error-color/bg/border/text`: エラー状態
+- `--warning-color/bg/border/text`: 警告状態
+- `--info-color/bg/border/text`: 情報表示
+
+**UI要素**
+- `--card-bg/border/shadow`: カード
+- `--shadow-sm/md/lg`: 影
+- `--overlay-bg`: オーバーレイ
+- `--link-color/hover`: リンク
+
+#### CSS変数の追加・変更時の注意
+
+**新しい色を追加する場合は、必ず両方のファイルを更新してください：**
+
+1. **`src/index.css`**: ライトモード用の値を`:root`に追加
+2. **`src/App.css`**: ダークモード用の値を`.dark-mode`に追加
+
+```css
+/* src/index.css */
 :root {
-  /* ライトモード */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --border-color: #dddddd;
-  --accent-color: #007bff;
-  --success-color: #28a745;
-  --error-color: #dc3545;
+  --new-color: #your-light-value;
 }
 
-[data-theme="dark"] {
-  /* ダークモード */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --border-color: #404040;
-  --accent-color: #4a9eff;
-  --success-color: #4caf50;
-  --error-color: #f44336;
+/* src/App.css */
+.dark-mode {
+  --new-color: #your-dark-value;
 }
 ```
 
 #### チェックリスト
 
-UI変更時には以下を確認してください:
+UI変更・追加時には以下を確認してください:
 
-- [ ] すべての背景色がCSS変数を使用している
-- [ ] すべてのテキスト色がCSS変数を使用している
-- [ ] すべてのボーダー・アウトラインがCSS変数を使用している
-- [ ] ホバー・フォーカス状態もダークモード対応している
+- [ ] すべての背景色が`var(--background)`や`var(--bg-secondary)`等のCSS変数を使用している
+- [ ] すべてのテキスト色が`var(--text-color)`や`var(--text-secondary)`等のCSS変数を使用している
+- [ ] すべてのボーダー・アウトラインが`var(--border-color)`等のCSS変数を使用している
+- [ ] ボタンは`var(--btn-primary-bg)`等の専用変数を使用している
+- [ ] ホバー・フォーカス・アクティブ状態もCSS変数を使用している
+- [ ] 直接色コード（`#ffffff`、`rgb()`、`white`等）を一切使用していない
+- [ ] ライトモードとダークモードの両方で動作確認済み
 - [ ] ライトモードで視覚的に確認した
 - [ ] ダークモードで視覚的に確認した
 - [ ] コントラスト比がアクセシビリティ基準を満たしている
