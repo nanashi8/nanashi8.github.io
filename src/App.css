@@ -16,7 +16,7 @@
   color-scheme: dark;
   
   /* 基本カラー */
-  --text-color: #e0e0e0;
+  --text-color: var(--text-color);
   --text-secondary: #b0b0b0;
   --text-tertiary: #888888;
   --background: #1a1a1a;
@@ -198,19 +198,19 @@
 .dark-mode .score-board,
 .dark-mode .score-item {
   background: var(--bg-tertiary);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .score-label {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .score-value {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .result-display {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .result-message.correct {
@@ -226,12 +226,12 @@
 }
 
 .dark-mode .correct-answer {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .stats-view {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .stats-view h2 {
@@ -239,13 +239,13 @@
 }
 
 .dark-mode .stats-view h3 {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .stats-tabs button {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #b0b0b0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
 }
 
 .dark-mode .stats-tabs button.active {
@@ -255,19 +255,19 @@
 }
 
 .dark-mode .stats-tabs button:hover:not(.active) {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: var(--text-color);
 }
 
 .dark-mode .filter-group label {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .select-input,
 .dark-mode .selector-dropdown {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .select-input:hover,
@@ -276,13 +276,13 @@
 }
 
 .dark-mode .word-card {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .word-card-word {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .word-card-meaning {
@@ -294,7 +294,7 @@
 }
 
 .dark-mode .word-card:hover {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: #667eea;
 }
 
@@ -322,9 +322,9 @@
 }
 
 .dark-mode .word-popup {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .word-popup-word {
@@ -332,8 +332,8 @@
 }
 
 .dark-mode .word-popup-close {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 /* 成績タブのダークモード対応 */
@@ -342,16 +342,16 @@
 }
 
 .dark-mode .stats-chart-container {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .dark-mode .stats-chart-container h4 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .btn-reset-difficulty {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   color: #ff9800;
   border-color: #ff9800;
 }
@@ -362,7 +362,7 @@
 }
 
 .dark-mode .btn-reset-all {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   color: #f44336;
   border-color: #f44336;
 }
@@ -373,9 +373,9 @@
 }
 
 .dark-mode .theme-btn {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: rgba(102, 126, 234, 0.3);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .theme-btn:hover {
@@ -388,7 +388,7 @@
 }
 
 .dark-mode .personality-card {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: rgba(102, 126, 234, 0.3);
 }
 
@@ -402,7 +402,7 @@
 }
 
 .dark-mode .personality-name {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .personality-desc {
@@ -414,7 +414,7 @@
 }
 
 .dark-mode .slider-value {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .estimated-duration {
@@ -439,34 +439,34 @@
 }
 
 .dark-mode .selector-label {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 /* 読解タブのダークモード */
 .dark-mode .reading-view {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .passage-selector {
   background: #1e1e1e;
-  color: #e0e0e0;
+  color: var(--text-color);
   border: 1px solid #444;
 }
 
 .dark-mode .passage-selector h3 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .passage-btn {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: var(--text-color);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .passage-btn:hover {
   border-color: #667eea;
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .passage-btn.active {
@@ -476,19 +476,19 @@
 }
 
 .dark-mode .passage-select {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .passage-select option {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .reading-content {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .passage-title {
@@ -510,23 +510,23 @@
 }
 
 .dark-mode .phrase-card {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .phrase-line {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-left-color: #667eea;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .phrase-card:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .phrase-toggle-btn {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: #667eea;
   color: #8b9ef5;
 }
@@ -552,9 +552,9 @@
 }
 
 .dark-mode .full-translation {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .full-translation h4 {
@@ -562,13 +562,13 @@
 }
 
 .dark-mode .full-translation .translation-text {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .phrase-translation {
   background: #1e1e1e;
   border: 1px solid #555;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .translation-text {
@@ -587,7 +587,7 @@
 }
 
 .dark-mode .phrase-english {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .full-translation h4 {
@@ -601,11 +601,11 @@
 
 /* フィルターセクションのダークモード */
 .dark-mode .quiz-filter-section {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .filter-group {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .start-btn {
@@ -620,13 +620,13 @@
 /* スコアボードタブのダークモード */
 .dark-mode .score-board-tabs {
   background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .score-tab {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: var(--text-color);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .score-tab:hover {
@@ -644,7 +644,7 @@
 /* 基本統計グリッド - ダークモード */
 .dark-mode .stat-card {
   background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .stat-card:hover {
@@ -657,7 +657,7 @@
 }
 
 .dark-mode .stat-value strong {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .stat-value .correct {
@@ -674,13 +674,13 @@
 
 /* モバイル統計タブ - ダークモード */
 .dark-mode .stat-subtab {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .stat-subtab:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .stat-subtab.active {
@@ -689,8 +689,8 @@
 }
 
 .dark-mode .stat-mobile-card {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .stat-mobile-label {
@@ -698,7 +698,7 @@
 }
 
 .dark-mode .stat-mobile-value {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .stat-mobile-value.correct {
@@ -724,7 +724,7 @@
 }
 
 .dark-mode .plan-progress-bar {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .plan-recommendation {
@@ -741,7 +741,7 @@
 }
 
 .dark-mode .plan-slider {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .plan-slider::-webkit-slider-thumb {
@@ -755,12 +755,12 @@
 /* スペルタブのダークモード */
 .dark-mode .spelling-view {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .user-word-display {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .user-word-label {
@@ -821,12 +821,12 @@
 }
 
 .dark-mode .question-details-spelling {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .detail-row {
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .detail-label {
@@ -864,18 +864,18 @@
 }
 
 .dark-mode .btn-secondary {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   color: #667eea;
   border-color: #667eea;
 }
 
 .dark-mode .btn-secondary:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 /* 成績タブの追加スタイル */
 .dark-mode .stats-cards {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .stat-card {
@@ -884,8 +884,8 @@
 }
 
 .dark-mode .stats-table {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .stats-table thead {
@@ -894,15 +894,15 @@
 }
 
 .dark-mode .stats-table tbody tr {
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .stats-table tbody tr:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .stats-table td {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .empty-state {
@@ -913,7 +913,7 @@
 /* 設定タブの追加スタイル */
 .dark-mode .settings-view {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .section-header h1 {
@@ -921,9 +921,9 @@
 }
 
 .dark-mode .setting-hint {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-left-color: #667eea;
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .plan-progress-banner {
@@ -936,7 +936,7 @@
 }
 
 .dark-mode .spelling-question-content {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .passage-instructions {
@@ -950,13 +950,13 @@
 }
 
 .dark-mode .word-card-inline {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .word-card-inline:hover:not(.disabled) {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: #667eea;
 }
 
@@ -968,17 +968,17 @@
 
 .dark-mode .word-cards-inline {
   background: var(--background);
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .inline-nav-btn {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
   color: #667eea;
 }
 
 .dark-mode .inline-nav-btn:hover:not(:disabled) {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .inline-nav-btn.next-inline-btn {
@@ -991,11 +991,11 @@
 }
 
 .dark-mode .question-nav-row {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .question-content-inline {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .question-reading {
@@ -1003,23 +1003,23 @@
 }
 
 .dark-mode .result-cards {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .result-card {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .result-card-btn {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
   color: #667eea;
 }
 
 .dark-mode .result-card-btn:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .result-card-btn.next-btn {
@@ -1032,13 +1032,13 @@
 }
 
 .dark-mode .question-details {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .detail-item {
   background: var(--background);
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .ai-comment-bar {
@@ -1051,22 +1051,22 @@
 }
 
 .dark-mode .difficulty-rating-buttons {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .rating-label-compact {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .rating-btn {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .rating-btn:hover:not(:disabled) {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: #667eea;
 }
 
@@ -2108,7 +2108,7 @@ option {
 
 .dark-mode .btn-back-to-settings {
   background: linear-gradient(135deg, #4f5bd5, #6a3d8f);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 
@@ -2551,12 +2551,12 @@ option {
 
 /* ダークモード対応 */
 .dark-mode .retention-breakdown-container {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .retention-title {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .retention-subtitle {
@@ -2564,7 +2564,7 @@ option {
 }
 
 .dark-mode .retention-breakdown-label {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .retention-progress-bar {
@@ -2746,8 +2746,8 @@ option {
 }
 
 .dark-mode .session-indicator {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .session-label,
@@ -2756,7 +2756,7 @@ option {
 }
 
 .dark-mode .session-count {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .history-empty {
@@ -2996,7 +2996,7 @@ option {
 }
 
 .dark-mode .question-hint {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 /* AIコメント行 - 問題と選択肢の間 */
@@ -3333,9 +3333,9 @@ option {
 }
 
 .dark-mode .difficulty-rating-compact {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 /* ナビゲーションボタン：右寄せ配置 */
@@ -4922,7 +4922,7 @@ option {
 }
 
 .dark-mode .phrase-text {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .phrase-meaning-old {
@@ -6825,13 +6825,13 @@ option {
 
   .dark-mode .score-board-tabs-mobile {
     background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
-    border-color: #444;
+    border-color: var(--border-color);
   }
 
   .dark-mode .score-board-tabs-mobile .score-tab {
-    background: #333;
+    background: var(--bg-tertiary);
     border-color: #555;
-    color: #e0e0e0;
+    color: var(--text-color);
   }
 
   .dark-mode .score-board-tabs-mobile .score-tab:hover {
@@ -7545,25 +7545,25 @@ option {
 }
 
 .dark-mode .study-settings-panel {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .study-settings-panel h3 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .setting-item label {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .setting-desc {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .setting-input {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: var(--text-color);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .setting-input:focus {
@@ -7571,7 +7571,7 @@ option {
 }
 
 .dark-mode .setting-unit {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 /* レスポンシブ対応 */
@@ -8256,8 +8256,8 @@ option {
 }
 
 .dark-mode .category-card {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
@@ -9862,12 +9862,12 @@ option {
 }
 
 .dark-mode .slider::-webkit-slider-thumb {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #8b9ef5;
 }
 
 .dark-mode .slider::-moz-range-thumb {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #8b9ef5;
 }
 
@@ -10048,17 +10048,17 @@ option {
 
 /* ダークモード対応 */
 .dark-mode .limit-setting label {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .limit-description {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .limit-input {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: var(--text-color);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .limit-input:focus {
@@ -10066,7 +10066,7 @@ option {
 }
 
 .dark-mode .limit-unit {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .limits-info {
@@ -10113,18 +10113,18 @@ option {
 }
 
 .dark-mode .study-settings-panel {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .error-log-panel {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .error-log-header {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 .dark-mode .error-log-item {
@@ -10137,17 +10137,17 @@ option {
 }
 
 .dark-mode .error-log-footer {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 .dark-mode .daily-plan-header {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .daily-plan-message {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .target-slider-container {
@@ -10156,8 +10156,8 @@ option {
 }
 
 .dark-mode .plan-recommendation-item {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 .dark-mode .plan-recommendation-item.plan-success {
@@ -10166,48 +10166,48 @@ option {
 }
 
 .dark-mode .selector-item {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .selector-item:hover {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: #667eea;
 }
 
 .dark-mode .question-container {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .loading-container,
 .dark-mode .error-container {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .feature-section {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .feature-item {
   background: var(--background);
   border-color: var(--text-color);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .feature-item:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .cluster-header {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 .dark-mode .related-word-button {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
   color: #667eea;
 }
@@ -10218,16 +10218,16 @@ option {
 }
 
 .dark-mode .question-item {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .question-item:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .question-item-content {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .question-item-word {
@@ -10243,21 +10243,21 @@ option {
 }
 
 .dark-mode .radar-chart-container {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .chart-wrapper {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .review-focus-indicator {
-  background: #333;
+  background: var(--bg-tertiary);
   color: #ffa726;
 }
 
 .dark-mode .stat-text-item {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .retention-breakdown-container {
@@ -10266,12 +10266,12 @@ option {
 }
 
 .dark-mode .settings-tab-message {
-  background: #2a2a2a;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .dark-mode .section-header {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .legend-box {
@@ -10279,12 +10279,12 @@ option {
 }
 
 .dark-mode .list-header {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 .dark-mode .question-items {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .reset-buttons {
@@ -11690,12 +11690,12 @@ option {
 }
 
 .dark-mode .reading-header {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-bottom-color: #444;
 }
 
 .dark-mode .reading-header h2 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .reading-selectors label {
@@ -11705,7 +11705,7 @@ option {
 .dark-mode .compact-select {
   background: #1e1e1e;
   border-color: var(--text-color);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .compact-select:focus {
@@ -11713,29 +11713,29 @@ option {
 }
 
 .dark-mode .btn-compact.btn-secondary {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: var(--text-color);
   color: #ccc;
 }
 
 .dark-mode .btn-compact.btn-secondary:hover {
-  background: #333;
+  background: var(--bg-tertiary);
   border-color: #666;
 }
 
 .dark-mode .passage-content {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .phrase-block {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .full-text-display {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .full-text-display h3 {
@@ -11743,11 +11743,11 @@ option {
 }
 
 .dark-mode .full-text-content {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .full-translation-display {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
   border-color: #667eea;
 }
 
@@ -11756,7 +11756,7 @@ option {
 }
 
 .dark-mode .full-translation-content {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .show-translation-btn {
@@ -11956,7 +11956,7 @@ option {
 }
 
 .dark-mode .calendar-day-count {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .calendar-day.calendar-color-0 {
@@ -12271,12 +12271,12 @@ option {
 }
 
 .dark-mode .stats-section-summary {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .stats-section-summary h3 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .summary-item {
@@ -12288,22 +12288,22 @@ option {
 }
 
 .dark-mode .summary-value {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .stats-section-calendar,
 .dark-mode .stats-section-growth,
 .dark-mode .stats-section-words,
 .dark-mode .words-column {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .stats-section-calendar h3,
 .dark-mode .stats-section-growth h3,
 .dark-mode .stats-section-words h3,
 .dark-mode .words-column h3 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .calendar-day {
@@ -12328,11 +12328,11 @@ option {
 }
 
 .dark-mode .word-item:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .word-text {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .word-stats {
@@ -12353,7 +12353,7 @@ option {
 
 .dark-mode .no-data {
   color: #aaa;
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .privacy-link {
@@ -12367,8 +12367,8 @@ option {
 }
 
 .dark-mode .chart-container {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .chart-bar {
@@ -12380,16 +12380,16 @@ option {
 }
 
 .dark-mode .chart-value {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .chart-wrapper {
-  background: #2a2a2a;
+  background: var(--bg-secondary);
 }
 
 .dark-mode .weekly-summary {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 /* ========== 時間帯別AI挨拶バナー ========== */
@@ -12607,11 +12607,11 @@ option {
 }
 
 .dark-mode .error-prediction-warning .warning-message {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .error-prediction-warning .hint {
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 .dark-mode .error-prediction-warning .confidence-booster {

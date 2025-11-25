@@ -313,11 +313,11 @@
 /* ダークモード対応 */
 .dark-mode .linguistic-relations-view {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .linguistic-relations-view h2 {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .search-input {
@@ -357,40 +357,40 @@
 }
 
 .dark-mode .feature-section {
-  background-color: #2a2a2a;
-  border-color: #444;
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .feature-section h4 {
-  color: #e0e0e0;
+  color: var(--text-color);
   border-bottom-color: #667eea;
 }
 
 .dark-mode .feature-item {
   background: var(--background);
-  border-color: #555;
+  border-color: var(--border-color);
 }
 
 .dark-mode .feature-item:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .feature-label {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .dark-mode .feature-value {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .clusters-section {
   background: #2a2a2a;
-  border-color: #444;
+  border-color: var(--border-color);
 }
 
 .dark-mode .cluster-header {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 .dark-mode .cluster-name {
@@ -398,16 +398,16 @@
 }
 
 .dark-mode .cluster-size {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .dark-mode .related-word {
   background: var(--background);
-  border-color: #555;
+  border-color: var(--border-color);
 }
 
 .dark-mode .related-word:hover {
-  background: #333;
+  background: var(--bg-tertiary);
 }
 
 .dark-mode .related-word-button {
@@ -420,11 +420,11 @@
 
 .dark-mode .relation-type {
   background-color: #333;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .relation-strength {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .dark-mode .empty-state {

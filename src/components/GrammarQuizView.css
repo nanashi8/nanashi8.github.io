@@ -535,13 +535,13 @@
 }
 
 .dark-mode .choice-button {
-  background: #3a3a3a;
-  color: #ffffff;
-  border-color: #777;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 .dark-mode .choice-button:hover:not(:disabled) {
-  background: #4a4a4a;
+  background: var(--bg-tertiary);
   border-color: #99aaff;
   box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
   transform: translateY(-1px);
@@ -590,9 +590,9 @@
 }
 
 .dark-mode .sentence-display {
-  background: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .error-message {
@@ -1045,13 +1045,13 @@
 }
 
 .dark-mode .choice-button {
-  background: #3a3a3a;
-  color: #ffffff;
-  border-color: #777;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 .dark-mode .choice-button:hover:not(:disabled) {
-  background: #4a4a4a;
+  background: var(--bg-tertiary);
   border-color: #99aaff;
   box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
   transform: translateY(-1px);
