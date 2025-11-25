@@ -906,8 +906,8 @@
 }
 
 .dark-mode .empty-state {
-  background: #2a2a2a;
-  color: #b0b0b0;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
 /* 設定タブの追加スタイル */
@@ -5882,7 +5882,7 @@ option {
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  color: #999;
+  color: var(--text-secondary);
   text-align: center;
 }
 

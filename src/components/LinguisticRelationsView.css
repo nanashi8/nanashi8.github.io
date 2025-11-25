@@ -321,9 +321,9 @@
 }
 
 .dark-mode .search-input {
-  background-color: #2a2a2a;
-  border-color: #444;
-  color: #e0e0e0;
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .search-input:focus {
@@ -331,14 +331,14 @@
 }
 
 .dark-mode .word-list {
-  background-color: #2a2a2a;
-  border-color: #444;
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .word-button {
   background-color: var(--background);
-  border-color: #555;
-  color: #e0e0e0;
+  border-color: var(--border-color);
+  color: var(--text-color);
 }
 
 .dark-mode .word-button:hover {
@@ -428,11 +428,11 @@
 }
 
 .dark-mode .empty-state {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .dark-mode .empty-state p {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 /* レスポンシブ対応 */
