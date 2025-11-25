@@ -1,6 +1,6 @@
 .app {
   background: var(--background, #ffffff);
-  color: var(--text-color, #000000);
+  color: var(--text-color, #333333);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,12 +17,12 @@
   
   /* 基本カラー */
   --text-color: #e0e0e0;
-  --text-secondary: #aaaaaa;
+  --text-secondary: #b0b0b0;
   --text-tertiary: #888888;
   --background: #1a1a1a;
   --bg-secondary: #2a2a2a;
-  --bg-tertiary: #333333;
-  --border-color: var(--text-color);
+  --bg-tertiary: #3a3a3a;
+  --border-color: #555555;
   --border-color-light: #444444;
   
   /* セマンティックカラー（ダークモード用） */

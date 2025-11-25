@@ -14,13 +14,13 @@
      ============================================ */
   
   /* 基本カラー */
-  --text-color: #000000;
+  --text-color: #333333;
   --text-secondary: #666666;
   --text-tertiary: #999999;
   --background: #ffffff;
   --bg-secondary: #f8f9fa;
   --bg-tertiary: #e9ecef;
-  --border-color: #e0e0e0;
+  --border-color: #dddddd;
   --border-color-light: #f0f0f0;
   
   /* セマンティックカラー（成功・エラー・警告・情報） */
