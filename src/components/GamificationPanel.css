@@ -396,7 +396,7 @@
 /* ダークモード対応 */
 .dark-mode .gamification-panel {
   background: var(--background);
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .streak-card,
@@ -405,12 +405,12 @@
 .dark-mode .badge-item,
 .dark-mode .badge-completion,
 .dark-mode .badge-card {
-  background: #2a2a2a;
-  border-color: #444;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .close-button {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .dark-mode .close-button:hover {
@@ -423,7 +423,7 @@
 .dark-mode .milestone-progress-text,
 .dark-mode .badge-earned,
 .dark-mode .badge-card-description {
-  color: #aaa;
+  color: var(--text-secondary);
 }
 
 .dark-mode .stat-value,
@@ -431,7 +431,7 @@
 .dark-mode .milestone-title,
 .dark-mode .badge-item-name,
 .dark-mode .badge-card-name {
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 .dark-mode .milestone-progress-bar,
@@ -440,9 +440,9 @@
 }
 
 .dark-mode .tabs-container button {
-  background: #2a2a2a;
-  color: #aaa;
-  border-color: #444;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
 }
 
 .dark-mode .tabs-container button.active {
@@ -452,8 +452,8 @@
 }
 
 .dark-mode .tabs-container button:hover:not(.active) {
-  background: #333;
-  color: #e0e0e0;
+  background: var(--bg-tertiary);
+  color: var(--text-color);
 }
 
 /* レスポンシブ対応 */
