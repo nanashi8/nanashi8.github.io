@@ -216,13 +216,13 @@
 .dark-mode .result-message.correct {
   background: #1e4d2b;
   color: #7ddb9b;
-  border-color: #28a745;
+  border-color: var(--success-color);
 }
 
 .dark-mode .result-message.incorrect {
   background: #4d1e23;
   color: #f0a0a8;
-  border-color: #dc3545;
+  border-color: var(--error-color);
 }
 
 .dark-mode .correct-answer {
@@ -309,7 +309,7 @@
 
 .dark-mode .word-card.unknown {
   background: #4d3d1a;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
 }
 
 .dark-mode .punctuation-card {
@@ -497,7 +497,7 @@
 
 .dark-mode .instructions {
   background: #3a3a1a;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
   color: #ffd54f;
 }
 
@@ -665,7 +665,7 @@
 }
 
 .dark-mode .stat-value .mastered {
-  color: #fb923c;
+  color: var(--warning-color);
 }
 
 .dark-mode .stat-sub {
@@ -706,7 +706,7 @@
 }
 
 .dark-mode .stat-mobile-value.mastered {
-  color: #fb923c;
+  color: var(--warning-color);
 }
 
 .dark-mode .stat-mobile-divider {
@@ -941,7 +941,7 @@
 
 .dark-mode .passage-instructions {
   background: #3a3a1a;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
   color: #ffd54f;
 }
 
@@ -962,7 +962,7 @@
 
 .dark-mode .word-card-inline.unknown {
   background: #4d3d1a;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
   color: #ffd54f;
 }
 
@@ -1043,7 +1043,7 @@
 
 .dark-mode .ai-comment-bar {
   background: linear-gradient(135deg, #3a3a1a 0%, #2a2a1a 100%);
-  border-left-color: #ffc107;
+  border-left-color: var(--warning-color);
 }
 
 .dark-mode .ai-comment-text {
@@ -1397,7 +1397,7 @@ option {
 }
 
 .score-value.correct {
-  color: #28a745;
+  color: var(--success-color);
 }
 
 /* 問題コンテナ */
@@ -1751,11 +1751,11 @@ option {
 }
 
 .score-stat strong.correct {
-  color: #28a745;
+  color: var(--success-color);
 }
 
 .score-stat strong.mastered {
-  color: #ff6b35;
+  color: var(--warning-color);
   font-weight: 700;
 }
 
@@ -1817,11 +1817,11 @@ option {
 }
 
 .stat-value .correct {
-  color: #28a745;
+  color: var(--success-color);
 }
 
 .stat-value .mastered {
-  color: #ff6b35;
+  color: var(--warning-color);
 }
 
 .stat-sub {
@@ -1894,11 +1894,11 @@ option {
 }
 
 .stat-mobile-value.correct {
-  color: #28a745;
+  color: var(--success-color);
 }
 
 .stat-mobile-value.mastered {
-  color: #ff6b35;
+  color: var(--warning-color);
 }
 
 .stat-mobile-divider {
@@ -1944,11 +1944,11 @@ option {
 }
 
 .stat-text-value.correct {
-  color: #28a745;
+  color: var(--success-color);
 }
 
 .stat-text-value.mastered {
-  color: #ff6b35;
+  color: var(--warning-color);
 }
 
 .stat-text-sub {
@@ -2313,7 +2313,7 @@ option {
 }
 
 .score-stat strong.goal-near {
-  color: #28a745;
+  color: var(--success-color);
   font-weight: 700;
 }
 
@@ -2345,7 +2345,7 @@ option {
 }
 
 .alert-count {
-  color: #ff6b35;
+  color: var(--warning-color);
   font-weight: 700;
 }
 
@@ -2569,7 +2569,7 @@ option {
 
 .retention-detail-mastered {
   background: rgba(40, 167, 69, 0.1);
-  color: #28a745;
+  color: var(--success-color);
   border: 1px solid rgba(40, 167, 69, 0.3);
 }
 
@@ -2581,7 +2581,7 @@ option {
 
 .retention-detail-struggling {
   background: rgba(220, 53, 69, 0.1);
-  color: #dc3545;
+  color: var(--error-color);
   border: 1px solid rgba(220, 53, 69, 0.3);
 }
 
@@ -2701,11 +2701,11 @@ option {
 }
 
 .stat-correct {
-  color: #28a745;
+  color: var(--success-color);
 }
 
 .stat-incorrect {
-  color: #ffc107;
+  color: var(--warning-color);
 }
 
 .stat-review {
@@ -2713,7 +2713,7 @@ option {
 }
 
 .stat-mastered {
-  color: #ff6b35;
+  color: var(--warning-color);
 }
 
 .history-indicator {
@@ -3037,7 +3037,7 @@ option {
 }
 
 .phrase-progress {
-  color: #28a745;
+  color: var(--success-color);
   font-weight: 600;
   margin-left: 4px;
 }
@@ -3251,14 +3251,14 @@ option {
 
 .choice-btn.correct {
   background: #d4edda;
-  border-color: #28a745;
+  border-color: var(--success-color);
   color: #155724;
   font-weight: 600;
 }
 
 .choice-btn.incorrect {
   background: #f8d7da;
-  border-color: #dc3545;
+  border-color: var(--error-color);
   color: #721c24;
 }
 
@@ -3348,33 +3348,33 @@ option {
 }
 
 .rating-btn.easy {
-  color: #28a745;
-  border-color: #28a745;
+  color: var(--success-color);
+  border-color: var(--success-color);
 }
 
 .rating-btn.easy.active {
   background: #d4edda;
-  border-color: #28a745;
+  border-color: var(--success-color);
 }
 
 .rating-btn.medium {
-  color: #ffc107;
-  border-color: #ffc107;
+  color: var(--warning-color);
+  border-color: var(--warning-color);
 }
 
 .rating-btn.medium.active {
   background: #fff3cd;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
 }
 
 .rating-btn.hard {
-  color: #dc3545;
-  border-color: #dc3545;
+  color: var(--error-color);
+  border-color: var(--error-color);
 }
 
 .rating-btn.hard.active {
   background: #f8d7da;
-  border-color: #dc3545;
+  border-color: var(--error-color);
 }
 
 /* 難易度評価スライダー（コンパクト版・旧版：互換性維持） */
@@ -4219,13 +4219,13 @@ option {
 
 .letter-box.blank.correct {
   background: #d4edda;
-  border-color: #28a745;
+  border-color: var(--success-color);
   color: #155724;
 }
 
 .letter-box.blank.incorrect {
   background: #f8d7da;
-  border-color: #dc3545;
+  border-color: var(--error-color);
   color: #721c24;
 }
 
@@ -6168,14 +6168,14 @@ option {
 /* スペルタブ: 回答後の正解・不正解 */
 .letter-card.practice-mode.selected.correct {
   background: #d4edda;
-  border-color: #28a745;
+  border-color: var(--success-color);
   color: #155724;
   opacity: 1;
 }
 
 .letter-card.practice-mode.selected.incorrect {
   background: #f8d7da;
-  border-color: #dc3545;
+  border-color: var(--error-color);
   color: #721c24;
   opacity: 1;
 }
@@ -10702,7 +10702,7 @@ option {
 
 .word-card.unknown {
   background: #fff3cd;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
   font-weight: 600;
 }
 
@@ -10725,7 +10725,7 @@ option {
 
 .word-card.phrase-card.unknown {
   background: #fff3cd;
-  border-color: #ffc107;
+  border-color: var(--warning-color);
 }
 
 .word-card.phrase-card .phrase-word {
@@ -11884,7 +11884,7 @@ option {
 }
 
 .trend-up {
-  color: #28a745;
+  color: var(--success-color);
   font-size: 0.85em;
 }
 
@@ -12101,7 +12101,7 @@ option {
 .chart-summary-item .summary-value {
   font-size: 1.5em;
   font-weight: bold;
-  color: #ff6b35;
+  color: var(--warning-color);
 }
 
 .chart-empty {
@@ -12598,7 +12598,7 @@ option {
 /* ダークモード対応 */
 .dark-mode .error-prediction-warning {
   background: linear-gradient(135deg, #4a4a2a 0%, #2a2a2a 100%);
-  border-color: #ffc107;
+  border-color: var(--warning-color);
 }
 
 .dark-mode .error-prediction-warning.medium {
@@ -12855,7 +12855,7 @@ option {
 }
 
 .error-log-header {
-  background-color: #dc3545;
+  background-color: var(--error-color);
   color: white;
   padding: 12px 16px;
   display: flex;
@@ -12865,7 +12865,7 @@ option {
 
 .error-log-copy-btn {
   background-color: white;
-  color: #dc3545;
+  color: var(--error-color);
   border: none;
   padding: 4px 12px;
   border-radius: 4px;
@@ -12944,7 +12944,7 @@ option {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #dc3545;
+  background-color: var(--error-color);
   color: white;
   border: none;
   border-radius: 50%;
