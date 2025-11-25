@@ -190,13 +190,12 @@ function ScoreBoard({
           <button 
             className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
             onClick={() => {
-              setActiveTab('settings');
               if (onShowSettings) {
                 onShowSettings();
               }
             }}
           >
-            設定
+            ⚙️ 設定
           </button>
         </div>
       )}
@@ -248,14 +247,13 @@ function ScoreBoard({
           <button 
             className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
             onClick={() => {
-              setActiveTab('settings');
               if (onShowSettings) {
                 onShowSettings();
               }
             }}
-            title="設定"
+            title="学習設定"
           >
-            設
+            ⚙️
           </button>
         </div>
       )}
@@ -500,20 +498,7 @@ function ScoreBoard({
           </div>
         </div>
       )}
-      
-      {/* 設定タブ */}
-      {activeTab === 'settings' && onShowSettings && (
-        <div className="score-board-content">
-          <div className="settings-tab-message">
-            <button 
-              onClick={onShowSettings}
-              className="btn-back-to-settings"
-            >
-              ⚙️ 学習設定に戻る
-            </button>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }
