@@ -22,7 +22,6 @@ interface SpellingViewProps {
   onStartQuiz: () => void;
   onReviewFocus?: () => void;
   isReviewFocusMode?: boolean;
-  onShowSettings?: () => void;
 }
 
 function SpellingView({ 
@@ -38,8 +37,7 @@ function SpellingView({
   onPhraseTypeFilterChange,
   onStartQuiz,
   onReviewFocus,
-  isReviewFocusMode = false,
-  onShowSettings
+  isReviewFocusMode = false
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
@@ -607,8 +605,78 @@ function SpellingView({
             sessionMastered={sessionStats.mastered}
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
-            onShowSettings={onShowSettings}
+            onShowSettings={() => setShowSettings(true)}
           />
+
+          {/* スペルクイズ中の学習設定パネル */}
+          {showSettings && (
+            <div className="study-settings-panel">
+              <div className="settings-header">
+                <h3>📊 学習設定</h3>
+                <button 
+                  onClick={() => setShowSettings(false)} 
+                  className="close-settings-btn"
+                >
+                  ✕ 閉じる
+                </button>
+              </div>
+              
+              <div className="filter-group">
+                <label htmlFor="category-select-spelling">📚 関連分野:</label>
+                <select
+                  id="category-select-spelling"
+                  value={selectedCategory}
+                  onChange={(e) => onCategoryChange(e.target.value)}
+                  className="select-input"
+                >
+                  {categoryList.map((cat) => (
+                    <option key={cat} value={cat}>
+                      {cat}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="difficulty-select-spelling">⭐ 難易度:</label>
+                <select
+                  id="difficulty-select-spelling"
+                  value={selectedDifficulty}
+                  onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
+                  className="select-input"
+                >
+                  <option value="all">全てのレベル</option>
+                  <option value="beginner">初級</option>
+                  <option value="intermediate">中級</option>
+                  <option value="advanced">上級</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="max-study-count-spelling">📊 学習数上限:</label>
+                <input
+                  id="max-study-count-spelling"
+                  type="number"
+                  min="1"
+                  value={maxStudyCount}
+                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+                  className="select-input number-input-small"
+                />
+              </div>
+              
+              <div className="filter-group">
+                <label htmlFor="max-review-count-spelling">🔄 要復習上限:</label>
+                <input
+                  id="max-review-count-spelling"
+                  type="number"
+                  min="0"
+                  value={maxReviewCount}
+                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+                  className="select-input number-input-small"
+                />
+              </div>
+            </div>
+          )}
 
           {currentQuestion && (
             <div className="question-card">

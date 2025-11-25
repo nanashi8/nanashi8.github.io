@@ -51,18 +51,11 @@ interface Unit {
   questions?: SentenceOrderingQuestion[]; // 後方互換性のため一時的に保持
 }
 
-interface IrregularVerbs {
-  category: string;
-  grammarPoint: string;
-  questions: VerbFormQuestion[];
-}
-
 interface QuizData {
   grade: number;
   totalQuestions: number;
   categories?: Category[];
   units?: Unit[];
-  irregularVerbs?: IrregularVerbs;
 }
 
 type QuizType = 'verb-form' | 'fill-in-blank' | 'sentence-ordering';
@@ -70,10 +63,9 @@ type Grade = 'all' | '1' | '2' | '3' | '1-all' | '2-all' | '3-all' | string; // 
 
 interface GrammarQuizViewProps {
   onSaveProgress?: (data: any) => void;
-  onShowSettings?: () => void;
 }
 
-function GrammarQuizView({ onShowSettings }: GrammarQuizViewProps) {
+function GrammarQuizView({ }: GrammarQuizViewProps) {
   const [quizType, setQuizType] = useState<QuizType>('verb-form');
   const [grade, setGrade] = useState<Grade>('all');
   const [availableUnits, setAvailableUnits] = useState<{ value: string; label: string }[]>([]);
@@ -123,62 +115,18 @@ function GrammarQuizView({ onShowSettings }: GrammarQuizViewProps) {
         return;
       }
       
-      // 並び替え問題の場合、Unit情報を読み込む
+      // すべての問題形式でUnit情報を読み込む
+      let filename = '';
       if (quizType === 'sentence-ordering') {
-        try {
-          const filename = `sentence-ordering-grade${gradeNum}.json`;
-          const res = await fetch(`/data/${filename}`);
-          if (res.ok) {
-            const data: QuizData = await res.json();
-            if (data.units) {
-              data.units.forEach(unit => {
-                units.push({
-                  value: `g${gradeNum}-${unit.unit.toLowerCase().replace(/\s+/g, '')}`,
-                  label: `中${gradeNum}_${unit.title}`
-                });
-              });
-            }
-          }
-        } catch (err) {
-          console.warn('Unit情報の読み込みに失敗しました');
-        }
+        filename = `sentence-ordering-grade${gradeNum}.json`;
+      } else if (quizType === 'verb-form') {
+        filename = `verb-form-questions-grade${gradeNum}.json`;
+      } else if (quizType === 'fill-in-blank') {
+        filename = `fill-in-blank-questions-grade${gradeNum}.json`;
       }
       
-      // 動詞変化問題の場合、Unit情報と不規則動詞を読み込む
-      if (quizType === 'verb-form') {
+      if (filename) {
         try {
-          const filename = `verb-form-questions-grade${gradeNum}.json`;
-          const res = await fetch(`/data/${filename}`);
-          if (res.ok) {
-            const data: QuizData = await res.json();
-            
-            // Units情報
-            if (data.units) {
-              data.units.forEach(unit => {
-                units.push({
-                  value: `g${gradeNum}-${unit.unit.toLowerCase().replace(/\s+/g, '')}`,
-                  label: `中${gradeNum}_${unit.title}`
-                });
-              });
-            }
-            
-            // 不規則動詞
-            if (data.irregularVerbs) {
-              units.push({
-                value: `${gradeNum}-irregular`,
-                label: `中${gradeNum}_不規則動詞 (${data.irregularVerbs.questions.length}問)`
-              });
-            }
-          }
-        } catch (err) {
-          console.warn('Unit情報の読み込みに失敗しました');
-        }
-      }
-      
-      // 穴埋め問題の場合、Unit情報を読み込む
-      if (quizType === 'fill-in-blank') {
-        try {
-          const filename = `fill-in-blank-questions-grade${gradeNum}.json`;
           const res = await fetch(`/data/${filename}`);
           if (res.ok) {
             const data: QuizData = await res.json();
@@ -229,7 +177,6 @@ function GrammarQuizView({ onShowSettings }: GrammarQuizViewProps) {
       // 学年フィルターの解析
       let gradesToLoad: string[] = [];
       let selectedUnit: string | null = null;
-      let isIrregularVerbs = false;
       
       if (grade === 'all') {
         gradesToLoad = ['1', '2', '3'];
@@ -239,13 +186,6 @@ function GrammarQuizView({ onShowSettings }: GrammarQuizViewProps) {
       } else if (grade.endsWith('-all')) {
         // '1-all', '2-all', '3-all' の場合
         gradesToLoad = [grade.charAt(0)];
-      } else if (grade.endsWith('-irregular')) {
-        // '1-irregular', '2-irregular', '3-irregular' の場合（不規則動詞）
-        const gradeNum = grade.match(/^(\d+)-/)?.[1];
-        if (gradeNum) {
-          gradesToLoad = [gradeNum];
-          isIrregularVerbs = true;
-        }
       } else if (grade.match(/^g\d+-/)) {
         // 'g1-unit0' のような特定のUnit
         const gradeNum = grade.match(/^g(\d+)-/)?.[1];
@@ -285,16 +225,8 @@ function GrammarQuizView({ onShowSettings }: GrammarQuizViewProps) {
       // 全ての問題を収集
       let questions: any[] = [];
       
-      // 不規則動詞の場合
-      if (isIrregularVerbs && quizType === 'verb-form') {
-        allData.forEach(data => {
-          if (data.irregularVerbs) {
-            questions.push(...data.irregularVerbs.questions);
-          }
-        });
-      }
       // 単元別の場合（新しいデータ構造）
-      else if (selectedUnit && allData[0]?.units) {
+      if (selectedUnit && allData[0]?.units) {
         allData.forEach(data => {
           if (data.units) {
             data.units.forEach(unit => {
@@ -594,8 +526,91 @@ function GrammarQuizView({ onShowSettings }: GrammarQuizViewProps) {
             sessionCorrect={sessionStats.correct}
             sessionIncorrect={sessionStats.incorrect}
             sessionMastered={sessionStats.mastered}
-            onShowSettings={onShowSettings}
+            onShowSettings={() => setShowSettings(true)}
           />
+
+          {/* 文法クイズ中の学習設定パネル */}
+          {showSettings && (
+            <div className="study-settings-panel">
+              <div className="settings-header">
+                <h3>📊 学習設定</h3>
+                <button 
+                  onClick={() => setShowSettings(false)} 
+                  className="close-settings-btn"
+                >
+                  ✕ 閉じる
+                </button>
+              </div>
+              
+              <div className="filter-group">
+                <label htmlFor="quiz-type-select-active">📝 問題の種類:</label>
+                <select
+                  id="quiz-type-select-active"
+                  value={quizType}
+                  onChange={(e) => setQuizType(e.target.value as QuizType)}
+                  className="select-input"
+                >
+                  <option value="verb-form">動詞変化</option>
+                  <option value="fill-in-blank">穴埋め</option>
+                  <option value="sentence-ordering">並び替え</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="grade-select-active">📚 学年:</label>
+                <select
+                  id="grade-select-active"
+                  value={grade}
+                  onChange={(e) => setGrade(e.target.value as Grade)}
+                  className="select-input"
+                >
+                  <option value="all">全学年</option>
+                  <option value="1">1年の内容</option>
+                  <option value="2">2年の内容</option>
+                  <option value="3">3年の内容</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="difficulty-select-active">⭐ 難易度:</label>
+                <select
+                  id="difficulty-select-active"
+                  value={difficulty}
+                  onChange={(e) => setDifficulty(e.target.value as DifficultyLevel)}
+                  className="select-input"
+                >
+                  <option value="all">全てのレベル</option>
+                  <option value="beginner">初級</option>
+                  <option value="intermediate">中級</option>
+                  <option value="advanced">上級</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="max-study-count-active">📊 学習数上限:</label>
+                <input
+                  id="max-study-count-active"
+                  type="number"
+                  min="1"
+                  value={maxStudyCount}
+                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
+                  className="select-input number-input-small"
+                />
+              </div>
+              
+              <div className="filter-group">
+                <label htmlFor="max-review-count-active">🔄 要復習上限:</label>
+                <input
+                  id="max-review-count-active"
+                  type="number"
+                  min="0"
+                  value={maxReviewCount}
+                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
+                  className="select-input number-input-small"
+                />
+              </div>
+            </div>
+          )}
 
           <div className="question-container">
             <div className="question-card">
