@@ -745,16 +745,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 個別フレーズの訳を表示（2段階）
   const handleShowPhraseTranslation = (phraseIndex: number) => {
-    // 最初のクリック: 単語の意味を表示
+    // フレーズの意味を表示（各単語の意味を表示）
     if (!wordMeaningsVisible[phraseIndex]) {
       setWordMeaningsVisible(prev => {
-        const newState = [...prev];
-        newState[phraseIndex] = true;
-        return newState;
-      });
-    } else if (!phraseTranslations[phraseIndex]) {
-      // 2回目のクリック: フレーズ全体の訳を表示
-      setPhraseTranslations(prev => {
         const newState = [...prev];
         newState[phraseIndex] = true;
         return newState;
@@ -1145,7 +1138,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 </div>
 
                 {/* 和訳（表示/非表示） */}
-                {phraseTranslations[phraseIdx] ? (
+                {wordMeaningsVisible[phraseIdx] ? (
                   <div className="phrase-translation visible">
                     <div className="translation-text">{phrase.phraseMeaning}</div>
                   </div>
@@ -1154,7 +1147,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     className="show-translation-btn"
                     onClick={() => handleShowPhraseTranslation(phraseIdx)}
                   >
-                    {!wordMeaningsVisible[phraseIdx] ? '単語の意味を表示 ▼' : 'フレーズの意味を表示 ▼'}
+                    フレーズの意味を表示 ▼
                   </button>
                 )}
               </div>
