@@ -505,30 +505,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   <option value="sentence-ordering">並び替え</option>
                 </select>
               </div>
-
-              <div className="filter-group">
-                <label htmlFor="max-study-count">📊 学習数上限:</label>
-                <input
-                  id="max-study-count"
-                  type="number"
-                  min="1"
-                  value={maxStudyCount}
-                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
-              </div>
-              
-              <div className="filter-group">
-                <label htmlFor="max-review-count">🔄 要復習上限:</label>
-                <input
-                  id="max-review-count"
-                  type="number"
-                  min="0"
-                  value={maxReviewCount}
-                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
-              </div>
             </div>
           )}
 
