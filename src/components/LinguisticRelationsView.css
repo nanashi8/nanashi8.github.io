@@ -157,27 +157,27 @@
 }
 
 .badge-action {
-  background-color: #4CAF50;
+  background-color: var(--success-color);
   color: white;
 }
 
 .badge-state {
-  background-color: #2196F3;
+  background-color: var(--info-color);
   color: white;
 }
 
 .badge-process {
-  background-color: #FF9800;
+  background-color: var(--warning-color);
   color: white;
 }
 
 .badge-positive {
-  background-color: #4CAF50;
+  background-color: var(--success-color);
   color: white;
 }
 
 .badge-negative {
-  background-color: #F44336;
+  background-color: var(--error-color);
   color: white;
 }
 

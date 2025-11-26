@@ -89,19 +89,20 @@ function SettingsView({
     applyDarkMode(mode);
   };
 
-  // 初回レンダリング時にdark-modeクラスを適用
+  // 初回レンダリング時とダークモード変更時に適用
   useEffect(() => {
+    // main.tsxで初期化済みだが、ユーザーが設定変更した場合は再適用
     applyDarkMode(darkMode);
     
-    // システム設定の変更を監視
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      if (darkMode === 'system') {
+    // システム設定の変更を監視（systemモードの場合のみ）
+    if (darkMode === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handleChange = () => {
         applyDarkMode('system');
-      }
-    };
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+      };
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
   }, [darkMode]);
 
   const totalWords = allQuestions.length;

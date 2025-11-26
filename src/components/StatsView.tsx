@@ -20,9 +20,10 @@ interface StatsViewProps {
   questionSets: QuestionSet[];
   allQuestions: Question[];
   categoryList: string[];
+  onResetComplete?: () => void;
 }
 
-function StatsView({ }: StatsViewProps) {
+function StatsView({ onResetComplete }: StatsViewProps) {
   const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
   
@@ -121,6 +122,11 @@ function StatsView({ }: StatsViewProps) {
       
       alert('学習記録をリセットしました');
       loadData(); // データを再読み込み
+      
+      // 成績タブを表示
+      if (onResetComplete) {
+        onResetComplete();
+      }
     }
   };
 
@@ -131,14 +137,6 @@ function StatsView({ }: StatsViewProps) {
         <h3>📆 学習カレンダー（過去12週間）</h3>
         <CalendarHeatmap data={calendarData} />
       </div>
-
-      {/* 成長グラフ */}
-      {cumulativeData.length > 0 && (
-        <div className="stats-section-growth">
-          <h3>📈 成長グラフ（週別）</h3>
-          <CumulativeGrowthChart data={cumulativeData} />
-        </div>
-      )}
 
       {/* 苦手単語 & 克服した単語 */}
       <div className="stats-section-words">
@@ -161,46 +159,6 @@ function StatsView({ }: StatsViewProps) {
             </ul>
           ) : (
             <p className="no-data">苦手な単語はありません！🎉</p>
-          )}
-        </div>
-        
-        <div className="words-column">
-          <h3>✨ 克服した苦手単語</h3>
-          {overcomeWords.length > 0 ? (
-            <ul className="word-list">
-              {overcomeWords.map((w, idx) => (
-                <li key={idx} className="word-item overcome">
-                  <span className="word-text">{w.word}</span>
-                  <span className="word-stats overcome-stats">
-                    <span className="overcome-before">❌{w.totalMistakes}回</span>
-                    <span className="overcome-arrow">→</span>
-                    <span className="overcome-after">📈{w.recentAccuracy}%</span>
-                    <span className="overcome-badge">🎉</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-data">まだ克服した苦手単語はありません</p>
-          )}
-        </div>
-        
-        <div className="words-column">
-          <h3>🎉 最近克服した単語</h3>
-          {recentlyMastered.length > 0 ? (
-            <ul className="word-list">
-              {recentlyMastered.map((w, idx) => (
-                <li key={idx} className="word-item mastered">
-                  <span className="word-text">{w.word}</span>
-                  <span className="word-stats">
-                    {new Date(w.masteredDate).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}
-                    <span className="word-attempts">({w.totalAttempts}回)</span>
-                  </span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-data">データがありません</p>
           )}
         </div>
       </div>
@@ -250,7 +208,18 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
   // 過去12週間のデータを週ごとにグループ化
   const weeks: Array<Array<{ date: string; count: number; accuracy: number }>> = [];
   for (let i = 0; i < data.length; i += 7) {
-    weeks.push(data.slice(i, i + 7));
+    const week = data.slice(i, i + 7);
+    // 最後の週が7日未満の場合、空のデータで埋める
+    while (week.length < 7) {
+      const lastDate = week.length > 0 ? new Date(week[week.length - 1].date) : new Date(data[data.length - 1].date);
+      lastDate.setDate(lastDate.getDate() + 1);
+      week.push({
+        date: lastDate.toISOString().split('T')[0],
+        count: 0,
+        accuracy: 0
+      });
+    }
+    weeks.push(week);
   }
 
   // 色の濃さを決定

@@ -25,6 +25,19 @@ dist-beta
 *.sln
 *.sw?
 
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Test files
+test-*.html
+test-*.js
+*_TEST_REPORT.md
+
+# Temporary CSS files
+*Context.css
+Attached*.css
+
 # Old files
 *.backup
 *.old-vanilla
@@ -48,6 +61,21 @@ missing_*.txt
 remaining_*.txt
 word_analysis.json
 etymology_enhancement_needed.json
+
+# Output directories
+scripts/output/
+**/output/
+
+# Archive and reference directories
+docs/archive/
+docs/references/
+docs/templates/
+
+# Old reports
+*_REPORT.txt
+*_CORRECTION_REPORT.md
+PROGRESS_REPORT_*.md
+CHANGELOG-*.md
 generation_log.txt
 test_*.md
 

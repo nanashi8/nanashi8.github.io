@@ -291,23 +291,54 @@ cd scripts && python3 phrase_coverage_report.py
 
 ### 📖 参照ドキュメント
 
-| ドキュメント | 用途 |
-|-------------|------|
-| [19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md) | 中学受験単語 |
-| [20-junior-high-phrases.md](./20-junior-high-phrases.md) | 中学受験フレーズ |
-| [15-data-structures.md](./15-data-structures.md) | データ構造 |
+| ドキュメント | 用途 | 重要度 |
+|-------------|------|--------|
+| **[AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md)** | データ追加ワークフロー | ⭐⭐⭐ 必読 |
+| **[19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md)** | 単語データ仕様・10カテゴリ定義 | ⭐⭐⭐ |
+| **[20-junior-high-phrases.md](./20-junior-high-phrases.md)** | フレーズデータ仕様・作成ガイドライン | ⭐⭐⭐ |
+| [15-data-structures.md](./15-data-structures.md) | データ構造・型定義 | ⭐⭐ |
+| [QUALITY_CHECKLIST.md](./QUALITY_CHECKLIST.md) | データ品質チェック項目 | ⭐⭐ |
+
+### 🎯 10カテゴリシステム（厳守）
+
+CSVの「関連分野」列は以下の10カテゴリのいずれかを使用（カテゴリ名は完全一致必須）:
+
+1. **言語基本** - 基本動詞・形容詞・副詞
+2. **学校・学習** - 教科・学習活動・文房具
+3. **日常生活** - 家庭・身の回り・日課
+4. **人・社会** - 人物・職業・社会活動
+5. **自然・環境** - 動物・植物・天候・地理
+6. **食・健康** - 食べ物・料理・健康・医療
+7. **運動・娯楽** - スポーツ・趣味・遊び
+8. **場所・移動** - 場所・方向・交通
+9. **時間・数量** - 時間・数・量
+10. **科学・技術** - 科学・技術・コンピュータ
+
+**カテゴリ自動正規化**: `scripts/normalize_categories_to_10.py`
 
 ### ⚡ クイックチェック
-- [ ] CSV形式正しい
+- [ ] CSV形式正しい（7列: 語句,読み,意味,語源等解説,関連語,関連分野,難易度）
 - [ ] 重複なし
-- [ ] カテゴリー・難易度適切
+- [ ] **関連分野: 上記10カテゴリのいずれか（完全一致）**
+- [ ] 難易度: 初級/中級/上級
 - [ ] ローカル環境で動作確認済み
+- [ ] カテゴリ正規化スクリプト実行（必要な場合）
 
 ### 💡 ファイル場所
 ```
-public/data/
-├── junior-high-entrance-words.csv    # 単語データ
-└── junior-high-entrance-phrases.csv  # フレーズデータ
+public/data/vocabulary/
+├── junior-high-entrance-words.csv    # 単語データ（2,901語・10カテゴリ完了）
+└── junior-high-entrance-phrases.csv  # フレーズデータ（⚠️データ未登録: 0/500表現）
+```
+
+### 🔧 カテゴリ正規化（必要時）
+
+```bash
+# カテゴリを10個に自動正規化（125→10など）
+python3 scripts/normalize_categories_to_10.py
+
+# バックアップ自動作成: .backup_YYYYMMDD_HHMMSS.csv
+# 統計レポート表示: カテゴリ別語彙数
 ```
 
 ---

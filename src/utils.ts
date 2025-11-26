@@ -78,9 +78,23 @@ export function parseCSV(csvText: string): Question[] {
       const reading = columns[1] || '';
       const meaning = columns[2] || '';
       const etymology = columns[3] || '';
-      const relatedWords = columns[4] || '';
-      const relatedFields = columns[5] || '';
-      const difficultyRaw = columns[6] || '';
+      
+      // CSVの列数によって処理を分岐（関連語フィールドに改行が含まれる場合、8列になる）
+      let relatedWords = '';
+      let relatedFields = '';
+      let difficultyRaw = '';
+      
+      if (columns.length >= 8) {
+        // 8列の場合：関連語が2列に分かれている
+        relatedWords = (columns[4] || '') + (columns[5] || '');
+        relatedFields = columns[6] || '';
+        difficultyRaw = columns[7] || '';
+      } else {
+        // 7列の場合：正常なフォーマット
+        relatedWords = columns[4] || '';
+        relatedFields = columns[5] || '';
+        difficultyRaw = columns[6] || '';
+      }
 
       // 難易度を日本語から英語に変換
       let difficulty = '';

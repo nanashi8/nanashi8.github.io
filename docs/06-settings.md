@@ -17,6 +17,8 @@
 
 ### 1. 学習プラン設定
 
+**関連分野（カテゴリ）仕様**: [19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md) - 10カテゴリシステム
+
 #### 学習期間選択
 
 ```typescript

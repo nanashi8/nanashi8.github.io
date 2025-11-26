@@ -69,6 +69,20 @@ export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
 
+// 10個の正式カテゴリ（docs/19-junior-high-vocabulary.md参照）
+export const OFFICIAL_CATEGORIES = [
+  '言語基本',
+  '学校・学習',
+  '日常生活',
+  '人・社会',
+  '自然・環境',
+  '食・健康',
+  '運動・娯楽',
+  '場所・移動',
+  '時間・数量',
+  '科学・技術',
+] as const;
+
 // LocalStorageサイズを確認する関数
 function checkLocalStorageSize() {
   try {
@@ -1289,6 +1303,7 @@ function App() {
             questionSets={questionSets}
             allQuestions={allQuestions}
             categoryList={categoryList}
+            onResetComplete={() => setActiveTab('stats')}
           />
         ) : (
           <SettingsView

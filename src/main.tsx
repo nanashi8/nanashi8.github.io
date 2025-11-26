@@ -4,6 +4,36 @@ import App from './App.tsx'
 import './index.css'
 import * as Sentry from "@sentry/react";
 
+// ダークモードの初期化（アプリ起動時に実行）
+const initializeDarkMode = () => {
+  const saved = localStorage.getItem('darkMode');
+  let mode: 'light' | 'dark' | 'system' = 'system';
+  
+  if (saved === 'system' || saved === 'light' || saved === 'dark') {
+    mode = saved;
+  } else if (saved === 'true') {
+    // 旧形式（boolean）からの移行
+    mode = 'dark';
+    localStorage.setItem('darkMode', 'dark');
+  } else if (saved === 'false') {
+    mode = 'light';
+    localStorage.setItem('darkMode', 'light');
+  }
+  
+  // ダークモードを適用
+  let isDark = false;
+  if (mode === 'system') {
+    isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  } else {
+    isDark = mode === 'dark';
+  }
+  
+  document.documentElement.classList.toggle('dark-mode', isDark);
+};
+
+// ダークモードを即座に初期化（FLASHを防ぐ）
+initializeDarkMode();
+
 // Sentry初期化（エラー監視）
 // 本番環境のみ有効化
 if (import.meta.env.PROD) {
