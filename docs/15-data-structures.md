@@ -17,13 +17,33 @@ export interface Question {
   meaning: string;       // 意味（正解）
   etymology: string;     // 語源解説
   relatedWords: string;  // 関連語
-  relatedFields: string; // 関連分野（表示用）
-  category?: string;     // カテゴリー（フィルター用）
-  difficulty: string;    // 難易度
+  relatedFields: string; // 関連分野（10カテゴリのいずれか）
+  category?: string;     // カテゴリー（フィルター用・内部処理）
+  difficulty: string;    // 難易度（初級/中級/上級）
   type?: 'word' | 'phrase';
   isPhraseOnly?: boolean; // 熟語フラグ
 }
 ```
+
+**📋 relatedFields（関連分野）の値**:
+- 必ず以下10個のカテゴリのいずれか1つ
+- 詳細: [19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md)
+
+1. 言語基本
+2. 学校・学習
+3. 日常生活
+4. 人・社会
+5. 自然・環境
+6. 食・健康
+7. 運動・娯楽
+8. 場所・移動
+9. 時間・数量
+10. 科学・技術
+
+**難易度**:
+- `初級`: 中1レベル
+- `中級`: 中2-3レベル
+- `上級`: 高校入試レベル
 
 ### 2. QuizState（和訳クイズ状態）
 

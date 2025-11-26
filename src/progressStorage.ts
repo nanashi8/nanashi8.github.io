@@ -61,7 +61,7 @@ export type SessionHistoryItem = {
 const SESSION_HISTORY_KEY = 'session-history';
 const MAX_SESSION_HISTORY = 50;
 
-import { putToDB, queryByIndex, STORES, isIndexedDBSupported } from './indexedDBStorage';
+import { putToDB, queryByIndex, STORES, isIndexedDBSupported, deleteDatabase } from './indexedDBStorage';
 import { isMigrationCompleted } from './dataMigration';
 
 export async function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling'): Promise<void> {
@@ -2369,7 +2369,6 @@ function loadAllQuestions(): Array<{ word: string; difficulty: string }> {
 export async function resetAllProgress(): Promise<void> {
   // 1. IndexedDBの完全削除
   try {
-    const { deleteDatabase } = await import('./indexedDBStorage');
     await deleteDatabase();
     console.log('✅ IndexedDB削除完了');
   } catch (error) {

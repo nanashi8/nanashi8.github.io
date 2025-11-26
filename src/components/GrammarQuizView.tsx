@@ -58,7 +58,7 @@ interface QuizData {
   units?: Unit[];
 }
 
-type QuizType = 'random' | 'verb-form' | 'fill-in-blank' | 'sentence-ordering';
+type QuizType = 'all' | 'random' | 'verb-form' | 'fill-in-blank' | 'sentence-ordering';
 type Grade = 'all' | '1' | '2' | '3' | '1-all' | '2-all' | '3-all' | string; // 'g1-u0', 'g1-u1' など
 
 interface GrammarQuizViewProps {
@@ -84,25 +84,10 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   const [sessionStats, setSessionStats] = useState({ correct: 0, incorrect: 0, mastered: 0 });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [userRating, setUserRating] = useState<number | null>(null);
 
   // 難易度フィルター
   type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
   const [difficulty, setDifficulty] = useState<DifficultyLevel>('all');
-
-  // 学習数上限の設定
-  const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
-  const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
-
-  const handleMaxStudyCountChange = (newCount: number) => {
-    setMaxStudyCount(newCount);
-    updateStudySettings({ maxStudyCount: newCount });
-  };
-
-  const handleMaxReviewCountChange = (newCount: number) => {
-    setMaxReviewCount(newCount);
-    updateStudySettings({ maxReviewCount: newCount });
-  };
 
   const currentQuestion = currentQuestions[currentQuestionIndex];
   const isSentenceOrdering = quizType === 'sentence-ordering';
@@ -119,9 +104,12 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
         return;
       }
       
-      // すべての問題形式でUnit情報を読み込む
+      // 全ての種類またはランダムの場合は、いずれかの問題形式からUnit情報を読み込む
+      // （通常はverb-formを使用）
       let filename = '';
-      if (quizType === 'sentence-ordering') {
+      if (quizType === 'all' || quizType === 'random') {
+        filename = `verb-form-questions-grade${gradeNum}.json`;
+      } else if (quizType === 'sentence-ordering') {
         filename = `sentence-ordering-grade${gradeNum}.json`;
       } else if (quizType === 'verb-form') {
         filename = `verb-form-questions-grade${gradeNum}.json`;
@@ -170,7 +158,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     setSelectedAnswer(null);
     setAnswered(false);
     setShowHint(false);
-    setUserRating(null);
   }, [currentQuestionIndex]);
 
   const handleStartQuiz = async () => {
@@ -201,8 +188,8 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       
       const allData: QuizData[] = [];
       
-      // ランダムモードの場合は全ての問題タイプを読み込む
-      if (quizType === 'random') {
+      // ランダムモードまたは全ての種類の場合は全ての問題タイプを読み込む
+      if (quizType === 'random' || quizType === 'all') {
         for (const g of gradesToLoad) {
           const quizTypes = ['verb-form', 'fill-in-blank', 'sentence-ordering'];
           for (const type of quizTypes) {
@@ -266,8 +253,8 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 return;
               }
               
-              // ランダムモードの場合は全ての問題タイプを収集
-              if (quizType === 'random') {
+              // ランダムモードまたは全ての種類の場合は全ての問題タイプを収集
+              if (quizType === 'random' || quizType === 'all') {
                 const validSentenceOrdering = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
                 questions.push(...validSentenceOrdering);
                 if (unit.verbForm) {
@@ -296,8 +283,8 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
           // 新しいデータ構造（units内に3形式）
           if (data.units) {
             data.units.forEach(unit => {
-              // ランダムモードの場合は全ての問題タイプを収集
-              if (quizType === 'random') {
+              // ランダムモードまたは全ての種類の場合は全ての問題タイプを収集
+              if (quizType === 'random' || quizType === 'all') {
                 const validSentenceOrdering = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
                 questions.push(...validSentenceOrdering);
                 if (unit.verbForm) {
@@ -417,10 +404,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     }
   };
 
-  const handleRatingChange = (rating: number) => {
-    setUserRating(rating);
-  };
-
   const toggleHint = () => {
     setShowHint(!showHint);
   };
@@ -432,7 +415,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       setSelectedWords([]);
       setAnswered(false);
       setShowHint(false);
-      setUserRating(null);
     }
   };
 
@@ -443,7 +425,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       setSelectedWords([]);
       setAnswered(false);
       setShowHint(false);
-      setUserRating(null);
     }
   };
 
@@ -487,6 +468,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   onChange={(e) => setQuizType(e.target.value as QuizType)}
                   className="select-input"
                 >
+                  <option value="all">全ての種類</option>
                   <option value="random">ランダム</option>
                   <option value="verb-form">動詞変化</option>
                   <option value="fill-in-blank">穴埋め</option>
@@ -503,30 +485,24 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   className="select-input"
                 >
                   <option value="all">全学年の内容</option>
-                  <optgroup label="1年生">
-                    <option value="1">1年の内容</option>
-                    {availableUnits
-                      .filter(u => u.value.startsWith('g1-'))
-                      .map(u => (
-                        <option key={u.value} value={u.value}>1年_{u.label}</option>
-                      ))}
-                  </optgroup>
-                  <optgroup label="2年生">
-                    <option value="2">2年の内容</option>
-                    {availableUnits
-                      .filter(u => u.value.startsWith('g2-'))
-                      .map(u => (
-                        <option key={u.value} value={u.value}>2年_{u.label}</option>
-                      ))}
-                  </optgroup>
-                  <optgroup label="3年生">
-                    <option value="3">3年の内容</option>
-                    {availableUnits
-                      .filter(u => u.value.startsWith('g3-'))
-                      .map(u => (
-                        <option key={u.value} value={u.value}>3年_{u.label}</option>
-                      ))}
-                  </optgroup>
+                  <option value="1">1年の内容</option>
+                  {availableUnits
+                    .filter(u => u.value.startsWith('g1-'))
+                    .map(u => (
+                      <option key={u.value} value={u.value}>1年_{u.label.replace(/^中\d+_/, '')}</option>
+                    ))}
+                  <option value="2">2年の内容</option>
+                  {availableUnits
+                    .filter(u => u.value.startsWith('g2-'))
+                    .map(u => (
+                      <option key={u.value} value={u.value}>2年_{u.label.replace(/^中\d+_/, '')}</option>
+                    ))}
+                  <option value="3">3年の内容</option>
+                  {availableUnits
+                    .filter(u => u.value.startsWith('g3-'))
+                    .map(u => (
+                      <option key={u.value} value={u.value}>3年_{u.label.replace(/^中\d+_/, '')}</option>
+                    ))}
                 </select>
               </div>
 
@@ -603,6 +579,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   onChange={(e) => setQuizType(e.target.value as QuizType)}
                   className="select-input"
                 >
+                  <option value="all">全ての種類</option>
                   <option value="random">ランダム</option>
                   <option value="verb-form">動詞変化</option>
                   <option value="fill-in-blank">穴埋め</option>
@@ -611,7 +588,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
               </div>
 
               <div className="filter-group">
-                <label htmlFor="grade-select-active">📚 学年:</label>
+                <label htmlFor="grade-select-active">📚 学年・単元:</label>
                 <select
                   id="grade-select-active"
                   value={grade}
@@ -620,8 +597,23 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 >
                   <option value="all">全学年の内容</option>
                   <option value="1">1年の内容</option>
+                  {availableUnits
+                    .filter(u => u.value.startsWith('g1-'))
+                    .map(u => (
+                      <option key={u.value} value={u.value}>1年_{u.label.replace(/^中\d+_/, '')}</option>
+                    ))}
                   <option value="2">2年の内容</option>
+                  {availableUnits
+                    .filter(u => u.value.startsWith('g2-'))
+                    .map(u => (
+                      <option key={u.value} value={u.value}>2年_{u.label.replace(/^中\d+_/, '')}</option>
+                    ))}
                   <option value="3">3年の内容</option>
+                  {availableUnits
+                    .filter(u => u.value.startsWith('g3-'))
+                    .map(u => (
+                      <option key={u.value} value={u.value}>3年_{u.label.replace(/^中\d+_/, '')}</option>
+                    ))}
                 </select>
               </div>
 
@@ -638,30 +630,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   <option value="intermediate">中級</option>
                   <option value="advanced">上級</option>
                 </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="max-study-count-active">📊 学習数上限:</label>
-                <input
-                  id="max-study-count-active"
-                  type="number"
-                  min="1"
-                  value={maxStudyCount}
-                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
-              </div>
-              
-              <div className="filter-group">
-                <label htmlFor="max-review-count-active">🔄 要復習上限:</label>
-                <input
-                  id="max-review-count-active"
-                  type="number"
-                  min="0"
-                  value={maxReviewCount}
-                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
               </div>
             </div>
           )}
@@ -826,36 +794,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                       )}
                     </>
                   )}
-
-                  {/* 難易度評価ボタン */}
-                  <div className="difficulty-rating-buttons">
-                    <div className="rating-label-compact">
-                      この問題の難易度:
-                    </div>
-                    <div className="rating-button-group">
-                      <button 
-                        className={`rating-btn easy ${userRating === 3 ? 'active' : ''}`}
-                        onClick={() => handleRatingChange(3)}
-                        aria-label="簡単"
-                      >
-                        😊 簡単
-                      </button>
-                      <button 
-                        className={`rating-btn medium ${userRating === 5 ? 'active' : ''}`}
-                        onClick={() => handleRatingChange(5)}
-                        aria-label="普通"
-                      >
-                        😐 普通
-                      </button>
-                      <button 
-                        className={`rating-btn hard ${userRating === 8 ? 'active' : ''}`}
-                        onClick={() => handleRatingChange(8)}
-                        aria-label="難しい"
-                      >
-                        😰 難しい
-                      </button>
-                    </div>
-                  </div>
                 </>
               )}
             </div>

@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { QuizState } from '../types';
-import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
+import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES } from '../App';
 import { ErrorPrediction } from '../errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
-import DailyPlanBanner from './DailyPlanBanner';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import { getStudySettings, updateStudySettings } from '../progressStorage';
 
@@ -64,20 +63,7 @@ function QuizView({
   const hasQuestions = questions.length > 0;
   const currentQuestion = hasQuestions ? questions[currentIndex] : null;
 
-  // 学習数・要復習上限の設定
-  const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
-  const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
   const [showSettings, setShowSettings] = useState<boolean>(false);
-
-  const handleMaxStudyCountChange = (newCount: number) => {
-    setMaxStudyCount(newCount);
-    updateStudySettings({ maxStudyCount: newCount });
-  };
-
-  const handleMaxReviewCountChange = (newCount: number) => {
-    setMaxReviewCount(newCount);
-    updateStudySettings({ maxReviewCount: newCount });
-  };
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -148,7 +134,7 @@ function QuizView({
               className="select-input"
             >
               <option value="all">全ての分野</option>
-              {categoryList.map((category) => (
+              {OFFICIAL_CATEGORIES.map((category) => (
                 <option key={category} value={category}>
                   {category}
                 </option>
@@ -204,30 +190,6 @@ function QuizView({
               </select>
             </div>
           )}
-
-          <div className="filter-group">
-            <label htmlFor="max-study-count">📊 学習数上限:</label>
-            <input
-              id="max-study-count"
-              type="number"
-              min="1"
-              value={maxStudyCount}
-              onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-              className="select-input number-input-small"
-            />
-          </div>
-          
-          <div className="filter-group">
-            <label htmlFor="max-review-count">🔄 要復習上限:</label>
-            <input
-              id="max-review-count"
-              type="number"
-              min="0"
-              value={maxReviewCount}
-              onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-              className="select-input number-input-small"
-            />
-          </div>
         </div>
       )}
 
@@ -271,9 +233,10 @@ function QuizView({
                   onChange={(e) => onCategoryChange(e.target.value)}
                   className="select-input"
                 >
-                  {categoryList.map((cat) => (
-                    <option key={cat} value={cat}>
-                      {cat}
+                  <option value="all">全ての分野</option>
+                  {OFFICIAL_CATEGORIES.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
                     </option>
                   ))}
                 </select>
@@ -306,30 +269,6 @@ function QuizView({
                   <option value="words-only">単語のみ</option>
                   <option value="phrases-only">熟語のみ</option>
                 </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="max-study-count-quiz">📊 学習数上限:</label>
-                <input
-                  id="max-study-count-quiz"
-                  type="number"
-                  min="1"
-                  value={maxStudyCount}
-                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
-              </div>
-              
-              <div className="filter-group">
-                <label htmlFor="max-review-count-quiz">🔄 要復習上限:</label>
-                <input
-                  id="max-review-count-quiz"
-                  type="number"
-                  min="0"
-                  value={maxReviewCount}
-                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
               </div>
             </div>
           )}

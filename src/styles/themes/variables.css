@@ -1,0 +1,190 @@
+/* ============================================
+   CSS Variables - Theme System
+   ============================================
+   
+   このファイルには全テーマで共通のCSS変数を定義します。
+   ライトモード・ダークモードで値をオーバーライドします。
+   ============================================ */
+
+:root {
+  /* ============================================
+     基本カラー
+     ============================================ */
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --background: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --border-color: #dddddd;
+  --border-color-light: #f0f0f0;
+  
+  /* ============================================
+     グレースケール
+     ============================================ */
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #e0e0e0;
+  --gray-400: #cccccc;
+  --gray-500: #aaaaaa;
+  --gray-600: #999999;
+  --gray-700: #666666;
+  --gray-800: #444444;
+  --gray-900: #333333;
+  --gray-light: #e5e7eb;
+  --gray-lighter: #f5f5f5;
+  --gray-medium: #9ca3af;
+  
+  /* ============================================
+     セマンティックカラー - 成功
+     ============================================ */
+  --success-color: #10b981;
+  --success-bg: #d1fae5;
+  --success-bg-hover: #c8e6c9;
+  --success-bg-light: #d4edda;
+  --success-border: #4caf50;
+  --success-text: #065f46;
+  --success-text-dark: #2e7d32;
+  --success-text-darker: #155724;
+  --success-text-light: #7ddb9b;
+  --success-text-green: #b8e986;
+  --success-green-dark: #28a745;
+  --success-green-darker: #45a049;
+  
+  /* ============================================
+     セマンティックカラー - エラー
+     ============================================ */
+  --error-color: #ef4444;
+  --error-bg: #fee2e2;
+  --error-bg-hover: #fecaca;
+  --error-bg-light: #f8d7da;
+  --error-border: #f87171;
+  --error-text: #991b1b;
+  --error-text-dark: #dc3545;
+  --error-text-light: #f0a0a8;
+  --error-red-dark: #dc3545;
+  --error-red-darker: #721c24;
+  --error-bright: #ff5252;
+  --error-pink: #f5576c;
+  
+  /* ============================================
+     セマンティックカラー - 警告
+     ============================================ */
+  --warning-color: #f59e0b;
+  --warning-bg: #fff3cd;
+  --warning-bg-hover: #fef3c7;
+  --warning-bg-light: #fef3c7;
+  --warning-border: #ffc107;
+  --warning-text: #78350f;
+  --warning-text-dark: #856404;
+  --warning-yellow: #ffc107;
+  --warning-gold: #ffd54f;
+  
+  /* ============================================
+     セマンティックカラー - 情報
+     ============================================ */
+  --info-color: #2196f3;
+  --info-bg: #e7f3ff;
+  --info-bg-hover: #e3f2fd;
+  --info-bg-dark: #1e3a5f;
+  --info-bg-darker: #2d3e50;
+  --info-bg-darkest: #2a3f5f;
+  --info-border: #007bff;
+  --info-text: #0056b3;
+  --info-text-dark: #004085;
+  --info-blue: #60a5fa;
+  --info-blue-light: #8bb8ff;
+  --info-blue-lighter: #b8d4ff;
+  --info-blue-lightest: #d4e3ff;
+  
+  /* ============================================
+     カードとコンテナ
+     ============================================ */
+  --card-bg: #ffffff;
+  --card-bg-hover: #f8f9fa;
+  --card-border: #e0e0e0;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* ============================================
+     ボタン
+     ============================================ */
+  --btn-primary-bg: #667eea;
+  --btn-primary-hover: #5568d3;
+  --btn-primary-text: #ffffff;
+  --btn-primary-light: #8b9ef5;
+  --btn-secondary-bg: #6c757d;
+  --btn-secondary-hover: #545b62;
+  --btn-secondary-text: #ffffff;
+  --btn-disabled-bg: #e9ecef;
+  --btn-disabled-text: #adb5bd;
+  
+  /* ============================================
+     インタラクティブ要素
+     ============================================ */
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+  --focus-ring: rgba(102, 126, 234, 0.3);
+  
+  /* ============================================
+     オーバーレイと透明度
+     ============================================ */
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --overlay-light: rgba(255, 255, 255, 0.8);
+  --backdrop-blur: blur(10px);
+  
+  /* ============================================
+     シャドウとトランジション
+     ============================================ */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  
+  /* ============================================
+     グラデーション用カラー
+     ============================================ */
+  --gradient-primary-start: #667eea;
+  --gradient-primary-end: #764ba2;
+  
+  /* ============================================
+     グラデーション定義
+     ============================================ */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-primary-light: linear-gradient(135deg, #8b9ef5 0%, #9d7fc2 100%);
+  --gradient-primary-subtle: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  --gradient-primary-fade: linear-gradient(to right, rgba(102, 126, 234, 0.3), var(--btn-primary-bg));
+  --gradient-primary-dark: linear-gradient(135deg, #4f5bd5 0%, #6a3d8f 100%);
+  --gradient-primary-medium: linear-gradient(135deg, #5568d3 0%, #653a8a 100%);
+  --gradient-primary-blue: linear-gradient(135deg, #4c6ef5 0%, #5f3d8a 100%);
+  --gradient-gray: linear-gradient(135deg, var(--gray-100) 0%, var(--bg-tertiary) 100%);
+  --gradient-purple: linear-gradient(90deg, #9C27B0 0%, #BA68C8 100%);
+  
+  /* セマンティックグラデーション */
+  --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --gradient-warning: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --gradient-error: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  --gradient-info: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+  --gradient-pink-error: linear-gradient(135deg, #f093fb 0%, var(--error-pink) 100%);
+  
+  /* ============================================
+     アクセントカラー
+     ============================================ */
+  --accent-orange: #ff9800;
+  --accent-red: #f44336;
+  --accent-purple: #9c27b0;
+  --accent-blue: #3b82f6;
+  --accent-indigo: #e0e7ff;
+  
+  /* ============================================
+     背景色のバリエーション
+     ============================================ */
+  --bg-lavender: #f8f9ff;
+  --bg-light-blue: #f0f4ff;
+  --bg-dark: #1a1f36;
+  --bg-darker: #2a2a2a;
+  
+  /* ============================================
+     純白
+     ============================================ */
+  --white: #ffffff;
+}

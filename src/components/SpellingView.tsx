@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
-import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter } from '../App';
+import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES } from '../App';
 import ScoreBoard from './ScoreBoard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
@@ -68,20 +68,7 @@ function SpellingView({
     mastered: 0,
   });
   
-  // 学習数・要復習上限の設定
-  const [maxStudyCount, setMaxStudyCount] = useState<number>(() => getStudySettings().maxStudyCount);
-  const [maxReviewCount, setMaxReviewCount] = useState<number>(() => getStudySettings().maxReviewCount);
   const [showSettings, setShowSettings] = useState<boolean>(false);
-
-  const handleMaxStudyCountChange = (newCount: number) => {
-    setMaxStudyCount(newCount);
-    updateStudySettings({ maxStudyCount: newCount });
-  };
-
-  const handleMaxReviewCountChange = (newCount: number) => {
-    setMaxReviewCount(newCount);
-    updateStudySettings({ maxReviewCount: newCount });
-  };
   
   // letter-cardsのrefを追加
   const letterCardsRef = useRef<HTMLDivElement>(null);
@@ -506,7 +493,7 @@ function SpellingView({
               className="select-input"
             >
               <option value="all">全ての分野</option>
-              {categoryList.map((category) => (
+              {OFFICIAL_CATEGORIES.map((category) => (
                 <option key={category} value={category}>
                   {category}
                 </option>
@@ -562,30 +549,6 @@ function SpellingView({
               </select>
             </div>
           )}
-
-          <div className="filter-group">
-            <label htmlFor="max-study-count-spelling">📊 学習数上限:</label>
-            <input
-              id="max-study-count-spelling"
-              type="number"
-              min="1"
-              value={maxStudyCount}
-              onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-              className="select-input number-input-small"
-            />
-          </div>
-          
-          <div className="filter-group">
-            <label htmlFor="max-review-count-spelling">🔄 要復習上限:</label>
-            <input
-              id="max-review-count-spelling"
-              type="number"
-              min="0"
-              value={maxReviewCount}
-              onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-              className="select-input number-input-small"
-            />
-          </div>
         </div>
       )}
 
@@ -629,9 +592,10 @@ function SpellingView({
                   onChange={(e) => onCategoryChange(e.target.value)}
                   className="select-input"
                 >
-                  {categoryList.map((cat) => (
-                    <option key={cat} value={cat}>
-                      {cat}
+                  <option value="all">全ての分野</option>
+                  {OFFICIAL_CATEGORIES.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
                     </option>
                   ))}
                 </select>
@@ -650,30 +614,6 @@ function SpellingView({
                   <option value="intermediate">中級</option>
                   <option value="advanced">上級</option>
                 </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="max-study-count-spelling">📊 学習数上限:</label>
-                <input
-                  id="max-study-count-spelling"
-                  type="number"
-                  min="1"
-                  value={maxStudyCount}
-                  onChange={(e) => handleMaxStudyCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
-              </div>
-              
-              <div className="filter-group">
-                <label htmlFor="max-review-count-spelling">🔄 要復習上限:</label>
-                <input
-                  id="max-review-count-spelling"
-                  type="number"
-                  min="0"
-                  value={maxReviewCount}
-                  onChange={(e) => handleMaxReviewCountChange(parseInt(e.target.value, 10))}
-                  className="select-input number-input-small"
-                />
               </div>
             </div>
           )}

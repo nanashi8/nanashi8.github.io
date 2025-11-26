@@ -8,6 +8,23 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    // CSS最適化設定
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    // チャンク分割戦略
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // ベンダーライブラリを別チャンクに
+          'react-vendor': ['react', 'react-dom'],
+          'chart-vendor': ['chart.js', 'react-chartjs-2'],
+        },
+      },
+    },
   },
   publicDir: 'public',
+  // CSS最適化オプション
+  css: {
+    devSourcemap: true,
+  },
 })
