@@ -499,10 +499,24 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   className="select-input"
                 >
                   <option value="all">全ての種類</option>
-                  <option value="random">ランダム</option>
                   <option value="verb-form">動詞変化</option>
                   <option value="fill-in-blank">穴埋め</option>
                   <option value="sentence-ordering">並び替え</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="difficulty-select">⭐ 難易度:</label>
+                <select
+                  id="difficulty-select"
+                  value={difficulty}
+                  onChange={(e) => setDifficulty(e.target.value as DifficultyLevel)}
+                  className="select-input"
+                >
+                  <option value="all">全てのレベル</option>
+                  <option value="beginner">初級</option>
+                  <option value="intermediate">中級</option>
+                  <option value="advanced">上級</option>
                 </select>
               </div>
             </div>
@@ -586,7 +600,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   className="select-input"
                 >
                   <option value="all">全ての種類</option>
-                  <option value="random">ランダム</option>
                   <option value="verb-form">動詞変化</option>
                   <option value="fill-in-blank">穴埋め</option>
                   <option value="sentence-ordering">並び替え</option>
