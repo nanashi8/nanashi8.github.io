@@ -461,22 +461,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
               <h3>📊 学習設定</h3>
               
               <div className="filter-group">
-                <label htmlFor="quiz-type-select">📝 問題の種類:</label>
-                <select
-                  id="quiz-type-select"
-                  value={quizType}
-                  onChange={(e) => setQuizType(e.target.value as QuizType)}
-                  className="select-input"
-                >
-                  <option value="all">全ての種類</option>
-                  <option value="random">ランダム</option>
-                  <option value="verb-form">動詞変化</option>
-                  <option value="fill-in-blank">穴埋め</option>
-                  <option value="sentence-ordering">並び替え</option>
-                </select>
-              </div>
-
-              <div className="filter-group">
                 <label htmlFor="grade-select">📚 学年・単元:</label>
                 <select
                   id="grade-select"
@@ -503,6 +487,22 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                     .map(u => (
                       <option key={u.value} value={u.value}>3年_{u.label.replace(/^中\d+_/, '')}</option>
                     ))}
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="quiz-type-select">📝 問題の種類:</label>
+                <select
+                  id="quiz-type-select"
+                  value={quizType}
+                  onChange={(e) => setQuizType(e.target.value as QuizType)}
+                  className="select-input"
+                >
+                  <option value="all">全ての種類</option>
+                  <option value="random">ランダム</option>
+                  <option value="verb-form">動詞変化</option>
+                  <option value="fill-in-blank">穴埋め</option>
+                  <option value="sentence-ordering">並び替え</option>
                 </select>
               </div>
 
@@ -572,22 +572,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
               </div>
               
               <div className="filter-group">
-                <label htmlFor="quiz-type-select-active">📝 問題の種類:</label>
-                <select
-                  id="quiz-type-select-active"
-                  value={quizType}
-                  onChange={(e) => setQuizType(e.target.value as QuizType)}
-                  className="select-input"
-                >
-                  <option value="all">全ての種類</option>
-                  <option value="random">ランダム</option>
-                  <option value="verb-form">動詞変化</option>
-                  <option value="fill-in-blank">穴埋め</option>
-                  <option value="sentence-ordering">並び替え</option>
-                </select>
-              </div>
-
-              <div className="filter-group">
                 <label htmlFor="grade-select-active">📚 学年・単元:</label>
                 <select
                   id="grade-select-active"
@@ -614,6 +598,22 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                     .map(u => (
                       <option key={u.value} value={u.value}>3年_{u.label.replace(/^中\d+_/, '')}</option>
                     ))}
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="quiz-type-select-active">📝 問題の種類:</label>
+                <select
+                  id="quiz-type-select-active"
+                  value={quizType}
+                  onChange={(e) => setQuizType(e.target.value as QuizType)}
+                  className="select-input"
+                >
+                  <option value="all">全ての種類</option>
+                  <option value="random">ランダム</option>
+                  <option value="verb-form">動詞変化</option>
+                  <option value="fill-in-blank">穴埋め</option>
+                  <option value="sentence-ordering">並び替え</option>
                 </select>
               </div>
 
