@@ -745,11 +745,41 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 個別フレーズの訳を表示（2段階）
   const handleShowPhraseTranslation = (phraseIndex: number) => {
-    // フレーズの意味を表示（各単語の意味を表示）
-    if (!wordMeaningsVisible[phraseIndex]) {
+    // 4段階のトグル
+    // 1. 単語の意味を表示 → 単語カードに意味表示
+    // 2. フレーズの意味を表示 → フレーズ全体の和訳表示
+    // 3. フレーズの意味を非表示 → フレーズ全体の和訳非表示
+    // 4. 単語の意味を非表示 → 単語カードの意味非表示
+    
+    const wordVisible = wordMeaningsVisible[phraseIndex];
+    const phraseVisible = phraseTranslations[phraseIndex];
+    
+    if (!wordVisible && !phraseVisible) {
+      // 状態1 → 状態2: 単語の意味を表示
       setWordMeaningsVisible(prev => {
         const newState = [...prev];
         newState[phraseIndex] = true;
+        return newState;
+      });
+    } else if (wordVisible && !phraseVisible) {
+      // 状態2 → 状態3: フレーズの意味を表示
+      setPhraseTranslations(prev => {
+        const newState = [...prev];
+        newState[phraseIndex] = true;
+        return newState;
+      });
+    } else if (wordVisible && phraseVisible) {
+      // 状態3 → 状態4: フレーズの意味を非表示
+      setPhraseTranslations(prev => {
+        const newState = [...prev];
+        newState[phraseIndex] = false;
+        return newState;
+      });
+    } else {
+      // 状態4 → 状態1: 単語の意味を非表示
+      setWordMeaningsVisible(prev => {
+        const newState = [...prev];
+        newState[phraseIndex] = false;
         return newState;
       });
     }
@@ -1138,18 +1168,21 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 </div>
 
                 {/* 和訳（表示/非表示） */}
-                {wordMeaningsVisible[phraseIdx] ? (
+                {phraseTranslations[phraseIdx] && (
                   <div className="phrase-translation visible">
                     <div className="translation-text">{phrase.phraseMeaning}</div>
                   </div>
-                ) : (
-                  <button
-                    className="show-translation-btn"
-                    onClick={() => handleShowPhraseTranslation(phraseIdx)}
-                  >
-                    フレーズの意味を表示 ▼
-                  </button>
                 )}
+                
+                <button
+                  className="show-translation-btn"
+                  onClick={() => handleShowPhraseTranslation(phraseIdx)}
+                >
+                  {!wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && '単語の意味を表示 ▼'}
+                  {wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && 'フレーズの意味を表示 ▼'}
+                  {wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && 'フレーズの意味を非表示 ▲'}
+                  {!wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && '単語の意味を非表示 ▲'}
+                </button>
               </div>
             );
             })}
