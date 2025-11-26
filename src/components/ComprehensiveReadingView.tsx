@@ -947,7 +947,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {passage.title} ({getLevelLabel(passage.level || '')} - {passage.actualWordCount}語)
+                  {getLevelLabel(passage.level || '')}_{passage.actualWordCount}語_{passage.title}
                 </option>
               ))}
             </select>
