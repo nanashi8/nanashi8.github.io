@@ -118,10 +118,11 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   useEffect(() => {
     const loadUnits = async () => {
       const units: { value: string; label: string }[] = [];
-      const baseGrade = grade.match(/^\d+/)?.[0] || grade;
-      const gradeNum = baseGrade === 'all' ? null : baseGrade;
+      // gradeから学年番号を抽出（'1', '2', '3', 'g1-unit0' -> '1', '2-all' -> '2'）
+      const gradeMatch = grade.match(/^g?(\d+)/);
+      const gradeNum = gradeMatch ? gradeMatch[1] : null;
       
-      if (!gradeNum) {
+      if (!gradeNum || grade === 'all') {
         setAvailableUnits([]);
         return;
       }
