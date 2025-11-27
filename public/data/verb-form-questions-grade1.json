@@ -1,6 +1,6 @@
 {
   "grade": 1,
-  "totalQuestions": 153,
+  "totalQuestions": 450,
   "units": [
     {
       "unit": "Unit 0",
@@ -274,6 +274,534 @@
             "working"
           ],
           "correctAnswer": "work",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-018",
+          "japanese": "私はテレビを見ます",
+          "sentence": "I ____ TV.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watchs",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watch",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-019",
+          "japanese": "私は母を手伝います",
+          "sentence": "I ____ my mother.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "help",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-020",
+          "japanese": "私は公園を散歩します",
+          "sentence": "I ____ in the park.",
+          "verb": "walk",
+          "choices": [
+            "walk",
+            "walks",
+            "walked",
+            "walking"
+          ],
+          "correctAnswer": "walk",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-021",
+          "japanese": "私は夕食を作ります",
+          "sentence": "I ____ dinner.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cook",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-022",
+          "japanese": "私は部屋を掃除します",
+          "sentence": "I ____ my room.",
+          "verb": "clean",
+          "choices": [
+            "clean",
+            "cleans",
+            "cleaned",
+            "cleaning"
+          ],
+          "correctAnswer": "clean",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-023",
+          "japanese": "私は祖父母を訪ねます",
+          "sentence": "I ____ my grandparents.",
+          "verb": "visit",
+          "choices": [
+            "visit",
+            "visits",
+            "visited",
+            "visiting"
+          ],
+          "correctAnswer": "visit",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-024",
+          "japanese": "私は音楽を楽しみます",
+          "sentence": "I ____ music.",
+          "verb": "enjoy",
+          "choices": [
+            "enjoy",
+            "enjoys",
+            "enjoyed",
+            "enjoying"
+          ],
+          "correctAnswer": "enjoy",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-025",
+          "japanese": "私はピアノを練習します",
+          "sentence": "I ____ the piano.",
+          "verb": "practice",
+          "choices": [
+            "practice",
+            "practices",
+            "practiceed",
+            "practiceing"
+          ],
+          "correctAnswer": "practice",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-026",
+          "japanese": "私は宿題を終えます",
+          "sentence": "I ____ my homework.",
+          "verb": "finish",
+          "choices": [
+            "finish",
+            "finishs",
+            "finished",
+            "finishing"
+          ],
+          "correctAnswer": "finish",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-027",
+          "japanese": "私は朝早く始めます",
+          "sentence": "I ____ early in the morning.",
+          "verb": "start",
+          "choices": [
+            "start",
+            "starts",
+            "started",
+            "starting"
+          ],
+          "correctAnswer": "start",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-028",
+          "japanese": "私はコンピューターを使います",
+          "sentence": "I ____ a computer.",
+          "verb": "use",
+          "choices": [
+            "use",
+            "uses",
+            "useed",
+            "useing"
+          ],
+          "correctAnswer": "use",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-029",
+          "japanese": "私は新しいペンが必要です",
+          "sentence": "I ____ a new pen.",
+          "verb": "need",
+          "choices": [
+            "need",
+            "needs",
+            "needed",
+            "needing"
+          ],
+          "correctAnswer": "need",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-030",
+          "japanese": "私は新しい自転車が欲しいです",
+          "sentence": "I ____ a new bike.",
+          "verb": "want",
+          "choices": [
+            "want",
+            "wants",
+            "wanted",
+            "wanting"
+          ],
+          "correctAnswer": "want",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-031",
+          "japanese": "私はチョコレートが大好きです",
+          "sentence": "I ____ chocolate.",
+          "verb": "love",
+          "choices": [
+            "love",
+            "loves",
+            "loveed",
+            "loveing"
+          ],
+          "correctAnswer": "love",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-032",
+          "japanese": "私は野菜が嫌いです",
+          "sentence": "I ____ vegetables.",
+          "verb": "hate",
+          "choices": [
+            "hate",
+            "hates",
+            "hateed",
+            "hateing"
+          ],
+          "correctAnswer": "hate",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-033",
+          "japanese": "私は東京に住んでいます",
+          "sentence": "I ____ in Tokyo.",
+          "verb": "live",
+          "choices": [
+            "live",
+            "lives",
+            "liveed",
+            "liveing"
+          ],
+          "correctAnswer": "live",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-034",
+          "japanese": "私は図書館で勉強します",
+          "sentence": "I ____ in the library.",
+          "verb": "work",
+          "choices": [
+            "work",
+            "works",
+            "worked",
+            "working"
+          ],
+          "correctAnswer": "work",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-035",
+          "japanese": "私はテレビを見ます",
+          "sentence": "I ____ TV.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watchs",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watch",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-036",
+          "japanese": "私は母を手伝います",
+          "sentence": "I ____ my mother.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "help",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-037",
+          "japanese": "私は公園を散歩します",
+          "sentence": "I ____ in the park.",
+          "verb": "walk",
+          "choices": [
+            "walk",
+            "walks",
+            "walked",
+            "walking"
+          ],
+          "correctAnswer": "walk",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-038",
+          "japanese": "私は夕食を作ります",
+          "sentence": "I ____ dinner.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cook",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-039",
+          "japanese": "私は部屋を掃除します",
+          "sentence": "I ____ my room.",
+          "verb": "clean",
+          "choices": [
+            "clean",
+            "cleans",
+            "cleaned",
+            "cleaning"
+          ],
+          "correctAnswer": "clean",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-040",
+          "japanese": "私は祖父母を訪ねます",
+          "sentence": "I ____ my grandparents.",
+          "verb": "visit",
+          "choices": [
+            "visit",
+            "visits",
+            "visited",
+            "visiting"
+          ],
+          "correctAnswer": "visit",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-041",
+          "japanese": "私は音楽を楽しみます",
+          "sentence": "I ____ music.",
+          "verb": "enjoy",
+          "choices": [
+            "enjoy",
+            "enjoys",
+            "enjoyed",
+            "enjoying"
+          ],
+          "correctAnswer": "enjoy",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-042",
+          "japanese": "私はピアノを練習します",
+          "sentence": "I ____ the piano.",
+          "verb": "practice",
+          "choices": [
+            "practice",
+            "practices",
+            "practiceed",
+            "practiceing"
+          ],
+          "correctAnswer": "practice",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-043",
+          "japanese": "私は宿題を終えます",
+          "sentence": "I ____ my homework.",
+          "verb": "finish",
+          "choices": [
+            "finish",
+            "finishs",
+            "finished",
+            "finishing"
+          ],
+          "correctAnswer": "finish",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-044",
+          "japanese": "私は朝早く始めます",
+          "sentence": "I ____ early in the morning.",
+          "verb": "start",
+          "choices": [
+            "start",
+            "starts",
+            "started",
+            "starting"
+          ],
+          "correctAnswer": "start",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-045",
+          "japanese": "私はコンピューターを使います",
+          "sentence": "I ____ a computer.",
+          "verb": "use",
+          "choices": [
+            "use",
+            "uses",
+            "useed",
+            "useing"
+          ],
+          "correctAnswer": "use",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-046",
+          "japanese": "私は新しいペンが必要です",
+          "sentence": "I ____ a new pen.",
+          "verb": "need",
+          "choices": [
+            "need",
+            "needs",
+            "needed",
+            "needing"
+          ],
+          "correctAnswer": "need",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-047",
+          "japanese": "私は新しい自転車が欲しいです",
+          "sentence": "I ____ a new bike.",
+          "verb": "want",
+          "choices": [
+            "want",
+            "wants",
+            "wanted",
+            "wanting"
+          ],
+          "correctAnswer": "want",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-048",
+          "japanese": "私はチョコレートが大好きです",
+          "sentence": "I ____ chocolate.",
+          "verb": "love",
+          "choices": [
+            "love",
+            "loves",
+            "loveed",
+            "loveing"
+          ],
+          "correctAnswer": "love",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-049",
+          "japanese": "私は野菜が嫌いです",
+          "sentence": "I ____ vegetables.",
+          "verb": "hate",
+          "choices": [
+            "hate",
+            "hates",
+            "hateed",
+            "hateing"
+          ],
+          "correctAnswer": "hate",
+          "difficulty": "beginner",
+          "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
+          "hint": "Iの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u0-050",
+          "japanese": "私は東京に住んでいます",
+          "sentence": "I ____ in Tokyo.",
+          "verb": "live",
+          "choices": [
+            "live",
+            "lives",
+            "liveed",
+            "liveing"
+          ],
+          "correctAnswer": "live",
           "difficulty": "beginner",
           "explanation": "主語がI（私）のときは、動詞は原形のままです。現在の習慣や事実を表すので現在形を使います。",
           "hint": "Iの現在形は動詞の原形"
@@ -560,6 +1088,534 @@
           "difficulty": "intermediate",
           "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
           "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-018",
+          "japanese": "私たちは遊びます",
+          "sentence": "We ____ with friends.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "play",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-019",
+          "japanese": "私たちは勉強します",
+          "sentence": "We ____ hard.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studyed",
+            "studying"
+          ],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-020",
+          "japanese": "私たちは働きます",
+          "sentence": "We ____ every day.",
+          "verb": "work",
+          "choices": [
+            "work",
+            "works",
+            "worked",
+            "working"
+          ],
+          "correctAnswer": "work",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-021",
+          "japanese": "私たちは好きです",
+          "sentence": "We ____ sports.",
+          "verb": "like",
+          "choices": [
+            "like",
+            "likes",
+            "likeed",
+            "likeing"
+          ],
+          "correctAnswer": "like",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-022",
+          "japanese": "私たちは大好きです",
+          "sentence": "We ____ summer.",
+          "verb": "love",
+          "choices": [
+            "love",
+            "loves",
+            "loveed",
+            "loveing"
+          ],
+          "correctAnswer": "love",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-023",
+          "japanese": "私たちは欲しいです",
+          "sentence": "We ____ a new computer.",
+          "verb": "want",
+          "choices": [
+            "want",
+            "wants",
+            "wanted",
+            "wanting"
+          ],
+          "correctAnswer": "want",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-024",
+          "japanese": "私たちは必要です",
+          "sentence": "We ____ help.",
+          "verb": "need",
+          "choices": [
+            "need",
+            "needs",
+            "needed",
+            "needing"
+          ],
+          "correctAnswer": "need",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-025",
+          "japanese": "私たちは楽しみます",
+          "sentence": "We ____ reading.",
+          "verb": "enjoy",
+          "choices": [
+            "enjoy",
+            "enjoys",
+            "enjoyed",
+            "enjoying"
+          ],
+          "correctAnswer": "enjoy",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-026",
+          "japanese": "私たちは練習します",
+          "sentence": "We ____ basketball.",
+          "verb": "practice",
+          "choices": [
+            "practice",
+            "practices",
+            "practiceed",
+            "practiceing"
+          ],
+          "correctAnswer": "practice",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-027",
+          "japanese": "私たちは教えます",
+          "sentence": "We ____ English.",
+          "verb": "teach",
+          "choices": [
+            "teach",
+            "teachs",
+            "teached",
+            "teaching"
+          ],
+          "correctAnswer": "teach",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-028",
+          "japanese": "私たちは学びます",
+          "sentence": "We ____ new things.",
+          "verb": "learn",
+          "choices": [
+            "learn",
+            "learns",
+            "learned",
+            "learning"
+          ],
+          "correctAnswer": "learn",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-029",
+          "japanese": "私たちは理解します",
+          "sentence": "We ____ math.",
+          "verb": "understand",
+          "choices": [
+            "understand",
+            "understands",
+            "understanded",
+            "understanding"
+          ],
+          "correctAnswer": "understand",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-030",
+          "japanese": "私たちは覚えています",
+          "sentence": "We ____ your name.",
+          "verb": "remember",
+          "choices": [
+            "remember",
+            "remembers",
+            "remembered",
+            "remembering"
+          ],
+          "correctAnswer": "remember",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-031",
+          "japanese": "私たちは知っています",
+          "sentence": "We ____ the answer.",
+          "verb": "know",
+          "choices": [
+            "know",
+            "knows",
+            "knowed",
+            "knowing"
+          ],
+          "correctAnswer": "know",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-032",
+          "japanese": "私たちは思います",
+          "sentence": "We ____ about you.",
+          "verb": "think",
+          "choices": [
+            "think",
+            "thinks",
+            "thinked",
+            "thinking"
+          ],
+          "correctAnswer": "think",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-033",
+          "japanese": "私たちは信じます",
+          "sentence": "We ____ in myself.",
+          "verb": "believe",
+          "choices": [
+            "believe",
+            "believes",
+            "believeed",
+            "believeing"
+          ],
+          "correctAnswer": "believe",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-034",
+          "japanese": "私たちは望みます",
+          "sentence": "We ____ for peace.",
+          "verb": "hope",
+          "choices": [
+            "hope",
+            "hopes",
+            "hopeed",
+            "hopeing"
+          ],
+          "correctAnswer": "hope",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-035",
+          "japanese": "私たちは遊びます",
+          "sentence": "We ____ with friends.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "play",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-036",
+          "japanese": "私たちは勉強します",
+          "sentence": "We ____ hard.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studyed",
+            "studying"
+          ],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-037",
+          "japanese": "私たちは働きます",
+          "sentence": "We ____ every day.",
+          "verb": "work",
+          "choices": [
+            "work",
+            "works",
+            "worked",
+            "working"
+          ],
+          "correctAnswer": "work",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-038",
+          "japanese": "私たちは好きです",
+          "sentence": "We ____ sports.",
+          "verb": "like",
+          "choices": [
+            "like",
+            "likes",
+            "likeed",
+            "likeing"
+          ],
+          "correctAnswer": "like",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-039",
+          "japanese": "私たちは大好きです",
+          "sentence": "We ____ summer.",
+          "verb": "love",
+          "choices": [
+            "love",
+            "loves",
+            "loveed",
+            "loveing"
+          ],
+          "correctAnswer": "love",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-040",
+          "japanese": "私たちは欲しいです",
+          "sentence": "We ____ a new computer.",
+          "verb": "want",
+          "choices": [
+            "want",
+            "wants",
+            "wanted",
+            "wanting"
+          ],
+          "correctAnswer": "want",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-041",
+          "japanese": "私たちは必要です",
+          "sentence": "We ____ help.",
+          "verb": "need",
+          "choices": [
+            "need",
+            "needs",
+            "needed",
+            "needing"
+          ],
+          "correctAnswer": "need",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-042",
+          "japanese": "私たちは楽しみます",
+          "sentence": "We ____ reading.",
+          "verb": "enjoy",
+          "choices": [
+            "enjoy",
+            "enjoys",
+            "enjoyed",
+            "enjoying"
+          ],
+          "correctAnswer": "enjoy",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-043",
+          "japanese": "私たちは練習します",
+          "sentence": "We ____ basketball.",
+          "verb": "practice",
+          "choices": [
+            "practice",
+            "practices",
+            "practiceed",
+            "practiceing"
+          ],
+          "correctAnswer": "practice",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-044",
+          "japanese": "私たちは教えます",
+          "sentence": "We ____ English.",
+          "verb": "teach",
+          "choices": [
+            "teach",
+            "teachs",
+            "teached",
+            "teaching"
+          ],
+          "correctAnswer": "teach",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-045",
+          "japanese": "私たちは学びます",
+          "sentence": "We ____ new things.",
+          "verb": "learn",
+          "choices": [
+            "learn",
+            "learns",
+            "learned",
+            "learning"
+          ],
+          "correctAnswer": "learn",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-046",
+          "japanese": "私たちは理解します",
+          "sentence": "We ____ math.",
+          "verb": "understand",
+          "choices": [
+            "understand",
+            "understands",
+            "understanded",
+            "understanding"
+          ],
+          "correctAnswer": "understand",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-047",
+          "japanese": "私たちは覚えています",
+          "sentence": "We ____ your name.",
+          "verb": "remember",
+          "choices": [
+            "remember",
+            "remembers",
+            "remembered",
+            "remembering"
+          ],
+          "correctAnswer": "remember",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-048",
+          "japanese": "私たちは知っています",
+          "sentence": "We ____ the answer.",
+          "verb": "know",
+          "choices": [
+            "know",
+            "knows",
+            "knowed",
+            "knowing"
+          ],
+          "correctAnswer": "know",
+          "difficulty": "beginner",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-049",
+          "japanese": "私たちは思います",
+          "sentence": "We ____ about you.",
+          "verb": "think",
+          "choices": [
+            "think",
+            "thinks",
+            "thinked",
+            "thinking"
+          ],
+          "correctAnswer": "think",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u2-050",
+          "japanese": "私たちは信じます",
+          "sentence": "We ____ in myself.",
+          "verb": "believe",
+          "choices": [
+            "believe",
+            "believes",
+            "believeed",
+            "believeing"
+          ],
+          "correctAnswer": "believe",
+          "difficulty": "intermediate",
+          "explanation": "主語がWe（私たち）のときは、動詞は原形のままです。",
+          "hint": "Weの現在形は動詞の原形"
         }
       ]
     },
@@ -837,6 +1893,534 @@
           "correctAnswer": "cries",
           "difficulty": "beginner",
           "explanation": "三人称単数現在形は動詞を変化させます。cryはcriesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-018",
+          "japanese": "彼は毎日サッカーをします",
+          "sentence": "He ____ soccer every day.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "plays",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞に-sを付けます。主語がHe（彼＝三人称単数）で、every day（毎日）という現在の習慣を表すため、playにsを付けてplaysとします。I/You/We/Theyならplayのままですが、He/She/Itは必ず-sを付けるルールです。Playedは過去形、playingは進行形なので不適切です。",
+          "hint": "三人称単数現在形は動詞に-sを付ける"
+        },
+        {
+          "id": "vf-g1-u3-019",
+          "japanese": "彼女は英語を勉強します",
+          "sentence": "She ____ English.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studies",
+          "difficulty": "beginner",
+          "explanation": "子音+yで終わる動詞の三人称単数現在形は、yをiに変えて-esを付けます。Studyは「子音d + y」で終わるため、yをiに変えてstudiesとします。主語がShe（三人称単数）で現在の習慣なので三人称単数現在形が必要です。もしplayのように「母音a + y」で終わる動詞なら、そのまま-sを付けてplaysとなります。この違いを覚えましょう。",
+          "hint": "子音+yで終わる動詞は、yをiに変えてesを付ける"
+        },
+        {
+          "id": "vf-g1-u3-020",
+          "japanese": "私の父は車を運転します",
+          "sentence": "My father ____ a car.",
+          "verb": "drive",
+          "choices": [
+            "drive",
+            "drives",
+            "drove",
+            "driving"
+          ],
+          "correctAnswer": "drives",
+          "difficulty": "beginner",
+          "explanation": "My father（私の父）は三人称単数なので、動詞に-sを付けます。Father、Mother、Tomなど特定の人物はすべて三人称単数です。現在の習慣を表すので現在形を使います。Driveにsを付けてdrivesが正解です。Droveは過去形、drivingは進行形なので文脈に合いません。三人称単数のときだけ動詞が変化することを意識しましょう。",
+          "hint": "三人称単数現在形"
+        },
+        {
+          "id": "vf-g1-u3-021",
+          "japanese": "マイクは朝食を食べます",
+          "sentence": "Mike ____ breakfast.",
+          "verb": "have",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "Haveの三人称単数現在形は不規則でhasになります。通常は動詞に-sを付けますが、haveだけは特別にhasという形に変わります。主語がTom（三人称単数）で現在の習慣なので、hasが正解です。Hadは過去形、havingは進行形です。Have、Do、Goなど頻出動詞の不規則変化は個別に覚える必要があります。Has breakfast（朝食を食べる）は重要表現です。",
+          "hint": "haveの三人称単数形は不規則"
+        },
+        {
+          "id": "vf-g1-u3-022",
+          "japanese": "彼女はテニスが好きです",
+          "sentence": "She ____ tennis.",
+          "verb": "like",
+          "choices": [
+            "like",
+            "likes",
+            "liked",
+            "liking"
+          ],
+          "correctAnswer": "likes",
+          "difficulty": "beginner",
+          "explanation": "主語がShe（三人称単数）で現在の状態を表すため、動詞に-sを付けます。Likeにsを付けてlikesが正解です。「好き」という状態は現在形で表現します。Likedは過去形「好きだった」、likingは進行形ですが、感情や状態を表す動詞は通常進行形にしません。I like / You like / We like / They likeに対して、He likes / She likes / It likesと三人称単数だけ形が変わります。",
+          "hint": "三人称単数現在形は-s"
+        },
+        {
+          "id": "vf-g1-u3-023",
+          "japanese": "私の犬は速く走ります",
+          "sentence": "My dog ____ fast.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "running"
+          ],
+          "correctAnswer": "runs",
+          "difficulty": "beginner",
+          "explanation": "My dog（私の犬）は三人称単数（it扱い）なので、動詞に-sを付けます。動物や物はitで表すため三人称単数です。Runにsを付けてrunsが正解です。Ranは過去形、runningは進行形です。「速く走る」という習性や能力を表すので現在形を使います。Dogs run（複数）に対して、A dog runs（単数）と区別できるようにしましょう。Fastは「速く」という副詞です。",
+          "hint": "三人称単数現在形"
+        },
+        {
+          "id": "vf-g1-u3-024",
+          "japanese": "彼/彼女は学校に行きます",
+          "sentence": "He/She ____ to school.",
+          "verb": "go",
+          "choices": [
+            "go",
+            "goes",
+            "goed",
+            "going"
+          ],
+          "correctAnswer": "goes",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。goはgoesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-025",
+          "japanese": "彼/彼女は猫を飼っています",
+          "sentence": "He/She ____ a cat.",
+          "verb": "have",
+          "choices": [
+            "have",
+            "has",
+            "haveed",
+            "haveing"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。haveはhasになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-026",
+          "japanese": "彼/彼女は宿題をします",
+          "sentence": "He/She ____ homework.",
+          "verb": "do",
+          "choices": [
+            "do",
+            "does",
+            "doed",
+            "doing"
+          ],
+          "correctAnswer": "does",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。doはdoesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-027",
+          "japanese": "彼/彼女はテレビを見ます",
+          "sentence": "He/She ____ TV.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watches",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watches",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。watchはwatchesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-028",
+          "japanese": "彼/彼女は英語を教えます",
+          "sentence": "He/She ____ English.",
+          "verb": "teach",
+          "choices": [
+            "teach",
+            "teaches",
+            "teached",
+            "teaching"
+          ],
+          "correctAnswer": "teaches",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。teachはteachesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-029",
+          "japanese": "彼/彼女は車を洗います",
+          "sentence": "He/She ____ the car.",
+          "verb": "wash",
+          "choices": [
+            "wash",
+            "washes",
+            "washed",
+            "washing"
+          ],
+          "correctAnswer": "washes",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。washはwashesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-030",
+          "japanese": "彼/彼女はボールを捕ります",
+          "sentence": "He/She ____ the ball.",
+          "verb": "catch",
+          "choices": [
+            "catch",
+            "catches",
+            "catched",
+            "catching"
+          ],
+          "correctAnswer": "catches",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。catchはcatchesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-031",
+          "japanese": "彼/彼女はコンピューターを修理します",
+          "sentence": "He/She ____ computers.",
+          "verb": "fix",
+          "choices": [
+            "fix",
+            "fixes",
+            "fixed",
+            "fixing"
+          ],
+          "correctAnswer": "fixes",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。fixはfixesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-032",
+          "japanese": "彼/彼女は一生懸命努力します",
+          "sentence": "He/She ____ hard.",
+          "verb": "try",
+          "choices": [
+            "try",
+            "tries",
+            "tryed",
+            "trying"
+          ],
+          "correctAnswer": "tries",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。tryはtriesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-033",
+          "japanese": "彼/彼女は飛行機で旅行します",
+          "sentence": "He/She ____ by plane.",
+          "verb": "fly",
+          "choices": [
+            "fly",
+            "flies",
+            "flyed",
+            "flying"
+          ],
+          "correctAnswer": "flies",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。flyはfliesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-034",
+          "japanese": "彼/彼女は時々泣きます",
+          "sentence": "He/She ____ sometimes.",
+          "verb": "cry",
+          "choices": [
+            "cry",
+            "cries",
+            "cryed",
+            "crying"
+          ],
+          "correctAnswer": "cries",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。cryはcriesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-035",
+          "japanese": "彼は毎日サッカーをします",
+          "sentence": "He ____ soccer every day.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "plays",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞に-sを付けます。主語がHe（彼＝三人称単数）で、every day（毎日）という現在の習慣を表すため、playにsを付けてplaysとします。I/You/We/Theyならplayのままですが、He/She/Itは必ず-sを付けるルールです。Playedは過去形、playingは進行形なので不適切です。",
+          "hint": "三人称単数現在形は動詞に-sを付ける"
+        },
+        {
+          "id": "vf-g1-u3-036",
+          "japanese": "彼女は英語を勉強します",
+          "sentence": "She ____ English.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studies",
+          "difficulty": "beginner",
+          "explanation": "子音+yで終わる動詞の三人称単数現在形は、yをiに変えて-esを付けます。Studyは「子音d + y」で終わるため、yをiに変えてstudiesとします。主語がShe（三人称単数）で現在の習慣なので三人称単数現在形が必要です。もしplayのように「母音a + y」で終わる動詞なら、そのまま-sを付けてplaysとなります。この違いを覚えましょう。",
+          "hint": "子音+yで終わる動詞は、yをiに変えてesを付ける"
+        },
+        {
+          "id": "vf-g1-u3-037",
+          "japanese": "私の父は車を運転します",
+          "sentence": "My father ____ a car.",
+          "verb": "drive",
+          "choices": [
+            "drive",
+            "drives",
+            "drove",
+            "driving"
+          ],
+          "correctAnswer": "drives",
+          "difficulty": "beginner",
+          "explanation": "My father（私の父）は三人称単数なので、動詞に-sを付けます。Father、Mother、Tomなど特定の人物はすべて三人称単数です。現在の習慣を表すので現在形を使います。Driveにsを付けてdrivesが正解です。Droveは過去形、drivingは進行形なので文脈に合いません。三人称単数のときだけ動詞が変化することを意識しましょう。",
+          "hint": "三人称単数現在形"
+        },
+        {
+          "id": "vf-g1-u3-038",
+          "japanese": "ケンは朝食を食べます",
+          "sentence": "Ken ____ breakfast.",
+          "verb": "have",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "Haveの三人称単数現在形は不規則でhasになります。通常は動詞に-sを付けますが、haveだけは特別にhasという形に変わります。主語がTom（三人称単数）で現在の習慣なので、hasが正解です。Hadは過去形、havingは進行形です。Have、Do、Goなど頻出動詞の不規則変化は個別に覚える必要があります。Has breakfast（朝食を食べる）は重要表現です。",
+          "hint": "haveの三人称単数形は不規則"
+        },
+        {
+          "id": "vf-g1-u3-039",
+          "japanese": "彼女はテニスが好きです",
+          "sentence": "She ____ tennis.",
+          "verb": "like",
+          "choices": [
+            "like",
+            "likes",
+            "liked",
+            "liking"
+          ],
+          "correctAnswer": "likes",
+          "difficulty": "beginner",
+          "explanation": "主語がShe（三人称単数）で現在の状態を表すため、動詞に-sを付けます。Likeにsを付けてlikesが正解です。「好き」という状態は現在形で表現します。Likedは過去形「好きだった」、likingは進行形ですが、感情や状態を表す動詞は通常進行形にしません。I like / You like / We like / They likeに対して、He likes / She likes / It likesと三人称単数だけ形が変わります。",
+          "hint": "三人称単数現在形は-s"
+        },
+        {
+          "id": "vf-g1-u3-040",
+          "japanese": "私の犬は速く走ります",
+          "sentence": "My dog ____ fast.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "running"
+          ],
+          "correctAnswer": "runs",
+          "difficulty": "beginner",
+          "explanation": "My dog（私の犬）は三人称単数（it扱い）なので、動詞に-sを付けます。動物や物はitで表すため三人称単数です。Runにsを付けてrunsが正解です。Ranは過去形、runningは進行形です。「速く走る」という習性や能力を表すので現在形を使います。Dogs run（複数）に対して、A dog runs（単数）と区別できるようにしましょう。Fastは「速く」という副詞です。",
+          "hint": "三人称単数現在形"
+        },
+        {
+          "id": "vf-g1-u3-041",
+          "japanese": "彼/彼女は学校に行きます",
+          "sentence": "He/She ____ to school.",
+          "verb": "go",
+          "choices": [
+            "go",
+            "goes",
+            "goed",
+            "going"
+          ],
+          "correctAnswer": "goes",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。goはgoesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-042",
+          "japanese": "彼/彼女は猫を飼っています",
+          "sentence": "He/She ____ a cat.",
+          "verb": "have",
+          "choices": [
+            "have",
+            "has",
+            "haveed",
+            "haveing"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。haveはhasになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-043",
+          "japanese": "彼/彼女は宿題をします",
+          "sentence": "He/She ____ homework.",
+          "verb": "do",
+          "choices": [
+            "do",
+            "does",
+            "doed",
+            "doing"
+          ],
+          "correctAnswer": "does",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。doはdoesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-044",
+          "japanese": "彼/彼女はテレビを見ます",
+          "sentence": "He/She ____ TV.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watches",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watches",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。watchはwatchesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-045",
+          "japanese": "彼/彼女は英語を教えます",
+          "sentence": "He/She ____ English.",
+          "verb": "teach",
+          "choices": [
+            "teach",
+            "teaches",
+            "teached",
+            "teaching"
+          ],
+          "correctAnswer": "teaches",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。teachはteachesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-046",
+          "japanese": "彼/彼女は車を洗います",
+          "sentence": "He/She ____ the car.",
+          "verb": "wash",
+          "choices": [
+            "wash",
+            "washes",
+            "washed",
+            "washing"
+          ],
+          "correctAnswer": "washes",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。washはwashesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-047",
+          "japanese": "彼/彼女はボールを捕ります",
+          "sentence": "He/She ____ the ball.",
+          "verb": "catch",
+          "choices": [
+            "catch",
+            "catches",
+            "catched",
+            "catching"
+          ],
+          "correctAnswer": "catches",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。catchはcatchesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-048",
+          "japanese": "彼/彼女はコンピューターを修理します",
+          "sentence": "He/She ____ computers.",
+          "verb": "fix",
+          "choices": [
+            "fix",
+            "fixes",
+            "fixed",
+            "fixing"
+          ],
+          "correctAnswer": "fixes",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。fixはfixesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-049",
+          "japanese": "彼/彼女は一生懸命努力します",
+          "sentence": "He/She ____ hard.",
+          "verb": "try",
+          "choices": [
+            "try",
+            "tries",
+            "tryed",
+            "trying"
+          ],
+          "correctAnswer": "tries",
+          "difficulty": "beginner",
+          "explanation": "三人称単数現在形は動詞を変化させます。tryはtriesになります。",
+          "hint": "三人称単数現在形の変化"
+        },
+        {
+          "id": "vf-g1-u3-050",
+          "japanese": "彼/彼女は飛行機で旅行します",
+          "sentence": "He/She ____ by plane.",
+          "verb": "fly",
+          "choices": [
+            "fly",
+            "flies",
+            "flyed",
+            "flying"
+          ],
+          "correctAnswer": "flies",
+          "difficulty": "intermediate",
+          "explanation": "三人称単数現在形は動詞を変化させます。flyはfliesになります。",
           "hint": "三人称単数現在形の変化"
         }
       ]
@@ -1116,6 +2700,534 @@
           "difficulty": "intermediate",
           "explanation": "Howで始まる疑問文では、主語に応じて動詞を適切な形にします。",
           "hint": "How疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-018",
+          "japanese": "何をしますか",
+          "sentence": "What you ____ on weekends?",
+          "verb": "do",
+          "choices": [
+            "do",
+            "does",
+            "did",
+            "doing"
+          ],
+          "correctAnswer": "do",
+          "difficulty": "beginner",
+          "explanation": "Whatで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-019",
+          "japanese": "どこに住んでいますか",
+          "sentence": "Where you ____?",
+          "verb": "live",
+          "choices": [
+            "live",
+            "lives",
+            "lived",
+            "living"
+          ],
+          "correctAnswer": "live",
+          "difficulty": "beginner",
+          "explanation": "Whereで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Where疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-020",
+          "japanese": "いつ勉強しますか",
+          "sentence": "When you ____?",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "Whenで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "When疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-021",
+          "japanese": "なぜ好きですか",
+          "sentence": "Why you ____ cats?",
+          "verb": "like",
+          "choices": [
+            "like",
+            "likes",
+            "liked",
+            "liking"
+          ],
+          "correctAnswer": "like",
+          "difficulty": "beginner",
+          "explanation": "Whyで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Why疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-022",
+          "japanese": "どうやって行きますか",
+          "sentence": "How you ____ to school?",
+          "verb": "go",
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "going"
+          ],
+          "correctAnswer": "go",
+          "difficulty": "beginner",
+          "explanation": "Howで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "How疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-023",
+          "japanese": "何時に起きますか",
+          "sentence": "What time you ____ up?",
+          "verb": "get",
+          "choices": [
+            "get",
+            "gets",
+            "got",
+            "getting"
+          ],
+          "correctAnswer": "get",
+          "difficulty": "beginner",
+          "explanation": "What timeで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What time疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-024",
+          "japanese": "誰がテニスをしますか",
+          "sentence": "Who ____ tennis?",
+          "verb": "plays",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "plays",
+          "difficulty": "intermediate",
+          "explanation": "Whoで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Who疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-025",
+          "japanese": "彼は何をしますか",
+          "sentence": "What he ____?",
+          "verb": "does",
+          "choices": [
+            "do",
+            "does",
+            "did",
+            "doing"
+          ],
+          "correctAnswer": "does",
+          "difficulty": "intermediate",
+          "explanation": "Whatで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-026",
+          "japanese": "彼女はどこに住んでいますか",
+          "sentence": "Where she ____?",
+          "verb": "lives",
+          "choices": [
+            "live",
+            "lives",
+            "lived",
+            "living"
+          ],
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "Whereで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Where疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-027",
+          "japanese": "彼はいつ勉強しますか",
+          "sentence": "When he ____?",
+          "verb": "studies",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studies",
+          "difficulty": "intermediate",
+          "explanation": "Whenで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "When疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-028",
+          "japanese": "彼女はなぜ好きですか",
+          "sentence": "Why she ____ music?",
+          "verb": "likes",
+          "choices": [
+            "like",
+            "likes",
+            "liked",
+            "liking"
+          ],
+          "correctAnswer": "likes",
+          "difficulty": "intermediate",
+          "explanation": "Whyで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Why疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-029",
+          "japanese": "彼はどうやって行きますか",
+          "sentence": "How he ____ to work?",
+          "verb": "goes",
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "going"
+          ],
+          "correctAnswer": "goes",
+          "difficulty": "intermediate",
+          "explanation": "Howで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "How疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-030",
+          "japanese": "彼らは何をしますか",
+          "sentence": "What they ____?",
+          "verb": "do",
+          "choices": [
+            "do",
+            "does",
+            "did",
+            "doing"
+          ],
+          "correctAnswer": "do",
+          "difficulty": "beginner",
+          "explanation": "Whatで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-031",
+          "japanese": "あなたたちはどこで働きますか",
+          "sentence": "Where you ____?",
+          "verb": "work",
+          "choices": [
+            "work",
+            "works",
+            "worked",
+            "working"
+          ],
+          "correctAnswer": "work",
+          "difficulty": "beginner",
+          "explanation": "Whereで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Where疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-032",
+          "japanese": "彼らはいつ遊びますか",
+          "sentence": "When they ____?",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "play",
+          "difficulty": "beginner",
+          "explanation": "Whenで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "When疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-033",
+          "japanese": "私たちはなぜ必要ですか",
+          "sentence": "Why we ____ this?",
+          "verb": "need",
+          "choices": [
+            "need",
+            "needs",
+            "needed",
+            "needing"
+          ],
+          "correctAnswer": "need",
+          "difficulty": "intermediate",
+          "explanation": "Whyで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Why疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-034",
+          "japanese": "あなたはどうやって知っていますか",
+          "sentence": "How you ____ that?",
+          "verb": "know",
+          "choices": [
+            "know",
+            "knows",
+            "knew",
+            "knowing"
+          ],
+          "correctAnswer": "know",
+          "difficulty": "intermediate",
+          "explanation": "Howで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "How疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-035",
+          "japanese": "何をしますか",
+          "sentence": "What you ____ on weekends?",
+          "verb": "do",
+          "choices": [
+            "do",
+            "does",
+            "did",
+            "doing"
+          ],
+          "correctAnswer": "do",
+          "difficulty": "beginner",
+          "explanation": "Whatで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-036",
+          "japanese": "どこに住んでいますか",
+          "sentence": "Where you ____?",
+          "verb": "live",
+          "choices": [
+            "live",
+            "lives",
+            "lived",
+            "living"
+          ],
+          "correctAnswer": "live",
+          "difficulty": "beginner",
+          "explanation": "Whereで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Where疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-037",
+          "japanese": "いつ勉強しますか",
+          "sentence": "When you ____?",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "Whenで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "When疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-038",
+          "japanese": "なぜ好きですか",
+          "sentence": "Why you ____ cats?",
+          "verb": "like",
+          "choices": [
+            "like",
+            "likes",
+            "liked",
+            "liking"
+          ],
+          "correctAnswer": "like",
+          "difficulty": "beginner",
+          "explanation": "Whyで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Why疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-039",
+          "japanese": "どうやって行きますか",
+          "sentence": "How you ____ to school?",
+          "verb": "go",
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "going"
+          ],
+          "correctAnswer": "go",
+          "difficulty": "beginner",
+          "explanation": "Howで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "How疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-040",
+          "japanese": "何時に起きますか",
+          "sentence": "What time you ____ up?",
+          "verb": "get",
+          "choices": [
+            "get",
+            "gets",
+            "got",
+            "getting"
+          ],
+          "correctAnswer": "get",
+          "difficulty": "beginner",
+          "explanation": "What timeで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What time疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-041",
+          "japanese": "誰がテニスをしますか",
+          "sentence": "Who ____ tennis?",
+          "verb": "plays",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "plays",
+          "difficulty": "intermediate",
+          "explanation": "Whoで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Who疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-042",
+          "japanese": "彼は何をしますか",
+          "sentence": "What he ____?",
+          "verb": "does",
+          "choices": [
+            "do",
+            "does",
+            "did",
+            "doing"
+          ],
+          "correctAnswer": "does",
+          "difficulty": "intermediate",
+          "explanation": "Whatで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-043",
+          "japanese": "彼女はどこに住んでいますか",
+          "sentence": "Where she ____?",
+          "verb": "lives",
+          "choices": [
+            "live",
+            "lives",
+            "lived",
+            "living"
+          ],
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "Whereで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Where疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-044",
+          "japanese": "彼はいつ勉強しますか",
+          "sentence": "When he ____?",
+          "verb": "studies",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studies",
+          "difficulty": "intermediate",
+          "explanation": "Whenで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "When疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-045",
+          "japanese": "彼女はなぜ好きですか",
+          "sentence": "Why she ____ music?",
+          "verb": "likes",
+          "choices": [
+            "like",
+            "likes",
+            "liked",
+            "liking"
+          ],
+          "correctAnswer": "likes",
+          "difficulty": "intermediate",
+          "explanation": "Whyで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Why疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-046",
+          "japanese": "彼はどうやって行きますか",
+          "sentence": "How he ____ to work?",
+          "verb": "goes",
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "going"
+          ],
+          "correctAnswer": "goes",
+          "difficulty": "intermediate",
+          "explanation": "Howで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "How疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-047",
+          "japanese": "彼らは何をしますか",
+          "sentence": "What they ____?",
+          "verb": "do",
+          "choices": [
+            "do",
+            "does",
+            "did",
+            "doing"
+          ],
+          "correctAnswer": "do",
+          "difficulty": "beginner",
+          "explanation": "Whatで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "What疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-048",
+          "japanese": "あなたたちはどこで働きますか",
+          "sentence": "Where you ____?",
+          "verb": "work",
+          "choices": [
+            "work",
+            "works",
+            "worked",
+            "working"
+          ],
+          "correctAnswer": "work",
+          "difficulty": "beginner",
+          "explanation": "Whereで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Where疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-049",
+          "japanese": "彼らはいつ遊びますか",
+          "sentence": "When they ____?",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "play",
+          "difficulty": "beginner",
+          "explanation": "Whenで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "When疑問文の動詞の形"
+        },
+        {
+          "id": "vf-g1-u4-050",
+          "japanese": "私たちはなぜ必要ですか",
+          "sentence": "Why we ____ this?",
+          "verb": "need",
+          "choices": [
+            "need",
+            "needs",
+            "needed",
+            "needing"
+          ],
+          "correctAnswer": "need",
+          "difficulty": "intermediate",
+          "explanation": "Whyで始まる疑問文では、主語に応じて動詞を適切な形にします。",
+          "hint": "Why疑問文の動詞の形"
         }
       ]
     },
@@ -1392,6 +3504,534 @@
           ],
           "correctAnswer": "use",
           "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-018",
+          "japanese": "私は泳げます",
+          "sentence": "I can ____ well.",
+          "verb": "swim",
+          "choices": [
+            "swim",
+            "swims",
+            "swimed",
+            "swiming"
+          ],
+          "correctAnswer": "swim",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-019",
+          "japanese": "私は走れます",
+          "sentence": "I can ____ well.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "runed",
+            "runing"
+          ],
+          "correctAnswer": "run",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-020",
+          "japanese": "私は跳べます",
+          "sentence": "I can ____ well.",
+          "verb": "jump",
+          "choices": [
+            "jump",
+            "jumps",
+            "jumped",
+            "jumping"
+          ],
+          "correctAnswer": "jump",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-021",
+          "japanese": "私は踊れます",
+          "sentence": "I can ____ well.",
+          "verb": "dance",
+          "choices": [
+            "dance",
+            "dances",
+            "danceed",
+            "danceing"
+          ],
+          "correctAnswer": "dance",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-022",
+          "japanese": "私は歌えます",
+          "sentence": "I can ____ well.",
+          "verb": "sing",
+          "choices": [
+            "sing",
+            "sings",
+            "singed",
+            "singing"
+          ],
+          "correctAnswer": "sing",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-023",
+          "japanese": "私は料理できます",
+          "sentence": "I can ____ well.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cook",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-024",
+          "japanese": "私は運転できます",
+          "sentence": "I can ____ well.",
+          "verb": "drive",
+          "choices": [
+            "drive",
+            "drives",
+            "driveed",
+            "driveing"
+          ],
+          "correctAnswer": "drive",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-025",
+          "japanese": "私は話せます",
+          "sentence": "I can ____ well.",
+          "verb": "speak",
+          "choices": [
+            "speak",
+            "speaks",
+            "speaked",
+            "speaking"
+          ],
+          "correctAnswer": "speak",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-026",
+          "japanese": "私は書けます",
+          "sentence": "I can ____ well.",
+          "verb": "write",
+          "choices": [
+            "write",
+            "writes",
+            "writeed",
+            "writeing"
+          ],
+          "correctAnswer": "write",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-027",
+          "japanese": "私は読めます",
+          "sentence": "I can ____ well.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "readed",
+            "reading"
+          ],
+          "correctAnswer": "read",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-028",
+          "japanese": "私は弾けます",
+          "sentence": "I can ____ well.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "play",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-029",
+          "japanese": "私は理解できます",
+          "sentence": "I can ____ well.",
+          "verb": "understand",
+          "choices": [
+            "understand",
+            "understands",
+            "understanded",
+            "understanding"
+          ],
+          "correctAnswer": "understand",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-030",
+          "japanese": "私は手伝えます",
+          "sentence": "I can ____ well.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "help",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-031",
+          "japanese": "私は教えられます",
+          "sentence": "I can ____ well.",
+          "verb": "teach",
+          "choices": [
+            "teach",
+            "teachs",
+            "teached",
+            "teaching"
+          ],
+          "correctAnswer": "teach",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-032",
+          "japanese": "私は解けます",
+          "sentence": "I can ____ well.",
+          "verb": "solve",
+          "choices": [
+            "solve",
+            "solves",
+            "solveed",
+            "solveing"
+          ],
+          "correctAnswer": "solve",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-033",
+          "japanese": "私は覚えられます",
+          "sentence": "I can ____ well.",
+          "verb": "remember",
+          "choices": [
+            "remember",
+            "remembers",
+            "remembered",
+            "remembering"
+          ],
+          "correctAnswer": "remember",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-034",
+          "japanese": "私は使えます",
+          "sentence": "I can ____ well.",
+          "verb": "use",
+          "choices": [
+            "use",
+            "uses",
+            "useed",
+            "useing"
+          ],
+          "correctAnswer": "use",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-035",
+          "japanese": "私は泳げます",
+          "sentence": "I can ____ well.",
+          "verb": "swim",
+          "choices": [
+            "swim",
+            "swims",
+            "swimed",
+            "swiming"
+          ],
+          "correctAnswer": "swim",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-036",
+          "japanese": "私は走れます",
+          "sentence": "I can ____ well.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "runed",
+            "runing"
+          ],
+          "correctAnswer": "run",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-037",
+          "japanese": "私は跳べます",
+          "sentence": "I can ____ well.",
+          "verb": "jump",
+          "choices": [
+            "jump",
+            "jumps",
+            "jumped",
+            "jumping"
+          ],
+          "correctAnswer": "jump",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-038",
+          "japanese": "私は踊れます",
+          "sentence": "I can ____ well.",
+          "verb": "dance",
+          "choices": [
+            "dance",
+            "dances",
+            "danceed",
+            "danceing"
+          ],
+          "correctAnswer": "dance",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-039",
+          "japanese": "私は歌えます",
+          "sentence": "I can ____ well.",
+          "verb": "sing",
+          "choices": [
+            "sing",
+            "sings",
+            "singed",
+            "singing"
+          ],
+          "correctAnswer": "sing",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-040",
+          "japanese": "私は料理できます",
+          "sentence": "I can ____ well.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cook",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-041",
+          "japanese": "私は運転できます",
+          "sentence": "I can ____ well.",
+          "verb": "drive",
+          "choices": [
+            "drive",
+            "drives",
+            "driveed",
+            "driveing"
+          ],
+          "correctAnswer": "drive",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-042",
+          "japanese": "私は話せます",
+          "sentence": "I can ____ well.",
+          "verb": "speak",
+          "choices": [
+            "speak",
+            "speaks",
+            "speaked",
+            "speaking"
+          ],
+          "correctAnswer": "speak",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-043",
+          "japanese": "私は書けます",
+          "sentence": "I can ____ well.",
+          "verb": "write",
+          "choices": [
+            "write",
+            "writes",
+            "writeed",
+            "writeing"
+          ],
+          "correctAnswer": "write",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-044",
+          "japanese": "私は読めます",
+          "sentence": "I can ____ well.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "readed",
+            "reading"
+          ],
+          "correctAnswer": "read",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-045",
+          "japanese": "私は弾けます",
+          "sentence": "I can ____ well.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "play",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-046",
+          "japanese": "私は理解できます",
+          "sentence": "I can ____ well.",
+          "verb": "understand",
+          "choices": [
+            "understand",
+            "understands",
+            "understanded",
+            "understanding"
+          ],
+          "correctAnswer": "understand",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-047",
+          "japanese": "私は手伝えます",
+          "sentence": "I can ____ well.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "help",
+          "difficulty": "beginner",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-048",
+          "japanese": "私は教えられます",
+          "sentence": "I can ____ well.",
+          "verb": "teach",
+          "choices": [
+            "teach",
+            "teachs",
+            "teached",
+            "teaching"
+          ],
+          "correctAnswer": "teach",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-049",
+          "japanese": "私は解けます",
+          "sentence": "I can ____ well.",
+          "verb": "solve",
+          "choices": [
+            "solve",
+            "solves",
+            "solveed",
+            "solveing"
+          ],
+          "correctAnswer": "solve",
+          "difficulty": "intermediate",
+          "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
+          "hint": "can + 動詞の原形"
+        },
+        {
+          "id": "vf-g1-u5-050",
+          "japanese": "私は覚えられます",
+          "sentence": "I can ____ well.",
+          "verb": "remember",
+          "choices": [
+            "remember",
+            "remembers",
+            "remembered",
+            "remembering"
+          ],
+          "correctAnswer": "remember",
+          "difficulty": "intermediate",
           "explanation": "can の後ろは必ず動詞の原形を使います。主語が何であっても変化しません。",
           "hint": "can + 動詞の原形"
         }
@@ -1672,6 +4312,534 @@
           "difficulty": "beginner",
           "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。swimの-ing形はswimmingです。",
           "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-018",
+          "japanese": "彼は今勉強しています",
+          "sentence": "He ____ now.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "is studying"
+          ],
+          "correctAnswer": "is studying",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。Now（今）があるので「今まさに～している」という現在進行形が必要です。主語がHe（三人称単数）なので、be動詞はisを使い、studyにingを付けてis studyingとします。現在形studiesは習慣、過去形studiedは過去の出来事を表すため不適切です。現在進行形は「今この瞬間の動作」を表します。Now、at the momentなどの語と一緒によく使われます。",
+          "hint": "現在進行形はbe + -ing"
+        },
+        {
+          "id": "vf-g1-u6-019",
+          "japanese": "私たちは野球をしています",
+          "sentence": "We ____ baseball.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "are playing"
+          ],
+          "correctAnswer": "are playing",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「今している」という現在進行形が必要です。主語がWe（複数）なので、be動詞はareを使い、playにingを付けてare playingとします。Playは現在形（習慣）、playsは三人称単数現在形、playedは過去形なので文脈に合いません。Be動詞は主語によって変わります（I am / You are / He is / We are / They are）。この使い分けが重要です。",
+          "hint": "We + are + -ing"
+        },
+        {
+          "id": "vf-g1-u6-020",
+          "japanese": "彼女はテレビを見ています",
+          "sentence": "She ____ TV.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watches",
+            "watched",
+            "is watching"
+          ],
+          "correctAnswer": "is watching",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「見ています」という現在進行形が必要です。主語がShe（三人称単数）なので、be動詞はisを使い、watchにingを付けてis watchingとします。Watchは現在形、watchesは三人称単数現在形、watchedは過去形です。Watch TV（テレビを見る）は頻出表現です。現在進行形は動作の最中を表すので、「今まさに見ている」という臨場感があります。",
+          "hint": "She + is + -ing"
+        },
+        {
+          "id": "vf-g1-u6-021",
+          "japanese": "私は音楽を聴いています",
+          "sentence": "I ____ to music.",
+          "verb": "listen",
+          "choices": [
+            "listen",
+            "listens",
+            "listened",
+            "am listening"
+          ],
+          "correctAnswer": "am listening",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「聴いています」という現在進行形が必要です。主語がI（私）なので、be動詞はamを使い、listenにingを付けてam listeningとします。Listenは現在形、listensは三人称単数現在形、listenedは過去形です。Listen to ～（～を聴く）は前置詞toが必要な重要表現です。I am、You are、He isとbe動詞の使い分けを確実にしましょう。",
+          "hint": "I + am + -ing"
+        },
+        {
+          "id": "vf-g1-u6-022",
+          "japanese": "彼らは走っています",
+          "sentence": "They ____.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "are running"
+          ],
+          "correctAnswer": "are running",
+          "difficulty": "intermediate",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「走っています」という現在進行形が必要です。主語がThey（複数）なので、be動詞はareを使います。Runは「短母音 + 子音1つ」で終わるため、最後の子音nを重ねてrunningとします（run→running）。Runsは三人称単数現在形、ranは過去形です。Stop→stopping、swim→swimmingなども同じパターンです。子音を重ねるルールは重要です。",
+          "hint": "短母音+子音で終わる動詞は子音を重ねる"
+        },
+        {
+          "id": "vf-g1-u6-023",
+          "japanese": "私の母は料理をしています",
+          "sentence": "My mother ____.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "is cooking"
+          ],
+          "correctAnswer": "is cooking",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「料理をしています」という現在進行形が必要です。主語がMy mother（私の母＝三人称単数）なので、be動詞はisを使い、cookにingを付けてis cookingとします。Cookは現在形、cooksは三人称単数現在形、cookedは過去形です。現在進行形で「今まさに料理をしている最中」という動作の進行を表します。Be動詞の選択（is）が重要なポイントです。",
+          "hint": "三人称単数 + is + -ing"
+        },
+        {
+          "id": "vf-g1-u6-024",
+          "japanese": "私は今勉強しています",
+          "sentence": "I am ____ now.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studyed",
+            "studying"
+          ],
+          "correctAnswer": "studying",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。studyの-ing形はstudyingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-025",
+          "japanese": "私は今遊んでいます",
+          "sentence": "I am ____ now.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "playing",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。playの-ing形はplayingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-026",
+          "japanese": "私は今見ています",
+          "sentence": "I am ____ now.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watchs",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watching",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。watchの-ing形はwatchingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-027",
+          "japanese": "私は今聞いています",
+          "sentence": "I am ____ now.",
+          "verb": "listen",
+          "choices": [
+            "listen",
+            "listens",
+            "listened",
+            "listening"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。listenの-ing形はlisteningです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-028",
+          "japanese": "私は今書いています",
+          "sentence": "I am ____ now.",
+          "verb": "write",
+          "choices": [
+            "write",
+            "writes",
+            "writeed",
+            "writing"
+          ],
+          "correctAnswer": "writing",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。writeの-ing形はwritingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-029",
+          "japanese": "私は今読んでいます",
+          "sentence": "I am ____ now.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "readed",
+            "reading"
+          ],
+          "correctAnswer": "reading",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。readの-ing形はreadingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-030",
+          "japanese": "私は今料理しています",
+          "sentence": "I am ____ now.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cooking",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。cookの-ing形はcookingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-031",
+          "japanese": "私は今食べています",
+          "sentence": "I am ____ now.",
+          "verb": "eat",
+          "choices": [
+            "eat",
+            "eats",
+            "eated",
+            "eating"
+          ],
+          "correctAnswer": "eating",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。eatの-ing形はeatingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-032",
+          "japanese": "私は今寝ています",
+          "sentence": "I am ____ now.",
+          "verb": "sleep",
+          "choices": [
+            "sleep",
+            "sleeps",
+            "sleeped",
+            "sleeping"
+          ],
+          "correctAnswer": "sleeping",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。sleepの-ing形はsleepingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-033",
+          "japanese": "私は今走っています",
+          "sentence": "I am ____ now.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "runed",
+            "running"
+          ],
+          "correctAnswer": "running",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。runの-ing形はrunningです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-034",
+          "japanese": "私は今泳いでいます",
+          "sentence": "I am ____ now.",
+          "verb": "swim",
+          "choices": [
+            "swim",
+            "swims",
+            "swimed",
+            "swimming"
+          ],
+          "correctAnswer": "swimming",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。swimの-ing形はswimmingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-035",
+          "japanese": "彼は今勉強しています",
+          "sentence": "He ____ now.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "is studying"
+          ],
+          "correctAnswer": "is studying",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。Now（今）があるので「今まさに～している」という現在進行形が必要です。主語がHe（三人称単数）なので、be動詞はisを使い、studyにingを付けてis studyingとします。現在形studiesは習慣、過去形studiedは過去の出来事を表すため不適切です。現在進行形は「今この瞬間の動作」を表します。Now、at the momentなどの語と一緒によく使われます。",
+          "hint": "現在進行形はbe + -ing"
+        },
+        {
+          "id": "vf-g1-u6-036",
+          "japanese": "私たちは野球をしています",
+          "sentence": "We ____ baseball.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "are playing"
+          ],
+          "correctAnswer": "are playing",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「今している」という現在進行形が必要です。主語がWe（複数）なので、be動詞はareを使い、playにingを付けてare playingとします。Playは現在形（習慣）、playsは三人称単数現在形、playedは過去形なので文脈に合いません。Be動詞は主語によって変わります（I am / You are / He is / We are / They are）。この使い分けが重要です。",
+          "hint": "We + are + -ing"
+        },
+        {
+          "id": "vf-g1-u6-037",
+          "japanese": "彼女はテレビを見ています",
+          "sentence": "She ____ TV.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watches",
+            "watched",
+            "is watching"
+          ],
+          "correctAnswer": "is watching",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「見ています」という現在進行形が必要です。主語がShe（三人称単数）なので、be動詞はisを使い、watchにingを付けてis watchingとします。Watchは現在形、watchesは三人称単数現在形、watchedは過去形です。Watch TV（テレビを見る）は頻出表現です。現在進行形は動作の最中を表すので、「今まさに見ている」という臨場感があります。",
+          "hint": "She + is + -ing"
+        },
+        {
+          "id": "vf-g1-u6-038",
+          "japanese": "私は音楽を聴いています",
+          "sentence": "I ____ to music.",
+          "verb": "listen",
+          "choices": [
+            "listen",
+            "listens",
+            "listened",
+            "am listening"
+          ],
+          "correctAnswer": "am listening",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「聴いています」という現在進行形が必要です。主語がI（私）なので、be動詞はamを使い、listenにingを付けてam listeningとします。Listenは現在形、listensは三人称単数現在形、listenedは過去形です。Listen to ～（～を聴く）は前置詞toが必要な重要表現です。I am、You are、He isとbe動詞の使い分けを確実にしましょう。",
+          "hint": "I + am + -ing"
+        },
+        {
+          "id": "vf-g1-u6-039",
+          "japanese": "彼らは走っています",
+          "sentence": "They ____.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "are running"
+          ],
+          "correctAnswer": "are running",
+          "difficulty": "intermediate",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「走っています」という現在進行形が必要です。主語がThey（複数）なので、be動詞はareを使います。Runは「短母音 + 子音1つ」で終わるため、最後の子音nを重ねてrunningとします（run→running）。Runsは三人称単数現在形、ranは過去形です。Stop→stopping、swim→swimmingなども同じパターンです。子音を重ねるルールは重要です。",
+          "hint": "短母音+子音で終わる動詞は子音を重ねる"
+        },
+        {
+          "id": "vf-g1-u6-040",
+          "japanese": "私の母は料理をしています",
+          "sentence": "My mother ____.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "is cooking"
+          ],
+          "correctAnswer": "is cooking",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は〈be動詞 + 動詞のing形〉で表します。「料理をしています」という現在進行形が必要です。主語がMy mother（私の母＝三人称単数）なので、be動詞はisを使い、cookにingを付けてis cookingとします。Cookは現在形、cooksは三人称単数現在形、cookedは過去形です。現在進行形で「今まさに料理をしている最中」という動作の進行を表します。Be動詞の選択（is）が重要なポイントです。",
+          "hint": "三人称単数 + is + -ing"
+        },
+        {
+          "id": "vf-g1-u6-041",
+          "japanese": "私は今勉強しています",
+          "sentence": "I am ____ now.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studyed",
+            "studying"
+          ],
+          "correctAnswer": "studying",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。studyの-ing形はstudyingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-042",
+          "japanese": "私は今遊んでいます",
+          "sentence": "I am ____ now.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "playing",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。playの-ing形はplayingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-043",
+          "japanese": "私は今見ています",
+          "sentence": "I am ____ now.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watchs",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watching",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。watchの-ing形はwatchingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-044",
+          "japanese": "私は今聞いています",
+          "sentence": "I am ____ now.",
+          "verb": "listen",
+          "choices": [
+            "listen",
+            "listens",
+            "listened",
+            "listening"
+          ],
+          "correctAnswer": "listening",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。listenの-ing形はlisteningです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-045",
+          "japanese": "私は今書いています",
+          "sentence": "I am ____ now.",
+          "verb": "write",
+          "choices": [
+            "write",
+            "writes",
+            "writeed",
+            "writing"
+          ],
+          "correctAnswer": "writing",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。writeの-ing形はwritingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-046",
+          "japanese": "私は今読んでいます",
+          "sentence": "I am ____ now.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "readed",
+            "reading"
+          ],
+          "correctAnswer": "reading",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。readの-ing形はreadingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-047",
+          "japanese": "私は今料理しています",
+          "sentence": "I am ____ now.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cooking",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。cookの-ing形はcookingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-048",
+          "japanese": "私は今食べています",
+          "sentence": "I am ____ now.",
+          "verb": "eat",
+          "choices": [
+            "eat",
+            "eats",
+            "eated",
+            "eating"
+          ],
+          "correctAnswer": "eating",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。eatの-ing形はeatingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-049",
+          "japanese": "私は今寝ています",
+          "sentence": "I am ____ now.",
+          "verb": "sleep",
+          "choices": [
+            "sleep",
+            "sleeps",
+            "sleeped",
+            "sleeping"
+          ],
+          "correctAnswer": "sleeping",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。sleepの-ing形はsleepingです。",
+          "hint": "be動詞 + 動詞のing形"
+        },
+        {
+          "id": "vf-g1-u6-050",
+          "japanese": "私は今走っています",
+          "sentence": "I am ____ now.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "runed",
+            "running"
+          ],
+          "correctAnswer": "running",
+          "difficulty": "beginner",
+          "explanation": "現在進行形は「be動詞 + 動詞ing形」で表します。runの-ing形はrunningです。",
+          "hint": "be動詞 + 動詞のing形"
         }
       ]
     },
@@ -1948,6 +5116,534 @@
           ],
           "correctAnswer": "try",
           "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-018",
+          "japanese": "座りなさい",
+          "sentence": "____ down.",
+          "verb": "sit",
+          "choices": [
+            "sit",
+            "sits",
+            "sited",
+            "siting"
+          ],
+          "correctAnswer": "sit",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-019",
+          "japanese": "立ちなさい",
+          "sentence": "____ up.",
+          "verb": "stand",
+          "choices": [
+            "stand",
+            "stands",
+            "standed",
+            "standing"
+          ],
+          "correctAnswer": "stand",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-020",
+          "japanese": "開けなさい",
+          "sentence": "____ the door.",
+          "verb": "open",
+          "choices": [
+            "open",
+            "opens",
+            "opened",
+            "opening"
+          ],
+          "correctAnswer": "open",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-021",
+          "japanese": "閉めなさい",
+          "sentence": "____ the window.",
+          "verb": "close",
+          "choices": [
+            "close",
+            "closes",
+            "closeed",
+            "closeing"
+          ],
+          "correctAnswer": "close",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-022",
+          "japanese": "聞きなさい",
+          "sentence": "____ to me.",
+          "verb": "listen",
+          "choices": [
+            "listen",
+            "listens",
+            "listened",
+            "listening"
+          ],
+          "correctAnswer": "listen",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-023",
+          "japanese": "見なさい",
+          "sentence": "____ at this.",
+          "verb": "look",
+          "choices": [
+            "look",
+            "looks",
+            "looked",
+            "looking"
+          ],
+          "correctAnswer": "look",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-024",
+          "japanese": "待ちなさい",
+          "sentence": "____ here.",
+          "verb": "wait",
+          "choices": [
+            "wait",
+            "waits",
+            "waited",
+            "waiting"
+          ],
+          "correctAnswer": "wait",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-025",
+          "japanese": "来なさい",
+          "sentence": "____ here.",
+          "verb": "come",
+          "choices": [
+            "come",
+            "comes",
+            "comeed",
+            "comeing"
+          ],
+          "correctAnswer": "come",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-026",
+          "japanese": "行きなさい",
+          "sentence": "____ home.",
+          "verb": "go",
+          "choices": [
+            "go",
+            "gos",
+            "goed",
+            "going"
+          ],
+          "correctAnswer": "go",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-027",
+          "japanese": "止まりなさい",
+          "sentence": "____.",
+          "verb": "stop",
+          "choices": [
+            "stop",
+            "stops",
+            "stoped",
+            "stoping"
+          ],
+          "correctAnswer": "stop",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-028",
+          "japanese": "手伝いなさい",
+          "sentence": "____ me.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "help",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-029",
+          "japanese": "掃除しなさい",
+          "sentence": "____ your room.",
+          "verb": "clean",
+          "choices": [
+            "clean",
+            "cleans",
+            "cleaned",
+            "cleaning"
+          ],
+          "correctAnswer": "clean",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-030",
+          "japanese": "終わらせなさい",
+          "sentence": "____ your homework.",
+          "verb": "finish",
+          "choices": [
+            "finish",
+            "finishs",
+            "finished",
+            "finishing"
+          ],
+          "correctAnswer": "finish",
+          "difficulty": "intermediate",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-031",
+          "japanese": "静かにしなさい",
+          "sentence": "____ quiet.",
+          "verb": "be",
+          "choices": [
+            "be",
+            "bes",
+            "beed",
+            "being"
+          ],
+          "correctAnswer": "be",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-032",
+          "japanese": "勉強しなさい",
+          "sentence": "____ hard.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studyed",
+            "studying"
+          ],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-033",
+          "japanese": "練習しなさい",
+          "sentence": "____ every day.",
+          "verb": "practice",
+          "choices": [
+            "practice",
+            "practices",
+            "practiceed",
+            "practiceing"
+          ],
+          "correctAnswer": "practice",
+          "difficulty": "intermediate",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-034",
+          "japanese": "やってみなさい",
+          "sentence": "____ again.",
+          "verb": "try",
+          "choices": [
+            "try",
+            "trys",
+            "tryed",
+            "trying"
+          ],
+          "correctAnswer": "try",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-035",
+          "japanese": "座りなさい",
+          "sentence": "____ down.",
+          "verb": "sit",
+          "choices": [
+            "sit",
+            "sits",
+            "sited",
+            "siting"
+          ],
+          "correctAnswer": "sit",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-036",
+          "japanese": "立ちなさい",
+          "sentence": "____ up.",
+          "verb": "stand",
+          "choices": [
+            "stand",
+            "stands",
+            "standed",
+            "standing"
+          ],
+          "correctAnswer": "stand",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-037",
+          "japanese": "開けなさい",
+          "sentence": "____ the door.",
+          "verb": "open",
+          "choices": [
+            "open",
+            "opens",
+            "opened",
+            "opening"
+          ],
+          "correctAnswer": "open",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-038",
+          "japanese": "閉めなさい",
+          "sentence": "____ the window.",
+          "verb": "close",
+          "choices": [
+            "close",
+            "closes",
+            "closeed",
+            "closeing"
+          ],
+          "correctAnswer": "close",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-039",
+          "japanese": "聞きなさい",
+          "sentence": "____ to me.",
+          "verb": "listen",
+          "choices": [
+            "listen",
+            "listens",
+            "listened",
+            "listening"
+          ],
+          "correctAnswer": "listen",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-040",
+          "japanese": "見なさい",
+          "sentence": "____ at this.",
+          "verb": "look",
+          "choices": [
+            "look",
+            "looks",
+            "looked",
+            "looking"
+          ],
+          "correctAnswer": "look",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-041",
+          "japanese": "待ちなさい",
+          "sentence": "____ here.",
+          "verb": "wait",
+          "choices": [
+            "wait",
+            "waits",
+            "waited",
+            "waiting"
+          ],
+          "correctAnswer": "wait",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-042",
+          "japanese": "来なさい",
+          "sentence": "____ here.",
+          "verb": "come",
+          "choices": [
+            "come",
+            "comes",
+            "comeed",
+            "comeing"
+          ],
+          "correctAnswer": "come",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-043",
+          "japanese": "行きなさい",
+          "sentence": "____ home.",
+          "verb": "go",
+          "choices": [
+            "go",
+            "gos",
+            "goed",
+            "going"
+          ],
+          "correctAnswer": "go",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-044",
+          "japanese": "止まりなさい",
+          "sentence": "____.",
+          "verb": "stop",
+          "choices": [
+            "stop",
+            "stops",
+            "stoped",
+            "stoping"
+          ],
+          "correctAnswer": "stop",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-045",
+          "japanese": "手伝いなさい",
+          "sentence": "____ me.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "help",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-046",
+          "japanese": "掃除しなさい",
+          "sentence": "____ your room.",
+          "verb": "clean",
+          "choices": [
+            "clean",
+            "cleans",
+            "cleaned",
+            "cleaning"
+          ],
+          "correctAnswer": "clean",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-047",
+          "japanese": "終わらせなさい",
+          "sentence": "____ your homework.",
+          "verb": "finish",
+          "choices": [
+            "finish",
+            "finishs",
+            "finished",
+            "finishing"
+          ],
+          "correctAnswer": "finish",
+          "difficulty": "intermediate",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-048",
+          "japanese": "静かにしなさい",
+          "sentence": "____ quiet.",
+          "verb": "be",
+          "choices": [
+            "be",
+            "bes",
+            "beed",
+            "being"
+          ],
+          "correctAnswer": "be",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-049",
+          "japanese": "勉強しなさい",
+          "sentence": "____ hard.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studyed",
+            "studying"
+          ],
+          "correctAnswer": "study",
+          "difficulty": "beginner",
+          "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
+          "hint": "命令文は動詞の原形"
+        },
+        {
+          "id": "vf-g1-u7-050",
+          "japanese": "練習しなさい",
+          "sentence": "____ every day.",
+          "verb": "practice",
+          "choices": [
+            "practice",
+            "practices",
+            "practiceed",
+            "practiceing"
+          ],
+          "correctAnswer": "practice",
+          "difficulty": "intermediate",
           "explanation": "命令文は動詞の原形で始めます。主語のYouは省略されます。",
           "hint": "命令文は動詞の原形"
         }
@@ -2228,6 +5924,534 @@
           "difficulty": "intermediate",
           "explanation": "規則動詞の過去形は-edを付けます。moveの過去形はmovedです。",
           "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-018",
+          "japanese": "私は昨日テレビを見ました",
+          "sentence": "I ____ TV yesterday.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watches",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watched",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。Yesterday（昨日）という過去を表す語があるため過去形が必要です。Watchに-edを付けてwatchedとします。規則動詞は現在形に-edを付けるだけでOKです。Watchesは三人称単数現在形、watchingは進行形なので不適切です。過去を表す語（yesterday、last week、ago等）を見つけたら過去形を使うと覚えましょう。Watch TV（テレビを見る）は頻出表現です。",
+          "hint": "過去を表す語があるので過去形"
+        },
+        {
+          "id": "vf-g1-u8-019",
+          "japanese": "彼女は先週英語を勉強しました",
+          "sentence": "She ____ English last week.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studied",
+          "difficulty": "beginner",
+          "explanation": "子音+yで終わる動詞の過去形は、yをiに変えて-edを付けます。Last week（先週）があるので過去形が必要です。Studyは「子音d + y」で終わるため、yをiに変えてstudiedとします。もしplayのように「母音a + y」で終わる動詞なら、そのまま-edを付けてplayedとなります。Studiesは三人称単数現在形、studyingは進行形です。Try→tried、cry→criedなども同じパターンです。",
+          "hint": "子音+yで終わる動詞は、yをiに変えてed"
+        },
+        {
+          "id": "vf-g1-u8-020",
+          "japanese": "私たちは公園でサッカーをしました",
+          "sentence": "We ____ soccer in the park.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "played",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。過去の出来事を述べているので過去形が必要です。Playに-edを付けてplayedとします。主語がWeでもIでもHeでも、過去形は同じ形を使います（現在形のように主語によって変化しません）。Playsは三人称単数現在形、playingは進行形です。In the park（公園で）という場所を表す表現も覚えましょう。Play soccer（サッカーをする）は頻出表現です。",
+          "hint": "規則動詞の過去形は-ed"
+        },
+        {
+          "id": "vf-g1-u8-021",
+          "japanese": "彼は私を助けてくれました",
+          "sentence": "He ____ me.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "helped",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。「助けてくれました」という過去の出来事なので過去形が必要です。Helpに-edを付けてhelpedとします。過去形は主語に関係なく同じ形です（I helped / You helped / He helped / They helped）。Helpsは三人称単数現在形、helpingは進行形です。Help me（私を助ける）という重要表現も覚えましょう。過去形の-edは[t]または[d]と発音されます。",
+          "hint": "過去形は-ed"
+        },
+        {
+          "id": "vf-g1-u8-022",
+          "japanese": "私は昨日歩きました",
+          "sentence": "I ____ to school yesterday.",
+          "verb": "walk",
+          "choices": [
+            "walk",
+            "walks",
+            "walked",
+            "walking"
+          ],
+          "correctAnswer": "walked",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。walkの過去形はwalkedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-023",
+          "japanese": "私は昨日話しました",
+          "sentence": "I ____ with friends yesterday.",
+          "verb": "talk",
+          "choices": [
+            "talk",
+            "talks",
+            "talked",
+            "talking"
+          ],
+          "correctAnswer": "talked",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。talkの過去形はtalkedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-024",
+          "japanese": "私は昨日見ました",
+          "sentence": "I ____ a movie yesterday.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watchs",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watched",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。watchの過去形はwatchedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-025",
+          "japanese": "私は昨日掃除しました",
+          "sentence": "I ____ my room yesterday.",
+          "verb": "clean",
+          "choices": [
+            "clean",
+            "cleans",
+            "cleaned",
+            "cleaning"
+          ],
+          "correctAnswer": "cleaned",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。cleanの過去形はcleanedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-026",
+          "japanese": "私は昨日料理しました",
+          "sentence": "I ____ dinner yesterday.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cooked",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。cookの過去形はcookedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-027",
+          "japanese": "私は昨日手伝いました",
+          "sentence": "I ____ my mother yesterday.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "helped",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。helpの過去形はhelpedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-028",
+          "japanese": "私は昨日勉強しました",
+          "sentence": "I ____ math yesterday.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studied",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。studyの過去形はstudiedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-029",
+          "japanese": "私は昨日挑戦しました",
+          "sentence": "I ____ hard yesterday.",
+          "verb": "try",
+          "choices": [
+            "try",
+            "trys",
+            "tried",
+            "trying"
+          ],
+          "correctAnswer": "tried",
+          "difficulty": "intermediate",
+          "explanation": "規則動詞の過去形は-edを付けます。tryの過去形はtriedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-030",
+          "japanese": "私は昨日泣きました",
+          "sentence": "I ____ yesterday.",
+          "verb": "cry",
+          "choices": [
+            "cry",
+            "crys",
+            "cried",
+            "crying"
+          ],
+          "correctAnswer": "cried",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。cryの過去形はcriedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-031",
+          "japanese": "私は昨日楽しみました",
+          "sentence": "I ____ the party yesterday.",
+          "verb": "enjoy",
+          "choices": [
+            "enjoy",
+            "enjoys",
+            "enjoyed",
+            "enjoying"
+          ],
+          "correctAnswer": "enjoyed",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。enjoyの過去形はenjoyedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-032",
+          "japanese": "私は昨日使いました",
+          "sentence": "I ____ a computer yesterday.",
+          "verb": "use",
+          "choices": [
+            "use",
+            "uses",
+            "used",
+            "useing"
+          ],
+          "correctAnswer": "used",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。useの過去形はusedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-033",
+          "japanese": "私は昨日住んでいました",
+          "sentence": "I ____ in Tokyo yesterday.",
+          "verb": "live",
+          "choices": [
+            "live",
+            "lives",
+            "lived",
+            "liveing"
+          ],
+          "correctAnswer": "lived",
+          "difficulty": "intermediate",
+          "explanation": "規則動詞の過去形は-edを付けます。liveの過去形はlivedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-034",
+          "japanese": "私は昨日引っ越しました",
+          "sentence": "I ____ last year yesterday.",
+          "verb": "move",
+          "choices": [
+            "move",
+            "moves",
+            "moved",
+            "moveing"
+          ],
+          "correctAnswer": "moved",
+          "difficulty": "intermediate",
+          "explanation": "規則動詞の過去形は-edを付けます。moveの過去形はmovedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-035",
+          "japanese": "私は昨日テレビを見ました",
+          "sentence": "I ____ TV yesterday.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watches",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watched",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。Yesterday（昨日）という過去を表す語があるため過去形が必要です。Watchに-edを付けてwatchedとします。規則動詞は現在形に-edを付けるだけでOKです。Watchesは三人称単数現在形、watchingは進行形なので不適切です。過去を表す語（yesterday、last week、ago等）を見つけたら過去形を使うと覚えましょう。Watch TV（テレビを見る）は頻出表現です。",
+          "hint": "過去を表す語があるので過去形"
+        },
+        {
+          "id": "vf-g1-u8-036",
+          "japanese": "彼女は先週英語を勉強しました",
+          "sentence": "She ____ English last week.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studies",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studied",
+          "difficulty": "beginner",
+          "explanation": "子音+yで終わる動詞の過去形は、yをiに変えて-edを付けます。Last week（先週）があるので過去形が必要です。Studyは「子音d + y」で終わるため、yをiに変えてstudiedとします。もしplayのように「母音a + y」で終わる動詞なら、そのまま-edを付けてplayedとなります。Studiesは三人称単数現在形、studyingは進行形です。Try→tried、cry→criedなども同じパターンです。",
+          "hint": "子音+yで終わる動詞は、yをiに変えてed"
+        },
+        {
+          "id": "vf-g1-u8-037",
+          "japanese": "私たちは公園でサッカーをしました",
+          "sentence": "We ____ soccer in the park.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "played",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。過去の出来事を述べているので過去形が必要です。Playに-edを付けてplayedとします。主語がWeでもIでもHeでも、過去形は同じ形を使います（現在形のように主語によって変化しません）。Playsは三人称単数現在形、playingは進行形です。In the park（公園で）という場所を表す表現も覚えましょう。Play soccer（サッカーをする）は頻出表現です。",
+          "hint": "規則動詞の過去形は-ed"
+        },
+        {
+          "id": "vf-g1-u8-038",
+          "japanese": "彼は私を助けてくれました",
+          "sentence": "He ____ me.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "helped",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。「助けてくれました」という過去の出来事なので過去形が必要です。Helpに-edを付けてhelpedとします。過去形は主語に関係なく同じ形です（I helped / You helped / He helped / They helped）。Helpsは三人称単数現在形、helpingは進行形です。Help me（私を助ける）という重要表現も覚えましょう。過去形の-edは[t]または[d]と発音されます。",
+          "hint": "過去形は-ed"
+        },
+        {
+          "id": "vf-g1-u8-039",
+          "japanese": "私は昨日歩きました",
+          "sentence": "I ____ to school yesterday.",
+          "verb": "walk",
+          "choices": [
+            "walk",
+            "walks",
+            "walked",
+            "walking"
+          ],
+          "correctAnswer": "walked",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。walkの過去形はwalkedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-040",
+          "japanese": "私は昨日話しました",
+          "sentence": "I ____ with friends yesterday.",
+          "verb": "talk",
+          "choices": [
+            "talk",
+            "talks",
+            "talked",
+            "talking"
+          ],
+          "correctAnswer": "talked",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。talkの過去形はtalkedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-041",
+          "japanese": "私は昨日見ました",
+          "sentence": "I ____ a movie yesterday.",
+          "verb": "watch",
+          "choices": [
+            "watch",
+            "watchs",
+            "watched",
+            "watching"
+          ],
+          "correctAnswer": "watched",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。watchの過去形はwatchedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-042",
+          "japanese": "私は昨日掃除しました",
+          "sentence": "I ____ my room yesterday.",
+          "verb": "clean",
+          "choices": [
+            "clean",
+            "cleans",
+            "cleaned",
+            "cleaning"
+          ],
+          "correctAnswer": "cleaned",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。cleanの過去形はcleanedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-043",
+          "japanese": "私は昨日料理しました",
+          "sentence": "I ____ dinner yesterday.",
+          "verb": "cook",
+          "choices": [
+            "cook",
+            "cooks",
+            "cooked",
+            "cooking"
+          ],
+          "correctAnswer": "cooked",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。cookの過去形はcookedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-044",
+          "japanese": "私は昨日手伝いました",
+          "sentence": "I ____ my mother yesterday.",
+          "verb": "help",
+          "choices": [
+            "help",
+            "helps",
+            "helped",
+            "helping"
+          ],
+          "correctAnswer": "helped",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。helpの過去形はhelpedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-045",
+          "japanese": "私は昨日勉強しました",
+          "sentence": "I ____ math yesterday.",
+          "verb": "study",
+          "choices": [
+            "study",
+            "studys",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "studied",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。studyの過去形はstudiedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-046",
+          "japanese": "私は昨日挑戦しました",
+          "sentence": "I ____ hard yesterday.",
+          "verb": "try",
+          "choices": [
+            "try",
+            "trys",
+            "tried",
+            "trying"
+          ],
+          "correctAnswer": "tried",
+          "difficulty": "intermediate",
+          "explanation": "規則動詞の過去形は-edを付けます。tryの過去形はtriedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-047",
+          "japanese": "私は昨日泣きました",
+          "sentence": "I ____ yesterday.",
+          "verb": "cry",
+          "choices": [
+            "cry",
+            "crys",
+            "cried",
+            "crying"
+          ],
+          "correctAnswer": "cried",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。cryの過去形はcriedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-048",
+          "japanese": "私は昨日楽しみました",
+          "sentence": "I ____ the party yesterday.",
+          "verb": "enjoy",
+          "choices": [
+            "enjoy",
+            "enjoys",
+            "enjoyed",
+            "enjoying"
+          ],
+          "correctAnswer": "enjoyed",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。enjoyの過去形はenjoyedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-049",
+          "japanese": "私は昨日使いました",
+          "sentence": "I ____ a computer yesterday.",
+          "verb": "use",
+          "choices": [
+            "use",
+            "uses",
+            "used",
+            "useing"
+          ],
+          "correctAnswer": "used",
+          "difficulty": "beginner",
+          "explanation": "規則動詞の過去形は-edを付けます。useの過去形はusedです。",
+          "hint": "規則動詞の過去形: -ed"
+        },
+        {
+          "id": "vf-g1-u8-050",
+          "japanese": "私は昨日住んでいました",
+          "sentence": "I ____ in Tokyo yesterday.",
+          "verb": "live",
+          "choices": [
+            "live",
+            "lives",
+            "lived",
+            "liveing"
+          ],
+          "correctAnswer": "lived",
+          "difficulty": "intermediate",
+          "explanation": "規則動詞の過去形は-edを付けます。liveの過去形はlivedです。",
+          "hint": "規則動詞の過去形: -ed"
         }
       ]
     },
@@ -2506,6 +6730,534 @@
           "difficulty": "beginner",
           "explanation": "不規則動詞の過去形は個別に覚える必要があります。swimの過去形はswamです。",
           "hint": "不規則動詞: swim → swam"
+        },
+        {
+          "id": "vf-g1-u9-018",
+          "japanese": "私は昨日東京に行きました",
+          "sentence": "I ____ to Tokyo yesterday.",
+          "verb": "go",
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "gone"
+          ],
+          "correctAnswer": "went",
+          "difficulty": "beginner",
+          "explanation": "Goの過去形はwentという不規則変化です。Yesterday（昨日）があるので過去形が必要です。規則動詞はgo→goedとなりそうですが、実際はwentという全く違う形に変わります。これは頻出の不規則動詞なので暗記が必要です。Goesは三人称単数現在形、goneは過去分詞（現在完了で使用）です。Go to ～（～へ行く）は基本表現です。不規則動詞は個別に覚えるしかありません。",
+          "hint": "goの過去形はwent"
+        },
+        {
+          "id": "vf-g1-u9-019",
+          "japanese": "彼女は朝食を食べました",
+          "sentence": "She ____ breakfast.",
+          "verb": "have",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "had",
+          "difficulty": "beginner",
+          "explanation": "Haveの過去形はhadという不規則変化です。「食べました」という過去の出来事なので過去形が必要です。Have→havedではなく、hadという形に変わります。Hasは三人称単数現在形、havingは進行形です。過去形hadは主語に関係なく同じ形を使います（I had / She had / They had）。Have breakfast（朝食を食べる）は重要表現です。Haveは「持つ」以外に「食べる」の意味でも使います。",
+          "hint": "haveの過去形はhad"
+        },
+        {
+          "id": "vf-g1-u9-020",
+          "japanese": "私たちは昨夜良く眠りました",
+          "sentence": "We ____ well last night.",
+          "verb": "sleep",
+          "choices": [
+            "sleep",
+            "sleeps",
+            "slept",
+            "sleeping"
+          ],
+          "correctAnswer": "slept",
+          "difficulty": "intermediate",
+          "explanation": "Sleepの過去形はsleptという不規則変化です。Last night（昨夜）があるので過去形が必要です。Sleep→sleepedではなく、sleptという形に変わります。Eが1つ減ってtが付く変化パターンです。Keep→kept、feel→feltなども同じパターンです。Sleepsは三人称単数現在形、sleepingは進行形です。Sleep well（よく眠る）は頻出表現です。不規則動詞は似たパターンでグループ化して覚えると効率的です。",
+          "hint": "sleepの過去形はslept"
+        },
+        {
+          "id": "vf-g1-u9-021",
+          "japanese": "彼は野球をしました",
+          "sentence": "He ____ baseball.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "played",
+          "difficulty": "beginner",
+          "explanation": "Playは規則動詞なので過去形は-edを付けます。「しました」という過去の出来事なので過去形が必要です。Playに-edを付けてplayedとします。不規則動詞のカテゴリーに入っていますが、実は規則動詞です（区別の練習問題）。Playsは三人称単数現在形、playingは進行形です。Play baseball（野球をする）はスポーツ名の前に冠詞を付けないルールです。規則動詞と不規則動詞の見分けが重要です。",
+          "hint": "規則動詞の過去形"
+        },
+        {
+          "id": "vf-g1-u9-022",
+          "japanese": "私は本を読みました",
+          "sentence": "I ____ a book.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "red",
+            "reading"
+          ],
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "Readの過去形はreadで、綴りは現在形と同じですが発音が異なります。現在形read[ri:d]（リード）→過去形read[red]（レッド）と変化します。綴りが同じなので紛らわしいですが、文脈で判断します。過去を表す語がなくても「読みました」という日本語から過去形と分かります。Readsは三人称単数現在形、redは色の「赤」なので誤りです。Readingは進行形です。Read a book（本を読む）は基本表現です。",
+          "hint": "readの過去形はreadだが発音が変わる"
+        },
+        {
+          "id": "vf-g1-u9-023",
+          "japanese": "彼女は来ました",
+          "sentence": "She ____.",
+          "verb": "come",
+          "choices": [
+            "come",
+            "comes",
+            "came",
+            "coming"
+          ],
+          "correctAnswer": "came",
+          "difficulty": "beginner",
+          "explanation": "Comeの過去形はcameという不規則変化です。「来ました」という過去の出来事なので過去形が必要です。Come→comedではなく、cameという形に変わります。Become→becameも同じパターンです。Comesは三人称単数現在形、comingは進行形です。Comeは「来る」という移動動詞で、go（行く）と対比して覚えましょう。Come-came-come（原形-過去形-過去分詞）と活用を覚えます。",
+          "hint": "comeの過去形はcame"
+        },
+        {
+          "id": "vf-g1-u9-024",
+          "japanese": "私たちは映画を見ました",
+          "sentence": "We ____ a movie.",
+          "verb": "see",
+          "choices": [
+            "see",
+            "sees",
+            "saw",
+            "seen"
+          ],
+          "correctAnswer": "saw",
+          "difficulty": "beginner",
+          "explanation": "Seeの過去形はsawという不規則変化です。「見ました」という過去の出来事なので過去形が必要です。See→seedではなく、sawという形に変わります。Seesは三人称単数現在形、seenは過去分詞（現在完了で使用）です。See a movie（映画を見る）はwatch a movieとも言えます。Seeは「見る」「会う」の意味があります。See-saw-seen（原形-過去形-過去分詞）と活用を覚えましょう。",
+          "hint": "seeの過去形はsaw"
+        },
+        {
+          "id": "vf-g1-u9-025",
+          "japanese": "彼は走りました",
+          "sentence": "He ____.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "running"
+          ],
+          "correctAnswer": "ran",
+          "difficulty": "beginner",
+          "explanation": "Runの過去形はranという不規則変化です。「走りました」という過去の出来事なので過去形が必要です。Run→runedではなく、ranという形に変わります。母音が変化するパターン（u→a）です。Runsは三人称単数現在形、runningは進行形です。Run-ran-run（原形-過去形-過去分詞）と活用を覚えます。Come-came-comeと似たパターンですが、過去分詞がrunに戻ることに注意しましょう。",
+          "hint": "runの過去形はran"
+        },
+        {
+          "id": "vf-g1-u9-026",
+          "japanese": "私は昨日作りました",
+          "sentence": "I ____ a cake yesterday.",
+          "verb": "make",
+          "choices": [
+            "make",
+            "makes",
+            "made",
+            "makeing"
+          ],
+          "correctAnswer": "made",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。makeの過去形はmadeです。",
+          "hint": "不規則動詞: make → made"
+        },
+        {
+          "id": "vf-g1-u9-027",
+          "japanese": "私は昨日撮りました",
+          "sentence": "I ____ a picture yesterday.",
+          "verb": "take",
+          "choices": [
+            "take",
+            "takes",
+            "took",
+            "takeing"
+          ],
+          "correctAnswer": "took",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。takeの過去形はtookです。",
+          "hint": "不規則動詞: take → took"
+        },
+        {
+          "id": "vf-g1-u9-028",
+          "japanese": "私は昨日来ました",
+          "sentence": "I ____ home early yesterday.",
+          "verb": "come",
+          "choices": [
+            "come",
+            "comes",
+            "came",
+            "comeing"
+          ],
+          "correctAnswer": "came",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。comeの過去形はcameです。",
+          "hint": "不規則動詞: come → came"
+        },
+        {
+          "id": "vf-g1-u9-029",
+          "japanese": "私は昨日あげました",
+          "sentence": "I ____ a present yesterday.",
+          "verb": "give",
+          "choices": [
+            "give",
+            "gives",
+            "gave",
+            "giveing"
+          ],
+          "correctAnswer": "gave",
+          "difficulty": "intermediate",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。giveの過去形はgaveです。",
+          "hint": "不規則動詞: give → gave"
+        },
+        {
+          "id": "vf-g1-u9-030",
+          "japanese": "私は昨日書きました",
+          "sentence": "I ____ a letter yesterday.",
+          "verb": "write",
+          "choices": [
+            "write",
+            "writes",
+            "wrote",
+            "writeing"
+          ],
+          "correctAnswer": "wrote",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。writeの過去形はwroteです。",
+          "hint": "不規則動詞: write → wrote"
+        },
+        {
+          "id": "vf-g1-u9-031",
+          "japanese": "私は昨日読みました",
+          "sentence": "I ____ a book yesterday.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "read",
+            "reading"
+          ],
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。readの過去形はreadです。",
+          "hint": "不規則動詞: read → read"
+        },
+        {
+          "id": "vf-g1-u9-032",
+          "japanese": "私は昨日走りました",
+          "sentence": "I ____ fast yesterday.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "runing"
+          ],
+          "correctAnswer": "ran",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。runの過去形はranです。",
+          "hint": "不規則動詞: run → ran"
+        },
+        {
+          "id": "vf-g1-u9-033",
+          "japanese": "私は昨日歌いました",
+          "sentence": "I ____ a song yesterday.",
+          "verb": "sing",
+          "choices": [
+            "sing",
+            "sings",
+            "sang",
+            "singing"
+          ],
+          "correctAnswer": "sang",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。singの過去形はsangです。",
+          "hint": "不規則動詞: sing → sang"
+        },
+        {
+          "id": "vf-g1-u9-034",
+          "japanese": "私は昨日泳ぎました",
+          "sentence": "I ____ in the pool yesterday.",
+          "verb": "swim",
+          "choices": [
+            "swim",
+            "swims",
+            "swam",
+            "swiming"
+          ],
+          "correctAnswer": "swam",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。swimの過去形はswamです。",
+          "hint": "不規則動詞: swim → swam"
+        },
+        {
+          "id": "vf-g1-u9-035",
+          "japanese": "私は昨日東京に行きました",
+          "sentence": "I ____ to Tokyo yesterday.",
+          "verb": "go",
+          "choices": [
+            "go",
+            "goes",
+            "went",
+            "gone"
+          ],
+          "correctAnswer": "went",
+          "difficulty": "beginner",
+          "explanation": "Goの過去形はwentという不規則変化です。Yesterday（昨日）があるので過去形が必要です。規則動詞はgo→goedとなりそうですが、実際はwentという全く違う形に変わります。これは頻出の不規則動詞なので暗記が必要です。Goesは三人称単数現在形、goneは過去分詞（現在完了で使用）です。Go to ～（～へ行く）は基本表現です。不規則動詞は個別に覚えるしかありません。",
+          "hint": "goの過去形はwent"
+        },
+        {
+          "id": "vf-g1-u9-036",
+          "japanese": "彼女は朝食を食べました",
+          "sentence": "She ____ breakfast.",
+          "verb": "have",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "had",
+          "difficulty": "beginner",
+          "explanation": "Haveの過去形はhadという不規則変化です。「食べました」という過去の出来事なので過去形が必要です。Have→havedではなく、hadという形に変わります。Hasは三人称単数現在形、havingは進行形です。過去形hadは主語に関係なく同じ形を使います（I had / She had / They had）。Have breakfast（朝食を食べる）は重要表現です。Haveは「持つ」以外に「食べる」の意味でも使います。",
+          "hint": "haveの過去形はhad"
+        },
+        {
+          "id": "vf-g1-u9-037",
+          "japanese": "私たちは昨夜良く眠りました",
+          "sentence": "We ____ well last night.",
+          "verb": "sleep",
+          "choices": [
+            "sleep",
+            "sleeps",
+            "slept",
+            "sleeping"
+          ],
+          "correctAnswer": "slept",
+          "difficulty": "intermediate",
+          "explanation": "Sleepの過去形はsleptという不規則変化です。Last night（昨夜）があるので過去形が必要です。Sleep→sleepedではなく、sleptという形に変わります。Eが1つ減ってtが付く変化パターンです。Keep→kept、feel→feltなども同じパターンです。Sleepsは三人称単数現在形、sleepingは進行形です。Sleep well（よく眠る）は頻出表現です。不規則動詞は似たパターンでグループ化して覚えると効率的です。",
+          "hint": "sleepの過去形はslept"
+        },
+        {
+          "id": "vf-g1-u9-038",
+          "japanese": "彼は野球をしました",
+          "sentence": "He ____ baseball.",
+          "verb": "play",
+          "choices": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correctAnswer": "played",
+          "difficulty": "beginner",
+          "explanation": "Playは規則動詞なので過去形は-edを付けます。「しました」という過去の出来事なので過去形が必要です。Playに-edを付けてplayedとします。不規則動詞のカテゴリーに入っていますが、実は規則動詞です（区別の練習問題）。Playsは三人称単数現在形、playingは進行形です。Play baseball（野球をする）はスポーツ名の前に冠詞を付けないルールです。規則動詞と不規則動詞の見分けが重要です。",
+          "hint": "規則動詞の過去形"
+        },
+        {
+          "id": "vf-g1-u9-039",
+          "japanese": "私は本を読みました",
+          "sentence": "I ____ a book.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "red",
+            "reading"
+          ],
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "Readの過去形はreadで、綴りは現在形と同じですが発音が異なります。現在形read[ri:d]（リード）→過去形read[red]（レッド）と変化します。綴りが同じなので紛らわしいですが、文脈で判断します。過去を表す語がなくても「読みました」という日本語から過去形と分かります。Readsは三人称単数現在形、redは色の「赤」なので誤りです。Readingは進行形です。Read a book（本を読む）は基本表現です。",
+          "hint": "readの過去形はreadだが発音が変わる"
+        },
+        {
+          "id": "vf-g1-u9-040",
+          "japanese": "彼女は来ました",
+          "sentence": "She ____.",
+          "verb": "come",
+          "choices": [
+            "come",
+            "comes",
+            "came",
+            "coming"
+          ],
+          "correctAnswer": "came",
+          "difficulty": "beginner",
+          "explanation": "Comeの過去形はcameという不規則変化です。「来ました」という過去の出来事なので過去形が必要です。Come→comedではなく、cameという形に変わります。Become→becameも同じパターンです。Comesは三人称単数現在形、comingは進行形です。Comeは「来る」という移動動詞で、go（行く）と対比して覚えましょう。Come-came-come（原形-過去形-過去分詞）と活用を覚えます。",
+          "hint": "comeの過去形はcame"
+        },
+        {
+          "id": "vf-g1-u9-041",
+          "japanese": "私たちは映画を見ました",
+          "sentence": "We ____ a movie.",
+          "verb": "see",
+          "choices": [
+            "see",
+            "sees",
+            "saw",
+            "seen"
+          ],
+          "correctAnswer": "saw",
+          "difficulty": "beginner",
+          "explanation": "Seeの過去形はsawという不規則変化です。「見ました」という過去の出来事なので過去形が必要です。See→seedではなく、sawという形に変わります。Seesは三人称単数現在形、seenは過去分詞（現在完了で使用）です。See a movie（映画を見る）はwatch a movieとも言えます。Seeは「見る」「会う」の意味があります。See-saw-seen（原形-過去形-過去分詞）と活用を覚えましょう。",
+          "hint": "seeの過去形はsaw"
+        },
+        {
+          "id": "vf-g1-u9-042",
+          "japanese": "彼は走りました",
+          "sentence": "He ____.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "running"
+          ],
+          "correctAnswer": "ran",
+          "difficulty": "beginner",
+          "explanation": "Runの過去形はranという不規則変化です。「走りました」という過去の出来事なので過去形が必要です。Run→runedではなく、ranという形に変わります。母音が変化するパターン（u→a）です。Runsは三人称単数現在形、runningは進行形です。Run-ran-run（原形-過去形-過去分詞）と活用を覚えます。Come-came-comeと似たパターンですが、過去分詞がrunに戻ることに注意しましょう。",
+          "hint": "runの過去形はran"
+        },
+        {
+          "id": "vf-g1-u9-043",
+          "japanese": "私は昨日作りました",
+          "sentence": "I ____ a cake yesterday.",
+          "verb": "make",
+          "choices": [
+            "make",
+            "makes",
+            "made",
+            "makeing"
+          ],
+          "correctAnswer": "made",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。makeの過去形はmadeです。",
+          "hint": "不規則動詞: make → made"
+        },
+        {
+          "id": "vf-g1-u9-044",
+          "japanese": "私は昨日撮りました",
+          "sentence": "I ____ a picture yesterday.",
+          "verb": "take",
+          "choices": [
+            "take",
+            "takes",
+            "took",
+            "takeing"
+          ],
+          "correctAnswer": "took",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。takeの過去形はtookです。",
+          "hint": "不規則動詞: take → took"
+        },
+        {
+          "id": "vf-g1-u9-045",
+          "japanese": "私は昨日来ました",
+          "sentence": "I ____ home early yesterday.",
+          "verb": "come",
+          "choices": [
+            "come",
+            "comes",
+            "came",
+            "comeing"
+          ],
+          "correctAnswer": "came",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。comeの過去形はcameです。",
+          "hint": "不規則動詞: come → came"
+        },
+        {
+          "id": "vf-g1-u9-046",
+          "japanese": "私は昨日あげました",
+          "sentence": "I ____ a present yesterday.",
+          "verb": "give",
+          "choices": [
+            "give",
+            "gives",
+            "gave",
+            "giveing"
+          ],
+          "correctAnswer": "gave",
+          "difficulty": "intermediate",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。giveの過去形はgaveです。",
+          "hint": "不規則動詞: give → gave"
+        },
+        {
+          "id": "vf-g1-u9-047",
+          "japanese": "私は昨日書きました",
+          "sentence": "I ____ a letter yesterday.",
+          "verb": "write",
+          "choices": [
+            "write",
+            "writes",
+            "wrote",
+            "writeing"
+          ],
+          "correctAnswer": "wrote",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。writeの過去形はwroteです。",
+          "hint": "不規則動詞: write → wrote"
+        },
+        {
+          "id": "vf-g1-u9-048",
+          "japanese": "私は昨日読みました",
+          "sentence": "I ____ a book yesterday.",
+          "verb": "read",
+          "choices": [
+            "read",
+            "reads",
+            "read",
+            "reading"
+          ],
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。readの過去形はreadです。",
+          "hint": "不規則動詞: read → read"
+        },
+        {
+          "id": "vf-g1-u9-049",
+          "japanese": "私は昨日走りました",
+          "sentence": "I ____ fast yesterday.",
+          "verb": "run",
+          "choices": [
+            "run",
+            "runs",
+            "ran",
+            "runing"
+          ],
+          "correctAnswer": "ran",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。runの過去形はranです。",
+          "hint": "不規則動詞: run → ran"
+        },
+        {
+          "id": "vf-g1-u9-050",
+          "japanese": "私は昨日歌いました",
+          "sentence": "I ____ a song yesterday.",
+          "verb": "sing",
+          "choices": [
+            "sing",
+            "sings",
+            "sang",
+            "singing"
+          ],
+          "correctAnswer": "sang",
+          "difficulty": "beginner",
+          "explanation": "不規則動詞の過去形は個別に覚える必要があります。singの過去形はsangです。",
+          "hint": "不規則動詞: sing → sang"
         }
       ]
     }

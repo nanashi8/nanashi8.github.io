@@ -1,6 +1,6 @@
 /**
  * 目標達成シミュレーター
- * TOEIC/英検レベルとの連動、達成予測計算
+ * 難易度レベルとの連動、達成予測計算
  */
 
 import { loadProgressSync, getTotalMasteredWordsCount } from './progressStorage';
@@ -22,75 +22,59 @@ export interface GoalLevel {
  */
 export const GOAL_LEVELS: GoalLevel[] = [
   {
-    id: 'eiken5',
-    name: '英検5級',
+    id: 'beginner-basic',
+    name: '初級基礎',
     requiredWords: 600,
     requiredAccuracy: 70,
-    description: '中学初級程度',
+    description: '基本的な単語',
     icon: '🌱'
   },
   {
-    id: 'eiken4',
-    name: '英検4級',
-    requiredWords: 1300,
+    id: 'beginner-complete',
+    name: '初級完了',
+    requiredWords: 1077,
     requiredAccuracy: 70,
-    description: '中学中級程度',
+    description: '初級レベル完全習得',
     icon: '🌿'
   },
   {
-    id: 'eiken3',
-    name: '英検3級',
-    requiredWords: 2100,
+    id: 'intermediate-half',
+    name: '中級半分',
+    requiredWords: 1900,
     requiredAccuracy: 75,
-    description: '中学卒業程度',
+    description: '中級レベル50%',
     icon: '🌳'
   },
   {
-    id: 'high-school-entrance',
-    name: '高校入試',
-    requiredWords: 2500,
-    requiredAccuracy: 80,
-    description: '高校入試レベル',
+    id: 'intermediate-complete',
+    name: '中級完了',
+    requiredWords: 2693,
+    requiredAccuracy: 75,
+    description: '中級レベル完全習得',
     icon: '🎓'
   },
   {
-    id: 'eiken-pre2',
-    name: '英検準2級',
-    requiredWords: 3600,
-    requiredAccuracy: 75,
-    description: '高校中級程度',
+    id: 'advanced-half',
+    name: '上級半分',
+    requiredWords: 3150,
+    requiredAccuracy: 80,
+    description: '上級レベル50%',
     icon: '📚'
   },
   {
-    id: 'toeic400',
-    name: 'TOEIC 400点',
-    requiredWords: 2000,
-    requiredAccuracy: 60,
-    description: '基礎英語力',
-    icon: '📖'
-  },
-  {
-    id: 'toeic500',
-    name: 'TOEIC 500点',
-    requiredWords: 3000,
-    requiredAccuracy: 65,
-    description: '初級ビジネス英語',
-    icon: '💼'
-  },
-  {
-    id: 'toeic600',
-    name: 'TOEIC 600点',
-    requiredWords: 4000,
-    requiredAccuracy: 70,
-    description: '中級ビジネス英語',
+    id: 'advanced-complete',
+    name: '上級完了',
+    requiredWords: 3578,
+    requiredAccuracy: 80,
+    description: '上級レベル完全習得',
     icon: '🚀'
   },
   {
-    id: 'toeic700',
-    name: 'TOEIC 700点',
-    requiredWords: 5000,
-    requiredAccuracy: 75,
-    description: '上級ビジネス英語',
+    id: 'master',
+    name: 'マスター',
+    requiredWords: 4000,
+    requiredAccuracy: 85,
+    description: '全レベル制覇',
     icon: '⭐'
   }
 ];
@@ -120,8 +104,8 @@ export function getCurrentGoal(): GoalLevel {
     const goal = GOAL_LEVELS.find(g => g.id === goalId);
     if (goal) return goal;
   }
-  // デフォルトは高校入試
-  return GOAL_LEVELS.find(g => g.id === 'high-school-entrance') || GOAL_LEVELS[0];
+  // デフォルトは中級完了
+  return GOAL_LEVELS.find(g => g.id === 'intermediate-complete') || GOAL_LEVELS[0];
 }
 
 /**

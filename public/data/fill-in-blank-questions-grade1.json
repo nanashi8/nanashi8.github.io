@@ -1,6 +1,6 @@
 {
   "grade": 1,
-  "totalQuestions": 160,
+  "totalQuestions": 500,
   "units": [
     {
       "unit": "Unit 0",
@@ -244,6 +244,516 @@
           "correctAnswer": "in",
           "difficulty": "beginner",
           "explanation": "月には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-017",
+          "japanese": "6時に",
+          "sentence": "____ 6 o'clock",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-018",
+          "japanese": "月曜日に",
+          "sentence": "____ Monday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-019",
+          "japanese": "朝に",
+          "sentence": "____ the morning",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "morning/afternoon/eveningには in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-020",
+          "japanese": "夜に",
+          "sentence": "____ night",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "night は at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-021",
+          "japanese": "日曜日に",
+          "sentence": "____ Sunday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-022",
+          "japanese": "午後に",
+          "sentence": "____ the afternoon",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "afternoon には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-023",
+          "japanese": "正午に",
+          "sentence": "____ noon",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "noon は at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-024",
+          "japanese": "週末に",
+          "sentence": "____ the weekend",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "weekend は on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-025",
+          "japanese": "春に",
+          "sentence": "____ spring",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-026",
+          "japanese": "2024年に",
+          "sentence": "____ 2024",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-027",
+          "japanese": "1月1日に",
+          "sentence": "____ January 1st",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "特定の日付には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-028",
+          "japanese": "夕方に",
+          "sentence": "____ evening",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "evening は at も使えます",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-029",
+          "japanese": "夏に",
+          "sentence": "____ summer",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-030",
+          "japanese": "私の誕生日に",
+          "sentence": "____ my birthday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "特定の日には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-031",
+          "japanese": "真夜中に",
+          "sentence": "____ midnight",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "midnight は at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-032",
+          "japanese": "12月に",
+          "sentence": "____ December",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "月には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-033",
+          "japanese": "6時に",
+          "sentence": "____ 6 o'clock",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-034",
+          "japanese": "月曜日に",
+          "sentence": "____ Monday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-035",
+          "japanese": "朝に",
+          "sentence": "____ the morning",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "morning/afternoon/eveningには in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-036",
+          "japanese": "夜に",
+          "sentence": "____ night",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "night は at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-037",
+          "japanese": "日曜日に",
+          "sentence": "____ Sunday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-038",
+          "japanese": "午後に",
+          "sentence": "____ the afternoon",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "afternoon には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-039",
+          "japanese": "正午に",
+          "sentence": "____ noon",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "noon は at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-040",
+          "japanese": "週末に",
+          "sentence": "____ the weekend",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "weekend は on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-041",
+          "japanese": "春に",
+          "sentence": "____ spring",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-042",
+          "japanese": "2024年に",
+          "sentence": "____ 2024",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-043",
+          "japanese": "1月1日に",
+          "sentence": "____ January 1st",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "特定の日付には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-044",
+          "japanese": "夕方に",
+          "sentence": "____ evening",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "evening は at も使えます",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-045",
+          "japanese": "夏に",
+          "sentence": "____ summer",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-046",
+          "japanese": "私の誕生日に",
+          "sentence": "____ my birthday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "特定の日には on を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-047",
+          "japanese": "真夜中に",
+          "sentence": "____ midnight",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "midnight は at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-048",
+          "japanese": "12月に",
+          "sentence": "____ December",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "月には in を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-049",
+          "japanese": "6時に",
+          "sentence": "____ 6 o'clock",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at を使います",
+          "hint": "時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u0-050",
+          "japanese": "月曜日に",
+          "sentence": "____ Monday",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on を使います",
           "hint": "時を表す前置詞"
         }
       ]
@@ -491,6 +1001,516 @@
           "difficulty": "beginner",
           "explanation": "at は活動場所",
           "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-017",
+          "japanese": "学校に",
+          "sentence": "I am ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は特定の場所・地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-018",
+          "japanese": "教室に",
+          "sentence": "We are ____ the classroom.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は空間の中を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-019",
+          "japanese": "机の上に",
+          "sentence": "The book is ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は接触面を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-020",
+          "japanese": "駅に",
+          "sentence": "He is ____ the station.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-021",
+          "japanese": "公園に",
+          "sentence": "They are ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は広い場所の中を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-022",
+          "japanese": "壁に",
+          "sentence": "The picture is ____ the wall.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は壁面などに付いている状態",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-023",
+          "japanese": "家に",
+          "sentence": "She is ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at home は決まり表現",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-024",
+          "japanese": "東京に",
+          "sentence": "I live ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は都市・国を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-025",
+          "japanese": "床に",
+          "sentence": "The bag is ____ the floor.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は床面に接触",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-026",
+          "japanese": "入口に",
+          "sentence": "Wait ____ the entrance.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "at は地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-027",
+          "japanese": "箱の中に",
+          "sentence": "The cat is ____ the box.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は容器の中",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-028",
+          "japanese": "椅子の上に",
+          "sentence": "Sit ____ the chair.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は座面に接触",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-029",
+          "japanese": "バス停に",
+          "sentence": "I'm waiting ____ the bus stop.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は待ち合わせ場所",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-030",
+          "japanese": "部屋に",
+          "sentence": "He is ____ his room.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は部屋の中",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-031",
+          "japanese": "テーブルの上に",
+          "sentence": "The cup is ____ the table.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on はテーブル面に接触",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-032",
+          "japanese": "図書館に",
+          "sentence": "We study ____ the library.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は活動場所",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-033",
+          "japanese": "学校に",
+          "sentence": "I am ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は特定の場所・地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-034",
+          "japanese": "教室に",
+          "sentence": "We are ____ the classroom.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は空間の中を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-035",
+          "japanese": "机の上に",
+          "sentence": "The book is ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は接触面を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-036",
+          "japanese": "駅に",
+          "sentence": "He is ____ the station.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-037",
+          "japanese": "公園に",
+          "sentence": "They are ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は広い場所の中を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-038",
+          "japanese": "壁に",
+          "sentence": "The picture is ____ the wall.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は壁面などに付いている状態",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-039",
+          "japanese": "家に",
+          "sentence": "She is ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at home は決まり表現",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-040",
+          "japanese": "東京に",
+          "sentence": "I live ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は都市・国を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-041",
+          "japanese": "床に",
+          "sentence": "The bag is ____ the floor.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は床面に接触",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-042",
+          "japanese": "入口に",
+          "sentence": "Wait ____ the entrance.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "at は地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-043",
+          "japanese": "箱の中に",
+          "sentence": "The cat is ____ the box.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は容器の中",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-044",
+          "japanese": "椅子の上に",
+          "sentence": "Sit ____ the chair.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は座面に接触",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-045",
+          "japanese": "バス停に",
+          "sentence": "I'm waiting ____ the bus stop.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は待ち合わせ場所",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-046",
+          "japanese": "部屋に",
+          "sentence": "He is ____ his room.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は部屋の中",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-047",
+          "japanese": "テーブルの上に",
+          "sentence": "The cup is ____ the table.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on はテーブル面に接触",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-048",
+          "japanese": "図書館に",
+          "sentence": "We study ____ the library.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は活動場所",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-049",
+          "japanese": "学校に",
+          "sentence": "I am ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は特定の場所・地点を表します",
+          "hint": "場所を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u1-050",
+          "japanese": "教室に",
+          "sentence": "We are ____ the classroom.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は空間の中を表します",
+          "hint": "場所を表す前置詞"
         }
       ]
     },
@@ -737,6 +1757,516 @@
           "difficulty": "beginner",
           "explanation": "with は道具",
           "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-017",
+          "japanese": "私は7時に起きます",
+          "sentence": "I get up ____ 7 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻(○時○分)を表すときはatを使います。At 7 o'clockで「7時に」という意味です。時刻はピンポイントの時点なのでatです。Onは曜日・日付、Inは月・年・季節などの長い時間に使います。Get upは「起きる」という重要な句動詞です。",
+          "hint": "時刻 → at"
+        },
+        {
+          "id": "fb-g1-u2-018",
+          "japanese": "彼女は朝食べます",
+          "sentence": "She eats breakfast ____ the morning.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "Morning, afternoon, eveningの前にはinを使います。In the morningで「朝に」という意味です。時間帯を表す場合はinを使います。ただし、nightだけは例外でat nightとなります。Eat breakfastは「朝食を食べる」という表現です。",
+          "hint": "morning/afternoon/evening → in"
+        },
+        {
+          "id": "fb-g1-u2-019",
+          "japanese": "私は日曜日の朝テニスをします",
+          "sentence": "I play tennis ____ Sunday morning.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "曜日+時間帯(Sunday morning, Monday afternoonなど)の前にはonを使います。曜日が含まれているため、onが優先されます。In Sunday morningとは言いません。Play tennisは「テニスをする」という意味です。曜日が付く場合は常にonです。",
+          "hint": "曜日+時間帯 → on"
+        },
+        {
+          "id": "fb-g1-u2-020",
+          "japanese": "猫は机の上にいます",
+          "sentence": "The cat is ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "表面や上に接しているときはonを使います。On the deskで「机の上に」です。Onは何かの上に接触している状態を表します。Inは中、Atは地点を表すため不適切です。壁や天井に接している場合もonを使います。",
+          "hint": "表面・上 → on"
+        },
+        {
+          "id": "fb-g1-u2-021",
+          "japanese": "私は学校にいます",
+          "sentence": "I am ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "学校、会社、家などの場所にいるときはatを使います。At schoolで「学校に(で)」です。Atは活動している場所を表します。In schoolだと「学校という建物の中」という物理的な位置になります。At homeは「家に」という慣用表現です。",
+          "hint": "場所 → at"
+        },
+        {
+          "id": "fb-g1-u2-022",
+          "japanese": "彼は公園にいます",
+          "sentence": "He is ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "公園、庭園などの広い場所の中にいるときはinを使います。In the parkで「公園に(で)」です。公園は広い空間なのでinです。Atだと公園という地点を示すだけで、中にいる感じが出ません。森や建物の中もinを使います。",
+          "hint": "公園 → in"
+        },
+        {
+          "id": "fb-g1-u2-023",
+          "japanese": "彼女は私の隣に座っています",
+          "sentence": "She is sitting ____ me.",
+          "choices": [
+            "beside",
+            "between",
+            "under",
+            "on"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かの隣や横にあるときはbesideを使います。Beside meで「私の隣に」です。Besideは「～のそばに」という意味です。Next toも同じ意味で使えます。Betweenは「2つの間」なので、ここでは不適切です。",
+          "hint": "隣 → beside"
+        },
+        {
+          "id": "fb-g1-u2-024",
+          "japanese": "彼は窓のそばに立っています",
+          "sentence": "He is standing ____ the window.",
+          "choices": [
+            "beside",
+            "under",
+            "between",
+            "in"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かのそばや隣にいるときはbesideを使います。Beside the windowで「窓のそばに」です。By the windowやnear the windowも似た意味で使えます。Besideは距離が近いことを表します。Stand beside ~で「～のそばに立つ」という表現です。",
+          "hint": "そば → beside"
+        },
+        {
+          "id": "fb-g1-u2-025",
+          "japanese": "学校に行く",
+          "sentence": "I go ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "go to で「〜へ行く」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-026",
+          "japanese": "東京から",
+          "sentence": "I come ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "from は出発点",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-027",
+          "japanese": "友達と",
+          "sentence": "I play ____ my friends.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は「〜と一緒に」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-028",
+          "japanese": "母のために",
+          "sentence": "I cook ____ my mother.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "for は「〜のために」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-029",
+          "japanese": "音楽について",
+          "sentence": "We talk ____ music.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about で「〜について話す」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-030",
+          "japanese": "図書館に",
+          "sentence": "We walk ____ the library.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "walk to で「〜へ歩く」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-031",
+          "japanese": "家から",
+          "sentence": "They run ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "from は起点",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-032",
+          "japanese": "ペンで",
+          "sentence": "I write ____ a pen.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は道具",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-033",
+          "japanese": "私は7時に起きます",
+          "sentence": "I get up ____ 7 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻(○時○分)を表すときはatを使います。At 7 o'clockで「7時に」という意味です。時刻はピンポイントの時点なのでatです。Onは曜日・日付、Inは月・年・季節などの長い時間に使います。Get upは「起きる」という重要な句動詞です。",
+          "hint": "時刻 → at"
+        },
+        {
+          "id": "fb-g1-u2-034",
+          "japanese": "彼女は朝食べます",
+          "sentence": "She eats breakfast ____ the morning.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "Morning, afternoon, eveningの前にはinを使います。In the morningで「朝に」という意味です。時間帯を表す場合はinを使います。ただし、nightだけは例外でat nightとなります。Eat breakfastは「朝食を食べる」という表現です。",
+          "hint": "morning/afternoon/evening → in"
+        },
+        {
+          "id": "fb-g1-u2-035",
+          "japanese": "私は日曜日の朝テニスをします",
+          "sentence": "I play tennis ____ Sunday morning.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "曜日+時間帯(Sunday morning, Monday afternoonなど)の前にはonを使います。曜日が含まれているため、onが優先されます。In Sunday morningとは言いません。Play tennisは「テニスをする」という意味です。曜日が付く場合は常にonです。",
+          "hint": "曜日+時間帯 → on"
+        },
+        {
+          "id": "fb-g1-u2-036",
+          "japanese": "猫は机の上にいます",
+          "sentence": "The cat is ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "表面や上に接しているときはonを使います。On the deskで「机の上に」です。Onは何かの上に接触している状態を表します。Inは中、Atは地点を表すため不適切です。壁や天井に接している場合もonを使います。",
+          "hint": "表面・上 → on"
+        },
+        {
+          "id": "fb-g1-u2-037",
+          "japanese": "私は学校にいます",
+          "sentence": "I am ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "学校、会社、家などの場所にいるときはatを使います。At schoolで「学校に(で)」です。Atは活動している場所を表します。In schoolだと「学校という建物の中」という物理的な位置になります。At homeは「家に」という慣用表現です。",
+          "hint": "場所 → at"
+        },
+        {
+          "id": "fb-g1-u2-038",
+          "japanese": "彼は公園にいます",
+          "sentence": "He is ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "公園、庭園などの広い場所の中にいるときはinを使います。In the parkで「公園に(で)」です。公園は広い空間なのでinです。Atだと公園という地点を示すだけで、中にいる感じが出ません。森や建物の中もinを使います。",
+          "hint": "公園 → in"
+        },
+        {
+          "id": "fb-g1-u2-039",
+          "japanese": "彼女は私の隣に座っています",
+          "sentence": "She is sitting ____ me.",
+          "choices": [
+            "beside",
+            "between",
+            "under",
+            "on"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かの隣や横にあるときはbesideを使います。Beside meで「私の隣に」です。Besideは「～のそばに」という意味です。Next toも同じ意味で使えます。Betweenは「2つの間」なので、ここでは不適切です。",
+          "hint": "隣 → beside"
+        },
+        {
+          "id": "fb-g1-u2-040",
+          "japanese": "彼は窓のそばに立っています",
+          "sentence": "He is standing ____ the window.",
+          "choices": [
+            "beside",
+            "under",
+            "between",
+            "in"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かのそばや隣にいるときはbesideを使います。Beside the windowで「窓のそばに」です。By the windowやnear the windowも似た意味で使えます。Besideは距離が近いことを表します。Stand beside ~で「～のそばに立つ」という表現です。",
+          "hint": "そば → beside"
+        },
+        {
+          "id": "fb-g1-u2-041",
+          "japanese": "学校に行く",
+          "sentence": "I go ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "go to で「〜へ行く」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-042",
+          "japanese": "東京から",
+          "sentence": "I come ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "from は出発点",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-043",
+          "japanese": "友達と",
+          "sentence": "I play ____ my friends.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は「〜と一緒に」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-044",
+          "japanese": "母のために",
+          "sentence": "I cook ____ my mother.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "for は「〜のために」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-045",
+          "japanese": "音楽について",
+          "sentence": "We talk ____ music.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about で「〜について話す」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-046",
+          "japanese": "図書館に",
+          "sentence": "We walk ____ the library.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "walk to で「〜へ歩く」",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-047",
+          "japanese": "家から",
+          "sentence": "They run ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "from は起点",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-048",
+          "japanese": "ペンで",
+          "sentence": "I write ____ a pen.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は道具",
+          "hint": "動詞と一緒に使う前置詞"
+        },
+        {
+          "id": "fb-g1-u2-049",
+          "japanese": "私は7時に起きます",
+          "sentence": "I get up ____ 7 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻(○時○分)を表すときはatを使います。At 7 o'clockで「7時に」という意味です。時刻はピンポイントの時点なのでatです。Onは曜日・日付、Inは月・年・季節などの長い時間に使います。Get upは「起きる」という重要な句動詞です。",
+          "hint": "時刻 → at"
+        },
+        {
+          "id": "fb-g1-u2-050",
+          "japanese": "彼女は朝食べます",
+          "sentence": "She eats breakfast ____ the morning.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "Morning, afternoon, eveningの前にはinを使います。In the morningで「朝に」という意味です。時間帯を表す場合はinを使います。ただし、nightだけは例外でat nightとなります。Eat breakfastは「朝食を食べる」という表現です。",
+          "hint": "morning/afternoon/evening → in"
         }
       ]
     },
@@ -982,6 +2512,516 @@
           "correctAnswer": "a",
           "difficulty": "intermediate",
           "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-017",
+          "japanese": "本",
+          "sentence": "I have ____ book.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-018",
+          "japanese": "りんご",
+          "sentence": "This is ____ apple.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-019",
+          "japanese": "その本",
+          "sentence": "I like ____ book.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "intermediate",
+          "explanation": "特定のものには the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-020",
+          "japanese": "犬",
+          "sentence": "She has ____ dog.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-021",
+          "japanese": "卵",
+          "sentence": "I eat ____ egg.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-022",
+          "japanese": "その学校",
+          "sentence": "He goes to ____ school.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "intermediate",
+          "explanation": "特定の学校には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-023",
+          "japanese": "ペン",
+          "sentence": "This is ____ pen.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-024",
+          "japanese": "オレンジ",
+          "sentence": "I want ____ orange.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-025",
+          "japanese": "その猫",
+          "sentence": "Look at ____ cat!",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "beginner",
+          "explanation": "特定の猫には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-026",
+          "japanese": "車",
+          "sentence": "My father has ____ car.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-027",
+          "japanese": "傘",
+          "sentence": "I need ____ umbrella.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "intermediate",
+          "explanation": "umbrella は母音で始まる",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-028",
+          "japanese": "その公園",
+          "sentence": "We play in ____ park.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "intermediate",
+          "explanation": "特定の公園には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-029",
+          "japanese": "友達",
+          "sentence": "He is ____ friend.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-030",
+          "japanese": "アイスクリーム",
+          "sentence": "She eats ____ ice cream.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "ice は母音で始まる",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-031",
+          "japanese": "その先生",
+          "sentence": "I like ____ teacher.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "beginner",
+          "explanation": "特定の先生には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-032",
+          "japanese": "質問",
+          "sentence": "I have ____ question.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "intermediate",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-033",
+          "japanese": "本",
+          "sentence": "I have ____ book.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-034",
+          "japanese": "りんご",
+          "sentence": "This is ____ apple.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-035",
+          "japanese": "その本",
+          "sentence": "I like ____ book.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "intermediate",
+          "explanation": "特定のものには the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-036",
+          "japanese": "犬",
+          "sentence": "She has ____ dog.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-037",
+          "japanese": "卵",
+          "sentence": "I eat ____ egg.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-038",
+          "japanese": "その学校",
+          "sentence": "He goes to ____ school.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "intermediate",
+          "explanation": "特定の学校には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-039",
+          "japanese": "ペン",
+          "sentence": "This is ____ pen.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-040",
+          "japanese": "オレンジ",
+          "sentence": "I want ____ orange.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-041",
+          "japanese": "その猫",
+          "sentence": "Look at ____ cat!",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "beginner",
+          "explanation": "特定の猫には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-042",
+          "japanese": "車",
+          "sentence": "My father has ____ car.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-043",
+          "japanese": "傘",
+          "sentence": "I need ____ umbrella.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "intermediate",
+          "explanation": "umbrella は母音で始まる",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-044",
+          "japanese": "その公園",
+          "sentence": "We play in ____ park.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "intermediate",
+          "explanation": "特定の公園には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-045",
+          "japanese": "友達",
+          "sentence": "He is ____ friend.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-046",
+          "japanese": "アイスクリーム",
+          "sentence": "She eats ____ ice cream.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "ice は母音で始まる",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-047",
+          "japanese": "その先生",
+          "sentence": "I like ____ teacher.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "the",
+          "difficulty": "beginner",
+          "explanation": "特定の先生には the",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-048",
+          "japanese": "質問",
+          "sentence": "I have ____ question.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "intermediate",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-049",
+          "japanese": "本",
+          "sentence": "I have ____ book.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "子音で始まる単語には a",
+          "hint": "冠詞の使い分け"
+        },
+        {
+          "id": "fb-g1-u3-050",
+          "japanese": "りんご",
+          "sentence": "This is ____ apple.",
+          "choices": [
+            "a",
+            "an",
+            "the",
+            "-"
+          ],
+          "correctAnswer": "an",
+          "difficulty": "beginner",
+          "explanation": "母音で始まる単語には an",
           "hint": "冠詞の使い分け"
         }
       ]
@@ -1229,6 +3269,516 @@
           "difficulty": "intermediate",
           "explanation": "talk about",
           "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-017",
+          "japanese": "私は月曜日に学校へ行きます",
+          "sentence": "I go to school ____ Monday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日を表すときはonを使います。On Mondayで「月曜日に」です。曜日は特定の日なのでonです。Atは時刻、Inは月や年に使います。Go to schoolは「学校へ行く」という基本表現です。全ての曜日(Sunday, Monday, Tuesdayなど)の前にonを使います。",
+          "hint": "曜日 → on"
+        },
+        {
+          "id": "fb-g1-u4-018",
+          "japanese": "私は夜勉強します",
+          "sentence": "I study ____ night.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "Nightは例外的にatを使います。At nightで「夜に」です。Morning, afternoon, eveningはinを使いますが、nightだけはatです。この例外をしっかり覚えましょう。Studyは「勉強する」という動詞です。",
+          "hint": "nightは例外的にat"
+        },
+        {
+          "id": "fb-g1-u4-019",
+          "sentence": "I was born ____ March 15th.",
+          "japanese": "私は3月15日に生まれました",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "特定の日付(○月○日)を表すときはonを使います。On March 15thで「3月15日に」です。日付は特定の日なのでonです。月だけならin Marchですが、日付が付くとon March 15thとなります。Was bornは「生まれた」という受動態です。",
+          "hint": "日付 → on"
+        },
+        {
+          "id": "fb-g1-u4-020",
+          "japanese": "彼は東京に住んでいます",
+          "sentence": "He lives ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "都市、国、地域などの広い場所を表すときはinを使います。In Tokyoで「東京に」です。Inは空間の中にいることを表します。Liveは「住む」という動詞で、前置詞inと一緒に使います。In Japan(日本に)、in the world(世界に)も同じくinです。",
+          "hint": "都市・国 → in"
+        },
+        {
+          "id": "fb-g1-u4-021",
+          "japanese": "写真は壁にかかっています",
+          "sentence": "The picture is ____ the wall.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "壁や天井などの表面に接しているときはonを使います。On the wallで「壁に」です。壁に掛かっている、貼ってある場合はonです。In the wallだと「壁の中に埋まっている」という意味になってしまいます。絵画やポスターもonです。",
+          "hint": "壁 → on"
+        },
+        {
+          "id": "fb-g1-u4-022",
+          "japanese": "犬は机の下にいます",
+          "sentence": "The dog is ____ the desk.",
+          "choices": [
+            "under",
+            "on",
+            "in",
+            "at"
+          ],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "何かの下にあるときはunderを使います。Under the deskで「机の下に」です。Underは真下の位置を表します。Onは上、Inは中なので意味が異なります。橋の下(under the bridge)、木の下(under the tree)も同じくunderです。",
+          "hint": "下 → under"
+        },
+        {
+          "id": "fb-g1-u4-023",
+          "japanese": "ボールは椅子の下にあります",
+          "sentence": "The ball is ____ the chair.",
+          "choices": [
+            "under",
+            "on",
+            "between",
+            "at"
+          ],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "何かの下にあるときはunderを使います。Under the chairで「椅子の下に」です。Underは下の位置関係を表す基本前置詞です。Onは「上に」、Betweenは「間に」なので位置が異なります。テーブルの下(under the table)も同じです。",
+          "hint": "下 → under"
+        },
+        {
+          "id": "fb-g1-u4-024",
+          "japanese": "猫はベッドの下で眠っています",
+          "sentence": "The cat is sleeping ____ the bed.",
+          "choices": [
+            "under",
+            "on",
+            "beside",
+            "between"
+          ],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "何かの下にあるときはunderを使います。Under the bedで「ベッドの下で」です。Onだと「ベッドの上」、Besideだと「ベッドの横」という意味になります。Sleep underは「～の下で眠る」という表現です。",
+          "hint": "下で → under"
+        },
+        {
+          "id": "fb-g1-u4-025",
+          "japanese": "どこから",
+          "sentence": "Where are you ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "出身地を聞く時は from",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-026",
+          "japanese": "どこに",
+          "sentence": "Where do you go ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "目的地には to",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-027",
+          "japanese": "誰と",
+          "sentence": "Who do you play ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "「誰と」は with",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-028",
+          "japanese": "何のために",
+          "sentence": "What do you study ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "目的を聞く時は for",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-029",
+          "japanese": "何時に",
+          "sentence": "What time do you get up ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-030",
+          "japanese": "何曜日に",
+          "sentence": "What day do you play tennis ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "曜日には on",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-031",
+          "japanese": "どの季節に",
+          "sentence": "Which season do you like ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "季節には in",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-032",
+          "japanese": "何について",
+          "sentence": "What do you talk ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-033",
+          "japanese": "私は月曜日に学校へ行きます",
+          "sentence": "I go to school ____ Monday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日を表すときはonを使います。On Mondayで「月曜日に」です。曜日は特定の日なのでonです。Atは時刻、Inは月や年に使います。Go to schoolは「学校へ行く」という基本表現です。全ての曜日(Sunday, Monday, Tuesdayなど)の前にonを使います。",
+          "hint": "曜日 → on"
+        },
+        {
+          "id": "fb-g1-u4-034",
+          "japanese": "私は夜勉強します",
+          "sentence": "I study ____ night.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "Nightは例外的にatを使います。At nightで「夜に」です。Morning, afternoon, eveningはinを使いますが、nightだけはatです。この例外をしっかり覚えましょう。Studyは「勉強する」という動詞です。",
+          "hint": "nightは例外的にat"
+        },
+        {
+          "id": "fb-g1-u4-035",
+          "sentence": "I was born ____ March 15th.",
+          "japanese": "私は3月15日に生まれました",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "特定の日付(○月○日)を表すときはonを使います。On March 15thで「3月15日に」です。日付は特定の日なのでonです。月だけならin Marchですが、日付が付くとon March 15thとなります。Was bornは「生まれた」という受動態です。",
+          "hint": "日付 → on"
+        },
+        {
+          "id": "fb-g1-u4-036",
+          "japanese": "彼は東京に住んでいます",
+          "sentence": "He lives ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "都市、国、地域などの広い場所を表すときはinを使います。In Tokyoで「東京に」です。Inは空間の中にいることを表します。Liveは「住む」という動詞で、前置詞inと一緒に使います。In Japan(日本に)、in the world(世界に)も同じくinです。",
+          "hint": "都市・国 → in"
+        },
+        {
+          "id": "fb-g1-u4-037",
+          "japanese": "写真は壁にかかっています",
+          "sentence": "The picture is ____ the wall.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "壁や天井などの表面に接しているときはonを使います。On the wallで「壁に」です。壁に掛かっている、貼ってある場合はonです。In the wallだと「壁の中に埋まっている」という意味になってしまいます。絵画やポスターもonです。",
+          "hint": "壁 → on"
+        },
+        {
+          "id": "fb-g1-u4-038",
+          "japanese": "犬は机の下にいます",
+          "sentence": "The dog is ____ the desk.",
+          "choices": [
+            "under",
+            "on",
+            "in",
+            "at"
+          ],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "何かの下にあるときはunderを使います。Under the deskで「机の下に」です。Underは真下の位置を表します。Onは上、Inは中なので意味が異なります。橋の下(under the bridge)、木の下(under the tree)も同じくunderです。",
+          "hint": "下 → under"
+        },
+        {
+          "id": "fb-g1-u4-039",
+          "japanese": "ボールは椅子の下にあります",
+          "sentence": "The ball is ____ the chair.",
+          "choices": [
+            "under",
+            "on",
+            "between",
+            "at"
+          ],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "何かの下にあるときはunderを使います。Under the chairで「椅子の下に」です。Underは下の位置関係を表す基本前置詞です。Onは「上に」、Betweenは「間に」なので位置が異なります。テーブルの下(under the table)も同じです。",
+          "hint": "下 → under"
+        },
+        {
+          "id": "fb-g1-u4-040",
+          "japanese": "猫はベッドの下で眠っています",
+          "sentence": "The cat is sleeping ____ the bed.",
+          "choices": [
+            "under",
+            "on",
+            "beside",
+            "between"
+          ],
+          "correctAnswer": "under",
+          "difficulty": "beginner",
+          "explanation": "何かの下にあるときはunderを使います。Under the bedで「ベッドの下で」です。Onだと「ベッドの上」、Besideだと「ベッドの横」という意味になります。Sleep underは「～の下で眠る」という表現です。",
+          "hint": "下で → under"
+        },
+        {
+          "id": "fb-g1-u4-041",
+          "japanese": "どこから",
+          "sentence": "Where are you ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "出身地を聞く時は from",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-042",
+          "japanese": "どこに",
+          "sentence": "Where do you go ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "目的地には to",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-043",
+          "japanese": "誰と",
+          "sentence": "Who do you play ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "「誰と」は with",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-044",
+          "japanese": "何のために",
+          "sentence": "What do you study ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "目的を聞く時は for",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-045",
+          "japanese": "何時に",
+          "sentence": "What time do you get up ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-046",
+          "japanese": "何曜日に",
+          "sentence": "What day do you play tennis ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "曜日には on",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-047",
+          "japanese": "どの季節に",
+          "sentence": "Which season do you like ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "季節には in",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-048",
+          "japanese": "何について",
+          "sentence": "What do you talk ____?",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about",
+          "hint": "疑問詞と前置詞"
+        },
+        {
+          "id": "fb-g1-u4-049",
+          "japanese": "私は月曜日に学校へ行きます",
+          "sentence": "I go to school ____ Monday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日を表すときはonを使います。On Mondayで「月曜日に」です。曜日は特定の日なのでonです。Atは時刻、Inは月や年に使います。Go to schoolは「学校へ行く」という基本表現です。全ての曜日(Sunday, Monday, Tuesdayなど)の前にonを使います。",
+          "hint": "曜日 → on"
+        },
+        {
+          "id": "fb-g1-u4-050",
+          "japanese": "私は夜勉強します",
+          "sentence": "I study ____ night.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "Nightは例外的にatを使います。At nightで「夜に」です。Morning, afternoon, eveningはinを使いますが、nightだけはatです。この例外をしっかり覚えましょう。Studyは「勉強する」という動詞です。",
+          "hint": "nightは例外的にat"
         }
       ]
     },
@@ -1475,6 +4025,516 @@
           "difficulty": "intermediate",
           "explanation": "talk about",
           "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-017",
+          "japanese": "私は5月に生まれました",
+          "sentence": "I was born ____ May.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "月を表すときはinを使います。In Mayで「5月に」です。月は比較的長い期間なのでinです。Atは時刻、Onは曜日・日付に使います。Was bornは「生まれた」という受動態の重要表現です。全ての月(January, February, Marchなど)の前にinを使います。",
+          "hint": "月 → in"
+        },
+        {
+          "id": "fb-g1-u5-018",
+          "japanese": "彼は2020年に日本に来ました",
+          "sentence": "He came to Japan ____ 2020.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年を表すときはinを使います。In 2020で「2020年に」です。年は長い期間なのでinです。月や季節と同じルールです。Came to Japanは「日本に来た」でcomeの過去形を使っています。世紀(in the 21st century)もinを使います。",
+          "hint": "年 → in"
+        },
+        {
+          "id": "fb-g1-u5-019",
+          "japanese": "私は駅にいます",
+          "sentence": "I am ____ the station.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "駅、空港、バス停などの地点を表すときはatを使います。At the stationで「駅に(で)」という意味です。Atは特定の地点を示します。Inは建物の中や広い場所、Onは表面に使います。Stationのような交通機関の場所はatです。",
+          "hint": "地点 → at"
+        },
+        {
+          "id": "fb-g1-u5-020",
+          "japanese": "本はかばんの中にあります",
+          "sentence": "The book is ____ the bag.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "何かの内部や中にあるときはinを使います。In the bagで「かばんの中に」です。Inは容器や空間の内部を表します。Onだと表面、Atだと地点になり、意味が変わってしまいます。箱やポケットの中もinです。",
+          "hint": "中 → in"
+        },
+        {
+          "id": "fb-g1-u5-021",
+          "japanese": "彼女はバス停で待っています",
+          "sentence": "She is waiting ____ the bus stop.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "バス停、駅、空港などの地点を表すときはatを使います。At the bus stopで「バス停で」です。特定の場所で何かをしているときはatです。Wait atは「～で待つ」という重要表現です。交通機関の乗降場所はatを使います。",
+          "hint": "バス停 → at"
+        },
+        {
+          "id": "fb-g1-u5-022",
+          "japanese": "銀行は郵便局と病院の間にあります",
+          "sentence": "The bank is ____ the post office and the hospital.",
+          "choices": [
+            "between",
+            "under",
+            "on",
+            "at"
+          ],
+          "correctAnswer": "between",
+          "difficulty": "intermediate",
+          "explanation": "2つのものの間にあるときはbetweenを使います。Between A and Bで「AとBの間に」という重要表現です。3つ以上の場合はamongを使います。Betweenは2つの間、Amongは3つ以上の中という使い分けを覚えましょう。",
+          "hint": "2つの間 → between"
+        },
+        {
+          "id": "fb-g1-u5-023",
+          "japanese": "図書館は学校と駅の間にあります",
+          "sentence": "The library is ____ the school and the station.",
+          "choices": [
+            "between",
+            "beside",
+            "under",
+            "on"
+          ],
+          "correctAnswer": "between",
+          "difficulty": "intermediate",
+          "explanation": "2つの場所の間にあるときはbetweenを使います。Between A and Bは位置関係を表す重要表現です。学校と駅という2つの地点の間に図書館があることを示しています。地図上の位置関係を説明するときによく使います。",
+          "hint": "AとBの間 → between A and B"
+        },
+        {
+          "id": "fb-g1-u5-024",
+          "japanese": "スーパーは銀行の隣にあります",
+          "sentence": "The supermarket is ____ the bank.",
+          "choices": [
+            "beside",
+            "under",
+            "between",
+            "in"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かの隣にあるときはbesideを使います。Beside the bankで「銀行の隣に」です。Next toも同じ意味で、どちらも「隣に」を表します。建物の位置関係を説明するときによく使う表現です。Near(近くに)よりも距離が近いニュアンスです。",
+          "hint": "隣に → beside"
+        },
+        {
+          "id": "fb-g1-u5-025",
+          "japanese": "〜へ",
+          "sentence": "I can go ____ the store.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "can go to で「〜へ行ける」",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-026",
+          "japanese": "〜と",
+          "sentence": "I can play ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "can play with で「〜と遊べる」",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-027",
+          "japanese": "〜語で",
+          "sentence": "I can speak ____ English.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "in + 言語",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-028",
+          "japanese": "〜の上で",
+          "sentence": "I can run ____ the beach.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は表面",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-029",
+          "japanese": "〜のために",
+          "sentence": "I can cook ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "for は目的",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-030",
+          "japanese": "〜が得意",
+          "sentence": "I can swim ____ the pool.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "場所の at",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-031",
+          "japanese": "〜から",
+          "sentence": "I can see ____ here.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "intermediate",
+          "explanation": "from は視点",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-032",
+          "japanese": "〜について",
+          "sentence": "I can talk ____ music.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-033",
+          "japanese": "私は5月に生まれました",
+          "sentence": "I was born ____ May.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "月を表すときはinを使います。In Mayで「5月に」です。月は比較的長い期間なのでinです。Atは時刻、Onは曜日・日付に使います。Was bornは「生まれた」という受動態の重要表現です。全ての月(January, February, Marchなど)の前にinを使います。",
+          "hint": "月 → in"
+        },
+        {
+          "id": "fb-g1-u5-034",
+          "japanese": "彼は2020年に日本に来ました",
+          "sentence": "He came to Japan ____ 2020.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年を表すときはinを使います。In 2020で「2020年に」です。年は長い期間なのでinです。月や季節と同じルールです。Came to Japanは「日本に来た」でcomeの過去形を使っています。世紀(in the 21st century)もinを使います。",
+          "hint": "年 → in"
+        },
+        {
+          "id": "fb-g1-u5-035",
+          "japanese": "私は駅にいます",
+          "sentence": "I am ____ the station.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "駅、空港、バス停などの地点を表すときはatを使います。At the stationで「駅に(で)」という意味です。Atは特定の地点を示します。Inは建物の中や広い場所、Onは表面に使います。Stationのような交通機関の場所はatです。",
+          "hint": "地点 → at"
+        },
+        {
+          "id": "fb-g1-u5-036",
+          "japanese": "本はかばんの中にあります",
+          "sentence": "The book is ____ the bag.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "何かの内部や中にあるときはinを使います。In the bagで「かばんの中に」です。Inは容器や空間の内部を表します。Onだと表面、Atだと地点になり、意味が変わってしまいます。箱やポケットの中もinです。",
+          "hint": "中 → in"
+        },
+        {
+          "id": "fb-g1-u5-037",
+          "japanese": "彼女はバス停で待っています",
+          "sentence": "She is waiting ____ the bus stop.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "バス停、駅、空港などの地点を表すときはatを使います。At the bus stopで「バス停で」です。特定の場所で何かをしているときはatです。Wait atは「～で待つ」という重要表現です。交通機関の乗降場所はatを使います。",
+          "hint": "バス停 → at"
+        },
+        {
+          "id": "fb-g1-u5-038",
+          "japanese": "銀行は郵便局と病院の間にあります",
+          "sentence": "The bank is ____ the post office and the hospital.",
+          "choices": [
+            "between",
+            "under",
+            "on",
+            "at"
+          ],
+          "correctAnswer": "between",
+          "difficulty": "intermediate",
+          "explanation": "2つのものの間にあるときはbetweenを使います。Between A and Bで「AとBの間に」という重要表現です。3つ以上の場合はamongを使います。Betweenは2つの間、Amongは3つ以上の中という使い分けを覚えましょう。",
+          "hint": "2つの間 → between"
+        },
+        {
+          "id": "fb-g1-u5-039",
+          "japanese": "図書館は学校と駅の間にあります",
+          "sentence": "The library is ____ the school and the station.",
+          "choices": [
+            "between",
+            "beside",
+            "under",
+            "on"
+          ],
+          "correctAnswer": "between",
+          "difficulty": "intermediate",
+          "explanation": "2つの場所の間にあるときはbetweenを使います。Between A and Bは位置関係を表す重要表現です。学校と駅という2つの地点の間に図書館があることを示しています。地図上の位置関係を説明するときによく使います。",
+          "hint": "AとBの間 → between A and B"
+        },
+        {
+          "id": "fb-g1-u5-040",
+          "japanese": "スーパーは銀行の隣にあります",
+          "sentence": "The supermarket is ____ the bank.",
+          "choices": [
+            "beside",
+            "under",
+            "between",
+            "in"
+          ],
+          "correctAnswer": "beside",
+          "difficulty": "intermediate",
+          "explanation": "何かの隣にあるときはbesideを使います。Beside the bankで「銀行の隣に」です。Next toも同じ意味で、どちらも「隣に」を表します。建物の位置関係を説明するときによく使う表現です。Near(近くに)よりも距離が近いニュアンスです。",
+          "hint": "隣に → beside"
+        },
+        {
+          "id": "fb-g1-u5-041",
+          "japanese": "〜へ",
+          "sentence": "I can go ____ the store.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "can go to で「〜へ行ける」",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-042",
+          "japanese": "〜と",
+          "sentence": "I can play ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "can play with で「〜と遊べる」",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-043",
+          "japanese": "〜語で",
+          "sentence": "I can speak ____ English.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "in + 言語",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-044",
+          "japanese": "〜の上で",
+          "sentence": "I can run ____ the beach.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は表面",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-045",
+          "japanese": "〜のために",
+          "sentence": "I can cook ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "for は目的",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-046",
+          "japanese": "〜が得意",
+          "sentence": "I can swim ____ the pool.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "場所の at",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-047",
+          "japanese": "〜から",
+          "sentence": "I can see ____ here.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "intermediate",
+          "explanation": "from は視点",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-048",
+          "japanese": "〜について",
+          "sentence": "I can talk ____ music.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about",
+          "hint": "canと前置詞"
+        },
+        {
+          "id": "fb-g1-u5-049",
+          "japanese": "私は5月に生まれました",
+          "sentence": "I was born ____ May.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "月を表すときはinを使います。In Mayで「5月に」です。月は比較的長い期間なのでinです。Atは時刻、Onは曜日・日付に使います。Was bornは「生まれた」という受動態の重要表現です。全ての月(January, February, Marchなど)の前にinを使います。",
+          "hint": "月 → in"
+        },
+        {
+          "id": "fb-g1-u5-050",
+          "japanese": "彼は2020年に日本に来ました",
+          "sentence": "He came to Japan ____ 2020.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年を表すときはinを使います。In 2020で「2020年に」です。年は長い期間なのでinです。月や季節と同じルールです。Came to Japanは「日本に来た」でcomeの過去形を使っています。世紀(in the 21st century)もinを使います。",
+          "hint": "年 → in"
         }
       ]
     },
@@ -1720,6 +4780,516 @@
           "correctAnswer": "about",
           "difficulty": "intermediate",
           "explanation": "talk about",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-017",
+          "japanese": "部屋で",
+          "sentence": "I am studying ____ my room.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は空間内",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-018",
+          "japanese": "学校で",
+          "sentence": "He is playing ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は場所",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-019",
+          "japanese": "〜の上で",
+          "sentence": "The cat is sleeping ____ the bed.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は接触面",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-020",
+          "japanese": "〜と",
+          "sentence": "She is talking ____ her friend.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は一緒に",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-021",
+          "japanese": "〜へ",
+          "sentence": "They are going ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "going to",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-022",
+          "japanese": "〜から",
+          "sentence": "I am coming ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "coming from",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-023",
+          "japanese": "〜を",
+          "sentence": "We are looking ____ the key.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "look for で探す",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-024",
+          "japanese": "〜について",
+          "sentence": "He is thinking ____ the test.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "think about",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-025",
+          "japanese": "〜で",
+          "sentence": "She is swimming ____ the pool.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in はプール内",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-026",
+          "japanese": "〜を",
+          "sentence": "I am looking ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "look at で見る",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-027",
+          "japanese": "〜で",
+          "sentence": "They are playing ____ the field.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は競技場",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-028",
+          "japanese": "〜で",
+          "sentence": "I am writing ____ a pencil.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は道具",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-029",
+          "japanese": "〜に",
+          "sentence": "She is listening ____ music.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "listen to",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-030",
+          "japanese": "〜から",
+          "sentence": "We are running ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "from は起点",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-031",
+          "japanese": "〜のために",
+          "sentence": "I am cooking ____ my family.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "for は目的",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-032",
+          "japanese": "〜について",
+          "sentence": "They are talking ____ sports.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-033",
+          "japanese": "部屋で",
+          "sentence": "I am studying ____ my room.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は空間内",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-034",
+          "japanese": "学校で",
+          "sentence": "He is playing ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は場所",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-035",
+          "japanese": "〜の上で",
+          "sentence": "The cat is sleeping ____ the bed.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は接触面",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-036",
+          "japanese": "〜と",
+          "sentence": "She is talking ____ her friend.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は一緒に",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-037",
+          "japanese": "〜へ",
+          "sentence": "They are going ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "going to",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-038",
+          "japanese": "〜から",
+          "sentence": "I am coming ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "coming from",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-039",
+          "japanese": "〜を",
+          "sentence": "We are looking ____ the key.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "look for で探す",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-040",
+          "japanese": "〜について",
+          "sentence": "He is thinking ____ the test.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "think about",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-041",
+          "japanese": "〜で",
+          "sentence": "She is swimming ____ the pool.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in はプール内",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-042",
+          "japanese": "〜を",
+          "sentence": "I am looking ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "look at で見る",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-043",
+          "japanese": "〜で",
+          "sentence": "They are playing ____ the field.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は競技場",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-044",
+          "japanese": "〜で",
+          "sentence": "I am writing ____ a pencil.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "with は道具",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-045",
+          "japanese": "〜に",
+          "sentence": "She is listening ____ music.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "listen to",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-046",
+          "japanese": "〜から",
+          "sentence": "We are running ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "from は起点",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-047",
+          "japanese": "〜のために",
+          "sentence": "I am cooking ____ my family.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "for は目的",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-048",
+          "japanese": "〜について",
+          "sentence": "They are talking ____ sports.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talk about",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-049",
+          "japanese": "部屋で",
+          "sentence": "I am studying ____ my room.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は空間内",
+          "hint": "現在進行形と前置詞"
+        },
+        {
+          "id": "fb-g1-u6-050",
+          "japanese": "学校で",
+          "sentence": "He is playing ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "at は場所",
           "hint": "現在進行形と前置詞"
         }
       ]
@@ -1967,6 +5537,516 @@
           "difficulty": "beginner",
           "explanation": "write on",
           "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-017",
+          "japanese": "〜へ",
+          "sentence": "Go ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "go to で「〜へ行け」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-018",
+          "japanese": "〜を",
+          "sentence": "Look ____ this.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "look at で「〜を見ろ」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-019",
+          "japanese": "〜を",
+          "sentence": "Listen ____ me.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "listen to で「〜を聞け」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-020",
+          "japanese": "〜を",
+          "sentence": "Wait ____ me.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "beginner",
+          "explanation": "wait for で「〜を待て」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-021",
+          "japanese": "〜と",
+          "sentence": "Come ____ me.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "come with で「〜と来い」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-022",
+          "japanese": "〜の上に",
+          "sentence": "Put it ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は接触面",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-023",
+          "japanese": "〜の中に",
+          "sentence": "Put it ____ the box.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は容器内",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-024",
+          "japanese": "〜に",
+          "sentence": "Write ____ your teacher.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "write to で手紙を書く",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-025",
+          "japanese": "〜から",
+          "sentence": "Stand ____ here.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "intermediate",
+          "explanation": "from は起点",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-026",
+          "japanese": "〜について",
+          "sentence": "Think ____ it.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "think about",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-027",
+          "japanese": "〜に",
+          "sentence": "Stay ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "stay at home",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-028",
+          "japanese": "〜で",
+          "sentence": "Play ____ your friends.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "play with",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-029",
+          "japanese": "〜へ",
+          "sentence": "Run ____ the goal.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "run to",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-030",
+          "japanese": "〜のために",
+          "sentence": "Study ____ the test.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "beginner",
+          "explanation": "study for",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-031",
+          "japanese": "〜で",
+          "sentence": "Speak ____ English.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "speak in + 言語",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-032",
+          "japanese": "〜に",
+          "sentence": "Write ____ the paper.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "write on",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-033",
+          "japanese": "〜へ",
+          "sentence": "Go ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "go to で「〜へ行け」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-034",
+          "japanese": "〜を",
+          "sentence": "Look ____ this.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "look at で「〜を見ろ」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-035",
+          "japanese": "〜を",
+          "sentence": "Listen ____ me.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "listen to で「〜を聞け」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-036",
+          "japanese": "〜を",
+          "sentence": "Wait ____ me.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "beginner",
+          "explanation": "wait for で「〜を待て」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-037",
+          "japanese": "〜と",
+          "sentence": "Come ____ me.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "come with で「〜と来い」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-038",
+          "japanese": "〜の上に",
+          "sentence": "Put it ____ the desk.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "on は接触面",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-039",
+          "japanese": "〜の中に",
+          "sentence": "Put it ____ the box.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "in は容器内",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-040",
+          "japanese": "〜に",
+          "sentence": "Write ____ your teacher.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "write to で手紙を書く",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-041",
+          "japanese": "〜から",
+          "sentence": "Stand ____ here.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "intermediate",
+          "explanation": "from は起点",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-042",
+          "japanese": "〜について",
+          "sentence": "Think ____ it.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "think about",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-043",
+          "japanese": "〜に",
+          "sentence": "Stay ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "stay at home",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-044",
+          "japanese": "〜で",
+          "sentence": "Play ____ your friends.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "play with",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-045",
+          "japanese": "〜へ",
+          "sentence": "Run ____ the goal.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "run to",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-046",
+          "japanese": "〜のために",
+          "sentence": "Study ____ the test.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "beginner",
+          "explanation": "study for",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-047",
+          "japanese": "〜で",
+          "sentence": "Speak ____ English.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "speak in + 言語",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-048",
+          "japanese": "〜に",
+          "sentence": "Write ____ the paper.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "write on",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-049",
+          "japanese": "〜へ",
+          "sentence": "Go ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "go to で「〜へ行け」",
+          "hint": "命令文と前置詞"
+        },
+        {
+          "id": "fb-g1-u7-050",
+          "japanese": "〜を",
+          "sentence": "Look ____ this.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "look at で「〜を見ろ」",
+          "hint": "命令文と前置詞"
         }
       ]
     },
@@ -2213,6 +6293,516 @@
           "difficulty": "beginner",
           "explanation": "時刻には at",
           "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-017",
+          "japanese": "〜時に",
+          "sentence": "I woke up ____ 7 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-018",
+          "japanese": "〜日に",
+          "sentence": "I played tennis ____ Sunday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-019",
+          "japanese": "〜に",
+          "sentence": "I visited Tokyo ____ summer.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-020",
+          "japanese": "〜に",
+          "sentence": "I studied ____ night.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "night は at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-021",
+          "japanese": "〜に",
+          "sentence": "I watched a movie ____ Monday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-022",
+          "japanese": "〜に",
+          "sentence": "I traveled ____ 2023.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-023",
+          "japanese": "〜に",
+          "sentence": "I arrived ____ noon.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "noon は at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-024",
+          "japanese": "〜に",
+          "sentence": "I finished ____ Friday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-025",
+          "japanese": "〜に",
+          "sentence": "I lived there ____ winter.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-026",
+          "japanese": "〜に",
+          "sentence": "I ate lunch ____ 12 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-027",
+          "japanese": "〜に",
+          "sentence": "I cleaned my room ____ Saturday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-028",
+          "japanese": "〜に",
+          "sentence": "I was born ____ April.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "月には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-029",
+          "japanese": "〜に",
+          "sentence": "I met him ____ midnight.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "midnight は at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-030",
+          "japanese": "〜に",
+          "sentence": "I started ____ January 1st.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "日付には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-031",
+          "japanese": "〜に",
+          "sentence": "I graduated ____ 2022.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "年には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-032",
+          "japanese": "〜に",
+          "sentence": "I woke up ____ 6:30.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-033",
+          "japanese": "〜時に",
+          "sentence": "I woke up ____ 7 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-034",
+          "japanese": "〜日に",
+          "sentence": "I played tennis ____ Sunday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-035",
+          "japanese": "〜に",
+          "sentence": "I visited Tokyo ____ summer.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-036",
+          "japanese": "〜に",
+          "sentence": "I studied ____ night.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "night は at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-037",
+          "japanese": "〜に",
+          "sentence": "I watched a movie ____ Monday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-038",
+          "japanese": "〜に",
+          "sentence": "I traveled ____ 2023.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "年には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-039",
+          "japanese": "〜に",
+          "sentence": "I arrived ____ noon.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "noon は at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-040",
+          "japanese": "〜に",
+          "sentence": "I finished ____ Friday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-041",
+          "japanese": "〜に",
+          "sentence": "I lived there ____ winter.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "季節には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-042",
+          "japanese": "〜に",
+          "sentence": "I ate lunch ____ 12 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-043",
+          "japanese": "〜に",
+          "sentence": "I cleaned my room ____ Saturday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-044",
+          "japanese": "〜に",
+          "sentence": "I was born ____ April.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "月には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-045",
+          "japanese": "〜に",
+          "sentence": "I met him ____ midnight.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "intermediate",
+          "explanation": "midnight は at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-046",
+          "japanese": "〜に",
+          "sentence": "I started ____ January 1st.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "intermediate",
+          "explanation": "日付には on",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-047",
+          "japanese": "〜に",
+          "sentence": "I graduated ____ 2022.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "intermediate",
+          "explanation": "年には in",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-048",
+          "japanese": "〜に",
+          "sentence": "I woke up ____ 6:30.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-049",
+          "japanese": "〜時に",
+          "sentence": "I woke up ____ 7 o'clock.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "時刻には at",
+          "hint": "過去の時を表す前置詞"
+        },
+        {
+          "id": "fb-g1-u8-050",
+          "japanese": "〜日に",
+          "sentence": "I played tennis ____ Sunday.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "曜日には on",
+          "hint": "過去の時を表す前置詞"
         }
       ]
     },
@@ -2458,6 +7048,516 @@
           "correctAnswer": "about",
           "difficulty": "intermediate",
           "explanation": "talked about",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-017",
+          "japanese": "〜へ",
+          "sentence": "I went ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "went to で「〜へ行った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-018",
+          "japanese": "〜から",
+          "sentence": "I came ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "came from で「〜から来た」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-019",
+          "japanese": "〜で",
+          "sentence": "I met him ____ the station.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "met at で「〜で会った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-020",
+          "japanese": "〜で",
+          "sentence": "I saw her ____ the library.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "saw in で「〜で見た」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-021",
+          "japanese": "〜で",
+          "sentence": "I sat ____ the chair.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "sat on で「〜に座った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-022",
+          "japanese": "〜と",
+          "sentence": "I went ____ my friend.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "went with で「〜と行った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-023",
+          "japanese": "〜を",
+          "sentence": "I looked ____ my bag.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "looked for で「〜を探した」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-024",
+          "japanese": "〜について",
+          "sentence": "I thought ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "thought about",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-025",
+          "japanese": "〜へ",
+          "sentence": "I ran ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "ran to",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-026",
+          "japanese": "〜から",
+          "sentence": "I got ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "got from",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-027",
+          "japanese": "〜を",
+          "sentence": "I looked ____ the sky.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "looked at",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-028",
+          "japanese": "〜に",
+          "sentence": "I lived ____ Japan.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "lived in",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-029",
+          "japanese": "〜に",
+          "sentence": "I put it ____ the table.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "put on",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-030",
+          "japanese": "〜で",
+          "sentence": "I wrote ____ a pen.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "wrote with",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-031",
+          "japanese": "〜のために",
+          "sentence": "I cooked ____ my family.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "cooked for",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-032",
+          "japanese": "〜について",
+          "sentence": "I talked ____ movies.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talked about",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-033",
+          "japanese": "〜へ",
+          "sentence": "I went ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "went to で「〜へ行った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-034",
+          "japanese": "〜から",
+          "sentence": "I came ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "came from で「〜から来た」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-035",
+          "japanese": "〜で",
+          "sentence": "I met him ____ the station.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "met at で「〜で会った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-036",
+          "japanese": "〜で",
+          "sentence": "I saw her ____ the library.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "saw in で「〜で見た」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-037",
+          "japanese": "〜で",
+          "sentence": "I sat ____ the chair.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "sat on で「〜に座った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-038",
+          "japanese": "〜と",
+          "sentence": "I went ____ my friend.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "went with で「〜と行った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-039",
+          "japanese": "〜を",
+          "sentence": "I looked ____ my bag.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "looked for で「〜を探した」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-040",
+          "japanese": "〜について",
+          "sentence": "I thought ____ you.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "thought about",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-041",
+          "japanese": "〜へ",
+          "sentence": "I ran ____ school.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "ran to",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-042",
+          "japanese": "〜から",
+          "sentence": "I got ____ home.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "got from",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-043",
+          "japanese": "〜を",
+          "sentence": "I looked ____ the sky.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "at",
+          "difficulty": "beginner",
+          "explanation": "looked at",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-044",
+          "japanese": "〜に",
+          "sentence": "I lived ____ Japan.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "in",
+          "difficulty": "beginner",
+          "explanation": "lived in",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-045",
+          "japanese": "〜に",
+          "sentence": "I put it ____ the table.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "on",
+          "difficulty": "beginner",
+          "explanation": "put on",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-046",
+          "japanese": "〜で",
+          "sentence": "I wrote ____ a pen.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "with",
+          "difficulty": "beginner",
+          "explanation": "wrote with",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-047",
+          "japanese": "〜のために",
+          "sentence": "I cooked ____ my family.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "for",
+          "difficulty": "intermediate",
+          "explanation": "cooked for",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-048",
+          "japanese": "〜について",
+          "sentence": "I talked ____ movies.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "about",
+          "difficulty": "intermediate",
+          "explanation": "talked about",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-049",
+          "japanese": "〜へ",
+          "sentence": "I went ____ the park.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "to",
+          "difficulty": "beginner",
+          "explanation": "went to で「〜へ行った」",
+          "hint": "過去形と前置詞"
+        },
+        {
+          "id": "fb-g1-u9-050",
+          "japanese": "〜から",
+          "sentence": "I came ____ Tokyo.",
+          "choices": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctAnswer": "from",
+          "difficulty": "beginner",
+          "explanation": "came from で「〜から来た」",
           "hint": "過去形と前置詞"
         }
       ]
