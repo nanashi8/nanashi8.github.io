@@ -1272,6 +1272,8 @@ function App() {
             onWordPhraseFilterChange={setSelectedWordPhraseFilter}
             selectedPhraseTypeFilter={selectedPhraseTypeFilter}
             onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
+            selectedDataSource={selectedDataSource}
+            onDataSourceChange={setSelectedDataSource}
             onStartQuiz={handleStartQuiz}
             onAnswer={handleAnswer}
             onNext={handleNext}
@@ -1297,6 +1299,8 @@ function App() {
             onWordPhraseFilterChange={setSelectedWordPhraseFilter}
             selectedPhraseTypeFilter={selectedPhraseTypeFilter}
             onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
+            selectedDataSource={selectedDataSource}
+            onDataSourceChange={setSelectedDataSource}
             onStartQuiz={handleStartQuiz}
             onReviewFocus={handleSpellingReviewFocus}
             isReviewFocusMode={reviewFocusMode}

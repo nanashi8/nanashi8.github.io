@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
-import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES } from '../App';
+import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import ScoreBoard from './ScoreBoard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
@@ -19,6 +19,8 @@ interface SpellingViewProps {
   onWordPhraseFilterChange?: (filter: WordPhraseFilter) => void;
   selectedPhraseTypeFilter?: PhraseTypeFilter;
   onPhraseTypeFilterChange?: (filter: PhraseTypeFilter) => void;
+  selectedDataSource?: DataSource;
+  onDataSourceChange?: (source: DataSource) => void;
   onStartQuiz: () => void;
   onReviewFocus?: () => void;
   isReviewFocusMode?: boolean;
@@ -35,6 +37,8 @@ function SpellingView({
   onWordPhraseFilterChange,
   selectedPhraseTypeFilter = 'all',
   onPhraseTypeFilterChange,
+  selectedDataSource = 'all',
+  onDataSourceChange,
   onStartQuiz,
   onReviewFocus,
   isReviewFocusMode = false
@@ -515,6 +519,22 @@ function SpellingView({
               <option value="advanced">上級</option>
             </select>
           </div>
+
+          {onDataSourceChange && (
+            <div className="filter-group">
+              <label htmlFor="data-source-select-spelling">📚 問題集:</label>
+              <select
+                id="data-source-select-spelling"
+                value={selectedDataSource}
+                onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
+                className="select-input"
+              >
+                <option value="all">すべて</option>
+                <option value="junior">高校受験</option>
+                <option value="intermediate">中級1800</option>
+              </select>
+            </div>
+          )}
 
           {onWordPhraseFilterChange && (
             <div className="filter-group">
