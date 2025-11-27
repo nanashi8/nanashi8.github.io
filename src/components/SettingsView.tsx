@@ -1,16 +1,21 @@
 import { useState, useEffect } from 'react';
 import type { Question, AIPersonality } from '../types';
+import type { DataSource } from '../App';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
 
 interface SettingsViewProps {
   allQuestions: Question[];
   onStartSession: (mode: 'morning' | 'afternoon' | 'evening', questions: Question[]) => void;
+  selectedDataSource?: DataSource;
+  onDataSourceChange?: (source: DataSource) => void;
 }
 
 function SettingsView({
   allQuestions,
   onStartSession,
+  selectedDataSource = 'all',
+  onDataSourceChange,
 }: SettingsViewProps) {
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
@@ -139,6 +144,44 @@ function SettingsView({
             ))}
           </div>
         </div>
+
+        {/* データソース選択 */}
+        {onDataSourceChange && (
+          <div className="simple-setting-section">
+            <h3>📚 出題範囲</h3>
+            <div className="theme-toggle-grid">
+              <button
+                className={`theme-btn ${selectedDataSource === 'all' ? 'active' : ''}`}
+                onClick={() => onDataSourceChange('all')}
+              >
+                <div className="theme-icon">🌐</div>
+                <div className="theme-label">すべて</div>
+                <div className="theme-sublabel">全単語</div>
+              </button>
+              <button
+                className={`theme-btn ${selectedDataSource === 'junior' ? 'active' : ''}`}
+                onClick={() => onDataSourceChange('junior')}
+              >
+                <div className="theme-icon">🎓</div>
+                <div className="theme-label">高校受験</div>
+                <div className="theme-sublabel">基礎単語</div>
+              </button>
+              <button
+                className={`theme-btn ${selectedDataSource === 'intermediate' ? 'active' : ''}`}
+                onClick={() => onDataSourceChange('intermediate')}
+              >
+                <div className="theme-icon">📖</div>
+                <div className="theme-label">中級1800</div>
+                <div className="theme-sublabel">発展単語</div>
+              </button>
+            </div>
+            <div className="theme-description">
+              {selectedDataSource === 'all' && '💡 全ての単語データから出題します'}
+              {selectedDataSource === 'junior' && '🎓 高校受験レベルの基礎単語から出題します'}
+              {selectedDataSource === 'intermediate' && '📖 中級1800の発展単語から出題します'}
+            </div>
+          </div>
+        )}
 
         {/* ダークモード切り替え */}
         <div className="simple-setting-section">

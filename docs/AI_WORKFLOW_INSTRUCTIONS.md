@@ -453,19 +453,24 @@ cd scripts && python3 vocab_coverage_lemma.py
 
 #### 📖 必須参照ドキュメント
 1. **`19-junior-high-vocabulary.md`** - ⚠️ 中学受験単語仕様（10カテゴリ定義）
-2. `20-junior-high-phrases.md` - 中学受験フレーズ
-3. `15-data-structures.md` - データ構造
+2. **`DATA_MANAGEMENT_GUIDE.md`** - ⚠️ データ管理・型安全性ガイド
+3. `20-junior-high-phrases.md` - 中学受験フレーズ
+4. `15-data-structures.md` - データ構造
+5. `public/data/constants.json` - 定数定義（一元管理）
 
 #### 🔄 実装フロー
 ```
-1. データ形式確認
+1. 定数確認（一元管理）
+   └─ public/data/constants.json で最新の10カテゴリ・難易度定義を確認
+
+2. データ形式確認
    ├─ CSV形式（7列: 語句,読み,意味,語源等解説,関連語,関連分野,難易度）
    ├─ 10カテゴリシステム（厳密一致必須）
-   └─ 難易度定義（初級/中級/上級）
+   └─ 難易度定義（beginner/intermediate/advanced）
 
-2. カテゴリ確認（重要）
-   ├─ 19-junior-high-vocabulary.mdで10カテゴリを確認
-   │   1. 言語基本
+3. カテゴリ確認（重要）
+   ├─ constants.json または 19-junior-high-vocabulary.md で確認
+   │   1. 言語基本（厳格: 代名詞・冠詞・前置詞・接続詞・be動詞・助動詞・基本副詞のみ）
    │   2. 学校・学習
    │   3. 日常生活
    │   4. 人・社会
@@ -478,42 +483,64 @@ cd scripts && python3 vocab_coverage_lemma.py
    ├─ 必ず上記10個のいずれか1つを使用
    └─ カテゴリ名は厳密一致（スペース・表記に注意）
 
-3. データ作成
+4. データ作成
    ├─ 重複チェック
    ├─ カテゴリー分類（10カテゴリから1つ選択）
-   ├─ 難易度設定（初級/中級/上級）
+   ├─ 難易度設定（beginner/intermediate/advanced）
    └─ CSV形式エスケープ（カンマ・改行は引用符で囲む）
 
-4. ファイル配置
+5. ファイル配置
    ├─ public/data/vocabulary/junior-high-entrance-words.csv
    └─ public/data/vocabulary/junior-high-entrance-phrases.csv
 
-5. カテゴリ正規化（既存データ修正時）
-   └─ python3 scripts/normalize_categories_to_10.py
+6. 自動分類（既存データ修正時）
+   ├─ 推奨: python3 scripts/classify_words_by_meaning.py（意味ベース・厳格）
+   └─ レガシー: python3 scripts/normalize_categories_to_10.py
 
-6. バリデーション
-   ├─ CSV構文チェック
-   ├─ カテゴリー妥当性（10カテゴリに含まれるか）
-   └─ 難易度適切性
+7. データ検証（必須）
+   ├─ npm run validate（ビルド前検証を手動実行）
+   ├─ TypeScriptランタイムバリデーション（ブラウザConsole確認）
+   └─ エラー0件を確認
 
-7. 動作確認
+8. 動作確認
    ├─ 和訳クイズで表示確認
    ├─ スペルクイズで表示確認
-   └─ 学習設定でカテゴリフィルタ確認（10個+「全ての分野」）
+   ├─ 学習設定でカテゴリフィルタ確認（10個+「全ての分野」）
+   └─ ブラウザのConsoleで警告がないか確認
 ```
 
 #### ⚠️ 絶対遵守事項
 - **関連分野は必ず10カテゴリのいずれか1つ**（複数指定禁止）
 - カテゴリ名は厳密一致（例: 「学校学習」❌ → 「学校・学習」✅）
 - CSV内のカンマは必ず引用符で囲む（例: `"word1: 意味1, word2: 意味2"`）
+- **データ追加後は必ず `npm run validate` で検証**
+- **ビルド前に `npm run build` で自動検証が実行される**
+
+#### 🔒 型安全性チェックポイント
+
+**TypeScript側**:
+- `src/types.ts`の`OFFICIAL_CATEGORIES`が定数定義
+- `src/utils.ts`の`parseCSV`でランタイムチェック
+- 不正なカテゴリはブラウザConsoleに警告表示
+
+**Python側**:
+- `public/data/constants.json`から定数読み込み
+- `scripts/validate_all_data.py`でビルド前検証
+- エラーがあればビルド停止
+
+**一元管理**:
+- `public/data/constants.json`が真実の情報源
+- TypeScript/Python両方から参照
 
 #### ✅ 完了チェックリスト
 - [ ] CSV形式正しい（7列）
 - [ ] 重複なし
-- [ ] カテゴリーが10個のいずれか
+- [ ] カテゴリーが10個のいずれか（constants.json準拠）
 - [ ] カテゴリー名が厳密一致
-- [ ] 難易度適切（初級/中級/上級）
+- [ ] 難易度適切（beginner/intermediate/advanced）
+- [ ] `npm run validate` 実行済み（エラー0件）
 - [ ] ローカル環境で動作確認済み
+- [ ] ブラウザConsoleで警告なし
 - [ ] 学習設定でカテゴリが正しく表示
 
 ---
@@ -629,6 +656,208 @@ docs/
 
 ---
 
+## 🛠️ スクリプト作成時の必須プロセス
+
+### 📋 新規スクリプト作成完了時のチェックリスト
+
+**すべての新規スクリプトについて、作成完了時に以下を必ず実施すること：**
+
+#### 1. スクリプト内ドキュメント
+- [ ] 先頭にdocstring追加（用途・機能・使用方法）
+- [ ] 主要関数にコメント追加
+- [ ] 実行例をコメントで記載
+
+#### 2. scripts/README.mdへの追加
+- [ ] スクリプト名と用途を記載
+- [ ] 実行方法（コマンド例）
+- [ ] 出力例
+- [ ] 使用例・ワークフロー
+
+#### 3. 該当する運用ガイドへの追加
+- [ ] **Vocabulary関連** → `DATA_MANAGEMENT_GUIDE.md`
+- [ ] **パッセージ関連** → `DATA_MANAGEMENT_GUIDE.md`
+- [ ] **文法問題関連** → `NEW_HORIZON_GRAMMAR_GUIDELINES.md` または `DATA_MANAGEMENT_GUIDE.md`
+- [ ] **フレーズ翻訳関連** → `DATA_MANAGEMENT_GUIDE.md`
+- [ ] **その他** → 適切なガイドラインに追加、または新規作成
+
+#### 4. QUICK_REFERENCE.mdへの追加
+- [ ] クイックコマンドセクションに追加
+- [ ] 該当するワークフローセクションに追加
+
+#### 5. 実行例・トラブルシューティング
+- [ ] 典型的な実行例を記載
+- [ ] 想定されるエラーと解決策を記載
+- [ ] 出力例のスクリーンショットまたはサンプル
+
+### 🔄 スクリプト複雑度による判定基準
+
+#### 🔴 高複雑度（即座にドキュメント化必須）
+- 100行以上のコード
+- 複数のファイルを処理
+- データ構造を変更
+- 自動バックアップ機能あり
+- 他のスクリプトから呼び出される
+
+**例**: 
+- `classify_words_by_meaning.py`
+- `split_passages_into_phrases.py`
+- `expand_verb_form_questions.py`
+
+**対応**: 作成完了時に即座に上記チェックリストを完了
+
+#### 🟡 中複雑度（2回目の使用時にドキュメント化）
+- 50-100行のコード
+- 単一ファイルを処理
+- 検証・レポート生成
+
+**例**:
+- `validate_grammar_questions.py`
+- `passage_quality_check.py`
+
+**対応**: 2回目に使用した時点でドキュメント化を提案
+
+#### 🟢 低複雑度（5回以上使用でドキュメント化）
+- 50行未満
+- ワンタイム処理
+- 簡単なデータ変換
+
+**対応**: 使用頻度が高くなった時点でドキュメント化を提案
+
+### 💡 ドキュメント化提案のタイミング
+
+**以下の状況では必ず提案すること：**
+
+1. **スクリプト作成完了時**（高複雑度の場合）
+   ```
+   「このスクリプトは複雑で再利用可能性が高いです。
+   以下をドキュメント化しましょう：
+   - scripts/README.mdに追加
+   - DATA_MANAGEMENT_GUIDE.mdに詳細を記載
+   - QUICK_REFERENCE.mdにクイックコマンドとして追加」
+   ```
+
+2. **複雑な作業完了時**
+   ```
+   「この作業は複数のステップを要しました。
+   次回から効率化するため、以下をドキュメント化しましょう：
+   - 作業手順書の作成
+   - 該当ガイドラインへの追加
+   - チェックリストの作成」
+   ```
+
+3. **データ構造変更時**
+   ```
+   「データ構造を変更しました。
+   以下を記録しましょう：
+   - Migration guideの作成
+   - 15-data-structures.mdの更新
+   - 既存データの移行スクリプト作成」
+   ```
+
+4. **同じ作業を2回以上実施した時**
+   ```
+   「この作業は2回目です。
+   今後も発生する可能性があるため、以下を検討しましょう：
+   - 自動化スクリプトの作成
+   - ワークフローのドキュメント化
+   - チェックリストの作成」
+   ```
+
+5. **バグ修正完了時**
+   ```
+   「このバグは特定の条件で再発する可能性があります。
+   トラブルシューティングセクションに追加しましょう。」
+   ```
+
+### 📊 定期メンテナンス（月次）
+
+**AIアシスタントは月初に以下を提案すること：**
+
+```bash
+# 1. 全スクリプトをリストアップ
+ls scripts/*.py
+
+# 2. scripts/README.mdに記載されているか確認
+# 3. 該当する運用ガイドにリンクされているか確認
+# 4. 使用頻度が高いスクリプトを特定（git logから）
+# 5. ドキュメント化されていないスクリプトを洗い出し
+```
+
+**チェック項目**:
+- [ ] 新規スクリプトがドキュメント化されているか
+- [ ] 既存スクリプトのドキュメントが最新か
+- [ ] 使用頻度の高いスクリプトが適切に整理されているか
+- [ ] トラブルシューティングが充実しているか
+- [ ] TypeScript定数とPython定数が同期しているか（constants.json基準）
+- [ ] ビルド前検証が正常動作しているか（`npm run validate`）
+
+---
+
+## 🔒 型安全性・データ整合性の維持（常時遵守）
+
+### 定数変更時の必須手順
+
+**10分野システムやカテゴリを変更する場合**:
+
+1. **constants.jsonを更新**（真実の情報源）
+   - `public/data/constants.json`の`categories.values`を編集
+
+2. **TypeScript型定義を同期**
+   - `src/types.ts`の`OFFICIAL_CATEGORIES`を更新
+   - 型エクスポートを確認
+
+3. **Pythonスクリプトを確認**
+   - `scripts/validate_all_data.py`がconstants.jsonから読み込むため自動同期
+   - `scripts/classify_words_by_meaning.py`は手動更新が必要
+
+4. **ドキュメントを更新**
+   - `docs/19-junior-high-vocabulary.md`
+   - `docs/DATA_MANAGEMENT_GUIDE.md`
+
+5. **検証**
+   ```bash
+   # データ検証
+   npm run validate
+   
+   # TypeScriptビルド
+   npm run build
+   
+   # ブラウザConsoleで警告確認
+   npm run dev
+   ```
+
+### データ追加時の型安全性チェック
+
+**CSVファイル追加・編集時**:
+
+1. **ビルド前検証を実行**
+   ```bash
+   npm run validate
+   ```
+
+2. **エラーがある場合**
+   - 10分野不適合 → `python3 scripts/classify_words_by_meaning.py`
+   - 難易度不適合 → 該当ファイルを手動修正
+
+3. **成功したらビルド**
+   ```bash
+   npm run build  # prebuildフックで自動検証
+   ```
+
+4. **ランタイムチェック**
+   - `npm run dev`でローカル起動
+   - ブラウザのConsoleで`[データ整合性警告]`がないか確認
+
+### 型定義の変更履歴
+
+| 日付 | 変更内容 | 影響範囲 |
+|------|---------|---------|
+| 2025-11-27 | 型安全性強化: リテラル型導入、ランタイムバリデーション追加 | src/types.ts, src/utils.ts |
+| 2025-11-27 | 定数の一元管理: constants.json作成 | public/data/constants.json |
+| 2025-11-27 | ビルド前検証: validate_all_data.py追加 | scripts/validate_all_data.py, package.json |
+
+---
+
 ## 🔄 継続的改善
 
 ### このドキュメント自体の更新
@@ -662,5 +891,5 @@ docs/
 
 ---
 
-**最終更新**: 2025年11月25日
-**バージョン**: 1.0.0
+**最終更新**: 2025年11月27日  
+**バージョン**: 3.0.0 - 型安全性・データ整合性パイプライン追加

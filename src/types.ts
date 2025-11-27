@@ -1,17 +1,48 @@
 // quiz-app互換の7列CSV形式
 // 語句,読み,意味,語源等解説,関連語,関連分野,難易度
 
+// 10分野システム（厳格な型定義）
+// 参照: docs/19-junior-high-vocabulary.md
+export const OFFICIAL_CATEGORIES = [
+  '言語基本',
+  '学校・学習',
+  '日常生活',
+  '人・社会',
+  '自然・環境',
+  '食・健康',
+  '運動・娯楽',
+  '場所・移動',
+  '時間・数量',
+  '科学・技術',
+] as const;
+
+export type CategoryType = typeof OFFICIAL_CATEGORIES[number];
+
+// 難易度の型定義
+export const DIFFICULTY_LEVELS = ['beginner', 'intermediate', 'advanced'] as const;
+export type DifficultyType = typeof DIFFICULTY_LEVELS[number];
+
 export interface Question {
   word: string;        // 語句（単語 or 熟語、熟語の場合スペース含む）
   reading: string;     // 読み（国際基準アクセント記号をカタカナで正確に）
   meaning: string;     // 意味（正解）
   etymology: string;   // 語源等解説（小中学生向け派生語習得支援）
   relatedWords: string; // 関連語（熟語・派生語と読みと意味）
-  relatedFields: string; // 関連分野（表示用）
-  category?: string;   // 関連分野（フィルター用）
-  difficulty: string;  // 難易度
+  relatedFields: string; // 関連分野（表示用・CSVから読み込み）
+  category?: string;   // 関連分野（フィルター用・内部処理）
+  difficulty: string;  // 難易度（CSVから読み込み）
+  source?: 'junior' | 'intermediate'; // データソース（高校受験 or 中級1800）
   type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
+}
+
+// バリデーション用のヘルパー関数
+export function isValidCategory(category: string): category is CategoryType {
+  return (OFFICIAL_CATEGORIES as readonly string[]).includes(category);
+}
+
+export function isValidDifficulty(difficulty: string): difficulty is DifficultyType {
+  return (DIFFICULTY_LEVELS as readonly string[]).includes(difficulty);
 }
 
 export interface QuizState {
