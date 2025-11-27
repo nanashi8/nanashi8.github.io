@@ -68,6 +68,7 @@ type Tab = 'translation' | 'spelling' | 'grammar' | 'reading' | 'dictionary' | '
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
+export type DataSource = 'all' | 'junior' | 'intermediate';
 
 // 10個の正式カテゴリ（docs/19-junior-high-vocabulary.md参照）
 export const OFFICIAL_CATEGORIES = [
@@ -158,6 +159,12 @@ function App() {
   
   // 熟語タイプフィルター
   const [selectedPhraseTypeFilter, setSelectedPhraseTypeFilter] = useState<PhraseTypeFilter>('all');
+  
+  // データソース選択
+  const [selectedDataSource, setSelectedDataSource] = useState<DataSource>(() => {
+    const saved = localStorage.getItem('selectedDataSource');
+    return (saved as DataSource) || 'all';
+  });
   
   // 問題集リスト管理（後方互換性のため残す）
   const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
@@ -306,21 +313,42 @@ function App() {
         // LocalStorageサイズの確認
         checkLocalStorageSize();
         
-        // 単語データを読み込み
-        const wordsResponse = await fetch('/data/vocabulary/junior-high-entrance-words.csv');
-        const wordsText = await wordsResponse.text();
-        const wordsQuestions = parseCSV(wordsText);
+        // 高校受験単語データを読み込み
+        const juniorWordsResponse = await fetch('/data/vocabulary/junior-high-entrance-words.csv');
+        const juniorWordsText = await juniorWordsResponse.text();
+        const juniorWordsQuestions = parseCSV(juniorWordsText).map(q => ({ ...q, source: 'junior' as const }));
         
-        // 熟語データを読み込み
-        let phrasesQuestions: Question[] = [];
+        // 高校受験熟語データを読み込み
+        let juniorPhrasesQuestions: Question[] = [];
         try {
-          const phrasesResponse = await fetch('/data/vocabulary/junior-high-entrance-phrases.csv');
-          const phrasesText = await phrasesResponse.text();
-          phrasesQuestions = parseCSV(phrasesText);
-          console.log(`📚 高校受験英熟語を読み込みました: ${phrasesQuestions.length}個`);
+          const juniorPhrasesResponse = await fetch('/data/vocabulary/junior-high-entrance-phrases.csv');
+          const juniorPhrasesText = await juniorPhrasesResponse.text();
+          juniorPhrasesQuestions = parseCSV(juniorPhrasesText).map(q => ({ ...q, source: 'junior' as const }));
+          console.log(`📚 高校受験英熟語を読み込みました: ${juniorPhrasesQuestions.length}個`);
         } catch (error) {
           console.warn('高校受験英熟語データの読み込みに失敗:', error);
-          // 熟語データの読み込みに失敗しても続行
+        }
+        
+        // 中級1800単語データを読み込み
+        let intermediateWordsQuestions: Question[] = [];
+        try {
+          const intermediateWordsResponse = await fetch('/data/vocabulary/intermediate-1800-words.csv');
+          const intermediateWordsText = await intermediateWordsResponse.text();
+          intermediateWordsQuestions = parseCSV(intermediateWordsText).map(q => ({ ...q, source: 'intermediate' as const }));
+          console.log(`📚 中級1800単語を読み込みました: ${intermediateWordsQuestions.length}個`);
+        } catch (error) {
+          console.warn('中級1800単語データの読み込みに失敗:', error);
+        }
+        
+        // 中級1800熟語データを読み込み
+        let intermediatePhrasesQuestions: Question[] = [];
+        try {
+          const intermediatePhrasesResponse = await fetch('/data/vocabulary/intermediate-1800-phrases.csv');
+          const intermediatePhrasesText = await intermediatePhrasesResponse.text();
+          intermediatePhrasesQuestions = parseCSV(intermediatePhrasesText).map(q => ({ ...q, source: 'intermediate' as const }));
+          console.log(`📚 中級1800熟語を読み込みました: ${intermediatePhrasesQuestions.length}個`);
+        } catch (error) {
+          console.warn('中級1800熟語データの読み込みに失敗:', error);
         }
         
         // 並び替え問題・文法問題のJSONファイルを読み込んでUnit情報を取得
@@ -348,8 +376,13 @@ function App() {
           console.warn('Unit title mapping failed:', error);
         }
         
-        // 単語と熟語を結合
-        const allQuestions = [...wordsQuestions, ...phrasesQuestions];
+        // 全データソースを統合
+        const allQuestions = [
+          ...juniorWordsQuestions,
+          ...juniorPhrasesQuestions,
+          ...intermediateWordsQuestions,
+          ...intermediatePhrasesQuestions
+        ];
         
         if (allQuestions.length > 0) {
           setAllQuestions(allQuestions);
@@ -454,10 +487,20 @@ function App() {
   useEffect(() => {
     localStorage.setItem('quiz-adaptive-mode', JSON.stringify(adaptiveMode));
   }, [adaptiveMode]);
+  
+  // データソース選択の保存
+  useEffect(() => {
+    localStorage.setItem('selectedDataSource', selectedDataSource);
+  }, [selectedDataSource]);
 
   // 関連分野と難易度でフィルタリング
   const getFilteredQuestions = (): Question[] => {
     let filtered = allQuestions;
+    
+    // データソースでフィルター
+    if (selectedDataSource !== 'all') {
+      filtered = filtered.filter(q => (q as any).source === selectedDataSource);
+    }
     
     // 関連分野でフィルター
     if (selectedCategory !== 'all') {
@@ -1308,6 +1351,8 @@ function App() {
         ) : (
           <SettingsView
             allQuestions={allQuestions}
+            selectedDataSource={selectedDataSource}
+            onDataSourceChange={setSelectedDataSource}
             onStartSession={(_mode, questions) => {
               // セッションの単語でクイズを開始
               setQuizState({

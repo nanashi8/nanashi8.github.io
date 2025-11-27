@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
 import { getStudySettings, updateStudySettings } from '../progressStorage';
@@ -66,8 +66,14 @@ interface GrammarQuizViewProps {
 }
 
 function GrammarQuizView({ }: GrammarQuizViewProps) {
-  const [quizType, setQuizType] = useState<QuizType>('verb-form');
-  const [grade, setGrade] = useState<Grade>('all');
+  const [quizType, setQuizType] = useState<QuizType>(() => {
+    const saved = localStorage.getItem('grammar-quiz-type');
+    return (saved as QuizType) || 'verb-form';
+  });
+  const [grade, setGrade] = useState<Grade>(() => {
+    const saved = localStorage.getItem('grammar-grade');
+    return (saved as Grade) || 'all';
+  });
   const [availableUnits, setAvailableUnits] = useState<{ value: string; label: string }[]>([]);
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
@@ -87,10 +93,26 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
 
   // 難易度フィルター
   type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
-  const [difficulty, setDifficulty] = useState<DifficultyLevel>('all');
+  const [difficulty, setDifficulty] = useState<DifficultyLevel>(() => {
+    const saved = localStorage.getItem('grammar-difficulty');
+    return (saved as DifficultyLevel) || 'all';
+  });
 
   const currentQuestion = currentQuestions[currentQuestionIndex];
   const isSentenceOrdering = quizType === 'sentence-ordering';
+
+  // 設定をlocalStorageに保存
+  useEffect(() => {
+    localStorage.setItem('grammar-quiz-type', quizType);
+  }, [quizType]);
+
+  useEffect(() => {
+    localStorage.setItem('grammar-grade', grade);
+  }, [grade]);
+
+  useEffect(() => {
+    localStorage.setItem('grammar-difficulty', difficulty);
+  }, [difficulty]);
 
   // 学年やクイズタイプが変更されたときにUnit一覧を更新
   useEffect(() => {
@@ -142,7 +164,24 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     loadUnits();
   }, [grade, quizType]);
 
-  // 問題が変わるたびに並び替え用の単語をシャッフル
+  // 設定が変更されたらクイズをリロード（クイズ開始中のみ）
+  const prevSettingsRef = useRef({ quizType, grade, difficulty });
+  useEffect(() => {
+    const prevSettings = prevSettingsRef.current;
+    const settingsChanged = 
+      prevSettings.quizType !== quizType ||
+      prevSettings.grade !== grade ||
+      prevSettings.difficulty !== difficulty;
+    
+    if (quizStarted && settingsChanged) {
+      // 設定が変わったらクイズを再ロード
+      handleStartQuiz();
+    }
+    
+    prevSettingsRef.current = { quizType, grade, difficulty };
+  }, [quizType, grade, difficulty]);
+
+  // 問題が変わるたびに並べ替え用の単語をシャッフル
   useEffect(() => {
     if (isSentenceOrdering && currentQuestion && currentQuestion.words) {
       const shuffled = [...currentQuestion.words].sort(() => Math.random() - 0.5);
