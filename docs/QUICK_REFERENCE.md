@@ -68,11 +68,88 @@ grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
 
 | 問題タイプ | ドキュメント | 行数 | 重要度 |
 |-----------|-------------|------|--------|
+| **総合文法（60問/Unit）** | **[AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md)** セクション2 | - | ⭐⭐⭐ 最優先 |
 | **文並び替え** | **[NEW_HORIZON_GRAMMAR_GUIDELINES.md](./NEW_HORIZON_GRAMMAR_GUIDELINES.md)** | 1,017行 | ⭐⭐⭐ |
 | **動詞変化** | **[NEW_HORIZON_VERB_FORM_GUIDELINES.md](./NEW_HORIZON_VERB_FORM_GUIDELINES.md)** | - | ⭐⭐⭐ |
 | **穴埋め** | **[NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md](./NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md)** | - | ⭐⭐⭐ |
 
-### ⚡ クイックチェック
+### 📋 総合文法問題構成（60問/Unit）
+
+```
+穴埋め（fillInBlank）: 15問
+├─ beginner: 5問
+├─ intermediate: 6問
+└─ advanced: 4問
+
+並び替え（sentenceOrdering）: 15問
+├─ beginner: 5問（3-5語）
+├─ intermediate: 5問（6-8語）
+└─ advanced: 5問（9-11語）
+
+言い換え（paraphrase）: 15問
+├─ beginner: 5問（肯定↔否定、肯定↔疑問）
+├─ intermediate: 5問（主語変更、時制変更）
+└─ advanced: 5問（複合的変換）
+
+動詞変化（verbForm）: 10問
+├─ beginner: 4問
+├─ intermediate: 3問
+└─ advanced: 3問
+
+会話（conversation）: 5問
+├─ beginner: 2問
+├─ intermediate: 2問
+└─ advanced: 1問
+```
+
+### ⚡ 作成ワークフロー（30問 × 2回）
+
+```bash
+# Phase 1: 前半30問（fillInBlank 15 + sentenceOrdering 15）
+python3 << 'PHASE1'
+import json
+questions = []
+# ... 30問作成 ...
+with open('public/data/grammar_grade1_unit6.json', 'w', encoding='utf-8') as f:
+    json.dump({"unit": "Unit 6", "totalQuestions": 30, "questions": questions}, f, ensure_ascii=False, indent=2)
+print("✅ 前半30問完成")
+PHASE1
+
+# Phase 2: 後半30問（paraphrase 15 + verbForm 10 + conversation 5）
+# 既存30問に追加して60問完成
+
+# Phase 3: 重複チェック（必須）
+python3 << 'CHECK'
+import json
+from collections import Counter
+with open('public/data/grammar_grade1_unit6.json') as f:
+    data = json.load(f)
+sentences = []
+for q in data['questions']:
+    if q['type'] == 'fillInBlank': sentences.append(q['sentence'])
+    elif q['type'] == 'sentenceOrdering': sentences.append(q['correctAnswer'])
+    elif q['type'] == 'paraphrase': sentences.append(q['originalSentence'])
+    elif q['type'] == 'verbForm': sentences.append(q['sentence'])
+    elif q['type'] == 'conversation': sentences.extend([d['text'] for d in q['dialogue']])
+counts = Counter(sentences)
+dups = {s: c for s, c in counts.items() if c > 1}
+if dups:
+    print(f"❌ 重複: {len(dups)}件")
+    for s, c in dups.items(): print(f"  - \"{s}\" ({c}回)")
+else:
+    print("✅ 重複0件")
+CHECK
+```
+
+### ⚡ クイックチェック（総合文法）
+- [ ] 60問完成（5タイプ正しく配分）
+- [ ] 重複チェック実行済み（重複0件）
+- [ ] JSON構文エラーなし
+- [ ] 難易度分散適切
+- [ ] NEW HORIZON教科書準拠
+- [ ] 各問題にID・explanation・hint付与
+
+### ⚡ クイックチェック（個別問題）
 - [ ] 語数: 3-11語（ガイドライン遵守）
 - [ ] 単一の文法項目に焦点
 - [ ] NEW HORIZON教科書準拠
