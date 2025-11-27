@@ -289,9 +289,15 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
           if (data.units) {
             data.units.forEach(unit => {
               const unitId = `g${data.grade}-${unit.unit.toLowerCase().replace(/\s+/g, '')}`;
+              
+              // デバッグ: unitIdと選択されたunitを確認
+              console.log(`Checking unit: ${unitId} vs selected: ${selectedUnit}`);
+              
               if (unitId !== selectedUnit) {
                 return;
               }
+              
+              console.log(`Match found! Loading questions from ${unitId}`);
               
               // ランダムモードまたは全ての種類の場合は全ての問題タイプを収集
               if (quizType === 'random' || quizType === 'all') {
@@ -355,6 +361,18 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       
       if (questions.length === 0) {
         throw new Error('選択された条件に該当する問題がありません');
+      }
+      
+      console.log(`Total questions before difficulty filter: ${questions.length}`);
+      
+      // 難易度フィルタリング
+      if (difficulty !== 'all') {
+        questions = questions.filter(q => q.difficulty === difficulty);
+        console.log(`Questions after difficulty filter (${difficulty}): ${questions.length}`);
+      }
+      
+      if (questions.length === 0) {
+        throw new Error(`選択された難易度（${difficulty}）に該当する問題がありません`);
       }
       
       // シャッフル
