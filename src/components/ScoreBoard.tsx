@@ -393,11 +393,9 @@ function ScoreBoard({
             {/* 達成済みまたは達成間近の目標のみ表示 */}
             {(() => {
               const allProgress = [
-                { id: 'eiken5', name: '英検5級', icon: '🌱', required: 600 },
-                { id: 'eiken4', name: '英検4級', icon: '🌿', required: 1300 },
-                { id: 'eiken3', name: '英検3級', icon: '🌳', required: 2100 },
-                { id: 'high-school', name: '高校入試', icon: '🎓', required: 2500 },
-                { id: 'eiken-pre2', name: '英検準2級', icon: '📚', required: 3600 }
+                { id: 'beginner', name: '初級', icon: '🌱', required: 1077 },
+                { id: 'intermediate', name: '中級', icon: '💪', required: 1616 },
+                { id: 'advanced', name: '上級', icon: '🔥', required: 885 }
               ];
               
               const displayGoals = allProgress
@@ -414,8 +412,8 @@ function ScoreBoard({
                 if (nextGoal) {
                   const remaining = nextGoal.required - masteredCount;
                   return (
-                    <span title={`${nextGoal.name}レベルまであと${remaining}語`}>
-                      📋 次の目標: <strong>{nextGoal.name}</strong> (あと{remaining}語)
+                    <span title={`${nextGoal.name}完了まであと${remaining}語`}>
+                      📋 次の目標: <strong>{nextGoal.name}完了</strong> (あと{remaining}語)
                     </span>
                   );
                 }
@@ -424,10 +422,10 @@ function ScoreBoard({
               return displayGoals.map((g, idx) => (
                 <span key={g.id}>
                   {idx > 0 && <span className="goal-divider">｜</span>}
-                  <span title={g.progress === 100 ? `${g.name}レベル達成済み` : `${g.name}まであと${g.remaining}語`}>
+                  <span title={g.progress === 100 ? `${g.name}完了済み` : `${g.name}完了まであと${g.remaining}語`}>
                     {g.icon}
                     {g.progress === 100 ? (
-                      <><strong>{g.name}</strong> 達成済み</>
+                      <><strong>{g.name}完了</strong></>
                     ) : (
                       <><strong>{g.name}</strong> {g.progress}% (あと{g.remaining}語)</>
                     )}

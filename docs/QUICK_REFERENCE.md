@@ -294,6 +294,7 @@ cd scripts && python3 phrase_coverage_report.py
 | ドキュメント | 用途 | 重要度 |
 |-------------|------|--------|
 | **[AI_WORKFLOW_INSTRUCTIONS.md](./AI_WORKFLOW_INSTRUCTIONS.md)** | データ追加ワークフロー | ⭐⭐⭐ 必読 |
+| **[DATA_MANAGEMENT_GUIDE.md](./DATA_MANAGEMENT_GUIDE.md)** | データ管理・正規化運用ガイド | ⭐⭐⭐ |
 | **[19-junior-high-vocabulary.md](./19-junior-high-vocabulary.md)** | 単語データ仕様・10カテゴリ定義 | ⭐⭐⭐ |
 | **[20-junior-high-phrases.md](./20-junior-high-phrases.md)** | フレーズデータ仕様・作成ガイドライン | ⭐⭐⭐ |
 | [15-data-structures.md](./15-data-structures.md) | データ構造・型定義 | ⭐⭐ |

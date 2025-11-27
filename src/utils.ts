@@ -1,10 +1,14 @@
-import { Question } from './types';
+import { Question, isValidCategory, OFFICIAL_CATEGORIES } from './types';
 
 /**
  * CSVテキストをパースして問題配列に変換
  * quiz-app互換の7列形式: 語句,読み,意味,語源等解説,関連語,関連分野,難易度
  * 
  * RFC 4180に準拠したCSVパーサー（引用符内のカンマを正しく処理）
+ * 
+ * ⚠️ データ整合性チェック:
+ * - 関連分野が10分野に適合しない場合、console.warnで警告
+ * - 不正なデータは読み込まれるが、開発者ツールで検出可能
  */
 export function parseCSV(csvText: string): Question[] {
   const lines = csvText.trim().split('\n');
@@ -104,6 +108,15 @@ export function parseCSV(csvText: string): Question[] {
         difficulty = 'intermediate';
       } else if (difficultyRaw.includes('上級') || difficultyRaw === 'advanced') {
         difficulty = 'advanced';
+      }
+
+      // ⚠️ データ整合性チェック: 10分野システム準拠確認
+      if (relatedFields && !isValidCategory(relatedFields)) {
+        console.warn(
+          `[データ整合性警告] 不正なカテゴリ: "${relatedFields}" (単語: "${word}")\n` +
+          `有効なカテゴリ: ${OFFICIAL_CATEGORIES.join(', ')}\n` +
+          `参照: docs/19-junior-high-vocabulary.md`
+        );
       }
 
       if (word && meaning) {

@@ -4,11 +4,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "python3 scripts/validate_all_data.py",
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "build:beta": "vite build --base=/beta/ --outDir dist-beta",
-    "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'"
+    "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'",
+    "validate": "python3 scripts/validate_all_data.py"
   },
   "dependencies": {
     "@sentry/react": "^7.120.4",
