@@ -164,7 +164,7 @@
 │ Phase 2: 前半30問作成 (15-20分)                         │
 └─────────────────────────────────────────────────────────┘
 
-3. 穴埋め問題（fillInBlank: 15問）
+1. 穴埋め問題（fillInBlank: 15問）
    ├─ beginner: 5問（基本形の穴埋め）
    ├─ intermediate: 6問（やや複雑な文）
    └─ advanced: 4問（応用的な文・長文）
@@ -182,7 +182,7 @@
      "hint": "I am"
    }
 
-4. 並び替え問題（sentenceOrdering: 15問）
+2. 並び替え問題（sentenceOrdering: 15問）
    ├─ beginner: 5問（3-5語）
    ├─ intermediate: 5問（6-8語）
    └─ advanced: 5問（9-11語）
@@ -199,7 +199,7 @@
      "hint": "I am"
    }
 
-5. 一時保存・検証
+3. 一時保存・検証
    ```bash
    python3 << 'SAVE1'
    import json
@@ -233,7 +233,7 @@
 │ Phase 3: 後半30問作成 (15-20分)                         │
 └─────────────────────────────────────────────────────────┘
 
-6. 言い換え問題（paraphrase: 15問）
+1. 言い換え問題（paraphrase: 15問）
    ├─ beginner: 5問（肯定↔否定、肯定↔疑問）
    ├─ intermediate: 5問（主語変更、時制変更）
    └─ advanced: 5問（複合的変換、疑問詞追加）
@@ -252,7 +252,7 @@
      "hint": "Am I"
    }
 
-7. 動詞変化問題（verbForm: 10問）
+2. 動詞変化問題（verbForm: 10問）
    ├─ beginner: 4問（基本形の選択）
    ├─ intermediate: 3問（三人称単数・進行形）
    └─ advanced: 3問（複雑な時制・助動詞後）
@@ -271,7 +271,7 @@
      "hint": "三人称単数"
    }
 
-8. 会話問題（conversation: 5問）
+3. 会話問題（conversation: 5問）
    ├─ beginner: 2問（基本応答）
    ├─ intermediate: 2問（状況判断）
    └─ advanced: 1問（複合的会話）
@@ -293,7 +293,7 @@
      "hint": "I am"
    }
 
-9. 完全版保存
+4. 完全版保存
    ```bash
    python3 << 'SAVE2'
    import json
@@ -335,7 +335,7 @@
 │ Phase 4: 品質チェック (5-10分)                          │
 └─────────────────────────────────────────────────────────┘
 
-10. 重複チェック（必須）
+1. 重複チェック（必須）
     ```bash
     python3 << 'CHECKDUP'
     import json
@@ -370,12 +370,12 @@
     CHECKDUP
     ```
 
-11. 重複修正（発見時）
+2. 重複修正（発見時）
     - 文の一部を変更（動詞・名詞・副詞の置き換え）
     - 文構造を変更（疑問文↔平叙文、主語変更）
     - 再度チェック実行（重複0件まで繰り返し）
 
-12. JSON構文チェック
+3. JSON構文チェック
     ```bash
     # 構文確認
     python3 -c "import json; json.load(open('public/data/grammar_grade{X}_unit{N}.json'))"
@@ -388,7 +388,7 @@
 │ Phase 5: 動作確認・デプロイ (5分)                       │
 └─────────────────────────────────────────────────────────┘
 
-13. ローカル環境確認
+1. ローカル環境確認
     ```bash
     npm run dev
     # → http://localhost:5173 で文法クイズ動作確認
@@ -401,7 +401,7 @@
     ├─ 解説が表示される
     └─ ヒントが表示される
 
-14. ビルド・デプロイ
+2. ビルド・デプロイ
     ```bash
     npm run build
     npm run deploy
@@ -598,14 +598,14 @@ done
 │ Phase 2: 執筆 (30-60分)                                 │
 └─────────────────────────────────────────────────────────┘
 
-4. パッセージ執筆
+1. パッセージ執筆
    ├─ テンプレートに沿って自然な英語で執筆
    ├─ 段落インデント: 各段落の最初の行に4スペース（必須）
    ├─ Em dash使用: — (not - or --)
    ├─ 語彙を自然に統合
    └─ 教育的価値を確保
 
-5. フォーマット確認
+2. フォーマット確認
    ├─ セクションヘッダー追加
    ├─ 段落字下げ統一（4スペース）
    ├─ 会話文の正しいフォーマット
@@ -615,7 +615,7 @@ done
 │ Phase 3: 品質チェック (10-15分)                         │
 └─────────────────────────────────────────────────────────┘
 
-6. 自動品質チェック実行
+1. 自動品質チェック実行
    ```bash
    cd scripts
    python3 passage_quality_check.py ../public/data/passages/{level}-{topic}.txt
@@ -628,7 +628,7 @@ done
    ├─ 自然な英語表現
    └─ 適切な単語数
 
-7. 語彙カバレッジ確認
+2. 語彙カバレッジ確認
    ```bash
    cd scripts
    python3 vocab_coverage_report.py --vocab ../public/data/vocabulary/all-words.csv
@@ -639,26 +639,26 @@ done
 │ Phase 4: フレーズ分割・JSON化 (20-30分)                │
 └─────────────────────────────────────────────────────────┘
 
-8. フレーズ分割実行
+1. フレーズ分割実行
    ```bash
    cd scripts
    python3 split_passages_into_phrases.py
    ```
    → public/data/passages-for-phrase-work/{level}-{topic}.txt 生成
 
-9. 日本語フレーズJSONテンプレート生成
+2. 日本語フレーズJSONテンプレート生成
    ```bash
    python3 prepare_japanese_phrase_template.py \
        --passage public/data/passages-for-phrase-work/{level}-{topic}.txt \
        --output public/data/dictionaries/{level}-{topic}-template.json
    ```
 
-10. 日本語訳を追加
+3. 日本語訳を追加
     ├─ {level}-{topic}-template.json を開く
     ├─ 各フレーズの "ja" フィールドに日本語訳を記入
     └─ 保存: public/data/dictionaries/{level}-{topic}.json
 
-11. JSON検証
+4. JSON検証
     ```bash
     # JSON構文チェック
     jq . public/data/dictionaries/{level}-{topic}.json
@@ -668,7 +668,7 @@ done
 │ Phase 5: 統合・動作確認 (5-10分)                        │
 └─────────────────────────────────────────────────────────┘
 
-12. ローカル環境で動作確認
+1. ローカル環境で動作確認
     ```bash
     cd /path/to/project
     npm run dev
@@ -685,7 +685,7 @@ done
 │ Phase 6: コミット・デプロイ (5分)                       │
 └─────────────────────────────────────────────────────────┘
 
-13. Git操作
+1. Git操作
     ```bash
     git add public/data/passages/{level}-{topic}.txt
     git add public/data/dictionaries/{level}-{topic}.json
@@ -703,7 +703,7 @@ done
     git push
     ```
 
-14. デプロイ
+2. デプロイ
     ```bash
     npm run build
     npm run deploy
