@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { QuizState } from '../types';
-import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES } from '../App';
+import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import { ErrorPrediction } from '../errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
@@ -18,6 +18,8 @@ interface QuizViewProps {
   onWordPhraseFilterChange?: (filter: WordPhraseFilter) => void;
   selectedPhraseTypeFilter?: PhraseTypeFilter;
   onPhraseTypeFilterChange?: (filter: PhraseTypeFilter) => void;
+  selectedDataSource?: DataSource;
+  onDataSourceChange?: (source: DataSource) => void;
   onStartQuiz: () => void;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
@@ -46,6 +48,8 @@ function QuizView({
   onWordPhraseFilterChange,
   selectedPhraseTypeFilter = 'all',
   onPhraseTypeFilterChange,
+  selectedDataSource = 'all',
+  onDataSourceChange,
   onStartQuiz,
   onAnswer,
   onNext,
@@ -156,6 +160,22 @@ function QuizView({
               <option value="advanced">上級</option>
             </select>
           </div>
+
+          {onDataSourceChange && (
+            <div className="filter-group">
+              <label htmlFor="data-source-select">📚 問題集:</label>
+              <select
+                id="data-source-select"
+                value={selectedDataSource}
+                onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
+                className="select-input"
+              >
+                <option value="all">すべて</option>
+                <option value="junior">高校受験</option>
+                <option value="intermediate">中級1800</option>
+              </select>
+            </div>
+          )}
 
           {onWordPhraseFilterChange && (
             <div className="filter-group">
