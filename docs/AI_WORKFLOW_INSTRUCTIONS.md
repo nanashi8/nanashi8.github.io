@@ -88,7 +88,9 @@
 3. **`NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md`** - 穴埋め問題
 4. `15-data-structures.md` - データ構造仕様
 
-#### 🔄 実装フロー（文並び替えの例）
+#### 🔄 実装フロー（総合文法問題作成：60問/Unit）
+
+##### A. 文並び替え問題（sentence-ordering）
 ```
 1. 対象確認
    ├─ 学年（1/2/3）
@@ -118,24 +120,443 @@
    └─ npm run dev で実際に問題が表示されるか確認
 ```
 
-#### 📊 データフォーマット
+##### B. 総合文法問題（grammar_grade{1,2,3}_unit{N}.json）
+
+**📋 問題構成（60問/Unit）:**
+- 穴埋め（fillInBlank）: 15問
+- 並び替え（sentenceOrdering）: 15問
+- 言い換え（paraphrase）: 15問
+- 動詞変化（verbForm）: 10問
+- 会話（conversation）: 5問
+
+**🔄 完全実装パイプライン:**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│ Phase 1: 企画・準備 (5分)                              │
+└─────────────────────────────────────────────────────────┘
+
+1. 単元情報確認
+   ├─ 学年: Grade 1/2/3
+   ├─ 単元番号: Unit 0-9
+   ├─ 文法項目: be動詞、can、現在進行形など
+   └─ 学習目標: 該当文法の理解度チェック
+
+2. 既存Unit確認
+   ```bash
+   # 既存ファイルの確認
+   ls public/data/grammar_grade1_unit*.json
+   
+   # 最新Unitの検証
+   python3 << 'CHECK'
+   import json
+   from collections import Counter
+   
+   with open('public/data/grammar_grade1_unit5.json') as f:
+       data = json.load(f)
+   
+   print(f"Total: {data['totalQuestions']}問")
+   print(f"Types: {data['questionTypes']}")
+   CHECK
+   ```
+
+┌─────────────────────────────────────────────────────────┐
+│ Phase 2: 前半30問作成 (15-20分)                         │
+└─────────────────────────────────────────────────────────┘
+
+3. 穴埋め問題（fillInBlank: 15問）
+   ├─ beginner: 5問（基本形の穴埋め）
+   ├─ intermediate: 6問（やや複雑な文）
+   └─ advanced: 4問（応用的な文・長文）
+   
+   構造:
+   {
+     "id": "g{grade}-u{unit}-fib-{number}",
+     "type": "fillInBlank",
+     "japanese": "日本語訳",
+     "sentence": "I ____ a student.",
+     "choices": ["am", "is", "are", "be"],
+     "correctAnswer": "am",
+     "difficulty": "beginner",
+     "explanation": "主語がIのときはbe動詞はam。",
+     "hint": "I am"
+   }
+
+4. 並び替え問題（sentenceOrdering: 15問）
+   ├─ beginner: 5問（3-5語）
+   ├─ intermediate: 5問（6-8語）
+   └─ advanced: 5問（9-11語）
+   
+   構造:
+   {
+     "id": "g{grade}-u{unit}-so-{number}",
+     "type": "sentenceOrdering",
+     "japanese": "日本語訳",
+     "words": ["am", "I", "student", "a"],
+     "correctAnswer": "I am a student.",
+     "difficulty": "beginner",
+     "explanation": "I am a student.で「私は学生です」。",
+     "hint": "I am"
+   }
+
+5. 一時保存・検証
+   ```bash
+   python3 << 'SAVE1'
+   import json
+   
+   questions = []
+   # ... 30問のデータ ...
+   
+   output = {
+       "unit": "Unit {N}",
+       "title": "{文法項目}",
+       "grammar": "{文法説明}",
+       "totalQuestions": len(questions),
+       "questionTypes": {
+           "fillInBlank": 15,
+           "sentenceOrdering": 15,
+           "paraphrase": 0,
+           "verbForm": 0,
+           "conversation": 0
+       },
+       "questions": questions
+   }
+   
+   with open('public/data/grammar_grade{X}_unit{N}.json', 'w', encoding='utf-8') as f:
+       json.dump(output, f, ensure_ascii=False, indent=2)
+   
+   print(f"✅ 一時保存: {len(questions)}問")
+   SAVE1
+   ```
+
+┌─────────────────────────────────────────────────────────┐
+│ Phase 3: 後半30問作成 (15-20分)                         │
+└─────────────────────────────────────────────────────────┘
+
+6. 言い換え問題（paraphrase: 15問）
+   ├─ beginner: 5問（肯定↔否定、肯定↔疑問）
+   ├─ intermediate: 5問（主語変更、時制変更）
+   └─ advanced: 5問（複合的変換、疑問詞追加）
+   
+   構造:
+   {
+     "id": "g{grade}-u{unit}-para-{number}",
+     "type": "paraphrase",
+     "japanese": "書き換え指示",
+     "originalSentence": "I am a student.",
+     "question": "疑問文に書き換えなさい",
+     "choices": ["Am I a student?", "I am a student?", ...],
+     "correctAnswer": "Am I a student?",
+     "difficulty": "beginner",
+     "explanation": "be動詞の疑問文はbe動詞を文頭に。",
+     "hint": "Am I"
+   }
+
+7. 動詞変化問題（verbForm: 10問）
+   ├─ beginner: 4問（基本形の選択）
+   ├─ intermediate: 3問（三人称単数・進行形）
+   └─ advanced: 3問（複雑な時制・助動詞後）
+   
+   構造:
+   {
+     "id": "g{grade}-u{unit}-vf-{number}",
+     "type": "verbForm",
+     "japanese": "動詞変化の説明",
+     "sentence": "He ____ to school.",
+     "verb": "go",
+     "choices": ["go", "goes", "going", "to go"],
+     "correctAnswer": "goes",
+     "difficulty": "beginner",
+     "explanation": "三人称単数現在形はgoesになる。",
+     "hint": "三人称単数"
+   }
+
+8. 会話問題（conversation: 5問）
+   ├─ beginner: 2問（基本応答）
+   ├─ intermediate: 2問（状況判断）
+   └─ advanced: 1問（複合的会話）
+   
+   構造:
+   {
+     "id": "g{grade}-u{unit}-conv-{number}",
+     "type": "conversation",
+     "japanese": "会話の状況",
+     "situation": "挨拶の場面",
+     "dialogue": [
+       {"speaker": "A", "text": "How are you?"},
+       {"speaker": "B", "text": "I ____ fine."}
+     ],
+     "choices": ["am", "is", "are", "be"],
+     "correctAnswer": "am",
+     "difficulty": "beginner",
+     "explanation": "主語がIのときはam。",
+     "hint": "I am"
+   }
+
+9. 完全版保存
+   ```bash
+   python3 << 'SAVE2'
+   import json
+   
+   # 既存30問読み込み
+   with open('public/data/grammar_grade{X}_unit{N}.json') as f:
+       data = json.load(f)
+   
+   questions = data['questions']
+   
+   # 後半30問追加
+   # ... paraphrase 15問 ...
+   # ... verbForm 10問 ...
+   # ... conversation 5問 ...
+   
+   output = {
+       "unit": "Unit {N}",
+       "title": "{文法項目}",
+       "grammar": "{文法説明}",
+       "totalQuestions": len(questions),
+       "questionTypes": {
+           "fillInBlank": 15,
+           "sentenceOrdering": 15,
+           "paraphrase": 15,
+           "verbForm": 10,
+           "conversation": 5
+       },
+       "questions": questions
+   }
+   
+   with open('public/data/grammar_grade{X}_unit{N}.json', 'w', encoding='utf-8') as f:
+       json.dump(output, f, ensure_ascii=False, indent=2)
+   
+   print(f"✅ Unit {N}完成: {len(questions)}問")
+   SAVE2
+   ```
+
+┌─────────────────────────────────────────────────────────┐
+│ Phase 4: 品質チェック (5-10分)                          │
+└─────────────────────────────────────────────────────────┘
+
+10. 重複チェック（必須）
+    ```bash
+    python3 << 'CHECKDUP'
+    import json
+    from collections import Counter
+    
+    with open('public/data/grammar_grade{X}_unit{N}.json') as f:
+        data = json.load(f)
+    
+    sentences = []
+    for q in data['questions']:
+        if q['type'] == 'fillInBlank':
+            sentences.append(q['sentence'])
+        elif q['type'] == 'sentenceOrdering':
+            sentences.append(q['correctAnswer'])
+        elif q['type'] == 'paraphrase':
+            sentences.append(q['originalSentence'])
+        elif q['type'] == 'verbForm':
+            sentences.append(q['sentence'])
+        elif q['type'] == 'conversation':
+            for d in q['dialogue']:
+                sentences.append(d['text'])
+    
+    counts = Counter(sentences)
+    duplicates = {s: c for s, c in counts.items() if c > 1}
+    
+    if duplicates:
+        print(f"❌ 重複発見: {len(duplicates)}件")
+        for s, c in duplicates.items():
+            print(f"  - \"{s}\" ({c}回)")
+    else:
+        print(f"✅ Unit {N}: 重複0件")
+    CHECKDUP
+    ```
+
+11. 重複修正（発見時）
+    - 文の一部を変更（動詞・名詞・副詞の置き換え）
+    - 文構造を変更（疑問文↔平叙文、主語変更）
+    - 再度チェック実行（重複0件まで繰り返し）
+
+12. JSON構文チェック
+    ```bash
+    # 構文確認
+    python3 -c "import json; json.load(open('public/data/grammar_grade{X}_unit{N}.json'))"
+    
+    # 問題数確認
+    python3 -c "import json; data=json.load(open('public/data/grammar_grade{X}_unit{N}.json')); print(f'Total: {len(data[\"questions\"])}')"
+    ```
+
+┌─────────────────────────────────────────────────────────┐
+│ Phase 5: 動作確認・デプロイ (5分)                       │
+└─────────────────────────────────────────────────────────┘
+
+13. ローカル環境確認
+    ```bash
+    npm run dev
+    # → http://localhost:5173 で文法クイズ動作確認
+    ```
+    
+    確認項目:
+    ├─ 問題が表示される
+    ├─ 選択肢が正しい
+    ├─ 正解判定が正しい
+    ├─ 解説が表示される
+    └─ ヒントが表示される
+
+14. ビルド・デプロイ
+    ```bash
+    npm run build
+    npm run deploy
+    ```
+```
+
+#### 📊 データフォーマット（問題タイプ別）
+
+**fillInBlank:**
 ```json
 {
-  "question": "彼女は毎日学校へ行きます。",
-  "words": ["goes", "to", "school", "she", "every", "day"],
-  "correctOrder": [3, 0, 1, 2, 4, 5],
-  "answer": "She goes to school every day.",
-  "grammarPoint": "三人称単数現在形",
-  "difficulty": "medium"
+  "id": "g1-u0-fib-001",
+  "type": "fillInBlank",
+  "japanese": "私は学生です。",
+  "sentence": "I ____ a student.",
+  "choices": ["am", "is", "are", "be"],
+  "correctAnswer": "am",
+  "difficulty": "beginner",
+  "explanation": "主語がIのときはbe動詞はam。I am a student.で「私は学生です」。",
+  "hint": "I am"
 }
 ```
 
+**sentenceOrdering:**
+```json
+{
+  "id": "g1-u0-so-001",
+  "type": "sentenceOrdering",
+  "japanese": "彼女は毎日学校へ行きます。",
+  "words": ["goes", "to", "school", "she", "every", "day"],
+  "correctAnswer": "She goes to school every day.",
+  "difficulty": "medium",
+  "explanation": "三人称単数現在形goesを使う。She goes to school every day.で「彼女は毎日学校へ行きます」。",
+  "hint": "She goes"
+}
+```
+
+**paraphrase:**
+```json
+{
+  "id": "g1-u0-para-001",
+  "type": "paraphrase",
+  "japanese": "肯定文→疑問文",
+  "originalSentence": "You are a student.",
+  "question": "疑問文に書き換えなさい",
+  "choices": ["Are you a student?", "You are a student?", "Do you a student?", "Is you a student?"],
+  "correctAnswer": "Are you a student?",
+  "difficulty": "beginner",
+  "explanation": "be動詞の疑問文はbe動詞を文頭に。Are you a student?で「あなたは学生ですか」。",
+  "hint": "Are you"
+}
+```
+
+**verbForm:**
+```json
+{
+  "id": "g1-u0-vf-001",
+  "type": "verbForm",
+  "japanese": "be動詞の選択",
+  "sentence": "He ____ a teacher.",
+  "verb": "be",
+  "choices": ["am", "is", "are", "be"],
+  "correctAnswer": "is",
+  "difficulty": "beginner",
+  "explanation": "三人称単数（he）のbe動詞はis。He is a teacher.で「彼は先生です」。",
+  "hint": "He is"
+}
+```
+
+**conversation:**
+```json
+{
+  "id": "g1-u0-conv-001",
+  "type": "conversation",
+  "japanese": "自己紹介の応答",
+  "situation": "初対面の挨拶場面",
+  "dialogue": [
+    {"speaker": "A", "text": "Are you a student?"},
+    {"speaker": "B", "text": "Yes, I ____."}
+  ],
+  "choices": ["am", "is", "are", "do"],
+  "correctAnswer": "am",
+  "difficulty": "beginner",
+  "explanation": "Are you～?の答えはYes, I am.またはNo, I'm not.。",
+  "hint": "Yes, I am"
+}
+```
+
+#### ⚠️ 絶対遵守事項（品質保証）
+
+1. **重複ゼロ原則**
+   - すべての英文が一意であること
+   - 会話の各発話も重複チェック対象
+   - 重複発見時は即座に修正
+
+2. **難易度分散**
+   - beginner/intermediate/advancedのバランス
+   - 各問題タイプで適切な難易度配分
+
+3. **文法焦点の統一**
+   - 1 Unit = 1文法項目
+   - 複数の文法を混在させない
+
+4. **NEW HORIZON準拠**
+   - 教科書の語彙・表現を使用
+   - 学年レベルに適合した内容
+
+5. **段階的作成**
+   - 30問ずつ作成・検証
+   - 一気に60問作らない（品質低下防止）
+
+#### 🛠️ 便利なコマンド集
+
+```bash
+# 全Unitの問題数確認
+for f in public/data/grammar_grade1_unit*.json; do
+  python3 -c "import json; d=json.load(open('$f')); print(f'$(basename $f): {d[\"totalQuestions\"]}問')"
+done
+
+# 特定Unitの重複チェック
+python3 << 'CHECK'
+import json, sys
+from collections import Counter
+with open(sys.argv[1]) as f:
+    data = json.load(f)
+sentences = []
+for q in data['questions']:
+    if q['type'] in ['fillInBlank', 'verbForm']:
+        sentences.append(q['sentence'])
+    elif q['type'] == 'sentenceOrdering':
+        sentences.append(q['correctAnswer'])
+    elif q['type'] == 'paraphrase':
+        sentences.append(q['originalSentence'])
+    elif q['type'] == 'conversation':
+        sentences.extend([d['text'] for d in q['dialogue']])
+counts = Counter(sentences)
+dups = {s: c for s, c in counts.items() if c > 1}
+print(f"重複: {len(dups)}件" if dups else "✅ 重複なし")
+CHECK public/data/grammar_grade1_unit5.json
+
+# 全Unitの重複一括チェック
+for f in public/data/grammar_grade1_unit*.json; do
+  echo "=== $(basename $f) ==="
+  python3 -c "..." $f
+done
+```
+
 #### ✅ 完了チェックリスト
-- [ ] ガイドライン準拠（語数・文法焦点）
-- [ ] NEW HORIZON教科書との整合性
+- [ ] 60問完成（fillInBlank 15 + sentenceOrdering 15 + paraphrase 15 + verbForm 10 + conversation 5）
+- [ ] 重複チェック実行済み（重複0件）
 - [ ] JSON構文エラーなし
-- [ ] totalQuestions正しく更新
+- [ ] 難易度分散適切
+- [ ] NEW HORIZON教科書準拠
 - [ ] ローカル環境で動作確認済み
+- [ ] ビルドエラーなし
 
 ---
 
