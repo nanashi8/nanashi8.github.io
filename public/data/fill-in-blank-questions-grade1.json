@@ -22710,323 +22710,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u6-001",
-          "japanese": "彼は学生です（現在進行形）",
-          "sentence": "He ____ a student.",
-          "verb": "現在進行形",
+          "japanese": "私は今勉強しています",
+          "sentence": "I am ____ now.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "studying",
+            "study",
+            "studys",
+            "studyed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "studying",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-002",
-          "japanese": "私は本を持っています（現在進行形）",
-          "sentence": "I ____ a book.",
-          "verb": "現在進行形",
+          "japanese": "彼は走っています",
+          "sentence": "He is ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "running",
+            "runn",
+            "runns",
+            "runned"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "running",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-003",
-          "japanese": "彼女は走ります（現在進行形）",
-          "sentence": "She ____.",
-          "verb": "現在進行形",
+          "japanese": "彼女は料理しています",
+          "sentence": "She is ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "cooking",
+            "cook",
+            "cooks",
+            "cooked"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "cooking",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-004",
-          "japanese": "彼らは勉強します（現在進行形）",
-          "sentence": "They ____.",
-          "verb": "現在進行形",
+          "japanese": "彼らは遊んでいます",
+          "sentence": "They are ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "playing",
+            "play",
+            "plays",
+            "played"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "playing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-005",
-          "japanese": "彼は学生です（現在進行形）",
-          "sentence": "He ____ a student.",
-          "verb": "現在進行形",
+          "japanese": "あなたは読んでいます",
+          "sentence": "You are ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "reading",
+            "read",
+            "reads",
+            "readed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "reading",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-006",
-          "japanese": "私は本を持っています（現在進行形）",
-          "sentence": "I ____ a book.",
-          "verb": "現在進行形",
+          "japanese": "私たちは歌っています",
+          "sentence": "We are ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "singing",
+            "sing",
+            "sings",
+            "singed"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "singing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-007",
-          "japanese": "彼女は走ります（現在進行形）",
-          "sentence": "She ____.",
-          "verb": "現在進行形",
+          "japanese": "犬は眠っています",
+          "sentence": "The dog is ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "sleeping",
+            "sleep",
+            "sleeps",
+            "sleeped"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "sleeping",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-008",
-          "japanese": "彼らは勉強します（現在進行形）",
-          "sentence": "They ____.",
-          "verb": "現在進行形",
+          "japanese": "生徒たちは書いています",
+          "sentence": "The students are ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "writing",
+            "writ",
+            "writs",
+            "writed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "writing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-009",
-          "japanese": "彼は学生です（現在進行形）",
-          "sentence": "He ____ a student.",
-          "verb": "現在進行形",
+          "japanese": "彼は泳いでいます",
+          "sentence": "He is ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "swimming",
+            "swim",
+            "swims",
+            "swimed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "swimming",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-010",
-          "japanese": "私は本を持っています（現在進行形）",
-          "sentence": "I ____ a book.",
-          "verb": "現在進行形",
+          "japanese": "彼女はテレビを見ています",
+          "sentence": "She is ____ TV.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "watching",
+            "watch",
+            "watchs",
+            "watched"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "watching",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-011",
-          "japanese": "彼女は走ります（現在進行形）",
-          "sentence": "She ____.",
-          "verb": "現在進行形",
+          "japanese": "私は音楽を聴いています",
+          "sentence": "I am ____ to music.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "listening",
+            "liste",
+            "listes",
+            "listeed"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "listening",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-012",
-          "japanese": "彼らは勉強します（現在進行形）",
-          "sentence": "They ____.",
-          "verb": "現在進行形",
+          "japanese": "彼らは待っています",
+          "sentence": "They are ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "waiting",
+            "wait",
+            "waits",
+            "waited"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "waiting",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-013",
-          "japanese": "彼は学生です（現在進行形）",
-          "sentence": "He ____ a student.",
-          "verb": "現在進行形",
+          "japanese": "あなたは食べています",
+          "sentence": "You are ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "eating",
+            "eat",
+            "eats",
+            "eated"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "eating",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-014",
-          "japanese": "私は本を持っています（現在進行形）",
-          "sentence": "I ____ a book.",
-          "verb": "現在進行形",
+          "japanese": "私たちは働いています",
+          "sentence": "We are ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "working",
+            "work",
+            "works",
+            "worked"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "working",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-015",
-          "japanese": "彼女は走ります（現在進行形）",
-          "sentence": "She ____.",
-          "verb": "現在進行形",
+          "japanese": "彼は笑っています",
+          "sentence": "He is ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "laughing",
+            "laugh",
+            "laughs",
+            "laughed"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "laughing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-016",
-          "japanese": "彼らは勉強します（現在進行形）",
-          "sentence": "They ____.",
-          "verb": "現在進行形",
+          "japanese": "彼女は踊っています",
+          "sentence": "She is ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "dancing",
+            "danc",
+            "dancs",
+            "danced"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "dancing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-017",
-          "japanese": "彼は学生です（現在進行形）",
-          "sentence": "He ____ a student.",
-          "verb": "現在進行形",
+          "japanese": "私は話しています",
+          "sentence": "I am ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "talking",
+            "talk",
+            "talks",
+            "talked"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "talking",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-018",
-          "japanese": "私は本を持っています（現在進行形）",
-          "sentence": "I ____ a book.",
-          "verb": "現在進行形",
+          "japanese": "子どもたちは遊んでいます",
+          "sentence": "The children are ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "playing",
+            "play",
+            "plays",
+            "played"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "playing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-019",
-          "japanese": "彼女は走ります（現在進行形）",
-          "sentence": "She ____.",
-          "verb": "現在進行形",
+          "japanese": "彼は運転しています",
+          "sentence": "He is ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "driving",
+            "driv",
+            "drivs",
+            "drived"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "driving",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         },
         {
           "id": "fb-g1-u6-020",
-          "japanese": "彼らは勉強します（現在進行形）",
-          "sentence": "They ____.",
-          "verb": "現在進行形",
+          "japanese": "彼女は絵を描いています",
+          "sentence": "She is ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "drawing",
+            "draw",
+            "draws",
+            "drawed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "drawing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の練習問題。",
-          "hint": "現在進行形"
+          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "hint": "動詞にingをつける"
         }
       ],
       "sentenceOrdering": [
@@ -26240,323 +26220,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u7-001",
-          "japanese": "彼は学生です（助動詞can）",
-          "sentence": "He ____ a student.",
-          "verb": "助動詞can",
+          "japanese": "私は泳げます",
+          "sentence": "I can ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "swim",
+            "swims",
+            "swiming",
+            "swimed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-002",
-          "japanese": "私は本を持っています（助動詞can）",
-          "sentence": "I ____ a book.",
-          "verb": "助動詞can",
+          "japanese": "彼は英語を話せます",
+          "sentence": "He can ____ English.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "speak",
+            "speaks",
+            "speaking",
+            "speaked"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "speak",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-003",
-          "japanese": "彼女は走ります（助動詞can）",
-          "sentence": "She ____.",
-          "verb": "助動詞can",
+          "japanese": "彼女はピアノを弾けます",
+          "sentence": "She can ____ the piano.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "play",
+            "plays",
+            "playing",
+            "played"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-004",
-          "japanese": "彼らは勉強します（助動詞can）",
-          "sentence": "They ____.",
-          "verb": "助動詞can",
+          "japanese": "彼らは速く走れます",
+          "sentence": "They can ____ fast.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "run",
+            "runs",
+            "runing",
+            "runed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "run",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-005",
-          "japanese": "彼は学生です（助動詞can）",
-          "sentence": "He ____ a student.",
-          "verb": "助動詞can",
+          "japanese": "あなたは料理ができます",
+          "sentence": "You can ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "cook",
+            "cooks",
+            "cooking",
+            "cooked"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "cook",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-006",
-          "japanese": "私は本を持っています（助動詞can）",
-          "sentence": "I ____ a book.",
-          "verb": "助動詞can",
+          "japanese": "私たちはこれを理解できます",
+          "sentence": "We can ____ this.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "understand",
+            "understands",
+            "understanding",
+            "understanded"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "understand",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-007",
-          "japanese": "彼女は走ります（助動詞can）",
-          "sentence": "She ____.",
-          "verb": "助動詞can",
+          "japanese": "犬は泳げます",
+          "sentence": "The dog can ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "swim",
+            "swims",
+            "swiming",
+            "swimed"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-008",
-          "japanese": "彼らは勉強します（助動詞can）",
-          "sentence": "They ____.",
-          "verb": "助動詞can",
+          "japanese": "私は泳げません",
+          "sentence": "I cannot ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "swim",
+            "swims",
+            "swiming",
+            "swimed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-009",
-          "japanese": "彼は学生です（助動詞can）",
-          "sentence": "He ____ a student.",
-          "verb": "助動詞can",
+          "japanese": "彼は運転できません",
+          "sentence": "He cannot ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "drive",
+            "drives",
+            "driveing",
+            "driveed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "drive",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-010",
-          "japanese": "私は本を持っています（助動詞can）",
-          "sentence": "I ____ a book.",
-          "verb": "助動詞can",
+          "japanese": "彼女は来られません",
+          "sentence": "She cannot ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "come",
+            "comes",
+            "comeing",
+            "comeed"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "come",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-011",
-          "japanese": "彼女は走ります（助動詞can）",
-          "sentence": "She ____.",
-          "verb": "助動詞can",
+          "japanese": "彼らは待てません",
+          "sentence": "They cannot ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "wait",
+            "waits",
+            "waiting",
+            "waited"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "wait",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-012",
-          "japanese": "彼らは勉強します（助動詞can）",
-          "sentence": "They ____.",
-          "verb": "助動詞can",
+          "japanese": "あなたは泳げますか",
+          "sentence": "Can you ____?",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "swim",
+            "swims",
+            "swiming",
+            "swimed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-013",
-          "japanese": "彼は学生です（助動詞can）",
-          "sentence": "He ____ a student.",
-          "verb": "助動詞can",
+          "japanese": "彼は英語を話せますか",
+          "sentence": "Can he ____ English?",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "speak",
+            "speaks",
+            "speaking",
+            "speaked"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "speak",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-014",
-          "japanese": "私は本を持っています（助動詞can）",
-          "sentence": "I ____ a book.",
-          "verb": "助動詞can",
+          "japanese": "彼女はピアノを弾けますか",
+          "sentence": "Can she ____ the piano?",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "play",
+            "plays",
+            "playing",
+            "played"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-015",
-          "japanese": "彼女は走ります（助動詞can）",
-          "sentence": "She ____.",
-          "verb": "助動詞can",
+          "japanese": "彼らは来られますか",
+          "sentence": "Can they ____?",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "come",
+            "comes",
+            "comeing",
+            "comeed"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "come",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-016",
-          "japanese": "彼らは勉強します（助動詞can）",
-          "sentence": "They ____.",
-          "verb": "助動詞can",
+          "japanese": "私は歌えます",
+          "sentence": "I can ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "sing",
+            "sings",
+            "singing",
+            "singed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "sing",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-017",
-          "japanese": "彼は学生です（助動詞can）",
-          "sentence": "He ____ a student.",
-          "verb": "助動詞can",
+          "japanese": "彼は絵を描けます",
+          "sentence": "He can ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "draw",
+            "draws",
+            "drawing",
+            "drawed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "draw",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-018",
-          "japanese": "私は本を持っています（助動詞can）",
-          "sentence": "I ____ a book.",
-          "verb": "助動詞can",
+          "japanese": "彼女はダンスができます",
+          "sentence": "She can ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "dance",
+            "dances",
+            "danceing",
+            "danceed"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "dance",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-019",
-          "japanese": "彼女は走ります（助動詞can）",
-          "sentence": "She ____.",
-          "verb": "助動詞can",
+          "japanese": "私たちは手伝えます",
+          "sentence": "We can ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "help",
+            "helps",
+            "helping",
+            "helped"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "help",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         },
         {
           "id": "fb-g1-u7-020",
-          "japanese": "彼らは勉強します（助動詞can）",
-          "sentence": "They ____.",
-          "verb": "助動詞can",
+          "japanese": "あなたは見えますか",
+          "sentence": "Can you ____?",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "see",
+            "sees",
+            "seeing",
+            "seeed"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "see",
           "difficulty": "beginner",
-          "explanation": "助動詞canの練習問題。",
-          "hint": "助動詞can"
+          "explanation": "canの後は必ず動詞の原形。",
+          "hint": "can + 動詞原形"
         }
       ],
       "sentenceOrdering": [
@@ -29770,323 +29730,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u8-001",
-          "japanese": "彼は学生です（過去形）",
-          "sentence": "He ____ a student.",
-          "verb": "過去形",
+          "japanese": "私は昨日勉強しました",
+          "sentence": "I studied ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "yesterday",
+            "today",
+            "tomorrow",
+            "now"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-002",
-          "japanese": "私は本を持っています（過去形）",
-          "sentence": "I ____ a book.",
-          "verb": "過去形",
+          "japanese": "彼は学校に行きました",
+          "sentence": "He went ____ school.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "to",
+            "at",
+            "in",
+            "on"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "to",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-003",
-          "japanese": "彼女は走ります（過去形）",
-          "sentence": "She ____.",
-          "verb": "過去形",
+          "japanese": "彼女は本を読みました",
+          "sentence": "She read a ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "book",
+            "books",
+            "read",
+            "reading"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "book",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-004",
-          "japanese": "彼らは勉強します（過去形）",
-          "sentence": "They ____.",
-          "verb": "過去形",
+          "japanese": "彼らはサッカーをしました",
+          "sentence": "They played ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "soccer",
+            "football",
+            "basketball",
+            "tennis"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "soccer",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-005",
-          "japanese": "彼は学生です（過去形）",
-          "sentence": "He ____ a student.",
-          "verb": "過去形",
+          "japanese": "私たちは映画を見ました",
+          "sentence": "We watched a ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "movie",
+            "film",
+            "show",
+            "video"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "movie",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-006",
-          "japanese": "私は本を持っています（過去形）",
-          "sentence": "I ____ a book.",
-          "verb": "過去形",
+          "japanese": "彼は朝食を食べました",
+          "sentence": "He ate ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "breakfast",
+            "lunch",
+            "dinner",
+            "meal"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "breakfast",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-007",
-          "japanese": "彼女は走ります（過去形）",
-          "sentence": "She ____.",
-          "verb": "過去形",
+          "japanese": "彼女は音楽を聴きました",
+          "sentence": "She listened ____ music.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "to",
+            "at",
+            "in",
+            "on"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "to",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-008",
-          "japanese": "彼らは勉強します（過去形）",
-          "sentence": "They ____.",
-          "verb": "過去形",
+          "japanese": "私は友達に会いました",
+          "sentence": "I met my ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "friend",
+            "friends",
+            "teacher",
+            "student"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "friend",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-009",
-          "japanese": "彼は学生です（過去形）",
-          "sentence": "He ____ a student.",
-          "verb": "過去形",
+          "japanese": "彼らは公園で遊びました",
+          "sentence": "They played in the ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "park",
+            "school",
+            "library",
+            "home"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "park",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-010",
-          "japanese": "私は本を持っています（過去形）",
-          "sentence": "I ____ a book.",
-          "verb": "過去形",
+          "japanese": "私は先週買い物をしました",
+          "sentence": "I went shopping last ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "week",
+            "month",
+            "year",
+            "day"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "week",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-011",
-          "japanese": "彼女は走ります（過去形）",
-          "sentence": "She ____.",
-          "verb": "過去形",
+          "japanese": "彼は昨日泳ぎました",
+          "sentence": "He swam ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "yesterday",
+            "today",
+            "tomorrow",
+            "now"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-012",
-          "japanese": "彼らは勉強します（過去形）",
-          "sentence": "They ____.",
-          "verb": "過去形",
+          "japanese": "彼女は昨日料理しました",
+          "sentence": "She cooked ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "yesterday",
+            "today",
+            "tomorrow",
+            "now"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-013",
-          "japanese": "彼は学生です（過去形）",
-          "sentence": "He ____ a student.",
-          "verb": "過去形",
+          "japanese": "私たちは図書館にいました",
+          "sentence": "We were at the ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "library",
+            "school",
+            "park",
+            "home"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "library",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-014",
-          "japanese": "私は本を持っています（過去形）",
-          "sentence": "I ____ a book.",
-          "verb": "過去形",
+          "japanese": "彼は先生でした",
+          "sentence": "He was a ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "teacher",
+            "student",
+            "doctor",
+            "nurse"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "teacher",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-015",
-          "japanese": "彼女は走ります（過去形）",
-          "sentence": "She ____.",
-          "verb": "過去形",
+          "japanese": "彼らは幸せでした",
+          "sentence": "They were ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "happy",
+            "sad",
+            "busy",
+            "tired"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "happy",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-016",
-          "japanese": "彼らは勉強します（過去形）",
-          "sentence": "They ____.",
-          "verb": "過去形",
+          "japanese": "私は昨日忙しかったです",
+          "sentence": "I was ____ yesterday.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "busy",
+            "happy",
+            "sad",
+            "tired"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "busy",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-017",
-          "japanese": "彼は学生です（過去形）",
-          "sentence": "He ____ a student.",
-          "verb": "過去形",
+          "japanese": "彼女は家にいました",
+          "sentence": "She was at ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "home",
+            "school",
+            "park",
+            "library"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "home",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-018",
-          "japanese": "私は本を持っています（過去形）",
-          "sentence": "I ____ a book.",
-          "verb": "過去形",
+          "japanese": "私は昨夜勉強しました",
+          "sentence": "I studied last ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "night",
+            "morning",
+            "afternoon",
+            "evening"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "night",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-019",
-          "japanese": "彼女は走ります（過去形）",
-          "sentence": "She ____.",
-          "verb": "過去形",
+          "japanese": "彼は先月日本に行きました",
+          "sentence": "He went to Japan last ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "month",
+            "week",
+            "year",
+            "day"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "month",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u8-020",
-          "japanese": "彼らは勉強します（過去形）",
-          "sentence": "They ____.",
-          "verb": "過去形",
+          "japanese": "彼らは昨年ここに住んでいました",
+          "sentence": "They lived here last ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "year",
+            "month",
+            "week",
+            "day"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "year",
           "difficulty": "beginner",
-          "explanation": "過去形の練習問題。",
-          "hint": "過去形"
+          "explanation": "過去形の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         }
       ],
       "sentenceOrdering": [
@@ -33300,323 +33240,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u9-001",
-          "japanese": "彼は学生です（未来表現）",
-          "sentence": "He ____ a student.",
-          "verb": "未来表現",
+          "japanese": "私は明日勉強します",
+          "sentence": "I will study ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "tomorrow",
+            "yesterday",
+            "today",
+            "now"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-002",
-          "japanese": "私は本を持っています（未来表現）",
-          "sentence": "I ____ a book.",
-          "verb": "未来表現",
+          "japanese": "彼は学校に行く予定です",
+          "sentence": "He is going ____ school.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "to",
+            "at",
+            "in",
+            "on"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "to",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-003",
-          "japanese": "彼女は走ります（未来表現）",
-          "sentence": "She ____.",
-          "verb": "未来表現",
+          "japanese": "彼女は本を読むでしょう",
+          "sentence": "She will read a ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "book",
+            "books",
+            "read",
+            "reading"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "book",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-004",
-          "japanese": "彼らは勉強します（未来表現）",
-          "sentence": "They ____.",
-          "verb": "未来表現",
+          "japanese": "彼らはサッカーをする予定です",
+          "sentence": "They are going to play ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "soccer",
+            "football",
+            "basketball",
+            "tennis"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "soccer",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-005",
-          "japanese": "彼は学生です（未来表現）",
-          "sentence": "He ____ a student.",
-          "verb": "未来表現",
+          "japanese": "私たちは映画を見る予定です",
+          "sentence": "We are going to watch a ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "movie",
+            "film",
+            "show",
+            "video"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "movie",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-006",
-          "japanese": "私は本を持っています（未来表現）",
-          "sentence": "I ____ a book.",
-          "verb": "未来表現",
+          "japanese": "彼は明日来ます",
+          "sentence": "He will come ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "tomorrow",
+            "yesterday",
+            "today",
+            "now"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-007",
-          "japanese": "彼女は走ります（未来表現）",
-          "sentence": "She ____.",
-          "verb": "未来表現",
+          "japanese": "彼女は料理する予定です",
+          "sentence": "She is going to ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "cook",
+            "cooks",
+            "cooking",
+            "cooked"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "cook",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-008",
-          "japanese": "彼らは勉強します（未来表現）",
-          "sentence": "They ____.",
-          "verb": "未来表現",
+          "japanese": "私は手伝います",
+          "sentence": "I will ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "help",
+            "helps",
+            "helping",
+            "helped"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "help",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-009",
-          "japanese": "彼は学生です（未来表現）",
-          "sentence": "He ____ a student.",
-          "verb": "未来表現",
+          "japanese": "彼らは旅行する予定です",
+          "sentence": "They are going to ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "travel",
+            "travels",
+            "traveling",
+            "traveled"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "travel",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-010",
-          "japanese": "私は本を持っています（未来表現）",
-          "sentence": "I ____ a book.",
-          "verb": "未来表現",
+          "japanese": "私は明日忙しいでしょう",
+          "sentence": "I will be busy ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "tomorrow",
+            "yesterday",
+            "today",
+            "now"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-011",
-          "japanese": "彼女は走ります（未来表現）",
-          "sentence": "She ____.",
-          "verb": "未来表現",
+          "japanese": "彼は先生になる予定です",
+          "sentence": "He is going to be a ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "teacher",
+            "student",
+            "doctor",
+            "nurse"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "teacher",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-012",
-          "japanese": "彼らは勉強します（未来表現）",
-          "sentence": "They ____.",
-          "verb": "未来表現",
+          "japanese": "彼女は歌うでしょう",
+          "sentence": "She will ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "sing",
+            "sings",
+            "singing",
+            "sang"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "sing",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-013",
-          "japanese": "彼は学生です（未来表現）",
-          "sentence": "He ____ a student.",
-          "verb": "未来表現",
+          "japanese": "私たちは勝つでしょう",
+          "sentence": "We will ____.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "win",
+            "wins",
+            "winning",
+            "won"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "win",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-014",
-          "japanese": "私は本を持っています（未来表現）",
-          "sentence": "I ____ a book.",
-          "verb": "未来表現",
+          "japanese": "彼らは来る予定です",
+          "sentence": "They are going to ____.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "come",
+            "comes",
+            "coming",
+            "came"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "come",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-015",
-          "japanese": "彼女は走ります（未来表現）",
-          "sentence": "She ____.",
-          "verb": "未来表現",
+          "japanese": "私は買い物に行く予定です",
+          "sentence": "I am going to go ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "shopping",
+            "shop",
+            "shops",
+            "shopped"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "shopping",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-016",
-          "japanese": "彼らは勉強します（未来表現）",
-          "sentence": "They ____.",
-          "verb": "未来表現",
+          "japanese": "彼は明日泳ぎます",
+          "sentence": "He will ____ tomorrow.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "swim",
+            "swims",
+            "swimming",
+            "swam"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-017",
-          "japanese": "彼は学生です（未来表現）",
-          "sentence": "He ____ a student.",
-          "verb": "未来表現",
+          "japanese": "彼女は彼を助ける予定です",
+          "sentence": "She is going to ____ him.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "do"
+            "help",
+            "helps",
+            "helping",
+            "helped"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "help",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-018",
-          "japanese": "私は本を持っています（未来表現）",
-          "sentence": "I ____ a book.",
-          "verb": "未来表現",
+          "japanese": "私たちは明日会います",
+          "sentence": "We will ____ tomorrow.",
           "choices": [
-            "have",
-            "am",
-            "are",
-            "do"
+            "meet",
+            "meets",
+            "meeting",
+            "met"
           ],
-          "correctAnswer": "have",
+          "correctAnswer": "meet",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-019",
-          "japanese": "彼女は走ります（未来表現）",
-          "sentence": "She ____.",
-          "verb": "未来表現",
+          "japanese": "彼は来週東京に行きます",
+          "sentence": "He will go to Tokyo next ____.",
           "choices": [
-            "runs",
-            "am",
-            "are",
-            "do"
+            "week",
+            "month",
+            "year",
+            "day"
           ],
-          "correctAnswer": "runs",
+          "correctAnswer": "week",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         },
         {
           "id": "fb-g1-u9-020",
-          "japanese": "彼らは勉強します（未来表現）",
-          "sentence": "They ____.",
-          "verb": "未来表現",
+          "japanese": "彼女は来年結婚する予定です",
+          "sentence": "She is going to get married next ____.",
           "choices": [
-            "study",
-            "am",
-            "are",
-            "do"
+            "year",
+            "month",
+            "week",
+            "day"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "year",
           "difficulty": "beginner",
-          "explanation": "未来表現の練習問題。",
-          "hint": "未来表現"
+          "explanation": "未来表現の文で使われる語彙。",
+          "hint": "文脈に合う単語を選ぶ"
         }
       ],
       "sentenceOrdering": [
