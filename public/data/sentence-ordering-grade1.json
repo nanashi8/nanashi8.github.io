@@ -10003,347 +10003,331 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u2-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私はノートを持っています",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "a",
+            "notebook"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I have a notebook",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u2-002",
-          "japanese": "Youは学生です",
+          "japanese": "彼は兄がいます",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "a",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He has a brother",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u2-003",
-          "japanese": "Heは学生です",
+          "japanese": "彼女は新しいカバンを持っています",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "a",
+            "new",
+            "bag"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She has a new bag",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
           "wordCount": 5
         },
         {
           "id": "so-g1-u2-004",
-          "japanese": "Sheは学生です",
+          "japanese": "私たちはたくさんの宿題があります",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "a",
+            "lot",
+            "of",
+            "homework"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We have a lot of homework",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u2-005",
-          "japanese": "Itは学生です",
+          "japanese": "彼らは時間がありません",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "no",
+            "time"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They have no time",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u2-006",
-          "japanese": "Weは学生です",
+          "japanese": "トムは英語を勉強します",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Tom",
+            "studies",
+            "English"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Tom studies English",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u2-007",
-          "japanese": "Theyは学生です",
+          "japanese": "メアリーはピアノを弾きます",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Mary",
+            "plays",
+            "the",
+            "piano"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Mary plays the piano",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u2-008",
-          "japanese": "My brotherは学生です",
-          "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
-          ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 6
-        },
-        {
-          "id": "so-g1-u2-009",
-          "japanese": "My sisterは学生です",
-          "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
-          ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 6
-        },
-        {
-          "id": "so-g1-u2-010",
-          "japanese": "The dogは学生です",
+          "japanese": "犬は速く走ります",
           "words": [
             "The",
             "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "runs",
+            "fast"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "The dog runs fast",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 6
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
+        },
+        {
+          "id": "so-g1-u2-009",
+          "japanese": "あなたはたいていテレビを見ます",
+          "words": [
+            "You",
+            "usually",
+            "watch",
+            "TV"
+          ],
+          "correctOrder": "You usually watch TV",
+          "difficulty": "beginner",
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
+        },
+        {
+          "id": "so-g1-u2-010",
+          "japanese": "私はコーヒーを飲みます",
+          "words": [
+            "I",
+            "drink",
+            "coffee"
+          ],
+          "correctOrder": "I drink coffee",
+          "difficulty": "beginner",
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u2-011",
-          "japanese": "The catは学生です",
+          "japanese": "彼はサッカーをしません",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "does",
+            "not",
+            "play",
+            "soccer"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He does not play soccer",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 6
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u2-012",
-          "japanese": "Tomは学生です",
+          "japanese": "彼女はピアノを弾きません",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "does",
+            "not",
+            "play",
+            "the",
+            "piano"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She does not play the piano",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u2-013",
-          "japanese": "Maryは学生です",
+          "japanese": "私は朝に走りません",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "do",
+            "not",
+            "run",
+            "in",
+            "the",
+            "morning"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I do not run in the morning",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 7
         },
         {
           "id": "so-g1-u2-014",
-          "japanese": "Iは学生です",
+          "japanese": "彼らは英語を勉強しません",
           "words": [
-            "I",
+            "They",
+            "do",
+            "not",
             "study",
-            "English",
-            "every",
-            "day"
+            "English"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They do not study English",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
           "wordCount": 5
         },
         {
           "id": "so-g1-u2-015",
-          "japanese": "Youは学生です",
+          "japanese": "あなたは音楽を聴きません",
           "words": [
             "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "do",
+            "not",
+            "listen",
+            "to",
+            "music"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "You do not listen to music",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u2-016",
-          "japanese": "Heは学生です",
+          "japanese": "彼は水を飲みません",
           "words": [
             "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "does",
+            "not",
+            "drink",
+            "water"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He does not drink water",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
           "wordCount": 5
         },
         {
           "id": "so-g1-u2-017",
-          "japanese": "Sheは学生です",
+          "japanese": "私は本を読みます",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "read",
+            "books"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I read books",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u2-018",
-          "japanese": "Itは学生です",
+          "japanese": "彼女は本を読みます",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "reads",
+            "books"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She reads books",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u2-019",
-          "japanese": "Weは学生です",
+          "japanese": "彼は学校に歩いて行きます",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "walks",
+            "to",
+            "school"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He walks to school",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u2-020",
-          "japanese": "Theyは学生です",
+          "japanese": "私たちはここに住んでいます",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "live",
+            "here"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We live here",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三人称単数現在形｜he/she/itでの-s/-es",
-          "wordCount": 5
+          "explanation": "have/has と一般動詞現在形（肯定・否定）の基本語順。",
+          "hint": "否定: do/does + not + 動詞原形",
+          "grammarPoint": "一般動詞の現在",
+          "wordCount": 3
         }
       ]
     },

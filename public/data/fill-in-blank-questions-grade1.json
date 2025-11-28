@@ -8630,303 +8630,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u2-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私はノートを持っています",
+          "sentence": "I ____ a notebook.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "have",
+            "has",
+            "am",
+            "are"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "彼は兄がいます",
+          "sentence": "He ____ a brother.",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼女は新しいカバンを持っています",
+          "sentence": "She ____ a new bag.",
           "choices": [
+            "have",
+            "has",
             "is",
-            "my",
-            "I",
-            "me"
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "私たちはたくさんの宿題があります",
+          "sentence": "We ____ a lot of homework.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "has",
+            "am",
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼らは時間がありません",
+          "sentence": "They ____ no time.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "has",
+            "am",
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "トムはギターを弾きます",
+          "sentence": "Tom ____ the guitar.",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "play",
+            "plays",
+            "do",
+            "does"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "メアリーは毎日英語を勉強します",
+          "sentence": "Mary ____ English every day.",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "study",
+            "studies",
+            "do",
+            "does"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "studies",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "japanese": "犬は速く走ります",
+          "sentence": "The dog ____ fast.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "run",
+            "runs",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "japanese": "あなたはたいていテレビを見ます",
+          "sentence": "You usually ____ TV.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "watch",
+            "watches",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "watch",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "japanese": "私はコーヒーを飲みます",
+          "sentence": "I ____ coffee.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "drink",
+            "drinks",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "drink",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "japanese": "彼はサッカーをしません",
+          "sentence": "He ____ not ____ soccer.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "does",
+            "play",
+            "has",
+            "have"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "does,play",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
+          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
         },
         {
           "id": "fb-g1-u2-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "japanese": "彼女はピアノを弾きません",
+          "sentence": "She ____ not ____ the piano.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "does",
+            "play",
+            "has",
+            "have"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "does,play",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
+          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
         },
         {
           "id": "fb-g1-u2-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "japanese": "私は朝に走りません",
+          "sentence": "I ____ not ____ in the morning.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "do",
+            "run",
+            "has",
+            "have"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "do,run",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
+          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
         },
         {
           "id": "fb-g1-u2-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "彼らは英語を勉強しません",
+          "sentence": "They ____ not ____ English.",
           "choices": [
-            "am",
-            "my",
-            "I",
-            "me"
+            "do",
+            "study",
+            "has",
+            "have"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "do,study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
+          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
         },
         {
           "id": "fb-g1-u2-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "あなたは音楽を聴きません",
+          "sentence": "You ____ not ____ to music.",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "do",
+            "listen",
+            "has",
+            "have"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "do,listen",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
+          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
         },
         {
           "id": "fb-g1-u2-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼は水を飲みません",
+          "sentence": "He ____ not ____ water.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "does",
+            "drink",
+            "has",
+            "have"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "does,drink",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
+          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
         },
         {
           "id": "fb-g1-u2-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "私は本を読みます",
+          "sentence": "I ____ books.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "read",
+            "reads",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "read",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼女は本を読みます",
+          "sentence": "She ____ books.",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "read",
+            "reads",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "reads",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼は学校に歩いて行きます",
+          "sentence": "He ____ to school.",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "walk",
+            "walks",
+            "do",
+            "does"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "walks",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "私たちはここに住んでいます",
+          "sentence": "We ____ here.",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "live",
+            "lives",
+            "do",
+            "does"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "live",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         }
       ],
       "sentenceOrdering": [

@@ -6868,323 +6868,323 @@
       "verbForm": [
         {
           "id": "vf-g1-u2-001",
-          "japanese": "私は毎日勉強する",
-          "sentence": "I ____ English every day.",
-          "verb": "study",
+          "japanese": "私は本を持っています",
+          "sentence": "I ____ a book.",
+          "verb": "present-simple",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "study",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-002",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
-          "verb": "play",
+          "japanese": "あなたは自転車を持っています",
+          "sentence": "You ____ a bike.",
+          "verb": "present-simple",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "play",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-003",
-          "japanese": "私は時々働く",
-          "sentence": "I ____ hard sometimes.",
-          "verb": "work",
+          "japanese": "彼は猫を飼っています",
+          "sentence": "He ____ a cat.",
+          "verb": "present-simple",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "work",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-004",
-          "japanese": "あなたは今手伝う",
-          "sentence": "You ____ my mother now.",
-          "verb": "help",
+          "japanese": "彼女はピアノがあります",
+          "sentence": "She ____ a piano.",
+          "verb": "present-simple",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "help",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-005",
-          "japanese": "私はいつも好む",
-          "sentence": "I ____ music always.",
-          "verb": "like",
+          "japanese": "それは4つの車輪があります",
+          "sentence": "It ____ four wheels.",
+          "verb": "present-simple",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "like",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-006",
-          "japanese": "あなたはよく愛する",
-          "sentence": "You ____ animals often.",
-          "verb": "love",
+          "japanese": "私たちは時間があります",
+          "sentence": "We ____ time.",
+          "verb": "present-simple",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "love",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-007",
-          "japanese": "私は毎日始める",
-          "sentence": "I ____ homework every day.",
-          "verb": "start",
+          "japanese": "彼らは多くの友達がいます",
+          "sentence": "They ____ many friends.",
+          "verb": "present-simple",
           "choices": [
-            "start",
-            "starts",
-            "started",
-            "starting"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "start",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstartを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-008",
-          "japanese": "あなたは普段終える",
-          "sentence": "You ____ lunch usually.",
-          "verb": "finish",
+          "japanese": "私の兄はカメラを持っています",
+          "sentence": "My brother ____ a camera.",
+          "verb": "present-simple",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "finish",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-009",
-          "japanese": "私は時々する",
-          "sentence": "I ____ soccer sometimes.",
-          "verb": "play",
+          "japanese": "先生は授業があります",
+          "sentence": "The teacher ____ a class.",
+          "verb": "present-simple",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "play",
+          "correctAnswer": "has",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-010",
-          "japanese": "あなたは今訪れる",
-          "sentence": "You ____ Tokyo now.",
-          "verb": "visit",
+          "japanese": "子どもたちはおもちゃを持っています",
+          "sentence": "The children ____ toys.",
+          "verb": "present-simple",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "have",
+            "has",
+            "is",
+            "are"
           ],
-          "correctAnswer": "visit",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-011",
-          "japanese": "私はいつも手伝う",
-          "sentence": "I ____ my mother always.",
-          "verb": "help",
+          "japanese": "彼は毎朝走ります",
+          "sentence": "He ____ every morning.",
+          "verb": "present-simple",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "run",
+            "runs",
+            "do",
+            "does"
           ],
-          "correctAnswer": "help",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-012",
-          "japanese": "あなたはよく欲しい",
-          "sentence": "You ____ a dog often.",
-          "verb": "want",
+          "japanese": "彼女はよく料理します",
+          "sentence": "She ____ often.",
+          "verb": "present-simple",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "cook",
+            "cooks",
+            "do",
+            "does"
           ],
-          "correctAnswer": "want",
+          "correctAnswer": "cooks",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-013",
-          "japanese": "私は毎日愛する",
-          "sentence": "I ____ animals every day.",
-          "verb": "love",
+          "japanese": "トムは英語を勉強します",
+          "sentence": "Tom ____ English.",
+          "verb": "present-simple",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "study",
+            "studies",
+            "do",
+            "does"
           ],
-          "correctAnswer": "love",
+          "correctAnswer": "studies",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-014",
-          "japanese": "あなたは普段住む",
-          "sentence": "You ____ in Tokyo usually.",
-          "verb": "live",
+          "japanese": "メアリーはピアノを弾きます",
+          "sentence": "Mary ____ the piano.",
+          "verb": "present-simple",
           "choices": [
-            "live",
-            "lives",
-            "liveed",
-            "liveing"
+            "play",
+            "plays",
+            "do",
+            "does"
           ],
-          "correctAnswer": "live",
+          "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままliveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-015",
-          "japanese": "私は時々終える",
-          "sentence": "I ____ lunch sometimes.",
-          "verb": "finish",
+          "japanese": "犬は速く走ります",
+          "sentence": "The dog ____ fast.",
+          "verb": "present-simple",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "run",
+            "runs",
+            "do",
+            "does"
           ],
-          "correctAnswer": "finish",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-016",
-          "japanese": "あなたは今練習する",
-          "sentence": "You ____ piano now.",
-          "verb": "practice",
+          "japanese": "私たちはサッカーをします",
+          "sentence": "We ____ soccer.",
+          "verb": "present-simple",
           "choices": [
-            "practice",
-            "practices",
-            "practiceed",
-            "practiceing"
+            "play",
+            "plays",
+            "do",
+            "does"
           ],
-          "correctAnswer": "practice",
+          "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままpracticeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-017",
-          "japanese": "私はいつも訪れる",
-          "sentence": "I ____ Tokyo always.",
-          "verb": "visit",
+          "japanese": "彼らはここに住んでいます",
+          "sentence": "They ____ here.",
+          "verb": "present-simple",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "live",
+            "lives",
+            "do",
+            "does"
           ],
-          "correctAnswer": "visit",
+          "correctAnswer": "live",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-018",
-          "japanese": "あなたはよく使う",
-          "sentence": "You ____ a computer often.",
-          "verb": "use",
+          "japanese": "私は水を飲みます",
+          "sentence": "I ____ water.",
+          "verb": "present-simple",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "drink",
+            "drinks",
+            "do",
+            "does"
           ],
-          "correctAnswer": "use",
+          "correctAnswer": "drink",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-019",
-          "japanese": "私は毎日欲しい",
-          "sentence": "I ____ a dog every day.",
-          "verb": "want",
+          "japanese": "あなたはよく音楽を聴きます",
+          "sentence": "You ____ to music often.",
+          "verb": "present-simple",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "listen",
+            "listens",
+            "do",
+            "does"
           ],
-          "correctAnswer": "want",
+          "correctAnswer": "listen",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-020",
-          "japanese": "あなたは普段必要とする",
-          "sentence": "You ____ help usually.",
-          "verb": "need",
+          "japanese": "私は宿題をします",
+          "sentence": "I ____ my homework.",
+          "verb": "present-simple",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "do",
+            "does",
+            "play",
+            "plays"
           ],
-          "correctAnswer": "need",
+          "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままneedを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         }
       ],
       "fillInBlank": [
