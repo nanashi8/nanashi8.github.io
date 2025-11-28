@@ -3438,8 +3438,8 @@
       "verbForm": [
         {
           "id": "vf-g1-u1-001",
-          "japanese": "私は学生です",
-          "sentence": "I ____ a student.",
+          "japanese": "私は10歳です",
+          "sentence": "I ____ ten years old.",
           "verb": "be",
           "choices": [
             "am",
@@ -3449,13 +3449,13 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ a student.",
+          "japanese": "あなたは元気です",
+          "sentence": "You ____ fine.",
           "verb": "be",
           "choices": [
             "am",
@@ -3465,13 +3465,13 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-003",
-          "japanese": "私は学生です",
-          "sentence": "He ____ a student.",
+          "japanese": "彼は背が高いです",
+          "sentence": "He ____ tall.",
           "verb": "be",
           "choices": [
             "am",
@@ -3481,13 +3481,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ a student.",
+          "japanese": "彼女は親切です",
+          "sentence": "She ____ kind.",
           "verb": "be",
           "choices": [
             "am",
@@ -3497,13 +3497,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-005",
-          "japanese": "私は学生です",
-          "sentence": "It ____ a student.",
+          "japanese": "それは青いです",
+          "sentence": "It ____ blue.",
           "verb": "be",
           "choices": [
             "am",
@@ -3513,13 +3513,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ a student.",
+          "japanese": "私たちは同級生です",
+          "sentence": "We ____ classmates.",
           "verb": "be",
           "choices": [
             "am",
@@ -3529,13 +3529,13 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-007",
-          "japanese": "私は学生です",
-          "sentence": "They ____ a student.",
+          "japanese": "彼らは日本人です",
+          "sentence": "They ____ Japanese.",
           "verb": "be",
           "choices": [
             "am",
@@ -3545,13 +3545,13 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ a student.",
+          "japanese": "これは新しい本です",
+          "sentence": "This ____ a new book.",
           "verb": "be",
           "choices": [
             "am",
@@ -3561,13 +3561,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-009",
-          "japanese": "私は学生です",
-          "sentence": "My sister ____ a student.",
+          "japanese": "それらは私の靴です",
+          "sentence": "Those ____ my shoes.",
           "verb": "be",
           "choices": [
             "am",
@@ -3575,15 +3575,15 @@
             "are",
             "be"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ a student.",
+          "japanese": "トムは忙しいです",
+          "sentence": "Tom ____ busy.",
           "verb": "be",
           "choices": [
             "am",
@@ -3593,13 +3593,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-011",
-          "japanese": "私は学生です",
-          "sentence": "The cat ____ a student.",
+          "japanese": "メアリーは歌手です",
+          "sentence": "Mary ____ a singer.",
           "verb": "be",
           "choices": [
             "am",
@@ -3609,13 +3609,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ a student.",
+          "japanese": "私の父は医者です",
+          "sentence": "My father ____ a doctor.",
           "verb": "be",
           "choices": [
             "am",
@@ -3625,13 +3625,13 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-013",
-          "japanese": "私は学生です",
-          "sentence": "Mary ____ a student.",
+          "japanese": "私の友達はここにいます",
+          "sentence": "My friend ____ here.",
           "verb": "be",
           "choices": [
             "am",
@@ -3641,13 +3641,109 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u1-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ a student.",
+          "japanese": "彼の兄は中学生です",
+          "sentence": "His brother ____ a junior high school student.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u1-015",
+          "japanese": "あなたたちは準備ができています",
+          "sentence": "You ____ ready.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u1-016",
+          "japanese": "その猫はかわいいです",
+          "sentence": "The cat ____ cute.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u1-017",
+          "japanese": "その犬は大きいです",
+          "sentence": "The dog ____ big.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u1-018",
+          "japanese": "机は木製です",
+          "sentence": "The desk ____ wooden.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u1-019",
+          "japanese": "これは難しいです",
+          "sentence": "This ____ difficult.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u1-020",
+          "japanese": "私は学校にいます",
+          "sentence": "I ____ at school.",
           "verb": "be",
           "choices": [
             "am",
@@ -3657,104 +3753,8 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
-        },
-        {
-          "id": "vf-g1-u1-015",
-          "japanese": "私は学生です",
-          "sentence": "You ____ a student.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
-        },
-        {
-          "id": "vf-g1-u1-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ a student.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
-        },
-        {
-          "id": "vf-g1-u1-017",
-          "japanese": "私は学生です",
-          "sentence": "She ____ a student.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
-        },
-        {
-          "id": "vf-g1-u1-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ a student.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
-        },
-        {
-          "id": "vf-g1-u1-019",
-          "japanese": "私は学生です",
-          "sentence": "We ____ a student.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
-        },
-        {
-          "id": "vf-g1-u1-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ a student.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         }
       ],
       "fillInBlank": [
