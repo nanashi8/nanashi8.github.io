@@ -12140,303 +12140,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u3-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "あなたは学生ですか",
+          "sentence": "____ you a student?",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "Do",
+            "Does",
+            "Are",
+            "Is"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "彼は先生ですか",
+          "sentence": "____ he a teacher?",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "Do",
+            "Does",
+            "Are",
+            "Is"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼女は忙しいですか",
+          "sentence": "____ she busy?",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "Do",
+            "Does",
+            "Are",
+            "Is"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼らは日本出身ですか",
+          "sentence": "____ they from Japan?",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "Do",
+            "Does",
+            "Are",
+            "Is"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "あなたは英語を勉強しますか",
+          "sentence": "Do you ____ English?",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "studies",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼は音楽が好きですか",
+          "sentence": "Does he ____ music?",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "like",
+            "likes",
+            "do",
+            "does"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "like",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼女はテニスをしますか",
+          "sentence": "Does she ____ tennis?",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "play",
+            "plaies",
+            "do",
+            "does"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "japanese": "彼らは毎日走りますか",
+          "sentence": "Do they ____ every day?",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "run",
+            "runs",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "run",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "japanese": "これは何ですか",
+          "sentence": "What ____ this?",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "are",
+            "do",
+            "does"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "japanese": "あれは誰ですか",
+          "sentence": "Who ____ that?",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "are",
+            "do",
+            "does"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "japanese": "どこに住んでいますか",
+          "sentence": "Where ____ you live?",
           "choices": [
+            "do",
+            "does",
             "is",
-            "my",
-            "I",
-            "me"
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "japanese": "いつ勉強しますか",
+          "sentence": "When ____ you study?",
           "choices": [
+            "do",
+            "does",
             "is",
-            "my",
-            "I",
-            "me"
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "japanese": "なぜ走りますか",
+          "sentence": "Why ____ he run?",
           "choices": [
+            "do",
+            "does",
             "is",
-            "my",
-            "I",
-            "me"
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "どのように料理しますか",
+          "sentence": "How ____ she cook?",
           "choices": [
-            "am",
-            "my",
-            "I",
-            "me"
+            "do",
+            "does",
+            "is",
+            "are"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "何色が好きですか",
+          "sentence": "What color ____ you like?",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "do",
+            "does",
+            "is",
+            "are"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "誰がピアノを弾きますか",
+          "sentence": "Who ____ the piano?",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "play",
+            "plays",
+            "do",
+            "does"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼は何をしますか",
+          "sentence": "What ____ he do?",
           "choices": [
+            "do",
+            "does",
             "is",
-            "my",
-            "I",
-            "me"
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼女はどこで働きますか",
+          "sentence": "Where ____ she work?",
           "choices": [
+            "do",
+            "does",
             "is",
-            "my",
-            "I",
-            "me"
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼らはいつ来ますか",
+          "sentence": "When ____ they come?",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "do",
+            "does",
+            "is",
+            "are"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
           "id": "fb-g1-u3-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "あなたは何が欲しいですか",
+          "sentence": "What ____ you want?",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "do",
+            "does",
+            "is",
+            "are"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         }
       ],
       "sentenceOrdering": [
@@ -15649,304 +15649,324 @@
       ],
       "fillInBlank": [
         {
-          "id": "fb-g1-u4-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "vf-g1-u4-001",
+          "japanese": "これは私の本です",
+          "sentence": "This is ____ book.",
+          "verb": "pronoun",
           "choices": [
             "my",
-            "I",
             "me",
+            "I",
             "mine"
           ],
           "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "id": "vf-g1-u4-002",
+          "japanese": "彼は私の友達です",
+          "sentence": "He is ____ friend.",
+          "verb": "pronoun",
           "choices": [
-            "are",
             "my",
+            "me",
             "I",
-            "me"
+            "mine"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "id": "vf-g1-u4-003",
+          "japanese": "私は彼を知っています",
+          "sentence": "I know ____.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "him",
+            "his",
+            "he",
+            "he's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "him",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "id": "vf-g1-u4-004",
+          "japanese": "彼女は彼らを見ます",
+          "sentence": "She sees ____.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "them",
+            "their",
+            "they",
+            "theirs"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "id": "vf-g1-u4-005",
+          "japanese": "これは彼の鞄です",
+          "sentence": "This is ____ bag.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "his",
+            "him",
+            "he",
+            "he's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "his",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "id": "vf-g1-u4-006",
+          "japanese": "それは彼女のペンです",
+          "sentence": "That is ____ pen.",
+          "verb": "pronoun",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "her",
+            "she",
+            "hers",
+            "she's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "her",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "id": "vf-g1-u4-007",
+          "japanese": "彼は彼女を助けます",
+          "sentence": "He helps ____.",
+          "verb": "pronoun",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "her",
+            "she",
+            "hers",
+            "she's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "her",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "id": "vf-g1-u4-008",
+          "japanese": "私たちは彼らと遊びます",
+          "sentence": "We play with ____.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "them",
+            "their",
+            "they",
+            "theirs"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "id": "vf-g1-u4-009",
+          "japanese": "これはあなたのノートですか",
+          "sentence": "Is this ____ notebook?",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "your",
+            "you",
+            "yours",
+            "you're"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "your",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "id": "vf-g1-u4-010",
+          "japanese": "彼は私たちを見ます",
+          "sentence": "He sees ____.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "us",
+            "our",
+            "we",
+            "ours"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "us",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "id": "vf-g1-u4-011",
+          "japanese": "彼女は私に電話します",
+          "sentence": "She calls ____.",
+          "verb": "pronoun",
           "choices": [
-            "is",
+            "me",
             "my",
             "I",
-            "me"
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "me",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "id": "vf-g1-u4-012",
+          "japanese": "彼らは私たちの先生です",
+          "sentence": "They are ____ teachers.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "our",
+            "us",
+            "we",
+            "ours"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "our",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "id": "vf-g1-u4-013",
+          "japanese": "私は彼の名前を知っています",
+          "sentence": "I know ____ name.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "his",
+            "him",
+            "he",
+            "he's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "his",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "id": "vf-g1-u4-014",
+          "japanese": "これは私たちの学校です",
+          "sentence": "This is ____ school.",
+          "verb": "pronoun",
           "choices": [
-            "am",
-            "my",
-            "I",
-            "me"
+            "our",
+            "us",
+            "we",
+            "ours"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "our",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "id": "vf-g1-u4-015",
+          "japanese": "彼女は彼らの母です",
+          "sentence": "She is ____ mother.",
+          "verb": "pronoun",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "their",
+            "them",
+            "they",
+            "theirs"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "their",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "id": "vf-g1-u4-016",
+          "japanese": "私たちは彼女を助けます",
+          "sentence": "We help ____.",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "her",
+            "she",
+            "hers",
+            "she's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "her",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "id": "vf-g1-u4-017",
+          "japanese": "あなたは彼らを知っていますか",
+          "sentence": "Do you know ____?",
+          "verb": "pronoun",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "them",
+            "their",
+            "they",
+            "theirs"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "id": "vf-g1-u4-018",
+          "japanese": "これは私の犬です",
+          "sentence": "This is ____ dog.",
+          "verb": "pronoun",
           "choices": [
-            "is",
             "my",
+            "me",
             "I",
-            "me"
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "id": "vf-g1-u4-019",
+          "japanese": "彼は彼女のノートを持っています",
+          "sentence": "He has ____ notebook.",
+          "verb": "pronoun",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "her",
+            "she",
+            "hers",
+            "she's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "her",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "fb-g1-u4-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "id": "vf-g1-u4-020",
+          "japanese": "私たちは彼を見ます",
+          "sentence": "We see ____.",
+          "verb": "pronoun",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "him",
+            "his",
+            "he",
+            "he's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "him",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "hint": "主語の前→所有格、動詞の後→目的格"
         }
       ],
       "sentenceOrdering": [
@@ -19159,304 +19179,324 @@
       ],
       "fillInBlank": [
         {
-          "id": "fb-g1-u5-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "vf-g1-u5-001",
+          "japanese": "私は3冊の本を持っています",
+          "sentence": "I have three ____.",
+          "verb": "plural",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "book",
+            "books",
+            "bookes",
+            "book's"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "id": "vf-g1-u5-002",
+          "japanese": "彼女は2匹の猫を飼っています",
+          "sentence": "She has two ____.",
+          "verb": "plural",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "cat",
+            "cats",
+            "cates",
+            "cat's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "cats",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "id": "vf-g1-u5-003",
+          "japanese": "私たちは多くの友達がいます",
+          "sentence": "We have many ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "friend",
+            "friends",
+            "friendes",
+            "friend's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "friends",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "id": "vf-g1-u5-004",
+          "japanese": "彼は5つのリンゴを持っています",
+          "sentence": "He has five ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "appl",
+            "apples",
+            "apples",
+            "appl's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "apples",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "id": "vf-g1-u5-005",
+          "japanese": "彼らは4台の車を持っています",
+          "sentence": "They have four ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "car",
+            "cars",
+            "cares",
+            "car's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "cars",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "id": "vf-g1-u5-006",
+          "japanese": "私は2本のペンを持っています",
+          "sentence": "I have two ____.",
+          "verb": "plural",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "pen",
+            "pens",
+            "penes",
+            "pen's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "pens",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "id": "vf-g1-u5-007",
+          "japanese": "彼女は3つの箱を持っています",
+          "sentence": "She has three ____.",
+          "verb": "plural",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "box",
+            "boxes",
+            "boxes",
+            "box's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "boxes",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "id": "vf-g1-u5-008",
+          "japanese": "私たちは多くの生徒がいます",
+          "sentence": "We have many ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "student",
+            "students",
+            "studentes",
+            "student's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "students",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "id": "vf-g1-u5-009",
+          "japanese": "彼は6つのオレンジを持っています",
+          "sentence": "He has six ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "orang",
+            "oranges",
+            "oranges",
+            "orang's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "oranges",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "id": "vf-g1-u5-010",
+          "japanese": "彼らは2人の子どもがいます",
+          "sentence": "They have two ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "child",
+            "children",
+            "childes",
+            "child's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "children",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "id": "vf-g1-u5-011",
+          "japanese": "私は3人の兄弟がいます",
+          "sentence": "I have three ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "brother",
+            "brothers",
+            "brotheres",
+            "brother's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "brothers",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "id": "vf-g1-u5-012",
+          "japanese": "彼女は4つのドレスを持っています",
+          "sentence": "She has four ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "dress",
+            "dresses",
+            "dresses",
+            "dress's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "dresses",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "id": "vf-g1-u5-013",
+          "japanese": "私たちは多くの先生がいます",
+          "sentence": "We have many ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "teacher",
+            "teachers",
+            "teacheres",
+            "teacher's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "teachers",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "id": "vf-g1-u5-014",
+          "japanese": "彼は2匹の犬を飼っています",
+          "sentence": "He has two ____.",
+          "verb": "plural",
           "choices": [
-            "am",
-            "my",
-            "I",
-            "me"
+            "dog",
+            "dogs",
+            "doges",
+            "dog's"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "dogs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "id": "vf-g1-u5-015",
+          "japanese": "彼らは3つのクラスがあります",
+          "sentence": "They have three ____.",
+          "verb": "plural",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "class",
+            "classes",
+            "classes",
+            "class's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "classes",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "id": "vf-g1-u5-016",
+          "japanese": "私は5つの時計を持っています",
+          "sentence": "I have five ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "watch",
+            "watches",
+            "watches",
+            "watch's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "watches",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "id": "vf-g1-u5-017",
+          "japanese": "彼女は2つの都市を訪れました",
+          "sentence": "She visited two ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "city",
+            "cities",
+            "cityes",
+            "city's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "cities",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "id": "vf-g1-u5-018",
+          "japanese": "私たちは多くの本を読みます",
+          "sentence": "We read many ____.",
+          "verb": "plural",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "book",
+            "books",
+            "bookes",
+            "book's"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "id": "vf-g1-u5-019",
+          "japanese": "彼は3人の女性を知っています",
+          "sentence": "He knows three ____.",
+          "verb": "plural",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "woman",
+            "women",
+            "womanes",
+            "woman's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "women",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         },
         {
-          "id": "fb-g1-u5-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "id": "vf-g1-u5-020",
+          "japanese": "彼らは2人の男性を見ます",
+          "sentence": "They see two ____.",
+          "verb": "plural",
           "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
+            "man",
+            "men",
+            "manes",
+            "man's"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "men",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "hint": "2つ以上→複数形"
         }
       ],
       "sentenceOrdering": [
@@ -22670,303 +22710,323 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u6-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は学生です（現在進行形）",
+          "sentence": "He ____ a student.",
+          "verb": "現在進行形",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "is",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "私は本を持っています（現在進行形）",
+          "sentence": "I ____ a book.",
+          "verb": "現在進行形",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼女は走ります（現在進行形）",
+          "sentence": "She ____.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼らは勉強します（現在進行形）",
+          "sentence": "They ____.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼は学生です（現在進行形）",
+          "sentence": "He ____ a student.",
+          "verb": "現在進行形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "私は本を持っています（現在進行形）",
+          "sentence": "I ____ a book.",
+          "verb": "現在進行形",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼女は走ります（現在進行形）",
+          "sentence": "She ____.",
+          "verb": "現在進行形",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "japanese": "彼らは勉強します（現在進行形）",
+          "sentence": "They ____.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "japanese": "彼は学生です（現在進行形）",
+          "sentence": "He ____ a student.",
+          "verb": "現在進行形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "japanese": "私は本を持っています（現在進行形）",
+          "sentence": "I ____ a book.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "japanese": "彼女は走ります（現在進行形）",
+          "sentence": "She ____.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "japanese": "彼らは勉強します（現在進行形）",
+          "sentence": "They ____.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "japanese": "彼は学生です（現在進行形）",
+          "sentence": "He ____ a student.",
+          "verb": "現在進行形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "私は本を持っています（現在進行形）",
+          "sentence": "I ____ a book.",
+          "verb": "現在進行形",
           "choices": [
+            "have",
             "am",
-            "my",
-            "I",
-            "me"
+            "are",
+            "do"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "彼女は走ります（現在進行形）",
+          "sentence": "She ____.",
+          "verb": "現在進行形",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼らは勉強します（現在進行形）",
+          "sentence": "They ____.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼は学生です（現在進行形）",
+          "sentence": "He ____ a student.",
+          "verb": "現在進行形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "私は本を持っています（現在進行形）",
+          "sentence": "I ____ a book.",
+          "verb": "現在進行形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼女は走ります（現在進行形）",
+          "sentence": "She ____.",
+          "verb": "現在進行形",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         },
         {
           "id": "fb-g1-u6-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼らは勉強します（現在進行形）",
+          "sentence": "They ____.",
+          "verb": "現在進行形",
           "choices": [
+            "study",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "現在進行形の練習問題。",
+          "hint": "現在進行形"
         }
       ],
       "sentenceOrdering": [
@@ -26180,303 +26240,323 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u7-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は学生です（助動詞can）",
+          "sentence": "He ____ a student.",
+          "verb": "助動詞can",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "is",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "私は本を持っています（助動詞can）",
+          "sentence": "I ____ a book.",
+          "verb": "助動詞can",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼女は走ります（助動詞can）",
+          "sentence": "She ____.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼らは勉強します（助動詞can）",
+          "sentence": "They ____.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼は学生です（助動詞can）",
+          "sentence": "He ____ a student.",
+          "verb": "助動詞can",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "私は本を持っています（助動詞can）",
+          "sentence": "I ____ a book.",
+          "verb": "助動詞can",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼女は走ります（助動詞can）",
+          "sentence": "She ____.",
+          "verb": "助動詞can",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "japanese": "彼らは勉強します（助動詞can）",
+          "sentence": "They ____.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "japanese": "彼は学生です（助動詞can）",
+          "sentence": "He ____ a student.",
+          "verb": "助動詞can",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "japanese": "私は本を持っています（助動詞can）",
+          "sentence": "I ____ a book.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "japanese": "彼女は走ります（助動詞can）",
+          "sentence": "She ____.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "japanese": "彼らは勉強します（助動詞can）",
+          "sentence": "They ____.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "japanese": "彼は学生です（助動詞can）",
+          "sentence": "He ____ a student.",
+          "verb": "助動詞can",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "私は本を持っています（助動詞can）",
+          "sentence": "I ____ a book.",
+          "verb": "助動詞can",
           "choices": [
+            "have",
             "am",
-            "my",
-            "I",
-            "me"
+            "are",
+            "do"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "彼女は走ります（助動詞can）",
+          "sentence": "She ____.",
+          "verb": "助動詞can",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼らは勉強します（助動詞can）",
+          "sentence": "They ____.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼は学生です（助動詞can）",
+          "sentence": "He ____ a student.",
+          "verb": "助動詞can",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "私は本を持っています（助動詞can）",
+          "sentence": "I ____ a book.",
+          "verb": "助動詞can",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼女は走ります（助動詞can）",
+          "sentence": "She ____.",
+          "verb": "助動詞can",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         },
         {
           "id": "fb-g1-u7-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼らは勉強します（助動詞can）",
+          "sentence": "They ____.",
+          "verb": "助動詞can",
           "choices": [
+            "study",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "助動詞canの練習問題。",
+          "hint": "助動詞can"
         }
       ],
       "sentenceOrdering": [
@@ -29690,303 +29770,323 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u8-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は学生です（過去形）",
+          "sentence": "He ____ a student.",
+          "verb": "過去形",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "is",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "私は本を持っています（過去形）",
+          "sentence": "I ____ a book.",
+          "verb": "過去形",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼女は走ります（過去形）",
+          "sentence": "She ____.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼らは勉強します（過去形）",
+          "sentence": "They ____.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼は学生です（過去形）",
+          "sentence": "He ____ a student.",
+          "verb": "過去形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "私は本を持っています（過去形）",
+          "sentence": "I ____ a book.",
+          "verb": "過去形",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼女は走ります（過去形）",
+          "sentence": "She ____.",
+          "verb": "過去形",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "japanese": "彼らは勉強します（過去形）",
+          "sentence": "They ____.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "japanese": "彼は学生です（過去形）",
+          "sentence": "He ____ a student.",
+          "verb": "過去形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "japanese": "私は本を持っています（過去形）",
+          "sentence": "I ____ a book.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "japanese": "彼女は走ります（過去形）",
+          "sentence": "She ____.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "japanese": "彼らは勉強します（過去形）",
+          "sentence": "They ____.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "japanese": "彼は学生です（過去形）",
+          "sentence": "He ____ a student.",
+          "verb": "過去形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "私は本を持っています（過去形）",
+          "sentence": "I ____ a book.",
+          "verb": "過去形",
           "choices": [
+            "have",
             "am",
-            "my",
-            "I",
-            "me"
+            "are",
+            "do"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "彼女は走ります（過去形）",
+          "sentence": "She ____.",
+          "verb": "過去形",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼らは勉強します（過去形）",
+          "sentence": "They ____.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼は学生です（過去形）",
+          "sentence": "He ____ a student.",
+          "verb": "過去形",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "私は本を持っています（過去形）",
+          "sentence": "I ____ a book.",
+          "verb": "過去形",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼女は走ります（過去形）",
+          "sentence": "She ____.",
+          "verb": "過去形",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         },
         {
           "id": "fb-g1-u8-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼らは勉強します（過去形）",
+          "sentence": "They ____.",
+          "verb": "過去形",
           "choices": [
+            "study",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "過去形の練習問題。",
+          "hint": "過去形"
         }
       ],
       "sentenceOrdering": [
@@ -33200,303 +33300,323 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u9-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は学生です（未来表現）",
+          "sentence": "He ____ a student.",
+          "verb": "未来表現",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "is",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "私は本を持っています（未来表現）",
+          "sentence": "I ____ a book.",
+          "verb": "未来表現",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼女は走ります（未来表現）",
+          "sentence": "She ____.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼らは勉強します（未来表現）",
+          "sentence": "They ____.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼は学生です（未来表現）",
+          "sentence": "He ____ a student.",
+          "verb": "未来表現",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "私は本を持っています（未来表現）",
+          "sentence": "I ____ a book.",
+          "verb": "未来表現",
           "choices": [
+            "have",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼女は走ります（未来表現）",
+          "sentence": "She ____.",
+          "verb": "未来表現",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
+          "japanese": "彼らは勉強します（未来表現）",
+          "sentence": "They ____.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
+          "japanese": "彼は学生です（未来表現）",
+          "sentence": "He ____ a student.",
+          "verb": "未来表現",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
+          "japanese": "私は本を持っています（未来表現）",
+          "sentence": "I ____ a book.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
+          "japanese": "彼女は走ります（未来表現）",
+          "sentence": "She ____.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "runs",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
+          "japanese": "彼らは勉強します（未来表現）",
+          "sentence": "They ____.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
+          "japanese": "彼は学生です（未来表現）",
+          "sentence": "He ____ a student.",
+          "verb": "未来表現",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "私は本を持っています（未来表現）",
+          "sentence": "I ____ a book.",
+          "verb": "未来表現",
           "choices": [
+            "have",
             "am",
-            "my",
-            "I",
-            "me"
+            "are",
+            "do"
           ],
-          "correctAnswer": "am",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "彼女は走ります（未来表現）",
+          "sentence": "She ____.",
+          "verb": "未来表現",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "彼らは勉強します（未来表現）",
+          "sentence": "They ____.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "study",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "彼は学生です（未来表現）",
+          "sentence": "He ____ a student.",
+          "verb": "未来表現",
           "choices": [
             "is",
-            "my",
-            "I",
-            "me"
+            "am",
+            "are",
+            "do"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "私は本を持っています（未来表現）",
+          "sentence": "I ____ a book.",
+          "verb": "未来表現",
           "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
+            "have",
+            "am",
+            "are",
+            "do"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "have",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "彼女は走ります（未来表現）",
+          "sentence": "She ____.",
+          "verb": "未来表現",
           "choices": [
+            "runs",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         },
         {
           "id": "fb-g1-u9-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼らは勉強します（未来表現）",
+          "sentence": "They ____.",
+          "verb": "未来表現",
           "choices": [
+            "study",
+            "am",
             "are",
-            "my",
-            "I",
-            "me"
+            "do"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "未来表現の練習問題。",
+          "hint": "未来表現"
         }
       ],
       "sentenceOrdering": [

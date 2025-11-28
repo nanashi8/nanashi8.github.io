@@ -13441,347 +13441,322 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u3-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あなたは学生ですか",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Are",
+            "you",
+            "a",
+            "student"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Are you a student",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-002",
-          "japanese": "Youは学生です",
+          "japanese": "彼は先生ですか",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Is",
+            "he",
+            "a",
+            "teacher"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Is he a teacher",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-003",
-          "japanese": "Heは学生です",
+          "japanese": "彼女は忙しいですか",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Is",
+            "she",
+            "busy"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Is she busy",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u3-004",
-          "japanese": "Sheは学生です",
+          "japanese": "彼らは日本出身ですか",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Are",
+            "they",
+            "from",
+            "Japan"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Are they from Japan",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-005",
-          "japanese": "Itは学生です",
+          "japanese": "あなたは英語を勉強しますか",
           "words": [
-            "It",
+            "Do",
+            "you",
             "study",
-            "English",
-            "every",
-            "day"
+            "English"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Do you study English",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-006",
-          "japanese": "Weは学生です",
+          "japanese": "彼は音楽が好きですか",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Does",
+            "he",
+            "like",
+            "music"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Does he like music",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-007",
-          "japanese": "Theyは学生です",
+          "japanese": "彼女はテニスをしますか",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Does",
+            "she",
+            "play",
+            "tennis"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Does she play tennis",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "彼らは毎日走りますか",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
+            "Do",
+            "they",
+            "run",
             "every",
             "day"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Do they run every day",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 6
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u3-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "これは何ですか",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "What",
+            "is",
+            "this"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "What is this",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 6
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u3-010",
-          "japanese": "The dogは学生です",
+          "japanese": "あれは誰ですか",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Who",
+            "is",
+            "that"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Who is that",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 6
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u3-011",
-          "japanese": "The catは学生です",
+          "japanese": "どこに住んでいますか",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Where",
+            "do",
+            "you",
+            "live"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Where do you live",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 6
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-012",
-          "japanese": "Tomは学生です",
+          "japanese": "いつ勉強しますか",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "When",
+            "do",
+            "you",
+            "study"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "When do you study",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-013",
-          "japanese": "Maryは学生です",
+          "japanese": "なぜ彼は走りますか",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Why",
+            "does",
+            "he",
+            "run"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Why does he run",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-014",
-          "japanese": "Iは学生です",
+          "japanese": "どのように彼女は料理しますか",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "How",
+            "does",
+            "she",
+            "cook"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "How does she cook",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-015",
-          "japanese": "Youは学生です",
+          "japanese": "何色が好きですか",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "What",
+            "color",
+            "do",
+            "you",
+            "like"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "What color do you like",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
           "wordCount": 5
         },
         {
           "id": "so-g1-u3-016",
-          "japanese": "Heは学生です",
+          "japanese": "彼は何をしますか",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "What",
+            "does",
+            "he",
+            "do"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "What does he do",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-017",
-          "japanese": "Sheは学生です",
+          "japanese": "彼女はどこで働きますか",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Where",
+            "does",
+            "she",
+            "work"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Where does she work",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-018",
-          "japanese": "Itは学生です",
+          "japanese": "彼らはいつ来ますか",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "When",
+            "do",
+            "they",
+            "come"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "When do they come",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-019",
-          "japanese": "Weは学生です",
+          "japanese": "あなたは何が欲しいですか",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "What",
+            "do",
+            "you",
+            "want"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "What do you want",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u3-020",
-          "japanese": "Theyは学生です",
+          "japanese": "誰がピアノを弾きますか",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Who",
+            "plays",
+            "the",
+            "piano"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Who plays the piano",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "代名詞と複数形｜this/that/these/those, 複数形の作り方",
-          "wordCount": 5
+          "explanation": "疑問文の語順: 疑問詞 + be動詞/Do/Does + 主語 + (動詞)...",
+          "hint": "疑問詞が文頭、次にbe動詞またはDo/Does",
+          "grammarPoint": "疑問文",
+          "wordCount": 4
         }
       ]
     },
@@ -16895,347 +16870,316 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u4-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは私の本です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "my",
+            "book"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is my book",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-002",
-          "japanese": "Youは学生です",
+          "japanese": "私は彼を知っています",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "know",
+            "him"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I know him",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-003",
-          "japanese": "Heは学生です",
+          "japanese": "彼女は彼らを見ます",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "sees",
+            "them"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She sees them",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-004",
-          "japanese": "Sheは学生です",
+          "japanese": "これは彼の鞄です",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "his",
+            "bag"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is his bag",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-005",
-          "japanese": "Itは学生です",
+          "japanese": "それは彼女のペンです",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "That",
+            "is",
+            "her",
+            "pen"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "That is her pen",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-006",
-          "japanese": "Weは学生です",
+          "japanese": "彼は彼女を助けます",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "helps",
+            "her"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He helps her",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-007",
-          "japanese": "Theyは学生です",
+          "japanese": "私たちは彼らと遊びます",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "play",
+            "with",
+            "them"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We play with them",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "これはあなたのノートですか",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Is",
+            "this",
+            "your",
+            "notebook"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Is this your notebook",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 6
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "彼は私たちを見ます",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "sees",
+            "us"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He sees us",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 6
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-010",
-          "japanese": "The dogは学生です",
+          "japanese": "彼女は私に電話します",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "calls",
+            "me"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She calls me",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 6
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-011",
-          "japanese": "The catは学生です",
+          "japanese": "彼らは私たちの先生です",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "are",
+            "our",
+            "teachers"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They are our teachers",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 6
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-012",
-          "japanese": "Tomは学生です",
+          "japanese": "私は彼の名前を知っています",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "know",
+            "his",
+            "name"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I know his name",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-013",
-          "japanese": "Maryは学生です",
+          "japanese": "これは私たちの学校です",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "our",
+            "school"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is our school",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-014",
-          "japanese": "Iは学生です",
+          "japanese": "彼女は彼らの母です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "is",
+            "their",
+            "mother"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She is their mother",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-015",
-          "japanese": "Youは学生です",
+          "japanese": "私たちは彼女を助けます",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "help",
+            "her"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We help her",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-016",
-          "japanese": "Heは学生です",
+          "japanese": "あなたは彼らを知っていますか",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Do",
+            "you",
+            "know",
+            "them"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Do you know them",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-017",
-          "japanese": "Sheは学生です",
+          "japanese": "これは私の犬です",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "my",
+            "dog"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is my dog",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-018",
-          "japanese": "Itは学生です",
+          "japanese": "彼は彼女のノートを持っています",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "her",
+            "notebook"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He has her notebook",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u4-019",
-          "japanese": "Weは学生です",
+          "japanese": "私たちは彼を見ます",
           "words": [
             "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "see",
+            "him"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We see him",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u4-020",
-          "japanese": "Theyは学生です",
+          "japanese": "彼らは私たちの友達です",
           "words": [
             "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "are",
+            "our",
+            "friends"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They are our friends",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞｜what/who/when/where/how, 疑問文の作り方",
-          "wordCount": 5
+          "explanation": "代名詞を含む基本文の語順。",
+          "hint": "主格・所有格・目的格の位置に注意",
+          "grammarPoint": "代名詞",
+          "wordCount": 4
         }
       ]
     },
@@ -20349,347 +20293,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u5-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は3冊の本を持っています",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "three",
+            "books"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I have three books",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-002",
-          "japanese": "Youは学生です",
+          "japanese": "彼女は2匹の猫を飼っています",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "two",
+            "cats"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She has two cats",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-003",
-          "japanese": "Heは学生です",
+          "japanese": "私たちは多くの友達がいます",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "many",
+            "friends"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We have many friends",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-004",
-          "japanese": "Sheは学生です",
+          "japanese": "彼は5つのリンゴを持っています",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "five",
+            "apples"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He has five apples",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-005",
-          "japanese": "Itは学生です",
+          "japanese": "彼らは4台の車を持っています",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "four",
+            "cars"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They have four cars",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-006",
-          "japanese": "Weは学生です",
+          "japanese": "私は2本のペンを持っています",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "have",
+            "two",
+            "pens"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I have two pens",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-007",
-          "japanese": "Theyは学生です",
+          "japanese": "彼女は3つの箱を持っています",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "three",
+            "boxes"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She has three boxes",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "私たちは多くの生徒がいます",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "many",
+            "students"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We have many students",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "彼は6つのオレンジを持っています",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "six",
+            "oranges"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He has six oranges",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-010",
-          "japanese": "The dogは学生です",
+          "japanese": "彼らは2人の子どもがいます",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "two",
+            "children"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They have two children",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-011",
-          "japanese": "The catは学生です",
+          "japanese": "私は3人の兄弟がいます",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "have",
+            "three",
+            "brothers"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I have three brothers",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-012",
-          "japanese": "Tomは学生です",
+          "japanese": "彼女は4つのドレスを持っています",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "four",
+            "dresses"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She has four dresses",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-013",
-          "japanese": "Maryは学生です",
+          "japanese": "私たちは多くの先生がいます",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "many",
+            "teachers"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We have many teachers",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-014",
-          "japanese": "Iは学生です",
+          "japanese": "彼は2匹の犬を飼っています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "two",
+            "dogs"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He has two dogs",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-015",
-          "japanese": "Youは学生です",
+          "japanese": "彼らは3つのクラスがあります",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "three",
+            "classes"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They have three classes",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-016",
-          "japanese": "Heは学生です",
+          "japanese": "私は5つの時計を持っています",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "have",
+            "five",
+            "watches"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I have five watches",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-017",
-          "japanese": "Sheは学生です",
+          "japanese": "彼女は2つの都市を訪れました",
           "words": [
             "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "visited",
+            "two",
+            "cities"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She visited two cities",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-018",
-          "japanese": "Itは学生です",
+          "japanese": "私たちは多くの本を読みます",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "read",
+            "many",
+            "books"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We read many books",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-019",
-          "japanese": "Weは学生です",
+          "japanese": "彼は3人の女性を知っています",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "knows",
+            "three",
+            "women"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He knows three women",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u5-020",
-          "japanese": "Theyは学生です",
+          "japanese": "彼らは2人の男性を見ます",
           "words": [
             "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "see",
+            "two",
+            "men"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They see two men",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "助動詞can｜can + 原形、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "複数形を含む基本文。",
+          "hint": "数詞の後は複数形",
+          "grammarPoint": "複数形",
+          "wordCount": 4
         }
       ]
     },
@@ -23803,347 +23723,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u6-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-002",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-003",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-004",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-005",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-006",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-007",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-010",
-          "japanese": "The dogは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-011",
-          "japanese": "The catは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 6
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-012",
-          "japanese": "Tomは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-013",
-          "japanese": "Maryは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-014",
-          "japanese": "Iは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-015",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-016",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-017",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-018",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-019",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u6-020",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（現在進行形）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形｜be動詞 + 動詞-ing、疑問文・否定文",
-          "wordCount": 5
+          "explanation": "現在進行形の語順練習。",
+          "hint": "現在進行形",
+          "grammarPoint": "現在進行形",
+          "wordCount": 4
         }
       ]
     },
@@ -27257,347 +27153,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u7-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-002",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-003",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-004",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-005",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-006",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-007",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 6
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 6
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-010",
-          "japanese": "The dogは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 6
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-011",
-          "japanese": "The catは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 6
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-012",
-          "japanese": "Tomは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-013",
-          "japanese": "Maryは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-014",
-          "japanese": "Iは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-015",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-016",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-017",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-018",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-019",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u7-020",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（助動詞can）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文｜動詞の原形、Don't～、Let's～",
-          "wordCount": 5
+          "explanation": "助動詞canの語順練習。",
+          "hint": "助動詞can",
+          "grammarPoint": "助動詞can",
+          "wordCount": 4
         }
       ]
     },
@@ -30711,347 +30583,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u8-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-002",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-003",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-004",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-005",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-006",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-007",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 6
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 6
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-010",
-          "japanese": "The dogは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 6
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-011",
-          "japanese": "The catは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 6
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-012",
-          "japanese": "Tomは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-013",
-          "japanese": "Maryは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-014",
-          "japanese": "Iは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-015",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-016",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-017",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-018",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-019",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u8-020",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（過去形）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（規則動詞）｜動詞 + ed、-edの発音、過去の時制表現",
-          "wordCount": 5
+          "explanation": "過去形の語順練習。",
+          "hint": "過去形",
+          "grammarPoint": "過去形",
+          "wordCount": 4
         }
       ]
     },
@@ -34165,347 +34013,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u9-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-002",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-003",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-004",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-005",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-006",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-007",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 6
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 6
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-010",
-          "japanese": "The dogは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 6
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-011",
-          "japanese": "The catは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 6
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-012",
-          "japanese": "Tomは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-013",
-          "japanese": "Maryは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-014",
-          "japanese": "Iは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-015",
-          "japanese": "Youは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-016",
-          "japanese": "Heは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-017",
-          "japanese": "Sheは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-018",
-          "japanese": "Itは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-019",
-          "japanese": "Weは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u9-020",
-          "japanese": "Theyは学生です",
+          "japanese": "これは文です（未来表現）",
           "words": [
-            "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "sentence"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a sentence",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形（不規則動詞）｜不規則動詞の過去形、過去の否定文・疑問文",
-          "wordCount": 5
+          "explanation": "未来表現の語順練習。",
+          "hint": "未来表現",
+          "grammarPoint": "未来表現",
+          "wordCount": 4
         }
       ]
     }
