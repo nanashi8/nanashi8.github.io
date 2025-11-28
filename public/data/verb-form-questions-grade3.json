@@ -8,9 +8,9 @@
       "verbForm": [
         {
           "id": "vf-g3-u0-001",
-          "japanese": "この本は今読まれている",
-          "sentence": "This book ____ being read now.",
-          "verb": "be",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English ____ spoken around the world.",
+          "verb": "passive",
           "choices": [
             "is",
             "are",
@@ -19,62 +19,30 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "進行形の受動態は be + being + 過去分詞。単数主語This bookに合わせてbe動詞はis。",
-          "hint": "単数主語 + is + being + 過去分詞"
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-002",
-          "japanese": "その写真は彼によって撮られた",
-          "sentence": "The photo ____ taken by him.",
-          "verb": "be",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book ____ read by many people.",
+          "verb": "passive",
           "choices": [
-            "was",
-            "were",
             "is",
-            "are"
+            "are",
+            "was",
+            "were"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去の受動態は was/were + 過去分詞。単数The photoなので was を選ぶ。",
-          "hint": "過去受動: was/were + 過去分詞"
+          "correctAnswer": "is",
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-003",
-          "japanese": "英語は多くの国々で話されている",
-          "sentence": "English ____ spoken in many countries.",
-          "verb": "be",
-          "choices": [
-            "is",
-            "are",
-            "was",
-            "were"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "現在の受動態: is/are + 過去分詞。不可算名詞Englishに合わせて is。",
-          "hint": "現在受動: is/are + 過去分詞"
-        },
-        {
-          "id": "vf-g3-u0-004",
-          "japanese": "そのケーキはもう作られてしまった",
-          "sentence": "The cake has ____ made already.",
-          "verb": "be",
-          "choices": [
-            "been",
-            "being",
-            "be",
-            "was"
-          ],
-          "correctAnswer": "been",
-          "difficulty": "intermediate",
-          "explanation": "現在完了受動は has/have + been + 過去分詞。空所には been が入る。",
-          "hint": "完了受動: has/have + been + p.p."
-        },
-        {
-          "id": "vf-g3-u0-005",
-          "japanese": "その部屋は昨日掃除されていなかった",
-          "sentence": "The room ____ not cleaned yesterday.",
-          "verb": "be",
+          "japanese": "その手紙は彼女によって書かれました",
+          "sentence": "The letter ____ written by her.",
+          "verb": "passive",
           "choices": [
             "was",
             "were",
@@ -83,46 +51,78 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "過去の受動態の否定: was/were + not + 過去分詞。単数roomなので was not。",
-          "hint": "過去受動の否定: was/were not + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
+        },
+        {
+          "id": "vf-g3-u0-004",
+          "japanese": "この橋は1990年に建てられました",
+          "sentence": "This bridge ____ built in 1990.",
+          "verb": "passive",
+          "choices": [
+            "was",
+            "were",
+            "is",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
+        },
+        {
+          "id": "vf-g3-u0-005",
+          "japanese": "これらの車は日本で作られています",
+          "sentence": "These cars ____ made in Japan.",
+          "verb": "passive",
+          "choices": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-006",
-          "japanese": "あの橋は今修理されています",
-          "sentence": "That bridge ____ being repaired now.",
-          "verb": "be",
+          "japanese": "その問題は昨日解かれました",
+          "sentence": "The problem ____ solved yesterday.",
+          "verb": "passive",
           "choices": [
-            "is",
-            "are",
             "was",
-            "has"
+            "were",
+            "is",
+            "are"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "進行形受動は be + being + p.p. 単数主語That bridgeなので is。",
-          "hint": "is being repaired"
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-007",
-          "japanese": "その手紙は来週送られます",
-          "sentence": "The letter ____ sent next week.",
-          "verb": "modal",
+          "japanese": "この歌は若者に愛されています",
+          "sentence": "This song ____ loved by young people.",
+          "verb": "passive",
           "choices": [
-            "will be",
             "is",
+            "are",
             "was",
-            "has been"
+            "were"
           ],
-          "correctAnswer": "will be",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "未来の受動は will be + p.p.。",
-          "hint": "will be + 過去分詞"
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-008",
-          "japanese": "その食べ物は子どもたちに好かれています",
-          "sentence": "The food ____ liked by children.",
-          "verb": "be",
+          "japanese": "彼の名前はよく知られています",
+          "sentence": "His name ____ well known.",
+          "verb": "passive",
           "choices": [
             "is",
             "are",
@@ -130,47 +130,47 @@
             "were"
           ],
           "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "単数名詞foodに合わせて is。受動態は be + p.p.。",
-          "hint": "be liked by ～"
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-009",
-          "japanese": "その歌はパーティーで彼女に歌われました",
-          "sentence": "The song ____ sung by her at the party.",
-          "verb": "be",
+          "japanese": "その窓は彼によって壊されました",
+          "sentence": "The window ____ broken by him.",
+          "verb": "passive",
           "choices": [
             "was",
-            "is",
             "were",
-            "has"
+            "is",
+            "are"
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "過去の受動: was/were + p.p. 単数songなので was。",
-          "hint": "過去受動: was + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-010",
-          "japanese": "この問題は簡単に解かれることができます",
-          "sentence": "This problem ____ solved easily.",
-          "verb": "modal",
+          "japanese": "これらの写真は去年撮られました",
+          "sentence": "These photos ____ taken last year.",
+          "verb": "passive",
           "choices": [
-            "can be",
-            "is",
             "was",
-            "has been"
+            "were",
+            "is",
+            "are"
           ],
-          "correctAnswer": "can be",
-          "difficulty": "advanced",
-          "explanation": "可能の受動は can be + p.p.。",
-          "hint": "can be + p.p."
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-011",
-          "japanese": "英語は世界中で話されています",
-          "sentence": "English ____ spoken all over the world.",
-          "verb": "be",
+          "japanese": "その扉は開けられています",
+          "sentence": "The door ____ opened.",
+          "verb": "passive",
           "choices": [
             "is",
             "are",
@@ -178,31 +178,15 @@
             "were"
           ],
           "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "単数扱いの English に合わせて is。受動: be + p.p.",
-          "hint": "be + p.p."
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-012",
-          "japanese": "その家は1950年に建てられました",
-          "sentence": "The house ____ built in 1950.",
-          "verb": "be",
-          "choices": [
-            "was",
-            "were",
-            "is",
-            "has been"
-          ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去の受動: was/were + p.p.",
-          "hint": "was + p.p."
-        },
-        {
-          "id": "vf-g3-u0-013",
-          "japanese": "この机は木で作られています",
-          "sentence": "This desk ____ made of wood.",
-          "verb": "be",
+          "japanese": "このコンピューターは使われていません",
+          "sentence": "This computer ____ not used.",
+          "verb": "passive",
           "choices": [
             "is",
             "are",
@@ -210,121 +194,137 @@
             "were"
           ],
           "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "現在の受動: is/are + p.p.",
-          "hint": "be made of"
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
+        },
+        {
+          "id": "vf-g3-u0-013",
+          "japanese": "その建物は1950年に建てられました",
+          "sentence": "The building ____ constructed in 1950.",
+          "verb": "passive",
+          "choices": [
+            "was",
+            "were",
+            "is",
+            "are"
+          ],
+          "correctAnswer": "was",
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-014",
-          "japanese": "その手紙はすでに送られました",
-          "sentence": "The letter has ____ sent already.",
-          "verb": "be",
+          "japanese": "多くの木が植えられました",
+          "sentence": "Many trees ____ planted.",
+          "verb": "passive",
           "choices": [
-            "been",
-            "being",
-            "be",
-            "was"
+            "was",
+            "were",
+            "is",
+            "are"
           ],
-          "correctAnswer": "been",
+          "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "完了受動: has/have + been + p.p.",
-          "hint": "has been + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-015",
-          "japanese": "その窓は今修理されているところです",
-          "sentence": "The window ____ being repaired now.",
-          "verb": "be",
+          "japanese": "その映画は世界中で見られています",
+          "sentence": "The movie ____ watched worldwide.",
+          "verb": "passive",
           "choices": [
             "is",
             "are",
             "was",
-            "has"
+            "were"
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "進行形受動: be + being + p.p. 単数window → is。",
-          "hint": "is being + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-016",
-          "japanese": "この問題は簡単に解かれます",
-          "sentence": "This problem ____ solved easily.",
-          "verb": "modal",
+          "japanese": "この部屋は毎日掃除されます",
+          "sentence": "This room ____ cleaned every day.",
+          "verb": "passive",
           "choices": [
-            "can be",
             "is",
+            "are",
             "was",
-            "has been"
+            "were"
           ],
-          "correctAnswer": "can be",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "可能受動: can be + p.p.",
-          "hint": "can be + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-017",
-          "japanese": "その歌は彼によって歌われました",
-          "sentence": "The song ____ sung by him.",
-          "verb": "be",
+          "japanese": "その手紙は英語で書かれました",
+          "sentence": "The letter ____ written in English.",
+          "verb": "passive",
           "choices": [
             "was",
             "were",
             "is",
-            "has"
+            "are"
           ],
           "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去受動（単数）: was + p.p.",
-          "hint": "was + p.p."
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-018",
-          "japanese": "これらの本は子どもたちに読まれています",
-          "sentence": "These books ____ read by children.",
-          "verb": "be",
+          "japanese": "これらの製品は中国で製造されています",
+          "sentence": "These products ____ manufactured in China.",
+          "verb": "passive",
           "choices": [
-            "are",
             "is",
-            "were",
-            "was"
+            "are",
+            "was",
+            "were"
           ],
           "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "複数主語 books → are。",
-          "hint": "are + p.p."
+          "difficulty": "intermediate",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-019",
-          "japanese": "その問題はもう解かれています",
-          "sentence": "The problem ____ been solved already.",
-          "verb": "be",
+          "japanese": "その絵は有名な画家によって描かれました",
+          "sentence": "The painting ____ painted by a famous artist.",
+          "verb": "passive",
           "choices": [
-            "has",
-            "have",
+            "was",
+            "were",
             "is",
-            "was"
+            "are"
           ],
-          "correctAnswer": "has",
+          "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "主語が単数 problem → has been solved。",
-          "hint": "has been + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         },
         {
           "id": "vf-g3-u0-020",
-          "japanese": "その部屋は来週掃除されるでしょう",
-          "sentence": "The room ____ cleaned next week.",
-          "verb": "modal",
+          "japanese": "この規則は守られるべきです",
+          "sentence": "This rule should ____ followed.",
+          "verb": "passive",
           "choices": [
-            "will be",
+            "be",
             "is",
-            "was",
-            "has been"
+            "are",
+            "was"
           ],
-          "correctAnswer": "will be",
+          "correctAnswer": "be",
           "difficulty": "intermediate",
-          "explanation": "未来の受動: will be + p.p.",
-          "hint": "will be + p.p."
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "hint": "受動態: be + p.p."
         }
       ],
       "fillInBlank": [
@@ -3438,323 +3438,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u1-001",
-          "japanese": "そのドアは昨日閉められた",
-          "sentence": "The door ____ closed yesterday.",
-          "verb": "be",
+          "japanese": "私は彼に会ったことがあります",
+          "sentence": "I ____ met him.",
+          "verb": "present-perfect",
           "choices": [
-            "was",
-            "were",
-            "is",
-            "has"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去受動: was/were + p.p. 単数door → was。",
-          "hint": "was + p.p."
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-002",
-          "japanese": "その机は木で作られています",
-          "sentence": "The desk ____ made of wood.",
-          "verb": "be",
+          "japanese": "彼女は東京に行ったことがあります",
+          "sentence": "She ____ been to Tokyo.",
+          "verb": "present-perfect",
           "choices": [
-            "is",
-            "are",
-            "was",
-            "were"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "現在受動: is/are + p.p. 単数desk → is。",
-          "hint": "be made of"
-        },
-        {
-          "id": "vf-g3-u1-003",
-          "japanese": "この橋は来年建てられる予定です",
-          "sentence": "This bridge ____ built next year.",
-          "verb": "modal",
-          "choices": [
-            "will be",
-            "is",
-            "was",
-            "has been"
-          ],
-          "correctAnswer": "will be",
-          "difficulty": "intermediate",
-          "explanation": "未来受動: will be + p.p.",
-          "hint": "will be + p.p."
-        },
-        {
-          "id": "vf-g3-u1-004",
-          "japanese": "この部屋は今掃除されているところです",
-          "sentence": "This room ____ being cleaned now.",
-          "verb": "be",
-          "choices": [
-            "is",
-            "are",
-            "was",
-            "has"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "intermediate",
-          "explanation": "進行形受動: be + being + p.p. 単数room → is。",
-          "hint": "is being + p.p."
-        },
-        {
-          "id": "vf-g3-u1-005",
-          "japanese": "その問題はすでに解かれています",
-          "sentence": "The problem ____ been solved already.",
-          "verb": "be",
-          "choices": [
-            "has",
             "have",
-            "is",
-            "was"
+            "has",
+            "had",
+            "having"
           ],
           "correctAnswer": "has",
           "difficulty": "intermediate",
-          "explanation": "完了受動: has/have been + p.p. 単数problem → has。",
-          "hint": "has been + p.p."
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
+        },
+        {
+          "id": "vf-g3-u1-003",
+          "japanese": "私たちはその映画を見たことがあります",
+          "sentence": "We ____ seen that movie.",
+          "verb": "present-perfect",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
+        },
+        {
+          "id": "vf-g3-u1-004",
+          "japanese": "彼は宿題を終えました",
+          "sentence": "He ____ finished his homework.",
+          "verb": "present-perfect",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
+        },
+        {
+          "id": "vf-g3-u1-005",
+          "japanese": "彼らはもう昼食を食べました",
+          "sentence": "They ____ already eaten lunch.",
+          "verb": "present-perfect",
+          "choices": [
+            "have",
+            "has",
+            "had",
+            "having"
+          ],
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-006",
-          "japanese": "英語は世界中で話されています",
-          "sentence": "English ____ spoken around the world.",
-          "verb": "be",
+          "japanese": "私はこの本を読んだことがありません",
+          "sentence": "I ____ never read this book.",
+          "verb": "present-perfect",
           "choices": [
-            "is",
-            "are",
-            "was",
-            "were"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "単数扱いEnglish → is。受動: be + p.p.",
-          "hint": "be + p.p."
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-007",
-          "japanese": "その歌は子どもたちに愛されています",
-          "sentence": "The song ____ loved by children.",
-          "verb": "be",
+          "japanese": "彼女はまだ来ていません",
+          "sentence": "She ____ not come yet.",
+          "verb": "present-perfect",
           "choices": [
-            "is",
-            "are",
-            "was",
-            "were"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "単数song → is。",
-          "hint": "be loved by ～"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-008",
-          "japanese": "その手紙は彼によって書かれました",
-          "sentence": "The letter ____ written by him.",
-          "verb": "be",
+          "japanese": "あなたは日本に行ったことがありますか",
+          "sentence": "____ you been to Japan?",
+          "verb": "present-perfect",
           "choices": [
-            "was",
-            "were",
-            "is",
-            "has"
+            "Have",
+            "Has",
+            "Do",
+            "Does"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去受動（単数）: was + p.p.",
-          "hint": "was + p.p."
+          "correctAnswer": "Have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-009",
-          "japanese": "その家は1950年に建てられました",
-          "sentence": "The house ____ built in 1950.",
-          "verb": "be",
+          "japanese": "彼はその知らせを聞きましたか",
+          "sentence": "____ he heard the news?",
+          "verb": "present-perfect",
           "choices": [
-            "was",
-            "were",
-            "is",
-            "has been"
+            "Have",
+            "Has",
+            "Do",
+            "Does"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去受動: was/were + p.p.",
-          "hint": "was + p.p."
+          "correctAnswer": "Has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-010",
-          "japanese": "この問題は簡単に解かれます",
-          "sentence": "This problem ____ solved easily.",
-          "verb": "modal",
+          "japanese": "私は3年間英語を勉強しています",
+          "sentence": "I ____ studied English for three years.",
+          "verb": "present-perfect",
           "choices": [
-            "can be",
-            "is",
-            "was",
-            "has been"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "can be",
+          "correctAnswer": "have",
           "difficulty": "intermediate",
-          "explanation": "可能受動: can be + p.p.",
-          "hint": "can be + p.p."
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-011",
-          "japanese": "その部屋は今使われていないところです",
-          "sentence": "The room ____ not being used now.",
-          "verb": "be",
+          "japanese": "彼女は2時間待っています",
+          "sentence": "She ____ waited for two hours.",
+          "verb": "present-perfect",
           "choices": [
-            "is",
-            "are",
-            "was",
-            "has been"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "has",
           "difficulty": "intermediate",
-          "explanation": "進行形受動の否定: is not being + 過去分詞。単数 subject → is。",
-          "hint": "is not being + p.p."
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-012",
-          "japanese": "その壁は先月塗られました",
-          "sentence": "The walls ____ painted last month.",
-          "verb": "be",
+          "japanese": "私たちはちょうど到着しました",
+          "sentence": "We ____ just arrived.",
+          "verb": "present-perfect",
           "choices": [
-            "were",
-            "was",
-            "are",
-            "has been"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "were",
-          "difficulty": "beginner",
-          "explanation": "過去受動: was/were + p.p. 複数 walls → were。",
-          "hint": "were + p.p."
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-013",
-          "japanese": "この問題は誰にでも解くことができます",
-          "sentence": "This problem ____ be solved by anyone.",
-          "verb": "modal",
+          "japanese": "彼はすでに出発しました",
+          "sentence": "He ____ already left.",
+          "verb": "present-perfect",
           "choices": [
-            "can",
-            "will",
-            "may",
-            "must"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "can",
+          "correctAnswer": "has",
           "difficulty": "intermediate",
-          "explanation": "可能受動: can be + p.p.（空所は助動詞本体 can）。",
-          "hint": "can be + p.p."
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-014",
-          "japanese": "英語はこの学校で教えられています",
-          "sentence": "English ____ taught at this school.",
-          "verb": "be",
+          "japanese": "彼らは京都を訪れたことがあります",
+          "sentence": "They ____ visited Kyoto.",
+          "verb": "present-perfect",
           "choices": [
-            "is",
-            "are",
-            "was",
-            "were"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "単数扱い English → is。受動: be + p.p.",
-          "hint": "be + taught"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-015",
-          "japanese": "その手紙は今書かれているところです",
-          "sentence": "The letters ____ being written now.",
-          "verb": "be",
+          "japanese": "私は彼女に会ったことがありません",
+          "sentence": "I ____ never met her.",
+          "verb": "present-perfect",
           "choices": [
-            "are",
-            "is",
-            "were",
-            "has been"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "have",
           "difficulty": "intermediate",
-          "explanation": "進行形受動: are being + p.p. 複数 letters → are。",
-          "hint": "are being + written"
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-016",
-          "japanese": "その家は2010年に建てられました",
-          "sentence": "The house ____ built in 2010.",
-          "verb": "be",
+          "japanese": "あなたは昼食を食べましたか",
+          "sentence": "____ you eaten lunch?",
+          "verb": "present-perfect",
           "choices": [
-            "was",
-            "were",
-            "is",
-            "has been"
+            "Have",
+            "Has",
+            "Do",
+            "Does"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去受動: was/were + p.p. 単数 house → was。",
-          "hint": "was + p.p."
+          "correctAnswer": "Have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-017",
-          "japanese": "その博物館は来年再開される予定です",
-          "sentence": "The museum ____ reopened next year.",
-          "verb": "modal",
+          "japanese": "彼女は手紙を書き終えました",
+          "sentence": "She ____ finished writing the letter.",
+          "verb": "present-perfect",
           "choices": [
-            "will be",
-            "is",
-            "was",
-            "has been"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "will be",
+          "correctAnswer": "has",
           "difficulty": "intermediate",
-          "explanation": "未来受動: will be + p.p.",
-          "hint": "will be + p.p."
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-018",
-          "japanese": "その窓は一週間前から割れたままです",
-          "sentence": "The window has ____ broken for a week.",
-          "verb": "be",
+          "japanese": "私たちは長い間ここに住んでいます",
+          "sentence": "We ____ lived here for a long time.",
+          "verb": "present-perfect",
           "choices": [
-            "been",
-            "being",
-            "be",
-            "was"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "been",
+          "correctAnswer": "have",
           "difficulty": "intermediate",
-          "explanation": "完了受動: has/have been + p.p. 空所には been。",
-          "hint": "has been + p.p."
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-019",
-          "japanese": "その車は日本で作られました",
-          "sentence": "The car ____ made in Japan.",
-          "verb": "be",
+          "japanese": "彼は何度も失敗しました",
+          "sentence": "He ____ failed many times.",
+          "verb": "present-perfect",
           "choices": [
-            "was",
-            "were",
-            "is",
-            "are"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "受動の基本: was/were + p.p. 単数 car → was。",
-          "hint": "was + made"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
           "id": "vf-g3-u1-020",
-          "japanese": "その写真は彼女によって撮られました",
-          "sentence": "The photo ____ taken by her.",
-          "verb": "be",
+          "japanese": "彼らはまだ決めていません",
+          "sentence": "They ____ not decided yet.",
+          "verb": "present-perfect",
           "choices": [
-            "was",
-            "is",
-            "were",
-            "has"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "過去受動: was + p.p. 行為者は by + 人。",
-          "hint": "by + 人"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "hint": "I/you/we/they→have, he/she/it→has"
         }
       ],
       "fillInBlank": [
@@ -6868,323 +6868,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u2-001",
-          "japanese": "私は毎日勉強する",
-          "sentence": "I ____ English every day.",
-          "verb": "study",
+          "japanese": "私は2時間勉強しています",
+          "sentence": "I ____ been studying for two hours.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-002",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
-          "verb": "play",
+          "japanese": "彼は朝から働いています",
+          "sentence": "He ____ been working since morning.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-003",
-          "japanese": "私は時々働く",
-          "sentence": "I ____ hard sometimes.",
-          "verb": "work",
+          "japanese": "彼女は30分待っています",
+          "sentence": "She ____ been waiting for 30 minutes.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-004",
-          "japanese": "あなたは今手伝う",
-          "sentence": "You ____ my mother now.",
-          "verb": "help",
+          "japanese": "私たちは3年間ここに住んでいます",
+          "sentence": "We ____ been living here for three years.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-005",
-          "japanese": "私はいつも好む",
-          "sentence": "I ____ music always.",
-          "verb": "like",
+          "japanese": "彼らは1時間話しています",
+          "sentence": "They ____ been talking for an hour.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-006",
-          "japanese": "あなたはよく愛する",
-          "sentence": "You ____ animals often.",
-          "verb": "love",
+          "japanese": "あなたは何をしていましたか",
+          "sentence": "What ____ you been doing?",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-007",
-          "japanese": "私は毎日始める",
-          "sentence": "I ____ homework every day.",
-          "verb": "start",
+          "japanese": "彼は昨日から寝ています",
+          "sentence": "He ____ been sleeping since yesterday.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "start",
-            "starts",
-            "started",
-            "starting"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "start",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstartを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-008",
-          "japanese": "あなたは普段終える",
-          "sentence": "You ____ lunch usually.",
-          "verb": "finish",
+          "japanese": "彼女は朝から料理しています",
+          "sentence": "She ____ been cooking since morning.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "finish",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-009",
-          "japanese": "私は時々する",
-          "sentence": "I ____ soccer sometimes.",
-          "verb": "play",
+          "japanese": "私は長い間これを探しています",
+          "sentence": "I ____ been looking for this for a long time.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-010",
-          "japanese": "あなたは今訪れる",
-          "sentence": "You ____ Tokyo now.",
-          "verb": "visit",
+          "japanese": "彼らは1週間旅行しています",
+          "sentence": "They ____ been traveling for a week.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-011",
-          "japanese": "私はいつも手伝う",
-          "sentence": "I ____ my mother always.",
-          "verb": "help",
+          "japanese": "彼は6時から勉強しています",
+          "sentence": "He ____ been studying since 6 o'clock.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-012",
-          "japanese": "あなたはよく欲しい",
-          "sentence": "You ____ a dog often.",
-          "verb": "want",
+          "japanese": "私たちは2時間走っています",
+          "sentence": "We ____ been running for two hours.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-013",
-          "japanese": "私は毎日愛する",
-          "sentence": "I ____ animals every day.",
-          "verb": "love",
+          "japanese": "彼女は午後からピアノを弾いています",
+          "sentence": "She ____ been playing the piano since this afternoon.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-014",
-          "japanese": "あなたは普段住む",
-          "sentence": "You ____ in Tokyo usually.",
-          "verb": "live",
+          "japanese": "私は5年間英語を教えています",
+          "sentence": "I ____ been teaching English for five years.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "live",
-            "lives",
-            "liveed",
-            "liveing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "live",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままliveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-015",
-          "japanese": "私は時々終える",
-          "sentence": "I ____ lunch sometimes.",
-          "verb": "finish",
+          "japanese": "彼らは朝から雨が降っています",
+          "sentence": "It ____ been raining since morning.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "finish",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-016",
-          "japanese": "あなたは今練習する",
-          "sentence": "You ____ piano now.",
-          "verb": "practice",
+          "japanese": "あなたはどのくらいここにいますか",
+          "sentence": "How long ____ you been here?",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "practice",
-            "practices",
-            "practiceed",
-            "practiceing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "practice",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままpracticeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-017",
-          "japanese": "私はいつも訪れる",
-          "sentence": "I ____ Tokyo always.",
-          "verb": "visit",
+          "japanese": "彼は1時間電話で話しています",
+          "sentence": "He ____ been talking on the phone for an hour.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-018",
-          "japanese": "あなたはよく使う",
-          "sentence": "You ____ a computer often.",
-          "verb": "use",
+          "japanese": "私たちは先週から準備しています",
+          "sentence": "We ____ been preparing since last week.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-019",
-          "japanese": "私は毎日欲しい",
-          "sentence": "I ____ a dog every day.",
-          "verb": "want",
+          "japanese": "彼女は30分歌っています",
+          "sentence": "She ____ been singing for 30 minutes.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "has",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         },
         {
           "id": "vf-g3-u2-020",
-          "japanese": "あなたは普段必要とする",
-          "sentence": "You ____ help usually.",
-          "verb": "need",
+          "japanese": "彼らは昨日から待っています",
+          "sentence": "They ____ been waiting since yesterday.",
+          "verb": "present-perfect-continuous",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "have",
+            "has",
+            "had",
+            "having"
           ],
-          "correctAnswer": "need",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままneedを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "have",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形: have/has been + 動詞ing。動作の継続を強調。",
+          "hint": "have/has been + -ing"
         }
       ],
       "fillInBlank": [
@@ -10298,323 +10298,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u3-001",
-          "japanese": "私は毎日勉強する",
-          "sentence": "I ____ English every day.",
-          "verb": "study",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
+          "verb": "関係代名詞",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "who",
+            "which",
+            "what",
+            "where"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-002",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
-          "verb": "play",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
+          "verb": "関係代名詞",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-003",
-          "japanese": "私は時々働く",
-          "sentence": "I ____ hard sometimes.",
-          "verb": "work",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a woman ____ speaks English.",
+          "verb": "関係代名詞",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "who",
+            "which",
+            "what",
+            "whose"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-004",
-          "japanese": "あなたは今手伝う",
-          "sentence": "You ____ my mother now.",
-          "verb": "help",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a building ____ is famous.",
+          "verb": "関係代名詞",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-005",
-          "japanese": "私はいつも好む",
-          "sentence": "I ____ music always.",
-          "verb": "like",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
+          "verb": "関係代名詞",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "who",
+            "which",
+            "what",
+            "where"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-006",
-          "japanese": "あなたはよく愛する",
-          "sentence": "You ____ animals often.",
-          "verb": "love",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
+          "verb": "関係代名詞",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-007",
-          "japanese": "私は毎日始める",
-          "sentence": "I ____ homework every day.",
-          "verb": "start",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a woman ____ speaks English.",
+          "verb": "関係代名詞",
           "choices": [
-            "start",
-            "starts",
-            "started",
-            "starting"
+            "who",
+            "which",
+            "what",
+            "whose"
           ],
-          "correctAnswer": "start",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstartを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-008",
-          "japanese": "あなたは普段終える",
-          "sentence": "You ____ lunch usually.",
-          "verb": "finish",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a building ____ is famous.",
+          "verb": "関係代名詞",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "finish",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-009",
-          "japanese": "私は時々する",
-          "sentence": "I ____ soccer sometimes.",
-          "verb": "play",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
+          "verb": "関係代名詞",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "who",
+            "which",
+            "what",
+            "where"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-010",
-          "japanese": "あなたは今訪れる",
-          "sentence": "You ____ Tokyo now.",
-          "verb": "visit",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
+          "verb": "関係代名詞",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-011",
-          "japanese": "私はいつも手伝う",
-          "sentence": "I ____ my mother always.",
-          "verb": "help",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a woman ____ speaks English.",
+          "verb": "関係代名詞",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "who",
+            "which",
+            "what",
+            "whose"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-012",
-          "japanese": "あなたはよく欲しい",
-          "sentence": "You ____ a dog often.",
-          "verb": "want",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a building ____ is famous.",
+          "verb": "関係代名詞",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-013",
-          "japanese": "私は毎日愛する",
-          "sentence": "I ____ animals every day.",
-          "verb": "love",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
+          "verb": "関係代名詞",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "who",
+            "which",
+            "what",
+            "where"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-014",
-          "japanese": "あなたは普段住む",
-          "sentence": "You ____ in Tokyo usually.",
-          "verb": "live",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
+          "verb": "関係代名詞",
           "choices": [
-            "live",
-            "lives",
-            "liveed",
-            "liveing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "live",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままliveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-015",
-          "japanese": "私は時々終える",
-          "sentence": "I ____ lunch sometimes.",
-          "verb": "finish",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a woman ____ speaks English.",
+          "verb": "関係代名詞",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "who",
+            "which",
+            "what",
+            "whose"
           ],
-          "correctAnswer": "finish",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-016",
-          "japanese": "あなたは今練習する",
-          "sentence": "You ____ piano now.",
-          "verb": "practice",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a building ____ is famous.",
+          "verb": "関係代名詞",
           "choices": [
-            "practice",
-            "practices",
-            "practiceed",
-            "practiceing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "practice",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままpracticeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-017",
-          "japanese": "私はいつも訪れる",
-          "sentence": "I ____ Tokyo always.",
-          "verb": "visit",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
+          "verb": "関係代名詞",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "who",
+            "which",
+            "what",
+            "where"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-018",
-          "japanese": "あなたはよく使う",
-          "sentence": "You ____ a computer often.",
-          "verb": "use",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
+          "verb": "関係代名詞",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-019",
-          "japanese": "私は毎日欲しい",
-          "sentence": "I ____ a dog every day.",
-          "verb": "want",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a woman ____ speaks English.",
+          "verb": "関係代名詞",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "who",
+            "which",
+            "what",
+            "whose"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         },
         {
           "id": "vf-g3-u3-020",
-          "japanese": "あなたは普段必要とする",
-          "sentence": "You ____ help usually.",
-          "verb": "need",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a building ____ is famous.",
+          "verb": "関係代名詞",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "that",
+            "who",
+            "what",
+            "where"
           ],
-          "correctAnswer": "need",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままneedを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の使い方。",
+          "hint": "関係代名詞"
         }
       ],
       "fillInBlank": [
@@ -13728,323 +13728,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u4-001",
-          "japanese": "私は毎日beする",
-          "sentence": "I ____  every day.",
-          "verb": "be",
+          "japanese": "英語を勉強することは重要です",
+          "sentence": "____ study English is important.",
+          "verb": "infinitive",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "To",
+            "For",
+            "At",
+            "Of"
           ],
-          "correctAnswer": "be",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "To",
+          "difficulty": "intermediate",
+          "explanation": "To不定詞の名詞的用法",
+          "hint": "To + 動詞原形"
         },
         {
           "id": "vf-g3-u4-002",
-          "japanese": "あなたは普段勉強する",
-          "sentence": "You ____ English usually.",
-          "verb": "study",
+          "japanese": "私は医者になりたいです",
+          "sentence": "I want ____ be a doctor.",
+          "verb": "infinitive",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "want to 動詞原形",
+          "hint": "want to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-003",
-          "japanese": "私は時々使う",
-          "sentence": "I ____ a computer sometimes.",
-          "verb": "use",
+          "japanese": "彼女は歌手になることを決めました",
+          "sentence": "She decided ____ become a singer.",
+          "verb": "infinitive",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "decide to 動詞原形",
+          "hint": "decide to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-004",
-          "japanese": "あなたは今働く",
-          "sentence": "You ____ hard now.",
-          "verb": "work",
+          "japanese": "何か飲むものが欲しいです",
+          "sentence": "I want ____ drink something.",
+          "verb": "infinitive",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "want to 動詞原形",
+          "hint": "want to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-005",
-          "japanese": "私はいつも必要とする",
-          "sentence": "I ____ help always.",
-          "verb": "need",
+          "japanese": "これは読むべき本です",
+          "sentence": "This is a book ____ read.",
+          "verb": "infinitive",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "need",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままneedを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "形容詞的用法: 名詞を修飾",
+          "hint": "to + 動詞原形で名詞を修飾"
         },
         {
           "id": "vf-g3-u4-006",
-          "japanese": "あなたはよく好む",
-          "sentence": "You ____ music often.",
-          "verb": "like",
+          "japanese": "私には話す友達がいません",
+          "sentence": "I have no friends ____ talk with.",
+          "verb": "infinitive",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "形容詞的用法",
+          "hint": "to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-007",
-          "japanese": "私は毎日勉強する",
-          "sentence": "I ____ English every day.",
-          "verb": "study",
+          "japanese": "これは書くためのペンです",
+          "sentence": "This is a pen ____ write with.",
+          "verb": "infinitive",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "形容詞的用法",
+          "hint": "to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-008",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
-          "verb": "play",
+          "japanese": "何か食べるものはありますか",
+          "sentence": "Do you have anything ____ eat?",
+          "verb": "infinitive",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "形容詞的用法",
+          "hint": "to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-009",
-          "japanese": "私は時々働く",
-          "sentence": "I ____ hard sometimes.",
-          "verb": "work",
+          "japanese": "私は友達に会うために駅に行きました",
+          "sentence": "I went to the station ____ meet my friend.",
+          "verb": "infinitive",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 目的",
+          "hint": "~するために"
         },
         {
           "id": "vf-g3-u4-010",
-          "japanese": "あなたは今手伝う",
-          "sentence": "You ____ my mother now.",
-          "verb": "help",
+          "japanese": "彼女は英語を学ぶためにアメリカに行きました",
+          "sentence": "She went to America ____ learn English.",
+          "verb": "infinitive",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 目的",
+          "hint": "~するために"
         },
         {
           "id": "vf-g3-u4-011",
-          "japanese": "私はいつも好む",
-          "sentence": "I ____ music always.",
-          "verb": "like",
+          "japanese": "私は音楽を聴くために部屋に行きました",
+          "sentence": "I went to my room ____ listen to music.",
+          "verb": "infinitive",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 目的",
+          "hint": "~するために"
         },
         {
           "id": "vf-g3-u4-012",
-          "japanese": "あなたはよく愛する",
-          "sentence": "You ____ animals often.",
-          "verb": "love",
+          "japanese": "彼は試合を見るために早く起きました",
+          "sentence": "He got up early ____ watch the game.",
+          "verb": "infinitive",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 目的",
+          "hint": "~するために"
         },
         {
           "id": "vf-g3-u4-013",
-          "japanese": "私は毎日する",
-          "sentence": "I ____ soccer every day.",
-          "verb": "play",
+          "japanese": "私はあなたに会えて嬉しいです",
+          "sentence": "I am glad ____ see you.",
+          "verb": "infinitive",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 感情の原因",
+          "hint": "glad to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-014",
-          "japanese": "あなたは普段訪れる",
-          "sentence": "You ____ Tokyo usually.",
-          "verb": "visit",
+          "japanese": "彼女はそのニュースを聞いて悲しかったです",
+          "sentence": "She was sad ____ hear the news.",
+          "verb": "infinitive",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 感情の原因",
+          "hint": "sad to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-015",
-          "japanese": "私は時々手伝う",
-          "sentence": "I ____ my mother sometimes.",
-          "verb": "help",
+          "japanese": "私はその結果を知って驚きました",
+          "sentence": "I was surprised ____ know the result.",
+          "verb": "infinitive",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 感情の原因",
+          "hint": "surprised to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-016",
-          "japanese": "あなたは今欲しい",
-          "sentence": "You ____ a dog now.",
-          "verb": "want",
+          "japanese": "彼らはその賞を受け取って喜びました",
+          "sentence": "They were happy ____ receive the prize.",
+          "verb": "infinitive",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "副詞的用法: 感情の原因",
+          "hint": "happy to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-017",
-          "japanese": "私はいつも愛する",
-          "sentence": "I ____ animals always.",
-          "verb": "love",
+          "japanese": "私はどこに行くべきか知りません",
+          "sentence": "I don't know where ____ go.",
+          "verb": "infinitive",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "疑問詞 + to不定詞",
+          "hint": "where to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-018",
-          "japanese": "あなたはよくbeする",
-          "sentence": "You ____  often.",
-          "verb": "be",
+          "japanese": "彼女は何を言うべきか分かりませんでした",
+          "sentence": "She didn't know what ____ say.",
+          "verb": "infinitive",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "be",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "疑問詞 + to不定詞",
+          "hint": "what to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-019",
-          "japanese": "私は毎日訪れる",
-          "sentence": "I ____ Tokyo every day.",
-          "verb": "visit",
+          "japanese": "私にいつ始めるべきか教えてください",
+          "sentence": "Please tell me when ____ start.",
+          "verb": "infinitive",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "疑問詞 + to不定詞",
+          "hint": "when to + 動詞原形"
         },
         {
           "id": "vf-g3-u4-020",
-          "japanese": "あなたは普段使う",
-          "sentence": "You ____ a computer usually.",
-          "verb": "use",
+          "japanese": "彼はどうやってそれを使うべきか知っています",
+          "sentence": "He knows how ____ use it.",
+          "verb": "infinitive",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "explanation": "疑問詞 + to不定詞",
+          "hint": "how to + 動詞原形"
         }
       ],
       "fillInBlank": [
@@ -17158,323 +17158,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u5-001",
-          "japanese": "彼は毎日英語を勉強する",
-          "sentence": "He ____ English every day.",
-          "verb": "study",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "verb": "gerund",
           "choices": [
-            "study",
-            "studies",
-            "studyed",
-            "studying"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "studies",
-          "difficulty": "beginner",
-          "explanation": "主語がhe（三人称単数）で、every dayという現在の習慣を表すため、studyに-sまたは-esを付けてstudiesとします。I/You/We/Theyならstudyのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
           "id": "vf-g3-u5-002",
-          "japanese": "トムは普段サッカーをする",
-          "sentence": "Tom ____ soccer usually.",
-          "verb": "play",
+          "japanese": "本を読むことは私の趣味です",
+          "sentence": "____ books is my hobby.",
+          "verb": "gerund",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "Reading",
+            "Read",
+            "To read",
+            "Reads"
           ],
-          "correctAnswer": "plays",
-          "difficulty": "beginner",
-          "explanation": "主語がTom（三人称単数）で、usuallyという現在の習慣を表すため、playに-sまたは-esを付けてplaysとします。I/You/We/Theyならplayのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Reading",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
           "id": "vf-g3-u5-003",
-          "japanese": "私の父はいつも東京を訪れる",
-          "sentence": "My father ____ Tokyo always.",
-          "verb": "visit",
+          "japanese": "早起きすることは健康に良いです",
+          "sentence": "____ up early is good for health.",
+          "verb": "gerund",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "Getting",
+            "Get",
+            "To get",
+            "Gets"
           ],
-          "correctAnswer": "visits",
-          "difficulty": "beginner",
-          "explanation": "主語がmy father（三人称単数）で、alwaysという現在の習慣を表すため、visitに-sまたは-esを付けてvisitsとします。I/You/We/Theyならvisitのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Getting",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
           "id": "vf-g3-u5-004",
-          "japanese": "私の兄弟はよくコンピュータを使う",
-          "sentence": "My brother ____ a computer often.",
-          "verb": "use",
+          "japanese": "水泳は良い運動です",
+          "sentence": "____ is good exercise.",
+          "verb": "gerund",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "Swimming",
+            "Swim",
+            "To swim",
+            "Swims"
           ],
-          "correctAnswer": "uses",
-          "difficulty": "beginner",
-          "explanation": "主語がmy brother（三人称単数）で、oftenという現在の習慣を表すため、useに-sまたは-esを付けてusesとします。I/You/We/Theyならuseのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Swimming",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-005",
-          "japanese": "Johnは時々一生懸命働く",
-          "sentence": "John ____ hard sometimes.",
-          "verb": "work",
+          "id": "vf-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "verb": "gerund",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "works",
-          "difficulty": "beginner",
-          "explanation": "主語がJohn（三人称単数）で、sometimesという現在の習慣を表すため、workに-sまたは-esを付けてworksとします。I/You/We/Theyならworkのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-006",
-          "japanese": "Mikeは今母を手伝う",
-          "sentence": "Mike ____ my mother now.",
-          "verb": "help",
+          "id": "vf-g3-u5-002",
+          "japanese": "本を読むことは私の趣味です",
+          "sentence": "____ books is my hobby.",
+          "verb": "gerund",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "Reading",
+            "Read",
+            "To read",
+            "Reads"
           ],
-          "correctAnswer": "helps",
-          "difficulty": "beginner",
-          "explanation": "主語がMike（三人称単数）で、nowという現在の習慣を表すため、helpに-sまたは-esを付けてhelpsとします。I/You/We/Theyならhelpのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Reading",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-007",
-          "japanese": "Kenは毎日犬が欲しい",
-          "sentence": "Ken ____ a dog every day.",
-          "verb": "want",
+          "id": "vf-g3-u5-003",
+          "japanese": "早起きすることは健康に良いです",
+          "sentence": "____ up early is good for health.",
+          "verb": "gerund",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "Getting",
+            "Get",
+            "To get",
+            "Gets"
           ],
-          "correctAnswer": "wants",
-          "difficulty": "beginner",
-          "explanation": "主語がKen（三人称単数）で、every dayという現在の習慣を表すため、wantに-sまたは-esを付けてwantsとします。I/You/We/Theyならwantのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Getting",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-008",
-          "japanese": "彼女は普段助けが必要とする",
-          "sentence": "She ____ help usually.",
-          "verb": "need",
+          "id": "vf-g3-u5-004",
+          "japanese": "水泳は良い運動です",
+          "sentence": "____ is good exercise.",
+          "verb": "gerund",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "Swimming",
+            "Swim",
+            "To swim",
+            "Swims"
           ],
-          "correctAnswer": "needs",
-          "difficulty": "beginner",
-          "explanation": "主語がshe（三人称単数）で、usuallyという現在の習慣を表すため、needに-sまたは-esを付けてneedsとします。I/You/We/Theyならneedのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Swimming",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-009",
-          "japanese": "メアリーはいつも音楽が好む",
-          "sentence": "Mary ____ music always.",
-          "verb": "like",
+          "id": "vf-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "verb": "gerund",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "likes",
-          "difficulty": "beginner",
-          "explanation": "主語がMary（三人称単数）で、alwaysという現在の習慣を表すため、likeに-sまたは-esを付けてlikesとします。I/You/We/Theyならlikeのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-010",
-          "japanese": "私の母はよく動物が愛する",
-          "sentence": "My mother ____ animals often.",
-          "verb": "love",
+          "id": "vf-g3-u5-002",
+          "japanese": "本を読むことは私の趣味です",
+          "sentence": "____ books is my hobby.",
+          "verb": "gerund",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "Reading",
+            "Read",
+            "To read",
+            "Reads"
           ],
-          "correctAnswer": "loves",
-          "difficulty": "beginner",
-          "explanation": "主語がmy mother（三人称単数）で、oftenという現在の習慣を表すため、loveに-sまたは-esを付けてlovesとします。I/You/We/Theyならloveのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Reading",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-011",
-          "japanese": "私の姉妹は時々東京に住む",
-          "sentence": "My sister ____ in Tokyo sometimes.",
-          "verb": "live",
+          "id": "vf-g3-u5-003",
+          "japanese": "早起きすることは健康に良いです",
+          "sentence": "____ up early is good for health.",
+          "verb": "gerund",
           "choices": [
-            "live",
-            "lives",
-            "liveed",
-            "liveing"
+            "Getting",
+            "Get",
+            "To get",
+            "Gets"
           ],
-          "correctAnswer": "lives",
-          "difficulty": "beginner",
-          "explanation": "主語がmy sister（三人称単数）で、sometimesという現在の習慣を表すため、liveに-sまたは-esを付けてlivesとします。I/You/We/Theyならliveのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Getting",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-012",
-          "japanese": "Janeは今大阪へ動く",
-          "sentence": "Jane ____ to Osaka now.",
-          "verb": "move",
+          "id": "vf-g3-u5-004",
+          "japanese": "水泳は良い運動です",
+          "sentence": "____ is good exercise.",
+          "verb": "gerund",
           "choices": [
-            "move",
-            "moves",
-            "moveed",
-            "moveing"
+            "Swimming",
+            "Swim",
+            "To swim",
+            "Swims"
           ],
-          "correctAnswer": "moves",
-          "difficulty": "beginner",
-          "explanation": "主語がJane（三人称単数）で、nowという現在の習慣を表すため、moveに-sまたは-esを付けてmovesとします。I/You/We/Theyならmoveのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Swimming",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-013",
-          "japanese": "Emilyは毎日宿題を始める",
-          "sentence": "Emily ____ homework every day.",
-          "verb": "start",
+          "id": "vf-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "verb": "gerund",
           "choices": [
-            "start",
-            "starts",
-            "started",
-            "starting"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "starts",
-          "difficulty": "beginner",
-          "explanation": "主語がEmily（三人称単数）で、every dayという現在の習慣を表すため、startに-sまたは-esを付けてstartsとします。I/You/We/Theyならstartのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-014",
-          "japanese": "Lisaは普段昼食を終える",
-          "sentence": "Lisa ____ lunch usually.",
-          "verb": "finish",
+          "id": "vf-g3-u5-002",
+          "japanese": "本を読むことは私の趣味です",
+          "sentence": "____ books is my hobby.",
+          "verb": "gerund",
           "choices": [
-            "finish",
-            "finishes",
-            "finished",
-            "finishing"
+            "Reading",
+            "Read",
+            "To read",
+            "Reads"
           ],
-          "correctAnswer": "finishes",
-          "difficulty": "beginner",
-          "explanation": "主語がLisa（三人称単数）で、usuallyという現在の習慣を表すため、finishに-sまたは-esを付けてfinishesとします。I/You/We/Theyならfinishのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Reading",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-015",
-          "japanese": "それはいつもピアノを練習する",
-          "sentence": "It ____ piano always.",
-          "verb": "practice",
+          "id": "vf-g3-u5-003",
+          "japanese": "早起きすることは健康に良いです",
+          "sentence": "____ up early is good for health.",
+          "verb": "gerund",
           "choices": [
-            "practice",
-            "practices",
-            "practiceed",
-            "practiceing"
+            "Getting",
+            "Get",
+            "To get",
+            "Gets"
           ],
-          "correctAnswer": "practices",
-          "difficulty": "beginner",
-          "explanation": "主語がit（三人称単数）で、alwaysという現在の習慣を表すため、practiceに-sまたは-esを付けてpracticesとします。I/You/We/Theyならpracticeのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Getting",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-016",
-          "japanese": "その犬はよくテレビを見る",
-          "sentence": "The dog ____ TV often.",
-          "verb": "watch",
+          "id": "vf-g3-u5-004",
+          "japanese": "水泳は良い運動です",
+          "sentence": "____ is good exercise.",
+          "verb": "gerund",
           "choices": [
-            "watch",
-            "watches",
-            "watched",
-            "watching"
+            "Swimming",
+            "Swim",
+            "To swim",
+            "Swims"
           ],
-          "correctAnswer": "watches",
-          "difficulty": "beginner",
-          "explanation": "主語がthe dog（三人称単数）で、oftenという現在の習慣を表すため、watchに-sまたは-esを付けてwatchesとします。I/You/We/Theyならwatchのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Swimming",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-017",
-          "japanese": "その猫は時々音楽を聞く",
-          "sentence": "The cat ____ to music sometimes.",
-          "verb": "listen",
+          "id": "vf-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "verb": "gerund",
           "choices": [
-            "listen",
-            "listens",
-            "listened",
-            "listening"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "listens",
-          "difficulty": "beginner",
-          "explanation": "主語がthe cat（三人称単数）で、sometimesという現在の習慣を表すため、listenに-sまたは-esを付けてlistensとします。I/You/We/Theyならlistenのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-018",
-          "japanese": "彼は普段写真を見る",
-          "sentence": "He ____ at pictures usually.",
-          "verb": "look",
+          "id": "vf-g3-u5-002",
+          "japanese": "本を読むことは私の趣味です",
+          "sentence": "____ books is my hobby.",
+          "verb": "gerund",
           "choices": [
-            "look",
-            "looks",
-            "looked",
-            "looking"
+            "Reading",
+            "Read",
+            "To read",
+            "Reads"
           ],
-          "correctAnswer": "looks",
-          "difficulty": "beginner",
-          "explanation": "主語がhe（三人称単数）で、usuallyという現在の習慣を表すため、lookに-sまたは-esを付けてlooksとします。I/You/We/Theyならlookのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Reading",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-019",
-          "japanese": "トムはいつも英語を勉強する",
-          "sentence": "Tom ____ English always.",
-          "verb": "study",
+          "id": "vf-g3-u5-003",
+          "japanese": "早起きすることは健康に良いです",
+          "sentence": "____ up early is good for health.",
+          "verb": "gerund",
           "choices": [
-            "study",
-            "studies",
-            "studyed",
-            "studying"
+            "Getting",
+            "Get",
+            "To get",
+            "Gets"
           ],
-          "correctAnswer": "studies",
-          "difficulty": "beginner",
-          "explanation": "主語がTom（三人称単数）で、alwaysという現在の習慣を表すため、studyに-sまたは-esを付けてstudiesとします。I/You/We/Theyならstudyのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Getting",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         },
         {
-          "id": "vf-g3-u5-020",
-          "japanese": "私の父はよくサッカーをする",
-          "sentence": "My father ____ soccer often.",
-          "verb": "play",
+          "id": "vf-g3-u5-004",
+          "japanese": "水泳は良い運動です",
+          "sentence": "____ is good exercise.",
+          "verb": "gerund",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "Swimming",
+            "Swim",
+            "To swim",
+            "Swims"
           ],
-          "correctAnswer": "plays",
-          "difficulty": "beginner",
-          "explanation": "主語がmy father（三人称単数）で、oftenという現在の習慣を表すため、playに-sまたは-esを付けてplaysとします。I/You/We/Theyならplayのままですが、He/She/Itは必ず-s/-esを付けます。",
-          "hint": "三人称単数現在形は動詞に-s/-esを付ける"
+          "correctAnswer": "Swimming",
+          "difficulty": "intermediate",
+          "explanation": "動名詞を主語にする",
+          "hint": "動詞-ing形"
         }
       ],
       "fillInBlank": [
@@ -20588,323 +20588,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u6-001",
-          "japanese": "私は毎日勉強する",
-          "sentence": "I ____ English every day.",
-          "verb": "study",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-002",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
-          "verb": "play",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-003",
-          "japanese": "私は時々働く",
-          "sentence": "I ____ hard sometimes.",
-          "verb": "work",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-004",
-          "japanese": "あなたは今手伝う",
-          "sentence": "You ____ my mother now.",
-          "verb": "help",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-005",
-          "japanese": "私はいつも好む",
-          "sentence": "I ____ music always.",
-          "verb": "like",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-006",
-          "japanese": "あなたはよく愛する",
-          "sentence": "You ____ animals often.",
-          "verb": "love",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-007",
-          "japanese": "私は毎日始める",
-          "sentence": "I ____ homework every day.",
-          "verb": "start",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "start",
-            "starts",
-            "started",
-            "starting"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "start",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstartを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-008",
-          "japanese": "あなたは普段終える",
-          "sentence": "You ____ lunch usually.",
-          "verb": "finish",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "finish",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-009",
-          "japanese": "私は時々する",
-          "sentence": "I ____ soccer sometimes.",
-          "verb": "play",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-010",
-          "japanese": "あなたは今訪れる",
-          "sentence": "You ____ Tokyo now.",
-          "verb": "visit",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-011",
-          "japanese": "私はいつも手伝う",
-          "sentence": "I ____ my mother always.",
-          "verb": "help",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-012",
-          "japanese": "あなたはよく欲しい",
-          "sentence": "You ____ a dog often.",
-          "verb": "want",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-013",
-          "japanese": "私は毎日愛する",
-          "sentence": "I ____ animals every day.",
-          "verb": "love",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-014",
-          "japanese": "あなたは普段住む",
-          "sentence": "You ____ in Tokyo usually.",
-          "verb": "live",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "live",
-            "lives",
-            "liveed",
-            "liveing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "live",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままliveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-015",
-          "japanese": "私は時々終える",
-          "sentence": "I ____ lunch sometimes.",
-          "verb": "finish",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "finish",
-            "finishs",
-            "finished",
-            "finishing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "finish",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままfinishを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-016",
-          "japanese": "あなたは今練習する",
-          "sentence": "You ____ piano now.",
-          "verb": "practice",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "practice",
-            "practices",
-            "practiceed",
-            "practiceing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "practice",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままpracticeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-017",
-          "japanese": "私はいつも訪れる",
-          "sentence": "I ____ Tokyo always.",
-          "verb": "visit",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-018",
-          "japanese": "あなたはよく使う",
-          "sentence": "You ____ a computer often.",
-          "verb": "use",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-019",
-          "japanese": "私は毎日欲しい",
-          "sentence": "I ____ a dog every day.",
-          "verb": "want",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         },
         {
           "id": "vf-g3-u6-020",
-          "japanese": "あなたは普段必要とする",
-          "sentence": "You ____ help usually.",
-          "verb": "need",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy ____ over there is my brother.",
+          "verb": "participle",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "need",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままneedを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在分詞で名詞を修飾",
+          "hint": "-ing形で「~している」"
         }
       ],
       "fillInBlank": [
@@ -24018,323 +24018,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u7-001",
-          "japanese": "私は毎日beする",
-          "sentence": "I ____  every day.",
-          "verb": "be",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "be",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-002",
-          "japanese": "あなたは普段勉強する",
-          "sentence": "You ____ English usually.",
-          "verb": "study",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-003",
-          "japanese": "私は時々使う",
-          "sentence": "I ____ a computer sometimes.",
-          "verb": "use",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-004",
-          "japanese": "あなたは今働く",
-          "sentence": "You ____ hard now.",
-          "verb": "work",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-005",
-          "japanese": "私はいつも必要とする",
-          "sentence": "I ____ help always.",
-          "verb": "need",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "need",
-            "needs",
-            "needed",
-            "needing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "need",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままneedを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-006",
-          "japanese": "あなたはよく好む",
-          "sentence": "You ____ music often.",
-          "verb": "like",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-007",
-          "japanese": "私は毎日勉強する",
-          "sentence": "I ____ English every day.",
-          "verb": "study",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "study",
-            "studys",
-            "studyed",
-            "studying"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "study",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままstudyを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-008",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
-          "verb": "play",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-009",
-          "japanese": "私は時々働く",
-          "sentence": "I ____ hard sometimes.",
-          "verb": "work",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "work",
-            "works",
-            "worked",
-            "working"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "work",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままworkを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-010",
-          "japanese": "あなたは今手伝う",
-          "sentence": "You ____ my mother now.",
-          "verb": "help",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-011",
-          "japanese": "私はいつも好む",
-          "sentence": "I ____ music always.",
-          "verb": "like",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "like",
-            "likes",
-            "likeed",
-            "likeing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "like",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままlikeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-012",
-          "japanese": "あなたはよく愛する",
-          "sentence": "You ____ animals often.",
-          "verb": "love",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-013",
-          "japanese": "私は毎日する",
-          "sentence": "I ____ soccer every day.",
-          "verb": "play",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "play",
-            "plays",
-            "played",
-            "playing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "play",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-014",
-          "japanese": "あなたは普段訪れる",
-          "sentence": "You ____ Tokyo usually.",
-          "verb": "visit",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-015",
-          "japanese": "私は時々手伝う",
-          "sentence": "I ____ my mother sometimes.",
-          "verb": "help",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "help",
-            "helps",
-            "helped",
-            "helping"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "help",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままhelpを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-016",
-          "japanese": "あなたは今欲しい",
-          "sentence": "You ____ a dog now.",
-          "verb": "want",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "want",
-            "wants",
-            "wanted",
-            "wanting"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "want",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままwantを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-017",
-          "japanese": "私はいつも愛する",
-          "sentence": "I ____ animals always.",
-          "verb": "love",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "love",
-            "loves",
-            "loveed",
-            "loveing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "love",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままloveを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-018",
-          "japanese": "あなたはよくbeする",
-          "sentence": "You ____  often.",
-          "verb": "be",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "be",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-019",
-          "japanese": "私は毎日訪れる",
-          "sentence": "I ____ Tokyo every day.",
-          "verb": "visit",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "visit",
-            "visits",
-            "visited",
-            "visiting"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "visit",
-          "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままvisitを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         },
         {
           "id": "vf-g3-u7-020",
-          "japanese": "あなたは普段使う",
-          "sentence": "You ____ a computer usually.",
-          "verb": "use",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "verb": "subjunctive",
           "choices": [
-            "use",
-            "uses",
-            "useed",
-            "useing"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "use",
-          "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
-          "hint": "I/You/We/Theyの場合は動詞の原形"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "explanation": "仮定法過去: were",
+          "hint": "If I were"
         }
       ],
       "fillInBlank": [
@@ -27448,323 +27448,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u8-001",
-          "japanese": "私は今勉強するている",
-          "sentence": "I am ____ English now.",
-          "verb": "study",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "study",
-            "studying",
-            "studyed",
-            "studys"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "studying",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Iのbe動詞はam、studyのing形はstudyingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-002",
-          "japanese": "あなたは今するている",
-          "sentence": "You are ____ soccer now.",
-          "verb": "play",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "play",
-            "playying",
-            "played",
-            "plays"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "playying",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。youのbe動詞はare、playのing形はplayyingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-003",
-          "japanese": "私の父は今訪れるている",
-          "sentence": "My father is ____ Tokyo now.",
-          "verb": "visit",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "visit",
-            "visitting",
-            "visited",
-            "visits"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "visitting",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。my fatherのbe動詞はis、visitのing形はvisittingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-004",
-          "japanese": "私の姉妹は今使うている",
-          "sentence": "My sister is ____ a computer now.",
-          "verb": "use",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "use",
-            "using",
-            "useed",
-            "uses"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "using",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。my sisterのbe動詞はis、useのing形はusingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-005",
-          "japanese": "私たちは今働くている",
-          "sentence": "We are ____ hard now.",
-          "verb": "work",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "work",
-            "working",
-            "worked",
-            "works"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "working",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。weのbe動詞はare、workのing形はworkingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-006",
-          "japanese": "私は今欲しいている",
-          "sentence": "I am ____ a dog now.",
-          "verb": "want",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "want",
-            "wanting",
-            "wanted",
-            "wants"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "wanting",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Iのbe動詞はam、wantのing形はwantingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-007",
-          "japanese": "あなたは今必要とするている",
-          "sentence": "You are ____ help now.",
-          "verb": "need",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "need",
-            "needing",
-            "needed",
-            "needs"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "needing",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。youのbe動詞はare、needのing形はneedingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-008",
-          "japanese": "トムは今好むている",
-          "sentence": "Tom is ____ music now.",
-          "verb": "like",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "like",
-            "liking",
-            "likeed",
-            "likes"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "liking",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Tomのbe動詞はis、likeのing形はlikingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-009",
-          "japanese": "私の母は今愛するている",
-          "sentence": "My mother is ____ animals now.",
-          "verb": "love",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "love",
-            "loving",
-            "loveed",
-            "loves"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "loving",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。my motherのbe動詞はis、loveのing形はlovingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-010",
-          "japanese": "私は今始めるている",
-          "sentence": "I am ____ homework now.",
-          "verb": "start",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "start",
-            "starting",
-            "started",
-            "starts"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "starting",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Iのbe動詞はam、startのing形はstartingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-011",
-          "japanese": "あなたは今終えるている",
-          "sentence": "You are ____ lunch now.",
-          "verb": "finish",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "finish",
-            "finishing",
-            "finished",
-            "finishs"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "finishing",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。youのbe動詞はare、finishのing形はfinishingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-012",
-          "japanese": "彼は今練習するている",
-          "sentence": "He is ____ piano now.",
-          "verb": "practice",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "practice",
-            "practicing",
-            "practiceed",
-            "practices"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "practicing",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。heのbe動詞はis、practiceのing形はpracticingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-013",
-          "japanese": "メアリーは今見るている",
-          "sentence": "Mary is ____ TV now.",
-          "verb": "watch",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "watch",
-            "watching",
-            "watched",
-            "watchs"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "watching",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Maryのbe動詞はis、watchのing形はwatchingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-014",
-          "japanese": "私たちは今聞くている",
-          "sentence": "We are ____ to music now.",
-          "verb": "listen",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "listen",
-            "listenning",
-            "listened",
-            "listens"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "listenning",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。weのbe動詞はare、listenのing形はlistenningです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-015",
-          "japanese": "私は今歩くている",
-          "sentence": "I am ____ to school now.",
-          "verb": "walk",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "walk",
-            "walking",
-            "walked",
-            "walks"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "walking",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Iのbe動詞はam、walkのing形はwalkingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-016",
-          "japanese": "あなたは今見るている",
-          "sentence": "You are ____ at pictures now.",
-          "verb": "look",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "look",
-            "looking",
-            "looked",
-            "looks"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "looking",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。youのbe動詞はare、lookのing形はlookingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-017",
-          "japanese": "Kenは今勉強するている",
-          "sentence": "Ken is ____ English now.",
-          "verb": "study",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "study",
-            "studying",
-            "studyed",
-            "studys"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "studying",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Kenのbe動詞はis、studyのing形はstudyingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-018",
-          "japanese": "彼女は今するている",
-          "sentence": "She is ____ soccer now.",
-          "verb": "play",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "play",
-            "playying",
-            "played",
-            "plays"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "playying",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。sheのbe動詞はis、playのing形はplayyingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-019",
-          "japanese": "私は今働くている",
-          "sentence": "I am ____ hard now.",
-          "verb": "work",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "work",
-            "working",
-            "worked",
-            "works"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "working",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。Iのbe動詞はam、workのing形はworkingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         },
         {
           "id": "vf-g3-u8-020",
-          "japanese": "あなたは今手伝うている",
-          "sentence": "You are ____ my mother now.",
-          "verb": "help",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "verb": "indirect",
           "choices": [
-            "help",
-            "helping",
-            "helped",
-            "helps"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "helping",
-          "difficulty": "beginner",
-          "explanation": "現在進行形は「be動詞 + 動詞のing形」で作ります。youのbe動詞はare、helpのing形はhelpingです。nowがあるので、今まさに行っている動作を表す現在進行形を使います。",
-          "hint": "現在進行形はbe動詞 + 動詞のing形"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "explanation": "間接疑問文: 平叙文の語順",
+          "hint": "where he lives"
         }
       ],
       "fillInBlank": [
@@ -30878,323 +30878,323 @@
       "verbForm": [
         {
           "id": "vf-g3-u9-001",
-          "japanese": "私は昨日beするした",
-          "sentence": "I ____  yesterday.",
-          "verb": "be",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "be",
-            "was",
-            "being",
-            "bes"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形wasを使います。beは不規則動詞で、過去形はwasです。",
-          "hint": "過去の時を表すyesterdayがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-002",
-          "japanese": "あなたは先週持つした",
-          "sentence": "You ____ a pen last week.",
-          "verb": "have",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "have",
-            "had",
-            "haveing",
-            "haves"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "had",
-          "difficulty": "beginner",
-          "explanation": "last weekという過去の時を表す語があるので、過去形hadを使います。haveは不規則動詞で、過去形はhadです。",
-          "hint": "過去の時を表すlast weekがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-003",
-          "japanese": "私の父は去年doするした",
-          "sentence": "My father ____  last year.",
-          "verb": "do",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "do",
-            "did",
-            "doing",
-            "dos"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "did",
-          "difficulty": "beginner",
-          "explanation": "last yearという過去の時を表す語があるので、過去形didを使います。doは不規則動詞で、過去形はdidです。",
-          "hint": "過去の時を表すlast yearがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-004",
-          "japanese": "私の姉妹は2日前に行くした",
-          "sentence": "My sister ____  two days ago.",
-          "verb": "go",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "go",
-            "went",
-            "going",
-            "gos"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "went",
-          "difficulty": "beginner",
-          "explanation": "two days agoという過去の時を表す語があるので、過去形wentを使います。goは不規則動詞で、過去形はwentです。",
-          "hint": "過去の時を表すtwo days agoがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-005",
-          "japanese": "私たちは先月来るした",
-          "sentence": "We ____  last month.",
-          "verb": "come",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "come",
-            "came",
-            "comeing",
-            "comes"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "came",
-          "difficulty": "beginner",
-          "explanation": "last monthという過去の時を表す語があるので、過去形cameを使います。comeは不規則動詞で、過去形はcameです。",
-          "hint": "過去の時を表すlast monthがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-006",
-          "japanese": "私は先週makeするした",
-          "sentence": "I ____  last week.",
-          "verb": "make",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "make",
-            "made",
-            "makeing",
-            "makes"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "made",
-          "difficulty": "beginner",
-          "explanation": "last weekという過去の時を表す語があるので、過去形madeを使います。makeは不規則動詞で、過去形はmadeです。",
-          "hint": "過去の時を表すlast weekがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-007",
-          "japanese": "あなたは去年takeするした",
-          "sentence": "You ____  last year.",
-          "verb": "take",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "take",
-            "took",
-            "takeing",
-            "takes"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "took",
-          "difficulty": "beginner",
-          "explanation": "last yearという過去の時を表す語があるので、過去形tookを使います。takeは不規則動詞で、過去形はtookです。",
-          "hint": "過去の時を表すlast yearがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-008",
-          "japanese": "トムは2日前に見るした",
-          "sentence": "Tom ____  two days ago.",
-          "verb": "see",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "see",
-            "saw",
-            "seeing",
-            "sees"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "saw",
-          "difficulty": "beginner",
-          "explanation": "two days agoという過去の時を表す語があるので、過去形sawを使います。seeは不規則動詞で、過去形はsawです。",
-          "hint": "過去の時を表すtwo days agoがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-009",
-          "japanese": "私の母は先月knowするした",
-          "sentence": "My mother ____  last month.",
-          "verb": "know",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "know",
-            "knew",
-            "knowing",
-            "knows"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "knew",
-          "difficulty": "beginner",
-          "explanation": "last monthという過去の時を表す語があるので、過去形knewを使います。knowは不規則動詞で、過去形はknewです。",
-          "hint": "過去の時を表すlast monthがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-010",
-          "japanese": "私は去年findするした",
-          "sentence": "I ____  last year.",
-          "verb": "find",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "find",
-            "found",
-            "finding",
-            "finds"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "found",
-          "difficulty": "beginner",
-          "explanation": "last yearという過去の時を表す語があるので、過去形foundを使います。findは不規則動詞で、過去形はfoundです。",
-          "hint": "過去の時を表すlast yearがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-011",
-          "japanese": "あなたは2日前にtellするした",
-          "sentence": "You ____  two days ago.",
-          "verb": "tell",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "tell",
-            "told",
-            "telling",
-            "tells"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "told",
-          "difficulty": "beginner",
-          "explanation": "two days agoという過去の時を表す語があるので、過去形toldを使います。tellは不規則動詞で、過去形はtoldです。",
-          "hint": "過去の時を表すtwo days agoがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-012",
-          "japanese": "彼は先月becomeするした",
-          "sentence": "He ____  last month.",
-          "verb": "become",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "become",
-            "became",
-            "becomeing",
-            "becomes"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "became",
-          "difficulty": "beginner",
-          "explanation": "last monthという過去の時を表す語があるので、過去形becameを使います。becomeは不規則動詞で、過去形はbecameです。",
-          "hint": "過去の時を表すlast monthがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-013",
-          "japanese": "メアリーは昨日勉強するした",
-          "sentence": "Mary ____ English yesterday.",
-          "verb": "study",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "study",
-            "studied",
-            "studying",
-            "studys"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "studied",
-          "difficulty": "beginner",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形studiedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すyesterdayがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-014",
-          "japanese": "私たちは先週するした",
-          "sentence": "We ____ soccer last week.",
-          "verb": "play",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "play",
-            "playyed",
-            "playing",
-            "plays"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "playyed",
-          "difficulty": "beginner",
-          "explanation": "last weekという過去の時を表す語があるので、過去形playyedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すlast weekがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-015",
-          "japanese": "私は2日前に使うした",
-          "sentence": "I ____ a computer two days ago.",
-          "verb": "use",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "use",
-            "used",
-            "useing",
-            "uses"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "used",
-          "difficulty": "beginner",
-          "explanation": "two days agoという過去の時を表す語があるので、過去形usedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すtwo days agoがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-016",
-          "japanese": "あなたは先月働くした",
-          "sentence": "You ____ hard last month.",
-          "verb": "work",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "work",
-            "worked",
-            "working",
-            "works"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "worked",
-          "difficulty": "beginner",
-          "explanation": "last monthという過去の時を表す語があるので、過去形workedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すlast monthがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-017",
-          "japanese": "Kenは昨日手伝うした",
-          "sentence": "Ken ____ my mother yesterday.",
-          "verb": "help",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "help",
-            "helped",
-            "helping",
-            "helps"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "helped",
-          "difficulty": "beginner",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形helpedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すyesterdayがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-018",
-          "japanese": "彼女は先週欲しいした",
-          "sentence": "She ____ a dog last week.",
-          "verb": "want",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "want",
-            "wanted",
-            "wanting",
-            "wants"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "wanted",
-          "difficulty": "beginner",
-          "explanation": "last weekという過去の時を表す語があるので、過去形wantedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すlast weekがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-019",
-          "japanese": "私は先月愛するした",
-          "sentence": "I ____ animals last month.",
-          "verb": "love",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "love",
-            "loved",
-            "loveing",
-            "loves"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "loved",
-          "difficulty": "beginner",
-          "explanation": "last monthという過去の時を表す語があるので、過去形lovedを使います。規則動詞は-edを付けて過去形を作ります。",
-          "hint": "過去の時を表すlast monthがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         },
         {
           "id": "vf-g3-u9-020",
-          "japanese": "あなたは昨日beするした",
-          "sentence": "You ____  yesterday.",
-          "verb": "be",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "verb": "comparative",
           "choices": [
-            "be",
-            "was",
-            "being",
-            "bes"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "was",
-          "difficulty": "beginner",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形wasを使います。beは不規則動詞で、過去形はwasです。",
-          "hint": "過去の時を表すyesterdayがあるので過去形"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "explanation": "比較級: -er",
+          "hint": "taller than"
         }
       ],
       "fillInBlank": [

@@ -1610,303 +1610,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u0-001",
-          "japanese": "この本は多くの人々に読まれています",
-          "sentence": "This book is ____ by many people.",
+          "japanese": "英語は世界中で話されています",
+          "sentence": "English is ____ around the world.",
           "choices": [
-            "read",
-            "reading",
-            "reads",
-            "to read"
+            "speak",
+            "spoke",
+            "spoken",
+            "speaking"
           ],
-          "correctAnswer": "read",
-          "difficulty": "beginner",
-          "explanation": "受動態は be + 過去分詞。read の過去分詞は綴りは同じで発音が異なる。",
-          "hint": "be + 過去分詞（read）"
+          "correctAnswer": "spoken",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-002",
-          "japanese": "その手紙は彼によって書かれました",
-          "sentence": "The letter was written ____ him.",
+          "japanese": "この本は多くの人に読まれています",
+          "sentence": "This book is ____ by many people.",
           "choices": [
-            "by",
-            "from",
-            "to",
-            "for"
+            "read",
+            "read",
+            "reads",
+            "reading"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "受動態で行為者を表す前置詞は by。",
-          "hint": "行為者は by ～"
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-003",
-          "japanese": "この橋は1990年に建てられました",
-          "sentence": "This bridge was built ____ 1990.",
+          "japanese": "その手紙は彼女によって書かれました",
+          "sentence": "The letter was ____ by her.",
           "choices": [
-            "in",
-            "on",
-            "at",
-            "since"
+            "write",
+            "wrote",
+            "written",
+            "writing"
           ],
-          "correctAnswer": "in",
+          "correctAnswer": "written",
           "difficulty": "intermediate",
-          "explanation": "年・月には in を用いる（on は日付、at は時刻）。",
-          "hint": "年・月 → in"
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-004",
-          "japanese": "英語は世界中で話されています",
-          "sentence": "English is spoken ____ the world.",
+          "japanese": "この橋は1990年に建てられました",
+          "sentence": "This bridge was ____ in 1990.",
           "choices": [
-            "all over",
-            "by",
-            "with",
-            "through"
+            "build",
+            "built",
+            "builds",
+            "building"
           ],
-          "correctAnswer": "all over",
+          "correctAnswer": "built",
           "difficulty": "intermediate",
-          "explanation": "「世界中で」は all over the world が定型。前置詞句として一まとまりで覚える。",
-          "hint": "all over the world"
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-005",
-          "japanese": "この歌は多くの若者に知られています",
-          "sentence": "This song is well ____ among many young people.",
+          "japanese": "これらの車は日本で作られています",
+          "sentence": "These cars are ____ in Japan.",
           "choices": [
-            "known",
-            "know",
-            "knowing",
-            "to know"
+            "make",
+            "made",
+            "makes",
+            "making"
           ],
-          "correctAnswer": "known",
-          "difficulty": "advanced",
-          "explanation": "be known は「知られている」。受動態由来の慣用表現で、過去分詞 known を用いる。",
-          "hint": "be known（知られている）"
+          "correctAnswer": "made",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-006",
-          "japanese": "この部屋は昨日使われました",
-          "sentence": "This room was ____ yesterday.",
+          "japanese": "その問題は昨日解かれました",
+          "sentence": "The problem was ____ yesterday.",
           "choices": [
-            "used",
-            "using",
-            "use",
-            "to use"
+            "solve",
+            "solved",
+            "solves",
+            "solving"
           ],
-          "correctAnswer": "used",
-          "difficulty": "beginner",
-          "explanation": "受動の過去: was/were + p.p. used（規則過去分詞）。",
-          "hint": "was used"
+          "correctAnswer": "solved",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-007",
-          "japanese": "インターネットは世界中で使われています",
-          "sentence": "The Internet is used ____ the world.",
+          "japanese": "この歌は若者に愛されています",
+          "sentence": "This song is ____ by young people.",
           "choices": [
-            "all over",
-            "around",
-            "by",
-            "for"
+            "lov",
+            "loved",
+            "lovs",
+            "loving"
           ],
-          "correctAnswer": "all over",
+          "correctAnswer": "loved",
           "difficulty": "intermediate",
-          "explanation": "「世界中で」は all over the world を固定表現として覚える。",
-          "hint": "all over the world"
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-008",
-          "japanese": "その手紙はもう送られました",
-          "sentence": "The letter has been ____.",
+          "japanese": "彼の名前はよく知られています",
+          "sentence": "His name is well ____.",
           "choices": [
-            "sent",
-            "send",
-            "sending",
-            "to send"
+            "know",
+            "knew",
+            "known",
+            "knowing"
           ],
-          "correctAnswer": "sent",
-          "difficulty": "beginner",
-          "explanation": "現在完了受動: has/have been + p.p. send → sent。",
-          "hint": "has been sent"
+          "correctAnswer": "known",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-009",
-          "japanese": "この机は木で作られています",
-          "sentence": "This desk is made ____ wood.",
+          "japanese": "その窓は彼によって壊されました",
+          "sentence": "The window was ____ by him.",
           "choices": [
-            "of",
-            "from",
-            "with",
-            "by"
+            "break",
+            "broke",
+            "broken",
+            "breaking"
           ],
-          "correctAnswer": "of",
+          "correctAnswer": "broken",
           "difficulty": "intermediate",
-          "explanation": "材料を表す of（素材がそのまま残る）。from は変化する場合。",
-          "hint": "be made of ～"
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-010",
-          "japanese": "その車は彼によって修理されました",
-          "sentence": "The car was repaired ____ him.",
+          "japanese": "これらの写真は去年撮られました",
+          "sentence": "These photos were ____ last year.",
           "choices": [
-            "by",
-            "from",
-            "to",
-            "at"
+            "take",
+            "took",
+            "taken",
+            "taking"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "受動態の行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "taken",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-011",
-          "japanese": "この歌は多くの人々に知られている",
-          "sentence": "This song is well ____ by many people.",
+          "japanese": "その扉は開けられています",
+          "sentence": "The door is ____.",
           "choices": [
-            "known",
-            "know",
-            "knowing",
-            "to know"
+            "open",
+            "opened",
+            "opens",
+            "opening"
           ],
-          "correctAnswer": "known",
-          "difficulty": "beginner",
-          "explanation": "be known（知られている）は過去分詞 known。",
-          "hint": "be known"
+          "correctAnswer": "opened",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-012",
-          "japanese": "この机は金属で作られています",
-          "sentence": "This desk is made ____ metal.",
+          "japanese": "このコンピューターは使われていません",
+          "sentence": "This computer is not ____.",
           "choices": [
-            "of",
-            "from",
-            "with",
-            "by"
+            "us",
+            "used",
+            "uss",
+            "using"
           ],
-          "correctAnswer": "of",
+          "correctAnswer": "used",
           "difficulty": "intermediate",
-          "explanation": "素材がそのまま残る → of。",
-          "hint": "be made of"
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-013",
-          "japanese": "紙は木から作られます",
-          "sentence": "Paper is made ____ wood.",
+          "japanese": "その建物は1950年に建てられました",
+          "sentence": "The building was ____ in 1950.",
           "choices": [
-            "from",
-            "of",
-            "by",
-            "with"
+            "construct",
+            "constructed",
+            "constructs",
+            "constructing"
           ],
-          "correctAnswer": "from",
+          "correctAnswer": "constructed",
           "difficulty": "intermediate",
-          "explanation": "性質が変化 → from。",
-          "hint": "be made from"
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-014",
-          "japanese": "その手紙は彼女により送られました",
-          "sentence": "The letter was sent ____ her.",
+          "japanese": "多くの木が植えられました",
+          "sentence": "Many trees were ____.",
           "choices": [
-            "by",
-            "from",
-            "to",
-            "for"
+            "plant",
+            "planted",
+            "plants",
+            "planting"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "planted",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-015",
-          "japanese": "窓は彼らによって割られました",
-          "sentence": "The window was broken ____ them.",
+          "japanese": "その映画は世界中で見られています",
+          "sentence": "The movie is ____ worldwide.",
           "choices": [
-            "by",
-            "with",
-            "for",
-            "to"
+            "watch",
+            "watched",
+            "watchs",
+            "watching"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "watched",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-016",
-          "japanese": "この部屋は今掃除されています",
-          "sentence": "This room is ____ cleaned now.",
+          "japanese": "この部屋は毎日掃除されます",
+          "sentence": "This room is ____ every day.",
           "choices": [
-            "being",
-            "been",
-            "be",
-            "to be"
+            "clean",
+            "cleaned",
+            "cleans",
+            "cleaning"
           ],
-          "correctAnswer": "being",
+          "correctAnswer": "cleaned",
           "difficulty": "intermediate",
-          "explanation": "進行形受動: is being + p.p.",
-          "hint": "is being + p.p."
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-017",
-          "japanese": "その問題はもう解かれました",
-          "sentence": "The problem has been ____.",
+          "japanese": "その手紙は英語で書かれました",
+          "sentence": "The letter was ____ in English.",
           "choices": [
-            "solved",
-            "solve",
-            "solving",
-            "to solve"
+            "write",
+            "wrote",
+            "written",
+            "writing"
           ],
-          "correctAnswer": "solved",
-          "difficulty": "beginner",
-          "explanation": "完了受動: has been + p.p.",
-          "hint": "has been + p.p."
+          "correctAnswer": "written",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-018",
-          "japanese": "この映画は日本で知られています",
-          "sentence": "This movie is known ____ Japan.",
+          "japanese": "これらの製品は中国で製造されています",
+          "sentence": "These products are ____ in China.",
           "choices": [
-            "in",
-            "at",
-            "to",
-            "on"
+            "manufactur",
+            "manufactured",
+            "manufacturs",
+            "manufacturing"
           ],
-          "correctAnswer": "in",
-          "difficulty": "beginner",
-          "explanation": "場所は in Japan。",
-          "hint": "in + 場所"
+          "correctAnswer": "manufactured",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-019",
-          "japanese": "その歌は若者に愛されています",
-          "sentence": "The song is loved ____ young people.",
+          "japanese": "その絵は有名な画家によって描かれました",
+          "sentence": "The painting was ____ by a famous artist.",
           "choices": [
-            "by",
-            "to",
-            "for",
-            "with"
+            "paint",
+            "painted",
+            "paints",
+            "painting"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "painted",
+          "difficulty": "intermediate",
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         },
         {
           "id": "fb-g3-u0-020",
-          "japanese": "この問題はすぐに解かれるでしょう",
-          "sentence": "This problem will be ____ soon.",
+          "japanese": "この本は1999年に出版されました",
+          "sentence": "This book was ____ in 1999.",
           "choices": [
-            "solved",
-            "solve",
-            "being solved",
-            "to solve"
+            "publish",
+            "published",
+            "publishs",
+            "publishing"
           ],
-          "correctAnswer": "solved",
+          "correctAnswer": "published",
           "difficulty": "intermediate",
-          "explanation": "未来受動: will be + p.p.",
-          "hint": "will be + p.p."
+          "explanation": "受動態では過去分詞を使う。",
+          "hint": "be動詞の後は過去分詞"
         }
       ],
       "sentenceOrdering": [
@@ -5120,303 +5120,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u1-001",
-          "japanese": "そのドアは昨日閉められました",
-          "sentence": "The door was ____ yesterday.",
+          "japanese": "私は彼に会ったことがあります",
+          "sentence": "I have ____ him.",
           "choices": [
-            "closed",
-            "close",
-            "closing",
-            "to close"
+            "meet",
+            "met",
+            "meets",
+            "meeting"
           ],
-          "correctAnswer": "closed",
-          "difficulty": "beginner",
-          "explanation": "受動の過去: was + 過去分詞。",
-          "hint": "was + p.p."
+          "correctAnswer": "met",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-002",
-          "japanese": "この机は木で作られています",
-          "sentence": "This desk is made ____ wood.",
+          "japanese": "彼女は東京に行ったことがあります",
+          "sentence": "She has ____ to Tokyo.",
           "choices": [
-            "of",
-            "from",
-            "with",
-            "by"
+            "be",
+            "was",
+            "been",
+            "being"
           ],
-          "correctAnswer": "of",
+          "correctAnswer": "been",
           "difficulty": "intermediate",
-          "explanation": "素材がそのまま残る → of。",
-          "hint": "be made of"
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-003",
-          "japanese": "紙は木から作られます",
-          "sentence": "Paper is made ____ wood.",
+          "japanese": "私たちはその映画を見たことがあります",
+          "sentence": "We have ____ that movie.",
           "choices": [
-            "from",
-            "of",
-            "by",
-            "with"
+            "see",
+            "saw",
+            "seen",
+            "seeing"
           ],
-          "correctAnswer": "from",
+          "correctAnswer": "seen",
           "difficulty": "intermediate",
-          "explanation": "性質が変化 → from。",
-          "hint": "be made from"
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-004",
-          "japanese": "英語は世界中で話されています",
-          "sentence": "English is ____ all over the world.",
+          "japanese": "彼は宿題を終えました",
+          "sentence": "He has ____ his homework.",
           "choices": [
-            "spoken",
-            "speak",
-            "speaking",
-            "to speak"
+            "finish",
+            "finished",
+            "finishs",
+            "finishing"
           ],
-          "correctAnswer": "spoken",
-          "difficulty": "beginner",
-          "explanation": "speak の過去分詞 spoken。",
-          "hint": "be + p.p."
+          "correctAnswer": "finished",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-005",
-          "japanese": "この部屋は今掃除されています",
-          "sentence": "This room is ____ cleaned now.",
+          "japanese": "彼らはもう昼食を食べました",
+          "sentence": "They have already ____ lunch.",
           "choices": [
-            "being",
-            "been",
-            "be",
-            "to be"
+            "eat",
+            "ate",
+            "eaten",
+            "eating"
           ],
-          "correctAnswer": "being",
+          "correctAnswer": "eaten",
           "difficulty": "intermediate",
-          "explanation": "進行形受動: is being + p.p.",
-          "hint": "is being + p.p."
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-006",
-          "japanese": "その問題はすでに解かれています",
-          "sentence": "The problem has been ____ already.",
+          "japanese": "私はこの本を読んだことがありません",
+          "sentence": "I have never ____ this book.",
           "choices": [
-            "solved",
-            "solve",
-            "solving",
-            "to solve"
+            "read",
+            "read",
+            "reads",
+            "reading"
           ],
-          "correctAnswer": "solved",
-          "difficulty": "beginner",
-          "explanation": "完了受動: has been + p.p.",
-          "hint": "has been + p.p."
+          "correctAnswer": "read",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-007",
-          "japanese": "その手紙は彼によって書かれました",
-          "sentence": "The letter was written ____ him.",
+          "japanese": "あなたは日本に行ったことがありますか",
+          "sentence": "Have you ____ to Japan?",
           "choices": [
-            "by",
-            "from",
-            "to",
-            "for"
+            "be",
+            "was",
+            "been",
+            "being"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "been",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-008",
-          "japanese": "その橋は来年建てられるでしょう",
-          "sentence": "The bridge will be ____ next year.",
+          "japanese": "彼はその知らせを聞きましたか",
+          "sentence": "Has he ____ the news?",
           "choices": [
-            "built",
-            "build",
-            "building",
-            "to build"
+            "hear",
+            "heard",
+            "hears",
+            "hearing"
           ],
-          "correctAnswer": "built",
+          "correctAnswer": "heard",
           "difficulty": "intermediate",
-          "explanation": "build の過去分詞 built。",
-          "hint": "will be + p.p."
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-009",
-          "japanese": "そのニュースは多くの国で報道されました",
-          "sentence": "The news was ____ in many countries.",
+          "japanese": "私は3年間英語を勉強しています",
+          "sentence": "I have ____ English for three years.",
           "choices": [
-            "reported",
-            "report",
-            "reporting",
-            "to report"
+            "studi",
+            "studied",
+            "studis",
+            "studiing"
           ],
-          "correctAnswer": "reported",
+          "correctAnswer": "studied",
           "difficulty": "intermediate",
-          "explanation": "受動の過去: was + reported。",
-          "hint": "was + p.p."
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-010",
-          "japanese": "その部屋は彼らによって飾られていました",
-          "sentence": "The room was ____ by them.",
+          "japanese": "彼女は2時間待っています",
+          "sentence": "She has ____ for two hours.",
           "choices": [
-            "being decorated",
-            "decorated",
-            "to decorate",
-            "decorating"
+            "wait",
+            "waited",
+            "waits",
+            "waiting"
           ],
-          "correctAnswer": "being decorated",
-          "difficulty": "advanced",
-          "explanation": "過去進行形受動: was being + p.p. 文脈的に進行中を表現。",
-          "hint": "was being + p.p."
+          "correctAnswer": "waited",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-011",
-          "japanese": "手紙は彼によって書かれました",
-          "sentence": "The letter was written ____ him.",
+          "japanese": "私たちはちょうど到着しました",
+          "sentence": "We have just ____.",
           "choices": [
-            "by",
-            "from",
-            "to",
-            "for"
+            "arriv",
+            "arrived",
+            "arrivs",
+            "arriving"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "受動態の行為者は by + 人。",
-          "hint": "by + 人"
+          "correctAnswer": "arrived",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-012",
-          "japanese": "その問題はすでに解かれました",
-          "sentence": "The problem has been ____ already.",
+          "japanese": "彼はすでに出発しました",
+          "sentence": "He has already ____.",
           "choices": [
-            "solved",
-            "solve",
-            "solving",
-            "to solve"
+            "leave",
+            "left",
+            "leaves",
+            "leaving"
           ],
-          "correctAnswer": "solved",
-          "difficulty": "beginner",
-          "explanation": "完了受動: has been + p.p.",
-          "hint": "has been + p.p."
+          "correctAnswer": "left",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-013",
-          "japanese": "その車は彼によって修理されました",
-          "sentence": "The car was repaired ____ him.",
+          "japanese": "彼らは京都を訪れたことがあります",
+          "sentence": "They have ____ Kyoto.",
           "choices": [
-            "by",
-            "from",
-            "to",
-            "at"
+            "visit",
+            "visited",
+            "visits",
+            "visiting"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "visited",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-014",
-          "japanese": "この橋は1990年に建てられました",
-          "sentence": "This bridge was built ____ 1990.",
+          "japanese": "私は彼女に会ったことがありません",
+          "sentence": "I have never ____ her.",
           "choices": [
-            "in",
-            "on",
-            "at",
-            "since"
+            "meet",
+            "met",
+            "meets",
+            "meeting"
           ],
-          "correctAnswer": "in",
+          "correctAnswer": "met",
           "difficulty": "intermediate",
-          "explanation": "年・月には in を用いる。",
-          "hint": "in + 年/月"
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-015",
-          "japanese": "この問題はすぐに解かれるでしょう",
-          "sentence": "This problem will be ____ soon.",
+          "japanese": "あなたは昼食を食べましたか",
+          "sentence": "Have you ____ lunch?",
           "choices": [
-            "solved",
-            "solve",
-            "being solved",
-            "to solve"
+            "eat",
+            "ate",
+            "eaten",
+            "eating"
           ],
-          "correctAnswer": "solved",
+          "correctAnswer": "eaten",
           "difficulty": "intermediate",
-          "explanation": "未来受動: will be + p.p.",
-          "hint": "will be + p.p."
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-016",
-          "japanese": "その歌は若者に愛されています",
-          "sentence": "The song is loved ____ young people.",
+          "japanese": "彼女は手紙を書き終えました",
+          "sentence": "She has finished ____ the letter.",
           "choices": [
-            "by",
-            "to",
-            "for",
-            "with"
+            "writing",
+            "writing",
+            "writings",
+            "writinging"
           ],
-          "correctAnswer": "by",
-          "difficulty": "beginner",
-          "explanation": "行為者は by。",
-          "hint": "by + 人"
+          "correctAnswer": "writing",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-017",
-          "japanese": "そのドアは昨日閉められました",
-          "sentence": "The door was ____ yesterday.",
+          "japanese": "私たちは長い間ここに住んでいます",
+          "sentence": "We have ____ here for a long time.",
           "choices": [
-            "closed",
-            "close",
-            "closing",
-            "to close"
+            "liv",
+            "lived",
+            "livs",
+            "living"
           ],
-          "correctAnswer": "closed",
-          "difficulty": "beginner",
-          "explanation": "受動の過去: was + 過去分詞。",
-          "hint": "was + p.p."
+          "correctAnswer": "lived",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-018",
-          "japanese": "そのドアは昨日閉められました",
-          "sentence": "The door was ____ yesterday.",
+          "japanese": "彼は何度も失敗しました",
+          "sentence": "He has ____ many times.",
           "choices": [
-            "closed",
-            "close",
-            "closing",
-            "to close"
+            "fail",
+            "failed",
+            "fails",
+            "failing"
           ],
-          "correctAnswer": "closed",
-          "difficulty": "beginner",
-          "explanation": "受動の過去: was + 過去分詞。",
-          "hint": "was + p.p."
+          "correctAnswer": "failed",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-019",
-          "japanese": "そのドアは昨日閉められました",
-          "sentence": "The door was ____ yesterday.",
+          "japanese": "私は彼の名前を忘れました",
+          "sentence": "I have ____ his name.",
           "choices": [
-            "closed",
-            "close",
-            "closing",
-            "to close"
+            "forget",
+            "forgot",
+            "forgotten",
+            "forgetting"
           ],
-          "correctAnswer": "closed",
-          "difficulty": "beginner",
-          "explanation": "受動の過去: was + 過去分詞。",
-          "hint": "was + p.p."
+          "correctAnswer": "forgotten",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         },
         {
           "id": "fb-g3-u1-020",
-          "japanese": "そのドアは昨日閉められました",
-          "sentence": "The door was ____ yesterday.",
+          "japanese": "彼女はその鍵を失くしました",
+          "sentence": "She has ____ the key.",
           "choices": [
-            "closed",
-            "close",
-            "closing",
-            "to close"
+            "lose",
+            "lost",
+            "loses",
+            "losing"
           ],
-          "correctAnswer": "closed",
-          "difficulty": "beginner",
-          "explanation": "受動の過去: was + 過去分詞。",
-          "hint": "was + p.p."
+          "correctAnswer": "lost",
+          "difficulty": "intermediate",
+          "explanation": "現在完了では過去分詞を使う。",
+          "hint": "have/has + 過去分詞"
         }
       ],
       "sentenceOrdering": [
@@ -8630,303 +8630,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u2-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は2時間勉強しています",
+          "sentence": "I have been ____ for two hours.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "studying",
+            "study",
+            "studyed",
+            "studys"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "studying",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は朝から働いています",
+          "sentence": "He has been ____ since morning.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "working",
+            "work",
+            "worked",
+            "works"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "working",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は30分待っています",
+          "sentence": "She has been ____ for 30 minutes.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "waiting",
+            "wait",
+            "waited",
+            "waits"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "waiting",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私たちは3年間ここに住んでいます",
+          "sentence": "We have been ____ here for three years.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "living",
+            "liv",
+            "lived",
+            "livs"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "living",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼らは1時間話しています",
+          "sentence": "They have been ____ for an hour.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "talking",
+            "talk",
+            "talked",
+            "talks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "talking",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は昨日から寝ています",
+          "sentence": "He has been ____ since yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "sleeping",
+            "sleep",
+            "sleeped",
+            "sleeps"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "sleeping",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は朝から料理しています",
+          "sentence": "She has been ____ since morning.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "cooking",
+            "cook",
+            "cooked",
+            "cooks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "cooking",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は長い間これを探しています",
+          "sentence": "I have been ____ for this for a long time.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "looking",
+            "look",
+            "looked",
+            "looks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "looking",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼らは1週間旅行しています",
+          "sentence": "They have been ____ for a week.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "traveling",
+            "travel",
+            "traveled",
+            "travels"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "traveling",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は6時から勉強しています",
+          "sentence": "He has been ____ since 6 o'clock.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "studying",
+            "study",
+            "studyed",
+            "studys"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "studying",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私たちは2時間走っています",
+          "sentence": "We have been ____ for two hours.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "runn",
+            "runned",
+            "runns"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は午後からピアノを弾いています",
+          "sentence": "She has been ____ the piano since this afternoon.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "playing",
+            "play",
+            "played",
+            "plays"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "playing",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は5年間英語を教えています",
+          "sentence": "I have been ____ English for five years.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "teaching",
+            "teach",
+            "teached",
+            "teachs"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "teaching",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は1時間電話で話しています",
+          "sentence": "He has been ____ on the phone for an hour.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "talking",
+            "talk",
+            "talked",
+            "talks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "talking",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私たちは先週から準備しています",
+          "sentence": "We have been ____ since last week.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "preparing",
+            "prepar",
+            "prepared",
+            "prepars"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "preparing",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は30分歌っています",
+          "sentence": "She has been ____ for 30 minutes.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "singing",
+            "sing",
+            "singed",
+            "sings"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "singing",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼らは昨日から待っています",
+          "sentence": "They have been ____ since yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "waiting",
+            "wait",
+            "waited",
+            "waits"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "waiting",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は朝から読んでいます",
+          "sentence": "I have been ____ since morning.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "reading",
+            "read",
+            "readed",
+            "reads"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "reading",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は1時間泳いでいます",
+          "sentence": "He has been ____ for an hour.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "swimming",
+            "swimm",
+            "swimmed",
+            "swimms"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "swimming",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         },
         {
           "id": "fb-g3-u2-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は午後から絵を描いています",
+          "sentence": "She has been ____ since this afternoon.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "drawing",
+            "draw",
+            "drawed",
+            "draws"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "drawing",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "hint": "been + 動詞ing"
         }
       ],
       "sentenceOrdering": [
@@ -12140,303 +12140,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u3-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "who",
+            "which",
+            "what",
+            "whom"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "that",
+            "who",
+            "what",
+            "which"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a ____ who speaks English.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "woman",
+            "man",
+            "person",
+            "people"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "woman",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a ____ that is famous.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "building",
+            "house",
+            "school",
+            "city"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "building",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "who",
+            "which",
+            "what",
+            "whom"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "that",
+            "who",
+            "what",
+            "which"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a ____ who speaks English.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "woman",
+            "man",
+            "person",
+            "people"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "woman",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a ____ that is famous.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "building",
+            "house",
+            "school",
+            "city"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "building",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "who",
+            "which",
+            "what",
+            "whom"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "that",
+            "who",
+            "what",
+            "which"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a ____ who speaks English.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "woman",
+            "man",
+            "person",
+            "people"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "woman",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a ____ that is famous.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "building",
+            "house",
+            "school",
+            "city"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "building",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "who",
+            "which",
+            "what",
+            "whom"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "that",
+            "who",
+            "what",
+            "which"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a ____ who speaks English.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "woman",
+            "man",
+            "person",
+            "people"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "woman",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a ____ that is famous.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "building",
+            "house",
+            "school",
+            "city"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "building",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私には東京に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Tokyo.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "who",
+            "which",
+            "what",
+            "whom"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは私が昨日買った本です",
+          "sentence": "This is the book ____ I bought yesterday.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "that",
+            "who",
+            "what",
+            "which"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は英語を話す女性です",
+          "sentence": "She is a ____ who speaks English.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "woman",
+            "man",
+            "person",
+            "people"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "woman",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         },
         {
           "id": "fb-g3-u3-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a ____ that is famous.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "building",
+            "house",
+            "school",
+            "city"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "building",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の表現。",
+          "hint": "関係代名詞"
         }
       ],
       "sentenceOrdering": [
@@ -15650,303 +15650,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u4-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は新しい言語を学ぶことが好きです",
+          "sentence": "I like ____ learn new languages.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "like to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女には話す友達がたくさんいます",
+          "sentence": "She has many friends ____ talk with.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "to + 動詞原形で修飾"
         },
         {
           "id": "fb-g3-u4-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は朝食を作るために早く起きました",
+          "sentence": "I got up early ____ make breakfast.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "fb-g3-u4-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼はその知らせを聞いて驚きました",
+          "sentence": "He was surprised ____ hear the news.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "surprised to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は何をすべきか分かりません",
+          "sentence": "I don't know what ____ do.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "what to do"
         },
         {
           "id": "fb-g3-u4-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは勉強するための良い場所です",
+          "sentence": "This is a good place ____ study.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "place to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼女を招待するために電話しました",
+          "sentence": "I called her ____ invite her.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "fb-g3-u4-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "何か飲むものはありますか",
+          "sentence": "Do you have anything ____ drink?",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "anything to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は本を借りるために図書館に行きました",
+          "sentence": "He went to the library ____ borrow books.",
+          "wordCount": 7,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "fb-g3-u4-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "どこに行くべきか教えてください",
+          "sentence": "Please tell me where ____ go.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "where to go"
         },
         {
           "id": "fb-g3-u4-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は歌手になることを夢見ています",
+          "sentence": "She dreams of becoming ____ singer.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "a",
+            "an",
+            "the",
+            "for"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "a",
+          "difficulty": "intermediate",
+          "hint": "become a + 職業"
         },
         {
           "id": "fb-g3-u4-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは行く時間です",
+          "sentence": "This is time ____ go.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "time to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私はあなたに会えて嬉しいです",
+          "sentence": "I am glad ____ see you.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "glad to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼はいつ始めるべきか知っています",
+          "sentence": "He knows when ____ start.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "when to start"
         },
         {
           "id": "fb-g3-u4-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "これは読むための良い本です",
+          "sentence": "This is a good book ____ read.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "book to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私はリラックスするために公園に散歩しました",
+          "sentence": "I walked to the park ____ relax.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "fb-g3-u4-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女はどうやって解決すべきか分かりません",
+          "sentence": "She doesn't know how ____ solve it.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "how to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私にはすべき仕事があります",
+          "sentence": "I have work ____ do.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "work to do"
         },
         {
           "id": "fb-g3-u4-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼はその結果を知って幸せでした",
+          "sentence": "He was happy ____ know the result.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "happy to + 動詞原形"
         },
         {
           "id": "fb-g3-u4-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "何を言うべきか教えてください",
+          "sentence": "Please tell me what ____ say.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "to",
+            "for",
+            "at",
+            "of"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "to",
+          "difficulty": "intermediate",
+          "hint": "what to say"
         }
       ],
       "sentenceOrdering": [
@@ -19160,303 +19160,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u5-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "wordCount": 3,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "hint": "動名詞: -ing形"
         },
         {
           "id": "fb-g3-u5-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy ____ to music.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "listening",
+            "listen",
+            "to listen",
+            "listens"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
           "id": "fb-g3-u5-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished ____ her homework.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "doing",
+            "do",
+            "to do",
+            "does"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "doing",
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
           "id": "fb-g3-u5-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped ____.",
+          "wordCount": 2,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "smoking",
+            "smoke",
+            "to smoke",
+            "smokes"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "smoking",
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "fb-g3-u5-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "wordCount": 3,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "hint": "動名詞: -ing形"
         },
         {
-          "id": "fb-g3-u5-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy ____ to music.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "listening",
+            "listen",
+            "to listen",
+            "listens"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "fb-g3-u5-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished ____ her homework.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "doing",
+            "do",
+            "to do",
+            "does"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "doing",
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "fb-g3-u5-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped ____.",
+          "wordCount": 2,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "smoking",
+            "smoke",
+            "to smoke",
+            "smokes"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "smoking",
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "fb-g3-u5-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "wordCount": 3,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "hint": "動名詞: -ing形"
         },
         {
-          "id": "fb-g3-u5-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy ____ to music.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "listening",
+            "listen",
+            "to listen",
+            "listens"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "fb-g3-u5-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished ____ her homework.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "doing",
+            "do",
+            "to do",
+            "does"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "doing",
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "fb-g3-u5-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped ____.",
+          "wordCount": 2,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "smoking",
+            "smoke",
+            "to smoke",
+            "smokes"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "smoking",
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "fb-g3-u5-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "wordCount": 3,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "hint": "動名詞: -ing形"
         },
         {
-          "id": "fb-g3-u5-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy ____ to music.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "listening",
+            "listen",
+            "to listen",
+            "listens"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "fb-g3-u5-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished ____ her homework.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "doing",
+            "do",
+            "to do",
+            "does"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "doing",
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "fb-g3-u5-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped ____.",
+          "wordCount": 2,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "smoking",
+            "smoke",
+            "to smoke",
+            "smokes"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "smoking",
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "fb-g3-u5-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "____ English is fun.",
+          "wordCount": 3,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "Speaking",
+            "Speak",
+            "To speak",
+            "Speaks"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "Speaking",
+          "difficulty": "intermediate",
+          "hint": "動名詞: -ing形"
         },
         {
-          "id": "fb-g3-u5-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy ____ to music.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "listening",
+            "listen",
+            "to listen",
+            "listens"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "listening",
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "fb-g3-u5-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished ____ her homework.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "doing",
+            "do",
+            "to do",
+            "does"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "doing",
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "fb-g3-u5-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "id": "fb-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped ____.",
+          "wordCount": 2,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "smoking",
+            "smoke",
+            "to smoke",
+            "smokes"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "smoking",
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         }
       ],
       "sentenceOrdering": [
@@ -22670,303 +22670,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u6-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "走っている少年は私の弟です",
+          "sentence": "The ____ boy is my brother.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "running",
+            "run",
+            "runs",
+            "ran"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "running",
+          "difficulty": "intermediate",
+          "hint": "-ing形"
         }
       ],
       "sentenceOrdering": [
@@ -26180,303 +26180,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u7-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "fb-g3-u7-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I ____ a bird, I would fly.",
+          "wordCount": 6,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "were",
+            "am",
+            "was",
+            "be"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "were",
+          "difficulty": "intermediate",
+          "hint": "If I were"
         }
       ],
       "sentenceOrdering": [
@@ -29690,303 +29690,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u8-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         },
         {
           "id": "fb-g3-u8-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he ____.",
+          "wordCount": 5,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "lives",
+            "live",
+            "living",
+            "lived"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "lives",
+          "difficulty": "intermediate",
+          "hint": "where he lives"
         }
       ],
       "sentenceOrdering": [
@@ -33200,303 +33200,303 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u9-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-002",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-003",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-004",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-005",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-006",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-007",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-008",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-009",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-010",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-012",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-013",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-014",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-015",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-016",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-017",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-018",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-019",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         },
         {
           "id": "fb-g3-u9-020",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is ____ than me.",
+          "wordCount": 4,
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "taller",
+            "tallest",
+            "tall",
+            "more tall"
           ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "correctAnswer": "taller",
+          "difficulty": "intermediate",
+          "hint": "-er than"
         }
       ],
       "sentenceOrdering": [
