@@ -5120,303 +5120,303 @@
       "fillInBlank": [
         {
           "id": "fb-g1-u1-001",
-          "japanese": "これは私のペンです",
-          "sentence": "This is ____ pen.",
-          "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
-          ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-002",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
-          "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-003",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-004",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-005",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-006",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
-          "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-007",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
-          "choices": [
-            "are",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-008",
-          "japanese": "My brotherは学生です",
-          "sentence": "My brother ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-009",
-          "japanese": "My sisterは学生です",
-          "sentence": "My sister ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-010",
-          "japanese": "The dogは学生です",
-          "sentence": "The dog ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-011",
-          "japanese": "The catは学生です",
-          "sentence": "The cat ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-012",
-          "japanese": "Tomは学生です",
-          "sentence": "Tom ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-013",
-          "japanese": "Maryは学生です",
-          "sentence": "Mary ____ pen.",
-          "choices": [
-            "is",
-            "my",
-            "I",
-            "me"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
-        },
-        {
-          "id": "fb-g1-u1-014",
-          "japanese": "Iは学生です",
-          "sentence": "I ____ pen.",
+          "japanese": "私は学生です",
+          "sentence": "I ____ a student.",
           "choices": [
             "am",
-            "my",
-            "I",
-            "me"
+            "is",
+            "are",
+            "be"
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-002",
+          "japanese": "あなたは先生です",
+          "sentence": "You ____ a teacher.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-003",
+          "japanese": "彼は医者です",
+          "sentence": "He ____ a doctor.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-004",
+          "japanese": "彼女は私の友達です",
+          "sentence": "She ____ my friend.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-005",
+          "japanese": "それはとても高いです",
+          "sentence": "It ____ very expensive.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-006",
+          "japanese": "私たちは同じクラスです",
+          "sentence": "We ____ in the same class.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-007",
+          "japanese": "彼らはサッカーファンです",
+          "sentence": "They ____ soccer fans.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-008",
+          "japanese": "これは簡単です",
+          "sentence": "This ____ easy.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-009",
+          "japanese": "あれは古い家です",
+          "sentence": "That ____ an old house.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-010",
+          "japanese": "これらは新しい靴です",
+          "sentence": "These ____ new shoes.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-011",
+          "japanese": "それらは青いボールです",
+          "sentence": "Those ____ blue balls.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-012",
+          "japanese": "トムはアメリカ出身です",
+          "sentence": "Tom ____ from the USA.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-013",
+          "japanese": "メアリーは有名です",
+          "sentence": "Mary ____ famous.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "fb-g1-u1-014",
+          "japanese": "私の母は看護師です",
+          "sentence": "My mother ____ a nurse.",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "fb-g1-u1-015",
-          "japanese": "Youは学生です",
-          "sentence": "You ____ pen.",
+          "japanese": "あなたの父は親切です",
+          "sentence": "Your father ____ kind.",
           "choices": [
+            "am",
+            "is",
             "are",
-            "my",
-            "I",
-            "me"
+            "be"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "fb-g1-u1-016",
-          "japanese": "Heは学生です",
-          "sentence": "He ____ pen.",
+          "japanese": "私の兄と私は学生です",
+          "sentence": "My brother and I ____ students.",
           "choices": [
+            "am",
             "is",
-            "my",
-            "I",
-            "me"
+            "are",
+            "be"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "fb-g1-u1-017",
-          "japanese": "Sheは学生です",
-          "sentence": "She ____ pen.",
+          "japanese": "この机はとても大きいです",
+          "sentence": "This desk ____ very big.",
           "choices": [
+            "am",
             "is",
-            "my",
-            "I",
-            "me"
+            "are",
+            "be"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "fb-g1-u1-018",
-          "japanese": "Itは学生です",
-          "sentence": "It ____ pen.",
+          "japanese": "彼のノートはここにあります",
+          "sentence": "His notebook ____ here.",
           "choices": [
+            "am",
             "is",
-            "my",
-            "I",
-            "me"
+            "are",
+            "be"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "fb-g1-u1-019",
-          "japanese": "Weは学生です",
-          "sentence": "We ____ pen.",
+          "japanese": "私たちは準備万端です",
+          "sentence": "We ____ ready.",
           "choices": [
+            "am",
+            "is",
             "are",
-            "my",
-            "I",
-            "me"
+            "be"
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "fb-g1-u1-020",
-          "japanese": "Theyは学生です",
-          "sentence": "They ____ pen.",
+          "japanese": "彼らは学校にいます",
+          "sentence": "They ____ at school.",
           "choices": [
+            "am",
+            "is",
             "are",
-            "my",
-            "I",
-            "me"
+            "be"
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "be動詞の基本文。主語に合わせたam/is/areを選ぶ。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         }
       ],
       "sentenceOrdering": [

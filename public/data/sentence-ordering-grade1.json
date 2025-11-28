@@ -6580,347 +6580,316 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u1-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は学生です",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "am",
+            "a",
+            "student"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I am a student",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-002",
-          "japanese": "Youは学生です",
+          "japanese": "あなたは親切です",
           "words": [
             "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "are",
+            "kind"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "You are kind",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-003",
-          "japanese": "Heは学生です",
+          "japanese": "彼は先生です",
           "words": [
             "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "is",
+            "a",
+            "teacher"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "He is a teacher",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-004",
-          "japanese": "Sheは学生です",
+          "japanese": "彼女は有名です",
           "words": [
             "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "is",
+            "famous"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "She is famous",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-005",
-          "japanese": "Itは学生です",
+          "japanese": "それは青いです",
           "words": [
             "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "is",
+            "blue"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "It is blue",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-006",
-          "japanese": "Weは学生です",
+          "japanese": "私たちは友達です",
           "words": [
             "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "are",
+            "friends"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "We are friends",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-007",
-          "japanese": "Theyは学生です",
+          "japanese": "彼らは忙しいです",
           "words": [
             "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "are",
+            "busy"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They are busy",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-008",
-          "japanese": "My brotherは学生です",
+          "japanese": "これは新しい本です",
           "words": [
-            "My",
-            "brother",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "new",
+            "book"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is a new book",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 6
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u1-009",
-          "japanese": "My sisterは学生です",
+          "japanese": "それらは私の靴です",
           "words": [
-            "My",
-            "sister",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Those",
+            "are",
+            "my",
+            "shoes"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Those are my shoes",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 6
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-010",
-          "japanese": "The dogは学生です",
+          "japanese": "トムは忙しいです",
           "words": [
-            "The",
-            "dog",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Tom",
+            "is",
+            "busy"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Tom is busy",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 6
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-011",
-          "japanese": "The catは学生です",
+          "japanese": "メアリーは歌手です",
           "words": [
-            "The",
-            "cat",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Mary",
+            "is",
+            "a",
+            "singer"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "Mary is a singer",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 6
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-012",
-          "japanese": "Tomは学生です",
+          "japanese": "私の父は医者です",
           "words": [
-            "Tom",
-            "study",
-            "English",
-            "every",
-            "day"
+            "My",
+            "father",
+            "is",
+            "a",
+            "doctor"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "My father is a doctor",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
           "wordCount": 5
         },
         {
           "id": "so-g1-u1-013",
-          "japanese": "Maryは学生です",
+          "japanese": "私の友達はここにいます",
           "words": [
-            "Mary",
-            "study",
-            "English",
-            "every",
-            "day"
+            "My",
+            "friend",
+            "is",
+            "here"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "My friend is here",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-014",
-          "japanese": "Iは学生です",
+          "japanese": "あなたたちは準備ができています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "You",
+            "are",
+            "ready"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "You are ready",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-015",
-          "japanese": "Youは学生です",
+          "japanese": "その猫はかわいいです",
           "words": [
-            "You",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "cat",
+            "is",
+            "cute"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "The cat is cute",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-016",
-          "japanese": "Heは学生です",
+          "japanese": "その犬は大きいです",
           "words": [
-            "He",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "dog",
+            "is",
+            "big"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "The dog is big",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-017",
-          "japanese": "Sheは学生です",
+          "japanese": "机は木製です",
           "words": [
-            "She",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "desk",
+            "is",
+            "wooden"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "The desk is wooden",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-018",
-          "japanese": "Itは学生です",
+          "japanese": "これは難しいです",
           "words": [
-            "It",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "difficult"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "This is difficult",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         },
         {
           "id": "so-g1-u1-019",
-          "japanese": "Weは学生です",
+          "japanese": "私は学校にいます",
           "words": [
-            "We",
-            "study",
-            "English",
-            "every",
-            "day"
+            "I",
+            "am",
+            "at",
+            "school"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "I am at school",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 4
         },
         {
           "id": "so-g1-u1-020",
-          "japanese": "Theyは学生です",
+          "japanese": "彼らは日本人です",
           "words": [
             "They",
-            "study",
-            "English",
-            "every",
-            "day"
+            "are",
+            "Japanese"
           ],
-          "correctOrder": "I study English every day",
+          "correctOrder": "They are Japanese",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞の基本｜一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
-          "wordCount": 5
+          "explanation": "be動詞の平叙文の基本語順を並べ替える。",
+          "hint": "主語→be動詞→補語/場所",
+          "grammarPoint": "be動詞の文",
+          "wordCount": 3
         }
       ]
     },
