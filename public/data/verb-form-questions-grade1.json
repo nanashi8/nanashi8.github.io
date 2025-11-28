@@ -19,13 +19,13 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "Iは一人称単数なので、be動詞はamを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称単数のbe動詞はam"
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u0-002",
-          "japanese": "あなたは幸せです",
-          "sentence": "You ____ happy.",
+          "japanese": "あなたは親切です",
+          "sentence": "You ____ kind.",
           "verb": "be",
           "choices": [
             "am",
@@ -35,13 +35,13 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "Youは二人称なので、be動詞はareを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "二人称のbe動詞はare"
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u0-003",
-          "japanese": "私の父は日本出身です",
-          "sentence": "My father ____ from Japan.",
+          "japanese": "彼は先生です",
+          "sentence": "He ____ a teacher.",
           "verb": "be",
           "choices": [
             "am",
@@ -51,203 +51,11 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "My fatherは三人称単数なので、be動詞はisを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称単数のbe動詞はis"
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
           "id": "vf-g1-u0-004",
-          "japanese": "私の姉妹は公園にいるです",
-          "sentence": "My sister ____ in the park.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "My sisterは三人称単数なので、be動詞はisを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称単数のbe動詞はis"
-        },
-        {
-          "id": "vf-g1-u0-005",
-          "japanese": "その犬は13歳です",
-          "sentence": "The dog ____ thirteen years old.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "The dogは三人称単数なので、be動詞はisを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称単数のbe動詞はis"
-        },
-        {
-          "id": "vf-g1-u0-006",
-          "japanese": "私たちは忙しいです",
-          "sentence": "We ____ busy.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "Weは一人称複数なので、be動詞はareを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "一人称複数のbe動詞はare"
-        },
-        {
-          "id": "vf-g1-u0-007",
-          "japanese": "my parentsは親切です",
-          "sentence": "My parents ____ kind.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "My parentsは三人称複数なので、be動詞はareを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称複数のbe動詞はare"
-        },
-        {
-          "id": "vf-g1-u0-008",
-          "japanese": "彼らは親切です",
-          "sentence": "They ____ kind.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "Theyは三人称複数なので、be動詞はareを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称複数のbe動詞はare"
-        },
-        {
-          "id": "vf-g1-u0-009",
-          "japanese": "それは13歳です",
-          "sentence": "It ____ thirteen years old.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "Itは三人称単数なので、be動詞はisを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称単数のbe動詞はis"
-        },
-        {
-          "id": "vf-g1-u0-010",
-          "japanese": "その猫は13歳です",
-          "sentence": "The cat ____ thirteen years old.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "The catは三人称単数なので、be動詞はisを使います。I→am、He/She/It→is、You/We/They→areというルールを覚えましょう。",
-          "hint": "三人称単数のbe動詞はis"
-        },
-        {
-          "id": "vf-g1-u0-011",
-          "japanese": "これは私のペンです",
-          "sentence": "This ____ my pen.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "beginner",
-          "explanation": "thisは単数なのでis。This is ～で「これは～です」。物を指し示す基本表現。",
-          "hint": "this/that → is"
-        },
-        {
-          "id": "vf-g1-u0-012",
-          "japanese": "彼らは学生です",
-          "sentence": "They ____ students.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "beginner",
-          "explanation": "複数主語theyにはare。studentsも複数形。They are = They're。",
-          "hint": "they → are"
-        },
-        {
-          "id": "vf-g1-u0-013",
-          "japanese": "あなたは正しいです",
-          "sentence": "You ____ right.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "intermediate",
-          "explanation": "You are right.は「あなたは正しい」という頻出表現。反対はYou are wrong.。",
-          "hint": "You are right"
-        },
-        {
-          "id": "vf-g1-u0-014",
-          "japanese": "彼は家にいます",
-          "sentence": "He ____ at home.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "is",
-          "difficulty": "intermediate",
-          "explanation": "場所を表すbe at ～。at homeは熟語で「家に」。",
-          "hint": "be at ～ = ～にいる"
-        },
-        {
-          "id": "vf-g1-u0-015",
-          "japanese": "私たちは同じクラスです",
-          "sentence": "We ____ in the same class.",
-          "verb": "be",
-          "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctAnswer": "are",
-          "difficulty": "intermediate",
-          "explanation": "the sameは「同じ」。必ずtheを付ける。in the same class/schoolは頻出。",
-          "hint": "the same"
-        },
-        {
-          "id": "vf-g1-u0-016",
           "japanese": "彼女は歌手です",
           "sentence": "She ____ a singer.",
           "verb": "be",
@@ -259,13 +67,29 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "職業を表す表現。a singer/a doctor/a teacherなど。",
-          "hint": "職業: a + 名詞"
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
-          "id": "vf-g1-u0-017",
-          "japanese": "これらは本です",
-          "sentence": "These ____ books.",
+          "id": "vf-g1-u0-005",
+          "japanese": "それは新しいです",
+          "sentence": "It ____ new.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-006",
+          "japanese": "私たちは友達です",
+          "sentence": "We ____ friends.",
           "verb": "be",
           "choices": [
             "am",
@@ -275,13 +99,29 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "theseは複数なのでare。booksも複数形。These are ～で「これらは～です」。",
-          "hint": "these → are"
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
-          "id": "vf-g1-u0-018",
-          "japanese": "彼は数学が得意です",
-          "sentence": "He ____ good at math.",
+          "id": "vf-g1-u0-007",
+          "japanese": "彼らは忙しいです",
+          "sentence": "They ____ busy.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-008",
+          "japanese": "これは私の本です",
+          "sentence": "This ____ my book.",
           "verb": "be",
           "choices": [
             "am",
@@ -290,14 +130,46 @@
             "be"
           ],
           "correctAnswer": "is",
-          "difficulty": "advanced",
-          "explanation": "be good at ～で「～が得意」。atの後は科目名や活動。受験頻出表現。",
-          "hint": "be good at ～"
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
-          "id": "vf-g1-u0-019",
-          "japanese": "私は英語に興味があります",
-          "sentence": "I ____ interested in English.",
+          "id": "vf-g1-u0-009",
+          "japanese": "これらは私の本です",
+          "sentence": "These ____ my books.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-010",
+          "japanese": "彼は日本出身です",
+          "sentence": "He ____ from Japan.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-011",
+          "japanese": "私は東京にいます",
+          "sentence": "I ____ in Tokyo.",
           "verb": "be",
           "choices": [
             "am",
@@ -306,12 +178,12 @@
             "be"
           ],
           "correctAnswer": "am",
-          "difficulty": "advanced",
-          "explanation": "be interested in ～で「～に興味がある」。likeよりフォーマル。",
-          "hint": "be interested in ～"
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
-          "id": "vf-g1-u0-020",
+          "id": "vf-g1-u0-012",
           "japanese": "彼女は有名です",
           "sentence": "She ____ famous.",
           "verb": "be",
@@ -322,9 +194,137 @@
             "be"
           ],
           "correctAnswer": "is",
-          "difficulty": "intermediate",
-          "explanation": "famousは「有名な」という形容詞。be動詞 + 形容詞の基本パターン。",
-          "hint": "be + 形容詞"
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-013",
+          "japanese": "それらは高いです",
+          "sentence": "They ____ expensive.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-014",
+          "japanese": "私たちは同じクラスです",
+          "sentence": "We ____ in the same class.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-015",
+          "japanese": "その猫はかわいいです",
+          "sentence": "The cat ____ cute.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-016",
+          "japanese": "私の父は忙しいです",
+          "sentence": "My father ____ busy.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-017",
+          "japanese": "彼の兄は医者です",
+          "sentence": "His brother ____ a doctor.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-018",
+          "japanese": "あなたたちは学生です",
+          "sentence": "You ____ students.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "are",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-019",
+          "japanese": "その本は古いです",
+          "sentence": "The book ____ old.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
+        },
+        {
+          "id": "vf-g1-u0-020",
+          "japanese": "私の家は大きいです",
+          "sentence": "My house ____ big.",
+          "verb": "be",
+          "choices": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctAnswer": "is",
+          "difficulty": "beginner",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "hint": "I→am / he,she,it→is / you,we,they→are"
         }
       ],
       "fillInBlank": [

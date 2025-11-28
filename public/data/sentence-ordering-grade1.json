@@ -3122,317 +3122,351 @@
           ],
           "correctOrder": "I study English every day",
           "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "be動詞の導入｜am/is/are の使い分け",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
           "wordCount": 5
         },
         {
           "id": "so-g1-u0-002",
-          "japanese": "彼は親切です",
+          "japanese": "彼は放課後サッカーをします",
           "words": [
-            "kind",
-            "is",
-            "he"
+            "He",
+            "plays",
+            "soccer",
+            "after",
+            "school"
           ],
-          "correctAnswer": "He is kind.",
-          "grammarPoint": "be動詞 + 形容詞",
+          "correctOrder": "He plays soccer after school",
           "difficulty": "beginner",
-          "explanation": "主語 + be動詞 + 形容詞の基本パターン。",
-          "hint": "He is ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u0-003",
-          "japanese": "あなたたちは友達です",
+          "japanese": "彼女は毎朝ピアノを練習します",
           "words": [
-            "friends",
-            "are",
-            "you"
+            "She",
+            "practices",
+            "the",
+            "piano",
+            "every",
+            "morning"
           ],
-          "correctAnswer": "You are friends.",
-          "grammarPoint": "be動詞の使い分け",
+          "correctOrder": "She practices the piano every morning",
           "difficulty": "beginner",
-          "explanation": "You are ～の語順。friendsは複数形。",
-          "hint": "You are ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u0-004",
-          "japanese": "これは本です",
+          "japanese": "私たちは日曜日に図書館へ行きます",
           "words": [
-            "book",
-            "a",
-            "is",
-            "this"
+            "We",
+            "go",
+            "to",
+            "the",
+            "library",
+            "on",
+            "Sundays"
           ],
-          "correctAnswer": "This is a book.",
-          "grammarPoint": "This is の使い方",
+          "correctOrder": "We go to the library on Sundays",
           "difficulty": "beginner",
-          "explanation": "This is ～で物を指し示す。aを忘れずに。",
-          "hint": "This is ～",
-          "wordCount": 4
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 7
         },
         {
           "id": "so-g1-u0-005",
-          "japanese": "私たちは日本人です",
+          "japanese": "彼らは家で夕食を食べます",
           "words": [
-            "Japanese",
-            "are",
-            "we"
+            "They",
+            "eat",
+            "dinner",
+            "at",
+            "home"
           ],
-          "correctAnswer": "We are Japanese.",
-          "grammarPoint": "国籍の表現",
+          "correctOrder": "They eat dinner at home",
           "difficulty": "beginner",
-          "explanation": "We are ～の語順。Japaneseは大文字で始める。",
-          "hint": "We are ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u0-006",
-          "japanese": "彼女は先生です",
+          "japanese": "トムは夜に本を読みます",
           "words": [
-            "teacher",
-            "a",
-            "is",
-            "she"
+            "Tom",
+            "reads",
+            "books",
+            "at",
+            "night"
           ],
-          "correctAnswer": "She is a teacher.",
-          "grammarPoint": "職業の表現",
+          "correctOrder": "Tom reads books at night",
           "difficulty": "beginner",
-          "explanation": "She is a ～の語順。職業名にはaを付ける。",
-          "hint": "She is a ～",
-          "wordCount": 4
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u0-007",
-          "japanese": "彼らは学生です",
+          "japanese": "メアリーは犬を毎日散歩させます",
           "words": [
-            "students",
-            "are",
-            "they"
+            "Mary",
+            "walks",
+            "her",
+            "dog",
+            "every",
+            "day"
           ],
-          "correctAnswer": "They are students.",
-          "grammarPoint": "複数形の使い方",
+          "correctOrder": "Mary walks her dog every day",
           "difficulty": "beginner",
-          "explanation": "They are ～の語順。複数なのでstudents。",
-          "hint": "They are ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u0-008",
-          "japanese": "私は13歳です",
+          "japanese": "私は朝6時に起きます",
           "words": [
-            "old",
-            "thirteen",
-            "am",
-            "years",
-            "I"
+            "I",
+            "get",
+            "up",
+            "at",
+            "six",
+            "in",
+            "the",
+            "morning"
           ],
-          "correctAnswer": "I am thirteen years old.",
-          "grammarPoint": "年齢の表現",
-          "difficulty": "intermediate",
-          "explanation": "be + 数字 + years oldの順。",
-          "hint": "数字 + years old",
-          "wordCount": 5
+          "correctOrder": "I get up at six in the morning",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 8
         },
         {
           "id": "so-g1-u0-009",
-          "japanese": "彼は東京出身です",
+          "japanese": "彼は日曜日に宿題をします",
           "words": [
-            "Tokyo",
-            "from",
-            "is",
-            "he"
+            "He",
+            "does",
+            "his",
+            "homework",
+            "on",
+            "Sunday"
           ],
-          "correctAnswer": "He is from Tokyo.",
-          "grammarPoint": "出身地の表現",
-          "difficulty": "intermediate",
-          "explanation": "be from ～で出身地を表す。",
-          "hint": "be from ～",
-          "wordCount": 4
+          "correctOrder": "He does his homework on Sunday",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u0-010",
-          "japanese": "私は今学校にいます",
+          "japanese": "私たちは週末に映画を見ます",
           "words": [
-            "school",
-            "at",
-            "now",
-            "am",
-            "I"
+            "We",
+            "watch",
+            "a",
+            "movie",
+            "on",
+            "the",
+            "weekend"
           ],
-          "correctAnswer": "I am at school now.",
-          "grammarPoint": "場所の表現",
-          "difficulty": "intermediate",
-          "explanation": "be at ～で位置を表す。nowは文末に。",
-          "hint": "be at ～ now",
-          "wordCount": 5
+          "correctOrder": "We watch a movie on the weekend",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 7
         },
         {
           "id": "so-g1-u0-011",
-          "japanese": "これらは私の本です",
+          "japanese": "彼女は学校で昼食を食べます",
           "words": [
-            "books",
-            "my",
-            "are",
-            "these"
+            "She",
+            "has",
+            "lunch",
+            "at",
+            "school"
           ],
-          "correctAnswer": "These are my books.",
-          "grammarPoint": "These areの使い方",
-          "difficulty": "intermediate",
-          "explanation": "Theseは複数なのでare。booksも複数形。",
-          "hint": "These are ～",
-          "wordCount": 4
+          "correctOrder": "She has lunch at school",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u0-012",
-          "japanese": "私たちは同じクラスです",
+          "japanese": "私は放課後友達と遊びます",
           "words": [
-            "class",
-            "same",
-            "the",
-            "in",
-            "are",
-            "we"
+            "I",
+            "play",
+            "with",
+            "friends",
+            "after",
+            "school"
           ],
-          "correctAnswer": "We are in the same class.",
-          "grammarPoint": "the sameの使い方",
-          "difficulty": "intermediate",
-          "explanation": "in the same classはひとまとまり。sameの前には必ずthe。",
-          "hint": "in the same ～",
+          "correctOrder": "I play with friends after school",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
           "wordCount": 6
         },
         {
           "id": "so-g1-u0-013",
-          "japanese": "彼は数学が得意です",
+          "japanese": "彼らは毎週金曜にテニスをします",
           "words": [
-            "math",
-            "at",
-            "good",
-            "is",
-            "he"
+            "They",
+            "play",
+            "tennis",
+            "every",
+            "Friday"
           ],
-          "correctAnswer": "He is good at math.",
-          "grammarPoint": "be good atの使い方",
-          "difficulty": "advanced",
-          "explanation": "be good at ～の語順を守る。",
-          "hint": "be good at ～",
+          "correctOrder": "They play tennis every Friday",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
           "wordCount": 5
         },
         {
           "id": "so-g1-u0-014",
-          "japanese": "私は音楽に興味があります",
+          "japanese": "先生は朝会で話します",
           "words": [
-            "music",
-            "in",
-            "interested",
-            "am",
-            "I"
+            "The",
+            "teacher",
+            "speaks",
+            "at",
+            "the",
+            "morning",
+            "assembly"
           ],
-          "correctAnswer": "I am interested in music.",
-          "grammarPoint": "be interested inの使い方",
-          "difficulty": "advanced",
-          "explanation": "be interested in ～の語順。",
-          "hint": "be interested in ～",
-          "wordCount": 5
+          "correctOrder": "The teacher speaks at the morning assembly",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 7
         },
         {
           "id": "so-g1-u0-015",
-          "japanese": "彼女は有名な歌手です",
+          "japanese": "私の母は毎朝コーヒーを飲みます",
           "words": [
-            "singer",
-            "famous",
-            "a",
-            "is",
-            "she"
+            "My",
+            "mother",
+            "drinks",
+            "coffee",
+            "every",
+            "morning"
           ],
-          "correctAnswer": "She is a famous singer.",
-          "grammarPoint": "形容詞の語順",
-          "difficulty": "advanced",
-          "explanation": "a + 形容詞 + 名詞の語順。",
-          "hint": "a + 形容詞 + 名詞",
-          "wordCount": 5
+          "correctOrder": "My mother drinks coffee every morning",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u0-016",
-          "japanese": "あなたは正しいです",
+          "japanese": "私の父は週末に車を洗います",
           "words": [
-            "right",
-            "are",
-            "you"
+            "My",
+            "father",
+            "washes",
+            "the",
+            "car",
+            "on",
+            "weekends"
           ],
-          "correctAnswer": "You are right.",
-          "grammarPoint": "You are rightの表現",
-          "difficulty": "intermediate",
-          "explanation": "You are right.は頻出表現。",
-          "hint": "You are right",
-          "wordCount": 3
+          "correctOrder": "My father washes the car on weekends",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 7
         },
         {
           "id": "so-g1-u0-017",
-          "japanese": "彼女は忙しいです",
+          "japanese": "彼女は音楽をよく聴きます",
           "words": [
-            "busy",
-            "is",
-            "she"
+            "She",
+            "often",
+            "listens",
+            "to",
+            "music"
           ],
-          "correctAnswer": "She is busy.",
-          "grammarPoint": "状態を表す形容詞",
+          "correctOrder": "She often listens to music",
           "difficulty": "beginner",
-          "explanation": "be + 形容詞で状態を表す。",
-          "hint": "She is ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u0-018",
-          "japanese": "それは簡単です",
+          "japanese": "私は時々公園で走ります",
           "words": [
-            "easy",
-            "is",
-            "it"
+            "I",
+            "sometimes",
+            "run",
+            "in",
+            "the",
+            "park"
           ],
-          "correctAnswer": "It is easy.",
-          "grammarPoint": "Itの使い方",
+          "correctOrder": "I sometimes run in the park",
           "difficulty": "beginner",
-          "explanation": "itは単数なのでis。",
-          "hint": "It is ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 6
         },
         {
           "id": "so-g1-u0-019",
-          "japanese": "私たちは幸せです",
+          "japanese": "彼は英語を家で勉強します",
           "words": [
-            "happy",
-            "are",
-            "we"
+            "He",
+            "studies",
+            "English",
+            "at",
+            "home"
           ],
-          "correctAnswer": "We are happy.",
-          "grammarPoint": "感情を表す形容詞",
+          "correctOrder": "He studies English at home",
           "difficulty": "beginner",
-          "explanation": "be + 形容詞で感情を表す。",
-          "hint": "We are ～",
-          "wordCount": 3
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 5
         },
         {
           "id": "so-g1-u0-020",
-          "japanese": "彼は野球部員です",
+          "japanese": "私たちは朝7時に朝食を食べます",
           "words": [
-            "team",
-            "baseball",
-            "the",
-            "of",
-            "member",
-            "a",
-            "is",
-            "he"
+            "We",
+            "eat",
+            "breakfast",
+            "at",
+            "seven",
+            "a.m."
           ],
-          "correctAnswer": "He is a member of the baseball team.",
-          "grammarPoint": "a member ofの使い方",
-          "difficulty": "advanced",
-          "explanation": "a member of ～で「～の一員」。",
-          "hint": "a member of ～",
-          "wordCount": 8
+          "correctOrder": "We eat breakfast at seven a.m.",
+          "difficulty": "beginner",
+          "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
+          "hint": "主語→動詞→目的語/場所/時",
+          "grammarPoint": "基本語順(SVO)・時/場所の語順",
+          "wordCount": 6
         }
       ]
     },
