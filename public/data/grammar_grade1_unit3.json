@@ -1,0 +1,1034 @@
+{
+  "unit": "Unit 3",
+  "title": "代名詞と複数形",
+  "grammar": "this/that/these/those, 複数形の作り方",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g1-u3-fib-001",
+      "type": "fillInBlank",
+      "japanese": "これは私のペンです",
+      "sentence": "____ is my pen.",
+      "choices": [
+        "This",
+        "That",
+        "These",
+        "Those"
+      ],
+      "correctAnswer": "This",
+      "difficulty": "beginner",
+      "explanation": "近くのもの（単数）を指すときはthisを使う。遠くはthat、複数はthese/those。",
+      "hint": "近く・単数 → this"
+    },
+    {
+      "id": "g1-u3-fib-002",
+      "type": "fillInBlank",
+      "japanese": "あれは学校です",
+      "sentence": "____ is a school.",
+      "choices": [
+        "That",
+        "This",
+        "Those",
+        "These"
+      ],
+      "correctAnswer": "That",
+      "difficulty": "beginner",
+      "explanation": "遠くのもの（単数）を指すときはthatを使う。近くはthis。",
+      "hint": "遠く・単数 → that"
+    },
+    {
+      "id": "g1-u3-fib-003",
+      "type": "fillInBlank",
+      "japanese": "これらは本です",
+      "sentence": "____ are books.",
+      "choices": [
+        "These",
+        "This",
+        "Those",
+        "That"
+      ],
+      "correctAnswer": "These",
+      "difficulty": "beginner",
+      "explanation": "近くのもの（複数）を指すときはtheseを使う。be動詞もareになる。",
+      "hint": "近く・複数 → these"
+    },
+    {
+      "id": "g1-u3-fib-004",
+      "type": "fillInBlank",
+      "japanese": "あれらは車です",
+      "sentence": "____ are cars.",
+      "choices": [
+        "Those",
+        "That",
+        "These",
+        "This"
+      ],
+      "correctAnswer": "Those",
+      "difficulty": "beginner",
+      "explanation": "遠くのもの（複数）を指すときはthoseを使う。be動詞もareになる。",
+      "hint": "遠く・複数 → those"
+    },
+    {
+      "id": "g1-u3-fib-005",
+      "type": "fillInBlank",
+      "japanese": "私は3冊の本を持っています",
+      "sentence": "I have three ____.",
+      "choices": [
+        "books",
+        "book",
+        "bookes",
+        "a book"
+      ],
+      "correctAnswer": "books",
+      "difficulty": "beginner",
+      "explanation": "複数を表すときは名詞に-sを付ける。threeは複数なので必ず-s。",
+      "hint": "複数 → -s"
+    },
+    {
+      "id": "g1-u3-fib-006",
+      "type": "fillInBlank",
+      "japanese": "これは何ですか",
+      "sentence": "What ____ this?",
+      "choices": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "What is this?で「これは何ですか」。thisは単数なのでis。",
+      "hint": "this → is"
+    },
+    {
+      "id": "g1-u3-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は2人の兄弟がいます",
+      "sentence": "She has two ____.",
+      "choices": [
+        "brothers",
+        "brother",
+        "brotheres",
+        "a brother"
+      ],
+      "correctAnswer": "brothers",
+      "difficulty": "intermediate",
+      "explanation": "twoは複数なので-sを付ける。brother→brothers。",
+      "hint": "two → 複数形"
+    },
+    {
+      "id": "g1-u3-fib-008",
+      "type": "fillInBlank",
+      "japanese": "あれらは何ですか",
+      "sentence": "What are ____?",
+      "choices": [
+        "those",
+        "that",
+        "these",
+        "this"
+      ],
+      "correctAnswer": "those",
+      "difficulty": "intermediate",
+      "explanation": "areと使うのはthese/those。遠くを指すのでthose。What are those?で「あれらは何ですか」。",
+      "hint": "are + 遠く → those"
+    },
+    {
+      "id": "g1-u3-fib-009",
+      "type": "fillInBlank",
+      "japanese": "私は多くの友達がいます",
+      "sentence": "I have many ____.",
+      "choices": [
+        "friends",
+        "friend",
+        "friendes",
+        "a friend"
+      ],
+      "correctAnswer": "friends",
+      "difficulty": "intermediate",
+      "explanation": "manyは「たくさんの」で必ず複数形と使う。friend→friends。",
+      "hint": "many → 複数形"
+    },
+    {
+      "id": "g1-u3-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は3匹の犬を飼っています",
+      "sentence": "He has three ____.",
+      "choices": [
+        "dogs",
+        "dog",
+        "doges",
+        "a dog"
+      ],
+      "correctAnswer": "dogs",
+      "difficulty": "intermediate",
+      "explanation": "threeは複数を表す。dog→dogs。",
+      "hint": "three → 複数形"
+    },
+    {
+      "id": "g1-u3-fib-011",
+      "type": "fillInBlank",
+      "japanese": "これらはトマトです",
+      "sentence": "These are ____.",
+      "choices": [
+        "tomatoes",
+        "tomatos",
+        "tomato",
+        "a tomato"
+      ],
+      "correctAnswer": "tomatoes",
+      "difficulty": "advanced",
+      "explanation": "-oで終わる名詞は-esを付ける。tomato→tomatoes。potato→potatoesも同様。",
+      "hint": "-o → -es"
+    },
+    {
+      "id": "g1-u3-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女は多くの時計を持っています",
+      "sentence": "She has many ____.",
+      "choices": [
+        "watches",
+        "watchs",
+        "watch",
+        "a watch"
+      ],
+      "correctAnswer": "watches",
+      "difficulty": "advanced",
+      "explanation": "-chで終わる名詞は-esを付ける。watch→watches。",
+      "hint": "-ch → -es"
+    },
+    {
+      "id": "g1-u3-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私は2つの箱を持っています",
+      "sentence": "I have two ____.",
+      "choices": [
+        "boxes",
+        "boxs",
+        "box",
+        "a box"
+      ],
+      "correctAnswer": "boxes",
+      "difficulty": "advanced",
+      "explanation": "-xで終わる名詞は-esを付ける。box→boxes。",
+      "hint": "-x → -es"
+    },
+    {
+      "id": "g1-u3-fib-014",
+      "type": "fillInBlank",
+      "japanese": "彼は4人の子供がいます",
+      "sentence": "He has four ____.",
+      "choices": [
+        "children",
+        "childs",
+        "childrens",
+        "child"
+      ],
+      "correctAnswer": "children",
+      "difficulty": "advanced",
+      "explanation": "child（子供）の複数形はchildren（不規則変化）。×childsは誤り。",
+      "hint": "child → children"
+    },
+    {
+      "id": "g1-u3-fib-015",
+      "type": "fillInBlank",
+      "japanese": "あれらは私の写真です",
+      "sentence": "Those are my ____.",
+      "choices": [
+        "photos",
+        "photoes",
+        "photo",
+        "a photo"
+      ],
+      "correctAnswer": "photos",
+      "difficulty": "advanced",
+      "explanation": "photoの複数形はphotos。-oで終わるが例外で-sのみ。piano→pianosも同様。",
+      "hint": "photo → photos"
+    },
+    {
+      "id": "g1-u3-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "これは私のペンです",
+      "words": [
+        "my",
+        "pen",
+        "this",
+        "is"
+      ],
+      "correctAnswer": "This is my pen.",
+      "difficulty": "beginner",
+      "explanation": "This is ～の基本語順。近くの単数を指す。",
+      "hint": "This is ～"
+    },
+    {
+      "id": "g1-u3-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "あれは学校です",
+      "words": [
+        "school",
+        "a",
+        "that",
+        "is"
+      ],
+      "correctAnswer": "That is a school.",
+      "difficulty": "beginner",
+      "explanation": "That is ～の基本語順。遠くの単数を指す。",
+      "hint": "That is ～"
+    },
+    {
+      "id": "g1-u3-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "これらは私の本です",
+      "words": [
+        "books",
+        "my",
+        "are",
+        "these"
+      ],
+      "correctAnswer": "These are my books.",
+      "difficulty": "beginner",
+      "explanation": "These are ～の語順。近くの複数を指す。be動詞はare。",
+      "hint": "These are ～"
+    },
+    {
+      "id": "g1-u3-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "あれらは新しい車です",
+      "words": [
+        "new",
+        "cars",
+        "are",
+        "those"
+      ],
+      "correctAnswer": "Those are new cars.",
+      "difficulty": "beginner",
+      "explanation": "Those are ～の語順。遠くの複数を指す。be動詞はare。",
+      "hint": "Those are ～"
+    },
+    {
+      "id": "g1-u3-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "これは何ですか",
+      "words": [
+        "this",
+        "what",
+        "is",
+        "?"
+      ],
+      "correctAnswer": "What is this?",
+      "difficulty": "beginner",
+      "explanation": "疑問詞What + is + this?の語順。「これは何？」",
+      "hint": "What is ～?"
+    },
+    {
+      "id": "g1-u3-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は4本のペンを持っています",
+      "words": [
+        "pens",
+        "four",
+        "I",
+        "have"
+      ],
+      "correctAnswer": "I have four pens.",
+      "difficulty": "intermediate",
+      "explanation": "I have + 数 + 複数形の語順。three booksで「3冊の本」。",
+      "hint": "I have three ～"
+    },
+    {
+      "id": "g1-u3-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "これらは何ですか",
+      "words": [
+        "are",
+        "what",
+        "these",
+        "?"
+      ],
+      "correctAnswer": "What are these?",
+      "difficulty": "intermediate",
+      "explanation": "What are ～?の語順。複数を尋ねるときはare。",
+      "hint": "What are ～?"
+    },
+    {
+      "id": "g1-u3-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は2人の兄弟がいます",
+      "words": [
+        "brothers",
+        "two",
+        "she",
+        "has"
+      ],
+      "correctAnswer": "She has two brothers.",
+      "difficulty": "intermediate",
+      "explanation": "She has + 数 + 複数形。two brothersで「2人の兄弟」。",
+      "hint": "She has two ～"
+    },
+    {
+      "id": "g1-u3-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "これらはりんごです",
+      "words": [
+        "apples",
+        "are",
+        "these"
+      ],
+      "correctAnswer": "These are apples.",
+      "difficulty": "intermediate",
+      "explanation": "These are ～の語順。apple→applesの複数形。",
+      "hint": "These are ～"
+    },
+    {
+      "id": "g1-u3-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は多くの友達がいます",
+      "words": [
+        "friends",
+        "many",
+        "she",
+        "has"
+      ],
+      "correctAnswer": "She has many friends.",
+      "difficulty": "intermediate",
+      "explanation": "I have many ～の語順。manyは必ず複数形と使う。",
+      "hint": "I have many ～"
+    },
+    {
+      "id": "g1-u3-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "あれは私の学校です",
+      "words": [
+        "my",
+        "school",
+        "that",
+        "is"
+      ],
+      "correctAnswer": "That is my school.",
+      "difficulty": "intermediate",
+      "explanation": "That is my ～の語順。所有格myを使う。",
+      "hint": "That is my ～"
+    },
+    {
+      "id": "g1-u3-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "これらは赤いトマトです",
+      "words": [
+        "red",
+        "tomatoes",
+        "are",
+        "these"
+      ],
+      "correctAnswer": "These are red tomatoes.",
+      "difficulty": "advanced",
+      "explanation": "tomato→tomatoesの複数形（-o→-es）。",
+      "hint": "tomato → tomatoes"
+    },
+    {
+      "id": "g1-u3-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼は2人の子供がいます",
+      "words": [
+        "children",
+        "two",
+        "he",
+        "has"
+      ],
+      "correctAnswer": "He has two children.",
+      "difficulty": "advanced",
+      "explanation": "child→childrenの不規則複数形。",
+      "hint": "child → children"
+    },
+    {
+      "id": "g1-u3-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は3つの箱を持っています",
+      "words": [
+        "boxes",
+        "three",
+        "she",
+        "has"
+      ],
+      "correctAnswer": "She has three boxes.",
+      "difficulty": "advanced",
+      "explanation": "box→boxesの複数形（-x→-es）。",
+      "hint": "box → boxes"
+    },
+    {
+      "id": "g1-u3-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "あれらは彼女の時計です",
+      "words": [
+        "her",
+        "watches",
+        "are",
+        "those"
+      ],
+      "correctAnswer": "Those are her watches.",
+      "difficulty": "advanced",
+      "explanation": "watch→watchesの複数形（-ch→-es）。所有格herを使う。",
+      "hint": "watch → watches"
+    },
+    {
+      "id": "g1-u3-para-001",
+      "type": "paraphrase",
+      "japanese": "単数→複数",
+      "originalSentence": "This is a book.",
+      "question": "複数形に書き換えなさい",
+      "choices": [
+        "These are books.",
+        "This are books.",
+        "These is books.",
+        "This is books."
+      ],
+      "correctAnswer": "These are books.",
+      "difficulty": "beginner",
+      "explanation": "this→these、is→are、a book→booksのすべてを複数形に変える。",
+      "hint": "this → these, is → are"
+    },
+    {
+      "id": "g1-u3-para-002",
+      "type": "paraphrase",
+      "japanese": "単数→複数",
+      "originalSentence": "That is a car.",
+      "question": "複数形に書き換えなさい",
+      "choices": [
+        "Those are cars.",
+        "That are cars.",
+        "Those is cars.",
+        "That is cars."
+      ],
+      "correctAnswer": "Those are cars.",
+      "difficulty": "beginner",
+      "explanation": "that→those、is→are、a car→carsのすべてを複数形に変える。",
+      "hint": "that → those, is → are"
+    },
+    {
+      "id": "g1-u3-para-003",
+      "type": "paraphrase",
+      "japanese": "複数→単数",
+      "originalSentence": "These are pens.",
+      "question": "単数形に書き換えなさい",
+      "choices": [
+        "This is a pen.",
+        "These is a pen.",
+        "This are a pen.",
+        "These are a pen."
+      ],
+      "correctAnswer": "This is a pen.",
+      "difficulty": "beginner",
+      "explanation": "these→this、are→is、pens→a penのすべてを単数形に変える。",
+      "hint": "these → this, are → is"
+    },
+    {
+      "id": "g1-u3-para-004",
+      "type": "paraphrase",
+      "japanese": "near→far（単数）",
+      "originalSentence": "This is my bag.",
+      "question": "「あれは」に変えて書き換えなさい",
+      "choices": [
+        "That is my bag.",
+        "Those is my bag.",
+        "That are my bag.",
+        "Those are my bag."
+      ],
+      "correctAnswer": "That is my bag.",
+      "difficulty": "intermediate",
+      "explanation": "this（これ）→that（あれ）に変える。単数なのでis。",
+      "hint": "this → that"
+    },
+    {
+      "id": "g1-u3-para-005",
+      "type": "paraphrase",
+      "japanese": "疑問文作成（複数）",
+      "originalSentence": "These are dogs.",
+      "question": "「これらは何ですか」の疑問文に書き換えなさい",
+      "choices": [
+        "What are these?",
+        "What these are?",
+        "These are what?",
+        "What is this?"
+      ],
+      "correctAnswer": "What are these?",
+      "difficulty": "intermediate",
+      "explanation": "What are these?で「これらは何ですか」。疑問詞Whatを文頭に、複数なのでare。",
+      "hint": "What are these?"
+    },
+    {
+      "id": "g1-u3-para-006",
+      "type": "paraphrase",
+      "japanese": "疑問文作成（複数）",
+      "originalSentence": "Those are books.",
+      "question": "「あれらは何ですか」の疑問文に書き換えなさい",
+      "choices": [
+        "What are those?",
+        "What those are?",
+        "Those are what?",
+        "What is those?"
+      ],
+      "correctAnswer": "What are those?",
+      "difficulty": "intermediate",
+      "explanation": "What are those?で「あれらは何ですか」。複数なのでare。",
+      "hint": "What are those?"
+    },
+    {
+      "id": "g1-u3-para-007",
+      "type": "paraphrase",
+      "japanese": "所有格の追加",
+      "originalSentence": "These are pens.",
+      "question": "「私の」を加えて書き換えなさい",
+      "choices": [
+        "These are my pens.",
+        "These my are pens.",
+        "These are pens my.",
+        "My these are pens."
+      ],
+      "correctAnswer": "These are my pens.",
+      "difficulty": "intermediate",
+      "explanation": "所有格myは名詞の前に置く。These are my pens.で「これらは私のペンです」。",
+      "hint": "my + 名詞"
+    },
+    {
+      "id": "g1-u3-para-008",
+      "type": "paraphrase",
+      "japanese": "数の追加",
+      "originalSentence": "I have books.",
+      "question": "「3冊の」を加えて書き換えなさい",
+      "choices": [
+        "I have three books.",
+        "I three have books.",
+        "I have books three.",
+        "Three I have books."
+      ],
+      "correctAnswer": "I have three books.",
+      "difficulty": "intermediate",
+      "explanation": "数詞は名詞の前に置く。I have three books.で「私は3冊の本を持っています」。",
+      "hint": "数 + 名詞"
+    },
+    {
+      "id": "g1-u3-para-009",
+      "type": "paraphrase",
+      "japanese": "near→far（複数）",
+      "originalSentence": "These are my friends.",
+      "question": "「あれらは」に変えて書き換えなさい",
+      "choices": [
+        "Those are my friends.",
+        "That are my friends.",
+        "Those is my friends.",
+        "That is my friends."
+      ],
+      "correctAnswer": "Those are my friends.",
+      "difficulty": "advanced",
+      "explanation": "these（これら）→those（あれら）に変える。複数なのでare。",
+      "hint": "these → those"
+    },
+    {
+      "id": "g1-u3-para-010",
+      "type": "paraphrase",
+      "japanese": "複数形の変化（-es）",
+      "originalSentence": "I have a box.",
+      "question": "「2つの」を加えて書き換えなさい",
+      "choices": [
+        "I have two boxes.",
+        "I have two boxs.",
+        "I have two box.",
+        "I two have boxes."
+      ],
+      "correctAnswer": "I have two boxes.",
+      "difficulty": "advanced",
+      "explanation": "box→boxes（-x→-es）。twoは複数形と使う。",
+      "hint": "box → boxes"
+    },
+    {
+      "id": "g1-u3-para-011",
+      "type": "paraphrase",
+      "japanese": "不規則複数形",
+      "originalSentence": "He has a child.",
+      "question": "「3人の」を加えて書き換えなさい",
+      "choices": [
+        "He has three children.",
+        "He has three childs.",
+        "He has three child.",
+        "He three has children."
+      ],
+      "correctAnswer": "He has three children.",
+      "difficulty": "advanced",
+      "explanation": "child→children（不規則変化）。×childsは誤り。",
+      "hint": "child → children"
+    },
+    {
+      "id": "g1-u3-para-012",
+      "type": "paraphrase",
+      "japanese": "複数形の変化（-o→-es）",
+      "originalSentence": "This is a tomato.",
+      "question": "複数形に書き換えなさい",
+      "choices": [
+        "These are tomatoes.",
+        "These are tomatos.",
+        "This are tomatoes.",
+        "These is tomatoes."
+      ],
+      "correctAnswer": "These are tomatoes.",
+      "difficulty": "advanced",
+      "explanation": "this→these、is→are、tomato→tomatoes（-o→-es）。",
+      "hint": "tomato → tomatoes"
+    },
+    {
+      "id": "g1-u3-para-013",
+      "type": "paraphrase",
+      "japanese": "many の使用",
+      "originalSentence": "I have friends.",
+      "question": "「たくさんの」を加えて書き換えなさい",
+      "choices": [
+        "I have many friends.",
+        "I many have friends.",
+        "I have friends many.",
+        "Many I have friends."
+      ],
+      "correctAnswer": "I have many friends.",
+      "difficulty": "advanced",
+      "explanation": "manyは複数形の前に置く。I have many friends.で「私はたくさんの友達がいます」。",
+      "hint": "many + 複数形"
+    },
+    {
+      "id": "g1-u3-para-014",
+      "type": "paraphrase",
+      "japanese": "複数形の変化（-ch→-es）",
+      "originalSentence": "She has a watch.",
+      "question": "「2つの」を加えて書き換えなさい",
+      "choices": [
+        "She has two watches.",
+        "She has two watchs.",
+        "She has two watch.",
+        "She two has watches."
+      ],
+      "correctAnswer": "She has two watches.",
+      "difficulty": "advanced",
+      "explanation": "watch→watches（-ch→-es）。twoは複数形と使う。",
+      "hint": "watch → watches"
+    },
+    {
+      "id": "g1-u3-para-015",
+      "type": "paraphrase",
+      "japanese": "例外の複数形",
+      "originalSentence": "I have a piano.",
+      "question": "「2つの」を加えて書き換えなさい",
+      "choices": [
+        "I have two pianos.",
+        "I have two pianoes.",
+        "I have two piano.",
+        "I two have pianos."
+      ],
+      "correctAnswer": "I have two pianos.",
+      "difficulty": "advanced",
+      "explanation": "piano→pianos（-oで終わるが例外で-sのみ）。photo→photosも同様。",
+      "hint": "piano → pianos"
+    },
+    {
+      "id": "g1-u3-vf-001",
+      "type": "verbForm",
+      "japanese": "bookの複数形（We版）",
+      "sentence": "We have three ____.",
+      "verb": "book",
+      "choices": [
+        "books",
+        "book",
+        "bookes",
+        "bookies"
+      ],
+      "correctAnswer": "books",
+      "difficulty": "beginner",
+      "explanation": "通常の名詞は-sを付けて複数形にする。book→books。",
+      "hint": "通常 → -s"
+    },
+    {
+      "id": "g1-u3-vf-002",
+      "type": "verbForm",
+      "japanese": "carの複数形（Those版）",
+      "sentence": "Those are ____.",
+      "verb": "car",
+      "choices": [
+        "cars",
+        "car",
+        "cares",
+        "carrs"
+      ],
+      "correctAnswer": "cars",
+      "difficulty": "beginner",
+      "explanation": "car→carsの規則変化。-sを付けるだけ。",
+      "hint": "通常 → -s"
+    },
+    {
+      "id": "g1-u3-vf-003",
+      "type": "verbForm",
+      "japanese": "boxの複数形（They版）",
+      "sentence": "They have two ____.",
+      "verb": "box",
+      "choices": [
+        "boxes",
+        "boxs",
+        "box",
+        "boxies"
+      ],
+      "correctAnswer": "boxes",
+      "difficulty": "intermediate",
+      "explanation": "-xで終わる名詞は-esを付ける。box→boxes。",
+      "hint": "-x → -es"
+    },
+    {
+      "id": "g1-u3-vf-004",
+      "type": "verbForm",
+      "japanese": "watchの複数形",
+      "sentence": "He has many ____.",
+      "verb": "watch",
+      "choices": [
+        "watches",
+        "watchs",
+        "watch",
+        "watchies"
+      ],
+      "correctAnswer": "watches",
+      "difficulty": "intermediate",
+      "explanation": "-chで終わる名詞は-esを付ける。watch→watches。",
+      "hint": "-ch → -es"
+    },
+    {
+      "id": "g1-u3-vf-005",
+      "type": "verbForm",
+      "japanese": "tomatoの複数形",
+      "sentence": "I like ____.",
+      "verb": "tomato",
+      "choices": [
+        "tomatoes",
+        "tomatos",
+        "tomato",
+        "tomatoies"
+      ],
+      "correctAnswer": "tomatoes",
+      "difficulty": "intermediate",
+      "explanation": "-oで終わる名詞は-esを付ける。tomato→tomatoes。potato→potatoesも同様。",
+      "hint": "-o → -es"
+    },
+    {
+      "id": "g1-u3-vf-006",
+      "type": "verbForm",
+      "japanese": "cityの複数形",
+      "sentence": "I visited two ____.",
+      "verb": "city",
+      "choices": [
+        "cities",
+        "citys",
+        "city",
+        "cityies"
+      ],
+      "correctAnswer": "cities",
+      "difficulty": "intermediate",
+      "explanation": "子音+yで終わる名詞はyをiに変えて-esを付ける。city→cities。",
+      "hint": "子音+y → -ies"
+    },
+    {
+      "id": "g1-u3-vf-007",
+      "type": "verbForm",
+      "japanese": "childの複数形",
+      "sentence": "They have three ____.",
+      "verb": "child",
+      "choices": [
+        "children",
+        "childs",
+        "child",
+        "childes"
+      ],
+      "correctAnswer": "children",
+      "difficulty": "advanced",
+      "explanation": "child→children（不規則変化）。最重要の不規則複数形。",
+      "hint": "child → children"
+    },
+    {
+      "id": "g1-u3-vf-008",
+      "type": "verbForm",
+      "japanese": "pianoの複数形",
+      "sentence": "We have two ____.",
+      "verb": "piano",
+      "choices": [
+        "pianos",
+        "pianoes",
+        "piano",
+        "pianoies"
+      ],
+      "correctAnswer": "pianos",
+      "difficulty": "advanced",
+      "explanation": "piano→pianos（-oで終わるが例外で-sのみ）。photo→photosも同様。",
+      "hint": "piano → pianos"
+    },
+    {
+      "id": "g1-u3-vf-009",
+      "type": "verbForm",
+      "japanese": "dishの複数形",
+      "sentence": "She washes the ____.",
+      "verb": "dish",
+      "choices": [
+        "dishes",
+        "dishs",
+        "dish",
+        "dishies"
+      ],
+      "correctAnswer": "dishes",
+      "difficulty": "advanced",
+      "explanation": "-shで終わる名詞は-esを付ける。dish→dishes。",
+      "hint": "-sh → -es"
+    },
+    {
+      "id": "g1-u3-vf-010",
+      "type": "verbForm",
+      "japanese": "leafの複数形",
+      "sentence": "The tree has many ____.",
+      "verb": "leaf",
+      "choices": [
+        "leaves",
+        "leafs",
+        "leaf",
+        "leafies"
+      ],
+      "correctAnswer": "leaves",
+      "difficulty": "advanced",
+      "explanation": "-fで終わる名詞はfをvに変えて-esを付ける。leaf→leaves。knife→knivesも同様。",
+      "hint": "-f → -ves"
+    },
+    {
+      "id": "g1-u3-conv-001",
+      "type": "conversation",
+      "japanese": "近くのものを指す",
+      "situation": "目の前のものについて話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What is this?"
+        },
+        {
+          "speaker": "B",
+          "text": "____ is my notebook."
+        }
+      ],
+      "choices": [
+        "This",
+        "That",
+        "These",
+        "Those"
+      ],
+      "correctAnswer": "This",
+      "difficulty": "beginner",
+      "explanation": "What is this?（これは何？）に対する答え。近くの単数なのでThis。",
+      "hint": "近く・単数 → This"
+    },
+    {
+      "id": "g1-u3-conv-002",
+      "type": "conversation",
+      "japanese": "遠くのものを尋ねる",
+      "situation": "遠くのものについて尋ねる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What are those?"
+        },
+        {
+          "speaker": "B",
+          "text": "____ are my bags."
+        }
+      ],
+      "choices": [
+        "Those",
+        "That",
+        "These",
+        "This"
+      ],
+      "correctAnswer": "Those",
+      "difficulty": "beginner",
+      "explanation": "What are those?（あれらは何？）に対する答え。遠くの複数なのでThose。",
+      "hint": "遠く・複数 → Those"
+    },
+    {
+      "id": "g1-u3-conv-003",
+      "type": "conversation",
+      "japanese": "数を答える",
+      "situation": "持っているものの数を答える場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How many books do you have?"
+        },
+        {
+          "speaker": "B",
+          "text": "I have ____ books."
+        }
+      ],
+      "choices": [
+        "five",
+        "a five",
+        "fives",
+        "fifth"
+      ],
+      "correctAnswer": "five",
+      "difficulty": "intermediate",
+      "explanation": "How many～?（いくつ？）に数で答える。数詞は複数形の前に置く。",
+      "hint": "数 + 複数形"
+    },
+    {
+      "id": "g1-u3-conv-004",
+      "type": "conversation",
+      "japanese": "複数のものについて話す",
+      "situation": "複数のものを見せる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are these your photos?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, ____ are."
+        }
+      ],
+      "choices": [
+        "they",
+        "these",
+        "it",
+        "this"
+      ],
+      "correctAnswer": "they",
+      "difficulty": "intermediate",
+      "explanation": "Are these～?に対する答え。these/thoseはtheyで受ける。Yes, they are.で答える。",
+      "hint": "these/those → they"
+    },
+    {
+      "id": "g1-u3-conv-005",
+      "type": "conversation",
+      "japanese": "不規則複数形を使う",
+      "situation": "家族について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Do you have children?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I have two ____."
+        }
+      ],
+      "choices": [
+        "children",
+        "childs",
+        "child",
+        "childrens"
+      ],
+      "correctAnswer": "children",
+      "difficulty": "advanced",
+      "explanation": "child（子供）の複数形はchildren（不規則）。twoは複数形と使う。",
+      "hint": "child → children"
+    }
+  ]
+}
