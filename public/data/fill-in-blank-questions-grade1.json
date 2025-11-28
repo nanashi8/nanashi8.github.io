@@ -1620,293 +1620,293 @@
           ],
           "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "「私の」という所有を表すので、所有格のmyを使います。",
-          "hint": "「私の」は所有格my"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-002",
-          "japanese": "彼は私の兄です",
-          "sentence": "He ____ my brother.",
+          "japanese": "これは私の本です",
+          "sentence": "This is ____ book.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "主語heにはis。家族を紹介する基本表現。my brother/sisterなど。",
-          "hint": "he → is"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-003",
-          "japanese": "あなたは学生です",
-          "sentence": "You ____ a student.",
+          "japanese": "これは私のノートです",
+          "sentence": "This is ____ notebook.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "主語youは単数でも複数でもare。",
-          "hint": "you → are"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-004",
-          "japanese": "私たちは日本人です",
-          "sentence": "We ____ Japanese.",
+          "japanese": "これは私のかばんです",
+          "sentence": "This is ____ bag.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "複数主語weにはare。Japaneseは「日本人/日本の」。",
-          "hint": "we → are"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-005",
-          "japanese": "彼女は先生です",
-          "sentence": "She ____ a teacher.",
+          "japanese": "これは私の机です",
+          "sentence": "This is ____ desk.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "主語sheにはis。職業を表す表現。",
-          "hint": "she → is"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-006",
-          "japanese": "彼らは友達です",
-          "sentence": "They ____ friends.",
+          "japanese": "これは私の椅子です",
+          "sentence": "This is ____ chair.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "複数主語theyにはare。friendsは複数形。",
-          "hint": "they → are"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-007",
-          "japanese": "これは本です",
-          "sentence": "This ____ a book.",
+          "japanese": "これは私の消しゴムです",
+          "sentence": "This is ____ eraser.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "thisは単数なのでis。物を指し示す基本表現。",
-          "hint": "this → is"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-008",
-          "japanese": "私は13歳です",
-          "sentence": "I ____ thirteen years old.",
+          "japanese": "これは私の鉛筆です",
+          "sentence": "This is ____ pencil.",
           "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "am",
-          "difficulty": "intermediate",
-          "explanation": "年齢表現「be + 数字 + years old」。自己紹介でよく使う。",
-          "hint": "年齢はbe動詞"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-009",
-          "japanese": "彼は東京出身です",
-          "sentence": "He ____ from Tokyo.",
+          "japanese": "これは私の時計です",
+          "sentence": "This is ____ watch.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
-          "difficulty": "intermediate",
-          "explanation": "be from ～で出身地を表す。from Japanのように国名も可。",
-          "hint": "be from ～"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-010",
-          "japanese": "私は今学校にいます",
-          "sentence": "I ____ at school now.",
+          "japanese": "これは私の電話です",
+          "sentence": "This is ____ phone.",
           "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "am",
-          "difficulty": "intermediate",
-          "explanation": "be at ～で場所を表す。at school/at homeなど。nowは文末に。",
-          "hint": "be at ～"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-011",
-          "japanese": "これらは私の本です",
-          "sentence": "These ____ my books.",
+          "japanese": "これは私の家です",
+          "sentence": "This is ____ house.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
-          "difficulty": "intermediate",
-          "explanation": "theseは複数なのでare。my booksも複数形。",
-          "hint": "these → are"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-012",
-          "japanese": "彼は親切です",
-          "sentence": "He ____ kind.",
+          "japanese": "あれは私の車です",
+          "sentence": "That is ____ car.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "性格を表す形容詞。be動詞 + 形容詞のパターン。",
-          "hint": "be + 形容詞"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-013",
-          "japanese": "あなたは正しいです",
-          "sentence": "You ____ right.",
+          "japanese": "これらは私の本です",
+          "sentence": "These are ____ books.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
-          "difficulty": "intermediate",
-          "explanation": "You are right.は頻出表現。「あなたは正しい」。",
-          "hint": "You are right"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-014",
-          "japanese": "私たちは同じクラスです",
-          "sentence": "We ____ in the same class.",
+          "japanese": "それらは私の鉛筆です",
+          "sentence": "Those are ____ pencils.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
-          "difficulty": "intermediate",
-          "explanation": "the sameは「同じ」。必ずtheを付ける。",
-          "hint": "the same"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-015",
-          "japanese": "彼女は忙しいです",
-          "sentence": "She ____ busy.",
+          "japanese": "これは私の帽子です",
+          "sentence": "This is ____ hat.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "busyは「忙しい」という形容詞。状態を表す。",
-          "hint": "be + 形容詞"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-016",
-          "japanese": "それは簡単です",
-          "sentence": "It ____ easy.",
+          "japanese": "これは私のシャツです",
+          "sentence": "This is ____ shirt.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "itは単数なのでis。easyは「簡単な」。",
-          "hint": "it → is"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-017",
-          "japanese": "彼は数学が得意です",
-          "sentence": "He ____ good at math.",
+          "japanese": "これは私の学校です",
+          "sentence": "This is ____ school.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
-          "difficulty": "advanced",
-          "explanation": "be good at ～で「～が得意」。受験頻出。",
-          "hint": "be good at ～"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-018",
-          "japanese": "私は音楽に興味があります",
-          "sentence": "I ____ interested in music.",
+          "japanese": "これは私の先生です",
+          "sentence": "This is ____ teacher.",
           "choices": [
-            "am",
-            "is",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "am",
-          "difficulty": "advanced",
-          "explanation": "be interested in ～で「～に興味がある」。",
-          "hint": "be interested in ～"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-019",
-          "japanese": "彼女は有名な歌手です",
-          "sentence": "She ____ a famous singer.",
+          "japanese": "これは私の兄です",
+          "sentence": "This is ____ brother.",
           "choices": [
-            "is",
-            "am",
-            "are",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "is",
-          "difficulty": "advanced",
-          "explanation": "a + 形容詞 + 名詞の語順。famousは「有名な」。",
-          "hint": "a + 形容詞 + 名詞"
+          "correctAnswer": "my",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-020",
-          "japanese": "私たちは幸せです",
-          "sentence": "We ____ happy.",
+          "japanese": "これは私の友達です",
+          "sentence": "This is ____ friend.",
           "choices": [
-            "are",
-            "am",
-            "is",
-            "be"
+            "my",
+            "I",
+            "me",
+            "mine"
           ],
-          "correctAnswer": "are",
+          "correctAnswer": "my",
           "difficulty": "beginner",
-          "explanation": "happyは「幸せな」という形容詞。感情を表す。",
-          "hint": "be + 形容詞"
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my"
         }
       ],
       "sentenceOrdering": [
