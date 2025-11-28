@@ -3678,8 +3678,8 @@
         },
         {
           "id": "vf-g1-u1-016",
-          "japanese": "その猫はかわいいです",
-          "sentence": "The cat ____ cute.",
+          "japanese": "その鳥は小さいです",
+          "sentence": "The bird ____ small.",
           "verb": "be",
           "choices": [
             "am",
@@ -13728,16 +13728,16 @@
       "verbForm": [
         {
           "id": "vf-g1-u4-001",
-          "japanese": "これは私の本です",
-          "sentence": "This is ____ book.",
+          "japanese": "これは彼のペンです",
+          "sentence": "This is ____ pen.",
           "verb": "pronoun",
           "choices": [
-            "my",
-            "me",
-            "I",
-            "mine"
+            "his",
+            "him",
+            "he",
+            "his'"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "his",
           "difficulty": "beginner",
           "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"

@@ -1625,8 +1625,8 @@
         },
         {
           "id": "fb-g1-u0-002",
-          "japanese": "これは私の本です",
-          "sentence": "This is ____ book.",
+          "japanese": "これは私のノートです",
+          "sentence": "This is ____ notebook.",
           "choices": [
             "my",
             "I",
