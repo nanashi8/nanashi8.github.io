@@ -277,19 +277,55 @@ function QuizView({
                 </select>
               </div>
 
-              <div className="filter-group">
-                <label htmlFor="word-phrase-filter-quiz">📝 単語・熟語:</label>
-                <select
-                  id="word-phrase-filter-quiz"
-                  value={selectedWordPhraseFilter}
-                  onChange={(e) => onWordPhraseFilterChange?.(e.target.value as WordPhraseFilter)}
-                  className="select-input"
-                >
-                  <option value="all">全て</option>
-                  <option value="words-only">単語のみ</option>
-                  <option value="phrases-only">熟語のみ</option>
-                </select>
-              </div>
+              {onDataSourceChange && (
+                <div className="filter-group">
+                  <label htmlFor="data-source-select-quiz">📚 問題集:</label>
+                  <select
+                    id="data-source-select-quiz"
+                    value={selectedDataSource}
+                    onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
+                    className="select-input"
+                  >
+                    <option value="all">すべて</option>
+                    <option value="junior">高校受験</option>
+                    <option value="intermediate">中級1800</option>
+                  </select>
+                </div>
+              )}
+
+              {onWordPhraseFilterChange && (
+                <div className="filter-group">
+                  <label htmlFor="word-phrase-filter-quiz">📖 単語/熟語:</label>
+                  <select
+                    id="word-phrase-filter-quiz"
+                    value={selectedWordPhraseFilter}
+                    onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
+                    className="select-input"
+                  >
+                    <option value="all">すべて</option>
+                    <option value="words-only">単語のみ</option>
+                    <option value="phrases-only">熟語のみ</option>
+                  </select>
+                </div>
+              )}
+
+              {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
+                <div className="filter-group">
+                  <label htmlFor="phrase-type-filter-quiz">🏷️ 熟語タイプ:</label>
+                  <select
+                    id="phrase-type-filter-quiz"
+                    value={selectedPhraseTypeFilter}
+                    onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
+                    className="select-input"
+                  >
+                    <option value="all">すべて</option>
+                    <option value="phrasal-verb">句動詞</option>
+                    <option value="idiom">イディオム</option>
+                    <option value="collocation">コロケーション</option>
+                    <option value="other">その他</option>
+                  </select>
+                </div>
+              )}
             </div>
           )}
           

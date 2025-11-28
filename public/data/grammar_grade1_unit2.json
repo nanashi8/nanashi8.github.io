@@ -1,0 +1,1050 @@
+{
+  "unit": "Unit 2",
+  "title": "三人称単数現在形",
+  "grammar": "he/she/itでの-s/-es",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g1-u2-fib-001",
+      "type": "fillInBlank",
+      "japanese": "彼は英語を勉強します",
+      "sentence": "He ____ English.",
+      "choices": [
+        "studies",
+        "study",
+        "studys",
+        "studying"
+      ],
+      "correctAnswer": "studies",
+      "difficulty": "beginner",
+      "explanation": "三人称単数（he/she/it）の現在形は動詞に-s/-esを付ける。studyは子音+yなので-ies。×studysは誤り。",
+      "hint": "子音+y → -ies"
+    },
+    {
+      "id": "g1-u2-fib-002",
+      "type": "fillInBlank",
+      "japanese": "彼女はサッカーをします",
+      "sentence": "She ____ soccer.",
+      "choices": [
+        "plays",
+        "play",
+        "plaies",
+        "playing"
+      ],
+      "correctAnswer": "plays",
+      "difficulty": "beginner",
+      "explanation": "playは母音+yなので-sを付けるだけ。×plaiesは誤り。三人称単数の基本パターン。",
+      "hint": "母音+y → -s"
+    },
+    {
+      "id": "g1-u2-fib-003",
+      "type": "fillInBlank",
+      "japanese": "彼は学校へ行きます",
+      "sentence": "He ____ to school.",
+      "choices": [
+        "goes",
+        "go",
+        "gos",
+        "going"
+      ],
+      "correctAnswer": "goes",
+      "difficulty": "beginner",
+      "explanation": "-o で終わる動詞は-esを付ける。go→goes。×gosは誤り。頻出の不規則パターン。",
+      "hint": "-o → -es"
+    },
+    {
+      "id": "g1-u2-fib-004",
+      "type": "fillInBlank",
+      "japanese": "彼女は本を持っています",
+      "sentence": "She ____ a book.",
+      "choices": [
+        "has",
+        "have",
+        "haves",
+        "having"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "beginner",
+      "explanation": "haveの三人称単数形はhas（不規則）。×havesは誤り。最重要の不規則変化。",
+      "hint": "have → has"
+    },
+    {
+      "id": "g1-u2-fib-005",
+      "type": "fillInBlank",
+      "japanese": "トムはテニスが好きです",
+      "sentence": "Tom ____ tennis.",
+      "choices": [
+        "likes",
+        "like",
+        "liks",
+        "liking"
+      ],
+      "correctAnswer": "likes",
+      "difficulty": "beginner",
+      "explanation": "人名（Tom）は三人称単数なので-sを付ける。like→likes。",
+      "hint": "人名も三人称単数"
+    },
+    {
+      "id": "g1-u2-fib-006",
+      "type": "fillInBlank",
+      "japanese": "彼はテレビを見ます",
+      "sentence": "He ____ TV.",
+      "choices": [
+        "watches",
+        "watch",
+        "watchs",
+        "watching"
+      ],
+      "correctAnswer": "watches",
+      "difficulty": "intermediate",
+      "explanation": "-chで終わる動詞は-esを付ける。watch→watches。-sh/-ch/-x/-s/-oは-esパターン。",
+      "hint": "-ch → -es"
+    },
+    {
+      "id": "g1-u2-fib-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は音楽を聞きません",
+      "sentence": "She ____ listen to music.",
+      "choices": [
+        "doesn't",
+        "don't",
+        "isn't",
+        "not"
+      ],
+      "correctAnswer": "doesn't",
+      "difficulty": "intermediate",
+      "explanation": "三人称単数の否定文はdoesn't + 原形。×don'tはI/You/We/They用。",
+      "hint": "he/she/it → doesn't"
+    },
+    {
+      "id": "g1-u2-fib-008",
+      "type": "fillInBlank",
+      "japanese": "彼は野球をしますか",
+      "sentence": "____ he play baseball?",
+      "choices": [
+        "Does",
+        "Do",
+        "Is",
+        "Are"
+      ],
+      "correctAnswer": "Does",
+      "difficulty": "intermediate",
+      "explanation": "三人称単数の疑問文はDoes + 主語 + 原形。答えはYes, he does. / No, he doesn't.。",
+      "hint": "he/she/it → Does"
+    },
+    {
+      "id": "g1-u2-fib-009",
+      "type": "fillInBlank",
+      "japanese": "彼女は毎日宿題をします",
+      "sentence": "She ____ her homework every day.",
+      "choices": [
+        "does",
+        "do",
+        "dose",
+        "doing"
+      ],
+      "correctAnswer": "does",
+      "difficulty": "intermediate",
+      "explanation": "doの三人称単数形はdoes（不規則）。do homework（宿題をする）は頻出表現。",
+      "hint": "do → does"
+    },
+    {
+      "id": "g1-u2-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は朝早く起きます",
+      "sentence": "He ____ up early in the morning.",
+      "choices": [
+        "gets",
+        "get",
+        "getes",
+        "getting"
+      ],
+      "correctAnswer": "gets",
+      "difficulty": "intermediate",
+      "explanation": "get up（起きる）は熟語。getは通常の-sパターン。get→gets。",
+      "hint": "get → gets"
+    },
+    {
+      "id": "g1-u2-fib-011",
+      "type": "fillInBlank",
+      "japanese": "彼女はバスで学校へ行きます",
+      "sentence": "She ____ to school by bus.",
+      "choices": [
+        "goes",
+        "go",
+        "went",
+        "is going"
+      ],
+      "correctAnswer": "goes",
+      "difficulty": "intermediate",
+      "explanation": "go to school by busの組み合わせ。goの三人称単数形はgoes。",
+      "hint": "go → goes"
+    },
+    {
+      "id": "g1-u2-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼は夕食後皿を洗います",
+      "sentence": "He ____ the dishes after dinner.",
+      "choices": [
+        "washes",
+        "wash",
+        "washs",
+        "washing"
+      ],
+      "correctAnswer": "washes",
+      "difficulty": "advanced",
+      "explanation": "-shで終わる動詞は-esを付ける。wash the dishes（皿を洗う）は日常表現。",
+      "hint": "-sh → -es"
+    },
+    {
+      "id": "g1-u2-fib-013",
+      "type": "fillInBlank",
+      "japanese": "彼女は放課後図書館で勉強しますか",
+      "sentence": "Does she ____ in the library after school?",
+      "choices": [
+        "study",
+        "studies",
+        "studied",
+        "is studying"
+      ],
+      "correctAnswer": "study",
+      "difficulty": "advanced",
+      "explanation": "Doesの後は必ず原形。×studiesは誤り。疑問文では動詞は原形のまま。",
+      "hint": "Doesの後は原形"
+    },
+    {
+      "id": "g1-u2-fib-014",
+      "type": "fillInBlank",
+      "japanese": "彼は英語を話しません",
+      "sentence": "He doesn't ____ English.",
+      "choices": [
+        "speak",
+        "speaks",
+        "speaking",
+        "spoke"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "advanced",
+      "explanation": "doesn'tの後は原形。×speaksは誤り。否定文でも動詞は原形。",
+      "hint": "doesn't + 原形"
+    },
+    {
+      "id": "g1-u2-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼女は毎朝6時に起きます",
+      "sentence": "She ____ at six every morning.",
+      "choices": [
+        "gets up",
+        "get up",
+        "getes up",
+        "getting up"
+      ],
+      "correctAnswer": "gets up",
+      "difficulty": "advanced",
+      "explanation": "get upは句動詞（2語で1つの動詞）。三人称単数ではgets upとなる。",
+      "hint": "句動詞もs/es付加"
+    },
+    {
+      "id": "g1-u2-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "彼は日本語を勉強します",
+      "words": [
+        "Japanese",
+        "he",
+        "studies"
+      ],
+      "correctAnswer": "He studies Japanese.",
+      "difficulty": "beginner",
+      "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語。",
+      "hint": "He studies ～"
+    },
+    {
+      "id": "g1-u2-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はバレーボールをします",
+      "words": [
+        "volleyball",
+        "plays",
+        "she"
+      ],
+      "correctAnswer": "She plays volleyball.",
+      "difficulty": "beginner",
+      "explanation": "She plays ～の語順。playは母音+yなので-sのみ。",
+      "hint": "She plays ～"
+    },
+    {
+      "id": "g1-u2-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼は公園へ行きます",
+      "words": [
+        "to",
+        "the",
+        "park",
+        "he",
+        "goes"
+      ],
+      "correctAnswer": "He goes to the park.",
+      "difficulty": "beginner",
+      "explanation": "go→goesの不規則パターン。go to ～の基本語順。",
+      "hint": "He goes to ～"
+    },
+    {
+      "id": "g1-u2-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は猫を飼っています",
+      "words": [
+        "cat",
+        "a",
+        "she",
+        "has"
+      ],
+      "correctAnswer": "She has a cat.",
+      "difficulty": "beginner",
+      "explanation": "have→hasの不規則変化。a catは「1匹の猫」。",
+      "hint": "She has ～"
+    },
+    {
+      "id": "g1-u2-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "トムはテニスが好きです",
+      "words": [
+        "tennis",
+        "Tom",
+        "likes"
+      ],
+      "correctAnswer": "Tom likes tennis.",
+      "difficulty": "beginner",
+      "explanation": "人名も三人称単数。Tom likes ～の語順。",
+      "hint": "Tom likes ～"
+    },
+    {
+      "id": "g1-u2-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼は映画を見ます",
+      "words": [
+        "movies",
+        "watches",
+        "he"
+      ],
+      "correctAnswer": "He watches movies.",
+      "difficulty": "intermediate",
+      "explanation": "watch→watches（-ch→-es）。watch moviesは「映画を見る」。",
+      "hint": "He watches ～"
+    },
+    {
+      "id": "g1-u2-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はラジオを聞きません",
+      "words": [
+        "to",
+        "the",
+        "radio",
+        "listen",
+        "she",
+        "doesn't"
+      ],
+      "correctAnswer": "She doesn't listen to the radio.",
+      "difficulty": "intermediate",
+      "explanation": "否定文：She doesn't + 原形。listen to the radioはセット。",
+      "hint": "doesn't + 原形"
+    },
+    {
+      "id": "g1-u2-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼はサッカーをしますか",
+      "words": [
+        "soccer",
+        "play",
+        "he",
+        "does",
+        "?"
+      ],
+      "correctAnswer": "Does he play soccer?",
+      "difficulty": "intermediate",
+      "explanation": "疑問文：Does + 主語 + 原形。文末に?。",
+      "hint": "Does he + 原形?"
+    },
+    {
+      "id": "g1-u2-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は毎日掃除をします",
+      "words": [
+        "cleaning",
+        "the",
+        "every",
+        "day",
+        "she",
+        "does"
+      ],
+      "correctAnswer": "She does the cleaning every day.",
+      "difficulty": "intermediate",
+      "explanation": "do→doesの不規則変化。do the cleaningは「掃除をする」。",
+      "hint": "She does ～"
+    },
+    {
+      "id": "g1-u2-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼は夜遅く寝ます",
+      "words": [
+        "to",
+        "bed",
+        "late",
+        "at",
+        "night",
+        "he",
+        "goes"
+      ],
+      "correctAnswer": "He goes to bed late at night.",
+      "difficulty": "intermediate",
+      "explanation": "go to bed lateで「遅く寝る」。at nightは時を表す。",
+      "hint": "goes to bed late"
+    },
+    {
+      "id": "g1-u2-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は電車で学校へ行きます",
+      "words": [
+        "to",
+        "school",
+        "by",
+        "train",
+        "she",
+        "goes"
+      ],
+      "correctAnswer": "She goes to school by train.",
+      "difficulty": "intermediate",
+      "explanation": "go to school by trainの語順。交通手段は文末。",
+      "hint": "goes to ～ by ～"
+    },
+    {
+      "id": "g1-u2-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼は毎週窓を洗います",
+      "words": [
+        "the",
+        "windows",
+        "every",
+        "week",
+        "he",
+        "washes"
+      ],
+      "correctAnswer": "He washes the windows every week.",
+      "difficulty": "advanced",
+      "explanation": "wash→washes（-sh→-es）。wash the windowsは家事表現。",
+      "hint": "washes the windows"
+    },
+    {
+      "id": "g1-u2-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は家で勉強しますか",
+      "words": [
+        "at",
+        "home",
+        "study",
+        "she",
+        "does",
+        "?"
+      ],
+      "correctAnswer": "Does she study at home?",
+      "difficulty": "advanced",
+      "explanation": "Does + 主語 + 原形の語順。at homeは「家で」。",
+      "hint": "Does she + 原形?"
+    },
+    {
+      "id": "g1-u2-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "彼は中国語を話しません",
+      "words": [
+        "Chinese",
+        "speak",
+        "he",
+        "doesn't"
+      ],
+      "correctAnswer": "He doesn't speak Chinese.",
+      "difficulty": "advanced",
+      "explanation": "doesn't + 原形の語順。speak Chineseで「中国語を話す」。",
+      "hint": "doesn't + 原形"
+    },
+    {
+      "id": "g1-u2-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は毎晩10時に寝ます",
+      "words": [
+        "to",
+        "bed",
+        "at",
+        "ten",
+        "every",
+        "night",
+        "she",
+        "goes"
+      ],
+      "correctAnswer": "She goes to bed at ten every night.",
+      "difficulty": "advanced",
+      "explanation": "句動詞goes to bedの語順。at ten（10時に）→every night（毎晩）の順。",
+      "hint": "goes to bed at ～"
+    },
+    {
+      "id": "g1-u2-para-001",
+      "type": "paraphrase",
+      "japanese": "主語の変更（I→He）",
+      "originalSentence": "I study English.",
+      "question": "主語をHeに変えて書き換えなさい",
+      "choices": [
+        "He studies English.",
+        "He study English.",
+        "He studys English.",
+        "He is study English."
+      ],
+      "correctAnswer": "He studies English.",
+      "difficulty": "beginner",
+      "explanation": "I→Heに変わると動詞に-s/-esを付ける。studyは子音+yなので-ies。",
+      "hint": "子音+y → -ies"
+    },
+    {
+      "id": "g1-u2-para-002",
+      "type": "paraphrase",
+      "japanese": "肯定文→疑問文",
+      "originalSentence": "He plays soccer.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Does he play soccer?",
+        "Do he play soccer?",
+        "Is he play soccer?",
+        "He plays soccer?"
+      ],
+      "correctAnswer": "Does he play soccer?",
+      "difficulty": "beginner",
+      "explanation": "三人称単数の疑問文はDoes + 主語 + 原形。動詞は原形playに戻る。",
+      "hint": "Does he + 原形?"
+    },
+    {
+      "id": "g1-u2-para-003",
+      "type": "paraphrase",
+      "japanese": "肯定文→否定文",
+      "originalSentence": "She likes music.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "She doesn't like music.",
+        "She don't like music.",
+        "She isn't like music.",
+        "She not likes music."
+      ],
+      "correctAnswer": "She doesn't like music.",
+      "difficulty": "beginner",
+      "explanation": "否定文はdoesn't + 原形。動詞は原形likeに戻る。×don'tは誤り。",
+      "hint": "doesn't + 原形"
+    },
+    {
+      "id": "g1-u2-para-004",
+      "type": "paraphrase",
+      "japanese": "主語の変更（We→He）",
+      "originalSentence": "We go to the park.",
+      "question": "主語をHeに変えて書き換えなさい",
+      "choices": [
+        "He goes to the park.",
+        "He go to the park.",
+        "He gos to the park.",
+        "He is go to the park."
+      ],
+      "correctAnswer": "He goes to the park.",
+      "difficulty": "intermediate",
+      "explanation": "We go → He goes。goは-o で終わるので-esを付ける。",
+      "hint": "-o → -es"
+    },
+    {
+      "id": "g1-u2-para-005",
+      "type": "paraphrase",
+      "japanese": "短縮形",
+      "originalSentence": "He does not like math.",
+      "question": "短縮形に書き換えなさい",
+      "choices": [
+        "He doesn't like math.",
+        "He don't like math.",
+        "He'sn't like math.",
+        "He not like math."
+      ],
+      "correctAnswer": "He doesn't like math.",
+      "difficulty": "intermediate",
+      "explanation": "does not → doesn't。三人称単数の否定短縮形。",
+      "hint": "does not = doesn't"
+    },
+    {
+      "id": "g1-u2-para-006",
+      "type": "paraphrase",
+      "japanese": "疑問文→否定文",
+      "originalSentence": "Does she study English?",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "She doesn't study English.",
+        "She don't study English.",
+        "She isn't study English.",
+        "Does she not study English?"
+      ],
+      "correctAnswer": "She doesn't study English.",
+      "difficulty": "intermediate",
+      "explanation": "Does she～?を否定文にするとShe doesn't～。動詞は原形のまま。",
+      "hint": "She doesn't ～"
+    },
+    {
+      "id": "g1-u2-para-007",
+      "type": "paraphrase",
+      "japanese": "Yesの答え",
+      "originalSentence": "Does he play tennis?",
+      "question": "Yesで答えなさい",
+      "choices": [
+        "Yes, he does.",
+        "Yes, he do.",
+        "Yes, he is.",
+        "Yes, he plays."
+      ],
+      "correctAnswer": "Yes, he does.",
+      "difficulty": "intermediate",
+      "explanation": "Does he～?にはYes, he does. / No, he doesn't.で答える。",
+      "hint": "Yes, he does"
+    },
+    {
+      "id": "g1-u2-para-008",
+      "type": "paraphrase",
+      "japanese": "主語の変更（You→She）",
+      "originalSentence": "You have a pen.",
+      "question": "主語をSheに変えて書き換えなさい",
+      "choices": [
+        "She has a pen.",
+        "She have a pen.",
+        "She haves a pen.",
+        "She is have a pen."
+      ],
+      "correctAnswer": "She has a pen.",
+      "difficulty": "intermediate",
+      "explanation": "have→hasの不規則変化。三人称単数の最重要パターン。",
+      "hint": "have → has"
+    },
+    {
+      "id": "g1-u2-para-009",
+      "type": "paraphrase",
+      "japanese": "主語の変更（They→He）",
+      "originalSentence": "They watch sports.",
+      "question": "主語をHeに変えて書き換えなさい",
+      "choices": [
+        "He watches sports.",
+        "He watch sports.",
+        "He watchs sports.",
+        "He is watch sports."
+      ],
+      "correctAnswer": "He watches sports.",
+      "difficulty": "advanced",
+      "explanation": "watch→watches（-ch→-es）。They watch → He watches。",
+      "hint": "-ch → -es"
+    },
+    {
+      "id": "g1-u2-para-010",
+      "type": "paraphrase",
+      "japanese": "否定疑問文",
+      "originalSentence": "He likes music.",
+      "question": "否定疑問文「彼は音楽が好きではないのですか」に書き換えなさい",
+      "choices": [
+        "Doesn't he like music?",
+        "Don't he like music?",
+        "Isn't he like music?",
+        "Does he not like music?"
+      ],
+      "correctAnswer": "Doesn't he like music?",
+      "difficulty": "advanced",
+      "explanation": "否定疑問文はDoesn't + 主語 + 原形。驚きや確認で使う。",
+      "hint": "Doesn't he ～?"
+    },
+    {
+      "id": "g1-u2-para-011",
+      "type": "paraphrase",
+      "japanese": "主語の変更（I→Tom）",
+      "originalSentence": "I do my homework.",
+      "question": "主語をTomに変えて書き換えなさい",
+      "choices": [
+        "Tom does his homework.",
+        "Tom do his homework.",
+        "Tom dose his homework.",
+        "Tom is do his homework."
+      ],
+      "correctAnswer": "Tom does his homework.",
+      "difficulty": "advanced",
+      "explanation": "do→does、my→hisの両方を変更。人名も三人称単数。",
+      "hint": "do → does、my → his"
+    },
+    {
+      "id": "g1-u2-para-012",
+      "type": "paraphrase",
+      "japanese": "頻度の追加",
+      "originalSentence": "She studies math.",
+      "question": "「毎日」を加えて書き換えなさい",
+      "choices": [
+        "She studies math every day.",
+        "She every day studies math.",
+        "Every day she studies math.",
+        "She studies every day math."
+      ],
+      "correctAnswer": "She studies math every day.",
+      "difficulty": "advanced",
+      "explanation": "頻度を表す語句は文末に置くのが基本。every dayは「毎日」。",
+      "hint": "文末に置く"
+    },
+    {
+      "id": "g1-u2-para-013",
+      "type": "paraphrase",
+      "japanese": "場所の追加",
+      "originalSentence": "He plays soccer.",
+      "question": "「公園で」を加えて書き換えなさい",
+      "choices": [
+        "He plays soccer in the park.",
+        "He in the park plays soccer.",
+        "In the park he plays soccer.",
+        "He plays in the park soccer."
+      ],
+      "correctAnswer": "He plays soccer in the park.",
+      "difficulty": "advanced",
+      "explanation": "場所を表す語句は文末に。目的語→場所の語順。",
+      "hint": "目的語 + 場所"
+    },
+    {
+      "id": "g1-u2-para-014",
+      "type": "paraphrase",
+      "japanese": "疑問詞疑問文",
+      "originalSentence": "She studies English.",
+      "question": "「何を」を尋ねる疑問文に書き換えなさい",
+      "choices": [
+        "What does she study?",
+        "What she studies?",
+        "What is she study?",
+        "Does she study what?"
+      ],
+      "correctAnswer": "What does she study?",
+      "difficulty": "advanced",
+      "explanation": "疑問詞What + does + 主語 + 原形の語順。Whatは文頭。",
+      "hint": "What does she ～?"
+    },
+    {
+      "id": "g1-u2-para-015",
+      "type": "paraphrase",
+      "japanese": "交通手段の追加",
+      "originalSentence": "She goes to school.",
+      "question": "「自転車で」を加えて書き換えなさい",
+      "choices": [
+        "She goes to school by bike.",
+        "She goes by bike to school.",
+        "She by bike goes to school.",
+        "She goes to school with bike."
+      ],
+      "correctAnswer": "She goes to school by bike.",
+      "difficulty": "advanced",
+      "explanation": "交通手段はby ～で文末に。×withは使わない。",
+      "hint": "by + 交通手段"
+    },
+    {
+      "id": "g1-u2-vf-001",
+      "type": "verbForm",
+      "japanese": "彼は数学を勉強します",
+      "sentence": "He ____ math.",
+      "verb": "study",
+      "choices": [
+        "studies",
+        "study",
+        "studys",
+        "studied"
+      ],
+      "correctAnswer": "studies",
+      "difficulty": "beginner",
+      "explanation": "studyの三人称単数形はstudies（子音+y→-ies）。最頻出の変化パターン。",
+      "hint": "子音+y → -ies"
+    },
+    {
+      "id": "g1-u2-vf-002",
+      "type": "verbForm",
+      "japanese": "彼女はバレーボールをします",
+      "sentence": "She ____ volleyball.",
+      "verb": "play",
+      "choices": [
+        "plays",
+        "play",
+        "plaies",
+        "played"
+      ],
+      "correctAnswer": "plays",
+      "difficulty": "beginner",
+      "explanation": "playの三人称単数形はplays（母音+y→-s）。×-iesにしないこと。",
+      "hint": "母音+y → -s"
+    },
+    {
+      "id": "g1-u2-vf-003",
+      "type": "verbForm",
+      "japanese": "彼は図書館へ行きます",
+      "sentence": "He ____ to the library.",
+      "verb": "go",
+      "choices": [
+        "goes",
+        "go",
+        "gos",
+        "went"
+      ],
+      "correctAnswer": "goes",
+      "difficulty": "beginner",
+      "explanation": "goの三人称単数形はgoes（-o→-es）。頻出の不規則パターン。",
+      "hint": "-o → -es"
+    },
+    {
+      "id": "g1-u2-vf-004",
+      "type": "verbForm",
+      "japanese": "彼女は犬を飼っています",
+      "sentence": "She ____ a dog.",
+      "verb": "have",
+      "choices": [
+        "has",
+        "have",
+        "haves",
+        "had"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "beginner",
+      "explanation": "haveの三人称単数形はhas（完全不規則）。最重要の不規則変化。",
+      "hint": "have → has"
+    },
+    {
+      "id": "g1-u2-vf-005",
+      "type": "verbForm",
+      "japanese": "彼は映画を見ます",
+      "sentence": "He ____ movies.",
+      "verb": "watch",
+      "choices": [
+        "watches",
+        "watch",
+        "watchs",
+        "watched"
+      ],
+      "correctAnswer": "watches",
+      "difficulty": "intermediate",
+      "explanation": "watchの三人称単数形はwatches（-ch→-es）。-sh/-ch/-x/-s/-oは-esパターン。",
+      "hint": "-ch → -es"
+    },
+    {
+      "id": "g1-u2-vf-006",
+      "type": "verbForm",
+      "japanese": "彼女はラジオを聞きますか",
+      "sentence": "Does she ____ to the radio?",
+      "verb": "listen",
+      "choices": [
+        "listen",
+        "listens",
+        "listening",
+        "listened"
+      ],
+      "correctAnswer": "listen",
+      "difficulty": "intermediate",
+      "explanation": "Doesの後は必ず原形。×listensは誤り。疑問文では-s/-esを付けない。",
+      "hint": "Doesの後は原形"
+    },
+    {
+      "id": "g1-u2-vf-007",
+      "type": "verbForm",
+      "japanese": "彼はバスケをしません",
+      "sentence": "He doesn't ____ basketball.",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "playing",
+        "played"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "doesn'tの後は原形。×playsは誤り。否定文でも-s/-esを付けない。",
+      "hint": "doesn't + 原形"
+    },
+    {
+      "id": "g1-u2-vf-008",
+      "type": "verbForm",
+      "japanese": "彼女は料理をします",
+      "sentence": "She ____ the cooking.",
+      "verb": "do",
+      "choices": [
+        "does",
+        "do",
+        "dose",
+        "did"
+      ],
+      "correctAnswer": "does",
+      "difficulty": "intermediate",
+      "explanation": "doの三人称単数形はdoes（不規則）。do the cooking（料理をする）は頻出表現。",
+      "hint": "do → does"
+    },
+    {
+      "id": "g1-u2-vf-009",
+      "type": "verbForm",
+      "japanese": "彼は車を洗います",
+      "sentence": "He ____ his car.",
+      "verb": "wash",
+      "choices": [
+        "washes",
+        "wash",
+        "washs",
+        "washed"
+      ],
+      "correctAnswer": "washes",
+      "difficulty": "advanced",
+      "explanation": "washの三人称単数形はwashes（-sh→-es）。wash the carは日常表現。",
+      "hint": "-sh → -es"
+    },
+    {
+      "id": "g1-u2-vf-010",
+      "type": "verbForm",
+      "japanese": "彼女は日本語を話しますか",
+      "sentence": "Does she ____ Japanese?",
+      "verb": "speak",
+      "choices": [
+        "speak",
+        "speaks",
+        "spoken",
+        "is speaking"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "advanced",
+      "explanation": "Doesの後は原形speak。speak Japaneseで「日本語を話す」。",
+      "hint": "Doesの後は原形"
+    },
+    {
+      "id": "g1-u2-conv-001",
+      "type": "conversation",
+      "japanese": "友人について話す",
+      "situation": "友人の趣味について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What does your brother do in his free time?"
+        },
+        {
+          "speaker": "B",
+          "text": "He ____ the guitar."
+        }
+      ],
+      "choices": [
+        "plays",
+        "play",
+        "is play",
+        "playing"
+      ],
+      "correctAnswer": "plays",
+      "difficulty": "beginner",
+      "explanation": "your brother（あなたの兄）は三人称単数なので-sを付ける。What does～?は三人称の行動を尋ねる表現。play the guitar「ギターを弾く」。",
+      "hint": "He + 動詞-s"
+    },
+    {
+      "id": "g1-u2-conv-002",
+      "type": "conversation",
+      "japanese": "家族の習慣を尋ねる",
+      "situation": "家族の日課について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Does your mother cook dinner every day?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, she ____."
+        }
+      ],
+      "choices": [
+        "does",
+        "do",
+        "is",
+        "cooks"
+      ],
+      "correctAnswer": "does",
+      "difficulty": "beginner",
+      "explanation": "Does she～?にはYes, she does. / No, she doesn't.で答える。動詞の繰り返しを避けてdoesを使う。",
+      "hint": "Yes, she does"
+    },
+    {
+      "id": "g1-u2-conv-003",
+      "type": "conversation",
+      "japanese": "友人の通学方法を尋ねる",
+      "situation": "通学手段について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How does your sister go to school?"
+        },
+        {
+          "speaker": "B",
+          "text": "She ____ to school by bike."
+        }
+      ],
+      "choices": [
+        "goes",
+        "go",
+        "is go",
+        "going"
+      ],
+      "correctAnswer": "goes",
+      "difficulty": "intermediate",
+      "explanation": "How does～?は方法を尋ねる三人称の疑問文。She goesで答える。by bikeは交通手段。",
+      "hint": "She goes ～"
+    },
+    {
+      "id": "g1-u2-conv-004",
+      "type": "conversation",
+      "japanese": "友人の習慣を尋ねる",
+      "situation": "勉強習慣について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Does he study English every day?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, he ____."
+        }
+      ],
+      "choices": [
+        "doesn't",
+        "don't",
+        "didn't",
+        "isn't"
+      ],
+      "correctAnswer": "doesn't",
+      "difficulty": "intermediate",
+      "explanation": "Does he～?の否定の答えはNo, he doesn't.。every dayは習慣を表す。",
+      "hint": "No, he doesn't"
+    },
+    {
+      "id": "g1-u2-conv-005",
+      "type": "conversation",
+      "japanese": "兄弟の活動を尋ねる",
+      "situation": "放課後の活動について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What does your brother do after school?"
+        },
+        {
+          "speaker": "B",
+          "text": "He usually ____ the piano."
+        }
+      ],
+      "choices": [
+        "plays",
+        "play",
+        "played",
+        "is playing"
+      ],
+      "correctAnswer": "plays",
+      "difficulty": "advanced",
+      "explanation": "What does～do?は「何をするか」を尋ねる。usuallyは頻度副詞で動詞の前に置く。play the piano「ピアノを弾く」。",
+      "hint": "He usually plays ～"
+    }
+  ]
+}

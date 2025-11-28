@@ -1,0 +1,1060 @@
+{
+  "unit": "Unit 1",
+  "title": "一般動詞の基本",
+  "grammar": "一般動詞の肯定文・否定文・疑問文（I/You/We/They）",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g1-u1-fib-001",
+      "type": "fillInBlank",
+      "japanese": "私は英語を勉強します",
+      "sentence": "I ____ English.",
+      "choices": [
+        "study",
+        "studies",
+        "am study",
+        "studying"
+      ],
+      "correctAnswer": "study",
+      "difficulty": "beginner",
+      "explanation": "一般動詞は主語I/You/We/Theyでは原形。studyは「勉強する」。×studiesは三人称単数用。",
+      "hint": "I/Youは原形"
+    },
+    {
+      "id": "g1-u1-fib-002",
+      "type": "fillInBlank",
+      "japanese": "私はサッカーが好きです",
+      "sentence": "I ____ soccer.",
+      "choices": [
+        "like",
+        "likes",
+        "am like",
+        "liking"
+      ],
+      "correctAnswer": "like",
+      "difficulty": "beginner",
+      "explanation": "likeは「好き」を表す一般動詞。I/You/We/Theyでは原形のまま。",
+      "hint": "主語Iは原形"
+    },
+    {
+      "id": "g1-u1-fib-003",
+      "type": "fillInBlank",
+      "japanese": "あなたはテニスをしますか",
+      "sentence": "____ you play tennis?",
+      "choices": [
+        "Do",
+        "Does",
+        "Are",
+        "Is"
+      ],
+      "correctAnswer": "Do",
+      "difficulty": "beginner",
+      "explanation": "一般動詞の疑問文は「Do/Does + 主語 + 原形」。主語youにはDo。答えはYes, I do. / No, I don't.",
+      "hint": "You → Do"
+    },
+    {
+      "id": "g1-u1-fib-004",
+      "type": "fillInBlank",
+      "japanese": "私は野球をしません",
+      "sentence": "I ____ play baseball.",
+      "choices": [
+        "don't",
+        "doesn't",
+        "am not",
+        "not"
+      ],
+      "correctAnswer": "don't",
+      "difficulty": "beginner",
+      "explanation": "否定文は「don't/doesn't + 原形」。I/You/We/Theyにはdon't。×am notはbe動詞用。",
+      "hint": "I → don't"
+    },
+    {
+      "id": "g1-u1-fib-005",
+      "type": "fillInBlank",
+      "japanese": "私たちは学校に行きます",
+      "sentence": "We ____ to school.",
+      "choices": [
+        "go",
+        "goes",
+        "are go",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "beginner",
+      "explanation": "go to ～で「～へ行く」。主語Weは原形go。go to school（学校へ行く）は頻出表現。",
+      "hint": "We → 原形"
+    },
+    {
+      "id": "g1-u1-fib-006",
+      "type": "fillInBlank",
+      "japanese": "彼らは音楽を聞きます",
+      "sentence": "They ____ to music.",
+      "choices": [
+        "listen",
+        "listens",
+        "are listen",
+        "listening"
+      ],
+      "correctAnswer": "listen",
+      "difficulty": "beginner",
+      "explanation": "listen to ～で「～を聞く」。主語Theyは原形。×listensは三人称単数用。",
+      "hint": "They → 原形"
+    },
+    {
+      "id": "g1-u1-fib-007",
+      "type": "fillInBlank",
+      "japanese": "あなたは毎日本を読みますか",
+      "sentence": "Do you ____ books every day?",
+      "choices": [
+        "read",
+        "reads",
+        "reading",
+        "are read"
+      ],
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "疑問文Doの後は原形。every day（毎日）は現在形でよく使う。readの発音に注意[ri:d]。",
+      "hint": "Doの後は原形"
+    },
+    {
+      "id": "g1-u1-fib-008",
+      "type": "fillInBlank",
+      "japanese": "私たちは朝食を食べません",
+      "sentence": "We ____ eat breakfast.",
+      "choices": [
+        "don't",
+        "doesn't",
+        "aren't",
+        "isn't"
+      ],
+      "correctAnswer": "don't",
+      "difficulty": "intermediate",
+      "explanation": "主語Weの否定文はdon't。breakfastは「朝食」で、have/eat breakfastで使う。",
+      "hint": "We → don't"
+    },
+    {
+      "id": "g1-u1-fib-009",
+      "type": "fillInBlank",
+      "japanese": "あなたたちは英語を話しますか",
+      "sentence": "Do you ____ English?",
+      "choices": [
+        "speak",
+        "speaks",
+        "speaking",
+        "spoke"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "intermediate",
+      "explanation": "speak ～で「～語を話す」。Doの後は必ず原形。speak English/Japanese/Chineseなど。",
+      "hint": "Doの後は原形"
+    },
+    {
+      "id": "g1-u1-fib-010",
+      "type": "fillInBlank",
+      "japanese": "私は毎日宿題をします",
+      "sentence": "I ____ my homework every day.",
+      "choices": [
+        "do",
+        "does",
+        "doing",
+        "am do"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "intermediate",
+      "explanation": "do homework（宿題をする）は頻出表現。動詞doと助動詞Doを混同しないように。",
+      "hint": "do homework"
+    },
+    {
+      "id": "g1-u1-fib-011",
+      "type": "fillInBlank",
+      "japanese": "彼らはバスで学校へ行きません",
+      "sentence": "They don't ____ to school by bus.",
+      "choices": [
+        "go",
+        "goes",
+        "going",
+        "went"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "don'tの後は原形。by bus（バスで）は交通手段を表す。by train/car/bikeなども同様。",
+      "hint": "don't + 原形"
+    },
+    {
+      "id": "g1-u1-fib-012",
+      "type": "fillInBlank",
+      "japanese": "あなたは放課後何をしますか",
+      "sentence": "What do you ____ after school?",
+      "choices": [
+        "do",
+        "does",
+        "doing",
+        "are do"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "advanced",
+      "explanation": "What do you do?は「何をしますか」。動詞doが2回出る形。after school（放課後）は頻出表現。",
+      "hint": "What do you do?"
+    },
+    {
+      "id": "g1-u1-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私たちは毎週末公園で遊びます",
+      "sentence": "We ____ in the park every weekend.",
+      "choices": [
+        "play",
+        "plays",
+        "playing",
+        "are play"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "advanced",
+      "explanation": "play in ～で「～で遊ぶ」。every weekend（毎週末）は頻度を表す。現在形の習慣表現。",
+      "hint": "主語Weは原形"
+    },
+    {
+      "id": "g1-u1-fib-014",
+      "type": "fillInBlank",
+      "japanese": "あなたたちは図書館で勉強しますか",
+      "sentence": "____ you study in the library?",
+      "choices": [
+        "Do",
+        "Does",
+        "Are",
+        "Is"
+      ],
+      "correctAnswer": "Do",
+      "difficulty": "advanced",
+      "explanation": "主語youの疑問文はDo。in the library（図書館で）は場所を表す。",
+      "hint": "You → Do"
+    },
+    {
+      "id": "g1-u1-fib-015",
+      "type": "fillInBlank",
+      "japanese": "私は夕食後テレビを見ません",
+      "sentence": "I don't ____ TV after dinner.",
+      "choices": [
+        "watch",
+        "watches",
+        "watching",
+        "watched"
+      ],
+      "correctAnswer": "watch",
+      "difficulty": "advanced",
+      "explanation": "watch TV（テレビを見る）、after dinner（夕食後）。don'tの後は必ず原形。",
+      "hint": "don't + 原形"
+    },
+    {
+      "id": "g1-u1-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "私は英語を勉強します",
+      "words": [
+        "English",
+        "I",
+        "study"
+      ],
+      "correctAnswer": "I study English.",
+      "difficulty": "beginner",
+      "explanation": "一般動詞の基本語順：主語 + 動詞 + 目的語。I study Englishは自己紹介でよく使う。",
+      "hint": "I + 動詞 + 目的語"
+    },
+    {
+      "id": "g1-u1-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "あなたはサッカーが好きですか",
+      "words": [
+        "soccer",
+        "like",
+        "you",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "Do you like soccer?",
+      "difficulty": "beginner",
+      "explanation": "疑問文：Do + 主語 + 原形。語順に注意。",
+      "hint": "Do you + 動詞?"
+    },
+    {
+      "id": "g1-u1-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "私は野球をしません",
+      "words": [
+        "play",
+        "don't",
+        "I",
+        "baseball"
+      ],
+      "correctAnswer": "I don't play baseball.",
+      "difficulty": "beginner",
+      "explanation": "否定文：主語 + don't + 原形。I don't playの語順を覚える。",
+      "hint": "I don't + 動詞"
+    },
+    {
+      "id": "g1-u1-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは学校へ行きます",
+      "words": [
+        "to",
+        "school",
+        "we",
+        "go"
+      ],
+      "correctAnswer": "We go to school.",
+      "difficulty": "beginner",
+      "explanation": "go to ～の語順。toは前置詞で「～へ」。",
+      "hint": "go to + 場所"
+    },
+    {
+      "id": "g1-u1-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは音楽を聞きます",
+      "words": [
+        "music",
+        "to",
+        "they",
+        "listen"
+      ],
+      "correctAnswer": "They listen to music.",
+      "difficulty": "beginner",
+      "explanation": "listen to ～は必ずセット。toを忘れないように。",
+      "hint": "listen to + 名詞"
+    },
+    {
+      "id": "g1-u1-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは毎日本を読みますか",
+      "words": [
+        "books",
+        "every",
+        "day",
+        "you",
+        "read",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "Do you read books every day?",
+      "difficulty": "intermediate",
+      "explanation": "疑問文の語順。every dayは文末に置くことが多い。",
+      "hint": "Do you + 動詞 ～ every day?"
+    },
+    {
+      "id": "g1-u1-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは朝食を食べません",
+      "words": [
+        "eat",
+        "don't",
+        "we",
+        "breakfast"
+      ],
+      "correctAnswer": "We don't eat breakfast.",
+      "difficulty": "intermediate",
+      "explanation": "We don't eatの語順。breakfastは無冠詞で使う（a breakfastは×）。",
+      "hint": "We don't + 動詞"
+    },
+    {
+      "id": "g1-u1-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "あなたたちは英語を話しますか",
+      "words": [
+        "English",
+        "speak",
+        "you",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "Do you speak English?",
+      "difficulty": "intermediate",
+      "explanation": "Do you speak ～?で言語能力を尋ねる。",
+      "hint": "Do you speak + 言語?"
+    },
+    {
+      "id": "g1-u1-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "私は毎日宿題をします",
+      "words": [
+        "homework",
+        "my",
+        "every",
+        "day",
+        "I",
+        "do"
+      ],
+      "correctAnswer": "I do my homework every day.",
+      "difficulty": "intermediate",
+      "explanation": "do my homeworkの語順。myは必ず付ける。every dayは文末。",
+      "hint": "do my homework"
+    },
+    {
+      "id": "g1-u1-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼らはバスで学校へ行きません",
+      "words": [
+        "to",
+        "school",
+        "by",
+        "bus",
+        "they",
+        "don't",
+        "go"
+      ],
+      "correctAnswer": "They don't go to school by bus.",
+      "difficulty": "intermediate",
+      "explanation": "go to school by busの語順。交通手段by ～は文末に。",
+      "hint": "go to ～ by ～"
+    },
+    {
+      "id": "g1-u1-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "あなたは放課後何をしますか",
+      "words": [
+        "after",
+        "school",
+        "you",
+        "do",
+        "what",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "What do you do after school?",
+      "difficulty": "advanced",
+      "explanation": "疑問詞Whatは文頭。doが2回（助動詞＋動詞）出ることに注意。",
+      "hint": "What do you do?"
+    },
+    {
+      "id": "g1-u1-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは毎週末公園で遊びます",
+      "words": [
+        "in",
+        "the",
+        "park",
+        "every",
+        "weekend",
+        "we",
+        "play"
+      ],
+      "correctAnswer": "We play in the park every weekend.",
+      "difficulty": "advanced",
+      "explanation": "場所（in the park）→時（every weekend）の語順が自然。",
+      "hint": "場所 + 時"
+    },
+    {
+      "id": "g1-u1-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "あなたたちは図書館で勉強しますか",
+      "words": [
+        "in",
+        "the",
+        "library",
+        "study",
+        "you",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "Do you study in the library?",
+      "difficulty": "advanced",
+      "explanation": "Do you study ～?の語順。in the libraryは場所を表す。",
+      "hint": "Do you + 動詞 + 場所?"
+    },
+    {
+      "id": "g1-u1-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "私は夕食後テレビを見ません",
+      "words": [
+        "TV",
+        "after",
+        "dinner",
+        "I",
+        "don't",
+        "watch"
+      ],
+      "correctAnswer": "I don't watch TV after dinner.",
+      "difficulty": "advanced",
+      "explanation": "watch TV after dinnerの語順。after dinnerは時を表す。",
+      "hint": "I don't + 動詞"
+    },
+    {
+      "id": "g1-u1-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは毎朝公園を走りますか",
+      "words": [
+        "in",
+        "the",
+        "park",
+        "every",
+        "morning",
+        "they",
+        "run",
+        "do",
+        "?"
+      ],
+      "correctAnswer": "Do they run in the park every morning?",
+      "difficulty": "advanced",
+      "explanation": "Do they ～?の疑問文。場所→時の語順。every morning（毎朝）は習慣表現。",
+      "hint": "Do they + 動詞?"
+    },
+    {
+      "id": "g1-u1-para-001",
+      "type": "paraphrase",
+      "japanese": "肯定文→疑問文",
+      "originalSentence": "You like music.",
+      "question": "疑問文に書き換えなさい",
+      "choices": [
+        "Do you like music?",
+        "Are you like music?",
+        "You like music?",
+        "Does you like music?"
+      ],
+      "correctAnswer": "Do you like music?",
+      "difficulty": "beginner",
+      "explanation": "一般動詞の疑問文は「Do/Does + 主語 + 原形」。主語youにはDo。",
+      "hint": "Do you ～?"
+    },
+    {
+      "id": "g1-u1-para-002",
+      "type": "paraphrase",
+      "japanese": "肯定文→否定文",
+      "originalSentence": "I play tennis.",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "I don't play tennis.",
+        "I am not play tennis.",
+        "I not play tennis.",
+        "I doesn't play tennis."
+      ],
+      "correctAnswer": "I don't play tennis.",
+      "difficulty": "beginner",
+      "explanation": "否定文は「don't/doesn't + 原形」。主語Iにはdon't。×am notはbe動詞用。",
+      "hint": "I don't ～"
+    },
+    {
+      "id": "g1-u1-para-003",
+      "type": "paraphrase",
+      "japanese": "主語の変更（I→We）",
+      "originalSentence": "I study English.",
+      "question": "主語をWeに変えて書き換えなさい",
+      "choices": [
+        "We study English.",
+        "We studies English.",
+        "We are study English.",
+        "We studying English."
+      ],
+      "correctAnswer": "We study English.",
+      "difficulty": "beginner",
+      "explanation": "I/You/We/Theyはすべて原形。主語が変わっても動詞の形は同じ。",
+      "hint": "We + 原形"
+    },
+    {
+      "id": "g1-u1-para-004",
+      "type": "paraphrase",
+      "japanese": "疑問文→否定文",
+      "originalSentence": "Do you play soccer?",
+      "question": "否定文に書き換えなさい",
+      "choices": [
+        "I don't play soccer.",
+        "You don't play soccer.",
+        "You doesn't play soccer.",
+        "Do you don't play soccer?"
+      ],
+      "correctAnswer": "You don't play soccer.",
+      "difficulty": "intermediate",
+      "explanation": "疑問文Do you ～?を否定文にするとYou don't ～。主語はそのまま。",
+      "hint": "You don't ～"
+    },
+    {
+      "id": "g1-u1-para-005",
+      "type": "paraphrase",
+      "japanese": "短縮形",
+      "originalSentence": "I do not like math.",
+      "question": "短縮形に書き換えなさい",
+      "choices": [
+        "I don't like math.",
+        "I'nt like math.",
+        "I not like math.",
+        "I doesn't like math."
+      ],
+      "correctAnswer": "I don't like math.",
+      "difficulty": "intermediate",
+      "explanation": "do not → don't。一般動詞の否定文では短縮形をよく使う。",
+      "hint": "do not = don't"
+    },
+    {
+      "id": "g1-u1-para-006",
+      "type": "paraphrase",
+      "japanese": "主語の変更（You→They）",
+      "originalSentence": "You go to school by bike.",
+      "question": "主語をTheyに変えて書き換えなさい",
+      "choices": [
+        "They go to school by bike.",
+        "They goes to school by bike.",
+        "They are go to school by bike.",
+        "They going to school by bike."
+      ],
+      "correctAnswer": "They go to school by bike.",
+      "difficulty": "intermediate",
+      "explanation": "You/Theyともに原形。by bikeは「自転車で」。",
+      "hint": "They + 原形"
+    },
+    {
+      "id": "g1-u1-para-007",
+      "type": "paraphrase",
+      "japanese": "否定疑問文",
+      "originalSentence": "You like music.",
+      "question": "否定疑問文「あなたは音楽が好きではないのですか」に書き換えなさい",
+      "choices": [
+        "Don't you like music?",
+        "Do you not like music?",
+        "You don't like music?",
+        "Aren't you like music?"
+      ],
+      "correctAnswer": "Don't you like music?",
+      "difficulty": "advanced",
+      "explanation": "否定疑問文は「Don't/Doesn't + 主語 + 原形」。驚きや確認で使う。",
+      "hint": "Don't you ～?"
+    },
+    {
+      "id": "g1-u1-para-008",
+      "type": "paraphrase",
+      "japanese": "Yesの答え",
+      "originalSentence": "Do you study English?",
+      "question": "Yesで答えなさい",
+      "choices": [
+        "Yes, I do.",
+        "Yes, I am.",
+        "Yes, I study.",
+        "Yes, you do."
+      ],
+      "correctAnswer": "Yes, I do.",
+      "difficulty": "intermediate",
+      "explanation": "Do you ～?にはYes, I do. / No, I don't.で答える。主語がyou→Iに変わる。",
+      "hint": "Yes, I do"
+    },
+    {
+      "id": "g1-u1-para-009",
+      "type": "paraphrase",
+      "japanese": "同義表現（like→love）",
+      "originalSentence": "I like soccer.",
+      "question": "loveを使って同じような意味に書き換えなさい",
+      "choices": [
+        "I love soccer.",
+        "I am love soccer.",
+        "I loves soccer.",
+        "I loving soccer."
+      ],
+      "correctAnswer": "I love soccer.",
+      "difficulty": "intermediate",
+      "explanation": "like（好き）≒ love（大好き）。どちらも一般動詞なので同じ形。",
+      "hint": "loveも一般動詞"
+    },
+    {
+      "id": "g1-u1-para-010",
+      "type": "paraphrase",
+      "japanese": "目的語の追加",
+      "originalSentence": "I study.",
+      "question": "「英語を」を加えて書き換えなさい",
+      "choices": [
+        "I study English.",
+        "I study to English.",
+        "I study the English.",
+        "I English study."
+      ],
+      "correctAnswer": "I study English.",
+      "difficulty": "intermediate",
+      "explanation": "一般動詞 + 目的語の語順。×toは不要。Englishは無冠詞。",
+      "hint": "study + 科目名"
+    },
+    {
+      "id": "g1-u1-para-011",
+      "type": "paraphrase",
+      "japanese": "頻度の追加",
+      "originalSentence": "I watch TV.",
+      "question": "「毎日」を加えて書き換えなさい",
+      "choices": [
+        "I watch TV every day.",
+        "I every day watch TV.",
+        "Every day I watch TV.",
+        "I watch every day TV."
+      ],
+      "correctAnswer": "I watch TV every day.",
+      "difficulty": "advanced",
+      "explanation": "頻度を表す語句は文末に置くのが基本。Every day I ～も可だが、文末が自然。",
+      "hint": "文末に置く"
+    },
+    {
+      "id": "g1-u1-para-012",
+      "type": "paraphrase",
+      "japanese": "場所の追加",
+      "originalSentence": "We play soccer.",
+      "question": "「公園で」を加えて書き換えなさい",
+      "choices": [
+        "We play soccer in the park.",
+        "We in the park play soccer.",
+        "In the park we play soccer.",
+        "We play in the park soccer."
+      ],
+      "correctAnswer": "We play soccer in the park.",
+      "difficulty": "advanced",
+      "explanation": "場所を表す語句は文末に。基本語順：主語 + 動詞 + 目的語 + 場所。",
+      "hint": "文末に置く"
+    },
+    {
+      "id": "g1-u1-para-013",
+      "type": "paraphrase",
+      "japanese": "疑問詞疑問文",
+      "originalSentence": "You play tennis.",
+      "question": "「何のスポーツ」を尋ねる疑問文に書き換えなさい",
+      "choices": [
+        "What sport do you play?",
+        "What sport you play?",
+        "What sport are you play?",
+        "Do you play what sport?"
+      ],
+      "correctAnswer": "What sport do you play?",
+      "difficulty": "advanced",
+      "explanation": "疑問詞 + do you + 動詞の語順。Whatは文頭。",
+      "hint": "What + do you ～?"
+    },
+    {
+      "id": "g1-u1-para-014",
+      "type": "paraphrase",
+      "japanese": "交通手段の追加",
+      "originalSentence": "I go to school.",
+      "question": "「バスで」を加えて書き換えなさい",
+      "choices": [
+        "I go to school by bus.",
+        "I go by bus to school.",
+        "I by bus go to school.",
+        "I go to school with bus."
+      ],
+      "correctAnswer": "I go to school by bus.",
+      "difficulty": "advanced",
+      "explanation": "交通手段はby ～で文末に。×withは使わない。by bus/train/car/bikeなど。",
+      "hint": "by + 交通手段"
+    },
+    {
+      "id": "g1-u1-para-015",
+      "type": "paraphrase",
+      "japanese": "複数の要素を含む文",
+      "originalSentence": "I study.",
+      "question": "「図書館で毎日英語を」を加えて書き換えなさい",
+      "choices": [
+        "I study English in the library every day.",
+        "I study in the library English every day.",
+        "Every day I study English in the library.",
+        "In the library I study English every day."
+      ],
+      "correctAnswer": "I study English in the library every day.",
+      "difficulty": "advanced",
+      "explanation": "基本語順：主語 + 動詞 + 目的語 + 場所 + 時。目的語→場所→時の順が自然。",
+      "hint": "目的語→場所→時"
+    },
+    {
+      "id": "g1-u1-vf-001",
+      "type": "verbForm",
+      "japanese": "私は英語を勉強します",
+      "sentence": "I ____ English.",
+      "verb": "study",
+      "choices": [
+        "study",
+        "studies",
+        "studied",
+        "studying"
+      ],
+      "correctAnswer": "study",
+      "difficulty": "beginner",
+      "explanation": "主語I/You/We/Theyでは動詞の原形。studyは規則動詞。",
+      "hint": "I → 原形"
+    },
+    {
+      "id": "g1-u1-vf-002",
+      "type": "verbForm",
+      "japanese": "あなたはサッカーをしますか",
+      "sentence": "Do you ____ soccer?",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "played",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "beginner",
+      "explanation": "Doの後は必ず原形。play soccerで「サッカーをする」。",
+      "hint": "Doの後は原形"
+    },
+    {
+      "id": "g1-u1-vf-003",
+      "type": "verbForm",
+      "japanese": "私たちは学校へ行きます",
+      "sentence": "We ____ to school.",
+      "verb": "go",
+      "choices": [
+        "go",
+        "goes",
+        "went",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "beginner",
+      "explanation": "主語Weは原形go。go to ～で「～へ行く」。不規則動詞goの現在形。",
+      "hint": "We → 原形"
+    },
+    {
+      "id": "g1-u1-vf-004",
+      "type": "verbForm",
+      "japanese": "彼らは音楽を聞きます",
+      "sentence": "They ____ to music.",
+      "verb": "listen",
+      "choices": [
+        "listen",
+        "listens",
+        "listened",
+        "listening"
+      ],
+      "correctAnswer": "listen",
+      "difficulty": "beginner",
+      "explanation": "主語Theyは原形listen。listen to ～は必ずセット。",
+      "hint": "They → 原形"
+    },
+    {
+      "id": "g1-u1-vf-005",
+      "type": "verbForm",
+      "japanese": "私は野球をしません",
+      "sentence": "I don't ____ baseball.",
+      "verb": "play",
+      "choices": [
+        "play",
+        "plays",
+        "played",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "don't/doesn'tの後は必ず原形。否定文でも動詞の形は変わらない。",
+      "hint": "don't + 原形"
+    },
+    {
+      "id": "g1-u1-vf-006",
+      "type": "verbForm",
+      "japanese": "あなたは本を読みますか",
+      "sentence": "Do you ____ books?",
+      "verb": "read",
+      "choices": [
+        "read",
+        "reads",
+        "reading",
+        "readed"
+      ],
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "Doの後は原形read。readの発音[ri:d]に注意（過去形・過去分詞はred[red]）。",
+      "hint": "Doの後は原形"
+    },
+    {
+      "id": "g1-u1-vf-007",
+      "type": "verbForm",
+      "japanese": "私たちは朝食を食べません",
+      "sentence": "We don't ____ breakfast.",
+      "verb": "eat",
+      "choices": [
+        "eat",
+        "eats",
+        "ate",
+        "eating"
+      ],
+      "correctAnswer": "eat",
+      "difficulty": "intermediate",
+      "explanation": "don'tの後は原形eat。不規則動詞eatの現在形。",
+      "hint": "don't + 原形"
+    },
+    {
+      "id": "g1-u1-vf-008",
+      "type": "verbForm",
+      "japanese": "あなたたちは英語を話しますか",
+      "sentence": "Do you ____ English?",
+      "verb": "speak",
+      "choices": [
+        "speak",
+        "speaks",
+        "spoke",
+        "speaking"
+      ],
+      "correctAnswer": "speak",
+      "difficulty": "intermediate",
+      "explanation": "Doの後は原形speak。不規則動詞speakの現在形。speak ～で「～語を話す」。",
+      "hint": "Doの後は原形"
+    },
+    {
+      "id": "g1-u1-vf-009",
+      "type": "verbForm",
+      "japanese": "私は宿題をします",
+      "sentence": "I ____ my homework.",
+      "verb": "do",
+      "choices": [
+        "do",
+        "does",
+        "did",
+        "doing"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "advanced",
+      "explanation": "do homework（宿題をする）は頻出表現。動詞doと助動詞Doの区別に注意。",
+      "hint": "do homework"
+    },
+    {
+      "id": "g1-u1-vf-010",
+      "type": "verbForm",
+      "japanese": "彼らはバスで学校へ行きません",
+      "sentence": "They don't ____ to school by bus.",
+      "verb": "go",
+      "choices": [
+        "go",
+        "goes",
+        "went",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "advanced",
+      "explanation": "don'tの後は原形go。by busは交通手段を表す。",
+      "hint": "don't + 原形"
+    },
+    {
+      "id": "g1-u1-conv-001",
+      "type": "conversation",
+      "japanese": "趣味を尋ねる会話",
+      "situation": "相手の趣味を尋ねる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What do you do in your free time?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ____ soccer."
+        }
+      ],
+      "choices": [
+        "play",
+        "plays",
+        "am play",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "beginner",
+      "explanation": "趣味を答えるときは一般動詞の現在形。free time（自由時間）は趣味の話題でよく使う。",
+      "hint": "I + 動詞"
+    },
+    {
+      "id": "g1-u1-conv-002",
+      "type": "conversation",
+      "japanese": "好みを尋ねる会話",
+      "situation": "好きなものを尋ねる場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Do you like music?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I ____."
+        }
+      ],
+      "choices": [
+        "do",
+        "am",
+        "like",
+        "does"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "beginner",
+      "explanation": "Do you ～?にはYes, I do. / No, I don't.で答える。動詞の繰り返しを避けてdoを使う。",
+      "hint": "Yes, I do"
+    },
+    {
+      "id": "g1-u1-conv-003",
+      "type": "conversation",
+      "japanese": "通学手段を尋ねる会話",
+      "situation": "通学方法について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How do you go to school?"
+        },
+        {
+          "speaker": "B",
+          "text": "I ____ to school by bike."
+        }
+      ],
+      "choices": [
+        "go",
+        "goes",
+        "am go",
+        "going"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "How do you ～?は方法を尋ねる。by bike（自転車で）は交通手段の答え方。",
+      "hint": "I go ～"
+    },
+    {
+      "id": "g1-u1-conv-004",
+      "type": "conversation",
+      "japanese": "習慣を尋ねる会話",
+      "situation": "日常の習慣について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Do you study English every day?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I ____."
+        }
+      ],
+      "choices": [
+        "don't",
+        "am not",
+        "doesn't",
+        "not"
+      ],
+      "correctAnswer": "don't",
+      "difficulty": "intermediate",
+      "explanation": "Do you ～?の否定の答えはNo, I don't.。every day（毎日）は習慣を表す。",
+      "hint": "No, I don't"
+    },
+    {
+      "id": "g1-u1-conv-005",
+      "type": "conversation",
+      "japanese": "放課後の予定を尋ねる会話",
+      "situation": "放課後の活動について話す場面",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What do you do after school?"
+        },
+        {
+          "speaker": "B",
+          "text": "I usually ____ in the library."
+        }
+      ],
+      "choices": [
+        "study",
+        "studies",
+        "am study",
+        "studying"
+      ],
+      "correctAnswer": "study",
+      "difficulty": "advanced",
+      "explanation": "What do you do?は「何をしますか」。usually（普通は）は頻度を表す副詞で、一般動詞の前に置く。",
+      "hint": "I usually + 動詞"
+    }
+  ]
+}
