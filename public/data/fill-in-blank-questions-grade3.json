@@ -12142,301 +12142,321 @@
           "id": "fb-g3-u3-001",
           "japanese": "私には東京に住んでいる友人がいます",
           "sentence": "I have a friend ____ lives in Tokyo.",
+          "wordCount": 8,
           "choices": [
             "who",
             "which",
-            "what",
-            "whom"
+            "that",
+            "where"
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-002",
-          "japanese": "これは私が昨日買った本です",
-          "sentence": "This is the book ____ I bought yesterday.",
-          "choices": [
-            "that",
-            "who",
-            "what",
-            "which"
-          ],
-          "correctAnswer": "that",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-003",
-          "japanese": "彼女は英語を話す女性です",
-          "sentence": "She is a ____ who speaks English.",
-          "choices": [
-            "woman",
-            "man",
-            "person",
-            "people"
-          ],
-          "correctAnswer": "woman",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-004",
-          "japanese": "これは有名な建物です",
-          "sentence": "This is a ____ that is famous.",
-          "choices": [
-            "building",
-            "house",
-            "school",
-            "city"
-          ],
-          "correctAnswer": "building",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-005",
-          "japanese": "私には東京に住んでいる友人がいます",
-          "sentence": "I have a friend ____ lives in Tokyo.",
+          "japanese": "私には京都に住んでいる友人がいます",
+          "sentence": "I have a friend ____ lives in Kyoto.",
+          "wordCount": 8,
           "choices": [
             "who",
             "which",
-            "what",
-            "whom"
+            "that",
+            "where"
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
-          "id": "fb-g3-u3-006",
+          "id": "fb-g3-u3-003",
+          "japanese": "彼女には大阪で働いている兄がいます",
+          "sentence": "She has a brother ____ works in Osaka.",
+          "wordCount": 8,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-004",
           "japanese": "これは私が昨日買った本です",
           "sentence": "This is the book ____ I bought yesterday.",
+          "wordCount": 8,
           "choices": [
-            "that",
             "who",
-            "what",
-            "which"
+            "which",
+            "that",
+            "where"
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-005",
+          "japanese": "これは私が先週買った本です",
+          "sentence": "This is the book ____ I bought last week.",
+          "wordCount": 9,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-006",
+          "japanese": "あれは彼が先月書いた手紙です",
+          "sentence": "That is the letter ____ he wrote last month.",
+          "wordCount": 9,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-007",
           "japanese": "彼女は英語を話す女性です",
-          "sentence": "She is a ____ who speaks English.",
+          "sentence": "She is a woman ____ speaks English.",
+          "wordCount": 7,
           "choices": [
-            "woman",
-            "man",
-            "person",
-            "people"
+            "who",
+            "which",
+            "that",
+            "where"
           ],
-          "correctAnswer": "woman",
+          "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-008",
-          "japanese": "これは有名な建物です",
-          "sentence": "This is a ____ that is famous.",
+          "japanese": "彼は日本語を話す男性です",
+          "sentence": "He is a man ____ speaks Japanese.",
+          "wordCount": 7,
           "choices": [
-            "building",
-            "house",
-            "school",
-            "city"
+            "who",
+            "which",
+            "that",
+            "where"
           ],
-          "correctAnswer": "building",
+          "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-009",
-          "japanese": "私には東京に住んでいる友人がいます",
-          "sentence": "I have a friend ____ lives in Tokyo.",
+          "japanese": "私はフランス語を話す先生を知っています",
+          "sentence": "I know a teacher ____ speaks French.",
+          "wordCount": 7,
           "choices": [
             "who",
             "which",
-            "what",
-            "whom"
+            "that",
+            "where"
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-010",
-          "japanese": "これは私が昨日買った本です",
-          "sentence": "This is the book ____ I bought yesterday.",
+          "japanese": "これは有名な建物です",
+          "sentence": "This is a famous building ____ everyone knows.",
+          "wordCount": 8,
           "choices": [
-            "that",
             "who",
-            "what",
-            "which"
+            "which",
+            "that",
+            "where"
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-011",
-          "japanese": "彼女は英語を話す女性です",
-          "sentence": "She is a ____ who speaks English.",
+          "japanese": "これは古い建物です",
+          "sentence": "This is an old building ____ was built 100 years ago.",
+          "wordCount": 11,
           "choices": [
-            "woman",
-            "man",
-            "person",
-            "people"
+            "who",
+            "which",
+            "that",
+            "where"
           ],
-          "correctAnswer": "woman",
+          "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-012",
-          "japanese": "これは有名な建物です",
-          "sentence": "This is a ____ that is famous.",
+          "japanese": "あれは新しい建物です",
+          "sentence": "That is a new building ____ was just completed.",
+          "wordCount": 9,
           "choices": [
-            "building",
-            "house",
-            "school",
-            "city"
+            "who",
+            "which",
+            "that",
+            "where"
           ],
-          "correctAnswer": "building",
+          "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-013",
-          "japanese": "私には東京に住んでいる友人がいます",
-          "sentence": "I have a friend ____ lives in Tokyo.",
+          "japanese": "私が読んだ本はとても面白かったです",
+          "sentence": "The book ____ I read was very interesting.",
+          "wordCount": 8,
           "choices": [
             "who",
             "which",
-            "what",
-            "whom"
+            "that",
+            "where"
           ],
-          "correctAnswer": "who",
+          "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-014",
-          "japanese": "これは私が昨日買った本です",
-          "sentence": "This is the book ____ I bought yesterday.",
-          "choices": [
-            "that",
-            "who",
-            "what",
-            "which"
-          ],
-          "correctAnswer": "that",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-015",
-          "japanese": "彼女は英語を話す女性です",
-          "sentence": "She is a ____ who speaks English.",
-          "choices": [
-            "woman",
-            "man",
-            "person",
-            "people"
-          ],
-          "correctAnswer": "woman",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-016",
-          "japanese": "これは有名な建物です",
-          "sentence": "This is a ____ that is famous.",
-          "choices": [
-            "building",
-            "house",
-            "school",
-            "city"
-          ],
-          "correctAnswer": "building",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-017",
-          "japanese": "私には東京に住んでいる友人がいます",
-          "sentence": "I have a friend ____ lives in Tokyo.",
+          "japanese": "彼女が見た映画は感動的でした",
+          "sentence": "The movie ____ she watched was touching.",
+          "wordCount": 7,
           "choices": [
             "who",
             "which",
-            "what",
-            "whom"
-          ],
-          "correctAnswer": "who",
-          "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
-        },
-        {
-          "id": "fb-g3-u3-018",
-          "japanese": "これは私が昨日買った本です",
-          "sentence": "This is the book ____ I bought yesterday.",
-          "choices": [
             "that",
-            "who",
-            "what",
-            "which"
+            "where"
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-015",
+          "japanese": "私たちが訪れた場所は美しかったです",
+          "sentence": "The place ____ we visited was beautiful.",
+          "wordCount": 7,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-016",
+          "japanese": "英語を教えている先生は親切です",
+          "sentence": "The teacher ____ teaches English is kind.",
+          "wordCount": 7,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-017",
+          "japanese": "ピアノを弾いている少女は私の妹です",
+          "sentence": "The girl ____ is playing the piano is my sister.",
+          "wordCount": 10,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "who",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
+        },
+        {
+          "id": "fb-g3-u3-018",
+          "japanese": "公園で走っている犬は私のペットです",
+          "sentence": "The dog ____ is running in the park is my pet.",
+          "wordCount": 11,
+          "choices": [
+            "who",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctAnswer": "that",
+          "difficulty": "intermediate",
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-019",
-          "japanese": "彼女は英語を話す女性です",
-          "sentence": "She is a ____ who speaks English.",
+          "japanese": "机の上にある本は私のものです",
+          "sentence": "The book ____ is on the desk is mine.",
+          "wordCount": 9,
           "choices": [
-            "woman",
-            "man",
-            "person",
-            "people"
+            "who",
+            "which",
+            "that",
+            "where"
           ],
-          "correctAnswer": "woman",
+          "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         },
         {
           "id": "fb-g3-u3-020",
-          "japanese": "これは有名な建物です",
-          "sentence": "This is a ____ that is famous.",
+          "japanese": "窓の近くに立っている男性は私の父です",
+          "sentence": "The man ____ is standing near the window is my father.",
+          "wordCount": 11,
           "choices": [
-            "building",
-            "house",
-            "school",
-            "city"
+            "who",
+            "which",
+            "that",
+            "where"
           ],
-          "correctAnswer": "building",
+          "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞の表現。",
-          "hint": "関係代名詞"
+          "grammarPoint": "関係代名詞",
+          "hint": "関係代名詞を使って2つの文をつなぎます。"
         }
       ],
       "sentenceOrdering": [
@@ -15650,303 +15670,343 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u4-001",
-          "japanese": "私は新しい言語を学ぶことが好きです",
-          "sentence": "I like ____ learn new languages.",
-          "wordCount": 5,
+          "japanese": "ピアノを弾くことは難しいです",
+          "sentence": "To ____ the piano is difficult.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to play",
+            "playing",
+            "played",
+            "plays"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to play",
           "difficulty": "intermediate",
-          "hint": "like to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-002",
-          "japanese": "彼女には話す友達がたくさんいます",
-          "sentence": "She has many friends ____ talk with.",
-          "wordCount": 6,
+          "japanese": "嘘をつくことは悪いことです",
+          "sentence": "To ____ a lie is bad.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to tell",
+            "telling",
+            "telled",
+            "tells"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to tell",
           "difficulty": "intermediate",
-          "hint": "to + 動詞原形で修飾"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-003",
-          "japanese": "私は朝食を作るために早く起きました",
-          "sentence": "I got up early ____ make breakfast.",
-          "wordCount": 6,
+          "japanese": "外国語を学ぶことは楽しいです",
+          "sentence": "To ____ a foreign language is fun.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to learn",
+            "learning",
+            "learned",
+            "learns"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to learn",
           "difficulty": "intermediate",
-          "hint": "~するために"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 7
         },
         {
           "id": "fb-g3-u4-004",
-          "japanese": "彼はその知らせを聞いて驚きました",
-          "sentence": "He was surprised ____ hear the news.",
-          "wordCount": 6,
+          "japanese": "毎日練習することが大切です",
+          "sentence": "To ____ every day is important.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to practice",
+            "practiceing",
+            "practiceed",
+            "practices"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to practice",
           "difficulty": "intermediate",
-          "hint": "surprised to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-005",
-          "japanese": "私は何をすべきか分かりません",
-          "sentence": "I don't know what ____ do.",
-          "wordCount": 5,
+          "japanese": "私は医者になりたいです",
+          "sentence": "I want to ____ a doctor.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to be",
+            "being",
+            "beed",
+            "bes"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to be",
           "difficulty": "intermediate",
-          "hint": "what to do"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-006",
-          "japanese": "これは勉強するための良い場所です",
-          "sentence": "This is a good place ____ study.",
-          "wordCount": 6,
+          "japanese": "彼女は歌手になることを決めました",
+          "sentence": "She decided to ____ a singer.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to become",
+            "becomeing",
+            "becomeed",
+            "becomes"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to become",
           "difficulty": "intermediate",
-          "hint": "place to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-007",
-          "japanese": "私は彼女を招待するために電話しました",
-          "sentence": "I called her ____ invite her.",
-          "wordCount": 5,
+          "japanese": "私たちは明日出発する予定です",
+          "sentence": "We plan to ____ tomorrow.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to leave",
+            "leaveing",
+            "leaveed",
+            "leaves"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to leave",
           "difficulty": "intermediate",
-          "hint": "~するために"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 5
         },
         {
           "id": "fb-g3-u4-008",
-          "japanese": "何か飲むものはありますか",
-          "sentence": "Do you have anything ____ drink?",
-          "wordCount": 5,
+          "japanese": "彼は新しい車を買うことを望んでいます",
+          "sentence": "He hopes to ____ a new car.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to buy",
+            "buying",
+            "buyed",
+            "buys"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to buy",
           "difficulty": "intermediate",
-          "hint": "anything to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 7
         },
         {
           "id": "fb-g3-u4-009",
-          "japanese": "彼は本を借りるために図書館に行きました",
-          "sentence": "He went to the library ____ borrow books.",
-          "wordCount": 7,
+          "japanese": "何か飲むものが欲しいです",
+          "sentence": "I want something to ____.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to drink",
+            "drinking",
+            "drinked",
+            "drinks"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to drink",
           "difficulty": "intermediate",
-          "hint": "~するために"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 5
         },
         {
           "id": "fb-g3-u4-010",
-          "japanese": "どこに行くべきか教えてください",
-          "sentence": "Please tell me where ____ go.",
-          "wordCount": 5,
+          "japanese": "これは解くべき問題です",
+          "sentence": "This is a problem to ____.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to solve",
+            "solveing",
+            "solveed",
+            "solves"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to solve",
           "difficulty": "intermediate",
-          "hint": "where to go"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-011",
-          "japanese": "彼女は歌手になることを夢見ています",
-          "sentence": "She dreams of becoming ____ singer.",
-          "wordCount": 5,
+          "japanese": "私には遊ぶ時間がありません",
+          "sentence": "I have no time to ____.",
+          "verb": "infinitive",
           "choices": [
-            "a",
-            "an",
-            "the",
-            "for"
+            "to play",
+            "playing",
+            "played",
+            "plays"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "to play",
           "difficulty": "intermediate",
-          "hint": "become a + 職業"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-012",
-          "japanese": "これは行く時間です",
-          "sentence": "This is time ____ go.",
-          "wordCount": 4,
+          "japanese": "書くための紙が必要です",
+          "sentence": "I need paper to ____ on.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to write",
+            "writeing",
+            "writeed",
+            "writes"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to write",
           "difficulty": "intermediate",
-          "hint": "time to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-013",
-          "japanese": "私はあなたに会えて嬉しいです",
-          "sentence": "I am glad ____ see you.",
-          "wordCount": 5,
+          "japanese": "私は友達に会うために駅に行きました",
+          "sentence": "I went to the station to ____ my friend.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to meet",
+            "meeting",
+            "meeted",
+            "meets"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to meet",
           "difficulty": "intermediate",
-          "hint": "glad to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 9
         },
         {
           "id": "fb-g3-u4-014",
-          "japanese": "彼はいつ始めるべきか知っています",
-          "sentence": "He knows when ____ start.",
-          "wordCount": 4,
+          "japanese": "彼女はお金を稼ぐためにアルバイトをします",
+          "sentence": "She works part-time to ____ money.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to earn",
+            "earning",
+            "earned",
+            "earns"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to earn",
           "difficulty": "intermediate",
-          "hint": "when to start"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-015",
-          "japanese": "これは読むための良い本です",
-          "sentence": "This is a good book ____ read.",
-          "wordCount": 6,
+          "japanese": "私は写真を撮るためにカメラを買いました",
+          "sentence": "I bought a camera to ____ pictures.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to take",
+            "takeing",
+            "takeed",
+            "takes"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to take",
           "difficulty": "intermediate",
-          "hint": "book to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 7
         },
         {
           "id": "fb-g3-u4-016",
-          "japanese": "私はリラックスするために公園に散歩しました",
-          "sentence": "I walked to the park ____ relax.",
-          "wordCount": 6,
+          "japanese": "彼は健康でいるために毎日走ります",
+          "sentence": "He runs every day to ____ healthy.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to stay",
+            "staying",
+            "stayed",
+            "stays"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to stay",
           "difficulty": "intermediate",
-          "hint": "~するために"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 7
         },
         {
           "id": "fb-g3-u4-017",
-          "japanese": "彼女はどうやって解決すべきか分かりません",
-          "sentence": "She doesn't know how ____ solve it.",
-          "wordCount": 6,
+          "japanese": "私はあなたに会えて嬉しいです",
+          "sentence": "I am glad to ____ you.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to see",
+            "seeing",
+            "seeed",
+            "sees"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to see",
           "difficulty": "intermediate",
-          "hint": "how to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         },
         {
           "id": "fb-g3-u4-018",
-          "japanese": "私にはすべき仕事があります",
-          "sentence": "I have work ____ do.",
-          "wordCount": 4,
+          "japanese": "彼女は試験に合格して興奮しました",
+          "sentence": "She was excited to ____ the exam.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to pass",
+            "passing",
+            "passed",
+            "passs"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to pass",
           "difficulty": "intermediate",
-          "hint": "work to do"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 7
         },
         {
           "id": "fb-g3-u4-019",
-          "japanese": "彼はその結果を知って幸せでした",
-          "sentence": "He was happy ____ know the result.",
-          "wordCount": 6,
+          "japanese": "私たちはあなたの成功を知って誇りに思います",
+          "sentence": "We are proud to ____ your success.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to know",
+            "knowing",
+            "knowed",
+            "knows"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to know",
           "difficulty": "intermediate",
-          "hint": "happy to + 動詞原形"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 7
         },
         {
           "id": "fb-g3-u4-020",
-          "japanese": "何を言うべきか教えてください",
-          "sentence": "Please tell me what ____ say.",
-          "wordCount": 5,
+          "japanese": "彼は招待されて光栄に思いました",
+          "sentence": "He was honored to ____ invited.",
+          "verb": "infinitive",
           "choices": [
-            "to",
-            "for",
-            "at",
-            "of"
+            "to be",
+            "being",
+            "beed",
+            "bes"
           ],
-          "correctAnswer": "to",
+          "correctAnswer": "to be",
           "difficulty": "intermediate",
-          "hint": "what to say"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "grammarPoint": "不定詞",
+          "wordCount": 6
         }
       ],
       "sentenceOrdering": [
@@ -19160,303 +19220,323 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u5-001",
-          "japanese": "英語を話すことは楽しいです",
-          "sentence": "____ English is fun.",
-          "wordCount": 3,
+          "japanese": "泳ぐことは良い運動です",
+          "sentence": "____ is good exercise.",
+          "wordCount": 4,
           "choices": [
-            "Speaking",
-            "Speak",
-            "To speak",
-            "Speaks"
+            "Swimming",
+            "Swimmed",
+            "Swimms",
+            "to Swimm"
           ],
-          "correctAnswer": "Speaking",
+          "correctAnswer": "Swimming",
           "difficulty": "intermediate",
-          "hint": "動名詞: -ing形"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
           "id": "fb-g3-u5-002",
-          "japanese": "私は音楽を聴くことを楽しみます",
-          "sentence": "I enjoy ____ to music.",
-          "wordCount": 4,
+          "japanese": "ランニングは健康に良いです",
+          "sentence": "____ is good for health.",
+          "wordCount": 5,
           "choices": [
-            "listening",
-            "listen",
-            "to listen",
-            "listens"
+            "Running",
+            "Runned",
+            "Runns",
+            "to Runn"
           ],
-          "correctAnswer": "listening",
+          "correctAnswer": "Running",
           "difficulty": "intermediate",
-          "hint": "enjoy + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
           "id": "fb-g3-u5-003",
-          "japanese": "彼女は宿題をすることを終えました",
-          "sentence": "She finished ____ her homework.",
-          "wordCount": 4,
+          "japanese": "ダンスは楽しい活動です",
+          "sentence": "____ is an enjoyable activity.",
+          "wordCount": 5,
           "choices": [
-            "doing",
-            "do",
-            "to do",
-            "does"
+            "Dancing",
+            "Danced",
+            "Dancs",
+            "to Danc"
           ],
-          "correctAnswer": "doing",
+          "correctAnswer": "Dancing",
           "difficulty": "intermediate",
-          "hint": "finish + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
           "id": "fb-g3-u5-004",
-          "japanese": "私は喫煙をやめました",
-          "sentence": "I stopped ____.",
-          "wordCount": 2,
+          "japanese": "釣りは私の趣味です",
+          "sentence": "____ is my hobby.",
+          "wordCount": 4,
           "choices": [
-            "smoking",
-            "smoke",
-            "to smoke",
-            "smokes"
+            "Fishing",
+            "Fished",
+            "Fishs",
+            "to Fish"
           ],
-          "correctAnswer": "smoking",
+          "correctAnswer": "Fishing",
           "difficulty": "intermediate",
-          "hint": "stop + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
-          "id": "fb-g3-u5-001",
-          "japanese": "英語を話すことは楽しいです",
-          "sentence": "____ English is fun.",
+          "id": "fb-g3-u5-005",
+          "japanese": "私は歌うことが好きです",
+          "sentence": "I like ____.",
           "wordCount": 3,
           "choices": [
+            "singing",
+            "singed",
+            "sings",
+            "to sing"
+          ],
+          "correctAnswer": "singing",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-006",
+          "japanese": "彼女は絵を描くことが好きです",
+          "sentence": "She likes ____.",
+          "wordCount": 3,
+          "choices": [
+            "painting",
+            "painted",
+            "paints",
+            "to paint"
+          ],
+          "correctAnswer": "painting",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-007",
+          "japanese": "私たちは旅行することが好きです",
+          "sentence": "We like ____.",
+          "wordCount": 3,
+          "choices": [
+            "traveling",
+            "traveled",
+            "travels",
+            "to travel"
+          ],
+          "correctAnswer": "traveling",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-008",
+          "japanese": "彼は料理することを楽しんでいます",
+          "sentence": "He enjoys ____.",
+          "wordCount": 3,
+          "choices": [
+            "cooking",
+            "cooked",
+            "cooks",
+            "to cook"
+          ],
+          "correctAnswer": "cooking",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-009",
+          "japanese": "彼はサッカーをすることが得意です",
+          "sentence": "He is good at ____ soccer.",
+          "wordCount": 6,
+          "choices": [
+            "playing",
+            "played",
+            "plays",
+            "to play"
+          ],
+          "correctAnswer": "playing",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-010",
+          "japanese": "彼女はピアノを弾くことが得意です",
+          "sentence": "She is good at ____ the piano.",
+          "wordCount": 7,
+          "choices": [
+            "playing",
+            "played",
+            "plays",
+            "to play"
+          ],
+          "correctAnswer": "playing",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-011",
+          "japanese": "私は早起きが得意です",
+          "sentence": "I am good at ____ up early.",
+          "wordCount": 7,
+          "choices": [
+            "getting",
+            "getted",
+            "getts",
+            "to gett"
+          ],
+          "correctAnswer": "getting",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-012",
+          "japanese": "彼らは問題を解くことが得意です",
+          "sentence": "They are good at ____ problems.",
+          "wordCount": 6,
+          "choices": [
+            "solving",
+            "solved",
+            "solvs",
+            "to solv"
+          ],
+          "correctAnswer": "solving",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-013",
+          "japanese": "読書は知識を増やすのに役立ちます",
+          "sentence": "____ helps increase knowledge.",
+          "wordCount": 4,
+          "choices": [
+            "Reading",
+            "Readed",
+            "Reads",
+            "to Read"
+          ],
+          "correctAnswer": "Reading",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-014",
+          "japanese": "書くことは考えをまとめるのに役立ちます",
+          "sentence": "____ helps organize thoughts.",
+          "wordCount": 4,
+          "choices": [
+            "Writing",
+            "Writed",
+            "Writs",
+            "to Writ"
+          ],
+          "correctAnswer": "Writing",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-015",
+          "japanese": "話すことはコミュニケーションに不可欠です",
+          "sentence": "____ is essential for communication.",
+          "wordCount": 5,
+          "choices": [
             "Speaking",
-            "Speak",
-            "To speak",
-            "Speaks"
+            "Speaked",
+            "Speaks",
+            "to Speak"
           ],
           "correctAnswer": "Speaking",
           "difficulty": "intermediate",
-          "hint": "動名詞: -ing形"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
-          "id": "fb-g3-u5-002",
-          "japanese": "私は音楽を聴くことを楽しみます",
-          "sentence": "I enjoy ____ to music.",
+          "id": "fb-g3-u5-016",
+          "japanese": "聞くことは理解の第一歩です",
+          "sentence": "____ is the first step to understanding.",
+          "wordCount": 7,
+          "choices": [
+            "Listening",
+            "Listened",
+            "Listens",
+            "to Listen"
+          ],
+          "correctAnswer": "Listening",
+          "difficulty": "intermediate",
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+        },
+        {
+          "id": "fb-g3-u5-017",
+          "japanese": "ショッピングは彼女の趣味です",
+          "sentence": "____ is her hobby.",
           "wordCount": 4,
           "choices": [
-            "listening",
-            "listen",
-            "to listen",
-            "listens"
+            "Shopping",
+            "Shopped",
+            "Shopps",
+            "to Shopp"
           ],
-          "correctAnswer": "listening",
+          "correctAnswer": "Shopping",
           "difficulty": "intermediate",
-          "hint": "enjoy + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
-          "id": "fb-g3-u5-003",
-          "japanese": "彼女は宿題をすることを終えました",
-          "sentence": "She finished ____ her homework.",
-          "wordCount": 4,
+          "id": "fb-g3-u5-018",
+          "japanese": "掃除は毎日の仕事です",
+          "sentence": "____ is a daily task.",
+          "wordCount": 5,
           "choices": [
-            "doing",
-            "do",
-            "to do",
-            "does"
+            "Cleaning",
+            "Cleaned",
+            "Cleans",
+            "to Clean"
           ],
-          "correctAnswer": "doing",
+          "correctAnswer": "Cleaning",
           "difficulty": "intermediate",
-          "hint": "finish + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
-          "id": "fb-g3-u5-004",
-          "japanese": "私は喫煙をやめました",
-          "sentence": "I stopped ____.",
-          "wordCount": 2,
+          "id": "fb-g3-u5-019",
+          "japanese": "勉強することは成功への鍵です",
+          "sentence": "____ is the key to success.",
+          "wordCount": 6,
           "choices": [
-            "smoking",
-            "smoke",
-            "to smoke",
-            "smokes"
+            "Studying",
+            "Studyed",
+            "Studys",
+            "to Study"
           ],
-          "correctAnswer": "smoking",
+          "correctAnswer": "Studying",
           "difficulty": "intermediate",
-          "hint": "stop + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         },
         {
-          "id": "fb-g3-u5-001",
-          "japanese": "英語を話すことは楽しいです",
-          "sentence": "____ English is fun.",
-          "wordCount": 3,
+          "id": "fb-g3-u5-020",
+          "japanese": "働くことは生活の一部です",
+          "sentence": "____ is part of life.",
+          "wordCount": 5,
           "choices": [
-            "Speaking",
-            "Speak",
-            "To speak",
-            "Speaks"
+            "Working",
+            "Worked",
+            "Works",
+            "to Work"
           ],
-          "correctAnswer": "Speaking",
+          "correctAnswer": "Working",
           "difficulty": "intermediate",
-          "hint": "動名詞: -ing形"
-        },
-        {
-          "id": "fb-g3-u5-002",
-          "japanese": "私は音楽を聴くことを楽しみます",
-          "sentence": "I enjoy ____ to music.",
-          "wordCount": 4,
-          "choices": [
-            "listening",
-            "listen",
-            "to listen",
-            "listens"
-          ],
-          "correctAnswer": "listening",
-          "difficulty": "intermediate",
-          "hint": "enjoy + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-003",
-          "japanese": "彼女は宿題をすることを終えました",
-          "sentence": "She finished ____ her homework.",
-          "wordCount": 4,
-          "choices": [
-            "doing",
-            "do",
-            "to do",
-            "does"
-          ],
-          "correctAnswer": "doing",
-          "difficulty": "intermediate",
-          "hint": "finish + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-004",
-          "japanese": "私は喫煙をやめました",
-          "sentence": "I stopped ____.",
-          "wordCount": 2,
-          "choices": [
-            "smoking",
-            "smoke",
-            "to smoke",
-            "smokes"
-          ],
-          "correctAnswer": "smoking",
-          "difficulty": "intermediate",
-          "hint": "stop + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-001",
-          "japanese": "英語を話すことは楽しいです",
-          "sentence": "____ English is fun.",
-          "wordCount": 3,
-          "choices": [
-            "Speaking",
-            "Speak",
-            "To speak",
-            "Speaks"
-          ],
-          "correctAnswer": "Speaking",
-          "difficulty": "intermediate",
-          "hint": "動名詞: -ing形"
-        },
-        {
-          "id": "fb-g3-u5-002",
-          "japanese": "私は音楽を聴くことを楽しみます",
-          "sentence": "I enjoy ____ to music.",
-          "wordCount": 4,
-          "choices": [
-            "listening",
-            "listen",
-            "to listen",
-            "listens"
-          ],
-          "correctAnswer": "listening",
-          "difficulty": "intermediate",
-          "hint": "enjoy + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-003",
-          "japanese": "彼女は宿題をすることを終えました",
-          "sentence": "She finished ____ her homework.",
-          "wordCount": 4,
-          "choices": [
-            "doing",
-            "do",
-            "to do",
-            "does"
-          ],
-          "correctAnswer": "doing",
-          "difficulty": "intermediate",
-          "hint": "finish + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-004",
-          "japanese": "私は喫煙をやめました",
-          "sentence": "I stopped ____.",
-          "wordCount": 2,
-          "choices": [
-            "smoking",
-            "smoke",
-            "to smoke",
-            "smokes"
-          ],
-          "correctAnswer": "smoking",
-          "difficulty": "intermediate",
-          "hint": "stop + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-001",
-          "japanese": "英語を話すことは楽しいです",
-          "sentence": "____ English is fun.",
-          "wordCount": 3,
-          "choices": [
-            "Speaking",
-            "Speak",
-            "To speak",
-            "Speaks"
-          ],
-          "correctAnswer": "Speaking",
-          "difficulty": "intermediate",
-          "hint": "動名詞: -ing形"
-        },
-        {
-          "id": "fb-g3-u5-002",
-          "japanese": "私は音楽を聴くことを楽しみます",
-          "sentence": "I enjoy ____ to music.",
-          "wordCount": 4,
-          "choices": [
-            "listening",
-            "listen",
-            "to listen",
-            "listens"
-          ],
-          "correctAnswer": "listening",
-          "difficulty": "intermediate",
-          "hint": "enjoy + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-003",
-          "japanese": "彼女は宿題をすることを終えました",
-          "sentence": "She finished ____ her homework.",
-          "wordCount": 4,
-          "choices": [
-            "doing",
-            "do",
-            "to do",
-            "does"
-          ],
-          "correctAnswer": "doing",
-          "difficulty": "intermediate",
-          "hint": "finish + 動名詞"
-        },
-        {
-          "id": "fb-g3-u5-004",
-          "japanese": "私は喫煙をやめました",
-          "sentence": "I stopped ____.",
-          "wordCount": 2,
-          "choices": [
-            "smoking",
-            "smoke",
-            "to smoke",
-            "smokes"
-          ],
-          "correctAnswer": "smoking",
-          "difficulty": "intermediate",
-          "hint": "stop + 動名詞"
+          "grammarPoint": "動名詞",
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
         }
       ],
       "sentenceOrdering": [
@@ -22685,288 +22765,288 @@
         },
         {
           "id": "fb-g3-u6-002",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "泣いている赤ちゃんはお腹が空いています",
+          "sentence": "The ____ baby is hungry.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "crying",
+            "cry",
+            "cries",
+            "cried"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "crying",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-003",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "遊んでいる子どもたちは元気です",
+          "sentence": "The ____ children are energetic.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "playing",
+            "play",
+            "plays",
+            "played"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "playing",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-004",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "ピアノを弾いている女性は先生です",
+          "sentence": "The woman ____ piano is a teacher.",
+          "wordCount": 6,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "playing",
+            "play",
+            "plays",
+            "played"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "playing",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-005",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
+          "japanese": "座っている男性は私の父です",
+          "sentence": "The man ____ is my father.",
           "wordCount": 5,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "sitting",
+            "sit",
+            "sits",
+            "sat"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "sitting",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-006",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "笑っている少女はかわいいです",
+          "sentence": "The ____ girl is cute.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "smiling",
+            "smile",
+            "smiles",
+            "smiled"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "smiling",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-007",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "歌っている人々は幸せです",
+          "sentence": "The ____ people are happy.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "singing",
+            "sing",
+            "sings",
+            "sang"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "singing",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-008",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "踊っている学生たちは楽しんでいます",
+          "sentence": "The ____ students are enjoying.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "dancing",
+            "dance",
+            "dances",
+            "danced"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "dancing",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-009",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "読んでいる男の子は集中しています",
+          "sentence": "The boy ____ is concentrating.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "reading",
+            "read",
+            "reads",
+            "to read"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "reading",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-010",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "話している女性たちは友達です",
+          "sentence": "The ____ women are friends.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "talking",
+            "talk",
+            "talks",
+            "talked"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "talking",
           "difficulty": "intermediate",
           "hint": "-ing形"
         },
         {
           "id": "fb-g3-u6-011",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
+          "japanese": "壊れた窓はまだ修理されていません",
+          "sentence": "The ____ window is not repaired.",
           "wordCount": 5,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "broken",
+            "break",
+            "breaks",
+            "breaking"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "broken",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-012",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "焼かれたパンは美味しいです",
+          "sentence": "The ____ bread is delicious.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "baked",
+            "bake",
+            "bakes",
+            "baking"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "baked",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-013",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "盗まれた自転車は見つかりました",
+          "sentence": "The ____ bicycle was found.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "stolen",
+            "steal",
+            "steals",
+            "stealing"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "stolen",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-014",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "書かれた手紙は感動的でした",
+          "sentence": "The ____ letter was touching.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "written",
+            "write",
+            "writes",
+            "writing"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "written",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-015",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "閉められたドアは開きません",
+          "sentence": "The ____ door won't open.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "closed",
+            "close",
+            "closes",
+            "closing"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "closed",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-016",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "失われた時間は戻りません",
+          "sentence": "The ____ time won't return.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "lost",
+            "lose",
+            "loses",
+            "losing"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "lost",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-017",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "洗われた服はきれいです",
+          "sentence": "The ____ clothes are clean.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "washed",
+            "wash",
+            "washes",
+            "washing"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "washed",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-018",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "冷やされた飲み物は美味しいです",
+          "sentence": "The ____ drink is tasty.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "chilled",
+            "chill",
+            "chills",
+            "chilling"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "chilled",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-019",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "撮られた写真は美しいです",
+          "sentence": "The ____ photo is beautiful.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "taken",
+            "take",
+            "takes",
+            "taking"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "taken",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         },
         {
           "id": "fb-g3-u6-020",
-          "japanese": "走っている少年は私の弟です",
-          "sentence": "The ____ boy is my brother.",
-          "wordCount": 5,
+          "japanese": "使われた道具は古いです",
+          "sentence": "The ____ tools are old.",
+          "wordCount": 4,
           "choices": [
-            "running",
-            "run",
-            "runs",
-            "ran"
+            "used",
+            "use",
+            "uses",
+            "using"
           ],
-          "correctAnswer": "running",
+          "correctAnswer": "used",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "p.p.形"
         }
       ],
       "sentenceOrdering": [
@@ -26180,9 +26260,9 @@
       "fillInBlank": [
         {
           "id": "fb-g3-u7-001",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし私が鳥なら、世界中を飛び回るのに",
+          "sentence": "If I ____ a bird, I would fly around the world.",
+          "wordCount": 11,
           "choices": [
             "were",
             "am",
@@ -26195,9 +26275,9 @@
         },
         {
           "id": "fb-g3-u7-002",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もしお金持ちなら、大きな家を買うのに",
+          "sentence": "If I ____ rich, I would buy a big house.",
+          "wordCount": 10,
           "choices": [
             "were",
             "am",
@@ -26210,24 +26290,24 @@
         },
         {
           "id": "fb-g3-u7-003",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼女が社長なら、会社を変えるでしょう",
+          "sentence": "If she ____ the president, she would change the company.",
+          "wordCount": 10,
           "choices": [
             "were",
-            "am",
+            "is",
             "was",
             "be"
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If she were"
         },
         {
           "id": "fb-g3-u7-004",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし私があなたなら、そうしないでしょう",
+          "sentence": "If I ____ you, I wouldn't do that.",
+          "wordCount": 8,
           "choices": [
             "were",
             "am",
@@ -26236,58 +26316,58 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I were you"
         },
         {
           "id": "fb-g3-u7-005",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし時間があれば、旅行に行くのに",
+          "sentence": "If I ____ time, I would travel.",
+          "wordCount": 7,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-006",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし車を持っていたら、ドライブに行くのに",
+          "sentence": "If I ____ a car, I would go for a drive.",
+          "wordCount": 11,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-007",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼が才能を持っていたら、成功するでしょう",
+          "sentence": "If he ____ talent, he would succeed.",
+          "wordCount": 7,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If he had"
         },
         {
           "id": "fb-g3-u7-008",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし私が魔法使いなら、世界を変えるのに",
+          "sentence": "If I ____ a wizard, I would change the world.",
+          "wordCount": 10,
           "choices": [
             "were",
             "am",
@@ -26300,54 +26380,54 @@
         },
         {
           "id": "fb-g3-u7-009",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼女が歌手なら、有名になるでしょう",
+          "sentence": "If she ____ a singer, she would be famous.",
+          "wordCount": 9,
           "choices": [
             "were",
-            "am",
+            "is",
             "was",
             "be"
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If she were"
         },
         {
           "id": "fb-g3-u7-010",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし兄弟がいたら、もっと楽しいのに",
+          "sentence": "If I ____ a sibling, it would be more fun.",
+          "wordCount": 10,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-011",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼が親切なら、みんなが好きになるでしょう",
+          "sentence": "If he ____ kind, everyone would like him.",
+          "wordCount": 8,
           "choices": [
             "were",
-            "am",
+            "is",
             "was",
             "be"
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If he were"
         },
         {
           "id": "fb-g3-u7-012",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし私が猫なら、一日中寝るのに",
+          "sentence": "If I ____ a cat, I would sleep all day.",
+          "wordCount": 10,
           "choices": [
             "were",
             "am",
@@ -26360,54 +26440,54 @@
         },
         {
           "id": "fb-g3-u7-013",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もしスーパーパワーがあれば、人々を助けるのに",
+          "sentence": "If I ____ superpowers, I would help people.",
+          "wordCount": 8,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-014",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼女が先生なら、良い授業をするでしょう",
+          "sentence": "If she ____ a teacher, she would teach well.",
+          "wordCount": 9,
           "choices": [
             "were",
-            "am",
+            "is",
             "was",
             "be"
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If she were"
         },
         {
           "id": "fb-g3-u7-015",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし知識があれば、問題を解けるのに",
+          "sentence": "If I ____ knowledge, I could solve the problem.",
+          "wordCount": 9,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-016",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし私が王様なら、平和な国を作るのに",
+          "sentence": "If I ____ a king, I would create a peaceful country.",
+          "wordCount": 11,
           "choices": [
             "were",
             "am",
@@ -26420,63 +26500,63 @@
         },
         {
           "id": "fb-g3-u7-017",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし勇気があれば、挑戦するのに",
+          "sentence": "If I ____ courage, I would try.",
+          "wordCount": 7,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-018",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼が医者なら、多くの人を救うでしょう",
+          "sentence": "If he ____ a doctor, he would save many people.",
+          "wordCount": 10,
           "choices": [
             "were",
-            "am",
+            "is",
             "was",
             "be"
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If he were"
         },
         {
           "id": "fb-g3-u7-019",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし翼があれば、空を飛ぶのに",
+          "sentence": "If I ____ wings, I would fly in the sky.",
+          "wordCount": 10,
           "choices": [
-            "were",
-            "am",
-            "was",
-            "be"
+            "had",
+            "have",
+            "has",
+            "having"
           ],
-          "correctAnswer": "were",
+          "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I had"
         },
         {
           "id": "fb-g3-u7-020",
-          "japanese": "もし私が鳥なら、飛んでいくのに",
-          "sentence": "If I ____ a bird, I would fly.",
-          "wordCount": 6,
+          "japanese": "もし彼女が大統領なら、良い政策を作るでしょう",
+          "sentence": "If she ____ the president, she would make good policies.",
+          "wordCount": 10,
           "choices": [
             "were",
-            "am",
+            "is",
             "was",
             "be"
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If she were"
         }
       ],
       "sentenceOrdering": [
@@ -29692,7 +29772,7 @@
           "id": "fb-g3-u8-001",
           "japanese": "私は彼がどこに住んでいるか知りません",
           "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "wordCount": 6,
           "choices": [
             "lives",
             "live",
@@ -29705,288 +29785,288 @@
         },
         {
           "id": "fb-g3-u8-002",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼女は何が起こったか知っています",
+          "sentence": "She knows what ____.",
+          "wordCount": 4,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "happened",
+            "happen",
+            "happens",
+            "happening"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "happened",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "what happened"
         },
         {
           "id": "fb-g3-u8-003",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私はいつ彼が来るか分かりません",
+          "sentence": "I don't know when he will ____.",
+          "wordCount": 7,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "come",
+            "comes",
+            "coming",
+            "came"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "come",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "when he will come"
         },
         {
           "id": "fb-g3-u8-004",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼はなぜ彼女が泣いているか知っています",
+          "sentence": "He knows why she is ____.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "crying",
+            "cry",
+            "cries",
+            "cried"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "crying",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "why she is crying"
         },
         {
           "id": "fb-g3-u8-005",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
+          "japanese": "私は誰がこれを作ったか知っています",
+          "sentence": "I know who ____ this.",
           "wordCount": 5,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "made",
+            "make",
+            "makes",
+            "making"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "made",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "who made"
         },
         {
           "id": "fb-g3-u8-006",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼女はどうやってそこに行くか分かりません",
+          "sentence": "She doesn't know how to ____ there.",
+          "wordCount": 7,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "get",
+            "gets",
+            "getting",
+            "got"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "get",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "how to get"
         },
         {
           "id": "fb-g3-u8-007",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私はどの本が一番良いか分かりません",
+          "sentence": "I don't know which book ____ the best.",
+          "wordCount": 8,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "is",
+            "are",
+            "was",
+            "were"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "which book is"
         },
         {
           "id": "fb-g3-u8-008",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼は何時に店が開くか知っています",
+          "sentence": "He knows what time the store ____.",
+          "wordCount": 7,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "opens",
+            "open",
+            "opening",
+            "opened"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "opens",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "what time it opens"
         },
         {
           "id": "fb-g3-u8-009",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私たちはどこで彼女に会えるか知りません",
+          "sentence": "We don't know where we can ____ her.",
+          "wordCount": 8,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "meet",
+            "meets",
+            "meeting",
+            "met"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "meet",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "where we can meet"
         },
         {
           "id": "fb-g3-u8-010",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼女はなぜ彼が怒っているか理解しています",
+          "sentence": "She understands why he is ____.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "angry",
+            "anger",
+            "angrily",
+            "angrier"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "angry",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "why he is angry"
         },
         {
           "id": "fb-g3-u8-011",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私はいつバスが出発するか知りたいです",
+          "sentence": "I want to know when the bus ____.",
+          "wordCount": 8,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "leaves",
+            "leave",
+            "leaving",
+            "left"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "leaves",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "when the bus leaves"
         },
         {
           "id": "fb-g3-u8-012",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼は誰が勝つか予測できます",
+          "sentence": "He can predict who will ____.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "win",
+            "wins",
+            "winning",
+            "won"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "win",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "who will win"
         },
         {
           "id": "fb-g3-u8-013",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私たちはどうやって問題を解決するか話し合いました",
+          "sentence": "We discussed how to ____ the problem.",
+          "wordCount": 7,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "solve",
+            "solves",
+            "solving",
+            "solved"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "solve",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "how to solve"
         },
         {
           "id": "fb-g3-u8-014",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼女は何が必要か教えてくれました",
+          "sentence": "She told me what I ____.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "need",
+            "needs",
+            "needing",
+            "needed"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "need",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "what I need"
         },
         {
           "id": "fb-g3-u8-015",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私はどこで鍵を置いたか忘れました",
+          "sentence": "I forgot where I ____ the key.",
+          "wordCount": 7,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "put",
+            "puts",
+            "putting",
+            "putted"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "put",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "where I put"
         },
         {
           "id": "fb-g3-u8-016",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼はなぜそれが重要か説明しました",
+          "sentence": "He explained why it ____ important.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "is",
+            "are",
+            "was",
+            "were"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "why it is"
         },
         {
           "id": "fb-g3-u8-017",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私たちはいつ会議が始まるか確認しました",
+          "sentence": "We checked when the meeting ____.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "starts",
+            "start",
+            "starting",
+            "started"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "starts",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "when it starts"
         },
         {
           "id": "fb-g3-u8-018",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼女はどの道が最短か知っています",
+          "sentence": "She knows which route ____ the shortest.",
+          "wordCount": 7,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "is",
+            "are",
+            "was",
+            "were"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "which route is"
         },
         {
           "id": "fb-g3-u8-019",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "私は何が彼を幸せにするか知っています",
+          "sentence": "I know what ____ him happy.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "makes",
+            "make",
+            "making",
+            "made"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "makes",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "what makes"
         },
         {
           "id": "fb-g3-u8-020",
-          "japanese": "私は彼がどこに住んでいるか知りません",
-          "sentence": "I don't know where he ____.",
-          "wordCount": 5,
+          "japanese": "彼はどうやって成功したか語りました",
+          "sentence": "He told us how he ____.",
+          "wordCount": 6,
           "choices": [
-            "lives",
-            "live",
-            "living",
-            "lived"
+            "succeeded",
+            "succeed",
+            "succeeds",
+            "succeeding"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "succeeded",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "how he succeeded"
         }
       ],
       "sentenceOrdering": [
@@ -33202,7 +33282,7 @@
           "id": "fb-g3-u9-001",
           "japanese": "彼は私より背が高いです",
           "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "wordCount": 5,
           "choices": [
             "taller",
             "tallest",
@@ -33211,292 +33291,292 @@
           ],
           "correctAnswer": "taller",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "taller than"
         },
         {
           "id": "fb-g3-u9-002",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "この本はあの本より面白いです",
+          "sentence": "This book is ____ than that one.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "more interesting",
+            "most interesting",
+            "interesting",
+            "interestinger"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "more interesting",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "more interesting"
         },
         {
           "id": "fb-g3-u9-003",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼女はクラスで最も賢いです",
+          "sentence": "She is the ____ in the class.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "smartest",
+            "smarter",
+            "smart",
+            "most smart"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "smartest",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the smartest"
         },
         {
           "id": "fb-g3-u9-004",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "これは世界で最も美しい場所です",
+          "sentence": "This is the ____ place in the world.",
+          "wordCount": 8,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "most beautiful",
+            "more beautiful",
+            "beautiful",
+            "beautifulest"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "most beautiful",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the most beautiful"
         },
         {
           "id": "fb-g3-u9-005",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "夏は冬より暑いです",
+          "sentence": "Summer is ____ than winter.",
+          "wordCount": 5,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "hotter",
+            "hottest",
+            "hot",
+            "more hot"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "hotter",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "hotter than"
         },
         {
           "id": "fb-g3-u9-006",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼は家族の中で最も若いです",
+          "sentence": "He is the ____ in his family.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "youngest",
+            "younger",
+            "young",
+            "most young"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "youngest",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the youngest"
         },
         {
           "id": "fb-g3-u9-007",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "この問題はあれより簡単です",
+          "sentence": "This problem is ____ than that one.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "easier",
+            "easiest",
+            "easy",
+            "more easy"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "easier",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "easier than"
         },
         {
           "id": "fb-g3-u9-008",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼女は学校で最も人気があります",
+          "sentence": "She is the ____ in the school.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "most popular",
+            "more popular",
+            "popular",
+            "popularest"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "most popular",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the most popular"
         },
         {
           "id": "fb-g3-u9-009",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "今日は昨日より寒いです",
+          "sentence": "Today is ____ than yesterday.",
+          "wordCount": 5,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "colder",
+            "coldest",
+            "cold",
+            "more cold"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "colder",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "colder than"
         },
         {
           "id": "fb-g3-u9-010",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "これは私が見た中で最も良い映画です",
+          "sentence": "This is the ____ movie I've ever seen.",
+          "wordCount": 8,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "best",
+            "better",
+            "good",
+            "most good"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "best",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the best"
         },
         {
           "id": "fb-g3-u9-011",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼の車は私のより速いです",
+          "sentence": "His car is ____ than mine.",
+          "wordCount": 6,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "faster",
+            "fastest",
+            "fast",
+            "more fast"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "faster",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "faster than"
         },
         {
           "id": "fb-g3-u9-012",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼女は三人の中で最も親切です",
+          "sentence": "She is the ____ of the three.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "kindest",
+            "kinder",
+            "kind",
+            "most kind"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "kindest",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the kindest"
         },
         {
           "id": "fb-g3-u9-013",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "この部屋はあの部屋より広いです",
+          "sentence": "This room is ____ than that one.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "larger",
+            "largest",
+            "large",
+            "more large"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "larger",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "larger than"
         },
         {
           "id": "fb-g3-u9-014",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "富士山は日本で最も高い山です",
+          "sentence": "Mt. Fuji is the ____ mountain in Japan.",
+          "wordCount": 8,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "highest",
+            "higher",
+            "high",
+            "most high"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "highest",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the highest"
         },
         {
           "id": "fb-g3-u9-015",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼女は私より上手に歌います",
+          "sentence": "She sings ____ than I do.",
+          "wordCount": 6,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "better",
+            "best",
+            "good",
+            "more good"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "better",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "better than"
         },
         {
           "id": "fb-g3-u9-016",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "これは店で最も安い商品です",
+          "sentence": "This is the ____ item in the store.",
+          "wordCount": 8,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "cheapest",
+            "cheaper",
+            "cheap",
+            "most cheap"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "cheapest",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the cheapest"
         },
         {
           "id": "fb-g3-u9-017",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼は兄より強いです",
+          "sentence": "He is ____ than his brother.",
+          "wordCount": 6,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "stronger",
+            "strongest",
+            "strong",
+            "more strong"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "stronger",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "stronger than"
         },
         {
           "id": "fb-g3-u9-018",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "これは今年最も重要な試験です",
+          "sentence": "This is the ____ exam this year.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "most important",
+            "more important",
+            "important",
+            "importantest"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "most important",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the most important"
         },
         {
           "id": "fb-g3-u9-019",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼の家は私の家より遠いです",
+          "sentence": "His house is ____ than mine.",
+          "wordCount": 6,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "farther",
+            "farthest",
+            "far",
+            "more far"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "farther",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "farther than"
         },
         {
           "id": "fb-g3-u9-020",
-          "japanese": "彼は私より背が高いです",
-          "sentence": "He is ____ than me.",
-          "wordCount": 4,
+          "japanese": "彼女は私が知っている中で最も幸せな人です",
+          "sentence": "She is the ____ person I know.",
+          "wordCount": 7,
           "choices": [
-            "taller",
-            "tallest",
-            "tall",
-            "more tall"
+            "happiest",
+            "happier",
+            "happy",
+            "most happy"
           ],
-          "correctAnswer": "taller",
+          "correctAnswer": "happiest",
           "difficulty": "intermediate",
-          "hint": "-er than"
+          "hint": "the happiest"
         }
       ],
       "sentenceOrdering": [
