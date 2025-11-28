@@ -3112,7 +3112,25 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u0-001",
-          "japanese": "この本は多くの人々に読まれている",
+          "japanese": "英語は世界中で話されています",
+          "words": [
+            "English",
+            "is",
+            "spoken",
+            "around",
+            "the",
+            "world"
+          ],
+          "correctOrder": "English is spoken around the world",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-002",
+          "japanese": "この本は多くの人に読まれています",
           "words": [
             "This",
             "book",
@@ -3120,346 +3138,333 @@
             "read",
             "by",
             "many",
-            "people",
-            "."
+            "people"
           ],
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（現在形）",
-          "wordCount": 8,
-          "hint": "主語 + be動詞 + 過去分詞 + by ～"
+          "correctOrder": "This book is read by many people",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 7
         },
         {
-          "id": "so-g3-u0-002",
-          "japanese": "その手紙は昨日トムによって書かれた",
+          "id": "so-g3-u0-003",
+          "japanese": "その手紙は彼女によって書かれました",
           "words": [
             "The",
             "letter",
             "was",
             "written",
             "by",
-            "Tom",
-            "yesterday",
-            "."
+            "her"
           ],
+          "correctOrder": "The letter was written by her",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（過去形）",
-          "wordCount": 8,
-          "hint": "過去形: was/were + 過去分詞"
-        },
-        {
-          "id": "so-g3-u0-003",
-          "japanese": "英語は多くの国々で話されている",
-          "words": [
-            "English",
-            "is",
-            "spoken",
-            "in",
-            "many",
-            "countries",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "受動態 + 前置詞句",
-          "wordCount": 7,
-          "hint": "be + 過去分詞 / 場所は in ～"
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u0-004",
-          "japanese": "その部屋は昨日彼らによって掃除された",
+          "japanese": "この橋は1990年に建てられました",
           "words": [
-            "The",
-            "room",
+            "This",
+            "bridge",
             "was",
-            "cleaned",
-            "by",
-            "them",
-            "yesterday",
-            "."
+            "built",
+            "in",
+            "1990"
           ],
+          "correctOrder": "This bridge was built in 1990",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（規則動詞の過去分詞）",
-          "wordCount": 8,
-          "hint": "clean → cleaned（規則動詞）"
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u0-005",
-          "japanese": "その窓は誰かに壊された",
+          "japanese": "これらの車は日本で作られています",
+          "words": [
+            "These",
+            "cars",
+            "are",
+            "made",
+            "in",
+            "Japan"
+          ],
+          "correctOrder": "These cars are made in Japan",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-006",
+          "japanese": "その問題は昨日解かれました",
+          "words": [
+            "The",
+            "problem",
+            "was",
+            "solved",
+            "yesterday"
+          ],
+          "correctOrder": "The problem was solved yesterday",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 5
+        },
+        {
+          "id": "so-g3-u0-007",
+          "japanese": "この歌は若者に愛されています",
+          "words": [
+            "This",
+            "song",
+            "is",
+            "loved",
+            "by",
+            "young",
+            "people"
+          ],
+          "correctOrder": "This song is loved by young people",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 7
+        },
+        {
+          "id": "so-g3-u0-008",
+          "japanese": "彼の名前はよく知られています",
+          "words": [
+            "His",
+            "name",
+            "is",
+            "well",
+            "known"
+          ],
+          "correctOrder": "His name is well known",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 5
+        },
+        {
+          "id": "so-g3-u0-009",
+          "japanese": "その窓は彼によって壊されました",
           "words": [
             "The",
             "window",
             "was",
             "broken",
             "by",
-            "someone",
-            "."
+            "him"
           ],
-          "difficulty": "advanced",
-          "grammarPoint": "受動態（不規則過去分詞）",
-          "wordCount": 7,
-          "hint": "break → broken（過去分詞）"
+          "correctOrder": "The window was broken by him",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
         },
         {
-          "id": "so-g3-u0-006",
-          "japanese": "その映画は日本で有名だ",
+          "id": "so-g3-u0-010",
+          "japanese": "これらの写真は去年撮られました",
+          "words": [
+            "These",
+            "photos",
+            "were",
+            "taken",
+            "last",
+            "year"
+          ],
+          "correctOrder": "These photos were taken last year",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-011",
+          "japanese": "その扉は開けられています",
+          "words": [
+            "The",
+            "door",
+            "is",
+            "opened"
+          ],
+          "correctOrder": "The door is opened",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 4
+        },
+        {
+          "id": "so-g3-u0-012",
+          "japanese": "このコンピューターは使われていません",
+          "words": [
+            "This",
+            "computer",
+            "is",
+            "not",
+            "used"
+          ],
+          "correctOrder": "This computer is not used",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 5
+        },
+        {
+          "id": "so-g3-u0-013",
+          "japanese": "その建物は1950年に建てられました",
+          "words": [
+            "The",
+            "building",
+            "was",
+            "constructed",
+            "in",
+            "1950"
+          ],
+          "correctOrder": "The building was constructed in 1950",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-014",
+          "japanese": "多くの木が植えられました",
+          "words": [
+            "Many",
+            "trees",
+            "were",
+            "planted"
+          ],
+          "correctOrder": "Many trees were planted",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 4
+        },
+        {
+          "id": "so-g3-u0-015",
+          "japanese": "その映画は世界中で見られています",
           "words": [
             "The",
             "movie",
             "is",
-            "known",
-            "in",
-            "Japan",
-            "."
+            "watched",
+            "worldwide"
           ],
+          "correctOrder": "The movie is watched worldwide",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（be known）",
-          "wordCount": 7,
-          "hint": "be known in ～（～で知られている）"
-        },
-        {
-          "id": "so-g3-u0-007",
-          "japanese": "これらの歌は若者に愛されている",
-          "words": [
-            "These",
-            "songs",
-            "are",
-            "loved",
-            "by",
-            "young",
-            "people",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "受動態（現在形・複数主語）",
-          "wordCount": 8,
-          "hint": "複数主語 + are + 過去分詞"
-        },
-        {
-          "id": "so-g3-u0-008",
-          "japanese": "この公園は多くの観光客に訪れられる",
-          "words": [
-            "This",
-            "park",
-            "is",
-            "visited",
-            "by",
-            "many",
-            "tourists",
-            "."
-          ],
-          "difficulty": "advanced",
-          "grammarPoint": "受動態 + by 句",
-          "wordCount": 8,
-          "hint": "visit → visited（規則動詞）"
-        },
-        {
-          "id": "so-g3-u0-009",
-          "japanese": "この部屋は毎日使われる",
-          "words": [
-            "This",
-            "room",
-            "is",
-            "used",
-            "every",
-            "day",
-            "."
-          ],
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（習慣的現在）",
-          "wordCount": 7,
-          "hint": "every day（毎日）の位置にも注意"
-        },
-        {
-          "id": "so-g3-u0-010",
-          "japanese": "その家は去年建てられた",
-          "words": [
-            "The",
-            "house",
-            "was",
-            "built",
-            "last",
-            "year",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "受動態（過去・不規則）",
-          "wordCount": 7,
-          "hint": "build → built（過去分詞）"
-        },
-        {
-          "id": "so-g3-u0-011",
-          "japanese": "この歌は世界中で歌われている",
-          "words": [
-            "This",
-            "song",
-            "is",
-            "sung",
-            "all",
-            "over",
-            "the",
-            "world",
-            "."
-          ],
-          "difficulty": "advanced",
-          "grammarPoint": "受動態（不規則p.p.）",
-          "wordCount": 9,
-          "hint": "sing → sung（過去分詞）"
-        },
-        {
-          "id": "so-g3-u0-012",
-          "japanese": "その机は木で作られている",
-          "words": [
-            "The",
-            "desk",
-            "is",
-            "made",
-            "of",
-            "wood",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "受動態 + of",
-          "wordCount": 7,
-          "hint": "be made of ～"
-        },
-        {
-          "id": "so-g3-u0-013",
-          "japanese": "この料理は多くのバターで作られる",
-          "words": [
-            "This",
-            "dish",
-            "is",
-            "made",
-            "with",
-            "a",
-            "lot",
-            "of",
-            "butter",
-            "."
-          ],
-          "difficulty": "advanced",
-          "grammarPoint": "受動態 + with",
-          "wordCount": 10,
-          "hint": "道具・材料: with ～"
-        },
-        {
-          "id": "so-g3-u0-014",
-          "japanese": "彼はその質問で知られている",
-          "words": [
-            "He",
-            "is",
-            "known",
-            "for",
-            "the",
-            "question",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "be known for",
-          "wordCount": 7,
-          "hint": "be known for ～（理由）"
-        },
-        {
-          "id": "so-g3-u0-015",
-          "japanese": "英語はこの学校で教えられている",
-          "words": [
-            "English",
-            "is",
-            "taught",
-            "at",
-            "this",
-            "school",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "受動態（不規則p.p.）",
-          "wordCount": 7,
-          "hint": "teach → taught"
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u0-016",
-          "japanese": "その橋は2年前に建てられた",
-          "words": [
-            "The",
-            "bridge",
-            "was",
-            "built",
-            "two",
-            "years",
-            "ago",
-            "."
-          ],
-          "difficulty": "intermediate",
-          "grammarPoint": "受動態（過去）",
-          "wordCount": 8,
-          "hint": "ago は文末"
-        },
-        {
-          "id": "so-g3-u0-017",
-          "japanese": "この手紙は彼女によって書かれた",
-          "words": [
-            "This",
-            "letter",
-            "was",
-            "written",
-            "by",
-            "her",
-            "."
-          ],
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（過去・by）",
-          "wordCount": 7,
-          "hint": "by + 人"
-        },
-        {
-          "id": "so-g3-u0-018",
-          "japanese": "これらの本は子どもたちに読まれている",
-          "words": [
-            "These",
-            "books",
-            "are",
-            "read",
-            "by",
-            "children",
-            "."
-          ],
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（複数主語）",
-          "wordCount": 7,
-          "hint": "複数主語 + are"
-        },
-        {
-          "id": "so-g3-u0-019",
-          "japanese": "その問題はすでに解かれている",
-          "words": [
-            "The",
-            "problem",
-            "has",
-            "been",
-            "solved",
-            "already",
-            "."
-          ],
-          "difficulty": "advanced",
-          "grammarPoint": "完了受動",
-          "wordCount": 7,
-          "hint": "has been + p.p."
-        },
-        {
-          "id": "so-g3-u0-020",
-          "japanese": "この部屋は今掃除されているところだ",
+          "japanese": "この部屋は毎日掃除されます",
           "words": [
             "This",
             "room",
             "is",
-            "being",
             "cleaned",
-            "now",
-            "."
+            "every",
+            "day"
           ],
-          "difficulty": "advanced",
-          "grammarPoint": "進行形受動",
-          "wordCount": 7,
-          "hint": "is being + p.p."
+          "correctOrder": "This room is cleaned every day",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-017",
+          "japanese": "その手紙は英語で書かれました",
+          "words": [
+            "The",
+            "letter",
+            "was",
+            "written",
+            "in",
+            "English"
+          ],
+          "correctOrder": "The letter was written in English",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-018",
+          "japanese": "これらの製品は中国で製造されています",
+          "words": [
+            "These",
+            "products",
+            "are",
+            "manufactured",
+            "in",
+            "China"
+          ],
+          "correctOrder": "These products are manufactured in China",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
+        },
+        {
+          "id": "so-g3-u0-019",
+          "japanese": "その絵は有名な画家によって描かれました",
+          "words": [
+            "The",
+            "painting",
+            "was",
+            "painted",
+            "by",
+            "a",
+            "famous",
+            "artist"
+          ],
+          "correctOrder": "The painting was painted by a famous artist",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 8
+        },
+        {
+          "id": "so-g3-u0-020",
+          "japanese": "この本は1999年に出版されました",
+          "words": [
+            "This",
+            "book",
+            "was",
+            "published",
+            "in",
+            "1999"
+          ],
+          "correctOrder": "This book was published in 1999",
+          "difficulty": "intermediate",
+          "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+          "hint": "be + p.p. + by ~",
+          "grammarPoint": "受動態",
+          "wordCount": 6
         }
       ]
     },
@@ -6573,349 +6578,346 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u1-001",
-          "japanese": "その箱は彼によって開けられた",
+          "japanese": "私は彼に会ったことがあります",
           "words": [
-            "The",
-            "box",
-            "was",
-            "opened",
-            "by",
-            "him",
-            "."
+            "I",
+            "have",
+            "met",
+            "him"
           ],
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（過去）",
-          "wordCount": 7,
-          "hint": "was + p.p."
+          "correctOrder": "I have met him",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 4
         },
         {
           "id": "so-g3-u1-002",
-          "japanese": "図書館は午後5時に閉められます",
+          "japanese": "彼女は東京に行ったことがあります",
           "words": [
-            "The",
-            "library",
-            "is",
-            "closed",
-            "at",
-            "5",
-            "p.m.",
-            "."
+            "She",
+            "has",
+            "been",
+            "to",
+            "Tokyo"
           ],
+          "correctOrder": "She has been to Tokyo",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（現在・時刻句）",
-          "wordCount": 8,
-          "hint": "be + p.p. / at + 時刻"
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-003",
-          "japanese": "この部屋は今掃除されているところだ",
+          "japanese": "私たちはその映画を見たことがあります",
           "words": [
-            "This",
-            "room",
-            "is",
-            "being",
-            "cleaned",
-            "now",
-            "."
+            "We",
+            "have",
+            "seen",
+            "that",
+            "movie"
           ],
+          "correctOrder": "We have seen that movie",
           "difficulty": "intermediate",
-          "grammarPoint": "進行形受動",
-          "wordCount": 7,
-          "hint": "is being + p.p."
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-004",
-          "japanese": "その橋は来年建てられる予定だ",
+          "japanese": "彼は宿題を終えました",
           "words": [
-            "The",
-            "bridge",
-            "will",
-            "be",
-            "built",
-            "next",
-            "year",
-            "."
+            "He",
+            "has",
+            "finished",
+            "his",
+            "homework"
           ],
+          "correctOrder": "He has finished his homework",
           "difficulty": "intermediate",
-          "grammarPoint": "未来受動",
-          "wordCount": 8,
-          "hint": "will be + p.p."
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-005",
-          "japanese": "彼は新しい自転車を与えられた",
+          "japanese": "彼らはもう昼食を食べました",
           "words": [
-            "He",
-            "was",
-            "given",
-            "a",
-            "new",
-            "bicycle",
-            "."
+            "They",
+            "have",
+            "already",
+            "eaten",
+            "lunch"
           ],
-          "difficulty": "advanced",
-          "grammarPoint": "第4文型の受動",
-          "wordCount": 7,
-          "hint": "be + given + 物"
+          "correctOrder": "They have already eaten lunch",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-006",
-          "japanese": "そのニュースは多くの国で報道された",
+          "japanese": "私はこの本を読んだことがありません",
           "words": [
-            "The",
-            "news",
-            "was",
-            "reported",
-            "in",
-            "many",
-            "countries",
-            "."
+            "I",
+            "have",
+            "never",
+            "read",
+            "this",
+            "book"
           ],
+          "correctOrder": "I have never read this book",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態 + 前置詞句",
-          "wordCount": 8,
-          "hint": "in + 場所"
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u1-007",
-          "japanese": "その問題はすでに解かれている",
+          "japanese": "彼女はまだ来ていません",
           "words": [
-            "The",
-            "problem",
+            "She",
             "has",
-            "been",
-            "solved",
-            "already",
-            "."
+            "not",
+            "come",
+            "yet"
           ],
-          "difficulty": "advanced",
-          "grammarPoint": "完了受動",
-          "wordCount": 7,
-          "hint": "has been + p.p."
+          "correctOrder": "She has not come yet",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-008",
-          "japanese": "この歌は若者に愛されている",
+          "japanese": "あなたは日本に行ったことがありますか",
           "words": [
-            "This",
-            "song",
-            "is",
-            "loved",
-            "by",
-            "young",
-            "people",
-            "."
+            "Have",
+            "you",
+            "been",
+            "to",
+            "Japan"
           ],
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（現在・by句）",
-          "wordCount": 8,
-          "hint": "by + 人"
+          "correctOrder": "Have you been to Japan",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-009",
-          "japanese": "部屋は彼女によって飾られていた",
+          "japanese": "彼はその知らせを聞きましたか",
           "words": [
-            "The",
-            "room",
-            "was",
-            "being",
-            "decorated",
-            "by",
-            "her",
-            "."
+            "Has",
+            "he",
+            "heard",
+            "the",
+            "news"
           ],
-          "difficulty": "advanced",
-          "grammarPoint": "過去進行形受動",
-          "wordCount": 8,
-          "hint": "was being + p.p."
+          "correctOrder": "Has he heard the news",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-010",
-          "japanese": "英語は世界中で話されている",
+          "japanese": "私は3年間英語を勉強しています",
           "words": [
+            "I",
+            "have",
+            "studied",
             "English",
-            "is",
-            "spoken",
-            "all",
-            "over",
-            "the",
-            "world",
-            "."
+            "for",
+            "three",
+            "years"
           ],
+          "correctOrder": "I have studied English for three years",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（不規則p.p.）",
-          "wordCount": 8,
-          "hint": "speak → spoken"
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u1-011",
-          "japanese": "そのケーキは母によって作られました",
+          "japanese": "彼女は2時間待っています",
           "words": [
-            "The",
-            "cake",
-            "was",
-            "made",
-            "by",
-            "my",
-            "mother"
+            "She",
+            "has",
+            "waited",
+            "for",
+            "two",
+            "hours"
           ],
-          "correctOrder": "The cake was made by my mother",
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（過去）",
-          "wordCount": 7,
-          "hint": "be + p.p. / by + 人"
+          "correctOrder": "She has waited for two hours",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u1-012",
-          "japanese": "この橋は今修理されているところです",
+          "japanese": "私たちはちょうど到着しました",
           "words": [
-            "This",
-            "bridge",
-            "is",
-            "being",
-            "repaired",
-            "now"
+            "We",
+            "have",
+            "just",
+            "arrived"
           ],
-          "correctOrder": "This bridge is being repaired now",
+          "correctOrder": "We have just arrived",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（進行形）",
-          "wordCount": 6,
-          "hint": "is being + p.p."
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 4
         },
         {
           "id": "so-g3-u1-013",
-          "japanese": "英語は世界中で話されています",
+          "japanese": "彼はすでに出発しました",
           "words": [
-            "English",
-            "is",
-            "spoken",
-            "around",
-            "the",
-            "world"
+            "He",
+            "has",
+            "already",
+            "left"
           ],
-          "correctOrder": "English is spoken around the world",
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（現在）",
-          "wordCount": 6,
-          "hint": "be + p.p."
+          "correctOrder": "He has already left",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 4
         },
         {
           "id": "so-g3-u1-014",
-          "japanese": "その問題はすでに解かれています",
+          "japanese": "彼らは京都を訪れたことがあります",
           "words": [
-            "The",
-            "problem",
-            "has",
-            "been",
-            "solved",
-            "already"
+            "They",
+            "have",
+            "visited",
+            "Kyoto"
           ],
-          "correctOrder": "The problem has been solved already",
+          "correctOrder": "They have visited Kyoto",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（完了）",
-          "wordCount": 6,
-          "hint": "has been + p.p."
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 4
         },
         {
           "id": "so-g3-u1-015",
-          "japanese": "その窓は昨日割られました",
+          "japanese": "私は彼女に会ったことがありません",
           "words": [
-            "The",
-            "window",
-            "was",
-            "broken",
-            "yesterday"
+            "I",
+            "have",
+            "never",
+            "met",
+            "her"
           ],
-          "correctOrder": "The window was broken yesterday",
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（過去）",
-          "wordCount": 5,
-          "hint": "was + p.p."
+          "correctOrder": "I have never met her",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-016",
-          "japanese": "この部屋は来週掃除されるでしょう",
+          "japanese": "あなたは昼食を食べましたか",
           "words": [
-            "This",
-            "room",
-            "will",
-            "be",
-            "cleaned",
-            "next",
-            "week"
+            "Have",
+            "you",
+            "eaten",
+            "lunch"
           ],
-          "correctOrder": "This room will be cleaned next week",
+          "correctOrder": "Have you eaten lunch",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（未来）",
-          "wordCount": 7,
-          "hint": "will be + p.p."
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 4
         },
         {
           "id": "so-g3-u1-017",
-          "japanese": "その歌は子どもたちに愛されています",
+          "japanese": "彼女は手紙を書き終えました",
           "words": [
-            "The",
-            "song",
-            "is",
-            "loved",
-            "by",
-            "children"
+            "She",
+            "has",
+            "finished",
+            "writing",
+            "the",
+            "letter"
           ],
-          "correctOrder": "The song is loved by children",
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（現在）",
-          "wordCount": 6,
-          "hint": "be + p.p. / by + 人"
+          "correctOrder": "She has finished writing the letter",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u1-018",
-          "japanese": "その手紙は彼によって書かれました",
+          "japanese": "私たちは長い間ここに住んでいます",
           "words": [
-            "The",
-            "letter",
-            "was",
-            "written",
-            "by",
-            "him"
+            "We",
+            "have",
+            "lived",
+            "here",
+            "for",
+            "a",
+            "long",
+            "time"
           ],
-          "correctOrder": "The letter was written by him",
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（過去）",
-          "wordCount": 6,
-          "hint": "was + p.p."
+          "correctOrder": "We have lived here for a long time",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u1-019",
-          "japanese": "この机は木で作られています",
+          "japanese": "彼は何度も失敗しました",
           "words": [
-            "This",
-            "desk",
-            "is",
-            "made",
-            "of",
-            "wood"
+            "He",
+            "has",
+            "failed",
+            "many",
+            "times"
           ],
-          "correctOrder": "This desk is made of wood",
-          "difficulty": "beginner",
-          "grammarPoint": "受動態（現在・材質）",
-          "wordCount": 6,
-          "hint": "be made of ～"
+          "correctOrder": "He has failed many times",
+          "difficulty": "intermediate",
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         },
         {
           "id": "so-g3-u1-020",
-          "japanese": "紙は木から作られます",
+          "japanese": "彼らはまだ決めていません",
           "words": [
-            "Paper",
-            "is",
-            "made",
-            "from",
-            "wood"
+            "They",
+            "have",
+            "not",
+            "decided",
+            "yet"
           ],
-          "correctOrder": "Paper is made from wood",
+          "correctOrder": "They have not decided yet",
           "difficulty": "intermediate",
-          "grammarPoint": "受動態（一般・素材変化）",
-          "wordCount": 5,
-          "hint": "be made from ～"
+          "explanation": "現在完了の語順: 主語 + have/has + 過去分詞。",
+          "hint": "have/has + p.p.",
+          "grammarPoint": "現在完了",
+          "wordCount": 5
         }
       ]
     },
@@ -10029,343 +10031,388 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u2-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は2時間勉強しています",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "been",
+            "studying",
+            "for",
+            "two",
+            "hours"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "I have been studying for two hours",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は朝から働いています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "been",
+            "working",
+            "since",
+            "morning"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "He has been working since morning",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u2-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は30分待っています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "been",
+            "waiting",
+            "for",
+            "30",
+            "minutes"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "She has been waiting for 30 minutes",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私たちは3年間ここに住んでいます",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "been",
+            "living",
+            "here",
+            "for",
+            "three",
+            "years"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "We have been living here for three years",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u2-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼らは1時間話しています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "been",
+            "talking",
+            "for",
+            "an",
+            "hour"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "They have been talking for an hour",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は昨日から寝ています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "been",
+            "sleeping",
+            "since",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "He has been sleeping since yesterday",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u2-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は朝から料理しています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "been",
+            "cooking",
+            "since",
+            "morning"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "She has been cooking since morning",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u2-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は長い間これを探しています",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "been",
+            "looking",
+            "for",
+            "this",
+            "for",
+            "a",
+            "long",
+            "time"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "I have been looking for this for a long time",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 10
         },
         {
           "id": "so-g3-u2-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼らは1週間旅行しています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "been",
+            "traveling",
+            "for",
+            "a",
+            "week"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "They have been traveling for a week",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は6時から勉強しています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "been",
+            "studying",
+            "since",
+            "6",
+            "o'clock"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "He has been studying since 6 o'clock",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私たちは2時間走っています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "been",
+            "running",
+            "for",
+            "two",
+            "hours"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "We have been running for two hours",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は午後からピアノを弾いています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "been",
+            "playing",
+            "the",
+            "piano",
+            "since",
+            "this",
+            "afternoon"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "She has been playing the piano since this afternoon",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 9
         },
         {
           "id": "so-g3-u2-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は5年間英語を教えています",
           "words": [
             "I",
-            "study",
+            "have",
+            "been",
+            "teaching",
             "English",
-            "every",
-            "day"
+            "for",
+            "five",
+            "years"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "I have been teaching English for five years",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u2-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は1時間電話で話しています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "been",
+            "talking",
+            "on",
+            "the",
+            "phone",
+            "for",
+            "an",
+            "hour"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "He has been talking on the phone for an hour",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 10
         },
         {
           "id": "so-g3-u2-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私たちは先週から準備しています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "We",
+            "have",
+            "been",
+            "preparing",
+            "since",
+            "last",
+            "week"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "We have been preparing since last week",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は30分歌っています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "been",
+            "singing",
+            "for",
+            "30",
+            "minutes"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "She has been singing for 30 minutes",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼らは昨日から待っています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "They",
+            "have",
+            "been",
+            "waiting",
+            "since",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "They have been waiting since yesterday",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u2-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は朝から読んでいます",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "been",
+            "reading",
+            "since",
+            "morning"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "I have been reading since morning",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 6
         },
         {
           "id": "so-g3-u2-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は1時間泳いでいます",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "has",
+            "been",
+            "swimming",
+            "for",
+            "an",
+            "hour"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "He has been swimming for an hour",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u2-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は午後から絵を描いています",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "been",
+            "drawing",
+            "since",
+            "this",
+            "afternoon"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "一般動詞",
-          "wordCount": 5
+          "correctOrder": "She has been drawing since this afternoon",
+          "difficulty": "intermediate",
+          "explanation": "現在完了進行形の語順: 主語 + have/has been + 動詞ing。",
+          "hint": "have/has been + -ing",
+          "grammarPoint": "現在完了進行形",
+          "wordCount": 7
         }
       ]
     },
@@ -13479,343 +13526,393 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u3-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私には東京に住んでいる友人がいます",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "a",
+            "friend",
+            "who",
+            "lives",
+            "in",
+            "Tokyo"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "I have a friend who lives in Tokyo",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは私が昨日買った本です",
           "words": [
+            "This",
+            "is",
+            "the",
+            "book",
+            "that",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "bought",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is the book that I bought yesterday",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は英語を話す女性です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "is",
+            "a",
+            "woman",
+            "who",
+            "speaks",
+            "English"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "She is a woman who speaks English",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは有名な建物です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "building",
+            "that",
+            "is",
+            "famous"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is a building that is famous",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私には東京に住んでいる友人がいます",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "a",
+            "friend",
+            "who",
+            "lives",
+            "in",
+            "Tokyo"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "I have a friend who lives in Tokyo",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは私が昨日買った本です",
           "words": [
+            "This",
+            "is",
+            "the",
+            "book",
+            "that",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "bought",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is the book that I bought yesterday",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は英語を話す女性です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "is",
+            "a",
+            "woman",
+            "who",
+            "speaks",
+            "English"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "She is a woman who speaks English",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは有名な建物です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "building",
+            "that",
+            "is",
+            "famous"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is a building that is famous",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私には東京に住んでいる友人がいます",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "a",
+            "friend",
+            "who",
+            "lives",
+            "in",
+            "Tokyo"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "I have a friend who lives in Tokyo",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは私が昨日買った本です",
           "words": [
+            "This",
+            "is",
+            "the",
+            "book",
+            "that",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "bought",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is the book that I bought yesterday",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は英語を話す女性です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "is",
+            "a",
+            "woman",
+            "who",
+            "speaks",
+            "English"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "She is a woman who speaks English",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは有名な建物です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "building",
+            "that",
+            "is",
+            "famous"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is a building that is famous",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私には東京に住んでいる友人がいます",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "a",
+            "friend",
+            "who",
+            "lives",
+            "in",
+            "Tokyo"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "I have a friend who lives in Tokyo",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは私が昨日買った本です",
           "words": [
+            "This",
+            "is",
+            "the",
+            "book",
+            "that",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "bought",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is the book that I bought yesterday",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は英語を話す女性です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "is",
+            "a",
+            "woman",
+            "who",
+            "speaks",
+            "English"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "She is a woman who speaks English",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは有名な建物です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "building",
+            "that",
+            "is",
+            "famous"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is a building that is famous",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私には東京に住んでいる友人がいます",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "a",
+            "friend",
+            "who",
+            "lives",
+            "in",
+            "Tokyo"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "I have a friend who lives in Tokyo",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは私が昨日買った本です",
           "words": [
+            "This",
+            "is",
+            "the",
+            "book",
+            "that",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "bought",
+            "yesterday"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is the book that I bought yesterday",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 8
         },
         {
           "id": "so-g3-u3-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は英語を話す女性です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "is",
+            "a",
+            "woman",
+            "who",
+            "speaks",
+            "English"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "She is a woman who speaks English",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         },
         {
           "id": "so-g3-u3-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは有名な建物です",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "building",
+            "that",
+            "is",
+            "famous"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "複数形・代名詞",
-          "wordCount": 5
+          "correctOrder": "This is a building that is famous",
+          "difficulty": "intermediate",
+          "explanation": "関係代名詞の語順。",
+          "hint": "関係代名詞",
+          "grammarPoint": "関係代名詞",
+          "wordCount": 7
         }
       ]
     },
@@ -16929,343 +17026,351 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u4-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は英語を勉強することが好きです",
+          "sentence": "I like to study English.",
           "words": [
             "I",
+            "like",
+            "to",
             "study",
-            "English",
-            "every",
-            "day"
+            "English"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I like to study English",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "like to + 動詞原形"
         },
         {
           "id": "so-g3-u4-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女には話す友達がいません",
+          "sentence": "She has no friends to talk with.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "has",
+            "no",
+            "friends",
+            "to",
+            "talk",
+            "with"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "She has no friends to talk with",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "grammarPoint": "不定詞",
+          "hint": "friends to talk with"
         },
         {
           "id": "so-g3-u4-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は朝食を作るために早く起きました",
+          "sentence": "I got up early to make breakfast.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "got",
+            "up",
+            "early",
+            "to",
+            "make",
+            "breakfast"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I got up early to make breakfast",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "so-g3-u4-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼はそのニュースを聞いて驚きました",
+          "sentence": "He was surprised to hear the news.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "was",
+            "surprised",
+            "to",
+            "hear",
+            "the",
+            "news"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "He was surprised to hear the news",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "surprised to + 動詞原形"
         },
         {
           "id": "so-g3-u4-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は何をすべきか分かりません",
+          "sentence": "I don't know what to do.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "what",
+            "to",
+            "do"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I don't know what to do",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "what to do"
         },
         {
           "id": "so-g3-u4-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは勉強するための良い場所です",
+          "sentence": "This is a good place to study.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "good",
+            "place",
+            "to",
+            "study"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "This is a good place to study",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "place to + 動詞原形"
         },
         {
           "id": "so-g3-u4-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼女を招待するために電話しました",
+          "sentence": "I called her to invite her.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "called",
+            "her",
+            "to",
+            "invite",
+            "her"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I called her to invite her",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "so-g3-u4-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "何か飲むものはありますか",
+          "sentence": "Do you have anything to drink?",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Do",
+            "you",
+            "have",
+            "anything",
+            "to",
+            "drink"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "Do you have anything to drink",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "anything to drink"
         },
         {
           "id": "so-g3-u4-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は本を借りるために図書館に行きました",
+          "sentence": "He went to the library to borrow books.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "went",
+            "to",
+            "the",
+            "library",
+            "to",
+            "borrow",
+            "books"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "He went to the library to borrow books",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "so-g3-u4-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "どこに行くべきか教えてください",
+          "sentence": "Please tell me where to go.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Please",
+            "tell",
+            "me",
+            "where",
+            "to",
+            "go"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "Please tell me where to go",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "where to go"
         },
         {
           "id": "so-g3-u4-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は歌手になることを夢見ています",
+          "sentence": "She dreams of becoming a singer.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "dreams",
+            "of",
+            "becoming",
+            "a",
+            "singer"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "She dreams of becoming a singer",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "dream of + 動名詞"
         },
         {
           "id": "so-g3-u4-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは行く時間です",
+          "sentence": "This is time to go.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "time",
+            "to",
+            "go"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "This is time to go",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "time to go"
         },
         {
           "id": "so-g3-u4-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私はあなたに会えて嬉しいです",
+          "sentence": "I am glad to see you.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "am",
+            "glad",
+            "to",
+            "see",
+            "you"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I am glad to see you",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "glad to + 動詞原形"
         },
         {
           "id": "so-g3-u4-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼はいつ始めるべきか知っています",
+          "sentence": "He knows when to start.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "knows",
+            "when",
+            "to",
+            "start"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "He knows when to start",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "when to start"
         },
         {
           "id": "so-g3-u4-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "これは読むための良い本です",
+          "sentence": "This is a good book to read.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "good",
+            "book",
+            "to",
+            "read"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "This is a good book to read",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "book to read"
         },
         {
           "id": "so-g3-u4-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私はリラックスするために公園に散歩しました",
+          "sentence": "I walked to the park to relax.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "walked",
+            "to",
+            "the",
+            "park",
+            "to",
+            "relax"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I walked to the park to relax",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "~するために"
         },
         {
           "id": "so-g3-u4-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女はどうやって解決すべきか分かりません",
+          "sentence": "She doesn't know how to solve it.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "doesn't",
+            "know",
+            "how",
+            "to",
+            "solve",
+            "it"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "She doesn't know how to solve it",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "how to + 動詞原形"
         },
         {
           "id": "so-g3-u4-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私にはすべき仕事があります",
+          "sentence": "I have work to do.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "have",
+            "work",
+            "to",
+            "do"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "I have work to do",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "work to do"
         },
         {
           "id": "so-g3-u4-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼はその結果を知って幸せでした",
+          "sentence": "He was happy to know the result.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "was",
+            "happy",
+            "to",
+            "know",
+            "the",
+            "result"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "He was happy to know the result",
+          "wordCount": 7,
+          "difficulty": "intermediate",
+          "hint": "happy to + 動詞原形"
         },
         {
           "id": "so-g3-u4-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "何を言うべきか教えてください",
+          "sentence": "Please tell me what to say.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "Please",
+            "tell",
+            "me",
+            "what",
+            "to",
+            "say"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（what/who/when）",
-          "wordCount": 5
+          "correctAnswer": "Please tell me what to say",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "what to say"
         }
       ]
     },
@@ -20379,343 +20484,308 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u5-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "Speaking English is fun.",
           "words": [
-            "I",
-            "study",
+            "Speaking",
             "English",
-            "every",
-            "day"
+            "is",
+            "fun"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "Speaking English is fun",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "hint": "動名詞が主語"
         },
         {
           "id": "so-g3-u5-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy listening to music.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "enjoy",
+            "listening",
+            "to",
+            "music"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I enjoy listening to music",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
           "id": "so-g3-u5-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished doing her homework.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "finished",
+            "doing",
+            "her",
+            "homework"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "She finished doing her homework",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
           "id": "so-g3-u5-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped smoking.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "stopped",
+            "smoking"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I stopped smoking",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "so-g3-u5-005",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "Speaking English is fun.",
           "words": [
-            "I",
-            "study",
+            "Speaking",
             "English",
-            "every",
-            "day"
+            "is",
+            "fun"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "Speaking English is fun",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "hint": "動名詞が主語"
         },
         {
-          "id": "so-g3-u5-006",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy listening to music.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "enjoy",
+            "listening",
+            "to",
+            "music"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I enjoy listening to music",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "so-g3-u5-007",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished doing her homework.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "finished",
+            "doing",
+            "her",
+            "homework"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "She finished doing her homework",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "so-g3-u5-008",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped smoking.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "stopped",
+            "smoking"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I stopped smoking",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "so-g3-u5-009",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "Speaking English is fun.",
           "words": [
-            "I",
-            "study",
+            "Speaking",
             "English",
-            "every",
-            "day"
+            "is",
+            "fun"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "Speaking English is fun",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "hint": "動名詞が主語"
         },
         {
-          "id": "so-g3-u5-010",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy listening to music.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "enjoy",
+            "listening",
+            "to",
+            "music"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I enjoy listening to music",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "so-g3-u5-011",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished doing her homework.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "finished",
+            "doing",
+            "her",
+            "homework"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "She finished doing her homework",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "so-g3-u5-012",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped smoking.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "stopped",
+            "smoking"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I stopped smoking",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "so-g3-u5-013",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "Speaking English is fun.",
           "words": [
-            "I",
-            "study",
+            "Speaking",
             "English",
-            "every",
-            "day"
+            "is",
+            "fun"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "Speaking English is fun",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "hint": "動名詞が主語"
         },
         {
-          "id": "so-g3-u5-014",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy listening to music.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "enjoy",
+            "listening",
+            "to",
+            "music"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I enjoy listening to music",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "so-g3-u5-015",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished doing her homework.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "finished",
+            "doing",
+            "her",
+            "homework"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "She finished doing her homework",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "so-g3-u5-016",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped smoking.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "stopped",
+            "smoking"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I stopped smoking",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         },
         {
-          "id": "so-g3-u5-017",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-001",
+          "japanese": "英語を話すことは楽しいです",
+          "sentence": "Speaking English is fun.",
           "words": [
-            "I",
-            "study",
+            "Speaking",
             "English",
-            "every",
-            "day"
+            "is",
+            "fun"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "Speaking English is fun",
+          "wordCount": 4,
+          "difficulty": "intermediate",
+          "hint": "動名詞が主語"
         },
         {
-          "id": "so-g3-u5-018",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-002",
+          "japanese": "私は音楽を聴くことを楽しみます",
+          "sentence": "I enjoy listening to music.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "enjoy",
+            "listening",
+            "to",
+            "music"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I enjoy listening to music",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "enjoy + 動名詞"
         },
         {
-          "id": "so-g3-u5-019",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-003",
+          "japanese": "彼女は宿題をすることを終えました",
+          "sentence": "She finished doing her homework.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "She",
+            "finished",
+            "doing",
+            "her",
+            "homework"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "She finished doing her homework",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "finish + 動名詞"
         },
         {
-          "id": "so-g3-u5-020",
-          "japanese": "私は毎日英語を勉強します",
+          "id": "so-g3-u5-004",
+          "japanese": "私は喫煙をやめました",
+          "sentence": "I stopped smoking.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "stopped",
+            "smoking"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "三単現のs",
-          "wordCount": 5
+          "correctAnswer": "I stopped smoking",
+          "wordCount": 3,
+          "difficulty": "intermediate",
+          "hint": "stop + 動名詞"
         }
       ]
     },
@@ -23829,343 +23899,383 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u6-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         },
         {
           "id": "so-g3-u6-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "あそこで走っている少年は私の弟です",
+          "sentence": "The boy running over there is my brother.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "The",
+            "boy",
+            "running",
+            "over",
+            "there",
+            "is",
+            "my",
+            "brother"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "命令文・canの文",
-          "wordCount": 5
+          "correctAnswer": "The boy running over there is my brother",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "現在分詞"
         }
       ]
     },
@@ -27279,343 +27389,383 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u7-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         },
         {
           "id": "so-g3-u7-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "もし私が鳥なら、飛んでいくのに",
+          "sentence": "If I were a bird I would fly.",
           "words": [
+            "If",
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "were",
+            "a",
+            "bird",
+            "I",
+            "would",
+            "fly"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "疑問詞（where/how）",
-          "wordCount": 5
+          "correctAnswer": "If I were a bird I would fly",
+          "wordCount": 8,
+          "difficulty": "intermediate",
+          "hint": "If I were"
         }
       ]
     },
@@ -30729,343 +30879,343 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u8-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         },
         {
           "id": "so-g3-u8-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "私は彼がどこに住んでいるか知りません",
+          "sentence": "I don't know where he lives.",
           "words": [
             "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "don't",
+            "know",
+            "where",
+            "he",
+            "lives"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "現在進行形",
-          "wordCount": 5
+          "correctAnswer": "I don't know where he lives",
+          "wordCount": 6,
+          "difficulty": "intermediate",
+          "hint": "間接疑問文"
         }
       ]
     },
@@ -34179,343 +34329,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g3-u9-001",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-002",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-003",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-004",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-005",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-006",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-007",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-008",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-009",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-010",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-011",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-012",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-013",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-014",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-015",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-016",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-017",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-018",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-019",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         },
         {
           "id": "so-g3-u9-020",
-          "japanese": "私は毎日英語を勉強します",
+          "japanese": "彼は私より背が高いです",
+          "sentence": "He is taller than me.",
           "words": [
-            "I",
-            "study",
-            "English",
-            "every",
-            "day"
+            "He",
+            "is",
+            "taller",
+            "than",
+            "me"
           ],
-          "correctOrder": "I study English every day",
-          "difficulty": "beginner",
-          "explanation": "主語 + 動詞 + 目的語 + 時の表現の順番です。",
-          "hint": "主語 + 動詞 + 目的語",
-          "grammarPoint": "過去形",
-          "wordCount": 5
+          "correctAnswer": "He is taller than me",
+          "wordCount": 5,
+          "difficulty": "intermediate",
+          "hint": "比較級"
         }
       ]
     }
