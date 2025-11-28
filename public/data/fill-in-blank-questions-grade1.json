@@ -8781,92 +8781,92 @@
         {
           "id": "fb-g1-u2-011",
           "japanese": "彼はサッカーをしません",
-          "sentence": "He ____ not ____ soccer.",
+          "sentence": "He does not ____ soccer.",
           "choices": [
-            "does",
             "play",
-            "has",
-            "have"
+            "plays",
+            "do",
+            "does"
           ],
-          "correctAnswer": "does,play",
+          "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
-          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-012",
           "japanese": "彼女はピアノを弾きません",
-          "sentence": "She ____ not ____ the piano.",
+          "sentence": "She does not ____ the piano.",
           "choices": [
-            "does",
             "play",
-            "has",
-            "have"
+            "plays",
+            "do",
+            "does"
           ],
-          "correctAnswer": "does,play",
+          "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
-          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-013",
           "japanese": "私は朝に走りません",
-          "sentence": "I ____ not ____ in the morning.",
+          "sentence": "I do not ____ in the morning.",
           "choices": [
-            "do",
             "run",
-            "has",
-            "have"
+            "runs",
+            "do",
+            "does"
           ],
-          "correctAnswer": "do,run",
+          "correctAnswer": "run",
           "difficulty": "beginner",
-          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
-          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-014",
           "japanese": "彼らは英語を勉強しません",
-          "sentence": "They ____ not ____ English.",
+          "sentence": "They do not ____ English.",
           "choices": [
-            "do",
             "study",
-            "has",
-            "have"
+            "studies",
+            "do",
+            "does"
           ],
-          "correctAnswer": "do,study",
+          "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
-          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-015",
           "japanese": "あなたは音楽を聴きません",
-          "sentence": "You ____ not ____ to music.",
+          "sentence": "You do not ____ to music.",
           "choices": [
-            "do",
             "listen",
-            "has",
-            "have"
+            "listens",
+            "do",
+            "does"
           ],
-          "correctAnswer": "do,listen",
+          "correctAnswer": "listen",
           "difficulty": "beginner",
-          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
-          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-016",
           "japanese": "彼は水を飲みません",
-          "sentence": "He ____ not ____ water.",
+          "sentence": "He does not ____ water.",
           "choices": [
-            "does",
             "drink",
-            "has",
-            "have"
+            "drinks",
+            "do",
+            "does"
           ],
-          "correctAnswer": "does,drink",
+          "correctAnswer": "drink",
           "difficulty": "beginner",
-          "explanation": "一般動詞の否定: do/does + not + 動詞原形",
-          "hint": "he/she/it→does not + 原形 / それ以外→do not + 原形"
+          "explanation": "have/has と一般動詞の3単現 -s",
+          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "fb-g1-u2-017",
