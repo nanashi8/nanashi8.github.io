@@ -23723,323 +23723,310 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u6-001",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "私は今勉強しています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "am",
+            "studying",
+            "now"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I am studying now",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u6-002",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼は走っています",
           "words": [
-            "This",
+            "He",
             "is",
-            "a",
-            "sentence"
+            "running"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He is running",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-003",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼女は料理しています",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "cooking"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is cooking",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-004",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼らは遊んでいます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "are",
+            "playing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They are playing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-005",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "あなたは読んでいます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "You",
+            "are",
+            "reading"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "You are reading",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-006",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "私たちは歌っています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "are",
+            "singing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We are singing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-007",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "犬は眠っています",
           "words": [
-            "This",
+            "The",
+            "dog",
             "is",
-            "a",
-            "sentence"
+            "sleeping"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "The dog is sleeping",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u6-008",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "生徒たちは書いています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "The",
+            "students",
+            "are",
+            "writing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "The students are writing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u6-009",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼は泳いでいます",
           "words": [
-            "This",
+            "He",
             "is",
-            "a",
-            "sentence"
+            "swimming"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He is swimming",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-010",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼女はテレビを見ています",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "watching",
+            "TV"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is watching TV",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u6-011",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "私は音楽を聴いています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "am",
+            "listening",
+            "to",
+            "music"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I am listening to music",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u6-012",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼らは待っています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "are",
+            "waiting"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They are waiting",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-013",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "あなたは食べています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "You",
+            "are",
+            "eating"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "You are eating",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-014",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "私たちは働いています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "are",
+            "working"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We are working",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-015",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼は笑っています",
           "words": [
-            "This",
+            "He",
             "is",
-            "a",
-            "sentence"
+            "laughing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He is laughing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-016",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼女は踊っています",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "dancing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is dancing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-017",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "私は話しています",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "am",
+            "talking"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I am talking",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-018",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "子どもたちは遊んでいます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "The",
+            "children",
+            "are",
+            "playing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "The children are playing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u6-019",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼は運転しています",
           "words": [
-            "This",
+            "He",
             "is",
-            "a",
-            "sentence"
+            "driving"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He is driving",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u6-020",
-          "japanese": "これは文です（現在進行形）",
+          "japanese": "彼女は絵を描いています",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "drawing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is drawing",
           "difficulty": "beginner",
-          "explanation": "現在進行形の語順練習。",
-          "hint": "現在進行形",
+          "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
+          "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 4
+          "wordCount": 3
         }
       ]
     },
@@ -27153,323 +27140,312 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u7-001",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "私は泳げます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "can",
+            "swim"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I can swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-002",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼は英語を話せます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "can",
+            "speak",
+            "English"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He can speak English",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
           "wordCount": 4
         },
         {
           "id": "so-g1-u7-003",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼女はピアノを弾けます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "can",
+            "play",
+            "the",
+            "piano"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She can play the piano",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u7-004",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼らは速く走れます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "can",
+            "run",
+            "fast"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They can run fast",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
           "wordCount": 4
         },
         {
           "id": "so-g1-u7-005",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "あなたは料理ができます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "You",
+            "can",
+            "cook"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "You can cook",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-006",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "私たちはこれを理解できます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "can",
+            "understand",
+            "this"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We can understand this",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
           "wordCount": 4
         },
         {
           "id": "so-g1-u7-007",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "犬は泳げます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "The",
+            "dog",
+            "can",
+            "swim"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "The dog can swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
           "wordCount": 4
         },
         {
           "id": "so-g1-u7-008",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "私は泳げません",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "cannot",
+            "swim"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I cannot swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-009",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼は運転できません",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "cannot",
+            "drive"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He cannot drive",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-010",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼女は来られません",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "cannot",
+            "come"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She cannot come",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-011",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼らは待てません",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "cannot",
+            "wait"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They cannot wait",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-012",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "あなたは泳げますか",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "Can",
+            "you",
+            "swim"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "Can you swim",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-013",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼は英語を話せますか",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "Can",
+            "he",
+            "speak",
+            "English"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "Can he speak English",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
           "wordCount": 4
         },
         {
           "id": "so-g1-u7-014",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼女はピアノを弾けますか",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "Can",
+            "she",
+            "play",
+            "the",
+            "piano"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "Can she play the piano",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u7-015",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼らは来られますか",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "Can",
+            "they",
+            "come"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "Can they come",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-016",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "私は歌えます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "can",
+            "sing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I can sing",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-017",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼は絵を描けます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "can",
+            "draw"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He can draw",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-018",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "彼女はダンスができます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "can",
+            "dance"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She can dance",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-019",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "私たちは手伝えます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "can",
+            "help"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We can help",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u7-020",
-          "japanese": "これは文です（助動詞can）",
+          "japanese": "あなたは見えますか",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "Can",
+            "you",
+            "see"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "Can you see",
           "difficulty": "beginner",
-          "explanation": "助動詞canの語順練習。",
-          "hint": "助動詞can",
+          "explanation": "助動詞canを使った文の語順。",
+          "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 4
+          "wordCount": 3
         }
       ]
     },
@@ -30583,323 +30559,323 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u8-001",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私は昨日勉強しました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "studied",
+            "yesterday"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I studied yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u8-002",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼は学校に行きました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "went",
+            "to",
+            "school"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He went to school",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-003",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼女は本を読みました",
           "words": [
-            "This",
-            "is",
+            "She",
+            "read",
             "a",
-            "sentence"
+            "book"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She read a book",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-004",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼らはサッカーをしました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "played",
+            "soccer"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They played soccer",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u8-005",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私たちは映画を見ました",
           "words": [
-            "This",
-            "is",
+            "We",
+            "watched",
             "a",
-            "sentence"
+            "movie"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We watched a movie",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-006",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼は朝食を食べました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "ate",
+            "breakfast"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He ate breakfast",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u8-007",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼女は音楽を聴きました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "listened",
+            "to",
+            "music"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She listened to music",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-008",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私は友達に会いました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "met",
+            "my",
+            "friend"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I met my friend",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-009",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼らは公園で遊びました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "played",
+            "in",
+            "the",
+            "park"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They played in the park",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u8-010",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私は先週買い物をしました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "went",
+            "shopping",
+            "last",
+            "week"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I went shopping last week",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u8-011",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼は昨日泳ぎました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "swam",
+            "yesterday"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He swam yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u8-012",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼女は昨日料理しました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "cooked",
+            "yesterday"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She cooked yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u8-013",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私たちは図書館にいました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "were",
+            "at",
+            "the",
+            "library"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We were at the library",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u8-014",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼は先生でした",
           "words": [
-            "This",
-            "is",
+            "He",
+            "was",
             "a",
-            "sentence"
+            "teacher"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He was a teacher",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-015",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼らは幸せでした",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "were",
+            "happy"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They were happy",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u8-016",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私は昨日忙しかったです",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "was",
+            "busy",
+            "yesterday"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I was busy yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-017",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼女は家にいました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "was",
+            "at",
+            "home"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She was at home",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-018",
-          "japanese": "これは文です（過去形）",
+          "japanese": "私は昨夜勉強しました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "studied",
+            "last",
+            "night"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I studied last night",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
           "wordCount": 4
         },
         {
           "id": "so-g1-u8-019",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼は先月日本に行きました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "went",
+            "to",
+            "Japan",
+            "last",
+            "month"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He went to Japan last month",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 6
         },
         {
           "id": "so-g1-u8-020",
-          "japanese": "これは文です（過去形）",
+          "japanese": "彼らは昨年ここに住んでいました",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "lived",
+            "here",
+            "last",
+            "year"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They lived here last year",
           "difficulty": "beginner",
-          "explanation": "過去形の語順練習。",
-          "hint": "過去形",
+          "explanation": "過去形の文の語順。",
+          "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 5
         }
       ]
     },
@@ -34013,323 +33989,345 @@
       "sentenceOrdering": [
         {
           "id": "so-g1-u9-001",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私は明日勉強します",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "will",
+            "study",
+            "tomorrow"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I will study tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
           "wordCount": 4
         },
         {
           "id": "so-g1-u9-002",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼は学校に行く予定です",
           "words": [
-            "This",
+            "He",
             "is",
-            "a",
-            "sentence"
+            "going",
+            "to",
+            "school"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He is going to school",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u9-003",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼女は本を読むでしょう",
           "words": [
-            "This",
-            "is",
+            "She",
+            "will",
+            "read",
             "a",
-            "sentence"
+            "book"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She will read a book",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u9-004",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼らはサッカーをする予定です",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "are",
+            "going",
+            "to",
+            "play",
+            "soccer"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They are going to play soccer",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 6
         },
         {
           "id": "so-g1-u9-005",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私たちは映画を見る予定です",
           "words": [
-            "This",
-            "is",
+            "We",
+            "are",
+            "going",
+            "to",
+            "watch",
             "a",
-            "sentence"
+            "movie"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We are going to watch a movie",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 7
         },
         {
           "id": "so-g1-u9-006",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼は明日来ます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "will",
+            "come",
+            "tomorrow"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He will come tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
           "wordCount": 4
         },
         {
           "id": "so-g1-u9-007",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼女は料理する予定です",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "going",
+            "to",
+            "cook"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is going to cook",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u9-008",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私は手伝います",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "will",
+            "help"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I will help",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u9-009",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼らは旅行する予定です",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "are",
+            "going",
+            "to",
+            "travel"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They are going to travel",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u9-010",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私は明日忙しいでしょう",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "will",
+            "be",
+            "busy",
+            "tomorrow"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I will be busy tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u9-011",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼は先生になる予定です",
           "words": [
-            "This",
+            "He",
             "is",
+            "going",
+            "to",
+            "be",
             "a",
-            "sentence"
+            "teacher"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He is going to be a teacher",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 7
         },
         {
           "id": "so-g1-u9-012",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼女は歌うでしょう",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "She",
+            "will",
+            "sing"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She will sing",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u9-013",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私たちは勝つでしょう",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "will",
+            "win"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We will win",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 3
         },
         {
           "id": "so-g1-u9-014",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼らは来る予定です",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "They",
+            "are",
+            "going",
+            "to",
+            "come"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "They are going to come",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 5
         },
         {
           "id": "so-g1-u9-015",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私は買い物に行く予定です",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "I",
+            "am",
+            "going",
+            "to",
+            "go",
+            "shopping"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "I am going to go shopping",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 6
         },
         {
           "id": "so-g1-u9-016",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼は明日泳ぎます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "will",
+            "swim",
+            "tomorrow"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He will swim tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
           "wordCount": 4
         },
         {
           "id": "so-g1-u9-017",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼女は彼を助ける予定です",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "going",
+            "to",
+            "help",
+            "him"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is going to help him",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 6
         },
         {
           "id": "so-g1-u9-018",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "私たちは明日会います",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "We",
+            "will",
+            "meet",
+            "tomorrow"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "We will meet tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
           "wordCount": 4
         },
         {
           "id": "so-g1-u9-019",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼は来週東京に行きます",
           "words": [
-            "This",
-            "is",
-            "a",
-            "sentence"
+            "He",
+            "will",
+            "go",
+            "to",
+            "Tokyo",
+            "next",
+            "week"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "He will go to Tokyo next week",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 7
         },
         {
           "id": "so-g1-u9-020",
-          "japanese": "これは文です（未来表現）",
+          "japanese": "彼女は来年結婚する予定です",
           "words": [
-            "This",
+            "She",
             "is",
-            "a",
-            "sentence"
+            "going",
+            "to",
+            "get",
+            "married",
+            "next",
+            "year"
           ],
-          "correctOrder": "This is a sentence",
+          "correctOrder": "She is going to get married next year",
           "difficulty": "beginner",
-          "explanation": "未来表現の語順練習。",
-          "hint": "未来表現",
+          "explanation": "未来表現の文の語順。",
+          "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 4
+          "wordCount": 8
         }
       ]
     }
