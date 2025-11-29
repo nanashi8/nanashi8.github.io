@@ -10832,8 +10832,8 @@ option {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding: 2px 4px; /* 4px 6pxから狭める */
-  margin: 1px 2px; /* 2px 3pxから狭める */
+  padding: 1px 3px; /* 2px 4pxからさらに狭める */
+  margin: 1px 2px;
   background: var(--gray-100);
   border: 1px solid #dee2e6;
   border-radius: 4px;
@@ -10854,11 +10854,12 @@ option {
   font-size: 1em;
   font-weight: 500;
   color: var(--text-color);
-  margin-bottom: 0; /* 2pxから0に狭める */
+  margin-bottom: 0;
   font-family: 'Times New Roman', 'Georgia', serif;
   display: flex;
   align-items: center;
   gap: 4px;
+  line-height: 1; /* 行の高さを最小化 */
 }
 
 .speaker-icon {
@@ -10885,14 +10886,15 @@ option {
   font-size: 0.8em;
   color: #444;
   text-align: center;
-  line-height: 1.1; /* 1.3から1.1に狭める */
+  line-height: 1; /* 1.1からさらに詰める */
   max-width: 100px;
   word-wrap: break-word;
   font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
   font-weight: 500;
   background: rgba(102, 126, 234, 0.05);
-  padding: 3px 5px;
+  padding: 2px 4px; /* 3px 5pxから狭める */
   border-radius: 3px;
+  margin-top: 1px; /* 英文との間隔を最小化 */
 }
 
 .word-card:hover {
