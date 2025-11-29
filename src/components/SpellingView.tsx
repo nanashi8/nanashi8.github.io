@@ -74,6 +74,9 @@ function SpellingView({
   
   const [showSettings, setShowSettings] = useState<boolean>(false);
   
+  // 回答時刻を記録（ScoreBoard更新用）
+  const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
+  
   // letter-cardsのrefを追加
   const letterCardsRef = useRef<HTMLDivElement>(null);
   
@@ -334,9 +337,12 @@ function SpellingView({
       ...prev,
       currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
       answered: false, // 回答状態をリセット
-    }));
+    });
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();
+    
+    // 回答時刻を更新（ScoreBoard更新用）
+    setLastAnswerTime(Date.now());
   };
 
   const handleSkip = () => {
@@ -366,6 +372,9 @@ function SpellingView({
       score: prev.score + 1, // スキップは正解扱い
       answered: true,
     }));
+    
+    // 回答時刻を更新（ScoreBoard更新用）
+    setLastAnswerTime(Date.now());
 
     // セッション統計を更新（正解扱い）
     setSessionStats((prev) => ({
@@ -531,7 +540,7 @@ function SpellingView({
               >
                 <option value="all">すべて</option>
                 <option value="junior">高校受験</option>
-                <option value="intermediate">中級1800</option>
+                <option value="intermediate">高校受験標準</option>
               </select>
             </div>
           )}
@@ -589,6 +598,8 @@ function SpellingView({
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
             onShowSettings={() => setShowSettings(true)}
+            currentWord={spellingState.questions[spellingState.currentIndex]?.word}
+            onAnswerTime={lastAnswerTime}
           />
 
           {/* スペルクイズ中の学習設定パネル */}
@@ -647,7 +658,7 @@ function SpellingView({
                   >
                     <option value="all">すべて</option>
                     <option value="junior">高校受験</option>
-                    <option value="intermediate">中級1800</option>
+                    <option value="intermediate">高校受験標準</option>
                   </select>
                 </div>
               )}

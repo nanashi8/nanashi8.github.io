@@ -68,6 +68,15 @@ function QuizView({
   const currentQuestion = hasQuestions ? questions[currentIndex] : null;
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
+  
+  // 回答時刻を記録（ScoreBoard更新用）
+  const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
+  
+  // 回答処理をラップ（回答時刻更新用）
+  const handleAnswer = (answer: string, correct: string) => {
+    onAnswer(answer, correct);
+    setLastAnswerTime(Date.now());
+  };
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -230,6 +239,8 @@ function QuizView({
             onReviewFocus={onReviewFocus}
             isReviewFocusMode={isReviewFocusMode}
             onShowSettings={() => setShowSettings(true)}
+            currentWord={currentQuestion?.word}
+            onAnswerTime={lastAnswerTime}
           />
           
           {/* クイズ中の学習設定パネル */}
@@ -288,7 +299,7 @@ function QuizView({
                   >
                     <option value="all">すべて</option>
                     <option value="junior">高校受験</option>
-                    <option value="intermediate">中級1800</option>
+                    <option value="intermediate">高校受験標準</option>
                   </select>
                 </div>
               )}
@@ -338,7 +349,7 @@ function QuizView({
                 currentIndex={currentIndex}
                 answered={answered}
                 selectedAnswer={selectedAnswer}
-                onAnswer={onAnswer}
+                onAnswer={handleAnswer}
                 onNext={onSkip ? (answered ? onNext : onSkip) : onNext}
                 onPrevious={onPrevious}
                 onDifficultyRate={onDifficultyRate}

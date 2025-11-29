@@ -171,14 +171,14 @@ function SettingsView({
                 onClick={() => onDataSourceChange('intermediate')}
               >
                 <div className="theme-icon">📖</div>
-                <div className="theme-label">中級1800</div>
-                <div className="theme-sublabel">発展単語</div>
+                <div className="theme-label">高校受験標準</div>
+                <div className="theme-sublabel">標準単語</div>
               </button>
             </div>
             <div className="theme-description">
               {selectedDataSource === 'all' && '💡 全ての単語データから出題します'}
               {selectedDataSource === 'junior' && '🎓 高校受験レベルの基礎単語から出題します'}
-              {selectedDataSource === 'intermediate' && '📖 中級1800の発展単語から出題します'}
+              {selectedDataSource === 'intermediate' && '📖 高校受験標準レベルの標準単語から出題します'}
             </div>
           </div>
         )}
