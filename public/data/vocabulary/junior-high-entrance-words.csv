@@ -2502,20 +2502,14 @@ crush,クラ́シュ,砕く・押しつぶす,"古フランス語 ""cruissir""(�
 I,ア́イ,私は,"古英語 ""ic""。派生: myself(マイセ́ルフ): 私自身","me(ミー): 私を, my(マ́イ): 私の",言語基本,beginner
 you,ユ́ー,あなたは・あなたたちは,"古英語 ""eow""。派生: yourself(ユアセ́ルフ): あなた自身","your(ユ́ア): あなたの, yours(ユ́アーズ): あなたのもの",言語基本,beginner
 he,ヒ́ー,彼は,"古英語 ""he""。派生: himself(ヒムセ́ルフ): 彼自身","him(ヒ́ム): 彼を, his(ヒ́ズ): 彼の",言語基本,beginner
-she,シ́ー,彼女は,"古英語 ""seo""。派生: herself(ハーセ́ルフ): 彼女自身","her(ハ́ー): 彼女の・彼女を, hers(ハ́ーズ): 彼女のもの",人・社会,beginner
 it,イ́ット,それは,"古英語 ""hit""。派生: itself(イットセ́ルフ): それ自身",its(イ́ッツ): それの,言語基本,beginner
 we,ウィ́ー,私たちは,"古英語 ""we""。派生: ourselves(アワセ́ルヴズ): 私たち自身","us(ア́ス): 私たちを, our(ア́ワー): 私たちの",言語基本,beginner
-they,ゼ́イ,彼ら・彼女らは,"古ノルド語 ""their""。派生: themselves(ゼムセ́ルヴズ): 彼ら自身","them(ゼ́ム): 彼らを, their(ゼ́ア): 彼らの",人・社会,beginner
 my,マ́イ,私の,"古英語 ""min""。派生: mine(マ́イン): 私のもの","I(ア́イ): 私は, me(ミー): 私を",言語基本,beginner
 your,ユ́ア,あなたの,"古英語 ""eower""。派生: yours(ユ́アーズ): あなたのもの","you(ユー): あなたは, yourself(ユアセルフ): あなた自身",言語基本,beginner
 his,ヒ́ズ,彼の,"古英語 ""his""。派生: his own(ヒズオ́ウン): 彼自身の","he(ヒー): 彼は, him(ヒム): 彼を",言語基本,beginner
 her,ハ́ー,彼女の・彼女を,"古英語 ""hire""。派生: hers(ハ́ーズ): 彼女のもの","she(シー): 彼女は, herself(ハーセルフ): 彼女自身",人・社会,beginner
 its,イ́ッツ,それの,it + 所有格。派生: of its own(オブイッツオウン): それ自身の,"it(イット): それは, itself(イットセルフ): それ自身",言語基本,beginner
-our,ア́ワー,私たちの,"古英語 ""ure""。派生: ours(ア́ワーズ): 私たちのもの","we(ウィー): 私たちは, us(アス): 私たちを",言語基本,beginner
-their,ゼ́ア,彼らの,"古ノルド語 ""theirra""。派生: theirs(ゼ́アーズ): 彼らのもの","they(ゼイ): 彼らは, them(ゼム): 彼らを",言語基本,beginner
 this,ジ́ス,これ・この,"古英語 ""this""。派生: this one(ジスワン): これ","that(ザット): あれ, these(ジーズ): これら",言語基本,beginner
-that,ザ́ット,あれ・あの,"古英語 ""thæt""。派生: that one(ザットワン): あれ","this(ジス): これ, those(ゾウズ): あれら",言語基本,beginner
-these,ジ́ーズ,これら,"古英語 ""thas""。派生: these ones(ジーズワンズ): これらのもの","this(ジス): これ, those(ゾウズ): あれら",言語基本,beginner
 those,ゾ́ウズ,あれら,"古英語 ""thas""。派生: those ones(ゾウズワンズ): あれらのもの","that(ザット): あれ, these(ジーズ): これら",言語基本,beginner
 what,ワ́ット,何,"古英語 ""hwæt""。派生: whatever(ワットエ́ヴァー): 何でも","which(ウィッチ): どれ, who(フー): 誰",時間・数量,beginner
 who,フ́ー,誰,"古英語 ""hwa""。派生: whoever(フーエ́ヴァー): 誰でも","whom(フーム): 誰を, whose(フーズ): 誰の",言語基本,beginner
@@ -2565,117 +2559,30 @@ man,マ́ン,男性・人,"古英語 ""mann""(人)。派生: mankind(マンカ�
 woman,ウ́ーマン,女性,"古英語 ""wifmann""(女の人)。派生: women(ウィ́ミン): 女性たち / womanly(ウーマンリ): 女性らしい","man(マン): 男性, lady(レイディ): 淑女, girl(ガール): 少女",人・社会,beginner
 wrong,ロ́ング,間違った,"古ノルド語 ""rangr""(曲がった)。派生: wrongly(ロングリ): 誤って / go wrong(ゴウロング): うまくいかない","right(ライト): 正しい, incorrect(インコレクト): 不正確な, mistake(ミステイク): 間違い",人・社会,beginner
 thirsty,サ́ースティ,のどが渇いた,thirst(サースト: 渇き)の形容詞形。派生: thirst(サースト): 渇き,"hungry(ハングリ): 空腹な, dry(ドライ): 乾いた, drink(ドリンク): 飲む",人・社会,beginner
-the,ザ́,その・例の,"古英語 ""se""(その)。派生: the more(ザモア): より一層","a(ア): 一つの, this(ジス): この, that(ザット): あの",言語基本,beginner
 a,ア́(エ́イ),一つの,"古英語 ""an""(一つ)の短縮形。派生: an(アン): 一つの(母音の前)","one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",言語基本,beginner
 me,ミ́ー,私を・私に,Iの目的格。派生: with me(ウィズミー): 私と一緒に,"I(アイ): 私は, my(マイ): 私の, myself(マイセルフ): 私自身",言語基本,beginner
 him,ヒ́ム,彼を・彼に,heの目的格。派生: with him(ウィズヒム): 彼と一緒に,"he(ヒー): 彼は, his(ヒズ): 彼の, himself(ヒムセルフ): 彼自身",言語基本,beginner
 us,ア́ス,私たちを・私たちに,weの目的格。派生: with us(ウィズアス): 私たちと一緒に,"we(ウィー): 私たちは, our(アワー): 私たちの, ourselves(アワセルヴズ): 私たち自身",言語基本,beginner
-them,ゼ́ム,彼らを・彼らに,theyの目的格。派生: with them(ウィズゼム): 彼らと一緒に,"they(ゼイ): 彼らは, their(ゼア): 彼らの, themselves(ゼムセルヴズ): 彼ら自身",言語基本,beginner
-one,ワ́ン,1つ・1,"古英語 ""an""(1つ)。派生: once(ワンス): 一度 / only one(オンリワン): たった1つ","two(トゥー): 2, first(ファースト): 最初の, single(シングル): 単一の",言語基本,beginner
-four,フォ́ー,4,"古英語 ""feower""。派生: fourth(フォース): 4番目 / fourteen(フォーティーン): 14","three(スリー): 3, five(ファイヴ): 5, quarter(クウォーター): 4分の1",人・社会,beginner
-five,ファ́イヴ,5,"古英語 ""fif""。派生: fifth(フィフス): 5番目 / fifteen(フィフティーン): 15","four(フォー): 4, six(シックス): 6, five times(ファイヴタイムズ): 5回",人・社会,beginner
-eight,エ́イト,8,"古英語 ""eahta""。派生: eighth(エ́イトス): 8番目 / eighteen(エイティーン): 18","seven(セヴン): 7, nine(ナイン): 9, eighty(エイティ): 80",人・社会,beginner
-nine,ナ́イン,9,"古英語 ""nigon""。派生: ninth(ナ́インス): 9番目 / nineteen(ナインティーン): 19","eight(エイト): 8, ten(テン): 10, ninety(ナインティ): 90",人・社会,beginner
-able,エ́イブル,できる,"ラテン語 ""habilis""(扱いやすい)。派生: ability(アビリティ): 能力 / unable(アネイブル): できない","capable(ケイパブル): 有能な, possible(ポッシブル): 可能な",人・社会,intermediate
 absent,ア́ブセント,不在の・欠席した,"ラテン語 ""absens""(離れた)。派生: absence(アブセンス): 不在 / absentee(アブセンティー): 欠席者","missing(ミッシング): 行方不明の, away(アウェイ): 離れて",人・社会,intermediate
-accept,アクセ́プト,受け入れる,"ラテン語 ""accipere""(受け取る)。派生: acceptance(アクセプタンス): 受諾 / acceptable(アクセプタブル): 受け入れられる","receive(リシーヴ): 受け取る, agree(アグリー): 同意する",人・社会,intermediate
-act,ア́クト,行動する・演じる,"ラテン語 ""agere""(行う)。派生: action(アクション): 行動 / actor(アクター): 俳優","perform(パフォーム): 実行する, behave(ビヘイヴ): 振る舞う",人・社会,intermediate
 active,ア́クティヴ,活動的な,"ラテン語 ""activus""。派生: activity(アクティヴィティ): 活動 / actively(アクティヴリ): 活発に","busy(ビジー): 忙しい, energetic(エナジェティック): 精力的な",人・社会,intermediate
-actual,ア́クチュアル,実際の,"ラテン語 ""actualis""(行動の)。派生: actually(アクチュアリ): 実は / actuality(アクチュアリティ): 現実","real(リアル): 本当の, true(トゥルー): 真実の",自然・環境,intermediate
-address,ア́ドレス,住所・演説する,"ラテン語 ""ad""(〜へ)+""directus""(向けられた)。派生: home address(ホームアドレス): 自宅住所","location(ロケイション): 場所, speech(スピーチ): 演説",場所・移動,intermediate
 admire,アドマ́イア,称賛する,"ラテン語 ""admirari""(驚く)。派生: admiration(アドミレイション): 称賛 / admirable(アドミラブル): 立派な","respect(リスペクト): 尊敬する, appreciate(アプリーシエイト): 感謝する",人・社会,intermediate
-admit,アドミ́ット,認める・入場を許す,"ラテン語 ""admittere""(送り込む)。派生: admission(アドミション): 入場 / admittance(アドミッタンス): 入場許可","confess(コンフェス): 告白する, allow(アラウ): 許す",場所・移動,intermediate
-adult,アダ́ルト,大人,"ラテン語 ""adultus""(成長した)。派生: adulthood(アダルトフッド): 成人期","grown-up(グロウンアップ): 大人, mature(マチュア): 成熟した",人・社会,intermediate
 advance,アドヴァ́ンス,進む・前進,"ラテン語 ""ab""+""ante""(前へ)。派生: advanced(アドヴァンスト): 高度な / advancement(アドヴァンスメント): 進歩","progress(プログレス): 進歩する, forward(フォーワード): 前へ",時間・数量,intermediate
 advantage,アドヴァ́ンテッジ,利点・有利,"古フランス語 ""avantage""(優位)。派生: advantageous(アドヴァンテイジャス): 有利な","benefit(ベネフィット): 利益, merit(メリット): 長所",人・社会,intermediate
 adventure,アドヴェ́ンチャー,冒険,"ラテン語 ""adventura""(起こること)。派生: adventurous(アドヴェンチャラス): 冒険好きな","journey(ジャーニ): 旅, experience(イクスピアリエンス): 経験",人・社会,intermediate
-advertise,ア́ドヴァタイズ,広告する,"ラテン語 ""advertere""(注意を向ける)。派生: advertisement(アドヴァタイズメント): 広告 / advertising(アドヴァタイジング): 広告業","promote(プロモウト): 宣伝する, announce(アナウンス): 発表する",人・社会,intermediate
 advice,アドヴァ́イス,助言,"古フランス語 ""avis""(意見)。派生: advisable(アドヴァイザブル): 賢明な","suggestion(サジェスチョン): 提案, recommendation(レコメンデイション): 推奨",人・社会,intermediate
 advise,アドヴァ́イズ,助言する,adviceの動詞形。派生: adviser(アドヴァイザー): 助言者 / advisory(アドヴァイザリ): 勧告の,"counsel(カウンセル): 助言する, recommend(レコメンド): 勧める",人・社会,intermediate
-afford,アフォ́ード,余裕がある,"古英語 ""geforthian""(達成する)。派生: affordable(アフォーダブル): 手頃な価格の","pay(ペイ): 支払う, manage(マニッジ): なんとかする",人・社会,intermediate
 afterwards,ア́フターワーズ,その後,"after+""wards""(方向)。派生: soon afterwards(スーンアフターワーズ): その後すぐに","later(レイター): 後で, then(ゼン): それから",時間・数量,intermediate
-agent,エ́イジェント,代理人・エージェント,"ラテン語 ""agere""(行う)の現在分詞。派生: agency(エイジェンシ): 代理店","representative(レプリゼンタティヴ): 代表者, dealer(ディーラー): 業者",人・社会,intermediate
 aircraft,エ́アクラフト,航空機,"air+""craft""(技術)。派生: aircraft carrier(エアクラフトキャリア): 航空母艦","airplane(エアプレイン): 飛行機, helicopter(ヘリコプター): ヘリコプター",自然・環境,intermediate
-alarm,アラ́ーム,警報・目覚まし時計,"イタリア語 ""all'arme""(武器へ!)。派生: alarming(アラーミング): 心配な / alarm clock(アラームクロック): 目覚まし時計","warning(ウォーニング): 警告, alert(アラート): 警戒",時間・数量,intermediate
-alike,アラ́イク,似ている,"古英語 ""gelic""(似た)。派生: look alike(ルックアライク): 似ている","similar(シミラー): 類似した, same(セイム): 同じ",人・社会,intermediate
-alive,アラ́イヴ,生きている,"on+""life""が語源。派生: stay alive(ステイアライヴ): 生き残る","living(リヴィング): 生きている, dead(デッド): 死んだ",人・社会,intermediate
-allowance,アラ́ウアンス,小遣い・手当,allow(許す)の名詞形。派生: monthly allowance(マンスリーアラウアンス): 月々の手当,"pocket money(ポケットマニ): 小遣い, grant(グラント): 補助金",食・健康,intermediate
 aloud,アラ́ウド,声を出して,"a+""loud""(大声で)。派生: read aloud(リードアラウド): 音読する","loudly(ラウドリ): 大声で, out loud(アウトラウド): 声に出して",人・社会,intermediate
 although,オールゾ́ウ,〜だけれども,"all+""though""(〜にもかかわらず)。派生: even although(イーヴンオールゾウ): たとえ〜でも","though(ゾウ): けれども, even though(イーヴンゾウ): たとえ〜でも",言語基本,intermediate
-altogether,オールトゥゲ́ザー,全く・完全に,"all+""together""。派生: not altogether(ノットオールトゥゲザー): 必ずしも〜ない","completely(コンプリートリ): 完全に, entirely(エンタイアリ): 全く",人・社会,intermediate
-amaze,アメ́イズ,驚かせる,"古英語 ""amasian""(混乱させる)。派生: amazement(アメイズメント): 驚き / amazing(アメイジング): 驚くべき","surprise(サプライズ): 驚かす, astonish(アストニッシュ): 驚嘆させる",人・社会,intermediate
-ambition,アンビ́ション,野心・大志,"ラテン語 ""ambitio""(名誉を求めること)。派生: ambitious(アンビシャス): 野心的な","goal(ゴウル): 目標, aspiration(アスピレイション): 大志",人・社会,intermediate
-amusement,アミュ́ーズメント,娯楽・楽しみ,amuse(楽しませる)の名詞形。派生: amusement park(アミューズメントパーク): 遊園地,"entertainment(エンターテインメント): 娯楽, fun(ファン): 楽しみ",運動・娯楽,intermediate
-ancient,エ́インシェント,古代の,"ラテン語 ""ante""(以前)。派生: ancient times(エインシェントタイムズ): 古代","old(オウルド): 古い, historic(ヒストリック): 歴史的な",人・社会,intermediate
-angle,ア́ングル,角度,"ラテン語 ""angulus""(角)。派生: right angle(ライトアングル): 直角 / triangle(トライアングル): 三角形","corner(コーナー): 角, view(ヴュー): 視点",時間・数量,intermediate
-announce,アナ́ウンス,発表する,"ラテン語 ""annuntiare""(知らせる)。派生: announcement(アナウンスメント): 発表 / announcer(アナウンサー): アナウンサー","declare(ディクレア): 宣言する, inform(インフォーム): 知らせる",人・社会,intermediate
-annoy,アノ́イ,いらいらさせる,"古フランス語 ""anoier""(悩ます)。派生: annoyance(アノイアンス): いらだち / annoying(アノイイング): うるさい","bother(ボザー): 悩ます, irritate(イリテイト): いらだたせる",人・社会,intermediate
-anxious,ア́ンクシャス,心配して・切望して,"ラテン語 ""anxius""(悩んだ)。派生: anxiety(アンザイアティ): 不安","worried(ワリド): 心配した, eager(イーガー): 熱心な",人・社会,intermediate
 anybody,エ́ニバディ,誰でも,"any+""body""(人)。派生: not anybody(ノットエニバディ): 誰も〜ない","anyone(エニワン): 誰でも, somebody(サムバディ): 誰か",人・社会,intermediate
 anyhow,エ́ニハウ,とにかく,"any+""how""。派生: anyhow you like(エニハウユーライク): 好きなように","anyway(エニウェイ): とにかく, nevertheless(ネヴァザレス): それでも",人・社会,intermediate
 anywhere,エ́ニウェア,どこでも,"any+""where""。派生: not anywhere(ノットエニウェア): どこにも〜ない","somewhere(サムウェア): どこか, everywhere(エヴリウェア): どこでも",場所・移動,intermediate
-apartment,アパ́ートメント,アパート・マンション,"イタリア語 ""appartamento""。派生: apartment building(アパートメントビルディング): アパート","flat(フラット): アパート, room(ルーム): 部屋",日常生活,intermediate
 apologize,アポ́ロジャイズ,謝る,"ギリシャ語 ""apologia""(弁明)。派生: apology(アポロジー): 謝罪","excuse(イクスキューズ): 言い訳する, regret(リグレット): 後悔する",人・社会,intermediate
-apparent,アパ́レント,明白な,"ラテン語 ""apparere""(現れる)。派生: apparently(アパレントリ): 明らかに","obvious(オブヴィアス): 明らかな, clear(クリア): 明確な",時間・数量,intermediate
-appeal,アピ́ール,訴える・魅力,"ラテン語 ""appellare""(呼びかける)。派生: appealing(アピーリング): 魅力的な","attract(アトラクト): 引きつける, request(リクウェスト): 要請する",科学・技術,intermediate
-applaud,アプロ́ード,拍手する,"ラテン語 ""applaudere""(拍手する)。派生: applause(アプローズ): 拍手","clap(クラップ): 手をたたく, praise(プレイズ): 称賛する",食・健康,intermediate
-applicant,ア́プリカント,志願者・応募者,apply(申し込む)の派生語。派生: application(アプリケイション): 応募 / job applicant(ジョブアプリカント): 求職者,"candidate(キャンディデイト): 候補者, volunteer(ヴォランティア): 志願者",人・社会,intermediate
-apply,アプラ́イ,申し込む・適用する,"ラテン語 ""applicare""(結びつける)。派生: application(アプリケイション): 応募 / apply for(アプライフォア): 申し込む","request(リクウェスト): 要求する, use(ユーズ): 使う",人・社会,intermediate
-appoint,アポ́イント,任命する,"古フランス語 ""apointer""(準備する)。派生: appointment(アポイントメント): 約束 / appointed(アポインティド): 指定された","assign(アサイン): 割り当てる, nominate(ノミネイト): 指名する",人・社会,intermediate
-appreciate,アプリ́ーシエイト,感謝する・鑑賞する,"ラテン語 ""appretiare""(評価する)。派生: appreciation(アプリーシエイション): 感謝 / appreciative(アプリーシエイティヴ): 感謝の","value(ヴァリュー): 評価する, thank(サンク): 感謝する",人・社会,intermediate
-approach,アプロ́ウチ,近づく・接近,"ラテン語 ""ad""+""propiare""(近づく)。派生: approaching(アプローチング): 近づいている","come near(カムニア): 近づく, method(メソッド): 方法",人・社会,intermediate
-appropriate,アプロ́ウプリエイト,適切な,"ラテン語 ""appropriare""(自分のものにする)。派生: appropriately(アプロウプリエイトリ): 適切に","suitable(スータブル): 適した, proper(プロパー): 適切な",人・社会,intermediate
-approve,アプルー́ヴ,承認する,"ラテン語 ""approbare""(是認する)。派生: approval(アプルーヴァル): 承認 / disapprove(ディサプルーヴ): 不承認にする","agree(アグリー): 同意する, accept(アクセプト): 受け入れる",人・社会,intermediate
-argue,ア́ーギュー,議論する・口論する,"ラテン語 ""arguere""(明らかにする)。派生: argument(アーギュメント): 議論","debate(ディベイト): 討論する, quarrel(クウォレル): 口論する",食・健康,intermediate
-arise,アラ́イズ,起こる・生じる,"古英語 ""arisan""(起きる)。派生: arose(アロウズ): 起こった / arisen(アリズン): 起こった","occur(オカー): 起こる, emerge(イマージ): 現れる",人・社会,intermediate
-arrange,アレ́インジ,配置する・手配する,"古フランス語 ""arengier""(列に並べる)。派生: arrangement(アレインジメント): 配置 / rearrange(リアレインジ): 並べ替える","organize(オーガナイズ): 組織する, plan(プラン): 計画する",食・健康,intermediate
-arrest,アレ́スト,逮捕する,"古フランス語 ""arester""(止める)。派生: under arrest(アンダーアレスト): 逮捕されて","catch(キャッチ): 捕まえる, seize(シーズ): 捕らえる",人・社会,intermediate
-article,ア́ーティクル,記事・品物,"ラテン語 ""articulus""(小さな関節)。派生: newspaper article(ニューズペイパーアーティクル): 新聞記事","item(アイテム): 品目, piece(ピース): 一片",日常生活,intermediate
-ashamed,アシェ́イムド,恥じて,shame(恥)の形容詞形。派生: be ashamed of(ビーアシェイムドオブ): 〜を恥じる,"embarrassed(エンバラスト): 恥ずかしい, guilty(ギルティ): 有罪の",人・社会,intermediate
-aside,アサ́イド,わきへ・別にして,"a+""side""(側)。派生: set aside(セットアサイド): 取っておく","apart(アパート): 離れて, away(アウェイ): 離れて",人・社会,intermediate
 asleep,アスリ́ープ,眠って,"a+""sleep""(睡眠)。派生: fall asleep(フォールアスリープ): 眠りに落ちる","sleeping(スリーピング): 眠っている, awake(アウェイク): 目覚めている",日常生活,intermediate
-aspect,ア́スペクト,側面・様相,"ラテン語 ""aspectus""(見ること)。派生: from every aspect(フロムエヴリアスペクト): あらゆる面から","side(サイド): 側面, feature(フィーチャー): 特徴",人・社会,intermediate
-assist,アシ́スト,援助する,"ラテン語 ""assistere""(そばに立つ)。派生: assistance(アシスタンス): 援助 / assistant(アシスタント): 助手","help(ヘルプ): 助ける, support(サポート): 支援する",人・社会,intermediate
-associate,アソ́ウシエイト,関連づける・交際する,"ラテン語 ""associare""(結びつける)。派生: association(アソシエイション): 協会 / associated(アソシエイティド): 関連した","connect(コネクト): 結びつける, relate(リレイト): 関係する",人・社会,intermediate
-assume,アシュ́ーム,仮定する・引き受ける,"ラテン語 ""assumere""(取る)。派生: assumption(アサンプション): 仮定 / assuming(アシューミング): 仮定すると","suppose(サポウズ): 仮定する, presume(プリズーム): 推定する",人・社会,intermediate
-assure,アシュ́ア,保証する・確信させる,"ラテン語 ""ad""+""securus""(安全な)。派生: assurance(アシュアランス): 保証 / assured(アシュアド): 確信した","ensure(エンシュア): 確実にする, guarantee(ギャランティー): 保証する",人・社会,intermediate
-astonish,アスト́ニッシュ,驚かせる,"古フランス語 ""estoner""(雷で打つ)。派生: astonishment(アストニッシュメント): 驚き / astonishing(アストニッシング): 驚くべき","surprise(サプライズ): 驚かす, amaze(アメイズ): 驚かせる",人・社会,intermediate
-athlete,ア́スリート,運動選手,"ギリシャ語 ""athletes""(競技者)。派生: athletic(アスレティック): 運動の / athletics(アスレティックス): 陸上競技","player(プレイヤー): 選手, sportsman(スポーツマン): スポーツ選手",食・健康,intermediate
-atmosphere,ア́トモスフィア,大気・雰囲気,"ギリシャ語 ""atmos""(蒸気)+""sphere""(球)。派生: atmospheric(アトモスフェリック): 大気の","air(エア): 空気, environment(エンヴァイロンメント): 環境",人・社会,intermediate
-attach,アタ́ッチ,取り付ける・付属させる,"古フランス語 ""atachier""(留める)。派生: attachment(アタッチメント): 付属品 / attached(アタッチト): 付属した","fasten(ファースン): 固定する, connect(コネクト): 接続する",人・社会,intermediate
-attack,アタ́ック,攻撃する,"古フランス語 ""attaquer""。派生: attacker(アタッカー): 攻撃者 / under attack(アンダーアタック): 攻撃を受けて","assault(アソールト): 襲撃する, strike(ストライク): 打つ",人・社会,intermediate
-attain,アテ́イン,達成する・到達する,"ラテン語 ""attingere""(触れる)。派生: attainment(アテインメント): 達成 / attainable(アテイナブル): 達成可能な","achieve(アチーヴ): 達成する, accomplish(アカンプリッシュ): 成し遂げる",人・社会,intermediate
-attempt,アテ́ンプト,試みる・企てる,"ラテン語 ""attemptare""(試す)。派生: attempted(アテンプティド): 未遂の","try(トライ): 試みる, endeavor(エンデヴァー): 努力する",人・社会,intermediate
-attend,アテ́ンド,出席する・世話をする,"ラテン語 ""attendere""(注意を向ける)。派生: attendance(アテンダンス): 出席 / attendant(アテンダント): 付添人","be present(ビープレゼント): 出席する, participate(パーティシペイト): 参加する",人・社会,intermediate
-attention,アテ́ンション,注意・注目,attend(注意を払う)の名詞形。派生: pay attention(ペイアテンション): 注意を払う / attentive(アテンティヴ): 注意深い,"care(ケア): 注意, focus(フォウカス): 焦点",食・健康,intermediate
-attitude,ア́ティチュード,態度・姿勢,"イタリア語 ""attitudine""(適性)。派生: positive attitude(ポジティヴアティチュード): 前向きな態度","manner(マナー): 態度, position(ポジション): 立場",時間・数量,intermediate
-attract,アトラ́クト,引きつける,"ラテン語 ""attrahere""(引き寄せる)。派生: attraction(アトラクション): 魅力 / attractive(アトラクティヴ): 魅力的な","draw(ドロー): 引く, appeal(アピール): 魅力がある",人・社会,intermediate
-audience,オ́ーディエンス,聴衆・観客,"ラテン語 ""audire""(聞く)。派生: large audience(ラージオーディエンス): 大勢の観客","spectator(スペクテイター): 観客, crowd(クラウド): 群衆",人・社会,intermediate
-author,オ́ーサー,著者・作家,"ラテン語 ""auctor""(創始者)。派生: authorship(オーサーシップ): 著作権","writer(ライター): 作家, novelist(ノヴェリスト): 小説家",場所・移動,intermediate
-authority,オソ́リティ,権威・当局,"ラテン語 ""auctoritas""(権威)。派生: authorities(オソリティーズ): 当局 / authoritative(オソリテイティヴ): 権威ある","power(パワー): 権力, control(コントロウル): 支配",人・社会,intermediate
-automatic,オートマ́ティック,自動の,"ギリシャ語 ""automatos""(自動の)。派生: automatically(オートマティカリ): 自動的に","self-acting(セルフアクティング): 自動の, mechanical(メカニカル): 機械的な",科学・技術,intermediate
-automobile,オートモビ́ール,自動車,"ギリシャ語 ""auto""(自己)+""mobile""(動く)。派生: automotive(オートモウティヴ): 自動車の","car(カー): 車, vehicle(ヴィークル): 乗り物",場所・移動,intermediate
-available,アヴェ́イラブル,利用できる・入手可能な,avail(役立つ)の形容詞形。派生: availability(アヴェイラビリティ): 入手可能性,"obtainable(オブテイナブル): 入手できる, accessible(アクセシブル): 利用しやすい",食・健康,intermediate
-avenue,ア́ヴェニュー,大通り・手段,"フランス語 ""avenue""(近づく道)。派生: wide avenue(ワイドアヴェニュー): 広い大通り","street(ストリート): 通り, road(ロウド): 道路",場所・移動,intermediate
-average,ア́ヴァリッジ,平均・平均的な,"アラビア語 ""awariya""(損傷品)が語源。派生: on average(オンアヴァリッジ): 平均して","mean(ミーン): 平均, normal(ノーマル): 普通の",人・社会,intermediate
-avoid,アヴォ́イド,避ける,"古フランス語 ""esvuidier""(空にする)。派生: avoidable(アヴォイダブル): 避けられる / avoidance(アヴォイダンス): 回避","escape(エスケイプ): 逃れる, prevent(プリヴェント): 防ぐ",人・社会,intermediate
-awake,アウェ́イク,目覚めている・目覚める,"古英語 ""awæcnan""(目覚める)。派生: awaken(アウェイクン): 目覚めさせる / wide awake(ワイドアウェイク): しっかり目覚めて","wake(ウェイク): 目覚める, alert(アラート): 用心深い",食・健康,intermediate
-award,アウォ́ード,賞・授与する,"古フランス語 ""eswarder""(見守る)。派生: award ceremony(アウォードセレモニ): 授賞式","prize(プライズ): 賞, honor(オナー): 栄誉",人・社会,intermediate
-aware,アウェ́ア,気づいて,ware(用心深い)の派生語。派生: awareness(アウェアネス): 意識 / be aware of(ビーアウェアオブ): 〜に気づいている,"conscious(コンシャス): 意識して, informed(インフォームド): 知らされた",人・社会,intermediate
-awful,オ́ーフル,ひどい・恐ろしい,"awe(畏敬)+""ful""(満ちた)。派生: awfully(オーフリ): ひどく","terrible(テリブル): ひどい, dreadful(ドレッドフル): 恐ろしい",人・社会,intermediate
-awkward,オ́ークワード,ぎこちない・不器用な,"古ノルド語 ""afugr""(向きが逆の)。派生: awkwardly(オークワードリ): ぎこちなく / awkwardness(オークワードネス): ぎこちなさ","clumsy(クラムジ): 不器用な, uncomfortable(アンカンファタブル): 気まずい",人・社会,intermediate
 background,バ́ックグラウンド,背景・経歴,"back+""ground""。派生: family background(ファミリバックグラウンド): 家庭環境","setting(セティング): 背景, history(ヒストリ): 経歴",食・健康,intermediate
 backward,バ́ックワード,後ろ向きの・後方へ,"back+""ward""(方向)。派生: backwards(バックワーズ): 後方へ / backward country(バックワードカントリ): 後進国","reverse(リヴァース): 逆の, behind(ビハインド): 遅れて",時間・数量,intermediate
 badly,バ́ッドリ,ひどく・悪く,bad(悪い)の副詞形。派生: go badly(ゴウバッドリ): うまくいかない,"poorly(プーアリ): 下手に, seriously(シリアスリ): ひどく",人・社会,intermediate
-baggage,バ́ゲッジ,手荷物,bag(かばん)の派生語。派生: baggage claim(バゲッジクレイム): 手荷物受取所,"luggage(ラゲッジ): 荷物, belongings(ビロンギングズ): 所持品",食・健康,intermediate
-bake,ベ́イク,焼く,"古英語 ""bacan""(焼く)。派生: baker(ベイカー): パン屋 / bakery(ベイカリ): パン屋","cook(クック): 料理する, roast(ロウスト): あぶる",人・社会,intermediate
-balance,バ́ランス,バランス・均衡,"ラテン語 ""bilanx""(天びん)。派生: balanced(バランスト): 均衡のとれた / keep balance(キープバランス): バランスを保つ","equilibrium(イクウィリブリアム): 平衡, stability(スタビリティ): 安定",人・社会,intermediate
-band,バ́ンド,バンド・帯,"古ノルド語 ""band""(縛るもの)。派生: rubber band(ラバーバンド): 輪ゴム / rock band(ロックバンド): ロックバンド","group(グループ): 集団, strip(ストリップ): 細長い布",人・社会,intermediate
-banner,バ́ナー,旗・横断幕,"古フランス語 ""baniere""。派生: under the banner of(アンダーザバナーオブ): 〜の旗印の下に","flag(フラッグ): 旗, sign(サイン): 標識",場所・移動,intermediate
-bare,ベ́ア,裸の・むき出しの,"古英語 ""bær""。派生: barefoot(ベアフット): 裸足で / barely(ベアリ): かろうじて","naked(ネイキッド): 裸の, empty(エンプティ): 空の",人・社会,intermediate
-bargain,バ́ーゲン,掘り出し物・交渉する,"古フランス語 ""bargaignier""。派生: bargain sale(バーゲンセール): 特売","deal(ディール): 取引, negotiate(ニゴウシエイト): 交渉する",日常生活,intermediate
-barrier,バ́リアー,障壁・バリア,"古フランス語 ""barriere""。派生: trade barrier(トレイドバリアー): 貿易障壁","obstacle(オブスタクル): 障害, fence(フェンス): 柵",日常生活,intermediate
-basis,ベ́イシス,基礎・根拠,"ギリシャ語 ""basis""(土台)。派生: on the basis of(オンザベイシスオブ): 〜に基づいて","foundation(ファウンデイション): 基礎, ground(グラウンド): 根拠",自然・環境,intermediate
 battery,バ́タリー,電池・バッテリー,"フランス語 ""batterie""(打つこと)。派生: dead battery(デッドバタリー): 切れた電池","cell(セル): 電池, power(パワー): 電力",自然・環境,intermediate
 battle,バ́トル,戦い・戦う,"ラテン語 ""battere""(打つ)。派生: battlefield(バトルフィールド): 戦場","fight(ファイト): 戦い, war(ウォー): 戦争, struggle(ストラグル): 奮闘",人・社会,intermediate
 bear,ベ́ア,耐える・生む,"古英語 ""beran""(運ぶ)。派生: bearable(ベアラブル): 耐えられる","endure(エンデュア): 耐える, carry(キャリ): 運ぶ, tolerate(トーレレイト): 我慢する",人・社会,intermediate
@@ -2690,8 +2597,6 @@ besides,ビサ́イズ,〜に加えて・その上,"by+""side""+""s""。派生: 
 bet,ベ́ット,賭ける・賭け,"古ノルド語 ""vetha""(誓約)。派生: betting(ベティング): 賭け事 / I bet(アイベット): きっと〜だ","wager(ウェイジャー): 賭ける, gamble(ギャンブル): 賭博する",人・社会,intermediate
 betray,ビトレ́イ,裏切る,"ラテン語 ""tradere""(引き渡す)。派生: betrayal(ビトレイアル): 裏切り / betrayer(ビトレイアー): 裏切り者","deceive(ディシーヴ): だます, cheat(チート): 裏切る",人・社会,intermediate
 billion,ビ́リョン,10億,"フランス語 ""bi""(2)+""million""。派生: billions of(ビリョンズオブ): 何十億もの","million(ミリォン): 100万, trillion(トリリョン): 1兆",人・社会,intermediate
-bind,バ́インド,縛る・結びつける,"古英語 ""bindan""。派生: binding(バインディング): 拘束力のある / bound(バウンド): 縛られた","tie(タイ): 結ぶ, fasten(ファースン): 固定する",人・社会,intermediate
-biography,バイア́グラフィ,伝記,"ギリシャ語 ""bios""(生命)+""graphein""(書く)。派生: biographical(バイオグラフィカル): 伝記の","life story(ライフストーリ): 生涯, memoir(メムワー): 回想録",人・社会,intermediate
 bite,バ́イト,かむ・一口,"古英語 ""bitan""。派生: bitten(ビトン): かまれた / bite off(バイトオフ): かみ切る","chew(チュー): かむ, nibble(ニブル): 少しずつかむ",食・健康,intermediate
 bitter,ビ́ター,苦い・つらい,"古英語 ""biter""。派生: bitterness(ビターネス): 苦味 / bitterly(ビターリ): ひどく","sour(サウアー): すっぱい, harsh(ハーシュ): 厳しい",食・健康,intermediate
 blame,ブレ́イム,非難する・責任,"古フランス語 ""blasmer""。派生: blameless(ブレイムレス): 非の打ち所がない","accuse(アキューズ): 告発する, criticize(クリティサイズ): 批判する",人・社会,intermediate
@@ -2706,197 +2611,53 @@ blow,ブロ́ウ,吹く・強打,"古英語 ""blawan""(吹く)。派生: blow up
 bold,ボ́ウルド,大胆な,"古英語 ""beald""。派生: boldly(ボウルドリ): 大胆に / boldness(ボウルドネス): 大胆さ","brave(ブレイヴ): 勇敢な, daring(デアリング): 大胆な",人・社会,intermediate
 bond,ボ́ンド,結びつき・絆,"古ノルド語 ""band""(縛るもの)。派生: bonding(ボンディング): 結合","tie(タイ): つながり, connection(コネクション): つながり",人・社会,intermediate
 boil,ボ́イル,沸騰する・沸かす,"ラテン語 ""bullire""(泡立つ)。派生: boiling(ボイリング): 沸騰している / boiled(ボイルド): 茹でた","heat(ヒート): 熱する, simmer(シマー): 弱火で煮る",人・社会,intermediate
-bone,ボ́ウン,骨,"古英語 ""ban""。派生: boneless(ボウンレス): 骨のない / backbone(バックボウン): 背骨","skeleton(スケルトン): 骸骨, skull(スカル): 頭蓋骨",食・健康,intermediate
 border,ボ́ーダー,国境・縁,"古フランス語 ""bordure""(縁)。派生: cross the border(クロスザボーダー): 国境を越える","boundary(バウンダリ): 境界, edge(エッジ): 縁",場所・移動,intermediate
 bore,ボ́ア,退屈させる・穴をあける,"古英語 ""borian""(穴をあける)。派生: boring(ボーリング): 退屈な / bored(ボード): 退屈した","drill(ドリル): 穴をあける, tire(タイア): うんざりさせる",人・社会,intermediate
 bother,ボ́ザー,悩ます・面倒をかける,語源不詳(アイルランド語?)。派生: bothersome(ボザーサム): 面倒な,"disturb(ディスターブ): 邪魔する, annoy(アノイ): いらだたせる, trouble(トラブル): 困らせる",人・社会,intermediate
 bound,バ́ウンド,縛られた・向かう,bind(縛る)の過去形。派生: be bound for(ビーバウンドフォー): 〜行きの / bound to(バウンドトゥ): きっと〜する,"tied(タイド): 結ばれた, headed(ヘディド): 向かっている",人・社会,intermediate
-boundary,バ́ウンダリ,境界,"bound(境界)+""ary""。派生: within boundaries(ウィズインバウンダリーズ): 境界内で","border(ボーダー): 国境, limit(リミット): 限界",人・社会,intermediate
 bow,バ́ウ,お辞儀する・弓,"古英語 ""bugan""(曲がる)。派生: bow and arrow(ボウアンドアロウ): 弓矢 / take a bow(テイクアバウ): お辞儀する","bend(ベンド): 曲げる, curve(カーヴ): 曲線",人・社会,intermediate
-branch,ブラ́ンチ,枝・支店,"ラテン語 ""branca""(足)。派生: branch office(ブランチオフィス): 支店","limb(リム): 枝, division(ディヴィジョン): 部門",場所・移動,intermediate
 brand,ブラ́ンド,ブランド・商標,"古英語 ""brand""(燃えている木)。派生: brand name(ブランドネイム): 商標名","trademark(トレードマーク): 商標, make(メイク): 製品",人・社会,intermediate
 brass,ブラ́ス,真鍮・金管楽器,"古英語 ""bræs""。派生: brass band(ブラスバンド): 吹奏楽団","metal(メタル): 金属, copper(コパー): 銅",運動・娯楽,intermediate
 brave,ブレ́イヴ,勇敢な,"イタリア語 ""bravo""(勇敢な)。派生: bravery(ブレイヴァリ): 勇気 / bravely(ブレイヴリ): 勇敢に","courageous(カレイジャス): 勇気ある, bold(ボウルド): 大胆な",人・社会,intermediate
 bread,ブレ́ッド,パン,"古英語 ""bread""。派生: breadcrumb(ブレッドクラム): パン粉","loaf(ロウフ): パン一斤, toast(トウスト): トースト",食・健康,intermediate
-breadth,ブレ́ッドス,幅,broad(広い)の名詞形。派生: width and breadth(ウィズアンドブレッドス): 幅と奥行き,"width(ウィズ): 幅, span(スパン): 幅",人・社会,intermediate
 breathe,ブリ́ーズ,呼吸する,breath(呼吸)の動詞形。派生: breathe in(ブリーズイン): 息を吸う / breathe out(ブリーズアウト): 息を吐く,"inhale(インヘイル): 吸い込む, respire(レスパイア): 呼吸する",人・社会,intermediate
-breed,ブリ́ード,品種・繁殖させる,"古英語 ""bredan""(育てる)。派生: breeding(ブリーディング): 繁殖 / well-bred(ウェルブレッド): 育ちのよい","raise(レイズ): 育てる, variety(ヴァライアティ): 品種",自然・環境,intermediate
 breeze,ブリ́ーズ,そよ風,"スペイン語 ""briza""(北東風)。派生: gentle breeze(ジェントルブリーズ): 穏やかなそよ風","wind(ウィンド): 風, gust(ガスト): 突風",自然・環境,intermediate
 brick,ブリ́ック,レンガ,"古フランス語 ""brique""。派生: brick house(ブリックハウス): レンガ造りの家","block(ブロック): ブロック, stone(ストウン): 石",人・社会,intermediate
 brief,ブリ́ーフ,短い・簡潔な,"ラテン語 ""brevis""(短い)。派生: briefly(ブリーフリ): 簡潔に / briefing(ブリーフィング): 簡単な説明","short(ショート): 短い, concise(コンサイス): 簡潔な",人・社会,intermediate
-brilliant,ブリ́リアント,輝かしい・優秀な,"フランス語 ""brillant""(輝く)。派生: brilliance(ブリリアンス): 輝き","bright(ブライト): 明るい, intelligent(インテリジェント): 知的な",人・社会,intermediate
-broadcast,ブロ́ードキャスト,放送する,"broad(広い)+""cast""(投げる)。派生: broadcaster(ブロードキャスター): アナウンサー","transmit(トランズミット): 送信する, air(エア): 放送する",人・社会,intermediate
 broad,ブロ́ード,広い,"古英語 ""brad""。派生: broaden(ブロードン): 広げる / broadly(ブロードリ): 広く","wide(ワイド): 幅広い, extensive(イクステンシヴ): 広範囲の",人・社会,intermediate
-budget,バ́ジェット,予算,"古フランス語 ""bougette""(小さな袋)。派生: budget plan(バジェットプラン): 予算計画","funds(ファンズ): 資金, allowance(アラウアンス): 手当",人・社会,intermediate
 bunch,バ́ンチ,束・房,"中英語 ""bunche""。派生: a bunch of(アバンチオブ): ひと束の","group(グループ): 集まり, cluster(クラスター): 房",人・社会,intermediate
 burden,バ́ードン,負担・重荷,"古英語 ""byrthen""。派生: burdensome(バードンサム): 負担になる","load(ロウド): 荷, weight(ウェイト): 重み",運動・娯楽,intermediate
 bureau,ビュ́ーロウ,局・事務所,"フランス語 ""bureau""(机)。派生: travel bureau(トラヴェルビューロウ): 旅行代理店","office(オフィス): 事務所, department(ディパートメント): 部門",場所・移動,intermediate
 burn,バ́ーン,燃える・焼く,"古英語 ""byrnan""。派生: burning(バーニング): 燃えている / burnt(バーント): 燃やした","flame(フレイム): 炎を上げる, scorch(スコーチ): 焦がす",人・社会,intermediate
-burst,バ́ースト,破裂する・突発,"古英語 ""berstan""。派生: burst into(バーストイントゥ): 突然〜し始める","explode(イクスプロウド): 爆発する, break(ブレイク): 壊れる",人・社会,intermediate
-bury,ベ́リ,埋める・葬る,"古英語 ""byrgan""。派生: burial(ベリアル): 埋葬 / bury the past(ベリザパスト): 過去を葬る","inter(インター): 埋葬する, hide(ハイド): 隠す",人・社会,intermediate
-bush,ブ́ッシュ,茂み・低木,"古ノルド語 ""buski""。派生: bushy(ブッシー): 茂った","shrub(シュラブ): 低木, hedge(ヘッジ): 生け垣",自然・環境,intermediate
 cabin,キャ́ビン,小屋・船室,"ラテン語 ""capanna""(小屋)。派生: log cabin(ログキャビン): 丸太小屋","hut(ハット): 小屋, cottage(コテッジ): 田舎家",場所・移動,intermediate
 cable,ケ́イブル,ケーブル・海底電線,"ラテン語 ""capulum""(投げ縄)。派生: cable car(ケイブルカー): ケーブルカー","wire(ワイアー): 針金, cord(コード): ひも",自然・環境,intermediate
 calculate,キャ́ルキュレイト,計算する,"ラテン語 ""calculare""(数える)。派生: calculation(キャルキュレイション): 計算 / calculator(キャルキュレイター): 計算機","compute(コンピュート): 計算する, count(カウント): 数える",学校・学習,intermediate
 calm,カ́ーム,静かな・落ち着いた,"ギリシャ語 ""kauma""(昼間の暑さ)。派生: calmly(カームリ): 静かに / calmness(カームネス): 落ち着き","quiet(クワイエット): 静かな, peaceful(ピースフル): 平和な",人・社会,intermediate
-campaign,キャンペ́イン,運動・キャンペーン,"ラテン語 ""campus""(平地)。派生: campaign for(キャンペインフォー): 〜のための運動","movement(ムーヴメント): 運動, drive(ドライヴ): 運動",運動・娯楽,intermediate
 cancel,キャ́ンセル,取り消す,"ラテン語 ""cancellare""(格子にする)。派生: cancellation(キャンセレイション): 取り消し","revoke(リヴォウク): 取り消す, call off(コールオフ): 中止する",人・社会,intermediate
 candidate,キャ́ンディデイト,候補者,"ラテン語 ""candidatus""(白衣を着た)。派生: presidential candidate(プレジデンシャルキャンディデイト): 大統領候補","applicant(アプリカント): 志願者, nominee(ノミニー): 指名された人",人・社会,intermediate
 capable,ケ́イパブル,有能な・できる,"ラテン語 ""capere""(つかむ)。派生: capability(ケイパビリティ): 能力 / capable of(ケイパブルオブ): 〜する能力がある","able(エイブル): できる, competent(コンピテント): 有能な",人・社会,intermediate
 capacity,カパ́シティ,容量・能力,capableの名詞形。派生: seating capacity(シーティングカパシティ): 収容人数,"ability(アビリティ): 能力, volume(ヴォリューム): 容積",時間・数量,intermediate
-capture,キャ́プチャー,捕らえる・捕獲,"ラテン語 ""captura""(捕獲)。派生: captured(キャプチャード): 捕らえられた","catch(キャッチ): 捕まえる, seize(シーズ): つかむ",人・社会,intermediate
 career,カリ́ア,経歴・職業,"フランス語 ""carriere""(競走路)。派生: career path(カリアパス): キャリアパス","profession(プロフェション): 職業, occupation(アキュペイション): 仕事",人・社会,intermediate
 cargo,カ́ーゴウ,貨物,"スペイン語 ""cargar""(積み込む)。派生: cargo ship(カーゴウシップ): 貨物船","freight(フレイト): 貨物, load(ロウド): 積荷",日常生活,intermediate
 carpenter,カ́ーペンター,大工,"ラテン語 ""carpentarius""(馬車製造者)。派生: carpentry(カーペントリ): 大工仕事","woodworker(ウッドワーカー): 木工職人, builder(ビルダー): 建築業者",人・社会,intermediate
 carriage,キャ́リッジ,馬車・客車,carry(運ぶ)の派生語。派生: baby carriage(ベイビキャリッジ): 乳母車,"coach(コウチ): 馬車, wagon(ワゴン): 荷馬車",場所・移動,intermediate
-cartoon,カートゥ́ーン,漫画・アニメ,"イタリア語 ""cartone""(厚紙)。派生: cartoon character(カートゥーンキャラクター): 漫画のキャラクター","comic(コミック): 漫画, animation(アニメイション): アニメーション",運動・娯楽,intermediate
-carve,カ́ーヴ,彫る・切り分ける,"古英語 ""ceorfan""(切る)。派生: carving(カービング): 彫刻 / carved(カーヴド): 彫られた","cut(カット): 切る, sculpture(スカルプチャー): 彫刻する",時間・数量,intermediate
-casual,キャ́ジュアル,偶然の・カジュアルな,"ラテン語 ""casualis""(偶然の)。派生: casually(キャジュアリ): 何気なく","informal(インフォーマル): 略式の, relaxed(リラクスト): くつろいだ",人・社会,intermediate
-catalog,キャ́タログ,カタログ・目録,"ギリシャ語 ""katalogos""(一覧表)。派生: catalog of(キャタログオブ): 〜の目録","list(リスト): リスト, directory(ディレクトリ): 名簿",食・健康,intermediate
-catastrophe,カタ́ストロフィ,大惨事,"ギリシャ語 ""katastrophe""(転覆)。派生: catastrophic(カタストロフィック): 壊滅的な","disaster(ディザスター): 災害, calamity(カラミティ): 災難",人・社会,intermediate
 category,キャ́テゴリ,部類・範疇,"ギリシャ語 ""kategoria""(告発)。派生: categorize(キャテゴライズ): 分類する","class(クラス): 種類, type(タイプ): 型",人・社会,intermediate
-Catholic,キャ́ソリック,カトリック教の,"ギリシャ語 ""katholikos""(普遍的な)。派生: Catholicism(カソリシズム): カトリック教","Protestant(プロテスタント): プロテスタント, Christian(クリスチャン): キリスト教徒",学校・学習,intermediate
-cease,スィ́ース,やめる・終わる,"ラテン語 ""cessare""(遅らせる)。派生: ceasefire(シースファイア): 停戦 / ceaseless(シースレス): 絶え間ない","stop(ストップ): 止める, end(エンド): 終わる",人・社会,intermediate
 celebrate,セ́レブレイト,祝う,"ラテン語 ""celebrare""(名誉を与える)。派生: celebration(セレブレイション): 祝賀 / celebrity(セレブリティ): 有名人","commemorate(コメモレイト): 記念する, observe(オブザーヴ): 祝う",運動・娯楽,intermediate
 ceremony,セ́レモニ,式・儀式,"ラテン語 ""caerimonia""(神聖さ)。派生: ceremonial(セレモウニアル): 儀式の","ritual(リチュアル): 儀式, rite(ライト): 儀礼",日常生活,intermediate
-chamber,チェ́インバー,部屋・議場,"ラテン語 ""camera""(部屋)。派生: chamber music(チェインバーミュージック): 室内楽","room(ルーム): 部屋, hall(ホール): ホール",場所・移動,intermediate
-champion,チャ́ンピオン,チャンピオン・優勝者,"ラテン語 ""campio""(戦士)。派生: championship(チャンピオンシップ): 選手権","winner(ウィナー): 勝者, victor(ヴィクター): 勝利者",運動・娯楽,intermediate
-chaos,ケ́イアス,混沌・無秩序,"ギリシャ語 ""khaos""(混沌)。派生: chaotic(ケイアティック): 混沌とした","confusion(コンフュージョン): 混乱, disorder(ディスオーダー): 無秩序",人・社会,intermediate
 character,キャ́ラクター,性格・文字,"ギリシャ語 ""kharakter""(刻印する道具)。派生: characteristic(キャラクタリスティック): 特徴的な","personality(パーソナリティ): 個性, nature(ネイチャー): 性質",学校・学習,intermediate
 characteristic,キャラクタリ́スティック,特徴的な,characterの派生語。派生: be characteristic of(ビーキャラクタリスティックオブ): 〜に特有の,"typical(ティピカル): 典型的な, distinctive(ディスティンクティヴ): 独特の",人・社会,intermediate
 charge,チャ́ージ,請求する・告発する,"ラテン語 ""carricare""(荷を積む)。派生: in charge of(インチャージオブ): 〜を担当して / free of charge(フリーオブチャージ): 無料で","accuse(アキューズ): 告発する, fee(フィー): 料金",人・社会,intermediate
-charity,チャ́リティ,慈善・慈善団体,"ラテン語 ""caritas""(愛)。派生: charitable(チャリタブル): 慈善の","kindness(カインドネス): 親切, generosity(ジェネロシティ): 寛大さ",食・健康,intermediate
-charm,チャ́ーム,魅力・お守り,"ラテン語 ""carmen""(歌)。派生: charming(チャーミング): 魅力的な","appeal(アピール): 魅力, attraction(アトラクション): 引きつけるもの",科学・技術,intermediate
 chart,チャ́ート,図表・海図,"ギリシャ語 ""khartes""(紙)。派生: flow chart(フロウチャート): フローチャート","graph(グラフ): グラフ, diagram(ダイアグラム): 図表",自然・環境,intermediate
 chase,チェ́イス,追いかける,"ラテン語 ""captiare""(捕まえようとする)。派生: chase after(チェイスアフター): 〜を追いかける","pursue(パースー): 追跡する, follow(フォロウ): 追う, hunt(ハント): 狩る",人・社会,intermediate
 cheat,チー́ト,だます・ずるをする,"中英語 ""cheten""(没収する)。派生: cheater(チーター): いかさま師 / cheating(チーティング): 不正行為","deceive(ディシーヴ): だます, trick(トリック): だます",人・社会,intermediate
-chest,チェ́スト,胸・箱,"古英語 ""cest""(箱)。派生: treasure chest(トレジャーチェスト): 宝箱 / chest pain(チェストペイン): 胸痛","breast(ブレスト): 胸, box(ボックス): 箱",食・健康,intermediate
-chew,チュ́ー,かむ,"古英語 ""ceowan""。派生: chewing gum(チューイングガム): チューインガム","bite(バイト): かむ, munch(マンチ): むしゃむしゃ食べる",人・社会,intermediate
-chill,チ́ル,冷やす・寒気,"古英語 ""ciele""(寒さ)。派生: chilly(チリ): 肌寒い / chilled(チルド): 冷やした","cold(コウルド): 寒い, cool(クール): 冷やす",食・健康,intermediate
-chip,チ́ップ,切れ端・欠ける,"古英語 ""cipp""(丸太)。派生: potato chip(ポテイトウチップ): ポテトチップ / chip off(チップオフ): 欠け落ちる","fragment(フラグメント): 破片, piece(ピース): かけら",人・社会,intermediate
-choke,チョ́ウク,息が詰まる・窒息させる,"古英語 ""aceocian""。派生: choke on(チョウクオン): 〜で窒息する","strangle(ストラングル): 絞殺する, suffocate(サファケイト): 窒息させる",人・社会,intermediate
 chop,チョ́ップ,切り刻む,"中英語 ""choppen""。派生: chop up(チョップアップ): 細かく切る / pork chop(ポークチョップ): ポークチョップ","cut(カット): 切る, slice(スライス): 薄切りにする",人・社会,intermediate
-circumstance,サ́ーカムスタンス,状況・事情,"ラテン語 ""circumstare""(周りに立つ)。派生: under the circumstances(アンダーザサーカムスタンシズ): その状況では","situation(シチュエイション): 状況, condition(コンディション): 状態",人・社会,intermediate
-cite,サ́イト,引用する・挙げる,"ラテン語 ""citare""(呼び出す)。派生: citation(サイテイション): 引用","quote(クウォウト): 引用する, refer to(リファートゥ): 言及する",人・社会,intermediate
-citizen,シ́ティズン,市民・国民,"ラテン語 ""civis""(市民)。派生: citizenship(シティズンシップ): 市民権","resident(レジデント): 居住者, national(ナショナル): 国民",場所・移動,intermediate
 claim,クレ́イム,主張する・要求,"ラテン語 ""clamare""(叫ぶ)。派生: claimant(クレイマント): 請求者","assert(アサート): 主張する, demand(ディマンド): 要求する",人・社会,intermediate
-clap,クラ́ップ,拍手する,"古英語 ""clappan""。派生: clapping(クラッピング): 拍手","applaud(アプロード): 拍手喝采する, pat(パット): 軽くたたく",食・健康,intermediate
-clarify,クラ́リファイ,明らかにする,"ラテン語 ""clarus""(明るい)。派生: clarification(クラリフィケイション): 明確化","explain(イクスプレイン): 説明する, clear up(クリアアップ): はっきりさせる",時間・数量,intermediate
-clash,クラ́ッシュ,衝突する・対立,擬音語。派生: clash with(クラッシュウィズ): 〜と衝突する,"conflict(コンフリクト): 対立する, collide(コライド): 衝突する",人・社会,intermediate
-classify,クラ́シファイ,分類する,"ラテン語 ""classis""(階級)。派生: classification(クラシフィケイション): 分類","categorize(キャテゴライズ): 分類する, sort(ソート): 分ける",時間・数量,intermediate
 classical,クラ́シカル,古典の・クラシックの,classicの派生語。派生: classical music(クラシカルミュージック): クラシック音楽,"traditional(トラディショナル): 伝統的な, ancient(エインシェント): 古代の",人・社会,intermediate
-clause,クロ́ーズ,条項・節,"ラテン語 ""clausula""(結び)。派生: main clause(メインクローズ): 主節","provision(プロヴィジョン): 規定, article(アーティクル): 条項",人・社会,intermediate
-claw,クロ́ー,かぎ爪,"古英語 ""clawu""。派生: sharp claws(シャープクローズ): 鋭い爪","nail(ネイル): 爪, talon(タロン): 猛禽の爪",食・健康,intermediate
 clerk,クラ́ーク,事務員・店員,"ラテン語 ""clericus""(聖職者)。派生: sales clerk(セイルズクラーク): 販売員","office worker(オフィスワーカー): 事務員, assistant(アシスタント): 助手",場所・移動,intermediate
-cliff,クリ́フ,崖,"古英語 ""clif""。派生: cliff edge(クリフエッジ): 崖っぷち","precipice(プレシピス): 絶壁, crag(クラグ): 岩山",人・社会,intermediate
-climate,クラ́イメット,気候,"ギリシャ語 ""klima""(傾斜)。派生: climate change(クライメットチェインジ): 気候変動","weather(ウェザー): 天気, temperature(テンペラチャー): 気温",自然・環境,intermediate
-clip,クリ́ップ,クリップ・切り取る,"古ノルド語 ""klippa""(切る)。派生: paper clip(ペイパークリップ): 紙クリップ / clip off(クリップオフ): 切り取る","cut(カット): 切る, fasten(ファースン): 留める",人・社会,intermediate
-coach,コ́ウチ,コーチ・長距離バス,"ハンガリー地名 ""Kocs""(馬車の産地)。派生: coach class(コウチクラス): 普通席","trainer(トレイナー): トレーナー, instructor(インストラクター): 指導者",場所・移動,intermediate
-coarse,コ́アース,粗い・下品な,"中英語 ""cours""(普通の)。派生: coarse sand(コアースサンド): 粗い砂","rough(ラフ): 粗い, crude(クルード): 粗野な",場所・移動,intermediate
-code,コ́ウド,規則・暗号,"ラテン語 ""codex""(法典)。派生: dress code(ドレスコウド): 服装規定 / code name(コウドネイム): 暗号名","rule(ルール): 規則, cipher(サイファー): 暗号",人・社会,intermediate
 coin,コ́イン,硬貨,"ラテン語 ""cuneus""(くさび)。派生: toss a coin(トスアコイン): コインを投げる","money(マニ): お金, currency(カーレンシ): 通貨",日常生活,intermediate
-collapse,コラ́プス,崩壊する・倒れる,"ラテン語 ""collapsus""(倒れた)。派生: collapse of(コラプスオブ): 〜の崩壊","fall(フォール): 倒れる, crumble(クランブル): 崩れる",人・社会,intermediate
-colleague,コ́リーグ,同僚,"ラテン語 ""collega""(仲間)。派生: work colleague(ワークコリーグ): 仕事仲間","coworker(コウワーカー): 同僚, associate(アソウシエイト): 仲間",人・社会,intermediate
-colony,コ́ロニ,植民地・集団,"ラテン語 ""colonia""(入植地)。派生: colonial(コロウニアル): 植民地の / colonist(コロニスト): 植民者","settlement(セトルメント): 居住地, territory(テリトリ): 領土",人・社会,intermediate
-column,コ́ラム,円柱・コラム,"ラテン語 ""columna""(柱)。派生: newspaper column(ニューズペイパーコラム): 新聞のコラム","pillar(ピラー): 柱, post(ポウスト): 支柱",日常生活,intermediate
 comb,コ́ウム,くし・とかす,"古英語 ""camb""。派生: comb one's hair(コウムワンズヘア): 髪をとかす","brush(ブラッシュ): ブラシでとかす, groom(グルーム): 手入れする",人・社会,intermediate
-combat,コ́ンバット,戦闘・戦う,"ラテン語 ""com""(共に)+""battuere""(打つ)。派生: combat zone(コンバットゾウン): 戦闘地域","fight(ファイト): 戦い, battle(バトル): 戦闘",人・社会,intermediate
-commerce,コ́マース,商業・通商,"ラテン語 ""commercium""(取引)。派生: commercial(コマーシャル): 商業の","trade(トレイド): 貿易, business(ビジネス): 商売",人・社会,intermediate
-commission,コミ́ション,委員会・手数料,"ラテン語 ""committere""(委ねる)。派生: on commission(オンコミション): 歩合制で","committee(コミティ): 委員会, fee(フィー): 手数料",時間・数量,intermediate
-commit,コミ́ット,犯す・約束する,commissionと同語源。派生: commit a crime(コミットアクライム): 犯罪を犯す / commitment(コミットメント): 約束,"perpetrate(パーペトレイト): 犯す, pledge(プレッジ): 誓う",人・社会,intermediate
-communicate,コミュ́ーニケイト,伝達する・意思疎通する,"ラテン語 ""communicare""(共有する)。派生: communication(コミュニケイション): 伝達","convey(コンヴェイ): 伝える, express(イクスプレス): 表現する",人・社会,intermediate
-companion,コンパ́ニョン,仲間・連れ,"ラテン語 ""com""(共に)+""panis""(パン)。派生: companionship(コンパニョンシップ): 友情","friend(フレンド): 友人, partner(パートナー): 相棒",人・社会,intermediate
-comparative,コンパ́ラティヴ,比較の,compareの派生語。派生: comparative study(コンパラティヴスタディ): 比較研究,"relative(レラティヴ): 相対的な, contrasting(コントラスティング): 対照的な",人・社会,intermediate
-compass,カ́ンパス,羅針盤・範囲,"ラテン語 ""com""(共に)+""passus""(歩み)。派生: compass direction(コンパスディレクション): 方位","direction(ディレクション): 方向, scope(スコウプ): 範囲",人・社会,intermediate
-compel,コンペ́ル,強制する,"ラテン語 ""compellere""(駆り立てる)。派生: compulsion(コンパルション): 強制","force(フォース): 強いる, oblige(オブライジ): 義務づける",人・社会,intermediate
-compensate,コ́ンペンセイト,補償する,"ラテン語 ""compensare""(均衡させる)。派生: compensation(コンペンセイション): 補償","repay(リペイ): 償う, reimburse(リインバース): 払い戻す",人・社会,intermediate
-compete,コンピ́ート,競争する,"ラテン語 ""competere""(共に求める)。派生: competition(コンペティション): 競争 / competitive(コンペティティヴ): 競争の","rival(ライヴァル): 競う, contest(コンテスト): 競う",人・社会,intermediate
-compile,コンパ́イル,編集する・まとめる,"ラテン語 ""compilare""(略奪する)。派生: compilation(コンピレイション): 編集物","collect(コレクト): 集める, assemble(アセンブル): 集める",人・社会,intermediate
-complain,コンプレ́イン,不平を言う,"ラテン語 ""complangere""(嘆く)。派生: complaint(コンプレイント): 不平","grumble(グランブル): ぶつぶつ言う, protest(プロウテスト): 抗議する",人・社会,intermediate
-complex,コ́ンプレクス,複雑な,"ラテン語 ""complexus""(包み込まれた)。派生: complexity(コンプレクシティ): 複雑さ","complicated(コンプリケイティド): 複雑な, intricate(イントリケット): 込み入った",人・社会,intermediate
-complicate,コ́ンプリケイト,複雑にする,"ラテン語 ""complicare""(折り畳む)。派生: complicated(コンプリケイティド): 複雑な","confuse(コンフューズ): 混乱させる, entangle(エンタングル): もつれさせる",人・社会,intermediate
-compose,コンポ́ウズ,作曲する・構成する,"ラテン語 ""componere""(組み立てる)。派生: composer(コンポウザー): 作曲家 / composition(コンポジション): 作曲","create(クリエイト): 創作する, constitute(コンスティテュート): 構成する",運動・娯楽,intermediate
-compound,コ́ンパウンド,複合の・化合物,"ラテン語 ""componere""(組み立てる)。派生: compound word(コンパウンドワード): 複合語","mixture(ミクスチャー): 混合物, combination(コンビネイション): 組み合わせ",日常生活,intermediate
-comprehend,コンプリヘ́ンド,理解する,"ラテン語 ""comprehendere""(つかむ)。派生: comprehension(コンプリヘンション): 理解","understand(アンダースタンド): 理解する, grasp(グラスプ): 把握する",学校・学習,intermediate
-compress,コンプレ́ス,圧縮する,"ラテン語 ""comprimere""(押し縮める)。派生: compression(コンプレション): 圧縮","squeeze(スクイーズ): 絞る, condense(コンデンス): 凝縮する",人・社会,intermediate
-comprise,コンプラ́イズ,〜から成る,"フランス語 ""compris""(含まれた)。派生: be comprised of(ビーコンプライズドオブ): 〜で構成される","consist of(コンシストオブ): 〜から成る, include(インクルード): 含む",人・社会,intermediate
-compromise,コ́ンプロマイズ,妥協・妥協する,"ラテン語 ""com""(共に)+""promittere""(約束する)。派生: reach a compromise(リーチアコンプロマイズ): 妥協に達する","settlement(セトルメント): 和解, concession(コンセション): 譲歩",人・社会,intermediate
-conceal,コンスィ́ール,隠す,"ラテン語 ""concelare""(隠す)。派生: concealment(コンシールメント): 隠蔽","hide(ハイド): 隠す, cover(カヴァー): 覆う",人・社会,intermediate
-concede,コンスィ́ード,認める・譲る,"ラテン語 ""concedere""(譲る)。派生: concession(コンセション): 譲歩","admit(アドミット): 認める, yield(イールド): 譲る",人・社会,intermediate
-conceive,コンスィ́ーヴ,思いつく・妊娠する,"ラテン語 ""concipere""(受け取る)。派生: conception(コンセプション): 概念 / conceivable(コンシーヴァブル): 考えられる","imagine(イマジン): 想像する, devise(ディヴァイズ): 考案する",人・社会,intermediate
-concentrate,コ́ンセントレイト,集中する,"ラテン語 ""centrum""(中心)。派生: concentration(コンセントレイション): 集中","focus(フォウカス): 集中する, center(センター): 集める",場所・移動,intermediate
-concept,コ́ンセプト,概念,conceiveの名詞形。派生: conceptual(コンセプチュアル): 概念の,"idea(アイディア): 考え, notion(ノウション): 概念",人・社会,intermediate
-concern,コンサ́ーン,関係する・心配,"ラテン語 ""concernere""(混ぜる)。派生: concerning(コンサーニング): 〜に関して / concerned(コンサーンド): 心配している","relate to(リレイトトゥ): 関係する, worry(ワリ): 心配",人・社会,intermediate
-conclude,コンクルー́ド,結論する・終える,"ラテン語 ""concludere""(閉じる)。派生: conclusion(コンクルージョン): 結論","infer(インファー): 推論する, finish(フィニッシュ): 終える",人・社会,intermediate
-concrete,コ́ンクリート,具体的な・コンクリート,"ラテン語 ""concretus""(固まった)。派生: concrete example(コンクリートイグザンプル): 具体例","solid(ソリッド): 固体の, specific(スペシフィック): 具体的な",食・健康,intermediate
-condemn,コンデ́ム,非難する・有罪とする,"ラテン語 ""condemnare""(有罪とする)。派生: condemnation(コンデムネイション): 非難","denounce(ディナウンス): 非難する, blame(ブレイム): 責める",人・社会,intermediate
-condense,コンデ́ンス,凝縮する,"ラテン語 ""condensare""(濃くする)。派生: condensation(コンデンセイション): 凝縮","compress(コンプレス): 圧縮する, concentrate(コンセントレイト): 濃縮する",人・社会,intermediate
-conduct,コンダ́クト,行う・指揮する,"ラテン語 ""conducere""(導く)。派生: conductor(コンダクター): 指揮者 / conduct oneself(コンダクトワンセルフ): 振る舞う","carry out(キャリアウト): 実行する, lead(リード): 導く",食・健康,intermediate
-confer,コンファ́ー,授与する・協議する,"ラテン語 ""conferre""(一緒に運ぶ)。派生: conference(コンファレンス): 会議","grant(グラント): 授与する, consult(コンサルト): 相談する",人・社会,intermediate
-confess,コンフェ́ス,告白する,"ラテン語 ""confiteri""(認める)。派生: confession(コンフェション): 告白","admit(アドミット): 認める, acknowledge(アクノーレッジ): 認める",人・社会,intermediate
-confident,コ́ンフィデント,自信のある,"ラテン語 ""confidere""(信頼する)。派生: confidence(コンフィデンス): 自信 / confidently(コンフィデントリ): 自信を持って","sure(シュア): 確信している, assured(アシュアード): 確信した",人・社会,intermediate
-confine,コンファ́イン,限定する・閉じ込める,"ラテン語 ""confinis""(境界を接する)。派生: confinement(コンファインメント): 監禁 / confined space(コンファインドスペイス): 閉じられた空間","restrict(リストリクト): 制限する, limit(リミット): 限定する",人・社会,intermediate
-confirm,コンファ́ーム,確認する,"ラテン語 ""confirmare""(強固にする)。派生: confirmation(コンファメイション): 確認","verify(ヴェリファイ): 検証する, validate(ヴァリデイト): 確認する",人・社会,intermediate
-conflict,コ́ンフリクト,対立・矛盾,"ラテン語 ""confligere""(衝突する)。派生: conflicting(コンフリクティング): 矛盾する","clash(クラッシュ): 衝突, dispute(ディスピュート): 論争",人・社会,intermediate
-conform,コンフォ́ーム,従う・一致する,"ラテン語 ""conformare""(同じ形にする)。派生: conformity(コンフォーミティ): 順応","comply(コンプライ): 従う, adapt(アダプト): 適応する",人・社会,intermediate
-confront,コンフラ́ント,直面する,"ラテン語 ""confrontare""(向かい合わせる)。派生: confrontation(コンフロンテイション): 対決","face(フェイス): 直面する, encounter(エンカウンター): 遭遇する",人・社会,intermediate
-confuse,コンフュ́ーズ,混乱させる,"ラテン語 ""confundere""(混ぜる)。派生: confusion(コンフュージョン): 混乱 / confused(コンフューズド): 混乱した","perplex(パープレクス): 当惑させる, bewilder(ビウィルダー): 困惑させる",人・社会,intermediate
-congratulate,コングラ́チュレイト,祝う,"ラテン語 ""congratulari""(共に喜ぶ)。派生: congratulations(コングラチュレイションズ): おめでとう","celebrate(セレブレイト): 祝う, compliment(コンプリメント): ほめる",運動・娯楽,intermediate
-congress,コ́ングレス,会議・議会,"ラテン語 ""congressus""(集まり)。派生: congressional(コングレショナル): 議会の","assembly(アセンブリ): 議会, parliament(パーラメント): 議会",人・社会,intermediate
-connect,コネ́クト,つなぐ,"ラテン語 ""connectere""(結びつける)。派生: connection(コネクション): つながり / connected(コネクティド): つながった","link(リンク): つなぐ, join(ジョイン): 結合する",人・社会,intermediate
-conquer,コ́ンカー,征服する,"ラテン語 ""conquirere""(獲得する)。派生: conquest(コンクェスト): 征服 / conqueror(コンカラー): 征服者","defeat(ディフィート): 打ち負かす, overcome(オウヴァーカム): 克服する",日常生活,intermediate
-conscience,コ́ンシェンス,良心,"ラテン語 ""conscientia""(知識)。派生: conscientious(コンシエンシャス): 良心的な","morality(モラリティ): 道徳, ethics(エシックス): 倫理",人・社会,intermediate
-conscious,コ́ンシャス,意識している,"ラテン語 ""conscius""(知っている)。派生: consciousness(コンシャスネス): 意識 / be conscious of(ビーコンシャスオブ): 〜を意識している","aware(アウェア): 気づいている, awake(アウェイク): 目覚めている",人・社会,intermediate
-consecutive,コンセ́キュティヴ,連続した,"ラテン語 ""consecutus""(続く)。派生: consecutively(コンセキュティヴリ): 連続して","successive(サクセッシヴ): 連続した, continuous(コンティニュアス): 継続的な",人・社会,intermediate
-consent,コンセ́ント,同意する・同意,"ラテン語 ""consentire""(一緒に感じる)。派生: mutual consent(ミューチュアルコンセント): 相互同意","agree(アグリー): 同意する, approval(アプルーヴァル): 承認",人・社会,intermediate
-consequence,コ́ンシクエンス,結果・重要性,"ラテン語 ""consequi""(続く)。派生: consequent(コンシクエント): 結果として起こる / consequently(コンシクエントリ): その結果","result(リザルト): 結果, outcome(アウトカム): 成果",人・社会,intermediate
-conservative,コンサ́ーヴァティヴ,保守的な,conserve(保存する)の派生語。派生: conservatism(コンサーヴァティズム): 保守主義,"traditional(トラディショナル): 伝統的な, moderate(モデレット): 穏健な",人・社会,intermediate
-conserve,コンサ́ーヴ,保存する,"ラテン語 ""conservare""(守る)。派生: conservation(コンサヴェイション): 保全","preserve(プリザーヴ): 保存する, protect(プロテクト): 保護する",人・社会,intermediate
-considerable,コンシ́デラブル,かなりの,considerの派生語。派生: considerably(コンシデラブリ): かなり,"substantial(サブスタンシャル): 相当な, significant(シグニフィカント): 重要な",人・社会,intermediate
-considerate,コンシ́デレット,思いやりのある,considerの派生語。派生: consideration(コンシデレイション): 思いやり,"thoughtful(ソートフル): 思慮深い, kind(カインド): 親切な",人・社会,intermediate
-consist,コンシ́スト,成り立つ,"ラテン語 ""consistere""(立つ)。派生: consist of(コンシストオブ): 〜から成る / consistent(コンシステント): 一貫した","comprise(コンプライズ): 構成される, be made up of(ビーメイドアップオブ): 〜で構成される",人・社会,intermediate
-console,コンソ́ウル,慰める・コンソール,"ラテン語 ""consolari""(慰める)。派生: consolation(コンソレイション): 慰め","comfort(カンファート): 慰める, soothe(スーズ): なだめる",人・社会,intermediate
-conspicuous,コンスピ́キュアス,目立つ,"ラテン語 ""conspicuus""(見える)。派生: conspicuously(コンスピキュアスリ): 目立って","noticeable(ノウティサブル): 目立つ, prominent(プロミネント): 顕著な",食・健康,intermediate
-constant,コ́ンスタント,絶え間ない・一定の,"ラテン語 ""constare""(一緒に立つ)。派生: constantly(コンスタントリ): 絶えず","continuous(コンティニュアス): 連続的な, steady(ステディ): 安定した",人・社会,intermediate
-constitute,コ́ンスティテュート,構成する,"ラテン語 ""constituere""(設立する)。派生: constitution(コンスティテューション): 憲法 / constituent(コンスティチュエント): 構成要素","form(フォーム): 形成する, compose(コンポウズ): 構成する",人・社会,intermediate
-construct,コンストラ́クト,建設する,"ラテン語 ""construere""(積み上げる)。派生: construction(コンストラクション): 建設 / constructive(コンストラクティヴ): 建設的な","build(ビルド): 建てる, erect(イレクト): 建設する",人・社会,intermediate
-consult,コンサ́ルト,相談する,"ラテン語 ""consultare""(熟考する)。派生: consultant(コンサルタント): コンサルタント / consultation(コンサルテイション): 相談","advise(アドヴァイズ): 助言する, confer(コンファー): 協議する",人・社会,intermediate
-consume,コンスー́ム,消費する,"ラテン語 ""consumere""(使い尽くす)。派生: consumer(コンスーマー): 消費者 / consumption(コンサンプション): 消費","use up(ユーズアップ): 使い果たす, eat(イート): 食べる",人・社会,intermediate
-contact,コ́ンタクト,接触・連絡する,"ラテン語 ""contingere""(触れる)。派生: contact lens(コンタクトレンズ): コンタクトレンズ / keep in contact(キープインコンタクト): 連絡を保つ","touch(タッチ): 触れる, reach(リーチ): 連絡する",人・社会,intermediate
-contain,コンテ́イン,含む・抑える,"ラテン語 ""continere""(保つ)。派生: container(コンテイナー): 容器","include(インクルード): 含む, hold(ホウルド): 保持する",人・社会,intermediate
-contaminate,コンタ́ミネイト,汚染する,"ラテン語 ""contaminare""(汚す)。派生: contamination(コンタミネイション): 汚染","pollute(ポルート): 汚染する, infect(インフェクト): 感染させる",人・社会,intermediate
-contemplate,コ́ンテンプレイト,熟考する,"ラテン語 ""contemplari""(観察する)。派生: contemplation(コンテンプレイション): 瞑想","meditate(メディテイト): 瞑想する, ponder(ポンダー): 熟考する",人・社会,intermediate
-contemporary,コンテ́ンポラリ,同時代の,"ラテン語 ""con""(共に)+""tempus""(時)。派生: contemporaries(コンテンポラリーズ): 同時代人","modern(モダン): 現代の, current(カレント): 現在の",時間・数量,intermediate
-contempt,コンテ́ンプト,軽蔑,"ラテン語 ""contemnere""(さげすむ)。派生: contemptuous(コンテンプチュアス): 軽蔑的な","scorn(スコーン): 軽蔑, disdain(ディスデイン): 侮蔑",人・社会,intermediate
-contend,コンテ́ンド,争う・主張する,"ラテン語 ""contendere""(張り合う)。派生: contention(コンテンション): 論争","compete(コンピート): 競争する, argue(アーギュー): 主張する",人・社会,intermediate
-continent,コ́ンティネント,大陸,"ラテン語 ""continens""(連続した)。派生: continental(コンティネンタル): 大陸の","landmass(ランドマス): 大陸, mainland(メインランド): 本土",人・社会,intermediate
-continual,コンティ́ニュアル,絶え間ない,continueの派生語。派生: continually(コンティニュアリ): 絶えず,"continuous(コンティニュアス): 連続的な, constant(コンスタント): 一定の",人・社会,intermediate
-contract,コ́ントラクト,契約・縮む,"ラテン語 ""contrahere""(引き寄せる)。派生: contractor(コントラクター): 請負業者 / contraction(コントラクション): 収縮","agreement(アグリーメント): 合意, shrink(シュリンク): 縮む",人・社会,intermediate
-contradict,コントラディ́クト,矛盾する,"ラテン語 ""contradicere""(反対を言う)。派生: contradiction(コントラディクション): 矛盾","deny(ディナイ): 否定する, oppose(オポウズ): 反対する",人・社会,intermediate
-contrary,コ́ントラリ,反対の,"ラテン語 ""contrarius""(反対の)。派生: on the contrary(オンザコントラリ): それどころか","opposite(オポジット): 正反対の, reverse(リヴァース): 逆の",人・社会,intermediate
-contrast,コントラ́スト,対照・対比する,"ラテン語 ""contra""(反対に)+""stare""(立つ)。派生: in contrast to(インコントラストトゥ): 〜と対照的に","compare(コンペア): 比較する, difference(ディファレンス): 違い",人・社会,intermediate
-contribute,コントリ́ビュート,貢献する,"ラテン語 ""contribuere""(与える)。派生: contribution(コントリビューション): 貢献 / contributor(コントリビューター): 寄稿者","donate(ドウネイト): 寄付する, provide(プロヴァイド): 提供する",人・社会,intermediate
-control,コントロ́ウル,支配する・制御,"ラテン語 ""contra""(反対に)+""rotulus""(巻物)。派生: under control(アンダーコントロウル): 制御下で / out of control(アウトオブコントロウル): 制御不能","manage(マネッジ): 管理する, regulate(レギュレイト): 規制する",人・社会,intermediate
-controversy,コ́ントロヴァーシ,論争,"ラテン語 ""controversia""(論争)。派生: controversial(コントロヴァーシャル): 論争の的となる","dispute(ディスピュート): 論争, debate(ディベイト): 討論",人・社会,intermediate
-convenience,コンヴィ́ーニエンス,便利,convenientの名詞形。派生: at one's convenience(アットワンズコンヴィーニエンス): 都合のよいときに,"comfort(カンファート): 快適さ, ease(イーズ): 容易さ",人・社会,intermediate
-convention,コンヴェ́ンション,会議・慣習,"ラテン語 ""convenire""(集まる)。派生: conventional(コンヴェンショナル): 従来の","conference(コンファレンス): 会議, custom(カスタム): 習慣",学校・学習,intermediate
-conversation,コンヴァセ́イション,会話,converse(会話する)の名詞形。派生: have a conversation(ハヴアコンヴァセイション): 会話する,"talk(トーク): 話, dialogue(ダイアローグ): 対話",人・社会,intermediate
-convert,コンヴァ́ート,変換する・改宗させる,"ラテン語 ""convertere""(変える)。派生: conversion(コンヴァージョン): 変換","change(チェインジ): 変える, transform(トランスフォーム): 変形させる",人・社会,intermediate
-convey,コンヴェ́イ,運ぶ・伝える,"ラテン語 ""con""(共に)+""via""(道)。派生: conveyance(コンヴェイアンス): 運搬","transport(トランスポート): 輸送する, communicate(コミュニケイト): 伝達する",人・社会,intermediate
-convict,コンヴィ́クト,有罪判決を下す,"ラテン語 ""convincere""(打ち勝つ)。派生: conviction(コンヴィクション): 有罪判決 / convicted(コンヴィクティド): 有罪とされた","condemn(コンデム): 有罪とする, sentence(センテンス): 判決を下す",場所・移動,intermediate
-convince,コンヴィ́ンス,納得させる,convictと同語源。派生: convinced(コンヴィンスト): 確信した / convincing(コンヴィンシング): 説得力のある,"persuade(パースウェイド): 説得する, assure(アシュア): 確信させる",人・社会,intermediate
-cooperate,コウア́パレイト,協力する,"ラテン語 ""co""(共に)+""operari""(働く)。派生: cooperation(コウアペレイション): 協力 / cooperative(コウアペラティヴ): 協力的な","collaborate(コラボレイト): 共同作業する, work together(ワークトゥゲザー): 一緒に働く",人・社会,intermediate
-coordinate,コウオ́ーディネイト,調整する,"ラテン語 ""co""(共に)+""ordinare""(整理する)。派生: coordination(コウオーディネイション): 調整 / coordinator(コウオーディネイター): コーディネーター","organize(オーガナイズ): 組織する, arrange(アレインジ): 配置する",人・社会,intermediate
 cope,コ́ウプ,対処する,"古フランス語 ""couper""(打つ)。派生: cope with(コウプウィズ): 〜に対処する","deal with(ディールウィズ): 処理する, manage(マネッジ): 何とかやる",人・社会,intermediate
-cord,コ́ード,ひも・コード,"ギリシャ語 ""khorde""(腸)。派生: spinal cord(スパイナルコード): 脊髄 / vocal cords(ヴォウカルコーズ): 声帯","rope(ロウプ): ロープ, string(ストリング): ひも",人・社会,intermediate
-core,コ́ア,核心・芯,"ラテン語 ""cor""(心臓)。派生: to the core(トゥザコア): 完全に","center(センター): 中心, heart(ハート): 核心",人・社会,intermediate
-corporate,コ́ーパレット,企業の,corporation(会社)の形容詞形。派生: corporate culture(コーパレットカルチャー): 企業文化,"business(ビジネス): 事業の, company(カンパニ): 会社の",人・社会,intermediate
-corporation,コーパレ́イション,会社・法人,"ラテン語 ""corpus""(体)。派生: multinational corporation(マルチナショナルコーパレイション): 多国籍企業","company(カンパニ): 会社, firm(ファーム): 会社",人・社会,intermediate
 correspond,コーレスポ́ンド,一致する・文通する,"ラテン語 ""correspondere""(調和する)。派生: correspondence(コーレスポンデンス): 一致 / correspondent(コーレスポンデント): 特派員","match(マッチ): 一致する, communicate(コミュニケイト): 通信する",学校・学習,intermediate
-corridor,コ́ーリドー,廊下,"イタリア語 ""corridore""(走る所)。派生: along the corridor(アロングザコーリドー): 廊下に沿って","hallway(ホールウェイ): 廊下, passage(パセッジ): 通路",場所・移動,intermediate
 costly,コ́ストリ,高価な,costの派生語。派生: be costly(ビーコストリ): 高くつく,"expensive(イクスペンシヴ): 高価な, dear(ディア): 高い",人・社会,intermediate
-costume,コ́スチューム,衣装,"イタリア語 ""costume""(習慣)。派生: costume party(コスチュームパーティ): 仮装パーティー","outfit(アウトフィット): 服装, dress(ドレス): 衣服",日常生活,intermediate
-cottage,コ́テッジ,小屋・田舎家,"中英語 ""cotage""(小屋)。派生: cottage cheese(コテッジチーズ): カッテージチーズ","cabin(キャビン): 小屋, hut(ハット): 小屋",場所・移動,intermediate
-counsel,カ́ウンセル,助言・弁護士,"ラテン語 ""consilium""(助言)。派生: counselor(カウンセラー): カウンセラー","advice(アドヴァイス): 助言, lawyer(ロイヤー): 弁護士",人・社会,intermediate
 countless,カ́ウントレス,無数の,"count+""less""。派生: countless times(カウントレスタイムズ): 数え切れないほど","innumerable(イニューメラブル): 無数の, numerous(ニューメラス): 多数の",時間・数量,intermediate
 county,カ́ウンティ,郡,"ラテン語 ""comitatus""(伯爵領)。派生: county seat(カウンティシート): 郡庁所在地","district(ディストリクト): 地区, province(プロヴィンス): 州",人・社会,intermediate

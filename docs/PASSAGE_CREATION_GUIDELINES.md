@@ -77,26 +77,51 @@ Topics should be:
 
 ---
 
-## 3. Formatting Standards
+## 3. Formatting Standards (UPDATED - Phrase-Based Format)
 
-### Paragraph Indentation
-**CRITICAL REQUIREMENT:**
-- First line of each paragraph MUST be indented with 4 spaces
-- Do NOT indent continuation lines
-- Section headers are NOT indented
+### **CURRENT IMPLEMENTATION: Phrase-Based Line Breaks**
+
+The current implementation uses a **phrase-based format** optimized for:
+- **Reading aloud practice** (natural breathing points)
+- **Cognitive chunking** (reduced cognitive load)
+- **Comprehension support** (meaningful units visible)
+- **Syntax understanding** (structural awareness)
+
+**Format Rules:**
+- Each meaningful phrase on its own line
+- No indentation required
+- Empty lines between phrase groups for readability
+- Natural breathing points guide line breaks
+
+**Theoretical Foundation:**
+- **Cognitive Load Theory**: Limits information chunks to working memory capacity (7±2 items)
+- **Chunking Theory**: Groups related words into meaningful units
+- **Prosody Visualization**: Makes speech rhythm visible for learners
+- **L2 Acquisition**: Supports gradual syntax internalization
 
 ```
-Example:
+Example (Phrase-Based Format):
 
-Section Header
+Last summer,
 
-    This is the first line of a paragraph with proper 4-space indentation.
-This is the second line with no indentation.
-This is the third line with no indentation.
+I had the opportunity
 
-    This is a new paragraph, starting with 4-space indentation again.
-The rest of the paragraph continues without indentation.
+to go
+
+to the U.K.—well, actually,
+
+I'd originally hoped
+
+to visit the United Kingdom,
+
+but the program I joined went
+
+to the United States instead.
 ```
+
+### ~~Legacy Format~~ (Deprecated)
+~~The old paragraph-indentation style with 4-space first-line indent is no longer used.~~
+~~This was replaced by the phrase-based format which better serves educational goals.~~
 
 ### Section Headers
 - Title case capitalization

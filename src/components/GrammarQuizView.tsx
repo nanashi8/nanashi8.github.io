@@ -76,6 +76,9 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   });
   const [availableUnits, setAvailableUnits] = useState<{ value: string; label: string }[]>([]);
   const [showSettings, setShowSettings] = useState<boolean>(false);
+  
+  // 回答時刻を記録（ScoreBoard更新用）
+  const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
   
   const [currentQuestions, setCurrentQuestions] = useState<any[]>([]);
@@ -404,6 +407,9 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     setSelectedAnswer(answer);
     setAnswered(true);
     
+    // 回答時刻を更新（ScoreBoard更新用）
+    setLastAnswerTime(Date.now());
+    
     const isCorrect = answer === currentQuestion.correctAnswer;
     setTotalAnswered(prev => prev + 1);
     
@@ -433,6 +439,10 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
         if (newWords.length === currentQuestion.words.length) {
           setTimeout(() => {
             setAnswered(true);
+            
+            // 回答時刻を更新（ScoreBoard更新用）
+            setLastAnswerTime(Date.now());
+            
             const userAnswer = newWords.join(' ');
             const correctAnswer = currentQuestion.words.join(' ');
             const isCorrect = userAnswer === correctAnswer;
@@ -604,6 +614,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
             sessionIncorrect={sessionStats.incorrect}
             sessionMastered={sessionStats.mastered}
             onShowSettings={() => setShowSettings(true)}
+            onAnswerTime={lastAnswerTime}
           />
 
           {/* 文法クイズ中の学習設定パネル */}

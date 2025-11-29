@@ -190,7 +190,7 @@ export function generateChoicesWithQuestions(
   const otherQuestions = allQuestions.filter((_, idx) => idx !== currentIndex);
   const shuffledOthers = shuffle(otherQuestions);
 
-  for (let i = 0; i < shuffledOthers.length && wrongQuestions.length < 2; i++) {
+  for (let i = 0; i < shuffledOthers.length && wrongQuestions.length < 3; i++) {
     const wrongQuestion = shuffledOthers[i];
     if (wrongQuestion.meaning !== currentQuestion.meaning && 
         !wrongQuestions.some(q => q.meaning === wrongQuestion.meaning)) {
@@ -199,7 +199,7 @@ export function generateChoicesWithQuestions(
   }
 
   // 誤答が足りない場合はダミーを追加
-  while (wrongQuestions.length < 2) {
+  while (wrongQuestions.length < 3) {
     wrongQuestions.push({
       word: `ダミー${wrongQuestions.length + 1}`,
       meaning: `選択肢${wrongQuestions.length + 1}`,
@@ -212,13 +212,12 @@ export function generateChoicesWithQuestions(
     });
   }
 
-  // 正解と誤答をシャッフルして、「分からない」を最後に追加
+  // 正解と誤答をシャッフル（4択）
   const allChoices = [
     { text: currentQuestion.meaning, question: currentQuestion },
     ...wrongQuestions.map(q => ({ text: q.meaning, question: q }))
   ];
-  const shuffledFirst3 = shuffle(allChoices);
-  return [...shuffledFirst3, { text: '分からない', question: null }];
+  return shuffle(allChoices);
 }
 
 /**

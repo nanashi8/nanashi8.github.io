@@ -8660,8 +8660,8 @@
         },
         {
           "id": "fb-g3-u2-003",
-          "japanese": "彼女は30分待っています",
-          "sentence": "She has been ____ for 30 minutes.",
+          "japanese": "彼女は一日中____している。",
+          "sentence": "She has been ____ all day.",
           "choices": [
             "waiting",
             "wait",
