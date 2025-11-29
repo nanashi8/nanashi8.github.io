@@ -8340,17 +8340,7 @@
       "segments": [
         {
           "word": "Johnson",
-          "meaning": {
-            "word": "Johnson",
-            "reading": "Johnson",
-            "meaning": "(未登録)",
-            "etymology": "",
-            "relatedWords": [],
-            "category": "未分類",
-            "difficulty": "未設定",
-            "passages": [],
-            "source": "auto-generated"
-          },
+          "meaning": "ジョンソン",
           "isUnknown": false
         },
         {
@@ -20103,17 +20093,7 @@
       "segments": [
         {
           "word": "Davis",
-          "meaning": {
-            "word": "Davis",
-            "reading": "Davis",
-            "meaning": "(未登録)",
-            "etymology": "",
-            "relatedWords": [],
-            "category": "未分類",
-            "difficulty": "未設定",
-            "passages": [],
-            "source": "auto-generated"
-          },
+          "meaning": "デイビス",
           "isUnknown": false
         },
         {
@@ -31588,17 +31568,7 @@
         },
         {
           "word": "Lisa",
-          "meaning": {
-            "word": "Lisa",
-            "reading": "Lisa",
-            "meaning": "(未登録)",
-            "etymology": "",
-            "relatedWords": [],
-            "category": "未分類",
-            "difficulty": "未設定",
-            "passages": [],
-            "source": "auto-generated"
-          },
+          "meaning": "リサ",
           "isUnknown": false
         },
         {
@@ -31630,17 +31600,7 @@
         },
         {
           "word": "Tom",
-          "meaning": {
-            "word": "Tom",
-            "reading": "Tom",
-            "meaning": "(未登録)",
-            "etymology": "",
-            "relatedWords": [],
-            "category": "未分類",
-            "difficulty": "未設定",
-            "passages": [],
-            "source": "auto-generated"
-          },
+          "meaning": "トム",
           "isUnknown": false
         }
       ]
