@@ -71,7 +71,7 @@ export function speakEnglish(
   utterance.volume = options.volume || 1.0;
 
   // 声の種類を設定
-  if (savedGender && savedGender !== 'system') {
+  if (savedGender) {
     const voices = window.speechSynthesis.getVoices();
     const englishVoices = voices.filter(voice => voice.lang.startsWith('en-'));
     
