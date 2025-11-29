@@ -7,7 +7,6 @@ function ReadingView() {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
   const [phraseTranslations, setPhraseTranslations] = useState<boolean[]>([]);
-  const [loading, setLoading] = useState(true);
   const [speakingPhraseIndex, setSpeakingPhraseIndex] = useState<number | null>(null);
 
   // 初回読み込み: public/data/dictionaries/passages.json から読み込み
@@ -16,7 +15,6 @@ function ReadingView() {
       .then((res) => res.json())
       .then((data: ReadingPassage[]) => {
         setPassages(data);
-        setLoading(false);
         if (data.length > 0) {
           setSelectedPassageId(data[0].id);
           setPhraseTranslations(new Array(data[0].phrases.length).fill(false));
@@ -25,7 +23,6 @@ function ReadingView() {
       .catch((err) => {
         console.error('Failed to load passages:', err);
         setPassages([]);
-        setLoading(false);
       });
   }, []);
 
@@ -166,12 +163,8 @@ function ReadingView() {
             : passage
         )
       );
-    }
+    );
   };
-
-  if (loading) {
-    return <div className="reading-view"><p>📖 読み込み中...</p></div>;
-  }
 
   if (passages.length === 0) {
     return (
