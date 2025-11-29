@@ -76,13 +76,13 @@ function ReadingView() {
       phrase.segments.forEach((segment) => {
         if (segment.isUnknown) {
           unknownWords.push({
-            word: segment.word,
-            reading: '',
-            meaning: segment.meaning,
-            etymology: '',
-            relatedWords: phrase.phraseMeaning,
-            relatedFields: currentPassage.title,
-            difficulty: '',
+            word: segment.lemma || segment.word, // 原形を優先、なければ表示形
+            reading: segment.reading || '',
+            meaning: segment.meaning || '',
+            etymology: segment.etymology || '',
+            relatedWords: segment.relatedWords || '',
+            relatedFields: segment.relatedFields || currentPassage.theme || currentPassage.title,
+            difficulty: segment.difficulty || 'intermediate',
           });
         }
       });
