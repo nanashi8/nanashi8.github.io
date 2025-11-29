@@ -96,9 +96,17 @@ export interface ReadingPhrase {
 }
 
 export interface ReadingSegment {
-  word: string; // 単語
+  word: string; // 単語（表示形：変化形のまま）
   meaning: string; // 意味
   isUnknown: boolean; // 分からない単語としてマークされているか
+  
+  // Question型互換フィールド（単語帳保存用）
+  lemma?: string; // 原形（辞書形）- gatheredならgather
+  reading?: string; // カタカナ読み（例: ギャザー）
+  etymology?: string; // 語源等解説（小中学生向け）
+  relatedWords?: string; // 関連語（熟語・派生語と読みと意味）
+  relatedFields?: string; // 関連分野
+  difficulty?: string; // 難易度（beginner/intermediate/advanced）
 }
 
 // 問題集（単語セット）の型
