@@ -348,7 +348,7 @@ function SpellingView({
       ...prev,
       currentIndex: prev.currentIndex + 1 < prev.questions.length ? prev.currentIndex + 1 : prev.currentIndex,
       answered: false, // 回答状態をリセット
-    });
+    }));
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();
     
