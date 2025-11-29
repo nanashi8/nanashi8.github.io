@@ -42,9 +42,9 @@ function SettingsView({
   };
 
   // 音声設定の読み込み
-  const [voiceGender, setVoiceGender] = useState<'female' | 'male' | 'system'>(() => {
+  const [voiceGender, setVoiceGender] = useState<'female' | 'male'>(() => {
     const saved = localStorage.getItem('voiceGender');
-    return (saved === 'female' || saved === 'male' || saved === 'system') ? saved : 'system';
+    return (saved === 'female' || saved === 'male') ? saved : 'female'; // 初期値を女性に設定
   });
 
   const [speechRate, setSpeechRate] = useState<number>(() => {
@@ -53,7 +53,7 @@ function SettingsView({
   });
 
   // 音声性別変更時にlocalStorageに保存
-  const handleVoiceGenderChange = (gender: 'female' | 'male' | 'system') => {
+  const handleVoiceGenderChange = (gender: 'female' | 'male') => {
     setVoiceGender(gender);
     localStorage.setItem('voiceGender', gender);
   };
@@ -117,10 +117,6 @@ function SettingsView({
   return (
     <div className="settings-view">
       <div className="settings-container">
-        <div className="section-header">
-          <h1>📚 学習プランナー</h1>
-        </div>
-
         {/* 学習プラン設定 */}
         <LearningPlanView
           allQuestions={allQuestions}
@@ -146,43 +142,6 @@ function SettingsView({
         </div>
 
         {/* データソース選択 */}
-        {onDataSourceChange && (
-          <div className="simple-setting-section">
-            <h3>📚 出題範囲</h3>
-            <div className="theme-toggle-grid">
-              <button
-                className={`theme-btn ${selectedDataSource === 'all' ? 'active' : ''}`}
-                onClick={() => onDataSourceChange('all')}
-              >
-                <div className="theme-icon">🌐</div>
-                <div className="theme-label">すべて</div>
-                <div className="theme-sublabel">全単語</div>
-              </button>
-              <button
-                className={`theme-btn ${selectedDataSource === 'junior' ? 'active' : ''}`}
-                onClick={() => onDataSourceChange('junior')}
-              >
-                <div className="theme-icon">🎓</div>
-                <div className="theme-label">高校受験</div>
-                <div className="theme-sublabel">基礎単語</div>
-              </button>
-              <button
-                className={`theme-btn ${selectedDataSource === 'intermediate' ? 'active' : ''}`}
-                onClick={() => onDataSourceChange('intermediate')}
-              >
-                <div className="theme-icon">📖</div>
-                <div className="theme-label">高校受験標準</div>
-                <div className="theme-sublabel">標準単語</div>
-              </button>
-            </div>
-            <div className="theme-description">
-              {selectedDataSource === 'all' && '💡 全ての単語データから出題します'}
-              {selectedDataSource === 'junior' && '🎓 高校受験レベルの基礎単語から出題します'}
-              {selectedDataSource === 'intermediate' && '📖 高校受験標準レベルの標準単語から出題します'}
-            </div>
-          </div>
-        )}
-
         {/* ダークモード切り替え */}
         <div className="simple-setting-section">
           <h3>🌙 表示モード</h3>
@@ -237,13 +196,6 @@ function SettingsView({
               >
                 <div className="theme-icon">👨</div>
                 <div className="theme-label">男性</div>
-              </button>
-              <button
-                className={`theme-btn ${voiceGender === 'system' ? 'active' : ''}`}
-                onClick={() => handleVoiceGenderChange('system')}
-              >
-                <div className="theme-icon">💻</div>
-                <div className="theme-label">自動</div>
               </button>
             </div>
           </div>
