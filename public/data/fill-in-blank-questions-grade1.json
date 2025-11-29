@@ -1640,37 +1640,7 @@
         },
         {
           "id": "fb-g1-u0-003",
-          "japanese": "これは私のノートです",
-          "sentence": "This is ____ notebook.",
-          "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
-          ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
-          "hint": "所有格: my"
-        },
-        {
-          "id": "fb-g1-u0-004",
-          "japanese": "これは私のかばんです",
-          "sentence": "This is ____ bag.",
-          "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
-          ],
-          "correctAnswer": "my",
-          "difficulty": "beginner",
-          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
-          "hint": "所有格: my"
-        },
-        {
-          "id": "fb-g1-u0-005",
-          "japanese": "これは私の机です",
+          "japanese": "これは机です",
           "sentence": "This is ____ desk.",
           "choices": [
             "my",
@@ -1678,14 +1648,30 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my",
+          "grammarPoint": "冠詞 (a/an)"
+        },
+        {
+          "id": "fb-g1-u0-004",
+          "japanese": "これはカレンダーです",
+          "sentence": "This is ____ calendar.",
+          "choices": [
+            "my",
+            "I",
+            "me",
+            "mine"
+          ],
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
         },
         {
-          "id": "fb-g1-u0-006",
-          "japanese": "これは私の椅子です",
+          "id": "fb-g1-u0-005",
+          "japanese": "これは椅子です",
           "sentence": "This is ____ chair.",
           "choices": [
             "my",
@@ -1693,25 +1679,41 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
         },
         {
-          "id": "fb-g1-u0-007",
-          "japanese": "これは私の消しゴムです",
-          "sentence": "This is ____ eraser.",
+          "id": "fb-g1-u0-006",
+          "japanese": "これは窓です",
+          "sentence": "This is ____ window.",
           "choices": [
             "my",
             "I",
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
+        },
+        {
+          "id": "fb-g1-u0-007",
+          "japanese": "これは定規です",
+          "sentence": "This is ____ ruler.",
+          "choices": [
+            "my",
+            "I",
+            "me",
+            "mine"
+          ],
+          "correctAnswer": "a",
+          "difficulty": "beginner",
+          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "hint": "所有格: my",
+          "grammarPoint": "冠詞 (a/an)"
         },
         {
           "id": "fb-g1-u0-008",
@@ -1760,18 +1762,19 @@
         },
         {
           "id": "fb-g1-u0-011",
-          "japanese": "これは私の家です",
-          "sentence": "This is ____ house.",
+          "japanese": "これは消しゴムです",
+          "sentence": "This is ____ eraser.",
           "choices": [
             "my",
             "I",
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "an",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
-          "hint": "所有格: my"
+          "hint": "母音erにはan",
+          "grammarPoint": "冠詞 (a/an)"
         },
         {
           "id": "fb-g1-u0-012",
@@ -1835,48 +1838,50 @@
         },
         {
           "id": "fb-g1-u0-016",
-          "japanese": "これは私のシャツです",
-          "sentence": "This is ____ shirt.",
+          "japanese": "これは図書館です",
+          "sentence": "This is ____ library.",
           "choices": [
             "my",
             "I",
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
-          "hint": "所有格: my"
+          "hint": "子音lにはa",
+          "grammarPoint": "冠詞 (a/an)"
         },
         {
           "id": "fb-g1-u0-017",
-          "japanese": "これは私の学校です",
-          "sentence": "This is ____ school.",
+          "japanese": "これは駅です",
+          "sentence": "This is ____ station.",
           "choices": [
             "my",
             "I",
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
         },
         {
           "id": "fb-g1-u0-018",
-          "japanese": "これは私の先生です",
-          "sentence": "This is ____ teacher.",
+          "japanese": "これは病院です",
+          "sentence": "This is ____ hospital.",
           "choices": [
             "my",
             "I",
             "me",
             "mine"
           ],
-          "correctAnswer": "my",
+          "correctAnswer": "an",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
-          "hint": "所有格: my"
+          "hint": "母音hにはan (hospital)",
+          "grammarPoint": "冠詞 (a/an)"
         },
         {
           "id": "fb-g1-u0-019",
@@ -14112,8 +14117,8 @@
         },
         {
           "id": "vf-g1-u4-005",
-          "japanese": "私は時々使う",
-          "sentence": "I ____ a computer sometimes.",
+          "japanese": "あれは箱です",
+          "sentence": "That is ____ box.",
           "verb": "use",
           "choices": [
             "use",
@@ -14121,7 +14126,7 @@
             "useed",
             "useing"
           ],
-          "correctAnswer": "use",
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
@@ -14256,8 +14261,8 @@
         },
         {
           "id": "vf-g1-u4-014",
-          "japanese": "あなたは普段する",
-          "sentence": "You ____ soccer usually.",
+          "japanese": "あれは公園です",
+          "sentence": "That is ____ park.",
           "verb": "play",
           "choices": [
             "play",
@@ -14265,7 +14270,7 @@
             "played",
             "playing"
           ],
-          "correctAnswer": "play",
+          "correctAnswer": "a",
           "difficulty": "beginner",
           "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
@@ -17578,8 +17583,8 @@
       "verbForm": [
         {
           "id": "vf-g1-u5-001",
-          "japanese": "彼は毎日英語を勉強する",
-          "sentence": "He ____ English every day.",
+          "japanese": "私は5つのリンゴを持っています",
+          "sentence": "I have five ____.",
           "verb": "study",
           "choices": [
             "study",
@@ -17587,7 +17592,7 @@
             "studyed",
             "studying"
           ],
-          "correctAnswer": "studies",
+          "correctAnswer": "apples",
           "difficulty": "beginner",
           "explanation": "主語がhe（三人称単数）で、every dayという現在の習慣を表すため、studyに-sまたは-esを付けてstudiesとします。I/You/We/Theyならstudyのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -17610,8 +17615,8 @@
         },
         {
           "id": "vf-g1-u5-003",
-          "japanese": "私の父はいつも東京を訪れる",
-          "sentence": "My father ____ Tokyo always.",
+          "japanese": "私たちはいくつかの本を持っています",
+          "sentence": "We have several ____.",
           "verb": "visit",
           "choices": [
             "visit",
@@ -17619,7 +17624,7 @@
             "visited",
             "visiting"
           ],
-          "correctAnswer": "visits",
+          "correctAnswer": "books",
           "difficulty": "beginner",
           "explanation": "主語がmy father（三人称単数）で、alwaysという現在の習慣を表すため、visitに-sまたは-esを付けてvisitsとします。I/You/We/Theyならvisitのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -17690,8 +17695,8 @@
         },
         {
           "id": "vf-g1-u5-008",
-          "japanese": "彼女は普段助けが必要とする",
-          "sentence": "She ____ help usually.",
+          "japanese": "私たちはいくつかのペンを持っています",
+          "sentence": "We have some ____.",
           "verb": "need",
           "choices": [
             "need",
@@ -17699,7 +17704,7 @@
             "needed",
             "needing"
           ],
-          "correctAnswer": "needs",
+          "correctAnswer": "pens",
           "difficulty": "beginner",
           "explanation": "主語がshe（三人称単数）で、usuallyという現在の習慣を表すため、needに-sまたは-esを付けてneedsとします。I/You/We/Theyならneedのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -17738,8 +17743,8 @@
         },
         {
           "id": "vf-g1-u5-011",
-          "japanese": "私の姉妹は時々東京に住む",
-          "sentence": "My sister ____ in Tokyo sometimes.",
+          "japanese": "私は6つのオレンジを持っています",
+          "sentence": "I have six ____.",
           "verb": "live",
           "choices": [
             "live",
@@ -17747,7 +17752,7 @@
             "liveed",
             "liveing"
           ],
-          "correctAnswer": "lives",
+          "correctAnswer": "oranges",
           "difficulty": "beginner",
           "explanation": "主語がmy sister（三人称単数）で、sometimesという現在の習慣を表すため、liveに-sまたは-esを付けてlivesとします。I/You/We/Theyならliveのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -19180,8 +19185,8 @@
       "fillInBlank": [
         {
           "id": "vf-g1-u5-001",
-          "japanese": "私は3冊の本を持っています",
-          "sentence": "I have three ____.",
+          "japanese": "私は8つのリンゴを持っています",
+          "sentence": "I have eight ____.",
           "verb": "plural",
           "choices": [
             "book",
@@ -19189,7 +19194,7 @@
             "bookes",
             "book's"
           ],
-          "correctAnswer": "books",
+          "correctAnswer": "apples",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -19212,8 +19217,8 @@
         },
         {
           "id": "vf-g1-u5-003",
-          "japanese": "私たちは多くの友達がいます",
-          "sentence": "We have many ____.",
+          "japanese": "私たちはいくつかの本を持っています",
+          "sentence": "We have several ____.",
           "verb": "plural",
           "choices": [
             "friend",
@@ -19221,7 +19226,7 @@
             "friendes",
             "friend's"
           ],
-          "correctAnswer": "friends",
+          "correctAnswer": "books",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -19292,8 +19297,8 @@
         },
         {
           "id": "vf-g1-u5-008",
-          "japanese": "私たちは多くの生徒がいます",
-          "sentence": "We have many ____.",
+          "japanese": "私たちはいくつかのペンを持っています",
+          "sentence": "We have some ____.",
           "verb": "plural",
           "choices": [
             "student",
@@ -19301,7 +19306,7 @@
             "studentes",
             "student's"
           ],
-          "correctAnswer": "students",
+          "correctAnswer": "pens",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -22830,18 +22835,19 @@
         },
         {
           "id": "fb-g1-u6-009",
-          "japanese": "彼は泳いでいます",
-          "sentence": "He is ____.",
+          "japanese": "彼は遊んでいます",
+          "sentence": "He ____ playing.",
           "choices": [
             "swimming",
             "swim",
             "swims",
             "swimed"
           ],
-          "correctAnswer": "swimming",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-010",
@@ -22875,78 +22881,83 @@
         },
         {
           "id": "fb-g1-u6-012",
-          "japanese": "彼らは待っています",
-          "sentence": "They are ____.",
+          "japanese": "彼らは走っています",
+          "sentence": "They ____ running.",
           "choices": [
             "waiting",
             "wait",
             "waits",
             "waited"
           ],
-          "correctAnswer": "waiting",
+          "correctAnswer": "are",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-013",
-          "japanese": "あなたは食べています",
-          "sentence": "You are ____.",
+          "japanese": "あなたは歌っています",
+          "sentence": "You ____ singing.",
           "choices": [
             "eating",
             "eat",
             "eats",
             "eated"
           ],
-          "correctAnswer": "eating",
+          "correctAnswer": "are",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-014",
-          "japanese": "私たちは働いています",
-          "sentence": "We are ____.",
+          "japanese": "私たちは踊っています",
+          "sentence": "We ____ dancing.",
           "choices": [
             "working",
             "work",
             "works",
             "worked"
           ],
-          "correctAnswer": "working",
+          "correctAnswer": "are",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-015",
-          "japanese": "彼は笑っています",
-          "sentence": "He is ____.",
+          "japanese": "彼は勉強しています",
+          "sentence": "He ____ studying.",
           "choices": [
             "laughing",
             "laugh",
             "laughs",
             "laughed"
           ],
-          "correctAnswer": "laughing",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-016",
-          "japanese": "彼女は踊っています",
-          "sentence": "She is ____.",
+          "japanese": "彼女は読んでいます",
+          "sentence": "She ____ reading.",
           "choices": [
             "dancing",
             "danc",
             "dancs",
             "danced"
           ],
-          "correctAnswer": "dancing",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-017",
@@ -22980,33 +22991,35 @@
         },
         {
           "id": "fb-g1-u6-019",
-          "japanese": "彼は運転しています",
-          "sentence": "He is ____.",
+          "japanese": "彼は働いています",
+          "sentence": "He ____ working.",
           "choices": [
             "driving",
             "driv",
             "drivs",
             "drived"
           ],
-          "correctAnswer": "driving",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         },
         {
           "id": "fb-g1-u6-020",
-          "japanese": "彼女は絵を描いています",
-          "sentence": "She is ____.",
+          "japanese": "彼女は料理しています",
+          "sentence": "She ____ cooking.",
           "choices": [
             "drawing",
             "draw",
             "draws",
             "drawed"
           ],
-          "correctAnswer": "drawing",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "現在進行形: be動詞 + 動詞ing形。",
-          "hint": "動詞にingをつける"
+          "hint": "動詞にingをつける",
+          "grammarPoint": "現在進行形 (be + -ing)"
         }
       ],
       "sentenceOrdering": [
@@ -26325,15 +26338,15 @@
         },
         {
           "id": "fb-g1-u7-008",
-          "japanese": "私は泳げません",
-          "sentence": "I cannot ____.",
+          "japanese": "私は速く走ることができます",
+          "sentence": "I ____ run fast.",
           "choices": [
             "swim",
             "swims",
             "swiming",
             "swimed"
           ],
-          "correctAnswer": "swim",
+          "correctAnswer": "can",
           "difficulty": "beginner",
           "explanation": "canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
@@ -26445,18 +26458,19 @@
         },
         {
           "id": "fb-g1-u7-016",
-          "japanese": "私は歌えます",
-          "sentence": "I can ____.",
+          "japanese": "私は上手に泳げます",
+          "sentence": "I can ____ well.",
           "choices": [
             "sing",
             "sings",
             "singing",
             "singed"
           ],
-          "correctAnswer": "sing",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
           "explanation": "canの後は必ず動詞の原形。",
-          "hint": "can + 動詞原形"
+          "hint": "can + 動詞原形",
+          "grammarPoint": "助動詞 can"
         },
         {
           "id": "fb-g1-u7-017",
@@ -26505,18 +26519,19 @@
         },
         {
           "id": "fb-g1-u7-020",
-          "japanese": "あなたは見えますか",
-          "sentence": "Can you ____?",
+          "japanese": "あなたは英語を話せますか",
+          "sentence": "Can you ____ English?",
           "choices": [
             "see",
             "sees",
             "seeing",
             "seeed"
           ],
-          "correctAnswer": "see",
+          "correctAnswer": "speak",
           "difficulty": "beginner",
           "explanation": "canの後は必ず動詞の原形。",
-          "hint": "can + 動詞原形"
+          "hint": "can + 動詞原形",
+          "grammarPoint": "助動詞 can"
         }
       ],
       "sentenceOrdering": [
@@ -29955,15 +29970,15 @@
         },
         {
           "id": "fb-g1-u8-016",
-          "japanese": "私は昨日忙しかったです",
-          "sentence": "I was ____ yesterday.",
+          "japanese": "彼女は看護師です",
+          "sentence": "She ____ a nurse.",
           "choices": [
             "busy",
             "happy",
             "sad",
             "tired"
           ],
-          "correctAnswer": "busy",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
@@ -33435,18 +33450,19 @@
         },
         {
           "id": "fb-g1-u9-014",
-          "japanese": "彼らは来る予定です",
-          "sentence": "They are going to ____.",
+          "japanese": "彼らは明日出発する予定です",
+          "sentence": "They are going to ____ tomorrow.",
           "choices": [
             "come",
             "comes",
             "coming",
             "came"
           ],
-          "correctAnswer": "come",
+          "correctAnswer": "leave",
           "difficulty": "beginner",
           "explanation": "未来表現の文で使われる語彙。",
-          "hint": "文脈に合う単語を選ぶ"
+          "hint": "文脈に合う単語を選ぶ",
+          "grammarPoint": "be going to"
         },
         {
           "id": "fb-g1-u9-015",

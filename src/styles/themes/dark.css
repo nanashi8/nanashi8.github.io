@@ -1576,17 +1576,31 @@ option {
   }
 
   .score-board-tabs-mobile .score-tab {
-    padding: 10px 18px;
+    padding: 8px 12px;
     background: var(--background);
     border: 2px solid var(--border-color);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
-    font-size: max(14px, 1em);
+    font-size: max(12px, 0.85em);
     font-weight: 600;
     white-space: nowrap;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    min-width: 60px;
+  }
+  
+  .score-board-tabs-mobile .score-tab .tab-icon {
+    font-size: 1.2em;
+  }
+  
+  .score-board-tabs-mobile .score-tab .tab-label {
+    font-size: 0.75em;
+    line-height: 1;
   }
 
   .score-board-tabs-mobile .score-tab:hover {
@@ -1937,8 +1951,113 @@ option {
   justify-content: center;
 }
 
+.plan-text-line-secondary {
+  margin-top: 8px;
+}
+
 .plan-text-line span {
   white-space: nowrap;
+}
+
+.plan-setting-clickable {
+  cursor: pointer;
+  color: var(--accent-blue);
+  transition: color 0.2s ease;
+}
+
+.plan-setting-clickable:hover {
+  color: var(--accent-purple);
+  text-decoration: underline;
+}
+
+.plan-settings-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.plan-settings-content {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.plan-settings-content h4 {
+  margin: 0 0 16px 0;
+  color: var(--text-primary);
+}
+
+.plan-setting-item {
+  margin-bottom: 16px;
+}
+
+.plan-setting-item label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+.plan-setting-item input {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1em;
+}
+
+.plan-settings-close {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s ease;
+}
+
+.plan-settings-close:hover {
+  background: var(--accent-purple);
+}
+
+/* モバイル用プラン設定モーダル調整 */
+@media (max-width: 768px) {
+  .plan-settings-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+  
+  .plan-settings-content h4 {
+    font-size: 1.1em;
+  }
+  
+  .plan-setting-item label {
+    font-size: 0.85em;
+  }
+  
+  .plan-setting-item input {
+    font-size: 16px; /* iOS Safari のズーム防止 */
+    padding: 10px 12px;
+  }
+  
+  .plan-settings-close {
+    padding: 12px;
+    font-size: 1.05em;
+  }
 }
 
 .plan-progress-compact {
@@ -2070,6 +2189,108 @@ option {
   color: var(--text-tertiary);
   font-size: 0.85em;
   font-style: italic;
+}
+
+/* 単語詳細表示 */
+.word-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.word-detail-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.word-detail-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.word-stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+.word-stat-value {
+  color: var(--text-primary);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.word-history-icons {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.word-retention-rate {
+  color: var(--accent-blue);
+  font-size: 1.2em;
+}
+
+.word-stat-description {
+  color: var(--text-tertiary);
+  font-size: 0.85em;
+  line-height: 1.4;
+  padding: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.word-detail-empty {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: 20px;
+  font-size: 0.95em;
+}
+
+/* モバイル用単語詳細表示調整 */
+@media (max-width: 768px) {
+  .word-detail-container {
+    padding: 4px 0;
+  }
+  
+  .word-detail-title {
+    font-size: 1em;
+    padding-bottom: 6px;
+  }
+  
+  .word-stat-label {
+    font-size: 0.85em;
+  }
+  
+  .word-stat-value {
+    font-size: 0.95em;
+  }
+  
+  .word-history-icons {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+  
+  .word-retention-rate {
+    font-size: 1.1em;
+  }
+  
+  .word-stat-description {
+    font-size: 0.8em;
+    padding: 6px;
+  }
 }
 
 /* 設定タブメッセージ */

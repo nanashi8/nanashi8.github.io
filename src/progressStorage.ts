@@ -2724,3 +2724,59 @@ export function getRecentlyMasteredWords(days: number = 7, limit: number = 10): 
   
   return words;
 }
+
+/**
+ * 単語の詳細データを取得（履歴タブ用）
+ */
+export function getWordDetailedData(word: string): {
+  correctCount: number;
+  totalCount: number;
+  accuracyHistory: string; // 🟩🟥などのアイコン履歴
+  retentionRate: number; // 定着率（0-100%）
+} | null {
+  const progress = loadProgressSync();
+  const wordProgress = progress.wordProgress[word];
+  
+  if (!wordProgress) {
+    return null;
+  }
+  
+  const correctCount = wordProgress.correctCount;
+  const totalCount = wordProgress.correctCount + wordProgress.incorrectCount;
+  
+  // 正誤履歴を生成（最新10件）
+  const history = wordProgress.history || [];
+  const recentHistory = history.slice(-10);
+  const accuracyHistory = recentHistory.map(h => h.correct ? '🟩' : '🟥').join('');
+  
+  // 定着率を計算（連続正解数、正答率、最終学習日からの経過時間を考慮）
+  let retentionRate = 0;
+  
+  if (totalCount === 0) {
+    retentionRate = 0;
+  } else {
+    // 基本正答率（0-70%）
+    const baseAccuracy = (correctCount / totalCount) * 70;
+    
+    // 連続正解ボーナス（0-20%）
+    const consecutiveBonus = Math.min(20, (wordProgress.consecutiveCorrect || 0) * 5);
+    
+    // 最終学習からの経過時間によるペナルティ（0-10%減少）
+    const daysSinceStudy = (Date.now() - wordProgress.lastStudied) / (24 * 60 * 60 * 1000);
+    const timePenalty = Math.min(10, Math.max(0, (daysSinceStudy - 1) * 2));
+    
+    retentionRate = Math.min(100, Math.max(0, baseAccuracy + consecutiveBonus - timePenalty));
+    
+    // 定着レベルによる調整
+    if (wordProgress.masteryLevel === 'mastered') {
+      retentionRate = Math.max(90, retentionRate);
+    }
+  }
+  
+  return {
+    correctCount,
+    totalCount,
+    accuracyHistory,
+    retentionRate: Math.round(retentionRate),
+  };
+}

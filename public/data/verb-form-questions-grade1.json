@@ -17238,8 +17238,8 @@
         },
         {
           "id": "vf-g1-u5-006",
-          "japanese": "私は2本のペンを持っています",
-          "sentence": "I have two ____.",
+          "japanese": "私は4つの消しゴムを持っています",
+          "sentence": "I have four ____.",
           "verb": "plural",
           "choices": [
             "pen",
@@ -17247,7 +17247,7 @@
             "penes",
             "pen's"
           ],
-          "correctAnswer": "pens",
+          "correctAnswer": "erasers",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -17270,8 +17270,8 @@
         },
         {
           "id": "vf-g1-u5-008",
-          "japanese": "私たちは多くの生徒がいます",
-          "sentence": "We have many ____.",
+          "japanese": "彼らはいくつかの本を持っています",
+          "sentence": "They have some ____.",
           "verb": "plural",
           "choices": [
             "student",
@@ -17279,7 +17279,7 @@
             "studentes",
             "student's"
           ],
-          "correctAnswer": "students",
+          "correctAnswer": "books",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -17318,8 +17318,8 @@
         },
         {
           "id": "vf-g1-u5-011",
-          "japanese": "私は3人の兄弟がいます",
-          "sentence": "I have three ____.",
+          "japanese": "私は2つのペンを持っています",
+          "sentence": "I have two ____.",
           "verb": "plural",
           "choices": [
             "brother",
@@ -17327,7 +17327,7 @@
             "brotheres",
             "brother's"
           ],
-          "correctAnswer": "brothers",
+          "correctAnswer": "pens",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -17350,8 +17350,8 @@
         },
         {
           "id": "vf-g1-u5-013",
-          "japanese": "私たちは多くの先生がいます",
-          "sentence": "We have many ____.",
+          "japanese": "あなたはいくつかの鉛筆を持っています",
+          "sentence": "You have several ____.",
           "verb": "plural",
           "choices": [
             "teacher",
@@ -17359,7 +17359,7 @@
             "teacheres",
             "teacher's"
           ],
-          "correctAnswer": "teachers",
+          "correctAnswer": "pencils",
           "difficulty": "beginner",
           "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
@@ -24130,8 +24130,8 @@
         },
         {
           "id": "vf-g1-u7-008",
-          "japanese": "私は泳げません",
-          "sentence": "I ____ swim.",
+          "japanese": "私は速く走ることができます",
+          "sentence": "I ____ run fast.",
           "verb": "can",
           "choices": [
             "cannot",
@@ -24139,7 +24139,7 @@
             "do not",
             "does not"
           ],
-          "correctAnswer": "cannot",
+          "correctAnswer": "can",
           "difficulty": "beginner",
           "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
           "hint": "can + 動詞原形"
@@ -27688,8 +27688,8 @@
         },
         {
           "id": "vf-g1-u8-016",
-          "japanese": "彼は先生でした",
-          "sentence": "He ____ a teacher.",
+          "japanese": "彼女は看護師です",
+          "sentence": "She ____ a nurse.",
           "verb": "past",
           "choices": [
             "was",
@@ -27697,7 +27697,7 @@
             "am",
             "are"
           ],
-          "correctAnswer": "was",
+          "correctAnswer": "is",
           "difficulty": "beginner",
           "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
           "hint": "昨日・先週など過去→過去形"

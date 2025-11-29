@@ -3146,21 +3146,21 @@
         },
         {
           "id": "so-g1-u0-003",
-          "japanese": "彼女は毎朝ピアノを練習します",
+          "japanese": "これは机です",
           "words": [
-            "She",
-            "practices",
-            "the",
-            "piano",
-            "every",
-            "morning"
+            "This",
+            "is",
+            "a",
+            "desk"
           ],
           "correctOrder": "She practices the piano every morning",
           "difficulty": "beginner",
           "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
           "hint": "主語→動詞→目的語/場所/時",
           "grammarPoint": "基本語順(SVO)・時/場所の語順",
-          "wordCount": 6
+          "wordCount": 4,
+          "sentence": "This is a desk.",
+          "correctAnswer": "This is a desk."
         },
         {
           "id": "so-g1-u0-004",
@@ -3183,20 +3183,21 @@
         },
         {
           "id": "so-g1-u0-005",
-          "japanese": "彼らは家で夕食を食べます",
+          "japanese": "これは椅子です",
           "words": [
-            "They",
-            "eat",
-            "dinner",
-            "at",
-            "home"
+            "This",
+            "is",
+            "a",
+            "chair"
           ],
           "correctOrder": "They eat dinner at home",
           "difficulty": "beginner",
           "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
           "hint": "主語→動詞→目的語/場所/時",
           "grammarPoint": "基本語順(SVO)・時/場所の語順",
-          "wordCount": 5
+          "wordCount": 4,
+          "sentence": "This is a chair.",
+          "correctAnswer": "This is a chair."
         },
         {
           "id": "so-g1-u0-006",
@@ -3217,21 +3218,21 @@
         },
         {
           "id": "so-g1-u0-007",
-          "japanese": "メアリーは犬を毎日散歩させます",
+          "japanese": "これは定規です",
           "words": [
-            "Mary",
-            "walks",
-            "her",
-            "dog",
-            "every",
-            "day"
+            "This",
+            "is",
+            "a",
+            "ruler"
           ],
           "correctOrder": "Mary walks her dog every day",
           "difficulty": "beginner",
           "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
           "hint": "主語→動詞→目的語/場所/時",
           "grammarPoint": "基本語順(SVO)・時/場所の語順",
-          "wordCount": 6
+          "wordCount": 4,
+          "sentence": "This is a ruler.",
+          "correctAnswer": "This is a ruler."
         },
         {
           "id": "so-g1-u0-008",
@@ -3292,20 +3293,21 @@
         },
         {
           "id": "so-g1-u0-011",
-          "japanese": "彼女は学校で昼食を食べます",
+          "japanese": "これは消しゴムです",
           "words": [
-            "She",
-            "has",
-            "lunch",
-            "at",
-            "school"
+            "This",
+            "is",
+            "an",
+            "eraser"
           ],
           "correctOrder": "She has lunch at school",
           "difficulty": "beginner",
           "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
           "hint": "主語→動詞→目的語/場所/時",
           "grammarPoint": "基本語順(SVO)・時/場所の語順",
-          "wordCount": 5
+          "wordCount": 4,
+          "sentence": "This is an eraser.",
+          "correctAnswer": "This is an eraser."
         },
         {
           "id": "so-g1-u0-012",
@@ -3381,22 +3383,21 @@
         },
         {
           "id": "so-g1-u0-016",
-          "japanese": "私の父は週末に車を洗います",
+          "japanese": "これは図書館です",
           "words": [
-            "My",
-            "father",
-            "washes",
-            "the",
-            "car",
-            "on",
-            "weekends"
+            "This",
+            "is",
+            "a",
+            "library"
           ],
           "correctOrder": "My father washes the car on weekends",
           "difficulty": "beginner",
           "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
           "hint": "主語→動詞→目的語/場所/時",
           "grammarPoint": "基本語順(SVO)・時/場所の語順",
-          "wordCount": 7
+          "wordCount": 4,
+          "sentence": "This is a library.",
+          "correctAnswer": "This is a library."
         },
         {
           "id": "so-g1-u0-017",
@@ -3417,21 +3418,21 @@
         },
         {
           "id": "so-g1-u0-018",
-          "japanese": "私は時々公園で走ります",
+          "japanese": "これは病院です",
           "words": [
-            "I",
-            "sometimes",
-            "run",
-            "in",
-            "the",
-            "park"
+            "This",
+            "is",
+            "an",
+            "hospital"
           ],
           "correctOrder": "I sometimes run in the park",
           "difficulty": "beginner",
           "explanation": "語順: 主語-動詞-目的語/修飾語。時や場所は文末が基本。",
           "hint": "主語→動詞→目的語/場所/時",
           "grammarPoint": "基本語順(SVO)・時/場所の語順",
-          "wordCount": 6
+          "wordCount": 4,
+          "sentence": "This is an hospital.",
+          "correctAnswer": "This is an hospital."
         },
         {
           "id": "so-g1-u0-019",
@@ -20373,19 +20374,21 @@
         },
         {
           "id": "so-g1-u5-006",
-          "japanese": "私は2本のペンを持っています",
+          "japanese": "私は4つの消しゴムを持っています",
           "words": [
             "I",
             "have",
-            "two",
-            "pens"
+            "four",
+            "erasers"
           ],
           "correctOrder": "I have two pens",
           "difficulty": "beginner",
           "explanation": "複数形を含む基本文。",
           "hint": "数詞の後は複数形",
           "grammarPoint": "複数形",
-          "wordCount": 4
+          "wordCount": 4,
+          "sentence": "I have four erasers.",
+          "correctAnswer": "I have four erasers."
         },
         {
           "id": "so-g1-u5-007",
@@ -20405,19 +20408,21 @@
         },
         {
           "id": "so-g1-u5-008",
-          "japanese": "私たちは多くの生徒がいます",
+          "japanese": "彼らはいくつかの本を持っています",
           "words": [
-            "We",
+            "They",
             "have",
-            "many",
-            "students"
+            "some",
+            "books"
           ],
           "correctOrder": "We have many students",
           "difficulty": "beginner",
           "explanation": "複数形を含む基本文。",
           "hint": "数詞の後は複数形",
           "grammarPoint": "複数形",
-          "wordCount": 4
+          "wordCount": 4,
+          "sentence": "They have some books.",
+          "correctAnswer": "They have some books."
         },
         {
           "id": "so-g1-u5-009",
@@ -20453,19 +20458,21 @@
         },
         {
           "id": "so-g1-u5-011",
-          "japanese": "私は3人の兄弟がいます",
+          "japanese": "私は2つのノートを持っています",
           "words": [
             "I",
             "have",
-            "three",
-            "brothers"
+            "two",
+            "notebooks"
           ],
           "correctOrder": "I have three brothers",
           "difficulty": "beginner",
           "explanation": "複数形を含む基本文。",
           "hint": "数詞の後は複数形",
           "grammarPoint": "複数形",
-          "wordCount": 4
+          "wordCount": 4,
+          "sentence": "I have two notebooks.",
+          "correctAnswer": "I have two notebooks."
         },
         {
           "id": "so-g1-u5-012",
@@ -20485,19 +20492,21 @@
         },
         {
           "id": "so-g1-u5-013",
-          "japanese": "私たちは多くの先生がいます",
+          "japanese": "あなたはいくつかの鉛筆を持っています",
           "words": [
-            "We",
+            "You",
             "have",
-            "many",
-            "teachers"
+            "several",
+            "pencils"
           ],
           "correctOrder": "We have many teachers",
           "difficulty": "beginner",
           "explanation": "複数形を含む基本文。",
           "hint": "数詞の後は複数形",
           "grammarPoint": "複数形",
-          "wordCount": 4
+          "wordCount": 4,
+          "sentence": "You have several pencils.",
+          "correctAnswer": "You have several pencils."
         },
         {
           "id": "so-g1-u5-014",
@@ -23846,18 +23855,20 @@
         },
         {
           "id": "so-g1-u6-009",
-          "japanese": "彼は泳いでいます",
+          "japanese": "彼は遊んでいます",
           "words": [
             "He",
             "is",
-            "swimming"
+            "playing"
           ],
           "correctOrder": "He is swimming",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "He is playing.",
+          "correctAnswer": "He is playing."
         },
         {
           "id": "so-g1-u6-010",
@@ -23894,78 +23905,88 @@
         },
         {
           "id": "so-g1-u6-012",
-          "japanese": "彼らは待っています",
+          "japanese": "彼らは走っています",
           "words": [
             "They",
             "are",
-            "waiting"
+            "running"
           ],
           "correctOrder": "They are waiting",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "They are running.",
+          "correctAnswer": "They are running."
         },
         {
           "id": "so-g1-u6-013",
-          "japanese": "あなたは食べています",
+          "japanese": "あなたは歌っています",
           "words": [
             "You",
             "are",
-            "eating"
+            "singing"
           ],
           "correctOrder": "You are eating",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "You are singing.",
+          "correctAnswer": "You are singing."
         },
         {
           "id": "so-g1-u6-014",
-          "japanese": "私たちは働いています",
+          "japanese": "私たちは踊っています",
           "words": [
             "We",
             "are",
-            "working"
+            "dancing"
           ],
           "correctOrder": "We are working",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "We are dancing.",
+          "correctAnswer": "We are dancing."
         },
         {
           "id": "so-g1-u6-015",
-          "japanese": "彼は笑っています",
+          "japanese": "彼は勉強しています",
           "words": [
             "He",
             "is",
-            "laughing"
+            "studying"
           ],
           "correctOrder": "He is laughing",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "He is studying.",
+          "correctAnswer": "He is studying."
         },
         {
           "id": "so-g1-u6-016",
-          "japanese": "彼女は踊っています",
+          "japanese": "彼女は読んでいます",
           "words": [
             "She",
             "is",
-            "dancing"
+            "reading"
           ],
           "correctOrder": "She is dancing",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "She is reading.",
+          "correctAnswer": "She is reading."
         },
         {
           "id": "so-g1-u6-017",
@@ -24000,33 +24021,37 @@
         },
         {
           "id": "so-g1-u6-019",
-          "japanese": "彼は運転しています",
+          "japanese": "彼は働いています",
           "words": [
             "He",
             "is",
-            "driving"
+            "working"
           ],
           "correctOrder": "He is driving",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "He is working.",
+          "correctAnswer": "He is working."
         },
         {
           "id": "so-g1-u6-020",
-          "japanese": "彼女は絵を描いています",
+          "japanese": "彼女は料理しています",
           "words": [
             "She",
             "is",
-            "drawing"
+            "cooking"
           ],
           "correctOrder": "She is drawing",
           "difficulty": "beginner",
           "explanation": "現在進行形の語順: 主語 + be動詞 + 動詞ing。",
           "hint": "be動詞 + -ing",
           "grammarPoint": "現在進行形",
-          "wordCount": 3
+          "wordCount": 3,
+          "sentence": "She is cooking.",
+          "correctAnswer": "She is cooking."
         }
       ]
     },
@@ -27251,18 +27276,21 @@
         },
         {
           "id": "so-g1-u7-008",
-          "japanese": "私は泳げません",
+          "japanese": "私は速く走ることができます",
           "words": [
             "I",
-            "cannot",
-            "swim"
+            "can",
+            "run",
+            "fast"
           ],
           "correctOrder": "I cannot swim",
           "difficulty": "beginner",
           "explanation": "助動詞canを使った文の語順。",
           "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 3
+          "wordCount": 4,
+          "sentence": "I can run fast.",
+          "correctAnswer": "I can run fast."
         },
         {
           "id": "so-g1-u7-009",
@@ -27374,18 +27402,21 @@
         },
         {
           "id": "so-g1-u7-016",
-          "japanese": "私は歌えます",
+          "japanese": "私は上手に泳げます",
           "words": [
             "I",
             "can",
-            "sing"
+            "swim",
+            "well"
           ],
           "correctOrder": "I can sing",
           "difficulty": "beginner",
           "explanation": "助動詞canを使った文の語順。",
           "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 3
+          "wordCount": 4,
+          "sentence": "I can swim well.",
+          "correctAnswer": "I can swim well."
         },
         {
           "id": "so-g1-u7-017",
@@ -27434,18 +27465,21 @@
         },
         {
           "id": "so-g1-u7-020",
-          "japanese": "あなたは見えますか",
+          "japanese": "あなたは英語を話せますか",
           "words": [
             "Can",
             "you",
-            "see"
+            "speak",
+            "English"
           ],
           "correctOrder": "Can you see",
           "difficulty": "beginner",
           "explanation": "助動詞canを使った文の語順。",
           "hint": "主語 + can + 動詞原形",
           "grammarPoint": "助動詞can",
-          "wordCount": 3
+          "wordCount": 4,
+          "sentence": "Can you speak English?",
+          "correctAnswer": "Can you speak English?"
         }
       ]
     },
@@ -30796,19 +30830,21 @@
         },
         {
           "id": "so-g1-u8-016",
-          "japanese": "私は昨日忙しかったです",
+          "japanese": "彼女は看護師です",
           "words": [
-            "I",
-            "was",
-            "busy",
-            "yesterday"
+            "She",
+            "is",
+            "a",
+            "nurse"
           ],
           "correctOrder": "I was busy yesterday",
           "difficulty": "beginner",
           "explanation": "過去形の文の語順。",
           "hint": "主語 + 過去形の動詞",
           "grammarPoint": "過去形",
-          "wordCount": 4
+          "wordCount": 4,
+          "sentence": "She is a nurse.",
+          "correctAnswer": "She is a nurse."
         },
         {
           "id": "so-g1-u8-017",
@@ -34207,20 +34243,23 @@
         },
         {
           "id": "so-g1-u9-014",
-          "japanese": "彼らは来る予定です",
+          "japanese": "彼らは明日出発する予定です",
           "words": [
             "They",
             "are",
             "going",
             "to",
-            "come"
+            "leave",
+            "tomorrow"
           ],
           "correctOrder": "They are going to come",
           "difficulty": "beginner",
           "explanation": "未来表現の文の語順。",
           "hint": "will/be going to + 動詞原形",
           "grammarPoint": "未来表現",
-          "wordCount": 5
+          "wordCount": 6,
+          "sentence": "They are going to leave tomorrow.",
+          "correctAnswer": "They are going to leave tomorrow."
         },
         {
           "id": "so-g1-u9-015",
