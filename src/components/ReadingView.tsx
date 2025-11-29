@@ -10,9 +10,9 @@ function ReadingView() {
   const [loading, setLoading] = useState(true);
   const [speakingPhraseIndex, setSpeakingPhraseIndex] = useState<number | null>(null);
 
-  // 初回読み込み: public/data/passages.json から読み込み
+  // 初回読み込み: public/data/dictionaries/passages.json から読み込み
   useEffect(() => {
-    fetch('/data/passages.json')
+    fetch('/data/dictionaries/passages.json')
       .then((res) => res.json())
       .then((data: ReadingPassage[]) => {
         setPassages(data);
