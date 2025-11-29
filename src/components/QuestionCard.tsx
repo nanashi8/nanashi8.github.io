@@ -343,24 +343,26 @@ function QuestionCard({
         >
           ←
         </button>
-        <div className="question-content-inline">
+        <div 
+          className={`question-content-inline ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
+          onClick={(e) => {
+            if (isSpeechSynthesisSupported()) {
+              e.preventDefault();
+              e.stopPropagation();
+              speakEnglish(question.word, { rate: 0.85 });
+            }
+          }}
+          onTouchEnd={(e) => {
+            if (isSpeechSynthesisSupported()) {
+              e.preventDefault();
+              e.stopPropagation();
+              speakEnglish(question.word, { rate: 0.85 });
+            }
+          }}
+          title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
+        >
           <div 
             className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
-            onClick={(e) => {
-              if (isSpeechSynthesisSupported()) {
-                e.preventDefault();
-                e.stopPropagation();
-                speakEnglish(question.word, { rate: 0.85 });
-              }
-            }}
-            onTouchEnd={(e) => {
-              if (isSpeechSynthesisSupported()) {
-                e.preventDefault();
-                e.stopPropagation();
-                speakEnglish(question.word, { rate: 0.85 });
-              }
-            }}
-            title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : question.word}
           >
             {question.word}
             {isSpeechSynthesisSupported() && (

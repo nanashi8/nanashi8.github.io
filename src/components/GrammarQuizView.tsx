@@ -79,6 +79,17 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
+  
+  // 自動次への設定
+  const [autoNext, setAutoNext] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoNext');
+    return saved === 'true';
+  });
+  
+  const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
+    const saved = localStorage.getItem('autoNextDelay');
+    return saved ? parseInt(saved, 10) : 1500;
+  });
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
   
   const [currentQuestions, setCurrentQuestions] = useState<any[]>([]);

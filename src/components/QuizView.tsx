@@ -72,10 +72,28 @@ function QuizView({
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   
+  // 自動次への設定
+  const [autoNext, setAutoNext] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoNext');
+    return saved === 'true';
+  });
+  
+  const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
+    const saved = localStorage.getItem('autoNextDelay');
+    return saved ? parseInt(saved, 10) : 1500;
+  });
+  
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = (answer: string, correct: string) => {
     onAnswer(answer, correct);
     setLastAnswerTime(Date.now());
+    
+    // 正解した場合、自動次へが有効なら次の問題に進む
+    if (autoNext && answer === correct) {
+      setTimeout(() => {
+        onNext();
+      }, autoNextDelay);
+    }
   };
 
   // 学習プランの状態をチェック
@@ -335,6 +353,48 @@ function QuizView({
                     <option value="collocation">コロケーション</option>
                     <option value="other">その他</option>
                   </select>
+                </div>
+              )}
+              
+              {/* 自動次へ設定 */}
+              <div className="filter-group">
+                <label htmlFor="auto-next-toggle">✅ 正解時自動次へ:</label>
+                <div className="checkbox-row">
+                  <input
+                    type="checkbox"
+                    id="auto-next-toggle"
+                    checked={autoNext}
+                    onChange={(e) => {
+                      setAutoNext(e.target.checked);
+                      localStorage.setItem('autoNext', e.target.checked.toString());
+                    }}
+                  />
+                  <label htmlFor="auto-next-toggle" className="checkbox-label">
+                    {autoNext ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
+              
+              {autoNext && (
+                <div className="filter-group">
+                  <label htmlFor="auto-next-delay">⏱️ 次への遅延時間:</label>
+                  <div className="slider-row">
+                    <input
+                      type="range"
+                      id="auto-next-delay"
+                      min="500"
+                      max="3000"
+                      step="100"
+                      value={autoNextDelay}
+                      onChange={(e) => {
+                        const delay = parseInt(e.target.value, 10);
+                        setAutoNextDelay(delay);
+                        localStorage.setItem('autoNextDelay', delay.toString());
+                      }}
+                      className="slider-input"
+                    />
+                    <span className="slider-value">{(autoNextDelay / 1000).toFixed(1)}秒</span>
+                  </div>
                 </div>
               )}
             </div>
