@@ -24,13 +24,13 @@ export function useLearningLimits(mode: 'translation' | 'spelling' | 'grammar'):
   });
 
   const setLearningLimit = useCallback((value: number) => {
-    const validValue = Math.max(1, value) || 30;
+    const validValue = Math.max(0, value) || 30;
     setLearningLimitState(validValue);
     localStorage.setItem(`learning-limit-${mode}`, validValue.toString());
   }, [mode]);
 
   const setReviewLimit = useCallback((value: number) => {
-    const validValue = Math.max(1, value) || 10;
+    const validValue = Math.max(0, value) || 10;
     setReviewLimitState(validValue);
     localStorage.setItem(`review-limit-${mode}`, validValue.toString());
   }, [mode]);
