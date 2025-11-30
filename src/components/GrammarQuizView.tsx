@@ -101,7 +101,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   const [showHint, setShowHint] = useState(false);
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
-  const [sessionStats, setSessionStats] = useState({ correct: 0, incorrect: 0, mastered: 0 });
+  const [sessionStats, setSessionStats] = useState({ correct: 0, incorrect: 0, review: 0, mastered: 0 });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -401,7 +401,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
       setShowHint(false);
       setScore(0);
       setTotalAnswered(0);
-      setSessionStats({ correct: 0, incorrect: 0, mastered: 0 });
+      setSessionStats({ correct: 0, incorrect: 0, review: 0, mastered: 0 });
       setQuizStarted(true);
       setLoading(false);
     } catch (err: any) {
@@ -665,9 +665,14 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
             totalAnswered={totalAnswered}
             sessionCorrect={sessionStats.correct}
             sessionIncorrect={sessionStats.incorrect}
+            sessionReview={sessionStats.review}
             sessionMastered={sessionStats.mastered}
             onShowSettings={() => setShowSettings(true)}
             onAnswerTime={lastAnswerTime}
+            dataSource="文法問題集"
+            category={grade === 'all' ? '全学年' : grade.startsWith('g') ? grade : `中${grade}年`}
+            difficulty={quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並べ替え' : '全種類'}
+            wordPhraseFilter="all"
           />
 
           {/* 文法クイズ中の学習設定パネル */}
