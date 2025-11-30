@@ -10506,8 +10506,8 @@ option {
   background: var(--bg-secondary);
 }
 
-.dark-mode .loading-container,
-.dark-mode .error-container {
+.dark-mode .error-message,
+.dark-mode .empty-container {
   background: var(--bg-secondary);
   color: var(--text-color);
 }
