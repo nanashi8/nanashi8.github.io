@@ -602,6 +602,47 @@ function SpellingView({
             onReviewLimitChange={setReviewLimit}
             idPrefix="spelling-"
           />
+
+          {/* 自動次へ設定 */}
+          <div className="filter-group">
+            <label htmlFor="auto-next-toggle-spelling-pre">✅ 正解時自動次へ:</label>
+            <div className="auto-next-controls">
+              <input
+                type="checkbox"
+                id="auto-next-toggle-spelling-pre"
+                checked={autoNext}
+                onChange={(e) => {
+                  setAutoNext(e.target.checked);
+                  localStorage.setItem('autoNext', e.target.checked.toString());
+                }}
+              />
+              <label htmlFor="auto-next-toggle-spelling-pre" className="checkbox-label">
+                {autoNext ? '有効' : '無効'}
+              </label>
+            </div>
+          </div>
+
+          {autoNext && (
+            <div className="filter-group">
+              <label htmlFor="auto-next-delay-spelling-pre">⏱️ 次への遅延時間:</label>
+              <select
+                id="auto-next-delay-spelling-pre"
+                value={autoNextDelay}
+                onChange={(e) => {
+                  const delay = parseInt(e.target.value);
+                  setAutoNextDelay(delay);
+                  localStorage.setItem('autoNextDelay', delay.toString());
+                }}
+                className="select-input"
+              >
+                <option value="500">0.5秒</option>
+                <option value="1000">1秒</option>
+                <option value="1500">1.5秒</option>
+                <option value="2000">2秒</option>
+                <option value="3000">3秒</option>
+              </select>
+            </div>
+          )}
         </div>
       )}
 
