@@ -121,7 +121,7 @@ function ScoreBoard({
   const tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = 
     mode === 'translation' || mode === 'spelling' 
       ? ['plan', 'breakdown', 'history', 'settings'] 
-      : ['plan', 'breakdown', 'settings'];
+      : ['plan', 'breakdown', 'settings']; // 文法・長文は履歴なし
 
   return (
     <div className="score-board-compact">
@@ -134,14 +134,12 @@ function ScoreBoard({
           >
             📋 プラン
           </button>
-          {(mode === 'translation' || mode === 'spelling') && (
-            <button 
-              className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
-              onClick={() => setActiveTab('breakdown')}
-            >
-              📈 学習状況
-            </button>
-          )}
+          <button 
+            className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+            onClick={() => setActiveTab('breakdown')}
+          >
+            📈 学習状況
+          </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
               className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
@@ -174,16 +172,14 @@ function ScoreBoard({
             <span className="tab-icon">📋</span>
             <span className="tab-label">プラン</span>
           </button>
-          {(mode === 'translation' || mode === 'spelling') && (
-            <button 
-              className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
-              onClick={() => setActiveTab('breakdown')}
-              title="学習状況"
-            >
-              <span className="tab-icon">📈</span>
-              <span className="tab-label">状況</span>
-            </button>
-          )}
+          <button 
+            className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+            onClick={() => setActiveTab('breakdown')}
+            title="学習状況"
+          >
+            <span className="tab-icon">📈</span>
+            <span className="tab-label">状況</span>
+          </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
               className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
@@ -220,60 +216,41 @@ function ScoreBoard({
       {activeTab === 'plan' && (
         <div className="score-board-content">
           <div className="plan-tab-compact">
-            {/* 和訳・スペルタブのみプラン詳細を表示 */}
-            {/* 和訳・スペルタブのみプラン詳細を表示 */}
-            {(mode === 'translation' || mode === 'spelling') ? (
-              <>
-                <div className="plan-text-line">
-                  <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
-                  <span className="stat-text-divider">｜</span>
-                  <span className="stat-text-label">{category || '全分野'}</span>
-                  <span className="stat-text-divider">｜</span>
-                  <span className="stat-text-label">{difficulty === 'all' ? '全難易度' : difficulty === 'basic' ? '基礎' : difficulty === 'standard' ? '標準' : difficulty === 'advanced' ? '発展' : '全難易度'}</span>
+            {/* 全モード共通のプラン詳細表示 */}
+            <div className="plan-text-line">
+              <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
+              <span className="stat-text-divider">｜</span>
+              <span className="stat-text-label">{category || '全分野'}</span>
+              <span className="stat-text-divider">｜</span>
+              <span className="stat-text-label">{difficulty === 'all' ? '全難易度' : difficulty === 'basic' ? '基礎' : difficulty === 'standard' ? '標準' : difficulty === 'advanced' ? '発展' : difficulty}</span>
+              {wordPhraseFilter && (
+                <>
                   <span className="stat-text-divider">｜</span>
                   <span className="stat-text-label">{wordPhraseFilter === 'all' ? '単語・熟語' : wordPhraseFilter === 'word' ? '単語のみ' : wordPhraseFilter === 'phrase' ? '熟語のみ' : '単語・熟語'}</span>
-                </div>
-                <div className="plan-text-line">
-                  <span className="stat-text-label">定着済:</span>
-                  <strong className="stat-text-value mastered">{detailedStats.masteredCount}</strong>
-                  <span className="stat-text-divider">｜</span>
-                  <span className="stat-text-label">学習中:</span>
-                  <strong className="stat-text-value learning">{detailedStats.learningCount}</strong>
-                  {learningLimit !== null && <span className="stat-text-sub">/{learningLimit}</span>}
-                  <span className="stat-text-divider">｜</span>
-                  <span className="stat-text-label">要復習:</span>
-                  <strong className="stat-text-value review">{detailedStats.strugglingCount}</strong>
-                  {reviewLimit !== null && <span className="stat-text-sub">/{reviewLimit}</span>}
-                  <span 
-                    className="plan-setting-icon"
-                    onClick={() => setShowPlanSettings(!showPlanSettings)}
-                    title="上限設定"
-                  >
-                    ⚙️
-                  </span>
-                </div>
-              </>
-            ) : (
-              /* 文法・長文タブは簡易表示 */
-              <div className="plan-text-line">
-                {totalAnswered > 0 && (
-                  <>
-                    <span className="stat-text-label">現在:</span>
-                    <strong className="stat-text-value correct">{currentScore}/{totalAnswered}</strong>
-                    <span className="stat-text-sub">({currentAccuracy}%)</span>
-                    <span className="stat-text-divider">｜</span>
-                  </>
-                )}
-                <span className="stat-text-label">正解:</span>
-                <strong className="stat-text-value correct">{sessionCorrect}問</strong>
-                <span className="stat-text-divider">｜</span>
-                <span className="stat-text-label">不正解:</span>
-                <strong className="stat-text-value incorrect">{sessionIncorrect}問</strong>
-                <span className="stat-text-divider">｜</span>
-                <span className="stat-text-label">定着:</span>
-                <strong className="stat-text-value mastered">{sessionMastered}問</strong>
-              </div>
-            )}
+                </>
+              )}
+            </div>
+            <div className="plan-text-line">
+              <span className="stat-text-label">定着済:</span>
+              <strong className="stat-text-value mastered">{detailedStats.masteredCount}</strong>
+              <span className="stat-text-divider">｜</span>
+              <span className="stat-text-label">学習中:</span>
+              <strong className="stat-text-value learning">{detailedStats.learningCount}</strong>
+              {learningLimit !== null && <span className="stat-text-sub">/{learningLimit}</span>}
+              <span className="stat-text-divider">｜</span>
+              <span className="stat-text-label">要復習:</span>
+              <strong className="stat-text-value review">{detailedStats.strugglingCount}</strong>
+              {reviewLimit !== null && <span className="stat-text-sub">/{reviewLimit}</span>}
+              {(mode === 'translation' || mode === 'spelling') && (
+                <span 
+                  className="plan-setting-icon"
+                  onClick={() => setShowPlanSettings(!showPlanSettings)}
+                  title="上限設定"
+                >
+                  ⚙️
+                </span>
+              )}
+            </div>
             {showPlanSettings && (mode === 'translation' || mode === 'spelling') && (
               <div className="plan-settings-modal">
                 <div className="plan-settings-content">
