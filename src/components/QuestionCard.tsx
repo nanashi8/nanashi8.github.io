@@ -67,12 +67,23 @@ function QuestionCard({
   const toggleChoiceDetails = (index: number) => {
     setExpandedChoices(prev => {
       const newSet = new Set(prev);
-      if (newSet.has(index)) {
-        newSet.delete(index);
+      // 回答後は、1つの選択肢をタップすると全ての選択肢の詳細をトグル
+      if (answered) {
+        // いずれかが開いていれば全て閉じる、全て閉じていれば全て開く
+        if (newSet.size > 0) {
+          return new Set();
+        } else {
+          return new Set(choicesWithQuestions.map((_, idx) => idx));
+        }
       } else {
-        newSet.add(index);
+        // 回答前は個別にトグル
+        if (newSet.has(index)) {
+          newSet.delete(index);
+        } else {
+          newSet.add(index);
+        }
+        return newSet;
       }
-      return newSet;
     });
   };
 
@@ -430,6 +441,12 @@ function QuestionCard({
                     <div className="choice-detail-item">
                       <span className="detail-label">読み:</span>
                       <span className="detail-text">{choiceQuestion.reading}</span>
+                    </div>
+                  )}
+                  {choiceQuestion.meaning && (
+                    <div className="choice-detail-item">
+                      <span className="detail-label">意味:</span>
+                      <span className="detail-text">{choiceQuestion.meaning}</span>
                     </div>
                   )}
                   {choiceQuestion.etymology && (
