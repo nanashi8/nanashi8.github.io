@@ -1634,24 +1634,6 @@ export function getRetentionRateWithAI(): {
     ? (masteredCount / appearedWords.length) * 100 
     : 0;
   
-  // デバッグ: 定着率の計算詳細をログ出力
-  console.log('📊 定着率計算:', {
-    出現単語数: appearedWords.length,
-    定着単語数: masteredCount,
-    定着率: `${Math.round(retentionRate)}%`,
-    計算式: `(${masteredCount} / ${appearedWords.length}) × 100`
-  });
-  
-  // デバッグ: 異常な値の検出
-  if (retentionRate > 100) {
-    console.warn('⚠️ 定着率が100%を超えています:', {
-      retentionRate,
-      masteredCount,
-      appearedCount: appearedWords.length,
-      calculation: `(${masteredCount} / ${appearedWords.length}) * 100 = ${retentionRate}`
-    });
-  }
-  
   // 定着率は0-100%の範囲に制限
   const normalizedRetentionRate = Math.min(100, Math.max(0, retentionRate));
   

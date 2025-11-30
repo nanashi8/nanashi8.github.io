@@ -71,33 +71,27 @@ function ScoreBoard({
   });
   
   const [detailedStatsData, setDetailedStatsData] = useState(() => getDetailedRetentionStats());
-  
-  // 最後に更新した回答時刻を記録
-  const [lastUpdateTime, setLastUpdateTime] = useState<number>(Date.now());
 
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
-    const updateStats = () => {
-      const { retentionRate, appearedCount } = getRetentionRateWithAI();
-      setRetentionData({ retentionRate, appearedCount });
-      setDetailedStatsData(getDetailedRetentionStats());
-      setLastUpdateTime(Date.now());
-    };
+    if (!onAnswerTime) return; // 初回マウント時はスキップ
     
-    updateStats();
+    const { retentionRate, appearedCount } = getRetentionRateWithAI();
+    setRetentionData({ retentionRate, appearedCount });
+    setDetailedStatsData(getDetailedRetentionStats());
   }, [onAnswerTime]); // 回答時のみ更新
 
-  // 本日の統計を取得（メモ化）
-  const { todayAccuracy, todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode, totalAnswered]);
+  // 本日の統計を取得（メモ化 - onAnswerTimeで更新）
+  const { todayAccuracy, todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode, onAnswerTime]);
 
-  // 累計回答数を取得（メモ化）
-  const totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode, totalAnswered]);
+  // 累計回答数を取得（メモ化 - onAnswerTimeで更新）
+  const totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode, onAnswerTime]);
 
-  // 定着数を取得（全体から）（メモ化）
-  const masteredCount = useMemo(() => getTotalMasteredWordsCount(), [sessionMastered]);
+  // 定着数を取得（全体から）（メモ化 - onAnswerTimeで更新）
+  const masteredCount = useMemo(() => getTotalMasteredWordsCount(), [onAnswerTime]);
 
-  // 出題数を取得（重複除外、全4700問のうち実際に出題された数）（メモ化）
-  const uniqueQuestionedCount = useMemo(() => getUniqueQuestionedWordsCount(), [totalAnswered]);
+  // 出題数を取得（重複除外、全4700問のうち実際に出題された数）（メモ化 - onAnswerTimeで更新）
+  const uniqueQuestionedCount = useMemo(() => getUniqueQuestionedWordsCount(), [onAnswerTime]);
 
   // 定着率をstateから取得
   const { retentionRate, appearedCount } = retentionData;
@@ -105,8 +99,8 @@ function ScoreBoard({
   // 詳細な定着率統計をstateから取得
   const detailedStats = detailedStatsData;
 
-  // 学習プラン情報を取得（メモ化）
-  const planInfo = useMemo(() => getDailyPlanInfo(mode), [mode, totalAnswered]);
+  // 学習プラン情報を取得（メモ化 - onAnswerTimeで更新）
+  const planInfo = useMemo(() => getDailyPlanInfo(mode), [mode, onAnswerTime]);
 
   // 現在のセッションの正答率を計算（メモ化）
   const currentAccuracy = useMemo(
@@ -131,7 +125,7 @@ function ScoreBoard({
           >
             📋 プラン
           </button>
-          {detailedStats.appearedWords > 0 && (
+          {(mode === 'translation' || mode === 'spelling') && (
             <button 
               className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
               onClick={() => setActiveTab('breakdown')}
@@ -171,7 +165,7 @@ function ScoreBoard({
             <span className="tab-icon">📋</span>
             <span className="tab-label">プラン</span>
           </button>
-          {detailedStats.appearedWords > 0 && (
+          {(mode === 'translation' || mode === 'spelling') && (
             <button 
               className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
               onClick={() => setActiveTab('breakdown')}
@@ -217,57 +211,65 @@ function ScoreBoard({
       {activeTab === 'plan' && (
         <div className="score-board-content">
           <div className="plan-tab-compact">
-            <div className="plan-text-line">
-              {totalAnswered > 0 && (
-                <>
-                  <span className="stat-text-label">現在:</span>
-                  <strong className="stat-text-value correct">{currentScore}/{totalAnswered}</strong>
-                  <span className="stat-text-sub">({currentAccuracy}%)</span>
+            {/* 和訳・スペルタブのみプラン詳細を表示 */}
+            {(mode === 'translation' || mode === 'spelling') ? (
+              <>
+                <div className="plan-text-line">
+                  <span className="stat-text-label">🟢 定着済:</span>
+                  <strong className="stat-text-value mastered">{detailedStats.masteredCount}語</strong>
                   <span className="stat-text-divider">｜</span>
-                </>
-              )}
-              <span className="stat-text-label">本日:</span>
-              <strong className="stat-text-value correct">{todayAccuracy}%</strong>
-              <span className="stat-text-sub">({todayTotalAnswered}問)</span>
-              <span className="stat-text-divider">｜</span>
-              <span 
-                title="学習した単語のうち、安定して正解できる単語の割合"
-              >
+                  <span className="stat-text-label">🟡 学習中:</span>
+                  <strong className="stat-text-value learning">{detailedStats.learningCount}語</strong>
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">🔴 要復習:</span>
+                  <strong className="stat-text-value review">{detailedStats.strugglingCount}語</strong>
+                </div>
+                <div className="plan-text-line plan-text-line-secondary">
+                  <span 
+                    className="plan-setting-clickable"
+                    onClick={() => setShowPlanSettings(!showPlanSettings)}
+                    title="クリックして設定"
+                  >
+                    🎯 学習中上限: <strong>{learningLimit === null ? '無制限' : `${learningLimit}語まで`}</strong>
+                  </span>
+                  <span>｜</span>
+                  <span 
+                    className="plan-setting-clickable"
+                    onClick={() => setShowPlanSettings(!showPlanSettings)}
+                    title="クリックして設定"
+                  >
+                    ⚠️ 要復習上限: <strong>{reviewLimit === null ? '無制限' : `${reviewLimit}語まで`}</strong>
+                  </span>
+                </div>
+              </>
+            ) : (
+              /* 文法・長文タブは簡易表示 */
+              <div className="plan-text-line">
+                {totalAnswered > 0 && (
+                  <>
+                    <span className="stat-text-label">現在:</span>
+                    <strong className="stat-text-value correct">{currentScore}/{totalAnswered}</strong>
+                    <span className="stat-text-sub">({currentAccuracy}%)</span>
+                    <span className="stat-text-divider">｜</span>
+                  </>
+                )}
+                <span className="stat-text-label">正解:</span>
+                <strong className="stat-text-value correct">{sessionCorrect}問</strong>
+                <span className="stat-text-divider">｜</span>
+                <span className="stat-text-label">不正解:</span>
+                <strong className="stat-text-value incorrect">{sessionIncorrect}問</strong>
+                <span className="stat-text-divider">｜</span>
                 <span className="stat-text-label">定着:</span>
-                <strong className="stat-text-value mastered">{retentionRate}%</strong>
-                <span className="stat-text-sub">({masteredCount}語定着)</span>
-              </span>
-              <span className="stat-text-divider">｜</span>
-              <span className="stat-text-label">累計:</span>
-              <strong className="stat-text-value">{totalAnsweredCount}問</strong>
-            </div>
-            <div className="plan-text-line plan-text-line-secondary">
-              <span>📋 要復習: <strong>{planInfo.reviewWordsCount}</strong></span>
-              <span>｜確認予定: <strong>{planInfo.scheduledWordsCount}</strong></span>
-            </div>
-            <div className="plan-text-line plan-text-line-secondary">
-              <span 
-                className="plan-setting-clickable"
-                onClick={() => setShowPlanSettings(!showPlanSettings)}
-                title="クリックして設定"
-              >
-                🎯 学習中: <strong>{learningLimit === null ? '無制限' : `${detailedStats.learningCount}/${learningLimit}`}</strong>
-              </span>
-              <span>｜</span>
-              <span 
-                className="plan-setting-clickable"
-                onClick={() => setShowPlanSettings(!showPlanSettings)}
-                title="クリックして設定"
-              >
-                ⚠️ 要復習: <strong>{reviewLimit === null ? '無制限' : `${planInfo.reviewWordsCount}/${reviewLimit}`}</strong>
-              </span>
-            </div>
-            {showPlanSettings && (
+                <strong className="stat-text-value mastered">{sessionMastered}問</strong>
+              </div>
+            )}
+            {showPlanSettings && (mode === 'translation' || mode === 'spelling') && (
               <div className="plan-settings-modal">
                 <div className="plan-settings-content">
                   <h4>🎯 出題繰り返し設定</h4>
+                  <p className="plan-settings-description">未入力はどこまでも出題します</p>
                   <div className="plan-setting-item">
-                    <label>学習中がいくつになるまで出題:</label>
+                    <label>学習中の語数上限:</label>
                     <input
                       type="number"
                       min="0"
@@ -283,9 +285,10 @@ function ScoreBoard({
                         }
                       }}
                     />
+                    <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
                   </div>
                   <div className="plan-setting-item">
-                    <label>要復習がいくつになるまで出題:</label>
+                    <label>要復習の語数上限:</label>
                     <input
                       type="number"
                       min="0"
@@ -301,6 +304,7 @@ function ScoreBoard({
                         }
                       }}
                     />
+                    <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
                   </div>
                   <button 
                     className="plan-settings-close"
@@ -315,17 +319,41 @@ function ScoreBoard({
         </div>
       )}
       
-      {/* 学習状況タブ（詳細な定着率の内訳） */}
-      {activeTab === 'breakdown' && detailedStats.appearedWords > 0 && (
+      {/* 学習状況タブ（詳細な定着率の内訳） - 和訳・スペルのみ */}
+      {activeTab === 'breakdown' && (mode === 'translation' || mode === 'spelling') && (
         <div className="score-board-content">
           <div className="retention-breakdown-container">
             <div className="retention-breakdown-header">
               <div className="retention-title">📊 学習状況の内訳</div>
-              <div className="retention-subtitle">
-                {detailedStats.appearedWords}問出題：
-                🟢定着 {detailedStats.masteredCount}語 
-                🟡学習中 {detailedStats.learningCount}語 
-                🔴要復習 {detailedStats.strugglingCount}語
+              {detailedStats.appearedWords > 0 ? (
+                <div className="retention-subtitle">
+                  {detailedStats.appearedWords}問出題：
+                  🟢定着 {detailedStats.masteredCount}語 
+                  🟡学習中 {detailedStats.learningCount}語 
+                  🔴要復習 {detailedStats.strugglingCount}語
+                </div>
+              ) : (
+                <div className="retention-subtitle">
+                  まだ問題に取り組んでいません
+                </div>
+              )}
+            </div>
+            {detailedStats.appearedWords > 0 && (
+              <>
+                <div className="retention-breakdown-stats">
+              <div className="stat-row">
+                <span className="stat-label">本日正答率:</span>
+                <strong className="stat-value">{todayAccuracy}%</strong>
+                <span className="stat-detail">({todayTotalAnswered}問)</span>
+              </div>
+              <div className="stat-row">
+                <span className="stat-label">本日定着率:</span>
+                <strong className="stat-value">{retentionRate}%</strong>
+                <span className="stat-detail">({masteredCount}語定着)</span>
+              </div>
+              <div className="stat-row">
+                <span className="stat-label">累計出題語句数:</span>
+                <strong className="stat-value">{totalAnsweredCount}問</strong>
               </div>
             </div>
             <div className="retention-progress-bar">
@@ -333,10 +361,10 @@ function ScoreBoard({
                 <div 
                   className="retention-segment retention-mastered"
                   data-percentage={Math.round(detailedStats.masteredPercentage)}
-                  title={`🟢 定着: ${detailedStats.masteredCount}語 (${detailedStats.masteredPercentage}%)`}
+                  title={`🟢 定着: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
                 >
                   {detailedStats.masteredPercentage >= 10 && (
-                    <span>{detailedStats.masteredPercentage}%</span>
+                    <span>{Math.round(detailedStats.masteredPercentage)}%</span>
                   )}
                 </div>
               )}
@@ -344,10 +372,10 @@ function ScoreBoard({
                 <div 
                   className="retention-segment retention-learning"
                   data-percentage={Math.round(detailedStats.learningPercentage)}
-                  title={`🟡 学習中: ${detailedStats.learningCount}語 (${detailedStats.learningPercentage}%)`}
+                  title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
                 >
                   {detailedStats.learningPercentage >= 10 && (
-                    <span>{detailedStats.learningPercentage}%</span>
+                    <span>{Math.round(detailedStats.learningPercentage)}%</span>
                   )}
                 </div>
               )}
@@ -355,14 +383,16 @@ function ScoreBoard({
                 <div 
                   className="retention-segment retention-struggling"
                   data-percentage={Math.round(detailedStats.strugglingPercentage)}
-                  title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${detailedStats.strugglingPercentage}%)`}
+                  title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
                 >
                   {detailedStats.strugglingPercentage >= 10 && (
-                    <span>{detailedStats.strugglingPercentage}%</span>
+                    <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
                   )}
                 </div>
               )}
             </div>
+            </>
+            )}
           </div>
         </div>
       )}
