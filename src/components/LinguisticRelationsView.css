@@ -57,13 +57,13 @@
 
 .word-button:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
   transform: translateY(-2px);
 }
 
 .word-button.selected {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
   border-color: var(--primary-color);
   font-weight: 600;
 }
@@ -158,32 +158,32 @@
 
 .badge-action {
   background-color: var(--success-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .badge-state {
   background-color: var(--info-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .badge-process {
   background-color: var(--warning-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .badge-positive {
   background-color: var(--success-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .badge-negative {
   background-color: var(--error-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .badge-neutral {
   background-color: #9E9E9E;
-  color: white;
+  color: var(--text-color-light);
 }
 
 .clusters-section {
@@ -245,7 +245,7 @@
 
 .related-word:hover {
   border-color: var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow-xs);
 }
 
 .related-word.high-priority {
@@ -293,7 +293,7 @@
 .study-together-badge {
   font-size: 11px;
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
   padding: 4px 10px;
   border-radius: 12px;
   font-weight: 600;
@@ -327,7 +327,7 @@
 }
 
 .dark-mode .search-input:focus {
-  border-color: #667eea;
+  border-color: var(--accent-purple);
 }
 
 .dark-mode .word-list {
@@ -342,14 +342,14 @@
 }
 
 .dark-mode .word-button:hover {
-  background-color: #667eea;
-  color: white;
+  background-color: var(--accent-purple);
+  color: var(--text-color-light);
 }
 
 .dark-mode .word-button.selected {
-  background-color: #667eea;
-  color: white;
-  border-color: #667eea;
+  background-color: var(--accent-purple);
+  color: var(--text-color-light);
+  border-color: var(--accent-purple);
 }
 
 .dark-mode .analysis-results h3 {
@@ -363,7 +363,7 @@
 
 .dark-mode .feature-section h4 {
   color: var(--text-color);
-  border-bottom-color: #667eea;
+  border-bottom-color: var(--accent-purple);
 }
 
 .dark-mode .feature-item {
@@ -384,7 +384,7 @@
 }
 
 .dark-mode .clusters-section {
-  background: #2a2a2a;
+  background: var(--bg-darker);
   border-color: var(--border-color);
 }
 
@@ -394,7 +394,7 @@
 }
 
 .dark-mode .cluster-name {
-  color: #667eea;
+  color: var(--accent-purple);
 }
 
 .dark-mode .cluster-size {
@@ -411,7 +411,7 @@
 }
 
 .dark-mode .related-word-button {
-  color: #667eea;
+  color: var(--accent-purple);
 }
 
 .dark-mode .related-word-button:hover {
@@ -419,7 +419,7 @@
 }
 
 .dark-mode .relation-type {
-  background-color: #333;
+  background-color: var(--var(--gray-500)-900);
   color: var(--text-color);
 }
 

@@ -13,13 +13,13 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
   padding: 5px 10px;
   transition: color 0.2s;
 }
 
 .close-button:hover {
-  color: var(--text-primary, #000);
+  color: var(--text-primary, var(--background-dark));
 }
 
 /* レベルセクション */
@@ -28,9 +28,9 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: #667eea;
+  background: var(--accent-purple);
   border-radius: 12px;
-  color: white;
+  color: var(--text-color-light);
   margin-bottom: 20px;
 }
 
@@ -62,7 +62,7 @@
 .xp-bar {
   width: 100%;
   height: 12px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--overlay-light);
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 5px;
@@ -70,7 +70,7 @@
 
 .xp-fill {
   height: 100%;
-  background: #00f260;
+  background: var(--success-color);
   transition: width 0.3s ease;
 }
 
@@ -92,7 +92,7 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
-  background: var(--bg-secondary, #f5f5f5);
+  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
   border-radius: 10px;
 }
 
@@ -107,12 +107,12 @@
 .streak-current {
   font-size: 28px;
   font-weight: bold;
-  color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
 }
 
 .streak-label {
   font-size: 14px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
 }
 
 /* 統計サマリー */
@@ -126,19 +126,19 @@
 .stat-item {
   text-align: center;
   padding: 15px;
-  background: var(--bg-secondary, #f5f5f5);
+  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
   border-radius: 10px;
 }
 
 .stat-value {
   font-size: 24px;
   font-weight: bold;
-  color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
 }
 
 .stat-label {
   font-size: 12px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
   margin-top: 5px;
 }
 
@@ -147,7 +147,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid var(--border-color, #e0e0e0);
+  border-bottom: 2px solid var(--border-color, var(--var(--var(--gray-500)-500)-300));
 }
 
 .tab-button {
@@ -156,18 +156,18 @@
   background: none;
   cursor: pointer;
   font-size: 16px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
   border-bottom: 3px solid transparent;
   transition: all 0.2s;
 }
 
 .tab-button:hover {
-  color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
 }
 
 .tab-button.active {
-  color: var(--primary-color, #667eea);
-  border-bottom-color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
+  border-bottom-color: var(--primary-color, var(--accent-purple));
   font-weight: 600;
 }
 
@@ -179,7 +179,7 @@
 .tab-content h3 {
   margin: 0 0 15px 0;
   font-size: 18px;
-  color: var(--text-primary, #000);
+  color: var(--text-primary, var(--background-dark));
 }
 
 /* 概要タブ */
@@ -191,18 +191,18 @@
 
 .milestone-card {
   padding: 15px;
-  background: var(--bg-secondary, #f5f5f5);
+  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
   border-radius: 10px;
-  border-left: 4px solid var(--primary-color, #667eea);
+  border-left: 4px solid var(--primary-color, var(--accent-purple));
 }
 
 .milestone-card.featured {
-  background: rgba(102, 126, 234, 0.1);
+  background: var(--gradient-primary-subtle);
   border-left-width: 6px;
 }
 
 .milestone-card.completed {
-  background: rgba(76, 175, 80, 0.1);
+  background: var(--success-bg);
   border-left-color: var(--success-border);
 }
 
@@ -219,21 +219,21 @@
 }
 
 .milestone-reward {
-  color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
   font-weight: 600;
   font-size: 14px;
 }
 
 .milestone-description {
   font-size: 14px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
   margin-bottom: 10px;
 }
 
 .milestone-progress-bar {
   width: 100%;
   height: 8px;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--shadow-xs);
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 5px;
@@ -241,13 +241,13 @@
 
 .milestone-progress-fill {
   height: 100%;
-  background: var(--primary-color, #667eea);
+  background: var(--primary-color, var(--accent-purple));
   transition: width 0.3s ease;
 }
 
 .milestone-progress-text {
   font-size: 12px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
   text-align: right;
 }
 
@@ -269,9 +269,9 @@
   align-items: center;
   gap: 15px;
   padding: 12px;
-  background: var(--bg-secondary, #f5f5f5);
+  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
   border-radius: 8px;
-  border-left: 4px solid #ffd700;
+  border-left: 4px solid var(--gold-color);
 }
 
 .badge-item.rarity-common {
@@ -305,16 +305,16 @@
 
 .badge-earned {
   font-size: 12px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
 }
 
 .badge-completion {
   text-align: center;
   padding: 15px;
-  background: var(--bg-secondary, #f5f5f5);
+  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
   border-radius: 8px;
   font-weight: 600;
-  color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
 }
 
 /* バッジタブ */
@@ -326,7 +326,7 @@
 
 .badge-card {
   padding: 15px;
-  background: var(--bg-secondary, #f5f5f5);
+  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
   border-radius: 10px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -334,7 +334,7 @@
 }
 
 .badge-card.earned {
-  border-color: #ffd700;
+  border-color: var(--gold-color);
 }
 
 .badge-card.locked {
@@ -344,7 +344,7 @@
 
 .badge-card:hover:not(.locked) {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px var(--shadow-xs);
 }
 
 .badge-card.rarity-common {
@@ -352,15 +352,15 @@
 }
 
 .badge-card.rarity-rare {
-  border-color: #2196f3;
+  border-color: var(--info-color);
 }
 
 .badge-card.rarity-epic {
-  border-color: #9c27b0;
+  border-color: var(--accent-purple);
 }
 
 .badge-card.rarity-legendary {
-  border-color: #ff9800;
+  border-color: var(--accent-orange);
 }
 
 .badge-icon-large {
@@ -376,14 +376,14 @@
 
 .badge-card-description {
   font-size: 12px;
-  color: var(--text-secondary, #666);
+  color: var(--text-secondary, var(--var(--gray-500)-700));
   line-height: 1.4;
   margin-bottom: 8px;
 }
 
 .badge-card-date {
   font-size: 11px;
-  color: var(--primary-color, #667eea);
+  color: var(--primary-color, var(--accent-purple));
 }
 
 /* マイルストーンタブ */
@@ -447,7 +447,7 @@
 
 .dark-mode .tabs-container button.active {
   background: var(--btn-primary-bg);
-  color: white;
+  color: var(--text-color-light);
   border-color: var(--btn-primary-bg);
 }
 
