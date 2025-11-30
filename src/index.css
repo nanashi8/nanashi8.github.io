@@ -25,7 +25,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #667eea;
+  background: var(--accent-purple);
   /* iOS Safari: バウンススクロール無効化 */
   overscroll-behavior: none;
   /* iOS Safari: 300ms タップ遅延を完全に削除 */
