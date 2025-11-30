@@ -64,24 +64,60 @@
 - `validate_all_content.py` - 重複 + 品質スコア
 - `validate_passage_quality.py` - 詳細な英文品質検証
 
-### 🟪 UI仕様準拠（UI Specifications）
-**形式**: TypeScript/TSX/CSS  
+### 🟪 デザインシステム準拠（Design System）
+
+**形式**: TypeScript/TSX/CSS
+
 **検証項目**:
-- ✅ **カラーシステム**: ハードコードされた色の検出
-- ✅ **ScoreBoard仕様**: タブ構成・プラン表示の準拠
-- ✅ **語句詳細表示**: 意味フィールド・一括開閉機能
-- ✅ **question-nav-row**: フォントサイズ・余白設定
-- ✅ **非同期処理**: await使用・setTimeout禁止
 
-**ツール**: `validate_ui_specifications.py`
+- ✅ **22色コアパレット厳守**: ハードコードされた色の検出・自動修正
+- ✅ **RGBA色禁止（業界標準準拠）**: 色付きRGBA → CSS変数に自動変換
+  - Material Design、Tailwind CSS、Bootstrap原則に従う
+  - 黒/白のRGBA（shadow/overlay用）のみ許可
+  - `hexToRgba()`はChart.js専用のみ使用可
+- ✅ **6段階タイポグラフィ（整数ピクセル・4pxステップ）**:
+  - 12px → 16px → 20px → 24px → 28px → 32px
+  - ハードコードされたfont-sizeの検出・自動修正
+- ✅ **6段階スペーシング**:
+  - 4px → 8px → 16px → 24px → 32px → 48px
+  - ハードコードされたmargin/paddingの検出・自動修正
+- ✅ **ダークモード対応**: 全色がライト・ダーク両対応
 
-**参照仕様書**: `docs/UI_IMMUTABLE_SPECIFICATIONS.md`
+**ツール**:
 
----
+- `validate_design_system.py` - 総合検証
+- `fix_hardcoded_colors.py` - 色の自動修正
+- `fix_rgba_colors.py` - **RGBA色のCSS変数化（業界標準準拠）**
+- `fix_hardcoded_typography.py` - フォントサイズの自動修正
+- `fix_hardcoded_spacing.py` - スペーシングの自動修正
+
+**参照仕様書**: `docs/UI_DESIGN_SYSTEM.md`
 
 ## 🚀 使用方法
 
-### 0. UI仕様検証（推奨：コード変更後）
+### 0. 業界標準ツール準拠検証（推奨：デプロイ前）
+
+フロントエンド開発の業界標準ツール準拠状況を検証:
+
+```bash
+python3 scripts/validate_industry_standards.py
+```
+
+**検証項目**:
+- ✅ ESLint/Prettier/EditorConfig設定ファイル存在確認
+- ✅ package.jsonのnpmスクリプト検証（lint, format, test等）
+- ✅ TypeScript strict mode設定確認
+- ✅ Vitest/React Testing Library設定確認
+- ✅ Husky + lint-staged設定確認
+- ✅ Node.jsバージョン固定（.nvmrc）確認
+
+**スコアリング**: 30項目を検証し、93-100点で合格
+
+**ツール**: `validate_industry_standards.py`
+
+---
+
+### 1. UI仕様検証（推奨：コード変更後）
 
 UI仕様書への準拠を検証:
 
