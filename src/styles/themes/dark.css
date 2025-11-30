@@ -379,7 +379,7 @@
 }
 
 .dark-mode .theme-btn.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
 }
 
@@ -393,7 +393,7 @@
 }
 
 .dark-mode .personality-card.active {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  background: rgba(102, 126, 234, 0.2);
   border-color: var(--btn-primary-bg);
 }
 
@@ -406,7 +406,7 @@
 }
 
 .dark-mode .setting-slider {
-  background: linear-gradient(to right, rgba(102, 126, 234, 0.3), var(--btn-primary-bg));
+  background: var(--btn-primary-bg);
 }
 
 .dark-mode .slider-value {
@@ -605,7 +605,7 @@
 }
 
 .dark-mode .start-btn {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
 }
 
@@ -615,7 +615,7 @@
 
 /* スコアボードタブのダークモード */
 .dark-mode .score-board-tabs {
-  background: linear-gradient(135deg, var(--text-color) 0%, #1e1e1e 100%);
+  background: var(--text-color);
   border-color: var(--border-color);
 }
 
@@ -631,7 +631,7 @@
 }
 
 .dark-mode .score-tab.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border-color: var(--btn-primary-bg);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
@@ -639,7 +639,7 @@
 
 /* 基本統計グリッド - ダークモード */
 .dark-mode .stat-card {
-  background: linear-gradient(135deg, var(--text-color) 0%, #1e1e1e 100%);
+  background: var(--text-color);
   border-color: var(--border-color);
 }
 
@@ -680,7 +680,7 @@
 }
 
 .dark-mode .stat-subtab.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
 }
 
@@ -711,7 +711,7 @@
 
 /* 学習プランタブ - ダークモード */
 .dark-mode .plan-summary {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2a4a6a 100%);
+  background: #1e3a5f;
   border-color: #3b5a7a;
 }
 
@@ -875,7 +875,7 @@
 }
 
 .dark-mode .stat-card {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
 }
 
@@ -923,7 +923,7 @@
 }
 
 .dark-mode .plan-progress-banner {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
 }
 
 /* その他の要素 */
@@ -1038,7 +1038,7 @@
 }
 
 .dark-mode .ai-comment-bar {
-  background: linear-gradient(135deg, #3a3a1a 0%, #2a2a1a 100%);
+  background: #3a3a1a;
   border-left-color: var(--warning-color);
 }
 
@@ -1575,7 +1575,7 @@ option {
 }
 
 .score-tab.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border-color: var(--btn-primary-bg);
   font-weight: 700;
@@ -1644,7 +1644,7 @@ option {
   }
 
   .score-board-tabs-mobile .score-tab.active {
-    background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+    background: var(--btn-primary-bg);
     color: white;
     border-color: var(--btn-primary-bg);
     font-weight: 700;
@@ -1661,7 +1661,7 @@ option {
 
 .settings-return-btn {
   padding: 8px 16px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border: none;
   border-radius: 6px;
@@ -1682,7 +1682,7 @@ option {
 }
 
 .dark-mode .settings-return-btn {
-  background: linear-gradient(135deg, var(--btn-primary-light) 0%, #9d7fc2 100%);
+  background: var(--btn-primary-light);
   box-shadow: 0 2px 4px rgba(139, 158, 245, 0.3);
 }
 
@@ -1709,7 +1709,7 @@ option {
 /* 補修モードインジケーター */
 .review-focus-indicator {
   width: 100%;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   padding: 8px 16px;
   border-radius: 8px;
@@ -1790,7 +1790,7 @@ option {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--background) 100%);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 6px 8px;
@@ -1862,7 +1862,7 @@ option {
 }
 
 .stat-subtab.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border-color: var(--btn-primary-bg);
   font-weight: 600;
@@ -2116,7 +2116,7 @@ option {
 
 .plan-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--success-color) 0%, var(--accent-blue) 100%);
+  background: var(--success-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2236,15 +2236,15 @@ option {
 }
 
 .retention-mastered {
-  background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%);
+  background: var(--success-color);
 }
 
 .retention-learning {
-  background: linear-gradient(135deg, var(--warning-color) 0%, #d97706 100%);
+  background: var(--warning-color);
 }
 
 .retention-struggling {
-  background: linear-gradient(135deg, var(--error-color) 0%, #dc2626 100%);
+  background: var(--error-color);
 }
 
 /* 履歴コンパクト */
@@ -2396,7 +2396,7 @@ option {
   font-size: 1em;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, var(--btn-primary-bg), var(--gradient-primary-end));
+  background: var(--btn-primary-bg);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -2414,7 +2414,7 @@ option {
 }
 
 .dark-mode .btn-back-to-settings {
-  background: linear-gradient(135deg, #4f5bd5, #6a3d8f);
+  background: #4f5bd5;
   color: var(--text-color);
 }
 
@@ -2792,15 +2792,15 @@ option {
 }
 
 .retention-mastered {
-  background: linear-gradient(135deg, var(--success-green-dark) 0%, #20c997 100%);
+  background: var(--success-green-dark);
 }
 
 .retention-learning {
-  background: linear-gradient(135deg, var(--warning-yellow) 0%, #fd7e14 100%);
+  background: var(--warning-yellow);
 }
 
 .retention-struggling {
-  background: linear-gradient(135deg, var(--error-red-dark) 0%, #e83e8c 100%);
+  background: var(--error-red-dark);
 }
 
 .retention-breakdown-details {
@@ -3255,7 +3255,7 @@ option {
 
 .phrase-badge {
   display: inline-block;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   font-size: 0.75em;
   padding: 4px 10px;
@@ -3265,7 +3265,7 @@ option {
 
 .phrase-type-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #f093fb;
   color: white;
   font-size: 0.75em;
   padding: 4px 10px;
@@ -3313,7 +3313,7 @@ option {
   gap: 8px;
   padding: 8px 12px;
   margin: 10px 0;
-  background: linear-gradient(135deg, #fff9e6 0%, #fff3d4 100%);
+  background: #fff9e6;
   border-left: 4px solid #ffa500;
   border-radius: 4px;
   font-size: 0.9em;
@@ -3321,7 +3321,7 @@ option {
 }
 
 .dark-mode .ai-comment-bar {
-  background: linear-gradient(135deg, #3d3520 0%, #453b25 100%);
+  background: #3d3520;
   border-left: 4px solid #ffa500;
   color: #f5ddb0;
 }
@@ -3736,7 +3736,7 @@ option {
   outline: none;
   -webkit-appearance: none;
   appearance: none;
-  background: linear-gradient(to right, var(--success-green-dark) 0%, var(--warning-yellow) 50%, var(--error-red-dark) 100%);
+  background: var(--success-green-dark);
   cursor: pointer;
 }
 
@@ -4850,7 +4850,7 @@ option {
 /* チャンク（節・句）の和訳 */
 .chunk-translation {
   padding: 10px 15px;
-  background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+  background: #e6f2ff;
   border-left: 4px solid var(--btn-primary-bg);
   border-radius: 6px;
   font-size: 1em;
@@ -6677,17 +6677,17 @@ option {
 }
 
 .difficulty-badge.beginner {
-  background: linear-gradient(135deg, var(--success-color) 0%, #059669 100%);
+  background: var(--success-color);
   color: white;
 }
 
 .difficulty-badge.intermediate {
-  background: linear-gradient(135deg, var(--warning-color) 0%, #d97706 100%);
+  background: var(--warning-color);
   color: white;
 }
 
 .difficulty-badge.advanced {
-  background: linear-gradient(135deg, var(--error-color) 0%, #dc2626 100%);
+  background: var(--error-color);
   color: white;
 }
 
@@ -7150,7 +7150,7 @@ option {
   }
 
   .dark-mode .score-board-tabs-mobile .score-tab.active {
-    background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+    background: var(--btn-primary-bg);
     color: white;
     border-color: var(--btn-primary-bg);
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
@@ -7290,7 +7290,7 @@ option {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -7473,7 +7473,7 @@ option {
 
 .chart-bar {
   width: 80%;
-  background: linear-gradient(to top, var(--btn-primary-bg), var(--gradient-primary-end));
+  background: var(--btn-primary-bg);
   border-radius: 4px 4px 0 0;
   transition: all 0.3s;
   min-height: 2px;
@@ -7693,7 +7693,7 @@ option {
 
 .start-btn {
   padding: 10px 30px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border: none;
   border-radius: 8px;
@@ -7719,7 +7719,7 @@ option {
 .start-btn:active {
   transform: scale(0.97);
   transition: transform 0.1s;
-  background: linear-gradient(135deg, var(--btn-primary-hover) 0%, #653a8a 100%);
+  background: var(--btn-primary-hover);
 }
 
 .start-btn:disabled {
@@ -7754,7 +7754,7 @@ option {
   font-size: max(16px, 1.1em);
   font-weight: 600;
   color: white;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -7773,7 +7773,7 @@ option {
 .settings-toggle-btn:active {
   transform: scale(0.97);
   transition: transform 0.1s;
-  background: linear-gradient(135deg, var(--btn-primary-hover) 0%, #653a8a 100%);
+  background: var(--btn-primary-hover);
 }
 
 /* 学習設定パネル */
@@ -7867,7 +7867,7 @@ option {
 
 /* ダークモード対応 */
 .dark-mode .settings-toggle-btn {
-  background: linear-gradient(135deg, var(--btn-primary-light) 0%, #9b7bc4 100%);
+  background: var(--btn-primary-light);
 }
 
 .dark-mode .study-settings-panel {
@@ -7999,7 +7999,7 @@ option {
 .stats-header {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -8085,7 +8085,7 @@ option {
 }
 
 .plan-progress-card {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   border-radius: 16px;
   padding: 24px;
   color: white;
@@ -8250,7 +8250,7 @@ option {
 .week-stat-item {
   flex: 1;
   min-width: 150px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #f093fb;
   color: white;
   padding: 20px;
   border-radius: 12px;
@@ -8325,7 +8325,7 @@ option {
 }
 
 .mode-card {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  background: #a8edea;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -8400,7 +8400,7 @@ option {
 
 .daily-item.today {
   border: 2px solid var(--btn-primary-bg);
-  background: linear-gradient(135deg, #f5f7ff 0%, var(--background) 100%);
+  background: #f5f7ff;
 }
 
 .daily-date {
@@ -8455,7 +8455,7 @@ option {
 
 .daily-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   transition: width 0.3s;
 }
 
@@ -8563,7 +8563,7 @@ option {
 }
 
 .quiz-badge.perfect {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #f093fb;
 }
 
 /* 分野別カード */
@@ -8654,19 +8654,19 @@ option {
 }
 
 .category-card.excellent .category-progress-fill {
-  background: linear-gradient(90deg, var(--success-color) 0%, #34d399 100%);
+  background: var(--success-color);
 }
 
 .category-card.good .category-progress-fill {
-  background: linear-gradient(90deg, var(--accent-blue) 0%, #60a5fa 100%);
+  background: var(--accent-blue);
 }
 
 .category-card.ok .category-progress-fill {
-  background: linear-gradient(90deg, var(--warning-color) 0%, #fbbf24 100%);
+  background: var(--warning-color);
 }
 
 .category-card.needswork .category-progress-fill {
-  background: linear-gradient(90deg, var(--error-color) 0%, #f87171 100%);
+  background: var(--error-color);
 }
 
 .category-card.not-started .category-progress-fill {
@@ -8791,7 +8791,7 @@ option {
 }
 
 .weak-encouragement {
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  background: #fef3c7;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -8838,7 +8838,7 @@ option {
 .plan-hero h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -8908,7 +8908,7 @@ option {
 }
 
 .duration-card.selected {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   border-color: var(--btn-primary-bg);
   color: white;
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
@@ -8942,7 +8942,7 @@ option {
 }
 
 .duration-option.selected {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   border-color: var(--btn-primary-bg);
   color: white;
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
@@ -9009,7 +9009,7 @@ option {
 }
 
 .btn-start-plan {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border: none;
   padding: 18px 50px;
@@ -9093,7 +9093,7 @@ option {
 .day-number {
   font-size: 3em;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -9153,15 +9153,15 @@ option {
 }
 
 .progress-bar.phase-1 {
-  background: linear-gradient(90deg, var(--success-border) 0%, #81C784 100%);
+  background: var(--success-border);
 }
 
 .progress-bar.phase-2 {
-  background: linear-gradient(90deg, #2196F3 0%, #64B5F6 100%);
+  background: #2196F3;
 }
 
 .progress-bar.phase-3 {
-  background: linear-gradient(90deg, #9C27B0 0%, #BA68C8 100%);
+  background: #9C27B0;
 }
 
 .progress-bar::before {
@@ -9258,17 +9258,17 @@ option {
 
 .session-card.morning {
   border-color: #FFA726;
-  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  background: #FFF3E0;
 }
 
 .session-card.afternoon {
   border-color: #42A5F5;
-  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+  background: #E3F2FD;
 }
 
 .session-card.evening {
   border-color: #AB47BC;
-  background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+  background: #F3E5F5;
 }
 
 .session-header {
@@ -9298,7 +9298,7 @@ option {
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   font-size: 1em;
   font-weight: 600;
@@ -9351,13 +9351,13 @@ option {
 
 .milestone-item.current {
   border-color: var(--btn-primary-bg);
-  background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
+  background: #E8EAF6;
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
 }
 
 .milestone-item.achieved {
   border-color: var(--success-border);
-  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+  background: #E8F5E9;
 }
 
 .milestone-item.passed {
@@ -9657,7 +9657,7 @@ option {
 
 /* 学習プラン進行状況バナー */
 .plan-progress-banner {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   border-radius: 12px;
   padding: 15px 20px;
   margin-bottom: 20px;
@@ -9861,7 +9861,7 @@ option {
   width: 100%;
   height: 10px;
   border-radius: 5px;
-  background: linear-gradient(to right, var(--accent-indigo), var(--btn-primary-bg));
+  background: var(--accent-indigo);
   outline: none;
   -webkit-appearance: none;
   appearance: none;
@@ -9922,7 +9922,7 @@ option {
   padding: 14px 25px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   font-size: 1.1em;
   font-weight: 600;
@@ -9944,7 +9944,7 @@ option {
 }
 
 .setting-button.danger {
-  background: linear-gradient(135deg, #ff5252 0%, var(--accent-red) 100%);
+  background: #ff5252;
 }
 
 .setting-button.danger:hover {
@@ -9965,7 +9965,7 @@ option {
 
 /* フィルターサマリー */
 .filter-summary {
-  background: linear-gradient(135deg, var(--accent-indigo) 0%, #f8f9ff 100%);
+  background: var(--accent-indigo);
   border-radius: 12px;
   padding: 25px;
   margin-top: 30px;
@@ -10030,7 +10030,7 @@ option {
 
 .personality-card.active {
   border-color: var(--btn-primary-bg);
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: rgba(102, 126, 234, 0.1);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
@@ -10097,7 +10097,7 @@ option {
 }
 
 .theme-btn.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   border-color: var(--btn-primary-bg);
   color: white;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
@@ -10142,7 +10142,7 @@ option {
   width: 100%;
   height: 8px;
   border-radius: 5px;
-  background: linear-gradient(to right, var(--accent-indigo) 0%, var(--btn-primary-bg) 50%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   outline: none;
   -webkit-appearance: none;
   appearance: none;
@@ -10184,7 +10184,7 @@ option {
 }
 
 .dark-mode .slider {
-  background: linear-gradient(to right, #2a2a3a 0%, var(--btn-primary-bg) 50%, var(--gradient-primary-end) 100%);
+  background: #2a2a3a;
 }
 
 .dark-mode .slider::-webkit-slider-thumb {
@@ -10247,7 +10247,7 @@ option {
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   font-size: 1.1em;
   font-weight: 600;
@@ -10785,7 +10785,7 @@ option {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 10px;
   padding: 12px 15px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   font-weight: 600;
   border-radius: 8px 8px 0 0;
@@ -10872,7 +10872,7 @@ option {
 }
 
 .btn-reset-progress {
-  background: linear-gradient(135deg, #ff5252 0%, var(--accent-red) 100%);
+  background: #ff5252;
   color: white;
 }
 
@@ -10882,7 +10882,7 @@ option {
 }
 
 .btn-reset-plan {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
 }
 
@@ -11474,7 +11474,7 @@ option {
 }
 
 .sub-tab-btn.active {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border-color: var(--btn-primary-bg);
   font-weight: 700;
@@ -11631,7 +11631,7 @@ option {
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border: none;
   border-radius: 10px;
@@ -11840,7 +11840,7 @@ option {
   gap: 6px;
   padding: 8px 12px;
   margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border: none;
   border-radius: 20px;
@@ -11863,7 +11863,7 @@ option {
 
 .phrase-speaker-btn.speaking {
   animation: speakPulse 0.6s ease-in-out;
-  background: linear-gradient(135deg, #4c6ef5 0%, #5f3d8a 100%);
+  background: #4c6ef5;
 }
 
 .full-text-display {
@@ -11910,7 +11910,7 @@ option {
 }
 
 .full-text-speaker-btn {
-  background: linear-gradient(135deg, #4c6ef5 0%, #5f3d8a 100%);
+  background: #4c6ef5;
 }
 
 .full-text-speaker-btn:hover:not(:disabled) {
@@ -11920,11 +11920,11 @@ option {
 
 .full-text-speaker-btn:active:not(:disabled) {
   transform: scale(0.98);
-  background: linear-gradient(135deg, #3b5bdb 0%, #4e3270 100%);
+  background: #3b5bdb;
 }
 
 .full-text-pause-btn {
-  background: linear-gradient(135deg, #ffa94d 0%, #ff6b35 100%);
+  background: #ffa94d;
 }
 
 .full-text-pause-btn:hover:not(:disabled) {
@@ -11934,11 +11934,11 @@ option {
 
 .full-text-pause-btn:active:not(:disabled) {
   transform: scale(0.98);
-  background: linear-gradient(135deg, #ff922b 0%, #e8590c 100%);
+  background: #ff922b;
 }
 
 .full-text-stop-btn {
-  background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
+  background: #9e9e9e;
 }
 
 .full-text-stop-btn:hover:not(:disabled) {
@@ -11948,15 +11948,15 @@ option {
 
 .full-text-stop-btn:active:not(:disabled) {
   transform: scale(0.98);
-  background: linear-gradient(135deg, #7e7e7e 0%, #616161 100%);
+  background: #7e7e7e;
 }
 
 .dark-mode .full-text-stop-btn {
-  background: linear-gradient(135deg, #868e96 0%, #495057 100%);
+  background: #868e96;
 }
 
 .dark-mode .full-text-stop-btn:active:not(:disabled) {
-  background: linear-gradient(135deg, #6c757d 0%, #343a40 100%);
+  background: #6c757d;
 }
 
 .full-text-speaker-btn:disabled,
@@ -12113,7 +12113,7 @@ option {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -12126,15 +12126,15 @@ option {
 }
 
 .dashboard-card:nth-child(2) {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: #f093fb;
 }
 
 .dashboard-card:nth-child(3) {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: #4facfe;
 }
 
 .dashboard-card:nth-child(4) {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  background: #43e97b;
 }
 
 .dashboard-icon {
@@ -12485,7 +12485,7 @@ option {
 
 .word-item.overcome {
   border-left: 4px solid var(--accent-orange);
-  background: linear-gradient(to right, #fff9e6 0%, var(--background) 100%);
+  background: #fff9e6;
   animation: overcome-glow 2s ease-in-out infinite;
 }
 
@@ -12673,7 +12673,7 @@ option {
 }
 
 .dark-mode .word-item.overcome {
-  background: linear-gradient(to right, #3a3000 0%, var(--text-color) 100%);
+  background: #3a3000;
 }
 
 .dark-mode .overcome-before {
@@ -12727,7 +12727,7 @@ option {
 
 /* ========== 時間帯別AI挨拶バナー ========== */
 .time-greeting-banner {
-  background: linear-gradient(135deg, var(--btn-primary-bg) 0%, var(--gradient-primary-end) 100%);
+  background: var(--btn-primary-bg);
   color: white;
   padding: 16px 20px;
   margin-bottom: 20px;
@@ -12804,7 +12804,7 @@ option {
 
 /* ダークモード対応 */
 .dark-mode .time-greeting-banner {
-  background: linear-gradient(135deg, var(--btn-primary-hover) 0%, #653a8a 100%);
+  background: var(--btn-primary-hover);
   box-shadow: 0 4px 12px rgba(85, 104, 211, 0.4);
 }
 
@@ -12819,7 +12819,7 @@ option {
 /* ===== 統合コメント欄（警告・フィードバック共通） ===== */
 /* エラー予測AI: 警告表示 */
 .error-prediction-warning {
-  background: linear-gradient(135deg, var(--warning-bg) 0%, #fff 100%);
+  background: var(--warning-bg);
   border: 2px solid var(--warning-yellow);
   border-radius: 12px;
   padding: 12px 16px;
@@ -12832,19 +12832,19 @@ option {
 }
 
 .error-prediction-warning.medium {
-  background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+  background: #e3f2fd;
   border-color: #2196f3;
   box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
 }
 
 .error-prediction-warning.high {
-  background: linear-gradient(135deg, #ffe0b2 0%, #fff 100%);
+  background: #ffe0b2;
   border-color: var(--accent-orange);
   box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
 }
 
 .error-prediction-warning.critical {
-  background: linear-gradient(135deg, #ffebee 0%, #fff 100%);
+  background: #ffebee;
   border-color: var(--accent-red);
   box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
 }
@@ -12920,22 +12920,22 @@ option {
 
 /* ダークモード対応 */
 .dark-mode .error-prediction-warning {
-  background: linear-gradient(135deg, #4a4a2a 0%, var(--text-color) 100%);
+  background: #4a4a2a;
   border-color: var(--warning-color);
 }
 
 .dark-mode .error-prediction-warning.medium {
-  background: linear-gradient(135deg, #1e3a5f 0%, var(--text-color) 100%);
+  background: #1e3a5f;
   border-color: #2196f3;
 }
 
 .dark-mode .error-prediction-warning.high {
-  background: linear-gradient(135deg, #5f3e1e 0%, var(--text-color) 100%);
+  background: #5f3e1e;
   border-color: var(--accent-orange);
 }
 
 .dark-mode .error-prediction-warning.critical {
-  background: linear-gradient(135deg, #5f1e1e 0%, var(--text-color) 100%);
+  background: #5f1e1e;
   border-color: var(--accent-red);
 }
 
