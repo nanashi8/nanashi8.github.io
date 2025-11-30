@@ -441,7 +441,7 @@
         {
           "id": "vf-g1-u0-028",
           "japanese": "Tom and Maryは親切です",
-          "sentence": "Tom and Mary ____ kind.",
+          "sentence": "Tom and mary ____ kind.",
           "verb": "be",
           "choices": [
             "am",
