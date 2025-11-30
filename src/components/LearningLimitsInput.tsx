@@ -27,6 +27,7 @@ export default function LearningLimitsInput({
           id={`${idPrefix}learning-limit`}
           value={learningLimit}
           onChange={(e) => onLearningLimitChange(parseInt(e.target.value))}
+          className="select-input"
         >
           {LIMIT_OPTIONS.map(option => (
             <option key={option} value={option}>
@@ -34,7 +35,6 @@ export default function LearningLimitsInput({
             </option>
           ))}
         </select>
-        <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
       </div>
 
       <div className="filter-group">
@@ -43,6 +43,7 @@ export default function LearningLimitsInput({
           id={`${idPrefix}review-limit`}
           value={reviewLimit}
           onChange={(e) => onReviewLimitChange(parseInt(e.target.value))}
+          className="select-input"
         >
           {LIMIT_OPTIONS.map(option => (
             <option key={option} value={option}>
@@ -50,7 +51,6 @@ export default function LearningLimitsInput({
             </option>
           ))}
         </select>
-        <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
       </div>
     </>
   );
