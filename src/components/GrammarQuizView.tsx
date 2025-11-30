@@ -87,12 +87,12 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
-    const saved = localStorage.getItem('autoNext');
+    const saved = localStorage.getItem('autoNext-grammar');
     return saved === 'true';
   });
   
   const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
-    const saved = localStorage.getItem('autoNextDelay');
+    const saved = localStorage.getItem('autoNextDelay-grammar');
     return saved ? parseInt(saved, 10) : 1500;
   });
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
@@ -611,6 +611,47 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 onReviewLimitChange={setReviewLimit}
                 idPrefix="grammar-"
               />
+
+              {/* 自動次へ設定 */}
+              <div className="filter-group">
+                <label htmlFor="auto-next-toggle-grammar-pre">✅ 正解時自動次へ:</label>
+                <div className="auto-next-controls">
+                  <input
+                    type="checkbox"
+                    id="auto-next-toggle-grammar-pre"
+                    checked={autoNext}
+                    onChange={(e) => {
+                      setAutoNext(e.target.checked);
+                      localStorage.setItem('autoNext-grammar', e.target.checked.toString());
+                    }}
+                  />
+                  <label htmlFor="auto-next-toggle-grammar-pre" className="checkbox-label">
+                    {autoNext ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
+
+              {autoNext && (
+                <div className="filter-group">
+                  <label htmlFor="auto-next-delay-grammar-pre">⏱️ 次への遅延時間:</label>
+                  <select
+                    id="auto-next-delay-grammar-pre"
+                    value={autoNextDelay}
+                    onChange={(e) => {
+                      const delay = parseInt(e.target.value);
+                      setAutoNextDelay(delay);
+                      localStorage.setItem('autoNextDelay-grammar', delay.toString());
+                    }}
+                    className="select-input"
+                  >
+                    <option value="500">0.5秒</option>
+                    <option value="1000">1秒</option>
+                    <option value="1500">1.5秒</option>
+                    <option value="2000">2秒</option>
+                    <option value="3000">3秒</option>
+                  </select>
+                </div>
+              )}
             </div>
           )}
 
@@ -726,6 +767,47 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 onReviewLimitChange={setReviewLimit}
                 idPrefix="grammar-quiz-"
               />
+
+              {/* 自動次へ設定 */}
+              <div className="filter-group">
+                <label htmlFor="auto-next-toggle-grammar-quiz">✅ 正解時自動次へ:</label>
+                <div className="auto-next-controls">
+                  <input
+                    type="checkbox"
+                    id="auto-next-toggle-grammar-quiz"
+                    checked={autoNext}
+                    onChange={(e) => {
+                      setAutoNext(e.target.checked);
+                      localStorage.setItem('autoNext-grammar', e.target.checked.toString());
+                    }}
+                  />
+                  <label htmlFor="auto-next-toggle-grammar-quiz" className="checkbox-label">
+                    {autoNext ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
+
+              {autoNext && (
+                <div className="filter-group">
+                  <label htmlFor="auto-next-delay-grammar-quiz">⏱️ 次への遅延時間:</label>
+                  <select
+                    id="auto-next-delay-grammar-quiz"
+                    value={autoNextDelay}
+                    onChange={(e) => {
+                      const delay = parseInt(e.target.value);
+                      setAutoNextDelay(delay);
+                      localStorage.setItem('autoNextDelay-grammar', delay.toString());
+                    }}
+                    className="select-input"
+                  >
+                    <option value="500">0.5秒</option>
+                    <option value="1000">1秒</option>
+                    <option value="1500">1.5秒</option>
+                    <option value="2000">2秒</option>
+                    <option value="3000">3秒</option>
+                  </select>
+                </div>
+              )}
             </div>
           )}
 
