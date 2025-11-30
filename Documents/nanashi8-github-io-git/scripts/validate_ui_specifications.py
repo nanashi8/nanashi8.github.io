@@ -7,6 +7,7 @@ docs/UI_IMMUTABLE_SPECIFICATIONS.md に記載された仕様に準拠してい�
 
 import re
 import json
+import sys
 from pathlib import Path
 from typing import List, Dict, Tuple
 
@@ -18,11 +19,27 @@ BLUE = '\033[94m'
 RESET = '\033[0m'
 
 class UISpecValidator:
-    def __init__(self, base_path: Path):
+    def __init__(self, base_path: Path, strict_mode: bool = False):
         self.base_path = base_path
         self.src_path = base_path / 'src'
         self.errors = []
         self.warnings = []
+        self.strict_mode = strict_mode
+        
+        # 既存の技術的負債ファイル（strictモードでは除外）
+        # 注: 既存のCSSファイルはすべてリファクタリング前のレガシーコード
+        # 新規作成するCSSファイルは必ずCSS変数のみを使用すること
+        self.legacy_files = [
+            'src/App.css',
+            'src/index.css',
+            'src/styles/themes/dark.css',
+            'src/styles/themes/light.css',
+            'src/styles/themes/variables.css',
+            'src/components/GamificationPanel.css',
+            'src/components/GrammarQuizView.css',
+            'src/components/DictionaryView.css',
+            'src/components/LinguisticRelationsView.css',
+        ] if strict_mode else []
         
     def validate_all(self) -> bool:
         """全ての検証を実行"""
@@ -67,6 +84,14 @@ class UISpecValidator:
         
         def should_exclude(file_path: Path) -> bool:
             """ファイルを除外すべきか判定"""
+            # レガシーファイルをstrictモードで除外
+            if self.strict_mode:
+                relative_path = str(file_path.relative_to(self.base_path))
+                for legacy_file in self.legacy_files:
+                    if relative_path == legacy_file:
+                        return True
+            
+            # パターンマッチ除外
             for pattern in excluded_patterns:
                 if pattern in file_path.name:
                     return True
@@ -345,13 +370,24 @@ class UISpecValidator:
 
 def main():
     """メイン処理"""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='UI仕様書準拠検証')
+    parser.add_argument('--strict', action='store_true', 
+                       help='strictモード: 既存の技術的負債を除外（新規コードのみチェック）')
+    args = parser.parse_args()
+    
     base_path = Path(__file__).parent.parent / 'nanashi8.github.io'
     
     if not base_path.exists():
         print(f"{RED}エラー: プロジェクトディレクトリが見つかりません: {base_path}{RESET}")
         return 1
     
-    validator = UISpecValidator(base_path)
+    validator = UISpecValidator(base_path, strict_mode=args.strict)
+    
+    if args.strict:
+        print(f"{BLUE}🔒 Strictモード: 既存の技術的負債を除外し、新規コードのみ検証します{RESET}\n")
+    
     success = validator.validate_all()
     
     return 0 if success else 1
