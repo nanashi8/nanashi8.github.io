@@ -228,9 +228,10 @@ class UISpecValidator:
                 self.warnings.append(f"⚠ .question-nav-row の余白: {', '.join(issues)}")
     
     def validate_async_handling(self):
-        """非同期処理の検証"""
-        print(f"\n{YELLOW}[5/5] 非同期処理検証{RESET}")
+        """非同期処理とローディング表示の検証"""
+        print(f"\n{YELLOW}[5/5] 非同期処理とローディング表示検証{RESET}")
         
+        # 1. App.tsxの検証
         app_path = self.src_path / 'App.tsx'
         if not app_path.exists():
             self.errors.append("❌ App.tsx が見つかりません")
@@ -273,6 +274,49 @@ class UISpecValidator:
         else:
             self.errors.append("❌ handleSkip関数が見つかりません")
             print(f"  {RED}✗{RESET} handleSkip関数が見つかりません")
+        
+        # 2. ローディング表示の禁止チェック
+        print(f"\n  {BLUE}ローディング表示検証:{RESET}")
+        forbidden_loading_patterns = [
+            (r'読み込み中\.\.\.', '「読み込み中...」テキスト'),
+            (r'Loading\.\.\.', '「Loading...」テキスト'),
+            (r'ローディング', '「ローディング」テキスト'),
+            (r'loading-container', 'loading-containerクラス'),
+        ]
+        
+        # 全てのTSX/TSファイルをチェック
+        tsx_files = list(self.src_path.glob('**/*.tsx')) + list(self.src_path.glob('**/*.ts'))
+        loading_found = False
+        
+        for tsx_file in tsx_files:
+            if 'node_modules' in str(tsx_file):
+                continue
+            
+            tsx_content = tsx_file.read_text(encoding='utf-8')
+            relative_path = tsx_file.relative_to(self.src_path)
+            
+            for pattern, description in forbidden_loading_patterns:
+                matches = re.finditer(pattern, tsx_content)
+                for match in matches:
+                    # コメント内や変数名の一部でないかチェック
+                    line_start = tsx_content.rfind('\n', 0, match.start()) + 1
+                    line_end = tsx_content.find('\n', match.end())
+                    line = tsx_content[line_start:line_end if line_end != -1 else len(tsx_content)]
+                    
+                    # コメント行は除外
+                    if '//' in line[:match.start() - line_start] or line.strip().startswith('//'):
+                        continue
+                    # JSXコメントは除外
+                    if '{/*' in line or '*/}' in line:
+                        continue
+                    
+                    self.errors.append(f"❌ {relative_path}: {description}が使用されています（禁止）")
+                    print(f"  {RED}✗{RESET} {relative_path}: {description}")
+                    loading_found = True
+        
+        if not loading_found:
+            print(f"  {GREEN}✓{RESET} 禁止されたローディング表示は見つかりませんでした")
+
     
     def print_report(self):
         """検証レポートを出力"""
