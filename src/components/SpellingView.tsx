@@ -3,10 +3,12 @@ import { Question, SpellingState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import ScoreBoard from './ScoreBoard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
+import LearningLimitsInput from './LearningLimitsInput';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
 import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface SpellingViewProps {
   questions: Question[];
@@ -77,16 +79,8 @@ function SpellingView({
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   
-  // 学習中・要復習の上限設定（デフォルト: 学習中30、要復習10）
-  const [learningLimit, setLearningLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('learning-limit-spelling');
-    return saved ? parseInt(saved) : 30;
-  });
-  
-  const [reviewLimit, setReviewLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('review-limit-spelling');
-    return saved ? parseInt(saved) : 10;
-  });
+  // 学習中・要復習の上限設定（カスタムフック使用）
+  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } = useLearningLimits('spelling');
   
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
@@ -601,39 +595,13 @@ function SpellingView({
             </div>
           )}
 
-          <div className="filter-group">
-            <label htmlFor="learning-limit-spelling">🎯 学習中の上限:</label>
-            <input
-              type="number"
-              id="learning-limit-spelling"
-              min="1"
-              value={learningLimit}
-              className="number-input"
-              onChange={(e) => {
-                const value = parseInt(e.target.value) || 30;
-                setLearningLimit(value);
-                localStorage.setItem('learning-limit-spelling', value.toString());
-              }}
-            />
-            <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
-          </div>
-
-          <div className="filter-group">
-            <label htmlFor="review-limit-spelling">⚠️ 要復習の上限:</label>
-            <input
-              type="number"
-              id="review-limit-spelling"
-              min="1"
-              value={reviewLimit}
-              className="number-input"
-              onChange={(e) => {
-                const value = parseInt(e.target.value) || 10;
-                setReviewLimit(value);
-                localStorage.setItem('review-limit-spelling', value.toString());
-              }}
-            />
-            <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
-          </div>
+          <LearningLimitsInput
+            learningLimit={learningLimit}
+            reviewLimit={reviewLimit}
+            onLearningLimitChange={setLearningLimit}
+            onReviewLimitChange={setReviewLimit}
+            idPrefix="spelling-"
+          />
         </div>
       )}
 
@@ -757,39 +725,13 @@ function SpellingView({
                 </div>
               )}
 
-              <div className="filter-group">
-                <label htmlFor="learning-limit-spelling-quiz">🎯 学習中の上限:</label>
-                <input
-                  type="number"
-                  id="learning-limit-spelling-quiz"
-                  min="1"
-                  value={learningLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 30;
-                    setLearningLimit(value);
-                    localStorage.setItem('learning-limit-spelling', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="review-limit-spelling-quiz">⚠️ 要復習の上限:</label>
-                <input
-                  type="number"
-                  id="review-limit-spelling-quiz"
-                  min="1"
-                  value={reviewLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 10;
-                    setReviewLimit(value);
-                    localStorage.setItem('review-limit-spelling', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
-              </div>
+              <LearningLimitsInput
+                learningLimit={learningLimit}
+                reviewLimit={reviewLimit}
+                onLearningLimitChange={setLearningLimit}
+                onReviewLimitChange={setReviewLimit}
+                idPrefix="spelling-quiz-"
+              />
             </div>
           )}
 

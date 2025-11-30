@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
+import LearningLimitsInput from './LearningLimitsInput';
 import { getStudySettings, updateStudySettings } from '../progressStorage';
+import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface VerbFormQuestion {
   id: string;
@@ -80,16 +82,8 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   
-  // 学習中・要復習の上限設定（デフォルト: 学習中30、要復習10）
-  const [learningLimit, setLearningLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('learning-limit-grammar');
-    return saved ? parseInt(saved) : 30;
-  });
-  
-  const [reviewLimit, setReviewLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('review-limit-grammar');
-    return saved ? parseInt(saved) : 10;
-  });
+  // 学習中・要復習の上限設定（カスタムフック使用）
+  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } = useLearningLimits('grammar');
   
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
@@ -610,39 +604,13 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 </select>
               </div>
 
-              <div className="filter-group">
-                <label htmlFor="learning-limit-grammar">🎯 学習中の上限:</label>
-                <input
-                  type="number"
-                  id="learning-limit-grammar"
-                  min="1"
-                  value={learningLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 30;
-                    setLearningLimit(value);
-                    localStorage.setItem('learning-limit-grammar', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="review-limit-grammar">⚠️ 要復習の上限:</label>
-                <input
-                  type="number"
-                  id="review-limit-grammar"
-                  min="1"
-                  value={reviewLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 10;
-                    setReviewLimit(value);
-                    localStorage.setItem('review-limit-grammar', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
-              </div>
+              <LearningLimitsInput
+                learningLimit={learningLimit}
+                reviewLimit={reviewLimit}
+                onLearningLimitChange={setLearningLimit}
+                onReviewLimitChange={setReviewLimit}
+                idPrefix="grammar-"
+              />
             </div>
           )}
 
@@ -751,39 +719,13 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 </select>
               </div>
 
-              <div className="filter-group">
-                <label htmlFor="learning-limit-grammar-quiz">🎯 学習中の上限:</label>
-                <input
-                  type="number"
-                  id="learning-limit-grammar-quiz"
-                  min="1"
-                  value={learningLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 30;
-                    setLearningLimit(value);
-                    localStorage.setItem('learning-limit-grammar', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="review-limit-grammar-quiz">⚠️ 要復習の上限:</label>
-                <input
-                  type="number"
-                  id="review-limit-grammar-quiz"
-                  min="1"
-                  value={reviewLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 10;
-                    setReviewLimit(value);
-                    localStorage.setItem('review-limit-grammar', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
-              </div>
+              <LearningLimitsInput
+                learningLimit={learningLimit}
+                reviewLimit={reviewLimit}
+                onLearningLimitChange={setLearningLimit}
+                onReviewLimitChange={setReviewLimit}
+                idPrefix="grammar-quiz-"
+              />
             </div>
           )}
 
