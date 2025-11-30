@@ -26825,7 +26825,7 @@
         {
           "id": "vf-g1-u8-012",
           "japanese": "Tom and Maryは今動くている",
-          "sentence": "Tom and mary are ____ to Osaka now.",
+          "sentence": "Tom and Mary are ____ to Osaka now.",
           "verb": "move",
           "choices": [
             "move",
@@ -27017,7 +27017,7 @@
         {
           "id": "vf-g1-u8-024",
           "japanese": "Tom and Maryは今使うている",
-          "sentence": "Tom and mary are ____ a computer now.",
+          "sentence": "Tom and Mary are ____ a computer now.",
           "verb": "use",
           "choices": [
             "use",
@@ -27209,7 +27209,7 @@
         {
           "id": "vf-g1-u8-036",
           "japanese": "Tom and Maryは今見るている",
-          "sentence": "Tom and mary are ____ TV now.",
+          "sentence": "Tom and Mary are ____ TV now.",
           "verb": "watch",
           "choices": [
             "watch",
@@ -27401,7 +27401,7 @@
         {
           "id": "vf-g1-u8-048",
           "japanese": "Tom and Maryは今必要とするている",
-          "sentence": "Tom and mary are ____ help now.",
+          "sentence": "Tom and Mary are ____ help now.",
           "verb": "need",
           "choices": [
             "need",
@@ -27593,7 +27593,7 @@
         {
           "id": "vf-g1-u8-060",
           "japanese": "Tom and Maryは今見るている",
-          "sentence": "Tom and mary are ____ at pictures now.",
+          "sentence": "Tom and Mary are ____ at pictures now.",
           "verb": "look",
           "choices": [
             "look",
@@ -31019,7 +31019,7 @@
         {
           "id": "vf-g1-u9-012",
           "japanese": "Tom and Maryは先週giveするした",
-          "sentence": "Tom and mary ____  last week.",
+          "sentence": "Tom and Mary ____  last week.",
           "verb": "give",
           "choices": [
             "give",
@@ -31211,7 +31211,7 @@
         {
           "id": "vf-g1-u9-024",
           "japanese": "Tom and Maryは2日前に好むした",
-          "sentence": "Tom and mary ____ music two days ago.",
+          "sentence": "Tom and Mary ____ music two days ago.",
           "verb": "like",
           "choices": [
             "like",
@@ -31403,7 +31403,7 @@
         {
           "id": "vf-g1-u9-036",
           "japanese": "Tom and Maryは昨日thinkするした",
-          "sentence": "Tom and mary ____  yesterday.",
+          "sentence": "Tom and Mary ____  yesterday.",
           "verb": "think",
           "choices": [
             "think",
@@ -31595,7 +31595,7 @@
         {
           "id": "vf-g1-u9-048",
           "japanese": "Tom and Maryは去年必要とするした",
-          "sentence": "Tom and mary ____ help last year.",
+          "sentence": "Tom and Mary ____ help last year.",
           "verb": "need",
           "choices": [
             "need",
@@ -31787,7 +31787,7 @@
         {
           "id": "vf-g1-u9-060",
           "japanese": "Tom and Maryは先月knowするした",
-          "sentence": "Tom and mary ____  last month.",
+          "sentence": "Tom and Mary ____  last month.",
           "verb": "know",
           "choices": [
             "know",
@@ -31979,7 +31979,7 @@
         {
           "id": "vf-g1-u9-072",
           "japanese": "Tom and Maryは先週欲しいした",
-          "sentence": "Tom and mary ____ a dog last week.",
+          "sentence": "Tom and Mary ____ a dog last week.",
           "verb": "want",
           "choices": [
             "want",
@@ -32171,7 +32171,7 @@
         {
           "id": "vf-g1-u9-084",
           "japanese": "Tom and Maryは2日前に見るした",
-          "sentence": "Tom and mary ____  two days ago.",
+          "sentence": "Tom and Mary ____  two days ago.",
           "verb": "see",
           "choices": [
             "see",
@@ -32363,7 +32363,7 @@
         {
           "id": "vf-g1-u9-096",
           "japanese": "Tom and Maryは昨日手伝うした",
-          "sentence": "Tom and mary ____ my mother yesterday.",
+          "sentence": "Tom and Mary ____ my mother yesterday.",
           "verb": "help",
           "choices": [
             "help",
