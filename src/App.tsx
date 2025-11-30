@@ -1135,20 +1135,20 @@ function App() {
   };
   
   // スキップハンドラー(回答前に次へボタンを押した場合)
-  const handleSkip = () => {
+  const handleSkip = async () => {
     const currentQuestion = quizState.questions[quizState.currentIndex];
     if (currentQuestion) {
       // 応答時間を計算
       const responseTime = Date.now() - questionStartTimeRef.current;
       
       // スキップ記録(30日間除外、AI学習アシスタントが後日検証)
-      recordWordSkip(currentQuestion.word, 30);
+      await recordWordSkip(currentQuestion.word, 30);
       
       // AI学習アシスタント: スキップグループに追加
       addToSkipGroup(currentQuestion.word);
       
       // 単語進捗を更新（正解として記録し、定着率をカウント）
-      updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'translation');
+      await updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'translation');
       
       // スキップでもスコアボードに反映(正解扱い)
       setQuizState((prev) => ({
@@ -1175,7 +1175,7 @@ function App() {
       }, 'translation');
       
       // 回答を記録
-      addQuizResult({
+      await addQuizResult({
         id: generateId(),
         questionSetId: 'translation-quiz-single',
         questionSetName: '和訳クイズ',
