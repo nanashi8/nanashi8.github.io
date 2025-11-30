@@ -6396,7 +6396,7 @@
         {
           "id": "vf-g1-u2-004",
           "japanese": "Tom and Maryはよく使う",
-          "sentence": "Tom and Mary ____ a computer often.",
+          "sentence": "Tom and mary ____ a computer often.",
           "verb": "use",
           "choices": [
             "use",
@@ -6460,7 +6460,7 @@
         {
           "id": "vf-g1-u2-008",
           "japanese": "Tom and Maryは普段必要とする",
-          "sentence": "Tom and Mary ____ help usually.",
+          "sentence": "Tom and mary ____ help usually.",
           "verb": "need",
           "choices": [
             "need",
@@ -6524,7 +6524,7 @@
         {
           "id": "vf-g1-u2-012",
           "japanese": "Tom and Maryは今動く",
-          "sentence": "Tom and Mary ____ to Osaka now.",
+          "sentence": "Tom and mary ____ to Osaka now.",
           "verb": "move",
           "choices": [
             "move",
@@ -6588,7 +6588,7 @@
         {
           "id": "vf-g1-u2-016",
           "japanese": "Tom and Maryはよく勉強する",
-          "sentence": "Tom and Mary ____ English often.",
+          "sentence": "Tom and mary ____ English often.",
           "verb": "study",
           "choices": [
             "study",
@@ -6652,7 +6652,7 @@
         {
           "id": "vf-g1-u2-020",
           "japanese": "Tom and Maryは普段働く",
-          "sentence": "Tom and Mary ____ hard usually.",
+          "sentence": "Tom and mary ____ hard usually.",
           "verb": "work",
           "choices": [
             "work",
@@ -6716,7 +6716,7 @@
         {
           "id": "vf-g1-u2-024",
           "japanese": "Tom and Maryは今好む",
-          "sentence": "Tom and Mary ____ music now.",
+          "sentence": "Tom and mary ____ music now.",
           "verb": "like",
           "choices": [
             "like",
@@ -6780,7 +6780,7 @@
         {
           "id": "vf-g1-u2-028",
           "japanese": "Tom and Maryはよく始める",
-          "sentence": "Tom and Mary ____ homework often.",
+          "sentence": "Tom and mary ____ homework often.",
           "verb": "start",
           "choices": [
             "start",

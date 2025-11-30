@@ -913,7 +913,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                     {currentQuestion.sentence}
                   </div>
                   <div className="choices-grid">
-                    {Array.isArray(currentQuestion.choices) ? currentQuestion.choices.map((choice: string, index: number) => {
+                    {currentQuestion.choices.map((choice: string, index: number) => {
                       const isSelected = selectedAnswer === choice;
                       const isCorrectChoice = choice === currentQuestion.correctAnswer;
                       const showCorrect = answered && isCorrectChoice;
@@ -931,9 +931,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                           {showIncorrect && ' ✗'}
                         </button>
                       );
-                    }) : (
-                      <div className="no-choices-placeholder">選択肢が利用できません</div>
-                    )}
+                    })}
                   </div>
                 </div>
               )}

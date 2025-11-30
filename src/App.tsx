@@ -219,9 +219,6 @@ function App() {
   const recentlyStudiedWordsRef = useRef<string[]>([]);
   
   // 設定
-  // ScoreBoard 更新用: 最終回答時刻（子コンポーネントから更新されることがある）
-  const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
-
   const [autoAdvance] = useState<boolean>(() => {
     const saved = localStorage.getItem('quiz-auto-advance');
     return saved ? JSON.parse(saved) : false;
