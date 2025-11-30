@@ -32,9 +32,9 @@
 
 .inline-nav-btn:hover:not(:disabled) {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--shadow-sm);
 }
 
 .inline-nav-btn:disabled {
@@ -97,18 +97,18 @@
 }
 
 .difficulty-badge.beginner {
-  background: #10b981;
-  color: white;
+  background: var(--success-color);
+  color: var(--text-color-light);
 }
 
 .difficulty-badge.intermediate {
-  background: #f59e0b;
-  color: white;
+  background: var(--warning-color);
+  color: var(--text-color-light);
 }
 
 .difficulty-badge.advanced {
-  background: #ef4444;
-  color: white;
+  background: var(--error-color);
+  color: var(--text-color-light);
 }
 
 /* 並び替え問題用のワードエリア */
@@ -150,14 +150,14 @@
   font-size: 16px;
   font-weight: 500;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-xs);
 }
 
 .word-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px var(--shadow-sm);
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .word-button:disabled {
@@ -167,7 +167,7 @@
 
 .word-button.selected {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .word-button.remaining {
@@ -190,15 +190,15 @@
   gap: 8px;
   margin: 10px 0;
   padding: 8px 12px;
-  background: #667eea;
+  background: var(--accent-purple);
   border-radius: 20px;
   font-size: 14px;
-  color: white;
+  color: var(--text-color-light);
   font-weight: 500;
 }
 
 .grammar-point .tag {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--overlay-light);
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;
@@ -246,7 +246,7 @@
 
 .choice-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--shadow-sm);
   border-color: var(--primary-color);
   background: var(--primary-light);
 }
@@ -280,7 +280,7 @@
   margin: 15px 0;
   padding: 15px 20px;
   background: #fef3c7;
-  border-left: 4px solid #f59e0b;
+  border-left: 4px solid var(--warning-color);
   border-radius: 8px;
   color: #78350f;
   font-size: 14px;
@@ -319,12 +319,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px var(--shadow-xs);
 }
 
 .submit-button {
-  background: #3b82f6;
-  color: white;
+  background: var(--accent-blue);
+  color: var(--text-color-light);
 }
 
 .submit-button:hover:not(:disabled) {
@@ -339,7 +339,7 @@
 
 .reset-button {
   background: #6b7280;
-  color: white;
+  color: var(--text-color-light);
 }
 
 .reset-button:hover {
@@ -357,12 +357,12 @@
 
 .result-box.correct {
   background: #d1fae5;
-  border: 3px solid #10b981;
+  border: 3px solid var(--success-color);
 }
 
 .result-box.incorrect {
   background: #fee2e2;
-  border: 3px solid #ef4444;
+  border: 3px solid var(--error-color);
 }
 
 .result-header {
@@ -465,7 +465,7 @@
 
 .rating-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-xs);
 }
 
 .rating-btn.easy {
@@ -474,20 +474,20 @@
 
 .rating-btn.easy:hover,
 .rating-btn.easy.active {
-  background: #10b981;
-  color: white;
+  background: var(--success-color);
+  color: var(--text-color-light);
   border-color: var(--success-color);
 }
 
 .rating-btn.medium {
-  border-color: #f59e0b;
+  border-color: var(--warning-color);
 }
 
 .rating-btn.medium:hover,
 .rating-btn.medium.active {
-  background: #f59e0b;
-  color: white;
-  border-color: #f59e0b;
+  background: var(--warning-color);
+  color: var(--text-color-light);
+  border-color: var(--warning-color);
 }
 
 .rating-btn.hard {
@@ -496,8 +496,8 @@
 
 .rating-btn.hard:hover,
 .rating-btn.hard.active {
-  background: #ef4444;
-  color: white;
+  background: var(--error-color);
+  color: var(--text-color-light);
   border-color: var(--error-color);
 }
 
@@ -506,7 +506,7 @@
   margin: 20px 0;
   padding: 15px 20px;
   background: #fee2e2;
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--error-color);
   border-radius: 8px;
   color: var(--error-text);
   font-weight: 500;
@@ -520,7 +520,7 @@
 
 .dark-mode .inline-nav-btn:hover:not(:disabled) {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .dark-mode .word-button {
@@ -531,7 +531,7 @@
 
 .dark-mode .word-button.selected {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .dark-mode .choice-button {
@@ -557,7 +557,7 @@
 .dark-mode .choice-button.incorrect {
   background: #5a1e1e;
   color: #fecaca;
-  border-color: #f87171;
+  border-color: var(--error-light);
   box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
 }
 
@@ -581,12 +581,12 @@
 }
 
 .dark-mode .grammar-point {
-  background: #667eea;
-  color: white;
+  background: var(--accent-purple);
+  color: var(--text-color-light);
 }
 
 .dark-mode .grammar-point .tag {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--overlay-light);
 }
 
 .dark-mode .sentence-display {
@@ -597,7 +597,7 @@
 
 .dark-mode .error-message {
   background: #5a1e1e;
-  border-left-color: #ef4444;
+  border-left-color: var(--error-color);
   color: #fecaca;
 }
 
@@ -688,14 +688,14 @@
   font-size: 16px;
   font-weight: 500;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-xs);
 }
 
 .word-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px var(--shadow-sm);
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .word-button:disabled {
@@ -705,7 +705,7 @@
 
 .word-button.selected {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .word-button.remaining {
@@ -728,15 +728,15 @@
   gap: 8px;
   margin: 10px 0;
   padding: 8px 12px;
-  background: #667eea;
+  background: var(--accent-purple);
   border-radius: 20px;
   font-size: 14px;
-  color: white;
+  color: var(--text-color-light);
   font-weight: 500;
 }
 
 .grammar-point .tag {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--overlay-light);
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 12px;
@@ -796,7 +796,7 @@
 
 .choice-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--shadow-sm);
   border-color: var(--primary-color);
   background: var(--primary-light);
 }
@@ -828,8 +828,8 @@
 /* ヒントボタン */
 .hint-button {
   padding: 8px 16px;
-  background: #fbbf24;
-  color: white;
+  background: var(--warning-light);
+  color: var(--text-color-light);
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -849,7 +849,7 @@
   margin: 15px 0;
   padding: 15px 20px;
   background: #fef3c7;
-  border-left: 4px solid #f59e0b;
+  border-left: 4px solid var(--warning-color);
   border-radius: 8px;
   color: #78350f;
   font-size: 14px;
@@ -878,12 +878,12 @@
 
 .result-box.correct {
   background: #d1fae5;
-  border: 3px solid #10b981;
+  border: 3px solid var(--success-color);
 }
 
 .result-box.incorrect {
   background: #fee2e2;
-  border: 3px solid #ef4444;
+  border: 3px solid var(--error-color);
 }
 
 .result-header {
@@ -934,7 +934,7 @@
 .explanation {
   margin-top: 15px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--overlay-light);
   border-radius: 8px;
   border-left: 4px solid var(--primary-color);
   color: var(--text-color);
@@ -963,12 +963,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px var(--shadow-xs);
 }
 
 .previous-button {
   background: #6b7280;
-  color: white;
+  color: var(--text-color-light);
 }
 
 .previous-button:hover:not(:disabled) {
@@ -982,8 +982,8 @@
 }
 
 .submit-button {
-  background: #3b82f6;
-  color: white;
+  background: var(--accent-blue);
+  color: var(--text-color-light);
 }
 
 .submit-button:hover:not(:disabled) {
@@ -997,8 +997,8 @@
 }
 
 .next-button {
-  background: #10b981;
-  color: white;
+  background: var(--success-color);
+  color: var(--text-color-light);
 }
 
 .next-button:hover:not(:disabled) {
@@ -1012,8 +1012,8 @@
 }
 
 .reset-button {
-  background: #f59e0b;
-  color: white;
+  background: var(--warning-color);
+  color: var(--text-color-light);
 }
 
 .reset-button:hover {
@@ -1026,7 +1026,7 @@
   margin: 20px 0;
   padding: 15px 20px;
   background: #fee2e2;
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--error-color);
   border-radius: 8px;
   color: var(--error-text);
   font-weight: 500;
@@ -1041,7 +1041,7 @@
 
 .dark-mode .word-button.selected {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-color-light);
 }
 
 .dark-mode .choice-button {
@@ -1067,7 +1067,7 @@
 .dark-mode .choice-button.incorrect {
   background: #5a1e1e;
   color: #fecaca;
-  border-color: #f87171;
+  border-color: var(--error-light);
   box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
 }
 
