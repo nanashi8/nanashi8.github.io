@@ -22,7 +22,12 @@ interface ScoreBoardProps {
   isReviewFocusMode?: boolean; // 補修モード中かどうか
   onShowSettings?: () => void; // 学習設定を開くコールバック
   currentWord?: string; // 現在表示中の単語
-  onAnswerTime?: number; // 回答時刻（更新トリガー用）
+  onAnswerTime?: number; // 回答時刻(更新トリガー用)
+  // 学習設定情報
+  dataSource?: string; // 問題集
+  category?: string; // 関連分野
+  difficulty?: string; // 難易度
+  wordPhraseFilter?: string; // 単語・熟語フィルター
 }
 
 function ScoreBoard({ 
@@ -37,7 +42,11 @@ function ScoreBoard({
   isReviewFocusMode = false,
   onShowSettings,
   currentWord,
-  onAnswerTime
+  onAnswerTime,
+  dataSource = '',
+  category = '',
+  difficulty = '',
+  wordPhraseFilter = ''
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'plan' | 'breakdown' | 'history' | 'settings'>('plan');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -212,33 +221,35 @@ function ScoreBoard({
         <div className="score-board-content">
           <div className="plan-tab-compact">
             {/* 和訳・スペルタブのみプラン詳細を表示 */}
+            {/* 和訳・スペルタブのみプラン詳細を表示 */}
             {(mode === 'translation' || mode === 'spelling') ? (
               <>
                 <div className="plan-text-line">
-                  <span className="stat-text-label">🟢 定着済:</span>
-                  <strong className="stat-text-value mastered">{detailedStats.masteredCount}語</strong>
+                  <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
                   <span className="stat-text-divider">｜</span>
-                  <span className="stat-text-label">🟡 学習中:</span>
-                  <strong className="stat-text-value learning">{detailedStats.learningCount}語</strong>
+                  <span className="stat-text-label">{category || '全分野'}</span>
                   <span className="stat-text-divider">｜</span>
-                  <span className="stat-text-label">🔴 要復習:</span>
-                  <strong className="stat-text-value review">{detailedStats.strugglingCount}語</strong>
+                  <span className="stat-text-label">{difficulty === 'all' ? '全難易度' : difficulty === 'basic' ? '基礎' : difficulty === 'standard' ? '標準' : difficulty === 'advanced' ? '発展' : '全難易度'}</span>
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">{wordPhraseFilter === 'all' ? '単語・熟語' : wordPhraseFilter === 'word' ? '単語のみ' : wordPhraseFilter === 'phrase' ? '熟語のみ' : '単語・熟語'}</span>
                 </div>
-                <div className="plan-text-line plan-text-line-secondary">
+                <div className="plan-text-line">
+                  <span className="stat-text-label">定着済:</span>
+                  <strong className="stat-text-value mastered">{detailedStats.masteredCount}</strong>
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">学習中:</span>
+                  <strong className="stat-text-value learning">{detailedStats.learningCount}</strong>
+                  {learningLimit !== null && <span className="stat-text-sub">/{learningLimit}</span>}
+                  <span className="stat-text-divider">｜</span>
+                  <span className="stat-text-label">要復習:</span>
+                  <strong className="stat-text-value review">{detailedStats.strugglingCount}</strong>
+                  {reviewLimit !== null && <span className="stat-text-sub">/{reviewLimit}</span>}
                   <span 
-                    className="plan-setting-clickable"
+                    className="plan-setting-icon"
                     onClick={() => setShowPlanSettings(!showPlanSettings)}
-                    title="クリックして設定"
+                    title="上限設定"
                   >
-                    🎯 学習中上限: <strong>{learningLimit === null ? '無制限' : `${learningLimit}語まで`}</strong>
-                  </span>
-                  <span>｜</span>
-                  <span 
-                    className="plan-setting-clickable"
-                    onClick={() => setShowPlanSettings(!showPlanSettings)}
-                    title="クリックして設定"
-                  >
-                    ⚠️ 要復習上限: <strong>{reviewLimit === null ? '無制限' : `${reviewLimit}語まで`}</strong>
+                    ⚙️
                   </span>
                 </div>
               </>
