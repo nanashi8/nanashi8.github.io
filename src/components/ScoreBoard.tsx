@@ -181,7 +181,7 @@ function ScoreBoard({
               title="学習状況"
             >
               <span className="tab-icon">📈</span>
-              <span className="tab-label">学習</span>
+              <span className="tab-label">状況</span>
             </button>
           )}
           {(mode === 'translation' || mode === 'spelling') && (
@@ -351,22 +351,6 @@ function ScoreBoard({
             </div>
             {detailedStats.appearedWords > 0 && (
               <>
-                <div className="retention-breakdown-stats">
-              <div className="stat-row">
-                <span className="stat-label">本日正答率:</span>
-                <strong className="stat-value">{todayAccuracy}%</strong>
-                <span className="stat-detail">({todayTotalAnswered}問)</span>
-              </div>
-              <div className="stat-row">
-                <span className="stat-label">本日定着率:</span>
-                <strong className="stat-value">{retentionRate}%</strong>
-                <span className="stat-detail">({masteredCount}語定着)</span>
-              </div>
-              <div className="stat-row">
-                <span className="stat-label">累計出題語句数:</span>
-                <strong className="stat-value">{totalAnsweredCount}問</strong>
-              </div>
-            </div>
             <div className="retention-progress-bar">
               {detailedStats.masteredPercentage > 0 && (
                 <div 
@@ -402,6 +386,22 @@ function ScoreBoard({
                 </div>
               )}
             </div>
+                <div className="retention-breakdown-stats">
+              <div className="stat-row">
+                <span className="stat-label">本日正答率:</span>
+                <strong className="stat-value">{todayAccuracy}%</strong>
+                <span className="stat-detail">({todayTotalAnswered}問)</span>
+              </div>
+              <div className="stat-row">
+                <span className="stat-label">本日定着率:</span>
+                <strong className="stat-value">{retentionRate}%</strong>
+                <span className="stat-detail">({masteredCount}語定着)</span>
+              </div>
+              <div className="stat-row">
+                <span className="stat-label">累計出題語句数:</span>
+                <strong className="stat-value">{totalAnsweredCount}問</strong>
+              </div>
+            </div>
             </>
             )}
           </div>
@@ -426,23 +426,18 @@ function ScoreBoard({
                   <div className="word-detail-container">
                     <div className="word-detail-title">📊 {currentWord} の学習データ</div>
                     <div className="word-detail-stats">
-                      <div className="word-stat-item">
-                        <span className="word-stat-label">正解回数:</span>
-                        <strong className="word-stat-value">{wordData.correctCount}回正解 / {wordData.totalCount}回出題</strong>
-                      </div>
+                      <span className="word-stat-label">正解:</span>
+                      <strong className="word-stat-value">{wordData.correctCount}/{wordData.totalCount}回</strong>
+                      <span className="word-stat-divider">｜</span>
                       {wordData.accuracyHistory && (
-                        <div className="word-stat-item">
-                          <span className="word-stat-label">正誤履歴:</span>
+                        <>
+                          <span className="word-stat-label">履歴:</span>
                           <span className="word-history-icons">{wordData.accuracyHistory}</span>
-                        </div>
+                          <span className="word-stat-divider">｜</span>
+                        </>
                       )}
-                      <div className="word-stat-item">
-                        <span className="word-stat-label">定着率（試験中）:</span>
-                        <strong className="word-stat-value word-retention-rate">{wordData.retentionRate}%</strong>
-                      </div>
-                      <div className="word-stat-description">
-                        💡 定着率100%は何回出題しても間違わない状態。0%は全く正解できない状態。70%なら10問中7問正解できる予測です。
-                      </div>
+                      <span className="word-stat-label">定着率:</span>
+                      <strong className="word-stat-value word-retention-rate">{wordData.retentionRate}%</strong>
                     </div>
                   </div>
                 );
