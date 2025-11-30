@@ -1,271 +1,306 @@
-# 品質自動化ガイド - 100%ユニーク度達成の仕組み
+# 品質自動化ガイド - 全コンテンツ品質保証システム
 
 ## 概要
 
-全1,800問の文法問題(G1/G2/G3 × 3ファイルタイプ)のユニーク度100%を効率的に達成・維持するための自動化ツールとワークフロー。
+このシステムは、英語学習アプリの全コンテンツ（文法・語彙・長文）の品質を自動的に保証します。
+あなたの設計思想と実装に完全対応した品質検証を提供します。
 
-## ツール構成
+## 🎯 設計思想
 
-### 1. 検証スクリプト
+### 1. **実装ベースの品質基準**
+- データ形式に完全対応（JSON, CSV, TXT）
+- 実際のアプリケーション動作を反映
+- TypeScriptコンポーネントの期待値に準拠
 
-**ファイル**: `scripts/validate_and_fix_duplicates.py`
+### 2. **教育的価値の最大化**
+- 中学生レベルに適した語彙・文法
+- 段階的な難易度設定（beginner → intermediate → advanced）
+- 自然な英文構造（フレーズ分割の適切性）
 
-**機能**:
-- 全1,800問の重複検証
-- グレード別・ファイルタイプ別の詳細レポート
-- 重複パターンの検出と出力
-- JSON形式での重複レポート出力
+### 3. **継続的品質改善**
+- 問題の自動検出と具体的な改善提案
+- スコアリングによる品質の定量化
+- 重複排除による学習効果の最大化
 
-**使用方法**:
+---
+
+## 📊 品質保証の3つの柱
+
+### 🟦 文法問題（Grammar Questions）
+**形式**: JSON  
+**検証項目**:
+- ✅ 問題文の重複排除（1,800問100%ユニーク）
+- ✅ Grade別の品質保証（中1, 中2, 中3）
+- ✅ 問題タイプ別検証（verb-form, fill-in-blank, sentence-ordering）
+
+**ツール**: `validate_all_content.py`
+
+### 🟨 語彙・スペル（Vocabulary）
+**形式**: CSV（日本語ヘッダー）  
+**検証項目**:
+- ✅ 単語の重複排除（7,830語100%ユニーク）
+- ✅ レベル別語彙の整合性
+- ✅ CSV形式の正確性（語句, 読み, 意味, etc.）
+- ✅ **プレースホルダー検出**（「手動確認必要」「語源情報を追加してください」等）
+
+**ツール**: 
+- `validate_all_content.py` - 重複検証 + プレースホルダー検出
+- `fix_vocabulary_duplicates.py` - 自動修正
+
+### 🟩 長文読解（Reading Passages）
+**形式**: TXT + JSON（index.json）  
+**検証項目**:
+- ✅ タイトル・IDの重複排除
+- ✅ 文字数要件の遵守
+  - beginner: 800-1,500語
+  - intermediate: 1,500-2,500語
+  - advanced: 2,500-4,000語
+- ✅ **英文品質の保証**（NEW!）
+  - フォーマット: 段落インデント（4スペース）
+  - 文構造: 従属節・前置詞句の自然な配置
+  - 語彙多様性: レベル別の期待値達成
+
+**ツール**:
+- `validate_all_content.py` - 重複 + 品質スコア
+- `validate_passage_quality.py` - 詳細な英文品質検証
+
+### 🟪 UI仕様準拠（UI Specifications）
+**形式**: TypeScript/TSX/CSS  
+**検証項目**:
+- ✅ **カラーシステム**: ハードコードされた色の検出
+- ✅ **ScoreBoard仕様**: タブ構成・プラン表示の準拠
+- ✅ **語句詳細表示**: 意味フィールド・一括開閉機能
+- ✅ **question-nav-row**: フォントサイズ・余白設定
+- ✅ **非同期処理**: await使用・setTimeout禁止
+
+**ツール**: `validate_ui_specifications.py`
+
+**参照仕様書**: `docs/UI_IMMUTABLE_SPECIFICATIONS.md`
+
+---
+
+## 🚀 使用方法
+
+### 0. UI仕様検証（推奨：コード変更後）
+
+UI仕様書への準拠を検証:
 
 ```bash
-# 基本検証
-python3 scripts/validate_and_fix_duplicates.py
+python3 scripts/validate_ui_specifications.py
+```
 
-# 重複レポートをJSON出力
-python3 scripts/validate_and_fix_duplicates.py --export duplicate_report.json
+**検証項目**:
+- カラーシステム（ハードコードされた色の検出）
+- ScoreBoard仕様（タブ構成・プラン表示）
+- 語句詳細表示（意味フィールド・一括開閉）
+- question-nav-row（フォントサイズ・余白）
+- 非同期処理（await使用・setTimeout禁止）
+
+**出力例**:
+```
+============================================================
+UI仕様書準拠検証
+============================================================
+
+[1/5] カラーシステム検証
+  ✓ ハードコードされた色は見つかりませんでした
+
+[2/5] ScoreBoard仕様検証
+  ✓ タブ「学習状況」が定義されている
+  ✓ プラン表示が詳細版を使用している
+  ✓ プラン統計表示が存在する
+
+[3/5] 語句詳細表示検証
+  ✓ 語句詳細に意味が表示されている
+  ✓ 全選択肢詳細の一括開閉機能が実装されている
+
+[4/5] question-nav-row仕様検証
+  ✓ .question-text のフォントサイズ: 28px (28px以上)
+  ✓ padding: 6px (6px以下)
+  ✓ margin-bottom: 10px (10px以下)
+
+[5/5] 非同期処理検証
+  ✓ recordWordSkipをawait
+  ✓ updateWordProgressをawait
+  ✓ addQuizResultをawait
+  ✓ setLastAnswerTimeを呼び出し
+  ✓ setTimeoutは使用されていません
+
+============================================================
+検証結果サマリー
+============================================================
+
+✓ UI仕様書への準拠を確認しました
+```
+
+### 1. 統合検証（推奨）
+
+全コンテンツを一括検証:
+
+```bash
+python3 scripts/validate_all_content.py
 ```
 
 **出力例**:
-
 ```
-【Grade 1 (中1)】
-  ✅ 100.0%  verb-form              (200/200)
-  ✅ 100.0%  fill-in-blank          (200/200)
-  ✅ 100.0%  sentence-ordering      (200/200)
+【文法問題】
+  総計: 1800/1800 = 100.00% ✅
 
-【総計】
-  総問題数: 1,800問
-  ユニーク: 1,800問
-  全体品質: 100.00%
-```
+【語彙・スペル】
+  総計: 7830/7830 = 100.00% ✅
 
-## ワークフロー
+【長文読解】
+  タイトル: 10/10 = 100.0% ✅
+  英文品質: 平均 74.6/100 ⚠️
+    合格(80点以上): 1/3 (33.3%)
+    要改善:
+      - beginner-supermarket-shopping: 71.9点
+      - intermediate-homestay-america: 72.5点
 
-### 新規問題作成時
-
-1. **問題生成**
-   ```bash
-   python3 scripts/generate_new_questions.py --grade 2 --unit 5
-   ```
-
-2. **即座に検証**
-   ```bash
-   python3 scripts/validate_and_fix_duplicates.py
-   ```
-
-3. **重複があれば修正**
-   - レポートに表示された重複IDを確認
-   - 該当問題を手動で修正
-   - 再検証
-
-### 既存データの品質改善
-
-1. **現状確認**
-   ```bash
-   python3 scripts/validate_and_fix_duplicates.py --export current_status.json
-   ```
-
-2. **重複パターン分析**
-   - `current_status.json`を開いて重複箇所を確認
-   - 重複が多いユニット・文法項目を特定
-
-3. **修正実施**
-   - 重複文を異なる表現に変更
-   - 主語・目的語・時制を変更
-   - 文脈を変えて意味は同じでも文が異なるようにする
-
-4. **検証ループ**
-   ```bash
-   python3 scripts/validate_and_fix_duplicates.py
-   # 100%になるまで繰り返し
-   ```
-
-## データ構造の理解
-
-### マルチセクション構造
-
-各JSONファイルは複数セクションを持つ:
-
-```json
-{
-  "units": [
-    {
-      "unit": "Unit 0",
-      "verbForm": [/* 20問 */],
-      "fillInBlank": [/* 100問 */],
-      "sentenceOrdering": [/* 100問 */]
-    }
-  ]
-}
+【総合サマリー】
+  全コンテンツ合計: 9,640/9,640 = 100.00%
 ```
 
-### ファイルタイプとメインセクション
+### 2. 長文の詳細品質検証
 
-| ファイル名 | メインセクション | 検証キー |
-|-----------|---------------|---------|
-| verb-form-questions-grade*.json | `verbForm` | `sentence` |
-| fill-in-blank-questions-grade*.json | `fillInBlank` | `sentence` |
-| sentence-ordering-grade*.json | `sentenceOrdering` | `correctOrder` (G3一部は`sentence`) |
-
-**重要**: 検証スクリプトは各ファイルの**メインセクションのみ**を検証します。
-
-## 重複修正のベストプラクティス
-
-### 1. 文の多様化テクニック
-
-**主語を変える**:
-```
-重複: "He is ____ than me." (3回)
-修正: 
-  - "He is ____ than me."
-  - "He looks ____ than before."
-  - "My brother is ____ than me."
-```
-
-**時間表現を変える**:
-```
-重複: "She has been ____ since morning." (4回)
-修正:
-  - "She has been ____ since morning."
-  - "She has been ____ all day."
-  - "She has been ____ for 30 minutes."
-  - "She has been ____ since yesterday."
-```
-
-**数量を変える**:
-```
-重複: "I have three ____." (3回)
-修正:
-  - "I have two ____."
-  - "I have five ____."
-  - "I have eight ____."
-```
-
-**動詞を変える**:
-```
-重複: "He is ____." (4回)
-修正:
-  - "He is studying."
-  - "He is playing."
-  - "He is working."
-  - "He is running."
-```
-
-### 2. 文法的一貫性の維持
-
-重複を修正する際も、以下を維持:
-- ✅ 文法項目の一貫性
-- ✅ 難易度レベル
-- ✅ 選択肢の妥当性
-- ✅ 日本語訳の正確性
-
-### 3. 効率的な修正順序
-
-1. **Unit単位で修正** - 同じ文法項目をまとめて処理
-2. **重複数が多い順** - インパクトの大きいものから
-3. **検証→修正→検証** - 小さいサイクルで確認
-
-## 品質メトリクス
-
-### 目標
-
-- **総合品質**: 100.00%
-- **各グレード**: 100.00% (600/600問)
-- **各ファイルタイプ**: 100.00% (200/200問)
-- **重複パターン数**: 0件
-
-### 現在の達成状況 (2025-11-29)
-
-✅ **Grade 1**: 100.0% (600/600)
-  - verb-form: 200/200
-  - fill-in-blank: 200/200
-  - sentence-ordering: 200/200
-
-✅ **Grade 2**: 100.0% (600/600)
-  - verb-form: 200/200
-  - fill-in-blank: 200/200
-  - sentence-ordering: 200/200
-
-✅ **Grade 3**: 100.0% (600/600)
-  - verb-form: 200/200
-  - fill-in-blank: 200/200
-  - sentence-ordering: 200/200
-
-**総計**: 1,800/1,800問 = **100.00%** 🎉
-
-## CI/CD統合 (今後の展望)
-
-### GitHub Actionsでの自動検証
-
-```yaml
-# .github/workflows/quality-check.yml
-name: Quality Check
-
-on: [push, pull_request]
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-      - name: Validate Grammar Questions
-        run: |
-          python3 scripts/validate_and_fix_duplicates.py
-      - name: Upload Report
-        if: failure()
-        uses: actions/upload-artifact@v2
-        with:
-          name: duplicate-report
-          path: duplicate_report.json
-```
-
-### Pre-commit Hook
+特定パッセージの英文品質を詳細チェック:
 
 ```bash
-# .git/hooks/pre-commit
-#!/bin/bash
-python3 scripts/validate_and_fix_duplicates.py
-if [ $? -ne 0 ]; then
-    echo "❌ 品質チェック失敗: 重複が検出されました"
-    echo "修正後に再度コミットしてください"
-    exit 1
-fi
+# 単一ファイル
+python3 scripts/validate_passage_quality.py --file beginner-cafe-menu.txt
+
+# レベル別
+python3 scripts/validate_passage_quality.py --level intermediate
+
+# 全パッセージ
+python3 scripts/validate_passage_quality.py
 ```
 
-## トラブルシューティング
+---
 
-### よくある問題
+## 🔍 品質基準の詳細
 
-**Q: G1/G3のsentence-orderingが23問/60問しか検出されない**
+### 長文英文品質（80点以上で合格）
 
-A: 一部の問題が`correctOrder`フィールドを持っていない可能性があります。スクリプトは`correctOrder`または`sentence`の両方をチェックします。
+#### 1. フォーマット品質 (30%)
 
-**Q: 重複レポートに表示されない重複がある**
+**段落インデント**:
+```
+正しい例:
+    This is the first line of a paragraph. (4スペース)
+This is the continuation without indentation.
 
-A: 検証スクリプトはメインセクションのみをチェックします。他のセクションの重複は意図的に無視されます。
+誤った例:
+This is missing indentation.  ❌
+     This has 5 spaces.  ❌
+```
 
-**Q: 100%達成後に新しい重複が発生**
+#### 2. コンテンツ品質 (40%)
 
-A: 新規問題追加時は必ず検証スクリプトを実行してください。CI/CD統合で自動化することを推奨します。
+**文字数要件**:
+- beginner: 800-1,500語（不足/超過で減点）
+- intermediate: 1,500-2,500語
+- advanced: 2,500-4,000語
 
-## 関連ドキュメント
+**語彙多様性**:
+- beginner: 40%以上のユニーク語彙率
+- intermediate: 45%以上
+- advanced: 50%以上
 
-- [GRAMMAR_QUALITY_PIPELINE.md](./GRAMMAR_QUALITY_PIPELINE.md) - 品質プロセス全体
-- [GRAMMAR_GENERATION_GUIDELINES.md](./GRAMMAR_GENERATION_GUIDELINES.md) - 問題作成ガイドライン
-- [GRAMMAR_VALIDATION_SPEC.md](./GRAMMAR_VALIDATION_SPEC.md) - 検証仕様
+#### 3. 文法構造品質 (30%)
 
-## まとめ
+**従属節の配置**:
+```
+❌ 悪い例:
+I was nervous.
+when I entered the classroom.
 
-このツールとワークフローにより:
+✅ 良い例:
+I was nervous when I entered the classroom.
+```
 
-1. ✅ **迅速な検証**: 1,800問を数秒で検証
-2. ✅ **詳細なレポート**: グレード別・ファイルタイプ別に重複を特定
-3. ✅ **再現可能**: 誰でも同じ方法で100%を達成可能
-4. ✅ **継続的品質**: 新規追加時も品質維持が容易
+**前置詞句の配置**:
+```
+❌ 悪い例:
+I played soccer.
+with my friends.
 
-**100%ユニーク度の達成と維持が効率的に実現できます。**
+✅ 良い例:
+I played soccer with my friends.
+```
+
+---
+
+## 📋 プレースホルダー検出
+
+### 検出パターン
+
+語彙CSVファイル内の以下のプレースホルダーを自動検出します:
+
+- `手動確認必要`
+- `語源情報を追加してください`
+- `語源情報が必要です`
+- `[TODO]`
+- `[FIXME]`
+- `[要確認]`
+- `[未入力]`
+
+### 検出方法
+
+```bash
+python3 scripts/validate_all_content.py
+```
+
+出力例:
+```
+【🔤 語彙・スペル】
+  ⚠️ 100.0%  all-words                           (3282/3282)
+      ⚠️ プレースホルダー検出: 284件
+        - 行29: 'Mr.' (explanationに'語源情報が必要です')
+        - 行30: 'Mrs.' (explanationに'語源情報が必要です')
+        ... 他281件
+  
+  総計: 7830/7830 = 100.00%
+  ⚠️ 総プレースホルダー数: 284件 - 要修正!
+```
+
+### 修正が必要な理由
+
+プレースホルダーが残っていると:
+- 和訳タブで正しい日本語訳が表示されない
+- スペルタブで意味不明な説明が表示される
+- ユーザー体験が大幅に低下
+
+---
+
+## 🛠️ ワークフロー
+
+### 新規長文パッセージ作成時
+
+1. **作成**: .txt ファイルを作成
+2. **index.json 更新**: メタデータ追加
+3. **品質検証**: `validate_passage_quality.py --file xxx.txt`
+4. **問題修正**: インデント、文構造を改善
+5. **再検証**: 80点以上を目指す
+6. **統合検証**: `validate_all_content.py`
+
+### リリース前チェック
+
+```bash
+# 全検証を実行（exit code 0 = 合格）
+python3 scripts/validate_all_content.py && \
+python3 scripts/validate_passage_quality.py && \
+echo "✅ リリース準備完了"
+```
+
+---
+
+## 🎉 まとめ
+
+このシステムにより:
+
+- ✅ **文法**: 1,800問100%ユニーク
+- ✅ **語彙**: 7,830語100%ユニーク
+- ✅ **長文**: タイトル100%ユニーク + 英文品質スコアリング
+
+**あなたの設計思想**（実装ベースの品質基準、教育的価値、継続的改善）に完全対応した品質保証を実現しています。
