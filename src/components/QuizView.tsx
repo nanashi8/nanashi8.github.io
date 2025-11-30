@@ -72,6 +72,17 @@ function QuizView({
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   
+  // 学習中・要復習の上限設定（デフォルト: 学習中30、要復習10）
+  const [learningLimit, setLearningLimit] = useState<number>(() => {
+    const saved = localStorage.getItem('learning-limit-translation');
+    return saved ? parseInt(saved) : 30;
+  });
+  
+  const [reviewLimit, setReviewLimit] = useState<number>(() => {
+    const saved = localStorage.getItem('review-limit-translation');
+    return saved ? parseInt(saved) : 10;
+  });
+  
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
     const saved = localStorage.getItem('autoNext');
@@ -243,20 +254,16 @@ function QuizView({
         <input
           type="number"
           id="learning-limit"
-          min="0"
-          placeholder="未入力=無制限"
+          min="1"
+          value={learningLimit}
           className="number-input"
           onChange={(e) => {
-            const value = e.target.value === '' ? null : parseInt(e.target.value);
-            if (value === null) {
-              localStorage.removeItem('learning-limit-translation');
-            } else {
-              localStorage.setItem('learning-limit-translation', value.toString());
-            }
+            const value = parseInt(e.target.value) || 30;
+            setLearningLimit(value);
+            localStorage.setItem('learning-limit-translation', value.toString());
           }}
-          defaultValue={localStorage.getItem('learning-limit-translation') || ''}
         />
-        <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+        <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
       </div>
 
       <div className="filter-group">
@@ -264,20 +271,16 @@ function QuizView({
         <input
           type="number"
           id="review-limit"
-          min="0"
-          placeholder="未入力=無制限"
+          min="1"
+          value={reviewLimit}
           className="number-input"
           onChange={(e) => {
-            const value = e.target.value === '' ? null : parseInt(e.target.value);
-            if (value === null) {
-              localStorage.removeItem('review-limit-translation');
-            } else {
-              localStorage.setItem('review-limit-translation', value.toString());
-            }
+            const value = parseInt(e.target.value) || 10;
+            setReviewLimit(value);
+            localStorage.setItem('review-limit-translation', value.toString());
           }}
-          defaultValue={localStorage.getItem('review-limit-translation') || ''}
         />
-        <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+        <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
       </div>
     </div>
   )}      {!hasQuestions ? (
@@ -405,20 +408,16 @@ function QuizView({
                 <input
                   type="number"
                   id="learning-limit-quiz"
-                  min="0"
-                  placeholder="未入力=無制限"
+                  min="1"
+                  value={learningLimit}
                   className="number-input"
                   onChange={(e) => {
-                    const value = e.target.value === '' ? null : parseInt(e.target.value);
-                    if (value === null) {
-                      localStorage.removeItem('learning-limit-translation');
-                    } else {
-                      localStorage.setItem('learning-limit-translation', value.toString());
-                    }
+                    const value = parseInt(e.target.value) || 30;
+                    setLearningLimit(value);
+                    localStorage.setItem('learning-limit-translation', value.toString());
                   }}
-                  defaultValue={localStorage.getItem('learning-limit-translation') || ''}
                 />
-                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
               </div>
 
               <div className="filter-group">
@@ -426,20 +425,16 @@ function QuizView({
                 <input
                   type="number"
                   id="review-limit-quiz"
-                  min="0"
-                  placeholder="未入力=無制限"
+                  min="1"
+                  value={reviewLimit}
                   className="number-input"
                   onChange={(e) => {
-                    const value = e.target.value === '' ? null : parseInt(e.target.value);
-                    if (value === null) {
-                      localStorage.removeItem('review-limit-translation');
-                    } else {
-                      localStorage.setItem('review-limit-translation', value.toString());
-                    }
+                    const value = parseInt(e.target.value) || 10;
+                    setReviewLimit(value);
+                    localStorage.setItem('review-limit-translation', value.toString());
                   }}
-                  defaultValue={localStorage.getItem('review-limit-translation') || ''}
                 />
-                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
               </div>
               
               {/* 自動次へ設定 */}
