@@ -5,7 +5,9 @@ import { ErrorPrediction } from '../errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
+import LearningLimitsInput from './LearningLimitsInput';
 import { getStudySettings, updateStudySettings } from '../progressStorage';
+import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface QuizViewProps {
   quizState: QuizState;
@@ -72,16 +74,8 @@ function QuizView({
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   
-  // 学習中・要復習の上限設定（デフォルト: 学習中30、要復習10）
-  const [learningLimit, setLearningLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('learning-limit-translation');
-    return saved ? parseInt(saved) : 30;
-  });
-  
-  const [reviewLimit, setReviewLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('review-limit-translation');
-    return saved ? parseInt(saved) : 10;
-  });
+  // 学習中・要復習の上限設定（カスタムフック使用）
+  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } = useLearningLimits('translation');
   
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
@@ -249,39 +243,13 @@ function QuizView({
         </div>
       )}
 
-      <div className="filter-group">
-        <label htmlFor="learning-limit">🎯 学習中の上限:</label>
-        <input
-          type="number"
-          id="learning-limit"
-          min="1"
-          value={learningLimit}
-          className="number-input"
-          onChange={(e) => {
-            const value = parseInt(e.target.value) || 30;
-            setLearningLimit(value);
-            localStorage.setItem('learning-limit-translation', value.toString());
-          }}
-        />
-        <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
-      </div>
-
-      <div className="filter-group">
-        <label htmlFor="review-limit">⚠️ 要復習の上限:</label>
-        <input
-          type="number"
-          id="review-limit"
-          min="1"
-          value={reviewLimit}
-          className="number-input"
-          onChange={(e) => {
-            const value = parseInt(e.target.value) || 10;
-            setReviewLimit(value);
-            localStorage.setItem('review-limit-translation', value.toString());
-          }}
-        />
-        <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
-      </div>
+      <LearningLimitsInput
+        learningLimit={learningLimit}
+        reviewLimit={reviewLimit}
+        onLearningLimitChange={setLearningLimit}
+        onReviewLimitChange={setReviewLimit}
+        idPrefix=""
+      />
     </div>
   )}      {!hasQuestions ? (
         <div className="empty-state">
@@ -403,39 +371,13 @@ function QuizView({
                 </div>
               )}
 
-              <div className="filter-group">
-                <label htmlFor="learning-limit-quiz">🎯 学習中の上限:</label>
-                <input
-                  type="number"
-                  id="learning-limit-quiz"
-                  min="1"
-                  value={learningLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 30;
-                    setLearningLimit(value);
-                    localStorage.setItem('learning-limit-translation', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 30）</p>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="review-limit-quiz">⚠️ 要復習の上限:</label>
-                <input
-                  type="number"
-                  id="review-limit-quiz"
-                  min="1"
-                  value={reviewLimit}
-                  className="number-input"
-                  onChange={(e) => {
-                    const value = parseInt(e.target.value) || 10;
-                    setReviewLimit(value);
-                    localStorage.setItem('review-limit-translation', value.toString());
-                  }}
-                />
-                <p className="setting-help">この数に達したら既存の内容で繰り返し出題（デフォルト: 10）</p>
-              </div>
+              <LearningLimitsInput
+                learningLimit={learningLimit}
+                reviewLimit={reviewLimit}
+                onLearningLimitChange={setLearningLimit}
+                onReviewLimitChange={setReviewLimit}
+                idPrefix="quiz-"
+              />
               
               {/* 自動次へ設定 */}
               <div className="filter-group">
