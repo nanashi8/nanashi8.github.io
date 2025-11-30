@@ -26,7 +26,7 @@ interface QuizViewProps {
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
   onPrevious: () => void;
-  onSkip?: () => void;
+  onSkip?: () => void | Promise<void>;
   onDifficultyRate?: (rating: number) => void;
   onReviewFocus?: () => void;
   sessionStats?: {

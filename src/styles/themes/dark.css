@@ -1409,8 +1409,8 @@ option {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 10px;
+  padding: 6px;
   background: var(--bg-secondary);
   border-radius: 12px;
   border: 2px solid var(--border-color);
@@ -1602,9 +1602,9 @@ option {
     justify-content: center;
     flex-wrap: wrap;
     padding: 6px;
-    background: linear-gradient(135deg, var(--gray-100) 0%, #e9ecef 100%);
+    background: var(--bg-tertiary);
     border-radius: 10px;
-    border: 2px solid #dee2e6;
+    border: 2px solid var(--border-color);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
@@ -3194,7 +3194,7 @@ option {
 }
 
 .question-text {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--text-color);
   text-align: center;
@@ -7134,7 +7134,7 @@ option {
   }
 
   .dark-mode .score-board-tabs-mobile {
-    background: linear-gradient(135deg, var(--text-color) 0%, #1e1e1e 100%);
+    background: var(--bg-tertiary);
     border-color: var(--border-color);
   }
 
