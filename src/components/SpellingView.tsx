@@ -879,8 +879,8 @@ function SpellingView({
                   {/* 詳細情報の表示（常に表示） */}
                   <div className="question-details-spelling">
                     {currentQuestion.reading && (
-                      <div className="detail-row">
-                        <span className="detail-label clickable-label" onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">読み:</span>
+                      <div className="detail-row clickable-row" onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">
+                        <span className="detail-label">読み:</span>
                         <span className="detail-content">{currentQuestion.reading}</span>
                       </div>
                     )}
@@ -907,9 +907,9 @@ function SpellingView({
                       </div>
                     )}
                     {currentQuestion.difficulty && (
-                      <div className="detail-row">
+                      <div className="detail-row clickable-row" onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">
                         <span className="detail-label">難易度:</span>
-                        <span className={`difficulty-badge ${currentQuestion.difficulty} clickable-label`} onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">
+                        <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
                           {currentQuestion.difficulty === 'beginner' ? '初級' : 
                            currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
                         </div>
