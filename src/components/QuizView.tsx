@@ -199,7 +199,7 @@ function QuizView({
               >
                 <option value="all">すべて</option>
                 <option value="junior">高校受験</option>
-                <option value="intermediate">中級1800</option>
+                <option value="intermediate">高校受験標準</option>
               </select>
             </div>
           )}
@@ -220,27 +220,67 @@ function QuizView({
             </div>
           )}
 
-          {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
-            <div className="filter-group">
-              <label htmlFor="phrase-type-filter">🏷️ 熟語タイプ:</label>
-              <select
-                id="phrase-type-filter"
-                value={selectedPhraseTypeFilter}
-                onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
-                className="select-input"
-              >
-                <option value="all">すべて</option>
-                <option value="phrasal-verb">句動詞</option>
-                <option value="idiom">イディオム</option>
-                <option value="collocation">コロケーション</option>
-                <option value="other">その他</option>
-              </select>
-            </div>
-          )}
+      {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
+        <div className="filter-group">
+          <label htmlFor="phrase-type-filter">🏷️ 熟語タイプ:</label>
+          <select
+            id="phrase-type-filter"
+            value={selectedPhraseTypeFilter}
+            onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
+            className="select-input"
+          >
+            <option value="all">すべて</option>
+            <option value="phrasal-verb">句動詞</option>
+            <option value="idiom">イディオム</option>
+            <option value="collocation">コロケーション</option>
+            <option value="other">その他</option>
+          </select>
         </div>
       )}
 
-      {!hasQuestions ? (
+      <div className="filter-group">
+        <label htmlFor="learning-limit">🎯 学習中の上限:</label>
+        <input
+          type="number"
+          id="learning-limit"
+          min="0"
+          placeholder="未入力=無制限"
+          className="number-input"
+          onChange={(e) => {
+            const value = e.target.value === '' ? null : parseInt(e.target.value);
+            if (value === null) {
+              localStorage.removeItem('learning-limit-translation');
+            } else {
+              localStorage.setItem('learning-limit-translation', value.toString());
+            }
+          }}
+          defaultValue={localStorage.getItem('learning-limit-translation') || ''}
+        />
+        <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+      </div>
+
+      <div className="filter-group">
+        <label htmlFor="review-limit">⚠️ 要復習の上限:</label>
+        <input
+          type="number"
+          id="review-limit"
+          min="0"
+          placeholder="未入力=無制限"
+          className="number-input"
+          onChange={(e) => {
+            const value = e.target.value === '' ? null : parseInt(e.target.value);
+            if (value === null) {
+              localStorage.removeItem('review-limit-translation');
+            } else {
+              localStorage.setItem('review-limit-translation', value.toString());
+            }
+          }}
+          defaultValue={localStorage.getItem('review-limit-translation') || ''}
+        />
+        <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+      </div>
+    </div>
+  )}      {!hasQuestions ? (
         <div className="empty-state">
           <p>📖 条件を選択して「クイズ開始」ボタンを押してください</p>
         </div>
@@ -355,6 +395,48 @@ function QuizView({
                   </select>
                 </div>
               )}
+
+              <div className="filter-group">
+                <label htmlFor="learning-limit-quiz">🎯 学習中の上限:</label>
+                <input
+                  type="number"
+                  id="learning-limit-quiz"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('learning-limit-translation');
+                    } else {
+                      localStorage.setItem('learning-limit-translation', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('learning-limit-translation') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="review-limit-quiz">⚠️ 要復習の上限:</label>
+                <input
+                  type="number"
+                  id="review-limit-quiz"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('review-limit-translation');
+                    } else {
+                      localStorage.setItem('review-limit-translation', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('review-limit-translation') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
               
               {/* 自動次へ設定 */}
               <div className="filter-group">
