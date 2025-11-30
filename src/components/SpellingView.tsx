@@ -589,6 +589,48 @@ function SpellingView({
               </select>
             </div>
           )}
+
+          <div className="filter-group">
+            <label htmlFor="learning-limit-spelling">🎯 学習中の上限:</label>
+            <input
+              type="number"
+              id="learning-limit-spelling"
+              min="0"
+              placeholder="未入力=無制限"
+              className="number-input"
+              onChange={(e) => {
+                const value = e.target.value === '' ? null : parseInt(e.target.value);
+                if (value === null) {
+                  localStorage.removeItem('learning-limit-spelling');
+                } else {
+                  localStorage.setItem('learning-limit-spelling', value.toString());
+                }
+              }}
+              defaultValue={localStorage.getItem('learning-limit-spelling') || ''}
+            />
+            <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="review-limit-spelling">⚠️ 要復習の上限:</label>
+            <input
+              type="number"
+              id="review-limit-spelling"
+              min="0"
+              placeholder="未入力=無制限"
+              className="number-input"
+              onChange={(e) => {
+                const value = e.target.value === '' ? null : parseInt(e.target.value);
+                if (value === null) {
+                  localStorage.removeItem('review-limit-spelling');
+                } else {
+                  localStorage.setItem('review-limit-spelling', value.toString());
+                }
+              }}
+              defaultValue={localStorage.getItem('review-limit-spelling') || ''}
+            />
+            <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+          </div>
         </div>
       )}
 
@@ -707,6 +749,48 @@ function SpellingView({
                   </select>
                 </div>
               )}
+
+              <div className="filter-group">
+                <label htmlFor="learning-limit-spelling-quiz">🎯 学習中の上限:</label>
+                <input
+                  type="number"
+                  id="learning-limit-spelling-quiz"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('learning-limit-spelling');
+                    } else {
+                      localStorage.setItem('learning-limit-spelling', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('learning-limit-spelling') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="review-limit-spelling-quiz">⚠️ 要復習の上限:</label>
+                <input
+                  type="number"
+                  id="review-limit-spelling-quiz"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('review-limit-spelling');
+                    } else {
+                      localStorage.setItem('review-limit-spelling', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('review-limit-spelling') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
             </div>
           )}
 

@@ -598,10 +598,52 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   <option value="advanced">上級</option>
                 </select>
               </div>
+
+              <div className="filter-group">
+                <label htmlFor="learning-limit-grammar">🎯 学習中の上限:</label>
+                <input
+                  type="number"
+                  id="learning-limit-grammar"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('learning-limit-grammar');
+                    } else {
+                      localStorage.setItem('learning-limit-grammar', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('learning-limit-grammar') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="review-limit-grammar">⚠️ 要復習の上限:</label>
+                <input
+                  type="number"
+                  id="review-limit-grammar"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('review-limit-grammar');
+                    } else {
+                      localStorage.setItem('review-limit-grammar', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('review-limit-grammar') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
             </div>
           )}
 
-          {error && (
+          {error && (  
             <div className="error-message">
               <p>❌ {error}</p>
             </div>
@@ -699,6 +741,48 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   <option value="intermediate">中級</option>
                   <option value="advanced">上級</option>
                 </select>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="learning-limit-grammar-quiz">🎯 学習中の上限:</label>
+                <input
+                  type="number"
+                  id="learning-limit-grammar-quiz"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('learning-limit-grammar');
+                    } else {
+                      localStorage.setItem('learning-limit-grammar', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('learning-limit-grammar') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
+              </div>
+
+              <div className="filter-group">
+                <label htmlFor="review-limit-grammar-quiz">⚠️ 要復習の上限:</label>
+                <input
+                  type="number"
+                  id="review-limit-grammar-quiz"
+                  min="0"
+                  placeholder="未入力=無制限"
+                  className="number-input"
+                  onChange={(e) => {
+                    const value = e.target.value === '' ? null : parseInt(e.target.value);
+                    if (value === null) {
+                      localStorage.removeItem('review-limit-grammar');
+                    } else {
+                      localStorage.setItem('review-limit-grammar', value.toString());
+                    }
+                  }}
+                  defaultValue={localStorage.getItem('review-limit-grammar') || ''}
+                />
+                <p className="setting-help">この数に達したら繰り返し復習モードに入ります</p>
               </div>
             </div>
           )}

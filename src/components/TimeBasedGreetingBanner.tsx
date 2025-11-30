@@ -57,19 +57,6 @@ function TimeBasedGreetingBanner({ onDismiss }: TimeBasedGreetingBannerProps) {
       }
     }
   }, []);
-  
-  // 学習進捗が変わったらstatsを更新
-  useEffect(() => {
-    const updateStats = () => {
-      getTodayStudyStats();
-      // 学習数が変わったら再度挨拶を生成することも可能
-      // ただし、うるさくならないよう初回のみ表示
-    };
-    
-    // 定期的に更新（オプション）
-    const interval = setInterval(updateStats, 60000); // 1分ごと
-    return () => clearInterval(interval);
-  }, []);
 
   const handleDismiss = () => {
     setIsDismissed(true);
