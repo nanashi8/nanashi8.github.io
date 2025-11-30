@@ -40,7 +40,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [phraseTranslations, setPhraseTranslations] = useState<boolean[]>([]);
   const [wordMeaningsVisible, setWordMeaningsVisible] = useState<boolean[]>([]);
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>('all');
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
   const [readingDictionary, setReadingDictionary] = useState<Map<string, any>>(new Map());
@@ -272,7 +271,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           });
           
           setPassages(sortedData);
-          setLoading(false);
           if (sortedData.length > 0) {
             setSelectedPassageId(sortedData[0].id);
             setPhraseTranslations(new Array(sortedData[0].phrases?.length || 0).fill(false));
@@ -418,7 +416,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         });
         
         setPassages(sortedData);
-        setLoading(false);
         if (sortedData.length > 0) {
           // 最初のパッセージ（一番簡単なもの）を選択
           setSelectedPassageId(sortedData[0].id);
@@ -429,7 +426,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       .catch((err) => {
         console.error('Error loading passages:', err);
         setError('パッセージの読み込みに失敗しました: ' + err.message);
-        setLoading(false);
       });
     });
   }, [wordDictionary]); // 辞書が読み込まれたら再実行
@@ -852,12 +848,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     setWordMeaningsVisible(new Array(currentPassage.phrases.length).fill(false));
   };
 
-  if (loading) {
-    return <div className="loading-container">読み込み中...</div>;
-  }
-
   if (error) {
-    return <div className="error-container">{error}</div>;
+    return <div className="error-message">{error}</div>;
   }
 
   if (passages.length === 0) {
@@ -1720,14 +1712,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           border-radius: 3px;
         }
 
-        .loading-container, .error-container, .empty-container {
+        .error-message, .empty-container {
           text-align: center;
           padding: 50px;
           font-size: 18px;
           color: #666;
         }
 
-        .error-container {
+        .error-message {
           color: #dc3545;
         }
 

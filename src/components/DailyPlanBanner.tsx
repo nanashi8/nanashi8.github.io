@@ -68,46 +68,40 @@ function DailyPlanBanner({ mode }: DailyPlanBannerProps) {
       if (!hasStudyHistory()) {
         return {
           icon: '🎓',
-          message: '今日から学習を始めましょう！',
-          color: '#3b82f6'
+          message: '今日から学習を始めましょう！'
         };
       }
       // 学習履歴があり復習なしの場合
       return {
         icon: '✨',
-        message: '素晴らしい！今日の復習はありません',
-        color: '#10b981'
+        message: '素晴らしい！今日の復習はありません'
       };
     }
     
     if (reviewWordsCount === 0) {
       return {
         icon: '📅',
-        message: `確認予定: ${scheduledWordsCount}語`,
-        color: '#3b82f6'
+        message: `確認予定: ${scheduledWordsCount}語`
       };
     }
     
     if (reviewWordsCount <= 10) {
       return {
         icon: '🎯',
-        message: `要復習: ${reviewWordsCount}語（今日中に完了可能！）`,
-        color: '#f59e0b'
+        message: `要復習: ${reviewWordsCount}語（今日中に完了可能！）`
       };
     }
     
     if (reviewWordsCount <= 30) {
       return {
         icon: '⏰',
-        message: `要復習: ${reviewWordsCount}語（集中して取り組もう）`,
-        color: '#ef4444'
+        message: `要復習: ${reviewWordsCount}語（集中して取り組もう）`
       };
     }
     
     return {
       icon: '🔥',
-      message: `要復習: ${reviewWordsCount}語（無理せず${targetCount}語ずつ進めよう）`,
-      color: '#dc2626'
+      message: `要復習: ${reviewWordsCount}語（無理せず${targetCount}語ずつ進めよう）`
     };
   };
 

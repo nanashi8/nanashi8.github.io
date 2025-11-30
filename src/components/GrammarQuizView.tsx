@@ -520,10 +520,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     return selectedAnswer === currentQuestion.correctAnswer;
   };
 
-  if (loading) {
-    return <div className="grammar-quiz-view"><div className="loading">読み込み中...</div></div>;
-  }
-
   return (
     <div className="quiz-view">
       {!quizStarted && (
