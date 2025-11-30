@@ -130,7 +130,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   transition: width 0.3s ease;
 }
 
@@ -250,7 +250,7 @@
 
 .related-word.high-priority {
   border: 2px solid var(--primary-color);
-  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background: var(--bg-primary);
 }
 
 .related-word-button {
@@ -292,7 +292,7 @@
 
 .study-together-badge {
   font-size: 11px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--primary-color);
   color: white;
   padding: 4px 10px;
   border-radius: 12px;
