@@ -880,7 +880,7 @@ function SpellingView({
                   <div className="question-details-spelling">
                     {currentQuestion.reading && (
                       <div className="detail-row">
-                        <span className="detail-label">読み:</span>
+                        <span className="detail-label clickable-label" onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">読み:</span>
                         <span className="detail-content">{currentQuestion.reading}</span>
                       </div>
                     )}
@@ -909,7 +909,7 @@ function SpellingView({
                     {currentQuestion.difficulty && (
                       <div className="detail-row">
                         <span className="detail-label">難易度:</span>
-                        <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                        <span className={`difficulty-badge ${currentQuestion.difficulty} clickable-label`} onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">
                           {currentQuestion.difficulty === 'beginner' ? '初級' : 
                            currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
                         </div>
