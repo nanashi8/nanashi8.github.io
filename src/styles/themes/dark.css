@@ -1541,26 +1541,26 @@ option {
 /* スコアボードタブナビゲーション */
 .score-board-tabs {
   display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 6px;
+  margin-bottom: 8px;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 8px;
+  padding: 6px;
   background: var(--bg-tertiary);
-  border-radius: 12px;
+  border-radius: 10px;
   border: 2px solid var(--border-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .score-tab {
-  padding: 10px 18px;
+  padding: 8px 14px;
   background: var(--bg-secondary);
   border: 2px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 1em;
+  font-size: 0.95em;
   font-weight: 600;
   white-space: nowrap;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -1596,23 +1596,23 @@ option {
 
   .score-board-tabs-mobile {
     display: flex; /* モバイルではタブを表示 */
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 6px;
+    margin-bottom: 8px;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 8px;
+    padding: 6px;
     background: linear-gradient(135deg, var(--gray-100) 0%, #e9ecef 100%);
-    border-radius: 12px;
+    border-radius: 10px;
     border: 2px solid #dee2e6;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   .score-board-tabs-mobile .score-tab {
-    padding: 8px 12px;
+    padding: 6px 10px;
     background: var(--background);
     border: 2px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
     font-size: max(12px, 0.85em);
@@ -1916,8 +1916,8 @@ option {
 
 /* スコアボードコンテンツエリア */
 .score-board-content {
-  min-height: 80px;
-  max-height: 250px;
+  min-height: 60px;
+  max-height: 200px;
   overflow-y: auto;
   font-size: 1em;
   width: 100%;
@@ -1972,15 +1972,15 @@ option {
 .plan-tab-compact {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .plan-text-line {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 8px;
-  font-size: 1em;
-  line-height: 1.5;
+  gap: 3px 6px;
+  font-size: 0.95em;
+  line-height: 1.4;
   justify-content: center;
 }
 
@@ -7631,22 +7631,22 @@ option {
 .filter-group {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   flex: 1;
   min-width: 200px;
 }
 
 .filter-group label {
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-weight: 600;
   color: var(--text-color);
 }
 
 .select-input {
-  padding: 10px;
+  padding: 8px;
   border: 2px solid var(--border-color);
   border-radius: 8px;
-  font-size: max(16px, 1em);
+  font-size: max(16px, 0.95em);
   background: var(--background);
   cursor: pointer;
   transition: all 0.2s;
@@ -7779,15 +7779,15 @@ option {
 /* 学習設定パネル */
 .study-settings-panel {
   background: var(--background);
-  border-radius: 12px;
-  padding: 20px;
-  margin: 15px 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 10px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .study-settings-panel h3 {
-  margin: 0 0 15px 0;
-  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
   color: var(--text-color);
 }
 
@@ -7795,7 +7795,7 @@ option {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .settings-header h3 {
