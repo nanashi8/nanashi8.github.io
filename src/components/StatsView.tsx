@@ -205,22 +205,28 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
     return <div className="calendar-empty">データがありません</div>;
   }
 
-  // 過去12週間のデータを週ごとにグループ化
-  const weeks: Array<Array<{ date: string; count: number; accuracy: number }>> = [];
-  for (let i = 0; i < data.length; i += 7) {
-    const week = data.slice(i, i + 7);
-    // 最後の週が7日未満の場合、空のデータで埋める
-    while (week.length < 7) {
-      const lastDate = week.length > 0 ? new Date(week[week.length - 1].date) : new Date(data[data.length - 1].date);
-      lastDate.setDate(lastDate.getDate() + 1);
-      week.push({
-        date: lastDate.toISOString().split('T')[0],
-        count: 0,
-        accuracy: 0
-      });
-    }
-    weeks.push(week);
-  }
+  // データを日付順にソート（古い順）
+  const sortedData = [...data].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  
+  // データを曜日ごとにグループ化（各行が同じ曜日）
+  const dayRows: Array<Array<{ date: string; count: number; accuracy: number; dayOfWeek: number }>> = [[], [], [], [], [], [], []];
+  
+  sortedData.forEach(day => {
+    const date = new Date(day.date);
+    const dayOfWeek = date.getDay(); // 0=日曜, 1=月曜, ..., 6=土曜
+    dayRows[dayOfWeek].push({ ...day, dayOfWeek });
+  });
+  
+  // 月曜始まりに並び替え（月火水木金土日）
+  const reorderedRows = [
+    dayRows[1], // 月曜
+    dayRows[2], // 火曜
+    dayRows[3], // 水曜
+    dayRows[4], // 木曜
+    dayRows[5], // 金曜
+    dayRows[6], // 土曜
+    dayRows[0]  // 日曜
+  ];
 
   // 色の濃さを決定
   const getColorClass = (count: number) => {
@@ -231,12 +237,15 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
     return 'calendar-color-4';
   };
 
+  const dayLabels = ['月', '火', '水', '木', '金', '土', '日'];
+
   return (
     <div className="calendar-heatmap">
       <div className="calendar-grid">
-        {weeks.map((week, weekIdx) => (
-          <div key={weekIdx} className="calendar-week">
-            {week.map((day, dayIdx) => {
+        {reorderedRows.map((row, rowIdx) => (
+          <div key={rowIdx} className="calendar-week">
+            <div className="calendar-day-label">{dayLabels[rowIdx]}</div>
+            {row.map((day, dayIdx) => {
               const date = new Date(day.date);
               const dayName = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
               return (

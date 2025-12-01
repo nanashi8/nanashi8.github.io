@@ -223,5 +223,23 @@
      追加の背景色
      ============================================ */
   --primary-color: #2563eb;
+  
+  /* ============================================
+     コンポーネント専用変数（リファクタリング中）
+     ============================================ */
+  /* 統一グレーテキスト - すべてのグレー系文字を#E0E0E0に */
+  --gray-text-unified: #E0E0E0;
+  
+  /* choice-btn */
+  --choice-btn-bg: var(--gray-800);
+  --choice-btn-color: var(--gray-text-unified);
+  --choice-btn-border: var(--border-color);
+  
+  /* score-tab */
+  --score-tab-border: var(--gray-600);
+  --score-tab-color: var(--gray-300);
+  
+  /* question-text */
+  --question-text-color: var(--gray-300);
 }
 
