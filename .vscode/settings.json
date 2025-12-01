@@ -3,5 +3,13 @@
     {
       "file": "docs/PASSAGE_CREATION_GUIDELINES.md"
     }
-  ]
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss", "less"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  }
 }
