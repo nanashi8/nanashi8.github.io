@@ -6,6 +6,7 @@
 @import './styles/components/tabs.css';
 @import './styles/components/choices.css';
 @import './styles/components/modals.css';
+@import './styles/components/forms.css';
 
 /* レイアウト */
 @import './styles/layout/containers.css';
