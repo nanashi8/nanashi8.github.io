@@ -9,7 +9,7 @@
   right: 0;
   bottom: 0;
   background: var(--overlay-bg);
-  z-index: 1000;
+  z-index: var(--z-modal);
 }
 
 /* 設定モーダル */
@@ -21,7 +21,7 @@
   background: var(--background);
   border-radius: 12px;
   box-shadow: 0 8px 32px var(--shadow-sm);
-  z-index: 1001;
+  z-index: var(--z-modal-content);
   min-width: 400px;
   max-width: 90%;
 }
