@@ -43,7 +43,7 @@ function getLocalStorageData(key: string): any {
     }
     
     return JSON.parse(data);
-  } catch (error) {
+  } catch (_error) {
     // JSONパースエラーは警告のみ（文字列データの可能性）
     console.warn(`${key} is not valid JSON (skipping)`);
     return null;
@@ -54,8 +54,8 @@ function getLocalStorageData(key: string): any {
 function getLocalStorageRawData(key: string): string | null {
   try {
     return localStorage.getItem(key);
-  } catch (error) {
-    console.error(`Failed to get ${key} from localStorage:`, error);
+  } catch (_error) {
+    console.error(`Failed to get ${key} from localStorage:`, _error);
     return null;
   }
 }

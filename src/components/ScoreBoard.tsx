@@ -1,11 +1,11 @@
 import { 
   getTodayStats, 
   getTotalAnsweredCount, 
-  getUniqueQuestionedWordsCount,
+  getUniqueQuestionedWordsCount as _getUniqueQuestionedWordsCount,
   getTotalMasteredWordsCount,
   getRetentionRateWithAI,
   getDetailedRetentionStats,
-  getDailyPlanInfo,
+  getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData
 } from '../progressStorage';
 import { useState, useEffect, useMemo } from 'react';
@@ -101,13 +101,13 @@ function ScoreBoard({
   const detailedStats = detailedStatsData;
 
   // 現在のセッションの正答率を計算（メモ化）
-  const currentAccuracy = useMemo(
+  const _currentAccuracy = useMemo(
     () => totalAnswered > 0 ? Math.round((currentScore / totalAnswered) * 100) : 0,
     [currentScore, totalAnswered]
   );
 
   // タブの配列（学習プラン、学習状況、履歴、設定）
-  const tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = 
+  const _tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = 
     mode === 'translation' || mode === 'spelling' 
       ? ['plan', 'breakdown', 'history', 'settings'] 
       : ['plan', 'breakdown', 'settings']; // 文法・長文は履歴なし
