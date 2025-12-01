@@ -1495,9 +1495,9 @@ export function getMasteredWords(words: string[]): string[] {
 
 /**
  * 本日の統計を取得（本日正答率、本日回答数）
- * @param mode クイズモード（translation, spelling, reading）
+ * @param mode クイズモード（translation, spelling, reading, grammar）
  */
-export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading'): {
+export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'grammar'): {
   todayCorrectCount: number;
   todayTotalAnswered: number;
   todayAccuracy: number;
@@ -1529,9 +1529,9 @@ export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading'): {
 
 /**
  * 累計回答数を取得
- * @param mode クイズモード（translation, spelling, reading）
+ * @param mode クイズモード（translation, spelling, reading, grammar）
  */
-export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'reading'): number {
+export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'reading' | 'grammar'): number {
   const progress = loadProgressSync();
   let results = progress.results;
   
