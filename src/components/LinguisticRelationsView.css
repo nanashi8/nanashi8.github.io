@@ -419,7 +419,7 @@
 }
 
 .dark-mode .relation-type {
-  background-color: var(--var(--gray-500)-900);
+  background-color: var(--gray-900);
   color: var(--text-color);
 }
 
