@@ -4,7 +4,7 @@ import { AIPersonality } from '../types';
 import { 
   generateTimeBasedGreeting, 
   updateConsecutiveDays,
-  getTodayStudyStats 
+  getTodayStudyStats as _getTodayStudyStats 
 } from '../timeBasedGreeting';
 import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractions';
 import { getBreatherTrivia } from '../englishTrivia';

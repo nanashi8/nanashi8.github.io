@@ -12,7 +12,7 @@ import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface SpellingViewProps {
   questions: Question[];
-  categoryList: string[];
+  _categoryList: string[];
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
   selectedDifficulty: DifficultyLevel;
@@ -30,7 +30,7 @@ interface SpellingViewProps {
 
 function SpellingView({ 
   questions, 
-  categoryList,
+  _categoryList,
   selectedCategory,
   onCategoryChange,
   selectedDifficulty,

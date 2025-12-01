@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import {
-  getStatsByModeDifficulty,
+  getStatsByModeDifficulty as _getStatsByModeDifficulty,
   resetStatsByModeDifficulty,
   resetAllProgress,
   loadProgressSync,
@@ -9,7 +9,7 @@ import {
   getMonthlyStats,
   getCumulativeProgressData,
   getRetentionTrend,
-  getWeakWords,
+  getWeakWords as _getWeakWords,
   getCurrentWeakWords,
   getOvercomeWeakWords,
   getRecentlyMasteredWords,
@@ -24,19 +24,19 @@ interface StatsViewProps {
 }
 
 function StatsView({ onResetComplete }: StatsViewProps) {
-  const [autoRefresh, setAutoRefresh] = useState<boolean>(true);
+  const [autoRefresh, _setAutoRefresh] = useState<boolean>(true);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
   
   // 新しい統計データ
   const [calendarData, setCalendarData] = useState<Array<{ date: string; count: number; accuracy: number }>>([]);
-  const [weeklyStats, setWeeklyStats] = useState<any>(null);
-  const [monthlyStats, setMonthlyStats] = useState<any>(null);
-  const [cumulativeData, setCumulativeData] = useState<any[]>([]);
-  const [retentionTrend, setRetentionTrend] = useState<any>(null);
+  const [_weeklyStats, setWeeklyStats] = useState<any>(null);
+  const [_monthlyStats, setMonthlyStats] = useState<any>(null);
+  const [_cumulativeData, setCumulativeData] = useState<any[]>([]);
+  const [_retentionTrend, setRetentionTrend] = useState<any>(null);
   const [weakWords, setWeakWords] = useState<any[]>([]);
-  const [overcomeWords, setOvercomeWords] = useState<any[]>([]);
-  const [recentlyMastered, setRecentlyMastered] = useState<any[]>([]);
-  const [streakDays, setStreakDays] = useState<number>(0);
+  const [_overcomeWords, setOvercomeWords] = useState<any[]>([]);
+  const [_recentlyMastered, setRecentlyMastered] = useState<any[]>([]);
+  const [_streakDays, setStreakDays] = useState<number>(0);
 
   // LocalStorageサイズを取得
   const getStorageSize = () => {
@@ -92,7 +92,7 @@ function StatsView({ onResetComplete }: StatsViewProps) {
   }, [autoRefresh]);
 
   // 難易度別リセット
-  const handleResetByDifficulty = (mode: 'translation' | 'spelling', difficulty: string) => {
+  const _handleResetByDifficulty = (mode: 'translation' | 'spelling', difficulty: string) => {
     const modeName = mode === 'translation' ? '和訳タブ' : 'スペルタブ';
     const difficultyName = difficulty === 'beginner' ? '初級' : difficulty === 'intermediate' ? '中級' : '上級';
     

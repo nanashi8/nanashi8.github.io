@@ -10,7 +10,7 @@ import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface QuizViewProps {
   quizState: QuizState;
-  categoryList: string[];
+  _categoryList: string[];
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
   selectedDifficulty: DifficultyLevel;
@@ -40,7 +40,7 @@ interface QuizViewProps {
 
 function QuizView({
   quizState,
-  categoryList,
+  _categoryList,
   selectedCategory,
   onCategoryChange,
   selectedDifficulty,

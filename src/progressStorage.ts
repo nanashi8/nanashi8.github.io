@@ -7,7 +7,7 @@ const STORAGE_KEY = 'progress-data';
 const MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数
 
 // SafeなLocalStorage操作
-function safeSetItem(key: string, value: string): boolean {
+function _safeSetItem(key: string, value: string): boolean {
   try {
     localStorage.setItem(key, value);
     return true;

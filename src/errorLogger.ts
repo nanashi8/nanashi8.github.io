@@ -94,7 +94,7 @@ class ErrorLogger {
     // LocalStorageに保存（診断用）
     try {
       localStorage.setItem('error-logs', JSON.stringify(this.logs.slice(-20)));
-    } catch (e) {
+    } catch (_e) {
       // 保存失敗は無視
     }
   }
@@ -141,7 +141,7 @@ class ErrorLogger {
     this.logs = [];
     try {
       localStorage.removeItem('error-logs');
-    } catch (e) {
+    } catch (_e) {
       // 削除失敗は無視
     }
   }

@@ -7,15 +7,15 @@ import { PERSONALITY_INFO } from '../aiCommentGenerator';
 interface SettingsViewProps {
   allQuestions: Question[];
   onStartSession: (mode: 'morning' | 'afternoon' | 'evening', questions: Question[]) => void;
-  selectedDataSource?: DataSource;
-  onDataSourceChange?: (source: DataSource) => void;
+  _selectedDataSource?: DataSource;
+  _onDataSourceChange?: (source: DataSource) => void;
 }
 
 function SettingsView({
   allQuestions,
   onStartSession,
-  selectedDataSource = 'all',
-  onDataSourceChange,
+  _selectedDataSource = 'all',
+  _onDataSourceChange,
 }: SettingsViewProps) {
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
@@ -34,6 +34,9 @@ function SettingsView({
     setBatchSize(newSize);
     localStorage.setItem('batchSize', newSize.toString());
   };
+
+  // 以下で利用できるように保持
+  void handleBatchSizeChange; // ESLintエラー回避
 
   // AI人格変更時にlocalStorageに保存
   const handlePersonalityChange = (personality: AIPersonality) => {
@@ -112,7 +115,7 @@ function SettingsView({
 
   const totalWords = allQuestions.length;
   const estimatedDays = Math.ceil(totalWords / batchSize);
-  const estimatedDaysText = `約${estimatedDays}日間`;
+  const _estimatedDaysText = `約${estimatedDays}日間`;
 
   return (
     <div className="settings-view">

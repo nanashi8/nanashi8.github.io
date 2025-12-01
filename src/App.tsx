@@ -1263,7 +1263,7 @@ function App() {
         {activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}
-            categoryList={categoryList}
+            _categoryList={categoryList}
             selectedCategory={selectedCategory}
             onCategoryChange={handleCategoryChange}
             selectedDifficulty={selectedDifficulty}
@@ -1290,7 +1290,7 @@ function App() {
         ) : activeTab === 'spelling' ? (
           <SpellingView
             questions={quizState.questions}
-            categoryList={categoryList}
+            _categoryList={categoryList}
             selectedCategory={selectedCategory}
             onCategoryChange={handleCategoryChange}
             selectedDifficulty={selectedDifficulty}
@@ -1355,8 +1355,8 @@ function App() {
         ) : (
           <SettingsView
             allQuestions={allQuestions}
-            selectedDataSource={selectedDataSource}
-            onDataSourceChange={setSelectedDataSource}
+            _selectedDataSource={selectedDataSource}
+            _onDataSourceChange={setSelectedDataSource}
             onStartSession={(_mode, questions) => {
               // セッションの単語でクイズを開始
               setQuizState({
