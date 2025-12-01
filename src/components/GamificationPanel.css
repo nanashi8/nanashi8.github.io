@@ -13,7 +13,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
   padding: 5px 10px;
   transition: color 0.2s;
 }
@@ -92,7 +92,7 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
-  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
+  background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 10px;
 }
 
@@ -112,7 +112,7 @@
 
 .streak-label {
   font-size: 14px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
 }
 
 /* 統計サマリー */
@@ -126,7 +126,7 @@
 .stat-item {
   text-align: center;
   padding: 15px;
-  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
+  background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 10px;
 }
 
@@ -138,7 +138,7 @@
 
 .stat-label {
   font-size: 12px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
   margin-top: 5px;
 }
 
@@ -147,7 +147,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid var(--border-color, var(--var(--var(--gray-500)-500)-300));
+  border-bottom: 2px solid var(--border-color, var(--gray-300));
 }
 
 .tab-button {
@@ -156,7 +156,7 @@
   background: none;
   cursor: pointer;
   font-size: 16px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
   border-bottom: 3px solid transparent;
   transition: all 0.2s;
 }
@@ -191,7 +191,7 @@
 
 .milestone-card {
   padding: 15px;
-  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
+  background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 10px;
   border-left: 4px solid var(--primary-color, var(--accent-purple));
 }
@@ -226,7 +226,7 @@
 
 .milestone-description {
   font-size: 14px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
   margin-bottom: 10px;
 }
 
@@ -247,7 +247,7 @@
 
 .milestone-progress-text {
   font-size: 12px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
   text-align: right;
 }
 
@@ -269,7 +269,7 @@
   align-items: center;
   gap: 15px;
   padding: 12px;
-  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
+  background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 8px;
   border-left: 4px solid var(--gold-color);
 }
@@ -305,13 +305,13 @@
 
 .badge-earned {
   font-size: 12px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
 }
 
 .badge-completion {
   text-align: center;
   padding: 15px;
-  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
+  background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 8px;
   font-weight: 600;
   color: var(--primary-color, var(--accent-purple));
@@ -326,7 +326,7 @@
 
 .badge-card {
   padding: 15px;
-  background: var(--bg-secondary, var(--var(--var(--gray-500)-500)-lighter));
+  background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 10px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -376,7 +376,7 @@
 
 .badge-card-description {
   font-size: 12px;
-  color: var(--text-secondary, var(--var(--gray-500)-700));
+  color: var(--text-secondary, var(--gray-700));
   line-height: 1.4;
   margin-bottom: 8px;
 }
