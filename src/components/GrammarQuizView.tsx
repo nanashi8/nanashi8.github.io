@@ -95,7 +95,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
     return saved ? parseInt(saved, 10) : 1500;
   });
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [_loading, setLoading] = useState<boolean>(false);
   
   const [currentQuestions, setCurrentQuestions] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
