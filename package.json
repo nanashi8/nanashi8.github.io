@@ -9,7 +9,9 @@
     "deploy": "npm run build && gh-pages -d dist",
     "build:beta": "vite build --base=/beta/ --outDir dist-beta",
     "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'",
-    "validate": "python3 scripts/validate_all_data.py"
+    "validate": "python3 scripts/validate_all_data.py",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:css:fix": "stylelint 'src/**/*.css' --fix"
   },
   "dependencies": {
     "@sentry/react": "^7.120.4",
@@ -24,6 +26,8 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "gh-pages": "^6.3.0",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^39.0.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"
   }
