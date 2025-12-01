@@ -1,0 +1,37 @@
+name: ビルドチェック
+
+# いつ実行するか
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: TypeScript & ビルド確認
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. コードをダウンロード
+      - name: コードをチェックアウト
+        uses: actions/checkout@v4
+      
+      # 2. Node.jsをセットアップ
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      # 3. 依存関係をインストール
+      - name: 依存関係インストール
+        run: npm ci
+      
+      # 4. TypeScriptの型チェック
+      - name: TypeScript型チェック
+        run: npx tsc --noEmit
+      
+      # 5. ビルドが成功するか確認
+      - name: ビルド確認
+        run: npm run build
