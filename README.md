@@ -1,5 +1,8 @@
 # 英語学習アプリ
 
+[![CSS品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
+[![ビルドチェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
+
 TypeScript + React で構築された、インタラクティブな英単語クイズアプリケーションです。
 
 ## 特徴
