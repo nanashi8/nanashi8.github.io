@@ -28,6 +28,6 @@ jobs:
       - name: 依存関係インストール
         run: npm ci
       
-      # 4. ビルドが成功するか確認
+      # 4. ビルドが成功するか確認（型チェック含む）
       - name: ビルド確認
         run: npm run build

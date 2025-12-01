@@ -163,7 +163,7 @@ function ReadingView() {
             : passage
         )
       );
-    );
+    }
   };
 
   if (passages.length === 0) {
