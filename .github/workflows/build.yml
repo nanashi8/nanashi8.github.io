@@ -28,6 +28,29 @@ jobs:
       - name: 依存関係インストール
         run: npm ci
       
-      # 4. ビルドが成功するか確認（型チェック含む）
+      # 4. ESLintによるコード品質チェック
+      - name: ESLintチェック
+        run: npm run lint
+        continue-on-error: true
+      
+      # 5. TypeScript型チェック（厳格モード）
+      - name: TypeScript型チェック
+        run: npm run typecheck
+        continue-on-error: true
+      
+      # 6. ビルドが成功するか確認
       - name: ビルド確認
         run: npm run build
+      
+      # 6. ビルド成果物の検証
+      - name: ビルド成果物確認
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "エラー: distディレクトリが生成されていません"
+            exit 1
+          fi
+          if [ ! -f "dist/index.html" ]; then
+            echo "エラー: index.htmlが生成されていません"
+            exit 1
+          fi
+          echo "✓ ビルド成果物が正常に生成されました"
