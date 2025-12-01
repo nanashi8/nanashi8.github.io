@@ -12,6 +12,7 @@
 
 /* ユーティリティ */
 @import './styles/utilities/spacing.css';
+@import './styles/utilities/animations.css';
 
 .app {
   background: var(--background, var(--background));
