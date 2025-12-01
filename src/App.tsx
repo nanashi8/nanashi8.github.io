@@ -1188,9 +1188,6 @@ function App() {
         mode: 'translation',
         difficulty: currentQuestion.difficulty,
       });
-      
-      // ScoreBoard更新のためlastAnswerTimeを更新
-      setLastAnswerTime(Date.now());
     } else {
       // 問題がない場合は通常の次へ
       setQuizState((prev) => ({

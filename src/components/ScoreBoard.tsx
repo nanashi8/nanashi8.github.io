@@ -34,11 +34,6 @@ function ScoreBoard({
   mode = 'translation', // デフォルトは和訳モード
   currentScore = 0,
   totalAnswered = 0,
-  sessionCorrect = 0,
-  sessionIncorrect = 0,
-  sessionReview = 0,
-  sessionMastered = 0,
-  onReviewFocus,
   isReviewFocusMode = false,
   onShowSettings,
   currentWord,
@@ -99,17 +94,11 @@ function ScoreBoard({
   // 定着数を取得（全体から）（メモ化 - onAnswerTimeで更新）
   const masteredCount = useMemo(() => getTotalMasteredWordsCount(), [onAnswerTime]);
 
-  // 出題数を取得（重複除外、全4700問のうち実際に出題された数）（メモ化 - onAnswerTimeで更新）
-  const uniqueQuestionedCount = useMemo(() => getUniqueQuestionedWordsCount(), [onAnswerTime]);
-
   // 定着率をstateから取得
-  const { retentionRate, appearedCount } = retentionData;
+  const { retentionRate } = retentionData;
   
   // 詳細な定着率統計をstateから取得
   const detailedStats = detailedStatsData;
-
-  // 学習プラン情報を取得（メモ化 - onAnswerTimeで更新）
-  const planInfo = useMemo(() => getDailyPlanInfo(mode), [mode, onAnswerTime]);
 
   // 現在のセッションの正答率を計算（メモ化）
   const currentAccuracy = useMemo(

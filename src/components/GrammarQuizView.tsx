@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
-import { getStudySettings, updateStudySettings } from '../progressStorage';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface VerbFormQuestion {
@@ -107,7 +106,6 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
   const [score, setScore] = useState(0);
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [sessionStats, setSessionStats] = useState({ correct: 0, incorrect: 0, review: 0, mastered: 0 });
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   // 難易度フィルター
