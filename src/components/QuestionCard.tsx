@@ -33,7 +33,6 @@ function QuestionCard({
   onNext,
   onPrevious,
   onDifficultyRate,
-  errorPrediction,
 }: QuestionCardProps) {
   // 選択肢をuseMemoで固定（currentIndexが変わった時だけ再生成）
   const choicesWithQuestions = useMemo(
@@ -41,9 +40,7 @@ function QuestionCard({
     [question.word, allQuestions, currentIndex]
   );
   
-  const [userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
-  const [aiComment, setAiComment] = useState<string>('');
   const [attemptCount, setAttemptCount] = useState<number>(0);
   const [, setCorrectStreak] = useState<number>(() => {
     const saved = sessionStorage.getItem('currentCorrectStreak');
@@ -326,15 +323,7 @@ function QuestionCard({
     return 'choice-btn';
   };
   
-  const handleRatingChange = (rating: number) => {
-    setUserRating(rating);
-    if (onDifficultyRate) {
-      onDifficultyRate(rating);
-    }
-  };
-  
   const handleNextClick = () => {
-    setUserRating(null); // 次の問題へ行く前にリセット
     setExpandedChoices(new Set()); // 開閉状態をリセット
     setAttemptCount(0); // 試行回数をリセット
     onNext();

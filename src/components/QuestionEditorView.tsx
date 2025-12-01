@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Question, QuestionSet } from '../types';
+import { QuestionSet } from '../types';
 import {
   saveQuestionSets,
   deleteQuestionSet,

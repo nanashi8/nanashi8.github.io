@@ -6,7 +6,6 @@ import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
-import { getStudySettings, updateStudySettings } from '../progressStorage';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface QuizViewProps {
@@ -41,7 +40,6 @@ interface QuizViewProps {
 
 function QuizView({
   quizState,
-  categoryList,
   selectedCategory,
   onCategoryChange,
   selectedDifficulty,
