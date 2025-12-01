@@ -1607,16 +1607,6 @@ option {
   text-shadow: 0 1px 2px var(--shadow-sm);
 }
 
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 2px 8px var(--gradient-primary-fade);
-  }
-
-  50% {
-    box-shadow: 0 4px 16px rgb(102, 126, 234, 0.5);
-  }
-}
-
 .score-stat {
   color: var(--text-secondary);
   white-space: nowrap;
@@ -2884,18 +2874,6 @@ option {
 
 .history-item:hover {
   transform: scale(1.2);
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .history-empty {
@@ -4453,17 +4431,6 @@ option {
   animation: speakPulse 0.6s ease-in-out;
   border-color: var(--gradient-primary-blue);
   background: #e7f5ff;
-}
-
-@keyframes speakPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgb(76, 110, 245, 0.4);
-  }
 }
 
 .word-card.unknown {
@@ -9267,18 +9234,6 @@ option {
   animation: fadeIn 0.3s ease-in;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .section-header {
   text-align: center;
   margin-bottom: 40px;
@@ -11109,23 +11064,6 @@ option {
   animation: highlightPulse 0.5s ease-in-out;
 }
 
-@keyframes highlightPulse {
-  0% {
-    background: #fef3c7;
-    transform: scale(1);
-  }
-
-  50% {
-    background: #fde68a;
-    transform: scale(1.02);
-  }
-
-  100% {
-    background: #fef3c7;
-    transform: scale(1);
-  }
-}
-
 /* 難易度とパッセージを横並び */
 .reading-selectors {
   display: flex;
@@ -11950,16 +11888,6 @@ option {
   animation: overcome-glow 2s ease-in-out infinite;
 }
 
-@keyframes overcome-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgb(255, 152, 0, 0.2);
-  }
-
-  50% {
-    box-shadow: 0 0 15px rgb(255, 152, 0, 0.4);
-  }
-}
-
 .overcome-stats {
   display: flex;
   align-items: center;
@@ -11986,16 +11914,6 @@ option {
 .overcome-badge {
   font-size: 1.1em;
   animation: bounce 1s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-3px);
-  }
 }
 
 .word-rank {
@@ -12199,18 +12117,6 @@ option {
   animation: slideDown 0.4s ease-out;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .time-greeting-content {
   display: flex;
   align-items: center;
@@ -12347,42 +12253,12 @@ option {
   color: var(--btn-primary-bg);
 }
 
-@keyframes warningPulse {
-  0%, 100% {
-    box-shadow: 0 2px 8px rgb(255, 193, 7, 0.2);
-  }
-
-  50% {
-    box-shadow: 0 4px 16px rgb(255, 193, 7, 0.4);
-  }
-}
-
 .error-prediction-warning.high {
   animation: warningPulseHigh 2s ease-in-out infinite;
 }
 
-@keyframes warningPulseHigh {
-  0%, 100% {
-    box-shadow: 0 2px 8px rgb(255, 152, 0, 0.3);
-  }
-
-  50% {
-    box-shadow: 0 4px 16px rgb(255, 152, 0, 0.5);
-  }
-}
-
 .error-prediction-warning.critical {
   animation: warningPulseCritical 1.5s ease-in-out infinite;
-}
-
-@keyframes warningPulseCritical {
-  0%, 100% {
-    box-shadow: 0 2px 8px rgb(244, 67, 54, 0.3);
-  }
-
-  50% {
-    box-shadow: 0 4px 16px rgb(244, 67, 54, 0.6);
-  }
 }
 
 /* ダークモード対応 */
