@@ -1277,8 +1277,6 @@ option {
   background: var(--btn-primary-hover);
 }
 
-/* スコアボード（旧版：互換性維持） - 削除済み(.score-board-compact を使用) */
-
 /* 問題コンテナ */
 .question-container {
   flex: 1;
@@ -3543,8 +3541,6 @@ option {
   font-style: italic;
 }
 
-/* 難易度評価スライダー（従来版：互換性維持） - 削除済み */
-
 .result-card {
   flex: 1;
   min-width: 100px;
@@ -4609,8 +4605,6 @@ option {
   line-height: 1.6;
 }
 
-/* 旧スタイル（後方互換性のため保持） - 削除済み */
-
 /* 節・句を行ごとに表示する新スタイル */
 .phrase-lines {
   display: flex;
@@ -4646,8 +4640,6 @@ option {
   width: 100%;
   box-sizing: border-box;
 }
-
-/* 旧スタイルを維持（後方互換性） - 削除済み */
 
 /* 和訳表示エリア */
 .phrase-translation {
