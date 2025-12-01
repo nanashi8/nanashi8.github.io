@@ -103,7 +103,7 @@
 .dark-mode .question-card,
 .dark-mode .choice-btn,
 .dark-mode .letter-card {
-  background: var(--card-bg-hover);
+  background: #2a2a2a;
   border-color: var(--card-border);
   color: var(--text-color);
 }
@@ -4216,7 +4216,7 @@ option {
   }
 
   .dark-mode .choice-btn {
-    background: var(--var(--gray-500)-800);
+    background: #2a2a2a;
     color: var(--background);
     border-color: var(--text-color);
   }
