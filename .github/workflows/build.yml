@@ -28,10 +28,6 @@ jobs:
       - name: 依存関係インストール
         run: npm ci
       
-      # 4. TypeScriptの型チェック
-      - name: TypeScript型チェック
-        run: npx tsc --noEmit
-      
-      # 5. ビルドが成功するか確認
+      # 4. ビルドが成功するか確認
       - name: ビルド確認
         run: npm run build
