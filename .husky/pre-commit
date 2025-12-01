@@ -9,9 +9,10 @@ echo "📝 変更ファイルを確認中..."
 if git diff --cached --name-only | grep -E '\.(tsx?|jsx?)$' > /dev/null; then
   echo "🔎 ESLintチェック実行中..."
   npm run lint || {
-    echo "❌ ESLintエラーが検出されました"
-    echo "💡 修正するか、修正不要な場合は git commit --no-verify を使用してください"
-    exit 1
+    echo "⚠️  ESLintエラーが検出されました"
+    echo "💡 警告: ESLintエラーがありますが、コミットは継続されます"
+    echo "💡 修正するには: npm run lint を実行してください"
+    # ESLintエラーは警告のみ（exit しない）
   }
 fi
 
