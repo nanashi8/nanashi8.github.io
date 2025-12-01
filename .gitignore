@@ -34,6 +34,11 @@ test-*.html
 test-*.js
 *_TEST_REPORT.md
 
+# Playwright test results
+test-results/
+playwright-report/
+playwright/.cache/
+
 # Temporary CSS files
 *Context.css
 Attached*.css
