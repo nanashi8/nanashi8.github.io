@@ -187,7 +187,7 @@ export async function getExportDataSize(): Promise<string> {
     const jsonString = await exportAllData();
     const bytes = new Blob([jsonString]).size;
     return formatBytes(bytes);
-  } catch (error) {
+  } catch (_error) {
     return '不明';
   }
 }
