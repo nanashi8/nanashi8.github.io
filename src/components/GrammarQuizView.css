@@ -75,7 +75,7 @@
 }
 
 .question-text.hint-active {
-  background: rgba(251, 191, 36, 0.1);
+  background: rgb(251, 191, 36, 0.1);
 }
 
 .question-text .hint-icon {
@@ -295,6 +295,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -330,7 +331,7 @@
 
 .submit-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 12px rgb(59, 130, 246, 0.4);
 }
 
 .submit-button:disabled {
@@ -345,7 +346,7 @@
 
 .reset-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 12px rgb(107, 114, 128, 0.3);
 }
 
 /* 結果表示ボックス */
@@ -394,7 +395,7 @@
 .correct-answer {
   margin: 10px 0;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.7);
   border-radius: 8px;
 }
 
@@ -543,8 +544,8 @@
 
 .dark-mode .choice-button:hover:not(:disabled) {
   background: var(--bg-tertiary);
-  border-color: #99aaff;
-  box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
+  border-color: #9af;
+  box-shadow: 0 0 12px rgb(153, 170, 255, 0.4);
   transform: translateY(-1px);
 }
 
@@ -552,14 +553,14 @@
   background: #1e5a28;
   color: #d1fae5;
   border-color: #4ade80;
-  box-shadow: 0 0 12px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 0 12px rgb(74, 222, 128, 0.4);
 }
 
 .dark-mode .choice-button.incorrect {
   background: #5a1e1e;
   color: #fecaca;
   border-color: var(--error-light);
-  box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
+  box-shadow: 0 0 12px rgb(248, 113, 113, 0.4);
 }
 
 .dark-mode .hint-box {
@@ -603,7 +604,7 @@
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .question-nav-row {
     padding: 8px;
   }
@@ -838,12 +839,12 @@
   font-weight: 600;
   margin: 10px 0;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(251, 191, 36, 0.3);
+  box-shadow: 0 2px 6px rgb(251, 191, 36, 0.3);
 }
 
 .hint-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+  box-shadow: 0 4px 12px rgb(251, 191, 36, 0.4);
 }
 
 .hint-box {
@@ -871,6 +872,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -915,7 +917,7 @@
 .correct-answer {
   margin: 10px 0;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.7);
   border-radius: 8px;
 }
 
@@ -974,7 +976,7 @@
 
 .previous-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 4px 12px rgb(107, 114, 128, 0.3);
 }
 
 .previous-button:disabled {
@@ -989,7 +991,7 @@
 
 .submit-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 12px rgb(59, 130, 246, 0.4);
 }
 
 .submit-button:disabled {
@@ -1004,7 +1006,7 @@
 
 .next-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px rgb(16, 185, 129, 0.4);
 }
 
 .next-button:disabled {
@@ -1019,7 +1021,7 @@
 
 .reset-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 12px rgb(245, 158, 11, 0.4);
 }
 
 /* エラーメッセージ */
@@ -1053,8 +1055,8 @@
 
 .dark-mode .choice-button:hover:not(:disabled) {
   background: var(--bg-tertiary);
-  border-color: #99aaff;
-  box-shadow: 0 0 12px rgba(153, 170, 255, 0.4);
+  border-color: #9af;
+  box-shadow: 0 0 12px rgb(153, 170, 255, 0.4);
   transform: translateY(-1px);
 }
 
@@ -1062,14 +1064,14 @@
   background: #1e5a28;
   color: #d1fae5;
   border-color: #4ade80;
-  box-shadow: 0 0 12px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 0 12px rgb(74, 222, 128, 0.4);
 }
 
 .dark-mode .choice-button.incorrect {
   background: #5a1e1e;
   color: #fecaca;
   border-color: var(--error-light);
-  box-shadow: 0 0 12px rgba(248, 113, 113, 0.4);
+  box-shadow: 0 0 12px rgb(248, 113, 113, 0.4);
 }
 
 .dark-mode .hint-box {
@@ -1088,7 +1090,7 @@
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .choices-grid {
     grid-template-columns: 1fr;
   }

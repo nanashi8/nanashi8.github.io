@@ -78,7 +78,7 @@
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .container {
     padding: 0 16px;
   }

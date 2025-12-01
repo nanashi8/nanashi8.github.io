@@ -10,13 +10,13 @@
   /* ============================================
      基本カラー
      ============================================ */
-  --text-color: #333333;
-  --text-secondary: #666666;
-  --text-tertiary: #999999;
-  --background: #ffffff;
+  --text-color: #333;
+  --text-secondary: #666;
+  --text-tertiary: #999;
+  --background: #fff;
   --bg-secondary: #f8f9fa;
   --bg-tertiary: #e9ecef;
-  --border-color: #dddddd;
+  --border-color: #ddd;
   --border-color-light: #f0f0f0;
   
   /* ============================================
@@ -25,12 +25,12 @@
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
   --gray-300: #e0e0e0;
-  --gray-400: #cccccc;
-  --gray-500: #aaaaaa;
-  --gray-600: #999999;
-  --gray-700: #666666;
-  --gray-800: #444444;
-  --gray-900: #333333;
+  --gray-400: #ccc;
+  --gray-500: #aaa;
+  --gray-600: #999;
+  --gray-700: #666;
+  --gray-800: #444;
+  --gray-900: #333;
   --gray-light: #e5e7eb;
   --gray-lighter: #f5f5f5;
   --gray-medium: #9ca3af;
@@ -100,21 +100,21 @@
   /* ============================================
      カードとコンテナ
      ============================================ */
-  --card-bg: #ffffff;
+  --card-bg: #fff;
   --card-bg-hover: #f8f9fa;
   --card-border: #e0e0e0;
-  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow: rgb(0, 0, 0, 0.1);
   
   /* ============================================
      ボタン
      ============================================ */
   --btn-primary-bg: #667eea;
   --btn-primary-hover: #5568d3;
-  --btn-primary-text: #ffffff;
+  --btn-primary-text: #fff;
   --btn-primary-light: #8b9ef5;
   --btn-secondary-bg: #6c757d;
   --btn-secondary-hover: #545b62;
-  --btn-secondary-text: #ffffff;
+  --btn-secondary-text: #fff;
   --btn-disabled-bg: #e9ecef;
   --btn-disabled-text: #adb5bd;
   
@@ -123,21 +123,21 @@
      ============================================ */
   --link-color: #007bff;
   --link-hover: #0056b3;
-  --focus-ring: rgba(102, 126, 234, 0.3);
+  --focus-ring: rgb(102, 126, 234, 0.3);
   
   /* ============================================
      オーバーレイと透明度
      ============================================ */
-  --overlay-bg: rgba(0, 0, 0, 0.5);
-  --overlay-light: rgba(255, 255, 255, 0.8);
+  --overlay-bg: rgb(0, 0, 0, 0.5);
+  --overlay-light: rgb(255, 255, 255, 0.8);
   --backdrop-blur: blur(10px);
   
   /* ============================================
      シャドウとトランジション
      ============================================ */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 2px rgb(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgb(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgb(0, 0, 0, 0.1);
   --transition-speed: 0.3s;
   
   /* ============================================
@@ -151,8 +151,8 @@
      ============================================ */
   --gradient-primary: #667eea;
   --gradient-primary-light: #8b9ef5;
-  --gradient-primary-subtle: rgba(102, 126, 234, 0.2);
-  --gradient-primary-fade: rgba(102, 126, 234, 0.3);
+  --gradient-primary-subtle: rgb(102, 126, 234, 0.2);
+  --gradient-primary-fade: rgb(102, 126, 234, 0.3);
   --gradient-primary-dark: #4f5bd5;
   --gradient-primary-medium: #5568d3;
   --gradient-primary-blue: #4c6ef5;
@@ -186,11 +186,11 @@
   /* ============================================
      純白・純黒
      ============================================ */
-  --white: #ffffff;
-  --black: #000000;
-  --background-light: #ffffff;
-  --background-dark: #000000;
-  --text-color-light: #ffffff;
+  --white: #fff;
+  --black: #000;
+  --background-light: #fff;
+  --background-dark: #000;
+  --text-color-light: #fff;
   
   /* ============================================
      追加のグレースケール
@@ -216,8 +216,8 @@
   /* ============================================
      シャドウとオーバーレイ
      ============================================ */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --overlay-xs: rgba(255, 255, 255, 0.1);
+  --shadow-xs: 0 1px 2px rgb(0, 0, 0, 0.05);
+  --overlay-xs: rgb(255, 255, 255, 0.1);
   
   /* ============================================
      追加の背景色

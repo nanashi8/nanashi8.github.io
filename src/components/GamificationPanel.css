@@ -457,7 +457,7 @@
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .stats-summary {
     grid-template-columns: 1fr;
   }
