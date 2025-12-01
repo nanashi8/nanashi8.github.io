@@ -40,9 +40,9 @@ function QuestionCard({
     [question.word, allQuestions, currentIndex]
   );
   
-  const [userRating, setUserRating] = useState<number | null>(null);
+  const [_userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
-  const [aiComment, setAiComment] = useState<string>('');
+  const [_aiComment, setAiComment] = useState<string>('');
   const [attemptCount, setAttemptCount] = useState<number>(0);
   const [, setCorrectStreak] = useState<number>(() => {
     const saved = sessionStorage.getItem('currentCorrectStreak');

@@ -23,7 +23,11 @@ const GamificationPanel: React.FC<GamificationPanelProps> = ({ onClose }) => {
 
   const nextMilestone = getNextMilestone();
   const badgeCompletionRate = getBadgeCompletionRate();
-  const xpProgress = (stats.level.currentXP / stats.level.requiredXP) * 100;
+  const xpProgress = stats ? (stats.level.currentXP / stats.level.requiredXP) * 100 : 0;
+
+  if (!stats) {
+    return <div className="gamification-panel loading">読み込み中...</div>;
+  }
 
   return (
     <div className="gamification-panel">
