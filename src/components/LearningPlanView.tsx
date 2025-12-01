@@ -15,7 +15,7 @@ interface LearningPlanViewProps {
 function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProps) {
   const [schedule, setSchedule] = useState<LearningSchedule | null>(null);
   const [dailyPlan, setDailyPlan] = useState<DailyStudyPlan | null>(null);
-  const [selectedMonths, setSelectedMonths] = useState<number>(3);
+  const [selectedMonths] = useState<number>(3);
   const [progress, setProgress] = useState({
     totalLearned: 0,
     totalReviewed: 0,
@@ -62,13 +62,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
       }
     }
   }, [schedule]);
-  
-  const handleStartPlan = () => {
-    const newSchedule = generateLearningPlan(allQuestions, selectedMonths);
-    setSchedule(newSchedule);
-    localStorage.setItem('learning-schedule-90days', JSON.stringify(newSchedule));
-    setDailyPlan(generateDailyPlan(newSchedule, allQuestions));
-  };
   
   const handleResetPlan = () => {
     const monthsLabel = schedule?.planDurationMonths === 1 ? '1ヶ月' : 
