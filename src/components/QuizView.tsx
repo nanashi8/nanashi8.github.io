@@ -40,6 +40,7 @@ interface QuizViewProps {
 
 function QuizView({
   quizState,
+  categoryList,
   selectedCategory,
   onCategoryChange,
   selectedDifficulty,
