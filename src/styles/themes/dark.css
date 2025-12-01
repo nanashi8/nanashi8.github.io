@@ -1402,7 +1402,7 @@ option {
   flex-shrink: 0;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: var(--z-sticky);
 }
 
 .score-board-compact {
@@ -1906,7 +1906,7 @@ option {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: var(--z-modal);
 }
 
 .plan-settings-content {
@@ -3045,7 +3045,7 @@ option {
   border-radius: 12px;
   font-size: 0.75em;
   font-weight: 600;
-  z-index: 1;
+  z-index: var(--z-base);
 }
 
 .question-header {
@@ -11673,7 +11673,7 @@ option {
 
 .calendar-day:hover {
   transform: scale(1.1);
-  z-index: 10;
+  z-index: var(--z-dropdown);
   box-shadow: 0 2px 8px var(--shadow-sm);
 }
 
