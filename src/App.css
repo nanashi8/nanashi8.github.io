@@ -1,9 +1,17 @@
 /* ============================================
-   共通コンポーネントスタイルのインポート
+   共通スタイルのインポート
    ============================================ */
+/* コンポーネント */
 @import './styles/components/buttons.css';
 @import './styles/components/tabs.css';
 @import './styles/components/choices.css';
+@import './styles/components/modals.css';
+
+/* レイアウト */
+@import './styles/layout/containers.css';
+
+/* ユーティリティ */
+@import './styles/utilities/spacing.css';
 
 .app {
   background: var(--background, var(--background));
