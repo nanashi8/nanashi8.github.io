@@ -197,6 +197,80 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       });
   }, []);
 
+  // 原形変換をメモ化（辞書が変わらない限りキャッシュ）
+  // NOTE: データ読み込みuseEffect内で使用されるため、先に定義する必要がある
+  const getLemma = useCallback((word: string): string => {
+    const normalized = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
+    
+    // まず元の形で検索（両方の辞書）
+    if (wordDictionary.has(normalized) || readingDictionary.has(normalized)) return normalized;
+    
+    // -s, -es の除去（三単現、複数形）
+    if (normalized.endsWith('es')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+    }
+    if (normalized.endsWith('s')) {
+      const base = normalized.slice(0, -1);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+    }
+    
+    // -ed の除去（過去形、過去分詞）
+    if (normalized.endsWith('ed')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+      if (wordDictionary.has(base + 'e') || readingDictionary.has(base + 'e')) return base + 'e';
+      if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+        const deduped = base.slice(0, -1);
+        if (wordDictionary.has(deduped) || readingDictionary.has(deduped)) return deduped;
+      }
+    }
+    
+    // -ing の除去（現在分詞、動名詞）
+    if (normalized.endsWith('ing')) {
+      const base = normalized.slice(0, -3);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+      if (wordDictionary.has(base + 'e') || readingDictionary.has(base + 'e')) return base + 'e';
+      if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
+        const deduped = base.slice(0, -1);
+        if (wordDictionary.has(deduped) || readingDictionary.has(deduped)) return deduped;
+      }
+    }
+    
+    // -ly の除去（副詞）
+    if (normalized.endsWith('ly')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+    }
+    
+    // -er, -est の除去（比較級、最上級）
+    if (normalized.endsWith('er')) {
+      const base = normalized.slice(0, -2);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+    }
+    if (normalized.endsWith('est')) {
+      const base = normalized.slice(0, -3);
+      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
+    }
+    
+    return normalized;
+  }, [wordDictionary, readingDictionary]);
+
+  // 単語の意味を辞書から取得（メモ化）
+  const getMeaning = useCallback((word: string, existingMeaning?: string): string => {
+    // existingMeaningがあり、'-'でない場合はそれを使用
+    if (existingMeaning && existingMeaning.trim() && existingMeaning !== '-') {
+      return existingMeaning;
+    }
+    
+    // 辞書から取得
+    const lemma = getLemma(word);
+    const wordData = wordDictionary.get(lemma);
+    const readingWord = readingDictionary.get(lemma);
+    
+    return wordData?.meaning || readingWord?.meaning || '';
+  }, [getLemma, wordDictionary, readingDictionary]);
+
   // 発音状態の監視
   useEffect(() => {
     const checkSpeechStatus = setInterval(() => {
@@ -249,8 +323,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 }
                 return passage;
               });
-            } catch (err) {
-              console.error('LocalStorageデータの読み込みエラー:', err);
+            } catch (_err) {
+              console.error('LocalStorageデータの読み込みエラー:', _err);
             }
           }
           
@@ -460,90 +534,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       return wordCountA - wordCountB;
     });
   }, [passages, difficultyFilter]);
-
-  // 原形変換をメモ化（辞書が変わらない限りキャッシュ）
-  const getLemma = useCallback((word: string): string => {
-    const normalized = word.toLowerCase().replace(/[.,!?;:"']/g, '').trim();
-    
-    // まず元の形で検索（両方の辞書）
-    if (wordDictionary.has(normalized) || readingDictionary.has(normalized)) return normalized;
-    
-    // -s, -es の除去（三単現、複数形）
-    if (normalized.endsWith('es')) {
-      const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-    }
-    if (normalized.endsWith('s')) {
-      const base = normalized.slice(0, -1);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-    }
-    
-    // -ed の除去（過去形、過去分詞）
-    if (normalized.endsWith('ed')) {
-      const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-      if (wordDictionary.has(base + 'e') || readingDictionary.has(base + 'e')) return base + 'e';
-      if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
-        const deduped = base.slice(0, -1);
-        if (wordDictionary.has(deduped) || readingDictionary.has(deduped)) return deduped;
-      }
-    }
-    
-    // -ing の除去（現在分詞、動名詞）
-    if (normalized.endsWith('ing')) {
-      const base = normalized.slice(0, -3);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-      if (wordDictionary.has(base + 'e') || readingDictionary.has(base + 'e')) return base + 'e';
-      if (base.length > 2 && base[base.length - 1] === base[base.length - 2]) {
-        const deduped = base.slice(0, -1);
-        if (wordDictionary.has(deduped) || readingDictionary.has(deduped)) return deduped;
-      }
-    }
-    
-    // -ly の除去（副詞）
-    if (normalized.endsWith('ly')) {
-      const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-    }
-    
-    // -er, -est の除去（比較級、最上級）
-    if (normalized.endsWith('er')) {
-      const base = normalized.slice(0, -2);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-    }
-    if (normalized.endsWith('est')) {
-      const base = normalized.slice(0, -3);
-      if (wordDictionary.has(base) || readingDictionary.has(base)) return base;
-    }
-    
-    return normalized;
-  }, [wordDictionary, readingDictionary]);
-
-  // 単語の意味を辞書から取得（メモ化）
-  const getMeaning = useCallback((word: string, existingMeaning?: string): string => {
-    // existingMeaningがあり、'-'でない場合はそれを使用
-    if (existingMeaning && existingMeaning.trim() && existingMeaning !== '-') {
-      return existingMeaning;
-    }
-    
-    // 辞書から取得
-    const lemma = getLemma(word);
-    
-    // メイン辞書をチェック
-    const wordData = wordDictionary.get(lemma);
-    if (wordData?.meaning) {
-      return wordData.meaning;
-    }
-    
-    // 長文読解辞書をチェック
-    const readingWord = readingDictionary.get(lemma);
-    if (readingWord?.meaning) {
-      return readingWord.meaning;
-    }
-    
-    // どちらもない場合は空文字列を返す（句読点や辞書にない単語）
-    return '';
-  }, [getLemma, wordDictionary, readingDictionary]);
 
   // パッセージ選択（メモ化）
   const handleSelectPassage = useCallback((passageId: string) => {

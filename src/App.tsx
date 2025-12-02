@@ -749,13 +749,9 @@ function App() {
         const sample = contextualSeq.transitions[0];
         console.log(`  例: ${sample.from} → ${sample.to} (${sample.reason})`);
       }
-    } else if (adaptiveMode && filteredQuestions.length > 0 && !reviewFocusMode) {
-      // フォールバック: 従来の適応的学習
-      filteredQuestions = selectAdaptiveQuestions(filteredQuestions, Math.min(maxQuestions, filteredQuestions.length));
-    } else if (!reviewFocusMode) {
-      // 通常モードでも学習数上限を適用
-      filteredQuestions = filteredQuestions.slice(0, maxQuestions);
     }
+    // NOTE: 学習曲線AI+文脈学習AIが上記のifブロックで実行されるため、
+    // 従来の適応的学習(selectAdaptiveQuestions)は使用されない
     
     if (reviewFocusMode) {
       console.log(`🎯 補修モード: ${filteredQuestions.length}問を繰り返し出題中`);
