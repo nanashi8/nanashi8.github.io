@@ -60,6 +60,18 @@ npm run build
 
 ## 開発ドキュメント
 
+### 必読ガイドライン（2025-12-02更新）
+
+- **[CSS開発ガイドライン](docs/CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名規約、CSS変数使用、重複禁止ルール
+- **[TypeScript/React開発ガイドライン](docs/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - コンポーネント設計、型定義、状態管理
+- **[品質管理パイプライン](docs/QUALITY_PIPELINE.md)** - テスト戦略、Git Hooks、CI/CD、品質基準
+
+### その他ドキュメント
+
 - [UI開発ガイドライン](docs/UI_DEVELOPMENT_GUIDELINES.md) - UI変更時の必須要件とベストプラクティス
 - [長文読解パッセージガイド](docs/READING_PASSAGES_GUIDE.md) - パッセージ生成システムの概要
 - [VS Code Simple Browser ガイド](docs/VS_CODE_SIMPLE_BROWSER_GUIDE.md) - 開発環境での表示確認方法
+
+### AI開発アシスタント向け
+
+- [開発指示書](.aitk/instructions/development-guidelines.instructions.md) - GitHub Copilot等AI支援用の統合ガイド
