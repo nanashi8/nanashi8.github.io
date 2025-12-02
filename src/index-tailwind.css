@@ -268,7 +268,8 @@
 
   /* スクロールバースタイル */
   .scrollbar-thin {
-    scrollbar-width: thin;
+    /* stylelint-disable-next-line */
+    scrollbar-width: thin; /* Firefox用。Safari等では無視される */
   }
 
   .scrollbar-thin::-webkit-scrollbar {
