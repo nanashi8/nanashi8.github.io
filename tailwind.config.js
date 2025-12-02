@@ -8,23 +8,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 既存のCSS変数からTailwindカラーパレットへマッピング
+        // 22色パレット準拠: 既存のCSS変数からTailwindカラーパレットへマッピング
         primary: {
           DEFAULT: '#667eea',
-          hover: '#5568d3',
-          light: '#8b9ef5',
+          hover: '#8b9ef5',
         },
         success: {
           DEFAULT: '#10b981',
           light: '#d1fae5',
           dark: '#065f46',
-          text: '#2e7d32',
         },
         error: {
           DEFAULT: '#ef4444',
           light: '#fee2e2',
           dark: '#991b1b',
-          text: '#dc3545',
         },
         warning: {
           DEFAULT: '#f59e0b',
@@ -46,6 +43,11 @@ export default {
           700: '#666',
           800: '#444',
           900: '#333',
+        },
+        accent: {
+          blue: '#3b82f6',
+          red: '#f44336',
+          purple: '#9c27b0',
         },
       },
       spacing: {
