@@ -79,7 +79,7 @@ function SettingsView({
     return 'system';
   });
 
-  // システムのダークモード設定を検出
+  // システムのダークモード設定を検出（Tailwindのdarkクラスを使用）
   const applyDarkMode = (mode: 'light' | 'dark' | 'system') => {
     let isDark = false;
     if (mode === 'system') {
@@ -87,7 +87,8 @@ function SettingsView({
     } else {
       isDark = mode === 'dark';
     }
-    document.documentElement.classList.toggle('dark-mode', isDark);
+    // Tailwind用のdarkクラスに変更
+    document.documentElement.classList.toggle('dark', isDark);
   };
 
   // ダークモード変更時にlocalStorageに保存

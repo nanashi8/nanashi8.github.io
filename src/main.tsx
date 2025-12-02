@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
+import './index-tailwind.css'
 import * as Sentry from "@sentry/react";
 
 // ダークモードの初期化（アプリ起動時に実行）
@@ -20,7 +20,7 @@ const initializeDarkMode = () => {
     localStorage.setItem('darkMode', 'light');
   }
   
-  // ダークモードを適用
+  // ダークモードを適用（Tailwindのdarkクラスを使用）
   let isDark = false;
   if (mode === 'system') {
     isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -28,7 +28,8 @@ const initializeDarkMode = () => {
     isDark = mode === 'dark';
   }
   
-  document.documentElement.classList.toggle('dark-mode', isDark);
+  // Tailwind用のdarkクラスに変更
+  document.documentElement.classList.toggle('dark', isDark);
 };
 
 // ダークモードを即座に初期化（FLASHを防ぐ）
