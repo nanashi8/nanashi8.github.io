@@ -14,5 +14,6 @@
   },
   "css.lint.compatibleVendorPrefixes": "ignore",
   "css.lint.vendorPrefix": "ignore",
-  "css.lint.unknownProperties": "ignore"
+  "css.lint.unknownProperties": "ignore",
+  "css.lint.unknownAtRules": "ignore"
 }
