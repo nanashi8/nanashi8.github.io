@@ -4,11 +4,28 @@
    
    ライトモード専用のスタイル定義
    22色カラーパレット準拠
+   背景: 白、カード: 青系、文字: 黒っぽい色
    ============================================ */
 
 :root {
   color-scheme: light;
+  
+  /* 背景色 - 白系 */
+  --background: #fff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  
+  /* テキストカラー - 黒っぽい色 */
+  --text-color: #333;
+  --text-secondary: #666;
+  --text-tertiary: #999;
+  
+  /* カードとコンテナ - 青系 */
+  --card-bg: #e7f3ff;
+  --card-bg-hover: #d4e3ff;
+  --card-border: #2196f3;
+  
+  /* ボーダー */
+  --border-color: #ddd;
+  --border-color-light: #f0f0f0;
 }
-
-/* デフォルトではvariables.cssの値が適用されるため、
-   ライトモードで特別にオーバーライドが必要な値のみ記述 */
