@@ -81,12 +81,12 @@ export function ErrorBadge() {
   const [errorCount, setErrorCount] = useState(0);
   const [showPanel, setShowPanel] = useState(false);
 
-  // 本番ではエラーバッジ/パネルを表示しない
-  if (import.meta.env.PROD) {
-    return null;
-  }
-
   useEffect(() => {
+    // 本番では何もしない
+    if (import.meta.env.PROD) {
+      return;
+    }
+    
     const interval = setInterval(() => {
       const errors = errorLogger.getRecentErrors();
       setErrorCount(errors.length);
@@ -98,6 +98,11 @@ export function ErrorBadge() {
 
     return () => clearInterval(interval);
   }, [showPanel]);
+
+  // 本番ではエラーバッジ/パネルを表示しない
+  if (import.meta.env.PROD) {
+    return null;
+  }
 
   if (errorCount === 0) {
     return null;
