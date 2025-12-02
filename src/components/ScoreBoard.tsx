@@ -118,27 +118,43 @@ function ScoreBoard({
       {!isMobile && (
         <div className="score-board-tabs">
           <button 
-            className={`score-tab ${activeTab === 'plan' ? 'active' : ''}`}
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+              activeTab === 'plan' 
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
             onClick={() => setActiveTab('plan')}
           >
             📋 プラン
           </button>
           <button 
-            className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+              activeTab === 'breakdown' 
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
             onClick={() => setActiveTab('breakdown')}
           >
             📈 学習状況
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
-              className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
+              className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+                activeTab === 'history' 
+                  ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+                  : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              }`}
               onClick={() => setActiveTab('history')}
             >
               📜 履歴
             </button>
           )}
           <button 
-            className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+              activeTab === 'settings' 
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
             onClick={() => {
               if (onShowSettings) {
                 onShowSettings();
@@ -154,33 +170,49 @@ function ScoreBoard({
       {isMobile && (
         <div className="score-board-tabs score-board-tabs-mobile">
           <button 
-            className={`score-tab ${activeTab === 'plan' ? 'active' : ''}`}
+            className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+              activeTab === 'plan' 
+                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
             onClick={() => setActiveTab('plan')}
             title="プラン"
           >
-            <span className="tab-icon">📋</span>
-            <span className="tab-label">プラン</span>
+            <span className="text-lg">📋</span>
+            <span>プラン</span>
           </button>
           <button 
-            className={`score-tab ${activeTab === 'breakdown' ? 'active' : ''}`}
+            className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+              activeTab === 'breakdown' 
+                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
             onClick={() => setActiveTab('breakdown')}
             title="学習状況"
           >
-            <span className="tab-icon">📈</span>
-            <span className="tab-label">状況</span>
+            <span className="text-lg">📈</span>
+            <span>状況</span>
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
-              className={`score-tab ${activeTab === 'history' ? 'active' : ''}`}
+              className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+                activeTab === 'history' 
+                  ? 'bg-primary text-white dark:bg-primary dark:text-white' 
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              }`}
               onClick={() => setActiveTab('history')}
               title="履歴"
             >
-              <span className="tab-icon">📜</span>
-              <span className="tab-label">履歴</span>
+              <span className="text-lg">📜</span>
+              <span>履歴</span>
             </button>
           )}
           <button 
-            className={`score-tab ${activeTab === 'settings' ? 'active' : ''}`}
+            className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+              activeTab === 'settings' 
+                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
             onClick={() => {
               if (onShowSettings) {
                 onShowSettings();
@@ -188,8 +220,8 @@ function ScoreBoard({
             }}
             title="学習設定"
           >
-            <span className="tab-icon">⚙️</span>
-            <span className="tab-label">設定</span>
+            <span className="text-lg">⚙️</span>
+            <span>設定</span>
           </button>
         </div>
       )}
