@@ -1209,53 +1209,83 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-app">
-      <div className="tab-menu">
+    <div className="min-h-screen bg-white dark:bg-black">
+      {/* タブメニュー - 中学生向け親しみやすいデザイン */}
+      <div className="flex gap-0 bg-gray-50 dark:bg-gray-900 shadow-md">
         <button
-          className={`tab-btn ${activeTab === 'translation' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'translation'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('translation')}
         >
-          和訳
+          📝 和訳
         </button>
         <button
-          className={`tab-btn ${activeTab === 'spelling' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'spelling'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('spelling')}
         >
-          スペル
+          ✏️ スペル
         </button>
         <button
-          className={`tab-btn ${activeTab === 'grammar' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'grammar'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('grammar')}
         >
-          文法
+          📚 文法
         </button>
         <button
-          className={`tab-btn ${activeTab === 'reading' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'reading'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('reading')}
         >
-          長文
+          📖 長文
         </button>
         <button
-          className={`tab-btn ${activeTab === 'dictionary' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'dictionary'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('dictionary')}
         >
-          辞書
+          📕 辞書
         </button>
         <button
-          className={`tab-btn ${activeTab === 'stats' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'stats'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('stats')}
         >
-          成績
+          📊 成績
         </button>
         <button
-          className={`tab-btn ${activeTab === 'settings' ? 'active' : ''}`}
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'settings'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
           onClick={() => setActiveTab('settings')}
         >
-          設定
+          ⚙️ 設定
         </button>
       </div>
 
-      <div className="tab-content">
+      {/* コンテンツエリア */}
+      <div className="p-4 md:p-6">
         {activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}

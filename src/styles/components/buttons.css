@@ -1,11 +1,17 @@
 /* ============================================
-   共通ボタンスタイル
+   共通ボタンスタイル（Tailwindで実装推奨）
    ============================================ */
 
-/* 基本ボタンスタイル */
+/* 基本ボタンスタイル - レガシー対応 */
 .btn-primary {
   background: var(--btn-primary-bg);
   color: var(--white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn-primary:hover {
@@ -13,29 +19,17 @@
 }
 
 .btn-secondary {
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
+  background: var(--bg-secondary);
+  color: var(--text-color);
+  padding: 12px 24px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn-secondary:hover {
-  background: var(--btn-secondary-hover);
-}
-
-/* ダークモード対応 */
-.dark-mode .btn-primary {
-  background: var(--btn-primary-bg);
-  color: var(--white);
-}
-
-.dark-mode .btn-primary:hover {
-  background: var(--btn-primary-hover);
-}
-
-.dark-mode .btn-secondary {
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-}
-
-.dark-mode .btn-secondary:hover {
-  background: var(--btn-secondary-hover);
+  background: var(--bg-tertiary);
+  border-color: var(--primary-color);
 }
