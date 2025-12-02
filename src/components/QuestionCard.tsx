@@ -314,15 +314,24 @@ function QuestionCard({
   }, [answered, choicesWithQuestions, question, onAnswer, attemptCount]);
 
   const getButtonClass = (choice: string) => {
-    if (!answered) return 'choice-btn';
+    // Tailwindクラスによるスタイリング
+    const baseClasses = 'w-full min-h-[56px] p-4 text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
+    const hoverClasses = 'hover:border-primary hover:bg-tertiary hover:-translate-y-1 hover:shadow-lg';
+    const activeClasses = 'active:bg-tertiary active:translate-y-0';
+    const darkBaseClasses = 'dark:bg-tertiary dark:text-gray-300 dark:border-border';
+    const darkHoverClasses = 'dark:hover:bg-secondary dark:hover:border-primary dark:hover:shadow-lg';
+    
+    if (!answered) {
+      return `${baseClasses} bg-gray-800 text-gray-300 border-border ${hoverClasses} ${activeClasses} ${darkBaseClasses} ${darkHoverClasses}`;
+    }
     
     if (choice === question.meaning) {
-      return 'choice-btn correct';
+      return `${baseClasses} bg-success border-success-border text-success-dark dark:bg-success dark:border-success-border dark:text-success-dark`;
     }
     if (choice === selectedAnswer && choice !== question.meaning) {
-      return 'choice-btn incorrect';
+      return `${baseClasses} bg-error border-error-border text-error-dark dark:bg-error dark:border-error-border dark:text-error-dark`;
     }
-    return 'choice-btn';
+    return `${baseClasses} bg-gray-800 text-gray-300 border-border ${darkBaseClasses}`;
   };
   
   const handleNextClick = () => {
