@@ -11,5 +11,8 @@
   "stylelint.validate": ["css", "scss", "less"],
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit"
-  }
+  },
+  "css.lint.compatibleVendorPrefixes": "ignore",
+  "css.lint.vendorPrefix": "ignore",
+  "css.lint.unknownProperties": "ignore"
 }
