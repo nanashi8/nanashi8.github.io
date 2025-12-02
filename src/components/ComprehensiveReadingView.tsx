@@ -895,13 +895,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         <div className="quiz-controls">
           <button 
             onClick={() => setShowSettings(!showSettings)} 
-            className="settings-toggle-btn"
+            className="px-6 py-3 text-base font-medium bg-secondary text-secondary border-2 border-transparent rounded-xl transition-all duration-300 hover:bg-secondary-hover hover:shadow-lg dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
           >
             ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
           </button>
           <button 
             onClick={handleStartReading}
-            className="start-btn"
+            className="px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-primary rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={!selectedPassageId}
           >
             📖 読解開始
@@ -951,25 +951,37 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       {readingStarted && (
         <div className="reading-sub-tabs">
           <button
-            className={`sub-tab-btn ${readingSubTab === 'reading' ? 'active' : ''}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+              readingSubTab === 'reading' 
+                ? 'bg-primary text-white border-2 border-primary shadow-md' 
+                : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+            }`}
             onClick={() => setReadingSubTab('reading')}
           >
             📖 読解
           </button>
           <button
-            className={`sub-tab-btn ${readingSubTab === 'fullText' ? 'active' : ''}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+              readingSubTab === 'fullText' 
+                ? 'bg-primary text-white border-2 border-primary shadow-md' 
+                : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+            }`}
             onClick={() => setReadingSubTab('fullText')}
           >
             📄 全文
           </button>
           <button
-            className={`sub-tab-btn ${readingSubTab === 'fullTranslation' ? 'active' : ''}`}
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+              readingSubTab === 'fullTranslation' 
+                ? 'bg-primary text-white border-2 border-primary shadow-md' 
+                : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
+            }`}
             onClick={() => setReadingSubTab('fullTranslation')}
           >
             📝 全訳
           </button>
           <button
-            className="sub-tab-btn"
+            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
             onClick={handleBackToSettings}
             title="設定"
           >
@@ -978,7 +990,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="sub-tab-divider"></div>
           <button 
             onClick={handleSaveUnknownWords}
-            className="sub-tab-btn sub-tab-action"
+            className="px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
             disabled={unknownCount === 0}
             title="未知語を保存"
           >
@@ -986,7 +998,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button 
             onClick={handleReset}
-            className="sub-tab-btn sub-tab-action"
+            className="px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md dark:bg-warning dark:text-warning-dark dark:hover:bg-warning-hover"
             title="リセット"
           >
             🔄 リセット
@@ -1040,7 +1052,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             {/* フレーズナビゲーション */}
             <div className="phrase-navigation">
               <button 
-                className="nav-btn prev-btn"
+                className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500"
                 onClick={handlePreviousPhrase}
                 disabled={currentPhraseIndex === 0}
                 title="前のフレーズ"
@@ -1057,7 +1069,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 </button>
               )}
               <button 
-                className="nav-btn next-btn"
+                className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500"
                 onClick={handleNextPhrase}
                 disabled={currentPhraseIndex === currentPassage.phrases.length - 1}
                 title="次のフレーズ"
@@ -1167,7 +1179,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 )}
                 
                 <button
-                  className="show-translation-btn"
+                  className="w-full px-4 py-3 text-sm font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
                   onClick={() => handleShowPhraseTranslation(phraseIdx)}
                 >
                   {!wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && '単語の意味を表示 ▼'}
@@ -1188,7 +1200,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               <h3>📄 全文</h3>
               <div className="full-text-controls">
                 <button
-                  className="full-text-speaker-btn"
+                  className="px-6 py-3 text-base font-medium bg-primary text-white border-2 border-primary rounded-lg transition-all duration-200 hover:bg-primary-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-primary dark:hover:bg-primary-hover"
                   onClick={() => {
                     // 話者部分（Student 1:, Mom:, etc.）と引用符を除外して発音
                     const fullText = currentPassage.phrases
@@ -1212,7 +1224,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   🔊 発音
                 </button>
                 <button
-                  className="full-text-pause-btn"
+                  className="px-6 py-3 text-base font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-warning dark:text-warning-dark dark:hover:bg-warning-hover"
                   onClick={() => {
                     if (isFullTextPaused) {
                       resumeSpeaking();
@@ -1228,7 +1240,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   {isFullTextPaused ? '▶️ 再開' : '⏸️ 一時停止'}
                 </button>
                 <button
-                  className="full-text-stop-btn"
+                  className="px-6 py-3 text-base font-medium bg-error text-white border-2 border-error rounded-lg transition-all duration-200 hover:bg-error-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-error dark:hover:bg-error-hover"
                   onClick={() => {
                     stopSpeaking();
                     setIsFullTextSpeaking(false);
