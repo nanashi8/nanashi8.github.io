@@ -1213,7 +1213,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="min-h-screen bg-gradient-app">
       <div className="tab-menu">
         <button
           className={`tab-btn ${activeTab === 'translation' ? 'active' : ''}`}
