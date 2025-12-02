@@ -145,11 +145,14 @@ function QuizView({
         <div className="quiz-controls">
           <button 
             onClick={() => setShowSettings(!showSettings)} 
-            className="settings-toggle-btn"
+            className="px-6 py-3 bg-secondary text-secondary-text rounded-lg hover:bg-secondary-hover transition-colors duration-300 font-medium shadow-md dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
           >
             ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
           </button>
-          <button onClick={onStartQuiz} className="start-btn">
+          <button 
+            onClick={onStartQuiz} 
+            className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-hover transition-colors duration-300 font-medium shadow-md dark:bg-primary dark:hover:bg-primary-hover"
+          >
             🎯 クイズ開始
           </button>
         </div>
@@ -323,7 +326,7 @@ function QuizView({
                 <h3>📊 学習設定</h3>
                 <button 
                   onClick={() => setShowSettings(false)} 
-                  className="close-settings-btn"
+                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
                 >
                   ✕ 閉じる
                 </button>
