@@ -506,12 +506,6 @@
   color: var(--white);
 }
 
-.dark-mode .phrase-meaning {
-  background: var(--info-bg-dark);
-  color: #8bb8ff;
-  border-left-color: var(--btn-primary-bg);
-}
-
 .dark-mode .phrase-translation-btn {
   background: var(--btn-primary-bg);
   color: var(--white);
@@ -527,10 +521,6 @@
   color: var(--text-color);
 }
 
-.dark-mode .full-translation h4 {
-  color: #8bb8ff;
-}
-
 .dark-mode .full-translation .translation-text {
   color: var(--text-color);
 }
@@ -543,11 +533,6 @@
 
 .dark-mode .translation-text {
   color: #b8e986;
-}
-
-.dark-mode .word-meaning {
-  background: var(--info-bg-darkest);
-  color: #d4e3ff;
 }
 
 .dark-mode .phrase-meaning {
@@ -612,11 +597,6 @@
 }
 
 /* 基本統計グリッド - ダークモード */
-.dark-mode .stat-card {
-  background: var(--text-color);
-  border-color: var(--border-color);
-}
-
 .dark-mode .stat-card:hover {
   border-color: var(--btn-primary-bg);
   box-shadow: 0 4px 12px var(--gradient-primary-fade);
@@ -754,11 +734,6 @@
   color: var(--gray-text-unified);
 }
 
-.dark-mode .phrase-hint {
-  background: var(--info-bg);
-  color: var(--info-color);
-}
-
 .dark-mode .phrase-progress {
   color: var(--success-color);
 }
@@ -775,10 +750,6 @@
 .dark-mode .btn-skip-word {
   background: #757575;
   color: var(--white);
-}
-
-.dark-mode .btn-skip-word:hover {
-  background: #616161;
 }
 
 .dark-mode .btn-toggle-details {
@@ -831,24 +802,6 @@
 .dark-mode .stat-card {
   background: var(--btn-primary-bg);
   color: var(--white);
-}
-
-.dark-mode .stats-table {
-  background: var(--bg-secondary);
-  color: var(--text-color);
-}
-
-.dark-mode .stats-table thead {
-  background: var(--btn-primary-bg);
-  color: var(--white);
-}
-
-.dark-mode .stats-table tbody tr {
-  border-color: var(--border-color);
-}
-
-.dark-mode .stats-table tbody tr:hover {
-  background: var(--bg-tertiary);
 }
 
 .dark-mode .stats-table td {
@@ -989,11 +942,6 @@
 .dark-mode .detail-item {
   background: var(--background);
   border-color: var(--border-color);
-}
-
-.dark-mode .ai-comment-bar {
-  background: #3a3a1a;
-  border-left-color: var(--warning-color);
 }
 
 .dark-mode .ai-comment-text {
@@ -2738,11 +2686,6 @@ option {
 }
 
 /* ダークモード対応 */
-.dark-mode .retention-breakdown-container {
-  background: var(--bg-secondary);
-  border-color: var(--border-color);
-}
-
 .dark-mode .retention-title {
   color: var(--text-color);
 }
@@ -7358,10 +7301,6 @@ option {
   background: var(--btn-primary-light);
 }
 
-.dark-mode .study-settings-panel {
-  background: var(--bg-secondary);
-}
-
 .dark-mode .study-settings-panel h3 {
   color: var(--gray-text-unified);
 }
@@ -9109,11 +9048,6 @@ option {
   background: #374151;
 }
 
-.dark-mode .plan-recommendation-item {
-  background: #111827;
-  color: var(--gray-medium);
-}
-
 .dark-mode .plan-success {
   background: #064e3b;
   color: #6ee7b7;
@@ -10051,10 +9985,6 @@ option {
   border-color: var(--border-color);
 }
 
-.dark-mode .chart-wrapper {
-  background: var(--bg-secondary);
-}
-
 .dark-mode .review-focus-indicator {
   background: var(--bg-tertiary);
   color: #ffa726;
@@ -10076,10 +10006,6 @@ option {
 
 .dark-mode .section-header {
   color: var(--text-color);
-}
-
-.dark-mode .legend-box {
-  border-color: var(--text-color);
 }
 
 .dark-mode .list-header {
@@ -11662,10 +11588,6 @@ option {
   position: relative;
 }
 
-.dark-mode .calendar-day {
-  border-color: #E0E0E0 !important;
-}
-
 .calendar-day-empty {
   opacity: 0;
   pointer-events: none;
@@ -11684,10 +11606,6 @@ option {
 .calendar-day-count {
   font-size: 0.65em;
   font-weight: bold;
-  color: var(--gray-text-unified);
-}
-
-.dark-mode .calendar-day-count {
   color: var(--gray-text-unified);
 }
 
