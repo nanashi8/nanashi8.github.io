@@ -5,20 +5,21 @@
    ダークモード専用のCSS変数オーバーライド
    variables.cssで定義された変数のみを上書き
    22色カラーパレット準拠
+   背景: 黒っぽい色、カード: グレー系、文字: 薄いグレー/白
    ============================================ */
 
 .dark-mode {
   color-scheme: dark;
   
-  /* 基本カラー */
-  --text-color: var(--gray-300);
-  --text-secondary: #b0b0b0;
+  /* 基本カラー - 黒っぽい背景 */
+  --text-color: #e0e0e0;
+  --text-secondary: #aaa;
   --text-tertiary: #888;
-  --background: var(--bg-darker);
-  --bg-secondary: var(--bg-darker);
-  --bg-tertiary: var(--gray-800);
-  --border-color: #555;
-  --border-color-light: var(--gray-800);
+  --background: #333;
+  --bg-secondary: #444;
+  --bg-tertiary: #555;
+  --border-color: #666;
+  --border-color-light: #555;
   
   /* セマンティックカラー - 成功 */
   --success-color: #4ade80;
@@ -52,10 +53,10 @@
   --info-text: #dbeafe;
   --info-text-dark: #bfdbfe;
   
-  /* カードとコンテナ */
-  --card-bg: var(--bg-darker);
-  --card-bg-hover: var(--gray-800);
-  --card-border: var(--gray-800);
+  /* カードとコンテナ - グレー系 */
+  --card-bg: #444;
+  --card-bg-hover: #555;
+  --card-border: #666;
   --card-shadow: var(--shadow-md);
   
   /* ボタン */
