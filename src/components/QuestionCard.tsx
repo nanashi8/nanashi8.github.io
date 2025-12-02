@@ -347,7 +347,7 @@ function QuestionCard({
     >
       <div className="question-nav-row">
         <button 
-          className="inline-nav-btn prev-inline-btn" 
+          className="flex-shrink-0 w-11 h-11 rounded-full text-xl font-bold border-2 border-primary bg-secondary text-primary cursor-pointer transition-all duration-300 flex items-center justify-center p-0 hover:bg-primary hover:text-white hover:scale-110 hover:shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:border-border disabled:text-muted dark:bg-secondary dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-white" 
           onClick={onPrevious}
           disabled={currentIndex === 0}
           title="前へ"
@@ -391,7 +391,7 @@ function QuestionCard({
           )}
         </div>
         <button 
-          className="inline-nav-btn next-inline-btn" 
+          className="flex-shrink-0 w-11 h-11 rounded-full text-xl font-bold border-2 border-primary bg-primary text-white cursor-pointer transition-all duration-300 flex items-center justify-center p-0 hover:bg-primary-hover hover:scale-110 hover:shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:border-border disabled:text-muted dark:bg-primary dark:border-primary dark:hover:bg-primary-hover" 
           onClick={handleNextClick}
           title="次へ"
         >
