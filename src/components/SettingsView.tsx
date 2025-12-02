@@ -151,25 +151,37 @@ function SettingsView({
           <h3>🌙 表示モード</h3>
           <div className="theme-toggle-grid">
             <button
-              className={`theme-btn ${darkMode === 'light' ? 'active' : ''}`}
+              className={`flex flex-col items-center gap-2 px-4 py-3 rounded-lg border-2 transition-all duration-200 ${
+                darkMode === 'light' 
+                  ? 'bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white' 
+                  : 'bg-gray-100 border-gray-300 text-gray-700 hover:border-primary hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-gray-700'
+              }`}
               onClick={() => handleDarkModeChange('light')}
             >
-              <div className="theme-icon">☀️</div>
-              <div className="theme-label">ライト</div>
+              <div className="text-2xl">☀️</div>
+              <div className="text-sm font-medium">ライト</div>
             </button>
             <button
-              className={`theme-btn ${darkMode === 'dark' ? 'active' : ''}`}
+              className={`flex flex-col items-center gap-2 px-4 py-3 rounded-lg border-2 transition-all duration-200 ${
+                darkMode === 'dark' 
+                  ? 'bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white' 
+                  : 'bg-gray-100 border-gray-300 text-gray-700 hover:border-primary hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-gray-700'
+              }`}
               onClick={() => handleDarkModeChange('dark')}
             >
-              <div className="theme-icon">🌙</div>
-              <div className="theme-label">ダーク</div>
+              <div className="text-2xl">🌙</div>
+              <div className="text-sm font-medium">ダーク</div>
             </button>
             <button
-              className={`theme-btn ${darkMode === 'system' ? 'active' : ''}`}
+              className={`flex flex-col items-center gap-2 px-4 py-3 rounded-lg border-2 transition-all duration-200 ${
+                darkMode === 'system' 
+                  ? 'bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white' 
+                  : 'bg-gray-100 border-gray-300 text-gray-700 hover:border-primary hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-gray-700'
+              }`}
               onClick={() => handleDarkModeChange('system')}
             >
-              <div className="theme-icon">💻</div>
-              <div className="theme-label">システム</div>
+              <div className="text-2xl">💻</div>
+              <div className="text-sm font-medium">システム</div>
             </button>
           </div>
           <div className="theme-description">
@@ -188,18 +200,26 @@ function SettingsView({
             <h4>🎤 声の種類</h4>
             <div className="theme-toggle-grid">
               <button
-                className={`theme-btn ${voiceGender === 'female' ? 'active' : ''}`}
+                className={`flex flex-col items-center gap-2 px-4 py-3 rounded-lg border-2 transition-all duration-200 ${
+                  voiceGender === 'female' 
+                    ? 'bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white' 
+                    : 'bg-gray-100 border-gray-300 text-gray-700 hover:border-primary hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-gray-700'
+                }`}
                 onClick={() => handleVoiceGenderChange('female')}
               >
-                <div className="theme-icon">👩</div>
-                <div className="theme-label">女性</div>
+                <div className="text-2xl">👩</div>
+                <div className="text-sm font-medium">女性</div>
               </button>
               <button
-                className={`theme-btn ${voiceGender === 'male' ? 'active' : ''}`}
+                className={`flex flex-col items-center gap-2 px-4 py-3 rounded-lg border-2 transition-all duration-200 ${
+                  voiceGender === 'male' 
+                    ? 'bg-primary border-primary text-white dark:bg-primary dark:border-primary dark:text-white' 
+                    : 'bg-gray-100 border-gray-300 text-gray-700 hover:border-primary hover:bg-gray-200 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-gray-700'
+                }`}
                 onClick={() => handleVoiceGenderChange('male')}
               >
-                <div className="theme-icon">👨</div>
-                <div className="theme-label">男性</div>
+                <div className="text-2xl">👨</div>
+                <div className="text-sm font-medium">男性</div>
               </button>
             </div>
           </div>

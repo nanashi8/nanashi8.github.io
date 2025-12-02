@@ -9,6 +9,7 @@
     "deploy": "npm run build && gh-pages -d dist",
     "build:beta": "vite build --base=/beta/ --outDir dist-beta",
     "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'",
+    "preview:beta": "npm run build:beta && vite preview --outDir dist-beta --port 4174",
     "validate": "python3 scripts/validate_all_data.py",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint 'src/**/*.css' --fix",
@@ -21,6 +22,7 @@
     "test:smoke:ui": "playwright test --project=chromium --ui",
     "test:smoke:debug": "playwright test --project=chromium --debug",
     "test:smoke:update": "playwright test --project=chromium --update-snapshots",
+    "test:visual": "playwright test tests/visual-comparison.spec.ts --project=chromium",
     "prepare": "husky"
   },
   "dependencies": {
