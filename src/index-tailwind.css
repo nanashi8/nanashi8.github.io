@@ -265,6 +265,11 @@
 
   /* グラデーション背景 */
   .bg-gradient-app {
+    background: #fff; /* ライトモードは白背景 */
+  }
+
+  /* ダークモードはグラデーション背景 */
+  .dark .bg-gradient-app {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 

@@ -1,31 +1,47 @@
 /* ============================================
-   Light Theme
+   Light Theme - 22色パレット参照
    ============================================
    
-   ライトモード専用のスタイル定義
-   22色カラーパレット準拠
-   背景: 白、カード: 青系、文字: 黒っぽい色
+   variables.cssの22色を参照するのみ
+   新しい色は追加しない
    ============================================ */
 
 :root {
   color-scheme: light;
   
-  /* 背景色 - 白系 */
-  --background: #fff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #e9ecef;
+  /* 背景 */
+  --background: var(--white);
+  --bg-secondary: var(--gray-50);
+  --bg-tertiary: var(--gray-100);
   
-  /* テキストカラー - 黒っぽい色 */
-  --text-color: #333;
-  --text-secondary: #666;
-  --text-tertiary: #999;
+  /* テキスト */
+  --text-color: var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-tertiary: var(--gray-400);
   
-  /* カードとコンテナ - 青系 */
-  --card-bg: #e7f3ff;
-  --card-bg-hover: #d4e3ff;
-  --card-border: #2196f3;
+  /* カード */
+  --card-bg: var(--blue-50);
+  --card-bg-hover: var(--blue-100);
+  --card-border: var(--blue-300);
+  
+  /* ボタン */
+  --btn-primary-bg: var(--blue-600);
+  --btn-primary-hover: var(--blue-700);
+  --btn-primary-text: var(--white);
+  --primary-color: var(--blue-600);
   
   /* ボーダー */
-  --border-color: #ddd;
-  --border-color-light: #f0f0f0;
+  --border-color: var(--gray-200);
+  --border-color-light: var(--gray-100);
+  
+  /* セマンティック */
+  --success-color: var(--green-500);
+  --error-color: var(--red-500);
+  --warning-color: var(--yellow-500);
+  --info-color: var(--blue-600);
+  
+  /* シャドウ */
+  --shadow-sm: 0 1px 2px rgb(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgb(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgb(0, 0, 0, 0.1);
 }
