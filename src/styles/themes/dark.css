@@ -1,86 +1,49 @@
 /* ============================================
-   Dark Theme - CSS Variable Overrides
+   Dark Theme - 22色パレット参照
    ============================================
    
-   ダークモード専用のCSS変数オーバーライド
-   variables.cssで定義された変数のみを上書き
-   22色カラーパレット準拠
-   背景: 黒っぽい色、カード: グレー系、文字: 薄いグレー/白
+   variables.cssの22色を参照するのみ
+   新しい色は追加しない
    ============================================ */
 
 .dark-mode {
   color-scheme: dark;
   
-  /* 基本カラー - 黒っぽい背景 */
-  --text-color: #e0e0e0;
-  --text-secondary: #aaa;
-  --text-tertiary: #888;
-  --background: #333;
-  --bg-secondary: #444;
-  --bg-tertiary: #555;
-  --border-color: #666;
-  --border-color-light: #555;
+  /* 背景 - より暗く */
+  --background: var(--black);
+  --bg-secondary: var(--gray-900);
+  --bg-tertiary: var(--gray-800);
   
-  /* セマンティックカラー - 成功 */
-  --success-color: #4ade80;
-  --success-bg: #1e5a28;
-  --success-bg-hover: #2d6a3a;
-  --success-border: #4ade80;
-  --success-text: #d1fae5;
-  --success-text-dark: #a7f3d0;
+  /* テキスト */
+  --text-color: var(--gray-200);
+  --text-secondary: var(--gray-300);
+  --text-tertiary: var(--gray-400);
   
-  /* セマンティックカラー - エラー */
-  --error-color: var(--error-light);
-  --error-bg: #5a1e1e;
-  --error-bg-hover: #6a2828;
-  --error-border: var(--error-light);
-  --error-text: #fecaca;
-  --error-text-dark: #fca5a5;
-  
-  /* セマンティックカラー - 警告 */
-  --warning-color: var(--warning-light);
-  --warning-bg: #78350f;
-  --warning-bg-hover: #92400e;
-  --warning-border: var(--warning-light);
-  --warning-text: #fef3c7;
-  --warning-text-dark: #fde68a;
-  
-  /* セマンティックカラー - 情報 */
-  --info-color: var(--accent-blue-light);
-  --info-bg: var(--info-bg-dark);
-  --info-bg-hover: #2e4a6f;
-  --info-border: var(--accent-blue-light);
-  --info-text: #dbeafe;
-  --info-text-dark: #bfdbfe;
-  
-  /* カードとコンテナ - グレー系 */
-  --card-bg: #444;
-  --card-bg-hover: #555;
-  --card-border: #666;
-  --card-shadow: var(--shadow-md);
+  /* カード - 暗めに */
+  --card-bg: var(--gray-800);
+  --card-bg-hover: var(--gray-700);
+  --card-border: var(--gray-600);
   
   /* ボタン */
-  --btn-primary-hover: #7a8ef0;
-  --btn-primary-text: #fff;
-  --btn-secondary-bg: #4a4a4a;
-  --btn-secondary-hover: #5a5a5a;
-  --btn-secondary-text: var(--gray-300);
-  --btn-disabled-bg: var(--gray-800);
-  --btn-disabled-text: var(--gray-700);
+  --btn-primary-bg: var(--gray-600);
+  --btn-primary-hover: var(--gray-500);
+  --btn-primary-text: var(--white);
+  --primary-color: var(--blue-300);
   
-  /* インタラクティブ要素 */
-  --link-color: var(--accent-blue-light);
-  --link-hover: #93c5fd;
-  --focus-ring: rgb(102, 126, 234, 0.4);
+  /* ボーダー */
+  --border-color: var(--gray-600);
+  --border-color-light: var(--gray-700);
   
-  /* オーバーレイと透明度 */
-  --overlay-bg: rgb(0, 0, 0, 0.7);
-  --overlay-light: var(--overlay-xs);
+  /* セマンティック */
+  --success-color: var(--green-400);
+  --error-color: var(--red-400);
+  --warning-color: var(--yellow-400);
+  --info-color: var(--blue-400);
   
   /* シャドウ */
-  --shadow-sm: 0 1px 2px var(--shadow-md);
+  --shadow-sm: 0 1px 2px rgb(0, 0, 0, 0.4);
   --shadow-md: 0 4px 6px rgb(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px var(--overlay-bg);
+  --shadow-lg: 0 10px 15px rgb(0, 0, 0, 0.5);
 }
 
 .dark-mode .app {
@@ -91,9 +54,9 @@
 .dark-mode .question-card,
 .dark-mode .choice-btn,
 .dark-mode .letter-card {
-  background: #2a2a2a;
+  background: var(--card-bg);
   border-color: var(--card-border);
-  color: var(--gray-text-unified);
+  color: var(--text-color);
 }
 
 .dark-mode .letter-card.practice-mode {
@@ -3892,9 +3855,9 @@ option {
   }
 
   .dark-mode .choice-btn {
-    background: #2a2a2a;
-    color: var(--background);
-    border-color: var(--text-color);
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
   }
 
   .navigation-controls {
