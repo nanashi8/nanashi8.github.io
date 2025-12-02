@@ -386,7 +386,7 @@ function calculateSingleWordPriority(
         learningImpact: 80 // 高い学習効果
       };
       
-    case 'improving':
+    case 'improving': {
       // 改善中 → 定着転換を狙う
       const daysSince = prediction.predictors.timeSinceLastStudy;
       const isOptimalTiming = daysSince >= 1 && daysSince <= 3;
@@ -399,8 +399,9 @@ function calculateSingleWordPriority(
         estimatedSuccessRate: prediction.nextCorrectProbability,
         learningImpact: 75
       };
+    }
       
-    case 'consolidating':
+    case 'consolidating': {
       // 定着化中 → 適切な間隔で復習
       const optimalInterval = curve.forgettingPattern.typicalDecayDays * 0.7;
       const currentInterval = prediction.predictors.timeSinceLastStudy;
@@ -414,6 +415,7 @@ function calculateSingleWordPriority(
         estimatedSuccessRate: prediction.nextCorrectProbability,
         learningImpact: 50
       };
+    }
       
     case 'mastered':
       // 習得済み → 低優先度（長期記憶の確認のみ）

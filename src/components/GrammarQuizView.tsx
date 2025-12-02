@@ -66,7 +66,7 @@ interface GrammarQuizViewProps {
   onSaveProgress?: (data: any) => void;
 }
 
-function GrammarQuizView({ }: GrammarQuizViewProps) {
+function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [quizType, setQuizType] = useState<QuizType>(() => {
     const saved = localStorage.getItem('grammar-quiz-type');
     return (saved as QuizType) || 'verb-form';
@@ -172,7 +172,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
               });
             }
           }
-        } catch (err) {
+        } catch (_err) {
           console.warn('Unit情報の読み込みに失敗しました');
         }
       }
@@ -266,7 +266,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 const data = await res.json();
                 allData.push(data);
               }
-            } catch (err) {
+            } catch (_err) {
               console.warn(`${filename} not found, skipping...`);
             }
           }
@@ -288,7 +288,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
               const data = await res.json();
               allData.push(data);
             }
-          } catch (err) {
+          } catch (_err) {
             console.warn(`${filename} not found, skipping...`);
           }
         }

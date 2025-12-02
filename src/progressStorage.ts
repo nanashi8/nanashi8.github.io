@@ -1769,20 +1769,19 @@ export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
       estimatedDays = 1;
       confidence = 90;
       currentStatus = `連続${consecutiveCorrect}回正解中`;
+    } else if (consecutiveCorrect === 1 && accuracy >= 0.9 && totalAttempts >= 2) {
+      // パターン2: 高精度安定型に近い（正答率90%以上）
+      remainingCorrectAnswers = 1;
+      nextMilestone = '高精度安定型で定着（連続2回正解）';
+      estimatedDays = 1;
+      confidence = 85;
+      currentStatus = `正答率${Math.round(accuracy * 100)}%`;
     } else if (consecutiveCorrect === 1) {
       remainingCorrectAnswers = 2;
       nextMilestone = '連続3回正解で定着';
       estimatedDays = 2;
       confidence = 75;
       currentStatus = `連続${consecutiveCorrect}回正解中`;
-    }
-    // パターン2: 高精度安定型に近い（正答率90%以上）
-    else if (accuracy >= 0.9 && consecutiveCorrect === 1 && totalAttempts >= 2) {
-      remainingCorrectAnswers = 1;
-      nextMilestone = '高精度安定型で定着（連続2回正解）';
-      estimatedDays = 1;
-      confidence = 85;
-      currentStatus = `正答率${Math.round(accuracy * 100)}%`;
     }
     // パターン3: 高回数安定型に近い
     else if (totalAttempts >= 4 && accuracy >= 0.75) {
