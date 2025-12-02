@@ -170,7 +170,7 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
           </select>
         </div>
 
-        <button type="submit" className="add-btn">
+        <button type="submit" className="px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-primary rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover">
           ➕ 問題を追加
         </button>
       </form>
@@ -180,13 +180,13 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
           <h3>作成した問題 ({questions.length}問)</h3>
           <div className="list-actions">
             <button
-              className="download-btn"
+              className="px-6 py-3 text-base font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
               onClick={handleDownload}
               disabled={questions.length === 0}
             >
               📥 CSVダウンロード
             </button>
-            <button className="template-btn" onClick={handleDownloadTemplate}>
+            <button className="px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover" onClick={handleDownloadTemplate}>
               📄 テンプレート
             </button>
           </div>
@@ -209,7 +209,7 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
                   </div>
                 </div>
                 <button
-                  className="delete-btn"
+                  className="px-4 py-2 text-sm font-medium bg-error text-white border-2 border-error rounded-lg transition-all duration-200 hover:bg-error-hover hover:shadow-md dark:bg-error dark:hover:bg-error-hover"
                   onClick={() => handleDelete(index)}
                 >
                   削除

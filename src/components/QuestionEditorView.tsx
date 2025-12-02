@@ -273,7 +273,7 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
                   className={`set-item ${selectedSetId === set.id ? 'active' : ''}`}
                 >
                   <button
-                    className="set-name-btn"
+                    className="w-full px-4 py-3 text-left text-base font-medium bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-lg transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500"
                     onClick={() => setSelectedSetId(set.id)}
                   >
                     <div className="set-name">{set.name}</div>
