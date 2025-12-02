@@ -3,8 +3,8 @@
 ## 📌 基本情報
 
 **プロジェクト名**: 高校受験英語学習アプリ  
-**バージョン**: 3.1.0  
-**最終更新**: 2025年11月25日  
+**バージョン**: 3.2.0  
+**最終更新**: 2025年12月2日  
 **ライセンス**: MIT  
 **デプロイURL**: https://nanashi8.github.io/
 
@@ -75,9 +75,11 @@
 ## 🛠️ 技術スタック
 
 ### フロントエンド
-- **React 18.2** + **TypeScript 5.2**
-- **Vite 5.4** - ビルドツール
-- **CSS3** - カスタムスタイリング（CSS変数対応）
+- **React 18.3.1** + **TypeScript 5.6.3**
+- **Vite 5.4.21** - ビルドツール
+- **CSS3** - カスタムスタイリング（CSS変数 100+個、ダークモード完全対応）
+  - 総行数: 12,255行（`dark.css` 最適化済み）
+  - BEM命名規約（新規コンポーネントから適用）
 
 ### ストレージ
 - **IndexedDB** - メイン学習データ（10MB+対応）
@@ -87,10 +89,21 @@
 - **GitHub Pages** - 静的サイトホスティング
 - **gh-pages** - 自動デプロイツール
 
-### 開発ツール
-- **ESLint** - コード品質チェック
+### 品質管理・開発ツール
+- **TypeScript 5.6.3** - 型チェック（strictモード有効、エラー0件達成）
+- **ESLint 9.17** - コード品質チェック（React Hooks対応）
+- **Stylelint 16.11** - CSS品質チェック
+- **Playwright 1.49** - E2Eテスト（スモークテスト + Visual Regression）
+- **Husky** - Git Hooks（pre-commit自動チェック）
 - **Git** - バージョン管理
-- **VS Code** - 推奨エディタ
+- **VS Code** - 推奨エディタ（Simple Browser推奨）
+
+### CI/CD
+- **GitHub Actions** - 自動ビルド・テスト
+  - TypeScript型チェック
+  - CSS Lint
+  - ビルド検証
+  - E2Eテスト（予定）
 
 ## 📊 データ規模
 
@@ -141,15 +154,40 @@
 - ✅ ダークモード実装完了（CSS変数による完全対応）
 - ✅ レスポンシブデザイン実装完了
 - ✅ エラー処理・ログ機能実装完了
-- ✅ ドキュメント整備完了（26個の仕様書 + AI開発パイプライン）
+- ✅ ドキュメント整備完了（30+の仕様書 + AI開発パイプライン）
 - ✅ 21本の長文パッセージ実装完了（語彙カバレッジ63%+）
 
-### 開発効率化システム
+### 品質管理体制（2025年12月2日確立）
+- ✅ **TypeScript型安全性**: 0エラー達成（11エラーから段階的改善）
+- ✅ **Pre-commitフック**: 自動型チェック + CSS Lint + ビルド検証
+- ✅ **CSS重複削除**: 18ルール（82行）手動削除完了
+- ✅ **BEM命名規約**: 新規コンポーネントから適用開始
+- ✅ **Playwright E2E**: スモークテスト + Visual Regression
+- ✅ **Smart Test**: Git差分ベースの最適化テスト実行
+- ✅ **GitHub Actions CI**: 自動ビルド・品質チェック
+
+### 開発ガイドライン・パイプライン
+- ✅ **CSS開発ガイドライン** - BEM命名、CSS変数必須、重複禁止
+- ✅ **TypeScript/React開発ガイドライン** - コンポーネント設計、型定義
+- ✅ **品質管理パイプライン** - テスト戦略、Git Hooks、CI/CD
+- ✅ **AI開発アシスタント用指示書** - GitHub Copilot統合ガイド
 - ✅ AI開発ワークフロー指示書（AI_WORKFLOW_INSTRUCTIONS.md）
 - ✅ クイックリファレンス（QUICK_REFERENCE.md）
 - ✅ 品質チェックリスト統合（QUALITY_CHECKLIST.md）
 - ✅ パッセージ作成6Phaseパイプライン
 - ✅ 自動化ツール（品質チェック・語彙カバレッジ・フレーズ分割）
+
+### 品質メトリクス（2025-12-02現在）
+
+| 項目 | 現在値 | 状態 |
+|-----|-------|------|
+| TypeScriptエラー | 0 | ✅ |
+| ESLint problems | 56 (warnings) | ⚠️ 改善中 |
+| CSSリントエラー | 0 | ✅ |
+| CSS総行数 | 12,255 | ✅ 最適化済み |
+| CSS重複ルール | 0 | ✅ |
+| ビルド時間 | 2.4秒 | ✅ |
+| CSSバンドルサイズ | 116KB | ✅ |
 
 ## 🚀 今後の展望
 
@@ -178,13 +216,24 @@
 
 ---
 
-**最終更新**: 2025年11月25日  
-**ドキュメントバージョン**: 3.1.0
+**最終更新**: 2025年12月2日  
+**ドキュメントバージョン**: 3.2.0
 
 ## 📝 関連ドキュメント
 
+### 開発ガイドライン（必読）
+- **[CSS開発ガイドライン](./CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名、CSS変数、重複防止
+- **[TypeScript/React開発ガイドライン](./TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - 型安全、コンポーネント設計
+- **[品質管理パイプライン](./QUALITY_PIPELINE.md)** - テスト戦略、Git Hooks、CI/CD
+- **[AI開発アシスタント用指示書](../.aitk/instructions/development-guidelines.instructions.md)** - GitHub Copilot統合ガイド
+
+### 機能仕様書
 - [02-和訳クイズ](./02-translation-quiz.md)
 - [03-スペルクイズ](./03-spelling-quiz.md)
 - [04-長文読解](./04-reading-comprehension.md)
 - [15-データ構造](./15-data-structures.md)
 - [22-開発環境セットアップ](./22-development-setup.md)
+
+### その他
+- [UI開発ガイドライン](./UI_DEVELOPMENT_GUIDELINES.md) - UI変更時の必須要件
+- [VS Code Simple Browser ガイド](./VS_CODE_SIMPLE_BROWSER_GUIDE.md) - 開発環境での確認方法
