@@ -8,46 +8,46 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 22色パレット準拠: 既存のCSS変数からTailwindカラーパレットへマッピング
+        // 22色パレット準拠: 中学生向けシンプルデザイン
+        white: '#fff',
+        black: '#000',
         primary: {
-          DEFAULT: '#667eea',
-          hover: '#8b9ef5',
+          DEFAULT: '#1976d2', // 濃い青（ライト用）
+          hover: '#1565c0',
+          dark: '#616161', // 濃いグレー（ダーク用）
+          'dark-hover': '#757575',
         },
         success: {
           DEFAULT: '#10b981',
           light: '#d1fae5',
-          dark: '#065f46',
+          dark: '#4ade80',
         },
         error: {
           DEFAULT: '#ef4444',
           light: '#fee2e2',
-          dark: '#991b1b',
+          dark: '#f87171',
         },
         warning: {
           DEFAULT: '#f59e0b',
           light: '#fff3cd',
-          dark: '#78350f',
+          dark: '#fbbf24',
         },
         info: {
-          DEFAULT: '#2196f3',
-          light: '#e7f3ff',
-          dark: '#0056b3',
+          DEFAULT: '#1976d2',
+          light: '#e3f2fd',
+          dark: '#60a5fa',
         },
         gray: {
-          100: '#f8f9fa',
-          200: '#e9ecef',
-          300: '#e0e0e0',
-          400: '#ccc',
-          500: '#aaa',
-          600: '#999',
-          700: '#666',
-          800: '#444',
-          900: '#333',
-        },
-        accent: {
-          blue: '#3b82f6',
-          red: '#f44336',
-          purple: '#9c27b0',
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e0e0e0',
+          300: '#bdbdbd',
+          400: '#9e9e9e',
+          500: '#757575',
+          600: '#616161',
+          700: '#424242',
+          800: '#303030',
+          900: '#1a1a1a',
         },
       },
       spacing: {

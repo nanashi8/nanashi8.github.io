@@ -6,14 +6,14 @@
 .tab-menu {
   display: flex;
   gap: 0;
-  background: var(--gray-100);
+  background: var(--bg-secondary); /* ← 白色に変更 */
   flex-shrink: 0;
 }
 
 .tab-btn {
   padding: 15px 30px;
   border: none;
-  background: var(--background);
+  background: var(--card-bg); /* タブ背景を青系(カード色)に設定 */
   color: var(--text-color);
   cursor: pointer;
   font-size: 1em;
@@ -28,7 +28,7 @@
 }
 
 .tab-btn.active {
-  background: var(--background);
+  background: var(--bg-secondary);
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
   font-weight: 600;
