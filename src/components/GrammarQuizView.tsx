@@ -526,11 +526,11 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
           <div className="quiz-controls">
             <button 
               onClick={() => setShowSettings(!showSettings)} 
-              className="settings-toggle-btn"
+              className="px-6 py-3 text-base font-medium bg-secondary text-secondary border-2 border-transparent rounded-xl transition-all duration-300 hover:bg-secondary-hover hover:shadow-lg dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
             >
               ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
             </button>
-            <button onClick={handleStartQuiz} className="start-btn">
+            <button onClick={handleStartQuiz} className="px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-primary rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover">
               🎯 クイズ開始
             </button>
           </div>
@@ -689,7 +689,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                 <h3>📊 学習設定</h3>
                 <button 
                   onClick={() => setShowSettings(false)} 
-                  className="close-settings-btn"
+                  className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                 >
                   ✕ 閉じる
                 </button>
@@ -816,7 +816,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
               {/* インラインナビゲーション */}
               <div className="question-nav-row">
                 <button 
-                  className="inline-nav-btn prev-inline-btn" 
+                  className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500" 
                   onClick={handlePrevious}
                   disabled={currentQuestionIndex === 0}
                   title="前へ"
@@ -842,7 +842,7 @@ function GrammarQuizView({ }: GrammarQuizViewProps) {
                   )}
                 </div>
                 <button 
-                  className="inline-nav-btn next-inline-btn" 
+                  className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500" 
                   onClick={handleNext}
                   disabled={currentQuestionIndex >= currentQuestions.length - 1}
                   title="次へ"
