@@ -8,9 +8,14 @@
   gap: 10px;
   margin-bottom: 15px;
   padding: 10px;
-  background: var(--gray-800);
+  background: var(--blue-50);
   border-radius: 12px;
   border: 2px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.dark-mode .question-nav-row {
+  background: var(--gray-800);
   color: var(--gray-300);
 }
 
@@ -54,8 +59,12 @@
   min-width: 0;
 }
 
+.dark-mode .question-content-inline {
+  background: transparent;
+}
+
 .question-text {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   color: var(--text-color);
   text-align: center;

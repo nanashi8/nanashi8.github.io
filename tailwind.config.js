@@ -47,8 +47,17 @@ export default {
           600: '#616161',
           700: '#424242',
           800: '#303030',
+          850: '#262626',
           900: '#1a1a1a',
         },
+        // CSS変数ベースのカスタムカラー
+        'text-color': 'var(--text-color)',
+        'text-secondary': 'var(--text-secondary)',
+        'bg-primary': 'var(--background)',
+        'bg-secondary': 'var(--bg-secondary)',
+        'card-bg': 'var(--card-bg)',
+        'card-border': 'var(--card-border)',
+        'border-color': 'var(--border-color)',
       },
       spacing: {
         // 既存のスペーシング値
@@ -72,14 +81,43 @@ export default {
         '2xl': '1.5rem',    // 24px
       },
       fontSize: {
-        'xs': '0.75rem',    // 12px
-        'sm': '0.875rem',   // 14px
-        'base': '1rem',     // 16px
-        'lg': '1.125rem',   // 18px
-        'xl': '1.25rem',    // 20px
-        '2xl': '1.5rem',    // 24px
-        '3xl': '1.875rem',  // 30px
-        '4xl': '2.25rem',   // 36px
+        // 業界標準準拠: Material Design, Bootstrap, Tailwind CSS
+        // [fontSize, { lineHeight, letterSpacing }]
+        'xs': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0' }],      // 12px
+        'sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0' }],  // 14px
+        'base': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0' }],     // 16px ← 基準
+        'lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '0' }],  // 18px
+        'xl': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '0' }],   // 20px
+        '2xl': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.025em' }],     // 24px
+        '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.025em' }], // 30px
+        '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.05em' }],    // 36px
+      },
+      lineHeight: {
+        'none': '1',
+        'tight': '1.25',
+        'snug': '1.375',
+        'normal': '1.5',
+        'relaxed': '1.625',
+        'loose': '2',
+      },
+      letterSpacing: {
+        'tighter': '-0.05em',
+        'tight': '-0.025em',
+        'normal': '0',
+        'wide': '0.025em',
+        'wider': '0.05em',
+        'widest': '0.1em',
+      },
+      fontWeight: {
+        'thin': '100',
+        'extralight': '200',
+        'light': '300',
+        'normal': '400',
+        'medium': '500',
+        'semibold': '600',
+        'bold': '700',
+        'extrabold': '800',
+        'black': '900',
       },
       boxShadow: {
         'sm': '0 1px 2px rgba(0, 0, 0, 0.05)',
