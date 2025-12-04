@@ -885,13 +885,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         <div className="quiz-controls">
           <button 
             onClick={() => setShowSettings(!showSettings)} 
-            className="px-6 py-3 text-base font-medium bg-secondary text-secondary border-2 border-transparent rounded-xl transition-all duration-300 hover:bg-secondary-hover hover:shadow-lg dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
+            className="w-64 px-8 py-4 text-lg font-bold bg-secondary text-white border-2 border-blue-300 rounded-xl transition-all duration-300 hover:bg-secondary-hover hover:shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
           >
             ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
           </button>
           <button 
             onClick={handleStartReading}
-            className="px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-primary rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={!selectedPassageId}
           >
             📖 読解開始
@@ -939,9 +939,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
       {/* 4タブ構造 + 操作ボタン（読解開始後に表示） */}
       {readingStarted && (
-        <div className="reading-sub-tabs">
+        <div className="reading-sub-tabs flex gap-2">
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               readingSubTab === 'reading' 
                 ? 'bg-primary text-white border-2 border-primary shadow-md' 
                 : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -951,7 +951,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📖 読解
           </button>
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               readingSubTab === 'fullText' 
                 ? 'bg-primary text-white border-2 border-primary shadow-md' 
                 : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -961,7 +961,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📄 全文
           </button>
           <button
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               readingSubTab === 'fullTranslation' 
                 ? 'bg-primary text-white border-2 border-primary shadow-md' 
                 : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -971,7 +971,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📝 全訳
           </button>
           <button
-            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            className="flex-1 px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
             onClick={handleBackToSettings}
             title="設定"
           >
@@ -980,7 +980,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           <div className="sub-tab-divider"></div>
           <button 
             onClick={handleSaveUnknownWords}
-            className="px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
+            className="flex-1 px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
             disabled={unknownCount === 0}
             title="未知語を保存"
           >
@@ -988,7 +988,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button 
             onClick={handleReset}
-            className="px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md dark:bg-warning dark:text-warning-dark dark:hover:bg-warning-hover"
+            className="flex-1 px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md dark:bg-warning dark:text-white dark:hover:bg-warning-hover"
             title="リセット"
           >
             🔄 リセット
@@ -1214,7 +1214,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   🔊 発音
                 </button>
                 <button
-                  className="px-6 py-3 text-base font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-warning dark:text-warning-dark dark:hover:bg-warning-hover"
+                  className="px-6 py-3 text-base font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-warning dark:text-white dark:hover:bg-warning-hover"
                   onClick={() => {
                     if (isFullTextPaused) {
                       resumeSpeaking();
@@ -1441,6 +1441,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           margin-bottom: 20px;
         }
 
+        .dark-mode .reading-header {
+          background: var(--gray-800);
+        }
+
         .reading-header h2 {
           margin: 0 0 20px 0;
         }
@@ -1452,6 +1456,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         .filter-controls label, .passage-selector label {
           font-weight: bold;
           margin-right: 10px;
+          color: #333;
+        }
+
+        .dark-mode .filter-controls label,
+        .dark-mode .passage-selector label {
+          color: var(--gray-200);
         }
 
         .filter-controls select, .passage-selector select {
@@ -1459,6 +1469,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           border: 1px solid #ddd;
           border-radius: 4px;
           font-size: 14px;
+          background: white;
+          color: #333;
+        }
+
+        .dark-mode .filter-controls select,
+        .dark-mode .passage-selector select {
+          background: var(--gray-700);
+          border-color: var(--gray-600);
+          color: var(--gray-200);
         }
 
         .passage-stats {
@@ -1474,12 +1493,23 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           background: #f0f0f0;
           border-radius: 4px;
           font-size: 14px;
+          color: #333;
+        }
+
+        .dark-mode .stat-badge {
+          background: var(--gray-700);
+          color: var(--gray-200);
         }
 
         .stat-badge.unknown-count {
           background: #fff3cd;
           color: #856404;
           font-weight: bold;
+        }
+
+        .dark-mode .stat-badge.unknown-count {
+          background: var(--yellow-500);
+          color: var(--black);
         }
 
         .action-buttons {
@@ -1546,6 +1576,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        .dark-mode .passage-content {
+          background: var(--gray-800);
+          color: var(--gray-100);
+        }
+
         .passage-title {
           text-align: center;
           color: #333;
@@ -1554,12 +1589,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         }
 
         .dark-mode .passage-title {
-          color: #ffffff;
+          color: var(--white);
         }
 
         .passage-body {
           line-height: 1.5;
           font-family: 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', YuMincho, serif;
+          color: #333;
+        }
+
+        .dark-mode .passage-body {
+          color: var(--gray-200);
         }
 
         .phrase-block {
@@ -1568,6 +1608,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           background: #ffffff;
           border-left: 3px solid #007bff;
           border-radius: 2px;
+        }
+
+        .dark-mode .phrase-block {
+          background: var(--gray-700);
+          border-left-color: var(--blue-400);
         }
 
         .phrase-english {
@@ -1595,9 +1640,19 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           min-width: 60px;
         }
 
+        .dark-mode .word-card {
+          background: var(--gray-700);
+          border-color: var(--gray-600);
+        }
+
         .word-card:hover {
           background: #e7f3ff;
           border-color: #007bff;
+        }
+
+        .dark-mode .word-card:hover {
+          background: var(--gray-600);
+          border-color: var(--blue-400);
         }
 
         .word-card.unknown {
@@ -1612,8 +1667,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           border-color: #4caf50;
         }
 
+        .dark-mode .word-card.phrase-card {
+          background: var(--gray-700);
+          border-color: var(--green-400);
+        }
+
         .word-card.phrase-card:hover {
           background: #c8e6c9;
+        }
+
+        .dark-mode .word-card.phrase-card:hover {
+          background: var(--gray-600);
         }
 
         .word-card.punctuation-card {
@@ -1636,9 +1700,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           text-align: center;
         }
 
+        .dark-mode .word-card-word {
+          color: var(--gray-200);
+        }
+
         .phrase-card .word-card-word {
           font-size: 15px;
           color: #2e7d32;
+        }
+
+        .dark-mode .phrase-card .word-card-word {
+          color: var(--green-400);
         }
 
         .word-card-meaning {
@@ -1650,6 +1722,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           background: rgba(255, 255, 255, 0.8);
           border-radius: 2px;
           min-height: 16px;
+        }
+
+        .dark-mode .word-card-meaning {
+          color: var(--gray-300);
+          background: rgba(48, 48, 48, 0.8);
         }
 
         .word-segment {
@@ -1693,11 +1770,20 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           border: 1px solid #dee2e6;
         }
 
+        .dark-mode .phrase-translation {
+          background: var(--gray-800);
+          border-color: var(--gray-600);
+        }
+
         .translation-text {
           font-size: 16px;
           color: #333;
           margin-bottom: 10px;
           font-weight: 500;
+        }
+
+        .dark-mode .translation-text {
+          color: var(--gray-200);
         }
 
         .word-meanings {
@@ -1708,10 +1794,19 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           color: #666;
         }
 
+        .dark-mode .word-meanings {
+          color: var(--gray-300);
+        }
+
         .word-meaning-pair {
           background: #e7f3ff;
           padding: 4px 8px;
           border-radius: 3px;
+        }
+
+        .dark-mode .word-meaning-pair {
+          background: var(--gray-700);
+          color: var(--gray-200);
         }
 
         .error-message, .empty-container {
@@ -1721,8 +1816,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           color: #666;
         }
 
+        .dark-mode .error-message,
+        .dark-mode .empty-container {
+          color: var(--gray-300);
+        }
+
         .error-message {
           color: #dc3545;
+        }
+
+        .dark-mode .error-message {
+          color: var(--red-400);
         }
 
         /* 単語ポップアップのスタイル */
@@ -1748,6 +1852,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           z-index: 1000;
           max-width: 400px;
           min-width: 250px;
+        }
+
+        .dark-mode .word-popup {
+          background: var(--gray-800);
+          border-color: var(--blue-400);
+          color: var(--gray-200);
         }
 
         .popup-close {
@@ -1826,9 +1936,20 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           margin-top: 20px;
         }
 
+        .dark-mode .full-text-display,
+        .dark-mode .full-translation-display {
+          background: var(--gray-800);
+          color: var(--gray-100);
+        }
+
         .full-text-display h3, .full-translation-display h3 {
           margin: 0 0 15px 0;
           color: #667eea;
+        }
+
+        .dark-mode .full-text-display h3,
+        .dark-mode .full-translation-display h3 {
+          color: var(--blue-400);
         }
 
         .full-text-content {

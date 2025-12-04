@@ -170,7 +170,7 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
           </select>
         </div>
 
-        <button type="submit" className="px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-primary rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover">
+        <button type="submit" className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary">
           ➕ 問題を追加
         </button>
       </form>

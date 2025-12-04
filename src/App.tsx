@@ -1209,9 +1209,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="min-h-screen bg-gray-50 dark:bg-black">
       {/* タブメニュー - 中学生向け親しみやすいデザイン */}
-      <div className="flex gap-0 bg-gray-50 dark:bg-gray-900 shadow-md">
+      <div className="flex gap-0 bg-gray-100 dark:bg-gray-900 shadow-md py-2">
         <button
           className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'translation'
@@ -1285,7 +1285,7 @@ function App() {
       </div>
 
       {/* コンテンツエリア */}
-      <div className="p-4 md:p-6">
+      <div className="p-4 md:p-6 bg-gray-50 dark:bg-black">
         {activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}

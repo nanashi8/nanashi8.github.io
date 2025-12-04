@@ -8,7 +8,7 @@ import {
   getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData
 } from '../progressStorage';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar'; // クイズモードを追加
@@ -45,6 +45,11 @@ function ScoreBoard({
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'plan' | 'breakdown' | 'history' | 'settings'>('plan');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  
+  // Progress bar refs
+  const masteredRef = useRef<HTMLDivElement>(null);
+  const learningRef = useRef<HTMLDivElement>(null);
+  const strugglingRef = useRef<HTMLDivElement>(null);
   
   // 学習プラン設定
   const [learningLimit, setLearningLimit] = useState<number | null>(() => {
@@ -85,6 +90,19 @@ function ScoreBoard({
     setDetailedStatsData(getDetailedRetentionStats());
   }, [onAnswerTime]); // 回答時のみ更新
 
+  // Update progress bar widths using CSS variables
+  useEffect(() => {
+    if (masteredRef.current) {
+      masteredRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.masteredPercentage)));
+    }
+    if (learningRef.current) {
+      learningRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.learningPercentage)));
+    }
+    if (strugglingRef.current) {
+      strugglingRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.strugglingPercentage)));
+    }
+  }, [detailedStatsData]);
+
   // 本日の統計を取得（メモ化 - onAnswerTimeで更新）
   const { todayAccuracy, todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode, onAnswerTime]);
 
@@ -116,9 +134,9 @@ function ScoreBoard({
     <div className="score-board-compact">
       {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
       {!isMobile && (
-        <div className="score-board-tabs">
+        <div className="score-board-tabs flex gap-2">
           <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'plan' 
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -128,7 +146,7 @@ function ScoreBoard({
             📋 プラン
           </button>
           <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'breakdown' 
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -139,7 +157,7 @@ function ScoreBoard({
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
-              className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+              className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
                 activeTab === 'history' 
                   ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                   : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -150,7 +168,7 @@ function ScoreBoard({
             </button>
           )}
           <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'settings' 
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -352,8 +370,9 @@ function ScoreBoard({
             <div className="retention-progress-bar">
               {detailedStats.masteredPercentage > 0 && (
                 <div 
+                  ref={masteredRef}
                   className="retention-segment retention-mastered"
-                  data-percentage={Math.round(detailedStats.masteredPercentage)}
+                  data-width={Math.round(detailedStats.masteredPercentage)}
                   title={`🟢 定着: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
                 >
                   {detailedStats.masteredPercentage >= 10 && (
@@ -363,8 +382,9 @@ function ScoreBoard({
               )}
               {detailedStats.learningPercentage > 0 && (
                 <div 
+                  ref={learningRef}
                   className="retention-segment retention-learning"
-                  data-percentage={Math.round(detailedStats.learningPercentage)}
+                  data-width={Math.round(detailedStats.learningPercentage)}
                   title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
                 >
                   {detailedStats.learningPercentage >= 10 && (
@@ -374,8 +394,9 @@ function ScoreBoard({
               )}
               {detailedStats.strugglingPercentage > 0 && (
                 <div 
+                  ref={strugglingRef}
                   className="retention-segment retention-struggling"
-                  data-percentage={Math.round(detailedStats.strugglingPercentage)}
+                  data-width={Math.round(detailedStats.strugglingPercentage)}
                   title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
                 >
                   {detailedStats.strugglingPercentage >= 10 && (
@@ -383,22 +404,6 @@ function ScoreBoard({
                   )}
                 </div>
               )}
-            </div>
-                <div className="retention-breakdown-stats">
-              <div className="stat-row">
-                <span className="stat-label">本日正答率:</span>
-                <strong className="stat-value">{todayAccuracy}%</strong>
-                <span className="stat-detail">({todayTotalAnswered}問)</span>
-              </div>
-              <div className="stat-row">
-                <span className="stat-label">本日定着率:</span>
-                <strong className="stat-value">{retentionRate}%</strong>
-                <span className="stat-detail">({masteredCount}語定着)</span>
-              </div>
-              <div className="stat-row">
-                <span className="stat-label">累計出題語句数:</span>
-                <strong className="stat-value">{totalAnsweredCount}問</strong>
-              </div>
             </div>
             </>
             )}

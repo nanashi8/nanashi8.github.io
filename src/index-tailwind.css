@@ -8,11 +8,9 @@
 /* 既存のコンポーネントCSSをインポート */
 @import './styles/layout/containers.css';
 @import './styles/components/choices.css';
-@import './styles/components/buttons.css';
 @import './styles/components/modals.css';
-@import './styles/components/tabs.css';
+@import './styles/components/spelling-view.css';
 @import './styles/utilities/animations.css';
-@import './styles/utilities/spacing.css';
 @import './App.css';
 
 /* Tailwind CSS Directives */

@@ -52,45 +52,49 @@
   --blue-300: #90caf9;
   
   /* ============================================
-     デフォルト値（ライトモード）
+     デフォルト値（ライトモード：白背景+黒文字）
      ============================================ */
   
-  /* 背景 */
+  /* 背景 - 白系 */
   --background: var(--white);
   --bg-secondary: var(--gray-50);
   --bg-tertiary: var(--gray-100);
   
-  /* テキスト */
+  /* テキスト - 黒/濃いグレー */
   --text-color: var(--gray-900);
   --text-secondary: var(--gray-600);
-  --text-tertiary: var(--gray-400);
+  --text-tertiary: var(--gray-500);
   
-  /* カード */
-  --card-bg: var(--blue-50);
-  --card-bg-hover: var(--blue-100);
-  --card-border: var(--blue-300);
+  /* カード - 明るい背景 */
+  --card-bg: var(--white);
+  --card-bg-hover: var(--gray-50);
+  --card-border: var(--gray-300);
   
-  /* ボタン */
+  /* ボタン - 青系保持 */
   --btn-primary-bg: var(--blue-600);
   --btn-primary-hover: var(--blue-700);
   --btn-primary-text: var(--white);
+  --btn-secondary-bg: var(--gray-100);
+  --btn-secondary-hover: var(--gray-200);
   --primary-color: var(--blue-600);
   
-  /* ボーダー */
+  /* ボーダー - 明るめ */
   --border-color: var(--gray-200);
   --border-color-light: var(--gray-100);
   
-  /* セマンティック */
+  /* セマンティック - 濃いめの色 */
   --success-color: var(--green-500);
-  --success-light: var(--green-400);
+  --success-bg: var(--green-500);
+  --success-border: var(--green-500);
+  --success-text-dark: var(--white);
   --error-color: var(--red-500);
-  --error-light: var(--red-400);
+  --error-bg: var(--red-500);
+  --error-border: var(--red-500);
+  --error-text-dark: var(--white);
   --warning-color: var(--yellow-500);
-  --warning-light: var(--yellow-400);
   --info-color: var(--blue-600);
-  --info-light: var(--blue-50);
   
-  /* シャドウ */
+  /* シャドウ - 明るめ */
   --shadow-sm: 0 1px 2px rgb(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgb(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgb(0, 0, 0, 0.1);
@@ -104,4 +108,26 @@
   --z-toast: 5000;
   --z-error-badge: 9999;
   --z-error-log: 10000;
+  
+  /* ============================================
+     スペーシングシステム（4px基準・0.25rem単位）
+     中学生向けに余裕を持たせた設定
+     ============================================ */
+  
+  /* 基本スペーシング */
+  --spacing-xs: 0.5rem;    /* 8px - 最小間隔 */
+  --spacing-sm: 0.75rem;   /* 12px - 小さい間隔 */
+  --spacing-md: 1rem;      /* 16px - 標準間隔 */
+  --spacing-lg: 1.5rem;    /* 24px - 大きい間隔 */
+  --spacing-xl: 2rem;      /* 32px - 特大間隔 */
+  --spacing-2xl: 3rem;     /* 48px - セクション間隔 */
+  
+  /* コンポーネント用スペーシング */
+  --card-padding: 1.5rem;  /* 24px - カード内余白 */
+  --button-padding-x: 1.5rem; /* 24px - ボタン横余白 */
+  --button-padding-y: 0.75rem; /* 12px - ボタン縦余白 */
+  --input-padding: 0.75rem;    /* 12px - 入力欄余白 */
+  --gap-items: 1rem;           /* 16px - アイテム間隔 */
+  --gap-sections: 2rem;        /* 32px - セクション間隔 */
 }
+

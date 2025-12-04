@@ -526,11 +526,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           <div className="quiz-controls">
             <button 
               onClick={() => setShowSettings(!showSettings)} 
-              className="px-6 py-3 text-base font-medium bg-secondary text-secondary border-2 border-transparent rounded-xl transition-all duration-300 hover:bg-secondary-hover hover:shadow-lg dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
+              className="w-64 px-8 py-4 text-lg font-bold bg-secondary text-white border-2 border-blue-300 rounded-xl transition-all duration-300 hover:bg-secondary-hover hover:shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
             >
               ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
             </button>
-            <button onClick={handleStartQuiz} className="px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-primary rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover">
+            <button onClick={handleStartQuiz} className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary">
               🎯 クイズ開始
             </button>
           </div>

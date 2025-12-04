@@ -2,8 +2,6 @@
    共通スタイルのインポート
    ============================================ */
 /* コンポーネント */
-@import './styles/components/buttons.css';
-@import './styles/components/tabs.css';
 @import './styles/components/choices.css';
 @import './styles/components/modals.css';
 @import './styles/components/quiz-common.css';
@@ -12,7 +10,6 @@
 @import './styles/layout/containers.css';
 
 /* ユーティリティ */
-@import './styles/utilities/spacing.css';
 @import './styles/utilities/animations.css';
 
 .app {
@@ -127,6 +124,22 @@
 .xp-fill[data-width="98"], .milestone-progress-fill[data-width="98"] { width: 98%; }
 .xp-fill[data-width="99"], .milestone-progress-fill[data-width="99"] { width: 99%; }
 .xp-fill[data-width="100"], .milestone-progress-fill[data-width="100"] { width: 100%; }
+
+/* ストレージプログレスバー用 - data-progress属性で動的幅設定 */
+[data-progress] {
+  width: 0%;
+}
+[data-progress="0"] { width: 0%; }
+[data-progress="10"] { width: 10%; }
+[data-progress="20"] { width: 20%; }
+[data-progress="30"] { width: 30%; }
+[data-progress="40"] { width: 40%; }
+[data-progress="50"] { width: 50%; }
+[data-progress="60"] { width: 60%; }
+[data-progress="70"] { width: 70%; }
+[data-progress="80"] { width: 80%; }
+[data-progress="90"] { width: 90%; }
+[data-progress="100"] { width: 100%; }
 
 /* ErrorLogPanel styles */
 .error-log-panel {
@@ -254,6 +267,29 @@
 .error-badge-count {
   font-size: 12px;
   font-weight: bold;
+}
+
+/* ===== 長文読解のスタイル ===== */
+.reading-sub-tabs {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.phrase-navigation {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.score-board-tabs {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* ===== モバイル版長文読解の最適化 ===== */
@@ -430,4 +466,245 @@
   .popup-meaning {
     font-size: 0.9em;
   }
+}
+
+/* ============================================
+   ScoreBoard スタイル
+   ============================================ */
+
+/* プランタブ */
+.plan-tab-compact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.dark-mode .plan-tab-compact {
+  background: var(--gray-800);
+}
+
+.plan-text-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.dark-mode .plan-text-line {
+  color: var(--gray-200);
+}
+
+.stat-text-label {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+}
+
+.dark-mode .stat-text-label {
+  color: var(--gray-300);
+}
+
+.stat-text-value {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.dark-mode .stat-text-value {
+  color: var(--white);
+}
+
+.stat-text-divider {
+  color: var(--gray-400);
+}
+
+.stat-text-sub {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.dark-mode .stat-text-sub {
+  color: var(--gray-400);
+}
+
+/* 学習状況タブ - 進捗バー */
+.retention-breakdown-container {
+  padding: 20px;
+}
+
+.retention-breakdown-header {
+  margin-bottom: 20px;
+}
+
+.retention-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.dark-mode .retention-title {
+  color: var(--white);
+}
+
+.retention-subtitle {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+}
+
+.dark-mode .retention-subtitle {
+  color: var(--gray-300);
+}
+
+.retention-progress-bar {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  background: var(--gray-200);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+}
+
+.dark-mode .retention-progress-bar {
+  background: var(--gray-700);
+}
+
+.retention-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: help;
+  flex-shrink: 0;
+}
+
+.retention-segment:hover {
+  opacity: 0.9;
+}
+
+.retention-mastered {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.retention-mastered[data-width] {
+  width: calc(var(--segment-width) * 1%);
+}
+
+.retention-learning {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.retention-learning[data-width] {
+  width: calc(var(--segment-width) * 1%);
+}
+
+.retention-struggling {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.retention-struggling[data-width] {
+  width: calc(var(--segment-width) * 1%);
+}
+
+.retention-breakdown-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.stat-label {
+  color: var(--gray-600);
+}
+
+.dark-mode .stat-label {
+  color: var(--gray-300);
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.dark-mode .stat-value {
+  color: var(--white);
+}
+
+.stat-detail {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.dark-mode .stat-detail {
+  color: var(--gray-400);
+}
+
+/* 履歴タブ */
+.history-compact,
+.word-detail-container,
+.word-detail-empty {
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.dark-mode .history-compact,
+.dark-mode .word-detail-container,
+.dark-mode .word-detail-empty {
+  background: var(--gray-800);
+  color: var(--gray-200);
+}
+
+.word-detail-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.dark-mode .word-detail-title {
+  color: var(--white);
+}
+
+.word-detail-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.word-stat-label {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.dark-mode .word-stat-label {
+  color: var(--gray-300);
+}
+
+.word-stat-value {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.dark-mode .word-stat-value {
+  color: var(--white);
+}
+
+.word-stat-divider {
+  color: var(--gray-400);
 }
