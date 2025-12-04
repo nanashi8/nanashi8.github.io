@@ -89,4 +89,8 @@ prototype/
 vocabulary_lists/
 
 # Archive and tools
-tools/
+tools/archive-scripts/
+tools/archive-reports/
+tools/deploy.log
+# Keep archive-github for documentation
+!tools/archive-github/
