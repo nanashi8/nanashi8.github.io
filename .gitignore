@@ -45,8 +45,15 @@ Attached*.css
 
 # Old files
 *.backup
+*.backup_*
 *.old-vanilla
 *.working
+
+# macOS Finder duplicate files
+*\ 2.*
+* 2.json
+* 2.csv
+* 2.txt
 
 # Python scripts (data generation and analysis)
 *.py
