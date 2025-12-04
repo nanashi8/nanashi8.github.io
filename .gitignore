@@ -87,3 +87,6 @@ test_*.md
 # Prototype and vocabulary lists
 prototype/
 vocabulary_lists/
+
+# Archive and tools
+tools/
