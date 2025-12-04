@@ -6169,13 +6169,13 @@
         },
         {
           "word": "a",
-          "meaning": "一つの",
+          "meaning": "午前（ante meridiem - ラテン語：正午の前）",
           "isUnknown": false,
-          "lemma": "a",
-          "reading": "ア́(エ́イ)",
-          "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
-          "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
-          "relatedFields": "言語基本",
+          "lemma": "a.m.",
+          "reading": "エーエム",
+          "etymology": "【略語】ante meridiem（ラテン語：正午の前）",
+          "relatedWords": "p.m.(ピーエム): 午後, morning(モーニング): 朝",
+          "relatedFields": "時間",
           "difficulty": "初級"
         },
         {
@@ -6306,14 +6306,14 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "午後（post meridiem - ラテン語：正午の後）",
           "isUnknown": false,
-          "lemma": "p",
-          "reading": "p",
-          "etymology": "",
-          "relatedWords": [],
-          "relatedFields": "未分類",
-          "difficulty": "未設定"
+          "lemma": "p.m.",
+          "reading": "ピーエム",
+          "etymology": "【略語】post meridiem（ラテン語：正午の後）",
+          "relatedWords": "a.m.(エーエム): 午前, afternoon(アフタヌーン): 午後, evening(イブニング): 夕方",
+          "relatedFields": "時間",
+          "difficulty": "初級"
         },
         {
           "word": ".",
@@ -6328,13 +6328,13 @@
         },
         {
           "word": "m",
-          "meaning": "メートル（長さの単位）",
+          "meaning": "午後（post meridiem - ラテン語：正午の後）",
           "isUnknown": false,
-          "lemma": "m",
-          "reading": "エム",
-          "etymology": "【単位】meter の略",
-          "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
-          "relatedFields": "単位",
+          "lemma": "p.m.",
+          "reading": "ピーエム",
+          "etymology": "【略語】post meridiem（ラテン語：正午の後）",
+          "relatedWords": "a.m.(エーエム): 午前, afternoon(アフタヌーン): 午後, evening(イブニング): 夕方",
+          "relatedFields": "時間",
           "difficulty": "初級"
         },
         {
@@ -14376,13 +14376,13 @@
         },
         {
           "word": "a",
-          "meaning": "一つの",
+          "meaning": "午前（ante meridiem - ラテン語：正午の前）",
           "isUnknown": false,
-          "lemma": "a",
-          "reading": "ア́(エ́イ)",
-          "etymology": "古英語 \"an\"(一つ)の短縮形。派生: an(アン): 一つの(母音の前)",
-          "relatedWords": "one(ワン): 1つ, the(ザ): その, some(サム): いくつかの",
-          "relatedFields": "言語基本",
+          "lemma": "a.m.",
+          "reading": "エーエム",
+          "etymology": "【略語】ante meridiem（ラテン語：正午の前）",
+          "relatedWords": "p.m.(ピーエム): 午後, morning(モーニング): 朝",
+          "relatedFields": "時間",
           "difficulty": "初級"
         },
         {
@@ -14398,13 +14398,13 @@
         },
         {
           "word": "m",
-          "meaning": "メートル（長さの単位）",
+          "meaning": "午前（ante meridiem - ラテン語：正午の前）",
           "isUnknown": false,
-          "lemma": "m",
-          "reading": "エム",
-          "etymology": "【単位】meter の略",
-          "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
-          "relatedFields": "単位",
+          "lemma": "a.m.",
+          "reading": "エーエム",
+          "etymology": "【略語】ante meridiem（ラテン語：正午の前）",
+          "relatedWords": "p.m.(ピーエム): 午後, morning(モーニング): 朝",
+          "relatedFields": "時間",
           "difficulty": "初級"
         },
         {
@@ -14558,14 +14558,14 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "午後（post meridiem - ラテン語：正午の後）",
           "isUnknown": false,
-          "lemma": "p",
-          "reading": "p",
-          "etymology": "",
-          "relatedWords": [],
-          "relatedFields": "未分類",
-          "difficulty": "未設定"
+          "lemma": "p.m.",
+          "reading": "ピーエム",
+          "etymology": "【略語】post meridiem（ラテン語：正午の後）",
+          "relatedWords": "a.m.(エーエム): 午前, afternoon(アフタヌーン): 午後, evening(イブニング): 夕方",
+          "relatedFields": "時間",
+          "difficulty": "初級"
         },
         {
           "word": ".",
@@ -14580,13 +14580,13 @@
         },
         {
           "word": "m",
-          "meaning": "メートル（長さの単位）",
+          "meaning": "午後（post meridiem - ラテン語：正午の後）",
           "isUnknown": false,
-          "lemma": "m",
-          "reading": "エム",
-          "etymology": "【単位】meter の略",
-          "relatedWords": "meter(メーター): メートル, cm(センチメートル): センチメートル, km(キロメートル): キロメートル",
-          "relatedFields": "単位",
+          "lemma": "p.m.",
+          "reading": "ピーエム",
+          "etymology": "【略語】post meridiem（ラテン語：正午の後）",
+          "relatedWords": "a.m.(エーエム): 午前, afternoon(アフタヌーン): 午後, evening(イブニング): 夕方",
+          "relatedFields": "時間",
           "difficulty": "初級"
         },
         {

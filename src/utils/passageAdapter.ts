@@ -333,19 +333,17 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
   try {
     const response = await fetch(`/data/passages-phrase-learning/${passageId}.json`);
     if (!response.ok) {
+      console.log(`No phrase learning JSON found for ${passageId}, will use .txt conversion`);
       return null; // ファイルが存在しない場合はnullを返す
     }
     
     const data = await response.json();
+    console.log(`Loaded phrase learning JSON for ${passageId}, phrases: ${data.phrases?.length || 0}`);
     
     // JSONデータをそのまま返す（ReadingPassage型に準拠）
-    // phraseMeaning → japanese へのマッピング
     const readingPassage: ReadingPassage = {
       ...data,
-      phrases: data.phrases.map((phrase: any) => ({
-        ...phrase,
-        phraseMeaning: phrase.japanese || phrase.phraseMeaning, // japanese フィールドを優先
-      }))
+      phrases: data.phrases || [], // phrasesが存在しない場合は空配列
     };
     
     return readingPassage;
@@ -365,6 +363,8 @@ export async function loadAllPassagesAsReadingFormat(
   const metadata = getPassageList();
   const passages: ReadingPassage[] = [];
 
+  console.log(`Loading ${metadata.length} passages...`);
+
   for (const meta of metadata) {
     // まずフレーズ学習JSONを試す
     let passage = await loadPhraseLearningJSON(meta.id);
@@ -375,10 +375,14 @@ export async function loadAllPassagesAsReadingFormat(
     }
     
     if (passage) {
+      console.log(`✓ Loaded passage: ${meta.id} (${passage.phrases?.length || 0} phrases)`);
       passages.push(passage);
+    } else {
+      console.error(`✗ Failed to load passage: ${meta.id}`);
     }
   }
 
+  console.log(`Total passages loaded: ${passages.length}`);
   return passages;
 }
 
