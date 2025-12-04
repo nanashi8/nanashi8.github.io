@@ -145,7 +145,7 @@ function QuizView({
         <div className="quiz-controls">
           <button 
             onClick={() => setShowSettings(!showSettings)} 
-            className="w-64 px-8 py-4 text-lg font-bold bg-secondary text-white border-2 border-blue-300 rounded-xl hover:bg-secondary-hover transition-all duration-300 shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
+            className="w-64 px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-blue-300 rounded-xl hover:bg-primary-hover transition-all duration-300 shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
           >
             ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
           </button>
