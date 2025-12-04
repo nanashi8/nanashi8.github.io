@@ -1,0 +1,1020 @@
+{
+  "unit": "Unit 9",
+  "title": "受動態",
+  "grammar": "be + 過去分詞",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
+    "verbForm": 10,
+    "conversation": 5
+  },
+  "questions": [
+    {
+      "id": "g2-u9-fib-001",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め1",
+      "sentence": "Example sentence 1 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の説明1。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-002",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め2",
+      "sentence": "Example sentence 2 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の説明2。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-003",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め3",
+      "sentence": "Example sentence 3 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の説明3。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-004",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め4",
+      "sentence": "Example sentence 4 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の説明4。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-005",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め5",
+      "sentence": "Example sentence 5 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の説明5。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-006",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め6",
+      "sentence": "Example sentence 6 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の説明6。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-007",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め7",
+      "sentence": "Example sentence 7 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の説明7。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-008",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め8",
+      "sentence": "Example sentence 8 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の説明8。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-009",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め9",
+      "sentence": "Example sentence 9 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の説明9。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-010",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め10",
+      "sentence": "Example sentence 10 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の説明10。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-011",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め11",
+      "sentence": "Example sentence 11 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の説明11。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-012",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め12",
+      "sentence": "Example sentence 12 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の説明12。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-013",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め13",
+      "sentence": "Example sentence 13 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の説明13。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-014",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め14",
+      "sentence": "Example sentence 14 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の説明14。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-fib-015",
+      "type": "fillInBlank",
+      "japanese": "受動態穴埋め15",
+      "sentence": "Example sentence 15 with ____ blank.",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の説明15。",
+      "hint": "ヒント"
+    },
+    {
+      "id": "g2-u9-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え1",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の文1。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え2",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の文2。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え3",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の文3。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え4",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の文4。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え5",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の文5。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え6",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の文6。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え7",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の文7。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え8",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の文8。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え9",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の文9。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え10",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の文10。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え11",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の文11。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え12",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の文12。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え13",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の文13。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え14",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の文14。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "受動態並べ替え15",
+      "words": [
+        "word1",
+        "word2",
+        "word3"
+      ],
+      "correctAnswer": "Word1 word2 word3.",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の文15。",
+      "hint": "順序"
+    },
+    {
+      "id": "g2-u9-para-001",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え1",
+      "originalSentence": "Original sentence 1.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の変換1。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-002",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え2",
+      "originalSentence": "Original sentence 2.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の変換2。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-003",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え3",
+      "originalSentence": "Original sentence 3.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の変換3。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-004",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え4",
+      "originalSentence": "Original sentence 4.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の変換4。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-005",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え5",
+      "originalSentence": "Original sentence 5.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の変換5。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-006",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え6",
+      "originalSentence": "Original sentence 6.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の変換6。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-007",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え7",
+      "originalSentence": "Original sentence 7.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の変換7。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-008",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え8",
+      "originalSentence": "Original sentence 8.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の変換8。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-009",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え9",
+      "originalSentence": "Original sentence 9.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の変換9。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-010",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え10",
+      "originalSentence": "Original sentence 10.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の変換10。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-011",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え11",
+      "originalSentence": "Original sentence 11.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の変換11。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-012",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え12",
+      "originalSentence": "Original sentence 12.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の変換12。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-013",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え13",
+      "originalSentence": "Original sentence 13.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の変換13。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-014",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え14",
+      "originalSentence": "Original sentence 14.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の変換14。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-para-015",
+      "type": "paraphrase",
+      "japanese": "受動態言い換え15",
+      "originalSentence": "Original sentence 15.",
+      "question": "書き換えなさい",
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の変換15。",
+      "hint": "変換"
+    },
+    {
+      "id": "g2-u9-vf-001",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化1",
+      "sentence": "Sentence 1 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の動詞1。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-002",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化2",
+      "sentence": "Sentence 2 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の動詞2。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-003",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化3",
+      "sentence": "Sentence 3 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の動詞3。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-004",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化4",
+      "sentence": "Sentence 4 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の動詞4。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-005",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化5",
+      "sentence": "Sentence 5 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の動詞5。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-006",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化6",
+      "sentence": "Sentence 6 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の動詞6。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-007",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化7",
+      "sentence": "Sentence 7 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の動詞7。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-008",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化8",
+      "sentence": "Sentence 8 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の動詞8。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-009",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化9",
+      "sentence": "Sentence 9 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の動詞9。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-vf-010",
+      "type": "verbForm",
+      "japanese": "受動態動詞変化10",
+      "sentence": "Sentence 10 with ____.",
+      "verb": "verb",
+      "choices": [
+        "form1",
+        "form2",
+        "form3",
+        "form4"
+      ],
+      "correctAnswer": "form1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の動詞10。",
+      "hint": "動詞"
+    },
+    {
+      "id": "g2-u9-conv-001",
+      "type": "conversation",
+      "japanese": "受動態会話1",
+      "situation": "状況1",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Question 1?"
+        },
+        {
+          "speaker": "B",
+          "text": "Answer ____."
+        }
+      ],
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の会話1。",
+      "hint": "会話"
+    },
+    {
+      "id": "g2-u9-conv-002",
+      "type": "conversation",
+      "japanese": "受動態会話2",
+      "situation": "状況2",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Question 2?"
+        },
+        {
+          "speaker": "B",
+          "text": "Answer ____."
+        }
+      ],
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "beginner",
+      "explanation": "be + 過去分詞の会話2。",
+      "hint": "会話"
+    },
+    {
+      "id": "g2-u9-conv-003",
+      "type": "conversation",
+      "japanese": "受動態会話3",
+      "situation": "状況3",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Question 3?"
+        },
+        {
+          "speaker": "B",
+          "text": "Answer ____."
+        }
+      ],
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の会話3。",
+      "hint": "会話"
+    },
+    {
+      "id": "g2-u9-conv-004",
+      "type": "conversation",
+      "japanese": "受動態会話4",
+      "situation": "状況4",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Question 4?"
+        },
+        {
+          "speaker": "B",
+          "text": "Answer ____."
+        }
+      ],
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "intermediate",
+      "explanation": "be + 過去分詞の会話4。",
+      "hint": "会話"
+    },
+    {
+      "id": "g2-u9-conv-005",
+      "type": "conversation",
+      "japanese": "受動態会話5",
+      "situation": "状況5",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Question 5?"
+        },
+        {
+          "speaker": "B",
+          "text": "Answer ____."
+        }
+      ],
+      "choices": [
+        "choice1",
+        "choice2",
+        "choice3",
+        "choice4"
+      ],
+      "correctAnswer": "choice1",
+      "difficulty": "advanced",
+      "explanation": "be + 過去分詞の会話5。",
+      "hint": "会話"
+    }
+  ]
+}

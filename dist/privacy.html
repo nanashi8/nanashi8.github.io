@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - nanashi8-quiz-app</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 30px;
+        }
+        .updated {
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #4CAF50;
+        }
+        hr {
+            margin-top: 50px;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日: 2025年11月22日</p>
+
+    <h2>1. はじめに</h2>
+    <p>nanashi8-quiz-app（以下「本サービス」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーは、本サービスがどのような情報を収集し、どのように使用するかを説明します。</p>
+
+    <h2>2. 収集する情報</h2>
+    <h3>2.1 自動収集される情報</h3>
+    <ul>
+        <li><strong>学習データ</strong>: クイズの進捗状況、正答率、学習履歴はブラウザのローカルストレージに保存されます
+            <ul>
+                <li>LocalStorage: 設定情報、一部の進捗データ</li>
+                <li>IndexedDB: クイズ履歴、学習進捗、カスタム問題集など大容量データ</li>
+                <li>データは自動的にLocalStorageからIndexedDBに移行される場合があります</li>
+            </ul>
+        </li>
+        <li><strong>エラー情報</strong>: アプリケーションのエラー発生時、以下の技術的情報がSentry（エラー監視サービス）に送信されます
+            <ul>
+                <li>エラーメッセージとスタックトレース</li>
+                <li>ブラウザの種類とバージョン</li>
+                <li>OSの種類とバージョン</li>
+                <li>画面解像度</li>
+                <li>エラー発生時のページURL</li>
+                <li>パフォーマンス計測データ（10%サンプリング）</li>
+                <li>セッションリプレイ（エラー発生時のみ記録）</li>
+            </ul>
+        </li>
+        <li><strong>アクセスログ</strong>: GitHub Pagesによるホスティングにより、以下の情報がGitHubのサーバーに記録される場合があります
+            <ul>
+                <li>IPアドレス</li>
+                <li>アクセス日時</li>
+                <li>ユーザーエージェント（ブラウザ情報）</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.2 収集しない情報</h3>
+    <p>本サービスは以下の情報を収集しません:</p>
+    <ul>
+        <li>氏名、メールアドレス、電話番号などの個人を特定できる情報</li>
+        <li>クレジットカード情報などの決済情報</li>
+        <li>位置情報（GPS等）</li>
+        <li>Cookie（現時点では使用していません）</li>
+        <li>学習データの内容（LocalStorage/IndexedDBの内容は外部送信されません）</li>
+    </ul>
+
+    <h2>3. 情報の使用目的</h2>
+    <ul>
+        <li><strong>学習データ</strong>: ユーザーの学習進捗を保存し、次回アクセス時に継続できるようにするため</li>
+        <li><strong>エラー情報</strong>: アプリケーションの品質向上、バグ修正、パフォーマンス改善のため</li>
+        <li><strong>アクセスログ</strong>: サービスの安定運用、セキュリティ対策のため（GitHub Pagesによる収集）</li>
+    </ul>
+
+    <h2>4. 情報の保存場所と保持期間</h2>
+    <h3>4.1 保存場所</h3>
+    <ul>
+        <li><strong>学習データ</strong>: ユーザーのブラウザ内（LocalStorageおよびIndexedDB）にのみ保存され、外部サーバーには送信されません</li>
+        <li><strong>エラー情報</strong>: Sentry.io（アメリカ合衆国）のサーバーに送信されます</li>
+        <li><strong>アクセスログ</strong>: GitHub（アメリカ合衆国）のサーバーに記録されます</li>
+    </ul>
+
+    <h3>4.2 保持期間</h3>
+    <ul>
+        <li><strong>学習データ</strong>: ユーザーが削除するまで無期限に保存されます</li>
+        <li><strong>エラーログ</strong>: Sentryで90日間保存後、自動削除されます</li>
+        <li><strong>アクセスログ</strong>: GitHub Pagesのポリシーに準拠します</li>
+    </ul>
+
+    <h2>5. 第三者サービスの利用</h2>
+    <p>本サービスは、以下の第三者サービスを利用しています:</p>
+    
+    <h3>5.1 Sentry（エラー監視）</h3>
+    <ul>
+        <li>提供者: Functional Software, Inc.</li>
+        <li>所在地: アメリカ合衆国</li>
+        <li>目的: エラー監視、パフォーマンス計測</li>
+        <li>プライバシーポリシー: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">https://sentry.io/privacy/</a></li>
+    </ul>
+
+    <h3>5.2 GitHub Pages（ホスティング）</h3>
+    <ul>
+        <li>提供者: GitHub, Inc.</li>
+        <li>所在地: アメリカ合衆国</li>
+        <li>目的: Webサイトのホスティング</li>
+        <li>プライバシーポリシー: <a href="https://docs.github.com/ja/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a></li>
+        <li>GitHub Pagesについて: <a href="https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener noreferrer">データ収集に関する情報</a></li>
+    </ul>
+
+    <h3>5.3 Web Speech API（音声合成）</h3>
+    <ul>
+        <li>提供者: ブラウザベンダー（Chrome、Safari、Firefox等）</li>
+        <li>目的: 英単語・英文の発音機能</li>
+        <li>データ処理: 基本的にブラウザ内で処理されますが、一部のブラウザ（Chrome等）では音声合成処理のためにGoogleサーバーと通信する場合があります</li>
+        <li>Chrome音声機能: <a href="https://support.google.com/chrome/answer/95884" target="_blank" rel="noopener noreferrer">https://support.google.com/chrome/answer/95884</a></li>
+    </ul>
+
+    <h2>6. 国際データ転送</h2>
+    <p>本サービスは、以下のデータをアメリカ合衆国のサーバーに転送します:</p>
+    <ul>
+        <li>エラー情報（Sentryサーバー）</li>
+        <li>アクセスログ（GitHub Pagesサーバー）</li>
+    </ul>
+    <p>これらのサービス提供者は、適切なデータ保護対策を実施しています。EUユーザーの場合、標準契約条項（SCC）等の適切な保護措置が適用されます。</p>
+
+    <h2>7. 情報の共有</h2>
+    <p>本サービスは、以下の場合を除き、収集した情報を第三者と共有しません:</p>
+    <ul>
+        <li>法令に基づく開示要求がある場合</li>
+        <li>サービスの運営に必要な範囲で、上記第三者サービス（Sentry、GitHub Pages）と共有する場合</li>
+        <li>ユーザーの同意がある場合</li>
+    </ul>
+
+    <h2>8. ユーザーの権利</h2>
+    <ul>
+        <li><strong>データの閲覧</strong>: アプリ内の設定画面から、保存されている学習データを確認できます</li>
+        <li><strong>データのエクスポート</strong>: アプリ内の設定画面から、学習データをJSON形式でダウンロードできます</li>
+        <li><strong>データの削除</strong>: 
+            <ul>
+                <li>アプリ内: 設定画面から学習データを削除できます</li>
+                <li>ブラウザ: ブラウザの設定から本サイトのデータ（LocalStorage/IndexedDB）を完全に削除できます</li>
+                <li>Sentryのデータ: GitHubリポジトリのIssuesから削除リクエストを送信してください</li>
+            </ul>
+        </li>
+        <li><strong>データポータビリティ</strong>: エクスポートしたJSONデータは他のアプリケーションでも利用可能です</li>
+        <li><strong>苦情申し立て</strong>: プライバシーに関する懸念がある場合、お住まいの地域のデータ保護機関に申し立てることができます</li>
+    </ul>
+
+    <h2>9. セキュリティ</h2>
+    <p>本サービスは以下のセキュリティ対策を実施しています:</p>
+    <ul>
+        <li><strong>通信の暗号化</strong>: HTTPS通信による暗号化（GitHub Pages）</li>
+        <li><strong>ローカルストレージ</strong>: 学習データはユーザーのブラウザ内にのみ保存され、外部に送信されません</li>
+        <li><strong>エラー監視</strong>: Sentryはエラー情報を安全に処理し、SOC 2 Type II認証を取得しています</li>
+        <li><strong>最小限の収集</strong>: 個人を特定できる情報を収集しないことによるリスク最小化</li>
+        <li><strong>定期的な更新</strong>: セキュリティパッチの適用、依存ライブラリの更新</li>
+    </ul>
+    <p>ただし、インターネット経由の送信や電子的な保存方法に完全に安全なものはありません。当サービスは最善を尽くしていますが、絶対的な安全性を保証することはできません。</p>
+
+    <h2>10. 子供のプライバシー</h2>
+    <p>本サービスは中学受験を目指す児童を含む全年齢のユーザーを対象としていますが、以下の点により子供のプライバシーを保護しています:</p>
+    <ul>
+        <li>氏名、メールアドレス等の個人情報を一切収集しません</li>
+        <li>学習データはブラウザ内にのみ保存され、外部サーバーに送信されません</li>
+        <li>保護者の同意なしに個人情報を収集することはありません</li>
+    </ul>
+    <p>13歳未満のお子様が本サービスを利用する場合、保護者の方はお子様のブラウザ設定を確認し、必要に応じてデータの削除を行ってください。</p>
+
+    <h2>11. プライバシーポリシーの変更</h2>
+    <p>本プライバシーポリシーは、サービスの改善や法令の変更に伴い更新される場合があります。</p>
+    <ul>
+        <li><strong>軽微な変更</strong>: 本ページ上部の「最終更新日」を更新します</li>
+        <li><strong>重要な変更</strong>: アプリ内で通知し、ユーザーに確認を求める場合があります</li>
+        <li><strong>確認推奨</strong>: 定期的に本ページを確認することをお勧めします</li>
+    </ul>
+    <p>変更後も本サービスを継続して利用することで、変更後のプライバシーポリシーに同意したものとみなされます。</p>
+
+    <h2>12. 適用法令とデータ保護</h2>
+    <p>本サービスは日本国内のユーザーを主な対象としていますが、以下の法令およびガイドラインを尊重します:</p>
+    <ul>
+        <li>個人情報の保護に関する法律（日本）</li>
+        <li>一般データ保護規則（GDPR、EU）- EUユーザーの場合</li>
+        <li>カリフォルニア州消費者プライバシー法（CCPA）- カリフォルニア州ユーザーの場合</li>
+    </ul>
+
+    <h2>13. お問い合わせ</h2>
+    <p>プライバシーポリシーに関するご質問、データ削除リクエスト、その他のお問い合わせは、以下の方法でご連絡ください:</p>
+    <ul>
+        <li><strong>GitHub Issues</strong>: <a href="https://github.com/nanashi8/nanashi8.github.io/issues" target="_blank" rel="noopener noreferrer">nanashi8/nanashi8.github.io</a></li>
+        <li><strong>対応時間</strong>: 通常、1週間以内に返信いたします</li>
+    </ul>
+    <p>データ削除リクエストの際は、以下の情報を含めてください:</p>
+    <ul>
+        <li>削除を希望するデータの種類（学習データ、エラーログ等）</li>
+        <li>該当する期間（分かる場合）</li>
+        <li>その他の識別情報（エラーID等、分かる場合）</li>
+    </ul>
+
+    <hr>
+    <p class="text-center">
+        <a href="/">アプリに戻る</a>
+    </p>
+</body>
+</html>
