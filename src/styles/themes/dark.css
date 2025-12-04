@@ -1,48 +1,51 @@
 /* ============================================
-   Dark Theme - 22色パレット参照（Tailwind使用）
+   Dark Theme - ダークモード（黒背景+白文字）
    ============================================
    
-   Tailwind CSS の dark: クラスを使用
-   このファイルにはCSS変数の上書きのみ
-   個別スタイルは各コンポーネントで dark: クラスを使用
+   暗い背景、明るい文字で目に優しく
    ============================================ */
 
 .dark-mode {
-  color-scheme: dark;
+  color-scheme: dark; /* 黒背景なのでdarkスキーム */
   
-  /* 背景 */
+  /* 背景 - 黒系 */
   --background: var(--black);
   --bg-secondary: var(--gray-900);
   --bg-tertiary: var(--gray-800);
   
-  /* テキスト */
-  --text-color: var(--gray-200);
+  /* テキスト - 白/明るいグレー */
+  --text-color: var(--gray-100);
   --text-secondary: var(--gray-300);
   --text-tertiary: var(--gray-400);
   
-  /* カード */
+  /* カード - 暗めの背景 */
   --card-bg: var(--gray-800);
   --card-bg-hover: var(--gray-700);
   --card-border: var(--gray-600);
   
   /* ボタン */
-  --btn-primary-bg: var(--gray-600);
-  --btn-primary-hover: var(--gray-500);
-  --btn-primary-text: var(--white);
-  --primary-color: var(--gray-100);
+  --btn-primary-bg: var(--blue-600);
+  --btn-primary-hover: var(--blue-700);
+  --btn-secondary-bg: var(--gray-800);
+  --btn-secondary-hover: var(--gray-700);
+  --primary-color: var(--blue-400);
   
-  /* ボーダー */
+  /* ボーダー - 暗め */
   --border-color: var(--gray-600);
   --border-color-light: var(--gray-700);
   
-  /* セマンティック */
+  /* セマンティック - 明るめの色 */
   --success-color: var(--green-400);
+  --success-bg: var(--green-500);
+  --success-border: var(--green-400);
   --error-color: var(--red-400);
+  --error-bg: var(--red-500);
+  --error-border: var(--red-400);
   --warning-color: var(--yellow-400);
   --info-color: var(--blue-400);
   
-  /* シャドウ */
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --shadow-md: 0 4px 6px rgb(0 0 0 / 0.4);
-  --shadow-lg: 0 10px 15px rgb(0 0 0 / 0.5);
+  /* シャドウ - 暗め */
+  --shadow-sm: 0 1px 2px rgb(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px rgb(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgb(0, 0, 0, 0.5);
 }

@@ -86,20 +86,11 @@ function QuestionCard({
     });
   };
 
-  // 不正解時に正解の選択肢の詳細も開く
+  // 不正解時に全ての選択肢の詳細を自動で開く
   useEffect(() => {
     if (answered && selectedAnswer && selectedAnswer !== question.meaning) {
-      // 正解の選択肢のインデックスを見つけて開く
-      const correctIndex = choicesWithQuestions.findIndex(
-        choice => choice.text === question.meaning
-      );
-      if (correctIndex !== -1) {
-        setExpandedChoices(prev => {
-          const newSet = new Set(prev);
-          newSet.add(correctIndex);
-          return newSet;
-        });
-      }
+      // 全ての選択肢を開く
+      setExpandedChoices(new Set(choicesWithQuestions.map((_, idx) => idx)));
     }
   }, [answered, selectedAnswer, question.meaning, choicesWithQuestions]);
 
@@ -316,22 +307,20 @@ function QuestionCard({
   const getButtonClass = (choice: string) => {
     // Tailwindクラスによるスタイリング
     const baseClasses = 'w-full min-h-[56px] p-4 text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
-    const hoverClasses = 'hover:border-primary hover:bg-tertiary hover:-translate-y-1 hover:shadow-lg';
-    const activeClasses = 'active:bg-tertiary active:translate-y-0';
-    const darkBaseClasses = 'dark:bg-tertiary dark:text-gray-300 dark:border-border';
-    const darkHoverClasses = 'dark:hover:bg-secondary dark:hover:border-primary dark:hover:shadow-lg';
+    const hoverClasses = 'hover:border-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
+    const activeClasses = 'active:bg-gray-200 dark:active:bg-gray-700 active:translate-y-0';
     
     if (!answered) {
-      return `${baseClasses} bg-gray-800 text-gray-300 border-border ${hoverClasses} ${activeClasses} ${darkBaseClasses} ${darkHoverClasses}`;
+      return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 ${hoverClasses} ${activeClasses}`;
     }
     
     if (choice === question.meaning) {
-      return `${baseClasses} bg-success border-success-border text-success-dark dark:bg-success dark:border-success-border dark:text-success-dark`;
+      return `${baseClasses} bg-green-600 border-green-600 text-white`;
     }
     if (choice === selectedAnswer && choice !== question.meaning) {
-      return `${baseClasses} bg-error border-error-border text-error-dark dark:bg-error dark:border-error-border dark:text-error-dark`;
+      return `${baseClasses} bg-red-600 border-red-600 text-white`;
     }
-    return `${baseClasses} bg-gray-800 text-gray-300 border-border ${darkBaseClasses}`;
+    return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600`;
   };
   
   const handleNextClick = () => {
@@ -373,7 +362,7 @@ function QuestionCard({
           title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
         >
           <div 
-            className={`question-text ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+            className={`question-text ${question.word.includes(' ') ? 'phrase-text text-2xl' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
           >
             {question.word}
             {isSpeechSynthesisSupported() && (

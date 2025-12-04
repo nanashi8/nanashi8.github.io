@@ -14,6 +14,11 @@
   margin-bottom: 20px;
 }
 
+.dark-mode .quiz-controls {
+  background: var(--gray-800);
+  border: 1px solid var(--gray-700);
+}
+
 /* 学習設定パネル */
 .study-settings-panel {
   background: var(--white);
@@ -21,7 +26,7 @@
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.05);
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.05);
 }
 
 .dark-mode .study-settings-panel {
@@ -94,7 +99,7 @@
   padding: 16px 20px;
   border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
 }
 
 .plan-progress-content {
@@ -124,27 +129,43 @@
 
 /* クイズビューコンテナ */
 .quiz-view {
-  background: var(--white);
+  width: 100%;
+  max-width: 100%;
   min-height: calc(100vh - 200px);
-  padding: 20px;
-  border-radius: 12px;
 }
 
 .dark-mode .quiz-view {
-  background: var(--gray-900);
+  /* ダークモード用の追加スタイルは不要 */
 }
 
 /* 問題カード */
 .question-card {
-  background: var(--blue-50);
-  border: 2px solid var(--blue-300);
+  background: var(--white);
+  border: 2px solid var(--gray-300);
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 0.05);
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.05);
 }
 
 .dark-mode .question-card {
+  background: var(--gray-800);
+  border-color: var(--gray-600);
+}
+
+/* 問題ナビゲーション行 */
+.question-nav-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--blue-50);
+  border-radius: 12px;
+  border: 1px solid var(--blue-200);
+}
+
+.dark-mode .question-nav-row {
   background: var(--gray-800);
   border-color: var(--gray-600);
 }

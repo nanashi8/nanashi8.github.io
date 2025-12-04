@@ -498,13 +498,13 @@ function SpellingView({
         <div className="quiz-controls">
           <button 
             onClick={() => setShowSettings(!showSettings)} 
-            className="px-6 py-3 bg-secondary text-secondary-text rounded-lg hover:bg-secondary-hover transition-colors duration-300 font-medium shadow-md dark:bg-secondary dark:text-secondary-text dark:hover:bg-secondary-hover"
+            className="w-64 px-8 py-4 text-lg font-bold bg-secondary text-white border-2 border-blue-300 rounded-xl hover:bg-secondary-hover transition-all duration-300 shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
           >
             ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
           </button>
           <button 
             onClick={onStartQuiz} 
-            className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-hover transition-colors duration-300 font-medium shadow-md dark:bg-primary dark:hover:bg-primary-hover"
+            className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-xl dark:bg-primary dark:hover:bg-primary-hover"
           >
             🎯 クイズ開始
           </button>
@@ -681,7 +681,7 @@ function SpellingView({
                 <h3>📊 学習設定</h3>
                 <button 
                   onClick={() => setShowSettings(false)} 
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
+                  className="px-4 py-2 bg-gray-100 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 hover:border-gray-400 transition-all duration-200 text-sm shadow-sm dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:border-gray-500"
                 >
                   ✕ 閉じる
                 </button>

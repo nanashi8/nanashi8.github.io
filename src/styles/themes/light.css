@@ -1,48 +1,11 @@
 /* ============================================
-   Light Theme - 22色パレット参照（Tailwind使用）
+   Light Theme - ライトモード（白背景+黒文字）
    ============================================
    
-   Tailwind CSS使用
-   このファイルにはCSS変数の定義のみ
-   個別スタイルはTailwindクラスで実装
+   variables.cssのデフォルト値がライトモードなので
+   このファイルではcolor-schemeのみ設定
    ============================================ */
 
 :root {
-  color-scheme: light;
-  
-  /* 背景 */
-  --background: var(--white);
-  --bg-secondary: var(--gray-50);
-  --bg-tertiary: var(--gray-100);
-  
-  /* テキスト */
-  --text-color: var(--gray-900);
-  --text-secondary: var(--gray-600);
-  --text-tertiary: var(--gray-400);
-  
-  /* カード */
-  --card-bg: var(--blue-50);
-  --card-bg-hover: var(--blue-100);
-  --card-border: var(--blue-300);
-  
-  /* ボタン */
-  --btn-primary-bg: var(--blue-600);
-  --btn-primary-hover: var(--blue-700);
-  --btn-primary-text: var(--white);
-  --primary-color: var(--blue-600);
-  
-  /* ボーダー */
-  --border-color: var(--gray-200);
-  --border-color-light: var(--gray-100);
-  
-  /* セマンティック */
-  --success-color: var(--green-500);
-  --error-color: var(--red-500);
-  --warning-color: var(--yellow-500);
-  --info-color: var(--blue-600);
-  
-  /* シャドウ */
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px rgb(0 0 0 / 0.1);
+  color-scheme: light; /* 白背景なのでlightスキーム */
 }
