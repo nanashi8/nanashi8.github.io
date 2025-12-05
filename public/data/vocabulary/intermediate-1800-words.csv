@@ -109,7 +109,7 @@ bad,バ́ッド,悪い,"語源不詳(中英語 ""badde"")。派生: badly(バ́�
 badminton,Badminton,バドミントン,ラケットでシャトルを打ち合うネット型球技。例: play badminton(バドミントンをする)。,"tennis(テニス): テニス, volleyball(バレーボール): バレー",人・社会,beginner
 bag,バ́ッグ,かばん,"古ノルド語の ""baggi"" が語源。派生: baggage(バ́ゲッジ): 手荷物 / baggy(バ́ギー): だぶだぶの","carry(ケ́アリ): 運ぶ, pocket(ポ́ケット): ポケット",人・社会,beginner
 bake,Bake,焼く,オーブンや直火で加熱調理する。パンや菓子を焼くときに使う。,ベイク,人・社会,intermediate
-baker,Baker,bakする人,,,人・社会,intermediate
+baker,ベ́イカー,パン屋・パン職人,"bake(焼く) + -er。派生: bakery(ベ́イカリ): パン屋 / baker's dozen(ベイカーズダズン): 13個","cook(ク́ック): 料理人, chef(シェ́フ): シェフ",人・社会,intermediate
 ball,ボ́ール,ボール,ゲルマン語系の語に由来。派生: balloon(バルー́ン): 風船 / ballgame(ボ́ールゲーム): 球技,"game(ゲ́ーム): 遊び, sport(スポ́ート): スポーツ",人・社会,beginner
 banana,Banana,バナナ,,,人・社会,intermediate
 bank,バ́ンク,土手・銀行,"イタリア語 ""banco""(ベンチ)。派生: riverbank(リヴァーバンク): 川岸 / savings bank(セイヴィングズバンク): 貯蓄銀行","shore(ショア): 岸, edge(エッジ): 縁",自然・環境,intermediate
@@ -134,7 +134,7 @@ bee,Bee,ハチ,蜜や花粉を集める昆虫。例: honey bee(ミツバチ)。,
 beef,Beef,牛肉,牛の肉。例: beef steak(ビーフステーキ)。,"pork(ポーク): 豚肉, chicken(チキン): 鶏肉",自然・環境,beginner
 before,ビフォ́ー,〜の前に,"""be""+""fore""(前) が語源。派生: beforehand(ビフォ́アハンド): 前もって / forefront(フォ́アフロント): 最前線","after(ア́フター): 後に, prior to(プラ́イアトゥ): 〜より前に",時間・数量,beginner
 begin,ビギ́ン,始める,"古英語の ""beginnan"" が語源。派生: beginning(ビギ́ニング): 始まり / beginner(ビギ́ナー): 初心者","start(スタ́ート): 始める, commence(コメ́ンス): 開始する",人・社会,beginner
-beginner,Beginner,beginnする人,,,人・社会,intermediate
+beginner,ビギ́ナー,初心者・初級者,"begin(始める) + -er。派生: beginner's luck(ビギナーズラック): ビギナーズラック","novice(ノ́ヴィス): 初心者, expert(エ́クスパート): 専門家",人・社会,intermediate
 behavior,Behavior,行動,,,人・社会,intermediate
 behind,ビハ́インド,〜の後ろに,"古英語の ""behindan"" が語源。派生: hind(ハ́インド): 後ろの / hindmost(ハ́インドモウスト): 最後部の","back(バ́ック): 後ろ, rear(リ́ア): 後部",時間・数量,beginner
 believe,ビリ́ーヴ,信じる,"古英語の ""gelīfan"" が語源。""lief""(愛しい)に由来。派生: belief(ビリ́ーフ): 信念 / believable(ビリ́ーヴァブル): 信じられる","trust(トラ́スト): 信頼する, doubt(ダ́ウト): 疑う",人・社会,beginner
@@ -490,7 +490,7 @@ fan,Fan,ファン、扇風機,,,食・健康,intermediate
 fantastic,Fantastic,素晴らしい,,,食・健康,intermediate
 far,フ́ァー,遠い,"古英語 ""feor""。派生: farther(フ́ァーザー): より遠い / farthest(フ́ァーゼスト): 最も遠い","near(ニ́ア): 近い, distant(ディ́スタント): 遠い",人・社会,beginner
 farm,フ́ァーム,農場,"ラテン語 ""firma""(契約)→農地賃貸。派生: farmer(フ́ァーマー): 農家 / farming(フ́ァーミング): 農業","field(フィ́ールド): 畑, crop(ク́ロップ): 作物",場所・移動,beginner
-farmer,Farmer,farmする人,,,人・社会,intermediate
+farmer,フ́ァーマー,農家・農民,"farm(農場) + -er。派生: farmhouse(ファームハウス): 農家 / farm worker(ファームワーカー): 農場労働者","agriculture(ア́グリカルチャー): 農業, peasant(ペ́ザント): 小作農",人・社会,intermediate
 fast,フ́ァスト,速い・断食する,"古英語 ""fæst""(堅い)とも関連。派生: fasten(フ́ァスン): 固定する / breakfast(ブ́レックファスト): 朝食(断食を破る)","quick(クイ́ック): 速い, rapid(ラ́ピド): 迅速な",食・健康,beginner
 fat,フ́ァット,太った・脂肪,"古英語 ""fǣtt""。派生: fatty(フ́ァティ): 脂っこい / fatten(フ́ァトゥン): 太らせる","thin(スィン): 痩せた, oil(オ́イル): 油",食・健康,beginner
 father,フ́ァーザー,父,"古英語 ""fæder""。派生: fatherly(フ́ァーザリ): 父親らしい / forefather(フ́ォーファーザー): 祖先","dad(ダ́ッド): お父さん, parent(ペ́アレント): 親",人・社会,beginner
@@ -918,14 +918,14 @@ notebook,Notebook,ノート,,,食・健康,intermediate
 nothing,ナ́シング,何もない,"古英語 ""nān thing""。派生: nothing but(ナ́シングバット): 〜だけ / for nothing(フォーナ́シング): ただで","none(ナ́ン): 何も〜ない, something(サ́ムシング): 何か",時間・数量,beginner
 notice,ノ́ウティス,気づく・通知,"ラテン語 ""notitia""(知識)。派生: noticeable(ノ́ウティサブル): 目立つ / notice board(ノ́ウティスボード): 掲示板","observe(オブザ́ーヴ): 観察する, announcement(アナ́ウンスメント): 発表",人・社会,beginner
 novel,ノ́ヴェル,小説・新しい,"ラテン語 ""novellus""(新しい)。派生: novelist(ノ́ヴェリスト): 小説家 / novelty(ノ́ヴェルティ): 新奇さ","book(ブ́ック): 本, story(スト́ーリ): 物語",運動・娯楽,intermediate
-November,November,novembする人,,,時間・数量,intermediate
+November,ノウヴェ́ンバー,11月,"ラテン語 ""novem""(9)から。古代ローマ暦3月始まりの9番目の月。派生: in November(イン ノウヴェンバー): 11月に","October(オクト́ーバー): 10月, December(ディセ́ンバー): 12月",時間・数量,intermediate
 now,ナ́ウ,今,"古英語 ""nū""。派生: nowadays(ナ́ウアデイズ): 今日では / right now(ラ́イトナウ): 今すぐ","present(プレ́ゼント): 現在, currently(カ́レントリ): 現在",時間・数量,beginner
 number,ナ́ンバー,数・番号,"ラテン語 ""numerus""。派生: numerous(ニ́ューメラス): 多数の / number one(ナ́ンバーワン): ナンバーワン","figure(フ́ィガー): 数字, amount(アマ́ウント): 量",時間・数量,beginner
 nurse,ナ́ース,看護師・看護する,"ラテン語 ""nutrix""(乳母)。派生: nursery(ナ́ーサリ): 保育園 / nursing(ナ́ーシング): 看護","doctor(ド́クター): 医者, care(ケ́ア): 世話",食・健康,beginner
 nursery,Nursery,保育園,,,食・健康,intermediate
 ocean,オ́ウシャン,海洋,"ギリシャ語 ""okeanos""。派生: oceanic(オウシャ́ニック): 海洋の / ocean liner(オ́ウシャンライナー): 定期客船","sea(スィ́ー): 海, wave(ウェ́イヴ): 波",自然・環境,beginner
 o'clock,オクロ́ック,〜時,of the clock の短縮。派生: around the clock(アラ́ウンドザクロック): 24時間 / what time(ホワ́ットタイム): 何時,"time(タ́イム): 時間, hour(ア́ワー): 時",時間・数量,beginner
-October,October,octobする人,,,時間・数量,intermediate
+October,オクト́ーバー,10月,"ラテン語 ""octo""(8)から。古代ローマ暦3月始まりの8番目の月。派生: in October(イン オクトーバー): 10月に","September(セプテ́ンバー): 9月, November(ノウヴェ́ンバー): 11月",時間・数量,intermediate
 of,Of,〜の,,,食・健康,intermediate
 off,Off,離れて、オフ,,,食・健康,intermediate
 offer,オ́ファー,提供する・申し出,"ラテン語 ""offerre""。派生: offering(オ́ファリング): 提供物 / special offer(スペ́シャルオファー): 特別提供","provide(プロヴァ́イド): 提供する, give(ギ́ヴ): 与える",人・社会,beginner
@@ -1020,7 +1020,7 @@ plant,プラ́ント,植物・植える,"ラテン語 ""planta""(若芽)。派�
 plastic,Plastic,プラスチック,,,食・健康,intermediate
 plate,プレ́イト,皿,"ギリシャ語 ""platus""(平らな)。派生: platter(プラ́ター): 大皿 / plate glass(プレ́イトグラス): 板ガラス","dish(ディ́シュ): 皿, bowl(ボ́ウル): ボウル",人・社会,beginner
 play,プレ́イ,遊ぶ・演奏する,"古英語 ""plegan""。派生: player(プレ́イアー): 選手 / playground(プレ́イグラウンド): 遊び場","game(ゲ́イム): 遊び, sport(スポ́ート): スポーツ",運動・娯楽,beginner
-player,Player,playする人,,,人・社会,intermediate
+player,プレ́イアー,選手・演奏者,"play(遊ぶ・演奏する) + -er。派生: team player(チームプレイヤー): チームプレーヤー / music player(ミュージックプレイヤー): 音楽プレーヤー","athlete(ア́スリート): 運動選手, musician(ミューズィ́シャン): 音楽家",運動・娯楽,intermediate
 please,プリ́ーズ,喜ばせる・どうぞ,"ラテン語 ""placere""(喜ばせる)。派生: pleasant(プレ́ザント): 快い / pleasure(プレ́ジャー): 喜び","satisfy(サ́ティスファイ): 満足させる, delight(ディラ́イト): 喜ばせる",人・社会,beginner
 pleasure,Pleasure,喜び、楽しみ,,,食・健康,intermediate
 p.m.,P.M.,午後,,,時間・数量,intermediate
@@ -1179,7 +1179,7 @@ sell,セ́ル,売る,"古英語 ""sellan""。派生: seller(セ́ラー): 売り
 send,セ́ンド,送る,"古英語 ""sendan""。派生: sender(セ́ンダー): 送り主 / send out(セ́ンドアウト): 送り出す","deliver(ディリ́ヴァー): 配達する, dispatch(ディスパ́ッチ): 発送する",人・社会,beginner
 sense,セ́ンス,感覚・理解する,"ラテン語 ""sentire""(感じる)。派生: sensible(セ́ンシブル): 分別のある / sensitivity(センシティ́ヴィティ): 感受性","feeling(フィ́ーリング): 感じ, perception(パセ́プション): 知覚",学校・学習,beginner
 sentence,セ́ンテンス,文・判決,"ラテン語 ""sententia""(意見)。派生: sentencing(セ́ンテンシング): 判決 / prison sentence(プリ́ズンセンテンス): 懲役刑","phrase(フレ́イズ): 句, judgment(ジャ́ッジメント): 判決",学校・学習,beginner
-September,September,septembする人,,,時間・数量,intermediate
+September,セプテ́ンバー,9月,"ラテン語 ""septem""(7)から。古代ローマ暦3月始まりの7番目の月。派生: in September(イン セプテンバー): 9月に","August(オ́ーガスト): 8月, October(オクト́ーバー): 10月",時間・数量,intermediate
 serious,シ́リアス,真剣な・深刻な,"ラテン語 ""serius""(重大な)。派生: seriously(シ́リアスリ): 真剣に / seriousness(シ́リアスネス): 深刻さ","grave(グレ́イヴ): 重大な, earnest(ア́ーネスト): 真剣な",人・社会,beginner
 serve,サ́ーヴ,仕える・出す,"ラテン語 ""servire""(仕える)。派生: service(サ́ーヴィス): サービス / serving(サ́ーヴィング): 給仕","help(ヘ́ルプ): 手伝う, provide(プロヴァ́イド): 提供する",人・社会,beginner
 service,Service,サービス、奉仕,,,食・健康,intermediate
@@ -1223,7 +1223,7 @@ since,シ́ンス,〜以来・〜なので,"中英語 ""sins""(その後)。派�
 sincerely,Sincerely,心から,,,人・社会,intermediate
 sing,シ́ング,歌う,"古英語 ""singan""。派生: singer(シ́ンガー): 歌手 / singing(シ́ンギング): 歌うこと","chant(チャ́ント): 歌う, hum(ハ́ム): 鼻歌を歌う",運動・娯楽,beginner
 Singapore,Singapore,シンガポール,,,場所・移動,intermediate
-singer,Singer,singする人,,,人・社会,intermediate
+singer,シ́ンガー,歌手・歌い手,"sing(歌う) + -er。派生: pop singer(ポップシンガー): ポップ歌手 / singer-songwriter(シンガーソングライター): シンガーソングライター","vocalist(ヴォ́ーカリスト): ボーカリスト, musician(ミューズィ́シャン): 音楽家",運動・娯楽,intermediate
 single,シ́ングル,一つの・独身の,"ラテン語 ""singulus""(一つの)。派生: singly(シ́ングリ): 単独で / single room(シ́ングルルーム): シングルルーム","one(ワ́ン): 1つの, alone(アロ́ウン): 一人の",人・社会,beginner
 sink,シ́ンク,沈む・流し台,"古英語 ""sincan""。派生: sinking(シ́ンキング): 沈むこと / kitchen sink(キ́ッチンシンク): 台所の流し","drown(ドラ́ウン): 溺れる, float(フロ́ウト): 浮く",人・社会,beginner
 sister,シ́スター,姉妹,"古ノルド語 ""systir""。派生: sisterly(シ́スターリ): 姉妹のような / sister-in-law(シ́スターインロー): 義理の姉妹","brother(ブラ́ザー): 兄弟, sibling(シ́ブリング): きょうだい",人・社会,beginner
@@ -1363,7 +1363,7 @@ tax,タ́クス,税金,"ラテン語 ""taxare""(評価する)。派生: taxation
 taxi,タ́クシー,タクシー,taximeter cab の短縮形。派生: taxi driver(タ́クシードライヴァー): タクシー運転手 / taxi stand(タ́クシースタンド): タクシー乗り場,"cab(キャ́ブ): タクシー, ride(ラ́イド): 乗車",場所・移動,beginner
 tea,ティ́ー,お茶,"中国語 ""te""。派生: teacup(ティ́ーカップ): ティーカップ / tea party(ティ́ーパーティ): お茶会","coffee(コ́ーフィ): コーヒー, drink(ドリ́ンク): 飲み物",食・健康,beginner
 teach,ティ́ーチ,教える,"古英語 ""tæcan""。派生: teacher(ティ́ーチャー): 教師 / teaching(ティ́ーチング): 教えること","instruct(インストラ́クト): 指導する, educate(エ́ジュケイト): 教育する",学校・学習,beginner
-teacher,Teacher,teachする人,,,人・社会,intermediate
+teacher,ティ́ーチャー,教師・先生,"teach(教える) + -er。派生: schoolteacher(スクールティーチャー): 学校教師 / head teacher(ヘッドティーチャー): 校長","instructor(インストラ́クター): 指導員, professor(プロフェ́サー): 教授",学校・学習,intermediate
 team,ティ́ーム,チーム,"古英語 ""team""(子孫)。派生: teamwork(ティ́ームワーク): チームワーク / team up(ティ́ームアップ): チームを組む","group(グルー́プ): グループ, crew(クルー́): 乗組員",運動・娯楽,beginner
 tear,ティ́アー,涙,"古英語 ""tear""。派生: tearful(ティ́アフル): 涙ぐんだ / in tears(インティ́アーズ): 泣いて","cry(クラ́イ): 泣く, weep(ウィ́ープ): 泣く",人・社会,beginner
 technology,テクノ́ロジー,技術,"ギリシャ語 ""tekhnologia""(技術の体系的扱い)。派生: technological(テクノロ́ジカル): 技術的な / high technology(ハ́イテクノロジー): 先端技術","science(サ́イエンス): 科学, innovation(イノヴェ́イション): 革新",人・社会,beginner
