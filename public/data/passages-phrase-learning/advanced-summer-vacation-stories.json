@@ -2683,7 +2683,7 @@
         },
         {
           "word": "die",
-          "meaning": "(要確認)",
+          "meaning": "死ぬ",
           "isUnknown": false,
           "lemma": "die",
           "reading": "die",
@@ -2911,7 +2911,7 @@
         },
         {
           "word": "silent",
-          "meaning": "(要確認)",
+          "meaning": "無言の",
           "isUnknown": false,
           "lemma": "silent",
           "reading": "silent",
@@ -5799,7 +5799,7 @@
         },
         {
           "word": "scared",
-          "meaning": "(要確認)",
+          "meaning": "怖がって",
           "isUnknown": false,
           "lemma": "scared",
           "reading": "scared",
@@ -6594,7 +6594,7 @@
         },
         {
           "word": "awesome",
-          "meaning": "(要確認)",
+          "meaning": "すごい",
           "isUnknown": false,
           "lemma": "awesome",
           "reading": "awesome",
@@ -7197,7 +7197,7 @@
         },
         {
           "word": "wish",
-          "meaning": "(要確認)",
+          "meaning": "願う",
           "isUnknown": false,
           "lemma": "wish",
           "reading": "wish",
@@ -8234,7 +8234,7 @@
         },
         {
           "word": "camping",
-          "meaning": "(要確認)",
+          "meaning": "キャンプ(すること)",
           "isUnknown": false,
           "lemma": "camping",
           "reading": "camping",
@@ -9471,7 +9471,7 @@
         },
         {
           "word": "lake",
-          "meaning": "(要確認)",
+          "meaning": "湖",
           "isUnknown": false,
           "lemma": "lake",
           "reading": "lake",
@@ -9795,7 +9795,7 @@
         },
         {
           "word": "shore",
-          "meaning": "(要確認)",
+          "meaning": "岸",
           "isUnknown": false,
           "lemma": "shore",
           "reading": "shore",
@@ -9869,7 +9869,7 @@
         },
         {
           "word": "swim",
-          "meaning": "(要確認)",
+          "meaning": "泳ぐ",
           "isUnknown": false,
           "lemma": "swim",
           "reading": "swim",
@@ -9902,7 +9902,7 @@
         },
         {
           "word": "lake",
-          "meaning": "(要確認)",
+          "meaning": "湖",
           "isUnknown": false,
           "lemma": "lake",
           "reading": "lake",
@@ -12121,7 +12121,7 @@
         },
         {
           "word": "worth",
-          "meaning": "(要確認)",
+          "meaning": "〜の価値がある",
           "isUnknown": false,
           "lemma": "worth",
           "reading": "worth",
@@ -12184,7 +12184,7 @@
         },
         {
           "word": "Worth",
-          "meaning": "(要確認)",
+          "meaning": "〜の価値がある",
           "isUnknown": false,
           "lemma": "Worth",
           "reading": "Worth",
@@ -12508,7 +12508,7 @@
         },
         {
           "word": "valley",
-          "meaning": "(要確認)",
+          "meaning": "谷",
           "isUnknown": false,
           "lemma": "valley",
           "reading": "valley",
@@ -12549,7 +12549,7 @@
         },
         {
           "word": "lake",
-          "meaning": "(要確認)",
+          "meaning": "湖",
           "isUnknown": false,
           "lemma": "lake",
           "reading": "lake",
@@ -13618,7 +13618,7 @@
         },
         {
           "word": "lake",
-          "meaning": "(要確認)",
+          "meaning": "湖",
           "isUnknown": false,
           "lemma": "lake",
           "reading": "lake",
@@ -14194,7 +14194,7 @@
         },
         {
           "word": "tent",
-          "meaning": "(要確認)",
+          "meaning": "テント",
           "isUnknown": false,
           "lemma": "tent",
           "reading": "tent",
@@ -14674,7 +14674,7 @@
         },
         {
           "word": "scared",
-          "meaning": "(要確認)",
+          "meaning": "怖がって",
           "isUnknown": false,
           "lemma": "scared",
           "reading": "scared",
@@ -14792,7 +14792,7 @@
         },
         {
           "word": "wilderness",
-          "meaning": "(要確認)",
+          "meaning": "荒野・原野",
           "isUnknown": false,
           "lemma": "wilderness",
           "reading": "wilderness",
@@ -14814,7 +14814,7 @@
         },
         {
           "word": "wild",
-          "meaning": "(要確認)",
+          "meaning": "野生の",
           "isUnknown": false,
           "lemma": "wild",
           "reading": "wild",
@@ -15220,7 +15220,7 @@
         },
         {
           "word": "wild",
-          "meaning": "(要確認)",
+          "meaning": "野生の",
           "isUnknown": false,
           "lemma": "wild",
           "reading": "wild",
@@ -15664,7 +15664,7 @@
         },
         {
           "word": "camping",
-          "meaning": "(要確認)",
+          "meaning": "キャンプ(すること)",
           "isUnknown": false,
           "lemma": "camping",
           "reading": "camping",
@@ -16081,7 +16081,7 @@
         },
         {
           "word": "warmth",
-          "meaning": "(要確認)",
+          "meaning": "暖かさ",
           "isUnknown": false,
           "lemma": "warmth",
           "reading": "warmth",
@@ -17818,7 +17818,7 @@
         },
         {
           "word": "France",
-          "meaning": "(要確認)",
+          "meaning": "フランス",
           "isUnknown": false,
           "lemma": "France",
           "reading": "France",
@@ -18098,7 +18098,7 @@
         },
         {
           "word": "France",
-          "meaning": "(要確認)",
+          "meaning": "フランス",
           "isUnknown": false,
           "lemma": "France",
           "reading": "France",
@@ -18539,7 +18539,7 @@
         },
         {
           "word": "Cathedral",
-          "meaning": "(要確認)",
+          "meaning": "大聖堂",
           "isUnknown": false,
           "lemma": "Cathedral",
           "reading": "Cathedral",
@@ -19060,7 +19060,7 @@
         },
         {
           "word": "top",
-          "meaning": "(要確認)",
+          "meaning": "頂上・最上位",
           "isUnknown": false,
           "lemma": "top",
           "reading": "top",
@@ -21846,7 +21846,7 @@
         },
         {
           "word": "sister",
-          "meaning": "(要確認)",
+          "meaning": "姉妹",
           "isUnknown": false,
           "lemma": "sister",
           "reading": "sister",
@@ -22104,7 +22104,7 @@
         },
         {
           "word": "Wall",
-          "meaning": "(要確認)",
+          "meaning": "壁",
           "isUnknown": false,
           "lemma": "Wall",
           "reading": "Wall",
@@ -23127,7 +23127,7 @@
         },
         {
           "word": "France",
-          "meaning": "(要確認)",
+          "meaning": "フランス",
           "isUnknown": false,
           "lemma": "France",
           "reading": "France",
@@ -27482,7 +27482,7 @@
         },
         {
           "word": "tourist",
-          "meaning": "(要確認)",
+          "meaning": "旅行者",
           "isUnknown": false,
           "lemma": "tourist",
           "reading": "tourist",
@@ -27665,7 +27665,7 @@
         },
         {
           "word": "France",
-          "meaning": "(要確認)",
+          "meaning": "フランス",
           "isUnknown": false,
           "lemma": "France",
           "reading": "France",
@@ -28402,7 +28402,7 @@
         },
         {
           "word": "France",
-          "meaning": "(要確認)",
+          "meaning": "フランス",
           "isUnknown": false,
           "lemma": "France",
           "reading": "France",
@@ -28561,7 +28561,7 @@
         },
         {
           "word": "attentive",
-          "meaning": "(要確認)",
+          "meaning": "注意深い・親切な",
           "isUnknown": false,
           "lemma": "attentive",
           "reading": "attentive",
@@ -29801,7 +29801,7 @@
         },
         {
           "word": "valid",
-          "meaning": "(要確認)",
+          "meaning": "有効な・妥当な",
           "isUnknown": false,
           "lemma": "valid",
           "reading": "valid",
@@ -32267,7 +32267,7 @@
         },
         {
           "word": "warmth",
-          "meaning": "(要確認)",
+          "meaning": "暖かさ",
           "isUnknown": false,
           "lemma": "warmth",
           "reading": "warmth",
@@ -32574,7 +32574,7 @@
         },
         {
           "word": "behavior",
-          "meaning": "(要確認)",
+          "meaning": "行動",
           "isUnknown": false,
           "lemma": "behavior",
           "reading": "behavior",
@@ -34868,7 +34868,7 @@
       "segments": [
         {
           "word": "France",
-          "meaning": "(要確認)",
+          "meaning": "フランス",
           "isUnknown": false,
           "lemma": "France",
           "reading": "France",
@@ -35104,7 +35104,7 @@
         },
         {
           "word": "continuity",
-          "meaning": "(要確認)",
+          "meaning": "連続性・継続",
           "isUnknown": false,
           "lemma": "continuity",
           "reading": "continuity",
@@ -36023,7 +36023,7 @@
         },
         {
           "word": "tone",
-          "meaning": "(要確認)",
+          "meaning": "音色・調子・口調",
           "isUnknown": false,
           "lemma": "tone",
           "reading": "tone",
@@ -36918,7 +36918,7 @@
         },
         {
           "word": "comprehension",
-          "meaning": "(要確認)",
+          "meaning": "理解・理解力",
           "isUnknown": false,
           "lemma": "comprehension",
           "reading": "comprehension",
@@ -37716,7 +37716,7 @@
         },
         {
           "word": "applicable",
-          "meaning": "(要確認)",
+          "meaning": "適用できる・当てはまる",
           "isUnknown": false,
           "lemma": "applicable",
           "reading": "applicable",
@@ -39271,7 +39271,7 @@
         },
         {
           "word": "camping",
-          "meaning": "(要確認)",
+          "meaning": "キャンプ(すること)",
           "isUnknown": false,
           "lemma": "camping",
           "reading": "camping",
@@ -41594,7 +41594,7 @@
         },
         {
           "word": "bookstore",
-          "meaning": "(要確認)",
+          "meaning": "書店",
           "isUnknown": false,
           "lemma": "bookstore",
           "reading": "bookstore",
@@ -42400,7 +42400,7 @@
         },
         {
           "word": "transport",
-          "meaning": "(要確認)",
+          "meaning": "輸送する・運ぶ",
           "isUnknown": false,
           "lemma": "transport",
           "reading": "transport",

@@ -129,7 +129,7 @@
         },
         {
           "word": "weekday",
-          "meaning": "(要確認)",
+          "meaning": "平日",
           "isUnknown": false,
           "lemma": "weekday",
           "reading": "weekday",
@@ -1684,7 +1684,7 @@
         },
         {
           "word": "accommodate",
-          "meaning": "(要確認)",
+          "meaning": "収容する・適応させる",
           "isUnknown": false,
           "lemma": "accommodate",
           "reading": "accommodate",
@@ -2392,7 +2392,7 @@
         },
         {
           "word": "selection",
-          "meaning": "(要確認)",
+          "meaning": "selectionすること",
           "isUnknown": false,
           "lemma": "selection",
           "reading": "selection",
@@ -2948,7 +2948,7 @@
         },
         {
           "word": "price",
-          "meaning": "(要確認)",
+          "meaning": "価格",
           "isUnknown": false,
           "lemma": "price",
           "reading": "price",
@@ -3196,7 +3196,7 @@
         },
         {
           "word": "fantastic",
-          "meaning": "(要確認)",
+          "meaning": "素晴らしい",
           "isUnknown": false,
           "lemma": "fantastic",
           "reading": "fantastic",
@@ -3237,7 +3237,7 @@
         },
         {
           "word": "bacon",
-          "meaning": "(要確認)",
+          "meaning": "ベーコン",
           "isUnknown": false,
           "lemma": "bacon",
           "reading": "bacon",
@@ -3344,7 +3344,7 @@
         },
         {
           "word": "awesome",
-          "meaning": "(要確認)",
+          "meaning": "すごい",
           "isUnknown": false,
           "lemma": "awesome",
           "reading": "awesome",
@@ -3569,7 +3569,7 @@
         },
         {
           "word": "weekday",
-          "meaning": "(要確認)",
+          "meaning": "平日",
           "isUnknown": false,
           "lemma": "weekday",
           "reading": "weekday",
@@ -3632,7 +3632,7 @@
         },
         {
           "word": "noodle",
-          "meaning": "(要確認)",
+          "meaning": "麺",
           "isUnknown": false,
           "lemma": "noodle",
           "reading": "noodle",
@@ -3643,7 +3643,7 @@
         },
         {
           "word": "soup",
-          "meaning": "(要確認)",
+          "meaning": "スープ",
           "isUnknown": false,
           "lemma": "soup",
           "reading": "soup",
@@ -3750,7 +3750,7 @@
         },
         {
           "word": "usual",
-          "meaning": "(要確認)",
+          "meaning": "いつもの・普通の",
           "isUnknown": false,
           "lemma": "usual",
           "reading": "usual",
@@ -4370,7 +4370,7 @@
         },
         {
           "word": "admirable",
-          "meaning": "(要確認)",
+          "meaning": "立派な・称賛すべき",
           "isUnknown": false,
           "lemma": "admirable",
           "reading": "admirable",
@@ -4426,7 +4426,7 @@
         },
         {
           "word": "absent",
-          "meaning": "(要確認)",
+          "meaning": "不在の・欠席した",
           "isUnknown": false,
           "lemma": "absent",
           "reading": "absent",
@@ -5047,7 +5047,7 @@
         },
         {
           "word": "complaint",
-          "meaning": "(要確認)",
+          "meaning": "不平・苦情",
           "isUnknown": false,
           "lemma": "complaint",
           "reading": "complaint",
@@ -5327,7 +5327,7 @@
         },
         {
           "word": "request",
-          "meaning": "(要確認)",
+          "meaning": "要請・要請する",
           "isUnknown": false,
           "lemma": "request",
           "reading": "request",
@@ -5653,7 +5653,7 @@
         },
         {
           "word": "ambition",
-          "meaning": "(要確認)",
+          "meaning": "野心・大望",
           "isUnknown": false,
           "lemma": "ambition",
           "reading": "ambition",
@@ -7586,7 +7586,7 @@
         },
         {
           "word": "adhere",
-          "meaning": "(要確認)",
+          "meaning": "固守する・付着する",
           "isUnknown": false,
           "lemma": "adhere",
           "reading": "adhere",
@@ -11783,7 +11783,7 @@
         },
         {
           "word": "charitable",
-          "meaning": "(要確認)",
+          "meaning": "慈善的な・寛容な",
           "isUnknown": false,
           "lemma": "charitable",
           "reading": "charitable",
@@ -12157,7 +12157,7 @@
         },
         {
           "word": "aesthetic",
-          "meaning": "(要確認)",
+          "meaning": "美的な・美学の",
           "isUnknown": false,
           "lemma": "aesthetic",
           "reading": "aesthetic",
@@ -13359,7 +13359,7 @@
         },
         {
           "word": "cautious",
-          "meaning": "(要確認)",
+          "meaning": "用心深い・慎重な",
           "isUnknown": false,
           "lemma": "cautious",
           "reading": "cautious",
@@ -13593,7 +13593,7 @@
         },
         {
           "word": "detail",
-          "meaning": "(要確認)",
+          "meaning": "詳細",
           "isUnknown": false,
           "lemma": "detail",
           "reading": "detail",
@@ -14259,7 +14259,7 @@
         },
         {
           "word": "consideration",
-          "meaning": "(要確認)",
+          "meaning": "考慮・配慮",
           "isUnknown": false,
           "lemma": "consideration",
           "reading": "consideration",
@@ -14437,7 +14437,7 @@
         },
         {
           "word": "via",
-          "meaning": "(要確認)",
+          "meaning": "〜経由で",
           "isUnknown": false,
           "lemma": "via",
           "reading": "via",
@@ -14969,7 +14969,7 @@
         },
         {
           "word": "core",
-          "meaning": "(要確認)",
+          "meaning": "核心・中心部",
           "isUnknown": false,
           "lemma": "core",
           "reading": "core",

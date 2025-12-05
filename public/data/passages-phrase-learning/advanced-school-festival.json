@@ -1754,7 +1754,7 @@
         },
         {
           "word": "classic",
-          "meaning": "(要確認)",
+          "meaning": "古典的な・一流の",
           "isUnknown": false,
           "lemma": "classic",
           "reading": "classic",
@@ -1776,7 +1776,7 @@
         },
         {
           "word": "tale",
-          "meaning": "(要確認)",
+          "meaning": "物語",
           "isUnknown": false,
           "lemma": "tale",
           "reading": "tale",
@@ -1927,7 +1927,7 @@
         },
         {
           "word": "upon",
-          "meaning": "(要確認)",
+          "meaning": "〜の上に",
           "isUnknown": false,
           "lemma": "upon",
           "reading": "upon",
@@ -2718,7 +2718,7 @@
         },
         {
           "word": "twist",
-          "meaning": "(要確認)",
+          "meaning": "ねじる・ひねる",
           "isUnknown": false,
           "lemma": "twist",
           "reading": "twist",
@@ -5054,7 +5054,7 @@
         },
         {
           "word": "prince",
-          "meaning": "(要確認)",
+          "meaning": "王子",
           "isUnknown": false,
           "lemma": "prince",
           "reading": "prince",
@@ -5450,7 +5450,7 @@
         },
         {
           "word": "actor",
-          "meaning": "(要確認)",
+          "meaning": "俳優",
           "isUnknown": false,
           "lemma": "actor",
           "reading": "actor",
@@ -6583,7 +6583,7 @@
         },
         {
           "word": "yen",
-          "meaning": "(要確認)",
+          "meaning": "円",
           "isUnknown": false,
           "lemma": "yen",
           "reading": "yen",
@@ -6798,7 +6798,7 @@
         },
         {
           "word": "contest",
-          "meaning": "(要確認)",
+          "meaning": "競技・争う",
           "isUnknown": false,
           "lemma": "contest",
           "reading": "contest",
@@ -7045,7 +7045,7 @@
         },
         {
           "word": "tragedy",
-          "meaning": "(要確認)",
+          "meaning": "悲劇",
           "isUnknown": false,
           "lemma": "tragedy",
           "reading": "tragedy",
@@ -8035,7 +8035,7 @@
         },
         {
           "word": "mirror",
-          "meaning": "(要確認)",
+          "meaning": "鏡",
           "isUnknown": false,
           "lemma": "mirror",
           "reading": "mirror",
@@ -8685,7 +8685,7 @@
         },
         {
           "word": "leader",
-          "meaning": "(要確認)",
+          "meaning": "指導者・リーダー",
           "isUnknown": false,
           "lemma": "leader",
           "reading": "leader",
@@ -8940,7 +8940,7 @@
         },
         {
           "word": "yen",
-          "meaning": "(要確認)",
+          "meaning": "円",
           "isUnknown": false,
           "lemma": "yen",
           "reading": "yen",
@@ -9851,7 +9851,7 @@
         },
         {
           "word": "stuff",
-          "meaning": "(要確認)",
+          "meaning": "物、材料",
           "isUnknown": false,
           "lemma": "stuff",
           "reading": "stuff",
@@ -10032,7 +10032,7 @@
         },
         {
           "word": "pull",
-          "meaning": "(要確認)",
+          "meaning": "引く",
           "isUnknown": false,
           "lemma": "pull",
           "reading": "pull",
@@ -10526,7 +10526,7 @@
         },
         {
           "word": "purple",
-          "meaning": "(要確認)",
+          "meaning": "紫色",
           "isUnknown": false,
           "lemma": "purple",
           "reading": "purple",
@@ -11521,7 +11521,7 @@
         },
         {
           "word": "river",
-          "meaning": "(要確認)",
+          "meaning": "川",
           "isUnknown": false,
           "lemma": "river",
           "reading": "river",
@@ -11543,7 +11543,7 @@
         },
         {
           "word": "waterfall",
-          "meaning": "(要確認)",
+          "meaning": "滝",
           "isUnknown": false,
           "lemma": "waterfall",
           "reading": "waterfall",
@@ -11757,7 +11757,7 @@
         },
         {
           "word": "silver",
-          "meaning": "(要確認)",
+          "meaning": "銀",
           "isUnknown": false,
           "lemma": "silver",
           "reading": "silver",
@@ -11820,7 +11820,7 @@
         },
         {
           "word": "accident",
-          "meaning": "(要確認)",
+          "meaning": "事故",
           "isUnknown": false,
           "lemma": "accident",
           "reading": "accident",
@@ -12592,7 +12592,7 @@
         },
         {
           "word": "leader",
-          "meaning": "(要確認)",
+          "meaning": "指導者・リーダー",
           "isUnknown": false,
           "lemma": "leader",
           "reading": "leader",
@@ -13282,7 +13282,7 @@
         },
         {
           "word": "lesson",
-          "meaning": "(要確認)",
+          "meaning": "授業・教訓",
           "isUnknown": false,
           "lemma": "lesson",
           "reading": "lesson",
@@ -13896,7 +13896,7 @@
         },
         {
           "word": "boring",
-          "meaning": "(要確認)",
+          "meaning": "退屈な",
           "isUnknown": false,
           "lemma": "boring",
           "reading": "boring",
@@ -15137,7 +15137,7 @@
         },
         {
           "word": "ball",
-          "meaning": "(要確認)",
+          "meaning": "ボール",
           "isUnknown": false,
           "lemma": "ball",
           "reading": "ball",
@@ -15430,7 +15430,7 @@
         },
         {
           "word": "costume",
-          "meaning": "(要確認)",
+          "meaning": "衣装・服装",
           "isUnknown": false,
           "lemma": "costume",
           "reading": "costume",
@@ -15633,7 +15633,7 @@
         },
         {
           "word": "costume",
-          "meaning": "(要確認)",
+          "meaning": "衣装・服装",
           "isUnknown": false,
           "lemma": "costume",
           "reading": "costume",
@@ -16336,7 +16336,7 @@
         },
         {
           "word": "bored",
-          "meaning": "(要確認)",
+          "meaning": "退屈した",
           "isUnknown": false,
           "lemma": "bored",
           "reading": "bored",
@@ -17456,7 +17456,7 @@
         },
         {
           "word": "curtain",
-          "meaning": "(要確認)",
+          "meaning": "カーテン",
           "isUnknown": false,
           "lemma": "curtain",
           "reading": "curtain",
@@ -17593,7 +17593,7 @@
         },
         {
           "word": "sword",
-          "meaning": "(要確認)",
+          "meaning": "剣",
           "isUnknown": false,
           "lemma": "sword",
           "reading": "sword",
@@ -18267,7 +18267,7 @@
         },
         {
           "word": "theater",
-          "meaning": "(要確認)",
+          "meaning": "劇場",
           "isUnknown": false,
           "lemma": "theater",
           "reading": "theater",
@@ -18919,7 +18919,7 @@
         },
         {
           "word": "curtain",
-          "meaning": "(要確認)",
+          "meaning": "カーテン",
           "isUnknown": false,
           "lemma": "curtain",
           "reading": "curtain",
@@ -19089,7 +19089,7 @@
         },
         {
           "word": "sword",
-          "meaning": "(要確認)",
+          "meaning": "剣",
           "isUnknown": false,
           "lemma": "sword",
           "reading": "sword",
@@ -19925,7 +19925,7 @@
         },
         {
           "word": "shirt",
-          "meaning": "(要確認)",
+          "meaning": "シャツ",
           "isUnknown": false,
           "lemma": "shirt",
           "reading": "shirt",
@@ -20344,7 +20344,7 @@
         },
         {
           "word": "smell",
-          "meaning": "(要確認)",
+          "meaning": "におい・においがする",
           "isUnknown": false,
           "lemma": "smell",
           "reading": "smell",
@@ -20799,7 +20799,7 @@
         },
         {
           "word": "yen",
-          "meaning": "(要確認)",
+          "meaning": "円",
           "isUnknown": false,
           "lemma": "yen",
           "reading": "yen",
@@ -20991,7 +20991,7 @@
         },
         {
           "word": "ninety",
-          "meaning": "(要確認)",
+          "meaning": "90",
           "isUnknown": false,
           "lemma": "ninety",
           "reading": "ninety",
@@ -22784,7 +22784,7 @@
         },
         {
           "word": "auditorium",
-          "meaning": "(要確認)",
+          "meaning": "講堂・観客席",
           "isUnknown": false,
           "lemma": "auditorium",
           "reading": "auditorium",
@@ -23102,7 +23102,7 @@
         },
         {
           "word": "upon",
-          "meaning": "(要確認)",
+          "meaning": "〜の上に",
           "isUnknown": false,
           "lemma": "upon",
           "reading": "upon",
@@ -24191,7 +24191,7 @@
         },
         {
           "word": "costume",
-          "meaning": "(要確認)",
+          "meaning": "衣装・服装",
           "isUnknown": false,
           "lemma": "costume",
           "reading": "costume",
@@ -24276,7 +24276,7 @@
         },
         {
           "word": "prince",
-          "meaning": "(要確認)",
+          "meaning": "王子",
           "isUnknown": false,
           "lemma": "prince",
           "reading": "prince",
@@ -24406,7 +24406,7 @@
         },
         {
           "word": "classic",
-          "meaning": "(要確認)",
+          "meaning": "古典的な・一流の",
           "isUnknown": false,
           "lemma": "classic",
           "reading": "classic",
@@ -25477,7 +25477,7 @@
         },
         {
           "word": "crew",
-          "meaning": "(要確認)",
+          "meaning": "乗組員・一団",
           "isUnknown": false,
           "lemma": "crew",
           "reading": "crew",
@@ -26583,7 +26583,7 @@
         },
         {
           "word": "auditorium",
-          "meaning": "(要確認)",
+          "meaning": "講堂・観客席",
           "isUnknown": false,
           "lemma": "auditorium",
           "reading": "auditorium",
@@ -29960,7 +29960,7 @@
         },
         {
           "word": "sword",
-          "meaning": "(要確認)",
+          "meaning": "剣",
           "isUnknown": false,
           "lemma": "sword",
           "reading": "sword",
@@ -30342,7 +30342,7 @@
         },
         {
           "word": "brilliant",
-          "meaning": "(要確認)",
+          "meaning": "輝かしい・優秀な",
           "isUnknown": false,
           "lemma": "brilliant",
           "reading": "brilliant",
@@ -31266,7 +31266,7 @@
         },
         {
           "word": "shirt",
-          "meaning": "(要確認)",
+          "meaning": "シャツ",
           "isUnknown": false,
           "lemma": "shirt",
           "reading": "shirt",
@@ -31804,7 +31804,7 @@
         },
         {
           "word": "triumph",
-          "meaning": "(要確認)",
+          "meaning": "勝利・成功",
           "isUnknown": false,
           "lemma": "triumph",
           "reading": "triumph",
@@ -32743,7 +32743,7 @@
         },
         {
           "word": "shirt",
-          "meaning": "(要確認)",
+          "meaning": "シャツ",
           "isUnknown": false,
           "lemma": "shirt",
           "reading": "shirt",
@@ -34018,7 +34018,7 @@
         },
         {
           "word": "applause",
-          "meaning": "(要確認)",
+          "meaning": "拍手・称賛",
           "isUnknown": false,
           "lemma": "applause",
           "reading": "applause",
@@ -36639,7 +36639,7 @@
         },
         {
           "word": "zone",
-          "meaning": "(要確認)",
+          "meaning": "地帯・区域",
           "isUnknown": false,
           "lemma": "zone",
           "reading": "zone",
@@ -37837,7 +37837,7 @@
         },
         {
           "word": "administration",
-          "meaning": "(要確認)",
+          "meaning": "管理・政権",
           "isUnknown": false,
           "lemma": "administration",
           "reading": "administration",
@@ -41020,7 +41020,7 @@
         },
         {
           "word": "contest",
-          "meaning": "(要確認)",
+          "meaning": "競技・争う",
           "isUnknown": false,
           "lemma": "contest",
           "reading": "contest",
@@ -42186,7 +42186,7 @@
         },
         {
           "word": "theater",
-          "meaning": "(要確認)",
+          "meaning": "劇場",
           "isUnknown": false,
           "lemma": "theater",
           "reading": "theater",
@@ -44282,7 +44282,7 @@
         },
         {
           "word": "charity",
-          "meaning": "(要確認)",
+          "meaning": "慈善・博愛",
           "isUnknown": false,
           "lemma": "charity",
           "reading": "charity",
@@ -46569,7 +46569,7 @@
         },
         {
           "word": "argue",
-          "meaning": "(要確認)",
+          "meaning": "議論する・主張する",
           "isUnknown": false,
           "lemma": "argue",
           "reading": "argue",
@@ -48455,7 +48455,7 @@
         },
         {
           "word": "combination",
-          "meaning": "(要確認)",
+          "meaning": "組み合わせ・結合",
           "isUnknown": false,
           "lemma": "combination",
           "reading": "combination",
@@ -48499,7 +48499,7 @@
         },
         {
           "word": "musical",
-          "meaning": "(要確認)",
+          "meaning": "ミュージカル、音楽の",
           "isUnknown": false,
           "lemma": "musical",
           "reading": "musical",
@@ -49797,7 +49797,7 @@
         },
         {
           "word": "custom",
-          "meaning": "(要確認)",
+          "meaning": "習慣",
           "isUnknown": false,
           "lemma": "custom",
           "reading": "custom",
@@ -50137,7 +50137,7 @@
         },
         {
           "word": "yen",
-          "meaning": "(要確認)",
+          "meaning": "円",
           "isUnknown": false,
           "lemma": "yen",
           "reading": "yen",
@@ -50502,7 +50502,7 @@
         },
         {
           "word": "closet",
-          "meaning": "(要確認)",
+          "meaning": "物入れ・秘密の",
           "isUnknown": false,
           "lemma": "closet",
           "reading": "closet",
@@ -52136,7 +52136,7 @@
         },
         {
           "word": "sword",
-          "meaning": "(要確認)",
+          "meaning": "剣",
           "isUnknown": false,
           "lemma": "sword",
           "reading": "sword",
@@ -52765,7 +52765,7 @@
         },
         {
           "word": "lie",
-          "meaning": "(要確認)",
+          "meaning": "横たわる・嘘",
           "isUnknown": false,
           "lemma": "lie",
           "reading": "lie",
@@ -52932,7 +52932,7 @@
         },
         {
           "word": "scared",
-          "meaning": "(要確認)",
+          "meaning": "怖がって",
           "isUnknown": false,
           "lemma": "scared",
           "reading": "scared",
@@ -54306,7 +54306,7 @@
         },
         {
           "word": "letter",
-          "meaning": "(要確認)",
+          "meaning": "手紙・文字",
           "isUnknown": false,
           "lemma": "letter",
           "reading": "letter",
@@ -55151,7 +55151,7 @@
         },
         {
           "word": "conclusion",
-          "meaning": "(要確認)",
+          "meaning": "結論・終結",
           "isUnknown": false,
           "lemma": "conclusion",
           "reading": "conclusion",
@@ -56731,7 +56731,7 @@
         },
         {
           "word": "silent",
-          "meaning": "(要確認)",
+          "meaning": "無言の",
           "isUnknown": false,
           "lemma": "silent",
           "reading": "silent",
@@ -56909,7 +56909,7 @@
         },
         {
           "word": "pretty",
-          "meaning": "(要確認)",
+          "meaning": "かわいい・かなり",
           "isUnknown": false,
           "lemma": "pretty",
           "reading": "pretty",
@@ -59803,7 +59803,7 @@
         },
         {
           "word": "constitute",
-          "meaning": "(要確認)",
+          "meaning": "構成する・設立する",
           "isUnknown": false,
           "lemma": "constitute",
           "reading": "constitute",
@@ -60438,7 +60438,7 @@
         },
         {
           "word": "prove",
-          "meaning": "(要確認)",
+          "meaning": "証明する",
           "isUnknown": false,
           "lemma": "prove",
           "reading": "prove",
@@ -61285,7 +61285,7 @@
         },
         {
           "word": "composure",
-          "meaning": "(要確認)",
+          "meaning": "沈着・平静",
           "isUnknown": false,
           "lemma": "composure",
           "reading": "composure",
@@ -62906,7 +62906,7 @@
         },
         {
           "word": "administer",
-          "meaning": "(要確認)",
+          "meaning": "管理する・執行する",
           "isUnknown": false,
           "lemma": "administer",
           "reading": "administer",
@@ -63403,7 +63403,7 @@
         },
         {
           "word": "novel",
-          "meaning": "(要確認)",
+          "meaning": "小説・新しい",
           "isUnknown": false,
           "lemma": "novel",
           "reading": "novel",
@@ -63710,7 +63710,7 @@
         },
         {
           "word": "subject",
-          "meaning": "(要確認)",
+          "meaning": "主題・科目",
           "isUnknown": false,
           "lemma": "subject",
           "reading": "subject",
@@ -64516,7 +64516,7 @@
         },
         {
           "word": "scared",
-          "meaning": "(要確認)",
+          "meaning": "怖がって",
           "isUnknown": false,
           "lemma": "scared",
           "reading": "scared",
@@ -67099,7 +67099,7 @@
         },
         {
           "word": "applause",
-          "meaning": "(要確認)",
+          "meaning": "拍手・称賛",
           "isUnknown": false,
           "lemma": "applause",
           "reading": "applause",
@@ -67231,7 +67231,7 @@
         },
         {
           "word": "cherish",
-          "meaning": "(要確認)",
+          "meaning": "大切にする・心に抱く",
           "isUnknown": false,
           "lemma": "cherish",
           "reading": "cherish",
