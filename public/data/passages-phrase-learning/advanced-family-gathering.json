@@ -1423,7 +1423,7 @@
         },
         {
           "word": "anymore",
-          "meaning": "(要確認)",
+          "meaning": "もはや",
           "isUnknown": false,
           "lemma": "anymore",
           "reading": "anymore",
@@ -3200,7 +3200,7 @@
         },
         {
           "word": "driver",
-          "meaning": "(要確認)",
+          "meaning": "運転手",
           "isUnknown": false,
           "lemma": "driver",
           "reading": "driver",
@@ -4036,7 +4036,7 @@
         },
         {
           "word": "desk",
-          "meaning": "(要確認)",
+          "meaning": "机",
           "isUnknown": false,
           "lemma": "desk",
           "reading": "desk",
@@ -5964,7 +5964,7 @@
         },
         {
           "word": "stomachache",
-          "meaning": "(要確認)",
+          "meaning": "腹痛",
           "isUnknown": false,
           "lemma": "stomachache",
           "reading": "stomachache",
@@ -7007,7 +7007,7 @@
         },
         {
           "word": "latest",
-          "meaning": "(要確認)",
+          "meaning": "最新の",
           "isUnknown": false,
           "lemma": "latest",
           "reading": "latest",
@@ -7505,7 +7505,7 @@
         },
         {
           "word": "delivery",
-          "meaning": "(要確認)",
+          "meaning": "配達・届けること",
           "isUnknown": false,
           "lemma": "delivery",
           "reading": "delivery",
@@ -8190,7 +8190,7 @@
         },
         {
           "word": "latest",
-          "meaning": "(要確認)",
+          "meaning": "最新の",
           "isUnknown": false,
           "lemma": "latest",
           "reading": "latest",
@@ -8349,7 +8349,7 @@
         },
         {
           "word": "graduate",
-          "meaning": "(要確認)",
+          "meaning": "卒業する",
           "isUnknown": false,
           "lemma": "graduate",
           "reading": "graduate",
@@ -10271,7 +10271,7 @@
         },
         {
           "word": "wash",
-          "meaning": "(要確認)",
+          "meaning": "洗う",
           "isUnknown": false,
           "lemma": "wash",
           "reading": "wash",
@@ -11562,7 +11562,7 @@
         },
         {
           "word": "wonder",
-          "meaning": "(要確認)",
+          "meaning": "不思議・驚き",
           "isUnknown": false,
           "lemma": "wonder",
           "reading": "wonder",
@@ -11776,7 +11776,7 @@
         },
         {
           "word": "silence",
-          "meaning": "(要確認)",
+          "meaning": "沈黙",
           "isUnknown": false,
           "lemma": "silence",
           "reading": "silence",
@@ -12287,7 +12287,7 @@
         },
         {
           "word": "settle",
-          "meaning": "(要確認)",
+          "meaning": "落ち着く・解決する",
           "isUnknown": false,
           "lemma": "settle",
           "reading": "settle",
@@ -13036,7 +13036,7 @@
         },
         {
           "word": "worth",
-          "meaning": "(要確認)",
+          "meaning": "〜の価値がある",
           "isUnknown": false,
           "lemma": "worth",
           "reading": "worth",
@@ -14382,7 +14382,7 @@
         },
         {
           "word": "announcement",
-          "meaning": "(要確認)",
+          "meaning": "announceすること",
           "isUnknown": false,
           "lemma": "announcement",
           "reading": "announcement",
@@ -14877,7 +14877,7 @@
         },
         {
           "word": "hug",
-          "meaning": "(要確認)",
+          "meaning": "抱きしめる",
           "isUnknown": false,
           "lemma": "hug",
           "reading": "hug",
@@ -16526,7 +16526,7 @@
         },
         {
           "word": "airplane",
-          "meaning": "(要確認)",
+          "meaning": "飛行機",
           "isUnknown": false,
           "lemma": "airplane",
           "reading": "airplane",
@@ -17632,7 +17632,7 @@
         },
         {
           "word": "fever",
-          "meaning": "(要確認)",
+          "meaning": "熱・発熱",
           "isUnknown": false,
           "lemma": "fever",
           "reading": "fever",
@@ -18477,7 +18477,7 @@
         },
         {
           "word": "interviewer",
-          "meaning": "(要確認)",
+          "meaning": "面接官・インタビュアー",
           "isUnknown": false,
           "lemma": "interviewer",
           "reading": "interviewer",
@@ -19519,7 +19519,7 @@
         },
         {
           "word": "chance",
-          "meaning": "(要確認)",
+          "meaning": "機会",
           "isUnknown": false,
           "lemma": "chance",
           "reading": "chance",
@@ -21371,7 +21371,7 @@
         },
         {
           "word": "latest",
-          "meaning": "(要確認)",
+          "meaning": "最新の",
           "isUnknown": false,
           "lemma": "latest",
           "reading": "latest",
@@ -22151,7 +22151,7 @@
         },
         {
           "word": "rush",
-          "meaning": "(要確認)",
+          "meaning": "急ぐ・殺到",
           "isUnknown": false,
           "lemma": "rush",
           "reading": "rush",
@@ -22614,7 +22614,7 @@
         },
         {
           "word": "toothache",
-          "meaning": "(要確認)",
+          "meaning": "歯痛",
           "isUnknown": false,
           "lemma": "toothache",
           "reading": "toothache",
@@ -22688,7 +22688,7 @@
         },
         {
           "word": "dentist",
-          "meaning": "(要確認)",
+          "meaning": "歯医者",
           "isUnknown": false,
           "lemma": "dentist",
           "reading": "dentist",
@@ -22795,7 +22795,7 @@
         },
         {
           "word": "weak",
-          "meaning": "(要確認)",
+          "meaning": "弱い",
           "isUnknown": false,
           "lemma": "weak",
           "reading": "weak",
@@ -26031,7 +26031,7 @@
         },
         {
           "word": "somewhere",
-          "meaning": "(要確認)",
+          "meaning": "どこかで",
           "isUnknown": false,
           "lemma": "somewhere",
           "reading": "somewhere",
@@ -26204,7 +26204,7 @@
         },
         {
           "word": "cottage",
-          "meaning": "(要確認)",
+          "meaning": "小屋・別荘",
           "isUnknown": false,
           "lemma": "cottage",
           "reading": "cottage",
@@ -26467,7 +26467,7 @@
         },
         {
           "word": "couple",
-          "meaning": "(要確認)",
+          "meaning": "夫婦",
           "isUnknown": false,
           "lemma": "couple",
           "reading": "couple",
@@ -26511,7 +26511,7 @@
         },
         {
           "word": "announcement",
-          "meaning": "(要確認)",
+          "meaning": "announceすること",
           "isUnknown": false,
           "lemma": "announcement",
           "reading": "announcement",
@@ -26829,7 +26829,7 @@
         },
         {
           "word": "driver",
-          "meaning": "(要確認)",
+          "meaning": "運転手",
           "isUnknown": false,
           "lemma": "driver",
           "reading": "driver",
@@ -28197,7 +28197,7 @@
         },
         {
           "word": "lucky",
-          "meaning": "(要確認)",
+          "meaning": "幸運な",
           "isUnknown": false,
           "lemma": "lucky",
           "reading": "lucky",
@@ -28781,7 +28781,7 @@
         },
         {
           "word": "latest",
-          "meaning": "(要確認)",
+          "meaning": "最新の",
           "isUnknown": false,
           "lemma": "latest",
           "reading": "latest",
@@ -30380,7 +30380,7 @@
         },
         {
           "word": "warmth",
-          "meaning": "(要確認)",
+          "meaning": "暖かさ",
           "isUnknown": false,
           "lemma": "warmth",
           "reading": "warmth",
@@ -31512,7 +31512,7 @@
         },
         {
           "word": "pleasure",
-          "meaning": "(要確認)",
+          "meaning": "喜び、楽しみ",
           "isUnknown": false,
           "lemma": "pleasure",
           "reading": "pleasure",
@@ -31663,7 +31663,7 @@
         },
         {
           "word": "worth",
-          "meaning": "(要確認)",
+          "meaning": "〜の価値がある",
           "isUnknown": false,
           "lemma": "worth",
           "reading": "worth",
@@ -31800,7 +31800,7 @@
         },
         {
           "word": "chance",
-          "meaning": "(要確認)",
+          "meaning": "機会",
           "isUnknown": false,
           "lemma": "chance",
           "reading": "chance",
@@ -32258,7 +32258,7 @@
         },
         {
           "word": "wash",
-          "meaning": "(要確認)",
+          "meaning": "洗う",
           "isUnknown": false,
           "lemma": "wash",
           "reading": "wash",
@@ -32387,7 +32387,7 @@
         },
         {
           "word": "pile",
-          "meaning": "(要確認)",
+          "meaning": "山・積み重ねる",
           "isUnknown": false,
           "lemma": "pile",
           "reading": "pile",
@@ -33944,7 +33944,7 @@
         },
         {
           "word": "alive",
-          "meaning": "(要確認)",
+          "meaning": "生きている",
           "isUnknown": false,
           "lemma": "alive",
           "reading": "alive",
@@ -34251,7 +34251,7 @@
         },
         {
           "word": "potato",
-          "meaning": "(要確認)",
+          "meaning": "じゃがいも",
           "isUnknown": false,
           "lemma": "potato",
           "reading": "potato",
@@ -34262,7 +34262,7 @@
         },
         {
           "word": "salad",
-          "meaning": "(要確認)",
+          "meaning": "サラダ",
           "isUnknown": false,
           "lemma": "salad",
           "reading": "salad",
@@ -34295,7 +34295,7 @@
         },
         {
           "word": "chicken",
-          "meaning": "(要確認)",
+          "meaning": "鶏・鶏肉",
           "isUnknown": false,
           "lemma": "chicken",
           "reading": "chicken",
@@ -34838,7 +34838,7 @@
         },
         {
           "word": "steady",
-          "meaning": "(要確認)",
+          "meaning": "安定した",
           "isUnknown": false,
           "lemma": "steady",
           "reading": "steady",
@@ -35804,7 +35804,7 @@
         },
         {
           "word": "accommodate",
-          "meaning": "(要確認)",
+          "meaning": "収容する・適応させる",
           "isUnknown": false,
           "lemma": "accommodate",
           "reading": "accommodate",
@@ -36144,7 +36144,7 @@
         },
         {
           "word": "vase",
-          "meaning": "(要確認)",
+          "meaning": "花瓶",
           "isUnknown": false,
           "lemma": "vase",
           "reading": "vase",
@@ -36262,7 +36262,7 @@
         },
         {
           "word": "wedding",
-          "meaning": "(要確認)",
+          "meaning": "結婚式",
           "isUnknown": false,
           "lemma": "wedding",
           "reading": "wedding",
@@ -36350,7 +36350,7 @@
         },
         {
           "word": "fifty",
-          "meaning": "(要確認)",
+          "meaning": "50",
           "isUnknown": false,
           "lemma": "fifty",
           "reading": "fifty",
@@ -36457,7 +36457,7 @@
         },
         {
           "word": "vase",
-          "meaning": "(要確認)",
+          "meaning": "花瓶",
           "isUnknown": false,
           "lemma": "vase",
           "reading": "vase",
@@ -36512,7 +36512,7 @@
         },
         {
           "word": "spot",
-          "meaning": "(要確認)",
+          "meaning": "点・場所・見つける",
           "isUnknown": false,
           "lemma": "spot",
           "reading": "spot",
@@ -37006,7 +37006,7 @@
         },
         {
           "word": "rope",
-          "meaning": "(要確認)",
+          "meaning": "ロープ",
           "isUnknown": false,
           "lemma": "rope",
           "reading": "rope",
@@ -37140,7 +37140,7 @@
         },
         {
           "word": "ward",
-          "meaning": "(要確認)",
+          "meaning": "病棟・区",
           "isUnknown": false,
           "lemma": "ward",
           "reading": "ward",
@@ -37359,7 +37359,7 @@
         },
         {
           "word": "aloud",
-          "meaning": "(要確認)",
+          "meaning": "声を出して",
           "isUnknown": false,
           "lemma": "aloud",
           "reading": "aloud",
@@ -39085,7 +39085,7 @@
         },
         {
           "word": "pin",
-          "meaning": "(要確認)",
+          "meaning": "ピン・留める",
           "isUnknown": false,
           "lemma": "pin",
           "reading": "pin",
@@ -39107,7 +39107,7 @@
         },
         {
           "word": "tail",
-          "meaning": "(要確認)",
+          "meaning": "しっぽ",
           "isUnknown": false,
           "lemma": "tail",
           "reading": "tail",
@@ -39151,7 +39151,7 @@
         },
         {
           "word": "type",
-          "meaning": "(要確認)",
+          "meaning": "型・種類",
           "isUnknown": false,
           "lemma": "type",
           "reading": "type",
@@ -39236,7 +39236,7 @@
         },
         {
           "word": "poem",
-          "meaning": "(要確認)",
+          "meaning": "詩",
           "isUnknown": false,
           "lemma": "poem",
           "reading": "poem",
@@ -40238,7 +40238,7 @@
         },
         {
           "word": "noon",
-          "meaning": "(要確認)",
+          "meaning": "正午",
           "isUnknown": false,
           "lemma": "noon",
           "reading": "noon",
@@ -40312,7 +40312,7 @@
         },
         {
           "word": "knock",
-          "meaning": "(要確認)",
+          "meaning": "ノックする・叩く",
           "isUnknown": false,
           "lemma": "knock",
           "reading": "knock",
@@ -40880,7 +40880,7 @@
         },
         {
           "word": "empty",
-          "meaning": "(要確認)",
+          "meaning": "空の",
           "isUnknown": false,
           "lemma": "empty",
           "reading": "empty",
@@ -41516,7 +41516,7 @@
         },
         {
           "word": "eighty",
-          "meaning": "(要確認)",
+          "meaning": "80",
           "isUnknown": false,
           "lemma": "eighty",
           "reading": "eighty",
@@ -43468,7 +43468,7 @@
         },
         {
           "word": "frame",
-          "meaning": "(要確認)",
+          "meaning": "枠・骨組み",
           "isUnknown": false,
           "lemma": "frame",
           "reading": "frame",
@@ -48332,7 +48332,7 @@
         },
         {
           "word": "calligraphy",
-          "meaning": "(要確認)",
+          "meaning": "書道・美しい書き方",
           "isUnknown": false,
           "lemma": "calligraphy",
           "reading": "calligraphy",
@@ -50130,7 +50130,7 @@
         },
         {
           "word": "grandmother",
-          "meaning": "(要確認)",
+          "meaning": "祖母・おばあさん",
           "isUnknown": false,
           "lemma": "grandmother",
           "reading": "grandmother",
@@ -51727,7 +51727,7 @@
         },
         {
           "word": "grandmother",
-          "meaning": "(要確認)",
+          "meaning": "祖母・おばあさん",
           "isUnknown": false,
           "lemma": "grandmother",
           "reading": "grandmother",
@@ -51919,7 +51919,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(要確認)",
+          "meaning": "乾く・乾いた",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -52492,7 +52492,7 @@
         },
         {
           "word": "usual",
-          "meaning": "(要確認)",
+          "meaning": "いつもの・普通の",
           "isUnknown": false,
           "lemma": "usual",
           "reading": "usual",
@@ -52892,7 +52892,7 @@
         },
         {
           "word": "detail",
-          "meaning": "(要確認)",
+          "meaning": "詳細",
           "isUnknown": false,
           "lemma": "detail",
           "reading": "detail",
@@ -53385,7 +53385,7 @@
         },
         {
           "word": "driver",
-          "meaning": "(要確認)",
+          "meaning": "運転手",
           "isUnknown": false,
           "lemma": "driver",
           "reading": "driver",
@@ -55403,7 +55403,7 @@
         },
         {
           "word": "transmit",
-          "meaning": "(要確認)",
+          "meaning": "伝える・送信する",
           "isUnknown": false,
           "lemma": "transmit",
           "reading": "transmit",
@@ -56083,7 +56083,7 @@
         },
         {
           "word": "bear",
-          "meaning": "(要確認)",
+          "meaning": "耐える・生む",
           "isUnknown": false,
           "lemma": "bear",
           "reading": "bear",
@@ -56257,7 +56257,7 @@
         },
         {
           "word": "alive",
-          "meaning": "(要確認)",
+          "meaning": "生きている",
           "isUnknown": false,
           "lemma": "alive",
           "reading": "alive",
@@ -57454,7 +57454,7 @@
         },
         {
           "word": "continuity",
-          "meaning": "(要確認)",
+          "meaning": "連続性・継続",
           "isUnknown": false,
           "lemma": "continuity",
           "reading": "continuity",
@@ -58088,7 +58088,7 @@
         },
         {
           "word": "cement",
-          "meaning": "(要確認)",
+          "meaning": "セメント・結束させる",
           "isUnknown": false,
           "lemma": "cement",
           "reading": "cement",
@@ -60771,7 +60771,7 @@
         },
         {
           "word": "burst",
-          "meaning": "(要確認)",
+          "meaning": "破裂する・爆発",
           "isUnknown": false,
           "lemma": "burst",
           "reading": "burst",
@@ -60815,7 +60815,7 @@
         },
         {
           "word": "bubble",
-          "meaning": "(要確認)",
+          "meaning": "泡・泡立つ",
           "isUnknown": false,
           "lemma": "bubble",
           "reading": "bubble",
@@ -62641,7 +62641,7 @@
         },
         {
           "word": "abundance",
-          "meaning": "(要確認)",
+          "meaning": "豊富・多量",
           "isUnknown": false,
           "lemma": "abundance",
           "reading": "abundance",
@@ -63359,7 +63359,7 @@
         },
         {
           "word": "situation",
-          "meaning": "(要確認)",
+          "meaning": "状況",
           "isUnknown": false,
           "lemma": "situation",
           "reading": "situation",
@@ -63488,7 +63488,7 @@
         },
         {
           "word": "afterwards",
-          "meaning": "(要確認)",
+          "meaning": "その後",
           "isUnknown": false,
           "lemma": "afterwards",
           "reading": "afterwards",
@@ -64719,7 +64719,7 @@
         },
         {
           "word": "announcement",
-          "meaning": "(要確認)",
+          "meaning": "announceすること",
           "isUnknown": false,
           "lemma": "announcement",
           "reading": "announcement",
@@ -65272,7 +65272,7 @@
         },
         {
           "word": "bond",
-          "meaning": "(要確認)",
+          "meaning": "結びつき・絆",
           "isUnknown": false,
           "lemma": "bond",
           "reading": "bond",
@@ -67349,7 +67349,7 @@
         },
         {
           "word": "warmth",
-          "meaning": "(要確認)",
+          "meaning": "暖かさ",
           "isUnknown": false,
           "lemma": "warmth",
           "reading": "warmth",

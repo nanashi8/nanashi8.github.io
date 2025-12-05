@@ -46,7 +46,7 @@
         },
         {
           "word": "tourist",
-          "meaning": "(要確認)",
+          "meaning": "旅行者",
           "isUnknown": false,
           "lemma": "tourist",
           "reading": "tourist",
@@ -1430,7 +1430,7 @@
         },
         {
           "word": "visitor",
-          "meaning": "(要確認)",
+          "meaning": "訪問者・来訪者",
           "isUnknown": false,
           "lemma": "visitor",
           "reading": "visitor",
@@ -1949,7 +1949,7 @@
         },
         {
           "word": "river",
-          "meaning": "(要確認)",
+          "meaning": "川",
           "isUnknown": false,
           "lemma": "river",
           "reading": "river",
@@ -2698,7 +2698,7 @@
         },
         {
           "word": "convenient",
-          "meaning": "(要確認)",
+          "meaning": "便利な・都合のよい",
           "isUnknown": false,
           "lemma": "convenient",
           "reading": "convenient",
@@ -4324,7 +4324,7 @@
       "segments": [
         {
           "word": "Garden",
-          "meaning": "(要確認)",
+          "meaning": "庭",
           "isUnknown": false,
           "lemma": "Garden",
           "reading": "Garden",
@@ -5440,7 +5440,7 @@
         },
         {
           "word": "awesome",
-          "meaning": "(要確認)",
+          "meaning": "すごい",
           "isUnknown": false,
           "lemma": "awesome",
           "reading": "awesome",
@@ -6961,7 +6961,7 @@
       "segments": [
         {
           "word": "Guest",
-          "meaning": "(要確認)",
+          "meaning": "客、ゲスト",
           "isUnknown": false,
           "lemma": "Guest",
           "reading": "Guest",
@@ -6972,7 +6972,7 @@
         },
         {
           "word": "speaker",
-          "meaning": "(要確認)",
+          "meaning": "話者・スピーカー",
           "isUnknown": false,
           "lemma": "speaker",
           "reading": "speaker",
@@ -7815,7 +7815,7 @@
         },
         {
           "word": "fantastic",
-          "meaning": "(要確認)",
+          "meaning": "素晴らしい",
           "isUnknown": false,
           "lemma": "fantastic",
           "reading": "fantastic",
@@ -11734,7 +11734,7 @@
         },
         {
           "word": "accommodate",
-          "meaning": "(要確認)",
+          "meaning": "収容する・適応させる",
           "isUnknown": false,
           "lemma": "accommodate",
           "reading": "accommodate",
@@ -12259,7 +12259,7 @@
         },
         {
           "word": "applicable",
-          "meaning": "(要確認)",
+          "meaning": "適用できる・当てはまる",
           "isUnknown": false,
           "lemma": "applicable",
           "reading": "applicable",
@@ -12879,7 +12879,7 @@
         },
         {
           "word": "unable",
-          "meaning": "(要確認)",
+          "meaning": "〜できない",
           "isUnknown": false,
           "lemma": "unable",
           "reading": "unable",
@@ -13424,7 +13424,7 @@
         },
         {
           "word": "Board",
-          "meaning": "(要確認)",
+          "meaning": "板・委員会",
           "isUnknown": false,
           "lemma": "Board",
           "reading": "Board",
@@ -15997,7 +15997,7 @@
         },
         {
           "word": "department",
-          "meaning": "(要確認)",
+          "meaning": "部門・学科",
           "isUnknown": false,
           "lemma": "department",
           "reading": "department",
@@ -16950,7 +16950,7 @@
         },
         {
           "word": "via",
-          "meaning": "(要確認)",
+          "meaning": "〜経由で",
           "isUnknown": false,
           "lemma": "via",
           "reading": "via",
@@ -16961,7 +16961,7 @@
         },
         {
           "word": "text",
-          "meaning": "(要確認)",
+          "meaning": "本文・テキスト",
           "isUnknown": false,
           "lemma": "text",
           "reading": "text",
@@ -17191,7 +17191,7 @@
       "segments": [
         {
           "word": "road",
-          "meaning": "(要確認)",
+          "meaning": "道路",
           "isUnknown": false,
           "lemma": "road",
           "reading": "road",
@@ -19683,7 +19683,7 @@
         },
         {
           "word": "attractive",
-          "meaning": "(要確認)",
+          "meaning": "魅力的な・魅力のある",
           "isUnknown": false,
           "lemma": "attractive",
           "reading": "attractive",
@@ -21100,7 +21100,7 @@
         },
         {
           "word": "advocate",
-          "meaning": "(要確認)",
+          "meaning": "主張する・提唱者",
           "isUnknown": false,
           "lemma": "advocate",
           "reading": "advocate",
@@ -22186,7 +22186,7 @@
         },
         {
           "word": "arrangement",
-          "meaning": "(要確認)",
+          "meaning": "配置・準備",
           "isUnknown": false,
           "lemma": "arrangement",
           "reading": "arrangement",
@@ -22241,7 +22241,7 @@
         },
         {
           "word": "earn",
-          "meaning": "(要確認)",
+          "meaning": "稼ぐ",
           "isUnknown": false,
           "lemma": "earn",
           "reading": "earn",
@@ -22889,7 +22889,7 @@
       "segments": [
         {
           "word": "Tax",
-          "meaning": "(要確認)",
+          "meaning": "税金",
           "isUnknown": false,
           "lemma": "Tax",
           "reading": "Tax",
@@ -25214,7 +25214,7 @@
         },
         {
           "word": "river",
-          "meaning": "(要確認)",
+          "meaning": "川",
           "isUnknown": false,
           "lemma": "river",
           "reading": "river",
@@ -25296,7 +25296,7 @@
         },
         {
           "word": "convenient",
-          "meaning": "(要確認)",
+          "meaning": "便利な・都合のよい",
           "isUnknown": false,
           "lemma": "convenient",
           "reading": "convenient",
@@ -25745,7 +25745,7 @@
         },
         {
           "word": "cooperative",
-          "meaning": "(要確認)",
+          "meaning": "協力的な・協同組合",
           "isUnknown": false,
           "lemma": "cooperative",
           "reading": "cooperative",
@@ -27742,7 +27742,7 @@
         },
         {
           "word": "cherish",
-          "meaning": "(要確認)",
+          "meaning": "大切にする・心に抱く",
           "isUnknown": false,
           "lemma": "cherish",
           "reading": "cherish",

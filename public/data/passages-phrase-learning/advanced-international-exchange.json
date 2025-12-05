@@ -2176,7 +2176,7 @@
         },
         {
           "word": "sport",
-          "meaning": "(要確認)",
+          "meaning": "スポーツ",
           "isUnknown": false,
           "lemma": "sport",
           "reading": "sport",
@@ -2826,7 +2826,7 @@
         },
         {
           "word": "ball",
-          "meaning": "(要確認)",
+          "meaning": "ボール",
           "isUnknown": false,
           "lemma": "ball",
           "reading": "ball",
@@ -3554,7 +3554,7 @@
         },
         {
           "word": "sport",
-          "meaning": "(要確認)",
+          "meaning": "スポーツ",
           "isUnknown": false,
           "lemma": "sport",
           "reading": "sport",
@@ -4728,7 +4728,7 @@
         },
         {
           "word": "baseball",
-          "meaning": "(要確認)",
+          "meaning": "野球",
           "isUnknown": false,
           "lemma": "baseball",
           "reading": "baseball",
@@ -5125,7 +5125,7 @@
         },
         {
           "word": "earn",
-          "meaning": "(要確認)",
+          "meaning": "稼ぐ",
           "isUnknown": false,
           "lemma": "earn",
           "reading": "earn",
@@ -5738,7 +5738,7 @@
         },
         {
           "word": "football",
-          "meaning": "(要確認)",
+          "meaning": "フットボール、サッカー",
           "isUnknown": false,
           "lemma": "football",
           "reading": "football",
@@ -5845,7 +5845,7 @@
         },
         {
           "word": "Bowl",
-          "meaning": "(要確認)",
+          "meaning": "ボウル・椀",
           "isUnknown": false,
           "lemma": "Bowl",
           "reading": "Bowl",
@@ -5941,7 +5941,7 @@
         },
         {
           "word": "baseball",
-          "meaning": "(要確認)",
+          "meaning": "野球",
           "isUnknown": false,
           "lemma": "baseball",
           "reading": "baseball",
@@ -6112,7 +6112,7 @@
         },
         {
           "word": "football",
-          "meaning": "(要確認)",
+          "meaning": "フットボール、サッカー",
           "isUnknown": false,
           "lemma": "football",
           "reading": "football",
@@ -6291,7 +6291,7 @@
         },
         {
           "word": "football",
-          "meaning": "(要確認)",
+          "meaning": "フットボール、サッカー",
           "isUnknown": false,
           "lemma": "football",
           "reading": "football",
@@ -6365,7 +6365,7 @@
         },
         {
           "word": "ball",
-          "meaning": "(要確認)",
+          "meaning": "ボール",
           "isUnknown": false,
           "lemma": "ball",
           "reading": "ball",
@@ -6613,7 +6613,7 @@
         },
         {
           "word": "rough",
-          "meaning": "(要確認)",
+          "meaning": "荒い・粗い",
           "isUnknown": false,
           "lemma": "rough",
           "reading": "rough",
@@ -7278,7 +7278,7 @@
         },
         {
           "word": "ski",
-          "meaning": "(要確認)",
+          "meaning": "スキー",
           "isUnknown": false,
           "lemma": "ski",
           "reading": "ski",
@@ -7341,7 +7341,7 @@
         },
         {
           "word": "ski",
-          "meaning": "(要確認)",
+          "meaning": "スキー",
           "isUnknown": false,
           "lemma": "ski",
           "reading": "ski",
@@ -8010,7 +8010,7 @@
         },
         {
           "word": "ski",
-          "meaning": "(要確認)",
+          "meaning": "スキー",
           "isUnknown": false,
           "lemma": "ski",
           "reading": "ski",
@@ -8251,7 +8251,7 @@
         },
         {
           "word": "skate",
-          "meaning": "(要確認)",
+          "meaning": "スケート",
           "isUnknown": false,
           "lemma": "skate",
           "reading": "skate",
@@ -9223,7 +9223,7 @@
         },
         {
           "word": "couple",
-          "meaning": "(要確認)",
+          "meaning": "夫婦",
           "isUnknown": false,
           "lemma": "couple",
           "reading": "couple",
@@ -9707,7 +9707,7 @@
         },
         {
           "word": "swim",
-          "meaning": "(要確認)",
+          "meaning": "泳ぐ",
           "isUnknown": false,
           "lemma": "swim",
           "reading": "swim",
@@ -10456,7 +10456,7 @@
         },
         {
           "word": "racket",
-          "meaning": "(要確認)",
+          "meaning": "ラケット",
           "isUnknown": false,
           "lemma": "racket",
           "reading": "racket",
@@ -12795,7 +12795,7 @@
         },
         {
           "word": "West",
-          "meaning": "(要確認)",
+          "meaning": "西",
           "isUnknown": false,
           "lemma": "West",
           "reading": "West",
@@ -14744,7 +14744,7 @@
         },
         {
           "word": "softball",
-          "meaning": "(要確認)",
+          "meaning": "ソフトボール",
           "isUnknown": false,
           "lemma": "softball",
           "reading": "softball",
@@ -14851,7 +14851,7 @@
         },
         {
           "word": "baseball",
-          "meaning": "(要確認)",
+          "meaning": "野球",
           "isUnknown": false,
           "lemma": "baseball",
           "reading": "baseball",
@@ -14928,7 +14928,7 @@
         },
         {
           "word": "ball",
-          "meaning": "(要確認)",
+          "meaning": "ボール",
           "isUnknown": false,
           "lemma": "ball",
           "reading": "ball",
@@ -15035,7 +15035,7 @@
         },
         {
           "word": "reply",
-          "meaning": "(要確認)",
+          "meaning": "返事する",
           "isUnknown": false,
           "lemma": "reply",
           "reading": "reply",
@@ -16032,7 +16032,7 @@
         },
         {
           "word": "player",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "player",
           "reading": "player",
@@ -17297,7 +17297,7 @@
         },
         {
           "word": "gold",
-          "meaning": "(要確認)",
+          "meaning": "金、金色",
           "isUnknown": false,
           "lemma": "gold",
           "reading": "gold",
@@ -17798,7 +17798,7 @@
         },
         {
           "word": "football",
-          "meaning": "(要確認)",
+          "meaning": "フットボール、サッカー",
           "isUnknown": false,
           "lemma": "football",
           "reading": "football",
@@ -17998,7 +17998,7 @@
         },
         {
           "word": "admire",
-          "meaning": "(要確認)",
+          "meaning": "称賛する",
           "isUnknown": false,
           "lemma": "admire",
           "reading": "admire",
@@ -18201,7 +18201,7 @@
         },
         {
           "word": "gold",
-          "meaning": "(要確認)",
+          "meaning": "金、金色",
           "isUnknown": false,
           "lemma": "gold",
           "reading": "gold",
@@ -19418,7 +19418,7 @@
         },
         {
           "word": "rugby",
-          "meaning": "(要確認)",
+          "meaning": "ラグビー",
           "isUnknown": false,
           "lemma": "rugby",
           "reading": "rugby",
@@ -19688,7 +19688,7 @@
         },
         {
           "word": "football",
-          "meaning": "(要確認)",
+          "meaning": "フットボール、サッカー",
           "isUnknown": false,
           "lemma": "football",
           "reading": "football",
@@ -19762,7 +19762,7 @@
         },
         {
           "word": "Rugby",
-          "meaning": "(要確認)",
+          "meaning": "ラグビー",
           "isUnknown": false,
           "lemma": "Rugby",
           "reading": "Rugby",
@@ -20344,7 +20344,7 @@
         },
         {
           "word": "sport",
-          "meaning": "(要確認)",
+          "meaning": "スポーツ",
           "isUnknown": false,
           "lemma": "sport",
           "reading": "sport",
@@ -21923,7 +21923,7 @@
         },
         {
           "word": "ok",
-          "meaning": "(要確認)",
+          "meaning": "オーケー、大丈夫",
           "isUnknown": false,
           "lemma": "ok",
           "reading": "ok",
@@ -25509,7 +25509,7 @@
         },
         {
           "word": "chime",
-          "meaning": "(要確認)",
+          "meaning": "鐘の音・調和する",
           "isUnknown": false,
           "lemma": "chime",
           "reading": "chime",
@@ -27098,7 +27098,7 @@
         },
         {
           "word": "anymore",
-          "meaning": "(要確認)",
+          "meaning": "もはや",
           "isUnknown": false,
           "lemma": "anymore",
           "reading": "anymore",
@@ -27422,7 +27422,7 @@
         },
         {
           "word": "chocolate",
-          "meaning": "(要確認)",
+          "meaning": "チョコレート",
           "isUnknown": false,
           "lemma": "chocolate",
           "reading": "chocolate",
@@ -28301,7 +28301,7 @@
         },
         {
           "word": "grandmother",
-          "meaning": "(要確認)",
+          "meaning": "祖母・おばあさん",
           "isUnknown": false,
           "lemma": "grandmother",
           "reading": "grandmother",
@@ -28737,7 +28737,7 @@
         },
         {
           "word": "choreography",
-          "meaning": "(要確認)",
+          "meaning": "振り付け・舞踊術",
           "isUnknown": false,
           "lemma": "choreography",
           "reading": "choreography",
@@ -30150,7 +30150,7 @@
         },
         {
           "word": "rock",
-          "meaning": "(要確認)",
+          "meaning": "岩・揺らす",
           "isUnknown": false,
           "lemma": "rock",
           "reading": "rock",
@@ -31904,7 +31904,7 @@
         },
         {
           "word": "curry",
-          "meaning": "(要確認)",
+          "meaning": "カレー",
           "isUnknown": false,
           "lemma": "curry",
           "reading": "curry",
@@ -32121,7 +32121,7 @@
         },
         {
           "word": "curry",
-          "meaning": "(要確認)",
+          "meaning": "カレー",
           "isUnknown": false,
           "lemma": "curry",
           "reading": "curry",
@@ -32217,7 +32217,7 @@
         },
         {
           "word": "grandmother",
-          "meaning": "(要確認)",
+          "meaning": "祖母・おばあさん",
           "isUnknown": false,
           "lemma": "grandmother",
           "reading": "grandmother",
@@ -32763,7 +32763,7 @@
         },
         {
           "word": "barbecue",
-          "meaning": "(要確認)",
+          "meaning": "バーベキュー",
           "isUnknown": false,
           "lemma": "barbecue",
           "reading": "barbecue",
@@ -32992,7 +32992,7 @@
         },
         {
           "word": "soul",
-          "meaning": "(要確認)",
+          "meaning": "魂",
           "isUnknown": false,
           "lemma": "soul",
           "reading": "soul",
@@ -33055,7 +33055,7 @@
         },
         {
           "word": "barbecue",
-          "meaning": "(要確認)",
+          "meaning": "バーベキュー",
           "isUnknown": false,
           "lemma": "barbecue",
           "reading": "barbecue",
@@ -33998,7 +33998,7 @@
         },
         {
           "word": "chicken",
-          "meaning": "(要確認)",
+          "meaning": "鶏・鶏肉",
           "isUnknown": false,
           "lemma": "chicken",
           "reading": "chicken",
@@ -34396,7 +34396,7 @@
         },
         {
           "word": "soup",
-          "meaning": "(要確認)",
+          "meaning": "スープ",
           "isUnknown": false,
           "lemma": "soup",
           "reading": "soup",
@@ -34613,7 +34613,7 @@
         },
         {
           "word": "sweet",
-          "meaning": "(要確認)",
+          "meaning": "甘い",
           "isUnknown": false,
           "lemma": "sweet",
           "reading": "sweet",
@@ -34635,7 +34635,7 @@
         },
         {
           "word": "sour",
-          "meaning": "(要確認)",
+          "meaning": "すっぱい",
           "isUnknown": false,
           "lemma": "sour",
           "reading": "sour",
@@ -35027,7 +35027,7 @@
         },
         {
           "word": "barbecue",
-          "meaning": "(要確認)",
+          "meaning": "バーベキュー",
           "isUnknown": false,
           "lemma": "barbecue",
           "reading": "barbecue",
@@ -35142,7 +35142,7 @@
         },
         {
           "word": "apple",
-          "meaning": "(要確認)",
+          "meaning": "りんご",
           "isUnknown": false,
           "lemma": "apple",
           "reading": "apple",
@@ -35153,7 +35153,7 @@
         },
         {
           "word": "pie",
-          "meaning": "(要確認)",
+          "meaning": "パイ",
           "isUnknown": false,
           "lemma": "pie",
           "reading": "pie",
@@ -38955,7 +38955,7 @@
         },
         {
           "word": "gesture",
-          "meaning": "(要確認)",
+          "meaning": "身振り、ジェスチャー",
           "isUnknown": false,
           "lemma": "gesture",
           "reading": "gesture",
@@ -45622,7 +45622,7 @@
         },
         {
           "word": "accept",
-          "meaning": "(要確認)",
+          "meaning": "受け入れる",
           "isUnknown": false,
           "lemma": "accept",
           "reading": "accept",
@@ -45722,7 +45722,7 @@
         },
         {
           "word": "rare",
-          "meaning": "(要確認)",
+          "meaning": "まれな",
           "isUnknown": false,
           "lemma": "rare",
           "reading": "rare",
@@ -56350,7 +56350,7 @@
         },
         {
           "word": "valid",
-          "meaning": "(要確認)",
+          "meaning": "有効な・妥当な",
           "isUnknown": false,
           "lemma": "valid",
           "reading": "valid",
@@ -57941,7 +57941,7 @@
         },
         {
           "word": "domestic",
-          "meaning": "(要確認)",
+          "meaning": "国内の・家庭の",
           "isUnknown": false,
           "lemma": "domestic",
           "reading": "domestic",
