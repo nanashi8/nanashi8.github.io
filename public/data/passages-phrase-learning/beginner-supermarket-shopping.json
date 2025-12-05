@@ -416,7 +416,7 @@
         },
         {
           "word": "list",
-          "meaning": "(要確認)",
+          "meaning": "リスト",
           "isUnknown": false,
           "lemma": "list",
           "reading": "list",
@@ -457,7 +457,7 @@
         },
         {
           "word": "leave",
-          "meaning": "(要確認)",
+          "meaning": "去る・残す",
           "isUnknown": false,
           "lemma": "leave",
           "reading": "leave",
@@ -728,7 +728,7 @@
         },
         {
           "word": "cart",
-          "meaning": "(要確認)",
+          "meaning": "カート",
           "isUnknown": false,
           "lemma": "cart",
           "reading": "cart",
@@ -1028,7 +1028,7 @@
         },
         {
           "word": "aisles",
-          "meaning": "(要確認)",
+          "meaning": "通路",
           "isUnknown": false,
           "lemma": "aisles",
           "reading": "aisles",
@@ -1901,7 +1901,7 @@
         },
         {
           "word": "apples",
-          "meaning": "(要確認)",
+          "meaning": "リンゴ",
           "isUnknown": false,
           "lemma": "apples",
           "reading": "apples",
@@ -2030,7 +2030,7 @@
         },
         {
           "word": "pumpkins",
-          "meaning": "(要確認)",
+          "meaning": "カボチャ",
           "isUnknown": false,
           "lemma": "pumpkins",
           "reading": "pumpkins",
@@ -2636,7 +2636,7 @@
         },
         {
           "word": "butcher",
-          "meaning": "(要確認)",
+          "meaning": "肉屋",
           "isUnknown": false,
           "lemma": "butcher",
           "reading": "butcher",
@@ -2883,7 +2883,7 @@
         },
         {
           "word": "butcher",
-          "meaning": "(要確認)",
+          "meaning": "肉屋",
           "isUnknown": false,
           "lemma": "butcher",
           "reading": "butcher",
@@ -3009,7 +3009,7 @@
         },
         {
           "word": "butcher",
-          "meaning": "(要確認)",
+          "meaning": "肉屋",
           "isUnknown": false,
           "lemma": "butcher",
           "reading": "butcher",
@@ -3838,7 +3838,7 @@
         },
         {
           "word": "bakery",
-          "meaning": "(要確認)",
+          "meaning": "ベーカリー",
           "isUnknown": false,
           "lemma": "bakery",
           "reading": "bakery",
@@ -5178,7 +5178,7 @@
         },
         {
           "word": "butter",
-          "meaning": "(要確認)",
+          "meaning": "バター",
           "isUnknown": false,
           "lemma": "butter",
           "reading": "butter",
@@ -5700,7 +5700,7 @@
         },
         {
           "word": "cream",
-          "meaning": "(要確認)",
+          "meaning": "クリーム",
           "isUnknown": false,
           "lemma": "cream",
           "reading": "cream",
@@ -5911,7 +5911,7 @@
         },
         {
           "word": "eggs",
-          "meaning": "(要確認)",
+          "meaning": "卵",
           "isUnknown": false,
           "lemma": "eggs",
           "reading": "eggs",
@@ -5996,7 +5996,7 @@
         },
         {
           "word": "butter",
-          "meaning": "(要確認)",
+          "meaning": "バター",
           "isUnknown": false,
           "lemma": "butter",
           "reading": "butter",
@@ -6111,7 +6111,7 @@
         },
         {
           "word": "aisles",
-          "meaning": "(要確認)",
+          "meaning": "通路",
           "isUnknown": false,
           "lemma": "aisles",
           "reading": "aisles",
@@ -7005,7 +7005,7 @@
         },
         {
           "word": "butter",
-          "meaning": "(要確認)",
+          "meaning": "バター",
           "isUnknown": false,
           "lemma": "butter",
           "reading": "butter",
@@ -7249,7 +7249,7 @@
         },
         {
           "word": "juice",
-          "meaning": "(要確認)",
+          "meaning": "ジュース",
           "isUnknown": false,
           "lemma": "juice",
           "reading": "juice",
@@ -7271,7 +7271,7 @@
         },
         {
           "word": "tea",
-          "meaning": "(要確認)",
+          "meaning": "キャリア",
           "isUnknown": false,
           "lemma": "tea",
           "reading": "tea",
@@ -7430,7 +7430,7 @@
         },
         {
           "word": "juice",
-          "meaning": "(要確認)",
+          "meaning": "ジュース",
           "isUnknown": false,
           "lemma": "juice",
           "reading": "juice",
@@ -8344,7 +8344,7 @@
         },
         {
           "word": "cream",
-          "meaning": "(要確認)",
+          "meaning": "クリーム",
           "isUnknown": false,
           "lemma": "cream",
           "reading": "cream",
@@ -8614,7 +8614,7 @@
         },
         {
           "word": "cream",
-          "meaning": "(要確認)",
+          "meaning": "クリーム",
           "isUnknown": false,
           "lemma": "cream",
           "reading": "cream",
@@ -8935,7 +8935,7 @@
         },
         {
           "word": "cream",
-          "meaning": "(要確認)",
+          "meaning": "クリーム",
           "isUnknown": false,
           "lemma": "cream",
           "reading": "cream",
@@ -9107,7 +9107,7 @@
         },
         {
           "word": "checkout",
-          "meaning": "(要確認)",
+          "meaning": "レジ",
           "isUnknown": false,
           "lemma": "checkout",
           "reading": "checkout",
@@ -9458,7 +9458,7 @@
         },
         {
           "word": "treat",
-          "meaning": "(要確認)",
+          "meaning": "扱う・治療する",
           "isUnknown": false,
           "lemma": "treat",
           "reading": "treat",
@@ -9868,7 +9868,7 @@
         },
         {
           "word": "checkout",
-          "meaning": "(要確認)",
+          "meaning": "レジ",
           "isUnknown": false,
           "lemma": "checkout",
           "reading": "checkout",
@@ -10082,7 +10082,7 @@
         },
         {
           "word": "card",
-          "meaning": "(要確認)",
+          "meaning": "カード",
           "isUnknown": false,
           "lemma": "card",
           "reading": "card",
@@ -10230,7 +10230,7 @@
         },
         {
           "word": "bought",
-          "meaning": "(要確認)",
+          "meaning": "買った",
           "isUnknown": false,
           "lemma": "bought",
           "reading": "bought",
@@ -10370,7 +10370,7 @@
         },
         {
           "word": "line",
-          "meaning": "(要確認)",
+          "meaning": "列・線",
           "isUnknown": false,
           "lemma": "line",
           "reading": "line",
@@ -10403,7 +10403,7 @@
         },
         {
           "word": "checkout",
-          "meaning": "(要確認)",
+          "meaning": "レジ",
           "isUnknown": false,
           "lemma": "checkout",
           "reading": "checkout",
@@ -10629,7 +10629,7 @@
         },
         {
           "word": "dinner",
-          "meaning": "(要確認)",
+          "meaning": "夕食",
           "isUnknown": false,
           "lemma": "dinner",
           "reading": "dinner",
@@ -10758,7 +10758,7 @@
         },
         {
           "word": "bought",
-          "meaning": "(要確認)",
+          "meaning": "買った",
           "isUnknown": false,
           "lemma": "bought",
           "reading": "bought",
@@ -10862,7 +10862,7 @@
         },
         {
           "word": "cart",
-          "meaning": "(要確認)",
+          "meaning": "カート",
           "isUnknown": false,
           "lemma": "cart",
           "reading": "cart",
@@ -11320,7 +11320,7 @@
         },
         {
           "word": "eggs",
-          "meaning": "(要確認)",
+          "meaning": "卵",
           "isUnknown": false,
           "lemma": "eggs",
           "reading": "eggs",
@@ -12692,7 +12692,7 @@
         },
         {
           "word": "complicated",
-          "meaning": "(要確認)",
+          "meaning": "複雑な",
           "isUnknown": false,
           "lemma": "complicated",
           "reading": "complicated",
@@ -13440,7 +13440,7 @@
         },
         {
           "word": "amount",
-          "meaning": "(要確認)",
+          "meaning": "金額",
           "isUnknown": false,
           "lemma": "amount",
           "reading": "amount",
@@ -13902,7 +13902,7 @@
         },
         {
           "word": "uniforms",
-          "meaning": "(要確認)",
+          "meaning": "ユニフォーム",
           "isUnknown": false,
           "lemma": "uniforms",
           "reading": "uniforms",
@@ -14087,7 +14087,7 @@
         },
         {
           "word": "bakery",
-          "meaning": "(要確認)",
+          "meaning": "ベーカリー",
           "isUnknown": false,
           "lemma": "bakery",
           "reading": "bakery",
@@ -15866,7 +15866,7 @@
         },
         {
           "word": "list",
-          "meaning": "(要確認)",
+          "meaning": "リスト",
           "isUnknown": false,
           "lemma": "list",
           "reading": "list",
@@ -16827,7 +16827,7 @@
         },
         {
           "word": "aisles",
-          "meaning": "(要確認)",
+          "meaning": "通路",
           "isUnknown": false,
           "lemma": "aisles",
           "reading": "aisles",
@@ -17115,7 +17115,7 @@
         },
         {
           "word": "trip",
-          "meaning": "(要確認)",
+          "meaning": "旅行",
           "isUnknown": false,
           "lemma": "trip",
           "reading": "trip",
@@ -17360,7 +17360,7 @@
         },
         {
           "word": "strawberries",
-          "meaning": "(要確認)",
+          "meaning": "イチゴ",
           "isUnknown": false,
           "lemma": "strawberries",
           "reading": "strawberries",
@@ -17382,7 +17382,7 @@
         },
         {
           "word": "asparagus",
-          "meaning": "(要確認)",
+          "meaning": "イチゴ",
           "isUnknown": false,
           "lemma": "asparagus",
           "reading": "asparagus",
@@ -17593,7 +17593,7 @@
         },
         {
           "word": "squash",
-          "meaning": "(要確認)",
+          "meaning": "カボチャ",
           "isUnknown": false,
           "lemma": "squash",
           "reading": "squash",
@@ -17615,7 +17615,7 @@
         },
         {
           "word": "pumpkins",
-          "meaning": "(要確認)",
+          "meaning": "カボチャ",
           "isUnknown": false,
           "lemma": "pumpkins",
           "reading": "pumpkins",
@@ -17648,7 +17648,7 @@
         },
         {
           "word": "apples",
-          "meaning": "(要確認)",
+          "meaning": "リンゴ",
           "isUnknown": false,
           "lemma": "apples",
           "reading": "apples",
@@ -18399,7 +18399,7 @@
         },
         {
           "word": "ripeness",
-          "meaning": "(要確認)",
+          "meaning": "なぜならそれ",
           "isUnknown": false,
           "lemma": "ripeness",
           "reading": "ripeness",
@@ -18783,7 +18783,7 @@
       "segments": [
         {
           "word": "juice",
-          "meaning": "(要確認)",
+          "meaning": "ジュース",
           "isUnknown": false,
           "lemma": "juice",
           "reading": "juice",
@@ -19322,7 +19322,7 @@
         },
         {
           "word": "amount",
-          "meaning": "(要確認)",
+          "meaning": "金額",
           "isUnknown": false,
           "lemma": "amount",
           "reading": "amount",
@@ -20142,7 +20142,7 @@
         },
         {
           "word": "accumulate",
-          "meaning": "(要確認)",
+          "meaning": "蓄積する",
           "isUnknown": false,
           "lemma": "accumulate",
           "reading": "accumulate",
@@ -20505,7 +20505,7 @@
         },
         {
           "word": "additional",
-          "meaning": "(要確認)",
+          "meaning": "追加の",
           "isUnknown": false,
           "lemma": "additional",
           "reading": "additional",
@@ -20898,7 +20898,7 @@
         },
         {
           "word": "substantial",
-          "meaning": "(要確認)",
+          "meaning": "実質的な・かなりの",
           "isUnknown": false,
           "lemma": "substantial",
           "reading": "substantial",
@@ -20909,7 +20909,7 @@
         },
         {
           "word": "amount",
-          "meaning": "(要確認)",
+          "meaning": "金額",
           "isUnknown": false,
           "lemma": "amount",
           "reading": "amount",
@@ -21622,7 +21622,7 @@
         },
         {
           "word": "casual",
-          "meaning": "(要確認)",
+          "meaning": "カジュアル",
           "isUnknown": false,
           "lemma": "casual",
           "reading": "casual",
@@ -21792,7 +21792,7 @@
         },
         {
           "word": "teenage",
-          "meaning": "(要確認)",
+          "meaning": "10代の",
           "isUnknown": false,
           "lemma": "teenage",
           "reading": "teenage",
@@ -22006,7 +22006,7 @@
         },
         {
           "word": "bakery",
-          "meaning": "(要確認)",
+          "meaning": "ベーカリー",
           "isUnknown": false,
           "lemma": "bakery",
           "reading": "bakery",
@@ -23757,7 +23757,7 @@
       "segments": [
         {
           "word": "decision",
-          "meaning": "(要確認)",
+          "meaning": "決定",
           "isUnknown": false,
           "lemma": "decision",
           "reading": "decision",

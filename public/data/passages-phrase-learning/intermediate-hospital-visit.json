@@ -367,7 +367,7 @@
         },
         {
           "word": "leg",
-          "meaning": "(要確認)",
+          "meaning": "ベッド",
           "isUnknown": false,
           "lemma": "leg",
           "reading": "leg",
@@ -1647,7 +1647,7 @@
         },
         {
           "word": "entrance",
-          "meaning": "(要確認)",
+          "meaning": "入口",
           "isUnknown": false,
           "lemma": "entrance",
           "reading": "entrance",
@@ -2852,7 +2852,7 @@
         },
         {
           "word": "held",
-          "meaning": "(要確認)",
+          "meaning": "開催した・持った",
           "isUnknown": false,
           "lemma": "held",
           "reading": "held",
@@ -4835,7 +4835,7 @@
         },
         {
           "word": "leg",
-          "meaning": "(要確認)",
+          "meaning": "ベッド",
           "isUnknown": false,
           "lemma": "leg",
           "reading": "leg",
@@ -5726,7 +5726,7 @@
         },
         {
           "word": "examine",
-          "meaning": "(要確認)",
+          "meaning": "調べる",
           "isUnknown": false,
           "lemma": "examine",
           "reading": "examine",
@@ -7612,7 +7612,7 @@
         },
         {
           "word": "oxygen",
-          "meaning": "(要確認)",
+          "meaning": "酸素",
           "isUnknown": false,
           "lemma": "oxygen",
           "reading": "oxygen",
@@ -7697,7 +7697,7 @@
         },
         {
           "word": "line",
-          "meaning": "(要確認)",
+          "meaning": "列・線",
           "isUnknown": false,
           "lemma": "line",
           "reading": "line",
@@ -10008,7 +10008,7 @@
         },
         {
           "word": "tonight",
-          "meaning": "(要確認)",
+          "meaning": "今夜",
           "isUnknown": false,
           "lemma": "tonight",
           "reading": "tonight",
@@ -10074,7 +10074,7 @@
         },
         {
           "word": "gently",
-          "meaning": "(要確認)",
+          "meaning": "優しく・穏やかに",
           "isUnknown": false,
           "lemma": "gently",
           "reading": "gently",
@@ -11613,7 +11613,7 @@
         },
         {
           "word": "won't",
-          "meaning": "(要確認)",
+          "meaning": "しないだろう",
           "isUnknown": false,
           "lemma": "won't",
           "reading": "won't",
@@ -12719,7 +12719,7 @@
         },
         {
           "word": "six",
-          "meaning": "(要確認)",
+          "meaning": "ケア",
           "isUnknown": false,
           "lemma": "six",
           "reading": "six",
@@ -13474,7 +13474,7 @@
         },
         {
           "word": "television",
-          "meaning": "(要確認)",
+          "meaning": "テレビ",
           "isUnknown": false,
           "lemma": "television",
           "reading": "television",
@@ -13570,7 +13570,7 @@
         },
         {
           "word": "coffee",
-          "meaning": "(要確認)",
+          "meaning": "コーヒー",
           "isUnknown": false,
           "lemma": "coffee",
           "reading": "coffee",
@@ -13809,7 +13809,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -15137,7 +15137,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -15348,7 +15348,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -15400,7 +15400,7 @@
         },
         {
           "word": "wore",
-          "meaning": "(要確認)",
+          "meaning": "着ていた",
           "isUnknown": false,
           "lemma": "wore",
           "reading": "wore",
@@ -16047,7 +16047,7 @@
         },
         {
           "word": "oxygen",
-          "meaning": "(要確認)",
+          "meaning": "酸素",
           "isUnknown": false,
           "lemma": "oxygen",
           "reading": "oxygen",
@@ -16209,7 +16209,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -17610,7 +17610,7 @@
         },
         {
           "word": "leg",
-          "meaning": "(要確認)",
+          "meaning": "ベッド",
           "isUnknown": false,
           "lemma": "leg",
           "reading": "leg",
@@ -20509,7 +20509,7 @@
         },
         {
           "word": "born",
-          "meaning": "(要確認)",
+          "meaning": "生まれた",
           "isUnknown": false,
           "lemma": "born",
           "reading": "born",
@@ -21690,7 +21690,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -22424,7 +22424,7 @@
         },
         {
           "word": "leg",
-          "meaning": "(要確認)",
+          "meaning": "ベッド",
           "isUnknown": false,
           "lemma": "leg",
           "reading": "leg",
@@ -23990,7 +23990,7 @@
         },
         {
           "word": "gained",
-          "meaning": "(要確認)",
+          "meaning": "得た",
           "isUnknown": false,
           "lemma": "gained",
           "reading": "gained",
@@ -26332,7 +26332,7 @@
         },
         {
           "word": "coverage",
-          "meaning": "(要確認)",
+          "meaning": "報道・範囲",
           "isUnknown": false,
           "lemma": "coverage",
           "reading": "coverage",
@@ -26705,7 +26705,7 @@
         },
         {
           "word": "coverage",
-          "meaning": "(要確認)",
+          "meaning": "報道・範囲",
           "isUnknown": false,
           "lemma": "coverage",
           "reading": "coverage",
@@ -27710,7 +27710,7 @@
         },
         {
           "word": "coverage",
-          "meaning": "(要確認)",
+          "meaning": "報道・範囲",
           "isUnknown": false,
           "lemma": "coverage",
           "reading": "coverage",
@@ -27962,7 +27962,7 @@
         },
         {
           "word": "policy",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policy",
           "reading": "policy",
@@ -29825,7 +29825,7 @@
         },
         {
           "word": "court",
-          "meaning": "(要確認)",
+          "meaning": "コート・裁判所",
           "isUnknown": false,
           "lemma": "court",
           "reading": "court",
@@ -32788,7 +32788,7 @@
         },
         {
           "word": "movement",
-          "meaning": "(要確認)",
+          "meaning": "動き・運動",
           "isUnknown": false,
           "lemma": "movement",
           "reading": "movement",
@@ -33021,7 +33021,7 @@
         },
         {
           "word": "discouraged",
-          "meaning": "(要確認)",
+          "meaning": "エマ",
           "isUnknown": false,
           "lemma": "discouraged",
           "reading": "discouraged",
@@ -33195,7 +33195,7 @@
         },
         {
           "word": "six",
-          "meaning": "(要確認)",
+          "meaning": "ケア",
           "isUnknown": false,
           "lemma": "six",
           "reading": "six",
@@ -33476,7 +33476,7 @@
         },
         {
           "word": "leg",
-          "meaning": "(要確認)",
+          "meaning": "ベッド",
           "isUnknown": false,
           "lemma": "leg",
           "reading": "leg",
@@ -33769,7 +33769,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -34819,7 +34819,7 @@
         },
         {
           "word": "importance",
-          "meaning": "(要確認)",
+          "meaning": "重要性",
           "isUnknown": false,
           "lemma": "importance",
           "reading": "importance",
@@ -35071,7 +35071,7 @@
         },
         {
           "word": "coverage",
-          "meaning": "(要確認)",
+          "meaning": "報道・範囲",
           "isUnknown": false,
           "lemma": "coverage",
           "reading": "coverage",
@@ -35112,7 +35112,7 @@
         },
         {
           "word": "gained",
-          "meaning": "(要確認)",
+          "meaning": "得た",
           "isUnknown": false,
           "lemma": "gained",
           "reading": "gained",
@@ -36164,7 +36164,7 @@
         },
         {
           "word": "importance",
-          "meaning": "(要確認)",
+          "meaning": "重要性",
           "isUnknown": false,
           "lemma": "importance",
           "reading": "importance",
@@ -36260,7 +36260,7 @@
         },
         {
           "word": "recovery",
-          "meaning": "(要確認)",
+          "meaning": "スタッフ",
           "isUnknown": false,
           "lemma": "recovery",
           "reading": "recovery",
@@ -36947,7 +36947,7 @@
         },
         {
           "word": "card",
-          "meaning": "(要確認)",
+          "meaning": "カード",
           "isUnknown": false,
           "lemma": "card",
           "reading": "card",
@@ -37084,7 +37084,7 @@
         },
         {
           "word": "met",
-          "meaning": "(要確認)",
+          "meaning": "会った",
           "isUnknown": false,
           "lemma": "met",
           "reading": "met",
@@ -37380,7 +37380,7 @@
         },
         {
           "word": "recover",
-          "meaning": "(要確認)",
+          "meaning": "回復する",
           "isUnknown": false,
           "lemma": "recover",
           "reading": "recover",
@@ -37668,7 +37668,7 @@
         },
         {
           "word": "leave",
-          "meaning": "(要確認)",
+          "meaning": "去る・残す",
           "isUnknown": false,
           "lemma": "leave",
           "reading": "leave",
@@ -39147,7 +39147,7 @@
         },
         {
           "word": "importance",
-          "meaning": "(要確認)",
+          "meaning": "重要性",
           "isUnknown": false,
           "lemma": "importance",
           "reading": "importance",
@@ -39448,7 +39448,7 @@
         },
         {
           "word": "precious",
-          "meaning": "(要確認)",
+          "meaning": "貴重な",
           "isUnknown": false,
           "lemma": "precious",
           "reading": "precious",
