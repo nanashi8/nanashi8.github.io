@@ -46,7 +46,7 @@
         },
         {
           "word": "tourist",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "tourist",
           "reading": "tourist",
@@ -87,7 +87,7 @@
         },
         {
           "word": "resident",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "resident",
           "reading": "resident",
@@ -299,7 +299,7 @@
       "segments": [
         {
           "word": "upcoming",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "upcoming",
           "reading": "upcoming",
@@ -362,7 +362,7 @@
         },
         {
           "word": "attractions",
-          "meaning": "(未登録)",
+          "meaning": "観光スポットについて",
           "isUnknown": false,
           "lemma": "attractions",
           "reading": "attractions",
@@ -495,7 +495,7 @@
         },
         {
           "word": "spirit",
-          "meaning": "(未登録)",
+          "meaning": "小さい",
           "isUnknown": false,
           "lemma": "spirit",
           "reading": "spirit",
@@ -525,7 +525,7 @@
       "segments": [
         {
           "word": "Located",
-          "meaning": "(未登録)",
+          "meaning": "メイン",
           "isUnknown": false,
           "lemma": "Located",
           "reading": "Located",
@@ -547,7 +547,7 @@
         },
         {
           "word": "100",
-          "meaning": "(未登録)",
+          "meaning": "数字の100",
           "isUnknown": false,
           "lemma": "100",
           "reading": "100",
@@ -569,7 +569,7 @@
         },
         {
           "word": "Street",
-          "meaning": "(未登録)",
+          "meaning": "信号",
           "isUnknown": false,
           "lemma": "Street",
           "reading": "Street",
@@ -632,7 +632,7 @@
         },
         {
           "word": "weekdays",
-          "meaning": "(未登録)",
+          "meaning": "平日",
           "isUnknown": false,
           "lemma": "weekdays",
           "reading": "weekdays",
@@ -654,7 +654,7 @@
         },
         {
           "word": "9",
-          "meaning": "(未登録)",
+          "meaning": "数字の9",
           "isUnknown": false,
           "lemma": "9",
           "reading": "9",
@@ -728,7 +728,7 @@
         },
         {
           "word": "6",
-          "meaning": "(未登録)",
+          "meaning": "数字の6",
           "isUnknown": false,
           "lemma": "6",
           "reading": "6",
@@ -739,7 +739,7 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -794,7 +794,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -805,7 +805,7 @@
         },
         {
           "word": "10",
-          "meaning": "(未登録)",
+          "meaning": "数字の10",
           "isUnknown": false,
           "lemma": "10",
           "reading": "10",
@@ -879,7 +879,7 @@
         },
         {
           "word": "4",
-          "meaning": "(未登録)",
+          "meaning": "数字の4",
           "isUnknown": false,
           "lemma": "4",
           "reading": "4",
@@ -890,7 +890,7 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -953,7 +953,7 @@
         },
         {
           "word": "knowledgeable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "knowledgeable",
           "reading": "knowledgeable",
@@ -1016,7 +1016,7 @@
       "segments": [
         {
           "word": "Manager",
-          "meaning": "(未登録)",
+          "meaning": "コアラ",
           "isUnknown": false,
           "lemma": "Manager",
           "reading": "Manager",
@@ -1057,7 +1057,7 @@
       "segments": [
         {
           "word": "Rodriguez",
-          "meaning": "(未登録)",
+          "meaning": "ロドリゲス",
           "isUnknown": false,
           "lemma": "Rodriguez",
           "reading": "Rodriguez",
@@ -1167,7 +1167,7 @@
         },
         {
           "word": "Spanish",
-          "meaning": "(未登録)",
+          "meaning": "ジェイク",
           "isUnknown": false,
           "lemma": "Spanish",
           "reading": "Spanish",
@@ -1230,7 +1230,7 @@
         },
         {
           "word": "Korean",
-          "meaning": "(未登録)",
+          "meaning": "中国語",
           "isUnknown": false,
           "lemma": "Korean",
           "reading": "Korean",
@@ -1271,7 +1271,7 @@
         },
         {
           "word": "certainly",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "certainly",
           "reading": "certainly",
@@ -1430,7 +1430,7 @@
         },
         {
           "word": "visitor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "visitor",
           "reading": "visitor",
@@ -1550,7 +1550,7 @@
       "segments": [
         {
           "word": "Rodriguez",
-          "meaning": "(未登録)",
+          "meaning": "ロドリゲス",
           "isUnknown": false,
           "lemma": "Rodriguez",
           "reading": "Rodriguez",
@@ -1713,7 +1713,7 @@
         },
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -1754,7 +1754,7 @@
         },
         {
           "word": "genuinely",
-          "meaning": "(未登録)",
+          "meaning": "日本",
           "isUnknown": false,
           "lemma": "genuinely",
           "reading": "genuinely",
@@ -1883,7 +1883,7 @@
         },
         {
           "word": "premier",
-          "meaning": "(未登録)",
+          "meaning": "最高級の",
           "isUnknown": false,
           "lemma": "premier",
           "reading": "premier",
@@ -1916,7 +1916,7 @@
         },
         {
           "word": "luxury",
-          "meaning": "(未登録)",
+          "meaning": "豪華な",
           "isUnknown": false,
           "lemma": "luxury",
           "reading": "luxury",
@@ -1949,7 +1949,7 @@
         },
         {
           "word": "river",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "river",
           "reading": "river",
@@ -1990,7 +1990,7 @@
       "segments": [
         {
           "word": "Recently",
-          "meaning": "(未登録)",
+          "meaning": "最近",
           "isUnknown": false,
           "lemma": "Recently",
           "reading": "Recently",
@@ -2001,7 +2001,7 @@
         },
         {
           "word": "renovated",
-          "meaning": "(未登録)",
+          "meaning": "改装された",
           "isUnknown": false,
           "lemma": "renovated",
           "reading": "renovated",
@@ -2034,7 +2034,7 @@
         },
         {
           "word": "amenities",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "amenities",
           "reading": "amenities",
@@ -2086,7 +2086,7 @@
         },
         {
           "word": "fitness",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fitness",
           "reading": "fitness",
@@ -2168,7 +2168,7 @@
         },
         {
           "word": "site",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "site",
           "reading": "site",
@@ -2198,7 +2198,7 @@
       "segments": [
         {
           "word": "Reservation",
-          "meaning": "(未登録)",
+          "meaning": "予約",
           "isUnknown": false,
           "lemma": "Reservation",
           "reading": "Reservation",
@@ -2209,7 +2209,7 @@
         },
         {
           "word": "strongly",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "strongly",
           "reading": "strongly",
@@ -2220,7 +2220,7 @@
         },
         {
           "word": "recommended",
-          "meaning": "(未登録)",
+          "meaning": "週末と祝日は",
           "isUnknown": false,
           "lemma": "recommended",
           "reading": "recommended",
@@ -2242,7 +2242,7 @@
         },
         {
           "word": "peak",
-          "meaning": "(未登録)",
+          "meaning": "長距離輸送のため",
           "isUnknown": false,
           "lemma": "peak",
           "reading": "peak",
@@ -2305,7 +2305,7 @@
         },
         {
           "word": "555",
-          "meaning": "(未登録)",
+          "meaning": "数字の555",
           "isUnknown": false,
           "lemma": "555",
           "reading": "555",
@@ -2316,7 +2316,7 @@
         },
         {
           "word": "0188",
-          "meaning": "(未登録)",
+          "meaning": "数字の0188",
           "isUnknown": false,
           "lemma": "0188",
           "reading": "0188",
@@ -2394,7 +2394,7 @@
         },
         {
           "word": "travelers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "travelers",
           "reading": "travelers",
@@ -2479,7 +2479,7 @@
         },
         {
           "word": "reasonable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "reasonable",
           "reading": "reasonable",
@@ -2520,7 +2520,7 @@
       "segments": [
         {
           "word": "Continental",
-          "meaning": "(未登録)",
+          "meaning": "コンチネンタル",
           "isUnknown": false,
           "lemma": "Continental",
           "reading": "Continental",
@@ -2546,7 +2546,7 @@
         },
         {
           "word": "included",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "included",
           "reading": "included",
@@ -2620,7 +2620,7 @@
         },
         {
           "word": "attractions",
-          "meaning": "(未登録)",
+          "meaning": "観光スポットについて",
           "isUnknown": false,
           "lemma": "attractions",
           "reading": "attractions",
@@ -2650,7 +2650,7 @@
       "segments": [
         {
           "word": "Ideal",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Ideal",
           "reading": "Ideal",
@@ -2687,7 +2687,7 @@
         },
         {
           "word": "wanting",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "wanting",
           "reading": "wanting",
@@ -2698,7 +2698,7 @@
         },
         {
           "word": "convenient",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "convenient",
           "reading": "convenient",
@@ -2709,7 +2709,7 @@
         },
         {
           "word": "location",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "location",
           "reading": "location",
@@ -2739,7 +2739,7 @@
         },
         {
           "word": "luxury",
-          "meaning": "(未登録)",
+          "meaning": "豪華な",
           "isUnknown": false,
           "lemma": "luxury",
           "reading": "luxury",
@@ -2843,7 +2843,7 @@
         },
         {
           "word": "owned",
-          "meaning": "(未登録)",
+          "meaning": "届ける",
           "isUnknown": false,
           "lemma": "owned",
           "reading": "owned",
@@ -2854,7 +2854,7 @@
         },
         {
           "word": "properties",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "properties",
           "reading": "properties",
@@ -2909,7 +2909,7 @@
         },
         {
           "word": "homemade",
-          "meaning": "(未登録)",
+          "meaning": "説明し",
           "isUnknown": false,
           "lemma": "homemade",
           "reading": "homemade",
@@ -2972,7 +2972,7 @@
         },
         {
           "word": "hosts",
-          "meaning": "(未登録)",
+          "meaning": "ホスト",
           "isUnknown": false,
           "lemma": "hosts",
           "reading": "hosts",
@@ -2991,7 +2991,7 @@
       "segments": [
         {
           "word": "who",
-          "meaning": "誰",
+          "meaning": "(関係代名詞)その人は",
           "isUnknown": false,
           "lemma": "who",
           "reading": "フ́ー",
@@ -3013,7 +3013,7 @@
         },
         {
           "word": "insider",
-          "meaning": "(未登録)",
+          "meaning": "知識",
           "isUnknown": false,
           "lemma": "insider",
           "reading": "insider",
@@ -3054,7 +3054,7 @@
         },
         {
           "word": "hidden",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hidden",
           "reading": "hidden",
@@ -3065,7 +3065,7 @@
         },
         {
           "word": "gems",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "gems",
           "reading": "gems",
@@ -3228,7 +3228,7 @@
         },
         {
           "word": "Thompson",
-          "meaning": "(未登録)",
+          "meaning": "教育的",
           "isUnknown": false,
           "lemma": "Thompson",
           "reading": "Thompson",
@@ -3239,7 +3239,7 @@
         },
         {
           "word": "Associates",
-          "meaning": "(未登録)",
+          "meaning": "トンプソン",
           "isUnknown": false,
           "lemma": "Associates",
           "reading": "Associates",
@@ -3261,7 +3261,7 @@
         },
         {
           "word": "lawyers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "lawyers",
           "reading": "lawyers",
@@ -3272,7 +3272,7 @@
         },
         {
           "word": "handling",
-          "meaning": "(未登録)",
+          "meaning": "演出について",
           "isUnknown": false,
           "lemma": "handling",
           "reading": "handling",
@@ -3324,7 +3324,7 @@
       "segments": [
         {
           "word": "Accounting",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Accounting",
           "reading": "Accounting",
@@ -3346,7 +3346,7 @@
         },
         {
           "word": "Plus",
-          "meaning": "(未登録)",
+          "meaning": "海辺",
           "isUnknown": false,
           "lemma": "Plus",
           "reading": "Plus",
@@ -3607,7 +3607,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -3629,7 +3629,7 @@
         },
         {
           "word": "Clinic",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Clinic",
           "reading": "Clinic",
@@ -3692,7 +3692,7 @@
         },
         {
           "word": "weekdays",
-          "meaning": "(未登録)",
+          "meaning": "平日",
           "isUnknown": false,
           "lemma": "weekdays",
           "reading": "weekdays",
@@ -3703,7 +3703,7 @@
         },
         {
           "word": "plus",
-          "meaning": "(未登録)",
+          "meaning": "海辺",
           "isUnknown": false,
           "lemma": "plus",
           "reading": "plus",
@@ -3725,7 +3725,7 @@
         },
         {
           "word": "mornings",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mornings",
           "reading": "mornings",
@@ -3807,7 +3807,7 @@
       "segments": [
         {
           "word": "Kim",
-          "meaning": "(未登録)",
+          "meaning": "近況",
           "isUnknown": false,
           "lemma": "Kim",
           "reading": "Kim",
@@ -3829,7 +3829,7 @@
         },
         {
           "word": "comprehensive",
-          "meaning": "(未登録)",
+          "meaning": "秀吉",
           "isUnknown": false,
           "lemma": "comprehensive",
           "reading": "comprehensive",
@@ -3952,7 +3952,7 @@
       "segments": [
         {
           "word": "drivers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drivers",
           "reading": "drivers",
@@ -4007,7 +4007,7 @@
         },
         {
           "word": "route",
-          "meaning": "(未登録)",
+          "meaning": "情報",
           "isUnknown": false,
           "lemma": "route",
           "reading": "route",
@@ -4037,7 +4037,7 @@
       "segments": [
         {
           "word": "Taxi",
-          "meaning": "(未登録)",
+          "meaning": "人間の仕事",
           "isUnknown": false,
           "lemma": "Taxi",
           "reading": "Taxi",
@@ -4125,7 +4125,7 @@
         },
         {
           "word": "hotels",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hotels",
           "reading": "hotels",
@@ -4261,7 +4261,7 @@
         },
         {
           "word": "plumbing",
-          "meaning": "(未登録)",
+          "meaning": "配管",
           "isUnknown": false,
           "lemma": "plumbing",
           "reading": "plumbing",
@@ -4283,7 +4283,7 @@
         },
         {
           "word": "electrical",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "electrical",
           "reading": "electrical",
@@ -4305,7 +4305,7 @@
         },
         {
           "word": "carpentry",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "carpentry",
           "reading": "carpentry",
@@ -4324,7 +4324,7 @@
       "segments": [
         {
           "word": "Garden",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Garden",
           "reading": "Garden",
@@ -4335,7 +4335,7 @@
         },
         {
           "word": "Masters",
-          "meaning": "(未登録)",
+          "meaning": "ガーデン",
           "isUnknown": false,
           "lemma": "Masters",
           "reading": "Masters",
@@ -4346,7 +4346,7 @@
         },
         {
           "word": "Landscaping",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Landscaping",
           "reading": "Landscaping",
@@ -4368,7 +4368,7 @@
         },
         {
           "word": "lawn",
-          "meaning": "(未登録)",
+          "meaning": "手入れ",
           "isUnknown": false,
           "lemma": "lawn",
           "reading": "lawn",
@@ -4420,7 +4420,7 @@
         },
         {
           "word": "trained",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "trained",
           "reading": "trained",
@@ -4472,7 +4472,7 @@
         },
         {
           "word": "annual",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "annual",
           "reading": "annual",
@@ -4590,7 +4590,7 @@
         },
         {
           "word": "singers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "singers",
           "reading": "singers",
@@ -4631,7 +4631,7 @@
         },
         {
           "word": "vendors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "vendors",
           "reading": "vendors",
@@ -4661,7 +4661,7 @@
       "segments": [
         {
           "word": "craft",
-          "meaning": "(未登録)",
+          "meaning": "クラフト",
           "isUnknown": false,
           "lemma": "craft",
           "reading": "craft",
@@ -4672,7 +4672,7 @@
         },
         {
           "word": "booths",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "booths",
           "reading": "booths",
@@ -4765,7 +4765,7 @@
         },
         {
           "word": "performer",
-          "meaning": "(未登録)",
+          "meaning": "ラインナップに",
           "isUnknown": false,
           "lemma": "performer",
           "reading": "performer",
@@ -4776,7 +4776,7 @@
         },
         {
           "word": "lineup",
-          "meaning": "(未登録)",
+          "meaning": "含まれる",
           "isUnknown": false,
           "lemma": "lineup",
           "reading": "lineup",
@@ -4809,7 +4809,7 @@
         },
         {
           "word": "bands",
-          "meaning": "(未登録)",
+          "meaning": "ソロ",
           "isUnknown": false,
           "lemma": "bands",
           "reading": "bands",
@@ -4831,7 +4831,7 @@
         },
         {
           "word": "solo",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "solo",
           "reading": "solo",
@@ -4872,7 +4872,7 @@
       "segments": [
         {
           "word": "Firework",
-          "meaning": "(未登録)",
+          "meaning": "ディスプレイ",
           "isUnknown": false,
           "lemma": "Firework",
           "reading": "Firework",
@@ -4916,7 +4916,7 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -4968,7 +4968,7 @@
       "segments": [
         {
           "word": "Admission",
-          "meaning": "(未登録)",
+          "meaning": "薬",
           "isUnknown": false,
           "lemma": "Admission",
           "reading": "Admission",
@@ -5042,7 +5042,7 @@
         },
         {
           "word": "craft",
-          "meaning": "(未登録)",
+          "meaning": "クラフト",
           "isUnknown": false,
           "lemma": "craft",
           "reading": "craft",
@@ -5053,7 +5053,7 @@
         },
         {
           "word": "purchases",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "purchases",
           "reading": "purchases",
@@ -5086,7 +5086,7 @@
         },
         {
           "word": "vendors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "vendors",
           "reading": "vendors",
@@ -5160,7 +5160,7 @@
         },
         {
           "word": "everybody",
-          "meaning": "(未登録)",
+          "meaning": "一緒に",
           "isUnknown": false,
           "lemma": "everybody",
           "reading": "everybody",
@@ -5226,7 +5226,7 @@
         },
         {
           "word": "Coordinator",
-          "meaning": "(未登録)",
+          "meaning": "ボランティア",
           "isUnknown": false,
           "lemma": "Coordinator",
           "reading": "Coordinator",
@@ -5237,7 +5237,7 @@
         },
         {
           "word": "James",
-          "meaning": "(未登録)",
+          "meaning": "ジェームズ",
           "isUnknown": false,
           "lemma": "James",
           "reading": "James",
@@ -5344,7 +5344,7 @@
         },
         {
           "word": "enjoying",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "enjoying",
           "reading": "enjoying",
@@ -5407,7 +5407,7 @@
         },
         {
           "word": "spirit",
-          "meaning": "(未登録)",
+          "meaning": "小さい",
           "isUnknown": false,
           "lemma": "spirit",
           "reading": "spirit",
@@ -5440,7 +5440,7 @@
         },
         {
           "word": "awesome",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "awesome",
           "reading": "awesome",
@@ -5481,7 +5481,7 @@
       "segments": [
         {
           "word": "Registration",
-          "meaning": "(未登録)",
+          "meaning": "事前登録",
           "isUnknown": false,
           "lemma": "Registration",
           "reading": "Registration",
@@ -5602,7 +5602,7 @@
         },
         {
           "word": "8",
-          "meaning": "(未登録)",
+          "meaning": "数字の8",
           "isUnknown": false,
           "lemma": "8",
           "reading": "8",
@@ -5859,7 +5859,7 @@
       "segments": [
         {
           "word": "Winners",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Winners",
           "reading": "Winners",
@@ -5885,7 +5885,7 @@
         },
         {
           "word": "medals",
-          "meaning": "(未登録)",
+          "meaning": "メダル",
           "isUnknown": false,
           "lemma": "medals",
           "reading": "medals",
@@ -5948,7 +5948,7 @@
         },
         {
           "word": "fee",
-          "meaning": "(未登録)",
+          "meaning": "費",
           "isUnknown": false,
           "lemma": "fee",
           "reading": "fee",
@@ -5970,7 +5970,7 @@
         },
         {
           "word": "20",
-          "meaning": "(未登録)",
+          "meaning": "数字の20",
           "isUnknown": false,
           "lemma": "20",
           "reading": "20",
@@ -5992,7 +5992,7 @@
         },
         {
           "word": "kids",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "kids",
           "reading": "kids",
@@ -6014,7 +6014,7 @@
         },
         {
           "word": "12",
-          "meaning": "(未登録)",
+          "meaning": "数字の12",
           "isUnknown": false,
           "lemma": "12",
           "reading": "12",
@@ -6066,7 +6066,7 @@
       "segments": [
         {
           "word": "Register",
-          "meaning": "(未登録)",
+          "meaning": "オンライン",
           "isUnknown": false,
           "lemma": "Register",
           "reading": "Register",
@@ -6151,7 +6151,7 @@
       "segments": [
         {
           "word": "Proceeds",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Proceeds",
           "reading": "Proceeds",
@@ -6206,7 +6206,7 @@
         },
         {
           "word": "County",
-          "meaning": "(未登録)",
+          "meaning": "収益",
           "isUnknown": false,
           "lemma": "County",
           "reading": "County",
@@ -6280,7 +6280,7 @@
         },
         {
           "word": "raised",
-          "meaning": "(未登録)",
+          "meaning": "恋しくなるよ!",
           "isUnknown": false,
           "lemma": "raised",
           "reading": "raised",
@@ -6291,7 +6291,7 @@
         },
         {
           "word": "15",
-          "meaning": "(未登録)",
+          "meaning": "数字の15",
           "isUnknown": false,
           "lemma": "15",
           "reading": "15",
@@ -6313,7 +6313,7 @@
         },
         {
           "word": "000",
-          "meaning": "(未登録)",
+          "meaning": "数字の000",
           "isUnknown": false,
           "lemma": "000",
           "reading": "000",
@@ -6343,7 +6343,7 @@
       "segments": [
         {
           "word": "Participants",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Participants",
           "reading": "Participants",
@@ -6369,7 +6369,7 @@
         },
         {
           "word": "T",
-          "meaning": "(未登録)",
+          "meaning": "信頼",
           "isUnknown": false,
           "lemma": "T",
           "reading": "T",
@@ -6424,7 +6424,7 @@
         },
         {
           "word": "refreshments",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "refreshments",
           "reading": "refreshments",
@@ -6476,7 +6476,7 @@
         },
         {
           "word": "featuring",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "featuring",
           "reading": "featuring",
@@ -6487,7 +6487,7 @@
         },
         {
           "word": "handmade",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "handmade",
           "reading": "handmade",
@@ -6520,7 +6520,7 @@
         },
         {
           "word": "decorations",
-          "meaning": "(未登録)",
+          "meaning": "1年",
           "isUnknown": false,
           "lemma": "decorations",
           "reading": "decorations",
@@ -6687,7 +6687,7 @@
         },
         {
           "word": "craftspeople",
-          "meaning": "(未登録)",
+          "meaning": "職人",
           "isUnknown": false,
           "lemma": "craftspeople",
           "reading": "craftspeople",
@@ -6846,7 +6846,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -6868,7 +6868,7 @@
         },
         {
           "word": "daytime",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "daytime",
           "reading": "daytime",
@@ -6879,7 +6879,7 @@
         },
         {
           "word": "crowds",
-          "meaning": "(未登録)",
+          "meaning": "なし",
           "isUnknown": false,
           "lemma": "crowds",
           "reading": "crowds",
@@ -6909,7 +6909,7 @@
       "segments": [
         {
           "word": "Guided",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Guided",
           "reading": "Guided",
@@ -6920,7 +6920,7 @@
         },
         {
           "word": "tours",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "tours",
           "reading": "tours",
@@ -6961,7 +6961,7 @@
       "segments": [
         {
           "word": "Guest",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Guest",
           "reading": "Guest",
@@ -6972,7 +6972,7 @@
         },
         {
           "word": "speaker",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "speaker",
           "reading": "speaker",
@@ -7013,7 +7013,7 @@
       "segments": [
         {
           "word": "Harrison",
-          "meaning": "(未登録)",
+          "meaning": "ハリソン",
           "isUnknown": false,
           "lemma": "Harrison",
           "reading": "Harrison",
@@ -7024,7 +7024,7 @@
         },
         {
           "word": "discusses",
-          "meaning": "(未登録)",
+          "meaning": "議論する",
           "isUnknown": false,
           "lemma": "discusses",
           "reading": "discusses",
@@ -7076,7 +7076,7 @@
       "segments": [
         {
           "word": "Ticket",
-          "meaning": "(未登録)",
+          "meaning": "絶滅危惧種を保護し",
           "isUnknown": false,
           "lemma": "Ticket",
           "reading": "Ticket",
@@ -7098,7 +7098,7 @@
         },
         {
           "word": "8",
-          "meaning": "(未登録)",
+          "meaning": "数字の8",
           "isUnknown": false,
           "lemma": "8",
           "reading": "8",
@@ -7131,7 +7131,7 @@
         },
         {
           "word": "5",
-          "meaning": "(未登録)",
+          "meaning": "数字の5",
           "isUnknown": false,
           "lemma": "5",
           "reading": "5",
@@ -7183,7 +7183,7 @@
         },
         {
           "word": "reservation",
-          "meaning": "(未登録)",
+          "meaning": "予約",
           "isUnknown": false,
           "lemma": "reservation",
           "reading": "reservation",
@@ -7194,7 +7194,7 @@
         },
         {
           "word": "recommended",
-          "meaning": "(未登録)",
+          "meaning": "週末と祝日は",
           "isUnknown": false,
           "lemma": "recommended",
           "reading": "recommended",
@@ -7327,7 +7327,7 @@
         },
         {
           "word": "chef",
-          "meaning": "(未登録)",
+          "meaning": "プロ",
           "isUnknown": false,
           "lemma": "chef",
           "reading": "chef",
@@ -7338,7 +7338,7 @@
         },
         {
           "word": "formerly",
-          "meaning": "(未登録)",
+          "meaning": "東京からの",
           "isUnknown": false,
           "lemma": "formerly",
           "reading": "formerly",
@@ -7360,7 +7360,7 @@
         },
         {
           "word": "Tokyo",
-          "meaning": "(未登録)",
+          "meaning": "価値",
           "isUnknown": false,
           "lemma": "Tokyo",
           "reading": "Tokyo",
@@ -7390,7 +7390,7 @@
       "segments": [
         {
           "word": "Specialties",
-          "meaning": "(未登録)",
+          "meaning": "ラーメン",
           "isUnknown": false,
           "lemma": "Specialties",
           "reading": "Specialties",
@@ -7412,7 +7412,7 @@
         },
         {
           "word": "sushi",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sushi",
           "reading": "sushi",
@@ -7434,7 +7434,7 @@
         },
         {
           "word": "ramen",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "ramen",
           "reading": "ramen",
@@ -7508,7 +7508,7 @@
       "segments": [
         {
           "word": "Dinner",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Dinner",
           "reading": "Dinner",
@@ -7519,7 +7519,7 @@
         },
         {
           "word": "reservations",
-          "meaning": "(未登録)",
+          "meaning": "予約",
           "isUnknown": false,
           "lemma": "reservations",
           "reading": "reservations",
@@ -7552,7 +7552,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -7697,7 +7697,7 @@
         },
         {
           "word": "owner",
-          "meaning": "(未登録)",
+          "meaning": "克服",
           "isUnknown": false,
           "lemma": "owner",
           "reading": "owner",
@@ -7719,7 +7719,7 @@
         },
         {
           "word": "chef",
-          "meaning": "(未登録)",
+          "meaning": "プロ",
           "isUnknown": false,
           "lemma": "chef",
           "reading": "chef",
@@ -7730,7 +7730,7 @@
         },
         {
           "word": "Tanaka",
-          "meaning": "(未登録)",
+          "meaning": "決めなければ",
           "isUnknown": false,
           "lemma": "Tanaka",
           "reading": "Tanaka",
@@ -7782,7 +7782,7 @@
         },
         {
           "word": "response",
-          "meaning": "(未登録)",
+          "meaning": "反応・返答",
           "isUnknown": false,
           "lemma": "response",
           "reading": "response",
@@ -7815,7 +7815,7 @@
         },
         {
           "word": "fantastic",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fantastic",
           "reading": "fantastic",
@@ -8029,7 +8029,7 @@
         },
         {
           "word": "setup",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "setup",
           "reading": "setup",
@@ -8171,7 +8171,7 @@
         },
         {
           "word": "issue",
-          "meaning": "(未登録)",
+          "meaning": "問題・課題",
           "isUnknown": false,
           "lemma": "issue",
           "reading": "issue",
@@ -8223,7 +8223,7 @@
       "segments": [
         {
           "word": "Manager",
-          "meaning": "(未登録)",
+          "meaning": "コアラ",
           "isUnknown": false,
           "lemma": "Manager",
           "reading": "Manager",
@@ -8234,7 +8234,7 @@
         },
         {
           "word": "Peterson",
-          "meaning": "(未登録)",
+          "meaning": "マネージャー",
           "isUnknown": false,
           "lemma": "Peterson",
           "reading": "Peterson",
@@ -8352,7 +8352,7 @@
         },
         {
           "word": "jargon",
-          "meaning": "(未登録)",
+          "meaning": "なし",
           "isUnknown": false,
           "lemma": "jargon",
           "reading": "jargon",
@@ -8474,7 +8474,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -8515,7 +8515,7 @@
         },
         {
           "word": "treat",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "treat",
           "reading": "treat",
@@ -8526,7 +8526,7 @@
         },
         {
           "word": "everybody",
-          "meaning": "(未登録)",
+          "meaning": "一緒に",
           "isUnknown": false,
           "lemma": "everybody",
           "reading": "everybody",
@@ -8633,7 +8633,7 @@
         },
         {
           "word": "collection",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "collection",
           "reading": "collection",
@@ -8756,7 +8756,7 @@
       "segments": [
         {
           "word": "children's",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "children's",
           "reading": "children's",
@@ -8819,7 +8819,7 @@
         },
         {
           "word": "Monday",
-          "meaning": "(未登録)",
+          "meaning": "週間",
           "isUnknown": false,
           "lemma": "Monday",
           "reading": "Monday",
@@ -8841,7 +8841,7 @@
         },
         {
           "word": "9",
-          "meaning": "(未登録)",
+          "meaning": "数字の9",
           "isUnknown": false,
           "lemma": "9",
           "reading": "9",
@@ -8896,7 +8896,7 @@
         },
         {
           "word": "8",
-          "meaning": "(未登録)",
+          "meaning": "数字の8",
           "isUnknown": false,
           "lemma": "8",
           "reading": "8",
@@ -8907,7 +8907,7 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -8981,7 +8981,7 @@
         },
         {
           "word": "1",
-          "meaning": "(未登録)",
+          "meaning": "数字の1",
           "isUnknown": false,
           "lemma": "1",
           "reading": "1",
@@ -8992,7 +8992,7 @@
         },
         {
           "word": "5",
-          "meaning": "(未登録)",
+          "meaning": "数字の5",
           "isUnknown": false,
           "lemma": "5",
           "reading": "5",
@@ -9003,7 +9003,7 @@
         },
         {
           "word": "p",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -9066,7 +9066,7 @@
         },
         {
           "word": "card",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "card",
           "reading": "card",
@@ -9239,7 +9239,7 @@
         },
         {
           "word": "60",
-          "meaning": "(未登録)",
+          "meaning": "数字の60",
           "isUnknown": false,
           "lemma": "60",
           "reading": "60",
@@ -9507,7 +9507,7 @@
         },
         {
           "word": "leagues",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "leagues",
           "reading": "leagues",
@@ -9529,7 +9529,7 @@
         },
         {
           "word": "tutoring",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "tutoring",
           "reading": "tutoring",
@@ -9749,7 +9749,7 @@
         },
         {
           "word": "listings",
-          "meaning": "(未登録)",
+          "meaning": "リスト",
           "isUnknown": false,
           "lemma": "listings",
           "reading": "listings",
@@ -9914,7 +9914,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -10168,7 +10168,7 @@
         },
         {
           "word": "notices",
-          "meaning": "(未登録)",
+          "meaning": "通知",
           "isUnknown": false,
           "lemma": "notices",
           "reading": "notices",
@@ -10223,7 +10223,7 @@
         },
         {
           "word": "12",
-          "meaning": "(未登録)",
+          "meaning": "数字の12",
           "isUnknown": false,
           "lemma": "12",
           "reading": "12",
@@ -10234,7 +10234,7 @@
         },
         {
           "word": "Oak",
-          "meaning": "(未登録)",
+          "meaning": "信号",
           "isUnknown": false,
           "lemma": "Oak",
           "reading": "Oak",
@@ -10245,7 +10245,7 @@
         },
         {
           "word": "Street",
-          "meaning": "(未登録)",
+          "meaning": "信号",
           "isUnknown": false,
           "lemma": "Street",
           "reading": "Street",
@@ -10300,7 +10300,7 @@
         },
         {
           "word": "www",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "www",
           "reading": "www",
@@ -10322,7 +10322,7 @@
         },
         {
           "word": "riversidetown",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "riversidetown",
           "reading": "riversidetown",
@@ -10344,7 +10344,7 @@
         },
         {
           "word": "org",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "org",
           "reading": "org",
@@ -10385,7 +10385,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -10448,7 +10448,7 @@
         },
         {
           "word": "participate",
-          "meaning": "(未登録)",
+          "meaning": "スポーツへ",
           "isUnknown": false,
           "lemma": "participate",
           "reading": "participate",
@@ -10744,7 +10744,7 @@
       "segments": [
         {
           "word": "Everybody",
-          "meaning": "(未登録)",
+          "meaning": "一緒に",
           "isUnknown": false,
           "lemma": "Everybody",
           "reading": "Everybody",
@@ -10829,7 +10829,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -10851,7 +10851,7 @@
         },
         {
           "word": "College",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "College",
           "reading": "College",
@@ -10947,7 +10947,7 @@
         },
         {
           "word": "acquire",
-          "meaning": "(未登録)",
+          "meaning": "新しい",
           "isUnknown": false,
           "lemma": "acquire",
           "reading": "acquire",
@@ -11173,7 +11173,7 @@
       "segments": [
         {
           "word": "Enrollment",
-          "meaning": "(未登録)",
+          "meaning": "アクセス",
           "isUnknown": false,
           "lemma": "Enrollment",
           "reading": "Enrollment",
@@ -11258,7 +11258,7 @@
         },
         {
           "word": "prior",
-          "meaning": "(未登録)",
+          "meaning": "レベル",
           "isUnknown": false,
           "lemma": "prior",
           "reading": "prior",
@@ -11384,7 +11384,7 @@
       "segments": [
         {
           "word": "accounting",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "accounting",
           "reading": "accounting",
@@ -11395,7 +11395,7 @@
         },
         {
           "word": "basics",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "basics",
           "reading": "basics",
@@ -11575,7 +11575,7 @@
       "segments": [
         {
           "word": "Tuition",
-          "meaning": "(未登録)",
+          "meaning": "授業料",
           "isUnknown": false,
           "lemma": "Tuition",
           "reading": "Tuition",
@@ -11682,7 +11682,7 @@
         },
         {
           "word": "donations",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "donations",
           "reading": "donations",
@@ -11734,7 +11734,7 @@
         },
         {
           "word": "accommodate",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "accommodate",
           "reading": "accommodate",
@@ -11857,7 +11857,7 @@
         },
         {
           "word": "college",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "college",
           "reading": "college",
@@ -11868,7 +11868,7 @@
         },
         {
           "word": "employs",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "employs",
           "reading": "employs",
@@ -11879,7 +11879,7 @@
         },
         {
           "word": "adjunct",
-          "meaning": "(未登録)",
+          "meaning": "講師",
           "isUnknown": false,
           "lemma": "adjunct",
           "reading": "adjunct",
@@ -11890,7 +11890,7 @@
         },
         {
           "word": "instructors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "instructors",
           "reading": "instructors",
@@ -11909,7 +11909,7 @@
       "segments": [
         {
           "word": "who",
-          "meaning": "誰",
+          "meaning": "(関係代名詞)その人は",
           "isUnknown": false,
           "lemma": "who",
           "reading": "フ́ー",
@@ -12010,7 +12010,7 @@
         },
         {
           "word": "chef",
-          "meaning": "(未登録)",
+          "meaning": "プロ",
           "isUnknown": false,
           "lemma": "chef",
           "reading": "chef",
@@ -12032,7 +12032,7 @@
         },
         {
           "word": "culinary",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "culinary",
           "reading": "culinary",
@@ -12084,7 +12084,7 @@
         },
         {
           "word": "retired",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "retired",
           "reading": "retired",
@@ -12095,7 +12095,7 @@
         },
         {
           "word": "accountant",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "accountant",
           "reading": "accountant",
@@ -12117,7 +12117,7 @@
         },
         {
           "word": "bookkeeping",
-          "meaning": "(未登録)",
+          "meaning": "クラス",
           "isUnknown": false,
           "lemma": "bookkeeping",
           "reading": "bookkeeping",
@@ -12259,7 +12259,7 @@
         },
         {
           "word": "applicable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "applicable",
           "reading": "applicable",
@@ -12314,7 +12314,7 @@
         },
         {
           "word": "theoretical",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "theoretical",
           "reading": "theoretical",
@@ -12432,7 +12432,7 @@
         },
         {
           "word": "abundant",
-          "meaning": "(未登録)",
+          "meaning": "私にとって",
           "isUnknown": false,
           "lemma": "abundant",
           "reading": "abundant",
@@ -12528,7 +12528,7 @@
         },
         {
           "word": "Senior",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Senior",
           "reading": "Senior",
@@ -12657,7 +12657,7 @@
         },
         {
           "word": "crafts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "crafts",
           "reading": "crafts",
@@ -12698,7 +12698,7 @@
       "segments": [
         {
           "word": "card",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "card",
           "reading": "card",
@@ -12824,7 +12824,7 @@
         },
         {
           "word": "appointments",
-          "meaning": "(未登録)",
+          "meaning": "利用可能である",
           "isUnknown": false,
           "lemma": "appointments",
           "reading": "appointments",
@@ -12879,7 +12879,7 @@
         },
         {
           "word": "unable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "unable",
           "reading": "unable",
@@ -12961,7 +12961,7 @@
         },
         {
           "word": "Wheels",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Wheels",
           "reading": "Wheels",
@@ -12972,7 +12972,7 @@
         },
         {
           "word": "delivers",
-          "meaning": "(未登録)",
+          "meaning": "配達する",
           "isUnknown": false,
           "lemma": "delivers",
           "reading": "delivers",
@@ -12994,7 +12994,7 @@
         },
         {
           "word": "lunches",
-          "meaning": "(未登録)",
+          "meaning": "ランチ",
           "isUnknown": false,
           "lemma": "lunches",
           "reading": "lunches",
@@ -13024,7 +13024,7 @@
         },
         {
           "word": "homebound",
-          "meaning": "(未登録)",
+          "meaning": "縛られた",
           "isUnknown": false,
           "lemma": "homebound",
           "reading": "homebound",
@@ -13035,7 +13035,7 @@
         },
         {
           "word": "seniors",
-          "meaning": "(未登録)",
+          "meaning": "高齢者",
           "isUnknown": false,
           "lemma": "seniors",
           "reading": "seniors",
@@ -13128,7 +13128,7 @@
         },
         {
           "word": "companionship",
-          "meaning": "(未登録)",
+          "meaning": "支援",
           "isUnknown": false,
           "lemma": "companionship",
           "reading": "companionship",
@@ -13172,7 +13172,7 @@
         },
         {
           "word": "minor",
-          "meaning": "(未登録)",
+          "meaning": "自由に―よく",
           "isUnknown": false,
           "lemma": "minor",
           "reading": "minor",
@@ -13183,7 +13183,7 @@
         },
         {
           "word": "household",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "household",
           "reading": "household",
@@ -13246,7 +13246,7 @@
         },
         {
           "word": "alleviates",
-          "meaning": "(未登録)",
+          "meaning": "孤独",
           "isUnknown": false,
           "lemma": "alleviates",
           "reading": "alleviates",
@@ -13257,7 +13257,7 @@
         },
         {
           "word": "loneliness",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "loneliness",
           "reading": "loneliness",
@@ -13287,7 +13287,7 @@
         },
         {
           "word": "enabling",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "enabling",
           "reading": "enabling",
@@ -13298,7 +13298,7 @@
         },
         {
           "word": "seniors",
-          "meaning": "(未登録)",
+          "meaning": "高齢者",
           "isUnknown": false,
           "lemma": "seniors",
           "reading": "seniors",
@@ -13402,7 +13402,7 @@
         },
         {
           "word": "Senior",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Senior",
           "reading": "Senior",
@@ -13424,7 +13424,7 @@
         },
         {
           "word": "Board",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Board",
           "reading": "Board",
@@ -13520,7 +13520,7 @@
         },
         {
           "word": "lobby",
-          "meaning": "(未登録)",
+          "meaning": "忙しかったです",
           "isUnknown": false,
           "lemma": "lobby",
           "reading": "lobby",
@@ -13690,7 +13690,7 @@
         },
         {
           "word": "options",
-          "meaning": "(未登録)",
+          "meaning": "医療",
           "isUnknown": false,
           "lemma": "options",
           "reading": "options",
@@ -13753,7 +13753,7 @@
         },
         {
           "word": "yielded",
-          "meaning": "(未登録)",
+          "meaning": "大幅な",
           "isUnknown": false,
           "lemma": "yielded",
           "reading": "yielded",
@@ -13838,7 +13838,7 @@
       "segments": [
         {
           "word": "Investing",
-          "meaning": "(未登録)",
+          "meaning": "コミュニティ",
           "isUnknown": false,
           "lemma": "Investing",
           "reading": "Investing",
@@ -13909,7 +13909,7 @@
         },
         {
           "word": "community's",
-          "meaning": "(未登録)",
+          "meaning": "将来の",
           "isUnknown": false,
           "lemma": "community's",
           "reading": "community's",
@@ -13931,7 +13931,7 @@
         },
         {
           "word": "prosperity",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "prosperity",
           "reading": "prosperity",
@@ -13961,7 +13961,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -13972,7 +13972,7 @@
         },
         {
           "word": "operates",
-          "meaning": "(未登録)",
+          "meaning": "運営する",
           "isUnknown": false,
           "lemma": "operates",
           "reading": "operates",
@@ -14005,7 +14005,7 @@
         },
         {
           "word": "nurturing",
-          "meaning": "(未登録)",
+          "meaning": "育む",
           "isUnknown": false,
           "lemma": "nurturing",
           "reading": "nurturing",
@@ -14112,7 +14112,7 @@
         },
         {
           "word": "engaged",
-          "meaning": "(未登録)",
+          "meaning": "スピーカー",
           "isUnknown": false,
           "lemma": "engaged",
           "reading": "engaged",
@@ -14123,7 +14123,7 @@
         },
         {
           "word": "productively",
-          "meaning": "(未登録)",
+          "meaning": "怠惰ではなく",
           "isUnknown": false,
           "lemma": "productively",
           "reading": "productively",
@@ -14156,7 +14156,7 @@
         },
         {
           "word": "idle",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "idle",
           "reading": "idle",
@@ -14401,7 +14401,7 @@
         },
         {
           "word": "Academy",
-          "meaning": "(未登録)",
+          "meaning": "ユース",
           "isUnknown": false,
           "lemma": "Academy",
           "reading": "Academy",
@@ -14456,7 +14456,7 @@
         },
         {
           "word": "participation",
-          "meaning": "(未登録)",
+          "meaning": "サービスにおいて",
           "isUnknown": false,
           "lemma": "participation",
           "reading": "participation",
@@ -14519,7 +14519,7 @@
       "segments": [
         {
           "word": "Participants",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Participants",
           "reading": "Participants",
@@ -14689,7 +14689,7 @@
         },
         {
           "word": "decision",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "decision",
           "reading": "decision",
@@ -14741,7 +14741,7 @@
         },
         {
           "word": "undertake",
-          "meaning": "(未登録)",
+          "meaning": "実施する",
           "isUnknown": false,
           "lemma": "undertake",
           "reading": "undertake",
@@ -14837,7 +14837,7 @@
         },
         {
           "word": "alumni",
-          "meaning": "(未登録)",
+          "meaning": "卒業生",
           "isUnknown": false,
           "lemma": "alumni",
           "reading": "alumni",
@@ -14926,7 +14926,7 @@
       "segments": [
         {
           "word": "inspired",
-          "meaning": "(未登録)",
+          "meaning": "刺激を受けた・鼓舞された",
           "isUnknown": false,
           "lemma": "inspired",
           "reading": "inspired",
@@ -14959,7 +14959,7 @@
         },
         {
           "word": "formative",
-          "meaning": "(未登録)",
+          "meaning": "経験",
           "isUnknown": false,
           "lemma": "formative",
           "reading": "formative",
@@ -15011,7 +15011,7 @@
         },
         {
           "word": "camps",
-          "meaning": "(未登録)",
+          "meaning": "キャンプ",
           "isUnknown": false,
           "lemma": "camps",
           "reading": "camps",
@@ -15033,7 +15033,7 @@
         },
         {
           "word": "supervised",
-          "meaning": "(未登録)",
+          "meaning": "監視された",
           "isUnknown": false,
           "lemma": "supervised",
           "reading": "supervised",
@@ -15172,7 +15172,7 @@
       "segments": [
         {
           "word": "Camps",
-          "meaning": "(未登録)",
+          "meaning": "キャンプ",
           "isUnknown": false,
           "lemma": "Camps",
           "reading": "Camps",
@@ -15216,7 +15216,7 @@
         },
         {
           "word": "themes",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "themes",
           "reading": "themes",
@@ -15268,7 +15268,7 @@
       "segments": [
         {
           "word": "outdoor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "outdoor",
           "reading": "outdoor",
@@ -15406,7 +15406,7 @@
       "segments": [
         {
           "word": "Scholarships",
-          "meaning": "(未登録)",
+          "meaning": "奨学金",
           "isUnknown": false,
           "lemma": "Scholarships",
           "reading": "Scholarships",
@@ -15436,7 +15436,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -15480,7 +15480,7 @@
         },
         {
           "word": "participate",
-          "meaning": "(未登録)",
+          "meaning": "スポーツへ",
           "isUnknown": false,
           "lemma": "participate",
           "reading": "participate",
@@ -15598,7 +15598,7 @@
         },
         {
           "word": "departments",
-          "meaning": "(未登録)",
+          "meaning": "間",
           "isUnknown": false,
           "lemma": "departments",
           "reading": "departments",
@@ -15726,7 +15726,7 @@
         },
         {
           "word": "response",
-          "meaning": "(未登録)",
+          "meaning": "反応・返答",
           "isUnknown": false,
           "lemma": "response",
           "reading": "response",
@@ -15756,7 +15756,7 @@
       "segments": [
         {
           "word": "Officers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Officers",
           "reading": "Officers",
@@ -15767,7 +15767,7 @@
         },
         {
           "word": "patrol",
-          "meaning": "(未登録)",
+          "meaning": "パトロールする",
           "isUnknown": false,
           "lemma": "patrol",
           "reading": "patrol",
@@ -15778,7 +15778,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -15890,7 +15890,7 @@
         },
         {
           "word": "policing",
-          "meaning": "(未登録)",
+          "meaning": "警察の",
           "isUnknown": false,
           "lemma": "policing",
           "reading": "policing",
@@ -15997,7 +15997,7 @@
         },
         {
           "word": "department",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "department",
           "reading": "department",
@@ -16052,7 +16052,7 @@
         },
         {
           "word": "inspections",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "inspections",
           "reading": "inspections",
@@ -16082,7 +16082,7 @@
       "segments": [
         {
           "word": "identifying",
-          "meaning": "(未登録)",
+          "meaning": "特定して",
           "isUnknown": false,
           "lemma": "identifying",
           "reading": "identifying",
@@ -16104,7 +16104,7 @@
         },
         {
           "word": "hazards",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hazards",
           "reading": "hazards",
@@ -16126,7 +16126,7 @@
         },
         {
           "word": "faulty",
-          "meaning": "(未登録)",
+          "meaning": "配線",
           "isUnknown": false,
           "lemma": "faulty",
           "reading": "faulty",
@@ -16137,7 +16137,7 @@
         },
         {
           "word": "wiring",
-          "meaning": "(未登録)",
+          "meaning": "不十分な",
           "isUnknown": false,
           "lemma": "wiring",
           "reading": "wiring",
@@ -16159,7 +16159,7 @@
         },
         {
           "word": "inadequate",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "inadequate",
           "reading": "inadequate",
@@ -16181,7 +16181,7 @@
         },
         {
           "word": "detectors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "detectors",
           "reading": "detectors",
@@ -16351,7 +16351,7 @@
         },
         {
           "word": "responses",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "responses",
           "reading": "responses",
@@ -16392,7 +16392,7 @@
         },
         {
           "word": "preparedness",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "preparedness",
           "reading": "preparedness",
@@ -16532,7 +16532,7 @@
         },
         {
           "word": "assembling",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "assembling",
           "reading": "assembling",
@@ -16565,7 +16565,7 @@
         },
         {
           "word": "kits",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "kits",
           "reading": "kits",
@@ -16673,7 +16673,7 @@
         },
         {
           "word": "administering",
-          "meaning": "(未登録)",
+          "meaning": "管理することのような",
           "isUnknown": false,
           "lemma": "administering",
           "reading": "administering",
@@ -16706,7 +16706,7 @@
         },
         {
           "word": "aid",
-          "meaning": "(未登録)",
+          "meaning": "処置",
           "isUnknown": false,
           "lemma": "aid",
           "reading": "aid",
@@ -16843,7 +16843,7 @@
         },
         {
           "word": "preparedness",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "preparedness",
           "reading": "preparedness",
@@ -16939,7 +16939,7 @@
         },
         {
           "word": "notifications",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "notifications",
           "reading": "notifications",
@@ -16950,7 +16950,7 @@
         },
         {
           "word": "via",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "via",
           "reading": "via",
@@ -16961,7 +16961,7 @@
         },
         {
           "word": "text",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "text",
           "reading": "text",
@@ -17106,7 +17106,7 @@
         },
         {
           "word": "register",
-          "meaning": "(未登録)",
+          "meaning": "オンライン",
           "isUnknown": false,
           "lemma": "register",
           "reading": "register",
@@ -17128,7 +17128,7 @@
         },
         {
           "word": "alerts",
-          "meaning": "(未登録)",
+          "meaning": "緊急事態に関する",
           "isUnknown": false,
           "lemma": "alerts",
           "reading": "alerts",
@@ -17139,7 +17139,7 @@
         },
         {
           "word": "regarding",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "regarding",
           "reading": "regarding",
@@ -17161,7 +17161,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -17191,7 +17191,7 @@
       "segments": [
         {
           "word": "road",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "road",
           "reading": "road",
@@ -17243,7 +17243,7 @@
         },
         {
           "word": "persons",
-          "meaning": "(未登録)",
+          "meaning": "不明",
           "isUnknown": false,
           "lemma": "persons",
           "reading": "persons",
@@ -17467,7 +17467,7 @@
         },
         {
           "word": "timely",
-          "meaning": "(未登録)",
+          "meaning": "警告",
           "isUnknown": false,
           "lemma": "timely",
           "reading": "timely",
@@ -17478,7 +17478,7 @@
         },
         {
           "word": "warnings",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "warnings",
           "reading": "warnings",
@@ -17489,7 +17489,7 @@
         },
         {
           "word": "prevented",
-          "meaning": "(未登録)",
+          "meaning": "優れている",
           "isUnknown": false,
           "lemma": "prevented",
           "reading": "prevented",
@@ -17500,7 +17500,7 @@
         },
         {
           "word": "injuries",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "injuries",
           "reading": "injuries",
@@ -17530,7 +17530,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -17552,7 +17552,7 @@
         },
         {
           "word": "pursues",
-          "meaning": "(未登録)",
+          "meaning": "追求する",
           "isUnknown": false,
           "lemma": "pursues",
           "reading": "pursues",
@@ -17641,7 +17641,7 @@
         },
         {
           "word": "diverts",
-          "meaning": "(未登録)",
+          "meaning": "転換する",
           "isUnknown": false,
           "lemma": "diverts",
           "reading": "diverts",
@@ -17652,7 +17652,7 @@
         },
         {
           "word": "substantial",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "substantial",
           "reading": "substantial",
@@ -17685,7 +17685,7 @@
         },
         {
           "word": "landfills",
-          "meaning": "(未登録)",
+          "meaning": "行動",
           "isUnknown": false,
           "lemma": "landfills",
           "reading": "landfills",
@@ -17844,7 +17844,7 @@
         },
         {
           "word": "designated",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "designated",
           "reading": "designated",
@@ -17855,7 +17855,7 @@
         },
         {
           "word": "bins",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "bins",
           "reading": "bins",
@@ -17918,7 +17918,7 @@
         },
         {
           "word": "gardeners",
-          "meaning": "(未登録)",
+          "meaning": "園芸家",
           "isUnknown": false,
           "lemma": "gardeners",
           "reading": "gardeners",
@@ -18006,7 +18006,7 @@
         },
         {
           "word": "amendments",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "amendments",
           "reading": "amendments",
@@ -18058,7 +18058,7 @@
         },
         {
           "word": "recently",
-          "meaning": "(未登録)",
+          "meaning": "最近",
           "isUnknown": false,
           "lemma": "recently",
           "reading": "recently",
@@ -18069,7 +18069,7 @@
         },
         {
           "word": "installed",
-          "meaning": "(未登録)",
+          "meaning": "回復に",
           "isUnknown": false,
           "lemma": "installed",
           "reading": "installed",
@@ -18091,7 +18091,7 @@
         },
         {
           "word": "panels",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "panels",
           "reading": "panels",
@@ -18113,7 +18113,7 @@
         },
         {
           "word": "municipal",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "municipal",
           "reading": "municipal",
@@ -18255,7 +18255,7 @@
         },
         {
           "word": "streetlights",
-          "meaning": "(未登録)",
+          "meaning": "街灯",
           "isUnknown": false,
           "lemma": "streetlights",
           "reading": "streetlights",
@@ -18266,7 +18266,7 @@
         },
         {
           "word": "replaced",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "replaced",
           "reading": "replaced",
@@ -18299,7 +18299,7 @@
         },
         {
           "word": "fixtures",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fixtures",
           "reading": "fixtures",
@@ -18381,7 +18381,7 @@
         },
         {
           "word": "nighttime",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "nighttime",
           "reading": "nighttime",
@@ -18392,7 +18392,7 @@
         },
         {
           "word": "visibility",
-          "meaning": "(未登録)",
+          "meaning": "視認性",
           "isUnknown": false,
           "lemma": "visibility",
           "reading": "visibility",
@@ -18433,7 +18433,7 @@
         },
         {
           "word": "investments",
-          "meaning": "(未登録)",
+          "meaning": "投資",
           "isUnknown": false,
           "lemma": "investments",
           "reading": "investments",
@@ -18592,7 +18592,7 @@
         },
         {
           "word": "lacking",
-          "meaning": "(未登録)",
+          "meaning": "庭",
           "isUnknown": false,
           "lemma": "lacking",
           "reading": "lacking",
@@ -18603,7 +18603,7 @@
         },
         {
           "word": "yards",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "yards",
           "reading": "yards",
@@ -18674,7 +18674,7 @@
       "segments": [
         {
           "word": "Plots",
-          "meaning": "(未登録)",
+          "meaning": "プロット",
           "isUnknown": false,
           "lemma": "Plots",
           "reading": "Plots",
@@ -18696,7 +18696,7 @@
         },
         {
           "word": "affordably",
-          "meaning": "(未登録)",
+          "meaning": "手頃",
           "isUnknown": false,
           "lemma": "affordably",
           "reading": "affordably",
@@ -18740,7 +18740,7 @@
         },
         {
           "word": "gardeners",
-          "meaning": "(未登録)",
+          "meaning": "園芸家",
           "isUnknown": false,
           "lemma": "gardeners",
           "reading": "gardeners",
@@ -18762,7 +18762,7 @@
         },
         {
           "word": "novices",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "novices",
           "reading": "novices",
@@ -18955,7 +18955,7 @@
         },
         {
           "word": "participants",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "participants",
           "reading": "participants",
@@ -18966,7 +18966,7 @@
         },
         {
           "word": "donate",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "donate",
           "reading": "donate",
@@ -19070,7 +19070,7 @@
         },
         {
           "word": "hunger",
-          "meaning": "(未登録)",
+          "meaning": "飢餓",
           "isUnknown": false,
           "lemma": "hunger",
           "reading": "hunger",
@@ -19100,7 +19100,7 @@
         },
         {
           "word": "minimizing",
-          "meaning": "(未登録)",
+          "meaning": "環境の変化",
           "isUnknown": false,
           "lemma": "minimizing",
           "reading": "minimizing",
@@ -19179,7 +19179,7 @@
         },
         {
           "word": "beautify",
-          "meaning": "(未登録)",
+          "meaning": "近隣",
           "isUnknown": false,
           "lemma": "beautify",
           "reading": "beautify",
@@ -19190,7 +19190,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -19294,7 +19294,7 @@
         },
         {
           "word": "distributes",
-          "meaning": "(未登録)",
+          "meaning": "無料の",
           "isUnknown": false,
           "lemma": "distributes",
           "reading": "distributes",
@@ -19316,7 +19316,7 @@
         },
         {
           "word": "seedlings",
-          "meaning": "(未登録)",
+          "meaning": "毎",
           "isUnknown": false,
           "lemma": "seedlings",
           "reading": "seedlings",
@@ -19453,7 +19453,7 @@
         },
         {
           "word": "properties",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "properties",
           "reading": "properties",
@@ -19494,7 +19494,7 @@
         },
         {
           "word": "5",
-          "meaning": "(未登録)",
+          "meaning": "数字の5",
           "isUnknown": false,
           "lemma": "5",
           "reading": "5",
@@ -19516,7 +19516,7 @@
         },
         {
           "word": "000",
-          "meaning": "(未登録)",
+          "meaning": "数字の000",
           "isUnknown": false,
           "lemma": "000",
           "reading": "000",
@@ -19560,7 +19560,7 @@
         },
         {
           "word": "planted",
-          "meaning": "(未登録)",
+          "meaning": "あることだけ",
           "isUnknown": false,
           "lemma": "planted",
           "reading": "planted",
@@ -19642,7 +19642,7 @@
         },
         {
           "word": "greener",
-          "meaning": "(未登録)",
+          "meaning": "より緑豊かな",
           "isUnknown": false,
           "lemma": "greener",
           "reading": "greener",
@@ -19683,7 +19683,7 @@
         },
         {
           "word": "attractive",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "attractive",
           "reading": "attractive",
@@ -19694,7 +19694,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -19724,7 +19724,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -19809,7 +19809,7 @@
       "segments": [
         {
           "word": "Approximately",
-          "meaning": "(未登録)",
+          "meaning": "およそ・約",
           "isUnknown": false,
           "lemma": "Approximately",
           "reading": "Approximately",
@@ -19880,7 +19880,7 @@
         },
         {
           "word": "born",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "born",
           "reading": "born",
@@ -19891,7 +19891,7 @@
         },
         {
           "word": "abroad",
-          "meaning": "(未登録)",
+          "meaning": "海外で・外国で",
           "isUnknown": false,
           "lemma": "abroad",
           "reading": "abroad",
@@ -19921,7 +19921,7 @@
       "segments": [
         {
           "word": "representing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "representing",
           "reading": "representing",
@@ -19932,7 +19932,7 @@
         },
         {
           "word": "dozens",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "dozens",
           "reading": "dozens",
@@ -20039,7 +20039,7 @@
         },
         {
           "word": "culturally",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "culturally",
           "reading": "culturally",
@@ -20061,7 +20061,7 @@
         },
         {
           "word": "economically",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "economically",
           "reading": "economically",
@@ -20266,7 +20266,7 @@
         },
         {
           "word": "showcasing",
-          "meaning": "(未登録)",
+          "meaning": "紹介する",
           "isUnknown": false,
           "lemma": "showcasing",
           "reading": "showcasing",
@@ -20485,7 +20485,7 @@
         },
         {
           "word": "bridges",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "bridges",
           "reading": "bridges",
@@ -20690,7 +20690,7 @@
         },
         {
           "word": "participation",
-          "meaning": "(未登録)",
+          "meaning": "サービスにおいて",
           "isUnknown": false,
           "lemma": "participation",
           "reading": "participation",
@@ -20775,7 +20775,7 @@
         },
         {
           "word": "informal",
-          "meaning": "(未登録)",
+          "meaning": "学習",
           "isUnknown": false,
           "lemma": "informal",
           "reading": "informal",
@@ -20797,7 +20797,7 @@
         },
         {
           "word": "supportive",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "supportive",
           "reading": "supportive",
@@ -20808,7 +20808,7 @@
         },
         {
           "word": "settings",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "settings",
           "reading": "settings",
@@ -20849,7 +20849,7 @@
         },
         {
           "word": "participants",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "participants",
           "reading": "participants",
@@ -20893,7 +20893,7 @@
         },
         {
           "word": "transcending",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "transcending",
           "reading": "transcending",
@@ -20967,7 +20967,7 @@
         },
         {
           "word": "Council",
-          "meaning": "(未登録)",
+          "meaning": "お互い",
           "isUnknown": false,
           "lemma": "Council",
           "reading": "Council",
@@ -20978,7 +20978,7 @@
         },
         {
           "word": "advises",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "advises",
           "reading": "advises",
@@ -21026,7 +21026,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -21048,7 +21048,7 @@
         },
         {
           "word": "minority",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "minority",
           "reading": "minority",
@@ -21100,7 +21100,7 @@
         },
         {
           "word": "advocate",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "advocate",
           "reading": "advocate",
@@ -21246,7 +21246,7 @@
         },
         {
           "word": "culturally",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "culturally",
           "reading": "culturally",
@@ -21257,7 +21257,7 @@
         },
         {
           "word": "sensitive",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sensitive",
           "reading": "sensitive",
@@ -21353,7 +21353,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -21375,7 +21375,7 @@
         },
         {
           "word": "welcoming",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "welcoming",
           "reading": "welcoming",
@@ -21624,7 +21624,7 @@
         },
         {
           "word": "ventures",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "ventures",
           "reading": "ventures",
@@ -21720,7 +21720,7 @@
         },
         {
           "word": "licenses",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "licenses",
           "reading": "licenses",
@@ -21892,7 +21892,7 @@
         },
         {
           "word": "dozens",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "dozens",
           "reading": "dozens",
@@ -21941,7 +21941,7 @@
         },
         {
           "word": "launch",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "launch",
           "reading": "launch",
@@ -21952,7 +21952,7 @@
         },
         {
           "word": "successfully",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "successfully",
           "reading": "successfully",
@@ -22026,7 +22026,7 @@
         },
         {
           "word": "venues",
-          "meaning": "(未登録)",
+          "meaning": "地元の",
           "isUnknown": false,
           "lemma": "venues",
           "reading": "venues",
@@ -22186,7 +22186,7 @@
         },
         {
           "word": "arrangement",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "arrangement",
           "reading": "arrangement",
@@ -22219,7 +22219,7 @@
         },
         {
           "word": "parties",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "parties",
           "reading": "parties",
@@ -22241,7 +22241,7 @@
         },
         {
           "word": "earn",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "earn",
           "reading": "earn",
@@ -22315,7 +22315,7 @@
         },
         {
           "word": "wholesalers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "wholesalers",
           "reading": "wholesalers",
@@ -22367,7 +22367,7 @@
         },
         {
           "word": "obtain",
-          "meaning": "(未登録)",
+          "meaning": "入手する",
           "isUnknown": false,
           "lemma": "obtain",
           "reading": "obtain",
@@ -22378,7 +22378,7 @@
         },
         {
           "word": "fresher",
-          "meaning": "(未登録)",
+          "meaning": "より新鮮な",
           "isUnknown": false,
           "lemma": "fresher",
           "reading": "fresher",
@@ -22474,7 +22474,7 @@
         },
         {
           "word": "beloved",
-          "meaning": "(未登録)",
+          "meaning": "愛されるメンバー",
           "isUnknown": false,
           "lemma": "beloved",
           "reading": "beloved",
@@ -22518,7 +22518,7 @@
         },
         {
           "word": "attracting",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "attracting",
           "reading": "attracting",
@@ -22586,7 +22586,7 @@
       "segments": [
         {
           "word": "Downtown",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Downtown",
           "reading": "Downtown",
@@ -22597,7 +22597,7 @@
         },
         {
           "word": "revitalization",
-          "meaning": "(未登録)",
+          "meaning": "活性化の",
           "isUnknown": false,
           "lemma": "revitalization",
           "reading": "revitalization",
@@ -22641,7 +22641,7 @@
         },
         {
           "word": "formerly",
-          "meaning": "(未登録)",
+          "meaning": "東京からの",
           "isUnknown": false,
           "lemma": "formerly",
           "reading": "formerly",
@@ -22652,7 +22652,7 @@
         },
         {
           "word": "neglected",
-          "meaning": "(未登録)",
+          "meaning": "エリア",
           "isUnknown": false,
           "lemma": "neglected",
           "reading": "neglected",
@@ -22685,7 +22685,7 @@
         },
         {
           "word": "vibrant",
-          "meaning": "(未登録)",
+          "meaning": "地区",
           "isUnknown": false,
           "lemma": "vibrant",
           "reading": "vibrant",
@@ -22707,7 +22707,7 @@
         },
         {
           "word": "districts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "districts",
           "reading": "districts",
@@ -22770,7 +22770,7 @@
         },
         {
           "word": "owners",
-          "meaning": "(未登録)",
+          "meaning": "所有者",
           "isUnknown": false,
           "lemma": "owners",
           "reading": "owners",
@@ -22781,7 +22781,7 @@
         },
         {
           "word": "renovate",
-          "meaning": "(未登録)",
+          "meaning": "改修するの",
           "isUnknown": false,
           "lemma": "renovate",
           "reading": "renovate",
@@ -22792,7 +22792,7 @@
         },
         {
           "word": "historic",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "historic",
           "reading": "historic",
@@ -22844,7 +22844,7 @@
         },
         {
           "word": "architectural",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "architectural",
           "reading": "architectural",
@@ -22889,7 +22889,7 @@
       "segments": [
         {
           "word": "Tax",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Tax",
           "reading": "Tax",
@@ -22957,7 +22957,7 @@
         },
         {
           "word": "locate",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "locate",
           "reading": "locate",
@@ -23069,7 +23069,7 @@
         },
         {
           "word": "vacancy",
-          "meaning": "(未登録)",
+          "meaning": "率",
           "isUnknown": false,
           "lemma": "vacancy",
           "reading": "vacancy",
@@ -23167,7 +23167,7 @@
       "segments": [
         {
           "word": "Workforce",
-          "meaning": "(未登録)",
+          "meaning": "プログラム",
           "isUnknown": false,
           "lemma": "Workforce",
           "reading": "Workforce",
@@ -23211,7 +23211,7 @@
         },
         {
           "word": "unemployed",
-          "meaning": "(未登録)",
+          "meaning": "失業者",
           "isUnknown": false,
           "lemma": "unemployed",
           "reading": "unemployed",
@@ -23277,7 +23277,7 @@
         },
         {
           "word": "placement",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "placement",
           "reading": "placement",
@@ -23356,7 +23356,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -23411,7 +23411,7 @@
         },
         {
           "word": "actual",
-          "meaning": "(未登録)",
+          "meaning": "実際の・現実の",
           "isUnknown": false,
           "lemma": "actual",
           "reading": "actual",
@@ -23422,7 +23422,7 @@
         },
         {
           "word": "labor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "labor",
           "reading": "labor",
@@ -23474,7 +23474,7 @@
       "segments": [
         {
           "word": "Graduates",
-          "meaning": "(未登録)",
+          "meaning": "スキル",
           "isUnknown": false,
           "lemma": "Graduates",
           "reading": "Graduates",
@@ -23518,7 +23518,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -23608,7 +23608,7 @@
         },
         {
           "word": "prospects",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "prospects",
           "reading": "prospects",
@@ -23693,7 +23693,7 @@
         },
         {
           "word": "indispensable",
-          "meaning": "(未登録)",
+          "meaning": "住民にとって",
           "isUnknown": false,
           "lemma": "indispensable",
           "reading": "indispensable",
@@ -23767,7 +23767,7 @@
         },
         {
           "word": "streamlines",
-          "meaning": "(未登録)",
+          "meaning": "合理化する",
           "isUnknown": false,
           "lemma": "streamlines",
           "reading": "streamlines",
@@ -23950,7 +23950,7 @@
       "segments": [
         {
           "word": "User",
-          "meaning": "(未登録)",
+          "meaning": "ユーザー",
           "isUnknown": false,
           "lemma": "User",
           "reading": "User",
@@ -23994,7 +23994,7 @@
         },
         {
           "word": "continuously",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "continuously",
           "reading": "continuously",
@@ -24016,7 +24016,7 @@
         },
         {
           "word": "functionality",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "functionality",
           "reading": "functionality",
@@ -24123,7 +24123,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -24175,7 +24175,7 @@
         },
         {
           "word": "briefly",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "briefly",
           "reading": "briefly",
@@ -24219,7 +24219,7 @@
         },
         {
           "word": "permanently",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "permanently",
           "reading": "permanently",
@@ -24463,7 +24463,7 @@
         },
         {
           "word": "friendliness",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "friendliness",
           "reading": "friendliness",
@@ -24632,7 +24632,7 @@
         },
         {
           "word": "owners",
-          "meaning": "(未登録)",
+          "meaning": "所有者",
           "isUnknown": false,
           "lemma": "owners",
           "reading": "owners",
@@ -24978,7 +24978,7 @@
         },
         {
           "word": "demographic",
-          "meaning": "(未登録)",
+          "meaning": "人口統計の",
           "isUnknown": false,
           "lemma": "demographic",
           "reading": "demographic",
@@ -25022,7 +25022,7 @@
         },
         {
           "word": "responses",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "responses",
           "reading": "responses",
@@ -25085,7 +25085,7 @@
         },
         {
           "word": "optimistic",
-          "meaning": "(未登録)",
+          "meaning": "私たちの",
           "isUnknown": false,
           "lemma": "optimistic",
           "reading": "optimistic",
@@ -25159,7 +25159,7 @@
         },
         {
           "word": "greatest",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "greatest",
           "reading": "greatest",
@@ -25214,7 +25214,7 @@
         },
         {
           "word": "river",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "river",
           "reading": "river",
@@ -25244,7 +25244,7 @@
       "segments": [
         {
           "word": "historic",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "historic",
           "reading": "historic",
@@ -25296,7 +25296,7 @@
         },
         {
           "word": "convenient",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "convenient",
           "reading": "convenient",
@@ -25307,7 +25307,7 @@
         },
         {
           "word": "location",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "location",
           "reading": "location",
@@ -25381,7 +25381,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -25414,7 +25414,7 @@
         },
         {
           "word": "remarkable",
-          "meaning": "(未登録)",
+          "meaning": "注目すべき・驚くべき",
           "isUnknown": false,
           "lemma": "remarkable",
           "reading": "remarkable",
@@ -25485,7 +25485,7 @@
         },
         {
           "word": "generosity",
-          "meaning": "(未登録)",
+          "meaning": "世界",
           "isUnknown": false,
           "lemma": "generosity",
           "reading": "generosity",
@@ -25745,7 +25745,7 @@
         },
         {
           "word": "cooperative",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "cooperative",
           "reading": "cooperative",
@@ -25756,7 +25756,7 @@
         },
         {
           "word": "spirit",
-          "meaning": "(未登録)",
+          "meaning": "小さい",
           "isUnknown": false,
           "lemma": "spirit",
           "reading": "spirit",
@@ -25767,7 +25767,7 @@
         },
         {
           "word": "distinguishes",
-          "meaning": "(未登録)",
+          "meaning": "区別する",
           "isUnknown": false,
           "lemma": "distinguishes",
           "reading": "distinguishes",
@@ -25778,7 +25778,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -25800,7 +25800,7 @@
         },
         {
           "word": "larger",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "larger",
           "reading": "larger",
@@ -25841,7 +25841,7 @@
         },
         {
           "word": "impersonal",
-          "meaning": "(未登録)",
+          "meaning": "非人格的な",
           "isUnknown": false,
           "lemma": "impersonal",
           "reading": "impersonal",
@@ -26134,7 +26134,7 @@
         },
         {
           "word": "participate",
-          "meaning": "(未登録)",
+          "meaning": "スポーツへ",
           "isUnknown": false,
           "lemma": "participate",
           "reading": "participate",
@@ -26230,7 +26230,7 @@
         },
         {
           "word": "meetings",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "meetings",
           "reading": "meetings",
@@ -26413,7 +26413,7 @@
         },
         {
           "word": "acquainted",
-          "meaning": "(未登録)",
+          "meaning": "隣人",
           "isUnknown": false,
           "lemma": "acquainted",
           "reading": "acquainted",
@@ -26542,7 +26542,7 @@
         },
         {
           "word": "fabric",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fabric",
           "reading": "fabric",
@@ -26564,7 +26564,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -26638,7 +26638,7 @@
         },
         {
           "word": "participate",
-          "meaning": "(未登録)",
+          "meaning": "スポーツへ",
           "isUnknown": false,
           "lemma": "participate",
           "reading": "participate",
@@ -26800,7 +26800,7 @@
         },
         {
           "word": "everybody",
-          "meaning": "(未登録)",
+          "meaning": "一緒に",
           "isUnknown": false,
           "lemma": "everybody",
           "reading": "everybody",
@@ -26841,7 +26841,7 @@
         },
         {
           "word": "insights",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "insights",
           "reading": "insights",
@@ -26874,7 +26874,7 @@
         },
         {
           "word": "strengthen",
-          "meaning": "(未登録)",
+          "meaning": "薬の",
           "isUnknown": false,
           "lemma": "strengthen",
           "reading": "strengthen",
@@ -26983,7 +26983,7 @@
       "segments": [
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -27027,7 +27027,7 @@
         },
         {
           "word": "honoring",
-          "meaning": "(未登録)",
+          "meaning": "奇妙また",
           "isUnknown": false,
           "lemma": "honoring",
           "reading": "honoring",
@@ -27068,7 +27068,7 @@
       "segments": [
         {
           "word": "Upcoming",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Upcoming",
           "reading": "Upcoming",
@@ -27169,7 +27169,7 @@
         },
         {
           "word": "waterfront",
-          "meaning": "(未登録)",
+          "meaning": "水辺",
           "isUnknown": false,
           "lemma": "waterfront",
           "reading": "waterfront",
@@ -27221,7 +27221,7 @@
         },
         {
           "word": "telecommunications",
-          "meaning": "(未登録)",
+          "meaning": "通信",
           "isUnknown": false,
           "lemma": "telecommunications",
           "reading": "telecommunications",
@@ -27273,7 +27273,7 @@
         },
         {
           "word": "enhancing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "enhancing",
           "reading": "enhancing",
@@ -27374,7 +27374,7 @@
         },
         {
           "word": "thoughtfully",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "thoughtfully",
           "reading": "thoughtfully",
@@ -27624,7 +27624,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -27698,7 +27698,7 @@
         },
         {
           "word": "sacrificing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sacrificing",
           "reading": "sacrificing",
@@ -27742,7 +27742,7 @@
         },
         {
           "word": "cherish",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "cherish",
           "reading": "cherish",
@@ -27868,7 +27868,7 @@
         },
         {
           "word": "privileged",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "privileged",
           "reading": "privileged",
@@ -27909,7 +27909,7 @@
       "segments": [
         {
           "word": "Affordability",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Affordability",
           "reading": "Affordability",
@@ -27931,7 +27931,7 @@
         },
         {
           "word": "accessibility",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "accessibility",
           "reading": "accessibility",
@@ -27964,7 +27964,7 @@
         },
         {
           "word": "inclusiveness",
-          "meaning": "(未登録)",
+          "meaning": "私たちの",
           "isUnknown": false,
           "lemma": "inclusiveness",
           "reading": "inclusiveness",
@@ -28060,7 +28060,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -28353,7 +28353,7 @@
         },
         {
           "word": "briefly",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "briefly",
           "reading": "briefly",
@@ -28375,7 +28375,7 @@
         },
         {
           "word": "permanently",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "permanently",
           "reading": "permanently",
@@ -28517,7 +28517,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",
@@ -28550,7 +28550,7 @@
         },
         {
           "word": "delighted",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "delighted",
           "reading": "delighted",
@@ -28709,7 +28709,7 @@
         },
         {
           "word": "Riverside",
-          "meaning": "(未登録)",
+          "meaning": "リバーサイド",
           "isUnknown": false,
           "lemma": "Riverside",
           "reading": "Riverside",

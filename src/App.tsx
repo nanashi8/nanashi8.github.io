@@ -7,7 +7,7 @@ import {
   selectAdaptiveQuestions,
   classifyPhraseType,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import {
   analyzeRadarChart,
@@ -627,6 +627,10 @@ function App() {
     // 当日の誤答単語を取得
     const todayIncorrect = getTodayIncorrectWords();
     
+    // 混同された単語を取得（優先的に出題）
+    const confusedWordsProgress = getConfusedWords(10);
+    const confusedWords = confusedWordsProgress.map(wp => wp.word);
+    
     // 誤答単語を要復習上限に基づいて制限
     let reviewQuestions: Question[] = [];
     if (todayIncorrect.length > 0) {
@@ -648,6 +652,23 @@ function App() {
       
       if (reviewQuestions.length > 0) {
         console.log(`🔄 要復習問題: ${reviewQuestions.length}問（上限: ${studySettings.maxReviewCount}問）`);
+      }
+    }
+    
+    // 混同された単語を優先的に出題（出題範囲内に含まれている場合）
+    if (confusedWords.length > 0) {
+      const confusedQuestions = filteredQuestions.filter(q =>
+        confusedWords.some(word => word.toLowerCase() === q.word.toLowerCase())
+      );
+      
+      if (confusedQuestions.length > 0) {
+        const nonConfusedQuestions = filteredQuestions.filter(q =>
+          !confusedWords.some(word => word.toLowerCase() === q.word.toLowerCase())
+        );
+        
+        // 混同された単語を優先的に配置（要復習の次）
+        filteredQuestions = [...confusedQuestions, ...nonConfusedQuestions];
+        console.log(`🔗 混同履歴: ${confusedQuestions.length}問を優先出題`);
       }
     }
     
@@ -853,14 +874,23 @@ function App() {
     }
   };
 
-  const handleAnswer = async (answer: string, correct: string) => {
+  const handleAnswer = async (answer: string, correct: string, selectedQuestion?: Question | null) => {
     if (quizState.answered) return;
 
+    // 「分からない」を選択した場合は不正解扱い
+    const isDontKnow = answer === '分からない';
+    
     // 安全な比較のため、両者をtrim()で正規化
     const normalizedAnswer = answer.trim();
     const normalizedCorrect = correct.trim();
-    const isCorrect = normalizedAnswer === normalizedCorrect;
+    const isCorrect = !isDontKnow && normalizedAnswer === normalizedCorrect;
     const currentQuestion = quizState.questions[quizState.currentIndex];
+    
+    // 不正解時、選択した選択肢の単語を「混同した単語」として記録
+    if (!isCorrect && selectedQuestion && selectedQuestion.word) {
+      await recordConfusion(selectedQuestion.word, currentQuestion.word);
+      console.log(`🔗 混同を記録: ${selectedQuestion.word} ← ${currentQuestion.word}`);
+    }
     
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;

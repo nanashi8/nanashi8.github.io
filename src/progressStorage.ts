@@ -239,6 +239,14 @@ export interface WordProgress {
     userAnswer?: string;
     sessionIndex?: number;
   }>;
+  
+  // 混同履歴（この単語を誤答として選んだ履歴）
+  confusedWith?: Array<{
+    word: string; // 実際に出題された単語
+    timestamp: number; // 混同した日時
+  }>;
+  confusionCount?: number; // 混同された合計回数
+  lastConfused?: number; // 最終混同日時
 }
 
 export interface UserProgress {
@@ -1352,14 +1360,24 @@ export function isWordSkipExcluded(word: string): boolean {
   const progress = loadProgressSync();
   const wordProgress = progress.wordProgress[word];
   
-  if (!wordProgress || !wordProgress.skipExcludeUntil) {
+  if (!wordProgress) {
     return false;
   }
   
-  return Date.now() < wordProgress.skipExcludeUntil;
+  // スキップによる除外期間をチェック
+  if (wordProgress.skipExcludeUntil && Date.now() < wordProgress.skipExcludeUntil) {
+    return true;
+  }
+  
+  // 定着済み単語の次回復習日をチェック
+  if (wordProgress.masteryLevel === 'mastered' && wordProgress.nextReviewDate && Date.now() < wordProgress.nextReviewDate) {
+    return true;
+  }
+  
+  return false;
 }
 
-// スキップ除外期間中の単語を除外した問題リストを取得
+// スキップ除外期間中の単語および定着済み単語（復習期間外）を除外した問題リストを取得
 export function filterSkippedWords<T extends { word: string }>(questions: T[]): T[] {
   return questions.filter(q => !isWordSkipExcluded(q.word));
 }
@@ -1412,6 +1430,78 @@ export function getWordsNeedingReview(hoursThreshold: number = 24): WordProgress
       return wp.masteryLevel === 'learning' && timeSinceLastStudy >= threshold;
     })
     .sort((a, b) => b.difficultyScore - a.difficultyScore);
+}
+
+/**
+ * 混同履歴を記録（誤答として選んだ単語を記録）
+ * @param confusedWord 誤答として選んだ単語
+ * @param actualWord 実際に出題された単語
+ */
+export async function recordConfusion(confusedWord: string, actualWord: string): Promise<void> {
+  const progress = await loadProgress();
+  
+  if (!progress.wordProgress[confusedWord]) {
+    // まだ進捗がない場合は初期化
+    progress.wordProgress[confusedWord] = {
+      word: confusedWord,
+      correctCount: 0,
+      incorrectCount: 0,
+      consecutiveCorrect: 0,
+      consecutiveIncorrect: 0,
+      lastStudied: Date.now(),
+      totalResponseTime: 0,
+      averageResponseTime: 0,
+      difficultyScore: 0,
+      masteryLevel: 'new',
+      responseTimes: [],
+      confusedWith: [],
+      confusionCount: 0,
+      lastConfused: Date.now()
+    };
+  }
+  
+  const wordProgress = progress.wordProgress[confusedWord];
+  
+  // 混同履歴を追加
+  if (!wordProgress.confusedWith) {
+    wordProgress.confusedWith = [];
+  }
+  
+  wordProgress.confusedWith.push({
+    word: actualWord,
+    timestamp: Date.now()
+  });
+  
+  // 最新10件のみ保持
+  if (wordProgress.confusedWith.length > 10) {
+    wordProgress.confusedWith = wordProgress.confusedWith.slice(-10);
+  }
+  
+  // 混同カウントを更新
+  wordProgress.confusionCount = (wordProgress.confusionCount || 0) + 1;
+  wordProgress.lastConfused = Date.now();
+  
+  // 難易度スコアを軽く上げる（混同されたということは覚えにくい可能性がある）
+  wordProgress.difficultyScore = Math.min(100, (wordProgress.difficultyScore || 0) + 5);
+  
+  await saveProgress(progress);
+  updateProgressCache(progress);
+}
+
+/**
+ * 混同された単語を優先的に取得（出題の優先度を上げるため）
+ */
+export function getConfusedWords(limit: number = 20): WordProgress[] {
+  const allWords = getAllWordProgress();
+  return allWords
+    .filter(wp => (wp.confusionCount || 0) > 0)
+    .sort((a, b) => {
+      // 混同回数が多い順、同じなら最終混同日時が新しい順
+      const countDiff = (b.confusionCount || 0) - (a.confusionCount || 0);
+      if (countDiff !== 0) return countDiff;
+      return (b.lastConfused || 0) - (a.lastConfused || 0);
+    })
+    .slice(0, limit);
 }
 
 // 学習統計のサマリーを取得

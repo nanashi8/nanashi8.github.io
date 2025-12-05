@@ -180,6 +180,7 @@ export function generateChoices(
 
 /**
  * 選択肢とそれに対応するQuestionオブジェクトを生成
+ * 正解1つ + 誤答2つ + 「分からない」の4択
  */
 export function generateChoicesWithQuestions(
   currentQuestion: Question,
@@ -190,7 +191,8 @@ export function generateChoicesWithQuestions(
   const otherQuestions = allQuestions.filter((_, idx) => idx !== currentIndex);
   const shuffledOthers = shuffle(otherQuestions);
 
-  for (let i = 0; i < shuffledOthers.length && wrongQuestions.length < 3; i++) {
+  // 誤答を2つ選択（3つから2つに変更）
+  for (let i = 0; i < shuffledOthers.length && wrongQuestions.length < 2; i++) {
     const wrongQuestion = shuffledOthers[i];
     if (wrongQuestion.meaning !== currentQuestion.meaning && 
         !wrongQuestions.some(q => q.meaning === wrongQuestion.meaning)) {
@@ -199,7 +201,7 @@ export function generateChoicesWithQuestions(
   }
 
   // 誤答が足りない場合はダミーを追加
-  while (wrongQuestions.length < 3) {
+  while (wrongQuestions.length < 2) {
     wrongQuestions.push({
       word: `ダミー${wrongQuestions.length + 1}`,
       meaning: `選択肢${wrongQuestions.length + 1}`,
@@ -212,12 +214,16 @@ export function generateChoicesWithQuestions(
     });
   }
 
-  // 正解と誤答をシャッフル（4択）
-  const allChoices = [
+  // 正解と誤答2つをシャッフルして、最後に「分からない」を追加
+  const firstThreeChoices = shuffle([
     { text: currentQuestion.meaning, question: currentQuestion },
     ...wrongQuestions.map(q => ({ text: q.meaning, question: q }))
+  ]);
+  
+  return [
+    ...firstThreeChoices,
+    { text: '分からない', question: null }
   ];
-  return shuffle(allChoices);
 }
 
 /**
