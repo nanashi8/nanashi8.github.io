@@ -227,7 +227,7 @@
         },
         {
           "word": "worried",
-          "meaning": "(要確認)",
+          "meaning": "心配・心配するた・された",
           "isUnknown": false,
           "lemma": "worried",
           "reading": "worried",
@@ -1724,7 +1724,7 @@
         },
         {
           "word": "arriving",
-          "meaning": "(要確認)",
+          "meaning": "到着すること・している",
           "isUnknown": false,
           "lemma": "arriving",
           "reading": "arriving",
@@ -1746,7 +1746,7 @@
         },
         {
           "word": "injuries",
-          "meaning": "(要確認)",
+          "meaning": "治癒（複数形）",
           "isUnknown": false,
           "lemma": "injuries",
           "reading": "injuries",
@@ -1768,7 +1768,7 @@
         },
         {
           "word": "illnesses",
-          "meaning": "(要確認)",
+          "meaning": "病気（複数形）",
           "isUnknown": false,
           "lemma": "illnesses",
           "reading": "illnesses",
@@ -2149,7 +2149,7 @@
         },
         {
           "word": "checked",
-          "meaning": "(要確認)",
+          "meaning": "確認する・小切手た・された",
           "isUnknown": false,
           "lemma": "checked",
           "reading": "checked",
@@ -2660,7 +2660,7 @@
         },
         {
           "word": "seats",
-          "meaning": "(要確認)",
+          "meaning": "座席",
           "isUnknown": false,
           "lemma": "seats",
           "reading": "seats",
@@ -3233,7 +3233,7 @@
         },
         {
           "word": "orderly",
-          "meaning": "(要確認)",
+          "meaning": "経験に",
           "isUnknown": false,
           "lemma": "orderly",
           "reading": "orderly",
@@ -3296,7 +3296,7 @@
         },
         {
           "word": "displayed",
-          "meaning": "(要確認)",
+          "meaning": "陳列する・展示た・された",
           "isUnknown": false,
           "lemma": "displayed",
           "reading": "displayed",
@@ -4476,7 +4476,7 @@
         },
         {
           "word": "divided",
-          "meaning": "(要確認)",
+          "meaning": "分ける・割るた・された",
           "isUnknown": false,
           "lemma": "divided",
           "reading": "divided",
@@ -4498,7 +4498,7 @@
         },
         {
           "word": "sections",
-          "meaning": "(要確認)",
+          "meaning": "部分・区域",
           "isUnknown": false,
           "lemma": "sections",
           "reading": "sections",
@@ -4509,7 +4509,7 @@
         },
         {
           "word": "separated",
-          "meaning": "(要確認)",
+          "meaning": "分ける・別々のた・された",
           "isUnknown": false,
           "lemma": "separated",
           "reading": "separated",
@@ -4673,7 +4673,7 @@
         },
         {
           "word": "moved",
-          "meaning": "(要確認)",
+          "meaning": "動く・引っ越すた・された",
           "isUnknown": false,
           "lemma": "moved",
           "reading": "moved",
@@ -4942,7 +4942,7 @@
         },
         {
           "word": "managed",
-          "meaning": "(要確認)",
+          "meaning": "管理する・何とかやるた・された",
           "isUnknown": false,
           "lemma": "managed",
           "reading": "managed",
@@ -5748,7 +5748,7 @@
         },
         {
           "word": "shortly",
-          "meaning": "(要確認)",
+          "meaning": "短いに",
           "isUnknown": false,
           "lemma": "shortly",
           "reading": "shortly",
@@ -6344,7 +6344,7 @@
         },
         {
           "word": "complications",
-          "meaning": "(要確認)",
+          "meaning": "オプション（複数形）",
           "isUnknown": false,
           "lemma": "complications",
           "reading": "complications",
@@ -6963,7 +6963,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -7226,7 +7226,7 @@
         },
         {
           "word": "acknowledging",
-          "meaning": "(要確認)",
+          "meaning": "認める・承認すること・している",
           "isUnknown": false,
           "lemma": "acknowledging",
           "reading": "acknowledging",
@@ -7322,7 +7322,7 @@
         },
         {
           "word": "waited",
-          "meaning": "(要確認)",
+          "meaning": "待つた・された",
           "isUnknown": false,
           "lemma": "waited",
           "reading": "waited",
@@ -8919,7 +8919,7 @@
         },
         {
           "word": "adjusted",
-          "meaning": "(要確認)",
+          "meaning": "調整する・適応するた・された",
           "isUnknown": false,
           "lemma": "adjusted",
           "reading": "adjusted",
@@ -10469,7 +10469,7 @@
         },
         {
           "word": "allowed",
-          "meaning": "(要確認)",
+          "meaning": "許すた・された",
           "isUnknown": false,
           "lemma": "allowed",
           "reading": "allowed",
@@ -11087,7 +11087,7 @@
         },
         {
           "word": "scheduled",
-          "meaning": "(要確認)",
+          "meaning": "スケジュール・予定た・された",
           "isUnknown": false,
           "lemma": "scheduled",
           "reading": "scheduled",
@@ -13441,7 +13441,7 @@
         },
         {
           "word": "chairs",
-          "meaning": "(要確認)",
+          "meaning": "制限（複数形）",
           "isUnknown": false,
           "lemma": "chairs",
           "reading": "chairs",
@@ -13592,7 +13592,7 @@
         },
         {
           "word": "magazines",
-          "meaning": "(要確認)",
+          "meaning": "雑誌",
           "isUnknown": false,
           "lemma": "magazines",
           "reading": "magazines",
@@ -13655,7 +13655,7 @@
         },
         {
           "word": "displayed",
-          "meaning": "(要確認)",
+          "meaning": "陳列する・展示た・された",
           "isUnknown": false,
           "lemma": "displayed",
           "reading": "displayed",
@@ -13721,7 +13721,7 @@
         },
         {
           "word": "status",
-          "meaning": "(要確認)",
+          "meaning": "地位・状態",
           "isUnknown": false,
           "lemma": "status",
           "reading": "status",
@@ -13960,7 +13960,7 @@
         },
         {
           "word": "names",
-          "meaning": "(要確認)",
+          "meaning": "名前・名付ける（複数形）",
           "isUnknown": false,
           "lemma": "names",
           "reading": "names",
@@ -14090,7 +14090,7 @@
         },
         {
           "word": "mostly",
-          "meaning": "(要確認)",
+          "meaning": "大部分は・主に",
           "isUnknown": false,
           "lemma": "mostly",
           "reading": "mostly",
@@ -14915,7 +14915,7 @@
         },
         {
           "word": "reported",
-          "meaning": "(要確認)",
+          "meaning": "報告・報告書た・された",
           "isUnknown": false,
           "lemma": "reported",
           "reading": "reported",
@@ -16555,7 +16555,7 @@
         },
         {
           "word": "remained",
-          "meaning": "(要確認)",
+          "meaning": "残る・とどまるた・された",
           "isUnknown": false,
           "lemma": "remained",
           "reading": "remained",
@@ -16825,7 +16825,7 @@
         },
         {
           "word": "checked",
-          "meaning": "(要確認)",
+          "meaning": "確認する・小切手た・された",
           "isUnknown": false,
           "lemma": "checked",
           "reading": "checked",
@@ -17555,7 +17555,7 @@
         },
         {
           "word": "putting",
-          "meaning": "(要確認)",
+          "meaning": "置くこと・している",
           "isUnknown": false,
           "lemma": "putting",
           "reading": "putting",
@@ -17651,7 +17651,7 @@
         },
         {
           "word": "sessions",
-          "meaning": "(要確認)",
+          "meaning": "セッション・会期",
           "isUnknown": false,
           "lemma": "sessions",
           "reading": "sessions",
@@ -18468,7 +18468,7 @@
         },
         {
           "word": "coordinated",
-          "meaning": "(要確認)",
+          "meaning": "調整するた・された",
           "isUnknown": false,
           "lemma": "coordinated",
           "reading": "coordinated",
@@ -18701,7 +18701,7 @@
         },
         {
           "word": "implemented",
-          "meaning": "(要確認)",
+          "meaning": "実施する・実装するた・された",
           "isUnknown": false,
           "lemma": "implemented",
           "reading": "implemented",
@@ -18887,7 +18887,7 @@
         },
         {
           "word": "maintained",
-          "meaning": "(要確認)",
+          "meaning": "維持する・保つた・された",
           "isUnknown": false,
           "lemma": "maintained",
           "reading": "maintained",
@@ -19392,7 +19392,7 @@
         },
         {
           "word": "samples",
-          "meaning": "(要確認)",
+          "meaning": "サンプル",
           "isUnknown": false,
           "lemma": "samples",
           "reading": "samples",
@@ -19447,7 +19447,7 @@
         },
         {
           "word": "analyzed",
-          "meaning": "(要確認)",
+          "meaning": "分析するた・された",
           "isUnknown": false,
           "lemma": "analyzed",
           "reading": "analyzed",
@@ -20316,7 +20316,7 @@
         },
         {
           "word": "units",
-          "meaning": "(要確認)",
+          "meaning": "単位",
           "isUnknown": false,
           "lemma": "units",
           "reading": "units",
@@ -20550,7 +20550,7 @@
         },
         {
           "word": "units",
-          "meaning": "(要確認)",
+          "meaning": "単位",
           "isUnknown": false,
           "lemma": "units",
           "reading": "units",
@@ -20572,7 +20572,7 @@
         },
         {
           "word": "specifically",
-          "meaning": "(要確認)",
+          "meaning": "具体的に",
           "isUnknown": false,
           "lemma": "specifically",
           "reading": "specifically",
@@ -20646,7 +20646,7 @@
         },
         {
           "word": "units",
-          "meaning": "(要確認)",
+          "meaning": "単位",
           "isUnknown": false,
           "lemma": "units",
           "reading": "units",
@@ -20712,7 +20712,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -20964,7 +20964,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -21046,7 +21046,7 @@
         },
         {
           "word": "holidays",
-          "meaning": "(要確認)",
+          "meaning": "休日",
           "isUnknown": false,
           "lemma": "holidays",
           "reading": "holidays",
@@ -22164,7 +22164,7 @@
         },
         {
           "word": "instructions",
-          "meaning": "(要確認)",
+          "meaning": "指示・説明書",
           "isUnknown": false,
           "lemma": "instructions",
           "reading": "instructions",
@@ -22654,7 +22654,7 @@
         },
         {
           "word": "complications",
-          "meaning": "(要確認)",
+          "meaning": "オプション（複数形）",
           "isUnknown": false,
           "lemma": "complications",
           "reading": "complications",
@@ -22706,7 +22706,7 @@
       "segments": [
         {
           "word": "increased",
-          "meaning": "(要確認)",
+          "meaning": "増加する・増加た・された",
           "isUnknown": false,
           "lemma": "increased",
           "reading": "increased",
@@ -22791,7 +22791,7 @@
         },
         {
           "word": "scheduled",
-          "meaning": "(要確認)",
+          "meaning": "スケジュール・予定た・された",
           "isUnknown": false,
           "lemma": "scheduled",
           "reading": "scheduled",
@@ -23112,7 +23112,7 @@
         },
         {
           "word": "possibly",
-          "meaning": "(要確認)",
+          "meaning": "おそらく",
           "isUnknown": false,
           "lemma": "possibly",
           "reading": "possibly",
@@ -23700,7 +23700,7 @@
         },
         {
           "word": "reflected",
-          "meaning": "(要確認)",
+          "meaning": "反射する・熟考するた・された",
           "isUnknown": false,
           "lemma": "reflected",
           "reading": "reflected",
@@ -24080,7 +24080,7 @@
         },
         {
           "word": "jobs",
-          "meaning": "(要確認)",
+          "meaning": "仕事",
           "isUnknown": false,
           "lemma": "jobs",
           "reading": "jobs",
@@ -24244,7 +24244,7 @@
         },
         {
           "word": "suffering",
-          "meaning": "(要確認)",
+          "meaning": "苦しむこと・している",
           "isUnknown": false,
           "lemma": "suffering",
           "reading": "suffering",
@@ -24329,7 +24329,7 @@
         },
         {
           "word": "remained",
-          "meaning": "(要確認)",
+          "meaning": "残る・とどまるた・された",
           "isUnknown": false,
           "lemma": "remained",
           "reading": "remained",
@@ -25323,7 +25323,7 @@
         },
         {
           "word": "maintained",
-          "meaning": "(要確認)",
+          "meaning": "維持する・保つた・された",
           "isUnknown": false,
           "lemma": "maintained",
           "reading": "maintained",
@@ -25721,7 +25721,7 @@
         },
         {
           "word": "operations",
-          "meaning": "(要確認)",
+          "meaning": "操作・手術",
           "isUnknown": false,
           "lemma": "operations",
           "reading": "operations",
@@ -26009,7 +26009,7 @@
         },
         {
           "word": "funded",
-          "meaning": "(要確認)",
+          "meaning": "資金・基金た・された",
           "isUnknown": false,
           "lemma": "funded",
           "reading": "funded",
@@ -26994,7 +26994,7 @@
         },
         {
           "word": "fixed",
-          "meaning": "(要確認)",
+          "meaning": "修理する・固定するた・された",
           "isUnknown": false,
           "lemma": "fixed",
           "reading": "fixed",
@@ -27005,7 +27005,7 @@
         },
         {
           "word": "fees",
-          "meaning": "(要確認)",
+          "meaning": "費（複数形）",
           "isUnknown": false,
           "lemma": "fees",
           "reading": "fees",
@@ -27603,7 +27603,7 @@
         },
         {
           "word": "procedures",
-          "meaning": "(要確認)",
+          "meaning": "手順",
           "isUnknown": false,
           "lemma": "procedures",
           "reading": "procedures",
@@ -27910,7 +27910,7 @@
         },
         {
           "word": "encounters",
-          "meaning": "(要確認)",
+          "meaning": "遭遇・出会い",
           "isUnknown": false,
           "lemma": "encounters",
           "reading": "encounters",
@@ -28014,7 +28014,7 @@
         },
         {
           "word": "questioning",
-          "meaning": "(要確認)",
+          "meaning": "質問こと・している",
           "isUnknown": false,
           "lemma": "questioning",
           "reading": "questioning",
@@ -28548,7 +28548,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -28619,7 +28619,7 @@
       "segments": [
         {
           "word": "accessing",
-          "meaning": "(要確認)",
+          "meaning": "接近こと・している",
           "isUnknown": false,
           "lemma": "accessing",
           "reading": "accessing",
@@ -28835,7 +28835,7 @@
         },
         {
           "word": "procedures",
-          "meaning": "(要確認)",
+          "meaning": "手順",
           "isUnknown": false,
           "lemma": "procedures",
           "reading": "procedures",
@@ -29937,7 +29937,7 @@
         },
         {
           "word": "penalties",
-          "meaning": "(要確認)",
+          "meaning": "罰則",
           "isUnknown": false,
           "lemma": "penalties",
           "reading": "penalties",
@@ -31161,7 +31161,7 @@
         },
         {
           "word": "procedures",
-          "meaning": "(要確認)",
+          "meaning": "手順",
           "isUnknown": false,
           "lemma": "procedures",
           "reading": "procedures",
@@ -31754,7 +31754,7 @@
         },
         {
           "word": "cases",
-          "meaning": "(要確認)",
+          "meaning": "場合・容器（複数形）",
           "isUnknown": false,
           "lemma": "cases",
           "reading": "cases",
@@ -31935,7 +31935,7 @@
         },
         {
           "word": "processes",
-          "meaning": "(要確認)",
+          "meaning": "過程・プロセス",
           "isUnknown": false,
           "lemma": "processes",
           "reading": "processes",
@@ -32476,7 +32476,7 @@
         },
         {
           "word": "attended",
-          "meaning": "(要確認)",
+          "meaning": "出席する・世話をするた・された",
           "isUnknown": false,
           "lemma": "attended",
           "reading": "attended",
@@ -32509,7 +32509,7 @@
         },
         {
           "word": "sessions",
-          "meaning": "(要確認)",
+          "meaning": "セッション・会期",
           "isUnknown": false,
           "lemma": "sessions",
           "reading": "sessions",
@@ -33306,7 +33306,7 @@
         },
         {
           "word": "nicely",
-          "meaning": "(要確認)",
+          "meaning": "良い・素敵なに",
           "isUnknown": false,
           "lemma": "nicely",
           "reading": "nicely",
@@ -33380,7 +33380,7 @@
         },
         {
           "word": "allowed",
-          "meaning": "(要確認)",
+          "meaning": "許すた・された",
           "isUnknown": false,
           "lemma": "allowed",
           "reading": "allowed",
@@ -33902,7 +33902,7 @@
         },
         {
           "word": "pushing",
-          "meaning": "(要確認)",
+          "meaning": "押すこと・している",
           "isUnknown": false,
           "lemma": "pushing",
           "reading": "pushing",
@@ -34797,7 +34797,7 @@
       "segments": [
         {
           "word": "emphasizing",
-          "meaning": "(要確認)",
+          "meaning": "強調する・重視すること・している",
           "isUnknown": false,
           "lemma": "emphasizing",
           "reading": "emphasizing",
@@ -35312,7 +35312,7 @@
         },
         {
           "word": "technicians",
-          "meaning": "(要確認)",
+          "meaning": "迅速（複数形）",
           "isUnknown": false,
           "lemma": "technicians",
           "reading": "technicians",
@@ -35334,7 +35334,7 @@
         },
         {
           "word": "administrators",
-          "meaning": "(要確認)",
+          "meaning": "多くの（複数形）",
           "isUnknown": false,
           "lemma": "administrators",
           "reading": "administrators",
@@ -36282,7 +36282,7 @@
         },
         {
           "word": "partly",
-          "meaning": "(要確認)",
+          "meaning": "部分・分かれるに",
           "isUnknown": false,
           "lemma": "partly",
           "reading": "partly",
@@ -36337,7 +36337,7 @@
         },
         {
           "word": "instructions",
-          "meaning": "(要確認)",
+          "meaning": "指示・説明書",
           "isUnknown": false,
           "lemma": "instructions",
           "reading": "instructions",
@@ -36446,7 +36446,7 @@
         },
         {
           "word": "sessions",
-          "meaning": "(要確認)",
+          "meaning": "セッション・会期",
           "isUnknown": false,
           "lemma": "sessions",
           "reading": "sessions",
@@ -38090,7 +38090,7 @@
         },
         {
           "word": "ending",
-          "meaning": "(要確認)",
+          "meaning": "終わり・終えること・している",
           "isUnknown": false,
           "lemma": "ending",
           "reading": "ending",

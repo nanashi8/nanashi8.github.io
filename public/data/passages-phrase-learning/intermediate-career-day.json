@@ -76,7 +76,7 @@
         },
         {
           "word": "organizes",
-          "meaning": "(要確認)",
+          "meaning": "組織する・整理する（複数形）",
           "isUnknown": false,
           "lemma": "organizes",
           "reading": "organizes",
@@ -369,7 +369,7 @@
         },
         {
           "word": "jobs",
-          "meaning": "(要確認)",
+          "meaning": "仕事",
           "isUnknown": false,
           "lemma": "jobs",
           "reading": "jobs",
@@ -588,7 +588,7 @@
         },
         {
           "word": "occupations",
-          "meaning": "(要確認)",
+          "meaning": "職業",
           "isUnknown": false,
           "lemma": "occupations",
           "reading": "occupations",
@@ -2342,7 +2342,7 @@
       "segments": [
         {
           "word": "diagnoses",
-          "meaning": "(要確認)",
+          "meaning": "診断する（複数形）",
           "isUnknown": false,
           "lemma": "diagnoses",
           "reading": "diagnoses",
@@ -2353,7 +2353,7 @@
         },
         {
           "word": "illnesses",
-          "meaning": "(要確認)",
+          "meaning": "病気（複数形）",
           "isUnknown": false,
           "lemma": "illnesses",
           "reading": "illnesses",
@@ -2446,7 +2446,7 @@
         },
         {
           "word": "performs",
-          "meaning": "(要確認)",
+          "meaning": "実行する・演じる（複数形）",
           "isUnknown": false,
           "lemma": "performs",
           "reading": "performs",
@@ -2457,7 +2457,7 @@
         },
         {
           "word": "procedures",
-          "meaning": "(要確認)",
+          "meaning": "手順",
           "isUnknown": false,
           "lemma": "procedures",
           "reading": "procedures",
@@ -2863,7 +2863,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -3458,7 +3458,7 @@
         },
         {
           "word": "illnesses",
-          "meaning": "(要確認)",
+          "meaning": "病気（複数形）",
           "isUnknown": false,
           "lemma": "illnesses",
           "reading": "illnesses",
@@ -4040,7 +4040,7 @@
         },
         {
           "word": "procedures",
-          "meaning": "(要確認)",
+          "meaning": "手順",
           "isUnknown": false,
           "lemma": "procedures",
           "reading": "procedures",
@@ -4256,7 +4256,7 @@
         },
         {
           "word": "nursing",
-          "meaning": "(要確認)",
+          "meaning": "看護師こと・している",
           "isUnknown": false,
           "lemma": "nursing",
           "reading": "nursing",
@@ -4503,7 +4503,7 @@
         },
         {
           "word": "fulfilling",
-          "meaning": "(要確認)",
+          "meaning": "果たす・実現すること・している",
           "isUnknown": false,
           "lemma": "fulfilling",
           "reading": "fulfilling",
@@ -5121,7 +5121,7 @@
         },
         {
           "word": "dispenses",
-          "meaning": "(要確認)",
+          "meaning": "分配する・調剤する（複数形）",
           "isUnknown": false,
           "lemma": "dispenses",
           "reading": "dispenses",
@@ -6270,7 +6270,7 @@
         },
         {
           "word": "cases",
-          "meaning": "(要確認)",
+          "meaning": "場合・容器（複数形）",
           "isUnknown": false,
           "lemma": "cases",
           "reading": "cases",
@@ -6555,7 +6555,7 @@
       "segments": [
         {
           "word": "representing",
-          "meaning": "(要確認)",
+          "meaning": "表す・代表すること・している",
           "isUnknown": false,
           "lemma": "representing",
           "reading": "representing",
@@ -6566,7 +6566,7 @@
         },
         {
           "word": "clients",
-          "meaning": "(要確認)",
+          "meaning": "依頼人・顧客",
           "isUnknown": false,
           "lemma": "clients",
           "reading": "clients",
@@ -6681,7 +6681,7 @@
         },
         {
           "word": "lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "lawyers",
           "reading": "lawyers",
@@ -7043,7 +7043,7 @@
       "segments": [
         {
           "word": "Lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "Lawyers",
           "reading": "Lawyers",
@@ -7317,7 +7317,7 @@
         },
         {
           "word": "lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "lawyers",
           "reading": "lawyers",
@@ -7454,7 +7454,7 @@
         },
         {
           "word": "cases",
-          "meaning": "(要確認)",
+          "meaning": "場合・容器（複数形）",
           "isUnknown": false,
           "lemma": "cases",
           "reading": "cases",
@@ -7632,7 +7632,7 @@
         },
         {
           "word": "lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "lawyers",
           "reading": "lawyers",
@@ -7739,7 +7739,7 @@
         },
         {
           "word": "contracts",
-          "meaning": "(要確認)",
+          "meaning": "契約",
           "isUnknown": false,
           "lemma": "contracts",
           "reading": "contracts",
@@ -8281,7 +8281,7 @@
         },
         {
           "word": "fairly",
-          "meaning": "(要確認)",
+          "meaning": "かなり",
           "isUnknown": false,
           "lemma": "fairly",
           "reading": "fairly",
@@ -8810,7 +8810,7 @@
         },
         {
           "word": "patrolling",
-          "meaning": "(要確認)",
+          "meaning": "パトロールすること・している",
           "isUnknown": false,
           "lemma": "patrolling",
           "reading": "patrolling",
@@ -8821,7 +8821,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(要確認)",
+          "meaning": "近隣・地域（複数形）",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -8851,7 +8851,7 @@
       "segments": [
         {
           "word": "investigating",
-          "meaning": "(要確認)",
+          "meaning": "調査する・捜査すること・している",
           "isUnknown": false,
           "lemma": "investigating",
           "reading": "investigating",
@@ -9070,7 +9070,7 @@
         },
         {
           "word": "stressed",
-          "meaning": "(要確認)",
+          "meaning": "ストレス・強調た・された",
           "isUnknown": false,
           "lemma": "stressed",
           "reading": "stressed",
@@ -9270,7 +9270,7 @@
       "segments": [
         {
           "word": "Officers",
-          "meaning": "(要確認)",
+          "meaning": "役員・将校",
           "isUnknown": false,
           "lemma": "Officers",
           "reading": "Officers",
@@ -10246,7 +10246,7 @@
         },
         {
           "word": "inspiring",
-          "meaning": "(要確認)",
+          "meaning": "励ます・鼓舞すること・している",
           "isUnknown": false,
           "lemma": "inspiring",
           "reading": "inspiring",
@@ -11208,7 +11208,7 @@
         },
         {
           "word": "papers",
-          "meaning": "(要確認)",
+          "meaning": "紙・論文（複数形）",
           "isUnknown": false,
           "lemma": "papers",
           "reading": "papers",
@@ -11823,7 +11823,7 @@
         },
         {
           "word": "conducts",
-          "meaning": "(要確認)",
+          "meaning": "行う・指揮する（複数形）",
           "isUnknown": false,
           "lemma": "conducts",
           "reading": "conducts",
@@ -11905,7 +11905,7 @@
         },
         {
           "word": "professors",
-          "meaning": "(要確認)",
+          "meaning": "教授",
           "isUnknown": false,
           "lemma": "professors",
           "reading": "professors",
@@ -12413,7 +12413,7 @@
       "segments": [
         {
           "word": "Librarians",
-          "meaning": "(要確認)",
+          "meaning": "図書館員・司書（複数形）",
           "isUnknown": false,
           "lemma": "Librarians",
           "reading": "Librarians",
@@ -12794,7 +12794,7 @@
       "segments": [
         {
           "word": "librarians",
-          "meaning": "(要確認)",
+          "meaning": "図書館員・司書（複数形）",
           "isUnknown": false,
           "lemma": "librarians",
           "reading": "librarians",
@@ -12860,7 +12860,7 @@
         },
         {
           "word": "databases",
-          "meaning": "(要確認)",
+          "meaning": "データベース（複数形）",
           "isUnknown": false,
           "lemma": "databases",
           "reading": "databases",
@@ -13454,7 +13454,7 @@
         },
         {
           "word": "financially",
-          "meaning": "(要確認)",
+          "meaning": "財政の、金融のに",
           "isUnknown": false,
           "lemma": "financially",
           "reading": "financially",
@@ -13676,7 +13676,7 @@
         },
         {
           "word": "analyzing",
-          "meaning": "(要確認)",
+          "meaning": "分析すること・している",
           "isUnknown": false,
           "lemma": "analyzing",
           "reading": "analyzing",
@@ -14400,7 +14400,7 @@
         },
         {
           "word": "opening",
-          "meaning": "(要確認)",
+          "meaning": "開ける・開いたこと・している",
           "isUnknown": false,
           "lemma": "opening",
           "reading": "opening",
@@ -14456,7 +14456,7 @@
         },
         {
           "word": "loans",
-          "meaning": "(要確認)",
+          "meaning": "Loan（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "loans",
           "reading": "loans",
@@ -14497,7 +14497,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -15362,7 +15362,7 @@
         },
         {
           "word": "employs",
-          "meaning": "(要確認)",
+          "meaning": "雇う（複数形）",
           "isUnknown": false,
           "lemma": "employs",
           "reading": "employs",
@@ -16134,7 +16134,7 @@
         },
         {
           "word": "featured",
-          "meaning": "(要確認)",
+          "meaning": "アートワークた・された",
           "isUnknown": false,
           "lemma": "featured",
           "reading": "featured",
@@ -16268,7 +16268,7 @@
         },
         {
           "word": "architect",
-          "meaning": "(要確認)",
+          "meaning": "建築家",
           "isUnknown": false,
           "lemma": "architect",
           "reading": "architect",
@@ -16394,7 +16394,7 @@
       "segments": [
         {
           "word": "Architects",
-          "meaning": "(要確認)",
+          "meaning": "建築家（複数形）",
           "isUnknown": false,
           "lemma": "Architects",
           "reading": "Architects",
@@ -16756,7 +16756,7 @@
         },
         {
           "word": "appealing",
-          "meaning": "(要確認)",
+          "meaning": "自宅こと・している",
           "isUnknown": false,
           "lemma": "appealing",
           "reading": "appealing",
@@ -16841,7 +16841,7 @@
         },
         {
           "word": "structurally",
-          "meaning": "(要確認)",
+          "meaning": "ものでしたに",
           "isUnknown": false,
           "lemma": "structurally",
           "reading": "structurally",
@@ -17096,7 +17096,7 @@
         },
         {
           "word": "architects",
-          "meaning": "(要確認)",
+          "meaning": "建築家（複数形）",
           "isUnknown": false,
           "lemma": "architects",
           "reading": "architects",
@@ -17578,7 +17578,7 @@
         },
         {
           "word": "photographs",
-          "meaning": "(要確認)",
+          "meaning": "写真",
           "isUnknown": false,
           "lemma": "photographs",
           "reading": "photographs",
@@ -18651,7 +18651,7 @@
         },
         {
           "word": "websites",
-          "meaning": "(要確認)",
+          "meaning": "ウェブサイト",
           "isUnknown": false,
           "lemma": "websites",
           "reading": "websites",
@@ -19100,7 +19100,7 @@
         },
         {
           "word": "noted",
-          "meaning": "(要確認)",
+          "meaning": "メモ・音符た・された",
           "isUnknown": false,
           "lemma": "noted",
           "reading": "noted",
@@ -19462,7 +19462,7 @@
         },
         {
           "word": "appealing",
-          "meaning": "(要確認)",
+          "meaning": "自宅こと・している",
           "isUnknown": false,
           "lemma": "appealing",
           "reading": "appealing",
@@ -19684,7 +19684,7 @@
         },
         {
           "word": "performs",
-          "meaning": "(要確認)",
+          "meaning": "実行する・演じる（複数形）",
           "isUnknown": false,
           "lemma": "performs",
           "reading": "performs",
@@ -20068,7 +20068,7 @@
         },
         {
           "word": "fulfilling",
-          "meaning": "(要確認)",
+          "meaning": "果たす・実現すること・している",
           "isUnknown": false,
           "lemma": "fulfilling",
           "reading": "fulfilling",
@@ -20090,7 +20090,7 @@
         },
         {
           "word": "performing",
-          "meaning": "(要確認)",
+          "meaning": "実行する・演じること・している",
           "isUnknown": false,
           "lemma": "performing",
           "reading": "performing",
@@ -20153,7 +20153,7 @@
         },
         {
           "word": "composing",
-          "meaning": "(要確認)",
+          "meaning": "普及してきましたこと・している",
           "isUnknown": false,
           "lemma": "composing",
           "reading": "composing",
@@ -20480,7 +20480,7 @@
         },
         {
           "word": "repairing",
-          "meaning": "(要確認)",
+          "meaning": "修理すること・している",
           "isUnknown": false,
           "lemma": "repairing",
           "reading": "repairing",
@@ -21693,7 +21693,7 @@
         },
         {
           "word": "prospects",
-          "meaning": "(要確認)",
+          "meaning": "見込み・展望",
           "isUnknown": false,
           "lemma": "prospects",
           "reading": "prospects",
@@ -22032,7 +22032,7 @@
         },
         {
           "word": "tools",
-          "meaning": "(要確認)",
+          "meaning": "道具",
           "isUnknown": false,
           "lemma": "tools",
           "reading": "tools",
@@ -22087,7 +22087,7 @@
         },
         {
           "word": "diagnoses",
-          "meaning": "(要確認)",
+          "meaning": "診断する（複数形）",
           "isUnknown": false,
           "lemma": "diagnoses",
           "reading": "diagnoses",
@@ -22320,7 +22320,7 @@
         },
         {
           "word": "continuously",
-          "meaning": "(要確認)",
+          "meaning": "連続した・途切れないに",
           "isUnknown": false,
           "lemma": "continuously",
           "reading": "continuously",
@@ -22482,7 +22482,7 @@
         },
         {
           "word": "fixing",
-          "meaning": "(要確認)",
+          "meaning": "修理する・固定すること・している",
           "isUnknown": false,
           "lemma": "fixing",
           "reading": "fixing",
@@ -22663,7 +22663,7 @@
         },
         {
           "word": "diagnostics",
-          "meaning": "(要確認)",
+          "meaning": "日（複数形）",
           "isUnknown": false,
           "lemma": "diagnostics",
           "reading": "diagnostics",
@@ -24020,7 +24020,7 @@
         },
         {
           "word": "forming",
-          "meaning": "(要確認)",
+          "meaning": "形・用紙・形成すること・している",
           "isUnknown": false,
           "lemma": "forming",
           "reading": "forming",
@@ -24065,7 +24065,7 @@
       "segments": [
         {
           "word": "conducting",
-          "meaning": "(要確認)",
+          "meaning": "行う・指揮すること・している",
           "isUnknown": false,
           "lemma": "conducting",
           "reading": "conducting",
@@ -24106,7 +24106,7 @@
       "segments": [
         {
           "word": "analyzing",
-          "meaning": "(要確認)",
+          "meaning": "分析すること・している",
           "isUnknown": false,
           "lemma": "analyzing",
           "reading": "analyzing",
@@ -24273,7 +24273,7 @@
         },
         {
           "word": "documenting",
-          "meaning": "(要確認)",
+          "meaning": "文書・記録すること・している",
           "isUnknown": false,
           "lemma": "documenting",
           "reading": "documenting",
@@ -24796,7 +24796,7 @@
       "segments": [
         {
           "word": "collecting",
-          "meaning": "(要確認)",
+          "meaning": "集める・収集すること・している",
           "isUnknown": false,
           "lemma": "collecting",
           "reading": "collecting",
@@ -24840,7 +24840,7 @@
         },
         {
           "word": "samples",
-          "meaning": "(要確認)",
+          "meaning": "サンプル",
           "isUnknown": false,
           "lemma": "samples",
           "reading": "samples",
@@ -25698,7 +25698,7 @@
         },
         {
           "word": "represented",
-          "meaning": "(要確認)",
+          "meaning": "表す・代表するた・された",
           "isUnknown": false,
           "lemma": "represented",
           "reading": "represented",
@@ -25939,7 +25939,7 @@
         },
         {
           "word": "chefs",
-          "meaning": "(要確認)",
+          "meaning": "プロ（複数形）",
           "isUnknown": false,
           "lemma": "chefs",
           "reading": "chefs",
@@ -26013,7 +26013,7 @@
         },
         {
           "word": "evenings",
-          "meaning": "(要確認)",
+          "meaning": "夕方・晩（複数形）",
           "isUnknown": false,
           "lemma": "evenings",
           "reading": "evenings",
@@ -26035,7 +26035,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -26845,7 +26845,7 @@
         },
         {
           "word": "manages",
-          "meaning": "(要確認)",
+          "meaning": "管理する・何とかやる（複数形）",
           "isUnknown": false,
           "lemma": "manages",
           "reading": "manages",
@@ -26997,7 +26997,7 @@
         },
         {
           "word": "operations",
-          "meaning": "(要確認)",
+          "meaning": "操作・手術",
           "isUnknown": false,
           "lemma": "operations",
           "reading": "operations",
@@ -27305,7 +27305,7 @@
         },
         {
           "word": "positions",
-          "meaning": "(要確認)",
+          "meaning": "位置・立場",
           "isUnknown": false,
           "lemma": "positions",
           "reading": "positions",
@@ -27732,7 +27732,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -30479,7 +30479,7 @@
         },
         {
           "word": "surprised",
-          "meaning": "(要確認)",
+          "meaning": "みんなた・された",
           "isUnknown": false,
           "lemma": "surprised",
           "reading": "surprised",
@@ -30586,7 +30586,7 @@
         },
         {
           "word": "jobs",
-          "meaning": "(要確認)",
+          "meaning": "仕事",
           "isUnknown": false,
           "lemma": "jobs",
           "reading": "jobs",
@@ -32427,7 +32427,7 @@
       "segments": [
         {
           "word": "Lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "Lawyers",
           "reading": "Lawyers",
@@ -32460,7 +32460,7 @@
         },
         {
           "word": "cases",
-          "meaning": "(要確認)",
+          "meaning": "場合・容器（複数形）",
           "isUnknown": false,
           "lemma": "cases",
           "reading": "cases",
@@ -32624,7 +32624,7 @@
         },
         {
           "word": "pursuing",
-          "meaning": "(要確認)",
+          "meaning": "追求する・続けること・している",
           "isUnknown": false,
           "lemma": "pursuing",
           "reading": "pursuing",
@@ -32917,7 +32917,7 @@
         },
         {
           "word": "positions",
-          "meaning": "(要確認)",
+          "meaning": "位置・立場",
           "isUnknown": false,
           "lemma": "positions",
           "reading": "positions",
@@ -33055,7 +33055,7 @@
         },
         {
           "word": "typically",
-          "meaning": "(要確認)",
+          "meaning": "典型的に",
           "isUnknown": false,
           "lemma": "typically",
           "reading": "typically",
@@ -33123,7 +33123,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -33197,7 +33197,7 @@
         },
         {
           "word": "enormously",
-          "meaning": "(要確認)",
+          "meaning": "巨大なに",
           "isUnknown": false,
           "lemma": "enormously",
           "reading": "enormously",
@@ -33356,7 +33356,7 @@
         },
         {
           "word": "typically",
-          "meaning": "(要確認)",
+          "meaning": "典型的に",
           "isUnknown": false,
           "lemma": "typically",
           "reading": "typically",
@@ -33389,7 +33389,7 @@
         },
         {
           "word": "salaries",
-          "meaning": "(要確認)",
+          "meaning": "給料",
           "isUnknown": false,
           "lemma": "salaries",
           "reading": "salaries",
@@ -33875,7 +33875,7 @@
         },
         {
           "word": "rarely",
-          "meaning": "(要確認)",
+          "meaning": "めったに〜ない",
           "isUnknown": false,
           "lemma": "rarely",
           "reading": "rarely",
@@ -34019,7 +34019,7 @@
         },
         {
           "word": "journeys",
-          "meaning": "(要確認)",
+          "meaning": "旅行（複数形）",
           "isUnknown": false,
           "lemma": "journeys",
           "reading": "journeys",
@@ -35200,7 +35200,7 @@
         },
         {
           "word": "professors",
-          "meaning": "(要確認)",
+          "meaning": "教授",
           "isUnknown": false,
           "lemma": "professors",
           "reading": "professors",
@@ -35323,7 +35323,7 @@
         },
         {
           "word": "librarians",
-          "meaning": "(要確認)",
+          "meaning": "図書館員・司書（複数形）",
           "isUnknown": false,
           "lemma": "librarians",
           "reading": "librarians",
@@ -35814,7 +35814,7 @@
         },
         {
           "word": "lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "lawyers",
           "reading": "lawyers",
@@ -35836,7 +35836,7 @@
         },
         {
           "word": "architects",
-          "meaning": "(要確認)",
+          "meaning": "建築家（複数形）",
           "isUnknown": false,
           "lemma": "architects",
           "reading": "architects",
@@ -35962,7 +35962,7 @@
         },
         {
           "word": "practicing",
-          "meaning": "(要確認)",
+          "meaning": "練習・実践こと・している",
           "isUnknown": false,
           "lemma": "practicing",
           "reading": "practicing",
@@ -37283,7 +37283,7 @@
         },
         {
           "word": "enabling",
-          "meaning": "(要確認)",
+          "meaning": "新しいハビタット建設のような。こと・している",
           "isUnknown": false,
           "lemma": "enabling",
           "reading": "enabling",
@@ -37640,7 +37640,7 @@
       "segments": [
         {
           "word": "experiencing",
-          "meaning": "(要確認)",
+          "meaning": "経験こと・している",
           "isUnknown": false,
           "lemma": "experiencing",
           "reading": "experiencing",
@@ -38167,7 +38167,7 @@
         },
         {
           "word": "clients",
-          "meaning": "(要確認)",
+          "meaning": "依頼人・顧客",
           "isUnknown": false,
           "lemma": "clients",
           "reading": "clients",
@@ -38211,7 +38211,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(要確認)",
+          "meaning": "雇用主",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -38577,7 +38577,7 @@
         },
         {
           "word": "attracted",
-          "meaning": "(要確認)",
+          "meaning": "引きつけるた・された",
           "isUnknown": false,
           "lemma": "attracted",
           "reading": "attracted",
@@ -39342,7 +39342,7 @@
         },
         {
           "word": "okay",
-          "meaning": "(要確認)",
+          "meaning": "オーケー・大丈夫",
           "isUnknown": false,
           "lemma": "okay",
           "reading": "okay",
@@ -39405,7 +39405,7 @@
         },
         {
           "word": "figured",
-          "meaning": "(要確認)",
+          "meaning": "人物・数字・図た・された",
           "isUnknown": false,
           "lemma": "figured",
           "reading": "figured",
@@ -41141,7 +41141,7 @@
         },
         {
           "word": "loving",
-          "meaning": "(要確認)",
+          "meaning": "愛する・愛こと・している",
           "isUnknown": false,
           "lemma": "loving",
           "reading": "loving",
@@ -41898,7 +41898,7 @@
         },
         {
           "word": "plays",
-          "meaning": "(要確認)",
+          "meaning": "遊ぶ・演奏する（複数形）",
           "isUnknown": false,
           "lemma": "plays",
           "reading": "plays",
@@ -42547,7 +42547,7 @@
         },
         {
           "word": "satisfactions",
-          "meaning": "(要確認)",
+          "meaning": "満足・充足（複数形）",
           "isUnknown": false,
           "lemma": "satisfactions",
           "reading": "satisfactions",

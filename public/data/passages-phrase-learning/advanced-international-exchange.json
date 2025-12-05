@@ -1461,7 +1461,7 @@
         },
         {
           "word": "stops",
-          "meaning": "(要確認)",
+          "meaning": "止まる・やめる（複数形）",
           "isUnknown": false,
           "lemma": "stops",
           "reading": "stops",
@@ -2398,7 +2398,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -2571,7 +2571,7 @@
         },
         {
           "word": "admits",
-          "meaning": "(要確認)",
+          "meaning": "認める・入場を許す（複数形）",
           "isUnknown": false,
           "lemma": "admits",
           "reading": "admits",
@@ -3122,7 +3122,7 @@
         },
         {
           "word": "watches",
-          "meaning": "(要確認)",
+          "meaning": "見る・観察する（複数形）",
           "isUnknown": false,
           "lemma": "watches",
           "reading": "watches",
@@ -3307,7 +3307,7 @@
         },
         {
           "word": "surprisingly",
-          "meaning": "(要確認)",
+          "meaning": "驚くことに",
           "isUnknown": false,
           "lemma": "surprisingly",
           "reading": "surprisingly",
@@ -3595,7 +3595,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -4315,7 +4315,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -4479,7 +4479,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -4553,7 +4553,7 @@
         },
         {
           "word": "quietly",
-          "meaning": "(要確認)",
+          "meaning": "静かなに",
           "isUnknown": false,
           "lemma": "quietly",
           "reading": "quietly",
@@ -4594,7 +4594,7 @@
         },
         {
           "word": "speaks",
-          "meaning": "(要確認)",
+          "meaning": "話す（複数形）",
           "isUnknown": false,
           "lemma": "speaks",
           "reading": "speaks",
@@ -5062,7 +5062,7 @@
         },
         {
           "word": "stadiums",
-          "meaning": "(要確認)",
+          "meaning": "暑すぎません（複数形）",
           "isUnknown": false,
           "lemma": "stadiums",
           "reading": "stadiums",
@@ -5114,7 +5114,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -5449,7 +5449,7 @@
         },
         {
           "word": "comments",
-          "meaning": "(要確認)",
+          "meaning": "コメント・論評する（複数形）",
           "isUnknown": false,
           "lemma": "comments",
           "reading": "comments",
@@ -5512,7 +5512,7 @@
         },
         {
           "word": "joins",
-          "meaning": "(要確認)",
+          "meaning": "参加する・つなぐ（複数形）",
           "isUnknown": false,
           "lemma": "joins",
           "reading": "joins",
@@ -6183,7 +6183,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -6321,7 +6321,7 @@
       "segments": [
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -6668,7 +6668,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -6786,7 +6786,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -7426,7 +7426,7 @@
         },
         {
           "word": "hosted",
-          "meaning": "(要確認)",
+          "meaning": "Host（固有名詞）た・された",
           "isUnknown": false,
           "lemma": "hosted",
           "reading": "hosted",
@@ -7604,7 +7604,7 @@
         },
         {
           "word": "laughs",
-          "meaning": "(要確認)",
+          "meaning": "笑う・笑い（複数形）",
           "isUnknown": false,
           "lemma": "laughs",
           "reading": "laughs",
@@ -7936,7 +7936,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -8021,7 +8021,7 @@
         },
         {
           "word": "slopes",
-          "meaning": "(要確認)",
+          "meaning": "斜面",
           "isUnknown": false,
           "lemma": "slopes",
           "reading": "slopes",
@@ -8550,7 +8550,7 @@
         },
         {
           "word": "skied",
-          "meaning": "(要確認)",
+          "meaning": "空た・された",
           "isUnknown": false,
           "lemma": "skied",
           "reading": "skied",
@@ -8820,7 +8820,7 @@
         },
         {
           "word": "laughs",
-          "meaning": "(要確認)",
+          "meaning": "笑う・笑い（複数形）",
           "isUnknown": false,
           "lemma": "laughs",
           "reading": "laughs",
@@ -8924,7 +8924,7 @@
         },
         {
           "word": "beaches",
-          "meaning": "(要確認)",
+          "meaning": "浜辺・ビーチ",
           "isUnknown": false,
           "lemma": "beaches",
           "reading": "beaches",
@@ -9020,7 +9020,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -9360,7 +9360,7 @@
         },
         {
           "word": "waves",
-          "meaning": "(要確認)",
+          "meaning": "波",
           "isUnknown": false,
           "lemma": "waves",
           "reading": "waves",
@@ -9674,7 +9674,7 @@
         },
         {
           "word": "summers",
-          "meaning": "(要確認)",
+          "meaning": "夏",
           "isUnknown": false,
           "lemma": "summers",
           "reading": "summers",
@@ -10253,7 +10253,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -10629,7 +10629,7 @@
         },
         {
           "word": "responds",
-          "meaning": "(要確認)",
+          "meaning": "応答する（複数形）",
           "isUnknown": false,
           "lemma": "responds",
           "reading": "responds",
@@ -10725,7 +10725,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -11147,7 +11147,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -11265,7 +11265,7 @@
         },
         {
           "word": "indoors",
-          "meaning": "(要確認)",
+          "meaning": "屋内の・室内の（複数形）",
           "isUnknown": false,
           "lemma": "indoors",
           "reading": "indoors",
@@ -11424,7 +11424,7 @@
         },
         {
           "word": "speaks",
-          "meaning": "(要確認)",
+          "meaning": "話す（複数形）",
           "isUnknown": false,
           "lemma": "speaks",
           "reading": "speaks",
@@ -12551,7 +12551,7 @@
         },
         {
           "word": "proudly",
-          "meaning": "(要確認)",
+          "meaning": "誇りに思う・自慢のに",
           "isUnknown": false,
           "lemma": "proudly",
           "reading": "proudly",
@@ -12924,7 +12924,7 @@
         },
         {
           "word": "responds",
-          "meaning": "(要確認)",
+          "meaning": "応答する（複数形）",
           "isUnknown": false,
           "lemma": "responds",
           "reading": "responds",
@@ -13478,7 +13478,7 @@
         },
         {
           "word": "boxing",
-          "meaning": "(要確認)",
+          "meaning": "箱こと・している",
           "isUnknown": false,
           "lemma": "boxing",
           "reading": "boxing",
@@ -13758,7 +13758,7 @@
         },
         {
           "word": "excitedly",
-          "meaning": "(要確認)",
+          "meaning": "興奮させる（過去形・過去分詞）に",
           "isUnknown": false,
           "lemma": "excitedly",
           "reading": "excitedly",
@@ -14272,7 +14272,7 @@
         },
         {
           "word": "beaches",
-          "meaning": "(要確認)",
+          "meaning": "浜辺・ビーチ",
           "isUnknown": false,
           "lemma": "beaches",
           "reading": "beaches",
@@ -14412,7 +14412,7 @@
         },
         {
           "word": "laughs",
-          "meaning": "(要確認)",
+          "meaning": "笑う・笑い（複数形）",
           "isUnknown": false,
           "lemma": "laughs",
           "reading": "laughs",
@@ -14788,7 +14788,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -15382,7 +15382,7 @@
         },
         {
           "word": "lots",
-          "meaning": "(要確認)",
+          "meaning": "多量・くじ（複数形）",
           "isUnknown": false,
           "lemma": "lots",
           "reading": "lots",
@@ -15404,7 +15404,7 @@
         },
         {
           "word": "beaches",
-          "meaning": "(要確認)",
+          "meaning": "浜辺・ビーチ",
           "isUnknown": false,
           "lemma": "beaches",
           "reading": "beaches",
@@ -15703,7 +15703,7 @@
         },
         {
           "word": "heroes",
-          "meaning": "(要確認)",
+          "meaning": "英雄",
           "isUnknown": false,
           "lemma": "heroes",
           "reading": "heroes",
@@ -15780,7 +15780,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -15931,7 +15931,7 @@
         },
         {
           "word": "proudly",
-          "meaning": "(要確認)",
+          "meaning": "誇りに思う・自慢のに",
           "isUnknown": false,
           "lemma": "proudly",
           "reading": "proudly",
@@ -16300,7 +16300,7 @@
         },
         {
           "word": "heroes",
-          "meaning": "(要確認)",
+          "meaning": "英雄",
           "isUnknown": false,
           "lemma": "heroes",
           "reading": "heroes",
@@ -16972,7 +16972,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -17120,7 +17120,7 @@
         },
         {
           "word": "heroes",
-          "meaning": "(要確認)",
+          "meaning": "英雄",
           "isUnknown": false,
           "lemma": "heroes",
           "reading": "heroes",
@@ -17201,7 +17201,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -17598,7 +17598,7 @@
         },
         {
           "word": "laughs",
-          "meaning": "(要確認)",
+          "meaning": "笑う・笑い（複数形）",
           "isUnknown": false,
           "lemma": "laughs",
           "reading": "laughs",
@@ -18511,7 +18511,7 @@
         },
         {
           "word": "heroes",
-          "meaning": "(要確認)",
+          "meaning": "英雄",
           "isUnknown": false,
           "lemma": "heroes",
           "reading": "heroes",
@@ -18623,7 +18623,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -18867,7 +18867,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -20031,7 +20031,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -20484,7 +20484,7 @@
         },
         {
           "word": "agrees",
-          "meaning": "(要確認)",
+          "meaning": "同意する（複数形）",
           "isUnknown": false,
           "lemma": "agrees",
           "reading": "agrees",
@@ -20639,7 +20639,7 @@
         },
         {
           "word": "asks",
-          "meaning": "(要確認)",
+          "meaning": "たずねる（複数形）",
           "isUnknown": false,
           "lemma": "asks",
           "reading": "asks",
@@ -21084,7 +21084,7 @@
         },
         {
           "word": "responds",
-          "meaning": "(要確認)",
+          "meaning": "応答する（複数形）",
           "isUnknown": false,
           "lemma": "responds",
           "reading": "responds",
@@ -21199,7 +21199,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -21522,7 +21522,7 @@
         },
         {
           "word": "laughs",
-          "meaning": "(要確認)",
+          "meaning": "笑う・笑い（複数形）",
           "isUnknown": false,
           "lemma": "laughs",
           "reading": "laughs",
@@ -21659,7 +21659,7 @@
       "segments": [
         {
           "word": "Lots",
-          "meaning": "(要確認)",
+          "meaning": "多量・くじ（複数形）",
           "isUnknown": false,
           "lemma": "Lots",
           "reading": "Lots",
@@ -21871,7 +21871,7 @@
         },
         {
           "word": "surprising",
-          "meaning": "(要確認)",
+          "meaning": "みんなこと・している",
           "isUnknown": false,
           "lemma": "surprising",
           "reading": "surprising",
@@ -21978,7 +21978,7 @@
         },
         {
           "word": "agrees",
-          "meaning": "(要確認)",
+          "meaning": "同意する（複数形）",
           "isUnknown": false,
           "lemma": "agrees",
           "reading": "agrees",
@@ -22268,7 +22268,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -22932,7 +22932,7 @@
         },
         {
           "word": "observes",
-          "meaning": "(要確認)",
+          "meaning": "観察する・守る（複数形）",
           "isUnknown": false,
           "lemma": "observes",
           "reading": "observes",
@@ -23201,7 +23201,7 @@
         },
         {
           "word": "totally",
-          "meaning": "(要確認)",
+          "meaning": "完全に",
           "isUnknown": false,
           "lemma": "totally",
           "reading": "totally",
@@ -23459,7 +23459,7 @@
         },
         {
           "word": "agrees",
-          "meaning": "(要確認)",
+          "meaning": "同意する（複数形）",
           "isUnknown": false,
           "lemma": "agrees",
           "reading": "agrees",
@@ -24543,7 +24543,7 @@
         },
         {
           "word": "other's",
-          "meaning": "(要確認)",
+          "meaning": "他人の",
           "isUnknown": false,
           "lemma": "other's",
           "reading": "other's",
@@ -25166,7 +25166,7 @@
         },
         {
           "word": "temples",
-          "meaning": "(要確認)",
+          "meaning": "寺院",
           "isUnknown": false,
           "lemma": "temples",
           "reading": "temples",
@@ -25188,7 +25188,7 @@
         },
         {
           "word": "beaches",
-          "meaning": "(要確認)",
+          "meaning": "浜辺・ビーチ",
           "isUnknown": false,
           "lemma": "beaches",
           "reading": "beaches",
@@ -25295,7 +25295,7 @@
         },
         {
           "word": "invites",
-          "meaning": "(要確認)",
+          "meaning": "招待する（複数形）",
           "isUnknown": false,
           "lemma": "invites",
           "reading": "invites",
@@ -25891,7 +25891,7 @@
         },
         {
           "word": "dreaming",
-          "meaning": "(要確認)",
+          "meaning": "一緒こと・している",
           "isUnknown": false,
           "lemma": "dreaming",
           "reading": "dreaming",
@@ -25943,7 +25943,7 @@
         },
         {
           "word": "other's",
-          "meaning": "(要確認)",
+          "meaning": "他人の",
           "isUnknown": false,
           "lemma": "other's",
           "reading": "other's",
@@ -26209,7 +26209,7 @@
         },
         {
           "word": "snacks",
-          "meaning": "(要確認)",
+          "meaning": "軽食・おやつ（複数形）",
           "isUnknown": false,
           "lemma": "snacks",
           "reading": "snacks",
@@ -26387,7 +26387,7 @@
         },
         {
           "word": "agrees",
-          "meaning": "(要確認)",
+          "meaning": "同意する（複数形）",
           "isUnknown": false,
           "lemma": "agrees",
           "reading": "agrees",
@@ -26524,7 +26524,7 @@
         },
         {
           "word": "excitedly",
-          "meaning": "(要確認)",
+          "meaning": "興奮させる（過去形・過去分詞）に",
           "isUnknown": false,
           "lemma": "excitedly",
           "reading": "excitedly",
@@ -26728,7 +26728,7 @@
         },
         {
           "word": "sides",
-          "meaning": "(要確認)",
+          "meaning": "側・横（複数形）",
           "isUnknown": false,
           "lemma": "sides",
           "reading": "sides",
@@ -26947,7 +26947,7 @@
         },
         {
           "word": "other's",
-          "meaning": "(要確認)",
+          "meaning": "他人の",
           "isUnknown": false,
           "lemma": "other's",
           "reading": "other's",
@@ -27282,7 +27282,7 @@
         },
         {
           "word": "wonderfully",
-          "meaning": "(要確認)",
+          "meaning": "素晴らしいに",
           "isUnknown": false,
           "lemma": "wonderfully",
           "reading": "wonderfully",
@@ -27315,7 +27315,7 @@
         },
         {
           "word": "surprisingly",
-          "meaning": "(要確認)",
+          "meaning": "驚くことに",
           "isUnknown": false,
           "lemma": "surprisingly",
           "reading": "surprisingly",
@@ -27378,7 +27378,7 @@
         },
         {
           "word": "snacks",
-          "meaning": "(要確認)",
+          "meaning": "軽食・おやつ（複数形）",
           "isUnknown": false,
           "lemma": "snacks",
           "reading": "snacks",
@@ -28082,7 +28082,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -28104,7 +28104,7 @@
         },
         {
           "word": "proudly",
-          "meaning": "(要確認)",
+          "meaning": "誇りに思う・自慢のに",
           "isUnknown": false,
           "lemma": "proudly",
           "reading": "proudly",
@@ -28641,7 +28641,7 @@
         },
         {
           "word": "videos",
-          "meaning": "(要確認)",
+          "meaning": "ビデオ",
           "isUnknown": false,
           "lemma": "videos",
           "reading": "videos",
@@ -30128,7 +30128,7 @@
         },
         {
           "word": "genres",
-          "meaning": "(要確認)",
+          "meaning": "ジャンル",
           "isUnknown": false,
           "lemma": "genres",
           "reading": "genres",
@@ -30517,7 +30517,7 @@
         },
         {
           "word": "noted",
-          "meaning": "(要確認)",
+          "meaning": "メモ・音符た・された",
           "isUnknown": false,
           "lemma": "noted",
           "reading": "noted",
@@ -30602,7 +30602,7 @@
         },
         {
           "word": "instruments",
-          "meaning": "(要確認)",
+          "meaning": "楽器・器具",
           "isUnknown": false,
           "lemma": "instruments",
           "reading": "instruments",
@@ -30912,7 +30912,7 @@
         },
         {
           "word": "instruments",
-          "meaning": "(要確認)",
+          "meaning": "楽器・器具",
           "isUnknown": false,
           "lemma": "instruments",
           "reading": "instruments",
@@ -31103,7 +31103,7 @@
         },
         {
           "word": "mostly",
-          "meaning": "(要確認)",
+          "meaning": "大部分は・主に",
           "isUnknown": false,
           "lemma": "mostly",
           "reading": "mostly",
@@ -32508,7 +32508,7 @@
         },
         {
           "word": "filling",
-          "meaning": "(要確認)",
+          "meaning": "間こと・している",
           "isUnknown": false,
           "lemma": "filling",
           "reading": "filling",
@@ -32678,7 +32678,7 @@
         },
         {
           "word": "occasions",
-          "meaning": "(要確認)",
+          "meaning": "機会・場合",
           "isUnknown": false,
           "lemma": "occasions",
           "reading": "occasions",
@@ -32807,7 +32807,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -35216,7 +35216,7 @@
         },
         {
           "word": "approached",
-          "meaning": "(要確認)",
+          "meaning": "近づく・接近た・された",
           "isUnknown": false,
           "lemma": "approached",
           "reading": "approached",
@@ -35572,7 +35572,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -36167,7 +36167,7 @@
         },
         {
           "word": "lots",
-          "meaning": "(要確認)",
+          "meaning": "多量・くじ（複数形）",
           "isUnknown": false,
           "lemma": "lots",
           "reading": "lots",
@@ -36340,7 +36340,7 @@
         },
         {
           "word": "clubs",
-          "meaning": "(要確認)",
+          "meaning": "クラブ・部活（複数形）",
           "isUnknown": false,
           "lemma": "clubs",
           "reading": "clubs",
@@ -36381,7 +36381,7 @@
         },
         {
           "word": "clubs",
-          "meaning": "(要確認)",
+          "meaning": "クラブ・部活（複数形）",
           "isUnknown": false,
           "lemma": "clubs",
           "reading": "clubs",
@@ -36414,7 +36414,7 @@
         },
         {
           "word": "clubs",
-          "meaning": "(要確認)",
+          "meaning": "クラブ・部活（複数形）",
           "isUnknown": false,
           "lemma": "clubs",
           "reading": "clubs",
@@ -37675,7 +37675,7 @@
         },
         {
           "word": "rounded",
-          "meaning": "(要確認)",
+          "meaning": "丸い・回りた・された",
           "isUnknown": false,
           "lemma": "rounded",
           "reading": "rounded",
@@ -37793,7 +37793,7 @@
         },
         {
           "word": "grades",
-          "meaning": "(要確認)",
+          "meaning": "成績・等級",
           "isUnknown": false,
           "lemma": "grades",
           "reading": "grades",
@@ -38291,7 +38291,7 @@
         },
         {
           "word": "basically",
-          "meaning": "(要確認)",
+          "meaning": "基本的に",
           "isUnknown": false,
           "lemma": "basically",
           "reading": "basically",
@@ -39713,7 +39713,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -39897,7 +39897,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -40177,7 +40177,7 @@
         },
         {
           "word": "cafes",
-          "meaning": "(要確認)",
+          "meaning": "カフェ・喫茶店（複数形）",
           "isUnknown": false,
           "lemma": "cafes",
           "reading": "cafes",
@@ -40520,7 +40520,7 @@
         },
         {
           "word": "trails",
-          "meaning": "(要確認)",
+          "meaning": "小道",
           "isUnknown": false,
           "lemma": "trails",
           "reading": "trails",
@@ -40830,7 +40830,7 @@
       "segments": [
         {
           "word": "Weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "Weekends",
           "reading": "Weekends",
@@ -42153,7 +42153,7 @@
         },
         {
           "word": "temples",
-          "meaning": "(要確認)",
+          "meaning": "寺院",
           "isUnknown": false,
           "lemma": "temples",
           "reading": "temples",
@@ -42315,7 +42315,7 @@
         },
         {
           "word": "temples",
-          "meaning": "(要確認)",
+          "meaning": "寺院",
           "isUnknown": false,
           "lemma": "temples",
           "reading": "temples",
@@ -43347,7 +43347,7 @@
         },
         {
           "word": "smartphones",
-          "meaning": "(要確認)",
+          "meaning": "スマートフォン（複数形）",
           "isUnknown": false,
           "lemma": "smartphones",
           "reading": "smartphones",
@@ -43391,7 +43391,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -44201,7 +44201,7 @@
         },
         {
           "word": "noted",
-          "meaning": "(要確認)",
+          "meaning": "メモ・音符た・された",
           "isUnknown": false,
           "lemma": "noted",
           "reading": "noted",
@@ -44275,7 +44275,7 @@
         },
         {
           "word": "towns",
-          "meaning": "(要確認)",
+          "meaning": "町",
           "isUnknown": false,
           "lemma": "towns",
           "reading": "towns",
@@ -44297,7 +44297,7 @@
         },
         {
           "word": "villages",
-          "meaning": "(要確認)",
+          "meaning": "村",
           "isUnknown": false,
           "lemma": "villages",
           "reading": "villages",
@@ -44703,7 +44703,7 @@
         },
         {
           "word": "videos",
-          "meaning": "(要確認)",
+          "meaning": "ビデオ",
           "isUnknown": false,
           "lemma": "videos",
           "reading": "videos",
@@ -45142,7 +45142,7 @@
         },
         {
           "word": "passes",
-          "meaning": "(要確認)",
+          "meaning": "通過する・合格する（複数形）",
           "isUnknown": false,
           "lemma": "passes",
           "reading": "passes",
@@ -45611,7 +45611,7 @@
         },
         {
           "word": "vendors",
-          "meaning": "(要確認)",
+          "meaning": "販売業者",
           "isUnknown": false,
           "lemma": "vendors",
           "reading": "vendors",
@@ -46203,7 +46203,7 @@
         },
         {
           "word": "modernizing",
-          "meaning": "(要確認)",
+          "meaning": "modernizeこと・している",
           "isUnknown": false,
           "lemma": "modernizing",
           "reading": "modernizing",
@@ -46580,7 +46580,7 @@
         },
         {
           "word": "reached",
-          "meaning": "(要確認)",
+          "meaning": "達する・届くた・された",
           "isUnknown": false,
           "lemma": "reached",
           "reading": "reached",
@@ -46651,7 +46651,7 @@
         },
         {
           "word": "seats",
-          "meaning": "(要確認)",
+          "meaning": "座席",
           "isUnknown": false,
           "lemma": "seats",
           "reading": "seats",
@@ -46826,7 +46826,7 @@
         },
         {
           "word": "finishing",
-          "meaning": "(要確認)",
+          "meaning": "終える・仕上げこと・している",
           "isUnknown": false,
           "lemma": "finishing",
           "reading": "finishing",
@@ -47001,7 +47001,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -47876,7 +47876,7 @@
         },
         {
           "word": "appeals",
-          "meaning": "(要確認)",
+          "meaning": "自宅（複数形）",
           "isUnknown": false,
           "lemma": "appeals",
           "reading": "appeals",
@@ -48109,7 +48109,7 @@
         },
         {
           "word": "organizing",
-          "meaning": "(要確認)",
+          "meaning": "組織する・整理すること・している",
           "isUnknown": false,
           "lemma": "organizing",
           "reading": "organizing",
@@ -48238,7 +48238,7 @@
         },
         {
           "word": "bringing",
-          "meaning": "(要確認)",
+          "meaning": "持ってくる・連れてくること・している",
           "isUnknown": false,
           "lemma": "bringing",
           "reading": "bringing",
@@ -49011,7 +49011,7 @@
         },
         {
           "word": "representing",
-          "meaning": "(要確認)",
+          "meaning": "表す・代表すること・している",
           "isUnknown": false,
           "lemma": "representing",
           "reading": "representing",
@@ -49066,7 +49066,7 @@
         },
         {
           "word": "bridges",
-          "meaning": "(要確認)",
+          "meaning": "橋（複数形）",
           "isUnknown": false,
           "lemma": "bridges",
           "reading": "bridges",
@@ -49321,7 +49321,7 @@
         },
         {
           "word": "educates",
-          "meaning": "(要確認)",
+          "meaning": "教育する（複数形）",
           "isUnknown": false,
           "lemma": "educates",
           "reading": "educates",
@@ -49384,7 +49384,7 @@
         },
         {
           "word": "traveling",
-          "meaning": "(要確認)",
+          "meaning": "旅行すること・している",
           "isUnknown": false,
           "lemma": "traveling",
           "reading": "traveling",
@@ -50694,7 +50694,7 @@
         },
         {
           "word": "players",
-          "meaning": "(要確認)",
+          "meaning": "選手・演奏者",
           "isUnknown": false,
           "lemma": "players",
           "reading": "players",
@@ -51327,7 +51327,7 @@
         },
         {
           "word": "observations",
-          "meaning": "(要確認)",
+          "meaning": "観察",
           "isUnknown": false,
           "lemma": "observations",
           "reading": "observations",
@@ -51467,7 +51467,7 @@
         },
         {
           "word": "thoughtfully",
-          "meaning": "(要確認)",
+          "meaning": "思慮深い・親切なに",
           "isUnknown": false,
           "lemma": "thoughtfully",
           "reading": "thoughtfully",
@@ -51530,7 +51530,7 @@
         },
         {
           "word": "thinks",
-          "meaning": "(要確認)",
+          "meaning": "考える（複数形）",
           "isUnknown": false,
           "lemma": "thinks",
           "reading": "thinks",
@@ -53137,7 +53137,7 @@
         },
         {
           "word": "ji",
-          "meaning": "(要確認)",
+          "meaning": "二・ji（日本語のローマ字）",
           "isUnknown": false,
           "lemma": "ji",
           "reading": "ji",
@@ -53705,7 +53705,7 @@
         },
         {
           "word": "exchanged",
-          "meaning": "(要確認)",
+          "meaning": "交換する・為替た・された",
           "isUnknown": false,
           "lemma": "exchanged",
           "reading": "exchanged",
@@ -53831,7 +53831,7 @@
         },
         {
           "word": "promised",
-          "meaning": "(要確認)",
+          "meaning": "約束た・された",
           "isUnknown": false,
           "lemma": "promised",
           "reading": "promised",
@@ -54382,7 +54382,7 @@
         },
         {
           "word": "sides",
-          "meaning": "(要確認)",
+          "meaning": "側・横（複数形）",
           "isUnknown": false,
           "lemma": "sides",
           "reading": "sides",
@@ -54786,7 +54786,7 @@
         },
         {
           "word": "participants",
-          "meaning": "(要確認)",
+          "meaning": "参加者",
           "isUnknown": false,
           "lemma": "participants",
           "reading": "participants",
@@ -55618,7 +55618,7 @@
         },
         {
           "word": "manufactured",
-          "meaning": "(要確認)",
+          "meaning": "環境問題た・された",
           "isUnknown": false,
           "lemma": "manufactured",
           "reading": "manufactured",
@@ -56590,7 +56590,7 @@
         },
         {
           "word": "nodded",
-          "meaning": "(要確認)",
+          "meaning": "うなずいた",
           "isUnknown": false,
           "lemma": "nodded",
           "reading": "nodded",
@@ -58315,7 +58315,7 @@
         },
         {
           "word": "loss",
-          "meaning": "(要確認)",
+          "meaning": "プラスチック（複数形）",
           "isUnknown": false,
           "lemma": "loss",
           "reading": "loss",
@@ -58524,7 +58524,7 @@
         },
         {
           "word": "agreements",
-          "meaning": "(要確認)",
+          "meaning": "Agreement（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "agreements",
           "reading": "agreements",
@@ -58590,7 +58590,7 @@
         },
         {
           "word": "enormously",
-          "meaning": "(要確認)",
+          "meaning": "巨大なに",
           "isUnknown": false,
           "lemma": "enormously",
           "reading": "enormously",
@@ -58746,7 +58746,7 @@
         },
         {
           "word": "platforms",
-          "meaning": "(要確認)",
+          "meaning": "プラットフォーム",
           "isUnknown": false,
           "lemma": "platforms",
           "reading": "platforms",
@@ -59525,7 +59525,7 @@
         },
         {
           "word": "overwhelming",
-          "meaning": "(要確認)",
+          "meaning": "圧倒する・打ちのめすこと・している",
           "isUnknown": false,
           "lemma": "overwhelming",
           "reading": "overwhelming",
@@ -60459,7 +60459,7 @@
         },
         {
           "word": "formed",
-          "meaning": "(要確認)",
+          "meaning": "形・用紙・形成するた・された",
           "isUnknown": false,
           "lemma": "formed",
           "reading": "formed",
@@ -60866,7 +60866,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -60940,7 +60940,7 @@
         },
         {
           "word": "suffering",
-          "meaning": "(要確認)",
+          "meaning": "苦しむこと・している",
           "isUnknown": false,
           "lemma": "suffering",
           "reading": "suffering",
@@ -61176,7 +61176,7 @@
         },
         {
           "word": "facts",
-          "meaning": "(要確認)",
+          "meaning": "事実（複数形）",
           "isUnknown": false,
           "lemma": "facts",
           "reading": "facts",
@@ -61495,7 +61495,7 @@
         },
         {
           "word": "beings",
-          "meaning": "(要確認)",
+          "meaning": "〜である・いる（現在分詞・動名詞）（複数形）",
           "isUnknown": false,
           "lemma": "beings",
           "reading": "beings",
@@ -61854,7 +61854,7 @@
         },
         {
           "word": "other's",
-          "meaning": "(要確認)",
+          "meaning": "他人の",
           "isUnknown": false,
           "lemma": "other's",
           "reading": "other's",
@@ -61917,7 +61917,7 @@
         },
         {
           "word": "wonderfully",
-          "meaning": "(要確認)",
+          "meaning": "素晴らしいに",
           "isUnknown": false,
           "lemma": "wonderfully",
           "reading": "wonderfully",
