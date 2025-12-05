@@ -135,7 +135,8 @@
 }
 
 .dark-mode .quiz-view {
-  /* ダークモード用の追加スタイルは不要 */
+  background: var(--gray-950);
+  color: var(--gray-100);
 }
 
 /* 問題カード */
@@ -166,6 +167,7 @@
 }
 
 .dark-mode .question-nav-row {
-  background: var(--gray-800);
-  border-color: var(--gray-600);
+  background: var(--gray-900);
+  border-color: var(--gray-700);
+  color: var(--gray-100);
 }

@@ -101,7 +101,7 @@ function ScoreBoard({
     if (strugglingRef.current) {
       strugglingRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.strugglingPercentage)));
     }
-  }, [detailedStatsData]);
+  }, [detailedStatsData, activeTab]); // activeTabも依存に追加してタブ切り替え時に更新
 
   // 本日の統計を取得（メモ化 - onAnswerTimeで更新）
   const { todayAccuracy, todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode, onAnswerTime]);
@@ -281,13 +281,24 @@ function ScoreBoard({
               <strong className="stat-text-value review">{detailedStats.strugglingCount}</strong>
               {reviewLimit !== null && <span className="stat-text-sub">/{reviewLimit}</span>}
               {(mode === 'translation' || mode === 'spelling') && (
-                <span 
-                  className="plan-setting-icon"
-                  onClick={() => setShowPlanSettings(!showPlanSettings)}
-                  title="上限設定"
-                >
-                  ⚙️
-                </span>
+                <>
+                  {detailedStats.strugglingCount > 0 && onReviewFocus && (
+                    <span 
+                      className="plan-review-icon"
+                      onClick={onReviewFocus}
+                      title="要復習モード開始"
+                    >
+                      🔥
+                    </span>
+                  )}
+                  <span 
+                    className="plan-setting-icon"
+                    onClick={() => setShowPlanSettings(!showPlanSettings)}
+                    title="上限設定"
+                  >
+                    ⚙️
+                  </span>
+                </>
               )}
             </div>
             {showPlanSettings && (mode === 'translation' || mode === 'spelling') && (
@@ -427,12 +438,17 @@ function ScoreBoard({
                 }
                 return (
                   <div className="word-detail-container">
-                    <div className="word-detail-title">📊 {currentWord} の学習データ</div>
+                    <div className="word-detail-title">
+                      📊 {currentWord} の学習データ
+                      <span className="word-status-badge">
+                        {wordData.statusIcon} {wordData.statusLabel}
+                      </span>
+                    </div>
                     <div className="word-detail-stats">
                       <span className="word-stat-label">正解:</span>
                       <strong className="word-stat-value">{wordData.correctCount}/{wordData.totalCount}回</strong>
                       <span className="word-stat-divider">｜</span>
-                      {wordData.accuracyHistory && (
+                      {wordData.accuracyHistory && wordData.accuracyHistory.length > 0 && (
                         <>
                           <span className="word-stat-label">履歴:</span>
                           <span className="word-history-icons">{wordData.accuracyHistory}</span>

@@ -19,8 +19,7 @@
       "choices": [
         "Open",
         "Opens",
-        "Opening",
-        "Opened"
+        "Opening"
       ],
       "correctAnswer": "Open",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "Be",
         "Are",
-        "Is",
-        "Am"
+        "Is"
       ],
       "correctAnswer": "Be",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "Come",
         "Comes",
-        "Coming",
-        "Came"
+        "Coming"
       ],
       "correctAnswer": "Come",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "Don't",
         "Doesn't",
-        "Not",
-        "No"
+        "Not"
       ],
       "correctAnswer": "Don't",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "Let's",
         "Let",
-        "Lets",
-        "Let us"
+        "Lets"
       ],
       "correctAnswer": "Let's",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "Read",
         "Reads",
-        "Reading",
-        "To read"
+        "Reading"
       ],
       "correctAnswer": "Read",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "be",
         "are",
-        "is",
-        "am"
+        "is"
       ],
       "correctAnswer": "be",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "Close",
         "Closes",
-        "Closing",
-        "Closed"
+        "Closing"
       ],
       "correctAnswer": "Close",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "Don't",
         "Doesn't",
-        "Not",
-        "No"
+        "Not"
       ],
       "correctAnswer": "Don't",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "study",
         "studies",
-        "studying",
-        "studied"
+        "studying"
       ],
       "correctAnswer": "study",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "Be",
         "Is",
-        "Are",
-        "Am"
+        "Are"
       ],
       "correctAnswer": "Be",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "take",
         "takes",
-        "taking",
-        "took"
+        "taking"
       ],
       "correctAnswer": "take",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "go",
         "goes",
-        "going",
-        "went"
+        "going"
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "Get",
         "Gets",
-        "Getting",
-        "Got"
+        "Getting"
       ],
       "correctAnswer": "Get",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "give",
         "gives",
-        "giving",
-        "gave"
+        "giving"
       ],
       "correctAnswer": "give",
       "difficulty": "advanced",
@@ -262,7 +247,8 @@
       "correctAnswer": "Sit down.",
       "difficulty": "beginner",
       "explanation": "sit downで「座る」。命令文は原形で始まる。",
-      "hint": "Sit down"
+      "hint": "Sit down",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-002",
@@ -275,7 +261,8 @@
       "correctAnswer": "Stand up.",
       "difficulty": "beginner",
       "explanation": "stand upで「立つ」。Stand up.で「立ちなさい」。",
-      "hint": "Stand up"
+      "hint": "Stand up",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-003",
@@ -288,7 +275,8 @@
       "correctAnswer": "Be quiet.",
       "difficulty": "beginner",
       "explanation": "be動詞の命令形。Be quiet.で「静かにしなさい」。",
-      "hint": "Be quiet"
+      "hint": "Be quiet",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-004",
@@ -301,7 +289,8 @@
       "correctAnswer": "Don't talk.",
       "difficulty": "beginner",
       "explanation": "否定の命令文。Don't talk.で「話さないで」。",
-      "hint": "Don't talk"
+      "hint": "Don't talk",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-005",
@@ -314,7 +303,8 @@
       "correctAnswer": "Let's go.",
       "difficulty": "beginner",
       "explanation": "Let's goで「行きましょう」。勧誘の表現。",
-      "hint": "Let's go"
+      "hint": "Let's go",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-006",
@@ -328,7 +318,8 @@
       "correctAnswer": "Read this book.",
       "difficulty": "intermediate",
       "explanation": "命令文の語順。Read this book.で「この本を読みなさい」。",
-      "hint": "Read this"
+      "hint": "Read this",
+      "wordCount": 3
     },
     {
       "id": "g1-u7-so-007",
@@ -341,7 +332,8 @@
       "correctAnswer": "Don't shout.",
       "difficulty": "intermediate",
       "explanation": "shoutは「叫ぶ」。Don't shout.で「叫ばないで」。",
-      "hint": "Open the"
+      "hint": "Open the",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-008",
@@ -355,7 +347,8 @@
       "correctAnswer": "Don't be late.",
       "difficulty": "intermediate",
       "explanation": "Don't be late.で「遅れないで」。Don't + be + 形容詞。",
-      "hint": "Don't be"
+      "hint": "Don't be",
+      "wordCount": 3
     },
     {
       "id": "g1-u7-so-009",
@@ -369,7 +362,8 @@
       "correctAnswer": "Let's eat together.",
       "difficulty": "intermediate",
       "explanation": "Let's eat together.で「一緒に食べましょう」。",
-      "hint": "Let's eat"
+      "hint": "Let's eat",
+      "wordCount": 3
     },
     {
       "id": "g1-u7-so-010",
@@ -383,7 +377,8 @@
       "correctAnswer": "Don't run here.",
       "difficulty": "intermediate",
       "explanation": "Don't run here.で「ここで走らないで」。",
-      "hint": "Don't run"
+      "hint": "Don't run",
+      "wordCount": 3
     },
     {
       "id": "g1-u7-so-011",
@@ -396,7 +391,8 @@
       "correctAnswer": "Speak English.",
       "difficulty": "advanced",
       "explanation": "Speak English.で「英語を話しなさい」。",
-      "hint": "Speak English"
+      "hint": "Speak English",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-012",
@@ -409,7 +405,8 @@
       "correctAnswer": "Don't worry.",
       "difficulty": "advanced",
       "explanation": "Don't worry.で「心配しないで」。よく使う表現。",
-      "hint": "Don't worry"
+      "hint": "Don't worry",
+      "wordCount": 2
     },
     {
       "id": "g1-u7-so-013",
@@ -423,7 +420,8 @@
       "correctAnswer": "Let's play tennis.",
       "difficulty": "advanced",
       "explanation": "Let's play tennis.で「テニスをしましょう」。",
-      "hint": "Let's play"
+      "hint": "Let's play",
+      "wordCount": 3
     },
     {
       "id": "g1-u7-so-014",
@@ -438,7 +436,8 @@
       "correctAnswer": "Don't forget your homework.",
       "difficulty": "advanced",
       "explanation": "Don't forget your homework.で「宿題を忘れないで」。",
-      "hint": "Don't forget"
+      "hint": "Don't forget",
+      "wordCount": 4
     },
     {
       "id": "g1-u7-so-015",
@@ -453,7 +452,8 @@
       "correctAnswer": "Be kind to others.",
       "difficulty": "advanced",
       "explanation": "Be kind to others.で「他の人に親切にしなさい」。",
-      "hint": "Be kind"
+      "hint": "Be kind",
+      "wordCount": 4
     },
     {
       "id": "g1-u7-para-001",
@@ -464,8 +464,7 @@
       "choices": [
         "Open the door.",
         "Opens the door.",
-        "Opening the door.",
-        "You open the door."
+        "Opening the door."
       ],
       "correctAnswer": "Open the door.",
       "difficulty": "beginner",
@@ -481,8 +480,7 @@
       "choices": [
         "Don't run.",
         "Not run.",
-        "No run.",
-        "Doesn't run."
+        "No run."
       ],
       "correctAnswer": "Don't run.",
       "difficulty": "beginner",
@@ -498,8 +496,7 @@
       "choices": [
         "Sleep.",
         "Sleeps.",
-        "Sleeping.",
-        "To sleep."
+        "Sleeping."
       ],
       "correctAnswer": "Sleep.",
       "difficulty": "beginner",
@@ -515,8 +512,7 @@
       "choices": [
         "Let's play soccer.",
         "Let play soccer.",
-        "Lets play soccer.",
-        "Let's plays soccer."
+        "Lets play soccer."
       ],
       "correctAnswer": "Let's play soccer.",
       "difficulty": "beginner",
@@ -532,8 +528,7 @@
       "choices": [
         "Be happy.",
         "Are happy.",
-        "Is happy.",
-        "Happy."
+        "Is happy."
       ],
       "correctAnswer": "Be happy.",
       "difficulty": "beginner",
@@ -549,8 +544,7 @@
       "choices": [
         "Don't sit here.",
         "Not sit here.",
-        "Doesn't sit here.",
-        "No sit here."
+        "Doesn't sit here."
       ],
       "correctAnswer": "Don't sit here.",
       "difficulty": "intermediate",
@@ -566,8 +560,7 @@
       "choices": [
         "Please close the window.",
         "Please closes the window.",
-        "Close the window please.",
-        "Please closing the window."
+        "Close the window please."
       ],
       "correctAnswer": "Please close the window.",
       "difficulty": "intermediate",
@@ -583,8 +576,7 @@
       "choices": [
         "Shall we play basketball?",
         "Shall we plays basketball?",
-        "Shall we playing basketball?",
-        "Shall play basketball?"
+        "Shall we playing basketball?"
       ],
       "correctAnswer": "Shall we play basketball?",
       "difficulty": "intermediate",
@@ -600,8 +592,7 @@
       "choices": [
         "Don't cry.",
         "Doesn't cry.",
-        "Not cry.",
-        "No cry."
+        "Not cry."
       ],
       "correctAnswer": "Don't cry.",
       "difficulty": "intermediate",
@@ -617,8 +608,7 @@
       "choices": [
         "Be careful.",
         "Are careful.",
-        "Is careful.",
-        "Careful."
+        "Is careful."
       ],
       "correctAnswer": "Be careful.",
       "difficulty": "intermediate",
@@ -634,8 +624,7 @@
       "choices": [
         "Study hard because you have a test tomorrow.",
         "Study hard because you has a test tomorrow.",
-        "Studies hard because you have a test tomorrow.",
-        "Study hard you have a test tomorrow."
+        "Studies hard because you have a test tomorrow."
       ],
       "correctAnswer": "Study hard because you have a test tomorrow.",
       "difficulty": "advanced",
@@ -651,8 +640,7 @@
       "choices": [
         "Don't be noisy.",
         "Not be noisy.",
-        "Doesn't be noisy.",
-        "Be not noisy."
+        "Doesn't be noisy."
       ],
       "correctAnswer": "Don't be noisy.",
       "difficulty": "advanced",
@@ -668,8 +656,7 @@
       "choices": [
         "Let's not go there.",
         "Don't let's go there.",
-        "Let's don't go there.",
-        "Not let's go there."
+        "Let's don't go there."
       ],
       "correctAnswer": "Let's not go there.",
       "difficulty": "advanced",
@@ -685,8 +672,7 @@
       "choices": [
         "Please listen to me, please.",
         "Please listens to me, please.",
-        "Listen to me please, please.",
-        "Please listening to me, please."
+        "Listen to me please, please."
       ],
       "correctAnswer": "Please listen to me, please.",
       "difficulty": "advanced",
@@ -702,8 +688,7 @@
       "choices": [
         "Why don't you take a rest?",
         "Why don't you takes a rest?",
-        "Why you don't take a rest?",
-        "Why don't take a rest?"
+        "Why you don't take a rest?"
       ],
       "correctAnswer": "Why don't you take a rest?",
       "difficulty": "advanced",
@@ -719,8 +704,7 @@
       "choices": [
         "Open",
         "Opens",
-        "Opening",
-        "Opened"
+        "Opening"
       ],
       "correctAnswer": "Open",
       "difficulty": "beginner",
@@ -736,8 +720,7 @@
       "choices": [
         "Speak",
         "Speaks",
-        "Speaking",
-        "Spoke"
+        "Speaking"
       ],
       "correctAnswer": "Speak",
       "difficulty": "beginner",
@@ -753,8 +736,7 @@
       "choices": [
         "Be",
         "Are",
-        "Is",
-        "Am"
+        "Is"
       ],
       "correctAnswer": "Be",
       "difficulty": "beginner",
@@ -770,8 +752,7 @@
       "choices": [
         "sit",
         "sits",
-        "sitting",
-        "sat"
+        "sitting"
       ],
       "correctAnswer": "sit",
       "difficulty": "beginner",
@@ -787,8 +768,7 @@
       "choices": [
         "play",
         "plays",
-        "playing",
-        "played"
+        "playing"
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
@@ -804,8 +784,7 @@
       "choices": [
         "Do",
         "Does",
-        "Doing",
-        "Did"
+        "Doing"
       ],
       "correctAnswer": "Do",
       "difficulty": "intermediate",
@@ -821,8 +800,7 @@
       "choices": [
         "be",
         "are",
-        "is",
-        "am"
+        "is"
       ],
       "correctAnswer": "be",
       "difficulty": "intermediate",
@@ -838,8 +816,7 @@
       "choices": [
         "Get",
         "Gets",
-        "Getting",
-        "Got"
+        "Getting"
       ],
       "correctAnswer": "Get",
       "difficulty": "advanced",
@@ -855,8 +832,7 @@
       "choices": [
         "go",
         "goes",
-        "going",
-        "went"
+        "going"
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
@@ -872,8 +848,7 @@
       "choices": [
         "give",
         "gives",
-        "giving",
-        "gave"
+        "giving"
       ],
       "correctAnswer": "give",
       "difficulty": "advanced",
@@ -898,8 +873,7 @@
       "choices": [
         "OK",
         "Yes, I do",
-        "Yes, I am",
-        "I open"
+        "Yes, I am"
       ],
       "correctAnswer": "OK",
       "difficulty": "beginner",
@@ -924,8 +898,7 @@
       "choices": [
         "Yes",
         "OK",
-        "Sure",
-        "All right"
+        "Sure"
       ],
       "correctAnswer": "Yes",
       "difficulty": "beginner",
@@ -950,8 +923,7 @@
       "choices": [
         "No",
         "Not",
-        "Don't",
-        "Never"
+        "Don't"
       ],
       "correctAnswer": "No",
       "difficulty": "intermediate",
@@ -976,8 +948,7 @@
       "choices": [
         "sorry",
         "OK",
-        "fine",
-        "good"
+        "fine"
       ],
       "correctAnswer": "sorry",
       "difficulty": "intermediate",
@@ -1002,8 +973,7 @@
       "choices": [
         "help",
         "helps",
-        "helping",
-        "helped"
+        "helping"
       ],
       "correctAnswer": "help",
       "difficulty": "advanced",

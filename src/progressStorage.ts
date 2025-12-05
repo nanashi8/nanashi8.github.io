@@ -140,13 +140,11 @@ export function clearSessionHistory(mode: 'translation' | 'spelling'): void {
 
 // 学習設定の型定義
 export interface StudySettings {
-  maxStudyCount: number; // 学習数上限（デフォルト: 20）
   maxReviewCount: number; // 要復習上限（デフォルト: 10）
 }
 
 // デフォルト設定
 const DEFAULT_STUDY_SETTINGS: StudySettings = {
-  maxStudyCount: 20,
   maxReviewCount: 10,
 };
 
@@ -157,7 +155,6 @@ export function getStudySettings(): StudySettings {
     if (stored) {
       const settings = JSON.parse(stored);
       return {
-        maxStudyCount: settings.maxStudyCount ?? DEFAULT_STUDY_SETTINGS.maxStudyCount,
         maxReviewCount: settings.maxReviewCount ?? DEFAULT_STUDY_SETTINGS.maxReviewCount,
       };
     }
@@ -2808,6 +2805,9 @@ export function getWordDetailedData(word: string): {
   totalCount: number;
   accuracyHistory: string; // 🟩🟥などのアイコン履歴
   retentionRate: number; // 定着率（0-100%）
+  status: 'mastered' | 'learning' | 'struggling' | 'new'; // 定着状態
+  statusLabel: string; // 状態ラベル
+  statusIcon: string; // 状態アイコン
 } | null {
   const progress = loadProgressSync();
   const wordProgress = progress.wordProgress[word];
@@ -2819,10 +2819,10 @@ export function getWordDetailedData(word: string): {
   const correctCount = wordProgress.correctCount;
   const totalCount = wordProgress.correctCount + wordProgress.incorrectCount;
   
-  // 正誤履歴を生成（最新10件） - historyプロパティは型定義に存在しないため空配列を使用
-  const history: any[] = []; // wordProgress.history || [];
-  const recentHistory = history.slice(-10);
-  const accuracyHistory = recentHistory.map((h: any) => h.correct ? '🟩' : '🟥').join('');
+  // learningHistoryから正誤履歴を生成（最新10件）
+  const learningHistory = wordProgress.learningHistory || [];
+  const recentHistory = learningHistory.slice(-10);
+  const accuracyHistory = recentHistory.map((h) => h.wasCorrect ? '🟩' : '🟥').join('');
   
   // 定着率を計算（連続正解数、正答率、最終学習日からの経過時間を考慮）
   let retentionRate = 0;
@@ -2848,10 +2848,36 @@ export function getWordDetailedData(word: string): {
     }
   }
   
+  // 定着状態を判定
+  let status: 'mastered' | 'learning' | 'struggling' | 'new' = 'new';
+  let statusLabel = '未学習';
+  let statusIcon = '⚪';
+  
+  if (totalCount === 0) {
+    status = 'new';
+    statusLabel = '未学習';
+    statusIcon = '⚪';
+  } else if (wordProgress.masteryLevel === 'mastered' || retentionRate >= 80) {
+    status = 'mastered';
+    statusLabel = '定着済';
+    statusIcon = '🟢';
+  } else if (retentionRate >= 50) {
+    status = 'learning';
+    statusLabel = '学習中';
+    statusIcon = '🟡';
+  } else {
+    status = 'struggling';
+    statusLabel = '要復習';
+    statusIcon = '🔴';
+  }
+  
   return {
     correctCount,
     totalCount,
     accuracyHistory,
     retentionRate: Math.round(retentionRate),
+    status,
+    statusLabel,
+    statusIcon,
   };
 }

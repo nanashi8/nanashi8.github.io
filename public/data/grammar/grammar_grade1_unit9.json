@@ -19,8 +19,7 @@
       "choices": [
         "went",
         "go",
-        "goes",
-        "going"
+        "goes"
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "came",
         "come",
-        "comes",
-        "coming"
+        "comes"
       ],
       "correctAnswer": "came",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "saw",
         "see",
-        "sees",
-        "seeing"
+        "sees"
       ],
       "correctAnswer": "saw",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "ate",
         "eat",
-        "eats",
-        "eating"
+        "eats"
       ],
       "correctAnswer": "ate",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "made",
         "make",
-        "makes",
-        "making"
+        "makes"
       ],
       "correctAnswer": "made",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "had",
         "have",
-        "has",
-        "having"
+        "has"
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "got",
         "get",
-        "gets",
-        "getting"
+        "gets"
       ],
       "correctAnswer": "got",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "took",
         "take",
-        "takes",
-        "taking"
+        "takes"
       ],
       "correctAnswer": "took",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "bought",
         "buy",
-        "buys",
-        "buying"
+        "buys"
       ],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "read",
         "reads",
-        "reading",
-        "readed"
+        "reading"
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "wrote",
         "write",
-        "writes",
-        "writing"
+        "writes"
       ],
       "correctAnswer": "wrote",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "knew",
         "know",
-        "knows",
-        "knowing"
+        "knows"
       ],
       "correctAnswer": "knew",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "gave",
         "give",
-        "gives",
-        "giving"
+        "gives"
       ],
       "correctAnswer": "gave",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "ran",
         "run",
-        "runs",
-        "running"
+        "runs"
       ],
       "correctAnswer": "ran",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "found",
         "find",
-        "finds",
-        "finding"
+        "finds"
       ],
       "correctAnswer": "found",
       "difficulty": "advanced",
@@ -264,7 +249,8 @@
       "correctAnswer": "I went home yesterday.",
       "difficulty": "beginner",
       "explanation": "「私は昨日家に帰りました」。go → went。",
-      "hint": "went"
+      "hint": "went",
+      "wordCount": 4
     },
     {
       "id": "g1-u9-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "She came to Japan.",
       "difficulty": "beginner",
       "explanation": "「彼女は日本に来ました」。come → came。",
-      "hint": "came"
+      "hint": "came",
+      "wordCount": 4
     },
     {
       "id": "g1-u9-so-003",
@@ -294,7 +281,8 @@
       "correctAnswer": "We saw him yesterday.",
       "difficulty": "beginner",
       "explanation": "「私たちは昨日彼に会いました」。see → saw。",
-      "hint": "saw"
+      "hint": "saw",
+      "wordCount": 4
     },
     {
       "id": "g1-u9-so-004",
@@ -309,7 +297,8 @@
       "correctAnswer": "He had lunch yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼は昨日昼食を食べました」。have → had。",
-      "hint": "had"
+      "hint": "had",
+      "wordCount": 4
     },
     {
       "id": "g1-u9-so-005",
@@ -324,7 +313,8 @@
       "correctAnswer": "They made cookies yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼らは昨日クッキーを作りました」。make → made。",
-      "hint": "made"
+      "hint": "made",
+      "wordCount": 4
     },
     {
       "id": "g1-u9-so-006",
@@ -340,7 +330,8 @@
       "correctAnswer": "I took this picture yesterday.",
       "difficulty": "intermediate",
       "explanation": "「私は昨日この写真を撮りました」。take → took。",
-      "hint": "took"
+      "hint": "took",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-so-007",
@@ -355,7 +346,8 @@
       "correctAnswer": "She bought a book.",
       "difficulty": "intermediate",
       "explanation": "「彼女は本を買いました」。buy → bought。",
-      "hint": "bought"
+      "hint": "bought",
+      "wordCount": 4
     },
     {
       "id": "g1-u9-so-008",
@@ -371,7 +363,8 @@
       "correctAnswer": "We ate pizza last night.",
       "difficulty": "intermediate",
       "explanation": "「私たちは昨晩ピザを食べました」。eat → ate。",
-      "hint": "ate"
+      "hint": "ate",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-so-009",
@@ -387,7 +380,8 @@
       "correctAnswer": "He got up early yesterday.",
       "difficulty": "intermediate",
       "explanation": "「彼は昨日早く起きました」。get → got。",
-      "hint": "got up"
+      "hint": "got up",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-so-010",
@@ -403,7 +397,8 @@
       "correctAnswer": "They read the story yesterday.",
       "difficulty": "intermediate",
       "explanation": "「彼らは昨日その物語を読みました」。read → read。",
-      "hint": "read"
+      "hint": "read",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-so-011",
@@ -420,7 +415,8 @@
       "correctAnswer": "I wrote an email this morning.",
       "difficulty": "advanced",
       "explanation": "「私は今朝メールを書きました」。write → wrote。",
-      "hint": "wrote"
+      "hint": "wrote",
+      "wordCount": 6
     },
     {
       "id": "g1-u9-so-012",
@@ -436,7 +432,8 @@
       "correctAnswer": "She gave me a present.",
       "difficulty": "advanced",
       "explanation": "「彼女は私にプレゼントをくれました」。give → gave。",
-      "hint": "gave"
+      "hint": "gave",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-so-013",
@@ -453,7 +450,8 @@
       "correctAnswer": "We ran in the park yesterday.",
       "difficulty": "advanced",
       "explanation": "「私たちは昨日公園で走りました」。run → ran。",
-      "hint": "ran"
+      "hint": "ran",
+      "wordCount": 6
     },
     {
       "id": "g1-u9-so-014",
@@ -469,7 +467,8 @@
       "correctAnswer": "He knew the truth yesterday.",
       "difficulty": "advanced",
       "explanation": "「彼は昨日真実を知っていました」。know → knew。",
-      "hint": "knew"
+      "hint": "knew",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-so-015",
@@ -485,7 +484,8 @@
       "correctAnswer": "They found a treasure yesterday.",
       "difficulty": "advanced",
       "explanation": "「彼らは昨日宝物を見つけました」。find → found。",
-      "hint": "found"
+      "hint": "found",
+      "wordCount": 5
     },
     {
       "id": "g1-u9-para-001",
@@ -496,8 +496,7 @@
       "choices": [
         "I went to school.",
         "I goed to school.",
-        "I going to school.",
-        "I goes to school."
+        "I going to school."
       ],
       "correctAnswer": "I went to school.",
       "difficulty": "beginner",
@@ -513,8 +512,7 @@
       "choices": [
         "She came home.",
         "She comed home.",
-        "She coming home.",
-        "She comes home."
+        "She coming home."
       ],
       "correctAnswer": "She came home.",
       "difficulty": "beginner",
@@ -530,8 +528,7 @@
       "choices": [
         "They saw the cat.",
         "They seed the cat.",
-        "They seeing the cat.",
-        "They sees the cat."
+        "They seeing the cat."
       ],
       "correctAnswer": "They saw the cat.",
       "difficulty": "beginner",
@@ -547,8 +544,7 @@
       "choices": [
         "We ate dinner.",
         "We eated dinner.",
-        "We eating dinner.",
-        "We eats dinner."
+        "We eating dinner."
       ],
       "correctAnswer": "We ate dinner.",
       "difficulty": "beginner",
@@ -564,8 +560,7 @@
       "choices": [
         "He made a plan.",
         "He maked a plan.",
-        "He making a plan.",
-        "He makes a plan."
+        "He making a plan."
       ],
       "correctAnswer": "He made a plan.",
       "difficulty": "beginner",
@@ -581,8 +576,7 @@
       "choices": [
         "I buy a pen.",
         "I buys a pen.",
-        "I buying a pen.",
-        "I bought a pen."
+        "I buying a pen."
       ],
       "correctAnswer": "I buy a pen.",
       "difficulty": "intermediate",
@@ -598,8 +592,7 @@
       "choices": [
         "She has a dog.",
         "She have a dog.",
-        "She having a dog.",
-        "She had a dog."
+        "She having a dog."
       ],
       "correctAnswer": "She has a dog.",
       "difficulty": "intermediate",
@@ -615,8 +608,7 @@
       "choices": [
         "Did you go to Tokyo yesterday?",
         "Do you go to Tokyo yesterday?",
-        "Did you went to Tokyo yesterday?",
-        "Do you went to Tokyo yesterday?"
+        "Did you went to Tokyo yesterday?"
       ],
       "correctAnswer": "Did you go to Tokyo yesterday?",
       "difficulty": "intermediate",
@@ -632,8 +624,7 @@
       "choices": [
         "I didn't see the movie last week.",
         "I don't see the movie last week.",
-        "I didn't saw the movie last week.",
-        "I not see the movie last week."
+        "I didn't saw the movie last week."
       ],
       "correctAnswer": "I didn't see the movie last week.",
       "difficulty": "intermediate",
@@ -649,8 +640,7 @@
       "choices": [
         "She didn't come here yesterday.",
         "She don't come here yesterday.",
-        "She didn't came here yesterday.",
-        "She not come here yesterday."
+        "She didn't came here yesterday."
       ],
       "correctAnswer": "She didn't come here yesterday.",
       "difficulty": "intermediate",
@@ -666,8 +656,7 @@
       "choices": [
         "Yes, I did.",
         "Yes, I do.",
-        "Yes, I had.",
-        "Yes, I have."
+        "Yes, I had."
       ],
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
@@ -683,8 +672,7 @@
       "choices": [
         "No, she didn't.",
         "No, she doesn't.",
-        "No, she not.",
-        "No, she wasn't."
+        "No, she not."
       ],
       "correctAnswer": "No, she didn't.",
       "difficulty": "advanced",
@@ -700,8 +688,7 @@
       "choices": [
         "I had lunch at school yesterday.",
         "I have lunch at school yesterday.",
-        "I had lunch at school.",
-        "I having lunch at school yesterday."
+        "I had lunch at school."
       ],
       "correctAnswer": "I had lunch at school yesterday.",
       "difficulty": "advanced",
@@ -717,8 +704,7 @@
       "choices": [
         "What did you buy?",
         "What do you buy?",
-        "What did you bought?",
-        "What you bought?"
+        "What did you bought?"
       ],
       "correctAnswer": "What did you buy?",
       "difficulty": "advanced",
@@ -734,8 +720,7 @@
       "choices": [
         "Where did she go?",
         "Where does she go?",
-        "Where did she went?",
-        "Where she went?"
+        "Where did she went?"
       ],
       "correctAnswer": "Where did she go?",
       "difficulty": "advanced",
@@ -751,8 +736,7 @@
       "choices": [
         "went",
         "go",
-        "goed",
-        "going"
+        "goed"
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
@@ -768,8 +752,7 @@
       "choices": [
         "came",
         "come",
-        "comed",
-        "coming"
+        "comed"
       ],
       "correctAnswer": "came",
       "difficulty": "beginner",
@@ -785,8 +768,7 @@
       "choices": [
         "saw",
         "see",
-        "seed",
-        "seeing"
+        "seed"
       ],
       "correctAnswer": "saw",
       "difficulty": "beginner",
@@ -802,8 +784,7 @@
       "choices": [
         "ate",
         "eat",
-        "eated",
-        "eating"
+        "eated"
       ],
       "correctAnswer": "ate",
       "difficulty": "beginner",
@@ -819,8 +800,7 @@
       "choices": [
         "made",
         "make",
-        "maked",
-        "making"
+        "maked"
       ],
       "correctAnswer": "made",
       "difficulty": "intermediate",
@@ -836,8 +816,7 @@
       "choices": [
         "had",
         "have",
-        "haved",
-        "having"
+        "haved"
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
@@ -853,8 +832,7 @@
       "choices": [
         "took",
         "take",
-        "taked",
-        "taking"
+        "taked"
       ],
       "correctAnswer": "took",
       "difficulty": "intermediate",
@@ -870,8 +848,7 @@
       "choices": [
         "bought",
         "buy",
-        "buyed",
-        "buying"
+        "buyed"
       ],
       "correctAnswer": "bought",
       "difficulty": "advanced",
@@ -887,8 +864,7 @@
       "choices": [
         "read",
         "reads",
-        "readed",
-        "reading"
+        "readed"
       ],
       "correctAnswer": "read",
       "difficulty": "advanced",
@@ -904,8 +880,7 @@
       "choices": [
         "wrote",
         "write",
-        "writed",
-        "writing"
+        "writed"
       ],
       "correctAnswer": "wrote",
       "difficulty": "advanced",
@@ -930,8 +905,7 @@
       "choices": [
         "went",
         "go",
-        "goes",
-        "going"
+        "goes"
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
@@ -956,8 +930,7 @@
       "choices": [
         "did",
         "do",
-        "had",
-        "have"
+        "had"
       ],
       "correctAnswer": "did",
       "difficulty": "beginner",
@@ -982,8 +955,7 @@
       "choices": [
         "didn't",
         "don't",
-        "wasn't",
-        "not"
+        "wasn't"
       ],
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
@@ -1008,8 +980,7 @@
       "choices": [
         "bought",
         "buy",
-        "buys",
-        "buying"
+        "buys"
       ],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
@@ -1034,8 +1005,7 @@
       "choices": [
         "go",
         "went",
-        "goes",
-        "going"
+        "goes"
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",

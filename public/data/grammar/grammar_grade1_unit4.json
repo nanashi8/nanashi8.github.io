@@ -19,8 +19,7 @@
       "choices": [
         "What",
         "Who",
-        "When",
-        "Where"
+        "When"
       ],
       "correctAnswer": "What",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "Who",
         "What",
-        "Where",
-        "How"
+        "Where"
       ],
       "correctAnswer": "Who",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "Where",
         "What",
-        "Who",
-        "When"
+        "Who"
       ],
       "correctAnswer": "Where",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "When",
         "Where",
-        "What",
-        "Who"
+        "What"
       ],
       "correctAnswer": "When",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "are",
         "is",
-        "do",
-        "does"
+        "do"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "Whose",
         "Who",
-        "What",
-        "Which"
+        "What"
       ],
       "correctAnswer": "Whose",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "Which",
         "What",
-        "Who",
-        "Where"
+        "Who"
       ],
       "correctAnswer": "Which",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "What",
         "When",
-        "Which",
-        "How"
+        "Which"
       ],
       "correctAnswer": "What",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "Where",
         "When",
-        "What",
-        "How"
+        "What"
       ],
       "correctAnswer": "Where",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "How",
         "What",
-        "Who",
-        "Which"
+        "Who"
       ],
       "correctAnswer": "How",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "What",
         "Which",
-        "How",
-        "Who"
+        "How"
       ],
       "correctAnswer": "What",
       "difficulty": "advanced",
@@ -195,8 +184,7 @@
       "choices": [
         "How",
         "What",
-        "When",
-        "Where"
+        "When"
       ],
       "correctAnswer": "How",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "Who",
         "What",
-        "Where",
-        "When"
+        "Where"
       ],
       "correctAnswer": "Who",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "How",
         "What",
-        "Which",
-        "Who"
+        "Which"
       ],
       "correctAnswer": "How",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "When",
         "What",
-        "Where",
-        "How"
+        "Where"
       ],
       "correctAnswer": "When",
       "difficulty": "advanced",
@@ -264,7 +249,8 @@
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
       "explanation": "What is this?で「これは何ですか」。疑問詞Whatを文頭に。",
-      "hint": "What is ～?"
+      "hint": "What is ～?",
+      "wordCount": 4
     },
     {
       "id": "g1-u4-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "Who are you?",
       "difficulty": "beginner",
       "explanation": "Who are you?で「あなたは誰ですか」。疑問詞Whoを文頭に。",
-      "hint": "Who are ～?"
+      "hint": "Who are ～?",
+      "wordCount": 4
     },
     {
       "id": "g1-u4-so-003",
@@ -295,7 +282,8 @@
       "correctAnswer": "Where are you from?",
       "difficulty": "beginner",
       "explanation": "Where are you from?で「どこの出身ですか」。fromは最後に。",
-      "hint": "Where are you from?"
+      "hint": "Where are you from?",
+      "wordCount": 5
     },
     {
       "id": "g1-u4-so-004",
@@ -312,7 +300,8 @@
       "correctAnswer": "When do you play tennis?",
       "difficulty": "beginner",
       "explanation": "When do you～?で「いつ～しますか」。一般動詞の疑問文。",
-      "hint": "When do you ～?"
+      "hint": "When do you ～?",
+      "wordCount": 6
     },
     {
       "id": "g1-u4-so-005",
@@ -327,7 +316,8 @@
       "correctAnswer": "How are you?",
       "difficulty": "beginner",
       "explanation": "How are you?で「元気ですか・ご機嫌いかがですか」。基本の挨拶。",
-      "hint": "How are you?"
+      "hint": "How are you?",
+      "wordCount": 4
     },
     {
       "id": "g1-u4-so-006",
@@ -343,7 +333,8 @@
       "correctAnswer": "What does he like?",
       "difficulty": "intermediate",
       "explanation": "What does he～?で「彼は何を～しますか」。三人称単数なのでdoes。",
-      "hint": "What does he ～?"
+      "hint": "What does he ～?",
+      "wordCount": 5
     },
     {
       "id": "g1-u4-so-007",
@@ -359,7 +350,8 @@
       "correctAnswer": "Where do you live?",
       "difficulty": "intermediate",
       "explanation": "Where do you～?で「どこで～しますか」。住んでいる場所を尋ねる。",
-      "hint": "Where do you ～?"
+      "hint": "Where do you ～?",
+      "wordCount": 5
     },
     {
       "id": "g1-u4-so-008",
@@ -378,7 +370,8 @@
       "correctAnswer": "What time do you go to bed?",
       "difficulty": "intermediate",
       "explanation": "What time do you～?で「何時に～しますか」。go to bedで「寝る」。",
-      "hint": "What time do you ～?"
+      "hint": "What time do you ～?",
+      "wordCount": 8
     },
     {
       "id": "g1-u4-so-009",
@@ -394,7 +387,8 @@
       "correctAnswer": "Whose bag is this?",
       "difficulty": "intermediate",
       "explanation": "Whose～is this?で「これは誰の～ですか」。所有を尋ねる。",
-      "hint": "Whose ～ is this?"
+      "hint": "Whose ～ is this?",
+      "wordCount": 5
     },
     {
       "id": "g1-u4-so-010",
@@ -412,7 +406,8 @@
       "correctAnswer": "How many brothers do you have?",
       "difficulty": "intermediate",
       "explanation": "How many～do you have?で「何人～がいますか」。数を尋ねる。",
-      "hint": "How many ～ do you have?"
+      "hint": "How many ～ do you have?",
+      "wordCount": 7
     },
     {
       "id": "g1-u4-so-011",
@@ -429,7 +424,8 @@
       "correctAnswer": "What color does she like?",
       "difficulty": "advanced",
       "explanation": "What color does～?で「何色が好きですか」。三人称単数なのでdoes。",
-      "hint": "What color does ～?"
+      "hint": "What color does ～?",
+      "wordCount": 6
     },
     {
       "id": "g1-u4-so-012",
@@ -446,7 +442,8 @@
       "correctAnswer": "Which sport do you like?",
       "difficulty": "advanced",
       "explanation": "Which～do you like?で「どちらの～が好きですか」。選択を尋ねる。",
-      "hint": "Which ～ do you like?"
+      "hint": "Which ～ do you like?",
+      "wordCount": 6
     },
     {
       "id": "g1-u4-so-013",
@@ -466,7 +463,8 @@
       "correctAnswer": "How long does it take to the station?",
       "difficulty": "advanced",
       "explanation": "How long does it take to～?で「～までどのくらいかかりますか」。",
-      "hint": "How long does it take ～?"
+      "hint": "How long does it take ～?",
+      "wordCount": 9
     },
     {
       "id": "g1-u4-so-014",
@@ -483,7 +481,8 @@
       "correctAnswer": "Who does he study with?",
       "difficulty": "advanced",
       "explanation": "Who does he～with?で「誰と～しますか」。withは最後に。",
-      "hint": "Who does he ～ with?"
+      "hint": "Who does he ～ with?",
+      "wordCount": 6
     },
     {
       "id": "g1-u4-so-015",
@@ -500,7 +499,8 @@
       "correctAnswer": "How much is this pen?",
       "difficulty": "advanced",
       "explanation": "How much is～?で「～はいくらですか」。値段を尋ねる。",
-      "hint": "How much is ～?"
+      "hint": "How much is ～?",
+      "wordCount": 6
     },
     {
       "id": "g1-u4-para-001",
@@ -511,8 +511,7 @@
       "choices": [
         "What is this?",
         "This is what?",
-        "What this is?",
-        "Is this what?"
+        "What this is?"
       ],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
@@ -528,8 +527,7 @@
       "choices": [
         "Who is she?",
         "She is who?",
-        "Who she is?",
-        "Is she who?"
+        "Who she is?"
       ],
       "correctAnswer": "Who is she?",
       "difficulty": "beginner",
@@ -545,8 +543,7 @@
       "choices": [
         "Where does he live?",
         "He lives where?",
-        "Where he lives?",
-        "Does he live where?"
+        "Where he lives?"
       ],
       "correctAnswer": "Where does he live?",
       "difficulty": "beginner",
@@ -562,8 +559,7 @@
       "choices": [
         "When do you study English?",
         "You study English when?",
-        "When you study English?",
-        "Do you study English when?"
+        "When you study English?"
       ],
       "correctAnswer": "When do you study English?",
       "difficulty": "beginner",
@@ -579,8 +575,7 @@
       "choices": [
         "How do you go to school?",
         "You go to school how?",
-        "How you go to school?",
-        "Do you go to school how?"
+        "How you go to school?"
       ],
       "correctAnswer": "How do you go to school?",
       "difficulty": "intermediate",
@@ -596,8 +591,7 @@
       "choices": [
         "What time does she get up?",
         "She gets up what time?",
-        "What time she gets up?",
-        "Does she get up what time?"
+        "What time she gets up?"
       ],
       "correctAnswer": "What time does she get up?",
       "difficulty": "intermediate",
@@ -613,8 +607,7 @@
       "choices": [
         "Whose book is this?",
         "This is whose book?",
-        "Whose this book is?",
-        "Is this whose book?"
+        "Whose this book is?"
       ],
       "correctAnswer": "Whose book is this?",
       "difficulty": "intermediate",
@@ -630,8 +623,7 @@
       "choices": [
         "Which do you like?",
         "You like which?",
-        "Which you like?",
-        "Do you like which?"
+        "Which you like?"
       ],
       "correctAnswer": "Which do you like?",
       "difficulty": "intermediate",
@@ -647,8 +639,7 @@
       "choices": [
         "How many dogs do you have?",
         "You have how many dogs?",
-        "How many dogs you have?",
-        "Do you have how many dogs?"
+        "How many dogs you have?"
       ],
       "correctAnswer": "How many dogs do you have?",
       "difficulty": "intermediate",
@@ -664,8 +655,7 @@
       "choices": [
         "What color do you like?",
         "You like what color?",
-        "What color you like?",
-        "Do you like what color?"
+        "What color you like?"
       ],
       "correctAnswer": "What color do you like?",
       "difficulty": "advanced",
@@ -681,8 +671,7 @@
       "choices": [
         "How much is this book?",
         "This book is how much?",
-        "How much this book is?",
-        "Is this book how much?"
+        "How much this book is?"
       ],
       "correctAnswer": "How much is this book?",
       "difficulty": "advanced",
@@ -698,8 +687,7 @@
       "choices": [
         "How long does it take?",
         "It takes how long?",
-        "How long it takes?",
-        "Does it take how long?"
+        "How long it takes?"
       ],
       "correctAnswer": "How long does it take?",
       "difficulty": "advanced",
@@ -715,8 +703,7 @@
       "choices": [
         "Who do you play tennis with?",
         "You play tennis with who?",
-        "Who you play tennis with?",
-        "Do you play tennis with who?"
+        "Who you play tennis with?"
       ],
       "correctAnswer": "Who do you play tennis with?",
       "difficulty": "advanced",
@@ -732,8 +719,7 @@
       "choices": [
         "What subject does he study?",
         "He studies what subject?",
-        "What subject he studies?",
-        "Does he study what subject?"
+        "What subject he studies?"
       ],
       "correctAnswer": "What subject does he study?",
       "difficulty": "advanced",
@@ -749,8 +735,7 @@
       "choices": [
         "How old is she?",
         "She is how old?",
-        "How old she is?",
-        "Is she how old?"
+        "How old she is?"
       ],
       "correctAnswer": "How old is she?",
       "difficulty": "advanced",
@@ -766,8 +751,7 @@
       "choices": [
         "do",
         "does",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "do",
       "difficulty": "beginner",
@@ -783,8 +767,7 @@
       "choices": [
         "does",
         "do",
-        "is",
-        "are"
+        "is"
       ],
       "correctAnswer": "does",
       "difficulty": "beginner",
@@ -800,8 +783,7 @@
       "choices": [
         "is",
         "are",
-        "do",
-        "does"
+        "do"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -817,8 +799,7 @@
       "choices": [
         "are",
         "is",
-        "do",
-        "does"
+        "do"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -834,8 +815,7 @@
       "choices": [
         "does",
         "do",
-        "is",
-        "are"
+        "is"
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
@@ -851,8 +831,7 @@
       "choices": [
         "do",
         "does",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "do",
       "difficulty": "intermediate",
@@ -868,8 +847,7 @@
       "choices": [
         "are",
         "is",
-        "do",
-        "does"
+        "do"
       ],
       "correctAnswer": "are",
       "difficulty": "intermediate",
@@ -885,8 +863,7 @@
       "choices": [
         "does",
         "do",
-        "is",
-        "are"
+        "is"
       ],
       "correctAnswer": "does",
       "difficulty": "advanced",
@@ -902,8 +879,7 @@
       "choices": [
         "are",
         "is",
-        "do",
-        "does"
+        "do"
       ],
       "correctAnswer": "are",
       "difficulty": "advanced",
@@ -919,8 +895,7 @@
       "choices": [
         "do",
         "does",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "do",
       "difficulty": "advanced",
@@ -945,8 +920,7 @@
       "choices": [
         "a",
         "an",
-        "the",
-        "some"
+        "the"
       ],
       "correctAnswer": "a",
       "difficulty": "beginner",
@@ -971,8 +945,7 @@
       "choices": [
         "from",
         "in",
-        "at",
-        "to"
+        "at"
       ],
       "correctAnswer": "from",
       "difficulty": "beginner",
@@ -997,8 +970,7 @@
       "choices": [
         "in",
         "on",
-        "at",
-        "of"
+        "at"
       ],
       "correctAnswer": "in",
       "difficulty": "intermediate",
@@ -1023,8 +995,7 @@
       "choices": [
         "five",
         "a five",
-        "the five",
-        "fifth"
+        "the five"
       ],
       "correctAnswer": "five",
       "difficulty": "intermediate",
@@ -1049,8 +1020,7 @@
       "choices": [
         "500",
         "a 500",
-        "the 500",
-        "500s"
+        "the 500"
       ],
       "correctAnswer": "500",
       "difficulty": "advanced",
