@@ -1017,7 +1017,7 @@
         },
         {
           "word": "electrical",
-          "meaning": "(要確認)",
+          "meaning": "電気の",
           "isUnknown": false,
           "lemma": "electrical",
           "reading": "electrical",
@@ -1206,7 +1206,7 @@
         },
         {
           "word": "Moore's",
-          "meaning": "(要確認)",
+          "meaning": "ムーアの",
           "isUnknown": false,
           "lemma": "Moore's",
           "reading": "Moore's",
@@ -1250,7 +1250,7 @@
         },
         {
           "word": "observation",
-          "meaning": "(要確認)",
+          "meaning": "観察",
           "isUnknown": false,
           "lemma": "observation",
           "reading": "observation",
@@ -1818,7 +1818,7 @@
         },
         {
           "word": "amounts",
-          "meaning": "(要確認)",
+          "meaning": "量・金額",
           "isUnknown": false,
           "lemma": "amounts",
           "reading": "amounts",
@@ -6225,7 +6225,7 @@
         },
         {
           "word": "exceeding",
-          "meaning": "(要確認)",
+          "meaning": "超える",
           "isUnknown": false,
           "lemma": "exceeding",
           "reading": "exceeding",
@@ -14927,7 +14927,7 @@
         },
         {
           "word": "expectancy",
-          "meaning": "(要確認)",
+          "meaning": "期待・予想",
           "isUnknown": false,
           "lemma": "expectancy",
           "reading": "expectancy",
@@ -16135,7 +16135,7 @@
         },
         {
           "word": "decline",
-          "meaning": "(要確認)",
+          "meaning": "減少・衰退",
           "isUnknown": false,
           "lemma": "decline",
           "reading": "decline",
@@ -25374,7 +25374,7 @@
         },
         {
           "word": "calculations",
-          "meaning": "(要確認)",
+          "meaning": "計算",
           "isUnknown": false,
           "lemma": "calculations",
           "reading": "calculations",
@@ -28336,7 +28336,7 @@
         },
         {
           "word": "persistent",
-          "meaning": "(要確認)",
+          "meaning": "持続的な・根気強い",
           "isUnknown": false,
           "lemma": "persistent",
           "reading": "persistent",
@@ -31511,7 +31511,7 @@
       "segments": [
         {
           "word": "Rural",
-          "meaning": "(要確認)",
+          "meaning": "田舎の・地方の",
           "isUnknown": false,
           "lemma": "Rural",
           "reading": "Rural",
@@ -32072,7 +32072,7 @@
         },
         {
           "word": "shift",
-          "meaning": "(要確認)",
+          "meaning": "変化・シフト",
           "isUnknown": false,
           "lemma": "shift",
           "reading": "shift",
@@ -39260,7 +39260,7 @@
         },
         {
           "word": "layer",
-          "meaning": "(要確認)",
+          "meaning": "層",
           "isUnknown": false,
           "lemma": "layer",
           "reading": "layer",
@@ -39282,7 +39282,7 @@
         },
         {
           "word": "layer",
-          "meaning": "(要確認)",
+          "meaning": "層",
           "isUnknown": false,
           "lemma": "layer",
           "reading": "layer",

@@ -5412,7 +5412,7 @@
       "segments": [
         {
           "word": "exceeding",
-          "meaning": "(要確認)",
+          "meaning": "超える",
           "isUnknown": false,
           "lemma": "exceeding",
           "reading": "exceeding",
@@ -5663,7 +5663,7 @@
         },
         {
           "word": "Nakamura",
-          "meaning": "(要確認)",
+          "meaning": "中村（人名）",
           "isUnknown": false,
           "lemma": "Nakamura",
           "reading": "Nakamura",
@@ -13329,7 +13329,7 @@
       "segments": [
         {
           "word": "Nakamura",
-          "meaning": "(要確認)",
+          "meaning": "中村（人名）",
           "isUnknown": false,
           "lemma": "Nakamura",
           "reading": "Nakamura",
@@ -27286,7 +27286,7 @@
         },
         {
           "word": "expectations",
-          "meaning": "(要確認)",
+          "meaning": "期待",
           "isUnknown": false,
           "lemma": "expectations",
           "reading": "expectations",
