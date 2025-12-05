@@ -613,7 +613,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -720,7 +720,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -816,7 +816,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -838,7 +838,7 @@
         },
         {
           "word": "holidays",
-          "meaning": "(要確認)",
+          "meaning": "休日",
           "isUnknown": false,
           "lemma": "holidays",
           "reading": "holidays",
@@ -975,7 +975,7 @@
         },
         {
           "word": "tickets",
-          "meaning": "(要確認)",
+          "meaning": "絶滅危惧種を保護し（複数形）",
           "isUnknown": false,
           "lemma": "tickets",
           "reading": "tickets",
@@ -1038,7 +1038,7 @@
         },
         {
           "word": "ins",
-          "meaning": "(要確認)",
+          "meaning": "〜の中に、〜で（複数形）",
           "isUnknown": false,
           "lemma": "ins",
           "reading": "ins",
@@ -1572,7 +1572,7 @@
         },
         {
           "word": "milking",
-          "meaning": "(要確認)",
+          "meaning": "牛乳こと・している",
           "isUnknown": false,
           "lemma": "milking",
           "reading": "milking",
@@ -1665,7 +1665,7 @@
         },
         {
           "word": "collecting",
-          "meaning": "(要確認)",
+          "meaning": "集める・収集すること・している",
           "isUnknown": false,
           "lemma": "collecting",
           "reading": "collecting",
@@ -2469,7 +2469,7 @@
         },
         {
           "word": "instructions",
-          "meaning": "(要確認)",
+          "meaning": "指示・説明書",
           "isUnknown": false,
           "lemma": "instructions",
           "reading": "instructions",
@@ -2650,7 +2650,7 @@
         },
         {
           "word": "frogs",
-          "meaning": "(要確認)",
+          "meaning": "30種以上を（複数形）",
           "isUnknown": false,
           "lemma": "frogs",
           "reading": "frogs",
@@ -2787,7 +2787,7 @@
         },
         {
           "word": "replicates",
-          "meaning": "(要確認)",
+          "meaning": "複製する・再現する（複数形）",
           "isUnknown": false,
           "lemma": "replicates",
           "reading": "replicates",
@@ -3154,7 +3154,7 @@
         },
         {
           "word": "windows",
-          "meaning": "(要確認)",
+          "meaning": "窓",
           "isUnknown": false,
           "lemma": "windows",
           "reading": "windows",
@@ -3228,7 +3228,7 @@
         },
         {
           "word": "behaviors",
-          "meaning": "(要確認)",
+          "meaning": "行動・振る舞い",
           "isUnknown": false,
           "lemma": "behaviors",
           "reading": "behaviors",
@@ -3302,7 +3302,7 @@
         },
         {
           "word": "status",
-          "meaning": "(要確認)",
+          "meaning": "地位・状態",
           "isUnknown": false,
           "lemma": "status",
           "reading": "status",
@@ -3431,7 +3431,7 @@
         },
         {
           "word": "notes",
-          "meaning": "(要確認)",
+          "meaning": "音符・メモ",
           "isUnknown": false,
           "lemma": "notes",
           "reading": "notes",
@@ -3601,7 +3601,7 @@
         },
         {
           "word": "closely",
-          "meaning": "(要確認)",
+          "meaning": "密接に",
           "isUnknown": false,
           "lemma": "closely",
           "reading": "closely",
@@ -3815,7 +3815,7 @@
         },
         {
           "word": "showcases",
-          "meaning": "(要確認)",
+          "meaning": "陳列ケース・披露する（複数形）",
           "isUnknown": false,
           "lemma": "showcases",
           "reading": "showcases",
@@ -3916,7 +3916,7 @@
         },
         {
           "word": "frogs",
-          "meaning": "(要確認)",
+          "meaning": "30種以上を（複数形）",
           "isUnknown": false,
           "lemma": "frogs",
           "reading": "frogs",
@@ -4103,7 +4103,7 @@
         },
         {
           "word": "displays",
-          "meaning": "(要確認)",
+          "meaning": "表示する・陳列する",
           "isUnknown": false,
           "lemma": "displays",
           "reading": "displays",
@@ -4462,7 +4462,7 @@
         },
         {
           "word": "sleeping",
-          "meaning": "(要確認)",
+          "meaning": "眠る・睡眠こと・している",
           "isUnknown": false,
           "lemma": "sleeping",
           "reading": "sleeping",
@@ -4573,7 +4573,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -4784,7 +4784,7 @@
         },
         {
           "word": "surprisingly",
-          "meaning": "(要確認)",
+          "meaning": "驚くことに",
           "isUnknown": false,
           "lemma": "surprisingly",
           "reading": "surprisingly",
@@ -5373,7 +5373,7 @@
         },
         {
           "word": "curiously",
-          "meaning": "(要確認)",
+          "meaning": "好奇心が強い・興味津々のに",
           "isUnknown": false,
           "lemma": "curiously",
           "reading": "curiously",
@@ -5570,7 +5570,7 @@
         },
         {
           "word": "scenes",
-          "meaning": "(要確認)",
+          "meaning": "場面・光景",
           "isUnknown": false,
           "lemma": "scenes",
           "reading": "scenes",
@@ -5622,7 +5622,7 @@
         },
         {
           "word": "researchers",
-          "meaning": "(要確認)",
+          "meaning": "研究者",
           "isUnknown": false,
           "lemma": "researchers",
           "reading": "researchers",
@@ -5819,7 +5819,7 @@
         },
         {
           "word": "threatened",
-          "meaning": "(要確認)",
+          "meaning": "脅かすた・された",
           "isUnknown": false,
           "lemma": "threatened",
           "reading": "threatened",
@@ -6155,7 +6155,7 @@
         },
         {
           "word": "successfully",
-          "meaning": "(要確認)",
+          "meaning": "成功して",
           "isUnknown": false,
           "lemma": "successfully",
           "reading": "successfully",
@@ -6188,7 +6188,7 @@
         },
         {
           "word": "released",
-          "meaning": "(要確認)",
+          "meaning": "解放する・発売た・された",
           "isUnknown": false,
           "lemma": "released",
           "reading": "released",
@@ -6298,7 +6298,7 @@
         },
         {
           "word": "proudly",
-          "meaning": "(要確認)",
+          "meaning": "誇りに思う・自慢のに",
           "isUnknown": false,
           "lemma": "proudly",
           "reading": "proudly",
@@ -6569,7 +6569,7 @@
         },
         {
           "word": "windows",
-          "meaning": "(要確認)",
+          "meaning": "窓",
           "isUnknown": false,
           "lemma": "windows",
           "reading": "windows",
@@ -6868,7 +6868,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -7009,7 +7009,7 @@
         },
         {
           "word": "facts",
-          "meaning": "(要確認)",
+          "meaning": "事実（複数形）",
           "isUnknown": false,
           "lemma": "facts",
           "reading": "facts",
@@ -7124,7 +7124,7 @@
         },
         {
           "word": "behaviors",
-          "meaning": "(要確認)",
+          "meaning": "行動・振る舞い",
           "isUnknown": false,
           "lemma": "behaviors",
           "reading": "behaviors",
@@ -7168,7 +7168,7 @@
         },
         {
           "word": "status",
-          "meaning": "(要確認)",
+          "meaning": "地位・状態",
           "isUnknown": false,
           "lemma": "status",
           "reading": "status",
@@ -7373,7 +7373,7 @@
         },
         {
           "word": "capturing",
-          "meaning": "(要確認)",
+          "meaning": "捕らえる・捕獲こと・している",
           "isUnknown": false,
           "lemma": "capturing",
           "reading": "capturing",
@@ -7532,7 +7532,7 @@
       "segments": [
         {
           "word": "Participants",
-          "meaning": "(要確認)",
+          "meaning": "参加者",
           "isUnknown": false,
           "lemma": "Participants",
           "reading": "Participants",
@@ -7905,7 +7905,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -7968,7 +7968,7 @@
         },
         {
           "word": "basics",
-          "meaning": "(要確認)",
+          "meaning": "Basic（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "basics",
           "reading": "basics",
@@ -8823,7 +8823,7 @@
         },
         {
           "word": "stands",
-          "meaning": "(要確認)",
+          "meaning": "立つ（複数形）",
           "isUnknown": false,
           "lemma": "stands",
           "reading": "stands",
@@ -9516,7 +9516,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -9568,7 +9568,7 @@
         },
         {
           "word": "trained",
-          "meaning": "(要確認)",
+          "meaning": "列車・訓練するた・された",
           "isUnknown": false,
           "lemma": "trained",
           "reading": "trained",
@@ -9590,7 +9590,7 @@
         },
         {
           "word": "equipped",
-          "meaning": "(要確認)",
+          "meaning": "装備するた・された",
           "isUnknown": false,
           "lemma": "equipped",
           "reading": "equipped",
@@ -10361,7 +10361,7 @@
         },
         {
           "word": "lots",
-          "meaning": "(要確認)",
+          "meaning": "多量・くじ（複数形）",
           "isUnknown": false,
           "lemma": "lots",
           "reading": "lots",
@@ -10690,7 +10690,7 @@
         },
         {
           "word": "locations",
-          "meaning": "(要確認)",
+          "meaning": "場所",
           "isUnknown": false,
           "lemma": "locations",
           "reading": "locations",
@@ -11306,7 +11306,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -11380,7 +11380,7 @@
         },
         {
           "word": "inspires",
-          "meaning": "(要確認)",
+          "meaning": "励ます・鼓舞する（複数形）",
           "isUnknown": false,
           "lemma": "inspires",
           "reading": "inspires",
@@ -11877,7 +11877,7 @@
         },
         {
           "word": "lots",
-          "meaning": "(要確認)",
+          "meaning": "多量・くじ（複数形）",
           "isUnknown": false,
           "lemma": "lots",
           "reading": "lots",
@@ -12036,7 +12036,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(要確認)",
+          "meaning": "展示品・展示する",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -12328,7 +12328,7 @@
         },
         {
           "word": "relies",
-          "meaning": "(要確認)",
+          "meaning": "リサイクルだけで（複数形）",
           "isUnknown": false,
           "lemma": "relies",
           "reading": "relies",
@@ -12524,7 +12524,7 @@
         },
         {
           "word": "duties",
-          "meaning": "(要確認)",
+          "meaning": "義務・職務",
           "isUnknown": false,
           "lemma": "duties",
           "reading": "duties",
@@ -12792,7 +12792,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(要確認)",
+          "meaning": "展示品・展示する",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -12877,7 +12877,7 @@
         },
         {
           "word": "welcoming",
-          "meaning": "(要確認)",
+          "meaning": "歓迎する・ようこそこと・している",
           "isUnknown": false,
           "lemma": "welcoming",
           "reading": "welcoming",
@@ -12899,7 +12899,7 @@
         },
         {
           "word": "impressions",
-          "meaning": "(要確認)",
+          "meaning": "印象・感想（複数形）",
           "isUnknown": false,
           "lemma": "impressions",
           "reading": "impressions",
@@ -13257,7 +13257,7 @@
         },
         {
           "word": "demonstrations",
-          "meaning": "(要確認)",
+          "meaning": "実演・デモ",
           "isUnknown": false,
           "lemma": "demonstrations",
           "reading": "demonstrations",
@@ -13632,7 +13632,7 @@
         },
         {
           "word": "insects",
-          "meaning": "(要確認)",
+          "meaning": "昆虫",
           "isUnknown": false,
           "lemma": "insects",
           "reading": "insects",
@@ -13772,7 +13772,7 @@
         },
         {
           "word": "ecologically",
-          "meaning": "(要確認)",
+          "meaning": "生態学的な・環境のに",
           "isUnknown": false,
           "lemma": "ecologically",
           "reading": "ecologically",
@@ -14150,7 +14150,7 @@
         },
         {
           "word": "parking",
-          "meaning": "(要確認)",
+          "meaning": "公園・駐車すること・している",
           "isUnknown": false,
           "lemma": "parking",
           "reading": "parking",
@@ -14453,7 +14453,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -14549,7 +14549,7 @@
         },
         {
           "word": "purposes",
-          "meaning": "(要確認)",
+          "meaning": "目的",
           "isUnknown": false,
           "lemma": "purposes",
           "reading": "purposes",
@@ -14819,7 +14819,7 @@
         },
         {
           "word": "scenes",
-          "meaning": "(要確認)",
+          "meaning": "場面・光景",
           "isUnknown": false,
           "lemma": "scenes",
           "reading": "scenes",
@@ -14830,7 +14830,7 @@
         },
         {
           "word": "tours",
-          "meaning": "(要確認)",
+          "meaning": "テレビ（複数形）",
           "isUnknown": false,
           "lemma": "tours",
           "reading": "tours",
@@ -15138,7 +15138,7 @@
         },
         {
           "word": "emphasizes",
-          "meaning": "(要確認)",
+          "meaning": "強調する・重視する（複数形）",
           "isUnknown": false,
           "lemma": "emphasizes",
           "reading": "emphasizes",
@@ -15552,7 +15552,7 @@
         },
         {
           "word": "positions",
-          "meaning": "(要確認)",
+          "meaning": "位置・立場",
           "isUnknown": false,
           "lemma": "positions",
           "reading": "positions",
@@ -15593,7 +15593,7 @@
         },
         {
           "word": "candidates",
-          "meaning": "(要確認)",
+          "meaning": "候補者",
           "isUnknown": false,
           "lemma": "candidates",
           "reading": "candidates",
@@ -15766,7 +15766,7 @@
         },
         {
           "word": "checks",
-          "meaning": "(要確認)",
+          "meaning": "確認する・小切手（複数形）",
           "isUnknown": false,
           "lemma": "checks",
           "reading": "checks",
@@ -15848,7 +15848,7 @@
         },
         {
           "word": "sessions",
-          "meaning": "(要確認)",
+          "meaning": "セッション・会期",
           "isUnknown": false,
           "lemma": "sessions",
           "reading": "sessions",
@@ -16018,7 +16018,7 @@
         },
         {
           "word": "donations",
-          "meaning": "(要確認)",
+          "meaning": "寄付",
           "isUnknown": false,
           "lemma": "donations",
           "reading": "donations",
@@ -16136,7 +16136,7 @@
         },
         {
           "word": "privileges",
-          "meaning": "(要確認)",
+          "meaning": "特権・恩恵（複数形）",
           "isUnknown": false,
           "lemma": "privileges",
           "reading": "privileges",
@@ -16986,7 +16986,7 @@
         },
         {
           "word": "passes",
-          "meaning": "(要確認)",
+          "meaning": "通過する・合格する（複数形）",
           "isUnknown": false,
           "lemma": "passes",
           "reading": "passes",
@@ -17422,7 +17422,7 @@
         },
         {
           "word": "tours",
-          "meaning": "(要確認)",
+          "meaning": "テレビ（複数形）",
           "isUnknown": false,
           "lemma": "tours",
           "reading": "tours",
@@ -17570,7 +17570,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(要確認)",
+          "meaning": "展示品・展示する",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -17764,7 +17764,7 @@
       "segments": [
         {
           "word": "Donations",
-          "meaning": "(要確認)",
+          "meaning": "寄付",
           "isUnknown": false,
           "lemma": "Donations",
           "reading": "Donations",
@@ -17819,7 +17819,7 @@
         },
         {
           "word": "tremendously",
-          "meaning": "(要確認)",
+          "meaning": "途方もない・すばらしいに",
           "isUnknown": false,
           "lemma": "tremendously",
           "reading": "tremendously",
@@ -18162,7 +18162,7 @@
         },
         {
           "word": "registered",
-          "meaning": "(要確認)",
+          "meaning": "オンラインた・された",
           "isUnknown": false,
           "lemma": "registered",
           "reading": "registered",
@@ -18259,7 +18259,7 @@
         },
         {
           "word": "donations",
-          "meaning": "(要確認)",
+          "meaning": "寄付",
           "isUnknown": false,
           "lemma": "donations",
           "reading": "donations",
@@ -18901,7 +18901,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -18997,7 +18997,7 @@
         },
         {
           "word": "aligned",
-          "meaning": "(要確認)",
+          "meaning": "運営た・された",
           "isUnknown": false,
           "lemma": "aligned",
           "reading": "aligned",
@@ -19104,7 +19104,7 @@
         },
         {
           "word": "guided",
-          "meaning": "(要確認)",
+          "meaning": "案内する・案内人た・された",
           "isUnknown": false,
           "lemma": "guided",
           "reading": "guided",
@@ -19115,7 +19115,7 @@
         },
         {
           "word": "tours",
-          "meaning": "(要確認)",
+          "meaning": "テレビ（複数形）",
           "isUnknown": false,
           "lemma": "tours",
           "reading": "tours",
@@ -19145,7 +19145,7 @@
         },
         {
           "word": "trained",
-          "meaning": "(要確認)",
+          "meaning": "列車・訓練するた・された",
           "isUnknown": false,
           "lemma": "trained",
           "reading": "trained",
@@ -19208,7 +19208,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(要確認)",
+          "meaning": "展示品・展示する",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -19238,7 +19238,7 @@
         },
         {
           "word": "explaining",
-          "meaning": "(要確認)",
+          "meaning": "説明すること・している",
           "isUnknown": false,
           "lemma": "explaining",
           "reading": "explaining",
@@ -19754,7 +19754,7 @@
       "segments": [
         {
           "word": "collecting",
-          "meaning": "(要確認)",
+          "meaning": "集める・収集すること・している",
           "isUnknown": false,
           "lemma": "collecting",
           "reading": "collecting",
@@ -19960,7 +19960,7 @@
         },
         {
           "word": "observes",
-          "meaning": "(要確認)",
+          "meaning": "観察する・守る（複数形）",
           "isUnknown": false,
           "lemma": "observes",
           "reading": "observes",
@@ -20635,7 +20635,7 @@
         },
         {
           "word": "suggestions",
-          "meaning": "(要確認)",
+          "meaning": "提案",
           "isUnknown": false,
           "lemma": "suggestions",
           "reading": "suggestions",
@@ -20764,7 +20764,7 @@
         },
         {
           "word": "classrooms",
-          "meaning": "(要確認)",
+          "meaning": "教室（複数形）",
           "isUnknown": false,
           "lemma": "classrooms",
           "reading": "classrooms",
@@ -21191,7 +21191,7 @@
         },
         {
           "word": "typically",
-          "meaning": "(要確認)",
+          "meaning": "典型的に",
           "isUnknown": false,
           "lemma": "typically",
           "reading": "typically",
@@ -21560,7 +21560,7 @@
         },
         {
           "word": "organizations",
-          "meaning": "(要確認)",
+          "meaning": "組織",
           "isUnknown": false,
           "lemma": "organizations",
           "reading": "organizations",
@@ -21650,7 +21650,7 @@
         },
         {
           "word": "focused",
-          "meaning": "(要確認)",
+          "meaning": "集中した・焦点を合わせた",
           "isUnknown": false,
           "lemma": "focused",
           "reading": "focused",
@@ -21746,7 +21746,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -22371,7 +22371,7 @@
         },
         {
           "word": "attracts",
-          "meaning": "(要確認)",
+          "meaning": "引きつける（複数形）",
           "isUnknown": false,
           "lemma": "attracts",
           "reading": "attracts",
@@ -22497,7 +22497,7 @@
         },
         {
           "word": "generating",
-          "meaning": "(要確認)",
+          "meaning": "生み出す・発生させること・している",
           "isUnknown": false,
           "lemma": "generating",
           "reading": "generating",
@@ -22681,7 +22681,7 @@
         },
         {
           "word": "coordinated",
-          "meaning": "(要確認)",
+          "meaning": "調整するた・された",
           "isUnknown": false,
           "lemma": "coordinated",
           "reading": "coordinated",
@@ -24109,7 +24109,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -24828,7 +24828,7 @@
         },
         {
           "word": "patrols",
-          "meaning": "(要確認)",
+          "meaning": "パトロールする（複数形）",
           "isUnknown": false,
           "lemma": "patrols",
           "reading": "patrols",
@@ -24861,7 +24861,7 @@
         },
         {
           "word": "reserves",
-          "meaning": "(要確認)",
+          "meaning": "予備・保護区",
           "isUnknown": false,
           "lemma": "reserves",
           "reading": "reserves",
@@ -25494,7 +25494,7 @@
         },
         {
           "word": "fees",
-          "meaning": "(要確認)",
+          "meaning": "費（複数形）",
           "isUnknown": false,
           "lemma": "fees",
           "reading": "fees",
@@ -25728,7 +25728,7 @@
         },
         {
           "word": "enjoying",
-          "meaning": "(要確認)",
+          "meaning": "楽しむこと・している",
           "isUnknown": false,
           "lemma": "enjoying",
           "reading": "enjoying",
@@ -25824,7 +25824,7 @@
         },
         {
           "word": "continuously",
-          "meaning": "(要確認)",
+          "meaning": "連続した・途切れないに",
           "isUnknown": false,
           "lemma": "continuously",
           "reading": "continuously",
@@ -25835,7 +25835,7 @@
         },
         {
           "word": "evolves",
-          "meaning": "(要確認)",
+          "meaning": "進化する・発展する（複数形）",
           "isUnknown": false,
           "lemma": "evolves",
           "reading": "evolves",
@@ -26007,7 +26007,7 @@
         },
         {
           "word": "developments",
-          "meaning": "(要確認)",
+          "meaning": "発展、開発（複数形）",
           "isUnknown": false,
           "lemma": "developments",
           "reading": "developments",
@@ -26224,7 +26224,7 @@
         },
         {
           "word": "featuring",
-          "meaning": "(要確認)",
+          "meaning": "アートワークこと・している",
           "isUnknown": false,
           "lemma": "featuring",
           "reading": "featuring",
@@ -26423,7 +26423,7 @@
         },
         {
           "word": "reversed",
-          "meaning": "(要確認)",
+          "meaning": "逆・反対・逆転させるた・された",
           "isUnknown": false,
           "lemma": "reversed",
           "reading": "reversed",
@@ -26445,7 +26445,7 @@
         },
         {
           "word": "enabling",
-          "meaning": "(要確認)",
+          "meaning": "新しいハビタット建設のような。こと・している",
           "isUnknown": false,
           "lemma": "enabling",
           "reading": "enabling",
@@ -26775,7 +26775,7 @@
         },
         {
           "word": "smartphones",
-          "meaning": "(要確認)",
+          "meaning": "スマートフォン（複数形）",
           "isUnknown": false,
           "lemma": "smartphones",
           "reading": "smartphones",
@@ -26797,7 +26797,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(要確認)",
+          "meaning": "展示品・展示する",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -26945,7 +26945,7 @@
         },
         {
           "word": "encounters",
-          "meaning": "(要確認)",
+          "meaning": "遭遇・出会い",
           "isUnknown": false,
           "lemma": "encounters",
           "reading": "encounters",
@@ -27041,7 +27041,7 @@
         },
         {
           "word": "panels",
-          "meaning": "(要確認)",
+          "meaning": "パネル・委員会",
           "isUnknown": false,
           "lemma": "panels",
           "reading": "panels",

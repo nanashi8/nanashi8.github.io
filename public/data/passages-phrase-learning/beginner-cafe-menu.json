@@ -302,7 +302,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -645,7 +645,7 @@
         },
         {
           "word": "ingredients",
-          "meaning": "(要確認)",
+          "meaning": "材料・成分",
           "isUnknown": false,
           "lemma": "ingredients",
           "reading": "ingredients",
@@ -875,7 +875,7 @@
         },
         {
           "word": "trusted",
-          "meaning": "(要確認)",
+          "meaning": "信頼・信用た・された",
           "isUnknown": false,
           "lemma": "trusted",
           "reading": "trusted",
@@ -1196,7 +1196,7 @@
         },
         {
           "word": "ingredients",
-          "meaning": "(要確認)",
+          "meaning": "材料・成分",
           "isUnknown": false,
           "lemma": "ingredients",
           "reading": "ingredients",
@@ -1558,7 +1558,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -1673,7 +1673,7 @@
         },
         {
           "word": "certainly",
-          "meaning": "(要確認)",
+          "meaning": "確かに",
           "isUnknown": false,
           "lemma": "certainly",
           "reading": "certainly",
@@ -1969,7 +1969,7 @@
         },
         {
           "word": "containers",
-          "meaning": "(要確認)",
+          "meaning": "容器",
           "isUnknown": false,
           "lemma": "containers",
           "reading": "containers",
@@ -2233,7 +2233,7 @@
         },
         {
           "word": "menus",
-          "meaning": "(要確認)",
+          "meaning": "期末（複数形）",
           "isUnknown": false,
           "lemma": "menus",
           "reading": "menus",
@@ -3011,7 +3011,7 @@
         },
         {
           "word": "coloring",
-          "meaning": "(要確認)",
+          "meaning": "色こと・している",
           "isUnknown": false,
           "lemma": "coloring",
           "reading": "coloring",
@@ -3728,7 +3728,7 @@
         },
         {
           "word": "remembers",
-          "meaning": "(要確認)",
+          "meaning": "覚えている（複数形）",
           "isUnknown": false,
           "lemma": "remembers",
           "reading": "remembers",
@@ -4164,7 +4164,7 @@
         },
         {
           "word": "dangerously",
-          "meaning": "(要確認)",
+          "meaning": "危険なに",
           "isUnknown": false,
           "lemma": "dangerously",
           "reading": "dangerously",
@@ -4563,7 +4563,7 @@
         },
         {
           "word": "warmly",
-          "meaning": "(要確認)",
+          "meaning": "暖かいに",
           "isUnknown": false,
           "lemma": "warmly",
           "reading": "warmly",
@@ -4779,7 +4779,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -5154,7 +5154,7 @@
         },
         {
           "word": "tastes",
-          "meaning": "(要確認)",
+          "meaning": "味・味わう（複数形）",
           "isUnknown": false,
           "lemma": "tastes",
           "reading": "tastes",
@@ -5305,7 +5305,7 @@
         },
         {
           "word": "fulfilled",
-          "meaning": "(要確認)",
+          "meaning": "果たす・実現するた・された",
           "isUnknown": false,
           "lemma": "fulfilled",
           "reading": "fulfilled",
@@ -5760,7 +5760,7 @@
         },
         {
           "word": "opening",
-          "meaning": "(要確認)",
+          "meaning": "開ける・開いたこと・している",
           "isUnknown": false,
           "lemma": "opening",
           "reading": "opening",
@@ -5827,7 +5827,7 @@
         },
         {
           "word": "traveled",
-          "meaning": "(要確認)",
+          "meaning": "旅行するた・された",
           "isUnknown": false,
           "lemma": "traveled",
           "reading": "traveled",
@@ -5838,7 +5838,7 @@
         },
         {
           "word": "extensively",
-          "meaning": "(要確認)",
+          "meaning": "広範囲のに",
           "isUnknown": false,
           "lemma": "extensively",
           "reading": "extensively",
@@ -6420,7 +6420,7 @@
         },
         {
           "word": "compromises",
-          "meaning": "(要確認)",
+          "meaning": "妥協・妥協する（複数形）",
           "isUnknown": false,
           "lemma": "compromises",
           "reading": "compromises",
@@ -6698,7 +6698,7 @@
         },
         {
           "word": "assembled",
-          "meaning": "(要確認)",
+          "meaning": "組み立てる・集まるた・された",
           "isUnknown": false,
           "lemma": "assembled",
           "reading": "assembled",
@@ -7109,7 +7109,7 @@
         },
         {
           "word": "ingredients",
-          "meaning": "(要確認)",
+          "meaning": "材料・成分",
           "isUnknown": false,
           "lemma": "ingredients",
           "reading": "ingredients",
@@ -7772,7 +7772,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -8043,7 +8043,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -8232,7 +8232,7 @@
         },
         {
           "word": "baked",
-          "meaning": "(要確認)",
+          "meaning": "特別な機会た・された",
           "isUnknown": false,
           "lemma": "baked",
           "reading": "baked",
@@ -8350,7 +8350,7 @@
         },
         {
           "word": "ingredients",
-          "meaning": "(要確認)",
+          "meaning": "材料・成分",
           "isUnknown": false,
           "lemma": "ingredients",
           "reading": "ingredients",
@@ -8435,7 +8435,7 @@
         },
         {
           "word": "meats",
-          "meaning": "(要確認)",
+          "meaning": "肉（複数形）",
           "isUnknown": false,
           "lemma": "meats",
           "reading": "meats",
@@ -8575,7 +8575,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -8908,7 +8908,7 @@
       "segments": [
         {
           "word": "manages",
-          "meaning": "(要確認)",
+          "meaning": "管理する・何とかやる（複数形）",
           "isUnknown": false,
           "lemma": "manages",
           "reading": "manages",
@@ -9398,7 +9398,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -9487,7 +9487,7 @@
         },
         {
           "word": "evolves",
-          "meaning": "(要確認)",
+          "meaning": "進化する・発展する（複数形）",
           "isUnknown": false,
           "lemma": "evolves",
           "reading": "evolves",
@@ -9550,7 +9550,7 @@
       "segments": [
         {
           "word": "featuring",
-          "meaning": "(要確認)",
+          "meaning": "アートワークこと・している",
           "isUnknown": false,
           "lemma": "featuring",
           "reading": "featuring",
@@ -9561,7 +9561,7 @@
         },
         {
           "word": "ingredients",
-          "meaning": "(要確認)",
+          "meaning": "材料・成分",
           "isUnknown": false,
           "lemma": "ingredients",
           "reading": "ingredients",
@@ -9775,7 +9775,7 @@
         },
         {
           "word": "tomatoes",
-          "meaning": "(要確認)",
+          "meaning": "パスタ用（複数形）",
           "isUnknown": false,
           "lemma": "tomatoes",
           "reading": "tomatoes",
@@ -9797,7 +9797,7 @@
         },
         {
           "word": "cucumbers",
-          "meaning": "(要確認)",
+          "meaning": "手の（複数形）",
           "isUnknown": false,
           "lemma": "cucumbers",
           "reading": "cucumbers",
@@ -10181,7 +10181,7 @@
         },
         {
           "word": "tastes",
-          "meaning": "(要確認)",
+          "meaning": "味・味わう（複数形）",
           "isUnknown": false,
           "lemma": "tastes",
           "reading": "tastes",
@@ -10422,7 +10422,7 @@
         },
         {
           "word": "environmentally",
-          "meaning": "(要確認)",
+          "meaning": "環境のに",
           "isUnknown": false,
           "lemma": "environmentally",
           "reading": "environmentally",
@@ -10614,7 +10614,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -10817,7 +10817,7 @@
         },
         {
           "word": "specials",
-          "meaning": "(要確認)",
+          "meaning": "特別な（複数形）",
           "isUnknown": false,
           "lemma": "specials",
           "reading": "specials",
@@ -10891,7 +10891,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -11028,7 +11028,7 @@
         },
         {
           "word": "platforms",
-          "meaning": "(要確認)",
+          "meaning": "プラットフォーム",
           "isUnknown": false,
           "lemma": "platforms",
           "reading": "platforms",
@@ -11113,7 +11113,7 @@
         },
         {
           "word": "displays",
-          "meaning": "(要確認)",
+          "meaning": "表示する・陳列する",
           "isUnknown": false,
           "lemma": "displays",
           "reading": "displays",
@@ -11135,7 +11135,7 @@
         },
         {
           "word": "specials",
-          "meaning": "(要確認)",
+          "meaning": "特別な（複数形）",
           "isUnknown": false,
           "lemma": "specials",
           "reading": "specials",
@@ -11320,7 +11320,7 @@
         },
         {
           "word": "participates",
-          "meaning": "(要確認)",
+          "meaning": "スポーツへ（複数形）",
           "isUnknown": false,
           "lemma": "participates",
           "reading": "participates",
@@ -11654,7 +11654,7 @@
         },
         {
           "word": "discarding",
-          "meaning": "(要確認)",
+          "meaning": "捨てる・破棄すること・している",
           "isUnknown": false,
           "lemma": "discarding",
           "reading": "discarding",
@@ -11794,7 +11794,7 @@
         },
         {
           "word": "organizations",
-          "meaning": "(要確認)",
+          "meaning": "組織",
           "isUnknown": false,
           "lemma": "organizations",
           "reading": "organizations",
@@ -11953,7 +11953,7 @@
         },
         {
           "word": "walls",
-          "meaning": "(要確認)",
+          "meaning": "壁",
           "isUnknown": false,
           "lemma": "walls",
           "reading": "walls",
@@ -12124,7 +12124,7 @@
         },
         {
           "word": "enhancing",
-          "meaning": "(要確認)",
+          "meaning": "高めること・している",
           "isUnknown": false,
           "lemma": "enhancing",
           "reading": "enhancing",
@@ -12261,7 +12261,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -12440,7 +12440,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -12484,7 +12484,7 @@
         },
         {
           "word": "displays",
-          "meaning": "(要確認)",
+          "meaning": "表示する・陳列する",
           "isUnknown": false,
           "lemma": "displays",
           "reading": "displays",
@@ -12602,7 +12602,7 @@
         },
         {
           "word": "positions",
-          "meaning": "(要確認)",
+          "meaning": "位置・立場",
           "isUnknown": false,
           "lemma": "positions",
           "reading": "positions",
@@ -12643,7 +12643,7 @@
         },
         {
           "word": "jobs",
-          "meaning": "(要確認)",
+          "meaning": "仕事",
           "isUnknown": false,
           "lemma": "jobs",
           "reading": "jobs",
@@ -12895,7 +12895,7 @@
         },
         {
           "word": "pursued",
-          "meaning": "(要確認)",
+          "meaning": "追求する・続けるた・された",
           "isUnknown": false,
           "lemma": "pursued",
           "reading": "pursued",
@@ -14385,7 +14385,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -15139,7 +15139,7 @@
         },
         {
           "word": "welcoming",
-          "meaning": "(要確認)",
+          "meaning": "歓迎する・ようこそこと・している",
           "isUnknown": false,
           "lemma": "welcoming",
           "reading": "welcoming",
@@ -15287,7 +15287,7 @@
         },
         {
           "word": "guided",
-          "meaning": "(要確認)",
+          "meaning": "案内する・案内人た・された",
           "isUnknown": false,
           "lemma": "guided",
           "reading": "guided",
@@ -15515,7 +15515,7 @@
         },
         {
           "word": "specials",
-          "meaning": "(要確認)",
+          "meaning": "特別な（複数形）",
           "isUnknown": false,
           "lemma": "specials",
           "reading": "specials",
@@ -15677,7 +15677,7 @@
         },
         {
           "word": "suggestions",
-          "meaning": "(要確認)",
+          "meaning": "提案",
           "isUnknown": false,
           "lemma": "suggestions",
           "reading": "suggestions",
@@ -15710,7 +15710,7 @@
         },
         {
           "word": "ingredients",
-          "meaning": "(要確認)",
+          "meaning": "材料・成分",
           "isUnknown": false,
           "lemma": "ingredients",
           "reading": "ingredients",
@@ -15784,7 +15784,7 @@
         },
         {
           "word": "recipes",
-          "meaning": "(要確認)",
+          "meaning": "レシピ",
           "isUnknown": false,
           "lemma": "recipes",
           "reading": "recipes",
@@ -15866,7 +15866,7 @@
         },
         {
           "word": "lively",
-          "meaning": "(要確認)",
+          "meaning": "生きる・住むに",
           "isUnknown": false,
           "lemma": "lively",
           "reading": "lively",
@@ -16178,7 +16178,7 @@
       "segments": [
         {
           "word": "enjoying",
-          "meaning": "(要確認)",
+          "meaning": "楽しむこと・している",
           "isUnknown": false,
           "lemma": "enjoying",
           "reading": "enjoying",
@@ -16836,7 +16836,7 @@
         },
         {
           "word": "welcoming",
-          "meaning": "(要確認)",
+          "meaning": "歓迎する・ようこそこと・している",
           "isUnknown": false,
           "lemma": "welcoming",
           "reading": "welcoming",

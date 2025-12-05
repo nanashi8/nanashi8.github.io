@@ -739,7 +739,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -794,7 +794,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -890,7 +890,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -1271,7 +1271,7 @@
         },
         {
           "word": "certainly",
-          "meaning": "(要確認)",
+          "meaning": "確かに",
           "isUnknown": false,
           "lemma": "certainly",
           "reading": "certainly",
@@ -2209,7 +2209,7 @@
         },
         {
           "word": "strongly",
-          "meaning": "(要確認)",
+          "meaning": "強く",
           "isUnknown": false,
           "lemma": "strongly",
           "reading": "strongly",
@@ -2546,7 +2546,7 @@
         },
         {
           "word": "included",
-          "meaning": "(要確認)",
+          "meaning": "含むた・された",
           "isUnknown": false,
           "lemma": "included",
           "reading": "included",
@@ -2687,7 +2687,7 @@
         },
         {
           "word": "wanting",
-          "meaning": "(要確認)",
+          "meaning": "欲しい・望むこと・している",
           "isUnknown": false,
           "lemma": "wanting",
           "reading": "wanting",
@@ -2854,7 +2854,7 @@
         },
         {
           "word": "properties",
-          "meaning": "(要確認)",
+          "meaning": "財産・特性",
           "isUnknown": false,
           "lemma": "properties",
           "reading": "properties",
@@ -3261,7 +3261,7 @@
         },
         {
           "word": "lawyers",
-          "meaning": "(要確認)",
+          "meaning": "弁護士",
           "isUnknown": false,
           "lemma": "lawyers",
           "reading": "lawyers",
@@ -3725,7 +3725,7 @@
         },
         {
           "word": "mornings",
-          "meaning": "(要確認)",
+          "meaning": "朝（複数形）",
           "isUnknown": false,
           "lemma": "mornings",
           "reading": "mornings",
@@ -4125,7 +4125,7 @@
         },
         {
           "word": "hotels",
-          "meaning": "(要確認)",
+          "meaning": "ホテル（複数形）",
           "isUnknown": false,
           "lemma": "hotels",
           "reading": "hotels",
@@ -4420,7 +4420,7 @@
         },
         {
           "word": "trained",
-          "meaning": "(要確認)",
+          "meaning": "列車・訓練するた・された",
           "isUnknown": false,
           "lemma": "trained",
           "reading": "trained",
@@ -4631,7 +4631,7 @@
         },
         {
           "word": "vendors",
-          "meaning": "(要確認)",
+          "meaning": "販売業者",
           "isUnknown": false,
           "lemma": "vendors",
           "reading": "vendors",
@@ -4916,7 +4916,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -5053,7 +5053,7 @@
         },
         {
           "word": "purchases",
-          "meaning": "(要確認)",
+          "meaning": "購入・買う（複数形）",
           "isUnknown": false,
           "lemma": "purchases",
           "reading": "purchases",
@@ -5086,7 +5086,7 @@
         },
         {
           "word": "vendors",
-          "meaning": "(要確認)",
+          "meaning": "販売業者",
           "isUnknown": false,
           "lemma": "vendors",
           "reading": "vendors",
@@ -5344,7 +5344,7 @@
         },
         {
           "word": "enjoying",
-          "meaning": "(要確認)",
+          "meaning": "楽しむこと・している",
           "isUnknown": false,
           "lemma": "enjoying",
           "reading": "enjoying",
@@ -5859,7 +5859,7 @@
       "segments": [
         {
           "word": "Winners",
-          "meaning": "(要確認)",
+          "meaning": "勝者",
           "isUnknown": false,
           "lemma": "Winners",
           "reading": "Winners",
@@ -6343,7 +6343,7 @@
       "segments": [
         {
           "word": "Participants",
-          "meaning": "(要確認)",
+          "meaning": "参加者",
           "isUnknown": false,
           "lemma": "Participants",
           "reading": "Participants",
@@ -6476,7 +6476,7 @@
         },
         {
           "word": "featuring",
-          "meaning": "(要確認)",
+          "meaning": "アートワークこと・している",
           "isUnknown": false,
           "lemma": "featuring",
           "reading": "featuring",
@@ -6846,7 +6846,7 @@
         },
         {
           "word": "exhibits",
-          "meaning": "(要確認)",
+          "meaning": "展示品・展示する",
           "isUnknown": false,
           "lemma": "exhibits",
           "reading": "exhibits",
@@ -6909,7 +6909,7 @@
       "segments": [
         {
           "word": "Guided",
-          "meaning": "(要確認)",
+          "meaning": "案内する・案内人た・された",
           "isUnknown": false,
           "lemma": "Guided",
           "reading": "Guided",
@@ -6920,7 +6920,7 @@
         },
         {
           "word": "tours",
-          "meaning": "(要確認)",
+          "meaning": "テレビ（複数形）",
           "isUnknown": false,
           "lemma": "tours",
           "reading": "tours",
@@ -7552,7 +7552,7 @@
         },
         {
           "word": "weekends",
-          "meaning": "(要確認)",
+          "meaning": "週末（複数形）",
           "isUnknown": false,
           "lemma": "weekends",
           "reading": "weekends",
@@ -8474,7 +8474,7 @@
         },
         {
           "word": "customers",
-          "meaning": "(要確認)",
+          "meaning": "顧客・客",
           "isUnknown": false,
           "lemma": "customers",
           "reading": "customers",
@@ -8907,7 +8907,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -9003,7 +9003,7 @@
         },
         {
           "word": "p",
-          "meaning": "(要確認)",
+          "meaning": "p・ページ",
           "isUnknown": false,
           "lemma": "p",
           "reading": "p",
@@ -9529,7 +9529,7 @@
         },
         {
           "word": "tutoring",
-          "meaning": "(要確認)",
+          "meaning": "忍耐強くこと・している",
           "isUnknown": false,
           "lemma": "tutoring",
           "reading": "tutoring",
@@ -9914,7 +9914,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(要確認)",
+          "meaning": "雇用主",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -11395,7 +11395,7 @@
         },
         {
           "word": "basics",
-          "meaning": "(要確認)",
+          "meaning": "Basic（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "basics",
           "reading": "basics",
@@ -11682,7 +11682,7 @@
         },
         {
           "word": "donations",
-          "meaning": "(要確認)",
+          "meaning": "寄付",
           "isUnknown": false,
           "lemma": "donations",
           "reading": "donations",
@@ -11868,7 +11868,7 @@
         },
         {
           "word": "employs",
-          "meaning": "(要確認)",
+          "meaning": "雇う（複数形）",
           "isUnknown": false,
           "lemma": "employs",
           "reading": "employs",
@@ -11890,7 +11890,7 @@
         },
         {
           "word": "instructors",
-          "meaning": "(要確認)",
+          "meaning": "経験でした（複数形）",
           "isUnknown": false,
           "lemma": "instructors",
           "reading": "instructors",
@@ -12657,7 +12657,7 @@
         },
         {
           "word": "crafts",
-          "meaning": "(要確認)",
+          "meaning": "クラフト（複数形）",
           "isUnknown": false,
           "lemma": "crafts",
           "reading": "crafts",
@@ -12961,7 +12961,7 @@
         },
         {
           "word": "Wheels",
-          "meaning": "(要確認)",
+          "meaning": "車輪",
           "isUnknown": false,
           "lemma": "Wheels",
           "reading": "Wheels",
@@ -13287,7 +13287,7 @@
         },
         {
           "word": "enabling",
-          "meaning": "(要確認)",
+          "meaning": "新しいハビタット建設のような。こと・している",
           "isUnknown": false,
           "lemma": "enabling",
           "reading": "enabling",
@@ -14519,7 +14519,7 @@
       "segments": [
         {
           "word": "Participants",
-          "meaning": "(要確認)",
+          "meaning": "参加者",
           "isUnknown": false,
           "lemma": "Participants",
           "reading": "Participants",
@@ -15216,7 +15216,7 @@
         },
         {
           "word": "themes",
-          "meaning": "(要確認)",
+          "meaning": "テーマ",
           "isUnknown": false,
           "lemma": "themes",
           "reading": "themes",
@@ -15756,7 +15756,7 @@
       "segments": [
         {
           "word": "Officers",
-          "meaning": "(要確認)",
+          "meaning": "役員・将校",
           "isUnknown": false,
           "lemma": "Officers",
           "reading": "Officers",
@@ -15778,7 +15778,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(要確認)",
+          "meaning": "近隣・地域（複数形）",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -16052,7 +16052,7 @@
         },
         {
           "word": "inspections",
-          "meaning": "(要確認)",
+          "meaning": "検査",
           "isUnknown": false,
           "lemma": "inspections",
           "reading": "inspections",
@@ -16351,7 +16351,7 @@
         },
         {
           "word": "responses",
-          "meaning": "(要確認)",
+          "meaning": "応答",
           "isUnknown": false,
           "lemma": "responses",
           "reading": "responses",
@@ -16532,7 +16532,7 @@
         },
         {
           "word": "assembling",
-          "meaning": "(要確認)",
+          "meaning": "組み立てる・集まること・している",
           "isUnknown": false,
           "lemma": "assembling",
           "reading": "assembling",
@@ -17161,7 +17161,7 @@
         },
         {
           "word": "emergencies",
-          "meaning": "(要確認)",
+          "meaning": "緊急事態・非常時（複数形）",
           "isUnknown": false,
           "lemma": "emergencies",
           "reading": "emergencies",
@@ -17478,7 +17478,7 @@
         },
         {
           "word": "warnings",
-          "meaning": "(要確認)",
+          "meaning": "警告",
           "isUnknown": false,
           "lemma": "warnings",
           "reading": "warnings",
@@ -17500,7 +17500,7 @@
         },
         {
           "word": "injuries",
-          "meaning": "(要確認)",
+          "meaning": "治癒（複数形）",
           "isUnknown": false,
           "lemma": "injuries",
           "reading": "injuries",
@@ -18091,7 +18091,7 @@
         },
         {
           "word": "panels",
-          "meaning": "(要確認)",
+          "meaning": "パネル・委員会",
           "isUnknown": false,
           "lemma": "panels",
           "reading": "panels",
@@ -18266,7 +18266,7 @@
         },
         {
           "word": "replaced",
-          "meaning": "(要確認)",
+          "meaning": "取り替えるた・された",
           "isUnknown": false,
           "lemma": "replaced",
           "reading": "replaced",
@@ -18955,7 +18955,7 @@
         },
         {
           "word": "participants",
-          "meaning": "(要確認)",
+          "meaning": "参加者",
           "isUnknown": false,
           "lemma": "participants",
           "reading": "participants",
@@ -19190,7 +19190,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(要確認)",
+          "meaning": "近隣・地域（複数形）",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -19453,7 +19453,7 @@
         },
         {
           "word": "properties",
-          "meaning": "(要確認)",
+          "meaning": "財産・特性",
           "isUnknown": false,
           "lemma": "properties",
           "reading": "properties",
@@ -19694,7 +19694,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(要確認)",
+          "meaning": "近隣・地域（複数形）",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -19921,7 +19921,7 @@
       "segments": [
         {
           "word": "representing",
-          "meaning": "(要確認)",
+          "meaning": "表す・代表すること・している",
           "isUnknown": false,
           "lemma": "representing",
           "reading": "representing",
@@ -20039,7 +20039,7 @@
         },
         {
           "word": "culturally",
-          "meaning": "(要確認)",
+          "meaning": "文化的なに",
           "isUnknown": false,
           "lemma": "culturally",
           "reading": "culturally",
@@ -20485,7 +20485,7 @@
         },
         {
           "word": "bridges",
-          "meaning": "(要確認)",
+          "meaning": "橋（複数形）",
           "isUnknown": false,
           "lemma": "bridges",
           "reading": "bridges",
@@ -20808,7 +20808,7 @@
         },
         {
           "word": "settings",
-          "meaning": "(要確認)",
+          "meaning": "設定・環境",
           "isUnknown": false,
           "lemma": "settings",
           "reading": "settings",
@@ -20849,7 +20849,7 @@
         },
         {
           "word": "participants",
-          "meaning": "(要確認)",
+          "meaning": "参加者",
           "isUnknown": false,
           "lemma": "participants",
           "reading": "participants",
@@ -20893,7 +20893,7 @@
         },
         {
           "word": "transcending",
-          "meaning": "(要確認)",
+          "meaning": "超越すること・している",
           "isUnknown": false,
           "lemma": "transcending",
           "reading": "transcending",
@@ -21026,7 +21026,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -21246,7 +21246,7 @@
         },
         {
           "word": "culturally",
-          "meaning": "(要確認)",
+          "meaning": "文化的なに",
           "isUnknown": false,
           "lemma": "culturally",
           "reading": "culturally",
@@ -21375,7 +21375,7 @@
         },
         {
           "word": "welcoming",
-          "meaning": "(要確認)",
+          "meaning": "歓迎する・ようこそこと・している",
           "isUnknown": false,
           "lemma": "welcoming",
           "reading": "welcoming",
@@ -21624,7 +21624,7 @@
         },
         {
           "word": "ventures",
-          "meaning": "(要確認)",
+          "meaning": "事業",
           "isUnknown": false,
           "lemma": "ventures",
           "reading": "ventures",
@@ -21720,7 +21720,7 @@
         },
         {
           "word": "licenses",
-          "meaning": "(要確認)",
+          "meaning": "免許・許可",
           "isUnknown": false,
           "lemma": "licenses",
           "reading": "licenses",
@@ -21952,7 +21952,7 @@
         },
         {
           "word": "successfully",
-          "meaning": "(要確認)",
+          "meaning": "成功して",
           "isUnknown": false,
           "lemma": "successfully",
           "reading": "successfully",
@@ -22219,7 +22219,7 @@
         },
         {
           "word": "parties",
-          "meaning": "(要確認)",
+          "meaning": "パーティー・政党（複数形）",
           "isUnknown": false,
           "lemma": "parties",
           "reading": "parties",
@@ -22518,7 +22518,7 @@
         },
         {
           "word": "attracting",
-          "meaning": "(要確認)",
+          "meaning": "引きつけること・している",
           "isUnknown": false,
           "lemma": "attracting",
           "reading": "attracting",
@@ -22707,7 +22707,7 @@
         },
         {
           "word": "districts",
-          "meaning": "(要確認)",
+          "meaning": "地区",
           "isUnknown": false,
           "lemma": "districts",
           "reading": "districts",
@@ -23356,7 +23356,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(要確認)",
+          "meaning": "雇用主",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -23518,7 +23518,7 @@
         },
         {
           "word": "employers",
-          "meaning": "(要確認)",
+          "meaning": "雇用主",
           "isUnknown": false,
           "lemma": "employers",
           "reading": "employers",
@@ -23608,7 +23608,7 @@
         },
         {
           "word": "prospects",
-          "meaning": "(要確認)",
+          "meaning": "見込み・展望",
           "isUnknown": false,
           "lemma": "prospects",
           "reading": "prospects",
@@ -23994,7 +23994,7 @@
         },
         {
           "word": "continuously",
-          "meaning": "(要確認)",
+          "meaning": "連続した・途切れないに",
           "isUnknown": false,
           "lemma": "continuously",
           "reading": "continuously",
@@ -25022,7 +25022,7 @@
         },
         {
           "word": "responses",
-          "meaning": "(要確認)",
+          "meaning": "応答",
           "isUnknown": false,
           "lemma": "responses",
           "reading": "responses",
@@ -26230,7 +26230,7 @@
         },
         {
           "word": "meetings",
-          "meaning": "(要確認)",
+          "meaning": "会議",
           "isUnknown": false,
           "lemma": "meetings",
           "reading": "meetings",
@@ -26841,7 +26841,7 @@
         },
         {
           "word": "insights",
-          "meaning": "(要確認)",
+          "meaning": "洞察",
           "isUnknown": false,
           "lemma": "insights",
           "reading": "insights",
@@ -27273,7 +27273,7 @@
         },
         {
           "word": "enhancing",
-          "meaning": "(要確認)",
+          "meaning": "高めること・している",
           "isUnknown": false,
           "lemma": "enhancing",
           "reading": "enhancing",
@@ -27374,7 +27374,7 @@
         },
         {
           "word": "thoughtfully",
-          "meaning": "(要確認)",
+          "meaning": "思慮深い・親切なに",
           "isUnknown": false,
           "lemma": "thoughtfully",
           "reading": "thoughtfully",
@@ -27698,7 +27698,7 @@
         },
         {
           "word": "sacrificing",
-          "meaning": "(要確認)",
+          "meaning": "犠牲・献身こと・している",
           "isUnknown": false,
           "lemma": "sacrificing",
           "reading": "sacrificing",
@@ -27868,7 +27868,7 @@
         },
         {
           "word": "privileged",
-          "meaning": "(要確認)",
+          "meaning": "特権・恩恵た・された",
           "isUnknown": false,
           "lemma": "privileged",
           "reading": "privileged",
