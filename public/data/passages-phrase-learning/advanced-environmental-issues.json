@@ -57,7 +57,7 @@
         },
         {
           "word": "unprecedented",
-          "meaning": "(要確認)",
+          "meaning": "前例のない",
           "isUnknown": false,
           "lemma": "unprecedented",
           "reading": "unprecedented",
@@ -464,7 +464,7 @@
         },
         {
           "word": "deforestation",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採",
           "isUnknown": false,
           "lemma": "deforestation",
           "reading": "deforestation",
@@ -827,7 +827,7 @@
         },
         {
           "word": "survival",
-          "meaning": "(要確認)",
+          "meaning": "生存",
           "isUnknown": false,
           "lemma": "survival",
           "reading": "survival",
@@ -1288,7 +1288,7 @@
         },
         {
           "word": "emission",
-          "meaning": "(要確認)",
+          "meaning": "未来",
           "isUnknown": false,
           "lemma": "emission",
           "reading": "emission",
@@ -1804,7 +1804,7 @@
         },
         {
           "word": "otherwise",
-          "meaning": "(要確認)",
+          "meaning": "さもなければ",
           "isUnknown": false,
           "lemma": "otherwise",
           "reading": "otherwise",
@@ -1900,7 +1900,7 @@
         },
         {
           "word": "effect",
-          "meaning": "(要確認)",
+          "meaning": "効果",
           "isUnknown": false,
           "lemma": "effect",
           "reading": "effect",
@@ -1911,7 +1911,7 @@
         },
         {
           "word": "itself",
-          "meaning": "(要確認)",
+          "meaning": "それ自体",
           "isUnknown": false,
           "lemma": "itself",
           "reading": "itself",
@@ -2188,7 +2188,7 @@
         },
         {
           "word": "effect",
-          "meaning": "(要確認)",
+          "meaning": "効果",
           "isUnknown": false,
           "lemma": "effect",
           "reading": "effect",
@@ -4741,7 +4741,7 @@
         },
         {
           "word": "unprecedented",
-          "meaning": "(要確認)",
+          "meaning": "前例のない",
           "isUnknown": false,
           "lemma": "unprecedented",
           "reading": "unprecedented",
@@ -5343,7 +5343,7 @@
         },
         {
           "word": "oxygen",
-          "meaning": "(要確認)",
+          "meaning": "酸素",
           "isUnknown": false,
           "lemma": "oxygen",
           "reading": "oxygen",
@@ -5779,7 +5779,7 @@
         },
         {
           "word": "largest",
-          "meaning": "(要確認)",
+          "meaning": "最大の",
           "isUnknown": false,
           "lemma": "largest",
           "reading": "largest",
@@ -6292,7 +6292,7 @@
         },
         {
           "word": "precious",
-          "meaning": "(要確認)",
+          "meaning": "貴重な",
           "isUnknown": false,
           "lemma": "precious",
           "reading": "precious",
@@ -6981,7 +6981,7 @@
         },
         {
           "word": "itself",
-          "meaning": "(要確認)",
+          "meaning": "それ自体",
           "isUnknown": false,
           "lemma": "itself",
           "reading": "itself",
@@ -7452,7 +7452,7 @@
         },
         {
           "word": "instance",
-          "meaning": "(要確認)",
+          "meaning": "例・場合",
           "isUnknown": false,
           "lemma": "instance",
           "reading": "instance",
@@ -7981,7 +7981,7 @@
         },
         {
           "word": "six",
-          "meaning": "(要確認)",
+          "meaning": "ケア",
           "isUnknown": false,
           "lemma": "six",
           "reading": "six",
@@ -8479,7 +8479,7 @@
       "segments": [
         {
           "word": "Deforestation",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採",
           "isUnknown": false,
           "lemma": "Deforestation",
           "reading": "Deforestation",
@@ -11803,7 +11803,7 @@
         },
         {
           "word": "moisture",
-          "meaning": "(要確認)",
+          "meaning": "水分",
           "isUnknown": false,
           "lemma": "moisture",
           "reading": "moisture",
@@ -13315,7 +13315,7 @@
         },
         {
           "word": "oxygen",
-          "meaning": "(要確認)",
+          "meaning": "酸素",
           "isUnknown": false,
           "lemma": "oxygen",
           "reading": "oxygen",
@@ -13811,7 +13811,7 @@
         },
         {
           "word": "accumulate",
-          "meaning": "(要確認)",
+          "meaning": "蓄積する",
           "isUnknown": false,
           "lemma": "accumulate",
           "reading": "accumulate",
@@ -14409,7 +14409,7 @@
         },
         {
           "word": "million",
-          "meaning": "(要確認)",
+          "meaning": "百万",
           "isUnknown": false,
           "lemma": "million",
           "reading": "million",
@@ -15217,7 +15217,7 @@
         },
         {
           "word": "larger",
-          "meaning": "(要確認)",
+          "meaning": "より大きい",
           "isUnknown": false,
           "lemma": "larger",
           "reading": "larger",
@@ -15642,7 +15642,7 @@
         },
         {
           "word": "billion",
-          "meaning": "(要確認)",
+          "meaning": "10億",
           "isUnknown": false,
           "lemma": "billion",
           "reading": "billion",
@@ -16405,7 +16405,7 @@
         },
         {
           "word": "precious",
-          "meaning": "(要確認)",
+          "meaning": "貴重な",
           "isUnknown": false,
           "lemma": "precious",
           "reading": "precious",
@@ -16587,7 +16587,7 @@
         },
         {
           "word": "deforestation",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採",
           "isUnknown": false,
           "lemma": "deforestation",
           "reading": "deforestation",
@@ -17094,7 +17094,7 @@
       "segments": [
         {
           "word": "Deforestation",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採",
           "isUnknown": false,
           "lemma": "Deforestation",
           "reading": "Deforestation",
@@ -17784,7 +17784,7 @@
         },
         {
           "word": "deforestation",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採",
           "isUnknown": false,
           "lemma": "deforestation",
           "reading": "deforestation",
@@ -17984,7 +17984,7 @@
         },
         {
           "word": "capacity",
-          "meaning": "(要確認)",
+          "meaning": "容量・能力",
           "isUnknown": false,
           "lemma": "capacity",
           "reading": "capacity",
@@ -18524,7 +18524,7 @@
         },
         {
           "word": "contamination",
-          "meaning": "(要確認)",
+          "meaning": "汚染",
           "isUnknown": false,
           "lemma": "contamination",
           "reading": "contamination",
@@ -18746,7 +18746,7 @@
         },
         {
           "word": "disposal",
-          "meaning": "(要確認)",
+          "meaning": "処分",
           "isUnknown": false,
           "lemma": "disposal",
           "reading": "disposal",
@@ -19316,7 +19316,7 @@
         },
         {
           "word": "storage",
-          "meaning": "(要確認)",
+          "meaning": "保存・貯蔵",
           "isUnknown": false,
           "lemma": "storage",
           "reading": "storage",
@@ -19604,7 +19604,7 @@
         },
         {
           "word": "disposal",
-          "meaning": "(要確認)",
+          "meaning": "処分",
           "isUnknown": false,
           "lemma": "disposal",
           "reading": "disposal",
@@ -21300,7 +21300,7 @@
         },
         {
           "word": "expand",
-          "meaning": "(要確認)",
+          "meaning": "拡大する",
           "isUnknown": false,
           "lemma": "expand",
           "reading": "expand",
@@ -21437,7 +21437,7 @@
         },
         {
           "word": "movement",
-          "meaning": "(要確認)",
+          "meaning": "動き・運動",
           "isUnknown": false,
           "lemma": "movement",
           "reading": "movement",
@@ -21700,7 +21700,7 @@
         },
         {
           "word": "effect",
-          "meaning": "(要確認)",
+          "meaning": "効果",
           "isUnknown": false,
           "lemma": "effect",
           "reading": "effect",
@@ -22960,7 +22960,7 @@
         },
         {
           "word": "landscape",
-          "meaning": "(要確認)",
+          "meaning": "景色",
           "isUnknown": false,
           "lemma": "landscape",
           "reading": "landscape",
@@ -23333,7 +23333,7 @@
         },
         {
           "word": "billion",
-          "meaning": "(要確認)",
+          "meaning": "10億",
           "isUnknown": false,
           "lemma": "billion",
           "reading": "billion",
@@ -23407,7 +23407,7 @@
         },
         {
           "word": "billion",
-          "meaning": "(要確認)",
+          "meaning": "10億",
           "isUnknown": false,
           "lemma": "billion",
           "reading": "billion",
@@ -25015,7 +25015,7 @@
         },
         {
           "word": "elsewhere",
-          "meaning": "(要確認)",
+          "meaning": "どこか他の場所",
           "isUnknown": false,
           "lemma": "elsewhere",
           "reading": "elsewhere",
@@ -26453,7 +26453,7 @@
         },
         {
           "word": "efficiency",
-          "meaning": "(要確認)",
+          "meaning": "効率",
           "isUnknown": false,
           "lemma": "efficiency",
           "reading": "efficiency",
@@ -26936,7 +26936,7 @@
         },
         {
           "word": "substantial",
-          "meaning": "(要確認)",
+          "meaning": "実質的な・かなりの",
           "isUnknown": false,
           "lemma": "substantial",
           "reading": "substantial",
@@ -27354,7 +27354,7 @@
         },
         {
           "word": "blows",
-          "meaning": "(要確認)",
+          "meaning": "そよ風",
           "isUnknown": false,
           "lemma": "blows",
           "reading": "blows",
@@ -27428,7 +27428,7 @@
         },
         {
           "word": "storage",
-          "meaning": "(要確認)",
+          "meaning": "保存・貯蔵",
           "isUnknown": false,
           "lemma": "storage",
           "reading": "storage",
@@ -28795,7 +28795,7 @@
         },
         {
           "word": "instance",
-          "meaning": "(要確認)",
+          "meaning": "例・場合",
           "isUnknown": false,
           "lemma": "instance",
           "reading": "instance",
@@ -29667,7 +29667,7 @@
         },
         {
           "word": "efficiency",
-          "meaning": "(要確認)",
+          "meaning": "効率",
           "isUnknown": false,
           "lemma": "efficiency",
           "reading": "efficiency",
@@ -30078,7 +30078,7 @@
         },
         {
           "word": "accomplish",
-          "meaning": "(要確認)",
+          "meaning": "達成する",
           "isUnknown": false,
           "lemma": "accomplish",
           "reading": "accomplish",
@@ -30910,7 +30910,7 @@
         },
         {
           "word": "efficiency",
-          "meaning": "(要確認)",
+          "meaning": "効率",
           "isUnknown": false,
           "lemma": "efficiency",
           "reading": "efficiency",
@@ -31191,7 +31191,7 @@
         },
         {
           "word": "disposal",
-          "meaning": "(要確認)",
+          "meaning": "処分",
           "isUnknown": false,
           "lemma": "disposal",
           "reading": "disposal",
@@ -33537,7 +33537,7 @@
         },
         {
           "word": "recover",
-          "meaning": "(要確認)",
+          "meaning": "回復する",
           "isUnknown": false,
           "lemma": "recover",
           "reading": "recover",
@@ -34182,7 +34182,7 @@
         },
         {
           "word": "production",
-          "meaning": "(要確認)",
+          "meaning": "生産",
           "isUnknown": false,
           "lemma": "production",
           "reading": "production",
@@ -35741,7 +35741,7 @@
         },
         {
           "word": "deforestation",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採",
           "isUnknown": false,
           "lemma": "deforestation",
           "reading": "deforestation",
@@ -36041,7 +36041,7 @@
         },
         {
           "word": "decision",
-          "meaning": "(要確認)",
+          "meaning": "決定",
           "isUnknown": false,
           "lemma": "decision",
           "reading": "decision",
@@ -38079,7 +38079,7 @@
         },
         {
           "word": "efficiency",
-          "meaning": "(要確認)",
+          "meaning": "効率",
           "isUnknown": false,
           "lemma": "efficiency",
           "reading": "efficiency",
@@ -38316,7 +38316,7 @@
         },
         {
           "word": "policy",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policy",
           "reading": "policy",
@@ -39372,7 +39372,7 @@
         },
         {
           "word": "coverage",
-          "meaning": "(要確認)",
+          "meaning": "報道・範囲",
           "isUnknown": false,
           "lemma": "coverage",
           "reading": "coverage",
@@ -40385,7 +40385,7 @@
         },
         {
           "word": "million",
-          "meaning": "(要確認)",
+          "meaning": "百万",
           "isUnknown": false,
           "lemma": "million",
           "reading": "million",
@@ -41633,7 +41633,7 @@
         },
         {
           "word": "contamination",
-          "meaning": "(要確認)",
+          "meaning": "汚染",
           "isUnknown": false,
           "lemma": "contamination",
           "reading": "contamination",
@@ -42214,7 +42214,7 @@
         },
         {
           "word": "faster",
-          "meaning": "(要確認)",
+          "meaning": "より速い",
           "isUnknown": false,
           "lemma": "faster",
           "reading": "faster",
@@ -44130,7 +44130,7 @@
         },
         {
           "word": "production",
-          "meaning": "(要確認)",
+          "meaning": "生産",
           "isUnknown": false,
           "lemma": "production",
           "reading": "production",
@@ -44515,7 +44515,7 @@
         },
         {
           "word": "expand",
-          "meaning": "(要確認)",
+          "meaning": "拡大する",
           "isUnknown": false,
           "lemma": "expand",
           "reading": "expand",
@@ -45132,7 +45132,7 @@
         },
         {
           "word": "contamination",
-          "meaning": "(要確認)",
+          "meaning": "汚染",
           "isUnknown": false,
           "lemma": "contamination",
           "reading": "contamination",
@@ -45669,7 +45669,7 @@
         },
         {
           "word": "function",
-          "meaning": "(要確認)",
+          "meaning": "機能",
           "isUnknown": false,
           "lemma": "function",
           "reading": "function",
@@ -46133,7 +46133,7 @@
         },
         {
           "word": "effect",
-          "meaning": "(要確認)",
+          "meaning": "効果",
           "isUnknown": false,
           "lemma": "effect",
           "reading": "effect",
@@ -48772,7 +48772,7 @@
         },
         {
           "word": "outdoor",
-          "meaning": "(要確認)",
+          "meaning": "屋外の",
           "isUnknown": false,
           "lemma": "outdoor",
           "reading": "outdoor",
@@ -49038,7 +49038,7 @@
         },
         {
           "word": "unprecedented",
-          "meaning": "(要確認)",
+          "meaning": "前例のない",
           "isUnknown": false,
           "lemma": "unprecedented",
           "reading": "unprecedented",
@@ -49175,7 +49175,7 @@
         },
         {
           "word": "accumulate",
-          "meaning": "(要確認)",
+          "meaning": "蓄積する",
           "isUnknown": false,
           "lemma": "accumulate",
           "reading": "accumulate",
@@ -49671,7 +49671,7 @@
         },
         {
           "word": "disposal",
-          "meaning": "(要確認)",
+          "meaning": "処分",
           "isUnknown": false,
           "lemma": "disposal",
           "reading": "disposal",
@@ -50600,7 +50600,7 @@
         },
         {
           "word": "contamination",
-          "meaning": "(要確認)",
+          "meaning": "汚染",
           "isUnknown": false,
           "lemma": "contamination",
           "reading": "contamination",
@@ -50715,7 +50715,7 @@
         },
         {
           "word": "initial",
-          "meaning": "(要確認)",
+          "meaning": "サーフィン",
           "isUnknown": false,
           "lemma": "initial",
           "reading": "initial",
@@ -51180,7 +51180,7 @@
         },
         {
           "word": "disposal",
-          "meaning": "(要確認)",
+          "meaning": "処分",
           "isUnknown": false,
           "lemma": "disposal",
           "reading": "disposal",
@@ -52275,7 +52275,7 @@
         },
         {
           "word": "storage",
-          "meaning": "(要確認)",
+          "meaning": "保存・貯蔵",
           "isUnknown": false,
           "lemma": "storage",
           "reading": "storage",
@@ -52407,7 +52407,7 @@
         },
         {
           "word": "emission",
-          "meaning": "(要確認)",
+          "meaning": "未来",
           "isUnknown": false,
           "lemma": "emission",
           "reading": "emission",
@@ -52651,7 +52651,7 @@
         },
         {
           "word": "storage",
-          "meaning": "(要確認)",
+          "meaning": "保存・貯蔵",
           "isUnknown": false,
           "lemma": "storage",
           "reading": "storage",
@@ -54102,7 +54102,7 @@
         },
         {
           "word": "sophisticated",
-          "meaning": "(要確認)",
+          "meaning": "洗練された",
           "isUnknown": false,
           "lemma": "sophisticated",
           "reading": "sophisticated",
@@ -54904,7 +54904,7 @@
         },
         {
           "word": "transition",
-          "meaning": "(要確認)",
+          "meaning": "移行",
           "isUnknown": false,
           "lemma": "transition",
           "reading": "transition",
@@ -55990,7 +55990,7 @@
         },
         {
           "word": "movement",
-          "meaning": "(要確認)",
+          "meaning": "動き・運動",
           "isUnknown": false,
           "lemma": "movement",
           "reading": "movement",
@@ -56785,7 +56785,7 @@
       "segments": [
         {
           "word": "stable",
-          "meaning": "(要確認)",
+          "meaning": "安定した",
           "isUnknown": false,
           "lemma": "stable",
           "reading": "stable",
@@ -58229,7 +58229,7 @@
         },
         {
           "word": "impossible",
-          "meaning": "(要確認)",
+          "meaning": "不可能な",
           "isUnknown": false,
           "lemma": "impossible",
           "reading": "impossible",
@@ -58774,7 +58774,7 @@
         },
         {
           "word": "survival",
-          "meaning": "(要確認)",
+          "meaning": "生存",
           "isUnknown": false,
           "lemma": "survival",
           "reading": "survival",

@@ -648,7 +648,7 @@
         },
         {
           "word": "dinner",
-          "meaning": "(要確認)",
+          "meaning": "夕食",
           "isUnknown": false,
           "lemma": "dinner",
           "reading": "dinner",
@@ -1031,7 +1031,7 @@
         },
         {
           "word": "tea",
-          "meaning": "(要確認)",
+          "meaning": "キャリア",
           "isUnknown": false,
           "lemma": "tea",
           "reading": "tea",
@@ -1160,7 +1160,7 @@
         },
         {
           "word": "tea",
-          "meaning": "(要確認)",
+          "meaning": "キャリア",
           "isUnknown": false,
           "lemma": "tea",
           "reading": "tea",
@@ -1641,7 +1641,7 @@
         },
         {
           "word": "replied",
-          "meaning": "(要確認)",
+          "meaning": "答えた",
           "isUnknown": false,
           "lemma": "replied",
           "reading": "replied",
@@ -3877,7 +3877,7 @@
         },
         {
           "word": "decision",
-          "meaning": "(要確認)",
+          "meaning": "決定",
           "isUnknown": false,
           "lemma": "decision",
           "reading": "decision",
@@ -4609,7 +4609,7 @@
         },
         {
           "word": "related",
-          "meaning": "(要確認)",
+          "meaning": "関連した",
           "isUnknown": false,
           "lemma": "related",
           "reading": "related",
@@ -5953,7 +5953,7 @@
         },
         {
           "word": "terrible",
-          "meaning": "(要確認)",
+          "meaning": "ひどい・恐ろしい",
           "isUnknown": false,
           "lemma": "terrible",
           "reading": "terrible",
@@ -6881,7 +6881,7 @@
         },
         {
           "word": "math",
-          "meaning": "(要確認)",
+          "meaning": "数学",
           "isUnknown": false,
           "lemma": "math",
           "reading": "math",
@@ -7634,7 +7634,7 @@
         },
         {
           "word": "terrible",
-          "meaning": "(要確認)",
+          "meaning": "ひどい・恐ろしい",
           "isUnknown": false,
           "lemma": "terrible",
           "reading": "terrible",
@@ -8545,7 +8545,7 @@
         },
         {
           "word": "forever",
-          "meaning": "(要確認)",
+          "meaning": "永遠に",
           "isUnknown": false,
           "lemma": "forever",
           "reading": "forever",
@@ -11887,7 +11887,7 @@
         },
         {
           "word": "partner",
-          "meaning": "(要確認)",
+          "meaning": "パートナー",
           "isUnknown": false,
           "lemma": "partner",
           "reading": "partner",
@@ -12232,7 +12232,7 @@
         },
         {
           "word": "baby",
-          "meaning": "(要確認)",
+          "meaning": "赤ちゃん",
           "isUnknown": false,
           "lemma": "baby",
           "reading": "baby",
@@ -12254,7 +12254,7 @@
         },
         {
           "word": "born",
-          "meaning": "(要確認)",
+          "meaning": "生まれた",
           "isUnknown": false,
           "lemma": "born",
           "reading": "born",
@@ -13656,7 +13656,7 @@
         },
         {
           "word": "partner",
-          "meaning": "(要確認)",
+          "meaning": "パートナー",
           "isUnknown": false,
           "lemma": "partner",
           "reading": "partner",
@@ -14489,7 +14489,7 @@
         },
         {
           "word": "partner",
-          "meaning": "(要確認)",
+          "meaning": "パートナー",
           "isUnknown": false,
           "lemma": "partner",
           "reading": "partner",
@@ -14574,7 +14574,7 @@
         },
         {
           "word": "baby",
-          "meaning": "(要確認)",
+          "meaning": "赤ちゃん",
           "isUnknown": false,
           "lemma": "baby",
           "reading": "baby",
@@ -14615,7 +14615,7 @@
         },
         {
           "word": "baby",
-          "meaning": "(要確認)",
+          "meaning": "赤ちゃん",
           "isUnknown": false,
           "lemma": "baby",
           "reading": "baby",
@@ -14648,7 +14648,7 @@
         },
         {
           "word": "born",
-          "meaning": "(要確認)",
+          "meaning": "生まれた",
           "isUnknown": false,
           "lemma": "born",
           "reading": "born",
@@ -14907,7 +14907,7 @@
       "segments": [
         {
           "word": "tears",
-          "meaning": "(要確認)",
+          "meaning": "涙",
           "isUnknown": false,
           "lemma": "tears",
           "reading": "tears",
@@ -15379,7 +15379,7 @@
         },
         {
           "word": "partner",
-          "meaning": "(要確認)",
+          "meaning": "パートナー",
           "isUnknown": false,
           "lemma": "partner",
           "reading": "partner",
@@ -15986,7 +15986,7 @@
         },
         {
           "word": "rewarding",
-          "meaning": "(要確認)",
+          "meaning": "やりがいのある",
           "isUnknown": false,
           "lemma": "rewarding",
           "reading": "rewarding",
@@ -16123,7 +16123,7 @@
         },
         {
           "word": "overseas",
-          "meaning": "(要確認)",
+          "meaning": "海外の",
           "isUnknown": false,
           "lemma": "overseas",
           "reading": "overseas",
@@ -16397,7 +16397,7 @@
         },
         {
           "word": "six",
-          "meaning": "(要確認)",
+          "meaning": "ケア",
           "isUnknown": false,
           "lemma": "six",
           "reading": "six",
@@ -17144,7 +17144,7 @@
         },
         {
           "word": "overseas",
-          "meaning": "(要確認)",
+          "meaning": "海外の",
           "isUnknown": false,
           "lemma": "overseas",
           "reading": "overseas",
@@ -18636,7 +18636,7 @@
         },
         {
           "word": "kept",
-          "meaning": "(要確認)",
+          "meaning": "保った・守った",
           "isUnknown": false,
           "lemma": "kept",
           "reading": "kept",
@@ -18721,7 +18721,7 @@
         },
         {
           "word": "terrible",
-          "meaning": "(要確認)",
+          "meaning": "ひどい・恐ろしい",
           "isUnknown": false,
           "lemma": "terrible",
           "reading": "terrible",
@@ -19941,7 +19941,7 @@
         },
         {
           "word": "teenage",
-          "meaning": "(要確認)",
+          "meaning": "10代の",
           "isUnknown": false,
           "lemma": "teenage",
           "reading": "teenage",
@@ -22225,7 +22225,7 @@
         },
         {
           "word": "decision",
-          "meaning": "(要確認)",
+          "meaning": "決定",
           "isUnknown": false,
           "lemma": "decision",
           "reading": "decision",
@@ -22603,7 +22603,7 @@
         },
         {
           "word": "terrible",
-          "meaning": "(要確認)",
+          "meaning": "ひどい・恐ろしい",
           "isUnknown": false,
           "lemma": "terrible",
           "reading": "terrible",
@@ -23110,7 +23110,7 @@
         },
         {
           "word": "gently",
-          "meaning": "(要確認)",
+          "meaning": "優しく・穏やかに",
           "isUnknown": false,
           "lemma": "gently",
           "reading": "gently",
@@ -24413,7 +24413,7 @@
         },
         {
           "word": "overseas",
-          "meaning": "(要確認)",
+          "meaning": "海外の",
           "isUnknown": false,
           "lemma": "overseas",
           "reading": "overseas",
@@ -24901,7 +24901,7 @@
         },
         {
           "word": "partner",
-          "meaning": "(要確認)",
+          "meaning": "パートナー",
           "isUnknown": false,
           "lemma": "partner",
           "reading": "partner",
@@ -26237,7 +26237,7 @@
         },
         {
           "word": "beach",
-          "meaning": "(要確認)",
+          "meaning": "浜辺",
           "isUnknown": false,
           "lemma": "beach",
           "reading": "beach",
@@ -26333,7 +26333,7 @@
         },
         {
           "word": "grew",
-          "meaning": "(要確認)",
+          "meaning": "成長した・育った",
           "isUnknown": false,
           "lemma": "grew",
           "reading": "grew",
@@ -26426,7 +26426,7 @@
         },
         {
           "word": "leave",
-          "meaning": "(要確認)",
+          "meaning": "去る・残す",
           "isUnknown": false,
           "lemma": "leave",
           "reading": "leave",
@@ -26500,7 +26500,7 @@
         },
         {
           "word": "baby",
-          "meaning": "(要確認)",
+          "meaning": "赤ちゃん",
           "isUnknown": false,
           "lemma": "baby",
           "reading": "baby",
@@ -28551,7 +28551,7 @@
         },
         {
           "word": "professions",
-          "meaning": "(要確認)",
+          "meaning": "職業",
           "isUnknown": false,
           "lemma": "professions",
           "reading": "professions",
@@ -29069,7 +29069,7 @@
         },
         {
           "word": "stability",
-          "meaning": "(要確認)",
+          "meaning": "彼女",
           "isUnknown": false,
           "lemma": "stability",
           "reading": "stability",
@@ -29110,7 +29110,7 @@
         },
         {
           "word": "annual",
-          "meaning": "(要確認)",
+          "meaning": "年次の・毎年の",
           "isUnknown": false,
           "lemma": "annual",
           "reading": "annual",
@@ -29781,7 +29781,7 @@
         },
         {
           "word": "won't",
-          "meaning": "(要確認)",
+          "meaning": "しないだろう",
           "isUnknown": false,
           "lemma": "won't",
           "reading": "won't",
@@ -29844,7 +29844,7 @@
         },
         {
           "word": "forever",
-          "meaning": "(要確認)",
+          "meaning": "永遠に",
           "isUnknown": false,
           "lemma": "forever",
           "reading": "forever",
@@ -31038,7 +31038,7 @@
         },
         {
           "word": "stable",
-          "meaning": "(要確認)",
+          "meaning": "安定した",
           "isUnknown": false,
           "lemma": "stable",
           "reading": "stable",
@@ -35039,7 +35039,7 @@
         },
         {
           "word": "precisely",
-          "meaning": "(要確認)",
+          "meaning": "正確に",
           "isUnknown": false,
           "lemma": "precisely",
           "reading": "precisely",
@@ -35242,7 +35242,7 @@
         },
         {
           "word": "known",
-          "meaning": "(要確認)",
+          "meaning": "知られた",
           "isUnknown": false,
           "lemma": "known",
           "reading": "known",
@@ -35963,7 +35963,7 @@
         },
         {
           "word": "storage",
-          "meaning": "(要確認)",
+          "meaning": "保存・貯蔵",
           "isUnknown": false,
           "lemma": "storage",
           "reading": "storage",
@@ -36770,7 +36770,7 @@
         },
         {
           "word": "hung",
-          "meaning": "(要確認)",
+          "meaning": "かけた",
           "isUnknown": false,
           "lemma": "hung",
           "reading": "hung",
@@ -39011,7 +39011,7 @@
         },
         {
           "word": "badminton",
-          "meaning": "(要確認)",
+          "meaning": "バドミントン",
           "isUnknown": false,
           "lemma": "badminton",
           "reading": "badminton",
@@ -41401,7 +41401,7 @@
         },
         {
           "word": "presence",
-          "meaning": "(要確認)",
+          "meaning": "存在",
           "isUnknown": false,
           "lemma": "presence",
           "reading": "presence",
@@ -41719,7 +41719,7 @@
         },
         {
           "word": "era",
-          "meaning": "(要確認)",
+          "meaning": "時代",
           "isUnknown": false,
           "lemma": "era",
           "reading": "era",
@@ -41760,7 +41760,7 @@
         },
         {
           "word": "dinner",
-          "meaning": "(要確認)",
+          "meaning": "夕食",
           "isUnknown": false,
           "lemma": "dinner",
           "reading": "dinner",
@@ -42828,7 +42828,7 @@
         },
         {
           "word": "insisted",
-          "meaning": "(要確認)",
+          "meaning": "ユーモア",
           "isUnknown": false,
           "lemma": "insisted",
           "reading": "insisted",
@@ -43383,7 +43383,7 @@
         },
         {
           "word": "kept",
-          "meaning": "(要確認)",
+          "meaning": "保った・守った",
           "isUnknown": false,
           "lemma": "kept",
           "reading": "kept",
@@ -45055,7 +45055,7 @@
         },
         {
           "word": "initial",
-          "meaning": "(要確認)",
+          "meaning": "サーフィン",
           "isUnknown": false,
           "lemma": "initial",
           "reading": "initial",
@@ -45915,7 +45915,7 @@
         },
         {
           "word": "politics",
-          "meaning": "(要確認)",
+          "meaning": "政治",
           "isUnknown": false,
           "lemma": "politics",
           "reading": "politics",
@@ -46414,7 +46414,7 @@
         },
         {
           "word": "teenage",
-          "meaning": "(要確認)",
+          "meaning": "10代の",
           "isUnknown": false,
           "lemma": "teenage",
           "reading": "teenage",
@@ -46581,7 +46581,7 @@
         },
         {
           "word": "teenage",
-          "meaning": "(要確認)",
+          "meaning": "10代の",
           "isUnknown": false,
           "lemma": "teenage",
           "reading": "teenage",
@@ -47239,7 +47239,7 @@
         },
         {
           "word": "nobody",
-          "meaning": "(要確認)",
+          "meaning": "誰も〜ない",
           "isUnknown": false,
           "lemma": "nobody",
           "reading": "nobody",
@@ -48139,7 +48139,7 @@
         },
         {
           "word": "politely",
-          "meaning": "(要確認)",
+          "meaning": "礼儀正しく",
           "isUnknown": false,
           "lemma": "politely",
           "reading": "politely",
@@ -50001,7 +50001,7 @@
         },
         {
           "word": "precious",
-          "meaning": "(要確認)",
+          "meaning": "貴重な",
           "isUnknown": false,
           "lemma": "precious",
           "reading": "precious",
@@ -50900,7 +50900,7 @@
         },
         {
           "word": "accumulate",
-          "meaning": "(要確認)",
+          "meaning": "蓄積する",
           "isUnknown": false,
           "lemma": "accumulate",
           "reading": "accumulate",
@@ -51279,7 +51279,7 @@
         },
         {
           "word": "difficulties",
-          "meaning": "(要確認)",
+          "meaning": "困難",
           "isUnknown": false,
           "lemma": "difficulties",
           "reading": "difficulties",
@@ -52355,7 +52355,7 @@
         },
         {
           "word": "leave",
-          "meaning": "(要確認)",
+          "meaning": "去る・残す",
           "isUnknown": false,
           "lemma": "leave",
           "reading": "leave",
@@ -52737,7 +52737,7 @@
         },
         {
           "word": "partner",
-          "meaning": "(要確認)",
+          "meaning": "パートナー",
           "isUnknown": false,
           "lemma": "partner",
           "reading": "partner",
@@ -53838,7 +53838,7 @@
         },
         {
           "word": "meant",
-          "meaning": "(要確認)",
+          "meaning": "意味した",
           "isUnknown": false,
           "lemma": "meant",
           "reading": "meant",
@@ -54137,7 +54137,7 @@
         },
         {
           "word": "leave",
-          "meaning": "(要確認)",
+          "meaning": "去る・残す",
           "isUnknown": false,
           "lemma": "leave",
           "reading": "leave",
@@ -54233,7 +54233,7 @@
         },
         {
           "word": "greatest",
-          "meaning": "(要確認)",
+          "meaning": "最も偉大な",
           "isUnknown": false,
           "lemma": "greatest",
           "reading": "greatest",
@@ -56468,7 +56468,7 @@
         },
         {
           "word": "treasure",
-          "meaning": "(要確認)",
+          "meaning": "宝物",
           "isUnknown": false,
           "lemma": "treasure",
           "reading": "treasure",
@@ -57810,7 +57810,7 @@
         },
         {
           "word": "presence",
-          "meaning": "(要確認)",
+          "meaning": "存在",
           "isUnknown": false,
           "lemma": "presence",
           "reading": "presence",
@@ -58852,7 +58852,7 @@
         },
         {
           "word": "precious",
-          "meaning": "(要確認)",
+          "meaning": "貴重な",
           "isUnknown": false,
           "lemma": "precious",
           "reading": "precious",
@@ -59806,7 +59806,7 @@
         },
         {
           "word": "labor",
-          "meaning": "(要確認)",
+          "meaning": "労働",
           "isUnknown": false,
           "lemma": "labor",
           "reading": "labor",
@@ -60288,7 +60288,7 @@
         },
         {
           "word": "stable",
-          "meaning": "(要確認)",
+          "meaning": "安定した",
           "isUnknown": false,
           "lemma": "stable",
           "reading": "stable",
@@ -61962,7 +61962,7 @@
         },
         {
           "word": "stable",
-          "meaning": "(要確認)",
+          "meaning": "安定した",
           "isUnknown": false,
           "lemma": "stable",
           "reading": "stable",
@@ -64708,7 +64708,7 @@
         },
         {
           "word": "baby",
-          "meaning": "(要確認)",
+          "meaning": "赤ちゃん",
           "isUnknown": false,
           "lemma": "baby",
           "reading": "baby",
@@ -64867,7 +64867,7 @@
         },
         {
           "word": "harder",
-          "meaning": "(要確認)",
+          "meaning": "より難しい",
           "isUnknown": false,
           "lemma": "harder",
           "reading": "harder",
@@ -65034,7 +65034,7 @@
         },
         {
           "word": "complicated",
-          "meaning": "(要確認)",
+          "meaning": "複雑な",
           "isUnknown": false,
           "lemma": "complicated",
           "reading": "complicated",
@@ -65130,7 +65130,7 @@
         },
         {
           "word": "greatest",
-          "meaning": "(要確認)",
+          "meaning": "最も偉大な",
           "isUnknown": false,
           "lemma": "greatest",
           "reading": "greatest",
@@ -65141,7 +65141,7 @@
         },
         {
           "word": "treasure",
-          "meaning": "(要確認)",
+          "meaning": "宝物",
           "isUnknown": false,
           "lemma": "treasure",
           "reading": "treasure",
@@ -66971,7 +66971,7 @@
         },
         {
           "word": "won't",
-          "meaning": "(要確認)",
+          "meaning": "しないだろう",
           "isUnknown": false,
           "lemma": "won't",
           "reading": "won't",
@@ -67434,7 +67434,7 @@
         },
         {
           "word": "belonging",
-          "meaning": "(要確認)",
+          "meaning": "エマ",
           "isUnknown": false,
           "lemma": "belonging",
           "reading": "belonging",
