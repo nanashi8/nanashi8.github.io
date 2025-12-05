@@ -35,6 +35,7 @@ function ScoreBoard({
   currentScore = 0,
   totalAnswered = 0,
   isReviewFocusMode = false,
+  onReviewFocus,
   onShowSettings,
   currentWord,
   onAnswerTime,
