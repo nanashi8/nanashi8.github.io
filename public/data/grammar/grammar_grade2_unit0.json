@@ -19,8 +19,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "wasn't",
         "weren't",
-        "am not",
-        "isn't"
+        "am not"
       ],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "weren't",
         "wasn't",
-        "are not",
-        "isn't"
+        "are not"
       ],
       "correctAnswer": "weren't",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "Were",
         "Was",
-        "Are",
-        "Is"
+        "Are"
       ],
       "correctAnswer": "Were",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "Was",
         "Were",
-        "Is",
-        "Are"
+        "Is"
       ],
       "correctAnswer": "Was",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "was",
         "were",
-        "is",
-        "are"
+        "is"
       ],
       "correctAnswer": "was",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "Was",
         "Were",
-        "Is",
-        "Are"
+        "Is"
       ],
       "correctAnswer": "Was",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "advanced",
@@ -264,7 +249,8 @@
       "correctAnswer": "I was tired yesterday.",
       "difficulty": "beginner",
       "explanation": "「私は昨日疲れていました」。",
-      "hint": "I was"
+      "hint": "I was",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "They were students then.",
       "difficulty": "beginner",
       "explanation": "「彼らはその時生徒でした」。",
-      "hint": "They were"
+      "hint": "They were",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-003",
@@ -294,7 +281,8 @@
       "correctAnswer": "He was in London.",
       "difficulty": "beginner",
       "explanation": "「彼はロンドンにいました」。",
-      "hint": "He was"
+      "hint": "He was",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-004",
@@ -309,7 +297,8 @@
       "correctAnswer": "We were friends then.",
       "difficulty": "beginner",
       "explanation": "「私たちはその時友達でした」。",
-      "hint": "We were"
+      "hint": "We were",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-005",
@@ -324,7 +313,8 @@
       "correctAnswer": "She was kind yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼女は昨日親切でした」。",
-      "hint": "She was"
+      "hint": "She was",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-006",
@@ -339,7 +329,8 @@
       "correctAnswer": "I wasn't hungry yesterday.",
       "difficulty": "intermediate",
       "explanation": "「私は昨日お腹が空いていませんでした」。",
-      "hint": "wasn't"
+      "hint": "wasn't",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-007",
@@ -354,7 +345,8 @@
       "correctAnswer": "They weren't here yesterday.",
       "difficulty": "intermediate",
       "explanation": "「彼らは昨日ここにいませんでした」。",
-      "hint": "weren't"
+      "hint": "weren't",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-008",
@@ -369,7 +361,8 @@
       "correctAnswer": "Was he sick yesterday?",
       "difficulty": "intermediate",
       "explanation": "「彼は昨日病気でしたか」。",
-      "hint": "Was"
+      "hint": "Was",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-009",
@@ -384,7 +377,8 @@
       "correctAnswer": "Were you at home?",
       "difficulty": "intermediate",
       "explanation": "「あなたは家にいましたか」。",
-      "hint": "Were"
+      "hint": "Were",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-010",
@@ -399,7 +393,8 @@
       "correctAnswer": "It was sunny yesterday.",
       "difficulty": "intermediate",
       "explanation": "「昨日は晴れていました」。",
-      "hint": "It was"
+      "hint": "It was",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-011",
@@ -416,7 +411,8 @@
       "correctAnswer": "She was in the park yesterday.",
       "difficulty": "advanced",
       "explanation": "「彼女は昨日公園にいました」。",
-      "hint": "She was"
+      "hint": "She was",
+      "wordCount": 6
     },
     {
       "id": "g2-u0-so-012",
@@ -432,7 +428,8 @@
       "correctAnswer": "They were very happy then.",
       "difficulty": "advanced",
       "explanation": "「彼らはその時とても幸せでした」。",
-      "hint": "They were"
+      "hint": "They were",
+      "wordCount": 5
     },
     {
       "id": "g2-u0-so-013",
@@ -447,7 +444,8 @@
       "correctAnswer": "Was the test difficult?",
       "difficulty": "advanced",
       "explanation": "「そのテストは難しかったですか」。",
-      "hint": "Was"
+      "hint": "Was",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-014",
@@ -462,7 +460,8 @@
       "correctAnswer": "We weren't ready yesterday.",
       "difficulty": "advanced",
       "explanation": "「私たちは昨日準備ができていませんでした」。",
-      "hint": "weren't"
+      "hint": "weren't",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-so-015",
@@ -477,7 +476,8 @@
       "correctAnswer": "Were the students quiet?",
       "difficulty": "advanced",
       "explanation": "「生徒たちは静かでしたか」。",
-      "hint": "Were"
+      "hint": "Were",
+      "wordCount": 4
     },
     {
       "id": "g2-u0-para-001",
@@ -488,8 +488,7 @@
       "choices": [
         "I was busy.",
         "I were busy.",
-        "I am busy.",
-        "I been busy."
+        "I am busy."
       ],
       "correctAnswer": "I was busy.",
       "difficulty": "beginner",
@@ -505,8 +504,7 @@
       "choices": [
         "They were happy.",
         "They was happy.",
-        "They are happy.",
-        "They been happy."
+        "They are happy."
       ],
       "correctAnswer": "They were happy.",
       "difficulty": "beginner",
@@ -522,8 +520,7 @@
       "choices": [
         "He was tired.",
         "He were tired.",
-        "He is tired.",
-        "He been tired."
+        "He is tired."
       ],
       "correctAnswer": "He was tired.",
       "difficulty": "beginner",
@@ -539,8 +536,7 @@
       "choices": [
         "I wasn't at home.",
         "I weren't at home.",
-        "I am not at home.",
-        "I not was at home."
+        "I am not at home."
       ],
       "correctAnswer": "I wasn't at home.",
       "difficulty": "beginner",
@@ -556,8 +552,7 @@
       "choices": [
         "They weren't teachers.",
         "They wasn't teachers.",
-        "They are not teachers.",
-        "They not were teachers."
+        "They are not teachers."
       ],
       "correctAnswer": "They weren't teachers.",
       "difficulty": "beginner",
@@ -573,8 +568,7 @@
       "choices": [
         "Was she happy?",
         "Were she happy?",
-        "Is she happy?",
-        "She was happy?"
+        "Is she happy?"
       ],
       "correctAnswer": "Was she happy?",
       "difficulty": "intermediate",
@@ -590,8 +584,7 @@
       "choices": [
         "Were you busy?",
         "Was you busy?",
-        "Are you busy?",
-        "You were busy?"
+        "Are you busy?"
       ],
       "correctAnswer": "Were you busy?",
       "difficulty": "intermediate",
@@ -607,8 +600,7 @@
       "choices": [
         "He is a teacher.",
         "He are a teacher.",
-        "He was a teacher.",
-        "He be a teacher."
+        "He was a teacher."
       ],
       "correctAnswer": "He is a teacher.",
       "difficulty": "intermediate",
@@ -624,8 +616,7 @@
       "choices": [
         "We are friends.",
         "We is friends.",
-        "We were friends.",
-        "We be friends."
+        "We were friends."
       ],
       "correctAnswer": "We are friends.",
       "difficulty": "intermediate",
@@ -641,8 +632,7 @@
       "choices": [
         "Yes, he was.",
         "Yes, he were.",
-        "Yes, he is.",
-        "Yes, he are."
+        "Yes, he is."
       ],
       "correctAnswer": "Yes, he was.",
       "difficulty": "intermediate",
@@ -658,8 +648,7 @@
       "choices": [
         "No, they weren't.",
         "No, they wasn't.",
-        "No, they aren't.",
-        "No, they isn't."
+        "No, they aren't."
       ],
       "correctAnswer": "No, they weren't.",
       "difficulty": "advanced",
@@ -675,8 +664,7 @@
       "choices": [
         "I was a student then.",
         "I were a student then.",
-        "I am a student then.",
-        "I be a student then."
+        "I am a student then."
       ],
       "correctAnswer": "I was a student then.",
       "difficulty": "advanced",
@@ -692,8 +680,7 @@
       "choices": [
         "Wasn't she sick?",
         "Weren't she sick?",
-        "Isn't she sick?",
-        "Not was she sick?"
+        "Isn't she sick?"
       ],
       "correctAnswer": "Wasn't she sick?",
       "difficulty": "advanced",
@@ -709,8 +696,7 @@
       "choices": [
         "Where was he?",
         "Where were he?",
-        "Where is he?",
-        "Where he was?"
+        "Where is he?"
       ],
       "correctAnswer": "Where was he?",
       "difficulty": "advanced",
@@ -726,8 +712,7 @@
       "choices": [
         "What were they?",
         "What was they?",
-        "What are they?",
-        "What they were?"
+        "What are they?"
       ],
       "correctAnswer": "What were they?",
       "difficulty": "advanced",
@@ -743,8 +728,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -760,8 +744,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
@@ -777,8 +760,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -794,8 +776,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
@@ -811,8 +792,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "intermediate",
@@ -828,8 +808,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "intermediate",
@@ -845,8 +824,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "intermediate",
@@ -862,8 +840,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "advanced",
@@ -879,8 +856,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "advanced",
@@ -896,8 +872,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "advanced",
@@ -922,8 +897,7 @@
       "choices": [
         "was",
         "were",
-        "is",
-        "are"
+        "is"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -948,8 +922,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -974,8 +947,7 @@
       "choices": [
         "wasn't",
         "weren't",
-        "isn't",
-        "aren't"
+        "isn't"
       ],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
@@ -1000,8 +972,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "intermediate",
@@ -1026,8 +997,7 @@
       "choices": [
         "was",
         "were",
-        "is",
-        "are"
+        "is"
       ],
       "correctAnswer": "was",
       "difficulty": "advanced",

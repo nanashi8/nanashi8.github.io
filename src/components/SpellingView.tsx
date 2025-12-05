@@ -792,24 +792,28 @@ function SpellingView({
                   ←
                 </button>
                 <div className="meaning-display">
-                  <div className="meaning-label">意味:</div>
-                  <div className="meaning-text">{currentQuestion.meaning}</div>
-                  {currentQuestion.difficulty && (
-                    <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
-                      {currentQuestion.difficulty === 'beginner' ? '初級' : 
-                       currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
-                    </div>
-                  )}
-                  {currentQuestion.word.includes(' ') && (
-                    <div className="phrase-hint">
-                      💡 熟語({phraseWords.length}語): 単語ごとに入力してください
-                      {completedWords.length > 0 && (
-                        <span className="phrase-progress">
-                          {' '}(完成: {completedWords.join(' ')})
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <div className="meaning-line">
+                    <span className="meaning-label">意味:</span>
+                    <span className="meaning-text">{currentQuestion.meaning}</span>
+                  </div>
+                  <div className="meaning-meta">
+                    {currentQuestion.difficulty && (
+                      <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                        {currentQuestion.difficulty === 'beginner' ? '初級' : 
+                         currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
+                      </div>
+                    )}
+                    {currentQuestion.word.includes(' ') && (
+                      <div className="phrase-hint">
+                        💡 熟語({phraseWords.length}語): 単語ごとに入力してください
+                        {completedWords.length > 0 && (
+                          <span className="phrase-progress">
+                            {' '}(完成: {completedWords.join(' ')})
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <button 
                   className="inline-nav-btn next-inline-btn" 

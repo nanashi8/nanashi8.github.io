@@ -19,8 +19,7 @@
       "choices": [
         "can",
         "do",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "can",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "can",
         "cans",
-        "is",
-        "does"
+        "is"
       ],
       "correctAnswer": "can",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "cannot",
         "can",
-        "am not",
-        "do not"
+        "am not"
       ],
       "correctAnswer": "cannot",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "Can",
         "Do",
-        "Are",
-        "Is"
+        "Are"
       ],
       "correctAnswer": "Can",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "cook",
         "cooks",
-        "cooking",
-        "to cook"
+        "cooking"
       ],
       "correctAnswer": "cook",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "can",
         "cans",
-        "are",
-        "do"
+        "are"
       ],
       "correctAnswer": "can",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "Can",
         "Does",
-        "Is",
-        "Do"
+        "Is"
       ],
       "correctAnswer": "Can",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "cannot",
         "can",
-        "are not",
-        "do not"
+        "are not"
       ],
       "correctAnswer": "cannot",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "run",
         "runs",
-        "running",
-        "to run"
+        "running"
       ],
       "correctAnswer": "run",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "speak",
         "speaks",
-        "speaking",
-        "to speak"
+        "speaking"
       ],
       "correctAnswer": "speak",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "ride",
         "rides",
-        "riding",
-        "to ride"
+        "riding"
       ],
       "correctAnswer": "ride",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "Can",
         "Does",
-        "Is",
-        "Has"
+        "Is"
       ],
       "correctAnswer": "Can",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "cannot",
         "can",
-        "are not",
-        "do not"
+        "are not"
       ],
       "correctAnswer": "cannot",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "skate",
         "skates",
-        "skating",
-        "to skate"
+        "skating"
       ],
       "correctAnswer": "skate",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "can",
         "do",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "can",
       "difficulty": "advanced",
@@ -263,7 +248,8 @@
       "correctAnswer": "I can swim.",
       "difficulty": "beginner",
       "explanation": "I can + 動詞原形の語順。I can swim.で「私は泳げます」。",
-      "hint": "I can ～"
+      "hint": "I can ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u5-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "She can play the piano.",
       "difficulty": "beginner",
       "explanation": "She can play the piano.で「彼女はピアノを弾けます」。play the pianoは定冠詞が必要。",
-      "hint": "She can ～"
+      "hint": "She can ～",
+      "wordCount": 5
     },
     {
       "id": "g1-u5-so-003",
@@ -294,7 +281,8 @@
       "correctAnswer": "I cannot speak English.",
       "difficulty": "beginner",
       "explanation": "I cannot + 動詞原形。cannot speak Englishで「英語を話せません」。",
-      "hint": "I cannot ～"
+      "hint": "I cannot ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u5-so-004",
@@ -310,7 +298,8 @@
       "correctAnswer": "Can you run fast?",
       "difficulty": "beginner",
       "explanation": "Can you + 動詞原形?で疑問文。run fastで「速く走る」。",
-      "hint": "Can you ～?"
+      "hint": "Can you ～?",
+      "wordCount": 5
     },
     {
       "id": "g1-u5-so-005",
@@ -324,7 +313,8 @@
       "correctAnswer": "He can cook.",
       "difficulty": "beginner",
       "explanation": "He can cook.で「彼は料理できます」。cookは動詞の原形。",
-      "hint": "He can ～"
+      "hint": "He can ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u5-so-006",
@@ -340,7 +330,8 @@
       "correctAnswer": "Can she sing well?",
       "difficulty": "intermediate",
       "explanation": "Can she + 動詞原形?で疑問文。sing wellで「上手に歌う」。",
-      "hint": "Can she ～?"
+      "hint": "Can she ～?",
+      "wordCount": 5
     },
     {
       "id": "g1-u5-so-007",
@@ -355,7 +346,8 @@
       "correctAnswer": "We can play soccer.",
       "difficulty": "intermediate",
       "explanation": "We can play soccer.で「私たちはサッカーができます」。",
-      "hint": "We can ～"
+      "hint": "We can ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u5-so-008",
@@ -370,7 +362,8 @@
       "correctAnswer": "They cannot read Japanese.",
       "difficulty": "intermediate",
       "explanation": "They cannot + 動詞原形。cannot read Japaneseで「日本語を読めません」。",
-      "hint": "They cannot ～"
+      "hint": "They cannot ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u5-so-009",
@@ -385,7 +378,8 @@
       "correctAnswer": "He can run fast.",
       "difficulty": "intermediate",
       "explanation": "He can run fast.で「彼は速く走れます」。fastは副詞。",
-      "hint": "He can ～"
+      "hint": "He can ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u5-so-010",
@@ -402,7 +396,8 @@
       "correctAnswer": "Can you ride a bike?",
       "difficulty": "intermediate",
       "explanation": "Can you + 動詞原形?で疑問文。ride a bikeで「自転車に乗る」。",
-      "hint": "Can you ～?"
+      "hint": "Can you ～?",
+      "wordCount": 6
     },
     {
       "id": "g1-u5-so-011",
@@ -419,7 +414,8 @@
       "correctAnswer": "Can she play the guitar?",
       "difficulty": "advanced",
       "explanation": "Can she play the guitar?で「彼女はギターを弾けますか」。楽器には定冠詞the。",
-      "hint": "play the guitar"
+      "hint": "play the guitar",
+      "wordCount": 6
     },
     {
       "id": "g1-u5-so-012",
@@ -434,7 +430,8 @@
       "correctAnswer": "I can't speak Chinese.",
       "difficulty": "advanced",
       "explanation": "I can't speak Chinese.で「中国語を話せません」。can'tはcannotの短縮形。",
-      "hint": "I can't ～"
+      "hint": "I can't ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u5-so-013",
@@ -450,7 +447,8 @@
       "correctAnswer": "He can skate very well.",
       "difficulty": "advanced",
       "explanation": "He can skate very well.で「彼は上手にスケートできます」。very wellで「とても上手に」。",
-      "hint": "very well"
+      "hint": "very well",
+      "wordCount": 5
     },
     {
       "id": "g1-u5-so-014",
@@ -466,7 +464,8 @@
       "correctAnswer": "We cannot solve this problem.",
       "difficulty": "advanced",
       "explanation": "We cannot solve this problem.で「この問題を解けません」。solve a problemで「問題を解く」。",
-      "hint": "solve this problem"
+      "hint": "solve this problem",
+      "wordCount": 5
     },
     {
       "id": "g1-u5-so-015",
@@ -482,7 +481,8 @@
       "correctAnswer": "What can you do?",
       "difficulty": "advanced",
       "explanation": "What can you do?で「何ができますか」。疑問詞+can+主語+動詞原形。",
-      "hint": "What can ～?"
+      "hint": "What can ～?",
+      "wordCount": 5
     },
     {
       "id": "g1-u5-para-001",
@@ -493,8 +493,7 @@
       "choices": [
         "Can you swim?",
         "Do you can swim?",
-        "You can swim?",
-        "Are you swim?"
+        "You can swim?"
       ],
       "correctAnswer": "Can you swim?",
       "difficulty": "beginner",
@@ -510,8 +509,7 @@
       "choices": [
         "She cannot play tennis.",
         "She doesn't can play tennis.",
-        "She can't plays tennis.",
-        "She isn't play tennis."
+        "She can't plays tennis."
       ],
       "correctAnswer": "She cannot play tennis.",
       "difficulty": "beginner",
@@ -527,8 +525,7 @@
       "choices": [
         "I can speak French.",
         "I do speak French.",
-        "I am speak French.",
-        "I speaks French."
+        "I am speak French."
       ],
       "correctAnswer": "I can speak French.",
       "difficulty": "beginner",
@@ -544,8 +541,7 @@
       "choices": [
         "He can cook.",
         "He cooks.",
-        "He is cook.",
-        "He does cook."
+        "He is cook."
       ],
       "correctAnswer": "He can cook.",
       "difficulty": "beginner",
@@ -561,8 +557,7 @@
       "choices": [
         "You cannot jump high.",
         "You don't can jump high.",
-        "You can't jumps high.",
-        "You aren't jump high."
+        "You can't jumps high."
       ],
       "correctAnswer": "You cannot jump high.",
       "difficulty": "intermediate",
@@ -578,8 +573,7 @@
       "choices": [
         "I can play the piano.",
         "I can plays the piano.",
-        "I can to play the piano.",
-        "I can playing the piano."
+        "I can to play the piano."
       ],
       "correctAnswer": "I can play the piano.",
       "difficulty": "intermediate",
@@ -595,8 +589,7 @@
       "choices": [
         "He can dance.",
         "He cans dance.",
-        "He can dances.",
-        "He can to dance."
+        "He can dances."
       ],
       "correctAnswer": "He can dance.",
       "difficulty": "intermediate",
@@ -612,8 +605,7 @@
       "choices": [
         "She cannot speak English.",
         "She can not speak English.",
-        "She does not can speak English.",
-        "She is not speak English."
+        "She does not can speak English."
       ],
       "correctAnswer": "She cannot speak English.",
       "difficulty": "intermediate",
@@ -629,8 +621,7 @@
       "choices": [
         "Can he play soccer?",
         "Does he can play soccer?",
-        "Can he plays soccer?",
-        "Is he play soccer?"
+        "Can he plays soccer?"
       ],
       "correctAnswer": "Can he play soccer?",
       "difficulty": "intermediate",
@@ -646,8 +637,7 @@
       "choices": [
         "Can they write Chinese?",
         "Cannot they write Chinese?",
-        "Do they can write Chinese?",
-        "Are they write Chinese?"
+        "Do they can write Chinese?"
       ],
       "correctAnswer": "Can they write Chinese?",
       "difficulty": "advanced",
@@ -663,8 +653,7 @@
       "choices": [
         "What can you play?",
         "What do you can play?",
-        "What you can play?",
-        "What are you play?"
+        "What you can play?"
       ],
       "correctAnswer": "What can you play?",
       "difficulty": "advanced",
@@ -680,8 +669,7 @@
       "choices": [
         "I can speak English.",
         "I cans speak English.",
-        "I can speaks English.",
-        "I can to speak English."
+        "I can speaks English."
       ],
       "correctAnswer": "I can speak English.",
       "difficulty": "advanced",
@@ -697,8 +685,7 @@
       "choices": [
         "She can sing.",
         "She can sings.",
-        "She can singing.",
-        "She can to sing."
+        "She can singing."
       ],
       "correctAnswer": "She can sing.",
       "difficulty": "advanced",
@@ -714,8 +701,7 @@
       "choices": [
         "He can run fast.",
         "He can runs fast.",
-        "He can fast run.",
-        "He can running fast."
+        "He can fast run."
       ],
       "correctAnswer": "He can run fast.",
       "difficulty": "advanced",
@@ -731,8 +717,7 @@
       "choices": [
         "I can play the piano.",
         "I can play piano.",
-        "I can plays the piano.",
-        "I can playing the piano."
+        "I can plays the piano."
       ],
       "correctAnswer": "I can play the piano.",
       "difficulty": "advanced",
@@ -748,8 +733,7 @@
       "choices": [
         "speak",
         "speaks",
-        "speaking",
-        "to speak"
+        "speaking"
       ],
       "correctAnswer": "speak",
       "difficulty": "beginner",
@@ -765,8 +749,7 @@
       "choices": [
         "play",
         "plays",
-        "playing",
-        "to play"
+        "playing"
       ],
       "correctAnswer": "play",
       "difficulty": "beginner",
@@ -782,8 +765,7 @@
       "choices": [
         "run",
         "runs",
-        "running",
-        "to run"
+        "running"
       ],
       "correctAnswer": "run",
       "difficulty": "beginner",
@@ -799,8 +781,7 @@
       "choices": [
         "drive",
         "drives",
-        "driving",
-        "to drive"
+        "driving"
       ],
       "correctAnswer": "drive",
       "difficulty": "beginner",
@@ -816,8 +797,7 @@
       "choices": [
         "read",
         "reads",
-        "reading",
-        "to read"
+        "reading"
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
@@ -833,8 +813,7 @@
       "choices": [
         "play",
         "plays",
-        "playing",
-        "to play"
+        "playing"
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
@@ -850,8 +829,7 @@
       "choices": [
         "sing",
         "sings",
-        "singing",
-        "to sing"
+        "singing"
       ],
       "correctAnswer": "sing",
       "difficulty": "intermediate",
@@ -867,8 +845,7 @@
       "choices": [
         "speak",
         "speaks",
-        "speaking",
-        "to speak"
+        "speaking"
       ],
       "correctAnswer": "speak",
       "difficulty": "advanced",
@@ -884,8 +861,7 @@
       "choices": [
         "skate",
         "skates",
-        "skating",
-        "to skate"
+        "skating"
       ],
       "correctAnswer": "skate",
       "difficulty": "advanced",
@@ -901,8 +877,7 @@
       "choices": [
         "go",
         "goes",
-        "going",
-        "to go"
+        "going"
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
@@ -927,8 +902,7 @@
       "choices": [
         "can",
         "do",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "can",
       "difficulty": "beginner",
@@ -953,8 +927,7 @@
       "choices": [
         "can't",
         "don't",
-        "am not",
-        "isn't"
+        "am not"
       ],
       "correctAnswer": "can't",
       "difficulty": "beginner",
@@ -979,8 +952,7 @@
       "choices": [
         "can",
         "does",
-        "is",
-        "do"
+        "is"
       ],
       "correctAnswer": "can",
       "difficulty": "intermediate",
@@ -1005,8 +977,7 @@
       "choices": [
         "play",
         "plays",
-        "playing",
-        "to play"
+        "playing"
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
@@ -1031,8 +1002,7 @@
       "choices": [
         "they",
         "them",
-        "their",
-        "theirs"
+        "their"
       ],
       "correctAnswer": "they",
       "difficulty": "advanced",

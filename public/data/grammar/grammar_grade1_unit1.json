@@ -19,8 +19,7 @@
       "choices": [
         "study",
         "studies",
-        "am study",
-        "studying"
+        "am study"
       ],
       "correctAnswer": "study",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "like",
         "likes",
-        "am like",
-        "liking"
+        "am like"
       ],
       "correctAnswer": "like",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "Do",
         "Does",
-        "Are",
-        "Is"
+        "Are"
       ],
       "correctAnswer": "Do",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "don't",
         "doesn't",
-        "am not",
-        "not"
+        "am not"
       ],
       "correctAnswer": "don't",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "go",
         "goes",
-        "are go",
-        "going"
+        "are go"
       ],
       "correctAnswer": "go",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "listen",
         "listens",
-        "are listen",
-        "listening"
+        "are listen"
       ],
       "correctAnswer": "listen",
       "difficulty": "beginner",
@@ -115,8 +109,7 @@
       "choices": [
         "read",
         "reads",
-        "reading",
-        "are read"
+        "reading"
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "don't",
         "doesn't",
-        "aren't",
-        "isn't"
+        "aren't"
       ],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "speak",
         "speaks",
-        "speaking",
-        "spoke"
+        "speaking"
       ],
       "correctAnswer": "speak",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "do",
         "does",
-        "doing",
-        "am do"
+        "doing"
       ],
       "correctAnswer": "do",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "go",
         "goes",
-        "going",
-        "went"
+        "going"
       ],
       "correctAnswer": "go",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "do",
         "does",
-        "doing",
-        "are do"
+        "doing"
       ],
       "correctAnswer": "do",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "play",
         "plays",
-        "playing",
-        "are play"
+        "playing"
       ],
       "correctAnswer": "play",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "Do",
         "Does",
-        "Are",
-        "Is"
+        "Are"
       ],
       "correctAnswer": "Do",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "watch",
         "watches",
-        "watching",
-        "watched"
+        "watching"
       ],
       "correctAnswer": "watch",
       "difficulty": "advanced",
@@ -263,7 +248,8 @@
       "correctAnswer": "I study English.",
       "difficulty": "beginner",
       "explanation": "一般動詞の基本語順：主語 + 動詞 + 目的語。I study Englishは自己紹介でよく使う。",
-      "hint": "I + 動詞 + 目的語"
+      "hint": "I + 動詞 + 目的語",
+      "wordCount": 3
     },
     {
       "id": "g1-u1-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "Do you like soccer?",
       "difficulty": "beginner",
       "explanation": "疑問文：Do + 主語 + 原形。語順に注意。",
-      "hint": "Do you + 動詞?"
+      "hint": "Do you + 動詞?",
+      "wordCount": 5
     },
     {
       "id": "g1-u1-so-003",
@@ -294,7 +281,8 @@
       "correctAnswer": "I don't play baseball.",
       "difficulty": "beginner",
       "explanation": "否定文：主語 + don't + 原形。I don't playの語順を覚える。",
-      "hint": "I don't + 動詞"
+      "hint": "I don't + 動詞",
+      "wordCount": 4
     },
     {
       "id": "g1-u1-so-004",
@@ -309,7 +297,8 @@
       "correctAnswer": "We go to school.",
       "difficulty": "beginner",
       "explanation": "go to ～の語順。toは前置詞で「～へ」。",
-      "hint": "go to + 場所"
+      "hint": "go to + 場所",
+      "wordCount": 4
     },
     {
       "id": "g1-u1-so-005",
@@ -324,7 +313,8 @@
       "correctAnswer": "They listen to music.",
       "difficulty": "beginner",
       "explanation": "listen to ～は必ずセット。toを忘れないように。",
-      "hint": "listen to + 名詞"
+      "hint": "listen to + 名詞",
+      "wordCount": 4
     },
     {
       "id": "g1-u1-so-006",
@@ -342,7 +332,8 @@
       "correctAnswer": "Do you read books every day?",
       "difficulty": "intermediate",
       "explanation": "疑問文の語順。every dayは文末に置くことが多い。",
-      "hint": "Do you + 動詞 ～ every day?"
+      "hint": "Do you + 動詞 ～ every day?",
+      "wordCount": 7
     },
     {
       "id": "g1-u1-so-007",
@@ -357,7 +348,8 @@
       "correctAnswer": "We don't eat breakfast.",
       "difficulty": "intermediate",
       "explanation": "We don't eatの語順。breakfastは無冠詞で使う（a breakfastは×）。",
-      "hint": "We don't + 動詞"
+      "hint": "We don't + 動詞",
+      "wordCount": 4
     },
     {
       "id": "g1-u1-so-008",
@@ -373,7 +365,8 @@
       "correctAnswer": "Do you speak English?",
       "difficulty": "intermediate",
       "explanation": "Do you speak ～?で言語能力を尋ねる。",
-      "hint": "Do you speak + 言語?"
+      "hint": "Do you speak + 言語?",
+      "wordCount": 5
     },
     {
       "id": "g1-u1-so-009",
@@ -390,7 +383,8 @@
       "correctAnswer": "I do my homework every day.",
       "difficulty": "intermediate",
       "explanation": "do my homeworkの語順。myは必ず付ける。every dayは文末。",
-      "hint": "do my homework"
+      "hint": "do my homework",
+      "wordCount": 6
     },
     {
       "id": "g1-u1-so-010",
@@ -408,7 +402,8 @@
       "correctAnswer": "They don't go to school by bus.",
       "difficulty": "intermediate",
       "explanation": "go to school by busの語順。交通手段by ～は文末に。",
-      "hint": "go to ～ by ～"
+      "hint": "go to ～ by ～",
+      "wordCount": 7
     },
     {
       "id": "g1-u1-so-011",
@@ -426,7 +421,8 @@
       "correctAnswer": "What do you do after school?",
       "difficulty": "advanced",
       "explanation": "疑問詞Whatは文頭。doが2回（助動詞＋動詞）出ることに注意。",
-      "hint": "What do you do?"
+      "hint": "What do you do?",
+      "wordCount": 7
     },
     {
       "id": "g1-u1-so-012",
@@ -444,7 +440,8 @@
       "correctAnswer": "We play in the park every weekend.",
       "difficulty": "advanced",
       "explanation": "場所（in the park）→時（every weekend）の語順が自然。",
-      "hint": "場所 + 時"
+      "hint": "場所 + 時",
+      "wordCount": 7
     },
     {
       "id": "g1-u1-so-013",
@@ -462,7 +459,8 @@
       "correctAnswer": "Do you study in the library?",
       "difficulty": "advanced",
       "explanation": "Do you study ～?の語順。in the libraryは場所を表す。",
-      "hint": "Do you + 動詞 + 場所?"
+      "hint": "Do you + 動詞 + 場所?",
+      "wordCount": 7
     },
     {
       "id": "g1-u1-so-014",
@@ -479,7 +477,8 @@
       "correctAnswer": "I don't watch TV after dinner.",
       "difficulty": "advanced",
       "explanation": "watch TV after dinnerの語順。after dinnerは時を表す。",
-      "hint": "I don't + 動詞"
+      "hint": "I don't + 動詞",
+      "wordCount": 6
     },
     {
       "id": "g1-u1-so-015",
@@ -499,7 +498,8 @@
       "correctAnswer": "Do they run in the park every morning?",
       "difficulty": "advanced",
       "explanation": "Do they ～?の疑問文。場所→時の語順。every morning（毎朝）は習慣表現。",
-      "hint": "Do they + 動詞?"
+      "hint": "Do they + 動詞?",
+      "wordCount": 9
     },
     {
       "id": "g1-u1-para-001",
@@ -510,8 +510,7 @@
       "choices": [
         "Do you like music?",
         "Are you like music?",
-        "You like music?",
-        "Does you like music?"
+        "You like music?"
       ],
       "correctAnswer": "Do you like music?",
       "difficulty": "beginner",
@@ -527,8 +526,7 @@
       "choices": [
         "I don't play tennis.",
         "I am not play tennis.",
-        "I not play tennis.",
-        "I doesn't play tennis."
+        "I not play tennis."
       ],
       "correctAnswer": "I don't play tennis.",
       "difficulty": "beginner",
@@ -544,8 +542,7 @@
       "choices": [
         "We study English.",
         "We studies English.",
-        "We are study English.",
-        "We studying English."
+        "We are study English."
       ],
       "correctAnswer": "We study English.",
       "difficulty": "beginner",
@@ -559,10 +556,9 @@
       "originalSentence": "Do you play soccer?",
       "question": "否定文に書き換えなさい",
       "choices": [
-        "I don't play soccer.",
         "You don't play soccer.",
-        "You doesn't play soccer.",
-        "Do you don't play soccer?"
+        "I don't play soccer.",
+        "You doesn't play soccer."
       ],
       "correctAnswer": "You don't play soccer.",
       "difficulty": "intermediate",
@@ -578,8 +574,7 @@
       "choices": [
         "I don't like math.",
         "I'nt like math.",
-        "I not like math.",
-        "I doesn't like math."
+        "I not like math."
       ],
       "correctAnswer": "I don't like math.",
       "difficulty": "intermediate",
@@ -595,8 +590,7 @@
       "choices": [
         "They go to school by bike.",
         "They goes to school by bike.",
-        "They are go to school by bike.",
-        "They going to school by bike."
+        "They are go to school by bike."
       ],
       "correctAnswer": "They go to school by bike.",
       "difficulty": "intermediate",
@@ -612,8 +606,7 @@
       "choices": [
         "Don't you like music?",
         "Do you not like music?",
-        "You don't like music?",
-        "Aren't you like music?"
+        "You don't like music?"
       ],
       "correctAnswer": "Don't you like music?",
       "difficulty": "advanced",
@@ -629,8 +622,7 @@
       "choices": [
         "Yes, I do.",
         "Yes, I am.",
-        "Yes, I study.",
-        "Yes, you do."
+        "Yes, I study."
       ],
       "correctAnswer": "Yes, I do.",
       "difficulty": "intermediate",
@@ -646,8 +638,7 @@
       "choices": [
         "I love soccer.",
         "I am love soccer.",
-        "I loves soccer.",
-        "I loving soccer."
+        "I loves soccer."
       ],
       "correctAnswer": "I love soccer.",
       "difficulty": "intermediate",
@@ -663,8 +654,7 @@
       "choices": [
         "I study English.",
         "I study to English.",
-        "I study the English.",
-        "I English study."
+        "I study the English."
       ],
       "correctAnswer": "I study English.",
       "difficulty": "intermediate",
@@ -680,8 +670,7 @@
       "choices": [
         "I watch TV every day.",
         "I every day watch TV.",
-        "Every day I watch TV.",
-        "I watch every day TV."
+        "Every day I watch TV."
       ],
       "correctAnswer": "I watch TV every day.",
       "difficulty": "advanced",
@@ -697,8 +686,7 @@
       "choices": [
         "We play soccer in the park.",
         "We in the park play soccer.",
-        "In the park we play soccer.",
-        "We play in the park soccer."
+        "In the park we play soccer."
       ],
       "correctAnswer": "We play soccer in the park.",
       "difficulty": "advanced",
@@ -714,8 +702,7 @@
       "choices": [
         "What sport do you play?",
         "What sport you play?",
-        "What sport are you play?",
-        "Do you play what sport?"
+        "What sport are you play?"
       ],
       "correctAnswer": "What sport do you play?",
       "difficulty": "advanced",
@@ -731,8 +718,7 @@
       "choices": [
         "I go to school by bus.",
         "I go by bus to school.",
-        "I by bus go to school.",
-        "I go to school with bus."
+        "I by bus go to school."
       ],
       "correctAnswer": "I go to school by bus.",
       "difficulty": "advanced",
@@ -748,8 +734,7 @@
       "choices": [
         "I study English in the library every day.",
         "I study in the library English every day.",
-        "Every day I study English in the library.",
-        "In the library I study English every day."
+        "Every day I study English in the library."
       ],
       "correctAnswer": "I study English in the library every day.",
       "difficulty": "advanced",
@@ -765,8 +750,7 @@
       "choices": [
         "study",
         "studies",
-        "studied",
-        "studying"
+        "studied"
       ],
       "correctAnswer": "study",
       "difficulty": "beginner",
@@ -782,8 +766,7 @@
       "choices": [
         "play",
         "plays",
-        "played",
-        "playing"
+        "played"
       ],
       "correctAnswer": "play",
       "difficulty": "beginner",
@@ -799,8 +782,7 @@
       "choices": [
         "go",
         "goes",
-        "went",
-        "going"
+        "went"
       ],
       "correctAnswer": "go",
       "difficulty": "beginner",
@@ -816,8 +798,7 @@
       "choices": [
         "listen",
         "listens",
-        "listened",
-        "listening"
+        "listened"
       ],
       "correctAnswer": "listen",
       "difficulty": "beginner",
@@ -833,8 +814,7 @@
       "choices": [
         "play",
         "plays",
-        "played",
-        "playing"
+        "played"
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
@@ -850,8 +830,7 @@
       "choices": [
         "read",
         "reads",
-        "reading",
-        "readed"
+        "reading"
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
@@ -867,8 +846,7 @@
       "choices": [
         "eat",
         "eats",
-        "ate",
-        "eating"
+        "ate"
       ],
       "correctAnswer": "eat",
       "difficulty": "intermediate",
@@ -884,8 +862,7 @@
       "choices": [
         "speak",
         "speaks",
-        "spoke",
-        "speaking"
+        "spoke"
       ],
       "correctAnswer": "speak",
       "difficulty": "intermediate",
@@ -901,8 +878,7 @@
       "choices": [
         "do",
         "does",
-        "did",
-        "doing"
+        "did"
       ],
       "correctAnswer": "do",
       "difficulty": "advanced",
@@ -918,8 +894,7 @@
       "choices": [
         "go",
         "goes",
-        "went",
-        "going"
+        "went"
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
@@ -944,8 +919,7 @@
       "choices": [
         "play",
         "plays",
-        "am play",
-        "playing"
+        "am play"
       ],
       "correctAnswer": "play",
       "difficulty": "beginner",
@@ -970,8 +944,7 @@
       "choices": [
         "do",
         "am",
-        "like",
-        "does"
+        "like"
       ],
       "correctAnswer": "do",
       "difficulty": "beginner",
@@ -996,8 +969,7 @@
       "choices": [
         "go",
         "goes",
-        "am go",
-        "going"
+        "am go"
       ],
       "correctAnswer": "go",
       "difficulty": "intermediate",
@@ -1022,8 +994,7 @@
       "choices": [
         "don't",
         "am not",
-        "doesn't",
-        "not"
+        "doesn't"
       ],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
@@ -1048,8 +1019,7 @@
       "choices": [
         "study",
         "studies",
-        "am study",
-        "studying"
+        "am study"
       ],
       "correctAnswer": "study",
       "difficulty": "advanced",

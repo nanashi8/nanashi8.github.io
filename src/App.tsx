@@ -672,11 +672,8 @@ function App() {
       }
     }
     
-    // 学習数上限を適用（適応的学習モードの有無に関わらず）
-    // 要復習集中モードの場合は上限を適用しない
-    const maxQuestions = reviewFocusMode ? filteredQuestions.length : studySettings.maxStudyCount;
-    
     // 学習曲線AI: 最適な出題順序を決定
+    // NOTE: 出題数は学習中・要復習の上限で制御されるため、ここでは制限しない
     if (!reviewFocusMode && filteredQuestions.length > 0) {
       const progress = await loadProgress();
       
@@ -712,7 +709,7 @@ function App() {
       );
       
       // 定着転換戦略を適用（苦手な単語を戦略的に配置）
-      const optimizedSequence = planConsolidationSequence(priorities, maxQuestions);
+      const optimizedSequence = planConsolidationSequence(priorities, filteredQuestions.length);
       
       // 認知負荷AIで優先度を調整
       const currentLoad = calculateCognitiveLoad(sessionResponsesRef.current, quizStartTimeRef.current);
@@ -731,8 +728,7 @@ function App() {
           const priorityA = wordToPriority.get(a.word)!.priority;
           const priorityB = wordToPriority.get(b.word)!.priority;
           return priorityB - priorityA;
-        })
-        .slice(0, maxQuestions);
+        });
       
       console.log('🧠 学習曲線AI: 最適な出題順序を決定');
       console.log('  出題戦略:', adjustedSequence.slice(0, 5).map(p => 
@@ -777,7 +773,7 @@ function App() {
     if (reviewFocusMode) {
       console.log(`🎯 補修モード: ${filteredQuestions.length}問を繰り返し出題中`);
     } else {
-      console.log(`📚 学習数: ${filteredQuestions.length}問（上限: ${studySettings.maxStudyCount}問）`);
+      console.log(`📚 学習数: ${filteredQuestions.length}問`);
     }
     
     setQuizState({

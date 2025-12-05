@@ -19,8 +19,7 @@
       "choices": [
         "studies",
         "study",
-        "studys",
-        "studying"
+        "studys"
       ],
       "correctAnswer": "studies",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "plays",
         "play",
-        "plaies",
-        "playing"
+        "plaies"
       ],
       "correctAnswer": "plays",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "goes",
         "go",
-        "gos",
-        "going"
+        "gos"
       ],
       "correctAnswer": "goes",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "has",
         "have",
-        "haves",
-        "having"
+        "haves"
       ],
       "correctAnswer": "has",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "likes",
         "like",
-        "liks",
-        "liking"
+        "liks"
       ],
       "correctAnswer": "likes",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "watches",
         "watch",
-        "watchs",
-        "watching"
+        "watchs"
       ],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "doesn't",
         "don't",
-        "isn't",
-        "not"
+        "isn't"
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "Does",
         "Do",
-        "Is",
-        "Are"
+        "Is"
       ],
       "correctAnswer": "Does",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "does",
         "do",
-        "dose",
-        "doing"
+        "dose"
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "gets",
         "get",
-        "getes",
-        "getting"
+        "getes"
       ],
       "correctAnswer": "gets",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "goes",
         "go",
-        "went",
-        "is going"
+        "went"
       ],
       "correctAnswer": "goes",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "washes",
         "wash",
-        "washs",
-        "washing"
+        "washs"
       ],
       "correctAnswer": "washes",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "study",
         "studies",
-        "studied",
-        "is studying"
+        "studied"
       ],
       "correctAnswer": "study",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "speak",
         "speaks",
-        "speaking",
-        "spoke"
+        "speaking"
       ],
       "correctAnswer": "speak",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "gets up",
         "get up",
-        "getes up",
-        "getting up"
+        "getes up"
       ],
       "correctAnswer": "gets up",
       "difficulty": "advanced",
@@ -263,7 +248,8 @@
       "correctAnswer": "He studies Japanese.",
       "difficulty": "beginner",
       "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語。",
-      "hint": "He studies ～"
+      "hint": "He studies ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u2-so-002",
@@ -277,7 +263,8 @@
       "correctAnswer": "She plays volleyball.",
       "difficulty": "beginner",
       "explanation": "She plays ～の語順。playは母音+yなので-sのみ。",
-      "hint": "She plays ～"
+      "hint": "She plays ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u2-so-003",
@@ -293,7 +280,8 @@
       "correctAnswer": "He goes to the park.",
       "difficulty": "beginner",
       "explanation": "go→goesの不規則パターン。go to ～の基本語順。",
-      "hint": "He goes to ～"
+      "hint": "He goes to ～",
+      "wordCount": 5
     },
     {
       "id": "g1-u2-so-004",
@@ -308,7 +296,8 @@
       "correctAnswer": "She has a cat.",
       "difficulty": "beginner",
       "explanation": "have→hasの不規則変化。a catは「1匹の猫」。",
-      "hint": "She has ～"
+      "hint": "She has ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u2-so-005",
@@ -322,7 +311,8 @@
       "correctAnswer": "Tom likes tennis.",
       "difficulty": "beginner",
       "explanation": "人名も三人称単数。Tom likes ～の語順。",
-      "hint": "Tom likes ～"
+      "hint": "Tom likes ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u2-so-006",
@@ -336,7 +326,8 @@
       "correctAnswer": "He watches movies.",
       "difficulty": "intermediate",
       "explanation": "watch→watches（-ch→-es）。watch moviesは「映画を見る」。",
-      "hint": "He watches ～"
+      "hint": "He watches ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u2-so-007",
@@ -353,7 +344,8 @@
       "correctAnswer": "She doesn't listen to the radio.",
       "difficulty": "intermediate",
       "explanation": "否定文：She doesn't + 原形。listen to the radioはセット。",
-      "hint": "doesn't + 原形"
+      "hint": "doesn't + 原形",
+      "wordCount": 6
     },
     {
       "id": "g1-u2-so-008",
@@ -369,7 +361,8 @@
       "correctAnswer": "Does he play soccer?",
       "difficulty": "intermediate",
       "explanation": "疑問文：Does + 主語 + 原形。文末に?。",
-      "hint": "Does he + 原形?"
+      "hint": "Does he + 原形?",
+      "wordCount": 5
     },
     {
       "id": "g1-u2-so-009",
@@ -386,7 +379,8 @@
       "correctAnswer": "She does the cleaning every day.",
       "difficulty": "intermediate",
       "explanation": "do→doesの不規則変化。do the cleaningは「掃除をする」。",
-      "hint": "She does ～"
+      "hint": "She does ～",
+      "wordCount": 6
     },
     {
       "id": "g1-u2-so-010",
@@ -404,7 +398,8 @@
       "correctAnswer": "He goes to bed late at night.",
       "difficulty": "intermediate",
       "explanation": "go to bed lateで「遅く寝る」。at nightは時を表す。",
-      "hint": "goes to bed late"
+      "hint": "goes to bed late",
+      "wordCount": 7
     },
     {
       "id": "g1-u2-so-011",
@@ -421,7 +416,8 @@
       "correctAnswer": "She goes to school by train.",
       "difficulty": "intermediate",
       "explanation": "go to school by trainの語順。交通手段は文末。",
-      "hint": "goes to ～ by ～"
+      "hint": "goes to ～ by ～",
+      "wordCount": 6
     },
     {
       "id": "g1-u2-so-012",
@@ -438,7 +434,8 @@
       "correctAnswer": "He washes the windows every week.",
       "difficulty": "advanced",
       "explanation": "wash→washes（-sh→-es）。wash the windowsは家事表現。",
-      "hint": "washes the windows"
+      "hint": "washes the windows",
+      "wordCount": 6
     },
     {
       "id": "g1-u2-so-013",
@@ -455,7 +452,8 @@
       "correctAnswer": "Does she study at home?",
       "difficulty": "advanced",
       "explanation": "Does + 主語 + 原形の語順。at homeは「家で」。",
-      "hint": "Does she + 原形?"
+      "hint": "Does she + 原形?",
+      "wordCount": 6
     },
     {
       "id": "g1-u2-so-014",
@@ -470,7 +468,8 @@
       "correctAnswer": "He doesn't speak Chinese.",
       "difficulty": "advanced",
       "explanation": "doesn't + 原形の語順。speak Chineseで「中国語を話す」。",
-      "hint": "doesn't + 原形"
+      "hint": "doesn't + 原形",
+      "wordCount": 4
     },
     {
       "id": "g1-u2-so-015",
@@ -489,7 +488,8 @@
       "correctAnswer": "She goes to bed at ten every night.",
       "difficulty": "advanced",
       "explanation": "句動詞goes to bedの語順。at ten（10時に）→every night（毎晩）の順。",
-      "hint": "goes to bed at ～"
+      "hint": "goes to bed at ～",
+      "wordCount": 8
     },
     {
       "id": "g1-u2-para-001",
@@ -500,8 +500,7 @@
       "choices": [
         "He studies English.",
         "He study English.",
-        "He studys English.",
-        "He is study English."
+        "He studys English."
       ],
       "correctAnswer": "He studies English.",
       "difficulty": "beginner",
@@ -517,8 +516,7 @@
       "choices": [
         "Does he play soccer?",
         "Do he play soccer?",
-        "Is he play soccer?",
-        "He plays soccer?"
+        "Is he play soccer?"
       ],
       "correctAnswer": "Does he play soccer?",
       "difficulty": "beginner",
@@ -534,8 +532,7 @@
       "choices": [
         "She doesn't like music.",
         "She don't like music.",
-        "She isn't like music.",
-        "She not likes music."
+        "She isn't like music."
       ],
       "correctAnswer": "She doesn't like music.",
       "difficulty": "beginner",
@@ -551,8 +548,7 @@
       "choices": [
         "He goes to the park.",
         "He go to the park.",
-        "He gos to the park.",
-        "He is go to the park."
+        "He gos to the park."
       ],
       "correctAnswer": "He goes to the park.",
       "difficulty": "intermediate",
@@ -568,8 +564,7 @@
       "choices": [
         "He doesn't like math.",
         "He don't like math.",
-        "He'sn't like math.",
-        "He not like math."
+        "He'sn't like math."
       ],
       "correctAnswer": "He doesn't like math.",
       "difficulty": "intermediate",
@@ -585,8 +580,7 @@
       "choices": [
         "She doesn't study English.",
         "She don't study English.",
-        "She isn't study English.",
-        "Does she not study English?"
+        "She isn't study English."
       ],
       "correctAnswer": "She doesn't study English.",
       "difficulty": "intermediate",
@@ -602,8 +596,7 @@
       "choices": [
         "Yes, he does.",
         "Yes, he do.",
-        "Yes, he is.",
-        "Yes, he plays."
+        "Yes, he is."
       ],
       "correctAnswer": "Yes, he does.",
       "difficulty": "intermediate",
@@ -619,8 +612,7 @@
       "choices": [
         "She has a pen.",
         "She have a pen.",
-        "She haves a pen.",
-        "She is have a pen."
+        "She haves a pen."
       ],
       "correctAnswer": "She has a pen.",
       "difficulty": "intermediate",
@@ -636,8 +628,7 @@
       "choices": [
         "He watches sports.",
         "He watch sports.",
-        "He watchs sports.",
-        "He is watch sports."
+        "He watchs sports."
       ],
       "correctAnswer": "He watches sports.",
       "difficulty": "advanced",
@@ -653,8 +644,7 @@
       "choices": [
         "Doesn't he like music?",
         "Don't he like music?",
-        "Isn't he like music?",
-        "Does he not like music?"
+        "Isn't he like music?"
       ],
       "correctAnswer": "Doesn't he like music?",
       "difficulty": "advanced",
@@ -670,8 +660,7 @@
       "choices": [
         "Tom does his homework.",
         "Tom do his homework.",
-        "Tom dose his homework.",
-        "Tom is do his homework."
+        "Tom dose his homework."
       ],
       "correctAnswer": "Tom does his homework.",
       "difficulty": "advanced",
@@ -687,8 +676,7 @@
       "choices": [
         "She studies math every day.",
         "She every day studies math.",
-        "Every day she studies math.",
-        "She studies every day math."
+        "Every day she studies math."
       ],
       "correctAnswer": "She studies math every day.",
       "difficulty": "advanced",
@@ -704,8 +692,7 @@
       "choices": [
         "He plays soccer in the park.",
         "He in the park plays soccer.",
-        "In the park he plays soccer.",
-        "He plays in the park soccer."
+        "In the park he plays soccer."
       ],
       "correctAnswer": "He plays soccer in the park.",
       "difficulty": "advanced",
@@ -721,8 +708,7 @@
       "choices": [
         "What does she study?",
         "What she studies?",
-        "What is she study?",
-        "Does she study what?"
+        "What is she study?"
       ],
       "correctAnswer": "What does she study?",
       "difficulty": "advanced",
@@ -738,8 +724,7 @@
       "choices": [
         "She goes to school by bike.",
         "She goes by bike to school.",
-        "She by bike goes to school.",
-        "She goes to school with bike."
+        "She by bike goes to school."
       ],
       "correctAnswer": "She goes to school by bike.",
       "difficulty": "advanced",
@@ -755,8 +740,7 @@
       "choices": [
         "studies",
         "study",
-        "studys",
-        "studied"
+        "studys"
       ],
       "correctAnswer": "studies",
       "difficulty": "beginner",
@@ -772,8 +756,7 @@
       "choices": [
         "plays",
         "play",
-        "plaies",
-        "played"
+        "plaies"
       ],
       "correctAnswer": "plays",
       "difficulty": "beginner",
@@ -789,8 +772,7 @@
       "choices": [
         "goes",
         "go",
-        "gos",
-        "went"
+        "gos"
       ],
       "correctAnswer": "goes",
       "difficulty": "beginner",
@@ -806,8 +788,7 @@
       "choices": [
         "has",
         "have",
-        "haves",
-        "had"
+        "haves"
       ],
       "correctAnswer": "has",
       "difficulty": "beginner",
@@ -823,8 +804,7 @@
       "choices": [
         "watches",
         "watch",
-        "watchs",
-        "watched"
+        "watchs"
       ],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
@@ -840,8 +820,7 @@
       "choices": [
         "listen",
         "listens",
-        "listening",
-        "listened"
+        "listening"
       ],
       "correctAnswer": "listen",
       "difficulty": "intermediate",
@@ -857,8 +836,7 @@
       "choices": [
         "play",
         "plays",
-        "playing",
-        "played"
+        "playing"
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
@@ -874,8 +852,7 @@
       "choices": [
         "does",
         "do",
-        "dose",
-        "did"
+        "dose"
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
@@ -891,8 +868,7 @@
       "choices": [
         "washes",
         "wash",
-        "washs",
-        "washed"
+        "washs"
       ],
       "correctAnswer": "washes",
       "difficulty": "advanced",
@@ -908,8 +884,7 @@
       "choices": [
         "speak",
         "speaks",
-        "spoken",
-        "is speaking"
+        "spoken"
       ],
       "correctAnswer": "speak",
       "difficulty": "advanced",
@@ -934,8 +909,7 @@
       "choices": [
         "plays",
         "play",
-        "is play",
-        "playing"
+        "is play"
       ],
       "correctAnswer": "plays",
       "difficulty": "beginner",
@@ -960,8 +934,7 @@
       "choices": [
         "does",
         "do",
-        "is",
-        "cooks"
+        "is"
       ],
       "correctAnswer": "does",
       "difficulty": "beginner",
@@ -986,8 +959,7 @@
       "choices": [
         "goes",
         "go",
-        "is go",
-        "going"
+        "is go"
       ],
       "correctAnswer": "goes",
       "difficulty": "intermediate",
@@ -1012,8 +984,7 @@
       "choices": [
         "doesn't",
         "don't",
-        "didn't",
-        "isn't"
+        "didn't"
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
@@ -1038,8 +1009,7 @@
       "choices": [
         "plays",
         "play",
-        "played",
-        "is playing"
+        "played"
       ],
       "correctAnswer": "plays",
       "difficulty": "advanced",

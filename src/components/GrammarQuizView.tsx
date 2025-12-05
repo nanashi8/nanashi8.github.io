@@ -117,7 +117,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   });
 
   const currentQuestion = currentQuestions[currentQuestionIndex];
-  const isSentenceOrdering = quizType === 'sentence-ordering';
+  const isSentenceOrdering = currentQuestion?.type === 'sentenceOrdering' || quizType === 'sentence-ordering';
 
   // 設定をlocalStorageに保存
   useEffect(() => {
@@ -145,35 +145,19 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         return;
       }
       
-      // 全ての種類またはランダムの場合は、いずれかの問題形式からUnit情報を読み込む
-      // （通常はverb-formを使用）
-      let filename = '';
-      if (quizType === 'all' || quizType === 'random') {
-        filename = `verb-form-questions-grade${gradeNum}.json`;
-      } else if (quizType === 'sentence-ordering') {
-        filename = `sentence-ordering-grade${gradeNum}.json`;
-      } else if (quizType === 'verb-form') {
-        filename = `verb-form-questions-grade${gradeNum}.json`;
-      } else if (quizType === 'fill-in-blank') {
-        filename = `fill-in-blank-questions-grade${gradeNum}.json`;
-      }
-      
-      if (filename) {
+      // 新しいgrammar_grade{N}_unit{X}.json形式から単元一覧を読み込む
+      for (let unitIdx = 0; unitIdx < 10; unitIdx++) {
         try {
-          const res = await fetch(`/data/${filename}`);
+          const res = await fetch(`/data/grammar/grammar_grade${gradeNum}_unit${unitIdx}.json`);
           if (res.ok) {
-            const data: QuizData = await res.json();
-            if (data.units) {
-              data.units.forEach(unit => {
-                units.push({
-                  value: `g${gradeNum}-${unit.unit.toLowerCase().replace(/\s+/g, '')}`,
-                  label: `中${gradeNum}_${unit.title}`
-                });
-              });
-            }
+            const data = await res.json();
+            units.push({
+              value: `g${gradeNum}-unit${unitIdx}`,
+              label: `中${gradeNum}_${data.title}`
+            });
           }
         } catch (_err) {
-          console.warn('Unit情報の読み込みに失敗しました');
+          console.warn(`Unit ${unitIdx}の読み込みに失敗しました`);
         }
       }
       
@@ -225,7 +209,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     try {
       // 学年フィルターの解析
       let gradesToLoad: string[] = [];
-      let selectedUnit: string | null = null;
+      let selectedUnitIndex: number | null = null;
       
       if (grade === 'all') {
         gradesToLoad = ['1', '2', '3'];
@@ -235,147 +219,67 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       } else if (grade.endsWith('-all')) {
         // '1-all', '2-all', '3-all' の場合
         gradesToLoad = [grade.charAt(0)];
-      } else if (grade.match(/^g\d+-/)) {
+      } else if (grade.match(/^g\d+-unit\d+$/)) {
         // 'g1-unit0' のような特定のUnit
-        const gradeNum = grade.match(/^g(\d+)-/)?.[1];
-        if (gradeNum) {
+        const gradeNum = grade.match(/^g(\d+)-unit(\d+)$/)?.[1];
+        const unitNum = grade.match(/^g(\d+)-unit(\d+)$/)?.[2];
+        if (gradeNum && unitNum !== undefined) {
           gradesToLoad = [gradeNum];
-          selectedUnit = grade;
+          selectedUnitIndex = parseInt(unitNum);
         }
       }
       
-      const allData: QuizData[] = [];
+      const allGrammarFiles: any[] = [];
       
-      // ランダムモードまたは全ての種類の場合は全ての問題タイプを読み込む
-      if (quizType === 'random' || quizType === 'all') {
-        for (const g of gradesToLoad) {
-          const quizTypes = ['verb-form', 'fill-in-blank', 'sentence-ordering'];
-          for (const type of quizTypes) {
-            let filename = '';
-            if (type === 'verb-form') {
-              filename = `verb-form-questions-grade${g}.json`;
-            } else if (type === 'fill-in-blank') {
-              filename = `fill-in-blank-questions-grade${g}.json`;
-            } else if (type === 'sentence-ordering') {
-              filename = `sentence-ordering-grade${g}.json`;
-            }
-            
-            try {
-              const res = await fetch(`/data/${filename}`);
-              if (res.ok) {
-                const data = await res.json();
-                allData.push(data);
-              }
-            } catch (_err) {
-              console.warn(`${filename} not found, skipping...`);
-            }
-          }
-        }
-      } else {
-        for (const g of gradesToLoad) {
-          let filename = '';
-          if (quizType === 'verb-form') {
-            filename = `verb-form-questions-grade${g}.json`;
-          } else if (quizType === 'fill-in-blank') {
-            filename = `fill-in-blank-questions-grade${g}.json`;
-          } else if (quizType === 'sentence-ordering') {
-            filename = `sentence-ordering-grade${g}.json`;
+      // 新しいgrammar_grade{N}_unit{X}.json形式のファイルを読み込む
+      for (const g of gradesToLoad) {
+        for (let unitIdx = 0; unitIdx < 10; unitIdx++) {
+          // 特定のunitが選択されている場合はそれだけを読み込む
+          if (selectedUnitIndex !== null && unitIdx !== selectedUnitIndex) {
+            continue;
           }
           
           try {
-            const res = await fetch(`/data/${filename}`);
+            const res = await fetch(`/data/grammar/grammar_grade${g}_unit${unitIdx}.json`);
             if (res.ok) {
               const data = await res.json();
-              allData.push(data);
+              allGrammarFiles.push(data);
             }
           } catch (_err) {
-            console.warn(`${filename} not found, skipping...`);
+            console.warn(`grammar_grade${g}_unit${unitIdx}.json not found, skipping...`);
           }
         }
       }
       
-      if (allData.length === 0) {
+      if (allGrammarFiles.length === 0) {
         throw new Error('問題データが見つかりません');
       }
       
       // 全ての問題を収集
       let questions: any[] = [];
       
-      // 単元別の場合（新しいデータ構造）
-      if (selectedUnit && allData[0]?.units) {
-        allData.forEach(data => {
-          if (data.units) {
-            data.units.forEach(unit => {
-              const unitId = `g${data.grade}-${unit.unit.toLowerCase().replace(/\s+/g, '')}`;
-              
-              // デバッグ: unitIdと選択されたunitを確認
-              console.log(`Checking unit: ${unitId} vs selected: ${selectedUnit}`);
-              
-              if (unitId !== selectedUnit) {
-                return;
-              }
-              
-              console.log(`Match found! Loading questions from ${unitId}`);
-              
-              // ランダムモードまたは全ての種類の場合は全ての問題タイプを収集
-              if (quizType === 'random' || quizType === 'all') {
-                const validSentenceOrdering = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
-                questions.push(...validSentenceOrdering);
-                if (unit.verbForm) {
-                  questions.push(...unit.verbForm);
-                }
-                if (unit.fillInBlank) {
-                  questions.push(...unit.fillInBlank);
-                }
-              }
-              // 問題形式に応じて問題を収集
-              else if (quizType === 'sentence-ordering') {
-                const validQuestions = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
-                questions.push(...validQuestions);
-              } else if (quizType === 'verb-form' && unit.verbForm) {
-                questions.push(...unit.verbForm);
-              } else if (quizType === 'fill-in-blank' && unit.fillInBlank) {
-                questions.push(...unit.fillInBlank);
-              }
-            });
-          }
-        });
-      }
-      // 学年全体の場合（新旧データ構造の両方に対応）
-      else {
-        allData.forEach(data => {
-          // 新しいデータ構造（units内に3形式）
-          if (data.units) {
-            data.units.forEach(unit => {
-              // ランダムモードまたは全ての種類の場合は全ての問題タイプを収集
-              if (quizType === 'random' || quizType === 'all') {
-                const validSentenceOrdering = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
-                questions.push(...validSentenceOrdering);
-                if (unit.verbForm) {
-                  questions.push(...unit.verbForm);
-                }
-                if (unit.fillInBlank) {
-                  questions.push(...unit.fillInBlank);
-                }
-              } else if (quizType === 'sentence-ordering') {
-                const validQuestions = (unit.sentenceOrdering || unit.questions || []).filter(q => q.wordCount > 1);
-                questions.push(...validQuestions);
-              } else if (quizType === 'verb-form' && unit.verbForm) {
-                questions.push(...unit.verbForm);
-              } else if (quizType === 'fill-in-blank' && unit.fillInBlank) {
-                questions.push(...unit.fillInBlank);
-              }
-            });
-          }
-          
-          // 旧データ構造（categoriesベース）- 後方互換性のため
-          if (data.categories && quizType !== 'sentence-ordering') {
-            data.categories.forEach(category => {
-              questions.push(...category.questions);
-            });
-          }
-        });
-      }
+      // 新しいgrammar形式から問題を収集
+      allGrammarFiles.forEach(grammarFile => {
+        const allQuestions = grammarFile.questions || [];
+        
+        // quizTypeをデータのtype形式に変換
+        const typeMapping: { [key: string]: string } = {
+          'verb-form': 'verbForm',
+          'fill-in-blank': 'fillInBlank',
+          'sentence-ordering': 'sentenceOrdering'
+        };
+        
+        // 問題形式でフィルタリング
+        if (quizType === 'all' || quizType === 'random') {
+          // 全形式を含める
+          questions.push(...allQuestions);
+        } else {
+          // 特定の形式のみ (quizTypeをデータ形式に変換)
+          const targetType = typeMapping[quizType] || quizType;
+          const filtered = allQuestions.filter((q: any) => q.type === targetType);
+          questions.push(...filtered);
+        }
+      });
       
       if (questions.length === 0) {
         throw new Error('選択された条件に該当する問題がありません');
@@ -425,7 +329,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     // 回答時刻を更新（ScoreBoard更新用）
     setLastAnswerTime(Date.now());
     
+    // 「分からない」は不正解として扱い、要復習にカウント
     const isCorrect = answer === currentQuestion.correctAnswer;
+    const isDontKnow = answer === '分からない';
+    
     setTotalAnswered(prev => prev + 1);
     
     if (isCorrect) {
@@ -437,6 +344,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         correct: prev.correct + 1,
         mastered: isMastered ? prev.mastered + 1 : prev.mastered
       }));
+    } else if (isDontKnow) {
+      // 「分からない」は要復習として扱う
+      setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1, review: prev.review + 1 }));
     } else {
       setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
     }
@@ -908,6 +818,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                     {currentQuestion.sentence}
                   </div>
                   <div className="choices-grid">
+                    {/* 3択 + 分からない */}
                     {currentQuestion.choices.map((choice: string, index: number) => {
                       const isSelected = selectedAnswer === choice;
                       const isCorrectChoice = choice === currentQuestion.correctAnswer;
@@ -927,6 +838,15 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                         </button>
                       );
                     })}
+                    {/* 「分からない」ボタン */}
+                    <button
+                      className={`choice-button dont-know ${selectedAnswer === '分からない' ? 'selected' : ''} ${answered && selectedAnswer === '分からない' ? 'incorrect' : ''}`}
+                      onClick={() => handleAnswerSelect('分からない')}
+                      disabled={answered}
+                    >
+                      分からない
+                      {answered && selectedAnswer === '分からない' && ' ✗'}
+                    </button>
                   </div>
                 </div>
               )}

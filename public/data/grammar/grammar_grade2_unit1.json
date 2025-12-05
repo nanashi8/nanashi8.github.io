@@ -19,8 +19,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "were",
         "was",
-        "are",
-        "is"
+        "are"
       ],
       "correctAnswer": "were",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "is"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "wasn't",
         "weren't",
-        "am not",
-        "isn't"
+        "am not"
       ],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "weren't",
         "wasn't",
-        "are not",
-        "isn't"
+        "are not"
       ],
       "correctAnswer": "weren't",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "Were",
         "Was",
-        "Are",
-        "Is"
+        "Are"
       ],
       "correctAnswer": "Were",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "Was",
         "Were",
-        "Is",
-        "Are"
+        "Is"
       ],
       "correctAnswer": "Was",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "writing",
         "write",
-        "writes",
-        "wrote"
+        "writes"
       ],
       "correctAnswer": "writing",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "listening to",
         "listen to",
-        "listens to",
-        "listened to"
+        "listens to"
       ],
       "correctAnswer": "listening to",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "raining",
         "rain",
-        "rains",
-        "rained"
+        "rains"
       ],
       "correctAnswer": "raining",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "running",
         "run",
-        "runs",
-        "ran"
+        "runs"
       ],
       "correctAnswer": "running",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "making",
         "make",
-        "makes",
-        "made"
+        "makes"
       ],
       "correctAnswer": "making",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "waiting",
         "wait",
-        "waits",
-        "waited"
+        "waits"
       ],
       "correctAnswer": "waiting",
       "difficulty": "advanced",
@@ -264,7 +249,8 @@
       "correctAnswer": "I was reading then.",
       "difficulty": "beginner",
       "explanation": "「私はその時読んでいました」。was + -ing。",
-      "hint": "was -ing"
+      "hint": "was -ing",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "They were playing soccer.",
       "difficulty": "beginner",
       "explanation": "「彼らはサッカーをしていました」。were + -ing。",
-      "hint": "were -ing"
+      "hint": "were -ing",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-003",
@@ -294,7 +281,8 @@
       "correctAnswer": "She was cooking dinner.",
       "difficulty": "beginner",
       "explanation": "「彼女は夕食を作っていました」。was + -ing。",
-      "hint": "was -ing"
+      "hint": "was -ing",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-004",
@@ -309,7 +297,8 @@
       "correctAnswer": "We were studying English.",
       "difficulty": "beginner",
       "explanation": "「私たちは英語を勉強していました」。were + -ing。",
-      "hint": "were -ing"
+      "hint": "were -ing",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-005",
@@ -324,7 +313,8 @@
       "correctAnswer": "He was running fast.",
       "difficulty": "beginner",
       "explanation": "「彼は速く走っていました」。was + -ing。",
-      "hint": "was -ing"
+      "hint": "was -ing",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-006",
@@ -339,7 +329,8 @@
       "correctAnswer": "I wasn't sleeping then.",
       "difficulty": "intermediate",
       "explanation": "「私はその時寝ていませんでした」。wasn't + -ing。",
-      "hint": "wasn't"
+      "hint": "wasn't",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-007",
@@ -354,7 +345,8 @@
       "correctAnswer": "They weren't watching TV.",
       "difficulty": "intermediate",
       "explanation": "「彼らはテレビを見ていませんでした」。weren't + -ing。",
-      "hint": "weren't"
+      "hint": "weren't",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-008",
@@ -369,7 +361,8 @@
       "correctAnswer": "Was she talking then?",
       "difficulty": "intermediate",
       "explanation": "「彼女はその時話していましたか」。Was + 主語 + -ing?",
-      "hint": "Was"
+      "hint": "Was",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-009",
@@ -385,7 +378,8 @@
       "correctAnswer": "Were you listening to music?",
       "difficulty": "intermediate",
       "explanation": "「あなたは音楽を聴いていましたか」。Were + 主語 + -ing?",
-      "hint": "Were"
+      "hint": "Were",
+      "wordCount": 5
     },
     {
       "id": "g2-u1-so-010",
@@ -400,7 +394,8 @@
       "correctAnswer": "It was raining yesterday.",
       "difficulty": "intermediate",
       "explanation": "「昨日は雨が降っていました」。was + -ing。",
-      "hint": "was -ing"
+      "hint": "was -ing",
+      "wordCount": 4
     },
     {
       "id": "g2-u1-so-011",
@@ -417,7 +412,8 @@
       "correctAnswer": "I was writing a letter then.",
       "difficulty": "advanced",
       "explanation": "「私はその時手紙を書いていました」。was + -ing。",
-      "hint": "was writing"
+      "hint": "was writing",
+      "wordCount": 6
     },
     {
       "id": "g2-u1-so-012",
@@ -433,7 +429,8 @@
       "correctAnswer": "They were playing video games.",
       "difficulty": "advanced",
       "explanation": "「彼らはテレビゲームをしていました」。were + -ing。",
-      "hint": "were playing"
+      "hint": "were playing",
+      "wordCount": 5
     },
     {
       "id": "g2-u1-so-013",
@@ -449,7 +446,8 @@
       "correctAnswer": "Was he doing his homework?",
       "difficulty": "advanced",
       "explanation": "「彼は宿題をしていましたか」。Was + 主語 + -ing?",
-      "hint": "Was doing"
+      "hint": "Was doing",
+      "wordCount": 5
     },
     {
       "id": "g2-u1-so-014",
@@ -465,7 +463,8 @@
       "correctAnswer": "We weren't playing outside then.",
       "difficulty": "advanced",
       "explanation": "「私たちはその時外で遊んでいませんでした」。weren't + -ing。",
-      "hint": "weren't"
+      "hint": "weren't",
+      "wordCount": 5
     },
     {
       "id": "g2-u1-so-015",
@@ -481,7 +480,8 @@
       "correctAnswer": "Were the students taking notes?",
       "difficulty": "advanced",
       "explanation": "「生徒たちはノートを取っていましたか」。Were + 主語 + -ing?",
-      "hint": "Were taking"
+      "hint": "Were taking",
+      "wordCount": 5
     },
     {
       "id": "g2-u1-para-001",
@@ -492,8 +492,7 @@
       "choices": [
         "I was studying.",
         "I were studying.",
-        "I am studying.",
-        "I studied."
+        "I am studying."
       ],
       "correctAnswer": "I was studying.",
       "difficulty": "beginner",
@@ -509,8 +508,7 @@
       "choices": [
         "They were playing.",
         "They was playing.",
-        "They are playing.",
-        "They played."
+        "They are playing."
       ],
       "correctAnswer": "They were playing.",
       "difficulty": "beginner",
@@ -526,8 +524,7 @@
       "choices": [
         "She was reading.",
         "She were reading.",
-        "She is reading.",
-        "She read."
+        "She is reading."
       ],
       "correctAnswer": "She was reading.",
       "difficulty": "beginner",
@@ -543,8 +540,7 @@
       "choices": [
         "I wasn't watching TV.",
         "I weren't watching TV.",
-        "I am not watching TV.",
-        "I didn't watch TV."
+        "I am not watching TV."
       ],
       "correctAnswer": "I wasn't watching TV.",
       "difficulty": "beginner",
@@ -560,8 +556,7 @@
       "choices": [
         "They weren't running.",
         "They wasn't running.",
-        "They are not running.",
-        "They didn't run."
+        "They are not running."
       ],
       "correctAnswer": "They weren't running.",
       "difficulty": "beginner",
@@ -577,8 +572,7 @@
       "choices": [
         "Was she singing?",
         "Were she singing?",
-        "Is she singing?",
-        "Did she sing?"
+        "Is she singing?"
       ],
       "correctAnswer": "Was she singing?",
       "difficulty": "intermediate",
@@ -594,8 +588,7 @@
       "choices": [
         "Were you sleeping?",
         "Was you sleeping?",
-        "Are you sleeping?",
-        "Did you sleep?"
+        "Are you sleeping?"
       ],
       "correctAnswer": "Were you sleeping?",
       "difficulty": "intermediate",
@@ -611,8 +604,7 @@
       "choices": [
         "I ate lunch.",
         "I eat lunch.",
-        "I was eating lunch.",
-        "I am eating lunch."
+        "I was eating lunch."
       ],
       "correctAnswer": "I ate lunch.",
       "difficulty": "intermediate",
@@ -628,8 +620,7 @@
       "choices": [
         "She was playing tennis.",
         "She were playing tennis.",
-        "She is playing tennis.",
-        "She plays tennis."
+        "She is playing tennis."
       ],
       "correctAnswer": "She was playing tennis.",
       "difficulty": "intermediate",
@@ -645,8 +636,7 @@
       "choices": [
         "Yes, he was.",
         "Yes, he were.",
-        "Yes, he is.",
-        "Yes, he did."
+        "Yes, he is."
       ],
       "correctAnswer": "Yes, he was.",
       "difficulty": "intermediate",
@@ -662,8 +652,7 @@
       "choices": [
         "No, they weren't.",
         "No, they wasn't.",
-        "No, they aren't.",
-        "No, they didn't."
+        "No, they aren't."
       ],
       "correctAnswer": "No, they weren't.",
       "difficulty": "advanced",
@@ -679,8 +668,7 @@
       "choices": [
         "What were you doing?",
         "What was you doing?",
-        "What are you doing?",
-        "What did you do?"
+        "What are you doing?"
       ],
       "correctAnswer": "What were you doing?",
       "difficulty": "advanced",
@@ -696,8 +684,7 @@
       "choices": [
         "What was she reading?",
         "What were she reading?",
-        "What is she reading?",
-        "What did she read?"
+        "What is she reading?"
       ],
       "correctAnswer": "What was she reading?",
       "difficulty": "advanced",
@@ -713,8 +700,7 @@
       "choices": [
         "I was studying then.",
         "I were studying then.",
-        "I am studying then.",
-        "I studied then."
+        "I am studying then."
       ],
       "correctAnswer": "I was studying then.",
       "difficulty": "advanced",
@@ -730,8 +716,7 @@
       "choices": [
         "I was watching TV when she came home.",
         "I watched TV when she came home.",
-        "I am watching TV when she came home.",
-        "I watch TV when she came home."
+        "I am watching TV when she came home."
       ],
       "correctAnswer": "I was watching TV when she came home.",
       "difficulty": "advanced",
@@ -747,8 +732,7 @@
       "choices": [
         "reading",
         "read",
-        "reads",
-        "readed"
+        "reads"
       ],
       "correctAnswer": "reading",
       "difficulty": "beginner",
@@ -764,8 +748,7 @@
       "choices": [
         "playing",
         "play",
-        "plays",
-        "played"
+        "plays"
       ],
       "correctAnswer": "playing",
       "difficulty": "beginner",
@@ -781,8 +764,7 @@
       "choices": [
         "watching",
         "watch",
-        "watches",
-        "watched"
+        "watches"
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
@@ -798,8 +780,7 @@
       "choices": [
         "studying",
         "study",
-        "studies",
-        "studied"
+        "studies"
       ],
       "correctAnswer": "studying",
       "difficulty": "beginner",
@@ -815,8 +796,7 @@
       "choices": [
         "running",
         "run",
-        "runs",
-        "ran"
+        "runs"
       ],
       "correctAnswer": "running",
       "difficulty": "intermediate",
@@ -832,8 +812,7 @@
       "choices": [
         "writing",
         "write",
-        "writes",
-        "wrote"
+        "writes"
       ],
       "correctAnswer": "writing",
       "difficulty": "intermediate",
@@ -849,8 +828,7 @@
       "choices": [
         "making",
         "make",
-        "makes",
-        "made"
+        "makes"
       ],
       "correctAnswer": "making",
       "difficulty": "intermediate",
@@ -866,8 +844,7 @@
       "choices": [
         "raining",
         "rain",
-        "rains",
-        "rained"
+        "rains"
       ],
       "correctAnswer": "raining",
       "difficulty": "advanced",
@@ -883,8 +860,7 @@
       "choices": [
         "listening",
         "listen",
-        "listens",
-        "listened"
+        "listens"
       ],
       "correctAnswer": "listening",
       "difficulty": "advanced",
@@ -900,8 +876,7 @@
       "choices": [
         "waiting",
         "wait",
-        "waits",
-        "waited"
+        "waits"
       ],
       "correctAnswer": "waiting",
       "difficulty": "advanced",
@@ -926,8 +901,7 @@
       "choices": [
         "watching",
         "watch",
-        "watches",
-        "watched"
+        "watches"
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
@@ -952,8 +926,7 @@
       "choices": [
         "was",
         "were",
-        "am",
-        "did"
+        "am"
       ],
       "correctAnswer": "was",
       "difficulty": "beginner",
@@ -978,8 +951,7 @@
       "choices": [
         "wasn't",
         "weren't",
-        "isn't",
-        "didn't"
+        "isn't"
       ],
       "correctAnswer": "wasn't",
       "difficulty": "intermediate",
@@ -1004,8 +976,7 @@
       "choices": [
         "playing",
         "play",
-        "plays",
-        "played"
+        "plays"
       ],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
@@ -1030,8 +1001,7 @@
       "choices": [
         "Was",
         "Were",
-        "Is",
-        "Did"
+        "Is"
       ],
       "correctAnswer": "Was",
       "difficulty": "advanced",

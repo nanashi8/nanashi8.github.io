@@ -19,8 +19,7 @@
       "choices": [
         "played",
         "play",
-        "plays",
-        "playing"
+        "plays"
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "watched",
         "watch",
-        "watches",
-        "watching"
+        "watches"
       ],
       "correctAnswer": "watched",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "studied",
         "study",
-        "studies",
-        "studying"
+        "studies"
       ],
       "correctAnswer": "studied",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "played",
         "play",
-        "plays",
-        "playing"
+        "plays"
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "cleaned",
         "clean",
-        "cleans",
-        "cleaning"
+        "cleans"
       ],
       "correctAnswer": "cleaned",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "received",
         "receive",
-        "receives",
-        "receiving"
+        "receives"
       ],
       "correctAnswer": "received",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "carried",
         "carry",
-        "carries",
-        "carrying"
+        "carries"
       ],
       "correctAnswer": "carried",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "worked",
         "work",
-        "works",
-        "working"
+        "works"
       ],
       "correctAnswer": "worked",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "enjoyed",
         "enjoy",
-        "enjoys",
-        "enjoying"
+        "enjoys"
       ],
       "correctAnswer": "enjoyed",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "finished",
         "finish",
-        "finishes",
-        "finishing"
+        "finishes"
       ],
       "correctAnswer": "finished",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "started",
         "start",
-        "starts",
-        "starting"
+        "starts"
       ],
       "correctAnswer": "started",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "cooked",
         "cook",
-        "cooks",
-        "cooking"
+        "cooks"
       ],
       "correctAnswer": "cooked",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "completed",
         "complete",
-        "completes",
-        "completing"
+        "completes"
       ],
       "correctAnswer": "completed",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "visited",
         "visit",
-        "visits",
-        "visiting"
+        "visits"
       ],
       "correctAnswer": "visited",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "opened",
         "open",
-        "opens",
-        "opening"
+        "opens"
       ],
       "correctAnswer": "opened",
       "difficulty": "advanced",
@@ -263,7 +248,8 @@
       "correctAnswer": "I walked yesterday.",
       "difficulty": "beginner",
       "explanation": "「私は昨日歩きました」。walk + ed = walked。",
-      "hint": "主語 + 過去形"
+      "hint": "主語 + 過去形",
+      "wordCount": 3
     },
     {
       "id": "g1-u8-so-002",
@@ -278,7 +264,8 @@
       "correctAnswer": "She danced last night.",
       "difficulty": "beginner",
       "explanation": "「彼女は昨晩踊りました」。dance + d = danced。",
-      "hint": "e→d"
+      "hint": "e→d",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-003",
@@ -292,7 +279,8 @@
       "correctAnswer": "They jumped yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼らは昨日跳びました」。jump + ed = jumped。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "wordCount": 3
     },
     {
       "id": "g1-u8-so-004",
@@ -307,7 +295,8 @@
       "correctAnswer": "We listened to music.",
       "difficulty": "beginner",
       "explanation": "「私たちは音楽を聴きました」。listen + ed = listened。",
-      "hint": "listened to"
+      "hint": "listened to",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-005",
@@ -322,7 +311,8 @@
       "correctAnswer": "He helped me yesterday.",
       "difficulty": "beginner",
       "explanation": "「彼は昨日私を助けました」。help + ed = helped。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-006",
@@ -338,7 +328,8 @@
       "correctAnswer": "I used this pen yesterday.",
       "difficulty": "intermediate",
       "explanation": "「私は昨日このペンを使いました」。use + d = used。",
-      "hint": "e→d"
+      "hint": "e→d",
+      "wordCount": 5
     },
     {
       "id": "g1-u8-so-007",
@@ -353,7 +344,8 @@
       "correctAnswer": "She asked a question.",
       "difficulty": "intermediate",
       "explanation": "「彼女は質問をしました」。ask + ed = asked。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-008",
@@ -368,7 +360,8 @@
       "correctAnswer": "They talked about sports.",
       "difficulty": "intermediate",
       "explanation": "「彼らはスポーツについて話しました」。talk + ed = talked。",
-      "hint": "talked about"
+      "hint": "talked about",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-009",
@@ -383,7 +376,8 @@
       "correctAnswer": "We practiced piano yesterday.",
       "difficulty": "intermediate",
       "explanation": "「私たちは昨日ピアノを練習しました」。practice + d = practiced。",
-      "hint": "e→d"
+      "hint": "e→d",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-010",
@@ -399,7 +393,8 @@
       "correctAnswer": "He wanted a new bike.",
       "difficulty": "intermediate",
       "explanation": "「彼は新しい自転車が欲しかった」。want + ed = wanted。",
-      "hint": "過去形"
+      "hint": "過去形",
+      "wordCount": 5
     },
     {
       "id": "g1-u8-so-011",
@@ -416,7 +411,8 @@
       "correctAnswer": "I brushed my teeth this morning.",
       "difficulty": "advanced",
       "explanation": "「私は今朝歯を磨きました」。brush + ed = brushed。",
-      "hint": "brushed teeth"
+      "hint": "brushed teeth",
+      "wordCount": 6
     },
     {
       "id": "g1-u8-so-012",
@@ -432,7 +428,8 @@
       "correctAnswer": "She arrived at school early.",
       "difficulty": "advanced",
       "explanation": "「彼女は学校に早く着きました」。arrive + d = arrived。",
-      "hint": "arrived at"
+      "hint": "arrived at",
+      "wordCount": 5
     },
     {
       "id": "g1-u8-so-013",
@@ -447,7 +444,8 @@
       "correctAnswer": "They tried many times.",
       "difficulty": "advanced",
       "explanation": "「彼らは何度も挑戦しました」。try → y を i に変えて ed = tried。",
-      "hint": "y→ied"
+      "hint": "y→ied",
+      "wordCount": 4
     },
     {
       "id": "g1-u8-so-014",
@@ -463,7 +461,8 @@
       "correctAnswer": "We crossed the street carefully.",
       "difficulty": "advanced",
       "explanation": "「私たちは注意深く通りを渡りました」。cross + ed = crossed。",
-      "hint": "crossed"
+      "hint": "crossed",
+      "wordCount": 5
     },
     {
       "id": "g1-u8-so-015",
@@ -479,7 +478,8 @@
       "correctAnswer": "He noticed the mistake immediately.",
       "difficulty": "advanced",
       "explanation": "「彼はすぐに間違いに気づきました」。notice + d = noticed。",
-      "hint": "noticed"
+      "hint": "noticed",
+      "wordCount": 5
     },
     {
       "id": "g1-u8-para-001",
@@ -490,8 +490,7 @@
       "choices": [
         "I played soccer.",
         "I plays soccer.",
-        "I playing soccer.",
-        "I am play soccer."
+        "I playing soccer."
       ],
       "correctAnswer": "I played soccer.",
       "difficulty": "beginner",
@@ -507,8 +506,7 @@
       "choices": [
         "She watched TV.",
         "She watch TV.",
-        "She watching TV.",
-        "She is watch TV."
+        "She watching TV."
       ],
       "correctAnswer": "She watched TV.",
       "difficulty": "beginner",
@@ -524,8 +522,7 @@
       "choices": [
         "They studied hard.",
         "They studys hard.",
-        "They studying hard.",
-        "They are study hard."
+        "They studying hard."
       ],
       "correctAnswer": "They studied hard.",
       "difficulty": "beginner",
@@ -541,8 +538,7 @@
       "choices": [
         "We walked to school.",
         "We walks to school.",
-        "We walking to school.",
-        "We are walk to school."
+        "We walking to school."
       ],
       "correctAnswer": "We walked to school.",
       "difficulty": "beginner",
@@ -558,8 +554,7 @@
       "choices": [
         "He cleaned his room.",
         "He clean his room.",
-        "He cleaning his room.",
-        "He is clean his room."
+        "He cleaning his room."
       ],
       "correctAnswer": "He cleaned his room.",
       "difficulty": "beginner",
@@ -575,8 +570,7 @@
       "choices": [
         "I visit my friend.",
         "I visits my friend.",
-        "I am visit my friend.",
-        "I visiting my friend."
+        "I am visit my friend."
       ],
       "correctAnswer": "I visit my friend.",
       "difficulty": "intermediate",
@@ -592,8 +586,7 @@
       "choices": [
         "She cooks dinner.",
         "She cook dinner.",
-        "She is cook dinner.",
-        "She cooking dinner."
+        "She is cook dinner."
       ],
       "correctAnswer": "She cooks dinner.",
       "difficulty": "intermediate",
@@ -609,8 +602,7 @@
       "choices": [
         "Did you play tennis yesterday?",
         "Do you play tennis yesterday?",
-        "Did you played tennis yesterday?",
-        "Do you played tennis yesterday?"
+        "Did you played tennis yesterday?"
       ],
       "correctAnswer": "Did you play tennis yesterday?",
       "difficulty": "intermediate",
@@ -626,8 +618,7 @@
       "choices": [
         "I didn't watch TV last night.",
         "I don't watch TV last night.",
-        "I didn't watched TV last night.",
-        "I not watch TV last night."
+        "I didn't watched TV last night."
       ],
       "correctAnswer": "I didn't watch TV last night.",
       "difficulty": "intermediate",
@@ -643,8 +634,7 @@
       "choices": [
         "She didn't study English yesterday.",
         "She don't study English yesterday.",
-        "She didn't studied English yesterday.",
-        "She not study English yesterday."
+        "She didn't studied English yesterday."
       ],
       "correctAnswer": "She didn't study English yesterday.",
       "difficulty": "intermediate",
@@ -660,8 +650,7 @@
       "choices": [
         "Yes, I did.",
         "Yes, I do.",
-        "Yes, I enjoyed.",
-        "Yes, I was."
+        "Yes, I enjoyed."
       ],
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
@@ -677,8 +666,7 @@
       "choices": [
         "No, he didn't.",
         "No, he doesn't.",
-        "No, he not.",
-        "No, he wasn't."
+        "No, he not."
       ],
       "correctAnswer": "No, he didn't.",
       "difficulty": "advanced",
@@ -694,8 +682,7 @@
       "choices": [
         "I played soccer yesterday.",
         "I play soccer yesterday.",
-        "I played soccer every day.",
-        "I playing soccer yesterday."
+        "I played soccer every day."
       ],
       "correctAnswer": "I played soccer yesterday.",
       "difficulty": "advanced",
@@ -711,8 +698,7 @@
       "choices": [
         "I was tired because I worked hard.",
         "I was tired because I work hard.",
-        "I am tired because I worked hard.",
-        "I tired because I worked hard."
+        "I am tired because I worked hard."
       ],
       "correctAnswer": "I was tired because I worked hard.",
       "difficulty": "advanced",
@@ -728,8 +714,7 @@
       "choices": [
         "What did you play?",
         "What do you play?",
-        "What did you played?",
-        "What you played?"
+        "What did you played?"
       ],
       "correctAnswer": "What did you play?",
       "difficulty": "advanced",
@@ -745,8 +730,7 @@
       "choices": [
         "watched",
         "watch",
-        "watches",
-        "watching"
+        "watches"
       ],
       "correctAnswer": "watched",
       "difficulty": "beginner",
@@ -762,8 +746,7 @@
       "choices": [
         "studied",
         "study",
-        "studies",
-        "studying"
+        "studies"
       ],
       "correctAnswer": "studied",
       "difficulty": "beginner",
@@ -779,8 +762,7 @@
       "choices": [
         "played",
         "play",
-        "plays",
-        "playing"
+        "plays"
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
@@ -796,8 +778,7 @@
       "choices": [
         "visited",
         "visit",
-        "visits",
-        "visiting"
+        "visits"
       ],
       "correctAnswer": "visited",
       "difficulty": "beginner",
@@ -813,8 +794,7 @@
       "choices": [
         "practiced",
         "practice",
-        "practices",
-        "practicing"
+        "practices"
       ],
       "correctAnswer": "practiced",
       "difficulty": "intermediate",
@@ -830,8 +810,7 @@
       "choices": [
         "enjoyed",
         "enjoy",
-        "enjoys",
-        "enjoying"
+        "enjoys"
       ],
       "correctAnswer": "enjoyed",
       "difficulty": "intermediate",
@@ -847,8 +826,7 @@
       "choices": [
         "helped",
         "help",
-        "helps",
-        "helping"
+        "helps"
       ],
       "correctAnswer": "helped",
       "difficulty": "intermediate",
@@ -864,8 +842,7 @@
       "choices": [
         "finished",
         "finish",
-        "finishes",
-        "finishing"
+        "finishes"
       ],
       "correctAnswer": "finished",
       "difficulty": "advanced",
@@ -881,8 +858,7 @@
       "choices": [
         "arrived",
         "arrive",
-        "arrives",
-        "arriving"
+        "arrives"
       ],
       "correctAnswer": "arrived",
       "difficulty": "advanced",
@@ -898,8 +874,7 @@
       "choices": [
         "remembered",
         "remember",
-        "remembers",
-        "remembering"
+        "remembers"
       ],
       "correctAnswer": "remembered",
       "difficulty": "advanced",
@@ -924,8 +899,7 @@
       "choices": [
         "played",
         "play",
-        "plays",
-        "playing"
+        "plays"
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
@@ -950,8 +924,7 @@
       "choices": [
         "did",
         "do",
-        "was",
-        "studied"
+        "was"
       ],
       "correctAnswer": "did",
       "difficulty": "beginner",
@@ -976,8 +949,7 @@
       "choices": [
         "didn't",
         "don't",
-        "wasn't",
-        "not"
+        "wasn't"
       ],
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
@@ -1002,8 +974,7 @@
       "choices": [
         "had",
         "have",
-        "has",
-        "having"
+        "has"
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
@@ -1028,8 +999,7 @@
       "choices": [
         "study",
         "studied",
-        "studies",
-        "studying"
+        "studies"
       ],
       "correctAnswer": "study",
       "difficulty": "advanced",

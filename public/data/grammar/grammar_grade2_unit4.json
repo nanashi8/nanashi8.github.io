@@ -1,7 +1,7 @@
 {
-  "unit": "Unit 8",
-  "title": "There is/are",
-  "grammar": "存在を表す構文",
+  "unit": "Unit 4",
+  "title": "不定詞",
+  "grammar": "to + 動詞の原形、3用法",
   "totalQuestions": 60,
   "questionTypes": {
     "fillInBlank": 15,
@@ -12,249 +12,234 @@
   },
   "questions": [
     {
-      "id": "g2-u8-fib-001",
+      "id": "g2-u4-fib-001",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め1",
+      "japanese": "不定詞穴埋め1",
       "sentence": "Example sentence 1 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明1。",
+      "explanation": "to + 動詞の原形、3用法の説明1。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-002",
+      "id": "g2-u4-fib-002",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め2",
+      "japanese": "不定詞穴埋め2",
       "sentence": "Example sentence 2 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明2。",
+      "explanation": "to + 動詞の原形、3用法の説明2。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-003",
+      "id": "g2-u4-fib-003",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め3",
+      "japanese": "不定詞穴埋め3",
       "sentence": "Example sentence 3 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明3。",
+      "explanation": "to + 動詞の原形、3用法の説明3。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-004",
+      "id": "g2-u4-fib-004",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め4",
+      "japanese": "不定詞穴埋め4",
       "sentence": "Example sentence 4 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明4。",
+      "explanation": "to + 動詞の原形、3用法の説明4。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-005",
+      "id": "g2-u4-fib-005",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め5",
+      "japanese": "不定詞穴埋め5",
       "sentence": "Example sentence 5 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明5。",
+      "explanation": "to + 動詞の原形、3用法の説明5。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-006",
+      "id": "g2-u4-fib-006",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め6",
+      "japanese": "不定詞穴埋め6",
       "sentence": "Example sentence 6 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明6。",
+      "explanation": "to + 動詞の原形、3用法の説明6。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-007",
+      "id": "g2-u4-fib-007",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め7",
+      "japanese": "不定詞穴埋め7",
       "sentence": "Example sentence 7 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明7。",
+      "explanation": "to + 動詞の原形、3用法の説明7。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-008",
+      "id": "g2-u4-fib-008",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め8",
+      "japanese": "不定詞穴埋め8",
       "sentence": "Example sentence 8 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明8。",
+      "explanation": "to + 動詞の原形、3用法の説明8。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-009",
+      "id": "g2-u4-fib-009",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め9",
+      "japanese": "不定詞穴埋め9",
       "sentence": "Example sentence 9 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明9。",
+      "explanation": "to + 動詞の原形、3用法の説明9。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-010",
+      "id": "g2-u4-fib-010",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め10",
+      "japanese": "不定詞穴埋め10",
       "sentence": "Example sentence 10 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明10。",
+      "explanation": "to + 動詞の原形、3用法の説明10。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-011",
+      "id": "g2-u4-fib-011",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め11",
+      "japanese": "不定詞穴埋め11",
       "sentence": "Example sentence 11 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明11。",
+      "explanation": "to + 動詞の原形、3用法の説明11。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-012",
+      "id": "g2-u4-fib-012",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め12",
+      "japanese": "不定詞穴埋め12",
       "sentence": "Example sentence 12 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明12。",
+      "explanation": "to + 動詞の原形、3用法の説明12。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-013",
+      "id": "g2-u4-fib-013",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め13",
+      "japanese": "不定詞穴埋め13",
       "sentence": "Example sentence 13 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明13。",
+      "explanation": "to + 動詞の原形、3用法の説明13。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-014",
+      "id": "g2-u4-fib-014",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め14",
+      "japanese": "不定詞穴埋め14",
       "sentence": "Example sentence 14 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明14。",
+      "explanation": "to + 動詞の原形、3用法の説明14。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-fib-015",
+      "id": "g2-u4-fib-015",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め15",
+      "japanese": "不定詞穴埋め15",
       "sentence": "Example sentence 15 with ____ blank.",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明15。",
+      "explanation": "to + 動詞の原形、3用法の説明15。",
       "hint": "ヒント"
     },
     {
-      "id": "g2-u8-so-001",
+      "id": "g2-u4-so-001",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え1",
+      "japanese": "不定詞並べ替え1",
       "words": [
         "word1",
         "word2",
@@ -262,13 +247,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文1。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文1。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-002",
+      "id": "g2-u4-so-002",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え2",
+      "japanese": "不定詞並べ替え2",
       "words": [
         "word1",
         "word2",
@@ -276,13 +262,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文2。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文2。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-003",
+      "id": "g2-u4-so-003",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え3",
+      "japanese": "不定詞並べ替え3",
       "words": [
         "word1",
         "word2",
@@ -290,13 +277,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文3。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文3。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-004",
+      "id": "g2-u4-so-004",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え4",
+      "japanese": "不定詞並べ替え4",
       "words": [
         "word1",
         "word2",
@@ -304,13 +292,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文4。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文4。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-005",
+      "id": "g2-u4-so-005",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え5",
+      "japanese": "不定詞並べ替え5",
       "words": [
         "word1",
         "word2",
@@ -318,13 +307,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文5。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文5。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-006",
+      "id": "g2-u4-so-006",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え6",
+      "japanese": "不定詞並べ替え6",
       "words": [
         "word1",
         "word2",
@@ -332,13 +322,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文6。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文6。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-007",
+      "id": "g2-u4-so-007",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え7",
+      "japanese": "不定詞並べ替え7",
       "words": [
         "word1",
         "word2",
@@ -346,13 +337,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文7。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文7。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-008",
+      "id": "g2-u4-so-008",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え8",
+      "japanese": "不定詞並べ替え8",
       "words": [
         "word1",
         "word2",
@@ -360,13 +352,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文8。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文8。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-009",
+      "id": "g2-u4-so-009",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え9",
+      "japanese": "不定詞並べ替え9",
       "words": [
         "word1",
         "word2",
@@ -374,13 +367,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文9。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文9。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-010",
+      "id": "g2-u4-so-010",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え10",
+      "japanese": "不定詞並べ替え10",
       "words": [
         "word1",
         "word2",
@@ -388,13 +382,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文10。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文10。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-011",
+      "id": "g2-u4-so-011",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え11",
+      "japanese": "不定詞並べ替え11",
       "words": [
         "word1",
         "word2",
@@ -402,13 +397,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文11。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文11。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-012",
+      "id": "g2-u4-so-012",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え12",
+      "japanese": "不定詞並べ替え12",
       "words": [
         "word1",
         "word2",
@@ -416,13 +412,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文12。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文12。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-013",
+      "id": "g2-u4-so-013",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え13",
+      "japanese": "不定詞並べ替え13",
       "words": [
         "word1",
         "word2",
@@ -430,13 +427,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文13。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文13。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-014",
+      "id": "g2-u4-so-014",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え14",
+      "japanese": "不定詞並べ替え14",
       "words": [
         "word1",
         "word2",
@@ -444,13 +442,14 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文14。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文14。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-so-015",
+      "id": "g2-u4-so-015",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え15",
+      "japanese": "不定詞並べ替え15",
       "words": [
         "word1",
         "word2",
@@ -458,438 +457,414 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文15。",
-      "hint": "順序"
+      "explanation": "to + 動詞の原形、3用法の文15。",
+      "hint": "順序",
+      "wordCount": 3
     },
     {
-      "id": "g2-u8-para-001",
+      "id": "g2-u4-para-001",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え1",
+      "japanese": "不定詞言い換え1",
       "originalSentence": "Original sentence 1.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換1。",
+      "explanation": "to + 動詞の原形、3用法の変換1。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-002",
+      "id": "g2-u4-para-002",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え2",
+      "japanese": "不定詞言い換え2",
       "originalSentence": "Original sentence 2.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換2。",
+      "explanation": "to + 動詞の原形、3用法の変換2。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-003",
+      "id": "g2-u4-para-003",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え3",
+      "japanese": "不定詞言い換え3",
       "originalSentence": "Original sentence 3.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換3。",
+      "explanation": "to + 動詞の原形、3用法の変換3。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-004",
+      "id": "g2-u4-para-004",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え4",
+      "japanese": "不定詞言い換え4",
       "originalSentence": "Original sentence 4.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換4。",
+      "explanation": "to + 動詞の原形、3用法の変換4。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-005",
+      "id": "g2-u4-para-005",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え5",
+      "japanese": "不定詞言い換え5",
       "originalSentence": "Original sentence 5.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換5。",
+      "explanation": "to + 動詞の原形、3用法の変換5。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-006",
+      "id": "g2-u4-para-006",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え6",
+      "japanese": "不定詞言い換え6",
       "originalSentence": "Original sentence 6.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換6。",
+      "explanation": "to + 動詞の原形、3用法の変換6。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-007",
+      "id": "g2-u4-para-007",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え7",
+      "japanese": "不定詞言い換え7",
       "originalSentence": "Original sentence 7.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換7。",
+      "explanation": "to + 動詞の原形、3用法の変換7。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-008",
+      "id": "g2-u4-para-008",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え8",
+      "japanese": "不定詞言い換え8",
       "originalSentence": "Original sentence 8.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換8。",
+      "explanation": "to + 動詞の原形、3用法の変換8。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-009",
+      "id": "g2-u4-para-009",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え9",
+      "japanese": "不定詞言い換え9",
       "originalSentence": "Original sentence 9.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換9。",
+      "explanation": "to + 動詞の原形、3用法の変換9。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-010",
+      "id": "g2-u4-para-010",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え10",
+      "japanese": "不定詞言い換え10",
       "originalSentence": "Original sentence 10.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換10。",
+      "explanation": "to + 動詞の原形、3用法の変換10。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-011",
+      "id": "g2-u4-para-011",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え11",
+      "japanese": "不定詞言い換え11",
       "originalSentence": "Original sentence 11.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換11。",
+      "explanation": "to + 動詞の原形、3用法の変換11。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-012",
+      "id": "g2-u4-para-012",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え12",
+      "japanese": "不定詞言い換え12",
       "originalSentence": "Original sentence 12.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換12。",
+      "explanation": "to + 動詞の原形、3用法の変換12。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-013",
+      "id": "g2-u4-para-013",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え13",
+      "japanese": "不定詞言い換え13",
       "originalSentence": "Original sentence 13.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換13。",
+      "explanation": "to + 動詞の原形、3用法の変換13。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-014",
+      "id": "g2-u4-para-014",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え14",
+      "japanese": "不定詞言い換え14",
       "originalSentence": "Original sentence 14.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換14。",
+      "explanation": "to + 動詞の原形、3用法の変換14。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-para-015",
+      "id": "g2-u4-para-015",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え15",
+      "japanese": "不定詞言い換え15",
       "originalSentence": "Original sentence 15.",
       "question": "書き換えなさい",
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換15。",
+      "explanation": "to + 動詞の原形、3用法の変換15。",
       "hint": "変換"
     },
     {
-      "id": "g2-u8-vf-001",
+      "id": "g2-u4-vf-001",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化1",
+      "japanese": "不定詞動詞変化1",
       "sentence": "Sentence 1 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞1。",
+      "explanation": "to + 動詞の原形、3用法の動詞1。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-002",
+      "id": "g2-u4-vf-002",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化2",
+      "japanese": "不定詞動詞変化2",
       "sentence": "Sentence 2 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞2。",
+      "explanation": "to + 動詞の原形、3用法の動詞2。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-003",
+      "id": "g2-u4-vf-003",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化3",
+      "japanese": "不定詞動詞変化3",
       "sentence": "Sentence 3 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞3。",
+      "explanation": "to + 動詞の原形、3用法の動詞3。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-004",
+      "id": "g2-u4-vf-004",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化4",
+      "japanese": "不定詞動詞変化4",
       "sentence": "Sentence 4 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞4。",
+      "explanation": "to + 動詞の原形、3用法の動詞4。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-005",
+      "id": "g2-u4-vf-005",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化5",
+      "japanese": "不定詞動詞変化5",
       "sentence": "Sentence 5 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞5。",
+      "explanation": "to + 動詞の原形、3用法の動詞5。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-006",
+      "id": "g2-u4-vf-006",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化6",
+      "japanese": "不定詞動詞変化6",
       "sentence": "Sentence 6 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞6。",
+      "explanation": "to + 動詞の原形、3用法の動詞6。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-007",
+      "id": "g2-u4-vf-007",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化7",
+      "japanese": "不定詞動詞変化7",
       "sentence": "Sentence 7 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞7。",
+      "explanation": "to + 動詞の原形、3用法の動詞7。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-008",
+      "id": "g2-u4-vf-008",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化8",
+      "japanese": "不定詞動詞変化8",
       "sentence": "Sentence 8 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞8。",
+      "explanation": "to + 動詞の原形、3用法の動詞8。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-009",
+      "id": "g2-u4-vf-009",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化9",
+      "japanese": "不定詞動詞変化9",
       "sentence": "Sentence 9 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞9。",
+      "explanation": "to + 動詞の原形、3用法の動詞9。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-vf-010",
+      "id": "g2-u4-vf-010",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化10",
+      "japanese": "不定詞動詞変化10",
       "sentence": "Sentence 10 with ____.",
       "verb": "verb",
       "choices": [
         "form1",
         "form2",
-        "form3",
-        "form4"
+        "form3"
       ],
       "correctAnswer": "form1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞10。",
+      "explanation": "to + 動詞の原形、3用法の動詞10。",
       "hint": "動詞"
     },
     {
-      "id": "g2-u8-conv-001",
+      "id": "g2-u4-conv-001",
       "type": "conversation",
-      "japanese": "There is/are会話1",
+      "japanese": "不定詞会話1",
       "situation": "状況1",
       "dialogue": [
         {
@@ -904,18 +879,17 @@
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の会話1。",
+      "explanation": "to + 動詞の原形、3用法の会話1。",
       "hint": "会話"
     },
     {
-      "id": "g2-u8-conv-002",
+      "id": "g2-u4-conv-002",
       "type": "conversation",
-      "japanese": "There is/are会話2",
+      "japanese": "不定詞会話2",
       "situation": "状況2",
       "dialogue": [
         {
@@ -930,18 +904,17 @@
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の会話2。",
+      "explanation": "to + 動詞の原形、3用法の会話2。",
       "hint": "会話"
     },
     {
-      "id": "g2-u8-conv-003",
+      "id": "g2-u4-conv-003",
       "type": "conversation",
-      "japanese": "There is/are会話3",
+      "japanese": "不定詞会話3",
       "situation": "状況3",
       "dialogue": [
         {
@@ -956,18 +929,17 @@
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の会話3。",
+      "explanation": "to + 動詞の原形、3用法の会話3。",
       "hint": "会話"
     },
     {
-      "id": "g2-u8-conv-004",
+      "id": "g2-u4-conv-004",
       "type": "conversation",
-      "japanese": "There is/are会話4",
+      "japanese": "不定詞会話4",
       "situation": "状況4",
       "dialogue": [
         {
@@ -982,18 +954,17 @@
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の会話4。",
+      "explanation": "to + 動詞の原形、3用法の会話4。",
       "hint": "会話"
     },
     {
-      "id": "g2-u8-conv-005",
+      "id": "g2-u4-conv-005",
       "type": "conversation",
-      "japanese": "There is/are会話5",
+      "japanese": "不定詞会話5",
       "situation": "状況5",
       "dialogue": [
         {
@@ -1008,12 +979,11 @@
       "choices": [
         "choice1",
         "choice2",
-        "choice3",
-        "choice4"
+        "choice3"
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の会話5。",
+      "explanation": "to + 動詞の原形、3用法の会話5。",
       "hint": "会話"
     }
   ]

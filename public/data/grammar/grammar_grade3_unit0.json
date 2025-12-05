@@ -1,0 +1,1009 @@
+{
+  "unit": "Unit 0",
+  "title": "受動態",
+  "grammar": "be動詞 + 過去分詞",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 20,
+    "sentenceOrdering": 20,
+    "verbForm": 20
+  },
+  "questions": [
+    {
+      "id": "vf-g3-u0-001",
+      "japanese": "英語は世界中で話されています",
+      "sentence": "English ____ spoken around the world.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-002",
+      "japanese": "この本は多くの人に読まれています",
+      "sentence": "This book ____ read by many people.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-003",
+      "japanese": "その手紙は彼女によって書かれました",
+      "sentence": "The letter ____ written by her.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-004",
+      "japanese": "この橋は1990年に建てられました",
+      "sentence": "This bridge ____ built in 1990.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-005",
+      "japanese": "これらの車は日本で作られています",
+      "sentence": "These cars ____ made in Japan.",
+      "verb": "passive",
+      "choices": [
+        "are",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-006",
+      "japanese": "その問題は昨日解かれました",
+      "sentence": "The problem ____ solved yesterday.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-007",
+      "japanese": "この歌は若者に愛されています",
+      "sentence": "This song ____ loved by young people.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-008",
+      "japanese": "彼の名前はよく知られています",
+      "sentence": "His name ____ well known.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-009",
+      "japanese": "その窓は彼によって壊されました",
+      "sentence": "The window ____ broken by him.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-010",
+      "japanese": "これらの写真は去年撮られました",
+      "sentence": "These photos ____ taken last year.",
+      "verb": "passive",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-011",
+      "japanese": "その扉は開けられています",
+      "sentence": "The door ____ opened.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-012",
+      "japanese": "このコンピューターは使われていません",
+      "sentence": "This computer ____ not used.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-013",
+      "japanese": "その建物は1950年に建てられました",
+      "sentence": "The building ____ constructed in 1950.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-014",
+      "japanese": "多くの木が植えられました",
+      "sentence": "Many trees ____ planted.",
+      "verb": "passive",
+      "choices": [
+        "were",
+        "was",
+        "is"
+      ],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-015",
+      "japanese": "その映画は世界中で見られています",
+      "sentence": "The movie ____ watched worldwide.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-016",
+      "japanese": "この部屋は毎日掃除されます",
+      "sentence": "This room ____ cleaned every day.",
+      "verb": "passive",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-017",
+      "japanese": "その手紙は英語で書かれました",
+      "sentence": "The letter ____ written in English.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-018",
+      "japanese": "これらの製品は中国で製造されています",
+      "sentence": "These products ____ manufactured in China.",
+      "verb": "passive",
+      "choices": [
+        "are",
+        "is",
+        "was"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-019",
+      "japanese": "その絵は有名な画家によって描かれました",
+      "sentence": "The painting ____ painted by a famous artist.",
+      "verb": "passive",
+      "choices": [
+        "was",
+        "were",
+        "is"
+      ],
+      "correctAnswer": "was",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u0-020",
+      "japanese": "この規則は守られるべきです",
+      "sentence": "This rule should ____ followed.",
+      "verb": "passive",
+      "choices": [
+        "be",
+        "is",
+        "are"
+      ],
+      "correctAnswer": "be",
+      "difficulty": "intermediate",
+      "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+      "hint": "受動態: be + p.p.",
+      "type": "verbForm"
+    },
+    {
+      "id": "fb-g3-u0-001",
+      "japanese": "英語は世界中で話されています",
+      "sentence": "English is ____ around the world.",
+      "choices": [
+        "spoken",
+        "speak",
+        "spoke"
+      ],
+      "correctAnswer": "spoken",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-002",
+      "japanese": "この本は多くの人に読まれています",
+      "sentence": "This book is ____ by many people.",
+      "choices": [
+        "read",
+        "reads",
+        "reading"
+      ],
+      "correctAnswer": "read",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-003",
+      "japanese": "その手紙は彼女によって書かれました",
+      "sentence": "The letter was ____ by her.",
+      "choices": [
+        "written",
+        "write",
+        "wrote"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-004",
+      "japanese": "この橋は1990年に建てられました",
+      "sentence": "This bridge was ____ in 1990.",
+      "choices": [
+        "built",
+        "build",
+        "builds"
+      ],
+      "correctAnswer": "built",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-005",
+      "japanese": "これらの車は日本で作られています",
+      "sentence": "These cars are ____ in Japan.",
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-006",
+      "japanese": "その問題は昨日解かれました",
+      "sentence": "The problem was ____ yesterday.",
+      "choices": [
+        "solved",
+        "solve",
+        "solves"
+      ],
+      "correctAnswer": "solved",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-007",
+      "japanese": "この歌は若者に愛されています",
+      "sentence": "This song is ____ by young people.",
+      "choices": [
+        "loved",
+        "lov",
+        "lovs"
+      ],
+      "correctAnswer": "loved",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-008",
+      "japanese": "彼の名前はよく知られています",
+      "sentence": "His name is well ____.",
+      "choices": [
+        "known",
+        "know",
+        "knew"
+      ],
+      "correctAnswer": "known",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-009",
+      "japanese": "その窓は彼によって壊されました",
+      "sentence": "The window was ____ by him.",
+      "choices": [
+        "broken",
+        "break",
+        "broke"
+      ],
+      "correctAnswer": "broken",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-010",
+      "japanese": "これらの写真は去年撮られました",
+      "sentence": "These photos were ____ last year.",
+      "choices": [
+        "taken",
+        "take",
+        "took"
+      ],
+      "correctAnswer": "taken",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-011",
+      "japanese": "その扉は開けられています",
+      "sentence": "The door is ____.",
+      "choices": [
+        "opened",
+        "open",
+        "opens"
+      ],
+      "correctAnswer": "opened",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-012",
+      "japanese": "このコンピューターは使われていません",
+      "sentence": "This computer is not ____.",
+      "choices": [
+        "used",
+        "us",
+        "uss"
+      ],
+      "correctAnswer": "used",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-013",
+      "japanese": "その建物は1950年に建てられました",
+      "sentence": "The building was ____ in 1950.",
+      "choices": [
+        "constructed",
+        "construct",
+        "constructs"
+      ],
+      "correctAnswer": "constructed",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-014",
+      "japanese": "多くの木が植えられました",
+      "sentence": "Many trees were ____.",
+      "choices": [
+        "planted",
+        "plant",
+        "plants"
+      ],
+      "correctAnswer": "planted",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-015",
+      "japanese": "その映画は世界中で見られています",
+      "sentence": "The movie is ____ worldwide.",
+      "choices": [
+        "watched",
+        "watch",
+        "watchs"
+      ],
+      "correctAnswer": "watched",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-016",
+      "japanese": "この部屋は毎日掃除されます",
+      "sentence": "This room is ____ every day.",
+      "choices": [
+        "cleaned",
+        "clean",
+        "cleans"
+      ],
+      "correctAnswer": "cleaned",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-017",
+      "japanese": "その手紙は英語で書かれました",
+      "sentence": "The letter was ____ in English.",
+      "choices": [
+        "written",
+        "write",
+        "wrote"
+      ],
+      "correctAnswer": "written",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-018",
+      "japanese": "これらの製品は中国で製造されています",
+      "sentence": "These products are ____ in China.",
+      "choices": [
+        "manufactured",
+        "manufactur",
+        "manufacturs"
+      ],
+      "correctAnswer": "manufactured",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-019",
+      "japanese": "その絵は有名な画家によって描かれました",
+      "sentence": "The painting was ____ by a famous artist.",
+      "choices": [
+        "painted",
+        "paint",
+        "paints"
+      ],
+      "correctAnswer": "painted",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u0-020",
+      "japanese": "この本は1999年に出版されました",
+      "sentence": "This book was ____ in 1999.",
+      "choices": [
+        "published",
+        "publish",
+        "publishs"
+      ],
+      "correctAnswer": "published",
+      "difficulty": "intermediate",
+      "explanation": "受動態では過去分詞を使う。",
+      "hint": "be動詞の後は過去分詞",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "so-g3-u0-001",
+      "japanese": "英語は世界中で話されています",
+      "words": [
+        "English",
+        "is",
+        "spoken",
+        "around",
+        "the",
+        "world"
+      ],
+      "correctOrder": "English is spoken around the world",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-002",
+      "japanese": "この本は多くの人に読まれています",
+      "words": [
+        "This",
+        "book",
+        "is",
+        "read",
+        "by",
+        "many",
+        "people"
+      ],
+      "correctOrder": "This book is read by many people",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 7,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-003",
+      "japanese": "その手紙は彼女によって書かれました",
+      "words": [
+        "The",
+        "letter",
+        "was",
+        "written",
+        "by",
+        "her"
+      ],
+      "correctOrder": "The letter was written by her",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-004",
+      "japanese": "この橋は1990年に建てられました",
+      "words": [
+        "This",
+        "bridge",
+        "was",
+        "built",
+        "in",
+        "1990"
+      ],
+      "correctOrder": "This bridge was built in 1990",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-005",
+      "japanese": "これらの車は日本で作られています",
+      "words": [
+        "These",
+        "cars",
+        "are",
+        "made",
+        "in",
+        "Japan"
+      ],
+      "correctOrder": "These cars are made in Japan",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-006",
+      "japanese": "その問題は昨日解かれました",
+      "words": [
+        "The",
+        "problem",
+        "was",
+        "solved",
+        "yesterday"
+      ],
+      "correctOrder": "The problem was solved yesterday",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-007",
+      "japanese": "この歌は若者に愛されています",
+      "words": [
+        "This",
+        "song",
+        "is",
+        "loved",
+        "by",
+        "young",
+        "people"
+      ],
+      "correctOrder": "This song is loved by young people",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 7,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-008",
+      "japanese": "彼の名前はよく知られています",
+      "words": [
+        "His",
+        "name",
+        "is",
+        "well",
+        "known"
+      ],
+      "correctOrder": "His name is well known",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-009",
+      "japanese": "その窓は彼によって壊されました",
+      "words": [
+        "The",
+        "window",
+        "was",
+        "broken",
+        "by",
+        "him"
+      ],
+      "correctOrder": "The window was broken by him",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-010",
+      "japanese": "これらの写真は去年撮られました",
+      "words": [
+        "These",
+        "photos",
+        "were",
+        "taken",
+        "last",
+        "year"
+      ],
+      "correctOrder": "These photos were taken last year",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-011",
+      "japanese": "その扉は開けられています",
+      "words": [
+        "The",
+        "door",
+        "is",
+        "opened"
+      ],
+      "correctOrder": "The door is opened",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 4,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-012",
+      "japanese": "このコンピューターは使われていません",
+      "words": [
+        "This",
+        "computer",
+        "is",
+        "not",
+        "used"
+      ],
+      "correctOrder": "This computer is not used",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-013",
+      "japanese": "その建物は1950年に建てられました",
+      "words": [
+        "The",
+        "building",
+        "was",
+        "constructed",
+        "in",
+        "1950"
+      ],
+      "correctOrder": "The building was constructed in 1950",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-014",
+      "japanese": "多くの木が植えられました",
+      "words": [
+        "Many",
+        "trees",
+        "were",
+        "planted"
+      ],
+      "correctOrder": "Many trees were planted",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 4,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-015",
+      "japanese": "その映画は世界中で見られています",
+      "words": [
+        "The",
+        "movie",
+        "is",
+        "watched",
+        "worldwide"
+      ],
+      "correctOrder": "The movie is watched worldwide",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 5,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-016",
+      "japanese": "この部屋は毎日掃除されます",
+      "words": [
+        "This",
+        "room",
+        "is",
+        "cleaned",
+        "every",
+        "day"
+      ],
+      "correctOrder": "This room is cleaned every day",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-017",
+      "japanese": "その手紙は英語で書かれました",
+      "words": [
+        "The",
+        "letter",
+        "was",
+        "written",
+        "in",
+        "English"
+      ],
+      "correctOrder": "The letter was written in English",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-018",
+      "japanese": "これらの製品は中国で製造されています",
+      "words": [
+        "These",
+        "products",
+        "are",
+        "manufactured",
+        "in",
+        "China"
+      ],
+      "correctOrder": "These products are manufactured in China",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-019",
+      "japanese": "その絵は有名な画家によって描かれました",
+      "words": [
+        "The",
+        "painting",
+        "was",
+        "painted",
+        "by",
+        "a",
+        "famous",
+        "artist"
+      ],
+      "correctOrder": "The painting was painted by a famous artist",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 8,
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u0-020",
+      "japanese": "この本は1999年に出版されました",
+      "words": [
+        "This",
+        "book",
+        "was",
+        "published",
+        "in",
+        "1999"
+      ],
+      "correctOrder": "This book was published in 1999",
+      "difficulty": "intermediate",
+      "explanation": "受動態の語順: 主語 + be動詞 + 過去分詞 + (by ~)。",
+      "hint": "be + p.p. + by ~",
+      "grammarPoint": "受動態",
+      "wordCount": 6,
+      "type": "sentenceOrdering"
+    }
+  ]
+}

@@ -1,0 +1,1084 @@
+{
+  "unit": "Unit 3",
+  "title": "関係代名詞",
+  "grammar": "who/which/that",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 20,
+    "sentenceOrdering": 20,
+    "verbForm": 20
+  },
+  "questions": [
+    {
+      "id": "vf-g3-u3-001",
+      "japanese": "私には東京に住んでいる友人がいます",
+      "sentence": "I have a friend ____ lives in Tokyo.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-002",
+      "japanese": "私には京都に住んでいる友人がいます",
+      "sentence": "I have a friend ____ lives in Kyoto.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-003",
+      "japanese": "彼女には大阪で働いている兄がいます",
+      "sentence": "She has a brother ____ works in Osaka.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-004",
+      "japanese": "これは私が昨日買った本です",
+      "sentence": "This is the book ____ I bought yesterday.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-005",
+      "japanese": "これは私が先週買った本です",
+      "sentence": "This is the book ____ I bought last week.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-006",
+      "japanese": "あれは彼が先月書いた手紙です",
+      "sentence": "That is the letter ____ he wrote last month.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-007",
+      "japanese": "彼女は英語を話す女性です",
+      "sentence": "She is a woman ____ speaks English.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-008",
+      "japanese": "彼は日本語を話す男性です",
+      "sentence": "He is a man ____ speaks Japanese.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-009",
+      "japanese": "私はフランス語を話す先生を知っています",
+      "sentence": "I know a teacher ____ speaks French.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-010",
+      "japanese": "これは有名な建物です",
+      "sentence": "This is a famous building ____ everyone knows.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-011",
+      "japanese": "これは古い建物です",
+      "sentence": "This is an old building ____ was built 100 years ago.",
+      "verb": "relative",
+      "choices": [
+        "which",
+        "who",
+        "that"
+      ],
+      "correctAnswer": "which",
+      "difficulty": "intermediate",
+      "explanation": "先行詞が物(building)なので、関係代名詞はwhichまたはthatを使う。whichの方が改まった表現で、建物などの物にはwhichがよく使われる。whoは人専用なので×。whereは場所を表す関係副詞なので×。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm",
+      "hint": "先行詞は物 → which/that"
+    },
+    {
+      "id": "vf-g3-u3-012",
+      "japanese": "あれは新しい建物です",
+      "sentence": "That is a new building ____ was just completed.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-013",
+      "japanese": "私が読んだ本はとても面白かったです",
+      "sentence": "The book ____ I read was very interesting.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-014",
+      "japanese": "彼女が見た映画は感動的でした",
+      "sentence": "The movie ____ she watched was touching.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-015",
+      "japanese": "私たちが訪れた場所は美しかったです",
+      "sentence": "The place ____ we visited was beautiful.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-016",
+      "japanese": "英語を教えている先生は親切です",
+      "sentence": "The teacher ____ teaches English is kind.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-017",
+      "japanese": "ピアノを弾いている少女は私の妹です",
+      "sentence": "The girl ____ is playing the piano is my sister.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-018",
+      "japanese": "公園で走っている犬は私のペットです",
+      "sentence": "The dog ____ is running in the park is my pet.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-019",
+      "japanese": "机の上にある本は私のものです",
+      "sentence": "The book ____ is on the desk is mine.",
+      "verb": "relative",
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u3-020",
+      "japanese": "窓の近くに立っている男性は私の父です",
+      "sentence": "The man ____ is standing near the window is my father.",
+      "verb": "relative",
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "grammarPoint": "関係代名詞",
+      "type": "verbForm"
+    },
+    {
+      "id": "fb-g3-u3-001",
+      "japanese": "私には東京に住んでいる友人がいます",
+      "sentence": "I have a friend ____ lives in Tokyo.",
+      "wordCount": 8,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-002",
+      "japanese": "私には京都に住んでいる友人がいます",
+      "sentence": "I have a friend ____ lives in Kyoto.",
+      "wordCount": 8,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-003",
+      "japanese": "彼女には大阪で働いている兄がいます",
+      "sentence": "She has a brother ____ works in Osaka.",
+      "wordCount": 8,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-004",
+      "japanese": "これは私が昨日買った本です",
+      "sentence": "This is the book ____ I bought yesterday.",
+      "wordCount": 8,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-005",
+      "japanese": "これは私が先週買った本です",
+      "sentence": "This is the book ____ I bought last week.",
+      "wordCount": 9,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-006",
+      "japanese": "あれは彼が先月書いた手紙です",
+      "sentence": "That is the letter ____ he wrote last month.",
+      "wordCount": 9,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-007",
+      "japanese": "彼女は英語を話す女性です",
+      "sentence": "She is a woman ____ speaks English.",
+      "wordCount": 7,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-008",
+      "japanese": "彼は日本語を話す男性です",
+      "sentence": "He is a man ____ speaks Japanese.",
+      "wordCount": 7,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-009",
+      "japanese": "私はフランス語を話す先生を知っています",
+      "sentence": "I know a teacher ____ speaks French.",
+      "wordCount": 7,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-010",
+      "japanese": "これは有名な建物です",
+      "sentence": "This is a famous building ____ everyone knows.",
+      "wordCount": 8,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-011",
+      "japanese": "これは古い建物です",
+      "sentence": "This is an old building ____ was built 100 years ago.",
+      "wordCount": 11,
+      "choices": [
+        "which",
+        "who",
+        "that"
+      ],
+      "correctAnswer": "which",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "先行詞は物 → which/that",
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(building)なので、関係代名詞はwhichまたはthatを使う。whichの方が改まった表現で、建物などの物にはwhichがよく使われる。whoは人専用なので×。whereは場所を表す関係副詞なので×。"
+    },
+    {
+      "id": "fb-g3-u3-012",
+      "japanese": "あれは新しい建物です",
+      "sentence": "That is a new building ____ was just completed.",
+      "wordCount": 9,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-013",
+      "japanese": "私が読んだ本はとても面白かったです",
+      "sentence": "The book ____ I read was very interesting.",
+      "wordCount": 8,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-014",
+      "japanese": "彼女が見た映画は感動的でした",
+      "sentence": "The movie ____ she watched was touching.",
+      "wordCount": 7,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-015",
+      "japanese": "私たちが訪れた場所は美しかったです",
+      "sentence": "The place ____ we visited was beautiful.",
+      "wordCount": 7,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-016",
+      "japanese": "英語を教えている先生は親切です",
+      "sentence": "The teacher ____ teaches English is kind.",
+      "wordCount": 7,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-017",
+      "japanese": "ピアノを弾いている少女は私の妹です",
+      "sentence": "The girl ____ is playing the piano is my sister.",
+      "wordCount": 10,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-018",
+      "japanese": "公園で走っている犬は私のペットです",
+      "sentence": "The dog ____ is running in the park is my pet.",
+      "wordCount": 11,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-019",
+      "japanese": "机の上にある本は私のものです",
+      "sentence": "The book ____ is on the desk is mine.",
+      "wordCount": 9,
+      "choices": [
+        "that",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u3-020",
+      "japanese": "窓の近くに立っている男性は私の父です",
+      "sentence": "The man ____ is standing near the window is my father.",
+      "wordCount": 11,
+      "choices": [
+        "who",
+        "which",
+        "that"
+      ],
+      "correctAnswer": "who",
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "so-g3-u3-001",
+      "japanese": "私には東京に住んでいる友人がいます",
+      "sentence": "I have a friend who lives in Tokyo.",
+      "words": [
+        "I",
+        "have",
+        "a",
+        "friend",
+        "who",
+        "lives",
+        "in",
+        "Tokyo."
+      ],
+      "correctAnswer": "I have a friend who lives in Tokyo.",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-002",
+      "japanese": "私には京都に住んでいる友人がいます",
+      "sentence": "I have a friend who lives in Kyoto.",
+      "words": [
+        "I",
+        "have",
+        "a",
+        "friend",
+        "who",
+        "lives",
+        "in",
+        "Kyoto."
+      ],
+      "correctAnswer": "I have a friend who lives in Kyoto.",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-003",
+      "japanese": "彼女には大阪で働いている兄がいます",
+      "sentence": "She has a brother who works in Osaka.",
+      "words": [
+        "She",
+        "has",
+        "a",
+        "brother",
+        "who",
+        "works",
+        "in",
+        "Osaka."
+      ],
+      "correctAnswer": "She has a brother who works in Osaka.",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-004",
+      "japanese": "これは私が昨日買った本です",
+      "sentence": "This is the book that I bought yesterday.",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "book",
+        "that",
+        "I",
+        "bought",
+        "yesterday."
+      ],
+      "correctAnswer": "This is the book that I bought yesterday.",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-005",
+      "japanese": "これは私が先週買った本です",
+      "sentence": "This is the book that I bought last week.",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "book",
+        "that",
+        "I",
+        "bought",
+        "last",
+        "week."
+      ],
+      "correctAnswer": "This is the book that I bought last week.",
+      "wordCount": 9,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-006",
+      "japanese": "あれは彼が先月書いた手紙です",
+      "sentence": "That is the letter that he wrote last month.",
+      "words": [
+        "That",
+        "is",
+        "the",
+        "letter",
+        "that",
+        "he",
+        "wrote",
+        "last",
+        "month."
+      ],
+      "correctAnswer": "That is the letter that he wrote last month.",
+      "wordCount": 9,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-007",
+      "japanese": "彼女は英語を話す女性です",
+      "sentence": "She is a woman who speaks English.",
+      "words": [
+        "She",
+        "is",
+        "a",
+        "woman",
+        "who",
+        "speaks",
+        "English."
+      ],
+      "correctAnswer": "She is a woman who speaks English.",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-008",
+      "japanese": "彼は日本語を話す男性です",
+      "sentence": "He is a man who speaks Japanese.",
+      "words": [
+        "He",
+        "is",
+        "a",
+        "man",
+        "who",
+        "speaks",
+        "Japanese."
+      ],
+      "correctAnswer": "He is a man who speaks Japanese.",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-009",
+      "japanese": "私はフランス語を話す先生を知っています",
+      "sentence": "I know a teacher who speaks French.",
+      "words": [
+        "I",
+        "know",
+        "a",
+        "teacher",
+        "who",
+        "speaks",
+        "French."
+      ],
+      "correctAnswer": "I know a teacher who speaks French.",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-010",
+      "japanese": "これは有名な建物です",
+      "sentence": "This is a famous building that everyone knows.",
+      "words": [
+        "This",
+        "is",
+        "a",
+        "famous",
+        "building",
+        "that",
+        "everyone",
+        "knows."
+      ],
+      "correctAnswer": "This is a famous building that everyone knows.",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-011",
+      "japanese": "これは古い建物です",
+      "sentence": "This is an old building that was built 100 years ago.",
+      "words": [
+        "This",
+        "is",
+        "an",
+        "old",
+        "building",
+        "that",
+        "was",
+        "built",
+        "100",
+        "years",
+        "ago."
+      ],
+      "correctAnswer": "This is an old building that was built 100 years ago.",
+      "wordCount": 11,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-012",
+      "japanese": "あれは新しい建物です",
+      "sentence": "That is a new building that was just completed.",
+      "words": [
+        "That",
+        "is",
+        "a",
+        "new",
+        "building",
+        "that",
+        "was",
+        "just",
+        "completed."
+      ],
+      "correctAnswer": "That is a new building that was just completed.",
+      "wordCount": 9,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-013",
+      "japanese": "私が読んだ本はとても面白かったです",
+      "sentence": "The book that I read was very interesting.",
+      "words": [
+        "The",
+        "book",
+        "that",
+        "I",
+        "read",
+        "was",
+        "very",
+        "interesting."
+      ],
+      "correctAnswer": "The book that I read was very interesting.",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-014",
+      "japanese": "彼女が見た映画は感動的でした",
+      "sentence": "The movie that she watched was touching.",
+      "words": [
+        "The",
+        "movie",
+        "that",
+        "she",
+        "watched",
+        "was",
+        "touching."
+      ],
+      "correctAnswer": "The movie that she watched was touching.",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-015",
+      "japanese": "私たちが訪れた場所は美しかったです",
+      "sentence": "The place that we visited was beautiful.",
+      "words": [
+        "The",
+        "place",
+        "that",
+        "we",
+        "visited",
+        "was",
+        "beautiful."
+      ],
+      "correctAnswer": "The place that we visited was beautiful.",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-016",
+      "japanese": "英語を教えている先生は親切です",
+      "sentence": "The teacher who teaches English is kind.",
+      "words": [
+        "The",
+        "teacher",
+        "who",
+        "teaches",
+        "English",
+        "is",
+        "kind."
+      ],
+      "correctAnswer": "The teacher who teaches English is kind.",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-017",
+      "japanese": "ピアノを弾いている少女は私の妹です",
+      "sentence": "The girl who is playing the piano is my sister.",
+      "words": [
+        "The",
+        "girl",
+        "who",
+        "is",
+        "playing",
+        "the",
+        "piano",
+        "is",
+        "my",
+        "sister."
+      ],
+      "correctAnswer": "The girl who is playing the piano is my sister.",
+      "wordCount": 10,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-018",
+      "japanese": "公園で走っている犬は私のペットです",
+      "sentence": "The dog that is running in the park is my pet.",
+      "words": [
+        "The",
+        "dog",
+        "that",
+        "is",
+        "running",
+        "in",
+        "the",
+        "park",
+        "is",
+        "my",
+        "pet."
+      ],
+      "correctAnswer": "The dog that is running in the park is my pet.",
+      "wordCount": 11,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-019",
+      "japanese": "机の上にある本は私のものです",
+      "sentence": "The book that is on the desk is mine.",
+      "words": [
+        "The",
+        "book",
+        "that",
+        "is",
+        "on",
+        "the",
+        "desk",
+        "is",
+        "mine."
+      ],
+      "correctAnswer": "The book that is on the desk is mine.",
+      "wordCount": 9,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u3-020",
+      "japanese": "窓の近くに立っている男性は私の父です",
+      "sentence": "The man who is standing near the window is my father.",
+      "words": [
+        "The",
+        "man",
+        "who",
+        "is",
+        "standing",
+        "near",
+        "the",
+        "window",
+        "is",
+        "my",
+        "father."
+      ],
+      "correctAnswer": "The man who is standing near the window is my father.",
+      "wordCount": 11,
+      "difficulty": "intermediate",
+      "grammarPoint": "関係代名詞",
+      "hint": "関係代名詞を使って2つの文をつなぎます。",
+      "type": "sentenceOrdering"
+    }
+  ]
+}
