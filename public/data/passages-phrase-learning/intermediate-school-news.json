@@ -46,7 +46,7 @@
         },
         {
           "word": "exam",
-          "meaning": "(要確認)",
+          "meaning": "試験",
           "isUnknown": false,
           "lemma": "exam",
           "reading": "exam",
@@ -1011,7 +1011,7 @@
         },
         {
           "word": "additional",
-          "meaning": "(要確認)",
+          "meaning": "追加の",
           "isUnknown": false,
           "lemma": "additional",
           "reading": "additional",
@@ -1573,7 +1573,7 @@
         },
         {
           "word": "grader",
-          "meaning": "(要確認)",
+          "meaning": "/言いました",
           "isUnknown": false,
           "lemma": "grader",
           "reading": "grader",
@@ -1680,7 +1680,7 @@
         },
         {
           "word": "notebook",
-          "meaning": "(要確認)",
+          "meaning": "ノート",
           "isUnknown": false,
           "lemma": "notebook",
           "reading": "notebook",
@@ -1784,7 +1784,7 @@
         },
         {
           "word": "exam",
-          "meaning": "(要確認)",
+          "meaning": "試験",
           "isUnknown": false,
           "lemma": "exam",
           "reading": "exam",
@@ -3021,7 +3021,7 @@
         },
         {
           "word": "exam",
-          "meaning": "(要確認)",
+          "meaning": "試験",
           "isUnknown": false,
           "lemma": "exam",
           "reading": "exam",
@@ -3323,7 +3323,7 @@
         },
         {
           "word": "grader",
-          "meaning": "(要確認)",
+          "meaning": "/言いました",
           "isUnknown": false,
           "lemma": "grader",
           "reading": "grader",
@@ -3718,7 +3718,7 @@
         },
         {
           "word": "expand",
-          "meaning": "(要確認)",
+          "meaning": "拡大する",
           "isUnknown": false,
           "lemma": "expand",
           "reading": "expand",
@@ -3751,7 +3751,7 @@
         },
         {
           "word": "semester",
-          "meaning": "(要確認)",
+          "meaning": "学期",
           "isUnknown": false,
           "lemma": "semester",
           "reading": "semester",
@@ -4141,7 +4141,7 @@
         },
         {
           "word": "list",
-          "meaning": "(要確認)",
+          "meaning": "リスト",
           "isUnknown": false,
           "lemma": "list",
           "reading": "list",
@@ -4613,7 +4613,7 @@
         },
         {
           "word": "exams",
-          "meaning": "(要確認)",
+          "meaning": "試験",
           "isUnknown": false,
           "lemma": "exams",
           "reading": "exams",
@@ -4747,7 +4747,7 @@
         },
         {
           "word": "systematic",
-          "meaning": "(要確認)",
+          "meaning": "体系的な",
           "isUnknown": false,
           "lemma": "systematic",
           "reading": "systematic",
@@ -5127,7 +5127,7 @@
         },
         {
           "word": "list",
-          "meaning": "(要確認)",
+          "meaning": "リスト",
           "isUnknown": false,
           "lemma": "list",
           "reading": "list",
@@ -5999,7 +5999,7 @@
         },
         {
           "word": "earthquake",
-          "meaning": "(要確認)",
+          "meaning": "地震",
           "isUnknown": false,
           "lemma": "earthquake",
           "reading": "earthquake",
@@ -6391,7 +6391,7 @@
         },
         {
           "word": "faster",
-          "meaning": "(要確認)",
+          "meaning": "より速い",
           "isUnknown": false,
           "lemma": "faster",
           "reading": "faster",
@@ -6813,7 +6813,7 @@
         },
         {
           "word": "importance",
-          "meaning": "(要確認)",
+          "meaning": "重要性",
           "isUnknown": false,
           "lemma": "importance",
           "reading": "importance",
@@ -7005,7 +7005,7 @@
         },
         {
           "word": "additional",
-          "meaning": "(要確認)",
+          "meaning": "追加の",
           "isUnknown": false,
           "lemma": "additional",
           "reading": "additional",
@@ -7038,7 +7038,7 @@
         },
         {
           "word": "semester",
-          "meaning": "(要確認)",
+          "meaning": "学期",
           "isUnknown": false,
           "lemma": "semester",
           "reading": "semester",
@@ -7264,7 +7264,7 @@
         },
         {
           "word": "semester",
-          "meaning": "(要確認)",
+          "meaning": "学期",
           "isUnknown": false,
           "lemma": "semester",
           "reading": "semester",
@@ -8582,7 +8582,7 @@
         },
         {
           "word": "production",
-          "meaning": "(要確認)",
+          "meaning": "生産",
           "isUnknown": false,
           "lemma": "production",
           "reading": "production",
@@ -8648,7 +8648,7 @@
         },
         {
           "word": "semester",
-          "meaning": "(要確認)",
+          "meaning": "学期",
           "isUnknown": false,
           "lemma": "semester",
           "reading": "semester",
@@ -8907,7 +8907,7 @@
         },
         {
           "word": "expression",
-          "meaning": "(要確認)",
+          "meaning": "表現",
           "isUnknown": false,
           "lemma": "expression",
           "reading": "expression",
@@ -10202,7 +10202,7 @@
         },
         {
           "word": "impossible",
-          "meaning": "(要確認)",
+          "meaning": "不可能な",
           "isUnknown": false,
           "lemma": "impossible",
           "reading": "impossible",
@@ -11070,7 +11070,7 @@
       "segments": [
         {
           "word": "Essay",
-          "meaning": "(要確認)",
+          "meaning": "エッセイ・小論文",
           "isUnknown": false,
           "lemma": "Essay",
           "reading": "Essay",
@@ -12728,7 +12728,7 @@
         },
         {
           "word": "systematic",
-          "meaning": "(要確認)",
+          "meaning": "体系的な",
           "isUnknown": false,
           "lemma": "systematic",
           "reading": "systematic",
@@ -13589,7 +13589,7 @@
         },
         {
           "word": "math",
-          "meaning": "(要確認)",
+          "meaning": "数学",
           "isUnknown": false,
           "lemma": "math",
           "reading": "math",
@@ -14457,7 +14457,7 @@
         },
         {
           "word": "essay",
-          "meaning": "(要確認)",
+          "meaning": "エッセイ・小論文",
           "isUnknown": false,
           "lemma": "essay",
           "reading": "essay",
@@ -14881,7 +14881,7 @@
         },
         {
           "word": "unprecedented",
-          "meaning": "(要確認)",
+          "meaning": "前例のない",
           "isUnknown": false,
           "lemma": "unprecedented",
           "reading": "unprecedented",
@@ -15018,7 +15018,7 @@
         },
         {
           "word": "essay",
-          "meaning": "(要確認)",
+          "meaning": "エッセイ・小論文",
           "isUnknown": false,
           "lemma": "essay",
           "reading": "essay",
@@ -15654,7 +15654,7 @@
         },
         {
           "word": "essay",
-          "meaning": "(要確認)",
+          "meaning": "エッセイ・小論文",
           "isUnknown": false,
           "lemma": "essay",
           "reading": "essay",
@@ -16244,7 +16244,7 @@
         },
         {
           "word": "essay",
-          "meaning": "(要確認)",
+          "meaning": "エッセイ・小論文",
           "isUnknown": false,
           "lemma": "essay",
           "reading": "essay",
@@ -16992,7 +16992,7 @@
         },
         {
           "word": "landscape",
-          "meaning": "(要確認)",
+          "meaning": "景色",
           "isUnknown": false,
           "lemma": "landscape",
           "reading": "landscape",
@@ -17933,7 +17933,7 @@
         },
         {
           "word": "sophisticated",
-          "meaning": "(要確認)",
+          "meaning": "洗練された",
           "isUnknown": false,
           "lemma": "sophisticated",
           "reading": "sophisticated",
@@ -19867,7 +19867,7 @@
         },
         {
           "word": "grew",
-          "meaning": "(要確認)",
+          "meaning": "成長した・育った",
           "isUnknown": false,
           "lemma": "grew",
           "reading": "grew",
@@ -20266,7 +20266,7 @@
         },
         {
           "word": "six",
-          "meaning": "(要確認)",
+          "meaning": "ケア",
           "isUnknown": false,
           "lemma": "six",
           "reading": "six",
@@ -20478,7 +20478,7 @@
         },
         {
           "word": "grew",
-          "meaning": "(要確認)",
+          "meaning": "成長した・育った",
           "isUnknown": false,
           "lemma": "grew",
           "reading": "grew",
@@ -20958,7 +20958,7 @@
         },
         {
           "word": "somewhat",
-          "meaning": "(要確認)",
+          "meaning": "いくらか",
           "isUnknown": false,
           "lemma": "somewhat",
           "reading": "somewhat",
@@ -21538,7 +21538,7 @@
         },
         {
           "word": "substantial",
-          "meaning": "(要確認)",
+          "meaning": "実質的な・かなりの",
           "isUnknown": false,
           "lemma": "substantial",
           "reading": "substantial",
@@ -21894,7 +21894,7 @@
         },
         {
           "word": "expand",
-          "meaning": "(要確認)",
+          "meaning": "拡大する",
           "isUnknown": false,
           "lemma": "expand",
           "reading": "expand",
@@ -22171,7 +22171,7 @@
         },
         {
           "word": "systematic",
-          "meaning": "(要確認)",
+          "meaning": "体系的な",
           "isUnknown": false,
           "lemma": "systematic",
           "reading": "systematic",
@@ -24727,7 +24727,7 @@
         },
         {
           "word": "disposal",
-          "meaning": "(要確認)",
+          "meaning": "処分",
           "isUnknown": false,
           "lemma": "disposal",
           "reading": "disposal",
@@ -25521,7 +25521,7 @@
         },
         {
           "word": "cafeteria",
-          "meaning": "(要確認)",
+          "meaning": "カフェテリア",
           "isUnknown": false,
           "lemma": "cafeteria",
           "reading": "cafeteria",
@@ -25762,7 +25762,7 @@
         },
         {
           "word": "cafeteria",
-          "meaning": "(要確認)",
+          "meaning": "カフェテリア",
           "isUnknown": false,
           "lemma": "cafeteria",
           "reading": "cafeteria",
@@ -25869,7 +25869,7 @@
         },
         {
           "word": "cafeteria",
-          "meaning": "(要確認)",
+          "meaning": "カフェテリア",
           "isUnknown": false,
           "lemma": "cafeteria",
           "reading": "cafeteria",
@@ -27067,7 +27067,7 @@
         },
         {
           "word": "difficulties",
-          "meaning": "(要確認)",
+          "meaning": "困難",
           "isUnknown": false,
           "lemma": "difficulties",
           "reading": "difficulties",
@@ -29209,7 +29209,7 @@
         },
         {
           "word": "exam",
-          "meaning": "(要確認)",
+          "meaning": "試験",
           "isUnknown": false,
           "lemma": "exam",
           "reading": "exam",
