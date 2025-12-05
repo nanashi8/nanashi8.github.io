@@ -109,6 +109,21 @@
 .meaning-display {
   flex: 1;
   display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* First line: meaning label and text */
+.meaning-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Second line: badges and hints */
+.meaning-meta {
+  display: flex;
   align-items: center;
   gap: 0.75rem;
   flex-wrap: wrap;
@@ -129,9 +144,6 @@
   font-size: 1.35rem;
   font-weight: 500;
   color: var(--gray-900);
-  flex: 1;
-  min-width: 0;
-  text-align: center;
 }
 
 .dark-mode .meaning-text {
@@ -228,9 +240,10 @@
 }
 
 .dark-mode .user-word-display {
-  background: var(--gray-800);
-  border-color: var(--blue-600);
+  background: var(--gray-900);
+  border-color: var(--gray-700);
   box-shadow: 0 2px 8px rgb(0, 0, 0, 0.3);
+  color: var(--gray-100);
 }
 
 .user-word-label {
@@ -280,7 +293,8 @@
 }
 
 .dark-mode .letter-cards {
-  background: var(--gray-800);
+  background: var(--gray-900);
+  color: var(--gray-100);
 }
 
 .dark-mode .letter-cards:focus {

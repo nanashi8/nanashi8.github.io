@@ -19,8 +19,7 @@
       "choices": [
         "studying",
         "study",
-        "studies",
-        "studied"
+        "studies"
       ],
       "correctAnswer": "studying",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "reading",
         "read",
-        "reads",
-        "to read"
+        "reads"
       ],
       "correctAnswer": "reading",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "watching",
         "watch",
-        "watches",
-        "watched"
+        "watches"
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "are",
         "is",
-        "am",
-        "be"
+        "am"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "is",
         "am",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "doing",
         "do",
-        "does",
-        "did"
+        "does"
       ],
       "correctAnswer": "doing",
       "difficulty": "intermediate",
@@ -115,8 +109,7 @@
       "choices": [
         "swimming",
         "swiming",
-        "swim",
-        "swims"
+        "swim"
       ],
       "correctAnswer": "swimming",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "doing",
         "do",
-        "does",
-        "did"
+        "does"
       ],
       "correctAnswer": "doing",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "Are",
         "Is",
-        "Am",
-        "Do"
+        "Am"
       ],
       "correctAnswer": "Are",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "cooking",
         "cook",
-        "cooks",
-        "cooked"
+        "cooks"
       ],
       "correctAnswer": "cooking",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "shopping",
         "shop",
-        "shops",
-        "shopped"
+        "shops"
       ],
       "correctAnswer": "shopping",
       "difficulty": "intermediate",
@@ -195,8 +184,7 @@
       "choices": [
         "writing",
         "write",
-        "writes",
-        "wrote"
+        "writes"
       ],
       "correctAnswer": "writing",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "playing",
         "play",
-        "plays",
-        "played"
+        "plays"
       ],
       "correctAnswer": "playing",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "singing",
         "sing",
-        "sings",
-        "sang"
+        "sings"
       ],
       "correctAnswer": "singing",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "having",
         "have",
-        "has",
-        "had"
+        "has"
       ],
       "correctAnswer": "having",
       "difficulty": "advanced",
@@ -263,7 +248,8 @@
       "correctAnswer": "I am running.",
       "difficulty": "beginner",
       "explanation": "現在進行形の基本文。I am running.で「走っています」。",
-      "hint": "I am"
+      "hint": "I am",
+      "wordCount": 3
     },
     {
       "id": "g1-u6-so-002",
@@ -277,7 +263,8 @@
       "correctAnswer": "She is reading.",
       "difficulty": "beginner",
       "explanation": "三人称単数はis。She is reading.で「読んでいます」。",
-      "hint": "She is"
+      "hint": "She is",
+      "wordCount": 3
     },
     {
       "id": "g1-u6-so-003",
@@ -291,7 +278,8 @@
       "correctAnswer": "They are eating.",
       "difficulty": "beginner",
       "explanation": "複数主語はare。They are eating.で「食べています」。",
-      "hint": "They are"
+      "hint": "They are",
+      "wordCount": 3
     },
     {
       "id": "g1-u6-so-004",
@@ -305,7 +293,8 @@
       "correctAnswer": "We are talking.",
       "difficulty": "beginner",
       "explanation": "weもare。We are talking.で「話しています」。",
-      "hint": "We are"
+      "hint": "We are",
+      "wordCount": 3
     },
     {
       "id": "g1-u6-so-005",
@@ -319,7 +308,8 @@
       "correctAnswer": "He is writing.",
       "difficulty": "beginner",
       "explanation": "He is writing.で「書いています」。writeはeを取ってwriting。",
-      "hint": "He is"
+      "hint": "He is",
+      "wordCount": 3
     },
     {
       "id": "g1-u6-so-006",
@@ -334,7 +324,8 @@
       "correctAnswer": "Are you studying?",
       "difficulty": "intermediate",
       "explanation": "疑問文はAreを文頭に。Are you studying?で「勉強していますか」。",
-      "hint": "Are you"
+      "hint": "Are you",
+      "wordCount": 4
     },
     {
       "id": "g1-u6-so-007",
@@ -348,7 +339,8 @@
       "correctAnswer": "She is swimming.",
       "difficulty": "intermediate",
       "explanation": "swimはmを重ねる。She is swimming.で「泳いでいます」。",
-      "hint": "is swimming"
+      "hint": "is swimming",
+      "wordCount": 3
     },
     {
       "id": "g1-u6-so-008",
@@ -364,7 +356,8 @@
       "correctAnswer": "I am listening to music.",
       "difficulty": "intermediate",
       "explanation": "listen to musicで「音楽を聞く」。I am listening to music.",
-      "hint": "listening to"
+      "hint": "listening to",
+      "wordCount": 5
     },
     {
       "id": "g1-u6-so-009",
@@ -379,7 +372,8 @@
       "correctAnswer": "They are playing soccer.",
       "difficulty": "intermediate",
       "explanation": "play soccerで「サッカーをする」。They are playing soccer.",
-      "hint": "playing soccer"
+      "hint": "playing soccer",
+      "wordCount": 4
     },
     {
       "id": "g1-u6-so-010",
@@ -396,7 +390,8 @@
       "correctAnswer": "I am not reading a book.",
       "difficulty": "intermediate",
       "explanation": "否定文はbe not + -ing。I am not reading a book.で「本を読んでいません」。",
-      "hint": "am not"
+      "hint": "am not",
+      "wordCount": 6
     },
     {
       "id": "g1-u6-so-011",
@@ -413,7 +408,8 @@
       "correctAnswer": "Is he watching TV now?",
       "difficulty": "advanced",
       "explanation": "疑問文はIsを文頭に。Is he watching TV now?で「今テレビを見ていますか」。",
-      "hint": "Is he"
+      "hint": "Is he",
+      "wordCount": 6
     },
     {
       "id": "g1-u6-so-012",
@@ -429,7 +425,8 @@
       "correctAnswer": "She is writing a letter.",
       "difficulty": "advanced",
       "explanation": "write a letterで「手紙を書く」。She is writing a letter.",
-      "hint": "writing a"
+      "hint": "writing a",
+      "wordCount": 5
     },
     {
       "id": "g1-u6-so-013",
@@ -446,7 +443,8 @@
       "correctAnswer": "We are running in the park.",
       "difficulty": "advanced",
       "explanation": "in the parkで「公園で」。We are running in the park.",
-      "hint": "in the park"
+      "hint": "in the park",
+      "wordCount": 6
     },
     {
       "id": "g1-u6-so-014",
@@ -462,7 +460,8 @@
       "correctAnswer": "What are you doing?",
       "difficulty": "advanced",
       "explanation": "疑問詞 + be動詞 + 主語 + -ing。What are you doing?で「何をしていますか」。",
-      "hint": "What are"
+      "hint": "What are",
+      "wordCount": 5
     },
     {
       "id": "g1-u6-so-015",
@@ -478,7 +477,8 @@
       "correctAnswer": "They are not eating breakfast.",
       "difficulty": "advanced",
       "explanation": "複数の否定文。They are not eating breakfast.で「朝食を食べていません」。",
-      "hint": "are not"
+      "hint": "are not",
+      "wordCount": 5
     },
     {
       "id": "g1-u6-para-001",
@@ -489,8 +489,7 @@
       "choices": [
         "Are you studying?",
         "You are studying?",
-        "Do you studying?",
-        "Is you studying?"
+        "Do you studying?"
       ],
       "correctAnswer": "Are you studying?",
       "difficulty": "beginner",
@@ -506,8 +505,7 @@
       "choices": [
         "She is not singing.",
         "She doesn't singing.",
-        "She not is singing.",
-        "She isn't sing."
+        "She not is singing."
       ],
       "correctAnswer": "She is not singing.",
       "difficulty": "beginner",
@@ -523,8 +521,7 @@
       "choices": [
         "I am watching TV.",
         "I watch TV.",
-        "I watching TV.",
-        "I am watch TV."
+        "I watching TV."
       ],
       "correctAnswer": "I am watching TV.",
       "difficulty": "beginner",
@@ -540,8 +537,7 @@
       "choices": [
         "He is running.",
         "He runs.",
-        "He running.",
-        "He is run."
+        "He running."
       ],
       "correctAnswer": "He is running.",
       "difficulty": "beginner",
@@ -557,8 +553,7 @@
       "choices": [
         "They are not playing soccer.",
         "They don't play soccer.",
-        "They not playing soccer.",
-        "They aren't play soccer."
+        "They not playing soccer."
       ],
       "correctAnswer": "They are not playing soccer.",
       "difficulty": "beginner",
@@ -574,8 +569,7 @@
       "choices": [
         "I am studying English.",
         "I am study English.",
-        "I studying English.",
-        "I studies English."
+        "I studying English."
       ],
       "correctAnswer": "I am studying English.",
       "difficulty": "intermediate",
@@ -591,8 +585,7 @@
       "choices": [
         "He is eating.",
         "He am eating.",
-        "He are eating.",
-        "He eats."
+        "He are eating."
       ],
       "correctAnswer": "He is eating.",
       "difficulty": "intermediate",
@@ -608,8 +601,7 @@
       "choices": [
         "She is swimming.",
         "She am swimming.",
-        "She are swimming.",
-        "She swims."
+        "She are swimming."
       ],
       "correctAnswer": "She is swimming.",
       "difficulty": "intermediate",
@@ -625,8 +617,7 @@
       "choices": [
         "I'm not running.",
         "I amn't running.",
-        "I not running.",
-        "I ain't running."
+        "I not running."
       ],
       "correctAnswer": "I'm not running.",
       "difficulty": "intermediate",
@@ -642,8 +633,7 @@
       "choices": [
         "What is he reading?",
         "What he is reading?",
-        "What does he reading?",
-        "What is he read?"
+        "What does he reading?"
       ],
       "correctAnswer": "What is he reading?",
       "difficulty": "intermediate",
@@ -659,8 +649,7 @@
       "choices": [
         "Where are they playing?",
         "Where they are playing?",
-        "Where do they playing?",
-        "Where are they play?"
+        "Where do they playing?"
       ],
       "correctAnswer": "Where are they playing?",
       "difficulty": "advanced",
@@ -676,8 +665,7 @@
       "choices": [
         "She is reading a book in the library.",
         "She is read a book in the library.",
-        "She reading a book in the library.",
-        "She is reads a book in the library."
+        "She reading a book in the library."
       ],
       "correctAnswer": "She is reading a book in the library.",
       "difficulty": "advanced",
@@ -693,8 +681,7 @@
       "choices": [
         "I am watching TV now.",
         "I watch TV now.",
-        "I watching TV now.",
-        "I am watch TV now."
+        "I watching TV now."
       ],
       "correctAnswer": "I am watching TV now.",
       "difficulty": "advanced",
@@ -710,8 +697,7 @@
       "choices": [
         "He is not sleeping.",
         "He does not sleeping.",
-        "He not sleeping.",
-        "He am not sleeping."
+        "He not sleeping."
       ],
       "correctAnswer": "He is not sleeping.",
       "difficulty": "advanced",
@@ -727,8 +713,7 @@
       "choices": [
         "We are studying hard.",
         "We are hard studying.",
-        "We studying hard.",
-        "We are study hard."
+        "We studying hard."
       ],
       "correctAnswer": "We are studying hard.",
       "difficulty": "advanced",
@@ -744,8 +729,7 @@
       "choices": [
         "reading",
         "read",
-        "reads",
-        "to read"
+        "reads"
       ],
       "correctAnswer": "reading",
       "difficulty": "beginner",
@@ -761,8 +745,7 @@
       "choices": [
         "watching",
         "watch",
-        "watches",
-        "to watch"
+        "watches"
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
@@ -778,8 +761,7 @@
       "choices": [
         "writing",
         "writeing",
-        "write",
-        "writes"
+        "write"
       ],
       "correctAnswer": "writing",
       "difficulty": "beginner",
@@ -795,8 +777,7 @@
       "choices": [
         "running",
         "runing",
-        "run",
-        "runs"
+        "run"
       ],
       "correctAnswer": "running",
       "difficulty": "beginner",
@@ -812,8 +793,7 @@
       "choices": [
         "swimming",
         "swiming",
-        "swim",
-        "swims"
+        "swim"
       ],
       "correctAnswer": "swimming",
       "difficulty": "intermediate",
@@ -829,8 +809,7 @@
       "choices": [
         "having",
         "haveing",
-        "have",
-        "has"
+        "have"
       ],
       "correctAnswer": "having",
       "difficulty": "intermediate",
@@ -846,8 +825,7 @@
       "choices": [
         "lying",
         "lieing",
-        "lie",
-        "lies"
+        "lie"
       ],
       "correctAnswer": "lying",
       "difficulty": "intermediate",
@@ -863,8 +841,7 @@
       "choices": [
         "shopping",
         "shoping",
-        "shop",
-        "shops"
+        "shop"
       ],
       "correctAnswer": "shopping",
       "difficulty": "advanced",
@@ -880,8 +857,7 @@
       "choices": [
         "making",
         "makeing",
-        "make",
-        "makes"
+        "make"
       ],
       "correctAnswer": "making",
       "difficulty": "advanced",
@@ -897,8 +873,7 @@
       "choices": [
         "sitting",
         "siting",
-        "sit",
-        "sits"
+        "sit"
       ],
       "correctAnswer": "sitting",
       "difficulty": "advanced",
@@ -923,8 +898,7 @@
       "choices": [
         "watching",
         "watch",
-        "watches",
-        "watched"
+        "watches"
       ],
       "correctAnswer": "watching",
       "difficulty": "beginner",
@@ -949,8 +923,7 @@
       "choices": [
         "not",
         "aren't",
-        "don't",
-        "doesn't"
+        "don't"
       ],
       "correctAnswer": "not",
       "difficulty": "beginner",
@@ -975,8 +948,7 @@
       "choices": [
         "is",
         "does",
-        "am",
-        "are"
+        "am"
       ],
       "correctAnswer": "is",
       "difficulty": "intermediate",
@@ -1001,8 +973,7 @@
       "choices": [
         "reading",
         "read",
-        "reads",
-        "to read"
+        "reads"
       ],
       "correctAnswer": "reading",
       "difficulty": "intermediate",
@@ -1027,8 +998,7 @@
       "choices": [
         "playing",
         "play",
-        "plays",
-        "played"
+        "plays"
       ],
       "correctAnswer": "playing",
       "difficulty": "advanced",

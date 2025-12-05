@@ -1,0 +1,1022 @@
+{
+  "unit": "Unit 8",
+  "title": "間接疑問文",
+  "grammar": "疑問詞 + 主語 + 動詞",
+  "totalQuestions": 60,
+  "questionTypes": {
+    "fillInBlank": 20,
+    "sentenceOrdering": 20,
+    "verbForm": 20
+  },
+  "questions": [
+    {
+      "id": "vf-g3-u8-001",
+      "japanese": "私は彼がどこに住んでいるか知りません",
+      "sentence": "I don't know where he ____.",
+      "verb": "indirect",
+      "choices": [
+        "lives",
+        "live",
+        "living"
+      ],
+      "correctAnswer": "lives",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: where + S + V",
+      "hint": "where he lives",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-002",
+      "japanese": "彼女は何が起こったか知っています",
+      "sentence": "She knows what ____.",
+      "verb": "indirect",
+      "choices": [
+        "happened",
+        "happen",
+        "happens"
+      ],
+      "correctAnswer": "happened",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what + V",
+      "hint": "what happened",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-003",
+      "japanese": "私はいつ彼が来るか分かりません",
+      "sentence": "I don't know when he will ____.",
+      "verb": "indirect",
+      "choices": [
+        "come",
+        "comes",
+        "coming"
+      ],
+      "correctAnswer": "come",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: when + S + V",
+      "hint": "when he will come",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-004",
+      "japanese": "彼はなぜ彼女が泣いているか知っています",
+      "sentence": "He knows why she is ____.",
+      "verb": "indirect",
+      "choices": [
+        "crying",
+        "cry",
+        "cries"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: why + S + V",
+      "hint": "why she is crying",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-005",
+      "japanese": "私は誰がこれを作ったか知っています",
+      "sentence": "I know who ____ this.",
+      "verb": "indirect",
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: who + V",
+      "hint": "who made",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-006",
+      "japanese": "彼女はどうやってそこに行くか分かりません",
+      "sentence": "She doesn't know how to ____ there.",
+      "verb": "indirect",
+      "choices": [
+        "get",
+        "gets",
+        "getting"
+      ],
+      "correctAnswer": "get",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: how to + V",
+      "hint": "how to get",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-007",
+      "japanese": "私はどの本が一番良いか分かりません",
+      "sentence": "I don't know which book ____ the best.",
+      "verb": "indirect",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: which + N + V",
+      "hint": "which book is",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-008",
+      "japanese": "彼は何時に店が開くか知っています",
+      "sentence": "He knows what time the store ____.",
+      "verb": "indirect",
+      "choices": [
+        "opens",
+        "open",
+        "opening"
+      ],
+      "correctAnswer": "opens",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what time + S + V",
+      "hint": "what time it opens",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-009",
+      "japanese": "私たちはどこで彼女に会えるか知りません",
+      "sentence": "We don't know where we can ____ her.",
+      "verb": "indirect",
+      "choices": [
+        "meet",
+        "meets",
+        "meeting"
+      ],
+      "correctAnswer": "meet",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: where + S + V",
+      "hint": "where we can meet",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-010",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています",
+      "sentence": "She understands why he is ____.",
+      "verb": "indirect",
+      "choices": [
+        "angry",
+        "anger",
+        "angrily"
+      ],
+      "correctAnswer": "angry",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: why + S + be",
+      "hint": "why he is angry",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-011",
+      "japanese": "私はいつバスが出発するか知りたいです",
+      "sentence": "I want to know when the bus ____.",
+      "verb": "indirect",
+      "choices": [
+        "leaves",
+        "leave",
+        "leaving"
+      ],
+      "correctAnswer": "leaves",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: when + S + V",
+      "hint": "when the bus leaves",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-012",
+      "japanese": "彼は誰が勝つか予測できます",
+      "sentence": "He can predict who will ____.",
+      "verb": "indirect",
+      "choices": [
+        "win",
+        "wins",
+        "winning"
+      ],
+      "correctAnswer": "win",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: who + V",
+      "hint": "who will win",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-013",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました",
+      "sentence": "We discussed how to ____ the problem.",
+      "verb": "indirect",
+      "choices": [
+        "solve",
+        "solves",
+        "solving"
+      ],
+      "correctAnswer": "solve",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: how to + V",
+      "hint": "how to solve",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-014",
+      "japanese": "彼女は何が必要か教えてくれました",
+      "sentence": "She told me what I ____.",
+      "verb": "indirect",
+      "choices": [
+        "need",
+        "needs",
+        "needing"
+      ],
+      "correctAnswer": "need",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what + S + V",
+      "hint": "what I need",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-015",
+      "japanese": "私はどこで鍵を置いたか忘れました",
+      "sentence": "I forgot where I ____ the key.",
+      "verb": "indirect",
+      "choices": [
+        "put",
+        "puts",
+        "putting"
+      ],
+      "correctAnswer": "put",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: where + S + V",
+      "hint": "where I put",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-016",
+      "japanese": "彼はなぜそれが重要か説明しました",
+      "sentence": "He explained why it ____ important.",
+      "verb": "indirect",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: why + S + V",
+      "hint": "why it is",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-017",
+      "japanese": "私たちはいつ会議が始まるか確認しました",
+      "sentence": "We checked when the meeting ____.",
+      "verb": "indirect",
+      "choices": [
+        "starts",
+        "start",
+        "starting"
+      ],
+      "correctAnswer": "starts",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: when + S + V",
+      "hint": "when it starts",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-018",
+      "japanese": "彼女はどの道が最短か知っています",
+      "sentence": "She knows which route ____ the shortest.",
+      "verb": "indirect",
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: which + N + V",
+      "hint": "which route is",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-019",
+      "japanese": "私は何が彼を幸せにするか知っています",
+      "sentence": "I know what ____ him happy.",
+      "verb": "indirect",
+      "choices": [
+        "makes",
+        "make",
+        "making"
+      ],
+      "correctAnswer": "makes",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: what + V",
+      "hint": "what makes",
+      "type": "verbForm"
+    },
+    {
+      "id": "vf-g3-u8-020",
+      "japanese": "彼はどうやって成功したか語りました",
+      "sentence": "He told us how he ____.",
+      "verb": "indirect",
+      "choices": [
+        "succeeded",
+        "succeed",
+        "succeeds"
+      ],
+      "correctAnswer": "succeeded",
+      "difficulty": "intermediate",
+      "explanation": "間接疑問文: how + S + V",
+      "hint": "how he succeeded",
+      "type": "verbForm"
+    },
+    {
+      "id": "fb-g3-u8-001",
+      "japanese": "私は彼がどこに住んでいるか知りません",
+      "sentence": "I don't know where he ____.",
+      "wordCount": 6,
+      "choices": [
+        "lives",
+        "live",
+        "living"
+      ],
+      "correctAnswer": "lives",
+      "difficulty": "intermediate",
+      "hint": "where he lives",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-002",
+      "japanese": "彼女は何が起こったか知っています",
+      "sentence": "She knows what ____.",
+      "wordCount": 4,
+      "choices": [
+        "happened",
+        "happen",
+        "happens"
+      ],
+      "correctAnswer": "happened",
+      "difficulty": "intermediate",
+      "hint": "what happened",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-003",
+      "japanese": "私はいつ彼が来るか分かりません",
+      "sentence": "I don't know when he will ____.",
+      "wordCount": 7,
+      "choices": [
+        "come",
+        "comes",
+        "coming"
+      ],
+      "correctAnswer": "come",
+      "difficulty": "intermediate",
+      "hint": "when he will come",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-004",
+      "japanese": "彼はなぜ彼女が泣いているか知っています",
+      "sentence": "He knows why she is ____.",
+      "wordCount": 6,
+      "choices": [
+        "crying",
+        "cry",
+        "cries"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "intermediate",
+      "hint": "why she is crying",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-005",
+      "japanese": "私は誰がこれを作ったか知っています",
+      "sentence": "I know who ____ this.",
+      "wordCount": 5,
+      "choices": [
+        "made",
+        "make",
+        "makes"
+      ],
+      "correctAnswer": "made",
+      "difficulty": "intermediate",
+      "hint": "who made",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-006",
+      "japanese": "彼女はどうやってそこに行くか分かりません",
+      "sentence": "She doesn't know how to ____ there.",
+      "wordCount": 7,
+      "choices": [
+        "get",
+        "gets",
+        "getting"
+      ],
+      "correctAnswer": "get",
+      "difficulty": "intermediate",
+      "hint": "how to get",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-007",
+      "japanese": "私はどの本が一番良いか分かりません",
+      "sentence": "I don't know which book ____ the best.",
+      "wordCount": 8,
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "hint": "which book is",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-008",
+      "japanese": "彼は何時に店が開くか知っています",
+      "sentence": "He knows what time the store ____.",
+      "wordCount": 7,
+      "choices": [
+        "opens",
+        "open",
+        "opening"
+      ],
+      "correctAnswer": "opens",
+      "difficulty": "intermediate",
+      "hint": "what time it opens",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-009",
+      "japanese": "私たちはどこで彼女に会えるか知りません",
+      "sentence": "We don't know where we can ____ her.",
+      "wordCount": 8,
+      "choices": [
+        "meet",
+        "meets",
+        "meeting"
+      ],
+      "correctAnswer": "meet",
+      "difficulty": "intermediate",
+      "hint": "where we can meet",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-010",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています",
+      "sentence": "She understands why he is ____.",
+      "wordCount": 6,
+      "choices": [
+        "angry",
+        "anger",
+        "angrily"
+      ],
+      "correctAnswer": "angry",
+      "difficulty": "intermediate",
+      "hint": "why he is angry",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-011",
+      "japanese": "私はいつバスが出発するか知りたいです",
+      "sentence": "I want to know when the bus ____.",
+      "wordCount": 8,
+      "choices": [
+        "leaves",
+        "leave",
+        "leaving"
+      ],
+      "correctAnswer": "leaves",
+      "difficulty": "intermediate",
+      "hint": "when the bus leaves",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-012",
+      "japanese": "彼は誰が勝つか予測できます",
+      "sentence": "He can predict who will ____.",
+      "wordCount": 6,
+      "choices": [
+        "win",
+        "wins",
+        "winning"
+      ],
+      "correctAnswer": "win",
+      "difficulty": "intermediate",
+      "hint": "who will win",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-013",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました",
+      "sentence": "We discussed how to ____ the problem.",
+      "wordCount": 7,
+      "choices": [
+        "solve",
+        "solves",
+        "solving"
+      ],
+      "correctAnswer": "solve",
+      "difficulty": "intermediate",
+      "hint": "how to solve",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-014",
+      "japanese": "彼女は何が必要か教えてくれました",
+      "sentence": "She told me what I ____.",
+      "wordCount": 6,
+      "choices": [
+        "need",
+        "needs",
+        "needing"
+      ],
+      "correctAnswer": "need",
+      "difficulty": "intermediate",
+      "hint": "what I need",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-015",
+      "japanese": "私はどこで鍵を置いたか忘れました",
+      "sentence": "I forgot where I ____ the key.",
+      "wordCount": 7,
+      "choices": [
+        "put",
+        "puts",
+        "putting"
+      ],
+      "correctAnswer": "put",
+      "difficulty": "intermediate",
+      "hint": "where I put",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-016",
+      "japanese": "彼はなぜそれが重要か説明しました",
+      "sentence": "He explained why it ____ important.",
+      "wordCount": 6,
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "hint": "why it is",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-017",
+      "japanese": "私たちはいつ会議が始まるか確認しました",
+      "sentence": "We checked when the meeting ____.",
+      "wordCount": 6,
+      "choices": [
+        "starts",
+        "start",
+        "starting"
+      ],
+      "correctAnswer": "starts",
+      "difficulty": "intermediate",
+      "hint": "when it starts",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-018",
+      "japanese": "彼女はどの道が最短か知っています",
+      "sentence": "She knows which route ____ the shortest.",
+      "wordCount": 7,
+      "choices": [
+        "is",
+        "are",
+        "was"
+      ],
+      "correctAnswer": "is",
+      "difficulty": "intermediate",
+      "hint": "which route is",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-019",
+      "japanese": "私は何が彼を幸せにするか知っています",
+      "sentence": "I know what ____ him happy.",
+      "wordCount": 6,
+      "choices": [
+        "makes",
+        "make",
+        "making"
+      ],
+      "correctAnswer": "makes",
+      "difficulty": "intermediate",
+      "hint": "what makes",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "fb-g3-u8-020",
+      "japanese": "彼はどうやって成功したか語りました",
+      "sentence": "He told us how he ____.",
+      "wordCount": 6,
+      "choices": [
+        "succeeded",
+        "succeed",
+        "succeeds"
+      ],
+      "correctAnswer": "succeeded",
+      "difficulty": "intermediate",
+      "hint": "how he succeeded",
+      "type": "fillInBlank"
+    },
+    {
+      "id": "so-g3-u8-001",
+      "japanese": "私は彼がどこに住んでいるか知りません",
+      "sentence": "I don't know where he lives.",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "where",
+        "he",
+        "lives"
+      ],
+      "correctAnswer": "I don't know where he lives",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "where he lives",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-002",
+      "japanese": "彼女は何が起こったか知っています",
+      "sentence": "She knows what happened.",
+      "words": [
+        "She",
+        "knows",
+        "what",
+        "happened"
+      ],
+      "correctAnswer": "She knows what happened",
+      "wordCount": 4,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what happened",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-003",
+      "japanese": "私はいつ彼が来るか分かりません",
+      "sentence": "I don't know when he will come.",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "when",
+        "he",
+        "will",
+        "come"
+      ],
+      "correctAnswer": "I don't know when he will come",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "when he will come",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-004",
+      "japanese": "彼はなぜ彼女が泣いているか知っています",
+      "sentence": "He knows why she is crying.",
+      "words": [
+        "He",
+        "knows",
+        "why",
+        "she",
+        "is",
+        "crying"
+      ],
+      "correctAnswer": "He knows why she is crying",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "why she is crying",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-005",
+      "japanese": "私は誰がこれを作ったか知っています",
+      "sentence": "I know who made this.",
+      "words": [
+        "I",
+        "know",
+        "who",
+        "made",
+        "this"
+      ],
+      "correctAnswer": "I know who made this",
+      "wordCount": 5,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "who made",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-006",
+      "japanese": "彼女はどうやってそこに行くか分かりません",
+      "sentence": "She doesn't know how to get there.",
+      "words": [
+        "She",
+        "doesn't",
+        "know",
+        "how",
+        "to",
+        "get",
+        "there"
+      ],
+      "correctAnswer": "She doesn't know how to get there",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "how to get",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-007",
+      "japanese": "私はどの本が一番良いか分かりません",
+      "sentence": "I don't know which book is the best.",
+      "words": [
+        "I",
+        "don't",
+        "know",
+        "which",
+        "book",
+        "is",
+        "the",
+        "best"
+      ],
+      "correctAnswer": "I don't know which book is the best",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "which book is",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-008",
+      "japanese": "彼は何時に店が開くか知っています",
+      "sentence": "He knows what time the store opens.",
+      "words": [
+        "He",
+        "knows",
+        "what",
+        "time",
+        "the",
+        "store",
+        "opens"
+      ],
+      "correctAnswer": "He knows what time the store opens",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what time",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-009",
+      "japanese": "私たちはどこで彼女に会えるか知りません",
+      "sentence": "We don't know where we can meet her.",
+      "words": [
+        "We",
+        "don't",
+        "know",
+        "where",
+        "we",
+        "can",
+        "meet",
+        "her"
+      ],
+      "correctAnswer": "We don't know where we can meet her",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "where we can",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-010",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています",
+      "sentence": "She understands why he is angry.",
+      "words": [
+        "She",
+        "understands",
+        "why",
+        "he",
+        "is",
+        "angry"
+      ],
+      "correctAnswer": "She understands why he is angry",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "why he is",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-011",
+      "japanese": "私はいつバスが出発するか知りたいです",
+      "sentence": "I want to know when the bus leaves.",
+      "words": [
+        "I",
+        "want",
+        "to",
+        "know",
+        "when",
+        "the",
+        "bus",
+        "leaves"
+      ],
+      "correctAnswer": "I want to know when the bus leaves",
+      "wordCount": 8,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "when the bus leaves",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-012",
+      "japanese": "彼は誰が勝つか予測できます",
+      "sentence": "He can predict who will win.",
+      "words": [
+        "He",
+        "can",
+        "predict",
+        "who",
+        "will",
+        "win"
+      ],
+      "correctAnswer": "He can predict who will win",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "who will win",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-013",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました",
+      "sentence": "We discussed how to solve the problem.",
+      "words": [
+        "We",
+        "discussed",
+        "how",
+        "to",
+        "solve",
+        "the",
+        "problem"
+      ],
+      "correctAnswer": "We discussed how to solve the problem",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "how to solve",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-014",
+      "japanese": "彼女は何が必要か教えてくれました",
+      "sentence": "She told me what I need.",
+      "words": [
+        "She",
+        "told",
+        "me",
+        "what",
+        "I",
+        "need"
+      ],
+      "correctAnswer": "She told me what I need",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what I need",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-015",
+      "japanese": "私はどこで鍵を置いたか忘れました",
+      "sentence": "I forgot where I put the key.",
+      "words": [
+        "I",
+        "forgot",
+        "where",
+        "I",
+        "put",
+        "the",
+        "key"
+      ],
+      "correctAnswer": "I forgot where I put the key",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "where I put",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-016",
+      "japanese": "彼はなぜそれが重要か説明しました",
+      "sentence": "He explained why it is important.",
+      "words": [
+        "He",
+        "explained",
+        "why",
+        "it",
+        "is",
+        "important"
+      ],
+      "correctAnswer": "He explained why it is important",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "why it is",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-017",
+      "japanese": "私たちはいつ会議が始まるか確認しました",
+      "sentence": "We checked when the meeting starts.",
+      "words": [
+        "We",
+        "checked",
+        "when",
+        "the",
+        "meeting",
+        "starts"
+      ],
+      "correctAnswer": "We checked when the meeting starts",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "when it starts",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-018",
+      "japanese": "彼女はどの道が最短か知っています",
+      "sentence": "She knows which route is the shortest.",
+      "words": [
+        "She",
+        "knows",
+        "which",
+        "route",
+        "is",
+        "the",
+        "shortest"
+      ],
+      "correctAnswer": "She knows which route is the shortest",
+      "wordCount": 7,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "which route is",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-019",
+      "japanese": "私は何が彼を幸せにするか知っています",
+      "sentence": "I know what makes him happy.",
+      "words": [
+        "I",
+        "know",
+        "what",
+        "makes",
+        "him",
+        "happy"
+      ],
+      "correctAnswer": "I know what makes him happy",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "what makes",
+      "type": "sentenceOrdering"
+    },
+    {
+      "id": "so-g3-u8-020",
+      "japanese": "彼はどうやって成功したか語りました",
+      "sentence": "He told us how he succeeded.",
+      "words": [
+        "He",
+        "told",
+        "us",
+        "how",
+        "he",
+        "succeeded"
+      ],
+      "correctAnswer": "He told us how he succeeded",
+      "wordCount": 6,
+      "difficulty": "intermediate",
+      "grammarPoint": "間接疑問文",
+      "hint": "how he succeeded",
+      "type": "sentenceOrdering"
+    }
+  ]
+}

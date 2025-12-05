@@ -19,8 +19,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "beginner",
@@ -33,10 +32,9 @@
       "japanese": "彼は私の兄です",
       "sentence": "He ____ my brother.",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -49,10 +47,9 @@
       "japanese": "あなたは学生です",
       "sentence": "You ____ a student.",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -65,10 +62,9 @@
       "japanese": "私たちは日本人です",
       "sentence": "We ____ Japanese.",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -81,10 +77,9 @@
       "japanese": "彼女は先生です",
       "sentence": "She ____ a teacher.",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -97,10 +92,9 @@
       "japanese": "彼らは友達です",
       "sentence": "They ____ friends.",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -113,10 +107,9 @@
       "japanese": "これは私の本です",
       "sentence": "This ____ my book.",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -131,8 +124,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "intermediate",
@@ -161,10 +152,9 @@
       "japanese": "彼は今家にいます",
       "sentence": "He ____ at home now.",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "intermediate",
@@ -177,10 +167,9 @@
       "japanese": "私たちは同じクラスです",
       "sentence": "We ____ in the same class.",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "intermediate",
@@ -193,10 +182,9 @@
       "japanese": "あなたは正しいです",
       "sentence": "You ____ right.",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "intermediate",
@@ -209,10 +197,9 @@
       "japanese": "彼は数学が得意です",
       "sentence": "He ____ good at math.",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "advanced",
@@ -241,10 +227,9 @@
       "japanese": "彼女は有名な歌手です",
       "sentence": "She ____ a famous singer.",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "advanced",
@@ -264,7 +249,8 @@
       "correctAnswer": "I am a student.",
       "difficulty": "beginner",
       "explanation": "基本語順：主語(I) + be動詞(am) + 補語(a student)。英語は主語から始める。",
-      "hint": "I am ～"
+      "hint": "I am ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u0-so-002",
@@ -278,7 +264,8 @@
       "correctAnswer": "He is kind.",
       "difficulty": "beginner",
       "explanation": "主語 + be動詞 + 形容詞の基本パターン。形容詞は補語として使う。",
-      "hint": "He is ～"
+      "hint": "He is ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u0-so-003",
@@ -292,7 +279,8 @@
       "correctAnswer": "You are friends.",
       "difficulty": "beginner",
       "explanation": "You are ～の語順。friendsは複数形。",
-      "hint": "You are ～"
+      "hint": "You are ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u0-so-004",
@@ -307,7 +295,8 @@
       "correctAnswer": "This is my pen.",
       "difficulty": "beginner",
       "explanation": "This is ～で物を指し示す。my + 名詞で所有を表す。",
-      "hint": "This is ～"
+      "hint": "This is ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u0-so-005",
@@ -321,7 +310,8 @@
       "correctAnswer": "We are Japanese.",
       "difficulty": "beginner",
       "explanation": "We are ～の語順。Japaneseは大文字で始める（国籍・言語は大文字）。",
-      "hint": "We are ～"
+      "hint": "We are ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u0-so-006",
@@ -336,7 +326,8 @@
       "correctAnswer": "She is a teacher.",
       "difficulty": "beginner",
       "explanation": "She is a ～の語順。職業名にはaを付ける（a teacher/a doctor）。",
-      "hint": "She is a ～"
+      "hint": "She is a ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u0-so-007",
@@ -350,7 +341,8 @@
       "correctAnswer": "They are students.",
       "difficulty": "beginner",
       "explanation": "They are ～の語順。複数なのでstudentsと複数形にする。",
-      "hint": "They are ～"
+      "hint": "They are ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u0-so-008",
@@ -366,7 +358,8 @@
       "correctAnswer": "I am thirteen years old.",
       "difficulty": "intermediate",
       "explanation": "年齢表現は「be動詞 + 数字 + years old」の順。thirteenは13。",
-      "hint": "数字 + years old"
+      "hint": "数字 + years old",
+      "wordCount": 5
     },
     {
       "id": "g1-u0-so-009",
@@ -381,7 +374,8 @@
       "correctAnswer": "He is from Tokyo.",
       "difficulty": "intermediate",
       "explanation": "「be from + 場所」で出身地。Tokyoのような都市名も使える。",
-      "hint": "be from ～"
+      "hint": "be from ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u0-so-010",
@@ -397,7 +391,8 @@
       "correctAnswer": "I am at school now.",
       "difficulty": "intermediate",
       "explanation": "「be at + 場所」で位置。nowは文末に置くことが多い。",
-      "hint": "be at ～ now"
+      "hint": "be at ～ now",
+      "wordCount": 5
     },
     {
       "id": "g1-u0-so-011",
@@ -412,7 +407,8 @@
       "correctAnswer": "These are my books.",
       "difficulty": "intermediate",
       "explanation": "Theseは複数なのでare。booksも複数形。my booksで「私の本たち」。",
-      "hint": "These are ～"
+      "hint": "These are ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u0-so-012",
@@ -429,7 +425,8 @@
       "correctAnswer": "We are in the same class.",
       "difficulty": "intermediate",
       "explanation": "「in the same class」はひとまとまり。sameの前には必ずtheを付ける。",
-      "hint": "in the same ～"
+      "hint": "in the same ～",
+      "wordCount": 6
     },
     {
       "id": "g1-u0-so-013",
@@ -445,7 +442,8 @@
       "correctAnswer": "He is good at math.",
       "difficulty": "advanced",
       "explanation": "熟語「be good at ～」は語順を守る。good atの間に他の語は入らない。",
-      "hint": "be good at ～"
+      "hint": "be good at ～",
+      "wordCount": 5
     },
     {
       "id": "g1-u0-so-014",
@@ -464,7 +462,8 @@
       "correctAnswer": "I am a member of the baseball team.",
       "difficulty": "advanced",
       "explanation": "「a member of ～」=「～の一員」。theは特定のチームを指すので必要。",
-      "hint": "a member of ～"
+      "hint": "a member of ～",
+      "wordCount": 8
     },
     {
       "id": "g1-u0-so-015",
@@ -480,7 +479,8 @@
       "correctAnswer": "She is interested in English.",
       "difficulty": "advanced",
       "explanation": "熟語「be interested in ～」の語順。interestedとinは必ずセット。",
-      "hint": "be interested in ～"
+      "hint": "be interested in ～",
+      "wordCount": 5
     },
     {
       "id": "g1-u0-para-001",
@@ -491,8 +491,7 @@
       "choices": [
         "Are you a student?",
         "Is you a student?",
-        "Am you a student?",
-        "You are a student?"
+        "Am you a student?"
       ],
       "correctAnswer": "Are you a student?",
       "difficulty": "beginner",
@@ -508,8 +507,7 @@
       "choices": [
         "He is not a teacher.",
         "He not is a teacher.",
-        "He isn't not a teacher.",
-        "He don't is a teacher."
+        "He isn't not a teacher."
       ],
       "correctAnswer": "He is not a teacher.",
       "difficulty": "beginner",
@@ -525,8 +523,7 @@
       "choices": [
         "It is a book.",
         "It are a book.",
-        "It a book.",
-        "It is book."
+        "It a book."
       ],
       "correctAnswer": "It is a book.",
       "difficulty": "beginner",
@@ -542,8 +539,7 @@
       "choices": [
         "I'm Japanese.",
         "I'am Japanese.",
-        "Im Japanese.",
-        "I' Japanese."
+        "Im Japanese."
       ],
       "correctAnswer": "I'm Japanese.",
       "difficulty": "beginner",
@@ -559,8 +555,7 @@
       "choices": [
         "Are they students?",
         "Is they students?",
-        "They are students?",
-        "Are students they?"
+        "They are students?"
       ],
       "correctAnswer": "Are they students?",
       "difficulty": "beginner",
@@ -576,8 +571,7 @@
       "choices": [
         "I'm not busy.",
         "I amn't busy.",
-        "I not busy.",
-        "I ain't busy."
+        "I not busy."
       ],
       "correctAnswer": "I'm not busy.",
       "difficulty": "intermediate",
@@ -593,8 +587,7 @@
       "choices": [
         "Isn't she kind?",
         "Is she not kind?",
-        "She isn't kind?",
-        "Not she is kind?"
+        "She isn't kind?"
       ],
       "correctAnswer": "Isn't she kind?",
       "difficulty": "intermediate",
@@ -610,8 +603,7 @@
       "choices": [
         "He is right.",
         "He are right.",
-        "He am right.",
-        "He right."
+        "He am right."
       ],
       "correctAnswer": "He is right.",
       "difficulty": "intermediate",
@@ -627,8 +619,7 @@
       "choices": [
         "We're friends.",
         "We'are friends.",
-        "Wer friends.",
-        "We' friends."
+        "Wer friends."
       ],
       "correctAnswer": "We're friends.",
       "difficulty": "intermediate",
@@ -644,8 +635,7 @@
       "choices": [
         "I am thirteen years old.",
         "I am thirteen.",
-        "I have thirteen years old.",
-        "I thirteen years old."
+        "I have thirteen years old."
       ],
       "correctAnswer": "I am thirteen years old.",
       "difficulty": "intermediate",
@@ -661,8 +651,7 @@
       "choices": [
         "They are books.",
         "They is books.",
-        "They books.",
-        "They are book."
+        "They books."
       ],
       "correctAnswer": "They are books.",
       "difficulty": "intermediate",
@@ -678,8 +667,7 @@
       "choices": [
         "Is he a doctor?",
         "Are he a doctor?",
-        "He is a doctor?",
-        "Does he a doctor?"
+        "He is a doctor?"
       ],
       "correctAnswer": "Is he a doctor?",
       "difficulty": "intermediate",
@@ -695,8 +683,7 @@
       "choices": [
         "I am interested in music.",
         "I interested in music.",
-        "I am interest in music.",
-        "I am interesting in music."
+        "I am interest in music."
       ],
       "correctAnswer": "I am interested in music.",
       "difficulty": "advanced",
@@ -710,10 +697,9 @@
       "originalSentence": "She plays tennis well.",
       "question": "be good atを使って同じ意味に書き換えなさい",
       "choices": [
-        "She is good at tennis.",
         "She is good at playing tennis.",
-        "She good at tennis.",
-        "She is good in tennis."
+        "She is good at tennis.",
+        "She good at tennis."
       ],
       "correctAnswer": "She is good at playing tennis.",
       "difficulty": "advanced",
@@ -729,8 +715,7 @@
       "choices": [
         "He is in the library.",
         "He is at the library.",
-        "He is on the library.",
-        "He is to the library."
+        "He is on the library."
       ],
       "correctAnswer": "He is in the library.",
       "difficulty": "advanced",
@@ -746,8 +731,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "beginner",
@@ -761,10 +745,9 @@
       "sentence": "He ____ kind.",
       "verb": "be",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -778,10 +761,9 @@
       "sentence": "You ____ students.",
       "verb": "be",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -795,10 +777,9 @@
       "sentence": "We ____ friends.",
       "verb": "be",
       "choices": [
-        "am",
-        "is",
         "are",
-        "be"
+        "am",
+        "is"
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
@@ -812,10 +793,9 @@
       "sentence": "She ____ a teacher.",
       "verb": "be",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -829,10 +809,9 @@
       "sentence": "____ you a student?",
       "verb": "be",
       "choices": [
-        "Am",
-        "Is",
         "Are",
-        "Be"
+        "Am",
+        "Is"
       ],
       "correctAnswer": "Are",
       "difficulty": "intermediate",
@@ -846,10 +825,9 @@
       "sentence": "____ he a teacher?",
       "verb": "be",
       "choices": [
-        "Am",
         "Is",
-        "Are",
-        "Be"
+        "Am",
+        "Are"
       ],
       "correctAnswer": "Is",
       "difficulty": "intermediate",
@@ -863,10 +841,9 @@
       "sentence": "____ they students?",
       "verb": "be",
       "choices": [
-        "Am",
-        "Is",
         "Are",
-        "Be"
+        "Am",
+        "Is"
       ],
       "correctAnswer": "Are",
       "difficulty": "intermediate",
@@ -882,8 +859,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "intermediate",
@@ -897,10 +873,9 @@
       "sentence": "He ____ not busy.",
       "verb": "be",
       "choices": [
-        "am",
         "is",
-        "are",
-        "be"
+        "am",
+        "are"
       ],
       "correctAnswer": "is",
       "difficulty": "intermediate",
@@ -925,8 +900,7 @@
       "choices": [
         "Nice to meet you, too. I'm Yuki.",
         "Yes, I am.",
-        "He is Tom.",
-        "I'm not Tom."
+        "He is Tom."
       ],
       "correctAnswer": "Nice to meet you, too. I'm Yuki.",
       "difficulty": "beginner",
@@ -951,8 +925,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "be"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "beginner",
@@ -977,8 +950,7 @@
       "choices": [
         "from",
         "in",
-        "at",
-        "to"
+        "at"
       ],
       "correctAnswer": "from",
       "difficulty": "intermediate",
@@ -1003,8 +975,7 @@
       "choices": [
         "am",
         "is",
-        "are",
-        "do"
+        "are"
       ],
       "correctAnswer": "am",
       "difficulty": "intermediate",
@@ -1029,8 +1000,7 @@
       "choices": [
         "it",
         "this",
-        "that",
-        "he"
+        "that"
       ],
       "correctAnswer": "it",
       "difficulty": "advanced",

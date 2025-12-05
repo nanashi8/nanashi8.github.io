@@ -19,8 +19,7 @@
       "choices": [
         "This",
         "That",
-        "These",
-        "Those"
+        "These"
       ],
       "correctAnswer": "This",
       "difficulty": "beginner",
@@ -35,8 +34,7 @@
       "choices": [
         "That",
         "This",
-        "Those",
-        "These"
+        "Those"
       ],
       "correctAnswer": "That",
       "difficulty": "beginner",
@@ -51,8 +49,7 @@
       "choices": [
         "These",
         "This",
-        "Those",
-        "That"
+        "Those"
       ],
       "correctAnswer": "These",
       "difficulty": "beginner",
@@ -67,8 +64,7 @@
       "choices": [
         "Those",
         "That",
-        "These",
-        "This"
+        "These"
       ],
       "correctAnswer": "Those",
       "difficulty": "beginner",
@@ -83,8 +79,7 @@
       "choices": [
         "books",
         "book",
-        "bookes",
-        "a book"
+        "bookes"
       ],
       "correctAnswer": "books",
       "difficulty": "beginner",
@@ -99,8 +94,7 @@
       "choices": [
         "is",
         "are",
-        "am",
-        "be"
+        "am"
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
@@ -115,8 +109,7 @@
       "choices": [
         "brothers",
         "brother",
-        "brotheres",
-        "a brother"
+        "brotheres"
       ],
       "correctAnswer": "brothers",
       "difficulty": "intermediate",
@@ -131,8 +124,7 @@
       "choices": [
         "those",
         "that",
-        "these",
-        "this"
+        "these"
       ],
       "correctAnswer": "those",
       "difficulty": "intermediate",
@@ -147,8 +139,7 @@
       "choices": [
         "friends",
         "friend",
-        "friendes",
-        "a friend"
+        "friendes"
       ],
       "correctAnswer": "friends",
       "difficulty": "intermediate",
@@ -163,8 +154,7 @@
       "choices": [
         "dogs",
         "dog",
-        "doges",
-        "a dog"
+        "doges"
       ],
       "correctAnswer": "dogs",
       "difficulty": "intermediate",
@@ -179,8 +169,7 @@
       "choices": [
         "tomatoes",
         "tomatos",
-        "tomato",
-        "a tomato"
+        "tomato"
       ],
       "correctAnswer": "tomatoes",
       "difficulty": "advanced",
@@ -195,8 +184,7 @@
       "choices": [
         "watches",
         "watchs",
-        "watch",
-        "a watch"
+        "watch"
       ],
       "correctAnswer": "watches",
       "difficulty": "advanced",
@@ -211,8 +199,7 @@
       "choices": [
         "boxes",
         "boxs",
-        "box",
-        "a box"
+        "box"
       ],
       "correctAnswer": "boxes",
       "difficulty": "advanced",
@@ -227,8 +214,7 @@
       "choices": [
         "children",
         "childs",
-        "childrens",
-        "child"
+        "childrens"
       ],
       "correctAnswer": "children",
       "difficulty": "advanced",
@@ -243,8 +229,7 @@
       "choices": [
         "photos",
         "photoes",
-        "photo",
-        "a photo"
+        "photo"
       ],
       "correctAnswer": "photos",
       "difficulty": "advanced",
@@ -264,7 +249,8 @@
       "correctAnswer": "This is my pen.",
       "difficulty": "beginner",
       "explanation": "This is ～の基本語順。近くの単数を指す。",
-      "hint": "This is ～"
+      "hint": "This is ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-002",
@@ -279,7 +265,8 @@
       "correctAnswer": "That is a school.",
       "difficulty": "beginner",
       "explanation": "That is ～の基本語順。遠くの単数を指す。",
-      "hint": "That is ～"
+      "hint": "That is ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-003",
@@ -294,7 +281,8 @@
       "correctAnswer": "These are my books.",
       "difficulty": "beginner",
       "explanation": "These are ～の語順。近くの複数を指す。be動詞はare。",
-      "hint": "These are ～"
+      "hint": "These are ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-004",
@@ -309,7 +297,8 @@
       "correctAnswer": "Those are new cars.",
       "difficulty": "beginner",
       "explanation": "Those are ～の語順。遠くの複数を指す。be動詞はare。",
-      "hint": "Those are ～"
+      "hint": "Those are ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-005",
@@ -324,7 +313,8 @@
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
       "explanation": "疑問詞What + is + this?の語順。「これは何？」",
-      "hint": "What is ～?"
+      "hint": "What is ～?",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-006",
@@ -339,7 +329,8 @@
       "correctAnswer": "I have four pens.",
       "difficulty": "intermediate",
       "explanation": "I have + 数 + 複数形の語順。three booksで「3冊の本」。",
-      "hint": "I have three ～"
+      "hint": "I have three ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-007",
@@ -354,7 +345,8 @@
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",
       "explanation": "What are ～?の語順。複数を尋ねるときはare。",
-      "hint": "What are ～?"
+      "hint": "What are ～?",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-008",
@@ -369,7 +361,8 @@
       "correctAnswer": "She has two brothers.",
       "difficulty": "intermediate",
       "explanation": "She has + 数 + 複数形。two brothersで「2人の兄弟」。",
-      "hint": "She has two ～"
+      "hint": "She has two ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-009",
@@ -383,7 +376,8 @@
       "correctAnswer": "These are apples.",
       "difficulty": "intermediate",
       "explanation": "These are ～の語順。apple→applesの複数形。",
-      "hint": "These are ～"
+      "hint": "These are ～",
+      "wordCount": 3
     },
     {
       "id": "g1-u3-so-010",
@@ -398,7 +392,8 @@
       "correctAnswer": "She has many friends.",
       "difficulty": "intermediate",
       "explanation": "I have many ～の語順。manyは必ず複数形と使う。",
-      "hint": "I have many ～"
+      "hint": "I have many ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-011",
@@ -413,7 +408,8 @@
       "correctAnswer": "That is my school.",
       "difficulty": "intermediate",
       "explanation": "That is my ～の語順。所有格myを使う。",
-      "hint": "That is my ～"
+      "hint": "That is my ～",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-012",
@@ -428,7 +424,8 @@
       "correctAnswer": "These are red tomatoes.",
       "difficulty": "advanced",
       "explanation": "tomato→tomatoesの複数形（-o→-es）。",
-      "hint": "tomato → tomatoes"
+      "hint": "tomato → tomatoes",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-013",
@@ -443,7 +440,8 @@
       "correctAnswer": "He has two children.",
       "difficulty": "advanced",
       "explanation": "child→childrenの不規則複数形。",
-      "hint": "child → children"
+      "hint": "child → children",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-014",
@@ -458,7 +456,8 @@
       "correctAnswer": "She has three boxes.",
       "difficulty": "advanced",
       "explanation": "box→boxesの複数形（-x→-es）。",
-      "hint": "box → boxes"
+      "hint": "box → boxes",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-so-015",
@@ -473,7 +472,8 @@
       "correctAnswer": "Those are her watches.",
       "difficulty": "advanced",
       "explanation": "watch→watchesの複数形（-ch→-es）。所有格herを使う。",
-      "hint": "watch → watches"
+      "hint": "watch → watches",
+      "wordCount": 4
     },
     {
       "id": "g1-u3-para-001",
@@ -484,8 +484,7 @@
       "choices": [
         "These are books.",
         "This are books.",
-        "These is books.",
-        "This is books."
+        "These is books."
       ],
       "correctAnswer": "These are books.",
       "difficulty": "beginner",
@@ -501,8 +500,7 @@
       "choices": [
         "Those are cars.",
         "That are cars.",
-        "Those is cars.",
-        "That is cars."
+        "Those is cars."
       ],
       "correctAnswer": "Those are cars.",
       "difficulty": "beginner",
@@ -518,8 +516,7 @@
       "choices": [
         "This is a pen.",
         "These is a pen.",
-        "This are a pen.",
-        "These are a pen."
+        "This are a pen."
       ],
       "correctAnswer": "This is a pen.",
       "difficulty": "beginner",
@@ -535,8 +532,7 @@
       "choices": [
         "That is my bag.",
         "Those is my bag.",
-        "That are my bag.",
-        "Those are my bag."
+        "That are my bag."
       ],
       "correctAnswer": "That is my bag.",
       "difficulty": "intermediate",
@@ -552,8 +548,7 @@
       "choices": [
         "What are these?",
         "What these are?",
-        "These are what?",
-        "What is this?"
+        "These are what?"
       ],
       "correctAnswer": "What are these?",
       "difficulty": "intermediate",
@@ -569,8 +564,7 @@
       "choices": [
         "What are those?",
         "What those are?",
-        "Those are what?",
-        "What is those?"
+        "Those are what?"
       ],
       "correctAnswer": "What are those?",
       "difficulty": "intermediate",
@@ -586,8 +580,7 @@
       "choices": [
         "These are my pens.",
         "These my are pens.",
-        "These are pens my.",
-        "My these are pens."
+        "These are pens my."
       ],
       "correctAnswer": "These are my pens.",
       "difficulty": "intermediate",
@@ -603,8 +596,7 @@
       "choices": [
         "I have three books.",
         "I three have books.",
-        "I have books three.",
-        "Three I have books."
+        "I have books three."
       ],
       "correctAnswer": "I have three books.",
       "difficulty": "intermediate",
@@ -620,8 +612,7 @@
       "choices": [
         "Those are my friends.",
         "That are my friends.",
-        "Those is my friends.",
-        "That is my friends."
+        "Those is my friends."
       ],
       "correctAnswer": "Those are my friends.",
       "difficulty": "advanced",
@@ -637,8 +628,7 @@
       "choices": [
         "I have two boxes.",
         "I have two boxs.",
-        "I have two box.",
-        "I two have boxes."
+        "I have two box."
       ],
       "correctAnswer": "I have two boxes.",
       "difficulty": "advanced",
@@ -654,8 +644,7 @@
       "choices": [
         "He has three children.",
         "He has three childs.",
-        "He has three child.",
-        "He three has children."
+        "He has three child."
       ],
       "correctAnswer": "He has three children.",
       "difficulty": "advanced",
@@ -671,8 +660,7 @@
       "choices": [
         "These are tomatoes.",
         "These are tomatos.",
-        "This are tomatoes.",
-        "These is tomatoes."
+        "This are tomatoes."
       ],
       "correctAnswer": "These are tomatoes.",
       "difficulty": "advanced",
@@ -688,8 +676,7 @@
       "choices": [
         "I have many friends.",
         "I many have friends.",
-        "I have friends many.",
-        "Many I have friends."
+        "I have friends many."
       ],
       "correctAnswer": "I have many friends.",
       "difficulty": "advanced",
@@ -705,8 +692,7 @@
       "choices": [
         "She has two watches.",
         "She has two watchs.",
-        "She has two watch.",
-        "She two has watches."
+        "She has two watch."
       ],
       "correctAnswer": "She has two watches.",
       "difficulty": "advanced",
@@ -722,8 +708,7 @@
       "choices": [
         "I have two pianos.",
         "I have two pianoes.",
-        "I have two piano.",
-        "I two have pianos."
+        "I have two piano."
       ],
       "correctAnswer": "I have two pianos.",
       "difficulty": "advanced",
@@ -739,8 +724,7 @@
       "choices": [
         "books",
         "book",
-        "bookes",
-        "bookies"
+        "bookes"
       ],
       "correctAnswer": "books",
       "difficulty": "beginner",
@@ -756,8 +740,7 @@
       "choices": [
         "cars",
         "car",
-        "cares",
-        "carrs"
+        "cares"
       ],
       "correctAnswer": "cars",
       "difficulty": "beginner",
@@ -773,8 +756,7 @@
       "choices": [
         "boxes",
         "boxs",
-        "box",
-        "boxies"
+        "box"
       ],
       "correctAnswer": "boxes",
       "difficulty": "intermediate",
@@ -790,8 +772,7 @@
       "choices": [
         "watches",
         "watchs",
-        "watch",
-        "watchies"
+        "watch"
       ],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
@@ -807,8 +788,7 @@
       "choices": [
         "tomatoes",
         "tomatos",
-        "tomato",
-        "tomatoies"
+        "tomato"
       ],
       "correctAnswer": "tomatoes",
       "difficulty": "intermediate",
@@ -824,8 +804,7 @@
       "choices": [
         "cities",
         "citys",
-        "city",
-        "cityies"
+        "city"
       ],
       "correctAnswer": "cities",
       "difficulty": "intermediate",
@@ -841,8 +820,7 @@
       "choices": [
         "children",
         "childs",
-        "child",
-        "childes"
+        "child"
       ],
       "correctAnswer": "children",
       "difficulty": "advanced",
@@ -858,8 +836,7 @@
       "choices": [
         "pianos",
         "pianoes",
-        "piano",
-        "pianoies"
+        "piano"
       ],
       "correctAnswer": "pianos",
       "difficulty": "advanced",
@@ -875,8 +852,7 @@
       "choices": [
         "dishes",
         "dishs",
-        "dish",
-        "dishies"
+        "dish"
       ],
       "correctAnswer": "dishes",
       "difficulty": "advanced",
@@ -892,8 +868,7 @@
       "choices": [
         "leaves",
         "leafs",
-        "leaf",
-        "leafies"
+        "leaf"
       ],
       "correctAnswer": "leaves",
       "difficulty": "advanced",
@@ -918,8 +893,7 @@
       "choices": [
         "This",
         "That",
-        "These",
-        "Those"
+        "These"
       ],
       "correctAnswer": "This",
       "difficulty": "beginner",
@@ -944,8 +918,7 @@
       "choices": [
         "Those",
         "That",
-        "These",
-        "This"
+        "These"
       ],
       "correctAnswer": "Those",
       "difficulty": "beginner",
@@ -970,8 +943,7 @@
       "choices": [
         "five",
         "a five",
-        "fives",
-        "fifth"
+        "fives"
       ],
       "correctAnswer": "five",
       "difficulty": "intermediate",
@@ -996,8 +968,7 @@
       "choices": [
         "they",
         "these",
-        "it",
-        "this"
+        "it"
       ],
       "correctAnswer": "they",
       "difficulty": "intermediate",
@@ -1022,8 +993,7 @@
       "choices": [
         "children",
         "childs",
-        "child",
-        "childrens"
+        "child"
       ],
       "correctAnswer": "children",
       "difficulty": "advanced",
