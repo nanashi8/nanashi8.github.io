@@ -1444,7 +1444,7 @@
         },
         {
           "word": "publicity",
-          "meaning": "(要確認)",
+          "meaning": "宣伝・広報",
           "isUnknown": false,
           "lemma": "publicity",
           "reading": "publicity",
@@ -1765,7 +1765,7 @@
         },
         {
           "word": "fairy",
-          "meaning": "(要確認)",
+          "meaning": "妖精",
           "isUnknown": false,
           "lemma": "fairy",
           "reading": "fairy",
@@ -3072,7 +3072,7 @@
         },
         {
           "word": "narrator",
-          "meaning": "(要確認)",
+          "meaning": "語り手",
           "isUnknown": false,
           "lemma": "narrator",
           "reading": "narrator",
@@ -4343,7 +4343,7 @@
         },
         {
           "word": "narrator",
-          "meaning": "(要確認)",
+          "meaning": "語り手",
           "isUnknown": false,
           "lemma": "narrator",
           "reading": "narrator",
@@ -4406,7 +4406,7 @@
         },
         {
           "word": "thrilled",
-          "meaning": "(要確認)",
+          "meaning": "わくわくした・興奮した",
           "isUnknown": false,
           "lemma": "thrilled",
           "reading": "thrilled",
@@ -4684,7 +4684,7 @@
         },
         {
           "word": "forgot",
-          "meaning": "(要確認)",
+          "meaning": "忘れた",
           "isUnknown": false,
           "lemma": "forgot",
           "reading": "forgot",
@@ -5650,7 +5650,7 @@
         },
         {
           "word": "publicity",
-          "meaning": "(要確認)",
+          "meaning": "宣伝・広報",
           "isUnknown": false,
           "lemma": "publicity",
           "reading": "publicity",
@@ -8368,7 +8368,7 @@
         },
         {
           "word": "decoration",
-          "meaning": "(要確認)",
+          "meaning": "装飾",
           "isUnknown": false,
           "lemma": "decoration",
           "reading": "decoration",
@@ -8674,7 +8674,7 @@
         },
         {
           "word": "decoration",
-          "meaning": "(要確認)",
+          "meaning": "装飾",
           "isUnknown": false,
           "lemma": "decoration",
           "reading": "decoration",
@@ -8792,7 +8792,7 @@
         },
         {
           "word": "furniture",
-          "meaning": "(要確認)",
+          "meaning": "家具",
           "isUnknown": false,
           "lemma": "furniture",
           "reading": "furniture",
@@ -8833,7 +8833,7 @@
         },
         {
           "word": "props",
-          "meaning": "(要確認)",
+          "meaning": "小道具",
           "isUnknown": false,
           "lemma": "props",
           "reading": "props",
@@ -9648,7 +9648,7 @@
         },
         {
           "word": "donated",
-          "meaning": "(要確認)",
+          "meaning": "寄付した",
           "isUnknown": false,
           "lemma": "donated",
           "reading": "donated",
@@ -9670,7 +9670,7 @@
         },
         {
           "word": "props",
-          "meaning": "(要確認)",
+          "meaning": "小道具",
           "isUnknown": false,
           "lemma": "props",
           "reading": "props",
@@ -10504,7 +10504,7 @@
         },
         {
           "word": "gray",
-          "meaning": "(要確認)",
+          "meaning": "灰色",
           "isUnknown": false,
           "lemma": "gray",
           "reading": "gray",
@@ -11240,7 +11240,7 @@
         },
         {
           "word": "gray",
-          "meaning": "(要確認)",
+          "meaning": "灰色",
           "isUnknown": false,
           "lemma": "gray",
           "reading": "gray",
@@ -12304,7 +12304,7 @@
         },
         {
           "word": "balls",
-          "meaning": "(要確認)",
+          "meaning": "ボール・舞踏会",
           "isUnknown": false,
           "lemma": "balls",
           "reading": "balls",
@@ -14033,7 +14033,7 @@
         },
         {
           "word": "dozens",
-          "meaning": "(要確認)",
+          "meaning": "数十",
           "isUnknown": false,
           "lemma": "dozens",
           "reading": "dozens",
@@ -15085,7 +15085,7 @@
         },
         {
           "word": "transformation",
-          "meaning": "(要確認)",
+          "meaning": "変化・変身",
           "isUnknown": false,
           "lemma": "transformation",
           "reading": "transformation",
@@ -15526,7 +15526,7 @@
         },
         {
           "word": "hidden",
-          "meaning": "(要確認)",
+          "meaning": "隠れた",
           "isUnknown": false,
           "lemma": "hidden",
           "reading": "hidden",
@@ -16047,7 +16047,7 @@
         },
         {
           "word": "whispered",
-          "meaning": "(要確認)",
+          "meaning": "ささやいた",
           "isUnknown": false,
           "lemma": "whispered",
           "reading": "whispered",
@@ -17519,7 +17519,7 @@
         },
         {
           "word": "forgot",
-          "meaning": "(要確認)",
+          "meaning": "忘れた",
           "isUnknown": false,
           "lemma": "forgot",
           "reading": "forgot",
@@ -17582,7 +17582,7 @@
         },
         {
           "word": "prop",
-          "meaning": "(要確認)",
+          "meaning": "支え・小道具",
           "isUnknown": false,
           "lemma": "prop",
           "reading": "prop",
@@ -17604,7 +17604,7 @@
         },
         {
           "word": "broke",
-          "meaning": "(要確認)",
+          "meaning": "壊れた",
           "isUnknown": false,
           "lemma": "broke",
           "reading": "broke",
@@ -20747,7 +20747,7 @@
         },
         {
           "word": "balls",
-          "meaning": "(要確認)",
+          "meaning": "ボール・舞踏会",
           "isUnknown": false,
           "lemma": "balls",
           "reading": "balls",
@@ -21589,7 +21589,7 @@
         },
         {
           "word": "nervousness",
-          "meaning": "(要確認)",
+          "meaning": "緊張",
           "isUnknown": false,
           "lemma": "nervousness",
           "reading": "nervousness",
@@ -22976,7 +22976,7 @@
         },
         {
           "word": "onto",
-          "meaning": "(要確認)",
+          "meaning": "〜の上に",
           "isUnknown": false,
           "lemma": "onto",
           "reading": "onto",
@@ -23876,7 +23876,7 @@
         },
         {
           "word": "prop",
-          "meaning": "(要確認)",
+          "meaning": "支え・小道具",
           "isUnknown": false,
           "lemma": "prop",
           "reading": "prop",
@@ -23965,7 +23965,7 @@
         },
         {
           "word": "recovered",
-          "meaning": "(要確認)",
+          "meaning": "回復した",
           "isUnknown": false,
           "lemma": "recovered",
           "reading": "recovered",
@@ -24265,7 +24265,7 @@
         },
         {
           "word": "dramatic",
-          "meaning": "(要確認)",
+          "meaning": "劇的な",
           "isUnknown": false,
           "lemma": "dramatic",
           "reading": "dramatic",
@@ -24590,7 +24590,7 @@
         },
         {
           "word": "fairy",
-          "meaning": "(要確認)",
+          "meaning": "妖精",
           "isUnknown": false,
           "lemma": "fairy",
           "reading": "fairy",
@@ -25532,7 +25532,7 @@
         },
         {
           "word": "props",
-          "meaning": "(要確認)",
+          "meaning": "小道具",
           "isUnknown": false,
           "lemma": "props",
           "reading": "props",
@@ -29182,7 +29182,7 @@
         },
         {
           "word": "chorused",
-          "meaning": "(要確認)",
+          "meaning": "合唱した・声を揃えて言った",
           "isUnknown": false,
           "lemma": "chorused",
           "reading": "chorused",
@@ -29897,7 +29897,7 @@
         },
         {
           "word": "spilled",
-          "meaning": "(要確認)",
+          "meaning": "こぼした",
           "isUnknown": false,
           "lemma": "spilled",
           "reading": "spilled",
@@ -31763,7 +31763,7 @@
         },
         {
           "word": "nervousness",
-          "meaning": "(要確認)",
+          "meaning": "緊張",
           "isUnknown": false,
           "lemma": "nervousness",
           "reading": "nervousness",
@@ -33283,7 +33283,7 @@
         },
         {
           "word": "sighed",
-          "meaning": "(要確認)",
+          "meaning": "ため息をついた",
           "isUnknown": false,
           "lemma": "sighed",
           "reading": "sighed",
@@ -35228,7 +35228,7 @@
         },
         {
           "word": "spilled",
-          "meaning": "(要確認)",
+          "meaning": "こぼした",
           "isUnknown": false,
           "lemma": "spilled",
           "reading": "spilled",
@@ -35280,7 +35280,7 @@
         },
         {
           "word": "prop",
-          "meaning": "(要確認)",
+          "meaning": "支え・小道具",
           "isUnknown": false,
           "lemma": "prop",
           "reading": "prop",
@@ -35291,7 +35291,7 @@
         },
         {
           "word": "broke",
-          "meaning": "(要確認)",
+          "meaning": "壊れた",
           "isUnknown": false,
           "lemma": "broke",
           "reading": "broke",
@@ -38177,7 +38177,7 @@
         },
         {
           "word": "donate",
-          "meaning": "(要確認)",
+          "meaning": "寄付する",
           "isUnknown": false,
           "lemma": "donate",
           "reading": "donate",
@@ -38965,7 +38965,7 @@
         },
         {
           "word": "perseverance",
-          "meaning": "(要確認)",
+          "meaning": "忍耐",
           "isUnknown": false,
           "lemma": "perseverance",
           "reading": "perseverance",
@@ -39786,7 +39786,7 @@
         },
         {
           "word": "advised",
-          "meaning": "(要確認)",
+          "meaning": "助言した",
           "isUnknown": false,
           "lemma": "advised",
           "reading": "advised",
@@ -41641,7 +41641,7 @@
         },
         {
           "word": "anticipated",
-          "meaning": "(要確認)",
+          "meaning": "予想した",
           "isUnknown": false,
           "lemma": "anticipated",
           "reading": "anticipated",
@@ -42315,7 +42315,7 @@
         },
         {
           "word": "decoration",
-          "meaning": "(要確認)",
+          "meaning": "装飾",
           "isUnknown": false,
           "lemma": "decoration",
           "reading": "decoration",
@@ -42699,7 +42699,7 @@
         },
         {
           "word": "remarked",
-          "meaning": "(要確認)",
+          "meaning": "述べた・意見を言った",
           "isUnknown": false,
           "lemma": "remarked",
           "reading": "remarked",
@@ -42935,7 +42935,7 @@
         },
         {
           "word": "casually",
-          "meaning": "(要確認)",
+          "meaning": "何気なく",
           "isUnknown": false,
           "lemma": "casually",
           "reading": "casually",
@@ -43039,7 +43039,7 @@
         },
         {
           "word": "people's",
-          "meaning": "(要確認)",
+          "meaning": "人々の",
           "isUnknown": false,
           "lemma": "people's",
           "reading": "people's",
@@ -43205,7 +43205,7 @@
         },
         {
           "word": "who's",
-          "meaning": "(要確認)",
+          "meaning": "誰が",
           "isUnknown": false,
           "lemma": "who's",
           "reading": "who's",
@@ -43216,7 +43216,7 @@
         },
         {
           "word": "reliable",
-          "meaning": "(要確認)",
+          "meaning": "信頼できる",
           "isUnknown": false,
           "lemma": "reliable",
           "reading": "reliable",
@@ -43246,7 +43246,7 @@
       "segments": [
         {
           "word": "who's",
-          "meaning": "(要確認)",
+          "meaning": "誰が",
           "isUnknown": false,
           "lemma": "who's",
           "reading": "who's",
@@ -43587,7 +43587,7 @@
         },
         {
           "word": "publicity",
-          "meaning": "(要確認)",
+          "meaning": "宣伝・広報",
           "isUnknown": false,
           "lemma": "publicity",
           "reading": "publicity",
@@ -44832,7 +44832,7 @@
         },
         {
           "word": "narrator",
-          "meaning": "(要確認)",
+          "meaning": "語り手",
           "isUnknown": false,
           "lemma": "narrator",
           "reading": "narrator",
@@ -44995,7 +44995,7 @@
         },
         {
           "word": "nervousness",
-          "meaning": "(要確認)",
+          "meaning": "緊張",
           "isUnknown": false,
           "lemma": "nervousness",
           "reading": "nervousness",
@@ -45968,7 +45968,7 @@
         },
         {
           "word": "theoretical",
-          "meaning": "(要確認)",
+          "meaning": "理論的な",
           "isUnknown": false,
           "lemma": "theoretical",
           "reading": "theoretical",
@@ -48477,7 +48477,7 @@
         },
         {
           "word": "exhibition",
-          "meaning": "(要確認)",
+          "meaning": "展示会",
           "isUnknown": false,
           "lemma": "exhibition",
           "reading": "exhibition",
@@ -48972,7 +48972,7 @@
         },
         {
           "word": "chaotic",
-          "meaning": "(要確認)",
+          "meaning": "混沌とした",
           "isUnknown": false,
           "lemma": "chaotic",
           "reading": "chaotic",
@@ -49564,7 +49564,7 @@
         },
         {
           "word": "casually",
-          "meaning": "(要確認)",
+          "meaning": "何気なく",
           "isUnknown": false,
           "lemma": "casually",
           "reading": "casually",
@@ -50698,7 +50698,7 @@
         },
         {
           "word": "instant",
-          "meaning": "(要確認)",
+          "meaning": "即座の",
           "isUnknown": false,
           "lemma": "instant",
           "reading": "instant",
@@ -51451,7 +51451,7 @@
         },
         {
           "word": "investment",
-          "meaning": "(要確認)",
+          "meaning": "投資",
           "isUnknown": false,
           "lemma": "investment",
           "reading": "investment",
@@ -52084,7 +52084,7 @@
         },
         {
           "word": "spilled",
-          "meaning": "(要確認)",
+          "meaning": "こぼした",
           "isUnknown": false,
           "lemma": "spilled",
           "reading": "spilled",
@@ -52147,7 +52147,7 @@
         },
         {
           "word": "broke",
-          "meaning": "(要確認)",
+          "meaning": "壊れた",
           "isUnknown": false,
           "lemma": "broke",
           "reading": "broke",
@@ -52732,7 +52732,7 @@
         },
         {
           "word": "impressive",
-          "meaning": "(要確認)",
+          "meaning": "印象的な",
           "isUnknown": false,
           "lemma": "impressive",
           "reading": "impressive",
@@ -52798,7 +52798,7 @@
         },
         {
           "word": "invisible",
-          "meaning": "(要確認)",
+          "meaning": "見えない",
           "isUnknown": false,
           "lemma": "invisible",
           "reading": "invisible",
@@ -52880,7 +52880,7 @@
         },
         {
           "word": "discomfort",
-          "meaning": "(要確認)",
+          "meaning": "不快",
           "isUnknown": false,
           "lemma": "discomfort",
           "reading": "discomfort",
@@ -53113,7 +53113,7 @@
         },
         {
           "word": "failure",
-          "meaning": "(要確認)",
+          "meaning": "失敗",
           "isUnknown": false,
           "lemma": "failure",
           "reading": "failure",
@@ -53157,7 +53157,7 @@
         },
         {
           "word": "prompted",
-          "meaning": "(要確認)",
+          "meaning": "促した",
           "isUnknown": false,
           "lemma": "prompted",
           "reading": "prompted",
@@ -54927,7 +54927,7 @@
         },
         {
           "word": "initiative",
-          "meaning": "(要確認)",
+          "meaning": "主導権・率先",
           "isUnknown": false,
           "lemma": "initiative",
           "reading": "initiative",
@@ -56232,7 +56232,7 @@
         },
         {
           "word": "forgot",
-          "meaning": "(要確認)",
+          "meaning": "忘れた",
           "isUnknown": false,
           "lemma": "forgot",
           "reading": "forgot",
@@ -58904,7 +58904,7 @@
         },
         {
           "word": "exemplified",
-          "meaning": "(要確認)",
+          "meaning": "例証した",
           "isUnknown": false,
           "lemma": "exemplified",
           "reading": "exemplified",
@@ -59940,7 +59940,7 @@
       "segments": [
         {
           "word": "exemplified",
-          "meaning": "(要確認)",
+          "meaning": "例証した",
           "isUnknown": false,
           "lemma": "exemplified",
           "reading": "exemplified",
@@ -61044,7 +61044,7 @@
         },
         {
           "word": "cultivate",
-          "meaning": "(要確認)",
+          "meaning": "栽培する・養う",
           "isUnknown": false,
           "lemma": "cultivate",
           "reading": "cultivate",
@@ -62995,7 +62995,7 @@
         },
         {
           "word": "overwhelmingly",
-          "meaning": "(要確認)",
+          "meaning": "圧倒的に",
           "isUnknown": false,
           "lemma": "overwhelmingly",
           "reading": "overwhelmingly",
@@ -65319,7 +65319,7 @@
         },
         {
           "word": "recognition",
-          "meaning": "(要確認)",
+          "meaning": "認識・承認",
           "isUnknown": false,
           "lemma": "recognition",
           "reading": "recognition",
