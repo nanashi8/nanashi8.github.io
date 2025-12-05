@@ -2,7 +2,7 @@
 
 ## 📌 概要
 
-英単語・フレーズから日本語訳を選ぶ3択クイズ機能。
+英単語・フレーズから日本語訳を選ぶ4択クイズ機能。
 最も基本的な学習モードで、語彙の意味理解に重点を置く。
 
 **データ仕様参照**:
@@ -15,7 +15,7 @@
 ### 基本フロー
 
 1. **問題表示**: 英単語・フレーズを表示
-2. **選択肢提示**: 3つの日本語訳を提示
+2. **選択肢提示**: 3つの日本語訳 + 「分からない」の4択を提示
 3. **解答**: ユーザーが1つ選択
 4. **判定**: 即座に正誤判定
 5. **フィードバック**: AIコメント表示（条件付き）
@@ -30,7 +30,18 @@
 □ 1. 捨てる、放棄する
 □ 2. 受け入れる
 □ 3. 達成する
+□ 4. 分からない
 ```
+
+### 学習状態の管理
+
+| 状態 | 条件 | 出題頻度 |
+|------|------|---------|
+| **定着済み** | 1発正解 または 連続2回以上正解 | しばらく出題を見送り |
+| **学習中** | 1回目不正解（「分からない」含む） | 継続して出題 |
+| **要復習** | 2回以上不正解 | 優先的に出題 |
+
+**注意**: 「分からない」を選択した場合は不正解扱いとなり、要復習にカウントされます。
 
 ## 🎛️ フィルター機能
 
@@ -170,22 +181,34 @@ function speakEnglish(text: string) {
 1. **正解**: 問題の正しい訳
 2. **誤答1**: 同じカテゴリーから選択
 3. **誤答2**: ランダムに選択
+4. **「分からない」**: 固定で最後に配置
 
 ### カテゴリー同一化
 
 混同を誘発するため、同じ品詞・カテゴリーから選択:
 
 ```typescript
-function generateChoices(
-  correctAnswer: string,
-  allQuestions: Question[]
-): string[] {
-  const category = detectCategory(correctAnswer);
+function generateChoicesWithQuestions(
+  currentQuestion: Question,
+  allQuestions: Question[],
+  currentIndex: number
+): Array<{ text: string; question: Question | null }> {
+  // 誤答を2つ選択
+  const wrongQuestions = selectWrongQuestions(allQuestions, currentQuestion, 2);
   
-  // 同カテゴリーから1つ
-  const sameCategory = allQuestions
-    .filter(q => detectCategory(q.meaning) === category)
-    .filter(q => q.meaning !== correctAnswer);
+  // 正解と誤答2つをシャッフル
+  const firstThreeChoices = shuffle([
+    { text: currentQuestion.meaning, question: currentQuestion },
+    ...wrongQuestions.map(q => ({ text: q.meaning, question: q }))
+  ]);
+  
+  // 最後に「分からない」を追加
+  return [
+    ...firstThreeChoices,
+    { text: '分からない', question: null }
+  ];
+}
+```
   
   const wrongChoice1 = sameCategory[Math.floor(Math.random() * sameCategory.length)];
   
@@ -302,6 +325,7 @@ interface WordProgress {
 | 1 | 選択肢1を選択 |
 | 2 | 選択肢2を選択 |
 | 3 | 選択肢3を選択 |
+| 4 | 選択肢4を選択（分からない） |
 | Space | 音声再生 |
 | Enter | 次の問題へ（解答後） |
 

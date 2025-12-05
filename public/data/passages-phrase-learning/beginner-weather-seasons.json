@@ -249,7 +249,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -507,7 +507,7 @@
         },
         {
           "word": "according",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "according",
           "reading": "according",
@@ -589,7 +589,7 @@
         },
         {
           "word": "arrives",
-          "meaning": "(未登録)",
+          "meaning": "後",
           "isUnknown": false,
           "lemma": "arrives",
           "reading": "arrives",
@@ -942,7 +942,7 @@
         },
         {
           "word": "melt",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "melt",
           "reading": "melt",
@@ -983,7 +983,7 @@
         },
         {
           "word": "melted",
-          "meaning": "(未登録)",
+          "meaning": "植物",
           "isUnknown": false,
           "lemma": "melted",
           "reading": "melted",
@@ -1205,7 +1205,7 @@
         },
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -1227,7 +1227,7 @@
         },
         {
           "word": "dead",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "dead",
           "reading": "dead",
@@ -1268,7 +1268,7 @@
         },
         {
           "word": "suddenly",
-          "meaning": "(未登録)",
+          "meaning": "言うこと",
           "isUnknown": false,
           "lemma": "suddenly",
           "reading": "suddenly",
@@ -1290,7 +1290,7 @@
         },
         {
           "word": "alive",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "alive",
           "reading": "alive",
@@ -1375,7 +1375,7 @@
         },
         {
           "word": "branches",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "branches",
           "reading": "branches",
@@ -1416,7 +1416,7 @@
         },
         {
           "word": "bloom",
-          "meaning": "(未登録)",
+          "meaning": "庭園と公園に",
           "isUnknown": false,
           "lemma": "bloom",
           "reading": "bloom",
@@ -1460,7 +1460,7 @@
         },
         {
           "word": "parks",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "parks",
           "reading": "parks",
@@ -1501,7 +1501,7 @@
         },
         {
           "word": "landscape",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "landscape",
           "reading": "landscape",
@@ -1556,7 +1556,7 @@
         },
         {
           "word": "gray",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "gray",
           "reading": "gray",
@@ -1608,7 +1608,7 @@
         },
         {
           "word": "colorful",
-          "meaning": "(未登録)",
+          "meaning": "デザイナー",
           "isUnknown": false,
           "lemma": "colorful",
           "reading": "colorful",
@@ -1682,7 +1682,7 @@
         },
         {
           "word": "unpredictable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "unpredictable",
           "reading": "unpredictable",
@@ -1852,7 +1852,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -1915,7 +1915,7 @@
         },
         {
           "word": "showers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "showers",
           "reading": "showers",
@@ -1934,7 +1934,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -2041,7 +2041,7 @@
         },
         {
           "word": "shower",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "shower",
           "reading": "shower",
@@ -2137,7 +2137,7 @@
         },
         {
           "word": "rainbow",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainbow",
           "reading": "rainbow",
@@ -2211,7 +2211,7 @@
         },
         {
           "word": "rainbow",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainbow",
           "reading": "rainbow",
@@ -2222,7 +2222,7 @@
         },
         {
           "word": "appears",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "appears",
           "reading": "appears",
@@ -2263,7 +2263,7 @@
         },
         {
           "word": "shines",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "shines",
           "reading": "shines",
@@ -2304,7 +2304,7 @@
         },
         {
           "word": "drops",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drops",
           "reading": "drops",
@@ -2378,7 +2378,7 @@
         },
         {
           "word": "mornings",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mornings",
           "reading": "mornings",
@@ -2433,7 +2433,7 @@
         },
         {
           "word": "quite",
-          "meaning": "(未登録)",
+          "meaning": "かなり・全く",
           "isUnknown": false,
           "lemma": "quite",
           "reading": "quite",
@@ -2444,7 +2444,7 @@
         },
         {
           "word": "chilly",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "chilly",
           "reading": "chilly",
@@ -2570,7 +2570,7 @@
         },
         {
           "word": "sunrise",
-          "meaning": "(未登録)",
+          "meaning": "より早く",
           "isUnknown": false,
           "lemma": "sunrise",
           "reading": "sunrise",
@@ -2777,7 +2777,7 @@
         },
         {
           "word": "sunshine",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sunshine",
           "reading": "sunshine",
@@ -2807,7 +2807,7 @@
       "segments": [
         {
           "word": "which",
-          "meaning": "どれ・どちら",
+          "meaning": "(関係代名詞)その物等は・を",
           "isUnknown": false,
           "lemma": "which",
           "reading": "ウィ́ッチ",
@@ -2851,7 +2851,7 @@
         },
         {
           "word": "happier",
-          "meaning": "(未登録)",
+          "meaning": "そしてより活動的な",
           "isUnknown": false,
           "lemma": "happier",
           "reading": "happier",
@@ -2884,7 +2884,7 @@
         },
         {
           "word": "energetic",
-          "meaning": "(未登録)",
+          "meaning": "ある",
           "isUnknown": false,
           "lemma": "energetic",
           "reading": "energetic",
@@ -3010,7 +3010,7 @@
         },
         {
           "word": "breeze",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "breeze",
           "reading": "breeze",
@@ -3021,7 +3021,7 @@
         },
         {
           "word": "blows",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blows",
           "reading": "blows",
@@ -3207,7 +3207,7 @@
         },
         {
           "word": "seeds",
-          "meaning": "(未登録)",
+          "meaning": "未来の環境管理のための。",
           "isUnknown": false,
           "lemma": "seeds",
           "reading": "seeds",
@@ -3396,7 +3396,7 @@
         },
         {
           "word": "hottest",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hottest",
           "reading": "hottest",
@@ -3492,7 +3492,7 @@
         },
         {
           "word": "shines",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "shines",
           "reading": "shines",
@@ -3615,7 +3615,7 @@
         },
         {
           "word": "rises",
-          "meaning": "(未登録)",
+          "meaning": "特に正午の間",
           "isUnknown": false,
           "lemma": "rises",
           "reading": "rises",
@@ -3681,7 +3681,7 @@
         },
         {
           "word": "midday",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "midday",
           "reading": "midday",
@@ -3822,7 +3822,7 @@
         },
         {
           "word": "intense",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "intense",
           "reading": "intense",
@@ -4237,7 +4237,7 @@
         },
         {
           "word": "outdoor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "outdoor",
           "reading": "outdoor",
@@ -4300,7 +4300,7 @@
       "segments": [
         {
           "word": "hiking",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hiking",
           "reading": "hiking",
@@ -4333,7 +4333,7 @@
         },
         {
           "word": "camping",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "camping",
           "reading": "camping",
@@ -4544,7 +4544,7 @@
         },
         {
           "word": "storms",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "storms",
           "reading": "storms",
@@ -4607,7 +4607,7 @@
       "segments": [
         {
           "word": "Thunder",
-          "meaning": "(未登録)",
+          "meaning": "稲妻",
           "isUnknown": false,
           "lemma": "Thunder",
           "reading": "Thunder",
@@ -4629,7 +4629,7 @@
         },
         {
           "word": "lightning",
-          "meaning": "(未登録)",
+          "meaning": "夏の嵐を",
           "isUnknown": false,
           "lemma": "lightning",
           "reading": "lightning",
@@ -4651,7 +4651,7 @@
         },
         {
           "word": "accompany",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "accompany",
           "reading": "accompany",
@@ -4673,7 +4673,7 @@
         },
         {
           "word": "storms",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "storms",
           "reading": "storms",
@@ -4714,7 +4714,7 @@
         },
         {
           "word": "thunder",
-          "meaning": "(未登録)",
+          "meaning": "稲妻",
           "isUnknown": false,
           "lemma": "thunder",
           "reading": "thunder",
@@ -4747,7 +4747,7 @@
         },
         {
           "word": "noises",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "noises",
           "reading": "noises",
@@ -4766,7 +4766,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -4799,7 +4799,7 @@
         },
         {
           "word": "frightening",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "frightening",
           "reading": "frightening",
@@ -4980,7 +4980,7 @@
       "segments": [
         {
           "word": "Lightning",
-          "meaning": "(未登録)",
+          "meaning": "夏の嵐を",
           "isUnknown": false,
           "lemma": "Lightning",
           "reading": "Lightning",
@@ -5013,7 +5013,7 @@
         },
         {
           "word": "flash",
-          "meaning": "(未登録)",
+          "meaning": "空の中の",
           "isUnknown": false,
           "lemma": "flash",
           "reading": "flash",
@@ -5139,7 +5139,7 @@
         },
         {
           "word": "clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "clouds",
           "reading": "clouds",
@@ -5183,7 +5183,7 @@
         },
         {
           "word": "electrical",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "electrical",
           "reading": "electrical",
@@ -5257,7 +5257,7 @@
         },
         {
           "word": "indoors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "indoors",
           "reading": "indoors",
@@ -5287,7 +5287,7 @@
         },
         {
           "word": "lightning",
-          "meaning": "(未登録)",
+          "meaning": "夏の嵐を",
           "isUnknown": false,
           "lemma": "lightning",
           "reading": "lightning",
@@ -5298,7 +5298,7 @@
         },
         {
           "word": "storms",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "storms",
           "reading": "storms",
@@ -5328,7 +5328,7 @@
         },
         {
           "word": "lightning",
-          "meaning": "(未登録)",
+          "meaning": "夏の嵐を",
           "isUnknown": false,
           "lemma": "lightning",
           "reading": "lightning",
@@ -5435,7 +5435,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -5642,7 +5642,7 @@
         },
         {
           "word": "drought",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drought",
           "reading": "drought",
@@ -5694,7 +5694,7 @@
         },
         {
           "word": "drought",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drought",
           "reading": "drought",
@@ -5768,7 +5768,7 @@
         },
         {
           "word": "moisture",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "moisture",
           "reading": "moisture",
@@ -5853,7 +5853,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -6095,7 +6095,7 @@
         },
         {
           "word": "rises",
-          "meaning": "(未登録)",
+          "meaning": "特に正午の間",
           "isUnknown": false,
           "lemma": "rises",
           "reading": "rises",
@@ -6158,7 +6158,7 @@
         },
         {
           "word": "5",
-          "meaning": "(未登録)",
+          "meaning": "数字の5",
           "isUnknown": false,
           "lemma": "5",
           "reading": "5",
@@ -6295,7 +6295,7 @@
         },
         {
           "word": "8",
-          "meaning": "(未登録)",
+          "meaning": "数字の8",
           "isUnknown": false,
           "lemma": "8",
           "reading": "8",
@@ -6413,7 +6413,7 @@
         },
         {
           "word": "plenty",
-          "meaning": "(未登録)",
+          "meaning": "人も",
           "isUnknown": false,
           "lemma": "plenty",
           "reading": "plenty",
@@ -6480,7 +6480,7 @@
         },
         {
           "word": "outdoor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "outdoor",
           "reading": "outdoor",
@@ -6684,7 +6684,7 @@
         },
         {
           "word": "sun's",
-          "meaning": "(未登録)",
+          "meaning": "できます",
           "isUnknown": false,
           "lemma": "sun's",
           "reading": "sun's",
@@ -6821,7 +6821,7 @@
         },
         {
           "word": "sunscreen",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sunscreen",
           "reading": "sunscreen",
@@ -6895,7 +6895,7 @@
         },
         {
           "word": "humid",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "humid",
           "reading": "humid",
@@ -6991,7 +6991,7 @@
         },
         {
           "word": "sticky",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sticky",
           "reading": "sticky",
@@ -7021,7 +7021,7 @@
       "segments": [
         {
           "word": "Humidity",
-          "meaning": "(未登録)",
+          "meaning": "湿度",
           "isUnknown": false,
           "lemma": "Humidity",
           "reading": "Humidity",
@@ -7098,7 +7098,7 @@
         },
         {
           "word": "moisture",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "moisture",
           "reading": "moisture",
@@ -7172,7 +7172,7 @@
         },
         {
           "word": "humidity",
-          "meaning": "(未登録)",
+          "meaning": "湿度",
           "isUnknown": false,
           "lemma": "humidity",
           "reading": "humidity",
@@ -7253,7 +7253,7 @@
         },
         {
           "word": "hotter",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hotter",
           "reading": "hotter",
@@ -7327,7 +7327,7 @@
         },
         {
           "word": "humid",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "humid",
           "reading": "humid",
@@ -7346,7 +7346,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -7390,7 +7390,7 @@
         },
         {
           "word": "mist",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mist",
           "reading": "mist",
@@ -7508,7 +7508,7 @@
         },
         {
           "word": "fall",
-          "meaning": "(未登録)",
+          "meaning": "好みます",
           "isUnknown": false,
           "lemma": "fall",
           "reading": "fall",
@@ -7704,7 +7704,7 @@
         },
         {
           "word": "drops",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drops",
           "reading": "drops",
@@ -7906,7 +7906,7 @@
         },
         {
           "word": "replaced",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "replaced",
           "reading": "replaced",
@@ -7950,7 +7950,7 @@
         },
         {
           "word": "mild",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mild",
           "reading": "mild",
@@ -8460,7 +8460,7 @@
         },
         {
           "word": "substance",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "substance",
           "reading": "substance",
@@ -8479,7 +8479,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -8701,7 +8701,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -8723,7 +8723,7 @@
         },
         {
           "word": "hidden",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "hidden",
           "reading": "hidden",
@@ -8830,7 +8830,7 @@
         },
         {
           "word": "pleasant",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "pleasant",
           "reading": "pleasant",
@@ -8967,7 +8967,7 @@
         },
         {
           "word": "skies",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "skies",
           "reading": "skies",
@@ -9008,7 +9008,7 @@
         },
         {
           "word": "sunshine",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sunshine",
           "reading": "sunshine",
@@ -9060,7 +9060,7 @@
         },
         {
           "word": "intense",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "intense",
           "reading": "intense",
@@ -9250,7 +9250,7 @@
         },
         {
           "word": "nights",
-          "meaning": "(未登録)",
+          "meaning": "何も",
           "isUnknown": false,
           "lemma": "nights",
           "reading": "nights",
@@ -9324,7 +9324,7 @@
         },
         {
           "word": "sunrise",
-          "meaning": "(未登録)",
+          "meaning": "より早く",
           "isUnknown": false,
           "lemma": "sunrise",
           "reading": "sunrise",
@@ -9431,7 +9431,7 @@
         },
         {
           "word": "fog",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fog",
           "reading": "fog",
@@ -9505,7 +9505,7 @@
       "segments": [
         {
           "word": "Fog",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Fog",
           "reading": "Fog",
@@ -9568,7 +9568,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -9579,7 +9579,7 @@
         },
         {
           "word": "touches",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "touches",
           "reading": "touches",
@@ -9675,7 +9675,7 @@
         },
         {
           "word": "mysterious",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mysterious",
           "reading": "mysterious",
@@ -9760,7 +9760,7 @@
         },
         {
           "word": "rises",
-          "meaning": "(未登録)",
+          "meaning": "特に正午の間",
           "isUnknown": false,
           "lemma": "rises",
           "reading": "rises",
@@ -9782,7 +9782,7 @@
         },
         {
           "word": "warms",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "warms",
           "reading": "warms",
@@ -9845,7 +9845,7 @@
         },
         {
           "word": "fog",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fog",
           "reading": "fog",
@@ -9867,7 +9867,7 @@
         },
         {
           "word": "disappears",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "disappears",
           "reading": "disappears",
@@ -9941,7 +9941,7 @@
         },
         {
           "word": "quite",
-          "meaning": "(未登録)",
+          "meaning": "かなり・全く",
           "isUnknown": false,
           "lemma": "quite",
           "reading": "quite",
@@ -9993,7 +9993,7 @@
         },
         {
           "word": "breeze",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "breeze",
           "reading": "breeze",
@@ -10004,7 +10004,7 @@
         },
         {
           "word": "blows",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blows",
           "reading": "blows",
@@ -10026,7 +10026,7 @@
         },
         {
           "word": "colorful",
-          "meaning": "(未登録)",
+          "meaning": "デザイナー",
           "isUnknown": false,
           "lemma": "colorful",
           "reading": "colorful",
@@ -10141,7 +10141,7 @@
         },
         {
           "word": "jump",
-          "meaning": "(未登録)",
+          "meaning": "山",
           "isUnknown": false,
           "lemma": "jump",
           "reading": "jump",
@@ -10163,7 +10163,7 @@
         },
         {
           "word": "piles",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "piles",
           "reading": "piles",
@@ -10185,7 +10185,7 @@
         },
         {
           "word": "fallen",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "fallen",
           "reading": "fallen",
@@ -10281,7 +10281,7 @@
         },
         {
           "word": "seeds",
-          "meaning": "(未登録)",
+          "meaning": "未来の環境管理のための。",
           "isUnknown": false,
           "lemma": "seeds",
           "reading": "seeds",
@@ -10410,7 +10410,7 @@
         },
         {
           "word": "progresses",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "progresses",
           "reading": "progresses",
@@ -10451,7 +10451,7 @@
         },
         {
           "word": "notice",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "notice",
           "reading": "notice",
@@ -10495,7 +10495,7 @@
         },
         {
           "word": "shorter",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "shorter",
           "reading": "shorter",
@@ -10625,7 +10625,7 @@
         },
         {
           "word": "twilight",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "twilight",
           "reading": "twilight",
@@ -10636,7 +10636,7 @@
         },
         {
           "word": "period",
-          "meaning": "(未登録)",
+          "meaning": "私",
           "isUnknown": false,
           "lemma": "period",
           "reading": "period",
@@ -10721,7 +10721,7 @@
         },
         {
           "word": "noticeable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "noticeable",
           "reading": "noticeable",
@@ -10784,7 +10784,7 @@
         },
         {
           "word": "crisp",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "crisp",
           "reading": "crisp",
@@ -10954,7 +10954,7 @@
         },
         {
           "word": "coldest",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "coldest",
           "reading": "coldest",
@@ -11028,7 +11028,7 @@
         },
         {
           "word": "drop",
-          "meaning": "(未登録)",
+          "meaning": "気温",
           "isUnknown": false,
           "lemma": "drop",
           "reading": "drop",
@@ -11050,7 +11050,7 @@
         },
         {
           "word": "freezing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "freezing",
           "reading": "freezing",
@@ -11080,7 +11080,7 @@
       "segments": [
         {
           "word": "which",
-          "meaning": "どれ・どちら",
+          "meaning": "(関係代名詞)その物等は・を",
           "isUnknown": false,
           "lemma": "which",
           "reading": "ウィ́ッチ",
@@ -11261,7 +11261,7 @@
         },
         {
           "word": "clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "clouds",
           "reading": "clouds",
@@ -11283,7 +11283,7 @@
         },
         {
           "word": "covers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "covers",
           "reading": "covers",
@@ -11349,7 +11349,7 @@
         },
         {
           "word": "blanket",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blanket",
           "reading": "blanket",
@@ -11379,7 +11379,7 @@
       "segments": [
         {
           "word": "Snowflakes",
-          "meaning": "(未登録)",
+          "meaning": "オンライン",
           "isUnknown": false,
           "lemma": "Snowflakes",
           "reading": "Snowflakes",
@@ -11423,7 +11423,7 @@
         },
         {
           "word": "crystals",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "crystals",
           "reading": "crystals",
@@ -11442,7 +11442,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -11486,7 +11486,7 @@
         },
         {
           "word": "clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "clouds",
           "reading": "clouds",
@@ -11527,7 +11527,7 @@
         },
         {
           "word": "snowflake",
-          "meaning": "(未登録)",
+          "meaning": "ユニークな形を",
           "isUnknown": false,
           "lemma": "snowflake",
           "reading": "snowflake",
@@ -11623,7 +11623,7 @@
         },
         {
           "word": "snowflakes",
-          "meaning": "(未登録)",
+          "meaning": "オンライン",
           "isUnknown": false,
           "lemma": "snowflakes",
           "reading": "snowflakes",
@@ -11634,7 +11634,7 @@
         },
         {
           "word": "fall",
-          "meaning": "(未登録)",
+          "meaning": "好みます",
           "isUnknown": false,
           "lemma": "fall",
           "reading": "fall",
@@ -11853,7 +11853,7 @@
         },
         {
           "word": "snowmen",
-          "meaning": "(未登録)",
+          "meaning": "そして雪合戦をして",
           "isUnknown": false,
           "lemma": "snowmen",
           "reading": "snowmen",
@@ -11886,7 +11886,7 @@
         },
         {
           "word": "snowball",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "snowball",
           "reading": "snowball",
@@ -12104,7 +12104,7 @@
         },
         {
           "word": "coats",
-          "meaning": "(未登録)",
+          "meaning": "学校",
           "isUnknown": false,
           "lemma": "coats",
           "reading": "coats",
@@ -12156,7 +12156,7 @@
       "segments": [
         {
           "word": "gloves",
-          "meaning": "(未登録)",
+          "meaning": "歓迎し",
           "isUnknown": false,
           "lemma": "gloves",
           "reading": "gloves",
@@ -12189,7 +12189,7 @@
         },
         {
           "word": "scarves",
-          "meaning": "(未登録)",
+          "meaning": "私たち",
           "isUnknown": false,
           "lemma": "scarves",
           "reading": "scarves",
@@ -12408,7 +12408,7 @@
         },
         {
           "word": "freezes",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "freezes",
           "reading": "freezes",
@@ -12523,7 +12523,7 @@
         },
         {
           "word": "branches",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "branches",
           "reading": "branches",
@@ -12534,7 +12534,7 @@
         },
         {
           "word": "sparkle",
-          "meaning": "(未登録)",
+          "meaning": "太陽光の中で",
           "isUnknown": false,
           "lemma": "sparkle",
           "reading": "sparkle",
@@ -12663,7 +12663,7 @@
         },
         {
           "word": "sidewalks",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sidewalks",
           "reading": "sidewalks",
@@ -12759,7 +12759,7 @@
         },
         {
           "word": "slippery",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "slippery",
           "reading": "slippery",
@@ -12885,7 +12885,7 @@
       "segments": [
         {
           "word": "Frost",
-          "meaning": "(未登録)",
+          "meaning": "植物",
           "isUnknown": false,
           "lemma": "Frost",
           "reading": "Frost",
@@ -12896,7 +12896,7 @@
         },
         {
           "word": "appears",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "appears",
           "reading": "appears",
@@ -12918,7 +12918,7 @@
         },
         {
           "word": "windows",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "windows",
           "reading": "windows",
@@ -12984,7 +12984,7 @@
         },
         {
           "word": "mornings",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mornings",
           "reading": "mornings",
@@ -13014,7 +13014,7 @@
       "segments": [
         {
           "word": "Frost",
-          "meaning": "(未登録)",
+          "meaning": "植物",
           "isUnknown": false,
           "lemma": "Frost",
           "reading": "Frost",
@@ -13047,7 +13047,7 @@
         },
         {
           "word": "thin",
-          "meaning": "(未登録)",
+          "meaning": "滑る",
           "isUnknown": false,
           "lemma": "thin",
           "reading": "thin",
@@ -13058,7 +13058,7 @@
         },
         {
           "word": "layer",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "layer",
           "reading": "layer",
@@ -13091,7 +13091,7 @@
         },
         {
           "word": "crystals",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "crystals",
           "reading": "crystals",
@@ -13110,7 +13110,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -13151,7 +13151,7 @@
         },
         {
           "word": "moisture",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "moisture",
           "reading": "moisture",
@@ -13195,7 +13195,7 @@
         },
         {
           "word": "freezes",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "freezes",
           "reading": "freezes",
@@ -13291,7 +13291,7 @@
         },
         {
           "word": "windows",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "windows",
           "reading": "windows",
@@ -13387,7 +13387,7 @@
         },
         {
           "word": "bitter",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "bitter",
           "reading": "bitter",
@@ -13601,7 +13601,7 @@
         },
         {
           "word": "blizzard",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blizzard",
           "reading": "blizzard",
@@ -13653,7 +13653,7 @@
         },
         {
           "word": "blizzard",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blizzard",
           "reading": "blizzard",
@@ -13798,7 +13798,7 @@
         },
         {
           "word": "blows",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blows",
           "reading": "blows",
@@ -13888,7 +13888,7 @@
         },
         {
           "word": "indoors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "indoors",
           "reading": "indoors",
@@ -13910,7 +13910,7 @@
         },
         {
           "word": "blizzards",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "blizzards",
           "reading": "blizzards",
@@ -14047,7 +14047,7 @@
         },
         {
           "word": "rises",
-          "meaning": "(未登録)",
+          "meaning": "特に正午の間",
           "isUnknown": false,
           "lemma": "rises",
           "reading": "rises",
@@ -14143,7 +14143,7 @@
         },
         {
           "word": "northern",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "northern",
           "reading": "northern",
@@ -14261,7 +14261,7 @@
         },
         {
           "word": "daylight",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "daylight",
           "reading": "daylight",
@@ -14302,7 +14302,7 @@
         },
         {
           "word": "sunrise",
-          "meaning": "(未登録)",
+          "meaning": "より早く",
           "isUnknown": false,
           "lemma": "sunrise",
           "reading": "sunrise",
@@ -14365,7 +14365,7 @@
         },
         {
           "word": "8",
-          "meaning": "(未登録)",
+          "meaning": "数字の8",
           "isUnknown": false,
           "lemma": "8",
           "reading": "8",
@@ -14547,7 +14547,7 @@
         },
         {
           "word": "4",
-          "meaning": "(未登録)",
+          "meaning": "数字の4",
           "isUnknown": false,
           "lemma": "4",
           "reading": "4",
@@ -14665,7 +14665,7 @@
         },
         {
           "word": "gray",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "gray",
           "reading": "gray",
@@ -14687,7 +14687,7 @@
         },
         {
           "word": "cloudy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "cloudy",
           "reading": "cloudy",
@@ -14717,7 +14717,7 @@
       "segments": [
         {
           "word": "Clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "Clouds",
           "reading": "Clouds",
@@ -14758,7 +14758,7 @@
         },
         {
           "word": "moisture",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "moisture",
           "reading": "moisture",
@@ -14813,7 +14813,7 @@
         },
         {
           "word": "condenses",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "condenses",
           "reading": "condenses",
@@ -14854,7 +14854,7 @@
         },
         {
           "word": "clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "clouds",
           "reading": "clouds",
@@ -14909,7 +14909,7 @@
         },
         {
           "word": "freezing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "freezing",
           "reading": "freezing",
@@ -14950,7 +14950,7 @@
       "segments": [
         {
           "word": "Freezing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Freezing",
           "reading": "Freezing",
@@ -15057,7 +15057,7 @@
         },
         {
           "word": "layer",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "layer",
           "reading": "layer",
@@ -15123,7 +15123,7 @@
         },
         {
           "word": "touches",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "touches",
           "reading": "touches",
@@ -15286,7 +15286,7 @@
         },
         {
           "word": "landscape",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "landscape",
           "reading": "landscape",
@@ -15297,7 +15297,7 @@
         },
         {
           "word": "covered",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "covered",
           "reading": "covered",
@@ -15404,7 +15404,7 @@
         },
         {
           "word": "bare",
-          "meaning": "(未登録)",
+          "meaning": "作ります",
           "isUnknown": false,
           "lemma": "bare",
           "reading": "bare",
@@ -15426,7 +15426,7 @@
         },
         {
           "word": "branches",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "branches",
           "reading": "branches",
@@ -15577,7 +15577,7 @@
         },
         {
           "word": "brighter",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "brighter",
           "reading": "brighter",
@@ -15662,7 +15662,7 @@
         },
         {
           "word": "nights",
-          "meaning": "(未登録)",
+          "meaning": "何も",
           "isUnknown": false,
           "lemma": "nights",
           "reading": "nights",
@@ -15755,7 +15755,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -15840,7 +15840,7 @@
         },
         {
           "word": "hurricane",
-          "meaning": "(未登録)",
+          "meaning": "巨大な嵐です",
           "isUnknown": false,
           "lemma": "hurricane",
           "reading": "hurricane",
@@ -16142,7 +16142,7 @@
         },
         {
           "word": "hit",
-          "meaning": "(未登録)",
+          "meaning": "もっ",
           "isUnknown": false,
           "lemma": "hit",
           "reading": "hit",
@@ -16194,7 +16194,7 @@
         },
         {
           "word": "tornado",
-          "meaning": "(未登録)",
+          "meaning": "激しく回転する柱です",
           "isUnknown": false,
           "lemma": "tornado",
           "reading": "tornado",
@@ -16227,7 +16227,7 @@
         },
         {
           "word": "violent",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "violent",
           "reading": "violent",
@@ -16238,7 +16238,7 @@
         },
         {
           "word": "spinning",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "spinning",
           "reading": "spinning",
@@ -16249,7 +16249,7 @@
         },
         {
           "word": "column",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "column",
           "reading": "column",
@@ -16290,7 +16290,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -16416,7 +16416,7 @@
       "segments": [
         {
           "word": "Tornadoes",
-          "meaning": "(未登録)",
+          "meaning": "竜巻",
           "isUnknown": false,
           "lemma": "Tornadoes",
           "reading": "Tornadoes",
@@ -16471,7 +16471,7 @@
         },
         {
           "word": "uproot",
-          "meaning": "(未登録)",
+          "meaning": "木々を",
           "isUnknown": false,
           "lemma": "uproot",
           "reading": "uproot",
@@ -16567,7 +16567,7 @@
         },
         {
           "word": "frightening",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "frightening",
           "reading": "frightening",
@@ -16608,7 +16608,7 @@
         },
         {
           "word": "avalanche",
-          "meaning": "(未登録)",
+          "meaning": "山岳地帯",
           "isUnknown": false,
           "lemma": "avalanche",
           "reading": "avalanche",
@@ -16704,7 +16704,7 @@
         },
         {
           "word": "amount",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "amount",
           "reading": "amount",
@@ -16737,7 +16737,7 @@
         },
         {
           "word": "suddenly",
-          "meaning": "(未登録)",
+          "meaning": "言うこと",
           "isUnknown": false,
           "lemma": "suddenly",
           "reading": "suddenly",
@@ -16748,7 +16748,7 @@
         },
         {
           "word": "slides",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "slides",
           "reading": "slides",
@@ -16781,7 +16781,7 @@
         },
         {
           "word": "slope",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "slope",
           "reading": "slope",
@@ -16811,7 +16811,7 @@
       "segments": [
         {
           "word": "Avalanches",
-          "meaning": "(未登録)",
+          "meaning": "雪崩",
           "isUnknown": false,
           "lemma": "Avalanches",
           "reading": "Avalanches",
@@ -16833,7 +16833,7 @@
         },
         {
           "word": "bury",
-          "meaning": "(未登録)",
+          "meaning": "埋める",
           "isUnknown": false,
           "lemma": "bury",
           "reading": "bury",
@@ -16918,7 +16918,7 @@
         },
         {
           "word": "who",
-          "meaning": "誰",
+          "meaning": "(関係代名詞)その人は",
           "isUnknown": false,
           "lemma": "who",
           "reading": "フ́ー",
@@ -17028,7 +17028,7 @@
         },
         {
           "word": "avalanche",
-          "meaning": "(未登録)",
+          "meaning": "山岳地帯",
           "isUnknown": false,
           "lemma": "avalanche",
           "reading": "avalanche",
@@ -17276,7 +17276,7 @@
         },
         {
           "word": "melt",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "melt",
           "reading": "melt",
@@ -17350,7 +17350,7 @@
         },
         {
           "word": "overflows",
-          "meaning": "(未登録)",
+          "meaning": "そして覆います",
           "isUnknown": false,
           "lemma": "overflows",
           "reading": "overflows",
@@ -17394,7 +17394,7 @@
         },
         {
           "word": "covers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "covers",
           "reading": "covers",
@@ -17424,7 +17424,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -17446,7 +17446,7 @@
         },
         {
           "word": "normally",
-          "meaning": "(未登録)",
+          "meaning": "自信",
           "isUnknown": false,
           "lemma": "normally",
           "reading": "normally",
@@ -17457,7 +17457,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -17572,7 +17572,7 @@
       "segments": [
         {
           "word": "Meteorologists",
-          "meaning": "(未登録)",
+          "meaning": "気象学者",
           "isUnknown": false,
           "lemma": "Meteorologists",
           "reading": "Meteorologists",
@@ -17605,7 +17605,7 @@
         },
         {
           "word": "who",
-          "meaning": "誰",
+          "meaning": "(関係代名詞)その人は",
           "isUnknown": false,
           "lemma": "who",
           "reading": "フ́ー",
@@ -17638,7 +17638,7 @@
         },
         {
           "word": "predict",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "predict",
           "reading": "predict",
@@ -17742,7 +17742,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -17775,7 +17775,7 @@
         },
         {
           "word": "humidity",
-          "meaning": "(未登録)",
+          "meaning": "湿度",
           "isUnknown": false,
           "lemma": "humidity",
           "reading": "humidity",
@@ -17964,7 +17964,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -18112,7 +18112,7 @@
         },
         {
           "word": "expect",
-          "meaning": "(未登録)",
+          "meaning": "今後数日間に",
           "isUnknown": false,
           "lemma": "expect",
           "reading": "expect",
@@ -18285,7 +18285,7 @@
         },
         {
           "word": "cloudy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "cloudy",
           "reading": "cloudy",
@@ -18315,7 +18315,7 @@
       "segments": [
         {
           "word": "rainy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -18348,7 +18348,7 @@
         },
         {
           "word": "snowy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "snowy",
           "reading": "snowy",
@@ -18511,7 +18511,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -18533,7 +18533,7 @@
         },
         {
           "word": "quite",
-          "meaning": "(未登録)",
+          "meaning": "かなり・全く",
           "isUnknown": false,
           "lemma": "quite",
           "reading": "quite",
@@ -18574,7 +18574,7 @@
         },
         {
           "word": "meteorologists",
-          "meaning": "(未登録)",
+          "meaning": "気象学者",
           "isUnknown": false,
           "lemma": "meteorologists",
           "reading": "meteorologists",
@@ -18596,7 +18596,7 @@
         },
         {
           "word": "satellites",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "satellites",
           "reading": "satellites",
@@ -18648,7 +18648,7 @@
       "segments": [
         {
           "word": "Satellites",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Satellites",
           "reading": "Satellites",
@@ -18659,7 +18659,7 @@
         },
         {
           "word": "orbit",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "orbit",
           "reading": "orbit",
@@ -18736,7 +18736,7 @@
         },
         {
           "word": "clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "clouds",
           "reading": "clouds",
@@ -18920,7 +18920,7 @@
         },
         {
           "word": "storms",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "storms",
           "reading": "storms",
@@ -19172,7 +19172,7 @@
         },
         {
           "word": "sunglasses",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sunglasses",
           "reading": "sunglasses",
@@ -19213,7 +19213,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -19287,7 +19287,7 @@
         },
         {
           "word": "umbrella",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "umbrella",
           "reading": "umbrella",
@@ -19309,7 +19309,7 @@
         },
         {
           "word": "waterproof",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "waterproof",
           "reading": "waterproof",
@@ -19320,7 +19320,7 @@
         },
         {
           "word": "jacket",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "jacket",
           "reading": "jacket",
@@ -19413,7 +19413,7 @@
         },
         {
           "word": "bundle",
-          "meaning": "(未登録)",
+          "meaning": "暖かい服に",
           "isUnknown": false,
           "lemma": "bundle",
           "reading": "bundle",
@@ -19725,7 +19725,7 @@
       "segments": [
         {
           "word": "Cloudy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Cloudy",
           "reading": "Cloudy",
@@ -19747,7 +19747,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -19824,7 +19824,7 @@
         },
         {
           "word": "sleepy",
-          "meaning": "(未登録)",
+          "meaning": "固定すること",
           "isUnknown": false,
           "lemma": "sleepy",
           "reading": "sleepy",
@@ -19846,7 +19846,7 @@
         },
         {
           "word": "sad",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sad",
           "reading": "sad",
@@ -20101,7 +20101,7 @@
         },
         {
           "word": "amount",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "amount",
           "reading": "amount",
@@ -20145,7 +20145,7 @@
         },
         {
           "word": "sunshine",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sunshine",
           "reading": "sunshine",
@@ -20282,7 +20282,7 @@
         },
         {
           "word": "flood",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "flood",
           "reading": "flood",
@@ -20389,7 +20389,7 @@
         },
         {
           "word": "drought",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drought",
           "reading": "drought",
@@ -20555,7 +20555,7 @@
         },
         {
           "word": "harvest",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "harvest",
           "reading": "harvest",
@@ -20618,7 +20618,7 @@
         },
         {
           "word": "outdoor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "outdoor",
           "reading": "outdoor",
@@ -20799,7 +20799,7 @@
       "segments": [
         {
           "word": "Skiing",
-          "meaning": "(未登録)",
+          "meaning": "慣れました",
           "isUnknown": false,
           "lemma": "Skiing",
           "reading": "Skiing",
@@ -20832,7 +20832,7 @@
         },
         {
           "word": "skating",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "skating",
           "reading": "skating",
@@ -20917,7 +20917,7 @@
       "segments": [
         {
           "word": "Hiking",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Hiking",
           "reading": "Hiking",
@@ -20939,7 +20939,7 @@
         },
         {
           "word": "pleasant",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "pleasant",
           "reading": "pleasant",
@@ -21002,7 +21002,7 @@
         },
         {
           "word": "mild",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mild",
           "reading": "mild",
@@ -21102,7 +21102,7 @@
       "segments": [
         {
           "word": "Meteorologists",
-          "meaning": "(未登録)",
+          "meaning": "気象学者",
           "isUnknown": false,
           "lemma": "Meteorologists",
           "reading": "Meteorologists",
@@ -21143,7 +21143,7 @@
       "segments": [
         {
           "word": "who",
-          "meaning": "誰",
+          "meaning": "(関係代名詞)その人は",
           "isUnknown": false,
           "lemma": "who",
           "reading": "フ́ー",
@@ -21209,7 +21209,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -21261,7 +21261,7 @@
         },
         {
           "word": "sophisticated",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sophisticated",
           "reading": "sophisticated",
@@ -21272,7 +21272,7 @@
         },
         {
           "word": "instruments",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "instruments",
           "reading": "instruments",
@@ -21302,7 +21302,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -21335,7 +21335,7 @@
         },
         {
           "word": "humidity",
-          "meaning": "(未登録)",
+          "meaning": "湿度",
           "isUnknown": false,
           "lemma": "humidity",
           "reading": "humidity",
@@ -21499,7 +21499,7 @@
       "segments": [
         {
           "word": "Satellites",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "Satellites",
           "reading": "Satellites",
@@ -21510,7 +21510,7 @@
         },
         {
           "word": "orbiting",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "orbiting",
           "reading": "orbiting",
@@ -21576,7 +21576,7 @@
         },
         {
           "word": "formations",
-          "meaning": "(未登録)",
+          "meaning": "宇宙から",
           "isUnknown": false,
           "lemma": "formations",
           "reading": "formations",
@@ -21672,7 +21672,7 @@
         },
         {
           "word": "forecasting",
-          "meaning": "(未登録)",
+          "meaning": "改善されました",
           "isUnknown": false,
           "lemma": "forecasting",
           "reading": "forecasting",
@@ -21694,7 +21694,7 @@
         },
         {
           "word": "improved",
-          "meaning": "(未登録)",
+          "meaning": "改善した・向上した",
           "isUnknown": false,
           "lemma": "improved",
           "reading": "improved",
@@ -21801,7 +21801,7 @@
         },
         {
           "word": "meteorologists",
-          "meaning": "(未登録)",
+          "meaning": "気象学者",
           "isUnknown": false,
           "lemma": "meteorologists",
           "reading": "meteorologists",
@@ -21831,7 +21831,7 @@
         },
         {
           "word": "predict",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "predict",
           "reading": "predict",
@@ -21875,7 +21875,7 @@
         },
         {
           "word": "ahead",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "ahead",
           "reading": "ahead",
@@ -21897,7 +21897,7 @@
         },
         {
           "word": "reasonable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "reasonable",
           "reading": "reasonable",
@@ -21982,7 +21982,7 @@
         },
         {
           "word": "somewhat",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "somewhat",
           "reading": "somewhat",
@@ -21993,7 +21993,7 @@
         },
         {
           "word": "unpredictable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "unpredictable",
           "reading": "unpredictable",
@@ -22130,7 +22130,7 @@
         },
         {
           "word": "atmospheric",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "atmospheric",
           "reading": "atmospheric",
@@ -22226,7 +22226,7 @@
         },
         {
           "word": "tools",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "tools",
           "reading": "tools",
@@ -22289,7 +22289,7 @@
       "segments": [
         {
           "word": "Radar",
-          "meaning": "(未登録)",
+          "meaning": "レーダー",
           "isUnknown": false,
           "lemma": "Radar",
           "reading": "Radar",
@@ -22311,7 +22311,7 @@
         },
         {
           "word": "precipitation",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "precipitation",
           "reading": "precipitation",
@@ -22448,7 +22448,7 @@
         },
         {
           "word": "balloons",
-          "meaning": "(未登録)",
+          "meaning": "厳しく",
           "isUnknown": false,
           "lemma": "balloons",
           "reading": "balloons",
@@ -22470,7 +22470,7 @@
         },
         {
           "word": "instruments",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "instruments",
           "reading": "instruments",
@@ -22544,7 +22544,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -22588,7 +22588,7 @@
         },
         {
           "word": "altitudes",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "altitudes",
           "reading": "altitudes",
@@ -22662,7 +22662,7 @@
         },
         {
           "word": "amounts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "amounts",
           "reading": "amounts",
@@ -22725,7 +22725,7 @@
         },
         {
           "word": "predictions",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "predictions",
           "reading": "predictions",
@@ -22766,7 +22766,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -22917,7 +22917,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -23021,7 +23021,7 @@
         },
         {
           "word": "harvest",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "harvest",
           "reading": "harvest",
@@ -23062,7 +23062,7 @@
       "segments": [
         {
           "word": "Airlines",
-          "meaning": "(未登録)",
+          "meaning": "航空会社",
           "isUnknown": false,
           "lemma": "Airlines",
           "reading": "Airlines",
@@ -23147,7 +23147,7 @@
         },
         {
           "word": "flight",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "flight",
           "reading": "flight",
@@ -23226,7 +23226,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -23248,7 +23248,7 @@
         },
         {
           "word": "schedule",
-          "meaning": "(未登録)",
+          "meaning": "スケジュール・予定",
           "isUnknown": false,
           "lemma": "schedule",
           "reading": "schedule",
@@ -23259,7 +23259,7 @@
         },
         {
           "word": "outdoor",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "outdoor",
           "reading": "outdoor",
@@ -23333,7 +23333,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -23344,7 +23344,7 @@
         },
         {
           "word": "indicate",
-          "meaning": "(未登録)",
+          "meaning": "太陽アイコン",
           "isUnknown": false,
           "lemma": "indicate",
           "reading": "indicate",
@@ -23388,7 +23388,7 @@
         },
         {
           "word": "icons",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "icons",
           "reading": "icons",
@@ -23421,7 +23421,7 @@
         },
         {
           "word": "skies",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "skies",
           "reading": "skies",
@@ -23451,7 +23451,7 @@
       "segments": [
         {
           "word": "clouds",
-          "meaning": "(未登録)",
+          "meaning": "雲が帯電するとき",
           "isUnknown": false,
           "lemma": "clouds",
           "reading": "clouds",
@@ -23473,7 +23473,7 @@
         },
         {
           "word": "overcast",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "overcast",
           "reading": "overcast",
@@ -23525,7 +23525,7 @@
         },
         {
           "word": "drops",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "drops",
           "reading": "drops",
@@ -23547,7 +23547,7 @@
         },
         {
           "word": "precipitation",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "precipitation",
           "reading": "precipitation",
@@ -23588,7 +23588,7 @@
         },
         {
           "word": "predictions",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "predictions",
           "reading": "predictions",
@@ -23684,7 +23684,7 @@
         },
         {
           "word": "forecasts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "forecasts",
           "reading": "forecasts",
@@ -23695,7 +23695,7 @@
         },
         {
           "word": "warn",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "warn",
           "reading": "warn",
@@ -23706,7 +23706,7 @@
         },
         {
           "word": "boaters",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "boaters",
           "reading": "boaters",
@@ -23728,7 +23728,7 @@
         },
         {
           "word": "sailors",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "sailors",
           "reading": "sailors",
@@ -23758,7 +23758,7 @@
         },
         {
           "word": "potentially",
-          "meaning": "(未登録)",
+          "meaning": "地産地消も",
           "isUnknown": false,
           "lemma": "potentially",
           "reading": "potentially",
@@ -23851,7 +23851,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -23951,7 +23951,7 @@
         },
         {
           "word": "average",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "average",
           "reading": "average",
@@ -24360,7 +24360,7 @@
         },
         {
           "word": "describes",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "describes",
           "reading": "describes",
@@ -24393,7 +24393,7 @@
         },
         {
           "word": "atmospheric",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "atmospheric",
           "reading": "atmospheric",
@@ -24445,7 +24445,7 @@
         },
         {
           "word": "refers",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "refers",
           "reading": "refers",
@@ -24541,7 +24541,7 @@
         },
         {
           "word": "centuries",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "centuries",
           "reading": "centuries",
@@ -24619,7 +24619,7 @@
         },
         {
           "word": "primarily",
-          "meaning": "(未登録)",
+          "meaning": "啓発的でした",
           "isUnknown": false,
           "lemma": "primarily",
           "reading": "primarily",
@@ -24663,7 +24663,7 @@
         },
         {
           "word": "releasing",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "releasing",
           "reading": "releasing",
@@ -24796,7 +24796,7 @@
         },
         {
           "word": "appears",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "appears",
           "reading": "appears",
@@ -24914,7 +24914,7 @@
         },
         {
           "word": "retreating",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "retreating",
           "reading": "retreating",
@@ -25089,7 +25089,7 @@
         },
         {
           "word": "melts",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "melts",
           "reading": "melts",
@@ -25163,7 +25163,7 @@
         },
         {
           "word": "intense",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "intense",
           "reading": "intense",
@@ -25237,7 +25237,7 @@
         },
         {
           "word": "increased",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "increased",
           "reading": "increased",
@@ -25289,7 +25289,7 @@
         },
         {
           "word": "waves",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "waves",
           "reading": "waves",
@@ -25525,7 +25525,7 @@
         },
         {
           "word": "migrate",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "migrate",
           "reading": "migrate",
@@ -25555,7 +25555,7 @@
         },
         {
           "word": "cooler",
-          "meaning": "(未登録)",
+          "meaning": "飾られた",
           "isUnknown": false,
           "lemma": "cooler",
           "reading": "cooler",
@@ -25873,7 +25873,7 @@
         },
         {
           "word": "shift",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "shift",
           "reading": "shift",
@@ -25928,7 +25928,7 @@
         },
         {
           "word": "predictable",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "predictable",
           "reading": "predictable",
@@ -26013,7 +26013,7 @@
         },
         {
           "word": "tornadoes",
-          "meaning": "(未登録)",
+          "meaning": "竜巻",
           "isUnknown": false,
           "lemma": "tornadoes",
           "reading": "tornadoes",
@@ -26098,7 +26098,7 @@
         },
         {
           "word": "waves",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "waves",
           "reading": "waves",
@@ -26202,7 +26202,7 @@
         },
         {
           "word": "attribute",
-          "meaning": "(未登録)",
+          "meaning": "単一の現象",
           "isUnknown": false,
           "lemma": "attribute",
           "reading": "attribute",
@@ -26317,7 +26317,7 @@
         },
         {
           "word": "overall",
-          "meaning": "(未登録)",
+          "meaning": "深刻さと頻度の増加を",
           "isUnknown": false,
           "lemma": "overall",
           "reading": "overall",
@@ -26361,7 +26361,7 @@
         },
         {
           "word": "severity",
-          "meaning": "(未登録)",
+          "meaning": "状態の",
           "isUnknown": false,
           "lemma": "severity",
           "reading": "severity",
@@ -26383,7 +26383,7 @@
         },
         {
           "word": "frequency",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "frequency",
           "reading": "frequency",
@@ -26446,7 +26446,7 @@
         },
         {
           "word": "particular",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "particular",
           "reading": "particular",
@@ -26877,7 +26877,7 @@
         },
         {
           "word": "modifying",
-          "meaning": "(未登録)",
+          "meaning": "産業慣行",
           "isUnknown": false,
           "lemma": "modifying",
           "reading": "modifying",
@@ -27190,7 +27190,7 @@
         },
         {
           "word": "environmentally",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "environmentally",
           "reading": "environmentally",
@@ -27201,7 +27201,7 @@
         },
         {
           "word": "conscious",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "conscious",
           "reading": "conscious",
@@ -27330,7 +27330,7 @@
         },
         {
           "word": "mindful",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "mindful",
           "reading": "mindful",
@@ -27541,7 +27541,7 @@
       "segments": [
         {
           "word": "that",
-          "meaning": "あれ・あの",
+          "meaning": "(関係代名詞)その人・物等は・を",
           "isUnknown": false,
           "lemma": "that",
           "reading": "ザ́ット",
@@ -27903,7 +27903,7 @@
         },
         {
           "word": "warmth",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "warmth",
           "reading": "warmth",
@@ -28584,7 +28584,7 @@
         },
         {
           "word": "type",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "type",
           "reading": "type",
@@ -28843,7 +28843,7 @@
         },
         {
           "word": "nature's",
-          "meaning": "(未登録)",
+          "meaning": "(要確認)",
           "isUnknown": false,
           "lemma": "nature's",
           "reading": "nature's",

@@ -299,6 +299,21 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       return existingMeaning;
     }
     
+    // 関係代名詞の特別処理
+    const lowerWord = word.toLowerCase();
+    if (lowerWord === 'who') {
+      return '(関係代名詞)その人は';
+    }
+    if (lowerWord === 'whom') {
+      return '(関係代名詞)その人を';
+    }
+    if (lowerWord === 'which') {
+      return '(関係代名詞)その物等は・を';
+    }
+    if (lowerWord === 'that') {
+      return '(関係代名詞)その人・物等は・を';
+    }
+    
     // 辞書から取得
     const lemma = getLemma(word);
     const wordData = wordDictionary.get(lemma);
@@ -638,45 +653,72 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     );
   };
 
-  // 個別フレーズの訳を表示（2段階）
-  const handleShowPhraseTranslation = (phraseIndex: number) => {
-    // 4段階のトグル
-    // 1. 単語の意味を表示 → 単語カードに意味表示
-    // 2. フレーズの意味を表示 → フレーズ全体の和訳表示
-    // 3. フレーズの意味を非表示 → フレーズ全体の和訳非表示
-    // 4. 単語の意味を非表示 → 単語カードの意味非表示
+  // 個別フレーズの訳を表示（4段階トグル）
+  const handleShowPhraseTranslation = (phraseIndex: number, direction: 'forward' | 'backward' = 'forward') => {
+    // 4段階の双方向トグル
+    // 状態1: すべて非表示
+    // 状態2: 単語の意味を表示
+    // 状態3: フレーズの意味を表示
+    // 状態4: フレーズの意味を非表示（単語の意味は表示中）
     
     const wordVisible = wordMeaningsVisible[phraseIndex];
     const phraseVisible = phraseTranslations[phraseIndex];
     
-    if (!wordVisible && !phraseVisible) {
-      // 状態1 → 状態2: 単語の意味を表示
-      setWordMeaningsVisible(prev => {
-        const newState = [...prev];
-        newState[phraseIndex] = true;
-        return newState;
-      });
-    } else if (wordVisible && !phraseVisible) {
-      // 状態2 → 状態3: フレーズの意味を表示
-      setPhraseTranslations(prev => {
-        const newState = [...prev];
-        newState[phraseIndex] = true;
-        return newState;
-      });
-    } else if (wordVisible && phraseVisible) {
-      // 状態3 → 状態4: フレーズの意味を非表示
-      setPhraseTranslations(prev => {
-        const newState = [...prev];
-        newState[phraseIndex] = false;
-        return newState;
-      });
+    if (direction === 'forward') {
+      // 順方向トグル
+      if (!wordVisible && !phraseVisible) {
+        // 状態1 → 状態2: 単語の意味を表示
+        setWordMeaningsVisible(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = true;
+          return newState;
+        });
+      } else if (wordVisible && !phraseVisible) {
+        // 状態2 → 状態3: フレーズの意味を表示
+        setPhraseTranslations(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = true;
+          return newState;
+        });
+      } else if (wordVisible && phraseVisible) {
+        // 状態3 → 状態4: フレーズの意味を非表示（単語の意味は表示のまま）
+        setPhraseTranslations(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = false;
+          return newState;
+        });
+      } else {
+        // 状態4 → 状態1: 単語の意味を非表示
+        setWordMeaningsVisible(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = false;
+          return newState;
+        });
+      }
     } else {
-      // 状態4 → 状態1: 単語の意味を非表示
-      setWordMeaningsVisible(prev => {
-        const newState = [...prev];
-        newState[phraseIndex] = false;
-        return newState;
-      });
+      // 逆方向トグル
+      if (!wordVisible && !phraseVisible) {
+        // 状態1 → 状態4: 単語の意味を表示（フレーズは非表示状態へ）
+        setWordMeaningsVisible(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = true;
+          return newState;
+        });
+      } else if (wordVisible && !phraseVisible) {
+        // 状態2または4 → 状態1: 単語の意味を非表示
+        setWordMeaningsVisible(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = false;
+          return newState;
+        });
+      } else if (wordVisible && phraseVisible) {
+        // 状態3 → 状態2: フレーズの意味を非表示
+        setPhraseTranslations(prev => {
+          const newState = [...prev];
+          newState[phraseIndex] = false;
+          return newState;
+        });
+      }
     }
   };
 
@@ -1077,15 +1119,23 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                   </div>
                 )}
                 
-                <button
-                  className="w-full px-4 py-3 text-sm font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
-                  onClick={() => handleShowPhraseTranslation(phraseIdx)}
-                >
-                  {!wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && '単語の意味を表示 ▼'}
-                  {wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && 'フレーズの意味を表示 ▼'}
-                  {wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && 'フレーズの意味を非表示 ▲'}
-                  {!wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && '単語の意味を非表示 ▲'}
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    className="flex-1 px-4 py-3 text-sm font-medium bg-gray-300 text-gray-700 border-2 border-gray-300 rounded-lg transition-all duration-200 hover:bg-gray-400 hover:shadow-md dark:bg-gray-600 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-500"
+                    onClick={() => handleShowPhraseTranslation(phraseIdx, 'backward')}
+                  >
+                    ◀ 戻る
+                  </button>
+                  <button
+                    className="flex-1 px-4 py-3 text-sm font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
+                    onClick={() => handleShowPhraseTranslation(phraseIdx, 'forward')}
+                  >
+                    {!wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && '単語の意味を表示 ▶'}
+                    {wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && 'フレーズの意味を表示 ▶'}
+                    {wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && 'フレーズの意味を非表示 ▶'}
+                    {!wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && '単語の意味を非表示 ▶'}
+                  </button>
+                </div>
               </div>
             );
             })}
@@ -1539,8 +1589,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           display: inline-flex;
           flex-direction: column;
           align-items: center;
-          padding: 6px 10px;
-          margin: 2px;
+          padding: 2px 5px;
+          margin: 1px;
           background: #f8f9fa;
           border: 1px solid #dee2e6;
           border-radius: 4px;
@@ -1625,12 +1675,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         .word-card-meaning {
           font-size: 12px;
           color: #666;
-          margin-top: 4px;
+          margin-top: 1px;
           text-align: center;
-          padding: 2px 4px;
+          padding: 1px 3px;
           background: rgba(255, 255, 255, 0.8);
           border-radius: 2px;
-          min-height: 16px;
+          min-height: 14px;
         }
 
         .dark-mode .word-card-meaning {

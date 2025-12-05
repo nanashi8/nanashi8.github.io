@@ -406,8 +406,8 @@
   }
 
   .word-card {
-    padding: 6px 10px;
-    margin: 2px;
+    padding: 2px 5px;
+    margin: 1px;
     font-size: 0.95em;
     min-width: auto;
   }
@@ -419,7 +419,7 @@
   .word-card-meaning {
     font-size: 0.75em;
     max-width: none;
-    padding: 2px 4px;
+    padding: 1px 3px;
   }
 
   .phrase-card {
