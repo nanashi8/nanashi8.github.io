@@ -1578,7 +1578,7 @@
         },
         {
           "word": "lettuce",
-          "meaning": "(要確認)",
+          "meaning": "レタス",
           "isUnknown": false,
           "lemma": "lettuce",
           "reading": "lettuce",
@@ -1674,7 +1674,7 @@
         },
         {
           "word": "ripe",
-          "meaning": "(要確認)",
+          "meaning": "熟した",
           "isUnknown": false,
           "lemma": "ripe",
           "reading": "ripe",
@@ -1797,7 +1797,7 @@
         },
         {
           "word": "potatoes",
-          "meaning": "(要確認)",
+          "meaning": "ジャガイモ",
           "isUnknown": false,
           "lemma": "potatoes",
           "reading": "potatoes",
@@ -3275,7 +3275,7 @@
         },
         {
           "word": "salmon",
-          "meaning": "(要確認)",
+          "meaning": "サケ",
           "isUnknown": false,
           "lemma": "salmon",
           "reading": "salmon",
@@ -4019,7 +4019,7 @@
         },
         {
           "word": "loaf",
-          "meaning": "(要確認)",
+          "meaning": "パンのかたまり",
           "isUnknown": false,
           "lemma": "loaf",
           "reading": "loaf",
@@ -4593,7 +4593,7 @@
         },
         {
           "word": "flour",
-          "meaning": "(要確認)",
+          "meaning": "小麦粉",
           "isUnknown": false,
           "lemma": "flour",
           "reading": "flour",
@@ -4656,7 +4656,7 @@
         },
         {
           "word": "yeast",
-          "meaning": "(要確認)",
+          "meaning": "酵母",
           "isUnknown": false,
           "lemma": "yeast",
           "reading": "yeast",
@@ -4849,7 +4849,7 @@
         },
         {
           "word": "oven",
-          "meaning": "(要確認)",
+          "meaning": "オーブン",
           "isUnknown": false,
           "lemma": "oven",
           "reading": "oven",
@@ -5826,7 +5826,7 @@
         },
         {
           "word": "cakes",
-          "meaning": "(要確認)",
+          "meaning": "ケーキ",
           "isUnknown": false,
           "lemma": "cakes",
           "reading": "cakes",
@@ -5933,7 +5933,7 @@
         },
         {
           "word": "flour",
-          "meaning": "(要確認)",
+          "meaning": "小麦粉",
           "isUnknown": false,
           "lemma": "flour",
           "reading": "flour",
@@ -6196,7 +6196,7 @@
         },
         {
           "word": "packaged",
-          "meaning": "(要確認)",
+          "meaning": "包装された",
           "isUnknown": false,
           "lemma": "packaged",
           "reading": "packaged",
@@ -6410,7 +6410,7 @@
         },
         {
           "word": "picks",
-          "meaning": "(要確認)",
+          "meaning": "選ぶ",
           "isUnknown": false,
           "lemma": "picks",
           "reading": "picks",
@@ -6432,7 +6432,7 @@
         },
         {
           "word": "spices",
-          "meaning": "(要確認)",
+          "meaning": "スパイス",
           "isUnknown": false,
           "lemma": "spices",
           "reading": "spices",
@@ -6476,7 +6476,7 @@
         },
         {
           "word": "pepper",
-          "meaning": "(要確認)",
+          "meaning": "コショウ",
           "isUnknown": false,
           "lemma": "pepper",
           "reading": "pepper",
@@ -6528,7 +6528,7 @@
         },
         {
           "word": "seasonings",
-          "meaning": "(要確認)",
+          "meaning": "調味料",
           "isUnknown": false,
           "lemma": "seasonings",
           "reading": "seasonings",
@@ -6791,7 +6791,7 @@
         },
         {
           "word": "jams",
-          "meaning": "(要確認)",
+          "meaning": "ジャム",
           "isUnknown": false,
           "lemma": "jams",
           "reading": "jams",
@@ -6994,7 +6994,7 @@
         },
         {
           "word": "peanut",
-          "meaning": "(要確認)",
+          "meaning": "ピーナッツ",
           "isUnknown": false,
           "lemma": "peanut",
           "reading": "peanut",
@@ -7090,7 +7090,7 @@
         },
         {
           "word": "jar",
-          "meaning": "(要確認)",
+          "meaning": "瓶",
           "isUnknown": false,
           "lemma": "jar",
           "reading": "jar",
@@ -7323,7 +7323,7 @@
         },
         {
           "word": "soda",
-          "meaning": "(要確認)",
+          "meaning": "ソーダ",
           "isUnknown": false,
           "lemma": "soda",
           "reading": "soda",
@@ -8374,7 +8374,7 @@
       "segments": [
         {
           "word": "Frozen",
-          "meaning": "(要確認)",
+          "meaning": "凍った",
           "isUnknown": false,
           "lemma": "Frozen",
           "reading": "Frozen",
@@ -8721,7 +8721,7 @@
         },
         {
           "word": "vanilla",
-          "meaning": "(要確認)",
+          "meaning": "バニラ",
           "isUnknown": false,
           "lemma": "vanilla",
           "reading": "vanilla",
@@ -10038,7 +10038,7 @@
         },
         {
           "word": "cash",
-          "meaning": "(要確認)",
+          "meaning": "現金",
           "isUnknown": false,
           "lemma": "cash",
           "reading": "cash",
@@ -10167,7 +10167,7 @@
         },
         {
           "word": "receipt",
-          "meaning": "(要確認)",
+          "meaning": "領収書",
           "isUnknown": false,
           "lemma": "receipt",
           "reading": "receipt",
@@ -10988,7 +10988,7 @@
         },
         {
           "word": "grocery",
-          "meaning": "(要確認)",
+          "meaning": "食料品店",
           "isUnknown": false,
           "lemma": "grocery",
           "reading": "grocery",
@@ -11682,7 +11682,7 @@
         },
         {
           "word": "freezer",
-          "meaning": "(要確認)",
+          "meaning": "冷凍庫",
           "isUnknown": false,
           "lemma": "freezer",
           "reading": "freezer",
@@ -11940,7 +11940,7 @@
         },
         {
           "word": "cupboard",
-          "meaning": "(要確認)",
+          "meaning": "食器棚",
           "isUnknown": false,
           "lemma": "cupboard",
           "reading": "cupboard",
@@ -13288,7 +13288,7 @@
         },
         {
           "word": "lengthy",
-          "meaning": "(要確認)",
+          "meaning": "長い",
           "isUnknown": false,
           "lemma": "lengthy",
           "reading": "lengthy",
@@ -13299,7 +13299,7 @@
         },
         {
           "word": "queue",
-          "meaning": "(要確認)",
+          "meaning": "列",
           "isUnknown": false,
           "lemma": "queue",
           "reading": "queue",
@@ -13662,7 +13662,7 @@
         },
         {
           "word": "hang",
-          "meaning": "(要確認)",
+          "meaning": "掛ける",
           "isUnknown": false,
           "lemma": "hang",
           "reading": "hang",
@@ -13717,7 +13717,7 @@
         },
         {
           "word": "cheerful",
-          "meaning": "(要確認)",
+          "meaning": "陽気な",
           "isUnknown": false,
           "lemma": "cheerful",
           "reading": "cheerful",
@@ -13791,7 +13791,7 @@
         },
         {
           "word": "festive",
-          "meaning": "(要確認)",
+          "meaning": "祝祭の",
           "isUnknown": false,
           "lemma": "festive",
           "reading": "festive",
@@ -13891,7 +13891,7 @@
         },
         {
           "word": "festive",
-          "meaning": "(要確認)",
+          "meaning": "祝祭の",
           "isUnknown": false,
           "lemma": "festive",
           "reading": "festive",
@@ -14002,7 +14002,7 @@
         },
         {
           "word": "turkeys",
-          "meaning": "(要確認)",
+          "meaning": "七面鳥",
           "isUnknown": false,
           "lemma": "turkeys",
           "reading": "turkeys",
@@ -14046,7 +14046,7 @@
         },
         {
           "word": "feasts",
-          "meaning": "(要確認)",
+          "meaning": "宴会",
           "isUnknown": false,
           "lemma": "feasts",
           "reading": "feasts",
@@ -14120,7 +14120,7 @@
         },
         {
           "word": "specialty",
-          "meaning": "(要確認)",
+          "meaning": "専門",
           "isUnknown": false,
           "lemma": "specialty",
           "reading": "specialty",
@@ -14153,7 +14153,7 @@
         },
         {
           "word": "gingerbread",
-          "meaning": "(要確認)",
+          "meaning": "ジンジャーブレッド",
           "isUnknown": false,
           "lemma": "gingerbread",
           "reading": "gingerbread",
@@ -14197,7 +14197,7 @@
         },
         {
           "word": "cakes",
-          "meaning": "(要確認)",
+          "meaning": "ケーキ",
           "isUnknown": false,
           "lemma": "cakes",
           "reading": "cakes",
@@ -14801,7 +14801,7 @@
         },
         {
           "word": "malfunctioned",
-          "meaning": "(要確認)",
+          "meaning": "故障した",
           "isUnknown": false,
           "lemma": "malfunctioned",
           "reading": "malfunctioned",
@@ -16101,7 +16101,7 @@
         },
         {
           "word": "persuasive",
-          "meaning": "(要確認)",
+          "meaning": "説得力のある",
           "isUnknown": false,
           "lemma": "persuasive",
           "reading": "persuasive",
@@ -16112,7 +16112,7 @@
         },
         {
           "word": "slogans",
-          "meaning": "(要確認)",
+          "meaning": "スローガン",
           "isUnknown": false,
           "lemma": "slogans",
           "reading": "slogans",
@@ -16346,7 +16346,7 @@
         },
         {
           "word": "advises",
-          "meaning": "(要確認)",
+          "meaning": "助言する",
           "isUnknown": false,
           "lemma": "advises",
           "reading": "advises",
@@ -16475,7 +16475,7 @@
         },
         {
           "word": "solely",
-          "meaning": "(要確認)",
+          "meaning": "単独で",
           "isUnknown": false,
           "lemma": "solely",
           "reading": "solely",
@@ -16723,7 +16723,7 @@
         },
         {
           "word": "towels",
-          "meaning": "(要確認)",
+          "meaning": "タオル",
           "isUnknown": false,
           "lemma": "towels",
           "reading": "towels",
@@ -16871,7 +16871,7 @@
         },
         {
           "word": "shampoo",
-          "meaning": "(要確認)",
+          "meaning": "シャンプー",
           "isUnknown": false,
           "lemma": "shampoo",
           "reading": "shampoo",
@@ -16893,7 +16893,7 @@
         },
         {
           "word": "soap",
-          "meaning": "(要確認)",
+          "meaning": "石鹸",
           "isUnknown": false,
           "lemma": "soap",
           "reading": "soap",
@@ -17071,7 +17071,7 @@
         },
         {
           "word": "household",
-          "meaning": "(要確認)",
+          "meaning": "家庭",
           "isUnknown": false,
           "lemma": "household",
           "reading": "household",
@@ -17478,7 +17478,7 @@
         },
         {
           "word": "melons",
-          "meaning": "(要確認)",
+          "meaning": "メロン",
           "isUnknown": false,
           "lemma": "melons",
           "reading": "melons",
@@ -18443,7 +18443,7 @@
         },
         {
           "word": "picked",
-          "meaning": "(要確認)",
+          "meaning": "選んだ",
           "isUnknown": false,
           "lemma": "picked",
           "reading": "picked",
@@ -18572,7 +18572,7 @@
         },
         {
           "word": "promotional",
-          "meaning": "(要確認)",
+          "meaning": "宣伝の",
           "isUnknown": false,
           "lemma": "promotional",
           "reading": "promotional",
@@ -19574,7 +19574,7 @@
         },
         {
           "word": "exceed",
-          "meaning": "(要確認)",
+          "meaning": "超える",
           "isUnknown": false,
           "lemma": "exceed",
           "reading": "exceed",
@@ -20272,7 +20272,7 @@
         },
         {
           "word": "shopper",
-          "meaning": "(要確認)",
+          "meaning": "買い物客",
           "isUnknown": false,
           "lemma": "shopper",
           "reading": "shopper",
@@ -20472,7 +20472,7 @@
         },
         {
           "word": "loyalty",
-          "meaning": "(要確認)",
+          "meaning": "忠誠",
           "isUnknown": false,
           "lemma": "loyalty",
           "reading": "loyalty",
@@ -20668,7 +20668,7 @@
         },
         {
           "word": "redeemed",
-          "meaning": "(要確認)",
+          "meaning": "償還された",
           "isUnknown": false,
           "lemma": "redeemed",
           "reading": "redeemed",
@@ -20690,7 +20690,7 @@
         },
         {
           "word": "discounts",
-          "meaning": "(要確認)",
+          "meaning": "割引",
           "isUnknown": false,
           "lemma": "discounts",
           "reading": "discounts",
@@ -21060,7 +21060,7 @@
         },
         {
           "word": "deals",
-          "meaning": "(要確認)",
+          "meaning": "取引",
           "isUnknown": false,
           "lemma": "deals",
           "reading": "deals",
@@ -21392,7 +21392,7 @@
         },
         {
           "word": "acquaintances",
-          "meaning": "(要確認)",
+          "meaning": "知人",
           "isUnknown": false,
           "lemma": "acquaintances",
           "reading": "acquaintances",
@@ -21466,7 +21466,7 @@
         },
         {
           "word": "greetings",
-          "meaning": "(要確認)",
+          "meaning": "挨拶",
           "isUnknown": false,
           "lemma": "greetings",
           "reading": "greetings",
@@ -22945,7 +22945,7 @@
         },
         {
           "word": "cherishes",
-          "meaning": "(要確認)",
+          "meaning": "大切にする",
           "isUnknown": false,
           "lemma": "cherishes",
           "reading": "cherishes",
@@ -25733,7 +25733,7 @@
         },
         {
           "word": "errands",
-          "meaning": "(要確認)",
+          "meaning": "用事",
           "isUnknown": false,
           "lemma": "errands",
           "reading": "errands",
