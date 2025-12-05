@@ -247,6 +247,9 @@ export interface WordProgress {
   }>;
   confusionCount?: number; // 混同された合計回数
   lastConfused?: number; // 最終混同日時
+  
+  // 定着済み単語の復習管理
+  nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
 }
 
 export interface UserProgress {
