@@ -346,7 +346,7 @@
         },
         {
           "word": "warnings",
-          "meaning": "(要確認)",
+          "meaning": "警告",
           "isUnknown": false,
           "lemma": "warnings",
           "reading": "warnings",
@@ -1752,7 +1752,7 @@
       "segments": [
         {
           "word": "traps",
-          "meaning": "(要確認)",
+          "meaning": "わな・落とし穴（複数形）",
           "isUnknown": false,
           "lemma": "traps",
           "reading": "traps",
@@ -2166,7 +2166,7 @@
         },
         {
           "word": "intensified",
-          "meaning": "(要確認)",
+          "meaning": "激化する・強めるた・された",
           "isUnknown": false,
           "lemma": "intensified",
           "reading": "intensified",
@@ -2328,7 +2328,7 @@
         },
         {
           "word": "increased",
-          "meaning": "(要確認)",
+          "meaning": "増加する・増加た・された",
           "isUnknown": false,
           "lemma": "increased",
           "reading": "increased",
@@ -2845,7 +2845,7 @@
         },
         {
           "word": "impacts",
-          "meaning": "(要確認)",
+          "meaning": "影響",
           "isUnknown": false,
           "lemma": "impacts",
           "reading": "impacts",
@@ -2996,7 +2996,7 @@
         },
         {
           "word": "waves",
-          "meaning": "(要確認)",
+          "meaning": "波",
           "isUnknown": false,
           "lemma": "waves",
           "reading": "waves",
@@ -3059,7 +3059,7 @@
         },
         {
           "word": "storms",
-          "meaning": "(要確認)",
+          "meaning": "嵐",
           "isUnknown": false,
           "lemma": "storms",
           "reading": "storms",
@@ -3185,7 +3185,7 @@
         },
         {
           "word": "caps",
-          "meaning": "(要確認)",
+          "meaning": "Cap（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "caps",
           "reading": "caps",
@@ -3621,7 +3621,7 @@
         },
         {
           "word": "disrupts",
-          "meaning": "(要確認)",
+          "meaning": "混乱させる・中断する（複数形）",
           "isUnknown": false,
           "lemma": "disrupts",
           "reading": "disrupts",
@@ -3643,7 +3643,7 @@
         },
         {
           "word": "currents",
-          "meaning": "(要確認)",
+          "meaning": "現在の、流れ（複数形）",
           "isUnknown": false,
           "lemma": "currents",
           "reading": "currents",
@@ -3943,7 +3943,7 @@
         },
         {
           "word": "disappears",
-          "meaning": "(要確認)",
+          "meaning": "消える（複数形）",
           "isUnknown": false,
           "lemma": "disappears",
           "reading": "disappears",
@@ -3976,7 +3976,7 @@
         },
         {
           "word": "waves",
-          "meaning": "(要確認)",
+          "meaning": "波",
           "isUnknown": false,
           "lemma": "waves",
           "reading": "waves",
@@ -4667,7 +4667,7 @@
         },
         {
           "word": "intensifying",
-          "meaning": "(要確認)",
+          "meaning": "激化する・強めること・している",
           "isUnknown": false,
           "lemma": "intensifying",
           "reading": "intensifying",
@@ -4830,7 +4830,7 @@
         },
         {
           "word": "suffers",
-          "meaning": "(要確認)",
+          "meaning": "苦しむ（複数形）",
           "isUnknown": false,
           "lemma": "suffers",
           "reading": "suffers",
@@ -4937,7 +4937,7 @@
         },
         {
           "word": "damages",
-          "meaning": "(要確認)",
+          "meaning": "損害・傷害（複数形）",
           "isUnknown": false,
           "lemma": "damages",
           "reading": "damages",
@@ -5546,7 +5546,7 @@
         },
         {
           "word": "cycles",
-          "meaning": "(要確認)",
+          "meaning": "周期・自転車（複数形）",
           "isUnknown": false,
           "lemma": "cycles",
           "reading": "cycles",
@@ -6248,7 +6248,7 @@
         },
         {
           "word": "operations",
-          "meaning": "(要確認)",
+          "meaning": "操作・手術",
           "isUnknown": false,
           "lemma": "operations",
           "reading": "operations",
@@ -6270,7 +6270,7 @@
         },
         {
           "word": "minerals",
-          "meaning": "(要確認)",
+          "meaning": "鉱物",
           "isUnknown": false,
           "lemma": "minerals",
           "reading": "minerals",
@@ -6303,7 +6303,7 @@
         },
         {
           "word": "metals",
-          "meaning": "(要確認)",
+          "meaning": "金属（複数形）",
           "isUnknown": false,
           "lemma": "metals",
           "reading": "metals",
@@ -6355,7 +6355,7 @@
         },
         {
           "word": "territories",
-          "meaning": "(要確認)",
+          "meaning": "領土",
           "isUnknown": false,
           "lemma": "territories",
           "reading": "territories",
@@ -7033,7 +7033,7 @@
         },
         {
           "word": "plays",
-          "meaning": "(要確認)",
+          "meaning": "遊ぶ・演奏する（複数形）",
           "isUnknown": false,
           "lemma": "plays",
           "reading": "plays",
@@ -8165,7 +8165,7 @@
         },
         {
           "word": "identified",
-          "meaning": "(要確認)",
+          "meaning": "確認する・同一視するた・された",
           "isUnknown": false,
           "lemma": "identified",
           "reading": "identified",
@@ -8649,7 +8649,7 @@
         },
         {
           "word": "tribes",
-          "meaning": "(要確認)",
+          "meaning": "部族",
           "isUnknown": false,
           "lemma": "tribes",
           "reading": "tribes",
@@ -9573,7 +9573,7 @@
         },
         {
           "word": "particles",
-          "meaning": "(要確認)",
+          "meaning": "粒子",
           "isUnknown": false,
           "lemma": "particles",
           "reading": "particles",
@@ -9762,7 +9762,7 @@
         },
         {
           "word": "particles",
-          "meaning": "(要確認)",
+          "meaning": "粒子",
           "isUnknown": false,
           "lemma": "particles",
           "reading": "particles",
@@ -10739,7 +10739,7 @@
         },
         {
           "word": "struggled",
-          "meaning": "(要確認)",
+          "meaning": "奮闘する・もがくた・された",
           "isUnknown": false,
           "lemma": "struggled",
           "reading": "struggled",
@@ -10908,7 +10908,7 @@
         },
         {
           "word": "varying",
-          "meaning": "(要確認)",
+          "meaning": "変わる・異なること・している",
           "isUnknown": false,
           "lemma": "varying",
           "reading": "varying",
@@ -11086,7 +11086,7 @@
         },
         {
           "word": "households",
-          "meaning": "(要確認)",
+          "meaning": "家庭・世帯",
           "isUnknown": false,
           "lemma": "households",
           "reading": "households",
@@ -11430,7 +11430,7 @@
         },
         {
           "word": "fires",
-          "meaning": "(要確認)",
+          "meaning": "火・発砲する・解雇する（複数形）",
           "isUnknown": false,
           "lemma": "fires",
           "reading": "fires",
@@ -11471,7 +11471,7 @@
         },
         {
           "word": "disproportionately",
-          "meaning": "(要確認)",
+          "meaning": "Disproportionate（固有名詞）に",
           "isUnknown": false,
           "lemma": "disproportionately",
           "reading": "disproportionately",
@@ -11833,7 +11833,7 @@
       "segments": [
         {
           "word": "damages",
-          "meaning": "(要確認)",
+          "meaning": "損害・傷害（複数形）",
           "isUnknown": false,
           "lemma": "damages",
           "reading": "damages",
@@ -12187,7 +12187,7 @@
         },
         {
           "word": "fired",
-          "meaning": "(要確認)",
+          "meaning": "火・発砲する・解雇するた・された",
           "isUnknown": false,
           "lemma": "fired",
           "reading": "fired",
@@ -13027,7 +13027,7 @@
         },
         {
           "word": "fertilizers",
-          "meaning": "(要確認)",
+          "meaning": "肥料（複数形）",
           "isUnknown": false,
           "lemma": "fertilizers",
           "reading": "fertilizers",
@@ -13038,7 +13038,7 @@
         },
         {
           "word": "containing",
-          "meaning": "(要確認)",
+          "meaning": "含む・抑えること・している",
           "isUnknown": false,
           "lemma": "containing",
           "reading": "containing",
@@ -13293,7 +13293,7 @@
         },
         {
           "word": "blooms",
-          "meaning": "(要確認)",
+          "meaning": "庭園と公園に（複数形）",
           "isUnknown": false,
           "lemma": "blooms",
           "reading": "blooms",
@@ -13411,7 +13411,7 @@
         },
         {
           "word": "zones",
-          "meaning": "(要確認)",
+          "meaning": "地帯",
           "isUnknown": false,
           "lemma": "zones",
           "reading": "zones",
@@ -13485,7 +13485,7 @@
         },
         {
           "word": "organisms",
-          "meaning": "(要確認)",
+          "meaning": "生物・有機体（複数形）",
           "isUnknown": false,
           "lemma": "organisms",
           "reading": "organisms",
@@ -13611,7 +13611,7 @@
         },
         {
           "word": "insects",
-          "meaning": "(要確認)",
+          "meaning": "昆虫",
           "isUnknown": false,
           "lemma": "insects",
           "reading": "insects",
@@ -14324,7 +14324,7 @@
         },
         {
           "word": "reached",
-          "meaning": "(要確認)",
+          "meaning": "達する・届くた・された",
           "isUnknown": false,
           "lemma": "reached",
           "reading": "reached",
@@ -14637,7 +14637,7 @@
         },
         {
           "word": "persists",
-          "meaning": "(要確認)",
+          "meaning": "持続する・固執する（複数形）",
           "isUnknown": false,
           "lemma": "persists",
           "reading": "persists",
@@ -14733,7 +14733,7 @@
         },
         {
           "word": "particles",
-          "meaning": "(要確認)",
+          "meaning": "粒子",
           "isUnknown": false,
           "lemma": "particles",
           "reading": "particles",
@@ -15291,7 +15291,7 @@
         },
         {
           "word": "patches",
-          "meaning": "(要確認)",
+          "meaning": "エコバッグ（複数形）",
           "isUnknown": false,
           "lemma": "patches",
           "reading": "patches",
@@ -16353,7 +16353,7 @@
         },
         {
           "word": "overlooked",
-          "meaning": "(要確認)",
+          "meaning": "individuallyた・された",
           "isUnknown": false,
           "lemma": "overlooked",
           "reading": "overlooked",
@@ -16831,7 +16831,7 @@
         },
         {
           "word": "occurs",
-          "meaning": "(要確認)",
+          "meaning": "起こる・思い浮かぶ（複数形）",
           "isUnknown": false,
           "lemma": "occurs",
           "reading": "occurs",
@@ -18598,7 +18598,7 @@
         },
         {
           "word": "metals",
-          "meaning": "(要確認)",
+          "meaning": "金属（複数形）",
           "isUnknown": false,
           "lemma": "metals",
           "reading": "metals",
@@ -18631,7 +18631,7 @@
         },
         {
           "word": "operations",
-          "meaning": "(要確認)",
+          "meaning": "操作・手術",
           "isUnknown": false,
           "lemma": "operations",
           "reading": "operations",
@@ -18864,7 +18864,7 @@
         },
         {
           "word": "technically",
-          "meaning": "(要確認)",
+          "meaning": "技術のに",
           "isUnknown": false,
           "lemma": "technically",
           "reading": "technically",
@@ -19250,7 +19250,7 @@
         },
         {
           "word": "implemented",
-          "meaning": "(要確認)",
+          "meaning": "実施する・実装するた・された",
           "isUnknown": false,
           "lemma": "implemented",
           "reading": "implemented",
@@ -19519,7 +19519,7 @@
         },
         {
           "word": "processes",
-          "meaning": "(要確認)",
+          "meaning": "過程・プロセス",
           "isUnknown": false,
           "lemma": "processes",
           "reading": "processes",
@@ -19789,7 +19789,7 @@
         },
         {
           "word": "substances",
-          "meaning": "(要確認)",
+          "meaning": "物質",
           "isUnknown": false,
           "lemma": "substances",
           "reading": "substances",
@@ -20260,7 +20260,7 @@
         },
         {
           "word": "substances",
-          "meaning": "(要確認)",
+          "meaning": "物質",
           "isUnknown": false,
           "lemma": "substances",
           "reading": "substances",
@@ -20419,7 +20419,7 @@
         },
         {
           "word": "shipped",
-          "meaning": "(要確認)",
+          "meaning": "船た・された",
           "isUnknown": false,
           "lemma": "shipped",
           "reading": "shipped",
@@ -20949,7 +20949,7 @@
         },
         {
           "word": "impacts",
-          "meaning": "(要確認)",
+          "meaning": "影響",
           "isUnknown": false,
           "lemma": "impacts",
           "reading": "impacts",
@@ -21193,7 +21193,7 @@
         },
         {
           "word": "consumes",
-          "meaning": "(要確認)",
+          "meaning": "消費する（複数形）",
           "isUnknown": false,
           "lemma": "consumes",
           "reading": "consumes",
@@ -21248,7 +21248,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -21801,7 +21801,7 @@
         },
         {
           "word": "surrounding",
-          "meaning": "(要確認)",
+          "meaning": "取り囲むこと・している",
           "isUnknown": false,
           "lemma": "surrounding",
           "reading": "surrounding",
@@ -23215,7 +23215,7 @@
         },
         {
           "word": "environmentally",
-          "meaning": "(要確認)",
+          "meaning": "環境のに",
           "isUnknown": false,
           "lemma": "environmentally",
           "reading": "environmentally",
@@ -23752,7 +23752,7 @@
         },
         {
           "word": "slowing",
-          "meaning": "(要確認)",
+          "meaning": "遅いこと・している",
           "isUnknown": false,
           "lemma": "slowing",
           "reading": "slowing",
@@ -24055,7 +24055,7 @@
         },
         {
           "word": "enormously",
-          "meaning": "(要確認)",
+          "meaning": "巨大なに",
           "isUnknown": false,
           "lemma": "enormously",
           "reading": "enormously",
@@ -24162,7 +24162,7 @@
         },
         {
           "word": "consumes",
-          "meaning": "(要確認)",
+          "meaning": "消費する（複数形）",
           "isUnknown": false,
           "lemma": "consumes",
           "reading": "consumes",
@@ -24368,7 +24368,7 @@
         },
         {
           "word": "consumed",
-          "meaning": "(要確認)",
+          "meaning": "消費するた・された",
           "isUnknown": false,
           "lemma": "consumed",
           "reading": "consumed",
@@ -24894,7 +24894,7 @@
         },
         {
           "word": "footprints",
-          "meaning": "(要確認)",
+          "meaning": "足跡・影響範囲（特に環境への）（複数形）",
           "isUnknown": false,
           "lemma": "footprints",
           "reading": "footprints",
@@ -25455,7 +25455,7 @@
         },
         {
           "word": "strongly",
-          "meaning": "(要確認)",
+          "meaning": "強く",
           "isUnknown": false,
           "lemma": "strongly",
           "reading": "strongly",
@@ -26357,7 +26357,7 @@
         },
         {
           "word": "panels",
-          "meaning": "(要確認)",
+          "meaning": "パネル・委員会",
           "isUnknown": false,
           "lemma": "panels",
           "reading": "panels",
@@ -26851,7 +26851,7 @@
         },
         {
           "word": "turbines",
-          "meaning": "(要確認)",
+          "meaning": "タービン・発電機（複数形）",
           "isUnknown": false,
           "lemma": "turbines",
           "reading": "turbines",
@@ -26999,7 +26999,7 @@
         },
         {
           "word": "installations",
-          "meaning": "(要確認)",
+          "meaning": "設置・施設",
           "isUnknown": false,
           "lemma": "installations",
           "reading": "installations",
@@ -27387,7 +27387,7 @@
         },
         {
           "word": "shines",
-          "meaning": "(要確認)",
+          "meaning": "輝く（複数形）",
           "isUnknown": false,
           "lemma": "shines",
           "reading": "shines",
@@ -27897,7 +27897,7 @@
         },
         {
           "word": "environmentally",
-          "meaning": "(要確認)",
+          "meaning": "環境のに",
           "isUnknown": false,
           "lemma": "environmentally",
           "reading": "environmentally",
@@ -28166,7 +28166,7 @@
         },
         {
           "word": "flowing",
-          "meaning": "(要確認)",
+          "meaning": "流れる・流れこと・している",
           "isUnknown": false,
           "lemma": "flowing",
           "reading": "flowing",
@@ -28351,7 +28351,7 @@
         },
         {
           "word": "impacts",
-          "meaning": "(要確認)",
+          "meaning": "影響",
           "isUnknown": false,
           "lemma": "impacts",
           "reading": "impacts",
@@ -28529,7 +28529,7 @@
         },
         {
           "word": "taps",
-          "meaning": "(要確認)",
+          "meaning": "蛇口・軽くたたく（複数形）",
           "isUnknown": false,
           "lemma": "taps",
           "reading": "taps",
@@ -29470,7 +29470,7 @@
         },
         {
           "word": "hotly",
-          "meaning": "(要確認)",
+          "meaning": "熱い・暑いに",
           "isUnknown": false,
           "lemma": "hotly",
           "reading": "hotly",
@@ -29757,7 +29757,7 @@
         },
         {
           "word": "sacrificing",
-          "meaning": "(要確認)",
+          "meaning": "犠牲・献身こと・している",
           "isUnknown": false,
           "lemma": "sacrificing",
           "reading": "sacrificing",
@@ -30026,7 +30026,7 @@
         },
         {
           "word": "bulbs",
-          "meaning": "(要確認)",
+          "meaning": "電球・球根（複数形）",
           "isUnknown": false,
           "lemma": "bulbs",
           "reading": "bulbs",
@@ -30855,7 +30855,7 @@
         },
         {
           "word": "processes",
-          "meaning": "(要確認)",
+          "meaning": "過程・プロセス",
           "isUnknown": false,
           "lemma": "processes",
           "reading": "processes",
@@ -30977,7 +30977,7 @@
         },
         {
           "word": "wastes",
-          "meaning": "(要確認)",
+          "meaning": "廃棄物",
           "isUnknown": false,
           "lemma": "wastes",
           "reading": "wastes",
@@ -31465,7 +31465,7 @@
         },
         {
           "word": "fertilizers",
-          "meaning": "(要確認)",
+          "meaning": "肥料（複数形）",
           "isUnknown": false,
           "lemma": "fertilizers",
           "reading": "fertilizers",
@@ -31665,7 +31665,7 @@
         },
         {
           "word": "nutrients",
-          "meaning": "(要確認)",
+          "meaning": "栄養素（複数形）",
           "isUnknown": false,
           "lemma": "nutrients",
           "reading": "nutrients",
@@ -31915,7 +31915,7 @@
         },
         {
           "word": "consumed",
-          "meaning": "(要確認)",
+          "meaning": "消費するた・された",
           "isUnknown": false,
           "lemma": "consumed",
           "reading": "consumed",
@@ -32000,7 +32000,7 @@
         },
         {
           "word": "remaining",
-          "meaning": "(要確認)",
+          "meaning": "残る・とどまること・している",
           "isUnknown": false,
           "lemma": "remaining",
           "reading": "remaining",
@@ -32074,7 +32074,7 @@
         },
         {
           "word": "parks",
-          "meaning": "(要確認)",
+          "meaning": "公園・駐車する（複数形）",
           "isUnknown": false,
           "lemma": "parks",
           "reading": "parks",
@@ -32115,7 +32115,7 @@
         },
         {
           "word": "reserves",
-          "meaning": "(要確認)",
+          "meaning": "予備・保護区",
           "isUnknown": false,
           "lemma": "reserves",
           "reading": "reserves",
@@ -32178,7 +32178,7 @@
         },
         {
           "word": "preserves",
-          "meaning": "(要確認)",
+          "meaning": "保存する・守る（複数形）",
           "isUnknown": false,
           "lemma": "preserves",
           "reading": "preserves",
@@ -32189,7 +32189,7 @@
         },
         {
           "word": "habitats",
-          "meaning": "(要確認)",
+          "meaning": "生息地",
           "isUnknown": false,
           "lemma": "habitats",
           "reading": "habitats",
@@ -32252,7 +32252,7 @@
         },
         {
           "word": "agreements",
-          "meaning": "(要確認)",
+          "meaning": "Agreement（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "agreements",
           "reading": "agreements",
@@ -32510,7 +32510,7 @@
         },
         {
           "word": "reserves",
-          "meaning": "(要確認)",
+          "meaning": "予備・保護区",
           "isUnknown": false,
           "lemma": "reserves",
           "reading": "reserves",
@@ -32543,7 +32543,7 @@
         },
         {
           "word": "funded",
-          "meaning": "(要確認)",
+          "meaning": "資金・基金た・された",
           "isUnknown": false,
           "lemma": "funded",
           "reading": "funded",
@@ -32887,7 +32887,7 @@
         },
         {
           "word": "damaged",
-          "meaning": "(要確認)",
+          "meaning": "損害・傷害た・された",
           "isUnknown": false,
           "lemma": "damaged",
           "reading": "damaged",
@@ -33333,7 +33333,7 @@
         },
         {
           "word": "damaged",
-          "meaning": "(要確認)",
+          "meaning": "損害・傷害た・された",
           "isUnknown": false,
           "lemma": "damaged",
           "reading": "damaged",
@@ -33344,7 +33344,7 @@
         },
         {
           "word": "reefs",
-          "meaning": "(要確認)",
+          "meaning": "岩礁・サンゴ礁（複数形）",
           "isUnknown": false,
           "lemma": "reefs",
           "reading": "reefs",
@@ -33578,7 +33578,7 @@
         },
         {
           "word": "implemented",
-          "meaning": "(要確認)",
+          "meaning": "実施する・実装するた・された",
           "isUnknown": false,
           "lemma": "implemented",
           "reading": "implemented",
@@ -33630,7 +33630,7 @@
         },
         {
           "word": "zones",
-          "meaning": "(要確認)",
+          "meaning": "地帯",
           "isUnknown": false,
           "lemma": "zones",
           "reading": "zones",
@@ -33975,7 +33975,7 @@
         },
         {
           "word": "surrounding",
-          "meaning": "(要確認)",
+          "meaning": "取り囲むこと・している",
           "isUnknown": false,
           "lemma": "surrounding",
           "reading": "surrounding",
@@ -33986,7 +33986,7 @@
         },
         {
           "word": "waters",
-          "meaning": "(要確認)",
+          "meaning": "水",
           "isUnknown": false,
           "lemma": "waters",
           "reading": "waters",
@@ -34116,7 +34116,7 @@
       "segments": [
         {
           "word": "Innovations",
-          "meaning": "(要確認)",
+          "meaning": "革新",
           "isUnknown": false,
           "lemma": "Innovations",
           "reading": "Innovations",
@@ -34410,7 +34410,7 @@
         },
         {
           "word": "pests",
-          "meaning": "(要確認)",
+          "meaning": "害虫・害獣（複数形）",
           "isUnknown": false,
           "lemma": "pests",
           "reading": "pests",
@@ -34514,7 +34514,7 @@
         },
         {
           "word": "soils",
-          "meaning": "(要確認)",
+          "meaning": "土（複数形）",
           "isUnknown": false,
           "lemma": "soils",
           "reading": "soils",
@@ -35188,7 +35188,7 @@
         },
         {
           "word": "environmentally",
-          "meaning": "(要確認)",
+          "meaning": "環境のに",
           "isUnknown": false,
           "lemma": "environmentally",
           "reading": "environmentally",
@@ -35210,7 +35210,7 @@
         },
         {
           "word": "substances",
-          "meaning": "(要確認)",
+          "meaning": "物質",
           "isUnknown": false,
           "lemma": "substances",
           "reading": "substances",
@@ -35251,7 +35251,7 @@
         },
         {
           "word": "plastics",
-          "meaning": "(要確認)",
+          "meaning": "Plastic（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "plastics",
           "reading": "plastics",
@@ -35350,7 +35350,7 @@
         },
         {
           "word": "plastics",
-          "meaning": "(要確認)",
+          "meaning": "Plastic（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "plastics",
           "reading": "plastics",
@@ -35667,7 +35667,7 @@
         },
         {
           "word": "networks",
-          "meaning": "(要確認)",
+          "meaning": "ネットワーク",
           "isUnknown": false,
           "lemma": "networks",
           "reading": "networks",
@@ -36130,7 +36130,7 @@
         },
         {
           "word": "coordinated",
-          "meaning": "(要確認)",
+          "meaning": "調整するた・された",
           "isUnknown": false,
           "lemma": "coordinated",
           "reading": "coordinated",
@@ -36237,7 +36237,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -36375,7 +36375,7 @@
         },
         {
           "word": "agreements",
-          "meaning": "(要確認)",
+          "meaning": "Agreement（固有名詞）（複数形）",
           "isUnknown": false,
           "lemma": "agreements",
           "reading": "agreements",
@@ -36627,7 +36627,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -37903,7 +37903,7 @@
         },
         {
           "word": "environmentally",
-          "meaning": "(要確認)",
+          "meaning": "環境のに",
           "isUnknown": false,
           "lemma": "environmentally",
           "reading": "environmentally",
@@ -38714,7 +38714,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -38825,7 +38825,7 @@
         },
         {
           "word": "inspires",
-          "meaning": "(要確認)",
+          "meaning": "励ます・鼓舞する（複数形）",
           "isUnknown": false,
           "lemma": "inspires",
           "reading": "inspires",
@@ -39243,7 +39243,7 @@
         },
         {
           "word": "plays",
-          "meaning": "(要確認)",
+          "meaning": "遊ぶ・演奏する（複数形）",
           "isUnknown": false,
           "lemma": "plays",
           "reading": "plays",
@@ -39715,7 +39715,7 @@
         },
         {
           "word": "powerfully",
-          "meaning": "(要確認)",
+          "meaning": "強力な・力強いに",
           "isUnknown": false,
           "lemma": "powerfully",
           "reading": "powerfully",
@@ -39896,7 +39896,7 @@
         },
         {
           "word": "facts",
-          "meaning": "(要確認)",
+          "meaning": "事実（複数形）",
           "isUnknown": false,
           "lemma": "facts",
           "reading": "facts",
@@ -40530,7 +40530,7 @@
         },
         {
           "word": "overwhelming",
-          "meaning": "(要確認)",
+          "meaning": "圧倒する・打ちのめすこと・している",
           "isUnknown": false,
           "lemma": "overwhelming",
           "reading": "overwhelming",
@@ -40928,7 +40928,7 @@
         },
         {
           "word": "successfully",
-          "meaning": "(要確認)",
+          "meaning": "成功して",
           "isUnknown": false,
           "lemma": "successfully",
           "reading": "successfully",
@@ -41153,7 +41153,7 @@
         },
         {
           "word": "overlooked",
-          "meaning": "(要確認)",
+          "meaning": "individuallyた・された",
           "isUnknown": false,
           "lemma": "overlooked",
           "reading": "overlooked",
@@ -41496,7 +41496,7 @@
         },
         {
           "word": "organisms",
-          "meaning": "(要確認)",
+          "meaning": "生物・有機体（複数形）",
           "isUnknown": false,
           "lemma": "organisms",
           "reading": "organisms",
@@ -41740,7 +41740,7 @@
         },
         {
           "word": "relies",
-          "meaning": "(要確認)",
+          "meaning": "リサイクルだけで（複数形）",
           "isUnknown": false,
           "lemma": "relies",
           "reading": "relies",
@@ -41784,7 +41784,7 @@
         },
         {
           "word": "fertilizers",
-          "meaning": "(要確認)",
+          "meaning": "肥料（複数形）",
           "isUnknown": false,
           "lemma": "fertilizers",
           "reading": "fertilizers",
@@ -42036,7 +42036,7 @@
         },
         {
           "word": "nutrients",
-          "meaning": "(要確認)",
+          "meaning": "栄養素（複数形）",
           "isUnknown": false,
           "lemma": "nutrients",
           "reading": "nutrients",
@@ -42247,7 +42247,7 @@
         },
         {
           "word": "processes",
-          "meaning": "(要確認)",
+          "meaning": "過程・プロセス",
           "isUnknown": false,
           "lemma": "processes",
           "reading": "processes",
@@ -42403,7 +42403,7 @@
       "segments": [
         {
           "word": "remaining",
-          "meaning": "(要確認)",
+          "meaning": "残る・とどまること・している",
           "isUnknown": false,
           "lemma": "remaining",
           "reading": "remaining",
@@ -42640,7 +42640,7 @@
         },
         {
           "word": "extensively",
-          "meaning": "(要確認)",
+          "meaning": "広範囲のに",
           "isUnknown": false,
           "lemma": "extensively",
           "reading": "extensively",
@@ -42662,7 +42662,7 @@
         },
         {
           "word": "exacerbates",
-          "meaning": "(要確認)",
+          "meaning": "悪化させる・激化させる（複数形）",
           "isUnknown": false,
           "lemma": "exacerbates",
           "reading": "exacerbates",
@@ -42788,7 +42788,7 @@
         },
         {
           "word": "depletes",
-          "meaning": "(要確認)",
+          "meaning": "枯渇させる・使い果たす（複数形）",
           "isUnknown": false,
           "lemma": "depletes",
           "reading": "depletes",
@@ -42810,7 +42810,7 @@
         },
         {
           "word": "nutrients",
-          "meaning": "(要確認)",
+          "meaning": "栄養素（複数形）",
           "isUnknown": false,
           "lemma": "nutrients",
           "reading": "nutrients",
@@ -43311,7 +43311,7 @@
         },
         {
           "word": "nutrients",
-          "meaning": "(要確認)",
+          "meaning": "栄養素（複数形）",
           "isUnknown": false,
           "lemma": "nutrients",
           "reading": "nutrients",
@@ -43333,7 +43333,7 @@
         },
         {
           "word": "disrupts",
-          "meaning": "(要確認)",
+          "meaning": "混乱させる・中断する（複数形）",
           "isUnknown": false,
           "lemma": "disrupts",
           "reading": "disrupts",
@@ -43355,7 +43355,7 @@
         },
         {
           "word": "cycles",
-          "meaning": "(要確認)",
+          "meaning": "周期・自転車（複数形）",
           "isUnknown": false,
           "lemma": "cycles",
           "reading": "cycles",
@@ -43396,7 +43396,7 @@
         },
         {
           "word": "cropping",
-          "meaning": "(要確認)",
+          "meaning": "作物・刈り取ること・している",
           "isUnknown": false,
           "lemma": "cropping",
           "reading": "cropping",
@@ -43500,7 +43500,7 @@
       "segments": [
         {
           "word": "preventing",
-          "meaning": "(要確認)",
+          "meaning": "防ぐこと・している",
           "isUnknown": false,
           "lemma": "preventing",
           "reading": "preventing",
@@ -44452,7 +44452,7 @@
         },
         {
           "word": "consumes",
-          "meaning": "(要確認)",
+          "meaning": "消費する（複数形）",
           "isUnknown": false,
           "lemma": "consumes",
           "reading": "consumes",
@@ -44744,7 +44744,7 @@
         },
         {
           "word": "covered",
-          "meaning": "(要確認)",
+          "meaning": "覆う・表紙た・された",
           "isUnknown": false,
           "lemma": "covered",
           "reading": "covered",
@@ -44807,7 +44807,7 @@
         },
         {
           "word": "disappears",
-          "meaning": "(要確認)",
+          "meaning": "消える（複数形）",
           "isUnknown": false,
           "lemma": "disappears",
           "reading": "disappears",
@@ -45450,7 +45450,7 @@
         },
         {
           "word": "operations",
-          "meaning": "(要確認)",
+          "meaning": "操作・手術",
           "isUnknown": false,
           "lemma": "operations",
           "reading": "operations",
@@ -46259,7 +46259,7 @@
         },
         {
           "word": "suffers",
-          "meaning": "(要確認)",
+          "meaning": "苦しむ（複数形）",
           "isUnknown": false,
           "lemma": "suffers",
           "reading": "suffers",
@@ -46878,7 +46878,7 @@
         },
         {
           "word": "singing",
-          "meaning": "(要確認)",
+          "meaning": "歌おうこと・している",
           "isUnknown": false,
           "lemma": "singing",
           "reading": "singing",
@@ -47078,7 +47078,7 @@
         },
         {
           "word": "extending",
-          "meaning": "(要確認)",
+          "meaning": "延ばす・広げること・している",
           "isUnknown": false,
           "lemma": "extending",
           "reading": "extending",
@@ -47122,7 +47122,7 @@
         },
         {
           "word": "enhancing",
-          "meaning": "(要確認)",
+          "meaning": "高めること・している",
           "isUnknown": false,
           "lemma": "enhancing",
           "reading": "enhancing",
@@ -47212,7 +47212,7 @@
         },
         {
           "word": "overlooked",
-          "meaning": "(要確認)",
+          "meaning": "individuallyた・された",
           "isUnknown": false,
           "lemma": "overlooked",
           "reading": "overlooked",
@@ -47489,7 +47489,7 @@
         },
         {
           "word": "phenomena",
-          "meaning": "(要確認)",
+          "meaning": "現象",
           "isUnknown": false,
           "lemma": "phenomena",
           "reading": "phenomena",
@@ -47541,7 +47541,7 @@
         },
         {
           "word": "evolved",
-          "meaning": "(要確認)",
+          "meaning": "進化する・発展するた・された",
           "isUnknown": false,
           "lemma": "evolved",
           "reading": "evolved",
@@ -47552,7 +47552,7 @@
         },
         {
           "word": "behaviors",
-          "meaning": "(要確認)",
+          "meaning": "行動・振る舞い",
           "isUnknown": false,
           "lemma": "behaviors",
           "reading": "behaviors",
@@ -47618,7 +47618,7 @@
         },
         {
           "word": "cycles",
-          "meaning": "(要確認)",
+          "meaning": "周期・自転車（複数形）",
           "isUnknown": false,
           "lemma": "cycles",
           "reading": "cycles",
@@ -47670,7 +47670,7 @@
         },
         {
           "word": "disrupts",
-          "meaning": "(要確認)",
+          "meaning": "混乱させる・中断する（複数形）",
           "isUnknown": false,
           "lemma": "disrupts",
           "reading": "disrupts",
@@ -47722,7 +47722,7 @@
       "segments": [
         {
           "word": "Insects",
-          "meaning": "(要確認)",
+          "meaning": "昆虫",
           "isUnknown": false,
           "lemma": "Insects",
           "reading": "Insects",
@@ -47744,7 +47744,7 @@
         },
         {
           "word": "attracted",
-          "meaning": "(要確認)",
+          "meaning": "引きつけるた・された",
           "isUnknown": false,
           "lemma": "attracted",
           "reading": "attracted",
@@ -47859,7 +47859,7 @@
         },
         {
           "word": "performing",
-          "meaning": "(要確認)",
+          "meaning": "実行する・演じること・している",
           "isUnknown": false,
           "lemma": "performing",
           "reading": "performing",
@@ -48197,7 +48197,7 @@
         },
         {
           "word": "reflected",
-          "meaning": "(要確認)",
+          "meaning": "反射する・熟考するた・された",
           "isUnknown": false,
           "lemma": "reflected",
           "reading": "reflected",
@@ -48230,7 +48230,7 @@
         },
         {
           "word": "waters",
-          "meaning": "(要確認)",
+          "meaning": "水",
           "isUnknown": false,
           "lemma": "waters",
           "reading": "waters",
@@ -48324,7 +48324,7 @@
         },
         {
           "word": "developments",
-          "meaning": "(要確認)",
+          "meaning": "発展、開発（複数形）",
           "isUnknown": false,
           "lemma": "developments",
           "reading": "developments",
@@ -48542,7 +48542,7 @@
         },
         {
           "word": "disrupts",
-          "meaning": "(要確認)",
+          "meaning": "混乱させる・中断する（複数形）",
           "isUnknown": false,
           "lemma": "disrupts",
           "reading": "disrupts",
@@ -48720,7 +48720,7 @@
         },
         {
           "word": "cancers",
-          "meaning": "(要確認)",
+          "meaning": "がん・癌（複数形）",
           "isUnknown": false,
           "lemma": "cancers",
           "reading": "cancers",
@@ -49279,7 +49279,7 @@
         },
         {
           "word": "persists",
-          "meaning": "(要確認)",
+          "meaning": "持続する・固執する（複数形）",
           "isUnknown": false,
           "lemma": "persists",
           "reading": "persists",
@@ -49301,7 +49301,7 @@
         },
         {
           "word": "centuries",
-          "meaning": "(要確認)",
+          "meaning": "世紀、100年（複数形）",
           "isUnknown": false,
           "lemma": "centuries",
           "reading": "centuries",
@@ -49737,7 +49737,7 @@
         },
         {
           "word": "continuously",
-          "meaning": "(要確認)",
+          "meaning": "連続した・途切れないに",
           "isUnknown": false,
           "lemma": "continuously",
           "reading": "continuously",
@@ -50063,7 +50063,7 @@
         },
         {
           "word": "minimizes",
-          "meaning": "(要確認)",
+          "meaning": "最小化する・最小限にする（複数形）",
           "isUnknown": false,
           "lemma": "minimizes",
           "reading": "minimizes",
@@ -50889,7 +50889,7 @@
         },
         {
           "word": "policies",
-          "meaning": "(要確認)",
+          "meaning": "政策",
           "isUnknown": false,
           "lemma": "policies",
           "reading": "policies",
@@ -51221,7 +51221,7 @@
         },
         {
           "word": "incentivizes",
-          "meaning": "(要確認)",
+          "meaning": "動機付ける・奨励する（複数形）",
           "isUnknown": false,
           "lemma": "incentivizes",
           "reading": "incentivizes",
@@ -51487,7 +51487,7 @@
         },
         {
           "word": "metals",
-          "meaning": "(要確認)",
+          "meaning": "金属（複数形）",
           "isUnknown": false,
           "lemma": "metals",
           "reading": "metals",
@@ -51531,7 +51531,7 @@
         },
         {
           "word": "substances",
-          "meaning": "(要確認)",
+          "meaning": "物質",
           "isUnknown": false,
           "lemma": "substances",
           "reading": "substances",
@@ -52212,7 +52212,7 @@
         },
         {
           "word": "complications",
-          "meaning": "(要確認)",
+          "meaning": "オプション（複数形）",
           "isUnknown": false,
           "lemma": "complications",
           "reading": "complications",
@@ -52870,7 +52870,7 @@
         },
         {
           "word": "impacts",
-          "meaning": "(要確認)",
+          "meaning": "影響",
           "isUnknown": false,
           "lemma": "impacts",
           "reading": "impacts",
@@ -53572,7 +53572,7 @@
         },
         {
           "word": "modeling",
-          "meaning": "(要確認)",
+          "meaning": "模型・モデルこと・している",
           "isUnknown": false,
           "lemma": "modeling",
           "reading": "modeling",
@@ -54028,7 +54028,7 @@
         },
         {
           "word": "transformations",
-          "meaning": "(要確認)",
+          "meaning": "変化",
           "isUnknown": false,
           "lemma": "transformations",
           "reading": "transformations",
@@ -54663,7 +54663,7 @@
         },
         {
           "word": "centuries",
-          "meaning": "(要確認)",
+          "meaning": "世紀、100年（複数形）",
           "isUnknown": false,
           "lemma": "centuries",
           "reading": "centuries",
@@ -54770,7 +54770,7 @@
         },
         {
           "word": "urgently",
-          "meaning": "(要確認)",
+          "meaning": "緊急の・差し迫ったに",
           "isUnknown": false,
           "lemma": "urgently",
           "reading": "urgently",
@@ -56922,7 +56922,7 @@
         },
         {
           "word": "luxuries",
-          "meaning": "(要確認)",
+          "meaning": "豪華な（複数形）",
           "isUnknown": false,
           "lemma": "luxuries",
           "reading": "luxuries",
@@ -58218,7 +58218,7 @@
         },
         {
           "word": "seems",
-          "meaning": "(要確認)",
+          "meaning": "〜のように見える（複数形）",
           "isUnknown": false,
           "lemma": "seems",
           "reading": "seems",

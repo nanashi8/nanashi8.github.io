@@ -812,7 +812,7 @@
         },
         {
           "word": "traveling",
-          "meaning": "(要確認)",
+          "meaning": "旅行すること・している",
           "isUnknown": false,
           "lemma": "traveling",
           "reading": "traveling",
@@ -2672,7 +2672,7 @@
         },
         {
           "word": "holding",
-          "meaning": "(要確認)",
+          "meaning": "正常ですこと・している",
           "isUnknown": false,
           "lemma": "holding",
           "reading": "holding",
@@ -3294,7 +3294,7 @@
         },
         {
           "word": "managed",
-          "meaning": "(要確認)",
+          "meaning": "管理する・何とかやるた・された",
           "isUnknown": false,
           "lemma": "managed",
           "reading": "managed",
@@ -3483,7 +3483,7 @@
         },
         {
           "word": "encouragingly",
-          "meaning": "(要確認)",
+          "meaning": "励ましている、心強いに",
           "isUnknown": false,
           "lemma": "encouragingly",
           "reading": "encouragingly",
@@ -4081,7 +4081,7 @@
         },
         {
           "word": "responded",
-          "meaning": "(要確認)",
+          "meaning": "応答するた・された",
           "isUnknown": false,
           "lemma": "responded",
           "reading": "responded",
@@ -4764,7 +4764,7 @@
         },
         {
           "word": "lawns",
-          "meaning": "(要確認)",
+          "meaning": "手入れ（複数形）",
           "isUnknown": false,
           "lemma": "lawns",
           "reading": "lawns",
@@ -4897,7 +4897,7 @@
         },
         {
           "word": "neighborhoods",
-          "meaning": "(要確認)",
+          "meaning": "近隣・地域（複数形）",
           "isUnknown": false,
           "lemma": "neighborhoods",
           "reading": "neighborhoods",
@@ -5911,7 +5911,7 @@
         },
         {
           "word": "repeated",
-          "meaning": "(要確認)",
+          "meaning": "私た・された",
           "isUnknown": false,
           "lemma": "repeated",
           "reading": "repeated",
@@ -5963,7 +5963,7 @@
         },
         {
           "word": "worried",
-          "meaning": "(要確認)",
+          "meaning": "心配・心配するた・された",
           "isUnknown": false,
           "lemma": "worried",
           "reading": "worried",
@@ -7517,7 +7517,7 @@
         },
         {
           "word": "remembered",
-          "meaning": "(要確認)",
+          "meaning": "覚えているた・された",
           "isUnknown": false,
           "lemma": "remembered",
           "reading": "remembered",
@@ -8054,7 +8054,7 @@
         },
         {
           "word": "warmly",
-          "meaning": "(要確認)",
+          "meaning": "暖かいに",
           "isUnknown": false,
           "lemma": "warmly",
           "reading": "warmly",
@@ -9953,7 +9953,7 @@
         },
         {
           "word": "gratefully",
-          "meaning": "(要確認)",
+          "meaning": "感謝しているに",
           "isUnknown": false,
           "lemma": "gratefully",
           "reading": "gratefully",
@@ -10183,7 +10183,7 @@
         },
         {
           "word": "nervously",
-          "meaning": "(要確認)",
+          "meaning": "神経質な・緊張したに",
           "isUnknown": false,
           "lemma": "nervously",
           "reading": "nervously",
@@ -13119,7 +13119,7 @@
         },
         {
           "word": "observations",
-          "meaning": "(要確認)",
+          "meaning": "観察",
           "isUnknown": false,
           "lemma": "observations",
           "reading": "observations",
@@ -14638,7 +14638,7 @@
         },
         {
           "word": "mornings",
-          "meaning": "(要確認)",
+          "meaning": "朝（複数形）",
           "isUnknown": false,
           "lemma": "mornings",
           "reading": "mornings",
@@ -15443,7 +15443,7 @@
         },
         {
           "word": "disagreed",
-          "meaning": "(要確認)",
+          "meaning": "自立た・された",
           "isUnknown": false,
           "lemma": "disagreed",
           "reading": "disagreed",
@@ -18715,7 +18715,7 @@
         },
         {
           "word": "satisfied",
-          "meaning": "(要確認)",
+          "meaning": "満足させるた・された",
           "isUnknown": false,
           "lemma": "satisfied",
           "reading": "satisfied",
@@ -20251,7 +20251,7 @@
         },
         {
           "word": "waited",
-          "meaning": "(要確認)",
+          "meaning": "待つた・された",
           "isUnknown": false,
           "lemma": "waited",
           "reading": "waited",
@@ -20439,7 +20439,7 @@
         },
         {
           "word": "surprised",
-          "meaning": "(要確認)",
+          "meaning": "みんなた・された",
           "isUnknown": false,
           "lemma": "surprised",
           "reading": "surprised",
@@ -20635,7 +20635,7 @@
         },
         {
           "word": "apologized",
-          "meaning": "(要確認)",
+          "meaning": "謝るた・された",
           "isUnknown": false,
           "lemma": "apologized",
           "reading": "apologized",
@@ -21161,7 +21161,7 @@
         },
         {
           "word": "translated",
-          "meaning": "(要確認)",
+          "meaning": "翻訳するた・された",
           "isUnknown": false,
           "lemma": "translated",
           "reading": "translated",
@@ -21268,7 +21268,7 @@
         },
         {
           "word": "moved",
-          "meaning": "(要確認)",
+          "meaning": "動く・引っ越すた・された",
           "isUnknown": false,
           "lemma": "moved",
           "reading": "moved",
@@ -21898,7 +21898,7 @@
         },
         {
           "word": "directions",
-          "meaning": "(要確認)",
+          "meaning": "方向・指示（複数形）",
           "isUnknown": false,
           "lemma": "directions",
           "reading": "directions",
@@ -22823,7 +22823,7 @@
         },
         {
           "word": "directions",
-          "meaning": "(要確認)",
+          "meaning": "方向・指示（複数形）",
           "isUnknown": false,
           "lemma": "directions",
           "reading": "directions",
@@ -24191,7 +24191,7 @@
         },
         {
           "word": "sadly",
-          "meaning": "(要確認)",
+          "meaning": "言うに",
           "isUnknown": false,
           "lemma": "sadly",
           "reading": "sadly",
@@ -26595,7 +26595,7 @@
         },
         {
           "word": "traveling",
-          "meaning": "(要確認)",
+          "meaning": "旅行すること・している",
           "isUnknown": false,
           "lemma": "traveling",
           "reading": "traveling",
@@ -27289,7 +27289,7 @@
         },
         {
           "word": "differently",
-          "meaning": "(要確認)",
+          "meaning": "異なって・違って",
           "isUnknown": false,
           "lemma": "differently",
           "reading": "differently",
@@ -28526,7 +28526,7 @@
         },
         {
           "word": "appreciated",
-          "meaning": "(要確認)",
+          "meaning": "感謝した・評価された",
           "isUnknown": false,
           "lemma": "appreciated",
           "reading": "appreciated",
@@ -28851,7 +28851,7 @@
         },
         {
           "word": "imagined",
-          "meaning": "(要確認)",
+          "meaning": "Imagine（固有名詞）た・された",
           "isUnknown": false,
           "lemma": "imagined",
           "reading": "imagined",
@@ -30320,7 +30320,7 @@
         },
         {
           "word": "offices",
-          "meaning": "(要確認)",
+          "meaning": "事務所（複数形）",
           "isUnknown": false,
           "lemma": "offices",
           "reading": "offices",
@@ -31833,7 +31833,7 @@
         },
         {
           "word": "freely",
-          "meaning": "(要確認)",
+          "meaning": "自由な・無料のに",
           "isUnknown": false,
           "lemma": "freely",
           "reading": "freely",
@@ -32022,7 +32022,7 @@
         },
         {
           "word": "viewpoints",
-          "meaning": "(要確認)",
+          "meaning": "見地・観点（複数形）",
           "isUnknown": false,
           "lemma": "viewpoints",
           "reading": "viewpoints",
@@ -32825,7 +32825,7 @@
         },
         {
           "word": "differently",
-          "meaning": "(要確認)",
+          "meaning": "異なって・違って",
           "isUnknown": false,
           "lemma": "differently",
           "reading": "differently",
@@ -33887,7 +33887,7 @@
         },
         {
           "word": "names",
-          "meaning": "(要確認)",
+          "meaning": "名前・名付ける（複数形）",
           "isUnknown": false,
           "lemma": "names",
           "reading": "names",
@@ -34068,7 +34068,7 @@
         },
         {
           "word": "freely",
-          "meaning": "(要確認)",
+          "meaning": "自由な・無料のに",
           "isUnknown": false,
           "lemma": "freely",
           "reading": "freely",
@@ -34414,7 +34414,7 @@
         },
         {
           "word": "observations",
-          "meaning": "(要確認)",
+          "meaning": "観察",
           "isUnknown": false,
           "lemma": "observations",
           "reading": "observations",
@@ -34576,7 +34576,7 @@
         },
         {
           "word": "reflecting",
-          "meaning": "(要確認)",
+          "meaning": "反射する・熟考すること・している",
           "isUnknown": false,
           "lemma": "reflecting",
           "reading": "reflecting",
@@ -35008,7 +35008,7 @@
         },
         {
           "word": "idioms",
-          "meaning": "(要確認)",
+          "meaning": "必要（複数形）",
           "isUnknown": false,
           "lemma": "idioms",
           "reading": "idioms",
@@ -36481,7 +36481,7 @@
         },
         {
           "word": "reductions",
-          "meaning": "(要確認)",
+          "meaning": "*（複数形）",
           "isUnknown": false,
           "lemma": "reductions",
           "reading": "reductions",
@@ -38278,7 +38278,7 @@
         },
         {
           "word": "contexts",
-          "meaning": "(要確認)",
+          "meaning": "文脈・背景",
           "isUnknown": false,
           "lemma": "contexts",
           "reading": "contexts",
@@ -39566,7 +39566,7 @@
         },
         {
           "word": "kindly",
-          "meaning": "(要確認)",
+          "meaning": "親切な・種類に",
           "isUnknown": false,
           "lemma": "kindly",
           "reading": "kindly",
@@ -40187,7 +40187,7 @@
         },
         {
           "word": "feelings",
-          "meaning": "(要確認)",
+          "meaning": "感情",
           "isUnknown": false,
           "lemma": "feelings",
           "reading": "feelings",
@@ -40689,7 +40689,7 @@
         },
         {
           "word": "struggled",
-          "meaning": "(要確認)",
+          "meaning": "奮闘する・もがくた・された",
           "isUnknown": false,
           "lemma": "struggled",
           "reading": "struggled",
@@ -40722,7 +40722,7 @@
         },
         {
           "word": "names",
-          "meaning": "(要確認)",
+          "meaning": "名前・名付ける（複数形）",
           "isUnknown": false,
           "lemma": "names",
           "reading": "names",
@@ -42951,7 +42951,7 @@
         },
         {
           "word": "emphasizing",
-          "meaning": "(要確認)",
+          "meaning": "強調する・重視すること・している",
           "isUnknown": false,
           "lemma": "emphasizing",
           "reading": "emphasizing",
@@ -46590,7 +46590,7 @@
         },
         {
           "word": "warmly",
-          "meaning": "(要確認)",
+          "meaning": "暖かいに",
           "isUnknown": false,
           "lemma": "warmly",
           "reading": "warmly",
