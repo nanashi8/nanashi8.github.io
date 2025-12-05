@@ -726,7 +726,7 @@
         },
         {
           "word": "assignment",
-          "meaning": "(要確認)",
+          "meaning": "割り当て・課題",
           "isUnknown": false,
           "lemma": "assignment",
           "reading": "assignment",
@@ -874,7 +874,7 @@
         },
         {
           "word": "astronomy",
-          "meaning": "(要確認)",
+          "meaning": "天文学",
           "isUnknown": false,
           "lemma": "astronomy",
           "reading": "astronomy",
@@ -1285,7 +1285,7 @@
         },
         {
           "word": "ride",
-          "meaning": "(要確認)",
+          "meaning": "乗る",
           "isUnknown": false,
           "lemma": "ride",
           "reading": "ride",
@@ -2829,7 +2829,7 @@
         },
         {
           "word": "accompany",
-          "meaning": "(要確認)",
+          "meaning": "同行する・伴う",
           "isUnknown": false,
           "lemma": "accompany",
           "reading": "accompany",
@@ -3656,7 +3656,7 @@
         },
         {
           "word": "pick",
-          "meaning": "(要確認)",
+          "meaning": "選ぶ・摘む",
           "isUnknown": false,
           "lemma": "pick",
           "reading": "pick",
@@ -5100,7 +5100,7 @@
         },
         {
           "word": "weigh",
-          "meaning": "(要確認)",
+          "meaning": "重さを量る・重さがある",
           "isUnknown": false,
           "lemma": "weigh",
           "reading": "weigh",
@@ -5278,7 +5278,7 @@
         },
         {
           "word": "weigh",
-          "meaning": "(要確認)",
+          "meaning": "重さを量る・重さがある",
           "isUnknown": false,
           "lemma": "weigh",
           "reading": "weigh",
@@ -5341,7 +5341,7 @@
         },
         {
           "word": "corner",
-          "meaning": "(要確認)",
+          "meaning": "角",
           "isUnknown": false,
           "lemma": "corner",
           "reading": "corner",
@@ -6106,7 +6106,7 @@
         },
         {
           "word": "split",
-          "meaning": "(要確認)",
+          "meaning": "割る・分裂",
           "isUnknown": false,
           "lemma": "split",
           "reading": "split",
@@ -6323,7 +6323,7 @@
         },
         {
           "word": "violet",
-          "meaning": "(要確認)",
+          "meaning": "すみれ・紫色",
           "isUnknown": false,
           "lemma": "violet",
           "reading": "violet",
@@ -6819,7 +6819,7 @@
         },
         {
           "word": "convex",
-          "meaning": "(要確認)",
+          "meaning": "凸の・凸面の",
           "isUnknown": false,
           "lemma": "convex",
           "reading": "convex",
@@ -7392,7 +7392,7 @@
         },
         {
           "word": "apparatus",
-          "meaning": "(要確認)",
+          "meaning": "装置・器具",
           "isUnknown": false,
           "lemma": "apparatus",
           "reading": "apparatus",
@@ -7839,7 +7839,7 @@
         },
         {
           "word": "wall",
-          "meaning": "(要確認)",
+          "meaning": "壁",
           "isUnknown": false,
           "lemma": "wall",
           "reading": "wall",
@@ -8327,7 +8327,7 @@
         },
         {
           "word": "rare",
-          "meaning": "(要確認)",
+          "meaning": "まれな",
           "isUnknown": false,
           "lemma": "rare",
           "reading": "rare",
@@ -8612,7 +8612,7 @@
         },
         {
           "word": "atom",
-          "meaning": "(要確認)",
+          "meaning": "原子",
           "isUnknown": false,
           "lemma": "atom",
           "reading": "atom",
@@ -8738,7 +8738,7 @@
         },
         {
           "word": "combination",
-          "meaning": "(要確認)",
+          "meaning": "組み合わせ・結合",
           "isUnknown": false,
           "lemma": "combination",
           "reading": "combination",
@@ -9718,7 +9718,7 @@
         },
         {
           "word": "bacteria",
-          "meaning": "(要確認)",
+          "meaning": "細菌",
           "isUnknown": false,
           "lemma": "bacteria",
           "reading": "bacteria",
@@ -10091,7 +10091,7 @@
         },
         {
           "word": "consist",
-          "meaning": "(要確認)",
+          "meaning": "成り立つ・一致する",
           "isUnknown": false,
           "lemma": "consist",
           "reading": "consist",
@@ -10548,7 +10548,7 @@
         },
         {
           "word": "blueprint",
-          "meaning": "(要確認)",
+          "meaning": "青写真・設計図",
           "isUnknown": false,
           "lemma": "blueprint",
           "reading": "blueprint",
@@ -10800,7 +10800,7 @@
         },
         {
           "word": "resemble",
-          "meaning": "(要確認)",
+          "meaning": "似ている",
           "isUnknown": false,
           "lemma": "resemble",
           "reading": "resemble",
@@ -12836,7 +12836,7 @@
         },
         {
           "word": "type",
-          "meaning": "(要確認)",
+          "meaning": "型・種類",
           "isUnknown": false,
           "lemma": "type",
           "reading": "type",
@@ -13302,7 +13302,7 @@
         },
         {
           "word": "sharp",
-          "meaning": "(要確認)",
+          "meaning": "鋭い",
           "isUnknown": false,
           "lemma": "sharp",
           "reading": "sharp",
@@ -14012,7 +14012,7 @@
         },
         {
           "word": "rock",
-          "meaning": "(要確認)",
+          "meaning": "岩・揺らす",
           "isUnknown": false,
           "lemma": "rock",
           "reading": "rock",
@@ -14300,7 +14300,7 @@
         },
         {
           "word": "astronomy",
-          "meaning": "(要確認)",
+          "meaning": "天文学",
           "isUnknown": false,
           "lemma": "astronomy",
           "reading": "astronomy",
@@ -14470,7 +14470,7 @@
         },
         {
           "word": "outer",
-          "meaning": "(要確認)",
+          "meaning": "外側の",
           "isUnknown": false,
           "lemma": "outer",
           "reading": "outer",
@@ -15579,7 +15579,7 @@
         },
         {
           "word": "outer",
-          "meaning": "(要確認)",
+          "meaning": "外側の",
           "isUnknown": false,
           "lemma": "outer",
           "reading": "outer",
@@ -16361,7 +16361,7 @@
         },
         {
           "word": "outer",
-          "meaning": "(要確認)",
+          "meaning": "外側の",
           "isUnknown": false,
           "lemma": "outer",
           "reading": "outer",
@@ -16553,7 +16553,7 @@
         },
         {
           "word": "consist",
-          "meaning": "(要確認)",
+          "meaning": "成り立つ・一致する",
           "isUnknown": false,
           "lemma": "consist",
           "reading": "consist",
@@ -16803,7 +16803,7 @@
         },
         {
           "word": "rock",
-          "meaning": "(要確認)",
+          "meaning": "岩・揺らす",
           "isUnknown": false,
           "lemma": "rock",
           "reading": "rock",
@@ -18212,7 +18212,7 @@
         },
         {
           "word": "telephone",
-          "meaning": "(要確認)",
+          "meaning": "電話",
           "isUnknown": false,
           "lemma": "telephone",
           "reading": "telephone",
@@ -21978,7 +21978,7 @@
         },
         {
           "word": "attack",
-          "meaning": "(要確認)",
+          "meaning": "攻撃・発作 / 攻撃する",
           "isUnknown": false,
           "lemma": "attack",
           "reading": "attack",
@@ -22000,7 +22000,7 @@
         },
         {
           "word": "bacteria",
-          "meaning": "(要確認)",
+          "meaning": "細菌",
           "isUnknown": false,
           "lemma": "bacteria",
           "reading": "bacteria",
@@ -23878,7 +23878,7 @@
         },
         {
           "word": "conserve",
-          "meaning": "(要確認)",
+          "meaning": "保存する・節約する",
           "isUnknown": false,
           "lemma": "conserve",
           "reading": "conserve",
@@ -24149,7 +24149,7 @@
         },
         {
           "word": "invention",
-          "meaning": "(要確認)",
+          "meaning": "inventionすること",
           "isUnknown": false,
           "lemma": "invention",
           "reading": "invention",
@@ -24182,7 +24182,7 @@
         },
         {
           "word": "wheel",
-          "meaning": "(要確認)",
+          "meaning": "車輪・回転する",
           "isUnknown": false,
           "lemma": "wheel",
           "reading": "wheel",
@@ -24612,7 +24612,7 @@
         },
         {
           "word": "horse",
-          "meaning": "(要確認)",
+          "meaning": "馬",
           "isUnknown": false,
           "lemma": "horse",
           "reading": "horse",
@@ -24719,7 +24719,7 @@
         },
         {
           "word": "telephone",
-          "meaning": "(要確認)",
+          "meaning": "電話",
           "isUnknown": false,
           "lemma": "telephone",
           "reading": "telephone",
@@ -24741,7 +24741,7 @@
         },
         {
           "word": "radio",
-          "meaning": "(要確認)",
+          "meaning": "ラジオ",
           "isUnknown": false,
           "lemma": "radio",
           "reading": "radio",
@@ -27964,7 +27964,7 @@
         },
         {
           "word": "comprehend",
-          "meaning": "(要確認)",
+          "meaning": "理解する・把握する",
           "isUnknown": false,
           "lemma": "comprehend",
           "reading": "comprehend",
@@ -29849,7 +29849,7 @@
         },
         {
           "word": "ride",
-          "meaning": "(要確認)",
+          "meaning": "乗る",
           "isUnknown": false,
           "lemma": "ride",
           "reading": "ride",
@@ -35007,7 +35007,7 @@
         },
         {
           "word": "bird",
-          "meaning": "(要確認)",
+          "meaning": "鳥",
           "isUnknown": false,
           "lemma": "bird",
           "reading": "bird",
@@ -35185,7 +35185,7 @@
         },
         {
           "word": "passenger",
-          "meaning": "(要確認)",
+          "meaning": "乗客",
           "isUnknown": false,
           "lemma": "passenger",
           "reading": "passenger",
@@ -35454,7 +35454,7 @@
         },
         {
           "word": "twentieth",
-          "meaning": "(要確認)",
+          "meaning": "20番目の",
           "isUnknown": false,
           "lemma": "twentieth",
           "reading": "twentieth",
@@ -35983,7 +35983,7 @@
         },
         {
           "word": "bald",
-          "meaning": "(要確認)",
+          "meaning": "はげた・露骨な",
           "isUnknown": false,
           "lemma": "bald",
           "reading": "bald",
@@ -36347,7 +36347,7 @@
         },
         {
           "word": "botanical",
-          "meaning": "(要確認)",
+          "meaning": "植物学の",
           "isUnknown": false,
           "lemma": "botanical",
           "reading": "botanical",
@@ -36358,7 +36358,7 @@
         },
         {
           "word": "garden",
-          "meaning": "(要確認)",
+          "meaning": "庭",
           "isUnknown": false,
           "lemma": "garden",
           "reading": "garden",
@@ -36706,7 +36706,7 @@
         },
         {
           "word": "garden",
-          "meaning": "(要確認)",
+          "meaning": "庭",
           "isUnknown": false,
           "lemma": "garden",
           "reading": "garden",
@@ -37532,7 +37532,7 @@
         },
         {
           "word": "brief",
-          "meaning": "(要確認)",
+          "meaning": "短い・簡潔な",
           "isUnknown": false,
           "lemma": "brief",
           "reading": "brief",
@@ -37917,7 +37917,7 @@
         },
         {
           "word": "comprehend",
-          "meaning": "(要確認)",
+          "meaning": "理解する・把握する",
           "isUnknown": false,
           "lemma": "comprehend",
           "reading": "comprehend",
@@ -38069,7 +38069,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(要確認)",
+          "meaning": "測る・手段",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -38742,7 +38742,7 @@
         },
         {
           "word": "astronomy",
-          "meaning": "(要確認)",
+          "meaning": "天文学",
           "isUnknown": false,
           "lemma": "astronomy",
           "reading": "astronomy",
@@ -38772,7 +38772,7 @@
         },
         {
           "word": "biochemistry",
-          "meaning": "(要確認)",
+          "meaning": "生化学",
           "isUnknown": false,
           "lemma": "biochemistry",
           "reading": "biochemistry",
@@ -40028,7 +40028,7 @@
         },
         {
           "word": "associate",
-          "meaning": "(要確認)",
+          "meaning": "関連づける・仲間",
           "isUnknown": false,
           "lemma": "associate",
           "reading": "associate",
@@ -40749,7 +40749,7 @@
         },
         {
           "word": "prove",
-          "meaning": "(要確認)",
+          "meaning": "証明する",
           "isUnknown": false,
           "lemma": "prove",
           "reading": "prove",
@@ -42426,7 +42426,7 @@
         },
         {
           "word": "fifty",
-          "meaning": "(要確認)",
+          "meaning": "50",
           "isUnknown": false,
           "lemma": "fifty",
           "reading": "fifty",
@@ -43123,7 +43123,7 @@
         },
         {
           "word": "subject",
-          "meaning": "(要確認)",
+          "meaning": "主題・科目",
           "isUnknown": false,
           "lemma": "subject",
           "reading": "subject",
@@ -43285,7 +43285,7 @@
         },
         {
           "word": "atom",
-          "meaning": "(要確認)",
+          "meaning": "原子",
           "isUnknown": false,
           "lemma": "atom",
           "reading": "atom",

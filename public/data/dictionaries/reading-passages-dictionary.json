@@ -58285,12 +58285,12 @@
   "france": {
     "word": "france",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "フランス",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-summer-vacation-stories"
@@ -59561,12 +59561,12 @@
   "worth": {
     "word": "worth",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜の価値がある",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-family-gathering",
@@ -61448,12 +61448,12 @@
   "argue": {
     "word": "argue",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "議論する・主張する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day",
       "advanced-school-festival",
@@ -61495,12 +61495,12 @@
   "combination": {
     "word": "combination",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "組み合わせ・結合",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum",
       "advanced-school-festival",
@@ -61594,12 +61594,12 @@
   "astronomy": {
     "word": "astronomy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "天文学",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-science-museum",
@@ -61654,12 +61654,12 @@
   "rock": {
     "word": "rock",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "岩・揺らす",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum",
       "intermediate-school-news",
@@ -61747,12 +61747,12 @@
   "comprehend": {
     "word": "comprehend",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "理解する・把握する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-science-museum",
@@ -61877,12 +61877,12 @@
   "garden": {
     "word": "garden",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "庭",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum",
       "intermediate-community-events",
@@ -61909,12 +61909,12 @@
   "measure": {
     "word": "measure",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "測る・手段",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons",
       "intermediate-science-museum",
@@ -61969,12 +61969,12 @@
   "football": {
     "word": "football",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "フットボール、サッカー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -62028,12 +62028,12 @@
   "grandmother": {
     "word": "grandmother",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "祖母・おばあさん",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-hospital-visit",
@@ -62043,12 +62043,12 @@
   "chicken": {
     "word": "chicken",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鶏・鶏肉",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-family-gathering",
@@ -62190,12 +62190,12 @@
   "silence": {
     "word": "silence",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "沈黙",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-hospital-visit",
@@ -62206,12 +62206,12 @@
   "announcement": {
     "word": "announcement",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "announceすること",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "advanced-family-gathering",
@@ -62268,12 +62268,12 @@
   "warmth": {
     "word": "warmth",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "暖かさ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-family-gathering",
@@ -62528,12 +62528,12 @@
   "conventional": {
     "word": "conventional",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "従来の・伝統的な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-technology-future",
@@ -62750,12 +62750,12 @@
   "condition": {
     "word": "condition",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "状態・条件",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-health-statistics",
@@ -62841,12 +62841,12 @@
   "wild": {
     "word": "wild",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "野生の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "beginner-wildlife-park-guide"
@@ -62868,12 +62868,12 @@
   "behavior": {
     "word": "behavior",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "行動",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-summer-vacation-stories",
@@ -63246,12 +63246,12 @@
   "rainy": {
     "word": "rainy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "雨の降る",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -63291,12 +63291,12 @@
   "road": {
     "word": "road",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "道路",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics",
       "intermediate-homestay-america",
@@ -63354,12 +63354,12 @@
   "album": {
     "word": "album",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "アルバム",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "intermediate-homestay-america"
@@ -63414,12 +63414,12 @@
   "willingness": {
     "word": "willingness",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "進んでする気持ち",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "intermediate-school-events-year",
@@ -63541,12 +63541,12 @@
   "shirt": {
     "word": "shirt",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "シャツ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-homestay-america"
@@ -63601,12 +63601,12 @@
   "vocabulary": {
     "word": "vocabulary",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "語彙・単語集",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-homestay-america",
@@ -63771,12 +63771,12 @@
   "upon": {
     "word": "upon",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜の上に",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-school-festival"
@@ -63858,12 +63858,12 @@
   "yen": {
     "word": "yen",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "円",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -63931,12 +63931,12 @@
   "river": {
     "word": "river",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "川",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-community-events",
@@ -63993,12 +63993,12 @@
   "ball": {
     "word": "ball",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ボール",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "advanced-international-exchange"
@@ -64039,12 +64039,12 @@
   "sword": {
     "word": "sword",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "剣",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -64052,12 +64052,12 @@
   "theater": {
     "word": "theater",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "劇場",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-school-festival",
@@ -64099,12 +64099,12 @@
   "smell": {
     "word": "smell",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "におい・においがする",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "advanced-school-festival",
@@ -64270,12 +64270,12 @@
   "musical": {
     "word": "musical",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ミュージカル、音楽の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-school-news"
@@ -64347,12 +64347,12 @@
   "scared": {
     "word": "scared",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "怖がって",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "advanced-school-festival"
@@ -64409,12 +64409,12 @@
   "assignment": {
     "word": "assignment",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "割り当て・課題",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-science-museum"
@@ -64423,12 +64423,12 @@
   "accompany": {
     "word": "accompany",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "同行する・伴う",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-health-statistics",
@@ -64547,12 +64547,12 @@
   "type": {
     "word": "type",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "型・種類",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-family-gathering",
@@ -64778,12 +64778,12 @@
   "bird": {
     "word": "bird",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鳥",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-science-museum",
@@ -64886,12 +64886,12 @@
   "fifty": {
     "word": "fifty",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "50",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-science-museum",
@@ -65093,12 +65093,12 @@
   "anymore": {
     "word": "anymore",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "もはや",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "advanced-family-gathering",
@@ -65124,12 +65124,12 @@
   "soup": {
     "word": "soup",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "スープ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu",
       "intermediate-exchange-student-australia-full",
@@ -65186,12 +65186,12 @@
   "accept": {
     "word": "accept",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "受け入れる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "advanced-environmental-issues",
@@ -65310,12 +65310,12 @@
   "latest": {
     "word": "latest",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "最新の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -65323,12 +65323,12 @@
   "delivery": {
     "word": "delivery",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "配達・届けること",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-health-statistics",
@@ -65339,12 +65339,12 @@
   "settle": {
     "word": "settle",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "落ち着く・解決する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-hospital-visit"
@@ -65492,12 +65492,12 @@
   "dry": {
     "word": "dry",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "乾く・乾いた",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-family-gathering"
@@ -65521,12 +65521,12 @@
   "detail": {
     "word": "detail",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "詳細",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "advanced-family-gathering",
@@ -65549,12 +65549,12 @@
   "bear": {
     "word": "bear",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "耐える・生む",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-career-day",
@@ -65716,12 +65716,12 @@
   "rapid": {
     "word": "rapid",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "急速な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-technology-future",
@@ -65815,12 +65815,12 @@
   "application": {
     "word": "application",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "応用・申請",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future",
       "beginner-wildlife-park-guide",
@@ -65876,12 +65876,12 @@
   "average": {
     "word": "average",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "平均・平均的な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-health-statistics",
@@ -66197,12 +66197,12 @@
   "text": {
     "word": "text",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "本文・テキスト",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-career-day",
@@ -66295,12 +66295,12 @@
   "selection": {
     "word": "selection",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "selectionすること",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "beginner-supermarket-shopping",
@@ -66325,12 +66325,12 @@
   "win": {
     "word": "win",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "勝つ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-school-events-year"
@@ -66448,12 +66448,12 @@
   "written": {
     "word": "written",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "書かれた",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-career-day"
@@ -66538,12 +66538,12 @@
   "camping": {
     "word": "camping",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "キャンプ(すること)",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-summer-vacation-stories"
@@ -66552,12 +66552,12 @@
   "lake": {
     "word": "lake",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "湖",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -66595,12 +66595,12 @@
   "sister": {
     "word": "sister",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "姉妹",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "intermediate-exchange-student-australia-full",
@@ -66643,12 +66643,12 @@
   "transport": {
     "word": "transport",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "輸送する・運ぶ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-summer-vacation-stories",
@@ -66688,12 +66688,12 @@
   "board": {
     "word": "board",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "板・委員会",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-community-events",
@@ -66736,12 +66736,12 @@
   "drill": {
     "word": "drill",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "訓練・ドリル",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-school-news"
@@ -66750,12 +66750,12 @@
   "atomic": {
     "word": "atomic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "原子の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "advanced-technology-future"
@@ -66811,12 +66811,12 @@
   "department": {
     "word": "department",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "部門・学科",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-hospital-visit",
       "intermediate-community-events",
@@ -66930,12 +66930,12 @@
   "injured": {
     "word": "injured",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "けがをした",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics",
       "intermediate-hospital-visit",
@@ -67065,12 +67065,12 @@
   "officer": {
     "word": "officer",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "役人・将校",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -67109,12 +67109,12 @@
   "tax": {
     "word": "tax",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "税金",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "advanced-technology-future",
@@ -67155,12 +67155,12 @@
   "guest": {
     "word": "guest",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "客、ゲスト",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "beginner-wildlife-park-guide",
@@ -67595,12 +67595,12 @@
   "convenient": {
     "word": "convenient",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "便利な・都合のよい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-technology-future",
@@ -67782,12 +67782,12 @@
   "wave": {
     "word": "wave",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "波・振る",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-technology-future",
       "intermediate-homestay-america"
@@ -67957,12 +67957,12 @@
   "zone": {
     "word": "zone",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "地帯・区域",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-school-festival",
@@ -68108,12 +68108,12 @@
   "piece": {
     "word": "piece",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "一片・作品",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-homestay-america",
@@ -68211,12 +68211,12 @@
   "tone": {
     "word": "tone",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "音色・調子・口調",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "beginner-conversation-daily",
@@ -68345,12 +68345,12 @@
   "classic": {
     "word": "classic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "古典的な・一流の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-school-news"
@@ -68402,12 +68402,12 @@
   "prince": {
     "word": "prince",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "王子",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-school-festival"
@@ -68432,12 +68432,12 @@
   "contest": {
     "word": "contest",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "競技・争う",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-school-news"
@@ -68475,12 +68475,12 @@
   "accident": {
     "word": "accident",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "事故",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-school-festival",
@@ -68503,12 +68503,12 @@
   "lesson": {
     "word": "lesson",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "授業・教訓",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-school-festival",
@@ -68532,12 +68532,12 @@
   "costume": {
     "word": "costume",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "衣装・服装",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -68632,12 +68632,12 @@
   "ninety": {
     "word": "ninety",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "90",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-school-festival",
@@ -68750,12 +68750,12 @@
   "crew": {
     "word": "crew",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "乗組員・一団",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "advanced-school-festival"
@@ -68790,12 +68790,12 @@
   "brilliant": {
     "word": "brilliant",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "輝かしい・優秀な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-school-festival",
@@ -69087,12 +69087,12 @@
   "silent": {
     "word": "silent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "無言の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "advanced-summer-vacation-stories",
@@ -69177,12 +69177,12 @@
   "subject": {
     "word": "subject",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "主題・科目",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum",
       "intermediate-school-events-year",
@@ -69269,12 +69269,12 @@
   "pick": {
     "word": "pick",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "選ぶ・摘む",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily",
       "beginner-supermarket-shopping",
@@ -69298,12 +69298,12 @@
   "weigh": {
     "word": "weigh",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "重さを量る・重さがある",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day",
       "intermediate-science-museum"
@@ -69382,12 +69382,12 @@
   "rare": {
     "word": "rare",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "まれな",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum",
       "advanced-environmental-issues",
@@ -69412,12 +69412,12 @@
   "bacteria": {
     "word": "bacteria",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "細菌",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum",
       "advanced-technology-future"
@@ -69456,12 +69456,12 @@
   "outer": {
     "word": "outer",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "外側の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -69541,12 +69541,12 @@
   "attack": {
     "word": "attack",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "攻撃・発作 / 攻撃する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "intermediate-science-museum",
@@ -69922,12 +69922,12 @@
   "sport": {
     "word": "sport",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "スポーツ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -69978,12 +69978,12 @@
   "baseball": {
     "word": "baseball",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "野球",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -69991,12 +69991,12 @@
   "earn": {
     "word": "earn",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "稼ぐ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "intermediate-community-events",
@@ -70019,12 +70019,12 @@
   "ski": {
     "word": "ski",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "スキー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -70105,12 +70105,12 @@
   "reply": {
     "word": "reply",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "返事する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "intermediate-exchange-student-australia",
@@ -70209,12 +70209,12 @@
   "chocolate": {
     "word": "chocolate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "チョコレート",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "beginner-supermarket-shopping",
@@ -70238,12 +70238,12 @@
   "curry": {
     "word": "curry",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "カレー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-international-exchange"
@@ -70295,12 +70295,12 @@
   "barbecue": {
     "word": "barbecue",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "バーベキュー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -70483,12 +70483,12 @@
   "valid": {
     "word": "valid",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "有効な・妥当な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-summer-vacation-stories",
@@ -70571,12 +70571,12 @@
   "driver": {
     "word": "driver",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "運転手",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -70599,12 +70599,12 @@
   "desk": {
     "word": "desk",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "机",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-hospital-visit",
@@ -70673,12 +70673,12 @@
   "wash": {
     "word": "wash",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "洗う",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-school-news"
@@ -70727,12 +70727,12 @@
   "fever": {
     "word": "fever",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "熱・発熱",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "beginner-conversation-daily",
@@ -70903,12 +70903,12 @@
   "alive": {
     "word": "alive",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "生きている",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-family-gathering"
@@ -70917,12 +70917,12 @@
   "salad": {
     "word": "salad",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "サラダ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-family-gathering",
@@ -70932,12 +70932,12 @@
   "accommodate": {
     "word": "accommodate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "収容する・適応させる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "advanced-family-gathering",
@@ -70976,12 +70976,12 @@
   "spot": {
     "word": "spot",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "点・場所・見つける",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "advanced-family-gathering",
@@ -71006,12 +71006,12 @@
   "ward": {
     "word": "ward",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "病棟・区",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-hospital-visit"
@@ -71035,12 +71035,12 @@
   "noon": {
     "word": "noon",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "正午",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-family-gathering"
@@ -71121,12 +71121,12 @@
   "usual": {
     "word": "usual",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "いつもの・普通の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "advanced-family-gathering",
@@ -71382,12 +71382,12 @@
   "meter": {
     "word": "meter",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "メートル・計器",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-technology-future",
       "advanced-environmental-issues"
@@ -71410,12 +71410,12 @@
   "tropical": {
     "word": "tropical",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "熱帯の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-wildlife-park-guide",
       "advanced-environmental-issues"
@@ -71437,12 +71437,12 @@
   "thousand": {
     "word": "thousand",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "1000",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-environmental-issues"
@@ -71451,12 +71451,12 @@
   "contaminate": {
     "word": "contaminate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "汚染する・汚す",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -71674,12 +71674,12 @@
   "particular": {
     "word": "particular",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "特定の・特別な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-environmental-issues"
@@ -71703,12 +71703,12 @@
   "advocate": {
     "word": "advocate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "主張する・提唱者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-community-events",
       "advanced-environmental-issues",
@@ -71939,12 +71939,12 @@
   "aesthetic": {
     "word": "aesthetic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "美的な・美学の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "intermediate-school-events-year",
@@ -72026,12 +72026,12 @@
   "ahead": {
     "word": "ahead",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "前方に",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-health-statistics",
@@ -72097,12 +72097,12 @@
   "die": {
     "word": "die",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "死ぬ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-health-statistics",
@@ -72126,12 +72126,12 @@
   "classification": {
     "word": "classification",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "分類・類別",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "beginner-conversation-daily",
@@ -72155,12 +72155,12 @@
   "authority": {
     "word": "authority",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "権威・当局",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -72235,12 +72235,12 @@
   "ambition": {
     "word": "ambition",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "野心・大望",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "beginner-cafe-menu"
@@ -72265,12 +72265,12 @@
   "rose": {
     "word": "rose",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "バラ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -72577,12 +72577,12 @@
   "king": {
     "word": "king",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "王",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -72753,12 +72753,12 @@
   "awesome": {
     "word": "awesome",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "すごい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu",
       "advanced-summer-vacation-stories",
@@ -72768,12 +72768,12 @@
   "wish": {
     "word": "wish",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "願う",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "advanced-summer-vacation-stories",
@@ -73056,12 +73056,12 @@
   "cautious": {
     "word": "cautious",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "用心深い・慎重な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "beginner-conversation-daily",
@@ -73071,12 +73071,12 @@
   "anxious": {
     "word": "anxious",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "心配して・切望して",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "beginner-conversation-daily",
@@ -73100,12 +73100,12 @@
   "contribution": {
     "word": "contribution",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "貢献・寄付",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "beginner-wildlife-park-guide"
@@ -73459,12 +73459,12 @@
   "temporary": {
     "word": "temporary",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "一時的な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "intermediate-school-events-year",
@@ -73723,12 +73723,12 @@
   "photographer": {
     "word": "photographer",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "写真家・カメラマン",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "beginner-wildlife-park-guide"
@@ -73737,12 +73737,12 @@
   "notice": {
     "word": "notice",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "気づく・通知",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "intermediate-career-day",
@@ -73752,12 +73752,12 @@
   "musician": {
     "word": "musician",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "音楽家",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "intermediate-school-news"
@@ -73894,12 +73894,12 @@
   "charitable": {
     "word": "charitable",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "慈善的な・寛容な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "intermediate-school-events-year",
@@ -73981,12 +73981,12 @@
   "visitor": {
     "word": "visitor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "訪問者・来訪者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-wildlife-park-guide",
       "intermediate-community-events"
@@ -74541,12 +74541,12 @@
   "sunshine": {
     "word": "sunshine",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "日光",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -74594,12 +74594,12 @@
   "cloudy": {
     "word": "cloudy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "曇った",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -74649,12 +74649,12 @@
   "fiction": {
     "word": "fiction",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "fictionすること",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-technology-future",
       "intermediate-school-news"
@@ -74718,12 +74718,12 @@
   "widespread": {
     "word": "widespread",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "広範囲の・普及した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-technology-future"
@@ -74786,12 +74786,12 @@
   "via": {
     "word": "via",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜経由で",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "advanced-health-statistics",
@@ -75037,12 +75037,12 @@
   "tall": {
     "word": "tall",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "背が高い",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "intermediate-homestay-america"
@@ -75051,12 +75051,12 @@
   "mail": {
     "word": "mail",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "郵便・郵送する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -75078,12 +75078,12 @@
   "corner": {
     "word": "corner",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "角",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum",
       "intermediate-homestay-america"
@@ -75120,12 +75120,12 @@
   "typical": {
     "word": "typical",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "典型的な・代表的な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day",
       "intermediate-homestay-america"
@@ -75203,12 +75203,12 @@
   "shore": {
     "word": "shore",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "岸",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "intermediate-homestay-america"
@@ -75246,12 +75246,12 @@
   "clerk": {
     "word": "clerk",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "事務員・店員",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-hospital-visit",
       "intermediate-homestay-america"
@@ -75260,12 +75260,12 @@
   "pleasure": {
     "word": "pleasure",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "喜び、楽しみ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-homestay-america"
@@ -75676,12 +75676,12 @@
   "awkward": {
     "word": "awkward",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "不器用な・気まずい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-homestay-america"
@@ -75774,12 +75774,12 @@
   "actor": {
     "word": "actor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "俳優",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "advanced-environmental-issues"
@@ -75843,12 +75843,12 @@
   "leader": {
     "word": "leader",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "指導者・リーダー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -76086,12 +76086,12 @@
   "curtain": {
     "word": "curtain",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "カーテン",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -76212,12 +76212,12 @@
   "auditorium": {
     "word": "auditorium",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "講堂・観客席",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -76437,12 +76437,12 @@
   "applause": {
     "word": "applause",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "拍手・称賛",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -76493,12 +76493,12 @@
   "administration": {
     "word": "administration",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "管理・政権",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-school-festival"
@@ -76594,12 +76594,12 @@
   "charity": {
     "word": "charity",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "慈善・博愛",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-school-news"
@@ -76665,12 +76665,12 @@
   "custom": {
     "word": "custom",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "習慣",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "advanced-technology-future"
@@ -76679,12 +76679,12 @@
   "closet": {
     "word": "closet",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "物入れ・秘密の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-hospital-visit"
@@ -76833,12 +76833,12 @@
   "prove": {
     "word": "prove",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "証明する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum",
       "advanced-school-festival"
@@ -76932,12 +76932,12 @@
   "administer": {
     "word": "administer",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "管理する・執行する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day",
       "advanced-school-festival"
@@ -76946,12 +76946,12 @@
   "novel": {
     "word": "novel",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "小説・新しい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival",
       "advanced-technology-future"
@@ -77018,12 +77018,12 @@
   "cherish": {
     "word": "cherish",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "大切にする・心に抱く",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival",
       "intermediate-community-events"
@@ -77046,12 +77046,12 @@
   "ride": {
     "word": "ride",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "乗る",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -77156,12 +77156,12 @@
   "split": {
     "word": "split",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "割る・分裂",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum",
       "advanced-technology-future"
@@ -77197,12 +77197,12 @@
   "wall": {
     "word": "wall",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "壁",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "intermediate-science-museum"
@@ -77211,12 +77211,12 @@
   "atom": {
     "word": "atom",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "原子",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -77251,12 +77251,12 @@
   "consist": {
     "word": "consist",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "成り立つ・一致する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -77497,12 +77497,12 @@
   "telephone": {
     "word": "telephone",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "電話",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -77608,12 +77608,12 @@
   "invention": {
     "word": "invention",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "inventionすること",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum",
       "advanced-technology-future"
@@ -77848,12 +77848,12 @@
   "brief": {
     "word": "brief",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "短い・簡潔な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-science-museum"
@@ -78126,12 +78126,12 @@
   "couple": {
     "word": "couple",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "夫婦",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "advanced-international-exchange"
@@ -78140,12 +78140,12 @@
   "swim": {
     "word": "swim",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "泳ぐ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "advanced-international-exchange"
@@ -78236,12 +78236,12 @@
   "gold": {
     "word": "gold",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "金、金色",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -78249,12 +78249,12 @@
   "rugby": {
     "word": "rugby",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ラグビー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -78481,12 +78481,12 @@
   "sweet": {
     "word": "sweet",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "甘い",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "advanced-international-exchange"
@@ -78985,12 +78985,12 @@
   "chance": {
     "word": "chance",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "機会",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -79027,12 +79027,12 @@
   "rush": {
     "word": "rush",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "急ぐ・殺到",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-family-gathering"
@@ -79041,12 +79041,12 @@
   "dentist": {
     "word": "dentist",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "歯医者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year",
       "advanced-family-gathering"
@@ -79055,12 +79055,12 @@
   "weak": {
     "word": "weak",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "弱い",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-hospital-visit"
@@ -79224,12 +79224,12 @@
   "steady": {
     "word": "steady",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "安定した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "intermediate-career-day"
@@ -79280,12 +79280,12 @@
   "vase": {
     "word": "vase",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "花瓶",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -79560,12 +79560,12 @@
   "transmit": {
     "word": "transmit",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "伝える・送信する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-family-gathering"
@@ -79615,12 +79615,12 @@
   "continuity": {
     "word": "continuity",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "連続性・継続",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "advanced-summer-vacation-stories"
@@ -79782,12 +79782,12 @@
   "abundance": {
     "word": "abundance",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "豊富・多量",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "beginner-supermarket-shopping"
@@ -79824,12 +79824,12 @@
   "bond": {
     "word": "bond",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "結びつき・絆",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering",
       "beginner-conversation-daily"
@@ -79949,12 +79949,12 @@
   "seventeen": {
     "word": "seventeen",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "17",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-environmental-issues"
@@ -79976,12 +79976,12 @@
   "timber": {
     "word": "timber",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "木材・材木",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues",
       "intermediate-school-news"
@@ -80224,12 +80224,12 @@
   "unsafe": {
     "word": "unsafe",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "危険な・安全でない",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -80237,12 +80237,12 @@
   "dead": {
     "word": "dead",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "死んだ・非常に",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-environmental-issues"
@@ -80251,12 +80251,12 @@
   "chain": {
     "word": "chain",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鎖・連鎖",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future",
       "advanced-environmental-issues"
@@ -80358,12 +80358,12 @@
   "burden": {
     "word": "burden",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "負担・重荷",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-environmental-issues"
@@ -80438,12 +80438,12 @@
   "compact": {
     "word": "compact",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "小型の・密集した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -80492,12 +80492,12 @@
   "correlate": {
     "word": "correlate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "相関させる・関連がある",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-environmental-issues"
@@ -80576,12 +80576,12 @@
   "aside": {
     "word": "aside",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "わきへ・別にして",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "advanced-environmental-issues"
@@ -80716,12 +80716,12 @@
   "attempt": {
     "word": "attempt",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "試み・企て",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "advanced-environmental-issues"
@@ -80829,12 +80829,12 @@
   "alternate": {
     "word": "alternate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "交互の・交代する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "advanced-environmental-issues"
@@ -80871,12 +80871,12 @@
   "alter": {
     "word": "alter",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "変える・改める",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-environmental-issues"
@@ -80912,12 +80912,12 @@
   "celestial": {
     "word": "celestial",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "天体の・天国の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-environmental-issues"
@@ -81052,12 +81052,12 @@
   "product": {
     "word": "product",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "製品",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "advanced-environmental-issues"
@@ -81080,12 +81080,12 @@
   "warrant": {
     "word": "warrant",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "令状・正当化する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics",
       "advanced-environmental-issues"
@@ -81207,12 +81207,12 @@
   "chronicle": {
     "word": "chronicle",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "年代記・記録する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -81261,12 +81261,12 @@
   "symbol": {
     "word": "symbol",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "象徴・記号",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -81447,12 +81447,12 @@
   "eighth": {
     "word": "eighth",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "8番目の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-school-news"
@@ -81527,12 +81527,12 @@
   "sale": {
     "word": "sale",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "販売・セール",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "beginner-supermarket-shopping"
@@ -81541,12 +81541,12 @@
   "church": {
     "word": "church",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "教会",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-school-events-year"
@@ -81702,12 +81702,12 @@
   "rule": {
     "word": "rule",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "規則・支配する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -81754,12 +81754,12 @@
   "colonial": {
     "word": "colonial",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "植民地の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -81794,12 +81794,12 @@
   "inventor": {
     "word": "inventor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "発明家・考案者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -81834,12 +81834,12 @@
   "upward": {
     "word": "upward",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "上へ・上向きの",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures",
       "advanced-health-statistics"
@@ -81956,12 +81956,12 @@
   "woman": {
     "word": "woman",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "女性",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-hospital-visit"
@@ -81998,12 +81998,12 @@
   "man": {
     "word": "man",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "男性・人",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-hospital-visit"
@@ -82039,12 +82039,12 @@
   "flight": {
     "word": "flight",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "飛行、フライト",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "beginner-weather-seasons"
@@ -82067,12 +82067,12 @@
   "writer": {
     "word": "writer",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "作家・著者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -82080,12 +82080,12 @@
   "star": {
     "word": "star",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "星・スター",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures",
       "intermediate-school-events-year"
@@ -82229,12 +82229,12 @@
   "conviction": {
     "word": "conviction",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "確信・有罪判決",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -82380,12 +82380,12 @@
   "construct": {
     "word": "construct",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "建設する・構築する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -82763,12 +82763,12 @@
   "tourist": {
     "word": "tourist",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "旅行者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "intermediate-community-events"
@@ -82901,12 +82901,12 @@
   "comprehension": {
     "word": "comprehension",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "理解・理解力",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "beginner-conversation-daily"
@@ -82915,12 +82915,12 @@
   "applicable": {
     "word": "applicable",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "適用できる・当てはまる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories",
       "intermediate-community-events"
@@ -83056,12 +83056,12 @@
   "o'clock": {
     "word": "o'clock",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜時",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -83206,12 +83206,12 @@
   "corridor": {
     "word": "corridor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "廊下・回廊",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-hospital-visit"
@@ -83234,12 +83234,12 @@
   "absent": {
     "word": "absent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "不在の・欠席した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "beginner-conversation-daily"
@@ -83248,12 +83248,12 @@
   "convey": {
     "word": "convey",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "伝える・運ぶ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-school-news"
@@ -83291,12 +83291,12 @@
   "absurd": {
     "word": "absurd",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "不条理な・ばかげた",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-school-news"
@@ -83305,12 +83305,12 @@
   "clarify": {
     "word": "clarify",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "明確にする・説明する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-school-news"
@@ -83347,12 +83347,12 @@
   "arrangement": {
     "word": "arrangement",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "配置・準備",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-community-events"
@@ -83417,12 +83417,12 @@
   "attitude": {
     "word": "attitude",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "態度・姿勢",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "intermediate-hospital-visit"
@@ -83431,12 +83431,12 @@
   "admirable": {
     "word": "admirable",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "立派な・称賛すべき",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "beginner-conversation-daily"
@@ -83460,12 +83460,12 @@
   "usage": {
     "word": "usage",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "使用法・用法",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily",
       "beginner-wildlife-park-guide"
@@ -83558,12 +83558,12 @@
   "arm": {
     "word": "arm",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "腕・武器",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-hospital-visit"
     ]
@@ -84240,12 +84240,12 @@
   "speaker": {
     "word": "speaker",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "話者・スピーカー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day",
       "intermediate-community-events"
@@ -84325,12 +84325,12 @@
   "attorney": {
     "word": "attorney",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "弁護士・代理人",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "intermediate-career-day"
@@ -84504,12 +84504,12 @@
   "assume": {
     "word": "assume",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "仮定する・引き受ける",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day",
       "intermediate-school-news"
@@ -84722,12 +84722,12 @@
   "confidential": {
     "word": "confidential",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "機密の・内密の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year",
       "intermediate-school-news"
@@ -84961,12 +84961,12 @@
   "core": {
     "word": "core",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "核心・中心部",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu",
       "intermediate-school-events-year"
@@ -85084,12 +85084,12 @@
   "gorilla": {
     "word": "gorilla",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ゴリラ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-wildlife-park-guide"
     ]
@@ -85470,12 +85470,12 @@
   "cooperative": {
     "word": "cooperative",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "協力的な・協同組合",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-wildlife-park-guide",
       "intermediate-community-events"
@@ -85623,12 +85623,12 @@
   "contrast": {
     "word": "contrast",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "対照・対比する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "intermediate-exchange-student-australia"
@@ -86058,12 +86058,12 @@
   "daughter": {
     "word": "daughter",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "娘",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "intermediate-exchange-student-australia"
@@ -86494,12 +86494,12 @@
   "accustomed": {
     "word": "accustomed",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "慣れた",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-exchange-student-australia-full",
       "intermediate-exchange-student-australia"
@@ -87180,12 +87180,12 @@
   "strawberry": {
     "word": "strawberry",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "いちご",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -87276,12 +87276,12 @@
   "attractive": {
     "word": "attractive",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "魅力的な・魅力のある",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping",
       "intermediate-community-events"
@@ -87431,12 +87431,12 @@
   "rainbow": {
     "word": "rainbow",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "虹",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -87659,12 +87659,12 @@
   "conscious": {
     "word": "conscious",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "意識のある・自覚した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons",
       "advanced-technology-future"
@@ -88362,12 +88362,12 @@
   "weekday": {
     "word": "weekday",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "平日",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -88403,12 +88403,12 @@
   "fantastic": {
     "word": "fantastic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "素晴らしい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu",
       "intermediate-community-events"
@@ -88792,12 +88792,12 @@
   "guitar": {
     "word": "guitar",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ギター",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-news"
     ]
@@ -89242,12 +89242,12 @@
   "complicate": {
     "word": "complicate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "複雑にする・ややこしくする",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -89438,12 +89438,12 @@
   "husband": {
     "word": "husband",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "夫",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -89451,12 +89451,12 @@
   "habit": {
     "word": "habit",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "習慣",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -89649,12 +89649,12 @@
   "container": {
     "word": "container",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "容器・コンテナ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -89756,12 +89756,12 @@
   "mix": {
     "word": "mix",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "混ぜる・混合",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -90174,12 +90174,12 @@
   "ear": {
     "word": "ear",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "耳",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -90253,12 +90253,12 @@
   "aggressive": {
     "word": "aggressive",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "攻撃的な・積極的な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -90474,12 +90474,12 @@
   "cope": {
     "word": "cope",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "対処する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-homestay-america"
     ]
@@ -90670,12 +90670,12 @@
   "tale": {
     "word": "tale",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "物語",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -90696,12 +90696,12 @@
   "twist": {
     "word": "twist",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ねじる・ひねる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -90800,12 +90800,12 @@
   "tragedy": {
     "word": "tragedy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "悲劇",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -90853,12 +90853,12 @@
   "mirror": {
     "word": "mirror",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鏡",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -90894,12 +90894,12 @@
   "stuff": {
     "word": "stuff",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "物、材料",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -90920,12 +90920,12 @@
   "pull": {
     "word": "pull",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "引く",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -90960,12 +90960,12 @@
   "purple": {
     "word": "purple",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "紫色",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -91064,12 +91064,12 @@
   "waterfall": {
     "word": "waterfall",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "滝",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -91090,12 +91090,12 @@
   "silver": {
     "word": "silver",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "銀",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -91117,12 +91117,12 @@
   "boring": {
     "word": "boring",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "退屈な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -91260,12 +91260,12 @@
   "bored": {
     "word": "bored",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "退屈した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -91775,12 +91775,12 @@
   "triumph": {
     "word": "triumph",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "勝利・成功",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92265,12 +92265,12 @@
   "lie": {
     "word": "lie",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "横たわる・嘘",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92372,12 +92372,12 @@
   "letter": {
     "word": "letter",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "手紙・文字",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92398,12 +92398,12 @@
   "conclusion": {
     "word": "conclusion",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "結論・終結",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92450,12 +92450,12 @@
   "pretty": {
     "word": "pretty",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "かわいい・かなり",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92555,12 +92555,12 @@
   "constitute": {
     "word": "constitute",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "構成する・設立する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92646,12 +92646,12 @@
   "composure": {
     "word": "composure",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "沈着・平静",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-school-festival"
     ]
@@ -92961,12 +92961,12 @@
   "violet": {
     "word": "violet",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "すみれ・紫色",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93052,12 +93052,12 @@
   "convex": {
     "word": "convex",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "凸の・凸面の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93104,12 +93104,12 @@
   "apparatus": {
     "word": "apparatus",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "装置・器具",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93196,12 +93196,12 @@
   "blueprint": {
     "word": "blueprint",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "青写真・設計図",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93209,12 +93209,12 @@
   "resemble": {
     "word": "resemble",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "似ている",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93366,12 +93366,12 @@
   "sharp": {
     "word": "sharp",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鋭い",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93813,12 +93813,12 @@
   "conserve": {
     "word": "conserve",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "保存する・節約する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93826,12 +93826,12 @@
   "wheel": {
     "word": "wheel",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "車輪・回転する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93852,12 +93852,12 @@
   "horse": {
     "word": "horse",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "馬",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -93878,12 +93878,12 @@
   "radio": {
     "word": "radio",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ラジオ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94179,12 +94179,12 @@
   "passenger": {
     "word": "passenger",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "乗客",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94232,12 +94232,12 @@
   "twentieth": {
     "word": "twentieth",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "20番目の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94258,12 +94258,12 @@
   "bald": {
     "word": "bald",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "はげた・露骨な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94310,12 +94310,12 @@
   "botanical": {
     "word": "botanical",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "植物学の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94403,12 +94403,12 @@
   "biochemistry": {
     "word": "biochemistry",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "生化学",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94429,12 +94429,12 @@
   "associate": {
     "word": "associate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "関連づける・仲間",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-science-museum"
     ]
@@ -94628,12 +94628,12 @@
   "bowl": {
     "word": "bowl",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ボウル・椀",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -94680,12 +94680,12 @@
   "rough": {
     "word": "rough",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "荒い・粗い",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -94745,12 +94745,12 @@
   "skate": {
     "word": "skate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "スケート",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -94811,12 +94811,12 @@
   "racket": {
     "word": "racket",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ラケット",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -94863,12 +94863,12 @@
   "west": {
     "word": "west",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "西",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -94929,12 +94929,12 @@
   "softball": {
     "word": "softball",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ソフトボール",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -94968,12 +94968,12 @@
   "player": {
     "word": "player",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "選手・演奏者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95124,12 +95124,12 @@
   "admire": {
     "word": "admire",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "称賛する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95202,12 +95202,12 @@
   "ok": {
     "word": "ok",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "オーケー、大丈夫",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95268,12 +95268,12 @@
   "chime": {
     "word": "chime",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鐘の音・調和する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95347,12 +95347,12 @@
   "choreography": {
     "word": "choreography",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "振り付け・舞踊術",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95516,12 +95516,12 @@
   "soul": {
     "word": "soul",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "魂",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95620,12 +95620,12 @@
   "sour": {
     "word": "sour",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "すっぱい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95672,12 +95672,12 @@
   "apple": {
     "word": "apple",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "りんご",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95685,12 +95685,12 @@
   "pie": {
     "word": "pie",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "パイ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -95764,12 +95764,12 @@
   "gesture": {
     "word": "gesture",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "身振り、ジェスチャー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -96302,12 +96302,12 @@
   "domestic": {
     "word": "domestic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "国内の・家庭の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-international-exchange"
     ]
@@ -96394,12 +96394,12 @@
   "stomachache": {
     "word": "stomachache",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "腹痛",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96434,12 +96434,12 @@
   "graduate": {
     "word": "graduate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "卒業する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96541,12 +96541,12 @@
   "wonder": {
     "word": "wonder",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "不思議・驚き",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96647,12 +96647,12 @@
   "hug": {
     "word": "hug",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "抱きしめる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96660,12 +96660,12 @@
   "airplane": {
     "word": "airplane",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "飛行機",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96699,12 +96699,12 @@
   "interviewer": {
     "word": "interviewer",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "面接官・インタビュアー",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96807,12 +96807,12 @@
   "toothache": {
     "word": "toothache",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "歯痛",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96872,12 +96872,12 @@
   "somewhere": {
     "word": "somewhere",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "どこかで",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96885,12 +96885,12 @@
   "cottage": {
     "word": "cottage",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "小屋・別荘",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96911,12 +96911,12 @@
   "lucky": {
     "word": "lucky",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "幸運な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -96976,12 +96976,12 @@
   "pile": {
     "word": "pile",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "山・積み重ねる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97135,12 +97135,12 @@
   "potato": {
     "word": "potato",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "じゃがいも",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97201,12 +97201,12 @@
   "wedding": {
     "word": "wedding",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "結婚式",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97280,12 +97280,12 @@
   "rope": {
     "word": "rope",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ロープ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97319,12 +97319,12 @@
   "aloud": {
     "word": "aloud",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "声を出して",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97385,12 +97385,12 @@
   "pin": {
     "word": "pin",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ピン・留める",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97398,12 +97398,12 @@
   "tail": {
     "word": "tail",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "しっぽ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97437,12 +97437,12 @@
   "poem": {
     "word": "poem",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "詩",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97503,12 +97503,12 @@
   "knock": {
     "word": "knock",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ノックする・叩く",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97529,12 +97529,12 @@
   "empty": {
     "word": "empty",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "空の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97542,12 +97542,12 @@
   "eighty": {
     "word": "eighty",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "80",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97607,12 +97607,12 @@
   "frame": {
     "word": "frame",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "枠・骨組み",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -97699,12 +97699,12 @@
   "calligraphy": {
     "word": "calligraphy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "書道・美しい書き方",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -98078,12 +98078,12 @@
   "cement": {
     "word": "cement",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "セメント・結束させる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -98301,12 +98301,12 @@
   "burst": {
     "word": "burst",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "破裂する・爆発",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -98314,12 +98314,12 @@
   "bubble": {
     "word": "bubble",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "泡・泡立つ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -98433,12 +98433,12 @@
   "situation": {
     "word": "situation",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "状況",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -98459,12 +98459,12 @@
   "afterwards": {
     "word": "afterwards",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "その後",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-family-gathering"
     ]
@@ -98629,12 +98629,12 @@
   "degree": {
     "word": "degree",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "程度・学位",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -98681,12 +98681,12 @@
   "beneath": {
     "word": "beneath",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜の下に",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -98707,12 +98707,12 @@
   "confront": {
     "word": "confront",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "立ち向かう・直面する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -98747,12 +98747,12 @@
   "cattle": {
     "word": "cattle",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "牛・家畜",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -98838,12 +98838,12 @@
   "collapse": {
     "word": "collapse",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "崩壊する・倒れる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -99059,12 +99059,12 @@
   "wood": {
     "word": "wood",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "木材・森",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -99494,12 +99494,12 @@
   "anchor": {
     "word": "anchor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "いかり・固定する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100189,12 +100189,12 @@
   "transplant": {
     "word": "transplant",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "移植する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100269,12 +100269,12 @@
   "yield": {
     "word": "yield",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "産出する・譲る",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100334,12 +100334,12 @@
   "account": {
     "word": "account",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "口座・説明",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100503,12 +100503,12 @@
   "vanish": {
     "word": "vanish",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "消える・消滅する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100597,12 +100597,12 @@
   "conversion": {
     "word": "conversion",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "変換・改宗",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100779,12 +100779,12 @@
   "whale": {
     "word": "whale",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "クジラ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -100988,12 +100988,12 @@
   "crawl": {
     "word": "crawl",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "這う・のろのろ進む",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -101421,12 +101421,12 @@
   "unfold": {
     "word": "unfold",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "開く・展開する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-environmental-issues"
     ]
@@ -101486,12 +101486,12 @@
   "himself": {
     "word": "himself",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "彼自身",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -101629,12 +101629,12 @@
   "virtue": {
     "word": "virtue",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "美徳・長所",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -101655,12 +101655,12 @@
   "shadow": {
     "word": "shadow",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "影",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -102020,12 +102020,12 @@
   "sacred": {
     "word": "sacred",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "神聖な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -102072,12 +102072,12 @@
   "thirteenth": {
     "word": "thirteenth",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "13番目の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -102280,12 +102280,12 @@
   "catholic": {
     "word": "catholic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "普遍的な・カトリックの",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -102425,12 +102425,12 @@
   "conscience": {
     "word": "conscience",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "良心・道義心",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -102529,12 +102529,12 @@
   "calendar": {
     "word": "calendar",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "カレンダー・暦",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -102959,12 +102959,12 @@
   "warfare": {
     "word": "warfare",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "戦争・戦闘",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -103154,12 +103154,12 @@
   "continent": {
     "word": "continent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "大陸・禁欲的な / 大陸",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -103258,12 +103258,12 @@
   "unity": {
     "word": "unity",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "統一・団結",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -103349,12 +103349,12 @@
   "brutal": {
     "word": "brutal",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "残酷な・冷酷な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -103375,12 +103375,12 @@
   "admiration": {
     "word": "admiration",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "賞賛・感嘆",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -103440,12 +103440,12 @@
   "object": {
     "word": "object",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "物・目的・反対する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -103740,12 +103740,12 @@
   "controversy": {
     "word": "controversy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "論争・論議",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -104196,12 +104196,12 @@
   "supper": {
     "word": "supper",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "夕食",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -104288,12 +104288,12 @@
   "aviation": {
     "word": "aviation",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "航空・飛行",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -104783,12 +104783,12 @@
   "volume": {
     "word": "volume",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "容積・巻",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -104875,12 +104875,12 @@
   "horror": {
     "word": "horror",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "恐怖・恐怖物",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -105018,12 +105018,12 @@
   "clarity": {
     "word": "clarity",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "明瞭さ・透明度",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -105593,12 +105593,12 @@
   "admiral": {
     "word": "admiral",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "海軍大将",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -106140,12 +106140,12 @@
   "tyranny": {
     "word": "tyranny",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "専制・圧政",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -106772,12 +106772,12 @@
   "author": {
     "word": "author",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "著者・作家",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -106785,12 +106785,12 @@
   "torch": {
     "word": "torch",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "たいまつ・懐中電灯",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-historical-figures"
     ]
@@ -107115,12 +107115,12 @@
   "valley": {
     "word": "valley",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "谷",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -107194,12 +107194,12 @@
   "tent": {
     "word": "tent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "テント",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -107207,12 +107207,12 @@
   "wilderness": {
     "word": "wilderness",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "荒野・原野",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -107324,12 +107324,12 @@
   "cathedral": {
     "word": "cathedral",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "大聖堂",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -107337,12 +107337,12 @@
   "top": {
     "word": "top",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "頂上・最上位",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -107795,12 +107795,12 @@
   "attentive": {
     "word": "attentive",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "注意深い・親切な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -108430,12 +108430,12 @@
   "bookstore": {
     "word": "bookstore",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "書店",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-summer-vacation-stories"
     ]
@@ -108651,12 +108651,12 @@
   "tray": {
     "word": "tray",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "盆・トレイ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -108677,12 +108677,12 @@
   "spaghetti": {
     "word": "spaghetti",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "スパゲッティ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -108690,12 +108690,12 @@
   "sandwich": {
     "word": "sandwich",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "サンドイッチ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -108794,12 +108794,12 @@
   "alarm": {
     "word": "alarm",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "警報・驚かす",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -108874,12 +108874,12 @@
   "ring": {
     "word": "ring",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "指輪・鳴る",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -108900,12 +108900,12 @@
   "headache": {
     "word": "headache",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "頭痛",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -109281,12 +109281,12 @@
   "quiz": {
     "word": "quiz",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "クイズ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -109373,12 +109373,12 @@
   "confusion": {
     "word": "confusion",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "混乱・困惑",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-conversation-daily"
     ]
@@ -109517,12 +109517,12 @@
   "confirm": {
     "word": "confirm",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "確認する・承認する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-hospital-visit"
     ]
@@ -109700,12 +109700,12 @@
   "ankle": {
     "word": "ankle",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "足首",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-hospital-visit"
     ]
@@ -109869,12 +109869,12 @@
   "floor": {
     "word": "floor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "床・階",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-hospital-visit"
     ]
@@ -110051,12 +110051,12 @@
   "wake": {
     "word": "wake",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "目覚める・起こす",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-hospital-visit"
     ]
@@ -110508,12 +110508,12 @@
   "appointment": {
     "word": "appointment",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "任命・約束",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-hospital-visit"
     ]
@@ -111344,12 +111344,12 @@
   "bar": {
     "word": "bar",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "棒・酒場",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -111501,12 +111501,12 @@
   "professor": {
     "word": "professor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "教授",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -111528,12 +111528,12 @@
   "corporation": {
     "word": "corporation",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "法人・株式会社",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -111554,12 +111554,12 @@
   "branch": {
     "word": "branch",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "枝・支店",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -111790,12 +111790,12 @@
   "advertisement": {
     "word": "advertisement",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "広告",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -111922,12 +111922,12 @@
   "auto": {
     "word": "auto",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "自動車",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112002,12 +112002,12 @@
   "approval": {
     "word": "approval",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "承認・賛成",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112015,12 +112015,12 @@
   "breakthrough": {
     "word": "breakthrough",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "突破口・画期的進展",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112122,12 +112122,12 @@
   "anticipate": {
     "word": "anticipate",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "予期する・期待する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112148,12 +112148,12 @@
   "seventy": {
     "word": "seventy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "70",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112174,12 +112174,12 @@
   "standard": {
     "word": "standard",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "標準・基準",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112187,12 +112187,12 @@
   "unless": {
     "word": "unless",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜でない限り",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112343,12 +112343,12 @@
   "assure": {
     "word": "assure",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "保証する・確信させる",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -112395,12 +112395,12 @@
   "contract": {
     "word": "contract",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "契約・収縮する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-career-day"
     ]
@@ -113022,12 +113022,12 @@
   "afterward": {
     "word": "afterward",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "後で・その後",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year"
     ]
@@ -113425,12 +113425,12 @@
   "beginner": {
     "word": "beginner",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "初心者・初級者",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-events-year"
     ]
@@ -113490,12 +113490,12 @@
   "ashamed": {
     "word": "ashamed",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "恥じて",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year"
     ]
@@ -113542,12 +113542,12 @@
   "arithmetic": {
     "word": "arithmetic",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "算数・算術",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year"
     ]
@@ -113661,12 +113661,12 @@
   "lecture": {
     "word": "lecture",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "講義・説教",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-events-year"
     ]
@@ -114060,12 +114060,12 @@
   "vet": {
     "word": "vet",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "獣医",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-wildlife-park-guide"
     ]
@@ -114165,12 +114165,12 @@
   "rabbit": {
     "word": "rabbit",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ウサギ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-wildlife-park-guide"
     ]
@@ -114191,12 +114191,12 @@
   "pig": {
     "word": "pig",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "豚",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-wildlife-park-guide"
     ]
@@ -114978,12 +114978,12 @@
   "penguin": {
     "word": "penguin",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ペンギン",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-wildlife-park-guide"
     ]
@@ -115150,12 +115150,12 @@
   "beef": {
     "word": "beef",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "牛肉",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115163,12 +115163,12 @@
   "pork": {
     "word": "pork",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "豚肉",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115268,12 +115268,12 @@
   "yogurt": {
     "word": "yogurt",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ヨーグルト",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115321,12 +115321,12 @@
   "cereal": {
     "word": "cereal",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "穀物・シリアル",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115426,12 +115426,12 @@
   "jam": {
     "word": "jam",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ジャム",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115478,12 +115478,12 @@
   "aisle": {
     "word": "aisle",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "通路",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115557,12 +115557,12 @@
   "trunk": {
     "word": "trunk",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "幹・トランク",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115753,12 +115753,12 @@
   "upper": {
     "word": "upper",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "上の・上部の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115805,12 +115805,12 @@
   "clever": {
     "word": "clever",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "賢い・器用な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -115976,12 +115976,12 @@
   "corn": {
     "word": "corn",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "トウモロコシ・穀物",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -116172,12 +116172,12 @@
   "son": {
     "word": "son",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "息子",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -116185,12 +116185,12 @@
   "neighbor": {
     "word": "neighbor",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "隣人",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -116211,12 +116211,12 @@
   "bank": {
     "word": "bank",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "土手・銀行",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -116237,12 +116237,12 @@
   "adult": {
     "word": "adult",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "成人・大人の / 大人",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-supermarket-shopping"
     ]
@@ -116526,12 +116526,12 @@
   "twilight": {
     "word": "twilight",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "たそがれ・薄明",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116565,12 +116565,12 @@
   "blanket": {
     "word": "blanket",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "毛布",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116656,12 +116656,12 @@
   "bitter": {
     "word": "bitter",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "苦い・つらい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116760,12 +116760,12 @@
   "violent": {
     "word": "violent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "暴力的な・激しい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116786,12 +116786,12 @@
   "column": {
     "word": "column",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "柱・縦列",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116890,12 +116890,12 @@
   "snowy": {
     "word": "snowy",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "雪の降る",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116916,12 +116916,12 @@
   "umbrella": {
     "word": "umbrella",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "傘",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116929,12 +116929,12 @@
   "waterproof": {
     "word": "waterproof",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "防水の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116942,12 +116942,12 @@
   "jacket": {
     "word": "jacket",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ジャケット",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -116968,12 +116968,12 @@
   "sad": {
     "word": "sad",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "悲しい",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -117098,12 +117098,12 @@
   "warn": {
     "word": "warn",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "警告する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-weather-seasons"
     ]
@@ -117570,12 +117570,12 @@
   "amplify": {
     "word": "amplify",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "増幅する・拡大する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -117635,12 +117635,12 @@
   "chess": {
     "word": "chess",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "チェス",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -117726,12 +117726,12 @@
   "coherent": {
     "word": "coherent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "首尾一貫した・筋の通った",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -117935,12 +117935,12 @@
   "base": {
     "word": "base",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "基礎",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -118092,12 +118092,12 @@
   "cord": {
     "word": "cord",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ひも・コード",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -118537,12 +118537,12 @@
   "width": {
     "word": "width",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "幅",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -118577,12 +118577,12 @@
   "clinical": {
     "word": "clinical",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "臨床の・冷静な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -118590,12 +118590,12 @@
   "aluminum": {
     "word": "aluminum",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "アルミニウム",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -119100,12 +119100,12 @@
   "bulk": {
     "word": "bulk",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "大部分・容積",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -119243,12 +119243,12 @@
   "consciousness": {
     "word": "consciousness",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "意識・自覚",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -119400,12 +119400,12 @@
   "title": {
     "word": "title",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "題名・称号",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -119716,12 +119716,12 @@
   "augment": {
     "word": "augment",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "増やす・増大する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -119820,12 +119820,12 @@
   "threshold": {
     "word": "threshold",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "敷居・入り口",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-technology-future"
     ]
@@ -119989,12 +119989,12 @@
   "price": {
     "word": "price",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "価格",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -120042,12 +120042,12 @@
   "bacon": {
     "word": "bacon",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "ベーコン",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -120081,12 +120081,12 @@
   "noodle": {
     "word": "noodle",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "麺",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -120200,12 +120200,12 @@
   "complaint": {
     "word": "complaint",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "不平・苦情",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -120227,12 +120227,12 @@
   "request": {
     "word": "request",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "要請・要請する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -120357,12 +120357,12 @@
   "adhere": {
     "word": "adhere",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "固守する・付着する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -120762,12 +120762,12 @@
   "consideration": {
     "word": "consideration",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "考慮・配慮",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "beginner-cafe-menu"
     ]
@@ -121479,12 +121479,12 @@
   "unable": {
     "word": "unable",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜できない",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-community-events"
     ]
@@ -122455,12 +122455,12 @@
   "twelve": {
     "word": "twelve",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "12",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-news"
     ]
@@ -122533,12 +122533,12 @@
   "seventh": {
     "word": "seventh",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "7番目の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "intermediate-school-news"
     ]
@@ -123028,12 +123028,12 @@
   "apparent": {
     "word": "apparent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "明白な・外見上の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "intermediate-school-news"
     ]
@@ -123902,12 +123902,12 @@
   "toll": {
     "word": "toll",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "通行料・犠牲",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -123915,12 +123915,12 @@
   "jail": {
     "word": "jail",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "刑務所",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -123967,12 +123967,12 @@
   "bomb": {
     "word": "bomb",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "爆弾",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "intermediate-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -124231,12 +124231,12 @@
   "male": {
     "word": "male",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "男性の・雄の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -124400,12 +124400,12 @@
   "tobacco": {
     "word": "tobacco",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "タバコ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -124598,12 +124598,12 @@
   "trigger": {
     "word": "trigger",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "引き金・きっかけ",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125151,12 +125151,12 @@
   "unequal": {
     "word": "unequal",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "不平等な・不均等な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125493,12 +125493,12 @@
   "advise": {
     "word": "advise",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "助言する",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125598,12 +125598,12 @@
   "tend": {
     "word": "tend",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "〜しがちである・世話をする",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125611,12 +125611,12 @@
   "affluent": {
     "word": "affluent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "裕福な・豊富な",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125703,12 +125703,12 @@
   "concurrent": {
     "word": "concurrent",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "同時発生の・並行した",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125716,12 +125716,12 @@
   "acute": {
     "word": "acute",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "鋭い・急性の",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]
@@ -125861,12 +125861,12 @@
   "cognition": {
     "word": "cognition",
     "reading": "",
-    "meaning": "(要確認)",
+    "meaning": "認知・認識",
     "etymology": "",
     "relatedWords": "",
     "category": "未分類",
     "difficulty": "長文専用",
-    "source": "auto",
+    "source": "junior-csv",
     "passages": [
       "advanced-health-statistics"
     ]

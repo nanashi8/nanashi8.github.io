@@ -1476,7 +1476,7 @@
         },
         {
           "word": "speaker",
-          "meaning": "(要確認)",
+          "meaning": "話者・スピーカー",
           "isUnknown": false,
           "lemma": "speaker",
           "reading": "speaker",
@@ -2216,7 +2216,7 @@
         },
         {
           "word": "typical",
-          "meaning": "(要確認)",
+          "meaning": "典型的な・代表的な",
           "isUnknown": false,
           "lemma": "typical",
           "reading": "typical",
@@ -3958,7 +3958,7 @@
       "segments": [
         {
           "word": "administer",
-          "meaning": "(要確認)",
+          "meaning": "管理する・執行する",
           "isUnknown": false,
           "lemma": "administer",
           "reading": "administer",
@@ -5648,7 +5648,7 @@
         },
         {
           "word": "detail",
-          "meaning": "(要確認)",
+          "meaning": "詳細",
           "isUnknown": false,
           "lemma": "detail",
           "reading": "detail",
@@ -6492,7 +6492,7 @@
         },
         {
           "word": "attorney",
-          "meaning": "(要確認)",
+          "meaning": "弁護士・代理人",
           "isUnknown": false,
           "lemma": "attorney",
           "reading": "attorney",
@@ -6939,7 +6939,7 @@
         },
         {
           "word": "bar",
-          "meaning": "(要確認)",
+          "meaning": "棒・酒場",
           "isUnknown": false,
           "lemma": "bar",
           "reading": "bar",
@@ -7221,7 +7221,7 @@
         },
         {
           "word": "argue",
-          "meaning": "(要確認)",
+          "meaning": "議論する・主張する",
           "isUnknown": false,
           "lemma": "argue",
           "reading": "argue",
@@ -8547,7 +8547,7 @@
         },
         {
           "word": "Officer",
-          "meaning": "(要確認)",
+          "meaning": "役人・将校",
           "isUnknown": false,
           "lemma": "Officer",
           "reading": "Officer",
@@ -8610,7 +8610,7 @@
         },
         {
           "word": "officer",
-          "meaning": "(要確認)",
+          "meaning": "役人・将校",
           "isUnknown": false,
           "lemma": "officer",
           "reading": "officer",
@@ -9048,7 +9048,7 @@
       "segments": [
         {
           "word": "Officer",
-          "meaning": "(要確認)",
+          "meaning": "役人・将校",
           "isUnknown": false,
           "lemma": "Officer",
           "reading": "Officer",
@@ -9133,7 +9133,7 @@
         },
         {
           "word": "officer",
-          "meaning": "(要確認)",
+          "meaning": "役人・将校",
           "isUnknown": false,
           "lemma": "officer",
           "reading": "officer",
@@ -11760,7 +11760,7 @@
         },
         {
           "word": "professor",
-          "meaning": "(要確認)",
+          "meaning": "教授",
           "isUnknown": false,
           "lemma": "professor",
           "reading": "professor",
@@ -12174,7 +12174,7 @@
         },
         {
           "word": "written",
-          "meaning": "(要確認)",
+          "meaning": "書かれた",
           "isUnknown": false,
           "lemma": "written",
           "reading": "written",
@@ -13120,7 +13120,7 @@
         },
         {
           "word": "corporation",
-          "meaning": "(要確認)",
+          "meaning": "法人・株式会社",
           "isUnknown": false,
           "lemma": "corporation",
           "reading": "corporation",
@@ -13369,7 +13369,7 @@
         },
         {
           "word": "tax",
-          "meaning": "(要確認)",
+          "meaning": "税金",
           "isUnknown": false,
           "lemma": "tax",
           "reading": "tax",
@@ -13791,7 +13791,7 @@
       "segments": [
         {
           "word": "spot",
-          "meaning": "(要確認)",
+          "meaning": "点・場所・見つける",
           "isUnknown": false,
           "lemma": "spot",
           "reading": "spot",
@@ -13961,7 +13961,7 @@
         },
         {
           "word": "detail",
-          "meaning": "(要確認)",
+          "meaning": "詳細",
           "isUnknown": false,
           "lemma": "detail",
           "reading": "detail",
@@ -14315,7 +14315,7 @@
         },
         {
           "word": "branch",
-          "meaning": "(要確認)",
+          "meaning": "枝・支店",
           "isUnknown": false,
           "lemma": "branch",
           "reading": "branch",
@@ -15373,7 +15373,7 @@
         },
         {
           "word": "fifty",
-          "meaning": "(要確認)",
+          "meaning": "50",
           "isUnknown": false,
           "lemma": "fifty",
           "reading": "fifty",
@@ -16023,7 +16023,7 @@
         },
         {
           "word": "bear",
-          "meaning": "(要確認)",
+          "meaning": "耐える・生む",
           "isUnknown": false,
           "lemma": "bear",
           "reading": "bear",
@@ -17436,7 +17436,7 @@
         },
         {
           "word": "photographer",
-          "meaning": "(要確認)",
+          "meaning": "写真家・カメラマン",
           "isUnknown": false,
           "lemma": "photographer",
           "reading": "photographer",
@@ -18135,7 +18135,7 @@
         },
         {
           "word": "photographer",
-          "meaning": "(要確認)",
+          "meaning": "写真家・カメラマン",
           "isUnknown": false,
           "lemma": "photographer",
           "reading": "photographer",
@@ -18714,7 +18714,7 @@
         },
         {
           "word": "product",
-          "meaning": "(要確認)",
+          "meaning": "製品",
           "isUnknown": false,
           "lemma": "product",
           "reading": "product",
@@ -18829,7 +18829,7 @@
         },
         {
           "word": "text",
-          "meaning": "(要確認)",
+          "meaning": "本文・テキスト",
           "isUnknown": false,
           "lemma": "text",
           "reading": "text",
@@ -19278,7 +19278,7 @@
         },
         {
           "word": "advertisement",
-          "meaning": "(要確認)",
+          "meaning": "広告",
           "isUnknown": false,
           "lemma": "advertisement",
           "reading": "advertisement",
@@ -19300,7 +19300,7 @@
         },
         {
           "word": "notice",
-          "meaning": "(要確認)",
+          "meaning": "気づく・通知",
           "isUnknown": false,
           "lemma": "notice",
           "reading": "notice",
@@ -19610,7 +19610,7 @@
         },
         {
           "word": "musician",
-          "meaning": "(要確認)",
+          "meaning": "音楽家",
           "isUnknown": false,
           "lemma": "musician",
           "reading": "musician",
@@ -21969,7 +21969,7 @@
         },
         {
           "word": "auto",
-          "meaning": "(要確認)",
+          "meaning": "自動車",
           "isUnknown": false,
           "lemma": "auto",
           "reading": "auto",
@@ -22427,7 +22427,7 @@
         },
         {
           "word": "assume",
-          "meaning": "(要確認)",
+          "meaning": "仮定する・引き受ける",
           "isUnknown": false,
           "lemma": "assume",
           "reading": "assume",
@@ -23340,7 +23340,7 @@
         },
         {
           "word": "approval",
-          "meaning": "(要確認)",
+          "meaning": "承認・賛成",
           "isUnknown": false,
           "lemma": "approval",
           "reading": "approval",
@@ -23787,7 +23787,7 @@
         },
         {
           "word": "breakthrough",
-          "meaning": "(要確認)",
+          "meaning": "突破口・画期的進展",
           "isUnknown": false,
           "lemma": "breakthrough",
           "reading": "breakthrough",
@@ -27038,7 +27038,7 @@
         },
         {
           "word": "guest",
-          "meaning": "(要確認)",
+          "meaning": "客、ゲスト",
           "isUnknown": false,
           "lemma": "guest",
           "reading": "guest",
@@ -27294,7 +27294,7 @@
         },
         {
           "word": "desk",
-          "meaning": "(要確認)",
+          "meaning": "机",
           "isUnknown": false,
           "lemma": "desk",
           "reading": "desk",
@@ -29926,7 +29926,7 @@
         },
         {
           "word": "anticipate",
-          "meaning": "(要確認)",
+          "meaning": "予期する・期待する",
           "isUnknown": false,
           "lemma": "anticipate",
           "reading": "anticipate",
@@ -30068,7 +30068,7 @@
         },
         {
           "word": "attack",
-          "meaning": "(要確認)",
+          "meaning": "攻撃・発作 / 攻撃する",
           "isUnknown": false,
           "lemma": "attack",
           "reading": "attack",
@@ -32493,7 +32493,7 @@
         },
         {
           "word": "seventy",
-          "meaning": "(要確認)",
+          "meaning": "70",
           "isUnknown": false,
           "lemma": "seventy",
           "reading": "seventy",
@@ -33077,7 +33077,7 @@
         },
         {
           "word": "standard",
-          "meaning": "(要確認)",
+          "meaning": "標準・基準",
           "isUnknown": false,
           "lemma": "standard",
           "reading": "standard",
@@ -33112,7 +33112,7 @@
       "segments": [
         {
           "word": "unless",
-          "meaning": "(要確認)",
+          "meaning": "〜でない限り",
           "isUnknown": false,
           "lemma": "unless",
           "reading": "unless",
@@ -33667,7 +33667,7 @@
         },
         {
           "word": "weigh",
-          "meaning": "(要確認)",
+          "meaning": "重さを量る・重さがある",
           "isUnknown": false,
           "lemma": "weigh",
           "reading": "weigh",
@@ -34250,7 +34250,7 @@
         },
         {
           "word": "musician",
-          "meaning": "(要確認)",
+          "meaning": "音楽家",
           "isUnknown": false,
           "lemma": "musician",
           "reading": "musician",
@@ -34608,7 +34608,7 @@
         },
         {
           "word": "steady",
-          "meaning": "(要確認)",
+          "meaning": "安定した",
           "isUnknown": false,
           "lemma": "steady",
           "reading": "steady",
@@ -36074,7 +36074,7 @@
         },
         {
           "word": "assure",
-          "meaning": "(要確認)",
+          "meaning": "保証する・確信させる",
           "isUnknown": false,
           "lemma": "assure",
           "reading": "assure",
@@ -36626,7 +36626,7 @@
         },
         {
           "word": "contract",
-          "meaning": "(要確認)",
+          "meaning": "契約・収縮する",
           "isUnknown": false,
           "lemma": "contract",
           "reading": "contract",

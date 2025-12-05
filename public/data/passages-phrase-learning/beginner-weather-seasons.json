@@ -249,7 +249,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(要確認)",
+          "meaning": "雨の降る",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -1227,7 +1227,7 @@
         },
         {
           "word": "dead",
-          "meaning": "(要確認)",
+          "meaning": "死んだ・非常に",
           "isUnknown": false,
           "lemma": "dead",
           "reading": "dead",
@@ -1290,7 +1290,7 @@
         },
         {
           "word": "alive",
-          "meaning": "(要確認)",
+          "meaning": "生きている",
           "isUnknown": false,
           "lemma": "alive",
           "reading": "alive",
@@ -1852,7 +1852,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(要確認)",
+          "meaning": "雨の降る",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -2137,7 +2137,7 @@
         },
         {
           "word": "rainbow",
-          "meaning": "(要確認)",
+          "meaning": "虹",
           "isUnknown": false,
           "lemma": "rainbow",
           "reading": "rainbow",
@@ -2211,7 +2211,7 @@
         },
         {
           "word": "rainbow",
-          "meaning": "(要確認)",
+          "meaning": "虹",
           "isUnknown": false,
           "lemma": "rainbow",
           "reading": "rainbow",
@@ -2777,7 +2777,7 @@
         },
         {
           "word": "sunshine",
-          "meaning": "(要確認)",
+          "meaning": "日光",
           "isUnknown": false,
           "lemma": "sunshine",
           "reading": "sunshine",
@@ -4333,7 +4333,7 @@
         },
         {
           "word": "camping",
-          "meaning": "(要確認)",
+          "meaning": "キャンプ(すること)",
           "isUnknown": false,
           "lemma": "camping",
           "reading": "camping",
@@ -4651,7 +4651,7 @@
         },
         {
           "word": "accompany",
-          "meaning": "(要確認)",
+          "meaning": "同行する・伴う",
           "isUnknown": false,
           "lemma": "accompany",
           "reading": "accompany",
@@ -5435,7 +5435,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(要確認)",
+          "meaning": "乾く・乾いた",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -5853,7 +5853,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(要確認)",
+          "meaning": "乾く・乾いた",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -9008,7 +9008,7 @@
         },
         {
           "word": "sunshine",
-          "meaning": "(要確認)",
+          "meaning": "日光",
           "isUnknown": false,
           "lemma": "sunshine",
           "reading": "sunshine",
@@ -10451,7 +10451,7 @@
         },
         {
           "word": "notice",
-          "meaning": "(要確認)",
+          "meaning": "気づく・通知",
           "isUnknown": false,
           "lemma": "notice",
           "reading": "notice",
@@ -10625,7 +10625,7 @@
         },
         {
           "word": "twilight",
-          "meaning": "(要確認)",
+          "meaning": "たそがれ・薄明",
           "isUnknown": false,
           "lemma": "twilight",
           "reading": "twilight",
@@ -11349,7 +11349,7 @@
         },
         {
           "word": "blanket",
-          "meaning": "(要確認)",
+          "meaning": "毛布",
           "isUnknown": false,
           "lemma": "blanket",
           "reading": "blanket",
@@ -13387,7 +13387,7 @@
         },
         {
           "word": "bitter",
-          "meaning": "(要確認)",
+          "meaning": "苦い・つらい",
           "isUnknown": false,
           "lemma": "bitter",
           "reading": "bitter",
@@ -14687,7 +14687,7 @@
         },
         {
           "word": "cloudy",
-          "meaning": "(要確認)",
+          "meaning": "曇った",
           "isUnknown": false,
           "lemma": "cloudy",
           "reading": "cloudy",
@@ -16227,7 +16227,7 @@
         },
         {
           "word": "violent",
-          "meaning": "(要確認)",
+          "meaning": "暴力的な・激しい",
           "isUnknown": false,
           "lemma": "violent",
           "reading": "violent",
@@ -16249,7 +16249,7 @@
         },
         {
           "word": "column",
-          "meaning": "(要確認)",
+          "meaning": "柱・縦列",
           "isUnknown": false,
           "lemma": "column",
           "reading": "column",
@@ -17457,7 +17457,7 @@
         },
         {
           "word": "dry",
-          "meaning": "(要確認)",
+          "meaning": "乾く・乾いた",
           "isUnknown": false,
           "lemma": "dry",
           "reading": "dry",
@@ -17742,7 +17742,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(要確認)",
+          "meaning": "測る・手段",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -18285,7 +18285,7 @@
         },
         {
           "word": "cloudy",
-          "meaning": "(要確認)",
+          "meaning": "曇った",
           "isUnknown": false,
           "lemma": "cloudy",
           "reading": "cloudy",
@@ -18315,7 +18315,7 @@
       "segments": [
         {
           "word": "rainy",
-          "meaning": "(要確認)",
+          "meaning": "雨の降る",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -18348,7 +18348,7 @@
         },
         {
           "word": "snowy",
-          "meaning": "(要確認)",
+          "meaning": "雪の降る",
           "isUnknown": false,
           "lemma": "snowy",
           "reading": "snowy",
@@ -19213,7 +19213,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(要確認)",
+          "meaning": "雨の降る",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -19287,7 +19287,7 @@
         },
         {
           "word": "umbrella",
-          "meaning": "(要確認)",
+          "meaning": "傘",
           "isUnknown": false,
           "lemma": "umbrella",
           "reading": "umbrella",
@@ -19309,7 +19309,7 @@
         },
         {
           "word": "waterproof",
-          "meaning": "(要確認)",
+          "meaning": "防水の",
           "isUnknown": false,
           "lemma": "waterproof",
           "reading": "waterproof",
@@ -19320,7 +19320,7 @@
         },
         {
           "word": "jacket",
-          "meaning": "(要確認)",
+          "meaning": "ジャケット",
           "isUnknown": false,
           "lemma": "jacket",
           "reading": "jacket",
@@ -19725,7 +19725,7 @@
       "segments": [
         {
           "word": "Cloudy",
-          "meaning": "(要確認)",
+          "meaning": "曇った",
           "isUnknown": false,
           "lemma": "Cloudy",
           "reading": "Cloudy",
@@ -19747,7 +19747,7 @@
         },
         {
           "word": "rainy",
-          "meaning": "(要確認)",
+          "meaning": "雨の降る",
           "isUnknown": false,
           "lemma": "rainy",
           "reading": "rainy",
@@ -19846,7 +19846,7 @@
         },
         {
           "word": "sad",
-          "meaning": "(要確認)",
+          "meaning": "悲しい",
           "isUnknown": false,
           "lemma": "sad",
           "reading": "sad",
@@ -20145,7 +20145,7 @@
         },
         {
           "word": "sunshine",
-          "meaning": "(要確認)",
+          "meaning": "日光",
           "isUnknown": false,
           "lemma": "sunshine",
           "reading": "sunshine",
@@ -21302,7 +21302,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(要確認)",
+          "meaning": "測る・手段",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -21875,7 +21875,7 @@
         },
         {
           "word": "ahead",
-          "meaning": "(要確認)",
+          "meaning": "前方に",
           "isUnknown": false,
           "lemma": "ahead",
           "reading": "ahead",
@@ -22544,7 +22544,7 @@
         },
         {
           "word": "measure",
-          "meaning": "(要確認)",
+          "meaning": "測る・手段",
           "isUnknown": false,
           "lemma": "measure",
           "reading": "measure",
@@ -23147,7 +23147,7 @@
         },
         {
           "word": "flight",
-          "meaning": "(要確認)",
+          "meaning": "飛行、フライト",
           "isUnknown": false,
           "lemma": "flight",
           "reading": "flight",
@@ -23695,7 +23695,7 @@
         },
         {
           "word": "warn",
-          "meaning": "(要確認)",
+          "meaning": "警告する",
           "isUnknown": false,
           "lemma": "warn",
           "reading": "warn",
@@ -23951,7 +23951,7 @@
         },
         {
           "word": "average",
-          "meaning": "(要確認)",
+          "meaning": "平均・平均的な",
           "isUnknown": false,
           "lemma": "average",
           "reading": "average",
@@ -26446,7 +26446,7 @@
         },
         {
           "word": "particular",
-          "meaning": "(要確認)",
+          "meaning": "特定の・特別な",
           "isUnknown": false,
           "lemma": "particular",
           "reading": "particular",
@@ -27201,7 +27201,7 @@
         },
         {
           "word": "conscious",
-          "meaning": "(要確認)",
+          "meaning": "意識のある・自覚した",
           "isUnknown": false,
           "lemma": "conscious",
           "reading": "conscious",
@@ -27903,7 +27903,7 @@
         },
         {
           "word": "warmth",
-          "meaning": "(要確認)",
+          "meaning": "暖かさ",
           "isUnknown": false,
           "lemma": "warmth",
           "reading": "warmth",
@@ -28584,7 +28584,7 @@
         },
         {
           "word": "type",
-          "meaning": "(要確認)",
+          "meaning": "型・種類",
           "isUnknown": false,
           "lemma": "type",
           "reading": "type",

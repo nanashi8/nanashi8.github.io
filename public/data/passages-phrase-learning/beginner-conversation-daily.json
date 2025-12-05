@@ -508,7 +508,7 @@
         },
         {
           "word": "o'clock",
-          "meaning": "(要確認)",
+          "meaning": "〜時",
           "isUnknown": false,
           "lemma": "o'clock",
           "reading": "o'clock",
@@ -5401,7 +5401,7 @@
         },
         {
           "word": "assignment",
-          "meaning": "(要確認)",
+          "meaning": "割り当て・課題",
           "isUnknown": false,
           "lemma": "assignment",
           "reading": "assignment",
@@ -6176,7 +6176,7 @@
         },
         {
           "word": "board",
-          "meaning": "(要確認)",
+          "meaning": "板・委員会",
           "isUnknown": false,
           "lemma": "board",
           "reading": "board",
@@ -7109,7 +7109,7 @@
         },
         {
           "word": "tray",
-          "meaning": "(要確認)",
+          "meaning": "盆・トレイ",
           "isUnknown": false,
           "lemma": "tray",
           "reading": "tray",
@@ -7205,7 +7205,7 @@
         },
         {
           "word": "piece",
-          "meaning": "(要確認)",
+          "meaning": "一片・作品",
           "isUnknown": false,
           "lemma": "piece",
           "reading": "piece",
@@ -8000,7 +8000,7 @@
         },
         {
           "word": "spaghetti",
-          "meaning": "(要確認)",
+          "meaning": "スパゲッティ",
           "isUnknown": false,
           "lemma": "spaghetti",
           "reading": "spaghetti",
@@ -8033,7 +8033,7 @@
         },
         {
           "word": "salad",
-          "meaning": "(要確認)",
+          "meaning": "サラダ",
           "isUnknown": false,
           "lemma": "salad",
           "reading": "salad",
@@ -8620,7 +8620,7 @@
         },
         {
           "word": "sandwich",
-          "meaning": "(要確認)",
+          "meaning": "サンドイッチ",
           "isUnknown": false,
           "lemma": "sandwich",
           "reading": "sandwich",
@@ -21860,7 +21860,7 @@
         },
         {
           "word": "o'clock",
-          "meaning": "(要確認)",
+          "meaning": "〜時",
           "isUnknown": false,
           "lemma": "o'clock",
           "reading": "o'clock",
@@ -23290,7 +23290,7 @@
         },
         {
           "word": "brief",
-          "meaning": "(要確認)",
+          "meaning": "短い・簡潔な",
           "isUnknown": false,
           "lemma": "brief",
           "reading": "brief",
@@ -23301,7 +23301,7 @@
         },
         {
           "word": "announcement",
-          "meaning": "(要確認)",
+          "meaning": "announceすること",
           "isUnknown": false,
           "lemma": "announcement",
           "reading": "announcement",
@@ -24239,7 +24239,7 @@
         },
         {
           "word": "cautious",
-          "meaning": "(要確認)",
+          "meaning": "用心深い・慎重な",
           "isUnknown": false,
           "lemma": "cautious",
           "reading": "cautious",
@@ -24324,7 +24324,7 @@
         },
         {
           "word": "drill",
-          "meaning": "(要確認)",
+          "meaning": "訓練・ドリル",
           "isUnknown": false,
           "lemma": "drill",
           "reading": "drill",
@@ -24453,7 +24453,7 @@
         },
         {
           "word": "alarm",
-          "meaning": "(要確認)",
+          "meaning": "警報・驚かす",
           "isUnknown": false,
           "lemma": "alarm",
           "reading": "alarm",
@@ -24801,7 +24801,7 @@
         },
         {
           "word": "corridor",
-          "meaning": "(要確認)",
+          "meaning": "廊下・回廊",
           "isUnknown": false,
           "lemma": "corridor",
           "reading": "corridor",
@@ -25076,7 +25076,7 @@
         },
         {
           "word": "pick",
-          "meaning": "(要確認)",
+          "meaning": "選ぶ・摘む",
           "isUnknown": false,
           "lemma": "pick",
           "reading": "pick",
@@ -25764,7 +25764,7 @@
         },
         {
           "word": "ring",
-          "meaning": "(要確認)",
+          "meaning": "指輪・鳴る",
           "isUnknown": false,
           "lemma": "ring",
           "reading": "ring",
@@ -25923,7 +25923,7 @@
         },
         {
           "word": "combination",
-          "meaning": "(要確認)",
+          "meaning": "組み合わせ・結合",
           "isUnknown": false,
           "lemma": "combination",
           "reading": "combination",
@@ -26148,7 +26148,7 @@
         },
         {
           "word": "headache",
-          "meaning": "(要確認)",
+          "meaning": "頭痛",
           "isUnknown": false,
           "lemma": "headache",
           "reading": "headache",
@@ -26622,7 +26622,7 @@
         },
         {
           "word": "fever",
-          "meaning": "(要確認)",
+          "meaning": "熱・発熱",
           "isUnknown": false,
           "lemma": "fever",
           "reading": "fever",
@@ -26937,7 +26937,7 @@
         },
         {
           "word": "anxious",
-          "meaning": "(要確認)",
+          "meaning": "心配して・切望して",
           "isUnknown": false,
           "lemma": "anxious",
           "reading": "anxious",
@@ -27422,7 +27422,7 @@
         },
         {
           "word": "absent",
-          "meaning": "(要確認)",
+          "meaning": "不在の・欠席した",
           "isUnknown": false,
           "lemma": "absent",
           "reading": "absent",
@@ -28717,7 +28717,7 @@
         },
         {
           "word": "tone",
-          "meaning": "(要確認)",
+          "meaning": "音色・調子・口調",
           "isUnknown": false,
           "lemma": "tone",
           "reading": "tone",
@@ -28931,7 +28931,7 @@
         },
         {
           "word": "convey",
-          "meaning": "(要確認)",
+          "meaning": "伝える・運ぶ",
           "isUnknown": false,
           "lemma": "convey",
           "reading": "convey",
@@ -30083,7 +30083,7 @@
         },
         {
           "word": "crew",
-          "meaning": "(要確認)",
+          "meaning": "乗組員・一団",
           "isUnknown": false,
           "lemma": "crew",
           "reading": "crew",
@@ -30593,7 +30593,7 @@
         },
         {
           "word": "crew",
-          "meaning": "(要確認)",
+          "meaning": "乗組員・一団",
           "isUnknown": false,
           "lemma": "crew",
           "reading": "crew",
@@ -30667,7 +30667,7 @@
         },
         {
           "word": "contribution",
-          "meaning": "(要確認)",
+          "meaning": "貢献・寄付",
           "isUnknown": false,
           "lemma": "contribution",
           "reading": "contribution",
@@ -30900,7 +30900,7 @@
         },
         {
           "word": "assignment",
-          "meaning": "(要確認)",
+          "meaning": "割り当て・課題",
           "isUnknown": false,
           "lemma": "assignment",
           "reading": "assignment",
@@ -30974,7 +30974,7 @@
         },
         {
           "word": "absurd",
-          "meaning": "(要確認)",
+          "meaning": "不条理な・ばかげた",
           "isUnknown": false,
           "lemma": "absurd",
           "reading": "absurd",
@@ -31459,7 +31459,7 @@
         },
         {
           "word": "clarify",
-          "meaning": "(要確認)",
+          "meaning": "明確にする・説明する",
           "isUnknown": false,
           "lemma": "clarify",
           "reading": "clarify",
@@ -31829,7 +31829,7 @@
         },
         {
           "word": "bond",
-          "meaning": "(要確認)",
+          "meaning": "結びつき・絆",
           "isUnknown": false,
           "lemma": "bond",
           "reading": "bond",
@@ -31895,7 +31895,7 @@
         },
         {
           "word": "atomic",
-          "meaning": "(要確認)",
+          "meaning": "原子の",
           "isUnknown": false,
           "lemma": "atomic",
           "reading": "atomic",
@@ -32233,7 +32233,7 @@
         },
         {
           "word": "comprehend",
-          "meaning": "(要確認)",
+          "meaning": "理解する・把握する",
           "isUnknown": false,
           "lemma": "comprehend",
           "reading": "comprehend",
@@ -33537,7 +33537,7 @@
         },
         {
           "word": "arrangement",
-          "meaning": "(要確認)",
+          "meaning": "配置・準備",
           "isUnknown": false,
           "lemma": "arrangement",
           "reading": "arrangement",
@@ -33589,7 +33589,7 @@
         },
         {
           "word": "alternate",
-          "meaning": "(要確認)",
+          "meaning": "交互の・交代する",
           "isUnknown": false,
           "lemma": "alternate",
           "reading": "alternate",
@@ -34461,7 +34461,7 @@
         },
         {
           "word": "classification",
-          "meaning": "(要確認)",
+          "meaning": "分類・類別",
           "isUnknown": false,
           "lemma": "classification",
           "reading": "classification",
@@ -35008,7 +35008,7 @@
         },
         {
           "word": "aside",
-          "meaning": "(要確認)",
+          "meaning": "わきへ・別にして",
           "isUnknown": false,
           "lemma": "aside",
           "reading": "aside",
@@ -36078,7 +36078,7 @@
         },
         {
           "word": "attitude",
-          "meaning": "(要確認)",
+          "meaning": "態度・姿勢",
           "isUnknown": false,
           "lemma": "attitude",
           "reading": "attitude",
@@ -36100,7 +36100,7 @@
         },
         {
           "word": "admirable",
-          "meaning": "(要確認)",
+          "meaning": "立派な・称賛すべき",
           "isUnknown": false,
           "lemma": "admirable",
           "reading": "admirable",
@@ -36393,7 +36393,7 @@
         },
         {
           "word": "vocabulary",
-          "meaning": "(要確認)",
+          "meaning": "語彙・単語集",
           "isUnknown": false,
           "lemma": "vocabulary",
           "reading": "vocabulary",
@@ -36404,7 +36404,7 @@
         },
         {
           "word": "quiz",
-          "meaning": "(要確認)",
+          "meaning": "クイズ",
           "isUnknown": false,
           "lemma": "quiz",
           "reading": "quiz",
@@ -37430,7 +37430,7 @@
         },
         {
           "word": "attempt",
-          "meaning": "(要確認)",
+          "meaning": "試み・企て",
           "isUnknown": false,
           "lemma": "attempt",
           "reading": "attempt",
@@ -37748,7 +37748,7 @@
         },
         {
           "word": "vocabulary",
-          "meaning": "(要確認)",
+          "meaning": "語彙・単語集",
           "isUnknown": false,
           "lemma": "vocabulary",
           "reading": "vocabulary",
@@ -37877,7 +37877,7 @@
         },
         {
           "word": "usage",
-          "meaning": "(要確認)",
+          "meaning": "使用法・用法",
           "isUnknown": false,
           "lemma": "usage",
           "reading": "usage",
@@ -37918,7 +37918,7 @@
         },
         {
           "word": "assignment",
-          "meaning": "(要確認)",
+          "meaning": "割り当て・課題",
           "isUnknown": false,
           "lemma": "assignment",
           "reading": "assignment",
@@ -39232,7 +39232,7 @@
         },
         {
           "word": "awkward",
-          "meaning": "(要確認)",
+          "meaning": "不器用な・気まずい",
           "isUnknown": false,
           "lemma": "awkward",
           "reading": "awkward",
@@ -42434,7 +42434,7 @@
         },
         {
           "word": "confusion",
-          "meaning": "(要確認)",
+          "meaning": "混乱・困惑",
           "isUnknown": false,
           "lemma": "confusion",
           "reading": "confusion",
@@ -42670,7 +42670,7 @@
         },
         {
           "word": "comprehension",
-          "meaning": "(要確認)",
+          "meaning": "理解・理解力",
           "isUnknown": false,
           "lemma": "comprehension",
           "reading": "comprehension",
@@ -44883,7 +44883,7 @@
         },
         {
           "word": "contribution",
-          "meaning": "(要確認)",
+          "meaning": "貢献・寄付",
           "isUnknown": false,
           "lemma": "contribution",
           "reading": "contribution",
@@ -45143,7 +45143,7 @@
         },
         {
           "word": "silent",
-          "meaning": "(要確認)",
+          "meaning": "無言の",
           "isUnknown": false,
           "lemma": "silent",
           "reading": "silent",

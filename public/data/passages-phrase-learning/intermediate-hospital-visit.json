@@ -1091,7 +1091,7 @@
         },
         {
           "word": "confirm",
-          "meaning": "(要確認)",
+          "meaning": "確認する・承認する",
           "isUnknown": false,
           "lemma": "confirm",
           "reading": "confirm",
@@ -1187,7 +1187,7 @@
         },
         {
           "word": "department",
-          "meaning": "(要確認)",
+          "meaning": "部門・学科",
           "isUnknown": false,
           "lemma": "department",
           "reading": "department",
@@ -1565,7 +1565,7 @@
         },
         {
           "word": "smell",
-          "meaning": "(要確認)",
+          "meaning": "におい・においがする",
           "isUnknown": false,
           "lemma": "smell",
           "reading": "smell",
@@ -2009,7 +2009,7 @@
         },
         {
           "word": "department",
-          "meaning": "(要確認)",
+          "meaning": "部門・学科",
           "isUnknown": false,
           "lemma": "department",
           "reading": "department",
@@ -2031,7 +2031,7 @@
         },
         {
           "word": "desk",
-          "meaning": "(要確認)",
+          "meaning": "机",
           "isUnknown": false,
           "lemma": "desk",
           "reading": "desk",
@@ -2072,7 +2072,7 @@
         },
         {
           "word": "clerk",
-          "meaning": "(要確認)",
+          "meaning": "事務員・店員",
           "isUnknown": false,
           "lemma": "clerk",
           "reading": "clerk",
@@ -2937,7 +2937,7 @@
         },
         {
           "word": "man",
-          "meaning": "(要確認)",
+          "meaning": "男性・人",
           "isUnknown": false,
           "lemma": "man",
           "reading": "man",
@@ -3071,7 +3071,7 @@
         },
         {
           "word": "woman",
-          "meaning": "(要確認)",
+          "meaning": "女性",
           "isUnknown": false,
           "lemma": "woman",
           "reading": "woman",
@@ -3148,7 +3148,7 @@
         },
         {
           "word": "arm",
-          "meaning": "(要確認)",
+          "meaning": "腕・武器",
           "isUnknown": false,
           "lemma": "arm",
           "reading": "arm",
@@ -3899,7 +3899,7 @@
         },
         {
           "word": "condition",
-          "meaning": "(要確認)",
+          "meaning": "状態・条件",
           "isUnknown": false,
           "lemma": "condition",
           "reading": "condition",
@@ -4964,7 +4964,7 @@
         },
         {
           "word": "weak",
-          "meaning": "(要確認)",
+          "meaning": "弱い",
           "isUnknown": false,
           "lemma": "weak",
           "reading": "weak",
@@ -5298,7 +5298,7 @@
         },
         {
           "word": "ankle",
-          "meaning": "(要確認)",
+          "meaning": "足首",
           "isUnknown": false,
           "lemma": "ankle",
           "reading": "ankle",
@@ -6823,7 +6823,7 @@
         },
         {
           "word": "grandmother",
-          "meaning": "(要確認)",
+          "meaning": "祖母・おばあさん",
           "isUnknown": false,
           "lemma": "grandmother",
           "reading": "grandmother",
@@ -7812,7 +7812,7 @@
         },
         {
           "word": "arm",
-          "meaning": "(要確認)",
+          "meaning": "腕・武器",
           "isUnknown": false,
           "lemma": "arm",
           "reading": "arm",
@@ -8028,7 +8028,7 @@
         },
         {
           "word": "transport",
-          "meaning": "(要確認)",
+          "meaning": "輸送する・運ぶ",
           "isUnknown": false,
           "lemma": "transport",
           "reading": "transport",
@@ -8176,7 +8176,7 @@
         },
         {
           "word": "ward",
-          "meaning": "(要確認)",
+          "meaning": "病棟・区",
           "isUnknown": false,
           "lemma": "ward",
           "reading": "ward",
@@ -8220,7 +8220,7 @@
         },
         {
           "word": "floor",
-          "meaning": "(要確認)",
+          "meaning": "床・階",
           "isUnknown": false,
           "lemma": "floor",
           "reading": "floor",
@@ -8346,7 +8346,7 @@
         },
         {
           "word": "ward",
-          "meaning": "(要確認)",
+          "meaning": "病棟・区",
           "isUnknown": false,
           "lemma": "ward",
           "reading": "ward",
@@ -8357,7 +8357,7 @@
         },
         {
           "word": "corridor",
-          "meaning": "(要確認)",
+          "meaning": "廊下・回廊",
           "isUnknown": false,
           "lemma": "corridor",
           "reading": "corridor",
@@ -9012,7 +9012,7 @@
         },
         {
           "word": "closet",
-          "meaning": "(要確認)",
+          "meaning": "物入れ・秘密の",
           "isUnknown": false,
           "lemma": "closet",
           "reading": "closet",
@@ -9417,7 +9417,7 @@
         },
         {
           "word": "settle",
-          "meaning": "(要確認)",
+          "meaning": "落ち着く・解決する",
           "isUnknown": false,
           "lemma": "settle",
           "reading": "settle",
@@ -11676,7 +11676,7 @@
         },
         {
           "word": "wake",
-          "meaning": "(要確認)",
+          "meaning": "目覚める・起こす",
           "isUnknown": false,
           "lemma": "wake",
           "reading": "wake",
@@ -12604,7 +12604,7 @@
         },
         {
           "word": "ninety",
-          "meaning": "(要確認)",
+          "meaning": "90",
           "isUnknown": false,
           "lemma": "ninety",
           "reading": "ninety",
@@ -13027,7 +13027,7 @@
         },
         {
           "word": "transport",
-          "meaning": "(要確認)",
+          "meaning": "輸送する・運ぶ",
           "isUnknown": false,
           "lemma": "transport",
           "reading": "transport",
@@ -13644,7 +13644,7 @@
         },
         {
           "word": "board",
-          "meaning": "(要確認)",
+          "meaning": "板・委員会",
           "isUnknown": false,
           "lemma": "board",
           "reading": "board",
@@ -14112,7 +14112,7 @@
         },
         {
           "word": "silence",
-          "meaning": "(要確認)",
+          "meaning": "沈黙",
           "isUnknown": false,
           "lemma": "silence",
           "reading": "silence",
@@ -14464,7 +14464,7 @@
         },
         {
           "word": "board",
-          "meaning": "(要確認)",
+          "meaning": "板・委員会",
           "isUnknown": false,
           "lemma": "board",
           "reading": "board",
@@ -17599,7 +17599,7 @@
         },
         {
           "word": "injured",
-          "meaning": "(要確認)",
+          "meaning": "けがをした",
           "isUnknown": false,
           "lemma": "injured",
           "reading": "injured",
@@ -22676,7 +22676,7 @@
         },
         {
           "word": "fever",
-          "meaning": "(要確認)",
+          "meaning": "熱・発熱",
           "isUnknown": false,
           "lemma": "fever",
           "reading": "fever",
@@ -22835,7 +22835,7 @@
         },
         {
           "word": "appointment",
-          "meaning": "(要確認)",
+          "meaning": "任命・約束",
           "isUnknown": false,
           "lemma": "appointment",
           "reading": "appointment",
@@ -23626,7 +23626,7 @@
         },
         {
           "word": "settle",
-          "meaning": "(要確認)",
+          "meaning": "落ち着く・解決する",
           "isUnknown": false,
           "lemma": "settle",
           "reading": "settle",
@@ -25271,7 +25271,7 @@
         },
         {
           "word": "temporary",
-          "meaning": "(要確認)",
+          "meaning": "一時的な",
           "isUnknown": false,
           "lemma": "temporary",
           "reading": "temporary",
@@ -25356,7 +25356,7 @@
         },
         {
           "word": "attitude",
-          "meaning": "(要確認)",
+          "meaning": "態度・姿勢",
           "isUnknown": false,
           "lemma": "attitude",
           "reading": "attitude",
@@ -31765,7 +31765,7 @@
         },
         {
           "word": "settle",
-          "meaning": "(要確認)",
+          "meaning": "落ち着く・解決する",
           "isUnknown": false,
           "lemma": "settle",
           "reading": "settle",
@@ -34043,7 +34043,7 @@
         },
         {
           "word": "accident",
-          "meaning": "(要確認)",
+          "meaning": "事故",
           "isUnknown": false,
           "lemma": "accident",
           "reading": "accident",
@@ -34372,7 +34372,7 @@
         },
         {
           "word": "cautious",
-          "meaning": "(要確認)",
+          "meaning": "用心深い・慎重な",
           "isUnknown": false,
           "lemma": "cautious",
           "reading": "cautious",
@@ -39470,7 +39470,7 @@
         },
         {
           "word": "worth",
-          "meaning": "(要確認)",
+          "meaning": "〜の価値がある",
           "isUnknown": false,
           "lemma": "worth",
           "reading": "worth",
