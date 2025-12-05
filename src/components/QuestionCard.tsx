@@ -16,7 +16,7 @@ interface QuestionCardProps {
   currentIndex: number;
   answered: boolean;
   selectedAnswer: string | null;
-  onAnswer: (answer: string, correct: string) => void;
+  onAnswer: (answer: string, correct: string, selectedQuestion?: Question | null) => void;
   onNext: () => void;
   onPrevious: () => void;
   onDifficultyRate?: (rating: number) => void;
@@ -275,11 +275,12 @@ function QuestionCard({
         if (index < choicesWithQuestions.length) {
           e.preventDefault();
           const choice = choicesWithQuestions[index].text;
+          const choiceQuestion = choicesWithQuestions[index].question;
           const isCorrect = choice === question.meaning;
           if (!isCorrect) {
             setAttemptCount(prev => prev + 1);
           }
-          onAnswer(choice, question.meaning);
+          onAnswer(choice, question.meaning, choiceQuestion);
         }
       }
       // スペースキー: スキップ（回答前のみ）
@@ -309,6 +310,18 @@ function QuestionCard({
     const baseClasses = 'w-full min-h-[56px] p-4 text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
     const hoverClasses = 'hover:border-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
     const activeClasses = 'active:bg-gray-200 dark:active:bg-gray-700 active:translate-y-0';
+    
+    // 「分からない」選択肢は特別なスタイル
+    if (choice === '分からない') {
+      if (!answered) {
+        return `${baseClasses} bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-400 dark:border-gray-500 ${hoverClasses} ${activeClasses}`;
+      }
+      // 回答後に「分からない」を選択していた場合は不正解の色
+      if (choice === selectedAnswer) {
+        return `${baseClasses} bg-red-600 border-red-600 text-white`;
+      }
+      return `${baseClasses} bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-400 dark:border-gray-500`;
+    }
     
     if (!answered) {
       return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 ${hoverClasses} ${activeClasses}`;
@@ -412,7 +425,7 @@ function QuestionCard({
                   if (!isCorrect) {
                     setAttemptCount(prev => prev + 1);
                   }
-                  onAnswer(choice.text, question.meaning);
+                  onAnswer(choice.text, question.meaning, choiceQuestion);
                 }}
                 disabled={false}
               >
