@@ -2853,7 +2853,7 @@
         },
         {
           "word": "vegetation",
-          "meaning": "(要確認)",
+          "meaning": "植生",
           "isUnknown": false,
           "lemma": "vegetation",
           "reading": "vegetation",
@@ -3102,7 +3102,7 @@
         },
         {
           "word": "interact",
-          "meaning": "(要確認)",
+          "meaning": "相互作用する",
           "isUnknown": false,
           "lemma": "interact",
           "reading": "interact",
@@ -4042,7 +4042,7 @@
         },
         {
           "word": "warning",
-          "meaning": "(要確認)",
+          "meaning": "警告・警告する",
           "isUnknown": false,
           "lemma": "warning",
           "reading": "warning",
@@ -12402,7 +12402,7 @@
         },
         {
           "word": "donate",
-          "meaning": "(要確認)",
+          "meaning": "寄付する",
           "isUnknown": false,
           "lemma": "donate",
           "reading": "donate",
@@ -16769,7 +16769,7 @@
         },
         {
           "word": "priority",
-          "meaning": "(要確認)",
+          "meaning": "優先事項",
           "isUnknown": false,
           "lemma": "priority",
           "reading": "priority",
@@ -17016,7 +17016,7 @@
       "segments": [
         {
           "word": "recognition",
-          "meaning": "(要確認)",
+          "meaning": "認識・承認",
           "isUnknown": false,
           "lemma": "recognition",
           "reading": "recognition",
@@ -19271,7 +19271,7 @@
         },
         {
           "word": "ecology",
-          "meaning": "(要確認)",
+          "meaning": "生態学",
           "isUnknown": false,
           "lemma": "ecology",
           "reading": "ecology",
@@ -20720,7 +20720,7 @@
         },
         {
           "word": "reinforce",
-          "meaning": "(要確認)",
+          "meaning": "強化する",
           "isUnknown": false,
           "lemma": "reinforce",
           "reading": "reinforce",
@@ -22292,7 +22292,7 @@
         },
         {
           "word": "promote",
-          "meaning": "(要確認)",
+          "meaning": "促進する",
           "isUnknown": false,
           "lemma": "promote",
           "reading": "promote",
@@ -22615,7 +22615,7 @@
         },
         {
           "word": "collection",
-          "meaning": "(要確認)",
+          "meaning": "収集・コレクション",
           "isUnknown": false,
           "lemma": "collection",
           "reading": "collection",
@@ -24979,7 +24979,7 @@
         },
         {
           "word": "donated",
-          "meaning": "(要確認)",
+          "meaning": "寄付した",
           "isUnknown": false,
           "lemma": "donated",
           "reading": "donated",
@@ -26290,7 +26290,7 @@
         },
         {
           "word": "underwater",
-          "meaning": "(要確認)",
+          "meaning": "水中の",
           "isUnknown": false,
           "lemma": "underwater",
           "reading": "underwater",
@@ -28175,7 +28175,7 @@
         },
         {
           "word": "closer",
-          "meaning": "(要確認)",
+          "meaning": "より近い",
           "isUnknown": false,
           "lemma": "closer",
           "reading": "closer",

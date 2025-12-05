@@ -2148,7 +2148,7 @@
         },
         {
           "word": "greeting",
-          "meaning": "(要確認)",
+          "meaning": "挨拶する・挨拶",
           "isUnknown": false,
           "lemma": "greet",
           "difficulty": "intermediate",
@@ -6437,7 +6437,7 @@
         },
         {
           "word": "pickled",
-          "meaning": "(要確認)",
+          "meaning": "漬けた・ピクルスにした",
           "isUnknown": false,
           "lemma": "pickle",
           "difficulty": "intermediate",
@@ -8032,7 +8032,7 @@
         },
         {
           "word": "whispered",
-          "meaning": "(要確認)",
+          "meaning": "ささやいた",
           "isUnknown": false,
           "lemma": "whisper",
           "difficulty": "advanced",
@@ -14314,7 +14314,7 @@
         },
         {
           "word": "thrilled",
-          "meaning": "(要確認)",
+          "meaning": "わくわくした・興奮した",
           "isUnknown": false,
           "lemma": "thrill",
           "difficulty": "intermediate",
@@ -19575,7 +19575,7 @@
         },
         {
           "word": "attempts",
-          "meaning": "(要確認)",
+          "meaning": "試み",
           "isUnknown": false,
           "lemma": "attempt",
           "difficulty": "intermediate",
@@ -19861,7 +19861,7 @@
         },
         {
           "word": "declared",
-          "meaning": "(要確認)",
+          "meaning": "宣言した",
           "isUnknown": false,
           "lemma": "declare",
           "difficulty": "intermediate",
@@ -35336,7 +35336,7 @@
         },
         {
           "word": "flavor",
-          "meaning": "(要確認)",
+          "meaning": "風味",
           "isUnknown": false,
           "lemma": "flavor",
           "difficulty": "intermediate",
@@ -39046,7 +39046,7 @@
         },
         {
           "word": "permission",
-          "meaning": "(要確認)",
+          "meaning": "許可",
           "isUnknown": false,
           "lemma": "permission",
           "difficulty": "advanced",
