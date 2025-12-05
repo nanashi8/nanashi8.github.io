@@ -72,7 +72,7 @@ function TimeBasedGreetingBanner({ onDismiss }: TimeBasedGreetingBannerProps) {
   return (
     <div className="time-greeting-banner">
       <div className="time-greeting-content">
-        <div className="time-greeting-message text-white dark:text-white">{greeting}</div>
+        <div className="time-greeting-message text-gray-800 dark:text-gray-300">{greeting}</div>
         <button 
           className="time-greeting-dismiss"
           onClick={handleDismiss}
