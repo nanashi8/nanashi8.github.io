@@ -1288,7 +1288,7 @@
         },
         {
           "word": "cows",
-          "meaning": "(要確認)",
+          "meaning": "牛",
           "isUnknown": false,
           "lemma": "cows",
           "reading": "cows",
@@ -1351,7 +1351,7 @@
         },
         {
           "word": "chickens",
-          "meaning": "(要確認)",
+          "meaning": "鶏",
           "isUnknown": false,
           "lemma": "chickens",
           "reading": "chickens",
@@ -1583,7 +1583,7 @@
         },
         {
           "word": "cows",
-          "meaning": "(要確認)",
+          "meaning": "牛",
           "isUnknown": false,
           "lemma": "cows",
           "reading": "cows",
@@ -2109,7 +2109,7 @@
       "segments": [
         {
           "word": "Kids",
-          "meaning": "(要確認)",
+          "meaning": "子供たち",
           "isUnknown": false,
           "lemma": "Kids",
           "reading": "Kids",
@@ -2238,7 +2238,7 @@
         },
         {
           "word": "piglets",
-          "meaning": "(要確認)",
+          "meaning": "子豚",
           "isUnknown": false,
           "lemma": "piglets",
           "reading": "piglets",
@@ -2260,7 +2260,7 @@
         },
         {
           "word": "calves",
-          "meaning": "(要確認)",
+          "meaning": "子牛",
           "isUnknown": false,
           "lemma": "calves",
           "reading": "calves",
@@ -2301,7 +2301,7 @@
         },
         {
           "word": "chicks",
-          "meaning": "(要確認)",
+          "meaning": "ひよこ",
           "isUnknown": false,
           "lemma": "chicks",
           "reading": "chicks",
@@ -3957,7 +3957,7 @@
         },
         {
           "word": "bullfrogs",
-          "meaning": "(要確認)",
+          "meaning": "ウシガエル",
           "isUnknown": false,
           "lemma": "bullfrogs",
           "reading": "bullfrogs",
@@ -4795,7 +4795,7 @@
         },
         {
           "word": "picky",
-          "meaning": "(要確認)",
+          "meaning": "好き嫌いが多い",
           "isUnknown": false,
           "lemma": "picky",
           "reading": "picky",
@@ -4806,7 +4806,7 @@
         },
         {
           "word": "eaters",
-          "meaning": "(要確認)",
+          "meaning": "食べる人",
           "isUnknown": false,
           "lemma": "eaters",
           "reading": "eaters",
@@ -5644,7 +5644,7 @@
         },
         {
           "word": "veterinarians",
-          "meaning": "(要確認)",
+          "meaning": "獣医",
           "isUnknown": false,
           "lemma": "veterinarians",
           "reading": "veterinarians",
@@ -6972,7 +6972,7 @@
         },
         {
           "word": "keepers",
-          "meaning": "(要確認)",
+          "meaning": "管理人",
           "isUnknown": false,
           "lemma": "keepers",
           "reading": "keepers",
@@ -7957,7 +7957,7 @@
         },
         {
           "word": "veterinary",
-          "meaning": "(要確認)",
+          "meaning": "獣医の",
           "isUnknown": false,
           "lemma": "veterinary",
           "reading": "veterinary",
@@ -8486,7 +8486,7 @@
         },
         {
           "word": "guinea",
-          "meaning": "(要確認)",
+          "meaning": "ギニア",
           "isUnknown": false,
           "lemma": "guinea",
           "reading": "guinea",
@@ -8782,7 +8782,7 @@
         },
         {
           "word": "vegetarian",
-          "meaning": "(要確認)",
+          "meaning": "ベジタリアン",
           "isUnknown": false,
           "lemma": "vegetarian",
           "reading": "vegetarian",
@@ -9327,7 +9327,7 @@
         },
         {
           "word": "replicas",
-          "meaning": "(要確認)",
+          "meaning": "複製品",
           "isUnknown": false,
           "lemma": "replicas",
           "reading": "replicas",
@@ -9938,7 +9938,7 @@
         },
         {
           "word": "removal",
-          "meaning": "(要確認)",
+          "meaning": "除去",
           "isUnknown": false,
           "lemma": "removal",
           "reading": "removal",
@@ -10001,7 +10001,7 @@
         },
         {
           "word": "refund",
-          "meaning": "(要確認)",
+          "meaning": "返金",
           "isUnknown": false,
           "lemma": "refund",
           "reading": "refund",
@@ -10712,7 +10712,7 @@
         },
         {
           "word": "restrooms",
-          "meaning": "(要確認)",
+          "meaning": "トイレ",
           "isUnknown": false,
           "lemma": "restrooms",
           "reading": "restrooms",
@@ -10879,7 +10879,7 @@
         },
         {
           "word": "download",
-          "meaning": "(要確認)",
+          "meaning": "ダウンロード",
           "isUnknown": false,
           "lemma": "download",
           "reading": "download",
@@ -12221,7 +12221,7 @@
         },
         {
           "word": "arrivals",
-          "meaning": "(要確認)",
+          "meaning": "到着",
           "isUnknown": false,
           "lemma": "arrivals",
           "reading": "arrivals",
@@ -12598,7 +12598,7 @@
         },
         {
           "word": "Greeting",
-          "meaning": "(要確認)",
+          "meaning": "挨拶",
           "isUnknown": false,
           "lemma": "Greeting",
           "reading": "Greeting",
@@ -12636,7 +12636,7 @@
         },
         {
           "word": "entrances",
-          "meaning": "(要確認)",
+          "meaning": "入口",
           "isUnknown": false,
           "lemma": "entrances",
           "reading": "entrances",
@@ -12699,7 +12699,7 @@
         },
         {
           "word": "brochures",
-          "meaning": "(要確認)",
+          "meaning": "パンフレット",
           "isUnknown": false,
           "lemma": "brochures",
           "reading": "brochures",
@@ -13402,7 +13402,7 @@
         },
         {
           "word": "learners",
-          "meaning": "(要確認)",
+          "meaning": "学習者",
           "isUnknown": false,
           "lemma": "learners",
           "reading": "learners",
@@ -13476,7 +13476,7 @@
         },
         {
           "word": "groundskeepers",
-          "meaning": "(要確認)",
+          "meaning": "管理人",
           "isUnknown": false,
           "lemma": "groundskeepers",
           "reading": "groundskeepers",
@@ -13498,7 +13498,7 @@
         },
         {
           "word": "landscaping",
-          "meaning": "(要確認)",
+          "meaning": "造園",
           "isUnknown": false,
           "lemma": "landscaping",
           "reading": "landscaping",
@@ -13539,7 +13539,7 @@
         },
         {
           "word": "pathways",
-          "meaning": "(要確認)",
+          "meaning": "経路",
           "isUnknown": false,
           "lemma": "pathways",
           "reading": "pathways",
@@ -13868,7 +13868,7 @@
         },
         {
           "word": "galas",
-          "meaning": "(要確認)",
+          "meaning": "ガラ",
           "isUnknown": false,
           "lemma": "galas",
           "reading": "galas",
@@ -13991,7 +13991,7 @@
         },
         {
           "word": "promotional",
-          "meaning": "(要確認)",
+          "meaning": "宣伝の",
           "isUnknown": false,
           "lemma": "promotional",
           "reading": "promotional",
@@ -14290,7 +14290,7 @@
         },
         {
           "word": "licensed",
-          "meaning": "(要確認)",
+          "meaning": "認可された",
           "isUnknown": false,
           "lemma": "licensed",
           "reading": "licensed",
@@ -15297,7 +15297,7 @@
         },
         {
           "word": "generous",
-          "meaning": "(要確認)",
+          "meaning": "寛大な",
           "isUnknown": false,
           "lemma": "generous",
           "reading": "generous",
@@ -16369,7 +16369,7 @@
         },
         {
           "word": "newsletter",
-          "meaning": "(要確認)",
+          "meaning": "ニュースレター",
           "isUnknown": false,
           "lemma": "newsletter",
           "reading": "newsletter",
@@ -16410,7 +16410,7 @@
         },
         {
           "word": "notification",
-          "meaning": "(要確認)",
+          "meaning": "通知",
           "isUnknown": false,
           "lemma": "notification",
           "reading": "notification",
@@ -16964,7 +16964,7 @@
         },
         {
           "word": "complimentary",
-          "meaning": "(要確認)",
+          "meaning": "無料の・褒める",
           "isUnknown": false,
           "lemma": "complimentary",
           "reading": "complimentary",
@@ -17112,7 +17112,7 @@
         },
         {
           "word": "donor",
-          "meaning": "(要確認)",
+          "meaning": "寄贈者",
           "isUnknown": false,
           "lemma": "donor",
           "reading": "donor",
@@ -17134,7 +17134,7 @@
         },
         {
           "word": "receptions",
-          "meaning": "(要確認)",
+          "meaning": "歓迎会",
           "isUnknown": false,
           "lemma": "receptions",
           "reading": "receptions",
@@ -17378,7 +17378,7 @@
         },
         {
           "word": "highest",
-          "meaning": "(要確認)",
+          "meaning": "最高の",
           "isUnknown": false,
           "lemma": "highest",
           "reading": "highest",
@@ -17474,7 +17474,7 @@
         },
         {
           "word": "curators",
-          "meaning": "(要確認)",
+          "meaning": "学芸員",
           "isUnknown": false,
           "lemma": "curators",
           "reading": "curators",
@@ -17496,7 +17496,7 @@
         },
         {
           "word": "veterinarians",
-          "meaning": "(要確認)",
+          "meaning": "獣医",
           "isUnknown": false,
           "lemma": "veterinarians",
           "reading": "veterinarians",
@@ -18281,7 +18281,7 @@
         },
         {
           "word": "deductible",
-          "meaning": "(要確認)",
+          "meaning": "控除できる",
           "isUnknown": false,
           "lemma": "deductible",
           "reading": "deductible",
@@ -18610,7 +18610,7 @@
         },
         {
           "word": "owl",
-          "meaning": "(要確認)",
+          "meaning": "フクロウ",
           "isUnknown": false,
           "lemma": "owl",
           "reading": "owl",
@@ -18879,7 +18879,7 @@
         },
         {
           "word": "constructing",
-          "meaning": "(要確認)",
+          "meaning": "建設する",
           "isUnknown": false,
           "lemma": "constructing",
           "reading": "constructing",
@@ -19156,7 +19156,7 @@
         },
         {
           "word": "educators",
-          "meaning": "(要確認)",
+          "meaning": "教育者",
           "isUnknown": false,
           "lemma": "educators",
           "reading": "educators",
@@ -19480,7 +19480,7 @@
         },
         {
           "word": "feathers",
-          "meaning": "(要確認)",
+          "meaning": "羽",
           "isUnknown": false,
           "lemma": "feathers",
           "reading": "feathers",
@@ -19543,7 +19543,7 @@
         },
         {
           "word": "shells",
-          "meaning": "(要確認)",
+          "meaning": "貝殻",
           "isUnknown": false,
           "lemma": "shells",
           "reading": "shells",
@@ -19927,7 +19927,7 @@
         },
         {
           "word": "conservationists",
-          "meaning": "(要確認)",
+          "meaning": "保護活動家",
           "isUnknown": false,
           "lemma": "conservationists",
           "reading": "conservationists",
@@ -20253,7 +20253,7 @@
       "segments": [
         {
           "word": "veterinary",
-          "meaning": "(要確認)",
+          "meaning": "獣医の",
           "isUnknown": false,
           "lemma": "veterinary",
           "reading": "veterinary",
@@ -20420,7 +20420,7 @@
         },
         {
           "word": "stewardship",
-          "meaning": "(要確認)",
+          "meaning": "管理",
           "isUnknown": false,
           "lemma": "stewardship",
           "reading": "stewardship",
@@ -20498,7 +20498,7 @@
         },
         {
           "word": "preparatory",
-          "meaning": "(要確認)",
+          "meaning": "準備の",
           "isUnknown": false,
           "lemma": "preparatory",
           "reading": "preparatory",
@@ -20709,7 +20709,7 @@
         },
         {
           "word": "educators",
-          "meaning": "(要確認)",
+          "meaning": "教育者",
           "isUnknown": false,
           "lemma": "educators",
           "reading": "educators",
@@ -21095,7 +21095,7 @@
         },
         {
           "word": "senior",
-          "meaning": "(要確認)",
+          "meaning": "年長の",
           "isUnknown": false,
           "lemma": "senior",
           "reading": "senior",
@@ -21257,7 +21257,7 @@
         },
         {
           "word": "turtles",
-          "meaning": "(要確認)",
+          "meaning": "カメ",
           "isUnknown": false,
           "lemma": "turtles",
           "reading": "turtles",
@@ -21809,7 +21809,7 @@
         },
         {
           "word": "corridors",
-          "meaning": "(要確認)",
+          "meaning": "廊下",
           "isUnknown": false,
           "lemma": "corridors",
           "reading": "corridors",
@@ -22711,7 +22711,7 @@
         },
         {
           "word": "zoos",
-          "meaning": "(要確認)",
+          "meaning": "動物園",
           "isUnknown": false,
           "lemma": "zoos",
           "reading": "zoos",
@@ -22785,7 +22785,7 @@
         },
         {
           "word": "genetically",
-          "meaning": "(要確認)",
+          "meaning": "遺伝的に",
           "isUnknown": false,
           "lemma": "genetically",
           "reading": "genetically",
@@ -23015,7 +23015,7 @@
         },
         {
           "word": "offspring",
-          "meaning": "(要確認)",
+          "meaning": "子孫",
           "isUnknown": false,
           "lemma": "offspring",
           "reading": "offspring",
@@ -23089,7 +23089,7 @@
         },
         {
           "word": "births",
-          "meaning": "(要確認)",
+          "meaning": "出生",
           "isUnknown": false,
           "lemma": "births",
           "reading": "births",
@@ -23177,7 +23177,7 @@
         },
         {
           "word": "reproduction",
-          "meaning": "(要確認)",
+          "meaning": "繁殖",
           "isUnknown": false,
           "lemma": "reproduction",
           "reading": "reproduction",
@@ -23229,7 +23229,7 @@
         },
         {
           "word": "offspring",
-          "meaning": "(要確認)",
+          "meaning": "子孫",
           "isUnknown": false,
           "lemma": "offspring",
           "reading": "offspring",
@@ -23544,7 +23544,7 @@
         },
         {
           "word": "Biologist",
-          "meaning": "(要確認)",
+          "meaning": "生物学者",
           "isUnknown": false,
           "lemma": "Biologist",
           "reading": "Biologist",
@@ -24244,7 +24244,7 @@
         },
         {
           "word": "acquisition",
-          "meaning": "(要確認)",
+          "meaning": "取得",
           "isUnknown": false,
           "lemma": "acquisition",
           "reading": "acquisition",
@@ -24326,7 +24326,7 @@
         },
         {
           "word": "waterfowl",
-          "meaning": "(要確認)",
+          "meaning": "水鳥",
           "isUnknown": false,
           "lemma": "waterfowl",
           "reading": "waterfowl",
@@ -24389,7 +24389,7 @@
         },
         {
           "word": "nesting",
-          "meaning": "(要確認)",
+          "meaning": "巣作り",
           "isUnknown": false,
           "lemma": "nesting",
           "reading": "nesting",
@@ -24573,7 +24573,7 @@
         },
         {
           "word": "deforested",
-          "meaning": "(要確認)",
+          "meaning": "森林伐採された",
           "isUnknown": false,
           "lemma": "deforested",
           "reading": "deforested",
@@ -24773,7 +24773,7 @@
         },
         {
           "word": "Poaching",
-          "meaning": "(要確認)",
+          "meaning": "密猟",
           "isUnknown": false,
           "lemma": "Poaching",
           "reading": "Poaching",
@@ -24817,7 +24817,7 @@
         },
         {
           "word": "ranger",
-          "meaning": "(要確認)",
+          "meaning": "レンジャー",
           "isUnknown": false,
           "lemma": "ranger",
           "reading": "ranger",
@@ -24883,7 +24883,7 @@
         },
         {
           "word": "elephants",
-          "meaning": "(要確認)",
+          "meaning": "象",
           "isUnknown": false,
           "lemma": "elephants",
           "reading": "elephants",
@@ -24905,7 +24905,7 @@
         },
         {
           "word": "rhinos",
-          "meaning": "(要確認)",
+          "meaning": "サイ",
           "isUnknown": false,
           "lemma": "rhinos",
           "reading": "rhinos",
@@ -24938,7 +24938,7 @@
         },
         {
           "word": "hunting",
-          "meaning": "(要確認)",
+          "meaning": "狩猟",
           "isUnknown": false,
           "lemma": "hunting",
           "reading": "hunting",
@@ -25235,7 +25235,7 @@
         },
         {
           "word": "turtle",
-          "meaning": "(要確認)",
+          "meaning": "カメ",
           "isUnknown": false,
           "lemma": "turtle",
           "reading": "turtle",
@@ -25549,7 +25549,7 @@
         },
         {
           "word": "merchandise",
-          "meaning": "(要確認)",
+          "meaning": "商品",
           "isUnknown": false,
           "lemma": "merchandise",
           "reading": "merchandise",
@@ -25593,7 +25593,7 @@
         },
         {
           "word": "external",
-          "meaning": "(要確認)",
+          "meaning": "外部の",
           "isUnknown": false,
           "lemma": "external",
           "reading": "external",
@@ -26070,7 +26070,7 @@
         },
         {
           "word": "Expansion",
-          "meaning": "(要確認)",
+          "meaning": "拡大",
           "isUnknown": false,
           "lemma": "Expansion",
           "reading": "Expansion",
@@ -26169,7 +26169,7 @@
         },
         {
           "word": "polar",
-          "meaning": "(要確認)",
+          "meaning": "極地の",
           "isUnknown": false,
           "lemma": "polar",
           "reading": "polar",
@@ -26513,7 +26513,7 @@
         },
         {
           "word": "elusive",
-          "meaning": "(要確認)",
+          "meaning": "つかみどころのない",
           "isUnknown": false,
           "lemma": "elusive",
           "reading": "elusive",
@@ -26524,7 +26524,7 @@
         },
         {
           "word": "nighttime",
-          "meaning": "(要確認)",
+          "meaning": "夜間",
           "isUnknown": false,
           "lemma": "nighttime",
           "reading": "nighttime",
@@ -26565,7 +26565,7 @@
         },
         {
           "word": "daytime",
-          "meaning": "(要確認)",
+          "meaning": "昼間",
           "isUnknown": false,
           "lemma": "daytime",
           "reading": "daytime",
@@ -26696,7 +26696,7 @@
         },
         {
           "word": "overlay",
-          "meaning": "(要確認)",
+          "meaning": "重ね合わせる",
           "isUnknown": false,
           "lemma": "overlay",
           "reading": "overlay",
@@ -26838,7 +26838,7 @@
         },
         {
           "word": "components",
-          "meaning": "(要確認)",
+          "meaning": "部品",
           "isUnknown": false,
           "lemma": "components",
           "reading": "components",
@@ -27786,7 +27786,7 @@
         },
         {
           "word": "desperately",
-          "meaning": "(要確認)",
+          "meaning": "必死に",
           "isUnknown": false,
           "lemma": "desperately",
           "reading": "desperately",
@@ -28290,7 +28290,7 @@
         },
         {
           "word": "flourishes",
-          "meaning": "(要確認)",
+          "meaning": "繁栄する",
           "isUnknown": false,
           "lemma": "flourishes",
           "reading": "flourishes",
@@ -28379,7 +28379,7 @@
         },
         {
           "word": "stewards",
-          "meaning": "(要確認)",
+          "meaning": "管理人",
           "isUnknown": false,
           "lemma": "stewards",
           "reading": "stewards",

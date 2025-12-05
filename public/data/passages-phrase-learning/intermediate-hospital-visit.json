@@ -858,7 +858,7 @@
         },
         {
           "word": "heading",
-          "meaning": "(要確認)",
+          "meaning": "見出し",
           "isUnknown": false,
           "lemma": "heading",
           "reading": "heading",
@@ -2020,7 +2020,7 @@
         },
         {
           "word": "reception",
-          "meaning": "(要確認)",
+          "meaning": "受付・歓迎会",
           "isUnknown": false,
           "lemma": "reception",
           "reading": "reception",
@@ -2256,7 +2256,7 @@
         },
         {
           "word": "examined",
-          "meaning": "(要確認)",
+          "meaning": "調べた",
           "isUnknown": false,
           "lemma": "examined",
           "reading": "examined",
@@ -2874,7 +2874,7 @@
         },
         {
           "word": "feverish",
-          "meaning": "(要確認)",
+          "meaning": "熱のある",
           "isUnknown": false,
           "lemma": "feverish",
           "reading": "feverish",
@@ -3318,7 +3318,7 @@
         },
         {
           "word": "corresponding",
-          "meaning": "(要確認)",
+          "meaning": "対応する",
           "isUnknown": false,
           "lemma": "corresponding",
           "reading": "corresponding",
@@ -3699,7 +3699,7 @@
         },
         {
           "word": "triage",
-          "meaning": "(要確認)",
+          "meaning": "トリアージ",
           "isUnknown": false,
           "lemma": "triage",
           "reading": "triage",
@@ -5287,7 +5287,7 @@
         },
         {
           "word": "fractured",
-          "meaning": "(要確認)",
+          "meaning": "骨折した",
           "isUnknown": false,
           "lemma": "fractured",
           "reading": "fractured",
@@ -5704,7 +5704,7 @@
         },
         {
           "word": "surgeon",
-          "meaning": "(要確認)",
+          "meaning": "外科医",
           "isUnknown": false,
           "lemma": "surgeon",
           "reading": "surgeon",
@@ -7686,7 +7686,7 @@
         },
         {
           "word": "intravenous",
-          "meaning": "(要確認)",
+          "meaning": "静脈内の",
           "isUnknown": false,
           "lemma": "intravenous",
           "reading": "intravenous",
@@ -7932,7 +7932,7 @@
         },
         {
           "word": "administered",
-          "meaning": "(要確認)",
+          "meaning": "実施された・管理された",
           "isUnknown": false,
           "lemma": "administered",
           "reading": "administered",
@@ -7976,7 +7976,7 @@
         },
         {
           "word": "bloodstream",
-          "meaning": "(要確認)",
+          "meaning": "血流",
           "isUnknown": false,
           "lemma": "bloodstream",
           "reading": "bloodstream",
@@ -8083,7 +8083,7 @@
         },
         {
           "word": "wheelchair",
-          "meaning": "(要確認)",
+          "meaning": "車椅子",
           "isUnknown": false,
           "lemma": "wheelchair",
           "reading": "wheelchair",
@@ -9198,7 +9198,7 @@
         },
         {
           "word": "bars",
-          "meaning": "(要確認)",
+          "meaning": "バー・棒",
           "isUnknown": false,
           "lemma": "bars",
           "reading": "bars",
@@ -11032,7 +11032,7 @@
         },
         {
           "word": "wristband",
-          "meaning": "(要確認)",
+          "meaning": "リストバンド",
           "isUnknown": false,
           "lemma": "wristband",
           "reading": "wristband",
@@ -11824,7 +11824,7 @@
         },
         {
           "word": "surgeon",
-          "meaning": "(要確認)",
+          "meaning": "外科医",
           "isUnknown": false,
           "lemma": "surgeon",
           "reading": "surgeon",
@@ -12086,7 +12086,7 @@
         },
         {
           "word": "incision",
-          "meaning": "(要確認)",
+          "meaning": "切開",
           "isUnknown": false,
           "lemma": "incision",
           "reading": "incision",
@@ -13842,7 +13842,7 @@
         },
         {
           "word": "etc",
-          "meaning": "(要確認)",
+          "meaning": "など",
           "isUnknown": false,
           "lemma": "etc",
           "reading": "etc",
@@ -15477,7 +15477,7 @@
         },
         {
           "word": "stabilized",
-          "meaning": "(要確認)",
+          "meaning": "安定化された",
           "isUnknown": false,
           "lemma": "stabilized",
           "reading": "stabilized",
@@ -17963,7 +17963,7 @@
         },
         {
           "word": "modified",
-          "meaning": "(要確認)",
+          "meaning": "修正された",
           "isUnknown": false,
           "lemma": "modified",
           "reading": "modified",
@@ -18638,7 +18638,7 @@
         },
         {
           "word": "updating",
-          "meaning": "(要確認)",
+          "meaning": "更新する",
           "isUnknown": false,
           "lemma": "updating",
           "reading": "updating",
@@ -18898,7 +18898,7 @@
         },
         {
           "word": "sanitary",
-          "meaning": "(要確認)",
+          "meaning": "衛生的な",
           "isUnknown": false,
           "lemma": "sanitary",
           "reading": "sanitary",
@@ -19425,7 +19425,7 @@
         },
         {
           "word": "specimens",
-          "meaning": "(要確認)",
+          "meaning": "標本",
           "isUnknown": false,
           "lemma": "specimens",
           "reading": "specimens",
@@ -19934,7 +19934,7 @@
         },
         {
           "word": "pills",
-          "meaning": "(要確認)",
+          "meaning": "錠剤",
           "isUnknown": false,
           "lemma": "pills",
           "reading": "pills",
@@ -19967,7 +19967,7 @@
         },
         {
           "word": "prescriptions",
-          "meaning": "(要確認)",
+          "meaning": "処方薬",
           "isUnknown": false,
           "lemma": "prescriptions",
           "reading": "prescriptions",
@@ -23374,7 +23374,7 @@
         },
         {
           "word": "prescriptions",
-          "meaning": "(要確認)",
+          "meaning": "処方薬",
           "isUnknown": false,
           "lemma": "prescriptions",
           "reading": "prescriptions",
@@ -23552,7 +23552,7 @@
         },
         {
           "word": "arose",
-          "meaning": "(要確認)",
+          "meaning": "生じた",
           "isUnknown": false,
           "lemma": "arose",
           "reading": "arose",
@@ -27699,7 +27699,7 @@
         },
         {
           "word": "deny",
-          "meaning": "(要確認)",
+          "meaning": "否定する",
           "isUnknown": false,
           "lemma": "deny",
           "reading": "deny",
@@ -28723,7 +28723,7 @@
         },
         {
           "word": "inadequate",
-          "meaning": "(要確認)",
+          "meaning": "不十分な",
           "isUnknown": false,
           "lemma": "inadequate",
           "reading": "inadequate",
@@ -29773,7 +29773,7 @@
         },
         {
           "word": "protective",
-          "meaning": "(要確認)",
+          "meaning": "保護的な",
           "isUnknown": false,
           "lemma": "protective",
           "reading": "protective",
@@ -30761,7 +30761,7 @@
         },
         {
           "word": "administered",
-          "meaning": "(要確認)",
+          "meaning": "実施された・管理された",
           "isUnknown": false,
           "lemma": "administered",
           "reading": "administered",
@@ -30983,7 +30983,7 @@
         },
         {
           "word": "wristbands",
-          "meaning": "(要確認)",
+          "meaning": "リストバンド(複数)",
           "isUnknown": false,
           "lemma": "wristbands",
           "reading": "wristbands",
@@ -31072,7 +31072,7 @@
         },
         {
           "word": "dosages",
-          "meaning": "(要確認)",
+          "meaning": "投与量",
           "isUnknown": false,
           "lemma": "dosages",
           "reading": "dosages",
@@ -32564,7 +32564,7 @@
         },
         {
           "word": "outpatient",
-          "meaning": "(要確認)",
+          "meaning": "外来患者",
           "isUnknown": false,
           "lemma": "outpatient",
           "reading": "outpatient",
@@ -33121,7 +33121,7 @@
         },
         {
           "word": "regained",
-          "meaning": "(要確認)",
+          "meaning": "取り戻した",
           "isUnknown": false,
           "lemma": "regained",
           "reading": "regained",
@@ -33432,7 +33432,7 @@
         },
         {
           "word": "partial",
-          "meaning": "(要確認)",
+          "meaning": "部分的な",
           "isUnknown": false,
           "lemma": "partial",
           "reading": "partial",
@@ -34523,7 +34523,7 @@
         },
         {
           "word": "tripping",
-          "meaning": "(要確認)",
+          "meaning": "つまずく",
           "isUnknown": false,
           "lemma": "tripping",
           "reading": "tripping",
@@ -34556,7 +34556,7 @@
         },
         {
           "word": "loose",
-          "meaning": "(要確認)",
+          "meaning": "緩い",
           "isUnknown": false,
           "lemma": "loose",
           "reading": "loose",
@@ -34567,7 +34567,7 @@
         },
         {
           "word": "rugs",
-          "meaning": "(要確認)",
+          "meaning": "敷物",
           "isUnknown": false,
           "lemma": "rugs",
           "reading": "rugs",
@@ -35123,7 +35123,7 @@
         },
         {
           "word": "insight",
-          "meaning": "(要確認)",
+          "meaning": "洞察",
           "isUnknown": false,
           "lemma": "insight",
           "reading": "insight",

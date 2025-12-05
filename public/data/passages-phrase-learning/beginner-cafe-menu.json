@@ -1369,7 +1369,7 @@
         },
         {
           "word": "yesterday's",
-          "meaning": "(要確認)",
+          "meaning": "昨日の",
           "isUnknown": false,
           "lemma": "yesterday's",
           "reading": "yesterday's",
@@ -1769,7 +1769,7 @@
         },
         {
           "word": "dine",
-          "meaning": "(要確認)",
+          "meaning": "食事する",
           "isUnknown": false,
           "lemma": "dine",
           "reading": "dine",
@@ -1917,7 +1917,7 @@
         },
         {
           "word": "takeout",
-          "meaning": "(要確認)",
+          "meaning": "テイクアウト",
           "isUnknown": false,
           "lemma": "takeout",
           "reading": "takeout",
@@ -2433,7 +2433,7 @@
         },
         {
           "word": "inform",
-          "meaning": "(要確認)",
+          "meaning": "知らせる",
           "isUnknown": false,
           "lemma": "inform",
           "reading": "inform",
@@ -2586,7 +2586,7 @@
         },
         {
           "word": "modify",
-          "meaning": "(要確認)",
+          "meaning": "修正する",
           "isUnknown": false,
           "lemma": "modify",
           "reading": "modify",
@@ -2690,7 +2690,7 @@
       "segments": [
         {
           "word": "Vegetarian",
-          "meaning": "(要確認)",
+          "meaning": "ベジタリアン",
           "isUnknown": false,
           "lemma": "Vegetarian",
           "reading": "Vegetarian",
@@ -2712,7 +2712,7 @@
         },
         {
           "word": "gluten",
-          "meaning": "(要確認)",
+          "meaning": "グルテン",
           "isUnknown": false,
           "lemma": "gluten",
           "reading": "gluten",
@@ -3044,7 +3044,7 @@
         },
         {
           "word": "crayons",
-          "meaning": "(要確認)",
+          "meaning": "クレヨン",
           "isUnknown": false,
           "lemma": "crayons",
           "reading": "crayons",
@@ -3107,7 +3107,7 @@
         },
         {
           "word": "entertained",
-          "meaning": "(要確認)",
+          "meaning": "楽しませた",
           "isUnknown": false,
           "lemma": "entertained",
           "reading": "entertained",
@@ -3270,7 +3270,7 @@
         },
         {
           "word": "crispy",
-          "meaning": "(要確認)",
+          "meaning": "サクサクした",
           "isUnknown": false,
           "lemma": "crispy",
           "reading": "crispy",
@@ -3322,7 +3322,7 @@
         },
         {
           "word": "pancakes",
-          "meaning": "(要確認)",
+          "meaning": "パンケーキ",
           "isUnknown": false,
           "lemma": "pancakes",
           "reading": "pancakes",
@@ -3440,7 +3440,7 @@
         },
         {
           "word": "bowls",
-          "meaning": "(要確認)",
+          "meaning": "ボウル",
           "isUnknown": false,
           "lemma": "bowls",
           "reading": "bowls",
@@ -4541,7 +4541,7 @@
         },
         {
           "word": "greeted",
-          "meaning": "(要確認)",
+          "meaning": "挨拶した",
           "isUnknown": false,
           "lemma": "greeted",
           "reading": "greeted",
@@ -4768,7 +4768,7 @@
         },
         {
           "word": "loyal",
-          "meaning": "(要確認)",
+          "meaning": "忠実な",
           "isUnknown": false,
           "lemma": "loyal",
           "reading": "loyal",
@@ -4905,7 +4905,7 @@
         },
         {
           "word": "fussy",
-          "meaning": "(要確認)",
+          "meaning": "うるさい",
           "isUnknown": false,
           "lemma": "fussy",
           "reading": "fussy",
@@ -4991,7 +4991,7 @@
         },
         {
           "word": "accommodates",
-          "meaning": "(要確認)",
+          "meaning": "収容する",
           "isUnknown": false,
           "lemma": "accommodates",
           "reading": "accommodates",
@@ -5523,7 +5523,7 @@
         },
         {
           "word": "founder",
-          "meaning": "(要確認)",
+          "meaning": "創設者",
           "isUnknown": false,
           "lemma": "founder",
           "reading": "founder",
@@ -6557,7 +6557,7 @@
         },
         {
           "word": "unrealistic",
-          "meaning": "(要確認)",
+          "meaning": "非現実的な",
           "isUnknown": false,
           "lemma": "unrealistic",
           "reading": "unrealistic",
@@ -7172,7 +7172,7 @@
         },
         {
           "word": "symbolizes",
-          "meaning": "(要確認)",
+          "meaning": "象徴する",
           "isUnknown": false,
           "lemma": "symbolizes",
           "reading": "symbolizes",
@@ -7205,7 +7205,7 @@
         },
         {
           "word": "renewal",
-          "meaning": "(要確認)",
+          "meaning": "更新",
           "isUnknown": false,
           "lemma": "renewal",
           "reading": "renewal",
@@ -7813,7 +7813,7 @@
         },
         {
           "word": "dawn",
-          "meaning": "(要確認)",
+          "meaning": "夜明け",
           "isUnknown": false,
           "lemma": "dawn",
           "reading": "dawn",
@@ -7939,7 +7939,7 @@
         },
         {
           "word": "pastries",
-          "meaning": "(要確認)",
+          "meaning": "ペストリー",
           "isUnknown": false,
           "lemma": "pastries",
           "reading": "pastries",
@@ -7991,7 +7991,7 @@
         },
         {
           "word": "aroma",
-          "meaning": "(要確認)",
+          "meaning": "香り",
           "isUnknown": false,
           "lemma": "aroma",
           "reading": "aroma",
@@ -8424,7 +8424,7 @@
         },
         {
           "word": "marinate",
-          "meaning": "(要確認)",
+          "meaning": "マリネする",
           "isUnknown": false,
           "lemma": "marinate",
           "reading": "marinate",
@@ -8542,7 +8542,7 @@
         },
         {
           "word": "prompt",
-          "meaning": "(要確認)",
+          "meaning": "促す",
           "isUnknown": false,
           "lemma": "prompt",
           "reading": "prompt",
@@ -8726,7 +8726,7 @@
         },
         {
           "word": "unsatisfactory",
-          "meaning": "(要確認)",
+          "meaning": "不満足な",
           "isUnknown": false,
           "lemma": "unsatisfactory",
           "reading": "unsatisfactory",
@@ -9158,7 +9158,7 @@
         },
         {
           "word": "exceptional",
-          "meaning": "(要確認)",
+          "meaning": "並外れた",
           "isUnknown": false,
           "lemma": "exceptional",
           "reading": "exceptional",
@@ -9169,7 +9169,7 @@
         },
         {
           "word": "organizational",
-          "meaning": "(要確認)",
+          "meaning": "組織の",
           "isUnknown": false,
           "lemma": "organizational",
           "reading": "organizational",
@@ -9690,7 +9690,7 @@
         },
         {
           "word": "peas",
-          "meaning": "(要確認)",
+          "meaning": "エンドウ豆",
           "isUnknown": false,
           "lemma": "peas",
           "reading": "peas",
@@ -9830,7 +9830,7 @@
         },
         {
           "word": "peaches",
-          "meaning": "(要確認)",
+          "meaning": "桃",
           "isUnknown": false,
           "lemma": "peaches",
           "reading": "peaches",
@@ -9937,7 +9937,7 @@
         },
         {
           "word": "mushrooms",
-          "meaning": "(要確認)",
+          "meaning": "キノコ",
           "isUnknown": false,
           "lemma": "mushrooms",
           "reading": "mushrooms",
@@ -10022,7 +10022,7 @@
         },
         {
           "word": "hearty",
-          "meaning": "(要確認)",
+          "meaning": "心のこもった",
           "isUnknown": false,
           "lemma": "hearty",
           "reading": "hearty",
@@ -10850,7 +10850,7 @@
         },
         {
           "word": "channels",
-          "meaning": "(要確認)",
+          "meaning": "チャンネル",
           "isUnknown": false,
           "lemma": "channels",
           "reading": "channels",
@@ -11528,7 +11528,7 @@
         },
         {
           "word": "logo",
-          "meaning": "(要確認)",
+          "meaning": "ロゴ",
           "isUnknown": false,
           "lemma": "logo",
           "reading": "logo",
@@ -11580,7 +11580,7 @@
         },
         {
           "word": "leftover",
-          "meaning": "(要確認)",
+          "meaning": "残り物",
           "isUnknown": false,
           "lemma": "leftover",
           "reading": "leftover",
@@ -11665,7 +11665,7 @@
         },
         {
           "word": "edible",
-          "meaning": "(要確認)",
+          "meaning": "食べられる",
           "isUnknown": false,
           "lemma": "edible",
           "reading": "edible",
@@ -13159,7 +13159,7 @@
         },
         {
           "word": "contemplates",
-          "meaning": "(要確認)",
+          "meaning": "熟考する",
           "isUnknown": false,
           "lemma": "contemplates",
           "reading": "contemplates",
@@ -13734,7 +13734,7 @@
         },
         {
           "word": "additions",
-          "meaning": "(要確認)",
+          "meaning": "追加",
           "isUnknown": false,
           "lemma": "additions",
           "reading": "additions",
@@ -14226,7 +14226,7 @@
         },
         {
           "word": "integration",
-          "meaning": "(要確認)",
+          "meaning": "統合",
           "isUnknown": false,
           "lemma": "integration",
           "reading": "integration",
@@ -14761,7 +14761,7 @@
         },
         {
           "word": "diminish",
-          "meaning": "(要確認)",
+          "meaning": "減少する",
           "isUnknown": false,
           "lemma": "diminish",
           "reading": "diminish",
@@ -16200,7 +16200,7 @@
         },
         {
           "word": "leisurely",
-          "meaning": "(要確認)",
+          "meaning": "ゆったりと",
           "isUnknown": false,
           "lemma": "leisurely",
           "reading": "leisurely",
