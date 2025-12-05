@@ -783,7 +783,7 @@
         },
         {
           "word": "homeroom",
-          "meaning": "(要確認)",
+          "meaning": "ホームルーム",
           "isUnknown": false,
           "lemma": "homeroom",
           "reading": "homeroom",
@@ -2103,7 +2103,7 @@
         },
         {
           "word": "venue",
-          "meaning": "(要確認)",
+          "meaning": "会場",
           "isUnknown": false,
           "lemma": "venue",
           "reading": "venue",
@@ -2851,7 +2851,7 @@
         },
         {
           "word": "posters",
-          "meaning": "(要確認)",
+          "meaning": "ポスター",
           "isUnknown": false,
           "lemma": "posters",
           "reading": "posters",
@@ -3262,7 +3262,7 @@
         },
         {
           "word": "nearby",
-          "meaning": "(要確認)",
+          "meaning": "近くの",
           "isUnknown": false,
           "lemma": "nearby",
           "reading": "nearby",
@@ -3358,7 +3358,7 @@
         },
         {
           "word": "student's",
-          "meaning": "(要確認)",
+          "meaning": "学生の",
           "isUnknown": false,
           "lemma": "student's",
           "reading": "student's",
@@ -4254,7 +4254,7 @@
         },
         {
           "word": "exceeded",
-          "meaning": "(要確認)",
+          "meaning": "超えた",
           "isUnknown": false,
           "lemma": "exceeded",
           "reading": "exceeded",
@@ -5303,7 +5303,7 @@
         },
         {
           "word": "chosen",
-          "meaning": "(要確認)",
+          "meaning": "選ばれた",
           "isUnknown": false,
           "lemma": "chosen",
           "reading": "chosen",
@@ -6249,7 +6249,7 @@
         },
         {
           "word": "loudspeakers",
-          "meaning": "(要確認)",
+          "meaning": "スピーカー",
           "isUnknown": false,
           "lemma": "loudspeakers",
           "reading": "loudspeakers",
@@ -6708,7 +6708,7 @@
         },
         {
           "word": "cheering",
-          "meaning": "(要確認)",
+          "meaning": "応援する",
           "isUnknown": false,
           "lemma": "cheering",
           "reading": "cheering",
@@ -6771,7 +6771,7 @@
         },
         {
           "word": "encouragement",
-          "meaning": "(要確認)",
+          "meaning": "励まし",
           "isUnknown": false,
           "lemma": "encouragement",
           "reading": "encouragement",
@@ -7156,7 +7156,7 @@
         },
         {
           "word": "pounded",
-          "meaning": "(要確認)",
+          "meaning": "叩いた",
           "isUnknown": false,
           "lemma": "pounded",
           "reading": "pounded",
@@ -7597,7 +7597,7 @@
         },
         {
           "word": "cheers",
-          "meaning": "(要確認)",
+          "meaning": "歓声・乾杯",
           "isUnknown": false,
           "lemma": "cheers",
           "reading": "cheers",
@@ -8203,7 +8203,7 @@
         },
         {
           "word": "captain",
-          "meaning": "(要確認)",
+          "meaning": "船長・キャプテン",
           "isUnknown": false,
           "lemma": "captain",
           "reading": "captain",
@@ -8698,7 +8698,7 @@
         },
         {
           "word": "fifteenth",
-          "meaning": "(要確認)",
+          "meaning": "15番目",
           "isUnknown": false,
           "lemma": "fifteenth",
           "reading": "fifteenth",
@@ -11030,7 +11030,7 @@
         },
         {
           "word": "roses",
-          "meaning": "(要確認)",
+          "meaning": "バラ",
           "isUnknown": false,
           "lemma": "roses",
           "reading": "roses",
@@ -11911,7 +11911,7 @@
         },
         {
           "word": "shouted",
-          "meaning": "(要確認)",
+          "meaning": "叫んだ",
           "isUnknown": false,
           "lemma": "shouted",
           "reading": "shouted",
@@ -13567,7 +13567,7 @@
         },
         {
           "word": "advisor",
-          "meaning": "(要確認)",
+          "meaning": "顧問・アドバイザー",
           "isUnknown": false,
           "lemma": "advisor",
           "reading": "advisor",
@@ -14558,7 +14558,7 @@
         },
         {
           "word": "backstage",
-          "meaning": "(要確認)",
+          "meaning": "舞台裏",
           "isUnknown": false,
           "lemma": "backstage",
           "reading": "backstage",
@@ -16132,7 +16132,7 @@
         },
         {
           "word": "intimate",
-          "meaning": "(要確認)",
+          "meaning": "親密な",
           "isUnknown": false,
           "lemma": "intimate",
           "reading": "intimate",
@@ -18931,7 +18931,7 @@
         },
         {
           "word": "gain",
-          "meaning": "(要確認)",
+          "meaning": "得る・獲得する",
           "isUnknown": false,
           "lemma": "gain",
           "reading": "gain",
@@ -19153,7 +19153,7 @@
         },
         {
           "word": "aimed",
-          "meaning": "(要確認)",
+          "meaning": "目指した",
           "isUnknown": false,
           "lemma": "aimed",
           "reading": "aimed",
@@ -22124,7 +22124,7 @@
         },
         {
           "word": "fortunate",
-          "meaning": "(要確認)",
+          "meaning": "幸運な",
           "isUnknown": false,
           "lemma": "fortunate",
           "reading": "fortunate",
@@ -22554,7 +22554,7 @@
         },
         {
           "word": "commenced",
-          "meaning": "(要確認)",
+          "meaning": "開始した",
           "isUnknown": false,
           "lemma": "commenced",
           "reading": "commenced",
@@ -22973,7 +22973,7 @@
       "segments": [
         {
           "word": "describing",
-          "meaning": "(要確認)",
+          "meaning": "説明する",
           "isUnknown": false,
           "lemma": "describing",
           "reading": "describing",
@@ -23847,7 +23847,7 @@
         },
         {
           "word": "judicial",
-          "meaning": "(要確認)",
+          "meaning": "司法の",
           "isUnknown": false,
           "lemma": "judicial",
           "reading": "judicial",
@@ -23902,7 +23902,7 @@
         },
         {
           "word": "defending",
-          "meaning": "(要確認)",
+          "meaning": "守る",
           "isUnknown": false,
           "lemma": "defending",
           "reading": "defending",
@@ -24633,7 +24633,7 @@
         },
         {
           "word": "publishing",
-          "meaning": "(要確認)",
+          "meaning": "出版",
           "isUnknown": false,
           "lemma": "publishing",
           "reading": "publishing",
@@ -24674,7 +24674,7 @@
         },
         {
           "word": "software",
-          "meaning": "(要確認)",
+          "meaning": "ソフトウェア",
           "isUnknown": false,
           "lemma": "software",
           "reading": "software",
@@ -24685,7 +24685,7 @@
         },
         {
           "word": "developer",
-          "meaning": "(要確認)",
+          "meaning": "開発者",
           "isUnknown": false,
           "lemma": "developer",
           "reading": "developer",
@@ -25352,7 +25352,7 @@
         },
         {
           "word": "panel",
-          "meaning": "(要確認)",
+          "meaning": "パネル",
           "isUnknown": false,
           "lemma": "panel",
           "reading": "panel",
@@ -27623,7 +27623,7 @@
         },
         {
           "word": "intimidating",
-          "meaning": "(要確認)",
+          "meaning": "脅迫的な",
           "isUnknown": false,
           "lemma": "intimidating",
           "reading": "intimidating",
@@ -27719,7 +27719,7 @@
         },
         {
           "word": "frightened",
-          "meaning": "(要確認)",
+          "meaning": "怖がった",
           "isUnknown": false,
           "lemma": "frightened",
           "reading": "frightened",
@@ -27955,7 +27955,7 @@
         },
         {
           "word": "reassured",
-          "meaning": "(要確認)",
+          "meaning": "安心させた",
           "isUnknown": false,
           "lemma": "reassured",
           "reading": "reassured",
@@ -29166,7 +29166,7 @@
         },
         {
           "word": "manageable",
-          "meaning": "(要確認)",
+          "meaning": "管理可能な",
           "isUnknown": false,
           "lemma": "manageable",
           "reading": "manageable",
@@ -29671,7 +29671,7 @@
         },
         {
           "word": "repeatedly",
-          "meaning": "(要確認)",
+          "meaning": "繰り返し",
           "isUnknown": false,
           "lemma": "repeatedly",
           "reading": "repeatedly",
@@ -30186,7 +30186,7 @@
         },
         {
           "word": "algebraic",
-          "meaning": "(要確認)",
+          "meaning": "代数の",
           "isUnknown": false,
           "lemma": "algebraic",
           "reading": "algebraic",
@@ -30260,7 +30260,7 @@
         },
         {
           "word": "meaningless",
-          "meaning": "(要確認)",
+          "meaning": "無意味な",
           "isUnknown": false,
           "lemma": "meaningless",
           "reading": "meaningless",
@@ -30293,7 +30293,7 @@
         },
         {
           "word": "straightforward",
-          "meaning": "(要確認)",
+          "meaning": "率直な",
           "isUnknown": false,
           "lemma": "straightforward",
           "reading": "straightforward",
@@ -30822,7 +30822,7 @@
         },
         {
           "word": "superficially",
-          "meaning": "(要確認)",
+          "meaning": "表面的に",
           "isUnknown": false,
           "lemma": "superficially",
           "reading": "superficially",
@@ -31308,7 +31308,7 @@
         },
         {
           "word": "methodology",
-          "meaning": "(要確認)",
+          "meaning": "方法論",
           "isUnknown": false,
           "lemma": "methodology",
           "reading": "methodology",
@@ -31661,7 +31661,7 @@
         },
         {
           "word": "conclusions",
-          "meaning": "(要確認)",
+          "meaning": "結論",
           "isUnknown": false,
           "lemma": "conclusions",
           "reading": "conclusions",
@@ -32435,7 +32435,7 @@
         },
         {
           "word": "rigor",
-          "meaning": "(要確認)",
+          "meaning": "厳格さ",
           "isUnknown": false,
           "lemma": "rigor",
           "reading": "rigor",
@@ -32616,7 +32616,7 @@
         },
         {
           "word": "nurtures",
-          "meaning": "(要確認)",
+          "meaning": "育てる",
           "isUnknown": false,
           "lemma": "nurtures",
           "reading": "nurtures",
@@ -34987,7 +34987,7 @@
         },
         {
           "word": "toughness",
-          "meaning": "(要確認)",
+          "meaning": "強靭さ",
           "isUnknown": false,
           "lemma": "toughness",
           "reading": "toughness",

@@ -896,7 +896,7 @@
         },
         {
           "word": "notebooks",
-          "meaning": "(要確認)",
+          "meaning": "ノート",
           "isUnknown": false,
           "lemma": "notebooks",
           "reading": "notebooks",
@@ -1055,7 +1055,7 @@
         },
         {
           "word": "worksheets",
-          "meaning": "(要確認)",
+          "meaning": "ワークシート",
           "isUnknown": false,
           "lemma": "worksheets",
           "reading": "worksheets",
@@ -1085,7 +1085,7 @@
       "segments": [
         {
           "word": "reference",
-          "meaning": "(要確認)",
+          "meaning": "参照",
           "isUnknown": false,
           "lemma": "reference",
           "reading": "reference",
@@ -4119,7 +4119,7 @@
         },
         {
           "word": "compiled",
-          "meaning": "(要確認)",
+          "meaning": "編集された",
           "isUnknown": false,
           "lemma": "compiled",
           "reading": "compiled",
@@ -4440,7 +4440,7 @@
         },
         {
           "word": "organizational",
-          "meaning": "(要確認)",
+          "meaning": "組織の",
           "isUnknown": false,
           "lemma": "organizational",
           "reading": "organizational",
@@ -4536,7 +4536,7 @@
         },
         {
           "word": "notebooks",
-          "meaning": "(要確認)",
+          "meaning": "ノート",
           "isUnknown": false,
           "lemma": "notebooks",
           "reading": "notebooks",
@@ -4987,7 +4987,7 @@
         },
         {
           "word": "kits",
-          "meaning": "(要確認)",
+          "meaning": "キット",
           "isUnknown": false,
           "lemma": "kits",
           "reading": "kits",
@@ -5977,7 +5977,7 @@
         },
         {
           "word": "simulated",
-          "meaning": "(要確認)",
+          "meaning": "シミュレートされた",
           "isUnknown": false,
           "lemma": "simulated",
           "reading": "simulated",
@@ -6284,7 +6284,7 @@
         },
         {
           "word": "taken",
-          "meaning": "(要確認)",
+          "meaning": "取られた",
           "isUnknown": false,
           "lemma": "taken",
           "reading": "taken",
@@ -6524,7 +6524,7 @@
         },
         {
           "word": "drills",
-          "meaning": "(要確認)",
+          "meaning": "訓練・ドリル",
           "isUnknown": false,
           "lemma": "drills",
           "reading": "drills",
@@ -7016,7 +7016,7 @@
         },
         {
           "word": "drills",
-          "meaning": "(要確認)",
+          "meaning": "訓練・ドリル",
           "isUnknown": false,
           "lemma": "drills",
           "reading": "drills",
@@ -7583,7 +7583,7 @@
         },
         {
           "word": "acrylic",
-          "meaning": "(要確認)",
+          "meaning": "アクリル",
           "isUnknown": false,
           "lemma": "acrylic",
           "reading": "acrylic",
@@ -9741,7 +9741,7 @@
         },
         {
           "word": "notebooks",
-          "meaning": "(要確認)",
+          "meaning": "ノート",
           "isUnknown": false,
           "lemma": "notebooks",
           "reading": "notebooks",
@@ -9785,7 +9785,7 @@
         },
         {
           "word": "erasers",
-          "meaning": "(要確認)",
+          "meaning": "消しゴム",
           "isUnknown": false,
           "lemma": "erasers",
           "reading": "erasers",
@@ -9999,7 +9999,7 @@
         },
         {
           "word": "urged",
-          "meaning": "(要確認)",
+          "meaning": "促した",
           "isUnknown": false,
           "lemma": "urged",
           "reading": "urged",
@@ -10158,7 +10158,7 @@
         },
         {
           "word": "notebooks",
-          "meaning": "(要確認)",
+          "meaning": "ノート",
           "isUnknown": false,
           "lemma": "notebooks",
           "reading": "notebooks",
@@ -11281,7 +11281,7 @@
         },
         {
           "word": "Exhibition",
-          "meaning": "(要確認)",
+          "meaning": "展覧会",
           "isUnknown": false,
           "lemma": "Exhibition",
           "reading": "Exhibition",
@@ -11524,7 +11524,7 @@
         },
         {
           "word": "experiment",
-          "meaning": "(要確認)",
+          "meaning": "実験",
           "isUnknown": false,
           "lemma": "experiment",
           "reading": "experiment",
@@ -12169,7 +12169,7 @@
         },
         {
           "word": "irrelevant",
-          "meaning": "(要確認)",
+          "meaning": "無関係な",
           "isUnknown": false,
           "lemma": "irrelevant",
           "reading": "irrelevant",
@@ -13397,7 +13397,7 @@
         },
         {
           "word": "aptitude",
-          "meaning": "(要確認)",
+          "meaning": "適性",
           "isUnknown": false,
           "lemma": "aptitude",
           "reading": "aptitude",
@@ -14446,7 +14446,7 @@
         },
         {
           "word": "winning",
-          "meaning": "(要確認)",
+          "meaning": "勝利",
           "isUnknown": false,
           "lemma": "winning",
           "reading": "winning",
@@ -14649,7 +14649,7 @@
         },
         {
           "word": "journals",
-          "meaning": "(要確認)",
+          "meaning": "学術誌",
           "isUnknown": false,
           "lemma": "journals",
           "reading": "journals",
@@ -15029,7 +15029,7 @@
         },
         {
           "word": "advocated",
-          "meaning": "(要確認)",
+          "meaning": "主張した",
           "isUnknown": false,
           "lemma": "advocated",
           "reading": "advocated",
@@ -15066,7 +15066,7 @@
         },
         {
           "word": "forestry",
-          "meaning": "(要確認)",
+          "meaning": "林業",
           "isUnknown": false,
           "lemma": "forestry",
           "reading": "forestry",
@@ -15323,7 +15323,7 @@
         },
         {
           "word": "argues",
-          "meaning": "(要確認)",
+          "meaning": "主張する",
           "isUnknown": false,
           "lemma": "argues",
           "reading": "argues",
@@ -15961,7 +15961,7 @@
         },
         {
           "word": "persuasive",
-          "meaning": "(要確認)",
+          "meaning": "説得力のある",
           "isUnknown": false,
           "lemma": "persuasive",
           "reading": "persuasive",
@@ -16718,7 +16718,7 @@
         },
         {
           "word": "planet's",
-          "meaning": "(要確認)",
+          "meaning": "惑星の",
           "isUnknown": false,
           "lemma": "planet's",
           "reading": "planet's",
@@ -17132,7 +17132,7 @@
         },
         {
           "word": "skyscrapers",
-          "meaning": "(要確認)",
+          "meaning": "超高層ビル",
           "isUnknown": false,
           "lemma": "skyscrapers",
           "reading": "skyscrapers",
@@ -18640,7 +18640,7 @@
         },
         {
           "word": "depth",
-          "meaning": "(要確認)",
+          "meaning": "深さ",
           "isUnknown": false,
           "lemma": "depth",
           "reading": "depth",
@@ -19188,7 +19188,7 @@
         },
         {
           "word": "curators",
-          "meaning": "(要確認)",
+          "meaning": "学芸員",
           "isUnknown": false,
           "lemma": "curators",
           "reading": "curators",
@@ -21002,7 +21002,7 @@
         },
         {
           "word": "Ken",
-          "meaning": "(要確認)",
+          "meaning": "ケン",
           "isUnknown": false,
           "lemma": "Ken",
           "reading": "Ken",
@@ -21227,7 +21227,7 @@
         },
         {
           "word": "dismissing",
-          "meaning": "(要確認)",
+          "meaning": "却下する",
           "isUnknown": false,
           "lemma": "dismissing",
           "reading": "dismissing",
@@ -21390,7 +21390,7 @@
         },
         {
           "word": "methodology",
-          "meaning": "(要確認)",
+          "meaning": "方法論",
           "isUnknown": false,
           "lemma": "methodology",
           "reading": "methodology",
@@ -21790,7 +21790,7 @@
         },
         {
           "word": "inquiry",
-          "meaning": "(要確認)",
+          "meaning": "調査",
           "isUnknown": false,
           "lemma": "inquiry",
           "reading": "inquiry",
@@ -24664,7 +24664,7 @@
         },
         {
           "word": "bins",
-          "meaning": "(要確認)",
+          "meaning": "ゴミ箱",
           "isUnknown": false,
           "lemma": "bins",
           "reading": "bins",
@@ -24694,7 +24694,7 @@
         },
         {
           "word": "campus",
-          "meaning": "(要確認)",
+          "meaning": "キャンパス",
           "isUnknown": false,
           "lemma": "campus",
           "reading": "campus",
@@ -25902,7 +25902,7 @@
         },
         {
           "word": "disposable",
-          "meaning": "(要確認)",
+          "meaning": "使い捨ての",
           "isUnknown": false,
           "lemma": "disposable",
           "reading": "disposable",
@@ -25935,7 +25935,7 @@
         },
         {
           "word": "utensils",
-          "meaning": "(要確認)",
+          "meaning": "食器",
           "isUnknown": false,
           "lemma": "utensils",
           "reading": "utensils",

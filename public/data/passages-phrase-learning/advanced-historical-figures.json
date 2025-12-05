@@ -650,7 +650,7 @@
         },
         {
           "word": "endure",
-          "meaning": "(要確認)",
+          "meaning": "耐える",
           "isUnknown": false,
           "lemma": "endure",
           "reading": "endure",
@@ -1234,7 +1234,7 @@
         },
         {
           "word": "grappled",
-          "meaning": "(要確認)",
+          "meaning": "取り組んだ",
           "isUnknown": false,
           "lemma": "grappled",
           "reading": "grappled",
@@ -1468,7 +1468,7 @@
         },
         {
           "word": "philosopher",
-          "meaning": "(要確認)",
+          "meaning": "哲学者",
           "isUnknown": false,
           "lemma": "philosopher",
           "reading": "philosopher",
@@ -1974,7 +1974,7 @@
         },
         {
           "word": "insistence",
-          "meaning": "(要確認)",
+          "meaning": "主張",
           "isUnknown": false,
           "lemma": "insistence",
           "reading": "insistence",
@@ -2026,7 +2026,7 @@
         },
         {
           "word": "unexamined",
-          "meaning": "(要確認)",
+          "meaning": "検証されていない",
           "isUnknown": false,
           "lemma": "unexamined",
           "reading": "unexamined",
@@ -2329,7 +2329,7 @@
         },
         {
           "word": "convictions",
-          "meaning": "(要確認)",
+          "meaning": "確信",
           "isUnknown": false,
           "lemma": "convictions",
           "reading": "convictions",
@@ -2370,7 +2370,7 @@
         },
         {
           "word": "convicted",
-          "meaning": "(要確認)",
+          "meaning": "有罪判決を受けた",
           "isUnknown": false,
           "lemma": "convicted",
           "reading": "convicted",
@@ -2403,7 +2403,7 @@
         },
         {
           "word": "corrupting",
-          "meaning": "(要確認)",
+          "meaning": "腐敗させる",
           "isUnknown": false,
           "lemma": "corrupting",
           "reading": "corrupting",
@@ -2469,7 +2469,7 @@
         },
         {
           "word": "sentenced",
-          "meaning": "(要確認)",
+          "meaning": "判決を受けた",
           "isUnknown": false,
           "lemma": "sentenced",
           "reading": "sentenced",
@@ -2584,7 +2584,7 @@
         },
         {
           "word": "exile",
-          "meaning": "(要確認)",
+          "meaning": "追放",
           "isUnknown": false,
           "lemma": "exile",
           "reading": "exile",
@@ -2666,7 +2666,7 @@
         },
         {
           "word": "poison",
-          "meaning": "(要確認)",
+          "meaning": "毒",
           "isUnknown": false,
           "lemma": "poison",
           "reading": "poison",
@@ -2844,7 +2844,7 @@
         },
         {
           "word": "martyrdom",
-          "meaning": "(要確認)",
+          "meaning": "殉教",
           "isUnknown": false,
           "lemma": "martyrdom",
           "reading": "martyrdom",
@@ -3134,7 +3134,7 @@
         },
         {
           "word": "institution",
-          "meaning": "(要確認)",
+          "meaning": "機関",
           "isUnknown": false,
           "lemma": "institution",
           "reading": "institution",
@@ -3545,7 +3545,7 @@
         },
         {
           "word": "sensory",
-          "meaning": "(要確認)",
+          "meaning": "感覚の",
           "isUnknown": false,
           "lemma": "sensory",
           "reading": "sensory",
@@ -3648,7 +3648,7 @@
         },
         {
           "word": "realm",
-          "meaning": "(要確認)",
+          "meaning": "領域",
           "isUnknown": false,
           "lemma": "realm",
           "reading": "realm",
@@ -3784,7 +3784,7 @@
         },
         {
           "word": "theology",
-          "meaning": "(要確認)",
+          "meaning": "神学",
           "isUnknown": false,
           "lemma": "theology",
           "reading": "theology",
@@ -3828,7 +3828,7 @@
         },
         {
           "word": "millennia",
-          "meaning": "(要確認)",
+          "meaning": "千年紀",
           "isUnknown": false,
           "lemma": "millennia",
           "reading": "millennia",
@@ -4223,7 +4223,7 @@
         },
         {
           "word": "astonishing",
-          "meaning": "(要確認)",
+          "meaning": "驚くべき",
           "isUnknown": false,
           "lemma": "astonishing",
           "reading": "astonishing",
@@ -4245,7 +4245,7 @@
         },
         {
           "word": "logic",
-          "meaning": "(要確認)",
+          "meaning": "論理",
           "isUnknown": false,
           "lemma": "logic",
           "reading": "logic",
@@ -4368,7 +4368,7 @@
         },
         {
           "word": "poetry",
-          "meaning": "(要確認)",
+          "meaning": "詩",
           "isUnknown": false,
           "lemma": "poetry",
           "reading": "poetry",
@@ -4516,7 +4516,7 @@
         },
         {
           "word": "authoritative",
-          "meaning": "(要確認)",
+          "meaning": "権威のある",
           "isUnknown": false,
           "lemma": "authoritative",
           "reading": "authoritative",
@@ -4805,7 +4805,7 @@
         },
         {
           "word": "filial",
-          "meaning": "(要確認)",
+          "meaning": "子としての",
           "isUnknown": false,
           "lemma": "filial",
           "reading": "filial",
@@ -4816,7 +4816,7 @@
         },
         {
           "word": "piety",
-          "meaning": "(要確認)",
+          "meaning": "敬虔",
           "isUnknown": false,
           "lemma": "piety",
           "reading": "piety",
@@ -5124,7 +5124,7 @@
         },
         {
           "word": "selecting",
-          "meaning": "(要確認)",
+          "meaning": "選択する",
           "isUnknown": false,
           "lemma": "selecting",
           "reading": "selecting",
@@ -5179,7 +5179,7 @@
         },
         {
           "word": "merit",
-          "meaning": "(要確認)",
+          "meaning": "長所・価値",
           "isUnknown": false,
           "lemma": "merit",
           "reading": "merit",
@@ -5212,7 +5212,7 @@
         },
         {
           "word": "aristocratic",
-          "meaning": "(要確認)",
+          "meaning": "貴族的な",
           "isUnknown": false,
           "lemma": "aristocratic",
           "reading": "aristocratic",
@@ -5459,7 +5459,7 @@
         },
         {
           "word": "occupation",
-          "meaning": "(要確認)",
+          "meaning": "職業",
           "isUnknown": false,
           "lemma": "occupation",
           "reading": "occupation",
@@ -5574,7 +5574,7 @@
         },
         {
           "word": "world's",
-          "meaning": "(要確認)",
+          "meaning": "世界の",
           "isUnknown": false,
           "lemma": "world's",
           "reading": "world's",
@@ -5651,7 +5651,7 @@
         },
         {
           "word": "followers",
-          "meaning": "(要確認)",
+          "meaning": "フォロワー",
           "isUnknown": false,
           "lemma": "followers",
           "reading": "followers",
@@ -5925,7 +5925,7 @@
         },
         {
           "word": "establishment",
-          "meaning": "(要確認)",
+          "meaning": "確立",
           "isUnknown": false,
           "lemma": "establishment",
           "reading": "establishment",
@@ -5966,7 +5966,7 @@
         },
         {
           "word": "crucifixion",
-          "meaning": "(要確認)",
+          "meaning": "磔刑",
           "isUnknown": false,
           "lemma": "crucifixion",
           "reading": "crucifixion",
@@ -6095,7 +6095,7 @@
         },
         {
           "word": "followers",
-          "meaning": "(要確認)",
+          "meaning": "フォロワー",
           "isUnknown": false,
           "lemma": "followers",
           "reading": "followers",
@@ -6106,7 +6106,7 @@
         },
         {
           "word": "proclaimed",
-          "meaning": "(要確認)",
+          "meaning": "宣言した",
           "isUnknown": false,
           "lemma": "proclaimed",
           "reading": "proclaimed",
@@ -6128,7 +6128,7 @@
         },
         {
           "word": "resurrection",
-          "meaning": "(要確認)",
+          "meaning": "復活",
           "isUnknown": false,
           "lemma": "resurrection",
           "reading": "resurrection",
@@ -6364,7 +6364,7 @@
         },
         {
           "word": "civilization's",
-          "meaning": "(要確認)",
+          "meaning": "文明の",
           "isUnknown": false,
           "lemma": "civilization's",
           "reading": "civilization's",
@@ -6639,7 +6639,7 @@
         },
         {
           "word": "revelations",
-          "meaning": "(要確認)",
+          "meaning": "啓示",
           "isUnknown": false,
           "lemma": "revelations",
           "reading": "revelations",
@@ -7194,7 +7194,7 @@
         },
         {
           "word": "languished",
-          "meaning": "(要確認)",
+          "meaning": "衰えた",
           "isUnknown": false,
           "lemma": "languished",
           "reading": "languished",
@@ -7863,7 +7863,7 @@
         },
         {
           "word": "obligatory",
-          "meaning": "(要確認)",
+          "meaning": "義務的な",
           "isUnknown": false,
           "lemma": "obligatory",
           "reading": "obligatory",
@@ -7896,7 +7896,7 @@
         },
         {
           "word": "Muslim",
-          "meaning": "(要確認)",
+          "meaning": "イスラム教徒",
           "isUnknown": false,
           "lemma": "Muslim",
           "reading": "Muslim",
@@ -8214,7 +8214,7 @@
         },
         {
           "word": "spiritual",
-          "meaning": "(要確認)",
+          "meaning": "精神的な",
           "isUnknown": false,
           "lemma": "spiritual",
           "reading": "spiritual",
@@ -8225,7 +8225,7 @@
         },
         {
           "word": "enlightenment",
-          "meaning": "(要確認)",
+          "meaning": "啓蒙",
           "isUnknown": false,
           "lemma": "enlightenment",
           "reading": "enlightenment",
@@ -8310,7 +8310,7 @@
         },
         {
           "word": "ascetic",
-          "meaning": "(要確認)",
+          "meaning": "禁欲的な",
           "isUnknown": false,
           "lemma": "ascetic",
           "reading": "ascetic",
@@ -8377,7 +8377,7 @@
         },
         {
           "word": "awakening",
-          "meaning": "(要確認)",
+          "meaning": "目覚め",
           "isUnknown": false,
           "lemma": "awakening",
           "reading": "awakening",
@@ -8421,7 +8421,7 @@
         },
         {
           "word": "remainder",
-          "meaning": "(要確認)",
+          "meaning": "残り",
           "isUnknown": false,
           "lemma": "remainder",
           "reading": "remainder",
@@ -8618,7 +8618,7 @@
         },
         {
           "word": "liberation",
-          "meaning": "(要確認)",
+          "meaning": "解放",
           "isUnknown": false,
           "lemma": "liberation",
           "reading": "liberation",
@@ -8837,7 +8837,7 @@
         },
         {
           "word": "monk",
-          "meaning": "(要確認)",
+          "meaning": "僧侶",
           "isUnknown": false,
           "lemma": "monk",
           "reading": "monk",
@@ -9007,7 +9007,7 @@
         },
         {
           "word": "indulgences",
-          "meaning": "(要確認)",
+          "meaning": "indulgence",
           "isUnknown": false,
           "lemma": "indulgences",
           "reading": "indulgences",
@@ -9085,7 +9085,7 @@
         },
         {
           "word": "sins",
-          "meaning": "(要確認)",
+          "meaning": "罪(複数)",
           "isUnknown": false,
           "lemma": "sins",
           "reading": "sins",
@@ -9170,7 +9170,7 @@
         },
         {
           "word": "nailed",
-          "meaning": "(要確認)",
+          "meaning": "釘で打った",
           "isUnknown": false,
           "lemma": "nailed",
           "reading": "nailed",
@@ -9348,7 +9348,7 @@
         },
         {
           "word": "fractured",
-          "meaning": "(要確認)",
+          "meaning": "骨折した",
           "isUnknown": false,
           "lemma": "fractured",
           "reading": "fractured",
@@ -9477,7 +9477,7 @@
         },
         {
           "word": "scripture",
-          "meaning": "(要確認)",
+          "meaning": "聖書",
           "isUnknown": false,
           "lemma": "scripture",
           "reading": "scripture",
@@ -9765,7 +9765,7 @@
         },
         {
           "word": "assassinated",
-          "meaning": "(要確認)",
+          "meaning": "暗殺された",
           "isUnknown": false,
           "lemma": "assassinated",
           "reading": "assassinated",
@@ -9891,7 +9891,7 @@
         },
         {
           "word": "Julian",
-          "meaning": "(要確認)",
+          "meaning": "ジュリアン",
           "isUnknown": false,
           "lemma": "Julian",
           "reading": "Julian",
@@ -10091,7 +10091,7 @@
         },
         {
           "word": "synonymous",
-          "meaning": "(要確認)",
+          "meaning": "同義の",
           "isUnknown": false,
           "lemma": "synonymous",
           "reading": "synonymous",
@@ -10113,7 +10113,7 @@
         },
         {
           "word": "supreme",
-          "meaning": "(要確認)",
+          "meaning": "最高の",
           "isUnknown": false,
           "lemma": "supreme",
           "reading": "supreme",
@@ -10256,7 +10256,7 @@
         },
         {
           "word": "derive",
-          "meaning": "(要確認)",
+          "meaning": "由来する",
           "isUnknown": false,
           "lemma": "derive",
           "reading": "derive",
@@ -10352,7 +10352,7 @@
         },
         {
           "word": "presided",
-          "meaning": "(要確認)",
+          "meaning": "主宰した",
           "isUnknown": false,
           "lemma": "presided",
           "reading": "presided",
@@ -10415,7 +10415,7 @@
         },
         {
           "word": "emergence",
-          "meaning": "(要確認)",
+          "meaning": "出現",
           "isUnknown": false,
           "lemma": "emergence",
           "reading": "emergence",
@@ -10738,7 +10738,7 @@
         },
         {
           "word": "reign",
-          "meaning": "(要確認)",
+          "meaning": "治世",
           "isUnknown": false,
           "lemma": "reign",
           "reading": "reign",
@@ -10771,7 +10771,7 @@
         },
         {
           "word": "defeat",
-          "meaning": "(要確認)",
+          "meaning": "敗北",
           "isUnknown": false,
           "lemma": "defeat",
           "reading": "defeat",
@@ -10815,7 +10815,7 @@
         },
         {
           "word": "Armada",
-          "meaning": "(要確認)",
+          "meaning": "アルマダ(無敵艦隊)",
           "isUnknown": false,
           "lemma": "Armada",
           "reading": "Armada",
@@ -10952,7 +10952,7 @@
         },
         {
           "word": "flowering",
-          "meaning": "(要確認)",
+          "meaning": "開花する",
           "isUnknown": false,
           "lemma": "flowering",
           "reading": "flowering",
@@ -11018,7 +11018,7 @@
         },
         {
           "word": "luminaries",
-          "meaning": "(要確認)",
+          "meaning": "著名人",
           "isUnknown": false,
           "lemma": "luminaries",
           "reading": "luminaries",
@@ -11185,7 +11185,7 @@
         },
         {
           "word": "princess",
-          "meaning": "(要確認)",
+          "meaning": "王女",
           "isUnknown": false,
           "lemma": "princess",
           "reading": "princess",
@@ -11341,7 +11341,7 @@
         },
         {
           "word": "corresponded",
-          "meaning": "(要確認)",
+          "meaning": "対応した",
           "isUnknown": false,
           "lemma": "corresponded",
           "reading": "corresponded",
@@ -11385,7 +11385,7 @@
         },
         {
           "word": "Voltaire",
-          "meaning": "(要確認)",
+          "meaning": "ヴォルテール",
           "isUnknown": false,
           "lemma": "Voltaire",
           "reading": "Voltaire",
@@ -11667,7 +11667,7 @@
         },
         {
           "word": "abolish",
-          "meaning": "(要確認)",
+          "meaning": "廃止する",
           "isUnknown": false,
           "lemma": "abolish",
           "reading": "abolish",
@@ -11678,7 +11678,7 @@
         },
         {
           "word": "serfdom",
-          "meaning": "(要確認)",
+          "meaning": "農奴制",
           "isUnknown": false,
           "lemma": "serfdom",
           "reading": "serfdom",
@@ -11719,7 +11719,7 @@
         },
         {
           "word": "aristocratic",
-          "meaning": "(要確認)",
+          "meaning": "貴族的な",
           "isUnknown": false,
           "lemma": "aristocratic",
           "reading": "aristocratic",
@@ -11730,7 +11730,7 @@
         },
         {
           "word": "rebellion",
-          "meaning": "(要確認)",
+          "meaning": "反乱",
           "isUnknown": false,
           "lemma": "rebellion",
           "reading": "rebellion",
@@ -11930,7 +11930,7 @@
         },
         {
           "word": "dominate",
-          "meaning": "(要確認)",
+          "meaning": "支配する",
           "isUnknown": false,
           "lemma": "dominate",
           "reading": "dominate",
@@ -11993,7 +11993,7 @@
         },
         {
           "word": "tactics",
-          "meaning": "(要確認)",
+          "meaning": "戦術",
           "isUnknown": false,
           "lemma": "tactics",
           "reading": "tactics",
@@ -12289,7 +12289,7 @@
         },
         {
           "word": "collapsed",
-          "meaning": "(要確認)",
+          "meaning": "崩壊した",
           "isUnknown": false,
           "lemma": "collapsed",
           "reading": "collapsed",
@@ -12344,7 +12344,7 @@
         },
         {
           "word": "exile",
-          "meaning": "(要確認)",
+          "meaning": "追放",
           "isUnknown": false,
           "lemma": "exile",
           "reading": "exile",
@@ -12736,7 +12736,7 @@
         },
         {
           "word": "Venezuela",
-          "meaning": "(要確認)",
+          "meaning": "ベネズエラ",
           "isUnknown": false,
           "lemma": "Venezuela",
           "reading": "Venezuela",
@@ -12758,7 +12758,7 @@
         },
         {
           "word": "Colombia",
-          "meaning": "(要確認)",
+          "meaning": "コロンビア",
           "isUnknown": false,
           "lemma": "Colombia",
           "reading": "Colombia",
@@ -12780,7 +12780,7 @@
         },
         {
           "word": "Ecuador",
-          "meaning": "(要確認)",
+          "meaning": "エクアドル",
           "isUnknown": false,
           "lemma": "Ecuador",
           "reading": "Ecuador",
@@ -12802,7 +12802,7 @@
         },
         {
           "word": "Peru",
-          "meaning": "(要確認)",
+          "meaning": "ペルー",
           "isUnknown": false,
           "lemma": "Peru",
           "reading": "Peru",
@@ -12843,7 +12843,7 @@
         },
         {
           "word": "Bolivia",
-          "meaning": "(要確認)",
+          "meaning": "ボリビア",
           "isUnknown": false,
           "lemma": "Bolivia",
           "reading": "Bolivia",
@@ -13005,7 +13005,7 @@
         },
         {
           "word": "materialized",
-          "meaning": "(要確認)",
+          "meaning": "実現した",
           "isUnknown": false,
           "lemma": "materialized",
           "reading": "materialized",
@@ -13016,7 +13016,7 @@
         },
         {
           "word": "nationalist",
-          "meaning": "(要確認)",
+          "meaning": "ナショナリスト",
           "isUnknown": false,
           "lemma": "nationalist",
           "reading": "nationalist",
@@ -13038,7 +13038,7 @@
         },
         {
           "word": "fragmented",
-          "meaning": "(要確認)",
+          "meaning": "断片化された",
           "isUnknown": false,
           "lemma": "fragmented",
           "reading": "fragmented",
@@ -13137,7 +13137,7 @@
         },
         {
           "word": "liberation",
-          "meaning": "(要確認)",
+          "meaning": "解放",
           "isUnknown": false,
           "lemma": "liberation",
           "reading": "liberation",
@@ -13248,7 +13248,7 @@
         },
         {
           "word": "nonviolent",
-          "meaning": "(要確認)",
+          "meaning": "非暴力の",
           "isUnknown": false,
           "lemma": "nonviolent",
           "reading": "nonviolent",
@@ -13374,7 +13374,7 @@
         },
         {
           "word": "disobedience",
-          "meaning": "(要確認)",
+          "meaning": "不服従",
           "isUnknown": false,
           "lemma": "disobedience",
           "reading": "disobedience",
@@ -13396,7 +13396,7 @@
         },
         {
           "word": "boycotts",
-          "meaning": "(要確認)",
+          "meaning": "ボイコット",
           "isUnknown": false,
           "lemma": "boycotts",
           "reading": "boycotts",
@@ -13448,7 +13448,7 @@
         },
         {
           "word": "protest",
-          "meaning": "(要確認)",
+          "meaning": "抗議",
           "isUnknown": false,
           "lemma": "protest",
           "reading": "protest",
@@ -13814,7 +13814,7 @@
         },
         {
           "word": "extremist",
-          "meaning": "(要確認)",
+          "meaning": "過激派",
           "isUnknown": false,
           "lemma": "extremist",
           "reading": "extremist",
@@ -13997,7 +13997,7 @@
         },
         {
           "word": "division",
-          "meaning": "(要確認)",
+          "meaning": "分割",
           "isUnknown": false,
           "lemma": "division",
           "reading": "division",
@@ -14093,7 +14093,7 @@
         },
         {
           "word": "imprisoned",
-          "meaning": "(要確認)",
+          "meaning": "投獄された",
           "isUnknown": false,
           "lemma": "imprisoned",
           "reading": "imprisoned",
@@ -14137,7 +14137,7 @@
         },
         {
           "word": "apartheid",
-          "meaning": "(要確認)",
+          "meaning": "アパルトヘイト",
           "isUnknown": false,
           "lemma": "apartheid",
           "reading": "apartheid",
@@ -14148,7 +14148,7 @@
         },
         {
           "word": "regime",
-          "meaning": "(要確認)",
+          "meaning": "政権",
           "isUnknown": false,
           "lemma": "regime",
           "reading": "regime",
@@ -14331,7 +14331,7 @@
         },
         {
           "word": "revenge",
-          "meaning": "(要確認)",
+          "meaning": "復讐",
           "isUnknown": false,
           "lemma": "revenge",
           "reading": "revenge",
@@ -14702,7 +14702,7 @@
         },
         {
           "word": "earned",
-          "meaning": "(要確認)",
+          "meaning": "稼いだ",
           "isUnknown": false,
           "lemma": "earned",
           "reading": "earned",
@@ -14824,7 +14824,7 @@
         },
         {
           "word": "mathematician",
-          "meaning": "(要確認)",
+          "meaning": "数学者",
           "isUnknown": false,
           "lemma": "mathematician",
           "reading": "mathematician",
@@ -14925,7 +14925,7 @@
         },
         {
           "word": "geometry",
-          "meaning": "(要確認)",
+          "meaning": "幾何学",
           "isUnknown": false,
           "lemma": "geometry",
           "reading": "geometry",
@@ -15055,7 +15055,7 @@
         },
         {
           "word": "buoyancy",
-          "meaning": "(要確認)",
+          "meaning": "浮力",
           "isUnknown": false,
           "lemma": "buoyancy",
           "reading": "buoyancy",
@@ -15107,7 +15107,7 @@
         },
         {
           "word": "immersed",
-          "meaning": "(要確認)",
+          "meaning": "浸った",
           "isUnknown": false,
           "lemma": "immersed",
           "reading": "immersed",
@@ -15129,7 +15129,7 @@
         },
         {
           "word": "fluid",
-          "meaning": "(要確認)",
+          "meaning": "流体",
           "isUnknown": false,
           "lemma": "fluid",
           "reading": "fluid",
@@ -15258,7 +15258,7 @@
         },
         {
           "word": "fluid",
-          "meaning": "(要確認)",
+          "meaning": "流体",
           "isUnknown": false,
           "lemma": "fluid",
           "reading": "fluid",
@@ -15343,7 +15343,7 @@
         },
         {
           "word": "ingenious",
-          "meaning": "(要確認)",
+          "meaning": "独創的な",
           "isUnknown": false,
           "lemma": "ingenious",
           "reading": "ingenious",
@@ -15376,7 +15376,7 @@
         },
         {
           "word": "allegedly",
-          "meaning": "(要確認)",
+          "meaning": "伝えられるところでは",
           "isUnknown": false,
           "lemma": "allegedly",
           "reading": "allegedly",
@@ -15387,7 +15387,7 @@
         },
         {
           "word": "defended",
-          "meaning": "(要確認)",
+          "meaning": "守った",
           "isUnknown": false,
           "lemma": "defended",
           "reading": "defended",
@@ -15398,7 +15398,7 @@
         },
         {
           "word": "Syracuse",
-          "meaning": "(要確認)",
+          "meaning": "シラキュース",
           "isUnknown": false,
           "lemma": "Syracuse",
           "reading": "Syracuse",
@@ -15431,7 +15431,7 @@
         },
         {
           "word": "siege",
-          "meaning": "(要確認)",
+          "meaning": "包囲",
           "isUnknown": false,
           "lemma": "siege",
           "reading": "siege",
@@ -15561,7 +15561,7 @@
         },
         {
           "word": "arguably",
-          "meaning": "(要確認)",
+          "meaning": "おそらく",
           "isUnknown": false,
           "lemma": "arguably",
           "reading": "arguably",
@@ -15764,7 +15764,7 @@
         },
         {
           "word": "gravitation",
-          "meaning": "(要確認)",
+          "meaning": "引力",
           "isUnknown": false,
           "lemma": "gravitation",
           "reading": "gravitation",
@@ -15830,7 +15830,7 @@
         },
         {
           "word": "mechanics",
-          "meaning": "(要確認)",
+          "meaning": "仕組み・機械学",
           "isUnknown": false,
           "lemma": "mechanics",
           "reading": "mechanics",
@@ -15852,7 +15852,7 @@
         },
         {
           "word": "elegant",
-          "meaning": "(要確認)",
+          "meaning": "優雅な",
           "isUnknown": false,
           "lemma": "elegant",
           "reading": "elegant",
@@ -15942,7 +15942,7 @@
         },
         {
           "word": "calculus",
-          "meaning": "(要確認)",
+          "meaning": "微積分",
           "isUnknown": false,
           "lemma": "calculus",
           "reading": "calculus",
@@ -16008,7 +16008,7 @@
         },
         {
           "word": "describing",
-          "meaning": "(要確認)",
+          "meaning": "説明する",
           "isUnknown": false,
           "lemma": "describing",
           "reading": "describing",
@@ -16104,7 +16104,7 @@
         },
         {
           "word": "optics",
-          "meaning": "(要確認)",
+          "meaning": "光学",
           "isUnknown": false,
           "lemma": "optics",
           "reading": "optics",
@@ -16167,7 +16167,7 @@
         },
         {
           "word": "comprises",
-          "meaning": "(要確認)",
+          "meaning": "構成する",
           "isUnknown": false,
           "lemma": "comprises",
           "reading": "comprises",
@@ -16189,7 +16189,7 @@
         },
         {
           "word": "spectrum",
-          "meaning": "(要確認)",
+          "meaning": "スペクトル",
           "isUnknown": false,
           "lemma": "spectrum",
           "reading": "spectrum",
@@ -16340,7 +16340,7 @@
         },
         {
           "word": "alchemist",
-          "meaning": "(要確認)",
+          "meaning": "錬金術師",
           "isUnknown": false,
           "lemma": "alchemist",
           "reading": "alchemist",
@@ -16362,7 +16362,7 @@
         },
         {
           "word": "theologian",
-          "meaning": "(要確認)",
+          "meaning": "神学者",
           "isUnknown": false,
           "lemma": "theologian",
           "reading": "theologian",
@@ -16525,7 +16525,7 @@
         },
         {
           "word": "secretive",
-          "meaning": "(要確認)",
+          "meaning": "秘密の",
           "isUnknown": false,
           "lemma": "secretive",
           "reading": "secretive",
@@ -16607,7 +16607,7 @@
         },
         {
           "word": "rational",
-          "meaning": "(要確認)",
+          "meaning": "合理的な",
           "isUnknown": false,
           "lemma": "rational",
           "reading": "rational",
@@ -16618,7 +16618,7 @@
         },
         {
           "word": "inquiry",
-          "meaning": "(要確認)",
+          "meaning": "調査",
           "isUnknown": false,
           "lemma": "inquiry",
           "reading": "inquiry",
@@ -16788,7 +16788,7 @@
         },
         {
           "word": "medieval",
-          "meaning": "(要確認)",
+          "meaning": "中世の",
           "isUnknown": false,
           "lemma": "medieval",
           "reading": "medieval",
@@ -16799,7 +16799,7 @@
         },
         {
           "word": "superstition",
-          "meaning": "(要確認)",
+          "meaning": "迷信",
           "isUnknown": false,
           "lemma": "superstition",
           "reading": "superstition",
@@ -16836,7 +16836,7 @@
         },
         {
           "word": "rationalism",
-          "meaning": "(要確認)",
+          "meaning": "合理主義",
           "isUnknown": false,
           "lemma": "rationalism",
           "reading": "rationalism",
@@ -17035,7 +17035,7 @@
         },
         {
           "word": "theology",
-          "meaning": "(要確認)",
+          "meaning": "神学",
           "isUnknown": false,
           "lemma": "theology",
           "reading": "theology",
@@ -17387,7 +17387,7 @@
         },
         {
           "word": "doctrines",
-          "meaning": "(要確認)",
+          "meaning": "教義",
           "isUnknown": false,
           "lemma": "doctrines",
           "reading": "doctrines",
@@ -17439,7 +17439,7 @@
         },
         {
           "word": "divine",
-          "meaning": "(要確認)",
+          "meaning": "神聖な",
           "isUnknown": false,
           "lemma": "divine",
           "reading": "divine",
@@ -17502,7 +17502,7 @@
         },
         {
           "word": "publishing",
-          "meaning": "(要確認)",
+          "meaning": "出版",
           "isUnknown": false,
           "lemma": "publishing",
           "reading": "publishing",
@@ -17568,7 +17568,7 @@
         },
         {
           "word": "anticipating",
-          "meaning": "(要確認)",
+          "meaning": "予想する",
           "isUnknown": false,
           "lemma": "anticipating",
           "reading": "anticipating",
@@ -17878,7 +17878,7 @@
         },
         {
           "word": "ensuing",
-          "meaning": "(要確認)",
+          "meaning": "続いて起こる",
           "isUnknown": false,
           "lemma": "ensuing",
           "reading": "ensuing",
@@ -18007,7 +18007,7 @@
         },
         {
           "word": "accepts",
-          "meaning": "(要確認)",
+          "meaning": "受け入れる",
           "isUnknown": false,
           "lemma": "accepts",
           "reading": "accepts",
@@ -18018,7 +18018,7 @@
         },
         {
           "word": "evolution's",
-          "meaning": "(要確認)",
+          "meaning": "進化の",
           "isUnknown": false,
           "lemma": "evolution's",
           "reading": "evolution's",
@@ -18040,7 +18040,7 @@
         },
         {
           "word": "validity",
-          "meaning": "(要確認)",
+          "meaning": "妥当性",
           "isUnknown": false,
           "lemma": "validity",
           "reading": "validity",
@@ -18122,7 +18122,7 @@
         },
         {
           "word": "Polish",
-          "meaning": "(要確認)",
+          "meaning": "ポーランドの",
           "isUnknown": false,
           "lemma": "Polish",
           "reading": "Polish",
@@ -18196,7 +18196,7 @@
       "segments": [
         {
           "word": "pioneered",
-          "meaning": "(要確認)",
+          "meaning": "開拓した",
           "isUnknown": false,
           "lemma": "pioneered",
           "reading": "pioneered",
@@ -18229,7 +18229,7 @@
         },
         {
           "word": "radioactivity",
-          "meaning": "(要確認)",
+          "meaning": "放射能",
           "isUnknown": false,
           "lemma": "radioactivity",
           "reading": "radioactivity",
@@ -18273,7 +18273,7 @@
         },
         {
           "word": "coined",
-          "meaning": "(要確認)",
+          "meaning": "作り出した",
           "isUnknown": false,
           "lemma": "coined",
           "reading": "coined",
@@ -18949,7 +18949,7 @@
         },
         {
           "word": "relativity",
-          "meaning": "(要確認)",
+          "meaning": "相対性理論",
           "isUnknown": false,
           "lemma": "relativity",
           "reading": "relativity",
@@ -19189,7 +19189,7 @@
         },
         {
           "word": "equivalent",
-          "meaning": "(要確認)",
+          "meaning": "同等の",
           "isUnknown": false,
           "lemma": "equivalent",
           "reading": "equivalent",
@@ -19222,7 +19222,7 @@
         },
         {
           "word": "mc²",
-          "meaning": "(要確認)",
+          "meaning": "mc²",
           "isUnknown": false,
           "lemma": "mc²",
           "reading": "mc²",
@@ -19318,7 +19318,7 @@
         },
         {
           "word": "spacetime",
-          "meaning": "(要確認)",
+          "meaning": "時空",
           "isUnknown": false,
           "lemma": "spacetime",
           "reading": "spacetime",
@@ -19329,7 +19329,7 @@
         },
         {
           "word": "curvature",
-          "meaning": "(要確認)",
+          "meaning": "曲率",
           "isUnknown": false,
           "lemma": "curvature",
           "reading": "curvature",
@@ -19521,7 +19521,7 @@
         },
         {
           "word": "predicted",
-          "meaning": "(要確認)",
+          "meaning": "予測された",
           "isUnknown": false,
           "lemma": "predicted",
           "reading": "predicted",
@@ -19565,7 +19565,7 @@
         },
         {
           "word": "holes",
-          "meaning": "(要確認)",
+          "meaning": "穴",
           "isUnknown": false,
           "lemma": "holes",
           "reading": "holes",
@@ -19587,7 +19587,7 @@
         },
         {
           "word": "gravitational",
-          "meaning": "(要確認)",
+          "meaning": "重力の",
           "isUnknown": false,
           "lemma": "gravitational",
           "reading": "gravitational",
@@ -19880,7 +19880,7 @@
         },
         {
           "word": "fled",
-          "meaning": "(要確認)",
+          "meaning": "逃げた",
           "isUnknown": false,
           "lemma": "fled",
           "reading": "fled",
@@ -19947,7 +19947,7 @@
         },
         {
           "word": "advocated",
-          "meaning": "(要確認)",
+          "meaning": "主張した",
           "isUnknown": false,
           "lemma": "advocated",
           "reading": "advocated",
@@ -20062,7 +20062,7 @@
         },
         {
           "word": "allied",
-          "meaning": "(要確認)",
+          "meaning": "同盟の",
           "isUnknown": false,
           "lemma": "allied",
           "reading": "allied",
@@ -20095,7 +20095,7 @@
         },
         {
           "word": "fascism",
-          "meaning": "(要確認)",
+          "meaning": "ファシズム",
           "isUnknown": false,
           "lemma": "fascism",
           "reading": "fascism",
@@ -20358,7 +20358,7 @@
         },
         {
           "word": "advancement",
-          "meaning": "(要確認)",
+          "meaning": "進歩",
           "isUnknown": false,
           "lemma": "advancement",
           "reading": "advancement",
@@ -20399,7 +20399,7 @@
         },
         {
           "word": "da",
-          "meaning": "(要確認)",
+          "meaning": "ダ",
           "isUnknown": false,
           "lemma": "da",
           "reading": "da",
@@ -20410,7 +20410,7 @@
         },
         {
           "word": "Vinci",
-          "meaning": "(要確認)",
+          "meaning": "ヴィンチ(ダ・ヴィンチ)",
           "isUnknown": false,
           "lemma": "Vinci",
           "reading": "Vinci",
@@ -20926,7 +20926,7 @@
         },
         {
           "word": "anatomist",
-          "meaning": "(要確認)",
+          "meaning": "解剖学者",
           "isUnknown": false,
           "lemma": "anatomist",
           "reading": "anatomist",
@@ -20997,7 +20997,7 @@
         },
         {
           "word": "notebooks",
-          "meaning": "(要確認)",
+          "meaning": "ノート",
           "isUnknown": false,
           "lemma": "notebooks",
           "reading": "notebooks",
@@ -21052,7 +21052,7 @@
         },
         {
           "word": "mechanics",
-          "meaning": "(要確認)",
+          "meaning": "仕組み・機械学",
           "isUnknown": false,
           "lemma": "mechanics",
           "reading": "mechanics",
@@ -21074,7 +21074,7 @@
         },
         {
           "word": "anatomy",
-          "meaning": "(要確認)",
+          "meaning": "解剖学",
           "isUnknown": false,
           "lemma": "anatomy",
           "reading": "anatomy",
@@ -21189,7 +21189,7 @@
         },
         {
           "word": "boundless",
-          "meaning": "(要確認)",
+          "meaning": "無限の",
           "isUnknown": false,
           "lemma": "boundless",
           "reading": "boundless",
@@ -21230,7 +21230,7 @@
         },
         {
           "word": "dissected",
-          "meaning": "(要確認)",
+          "meaning": "解剖した",
           "isUnknown": false,
           "lemma": "dissected",
           "reading": "dissected",
@@ -21241,7 +21241,7 @@
         },
         {
           "word": "corpses",
-          "meaning": "(要確認)",
+          "meaning": "死体",
           "isUnknown": false,
           "lemma": "corpses",
           "reading": "corpses",
@@ -21282,7 +21282,7 @@
         },
         {
           "word": "anatomy",
-          "meaning": "(要確認)",
+          "meaning": "解剖学",
           "isUnknown": false,
           "lemma": "anatomy",
           "reading": "anatomy",
@@ -21427,7 +21427,7 @@
         },
         {
           "word": "fortifications",
-          "meaning": "(要確認)",
+          "meaning": "要塞",
           "isUnknown": false,
           "lemma": "fortifications",
           "reading": "fortifications",
@@ -21660,7 +21660,7 @@
         },
         {
           "word": "sensitivity",
-          "meaning": "(要確認)",
+          "meaning": "感受性",
           "isUnknown": false,
           "lemma": "sensitivity",
           "reading": "sensitivity",
@@ -21838,7 +21838,7 @@
         },
         {
           "word": "poetry",
-          "meaning": "(要確認)",
+          "meaning": "詩",
           "isUnknown": false,
           "lemma": "poetry",
           "reading": "poetry",
@@ -22227,7 +22227,7 @@
         },
         {
           "word": "arguably",
-          "meaning": "(要確認)",
+          "meaning": "おそらく",
           "isUnknown": false,
           "lemma": "arguably",
           "reading": "arguably",
@@ -22604,7 +22604,7 @@
         },
         {
           "word": "jealousy",
-          "meaning": "(要確認)",
+          "meaning": "嫉妬",
           "isUnknown": false,
           "lemma": "jealousy",
           "reading": "jealousy",
@@ -22656,7 +22656,7 @@
         },
         {
           "word": "guilt",
-          "meaning": "(要確認)",
+          "meaning": "罪悪感",
           "isUnknown": false,
           "lemma": "guilt",
           "reading": "guilt",
@@ -22708,7 +22708,7 @@
         },
         {
           "word": "mercy",
-          "meaning": "(要確認)",
+          "meaning": "慈悲",
           "isUnknown": false,
           "lemma": "mercy",
           "reading": "mercy",
@@ -22760,7 +22760,7 @@
         },
         {
           "word": "deception",
-          "meaning": "(要確認)",
+          "meaning": "詐欺",
           "isUnknown": false,
           "lemma": "deception",
           "reading": "deception",
@@ -22853,7 +22853,7 @@
         },
         {
           "word": "tormented",
-          "meaning": "(要確認)",
+          "meaning": "苦しめられた",
           "isUnknown": false,
           "lemma": "tormented",
           "reading": "tormented",
@@ -22916,7 +22916,7 @@
         },
         {
           "word": "Macbeth",
-          "meaning": "(要確認)",
+          "meaning": "マクベス",
           "isUnknown": false,
           "lemma": "Macbeth",
           "reading": "Macbeth",
@@ -23267,7 +23267,7 @@
         },
         {
           "word": "insight",
-          "meaning": "(要確認)",
+          "meaning": "洞察",
           "isUnknown": false,
           "lemma": "insight",
           "reading": "insight",
@@ -23352,7 +23352,7 @@
         },
         {
           "word": "van",
-          "meaning": "(要確認)",
+          "meaning": "バン",
           "isUnknown": false,
           "lemma": "van",
           "reading": "van",
@@ -23651,7 +23651,7 @@
         },
         {
           "word": "iconic",
-          "meaning": "(要確認)",
+          "meaning": "象徴的な",
           "isUnknown": false,
           "lemma": "iconic",
           "reading": "iconic",
@@ -23673,7 +23673,7 @@
         },
         {
           "word": "Symphony",
-          "meaning": "(要確認)",
+          "meaning": "交響曲",
           "isUnknown": false,
           "lemma": "Symphony",
           "reading": "Symphony",
@@ -23725,7 +23725,7 @@
         },
         {
           "word": "deaf",
-          "meaning": "(要確認)",
+          "meaning": "聴覚障害のある",
           "isUnknown": false,
           "lemma": "deaf",
           "reading": "deaf",
@@ -24008,7 +24008,7 @@
         },
         {
           "word": "Amadeus",
-          "meaning": "(要確認)",
+          "meaning": "アマデウス(モーツァルトの中間名)",
           "isUnknown": false,
           "lemma": "Amadeus",
           "reading": "Amadeus",
@@ -24019,7 +24019,7 @@
         },
         {
           "word": "Mozart",
-          "meaning": "(要確認)",
+          "meaning": "モーツァルト",
           "isUnknown": false,
           "lemma": "Mozart",
           "reading": "Mozart",
@@ -24071,7 +24071,7 @@
         },
         {
           "word": "prodigy",
-          "meaning": "(要確認)",
+          "meaning": "神童",
           "isUnknown": false,
           "lemma": "prodigy",
           "reading": "prodigy",
@@ -24279,7 +24279,7 @@
         },
         {
           "word": "operas",
-          "meaning": "(要確認)",
+          "meaning": "オペラ",
           "isUnknown": false,
           "lemma": "operas",
           "reading": "operas",
@@ -24301,7 +24301,7 @@
         },
         {
           "word": "symphonies",
-          "meaning": "(要確認)",
+          "meaning": "交響曲(複数)",
           "isUnknown": false,
           "lemma": "symphonies",
           "reading": "symphonies",
@@ -24383,7 +24383,7 @@
         },
         {
           "word": "choral",
-          "meaning": "(要確認)",
+          "meaning": "合唱の",
           "isUnknown": false,
           "lemma": "choral",
           "reading": "choral",
@@ -24435,7 +24435,7 @@
         },
         {
           "word": "melodic",
-          "meaning": "(要確認)",
+          "meaning": "メロディアスな",
           "isUnknown": false,
           "lemma": "melodic",
           "reading": "melodic",
@@ -24543,7 +24543,7 @@
         },
         {
           "word": "depth",
-          "meaning": "(要確認)",
+          "meaning": "深さ",
           "isUnknown": false,
           "lemma": "depth",
           "reading": "depth",
@@ -24584,7 +24584,7 @@
         },
         {
           "word": "delight",
-          "meaning": "(要確認)",
+          "meaning": "喜び",
           "isUnknown": false,
           "lemma": "delight",
           "reading": "delight",
@@ -24658,7 +24658,7 @@
         },
         {
           "word": "effortless",
-          "meaning": "(要確認)",
+          "meaning": "楽々とした",
           "isUnknown": false,
           "lemma": "effortless",
           "reading": "effortless",
@@ -24721,7 +24721,7 @@
         },
         {
           "word": "sophistication",
-          "meaning": "(要確認)",
+          "meaning": "洗練",
           "isUnknown": false,
           "lemma": "sophistication",
           "reading": "sophistication",
@@ -24754,7 +24754,7 @@
         },
         {
           "word": "examination",
-          "meaning": "(要確認)",
+          "meaning": "検査",
           "isUnknown": false,
           "lemma": "examination",
           "reading": "examination",
@@ -24795,7 +24795,7 @@
         },
         {
           "word": "Picasso",
-          "meaning": "(要確認)",
+          "meaning": "ピカソ",
           "isUnknown": false,
           "lemma": "Picasso",
           "reading": "Picasso",
@@ -24806,7 +24806,7 @@
         },
         {
           "word": "co",
-          "meaning": "(要確認)",
+          "meaning": "共同で",
           "isUnknown": false,
           "lemma": "co",
           "reading": "co",
@@ -24828,7 +24828,7 @@
         },
         {
           "word": "Cubism",
-          "meaning": "(要確認)",
+          "meaning": "キュビズム",
           "isUnknown": false,
           "lemma": "Cubism",
           "reading": "Cubism",
@@ -24872,7 +24872,7 @@
         },
         {
           "word": "astounding",
-          "meaning": "(要確認)",
+          "meaning": "驚異的な",
           "isUnknown": false,
           "lemma": "astounding",
           "reading": "astounding",
@@ -25001,7 +25001,7 @@
         },
         {
           "word": "ceramics",
-          "meaning": "(要確認)",
+          "meaning": "陶磁器",
           "isUnknown": false,
           "lemma": "ceramics",
           "reading": "ceramics",
@@ -25023,7 +25023,7 @@
         },
         {
           "word": "printmaking",
-          "meaning": "(要確認)",
+          "meaning": "版画",
           "isUnknown": false,
           "lemma": "printmaking",
           "reading": "printmaking",
@@ -25212,7 +25212,7 @@
         },
         {
           "word": "masterpiece",
-          "meaning": "(要確認)",
+          "meaning": "傑作",
           "isUnknown": false,
           "lemma": "masterpiece",
           "reading": "masterpiece",
@@ -25267,7 +25267,7 @@
         },
         {
           "word": "depicting",
-          "meaning": "(要確認)",
+          "meaning": "描写する",
           "isUnknown": false,
           "lemma": "depicting",
           "reading": "depicting",
@@ -25396,7 +25396,7 @@
         },
         {
           "word": "statement",
-          "meaning": "(要確認)",
+          "meaning": "声明",
           "isUnknown": false,
           "lemma": "statement",
           "reading": "statement",
@@ -25437,7 +25437,7 @@
         },
         {
           "word": "Lincoln",
-          "meaning": "(要確認)",
+          "meaning": "リンカーン",
           "isUnknown": false,
           "lemma": "Lincoln",
           "reading": "Lincoln",
@@ -25478,7 +25478,7 @@
         },
         {
           "word": "sixteenth",
-          "meaning": "(要確認)",
+          "meaning": "16番目の",
           "isUnknown": false,
           "lemma": "sixteenth",
           "reading": "sixteenth",
@@ -25619,7 +25619,7 @@
         },
         {
           "word": "abolished",
-          "meaning": "(要確認)",
+          "meaning": "廃止された",
           "isUnknown": false,
           "lemma": "abolished",
           "reading": "abolished",
@@ -25866,7 +25866,7 @@
         },
         {
           "word": "eloquence",
-          "meaning": "(要確認)",
+          "meaning": "雄弁",
           "isUnknown": false,
           "lemma": "eloquence",
           "reading": "eloquence",
@@ -25888,7 +25888,7 @@
         },
         {
           "word": "Gettysburg",
-          "meaning": "(要確認)",
+          "meaning": "ゲティスバーグ",
           "isUnknown": false,
           "lemma": "Gettysburg",
           "reading": "Gettysburg",
@@ -25932,7 +25932,7 @@
         },
         {
           "word": "Inaugural",
-          "meaning": "(要確認)",
+          "meaning": "就任の",
           "isUnknown": false,
           "lemma": "Inaugural",
           "reading": "Inaugural",
@@ -25965,7 +25965,7 @@
         },
         {
           "word": "masterpieces",
-          "meaning": "(要確認)",
+          "meaning": "傑作(複数)",
           "isUnknown": false,
           "lemma": "masterpieces",
           "reading": "masterpieces",
@@ -26143,7 +26143,7 @@
         },
         {
           "word": "sin",
-          "meaning": "(要確認)",
+          "meaning": "罪",
           "isUnknown": false,
           "lemma": "sin",
           "reading": "sin",
@@ -26228,7 +26228,7 @@
         },
         {
           "word": "martyr",
-          "meaning": "(要確認)",
+          "meaning": "殉教者",
           "isUnknown": false,
           "lemma": "martyr",
           "reading": "martyr",
@@ -26291,7 +26291,7 @@
         },
         {
           "word": "reconstruction",
-          "meaning": "(要確認)",
+          "meaning": "再建",
           "isUnknown": false,
           "lemma": "reconstruction",
           "reading": "reconstruction",
@@ -26335,7 +26335,7 @@
         },
         {
           "word": "incomplete",
-          "meaning": "(要確認)",
+          "meaning": "不完全な",
           "isUnknown": false,
           "lemma": "incomplete",
           "reading": "incomplete",
@@ -26442,7 +26442,7 @@
         },
         {
           "word": "oppression",
-          "meaning": "(要確認)",
+          "meaning": "抑圧",
           "isUnknown": false,
           "lemma": "oppression",
           "reading": "oppression",
@@ -26750,7 +26750,7 @@
         },
         {
           "word": "women's",
-          "meaning": "(要確認)",
+          "meaning": "女性の",
           "isUnknown": false,
           "lemma": "women's",
           "reading": "women's",
@@ -26761,7 +26761,7 @@
         },
         {
           "word": "suffrage",
-          "meaning": "(要確認)",
+          "meaning": "参政権",
           "isUnknown": false,
           "lemma": "suffrage",
           "reading": "suffrage",
@@ -26971,7 +26971,7 @@
         },
         {
           "word": "ridicule",
-          "meaning": "(要確認)",
+          "meaning": "嘲笑",
           "isUnknown": false,
           "lemma": "ridicule",
           "reading": "ridicule",
@@ -26993,7 +26993,7 @@
         },
         {
           "word": "opposition",
-          "meaning": "(要確認)",
+          "meaning": "反対",
           "isUnknown": false,
           "lemma": "opposition",
           "reading": "opposition",
@@ -27270,7 +27270,7 @@
         },
         {
           "word": "groundwork",
-          "meaning": "(要確認)",
+          "meaning": "基礎",
           "isUnknown": false,
           "lemma": "groundwork",
           "reading": "groundwork",
@@ -27336,7 +27336,7 @@
         },
         {
           "word": "women's",
-          "meaning": "(要確認)",
+          "meaning": "女性の",
           "isUnknown": false,
           "lemma": "women's",
           "reading": "women's",
@@ -27388,7 +27388,7 @@
         },
         {
           "word": "Douglass",
-          "meaning": "(要確認)",
+          "meaning": "ダグラス(人名)",
           "isUnknown": false,
           "lemma": "Douglass",
           "reading": "Douglass",
@@ -27399,7 +27399,7 @@
         },
         {
           "word": "escaped",
-          "meaning": "(要確認)",
+          "meaning": "逃げた",
           "isUnknown": false,
           "lemma": "escaped",
           "reading": "escaped",
@@ -27465,7 +27465,7 @@
         },
         {
           "word": "abolitionist",
-          "meaning": "(要確認)",
+          "meaning": "奴隷制廃止論者",
           "isUnknown": false,
           "lemma": "abolitionist",
           "reading": "abolitionist",
@@ -27569,7 +27569,7 @@
         },
         {
           "word": "autobiography",
-          "meaning": "(要確認)",
+          "meaning": "自伝",
           "isUnknown": false,
           "lemma": "autobiography",
           "reading": "autobiography",
@@ -27591,7 +27591,7 @@
         },
         {
           "word": "slavery's",
-          "meaning": "(要確認)",
+          "meaning": "奴隷制の",
           "isUnknown": false,
           "lemma": "slavery's",
           "reading": "slavery's",
@@ -27699,7 +27699,7 @@
         },
         {
           "word": "slavery's",
-          "meaning": "(要確認)",
+          "meaning": "奴隷制の",
           "isUnknown": false,
           "lemma": "slavery's",
           "reading": "slavery's",
@@ -27710,7 +27710,7 @@
         },
         {
           "word": "defenders",
-          "meaning": "(要確認)",
+          "meaning": "擁護者",
           "isUnknown": false,
           "lemma": "defenders",
           "reading": "defenders",
@@ -27721,7 +27721,7 @@
         },
         {
           "word": "denied",
-          "meaning": "(要確認)",
+          "meaning": "否定した",
           "isUnknown": false,
           "lemma": "denied",
           "reading": "denied",
@@ -27754,7 +27754,7 @@
         },
         {
           "word": "possessed",
-          "meaning": "(要確認)",
+          "meaning": "所有した",
           "isUnknown": false,
           "lemma": "possessed",
           "reading": "possessed",
@@ -27795,7 +27795,7 @@
         },
         {
           "word": "argued",
-          "meaning": "(要確認)",
+          "meaning": "主張した",
           "isUnknown": false,
           "lemma": "argued",
           "reading": "argued",
@@ -27836,7 +27836,7 @@
         },
         {
           "word": "corrupted",
-          "meaning": "(要確認)",
+          "meaning": "腐敗した",
           "isUnknown": false,
           "lemma": "corrupted",
           "reading": "corrupted",
@@ -27858,7 +27858,7 @@
         },
         {
           "word": "enslaved",
-          "meaning": "(要確認)",
+          "meaning": "奴隷にされた",
           "isUnknown": false,
           "lemma": "enslaved",
           "reading": "enslaved",
@@ -27880,7 +27880,7 @@
         },
         {
           "word": "enslaver",
-          "meaning": "(要確認)",
+          "meaning": "奴隷にする人",
           "isUnknown": false,
           "lemma": "enslaver",
           "reading": "enslaver",
@@ -28006,7 +28006,7 @@
         },
         {
           "word": "Jr",
-          "meaning": "(要確認)",
+          "meaning": "ジュニア",
           "isUnknown": false,
           "lemma": "Jr",
           "reading": "Jr",
@@ -28080,7 +28080,7 @@
         },
         {
           "word": "nonviolent",
-          "meaning": "(要確認)",
+          "meaning": "非暴力の",
           "isUnknown": false,
           "lemma": "nonviolent",
           "reading": "nonviolent",
@@ -28228,7 +28228,7 @@
         },
         {
           "word": "boycotts",
-          "meaning": "(要確認)",
+          "meaning": "ボイコット",
           "isUnknown": false,
           "lemma": "boycotts",
           "reading": "boycotts",
@@ -28280,7 +28280,7 @@
         },
         {
           "word": "stirring",
-          "meaning": "(要確認)",
+          "meaning": "かき混ぜる",
           "isUnknown": false,
           "lemma": "stirring",
           "reading": "stirring",
@@ -28291,7 +28291,7 @@
         },
         {
           "word": "oratory",
-          "meaning": "(要確認)",
+          "meaning": "演説",
           "isUnknown": false,
           "lemma": "oratory",
           "reading": "oratory",
@@ -28830,7 +28830,7 @@
         },
         {
           "word": "Yousafzai",
-          "meaning": "(要確認)",
+          "meaning": "ユスフザイ(マララ)",
           "isUnknown": false,
           "lemma": "Yousafzai",
           "reading": "Yousafzai",
@@ -28893,7 +28893,7 @@
         },
         {
           "word": "militants",
-          "meaning": "(要確認)",
+          "meaning": "過激派",
           "isUnknown": false,
           "lemma": "militants",
           "reading": "militants",
@@ -28915,7 +28915,7 @@
         },
         {
           "word": "advocating",
-          "meaning": "(要確認)",
+          "meaning": "提唱する",
           "isUnknown": false,
           "lemma": "advocating",
           "reading": "advocating",
@@ -29022,7 +29022,7 @@
         },
         {
           "word": "youngest",
-          "meaning": "(要確認)",
+          "meaning": "最年少の",
           "isUnknown": false,
           "lemma": "youngest",
           "reading": "youngest",
@@ -29055,7 +29055,7 @@
         },
         {
           "word": "laureate",
-          "meaning": "(要確認)",
+          "meaning": "受賞者",
           "isUnknown": false,
           "lemma": "laureate",
           "reading": "laureate",
@@ -29118,7 +29118,7 @@
         },
         {
           "word": "defying",
-          "meaning": "(要確認)",
+          "meaning": "挑む",
           "isUnknown": false,
           "lemma": "defying",
           "reading": "defying",
@@ -29129,7 +29129,7 @@
         },
         {
           "word": "extremism",
-          "meaning": "(要確認)",
+          "meaning": "過激主義",
           "isUnknown": false,
           "lemma": "extremism",
           "reading": "extremism",
@@ -29539,7 +29539,7 @@
         },
         {
           "word": "fleets",
-          "meaning": "(要確認)",
+          "meaning": "艦隊",
           "isUnknown": false,
           "lemma": "fleets",
           "reading": "fleets",
@@ -29569,7 +29569,7 @@
         },
         {
           "word": "sailed",
-          "meaning": "(要確認)",
+          "meaning": "航海した",
           "isUnknown": false,
           "lemma": "sailed",
           "reading": "sailed",
@@ -29646,7 +29646,7 @@
         },
         {
           "word": "Arabia",
-          "meaning": "(要確認)",
+          "meaning": "アラビア",
           "isUnknown": false,
           "lemma": "Arabia",
           "reading": "Arabia",
@@ -29742,7 +29742,7 @@
         },
         {
           "word": "fifteenth",
-          "meaning": "(要確認)",
+          "meaning": "15番目",
           "isUnknown": false,
           "lemma": "fifteenth",
           "reading": "fifteenth",
@@ -29794,7 +29794,7 @@
         },
         {
           "word": "expeditions",
-          "meaning": "(要確認)",
+          "meaning": "遠征(複数)",
           "isUnknown": false,
           "lemma": "expeditions",
           "reading": "expeditions",
@@ -29827,7 +29827,7 @@
         },
         {
           "word": "naval",
-          "meaning": "(要確認)",
+          "meaning": "海軍の",
           "isUnknown": false,
           "lemma": "naval",
           "reading": "naval",
@@ -29871,7 +29871,7 @@
         },
         {
           "word": "sophistication",
-          "meaning": "(要確認)",
+          "meaning": "洗練",
           "isUnknown": false,
           "lemma": "sophistication",
           "reading": "sophistication",
@@ -30208,7 +30208,7 @@
         },
         {
           "word": "monarchs",
-          "meaning": "(要確認)",
+          "meaning": "君主",
           "isUnknown": false,
           "lemma": "monarchs",
           "reading": "monarchs",
@@ -30493,7 +30493,7 @@
         },
         {
           "word": "hemispheres",
-          "meaning": "(要確認)",
+          "meaning": "半球",
           "isUnknown": false,
           "lemma": "hemispheres",
           "reading": "hemispheres",
@@ -30612,7 +30612,7 @@
         },
         {
           "word": "interconnection",
-          "meaning": "(要確認)",
+          "meaning": "相互接続",
           "isUnknown": false,
           "lemma": "interconnection",
           "reading": "interconnection",
@@ -30749,7 +30749,7 @@
         },
         {
           "word": "exploitation",
-          "meaning": "(要確認)",
+          "meaning": "搾取",
           "isUnknown": false,
           "lemma": "exploitation",
           "reading": "exploitation",
@@ -30842,7 +30842,7 @@
         },
         {
           "word": "expedition",
-          "meaning": "(要確認)",
+          "meaning": "遠征",
           "isUnknown": false,
           "lemma": "expedition",
           "reading": "expedition",
@@ -30935,7 +30935,7 @@
         },
         {
           "word": "completion",
-          "meaning": "(要確認)",
+          "meaning": "完成",
           "isUnknown": false,
           "lemma": "completion",
           "reading": "completion",
@@ -31002,7 +31002,7 @@
         },
         {
           "word": "circumnavigation",
-          "meaning": "(要確認)",
+          "meaning": "周航",
           "isUnknown": false,
           "lemma": "circumnavigation",
           "reading": "circumnavigation",
@@ -31076,7 +31076,7 @@
         },
         {
           "word": "world's",
-          "meaning": "(要確認)",
+          "meaning": "世界の",
           "isUnknown": false,
           "lemma": "world's",
           "reading": "world's",
@@ -31087,7 +31087,7 @@
         },
         {
           "word": "spherical",
-          "meaning": "(要確認)",
+          "meaning": "球形の",
           "isUnknown": false,
           "lemma": "spherical",
           "reading": "spherical",
@@ -31120,7 +31120,7 @@
         },
         {
           "word": "vastness",
-          "meaning": "(要確認)",
+          "meaning": "広大さ",
           "isUnknown": false,
           "lemma": "vastness",
           "reading": "vastness",
@@ -31301,7 +31301,7 @@
         },
         {
           "word": "unknowns",
-          "meaning": "(要確認)",
+          "meaning": "未知数",
           "isUnknown": false,
           "lemma": "unknowns",
           "reading": "unknowns",
@@ -31548,7 +31548,7 @@
         },
         {
           "word": "superhuman",
-          "meaning": "(要確認)",
+          "meaning": "超人的な",
           "isUnknown": false,
           "lemma": "superhuman",
           "reading": "superhuman",
@@ -31674,7 +31674,7 @@
         },
         {
           "word": "dealt",
-          "meaning": "(要確認)",
+          "meaning": "扱った",
           "isUnknown": false,
           "lemma": "dealt",
           "reading": "dealt",
@@ -31933,7 +31933,7 @@
         },
         {
           "word": "extraordinary",
-          "meaning": "(要確認)",
+          "meaning": "並外れた",
           "isUnknown": false,
           "lemma": "extraordinary",
           "reading": "extraordinary",
@@ -32138,7 +32138,7 @@
         },
         {
           "word": "exceptional",
-          "meaning": "(要確認)",
+          "meaning": "並外れた",
           "isUnknown": false,
           "lemma": "exceptional",
           "reading": "exceptional",
@@ -32182,7 +32182,7 @@
         },
         {
           "word": "compensated",
-          "meaning": "(要確認)",
+          "meaning": "補償された",
           "isUnknown": false,
           "lemma": "compensated",
           "reading": "compensated",
@@ -32422,7 +32422,7 @@
         },
         {
           "word": "work's",
-          "meaning": "(要確認)",
+          "meaning": "仕事の",
           "isUnknown": false,
           "lemma": "work's",
           "reading": "work's",
@@ -32433,7 +32433,7 @@
         },
         {
           "word": "fruition",
-          "meaning": "(要確認)",
+          "meaning": "実現",
           "isUnknown": false,
           "lemma": "fruition",
           "reading": "fruition",
@@ -32534,7 +32534,7 @@
         },
         {
           "word": "partial",
-          "meaning": "(要確認)",
+          "meaning": "部分的な",
           "isUnknown": false,
           "lemma": "partial",
           "reading": "partial",
@@ -32619,7 +32619,7 @@
         },
         {
           "word": "significance",
-          "meaning": "(要確認)",
+          "meaning": "重要性",
           "isUnknown": false,
           "lemma": "significance",
           "reading": "significance",
@@ -32864,7 +32864,7 @@
         },
         {
           "word": "history's",
-          "meaning": "(要確認)",
+          "meaning": "歴史の",
           "isUnknown": false,
           "lemma": "history's",
           "reading": "history's",
@@ -33097,7 +33097,7 @@
         },
         {
           "word": "explorer",
-          "meaning": "(要確認)",
+          "meaning": "探検家",
           "isUnknown": false,
           "lemma": "explorer",
           "reading": "explorer",
@@ -33141,7 +33141,7 @@
         },
         {
           "word": "colonizer",
-          "meaning": "(要確認)",
+          "meaning": "植民者",
           "isUnknown": false,
           "lemma": "colonizer",
           "reading": "colonizer",
@@ -33193,7 +33193,7 @@
         },
         {
           "word": "genocide",
-          "meaning": "(要確認)",
+          "meaning": "大量虐殺",
           "isUnknown": false,
           "lemma": "genocide",
           "reading": "genocide",
@@ -33245,7 +33245,7 @@
         },
         {
           "word": "reformer",
-          "meaning": "(要確認)",
+          "meaning": "改革者",
           "isUnknown": false,
           "lemma": "reformer",
           "reading": "reformer",
@@ -33289,7 +33289,7 @@
         },
         {
           "word": "tyrant",
-          "meaning": "(要確認)",
+          "meaning": "暴君",
           "isUnknown": false,
           "lemma": "tyrant",
           "reading": "tyrant",
@@ -33489,7 +33489,7 @@
         },
         {
           "word": "whitewashed",
-          "meaning": "(要確認)",
+          "meaning": "白く塗られた",
           "isUnknown": false,
           "lemma": "whitewashed",
           "reading": "whitewashed",
@@ -33511,7 +33511,7 @@
         },
         {
           "word": "dismissed",
-          "meaning": "(要確認)",
+          "meaning": "却下された",
           "isUnknown": false,
           "lemma": "dismissed",
           "reading": "dismissed",
@@ -33552,7 +33552,7 @@
         },
         {
           "word": "examined",
-          "meaning": "(要確認)",
+          "meaning": "調べた",
           "isUnknown": false,
           "lemma": "examined",
           "reading": "examined",
@@ -33659,7 +33659,7 @@
         },
         {
           "word": "flaws",
-          "meaning": "(要確認)",
+          "meaning": "欠陥",
           "isUnknown": false,
           "lemma": "flaws",
           "reading": "flaws",
@@ -33722,7 +33722,7 @@
         },
         {
           "word": "illuminates",
-          "meaning": "(要確認)",
+          "meaning": "照らす",
           "isUnknown": false,
           "lemma": "illuminates",
           "reading": "illuminates",
@@ -33799,7 +33799,7 @@
         },
         {
           "word": "evil",
-          "meaning": "(要確認)",
+          "meaning": "悪",
           "isUnknown": false,
           "lemma": "evil",
           "reading": "evil",
@@ -33977,7 +33977,7 @@
         },
         {
           "word": "duality",
-          "meaning": "(要確認)",
+          "meaning": "二重性",
           "isUnknown": false,
           "lemma": "duality",
           "reading": "duality",
@@ -34204,7 +34204,7 @@
         },
         {
           "word": "guarding",
-          "meaning": "(要確認)",
+          "meaning": "守る",
           "isUnknown": false,
           "lemma": "guarding",
           "reading": "guarding",
@@ -34248,7 +34248,7 @@
         },
         {
           "word": "cruelty",
-          "meaning": "(要確認)",
+          "meaning": "残酷さ",
           "isUnknown": false,
           "lemma": "cruelty",
           "reading": "cruelty",
@@ -34311,7 +34311,7 @@
         },
         {
           "word": "oppression",
-          "meaning": "(要確認)",
+          "meaning": "抑圧",
           "isUnknown": false,
           "lemma": "oppression",
           "reading": "oppression",
@@ -34385,7 +34385,7 @@
         },
         {
           "word": "grappling",
-          "meaning": "(要確認)",
+          "meaning": "取り組む",
           "isUnknown": false,
           "lemma": "grappling",
           "reading": "grappling",
@@ -34997,7 +34997,7 @@
         },
         {
           "word": "testimonies",
-          "meaning": "(要確認)",
+          "meaning": "証言",
           "isUnknown": false,
           "lemma": "testimonies",
           "reading": "testimonies",
@@ -35108,7 +35108,7 @@
       "segments": [
         {
           "word": "Letters",
-          "meaning": "(要確認)",
+          "meaning": "手紙",
           "isUnknown": false,
           "lemma": "Letters",
           "reading": "Letters",
@@ -35462,7 +35462,7 @@
         },
         {
           "word": "creators",
-          "meaning": "(要確認)",
+          "meaning": "創造者",
           "isUnknown": false,
           "lemma": "creators",
           "reading": "creators",
@@ -35503,7 +35503,7 @@
         },
         {
           "word": "medieval",
-          "meaning": "(要確認)",
+          "meaning": "中世の",
           "isUnknown": false,
           "lemma": "medieval",
           "reading": "medieval",
@@ -35536,7 +35536,7 @@
         },
         {
           "word": "glorify",
-          "meaning": "(要確認)",
+          "meaning": "賛美する",
           "isUnknown": false,
           "lemma": "glorify",
           "reading": "glorify",
@@ -35588,7 +35588,7 @@
         },
         {
           "word": "ignoring",
-          "meaning": "(要確認)",
+          "meaning": "無視する",
           "isUnknown": false,
           "lemma": "ignoring",
           "reading": "ignoring",
@@ -35770,7 +35770,7 @@
       "segments": [
         {
           "word": "journal",
-          "meaning": "(要確認)",
+          "meaning": "日誌",
           "isUnknown": false,
           "lemma": "journal",
           "reading": "journal",
@@ -36078,7 +36078,7 @@
         },
         {
           "word": "distinguish",
-          "meaning": "(要確認)",
+          "meaning": "区別する",
           "isUnknown": false,
           "lemma": "distinguish",
           "reading": "distinguish",
@@ -36292,7 +36292,7 @@
         },
         {
           "word": "portrayed",
-          "meaning": "(要確認)",
+          "meaning": "描写した",
           "isUnknown": false,
           "lemma": "portrayed",
           "reading": "portrayed",
@@ -36396,7 +36396,7 @@
         },
         {
           "word": "barbaric",
-          "meaning": "(要確認)",
+          "meaning": "野蛮な",
           "isUnknown": false,
           "lemma": "barbaric",
           "reading": "barbaric",
@@ -36459,7 +36459,7 @@
         },
         {
           "word": "justified",
-          "meaning": "(要確認)",
+          "meaning": "正当化された",
           "isUnknown": false,
           "lemma": "justified",
           "reading": "justified",
@@ -36470,7 +36470,7 @@
         },
         {
           "word": "imperialism",
-          "meaning": "(要確認)",
+          "meaning": "帝国主義",
           "isUnknown": false,
           "lemma": "imperialism",
           "reading": "imperialism",
@@ -36492,7 +36492,7 @@
         },
         {
           "word": "depicting",
-          "meaning": "(要確認)",
+          "meaning": "描写する",
           "isUnknown": false,
           "lemma": "depicting",
           "reading": "depicting",
@@ -36503,7 +36503,7 @@
         },
         {
           "word": "colonized",
-          "meaning": "(要確認)",
+          "meaning": "植民地化された",
           "isUnknown": false,
           "lemma": "colonized",
           "reading": "colonized",
@@ -36544,7 +36544,7 @@
         },
         {
           "word": "primitive",
-          "meaning": "(要確認)",
+          "meaning": "原始的な",
           "isUnknown": false,
           "lemma": "primitive",
           "reading": "primitive",
@@ -36758,7 +36758,7 @@
         },
         {
           "word": "dismissing",
-          "meaning": "(要確認)",
+          "meaning": "却下する",
           "isUnknown": false,
           "lemma": "dismissing",
           "reading": "dismissing",
@@ -36832,7 +36832,7 @@
         },
         {
           "word": "unreliable",
-          "meaning": "(要確認)",
+          "meaning": "信頼できない",
           "isUnknown": false,
           "lemma": "unreliable",
           "reading": "unreliable",
@@ -36985,7 +36985,7 @@
         },
         {
           "word": "reference",
-          "meaning": "(要確認)",
+          "meaning": "参照",
           "isUnknown": false,
           "lemma": "reference",
           "reading": "reference",
@@ -37081,7 +37081,7 @@
         },
         {
           "word": "motives",
-          "meaning": "(要確認)",
+          "meaning": "動機",
           "isUnknown": false,
           "lemma": "motives",
           "reading": "motives",
@@ -37174,7 +37174,7 @@
         },
         {
           "word": "distinguish",
-          "meaning": "(要確認)",
+          "meaning": "区別する",
           "isUnknown": false,
           "lemma": "distinguish",
           "reading": "distinguish",
@@ -37185,7 +37185,7 @@
         },
         {
           "word": "eyewitness",
-          "meaning": "(要確認)",
+          "meaning": "目撃者",
           "isUnknown": false,
           "lemma": "eyewitness",
           "reading": "eyewitness",
@@ -37218,7 +37218,7 @@
         },
         {
           "word": "hearsay",
-          "meaning": "(要確認)",
+          "meaning": "伝聞",
           "isUnknown": false,
           "lemma": "hearsay",
           "reading": "hearsay",
@@ -37711,7 +37711,7 @@
         },
         {
           "word": "manuscripts",
-          "meaning": "(要確認)",
+          "meaning": "原稿",
           "isUnknown": false,
           "lemma": "manuscripts",
           "reading": "manuscripts",
@@ -37886,7 +37886,7 @@
         },
         {
           "word": "verification",
-          "meaning": "(要確認)",
+          "meaning": "検証",
           "isUnknown": false,
           "lemma": "verification",
           "reading": "verification",
@@ -38111,7 +38111,7 @@
         },
         {
           "word": "forgery",
-          "meaning": "(要確認)",
+          "meaning": "偽造",
           "isUnknown": false,
           "lemma": "forgery",
           "reading": "forgery",
@@ -38435,7 +38435,7 @@
         },
         {
           "word": "forgeries",
-          "meaning": "(要確認)",
+          "meaning": "偽造",
           "isUnknown": false,
           "lemma": "forgeries",
           "reading": "forgeries",
@@ -38524,7 +38524,7 @@
         },
         {
           "word": "verification's",
-          "meaning": "(要確認)",
+          "meaning": "検証の",
           "isUnknown": false,
           "lemma": "verification's",
           "reading": "verification's",
@@ -38894,7 +38894,7 @@
         },
         {
           "word": "imperfect",
-          "meaning": "(要確認)",
+          "meaning": "不完全な",
           "isUnknown": false,
           "lemma": "imperfect",
           "reading": "imperfect",
@@ -38916,7 +38916,7 @@
         },
         {
           "word": "selective",
-          "meaning": "(要確認)",
+          "meaning": "選択的な",
           "isUnknown": false,
           "lemma": "selective",
           "reading": "selective",
@@ -38979,7 +38979,7 @@
         },
         {
           "word": "revise",
-          "meaning": "(要確認)",
+          "meaning": "改訂する",
           "isUnknown": false,
           "lemma": "revise",
           "reading": "revise",
@@ -39730,7 +39730,7 @@
         },
         {
           "word": "illustrate",
-          "meaning": "(要確認)",
+          "meaning": "説明する",
           "isUnknown": false,
           "lemma": "illustrate",
           "reading": "illustrate",
@@ -40399,7 +40399,7 @@
         },
         {
           "word": "significance",
-          "meaning": "(要確認)",
+          "meaning": "重要性",
           "isUnknown": false,
           "lemma": "significance",
           "reading": "significance",
@@ -40440,7 +40440,7 @@
         },
         {
           "word": "designates",
-          "meaning": "(要確認)",
+          "meaning": "指定する",
           "isUnknown": false,
           "lemma": "designates",
           "reading": "designates",
@@ -40550,7 +40550,7 @@
         },
         {
           "word": "outstanding",
-          "meaning": "(要確認)",
+          "meaning": "優れた",
           "isUnknown": false,
           "lemma": "outstanding",
           "reading": "outstanding",
@@ -41272,7 +41272,7 @@
         },
         {
           "word": "dominant",
-          "meaning": "(要確認)",
+          "meaning": "支配的な",
           "isUnknown": false,
           "lemma": "dominant",
           "reading": "dominant",
@@ -41695,7 +41695,7 @@
         },
         {
           "word": "engage",
-          "meaning": "(要確認)",
+          "meaning": "従事する",
           "isUnknown": false,
           "lemma": "engage",
           "reading": "engage",
@@ -41943,7 +41943,7 @@
         },
         {
           "word": "oversimplifying",
-          "meaning": "(要確認)",
+          "meaning": "単純化しすぎる",
           "isUnknown": false,
           "lemma": "oversimplifying",
           "reading": "oversimplifying",
@@ -41984,7 +41984,7 @@
         },
         {
           "word": "interpretation",
-          "meaning": "(要確認)",
+          "meaning": "解釈",
           "isUnknown": false,
           "lemma": "interpretation",
           "reading": "interpretation",
@@ -42202,7 +42202,7 @@
         },
         {
           "word": "antiquated",
-          "meaning": "(要確認)",
+          "meaning": "時代遅れの",
           "isUnknown": false,
           "lemma": "antiquated",
           "reading": "antiquated",
@@ -42454,7 +42454,7 @@
         },
         {
           "word": "methodologies",
-          "meaning": "(要確認)",
+          "meaning": "方法論",
           "isUnknown": false,
           "lemma": "methodologies",
           "reading": "methodologies",
@@ -43507,7 +43507,7 @@
         },
         {
           "word": "veneration",
-          "meaning": "(要確認)",
+          "meaning": "崇敬",
           "isUnknown": false,
           "lemma": "veneration",
           "reading": "veneration",

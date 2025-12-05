@@ -227,7 +227,7 @@
         },
         {
           "word": "disseminate",
-          "meaning": "(要確認)",
+          "meaning": "普及させる",
           "isUnknown": false,
           "lemma": "disseminate",
           "reading": "disseminate",
@@ -353,7 +353,7 @@
         },
         {
           "word": "acceleration",
-          "meaning": "(要確認)",
+          "meaning": "加速",
           "isUnknown": false,
           "lemma": "acceleration",
           "reading": "acceleration",
@@ -419,7 +419,7 @@
         },
         {
           "word": "existence",
-          "meaning": "(要確認)",
+          "meaning": "存在",
           "isUnknown": false,
           "lemma": "existence",
           "reading": "existence",
@@ -559,7 +559,7 @@
         },
         {
           "word": "entertain",
-          "meaning": "(要確認)",
+          "meaning": "楽しませる",
           "isUnknown": false,
           "lemma": "entertain",
           "reading": "entertain",
@@ -847,7 +847,7 @@
         },
         {
           "word": "transistor",
-          "meaning": "(要確認)",
+          "meaning": "トランジスタ",
           "isUnknown": false,
           "lemma": "transistor",
           "reading": "transistor",
@@ -880,7 +880,7 @@
         },
         {
           "word": "initiated",
-          "meaning": "(要確認)",
+          "meaning": "開始した",
           "isUnknown": false,
           "lemma": "initiated",
           "reading": "initiated",
@@ -976,7 +976,7 @@
         },
         {
           "word": "switches",
-          "meaning": "(要確認)",
+          "meaning": "スイッチ",
           "isUnknown": false,
           "lemma": "switches",
           "reading": "switches",
@@ -1154,7 +1154,7 @@
         },
         {
           "word": "gradual",
-          "meaning": "(要確認)",
+          "meaning": "段階的な",
           "isUnknown": false,
           "lemma": "gradual",
           "reading": "gradual",
@@ -1280,7 +1280,7 @@
         },
         {
           "word": "transistor",
-          "meaning": "(要確認)",
+          "meaning": "トランジスタ",
           "isUnknown": false,
           "lemma": "transistor",
           "reading": "transistor",
@@ -1291,7 +1291,7 @@
         },
         {
           "word": "density",
-          "meaning": "(要確認)",
+          "meaning": "密度",
           "isUnknown": false,
           "lemma": "density",
           "reading": "density",
@@ -1447,7 +1447,7 @@
         },
         {
           "word": "exponential",
-          "meaning": "(要確認)",
+          "meaning": "指数関数的な",
           "isUnknown": false,
           "lemma": "exponential",
           "reading": "exponential",
@@ -1665,7 +1665,7 @@
         },
         {
           "word": "ENIAC",
-          "meaning": "(要確認)",
+          "meaning": "ENIAC(初期コンピュータ)",
           "isUnknown": false,
           "lemma": "ENIAC",
           "reading": "ENIAC",
@@ -1747,7 +1747,7 @@
       "segments": [
         {
           "word": "weighed",
-          "meaning": "(要確認)",
+          "meaning": "重さを量った",
           "isUnknown": false,
           "lemma": "weighed",
           "reading": "weighed",
@@ -1914,7 +1914,7 @@
         },
         {
           "word": "possesses",
-          "meaning": "(要確認)",
+          "meaning": "所有する",
           "isUnknown": false,
           "lemma": "possesses",
           "reading": "possesses",
@@ -2558,7 +2558,7 @@
         },
         {
           "word": "microchips",
-          "meaning": "(要確認)",
+          "meaning": "マイクロチップ",
           "isUnknown": false,
           "lemma": "microchips",
           "reading": "microchips",
@@ -3513,7 +3513,7 @@
         },
         {
           "word": "altered",
-          "meaning": "(要確認)",
+          "meaning": "変更された",
           "isUnknown": false,
           "lemma": "altered",
           "reading": "altered",
@@ -4043,7 +4043,7 @@
         },
         {
           "word": "polarization",
-          "meaning": "(要確認)",
+          "meaning": "分極化",
           "isUnknown": false,
           "lemma": "polarization",
           "reading": "polarization",
@@ -4430,7 +4430,7 @@
         },
         {
           "word": "click",
-          "meaning": "(要確認)",
+          "meaning": "クリック",
           "isUnknown": false,
           "lemma": "click",
           "reading": "click",
@@ -4811,7 +4811,7 @@
         },
         {
           "word": "utility",
-          "meaning": "(要確認)",
+          "meaning": "公益事業",
           "isUnknown": false,
           "lemma": "utility",
           "reading": "utility",
@@ -4981,7 +4981,7 @@
         },
         {
           "word": "confined",
-          "meaning": "(要確認)",
+          "meaning": "閉じ込められた",
           "isUnknown": false,
           "lemma": "confined",
           "reading": "confined",
@@ -5416,7 +5416,7 @@
         },
         {
           "word": "defeat",
-          "meaning": "(要確認)",
+          "meaning": "敗北",
           "isUnknown": false,
           "lemma": "defeat",
           "reading": "defeat",
@@ -5597,7 +5597,7 @@
         },
         {
           "word": "subset",
-          "meaning": "(要確認)",
+          "meaning": "サブセット",
           "isUnknown": false,
           "lemma": "subset",
           "reading": "subset",
@@ -6014,7 +6014,7 @@
         },
         {
           "word": "radiologists",
-          "meaning": "(要確認)",
+          "meaning": "放射線科医",
           "isUnknown": false,
           "lemma": "radiologists",
           "reading": "radiologists",
@@ -6140,7 +6140,7 @@
         },
         {
           "word": "pneumonia",
-          "meaning": "(要確認)",
+          "meaning": "肺炎",
           "isUnknown": false,
           "lemma": "pneumonia",
           "reading": "pneumonia",
@@ -6203,7 +6203,7 @@
         },
         {
           "word": "rivaling",
-          "meaning": "(要確認)",
+          "meaning": "競争する",
           "isUnknown": false,
           "lemma": "rivaling",
           "reading": "rivaling",
@@ -6362,7 +6362,7 @@
         },
         {
           "word": "loosely",
-          "meaning": "(要確認)",
+          "meaning": "ゆるく",
           "isUnknown": false,
           "lemma": "loosely",
           "reading": "loosely",
@@ -7128,7 +7128,7 @@
         },
         {
           "word": "unrepresentative",
-          "meaning": "(要確認)",
+          "meaning": "代表的でない",
           "isUnknown": false,
           "lemma": "unrepresentative",
           "reading": "unrepresentative",
@@ -7881,7 +7881,7 @@
         },
         {
           "word": "superintelligent",
-          "meaning": "(要確認)",
+          "meaning": "超知能の",
           "isUnknown": false,
           "lemma": "superintelligent",
           "reading": "superintelligent",
@@ -8422,7 +8422,7 @@
         },
         {
           "word": "plowing",
-          "meaning": "(要確認)",
+          "meaning": "耕す",
           "isUnknown": false,
           "lemma": "plowing",
           "reading": "plowing",
@@ -8641,7 +8641,7 @@
       "segments": [
         {
           "word": "Displaced",
-          "meaning": "(要確認)",
+          "meaning": "避難した",
           "isUnknown": false,
           "lemma": "Displaced",
           "reading": "Displaced",
@@ -8764,7 +8764,7 @@
         },
         {
           "word": "sector",
-          "meaning": "(要確認)",
+          "meaning": "部門",
           "isUnknown": false,
           "lemma": "sector",
           "reading": "sector",
@@ -9129,7 +9129,7 @@
         },
         {
           "word": "cognitive",
-          "meaning": "(要確認)",
+          "meaning": "認知の",
           "isUnknown": false,
           "lemma": "cognitive",
           "reading": "cognitive",
@@ -9217,7 +9217,7 @@
         },
         {
           "word": "automated",
-          "meaning": "(要確認)",
+          "meaning": "自動化された",
           "isUnknown": false,
           "lemma": "automated",
           "reading": "automated",
@@ -9310,7 +9310,7 @@
         },
         {
           "word": "displace",
-          "meaning": "(要確認)",
+          "meaning": "移動させる",
           "isUnknown": false,
           "lemma": "displace",
           "reading": "displace",
@@ -10237,7 +10237,7 @@
         },
         {
           "word": "retrain",
-          "meaning": "(要確認)",
+          "meaning": "再訓練する",
           "isUnknown": false,
           "lemma": "retrain",
           "reading": "retrain",
@@ -10590,7 +10590,7 @@
         },
         {
           "word": "unconditional",
-          "meaning": "(要確認)",
+          "meaning": "無条件の",
           "isUnknown": false,
           "lemma": "unconditional",
           "reading": "unconditional",
@@ -10657,7 +10657,7 @@
         },
         {
           "word": "proposed",
-          "meaning": "(要確認)",
+          "meaning": "提案された",
           "isUnknown": false,
           "lemma": "proposed",
           "reading": "proposed",
@@ -10783,7 +10783,7 @@
         },
         {
           "word": "cushion",
-          "meaning": "(要確認)",
+          "meaning": "クッション",
           "isUnknown": false,
           "lemma": "cushion",
           "reading": "cushion",
@@ -10794,7 +10794,7 @@
         },
         {
           "word": "automation's",
-          "meaning": "(要確認)",
+          "meaning": "自動化の",
           "isUnknown": false,
           "lemma": "automation's",
           "reading": "automation's",
@@ -11025,7 +11025,7 @@
         },
         {
           "word": "compensated",
-          "meaning": "(要確認)",
+          "meaning": "補償された",
           "isUnknown": false,
           "lemma": "compensated",
           "reading": "compensated",
@@ -11103,7 +11103,7 @@
         },
         {
           "word": "affordability",
-          "meaning": "(要確認)",
+          "meaning": "手頃さ",
           "isUnknown": false,
           "lemma": "affordability",
           "reading": "affordability",
@@ -11421,7 +11421,7 @@
         },
         {
           "word": "memorization",
-          "meaning": "(要確認)",
+          "meaning": "暗記",
           "isUnknown": false,
           "lemma": "memorization",
           "reading": "memorization",
@@ -11594,7 +11594,7 @@
         },
         {
           "word": "cognitive",
-          "meaning": "(要確認)",
+          "meaning": "認知の",
           "isUnknown": false,
           "lemma": "cognitive",
           "reading": "cognitive",
@@ -12506,7 +12506,7 @@
         },
         {
           "word": "precise",
-          "meaning": "(要確認)",
+          "meaning": "正確な",
           "isUnknown": false,
           "lemma": "precise",
           "reading": "precise",
@@ -12517,7 +12517,7 @@
         },
         {
           "word": "modification",
-          "meaning": "(要確認)",
+          "meaning": "修正",
           "isUnknown": false,
           "lemma": "modification",
           "reading": "modification",
@@ -12550,7 +12550,7 @@
         },
         {
           "word": "sequences",
-          "meaning": "(要確認)",
+          "meaning": "配列",
           "isUnknown": false,
           "lemma": "sequences",
           "reading": "sequences",
@@ -12977,7 +12977,7 @@
         },
         {
           "word": "germline",
-          "meaning": "(要確認)",
+          "meaning": "生殖系列",
           "isUnknown": false,
           "lemma": "germline",
           "reading": "germline",
@@ -13414,7 +13414,7 @@
         },
         {
           "word": "prescribe",
-          "meaning": "(要確認)",
+          "meaning": "処方する",
           "isUnknown": false,
           "lemma": "prescribe",
           "reading": "prescribe",
@@ -13567,7 +13567,7 @@
         },
         {
           "word": "ineffective",
-          "meaning": "(要確認)",
+          "meaning": "効果のない",
           "isUnknown": false,
           "lemma": "ineffective",
           "reading": "ineffective",
@@ -13652,7 +13652,7 @@
         },
         {
           "word": "body's",
-          "meaning": "(要確認)",
+          "meaning": "体の",
           "isUnknown": false,
           "lemma": "body's",
           "reading": "body's",
@@ -13756,7 +13756,7 @@
         },
         {
           "word": "chemotherapy",
-          "meaning": "(要確認)",
+          "meaning": "化学療法",
           "isUnknown": false,
           "lemma": "chemotherapy",
           "reading": "chemotherapy",
@@ -13841,7 +13841,7 @@
         },
         {
           "word": "cancerous",
-          "meaning": "(要確認)",
+          "meaning": "癌の",
           "isUnknown": false,
           "lemma": "cancerous",
           "reading": "cancerous",
@@ -13926,7 +13926,7 @@
         },
         {
           "word": "selectively",
-          "meaning": "(要確認)",
+          "meaning": "選択的に",
           "isUnknown": false,
           "lemma": "selectively",
           "reading": "selectively",
@@ -14199,7 +14199,7 @@
         },
         {
           "word": "untreatable",
-          "meaning": "(要確認)",
+          "meaning": "治療不可能な",
           "isUnknown": false,
           "lemma": "untreatable",
           "reading": "untreatable",
@@ -14347,7 +14347,7 @@
         },
         {
           "word": "organs",
-          "meaning": "(要確認)",
+          "meaning": "臓器",
           "isUnknown": false,
           "lemma": "organs",
           "reading": "organs",
@@ -14440,7 +14440,7 @@
         },
         {
           "word": "differentiate",
-          "meaning": "(要確認)",
+          "meaning": "区別する",
           "isUnknown": false,
           "lemma": "differentiate",
           "reading": "differentiate",
@@ -14555,7 +14555,7 @@
         },
         {
           "word": "regenerate",
-          "meaning": "(要確認)",
+          "meaning": "再生する",
           "isUnknown": false,
           "lemma": "regenerate",
           "reading": "regenerate",
@@ -14659,7 +14659,7 @@
         },
         {
           "word": "spinal",
-          "meaning": "(要確認)",
+          "meaning": "脊椎の",
           "isUnknown": false,
           "lemma": "spinal",
           "reading": "spinal",
@@ -14733,7 +14733,7 @@
         },
         {
           "word": "neurodegenerative",
-          "meaning": "(要確認)",
+          "meaning": "神経変性の",
           "isUnknown": false,
           "lemma": "neurodegenerative",
           "reading": "neurodegenerative",
@@ -15078,7 +15078,7 @@
         },
         {
           "word": "sanitation",
-          "meaning": "(要確認)",
+          "meaning": "衛生",
           "isUnknown": false,
           "lemma": "sanitation",
           "reading": "sanitation",
@@ -16080,7 +16080,7 @@
         },
         {
           "word": "panel",
-          "meaning": "(要確認)",
+          "meaning": "パネル",
           "isUnknown": false,
           "lemma": "panel",
           "reading": "panel",
@@ -17068,7 +17068,7 @@
         },
         {
           "word": "pumping",
-          "meaning": "(要確認)",
+          "meaning": "ポンプで送る",
           "isUnknown": false,
           "lemma": "pumping",
           "reading": "pumping",
@@ -17090,7 +17090,7 @@
         },
         {
           "word": "uphill",
-          "meaning": "(要確認)",
+          "meaning": "上り坂",
           "isUnknown": false,
           "lemma": "uphill",
           "reading": "uphill",
@@ -17424,7 +17424,7 @@
         },
         {
           "word": "limitless",
-          "meaning": "(要確認)",
+          "meaning": "無限の",
           "isUnknown": false,
           "lemma": "limitless",
           "reading": "limitless",
@@ -17491,7 +17491,7 @@
         },
         {
           "word": "sustainably",
-          "meaning": "(要確認)",
+          "meaning": "持続可能に",
           "isUnknown": false,
           "lemma": "sustainably",
           "reading": "sustainably",
@@ -17565,7 +17565,7 @@
         },
         {
           "word": "fission",
-          "meaning": "(要確認)",
+          "meaning": "核分裂",
           "isUnknown": false,
           "lemma": "fission",
           "reading": "fission",
@@ -17576,7 +17576,7 @@
         },
         {
           "word": "reactors",
-          "meaning": "(要確認)",
+          "meaning": "原子炉",
           "isUnknown": false,
           "lemma": "reactors",
           "reading": "reactors",
@@ -17713,7 +17713,7 @@
         },
         {
           "word": "reactors",
-          "meaning": "(要確認)",
+          "meaning": "原子炉",
           "isUnknown": false,
           "lemma": "reactors",
           "reading": "reactors",
@@ -17735,7 +17735,7 @@
         },
         {
           "word": "fuse",
-          "meaning": "(要確認)",
+          "meaning": "融合する",
           "isUnknown": false,
           "lemma": "fuse",
           "reading": "fuse",
@@ -17864,7 +17864,7 @@
         },
         {
           "word": "meltdown",
-          "meaning": "(要確認)",
+          "meaning": "メルトダウン",
           "isUnknown": false,
           "lemma": "meltdown",
           "reading": "meltdown",
@@ -18038,7 +18038,7 @@
         },
         {
           "word": "elusive",
-          "meaning": "(要確認)",
+          "meaning": "つかみどころのない",
           "isUnknown": false,
           "lemma": "elusive",
           "reading": "elusive",
@@ -18416,7 +18416,7 @@
         },
         {
           "word": "envision",
-          "meaning": "(要確認)",
+          "meaning": "想像する",
           "isUnknown": false,
           "lemma": "envision",
           "reading": "envision",
@@ -19184,7 +19184,7 @@
         },
         {
           "word": "utilized",
-          "meaning": "(要確認)",
+          "meaning": "利用された",
           "isUnknown": false,
           "lemma": "utilized",
           "reading": "utilized",
@@ -19354,7 +19354,7 @@
         },
         {
           "word": "economically",
-          "meaning": "(要確認)",
+          "meaning": "経済的に",
           "isUnknown": false,
           "lemma": "economically",
           "reading": "economically",
@@ -19365,7 +19365,7 @@
         },
         {
           "word": "viable",
-          "meaning": "(要確認)",
+          "meaning": "実行可能な",
           "isUnknown": false,
           "lemma": "viable",
           "reading": "viable",
@@ -19387,7 +19387,7 @@
         },
         {
           "word": "scalable",
-          "meaning": "(要確認)",
+          "meaning": "拡張可能な",
           "isUnknown": false,
           "lemma": "scalable",
           "reading": "scalable",
@@ -19724,7 +19724,7 @@
         },
         {
           "word": "launch",
-          "meaning": "(要確認)",
+          "meaning": "打ち上げ",
           "isUnknown": false,
           "lemma": "launch",
           "reading": "launch",
@@ -20128,7 +20128,7 @@
         },
         {
           "word": "proximity",
-          "meaning": "(要確認)",
+          "meaning": "近さ",
           "isUnknown": false,
           "lemma": "proximity",
           "reading": "proximity",
@@ -20298,7 +20298,7 @@
         },
         {
           "word": "viable",
-          "meaning": "(要確認)",
+          "meaning": "実行可能な",
           "isUnknown": false,
           "lemma": "viable",
           "reading": "viable",
@@ -20592,7 +20592,7 @@
         },
         {
           "word": "breathable",
-          "meaning": "(要確認)",
+          "meaning": "通気性のある",
           "isUnknown": false,
           "lemma": "breathable",
           "reading": "breathable",
@@ -20677,7 +20677,7 @@
         },
         {
           "word": "isolation",
-          "meaning": "(要確認)",
+          "meaning": "孤立",
           "isUnknown": false,
           "lemma": "isolation",
           "reading": "isolation",
@@ -21131,7 +21131,7 @@
         },
         {
           "word": "sustaining",
-          "meaning": "(要確認)",
+          "meaning": "維持する",
           "isUnknown": false,
           "lemma": "sustaining",
           "reading": "sustaining",
@@ -21342,7 +21342,7 @@
         },
         {
           "word": "habitable",
-          "meaning": "(要確認)",
+          "meaning": "住める",
           "isUnknown": false,
           "lemma": "habitable",
           "reading": "habitable",
@@ -21479,7 +21479,7 @@
         },
         {
           "word": "terraform",
-          "meaning": "(要確認)",
+          "meaning": "テラフォーミング",
           "isUnknown": false,
           "lemma": "terraform",
           "reading": "terraform",
@@ -22038,7 +22038,7 @@
         },
         {
           "word": "revealing",
-          "meaning": "(要確認)",
+          "meaning": "明らかにする",
           "isUnknown": false,
           "lemma": "revealing",
           "reading": "revealing",
@@ -22049,7 +22049,7 @@
         },
         {
           "word": "cosmic",
-          "meaning": "(要確認)",
+          "meaning": "宇宙の",
           "isUnknown": false,
           "lemma": "cosmic",
           "reading": "cosmic",
@@ -22186,7 +22186,7 @@
         },
         {
           "word": "rocks",
-          "meaning": "(要確認)",
+          "meaning": "岩",
           "isUnknown": false,
           "lemma": "rocks",
           "reading": "rocks",
@@ -22356,7 +22356,7 @@
         },
         {
           "word": "Webb",
-          "meaning": "(要確認)",
+          "meaning": "ウェッブ(人名)",
           "isUnknown": false,
           "lemma": "Webb",
           "reading": "Webb",
@@ -22378,7 +22378,7 @@
         },
         {
           "word": "Telescope",
-          "meaning": "(要確認)",
+          "meaning": "望遠鏡",
           "isUnknown": false,
           "lemma": "Telescope",
           "reading": "Telescope",
@@ -22489,7 +22489,7 @@
         },
         {
           "word": "universe's",
-          "meaning": "(要確認)",
+          "meaning": "宇宙の",
           "isUnknown": false,
           "lemma": "universe's",
           "reading": "universe's",
@@ -22541,7 +22541,7 @@
         },
         {
           "word": "missions",
-          "meaning": "(要確認)",
+          "meaning": "任務",
           "isUnknown": false,
           "lemma": "missions",
           "reading": "missions",
@@ -22596,7 +22596,7 @@
         },
         {
           "word": "cosmic",
-          "meaning": "(要確認)",
+          "meaning": "宇宙の",
           "isUnknown": false,
           "lemma": "cosmic",
           "reading": "cosmic",
@@ -22736,7 +22736,7 @@
         },
         {
           "word": "manipulates",
-          "meaning": "(要確認)",
+          "meaning": "操作する",
           "isUnknown": false,
           "lemma": "manipulates",
           "reading": "manipulates",
@@ -22843,7 +22843,7 @@
         },
         {
           "word": "nanometer",
-          "meaning": "(要確認)",
+          "meaning": "ナノメートル",
           "isUnknown": false,
           "lemma": "nanometer",
           "reading": "nanometer",
@@ -22876,7 +22876,7 @@
         },
         {
           "word": "billionth",
-          "meaning": "(要確認)",
+          "meaning": "10億分の1",
           "isUnknown": false,
           "lemma": "billionth",
           "reading": "billionth",
@@ -23027,7 +23027,7 @@
         },
         {
           "word": "hair's",
-          "meaning": "(要確認)",
+          "meaning": "髪の",
           "isUnknown": false,
           "lemma": "hair's",
           "reading": "hair's",
@@ -23679,7 +23679,7 @@
         },
         {
           "word": "nanomedical",
-          "meaning": "(要確認)",
+          "meaning": "ナノ医療の",
           "isUnknown": false,
           "lemma": "nanomedical",
           "reading": "nanomedical",
@@ -23998,7 +23998,7 @@
         },
         {
           "word": "nanotubes",
-          "meaning": "(要確認)",
+          "meaning": "ナノチューブ",
           "isUnknown": false,
           "lemma": "nanotubes",
           "reading": "nanotubes",
@@ -24231,7 +24231,7 @@
         },
         {
           "word": "repellent",
-          "meaning": "(要確認)",
+          "meaning": "虫除け",
           "isUnknown": false,
           "lemma": "repellent",
           "reading": "repellent",
@@ -24253,7 +24253,7 @@
         },
         {
           "word": "antibacterial",
-          "meaning": "(要確認)",
+          "meaning": "抗菌の",
           "isUnknown": false,
           "lemma": "antibacterial",
           "reading": "antibacterial",
@@ -24409,7 +24409,7 @@
         },
         {
           "word": "shrink",
-          "meaning": "(要確認)",
+          "meaning": "縮む",
           "isUnknown": false,
           "lemma": "shrink",
           "reading": "shrink",
@@ -24669,7 +24669,7 @@
         },
         {
           "word": "paradigms",
-          "meaning": "(要確認)",
+          "meaning": "パラダイム(複数)",
           "isUnknown": false,
           "lemma": "paradigms",
           "reading": "paradigms",
@@ -25189,7 +25189,7 @@
         },
         {
           "word": "superposition",
-          "meaning": "(要確認)",
+          "meaning": "重ね合わせ",
           "isUnknown": false,
           "lemma": "superposition",
           "reading": "superposition",
@@ -25497,7 +25497,7 @@
         },
         {
           "word": "crack",
-          "meaning": "(要確認)",
+          "meaning": "ひび",
           "isUnknown": false,
           "lemma": "crack",
           "reading": "crack",
@@ -25721,7 +25721,7 @@
         },
         {
           "word": "theoretically",
-          "meaning": "(要確認)",
+          "meaning": "理論的には",
           "isUnknown": false,
           "lemma": "theoretically",
           "reading": "theoretically",
@@ -25732,7 +25732,7 @@
         },
         {
           "word": "unbreakable",
-          "meaning": "(要確認)",
+          "meaning": "壊れない",
           "isUnknown": false,
           "lemma": "unbreakable",
           "reading": "unbreakable",
@@ -26055,7 +26055,7 @@
         },
         {
           "word": "extraordinarily",
-          "meaning": "(要確認)",
+          "meaning": "並外れて",
           "isUnknown": false,
           "lemma": "extraordinarily",
           "reading": "extraordinarily",
@@ -26096,7 +26096,7 @@
       "segments": [
         {
           "word": "Qubits",
-          "meaning": "(要確認)",
+          "meaning": "量子ビット",
           "isUnknown": false,
           "lemma": "Qubits",
           "reading": "Qubits",
@@ -26151,7 +26151,7 @@
         },
         {
           "word": "disturbed",
-          "meaning": "(要確認)",
+          "meaning": "動揺した",
           "isUnknown": false,
           "lemma": "disturbed",
           "reading": "disturbed",
@@ -26840,7 +26840,7 @@
         },
         {
           "word": "headsets",
-          "meaning": "(要確認)",
+          "meaning": "ヘッドセット",
           "isUnknown": false,
           "lemma": "headsets",
           "reading": "headsets",
@@ -26862,7 +26862,7 @@
         },
         {
           "word": "immersed",
-          "meaning": "(要確認)",
+          "meaning": "浸った",
           "isUnknown": false,
           "lemma": "immersed",
           "reading": "immersed",
@@ -28032,7 +28032,7 @@
         },
         {
           "word": "resolution",
-          "meaning": "(要確認)",
+          "meaning": "解決",
           "isUnknown": false,
           "lemma": "resolution",
           "reading": "resolution",
@@ -28210,7 +28210,7 @@
         },
         {
           "word": "ubiquitous",
-          "meaning": "(要確認)",
+          "meaning": "どこにでもある",
           "isUnknown": false,
           "lemma": "ubiquitous",
           "reading": "ubiquitous",
@@ -28281,7 +28281,7 @@
         },
         {
           "word": "envision",
-          "meaning": "(要確認)",
+          "meaning": "想像する",
           "isUnknown": false,
           "lemma": "envision",
           "reading": "envision",
@@ -28314,7 +28314,7 @@
         },
         {
           "word": "metaverse",
-          "meaning": "(要確認)",
+          "meaning": "メタバース",
           "isUnknown": false,
           "lemma": "metaverse",
           "reading": "metaverse",
@@ -28558,7 +28558,7 @@
         },
         {
           "word": "dystopian",
-          "meaning": "(要確認)",
+          "meaning": "ディストピアの",
           "isUnknown": false,
           "lemma": "dystopian",
           "reading": "dystopian",
@@ -28569,7 +28569,7 @@
         },
         {
           "word": "escape",
-          "meaning": "(要確認)",
+          "meaning": "逃げる",
           "isUnknown": false,
           "lemma": "escape",
           "reading": "escape",
@@ -28702,7 +28702,7 @@
         },
         {
           "word": "advancement",
-          "meaning": "(要確認)",
+          "meaning": "進歩",
           "isUnknown": false,
           "lemma": "advancement",
           "reading": "advancement",
@@ -29204,7 +29204,7 @@
         },
         {
           "word": "discriminate",
-          "meaning": "(要確認)",
+          "meaning": "差別する",
           "isUnknown": false,
           "lemma": "discriminate",
           "reading": "discriminate",
@@ -29333,7 +29333,7 @@
         },
         {
           "word": "radicalize",
-          "meaning": "(要確認)",
+          "meaning": "過激化する",
           "isUnknown": false,
           "lemma": "radicalize",
           "reading": "radicalize",
@@ -29355,7 +29355,7 @@
         },
         {
           "word": "polarize",
-          "meaning": "(要確認)",
+          "meaning": "分極化する",
           "isUnknown": false,
           "lemma": "polarize",
           "reading": "polarize",
@@ -29473,7 +29473,7 @@
         },
         {
           "word": "deploy",
-          "meaning": "(要確認)",
+          "meaning": "配備する",
           "isUnknown": false,
           "lemma": "deploy",
           "reading": "deploy",
@@ -30391,7 +30391,7 @@
         },
         {
           "word": "precautionary",
-          "meaning": "(要確認)",
+          "meaning": "予防的な",
           "isUnknown": false,
           "lemma": "precautionary",
           "reading": "precautionary",
@@ -30428,7 +30428,7 @@
         },
         {
           "word": "erring",
-          "meaning": "(要確認)",
+          "meaning": "誤った",
           "isUnknown": false,
           "lemma": "erring",
           "reading": "erring",
@@ -30450,7 +30450,7 @@
         },
         {
           "word": "caution's",
-          "meaning": "(要確認)",
+          "meaning": "注意の",
           "isUnknown": false,
           "lemma": "caution's",
           "reading": "caution's",
@@ -30576,7 +30576,7 @@
         },
         {
           "word": "caution",
-          "meaning": "(要確認)",
+          "meaning": "注意",
           "isUnknown": false,
           "lemma": "caution",
           "reading": "caution",
@@ -30587,7 +30587,7 @@
         },
         {
           "word": "stifles",
-          "meaning": "(要確認)",
+          "meaning": "抑える",
           "isUnknown": false,
           "lemma": "stifles",
           "reading": "stifles",
@@ -31358,7 +31358,7 @@
         },
         {
           "word": "informational",
-          "meaning": "(要確認)",
+          "meaning": "情報の",
           "isUnknown": false,
           "lemma": "informational",
           "reading": "informational",
@@ -31380,7 +31380,7 @@
         },
         {
           "word": "connectivity",
-          "meaning": "(要確認)",
+          "meaning": "接続性",
           "isUnknown": false,
           "lemma": "connectivity",
           "reading": "connectivity",
@@ -31954,7 +31954,7 @@
         },
         {
           "word": "imperative",
-          "meaning": "(要確認)",
+          "meaning": "必須の",
           "isUnknown": false,
           "lemma": "imperative",
           "reading": "imperative",
@@ -31987,7 +31987,7 @@
         },
         {
           "word": "obligation",
-          "meaning": "(要確認)",
+          "meaning": "義務",
           "isUnknown": false,
           "lemma": "obligation",
           "reading": "obligation",
@@ -32061,7 +32061,7 @@
         },
         {
           "word": "paradigm",
-          "meaning": "(要確認)",
+          "meaning": "パラダイム",
           "isUnknown": false,
           "lemma": "paradigm",
           "reading": "paradigm",
@@ -32364,7 +32364,7 @@
         },
         {
           "word": "superposition",
-          "meaning": "(要確認)",
+          "meaning": "重ね合わせ",
           "isUnknown": false,
           "lemma": "superposition",
           "reading": "superposition",
@@ -32800,7 +32800,7 @@
         },
         {
           "word": "feasibly",
-          "meaning": "(要確認)",
+          "meaning": "実行可能に",
           "isUnknown": false,
           "lemma": "feasibly",
           "reading": "feasibly",
@@ -33034,7 +33034,7 @@
         },
         {
           "word": "delicate",
-          "meaning": "(要確認)",
+          "meaning": "繊細な",
           "isUnknown": false,
           "lemma": "delicate",
           "reading": "delicate",
@@ -33128,7 +33128,7 @@
         },
         {
           "word": "interference",
-          "meaning": "(要確認)",
+          "meaning": "干渉",
           "isUnknown": false,
           "lemma": "interference",
           "reading": "interference",
@@ -33265,7 +33265,7 @@
         },
         {
           "word": "disturbances",
-          "meaning": "(要確認)",
+          "meaning": "妨害",
           "isUnknown": false,
           "lemma": "disturbances",
           "reading": "disturbances",
@@ -33287,7 +33287,7 @@
         },
         {
           "word": "decoherence",
-          "meaning": "(要確認)",
+          "meaning": "デコヒーレンス",
           "isUnknown": false,
           "lemma": "decoherence",
           "reading": "decoherence",
@@ -33542,7 +33542,7 @@
         },
         {
           "word": "manipulates",
-          "meaning": "(要確認)",
+          "meaning": "操作する",
           "isUnknown": false,
           "lemma": "manipulates",
           "reading": "manipulates",
@@ -33619,7 +33619,7 @@
         },
         {
           "word": "billionths",
-          "meaning": "(要確認)",
+          "meaning": "10億分の1(複数)",
           "isUnknown": false,
           "lemma": "billionths",
           "reading": "billionths",
@@ -33852,7 +33852,7 @@
         },
         {
           "word": "nanotubes",
-          "meaning": "(要確認)",
+          "meaning": "ナノチューブ",
           "isUnknown": false,
           "lemma": "nanotubes",
           "reading": "nanotubes",
@@ -33874,7 +33874,7 @@
         },
         {
           "word": "extraordinarily",
-          "meaning": "(要確認)",
+          "meaning": "並外れて",
           "isUnknown": false,
           "lemma": "extraordinarily",
           "reading": "extraordinarily",
@@ -33907,7 +33907,7 @@
         },
         {
           "word": "lightweight",
-          "meaning": "(要確認)",
+          "meaning": "軽量の",
           "isUnknown": false,
           "lemma": "lightweight",
           "reading": "lightweight",
@@ -33948,7 +33948,7 @@
         },
         {
           "word": "dots",
-          "meaning": "(要確認)",
+          "meaning": "点",
           "isUnknown": false,
           "lemma": "dots",
           "reading": "dots",
@@ -33997,7 +33997,7 @@
         },
         {
           "word": "precise",
-          "meaning": "(要確認)",
+          "meaning": "正確な",
           "isUnknown": false,
           "lemma": "precise",
           "reading": "precise",
@@ -34482,7 +34482,7 @@
         },
         {
           "word": "semiconductor",
-          "meaning": "(要確認)",
+          "meaning": "半導体",
           "isUnknown": false,
           "lemma": "semiconductor",
           "reading": "semiconductor",
@@ -34613,7 +34613,7 @@
         },
         {
           "word": "sparing",
-          "meaning": "(要確認)",
+          "meaning": "控えめな",
           "isUnknown": false,
           "lemma": "sparing",
           "reading": "sparing",
@@ -34768,7 +34768,7 @@
         },
         {
           "word": "incompletely",
-          "meaning": "(要確認)",
+          "meaning": "不完全に",
           "isUnknown": false,
           "lemma": "incompletely",
           "reading": "incompletely",
@@ -35112,7 +35112,7 @@
         },
         {
           "word": "prosthetic",
-          "meaning": "(要確認)",
+          "meaning": "義肢の",
           "isUnknown": false,
           "lemma": "prosthetic",
           "reading": "prosthetic",
@@ -35123,7 +35123,7 @@
         },
         {
           "word": "limbs",
-          "meaning": "(要確認)",
+          "meaning": "手足",
           "isUnknown": false,
           "lemma": "limbs",
           "reading": "limbs",
@@ -35394,7 +35394,7 @@
         },
         {
           "word": "cognitive",
-          "meaning": "(要確認)",
+          "meaning": "認知の",
           "isUnknown": false,
           "lemma": "cognitive",
           "reading": "cognitive",
@@ -36454,7 +36454,7 @@
         },
         {
           "word": "multiply",
-          "meaning": "(要確認)",
+          "meaning": "掛ける",
           "isUnknown": false,
           "lemma": "multiply",
           "reading": "multiply",
@@ -36539,7 +36539,7 @@
         },
         {
           "word": "hacker",
-          "meaning": "(要確認)",
+          "meaning": "ハッカー",
           "isUnknown": false,
           "lemma": "hacker",
           "reading": "hacker",
@@ -36602,7 +36602,7 @@
         },
         {
           "word": "gains",
-          "meaning": "(要確認)",
+          "meaning": "利益",
           "isUnknown": false,
           "lemma": "gains",
           "reading": "gains",
@@ -36624,7 +36624,7 @@
         },
         {
           "word": "foothold",
-          "meaning": "(要確認)",
+          "meaning": "足がかり",
           "isUnknown": false,
           "lemma": "foothold",
           "reading": "foothold",
@@ -36698,7 +36698,7 @@
       "segments": [
         {
           "word": "Inadequately",
-          "meaning": "(要確認)",
+          "meaning": "不十分に",
           "isUnknown": false,
           "lemma": "Inadequately",
           "reading": "Inadequately",
@@ -36775,7 +36775,7 @@
         },
         {
           "word": "manipulated",
-          "meaning": "(要確認)",
+          "meaning": "操作された",
           "isUnknown": false,
           "lemma": "manipulated",
           "reading": "manipulated",
@@ -36868,7 +36868,7 @@
         },
         {
           "word": "connectivity",
-          "meaning": "(要確認)",
+          "meaning": "接続性",
           "isUnknown": false,
           "lemma": "connectivity",
           "reading": "connectivity",
@@ -36997,7 +36997,7 @@
         },
         {
           "word": "decentralized",
-          "meaning": "(要確認)",
+          "meaning": "分散化された",
           "isUnknown": false,
           "lemma": "decentralized",
           "reading": "decentralized",
@@ -37060,7 +37060,7 @@
         },
         {
           "word": "intermediaries",
-          "meaning": "(要確認)",
+          "meaning": "仲介者",
           "isUnknown": false,
           "lemma": "intermediaries",
           "reading": "intermediaries",
@@ -37123,7 +37123,7 @@
         },
         {
           "word": "cryptocurrency",
-          "meaning": "(要確認)",
+          "meaning": "暗号通貨",
           "isUnknown": false,
           "lemma": "cryptocurrency",
           "reading": "cryptocurrency",
@@ -37186,7 +37186,7 @@
         },
         {
           "word": "tamper",
-          "meaning": "(要確認)",
+          "meaning": "改ざんする",
           "isUnknown": false,
           "lemma": "tamper",
           "reading": "tamper",
@@ -37219,7 +37219,7 @@
         },
         {
           "word": "ledgers",
-          "meaning": "(要確認)",
+          "meaning": "元帳",
           "isUnknown": false,
           "lemma": "ledgers",
           "reading": "ledgers",
@@ -37375,7 +37375,7 @@
       "segments": [
         {
           "word": "property",
-          "meaning": "(要確認)",
+          "meaning": "財産",
           "isUnknown": false,
           "lemma": "property",
           "reading": "property",
@@ -37490,7 +37490,7 @@
         },
         {
           "word": "verification",
-          "meaning": "(要確認)",
+          "meaning": "検証",
           "isUnknown": false,
           "lemma": "verification",
           "reading": "verification",
@@ -37987,7 +37987,7 @@
         },
         {
           "word": "synthesize",
-          "meaning": "(要確認)",
+          "meaning": "合成する",
           "isUnknown": false,
           "lemma": "synthesize",
           "reading": "synthesize",
@@ -38105,7 +38105,7 @@
         },
         {
           "word": "engineered",
-          "meaning": "(要確認)",
+          "meaning": "設計された",
           "isUnknown": false,
           "lemma": "engineered",
           "reading": "engineered",
@@ -38116,7 +38116,7 @@
         },
         {
           "word": "microorganisms",
-          "meaning": "(要確認)",
+          "meaning": "微生物",
           "isUnknown": false,
           "lemma": "microorganisms",
           "reading": "microorganisms",
@@ -38387,7 +38387,7 @@
         },
         {
           "word": "unintended",
-          "meaning": "(要確認)",
+          "meaning": "意図しない",
           "isUnknown": false,
           "lemma": "unintended",
           "reading": "unintended",
@@ -38431,7 +38431,7 @@
         },
         {
           "word": "engineered",
-          "meaning": "(要確認)",
+          "meaning": "設計された",
           "isUnknown": false,
           "lemma": "engineered",
           "reading": "engineered",
@@ -38705,7 +38705,7 @@
         },
         {
           "word": "simulated",
-          "meaning": "(要確認)",
+          "meaning": "シミュレートされた",
           "isUnknown": false,
           "lemma": "simulated",
           "reading": "simulated",
@@ -38994,7 +38994,7 @@
         },
         {
           "word": "telepresence",
-          "meaning": "(要確認)",
+          "meaning": "遠隔臨場感",
           "isUnknown": false,
           "lemma": "telepresence",
           "reading": "telepresence",
@@ -39216,7 +39216,7 @@
         },
         {
           "word": "dimensional",
-          "meaning": "(要確認)",
+          "meaning": "次元の",
           "isUnknown": false,
           "lemma": "dimensional",
           "reading": "dimensional",
@@ -39356,7 +39356,7 @@
         },
         {
           "word": "additive",
-          "meaning": "(要確認)",
+          "meaning": "添加物",
           "isUnknown": false,
           "lemma": "additive",
           "reading": "additive",
@@ -39404,7 +39404,7 @@
         },
         {
           "word": "prototyping",
-          "meaning": "(要確認)",
+          "meaning": "プロトタイピング",
           "isUnknown": false,
           "lemma": "prototyping",
           "reading": "prototyping",
@@ -39508,7 +39508,7 @@
         },
         {
           "word": "geometries",
-          "meaning": "(要確認)",
+          "meaning": "幾何学",
           "isUnknown": false,
           "lemma": "geometries",
           "reading": "geometries",
@@ -39716,7 +39716,7 @@
         },
         {
           "word": "spare",
-          "meaning": "(要確認)",
+          "meaning": "予備の",
           "isUnknown": false,
           "lemma": "spare",
           "reading": "spare",
@@ -39930,7 +39930,7 @@
         },
         {
           "word": "destiny",
-          "meaning": "(要確認)",
+          "meaning": "運命",
           "isUnknown": false,
           "lemma": "destiny",
           "reading": "destiny",
@@ -40209,7 +40209,7 @@
         },
         {
           "word": "liberate",
-          "meaning": "(要確認)",
+          "meaning": "解放する",
           "isUnknown": false,
           "lemma": "liberate",
           "reading": "liberate",
@@ -40279,7 +40279,7 @@
         },
         {
           "word": "surveil",
-          "meaning": "(要確認)",
+          "meaning": "監視する",
           "isUnknown": false,
           "lemma": "surveil",
           "reading": "surveil",
@@ -40663,7 +40663,7 @@
       "segments": [
         {
           "word": "industrialization",
-          "meaning": "(要確認)",
+          "meaning": "工業化",
           "isUnknown": false,
           "lemma": "industrialization",
           "reading": "industrialization",
@@ -40781,7 +40781,7 @@
         },
         {
           "word": "losers",
-          "meaning": "(要確認)",
+          "meaning": "敗者",
           "isUnknown": false,
           "lemma": "losers",
           "reading": "losers",
@@ -40844,7 +40844,7 @@
         },
         {
           "word": "dilemmas",
-          "meaning": "(要確認)",
+          "meaning": "ジレンマ",
           "isUnknown": false,
           "lemma": "dilemmas",
           "reading": "dilemmas",
@@ -41082,7 +41082,7 @@
         },
         {
           "word": "scope",
-          "meaning": "(要確認)",
+          "meaning": "範囲",
           "isUnknown": false,
           "lemma": "scope",
           "reading": "scope",
@@ -41636,7 +41636,7 @@
         },
         {
           "word": "restraining",
-          "meaning": "(要確認)",
+          "meaning": "抑制する",
           "isUnknown": false,
           "lemma": "restraining",
           "reading": "restraining",
@@ -42023,7 +42023,7 @@
         },
         {
           "word": "totalitarianism",
-          "meaning": "(要確認)",
+          "meaning": "全体主義",
           "isUnknown": false,
           "lemma": "totalitarianism",
           "reading": "totalitarianism",
@@ -42409,7 +42409,7 @@
         },
         {
           "word": "predetermined",
-          "meaning": "(要確認)",
+          "meaning": "予め決められた",
           "isUnknown": false,
           "lemma": "predetermined",
           "reading": "predetermined",
@@ -42708,7 +42708,7 @@
         },
         {
           "word": "judgment",
-          "meaning": "(要確認)",
+          "meaning": "判断",
           "isUnknown": false,
           "lemma": "judgment",
           "reading": "judgment",
@@ -42990,7 +42990,7 @@
         },
         {
           "word": "isolate",
-          "meaning": "(要確認)",
+          "meaning": "隔離する",
           "isUnknown": false,
           "lemma": "isolate",
           "reading": "isolate",
@@ -43168,7 +43168,7 @@
         },
         {
           "word": "technologists",
-          "meaning": "(要確認)",
+          "meaning": "技術者",
           "isUnknown": false,
           "lemma": "technologists",
           "reading": "technologists",
@@ -43190,7 +43190,7 @@
         },
         {
           "word": "policymakers",
-          "meaning": "(要確認)",
+          "meaning": "政策立案者",
           "isUnknown": false,
           "lemma": "policymakers",
           "reading": "policymakers",
@@ -43797,7 +43797,7 @@
         },
         {
           "word": "foresight",
-          "meaning": "(要確認)",
+          "meaning": "先見の明",
           "isUnknown": false,
           "lemma": "foresight",
           "reading": "foresight",
@@ -44145,7 +44145,7 @@
         },
         {
           "word": "descendants",
-          "meaning": "(要確認)",
+          "meaning": "子孫",
           "isUnknown": false,
           "lemma": "descendants",
           "reading": "descendants",
@@ -44345,7 +44345,7 @@
         },
         {
           "word": "wield",
-          "meaning": "(要確認)",
+          "meaning": "振るう",
           "isUnknown": false,
           "lemma": "wield",
           "reading": "wield",
@@ -44408,7 +44408,7 @@
         },
         {
           "word": "lies",
-          "meaning": "(要確認)",
+          "meaning": "嘘",
           "isUnknown": false,
           "lemma": "lies",
           "reading": "lies",
@@ -44726,7 +44726,7 @@
         },
         {
           "word": "flourishing",
-          "meaning": "(要確認)",
+          "meaning": "繁栄する",
           "isUnknown": false,
           "lemma": "flourishing",
           "reading": "flourishing",
@@ -44748,7 +44748,7 @@
         },
         {
           "word": "peril",
-          "meaning": "(要確認)",
+          "meaning": "危険",
           "isUnknown": false,
           "lemma": "peril",
           "reading": "peril",
