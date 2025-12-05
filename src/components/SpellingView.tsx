@@ -668,7 +668,7 @@ function SpellingView({
             onShowSettings={() => setShowSettings(true)}
             currentWord={spellingState.questions[spellingState.currentIndex]?.word}
             onAnswerTime={lastAnswerTime}
-            dataSource={selectedDataSource === 'all' ? '全問題集' : selectedDataSource === 'junior' ? '中学重要語句' : '中級編'}
+            dataSource={selectedDataSource === 'all' ? '全問題集' : selectedDataSource === 'junior' ? '高校受験' : '高校受験標準'}
             category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
             difficulty={selectedDifficulty}
             wordPhraseFilter={selectedWordPhraseFilter}
