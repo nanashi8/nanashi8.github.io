@@ -51381,13 +51381,13 @@
   "—": {
     "word": "—",
     "reading": "",
-    "meaning": "",
+    "meaning": "（ダッシュ）補足説明・強調",
     "etymology": "",
     "relatedWords": "",
     "category": "記号",
     "difficulty": "初級",
     "passages": [],
-    "source": "auto",
+    "source": "punctuation",
     "baseWord": null
   },
   "ms": {
@@ -126238,5 +126238,45 @@
   "Milky": {
     "meaning": "乳白色の",
     "source": "sentence-start-word"
+  },
+  ".": {
+    "meaning": "（ピリオド）文の終わり",
+    "source": "punctuation"
+  },
+  ",": {
+    "meaning": "（カンマ）区切り・並列",
+    "source": "punctuation"
+  },
+  "!": {
+    "meaning": "（感嘆符）驚き・強調",
+    "source": "punctuation"
+  },
+  "?": {
+    "meaning": "（疑問符）質問",
+    "source": "punctuation"
+  },
+  ":": {
+    "meaning": "（コロン）説明・例示が続く",
+    "source": "punctuation"
+  },
+  ";": {
+    "meaning": "（セミコロン）文の区切り",
+    "source": "punctuation"
+  },
+  "\"": {
+    "meaning": "（引用符）会話・引用",
+    "source": "punctuation"
+  },
+  "'": {
+    "meaning": "（アポストロフィ）所有・省略",
+    "source": "punctuation"
+  },
+  "(": {
+    "meaning": "（開き括弧）補足情報の開始",
+    "source": "punctuation"
+  },
+  ")": {
+    "meaning": "（閉じ括弧）補足情報の終了",
+    "source": "punctuation"
   }
 }

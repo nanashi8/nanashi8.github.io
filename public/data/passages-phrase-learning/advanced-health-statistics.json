@@ -79,7 +79,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -201,7 +201,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -420,7 +420,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -594,7 +594,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -778,7 +778,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -863,7 +863,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -970,7 +970,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -1144,7 +1144,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -1270,7 +1270,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -1366,7 +1366,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -1462,7 +1462,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -1625,7 +1625,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -1762,7 +1762,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -1891,7 +1891,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -1959,7 +1959,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -2011,7 +2011,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -2052,7 +2052,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -2162,7 +2162,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -2317,7 +2317,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -2432,7 +2432,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -2572,7 +2572,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -2613,7 +2613,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -2635,7 +2635,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -2772,7 +2772,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -2901,7 +2901,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -2994,7 +2994,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -3057,7 +3057,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -3079,7 +3079,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -3219,7 +3219,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -3400,7 +3400,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -3611,7 +3611,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -3719,7 +3719,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -3881,7 +3881,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -3944,7 +3944,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -4095,7 +4095,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -4246,7 +4246,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -4320,7 +4320,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -4449,7 +4449,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -4627,7 +4627,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -4690,7 +4690,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -4764,7 +4764,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -4923,7 +4923,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -4953,7 +4953,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -5118,7 +5118,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -5255,7 +5255,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -5351,7 +5351,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -5419,7 +5419,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -5515,7 +5515,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -5556,7 +5556,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -5589,7 +5589,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -5770,7 +5770,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -5855,7 +5855,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6028,7 +6028,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6154,7 +6154,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -6261,7 +6261,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6317,7 +6317,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -6402,7 +6402,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6520,7 +6520,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6638,7 +6638,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6789,7 +6789,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -6918,7 +6918,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -7066,7 +7066,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -7129,7 +7129,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -7170,7 +7170,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -7244,7 +7244,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -7425,7 +7425,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -7610,7 +7610,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -7651,7 +7651,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -7703,7 +7703,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -7810,7 +7810,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -7947,7 +7947,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -8043,7 +8043,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -8139,7 +8139,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -8265,7 +8265,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -8361,7 +8361,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -8476,7 +8476,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -8574,7 +8574,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -8626,7 +8626,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -8711,7 +8711,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -8774,7 +8774,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -8826,7 +8826,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -8955,7 +8955,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -9092,7 +9092,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -9155,7 +9155,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -9329,7 +9329,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -9455,7 +9455,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -9628,7 +9628,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -9768,7 +9768,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -9820,7 +9820,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -9920,7 +9920,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -10049,7 +10049,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -10193,7 +10193,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -10278,7 +10278,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -10308,7 +10308,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -10352,7 +10352,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -10459,7 +10459,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -10585,7 +10585,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -10648,7 +10648,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -10670,7 +10670,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -10771,7 +10771,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -10856,7 +10856,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11041,7 +11041,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11178,7 +11178,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11230,7 +11230,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11298,7 +11298,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11361,7 +11361,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11402,7 +11402,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11457,7 +11457,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11553,7 +11553,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11662,7 +11662,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11692,7 +11692,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11725,7 +11725,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -11810,7 +11810,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11832,7 +11832,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -11895,7 +11895,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12046,7 +12046,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12146,7 +12146,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12286,7 +12286,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12426,7 +12426,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -12448,7 +12448,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -12500,7 +12500,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12656,7 +12656,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12785,7 +12785,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -12947,7 +12947,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -13084,7 +13084,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -13136,7 +13136,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -13232,7 +13232,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -13317,7 +13317,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -13347,7 +13347,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -13501,7 +13501,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -13612,7 +13612,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -13642,7 +13642,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -13675,7 +13675,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -13869,7 +13869,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14039,7 +14039,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14176,7 +14176,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14239,7 +14239,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -14313,7 +14313,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14431,7 +14431,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14516,7 +14516,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14623,7 +14623,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14756,7 +14756,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -14857,7 +14857,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -14898,7 +14898,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -14950,7 +14950,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15057,7 +15057,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15205,7 +15205,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15386,7 +15386,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15471,7 +15471,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -15523,7 +15523,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -15575,7 +15575,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15764,7 +15764,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -15786,7 +15786,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -15838,7 +15838,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15934,7 +15934,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -15997,7 +15997,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -16038,7 +16038,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16060,7 +16060,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16101,7 +16101,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16205,7 +16205,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16227,7 +16227,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16323,7 +16323,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -16375,7 +16375,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16427,7 +16427,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16473,7 +16473,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16525,7 +16525,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -16632,7 +16632,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -16794,7 +16794,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -16934,7 +16934,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -16964,7 +16964,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -17063,7 +17063,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -17141,7 +17141,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -17252,7 +17252,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -17337,7 +17337,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -17422,7 +17422,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -17474,7 +17474,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -17567,7 +17567,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -17772,7 +17772,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -17890,7 +17890,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -18082,7 +18082,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -18123,7 +18123,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -18186,7 +18186,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -18345,7 +18345,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -18463,7 +18463,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -18526,7 +18526,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -18567,7 +18567,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -18608,7 +18608,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -18641,7 +18641,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -18805,7 +18805,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -18969,7 +18969,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -19154,7 +19154,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -19261,7 +19261,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -19417,7 +19417,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -19447,7 +19447,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -19524,7 +19524,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -19621,7 +19621,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -19662,7 +19662,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -19725,7 +19725,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -19858,7 +19858,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20010,7 +20010,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20040,7 +20040,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -20150,7 +20150,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20261,7 +20261,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -20283,7 +20283,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -20335,7 +20335,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20365,7 +20365,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -20424,7 +20424,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20454,7 +20454,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -20602,7 +20602,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20691,7 +20691,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20787,7 +20787,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -20872,7 +20872,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -20987,7 +20987,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21072,7 +21072,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21146,7 +21146,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -21213,7 +21213,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21269,7 +21269,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -21310,7 +21310,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -21332,7 +21332,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -21384,7 +21384,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21474,7 +21474,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21592,7 +21592,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21756,7 +21756,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -21808,7 +21808,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -21931,7 +21931,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22061,7 +22061,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22209,7 +22209,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -22239,7 +22239,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -22272,7 +22272,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22427,7 +22427,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22545,7 +22545,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22638,7 +22638,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -22690,7 +22690,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -22764,7 +22764,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -22832,7 +22832,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22939,7 +22939,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -22980,7 +22980,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23007,7 +23007,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23073,7 +23073,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -23162,7 +23162,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -23225,7 +23225,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23247,7 +23247,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23362,7 +23362,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23403,7 +23403,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23436,7 +23436,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -23569,7 +23569,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -23621,7 +23621,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -23695,7 +23695,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -23813,7 +23813,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -23876,7 +23876,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -24016,7 +24016,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24123,7 +24123,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24208,7 +24208,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24293,7 +24293,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24430,7 +24430,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24548,7 +24548,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24593,7 +24593,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -24626,7 +24626,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -24670,7 +24670,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -24759,7 +24759,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -24800,7 +24800,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -24893,7 +24893,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -25015,7 +25015,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -25127,7 +25127,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -25256,7 +25256,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -25308,7 +25308,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -25503,7 +25503,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -25747,7 +25747,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -25843,7 +25843,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -25895,7 +25895,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -25958,7 +25958,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -26076,7 +26076,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -26117,7 +26117,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -26180,7 +26180,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -26306,7 +26306,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -26366,7 +26366,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -26444,7 +26444,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -26633,7 +26633,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -26740,7 +26740,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -26792,7 +26792,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -26855,7 +26855,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -26973,7 +26973,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -27102,7 +27102,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -27269,7 +27269,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -27420,7 +27420,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -27590,7 +27590,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -27691,7 +27691,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -27858,7 +27858,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -28022,7 +28022,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -28107,7 +28107,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -28203,7 +28203,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -28323,7 +28323,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28386,7 +28386,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -28482,7 +28482,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28523,7 +28523,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28545,7 +28545,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28567,7 +28567,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28608,7 +28608,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28660,7 +28660,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -28756,7 +28756,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -28879,7 +28879,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -29023,7 +29023,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -29075,7 +29075,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -29220,7 +29220,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -29304,7 +29304,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -29400,7 +29400,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -29433,7 +29433,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -29455,7 +29455,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -29650,7 +29650,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -29757,7 +29757,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -29787,7 +29787,7 @@
         },
         {
           "word": "\"",
-          "meaning": "",
+          "meaning": "（引用符）会話・引用",
           "isUnknown": false,
           "lemma": "\"",
           "difficulty": "beginner",
@@ -29820,7 +29820,7 @@
         },
         {
           "word": "\"",
-          "meaning": "",
+          "meaning": "（引用符）会話・引用",
           "isUnknown": false,
           "lemma": "\"",
           "difficulty": "beginner",
@@ -29905,7 +29905,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -29979,7 +29979,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -30053,7 +30053,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30094,7 +30094,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30135,7 +30135,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30209,7 +30209,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -30302,7 +30302,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30324,7 +30324,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30387,7 +30387,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30450,7 +30450,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -30524,7 +30524,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -30624,7 +30624,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -30654,7 +30654,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30687,7 +30687,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30816,7 +30816,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30898,7 +30898,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30924,7 +30924,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -30976,7 +30976,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -31122,7 +31122,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -31227,7 +31227,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -31257,7 +31257,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -31345,7 +31345,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -31386,7 +31386,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -31449,7 +31449,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -31495,7 +31495,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -31528,7 +31528,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -31614,7 +31614,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -31666,7 +31666,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -31714,7 +31714,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -31854,7 +31854,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -31974,7 +31974,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -32063,7 +32063,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -32174,7 +32174,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -32218,7 +32218,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32264,7 +32264,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32316,7 +32316,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32384,7 +32384,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -32504,7 +32504,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32628,7 +32628,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -32765,7 +32765,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -32810,7 +32810,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32851,7 +32851,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32892,7 +32892,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -32977,7 +32977,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33051,7 +33051,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33103,7 +33103,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33144,7 +33144,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33196,7 +33196,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33259,7 +33259,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33359,7 +33359,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33466,7 +33466,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33529,7 +33529,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33629,7 +33629,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33703,7 +33703,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33803,7 +33803,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33844,7 +33844,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -33956,7 +33956,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -33997,7 +33997,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -34112,7 +34112,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -34145,7 +34145,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -34293,7 +34293,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -34452,7 +34452,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -34548,7 +34548,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -34671,7 +34671,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -34858,7 +34858,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -34943,7 +34943,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35088,7 +35088,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35239,7 +35239,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35357,7 +35357,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35521,7 +35521,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35595,7 +35595,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -35746,7 +35746,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35836,7 +35836,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -35910,7 +35910,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -35984,7 +35984,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -36014,7 +36014,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -36047,7 +36047,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -36171,7 +36171,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -36269,7 +36269,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -36373,7 +36373,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -36458,7 +36458,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -36609,7 +36609,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -36738,7 +36738,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -36779,7 +36779,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -36831,7 +36831,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -37021,7 +37021,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -37125,7 +37125,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -37218,7 +37218,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -37359,7 +37359,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -37455,7 +37455,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -37540,7 +37540,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -37648,7 +37648,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -37774,7 +37774,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -37881,7 +37881,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -38029,7 +38029,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -38144,7 +38144,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -38311,7 +38311,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -38396,7 +38396,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -38519,7 +38519,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -38637,7 +38637,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -38711,7 +38711,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -38842,7 +38842,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -38960,7 +38960,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -39045,7 +39045,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -39160,7 +39160,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -39190,7 +39190,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -39278,7 +39278,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -39489,7 +39489,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -39578,7 +39578,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -39700,7 +39700,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -39818,7 +39818,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -39870,7 +39870,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -39916,7 +39916,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -40128,7 +40128,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -40279,7 +40279,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -40428,7 +40428,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -40609,7 +40609,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -40631,7 +40631,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -40653,7 +40653,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -40727,7 +40727,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -40812,7 +40812,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -40845,7 +40845,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -41015,7 +41015,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -41078,7 +41078,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -41179,7 +41179,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -41220,7 +41220,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -41294,7 +41294,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -41357,7 +41357,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -41398,7 +41398,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -41439,7 +41439,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -41502,7 +41502,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -41691,7 +41691,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -41872,7 +41872,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42031,7 +42031,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42105,7 +42105,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42146,7 +42146,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42187,7 +42187,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42239,7 +42239,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42333,7 +42333,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42459,7 +42459,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42541,7 +42541,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42582,7 +42582,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42700,7 +42700,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42730,7 +42730,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42774,7 +42774,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42867,7 +42867,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -42908,7 +42908,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -42982,7 +42982,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43004,7 +43004,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43056,7 +43056,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -43108,7 +43108,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43130,7 +43130,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43226,7 +43226,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -43316,7 +43316,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -43360,7 +43360,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43401,7 +43401,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43442,7 +43442,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -43497,7 +43497,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -43615,7 +43615,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -43667,7 +43667,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43708,7 +43708,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -43804,7 +43804,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44037,7 +44037,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44078,7 +44078,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -44119,7 +44119,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -44193,7 +44193,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44223,7 +44223,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -44287,7 +44287,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -44320,7 +44320,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44537,7 +44537,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44583,7 +44583,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -44640,7 +44640,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -44714,7 +44714,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44865,7 +44865,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -44983,7 +44983,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45112,7 +45112,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45253,7 +45253,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45354,7 +45354,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45384,7 +45384,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -45443,7 +45443,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45528,7 +45528,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45635,7 +45635,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45769,7 +45769,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45880,7 +45880,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -45943,7 +45943,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -46025,7 +46025,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46066,7 +46066,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46118,7 +46118,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46170,7 +46170,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46285,7 +46285,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -46436,7 +46436,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -46540,7 +46540,7 @@
         },
         {
           "word": "—",
-          "meaning": "",
+          "meaning": "（ダッシュ）補足説明・強調",
           "isUnknown": false,
           "lemma": "—",
           "difficulty": "beginner",
@@ -46592,7 +46592,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -46677,7 +46677,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46699,7 +46699,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46773,7 +46773,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46803,7 +46803,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46836,7 +46836,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -46910,7 +46910,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -46951,7 +46951,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47040,7 +47040,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47155,7 +47155,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47251,7 +47251,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -47329,7 +47329,7 @@
         },
         {
           "word": ":",
-          "meaning": "",
+          "meaning": "（コロン）説明・例示が続く",
           "isUnknown": false,
           "lemma": ":",
           "difficulty": "beginner",
@@ -47403,7 +47403,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47481,7 +47481,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47574,7 +47574,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47733,7 +47733,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47763,7 +47763,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -47796,7 +47796,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -47969,7 +47969,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
@@ -48021,7 +48021,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -48106,7 +48106,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -48136,7 +48136,7 @@
         },
         {
           "word": ",",
-          "meaning": "",
+          "meaning": "（カンマ）区切り・並列",
           "isUnknown": false,
           "lemma": ",",
           "difficulty": "beginner",
@@ -48169,7 +48169,7 @@
         },
         {
           "word": ".",
-          "meaning": "",
+          "meaning": "（ピリオド）文の終わり",
           "isUnknown": false,
           "lemma": ".",
           "difficulty": "beginner",
