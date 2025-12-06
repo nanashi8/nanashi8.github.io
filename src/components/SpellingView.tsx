@@ -611,8 +611,7 @@ function SpellingView({
 
           {/* 自動次へ設定 */}
           <div className="filter-group">
-            <label htmlFor="auto-next-toggle-spelling-pre">✅ 正解時自動次へ:</label>
-            <div className="auto-next-controls">
+            <div className="checkbox-row">
               <input
                 type="checkbox"
                 id="auto-next-toggle-spelling-pre"
@@ -623,14 +622,14 @@ function SpellingView({
                 }}
               />
               <label htmlFor="auto-next-toggle-spelling-pre" className="checkbox-label">
-                {autoNext ? '有効' : '無効'}
+                正解時自動で次へ：{autoNext ? '有効' : '無効'}
               </label>
             </div>
           </div>
 
           {autoNext && (
             <div className="filter-group">
-              <label htmlFor="auto-next-delay-spelling-pre">⏱️ 次への遅延時間:</label>
+              <label htmlFor="auto-next-delay-spelling-pre">⏱️ 次への遅延時間：</label>
               <select
                 id="auto-next-delay-spelling-pre"
                 value={autoNextDelay}
