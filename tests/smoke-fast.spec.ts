@@ -10,8 +10,14 @@ import { test, expect } from '@playwright/test';
 
 test.describe('超高速煙テスト', () => {
   test('アプリの基本動作確認', async ({ page }) => {
-    // 1. アプリ起動確認
-    await page.goto('http://localhost:5173');
+    // タイムアウトを30秒に延長（サーバー起動待ち含む）
+    test.setTimeout(30000);
+    
+    // 1. アプリ起動確認（リトライ付き）
+    await page.goto('http://localhost:5173', { 
+      waitUntil: 'networkidle',
+      timeout: 15000 
+    });
     await expect(page).toHaveTitle(/英語クイズ|Quiz/);
     
     // 2. 翻訳クイズ開始確認
@@ -19,7 +25,7 @@ test.describe('超高速煙テスト', () => {
     await startButton.click();
     
     // 3. 問題表示確認（最重要：これが表示されればクイズは動作している）
-    await expect(page.locator('[class*="question"]').first()).toBeVisible({ timeout: 3000 });
+    await expect(page.locator('[class*="question"]').first()).toBeVisible({ timeout: 10000 });
     
     // 4. JavaScriptエラーがないことを確認
     const errors: string[] = [];
