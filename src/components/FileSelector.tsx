@@ -47,7 +47,7 @@ function FileSelector({
             aria-label="問題集を選択"
           >
             <option value="">問題集を選択...</option>
-            <option value="/data/junior-high-entrance-words.csv">中学生・高校受験英単語 (3,600語)</option>
+            <option value="/data/high-school-entrance-words.csv">中学生・高校受験英単語 (3,600語)</option>
           </select>
         </div>
 

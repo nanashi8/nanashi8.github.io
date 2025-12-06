@@ -183,7 +183,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   useEffect(() => {
     console.log('[長文] 辞書の読み込みを開始...');
     // メイン辞書（CSV）の読み込み
-    fetch('/data/vocabulary/junior-high-entrance-words.csv')
+    fetch('/data/vocabulary/high-school-entrance-words.csv')
       .then((res) => {
         if (!res.ok) {
           throw new Error(`CSV読み込み失敗: ${res.status}`);
