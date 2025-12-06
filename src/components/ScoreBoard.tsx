@@ -373,7 +373,7 @@ function ScoreBoard({
             <div className="retention-progress-bar">
               {mode === 'memorization' ? (
                 <>
-                  {/* 暗記タブ用: 覚えた/覚えていない */}
+                  {/* 暗記タブ用: 覚えた/覚えていない（2種類のみ） */}
                   {detailedStats.masteredPercentage > 0 && (
                     <div 
                       ref={masteredRef}
@@ -386,27 +386,15 @@ function ScoreBoard({
                       )}
                     </div>
                   )}
-                  {detailedStats.learningPercentage > 0 && (
+                  {(detailedStats.learningPercentage + detailedStats.strugglingPercentage) > 0 && (
                     <div 
                       ref={learningRef}
                       className="retention-segment retention-learning"
-                      data-width={Math.round(detailedStats.learningPercentage)}
-                      title={`🟡 覚えていない（学習中）: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                      data-width={Math.round(detailedStats.learningPercentage + detailedStats.strugglingPercentage)}
+                      title={`🟡 覚えていない: ${detailedStats.learningCount + detailedStats.strugglingCount}語 (${Math.round(detailedStats.learningPercentage + detailedStats.strugglingPercentage)}%)`}
                     >
-                      {detailedStats.learningPercentage >= 10 && (
-                        <span>{Math.round(detailedStats.learningPercentage)}%</span>
-                      )}
-                    </div>
-                  )}
-                  {detailedStats.strugglingPercentage > 0 && (
-                    <div 
-                      ref={strugglingRef}
-                      className="retention-segment retention-struggling"
-                      data-width={Math.round(detailedStats.strugglingPercentage)}
-                      title={`🔴 覚えていない（要復習）: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
-                    >
-                      {detailedStats.strugglingPercentage >= 10 && (
-                        <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
+                      {(detailedStats.learningPercentage + detailedStats.strugglingPercentage) >= 10 && (
+                        <span>{Math.round(detailedStats.learningPercentage + detailedStats.strugglingPercentage)}%</span>
                       )}
                     </div>
                   )}

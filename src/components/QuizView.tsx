@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { QuizState } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import { ErrorPrediction } from '../errorPredictionAI';
@@ -93,6 +93,13 @@ function QuizView({
     return saved !== 'false'; // デフォルトはtrue
   });
   
+  // 初回マウント時に自動でクイズ開始
+  useEffect(() => {
+    if (!hasQuestions) {
+      onStartQuiz();
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = (answer: string, correct: string) => {
     onAnswer(answer, correct);
@@ -147,22 +154,7 @@ function QuizView({
         </div>
       )}
       
-      {!hasQuestions && (
-        <div className="quiz-controls">
-          <button 
-            onClick={onStartQuiz} 
-            className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-xl dark:bg-primary dark:hover:bg-primary-hover"
-          >
-            🎯 クイズ開始
-          </button>
-        </div>
-      )}
-
-      {!hasQuestions ? (
-        <div className="empty-state">
-          <p>📖 条件を選択して「クイズ開始」ボタンを押してください</p>
-        </div>
-      ) : (
+      {hasQuestions && (
         <>
           <ScoreBoard
             mode="translation"
