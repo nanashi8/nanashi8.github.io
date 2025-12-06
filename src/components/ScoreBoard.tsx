@@ -175,7 +175,7 @@ function ScoreBoard({
             }`}
             onClick={() => setActiveTab('settings')}
           >
-            ⚙️ 設定
+            ⚙️ 学習設定
           </button>
         </div>
       )}
@@ -453,28 +453,11 @@ function ScoreBoard({
         </div>
       )}
 
-      {/* 設定タブ */}
+      {/* 学習設定タブ */}
       {activeTab === 'settings' && (
         <div className="score-board-content">
-          <div className="plan-tab-compact">
-            <div className="plan-text-line">
-              <span className="stat-text-label">📚 問題集:</span>
-              <strong className="stat-text-value">{dataSource || '全問題集'}</strong>
-            </div>
-            <div className="plan-text-line">
-              <span className="stat-text-label">🏷️ 関連分野:</span>
-              <strong className="stat-text-value">{category || '全分野'}</strong>
-            </div>
-            <div className="plan-text-line">
-              <span className="stat-text-label">📊 難易度:</span>
-              <strong className="stat-text-value">{difficulty === 'all' ? '全難易度' : difficulty === 'basic' ? '基礎' : difficulty === 'standard' ? '標準' : difficulty === 'advanced' ? '発展' : difficulty}</strong>
-            </div>
-            {wordPhraseFilter && (
-              <div className="plan-text-line">
-                <span className="stat-text-label">📝 単語・熟語:</span>
-                <strong className="stat-text-value">{wordPhraseFilter === 'all' ? '単語・熟語' : wordPhraseFilter === 'word' ? '単語のみ' : wordPhraseFilter === 'phrase' ? '熟語のみ' : '単語・熟語'}</strong>
-              </div>
-            )}
+          <div className="settings-info">
+            <p>⚙️ 学習設定を変更するには、問題選択画面の「学習設定」ボタンを使用してください。</p>
           </div>
         </div>
       )}
