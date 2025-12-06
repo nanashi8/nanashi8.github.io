@@ -255,8 +255,7 @@ function QuizView({
 
       {/* 自動次へ設定 */}
       <div className="filter-group">
-        <label htmlFor="auto-next-toggle-pre">✅ 正解時自動次へ:</label>
-        <div className="auto-next-controls">
+        <div className="checkbox-row">
           <input
             type="checkbox"
             id="auto-next-toggle-pre"
@@ -267,14 +266,14 @@ function QuizView({
             }}
           />
           <label htmlFor="auto-next-toggle-pre" className="checkbox-label">
-            {autoNext ? '有効' : '無効'}
+            正解時自動で次へ：{autoNext ? '有効' : '無効'}
           </label>
         </div>
       </div>
 
       {autoNext && (
         <div className="filter-group">
-          <label htmlFor="auto-next-delay-pre">⏱️ 次への遅延時間:</label>
+          <label htmlFor="auto-next-delay-pre">⏱️ 次への遅延時間：</label>
           <select
             id="auto-next-delay-pre"
             value={autoNextDelay}
@@ -424,7 +423,6 @@ function QuizView({
               
               {/* 自動次へ設定 */}
               <div className="filter-group">
-                <label htmlFor="auto-next-toggle">✅ 正解時自動次へ:</label>
                 <div className="checkbox-row">
                   <input
                     type="checkbox"
@@ -436,14 +434,14 @@ function QuizView({
                     }}
                   />
                   <label htmlFor="auto-next-toggle" className="checkbox-label">
-                    {autoNext ? '有効' : '無効'}
+                    正解時自動で次へ：{autoNext ? '有効' : '無効'}
                   </label>
                 </div>
               </div>
               
               {autoNext && (
                 <div className="filter-group">
-                  <label htmlFor="auto-next-delay">⏱️ 次への遅延時間:</label>
+                  <label htmlFor="auto-next-delay">⏱️ 次への遅延時間：</label>
                   <div className="slider-row">
                     <input
                       type="range"
