@@ -330,10 +330,10 @@ const handleSubmitUnknown = () => {
 英米人が話す際の塊（thought groups）で分割:
 
 1. **主語句**: "Learning", "Modern technology", "In today's world"
-2. **動詞句**: "is", "has transformed", "can access"
-3. **補語・目的語**: "a lifelong journey", "information instantly"
-4. **修飾句**: "that requires dedication", "from anywhere"
-5. **接続詞句**: "However,", "In fact,"
+1. **動詞句**: "is", "has transformed", "can access"
+1. **補語・目的語**: "a lifelong journey", "information instantly"
+1. **修飾句**: "that requires dedication", "from anywhere"
+1. **接続詞句**: "However,", "In fact,"
 
 ### 分割の具体例
 
@@ -386,12 +386,12 @@ const combinedQuestions = [...csvQuestions, ...unknownWords];
    - 再クリック → ハイライト解除
    - 送信ボタン → 和訳/スペルクイズに追加
 
-2. **UI動作**
+1. **UI動作**
    - ホバー → 単語が浮き上がる
    - 単語の意味が常に表示
    - フレーズ和訳が下部に表示
 
-3. **データ連携**
+1. **データ連携**
    - 送信後、unknownWordsに追加
    - 他のタブで新しい問題として出題
 

@@ -18,7 +18,7 @@
    - 機能は全プラットフォームで完全統一
    - モバイル例外は表示最適化のみ許容
 
-2. **[AI開発ワークフロー: クロスプラットフォーム実装指示](./AI_WORKFLOW_CROSS_PLATFORM_INSTRUCTIONS.md)**
+1. **[AI開発ワークフロー: クロスプラットフォーム実装指示](./AI_WORKFLOW_CROSS_PLATFORM_INSTRUCTIONS.md)**
    - プラットフォーム言及の解釈ルール
    - 実装パイプラインとチェックリスト
    - コード実装テンプレート
@@ -33,28 +33,28 @@
 
 #### 📖 必須参照ドキュメント
 1. **`CROSS_PLATFORM_DEVELOPMENT_GUIDE.md`** - 🔴 **最優先・必読**
-2. **`AI_WORKFLOW_CROSS_PLATFORM_INSTRUCTIONS.md`** - 🔴 **最優先・必読**
-3. **`UI_DEVELOPMENT_GUIDELINES.md`** - ⚠️ 必読
-4. **`DESIGN_SYSTEM_RULES.md`** - ⚠️ デザインルール・カラーシステム定義
-5. 該当機能の仕様書（`01-26`シリーズ）
-6. `17-styling.md` - デザインシステム
-7. `18-dark-mode.md` - ダークモード実装
+1. **`AI_WORKFLOW_CROSS_PLATFORM_INSTRUCTIONS.md`** - 🔴 **最優先・必読**
+1. **`UI_DEVELOPMENT_GUIDELINES.md`** - ⚠️ 必読
+1. **`DESIGN_SYSTEM_RULES.md`** - ⚠️ デザインルール・カラーシステム定義
+1. 該当機能の仕様書（`01-26`シリーズ）
+1. `17-styling.md` - デザインシステム
+1. `18-dark-mode.md` - ダークモード実装
 
 #### 🔄 実装フロー
 ```
 1. 要件確認
    └─ 該当機能の仕様書を読む
 
-2. デザインルール確認
+1. デザインルール確認
    ├─ DESIGN_SYSTEM_RULES.mdでカラールール確認
    └─ 既存コンポーネントとの一貫性を確認
 
-3. 実装
+1. 実装
    ├─ CSS変数のみ使用（ハードコード色禁止）
    ├─ レスポンシブ対応（デスクトップ/タブレット/モバイル）
    └─ アクセシビリティ考慮
 
-4. 自動デザインチェック（実装後必須）
+1. 自動デザインチェック（実装後必須）
    ├─ 直接色指定チェック:
    │   grep -rn "background.*#[0-9a-fA-F]\{6\}" src/**/*.css | grep -v "dark-mode"
    ├─ 暗い色の直接使用チェック:
@@ -62,12 +62,12 @@
    └─ white/black直接使用チェック:
        grep -rn ":\s*white\|:\s*black" src/**/*.css | grep -v "dark-mode"
 
-5. テスト
+1. テスト
    ├─ ライトモードで動作確認
    ├─ ダークモードで動作確認
    └─ レスポンシブ表示確認（3サイズ）
 
-6. デプロイ前チェック
+1. デプロイ前チェック
    └─ UI_DEVELOPMENT_GUIDELINES.mdのチェックリスト完了
 ```
 
@@ -106,9 +106,9 @@
 
 #### 📖 必須参照ドキュメント
 1. **`NEW_HORIZON_GRAMMAR_GUIDELINES.md`** - 文並び替え問題（1,017行）
-2. **`NEW_HORIZON_VERB_FORM_GUIDELINES.md`** - 動詞変化問題
-3. **`NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md`** - 穴埋め問題
-4. `15-data-structures.md` - データ構造仕様
+1. **`NEW_HORIZON_VERB_FORM_GUIDELINES.md`** - 動詞変化問題
+1. **`NEW_HORIZON_FILL_IN_BLANK_GUIDELINES.md`** - 穴埋め問題
+1. `15-data-structures.md` - データ構造仕様
 
 #### 🔄 実装フロー（総合文法問題作成：60問/Unit）
 
@@ -119,26 +119,26 @@
    ├─ 単元（Unit 0-9）
    └─ 文法項目（be動詞、一般動詞など）
 
-2. ガイドライン確認
+1. ガイドライン確認
    └─ NEW_HORIZON_GRAMMAR_GUIDELINES.mdの該当単元セクション読む
 
-3. 問題作成
+1. 問題作成
    ├─ 語数: 3-11語（ガイドライン遵守）
    ├─ 難易度: 学年・単元に適合
    ├─ 文法焦点: 単一の文法項目に集中
    └─ NEW HORIZON教科書準拠
 
-4. JSONファイル編集
+1. JSONファイル編集
    ├─ public/data/sentence-ordering-grade{1,2,3}.json
    ├─ units配列の該当unitに追加
    └─ totalQuestions更新
 
-5. バリデーション
+1. バリデーション
    ├─ JSON構文チェック
    ├─ 重複チェック
    └─ 語数・難易度確認
 
-6. 動作確認
+1. 動作確認
    └─ npm run dev で実際に問題が表示されるか確認
 ```
 
@@ -164,7 +164,7 @@
    ├─ 文法項目: be動詞、can、現在進行形など
    └─ 学習目標: 該当文法の理解度チェック
 
-2. 既存Unit確認
+1. 既存Unit確認
    ```bash
    # 既存ファイルの確認
    ls public/data/grammar_grade1_unit*.json
@@ -204,7 +204,7 @@
      "hint": "I am"
    }
 
-2. 並び替え問題（sentenceOrdering: 15問）
+1. 並び替え問題（sentenceOrdering: 15問）
    ├─ beginner: 5問（3-5語）
    ├─ intermediate: 5問（6-8語）
    └─ advanced: 5問（9-11語）
@@ -221,7 +221,7 @@
      "hint": "I am"
    }
 
-3. 一時保存・検証
+1. 一時保存・検証
    ```bash
    python3 << 'SAVE1'
    import json
@@ -274,7 +274,7 @@
      "hint": "Am I"
    }
 
-2. 動詞変化問題（verbForm: 10問）
+1. 動詞変化問題（verbForm: 10問）
    ├─ beginner: 4問（基本形の選択）
    ├─ intermediate: 3問（三人称単数・進行形）
    └─ advanced: 3問（複雑な時制・助動詞後）
@@ -293,7 +293,7 @@
      "hint": "三人称単数"
    }
 
-3. 会話問題（conversation: 5問）
+1. 会話問題（conversation: 5問）
    ├─ beginner: 2問（基本応答）
    ├─ intermediate: 2問（状況判断）
    └─ advanced: 1問（複合的会話）
@@ -315,7 +315,7 @@
      "hint": "I am"
    }
 
-4. 完全版保存
+1. 完全版保存
    ```bash
    python3 << 'SAVE2'
    import json
@@ -392,12 +392,12 @@
     CHECKDUP
     ```
 
-2. 重複修正（発見時）
+1. 重複修正（発見時）
     - 文の一部を変更（動詞・名詞・副詞の置き換え）
     - 文構造を変更（疑問文↔平叙文、主語変更）
     - 再度チェック実行（重複0件まで繰り返し）
 
-3. JSON構文チェック
+1. JSON構文チェック
     ```bash
     # 構文確認
     python3 -c "import json; json.load(open('public/data/grammar_grade{X}_unit{N}.json'))"
@@ -423,7 +423,7 @@
     ├─ 解説が表示される
     └─ ヒントが表示される
 
-2. ビルド・デプロイ
+1. ビルド・デプロイ
     ```bash
     npm run build
     npm run deploy
@@ -519,19 +519,19 @@
    - 会話の各発話も重複チェック対象
    - 重複発見時は即座に修正
 
-2. **難易度分散**
+1. **難易度分散**
    - beginner/intermediate/advancedのバランス
    - 各問題タイプで適切な難易度配分
 
-3. **文法焦点の統一**
+1. **文法焦点の統一**
    - 1 Unit = 1文法項目
    - 複数の文法を混在させない
 
-4. **NEW HORIZON準拠**
+1. **NEW HORIZON準拠**
    - 教科書の語彙・表現を使用
    - 学年レベルに適合した内容
 
-5. **段階的作成**
+1. **段階的作成**
    - 30問ずつ作成・検証
    - 一気に60問作らない（品質低下防止）
 
@@ -586,10 +586,10 @@ done
 
 #### 📖 必須参照ドキュメント
 1. **`PASSAGE_CREATION_GUIDELINES.md`** - 作成標準（635行）
-2. **`PASSAGE_QUICKSTART.md`** - クイックスタートガイド
-3. **`PASSAGE_QUALITY_GUIDE.md`** - 品質基準
-4. **`PASSAGE_PHRASE_JSON_CREATION_GUIDE.md`** - フレーズJSON作成
-5. `21-reading-passages.md` - 長文読解機能仕様
+1. **`PASSAGE_QUICKSTART.md`** - クイックスタートガイド
+1. **`PASSAGE_QUALITY_GUIDE.md`** - 品質基準
+1. **`PASSAGE_PHRASE_JSON_CREATION_GUIDE.md`** - フレーズJSON作成
+1. `21-reading-passages.md` - 長文読解機能仕様
 
 #### 🔄 完全実装パイプライン
 
@@ -604,14 +604,14 @@ done
    ├─ 目標語数: 800-1500 / 1500-2500 / 2500-4000
    └─ トピック選択: 教育的価値・年齢適合性確認
 
-2. 現在のカバー率確認
+1. 現在のカバー率確認
    ```bash
    cd scripts
    python3 vocab_coverage_report.py --vocab ../public/data/vocabulary/all-words.csv
    ```
    → 現在のカバー率を記録（例: 63.06%）
 
-3. テンプレート準備
+1. テンプレート準備
    ```bash
    cp docs/templates/passage-template.txt public/data/passages/{level}-{topic}.txt
    ```
@@ -627,7 +627,7 @@ done
    ├─ 語彙を自然に統合
    └─ 教育的価値を確保
 
-2. フォーマット確認
+1. フォーマット確認
    ├─ セクションヘッダー追加
    ├─ 段落字下げ統一（4スペース）
    ├─ 会話文の正しいフォーマット
@@ -650,7 +650,7 @@ done
    ├─ 自然な英語表現
    └─ 適切な単語数
 
-2. 語彙カバレッジ確認
+1. 語彙カバレッジ確認
    ```bash
    cd scripts
    python3 vocab_coverage_report.py --vocab ../public/data/vocabulary/all-words.csv
@@ -668,19 +668,19 @@ done
    ```
    → public/data/passages-for-phrase-work/{level}-{topic}.txt 生成
 
-2. 日本語フレーズJSONテンプレート生成
+1. 日本語フレーズJSONテンプレート生成
    ```bash
    python3 prepare_japanese_phrase_template.py \
        --passage public/data/passages-for-phrase-work/{level}-{topic}.txt \
        --output public/data/dictionaries/{level}-{topic}-template.json
    ```
 
-3. 日本語訳を追加
+1. 日本語訳を追加
     ├─ {level}-{topic}-template.json を開く
     ├─ 各フレーズの "ja" フィールドに日本語訳を記入
     └─ 保存: public/data/dictionaries/{level}-{topic}.json
 
-4. JSON検証
+1. JSON検証
     ```bash
     # JSON構文チェック
     jq . public/data/dictionaries/{level}-{topic}.json
@@ -725,7 +725,7 @@ done
     git push
     ```
 
-2. デプロイ
+1. デプロイ
     ```bash
     npm run build
     npm run deploy
@@ -801,8 +801,8 @@ cd scripts && python3 vocab_coverage_lemma.py
 
 #### 📖 参照ドキュメント
 1. `24-testing-strategy.md` - テスト戦略
-2. 該当機能の仕様書（`01-26`シリーズ）
-3. UI関連なら `UI_DEVELOPMENT_GUIDELINES.md`
+1. 該当機能の仕様書（`01-26`シリーズ）
+1. UI関連なら `UI_DEVELOPMENT_GUIDELINES.md`
 
 #### 🔄 実装フロー
 ```
@@ -811,22 +811,22 @@ cd scripts && python3 vocab_coverage_lemma.py
    ├─ 再現手順の確認
    └─ 影響範囲の特定
 
-2. 原因調査
+1. 原因調査
    ├─ 該当コードの読解
    ├─ 仕様書との照合
    └─ 関連コンポーネント確認
 
-3. 修正実装
+1. 修正実装
    ├─ 最小限の変更
    ├─ 既存機能への影響最小化
    └─ ガイドライン遵守（UI変更の場合）
 
-4. テスト
+1. テスト
    ├─ バグ再現しないこと確認
    ├─ 関連機能の動作確認
    └─ リグレッションテスト
 
-5. ドキュメント更新
+1. ドキュメント更新
    └─ 必要に応じて仕様書・ガイドライン更新
 ```
 
@@ -842,10 +842,10 @@ cd scripts && python3 vocab_coverage_lemma.py
 
 #### 📖 参照ドキュメント
 1. `01-project-overview.md` - プロジェクト全体像
-2. 関連する機能仕様書（`02-14`シリーズ）
-3. `15-data-structures.md` - データ構造
-4. `16-storage-strategy.md` - ストレージ戦略
-5. `UI_DEVELOPMENT_GUIDELINES.md` - UI実装規則
+1. 関連する機能仕様書（`02-14`シリーズ）
+1. `15-data-structures.md` - データ構造
+1. `16-storage-strategy.md` - ストレージ戦略
+1. `UI_DEVELOPMENT_GUIDELINES.md` - UI実装規則
 
 #### 🔄 実装フロー
 ```
@@ -854,30 +854,30 @@ cd scripts && python3 vocab_coverage_lemma.py
    ├─ 既存機能との統合ポイント
    └─ データ構造の設計
 
-2. 設計
+1. 設計
    ├─ コンポーネント構成
    ├─ 状態管理方法
    ├─ データフロー
    └─ UI/UXデザイン
 
-3. 実装
+1. 実装
    ├─ TypeScript/React実装
    ├─ CSS（変数使用必須）
    ├─ データ処理ロジック
    └─ ストレージ連携
 
-4. テスト
+1. テスト
    ├─ 単体テスト
    ├─ 統合テスト
    ├─ ライト/ダークモード
    └─ レスポンシブ表示
 
-5. ドキュメント作成
+1. ドキュメント作成
    ├─ 機能仕様書（新規または既存更新）
    ├─ データ構造仕様更新
    └─ README更新
 
-6. デプロイ
+1. デプロイ
    └─ 23-deployment.md参照
 ```
 
@@ -896,22 +896,22 @@ cd scripts && python3 vocab_coverage_lemma.py
 
 #### 📖 必須参照ドキュメント
 1. **`19-junior-high-vocabulary.md`** - ⚠️ 中学受験単語仕様（10カテゴリ定義）
-2. **`DATA_MANAGEMENT_GUIDE.md`** - ⚠️ データ管理・型安全性ガイド
-3. `20-junior-high-phrases.md` - 中学受験フレーズ
-4. `15-data-structures.md` - データ構造
-5. `public/data/constants.json` - 定数定義（一元管理）
+1. **`DATA_MANAGEMENT_GUIDE.md`** - ⚠️ データ管理・型安全性ガイド
+1. `20-junior-high-phrases.md` - 中学受験フレーズ
+1. `15-data-structures.md` - データ構造
+1. `public/data/constants.json` - 定数定義（一元管理）
 
 #### 🔄 実装フロー
 ```
 1. 定数確認（一元管理）
    └─ public/data/constants.json で最新の10カテゴリ・難易度定義を確認
 
-2. データ形式確認
+1. データ形式確認
    ├─ CSV形式（7列: 語句,読み,意味,語源等解説,関連語,関連分野,難易度）
    ├─ 10カテゴリシステム（厳密一致必須）
    └─ 難易度定義（beginner/intermediate/advanced）
 
-3. カテゴリ確認（重要）
+1. カテゴリ確認（重要）
    ├─ constants.json または 19-junior-high-vocabulary.md で確認
    │   1. 言語基本（厳格: 代名詞・冠詞・前置詞・接続詞・be動詞・助動詞・基本副詞のみ）
    │   2. 学校・学習
@@ -926,26 +926,26 @@ cd scripts && python3 vocab_coverage_lemma.py
    ├─ 必ず上記10個のいずれか1つを使用
    └─ カテゴリ名は厳密一致（スペース・表記に注意）
 
-4. データ作成
+1. データ作成
    ├─ 重複チェック
    ├─ カテゴリー分類（10カテゴリから1つ選択）
    ├─ 難易度設定（beginner/intermediate/advanced）
    └─ CSV形式エスケープ（カンマ・改行は引用符で囲む）
 
-5. ファイル配置
+1. ファイル配置
    ├─ public/data/vocabulary/junior-high-entrance-words.csv
    └─ public/data/vocabulary/junior-high-entrance-phrases.csv
 
-6. 自動分類（既存データ修正時）
+1. 自動分類（既存データ修正時）
    ├─ 推奨: python3 scripts/classify_words_by_meaning.py（意味ベース・厳格）
    └─ レガシー: python3 scripts/normalize_categories_to_10.py
 
-7. データ検証（必須）
+1. データ検証（必須）
    ├─ npm run validate（ビルド前検証を手動実行）
    ├─ TypeScriptランタイムバリデーション（ブラウザConsole確認）
    └─ エラー0件を確認
 
-8. 動作確認
+1. 動作確認
    ├─ 和訳クイズで表示確認
    ├─ スペルクイズで表示確認
    ├─ 学習設定でカテゴリフィルタ確認（10個+「全ての分野」）
@@ -1078,9 +1078,9 @@ docs/
 ### 1. 指示受領時の初期アクション
 ```
 1. 作業タイプを特定（UI/文法/長文/バグ/新機能/データ）
-2. 該当ワークフローセクションを参照
-3. 必須ドキュメントをリストアップ
-4. 実装フローに従って進行
+1. 該当ワークフローセクションを参照
+1. 必須ドキュメントをリストアップ
+1. 実装フローに従って進行
 ```
 
 ### 2. 並列作業の活用
@@ -1179,7 +1179,7 @@ docs/
    - QUICK_REFERENCE.mdにクイックコマンドとして追加」
    ```
 
-2. **複雑な作業完了時**
+1. **複雑な作業完了時**
    ```
    「この作業は複数のステップを要しました。
    次回から効率化するため、以下をドキュメント化しましょう：
@@ -1188,7 +1188,7 @@ docs/
    - チェックリストの作成」
    ```
 
-3. **データ構造変更時**
+1. **データ構造変更時**
    ```
    「データ構造を変更しました。
    以下を記録しましょう：
@@ -1197,7 +1197,7 @@ docs/
    - 既存データの移行スクリプト作成」
    ```
 
-4. **同じ作業を2回以上実施した時**
+1. **同じ作業を2回以上実施した時**
    ```
    「この作業は2回目です。
    今後も発生する可能性があるため、以下を検討しましょう：
@@ -1206,7 +1206,7 @@ docs/
    - チェックリストの作成」
    ```
 
-5. **バグ修正完了時**
+1. **バグ修正完了時**
    ```
    「このバグは特定の条件で再発する可能性があります。
    トラブルシューティングセクションに追加しましょう。」
@@ -1245,19 +1245,19 @@ ls scripts/*.py
 1. **constants.jsonを更新**（真実の情報源）
    - `public/data/constants.json`の`categories.values`を編集
 
-2. **TypeScript型定義を同期**
+1. **TypeScript型定義を同期**
    - `src/types.ts`の`OFFICIAL_CATEGORIES`を更新
    - 型エクスポートを確認
 
-3. **Pythonスクリプトを確認**
+1. **Pythonスクリプトを確認**
    - `scripts/validate_all_data.py`がconstants.jsonから読み込むため自動同期
    - `scripts/classify_words_by_meaning.py`は手動更新が必要
 
-4. **ドキュメントを更新**
+1. **ドキュメントを更新**
    - `docs/19-junior-high-vocabulary.md`
    - `docs/DATA_MANAGEMENT_GUIDE.md`
 
-5. **検証**
+1. **検証**
    ```bash
    # データ検証
    npm run validate
@@ -1278,16 +1278,16 @@ ls scripts/*.py
    npm run validate
    ```
 
-2. **エラーがある場合**
+1. **エラーがある場合**
    - 10分野不適合 → `python3 scripts/classify_words_by_meaning.py`
    - 難易度不適合 → 該当ファイルを手動修正
 
-3. **成功したらビルド**
+1. **成功したらビルド**
    ```bash
    npm run build  # prebuildフックで自動検証
    ```
 
-4. **ランタイムチェック**
+1. **ランタイムチェック**
    - `npm run dev`でローカル起動
    - ブラウザのConsoleで`[データ整合性警告]`がないか確認
 
@@ -1319,18 +1319,18 @@ ls scripts/*.py
 
 ### ビルドエラー
 1. `npm run build` のエラーメッセージ確認
-2. TypeScript型エラーなら該当ファイル修正
-3. CSS変数未定義なら `src/index.css` または `src/App.css` 確認
+1. TypeScript型エラーなら該当ファイル修正
+1. CSS変数未定義なら `src/index.css` または `src/App.css` 確認
 
 ### デプロイ失敗
 1. `23-deployment.md` 参照
-2. GitHub Pagesの設定確認
-3. ビルドファイル（`dist/`）の存在確認
+1. GitHub Pagesの設定確認
+1. ビルドファイル（`dist/`）の存在確認
 
 ### ダークモード表示異常
 1. `UI_DEVELOPMENT_GUIDELINES.md` のチェックリスト確認
-2. CSS変数使用しているか確認（ハードコード色がないか）
-3. `src/App.css` の `.dark-mode` セクション確認
+1. CSS変数使用しているか確認（ハードコード色がないか）
+1. `src/App.css` の `.dark-mode` セクション確認
 
 ---
 

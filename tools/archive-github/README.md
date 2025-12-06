@@ -36,5 +36,5 @@
 
 このワークフローを復元する場合:
 1. パスを現在の構造に修正 (`nanashi8.github.io/` プレフィックスを削除)
-2. 必要なPythonスクリプトを `scripts/` に復元
-3. `.github/workflows/` にコピー
+1. 必要なPythonスクリプトを `scripts/` に復元
+1. `.github/workflows/` にコピー

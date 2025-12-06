@@ -9,10 +9,10 @@
 ### 現在の自動分割ロジック（`passageAdapter.ts`）
 
 1. **基本単位**: 文（`.` `!` `?`で終わる）
-2. **長文の分割**: 20単語を超える文は接続詞で分割
+1. **長文の分割**: 20単語を超える文は接続詞で分割
    - 対象接続詞: `when`, `if`, `because`, `although`, `while`, `since`, `after`, `before`, `unless`, `until`, `as`, `though`, `whereas`
    - 分割条件: 15単語以上経過後に接続詞が出現した場合
-3. **会話文**: `Speaker: "..."` 形式は1つのフレーズとして扱う
+1. **会話文**: `Speaker: "..."` 形式は1つのフレーズとして扱う
 
 ### フレーズ分割の例
 
@@ -31,7 +31,7 @@ I worked at the same company for a long time—fifteen years—but decided it wa
 
 **分割結果（2フレーズ）:**
 1. `I worked at the same company for a long time—fifteen years—but decided it was time for a change`
-2. `because I was tired of the routine.`
+1. `because I was tired of the routine.`
 
 ## フレーズ訳の要件
 
@@ -53,11 +53,11 @@ I worked at the same company for a long time—fifteen years—but decided it wa
    - 独立して読んでも意味が通じる
    - 主語・述語が明確（文脈で省略可能な場合を除く）
 
-2. **日本語として自然**
+1. **日本語として自然**
    - 直訳ではなく、自然な日本語表現
    - 中学生が読んで理解できるレベル
 
-3. **長さが適切**
+1. **長さが適切**
    - 1フレーズ = 1文または1節
    - 長すぎず、短すぎず（目安: 20-60文字）
 
@@ -81,9 +81,9 @@ I worked at the same company for a long time—fifteen years—but decided it wa
 各フレーズを以下のタイプに分類:
 
 1. **完全文** - 主語・述語が揃った完結した文
-2. **従属節** - 接続詞で始まる節（`because...`, `when...`など）
-3. **会話文** - 引用符で囲まれた発話
-4. **タイトル・見出し** - 段落の見出し
+1. **従属節** - 接続詞で始まる節（`because...`, `when...`など）
+1. **会話文** - 引用符で囲まれた発話
+1. **タイトル・見出し** - 段落の見出し
 
 ### Step 2: タイプ別翻訳方針
 
@@ -162,11 +162,11 @@ I worked at the same company for a long time—fifteen years—but decided it wa
 1. **`japanese`と`phraseMeaning`は同じ値を設定**
    - 互換性のため両方に同じ訳を入れる
 
-2. **英文フレーズは自動分割結果と完全一致**
+1. **英文フレーズは自動分割結果と完全一致**
    - `passageAdapter.ts`の分割ロジックと一致させる
    - 手動で勝手に分割しない
 
-3. **全フレーズに訳を付ける**
+1. **全フレーズに訳を付ける**
    - 空欄や"(未登録)"は禁止
    - 最低限の訳でも必ず入れる
 
@@ -222,11 +222,11 @@ I worked at the same company for a long time—fifteen years—but decided it wa
 ### フレーズ訳生成スクリプトの要件
 
 1. **入力**: `.txt`形式の英文パッセージ
-2. **処理**:
+1. **処理**:
    - `passageAdapter.ts`と同じロジックでフレーズ分割
    - 各フレーズをLLM APIに送信して翻訳
    - 翻訳結果を検証（長さ、自然さ）
-3. **出力**: JSONファイル（`passages-phrase-learning/`）
+1. **出力**: JSONファイル（`passages-phrase-learning/`）
 
 ### スクリプト設計案
 
@@ -234,14 +234,14 @@ I worked at the same company for a long time—fifteen years—but decided it wa
 # scripts/generate_phrase_translations.py
 
 1. パッセージファイル読み込み
-2. フレーズ分割（TypeScriptロジックをPythonで再現）
-3. 各フレーズをLLM APIで翻訳
+1. フレーズ分割（TypeScriptロジックをPythonで再現）
+1. 各フレーズをLLM APIで翻訳
    - プロンプト: "以下の英文フレーズを、中学生にも分かる自然な日本語に翻訳してください"
    - 文脈を渡す: 前後数フレーズも一緒に送信
-4. 翻訳結果を検証
+1. 翻訳結果を検証
    - 長さチェック（20-60文字推奨）
    - キーワード一致チェック（固有名詞など）
-5. JSON形式で出力
+1. JSON形式で出力
 ```
 
 ## パイプラインへの統合
@@ -278,9 +278,9 @@ def validate_phrase_translations(self):
 適切なフレーズ訳を生成・維持するためには:
 
 1. ✅ **自動分割ロジックを理解**する
-2. ✅ **対応性・自然さ・文脈**の3原則を守る
-3. ✅ **品質チェック**を実施する
-4. ✅ **パイプラインで継続的に検証**する
+1. ✅ **対応性・自然さ・文脈**の3原則を守る
+1. ✅ **品質チェック**を実施する
+1. ✅ **パイプラインで継続的に検証**する
 
 これにより、学習者にとって有益な長文読解機能を提供できます。
 

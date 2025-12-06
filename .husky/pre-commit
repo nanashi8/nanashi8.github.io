@@ -1,35 +1,44 @@
 #!/bin/sh
 
 echo "🔍 Pre-commit チェック開始..."
+echo "⚠️  【重要】すべてのエラー・警告を完全に解消する必要があります"
+echo ""
 
 # 1. ステージされたファイルのみをチェック
 echo "📝 変更ファイルを確認中..."
 
-# 2. ESLintチェック（TypeScript/TSXファイルのみ）
+# 2. ESLintチェック（TypeScript/TSXファイルのみ、エラーのみ）
 if git diff --cached --name-only | grep -E '\.(tsx?|jsx?)$' > /dev/null; then
-  echo "🔎 ESLintチェック実行中..."
-  npm run lint || {
-    echo "⚠️  ESLintエラーが検出されました"
-    echo "💡 警告: ESLintエラーがありますが、コミットは継続されます"
-    echo "💡 修正するには: npm run lint を実行してください"
-    # ESLintエラーは警告のみ（exit しない）
+  echo "🔎 ESLintチェック実行中（エラーのみ）..."
+  npm run lint:errors-only || {
+    echo ""
+    echo "❌ ESLintエラーが検出されました"
+    echo "💡 修正方法: npm run lint で詳細を確認"
+    echo "💡 警告も確認: npm run quality:strict"
+    echo "💡 強制コミット: git commit --no-verify（非推奨）"
+    exit 1
   }
 fi
 
 # 3. TypeScript型チェック
 echo "🔍 TypeScript型チェック実行中..."
 npm run typecheck || {
-  echo "⚠️  TypeScript型エラーが検出されました"
-  echo "💡 警告: 型エラーがありますが、コミットは継続されます"
-  # 型エラーは警告のみ（exit しない）
+  echo ""
+  echo "❌ TypeScript型エラーが検出されました"
+  echo "💡 any型、未使用変数も含めてすべて修正してください"
+  echo "💡 修正方法: npm run typecheck で詳細を確認"
+  echo "💡 VS Code問題パネルで0エラーを確認してください"
+  exit 1
 }
 
 # 4. CSSチェック（CSSファイルが変更されている場合）
 if git diff --cached --name-only | grep '\.css$' > /dev/null; then
   echo "🎨 CSSチェック実行中..."
   npm run lint:css || {
+    echo ""
     echo "❌ CSSエラーが検出されました"
-    echo "💡 npm run lint:css:fix で自動修正できます"
+    echo "💡 自動修正: npm run lint:css:fix"
+    echo "💡 手動確認: npm run lint:css"
     exit 1
   }
 fi
@@ -37,12 +46,29 @@ fi
 # 5. ビルドチェック（重要なファイルが変更されている場合）
 if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css)$' > /dev/null; then
   echo "🏗️  ビルドチェック実行中..."
-  npm run build > /dev/null 2>&1 || {
+  BUILD_OUTPUT=$(npm run build 2>&1)
+  BUILD_STATUS=$?
+  
+  if [ $BUILD_STATUS -ne 0 ]; then
+    echo ""
     echo "❌ ビルドに失敗しました"
-    echo "💡 npm run build でエラー内容を確認してください"
+    echo "$BUILD_OUTPUT"
     exit 1
-  }
-  echo "✅ ビルド成功"
+  fi
+  
+  # ビルド警告もチェック
+  if echo "$BUILD_OUTPUT" | grep -i "warning" > /dev/null; then
+    echo ""
+    echo "⚠️  ビルド警告が検出されました"
+    echo "$BUILD_OUTPUT" | grep -i "warning"
+    echo "💡 すべての警告を修正してからコミットしてください"
+    exit 1
+  fi
+  
+  echo "✅ ビルド成功（エラー・警告なし）"
 fi
 
+# 6. 最終確認
+echo ""
 echo "✨ すべてのチェックが完了しました！"
+echo "📊 VS Code問題パネルで0エラー・0警告を確認してください"

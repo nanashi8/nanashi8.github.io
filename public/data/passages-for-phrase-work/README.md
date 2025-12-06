@@ -6,30 +6,30 @@
 
 ### Beginner（初級）- 5ファイル
 1. beginner-cafe-menu.txt
-2. beginner-conversation-daily.txt
-3. beginner-supermarket-shopping.txt
-4. beginner-weather-seasons.txt
-5. beginner-wildlife-park-guide.txt
+1. beginner-conversation-daily.txt
+1. beginner-supermarket-shopping.txt
+1. beginner-weather-seasons.txt
+1. beginner-wildlife-park-guide.txt
 
 ### Intermediate（中級）- 8ファイル
 1. intermediate-career-day.txt
-2. intermediate-community-events.txt
-3. intermediate-exchange-student-australia.txt
-4. intermediate-homestay-america.txt
-5. intermediate-hospital-visit.txt
-6. intermediate-school-events-year.txt
-7. intermediate-school-news.txt
-8. intermediate-science-museum.txt
+1. intermediate-community-events.txt
+1. intermediate-exchange-student-australia.txt
+1. intermediate-homestay-america.txt
+1. intermediate-hospital-visit.txt
+1. intermediate-school-events-year.txt
+1. intermediate-school-news.txt
+1. intermediate-science-museum.txt
 
 ### Advanced（上級）- 8ファイル
 1. advanced-environmental-issues.txt
-2. advanced-family-gathering.txt
-3. advanced-health-statistics.txt
-4. advanced-historical-figures.txt
-5. advanced-international-exchange.txt
-6. advanced-school-festival.txt
-7. advanced-summer-vacation-stories.txt
-8. advanced-technology-future.txt
+1. advanced-family-gathering.txt
+1. advanced-health-statistics.txt
+1. advanced-historical-figures.txt
+1. advanced-international-exchange.txt
+1. advanced-school-festival.txt
+1. advanced-summer-vacation-stories.txt
+1. advanced-technology-future.txt
 
 ## 重要な発見
 
@@ -50,11 +50,11 @@
    - 保存先: `public/data/passages-translations/[パッセージID]-ja.txt`
    - 例: `intermediate-exchange-student-australia-ja.txt`
 
-2. 自動変換スクリプトで各行をフレーズとして処理
+1. 自動変換スクリプトで各行をフレーズとして処理
    - ガイドライン参照: `docs/PASSAGE_PHRASE_JSON_CREATION_GUIDE.md`
    - セクション: 「改行済みファイルからの高速変換」
 
-3. フレーズJSONファイルを生成
+1. フレーズJSONファイルを生成
    - 保存先: `public/data/passages-phrase-learning/[パッセージID].json`
 
 ## 参考資料

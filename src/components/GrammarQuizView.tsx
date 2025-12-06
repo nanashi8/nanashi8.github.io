@@ -429,151 +429,28 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     return selectedAnswer === currentQuestion.correctAnswer;
   };
 
+  // コンポーネントマウント時に自動でクイズ開始
+  useEffect(() => {
+    if (!quizStarted) {
+      handleStartQuiz();
+    }
+  }, [quizType, grade, difficulty]); // 設定変更時に再開始
+  
   return (
     <div className="quiz-view">
-      {!quizStarted && (
-        <>
-          <div className="quiz-controls">
-            <button 
-              onClick={() => setShowSettings(!showSettings)} 
-              className="w-64 px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-blue-300 rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
-            >
-              ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
-            </button>
-            <button onClick={handleStartQuiz} className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary">
-              🎯 クイズ開始
-            </button>
-          </div>
-
-          {showSettings && (
-            <div className="study-settings-panel">
-              <h3>📊 学習設定</h3>
-              
-              <div className="filter-group">
-                <label htmlFor="grade-select">📚 学年・単元:</label>
-                <select
-                  id="grade-select"
-                  value={grade}
-                  onChange={(e) => setGrade(e.target.value as Grade)}
-                  className="select-input"
-                >
-                  <option value="all">全学年の内容</option>
-                  <option value="1">1年の内容</option>
-                  {availableUnits
-                    .filter(u => u.value.startsWith('g1-'))
-                    .map(u => (
-                      <option key={u.value} value={u.value}>1年_{u.label.replace(/^中\d+_/, '')}</option>
-                    ))}
-                  <option value="2">2年の内容</option>
-                  {availableUnits
-                    .filter(u => u.value.startsWith('g2-'))
-                    .map(u => (
-                      <option key={u.value} value={u.value}>2年_{u.label.replace(/^中\d+_/, '')}</option>
-                    ))}
-                  <option value="3">3年の内容</option>
-                  {availableUnits
-                    .filter(u => u.value.startsWith('g3-'))
-                    .map(u => (
-                      <option key={u.value} value={u.value}>3年_{u.label.replace(/^中\d+_/, '')}</option>
-                    ))}
-                </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="quiz-type-select">📝 問題の種類:</label>
-                <select
-                  id="quiz-type-select"
-                  value={quizType}
-                  onChange={(e) => setQuizType(e.target.value as QuizType)}
-                  className="select-input"
-                >
-                  <option value="all">全ての種類</option>
-                  <option value="verb-form">動詞変化</option>
-                  <option value="fill-in-blank">穴埋め</option>
-                  <option value="sentence-ordering">並び替え</option>
-                </select>
-              </div>
-
-              <div className="filter-group">
-                <label htmlFor="difficulty-select">⭐ 難易度:</label>
-                <select
-                  id="difficulty-select"
-                  value={difficulty}
-                  onChange={(e) => setDifficulty(e.target.value as DifficultyLevel)}
-                  className="select-input"
-                  disabled={true}
-                  title="現在、難易度選択はできません（全問題が対象です）"
-                >
-                  <option value="all">全てのレベル</option>
-                </select>
-              </div>
-
-              <LearningLimitsInput
-                learningLimit={learningLimit}
-                reviewLimit={reviewLimit}
-                onLearningLimitChange={setLearningLimit}
-                onReviewLimitChange={setReviewLimit}
-                idPrefix="grammar-"
-              />
-
-              {/* 自動次へ設定 */}
-              <div className="filter-group">
-                <label htmlFor="auto-next-toggle-grammar-pre">✅ 正解時自動次へ:</label>
-                <div className="auto-next-controls">
-                  <input
-                    type="checkbox"
-                    id="auto-next-toggle-grammar-pre"
-                    checked={autoNext}
-                    onChange={(e) => {
-                      setAutoNext(e.target.checked);
-                      localStorage.setItem('autoNext-grammar', e.target.checked.toString());
-                    }}
-                  />
-                  <label htmlFor="auto-next-toggle-grammar-pre" className="checkbox-label">
-                    {autoNext ? '有効' : '無効'}
-                  </label>
-                </div>
-              </div>
-
-              {autoNext && (
-                <div className="filter-group">
-                  <label htmlFor="auto-next-delay-grammar-pre">⏱️ 次への遅延時間:</label>
-                  <select
-                    id="auto-next-delay-grammar-pre"
-                    value={autoNextDelay}
-                    onChange={(e) => {
-                      const delay = parseInt(e.target.value);
-                      setAutoNextDelay(delay);
-                      localStorage.setItem('autoNextDelay-grammar', delay.toString());
-                    }}
-                    className="select-input"
-                  >
-                    <option value="500">0.5秒</option>
-                    <option value="1000">1秒</option>
-                    <option value="1500">1.5秒</option>
-                    <option value="2000">2秒</option>
-                    <option value="3000">3秒</option>
-                  </select>
-                </div>
-              )}
-            </div>
-          )}
-
-          {error && (  
-            <div className="error-message">
-              <p>❌ {error}</p>
-            </div>
-          )}
-
-          {!error && (
-            <div className="empty-state">
-              <p>📖 条件を選択して「クイズ開始」ボタンを押してください</p>
-            </div>
-          )}
-        </>
+      {error && (
+        <div className="error-message">
+          <p>❌ {error}</p>
+          <button 
+            onClick={handleStartQuiz} 
+            className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            再試行
+          </button>
+        </div>
       )}
 
-      {quizStarted && currentQuestion && (
+      {!error && quizStarted && currentQuestion && (
         <>
           <ScoreBoard
             mode="grammar"

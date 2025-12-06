@@ -7,30 +7,30 @@
 ### 🏗️ 基礎仕様（システム全体）
 
 1. **[00-overview.md](./00-overview.md)** - システム全体概要
-2. **[05-data-structures.md](./05-data-structures.md)** - データ構造仕様
-3. **[06-styling.md](./06-styling.md)** - スタイリング仕様
+1. **[05-data-structures.md](./05-data-structures.md)** - データ構造仕様
+1. **[06-styling.md](./06-styling.md)** - スタイリング仕様
 
 ### 📝 データ仕様
 
-4. **[07-junior-high-entrance-vocabulary.md](./07-junior-high-entrance-vocabulary.md)** - 高校受験英単語集仕様
-5. **[08-junior-high-entrance-phrases.md](./08-junior-high-entrance-phrases.md)** - 高校受験英熟語集仕様
+1. **[07-junior-high-entrance-vocabulary.md](./07-junior-high-entrance-vocabulary.md)** - 高校受験英単語集仕様
+1. **[08-junior-high-entrance-phrases.md](./08-junior-high-entrance-phrases.md)** - 高校受験英熟語集仕様
 
 ### 🎮 コア機能仕様（クイズモード）
 
-6. **[01-translation-quiz.md](./01-translation-quiz.md)** - 和訳クイズ仕様
-7. **[02-spelling-quiz.md](./02-spelling-quiz.md)** - スペルクイズ仕様
-8. **[03-reading-comprehension.md](./03-reading-comprehension.md)** - 長文読解仕様
-9. **[09-comprehensive-reading-passages.md](./09-comprehensive-reading-passages.md)** - 包括的長文読解仕様
+1. **[01-translation-quiz.md](./01-translation-quiz.md)** - 和訳クイズ仕様
+1. **[02-spelling-quiz.md](./02-spelling-quiz.md)** - スペルクイズ仕様
+1. **[03-reading-comprehension.md](./03-reading-comprehension.md)** - 長文読解仕様
+1. **[09-comprehensive-reading-passages.md](./09-comprehensive-reading-passages.md)** - 包括的長文読解仕様
 
 ### 🤖 AI・学習支援機能
 
-10. **[10-adaptive-learning-ai.md](./10-adaptive-learning-ai.md)** - 適応的学習AI・進捗管理システム仕様
+1. **[10-adaptive-learning-ai.md](./10-adaptive-learning-ai.md)** - 適応的学習AI・進捗管理システム仕様
 
 ### 📊 UI機能仕様
 
-11. **[12-stats-view.md](./12-stats-view.md)** - 統計・分析画面仕様
-12. **[11-settings-view.md](./11-settings-view.md)** - 設定画面仕様
-13. **[04-question-creator.md](./04-question-creator.md)** - 問題編集画面仕様
+1. **[12-stats-view.md](./12-stats-view.md)** - 統計・分析画面仕様
+1. **[11-settings-view.md](./11-settings-view.md)** - 設定画面仕様
+1. **[04-question-creator.md](./04-question-creator.md)** - 問題編集画面仕様
 
 ### 参考資料
 
@@ -41,19 +41,19 @@
 ### 新機能開発時
 
 1. 該当する仕様書を参照
-2. データ構造・UIコンポーネント・スタイルを確認
-3. 既存機能との整合性を保ちながら実装
+1. データ構造・UIコンポーネント・スタイルを確認
+1. 既存機能との整合性を保ちながら実装
 
 ### 機能復元時
 
 1. 失われた機能の仕様書を開く
-2. 「実装詳細」セクションを参照
-3. 「機能復元手順」に従って実装を復元
+1. 「実装詳細」セクションを参照
+1. 「機能復元手順」に従って実装を復元
 
 ### メンテナンス時
 
 1. 関連する仕様書を更新
-2. 変更履歴に日付と変更内容を記録
+1. 変更履歴に日付と変更内容を記録
 
 ## 📋 仕様書の更新ルール
 

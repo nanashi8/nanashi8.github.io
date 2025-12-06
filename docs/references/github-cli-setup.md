@@ -24,13 +24,13 @@ gh auth login
 ```
 手動でトークンを生成して貼り付ける方法:
 1. https://github.com/settings/tokens にアクセス
-2. "Generate new token (classic)" をクリック
-3. 必要なスコープを選択:
+1. "Generate new token (classic)" をクリック
+1. 必要なスコープを選択:
    - `repo` - リポジトリへのフルアクセス
    - `read:org` - 組織情報の読み取り
    - `admin:public_key` - SSH公開鍵の管理
-4. トークンをコピー
-5. `gh auth login` で貼り付け
+1. トークンをコピー
+1. `gh auth login` で貼り付け
 
 #### C. SSH鍵アップロード
 既存のSSH鍵をGitHubアカウントに自動アップロードする方法です。
@@ -103,7 +103,7 @@ GitHubアカウントへのアクセス権限を持つトークン文字列:
 
 **解決方法**:
 1. 新しいトークンを生成: https://github.com/settings/tokens
-2. または、ブラウザ認証を使用: `gh auth login --web`
+1. または、ブラウザ認証を使用: `gh auth login --web`
 
 ### エラー: error connecting to nanashi8
 
@@ -111,8 +111,8 @@ GitHubアカウントへのアクセス権限を持つトークン文字列:
 
 **解決方法**:
 1. `gh auth logout` で認証をクリア
-2. `gh auth login` を再実行
-3. "Where do you use GitHub?" で **GitHub.com** を選択
+1. `gh auth login` を再実行
+1. "Where do you use GitHub?" で **GitHub.com** を選択
 
 ### エラー: check your internet connection
 
@@ -122,7 +122,7 @@ GitHubアカウントへのアクセス権限を持つトークン文字列:
 
 **解決方法**:
 1. インターネット接続を確認
-2. `gh auth logout` してから `gh auth login` を再実行
+1. `gh auth logout` してから `gh auth login` を再実行
 
 ## 認証状態の確認
 
@@ -161,15 +161,15 @@ gh issue create
    - 他人と共有しない
    - 定期的に更新する
 
-2. **最小権限の原則**
+1. **最小権限の原則**
    - 必要なスコープのみを付与
    - 不要になったトークンは削除
 
-3. **有効期限の設定**
+1. **有効期限の設定**
    - 長期間有効なトークンは避ける
    - 推奨: 30日〜90日
 
-4. **ブラウザ認証を推奨**
+1. **ブラウザ認証を推奨**
    - トークンの手動管理が不要
    - 自動的に適切な権限が設定される
 

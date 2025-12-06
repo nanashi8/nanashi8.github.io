@@ -3,8 +3,8 @@
 ## Objectives
 Establish coherent, pedagogically tiered English passages for intermediate and advanced levels that: 
 1. Reinforce previously acquired high‑frequency vocabulary while incrementally introducing mid/high utility academic and thematic terms.
-2. Model discourse structures appropriate to CEFR B1→B2 (intermediate) and B2→C1 (advanced) transitions.
-3. Provide lexical, syntactic, and rhetorical scaffolding for analytical tasks (summarizing, contrasting, inferring cause/effect, evaluating arguments).
+1. Model discourse structures appropriate to CEFR B1→B2 (intermediate) and B2→C1 (advanced) transitions.
+1. Provide lexical, syntactic, and rhetorical scaffolding for analytical tasks (summarizing, contrasting, inferring cause/effect, evaluating arguments).
 
 ## Level Differentiation Summary
 | Dimension | Intermediate (B1→B2) | Advanced (B2→C1) |
@@ -34,16 +34,16 @@ Advanced Themes (select 3):
 ## Structural Templates
 Intermediate (per passage):
 1. Context Setup (2–3 sentences) – concrete, relatable scenario.
-2. Explanatory Development (3–4 sentences) – mechanism or process with cause/effect signalling.
-3. Example Cluster (2–3 sentences) – two contrasting mini-examples (A vs B) to solidify pattern.
-4. Light Reflection (2 sentences) – benefit, caution, or next step.
+1. Explanatory Development (3–4 sentences) – mechanism or process with cause/effect signalling.
+1. Example Cluster (2–3 sentences) – two contrasting mini-examples (A vs B) to solidify pattern.
+1. Light Reflection (2 sentences) – benefit, caution, or next step.
 
 Advanced (per passage):
 1. Framing & Thesis – situate issue + nuanced claim.
-2. Layered Expansion – elaborate claim using data, principle, or theoretical lens.
-3. Counterpoint – articulate credible opposing view; fair representation.
-4. Rebuttal / Synthesis – integrate, weigh trade-offs, refine stance.
-5. Forward-Looking / Implication – policy, ethical, or strategic outlook.
+1. Layered Expansion – elaborate claim using data, principle, or theoretical lens.
+1. Counterpoint – articulate credible opposing view; fair representation.
+1. Rebuttal / Synthesis – integrate, weigh trade-offs, refine stance.
+1. Forward-Looking / Implication – policy, ethical, or strategic outlook.
 
 ## Lexical Progression
 Intermediate: Introduce mid-frequency verbs (adjust, allocate, emerge), adjectives (reliable, subtle), and nouns (metrics, barrier) with immediate paraphrase or context clue.
@@ -78,11 +78,11 @@ Will extend `passage_validator.py` to output:
 
 ## Rewrite Workflow
 1. Draft intermediate passage 1 using template; run validator; adjust high frequency ratio.
-2. Complete remaining intermediate passages ensuring recycled new terms.
-3. Draft advanced passage 1 emphasizing balanced counterargument.
-4. Integrate validator extensions; re-run all.
-5. Peer-style manual pass: coherence, collocations, lexical variety.
-6. Update `index.json` with new counts + vocabulary metrics.
+1. Complete remaining intermediate passages ensuring recycled new terms.
+1. Draft advanced passage 1 emphasizing balanced counterargument.
+1. Integrate validator extensions; re-run all.
+1. Peer-style manual pass: coherence, collocations, lexical variety.
+1. Update `index.json` with new counts + vocabulary metrics.
 
 ## Future Enhancements
 - Add semantic field tagging (health, policy, tech) for adaptive sequencing.
