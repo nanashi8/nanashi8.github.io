@@ -255,3 +255,83 @@ export interface UserLearningProfile {
   // 最終更新日時
   lastUpdated: number;
 }
+
+// 暗記タブ用の型定義
+export interface MemorizationCardState {
+  showWord: boolean;           // 単語（常に表示）
+  showMeaning: boolean;        // 意味（初期: 表示）
+  showPronunciation: boolean;  // 読み（タップで切り替え）
+  showExample: boolean;        // 例文（タップで切り替え）
+  showEtymology: boolean;      // 語源（タップで切り替え）
+  showRelated: boolean;        // 関連語（タップで切り替え）
+}
+
+// 暗記行動の記録
+export interface MemorizationBehavior {
+  word: string;
+  timestamp: number;
+  viewDuration: number;        // 滞在秒数
+  swipeDirection: 'left' | 'right'; // スワイプ方向
+  sessionId: string;
+  consecutiveViews: number;    // このセッション内での連続表示回数
+}
+
+// 学習曲線の予測データ
+export interface MemorizationCurve {
+  word: string;
+  exposures: Array<{
+    timestamp: number;
+    viewDuration: number;
+    swipeDirection: 'left' | 'right';
+    confidence: number;        // 0-1: AIが推定する定着度
+  }>;
+  predictedMastery: number;    // 0-1: 次回右スワイプする確率
+  optimalNextReview: number;   // 最適な次回復習時刻
+  learningVelocity: number;    // 学習速度（曲線の勾配）
+}
+
+// 個人別学習パラメータ
+export interface PersonalizedLearningProfile {
+  userId: string;
+  
+  // 学習速度プロファイル
+  learningSpeed: 'fast' | 'medium' | 'slow';
+  
+  // 最適な復習間隔（個人差）
+  optimalReviewIntervals: {
+    firstReview: number;   // 初回復習（分）
+    secondReview: number;  // 2回目（時間）
+    thirdReview: number;   // 3回目（日）
+  };
+  
+  // 滞在時間の閾値（統計から算出）
+  viewDurationThresholds: {
+    quick: number;      // さっと見た
+    normal: number;     // 通常
+    struggling: number; // 苦戦中
+  };
+  
+  // 予測モデルの信頼度
+  modelConfidence: number; // 0-1
+  
+  // 較正データ
+  calibrationData: {
+    totalPredictions: number;
+    correctPredictions: number;
+    overestimations: number;  // 過大評価した回数
+    underestimations: number; // 過小評価した回数
+  };
+}
+
+// 暗記タブの学習設定
+export interface MemorizationSettings {
+  // 音声読み上げ
+  autoVoice: boolean;          // 自動音声読み上げ
+  voiceWithMeaning: boolean;   // 意味も読み上げ
+  
+  // インターリービング（異なる分野を混ぜる）
+  interleavingMode: 'off' | 'medium' | 'high';
+  
+  // カード表示設定（永続化）
+  cardDisplaySettings: MemorizationCardState;
+}
