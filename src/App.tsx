@@ -332,7 +332,7 @@ function App() {
         // 中級1800単語データを読み込み
         let intermediateWordsQuestions: Question[] = [];
         try {
-          const intermediateWordsResponse = await fetch('/data/vocabulary/intermediate-1800-words.csv');
+          const intermediateWordsResponse = await fetch('/data/vocabulary/high-school-intermediate-words.csv');
           const intermediateWordsText = await intermediateWordsResponse.text();
           intermediateWordsQuestions = parseCSV(intermediateWordsText).map(q => ({ ...q, source: 'intermediate' as const }));
           console.log(`📚 中級1800単語を読み込みました: ${intermediateWordsQuestions.length}個`);
@@ -343,7 +343,7 @@ function App() {
         // 中級1800熟語データを読み込み
         let intermediatePhrasesQuestions: Question[] = [];
         try {
-          const intermediatePhrasesResponse = await fetch('/data/vocabulary/intermediate-1800-phrases.csv');
+          const intermediatePhrasesResponse = await fetch('/data/vocabulary/high-school-intermediate-phrases.csv');
           const intermediatePhrasesText = await intermediatePhrasesResponse.text();
           intermediatePhrasesQuestions = parseCSV(intermediatePhrasesText).map(q => ({ ...q, source: 'intermediate' as const }));
           console.log(`📚 中級1800熟語を読み込みました: ${intermediatePhrasesQuestions.length}個`);
