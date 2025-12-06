@@ -259,6 +259,9 @@ function SpellingView({
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
 
+    // 回答時刻を更新（ScoreBoard更新用）- 回答直後に更新
+    setLastAnswerTime(Date.now());
+
     // 単語進捗を更新
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'spelling');
