@@ -173,11 +173,11 @@ Mom: "It's seven o'clock," she replied.
 
 ### Grammar Rules
 1. **Subject-verb agreement**: Always verify
-2. **Verb tense consistency**: Maintain consistent tense within sections
-3. **Articles (a/an/the)**:
+1. **Verb tense consistency**: Maintain consistent tense within sections
+1. **Articles (a/an/the)**:
    - Use "an" before vowel sounds: `an apple`, `an hour`
    - Use "a" before consonant sounds: `a university`, `a European`
-4. **Countable vs uncountable nouns**:
+1. **Countable vs uncountable nouns**:
    - Use "number of" with countable: `number of deaths`, `number of people`
    - Use "amount of" with uncountable: `amount of water`, `amount of money`
 
@@ -199,10 +199,10 @@ Mom: "It's seven o'clock," she replied.
 
 ### Vocabulary Integration Principles
 1. **Natural integration**: Words must fit context authentically
-2. **Educational value**: Vocabulary should be useful for students
-3. **Thematic coherence**: Related words grouped by topic
-4. **Progressive difficulty**: Match vocabulary to passage level
-5. **No forced vocabulary**: Never sacrifice natural English for coverage
+1. **Educational value**: Vocabulary should be useful for students
+1. **Thematic coherence**: Related words grouped by topic
+1. **Progressive difficulty**: Match vocabulary to passage level
+1. **No forced vocabulary**: Never sacrifice natural English for coverage
 
 ### Checking Coverage
 Run vocabulary coverage report:
@@ -221,10 +221,10 @@ Words unused: XXXX
 ### Expanding for Coverage
 When expanding passages to improve coverage:
 1. Identify thematically appropriate unused words
-2. Create natural sections that incorporate these words
-3. Maintain narrative flow and educational quality
-4. Insert before conclusion sections
-5. Verify coverage improvement after each batch
+1. Create natural sections that incorporate these words
+1. Maintain narrative flow and educational quality
+1. Insert before conclusion sections
+1. Verify coverage improvement after each batch
 
 **Coverage Expansion Strategies:**
 - Add contextual detail sections
@@ -334,46 +334,46 @@ def fix_dashes(content):
 
 ### Step 1: Planning
 1. Select topic appropriate for target level
-2. Research content for accuracy
-3. Identify target vocabulary to integrate
-4. Outline main sections
+1. Research content for accuracy
+1. Identify target vocabulary to integrate
+1. Outline main sections
 
 ### Step 2: Drafting
 1. Write initial draft in plain text
-2. Focus on content quality and natural English
-3. Aim for target word count
-4. Include vocabulary naturally
+1. Focus on content quality and natural English
+1. Aim for target word count
+1. Include vocabulary naturally
 
 ### Step 3: Formatting
 1. Add section headers
-2. Apply 4-space paragraph indentation
-3. Format dialogue correctly
-4. Fix em dashes
+1. Apply 4-space paragraph indentation
+1. Format dialogue correctly
+1. Fix em dashes
 
 ### Step 4: Grammar & Style Review
 1. Check subject-verb agreement
-2. Verify tense consistency
-3. Review article usage (a/an/the)
-4. Check countable/uncountable nouns
-5. Verify punctuation
+1. Verify tense consistency
+1. Review article usage (a/an/the)
+1. Check countable/uncountable nouns
+1. Verify punctuation
 
 ### Step 5: Vocabulary Check
 1. Run coverage report
-2. Identify integration opportunities
-3. Add natural expansions if needed
-4. Re-check coverage
+1. Identify integration opportunities
+1. Add natural expansions if needed
+1. Re-check coverage
 
 ### Step 6: Quality Assurance
 1. Run automated checks
-2. Read aloud for naturalness
-3. Verify educational value
-4. Check against all guidelines
+1. Read aloud for naturalness
+1. Verify educational value
+1. Check against all guidelines
 
 ### Step 7: Publication
 1. Save to `public/data/passages/`
-2. Update related dictionaries if needed
-3. Commit with descriptive message
-4. Push to GitHub
+1. Update related dictionaries if needed
+1. Commit with descriptive message
+1. Push to GitHub
 
 ---
 
@@ -410,9 +410,9 @@ def fix_dashes(content):
 
 ### Vocabulary Categories to Prioritize
 1. **High-frequency academic words**: Essential for student learning
-2. **Thematically clustered words**: Easier to integrate naturally
-3. **Common collocations**: Natural in context
-4. **Cross-topic vocabulary**: Versatile usage
+1. **Thematically clustered words**: Easier to integrate naturally
+1. **Common collocations**: Natural in context
+1. **Cross-topic vocabulary**: Versatile usage
 
 ### Words Difficult to Integrate Naturally
 - Highly specialized technical terms (biochemistry, nanotechnology)
@@ -619,10 +619,10 @@ This document should be updated whenever:
 
 ### Common Errors to Avoid
 1. It's vs its (it's = it is)
-2. Their vs there vs they're
-3. Your vs you're (you're = you are)
-4. Affect vs effect (affect = verb, effect = noun usually)
-5. Then vs than (then = time, than = comparison)
+1. Their vs there vs they're
+1. Your vs you're (you're = you are)
+1. Affect vs effect (affect = verb, effect = noun usually)
+1. Then vs than (then = time, than = comparison)
 
 ---
 

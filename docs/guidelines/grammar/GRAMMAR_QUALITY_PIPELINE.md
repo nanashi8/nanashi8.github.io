@@ -40,9 +40,9 @@ G1/G2/G3の文法問題作成で培った品質保証の仕組みとベストプ
 
 #### 設計原則
 1. **ユニーク性**: 全問題で英文がユニークであること
-2. **完全性**: 必須フィールドに空文字列を許可しない
-3. **一貫性**: Unit間で重複がないこと
-4. **多様性**: 同じ文法パターンでも異なる語彙を使用
+1. **完全性**: 必須フィールドに空文字列を許可しない
+1. **一貫性**: Unit間で重複がないこと
+1. **多様性**: 同じ文法パターンでも異なる語彙を使用
 
 ---
 
@@ -55,9 +55,9 @@ def build_unit_questions():
     """
     ベストプラクティス:
     1. 各Unitで20問を生成
-    2. パターン配列で管理 (japanese, sentence, answer)
-    3. 語彙の多様性を確保
-    4. 同じ主語/動詞の連続使用を避ける
+    1. パターン配列で管理 (japanese, sentence, answer)
+    1. 語彙の多様性を確保
+    1. 同じ主語/動詞の連続使用を避ける
     """
     patterns = [
         ("日本語訳1", "English sentence 1 ____.", "answer1"),
@@ -117,8 +117,8 @@ def detect_duplicates(questions):
     """
     重複パターンの検出:
     1. 完全一致 (sentence)
-    2. 日本語重複 (japanese)
-    3. ID重複 (id)
+    1. 日本語重複 (japanese)
+    1. ID重複 (id)
     """
     from collections import Counter
     
@@ -136,8 +136,8 @@ def validate_cross_files(vf_data, fb_data, so_data):
     """
     3ファイル間の整合性チェック:
     1. ID一致 (vf-xxx → fb-xxx → so-xxx)
-    2. 日本語一致
-    3. 問題数一致
+    1. 日本語一致
+    1. 問題数一致
     """
     for i, (vf, fb, so) in enumerate(zip(vf_units, fb_units, so_units)):
         assert vf['japanese'] == fb['japanese'] == so['japanese']
@@ -196,8 +196,8 @@ def calculate_quality_metrics(data):
     """
     品質指標:
     1. ユニーク度 = unique_sentences / total_sentences * 100
-    2. 完全性 = filled_fields / total_fields * 100
-    3. 多様性 = unique_vocabulary / total_vocabulary * 100
+    1. 完全性 = filled_fields / total_fields * 100
+    1. 多様性 = unique_vocabulary / total_vocabulary * 100
     """
     total = len(all_sentences)
     unique = len(set(all_sentences))
@@ -382,9 +382,9 @@ def generate_with_llm(grammar_point, count=20):
     """
     LLMを使った問題生成:
     1. 文法ポイントを指定
-    2. 多様性の制約を追加
-    3. 既存問題との重複チェック
-    4. 品質検証後に採用
+    1. 多様性の制約を追加
+    1. 既存問題との重複チェック
+    1. 品質検証後に採用
     """
     prompt = f"""
     Create {count} unique English grammar questions for {grammar_point}.
@@ -422,7 +422,7 @@ def generate_with_llm(grammar_point, count=20):
 cp scripts/rebuild_grade2_complete.py scripts/build_new_grammar.py
 ```
 
-2. **文法ポイントを定義**
+1. **文法ポイントを定義**
 ```python
 def build_unit0_your_grammar():
     patterns = [
@@ -431,22 +431,22 @@ def build_unit0_your_grammar():
     ]
 ```
 
-3. **生成実行**
+1. **生成実行**
 ```bash
 python3 scripts/build_new_grammar.py
 ```
 
-4. **検証実行**
+1. **検証実行**
 ```bash
 python3 scripts/validate_grammar_v2.py public/data/your-grammar.json
 ```
 
-5. **品質確認**
+1. **品質確認**
 - ユニーク度 ≥ 99%
 - 完全性 = 100%
 - 重複 ≤ 2
 
-6. **デプロイ**
+1. **デプロイ**
 ```bash
 git add public/data/your-grammar.json
 git commit -m "Add new grammar: [文法名] ([問題数]問, [ユニーク度]%)"
@@ -519,8 +519,8 @@ Overall:
 
 このパイプラインを活用することで:
 1. **高品質な問題を効率的に生成**できる
-2. **データ破損を早期に検出**できる
-3. **継続的な品質改善**が可能
-4. **再現可能なプロセス**を確立
+1. **データ破損を早期に検出**できる
+1. **継続的な品質改善**が可能
+1. **再現可能なプロセス**を確立
 
 **品質の鍵**: 生成 → 検証 → 修正 → 再検証のサイクルを徹底すること

@@ -42,7 +42,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>('all');
   const [error, setError] = useState<string | null>(null);
   const [wordDictionary, setWordDictionary] = useState<Map<string, Question>>(new Map());
-  const [readingDictionary, setReadingDictionary] = useState<Map<string, any>>(new Map());
+  const [readingDictionary, setReadingDictionary] = useState<Map<string, Record<string, string>>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [readingStarted, setReadingStarted] = useState(false);
@@ -231,10 +231,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         }
         return res.json();
       })
-      .then((dictData) => {
-        const readingDict = new Map<string, any>();
+      .then((dictData: Record<string, Record<string, string>>) => {
+        const readingDict = new Map<string, Record<string, string>>();
         
-        Object.entries(dictData).forEach(([word, info]: [string, any]) => {
+        Object.entries(dictData).forEach(([word, info]) => {
           readingDict.set(word.toLowerCase(), info);
         });
         
@@ -362,13 +362,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     // 古いLocalStorageデータをクリア（容量節約）
     try {
       localStorage.removeItem('reading-passages-data');
-    } catch (e) {
+    } catch (_e) {
       // エラーは無視
     }
     
     // 保存済みの「分からない単語」状態を読み込む
     const readingProgressKey = 'reading-unknown-words-state';
-    let savedProgress: any[] = [];
+    let savedProgress: Array<{id: string; unknownWords?: string[]}> = [];
     try {
       const stored = localStorage.getItem(readingProgressKey);
       if (stored) {
@@ -386,15 +386,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           
           // 保存済みの「分からない単語」状態を復元
           const restoredPassages = loadedPassages.map(passage => {
-            const saved = savedProgress.find((p: any) => p.id === passage.id);
-            if (saved && saved.unknownWords && saved.unknownWords.length > 0) {
+            const saved = savedProgress.find((p) => p.id === passage.id);
+            if (saved?.unknownWords && saved.unknownWords.length > 0) {
               return {
                 ...passage,
                 phrases: passage.phrases.map((phrase, pIdx) => ({
                   ...phrase,
                   segments: phrase.segments.map((seg, sIdx) => ({
                     ...seg,
-                    isUnknown: saved.unknownWords.includes(`${pIdx}-${sIdx}`)
+                    isUnknown: saved.unknownWords?.includes(`${pIdx}-${sIdx}`) ?? false
                   }))
                 }))
               };

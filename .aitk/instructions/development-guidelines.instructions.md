@@ -21,6 +21,27 @@ AI開発アシスタント（GitHub Copilot等）が開発支援する際の必�
 
 ## 🚨 **絶対に守るべき原則**
 
+### 0. **すべてのエラー・警告を完全に解消する（最優先）**
+
+- ✅ **動作に影響しないエラーも必ず修正**
+  - TypeScriptエラー（型エラー、未使用変数等）
+  - ESLintエラー・警告
+  - マークダウンリンター警告（リスト番号、テーブル、リンク等）
+  - GitHub Actions警告（環境変数アクセス等）
+  - Python import警告（開発ツールでも）
+  - その他すべての警告・エラー
+
+- ❌ **「動作に影響しないから放置」は禁止**
+  - リンター警告の無視
+  - 型エラーの放置
+  - ビルド警告の無視
+  - 未使用変数の放置
+
+- 📖 **理由**: 
+  - 小さな警告の蓄積がコード品質を低下させる
+  - 重要なエラーが警告に埋もれて見逃される
+  - メンテナンス性が悪化する
+
 ### 1. **CSS変更は極めて慎重に**
 
 - ❌ **自動化ツールでのCSS変更は禁止**
@@ -32,9 +53,9 @@ AI開発アシスタント（GitHub Copilot等）が開発支援する際の必�
 
 - ✅ **CSS変更の正しい手順**:
   1. 1箇所ずつ手動で変更
-  2. `npm run build` で確認
-  3. Simple Browserで目視確認
-  4. コミット
+  1. `npm run build` で確認
+  1. Simple Browserで目視確認
+  1. コミット
 
 - 📖 **詳細**: `docs/CSS_DEVELOPMENT_GUIDELINES.md`
 
@@ -82,9 +103,26 @@ const data: any = getData();
 
 ```bash
 # 必ず実行（pre-commitフックで自動実行）
-npm run typecheck  # TypeScript型エラー0件
-npm run lint:css   # CSSリントエラー0件
-npm run build      # ビルド成功
+npm run typecheck  # TypeScript型エラー0件（必須）
+npm run lint       # ESLintエラー・警告0件（必須）
+npm run lint:css   # CSSリントエラー0件（必須）
+npm run build      # ビルド成功、警告0件（必須）
+
+# すべてのエラー・警告を確認
+# VS Codeの問題パネルで0件を確認してからコミット
+```
+
+### 6. **エラー・警告ゼロの維持**
+
+```bash
+# 開発中に常に確認
+# VS Code問題パネル: 0エラー、0警告
+
+# コミット前に必ず確認
+git status
+npm run typecheck && npm run lint && npm run lint:css && npm run build
+
+# すべてが✅であることを確認してからコミット
 ```
 
 ---
@@ -99,13 +137,13 @@ npm run build      # ビルド成功
    - 重複禁止ルール
    - 安全な変更手順
 
-2. **TypeScript/React開発ガイドライン** (`docs/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md`)
+1. **TypeScript/React開発ガイドライン** (`docs/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md`)
    - コンポーネント設計
    - Props型定義
    - 状態管理（useState, useReducer）
    - カスタムフック
 
-3. **品質管理パイプライン** (`docs/QUALITY_PIPELINE.md`)
+1. **品質管理パイプライン** (`docs/QUALITY_PIPELINE.md`)
    - Git Hooks
    - CI/CD
    - テスト戦略
@@ -366,9 +404,9 @@ npm run build
 
 **教訓**:
 1. CSS変更は手動のみ
-2. 1箇所ずつ変更
-3. 必ずビルド確認
-4. Simple Browserで目視確認
+1. 1箇所ずつ変更
+1. 必ずビルド確認
+1. Simple Browserで目視確認
 
 ### TypeScriptエラー削減の成果
 

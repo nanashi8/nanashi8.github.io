@@ -23,18 +23,18 @@
 ### 優先度: 高
 
 1. **ComprehensiveReadingView.tsx の重複表示**（すぐ修正すべき）
-2. **Sustainability の固有名詞誤記**（目立つエラー）
-3. **Advanced-1.json の phrase-3, phrase-15**（読点欠落が顕著）
+1. **Sustainability の固有名詞誤記**（目立つエラー）
+1. **Advanced-1.json の phrase-3, phrase-15**（読点欠落が顕著）
 
 ### 優先度: 中
 
-4. その他の主要な固有名詞誤記（Solar, Renewable, Electric など）
-5. Intermediate パッセージの並列要素読点欠落
+1. その他の主要な固有名詞誤記（Solar, Renewable, Electric など）
+1. Intermediate パッセージの並列要素読点欠落
 
 ### 優先度: 低
 
-6. カタカナ語の自然な表記調整
-7. 細かい助詞の調整
+1. カタカナ語の自然な表記調整
+1. 細かい助詞の調整
 
 ---
 
@@ -105,9 +105,9 @@
 ### 修正方法
 
 1. ファイルを開く
-2. 対象の単語を検索（例: `"sustainability"`）
-3. `meaning` フィールドを修正
-4. 必要に応じて `reading` フィールドを追加
+1. 対象の単語を検索（例: `"sustainability"`）
+1. `meaning` フィールドを修正
+1. 必要に応じて `reading` フィールドを追加
 
 ### 主要な修正（アルファベット順）
 
@@ -368,17 +368,17 @@ jq . public/data/advanced-1.json > /dev/null && echo "OK" || echo "Error"
    done
    ```
 
-2. **ビルドテスト**
+1. **ビルドテスト**
    ```bash
    npm run build
    ```
 
-3. **開発サーバーで動作確認**
+1. **開発サーバーで動作確認**
    ```bash
    npm run dev
    ```
 
-4. **表示確認項目**
+1. **表示確認項目**
    - [ ] フレーズ訳に読点が正しく表示される
    - [ ] フレーズ訳表示時に単語の意味が重複しない
    - [ ] 単語詳細で「（固有名詞）」が適切
@@ -396,5 +396,5 @@ jq . public/data/advanced-1.json > /dev/null && echo "OK" || echo "Error"
 
 修正は段階的に行うことをお勧めします:
 1. まず優先度「高」の項目
-2. 次に優先度「中」の項目
-3. 時間があれば優先度「低」の項目
+1. 次に優先度「中」の項目
+1. 時間があれば優先度「低」の項目

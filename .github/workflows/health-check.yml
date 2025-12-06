@@ -36,7 +36,7 @@ jobs:
         retention-days: 30
         
     - name: 問題が検出された場合はイシューを作成
-      if: env.HEALTH_CHECK_FAILED == 'true'
+      if: steps.health_check.outputs.failed == 'true'
       uses: actions/github-script@v7
       with:
         script: |
@@ -115,7 +115,7 @@ jobs:
           }
       
     - name: 診断成功時のメッセージ
-      if: env.HEALTH_CHECK_FAILED != 'true'
+      if: steps.health_check.outputs.failed != 'true'
       run: |
         echo "✅ システム健康診断完了: 問題は検出されませんでした"
         echo "コードベースは良好な状態です 🎉"

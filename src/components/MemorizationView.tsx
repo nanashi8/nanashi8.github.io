@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Question, MemorizationCardState, MemorizationBehavior } from '../types';
 import { 
   getMemorizationCardSettings, 
@@ -7,6 +7,7 @@ import {
   getMemorizationSettings
 } from '../progressStorage';
 import { speakEnglish } from '../speechSynthesis';
+import ScoreBoard from './ScoreBoard';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
@@ -40,9 +41,23 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   const [sessionId] = useState(() => `session-${Date.now()}`);
   const [consecutiveViews, setConsecutiveViews] = useState(0);
   
+  // セッション統計
+  const [sessionStats, setSessionStats] = useState({
+    correct: 0,
+    incorrect: 0,
+    total: 0,
+  });
+  
+  // 回答時刻（ScoreBoard更新用）
+  const [lastAnswerTime, setLastAnswerTime] = useState<number>(0);
+  
   // 滞在時間計測
   const cardDisplayTimeRef = useRef<number>(0);
   const [isLoading, setIsLoading] = useState(true);
+  
+  // タッチ開始位置とカード要素のref
+  const touchStartX = useRef<number>(0);
+  const cardRef = useRef<HTMLDivElement>(null);
   
   // 初期化: カード表示設定と音声設定を読み込み
   useEffect(() => {
@@ -121,12 +136,22 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     await saveMemorizationCardSettings(newState);
   };
   
-  // スワイプ処理
-  const handleSwipe = async (direction: 'left' | 'right') => {
+  // スワイプ処理（useCallbackで最適化）
+  const handleSwipe = useCallback(async (direction: 'left' | 'right') => {
     if (!currentQuestion) return;
     
     // 滞在時間を記録
     const viewDuration = (Date.now() - cardDisplayTimeRef.current) / 1000; // 秒単位
+    
+    // 統計を更新
+    setSessionStats(prev => ({
+      correct: direction === 'right' ? prev.correct + 1 : prev.correct,
+      incorrect: direction === 'left' ? prev.incorrect + 1 : prev.incorrect,
+      total: prev.total + 1,
+    }));
+    
+    // 回答時刻を更新
+    setLastAnswerTime(Date.now());
     
     // 16秒以上は放置とみなしてカウントしない
     if (viewDuration < 16) {
@@ -154,7 +179,41 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
       // 全て終了
       setCurrentQuestion(null);
     }
-  };
+  }, [currentQuestion, currentIndex, questions, sessionId, consecutiveViews]);
+  
+  // スワイプイベントリスナー追加（handleSwipeの後に配置）
+  useEffect(() => {
+    const card = cardRef.current;
+    if (!card) return;
+    
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX.current = e.touches[0].clientX;
+    };
+    
+    const handleTouchEnd = (e: TouchEvent) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchEndX - touchStartX.current;
+      
+      // 100px以上のスワイプで判定
+      if (Math.abs(diff) > 100) {
+        if (diff > 0) {
+          // 右スワイプ（覚えた）
+          handleSwipe('right');
+        } else {
+          // 左スワイプ（覚えていない）
+          handleSwipe('left');
+        }
+      }
+    };
+    
+    card.addEventListener('touchstart', handleTouchStart);
+    card.addEventListener('touchend', handleTouchEnd);
+    
+    return () => {
+      card.removeEventListener('touchstart', handleTouchStart);
+      card.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [handleSwipe]);
   
   if (isLoading) {
     return (
@@ -179,144 +238,142 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
-      {/* 進捗表示 */}
+      {/* スコアボード */}
       <div className="max-w-6xl mx-auto mb-4">
-        <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
-          <span>{currentIndex + 1} / {questions.length}</span>
-          <span>連続: {consecutiveViews}枚</span>
-        </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-          {/* eslint-disable-next-line react/forbid-dom-props */}
-          <div
-            className="bg-blue-500 h-2 rounded-full transition-all"
-            style={{
-              width: `${Math.round(((currentIndex + 1) / questions.length) * 100)}%`
-            }}
-          />
-        </div>
+        <ScoreBoard 
+          mode="memorization"
+          sessionCorrect={sessionStats.correct}
+          sessionIncorrect={sessionStats.incorrect}
+          totalAnswered={sessionStats.total}
+          onAnswerTime={lastAnswerTime}
+          onShowSettings={() => alert('暗記タブの学習設定は現在開発中です。\n\n今後、以下の設定を追加予定：\n- 学習中の上限設定\n- 要復習の上限設定\n- 自動音声再生')}
+        />
       </div>
       
       {/* 暗記カード */}
-      <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* 左側: 単語と意味 */}
-          <div>
+      <div className="max-w-6xl mx-auto">
+        <div ref={cardRef} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+          {/* 語句と矢印 */}
+          <div className="flex items-center gap-4 mb-6">
+            {/* 左ボタン - まだ覚えていない */}
+            <button
+              onClick={() => handleSwipe('left')}
+              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl"
+              aria-label="まだ覚えていない"
+            >
+              ←
+            </button>
+            
             {/* 単語（常に表示）*/}
-            <div className="text-center mb-6">
-              <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+            <div className="flex-1 text-center">
+              <div className="text-4xl font-bold text-gray-900 dark:text-white">
                 {currentQuestion.word}
               </div>
             </div>
             
-            {/* 意味（初期表示）*/}
-            <div className="mb-4">
-              <button
-                onClick={() => toggleCardField('showMeaning')}
-                className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
-              >
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold text-gray-700 dark:text-gray-300">意味</span>
-                  <span className="text-gray-500 dark:text-gray-400">
-                    {cardState.showMeaning ? '▼' : '▶'}
-                  </span>
-                </div>
+            {/* 右ボタン - 覚えた */}
+            <button
+              onClick={() => handleSwipe('right')}
+              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl"
+              aria-label="覚えた"
+            >
+              →
+            </button>
+          </div>
+          
+          {/* 詳細情報（横並びレイアウト） */}
+          <div className="space-y-3">
+            {/* 意味 */}
+            <button
+              onClick={() => toggleCardField('showMeaning')}
+              className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+            >
+              <div className="flex items-center gap-4">
+                <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">意味</span>
+                <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                  {cardState.showMeaning ? '▼' : '▶'}
+                </span>
                 {cardState.showMeaning && (
-                  <div className="mt-2 text-lg text-gray-900 dark:text-white">
+                  <div className="flex-1 text-lg text-gray-900 dark:text-white">
                     {currentQuestion.meaning}
                   </div>
                 )}
-              </button>
-            </div>
-          </div>
-
-          {/* 右側: 詳細情報 */}
-          <div className="space-y-4">
-            {/* 読み（タップで切り替え）*/}
-            <div>
-              <button
-                onClick={() => toggleCardField('showPronunciation')}
-                className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
-              >
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold text-gray-700 dark:text-gray-300">読み</span>
-                  <span className="text-gray-500 dark:text-gray-400">
-                    {cardState.showPronunciation ? '▼' : '▶'}
-                  </span>
-                </div>
+              </div>
+            </button>
+            
+            {/* 読み */}
+            <button
+              onClick={() => toggleCardField('showPronunciation')}
+              className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+            >
+              <div className="flex items-center gap-4">
+                <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">読み</span>
+                <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                  {cardState.showPronunciation ? '▼' : '▶'}
+                </span>
                 {cardState.showPronunciation && (
-                  <div className="mt-2 text-base text-gray-700 dark:text-gray-300">
+                  <div className="flex-1 text-base text-gray-700 dark:text-gray-300">
                     {currentQuestion.reading}
                   </div>
                 )}
-              </button>
-            </div>
+              </div>
+            </button>
             
-            {/* 語源（タップで切り替え）*/}
-            {currentQuestion.etymology && (
-              <div>
-                <button
-                  onClick={() => toggleCardField('showEtymology')}
-                  className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
-                >
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold text-gray-700 dark:text-gray-300">語源・解説</span>
-                    <span className="text-gray-500 dark:text-gray-400">
-                      {cardState.showEtymology ? '▼' : '▶'}
-                    </span>
-                  </div>
+            {/* 語源 */}
+            {currentQuestion.etymology && 
+             currentQuestion.etymology.trim() !== '' &&
+             currentQuestion.etymology !== '中学英語で重要な単語です。' && (
+              <button
+                onClick={() => toggleCardField('showEtymology')}
+                className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">語源・解説</span>
+                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                    {cardState.showEtymology ? '▼' : '▶'}
+                  </span>
                   {cardState.showEtymology && (
-                    <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex-1 text-sm text-gray-600 dark:text-gray-400">
                       {currentQuestion.etymology}
                     </div>
                   )}
-                </button>
-              </div>
+                </div>
+              </button>
             )}
             
-            {/* 関連語（タップで切り替え）*/}
-            {currentQuestion.relatedWords && (
-              <div>
-                <button
-                  onClick={() => toggleCardField('showRelated')}
-                  className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
-                >
-                  <div className="flex justify-between items-center">
-                    <span className="font-semibold text-gray-700 dark:text-gray-300">関連語</span>
-                    <span className="text-gray-500 dark:text-gray-400">
-                      {cardState.showRelated ? '▼' : '▶'}
-                    </span>
-                  </div>
+            {/* 関連語 */}
+            {currentQuestion.relatedWords && 
+             currentQuestion.relatedWords.trim() !== '' && (
+              <button
+                onClick={() => toggleCardField('showRelated')}
+                className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">関連語</span>
+                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                    {cardState.showRelated ? '▼' : '▶'}
+                  </span>
                   {cardState.showRelated && (
-                    <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex-1 text-sm text-gray-600 dark:text-gray-400">
                       {currentQuestion.relatedWords}
                     </div>
                   )}
-                </button>
-              </div>
+                </div>
+              </button>
             )}
           </div>
         </div>
-        
-        {/* スワイプボタン */}
-        <div className="flex gap-4 mt-8">
-          <button
-            onClick={() => handleSwipe('left')}
-            className="flex-1 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition"
-          >
-            ← まだ覚えていない
-          </button>
-          <button
-            onClick={() => handleSwipe('right')}
-            className="flex-1 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition"
-          >
-            覚えた →
-          </button>
-        </div>
       </div>
       
-      {/* ヒント */}
-      <div className="max-w-6xl mx-auto mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
-        💡 各項目をタップすると表示/非表示を切り替えられます
+      {/* 進捗とヒント */}
+      <div className="max-w-6xl mx-auto mt-4">
+        <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+          <span>{currentIndex + 1} / {questions.length}</span>
+          <span>連続: {consecutiveViews}枚</span>
+        </div>
+        <div className="text-center text-sm text-gray-500 dark:text-gray-400">
+          💡 各項目をタップすると表示/非表示を切り替えられます
+        </div>
       </div>
     </div>
   );

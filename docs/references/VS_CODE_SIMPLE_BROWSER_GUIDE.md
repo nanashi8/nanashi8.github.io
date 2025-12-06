@@ -38,15 +38,15 @@ npm run dev
 ### 方法1: コマンドパレット経由（推奨）
 
 1. **Cmd + Shift + P** (macOS) または **Ctrl + Shift + P** (Windows) でコマンドパレットを開く
-2. 「Simple Browser」と入力
-3. 「**Simple Browser: Show**」を選択
-4. URLを入力: `http://localhost:5173`
-5. Enterキーを押す
+1. 「Simple Browser」と入力
+1. 「**Simple Browser: Show**」を選択
+1. URLを入力: `http://localhost:5173`
+1. Enterキーを押す
 
 ### 方法2: ターミナルのURLから直接開く
 
 1. ターミナルに表示される `http://localhost:5173/` を右クリック
-2. 「**Follow Link**」または「**Open in Simple Browser**」を選択
+1. 「**Follow Link**」または「**Open in Simple Browser**」を選択
    - ※環境によってメニュー名が異なる場合があります
 
 ### 方法3: GitHubでコパイロットに依頼
@@ -69,8 +69,8 @@ http://localhost:5173 をシンプルブラウザで開いて
 ### 見つからない場合
 
 1. **エディタエリアを確認**: 他のタブの後ろに隠れていないか確認
-2. **パネルを確認**: 下部パネルやサイドバーに表示されていないか確認
-3. **再度開く**: コマンドパレットから再度「Simple Browser: Show」を実行
+1. **パネルを確認**: 下部パネルやサイドバーに表示されていないか確認
+1. **再度開く**: コマンドパレットから再度「Simple Browser: Show」を実行
 
 ---
 
@@ -152,8 +152,8 @@ npm run dev
 **解決策**:
 
 1. Simple Browserを閉じる
-2. Cmd + Shift + P → 「Developer: Reload Window」
-3. 再度Simple Browserを開く
+1. Cmd + Shift + P → 「Developer: Reload Window」
+1. 再度Simple Browserを開く
 
 ### 変更が反映されない
 
@@ -171,8 +171,8 @@ npm run dev
 **確認事項**:
 
 1. VS Codeのバージョンが最新か確認
-2. 拡張機能「Built-in」が有効になっているか確認
-3. コマンドパレットで「Simple Browser」と検索して候補が出るか確認
+1. 拡張機能「Built-in」が有効になっているか確認
+1. コマンドパレットで「Simple Browser」と検索して候補が出るか確認
 
 ---
 

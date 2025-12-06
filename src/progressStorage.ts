@@ -218,6 +218,8 @@ export interface WordProgress {
   skipExcludeUntil?: number; // この日時まで出題除外（タイムスタンプ）
   needsVerification?: boolean; // AI学習アシスタント: 検証が必要
   verificationReason?: string; // AI学習アシスタント: 検証が必要な理由
+  meaning?: string; // 意味（苦手語句表示用）
+  reading?: string; // 読み（苦手語句表示用）
   
   // モード別統計（難易度別リセット用）
   totalAttempts?: number; // 総試行回数
@@ -856,8 +858,8 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
         word,
         mistakes,
         recentAccuracy: 0,
-        meaning: wp?.meaning,
-        reading: wp?.reading,
+        meaning: undefined,
+        reading: undefined,
       });
       return;
     }
@@ -1595,7 +1597,7 @@ export function getMasteredWords(words: string[]): string[] {
  * 本日の統計を取得（本日正答率、本日回答数）
  * @param mode クイズモード（translation, spelling, reading, grammar）
  */
-export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'grammar'): {
+export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'): {
   todayCorrectCount: number;
   todayTotalAnswered: number;
   todayAccuracy: number;
@@ -1629,7 +1631,7 @@ export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'g
  * 累計回答数を取得
  * @param mode クイズモード（translation, spelling, reading, grammar）
  */
-export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'reading' | 'grammar'): number {
+export function getTotalAnsweredCount(mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'): number {
   const progress = loadProgressSync();
   let results = progress.results;
   

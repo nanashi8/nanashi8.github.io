@@ -16,22 +16,22 @@
    - 単語ごとの習熟度を管理
    - カテゴリー・難易度別の統計を集計
 
-2. **適応的学習（adaptiveLearningAI.ts）**
+1. **適応的学習（adaptiveLearningAI.ts）**
    - 間隔反復学習スケジュールの生成
    - 記憶保持率の計算
    - 復習タイミングの最適化
 
-3. **学習アシスタント（learningAssistant.ts）**
+1. **学習アシスタント（learningAssistant.ts）**
    - スキップされた単語の管理
    - 弱点単語の優先的出題
    - AI人格によるコメント生成
 
-4. **レーダーチャート分析（radarChartAI.ts）**
+1. **レーダーチャート分析（radarChartAI.ts）**
    - カテゴリー別の弱点分析
    - 改善プランの自動生成
    - 学習進捗の可視化
 
-5. **言語学的関連性（linguisticRelationsAI.ts）**
+1. **言語学的関連性（linguisticRelationsAI.ts）**
    - 語源・語根による関連語抽出
    - 意味分野による関連付け
    - 効率的な語彙習得支援
@@ -528,8 +528,8 @@ export function generateComment(
 LocalStorageの容量制限（約5MB）に対応するため、以下の戦略を実装：
 
 1. **自動圧縮**: 30日以上前のデータを自動削除
-2. **選択的保存**: 重要な単語の進捗のみ保持
-3. **警告表示**: 4MB以上で警告を表示
+1. **選択的保存**: 重要な単語の進捗のみ保持
+1. **警告表示**: 4MB以上で警告を表示
 
 ```typescript
 function checkLocalStorageSize() {
@@ -562,9 +562,9 @@ function checkLocalStorageSize() {
 ### 指標
 
 1. **正答率**: 全体・カテゴリー別・難易度別
-2. **習熟単語数**: new / learning / mastered の分類
-3. **学習時間**: 日別・週別の累積
-4. **記憶定着率**: 間隔反復学習による予測値
+1. **習熟単語数**: new / learning / mastered の分類
+1. **学習時間**: 日別・週別の累積
+1. **記憶定着率**: 間隔反復学習による予測値
 
 ### データエクスポート
 
@@ -580,8 +580,8 @@ export function exportProgress(): string {
 ### 進捗追跡システムの復元
 
 1. `src/progressStorage.ts` を作成
-2. 上記の `loadProgress()`, `saveProgress()`, `addQuizResult()` を実装
-3. `App.tsx` で進捗追跡を統合:
+1. 上記の `loadProgress()`, `saveProgress()`, `addQuizResult()` を実装
+1. `App.tsx` で進捗追跡を統合:
 
 ```typescript
 import { addQuizResult, updateWordProgress } from './progressStorage';
@@ -606,8 +606,8 @@ const handleAnswer = (answer: string, correct: string) => {
 ### 統計画面の復元
 
 1. `src/components/StatsView.tsx` を作成
-2. レーダーチャートコンポーネントを実装
-3. `App.tsx` にタブとして追加:
+1. レーダーチャートコンポーネントを実装
+1. `App.tsx` にタブとして追加:
 
 ```typescript
 <button

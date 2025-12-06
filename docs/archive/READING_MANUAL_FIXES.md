@@ -179,28 +179,28 @@
 ### 手順1: ComprehensiveReadingView.tsx の修正
 
 1. `src/components/ComprehensiveReadingView.tsx` を開く
-2. 882-889行目の `<div className="word-meanings">...</div>` ブロック全体を削除
-3. 保存
+1. 882-889行目の `<div className="word-meanings">...</div>` ブロック全体を削除
+1. 保存
 
 ### 手順2: reading-passages-dictionary.json の修正
 
 1. `public/data/reading-passages-dictionary.json` を開く
-2. 上記の表を参照して、各エントリの `meaning` と `reading` を修正
-3. 検索機能を使うと効率的です（例: `"sustainability"` で検索）
-4. 保存
+1. 上記の表を参照して、各エントリの `meaning` と `reading` を修正
+1. 検索機能を使うと効率的です（例: `"sustainability"` で検索）
+1. 保存
 
 ### 手順3: パッセージファイルの修正
 
 1. 各パッセージファイルを開く（`advanced-1.json`, `intermediate-5.json` など）
-2. 上記の問題フレーズを検索して修正
-3. 他にも読点が欠けているフレーズがないか確認
-4. 保存
+1. 上記の問題フレーズを検索して修正
+1. 他にも読点が欠けているフレーズがないか確認
+1. 保存
 
 ### 手順4: 動作確認
 
 1. `npm run build` でビルド
-2. `npm run dev` で開発サーバー起動
-3. 読解機能を開いて以下を確認:
+1. `npm run dev` で開発サーバー起動
+1. 読解機能を開いて以下を確認:
    - フレーズ訳表示時に単語の意味が重複していないか
    - 日本語訳が自然か
    - 単語の詳細で固有名詞マークが適切か
@@ -214,10 +214,10 @@
 1. **並列要素に読点がない**
    - 例: `"A B C"`  → `"A、B、C"`
    
-2. **長い文で息継ぎがない**
+1. **長い文で息継ぎがない**
    - 適切な位置に読点を追加
 
-3. **助詞の欠落**
+1. **助詞の欠落**
    - 例: `"〜について知る必要あります"` → `"〜について知る必要があります"`
 
 ---

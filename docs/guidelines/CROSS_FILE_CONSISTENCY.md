@@ -51,9 +51,9 @@ grep -r "一つの" public/data/passages-phrase-learning/beginner-cafe-menu.json
 
 ### ステップ4: 修正の優先順位
 1. **最優先**: `passages-phrase-learning/*.json`（現在使用中）
-2. **中優先**: `passages-for-phrase-work/*.txt`（フォールバック用）
-3. **低優先**: `passages-translations/*.txt`（未使用）
-4. **廃止**: `passages/*.txt`（読み込まれていない）
+1. **中優先**: `passages-for-phrase-work/*.txt`（フォールバック用）
+1. **低優先**: `passages-translations/*.txt`（未使用）
+1. **廃止**: `passages/*.txt`（読み込まれていない）
 
 ### ステップ5: 一括修正の実行
 複数ファイルに同じ誤りがある場合：
@@ -90,8 +90,8 @@ find public/data/passages-phrase-learning -name "*.json" -exec sed -i '' 's/"mea
 
 今後作成すべきスクリプト：
 1. `scripts/validate_consistency.py` - ファイル間整合性チェック
-2. `scripts/fix_abbreviations.py` - 略語の自動修正
-3. `scripts/sync_translations.py` - 翻訳の同期
+1. `scripts/fix_abbreviations.py` - 略語の自動修正
+1. `scripts/sync_translations.py` - 翻訳の同期
 
 ## 注意事項
 

@@ -88,30 +88,30 @@ python3 extract_vocabulary.py
 ## 検証項目（11チェック）
 
 1. **word_count**: 語数チェック
-2. **vocabulary_level**: 語彙レベル違反チェック
-3. **chunk_length**: チャンク長（3-7語推奨）
-4. **category_balance**: カテゴリバランス
-5. **translation_rules**: 直訳ルール（関係代名詞など）
-6. **duplicate_words**: 重複語チェック
-7. **naturalness**: 文章の自然さ（100点満点）
-8. **exam_relevance**: 受験適合度（100点満点）
-9. **comprehension_suitability**: 読解問題適性（100点満点）
-10. **educational_validity**: 教育的妥当性（100点満点）
-11. **paragraph_structure**: 段落構造（100点満点）
+1. **vocabulary_level**: 語彙レベル違反チェック
+1. **chunk_length**: チャンク長（3-7語推奨）
+1. **category_balance**: カテゴリバランス
+1. **translation_rules**: 直訳ルール（関係代名詞など）
+1. **duplicate_words**: 重複語チェック
+1. **naturalness**: 文章の自然さ（100点満点）
+1. **exam_relevance**: 受験適合度（100点満点）
+1. **comprehension_suitability**: 読解問題適性（100点満点）
+1. **educational_validity**: 教育的妥当性（100点満点）
+1. **paragraph_structure**: 段落構造（100点満点）
 
 ## カスタマイズ方法
 
 ### パッセージ内容の改善
 
 1. **手動編集**: `prototype/<passage-id>.json` を直接編集
-2. **生成アルゴリズム改善**: `generate_all_passages.py` の `generate_body_from_vocab()` を修正
-3. **テンプレート追加**: `generate_introduction()` や `generate_conclusion()` を拡張
+1. **生成アルゴリズム改善**: `generate_all_passages.py` の `generate_body_from_vocab()` を修正
+1. **テンプレート追加**: `generate_introduction()` や `generate_conclusion()` を拡張
 
 ### 新しいテーマの追加
 
 1. `extract_vocabulary.py` にテーマを追加
-2. `generate_all_passages.py` の `passages_config` に設定を追加
-3. 再生成を実行
+1. `generate_all_passages.py` の `passages_config` に設定を追加
+1. 再生成を実行
 
 ## データ形式
 
