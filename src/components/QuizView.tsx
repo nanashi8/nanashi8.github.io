@@ -292,6 +292,25 @@ function QuizView({
           </select>
         </div>
       )}
+
+      {/* 不正解時詳細自動表示設定 */}
+      <div className="filter-group">
+        <div className="checkbox-row">
+          <input
+            type="checkbox"
+            id="auto-show-details-toggle-pre"
+            checked={localStorage.getItem('autoShowDetails') !== 'false'}
+            onChange={(e) => {
+              localStorage.setItem('autoShowDetails', e.target.checked.toString());
+              // 再レンダリングを強制
+              setAutoNext(prev => prev);
+            }}
+          />
+          <label htmlFor="auto-show-details-toggle-pre" className="checkbox-label">
+            不正解時自動で詳細を開く：{localStorage.getItem('autoShowDetails') !== 'false' ? '有効' : '無効'}
+          </label>
+        </div>
+      </div>
     </div>
   )}      {!hasQuestions ? (
         <div className="empty-state">
@@ -461,6 +480,24 @@ function QuizView({
                   </div>
                 </div>
               )}
+
+              {/* 不正解時詳細自動表示設定 */}
+              <div className="filter-group">
+                <div className="checkbox-row">
+                  <input
+                    type="checkbox"
+                    id="auto-show-details-toggle"
+                    checked={localStorage.getItem('autoShowDetails') !== 'false'}
+                    onChange={(e) => {
+                      localStorage.setItem('autoShowDetails', e.target.checked.toString());
+                      setAutoNext(prev => prev);
+                    }}
+                  />
+                  <label htmlFor="auto-show-details-toggle" className="checkbox-label">
+                    不正解時自動で詳細を開く：{localStorage.getItem('autoShowDetails') !== 'false' ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
             </div>
           )}
           
