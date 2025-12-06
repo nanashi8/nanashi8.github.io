@@ -210,7 +210,7 @@ function ScoreBoard({
             title="学習状況"
           >
             <span className="text-base">📈</span>
-            <span className="leading-tight">状況</span>
+            <span className="leading-tight">学習状況</span>
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
