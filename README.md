@@ -27,6 +27,9 @@ npm run build
 
 # プレビュー
 npm run preview
+
+# システム健康診断
+npm run health-check
 ```
 
 ## CSV形式
@@ -75,3 +78,31 @@ npm run build
 ### AI開発アシスタント向け
 
 - [開発指示書](.aitk/instructions/development-guidelines.instructions.md) - GitHub Copilot等AI支援用の統合ガイド
+
+## コード品質管理
+
+### システム健康診断
+
+定期的にコードベースの健全性をチェックできます：
+
+```bash
+npm run health-check
+```
+
+**診断項目:**
+- localStorage キーの一貫性
+- 重複コンポーネント/関数の検出
+- useEffect 依存配列の警告
+- 未使用変数のチェック
+- CSS クラスの重複
+- デバッグコード残留チェック
+- 型定義の重複
+- 大きすぎるファイルの検出
+- import文の整理状況
+
+詳細レポート: [docs/quality/HEALTH_CHECK_REPORT.md](docs/quality/HEALTH_CHECK_REPORT.md)
+
+**推奨サイクル:**
+- 毎週: 軽量診断実行
+- 毎月: 詳細レポート作成
+- 四半期: リファクタリング実施

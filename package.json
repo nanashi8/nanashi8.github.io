@@ -24,6 +24,7 @@
     "test:smoke:debug": "playwright test --project=chromium --debug",
     "test:smoke:update": "playwright test --project=chromium --update-snapshots",
     "test:visual": "playwright test tests/visual-comparison.spec.ts --project=chromium",
+    "health-check": "bash scripts/health-check.sh",
     "prepare": "husky"
   },
   "dependencies": {
