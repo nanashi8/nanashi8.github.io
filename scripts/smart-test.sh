@@ -60,20 +60,13 @@ if [ "$RUN_BASIC_TEST" = false ] && [ "$RUN_LAYOUT_TEST" = false ] && [ "$RUN_ST
   RUN_BASIC_TEST=true
 fi
 
-# 開発サーバー確認
-if ! lsof -i:5173 | grep -q LISTEN; then
-  echo "⚠️  開発サーバーが起動していません"
-  echo "💡 別のターミナルで npm run dev を実行してください"
-  exit 1
-fi
-
-# テスト実行
+# テスト実行（test-runner.shを使用して自動的にサーバー管理）
 echo ""
 echo "🧪 テスト実行開始..."
 
 if [ "$RUN_BASIC_TEST" = true ]; then
   echo "▶️  基本機能テスト"
-  npm run test:smoke || exit 1
+  bash scripts/test-runner.sh smoke-fast || exit 1
 fi
 
 if [ "$RUN_LAYOUT_TEST" = true ]; then
