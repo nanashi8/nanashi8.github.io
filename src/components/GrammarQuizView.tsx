@@ -501,11 +501,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                   value={difficulty}
                   onChange={(e) => setDifficulty(e.target.value as DifficultyLevel)}
                   className="select-input"
+                  disabled={true}
+                  title="現在、難易度選択はできません（全問題が対象です）"
                 >
                   <option value="all">全てのレベル</option>
-                  <option value="beginner">初級</option>
-                  <option value="intermediate">中級</option>
-                  <option value="advanced">上級</option>
                 </select>
               </div>
 
@@ -586,9 +585,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             sessionMastered={sessionStats.mastered}
             onShowSettings={() => setShowSettings(true)}
             onAnswerTime={lastAnswerTime}
-            dataSource="文法問題集"
-            category={grade === 'all' ? '全学年' : grade.startsWith('g') ? grade : `中${grade}年`}
-            difficulty={quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並べ替え' : '全種類'}
+            dataSource={
+              grade.startsWith('g') && grade.includes('-unit')
+                ? `📚 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}｜${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}｜単語・熟語`
+                : `📚 ${grade === 'all' ? '全学年' : `${grade}年`}-${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`
+            }
+            category=""
+            difficulty=""
             wordPhraseFilter="all"
           />
 
@@ -657,11 +660,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                   value={difficulty}
                   onChange={(e) => setDifficulty(e.target.value as DifficultyLevel)}
                   className="select-input"
+                  disabled={true}
+                  title="現在、難易度選択はできません（全問題が対象です）"
                 >
                   <option value="all">全てのレベル</option>
-                  <option value="beginner">初級</option>
-                  <option value="intermediate">中級</option>
-                  <option value="advanced">上級</option>
                 </select>
               </div>
 
@@ -777,6 +779,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
               {isSentenceOrdering ? (
                 <div className="word-area">
+                  {/* 日本語訳を表示 */}
+                  {currentQuestion.japanese && (
+                    <div className="japanese-meaning">
+                      <span className="meaning-label">意味:</span>
+                      <span className="meaning-text">{currentQuestion.japanese}</span>
+                    </div>
+                  )}
                   <div className="selected-words-area">
                     <div className="area-label">選択した単語 ({selectedWords.length}語)</div>
                     <div className="word-container">
