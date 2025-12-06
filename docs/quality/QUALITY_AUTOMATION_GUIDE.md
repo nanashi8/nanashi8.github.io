@@ -34,17 +34,17 @@
    - inflected form（gathered等）はlemma（gather）で保存
    - reading, etymology, relatedWords, relatedFields, difficultyも必須
 
-2. **自動変換スクリプトを活用すること**
+1. **自動変換スクリプトを活用すること**
    - `scripts/add_lemma_metadata.py`で一括変換
    - AI API未設定時は最低限lemmaとdifficultyのみ自動付与
 
-3. **品質検証を必ず実施すること**
+1. **品質検証を必ず実施すること**
    - `scripts/validate_all_data.py`でエラーゼロを確認
 
-4. **編集履歴・変更理由を記録すること**
+1. **編集履歴・変更理由を記録すること**
    - 主要な変更はコミットメッセージに明記
 
-5. **パイプライン手順を守ること**
+1. **パイプライン手順を守ること**
    - 構想→設計→変換→検証→連携→管理の順で作業
 
 ---

@@ -490,154 +490,11 @@ function SpellingView({
       {!hasQuestions && (
         <div className="quiz-controls">
           <button 
-            onClick={() => setShowSettings(!showSettings)} 
-            className="w-64 px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-blue-300 rounded-xl hover:bg-primary-hover transition-all duration-300 shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
-          >
-            ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
-          </button>
-          <button 
             onClick={onStartQuiz} 
             className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-xl dark:bg-primary dark:hover:bg-primary-hover"
           >
             🎯 クイズ開始
           </button>
-        </div>
-      )}
-
-      {/* 学習設定パネル */}
-      {!hasQuestions && showSettings && (
-        <div className="study-settings-panel">
-          <h3>📊 学習設定</h3>
-          
-          <div className="filter-group">
-            <label htmlFor="category-select-spelling">📚 関連分野:</label>
-            <select
-              id="category-select-spelling"
-              value={selectedCategory}
-              onChange={(e) => onCategoryChange(e.target.value)}
-              className="select-input"
-            >
-              <option value="all">全ての分野</option>
-              {OFFICIAL_CATEGORIES.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="filter-group">
-            <label htmlFor="difficulty-select-spelling">⭐ 難易度:</label>
-            <select
-              id="difficulty-select-spelling"
-              value={selectedDifficulty}
-              onChange={(e) => onDifficultyChange(e.target.value as DifficultyLevel)}
-              className="select-input"
-            >
-              <option value="all">全てのレベル</option>
-              <option value="beginner">初級</option>
-              <option value="intermediate">中級</option>
-              <option value="advanced">上級</option>
-            </select>
-          </div>
-
-          {onDataSourceChange && (
-            <div className="filter-group">
-              <label htmlFor="data-source-select-spelling">📚 問題集:</label>
-              <select
-                id="data-source-select-spelling"
-                value={selectedDataSource}
-                onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
-                className="select-input"
-              >
-                <option value="all">すべて</option>
-                <option value="junior">高校受験</option>
-                <option value="intermediate">高校受験標準</option>
-              </select>
-            </div>
-          )}
-
-          {onWordPhraseFilterChange && (
-            <div className="filter-group">
-              <label htmlFor="word-phrase-filter-spelling">📖 単語/熟語:</label>
-              <select
-                id="word-phrase-filter-spelling"
-                value={selectedWordPhraseFilter}
-                onChange={(e) => onWordPhraseFilterChange(e.target.value as WordPhraseFilter)}
-                className="select-input"
-              >
-                <option value="all">すべて</option>
-                <option value="words-only">単語のみ</option>
-                <option value="phrases-only">熟語のみ</option>
-              </select>
-            </div>
-          )}
-
-          {onPhraseTypeFilterChange && selectedWordPhraseFilter === 'phrases-only' && (
-            <div className="filter-group">
-              <label htmlFor="phrase-type-filter-spelling">🏷️ 熟語タイプ:</label>
-              <select
-                id="phrase-type-filter-spelling"
-                value={selectedPhraseTypeFilter}
-                onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
-                className="select-input"
-              >
-                <option value="all">すべて</option>
-                <option value="phrasal-verb">句動詞</option>
-                <option value="idiom">イディオム</option>
-                <option value="collocation">コロケーション</option>
-                <option value="other">その他</option>
-              </select>
-            </div>
-          )}
-
-          <LearningLimitsInput
-            learningLimit={learningLimit}
-            reviewLimit={reviewLimit}
-            onLearningLimitChange={setLearningLimit}
-            onReviewLimitChange={setReviewLimit}
-            idPrefix="spelling-"
-          />
-
-          {/* 自動次へ設定 */}
-          <div className="filter-group">
-            <div className="checkbox-row">
-              <input
-                type="checkbox"
-                id="auto-next-toggle-spelling-pre"
-                checked={autoNext}
-                onChange={(e) => {
-                  setAutoNext(e.target.checked);
-                  localStorage.setItem('autoNext', e.target.checked.toString());
-                }}
-              />
-              <label htmlFor="auto-next-toggle-spelling-pre" className="checkbox-label">
-                正解時自動で次へ：{autoNext ? '有効' : '無効'}
-              </label>
-            </div>
-          </div>
-
-          {autoNext && (
-            <div className="filter-group">
-              <label htmlFor="auto-next-delay-spelling-pre">⏱️ 次への遅延時間：</label>
-              <select
-                id="auto-next-delay-spelling-pre"
-                value={autoNextDelay}
-                onChange={(e) => {
-                  const delay = parseInt(e.target.value);
-                  setAutoNextDelay(delay);
-                  localStorage.setItem('autoNextDelay', delay.toString());
-                }}
-                className="select-input"
-              >
-                <option value="500">0.5秒</option>
-                <option value="1000">1秒</option>
-                <option value="1500">1.5秒</option>
-                <option value="2000">2秒</option>
-                <option value="3000">3秒</option>
-              </select>
-            </div>
-          )}
         </div>
       )}
 
@@ -749,7 +606,11 @@ function SpellingView({
                   <select
                     id="phrase-type-filter-spelling"
                     value={selectedPhraseTypeFilter}
-                    onChange={(e) => onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter)}
+                    onChange={(e) => {
+                      if (onPhraseTypeFilterChange) {
+                        onPhraseTypeFilterChange(e.target.value as PhraseTypeFilter);
+                      }
+                    }}
                     className="select-input"
                   >
                     <option value="all">すべて</option>

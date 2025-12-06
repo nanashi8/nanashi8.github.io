@@ -70,14 +70,14 @@ const handleFileSelect = async (file: File) => {
 };
 ```
 
-2. **選択肢生成**
+1. **選択肢生成**
 ```typescript
 // 現在の問題の正解 + ランダムな2つの不正解
 const currentQuestion = questions[currentIndex];
 const choices = generateChoices(currentQuestion, questions, 3);
 ```
 
-3. **回答処理**
+1. **回答処理**
 ```typescript
 const handleAnswer = (answer: string) => {
   const isCorrect = answer === currentQuestion.meaning;
@@ -91,7 +91,7 @@ const handleAnswer = (answer: string) => {
 };
 ```
 
-4. **次の問題へ移動**
+1. **次の問題へ移動**
 ```typescript
 const handleNext = () => {
   if (currentIndex < questions.length - 1) {
@@ -187,11 +187,11 @@ const combinedQuestions = [...questions, ...unknownWords];
    - 次へボタンをクリック → 次の問題が表示
    - 最後の問題 → 結果画面が表示
 
-2. **異常系**
+1. **異常系**
    - 不正なCSV → エラーメッセージ表示
    - 問題数が0 → 「問題がありません」表示
 
-3. **エッジケース**
+1. **エッジケース**
    - 問題数が2つ以下 → 選択肢生成に重複あり
    - 同じ意味の単語が複数 → ランダム選択
 

@@ -95,9 +95,9 @@ npm run build
 
 **作業のコツ**:
 1. 検索で該当箇所を見つける
-2. `meaning` フィールドを修正
-3. `reading` フィールドを `-` からカタカナに変更
-4. 次の検索へ
+1. `meaning` フィールドを修正
+1. `reading` フィールドを `-` からカタカナに変更
+1. 次の検索へ
 
 各10個修正したら保存してJSONの構文チェック:
 ```bash
@@ -120,9 +120,9 @@ jq . public/data/reading-passages-dictionary.json > /dev/null && echo "OK"
 
 **手順**:
 1. ファイルを開く
-2. Ctrl+H（または Cmd+H）で置換機能を開く
-3. 上記の文字列を検索して、修正後の文字列に置換
-4. 保存
+1. Ctrl+H（または Cmd+H）で置換機能を開く
+1. 上記の文字列を検索して、修正後の文字列に置換
+1. 保存
 
 #### 3-2. Intermediate-5.json の修正
 
@@ -139,8 +139,8 @@ jq . public/data/reading-passages-dictionary.json > /dev/null && echo "OK"
 
 **優先順位**:
 1. 明らかな並列（3つ以上の名詞が連続）
-2. カタカナ長文
-3. 自然さの調整
+1. カタカナ長文
+1. 自然さの調整
 
 ---
 
@@ -228,13 +228,13 @@ npm run deploy
 1. **READING_MANUAL_FIXES.md**  
    修正の概要と主要な修正項目
 
-2. **READING_DETAILED_FIXES.md**  
+1. **READING_DETAILED_FIXES.md**  
    辞書エントリの詳細な修正例
 
-3. **TRANSLATION_CHECK_REPORT.txt**  
+1. **TRANSLATION_CHECK_REPORT.txt**  
    全702件の問題箇所リスト
 
-4. **check_reading_translations.py**  
+1. **check_reading_translations.py**  
    問題検出スクリプト（再実行可能）
 
 ---
@@ -280,9 +280,9 @@ git checkout -- .
 すべての修正が完了したら:
 
 1. ✅ 全ファイルのビルドが成功することを確認
-2. ✅ ブラウザで読解機能の動作を確認
-3. ✅ 変更をコミット
-4. ✅ デプロイ
+1. ✅ ブラウザで読解機能の動作を確認
+1. ✅ 変更をコミット
+1. ✅ デプロイ
 
 ```bash
 # コミット

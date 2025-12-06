@@ -75,10 +75,10 @@
 ## 6. 作業ステップ (Roadmap)
 
 1. 既存 .txt を `public/data/passage-sources/archive/` へ移動 (保全)。
-2. Beginner 3 本再執筆 → 検証 → コミット。
-3. Intermediate 2 本 (優先テーマ: health, environment) → 検証。
-4. Advanced 1 本 (global sustainability) プロトタイプ。
-5. 残りを順次補完 → index.json 更新。
+1. Beginner 3 本再執筆 → 検証 → コミット。
+1. Intermediate 2 本 (優先テーマ: health, environment) → 検証。
+1. Advanced 1 本 (global sustainability) プロトタイプ。
+1. 残りを順次補完 → index.json 更新。
 
 ## 7. サンプル冒頭 (Beginner)
 

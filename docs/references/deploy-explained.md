@@ -16,13 +16,13 @@
 短い操作メモ（即時修復：手早く公開）
 1. main をバックアップする（念のため）
    - 例：`git branch backup-main-YYYYMMDD`（ローカルで作成）
-2. `dist/` の中身を main のルートにコピーしてコミット・push する
+1. `dist/` の中身を main のルートにコピーしてコミット・push する
    - （ローカルで）`rm -rf *` や `git clean` を使う前に必ずバックアップを確認してください。
 
 短い操作メモ（推奨：自動化）
 1. main にソースを置く（そのまま）
-2. GitHub Actions を追加して、push 時に `npm ci && npm run build` を実行し、生成された `dist/` を `gh-pages` ブランチへデプロイする
-3. GitHub の Settings → Pages で公開元を `gh-pages` / root に設定する
+1. GitHub Actions を追加して、push 時に `npm ci && npm run build` を実行し、生成された `dist/` を `gh-pages` ブランチへデプロイする
+1. GitHub の Settings → Pages で公開元を `gh-pages` / root に設定する
 
 補足：ページが白くなる主な原因
 - Pages の公開元が期待しているブランチではない（例：`gh-pages` に push したが Pages は `main` を見ている）

@@ -44,9 +44,9 @@
 ### 手動テスト手順
 
 1. `npm run dev` で開発サーバー起動
-2. ブラウザで各機能を操作
-3. DevToolsでエラーログを確認
-4. LocalStorageのデータを確認
+1. ブラウザで各機能を操作
+1. DevToolsでエラーログを確認
+1. LocalStorageのデータを確認
 
 ### TypeScript型チェック
 

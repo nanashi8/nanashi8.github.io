@@ -519,9 +519,9 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 
 **動作:**
 1. ボタンをクリック
-2. `<body class="dark-mode">` が付く
-3. CSS変数が上書きされる
-4. 画面全体の色が変わる ✨
+1. `<body class="dark-mode">` が付く
+1. CSS変数が上書きされる
+1. 画面全体の色が変わる ✨
 
 ### 4.3 このプロジェクトの実装
 
@@ -714,10 +714,10 @@ src/
 
 #### 優先順位（強い順）
 1. `!important` (最強、使わない方が良い)
-2. インラインスタイル `style="..."`
-3. IDセレクタ `#header`
-4. クラスセレクタ `.button`
-5. タグセレクタ `div`
+1. インラインスタイル `style="..."`
+1. IDセレクタ `#header`
+1. クラスセレクタ `.button`
+1. タグセレクタ `div`
 
 ```css
 /* 詳細度: 1 (タグ) */
@@ -1115,8 +1115,8 @@ project/
 
 **動作:**
 1. ページを開く → ライトモード
-2. ボタンをクリック → ダークモードに切り替え
-3. ページをリロード → 前回の設定を記憶
+1. ボタンをクリック → ダークモードに切り替え
+1. ページをリロード → 前回の設定を記憶
 
 ---
 
@@ -1161,15 +1161,15 @@ project/
    - https://developer.mozilla.org/ja/docs/Web/CSS
    - CSS公式リファレンス
 
-2. **CSS Tricks**
+1. **CSS Tricks**
    - https://css-tricks.com/
    - 実践的なテクニック集（英語）
 
-3. **Flexbox Froggy**
+1. **Flexbox Froggy**
    - https://flexboxfroggy.com/#ja
    - Flexboxをゲームで学習（日本語対応）
 
-4. **Grid Garden**
+1. **Grid Garden**
    - https://cssgridgarden.com/#ja
    - CSS Gridをゲームで学習（日本語対応）
 
@@ -1178,14 +1178,14 @@ project/
    - https://codepen.io/
    - ブラウザ上でCSS練習
 
-2. **CSS Battle**
+1. **CSS Battle**
    - https://cssbattle.dev/
    - CSSコーディングチャレンジ
 
 ### 動画学習（YouTube）
 1. "CSS完全初心者講座"
-2. "Flexboxレイアウト入門"
-3. "ダークモード実装チュートリアル"
+1. "Flexboxレイアウト入門"
+1. "ダークモード実装チュートリアル"
 
 ---
 
@@ -1298,18 +1298,18 @@ Week 4: 最適化（8時間）
 
 ### 短期（1-2ヶ月）
 1. CSS Gridを学習
-2. アニメーションを追加
-3. レスポンシブデザインを強化
+1. アニメーションを追加
+1. レスポンシブデザインを強化
 
 ### 中期（3-6ヶ月）
 1. CSS Modules導入（Phase 3）
-2. Tailwind CSSを試す
-3. Sassを学習
+1. Tailwind CSSを試す
+1. Sassを学習
 
 ### 長期（6-12ヶ月）
 1. パフォーマンス最適化の深掘り
-2. アクセシビリティ対応
-3. デザインシステム構築
+1. アクセシビリティ対応
+1. デザインシステム構築
 
 ---
 

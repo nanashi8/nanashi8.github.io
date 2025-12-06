@@ -11,7 +11,7 @@ import {
 import { useState, useEffect, useMemo, useRef } from 'react';
 
 interface ScoreBoardProps {
-  mode?: 'translation' | 'spelling' | 'reading' | 'grammar'; // クイズモードを追加
+  mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
   currentScore?: number; // 現在のスコア
   totalAnswered?: number; // 現在の回答数
   sessionCorrect?: number; // セッション内の正解数
@@ -104,17 +104,17 @@ function ScoreBoard({
     }
   }, [detailedStatsData, activeTab]); // activeTabも依存に追加してタブ切り替え時に更新
 
-  // 本日の統計を取得（メモ化 - onAnswerTimeで更新）
-  const { todayAccuracy, todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode, onAnswerTime]);
+  // 本日の統計を取得（メモ化 - modeで更新）
+  const { todayAccuracy: _todayAccuracy, todayTotalAnswered: _todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode]);
 
-  // 累計回答数を取得（メモ化 - onAnswerTimeで更新）
-  const totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode, onAnswerTime]);
+  // 累計回答数を取得（メモ化 - modeで更新）
+  const _totalAnsweredCount = useMemo(() => getTotalAnsweredCount(mode), [mode]);
 
-  // 定着数を取得（全体から）（メモ化 - onAnswerTimeで更新）
-  const masteredCount = useMemo(() => getTotalMasteredWordsCount(), [onAnswerTime]);
+  // 定着数を取得（全体から）（メモ化）
+  const _masteredCount = useMemo(() => getTotalMasteredWordsCount(), []);
 
   // 定着率をstateから取得
-  const { retentionRate } = retentionData;
+  const { retentionRate: _retentionRate } = retentionData;
   
   // 詳細な定着率統計をstateから取得
   const detailedStats = detailedStatsData;
@@ -271,16 +271,6 @@ function ScoreBoard({
               )}
             </div>
             <div className="plan-text-line">
-              <span className="stat-text-label">定着済:</span>
-              <strong className="stat-text-value mastered">{detailedStats.masteredCount}</strong>
-              <span className="stat-text-divider">｜</span>
-              <span className="stat-text-label">学習中:</span>
-              <strong className="stat-text-value learning">{detailedStats.learningCount}</strong>
-              {learningLimit !== null && <span className="stat-text-sub">/{learningLimit}</span>}
-              <span className="stat-text-divider">｜</span>
-              <span className="stat-text-label">要復習:</span>
-              <strong className="stat-text-value review">{detailedStats.strugglingCount}</strong>
-              {reviewLimit !== null && <span className="stat-text-sub">/{reviewLimit}</span>}
               {(mode === 'translation' || mode === 'spelling') && (
                 <>
                   <span 
@@ -350,62 +340,117 @@ function ScoreBoard({
       )}
       
       {/* 学習状況タブ（詳細な定着率の内訳） - 和訳・スペルのみ */}
-      {activeTab === 'breakdown' && (mode === 'translation' || mode === 'spelling') && (
+      {activeTab === 'breakdown' && (mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
         <div className="score-board-content">
           <div className="retention-breakdown-container">
             <div className="retention-breakdown-header">
               <div className="retention-title">📊 学習状況の内訳</div>
               {detailedStats.appearedWords > 0 ? (
                 <div className="retention-subtitle">
-                  {detailedStats.appearedWords}問出題：
-                  🟢定着 {detailedStats.masteredCount}語 
-                  🟡学習中 {detailedStats.learningCount}語 
-                  🔴要復習 {detailedStats.strugglingCount}語
+                  {mode === 'memorization' ? (
+                    <>
+                      {detailedStats.appearedWords}語確認：
+                      🟢覚えた {detailedStats.masteredCount}語 
+                      🟡覚えていない {detailedStats.learningCount + detailedStats.strugglingCount}語
+                    </>
+                  ) : (
+                    <>
+                      {detailedStats.appearedWords}問出題：
+                      🟢定着 {detailedStats.masteredCount}語 
+                      🟡学習中 {detailedStats.learningCount}語 
+                      🔴要復習 {detailedStats.strugglingCount}語
+                    </>
+                  )}
                 </div>
               ) : (
                 <div className="retention-subtitle">
-                  まだ問題に取り組んでいません
+                  {mode === 'memorization' ? 'まだ語句を確認していません' : 'まだ問題に取り組んでいません'}
                 </div>
               )}
             </div>
             {detailedStats.appearedWords > 0 && (
               <>
             <div className="retention-progress-bar">
-              {detailedStats.masteredPercentage > 0 && (
-                <div 
-                  ref={masteredRef}
-                  className="retention-segment retention-mastered"
-                  data-width={Math.round(detailedStats.masteredPercentage)}
-                  title={`🟢 定着: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
-                >
-                  {detailedStats.masteredPercentage >= 10 && (
-                    <span>{Math.round(detailedStats.masteredPercentage)}%</span>
+              {mode === 'memorization' ? (
+                <>
+                  {/* 暗記タブ用: 覚えた/覚えていない */}
+                  {detailedStats.masteredPercentage > 0 && (
+                    <div 
+                      ref={masteredRef}
+                      className="retention-segment retention-mastered"
+                      data-width={Math.round(detailedStats.masteredPercentage)}
+                      title={`🟢 覚えた: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
+                    >
+                      {detailedStats.masteredPercentage >= 10 && (
+                        <span>{Math.round(detailedStats.masteredPercentage)}%</span>
+                      )}
+                    </div>
                   )}
-                </div>
-              )}
-              {detailedStats.learningPercentage > 0 && (
-                <div 
-                  ref={learningRef}
-                  className="retention-segment retention-learning"
-                  data-width={Math.round(detailedStats.learningPercentage)}
-                  title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
-                >
-                  {detailedStats.learningPercentage >= 10 && (
-                    <span>{Math.round(detailedStats.learningPercentage)}%</span>
+                  {detailedStats.learningPercentage > 0 && (
+                    <div 
+                      ref={learningRef}
+                      className="retention-segment retention-learning"
+                      data-width={Math.round(detailedStats.learningPercentage)}
+                      title={`🟡 覚えていない（学習中）: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                    >
+                      {detailedStats.learningPercentage >= 10 && (
+                        <span>{Math.round(detailedStats.learningPercentage)}%</span>
+                      )}
+                    </div>
                   )}
-                </div>
-              )}
-              {detailedStats.strugglingPercentage > 0 && (
-                <div 
-                  ref={strugglingRef}
-                  className="retention-segment retention-struggling"
-                  data-width={Math.round(detailedStats.strugglingPercentage)}
-                  title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
-                >
-                  {detailedStats.strugglingPercentage >= 10 && (
-                    <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
+                  {detailedStats.strugglingPercentage > 0 && (
+                    <div 
+                      ref={strugglingRef}
+                      className="retention-segment retention-struggling"
+                      data-width={Math.round(detailedStats.strugglingPercentage)}
+                      title={`🔴 覚えていない（要復習）: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
+                    >
+                      {detailedStats.strugglingPercentage >= 10 && (
+                        <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
+                      )}
+                    </div>
                   )}
-                </div>
+                </>
+              ) : (
+                <>
+                  {/* 和訳・スペル・文法タブ用: 定着/学習中/要復習 */}
+                  {detailedStats.masteredPercentage > 0 && (
+                    <div 
+                      ref={masteredRef}
+                      className="retention-segment retention-mastered"
+                      data-width={Math.round(detailedStats.masteredPercentage)}
+                      title={`🟢 定着: ${detailedStats.masteredCount}語 (${Math.round(detailedStats.masteredPercentage)}%)`}
+                    >
+                      {detailedStats.masteredPercentage >= 10 && (
+                        <span>{Math.round(detailedStats.masteredPercentage)}%</span>
+                      )}
+                    </div>
+                  )}
+                  {detailedStats.learningPercentage > 0 && (
+                    <div 
+                      ref={learningRef}
+                      className="retention-segment retention-learning"
+                      data-width={Math.round(detailedStats.learningPercentage)}
+                      title={`🟡 学習中: ${detailedStats.learningCount}語 (${Math.round(detailedStats.learningPercentage)}%)`}
+                    >
+                      {detailedStats.learningPercentage >= 10 && (
+                        <span>{Math.round(detailedStats.learningPercentage)}%</span>
+                      )}
+                    </div>
+                  )}
+                  {detailedStats.strugglingPercentage > 0 && (
+                    <div 
+                      ref={strugglingRef}
+                      className="retention-segment retention-struggling"
+                      data-width={Math.round(detailedStats.strugglingPercentage)}
+                      title={`🔴 要復習: ${detailedStats.strugglingCount}語 (${Math.round(detailedStats.strugglingPercentage)}%)`}
+                    >
+                      {detailedStats.strugglingPercentage >= 10 && (
+                        <span>{Math.round(detailedStats.strugglingPercentage)}%</span>
+                      )}
+                    </div>
+                  )}
+                </>
               )}
             </div>
             </>
@@ -415,7 +460,7 @@ function ScoreBoard({
       )}
       
       {/* 履歴タブ */}
-      {activeTab === 'history' && (mode === 'translation' || mode === 'spelling') && (
+      {activeTab === 'history' && (mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
         <div className="score-board-content">
           <div className="history-compact">
             {currentWord ? (
