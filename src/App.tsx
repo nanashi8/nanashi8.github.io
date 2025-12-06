@@ -55,6 +55,7 @@ import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import GrammarQuizView from './components/GrammarQuizView';
+import MemorizationView from './components/MemorizationView';
 import DictionaryView from './components/DictionaryView';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
@@ -64,7 +65,7 @@ import './App.css';
 import { migrateToIndexedDB } from './dataMigration';
 import { initStorageStrategy } from './storageManager';
 
-type Tab = 'translation' | 'spelling' | 'grammar' | 'reading' | 'dictionary' | 'stats' | 'settings';
+type Tab = 'memorization' | 'translation' | 'spelling' | 'grammar' | 'reading' | 'dictionary' | 'stats' | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
@@ -1239,6 +1240,16 @@ function App() {
       <div className="flex gap-0 bg-gray-100 dark:bg-gray-900 shadow-md py-2">
         <button
           className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+            activeTab === 'memorization'
+              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
+              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+          }`}
+          onClick={() => setActiveTab('memorization')}
+        >
+          💡 暗記
+        </button>
+        <button
+          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'translation'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1311,7 +1322,11 @@ function App() {
 
       {/* コンテンツエリア */}
       <div className="p-4 md:p-6 bg-gray-50 dark:bg-black">
-        {activeTab === 'translation' ? (
+        {activeTab === 'memorization' ? (
+          <MemorizationView
+            allQuestions={allQuestions}
+          />
+        ) : activeTab === 'translation' ? (
           <QuizView
             quizState={quizState}
             _categoryList={categoryList}

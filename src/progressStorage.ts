@@ -2889,3 +2889,107 @@ export function getWordDetailedData(word: string): {
     statusIcon,
   };
 }
+
+// ===========================
+// 暗記タブ用の関数
+// ===========================
+
+// カード表示設定の保存
+export async function saveMemorizationCardSettings(settings: import('./types').MemorizationCardState): Promise<void> {
+  try {
+    await saveProgressData('memorization-card-settings', settings);
+  } catch (error) {
+    console.error('カード表示設定の保存エラー:', error);
+    // フォールバック: localStorage
+    localStorage.setItem('memorization-card-settings', JSON.stringify(settings));
+  }
+}
+
+// カード表示設定の読み込み
+export async function getMemorizationCardSettings(): Promise<import('./types').MemorizationCardState | null> {
+  try {
+    const settings = await loadProgressData<import('./types').MemorizationCardState>('memorization-card-settings');
+    return settings;
+  } catch (error) {
+    console.error('カード表示設定の読み込みエラー:', error);
+    // フォールバック: localStorage
+    const stored = localStorage.getItem('memorization-card-settings');
+    return stored ? JSON.parse(stored) : null;
+  }
+}
+
+// 暗記設定の保存
+export async function saveMemorizationSettings(settings: import('./types').MemorizationSettings): Promise<void> {
+  try {
+    await saveProgressData('memorization-settings', settings);
+  } catch (error) {
+    console.error('暗記設定の保存エラー:', error);
+    localStorage.setItem('memorization-settings', JSON.stringify(settings));
+  }
+}
+
+// 暗記設定の読み込み
+export async function getMemorizationSettings(): Promise<import('./types').MemorizationSettings | null> {
+  try {
+    const settings = await loadProgressData<import('./types').MemorizationSettings>('memorization-settings');
+    return settings;
+  } catch (error) {
+    console.error('暗記設定の読み込みエラー:', error);
+    const stored = localStorage.getItem('memorization-settings');
+    return stored ? JSON.parse(stored) : null;
+  }
+}
+
+// 暗記行動記録の保存
+export async function recordMemorizationBehavior(behavior: import('./types').MemorizationBehavior): Promise<void> {
+  try {
+    // 既存の記録を取得
+    const existingBehaviors = await loadProgressData<import('./types').MemorizationBehavior[]>('memorization-behaviors') || [];
+    
+    // 新しい記録を追加（最大1000件まで）
+    const behaviors = [...existingBehaviors, behavior].slice(-1000);
+    
+    await saveProgressData('memorization-behaviors', behaviors);
+  } catch (error) {
+    console.error('暗記行動記録の保存エラー:', error);
+  }
+}
+
+// 暗記行動履歴の取得
+export async function getMemorizationHistory(word?: string, limit: number = 100): Promise<import('./types').MemorizationBehavior[]> {
+  try {
+    const behaviors = await loadProgressData<import('./types').MemorizationBehavior[]>('memorization-behaviors') || [];
+    
+    let filtered = behaviors;
+    if (word) {
+      filtered = behaviors.filter(b => b.word === word);
+    }
+    
+    return filtered.slice(-limit);
+  } catch (error) {
+    console.error('暗記行動履歴の取得エラー:', error);
+    return [];
+  }
+}
+
+// 学習曲線データの更新
+export async function updateMemorizationCurve(word: string, curve: import('./types').MemorizationCurve): Promise<void> {
+  try {
+    const key = `memorization-curve-${word}`;
+    await saveProgressData(key, curve);
+  } catch (error) {
+    console.error('学習曲線データの更新エラー:', error);
+  }
+}
+
+// 学習曲線データの取得
+export async function getMemorizationCurve(word: string): Promise<import('./types').MemorizationCurve | null> {
+  try {
+    const key = `memorization-curve-${word}`;
+    const curve = await loadProgressData<import('./types').MemorizationCurve>(key);
+    return curve;
+  } catch (error) {
+    console.error('学習曲線データの取得エラー:', error);
+    return null;
+  }
+}
