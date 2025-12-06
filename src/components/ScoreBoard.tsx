@@ -240,7 +240,7 @@ function ScoreBoard({
             title="学習設定"
           >
             <span className="text-base">⚙️</span>
-            <span className="leading-tight">設定</span>
+            <span className="leading-tight">学習設定</span>
           </button>
         </div>
       )}
