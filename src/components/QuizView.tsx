@@ -87,6 +87,12 @@ function QuizView({
     return saved ? parseInt(saved, 10) : 1500;
   });
   
+  // 不正解時詳細自動表示の設定
+  const [autoShowDetails, setAutoShowDetails] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoShowDetails');
+    return saved !== 'false'; // デフォルトはtrue
+  });
+  
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = (answer: string, correct: string) => {
     onAnswer(answer, correct);
@@ -299,15 +305,14 @@ function QuizView({
           <input
             type="checkbox"
             id="auto-show-details-toggle-pre"
-            checked={localStorage.getItem('autoShowDetails') !== 'false'}
+            checked={autoShowDetails}
             onChange={(e) => {
+              setAutoShowDetails(e.target.checked);
               localStorage.setItem('autoShowDetails', e.target.checked.toString());
-              // 再レンダリングを強制
-              setAutoNext(prev => prev);
             }}
           />
           <label htmlFor="auto-show-details-toggle-pre" className="checkbox-label">
-            不正解時自動で詳細を開く：{localStorage.getItem('autoShowDetails') !== 'false' ? '有効' : '無効'}
+            不正解時自動で詳細を開く：{autoShowDetails ? '有効' : '無効'}
           </label>
         </div>
       </div>
@@ -487,14 +492,14 @@ function QuizView({
                   <input
                     type="checkbox"
                     id="auto-show-details-toggle"
-                    checked={localStorage.getItem('autoShowDetails') !== 'false'}
+                    checked={autoShowDetails}
                     onChange={(e) => {
+                      setAutoShowDetails(e.target.checked);
                       localStorage.setItem('autoShowDetails', e.target.checked.toString());
-                      setAutoNext(prev => prev);
                     }}
                   />
                   <label htmlFor="auto-show-details-toggle" className="checkbox-label">
-                    不正解時自動で詳細を開く：{localStorage.getItem('autoShowDetails') !== 'false' ? '有効' : '無効'}
+                    不正解時自動で詳細を開く：{autoShowDetails ? '有効' : '無効'}
                   </label>
                 </div>
               </div>
