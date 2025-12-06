@@ -1,0 +1,121 @@
+name: コードベース健康診断
+
+on:
+  # 毎週月曜日 午前9時(JST)に自動実行
+  schedule:
+    - cron: '0 0 * * 1'  # UTC 0:00 = JST 9:00 (月曜日)
+  
+  # 手動実行も可能
+  workflow_dispatch:
+  
+  # プルリクエスト時にも実行
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: チェックアウト
+      uses: actions/checkout@v4
+      
+    - name: システム健康診断を実行
+      id: health_check
+      run: |
+        chmod +x scripts/health-check.sh
+        bash scripts/health-check.sh > health-report.txt 2>&1 || echo "HEALTH_CHECK_FAILED=true" >> $GITHUB_ENV
+        cat health-report.txt
+      continue-on-error: true
+      
+    - name: 診断結果をアーティファクトとして保存
+      uses: actions/upload-artifact@v4
+      with:
+        name: health-check-report
+        path: health-report.txt
+        retention-days: 30
+        
+    - name: 問題が検出された場合はイシューを作成
+      if: env.HEALTH_CHECK_FAILED == 'true'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const report = fs.readFileSync('health-report.txt', 'utf8');
+          
+          const today = new Date().toISOString().split('T')[0];
+          const title = `🏥 定期メンテナンス必要: システム健康診断 (${today})`;
+          
+          const body = `## 🏥 システム健康診断レポート
+          
+          定期診断でコードベースに問題が検出されました。
+          
+          **実行日時**: ${today}
+          **実行環境**: GitHub Actions
+          
+          ### 📋 診断結果
+          
+          \`\`\`
+          ${report}
+          \`\`\`
+          
+          ### 🔧 推奨アクション
+          
+          1. 詳細レポートを確認: [docs/quality/HEALTH_CHECK_REPORT.md](../blob/main/docs/quality/HEALTH_CHECK_REPORT.md)
+          2. 優先度の高い問題から対応を開始
+          3. 対応完了後に \`npm run health-check\` で再診断
+          
+          ### 📊 優先度ガイド
+          
+          - 🔴 **高**: 型定義重複、セキュリティリスク → 即座に対応
+          - 🟡 **中**: ファイル肥大化、パフォーマンス問題 → 1-2週間以内
+          - 🟢 **低**: 命名規則、コードスタイル → 次回リファクタリング時
+          
+          ### ✅ 対応後のチェックリスト
+          
+          - [ ] 検出された問題を確認
+          - [ ] 優先度の高い項目に対応
+          - [ ] ローカルで \`npm run health-check\` を実行
+          - [ ] 問題が解消されたことを確認
+          - [ ] このイシューをクローズ
+          
+          ---
+          
+          **自動生成**: GitHub Actions ワークフロー \`.github/workflows/health-check.yml\`
+          **手動実行**: \`npm run health-check\`
+          `;
+          
+          // 既存の未クローズの健康診断イシューを検索
+          const issues = await github.rest.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+            labels: 'health-check,maintenance'
+          });
+          
+          // 既存のイシューがある場合はコメントを追加、なければ新規作成
+          if (issues.data.length > 0) {
+            const latestIssue = issues.data[0];
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: latestIssue.number,
+              body: `## 🔄 新しい診断結果 (${today})\n\n問題が継続して検出されています。\n\n<details>\n<summary>最新の診断結果を表示</summary>\n\n\`\`\`\n${report}\n\`\`\`\n\n</details>`
+            });
+            console.log(`既存のイシュー #${latestIssue.number} にコメントを追加しました`);
+          } else {
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['health-check', 'maintenance', 'automated']
+            });
+            console.log(`新しいイシュー #${issue.data.number} を作成しました`);
+          }
+      
+    - name: 診断成功時のメッセージ
+      if: env.HEALTH_CHECK_FAILED != 'true'
+      run: |
+        echo "✅ システム健康診断完了: 問題は検出されませんでした"
+        echo "コードベースは良好な状態です 🎉"
