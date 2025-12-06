@@ -127,7 +127,7 @@ function checkLocalStorageSize() {
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
   
-  // 全問題データ（junior-high-entrance-words.csvから読み込み）
+  // 全問題データ（high-school-entrance-words.csvから読み込み）
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   // テスト用モジュール（開発環境のみ）
@@ -252,7 +252,7 @@ function App() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  // 初回読み込み: junior-high-entrance-words.csvと高校受験英熟語を読み込み
+  // 初回読み込み: high-school-entrance-words.csvと高校受験英熟語を読み込み
   useEffect(() => {
     const loadInitialData = async () => {
       try {
@@ -314,14 +314,14 @@ function App() {
         checkLocalStorageSize();
         
         // 高校受験単語データを読み込み
-        const juniorWordsResponse = await fetch('/data/vocabulary/junior-high-entrance-words.csv');
+        const juniorWordsResponse = await fetch('/data/vocabulary/high-school-entrance-words.csv');
         const juniorWordsText = await juniorWordsResponse.text();
         const juniorWordsQuestions = parseCSV(juniorWordsText).map(q => ({ ...q, source: 'junior' as const }));
         
         // 高校受験熟語データを読み込み
         let juniorPhrasesQuestions: Question[] = [];
         try {
-          const juniorPhrasesResponse = await fetch('/data/vocabulary/junior-high-entrance-phrases.csv');
+          const juniorPhrasesResponse = await fetch('/data/vocabulary/high-school-entrance-phrases.csv');
           const juniorPhrasesText = await juniorPhrasesResponse.text();
           juniorPhrasesQuestions = parseCSV(juniorPhrasesText).map(q => ({ ...q, source: 'junior' as const }));
           console.log(`📚 高校受験英熟語を読み込みました: ${juniorPhrasesQuestions.length}個`);
@@ -454,7 +454,7 @@ function App() {
             questions: allQuestions,
             createdAt: Date.now(),
             isBuiltIn: true,
-            source: 'junior-high-entrance-words.csv + junior-high-entrance-phrases.csv',
+            source: 'high-school-entrance-words.csv + high-school-entrance-phrases.csv',
           };
           setQuestionSets([mainSet]);
         }
