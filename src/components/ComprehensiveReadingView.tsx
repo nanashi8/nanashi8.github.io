@@ -181,9 +181,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 単語集データの読み込み
   useEffect(() => {
+    console.log('[長文] 辞書の読み込みを開始...');
     // メイン辞書（CSV）の読み込み
     fetch('/data/vocabulary/junior-high-entrance-words.csv')
-      .then((res) => res.text())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`CSV読み込み失敗: ${res.status}`);
+        }
+        return res.text();
+      })
       .then((csvText) => {
         const lines = csvText.split('\n');
         const dictionary = new Map<string, Question>();
@@ -209,15 +215,22 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           }
         });
         
+        console.log(`[長文] メイン辞書: ${dictionary.size}単語を読み込みました`);
         setWordDictionary(dictionary);
       })
       .catch((err) => {
-        console.error('Error loading word dictionary:', err);
+        console.error('[長文] Error loading word dictionary:', err);
+        setError('単語辞書の読み込みに失敗しました: ' + err.message);
       });
     
     // 長文読解専用辞書（JSON）の読み込み
     fetch('/data/dictionaries/reading-passages-dictionary.json')
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`JSON読み込み失敗: ${res.status}`);
+        }
+        return res.json();
+      })
       .then((dictData) => {
         const readingDict = new Map<string, any>();
         
@@ -226,10 +239,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         });
         
         setReadingDictionary(readingDict);
-        console.log(`長文読解辞書: ${readingDict.size}単語を読み込みました`);
+        console.log(`[長文] 長文読解辞書: ${readingDict.size}単語を読み込みました`);
       })
       .catch((err) => {
-        console.error('Error loading reading dictionary:', err);
+        console.error('[長文] Error loading reading dictionary:', err);
+        // 長文辞書はオプショナルなのでエラー表示しない
       });
   }, []);
 
@@ -339,8 +353,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   useEffect(() => {
     // 辞書がまだ読み込まれていない場合は待機
     if (wordDictionary.size === 0) {
+      console.log('[長文] 辞書の読み込みを待機中...');
       return;
     }
+    
+    console.log(`[長文] パッセージデータの読み込みを開始... (辞書: ${wordDictionary.size}単語)`);
     
     // 古いLocalStorageデータをクリア（容量節約）
     try {
@@ -358,14 +375,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         savedProgress = JSON.parse(stored);
       }
     } catch (e) {
-      console.warn('保存済み進捗の読み込みに失敗:', e);
+      console.warn('[長文] 保存済み進捗の読み込みに失敗:', e);
     }
     
     // フレーズ学習用JSONから直接読み込む
     loadAllPassagesAsReadingFormat(wordDictionary)
       .then((loadedPassages) => {
         if (loadedPassages && loadedPassages.length > 0) {
-          console.log('Loaded passages:', loadedPassages.length);
+          console.log(`[長文] ${loadedPassages.length}件のパッセージを読み込みました`);
           
           // 保存済みの「分からない単語」状態を復元
           const restoredPassages = loadedPassages.map(passage => {
@@ -402,17 +419,20 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           });
           
           setPassages(sortedData);
+          console.log(`[長文] パッセージを設定完了: ${sortedData.length}件`);
           if (sortedData.length > 0) {
             setSelectedPassageId(sortedData[0].id);
             setPhraseTranslations(new Array(sortedData[0].phrases?.length || 0).fill(false));
             setWordMeaningsVisible(new Array(sortedData[0].phrases?.length || 0).fill(false));
+            console.log(`[長文] 初期パッセージを選択: ${sortedData[0].id}`);
           }
         } else {
-          setError('パッセージデータの読み込みに失敗しました');
+          console.error('[長文] loadAllPassagesAsReadingFormatが空の配列を返しました');
+          setError('パッセージデータの読み込みに失敗しました（データが空です）');
         }
       })
       .catch((err) => {
-        console.error('Error loading passages:', err);
+        console.error('[長文] Error loading passages:', err);
         setError('パッセージの読み込みに失敗しました: ' + err.message);
       });
   }, [wordDictionary]); // 辞書が読み込まれたら再実行
