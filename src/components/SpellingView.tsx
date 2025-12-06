@@ -176,16 +176,15 @@ function SpellingView({
     }
   }, [spellingState.currentIndex, spellingState.questions]);
 
-  // letter-cardsに自動フォーカス（問題変更時とマウント時）
-  useEffect(() => {
-    if (!spellingState.answered && letterCardsRef.current) {
-      // タイマーで確実にフォーカス
-      const timer = setTimeout(() => {
-        letterCardsRef.current?.focus();
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [spellingState.answered, spellingState.currentIndex, spellingState.questions.length]);
+  // letter-cardsに自動フォーカス（コメントアウト - 自動スクロール防止）
+  // useEffect(() => {
+  //   if (!spellingState.answered && letterCardsRef.current) {
+  //     const timer = setTimeout(() => {
+  //       letterCardsRef.current?.focus();
+  //     }, 100);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [spellingState.answered, spellingState.currentIndex, spellingState.questions.length]);
 
   // カードをタップして選択
   const handleLetterClick = (_letter: string, index: number) => {

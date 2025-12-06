@@ -14,6 +14,13 @@ interface MemorizationViewProps {
 }
 
 function MemorizationView({ allQuestions }: MemorizationViewProps) {
+  // 学習設定
+  const [showSettings, setShowSettings] = useState(false);
+  const [selectedDataSource, setSelectedDataSource] = useState<string>('all');
+  const [_selectedCategory, _setSelectedCategory] = useState<string>('全分野');
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
+  const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
+  
   // 学習中・復習中の上限設定（デフォルト値）
   const learningLimit = 20;
   const reviewLimit = 30;
@@ -246,9 +253,73 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
           sessionIncorrect={sessionStats.incorrect}
           totalAnswered={sessionStats.total}
           onAnswerTime={lastAnswerTime}
-          onShowSettings={() => alert('暗記タブの学習設定は現在開発中です。\n\n今後、以下の設定を追加予定：\n- 学習中の上限設定\n- 要復習の上限設定\n- 自動音声再生')}
+          onShowSettings={() => setShowSettings(true)}
+          dataSource={selectedDataSource}
+          category="全分野"
+          difficulty={selectedDifficulty}
+          wordPhraseFilter={selectedWordPhraseFilter}
         />
       </div>
+      
+      {/* 学習設定パネル */}
+      {showSettings && (
+        <div className="max-w-6xl mx-auto mb-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-xl font-bold">📊 学習設定</h3>
+            <button 
+              onClick={() => setShowSettings(false)} 
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600"
+            >
+              ✕ 閉じる
+            </button>
+          </div>
+          
+          <div className="space-y-4">
+            <div>
+              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2">📚 問題集:</label>
+              <select 
+                id="memorization-datasource"
+                value={selectedDataSource} 
+                onChange={(e) => setSelectedDataSource(e.target.value)}
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+              >
+                <option value="all">全問題集</option>
+                <option value="junior">高校受験</option>
+                <option value="standard">高校受験標準</option>
+              </select>
+            </div>
+            
+            <div>
+              <label htmlFor="memorization-difficulty" className="block text-sm font-medium mb-2">📊 難易度:</label>
+              <select 
+                id="memorization-difficulty"
+                value={selectedDifficulty} 
+                onChange={(e) => setSelectedDifficulty(e.target.value)}
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+              >
+                <option value="all">全難易度</option>
+                <option value="beginner">初級</option>
+                <option value="intermediate">中級</option>
+                <option value="advanced">上級</option>
+              </select>
+            </div>
+            
+            <div>
+              <label htmlFor="memorization-filter" className="block text-sm font-medium mb-2">📝 単語・熟語:</label>
+              <select 
+                id="memorization-filter"
+                value={selectedWordPhraseFilter} 
+                onChange={(e) => setSelectedWordPhraseFilter(e.target.value)}
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+              >
+                <option value="all">単語＋熟語</option>
+                <option value="words">単語のみ</option>
+                <option value="phrases">熟語のみ</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* 暗記カード */}
       <div className="max-w-6xl mx-auto">
