@@ -134,9 +134,9 @@ function ScoreBoard({
     <div className="score-board-compact">
       {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
       {!isMobile && (
-        <div className="score-board-tabs flex gap-2">
+        <div className={`score-board-tabs ${(mode === 'translation' || mode === 'spelling') ? 'grid grid-cols-4 gap-2' : 'grid grid-cols-3 gap-2'}`}>
           <button 
-            className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'plan' 
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -146,7 +146,7 @@ function ScoreBoard({
             📋 プラン
           </button>
           <button 
-            className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'breakdown' 
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -157,7 +157,7 @@ function ScoreBoard({
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
-              className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+              className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
                 activeTab === 'history' 
                   ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                   : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -168,7 +168,7 @@ function ScoreBoard({
             </button>
           )}
           <button 
-            className={`flex-1 px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'settings' 
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
