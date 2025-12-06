@@ -283,21 +283,12 @@ function ScoreBoard({
               {reviewLimit !== null && <span className="stat-text-sub">/{reviewLimit}</span>}
               {(mode === 'translation' || mode === 'spelling') && (
                 <>
-                  {detailedStats.strugglingCount > 0 && onReviewFocus && (
-                    <span 
-                      className="plan-review-icon"
-                      onClick={onReviewFocus}
-                      title="要復習モード開始"
-                    >
-                      🔥
-                    </span>
-                  )}
                   <span 
-                    className="plan-setting-icon"
-                    onClick={() => setShowPlanSettings(!showPlanSettings)}
-                    title="上限設定"
+                    className={`plan-setting-icon ${isReviewFocusMode ? 'active' : ''}`}
+                    onClick={onReviewFocus}
+                    title={isReviewFocusMode ? "復習モード解除" : "復習モード開始"}
                   >
-                    ⚙️
+                    🔥
                   </span>
                 </>
               )}
