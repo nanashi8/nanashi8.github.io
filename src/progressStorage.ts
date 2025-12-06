@@ -826,6 +826,8 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
   word: string;
   mistakes: number;
   recentAccuracy: number;
+  meaning?: string;
+  reading?: string;
 }> {
   const progress = loadProgressSync();
   
@@ -841,6 +843,8 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
     word: string;
     mistakes: number;
     recentAccuracy: number;
+    meaning?: string;
+    reading?: string;
   }> = [];
   
   wordMistakes.forEach((mistakes, word) => {
@@ -852,6 +856,8 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
         word,
         mistakes,
         recentAccuracy: 0,
+        meaning: wp?.meaning,
+        reading: wp?.reading,
       });
       return;
     }
@@ -872,6 +878,8 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
         word,
         mistakes,
         recentAccuracy: Math.round(accuracy),
+        meaning: wp.meaning,
+        reading: wp.reading,
       });
     }
   });
