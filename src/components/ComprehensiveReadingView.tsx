@@ -926,12 +926,12 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             onClick={handleBackToSettings}
             title="設定"
           >
-            ⚙️ 設定
+            ⚙️ 学習設定
           </button>
           <div className="sub-tab-divider"></div>
           <button 
             onClick={handleSaveUnknownWords}
-            className="flex-1 px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
+            className=" text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
             disabled={unknownCount === 0}
             title="未知語を保存"
           >
