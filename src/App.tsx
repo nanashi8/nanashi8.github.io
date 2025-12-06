@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { QuizState, QuestionSet, Question } from './types';
 import {
   parseCSV,
@@ -492,6 +492,15 @@ function App() {
   useEffect(() => {
     localStorage.setItem('selectedDataSource', selectedDataSource);
   }, [selectedDataSource]);
+
+  // 問題集・カテゴリ・難易度が変更された時、クイズ開始済みなら自動的に再開始
+  useEffect(() => {
+    if (quizState.questions.length > 0) {
+      // クイズ開始済みの場合のみ再開始
+      handleStartQuiz();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedDataSource, selectedCategory, selectedDifficulty, selectedWordPhraseFilter, selectedPhraseTypeFilter]);
 
   // 関連分野と難易度でフィルタリング
   const getFilteredQuestions = (): Question[] => {
