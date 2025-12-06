@@ -86,9 +86,10 @@ function QuestionCard({
     });
   };
 
-  // 不正解時に全ての選択肢の詳細を自動で開く
+  // 不正解時に全ての選択肢の詳細を自動で開く（設定でON/OFF可能）
   useEffect(() => {
-    if (answered && selectedAnswer && selectedAnswer !== question.meaning) {
+    const autoShowDetails = localStorage.getItem('autoShowDetails') !== 'false'; // デフォルトはtrue
+    if (answered && selectedAnswer && selectedAnswer !== question.meaning && autoShowDetails) {
       // 全ての選択肢を開く
       setExpandedChoices(new Set(choicesWithQuestions.map((_, idx) => idx)));
     }
