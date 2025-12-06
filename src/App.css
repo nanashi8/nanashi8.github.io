@@ -564,11 +564,11 @@
 .retention-progress-bar {
   display: flex;
   width: 100%;
-  height: 48px;
+  height: 24px;
   background: var(--gray-200);
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.1);
 }
 
 .dark-mode .retention-progress-bar {
@@ -581,7 +581,7 @@
   justify-content: center;
   color: white;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   transition: all 0.3s ease;
   cursor: help;
   flex-shrink: 0;
