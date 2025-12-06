@@ -36,6 +36,7 @@ function ScoreBoard({
   totalAnswered = 0,
   isReviewFocusMode = false,
   onReviewFocus,
+  onShowSettings,
   currentWord,
   onAnswerTime,
   dataSource = '',
@@ -173,7 +174,11 @@ function ScoreBoard({
                 ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
-            onClick={() => setActiveTab('settings')}
+            onClick={() => {
+              if (onShowSettings) {
+                onShowSettings();
+              }
+            }}
           >
             ⚙️ 学習設定
           </button>
@@ -227,7 +232,11 @@ function ScoreBoard({
                 ? 'bg-primary text-white dark:bg-primary dark:text-white' 
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
-            onClick={() => setActiveTab('settings')}
+            onClick={() => {
+              if (onShowSettings) {
+                onShowSettings();
+              }
+            }}
             title="学習設定"
           >
             <span className="text-lg">⚙️</span>
@@ -449,15 +458,6 @@ function ScoreBoard({
                 <p>問題を開始すると、現在の単語のデータが表示されます</p>
               </div>
             )}
-          </div>
-        </div>
-      )}
-
-      {/* 学習設定タブ */}
-      {activeTab === 'settings' && (
-        <div className="score-board-content">
-          <div className="settings-info">
-            <p>⚙️ 学習設定を変更するには、問題選択画面の「学習設定」ボタンを使用してください。</p>
           </div>
         </div>
       )}
