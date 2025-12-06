@@ -890,9 +890,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
       {/* 4タブ構造 + 操作ボタン（読解開始後に表示） */}
       {readingStarted && (
-        <div className="reading-sub-tabs flex gap-2">
+        <div className="reading-sub-tabs grid grid-cols-6 gap-2">
           <button
-            className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               readingSubTab === 'reading' 
                 ? 'bg-primary text-white border-2 border-primary shadow-md' 
                 : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -902,7 +902,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📖 読解
           </button>
           <button
-            className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               readingSubTab === 'fullText' 
                 ? 'bg-primary text-white border-2 border-primary shadow-md' 
                 : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -912,7 +912,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📄 全文
           </button>
           <button
-            className={`flex-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+            className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               readingSubTab === 'fullTranslation' 
                 ? 'bg-primary text-white border-2 border-primary shadow-md' 
                 : 'bg-gray-200 text-gray-700 border-2 border-transparent hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
@@ -922,16 +922,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             📝 全訳
           </button>
           <button
-            className="flex-1 px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
             onClick={handleBackToSettings}
             title="設定"
           >
             ⚙️ 学習設定
           </button>
-          <div className="sub-tab-divider"></div>
           <button 
             onClick={handleSaveUnknownWords}
-            className=" text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
+            className="px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
             disabled={unknownCount === 0}
             title="未知語を保存"
           >
@@ -939,7 +938,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button 
             onClick={handleReset}
-            className="flex-1 px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md dark:bg-warning dark:text-white dark:hover:bg-warning-hover"
+            className="px-4 py-2 text-sm font-medium bg-warning text-warning-dark border-2 border-warning rounded-lg transition-all duration-200 hover:bg-warning-hover hover:shadow-md dark:bg-warning dark:text-white dark:hover:bg-warning-hover"
             title="リセット"
           >
             🔄 リセット
