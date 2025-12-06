@@ -456,29 +456,25 @@ function ScoreBoard({
       {/* 設定タブ */}
       {activeTab === 'settings' && (
         <div className="score-board-content">
-          <div className="settings-info">
-            <p>⚙️ このタブでは学習設定の内容を表示します。設定を変更するには、問題選択画面の「学習設定」ボタンを使用してください。</p>
-            <div className="current-settings">
-              <h4>📋 現在の学習設定</h4>
-              <div className="setting-item">
-                <span className="setting-label">問題集:</span>
-                <span className="setting-value">{dataSource || '全問題集'}</span>
-              </div>
-              <div className="setting-item">
-                <span className="setting-label">関連分野:</span>
-                <span className="setting-value">{category || '全分野'}</span>
-              </div>
-              <div className="setting-item">
-                <span className="setting-label">難易度:</span>
-                <span className="setting-value">{difficulty === 'all' ? '全難易度' : difficulty === 'basic' ? '基礎' : difficulty === 'standard' ? '標準' : difficulty === 'advanced' ? '発展' : difficulty}</span>
-              </div>
-              {wordPhraseFilter && (
-                <div className="setting-item">
-                  <span className="setting-label">単語・熟語:</span>
-                  <span className="setting-value">{wordPhraseFilter === 'all' ? '単語・熟語' : wordPhraseFilter === 'word' ? '単語のみ' : wordPhraseFilter === 'phrase' ? '熟語のみ' : '単語・熟語'}</span>
-                </div>
-              )}
+          <div className="plan-tab-compact">
+            <div className="plan-text-line">
+              <span className="stat-text-label">📚 問題集:</span>
+              <strong className="stat-text-value">{dataSource || '全問題集'}</strong>
             </div>
+            <div className="plan-text-line">
+              <span className="stat-text-label">🏷️ 関連分野:</span>
+              <strong className="stat-text-value">{category || '全分野'}</strong>
+            </div>
+            <div className="plan-text-line">
+              <span className="stat-text-label">📊 難易度:</span>
+              <strong className="stat-text-value">{difficulty === 'all' ? '全難易度' : difficulty === 'basic' ? '基礎' : difficulty === 'standard' ? '標準' : difficulty === 'advanced' ? '発展' : difficulty}</strong>
+            </div>
+            {wordPhraseFilter && (
+              <div className="plan-text-line">
+                <span className="stat-text-label">📝 単語・熟語:</span>
+                <strong className="stat-text-value">{wordPhraseFilter === 'all' ? '単語・熟語' : wordPhraseFilter === 'word' ? '単語のみ' : wordPhraseFilter === 'phrase' ? '熟語のみ' : '単語・熟語'}</strong>
+              </div>
+            )}
           </div>
         </div>
       )}
