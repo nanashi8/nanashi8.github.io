@@ -153,25 +153,39 @@ function StatsView({ onResetComplete }: StatsViewProps) {
               {weakWords.map((w, idx) => (
                 <li 
                   key={idx} 
-                  className="flex items-center justify-between p-4 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg border border-orange-200 dark:border-orange-700 hover:shadow-md hover:scale-[1.02] transition-all duration-200"
+                  className="p-4 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg border border-orange-200 dark:border-orange-700 hover:shadow-md hover:scale-[1.02] transition-all duration-200"
                 >
-                  <div className="flex items-center gap-4 flex-1">
-                    <span className="flex items-center justify-center w-8 h-8 bg-orange-500 dark:bg-orange-600 text-white font-bold rounded-full text-sm">
-                      {idx + 1}
-                    </span>
-                    <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                      {w.word}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm">
-                    <span className="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 rounded-full font-medium">
-                      ❌ {w.mistakes}回
-                    </span>
-                    {w.recentAccuracy > 0 && (
-                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full font-medium">
-                        正解率 {w.recentAccuracy}%
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-4 flex-1">
+                      <span className="flex items-center justify-center w-8 h-8 bg-orange-500 dark:bg-orange-600 text-white font-bold rounded-full text-sm">
+                        {idx + 1}
                       </span>
-                    )}
+                      <div className="flex flex-col">
+                        <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                          {w.word}
+                        </span>
+                        {w.meaning && (
+                          <span className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            {w.meaning}
+                          </span>
+                        )}
+                        {w.reading && (
+                          <span className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                            {w.reading}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <span className="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 rounded-full font-medium">
+                        ❌ {w.mistakes}回
+                      </span>
+                      {w.recentAccuracy > 0 && (
+                        <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full font-medium">
+                          正解率 {w.recentAccuracy}%
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </li>
               ))}
