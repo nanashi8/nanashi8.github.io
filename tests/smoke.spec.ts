@@ -36,45 +36,78 @@ test.describe('煙テスト - 基本機能', () => {
   });
 
   test('文法クイズが開始できること', async ({ page }) => {
-    // 文法クイズタブをクリック
     const grammarTab = page.getByRole('button', { name: /文法|Grammar/ });
     await grammarTab.click();
     await page.waitForTimeout(300);
-    
-    // クイズ開始ボタンをクリックして問題表示を待つ
     const startButton = page.getByRole('button', { name: /クイズ開始|開始|Start/i });
     await startButton.click();
-    
-    // 問題が表示されることを確認（設定画面から問題画面への遷移を待つ）
     await expect(page.locator('[class*="question"]').first()).toBeVisible({ timeout: 3000 });
   });
 
-  test('重大なJavaScriptエラーが発生しないこと', async ({ page }) => {
-    const errors: string[] = [];
-    
-    // コンソールエラーを収集
-    page.on('console', (msg) => {
-      if (msg.type() === 'error') {
-        errors.push(msg.text());
+  test('スペルクイズが開始できること', async ({ page }) => {
+    const spellingTab = page.getByRole('button', { name: /スペル|Spelling/ });
+    await spellingTab.click();
+    await page.waitForTimeout(300);
+    const startButton = page.getByRole('button', { name: /クイズ開始|開始|Start/i });
+    await startButton.click();
+    await expect(page.locator('[class*="question"]').first()).toBeVisible({ timeout: 3000 });
+  });
+
+  test('長文読解が開始できること', async ({ page }) => {
+    const readingTab = page.getByRole('button', { name: /長文|Reading/ });
+    await readingTab.click();
+    await page.waitForTimeout(300);
+    const readingContent = page.locator('[class*="reading"], [class*="passage"], [class*="article"]').first();
+    await expect(readingContent).toBeVisible({ timeout: 3000 });
+  });
+
+  test('統計画面が表示できること', async ({ page }) => {
+    const statsTab = page.getByRole('button', { name: /統計|Stats|分析/ });
+    await statsTab.click();
+    await page.waitForTimeout(300);
+    const statsContent = page.locator('[class*="stats"], [class*="chart"], [class*="progress"]').first();
+    await expect(statsContent).toBeVisible({ timeout: 3000 });
+  });
+
+  test('データロードが成功すること', async ({ page }) => {
+    const dataLoadErrors: string[] = [];
+    page.on('response', (response) => {
+      const url = response.url();
+      if ((url.includes('.csv') || url.includes('.json')) && !response.ok()) {
+        dataLoadErrors.push(`${url} (${response.status()})`);
       }
     });
     
-    // ページエラーを収集
-    page.on('pageerror', (error) => {
-      errors.push(error.message);
-    });
-    
-    // 各タブを巡回
     const tabs = ['和訳', '文法', 'スペル', '長文'];
     for (const tabName of tabs) {
       const tab = page.getByRole('button', { name: new RegExp(tabName) });
       if (await tab.isVisible()) {
         await tab.click();
-        await page.waitForTimeout(1000);
+        await page.waitForTimeout(500);
       }
     }
     
-    // ReferenceError や TypeError などの重大なエラーがないことを確認
+    expect(dataLoadErrors).toHaveLength(0);
+  });
+
+  test('重大なJavaScriptエラーが発生しないこと', async ({ page }) => {
+    const errors: string[] = [];
+    page.on('console', (msg) => {
+      if (msg.type() === 'error') errors.push(msg.text());
+    });
+    page.on('pageerror', (error) => {
+      errors.push(error.message);
+    });
+    
+    const tabs = ['和訳', '文法', 'スペル', '長文'];
+    for (const tabName of tabs) {
+      const tab = page.getByRole('button', { name: new RegExp(tabName) });
+      if (await tab.isVisible()) {
+        await tab.click();
+        await page.waitForTimeout(500);
+      }
+    }
+    
     const criticalErrors = errors.filter(err => 
       err.includes('ReferenceError') || 
       err.includes('TypeError') ||
