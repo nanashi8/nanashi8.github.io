@@ -334,16 +334,6 @@ function SpellingView({
         });
       }
       
-      // 全問題に回答したら完了メッセージを表示（次の問題がない場合のみ）
-      if (newState.totalAnswered === prev.questions.length && newState.currentIndex >= prev.questions.length - 1) {
-        const percentage = (newState.score / newState.totalAnswered) * 100;
-        
-        // 完了メッセージ
-        setTimeout(() => {
-          alert(`スペルクイズ完了！\n正解: ${newState.score}/${newState.totalAnswered} (${percentage.toFixed(1)}%)\n成績タブで詳細を確認できます。`);
-        }, 500);
-      }
-      
       return newState;
     });
   };

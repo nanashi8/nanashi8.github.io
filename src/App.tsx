@@ -1047,16 +1047,6 @@ function App() {
       // 自動で次へ進む機能を無効化（ユーザーが解答を確認できるように）
       // autoAdvanceが有効でも、解答表示を確認してから手動で次へ進む
       
-      // 全問題に回答したら完了メッセージを表示
-      if (newState.totalAnswered === prev.questions.length) {
-        const percentage = (newState.score / newState.totalAnswered) * 100;
-        
-        // 完了メッセージ
-        setTimeout(() => {
-          alert(`クイズ完了！\n正解: ${newState.score}/${newState.totalAnswered} (${percentage.toFixed(1)}%)\n成績タブで詳細を確認できます。`);
-        }, 500);
-      }
-      
       return newState;
     });
   };
