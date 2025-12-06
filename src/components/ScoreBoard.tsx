@@ -185,11 +185,11 @@ function ScoreBoard({
         </div>
       )}
 
-      {/* タブナビゲーション: モバイル版（アイコン+テキスト） */}
+      {/* タブナビゲーション: モバイル版（アイコンのみコンパクト表示） */}
       {isMobile && (
-        <div className="score-board-tabs score-board-tabs-mobile">
+        <div className={`score-board-tabs score-board-tabs-mobile ${(mode === 'translation' || mode === 'spelling') ? 'grid grid-cols-4 gap-1' : 'grid grid-cols-3 gap-1'}`}>
           <button 
-            className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
               activeTab === 'plan' 
                 ? 'bg-primary text-white dark:bg-primary dark:text-white' 
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -197,11 +197,11 @@ function ScoreBoard({
             onClick={() => setActiveTab('plan')}
             title="プラン"
           >
-            <span className="text-lg">📋</span>
-            <span>プラン</span>
+            <span className="text-base">📋</span>
+            <span className="leading-tight">プラン</span>
           </button>
           <button 
-            className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
               activeTab === 'breakdown' 
                 ? 'bg-primary text-white dark:bg-primary dark:text-white' 
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -209,12 +209,12 @@ function ScoreBoard({
             onClick={() => setActiveTab('breakdown')}
             title="学習状況"
           >
-            <span className="text-lg">📈</span>
-            <span>状況</span>
+            <span className="text-base">📈</span>
+            <span className="leading-tight">状況</span>
           </button>
           {(mode === 'translation' || mode === 'spelling') && (
             <button 
-              className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+              className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
                 activeTab === 'history' 
                   ? 'bg-primary text-white dark:bg-primary dark:text-white' 
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -222,12 +222,12 @@ function ScoreBoard({
               onClick={() => setActiveTab('history')}
               title="履歴"
             >
-              <span className="text-lg">📜</span>
-              <span>履歴</span>
+              <span className="text-base">📜</span>
+              <span className="leading-tight">履歴</span>
             </button>
           )}
           <button 
-            className={`flex flex-col items-center gap-1 px-3 py-2 text-xs font-medium transition-all duration-200 rounded-lg ${
+            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
               activeTab === 'settings' 
                 ? 'bg-primary text-white dark:bg-primary dark:text-white' 
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
@@ -239,8 +239,8 @@ function ScoreBoard({
             }}
             title="学習設定"
           >
-            <span className="text-lg">⚙️</span>
-            <span>設定</span>
+            <span className="text-base">⚙️</span>
+            <span className="leading-tight">設定</span>
           </button>
         </div>
       )}
