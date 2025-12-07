@@ -36,6 +36,17 @@ KATAKANA_TO_IPA = {
     'スェ́ンズデイ': 'ˈθɜːzdeɪ',
     'チュ́ーズデイ': 'ˈtjuːzdeɪ',
     'ウェ́ンズデイ': 'ˈwɛnzdeɪ',
+    # 追加: 新規IPA欠損単語
+    'コリ́ア': 'kəˈɹiə',
+    'マ́ンデイ': 'ˈmʌndeɪ',
+    'ミ́スター': 'ˈmɪstə',
+    'ミ́シズ': 'ˈmɪsɪz',
+    'マウ́ント': 'maʊnt',
+    'オリ́ンピック': 'əˈlɪmpɪk',
+    'サ́タデイ': 'ˈsætədeɪ',
+    'スィンガポ́ール': 'ˈsɪŋəpɔː',
+    'サ́ンデイ': 'ˈsʌndeɪ',
+    'タ́イランド': 'ˈtaɪlænd',
 }
 
 def fix_ipa_missing(csv_file_path: Path, output_path: Path = None):
