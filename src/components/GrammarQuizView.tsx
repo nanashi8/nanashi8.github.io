@@ -170,6 +170,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
   // 設定が変更されたらクイズをリロード（クイズ開始中のみ）
   const prevSettingsRef = useRef({ quizType, grade, difficulty });
+  const questionStartTimeRef = useRef<number>(Date.now());
   useEffect(() => {
     const prevSettings = prevSettingsRef.current;
     const settingsChanged = 
@@ -336,6 +337,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     
     setTotalAnswered(prev => prev + 1);
     
+    // 応答時間を計算
+    const responseTime = Date.now() - questionStartTimeRef.current;
+    
     if (isCorrect) {
       setScore(prev => prev + 1);
       // 連続3回正解で定着とみなす（簡易判定）
@@ -352,24 +356,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
     }
     
-    // 進捗データに記録（ScoreBoard統計用）
+    // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
     (async () => {
-      const { loadProgress, saveProgress } = await import('../progressStorage');
-      const progress = await loadProgress();
-      progress.results.push({
-        id: `grammar-${Date.now()}`,
-        questionSetId: grade,
-        questionSetName: `文法${grade}`,
-        score: isCorrect ? 1 : 0,
-        total: 1,
-        percentage: isCorrect ? 100 : 0,
-        date: Date.now(),
-        timeSpent: 0,
-        incorrectWords: [],
-        mode: 'grammar',
-        difficulty: 'intermediate'
-      });
-      await saveProgress(progress);
+      const { updateWordProgress } = await import('../progressStorage');
+      await updateWordProgress(
+        currentQuestion.question,
+        isCorrect,
+        responseTime,
+        undefined,
+        'grammar'
+      );
     })();
   };
 
@@ -395,6 +391,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             
             setTotalAnswered(prevTotal => prevTotal + 1);
             
+            // 応答時間を計算
+            const responseTime = Date.now() - questionStartTimeRef.current;
+            
             if (isCorrect) {
               setScore(prevScore => prevScore + 1);
               // 連続3回正解で定着とみなす（簡易判定）
@@ -408,24 +407,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
             }
             
-            // 進捗データに記録（ScoreBoard統計用）
+            // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
             (async () => {
-              const { loadProgress, saveProgress } = await import('../progressStorage');
-              const progress = await loadProgress();
-              progress.results.push({
-                id: `grammar-ordering-${Date.now()}`,
-                questionSetId: grade,
-                questionSetName: `文法並び替え${grade}`,
-                score: isCorrect ? 1 : 0,
-                total: 1,
-                percentage: isCorrect ? 100 : 0,
-                date: Date.now(),
-                timeSpent: 0,
-                incorrectWords: [],
-                mode: 'grammar',
-                difficulty: 'intermediate'
-              });
-              await saveProgress(progress);
+              const { updateWordProgress } = await import('../progressStorage');
+              await updateWordProgress(
+                currentQuestion.words.join(' '),
+                isCorrect,
+                responseTime,
+                undefined,
+                'grammar'
+              );
             })();
           }, 100);
         }
@@ -449,6 +440,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setSelectedWords([]);
       setAnswered(false);
       setShowHint(false);
+      questionStartTimeRef.current = Date.now(); // 次の問題の開始時刻を記録
     }
   };
 
@@ -459,6 +451,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setSelectedWords([]);
       setAnswered(false);
       setShowHint(false);
+      questionStartTimeRef.current = Date.now(); // 前の問題の開始時刻を記録
     }
   };
 
