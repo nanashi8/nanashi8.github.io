@@ -482,7 +482,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       {/* 暗記カード */}
       <div className="max-w-6xl mx-auto">
         <div ref={cardRef} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          {/* 語句と矢印 */}
+          {/* 語句と左右ボタン */}
           <div className="flex items-center gap-4 mb-6">
             {/* 左ボタン - まだ覚えていない */}
             <button
@@ -510,7 +510,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
             </button>
           </div>
           
-          {/* 詳細情報（横並びレイアウト） */}
+          {/* 詳細情報 */}
           <div className="space-y-3">
             {/* 意味 */}
             <button
@@ -591,17 +591,6 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
               </button>
             )}
           </div>
-        </div>
-      </div>
-      
-      {/* 進捗とヒント */}
-      <div className="max-w-6xl mx-auto mt-4">
-        <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
-          <span>{currentIndex + 1} / {questions.length}</span>
-          <span>連続: {consecutiveViews}枚</span>
-        </div>
-        <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-          💡 各項目をタップすると表示/非表示を切り替えられます
         </div>
       </div>
     </div>

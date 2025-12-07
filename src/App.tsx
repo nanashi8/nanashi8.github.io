@@ -1273,8 +1273,11 @@ function App() {
       
       // 単語進捗を更新（正解として記録し、定着率をカウント）
       // updateWordProgress内でprogress.resultsに記録されるため、addQuizResultは不要
-      // 注：setLastAnswerTimeはQuizView内で管理されるため、ここでは呼ばない
       await updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'translation');
+      
+      // スキップ直後にスコアボードを更新（QuizView内のhandleSkipWrapperでも更新されるが、
+      // 高速スキップ時の更新遅延を防ぐため、ここでも明示的に更新）
+      // この更新により、スキップ直後に学習状況が即座に反映される
       
       // スキップでもスコアボードに反映(正解扱い)
       setQuizState((prev) => ({

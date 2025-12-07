@@ -722,6 +722,10 @@ function SpellingView({
                       e.preventDefault();
                         // スキップのみ実行、次へは自動遷移しない
                         handleSkip();
+                    } else if (e.key === 'Enter') {
+                      // Enterキー: スキップ（正解扱い・定着済）
+                      e.preventDefault();
+                      handleSkip();
                     }
                   } else if (e.key === 'Enter') {
                     // 回答後のEnterで次へ進む
