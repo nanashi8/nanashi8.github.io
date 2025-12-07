@@ -31,7 +31,45 @@ npm run typecheck || {
   exit 1
 }
 
-# 4. CSSチェック（CSSファイルが変更されている場合）
+# 4. データ品質チェック（CSVファイルが変更されている場合）
+if git diff --cached --name-only | grep -E 'public/data/.*\.(csv|json)$' > /dev/null; then
+  echo "📊 データ品質チェック実行中..."
+  
+  # データ品質チェックを実行
+  npm run check:data-quality > /tmp/data-quality-check.log 2>&1
+  CHECK_STATUS=$?
+  
+  # エラーがあればコミット拒否
+  if grep -q "🔴 エラー:" /tmp/data-quality-check.log; then
+    echo ""
+    echo "❌ データ品質エラーが検出されました！"
+    echo ""
+    grep -A 10 "🔴 エラー:" /tmp/data-quality-check.log | head -20
+    echo ""
+    echo "💡 修正方法:"
+    echo "  1. npm run check:data-quality で詳細を確認"
+    echo "  2. scripts/auto-fix-all.py で自動修正（実装予定）"
+    echo "  3. 手動で該当エントリを修正"
+    echo ""
+    echo "詳細レポート: scripts/output/data-quality-report.txt"
+    exit 1
+  fi
+  
+  # 警告もチェック（オプション：厳格モード）
+  if grep -q "🟡 警告:" /tmp/data-quality-check.log; then
+    echo ""
+    echo "⚠️  データ品質警告が検出されました"
+    grep -A 5 "🟡 警告:" /tmp/data-quality-check.log | head -10
+    echo ""
+    echo "💡 警告も修正することを推奨します"
+    echo "💡 それでもコミットする場合: git commit --no-verify"
+    # 警告は許可する（exit 0）が、ユーザーに通知
+  fi
+  
+  echo "✅ データ品質チェック完了"
+fi
+
+# 5. CSSチェック（CSSファイルが変更されている場合）
 if git diff --cached --name-only | grep '\.css$' > /dev/null; then
   echo "🎨 CSSチェック実行中..."
   npm run lint:css || {
