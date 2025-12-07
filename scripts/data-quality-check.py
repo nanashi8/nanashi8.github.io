@@ -358,11 +358,34 @@ class DataQualityChecker:
         json_files = list(directory.rglob('*.json'))
         csv_files = list(directory.rglob('*.csv'))
         
-        # .ipa-testファイルを除外
-        csv_files = [f for f in csv_files if not str(f).endswith('.ipa-test')]
+        # 除外パターン
+        exclude_patterns = [
+            '.ipa-test',           # テストファイル
+            'constants.json',      # 定数定義ファイル
+            '/grammar/',           # 文法問題ファイル
+            'sentence-ordering',   # 文並べ替え問題
+            'pronunciation-questions',  # 発音問題
+            'accent-questions',    # アクセント問題
+            'fill-in-blank',       # 穴埋め問題
+            'verb-form-questions', # 動詞変形問題
+            'grade1_unit0_manual', # マニュアルデータ
+            '/dictionaries/',      # 辞書ファイル（passages.json等）
+            '/passages/',          # パッセージファイル
+            '/passages-phrase-learning/'  # フレーズ学習パッセージ
+        ]
         
-        total_files = len(json_files) + len(csv_files)
-        print(f"🔍 {total_files}個のファイルをスキャンします（JSON: {len(json_files)}, CSV: {len(csv_files)}）...\n")
+        # JSONファイルをフィルタリング
+        json_files = [
+            f for f in json_files 
+            if not any(pattern in str(f) for pattern in exclude_patterns)
+        ]
+        
+        # CSVファイルをフィルタリング
+        csv_files = [
+            f for f in csv_files 
+            if not any(pattern in str(f) for pattern in exclude_patterns)
+        ]
+        
         total_files = len(json_files) + len(csv_files)
         print(f"🔍 {total_files}個のファイルをスキャンします（JSON: {len(json_files)}, CSV: {len(csv_files)}）...\n")
         
