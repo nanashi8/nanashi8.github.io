@@ -4,7 +4,8 @@ import {
   getMemorizationCardSettings, 
   saveMemorizationCardSettings,
   recordMemorizationBehavior,
-  getMemorizationSettings
+  getMemorizationSettings,
+  saveMemorizationSettings
 } from '../progressStorage';
 import { speakEnglish } from '../speechSynthesis';
 import ScoreBoard from './ScoreBoard';
@@ -17,7 +18,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   // 学習設定
   const [showSettings, setShowSettings] = useState(false);
   const [selectedDataSource, setSelectedDataSource] = useState<string>('all');
-  const [_selectedCategory, _setSelectedCategory] = useState<string>('全分野');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
   
@@ -37,7 +38,8 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   
   // 音声設定
   const [autoVoice, setAutoVoice] = useState(false);
-  const [voiceWithMeaning, setVoiceWithMeaning] = useState(false);
+  const [voiceWord, setVoiceWord] = useState(true); // 語句を読み上げ
+  const [voiceMeaning, setVoiceMeaning] = useState(false); // 意味も読み上げ
   
   // 現在表示中の語句
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
@@ -78,7 +80,8 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
         const memSettings = await getMemorizationSettings();
         if (memSettings) {
           setAutoVoice(memSettings.autoVoice || false);
-          setVoiceWithMeaning(memSettings.voiceWithMeaning || false);
+          setVoiceWord(memSettings.voiceWord !== undefined ? memSettings.voiceWord : true);
+          setVoiceMeaning(memSettings.voiceMeaning || false);
         }
         
         setIsLoading(false);
@@ -91,15 +94,36 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     loadSettings();
   }, []);
   
+  // 関連分野のリストを取得
+  const getAvailableCategories = (): string[] => {
+    const categories = new Set<string>();
+    allQuestions.forEach(q => {
+      if (q.relatedFields && Array.isArray(q.relatedFields)) {
+        q.relatedFields.forEach(field => categories.add(field));
+      }
+    });
+    return Array.from(categories).sort();
+  };
+  
   // 出題する語句を選択（シンプルな実装、後でAI最適化）
   useEffect(() => {
     if (allQuestions.length === 0 || isLoading) return;
     
     const selectQuestions = () => {
+      // 学習設定に基づいてフィルタリング
+      let filtered = allQuestions;
+      
+      // 関連分野フィルター
+      if (selectedCategory !== 'all') {
+        filtered = filtered.filter(q => 
+          q.relatedFields && Array.isArray(q.relatedFields) && q.relatedFields.includes(selectedCategory)
+        );
+      }
+      
       // Phase 1: シンプルにランダム選択（後でAI判定を追加）
       const totalLimit = learningLimit + reviewLimit;
-      const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
-      const selected = shuffled.slice(0, Math.min(totalLimit, allQuestions.length));
+      const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+      const selected = shuffled.slice(0, Math.min(totalLimit, filtered.length));
       
       setQuestions(selected);
       if (selected.length > 0) {
@@ -110,25 +134,27 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     };
     
     selectQuestions();
-  }, [allQuestions, learningLimit, reviewLimit, isLoading]);
+  }, [allQuestions, learningLimit, reviewLimit, isLoading, selectedCategory]);
   
   // 音声読み上げ（カード表示時）
   useEffect(() => {
     if (!currentQuestion || !autoVoice) return;
     
     const speakCard = async () => {
-      // 語句を読み上げ
-      speakEnglish(currentQuestion.word, { rate: 0.85 });
+      // 語句を読み上げ（設定がONの場合）
+      if (voiceWord) {
+        speakEnglish(currentQuestion.word, { rate: 0.85 });
+      }
       
       // 意味も読み上げ（設定がONの場合）
-      if (voiceWithMeaning) {
+      if (voiceMeaning && voiceWord) {
         await new Promise(resolve => setTimeout(resolve, 1500)); // 1.5秒待機
         // 日本語の意味は読まない（英語のみ）
       }
     };
     
     speakCard();
-  }, [currentQuestion, autoVoice, voiceWithMeaning]);
+  }, [currentQuestion, autoVoice, voiceWord, voiceMeaning]);
   
   // カード表示設定の切り替え（永続化）
   const toggleCardField = async (field: keyof MemorizationCardState) => {
@@ -141,6 +167,21 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     
     setCardState(newState);
     await saveMemorizationCardSettings(newState);
+  };
+  
+  // 音声設定の保存
+  const updateVoiceSettings = async (autoVoiceVal: boolean, voiceWordVal: boolean, voiceMeaningVal: boolean) => {
+    setAutoVoice(autoVoiceVal);
+    setVoiceWord(voiceWordVal);
+    setVoiceMeaning(voiceMeaningVal);
+    
+    await saveMemorizationSettings({
+      autoVoice: autoVoiceVal,
+      voiceWord: voiceWordVal,
+      voiceMeaning: voiceMeaningVal,
+      interleavingMode: 'off',
+      cardDisplaySettings: cardState,
+    });
   };
   
   // スワイプ処理（useCallbackで最適化）
@@ -255,7 +296,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
           onAnswerTime={lastAnswerTime}
           onShowSettings={() => setShowSettings(true)}
           dataSource={selectedDataSource}
-          category="全分野"
+          category={selectedCategory === 'all' ? '全分野' : selectedCategory}
           difficulty={selectedDifficulty}
           wordPhraseFilter={selectedWordPhraseFilter}
         />
@@ -290,6 +331,21 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
             </div>
             
             <div>
+              <label htmlFor="memorization-category" className="block text-sm font-medium mb-2">🏷️ 関連分野:</label>
+              <select 
+                id="memorization-category"
+                value={selectedCategory} 
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+              >
+                <option value="all">全分野</option>
+                {getAvailableCategories().map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
               <label htmlFor="memorization-difficulty" className="block text-sm font-medium mb-2">📊 難易度:</label>
               <select 
                 id="memorization-difficulty"
@@ -316,6 +372,43 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
                 <option value="words">単語のみ</option>
                 <option value="phrases">熟語のみ</option>
               </select>
+            </div>
+            
+            <div className="border-t pt-4 dark:border-gray-700">
+              <label className="block text-sm font-medium mb-3">🔊 自動発音設定:</label>
+              <div className="space-y-2">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={autoVoice}
+                    onChange={(e) => updateVoiceSettings(e.target.checked, voiceWord, voiceMeaning)}
+                    className="mr-2 w-4 h-4"
+                  />
+                  <span>自動で発音する</span>
+                </label>
+                {autoVoice && (
+                  <div className="ml-6 space-y-2">
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={voiceWord}
+                        onChange={(e) => updateVoiceSettings(autoVoice, e.target.checked, voiceMeaning)}
+                        className="mr-2 w-4 h-4"
+                      />
+                      <span>語句を読み上げ</span>
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="checkbox"
+                        checked={voiceMeaning}
+                        onChange={(e) => updateVoiceSettings(autoVoice, voiceWord, e.target.checked)}
+                        className="mr-2 w-4 h-4"
+                      />
+                      <span>意味も読み上げ</span>
+                    </label>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

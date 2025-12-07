@@ -327,7 +327,9 @@ export interface PersonalizedLearningProfile {
 export interface MemorizationSettings {
   // 音声読み上げ
   autoVoice: boolean;          // 自動音声読み上げ
-  voiceWithMeaning: boolean;   // 意味も読み上げ
+  voiceWord: boolean;          // 語句を読み上げ
+  voiceMeaning: boolean;       // 意味も読み上げ
+  voiceWithMeaning?: boolean;  // 後方互換性のため残す（非推奨）
   
   // インターリービング（異なる分野を混ぜる）
   interleavingMode: 'off' | 'medium' | 'high';

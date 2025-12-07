@@ -593,7 +593,7 @@
 
 .review-mode-icon.active {
   background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-  box-shadow: 0 0 12px rgba(255, 107, 107, 0.6);
+  box-shadow: 0 0 12px rgb(255, 107, 107, 0.6);
   animation: flame-pulse 1.5s ease-in-out infinite;
 }
 
@@ -607,10 +607,10 @@
 
 @keyframes flame-pulse {
   0%, 100% {
-    box-shadow: 0 0 12px rgba(255, 107, 107, 0.6);
+    box-shadow: 0 0 12px rgb(255, 107, 107, 0.6);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 107, 107, 0.9);
+    box-shadow: 0 0 20px rgb(255, 107, 107, 0.9);
   }
 }
 
