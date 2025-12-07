@@ -147,9 +147,9 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
       }
       
       // 意味も読み上げ（設定がONの場合）
-      if (voiceMeaning && voiceWord) {
+      if (voiceMeaning && currentQuestion.meaning) {
         await new Promise(resolve => setTimeout(resolve, 1500)); // 1.5秒待機
-        // 日本語の意味は読まない（英語のみ）
+        speakEnglish(currentQuestion.meaning, { rate: 0.85 });
       }
     };
     
