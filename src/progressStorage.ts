@@ -229,6 +229,12 @@ export interface WordProgress {
   spellingAttempts?: number; // スペルモードの試行回数
   spellingCorrect?: number; // スペルモードの正解回数
   spellingStreak?: number; // スペルモードの連続正解数
+  grammarAttempts?: number; // 文法モードの試行回数
+  grammarCorrect?: number; // 文法モードの正解回数
+  grammarStreak?: number; // 文法モードの連続正解数
+  memorizationAttempts?: number; // 暗記モードの試行回数
+  memorizationCorrect?: number; // 暗記モードの正解回数
+  memorizationStreak?: number; // 暗記モードの連続正解数
   
   // 学習曲線AI用の詳細履歴
   learningHistory?: Array<{
@@ -1183,7 +1189,7 @@ export async function updateWordProgress(
   isCorrect: boolean,
   responseTime: number, // ミリ秒
   userRating?: number, // 1-10のユーザー評価（オプション）
-  mode?: 'translation' | 'spelling' | 'reading' // モード情報
+  mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization' // モード情報
 ): Promise<void> {
   const progress = await loadProgress();
   
@@ -1221,10 +1227,28 @@ export async function updateWordProgress(
     } else {
       wordProgress.spellingStreak = 0;
     }
+  } else if (mode === 'grammar') {
+    // 文法モードの統計（将来的に拡張可能）
+    wordProgress.grammarAttempts = (wordProgress.grammarAttempts || 0) + 1;
+    if (isCorrect) {
+      wordProgress.grammarCorrect = (wordProgress.grammarCorrect || 0) + 1;
+      wordProgress.grammarStreak = (wordProgress.grammarStreak || 0) + 1;
+    } else {
+      wordProgress.grammarStreak = 0;
+    }
+  } else if (mode === 'memorization') {
+    // 暗記モードの統計（将来的に拡張可能）
+    wordProgress.memorizationAttempts = (wordProgress.memorizationAttempts || 0) + 1;
+    if (isCorrect) {
+      wordProgress.memorizationCorrect = (wordProgress.memorizationCorrect || 0) + 1;
+      wordProgress.memorizationStreak = (wordProgress.memorizationStreak || 0) + 1;
+    } else {
+      wordProgress.memorizationStreak = 0;
+    }
   }
   
   // 総試行回数を更新
-  wordProgress.totalAttempts = (wordProgress.translationAttempts || 0) + (wordProgress.spellingAttempts || 0);
+  wordProgress.totalAttempts = (wordProgress.translationAttempts || 0) + (wordProgress.spellingAttempts || 0) + (wordProgress.grammarAttempts || 0) + (wordProgress.memorizationAttempts || 0);
   
   // 応答時間を更新
   wordProgress.totalResponseTime += responseTime;
@@ -1283,17 +1307,24 @@ export async function updateWordProgress(
   
   // results配列に記録（ScoreBoard統計用）
   if (mode) {
+    const questionSetName = 
+      mode === 'translation' ? '和訳' :
+      mode === 'spelling' ? 'スペル' :
+      mode === 'grammar' ? '文法' :
+      mode === 'memorization' ? '暗記' :
+      '読解';
+    
     progress.results.push({
       id: `word-${word}-${Date.now()}`,
       questionSetId: 'individual-word',
-      questionSetName: mode === 'translation' ? '和訳' : mode === 'spelling' ? 'スペル' : '読解',
+      questionSetName,
       score: isCorrect ? 1 : 0,
       total: 1,
       percentage: isCorrect ? 100 : 0,
       date: Date.now(),
       timeSpent: responseTime / 1000,
       incorrectWords: isCorrect ? [] : [word],
-      mode: mode === 'translation' ? 'translation' : mode === 'spelling' ? 'spelling' : 'reading',
+      mode: mode as 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization',
       difficulty: wordProgress.difficultyScore > 0.7 ? 'advanced' : wordProgress.difficultyScore > 0.4 ? 'intermediate' : 'beginner'
     });
   }
