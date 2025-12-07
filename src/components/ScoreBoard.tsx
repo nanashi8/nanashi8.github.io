@@ -216,7 +216,7 @@ function ScoreBoard({
             <span className="text-base">📈</span>
             <span className="leading-tight">学習状況</span>
           </button>
-          {(mode === 'translation' || mode === 'spelling') && (
+          {(mode === 'translation' || mode === 'spelling' || mode === 'grammar') && (
             <button 
               className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
                 activeTab === 'history' 

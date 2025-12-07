@@ -192,7 +192,7 @@ export interface QuizResult {
   date: number;
   timeSpent: number; // 秒
   incorrectWords: string[];
-  mode: 'translation' | 'spelling' | 'reading';
+  mode: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization';
   category?: string; // 関連分野
   difficulty?: string; // 難易度レベル
 }
@@ -1279,6 +1279,23 @@ export async function updateWordProgress(
     if (masteryResult.reason !== '未定着') {
       console.log(`✅ ${word} が定着: ${masteryResult.reason} (除外期間: ${masteryResult.excludeDays}日)`);
     }
+  }
+  
+  // results配列に記録（ScoreBoard統計用）
+  if (mode) {
+    progress.results.push({
+      id: `word-${word}-${Date.now()}`,
+      questionSetId: 'individual-word',
+      questionSetName: mode === 'translation' ? '和訳' : mode === 'spelling' ? 'スペル' : '読解',
+      score: isCorrect ? 1 : 0,
+      total: 1,
+      percentage: isCorrect ? 100 : 0,
+      date: Date.now(),
+      timeSpent: responseTime / 1000,
+      incorrectWords: isCorrect ? [] : [word],
+      mode: mode === 'translation' ? 'translation' : mode === 'spelling' ? 'spelling' : 'reading',
+      difficulty: wordProgress.difficultyScore > 0.7 ? 'advanced' : wordProgress.difficultyScore > 0.4 ? 'intermediate' : 'beginner'
+    });
   }
   
   await saveProgress(progress);

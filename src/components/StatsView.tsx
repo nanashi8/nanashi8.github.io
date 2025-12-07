@@ -485,16 +485,18 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
                   return (
                     <div
                       key={dayIdx}
-                      className={`w-20 h-20 rounded-lg flex flex-col items-center justify-center text-xs font-bold transition-all duration-200 hover:scale-105 hover:shadow-xl cursor-pointer border-2 ${
+                      className={`w-20 h-20 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-200 hover:scale-105 hover:shadow-xl cursor-pointer border-2 ${
                         colorClasses[getColorClass(day.count) as keyof typeof colorClasses]
                       } ${
                         isToday ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white dark:ring-offset-gray-800 shadow-2xl border-yellow-400' : 'border-transparent'
                       }`}
                       title={`${day.date} (${dayName})${isToday ? ' [今日]' : ''}: ${day.count}問 (正答率${day.accuracy.toFixed(0)}%)`}
                     >
-                      <div className="text-base leading-tight">{day.mastered}</div>
-                      <div className="text-[10px] opacity-80">/</div>
-                      <div className="text-sm leading-tight">{day.count}</div>
+                      <div className="flex items-center gap-1">
+                        <span className="text-base">{day.mastered}</span>
+                        <span className="text-[10px] opacity-80">/</span>
+                        <span className="text-sm">{day.count}</span>
+                      </div>
                     </div>
                   );
                 })}
