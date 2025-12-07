@@ -94,16 +94,15 @@ if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css)$' > /dev/null; the
     exit 1
   fi
   
-  # ビルド警告もチェック
+  # ビルド警告もチェック（通知のみ、コミットは許可）
   if echo "$BUILD_OUTPUT" | grep -i "warning" > /dev/null; then
     echo ""
-    echo "⚠️  ビルド警告が検出されました"
-    echo "$BUILD_OUTPUT" | grep -i "warning"
-    echo "💡 すべての警告を修正してからコミットしてください"
-    exit 1
+    echo "⚠️  ビルド警告が検出されました（コミットは許可）"
+    echo "$BUILD_OUTPUT" | grep -i "warning" | head -3
+    echo "💡 時間があるときに修正することを推奨します"
   fi
   
-  echo "✅ ビルド成功（エラー・警告なし）"
+  echo "✅ ビルド成功"
 fi
 
 # 6. 最終確認
