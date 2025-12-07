@@ -7,6 +7,8 @@
  * runScoreBoardTests();
  */
 
+import { logger } from '../logger';
+
 import { 
   getTodayStats, 
   getTotalAnsweredCount,
@@ -30,7 +32,7 @@ type TestResult = {
  * スコアボードの全テストを実行
  */
 export function runScoreBoardTests(): void {
-  console.log('=== スコアボード表示内容テスト開始 ===\n');
+  logger.log('=== スコアボード表示内容テスト開始 ===\n');
   
   const results: TestResult[] = [];
 
@@ -65,31 +67,31 @@ export function runScoreBoardTests(): void {
   results.push(testDataRanges());
 
   // 結果のサマリー
-  console.log('\n=== テスト結果サマリー ===');
+  logger.log('\n=== テスト結果サマリー ===');
   const passed = results.filter(r => r.passed).length;
   const failed = results.filter(r => !r.passed).length;
   
-  console.log(`✅ 成功: ${passed}件`);
-  console.log(`❌ 失敗: ${failed}件`);
-  console.log(`📊 合計: ${results.length}件\n`);
+  logger.log(`✅ 成功: ${passed}件`);
+  logger.log(`❌ 失敗: ${failed}件`);
+  logger.log(`📊 合計: ${results.length}件\n`);
 
   // 失敗したテストの詳細
   const failedTests = results.filter(r => !r.passed);
   if (failedTests.length > 0) {
-    console.log('=== 失敗したテスト ===');
+    logger.log('=== 失敗したテスト ===');
     failedTests.forEach(test => {
-      console.error(`❌ ${test.name}`);
-      console.error(`   ${test.message}`);
+      logger.error(`❌ ${test.name}`);
+      logger.error(`   ${test.message}`);
       if (test.data) {
-        console.error('   データ:', test.data);
+        logger.error('   データ:', test.data);
       }
     });
   }
 
-  console.log('\n=== 全データダンプ ===');
+  logger.log('\n=== 全データダンプ ===');
   results.forEach(test => {
     if (test.data) {
-      console.log(`${test.name}:`, test.data);
+      logger.log(`${test.name}:`, test.data);
     }
   });
 }
@@ -520,7 +522,7 @@ function testDataRanges(): TestResult {
  * 簡易版: スコアボードの現在の表示内容を確認
  */
 export function checkCurrentScoreBoardDisplay(mode: 'translation' | 'spelling' | 'reading' = 'translation'): void {
-  console.log(`\n=== スコアボード表示内容確認 (${mode}モード) ===\n`);
+  logger.log(`\n=== スコアボード表示内容確認 (${mode}モード) ===\n`);
 
   const { todayAccuracy, todayTotalAnswered } = getTodayStats(mode);
   const totalAnsweredCount = getTotalAnsweredCount(mode);
@@ -531,41 +533,41 @@ export function checkCurrentScoreBoardDisplay(mode: 'translation' | 'spelling' |
   const goalProgress = calculateGoalProgress();
   const alertSummary = getAlertSummary();
 
-  console.log('📊 基本統計タブ:');
-  console.log(`  本日正答率: ${todayAccuracy}% (${todayTotalAnswered}問)`);
-  console.log(`  定着率: ${retentionRate}% (${masteredCount}/${appearedCount})`);
-  console.log(`  累計回答: ${totalAnsweredCount}`);
-  console.log('');
+  logger.log('📊 基本統計タブ:');
+  logger.log(`  本日正答率: ${todayAccuracy}% (${todayTotalAnswered}問)`);
+  logger.log(`  定着率: ${retentionRate}% (${masteredCount}/${appearedCount})`);
+  logger.log(`  累計回答: ${totalAnsweredCount}`);
+  logger.log('');
 
-  console.log('📊 学習状況の内訳:');
-  console.log(`  🟢 完全定着: ${detailedStats.masteredCount}語 (${detailedStats.masteredPercentage}%)`);
-  console.log(`  🟡 学習中: ${detailedStats.learningCount}語 (${detailedStats.learningPercentage}%)`);
-  console.log(`  🔴 要復習: ${detailedStats.strugglingCount}語 (${detailedStats.strugglingPercentage}%)`);
-  console.log(`  💡 加重定着率: ${detailedStats.weightedRetentionRate}%`);
-  console.log('');
+  logger.log('📊 学習状況の内訳:');
+  logger.log(`  🟢 完全定着: ${detailedStats.masteredCount}語 (${detailedStats.masteredPercentage}%)`);
+  logger.log(`  🟡 学習中: ${detailedStats.learningCount}語 (${detailedStats.learningPercentage}%)`);
+  logger.log(`  🔴 要復習: ${detailedStats.strugglingCount}語 (${detailedStats.strugglingPercentage}%)`);
+  logger.log(`  💡 加重定着率: ${detailedStats.weightedRetentionRate}%`);
+  logger.log('');
 
-  console.log('🎯 目標・進捗タブ:');
+  logger.log('🎯 目標・進捗タブ:');
   if (nearMasteryStats.nearMasteryCount > 0) {
-    console.log(`  🎯 定着間近: ${nearMasteryStats.nearMasteryCount}個`);
+    logger.log(`  🎯 定着間近: ${nearMasteryStats.nearMasteryCount}個`);
   }
   if (nearMasteryStats.longTermMemoryCount > 0) {
-    console.log(`  🧠 長期記憶: ${nearMasteryStats.longTermMemoryCount}個`);
+    logger.log(`  🧠 長期記憶: ${nearMasteryStats.longTermMemoryCount}個`);
   }
   if (nearMasteryStats.superMemoryCount > 0) {
-    console.log(`  ✨ 完全定着: ${nearMasteryStats.superMemoryCount}個`);
+    logger.log(`  ✨ 完全定着: ${nearMasteryStats.superMemoryCount}個`);
   }
-  console.log(`  ${goalProgress.goal.icon} 目標進捗: ${goalProgress.overallProgress}% (${goalProgress.goal.name})`);
+  logger.log(`  ${goalProgress.goal.icon} 目標進捗: ${goalProgress.overallProgress}% (${goalProgress.goal.name})`);
   if (alertSummary.todayReviewCount >= 1) {
-    console.log(`  ⏰ 要復習: ${alertSummary.todayReviewCount}個`);
+    logger.log(`  ⏰ 要復習: ${alertSummary.todayReviewCount}個`);
   }
-  console.log('');
+  logger.log('');
 }
 
 // ブラウザコンソールからアクセスできるようにグローバルに公開
 if (typeof window !== 'undefined') {
   (window as any).runScoreBoardTests = runScoreBoardTests;
   (window as any).checkCurrentScoreBoardDisplay = checkCurrentScoreBoardDisplay;
-  console.log('✅ テスト関数を公開しました:');
-  console.log('  - window.runScoreBoardTests()');
-  console.log('  - window.checkCurrentScoreBoardDisplay("translation")');
+  logger.log('✅ テスト関数を公開しました:');
+  logger.log('  - window.runScoreBoardTests()');
+  logger.log('  - window.checkCurrentScoreBoardDisplay("translation")');
 }

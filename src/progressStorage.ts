@@ -1,6 +1,7 @@
 // 進捗・成績管理用のストレージモジュール（IndexedDB/LocalStorage統合）
 
 import { saveProgressData, loadProgressData, saveSetting, loadSetting } from './storageManager';
+import { logger } from './logger';
 
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
@@ -13,18 +14,18 @@ function _safeSetItem(key: string, value: string): boolean {
     return true;
   } catch (e) {
     if (e instanceof DOMException && e.name === 'QuotaExceededError') {
-      console.warn('LocalStorage容量超過。古いデータを削除します。');
+      logger.warn('LocalStorage容量超過。古いデータを削除します。');
       // 古い結果データを削除
       cleanupOldResults();
       try {
         localStorage.setItem(key, value);
         return true;
       } catch (e2) {
-        console.error('データ削除後も保存失敗:', e2);
+        logger.error('データ削除後も保存失敗:', e2);
         return false;
       }
     }
-    console.error('LocalStorage保存エラー:', e);
+    logger.error('LocalStorage保存エラー:', e);
     return false;
   }
 }
@@ -46,7 +47,7 @@ function cleanupOldResults(): void {
       ...resultsByMode.reading.slice(-MAX_RESULTS_PER_MODE),
     ].sort((a, b) => a.date - b.date);
     
-    console.log(`古い結果を削除: ${resultsByMode.translation.length + resultsByMode.spelling.length + resultsByMode.reading.length}件 → ${data.results.length}件`);
+    logger.log(`古い結果を削除: ${resultsByMode.translation.length + resultsByMode.spelling.length + resultsByMode.reading.length}件 → ${data.results.length}件`);
   }
 }
 
@@ -92,7 +93,7 @@ export async function addSessionHistory(item: SessionHistoryItem, mode: 'transla
       localStorage.setItem(key, JSON.stringify(history));
     }
   } catch (e) {
-    console.error('セッション履歴の保存エラー:', e);
+    logger.error('セッション履歴の保存エラー:', e);
   }
 }
 
@@ -124,7 +125,7 @@ export async function getSessionHistory(mode: 'translation' | 'spelling', limit:
       return history.slice(-limit);
     }
   } catch (e) {
-    console.error('セッション履歴の取得エラー:', e);
+    logger.error('セッション履歴の取得エラー:', e);
     return [];
   }
 }
@@ -134,7 +135,7 @@ export function clearSessionHistory(mode: 'translation' | 'spelling'): void {
     const key = `${SESSION_HISTORY_KEY}-${mode}`;
     localStorage.removeItem(key);
   } catch (e) {
-    console.error('セッション履歴のクリアエラー:', e);
+    logger.error('セッション履歴のクリアエラー:', e);
   }
 }
 
@@ -159,7 +160,7 @@ export function getStudySettings(): StudySettings {
       };
     }
   } catch (e) {
-    console.error('学習設定の取得エラー:', e);
+    logger.error('学習設定の取得エラー:', e);
   }
   return { ...DEFAULT_STUDY_SETTINGS };
 }
@@ -170,7 +171,7 @@ export function saveStudySettings(settings: StudySettings): boolean {
     localStorage.setItem('study-settings', JSON.stringify(settings));
     return true;
   } catch (e) {
-    console.error('学習設定の保存エラー:', e);
+    logger.error('学習設定の保存エラー:', e);
     return false;
   }
 }
@@ -352,7 +353,7 @@ export async function loadProgress(): Promise<UserProgress> {
     
     return progress;
   } catch (error) {
-    console.error('進捗データの読み込みエラー:', error);
+    logger.error('進捗データの読み込みエラー:', error);
     const initialized = initializeProgress();
     updateProgressCache(initialized);
     return initialized;
@@ -366,7 +367,7 @@ let progressCache: UserProgress | null = null;
 function ensureProgressCache(): UserProgress {
   if (!progressCache) {
     progressCache = initializeProgress();
-    console.log('📦 Progress cache initialized with default data');
+    logger.log('📦 Progress cache initialized with default data');
   }
   return progressCache;
 }
@@ -375,7 +376,7 @@ export function loadProgressSync(): UserProgress {
   if (progressCache) {
     // キャッシュがあっても、statisticsが欠けていたら補完
     if (!progressCache.statistics) {
-      console.warn('⚠️ Cache missing statistics, reinitializing');
+      logger.warn('⚠️ Cache missing statistics, reinitializing');
       progressCache = initializeProgress();
     }
     return progressCache;
@@ -424,7 +425,7 @@ export function loadProgressSync(): UserProgress {
     progressCache = progress;
     return progress;
   } catch (error) {
-    console.error('進捗データの読み込みエラー:', error);
+    logger.error('進捗データの読み込みエラー:', error);
     const initialized = initializeProgress();
     progressCache = initialized;
     return initialized;
@@ -449,17 +450,17 @@ export async function saveProgress(progress: UserProgress): Promise<void> {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
     } catch (e) {
-      console.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
+      logger.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
     }
     
     // ストレージマネージャーで保存
     const saved = await saveProgressData(progress);
     
     if (!saved) {
-      console.error('データの保存に失敗しました');
+      logger.error('データの保存に失敗しました');
     }
   } catch (error) {
-    console.error('進捗データの保存に失敗:', error);
+    logger.error('進捗データの保存に失敗:', error);
   }
 }
 
@@ -489,7 +490,7 @@ function compressProgressData(progress: UserProgress): void {
 
 // 緊急圧縮: より積極的にデータを削減
 function emergencyCompress(progress: UserProgress): void {
-  console.log('緊急圧縮を開始...');
+  logger.log('緊急圧縮を開始...');
   
   // 1. クイズ結果を最新300件に削減
   if (progress.results.length > 300) {
@@ -517,7 +518,7 @@ function emergencyCompress(progress: UserProgress): void {
     progress.statistics.studyDates = progress.statistics.studyDates.slice(0, 180);
   }
   
-  console.log('緊急圧縮完了');
+  logger.log('緊急圧縮完了');
 }
 
 // クイズ結果を追加
@@ -729,7 +730,7 @@ export function importProgress(jsonData: string): boolean {
     saveProgress(progress);
     return true;
   } catch (error) {
-    console.error('進捗データのインポートエラー:', error);
+    logger.error('進捗データのインポートエラー:', error);
     return false;
   }
 }
@@ -1288,7 +1289,7 @@ export async function updateWordProgress(
   
   // デバッグ: 習熟レベルの変化をログ出力
   if (oldMasteryLevel !== wordProgress.masteryLevel) {
-    console.log(`🔄 ${word}: ${oldMasteryLevel} → ${wordProgress.masteryLevel} (正解: ${wordProgress.correctCount}, 不正解: ${wordProgress.incorrectCount}, 連続: ${wordProgress.consecutiveCorrect})`);
+    logger.log(`🔄 ${word}: ${oldMasteryLevel} → ${wordProgress.masteryLevel} (正解: ${wordProgress.correctCount}, 不正解: ${wordProgress.incorrectCount}, 連続: ${wordProgress.consecutiveCorrect})`);
   }
   
   // 柔軟な定着判定システム
@@ -1301,7 +1302,7 @@ export async function updateWordProgress(
     
     // デバッグ用: 定着理由をログ出力
     if (masteryResult.reason !== '未定着') {
-      console.log(`✅ ${word} が定着: ${masteryResult.reason} (除外期間: ${masteryResult.excludeDays}日)`);
+      logger.log(`✅ ${word} が定着: ${masteryResult.reason} (除外期間: ${masteryResult.excludeDays}日)`);
     }
   }
   
@@ -1368,17 +1369,17 @@ function removeFromReadingUnknownWords(word: string): void {
         localStorage.setItem(readingDataKey, JSON.stringify(passages));
       } catch (error) {
         if (error instanceof DOMException && error.name === 'QuotaExceededError') {
-          console.warn('長文読解データの保存に失敗（容量超過）。データを圧縮します。');
+          logger.warn('長文読解データの保存に失敗（容量超過）。データを圧縮します。');
           // 長文読解データは再読み込みで復元できるため、削除して再取得を促す
           localStorage.removeItem(readingDataKey);
-          console.log('長文読解データを削除しました。次回読み込み時に再取得されます。');
+          logger.log('長文読解データを削除しました。次回読み込み時に再取得されます。');
         } else {
           throw error;
         }
       }
     }
   } catch (err) {
-    console.error('長文読解データの更新エラー:', err);
+    logger.error('長文読解データの更新エラー:', err);
   }
 }
 
@@ -2456,7 +2457,7 @@ export function resetStatsByModeDifficulty(mode: 'translation' | 'spelling', dif
   
   saveProgress(progress);
   
-  console.log(`${mode}モードの${difficulty}をリセット: ${removedResults.length}件の結果を削除`);
+  logger.log(`${mode}モードの${difficulty}をリセット: ${removedResults.length}件の結果を削除`);
 }
 
 /**
@@ -2488,7 +2489,7 @@ function loadAllQuestions(): Array<{ word: string; difficulty: string }> {
       return JSON.parse(stored);
     }
   } catch (e) {
-    console.error('Failed to load questions cache:', e);
+    logger.error('Failed to load questions cache:', e);
   }
   return [];
 }
@@ -2500,9 +2501,9 @@ export async function resetAllProgress(): Promise<void> {
   // 1. IndexedDBの完全削除
   try {
     await deleteDatabase();
-    console.log('✅ IndexedDB削除完了');
+    logger.log('✅ IndexedDB削除完了');
   } catch (error) {
-    console.error('IndexedDB削除エラー:', error);
+    logger.error('IndexedDB削除エラー:', error);
   }
 
   // 2. LocalStorageの全ての関連キーを削除
@@ -2532,7 +2533,7 @@ export async function resetAllProgress(): Promise<void> {
     try {
       localStorage.removeItem(key);
     } catch (e) {
-      console.error(`Failed to remove ${key}:`, e);
+      logger.error(`Failed to remove ${key}:`, e);
     }
   });
   
@@ -2540,7 +2541,7 @@ export async function resetAllProgress(): Promise<void> {
   const initialProgress = initializeProgress();
   saveProgress(initialProgress);
   
-  console.log(`✅ リセット完了: LocalStorage ${keysToRemove.length}個のキーを削除しました`);
+  logger.log(`✅ リセット完了: LocalStorage ${keysToRemove.length}個のキーを削除しました`);
   
   // 4. ページリロード（キャッシュクリア目的）
   window.location.reload();
@@ -2949,7 +2950,7 @@ export async function saveMemorizationCardSettings(settings: import('./types').M
   try {
     await saveSetting('memorization-card-settings', settings);
   } catch (error) {
-    console.error('カード表示設定の保存エラー:', error);
+    logger.error('カード表示設定の保存エラー:', error);
     // フォールバック: localStorage
     localStorage.setItem('memorization-card-settings', JSON.stringify(settings));
   }
@@ -2961,7 +2962,7 @@ export async function getMemorizationCardSettings(): Promise<import('./types').M
     const settings = await loadSetting('memorization-card-settings');
     return settings ? (typeof settings === 'string' ? JSON.parse(settings) : settings) : null;
   } catch (error) {
-    console.error('カード表示設定の読み込みエラー:', error);
+    logger.error('カード表示設定の読み込みエラー:', error);
     // フォールバック: localStorage
     const stored = localStorage.getItem('memorization-card-settings');
     return stored ? JSON.parse(stored) : null;
@@ -2973,7 +2974,7 @@ export async function saveMemorizationSettings(settings: import('./types').Memor
   try {
     await saveSetting('memorization-settings', settings);
   } catch (error) {
-    console.error('暗記設定の保存エラー:', error);
+    logger.error('暗記設定の保存エラー:', error);
     localStorage.setItem('memorization-settings', JSON.stringify(settings));
   }
 }
@@ -2984,7 +2985,7 @@ export async function getMemorizationSettings(): Promise<import('./types').Memor
     const settings = await loadSetting('memorization-settings');
     return settings ? (typeof settings === 'string' ? JSON.parse(settings) : settings) : null;
   } catch (error) {
-    console.error('暗記設定の読み込みエラー:', error);
+    logger.error('暗記設定の読み込みエラー:', error);
     const stored = localStorage.getItem('memorization-settings');
     return stored ? JSON.parse(stored) : null;
   }
@@ -3002,7 +3003,7 @@ export async function recordMemorizationBehavior(behavior: import('./types').Mem
     
     await saveSetting('memorization-behaviors', updated);
   } catch (error) {
-    console.error('暗記行動記録の保存エラー:', error);
+    logger.error('暗記行動記録の保存エラー:', error);
   }
 }
 
@@ -3019,7 +3020,7 @@ export async function getMemorizationHistory(word?: string, limit: number = 100)
     
     return filtered.slice(-limit);
   } catch (error) {
-    console.error('暗記行動履歴の取得エラー:', error);
+    logger.error('暗記行動履歴の取得エラー:', error);
     return [];
   }
 }
@@ -3030,7 +3031,7 @@ export async function updateMemorizationCurve(word: string, curve: import('./typ
     const key = `memorization-curve-${word}`;
     await saveSetting(key, curve);
   } catch (error) {
-    console.error('学習曲線データの更新エラー:', error);
+    logger.error('学習曲線データの更新エラー:', error);
   }
 }
 
@@ -3041,7 +3042,7 @@ export async function getMemorizationCurve(word: string): Promise<import('./type
     const curveData = await loadSetting(key);
     return curveData ? (typeof curveData === 'string' ? JSON.parse(curveData) : curveData) : null;
   } catch (error) {
-    console.error('学習曲線データの取得エラー:', error);
+    logger.error('学習曲線データの取得エラー:', error);
     return null;
   }
 }
@@ -3058,7 +3059,7 @@ export async function getCustomQuestionSets(): Promise<import('./types').CustomQ
     const data = await loadSetting(CUSTOM_QUESTION_SETS_KEY);
     return data ? (typeof data === 'string' ? JSON.parse(data) : data) : [];
   } catch (error) {
-    console.error('カスタム問題セット取得エラー:', error);
+    logger.error('カスタム問題セット取得エラー:', error);
     return [];
   }
 }
@@ -3082,7 +3083,7 @@ export async function saveCustomQuestionSet(questionSet: import('./types').Custo
     
     await saveSetting(CUSTOM_QUESTION_SETS_KEY, sets);
   } catch (error) {
-    console.error('カスタム問題セット保存エラー:', error);
+    logger.error('カスタム問題セット保存エラー:', error);
     throw error;
   }
 }
@@ -3094,7 +3095,7 @@ export async function deleteCustomQuestionSet(id: string): Promise<void> {
     const filtered = sets.filter(s => s.id !== id);
     await saveSetting(CUSTOM_QUESTION_SETS_KEY, filtered);
   } catch (error) {
-    console.error('カスタム問題セット削除エラー:', error);
+    logger.error('カスタム問題セット削除エラー:', error);
     throw error;
   }
 }
@@ -3208,6 +3209,6 @@ export async function updateAutoUpdateQuestionSets(allQuestions: import('./types
       await saveSetting(CUSTOM_QUESTION_SETS_KEY, sets);
     }
   } catch (error) {
-    console.error('自動更新エラー:', error);
+    logger.error('自動更新エラー:', error);
   }
 }

@@ -8,6 +8,7 @@ import {
   classifyPhraseType,
 } from './utils';
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './progressStorage';
+import { logger } from './logger';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import {
   analyzeRadarChart,
@@ -104,24 +105,24 @@ function checkLocalStorageSize() {
     }
     
     const totalMB = totalSize / (1024 * 1024);
-    console.log(`📊 LocalStorage使用量: ${totalMB.toFixed(2)}MB`);
+    logger.log(`📊 LocalStorage使用量: ${totalMB.toFixed(2)}MB`);
     
     // 大きいデータをログ出力
     details.sort((a, b) => b.size - a.size);
     details.slice(0, 5).forEach(d => {
       const sizeMB = d.size / (1024 * 1024);
-      console.log(`  - ${d.key}: ${sizeMB.toFixed(2)}MB`);
+      logger.log(`  - ${d.key}: ${sizeMB.toFixed(2)}MB`);
     });
     
     // 警告表示（4MB以上で警告）
     if (totalMB > 4) {
-      console.warn('⚠️ LocalStorageの使用量が多いため、古いデータを自動削除しています。');
+      logger.warn('⚠️ LocalStorageの使用量が多いため、古いデータを自動削除しています。');
       // 進捗データを再読み込みして自動圧縮を実行
       loadProgress();
-      console.log('自動圧縮が完了しました。');
+      logger.log('自動圧縮が完了しました。');
     }
   } catch (error) {
-    console.error('LocalStorageサイズの確認エラー:', error);
+    logger.error('LocalStorageサイズの確認エラー:', error);
   }
 }
 
@@ -137,11 +138,11 @@ function App() {
     const isDevelopment = !window.location.hostname.includes('github.io');
     if (isDevelopment) {
       import('./tests/scoreBoardTests').then(() => {
-        console.log('✅ スコアボードテストモジュールを読み込みました');
-        console.log('   使い方: window.runScoreBoardTests()');
-        console.log('   または: window.checkCurrentScoreBoardDisplay("translation")');
+        logger.log('✅ スコアボードテストモジュールを読み込みました');
+        logger.log('   使い方: window.runScoreBoardTests()');
+        logger.log('   または: window.checkCurrentScoreBoardDisplay("translation")');
       }).catch(err => {
-        console.error('テストモジュールの読み込みエラー:', err);
+        logger.error('テストモジュールの読み込みエラー:', err);
       });
     }
   }, []);
@@ -277,11 +278,11 @@ function App() {
     const loadInitialData = async () => {
       try {
         // IndexedDB移行を実行（初回のみ）
-        console.log('🔄 データ移行チェック中...');
+        logger.log('🔄 データ移行チェック中...');
         try {
           await migrateToIndexedDB();
         } catch (migrationError) {
-          console.error('Migration error (continuing):', migrationError);
+          logger.error('Migration error (continuing):', migrationError);
         }
         
         // ストレージ戦略を初期化
@@ -294,18 +295,18 @@ function App() {
           // データ検証
           if (progress && progress.wordProgress && progress.statistics && progress.questionSetStats) {
             updateProgressCache(progress);
-            console.log('✅ Progress data loaded successfully');
+            logger.log('✅ Progress data loaded successfully');
             progressLoaded = true;
           } else {
-            console.warn('⚠️ Progress data incomplete, reinitializing');
+            logger.warn('⚠️ Progress data incomplete, reinitializing');
           }
         } catch (progressError) {
-          console.error('Progress load error:', progressError);
+          logger.error('Progress load error:', progressError);
         }
         
         // ロード失敗または不完全な場合は初期化
         if (!progressLoaded) {
-          console.log('🔧 Initializing fresh progress data');
+          logger.log('🔧 Initializing fresh progress data');
           const initialProgress = {
             results: [],
             statistics: {
@@ -326,7 +327,7 @@ function App() {
           try {
             localStorage.setItem('progress-data', JSON.stringify(initialProgress));
           } catch (e) {
-            console.warn('Failed to save initial progress:', e);
+            logger.warn('Failed to save initial progress:', e);
           }
         }
         
@@ -344,9 +345,9 @@ function App() {
           const juniorPhrasesResponse = await fetch('/data/vocabulary/high-school-entrance-phrases.csv');
           const juniorPhrasesText = await juniorPhrasesResponse.text();
           juniorPhrasesQuestions = parseCSV(juniorPhrasesText).map(q => ({ ...q, source: 'junior' as const }));
-          console.log(`📚 高校受験英熟語を読み込みました: ${juniorPhrasesQuestions.length}個`);
+          logger.log(`📚 高校受験英熟語を読み込みました: ${juniorPhrasesQuestions.length}個`);
         } catch (error) {
-          console.warn('高校受験英熟語データの読み込みに失敗:', error);
+          logger.warn('高校受験英熟語データの読み込みに失敗:', error);
         }
         
         // 中級1800単語データを読み込み
@@ -355,9 +356,9 @@ function App() {
           const intermediateWordsResponse = await fetch('/data/vocabulary/high-school-intermediate-words.csv');
           const intermediateWordsText = await intermediateWordsResponse.text();
           intermediateWordsQuestions = parseCSV(intermediateWordsText).map(q => ({ ...q, source: 'intermediate' as const }));
-          console.log(`📚 中級1800単語を読み込みました: ${intermediateWordsQuestions.length}個`);
+          logger.log(`📚 中級1800単語を読み込みました: ${intermediateWordsQuestions.length}個`);
         } catch (error) {
-          console.warn('中級1800単語データの読み込みに失敗:', error);
+          logger.warn('中級1800単語データの読み込みに失敗:', error);
         }
         
         // 中級1800熟語データを読み込み
@@ -366,9 +367,9 @@ function App() {
           const intermediatePhrasesResponse = await fetch('/data/vocabulary/high-school-intermediate-phrases.csv');
           const intermediatePhrasesText = await intermediatePhrasesResponse.text();
           intermediatePhrasesQuestions = parseCSV(intermediatePhrasesText).map(q => ({ ...q, source: 'intermediate' as const }));
-          console.log(`📚 中級1800熟語を読み込みました: ${intermediatePhrasesQuestions.length}個`);
+          logger.log(`📚 中級1800熟語を読み込みました: ${intermediatePhrasesQuestions.length}個`);
         } catch (error) {
-          console.warn('中級1800熟語データの読み込みに失敗:', error);
+          logger.warn('中級1800熟語データの読み込みに失敗:', error);
         }
         
         // 並び替え問題・文法問題のJSONファイルを読み込んでUnit情報を取得
@@ -389,11 +390,11 @@ function App() {
                 });
               }
             } catch (err) {
-              console.warn(`Grade ${grade} sentence ordering data not found:`, err);
+              logger.warn(`Grade ${grade} sentence ordering data not found:`, err);
             }
           }
         } catch (error) {
-          console.warn('Unit title mapping failed:', error);
+          logger.warn('Unit title mapping failed:', error);
         }
         
         // 全データソースを統合
@@ -415,7 +416,7 @@ function App() {
             }));
             localStorage.setItem('all-questions-cache', JSON.stringify(questionsCache));
           } catch (e) {
-            console.warn('Questions cache save failed:', e);
+            logger.warn('Questions cache save failed:', e);
           }
           
           // 関連分野のリストを抽出
@@ -521,7 +522,7 @@ function App() {
           setIsDataLoaded(true);
         }
       } catch (error) {
-        console.error('英単語データの読み込みに失敗:', error);
+        logger.error('英単語データの読み込みに失敗:', error);
         alert('英単語データの読み込みに失敗しました');
       }
     };
@@ -549,7 +550,7 @@ function App() {
         setQuestionSets([mainSet, ...customQuestionSets]);
       }
     } catch (error) {
-      console.error('カスタム問題セットの再読み込みに失敗:', error);
+      logger.error('カスタム問題セットの再読み込みに失敗:', error);
     }
   };
 
@@ -637,7 +638,7 @@ function App() {
   const handleStartQuiz = async () => {
     // ゲーミフィケーションAI: モチベーションメッセージ表示
     const motivationMsg = getMotivationalMessage();
-    console.log('🎮 ゲーミフィケーション:', motivationMsg);
+    logger.log('🎮 ゲーミフィケーション:', motivationMsg);
 
     // 学習設定を取得
     const studySettings = getStudySettings();
@@ -665,7 +666,7 @@ function App() {
       
       // 補修モード用の問題プールを設定（繰り返し出題用）
       setReviewQuestionPool([...filteredQuestions]);
-      console.log(`🎯 補修モード開始: ${filteredQuestions.length}問を繰り返し出題`);
+      logger.log(`🎯 補修モード開始: ${filteredQuestions.length}問を繰り返し出題`);
     }
     
     // レーダーチャートAI: 弱点分野を分析
@@ -675,17 +676,17 @@ function App() {
     const improvementProgress = getImprovementProgress();
     if (improvementProgress) {
       updateImprovementProgress(radarAnalysis);
-      console.log(`📊 改善進捗: ${improvementProgress.currentDay}日目 - 全体進捗${improvementProgress.overallProgress.toFixed(1)}%`);
+      logger.log(`📊 改善進捗: ${improvementProgress.currentDay}日目 - 全体進捗${improvementProgress.overallProgress.toFixed(1)}%`);
     } else if (radarAnalysis.weakCategories.length > 0) {
       // 初回の場合は改善プランを開始
       saveImprovementProgress(radarAnalysis);
-      console.log('🎯 レーダーチャート改善プランを開始しました');
+      logger.log('🎯 レーダーチャート改善プランを開始しました');
     }
     
     // AI推奨メッセージをコンソールに表示
     if (radarAnalysis.aiRecommendations.length > 0) {
-      console.log('🧠 AI学習アシスタント からの推奨:');
-      radarAnalysis.aiRecommendations.forEach(rec => console.log(`  ${rec}`));
+      logger.log('🧠 AI学習アシスタント からの推奨:');
+      radarAnalysis.aiRecommendations.forEach(rec => logger.log(`  ${rec}`));
     }
     
     // 弱点分野からの出題を優先(AIが自動調整)
@@ -695,7 +696,7 @@ function App() {
         radarAnalysis.weakCategories,
         Math.min(30, filteredQuestions.length)
       );
-      console.log(`💡 弱点分野を優先出題: ${radarAnalysis.weakCategories.slice(0, 3).map(w => w.category).join(', ')}`);
+      logger.log(`💡 弱点分野を優先出題: ${radarAnalysis.weakCategories.slice(0, 3).map(w => w.category).join(', ')}`);
     }
     
     // 言語学的関連性による出題(最近学習した単語の関連語を優先)
@@ -714,7 +715,7 @@ function App() {
           !relatedQuestions.some(rq => rq.word === q.word)
         );
         filteredQuestions = [...relatedQuestions, ...nonRelatedQuestions];
-        console.log(`🔗 言語学的関連性: ${relatedQuestions.length}問の関連語を優先出題`);
+        logger.log(`🔗 言語学的関連性: ${relatedQuestions.length}問の関連語を優先出題`);
       }
     }
     */
@@ -746,7 +747,7 @@ function App() {
       filteredQuestions = [...reviewQuestions, ...correctQuestions];
       
       if (reviewQuestions.length > 0) {
-        console.log(`🔄 要復習問題: ${reviewQuestions.length}問（上限: ${studySettings.maxReviewCount}問）`);
+        logger.log(`🔄 要復習問題: ${reviewQuestions.length}問（上限: ${studySettings.maxReviewCount}問）`);
       }
     }
     
@@ -763,7 +764,7 @@ function App() {
         
         // 混同された単語を優先的に配置（要復習の次）
         filteredQuestions = [...confusedQuestions, ...nonConfusedQuestions];
-        console.log(`🔗 混同履歴: ${confusedQuestions.length}問を優先出題`);
+        logger.log(`🔗 混同履歴: ${confusedQuestions.length}問を優先出題`);
       }
     }
     
@@ -825,15 +826,15 @@ function App() {
           return priorityB - priorityA;
         });
       
-      console.log('🧠 学習曲線AI: 最適な出題順序を決定');
-      console.log('  出題戦略:', adjustedSequence.slice(0, 5).map(p => 
+      logger.log('🧠 学習曲線AI: 最適な出題順序を決定');
+      logger.log('  出題戦略:', adjustedSequence.slice(0, 5).map(p => 
         `${p.word}(${p.strategy}, 成功率${p.estimatedSuccessRate.toFixed(0)}%)`
       ).join(', '));
       
       // 認知負荷メッセージを表示
       if (currentLoad.fatigueLevel > 40) {
         const message = generateFatigueMessage(currentLoad);
-        console.log(`⚡ 認知負荷: ${currentLoad.fatigueLevel.toFixed(0)}% - ${message}`);
+        logger.log(`⚡ 認知負荷: ${currentLoad.fatigueLevel.toFixed(0)}% - ${message}`);
       }
       
       // 文脈学習AI: 意味的に関連する単語を近くに配置
@@ -855,20 +856,20 @@ function App() {
         return orderA - orderB;
       });
       
-      console.log('🔗 文脈学習AI: 意味的クラスタリング完了');
-      console.log(`  クラスター数: ${contextualSeq.clusters.length}`);
+      logger.log('🔗 文脈学習AI: 意味的クラスタリング完了');
+      logger.log(`  クラスター数: ${contextualSeq.clusters.length}`);
       if (contextualSeq.transitions.length > 0) {
         const sample = contextualSeq.transitions[0];
-        console.log(`  例: ${sample.from} → ${sample.to} (${sample.reason})`);
+        logger.log(`  例: ${sample.from} → ${sample.to} (${sample.reason})`);
       }
     }
     // NOTE: 学習曲線AI+文脈学習AIが上記のifブロックで実行されるため、
     // 従来の適応的学習(selectAdaptiveQuestions)は使用されない
     
     if (reviewFocusMode) {
-      console.log(`🎯 補修モード: ${filteredQuestions.length}問を繰り返し出題中`);
+      logger.log(`🎯 補修モード: ${filteredQuestions.length}問を繰り返し出題中`);
     } else {
-      console.log(`📚 学習数: ${filteredQuestions.length}問`);
+      logger.log(`📚 学習数: ${filteredQuestions.length}問`);
     }
     
     setQuizState({
@@ -917,13 +918,13 @@ function App() {
     );
     errorPredictionsRef.current = predictions;
     
-    console.log('🔮 エラー予測AI: 誤答リスク分析完了');
+    logger.log('🔮 エラー予測AI: 誤答リスク分析完了');
     const highRisk = Array.from(predictions.values())
       .filter(p => p.warningLevel === 'high' || p.warningLevel === 'critical')
       .sort((a, b) => b.errorRisk - a.errorRisk);
     if (highRisk.length > 0) {
-      console.log(`  高リスク問題: ${highRisk.length}問`);
-      console.log(`  最高リスク: ${highRisk[0].word} (${highRisk[0].errorRisk.toFixed(0)}% - ${highRisk[0].primaryPattern})`);
+      logger.log(`  高リスク問題: ${highRisk.length}問`);
+      logger.log(`  最高リスク: ${highRisk[0].word} (${highRisk[0].errorRisk.toFixed(0)}% - ${highRisk[0].primaryPattern})`);
     }
   };
 
@@ -996,7 +997,7 @@ function App() {
     // 不正解時、選択した選択肢の単語を「混同した単語」として記録
     if (!isCorrect && selectedQuestion && selectedQuestion.word) {
       await recordConfusion(selectedQuestion.word, currentQuestion.word);
-      console.log(`🔗 混同を記録: ${selectedQuestion.word} ← ${currentQuestion.word}`);
+      logger.log(`🔗 混同を記録: ${selectedQuestion.word} ← ${currentQuestion.word}`);
     }
     
     // 応答時間を計算
@@ -1026,7 +1027,7 @@ function App() {
       
       // 休憩推奨をチェック
       if (currentLoad.breakRecommendation?.shouldBreak) {
-        console.log(`💤 休憩推奨: ${currentLoad.breakRecommendation.reason}`);
+        logger.log(`💤 休憩推奨: ${currentLoad.breakRecommendation.reason}`);
       }
       
       // エラー予測AI: 回答を記録
@@ -1093,7 +1094,7 @@ function App() {
           handleSkippedWordCorrect(currentQuestion.word);
         } else {
           handleSkippedWordIncorrect(currentQuestion.word);
-          console.log('🤔 AI学習アシスタント: スキップした単語が不正解でした。同時期の単語を再確認します。');
+          logger.log('🤔 AI学習アシスタント: スキップした単語が不正解でした。同時期の単語を再確認します。');
         }
       }
       
@@ -1129,7 +1130,7 @@ function App() {
           if (currentStreak + 1 >= 2) {
             const newPool = reviewQuestionPool.filter(q => q.word !== currentQuestion.word);
             setReviewQuestionPool(newPool);
-            console.log(`✅ ${currentQuestion.word} を補修対象から除外 (2回連続正解)`);
+            logger.log(`✅ ${currentQuestion.word} を補修対象から除外 (2回連続正解)`);
             
             // 問題プールが空になったら補修モード終了
             if (newPool.length === 0) {
@@ -1198,7 +1199,7 @@ function App() {
           const profile = generateLearningStyleProfile('user', history);
           const currentTime = getTimeOfDayStyle();
           const message = generateRecommendationMessage(profile, currentTime);
-          console.log('📊 学習スタイルAI:', message);
+          logger.log('📊 学習スタイルAI:', message);
         }
 
         // ゲーミフィケーションAI: セッション終了処理
@@ -1213,19 +1214,19 @@ function App() {
         );
 
         // フィードバックメッセージをログ出力
-        console.log('🎮 ゲーミフィケーション結果:');
-        console.log(`  獲得XP: ${gamificationResult.xpGained}`);
+        logger.log('🎮 ゲーミフィケーション結果:');
+        logger.log(`  獲得XP: ${gamificationResult.xpGained}`);
         if (gamificationResult.leveledUp) {
-          console.log(`  🎉 レベルアップ! Lv.${gamificationResult.newLevel}`);
+          logger.log(`  🎉 レベルアップ! Lv.${gamificationResult.newLevel}`);
         }
         gamificationResult.feedback.forEach(fb => {
-          console.log(`  ${fb.icon} ${fb.message}`);
+          logger.log(`  ${fb.icon} ${fb.message}`);
         });
       }
       
       // 補修モードの場合、最後の問題に到達したら最初に戻る
       if (reviewFocusMode && nextIndex >= currentQuestions.length) {
-        console.log('🔄 補修モード: 問題を繰り返します');
+        logger.log('🔄 補修モード: 問題を繰り返します');
         return {
           ...prev,
           questions: currentQuestions,

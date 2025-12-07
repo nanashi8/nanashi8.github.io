@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { logger } from '../logger';
 import type { LearningSchedule, DailyStudyPlan, Question } from '../types';
 import { 
   generateLearningPlan,
@@ -43,7 +44,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
         setSchedule(parsed);
         setDailyPlan(generateDailyPlan(parsed, allQuestions));
       } catch (error) {
-        console.error('Failed to load schedule:', error);
+        logger.error('Failed to load schedule:', error);
       }
     }
   }, [allQuestions]);
