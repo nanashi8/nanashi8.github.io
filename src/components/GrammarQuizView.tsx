@@ -247,9 +247,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             if (res.ok) {
               const data = await res.json();
               allGrammarFiles.push(data);
+            } else {
+              // ファイルが見つからない場合（404など）はデバッグモードでのみログ出力
+              logger.log(`grammar_grade${g}_unit${unitIdx}.json returned status ${res.status}, skipping...`);
             }
-          } catch (_err) {
-            logger.warn(`grammar_grade${g}_unit${unitIdx}.json not found, skipping...`);
+          } catch (err) {
+            // ネットワークエラーなど、fetch自体が失敗した場合
+            logger.log(`Failed to fetch grammar_grade${g}_unit${unitIdx}.json:`, err);
           }
         }
       }
