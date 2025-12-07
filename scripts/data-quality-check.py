@@ -30,10 +30,10 @@ class DataQualityChecker:
         }
         
         # IPA記号の正規表現（正しい記号のみ）
-        # 基本母音: a e i o u ɑ æ ə ɛ ɪ ʊ ʌ ɔ ɜ ʉ ɒ ɐ ɝ ɚ ɘ ɨ
-        # 子音: p b t d k g f v θ ð s z ʃ ʒ h m n ŋ l r j w ʔ ɹ ɡ ɾ ɫ
-        # 補助記号: ː ˈ ˌ . - [] () ͡ ̩ ̯ (長音、強勢、音節境界、連結、音節性子音、非音節化)
-        self.valid_ipa_chars = set('ɑæəɛɪʊʌaeiouɔɜʉɒɐɝɚɘɨːˈˌθðʃʒŋtdkgpbfvszmnlrjwhʔɹɡɾɫ.\\-[]() ̩̯͡')
+        # 基本母音: a e i o u ɑ æ ə ɛ ɪ ʊ ʌ ɔ ɜ ʉ ɒ ɐ ɝ ɚ ɘ ɨ ä ŏ ɵ ɞ
+        # 子音: p b t d k g f v θ ð s z ʃ ʒ h m n ŋ l r j w x y c ʔ ɹ ɡ ɾ ɫ ʍ
+        # 補助記号: ː ˈ ˌ . - [] () ͡ ̩ ̯ ̚ ̠ ̈ ̊ ̪ ̬ ̥ ̞ ʰ ʷ (長音、強勢、音節境界、連結、音節性子音、非音節化、無開放、後舌化、分散、無声化、歯音化、有声化、無声化、下降、気息、円唇化)
+        self.valid_ipa_chars = set('ɑæəɛɪʊʌaeiouɔɜʉɒɐɝɚɘɨäŏɵɞːˈˌθðʃʒŋtdkgpbfvszmnlrjwhxyc ʔɹɡɾɫʍ.\\-[]() ̩̯̠̪̬̥̞̈̊̚͡ʰʷ')
         
         # カタカナの正規表現（アクセント記号を含む）
         self.katakana_pattern = re.compile(r'^[ァ-ヴー・ ́]+$')
