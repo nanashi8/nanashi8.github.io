@@ -30,7 +30,16 @@ npm run preview
 
 # システム健康診断
 npm run health-check
+
+# 開発ガイドラインチェック
+./scripts/check-guidelines.sh
 ```
+
+### 開発ドキュメント
+
+- [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md) - **必読** 二重記録などの問題を防ぐための重要なガイド
+- [コントリビューションガイド](.github/CONTRIBUTING.md) - Pull Requestを送る前に確認
+- [進捗記録パターン](.aitk/instructions/progress-tracking-patterns.instructions.md) - 実装パターンのクイックリファレンス
 
 ## CSV形式
 
