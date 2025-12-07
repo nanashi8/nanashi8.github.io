@@ -7,7 +7,7 @@ import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
 interface ComprehensiveReadingViewProps {
-  onSaveUnknownWords?: (words: { word: string; meaning: string }[]) => void;
+  onSaveUnknownWords?: (words: Question[]) => void | Promise<void>;
 }
 
 interface WordPopup {
@@ -220,7 +220,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       })
       .catch((err) => {
         console.error('[長文] Error loading word dictionary:', err);
-        setError('単語辞書の読み込みに失敗しました: ' + err.message);
+        // 辞書の読み込みエラーは致命的ではないので、警告のみ表示
+        console.warn('単語辞書の読み込みに失敗しましたが、長文読解は続行できます');
       });
     
     // 長文読解専用辞書（JSON）の読み込み
@@ -746,7 +747,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const handleSaveUnknownWords = () => {
     if (!currentPassage) return;
 
-    const unknownWords: { word: string; meaning: string }[] = [];
+    const unknownWords: Question[] = [];
     currentPassage.phrases.forEach(phrase => {
       phrase.segments.forEach(segment => {
         if (segment.isUnknown && segment.word.trim() !== '') {
@@ -755,6 +756,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             unknownWords.push({
               word: segment.word,
               meaning: segment.meaning,
+              reading: segment.reading || '',
+              etymology: segment.etymology || '',
+              relatedWords: segment.relatedWords || '',
+              relatedFields: segment.relatedFields || '',
+              difficulty: segment.difficulty || 'intermediate',
             });
           }
         }

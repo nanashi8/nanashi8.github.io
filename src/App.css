@@ -472,6 +472,11 @@
    ScoreBoard スタイル
    ============================================ */
 
+/* ScoreBoard全体のコンテナに固定高さを設定 */
+.score-board-compact {
+  min-height: 180px;
+}
+
 /* プランタブ */
 .plan-tab-compact {
   display: flex;
@@ -481,6 +486,7 @@
   padding: 16px;
   background: var(--bg-secondary);
   border-radius: 8px;
+  min-height: 120px;
 }
 
 .dark-mode .plan-tab-compact {
@@ -535,6 +541,7 @@
 /* 学習状況タブ - 進捗バー */
 .retention-breakdown-container {
   padding: 20px;
+  min-height: 120px;
 }
 
 .retention-breakdown-header {
@@ -555,10 +562,56 @@
 .retention-subtitle {
   font-size: 0.95rem;
   color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .dark-mode .retention-subtitle {
   color: var(--gray-300);
+}
+
+/* 復習モード炎アイコン */
+.review-mode-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background: var(--gray-200);
+  margin-left: 8px;
+}
+
+.review-mode-icon:hover {
+  background: var(--gray-300);
+  transform: scale(1.1);
+}
+
+.review-mode-icon.active {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  box-shadow: 0 0 12px rgba(255, 107, 107, 0.6);
+  animation: flame-pulse 1.5s ease-in-out infinite;
+}
+
+.dark-mode .review-mode-icon {
+  background: var(--gray-700);
+}
+
+.dark-mode .review-mode-icon:hover {
+  background: var(--gray-600);
+}
+
+@keyframes flame-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(255, 107, 107, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.9);
+  }
 }
 
 .retention-progress-bar {
@@ -661,6 +714,7 @@
   padding: 16px;
   background: var(--bg-secondary);
   border-radius: 8px;
+  min-height: 120px;
 }
 
 .dark-mode .history-compact,
