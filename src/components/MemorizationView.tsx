@@ -25,9 +25,10 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
   
-  // 学習中・復習中の上限設定（デフォルト値）
-  const learningLimit = 20;
-  const reviewLimit = 30;
+  // 学習中・復習中の上限設定を撤廃（無制限）
+  // ユーザーが数千回まわすことを想定
+  const learningLimit = Infinity;
+  const reviewLimit = Infinity;
   
   // カード表示設定（永続化）
   const [cardState, setCardState] = useState<MemorizationCardState>({
@@ -131,10 +132,9 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
         );
       }
       
-      // Phase 1: シンプルにランダム選択（後でAI判定を追加）
-      const totalLimit = learningLimit + reviewLimit;
+      // 上限を撤廃：フィルター済みの全問題を使用
       const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-      const selected = shuffled.slice(0, Math.min(totalLimit, filtered.length));
+      const selected = shuffled; // 全問題を使用（上限なし）
       
       setQuestions(selected);
       if (selected.length > 0) {
