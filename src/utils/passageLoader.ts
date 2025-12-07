@@ -3,6 +3,8 @@
  * PASSAGE_CREATION_GUIDELINES.md の仕様に基づく
  */
 
+import { logger } from '../logger';
+
 export interface PassageMetadata {
   id: string;
   title: string;
@@ -72,7 +74,7 @@ export function getPassagesByLevel(level: 'beginner' | 'intermediate' | 'advance
 export async function loadPassage(passageId: string): Promise<LoadedPassage | null> {
   const metadata = PASSAGE_FILES.find(p => p.id === passageId);
   if (!metadata) {
-    console.error(`Passage not found: ${passageId}`);
+    logger.error(`Passage not found: ${passageId}`);
     return null;
   }
 
@@ -91,7 +93,7 @@ export async function loadPassage(passageId: string): Promise<LoadedPassage | nu
       sections,
     };
   } catch (error) {
-    console.error(`Error loading passage ${passageId}:`, error);
+    logger.error(`Error loading passage ${passageId}:`, error);
     return null;
   }
 }

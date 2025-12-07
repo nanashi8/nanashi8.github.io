@@ -3,6 +3,7 @@ import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
+import { logger } from '../logger';
 
 interface VerbFormQuestion {
   id: string;
@@ -248,7 +249,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               allGrammarFiles.push(data);
             }
           } catch (_err) {
-            console.warn(`grammar_grade${g}_unit${unitIdx}.json not found, skipping...`);
+            logger.warn(`grammar_grade${g}_unit${unitIdx}.json not found, skipping...`);
           }
         }
       }
@@ -287,12 +288,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         throw new Error('選択された条件に該当する問題がありません');
       }
       
-      console.log(`Total questions before difficulty filter: ${questions.length}`);
+      logger.log(`Total questions before difficulty filter: ${questions.length}`);
       
       // 難易度フィルタリング
       if (difficulty !== 'all') {
         questions = questions.filter(q => q.difficulty === difficulty);
-        console.log(`Questions after difficulty filter (${difficulty}): ${questions.length}`);
+        logger.log(`Questions after difficulty filter (${difficulty}): ${questions.length}`);
       }
       
       if (questions.length === 0) {
@@ -315,7 +316,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setQuizStarted(true);
       setLoading(false);
     } catch (err: any) {
-      console.error('データ読み込みエラー:', err);
+      logger.error('データ読み込みエラー:', err);
       setError(err.message);
       setLoading(false);
     }

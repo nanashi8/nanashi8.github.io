@@ -8,6 +8,7 @@ import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSes
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
 import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { logger } from '../logger';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 
 interface SpellingViewProps {
@@ -462,7 +463,7 @@ function SpellingView({
         phase: schedule.phase,
       };
     } catch (e) {
-      console.error('Failed to parse learning plan:', e);
+      logger.error('Failed to parse learning plan:', e);
     }
   }
 

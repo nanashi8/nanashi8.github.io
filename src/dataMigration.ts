@@ -7,6 +7,7 @@ import {
   getFromDB,
   STORES
 } from './indexedDBStorage';
+import { logger } from './logger';
 
 const MIGRATION_FLAG_KEY = 'indexeddb-migration-completed';
 const MIGRATION_VERSION = '1.1'; // バージョンアップしてエラー修正版で再移行
@@ -25,9 +26,9 @@ export function isMigrationCompleted(): boolean {
 function setMigrationCompleted(): void {
   try {
     localStorage.setItem(MIGRATION_FLAG_KEY, MIGRATION_VERSION);
-    console.log('✅ Migration flag set');
+    logger.log('✅ Migration flag set');
   } catch (error) {
-    console.error('Failed to set migration flag:', error);
+    logger.error('Failed to set migration flag:', error);
   }
 }
 
@@ -45,7 +46,7 @@ function getLocalStorageData(key: string): any {
     return JSON.parse(data);
   } catch (_error) {
     // JSONパースエラーは警告のみ（文字列データの可能性）
-    console.warn(`${key} is not valid JSON (skipping)`);
+    logger.warn(`${key} is not valid JSON (skipping)`);
     return null;
   }
 }
@@ -55,7 +56,7 @@ function getLocalStorageRawData(key: string): string | null {
   try {
     return localStorage.getItem(key);
   } catch (_error) {
-    console.error(`Failed to get ${key} from localStorage:`, _error);
+    logger.error(`Failed to get ${key} from localStorage:`, _error);
     return null;
   }
 }
@@ -89,12 +90,12 @@ async function migrateProgressData(): Promise<boolean> {
       }
       
       await putToDB(STORES.PROGRESS, progressData, 'main');
-      console.log('📦 Progress data migrated:', Object.keys(progressData.wordProgress || {}).length, 'words');
+      logger.log('📦 Progress data migrated:', Object.keys(progressData.wordProgress || {}).length, 'words');
       return true;
     }
     
     // LocalStorageにデータがない場合は初期データを作成
-    console.log('ℹ️ No progress data to migrate, creating initial data');
+    logger.log('ℹ️ No progress data to migrate, creating initial data');
     const initialData = {
       wordProgress: {},
       results: [],
@@ -113,7 +114,7 @@ async function migrateProgressData(): Promise<boolean> {
     await putToDB(STORES.PROGRESS, initialData, 'main');
     return true;
   } catch (error) {
-    console.error('Progress data migration error:', error);
+    logger.error('Progress data migration error:', error);
     return false;
   }
 }
@@ -143,11 +144,11 @@ async function migrateSessionHistory(): Promise<boolean> {
     }
 
     if (totalMigrated > 0) {
-      console.log('📜 Session history migrated:', totalMigrated, 'items');
+      logger.log('📜 Session history migrated:', totalMigrated, 'items');
     }
     return true;
   } catch (error) {
-    console.error('Session history migration error:', error);
+    logger.error('Session history migration error:', error);
     return false;
   }
 }
@@ -183,11 +184,11 @@ async function migrateDailyStats(): Promise<boolean> {
     }
 
     if (migratedCount > 0 || cleanedCount > 0) {
-      console.log(`📊 Daily stats: migrated ${migratedCount}, cleaned ${cleanedCount}`);
+      logger.log(`📊 Daily stats: migrated ${migratedCount}, cleaned ${cleanedCount}`);
     }
     return true;
   } catch (error) {
-    console.error('Daily stats migration error:', error);
+    logger.error('Daily stats migration error:', error);
     return false;
   }
 }
@@ -216,7 +217,7 @@ async function migrateSettings(): Promise<boolean> {
       try {
         // lastLoginで始まるキーはスキップ
         if (key.includes('lastLogin')) {
-          console.warn(`Skipping ${key} from JSON migration`);
+          logger.warn(`Skipping ${key} from JSON migration`);
           continue;
         }
         
@@ -226,7 +227,7 @@ async function migrateSettings(): Promise<boolean> {
           migratedCount++;
         }
       } catch (error) {
-        console.warn(`Failed to migrate ${key}:`, error);
+        logger.warn(`Failed to migrate ${key}:`, error);
       }
     }
     
@@ -239,7 +240,7 @@ async function migrateSettings(): Promise<boolean> {
           migratedCount++;
         }
       } catch (error) {
-        console.warn(`Failed to migrate ${key}:`, error);
+        logger.warn(`Failed to migrate ${key}:`, error);
       }
     }
 
@@ -256,7 +257,7 @@ async function migrateSettings(): Promise<boolean> {
           migratedCount++;
         }
       } catch (error) {
-        console.warn(`Failed to migrate ${planKey}:`, error);
+        logger.warn(`Failed to migrate ${planKey}:`, error);
       }
       
       try {
@@ -266,16 +267,16 @@ async function migrateSettings(): Promise<boolean> {
           migratedCount++;
         }
       } catch (error) {
-        console.warn(`Failed to migrate ${goalKey}:`, error);
+        logger.warn(`Failed to migrate ${goalKey}:`, error);
       }
     }
 
     if (migratedCount > 0) {
-      console.log('⚙️ Settings migrated:', migratedCount, 'items');
+      logger.log('⚙️ Settings migrated:', migratedCount, 'items');
     }
     return true;
   } catch (error) {
-    console.error('Settings migration error:', error);
+    logger.error('Settings migration error:', error);
     return false;
   }
 }
@@ -287,20 +288,20 @@ async function verifyMigration(): Promise<boolean> {
     const progressData = await getFromDB(STORES.PROGRESS, 'main') as any;
     
     if (!progressData) {
-      console.warn('⚠️ Progress data verification failed - no data found');
+      logger.warn('⚠️ Progress data verification failed - no data found');
       return false;
     }
     
     // wordProgressが存在し、オブジェクトであることを確認
     if (!progressData.wordProgress || typeof progressData.wordProgress !== 'object') {
-      console.warn('⚠️ Progress data verification failed - invalid wordProgress');
+      logger.warn('⚠️ Progress data verification failed - invalid wordProgress');
       return false;
     }
 
-    console.log('✅ Migration verification passed');
+    logger.log('✅ Migration verification passed');
     return true;
   } catch (error) {
-    console.error('Migration verification error:', error);
+    logger.error('Migration verification error:', error);
     return false;
   }
 }
@@ -309,17 +310,17 @@ async function verifyMigration(): Promise<boolean> {
 export async function migrateToIndexedDB(): Promise<boolean> {
   // 既に移行済みかチェック
   if (isMigrationCompleted()) {
-    console.log('ℹ️ Migration already completed');
+    logger.log('ℹ️ Migration already completed');
     return true;
   }
 
   // IndexedDB対応チェック
   if (!isIndexedDBSupported()) {
-    console.warn('⚠️ IndexedDB not supported, using localStorage');
+    logger.warn('⚠️ IndexedDB not supported, using localStorage');
     return false;
   }
 
-  console.log('🚀 Starting data migration to IndexedDB...');
+  logger.log('🚀 Starting data migration to IndexedDB...');
 
   try {
     // DB初期化
@@ -337,7 +338,7 @@ export async function migrateToIndexedDB(): Promise<boolean> {
     const labels = ['Progress', 'SessionHistory', 'DailyStats', 'Settings'];
     results.forEach((result, index) => {
       if (!result) {
-        console.warn(`⚠️ ${labels[index]} migration incomplete (may be empty)`);
+        logger.warn(`⚠️ ${labels[index]} migration incomplete (may be empty)`);
       }
     });
 
@@ -351,20 +352,20 @@ export async function migrateToIndexedDB(): Promise<boolean> {
       if (verified) {
         // 移行完了フラグを設定
         setMigrationCompleted();
-        console.log('🎉 Migration completed successfully!');
+        logger.log('🎉 Migration completed successfully!');
         return true;
       } else {
-        console.warn('⚠️ Migration verification failed, but marking as complete');
+        logger.warn('⚠️ Migration verification failed, but marking as complete');
         setMigrationCompleted();
         return true;
       }
     } else {
-      console.warn('⚠️ All migrations returned false, marking as complete anyway');
+      logger.warn('⚠️ All migrations returned false, marking as complete anyway');
       setMigrationCompleted();
       return true;
     }
   } catch (error) {
-    console.error('❌ Migration failed:', error);
+    logger.error('❌ Migration failed:', error);
     return false;
   }
 }
@@ -373,9 +374,9 @@ export async function migrateToIndexedDB(): Promise<boolean> {
 export function resetMigrationFlag(): void {
   try {
     localStorage.removeItem(MIGRATION_FLAG_KEY);
-    console.log('🔄 Migration flag reset');
+    logger.log('🔄 Migration flag reset');
   } catch (error) {
-    console.error('Failed to reset migration flag:', error);
+    logger.error('Failed to reset migration flag:', error);
   }
 }
 

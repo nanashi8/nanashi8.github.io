@@ -13,6 +13,8 @@
  * 4. 個別推奨: ユーザーに最適化された学習プランを提案
  */
 
+import { logger } from './logger';
+
 /**
  * セッション統計
  */
@@ -453,7 +455,7 @@ export function saveSessionToHistory(session: SessionStats): void {
     
     localStorage.setItem(key, JSON.stringify(trimmed));
   } catch (error) {
-    console.error('Failed to save session history:', error);
+    logger.error('Failed to save session history:', error);
   }
 }
 
@@ -466,7 +468,7 @@ export function loadSessionHistory(): SessionStats[] {
     const stored = localStorage.getItem(key);
     return stored ? JSON.parse(stored) : [];
   } catch (error) {
-    console.error('Failed to load session history:', error);
+    logger.error('Failed to load session history:', error);
     return [];
   }
 }

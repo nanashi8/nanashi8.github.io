@@ -2,6 +2,8 @@
  * 改善版：シンプルで分かりやすい定着率計算
  */
 
+import { logger } from './logger';
+
 interface WordProgress {
   word: string;
   correctCount: number;
@@ -277,14 +279,14 @@ if (typeof window !== 'undefined') {
   // ブラウザ環境でのみ実行
   (window as any).testRetentionScenario = () => {
     const result = testScenario1();
-    console.log('=== 定着率テスト ===');
-    console.log('シナリオ: 10問やって5問連続正解、5問不正解');
-    console.log('出題単語数:', result.appearedWords);
-    console.log('定着数:', result.masteredCount);
-    console.log('学習中:', result.learningCount);
-    console.log('要復習:', result.strugglingCount);
-    console.log('基本定着率:', result.basicRetentionRate + '%');
-    console.log('内訳: 🟢' + result.masteredPercentage + '% 🟡' + result.learningPercentage + '% 🔴' + result.strugglingPercentage + '%');
-    console.log('期待値: 50% ✅ 実際: ' + result.basicRetentionRate + '%');
+    logger.log('=== 定着率テスト ===');
+    logger.log('シナリオ: 10問やって5問連続正解、5問不正解');
+    logger.log('出題単語数:', result.appearedWords);
+    logger.log('定着数:', result.masteredCount);
+    logger.log('学習中:', result.learningCount);
+    logger.log('要復習:', result.strugglingCount);
+    logger.log('基本定着率:', result.basicRetentionRate + '%');
+    logger.log('内訳: 🟢' + result.masteredPercentage + '% 🟡' + result.learningPercentage + '% 🔴' + result.strugglingPercentage + '%');
+    logger.log('期待値: 50% ✅ 実際: ' + result.basicRetentionRate + '%');
   };
 }

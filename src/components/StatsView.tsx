@@ -18,6 +18,7 @@ import {
   getCustomQuestionSets,
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
+import { logger } from '../logger';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -64,7 +65,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       details.sort((a, b) => b.sizeMB - a.sizeMB);
       setStorageInfo({ totalMB: totalSize / (1024 * 1024), details: details.slice(0, 5) });
     } catch (error) {
-      console.error('ストレージサイズの取得エラー:', error);
+      logger.error('ストレージサイズの取得エラー:', error);
     }
   };
 
@@ -251,7 +252,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                     
                     alert(`✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`);
                   } catch (error) {
-                    console.error('問題セット作成エラー:', error);
+                    logger.error('問題セット作成エラー:', error);
                     alert('❌ 問題セットの作成に失敗しました');
                   }
                 }}
@@ -289,7 +290,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                     
                     alert(`✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`);
                   } catch (error) {
-                    console.error('問題セット作成エラー:', error);
+                    logger.error('問題セット作成エラー:', error);
                     alert('❌ 問題セットの作成に失敗しました');
                   }
                 }}

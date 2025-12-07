@@ -1,5 +1,7 @@
 // IndexedDBラッパーモジュール - ストレージの抽象化レイヤー
 
+import { logger } from './logger';
+
 const DB_NAME = 'QuizAppDB';
 const DB_VERSION = 1;
 
@@ -57,13 +59,13 @@ export function initDB(): Promise<IDBDatabase> {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
 
     request.onerror = () => {
-      console.error('IndexedDB open error:', request.error);
+      logger.error('IndexedDB open error:', request.error);
       reject(request.error);
     };
 
     request.onsuccess = () => {
       dbInstance = request.result;
-      console.log('✅ IndexedDB initialized successfully');
+      logger.log('✅ IndexedDB initialized successfully');
       resolve(dbInstance);
     };
 
@@ -97,7 +99,7 @@ export function initDB(): Promise<IDBDatabase> {
         db.createObjectStore(STORES.SETTINGS);
       }
 
-      console.log('📦 IndexedDB stores created');
+      logger.log('📦 IndexedDB stores created');
     };
   });
 }
@@ -115,7 +117,7 @@ export async function getFromDB<T>(storeName: string, key: IDBValidKey): Promise
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('getFromDB error:', error);
+    logger.error('getFromDB error:', error);
     return null;
   }
 }
@@ -133,7 +135,7 @@ export async function putToDB<T>(storeName: string, value: T, key?: IDBValidKey)
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('putToDB error:', error);
+    logger.error('putToDB error:', error);
     return false;
   }
 }
@@ -151,7 +153,7 @@ export async function deleteFromDB(storeName: string, key: IDBValidKey): Promise
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('deleteFromDB error:', error);
+    logger.error('deleteFromDB error:', error);
     return false;
   }
 }
@@ -169,7 +171,7 @@ export async function getAllFromDB<T>(storeName: string): Promise<T[]> {
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('getAllFromDB error:', error);
+    logger.error('getAllFromDB error:', error);
     return [];
   }
 }
@@ -203,7 +205,7 @@ export async function queryByIndex<T>(
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('queryByIndex error:', error);
+    logger.error('queryByIndex error:', error);
     return [];
   }
 }
@@ -221,7 +223,7 @@ export async function clearStore(storeName: string): Promise<boolean> {
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('clearStore error:', error);
+    logger.error('clearStore error:', error);
     return false;
   }
 }
@@ -236,7 +238,7 @@ export async function getStorageEstimate(): Promise<{ usage: number; quota: numb
         quota: estimate.quota || 0
       };
     } catch (error) {
-      console.error('Storage estimate error:', error);
+      logger.error('Storage estimate error:', error);
     }
   }
   return { usage: 0, quota: 0 };
@@ -255,7 +257,7 @@ export async function getCount(storeName: string): Promise<number> {
       request.onerror = () => reject(request.error);
     });
   } catch (error) {
-    console.error('getCount error:', error);
+    logger.error('getCount error:', error);
     return 0;
   }
 }
@@ -270,11 +272,11 @@ export async function deleteDatabase(): Promise<boolean> {
     
     const request = indexedDB.deleteDatabase(DB_NAME);
     request.onsuccess = () => {
-      console.log('🗑️ Database deleted');
+      logger.log('🗑️ Database deleted');
       resolve(true);
     };
     request.onerror = () => {
-      console.error('Database delete error');
+      logger.error('Database delete error');
       resolve(false);
     };
   });

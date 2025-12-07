@@ -7,6 +7,7 @@ import QuestionCard from './QuestionCard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
+import { logger } from '../logger';
 
 interface QuizViewProps {
   quizState: QuizState;
@@ -133,7 +134,7 @@ function QuizView({
         phase: schedule.phase,
       };
     } catch (e) {
-      console.error('Failed to parse learning plan:', e);
+      logger.error('Failed to parse learning plan:', e);
     }
   }
 

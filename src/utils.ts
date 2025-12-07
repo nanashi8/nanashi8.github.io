@@ -1,4 +1,5 @@
 import { Question, isValidCategory, OFFICIAL_CATEGORIES } from './types';
+import { logger } from './logger';
 
 /**
  * CSVテキストをパースして問題配列に変換
@@ -112,7 +113,7 @@ export function parseCSV(csvText: string): Question[] {
 
       // ⚠️ データ整合性チェック: 10分野システム準拠確認
       if (relatedFields && !isValidCategory(relatedFields)) {
-        console.warn(
+        logger.warn(
           `[データ整合性警告] 不正なカテゴリ: "${relatedFields}" (単語: "${word}")\n` +
           `有効なカテゴリ: ${OFFICIAL_CATEGORIES.join(', ')}\n` +
           `参照: docs/19-junior-high-vocabulary.md`
@@ -293,7 +294,7 @@ export function saveQuestionSets(sets: QuestionSet[]): void {
   try {
     localStorage.setItem(QUESTION_SETS_KEY, JSON.stringify(sets));
   } catch (error) {
-    console.error('Failed to save question sets:', error);
+    logger.error('Failed to save question sets:', error);
   }
 }
 
@@ -306,7 +307,7 @@ export function loadQuestionSets(): QuestionSet[] {
     if (!data) return [];
     return JSON.parse(data) as QuestionSet[];
   } catch (error) {
-    console.error('Failed to load question sets:', error);
+    logger.error('Failed to load question sets:', error);
     return [];
   }
 }
@@ -376,7 +377,7 @@ export function importPassagesJSON(jsonText: string): ReadingPassage[] {
     }
     return parsed as ReadingPassage[];
   } catch (error) {
-    console.error('Failed to import passages:', error);
+    logger.error('Failed to import passages:', error);
     throw error;
   }
 }

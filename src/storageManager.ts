@@ -1,4 +1,4 @@
-// ストレージマネージャー - IndexedDBとLocalStorageの統合管理
+// ストレージマネージャー - IndexedDBとlocalStorageの統合管理
 
 import {
   isIndexedDBSupported,
@@ -7,13 +7,14 @@ import {
   STORES
 } from './indexedDBStorage';
 import { isMigrationCompleted } from './dataMigration';
+import { logger } from './logger';
 
 // ストレージ戦略の決定
 let useIndexedDB = false;
 
 export function initStorageStrategy(): void {
   useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
-  console.log(`📦 Storage strategy: ${useIndexedDB ? 'IndexedDB' : 'localStorage'}`);
+  logger.log(`📦 Storage strategy: ${useIndexedDB ? 'IndexedDB' : 'localStorage'}`);
 }
 
 // 進捗データの保存（統合インターフェース）
@@ -28,13 +29,13 @@ export async function saveProgressData(data: any): Promise<boolean> {
       return true;
     }
   } catch (error) {
-    console.error('saveProgressData error:', error);
+    logger.error('saveProgressData error:', error);
     // IndexedDB失敗時はLocalStorageにフォールバック
     try {
       localStorage.setItem('progress-data', JSON.stringify(data));
       return true;
     } catch (fallbackError) {
-      console.error('localStorage fallback failed:', fallbackError);
+      logger.error('localStorage fallback failed:', fallbackError);
       return false;
     }
   }
@@ -57,7 +58,7 @@ export async function loadProgressData(): Promise<any | null> {
       return data ? JSON.parse(data) : null;
     }
   } catch (error) {
-    console.error('loadProgressData error:', error);
+    logger.error('loadProgressData error:', error);
     return null;
   }
 }
@@ -72,7 +73,7 @@ export async function saveSetting(key: string, value: any): Promise<boolean> {
       return true;
     }
   } catch (error) {
-    console.error(`saveSetting(${key}) error:`, error);
+    logger.error(`saveSetting(${key}) error:`, error);
     // フォールバック
     try {
       localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
@@ -98,7 +99,7 @@ export async function loadSetting(key: string): Promise<any | null> {
       return data || null;
     }
   } catch (error) {
-    console.error(`loadSetting(${key}) error:`, error);
+    logger.error(`loadSetting(${key}) error:`, error);
     return null;
   }
 }
@@ -109,7 +110,7 @@ export function saveToLocalStorage(key: string, value: any): boolean {
     localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
     return true;
   } catch (error) {
-    console.error(`saveToLocalStorage(${key}) error:`, error);
+    logger.error(`saveToLocalStorage(${key}) error:`, error);
     return false;
   }
 }
@@ -119,7 +120,7 @@ export function loadFromLocalStorage(key: string): any | null {
   try {
     return localStorage.getItem(key);
   } catch (error) {
-    console.error(`loadFromLocalStorage(${key}) error:`, error);
+    logger.error(`loadFromLocalStorage(${key}) error:`, error);
     return null;
   }
 }
@@ -139,7 +140,7 @@ export function getStorageUsage(): { localStorage: number; indexedDB: boolean } 
       }
     }
   } catch (error) {
-    console.error('Failed to calculate localStorage size:', error);
+    logger.error('Failed to calculate localStorage size:', error);
   }
 
   return {

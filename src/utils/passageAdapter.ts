@@ -5,6 +5,7 @@
 
 import { ReadingPassage, ReadingSegment } from '../types';
 import { getPassageList, loadPassage } from './passageLoader';
+import { logger } from '../logger';
 
 // 補助関数: 単語の基本形を取得（簡易版）
 function getLemma(word: string): string {
@@ -333,12 +334,12 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
   try {
     const response = await fetch(`/data/passages-phrase-learning/${passageId}.json`);
     if (!response.ok) {
-      console.log(`No phrase learning JSON found for ${passageId}, will use .txt conversion`);
+      logger.log(`No phrase learning JSON found for ${passageId}, will use .txt conversion`);
       return null; // ファイルが存在しない場合はnullを返す
     }
     
     const data = await response.json();
-    console.log(`Loaded phrase learning JSON for ${passageId}, phrases: ${data.phrases?.length || 0}`);
+    logger.log(`Loaded phrase learning JSON for ${passageId}, phrases: ${data.phrases?.length || 0}`);
     
     // JSONデータをそのまま返す（ReadingPassage型に準拠）
     const readingPassage: ReadingPassage = {
@@ -348,7 +349,7 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
     
     return readingPassage;
   } catch (error) {
-    console.error(`Error loading phrase learning JSON for ${passageId}:`, error);
+    logger.error(`Error loading phrase learning JSON for ${passageId}:`, error);
     return null;
   }
 }
@@ -363,7 +364,7 @@ export async function loadAllPassagesAsReadingFormat(
   const metadata = getPassageList();
   const passages: ReadingPassage[] = [];
 
-  console.log(`Loading ${metadata.length} passages...`);
+  logger.log(`Loading ${metadata.length} passages...`);
 
   for (const meta of metadata) {
     // まずフレーズ学習JSONを試す
@@ -375,14 +376,14 @@ export async function loadAllPassagesAsReadingFormat(
     }
     
     if (passage) {
-      console.log(`✓ Loaded passage: ${meta.id} (${passage.phrases?.length || 0} phrases)`);
+      logger.log(`✓ Loaded passage: ${meta.id} (${passage.phrases?.length || 0} phrases)`);
       passages.push(passage);
     } else {
-      console.error(`✗ Failed to load passage: ${meta.id}`);
+      logger.error(`✗ Failed to load passage: ${meta.id}`);
     }
   }
 
-  console.log(`Total passages loaded: ${passages.length}`);
+  logger.log(`Total passages loaded: ${passages.length}`);
   return passages;
 }
 
