@@ -160,9 +160,9 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     };
     
     speakCard();
-    // voiceDelayを依存配列から除外（スライダー調整中の音声再生を防ぐ）
+    // voiceWord, voiceMeaning, voiceDelayを依存配列から除外（設定変更時の音声再生を防ぐ）
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentQuestion, autoVoice, voiceWord, voiceMeaning]);
+  }, [currentQuestion, autoVoice]);
   
   // カード表示設定の切り替え（永続化）
   const toggleCardField = async (field: keyof MemorizationCardState) => {
@@ -416,7 +416,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
                         onChange={(e) => updateVoiceSettings(autoVoice, voiceWord, e.target.checked)}
                         className="mr-2 w-4 h-4"
                       />
-                      <span>意味も読み上げ</span>
+                      <span>意味を読み上げ</span>
                     </label>
                     {voiceMeaning && (
                       <div className="ml-6 mt-2">
