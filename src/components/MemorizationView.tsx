@@ -149,7 +149,11 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
       // 意味も読み上げ（設定がONの場合）
       if (voiceMeaning && currentQuestion.meaning) {
         await new Promise(resolve => setTimeout(resolve, 1500)); // 1.5秒待機
-        speakEnglish(currentQuestion.meaning, { rate: 0.85 });
+        // 日本語の意味を読み上げ
+        const utterance = new SpeechSynthesisUtterance(currentQuestion.meaning);
+        utterance.lang = 'ja-JP';
+        utterance.rate = 0.85;
+        window.speechSynthesis.speak(utterance);
       }
     };
     
@@ -317,12 +321,12 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2">📚 問題集:</label>
+              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📚 問題集:</label>
               <select 
                 id="memorization-datasource"
                 value={selectedDataSource} 
                 onChange={(e) => setSelectedDataSource(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               >
                 <option value="all">全問題集</option>
                 <option value="junior">高校受験</option>
@@ -331,12 +335,12 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
             </div>
             
             <div>
-              <label htmlFor="memorization-category" className="block text-sm font-medium mb-2">🏷️ 関連分野:</label>
+              <label htmlFor="memorization-category" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">🏷️ 関連分野:</label>
               <select 
                 id="memorization-category"
                 value={selectedCategory} 
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               >
                 <option value="all">全分野</option>
                 {getAvailableCategories().map(category => (
@@ -346,12 +350,12 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
             </div>
             
             <div>
-              <label htmlFor="memorization-difficulty" className="block text-sm font-medium mb-2">📊 難易度:</label>
+              <label htmlFor="memorization-difficulty" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📊 難易度:</label>
               <select 
                 id="memorization-difficulty"
                 value={selectedDifficulty} 
                 onChange={(e) => setSelectedDifficulty(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               >
                 <option value="all">全難易度</option>
                 <option value="beginner">初級</option>
@@ -361,12 +365,12 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
             </div>
             
             <div>
-              <label htmlFor="memorization-filter" className="block text-sm font-medium mb-2">📝 単語・熟語:</label>
+              <label htmlFor="memorization-filter" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📝 単語・熟語:</label>
               <select 
                 id="memorization-filter"
                 value={selectedWordPhraseFilter} 
                 onChange={(e) => setSelectedWordPhraseFilter(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               >
                 <option value="all">単語＋熟語</option>
                 <option value="words">単語のみ</option>
@@ -375,7 +379,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
             </div>
             
             <div className="border-t pt-4 dark:border-gray-700">
-              <label className="block text-sm font-medium mb-3">🔊 自動発音設定:</label>
+              <label className="block text-sm font-medium mb-3 text-gray-700 dark:text-gray-300">🔊 自動発音設定:</label>
               <div className="space-y-2">
                 <label className="flex items-center">
                   <input
