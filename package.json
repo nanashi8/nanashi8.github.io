@@ -11,6 +11,7 @@
     "deploy:beta": "npm run build:beta && gh-pages -d dist-beta -a --dest beta -m 'Deploy beta preview'",
     "preview:beta": "npm run build:beta && vite preview --outDir dist-beta --port 4174",
     "validate": "python3 scripts/validate_all_data.py",
+    "check:data-quality": "bash scripts/check-data-quality.sh",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "stylelint 'src/**/*.css' --fix",
     "typecheck": "tsc --noEmit",
