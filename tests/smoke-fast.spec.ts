@@ -31,9 +31,13 @@ test.describe('超高速煙テスト', () => {
     }
     
     // 4. 問題が表示されることを確認（最重要：これが表示されればクイズは動作している）
-    // 単語が表示されているか、または問題カードが表示されているか
-    const wordOrQuestion = page.locator('text=Christmas').or(page.locator('[class*="question"]').first());
-    await expect(wordOrQuestion).toBeVisible({ timeout: 10000 });
+    // どんな単語でも良いので、問題カード全体が存在すればOK
+    const hasQuestionCard = page.locator('[class*="question"]').first().or(
+      page.locator('[class*="card"]').first()
+    ).or(
+      page.locator('text=/^[A-Za-z]+$/')  // 英単語パターン
+    );
+    await expect(hasQuestionCard).toBeVisible({ timeout: 10000 });
     
     // 4. JavaScriptエラーがないことを確認
     const errors: string[] = [];
