@@ -211,10 +211,12 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
     // 滞在時間を記録
     const viewDuration = (Date.now() - cardDisplayTimeRef.current) / 1000; // 秒単位
     
+    const isCorrect = direction === 'right';
+    
     // 統計を更新
     setSessionStats(prev => ({
-      correct: direction === 'right' ? prev.correct + 1 : prev.correct,
-      incorrect: direction === 'left' ? prev.incorrect + 1 : prev.incorrect,
+      correct: isCorrect ? prev.correct + 1 : prev.correct,
+      incorrect: isCorrect ? prev.incorrect : prev.incorrect + 1,
       total: prev.total + 1,
     }));
     
@@ -231,6 +233,16 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       
       await recordMemorizationBehavior(behavior);
       setConsecutiveViews(prev => prev + 1);
+      
+      // 進捗データにも記録（ScoreBoard用）
+      const { updateWordProgress } = await import('../progressStorage');
+      await updateWordProgress(
+        currentQuestion.word,
+        isCorrect,
+        viewDuration * 1000, // ミリ秒に変換
+        undefined,
+        'translation' // 暗記タブも翻訳モードとして記録
+      );
     }
     
     // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）

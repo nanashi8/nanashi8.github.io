@@ -351,6 +351,26 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     } else {
       setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
     }
+    
+    // 進捗データに記録（ScoreBoard統計用）
+    (async () => {
+      const { loadProgress, saveProgress } = await import('../progressStorage');
+      const progress = await loadProgress();
+      progress.results.push({
+        id: `grammar-${Date.now()}`,
+        questionSetId: grade,
+        questionSetName: `文法${grade}`,
+        score: isCorrect ? 1 : 0,
+        total: 1,
+        percentage: isCorrect ? 100 : 0,
+        date: Date.now(),
+        timeSpent: 0,
+        incorrectWords: [],
+        mode: 'grammar',
+        difficulty: 'intermediate'
+      });
+      await saveProgress(progress);
+    })();
   };
 
   const handleWordClick = (word: string, fromRemaining: boolean) => {
@@ -387,6 +407,26 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             } else {
               setSessionStats(prev => ({ ...prev, incorrect: prev.incorrect + 1 }));
             }
+            
+            // 進捗データに記録（ScoreBoard統計用）
+            (async () => {
+              const { loadProgress, saveProgress } = await import('../progressStorage');
+              const progress = await loadProgress();
+              progress.results.push({
+                id: `grammar-ordering-${Date.now()}`,
+                questionSetId: grade,
+                questionSetName: `文法並び替え${grade}`,
+                score: isCorrect ? 1 : 0,
+                total: 1,
+                percentage: isCorrect ? 100 : 0,
+                date: Date.now(),
+                timeSpent: 0,
+                incorrectWords: [],
+                mode: 'grammar',
+                difficulty: 'intermediate'
+              });
+              await saveProgress(progress);
+            })();
           }, 100);
         }
         
@@ -465,10 +505,10 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             onAnswerTime={lastAnswerTime}
             dataSource={
               grade.startsWith('g') && grade.includes('-unit')
-                ? `📚 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}｜${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}｜単語・熟語`
-                : `📚 ${grade === 'all' ? '全学年' : `${grade}年`}-${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`
+                ? `📚 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
+                : `📚 ${grade === 'all' ? '全学年' : `${grade}年`}`
             }
-            category=""
+            category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
             difficulty=""
             wordPhraseFilter="all"
           />
