@@ -1271,6 +1271,8 @@ function App() {
       addToSkipGroup(currentQuestion.word);
       
       // 単語進捗を更新（正解として記録し、定着率をカウント）
+      // updateWordProgress内でprogress.resultsに記録されるため、addQuizResultは不要
+      // 注：setLastAnswerTimeはQuizView内で管理されるため、ここでは呼ばない
       await updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'translation');
       
       // スキップでもスコアボードに反映(正解扱い)
@@ -1296,21 +1298,6 @@ function App() {
         word: currentQuestion.word,
         timestamp: Date.now()
       }, 'translation');
-      
-      // 回答を記録
-      await addQuizResult({
-        id: generateId(),
-        questionSetId: 'translation-quiz-single',
-        questionSetName: '和訳クイズ',
-        score: 1, // スキップは正解扱い
-        total: 1,
-        percentage: 100,
-        date: Date.now(),
-        timeSpent: 0,
-        incorrectWords: [],
-        mode: 'translation',
-        difficulty: currentQuestion.difficulty,
-      });
     } else {
       // 問題がない場合は通常の次へ
       setQuizState((prev) => ({

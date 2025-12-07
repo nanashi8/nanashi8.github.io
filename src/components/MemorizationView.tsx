@@ -304,16 +304,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
   }
   
   if (!currentQuestion) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <div className="text-2xl mb-4">🎉 今日の暗記完了！</div>
-          <div className="text-gray-600 dark:text-gray-400">
-            お疲れ様でした。明日も頑張りましょう！
-          </div>
-        </div>
-      </div>
-    );
+    return null; // 上限メッセージを廃止
   }
   
   return (

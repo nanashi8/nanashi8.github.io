@@ -107,6 +107,14 @@ function QuizView({
       }, autoNextDelay);
     }
   };
+  
+  // スキップ処理をラップ（回答時刻更新用）
+  const handleSkipWrapper = async () => {
+    if (onSkip) {
+      await onSkip();
+      setLastAnswerTime(Date.now());
+    }
+  };
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -346,7 +354,7 @@ function QuizView({
                 answered={answered}
                 selectedAnswer={selectedAnswer}
                 onAnswer={handleAnswer}
-                onNext={onSkip ? (answered ? onNext : onSkip) : onNext}
+                onNext={onSkip ? (answered ? onNext : handleSkipWrapper) : onNext}
                 onPrevious={onPrevious}
                 onDifficultyRate={onDifficultyRate}
                 errorPrediction={errorPrediction}
