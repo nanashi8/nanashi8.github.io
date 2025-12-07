@@ -40,6 +40,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   const [autoVoice, setAutoVoice] = useState(false);
   const [voiceWord, setVoiceWord] = useState(true); // 語句を読み上げ
   const [voiceMeaning, setVoiceMeaning] = useState(false); // 意味も読み上げ
+  const [voiceDelay, setVoiceDelay] = useState(1.5); // 語句と意味の間の待機時間（秒）
   
   // 現在表示中の語句
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
@@ -82,6 +83,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
           setAutoVoice(memSettings.autoVoice || false);
           setVoiceWord(memSettings.voiceWord !== undefined ? memSettings.voiceWord : true);
           setVoiceMeaning(memSettings.voiceMeaning || false);
+          setVoiceDelay(memSettings.voiceDelay !== undefined ? memSettings.voiceDelay : 1.5);
         }
         
         setIsLoading(false);
@@ -148,7 +150,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
       
       // 意味も読み上げ（設定がONの場合）
       if (voiceMeaning && currentQuestion.meaning) {
-        await new Promise(resolve => setTimeout(resolve, 1500)); // 1.5秒待機
+        await new Promise(resolve => setTimeout(resolve, voiceDelay * 1000)); // 設定された秒数待機
         // 日本語の意味を読み上げ
         const utterance = new SpeechSynthesisUtterance(currentQuestion.meaning);
         utterance.lang = 'ja-JP';
@@ -158,7 +160,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     };
     
     speakCard();
-  }, [currentQuestion, autoVoice, voiceWord, voiceMeaning]);
+  }, [currentQuestion, autoVoice, voiceWord, voiceMeaning, voiceDelay]);
   
   // カード表示設定の切り替え（永続化）
   const toggleCardField = async (field: keyof MemorizationCardState) => {
@@ -174,15 +176,19 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   };
   
   // 音声設定の保存
-  const updateVoiceSettings = async (autoVoiceVal: boolean, voiceWordVal: boolean, voiceMeaningVal: boolean) => {
+  const updateVoiceSettings = async (autoVoiceVal: boolean, voiceWordVal: boolean, voiceMeaningVal: boolean, voiceDelayVal?: number) => {
     setAutoVoice(autoVoiceVal);
     setVoiceWord(voiceWordVal);
     setVoiceMeaning(voiceMeaningVal);
+    if (voiceDelayVal !== undefined) {
+      setVoiceDelay(voiceDelayVal);
+    }
     
     await saveMemorizationSettings({
       autoVoice: autoVoiceVal,
       voiceWord: voiceWordVal,
       voiceMeaning: voiceMeaningVal,
+      voiceDelay: voiceDelayVal !== undefined ? voiceDelayVal : voiceDelay,
       interleavingMode: 'off',
       cardDisplaySettings: cardState,
     });
@@ -410,6 +416,31 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
                       />
                       <span>意味も読み上げ</span>
                     </label>
+                    {voiceMeaning && (
+                      <div className="ml-6 mt-2">
+                        <label className="block text-sm text-gray-600 dark:text-gray-400 mb-1">
+                          ⏱️ 語句と意味の間隔: {voiceDelay.toFixed(1)}秒
+                        </label>
+                        <input
+                          type="range"
+                          min="0.5"
+                          max="5.0"
+                          step="0.5"
+                          value={voiceDelay}
+                          onChange={(e) => {
+                            const newDelay = parseFloat(e.target.value);
+                            setVoiceDelay(newDelay);
+                            updateVoiceSettings(autoVoice, voiceWord, voiceMeaning, newDelay);
+                          }}
+                          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                          aria-label="語句と意味の間隔"
+                        />
+                        <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                          <span>0.5秒</span>
+                          <span>5.0秒</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

@@ -329,6 +329,7 @@ export interface MemorizationSettings {
   autoVoice: boolean;          // 自動音声読み上げ
   voiceWord: boolean;          // 語句を読み上げ
   voiceMeaning: boolean;       // 意味も読み上げ
+  voiceDelay?: number;         // 語句と意味の間の待機時間（秒）
   voiceWithMeaning?: boolean;  // 後方互換性のため残す（非推奨）
   
   // インターリービング（異なる分野を混ぜる）
