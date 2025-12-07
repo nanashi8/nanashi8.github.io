@@ -93,13 +93,6 @@ function QuizView({
     return saved !== 'false'; // デフォルトはtrue
   });
   
-  // 初回マウント時に自動でクイズ開始
-  useEffect(() => {
-    if (!hasQuestions) {
-      onStartQuiz();
-    }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = (answer: string, correct: string) => {
     onAnswer(answer, correct);

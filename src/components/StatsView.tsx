@@ -13,6 +13,8 @@ import {
   getCurrentWeakWords,
   getOvercomeWeakWords,
   getRecentlyMasteredWords,
+  createWeakWordsQuestionSet,
+  saveCustomQuestionSet,
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
 
@@ -23,7 +25,7 @@ interface StatsViewProps {
   onResetComplete?: () => void;
 }
 
-function StatsView({ onResetComplete }: StatsViewProps) {
+function StatsView({ onResetComplete, allQuestions }: StatsViewProps) {
   const [autoRefresh, _setAutoRefresh] = useState<boolean>(true);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
   
@@ -71,7 +73,20 @@ function StatsView({ onResetComplete }: StatsViewProps) {
     setMonthlyStats(getMonthlyStats());
     setCumulativeData(getCumulativeProgressData(12));
     setRetentionTrend(getRetentionTrend());
-    setWeakWords(getCurrentWeakWords(10));
+    
+    // 苦手単語に詳細情報を追加
+    const weakWordsBase = getCurrentWeakWords(10);
+    const weakWordsWithDetails = weakWordsBase.map(w => {
+      const questionData = allQuestions.find(q => q.word.toLowerCase() === w.word.toLowerCase());
+      return {
+        ...w,
+        etymology: questionData?.etymology,
+        relatedWords: questionData?.relatedWords,
+        difficulty: questionData?.difficulty,
+      };
+    });
+    setWeakWords(weakWordsWithDetails);
+    
     setOvercomeWords(getOvercomeWeakWords(10));
     setRecentlyMastered(getRecentlyMasteredWords(7, 5));
     
@@ -174,6 +189,16 @@ function StatsView({ onResetComplete }: StatsViewProps) {
                             {w.reading}
                           </span>
                         )}
+                        {w.etymology && (
+                          <span className="text-xs text-blue-600 dark:text-blue-400 mt-1">
+                            📖 {w.etymology}
+                          </span>
+                        )}
+                        {w.relatedWords && (
+                          <span className="text-xs text-purple-600 dark:text-purple-400 mt-0.5">
+                            🔗 {w.relatedWords}
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
@@ -190,6 +215,61 @@ function StatsView({ onResetComplete }: StatsViewProps) {
                 </li>
               ))}
             </ul>
+            {/* 苦手語句から問題セット生成ボタン */}
+            <div className="mt-6 flex gap-3">
+              <button
+                onClick={async () => {
+                  try {
+                    const questionSet = await createWeakWordsQuestionSet(
+                      `苦手語句集 ${new Date().toLocaleDateString('ja-JP')}`,
+                      20,
+                      3,
+                      60,
+                      allQuestions
+                    );
+                    await saveCustomQuestionSet(questionSet);
+                    alert(`✅ 問題セット「${questionSet.name}」を作成しました！\n和訳・スペルタブで利用できます。`);
+                  } catch (error) {
+                    console.error('問題セット作成エラー:', error);
+                    alert('❌ 問題セットの作成に失敗しました');
+                  }
+                }}
+                className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2"
+              >
+                📚 問題セットを作成
+                <span className="text-xs opacity-90">(上位20語)</span>
+              </button>
+              <button
+                onClick={async () => {
+                  const limit = prompt('取得する苦手語句の数を入力してください（1-100）', '30');
+                  if (!limit) return;
+                  
+                  const numLimit = parseInt(limit);
+                  if (isNaN(numLimit) || numLimit < 1 || numLimit > 100) {
+                    alert('1から100までの数値を入力してください');
+                    return;
+                  }
+                  
+                  try {
+                    const questionSet = await createWeakWordsQuestionSet(
+                      `苦手語句集 ${new Date().toLocaleDateString('ja-JP')} (${numLimit}語)`,
+                      numLimit,
+                      3,
+                      60,
+                      allQuestions
+                    );
+                    await saveCustomQuestionSet(questionSet);
+                    alert(`✅ 問題セット「${questionSet.name}」を作成しました！\n和訳・スペルタブで利用できます。`);
+                  } catch (error) {
+                    console.error('問題セット作成エラー:', error);
+                    alert('❌ 問題セットの作成に失敗しました');
+                  }
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
+              >
+                ⚙️ カスタム
+              </button>
+            </div>
           </div>
         ) : (
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border-2 border-dashed border-green-300 dark:border-green-700 p-8 text-center">

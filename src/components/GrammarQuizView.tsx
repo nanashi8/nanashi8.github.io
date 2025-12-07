@@ -252,7 +252,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       }
       
       if (allGrammarFiles.length === 0) {
-        throw new Error('問題データが見つかりません');
+        throw new Error(`問題データが見つかりません（学年: ${grade}, 形式: ${quizType}, 難易度: ${difficulty}）`);
       }
       
       // 全ての問題を収集
