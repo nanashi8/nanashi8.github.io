@@ -218,10 +218,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         console.log(`[長文] メイン辞書: ${dictionary.size}単語を読み込みました`);
         setWordDictionary(dictionary);
       })
-      .catch((err) => {
-        console.error('[長文] Error loading word dictionary:', err);
-        // 辞書の読み込みエラーは致命的ではないので、警告のみ表示
-        console.warn('単語辞書の読み込みに失敗しましたが、長文読解は続行できます');
+      .catch((_err) => {
+        // 辞書の読み込みエラーは致命的ではないので、静かに無視
+        // 長文読解は辞書なしでも続行可能
       });
     
     // 長文読解専用辞書（JSON）の読み込み
