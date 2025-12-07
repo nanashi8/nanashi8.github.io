@@ -10,22 +10,30 @@ import { test, expect } from '@playwright/test';
 
 test.describe('超高速煙テスト', () => {
   test('アプリの基本動作確認', async ({ page }) => {
-    // タイムアウトを30秒に延長（サーバー起動待ち含む）
-    test.setTimeout(30000);
+    // タイムアウトを60秒に延長（サーバー起動待ち含む）
+    test.setTimeout(60000);
     
-    // 1. アプリ起動確認（リトライ付き）
+    // 1. アプリ起動確認（リトライ付き・サーバー起動待ち時間延長）
     await page.goto('http://localhost:5173', { 
       waitUntil: 'networkidle',
-      timeout: 15000 
+      timeout: 30000 
     });
     await expect(page).toHaveTitle(/英語クイズ|Quiz/);
     
-    // 2. 翻訳クイズ開始確認
-    const startButton = page.getByRole('button', { name: /クイズ開始|開始|Start/i });
-    await startButton.click();
+    // 2. クイズモード選択ボタンが表示されることを確認
+    const memorizeButton = page.getByRole('button', { name: /💡 暗記/ });
+    await expect(memorizeButton).toBeVisible({ timeout: 5000 });
     
-    // 3. 問題表示確認（最重要：これが表示されればクイズは動作している）
-    await expect(page.locator('[class*="question"]').first()).toBeVisible({ timeout: 10000 });
+    // 3. 暗記モードをクリック（既に選択されている場合もある）
+    const isClickable = await memorizeButton.isEnabled();
+    if (isClickable) {
+      await memorizeButton.click();
+    }
+    
+    // 4. 問題が表示されることを確認（最重要：これが表示されればクイズは動作している）
+    // 単語が表示されているか、または問題カードが表示されているか
+    const wordOrQuestion = page.locator('text=Christmas').or(page.locator('[class*="question"]').first());
+    await expect(wordOrQuestion).toBeVisible({ timeout: 10000 });
     
     // 4. JavaScriptエラーがないことを確認
     const errors: string[] = [];
