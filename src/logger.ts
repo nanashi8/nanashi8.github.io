@@ -1,37 +1,45 @@
 /**
  * 環境に応じたロギングユーティリティ
- * 開発環境: すべてのログを出力
- * 本番環境: エラーのみ出力
+ * 
+ * ログレベル:
+ * - production: エラーのみ
+ * - development: 警告とエラーのみ（デバッグログは無効）
+ * - debug: すべてのログ（URL に ?debug=true を追加）
  */
 
 const isDevelopment = import.meta.env.DEV;
+const isDebugMode = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('debug') === 'true';
 
 export const logger = {
   log: (...args: unknown[]) => {
-    if (isDevelopment) {
+    // デバッグモードのみ出力
+    if (isDebugMode) {
       console.log(...args);
     }
   },
   
   warn: (...args: unknown[]) => {
-    if (isDevelopment) {
+    // 開発環境とデバッグモードで出力
+    if (isDevelopment || isDebugMode) {
       console.warn(...args);
     }
   },
   
   error: (...args: unknown[]) => {
-    // エラーは本番環境でも出力
+    // 常に出力
     console.error(...args);
   },
   
   debug: (...args: unknown[]) => {
-    if (isDevelopment) {
+    // デバッグモードのみ出力
+    if (isDebugMode) {
       console.debug(...args);
     }
   },
   
   info: (...args: unknown[]) => {
-    if (isDevelopment) {
+    // デバッグモードのみ出力
+    if (isDebugMode) {
       console.info(...args);
     }
   },
