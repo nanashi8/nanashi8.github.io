@@ -8,6 +8,7 @@ import {
   saveMemorizationSettings
 } from '../progressStorage';
 import { speakEnglish } from '../speechSynthesis';
+import { logger } from '../logger';
 import ScoreBoard from './ScoreBoard';
 
 interface MemorizationViewProps {
@@ -90,7 +91,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
         
         setIsLoading(false);
       } catch (error) {
-        console.error('設定の読み込みエラー:', error);
+        logger.error('設定の読み込みエラー:', error);
         setIsLoading(false);
       }
     };

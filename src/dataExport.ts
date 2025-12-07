@@ -3,6 +3,7 @@
 import { loadProgress, saveProgress } from './progressStorage';
 import { getAllFromDB, STORES } from './indexedDBStorage';
 import { getMigrationInfo } from './dataMigration';
+import { logger } from './logger';
 
 // エクスポートデータの型
 export interface ExportData {
@@ -51,7 +52,7 @@ export async function exportAllData(): Promise<string> {
           }
         }
       } catch (error) {
-        console.warn('IndexedDBデータの取得に失敗、LocalStorageから取得します:', error);
+        logger.warn('IndexedDBデータの取得に失敗、LocalStorageから取得します:', error);
       }
     }
 
@@ -78,7 +79,7 @@ export async function exportAllData(): Promise<string> {
 
     return JSON.stringify(exportData, null, 2);
   } catch (error) {
-    console.error('データエクスポートエラー:', error);
+    logger.error('データエクスポートエラー:', error);
     throw new Error('データのエクスポートに失敗しました');
   }
 }
@@ -100,9 +101,9 @@ export async function downloadBackup(): Promise<void> {
     
     URL.revokeObjectURL(url);
     
-    console.log(`✅ バックアップ完了: ${filename}`);
+    logger.log(`✅ バックアップ完了: ${filename}`);
   } catch (error) {
-    console.error('バックアップダウンロードエラー:', error);
+    logger.error('バックアップダウンロードエラー:', error);
     alert('バックアップのダウンロードに失敗しました');
   }
 }
@@ -139,12 +140,12 @@ export async function importData(jsonString: string): Promise<boolean> {
       }
     }
 
-    console.log('✅ データ復元完了');
+    logger.log('✅ データ復元完了');
     alert('データの復元が完了しました。ページをリロードしてください。');
     
     return true;
   } catch (error) {
-    console.error('データインポートエラー:', error);
+    logger.error('データインポートエラー:', error);
     alert('データの復元に失敗しました。ファイルが破損している可能性があります。');
     return false;
   }

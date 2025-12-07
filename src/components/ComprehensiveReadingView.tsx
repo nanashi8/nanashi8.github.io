@@ -3,6 +3,7 @@ import { ReadingPassage, Question, ReadingSegment } from '../types';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
+import { logger } from '../logger';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -67,7 +68,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         }));
         localStorage.setItem(readingProgressKey, JSON.stringify(progressData));
       } catch (error) {
-        console.warn('分からない単語の状態保存に失敗:', error);
+        logger.warn('分からない単語の状態保存に失敗:', error);
       }
     }
   }, [passages]);
@@ -181,7 +182,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   // 単語集データの読み込み
   useEffect(() => {
-    console.log('[長文] 辞書の読み込みを開始...');
+    logger.log('[長文] 辞書の読み込みを開始...');
     // メイン辞書（CSV）の読み込み
     fetch('/data/vocabulary/high-school-entrance-words.csv')
       .then((res) => {
@@ -215,7 +216,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           }
         });
         
-        console.log(`[長文] メイン辞書: ${dictionary.size}単語を読み込みました`);
+        logger.log(`[長文] メイン辞書: ${dictionary.size}単語を読み込みました`);
         setWordDictionary(dictionary);
       })
       .catch((_err) => {
@@ -239,10 +240,10 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         });
         
         setReadingDictionary(readingDict);
-        console.log(`[長文] 長文読解辞書: ${readingDict.size}単語を読み込みました`);
+        logger.log(`[長文] 長文読解辞書: ${readingDict.size}単語を読み込みました`);
       })
       .catch((err) => {
-        console.error('[長文] Error loading reading dictionary:', err);
+        logger.error('[長文] Error loading reading dictionary:', err);
         // 長文辞書はオプショナルなのでエラー表示しない
       });
   }, []);
@@ -353,11 +354,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   useEffect(() => {
     // 辞書がまだ読み込まれていない場合は待機
     if (wordDictionary.size === 0) {
-      console.log('[長文] 辞書の読み込みを待機中...');
+      logger.log('[長文] 辞書の読み込みを待機中...');
       return;
     }
     
-    console.log(`[長文] パッセージデータの読み込みを開始... (辞書: ${wordDictionary.size}単語)`);
+    logger.log(`[長文] パッセージデータの読み込みを開始... (辞書: ${wordDictionary.size}単語)`);
     
     // 古いLocalStorageデータをクリア（容量節約）
     try {
@@ -375,14 +376,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         savedProgress = JSON.parse(stored);
       }
     } catch (e) {
-      console.warn('[長文] 保存済み進捗の読み込みに失敗:', e);
+      logger.warn('[長文] 保存済み進捗の読み込みに失敗:', e);
     }
     
     // フレーズ学習用JSONから直接読み込む
     loadAllPassagesAsReadingFormat(wordDictionary)
       .then((loadedPassages) => {
         if (loadedPassages && loadedPassages.length > 0) {
-          console.log(`[長文] ${loadedPassages.length}件のパッセージを読み込みました`);
+          logger.log(`[長文] ${loadedPassages.length}件のパッセージを読み込みました`);
           
           // 保存済みの「分からない単語」状態を復元
           const restoredPassages = loadedPassages.map(passage => {
@@ -419,20 +420,20 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           });
           
           setPassages(sortedData);
-          console.log(`[長文] パッセージを設定完了: ${sortedData.length}件`);
+          logger.log(`[長文] パッセージを設定完了: ${sortedData.length}件`);
           if (sortedData.length > 0) {
             setSelectedPassageId(sortedData[0].id);
             setPhraseTranslations(new Array(sortedData[0].phrases?.length || 0).fill(false));
             setWordMeaningsVisible(new Array(sortedData[0].phrases?.length || 0).fill(false));
-            console.log(`[長文] 初期パッセージを選択: ${sortedData[0].id}`);
+            logger.log(`[長文] 初期パッセージを選択: ${sortedData[0].id}`);
           }
         } else {
-          console.error('[長文] loadAllPassagesAsReadingFormatが空の配列を返しました');
+          logger.error('[長文] loadAllPassagesAsReadingFormatが空の配列を返しました');
           setError('パッセージデータの読み込みに失敗しました（データが空です）');
         }
       })
       .catch((err) => {
-        console.error('[長文] Error loading passages:', err);
+        logger.error('[長文] Error loading passages:', err);
         setError('パッセージの読み込みに失敗しました: ' + err.message);
       });
   }, [wordDictionary]); // 辞書が読み込まれたら再実行
@@ -496,8 +497,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     
     // デバッグ: パッセージデータを確認
     const passage = passages.find(p => p.id === selectedPassageId);
-    console.log('Selected passage:', passage);
-    console.log('Phrases count:', passage?.phrases?.length);
+    logger.log('Selected passage:', passage);
+    logger.log('Phrases count:', passage?.phrases?.length);
     
     if (!passage || !passage.phrases || passage.phrases.length === 0) {
       alert('パッセージデータが正しく読み込まれていません。ページを再読み込みしてください。');
@@ -639,7 +640,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         });
       } else {
         // 辞書にない場合でもポップアップは表示しない
-        console.warn(`Word not found in dictionary: ${normalizedWord}`);
+        logger.warn(`Word not found in dictionary: ${normalizedWord}`);
       }
     }
   };

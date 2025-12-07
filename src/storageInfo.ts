@@ -3,6 +3,7 @@
 import { getStorageEstimate, getCount, STORES } from './indexedDBStorage';
 import { getMigrationInfo } from './dataMigration';
 import { formatBytes } from './dataExport';
+import { logger } from './logger';
 
 export interface StorageInfo {
   localStorage: {
@@ -45,7 +46,7 @@ function getLocalStorageSize(): number {
       }
     }
   } catch (error) {
-    console.error('LocalStorageサイズ計算エラー:', error);
+    logger.error('LocalStorageサイズ計算エラー:', error);
   }
   
   return total;
@@ -71,7 +72,7 @@ export async function getStorageInfo(): Promise<StorageInfo> {
       sessionHistoryCount = await getCount(STORES.SESSION_HISTORY);
       dailyStatsCount = await getCount(STORES.DAILY_STATS);
     } catch (error) {
-      console.error('IndexedDB件数取得エラー:', error);
+      logger.error('IndexedDB件数取得エラー:', error);
     }
   }
   

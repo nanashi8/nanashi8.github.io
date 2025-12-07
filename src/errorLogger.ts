@@ -1,4 +1,5 @@
 // エラーログ収集システム
+import { logger } from './logger';
 
 export interface ErrorLog {
   timestamp: number;
@@ -182,5 +183,5 @@ export const errorLogger = new ErrorLogger();
 export function initErrorLogger(): void {
   errorLogger.interceptConsole();
   errorLogger.captureGlobalErrors();
-  console.log('🔍 Error logger initialized');
+  logger.log('🔍 Error logger initialized');
 }

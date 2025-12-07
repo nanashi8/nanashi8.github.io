@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { logger } from '../logger';
 import { ReadingPassage, Question } from '../types';
 import { saveQuestionSet, generateId } from '../utils';
 import { speakEnglish, stopSpeaking } from '../speechSynthesis';
@@ -21,7 +22,7 @@ function ReadingView() {
         }
       })
       .catch((err) => {
-        console.error('Failed to load passages:', err);
+        logger.error('Failed to load passages:', err);
         setPassages([]);
       });
   }, []);

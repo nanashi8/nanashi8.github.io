@@ -6,11 +6,12 @@ import { useState } from 'react';
 import { Question } from '../types';
 import { 
   extractLinguisticFeatures, 
-  generateRelatedWordClusters, 
+  generateRelatedWordClusters,
   LinguisticFeatures,
   RelatedWordCluster,
   LinguisticRelationType 
 } from '../linguisticRelationsAI';
+import { logger } from '../logger';
 import './LinguisticRelationsView.css';
 
 interface LinguisticRelationsViewProps {
@@ -57,8 +58,8 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
       const wordClusters = generateRelatedWordClusters(allQuestions, word);
       setClusters(wordClusters);
       
-      console.log('📚 言語学的特徴:', linguisticFeatures);
-      console.log('🔗 関連単語クラスター:', wordClusters);
+      logger.log('📚 言語学的特徴:', linguisticFeatures);
+      logger.log('🔗 関連単語クラスター:', wordClusters);
     }
   };
 

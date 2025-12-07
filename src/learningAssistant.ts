@@ -1,4 +1,5 @@
 // AI学習アシスタント - スキップした単語の検証と復習管理
+import { logger } from './logger';
 
 import { loadProgressSync, saveProgress } from './progressStorage';
 
@@ -19,7 +20,7 @@ function loadSkipGroups(): SkipGroup[] {
     const data = localStorage.getItem(SKIP_GROUP_KEY);
     return data ? JSON.parse(data) : [];
   } catch (error) {
-    console.error('スキップグループの読み込みエラー:', error);
+    logger.error('スキップグループの読み込みエラー:', error);
     return [];
   }
 }
@@ -29,7 +30,7 @@ function saveSkipGroups(groups: SkipGroup[]): void {
   try {
     localStorage.setItem(SKIP_GROUP_KEY, JSON.stringify(groups));
   } catch (error) {
-    console.error('スキップグループの保存エラー:', error);
+    logger.error('スキップグループの保存エラー:', error);
   }
 }
 
@@ -104,7 +105,7 @@ export function handleSkippedWordIncorrect(word: string): void {
     saveProgress(progress);
     saveSkipGroups(groups);
     
-    console.log(`AI学習アシスタント: 「${word}」が不正解でした。同時期にスキップした${group.suspiciousWords.length}個の単語を再出題対象にします。`);
+    logger.log(`AI学習アシスタント: 「${word}」が不正解でした。同時期にスキップした${group.suspiciousWords.length}個の単語を再出題対象にします。`);
   }
 }
 

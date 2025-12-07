@@ -2,6 +2,8 @@
  * Web Speech API を使用した音声合成ユーティリティ
  */
 
+import { logger } from './logger';
+
 /**
  * 会話形式のテキストから話者名と記号を除去
  * 例: 'Tom: "Hello, how are you?"' → 'Hello, how are you?'
@@ -47,7 +49,7 @@ export function speakEnglish(
 ): void {
   // Web Speech API のサポート確認
   if (!('speechSynthesis' in window)) {
-    console.warn('このブラウザはWeb Speech APIをサポートしていません');
+    logger.warn('このブラウザはWeb Speech APIをサポートしていません');
     return;
   }
 
@@ -96,7 +98,7 @@ export function speakEnglish(
 
   // エラーハンドリング
   utterance.onerror = (event) => {
-    console.error('音声合成エラー:', event);
+    logger.error('音声合成エラー:', event);
   };
 
   // 発音を実行

@@ -9,6 +9,7 @@
  * 5. 動作・状態・性質による分類
  */
 
+import { logger } from './logger';
 import { Question } from './types';
 // 言語学的関連性のみを扱うため、progressStorageのインポートは不要
 
@@ -549,7 +550,7 @@ export function selectRelatedQuestions(
         if (question && selected.length < targetCount) {
           selected.push(question);
           selectedWords.add(rw.word);
-          console.log(`🔗 関連出題: "${studiedWord}" → "${rw.word}" (${rw.relationType})`);
+          logger.log(`🔗 関連出題: "${studiedWord}" → "${rw.word}" (${rw.relationType})`);
         }
       });
     });

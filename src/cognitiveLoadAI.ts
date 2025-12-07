@@ -8,6 +8,8 @@
  * 4. 休憩推奨アルゴリズム
  */
 
+import { logger } from './logger';
+
 import { QuestionPriority } from './learningCurveAI';
 
 /**
@@ -216,11 +218,11 @@ export function adjustDifficultyByCognitiveLoad(
 ): QuestionPriority[] {
   const { fatigueLevel, concentrationLevel, timeOfDay, sessionStats } = cognitiveLoad;
   
-  console.log(`🧠 認知負荷AI: 疲労度${fatigueLevel}%, 集中力${concentrationLevel}%, 時間帯: ${timeOfDay}`);
+  logger.log(`🧠 認知負荷AI: 疲労度${fatigueLevel}%, 集中力${concentrationLevel}%, 時間帯: ${timeOfDay}`);
   
   // 高疲労時: 簡単な復習問題を優先
   if (fatigueLevel >= 70) {
-    console.log('  💤 疲労度高: 簡単な復習問題を優先');
+    logger.log('  💤 疲労度高: 簡単な復習問題を優先');
     return priorities
       .filter(p => p.estimatedSuccessRate >= 70 || p.strategy === 'spaced_repetition')
       .map(p => ({
@@ -232,7 +234,7 @@ export function adjustDifficultyByCognitiveLoad(
   
   // 中程度疲労: バランス重視
   if (fatigueLevel >= 40) {
-    console.log('  😐 疲労度中: バランス重視');
+    logger.log('  😐 疲労度中: バランス重視');
     return priorities.map(p => {
       // 極端に難しい問題を避ける
       if (p.estimatedSuccessRate < 40) {
@@ -244,7 +246,7 @@ export function adjustDifficultyByCognitiveLoad(
   
   // 高集中時: 新規学習と難問を投入
   if (concentrationLevel >= 70 && sessionStats.duration < 15) {
-    console.log('  ⚡ 集中力高: 新規単語・難問を優先');
+    logger.log('  ⚡ 集中力高: 新規単語・難問を優先');
     
     return priorities.map(p => {
       // 新規学習を優先
@@ -275,7 +277,7 @@ function adjustByTimeOfDay(
   switch (timeOfDay) {
     case 'morning':
       // 朝: 新規学習と重要単語
-      console.log('  🌅 朝: 新規学習を優先');
+      logger.log('  🌅 朝: 新規学習を優先');
       return priorities.map(p => {
         if (p.strategy === 'new_learning') {
           return { ...p, priority: p.priority + 15, reason: p.reason + ' (朝・新規最適)' };
@@ -285,12 +287,12 @@ function adjustByTimeOfDay(
       
     case 'afternoon':
       // 午後: バランス型
-      console.log('  ☀️ 午後: バランス型');
+      logger.log('  ☀️ 午後: バランス型');
       return priorities;
       
     case 'evening':
       // 夕方: 復習中心
-      console.log('  🌆 夕方: 復習中心');
+      logger.log('  🌆 夕方: 復習中心');
       return priorities.map(p => {
         if (p.strategy === 'spaced_repetition' || p.strategy === 'consolidation') {
           return { ...p, priority: p.priority + 10, reason: p.reason + ' (夕方・復習最適)' };
@@ -300,7 +302,7 @@ function adjustByTimeOfDay(
       
     case 'night':
       // 夜: 軽い復習のみ（新規学習は避ける）
-      console.log('  🌙 夜: 軽い復習のみ');
+      logger.log('  🌙 夜: 軽い復習のみ');
       return priorities
         .filter(p => p.strategy !== 'new_learning' || p.estimatedSuccessRate >= 60)
         .map(p => {
