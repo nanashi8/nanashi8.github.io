@@ -69,7 +69,7 @@ type Tab = 'memorization' | 'translation' | 'spelling' | 'grammar' | 'reading' |
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
 export type PhraseTypeFilter = 'all' | 'phrasal-verb' | 'idiom' | 'collocation' | 'other';
-export type DataSource = 'all' | 'junior' | 'intermediate';
+export type DataSource = 'all' | 'junior' | 'intermediate' | 'advanced' | 'standard' | string; // stringはカスタム問題セットID
 
 // 10個の正式カテゴリ（docs/19-junior-high-vocabulary.md参照）
 export const OFFICIAL_CATEGORIES = [
@@ -161,11 +161,18 @@ function App() {
   // 熟語タイプフィルター
   const [selectedPhraseTypeFilter, setSelectedPhraseTypeFilter] = useState<PhraseTypeFilter>('all');
   
-  // データソース選択
+  // データソース選択（問題セットID）
   const [selectedDataSource, setSelectedDataSource] = useState<DataSource>(() => {
     const saved = localStorage.getItem('selectedDataSource');
     return (saved as DataSource) || 'all';
   });
+  
+  // 選択中の問題セット名を取得
+  const getSelectedQuestionSetName = () => {
+    if (selectedDataSource === 'all') return '全問題集';
+    const set = questionSets.find(qs => qs.id === selectedDataSource);
+    return set ? set.name : '全問題集';
+  };
   
   // 問題集リスト管理（後方互換性のため残す）
   const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
@@ -460,31 +467,55 @@ function App() {
           
           setCategoryList(sortedCategories);
           
-          // 問題集形式で保存（後方互換性のため）
-          const mainSet: QuestionSet = {
-            id: 'main-set',
-            name: '高校受験英単語・熟語',
+          // 問題集を難易度別に分割
+          const allSet: QuestionSet = {
+            id: 'all-set',
+            name: '高校受験総合',
             questions: allQuestions,
             createdAt: Date.now(),
             isBuiltIn: true,
             source: 'high-school-entrance-words.csv + high-school-entrance-phrases.csv',
           };
           
+          const advancedSet: QuestionSet = {
+            id: 'advanced-set',
+            name: '高校受験上級',
+            questions: allQuestions.filter(q => q.difficulty === 'advanced'),
+            createdAt: Date.now(),
+            isBuiltIn: true,
+            source: 'high-school-entrance-words.csv (advanced)',
+          };
+          
+          const standardSet: QuestionSet = {
+            id: 'standard-set',
+            name: '高校受験標準',
+            questions: allQuestions.filter(q => q.difficulty === 'intermediate' || q.difficulty === 'beginner'),
+            createdAt: Date.now(),
+            isBuiltIn: true,
+            source: 'high-school-entrance-words.csv (standard)',
+          };
+          
           // カスタム問題セットを読み込み
           const { getCustomQuestionSets } = await import('./progressStorage');
           const customSets = await getCustomQuestionSets();
           
-          // カスタム問題セットをQuestionSet形式に変換して追加
-          const customQuestionSets: QuestionSet[] = customSets.map(cs => ({
-            id: cs.id,
-            name: cs.name,
-            questions: cs.questions,
-            createdAt: cs.createdAt,
-            isBuiltIn: false,
-            source: cs.source === 'reading' ? '長文読解' : cs.source === 'weak-words' ? '苦手語句' : '手動作成',
-          }));
+          // カスタム問題セットをQuestionSet形式に変換して追加（日付付き名前）
+          const customQuestionSets: QuestionSet[] = customSets.map(cs => {
+            const date = new Date(cs.createdAt);
+            const dateStr = `${date.getMonth() + 1}/${date.getDate()}`;
+            const sourcePrefix = cs.source === 'reading' ? '長文' : cs.source === 'weak-words' ? '苦手語句' : '手動';
+            
+            return {
+              id: cs.id,
+              name: `カスタム問題（${sourcePrefix}_${dateStr}）`,
+              questions: cs.questions,
+              createdAt: cs.createdAt,
+              isBuiltIn: false,
+              source: cs.source === 'reading' ? '長文読解' : cs.source === 'weak-words' ? '苦手語句' : '手動作成',
+            };
+          });
           
-          setQuestionSets([mainSet, ...customQuestionSets]);
+          setQuestionSets([allSet, advancedSet, standardSet, ...customQuestionSets]);
           
           // データ読み込み完了をマーク
           setIsDataLoaded(true);
@@ -1411,6 +1442,7 @@ function App() {
             onPhraseTypeFilterChange={setSelectedPhraseTypeFilter}
             selectedDataSource={selectedDataSource}
             onDataSourceChange={setSelectedDataSource}
+            questionSets={questionSets}
             onStartQuiz={handleStartQuiz}
             onAnswer={handleAnswer}
             onNext={handleNext}

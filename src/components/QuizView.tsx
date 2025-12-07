@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { QuizState } from '../types';
+import { QuizState, QuestionSet } from '../types';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import { ErrorPrediction } from '../errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
@@ -21,6 +21,7 @@ interface QuizViewProps {
   onPhraseTypeFilterChange?: (filter: PhraseTypeFilter) => void;
   selectedDataSource?: DataSource;
   onDataSourceChange?: (source: DataSource) => void;
+  questionSets?: QuestionSet[];
   onStartQuiz: () => void;
   onAnswer: (answer: string, correct: string) => void;
   onNext: () => void;
@@ -51,6 +52,7 @@ function QuizView({
   onPhraseTypeFilterChange,
   selectedDataSource = 'all',
   onDataSourceChange,
+  questionSets,
   onStartQuiz,
   onAnswer,
   onNext,
@@ -162,7 +164,7 @@ function QuizView({
             onShowSettings={() => setShowSettings(true)}
             currentWord={currentQuestion?.word}
             onAnswerTime={lastAnswerTime}
-            dataSource={selectedDataSource === 'all' ? '全問題集' : selectedDataSource === 'junior' ? '高校受験' : '高校受験標準'}
+            dataSource={questionSets?.find(qs => qs.id === selectedDataSource)?.name || '全問題集'}
             category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
             difficulty={selectedDifficulty}
             wordPhraseFilter={selectedWordPhraseFilter}
@@ -213,18 +215,20 @@ function QuizView({
                 </select>
               </div>
 
-              {onDataSourceChange && (
+              {onDataSourceChange && questionSets && (
                 <div className="filter-group">
-                  <label htmlFor="data-source-select-quiz">📚 問題集:</label>
+                  <label htmlFor="data-source-select-quiz">📚 出題元:</label>
                   <select
                     id="data-source-select-quiz"
                     value={selectedDataSource}
                     onChange={(e) => onDataSourceChange(e.target.value as DataSource)}
                     className="select-input"
                   >
-                    <option value="all">すべて</option>
-                    <option value="junior">高校受験</option>
-                    <option value="intermediate">高校受験標準</option>
+                    {questionSets.map((set) => (
+                      <option key={set.id} value={set.id}>
+                        {set.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
               )}
