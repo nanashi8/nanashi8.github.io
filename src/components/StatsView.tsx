@@ -15,6 +15,7 @@ import {
   getRecentlyMasteredWords,
   createWeakWordsQuestionSet,
   saveCustomQuestionSet,
+  getCustomQuestionSets,
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
 
@@ -23,11 +24,13 @@ interface StatsViewProps {
   allQuestions: Question[];
   categoryList: string[];
   onResetComplete?: () => void;
+  onQuestionSetsUpdated?: () => Promise<void>;
 }
 
-function StatsView({ onResetComplete, allQuestions }: StatsViewProps) {
+function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: StatsViewProps) {
   const [autoRefresh, _setAutoRefresh] = useState<boolean>(true);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
+  const [hasWeakWordsSet, setHasWeakWordsSet] = useState<boolean>(false);
   
   // 新しい統計データ
   const [calendarData, setCalendarData] = useState<Array<{ date: string; count: number; accuracy: number }>>([]);
@@ -100,8 +103,19 @@ function StatsView({ onResetComplete, allQuestions }: StatsViewProps) {
   useEffect(() => {
     loadData();
     
+    // 苦手単語セットが存在するかチェック
+    const checkWeakWordsSet = async () => {
+      const sets = await getCustomQuestionSets();
+      const hasSet = sets.some(s => s.source === 'weak-words');
+      setHasWeakWordsSet(hasSet);
+    };
+    checkWeakWordsSet();
+    
     if (autoRefresh) {
-      const interval = setInterval(loadData, 5000);
+      const interval = setInterval(() => {
+        loadData();
+        checkWeakWordsSet();
+      }, 5000);
       return () => clearInterval(interval);
     }
   }, [autoRefresh]);
@@ -228,7 +242,14 @@ function StatsView({ onResetComplete, allQuestions }: StatsViewProps) {
                       allQuestions
                     );
                     await saveCustomQuestionSet(questionSet);
-                    alert(`✅ 問題セット「${questionSet.name}」を作成しました！\n和訳・スペルタブで利用できます。`);
+                    setHasWeakWordsSet(true);
+                    
+                    // 問題セット一覧を再読み込み
+                    if (onQuestionSetsUpdated) {
+                      await onQuestionSetsUpdated();
+                    }
+                    
+                    alert(`✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`);
                   } catch (error) {
                     console.error('問題セット作成エラー:', error);
                     alert('❌ 問題セットの作成に失敗しました');
@@ -236,7 +257,7 @@ function StatsView({ onResetComplete, allQuestions }: StatsViewProps) {
                 }}
                 className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2"
               >
-                📚 問題セットを作成
+                📚 問題セットを{hasWeakWordsSet ? '更新' : '作成'}
                 <span className="text-xs opacity-90">(上位20語)</span>
               </button>
               <button
@@ -259,7 +280,14 @@ function StatsView({ onResetComplete, allQuestions }: StatsViewProps) {
                       allQuestions
                     );
                     await saveCustomQuestionSet(questionSet);
-                    alert(`✅ 問題セット「${questionSet.name}」を作成しました！\n和訳・スペルタブで利用できます。`);
+                    setHasWeakWordsSet(true);
+                    
+                    // 問題セット一覧を再読み込み
+                    if (onQuestionSetsUpdated) {
+                      await onQuestionSetsUpdated();
+                    }
+                    
+                    alert(`✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`);
                   } catch (error) {
                     console.error('問題セット作成エラー:', error);
                     alert('❌ 問題セットの作成に失敗しました');

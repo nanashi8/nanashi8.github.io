@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Question, MemorizationCardState, MemorizationBehavior } from '../types';
+import { Question, MemorizationCardState, MemorizationBehavior, QuestionSet } from '../types';
 import { 
   getMemorizationCardSettings, 
   saveMemorizationCardSettings,
@@ -12,12 +12,14 @@ import ScoreBoard from './ScoreBoard';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
+  questionSets: QuestionSet[];
 }
 
-function MemorizationView({ allQuestions }: MemorizationViewProps) {
+function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps) {
   // 学習設定
   const [showSettings, setShowSettings] = useState(false);
   const [selectedDataSource, setSelectedDataSource] = useState<string>('all');
+  const [selectedQuestionSet, setSelectedQuestionSet] = useState<string>('main-set');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
@@ -109,11 +111,17 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
   
   // 出題する語句を選択（シンプルな実装、後でAI最適化）
   useEffect(() => {
-    if (allQuestions.length === 0 || isLoading) return;
+    if (isLoading) return;
     
     const selectQuestions = () => {
+      // 問題セットを選択
+      const selectedSet = questionSets.find(qs => qs.id === selectedQuestionSet);
+      const baseQuestions = selectedSet ? selectedSet.questions : allQuestions;
+      
+      if (baseQuestions.length === 0) return;
+      
       // 学習設定に基づいてフィルタリング
-      let filtered = allQuestions;
+      let filtered = baseQuestions;
       
       // 関連分野フィルター
       if (selectedCategory !== 'all') {
@@ -136,7 +144,7 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
     };
     
     selectQuestions();
-  }, [allQuestions, learningLimit, reviewLimit, isLoading, selectedCategory]);
+  }, [questionSets, selectedQuestionSet, allQuestions, learningLimit, reviewLimit, isLoading, selectedCategory]);
   
   // 音声読み上げ（カード表示時）
   useEffect(() => {
@@ -329,7 +337,23 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📚 問題集:</label>
+              <label htmlFor="memorization-questionset" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📚 問題セット:</label>
+              <select 
+                id="memorization-questionset"
+                value={selectedQuestionSet} 
+                onChange={(e) => setSelectedQuestionSet(e.target.value)}
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+              >
+                {questionSets.map(qs => (
+                  <option key={qs.id} value={qs.id}>
+                    {qs.name} ({qs.questions.length}語)
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
+              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📖 データソース:</label>
               <select 
                 id="memorization-datasource"
                 value={selectedDataSource} 
