@@ -140,7 +140,95 @@ function XxxView() {
 - [ ] 回答処理で `setLastAnswerTime(Date.now())` を呼んでいるか？
 - [ ] 次の問題に移動時に `questionStartTimeRef.current = Date.now()` を呼んでいるか？
 
-## 4. 新しいモードの追加手順
+## 4. 新機能追加前のチェックリスト
+
+### 事前確認（必須）
+
+新しい機能を追加する前に、以下を必ず確認してください：
+
+#### 1. 既存機能の重複チェック
+- [ ] 同じ機能が既に実装されていないか？
+- [ ] 似た機能を拡張できないか？
+- [ ] 既存のコンポーネントを再利用できないか？
+
+#### 2. データフローの確認
+- [ ] 進捗記録が必要か？ → `updateWordProgress`を使用
+- [ ] ScoreBoard更新が必要か？ → `lastAnswerTime`を更新
+- [ ] LocalStorageに保存が必要か？ → 既存のキー命名規則に従う
+- [ ] APIコールが必要か？ → 既存のパターンに従う
+
+#### 3. 型定義の影響範囲
+- [ ] 新しい型を追加するか？ → `types.ts`に集約
+- [ ] 既存の型を拡張するか？ → 後方互換性を保つ
+- [ ] モード追加か？ → 「5. 新しいモードの追加手順」参照
+- [ ] 状態管理が必要か？ → `useState`/`useRef`のパターンに従う
+
+#### 4. UI/UXの一貫性
+- [ ] 既存のデザインパターンに従っているか？
+- [ ] レスポンシブ対応は必要か？
+- [ ] ダークモード対応は必要か？
+- [ ] アクセシビリティは考慮されているか？
+
+#### 5. パフォーマンスへの影響
+- [ ] 大量データを扱うか？ → メモ化やページネーション検討
+- [ ] 頻繁に更新される状態か？ → 不要な再レンダリング防止
+- [ ] 非同期処理か？ → ローディング状態とエラーハンドリング
+
+### 実装前の設計確認
+
+#### LocalStorageキーの命名規則
+```typescript
+// ✅ 正しい命名パターン
+'quiz-app-{feature-name}'        // アプリ全体の設定
+'{tab-name}-{setting-name}'      // タブ固有の設定
+'{feature}-{data-type}-{scope}'  // 機能固有のデータ
+
+// 例:
+'quiz-app-user-progress'         // 進捗データ
+'translation-auto-next'          // 和訳タブの自動次へ設定
+'learning-schedule-90days'       // 学習スケジュール
+'reading-passages-data'          // 長文読解データ
+
+// ❌ 避けるべきパターン
+'data'                           // 曖昧すぎる
+'myFeature'                      // プレフィックスなし
+'feature_new_data'               // アンダースコア（ハイフン推奨）
+```
+
+#### コンポーネント配置の原則
+```
+src/
+├── components/           # 再利用可能なUIコンポーネント
+│   ├── *View.tsx        # タブごとのメインビュー
+│   ├── ScoreBoard.tsx   # 共通コンポーネント
+│   └── ...
+├── hooks/               # カスタムフック
+│   └── useLearningLimits.ts
+├── types.ts             # 型定義の集約
+├── progressStorage.ts   # 進捗管理の中核
+└── App.tsx              # ルーティングと状態管理
+```
+
+#### 状態管理のパターン
+```typescript
+// ローカル状態（コンポーネント内のみ）
+const [localState, setLocalState] = useState(initialValue);
+
+// 永続化が必要な状態（localStorage使用）
+const [setting, setSetting] = useState(() => {
+  const saved = localStorage.getItem('key');
+  return saved ? JSON.parse(saved) : defaultValue;
+});
+
+useEffect(() => {
+  localStorage.setItem('key', JSON.stringify(setting));
+}, [setting]);
+
+// 共通状態（App.tsxで管理してprops経由で渡す）
+// または Context API使用（大規模な場合）
+```
+
+## 5. 新しいモードの追加手順
 
 ### ステップ1: 型定義を更新
 
@@ -259,9 +347,332 @@ export interface QuizResult {
 3. **複数の場所から進捗記録していないか？**
    - 記録は1箇所のみ
 
-## 6. コードレビューチェックリスト
+## 6. 機能別実装ガイド
 
-新しい機能や修正を実装する前に、以下を確認してください：
+### 6.1 データ永続化機能の追加
+
+#### チェックポイント
+- [ ] LocalStorageキー名は既存の命名規則に従っているか？
+- [ ] データマイグレーション（バージョン管理）は必要か？
+- [ ] データサイズの上限を考慮しているか？（LocalStorageは5-10MB）
+- [ ] エラーハンドリング（localStorage無効/容量超過）を実装しているか？
+
+#### 実装パターン
+```typescript
+// ✅ 推奨パターン
+const STORAGE_KEY = 'quiz-app-feature-data';
+const STORAGE_VERSION = 1;
+
+interface FeatureData {
+  version: number;
+  data: YourDataType;
+  updatedAt: number;
+}
+
+// 保存
+export async function saveFeatureData(data: YourDataType): Promise<void> {
+  try {
+    const storageData: FeatureData = {
+      version: STORAGE_VERSION,
+      data,
+      updatedAt: Date.now()
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(storageData));
+  } catch (error) {
+    console.error('保存エラー:', error);
+    // フォールバック処理
+  }
+}
+
+// 読み込み
+export async function loadFeatureData(): Promise<YourDataType | null> {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (!stored) return null;
+    
+    const parsed: FeatureData = JSON.parse(stored);
+    
+    // バージョンチェック
+    if (parsed.version !== STORAGE_VERSION) {
+      // マイグレーション処理
+      return migrateData(parsed);
+    }
+    
+    return parsed.data;
+  } catch (error) {
+    console.error('読み込みエラー:', error);
+    return null;
+  }
+}
+```
+
+### 6.2 カスタムフックの追加
+
+#### チェックポイント
+- [ ] 既存のフックと重複していないか？
+- [ ] `hooks/`ディレクトリに配置しているか？
+- [ ] 命名規則は`use*`か？
+- [ ] 依存配列は正しく設定されているか？
+
+#### 実装パターン
+```typescript
+// hooks/useFeatureName.ts
+import { useState, useEffect } from 'react';
+
+export function useFeatureName(param: ParamType) {
+  const [state, setState] = useState<StateType>(initialValue);
+  
+  useEffect(() => {
+    // 副作用処理
+    return () => {
+      // クリーンアップ
+    };
+  }, [param]); // 依存配列を正しく設定
+  
+  return { state, setState };
+}
+```
+
+### 6.3 新しいタブ（View）の追加
+
+#### チェックポイント
+- [ ] `src/components/*View.tsx`の命名規則に従っているか？
+- [ ] 進捗記録パターン（セクション3）に従っているか？
+- [ ] ScoreBoard更新パターン（セクション2）に従っているか？
+- [ ] `App.tsx`にルーティングを追加したか？
+- [ ] タブアイコンとラベルを定義したか？
+
+#### 実装パターン
+```typescript
+// src/components/NewFeatureView.tsx
+import { useState, useRef } from 'react';
+import { updateWordProgress } from '../progressStorage';
+import ScoreBoard from './ScoreBoard';
+
+function NewFeatureView() {
+  // 必須: 質問開始時刻
+  const questionStartTimeRef = useRef<number>(Date.now());
+  
+  // 必須: ScoreBoard更新用
+  const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
+  
+  // セッション統計
+  const [sessionStats, setSessionStats] = useState({
+    correct: 0,
+    incorrect: 0,
+    review: 0,
+    mastered: 0
+  });
+  
+  const handleAnswer = async (isCorrect: boolean) => {
+    const responseTime = Date.now() - questionStartTimeRef.current;
+    
+    await updateWordProgress(
+      currentQuestion.word,
+      isCorrect,
+      responseTime,
+      undefined,
+      'new-mode' // モード名
+    );
+    
+    setLastAnswerTime(Date.now());
+    setSessionStats(prev => ({
+      ...prev,
+      correct: prev.correct + (isCorrect ? 1 : 0),
+      incorrect: prev.incorrect + (isCorrect ? 0 : 1),
+    }));
+  };
+  
+  return (
+    <div>
+      <ScoreBoard
+        mode="new-mode"
+        onAnswerTime={lastAnswerTime}
+        sessionCorrect={sessionStats.correct}
+        sessionIncorrect={sessionStats.incorrect}
+        // ...
+      />
+      {/* コンテンツ */}
+    </div>
+  );
+}
+
+export default NewFeatureView;
+```
+
+```typescript
+// App.tsx にルーティング追加
+const [activeTab, setActiveTab] = useState<'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization' | 'new-feature'>('translation');
+
+// JSX内
+{activeTab === 'new-feature' && <NewFeatureView />}
+```
+
+### 6.4 新しい統計・分析機能の追加
+
+#### チェックポイント
+- [ ] `progress.results`配列を活用しているか？
+- [ ] データ集計ロジックは効率的か？（大量データ対応）
+- [ ] フィルタリング条件は既存のパターンに従っているか？
+- [ ] 日付範囲の処理は統一されているか？
+
+#### 実装パターン
+```typescript
+// 統計計算の例
+export function calculateFeatureStats(
+  results: QuizResult[],
+  options: {
+    mode?: QuizResult['mode'];
+    startDate?: number;
+    endDate?: number;
+  } = {}
+): FeatureStats {
+  const filtered = results.filter(result => {
+    if (options.mode && result.mode !== options.mode) return false;
+    if (options.startDate && result.date < options.startDate) return false;
+    if (options.endDate && result.date > options.endDate) return false;
+    return true;
+  });
+  
+  // 集計処理
+  return {
+    total: filtered.length,
+    // ...
+  };
+}
+```
+
+### 6.5 新しいUI コンポーネントの追加
+
+#### チェックポイント
+- [ ] 既存のコンポーネントを再利用できないか？
+- [ ] Tailwind CSSのクラス名を使用しているか？
+- [ ] ダークモード対応のクラス（`dark:`）を追加しているか？
+- [ ] レスポンシブデザインを考慮しているか？
+- [ ] アクセシビリティ（aria-label等）を考慮しているか？
+
+#### 実装パターン
+```typescript
+// components/NewComponent.tsx
+interface NewComponentProps {
+  // Props定義
+}
+
+function NewComponent({ }: NewComponentProps) {
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+      {/* レスポンシブ + ダークモード対応 */}
+      <button 
+        className="px-4 py-2 bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-lg"
+        aria-label="説明的なラベル"
+      >
+        ボタン
+      </button>
+    </div>
+  );
+}
+
+export default NewComponent;
+```
+
+### 6.6 新しいデータソース・API連携の追加
+
+#### チェックポイント
+- [ ] エラーハンドリングは実装されているか？
+- [ ] ローディング状態を管理しているか？
+- [ ] リトライロジックは必要か？
+- [ ] レスポンスのキャッシュは必要か？
+- [ ] 型定義は適切か？
+
+#### 実装パターン
+```typescript
+// API呼び出しの例
+interface ApiResponse {
+  // レスポンス型定義
+}
+
+export async function fetchFeatureData(): Promise<ApiResponse> {
+  try {
+    const response = await fetch('/api/feature');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data: ApiResponse = await response.json();
+    return data;
+  } catch (error) {
+    console.error('API呼び出しエラー:', error);
+    throw error;
+  }
+}
+
+// コンポーネント内での使用
+function FeatureComponent() {
+  const [data, setData] = useState<ApiResponse | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const result = await fetchFeatureData();
+        setData(result);
+      } catch (err) {
+        setError('データの読み込みに失敗しました');
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadData();
+  }, []);
+  
+  if (loading) return <div>読み込み中...</div>;
+  if (error) return <div>エラー: {error}</div>;
+  if (!data) return null;
+  
+  return <div>{/* データ表示 */}</div>;
+}
+```
+
+### 6.7 新しい問題形式の追加
+
+#### チェックポイント
+- [ ] `Question`型を拡張するか、新しい型を定義するか？
+- [ ] CSVデータからの読み込みは必要か？
+- [ ] 進捗記録は既存パターンに従っているか？
+- [ ] 採点ロジックは正確か？
+
+#### 実装パターン
+```typescript
+// types.ts に型定義追加
+export interface NewQuestionType extends Question {
+  // 追加フィールド
+  newField: string;
+}
+
+// 問題コンポーネント
+function NewQuestionCard({ question }: { question: NewQuestionType }) {
+  const [userAnswer, setUserAnswer] = useState('');
+  
+  const handleSubmit = () => {
+    const isCorrect = checkAnswer(userAnswer, question);
+    // 既存の進捗記録パターンに従う
+    onAnswer(isCorrect);
+  };
+  
+  return (
+    <div>
+      {/* 問題UI */}
+    </div>
+  );
+}
+```
+
+## 7. コードレビューチェックリスト（拡張版）
 
 ### 実装前チェック
 - [ ] 既存の進捗記録システムと競合しないか？
