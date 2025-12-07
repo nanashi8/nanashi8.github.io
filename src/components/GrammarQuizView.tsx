@@ -156,8 +156,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               label: `中${gradeNum}_${data.title}`
             });
           }
+          // ファイルが存在しない場合は静かにスキップ
         } catch (_err) {
-          console.warn(`Unit ${unitIdx}の読み込みに失敗しました`);
+          // ファイル読み込みエラーは無視（存在しないファイルは正常）
         }
       }
       
