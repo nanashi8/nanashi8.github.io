@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幾何学図形デモ - 円と内接図形</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .demo-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        svg {
+            border: 1px solid #ddd;
+            background: white;
+            display: block;
+            margin: 0 auto;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            background: white;
+            display: block;
+            margin: 0 auto;
+        }
+        .description {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            font-size: 14px;
+            color: #555;
+        }
+        .controls {
+            margin-top: 15px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 5px;
+        }
+        .controls h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        .control-group {
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .control-group label {
+            font-weight: bold;
+            min-width: 80px;
+        }
+        .control-group input {
+            padding: 5px 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .control-group button {
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .control-group button:hover {
+            background: #2980b9;
+        }
+        .control-group button.delete {
+            background: #e74c3c;
+        }
+        .control-group button.delete:hover {
+            background: #c0392b;
+        }
+        #pointList, #lineList {
+            font-size: 13px;
+            color: #555;
+            margin-top: 5px;
+        }
+        .context-menu {
+            position: absolute;
+            background: white;
+            border: 2px solid #2c3e50;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+            min-width: 180px;
+            display: none;
+        }
+        .context-menu.active {
+            display: block;
+        }
+        .context-menu-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #ecf0f1;
+            transition: background 0.2s;
+            font-size: 14px;
+        }
+        .context-menu-item:last-child {
+            border-bottom: none;
+        }
+        .context-menu-item:hover {
+            background: #3498db;
+            color: white;
+        }
+        .context-menu-item.danger:hover {
+            background: #e74c3c;
+            color: white;
+        }
+        .context-menu-item.disabled {
+            color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        .context-menu-item.disabled:hover {
+            background: white;
+            color: #bdc3c7;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            min-width: 300px;
+        }
+        .modal-content h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .modal-buttons button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .modal-buttons .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        .modal-buttons .btn-primary:hover {
+            background: #2980b9;
+        }
+        .modal-buttons .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        .modal-buttons .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        .toolbar {
+            margin-top: 15px;
+            padding: 15px;
+            background: #34495e;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .toolbar button {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .toolbar button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .toolbar .btn-line {
+            background: #3498db;
+            color: white;
+        }
+        .toolbar .btn-line:hover {
+            background: #2980b9;
+        }
+        .toolbar .btn-point {
+            background: #e74c3c;
+            color: white;
+        }
+        .toolbar .btn-point:hover {
+            background: #c0392b;
+        }
+        .toolbar .btn-text {
+            background: #9b59b6;
+            color: white;
+        }
+        .toolbar .btn-text:hover {
+            background: #8e44ad;
+        }
+        .toolbar .btn-edit {
+            background: #f39c12;
+            color: white;
+        }
+        .toolbar .btn-edit:hover {
+            background: #e67e22;
+        }
+        .toolbar .btn-delete {
+            background: #e74c3c;
+            color: white;
+        }
+        .toolbar .btn-delete:hover {
+            background: #c0392b;
+        }
+        .toolbar button.active {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>🔵 幾何学図形の自動生成デモ</h1>
+    
+    <div class="container">
+        <!-- SVG版 -->
+        <div class="demo-section">
+            <h2>方法1: SVG直接描画</h2>
+            <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+                <!-- 半円 -->
+                <path d="M 50 200 A 150 150 0 0 1 350 200" 
+                      stroke="black" fill="none" stroke-width="2"/>
+                
+                <!-- 底辺 AB -->
+                <line x1="50" y1="200" x2="350" y2="200" 
+                      stroke="black" stroke-width="2"/>
+                
+                <!-- 弦 AC -->
+                <line x1="50" y1="200" x2="280" y2="80" 
+                      stroke="black" stroke-width="1.5"/>
+                
+                <!-- 弦 CD -->
+                <line x1="280" y1="80" x2="320" y2="120" 
+                      stroke="black" stroke-width="1.5"/>
+                
+                <!-- 弦 CE -->
+                <line x1="280" y1="80" x2="150" y2="130" 
+                      stroke="black" stroke-width="1.5"/>
+                
+                <!-- 弦 EF -->
+                <line x1="150" y1="130" x2="200" y2="150" 
+                      stroke="black" stroke-width="1.5"/>
+                
+                <!-- 弦 FD -->
+                <line x1="200" y1="150" x2="320" y2="120" 
+                      stroke="black" stroke-width="1.5"/>
+                
+                <!-- 弦 DB -->
+                <line x1="320" y1="120" x2="350" y2="200" 
+                      stroke="black" stroke-width="1.5"/>
+                
+                <!-- ラベル -->
+                <text x="35" y="215" font-size="16" font-family="serif" font-weight="bold">A</text>
+                <text x="360" y="215" font-size="16" font-family="serif" font-weight="bold">B</text>
+                <text x="285" y="70" font-size="16" font-family="serif" font-weight="bold">C</text>
+                <text x="330" y="110" font-size="16" font-family="serif" font-weight="bold">D</text>
+                <text x="135" y="125" font-size="16" font-family="serif" font-weight="bold">E</text>
+                <text x="175" y="145" font-size="16" font-family="serif" font-weight="bold">F</text>
+                <text x="245" y="145" font-size="16" font-family="serif" font-weight="bold">X</text>
+                <text x="195" y="220" font-size="16" font-family="serif" font-weight="bold">O</text>
+                
+                <!-- 点の表示 -->
+                <circle cx="50" cy="200" r="3" fill="black"/>
+                <circle cx="350" cy="200" r="3" fill="black"/>
+                <circle cx="280" cy="80" r="3" fill="black"/>
+                <circle cx="320" cy="120" r="3" fill="black"/>
+                <circle cx="150" cy="130" r="3" fill="black"/>
+                <circle cx="200" cy="150" r="3" fill="black"/>
+                <circle cx="200" cy="200" r="3" fill="black"/>
+                <circle cx="240" cy="150" r="3" fill="black"/>
+            </svg>
+            <div class="description">
+                <strong>特徴:</strong> ベクター形式で拡大しても綺麗。軽量でWebに最適。
+            </div>
+        </div>
+
+        <!-- Canvas版 -->
+        <div class="demo-section">
+            <h2>方法2: Canvas動的描画</h2>
+            <canvas id="geometryCanvas" width="400" height="250"></canvas>
+            <div class="description">
+                <strong>特徴:</strong> JavaScriptで動的に生成。アニメーションやインタラクティブ機能を追加可能。
+            </div>
+        </div>
+
+        <!-- インタラクティブ版 -->
+        <div class="demo-section">
+            <h2>方法3: フル編集可能版</h2>
+            <svg id="interactiveSvg" width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+                <!-- JavaScriptで生成 -->
+            </svg>
+            
+            <!-- ツールバー -->
+            <div class="toolbar">
+                <!-- 第1行: 線操作 -->
+                <button class="btn-line" onclick="toggleDrawLineMode()" id="drawLineBtn">
+                    📏 線を描画
+                </button>
+                <button class="btn-edit" onclick="openEditLineDialog()" id="editLineBtn">
+                    ✏️ 線を編集
+                </button>
+                <button class="btn-delete" onclick="toggleDeleteLineMode()" id="deleteLineBtn">
+                    🗑️ 線を削除
+                </button>
+                
+                <!-- 第2行: 点操作 -->
+                <button class="btn-point" onclick="toggleAddPointMode()" id="addPointBtn">
+                    ➕ 点を作成
+                </button>
+                <button class="btn-point" onclick="toggleMovePointMode()" id="movePointBtn">
+                    ↔️ 点を移動
+                </button>
+                <button class="btn-delete" onclick="toggleDeletePointMode()" id="deletePointBtn">
+                    🗑️ 点を削除
+                </button>
+                
+                <!-- 第3行: 文字操作 -->
+                <button class="btn-text" onclick="toggleAddTextMode()" id="addTextBtn">
+                    📝 文字を作成
+                </button>
+                <button class="btn-edit" onclick="openEditTextDialog()" id="editTextBtn">
+                    ✏️ 文字を編集
+                </button>
+                <button class="btn-delete" onclick="toggleDeleteTextMode()" id="deleteTextBtn">
+                    🗑️ 文字を削除
+                </button>
+            </div>
+            
+            <div class="description">
+                <strong>操作:</strong> 🖱️左クリック＆ドラッグで移動 | 🖱️右クリックでメニュー | 🖱️SVG上で右クリックして新規作成
+            </div>
+            
+            <!-- コンテキストメニュー -->
+            <div id="contextMenu" class="context-menu">
+                <div class="context-menu-item" onclick="contextMenuAction('rename')">✏️ 名前を変更</div>
+                <div class="context-menu-item" onclick="contextMenuAction('addLine')">📏 この点から線を引く</div>
+                <div class="context-menu-item danger" onclick="contextMenuAction('delete')">🗑️ この点を削除</div>
+            </div>
+            
+            <!-- SVG用コンテキストメニュー -->
+            <div id="svgContextMenu" class="context-menu">
+                <div class="context-menu-item" onclick="svgContextMenuAction('addPoint')">➕ ここに点を追加</div>
+            </div>
+            
+            <!-- モーダル: 名前変更 -->
+            <div id="renameModal" class="modal">
+                <div class="modal-content">
+                    <h3>点の名前を変更</h3>
+                    <label>新しい名前:</label>
+                    <input type="text" id="renameInput" maxlength="2" placeholder="例: P">
+                    <div class="modal-buttons">
+                        <button class="btn-primary" onclick="confirmRename()">変更</button>
+                        <button class="btn-secondary" onclick="closeModal('renameModal')">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- モーダル: 新規点作成 -->
+            <div id="addPointModal" class="modal">
+                <div class="modal-content">
+                    <h3>新しい点を追加</h3>
+                    <label>点の名前:</label>
+                    <input type="text" id="addPointInput" maxlength="2" placeholder="例: P">
+                    <div class="modal-buttons">
+                        <button class="btn-primary" onclick="confirmAddPoint()">追加</button>
+                        <button class="btn-secondary" onclick="closeModal('addPointModal')">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- モーダル: 線を引く -->
+            <div id="addLineModal" class="modal">
+                <div class="modal-content">
+                    <h3>線を引く</h3>
+                    <label>終点の名前:</label>
+                    <input type="text" id="addLineInput" maxlength="2" placeholder="例: C">
+                    <div class="modal-buttons">
+                        <button class="btn-primary" onclick="confirmAddLineFromContext()">追加</button>
+                        <button class="btn-secondary" onclick="closeModal('addLineModal')">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- モーダル: 線を編集 -->
+            <div id="editLineModal" class="modal">
+                <div class="modal-content">
+                    <h3>線を編集</h3>
+                    <div id="lineEditList"></div>
+                    <div class="modal-buttons">
+                        <button class="btn-secondary" onclick="closeModal('editLineModal')">閉じる</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- モーダル: テキストを追加 -->
+            <div id="addTextModal" class="modal">
+                <div class="modal-content">
+                    <h3>文字を追加</h3>
+                    <label>表示する文字:</label>
+                    <input type="text" id="addTextContent" placeholder="例: ∠ABC = 60°">
+                    <label>文字サイズ:</label>
+                    <input type="number" id="addTextSize" value="14" min="8" max="32">
+                    <div class="modal-buttons">
+                        <button class="btn-primary" onclick="confirmAddText()">追加</button>
+                        <button class="btn-secondary" onclick="closeModal('addTextModal')">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- モーダル: テキストを編集 -->
+            <div id="editTextModal" class="modal">
+                <div class="modal-content">
+                    <h3>文字を編集</h3>
+                    <div id="textEditList"></div>
+                    <div class="modal-buttons">
+                        <button class="btn-secondary" onclick="closeModal('editTextModal')">閉じる</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <h3>📍 点を追加</h3>
+                <div class="control-group">
+                    <label>ラベル:</label>
+                    <input type="text" id="newPointLabel" placeholder="例: P" maxlength="2">
+                    <label>X:</label>
+                    <input type="number" id="newPointX" placeholder="100" min="10" max="390" value="200">
+                    <label>Y:</label>
+                    <input type="number" id="newPointY" placeholder="100" min="10" max="240" value="100">
+                    <button onclick="addPoint()">点を追加</button>
+                </div>
+                <div id="pointList"></div>
+                
+                <h3>📏 線を追加</h3>
+                <div class="control-group">
+                    <label>始点:</label>
+                    <input type="text" id="lineStart" placeholder="例: A" maxlength="2">
+                    <label>終点:</label>
+                    <input type="text" id="lineEnd" placeholder="例: C" maxlength="2">
+                    <button onclick="addLine()">線を追加</button>
+                </div>
+                <div id="lineList"></div>
+                
+                <h3>✏️ ラベルを変更</h3>
+                <div class="control-group">
+                    <label>元のラベル:</label>
+                    <input type="text" id="oldLabel" placeholder="例: X" maxlength="2">
+                    <label>新ラベル:</label>
+                    <input type="text" id="newLabel" placeholder="例: Y" maxlength="2">
+                    <button onclick="renamePoint()">変更</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Canvas版の描画
+        class GeometryRenderer {
+            constructor(canvasId) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+            }
+            
+            drawSemicircle(center, radius, start, end) {
+                this.ctx.beginPath();
+                this.ctx.arc(center.x, center.y, radius, Math.PI, 0, false);
+                this.ctx.lineWidth = 2;
+                this.ctx.stroke();
+                
+                // 直径
+                this.ctx.beginPath();
+                this.ctx.moveTo(start.x, start.y);
+                this.ctx.lineTo(end.x, end.y);
+                this.ctx.lineWidth = 2;
+                this.ctx.stroke();
+            }
+            
+            drawLine(p1, p2, width = 1.5) {
+                this.ctx.beginPath();
+                this.ctx.moveTo(p1.x, p1.y);
+                this.ctx.lineTo(p2.x, p2.y);
+                this.ctx.lineWidth = width;
+                this.ctx.stroke();
+            }
+            
+            drawLabel(point, text, offset = {x: -10, y: -10}) {
+                this.ctx.font = 'bold 16px serif';
+                this.ctx.fillStyle = 'black';
+                this.ctx.fillText(text, point.x + offset.x, point.y + offset.y);
+            }
+            
+            drawPoint(point, radius = 3) {
+                this.ctx.beginPath();
+                this.ctx.arc(point.x, point.y, radius, 0, Math.PI * 2);
+                this.ctx.fillStyle = 'black';
+                this.ctx.fill();
+            }
+            
+            render() {
+                const A = { x: 50, y: 200 };
+                const B = { x: 350, y: 200 };
+                const O = { x: 200, y: 200 };
+                const C = { x: 280, y: 80 };
+                const D = { x: 320, y: 120 };
+                const E = { x: 150, y: 130 };
+                const F = { x: 200, y: 150 };
+                const X = { x: 240, y: 150 };
+                
+                // 半円を描画
+                this.drawSemicircle(O, 150, A, B);
+                
+                // 弦を描画
+                this.drawLine(A, C);
+                this.drawLine(C, D);
+                this.drawLine(C, E);
+                this.drawLine(E, F);
+                this.drawLine(F, D);
+                this.drawLine(D, B);
+                
+                // 点を描画
+                [A, B, C, D, E, F, O, X].forEach(p => this.drawPoint(p));
+                
+                // ラベルを描画
+                this.drawLabel(A, 'A', {x: -15, y: 5});
+                this.drawLabel(B, 'B', {x: 10, y: 5});
+                this.drawLabel(C, 'C', {x: 5, y: -10});
+                this.drawLabel(D, 'D', {x: 10, y: -10});
+                this.drawLabel(E, 'E', {x: -15, y: -5});
+                this.drawLabel(F, 'F', {x: -25, y: -5});
+                this.drawLabel(O, 'O', {x: -5, y: 20});
+                this.drawLabel(X, 'X', {x: 5, y: -5});
+            }
+        }
+        
+        // Canvas版を描画
+        const renderer = new GeometryRenderer('geometryCanvas');
+        renderer.render();
+
+        // インタラクティブ版
+        const svg = document.getElementById('interactiveSvg');
+        const points = {
+            A: { x: 50, y: 200, fixed: true },  // 固定点
+            B: { x: 350, y: 200, fixed: true }, // 固定点
+            C: { x: 280, y: 80 },
+            D: { x: 320, y: 120 },
+            E: { x: 150, y: 130 },
+            F: { x: 200, y: 150 },
+            O: { x: 200, y: 200, fixed: true }, // 固定点
+            X: { x: 240, y: 150 }
+        };
+
+        let customLines = [
+            ['A', 'C'],
+            ['C', 'D'],
+            ['C', 'E'],
+            ['E', 'F'],
+            ['F', 'D'],
+            ['D', 'B']
+        ];
+
+        let draggedPoint = null;
+        let contextMenuTarget = null;
+        let contextMenuPosition = { x: 0, y: 0 };
+        let drawLineMode = false;
+        let drawLineStart = null;
+        let deleteLineMode = false;
+        let addPointMode = false;
+        let movePointMode = true; // デフォルトで有効
+        let deletePointMode = false;
+        let addTextMode = false;
+        let deleteTextMode = false;
+        let customTexts = []; // { content: string, x: number, y: number, size: number }
+        
+        // 半円の定義
+        const semicircle = {
+            center: { x: 200, y: 200 },
+            radius: 150
+        };
+        
+        // 点を半円上にスナップする関数
+        function snapToSemicircle(x, y, threshold = 15) {
+            const dx = x - semicircle.center.x;
+            const dy = y - semicircle.center.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            // 半円の円弧上かチェック（上半分のみ、y <= center.y）
+            if (Math.abs(distance - semicircle.radius) < threshold && y <= semicircle.center.y) {
+                // 円弧上にスナップ
+                const angle = Math.atan2(dy, dx);
+                return {
+                    x: semicircle.center.x + semicircle.radius * Math.cos(angle),
+                    y: semicircle.center.y + semicircle.radius * Math.sin(angle),
+                    snapped: true
+                };
+            }
+            
+            return { x, y, snapped: false };
+        }
+
+        function renderInteractive() {
+            svg.innerHTML = '';
+            
+            // 半円（固定）
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', `M 50 200 A 150 150 0 0 1 350 200`);
+            path.setAttribute('stroke', '#34495e');
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke-width', '2');
+            svg.appendChild(path);
+            
+            // 底辺（固定）
+            const base = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            base.setAttribute('x1', '50');
+            base.setAttribute('y1', '200');
+            base.setAttribute('x2', '350');
+            base.setAttribute('y2', '200');
+            base.setAttribute('stroke', '#34495e');
+            base.setAttribute('stroke-width', '2');
+            svg.appendChild(base);
+            
+            // カスタム線分（動的）
+            customLines.forEach(([label1, label2]) => {
+                const p1 = points[label1];
+                const p2 = points[label2];
+                if (p1 && p2) {
+                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    line.setAttribute('x1', p1.x);
+                    line.setAttribute('y1', p1.y);
+                    line.setAttribute('x2', p2.x);
+                    line.setAttribute('y2', p2.y);
+                    line.setAttribute('stroke', '#3498db');
+                    line.setAttribute('stroke-width', deleteLineMode ? '4' : '2');
+                    line.setAttribute('opacity', '0.7');
+                    line.style.cursor = deleteLineMode ? 'pointer' : 'default';
+                    
+                    if (deleteLineMode) {
+                        line.addEventListener('click', () => {
+                            const index = customLines.findIndex(([s, e]) => 
+                                (s === label1 && e === label2) || (s === label2 && e === label1)
+                            );
+                            if (index !== -1) {
+                                customLines.splice(index, 1);
+                                renderInteractive();
+                            }
+                        });
+                    }
+                    
+                    svg.appendChild(line);
+                }
+            });
+            
+            // 点とラベル
+            Object.entries(points).forEach(([label, point]) => {
+                // 点
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', point.x);
+                circle.setAttribute('cy', point.y);
+                circle.setAttribute('r', '6');
+                circle.setAttribute('fill', point.fixed ? '#95a5a6' : '#e74c3c');
+                circle.setAttribute('stroke', '#2c3e50');
+                circle.setAttribute('stroke-width', '2');
+                circle.setAttribute('cursor', point.fixed ? 'default' : 'move');
+                circle.style.transition = 'r 0.2s';
+                
+                if (!point.fixed) {
+                    circle.addEventListener('mouseenter', () => {
+                        circle.setAttribute('r', '10');
+                    });
+                    circle.addEventListener('mouseleave', () => {
+                        if (draggedPoint !== label) {
+                            circle.setAttribute('r', '6');
+                        }
+                    });
+                    
+                    // クリックイベント
+                    circle.addEventListener('mousedown', (e) => {
+                        if (e.button === 0) { // 左クリック
+                            if (drawLineMode) {
+                                // 線描画モード
+                                if (!drawLineStart) {
+                                    drawLineStart = label;
+                                    circle.setAttribute('r', '10');
+                                    circle.setAttribute('fill', '#f39c12');
+                                } else {
+                                    // 2点目をクリック
+                                    if (drawLineStart !== label) {
+                                        const exists = customLines.some(([s, e]) => 
+                                            (s === drawLineStart && e === label) || 
+                                            (s === label && e === drawLineStart)
+                                        );
+                                        if (!exists) {
+                                            customLines.push([drawLineStart, label]);
+                                        }
+                                    }
+                                    drawLineStart = null;
+                                    renderInteractive();
+                                }
+                            } else if (deletePointMode) {
+                                // 点削除モード
+                                deletePoint(label);
+                            } else if (movePointMode && !deleteLineMode && !addTextMode && !deleteTextMode) {
+                                // 通常のドラッグモード
+                                draggedPoint = label;
+                                circle.setAttribute('r', '10');
+                            }
+                        }
+                    });
+                    
+                    // 右クリックメニュー
+                    circle.addEventListener('contextmenu', (e) => {
+                        e.preventDefault();
+                        showContextMenu(e.pageX, e.pageY, label);
+                    });
+                }
+                
+                svg.appendChild(circle);
+                
+                // ラベル
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', point.x + 12);
+                text.setAttribute('y', point.y - 12);
+                text.setAttribute('font-size', '18');
+                text.setAttribute('font-weight', 'bold');
+                text.setAttribute('fill', '#2c3e50');
+                text.setAttribute('pointer-events', 'none');
+                text.textContent = label;
+                svg.appendChild(text);
+            });
+            
+            // カスタムテキストを描画
+            customTexts.forEach((textObj, index) => {
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', textObj.x);
+                text.setAttribute('y', textObj.y);
+                text.setAttribute('font-size', textObj.size);
+                text.setAttribute('fill', '#8e44ad');
+                text.setAttribute('font-weight', 'bold');
+                text.textContent = textObj.content;
+                text.style.cursor = deleteTextMode ? 'pointer' : 'default';
+                
+                if (deleteTextMode) {
+                    text.addEventListener('click', () => {
+                        customTexts.splice(index, 1);
+                        renderInteractive();
+                    });
+                }
+                
+                svg.appendChild(text);
+            });
+            
+            updatePointList();
+            updateLineList();
+        }
+        
+        // SVG全体でのマウス移動イベント
+        svg.addEventListener('mousemove', (e) => {
+            if (draggedPoint && !points[draggedPoint].fixed) {
+                const rect = svg.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+                
+                // 半円にスナップ
+                const snapped = snapToSemicircle(x, y);
+                x = snapped.x;
+                y = snapped.y;
+                
+                // 境界チェック
+                if (x >= 10 && x <= 390 && y >= 10 && y <= 240) {
+                    points[draggedPoint].x = x;
+                    points[draggedPoint].y = y;
+                    renderInteractive();
+                }
+            }
+        });
+        
+        // マウスボタンを離したらドラッグ終了
+        svg.addEventListener('mouseup', () => {
+            if (draggedPoint) {
+                draggedPoint = null;
+                renderInteractive();
+            }
+        });
+        
+        svg.addEventListener('mouseleave', () => {
+            if (draggedPoint) {
+                draggedPoint = null;
+                renderInteractive();
+            }
+        });
+        
+        // SVG上での右クリック（新規点作成）
+        svg.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            const rect = svg.getBoundingClientRect();
+            contextMenuPosition.x = e.clientX - rect.left;
+            contextMenuPosition.y = e.clientY - rect.top;
+            
+            // 点上でのクリックでなければSVGメニューを表示
+            if (!e.target.classList.contains('point')) {
+                showSvgContextMenu(e.pageX, e.pageY);
+            }
+        });
+        
+        // SVG上でのクリック（テキスト追加モード）
+        svg.addEventListener('click', (e) => {
+            if (addTextMode && e.target === svg) {
+                const rect = svg.getBoundingClientRect();
+                contextMenuPosition.x = e.clientX - rect.left;
+                contextMenuPosition.y = e.clientY - rect.top;
+                document.getElementById('addTextContent').value = '';
+                document.getElementById('addTextModal').classList.add('active');
+                document.getElementById('addTextContent').focus();
+            } else if (addPointMode && e.target === svg) {
+                const rect = svg.getBoundingClientRect();
+                contextMenuPosition.x = e.clientX - rect.left;
+                contextMenuPosition.y = e.clientY - rect.top;
+                document.getElementById('addPointInput').value = '';
+                document.getElementById('addPointModal').classList.add('active');
+                document.getElementById('addPointInput').focus();
+            }
+        });
+        
+        // コンテキストメニューを表示
+        function showContextMenu(x, y, label) {
+            hideAllMenus();
+            contextMenuTarget = label;
+            const menu = document.getElementById('contextMenu');
+            menu.style.left = x + 'px';
+            menu.style.top = y + 'px';
+            menu.classList.add('active');
+        }
+        
+        // SVGコンテキストメニューを表示
+        function showSvgContextMenu(x, y) {
+            hideAllMenus();
+            const menu = document.getElementById('svgContextMenu');
+            menu.style.left = x + 'px';
+            menu.style.top = y + 'px';
+            menu.classList.add('active');
+        }
+        
+        // すべてのメニューを非表示
+        function hideAllMenus() {
+            document.querySelectorAll('.context-menu').forEach(menu => {
+                menu.classList.remove('active');
+            });
+        }
+        
+        // コンテキストメニューアクション
+        function contextMenuAction(action) {
+            hideAllMenus();
+            
+            if (!contextMenuTarget) return;
+            
+            switch(action) {
+                case 'rename':
+                    document.getElementById('renameInput').value = '';
+                    document.getElementById('renameModal').classList.add('active');
+                    document.getElementById('renameInput').focus();
+                    break;
+                case 'delete':
+                    deletePoint(contextMenuTarget);
+                    contextMenuTarget = null;
+                    break;
+                case 'addLine':
+                    document.getElementById('addLineInput').value = '';
+                    document.getElementById('addLineModal').classList.add('active');
+                    document.getElementById('addLineInput').focus();
+                    break;
+            }
+        }
+        
+        // SVGコンテキストメニューアクション
+        function svgContextMenuAction(action) {
+            hideAllMenus();
+            
+            if (action === 'addPoint') {
+                document.getElementById('addPointInput').value = '';
+                document.getElementById('addPointModal').classList.add('active');
+                document.getElementById('addPointInput').focus();
+            }
+        }
+        
+        // モーダルを閉じる
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+        
+        // 名前変更を確定
+        function confirmRename() {
+            const newLabel = document.getElementById('renameInput').value.trim().toUpperCase();
+            
+            if (!newLabel) {
+                alert('名前を入力してください');
+                return;
+            }
+            if (points[newLabel]) {
+                alert(`点 ${newLabel} は既に存在します`);
+                return;
+            }
+            
+            // 点の名前を変更
+            points[newLabel] = points[contextMenuTarget];
+            delete points[contextMenuTarget];
+            
+            // 線分のラベルも更新
+            customLines = customLines.map(([s, e]) => [
+                s === contextMenuTarget ? newLabel : s,
+                e === contextMenuTarget ? newLabel : e
+            ]);
+            
+            contextMenuTarget = null;
+            closeModal('renameModal');
+            renderInteractive();
+        }
+        
+        // 新規点追加を確定
+        function confirmAddPoint() {
+            const label = document.getElementById('addPointInput').value.trim().toUpperCase();
+            
+            if (!label) {
+                alert('名前を入力してください');
+                return;
+            }
+            if (points[label]) {
+                alert(`点 ${label} は既に存在します`);
+                return;
+            }
+            
+            // 半円にスナップ
+            const snapped = snapToSemicircle(contextMenuPosition.x, contextMenuPosition.y);
+            
+            points[label] = { 
+                x: snapped.x, 
+                y: snapped.y, 
+                fixed: false 
+            };
+            
+            closeModal('addPointModal');
+            renderInteractive();
+        }
+        
+        // 線を追加（コンテキストメニューから）
+        function confirmAddLineFromContext() {
+            const endLabel = document.getElementById('addLineInput').value.trim().toUpperCase();
+            
+            if (!endLabel) {
+                alert('終点の名前を入力してください');
+                return;
+            }
+            if (!points[endLabel]) {
+                alert(`点 ${endLabel} が存在しません`);
+                return;
+            }
+            
+            // 既に存在するかチェック
+            const exists = customLines.some(([s, e]) => 
+                (s === contextMenuTarget && e === endLabel) || 
+                (s === endLabel && e === contextMenuTarget)
+            );
+            
+            if (exists) {
+                alert('この線は既に存在します');
+                return;
+            }
+            
+            customLines.push([contextMenuTarget, endLabel]);
+            contextMenuTarget = null;
+            closeModal('addLineModal');
+            renderInteractive();
+        }
+        
+        // ページ全体でクリックしたらメニューを閉じる
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.context-menu')) {
+                hideAllMenus();
+            }
+        });
+        
+        // モーダル外クリックで閉じる
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+        
+        // Enterキーでモーダル確定
+        document.getElementById('renameInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') confirmRename();
+        });
+        document.getElementById('addPointInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') confirmAddPoint();
+        });
+        document.getElementById('addLineInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') confirmAddLineFromContext();
+        });
+        
+        // 点を追加
+        function addPoint() {
+            const label = document.getElementById('newPointLabel').value.trim().toUpperCase();
+            const x = parseInt(document.getElementById('newPointX').value);
+            const y = parseInt(document.getElementById('newPointY').value);
+            
+            if (!label) {
+                alert('ラベルを入力してください');
+                return;
+            }
+            if (points[label]) {
+                alert(`点 ${label} は既に存在します`);
+                return;
+            }
+            if (isNaN(x) || isNaN(y)) {
+                alert('X, Y座標を正しく入力してください');
+                return;
+            }
+            
+            points[label] = { x, y, fixed: false };
+            document.getElementById('newPointLabel').value = '';
+            renderInteractive();
+        }
+        
+        // 線を追加
+        function addLine() {
+            const start = document.getElementById('lineStart').value.trim().toUpperCase();
+            const end = document.getElementById('lineEnd').value.trim().toUpperCase();
+            
+            if (!start || !end) {
+                alert('始点と終点を入力してください');
+                return;
+            }
+            if (!points[start]) {
+                alert(`点 ${start} が存在しません`);
+                return;
+            }
+            if (!points[end]) {
+                alert(`点 ${end} が存在しません`);
+                return;
+            }
+            
+            // 既に存在するかチェック
+            const exists = customLines.some(([s, e]) => 
+                (s === start && e === end) || (s === end && e === start)
+            );
+            
+            if (exists) {
+                alert('この線は既に存在します');
+                return;
+            }
+            
+            customLines.push([start, end]);
+            document.getElementById('lineStart').value = '';
+            document.getElementById('lineEnd').value = '';
+            renderInteractive();
+        }
+        
+        // ラベルを変更
+        function renamePoint() {
+            const oldLabel = document.getElementById('oldLabel').value.trim().toUpperCase();
+            const newLabel = document.getElementById('newLabel').value.trim().toUpperCase();
+            
+            if (!oldLabel || !newLabel) {
+                alert('両方のラベルを入力してください');
+                return;
+            }
+            if (!points[oldLabel]) {
+                alert(`点 ${oldLabel} が存在しません`);
+                return;
+            }
+            if (points[newLabel]) {
+                alert(`点 ${newLabel} は既に存在します`);
+                return;
+            }
+            if (points[oldLabel].fixed) {
+                alert('固定点のラベルは変更できません');
+                return;
+            }
+            
+            // 点の名前を変更
+            points[newLabel] = points[oldLabel];
+            delete points[oldLabel];
+            
+            // 線分のラベルも更新
+            customLines = customLines.map(([s, e]) => [
+                s === oldLabel ? newLabel : s,
+                e === oldLabel ? newLabel : e
+            ]);
+            
+            document.getElementById('oldLabel').value = '';
+            document.getElementById('newLabel').value = '';
+            renderInteractive();
+        }
+        
+        // 点を削除
+        function deletePoint(label) {
+            if (points[label].fixed) {
+                alert('固定点は削除できません');
+                return;
+            }
+            
+            // この点を使用している線を削除
+            customLines = customLines.filter(([s, e]) => s !== label && e !== label);
+            
+            delete points[label];
+            renderInteractive();
+        }
+        
+        // 線を削除
+        function deleteLine(index) {
+            customLines.splice(index, 1);
+            renderInteractive();
+        }
+        
+        // 点リストを更新
+        function updatePointList() {
+            const list = document.getElementById('pointList');
+            const movablePoints = Object.entries(points).filter(([_, p]) => !p.fixed);
+            
+            if (movablePoints.length === 0) {
+                list.innerHTML = '<small>追加した点はありません</small>';
+                return;
+            }
+            
+            list.innerHTML = '<strong>追加した点:</strong> ' + 
+                movablePoints.map(([label, p]) => 
+                    `${label}(${Math.round(p.x)}, ${Math.round(p.y)}) 
+                    <button class="delete" style="padding: 2px 8px; font-size: 11px; margin-left: 5px;" 
+                            onclick="deletePoint('${label}')">削除</button>`
+                ).join(' | ');
+        }
+        
+        // 線リストを更新
+        function updateLineList() {
+            const list = document.getElementById('lineList');
+            
+            if (customLines.length === 0) {
+                list.innerHTML = '<small>線がありません</small>';
+                return;
+            }
+            
+            list.innerHTML = '<strong>線:</strong> ' + 
+                customLines.map(([s, e], i) => 
+                    `${s}-${e} 
+                    <button class="delete" style="padding: 2px 8px; font-size: 11px; margin-left: 5px;" 
+                            onclick="deleteLine(${i})">削除</button>`
+                ).join(' | ');
+        }
+        
+        // ツールバー機能
+        function toggleDrawLineMode() {
+            drawLineMode = !drawLineMode;
+            drawLineStart = null;
+            deleteLineMode = false;
+            addPointMode = false;
+            movePointMode = false;
+            deletePointMode = false;
+            addTextMode = false;
+            deleteTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function toggleDeleteLineMode() {
+            deleteLineMode = !deleteLineMode;
+            drawLineMode = false;
+            drawLineStart = null;
+            addPointMode = false;
+            movePointMode = false;
+            deletePointMode = false;
+            addTextMode = false;
+            deleteTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function toggleAddPointMode() {
+            addPointMode = !addPointMode;
+            drawLineMode = false;
+            drawLineStart = null;
+            deleteLineMode = false;
+            movePointMode = false;
+            deletePointMode = false;
+            addTextMode = false;
+            deleteTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function toggleMovePointMode() {
+            movePointMode = !movePointMode;
+            drawLineMode = false;
+            drawLineStart = null;
+            deleteLineMode = false;
+            addPointMode = false;
+            deletePointMode = false;
+            addTextMode = false;
+            deleteTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function toggleDeletePointMode() {
+            deletePointMode = !deletePointMode;
+            drawLineMode = false;
+            drawLineStart = null;
+            deleteLineMode = false;
+            addPointMode = false;
+            movePointMode = false;
+            addTextMode = false;
+            deleteTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function toggleAddTextMode() {
+            addTextMode = !addTextMode;
+            drawLineMode = false;
+            drawLineStart = null;
+            deleteLineMode = false;
+            addPointMode = false;
+            movePointMode = false;
+            deletePointMode = false;
+            deleteTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function toggleDeleteTextMode() {
+            deleteTextMode = !deleteTextMode;
+            drawLineMode = false;
+            drawLineStart = null;
+            deleteLineMode = false;
+            addPointMode = false;
+            movePointMode = false;
+            deletePointMode = false;
+            addTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function updateToolbarButtons() {
+            document.getElementById('drawLineBtn').classList.toggle('active', drawLineMode);
+            document.getElementById('deleteLineBtn').classList.toggle('active', deleteLineMode);
+            document.getElementById('addPointBtn').classList.toggle('active', addPointMode);
+            document.getElementById('movePointBtn').classList.toggle('active', movePointMode);
+            document.getElementById('deletePointBtn').classList.toggle('active', deletePointMode);
+            document.getElementById('addTextBtn').classList.toggle('active', addTextMode);
+            document.getElementById('deleteTextBtn').classList.toggle('active', deleteTextMode);
+        }
+        
+        function openEditLineDialog() {
+            const list = document.getElementById('lineEditList');
+            if (customLines.length === 0) {
+                list.innerHTML = '<p>線がありません</p>';
+            } else {
+                list.innerHTML = customLines.map(([s, e], i) => `
+                    <div style="padding: 8px; margin: 5px 0; background: #f8f9fa; border-radius: 4px; display: flex; justify-content: space-between; align-items: center;">
+                        <span><strong>${s} - ${e}</strong></span>
+                        <button class="btn-delete" style="padding: 5px 12px;" onclick="deleteLine(${i}); closeModal('editLineModal');">削除</button>
+                    </div>
+                `).join('');
+            }
+            document.getElementById('editLineModal').classList.add('active');
+        }
+        
+        function openEditTextDialog() {
+            const list = document.getElementById('textEditList');
+            if (customTexts.length === 0) {
+                list.innerHTML = '<p>文字がありません</p>';
+            } else {
+                list.innerHTML = customTexts.map((text, i) => `
+                    <div style="padding: 8px; margin: 5px 0; background: #f8f9fa; border-radius: 4px; display: flex; justify-content: space-between; align-items: center;">
+                        <span><strong>"${text.content}"</strong> (${text.size}px)</span>
+                        <button class="btn-delete" style="padding: 5px 12px;" onclick="deleteText(${i}); closeModal('editTextModal');">削除</button>
+                    </div>
+                `).join('');
+            }
+            document.getElementById('editTextModal').classList.add('active');
+        }
+        
+        function confirmAddText() {
+            const content = document.getElementById('addTextContent').value.trim();
+            const size = parseInt(document.getElementById('addTextSize').value);
+            
+            if (!content) {
+                alert('文字を入力してください');
+                return;
+            }
+            
+            customTexts.push({
+                content: content,
+                x: contextMenuPosition.x,
+                y: contextMenuPosition.y,
+                size: size
+            });
+            
+            closeModal('addTextModal');
+            addTextMode = false;
+            updateToolbarButtons();
+            renderInteractive();
+        }
+        
+        function deleteText(index) {
+            customTexts.splice(index, 1);
+            renderInteractive();
+        }
+        
+        // 初期化時に移動モードをアクティブに
+        updateToolbarButtons();
+        renderInteractive();
+    </script>
+</body>
+</html>
