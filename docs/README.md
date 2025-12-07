@@ -2,6 +2,20 @@
 
 ## 📚 目次
 
+## 🗓️ プロジェクト計画・ロードマップ
+
+**プロジェクトの全体像と今後の方向性:**
+
+- [**📋 プラットフォーム開発ロードマップ**](./PLATFORM_ROADMAP.md) - ⭐ 全体アーキテクチャ・Phase 1-5の詳細計画・技術スタック
+- [**📝 Phase 1 タスクリスト**](./PHASE_1_TASKS.md) - ⭐ 基盤構築期の具体的タスク・進捗管理
+
+**既存の計画・ロードマップ:**
+- [データ品質改善計画](./guidelines/DATA_QUALITY_REPORT.md) - データ品質向上のフェーズ別計画
+- [パッセージ作成ロードマップ](./guidelines/passage/PASSAGE_CREATION_GUIDELINES.md) - 長文パッセージの段階的追加計画
+- [文法問題品質パイプライン](./guidelines/grammar/GRAMMAR_QUALITY_PIPELINE.md) - 文法問題の生成・検証フロー
+
+---
+
 ## 🚀 開発効率化ドキュメント（AI作業用）
 
 **開発作業を始める前に必ず確認:**
