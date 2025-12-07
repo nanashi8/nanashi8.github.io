@@ -297,20 +297,41 @@ class DataQualityChecker:
                             'message': '必須フィールド "意味" が欠損しています'
                         })
                     
-                    # 読みフィールドの検証: "IPA1 (カタカナ́1) IPA2 (カタカナ́2) ..." 形式
+                    # 読みフィールドの検証: "IPA (カタカナ́)" 形式
+                    # または フレーズ形式: "IPA1 (カタカナ́1) IPA2 (カタカナ́2)"
                     if reading:
                         # カッコの存在チェック
                         if '(' in reading and ')' in reading:
-                            # 複数のIPAとカタカナのペアを抽出
-                            # 例: "ɡet (ゲット) ʌp (アップ)" → [("ɡet", "ゲット"), ("ʌp", "アップ")]
                             import re
-                            # パターン: "IPA部分 (カタカナ部分)" を繰り返し抽出
-                            pairs = re.findall(r'([^()]+)\s*\(([^)]+)\)', reading)
                             
-                            if pairs:
+                            # まず、フレーズ形式（複数のペア）かチェック
+                            # パターン: カタカナを含む括弧が2つ以上ある
+                            katakana_brackets = re.findall(r'\(([^)]*[ァ-ヴー][^)]*)\)', reading)
+                            
+                            if len(katakana_brackets) >= 2:
+                                # フレーズ形式: 複数のIPA+カタカナペア
+                                # 各ペアを抽出して検証
+                                pairs = re.findall(r'([^\s()]+)\s*\(([^)]+)\)', reading)
+                                
                                 for ipa_part, katakana_part in pairs:
                                     ipa_part = ipa_part.strip()
                                     katakana_part = katakana_part.strip()
+                                    
+                                    # IPA部分の検証（括弧内にIPA記号が含まれる可能性もある）
+                                    if ipa_part:
+                                        self.check_ipa_reading(word, ipa_part, str(file_path), line_num)
+                                    
+                                    # カタカナ部分の検証
+                                    if katakana_part and re.search(r'[ァ-ヴー]', katakana_part):
+                                        self.check_katakana_reading(word, katakana_part, str(file_path), line_num)
+                            else:
+                                # 単語形式: 最後の括弧をカタカナ部分として抽出
+                                # 例: "ˈak(t)ʃj(ʊ)əl (ア́クチュアル)" → IPA: "ˈak(t)ʃj(ʊ)əl", カタカナ: "ア́クチュアル"
+                                match = re.search(r'^(.+)\s*\(([^)]+)\)$', reading)
+                                
+                                if match:
+                                    ipa_part = match.group(1).strip()
+                                    katakana_part = match.group(2).strip()
                                     
                                     # IPA部分の検証
                                     if ipa_part:
@@ -319,16 +340,6 @@ class DataQualityChecker:
                                     # カタカナ部分の検証（アクセント記号付き）
                                     if katakana_part:
                                         self.check_katakana_reading(word, katakana_part, str(file_path), line_num)
-                            else:
-                                self.errors.append({
-                                    'type': 'IPA_MISSING',
-                                    'severity': 'ERROR',
-                                    'file': str(file_path),
-                                    'line': line_num,
-                                    'word': word,
-                                    'reading': reading,
-                                    'message': f'IPA発音のパース失敗: "{reading}"'
-                                })
                         else:
                             # カッコがない場合はIPA欠損エラー
                             self.errors.append({
