@@ -97,12 +97,16 @@ function ScoreBoard({
       masteredRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.masteredPercentage)));
     }
     if (learningRef.current) {
-      learningRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.learningPercentage)));
+      // 暗記タブでは learning + struggling の合算値を設定
+      const learningWidth = mode === 'memorization' 
+        ? Math.round(detailedStatsData.learningPercentage + detailedStatsData.strugglingPercentage)
+        : Math.round(detailedStatsData.learningPercentage);
+      learningRef.current.style.setProperty('--segment-width', String(learningWidth));
     }
     if (strugglingRef.current) {
       strugglingRef.current.style.setProperty('--segment-width', String(Math.round(detailedStatsData.strugglingPercentage)));
     }
-  }, [detailedStatsData, activeTab]); // activeTabも依存に追加してタブ切り替え時に更新
+  }, [detailedStatsData, activeTab, mode]); // modeも依存に追加
 
   // 本日の統計を取得（メモ化 - modeで更新）
   const { todayAccuracy: _todayAccuracy, todayTotalAnswered: _todayTotalAnswered } = useMemo(() => getTodayStats(mode), [mode]);
@@ -245,13 +249,6 @@ function ScoreBoard({
         </div>
       )}
 
-      {/* 補修モードインジケーター */}
-      {isReviewFocusMode && (
-        <div className="review-focus-indicator">
-          🎯 <strong>補修モード</strong> - 要復習問題を繰り返し出題中
-        </div>
-      )}
-      
       {/* 学習プランタブ */}
       {activeTab === 'plan' && (
         <div className="score-board-content">
@@ -267,19 +264,6 @@ function ScoreBoard({
                 <>
                   <span className="stat-text-divider">｜</span>
                   <span className="stat-text-label">{wordPhraseFilter === 'all' ? '単語・熟語' : wordPhraseFilter === 'word' ? '単語のみ' : wordPhraseFilter === 'phrase' ? '熟語のみ' : '単語・熟語'}</span>
-                </>
-              )}
-            </div>
-            <div className="plan-text-line">
-              {(mode === 'translation' || mode === 'spelling') && (
-                <>
-                  <span 
-                    className={`plan-setting-icon ${isReviewFocusMode ? 'active' : ''}`}
-                    onClick={onReviewFocus}
-                    title={isReviewFocusMode ? "復習モード解除" : "復習モード開始"}
-                  >
-                    🔥
-                  </span>
                 </>
               )}
             </div>
@@ -359,6 +343,15 @@ function ScoreBoard({
                       🟢定着 {detailedStats.masteredCount}語 
                       🟡学習中 {detailedStats.learningCount}語 
                       🔴要復習 {detailedStats.strugglingCount}語
+                      {(mode === 'translation' || mode === 'spelling') && onReviewFocus && (
+                        <span 
+                          className={`review-mode-icon ${isReviewFocusMode ? 'active' : ''}`}
+                          onClick={onReviewFocus}
+                          title={isReviewFocusMode ? "復習モード解除" : "復習モード開始"}
+                        >
+                          🔥
+                        </span>
+                      )}
                     </>
                   )}
                 </div>

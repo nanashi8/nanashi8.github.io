@@ -2997,3 +2997,169 @@ export async function getMemorizationCurve(word: string): Promise<import('./type
     return null;
   }
 }
+
+// ============================================
+// カスタム問題セット管理機能
+// ============================================
+
+const CUSTOM_QUESTION_SETS_KEY = 'custom-question-sets';
+
+// カスタム問題セット一覧を取得
+export async function getCustomQuestionSets(): Promise<import('./types').CustomQuestionSet[]> {
+  try {
+    const data = await loadSetting(CUSTOM_QUESTION_SETS_KEY);
+    return data ? (typeof data === 'string' ? JSON.parse(data) : data) : [];
+  } catch (error) {
+    console.error('カスタム問題セット取得エラー:', error);
+    return [];
+  }
+}
+
+// カスタム問題セットを保存
+export async function saveCustomQuestionSet(questionSet: import('./types').CustomQuestionSet): Promise<void> {
+  try {
+    const sets = await getCustomQuestionSets();
+    const existingIndex = sets.findIndex(s => s.id === questionSet.id);
+    
+    if (existingIndex >= 0) {
+      // 既存のセットを更新
+      sets[existingIndex] = {
+        ...questionSet,
+        updatedAt: Date.now(),
+      };
+    } else {
+      // 新規追加
+      sets.push(questionSet);
+    }
+    
+    await saveSetting(CUSTOM_QUESTION_SETS_KEY, sets);
+  } catch (error) {
+    console.error('カスタム問題セット保存エラー:', error);
+    throw error;
+  }
+}
+
+// カスタム問題セットを削除
+export async function deleteCustomQuestionSet(id: string): Promise<void> {
+  try {
+    const sets = await getCustomQuestionSets();
+    const filtered = sets.filter(s => s.id !== id);
+    await saveSetting(CUSTOM_QUESTION_SETS_KEY, filtered);
+  } catch (error) {
+    console.error('カスタム問題セット削除エラー:', error);
+    throw error;
+  }
+}
+
+// 苦手語句から自動的に問題セットを生成
+export async function createWeakWordsQuestionSet(
+  name: string,
+  limit: number = 20,
+  minMistakes: number = 3,
+  maxAccuracy: number = 60,
+  allQuestions: import('./types').Question[]
+): Promise<import('./types').CustomQuestionSet> {
+  // 苦手語句を取得
+  const weakWords = getCurrentWeakWords(100); // 多めに取得
+  
+  // 条件でフィルタリング
+  const filtered = weakWords.filter(w => 
+    w.mistakes >= minMistakes && 
+    w.recentAccuracy <= maxAccuracy
+  ).slice(0, limit);
+  
+  // allQuestionsから詳細情報を取得してQuestion形式に変換
+  const questions: import('./types').Question[] = filtered.map(w => {
+    const questionData = allQuestions.find(q => q.word.toLowerCase() === w.word.toLowerCase());
+    
+    if (questionData) {
+      return questionData;
+    }
+    
+    // allQuestionsに見つからない場合は基本情報のみで作成
+    return {
+      word: w.word,
+      reading: w.reading || '',
+      meaning: w.meaning || '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: 'intermediate',
+    };
+  });
+  
+  const questionSet: import('./types').CustomQuestionSet = {
+    id: `weak-words-${Date.now()}`,
+    name,
+    source: 'weak-words',
+    questions,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+    isAutoUpdate: true,
+    autoUpdateConfig: {
+      limit,
+      minMistakes,
+      maxAccuracy,
+    },
+    metadata: {
+      description: `苦手語句から自動生成（間違い${minMistakes}回以上、正答率${maxAccuracy}%以下）`,
+      totalWords: questions.length,
+    },
+  };
+  
+  return questionSet;
+}
+
+// 長文保存語句から問題セットを生成
+export async function createReadingQuestionSet(
+  name: string,
+  questions: import('./types').Question[]
+): Promise<import('./types').CustomQuestionSet> {
+  const questionSet: import('./types').CustomQuestionSet = {
+    id: `reading-${Date.now()}`,
+    name,
+    source: 'reading',
+    questions,
+    createdAt: Date.now(),
+    updatedAt: Date.now(),
+    isAutoUpdate: false,
+    metadata: {
+      description: '長文読解から保存した語句',
+      totalWords: questions.length,
+    },
+  };
+  
+  return questionSet;
+}
+
+// 自動更新が有効な問題セットを更新
+export async function updateAutoUpdateQuestionSets(allQuestions: import('./types').Question[]): Promise<void> {
+  try {
+    const sets = await getCustomQuestionSets();
+    let updated = false;
+    
+    for (const set of sets) {
+      if (set.isAutoUpdate && set.source === 'weak-words' && set.autoUpdateConfig) {
+        // 苦手語句を再取得して更新
+        const newSet = await createWeakWordsQuestionSet(
+          set.name,
+          set.autoUpdateConfig.limit,
+          set.autoUpdateConfig.minMistakes,
+          set.autoUpdateConfig.maxAccuracy,
+          allQuestions
+        );
+        
+        set.questions = newSet.questions;
+        set.updatedAt = Date.now();
+        set.metadata = newSet.metadata;
+        updated = true;
+      }
+    }
+    
+    if (updated) {
+      await saveSetting(CUSTOM_QUESTION_SETS_KEY, sets);
+    }
+  } catch (error) {
+    console.error('自動更新エラー:', error);
+  }
+}

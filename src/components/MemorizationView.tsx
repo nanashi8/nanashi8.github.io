@@ -157,9 +157,6 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
       total: prev.total + 1,
     }));
     
-    // 回答時刻を更新
-    setLastAnswerTime(Date.now());
-    
     // 16秒以上は放置とみなしてカウントしない
     if (viewDuration < 16) {
       const behavior: MemorizationBehavior = {
@@ -174,6 +171,9 @@ function MemorizationView({ allQuestions }: MemorizationViewProps) {
       await recordMemorizationBehavior(behavior);
       setConsecutiveViews(prev => prev + 1);
     }
+    
+    // データ保存後に回答時刻を更新（ScoreBoard再計算のトリガー）
+    setLastAnswerTime(Date.now());
     
     // 次の語句へ
     const nextIndex = currentIndex + 1;

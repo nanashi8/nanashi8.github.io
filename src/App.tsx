@@ -170,6 +170,18 @@ function App() {
   // 問題集リスト管理（後方互換性のため残す）
   const [questionSets, setQuestionSets] = useState<QuestionSet[]>([]);
   
+  // データ読み込み完了フラグ
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+  
+  // データ読み込み完了後、和訳タブで自動的にクイズ開始
+  const hasAutoStarted = useRef(false);
+  useEffect(() => {
+    if (isDataLoaded && activeTab === 'translation' && !hasAutoStarted.current && quizState.questions.length === 0) {
+      hasAutoStarted.current = true;
+      handleStartQuiz();
+    }
+  }, [isDataLoaded, activeTab]); // eslint-disable-line react-hooks/exhaustive-deps
+  
   // 適応的学習モード
   const [adaptiveMode] = useState<boolean>(() => {
     const saved = localStorage.getItem('quiz-adaptive-mode');
@@ -457,7 +469,25 @@ function App() {
             isBuiltIn: true,
             source: 'high-school-entrance-words.csv + high-school-entrance-phrases.csv',
           };
-          setQuestionSets([mainSet]);
+          
+          // カスタム問題セットを読み込み
+          const { getCustomQuestionSets } = await import('./progressStorage');
+          const customSets = await getCustomQuestionSets();
+          
+          // カスタム問題セットをQuestionSet形式に変換して追加
+          const customQuestionSets: QuestionSet[] = customSets.map(cs => ({
+            id: cs.id,
+            name: cs.name,
+            questions: cs.questions,
+            createdAt: cs.createdAt,
+            isBuiltIn: false,
+            source: cs.source === 'reading' ? '長文読解' : cs.source === 'weak-words' ? '苦手語句' : '手動作成',
+          }));
+          
+          setQuestionSets([mainSet, ...customQuestionSets]);
+          
+          // データ読み込み完了をマーク
+          setIsDataLoaded(true);
         }
       } catch (error) {
         console.error('英単語データの読み込みに失敗:', error);
@@ -844,15 +874,31 @@ function App() {
 
   // 要復習集中モード（補修モード）切り替えハンドラー
   const handleReviewFocus = () => {
-    setReviewFocusMode(true);
-    setReviewCorrectStreak(new Map()); // 連続正解数をリセット
+    if (reviewFocusMode) {
+      // 復習モード解除
+      setReviewFocusMode(false);
+      setReviewQuestionPool([]);
+      setReviewCorrectStreak(new Map());
+    } else {
+      // 復習モード開始
+      setReviewFocusMode(true);
+      setReviewCorrectStreak(new Map()); // 連続正解数をリセット
+    }
     handleStartQuiz();
   };
   
   // スペルタブ用の補修モードハンドラー
   const handleSpellingReviewFocus = () => {
-    setReviewFocusMode(true);
-    setReviewCorrectStreak(new Map()); // 連続正解数をリセット
+    if (reviewFocusMode) {
+      // 復習モード解除
+      setReviewFocusMode(false);
+      setReviewQuestionPool([]);
+      setReviewCorrectStreak(new Map());
+    } else {
+      // 復習モード開始
+      setReviewFocusMode(true);
+      setReviewCorrectStreak(new Map()); // 連続正解数をリセット
+    }
     handleStartQuiz();
   };
 
@@ -1373,7 +1419,7 @@ function App() {
           />
         ) : activeTab === 'reading' ? (
           <ComprehensiveReadingView 
-            onSaveUnknownWords={(words) => {
+            onSaveUnknownWords={async (words) => {
               // 分からない単語を問題集として保存
               if (words.length === 0) return;
               
@@ -1384,17 +1430,18 @@ function App() {
               
               const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, defaultName);
               if (setName) {
+                // 1. 従来のQuestionSet形式で保存（後方互換性）
                 const newSet: QuestionSet = {
                   id: generateId(),
                   name: setName,
                   questions: words.map(w => ({
                     word: w.word,
-                    reading: '',
+                    reading: w.reading || '',
                     meaning: w.meaning,
-                    etymology: '',
-                    relatedWords: '',
-                    relatedFields: '',
-                    difficulty: ''
+                    etymology: w.etymology || '',
+                    relatedWords: w.relatedWords || '',
+                    relatedFields: w.relatedFields || '',
+                    difficulty: w.difficulty || 'intermediate'
                   })),
                   createdAt: Date.now(),
                   isBuiltIn: false,
@@ -1403,6 +1450,12 @@ function App() {
                 const updatedSets = [...questionSets, newSet];
                 setQuestionSets(updatedSets);
                 saveQuestionSets(updatedSets);
+                
+                // 2. 新しいカスタム問題セット形式でも保存
+                const { createReadingQuestionSet, saveCustomQuestionSet } = await import('./progressStorage');
+                const customSet = await createReadingQuestionSet(setName, newSet.questions);
+                await saveCustomQuestionSet(customSet);
+                
                 alert(`問題集「${setName}」を保存しました！\n和訳・スペルタブで利用できます。`);
               }
             }}

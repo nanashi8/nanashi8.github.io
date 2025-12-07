@@ -335,3 +335,25 @@ export interface MemorizationSettings {
   // カード表示設定（永続化）
   cardDisplaySettings: MemorizationCardState;
 }
+
+// カスタム問題セットの型定義（高機能版）
+export interface CustomQuestionSet {
+  id: string; // 一意のID
+  name: string; // 問題セット名
+  source: 'reading' | 'weak-words' | 'manual'; // 作成元
+  questions: Question[]; // 問題リスト
+  createdAt: number; // 作成日時
+  updatedAt: number; // 更新日時
+  isAutoUpdate: boolean; // 自動更新するか（苦手語句の場合）
+  autoUpdateConfig?: {
+    limit: number; // 取得する苦手語句の数
+    minMistakes: number; // 最低間違い回数
+    maxAccuracy: number; // 最大正答率（これ以下を苦手とする）
+  };
+  metadata?: {
+    description?: string; // 説明
+    tags?: string[]; // タグ
+    difficulty?: string; // 難易度
+    totalWords?: number; // 総単語数
+  };
+}
