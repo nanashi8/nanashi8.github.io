@@ -497,6 +497,30 @@ function App() {
     
     loadInitialData();
   }, []);
+  
+  // カスタム問題セットを再読み込みする関数
+  const reloadQuestionSets = async () => {
+    try {
+      const { getCustomQuestionSets } = await import('./progressStorage');
+      const customSets = await getCustomQuestionSets();
+      
+      const mainSet = questionSets.find(qs => qs.isBuiltIn);
+      const customQuestionSets: QuestionSet[] = customSets.map(cs => ({
+        id: cs.id,
+        name: cs.name,
+        questions: cs.questions,
+        createdAt: cs.createdAt,
+        isBuiltIn: false,
+        source: cs.source === 'reading' ? '長文読解' : cs.source === 'weak-words' ? '苦手語句' : '手動作成',
+      }));
+      
+      if (mainSet) {
+        setQuestionSets([mainSet, ...customQuestionSets]);
+      }
+    } catch (error) {
+      console.error('カスタム問題セットの再読み込みに失敗:', error);
+    }
+  };
 
   // 問題集が変更されたら localStorage に保存（削除）
   // useEffect(() => {
@@ -1371,6 +1395,7 @@ function App() {
         {activeTab === 'memorization' ? (
           <MemorizationView
             allQuestions={allQuestions}
+            questionSets={questionSets}
           />
         ) : activeTab === 'translation' ? (
           <QuizView
@@ -1456,7 +1481,10 @@ function App() {
                 const customSet = await createReadingQuestionSet(setName, newSet.questions);
                 await saveCustomQuestionSet(customSet);
                 
-                alert(`問題集「${setName}」を保存しました！\n和訳・スペルタブで利用できます。`);
+                // 問題セット一覧を再読み込み
+                await reloadQuestionSets();
+                
+                alert(`問題集「${setName}」を保存しました！\n和訳・暗記・スペルタブで利用できます。`);
               }
             }}
           />
@@ -1470,6 +1498,7 @@ function App() {
             allQuestions={allQuestions}
             categoryList={categoryList}
             onResetComplete={() => setActiveTab('stats')}
+            onQuestionSetsUpdated={reloadQuestionSets}
           />
         ) : (
           <SettingsView
