@@ -722,7 +722,7 @@
     {
       "id": "g2-u0-vf-001",
       "type": "verbForm",
-      "japanese": "be動詞過去I",
+      "japanese": "私は昨日興奮していました",
       "sentence": "I ____ excited yesterday.",
       "verb": "be",
       "choices": [
@@ -738,7 +738,7 @@
     {
       "id": "g2-u0-vf-002",
       "type": "verbForm",
-      "japanese": "be動詞過去they",
+      "japanese": "彼らは学校にいました",
       "sentence": "They ____ at school.",
       "verb": "be",
       "choices": [
@@ -754,7 +754,7 @@
     {
       "id": "g2-u0-vf-003",
       "type": "verbForm",
-      "japanese": "be動詞過去he",
+      "japanese": "彼は昨日遅れました",
       "sentence": "He ____ late yesterday.",
       "verb": "be",
       "choices": [
@@ -770,7 +770,7 @@
     {
       "id": "g2-u0-vf-004",
       "type": "verbForm",
-      "japanese": "be動詞過去you",
+      "japanese": "あなたは先週遅れました",
       "sentence": "You ____ late last week.",
       "verb": "be",
       "choices": [
@@ -786,7 +786,7 @@
     {
       "id": "g2-u0-vf-005",
       "type": "verbForm",
-      "japanese": "be動詞過去she",
+      "japanese": "彼女は東京にいました",
       "sentence": "She ____ in Tokyo.",
       "verb": "be",
       "choices": [
@@ -802,7 +802,7 @@
     {
       "id": "g2-u0-vf-006",
       "type": "verbForm",
-      "japanese": "be動詞過去we",
+      "japanese": "私たちはその時友達でした",
       "sentence": "We ____ friends then.",
       "verb": "be",
       "choices": [
@@ -818,7 +818,7 @@
     {
       "id": "g2-u0-vf-007",
       "type": "verbForm",
-      "japanese": "be動詞過去it",
+      "japanese": "昨日は雨でした",
       "sentence": "It ____ rainy yesterday.",
       "verb": "be",
       "choices": [
@@ -834,7 +834,7 @@
     {
       "id": "g2-u0-vf-008",
       "type": "verbForm",
-      "japanese": "be動詞過去複数",
+      "japanese": "その本は面白かったです",
       "sentence": "The books ____ interesting.",
       "verb": "be",
       "choices": [
@@ -850,7 +850,7 @@
     {
       "id": "g2-u0-vf-009",
       "type": "verbForm",
-      "japanese": "be動詞過去単数",
+      "japanese": "その猫はかわいかったです",
       "sentence": "The cat ____ cute.",
       "verb": "be",
       "choices": [
@@ -866,7 +866,7 @@
     {
       "id": "g2-u0-vf-010",
       "type": "verbForm",
-      "japanese": "be動詞過去複数",
+      "japanese": "私の両親は大阪にいました",
       "sentence": "My parents ____ in Osaka.",
       "verb": "be",
       "choices": [

@@ -13748,12 +13748,12 @@
           "sentence": "To ____ a lie is bad.",
           "verb": "infinitive",
           "choices": [
-            "to tell",
+            "tell",
             "telling",
-            "telled",
+            "told",
             "tells"
           ],
-          "correctAnswer": "to tell",
+          "correctAnswer": "tell",
           "difficulty": "intermediate",
           "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
           "grammarPoint": "不定詞"
