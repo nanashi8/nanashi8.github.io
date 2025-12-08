@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "What",
       "difficulty": "beginner",
-      "explanation": "「何」と尋ねるときはWhatを使う。What is this?で「これは何ですか」。",
+      "explanation": "「何」と尋ねるときはWhatを使います。What is this?で「これは何ですか」です。",
       "hint": "何 → What"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "Who",
       "difficulty": "beginner",
-      "explanation": "「誰」と尋ねるときはWhoを使う。Who are you?で「あなたは誰ですか」。",
+      "explanation": "「誰」と尋ねるときはWhoを使います。Who are you?で「あなたは誰ですか」です。",
       "hint": "誰 → Who"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "Where",
       "difficulty": "beginner",
-      "explanation": "「どこ」と尋ねるときはWhereを使う。Where are you from?で「どこの出身ですか」。",
+      "explanation": "「どこ」と尋ねるときはWhereを使います。Where are you from?で「どこの出身ですか」です。",
       "hint": "どこ → Where"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "When",
       "difficulty": "beginner",
-      "explanation": "「いつ」と尋ねるときはWhenを使う。When do you～?で「いつ～しますか」。",
+      "explanation": "「いつ」と尋ねるときはWhenを使います。When do you～?で「いつ～しますか」です。",
       "hint": "いつ → When"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "「どう・どのように」と尋ねるときはHowを使う。How are you?で「元気ですか」。",
+      "explanation": "「どう・どのように」と尋ねるときはHowを使います。How are you?で「元気ですか」です。",
       "hint": "どう → How"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "Whose",
       "difficulty": "intermediate",
-      "explanation": "「誰の」と尋ねるときはWhoseを使う。Whose～is this?で「これは誰の～ですか」。",
+      "explanation": "「誰の」と尋ねるときはWhoseを使います。Whose～is this?で「これは誰の～ですか」です。",
       "hint": "誰の → Whose"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "Which",
       "difficulty": "intermediate",
-      "explanation": "「どちら」と尋ねるときはWhichを使う。Which～do you like?で「どの～が好きですか」。",
+      "explanation": "「どちら」と尋ねるときはWhichを使います。Which～do you like?で「どの～が好きですか」です。",
       "hint": "どちら → Which"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "What",
       "difficulty": "intermediate",
-      "explanation": "「何時」はWhat timeで表す。What time do you～?で「何時に～しますか」。",
+      "explanation": "「何時」はWhat timeで表します。What time do you～?で「何時に～しますか」です。",
       "hint": "何時 → What time"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "Where",
       "difficulty": "intermediate",
-      "explanation": "「どこで」はWhereで尋ねる。Where do you～?で「どこで～しますか」。",
+      "explanation": "「どこで」はWhereで尋ねります。Where do you～?で「どこで～しますか」です。",
       "hint": "どこで → Where"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "How",
       "difficulty": "intermediate",
-      "explanation": "「いくつ・何人」はHow manyで尋ねる。How many～are there?で「何人いますか」。",
+      "explanation": "「いくつ・何人」はHow manyで尋ねります。How many～are there?で「何人いますか」です。",
       "hint": "何人 → How many"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "What",
       "difficulty": "advanced",
-      "explanation": "「何色」はWhat colorで表す。What color does～?で「何色が好きですか」。",
+      "explanation": "「何色」はWhat colorで表します。What color does～?で「何色が好きですか」です。",
       "hint": "何色 → What color"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "How",
       "difficulty": "advanced",
-      "explanation": "「どのくらい」はHow longで尋ねる。How long does it take?で「どのくらいかかりますか」。",
+      "explanation": "「どのくらい」はHow longで尋ねります。How long does it take?で「どのくらいかかりますか」です。",
       "hint": "どのくらい → How long"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "Who",
       "difficulty": "advanced",
-      "explanation": "「誰と」はWhoで尋ねる。Who is～talking to?で「誰と話していますか」。",
+      "explanation": "「誰と」はWhoで尋ねります。Who is～talking to?で「誰と話していますか」です。",
       "hint": "誰と → Who"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "How",
       "difficulty": "advanced",
-      "explanation": "「いくら」はHow muchで尋ねる。How much is it?で「いくらですか」。",
+      "explanation": "「いくら」はHow muchで尋ねります。How much is it?で「いくらですか」です。",
       "hint": "いくら → How much"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "When",
       "difficulty": "advanced",
-      "explanation": "「いつ」と尋ねるときはWhenを使う。When is～?で「～はいつですか」。",
+      "explanation": "「いつ」と尋ねるときはWhenを使います。When is～?で「～はいつですか」です。",
       "hint": "いつ → When"
     },
     {
@@ -248,7 +248,7 @@
       ],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
-      "explanation": "What is this?で「これは何ですか」。疑問詞Whatを文頭に。",
+      "explanation": "What is this?で「これは何ですか」です。疑問詞Whatを文頭にです。",
       "hint": "What is ～?",
       "wordCount": 4
     },
@@ -264,7 +264,7 @@
       ],
       "correctAnswer": "Who are you?",
       "difficulty": "beginner",
-      "explanation": "Who are you?で「あなたは誰ですか」。疑問詞Whoを文頭に。",
+      "explanation": "Who are you?で「あなたは誰ですか」です。疑問詞Whoを文頭にです。",
       "hint": "Who are ～?",
       "wordCount": 4
     },
@@ -281,7 +281,7 @@
       ],
       "correctAnswer": "Where are you from?",
       "difficulty": "beginner",
-      "explanation": "Where are you from?で「どこの出身ですか」。fromは最後に。",
+      "explanation": "Where are you from?で「どこの出身ですか」です。fromは最後にです。",
       "hint": "Where are you from?",
       "wordCount": 5
     },
@@ -299,7 +299,7 @@
       ],
       "correctAnswer": "When do you play tennis?",
       "difficulty": "beginner",
-      "explanation": "When do you～?で「いつ～しますか」。一般動詞の疑問文。",
+      "explanation": "When do you～?で「いつ～しますか」です。一般動詞の疑問文です。",
       "hint": "When do you ～?",
       "wordCount": 6
     },
@@ -315,7 +315,7 @@
       ],
       "correctAnswer": "How are you?",
       "difficulty": "beginner",
-      "explanation": "How are you?で「元気ですか・ご機嫌いかがですか」。基本の挨拶。",
+      "explanation": "How are you?で「元気ですか・ご機嫌いかがですか」です。基本の挨拶です。",
       "hint": "How are you?",
       "wordCount": 4
     },
@@ -332,7 +332,7 @@
       ],
       "correctAnswer": "What does he like?",
       "difficulty": "intermediate",
-      "explanation": "What does he～?で「彼は何を～しますか」。三人称単数なのでdoes。",
+      "explanation": "What does he～?で「彼は何を～しますか」です。三人称単数なのでdoesです。",
       "hint": "What does he ～?",
       "wordCount": 5
     },
@@ -349,7 +349,7 @@
       ],
       "correctAnswer": "Where do you live?",
       "difficulty": "intermediate",
-      "explanation": "Where do you～?で「どこで～しますか」。住んでいる場所を尋ねる。",
+      "explanation": "Where do you～?で「どこで～しますか」です。住んでいる場所を尋ねります。",
       "hint": "Where do you ～?",
       "wordCount": 5
     },
@@ -369,7 +369,7 @@
       ],
       "correctAnswer": "What time do you go to bed?",
       "difficulty": "intermediate",
-      "explanation": "What time do you～?で「何時に～しますか」。go to bedで「寝る」。",
+      "explanation": "What time do you～?で「何時に～しますか」です。go to bedで「寝る」です。",
       "hint": "What time do you ～?",
       "wordCount": 8
     },
@@ -386,7 +386,7 @@
       ],
       "correctAnswer": "Whose bag is this?",
       "difficulty": "intermediate",
-      "explanation": "Whose～is this?で「これは誰の～ですか」。所有を尋ねる。",
+      "explanation": "Whose～is this?で「これは誰の～ですか」です。所有を尋ねります。",
       "hint": "Whose ～ is this?",
       "wordCount": 5
     },
@@ -405,7 +405,7 @@
       ],
       "correctAnswer": "How many brothers do you have?",
       "difficulty": "intermediate",
-      "explanation": "How many～do you have?で「何人～がいますか」。数を尋ねる。",
+      "explanation": "How many～do you have?で「何人～がいますか」です。数を尋ねります。",
       "hint": "How many ～ do you have?",
       "wordCount": 7
     },
@@ -423,7 +423,7 @@
       ],
       "correctAnswer": "What color does she like?",
       "difficulty": "advanced",
-      "explanation": "What color does～?で「何色が好きですか」。三人称単数なのでdoes。",
+      "explanation": "What color does～?で「何色が好きですか」です。三人称単数なのでdoesです。",
       "hint": "What color does ～?",
       "wordCount": 6
     },
@@ -441,7 +441,7 @@
       ],
       "correctAnswer": "Which sport do you like?",
       "difficulty": "advanced",
-      "explanation": "Which～do you like?で「どちらの～が好きですか」。選択を尋ねる。",
+      "explanation": "Which～do you like?で「どちらの～が好きですか」です。選択を尋ねります。",
       "hint": "Which ～ do you like?",
       "wordCount": 6
     },
@@ -462,7 +462,7 @@
       ],
       "correctAnswer": "How long does it take to the station?",
       "difficulty": "advanced",
-      "explanation": "How long does it take to～?で「～までどのくらいかかりますか」。",
+      "explanation": "How long does it take to～?で「～までどのくらいかかりますか」です。",
       "hint": "How long does it take ～?",
       "wordCount": 9
     },
@@ -480,7 +480,7 @@
       ],
       "correctAnswer": "Who does he study with?",
       "difficulty": "advanced",
-      "explanation": "Who does he～with?で「誰と～しますか」。withは最後に。",
+      "explanation": "Who does he～with?で「誰と～しますか」です。withは最後にです。",
       "hint": "Who does he ～ with?",
       "wordCount": 6
     },
@@ -498,7 +498,7 @@
       ],
       "correctAnswer": "How much is this pen?",
       "difficulty": "advanced",
-      "explanation": "How much is～?で「～はいくらですか」。値段を尋ねる。",
+      "explanation": "How much is～?で「～はいくらですか」です。値段を尋ねります。",
       "hint": "How much is ～?",
       "wordCount": 6
     },
@@ -515,7 +515,7 @@
       ],
       "correctAnswer": "What is this?",
       "difficulty": "beginner",
-      "explanation": "What is this?で「これは何ですか」。疑問詞Whatを文頭に。",
+      "explanation": "What is this?で「これは何ですか」です。疑問詞Whatを文頭にです。",
       "hint": "What is ～?"
     },
     {
@@ -531,7 +531,7 @@
       ],
       "correctAnswer": "Who is she?",
       "difficulty": "beginner",
-      "explanation": "Who is she?で「彼女は誰ですか」。人を尋ねるときはWho。",
+      "explanation": "Who is she?で「彼女は誰ですか」です。人を尋ねるときはWhoです。",
       "hint": "Who is ～?"
     },
     {
@@ -547,7 +547,7 @@
       ],
       "correctAnswer": "Where does he live?",
       "difficulty": "beginner",
-      "explanation": "Where does he～?で「彼はどこで～しますか」。場所を尋ねる。",
+      "explanation": "Where does he～?で「彼はどこで～しますか」です。場所を尋ねります。",
       "hint": "Where does he ～?"
     },
     {
@@ -563,7 +563,7 @@
       ],
       "correctAnswer": "When do you study English?",
       "difficulty": "beginner",
-      "explanation": "When do you～?で「いつ～しますか」。時を尋ねる。",
+      "explanation": "When do you～?で「いつ～しますか」です。時を尋ねります。",
       "hint": "When do you ～?"
     },
     {
@@ -579,7 +579,7 @@
       ],
       "correctAnswer": "How do you go to school?",
       "difficulty": "intermediate",
-      "explanation": "How do you～?で「どうやって～しますか」。方法を尋ねる。",
+      "explanation": "How do you～?で「どうやって～しますか」です。方法を尋ねります。",
       "hint": "How do you ～?"
     },
     {
@@ -595,7 +595,7 @@
       ],
       "correctAnswer": "What time does she get up?",
       "difficulty": "intermediate",
-      "explanation": "What time does～?で「何時に～しますか」。時刻を尋ねる。",
+      "explanation": "What time does～?で「何時に～しますか」です。時刻を尋ねります。",
       "hint": "What time does ～?"
     },
     {
@@ -611,7 +611,7 @@
       ],
       "correctAnswer": "Whose book is this?",
       "difficulty": "intermediate",
-      "explanation": "Whose～is this?で「これは誰の～ですか」。所有を尋ねる。",
+      "explanation": "Whose～is this?で「これは誰の～ですか」です。所有を尋ねります。",
       "hint": "Whose ～ is this?"
     },
     {
@@ -627,7 +627,7 @@
       ],
       "correctAnswer": "Which do you like?",
       "difficulty": "intermediate",
-      "explanation": "Which do you like?で「どちらが好きですか」。選択を尋ねる。",
+      "explanation": "Which do you like?で「どちらが好きですか」です。選択を尋ねります。",
       "hint": "Which do you ～?"
     },
     {
@@ -643,7 +643,7 @@
       ],
       "correctAnswer": "How many dogs do you have?",
       "difficulty": "intermediate",
-      "explanation": "How many～do you have?で「何匹～がいますか」。数を尋ねる。",
+      "explanation": "How many～do you have?で「何匹～がいますか」です。数を尋ねります。",
       "hint": "How many ～ do you have?"
     },
     {
@@ -659,7 +659,7 @@
       ],
       "correctAnswer": "What color do you like?",
       "difficulty": "advanced",
-      "explanation": "What color do you like?で「何色が好きですか」。色を尋ねる。",
+      "explanation": "What color do you like?で「何色が好きですか」です。色を尋ねります。",
       "hint": "What color do you ～?"
     },
     {
@@ -675,7 +675,7 @@
       ],
       "correctAnswer": "How much is this book?",
       "difficulty": "advanced",
-      "explanation": "How much is～?で「～はいくらですか」。値段を尋ねる。",
+      "explanation": "How much is～?で「～はいくらですか」です。値段を尋ねります。",
       "hint": "How much is ～?"
     },
     {
@@ -691,7 +691,7 @@
       ],
       "correctAnswer": "How long does it take?",
       "difficulty": "advanced",
-      "explanation": "How long does it take?で「どのくらいかかりますか」。時間を尋ねる。",
+      "explanation": "How long does it take?で「どのくらいかかりますか」です。時間を尋ねります。",
       "hint": "How long does it ～?"
     },
     {
@@ -707,7 +707,7 @@
       ],
       "correctAnswer": "Who do you play tennis with?",
       "difficulty": "advanced",
-      "explanation": "Who do you～with?で「誰と～しますか」。withは最後に。",
+      "explanation": "Who do you～with?で「誰と～しますか」です。withは最後にです。",
       "hint": "Who do you ～ with?"
     },
     {
@@ -723,7 +723,7 @@
       ],
       "correctAnswer": "What subject does he study?",
       "difficulty": "advanced",
-      "explanation": "What subject does～?で「何の教科を～しますか」。科目を尋ねる。",
+      "explanation": "What subject does～?で「何の教科を～しますか」です。科目を尋ねります。",
       "hint": "What subject does ～?"
     },
     {
@@ -739,7 +739,7 @@
       ],
       "correctAnswer": "How old is she?",
       "difficulty": "advanced",
-      "explanation": "How old is～?で「～は何歳ですか」。年齢を尋ねる。",
+      "explanation": "How old is～?で「～は何歳ですか」です。年齢を尋ねります。",
       "hint": "How old is ～?"
     },
     {
@@ -755,7 +755,7 @@
       ],
       "correctAnswer": "do",
       "difficulty": "beginner",
-      "explanation": "一般動詞の疑問文はdo/doesを使う。youなのでdo。",
+      "explanation": "一般動詞の疑問文はdo/doesを使います。youなのでdoです。",
       "hint": "you → do"
     },
     {
@@ -771,7 +771,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "beginner",
-      "explanation": "三人称単数の疑問文はdoesを使う。sheなのでdoes。",
+      "explanation": "三人称単数の疑問文はdoesを使います。sheなのでdoesです。",
       "hint": "she → does"
     },
     {
@@ -787,7 +787,7 @@
       ],
       "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "be動詞の疑問文はbe動詞をそのまま使う。that manは単数なのでis。",
+      "explanation": "be動詞の疑問文はbe動詞をそのまま使います。that manは単数なのでisです。",
       "hint": "that man → is"
     },
     {
@@ -803,7 +803,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "theseは複数なのでbe動詞はare。What are these?で「これらは何ですか」。",
+      "explanation": "theseは複数なのでbe動詞はareです。What are these?で「これらは何ですか」です。",
       "hint": "these → are"
     },
     {
@@ -819,7 +819,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の疑問文はdoesを使う。heなのでdoes。",
+      "explanation": "三人称単数の疑問文はdoesを使います。heなのでdoesです。",
       "hint": "he → does"
     },
     {
@@ -835,7 +835,7 @@
       ],
       "correctAnswer": "do",
       "difficulty": "intermediate",
-      "explanation": "一般動詞の疑問文。youなのでdo。How do you～?で「どうやって～しますか」。",
+      "explanation": "一般動詞の疑問文です。youなのでdoです。How do you～?で「どうやって～しますか」です。",
       "hint": "you → do"
     },
     {
@@ -851,7 +851,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "intermediate",
-      "explanation": "friendsは複数なのでare。Where are～from?で「～はどこ出身ですか」。",
+      "explanation": "friendsは複数なのでareです。Where are～from?で「～はどこ出身ですか」です。",
       "hint": "friends → are"
     },
     {
@@ -867,7 +867,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "advanced",
-      "explanation": "三人称単数の疑問文。sheなのでdoes。What time does～?で「何時に～しますか」。",
+      "explanation": "三人称単数の疑問文です。sheなのでdoesです。What time does～?で「何時に～しますか」です。",
       "hint": "she → does"
     },
     {
@@ -883,7 +883,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "advanced",
-      "explanation": "How many～are there?で「何人いますか」。複数なのでare。",
+      "explanation": "How many～are there?で「何人いますか」です。複数なのでareです。",
       "hint": "How many → are"
     },
     {
@@ -899,7 +899,7 @@
       ],
       "correctAnswer": "do",
       "difficulty": "advanced",
-      "explanation": "一般動詞の疑問文。youなのでdo。Which～do you like?で「どちらが好きですか」。",
+      "explanation": "一般動詞の疑問文です。youなのでdoです。Which～do you like?で「どちらが好きですか」です。",
       "hint": "you → do"
     },
     {
@@ -924,7 +924,7 @@
       ],
       "correctAnswer": "a",
       "difficulty": "beginner",
-      "explanation": "What do you have?（何を持っていますか）に対する答え。notebookは子音で始まるのでa。",
+      "explanation": "What do you have?（何を持っていますか）に対する答えです。notebookは子音で始まるのでaです。",
       "hint": "notebook → a"
     },
     {
@@ -949,7 +949,7 @@
       ],
       "correctAnswer": "from",
       "difficulty": "beginner",
-      "explanation": "Where are you from?（どこ出身ですか）にはI'm from～で答える。",
+      "explanation": "Where are you from?（どこ出身ですか）にはI'm from～で答えります。",
       "hint": "出身 → from"
     },
     {
@@ -974,7 +974,7 @@
       ],
       "correctAnswer": "in",
       "difficulty": "intermediate",
-      "explanation": "月を表すときは前置詞inを使う。in Mayで「5月に」。",
+      "explanation": "月を表すときは前置詞inを使います。in Mayで「5月に」です。",
       "hint": "月 → in"
     },
     {
@@ -999,7 +999,7 @@
       ],
       "correctAnswer": "five",
       "difficulty": "intermediate",
-      "explanation": "How many～?（いくつ）には数で答える。fiveで「5冊」。",
+      "explanation": "How many～?（いくつ）には数で答えります。fiveで「5冊」です。",
       "hint": "数で答える"
     },
     {
@@ -1024,7 +1024,7 @@
       ],
       "correctAnswer": "500",
       "difficulty": "advanced",
-      "explanation": "How much is～?（いくらですか）には値段で答える。500 yenで「500円」。",
+      "explanation": "How much is～?（いくらですか）には値段で答えります。500 yenで「500円」です。",
       "hint": "数字のみ"
     },
     {
@@ -1039,7 +1039,7 @@
       ],
       "correctAnswer": "How old",
       "difficulty": "beginner",
-      "explanation": "How + 形容詞で「どのくらい~」と程度を尋ねる疑問文として覚えること。How old = 「何歳」。",
+      "explanation": "How + 形容詞で「どのくらい~」と程度を尋ねる疑問文として覚えてください。How old = 「何歳」です。",
       "hint": "年齢を尋ねる"
     },
     {
@@ -1054,7 +1054,7 @@
       ],
       "correctAnswer": "How tall",
       "difficulty": "beginner",
-      "explanation": "How + 形容詞という疑問文の形として覚えること。How tall = 「身長はどのくらい」。",
+      "explanation": "How + 形容詞という疑問文の形として覚えてください。How tall = 「身長はどのくらい」です。",
       "hint": "身長を尋ねる"
     },
     {
@@ -1071,7 +1071,7 @@
       ],
       "correctAnswer": "How far is it to Tokyo?",
       "difficulty": "intermediate",
-      "explanation": "How + 形容詞という疑問文として覚えること。How far = 「どのくらい遠い」で距離を尋ねる。",
+      "explanation": "How + 形容詞という疑問文として覚えてください。How far = 「どのくらい遠い」で距離を尋ねります。",
       "hint": "How far",
       "wordCount": 6
     },
@@ -1097,7 +1097,7 @@
       ],
       "correctAnswer": "How fast",
       "difficulty": "intermediate",
-      "explanation": "How + 形容詞で程度を尋ねる疑問文として覚えること。How fast = 「どのくらい速い」。",
+      "explanation": "How + 形容詞で程度を尋ねる疑問文として覚えてください。How fast = 「どのくらい速い」です。",
       "hint": "速度を尋ねる"
     },
     {
@@ -1113,7 +1113,7 @@
       ],
       "correctAnswer": "How high is this building?",
       "difficulty": "intermediate",
-      "explanation": "How + 形容詞という疑問文として覚えること。How high = 「どのくらい高い」で高さを尋ねる。",
+      "explanation": "How + 形容詞という疑問文として覚えてください。How high = 「どのくらい高い」で高さを尋ねります。",
       "hint": "How high",
       "wordCount": 5
     }

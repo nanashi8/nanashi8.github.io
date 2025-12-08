@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "studies",
       "difficulty": "beginner",
-      "explanation": "三人称単数（he/she/it）の現在形は動詞に-s/-esを付ける。studyは子音+yなので-ies。×studysは誤り。",
+      "explanation": "三人称単数（he/she/it）の現在形は動詞に-s/-esを付けます。studyは子音+yなので-iesです。×studysは誤りです。",
       "hint": "子音+y → -ies"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "plays",
       "difficulty": "beginner",
-      "explanation": "playは母音+yなので-sを付けるだけ。×plaiesは誤り。三人称単数の基本パターン。",
+      "explanation": "playは母音+yなので-sを付けるだけです。×plaiesは誤りです。三人称単数の基本パターンです。",
       "hint": "母音+y → -s"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "goes",
       "difficulty": "beginner",
-      "explanation": "-o で終わる動詞は-esを付ける。go→goes。×gosは誤り。頻出の不規則パターン。",
+      "explanation": "-o で終わる動詞は-esを付けます。go→goesです。×gosは誤りです。頻出の不規則パターンです。",
       "hint": "-o → -es"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "beginner",
-      "explanation": "haveの三人称単数形はhas（不規則）。×havesは誤り。最重要の不規則変化。",
+      "explanation": "haveの三人称単数形はhas（不規則）です。×havesは誤りです。最重要の不規則変化です。",
       "hint": "have → has"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "likes",
       "difficulty": "beginner",
-      "explanation": "人名（Tom）は三人称単数なので-sを付ける。like→likes。",
+      "explanation": "人名（Tom）は三人称単数なので-sを付けます。like→likesです。",
       "hint": "人名も三人称単数"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
-      "explanation": "-chで終わる動詞は-esを付ける。watch→watches。-sh/-ch/-x/-s/-oは-esパターン。",
+      "explanation": "-chで終わる動詞は-esを付けます。watch→watchesです。-sh/-ch/-x/-s/-oは-esパターンです。",
       "hint": "-ch → -es"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の否定文はdoesn't + 原形。×don'tはI/You/We/They用。",
+      "explanation": "三人称単数の否定文はdoesn't + 原形です。×don'tはI/You/We/They用。",
       "hint": "he/she/it → doesn't"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "Does",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の疑問文はDoes + 主語 + 原形。答えはYes, he does. / No, he doesn't.。",
+      "explanation": "三人称単数の疑問文はDoes + 主語 + 原形です。答えはYes, he does. / No, he doesn't.です。",
       "hint": "he/she/it → Does"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
-      "explanation": "doの三人称単数形はdoes（不規則）。do homework（宿題をする）は熟語として覚えること。",
+      "explanation": "doの三人称単数形はdoes（不規則）です。do homework（宿題をする）は熟語として覚えてください。",
       "hint": "do → does"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "gets",
       "difficulty": "intermediate",
-      "explanation": "get up（起きる）は熟語。getは通常の-sパターン。get→gets。",
+      "explanation": "get up（起きる）は熟語です。getは通常の-sパターンです。get→getsです。",
       "hint": "get → gets"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "goes",
       "difficulty": "intermediate",
-      "explanation": "go to school by busの組み合わせ。goの三人称単数形はgoes。",
+      "explanation": "go to school by busの組み合わせです。goの三人称単数形はgoesです。",
       "hint": "go → goes"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "washes",
       "difficulty": "advanced",
-      "explanation": "-shで終わる動詞は-esを付ける。wash the dishes（皿を洗う）は日常表現。",
+      "explanation": "-shで終わる動詞は-esを付けます。wash the dishes（皿を洗う）は日常表現です。",
       "hint": "-sh → -es"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "study",
       "difficulty": "advanced",
-      "explanation": "Doesの後は必ず原形。×studiesは誤り。疑問文では動詞は原形のまま。",
+      "explanation": "Doesの後は必ず原形です。×studiesは誤りです。疑問文では動詞は原形のままです。",
       "hint": "Doesの後は原形"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "speak",
       "difficulty": "advanced",
-      "explanation": "doesn'tの後は原形。×speaksは誤り。否定文でも動詞は原形。",
+      "explanation": "doesn'tの後は原形です。×speaksは誤りです。否定文でも動詞は原形です。",
       "hint": "doesn't + 原形"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "gets up",
       "difficulty": "advanced",
-      "explanation": "get upは句動詞（2語で1つの動詞）。三人称単数ではgets upとなる。",
+      "explanation": "get upは句動詞（2語で1つの動詞）です。三人称単数ではgets upとなります。",
       "hint": "句動詞もs/es付加"
     },
     {
@@ -247,7 +247,7 @@
       ],
       "correctAnswer": "He studies Japanese.",
       "difficulty": "beginner",
-      "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語。",
+      "explanation": "三人称単数の基本語順：He + studies（動詞-s/-es）+ 目的語です。",
       "hint": "He studies ～",
       "wordCount": 3
     },
@@ -262,7 +262,7 @@
       ],
       "correctAnswer": "She plays volleyball.",
       "difficulty": "beginner",
-      "explanation": "She plays ～の語順。playは母音+yなので-sのみ。",
+      "explanation": "She plays ～の語順です。playは母音+yなので-sのみです。",
       "hint": "She plays ～",
       "wordCount": 3
     },
@@ -279,7 +279,7 @@
       ],
       "correctAnswer": "He goes to the park.",
       "difficulty": "beginner",
-      "explanation": "go→goesの不規則パターン。go to ～の基本語順。",
+      "explanation": "go→goesの不規則パターンです。go to ～の基本語順です。",
       "hint": "He goes to ～",
       "wordCount": 5
     },
@@ -295,7 +295,7 @@
       ],
       "correctAnswer": "She has a cat.",
       "difficulty": "beginner",
-      "explanation": "have→hasの不規則変化。a catは「1匹の猫」。",
+      "explanation": "have→hasの不規則変化です。a catは「1匹の猫」です。",
       "hint": "She has ～",
       "wordCount": 4
     },
@@ -310,7 +310,7 @@
       ],
       "correctAnswer": "Tom likes tennis.",
       "difficulty": "beginner",
-      "explanation": "人名も三人称単数。Tom likes ～の語順。",
+      "explanation": "人名も三人称単数です。Tom likes ～の語順です。",
       "hint": "Tom likes ～",
       "wordCount": 3
     },
@@ -325,7 +325,7 @@
       ],
       "correctAnswer": "He watches movies.",
       "difficulty": "intermediate",
-      "explanation": "watch→watches（-ch→-es）。watch moviesは「映画を見る」。",
+      "explanation": "watch→watches（-ch→-es）です。watch moviesは「映画を見る」です。",
       "hint": "He watches ～",
       "wordCount": 3
     },
@@ -343,7 +343,7 @@
       ],
       "correctAnswer": "She doesn't listen to the radio.",
       "difficulty": "intermediate",
-      "explanation": "否定文：She doesn't + 原形。listen to the radioはセット。",
+      "explanation": "否定文：She doesn't + 原形です。listen to the radioはセットです。",
       "hint": "doesn't + 原形",
       "wordCount": 6
     },
@@ -360,7 +360,7 @@
       ],
       "correctAnswer": "Does he play soccer?",
       "difficulty": "intermediate",
-      "explanation": "疑問文：Does + 主語 + 原形。文末に?。",
+      "explanation": "疑問文：Does + 主語 + 原形です。文末に?です。",
       "hint": "Does he + 原形?",
       "wordCount": 5
     },
@@ -378,7 +378,7 @@
       ],
       "correctAnswer": "She does the cleaning every day.",
       "difficulty": "intermediate",
-      "explanation": "do→doesの不規則変化。do the cleaningは「掃除をする」。",
+      "explanation": "do→doesの不規則変化です。do the cleaningは「掃除をする」です。",
       "hint": "She does ～",
       "wordCount": 6
     },
@@ -397,7 +397,7 @@
       ],
       "correctAnswer": "He goes to bed late at night.",
       "difficulty": "intermediate",
-      "explanation": "go to bed lateで「遅く寝る」。at nightは時を表す。",
+      "explanation": "go to bed lateで「遅く寝る」です。at nightは時を表します。",
       "hint": "goes to bed late",
       "wordCount": 7
     },
@@ -415,7 +415,7 @@
       ],
       "correctAnswer": "She goes to school by train.",
       "difficulty": "intermediate",
-      "explanation": "go to school by trainの語順。交通手段は文末。",
+      "explanation": "go to school by trainの語順です。交通手段は文末です。",
       "hint": "goes to ～ by ～",
       "wordCount": 6
     },
@@ -433,7 +433,7 @@
       ],
       "correctAnswer": "He washes the windows every week.",
       "difficulty": "advanced",
-      "explanation": "wash→washes（-sh→-es）。wash the windowsは家事表現。",
+      "explanation": "wash→washes（-sh→-es）です。wash the windowsは家事表現です。",
       "hint": "washes the windows",
       "wordCount": 6
     },
@@ -451,7 +451,7 @@
       ],
       "correctAnswer": "Does she study at home?",
       "difficulty": "advanced",
-      "explanation": "Does + 主語 + 原形の語順。at homeは「家で」。",
+      "explanation": "Does + 主語 + 原形の語順です。at homeは「家で」です。",
       "hint": "Does she + 原形?",
       "wordCount": 6
     },
@@ -467,7 +467,7 @@
       ],
       "correctAnswer": "He doesn't speak Chinese.",
       "difficulty": "advanced",
-      "explanation": "doesn't + 原形の語順。speak Chineseで「中国語を話す」。",
+      "explanation": "doesn't + 原形の語順です。speak Chineseで「中国語を話す」です。",
       "hint": "doesn't + 原形",
       "wordCount": 4
     },
@@ -487,7 +487,7 @@
       ],
       "correctAnswer": "She goes to bed at ten every night.",
       "difficulty": "advanced",
-      "explanation": "句動詞goes to bedの語順。at ten（10時に）→every night（毎晩）の順。",
+      "explanation": "句動詞goes to bedの語順です。at ten（10時に）→every night（毎晩）の順です。",
       "hint": "goes to bed at ～",
       "wordCount": 8
     },
@@ -504,7 +504,7 @@
       ],
       "correctAnswer": "He studies English.",
       "difficulty": "beginner",
-      "explanation": "I→Heに変わると動詞に-s/-esを付ける。studyは子音+yなので-ies。",
+      "explanation": "I→Heに変わると動詞に-s/-esを付けます。studyは子音+yなので-iesです。",
       "hint": "子音+y → -ies"
     },
     {
@@ -520,7 +520,7 @@
       ],
       "correctAnswer": "Does he play soccer?",
       "difficulty": "beginner",
-      "explanation": "三人称単数の疑問文はDoes + 主語 + 原形。動詞は原形playに戻る。",
+      "explanation": "三人称単数の疑問文はDoes + 主語 + 原形です。動詞は原形playに戻りまします。",
       "hint": "Does he + 原形?"
     },
     {
@@ -536,7 +536,7 @@
       ],
       "correctAnswer": "She doesn't like music.",
       "difficulty": "beginner",
-      "explanation": "否定文はdoesn't + 原形。動詞は原形likeに戻る。×don'tは誤り。",
+      "explanation": "否定文はdoesn't + 原形です。動詞は原形likeに戻りまします。×don'tは誤りです。",
       "hint": "doesn't + 原形"
     },
     {
@@ -552,7 +552,7 @@
       ],
       "correctAnswer": "He goes to the park.",
       "difficulty": "intermediate",
-      "explanation": "We go → He goes。goは-o で終わるので-esを付ける。",
+      "explanation": "We go → He goesです。goは-o で終わるので-esを付けます。",
       "hint": "-o → -es"
     },
     {
@@ -568,7 +568,7 @@
       ],
       "correctAnswer": "He doesn't like math.",
       "difficulty": "intermediate",
-      "explanation": "does not → doesn't。三人称単数の否定短縮形。",
+      "explanation": "does not → doesn'tです。三人称単数の否定短縮形です。",
       "hint": "does not = doesn't"
     },
     {
@@ -584,7 +584,7 @@
       ],
       "correctAnswer": "She doesn't study English.",
       "difficulty": "intermediate",
-      "explanation": "Does she～?を否定文にするとShe doesn't～。動詞は原形のまま。",
+      "explanation": "Does she～?を否定文にするとShe doesn't～です。動詞は原形のままです。",
       "hint": "She doesn't ～"
     },
     {
@@ -600,7 +600,7 @@
       ],
       "correctAnswer": "Yes, he does.",
       "difficulty": "intermediate",
-      "explanation": "Does he～?にはYes, he does. / No, he doesn't.で答える。",
+      "explanation": "Does he～?にはYes, he does. / No, he doesn't.で答えります。",
       "hint": "Yes, he does"
     },
     {
@@ -616,7 +616,7 @@
       ],
       "correctAnswer": "She has a pen.",
       "difficulty": "intermediate",
-      "explanation": "have→hasの不規則変化。三人称単数の最重要パターン。",
+      "explanation": "have→hasの不規則変化です。三人称単数の最重要パターンです。",
       "hint": "have → has"
     },
     {
@@ -632,7 +632,7 @@
       ],
       "correctAnswer": "He watches sports.",
       "difficulty": "advanced",
-      "explanation": "watch→watches（-ch→-es）。They watch → He watches。",
+      "explanation": "watch→watches（-ch→-es）です。They watch → He watchesです。",
       "hint": "-ch → -es"
     },
     {
@@ -648,7 +648,7 @@
       ],
       "correctAnswer": "Doesn't he like music?",
       "difficulty": "advanced",
-      "explanation": "否定疑問文はDoesn't + 主語 + 原形。驚きや確認で使う。",
+      "explanation": "否定疑問文はDoesn't + 主語 + 原形です。驚きや確認で使います。",
       "hint": "Doesn't he ～?"
     },
     {
@@ -664,7 +664,7 @@
       ],
       "correctAnswer": "Tom does his homework.",
       "difficulty": "advanced",
-      "explanation": "do→does、my→hisの両方を変更。人名も三人称単数。",
+      "explanation": "do→does、my→hisの両方を変更です。人名も三人称単数です。",
       "hint": "do → does、my → his"
     },
     {
@@ -680,7 +680,7 @@
       ],
       "correctAnswer": "She studies math every day.",
       "difficulty": "advanced",
-      "explanation": "頻度を表す語句は文末に置くのが基本。every dayは「毎日」。",
+      "explanation": "頻度を表す語句は文末に置くのが基本です。every dayは「毎日」です。",
       "hint": "文末に置く"
     },
     {
@@ -696,7 +696,7 @@
       ],
       "correctAnswer": "He plays soccer in the park.",
       "difficulty": "advanced",
-      "explanation": "場所を表す語句は文末に。目的語→場所の語順。",
+      "explanation": "場所を表す語句は文末にです。目的語→場所の語順です。",
       "hint": "目的語 + 場所"
     },
     {
@@ -712,7 +712,7 @@
       ],
       "correctAnswer": "What does she study?",
       "difficulty": "advanced",
-      "explanation": "疑問詞What + does + 主語 + 原形の語順。Whatは文頭。",
+      "explanation": "疑問詞What + does + 主語 + 原形の語順です。Whatは文頭です。",
       "hint": "What does she ～?"
     },
     {
@@ -728,7 +728,7 @@
       ],
       "correctAnswer": "She goes to school by bike.",
       "difficulty": "advanced",
-      "explanation": "交通手段はby ～で文末に。×withは使わない。",
+      "explanation": "交通手段はby ～で文末にです。×withは使わない。",
       "hint": "by + 交通手段"
     },
     {
@@ -744,7 +744,7 @@
       ],
       "correctAnswer": "studies",
       "difficulty": "beginner",
-      "explanation": "studyの三人称単数形はstudies（子音+y→-ies）。最頻出の変化パターン。",
+      "explanation": "studyの三人称単数形はstudies（子音+y→-ies）です。最頻出の変化パターンです。",
       "hint": "子音+y → -ies"
     },
     {
@@ -760,7 +760,7 @@
       ],
       "correctAnswer": "plays",
       "difficulty": "beginner",
-      "explanation": "playの三人称単数形はplays（母音+y→-s）。×-iesにしないこと。",
+      "explanation": "playの三人称単数形はplays（母音+y→-s）です。×-iesにしないこと。",
       "hint": "母音+y → -s"
     },
     {
@@ -776,7 +776,7 @@
       ],
       "correctAnswer": "goes",
       "difficulty": "beginner",
-      "explanation": "goの三人称単数形はgoes（-o→-es）。頻出の不規則パターン。",
+      "explanation": "goの三人称単数形はgoes（-o→-es）です。頻出の不規則パターンです。",
       "hint": "-o → -es"
     },
     {
@@ -792,7 +792,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "beginner",
-      "explanation": "haveの三人称単数形はhas（完全不規則）。最重要の不規則変化。",
+      "explanation": "haveの三人称単数形はhas（完全不規則）です。最重要の不規則変化です。",
       "hint": "have → has"
     },
     {
@@ -808,7 +808,7 @@
       ],
       "correctAnswer": "watches",
       "difficulty": "intermediate",
-      "explanation": "watchの三人称単数形はwatches（-ch→-es）。-sh/-ch/-x/-s/-oは-esパターン。",
+      "explanation": "watchの三人称単数形はwatches（-ch→-es）です。-sh/-ch/-x/-s/-oは-esパターンです。",
       "hint": "-ch → -es"
     },
     {
@@ -824,7 +824,7 @@
       ],
       "correctAnswer": "listen",
       "difficulty": "intermediate",
-      "explanation": "Doesの後は必ず原形。×listensは誤り。疑問文では-s/-esを付けない。",
+      "explanation": "Doesの後は必ず原形です。×listensは誤りです。疑問文では-s/-esを付けないです。",
       "hint": "Doesの後は原形"
     },
     {
@@ -840,7 +840,7 @@
       ],
       "correctAnswer": "play",
       "difficulty": "intermediate",
-      "explanation": "doesn'tの後は原形。×playsは誤り。否定文でも-s/-esを付けない。",
+      "explanation": "doesn'tの後は原形です。×playsは誤りです。否定文でも-s/-esを付けないです。",
       "hint": "doesn't + 原形"
     },
     {
@@ -856,7 +856,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
-      "explanation": "doの三人称単数形はdoes（不規則）。do the cooking（料理をする）は熟語として覚えること。",
+      "explanation": "doの三人称単数形はdoes（不規則）です。do the cooking（料理をする）は熟語として覚えてください。",
       "hint": "do → does"
     },
     {
@@ -872,7 +872,7 @@
       ],
       "correctAnswer": "washes",
       "difficulty": "advanced",
-      "explanation": "washの三人称単数形はwashes（-sh→-es）。wash the carは日常表現。",
+      "explanation": "washの三人称単数形はwashes（-sh→-es）です。wash the carは日常表現です。",
       "hint": "-sh → -es"
     },
     {
@@ -888,7 +888,7 @@
       ],
       "correctAnswer": "speak",
       "difficulty": "advanced",
-      "explanation": "Doesの後は原形speak。speak Japaneseで「日本語を話す」。",
+      "explanation": "Doesの後は原形speakです。speak Japaneseで「日本語を話す」です。",
       "hint": "Doesの後は原形"
     },
     {
@@ -913,7 +913,7 @@
       ],
       "correctAnswer": "plays",
       "difficulty": "beginner",
-      "explanation": "your brother（あなたの兄）は三人称単数なので-sを付ける。What does～?は三人称の行動を尋ねる表現。play the guitar「ギターを弾く」。",
+      "explanation": "your brother（あなたの兄）は三人称単数なので-sを付けます。What does～?は三人称の行動を尋ねる表現です。play the guitar「ギターを弾く」です。",
       "hint": "He + 動詞-s"
     },
     {
@@ -938,7 +938,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "beginner",
-      "explanation": "Does she～?にはYes, she does. / No, she doesn't.で答える。動詞の繰り返しを避けてdoesを使う。",
+      "explanation": "Does she～?にはYes, she does. / No, she doesn't.で答えります。動詞の繰り返しを避けてdoesを使います。",
       "hint": "Yes, she does"
     },
     {
@@ -963,7 +963,7 @@
       ],
       "correctAnswer": "goes",
       "difficulty": "intermediate",
-      "explanation": "How does～?は方法を尋ねる三人称の疑問文。She goesで答える。by bikeは交通手段。",
+      "explanation": "How does～?は方法を尋ねる三人称の疑問文です。She goesで答えります。by bikeは交通手段です。",
       "hint": "She goes ～"
     },
     {
@@ -988,7 +988,7 @@
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
-      "explanation": "Does he～?の否定の答えはNo, he doesn't.。every dayは習慣を表す。",
+      "explanation": "Does he～?の否定の答えはNo, he doesn't.です。every dayは習慣を表します。",
       "hint": "No, he doesn't"
     },
     {
@@ -1013,7 +1013,7 @@
       ],
       "correctAnswer": "plays",
       "difficulty": "advanced",
-      "explanation": "What does～do?は「何をするか」を尋ねる。usuallyは頻度副詞で動詞の前に置く。play the piano「ピアノを弾く」。",
+      "explanation": "What does～do?は「何をするか」を尋ねります。usuallyは頻度副詞で動詞の前に置きます。play the piano「ピアノを弾く」です。",
       "hint": "He usually plays ～"
     },
     {
@@ -1028,7 +1028,7 @@
       ],
       "correctAnswer": "aren't",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文は「肯定文, 否定疑問?」の形。You are → aren't youとする構文として覚えること。「~ですよね」という確認の意味。",
+      "explanation": "付加疑問文は「肯定文, 否定疑問?」の形です。You are → aren't youとする構文として覚えてください。「~ですよね」という確認の意味です。",
       "hint": "aren't"
     },
     {
@@ -1043,7 +1043,7 @@
       ],
       "correctAnswer": "isn't",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えること。He is → isn't heとなる。",
+      "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。He is → isn't heとなります。",
       "hint": "isn't"
     },
     {
@@ -1059,7 +1059,7 @@
       ],
       "correctAnswer": "They are friends, aren't they?",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文という構文として覚えること。They are → aren't theyと続ける。",
+      "explanation": "付加疑問文という構文として覚えてください。They are → aren't theyと続けります。",
       "hint": "aren't they",
       "wordCount": 5
     },
@@ -1075,7 +1075,7 @@
       ],
       "correctAnswer": "is",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文は「否定文, 肯定疑問?」の形になる構文として覚えること。isn't → isとなる。",
+      "explanation": "付加疑問文は「否定文, 肯定疑問?」の形になる構文として覚えてください。isn't → isとなります。",
       "hint": "is"
     },
     {
@@ -1090,7 +1090,7 @@
       ],
       "correctAnswer": "aren't",
       "difficulty": "beginner",
-      "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えること。You are → aren't you。",
+      "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。You are → aren't youです。",
       "hint": "aren't"
     },
     {
@@ -1107,7 +1107,7 @@
       ],
       "correctAnswer": "She isn't a teacher, is she?",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えること。isn't → is。",
+      "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。isn't → isです。",
       "hint": "is she",
       "wordCount": 6
     },
@@ -1123,7 +1123,7 @@
       ],
       "correctAnswer": "isn't",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文という構文として覚えること。This is → isn't itとなる。",
+      "explanation": "付加疑問文という構文として覚えてください。This is → isn't itとなります。",
       "hint": "isn't"
     },
     {
@@ -1148,7 +1148,7 @@
       ],
       "correctAnswer": "aren't",
       "difficulty": "beginner",
-      "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えること。",
+      "explanation": "付加疑問文は「肯定文, 否定疑問?」という構文として覚えてください。",
       "hint": "aren't"
     },
     {
@@ -1163,7 +1163,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えること。aren't → areとなる。",
+      "explanation": "付加疑問文は「否定文, 肯定疑問?」という構文として覚えてください。aren't → areとなります。",
       "hint": "are"
     },
     {
@@ -1180,7 +1180,7 @@
       ],
       "correctAnswer": "That is her bike, isn't it?",
       "difficulty": "intermediate",
-      "explanation": "付加疑問文という構文として覚えること。That is → isn't it。",
+      "explanation": "付加疑問文という構文として覚えてください。That is → isn't itです。",
       "hint": "isn't it",
       "wordCount": 6
     },
@@ -1196,7 +1196,7 @@
       ],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
-      "explanation": "一般動詞の付加疑問文は「肯定文, don't/doesn't...?」という構文として覚えること。You study → don't you。",
+      "explanation": "一般動詞の付加疑問文は「肯定文, don't/doesn't...?」という構文として覚えてください。You study → don't youです。",
       "hint": "don't"
     },
     {
@@ -1211,7 +1211,7 @@
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の付加疑問文は「肯定文, doesn't...?」という構文として覚えること。He plays → doesn't he。",
+      "explanation": "三人称単数の付加疑問文は「肯定文, doesn't...?」という構文として覚えてください。He plays → doesn't heです。",
       "hint": "doesn't"
     },
     {
@@ -1227,7 +1227,7 @@
       ],
       "correctAnswer": "She likes music, doesn't she?",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の付加疑問文という構文として覚えること。likes → doesn't。",
+      "explanation": "三人称単数の付加疑問文という構文として覚えてください。likes → doesn'tです。",
       "hint": "doesn't she",
       "wordCount": 5
     },
@@ -1243,7 +1243,7 @@
       ],
       "correctAnswer": "do",
       "difficulty": "intermediate",
-      "explanation": "否定文の付加疑問文は「否定文, do/does...?」という構文として覚えること。don't → do。",
+      "explanation": "否定文の付加疑問文は「否定文, do/does...?」という構文として覚えてください。don't → doです。",
       "hint": "do"
     },
     {
@@ -1258,7 +1258,7 @@
       ],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
-      "explanation": "複数の付加疑問文は「肯定文, don't...?」という構文として覚えること。They run → don't they。",
+      "explanation": "複数の付加疑問文は「肯定文, don't...?」という構文として覚えてください。They run → don't theyです。",
       "hint": "don't"
     },
     {
@@ -1275,7 +1275,7 @@
       ],
       "correctAnswer": "He doesn't eat breakfast, does he?",
       "difficulty": "intermediate",
-      "explanation": "否定文の付加疑問文は「否定文, does...?」という構文として覚えること。",
+      "explanation": "否定文の付加疑問文は「否定文, does...?」という構文として覚えてください。",
       "hint": "does he",
       "wordCount": 6
     },
@@ -1291,7 +1291,7 @@
       ],
       "correctAnswer": "don't",
       "difficulty": "intermediate",
-      "explanation": "一般動詞haveの付加疑問文は「肯定文, don't...?」という構文として覚えること。",
+      "explanation": "一般動詞haveの付加疑問文は「肯定文, don't...?」という構文として覚えてください。",
       "hint": "don't"
     },
     {
@@ -1316,7 +1316,7 @@
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の付加疑問文という構文として覚えること。speaks → doesn't。",
+      "explanation": "三人称単数の付加疑問文という構文として覚えてください。speaks → doesn'tです。",
       "hint": "doesn't"
     },
     {
@@ -1331,7 +1331,7 @@
       ],
       "correctAnswer": "don't",
       "difficulty": "beginner",
-      "explanation": "一般動詞の付加疑問文は「肯定文, don't...?」という構文として覚えること。",
+      "explanation": "一般動詞の付加疑問文は「肯定文, don't...?」という構文として覚えてください。",
       "hint": "don't"
     },
     {
@@ -1348,7 +1348,7 @@
       ],
       "correctAnswer": "He doesn't play baseball, does he?",
       "difficulty": "intermediate",
-      "explanation": "否定文の付加疑問文という構文として覚えること。doesn't → does。",
+      "explanation": "否定文の付加疑問文という構文として覚えてください。doesn't → doesです。",
       "hint": "does he",
       "wordCount": 6
     },
@@ -1364,7 +1364,7 @@
       ],
       "correctAnswer": "don't",
       "difficulty": "beginner",
-      "explanation": "一般動詞の付加疑問文という構文として覚えること。You read → don't you。",
+      "explanation": "一般動詞の付加疑問文という構文として覚えてください。You read → don't youです。",
       "hint": "don't"
     },
     {
@@ -1379,7 +1379,7 @@
       ],
       "correctAnswer": "does",
       "difficulty": "intermediate",
-      "explanation": "否定文の付加疑問文は「否定文, does...?」という構文として覚えること。",
+      "explanation": "否定文の付加疑問文は「否定文, does...?」という構文として覚えてください。",
       "hint": "does"
     },
     {
@@ -1395,7 +1395,7 @@
       ],
       "correctAnswer": "They live here, don't they?",
       "difficulty": "intermediate",
-      "explanation": "一般動詞の付加疑問文という構文として覚えること。live → don't。",
+      "explanation": "一般動詞の付加疑問文という構文として覚えてください。live → don'tです。",
       "hint": "don't they",
       "wordCount": 5
     },
@@ -1421,7 +1421,7 @@
       ],
       "correctAnswer": "do",
       "difficulty": "intermediate",
-      "explanation": "否定文の付加疑問文は「否定文, do...?」という構文として覚えること。",
+      "explanation": "否定文の付加疑問文は「否定文, do...?」という構文として覚えてください。",
       "hint": "do"
     },
     {
@@ -1436,7 +1436,7 @@
       ],
       "correctAnswer": "doesn't",
       "difficulty": "intermediate",
-      "explanation": "三人称単数の付加疑問文という構文として覚えること。studies → doesn't。",
+      "explanation": "三人称単数の付加疑問文という構文として覚えてください。studies → doesn'tです。",
       "hint": "doesn't"
     },
     {
@@ -1451,7 +1451,7 @@
       ],
       "correctAnswer": "shall",
       "difficulty": "advanced",
-      "explanation": "Let's の付加疑問文は shall we? という構文として覚えること。Let's go → shall we?は決まった形。",
+      "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。Let's go → shall we?は決まった形です。",
       "hint": "shall"
     },
     {
@@ -1468,7 +1468,7 @@
       ],
       "correctAnswer": "Let's have lunch together, shall we?",
       "difficulty": "advanced",
-      "explanation": "Let's の付加疑問文は shall we? という構文として覚えること。",
+      "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。",
       "hint": "shall we",
       "wordCount": 6
     },
@@ -1484,7 +1484,7 @@
       ],
       "correctAnswer": "will",
       "difficulty": "advanced",
-      "explanation": "命令文の付加疑問文は will you? という構文として覚えること。Open → will you?で丁寧な依頼になる。",
+      "explanation": "命令文の付加疑問文は will you? という構文として覚えてください。Open → will you?で丁寧な依頼になります。",
       "hint": "will"
     },
     {
@@ -1499,7 +1499,7 @@
       ],
       "correctAnswer": "shall",
       "difficulty": "advanced",
-      "explanation": "Let's の付加疑問文は shall we? という構文として覚えること。",
+      "explanation": "Let's の付加疑問文は shall we? という構文として覚えてください。",
       "hint": "shall"
     },
     {
@@ -1514,7 +1514,7 @@
       ],
       "correctAnswer": "Be quiet, will you?",
       "difficulty": "advanced",
-      "explanation": "命令文の付加疑問文は will you? という構文として覚えること。",
+      "explanation": "命令文の付加疑問文は will you? という構文として覚えてください。",
       "hint": "will you",
       "wordCount": 4
     }

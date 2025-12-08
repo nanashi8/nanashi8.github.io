@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明1。",
+      "explanation": "存在を表す構文の説明1です。",
       "hint": "ヒント"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明2。",
+      "explanation": "存在を表す構文の説明2です。",
       "hint": "ヒント"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明3。",
+      "explanation": "存在を表す構文の説明3です。",
       "hint": "ヒント"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明4。",
+      "explanation": "存在を表す構文の説明4です。",
       "hint": "ヒント"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明5。",
+      "explanation": "存在を表す構文の説明5です。",
       "hint": "ヒント"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明6。",
+      "explanation": "存在を表す構文の説明6です。",
       "hint": "ヒント"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明7。",
+      "explanation": "存在を表す構文の説明7です。",
       "hint": "ヒント"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明8。",
+      "explanation": "存在を表す構文の説明8です。",
       "hint": "ヒント"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明9。",
+      "explanation": "存在を表す構文の説明9です。",
       "hint": "ヒント"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明10。",
+      "explanation": "存在を表す構文の説明10です。",
       "hint": "ヒント"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明11。",
+      "explanation": "存在を表す構文の説明11です。",
       "hint": "ヒント"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明12。",
+      "explanation": "存在を表す構文の説明12です。",
       "hint": "ヒント"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明13。",
+      "explanation": "存在を表す構文の説明13です。",
       "hint": "ヒント"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明14。",
+      "explanation": "存在を表す構文の説明14です。",
       "hint": "ヒント"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明15。",
+      "explanation": "存在を表す構文の説明15です。",
       "hint": "ヒント"
     },
     {
@@ -247,7 +247,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文1。",
+      "explanation": "存在を表す構文の文1です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -262,7 +262,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文2。",
+      "explanation": "存在を表す構文の文2です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -277,7 +277,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文3。",
+      "explanation": "存在を表す構文の文3です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -292,7 +292,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文4。",
+      "explanation": "存在を表す構文の文4です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -307,7 +307,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文5。",
+      "explanation": "存在を表す構文の文5です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -322,7 +322,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文6。",
+      "explanation": "存在を表す構文の文6です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -337,7 +337,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文7。",
+      "explanation": "存在を表す構文の文7です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -352,7 +352,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文8。",
+      "explanation": "存在を表す構文の文8です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -367,7 +367,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文9。",
+      "explanation": "存在を表す構文の文9です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -382,7 +382,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文10。",
+      "explanation": "存在を表す構文の文10です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -397,7 +397,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文11。",
+      "explanation": "存在を表す構文の文11です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -412,7 +412,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文12。",
+      "explanation": "存在を表す構文の文12です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -427,7 +427,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文13。",
+      "explanation": "存在を表す構文の文13です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -442,7 +442,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文14。",
+      "explanation": "存在を表す構文の文14です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -457,7 +457,7 @@
       ],
       "correctAnswer": "Word1 word2 word3.",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の文15。",
+      "explanation": "存在を表す構文の文15です。",
       "hint": "順序",
       "wordCount": 3
     },
@@ -474,7 +474,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換1。",
+      "explanation": "存在を表す構文の変換1です。",
       "hint": "変換"
     },
     {
@@ -490,7 +490,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換2。",
+      "explanation": "存在を表す構文の変換2です。",
       "hint": "変換"
     },
     {
@@ -506,7 +506,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換3。",
+      "explanation": "存在を表す構文の変換3です。",
       "hint": "変換"
     },
     {
@@ -522,7 +522,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換4。",
+      "explanation": "存在を表す構文の変換4です。",
       "hint": "変換"
     },
     {
@@ -538,7 +538,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換5。",
+      "explanation": "存在を表す構文の変換5です。",
       "hint": "変換"
     },
     {
@@ -554,7 +554,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換6。",
+      "explanation": "存在を表す構文の変換6です。",
       "hint": "変換"
     },
     {
@@ -570,7 +570,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換7。",
+      "explanation": "存在を表す構文の変換7です。",
       "hint": "変換"
     },
     {
@@ -586,7 +586,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換8。",
+      "explanation": "存在を表す構文の変換8です。",
       "hint": "変換"
     },
     {
@@ -602,7 +602,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換9。",
+      "explanation": "存在を表す構文の変換9です。",
       "hint": "変換"
     },
     {
@@ -618,7 +618,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換10。",
+      "explanation": "存在を表す構文の変換10です。",
       "hint": "変換"
     },
     {
@@ -634,7 +634,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換11。",
+      "explanation": "存在を表す構文の変換11です。",
       "hint": "変換"
     },
     {
@@ -650,7 +650,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換12。",
+      "explanation": "存在を表す構文の変換12です。",
       "hint": "変換"
     },
     {
@@ -666,7 +666,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換13。",
+      "explanation": "存在を表す構文の変換13です。",
       "hint": "変換"
     },
     {
@@ -682,7 +682,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換14。",
+      "explanation": "存在を表す構文の変換14です。",
       "hint": "変換"
     },
     {
@@ -698,7 +698,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換15。",
+      "explanation": "存在を表す構文の変換15です。",
       "hint": "変換"
     },
     {
@@ -714,7 +714,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞1。",
+      "explanation": "存在を表す構文の動詞1です。",
       "hint": "動詞"
     },
     {
@@ -730,7 +730,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞2。",
+      "explanation": "存在を表す構文の動詞2です。",
       "hint": "動詞"
     },
     {
@@ -746,7 +746,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞3。",
+      "explanation": "存在を表す構文の動詞3です。",
       "hint": "動詞"
     },
     {
@@ -762,7 +762,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞4。",
+      "explanation": "存在を表す構文の動詞4です。",
       "hint": "動詞"
     },
     {
@@ -778,7 +778,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞5。",
+      "explanation": "存在を表す構文の動詞5です。",
       "hint": "動詞"
     },
     {
@@ -794,7 +794,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞6。",
+      "explanation": "存在を表す構文の動詞6です。",
       "hint": "動詞"
     },
     {
@@ -810,7 +810,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞7。",
+      "explanation": "存在を表す構文の動詞7です。",
       "hint": "動詞"
     },
     {
@@ -826,7 +826,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞8。",
+      "explanation": "存在を表す構文の動詞8です。",
       "hint": "動詞"
     },
     {
@@ -842,7 +842,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞9。",
+      "explanation": "存在を表す構文の動詞9です。",
       "hint": "動詞"
     },
     {
@@ -858,7 +858,7 @@
       ],
       "correctAnswer": "form1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞10。",
+      "explanation": "存在を表す構文の動詞10です。",
       "hint": "動詞"
     },
     {
@@ -883,7 +883,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の会話1。",
+      "explanation": "存在を表す構文の会話1です。",
       "hint": "会話"
     },
     {
@@ -908,7 +908,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の会話2。",
+      "explanation": "存在を表す構文の会話2です。",
       "hint": "会話"
     },
     {
@@ -933,7 +933,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の会話3。",
+      "explanation": "存在を表す構文の会話3です。",
       "hint": "会話"
     },
     {
@@ -958,7 +958,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "intermediate",
-      "explanation": "存在を表す構文の会話4。",
+      "explanation": "存在を表す構文の会話4です。",
       "hint": "会話"
     },
     {
@@ -983,7 +983,7 @@
       ],
       "correctAnswer": "choice1",
       "difficulty": "advanced",
-      "explanation": "存在を表す構文の会話5。",
+      "explanation": "存在を表す構文の会話5です。",
       "hint": "会話"
     },
     {
@@ -998,7 +998,7 @@
       ],
       "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "mustは「~しなければならない」という強い義務を表す助動詞として覚えること。主観的な義務や強制を示す。",
+      "explanation": "mustは「~しなければならない」という強い義務を表す助動詞として覚えてください。主観的な義務や強制を示します。",
       "hint": "義務"
     },
     {
@@ -1013,7 +1013,7 @@
       ],
       "correctAnswer": "have",
       "difficulty": "intermediate",
-      "explanation": "have to は「~しなければならない」という客観的な義務を表す表現として覚えること。mustより客観的。I have to get up.",
+      "explanation": "have to は「~しなければならない」という客観的な義務を表す表現として覚えてください。mustより客観的です。I have to get up.です。",
       "hint": "客観的義務"
     },
     {
@@ -1028,7 +1028,7 @@
       ],
       "correctAnswer": "He must take medicine.",
       "difficulty": "beginner",
-      "explanation": "mustは主語 + must + 動詞の原形という語順として覚えること。「~しなければならない」。",
+      "explanation": "mustは主語 + must + 動詞の原形という語順として覚えてください。「~しなければならない」です。",
       "hint": "must + 動詞原形",
       "wordCount": 4
     },
@@ -1044,7 +1044,7 @@
       ],
       "correctAnswer": "has",
       "difficulty": "intermediate",
-      "explanation": "have toの三人称単数形はhas toとなることを覚えること。She has to practice.「彼女は練習しなければならない」。",
+      "explanation": "have toの三人称単数形はhas toとなることを覚えてください。She has to practice.「彼女は練習しなければならない」です。",
       "hint": "三人称単数"
     },
     {
@@ -1055,7 +1055,7 @@
       "question": "You ____ go to bed early.",
       "correctAnswer": "have to",
       "difficulty": "intermediate",
-      "explanation": "mustとhave toは基本的に同じ意味。mustは主観的、have toは客観的義務を表す。"
+      "explanation": "mustとhave toは基本的に同じ意味です。mustは主観的、have toは客観的義務を表します。"
     },
     {
       "id": "g2-u8-must-006",
@@ -1079,7 +1079,7 @@
       ],
       "correctAnswer": "must",
       "difficulty": "intermediate",
-      "explanation": "mustで強い必要性「~しなければならない」を表す。I must leave now.「今すぐ出発しなければ」。",
+      "explanation": "mustで強い必要性「~しなければならない」を表します。I must leave now.「今すぐ出発しなければ」です。",
       "hint": "強い必要性"
     },
     {
@@ -1094,7 +1094,7 @@
       ],
       "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "mustは「~しなければならない」という義務を表す助動詞として覚えること。We must follow.「従わなければならない」。",
+      "explanation": "mustは「~しなければならない」という義務を表す助動詞として覚えてください。We must follow.「従わなければならない」です。",
       "hint": "義務"
     },
     {
@@ -1112,7 +1112,7 @@
       ],
       "correctAnswer": "He has to get up early tomorrow.",
       "difficulty": "intermediate",
-      "explanation": "have toは主語 + have/has + to + 動詞の原形という語順として覚えること。",
+      "explanation": "have toは主語 + have/has + to + 動詞の原形という語順として覚えてください。",
       "hint": "has to get",
       "wordCount": 7
     },
@@ -1128,7 +1128,7 @@
       ],
       "correctAnswer": "must",
       "difficulty": "intermediate",
-      "explanation": "mustの後はbe動詞の原形beを使うことを覚えること。You must be careful.「注意深くならなければ」。",
+      "explanation": "mustの後はbe動詞の原形beを使うことを覚えてください。You must be careful.「注意深くならなければ」です。",
       "hint": "must be"
     },
     {
@@ -1139,7 +1139,7 @@
       "question": "I ____ go to school.",
       "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "have toとmustは基本的に同じ意味。両方とも「~しなければならない」を表す。"
+      "explanation": "have toとmustは基本的に同じ意味です。両方とも「~しなければならない」を表します。"
     }
   ]
 }
