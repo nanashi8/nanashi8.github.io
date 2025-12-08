@@ -1,1150 +1,1129 @@
 {
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "enabled": true,
   "unit": "Unit 8",
   "title": "There is/are",
   "grammar": "存在を表す構文",
-  "totalQuestions": 70,
+  "totalQuestions": 60,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 17,
-    "paraphrase": 17,
+    "fillInBlank": 15,
+    "sentenceOrdering": 15,
+    "paraphrase": 15,
     "verbForm": 10,
-    "conversation": 6
+    "conversation": 5
   },
   "questions": [
     {
       "id": "g2-u8-fib-001",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め1。",
-      "sentence": "Example sentence 1 with ____ blank.",
+      "japanese": "机の上に本があります。",
+      "sentence": "There ____ a book on the desk.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明1です。",
-      "hint": "ヒント"
+      "explanation": "単数のa bookなのでisを使います。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-002",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め2。",
-      "sentence": "Example sentence 2 with ____ blank.",
+      "japanese": "公園に子供たちがいます。",
+      "sentence": "There ____ children in the park.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明2です。",
-      "hint": "ヒント"
+      "explanation": "複数のchildrenなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-003",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め3。",
-      "sentence": "Example sentence 3 with ____ blank.",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "sentence": "There ____ milk in the fridge.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明3です。",
-      "hint": "ヒント"
+      "explanation": "数えられないmilkなのでisです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-004",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め4。",
-      "sentence": "Example sentence 4 with ____ blank.",
+      "japanese": "教室に生徒が一人います。",
+      "sentence": "There ____ a student in the classroom.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明4です。",
-      "hint": "ヒント"
+      "explanation": "単数のa studentなのでisです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-005",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め5。",
-      "sentence": "Example sentence 5 with ____ blank.",
+      "japanese": "庭に花がたくさんあります。",
+      "sentence": "There ____ many flowers in the garden.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の説明5です。",
-      "hint": "ヒント"
+      "explanation": "複数のflowersなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-006",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め6。",
-      "sentence": "Example sentence 6 with ____ blank.",
+      "japanese": "机の上に猫がいます。",
+      "sentence": "There ____ a cat on the table.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明6です。",
-      "hint": "ヒント"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa catなのでisです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-007",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め7。",
-      "sentence": "Example sentence 7 with ____ blank.",
+      "japanese": "箱の中にりんごがあります。",
+      "sentence": "There ____ apples in the box.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明7です。",
-      "hint": "ヒント"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のapplesなのでareです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-008",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め8。",
-      "sentence": "Example sentence 8 with ____ blank.",
+      "japanese": "部屋に誰かいます。",
+      "sentence": "There ____ someone in the room.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明8です。",
-      "hint": "ヒント"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "someoneは単数扱いなのでisです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-009",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め9。",
-      "sentence": "Example sentence 9 with ____ blank.",
+      "japanese": "壁に絵があります。",
+      "sentence": "There ____ a picture on the wall.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明9です。",
-      "hint": "ヒント"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa pictureなのでisを使います。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-010",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め10。",
-      "sentence": "Example sentence 10 with ____ blank.",
+      "japanese": "カバンの中に本が3冊あります。",
+      "sentence": "There ____ three books in the bag.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明10です。",
-      "hint": "ヒント"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のthree booksなのでareです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-011",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め11。",
-      "sentence": "Example sentence 11 with ____ blank.",
+      "japanese": "テーブルの上にコップがあります。",
+      "sentence": "There ____ a glass on the table.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の説明11です。",
-      "hint": "ヒント"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa glassなのでisです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-012",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め12。",
-      "sentence": "Example sentence 12 with ____ blank.",
+      "japanese": "学校に先生がたくさんいます。",
+      "sentence": "There ____ many teachers at school.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明12です。",
-      "hint": "ヒント"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のteachersなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-013",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め13。",
-      "sentence": "Example sentence 13 with ____ blank.",
+      "japanese": "冷蔵庫に卵があります。",
+      "sentence": "There ____ eggs in the fridge.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明13です。",
-      "hint": "ヒント"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のeggsなのでareです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-014",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め14。",
-      "sentence": "Example sentence 14 with ____ blank.",
+      "japanese": "窓の近くに椅子があります。",
+      "sentence": "There ____ a chair near the window.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明14です。",
-      "hint": "ヒント"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "単数のa chairなのでisです。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-fib-015",
       "type": "fillInBlank",
-      "japanese": "There is/are穴埋め15。",
-      "sentence": "Example sentence 15 with ____ blank.",
+      "japanese": "空に星がたくさんあります。",
+      "sentence": "There ____ many stars in the sky.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の説明15です。",
-      "hint": "ヒント"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "複数のstarsなのでareを使います。",
+      "hint": "単数ならis、複数ならare"
     },
     {
       "id": "g2-u8-so-001",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え1。",
+      "japanese": "机の上に本があります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "a",
+        "book",
+        "on",
+        "the",
+        "desk",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "book",
+        "on",
+        "the",
+        "desk",
+        "."
+      ],
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文1です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "There is + 単数名詞の語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-002",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え2。",
+      "japanese": "公園に子供たちがいます。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "children",
+        "in",
+        "the",
+        "park",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
+      "correctOrder": [
+        "There",
+        "are",
+        "children",
+        "in",
+        "the",
+        "park",
+        "."
+      ],
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文2です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "There are + 複数名詞の語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-003",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え3。",
+      "japanese": "冷蔵庫に牛乳があります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "milk",
+        "in",
+        "the",
+        "fridge",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
+      "correctOrder": [
+        "There",
+        "is",
+        "milk",
+        "in",
+        "the",
+        "fridge",
+        "."
+      ],
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文3です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "数えられない名詞はisを使います。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-004",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え4。",
+      "japanese": "教室に生徒が一人います。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "a",
+        "student",
+        "in",
+        "the",
+        "classroom",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "student",
+        "in",
+        "the",
+        "classroom",
+        "."
+      ],
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文4です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "There is a studentの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-005",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え5。",
+      "japanese": "庭に花がたくさんあります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "many",
+        "flowers",
+        "in",
+        "the",
+        "garden",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
+      "correctOrder": [
+        "There",
+        "are",
+        "many",
+        "flowers",
+        "in",
+        "the",
+        "garden",
+        "."
+      ],
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の文5です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "There are many flowersです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-006",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え6。",
+      "japanese": "机の上に猫がいます。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "a",
+        "cat",
+        "on",
+        "the",
+        "table",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文6です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "cat",
+        "on",
+        "the",
+        "table",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a catの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-007",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え7。",
+      "japanese": "箱の中にりんごがあります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "apples",
+        "in",
+        "the",
+        "box",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文7です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "are",
+        "apples",
+        "in",
+        "the",
+        "box",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数形applesなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-008",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え8。",
+      "japanese": "部屋に誰かいます。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "someone",
+        "in",
+        "the",
+        "room",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文8です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "is",
+        "someone",
+        "in",
+        "the",
+        "room",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "someoneは単数なのでisです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-009",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え9。",
+      "japanese": "壁に絵があります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "a",
+        "picture",
+        "on",
+        "the",
+        "wall",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文9です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "picture",
+        "on",
+        "the",
+        "wall",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a pictureの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-010",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え10。",
+      "japanese": "カバンの中に本が3冊あります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "three",
+        "books",
+        "in",
+        "the",
+        "bag",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の文10です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "are",
+        "three",
+        "books",
+        "in",
+        "the",
+        "bag",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "three booksは複数なのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-011",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え11。",
+      "japanese": "テーブルの上にコップがあります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "a",
+        "glass",
+        "on",
+        "the",
+        "table",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の文11です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "glass",
+        "on",
+        "the",
+        "table",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a glassの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-012",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え12。",
+      "japanese": "学校に先生がたくさんいます。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "many",
+        "teachers",
+        "at",
+        "school",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の文12です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "are",
+        "many",
+        "teachers",
+        "at",
+        "school",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数のteachersなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-013",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え13。",
+      "japanese": "冷蔵庫に卵があります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "eggs",
+        "in",
+        "the",
+        "fridge",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の文13です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "are",
+        "eggs",
+        "in",
+        "the",
+        "fridge",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "複数eggsなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-014",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え14。",
+      "japanese": "窓の近くに椅子があります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "is",
+        "a",
+        "chair",
+        "near",
+        "the",
+        "window",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の文14です。",
-      "hint": "順序",
-      "wordCount": 3
+      "correctOrder": [
+        "There",
+        "is",
+        "a",
+        "chair",
+        "near",
+        "the",
+        "window",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "There is a chairの語順です。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
       "id": "g2-u8-so-015",
       "type": "sentenceOrdering",
-      "japanese": "There is/are並べ替え15。",
+      "japanese": "空に星がたくさんあります。",
       "words": [
-        "word1",
-        "word2",
-        "word3"
+        "There",
+        "are",
+        "many",
+        "stars",
+        "in",
+        "the",
+        "sky",
+        "."
       ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の文15です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u8-para-001",
-      "type": "paraphrase",
-      "japanese": "There is/are言い換え1。",
-      "originalSentence": "Original sentence 1.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+      "correctOrder": [
+        "There",
+        "are",
+        "many",
+        "stars",
+        "in",
+        "the",
+        "sky",
+        "."
       ],
-      "correctAnswer": "choice1",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換1です。",
-      "hint": "変換"
+      "explanation": "複数starsなのでareです。",
+      "hint": "There is/are + 名詞 + 場所"
     },
     {
-      "id": "g2-u8-para-002",
+      "id": "g2-u8-pp-001",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え2。",
-      "originalSentence": "Original sentence 2.",
-      "question": "書き換えなさい",
+      "japanese": "机の上に本があります。",
+      "sentence": "A book exists on the desk.",
+      "targetSentence": "There ____ a book on the desk.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換2です。",
-      "hint": "変換"
+      "explanation": "存在を表すThere isで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-003",
+      "id": "g2-u8-pp-002",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え3。",
-      "originalSentence": "Original sentence 3.",
-      "question": "書き換えなさい",
+      "japanese": "公園に子供たちがいます。",
+      "sentence": "Children exist in the park.",
+      "targetSentence": "There ____ children in the park.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換3です。",
-      "hint": "変換"
+      "explanation": "There areで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-004",
+      "id": "g2-u8-pp-003",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え4。",
-      "originalSentence": "Original sentence 4.",
-      "question": "書き換えなさい",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "sentence": "Milk exists in the fridge.",
+      "targetSentence": "There ____ milk in the fridge.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換4です。",
-      "hint": "変換"
+      "explanation": "There isで表現します。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-005",
+      "id": "g2-u8-pp-004",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え5。",
-      "originalSentence": "Original sentence 5.",
-      "question": "書き換えなさい",
+      "japanese": "教室に生徒が一人います。",
+      "sentence": "A student exists in the classroom.",
+      "targetSentence": "There ____ a student in the classroom.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の変換5です。",
-      "hint": "変換"
+      "explanation": "There is a studentで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-006",
+      "id": "g2-u8-pp-005",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え6。",
-      "originalSentence": "Original sentence 6.",
-      "question": "書き換えなさい",
+      "japanese": "庭に花がたくさんあります。",
+      "sentence": "Many flowers exist in the garden.",
+      "targetSentence": "There ____ many flowers in the garden.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換6です。",
-      "hint": "変換"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are flowersです。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-007",
+      "id": "g2-u8-pp-006",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え7。",
-      "originalSentence": "Original sentence 7.",
-      "question": "書き換えなさい",
+      "japanese": "机の上に猫がいます。",
+      "sentence": "A cat exists on the table.",
+      "targetSentence": "There ____ a cat on the table.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換7です。",
-      "hint": "変換"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a catで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-008",
+      "id": "g2-u8-pp-007",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え8。",
-      "originalSentence": "Original sentence 8.",
-      "question": "書き換えなさい",
+      "japanese": "箱の中にりんごがあります。",
+      "sentence": "Apples exist in the box.",
+      "targetSentence": "There ____ apples in the box.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換8です。",
-      "hint": "変換"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are applesです。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-009",
+      "id": "g2-u8-pp-008",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え9。",
-      "originalSentence": "Original sentence 9.",
-      "question": "書き換えなさい",
+      "japanese": "部屋に誰かいます。",
+      "sentence": "Someone exists in the room.",
+      "targetSentence": "There ____ someone in the room.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換9です。",
-      "hint": "変換"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is someoneで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-010",
+      "id": "g2-u8-pp-009",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え10。",
-      "originalSentence": "Original sentence 10.",
-      "question": "書き換えなさい",
+      "japanese": "壁に絵があります。",
+      "sentence": "A picture exists on the wall.",
+      "targetSentence": "There ____ a picture on the wall.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の変換10です。",
-      "hint": "変換"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a pictureです。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-011",
+      "id": "g2-u8-pp-010",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え11。",
-      "originalSentence": "Original sentence 11.",
-      "question": "書き換えなさい",
+      "japanese": "カバンの中に本が3冊あります。",
+      "sentence": "Three books exist in the bag.",
+      "targetSentence": "There ____ three books in the bag.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換11です。",
-      "hint": "変換"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are booksで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-012",
+      "id": "g2-u8-pp-011",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え12。",
-      "originalSentence": "Original sentence 12.",
-      "question": "書き換えなさい",
+      "japanese": "テーブルの上にコップがあります。",
+      "sentence": "A glass exists on the table.",
+      "targetSentence": "There ____ a glass on the table.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換12です。",
-      "hint": "変換"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a glassです。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-013",
+      "id": "g2-u8-pp-012",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え13。",
-      "originalSentence": "Original sentence 13.",
-      "question": "書き換えなさい",
+      "japanese": "学校に先生がたくさんいます。",
+      "sentence": "Many teachers exist at school.",
+      "targetSentence": "There ____ many teachers at school.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換13です。",
-      "hint": "変換"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are teachersで言い換えます。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-014",
+      "id": "g2-u8-pp-013",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え14。",
-      "originalSentence": "Original sentence 14.",
-      "question": "書き換えなさい",
+      "japanese": "冷蔵庫に卵があります。",
+      "sentence": "Eggs exist in the fridge.",
+      "targetSentence": "There ____ eggs in the fridge.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換14です。",
-      "hint": "変換"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are eggsです。",
+      "hint": "There is/areで言い換え"
     },
     {
-      "id": "g2-u8-para-015",
+      "id": "g2-u8-pp-014",
       "type": "paraphrase",
-      "japanese": "There is/are言い換え15。",
-      "originalSentence": "Original sentence 15.",
-      "question": "書き換えなさい",
+      "japanese": "窓の近くに椅子があります。",
+      "sentence": "A chair exists near the window.",
+      "targetSentence": "There ____ a chair near the window.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の変換15です。",
-      "hint": "変換"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "There is a chairで言い換えます。",
+      "hint": "There is/areで言い換え"
+    },
+    {
+      "id": "g2-u8-pp-015",
+      "type": "paraphrase",
+      "japanese": "空に星がたくさんあります。",
+      "sentence": "Many stars exist in the sky.",
+      "targetSentence": "There ____ many stars in the sky.",
+      "choices": [
+        "are",
+        "is",
+        "am"
+      ],
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "There are starsです。",
+      "hint": "There is/areで言い換え"
     },
     {
       "id": "g2-u8-vf-001",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化1。",
-      "sentence": "Sentence 1 with ____.",
-      "verb": "verb",
+      "japanese": "机の上に本があります。",
+      "sentence": "There ____ a book on the desk.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "form1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞1です。",
-      "hint": "動詞"
+      "explanation": "a bookは単数なのでisです。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-002",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化2。",
-      "sentence": "Sentence 2 with ____.",
-      "verb": "verb",
+      "japanese": "公園に子供たちがいます。",
+      "sentence": "There ____ children in the park.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "form1",
+      "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞2です。",
-      "hint": "動詞"
+      "explanation": "childrenは複数なのでareです。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-003",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化3。",
-      "sentence": "Sentence 3 with ____.",
-      "verb": "verb",
+      "japanese": "冷蔵庫に牛乳があります。",
+      "sentence": "There ____ milk in the fridge.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "form1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞3です。",
-      "hint": "動詞"
+      "explanation": "milkは数えられないのでisです。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-004",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化4。",
-      "sentence": "Sentence 4 with ____.",
-      "verb": "verb",
+      "japanese": "教室に生徒が一人います。",
+      "sentence": "There ____ a student in the classroom.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "form1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の動詞4です。",
-      "hint": "動詞"
+      "explanation": "a studentは単数です。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-005",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化5。",
-      "sentence": "Sentence 5 with ____.",
-      "verb": "verb",
+      "japanese": "庭に花がたくさんあります。",
+      "sentence": "There ____ many flowers in the garden.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞5です。",
-      "hint": "動詞"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "flowersは複数です。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-006",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化6。",
-      "sentence": "Sentence 6 with ____.",
-      "verb": "verb",
+      "japanese": "机の上に猫がいます。",
+      "sentence": "There ____ a cat on the table.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞6です。",
-      "hint": "動詞"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a catは単数です。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-007",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化7。",
-      "sentence": "Sentence 7 with ____.",
-      "verb": "verb",
+      "japanese": "箱の中にりんごがあります。",
+      "sentence": "There ____ apples in the box.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の動詞7です。",
-      "hint": "動詞"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "applesは複数です。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-008",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化8。",
-      "sentence": "Sentence 8 with ____.",
-      "verb": "verb",
+      "japanese": "部屋に誰かいます。",
+      "sentence": "There ____ someone in the room.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞8です。",
-      "hint": "動詞"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "someoneは単数扱いです。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-009",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化9。",
-      "sentence": "Sentence 9 with ____.",
-      "verb": "verb",
+      "japanese": "壁に絵があります。",
+      "sentence": "There ____ a picture on the wall.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞9です。",
-      "hint": "動詞"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a pictureは単数です。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-vf-010",
       "type": "verbForm",
-      "japanese": "There is/are動詞変化10。",
-      "sentence": "Sentence 10 with ____.",
-      "verb": "verb",
+      "japanese": "カバンの中に本が3冊あります。",
+      "sentence": "There ____ three books in the bag.",
       "choices": [
-        "form1",
-        "form2",
-        "form3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の動詞10です。",
-      "hint": "動詞"
+      "correctAnswer": "are",
+      "difficulty": "beginner",
+      "explanation": "three booksは複数です。",
+      "hint": "名詞が単数か複数かで判断"
     },
     {
       "id": "g2-u8-conv-001",
       "type": "conversation",
-      "japanese": "There is/are会話1。",
-      "situation": "状況1",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 1?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 机の上に何がありますか? B: 本があります。",
+      "conversation": [
+        "A: What is on the desk?",
+        "B: There ____ a book."
       ],
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "is",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の会話1です。",
-      "hint": "会話"
+      "explanation": "a bookは単数なのでisです。",
+      "hint": "名詞の単複に注目"
     },
     {
       "id": "g2-u8-conv-002",
       "type": "conversation",
-      "japanese": "There is/are会話2。",
-      "situation": "状況2",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 2?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 公園に誰がいますか? B: 子供たちがいます。",
+      "conversation": [
+        "A: Who is in the park?",
+        "B: There ____ children."
       ],
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "存在を表す構文の会話2です。",
-      "hint": "会話"
+      "explanation": "childrenは複数なのでareです。",
+      "hint": "名詞の単複に注目"
     },
     {
       "id": "g2-u8-conv-003",
       "type": "conversation",
-      "japanese": "There is/are会話3。",
-      "situation": "状況3",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 3?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 冷蔵庫に何かありますか? B: 牛乳があります。",
+      "conversation": [
+        "A: Is there anything in the fridge?",
+        "B: Yes, there ____ milk."
       ],
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の会話3です。",
-      "hint": "会話"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "milkは数えられないのでisです。",
+      "hint": "名詞の単複に注目"
     },
     {
       "id": "g2-u8-conv-004",
       "type": "conversation",
-      "japanese": "There is/are会話4。",
-      "situation": "状況4",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 4?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 教室に誰かいますか? B: はい、生徒が一人います。",
+      "conversation": [
+        "A: Is there anyone in the classroom?",
+        "B: Yes, there ____ a student."
       ],
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "is",
+        "are",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "存在を表す構文の会話4です。",
-      "hint": "会話"
+      "correctAnswer": "is",
+      "difficulty": "beginner",
+      "explanation": "a studentは単数です。",
+      "hint": "名詞の単複に注目"
     },
     {
       "id": "g2-u8-conv-005",
       "type": "conversation",
-      "japanese": "There is/are会話5。",
-      "situation": "状況5",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 5?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 庭に何がありますか? B: 花がたくさんあります。",
+      "conversation": [
+        "A: What is in the garden?",
+        "B: There ____ many flowers."
       ],
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "are",
+        "is",
+        "am"
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "存在を表す構文の会話5です。",
-      "hint": "会話"
-    },
-    {
-      "id": "g2-u8-must-001",
-      "type": "fillInBlank",
-      "japanese": "あなたは宿題をしなければなりません。",
-      "sentence": "You ____ do your homework.",
-      "choices": [
-        "must",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "must",
+      "correctAnswer": "are",
       "difficulty": "beginner",
-      "explanation": "mustは「~しなければならない」という強い義務を表す助動詞として覚えてください。主観的な義務や強制を示します。",
-      "hint": "義務"
-    },
-    {
-      "id": "g2-u8-must-002",
-      "type": "fillInBlank",
-      "japanese": "私は7時に起きなければなりません。",
-      "sentence": "I ____ to get up at 7.",
-      "choices": [
-        "have",
-        "must",
-        "can"
-      ],
-      "correctAnswer": "have",
-      "difficulty": "intermediate",
-      "explanation": "have to は「~しなければならない」という客観的な義務を表す表現として覚えてください。mustより客観的です。I have to get up.です。",
-      "hint": "客観的義務"
-    },
-    {
-      "id": "g2-u8-must-003",
-      "type": "sentenceOrdering",
-      "japanese": "彼は薬を飲まなければなりません。",
-      "words": [
-        "he",
-        "must",
-        "take",
-        "medicine"
-      ],
-      "correctAnswer": "He must take medicine.",
-      "difficulty": "beginner",
-      "explanation": "mustは主語 + must + 動詞の原形という語順として覚えてください。「~しなければならない」です。",
-      "hint": "must + 動詞原形",
-      "wordCount": 4
-    },
-    {
-      "id": "g2-u8-must-004",
-      "type": "fillInBlank",
-      "japanese": "彼女は毎日練習しなければなりません。",
-      "sentence": "She ____ to practice every day.",
-      "choices": [
-        "has",
-        "must",
-        "have"
-      ],
-      "correctAnswer": "has",
-      "difficulty": "intermediate",
-      "explanation": "have toの三人称単数形はhas toとなることを覚えてください。She has to practice.「彼女は練習しなければならない」です。",
-      "hint": "三人称単数"
-    },
-    {
-      "id": "g2-u8-must-005",
-      "type": "paraphrase",
-      "japanese": "早く寝なければなりません（go to bed early）をhave toで。",
-      "originalSentence": "You must go to bed early.",
-      "question": "You ____ go to bed early.",
-      "correctAnswer": "have to",
-      "difficulty": "intermediate",
-      "explanation": "mustとhave toは基本的に同じ意味です。mustは主観的、have toは客観的義務を表します。"
-    },
-    {
-      "id": "g2-u8-must-006",
-      "type": "conversation",
-      "japanese": "今すぐ出発しなければなりません。",
-      "situation": "急いでいる",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Can you stay longer?"
-        },
-        {
-          "speaker": "B",
-          "text": "No, I ____ leave now."
-        }
-      ],
-      "choices": [
-        "must",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "intermediate",
-      "explanation": "mustで強い必要性「~しなければならない」を表します。I must leave now.「今すぐ出発しなければ」です。",
-      "hint": "強い必要性"
-    },
-    {
-      "id": "g2-u8-must-007",
-      "type": "fillInBlank",
-      "japanese": "私たちは規則に従わなければなりません。",
-      "sentence": "We ____ follow the rules.",
-      "choices": [
-        "must",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "mustは「~しなければならない」という義務を表す助動詞として覚えてください。We must follow.「従わなければならない」です。",
-      "hint": "義務"
-    },
-    {
-      "id": "g2-u8-must-008",
-      "type": "sentenceOrdering",
-      "japanese": "彼は明日早く起きなければなりません。",
-      "words": [
-        "he",
-        "has",
-        "to",
-        "get",
-        "up",
-        "early",
-        "tomorrow"
-      ],
-      "correctAnswer": "He has to get up early tomorrow.",
-      "difficulty": "intermediate",
-      "explanation": "have toは主語 + have/has + to + 動詞の原形という語順として覚えてください。",
-      "hint": "has to get",
-      "wordCount": 7
-    },
-    {
-      "id": "g2-u8-must-009",
-      "type": "fillInBlank",
-      "japanese": "あなたはもっと注意深くならなければなりません。",
-      "sentence": "You ____ be more careful.",
-      "choices": [
-        "must",
-        "can",
-        "may"
-      ],
-      "correctAnswer": "must",
-      "difficulty": "intermediate",
-      "explanation": "mustの後はbe動詞の原形beを使うことを覚えてください。You must be careful.「注意深くならなければ」です。",
-      "hint": "must be"
-    },
-    {
-      "id": "g2-u8-must-010",
-      "type": "paraphrase",
-      "japanese": "学校に行かなければなりません（go to school）をmustで。",
-      "originalSentence": "I have to go to school.",
-      "question": "I ____ go to school.",
-      "correctAnswer": "must",
-      "difficulty": "beginner",
-      "explanation": "have toとmustは基本的に同じ意味です。両方とも「~しなければならない」を表します。"
+      "explanation": "flowersは複数です。",
+      "hint": "名詞の単複に注目"
     }
-  ],
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
-  "disabledDate": "2025-12-09T05:38:25.092195"
+  ]
 }
