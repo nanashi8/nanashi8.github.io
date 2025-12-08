@@ -145,17 +145,14 @@ function ScoreBoard({
     [currentScore, totalAnswered]
   );
 
-  // タブの配列（学習プラン、学習状況、履歴、設定）
-  const _tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = 
-    mode === 'translation' || mode === 'spelling' 
-      ? ['plan', 'breakdown', 'history', 'settings'] 
-      : ['plan', 'breakdown', 'settings']; // 文法・長文は履歴なし
+  // タブの配列（学習プラン、学習状況、履歴、設定）- 全モード共通
+  const _tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = ['plan', 'breakdown', 'history', 'settings'];
 
   return (
     <div className="score-board-compact">
       {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
       {!isMobile && (
-        <div className={`score-board-tabs ${(mode === 'translation' || mode === 'spelling') ? 'grid grid-cols-4 gap-2' : 'grid grid-cols-3 gap-2'}`}>
+        <div className="score-board-tabs grid grid-cols-4 gap-2">
           <button 
             className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'plan' 
@@ -176,18 +173,16 @@ function ScoreBoard({
           >
             📈 学習状況
           </button>
-          {(mode === 'translation' || mode === 'spelling') && (
-            <button 
-              className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-                activeTab === 'history' 
-                  ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
-                  : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-              }`}
-              onClick={() => setActiveTab('history')}
-            >
-              📜 履歴
-            </button>
-          )}
+          <button 
+            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+              activeTab === 'history' 
+                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
+            onClick={() => setActiveTab('history')}
+          >
+            📜 履歴
+          </button>
           <button 
             className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
               activeTab === 'settings' 
@@ -195,7 +190,9 @@ function ScoreBoard({
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => {
-              if (onShowSettings) {
+              if (mode === 'grammar') {
+                setActiveTab('settings');
+              } else if (onShowSettings) {
                 onShowSettings();
               }
             }}
@@ -232,20 +229,18 @@ function ScoreBoard({
             <span className="text-base">📈</span>
             <span className="leading-tight">学習状況</span>
           </button>
-          {(mode === 'translation' || mode === 'spelling' || mode === 'grammar') && (
-            <button 
-              className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
-                activeTab === 'history' 
-                  ? 'bg-primary text-white dark:bg-primary dark:text-white' 
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-              }`}
-              onClick={() => setActiveTab('history')}
-              title="履歴"
-            >
-              <span className="text-base">📜</span>
-              <span className="leading-tight">履歴</span>
-            </button>
-          )}
+          <button 
+            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
+              activeTab === 'history' 
+                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
+            onClick={() => setActiveTab('history')}
+            title="履歴"
+          >
+            <span className="text-base">📜</span>
+            <span className="leading-tight">履歴</span>
+          </button>
           <button 
             className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
               activeTab === 'settings' 
@@ -253,7 +248,9 @@ function ScoreBoard({
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => {
-              if (onShowSettings) {
+              if (mode === 'grammar') {
+                setActiveTab('settings');
+              } else if (onShowSettings) {
                 onShowSettings();
               }
             }}
@@ -457,10 +454,15 @@ function ScoreBoard({
       )}
       
       {/* 履歴タブ */}
-      {activeTab === 'history' && (mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
+      {activeTab === 'history' && (
         <div className="score-board-content">
           <div className="history-compact">
-            {currentWord && currentWordData ? (
+            {mode === 'grammar' ? (
+              <div className="word-detail-empty">
+                <p>文法問題では単語別の履歴は表示されません</p>
+                <p className="stat-text-sub">学習状況タブで全体の進捗を確認できます</p>
+              </div>
+            ) : currentWord && currentWordData ? (
               <div className="word-detail-container">
                 <div className="word-detail-title">
                   📊 {currentWord} の学習データ
@@ -496,30 +498,36 @@ function ScoreBoard({
         </div>
       )}
       
-      {/* 設定タブ - 文法モード専用 */}
-      {activeTab === 'settings' && mode === 'grammar' && (
+      {/* 設定タブ */}
+      {activeTab === 'settings' && (
         <div className="score-board-content">
           <div className="settings-tab-container">
-            <div className="settings-section">
-              <h4 className="settings-section-title">🔊 読み上げ設定</h4>
-              <div className="settings-item">
-                <label className="settings-checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={autoReadAloud}
-                    onChange={(e) => {
-                      if (onAutoReadAloudChange) {
-                        onAutoReadAloudChange(e.target.checked);
-                      }
-                    }}
-                  />
-                  <span>回答時に問題と答えの英文を自動読み上げ</span>
-                </label>
-                <p className="settings-help-text">
-                  正解・不正解に関わらず、回答後に問題文の英文を読み上げます
-                </p>
+            {mode === 'grammar' ? (
+              <div className="settings-section">
+                <h4 className="settings-section-title">🔊 読み上げ設定</h4>
+                <div className="settings-item">
+                  <label className="settings-checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={autoReadAloud}
+                      onChange={(e) => {
+                        if (onAutoReadAloudChange) {
+                          onAutoReadAloudChange(e.target.checked);
+                        }
+                      }}
+                    />
+                    <span>回答時に問題と答えの英文を自動読み上げ</span>
+                  </label>
+                  <p className="settings-help-text">
+                    正解・不正解に関わらず、回答後に問題文の英文を読み上げます
+                  </p>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="word-detail-empty">
+                <p>このタブの設定は学習設定パネルから行えます</p>
+              </div>
+            )}
           </div>
         </div>
       )}
