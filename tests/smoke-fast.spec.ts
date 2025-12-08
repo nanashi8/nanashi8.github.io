@@ -31,13 +31,10 @@ test.describe('超高速煙テスト', () => {
     }
     
     // 4. 問題が表示されることを確認（最重要：これが表示されればクイズは動作している）
-    // どんな単語でも良いので、問題カード全体が存在すればOK
-    const hasQuestionCard = page.locator('[class*="question"]').first().or(
-      page.locator('[class*="card"]').first()
-    ).or(
-      page.locator('text=/^[A-Za-z]+$/')  // 英単語パターン
-    );
-    await expect(hasQuestionCard).toBeVisible({ timeout: 10000 });
+    // 暗記タブには左右ボタンと中央に単語が表示される
+    // 英単語（4文字以上のアルファベット）が表示されていればOK
+    const wordDisplay = page.locator('text=/^[A-Za-z]{4,}$/');
+    await expect(wordDisplay).toBeVisible({ timeout: 10000 });
     
     // 4. JavaScriptエラーがないことを確認
     const errors: string[] = [];
