@@ -14,7 +14,7 @@
     {
       "id": "g2-u0-fib-001",
       "type": "fillInBlank",
-      "japanese": "私は昨日幸せでした",
+      "japanese": "私は昨日幸せでした。",
       "sentence": "I ____ happy yesterday.",
       "choices": [
         "was",
@@ -29,7 +29,7 @@
     {
       "id": "g2-u0-fib-002",
       "type": "fillInBlank",
-      "japanese": "彼らは昨晩家にいました",
+      "japanese": "彼らは昨晩家にいました。",
       "sentence": "They ____ at home last night.",
       "choices": [
         "were",
@@ -44,7 +44,7 @@
     {
       "id": "g2-u0-fib-003",
       "type": "fillInBlank",
-      "japanese": "彼は昨日病気でした",
+      "japanese": "彼は昨日病気でした。",
       "sentence": "He ____ sick yesterday.",
       "choices": [
         "was",
@@ -59,7 +59,7 @@
     {
       "id": "g2-u0-fib-004",
       "type": "fillInBlank",
-      "japanese": "あなたは先週忙しかった",
+      "japanese": "あなたは先週忙しかった。",
       "sentence": "You ____ busy last week.",
       "choices": [
         "were",
@@ -74,7 +74,7 @@
     {
       "id": "g2-u0-fib-005",
       "type": "fillInBlank",
-      "japanese": "彼女は昨日東京にいました",
+      "japanese": "彼女は昨日東京にいました。",
       "sentence": "She ____ in Tokyo yesterday.",
       "choices": [
         "was",
@@ -89,7 +89,7 @@
     {
       "id": "g2-u0-fib-006",
       "type": "fillInBlank",
-      "japanese": "私たちは先週の日曜日に図書館にいました",
+      "japanese": "私たちは先週の日曜日に図書館にいました。",
       "sentence": "We ____ in the library last Sunday.",
       "choices": [
         "were",
@@ -104,7 +104,7 @@
     {
       "id": "g2-u0-fib-007",
       "type": "fillInBlank",
-      "japanese": "昨日は寒かった",
+      "japanese": "昨日は寒かった。",
       "sentence": "It ____ cold yesterday.",
       "choices": [
         "was",
@@ -119,7 +119,7 @@
     {
       "id": "g2-u0-fib-008",
       "type": "fillInBlank",
-      "japanese": "私は昨日疲れていませんでした",
+      "japanese": "私は昨日疲れていませんでした。",
       "sentence": "I ____ tired yesterday.",
       "choices": [
         "wasn't",
@@ -134,7 +134,7 @@
     {
       "id": "g2-u0-fib-009",
       "type": "fillInBlank",
-      "japanese": "彼らは昨日学校にいませんでした",
+      "japanese": "彼らは昨日学校にいませんでした。",
       "sentence": "They ____ at school yesterday.",
       "choices": [
         "weren't",
@@ -149,7 +149,7 @@
     {
       "id": "g2-u0-fib-010",
       "type": "fillInBlank",
-      "japanese": "あなたは昨日家にいましたか",
+      "japanese": "あなたは昨日家にいましたか。",
       "sentence": "____ you at home yesterday?",
       "choices": [
         "Were",
@@ -164,7 +164,7 @@
     {
       "id": "g2-u0-fib-011",
       "type": "fillInBlank",
-      "japanese": "彼女は昨日怒っていましたか",
+      "japanese": "彼女は昨日怒っていましたか。",
       "sentence": "____ she angry yesterday?",
       "choices": [
         "Was",
@@ -179,7 +179,7 @@
     {
       "id": "g2-u0-fib-012",
       "type": "fillInBlank",
-      "japanese": "先週末は天気が良かった",
+      "japanese": "先週末は天気が良かった。",
       "sentence": "The weather ____ nice last weekend.",
       "choices": [
         "was",
@@ -194,7 +194,7 @@
     {
       "id": "g2-u0-fib-013",
       "type": "fillInBlank",
-      "japanese": "両親は先月京都にいました",
+      "japanese": "両親は先月京都にいました。",
       "sentence": "My parents ____ in Kyoto last month.",
       "choices": [
         "were",
@@ -209,7 +209,7 @@
     {
       "id": "g2-u0-fib-014",
       "type": "fillInBlank",
-      "japanese": "彼は昨日幸せでしたか",
+      "japanese": "彼は昨日幸せでしたか。",
       "sentence": "____ he happy yesterday?",
       "choices": [
         "Was",
@@ -224,7 +224,7 @@
     {
       "id": "g2-u0-fib-015",
       "type": "fillInBlank",
-      "japanese": "それらの本は面白かった",
+      "japanese": "それらの本は面白かった。",
       "sentence": "Those books ____ interesting.",
       "choices": [
         "were",
@@ -239,7 +239,7 @@
     {
       "id": "g2-u0-so-001",
       "type": "sentenceOrdering",
-      "japanese": "私は昨日疲れていました",
+      "japanese": "私は昨日疲れていました。",
       "words": [
         "I",
         "was",
@@ -255,7 +255,7 @@
     {
       "id": "g2-u0-so-002",
       "type": "sentenceOrdering",
-      "japanese": "彼らはその時生徒でした",
+      "japanese": "彼らはその時生徒でした。",
       "words": [
         "they",
         "were",
@@ -271,7 +271,7 @@
     {
       "id": "g2-u0-so-003",
       "type": "sentenceOrdering",
-      "japanese": "彼はロンドンにいました",
+      "japanese": "彼はロンドンにいました。",
       "words": [
         "he",
         "was",
@@ -287,7 +287,7 @@
     {
       "id": "g2-u0-so-004",
       "type": "sentenceOrdering",
-      "japanese": "私たちはその時友達でした",
+      "japanese": "私たちはその時友達でした。",
       "words": [
         "we",
         "were",
@@ -303,7 +303,7 @@
     {
       "id": "g2-u0-so-005",
       "type": "sentenceOrdering",
-      "japanese": "彼女は昨日親切でした",
+      "japanese": "彼女は昨日親切でした。",
       "words": [
         "she",
         "was",
@@ -319,7 +319,7 @@
     {
       "id": "g2-u0-so-006",
       "type": "sentenceOrdering",
-      "japanese": "私は昨日お腹が空いていませんでした",
+      "japanese": "私は昨日お腹が空いていませんでした。",
       "words": [
         "I",
         "wasn't",
@@ -335,7 +335,7 @@
     {
       "id": "g2-u0-so-007",
       "type": "sentenceOrdering",
-      "japanese": "彼らは昨日ここにいませんでした",
+      "japanese": "彼らは昨日ここにいませんでした。",
       "words": [
         "they",
         "weren't",
@@ -351,7 +351,7 @@
     {
       "id": "g2-u0-so-008",
       "type": "sentenceOrdering",
-      "japanese": "彼は昨日病気でしたか",
+      "japanese": "彼は昨日病気でしたか。",
       "words": [
         "was",
         "he",
@@ -367,7 +367,7 @@
     {
       "id": "g2-u0-so-009",
       "type": "sentenceOrdering",
-      "japanese": "あなたは家にいましたか",
+      "japanese": "あなたは家にいましたか。",
       "words": [
         "were",
         "you",
@@ -383,7 +383,7 @@
     {
       "id": "g2-u0-so-010",
       "type": "sentenceOrdering",
-      "japanese": "昨日は晴れていました",
+      "japanese": "昨日は晴れていました。",
       "words": [
         "it",
         "was",
@@ -399,7 +399,7 @@
     {
       "id": "g2-u0-so-011",
       "type": "sentenceOrdering",
-      "japanese": "過去の場所",
+      "japanese": "過去の場所。",
       "words": [
         "she",
         "was",
@@ -417,7 +417,7 @@
     {
       "id": "g2-u0-so-012",
       "type": "sentenceOrdering",
-      "japanese": "彼らはその時とても幸せでした",
+      "japanese": "彼らはその時とても幸せでした。",
       "words": [
         "they",
         "were",
@@ -434,7 +434,7 @@
     {
       "id": "g2-u0-so-013",
       "type": "sentenceOrdering",
-      "japanese": "そのテストは難しかったですか",
+      "japanese": "そのテストは難しかったですか。",
       "words": [
         "was",
         "the",
@@ -450,7 +450,7 @@
     {
       "id": "g2-u0-so-014",
       "type": "sentenceOrdering",
-      "japanese": "私たちは昨日準備ができていませんでした",
+      "japanese": "私たちは昨日準備ができていませんでした。",
       "words": [
         "we",
         "weren't",
@@ -466,7 +466,7 @@
     {
       "id": "g2-u0-so-015",
       "type": "sentenceOrdering",
-      "japanese": "生徒たちは静かでしたか",
+      "japanese": "生徒たちは静かでしたか。",
       "words": [
         "were",
         "the",
@@ -482,7 +482,7 @@
     {
       "id": "g2-u0-para-001",
       "type": "paraphrase",
-      "japanese": "現在→過去",
+      "japanese": "現在→過去。",
       "originalSentence": "I am busy.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -498,7 +498,7 @@
     {
       "id": "g2-u0-para-002",
       "type": "paraphrase",
-      "japanese": "現在→過去",
+      "japanese": "現在→過去。",
       "originalSentence": "They are happy.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -514,7 +514,7 @@
     {
       "id": "g2-u0-para-003",
       "type": "paraphrase",
-      "japanese": "現在→過去",
+      "japanese": "現在→過去。",
       "originalSentence": "He is tired.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -530,7 +530,7 @@
     {
       "id": "g2-u0-para-004",
       "type": "paraphrase",
-      "japanese": "肯定→否定",
+      "japanese": "肯定→否定。",
       "originalSentence": "I was at home.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -546,7 +546,7 @@
     {
       "id": "g2-u0-para-005",
       "type": "paraphrase",
-      "japanese": "肯定→否定",
+      "japanese": "肯定→否定。",
       "originalSentence": "They were teachers.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -562,7 +562,7 @@
     {
       "id": "g2-u0-para-006",
       "type": "paraphrase",
-      "japanese": "肯定→疑問",
+      "japanese": "肯定→疑問。",
       "originalSentence": "She was happy.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -578,7 +578,7 @@
     {
       "id": "g2-u0-para-007",
       "type": "paraphrase",
-      "japanese": "肯定→疑問",
+      "japanese": "肯定→疑問。",
       "originalSentence": "You were busy.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -594,7 +594,7 @@
     {
       "id": "g2-u0-para-008",
       "type": "paraphrase",
-      "japanese": "過去→現在",
+      "japanese": "過去→現在。",
       "originalSentence": "He was a teacher.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -610,7 +610,7 @@
     {
       "id": "g2-u0-para-009",
       "type": "paraphrase",
-      "japanese": "過去→現在",
+      "japanese": "過去→現在。",
       "originalSentence": "We were friends.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -626,7 +626,7 @@
     {
       "id": "g2-u0-para-010",
       "type": "paraphrase",
-      "japanese": "疑問文の応答",
+      "japanese": "疑問文の応答。",
       "originalSentence": "Was he at home?",
       "question": "肯定で答えなさい",
       "choices": [
@@ -642,7 +642,7 @@
     {
       "id": "g2-u0-para-011",
       "type": "paraphrase",
-      "japanese": "疑問文の応答",
+      "japanese": "疑問文の応答。",
       "originalSentence": "Were they late?",
       "question": "否定で答えなさい",
       "choices": [
@@ -658,7 +658,7 @@
     {
       "id": "g2-u0-para-012",
       "type": "paraphrase",
-      "japanese": "時制変更",
+      "japanese": "時制変更。",
       "originalSentence": "I am a student now.",
       "question": "「その時」に書き換えなさい",
       "choices": [
@@ -674,7 +674,7 @@
     {
       "id": "g2-u0-para-013",
       "type": "paraphrase",
-      "japanese": "否定疑問文",
+      "japanese": "否定疑問文。",
       "originalSentence": "She was sick.",
       "question": "否定の疑問文に",
       "choices": [
@@ -690,7 +690,7 @@
     {
       "id": "g2-u0-para-014",
       "type": "paraphrase",
-      "japanese": "Wh疑問文",
+      "japanese": "Wh疑問文。",
       "originalSentence": "He was in Tokyo.",
       "question": "Whereを使って疑問文に",
       "choices": [
@@ -706,7 +706,7 @@
     {
       "id": "g2-u0-para-015",
       "type": "paraphrase",
-      "japanese": "Wh疑問文",
+      "japanese": "Wh疑問文。",
       "originalSentence": "They were students.",
       "question": "Whatを使って疑問文に",
       "choices": [
@@ -722,7 +722,7 @@
     {
       "id": "g2-u0-vf-001",
       "type": "verbForm",
-      "japanese": "私は昨日興奮していました",
+      "japanese": "私は昨日興奮していました。",
       "sentence": "I ____ excited yesterday.",
       "verb": "be",
       "choices": [
@@ -738,7 +738,7 @@
     {
       "id": "g2-u0-vf-002",
       "type": "verbForm",
-      "japanese": "彼らは学校にいました",
+      "japanese": "彼らは学校にいました。",
       "sentence": "They ____ at school.",
       "verb": "be",
       "choices": [
@@ -754,7 +754,7 @@
     {
       "id": "g2-u0-vf-003",
       "type": "verbForm",
-      "japanese": "彼は昨日遅れました",
+      "japanese": "彼は昨日遅れました。",
       "sentence": "He ____ late yesterday.",
       "verb": "be",
       "choices": [
@@ -770,7 +770,7 @@
     {
       "id": "g2-u0-vf-004",
       "type": "verbForm",
-      "japanese": "あなたは先週遅れました",
+      "japanese": "あなたは先週遅れました。",
       "sentence": "You ____ late last week.",
       "verb": "be",
       "choices": [
@@ -786,7 +786,7 @@
     {
       "id": "g2-u0-vf-005",
       "type": "verbForm",
-      "japanese": "彼女は東京にいました",
+      "japanese": "彼女は東京にいました。",
       "sentence": "She ____ in Tokyo.",
       "verb": "be",
       "choices": [
@@ -802,7 +802,7 @@
     {
       "id": "g2-u0-vf-006",
       "type": "verbForm",
-      "japanese": "私たちはその時友達でした",
+      "japanese": "私たちはその時友達でした。",
       "sentence": "We ____ friends then.",
       "verb": "be",
       "choices": [
@@ -818,7 +818,7 @@
     {
       "id": "g2-u0-vf-007",
       "type": "verbForm",
-      "japanese": "昨日は雨でした",
+      "japanese": "昨日は雨でした。",
       "sentence": "It ____ rainy yesterday.",
       "verb": "be",
       "choices": [
@@ -834,7 +834,7 @@
     {
       "id": "g2-u0-vf-008",
       "type": "verbForm",
-      "japanese": "その本は面白かったです",
+      "japanese": "その本は面白かったです。",
       "sentence": "The books ____ interesting.",
       "verb": "be",
       "choices": [
@@ -850,7 +850,7 @@
     {
       "id": "g2-u0-vf-009",
       "type": "verbForm",
-      "japanese": "その猫はかわいかったです",
+      "japanese": "その猫はかわいかったです。",
       "sentence": "The cat ____ cute.",
       "verb": "be",
       "choices": [
@@ -866,7 +866,7 @@
     {
       "id": "g2-u0-vf-010",
       "type": "verbForm",
-      "japanese": "私の両親は大阪にいました",
+      "japanese": "私の両親は大阪にいました。",
       "sentence": "My parents ____ in Osaka.",
       "verb": "be",
       "choices": [
@@ -882,7 +882,7 @@
     {
       "id": "g2-u0-conv-001",
       "type": "conversation",
-      "japanese": "過去の状態",
+      "japanese": "過去の状態。",
       "situation": "昨日の様子を聞く",
       "dialogue": [
         {
@@ -907,7 +907,7 @@
     {
       "id": "g2-u0-conv-002",
       "type": "conversation",
-      "japanese": "過去の確認",
+      "japanese": "過去の確認。",
       "situation": "昨日の場所を確認",
       "dialogue": [
         {
@@ -932,7 +932,7 @@
     {
       "id": "g2-u0-conv-003",
       "type": "conversation",
-      "japanese": "過去の否定",
+      "japanese": "過去の否定。",
       "situation": "体調について",
       "dialogue": [
         {
@@ -957,7 +957,7 @@
     {
       "id": "g2-u0-conv-004",
       "type": "conversation",
-      "japanese": "あなたの友達はどこにいましたか",
+      "japanese": "あなたの友達はどこにいましたか。",
       "situation": "友達について",
       "dialogue": [
         {
@@ -982,7 +982,7 @@
     {
       "id": "g2-u0-conv-005",
       "type": "conversation",
-      "japanese": "過去の天気",
+      "japanese": "過去の天気。",
       "situation": "天気について",
       "dialogue": [
         {

@@ -11,7 +11,7 @@
   "questions": [
     {
       "id": "vf-g3-u7-001",
-      "japanese": "もし私が鳥なら、世界中を飛び回るのに",
+      "japanese": "もし私が鳥なら、世界中を飛び回るのに。",
       "sentence": "If I ____ a bird, I would fly around the world.",
       "verb": "subjunctive",
       "choices": [
@@ -27,7 +27,7 @@
     },
     {
       "id": "vf-g3-u7-002",
-      "japanese": "もしお金持ちなら、大きな家を買うのに",
+      "japanese": "もしお金持ちなら、大きな家を買うのに。",
       "sentence": "If I ____ rich, I would buy a big house.",
       "verb": "subjunctive",
       "choices": [
@@ -43,7 +43,7 @@
     },
     {
       "id": "vf-g3-u7-003",
-      "japanese": "もし彼女が社長なら、会社を変えるでしょう",
+      "japanese": "もし彼女が社長なら、会社を変えるでしょう。",
       "sentence": "If she ____ the president, she would change the company.",
       "verb": "subjunctive",
       "choices": [
@@ -59,7 +59,7 @@
     },
     {
       "id": "vf-g3-u7-004",
-      "japanese": "もし私があなたなら、そうしないでしょう",
+      "japanese": "もし私があなたなら、そうしないでしょう。",
       "sentence": "If I ____ you, I wouldn't do that.",
       "verb": "subjunctive",
       "choices": [
@@ -75,7 +75,7 @@
     },
     {
       "id": "vf-g3-u7-005",
-      "japanese": "もし時間があれば、旅行に行くのに",
+      "japanese": "もし時間があれば、旅行に行くのに。",
       "sentence": "If I ____ time, I would travel.",
       "verb": "subjunctive",
       "choices": [
@@ -91,7 +91,7 @@
     },
     {
       "id": "vf-g3-u7-006",
-      "japanese": "もし車を持っていたら、ドライブに行くのに",
+      "japanese": "もし車を持っていたら、ドライブに行くのに。",
       "sentence": "If I ____ a car, I would go for a drive.",
       "verb": "subjunctive",
       "choices": [
@@ -107,7 +107,7 @@
     },
     {
       "id": "vf-g3-u7-007",
-      "japanese": "もし彼が才能を持っていたら、成功するでしょう",
+      "japanese": "もし彼が才能を持っていたら、成功するでしょう。",
       "sentence": "If he ____ talent, he would succeed.",
       "verb": "subjunctive",
       "choices": [
@@ -123,7 +123,7 @@
     },
     {
       "id": "vf-g3-u7-008",
-      "japanese": "もし私が魔法使いなら、世界を変えるのに",
+      "japanese": "もし私が魔法使いなら、世界を変えるのに。",
       "sentence": "If I ____ a wizard, I would change the world.",
       "verb": "subjunctive",
       "choices": [
@@ -139,7 +139,7 @@
     },
     {
       "id": "vf-g3-u7-009",
-      "japanese": "もし彼女が歌手なら、有名になるでしょう",
+      "japanese": "もし彼女が歌手なら、有名になるでしょう。",
       "sentence": "If she ____ a singer, she would be famous.",
       "verb": "subjunctive",
       "choices": [
@@ -155,7 +155,7 @@
     },
     {
       "id": "vf-g3-u7-010",
-      "japanese": "もし兄弟がいたら、もっと楽しいのに",
+      "japanese": "もし兄弟がいたら、もっと楽しいのに。",
       "sentence": "If I ____ a sibling, it would be more fun.",
       "verb": "subjunctive",
       "choices": [
@@ -171,7 +171,7 @@
     },
     {
       "id": "vf-g3-u7-011",
-      "japanese": "もし彼が親切なら、みんなが好きになるでしょう",
+      "japanese": "もし彼が親切なら、みんなが好きになるでしょう。",
       "sentence": "If he ____ kind, everyone would like him.",
       "verb": "subjunctive",
       "choices": [
@@ -187,7 +187,7 @@
     },
     {
       "id": "vf-g3-u7-012",
-      "japanese": "もし私が猫なら、一日中寝るのに",
+      "japanese": "もし私が猫なら、一日中寝るのに。",
       "sentence": "If I ____ a cat, I would sleep all day.",
       "verb": "subjunctive",
       "choices": [
@@ -203,7 +203,7 @@
     },
     {
       "id": "vf-g3-u7-013",
-      "japanese": "もしスーパーパワーがあれば、人々を助けるのに",
+      "japanese": "もしスーパーパワーがあれば、人々を助けるのに。",
       "sentence": "If I ____ superpowers, I would help people.",
       "verb": "subjunctive",
       "choices": [
@@ -219,7 +219,7 @@
     },
     {
       "id": "vf-g3-u7-014",
-      "japanese": "もし彼女が先生なら、良い授業をするでしょう",
+      "japanese": "もし彼女が先生なら、良い授業をするでしょう。",
       "sentence": "If she ____ a teacher, she would teach well.",
       "verb": "subjunctive",
       "choices": [
@@ -235,7 +235,7 @@
     },
     {
       "id": "vf-g3-u7-015",
-      "japanese": "もし知識があれば、問題を解けるのに",
+      "japanese": "もし知識があれば、問題を解けるのに。",
       "sentence": "If I ____ knowledge, I could solve the problem.",
       "verb": "subjunctive",
       "choices": [
@@ -251,7 +251,7 @@
     },
     {
       "id": "vf-g3-u7-016",
-      "japanese": "もし私が王様なら、平和な国を作るのに",
+      "japanese": "もし私が王様なら、平和な国を作るのに。",
       "sentence": "If I ____ a king, I would create a peaceful country.",
       "verb": "subjunctive",
       "choices": [
@@ -267,7 +267,7 @@
     },
     {
       "id": "vf-g3-u7-017",
-      "japanese": "もし勇気があれば、挑戦するのに",
+      "japanese": "もし勇気があれば、挑戦するのに。",
       "sentence": "If I ____ courage, I would try.",
       "verb": "subjunctive",
       "choices": [
@@ -283,7 +283,7 @@
     },
     {
       "id": "vf-g3-u7-018",
-      "japanese": "もし彼が医者なら、多くの人を救うでしょう",
+      "japanese": "もし彼が医者なら、多くの人を救うでしょう。",
       "sentence": "If he ____ a doctor, he would save many people.",
       "verb": "subjunctive",
       "choices": [
@@ -299,7 +299,7 @@
     },
     {
       "id": "vf-g3-u7-019",
-      "japanese": "もし翼があれば、空を飛ぶのに",
+      "japanese": "もし翼があれば、空を飛ぶのに。",
       "sentence": "If I ____ wings, I would fly in the sky.",
       "verb": "subjunctive",
       "choices": [
@@ -315,7 +315,7 @@
     },
     {
       "id": "vf-g3-u7-020",
-      "japanese": "もし彼女が大統領なら、良い政策を作るでしょう",
+      "japanese": "もし彼女が大統領なら、良い政策を作るでしょう。",
       "sentence": "If she ____ the president, she would make good policies.",
       "verb": "subjunctive",
       "choices": [
@@ -331,7 +331,7 @@
     },
     {
       "id": "fb-g3-u7-001",
-      "japanese": "もし私が鳥なら、世界中を飛び回るのに",
+      "japanese": "もし私が鳥なら、世界中を飛び回るのに。",
       "sentence": "If I ____ a bird, I would fly around the world.",
       "wordCount": 11,
       "choices": [
@@ -347,7 +347,7 @@
     },
     {
       "id": "fb-g3-u7-002",
-      "japanese": "もしお金持ちなら、大きな家を買うのに",
+      "japanese": "もしお金持ちなら、大きな家を買うのに。",
       "sentence": "If I ____ rich, I would buy a big house.",
       "wordCount": 10,
       "choices": [
@@ -363,7 +363,7 @@
     },
     {
       "id": "fb-g3-u7-003",
-      "japanese": "もし彼女が社長なら、会社を変えるでしょう",
+      "japanese": "もし彼女が社長なら、会社を変えるでしょう。",
       "sentence": "If she ____ the president, she would change the company.",
       "wordCount": 10,
       "choices": [
@@ -379,7 +379,7 @@
     },
     {
       "id": "fb-g3-u7-004",
-      "japanese": "もし私があなたなら、そうしないでしょう",
+      "japanese": "もし私があなたなら、そうしないでしょう。",
       "sentence": "If I ____ you, I wouldn't do that.",
       "wordCount": 8,
       "choices": [
@@ -395,7 +395,7 @@
     },
     {
       "id": "fb-g3-u7-005",
-      "japanese": "もし時間があれば、旅行に行くのに",
+      "japanese": "もし時間があれば、旅行に行くのに。",
       "sentence": "If I ____ time, I would travel.",
       "wordCount": 7,
       "choices": [
@@ -411,7 +411,7 @@
     },
     {
       "id": "fb-g3-u7-006",
-      "japanese": "もし車を持っていたら、ドライブに行くのに",
+      "japanese": "もし車を持っていたら、ドライブに行くのに。",
       "sentence": "If I ____ a car, I would go for a drive.",
       "wordCount": 11,
       "choices": [
@@ -427,7 +427,7 @@
     },
     {
       "id": "fb-g3-u7-007",
-      "japanese": "もし彼が才能を持っていたら、成功するでしょう",
+      "japanese": "もし彼が才能を持っていたら、成功するでしょう。",
       "sentence": "If he ____ talent, he would succeed.",
       "wordCount": 7,
       "choices": [
@@ -443,7 +443,7 @@
     },
     {
       "id": "fb-g3-u7-008",
-      "japanese": "もし私が魔法使いなら、世界を変えるのに",
+      "japanese": "もし私が魔法使いなら、世界を変えるのに。",
       "sentence": "If I ____ a wizard, I would change the world.",
       "wordCount": 10,
       "choices": [
@@ -459,7 +459,7 @@
     },
     {
       "id": "fb-g3-u7-009",
-      "japanese": "もし彼女が歌手なら、有名になるでしょう",
+      "japanese": "もし彼女が歌手なら、有名になるでしょう。",
       "sentence": "If she ____ a singer, she would be famous.",
       "wordCount": 9,
       "choices": [
@@ -475,7 +475,7 @@
     },
     {
       "id": "fb-g3-u7-010",
-      "japanese": "もし兄弟がいたら、もっと楽しいのに",
+      "japanese": "もし兄弟がいたら、もっと楽しいのに。",
       "sentence": "If I ____ a sibling, it would be more fun.",
       "wordCount": 10,
       "choices": [
@@ -491,7 +491,7 @@
     },
     {
       "id": "fb-g3-u7-011",
-      "japanese": "もし彼が親切なら、みんなが好きになるでしょう",
+      "japanese": "もし彼が親切なら、みんなが好きになるでしょう。",
       "sentence": "If he ____ kind, everyone would like him.",
       "wordCount": 8,
       "choices": [
@@ -507,7 +507,7 @@
     },
     {
       "id": "fb-g3-u7-012",
-      "japanese": "もし私が猫なら、一日中寝るのに",
+      "japanese": "もし私が猫なら、一日中寝るのに。",
       "sentence": "If I ____ a cat, I would sleep all day.",
       "wordCount": 10,
       "choices": [
@@ -523,7 +523,7 @@
     },
     {
       "id": "fb-g3-u7-013",
-      "japanese": "もしスーパーパワーがあれば、人々を助けるのに",
+      "japanese": "もしスーパーパワーがあれば、人々を助けるのに。",
       "sentence": "If I ____ superpowers, I would help people.",
       "wordCount": 8,
       "choices": [
@@ -539,7 +539,7 @@
     },
     {
       "id": "fb-g3-u7-014",
-      "japanese": "もし彼女が先生なら、良い授業をするでしょう",
+      "japanese": "もし彼女が先生なら、良い授業をするでしょう。",
       "sentence": "If she ____ a teacher, she would teach well.",
       "wordCount": 9,
       "choices": [
@@ -555,7 +555,7 @@
     },
     {
       "id": "fb-g3-u7-015",
-      "japanese": "もし知識があれば、問題を解けるのに",
+      "japanese": "もし知識があれば、問題を解けるのに。",
       "sentence": "If I ____ knowledge, I could solve the problem.",
       "wordCount": 9,
       "choices": [
@@ -571,7 +571,7 @@
     },
     {
       "id": "fb-g3-u7-016",
-      "japanese": "もし私が王様なら、平和な国を作るのに",
+      "japanese": "もし私が王様なら、平和な国を作るのに。",
       "sentence": "If I ____ a king, I would create a peaceful country.",
       "wordCount": 11,
       "choices": [
@@ -587,7 +587,7 @@
     },
     {
       "id": "fb-g3-u7-017",
-      "japanese": "もし勇気があれば、挑戦するのに",
+      "japanese": "もし勇気があれば、挑戦するのに。",
       "sentence": "If I ____ courage, I would try.",
       "wordCount": 7,
       "choices": [
@@ -603,7 +603,7 @@
     },
     {
       "id": "fb-g3-u7-018",
-      "japanese": "もし彼が医者なら、多くの人を救うでしょう",
+      "japanese": "もし彼が医者なら、多くの人を救うでしょう。",
       "sentence": "If he ____ a doctor, he would save many people.",
       "wordCount": 10,
       "choices": [
@@ -619,7 +619,7 @@
     },
     {
       "id": "fb-g3-u7-019",
-      "japanese": "もし翼があれば、空を飛ぶのに",
+      "japanese": "もし翼があれば、空を飛ぶのに。",
       "sentence": "If I ____ wings, I would fly in the sky.",
       "wordCount": 10,
       "choices": [
@@ -635,7 +635,7 @@
     },
     {
       "id": "fb-g3-u7-020",
-      "japanese": "もし彼女が大統領なら、良い政策を作るでしょう",
+      "japanese": "もし彼女が大統領なら、良い政策を作るでしょう。",
       "sentence": "If she ____ the president, she would make good policies.",
       "wordCount": 10,
       "choices": [
@@ -651,7 +651,7 @@
     },
     {
       "id": "so-g3-u7-001",
-      "japanese": "もし私が鳥なら、世界中を飛び回るのに",
+      "japanese": "もし私が鳥なら、世界中を飛び回るのに。",
       "sentence": "If I were a bird I would fly around the world.",
       "words": [
         "If",
@@ -676,7 +676,7 @@
     },
     {
       "id": "so-g3-u7-002",
-      "japanese": "もしお金持ちなら、大きな家を買うのに",
+      "japanese": "もしお金持ちなら、大きな家を買うのに。",
       "sentence": "If I were rich I would buy a big house.",
       "words": [
         "If",
@@ -700,7 +700,7 @@
     },
     {
       "id": "so-g3-u7-003",
-      "japanese": "もし私があなたなら、そうしないでしょう",
+      "japanese": "もし私があなたなら、そうしないでしょう。",
       "sentence": "If I were you I wouldn't do that.",
       "words": [
         "If",
@@ -722,7 +722,7 @@
     },
     {
       "id": "so-g3-u7-004",
-      "japanese": "もし時間があれば、旅行に行くのに",
+      "japanese": "もし時間があれば、旅行に行くのに。",
       "sentence": "If I had time I would travel.",
       "words": [
         "If",
@@ -743,7 +743,7 @@
     },
     {
       "id": "so-g3-u7-005",
-      "japanese": "もし車を持っていたら、ドライブに行くのに",
+      "japanese": "もし車を持っていたら、ドライブに行くのに。",
       "sentence": "If I had a car I would go for a drive.",
       "words": [
         "If",
@@ -768,7 +768,7 @@
     },
     {
       "id": "so-g3-u7-006",
-      "japanese": "仮定法の例文6",
+      "japanese": "仮定法の例文6。",
       "sentence": "If I were example6 I would succeed.",
       "words": [
         "If",
@@ -789,7 +789,7 @@
     },
     {
       "id": "so-g3-u7-007",
-      "japanese": "仮定法の例文7",
+      "japanese": "仮定法の例文7。",
       "sentence": "If I were example7 I would succeed.",
       "words": [
         "If",
@@ -810,7 +810,7 @@
     },
     {
       "id": "so-g3-u7-008",
-      "japanese": "仮定法の例文8",
+      "japanese": "仮定法の例文8。",
       "sentence": "If I were example8 I would succeed.",
       "words": [
         "If",
@@ -831,7 +831,7 @@
     },
     {
       "id": "so-g3-u7-009",
-      "japanese": "仮定法の例文9",
+      "japanese": "仮定法の例文9。",
       "sentence": "If I were example9 I would succeed.",
       "words": [
         "If",
@@ -852,7 +852,7 @@
     },
     {
       "id": "so-g3-u7-010",
-      "japanese": "仮定法の例文10",
+      "japanese": "仮定法の例文10。",
       "sentence": "If I were example10 I would succeed.",
       "words": [
         "If",
@@ -873,7 +873,7 @@
     },
     {
       "id": "so-g3-u7-011",
-      "japanese": "仮定法の例文11",
+      "japanese": "仮定法の例文11。",
       "sentence": "If I were example11 I would succeed.",
       "words": [
         "If",
@@ -894,7 +894,7 @@
     },
     {
       "id": "so-g3-u7-012",
-      "japanese": "仮定法の例文12",
+      "japanese": "仮定法の例文12。",
       "sentence": "If I were example12 I would succeed.",
       "words": [
         "If",
@@ -915,7 +915,7 @@
     },
     {
       "id": "so-g3-u7-013",
-      "japanese": "仮定法の例文13",
+      "japanese": "仮定法の例文13。",
       "sentence": "If I were example13 I would succeed.",
       "words": [
         "If",
@@ -936,7 +936,7 @@
     },
     {
       "id": "so-g3-u7-014",
-      "japanese": "仮定法の例文14",
+      "japanese": "仮定法の例文14。",
       "sentence": "If I were example14 I would succeed.",
       "words": [
         "If",
@@ -957,7 +957,7 @@
     },
     {
       "id": "so-g3-u7-015",
-      "japanese": "仮定法の例文15",
+      "japanese": "仮定法の例文15。",
       "sentence": "If I were example15 I would succeed.",
       "words": [
         "If",
@@ -978,7 +978,7 @@
     },
     {
       "id": "so-g3-u7-016",
-      "japanese": "仮定法の例文16",
+      "japanese": "仮定法の例文16。",
       "sentence": "If I were example16 I would succeed.",
       "words": [
         "If",
@@ -999,7 +999,7 @@
     },
     {
       "id": "so-g3-u7-017",
-      "japanese": "仮定法の例文17",
+      "japanese": "仮定法の例文17。",
       "sentence": "If I were example17 I would succeed.",
       "words": [
         "If",
@@ -1020,7 +1020,7 @@
     },
     {
       "id": "so-g3-u7-018",
-      "japanese": "仮定法の例文18",
+      "japanese": "仮定法の例文18。",
       "sentence": "If I were example18 I would succeed.",
       "words": [
         "If",
@@ -1041,7 +1041,7 @@
     },
     {
       "id": "so-g3-u7-019",
-      "japanese": "仮定法の例文19",
+      "japanese": "仮定法の例文19。",
       "sentence": "If I were example19 I would succeed.",
       "words": [
         "If",
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "so-g3-u7-020",
-      "japanese": "仮定法の例文20",
+      "japanese": "仮定法の例文20。",
       "sentence": "If I were example20 I would succeed.",
       "words": [
         "If",

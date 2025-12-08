@@ -14,7 +14,7 @@
     {
       "id": "g1-u2-fib-001",
       "type": "fillInBlank",
-      "japanese": "彼は英語を勉強します",
+      "japanese": "彼は英語を勉強します。",
       "sentence": "He ____ English.",
       "choices": [
         "studies",
@@ -29,7 +29,7 @@
     {
       "id": "g1-u2-fib-002",
       "type": "fillInBlank",
-      "japanese": "彼女はサッカーをします",
+      "japanese": "彼女はサッカーをします。",
       "sentence": "She ____ soccer.",
       "choices": [
         "plays",
@@ -44,7 +44,7 @@
     {
       "id": "g1-u2-fib-003",
       "type": "fillInBlank",
-      "japanese": "彼は学校へ行きます",
+      "japanese": "彼は学校へ行きます。",
       "sentence": "He ____ to school.",
       "choices": [
         "goes",
@@ -59,7 +59,7 @@
     {
       "id": "g1-u2-fib-004",
       "type": "fillInBlank",
-      "japanese": "彼女は本を持っています",
+      "japanese": "彼女は本を持っています。",
       "sentence": "She ____ a book.",
       "choices": [
         "has",
@@ -74,7 +74,7 @@
     {
       "id": "g1-u2-fib-005",
       "type": "fillInBlank",
-      "japanese": "トムはテニスが好きです",
+      "japanese": "トムはテニスが好きです。",
       "sentence": "Tom ____ tennis.",
       "choices": [
         "likes",
@@ -89,7 +89,7 @@
     {
       "id": "g1-u2-fib-006",
       "type": "fillInBlank",
-      "japanese": "彼はテレビを見ます",
+      "japanese": "彼はテレビを見ます。",
       "sentence": "He ____ TV.",
       "choices": [
         "watches",
@@ -104,7 +104,7 @@
     {
       "id": "g1-u2-fib-007",
       "type": "fillInBlank",
-      "japanese": "彼女は音楽を聞きません",
+      "japanese": "彼女は音楽を聞きません。",
       "sentence": "She ____ listen to music.",
       "choices": [
         "doesn't",
@@ -119,7 +119,7 @@
     {
       "id": "g1-u2-fib-008",
       "type": "fillInBlank",
-      "japanese": "彼は野球をしますか",
+      "japanese": "彼は野球をしますか。",
       "sentence": "____ he play baseball?",
       "choices": [
         "Does",
@@ -134,7 +134,7 @@
     {
       "id": "g1-u2-fib-009",
       "type": "fillInBlank",
-      "japanese": "彼女は毎日宿題をします",
+      "japanese": "彼女は毎日宿題をします。",
       "sentence": "She ____ her homework every day.",
       "choices": [
         "does",
@@ -149,7 +149,7 @@
     {
       "id": "g1-u2-fib-010",
       "type": "fillInBlank",
-      "japanese": "彼は朝早く起きます",
+      "japanese": "彼は朝早く起きます。",
       "sentence": "He ____ up early in the morning.",
       "choices": [
         "gets",
@@ -164,7 +164,7 @@
     {
       "id": "g1-u2-fib-011",
       "type": "fillInBlank",
-      "japanese": "彼女はバスで学校へ行きます",
+      "japanese": "彼女はバスで学校へ行きます。",
       "sentence": "She ____ to school by bus.",
       "choices": [
         "goes",
@@ -179,7 +179,7 @@
     {
       "id": "g1-u2-fib-012",
       "type": "fillInBlank",
-      "japanese": "彼は夕食後皿を洗います",
+      "japanese": "彼は夕食後皿を洗います。",
       "sentence": "He ____ the dishes after dinner.",
       "choices": [
         "washes",
@@ -194,7 +194,7 @@
     {
       "id": "g1-u2-fib-013",
       "type": "fillInBlank",
-      "japanese": "彼女は放課後図書館で勉強しますか",
+      "japanese": "彼女は放課後図書館で勉強しますか。",
       "sentence": "Does she ____ in the library after school?",
       "choices": [
         "study",
@@ -209,7 +209,7 @@
     {
       "id": "g1-u2-fib-014",
       "type": "fillInBlank",
-      "japanese": "彼は英語を話しません",
+      "japanese": "彼は英語を話しません。",
       "sentence": "He doesn't ____ English.",
       "choices": [
         "speak",
@@ -224,7 +224,7 @@
     {
       "id": "g1-u2-fib-015",
       "type": "fillInBlank",
-      "japanese": "彼女は毎朝6時に起きます",
+      "japanese": "彼女は毎朝6時に起きます。",
       "sentence": "She ____ at six every morning.",
       "choices": [
         "gets up",
@@ -239,7 +239,7 @@
     {
       "id": "g1-u2-so-001",
       "type": "sentenceOrdering",
-      "japanese": "彼は日本語を勉強します",
+      "japanese": "彼は日本語を勉強します。",
       "words": [
         "Japanese",
         "he",
@@ -254,7 +254,7 @@
     {
       "id": "g1-u2-so-002",
       "type": "sentenceOrdering",
-      "japanese": "彼女はバレーボールをします",
+      "japanese": "彼女はバレーボールをします。",
       "words": [
         "volleyball",
         "plays",
@@ -269,7 +269,7 @@
     {
       "id": "g1-u2-so-003",
       "type": "sentenceOrdering",
-      "japanese": "彼は公園へ行きます",
+      "japanese": "彼は公園へ行きます。",
       "words": [
         "to",
         "the",
@@ -286,7 +286,7 @@
     {
       "id": "g1-u2-so-004",
       "type": "sentenceOrdering",
-      "japanese": "彼女は猫を飼っています",
+      "japanese": "彼女は猫を飼っています。",
       "words": [
         "cat",
         "a",
@@ -302,7 +302,7 @@
     {
       "id": "g1-u2-so-005",
       "type": "sentenceOrdering",
-      "japanese": "トムはテニスが好きです",
+      "japanese": "トムはテニスが好きです。",
       "words": [
         "tennis",
         "Tom",
@@ -317,7 +317,7 @@
     {
       "id": "g1-u2-so-006",
       "type": "sentenceOrdering",
-      "japanese": "彼は映画を見ます",
+      "japanese": "彼は映画を見ます。",
       "words": [
         "movies",
         "watches",
@@ -332,7 +332,7 @@
     {
       "id": "g1-u2-so-007",
       "type": "sentenceOrdering",
-      "japanese": "彼女はラジオを聞きません",
+      "japanese": "彼女はラジオを聞きません。",
       "words": [
         "to",
         "the",
@@ -350,7 +350,7 @@
     {
       "id": "g1-u2-so-008",
       "type": "sentenceOrdering",
-      "japanese": "彼はサッカーをしますか",
+      "japanese": "彼はサッカーをしますか。",
       "words": [
         "soccer",
         "play",
@@ -367,7 +367,7 @@
     {
       "id": "g1-u2-so-009",
       "type": "sentenceOrdering",
-      "japanese": "彼女は毎日掃除をします",
+      "japanese": "彼女は毎日掃除をします。",
       "words": [
         "cleaning",
         "the",
@@ -385,7 +385,7 @@
     {
       "id": "g1-u2-so-010",
       "type": "sentenceOrdering",
-      "japanese": "彼は夜遅く寝ます",
+      "japanese": "彼は夜遅く寝ます。",
       "words": [
         "to",
         "bed",
@@ -404,7 +404,7 @@
     {
       "id": "g1-u2-so-011",
       "type": "sentenceOrdering",
-      "japanese": "彼女は電車で学校へ行きます",
+      "japanese": "彼女は電車で学校へ行きます。",
       "words": [
         "to",
         "school",
@@ -422,7 +422,7 @@
     {
       "id": "g1-u2-so-012",
       "type": "sentenceOrdering",
-      "japanese": "彼は毎週窓を洗います",
+      "japanese": "彼は毎週窓を洗います。",
       "words": [
         "the",
         "windows",
@@ -440,7 +440,7 @@
     {
       "id": "g1-u2-so-013",
       "type": "sentenceOrdering",
-      "japanese": "彼女は家で勉強しますか",
+      "japanese": "彼女は家で勉強しますか。",
       "words": [
         "at",
         "home",
@@ -458,7 +458,7 @@
     {
       "id": "g1-u2-so-014",
       "type": "sentenceOrdering",
-      "japanese": "彼は中国語を話しません",
+      "japanese": "彼は中国語を話しません。",
       "words": [
         "Chinese",
         "speak",
@@ -474,7 +474,7 @@
     {
       "id": "g1-u2-so-015",
       "type": "sentenceOrdering",
-      "japanese": "彼女は毎晩10時に寝ます",
+      "japanese": "彼女は毎晩10時に寝ます。",
       "words": [
         "to",
         "bed",
@@ -494,7 +494,7 @@
     {
       "id": "g1-u2-para-001",
       "type": "paraphrase",
-      "japanese": "主語の変更（I→He）",
+      "japanese": "主語の変更（I→He）。",
       "originalSentence": "I study English.",
       "question": "主語をHeに変えて書き換えなさい",
       "choices": [
@@ -510,7 +510,7 @@
     {
       "id": "g1-u2-para-002",
       "type": "paraphrase",
-      "japanese": "He plays soccer.（疑問文に）",
+      "japanese": "He plays soccer.（疑問文に）。",
       "originalSentence": "He plays soccer.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -526,7 +526,7 @@
     {
       "id": "g1-u2-para-003",
       "type": "paraphrase",
-      "japanese": "She likes music.（否定文に）",
+      "japanese": "She likes music.（否定文に）。",
       "originalSentence": "She likes music.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -542,7 +542,7 @@
     {
       "id": "g1-u2-para-004",
       "type": "paraphrase",
-      "japanese": "主語の変更（We→He）",
+      "japanese": "主語の変更（We→He）。",
       "originalSentence": "We go to the park.",
       "question": "主語をHeに変えて書き換えなさい",
       "choices": [
@@ -558,7 +558,7 @@
     {
       "id": "g1-u2-para-005",
       "type": "paraphrase",
-      "japanese": "短縮形",
+      "japanese": "短縮形。",
       "originalSentence": "He does not like math.",
       "question": "短縮形に書き換えなさい",
       "choices": [
@@ -574,7 +574,7 @@
     {
       "id": "g1-u2-para-006",
       "type": "paraphrase",
-      "japanese": "Does she study English?（否定文に）",
+      "japanese": "Does she study English?（否定文に）。",
       "originalSentence": "Does she study English?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -590,7 +590,7 @@
     {
       "id": "g1-u2-para-007",
       "type": "paraphrase",
-      "japanese": "Yesの答え",
+      "japanese": "Yesの答え。",
       "originalSentence": "Does he play tennis?",
       "question": "Yesで答えなさい",
       "choices": [
@@ -606,7 +606,7 @@
     {
       "id": "g1-u2-para-008",
       "type": "paraphrase",
-      "japanese": "主語の変更（You→She）",
+      "japanese": "主語の変更（You→She）。",
       "originalSentence": "You have a pen.",
       "question": "主語をSheに変えて書き換えなさい",
       "choices": [
@@ -622,7 +622,7 @@
     {
       "id": "g1-u2-para-009",
       "type": "paraphrase",
-      "japanese": "主語の変更（They→He）",
+      "japanese": "主語の変更（They→He）。",
       "originalSentence": "They watch sports.",
       "question": "主語をHeに変えて書き換えなさい",
       "choices": [
@@ -638,7 +638,7 @@
     {
       "id": "g1-u2-para-010",
       "type": "paraphrase",
-      "japanese": "He likes music.（疑問文に）",
+      "japanese": "He likes music.（疑問文に）。",
       "originalSentence": "He likes music.",
       "question": "否定疑問文「彼は音楽が好きではないのですか」に書き換えなさい",
       "choices": [
@@ -654,7 +654,7 @@
     {
       "id": "g1-u2-para-011",
       "type": "paraphrase",
-      "japanese": "主語の変更（I→Tom）",
+      "japanese": "主語の変更（I→Tom）。",
       "originalSentence": "I do my homework.",
       "question": "主語をTomに変えて書き換えなさい",
       "choices": [
@@ -670,7 +670,7 @@
     {
       "id": "g1-u2-para-012",
       "type": "paraphrase",
-      "japanese": "毎日",
+      "japanese": "毎日。",
       "originalSentence": "She studies math.",
       "question": "「毎日」を加えて書き換えなさい",
       "choices": [
@@ -686,7 +686,7 @@
     {
       "id": "g1-u2-para-013",
       "type": "paraphrase",
-      "japanese": "場所の追加",
+      "japanese": "場所の追加。",
       "originalSentence": "He plays soccer.",
       "question": "「公園で」を加えて書き換えなさい",
       "choices": [
@@ -702,7 +702,7 @@
     {
       "id": "g1-u2-para-014",
       "type": "paraphrase",
-      "japanese": "She studies English.（疑問文に）",
+      "japanese": "She studies English.（疑問文に）。",
       "originalSentence": "She studies English.",
       "question": "「何を」を尋ねる疑問文に書き換えなさい",
       "choices": [
@@ -718,7 +718,7 @@
     {
       "id": "g1-u2-para-015",
       "type": "paraphrase",
-      "japanese": "交通手段の追加",
+      "japanese": "交通手段の追加。",
       "originalSentence": "She goes to school.",
       "question": "「自転車で」を加えて書き換えなさい",
       "choices": [
@@ -734,7 +734,7 @@
     {
       "id": "g1-u2-vf-001",
       "type": "verbForm",
-      "japanese": "彼は数学を勉強します",
+      "japanese": "彼は数学を勉強します。",
       "sentence": "He ____ math.",
       "verb": "study",
       "choices": [
@@ -750,7 +750,7 @@
     {
       "id": "g1-u2-vf-002",
       "type": "verbForm",
-      "japanese": "彼女はバレーボールをします",
+      "japanese": "彼女はバレーボールをします。",
       "sentence": "She ____ volleyball.",
       "verb": "play",
       "choices": [
@@ -766,7 +766,7 @@
     {
       "id": "g1-u2-vf-003",
       "type": "verbForm",
-      "japanese": "彼は図書館へ行きます",
+      "japanese": "彼は図書館へ行きます。",
       "sentence": "He ____ to the library.",
       "verb": "go",
       "choices": [
@@ -782,7 +782,7 @@
     {
       "id": "g1-u2-vf-004",
       "type": "verbForm",
-      "japanese": "彼女は犬を飼っています",
+      "japanese": "彼女は犬を飼っています。",
       "sentence": "She ____ a dog.",
       "verb": "have",
       "choices": [
@@ -798,7 +798,7 @@
     {
       "id": "g1-u2-vf-005",
       "type": "verbForm",
-      "japanese": "彼は映画を見ます",
+      "japanese": "彼は映画を見ます。",
       "sentence": "He ____ movies.",
       "verb": "watch",
       "choices": [
@@ -814,7 +814,7 @@
     {
       "id": "g1-u2-vf-006",
       "type": "verbForm",
-      "japanese": "彼女はラジオを聞きますか",
+      "japanese": "彼女はラジオを聞きますか。",
       "sentence": "Does she ____ to the radio?",
       "verb": "listen",
       "choices": [
@@ -830,7 +830,7 @@
     {
       "id": "g1-u2-vf-007",
       "type": "verbForm",
-      "japanese": "彼はバスケをしません",
+      "japanese": "彼はバスケをしません。",
       "sentence": "He doesn't ____ basketball.",
       "verb": "play",
       "choices": [
@@ -846,7 +846,7 @@
     {
       "id": "g1-u2-vf-008",
       "type": "verbForm",
-      "japanese": "彼女は料理をします",
+      "japanese": "彼女は料理をします。",
       "sentence": "She ____ the cooking.",
       "verb": "do",
       "choices": [
@@ -862,7 +862,7 @@
     {
       "id": "g1-u2-vf-009",
       "type": "verbForm",
-      "japanese": "彼は車を洗います",
+      "japanese": "彼は車を洗います。",
       "sentence": "He ____ his car.",
       "verb": "wash",
       "choices": [
@@ -878,7 +878,7 @@
     {
       "id": "g1-u2-vf-010",
       "type": "verbForm",
-      "japanese": "彼女は日本語を話しますか",
+      "japanese": "彼女は日本語を話しますか。",
       "sentence": "Does she ____ Japanese?",
       "verb": "speak",
       "choices": [
@@ -894,7 +894,7 @@
     {
       "id": "g1-u2-conv-001",
       "type": "conversation",
-      "japanese": "友人について話す",
+      "japanese": "友人について話す。",
       "situation": "友人の趣味について話す場面",
       "dialogue": [
         {
@@ -919,7 +919,7 @@
     {
       "id": "g1-u2-conv-002",
       "type": "conversation",
-      "japanese": "家族の習慣を尋ねる",
+      "japanese": "家族の習慣を尋ねる。",
       "situation": "家族の日課について話す場面",
       "dialogue": [
         {
@@ -944,7 +944,7 @@
     {
       "id": "g1-u2-conv-003",
       "type": "conversation",
-      "japanese": "友人の通学方法を尋ねる",
+      "japanese": "友人の通学方法を尋ねる。",
       "situation": "通学手段について話す場面",
       "dialogue": [
         {
@@ -969,7 +969,7 @@
     {
       "id": "g1-u2-conv-004",
       "type": "conversation",
-      "japanese": "友人の習慣を尋ねる",
+      "japanese": "友人の習慣を尋ねる。",
       "situation": "勉強習慣について話す場面",
       "dialogue": [
         {
@@ -994,7 +994,7 @@
     {
       "id": "g1-u2-conv-005",
       "type": "conversation",
-      "japanese": "兄弟の活動を尋ねる",
+      "japanese": "兄弟の活動を尋ねる。",
       "situation": "放課後の活動について話す場面",
       "dialogue": [
         {
@@ -1019,7 +1019,7 @@
     {
       "id": "g1-u2-tag-001",
       "type": "fillInBlank",
-      "japanese": "あなたは学生ですよね",
+      "japanese": "あなたは学生ですよね。",
       "sentence": "You are a student, ____ you?",
       "choices": [
         "aren't",
@@ -1034,7 +1034,7 @@
     {
       "id": "g1-u2-tag-002",
       "type": "fillInBlank",
-      "japanese": "彼は医者ですよね",
+      "japanese": "彼は医者ですよね。",
       "sentence": "He is a doctor, ____ he?",
       "choices": [
         "isn't",
@@ -1049,7 +1049,7 @@
     {
       "id": "g1-u2-tag-003",
       "type": "sentenceOrdering",
-      "japanese": "彼らは友達ですよね",
+      "japanese": "彼らは友達ですよね。",
       "words": [
         "they",
         "are",
@@ -1066,7 +1066,7 @@
     {
       "id": "g1-u2-tag-004",
       "type": "fillInBlank",
-      "japanese": "それは簡単じゃないですよね",
+      "japanese": "それは簡単じゃないですよね。",
       "sentence": "It isn't easy, ____ it?",
       "choices": [
         "is",
@@ -1081,7 +1081,7 @@
     {
       "id": "g1-u2-tag-005",
       "type": "fillInBlank",
-      "japanese": "あなたたちは忙しいですよね",
+      "japanese": "あなたたちは忙しいですよね。",
       "sentence": "You are busy, ____ you?",
       "choices": [
         "aren't",
@@ -1096,7 +1096,7 @@
     {
       "id": "g1-u2-tag-006",
       "type": "sentenceOrdering",
-      "japanese": "彼女は先生じゃないですよね",
+      "japanese": "彼女は先生じゃないですよね。",
       "words": [
         "she",
         "isn't",
@@ -1114,7 +1114,7 @@
     {
       "id": "g1-u2-tag-007",
       "type": "fillInBlank",
-      "japanese": "これは彼のペンですよね",
+      "japanese": "これは彼のペンですよね。",
       "sentence": "This is his pen, ____ it?",
       "choices": [
         "isn't",
@@ -1129,7 +1129,7 @@
     {
       "id": "g1-u2-tag-008",
       "type": "conversation",
-      "japanese": "あなたは日本人ですよね",
+      "japanese": "あなたは日本人ですよね。",
       "situation": "確認",
       "dialogue": [
         {
@@ -1154,7 +1154,7 @@
     {
       "id": "g1-u2-tag-009",
       "type": "fillInBlank",
-      "japanese": "私たちは遅刻していないですよね",
+      "japanese": "私たちは遅刻していないですよね。",
       "sentence": "We aren't late, ____ we?",
       "choices": [
         "are",
@@ -1169,7 +1169,7 @@
     {
       "id": "g1-u2-tag-010",
       "type": "sentenceOrdering",
-      "japanese": "あれは彼女の自転車ですよね",
+      "japanese": "あれは彼女の自転車ですよね。",
       "words": [
         "that",
         "is",
@@ -1187,7 +1187,7 @@
     {
       "id": "g1-u2-tag-011",
       "type": "fillInBlank",
-      "japanese": "あなたは英語を勉強しますよね",
+      "japanese": "あなたは英語を勉強しますよね。",
       "sentence": "You study English, ____ you?",
       "choices": [
         "don't",
@@ -1202,7 +1202,7 @@
     {
       "id": "g1-u2-tag-012",
       "type": "fillInBlank",
-      "japanese": "彼はサッカーをしますよね",
+      "japanese": "彼はサッカーをしますよね。",
       "sentence": "He plays soccer, ____ he?",
       "choices": [
         "doesn't",
@@ -1217,7 +1217,7 @@
     {
       "id": "g1-u2-tag-013",
       "type": "sentenceOrdering",
-      "japanese": "彼女は音楽が好きですよね",
+      "japanese": "彼女は音楽が好きですよね。",
       "words": [
         "she",
         "likes",
@@ -1234,7 +1234,7 @@
     {
       "id": "g1-u2-tag-014",
       "type": "fillInBlank",
-      "japanese": "あなたはテレビを見ないですよね",
+      "japanese": "あなたはテレビを見ないですよね。",
       "sentence": "You don't watch TV, ____ you?",
       "choices": [
         "do",
@@ -1249,7 +1249,7 @@
     {
       "id": "g1-u2-tag-015",
       "type": "fillInBlank",
-      "japanese": "彼らは毎日走りますよね",
+      "japanese": "彼らは毎日走りますよね。",
       "sentence": "They run every day, ____ they?",
       "choices": [
         "don't",
@@ -1264,7 +1264,7 @@
     {
       "id": "g1-u2-tag-016",
       "type": "sentenceOrdering",
-      "japanese": "彼は朝食を食べないですよね",
+      "japanese": "彼は朝食を食べないですよね。",
       "words": [
         "he",
         "doesn't",
@@ -1282,7 +1282,7 @@
     {
       "id": "g1-u2-tag-017",
       "type": "fillInBlank",
-      "japanese": "あなたは犬を飼っていますよね",
+      "japanese": "あなたは犬を飼っていますよね。",
       "sentence": "You have a dog, ____ you?",
       "choices": [
         "don't",
@@ -1297,7 +1297,7 @@
     {
       "id": "g1-u2-tag-018",
       "type": "conversation",
-      "japanese": "彼女は日本語を話しますよね",
+      "japanese": "彼女は日本語を話しますよね。",
       "situation": "確認",
       "dialogue": [
         {
@@ -1322,7 +1322,7 @@
     {
       "id": "g1-u2-tag-019",
       "type": "fillInBlank",
-      "japanese": "あなたたちは学校に行きますよね",
+      "japanese": "あなたたちは学校に行きますよね。",
       "sentence": "You go to school, ____ you?",
       "choices": [
         "don't",
@@ -1337,7 +1337,7 @@
     {
       "id": "g1-u2-tag-020",
       "type": "sentenceOrdering",
-      "japanese": "彼は野球をしないですよね",
+      "japanese": "彼は野球をしないですよね。",
       "words": [
         "he",
         "doesn't",
@@ -1355,7 +1355,7 @@
     {
       "id": "g1-u2-tag-021",
       "type": "fillInBlank",
-      "japanese": "あなたは本を読みますよね",
+      "japanese": "あなたは本を読みますよね。",
       "sentence": "You read books, ____ you?",
       "choices": [
         "don't",
@@ -1370,7 +1370,7 @@
     {
       "id": "g1-u2-tag-022",
       "type": "fillInBlank",
-      "japanese": "彼女は早く起きないですよね",
+      "japanese": "彼女は早く起きないですよね。",
       "sentence": "She doesn't get up early, ____ she?",
       "choices": [
         "does",
@@ -1385,7 +1385,7 @@
     {
       "id": "g1-u2-tag-023",
       "type": "sentenceOrdering",
-      "japanese": "彼らはここに住んでいますよね",
+      "japanese": "彼らはここに住んでいますよね。",
       "words": [
         "they",
         "live",
@@ -1402,7 +1402,7 @@
     {
       "id": "g1-u2-tag-024",
       "type": "conversation",
-      "japanese": "あなたは車を運転しないですよね",
+      "japanese": "あなたは車を運転しないですよね。",
       "situation": "確認",
       "dialogue": [
         {
@@ -1427,7 +1427,7 @@
     {
       "id": "g1-u2-tag-025",
       "type": "fillInBlank",
-      "japanese": "彼は数学を勉強しますよね",
+      "japanese": "彼は数学を勉強しますよね。",
       "sentence": "He studies math, ____ he?",
       "choices": [
         "doesn't",
@@ -1442,7 +1442,7 @@
     {
       "id": "g1-u2-tag-026",
       "type": "fillInBlank",
-      "japanese": "公園に行きましょうよ",
+      "japanese": "公園に行きましょうよ。",
       "sentence": "Let's go to the park, ____ we?",
       "choices": [
         "shall",
@@ -1457,7 +1457,7 @@
     {
       "id": "g1-u2-tag-027",
       "type": "sentenceOrdering",
-      "japanese": "一緒に昼食を食べましょうよ",
+      "japanese": "一緒に昼食を食べましょうよ。",
       "words": [
         "let's",
         "have",
@@ -1475,7 +1475,7 @@
     {
       "id": "g1-u2-tag-028",
       "type": "fillInBlank",
-      "japanese": "窓を開けてくれませんか",
+      "japanese": "窓を開けてくれませんか。",
       "sentence": "Open the window, ____ you?",
       "choices": [
         "will",
@@ -1490,7 +1490,7 @@
     {
       "id": "g1-u2-tag-029",
       "type": "fillInBlank",
-      "japanese": "映画を見ましょうよ",
+      "japanese": "映画を見ましょうよ。",
       "sentence": "Let's watch a movie, ____ we?",
       "choices": [
         "shall",
@@ -1505,7 +1505,7 @@
     {
       "id": "g1-u2-tag-030",
       "type": "sentenceOrdering",
-      "japanese": "静かにしてくれませんか",
+      "japanese": "静かにしてくれませんか。",
       "words": [
         "be",
         "quiet",

@@ -13,7 +13,7 @@
   "questions": [
     {
       "id": "vf-g3-u5-001",
-      "japanese": "泳ぐことは良い運動です",
+      "japanese": "泳ぐことは良い運動です。",
       "sentence": "____ is good exercise.",
       "verb": "Swimm",
       "choices": [
@@ -29,7 +29,7 @@
     },
     {
       "id": "vf-g3-u5-002",
-      "japanese": "ランニングは健康に良いです",
+      "japanese": "ランニングは健康に良いです。",
       "sentence": "____ is good for health.",
       "verb": "Runn",
       "choices": [
@@ -45,7 +45,7 @@
     },
     {
       "id": "vf-g3-u5-003",
-      "japanese": "ダンスは楽しい活動です",
+      "japanese": "ダンスは楽しい活動です。",
       "sentence": "____ is an enjoyable activity.",
       "verb": "Danc",
       "choices": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "vf-g3-u5-004",
-      "japanese": "釣りは私の趣味です",
+      "japanese": "釣りは私の趣味です。",
       "sentence": "____ is my hobby.",
       "verb": "Fish",
       "choices": [
@@ -77,7 +77,7 @@
     },
     {
       "id": "vf-g3-u5-005",
-      "japanese": "私は歌うことが好きです",
+      "japanese": "私は歌うことが好きです。",
       "sentence": "I like ____.",
       "verb": "sing",
       "choices": [
@@ -93,7 +93,7 @@
     },
     {
       "id": "vf-g3-u5-006",
-      "japanese": "彼女は絵を描くことが好きです",
+      "japanese": "彼女は絵を描くことが好きです。",
       "sentence": "She likes ____.",
       "verb": "paint",
       "choices": [
@@ -109,7 +109,7 @@
     },
     {
       "id": "vf-g3-u5-007",
-      "japanese": "私たちは旅行することが好きです",
+      "japanese": "私たちは旅行することが好きです。",
       "sentence": "We like ____.",
       "verb": "travel",
       "choices": [
@@ -125,7 +125,7 @@
     },
     {
       "id": "vf-g3-u5-008",
-      "japanese": "彼は料理することを楽しんでいます",
+      "japanese": "彼は料理することを楽しんでいます。",
       "sentence": "He enjoys ____.",
       "verb": "cook",
       "choices": [
@@ -141,7 +141,7 @@
     },
     {
       "id": "vf-g3-u5-009",
-      "japanese": "彼はサッカーをすることが得意です",
+      "japanese": "彼はサッカーをすることが得意です。",
       "sentence": "He is good at ____ soccer.",
       "verb": "play",
       "choices": [
@@ -157,7 +157,7 @@
     },
     {
       "id": "vf-g3-u5-010",
-      "japanese": "彼女はピアノを弾くことが得意です",
+      "japanese": "彼女はピアノを弾くことが得意です。",
       "sentence": "She is good at ____ the piano.",
       "verb": "play",
       "choices": [
@@ -173,7 +173,7 @@
     },
     {
       "id": "vf-g3-u5-011",
-      "japanese": "私は早起きが得意です",
+      "japanese": "私は早起きが得意です。",
       "sentence": "I am good at ____ up early.",
       "verb": "gett",
       "choices": [
@@ -189,7 +189,7 @@
     },
     {
       "id": "vf-g3-u5-012",
-      "japanese": "彼らは問題を解くことが得意です",
+      "japanese": "彼らは問題を解くことが得意です。",
       "sentence": "They are good at ____ problems.",
       "verb": "solv",
       "choices": [
@@ -205,7 +205,7 @@
     },
     {
       "id": "vf-g3-u5-013",
-      "japanese": "読書は知識を増やすのに役立ちます",
+      "japanese": "読書は知識を増やすのに役立ちます。",
       "sentence": "____ helps increase knowledge.",
       "verb": "Read",
       "choices": [
@@ -221,7 +221,7 @@
     },
     {
       "id": "vf-g3-u5-014",
-      "japanese": "書くことは考えをまとめるのに役立ちます",
+      "japanese": "書くことは考えをまとめるのに役立ちます。",
       "sentence": "____ helps organize thoughts.",
       "verb": "Writ",
       "choices": [
@@ -237,7 +237,7 @@
     },
     {
       "id": "vf-g3-u5-015",
-      "japanese": "話すことはコミュニケーションに不可欠です",
+      "japanese": "話すことはコミュニケーションに不可欠です。",
       "sentence": "____ is essential for communication.",
       "verb": "Speak",
       "choices": [
@@ -253,7 +253,7 @@
     },
     {
       "id": "vf-g3-u5-016",
-      "japanese": "聞くことは理解の第一歩です",
+      "japanese": "聞くことは理解の第一歩です。",
       "sentence": "____ is the first step to understanding.",
       "verb": "Listen",
       "choices": [
@@ -269,7 +269,7 @@
     },
     {
       "id": "vf-g3-u5-017",
-      "japanese": "ショッピングは彼女の趣味です",
+      "japanese": "ショッピングは彼女の趣味です。",
       "sentence": "____ is her hobby.",
       "verb": "Shopp",
       "choices": [
@@ -285,7 +285,7 @@
     },
     {
       "id": "vf-g3-u5-018",
-      "japanese": "掃除は毎日の仕事です",
+      "japanese": "掃除は毎日の仕事です。",
       "sentence": "____ is a daily task.",
       "verb": "Clean",
       "choices": [
@@ -301,7 +301,7 @@
     },
     {
       "id": "vf-g3-u5-019",
-      "japanese": "勉強することは成功への鍵です",
+      "japanese": "勉強することは成功への鍵です。",
       "sentence": "____ is the key to success.",
       "verb": "Study",
       "choices": [
@@ -317,7 +317,7 @@
     },
     {
       "id": "vf-g3-u5-020",
-      "japanese": "働くことは生活の一部です",
+      "japanese": "働くことは生活の一部です。",
       "sentence": "____ is part of life.",
       "verb": "Work",
       "choices": [
@@ -333,7 +333,7 @@
     },
     {
       "id": "fb-g3-u5-001",
-      "japanese": "泳ぐことは良い運動です",
+      "japanese": "泳ぐことは良い運動です。",
       "sentence": "____ is good exercise.",
       "wordCount": 4,
       "choices": [
@@ -350,7 +350,7 @@
     },
     {
       "id": "fb-g3-u5-002",
-      "japanese": "ランニングは健康に良いです",
+      "japanese": "ランニングは健康に良いです。",
       "sentence": "____ is good for health.",
       "wordCount": 5,
       "choices": [
@@ -367,7 +367,7 @@
     },
     {
       "id": "fb-g3-u5-003",
-      "japanese": "ダンスは楽しい活動です",
+      "japanese": "ダンスは楽しい活動です。",
       "sentence": "____ is an enjoyable activity.",
       "wordCount": 5,
       "choices": [
@@ -384,7 +384,7 @@
     },
     {
       "id": "fb-g3-u5-004",
-      "japanese": "釣りは私の趣味です",
+      "japanese": "釣りは私の趣味です。",
       "sentence": "____ is my hobby.",
       "wordCount": 4,
       "choices": [
@@ -401,7 +401,7 @@
     },
     {
       "id": "fb-g3-u5-005",
-      "japanese": "私は歌うことが好きです",
+      "japanese": "私は歌うことが好きです。",
       "sentence": "I like ____.",
       "wordCount": 3,
       "choices": [
@@ -418,7 +418,7 @@
     },
     {
       "id": "fb-g3-u5-006",
-      "japanese": "彼女は絵を描くことが好きです",
+      "japanese": "彼女は絵を描くことが好きです。",
       "sentence": "She likes ____.",
       "wordCount": 3,
       "choices": [
@@ -435,7 +435,7 @@
     },
     {
       "id": "fb-g3-u5-007",
-      "japanese": "私たちは旅行することが好きです",
+      "japanese": "私たちは旅行することが好きです。",
       "sentence": "We like ____.",
       "wordCount": 3,
       "choices": [
@@ -452,7 +452,7 @@
     },
     {
       "id": "fb-g3-u5-008",
-      "japanese": "彼は料理することを楽しんでいます",
+      "japanese": "彼は料理することを楽しんでいます。",
       "sentence": "He enjoys ____.",
       "wordCount": 3,
       "choices": [
@@ -469,7 +469,7 @@
     },
     {
       "id": "fb-g3-u5-009",
-      "japanese": "彼はサッカーをすることが得意です",
+      "japanese": "彼はサッカーをすることが得意です。",
       "sentence": "He is good at ____ soccer.",
       "wordCount": 6,
       "choices": [
@@ -486,7 +486,7 @@
     },
     {
       "id": "fb-g3-u5-010",
-      "japanese": "彼女はピアノを弾くことが得意です",
+      "japanese": "彼女はピアノを弾くことが得意です。",
       "sentence": "She is good at ____ the piano.",
       "wordCount": 7,
       "choices": [
@@ -503,7 +503,7 @@
     },
     {
       "id": "fb-g3-u5-011",
-      "japanese": "私は早起きが得意です",
+      "japanese": "私は早起きが得意です。",
       "sentence": "I am good at ____ up early.",
       "wordCount": 7,
       "choices": [
@@ -520,7 +520,7 @@
     },
     {
       "id": "fb-g3-u5-012",
-      "japanese": "彼らは問題を解くことが得意です",
+      "japanese": "彼らは問題を解くことが得意です。",
       "sentence": "They are good at ____ problems.",
       "wordCount": 6,
       "choices": [
@@ -537,7 +537,7 @@
     },
     {
       "id": "fb-g3-u5-013",
-      "japanese": "読書は知識を増やすのに役立ちます",
+      "japanese": "読書は知識を増やすのに役立ちます。",
       "sentence": "____ helps increase knowledge.",
       "wordCount": 4,
       "choices": [
@@ -554,7 +554,7 @@
     },
     {
       "id": "fb-g3-u5-014",
-      "japanese": "書くことは考えをまとめるのに役立ちます",
+      "japanese": "書くことは考えをまとめるのに役立ちます。",
       "sentence": "____ helps organize thoughts.",
       "wordCount": 4,
       "choices": [
@@ -571,7 +571,7 @@
     },
     {
       "id": "fb-g3-u5-015",
-      "japanese": "話すことはコミュニケーションに不可欠です",
+      "japanese": "話すことはコミュニケーションに不可欠です。",
       "sentence": "____ is essential for communication.",
       "wordCount": 5,
       "choices": [
@@ -588,7 +588,7 @@
     },
     {
       "id": "fb-g3-u5-016",
-      "japanese": "聞くことは理解の第一歩です",
+      "japanese": "聞くことは理解の第一歩です。",
       "sentence": "____ is the first step to understanding.",
       "wordCount": 7,
       "choices": [
@@ -605,7 +605,7 @@
     },
     {
       "id": "fb-g3-u5-017",
-      "japanese": "ショッピングは彼女の趣味です",
+      "japanese": "ショッピングは彼女の趣味です。",
       "sentence": "____ is her hobby.",
       "wordCount": 4,
       "choices": [
@@ -622,7 +622,7 @@
     },
     {
       "id": "fb-g3-u5-018",
-      "japanese": "掃除は毎日の仕事です",
+      "japanese": "掃除は毎日の仕事です。",
       "sentence": "____ is a daily task.",
       "wordCount": 5,
       "choices": [
@@ -639,7 +639,7 @@
     },
     {
       "id": "fb-g3-u5-019",
-      "japanese": "勉強することは成功への鍵です",
+      "japanese": "勉強することは成功への鍵です。",
       "sentence": "____ is the key to success.",
       "wordCount": 6,
       "choices": [
@@ -656,7 +656,7 @@
     },
     {
       "id": "fb-g3-u5-020",
-      "japanese": "働くことは生活の一部です",
+      "japanese": "働くことは生活の一部です。",
       "sentence": "____ is part of life.",
       "wordCount": 5,
       "choices": [
@@ -673,7 +673,7 @@
     },
     {
       "id": "so-g3-u5-001",
-      "japanese": "泳ぐことは良い運動です",
+      "japanese": "泳ぐことは良い運動です。",
       "sentence": "Swimming is good exercise.",
       "words": [
         "Swimming",
@@ -691,7 +691,7 @@
     },
     {
       "id": "so-g3-u5-002",
-      "japanese": "ランニングは健康に良いです",
+      "japanese": "ランニングは健康に良いです。",
       "sentence": "Running is good for health.",
       "words": [
         "Running",
@@ -710,7 +710,7 @@
     },
     {
       "id": "so-g3-u5-003",
-      "japanese": "ダンスは楽しい活動です",
+      "japanese": "ダンスは楽しい活動です。",
       "sentence": "Dancing is an enjoyable activity.",
       "words": [
         "Dancing",
@@ -729,7 +729,7 @@
     },
     {
       "id": "so-g3-u5-004",
-      "japanese": "釣りは私の趣味です",
+      "japanese": "釣りは私の趣味です。",
       "sentence": "Fishing is my hobby.",
       "words": [
         "Fishing",
@@ -747,7 +747,7 @@
     },
     {
       "id": "so-g3-u5-005",
-      "japanese": "私は歌うことが好きです",
+      "japanese": "私は歌うことが好きです。",
       "sentence": "I like singing.",
       "words": [
         "I",
@@ -764,7 +764,7 @@
     },
     {
       "id": "so-g3-u5-006",
-      "japanese": "彼女は絵を描くことが好きです",
+      "japanese": "彼女は絵を描くことが好きです。",
       "sentence": "She likes painting.",
       "words": [
         "She",
@@ -781,7 +781,7 @@
     },
     {
       "id": "so-g3-u5-007",
-      "japanese": "私たちは旅行することが好きです",
+      "japanese": "私たちは旅行することが好きです。",
       "sentence": "We like traveling.",
       "words": [
         "We",
@@ -798,7 +798,7 @@
     },
     {
       "id": "so-g3-u5-008",
-      "japanese": "彼は料理することを楽しんでいます",
+      "japanese": "彼は料理することを楽しんでいます。",
       "sentence": "He enjoys cooking.",
       "words": [
         "He",
@@ -815,7 +815,7 @@
     },
     {
       "id": "so-g3-u5-009",
-      "japanese": "彼はサッカーをすることが得意です",
+      "japanese": "彼はサッカーをすることが得意です。",
       "sentence": "He is good at playing soccer.",
       "words": [
         "He",
@@ -835,7 +835,7 @@
     },
     {
       "id": "so-g3-u5-010",
-      "japanese": "彼女はピアノを弾くことが得意です",
+      "japanese": "彼女はピアノを弾くことが得意です。",
       "sentence": "She is good at playing the piano.",
       "words": [
         "She",
@@ -856,7 +856,7 @@
     },
     {
       "id": "so-g3-u5-011",
-      "japanese": "私は早起きが得意です",
+      "japanese": "私は早起きが得意です。",
       "sentence": "I am good at getting up early.",
       "words": [
         "I",
@@ -877,7 +877,7 @@
     },
     {
       "id": "so-g3-u5-012",
-      "japanese": "彼らは問題を解くことが得意です",
+      "japanese": "彼らは問題を解くことが得意です。",
       "sentence": "They are good at solving problems.",
       "words": [
         "They",
@@ -897,7 +897,7 @@
     },
     {
       "id": "so-g3-u5-013",
-      "japanese": "読書は知識を増やすのに役立ちます",
+      "japanese": "読書は知識を増やすのに役立ちます。",
       "sentence": "Reading helps increase knowledge.",
       "words": [
         "Reading",
@@ -915,7 +915,7 @@
     },
     {
       "id": "so-g3-u5-014",
-      "japanese": "書くことは考えをまとめるのに役立ちます",
+      "japanese": "書くことは考えをまとめるのに役立ちます。",
       "sentence": "Writing helps organize thoughts.",
       "words": [
         "Writing",
@@ -933,7 +933,7 @@
     },
     {
       "id": "so-g3-u5-015",
-      "japanese": "話すことはコミュニケーションに不可欠です",
+      "japanese": "話すことはコミュニケーションに不可欠です。",
       "sentence": "Speaking is essential for communication.",
       "words": [
         "Speaking",
@@ -952,7 +952,7 @@
     },
     {
       "id": "so-g3-u5-016",
-      "japanese": "聞くことは理解の第一歩です",
+      "japanese": "聞くことは理解の第一歩です。",
       "sentence": "Listening is the first step to understanding.",
       "words": [
         "Listening",
@@ -973,7 +973,7 @@
     },
     {
       "id": "so-g3-u5-017",
-      "japanese": "ショッピングは彼女の趣味です",
+      "japanese": "ショッピングは彼女の趣味です。",
       "sentence": "Shopping is her hobby.",
       "words": [
         "Shopping",
@@ -991,7 +991,7 @@
     },
     {
       "id": "so-g3-u5-018",
-      "japanese": "掃除は毎日の仕事です",
+      "japanese": "掃除は毎日の仕事です。",
       "sentence": "Cleaning is a daily task.",
       "words": [
         "Cleaning",
@@ -1010,7 +1010,7 @@
     },
     {
       "id": "so-g3-u5-019",
-      "japanese": "勉強することは成功への鍵です",
+      "japanese": "勉強することは成功への鍵です。",
       "sentence": "Studying is the key to success.",
       "words": [
         "Studying",
@@ -1030,7 +1030,7 @@
     },
     {
       "id": "so-g3-u5-020",
-      "japanese": "働くことは生活の一部です",
+      "japanese": "働くことは生活の一部です。",
       "sentence": "Working is part of life.",
       "words": [
         "Working",
@@ -1050,7 +1050,7 @@
     {
       "id": "g3-u5-prep-001",
       "type": "fillInBlank",
-      "japanese": "私は彼に会うのを楽しみにしています",
+      "japanese": "私は彼に会うのを楽しみにしています。",
       "sentence": "I'm looking forward to ____ him.",
       "choices": [
         "seeing",
@@ -1065,7 +1065,7 @@
     {
       "id": "g3-u5-prep-002",
       "type": "sentenceOrdering",
-      "japanese": "私たちは旅行するのを楽しみにしています",
+      "japanese": "私たちは旅行するのを楽しみにしています。",
       "words": [
         "we",
         "are",
@@ -1083,7 +1083,7 @@
     {
       "id": "g3-u5-prep-003",
       "type": "conversation",
-      "japanese": "私はあなたの返事を楽しみにしています",
+      "japanese": "私はあなたの返事を楽しみにしています。",
       "situation": "期待",
       "dialogue": [
         {
@@ -1108,7 +1108,7 @@
     {
       "id": "g3-u5-prep-004",
       "type": "fillInBlank",
-      "japanese": "彼女は試験に合格するのを楽しみにしています",
+      "japanese": "彼女は試験に合格するのを楽しみにしています。",
       "sentence": "She is looking forward to ____ the exam.",
       "choices": [
         "passing",
@@ -1123,7 +1123,7 @@
     {
       "id": "g3-u5-prep-005",
       "type": "fillInBlank",
-      "japanese": "私は早起きに慣れています",
+      "japanese": "私は早起きに慣れています。",
       "sentence": "I'm used to ____ up early.",
       "choices": [
         "getting",
@@ -1138,7 +1138,7 @@
     {
       "id": "g3-u5-prep-006",
       "type": "sentenceOrdering",
-      "japanese": "彼は一人で暮らすのに慣れています",
+      "japanese": "彼は一人で暮らすのに慣れています。",
       "words": [
         "he",
         "is",
@@ -1156,7 +1156,7 @@
     {
       "id": "g3-u5-prep-007",
       "type": "paraphrase",
-      "japanese": "彼女は英語を話すことに慣れました（speaking）",
+      "japanese": "彼女は英語を話すことに慣れました（speaking）。",
       "originalSentence": "She got accustomed to speaking English.",
       "question": "She got used to ____ English.",
       "correctAnswer": "speaking",
@@ -1166,7 +1166,7 @@
     {
       "id": "g3-u5-prep-008",
       "type": "fillInBlank",
-      "japanese": "私たちは暑い天気に慣れています",
+      "japanese": "私たちは暑い天気に慣れています。",
       "sentence": "We are used to ____ hot weather.",
       "choices": [
         "having",
@@ -1181,7 +1181,7 @@
     {
       "id": "g3-u5-prep-009",
       "type": "fillInBlank",
-      "japanese": "手伝ってくれてありがとう",
+      "japanese": "手伝ってくれてありがとう。",
       "sentence": "Thank you for ____ me.",
       "choices": [
         "helping",
@@ -1196,7 +1196,7 @@
     {
       "id": "g3-u5-prep-010",
       "type": "sentenceOrdering",
-      "japanese": "来てくれてありがとう",
+      "japanese": "来てくれてありがとう。",
       "words": [
         "thank",
         "you",
@@ -1212,7 +1212,7 @@
     {
       "id": "g3-u5-prep-011",
       "type": "conversation",
-      "japanese": "教えてくれてありがとう",
+      "japanese": "教えてくれてありがとう。",
       "situation": "感謝",
       "dialogue": [
         {
@@ -1237,7 +1237,7 @@
     {
       "id": "g3-u5-prep-012",
       "type": "fillInBlank",
-      "japanese": "彼は何も言わずに出て行きました",
+      "japanese": "彼は何も言わずに出て行きました。",
       "sentence": "He left without ____ anything.",
       "choices": [
         "saying",
@@ -1252,7 +1252,7 @@
     {
       "id": "g3-u5-prep-013",
       "type": "sentenceOrdering",
-      "japanese": "彼女は朝食を食べずに出かけました",
+      "japanese": "彼女は朝食を食べずに出かけました。",
       "words": [
         "she",
         "left",
@@ -1269,7 +1269,7 @@
     {
       "id": "g3-u5-prep-014",
       "type": "fillInBlank",
-      "japanese": "休まずに働き続けました",
+      "japanese": "休まずに働き続けました。",
       "sentence": "I kept working without ____.",
       "choices": [
         "resting",
@@ -1284,7 +1284,7 @@
     {
       "id": "g3-u5-prep-015",
       "type": "fillInBlank",
-      "japanese": "一生懸命勉強することで合格しました",
+      "japanese": "一生懸命勉強することで合格しました。",
       "sentence": "I passed the exam by ____ hard.",
       "choices": [
         "studying",
@@ -1299,7 +1299,7 @@
     {
       "id": "g3-u5-prep-016",
       "type": "sentenceOrdering",
-      "japanese": "練習することで上達できます",
+      "japanese": "練習することで上達できます。",
       "sentence": "あなたは練習することで上達できます",
       "words": [
         "you",
@@ -1317,7 +1317,7 @@
     {
       "id": "g3-u5-prep-017",
       "type": "paraphrase",
-      "japanese": "彼は走ることで健康を保ちます（running）",
+      "japanese": "彼は走ることで健康を保ちます（running）。",
       "originalSentence": "He stays healthy when he runs.",
       "question": "He stays healthy by ____.",
       "correctAnswer": "running",
@@ -1327,7 +1327,7 @@
     {
       "id": "g3-u5-prep-018",
       "type": "fillInBlank",
-      "japanese": "彼女は歌うのが得意です",
+      "japanese": "彼女は歌うのが得意です。",
       "sentence": "She is good at ____.",
       "choices": [
         "singing",
@@ -1342,7 +1342,7 @@
     {
       "id": "g3-u5-prep-019",
       "type": "fillInBlank",
-      "japanese": "私は失敗することを恐れています",
+      "japanese": "私は失敗することを恐れています。",
       "sentence": "I'm afraid of ____.",
       "choices": [
         "failing",
@@ -1357,7 +1357,7 @@
     {
       "id": "g3-u5-prep-020",
       "type": "sentenceOrdering",
-      "japanese": "彼は遅刻したことを謝りました",
+      "japanese": "彼は遅刻したことを謝りました。",
       "words": [
         "he",
         "apologized",

@@ -11,7 +11,7 @@
   "questions": [
     {
       "id": "vf-g3-u2-001",
-      "japanese": "私は2時間勉強しています",
+      "japanese": "私は2時間勉強しています。",
       "sentence": "I ____ been studying for two hours.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -27,7 +27,7 @@
     },
     {
       "id": "vf-g3-u2-002",
-      "japanese": "彼は朝から働いています",
+      "japanese": "彼は朝から働いています。",
       "sentence": "He ____ been working since morning.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -43,7 +43,7 @@
     },
     {
       "id": "vf-g3-u2-003",
-      "japanese": "彼女は30分待っています",
+      "japanese": "彼女は30分待っています。",
       "sentence": "She ____ been waiting for 30 minutes.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -59,7 +59,7 @@
     },
     {
       "id": "vf-g3-u2-004",
-      "japanese": "私たちは3年間ここに住んでいます",
+      "japanese": "私たちは3年間ここに住んでいます。",
       "sentence": "We ____ been living here for three years.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -75,7 +75,7 @@
     },
     {
       "id": "vf-g3-u2-005",
-      "japanese": "彼らは1時間話しています",
+      "japanese": "彼らは1時間話しています。",
       "sentence": "They ____ been talking for an hour.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -91,7 +91,7 @@
     },
     {
       "id": "vf-g3-u2-006",
-      "japanese": "あなたは何をしていましたか",
+      "japanese": "あなたは何をしていましたか。",
       "sentence": "What ____ you been doing?",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -107,7 +107,7 @@
     },
     {
       "id": "vf-g3-u2-007",
-      "japanese": "彼は昨日から寝ています",
+      "japanese": "彼は昨日から寝ています。",
       "sentence": "He ____ been sleeping since yesterday.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -123,7 +123,7 @@
     },
     {
       "id": "vf-g3-u2-008",
-      "japanese": "彼女は朝から料理しています",
+      "japanese": "彼女は朝から料理しています。",
       "sentence": "She ____ been cooking since morning.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -139,7 +139,7 @@
     },
     {
       "id": "vf-g3-u2-009",
-      "japanese": "私は長い間これを探しています",
+      "japanese": "私は長い間これを探しています。",
       "sentence": "I ____ been looking for this for a long time.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -155,7 +155,7 @@
     },
     {
       "id": "vf-g3-u2-010",
-      "japanese": "彼らは1週間旅行しています",
+      "japanese": "彼らは1週間旅行しています。",
       "sentence": "They ____ been traveling for a week.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -171,7 +171,7 @@
     },
     {
       "id": "vf-g3-u2-011",
-      "japanese": "彼は6時から勉強しています",
+      "japanese": "彼は6時から勉強しています。",
       "sentence": "He ____ been studying since 6 o'clock.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -187,7 +187,7 @@
     },
     {
       "id": "vf-g3-u2-012",
-      "japanese": "私たちは2時間走っています",
+      "japanese": "私たちは2時間走っています。",
       "sentence": "We ____ been running for two hours.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -203,7 +203,7 @@
     },
     {
       "id": "vf-g3-u2-013",
-      "japanese": "彼女は午後からピアノを弾いています",
+      "japanese": "彼女は午後からピアノを弾いています。",
       "sentence": "She ____ been playing the piano since this afternoon.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -219,7 +219,7 @@
     },
     {
       "id": "vf-g3-u2-014",
-      "japanese": "私は5年間英語を教えています",
+      "japanese": "私は5年間英語を教えています。",
       "sentence": "I ____ been teaching English for five years.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -235,7 +235,7 @@
     },
     {
       "id": "vf-g3-u2-015",
-      "japanese": "彼らは朝から雨が降っています",
+      "japanese": "彼らは朝から雨が降っています。",
       "sentence": "It ____ been raining since morning.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -251,7 +251,7 @@
     },
     {
       "id": "vf-g3-u2-016",
-      "japanese": "あなたはどのくらいここにいますか",
+      "japanese": "あなたはどのくらいここにいますか。",
       "sentence": "How long ____ you been here?",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -267,7 +267,7 @@
     },
     {
       "id": "vf-g3-u2-017",
-      "japanese": "彼は1時間電話で話しています",
+      "japanese": "彼は1時間電話で話しています。",
       "sentence": "He ____ been talking on the phone for an hour.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -283,7 +283,7 @@
     },
     {
       "id": "vf-g3-u2-018",
-      "japanese": "私たちは先週から準備しています",
+      "japanese": "私たちは先週から準備しています。",
       "sentence": "We ____ been preparing since last week.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -299,7 +299,7 @@
     },
     {
       "id": "vf-g3-u2-019",
-      "japanese": "彼女は30分歌っています",
+      "japanese": "彼女は30分歌っています。",
       "sentence": "She ____ been singing for 30 minutes.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -315,7 +315,7 @@
     },
     {
       "id": "vf-g3-u2-020",
-      "japanese": "彼らは昨日から待っています",
+      "japanese": "彼らは昨日から待っています。",
       "sentence": "They ____ been waiting since yesterday.",
       "verb": "present-perfect-continuous",
       "choices": [
@@ -331,7 +331,7 @@
     },
     {
       "id": "fb-g3-u2-001",
-      "japanese": "私は2時間勉強しています",
+      "japanese": "私は2時間勉強しています。",
       "sentence": "I have been ____ for two hours.",
       "choices": [
         "studying",
@@ -346,7 +346,7 @@
     },
     {
       "id": "fb-g3-u2-002",
-      "japanese": "彼は朝から働いています",
+      "japanese": "彼は朝から働いています。",
       "sentence": "He has been ____ since morning.",
       "choices": [
         "working",
@@ -376,7 +376,7 @@
     },
     {
       "id": "fb-g3-u2-004",
-      "japanese": "私たちは3年間ここに住んでいます",
+      "japanese": "私たちは3年間ここに住んでいます。",
       "sentence": "We have been ____ here for three years.",
       "choices": [
         "living",
@@ -391,7 +391,7 @@
     },
     {
       "id": "fb-g3-u2-005",
-      "japanese": "彼らは1時間話しています",
+      "japanese": "彼らは1時間話しています。",
       "sentence": "They have been ____ for an hour.",
       "choices": [
         "talking",
@@ -406,7 +406,7 @@
     },
     {
       "id": "fb-g3-u2-006",
-      "japanese": "彼は昨日から寝ています",
+      "japanese": "彼は昨日から寝ています。",
       "sentence": "He has been ____ since yesterday.",
       "choices": [
         "sleeping",
@@ -421,7 +421,7 @@
     },
     {
       "id": "fb-g3-u2-007",
-      "japanese": "彼女は朝から料理しています",
+      "japanese": "彼女は朝から料理しています。",
       "sentence": "She has been ____ since morning.",
       "choices": [
         "cooking",
@@ -436,7 +436,7 @@
     },
     {
       "id": "fb-g3-u2-008",
-      "japanese": "私は長い間これを探しています",
+      "japanese": "私は長い間これを探しています。",
       "sentence": "I have been ____ for this for a long time.",
       "choices": [
         "looking",
@@ -451,7 +451,7 @@
     },
     {
       "id": "fb-g3-u2-009",
-      "japanese": "彼らは1週間旅行しています",
+      "japanese": "彼らは1週間旅行しています。",
       "sentence": "They have been ____ for a week.",
       "choices": [
         "traveling",
@@ -466,7 +466,7 @@
     },
     {
       "id": "fb-g3-u2-010",
-      "japanese": "彼は6時から勉強しています",
+      "japanese": "彼は6時から勉強しています。",
       "sentence": "He has been ____ since 6 o'clock.",
       "choices": [
         "studying",
@@ -481,7 +481,7 @@
     },
     {
       "id": "fb-g3-u2-011",
-      "japanese": "私たちは2時間走っています",
+      "japanese": "私たちは2時間走っています。",
       "sentence": "We have been ____ for two hours.",
       "choices": [
         "running",
@@ -496,7 +496,7 @@
     },
     {
       "id": "fb-g3-u2-012",
-      "japanese": "彼女は午後からピアノを弾いています",
+      "japanese": "彼女は午後からピアノを弾いています。",
       "sentence": "She has been ____ the piano since this afternoon.",
       "choices": [
         "playing",
@@ -511,7 +511,7 @@
     },
     {
       "id": "fb-g3-u2-013",
-      "japanese": "私は5年間英語を教えています",
+      "japanese": "私は5年間英語を教えています。",
       "sentence": "I have been ____ English for five years.",
       "choices": [
         "teaching",
@@ -526,7 +526,7 @@
     },
     {
       "id": "fb-g3-u2-014",
-      "japanese": "彼は1時間電話で話しています",
+      "japanese": "彼は1時間電話で話しています。",
       "sentence": "He has been ____ on the phone for an hour.",
       "choices": [
         "talking",
@@ -541,7 +541,7 @@
     },
     {
       "id": "fb-g3-u2-015",
-      "japanese": "私たちは先週から準備しています",
+      "japanese": "私たちは先週から準備しています。",
       "sentence": "We have been ____ since last week.",
       "choices": [
         "preparing",
@@ -556,7 +556,7 @@
     },
     {
       "id": "fb-g3-u2-016",
-      "japanese": "彼女は30分歌っています",
+      "japanese": "彼女は30分歌っています。",
       "sentence": "She has been ____ for 30 minutes.",
       "choices": [
         "singing",
@@ -571,7 +571,7 @@
     },
     {
       "id": "fb-g3-u2-017",
-      "japanese": "彼らは昨日から待っています",
+      "japanese": "彼らは昨日から待っています。",
       "sentence": "They have been ____ since yesterday.",
       "choices": [
         "waiting",
@@ -586,7 +586,7 @@
     },
     {
       "id": "fb-g3-u2-018",
-      "japanese": "私は朝から読んでいます",
+      "japanese": "私は朝から読んでいます。",
       "sentence": "I have been ____ since morning.",
       "choices": [
         "reading",
@@ -601,7 +601,7 @@
     },
     {
       "id": "fb-g3-u2-019",
-      "japanese": "彼は1時間泳いでいます",
+      "japanese": "彼は1時間泳いでいます。",
       "sentence": "He has been ____ for an hour.",
       "choices": [
         "swimming",
@@ -616,7 +616,7 @@
     },
     {
       "id": "fb-g3-u2-020",
-      "japanese": "彼女は午後から絵を描いています",
+      "japanese": "彼女は午後から絵を描いています。",
       "sentence": "She has been ____ since this afternoon.",
       "choices": [
         "drawing",
@@ -631,7 +631,7 @@
     },
     {
       "id": "so-g3-u2-001",
-      "japanese": "私は2時間勉強しています",
+      "japanese": "私は2時間勉強しています。",
       "words": [
         "I",
         "have",
@@ -652,7 +652,7 @@
     },
     {
       "id": "so-g3-u2-002",
-      "japanese": "彼は朝から働いています",
+      "japanese": "彼は朝から働いています。",
       "words": [
         "He",
         "has",
@@ -672,7 +672,7 @@
     },
     {
       "id": "so-g3-u2-003",
-      "japanese": "彼女は30分待っています",
+      "japanese": "彼女は30分待っています。",
       "words": [
         "She",
         "has",
@@ -693,7 +693,7 @@
     },
     {
       "id": "so-g3-u2-004",
-      "japanese": "私たちは3年間ここに住んでいます",
+      "japanese": "私たちは3年間ここに住んでいます。",
       "words": [
         "We",
         "have",
@@ -715,7 +715,7 @@
     },
     {
       "id": "so-g3-u2-005",
-      "japanese": "彼らは1時間話しています",
+      "japanese": "彼らは1時間話しています。",
       "words": [
         "They",
         "have",
@@ -736,7 +736,7 @@
     },
     {
       "id": "so-g3-u2-006",
-      "japanese": "彼は昨日から寝ています",
+      "japanese": "彼は昨日から寝ています。",
       "words": [
         "He",
         "has",
@@ -756,7 +756,7 @@
     },
     {
       "id": "so-g3-u2-007",
-      "japanese": "彼女は朝から料理しています",
+      "japanese": "彼女は朝から料理しています。",
       "words": [
         "She",
         "has",
@@ -776,7 +776,7 @@
     },
     {
       "id": "so-g3-u2-008",
-      "japanese": "私は長い間これを探しています",
+      "japanese": "私は長い間これを探しています。",
       "words": [
         "I",
         "have",
@@ -800,7 +800,7 @@
     },
     {
       "id": "so-g3-u2-009",
-      "japanese": "彼らは1週間旅行しています",
+      "japanese": "彼らは1週間旅行しています。",
       "words": [
         "They",
         "have",
@@ -821,7 +821,7 @@
     },
     {
       "id": "so-g3-u2-010",
-      "japanese": "彼は6時から勉強しています",
+      "japanese": "彼は6時から勉強しています。",
       "words": [
         "He",
         "has",
@@ -842,7 +842,7 @@
     },
     {
       "id": "so-g3-u2-011",
-      "japanese": "私たちは2時間走っています",
+      "japanese": "私たちは2時間走っています。",
       "words": [
         "We",
         "have",
@@ -863,7 +863,7 @@
     },
     {
       "id": "so-g3-u2-012",
-      "japanese": "彼女は午後からピアノを弾いています",
+      "japanese": "彼女は午後からピアノを弾いています。",
       "words": [
         "She",
         "has",
@@ -886,7 +886,7 @@
     },
     {
       "id": "so-g3-u2-013",
-      "japanese": "私は5年間英語を教えています",
+      "japanese": "私は5年間英語を教えています。",
       "words": [
         "I",
         "have",
@@ -908,7 +908,7 @@
     },
     {
       "id": "so-g3-u2-014",
-      "japanese": "彼は1時間電話で話しています",
+      "japanese": "彼は1時間電話で話しています。",
       "words": [
         "He",
         "has",
@@ -932,7 +932,7 @@
     },
     {
       "id": "so-g3-u2-015",
-      "japanese": "私たちは先週から準備しています",
+      "japanese": "私たちは先週から準備しています。",
       "words": [
         "We",
         "have",
@@ -953,7 +953,7 @@
     },
     {
       "id": "so-g3-u2-016",
-      "japanese": "彼女は30分歌っています",
+      "japanese": "彼女は30分歌っています。",
       "words": [
         "She",
         "has",
@@ -974,7 +974,7 @@
     },
     {
       "id": "so-g3-u2-017",
-      "japanese": "彼らは昨日から待っています",
+      "japanese": "彼らは昨日から待っています。",
       "words": [
         "They",
         "have",
@@ -994,7 +994,7 @@
     },
     {
       "id": "so-g3-u2-018",
-      "japanese": "私は朝から読んでいます",
+      "japanese": "私は朝から読んでいます。",
       "words": [
         "I",
         "have",
@@ -1014,7 +1014,7 @@
     },
     {
       "id": "so-g3-u2-019",
-      "japanese": "彼は1時間泳いでいます",
+      "japanese": "彼は1時間泳いでいます。",
       "words": [
         "He",
         "has",
@@ -1035,7 +1035,7 @@
     },
     {
       "id": "so-g3-u2-020",
-      "japanese": "彼女は午後から絵を描いています",
+      "japanese": "彼女は午後から絵を描いています。",
       "words": [
         "She",
         "has",
