@@ -287,12 +287,27 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       }
     };
     
+    // キーボードイベント追加（カーソルキー対応）
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        // 左カーソルキー（覚えていない）
+        e.preventDefault();
+        handleSwipe('left');
+      } else if (e.key === 'ArrowRight') {
+        // 右カーソルキー（覚えた）
+        e.preventDefault();
+        handleSwipe('right');
+      }
+    };
+    
     card.addEventListener('touchstart', handleTouchStart);
     card.addEventListener('touchend', handleTouchEnd);
+    document.addEventListener('keydown', handleKeyDown);
     
     return () => {
       card.removeEventListener('touchstart', handleTouchStart);
       card.removeEventListener('touchend', handleTouchEnd);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleSwipe]);
   
