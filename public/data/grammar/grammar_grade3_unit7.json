@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data in sentenceOrdering questions 6-20",
   "unit": "Unit 7",
   "title": "仮定法",
   "grammar": "If I were/If I had",
@@ -1081,5 +1083,8 @@
       "type": "sentenceOrdering",
       "explanation": "仮定法の例文20。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.097089"
 }

@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 8",
   "title": "There is/are",
   "grammar": "存在を表す構文",
@@ -1141,5 +1143,8 @@
       "difficulty": "beginner",
       "explanation": "have toとmustは基本的に同じ意味です。両方とも「~しなければならない」を表します。"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.092195"
 }

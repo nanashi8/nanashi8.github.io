@@ -626,7 +626,7 @@
     {
       "id": "g2-u0-para-010",
       "type": "paraphrase",
-      "japanese": "疑問文の応答。",
+      "japanese": "はい、行きました。",
       "originalSentence": "Was he at home?",
       "question": "肯定で答えなさい",
       "choices": [
@@ -642,7 +642,7 @@
     {
       "id": "g2-u0-para-011",
       "type": "paraphrase",
-      "japanese": "疑問文の応答。",
+      "japanese": "いいえ、行きませんでした。",
       "originalSentence": "Were they late?",
       "question": "否定で答えなさい",
       "choices": [
@@ -674,7 +674,7 @@
     {
       "id": "g2-u0-para-013",
       "type": "paraphrase",
-      "japanese": "否定疑問文。",
+      "japanese": "あなたは行かなかったのですか。",
       "originalSentence": "She was sick.",
       "question": "否定の疑問文に",
       "choices": [
@@ -690,7 +690,7 @@
     {
       "id": "g2-u0-para-014",
       "type": "paraphrase",
-      "japanese": "Wh疑問文。",
+      "japanese": "あなたはどこへ行きましたか。",
       "originalSentence": "He was in Tokyo.",
       "question": "Whereを使って疑問文に",
       "choices": [
@@ -706,7 +706,7 @@
     {
       "id": "g2-u0-para-015",
       "type": "paraphrase",
-      "japanese": "Wh疑問文。",
+      "japanese": "あなたはいつ行きましたか。",
       "originalSentence": "They were students.",
       "question": "Whatを使って疑問文に",
       "choices": [

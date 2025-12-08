@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 3",
   "title": "助動詞must/have to",
   "grammar": "義務・必要性の表現",
@@ -986,5 +988,8 @@
       "explanation": "義務・必要性の表現の会話5です。",
       "hint": "会話"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.077513"
 }

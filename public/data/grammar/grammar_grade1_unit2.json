@@ -510,7 +510,7 @@
     {
       "id": "g1-u2-para-002",
       "type": "paraphrase",
-      "japanese": "He plays soccer.（疑問文に）。",
+      "japanese": "彼はサッカーをしますか。",
       "originalSentence": "He plays soccer.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -526,7 +526,7 @@
     {
       "id": "g1-u2-para-003",
       "type": "paraphrase",
-      "japanese": "She likes music.（否定文に）。",
+      "japanese": "彼女は音楽が好きではありません。",
       "originalSentence": "She likes music.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -574,7 +574,7 @@
     {
       "id": "g1-u2-para-006",
       "type": "paraphrase",
-      "japanese": "Does she study English?（否定文に）。",
+      "japanese": "いいえ、彼女は英語を勉強しません。",
       "originalSentence": "Does she study English?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -590,7 +590,7 @@
     {
       "id": "g1-u2-para-007",
       "type": "paraphrase",
-      "japanese": "Yesの答え。",
+      "japanese": "はい、彼は音楽が好きです。",
       "originalSentence": "Does he play tennis?",
       "question": "Yesで答えなさい",
       "choices": [
@@ -638,7 +638,7 @@
     {
       "id": "g1-u2-para-010",
       "type": "paraphrase",
-      "japanese": "He likes music.（疑問文に）。",
+      "japanese": "彼は音楽が好きですか。",
       "originalSentence": "He likes music.",
       "question": "否定疑問文「彼は音楽が好きではないのですか」に書き換えなさい",
       "choices": [
@@ -702,7 +702,7 @@
     {
       "id": "g1-u2-para-014",
       "type": "paraphrase",
-      "japanese": "She studies English.（疑問文に）。",
+      "japanese": "彼女は英語を勉強しますか。",
       "originalSentence": "She studies English.",
       "question": "「何を」を尋ねる疑問文に書き換えなさい",
       "choices": [

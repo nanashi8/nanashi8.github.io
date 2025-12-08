@@ -552,7 +552,7 @@
     {
       "id": "g1-u1-para-004",
       "type": "paraphrase",
-      "japanese": "Do you play soccer?（否定文に）。",
+      "japanese": "いいえ、私はサッカーをしません。",
       "originalSentence": "Do you play soccer?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -616,7 +616,7 @@
     {
       "id": "g1-u1-para-008",
       "type": "paraphrase",
-      "japanese": "Yesの答え。",
+      "japanese": "はい、私はテニスをします。",
       "originalSentence": "Do you study English?",
       "question": "Yesで答えなさい",
       "choices": [
@@ -696,7 +696,7 @@
     {
       "id": "g1-u1-para-013",
       "type": "paraphrase",
-      "japanese": "You play tennis.（疑問文に）。",
+      "japanese": "あなたはテニスをしますか。",
       "originalSentence": "You play tennis.",
       "question": "「何のスポーツ」を尋ねる疑問文に書き換えなさい",
       "choices": [

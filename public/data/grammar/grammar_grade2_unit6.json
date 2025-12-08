@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 6",
   "title": "接続詞",
   "grammar": "when/if/because/that",
@@ -1327,5 +1329,8 @@
       "explanation": "when節(瞬間) + 主節(過去完了)で「~したとき、すでに...していた」という構文として覚えてください。",
       "hint": "到着という瞬間"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.083574"
 }
