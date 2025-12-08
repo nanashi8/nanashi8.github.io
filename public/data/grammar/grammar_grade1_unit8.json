@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
-      "explanation": "yesterdayがあるので過去形。play + ed = played。",
+      "explanation": "yesterdayがあるので過去形です。play + ed = playedです。",
       "hint": "過去形"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "watched",
       "difficulty": "beginner",
-      "explanation": "last nightは過去。watch + ed = watched。",
+      "explanation": "last nightは過去です。watch + ed = watchedです。",
       "hint": "過去形"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "studied",
       "difficulty": "beginner",
-      "explanation": "yesterdayは過去。study → y を i に変えて ed = studied。",
+      "explanation": "yesterdayは過去です。study → y を i に変えて ed = studiedです。",
       "hint": "y→ied"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
-      "explanation": "last weekは過去。play + ed = played。",
+      "explanation": "last weekは過去です。play + ed = playedです。",
       "hint": "過去形"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "cleaned",
       "difficulty": "beginner",
-      "explanation": "yesterdayは過去。clean + ed = cleaned。",
+      "explanation": "yesterdayは過去です。clean + ed = cleanedです。",
       "hint": "過去形"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "received",
       "difficulty": "intermediate",
-      "explanation": "last Sundayは過去。receive + d = received（eで終わる→d）。",
+      "explanation": "last Sundayは過去です。receive + d = received（eで終わる→d）です。",
       "hint": "e→d"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "carried",
       "difficulty": "intermediate",
-      "explanation": "yesterdayは過去。carry → y を i に変えて ed = carried。",
+      "explanation": "yesterdayは過去です。carry → y を i に変えて ed = carriedです。",
       "hint": "y→ied"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "worked",
       "difficulty": "intermediate",
-      "explanation": "last monthは過去。work + ed = worked。",
+      "explanation": "last monthは過去です。work + ed = workedです。",
       "hint": "過去形"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "enjoyed",
       "difficulty": "intermediate",
-      "explanation": "last Fridayは過去。enjoy + ed = enjoyed。",
+      "explanation": "last Fridayは過去です。enjoy + ed = enjoyedです。",
       "hint": "過去形"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "finished",
       "difficulty": "intermediate",
-      "explanation": "two hours agoは過去。finish + ed = finished。",
+      "explanation": "two hours agoは過去です。finish + ed = finishedです。",
       "hint": "過去形"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "started",
       "difficulty": "intermediate",
-      "explanation": "yesterday morningは過去。start + ed = started。",
+      "explanation": "yesterday morningは過去です。start + ed = startedです。",
       "hint": "過去形"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "cooked",
       "difficulty": "advanced",
-      "explanation": "last Saturdayは過去。cook + ed = cooked。",
+      "explanation": "last Saturdayは過去です。cook + ed = cookedです。",
       "hint": "過去形"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "completed",
       "difficulty": "advanced",
-      "explanation": "last yearは過去。complete + d = completed（eで終わる→d）。",
+      "explanation": "last yearは過去です。complete + d = completed（eで終わる→d）です。",
       "hint": "e→d"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "visited",
       "difficulty": "advanced",
-      "explanation": "last summerは過去。visit + ed = visited。",
+      "explanation": "last summerは過去です。visit + ed = visitedです。",
       "hint": "過去形"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "opened",
       "difficulty": "advanced",
-      "explanation": "five minutes agoは過去。open + ed = opened。",
+      "explanation": "five minutes agoは過去です。open + ed = openedです。",
       "hint": "過去形"
     },
     {
@@ -247,7 +247,7 @@
       ],
       "correctAnswer": "I walked yesterday.",
       "difficulty": "beginner",
-      "explanation": "「私は昨日歩きました」。walk + ed = walked。",
+      "explanation": "「私は昨日歩きました」です。walk + ed = walkedです。",
       "hint": "主語 + 過去形",
       "wordCount": 3
     },
@@ -263,7 +263,7 @@
       ],
       "correctAnswer": "She danced last night.",
       "difficulty": "beginner",
-      "explanation": "「彼女は昨晩踊りました」。dance + d = danced。",
+      "explanation": "「彼女は昨晩踊りました」です。dance + d = dancedです。",
       "hint": "e→d",
       "wordCount": 4
     },
@@ -278,7 +278,7 @@
       ],
       "correctAnswer": "They jumped yesterday.",
       "difficulty": "beginner",
-      "explanation": "「彼らは昨日跳びました」。jump + ed = jumped。",
+      "explanation": "「彼らは昨日跳びました」です。jump + ed = jumpedです。",
       "hint": "過去形",
       "wordCount": 3
     },
@@ -294,7 +294,7 @@
       ],
       "correctAnswer": "We listened to music.",
       "difficulty": "beginner",
-      "explanation": "「私たちは音楽を聴きました」。listen + ed = listened。",
+      "explanation": "「私たちは音楽を聴きました」です。listen + ed = listenedです。",
       "hint": "listened to",
       "wordCount": 4
     },
@@ -310,7 +310,7 @@
       ],
       "correctAnswer": "He helped me yesterday.",
       "difficulty": "beginner",
-      "explanation": "「彼は昨日私を助けました」。help + ed = helped。",
+      "explanation": "「彼は昨日私を助けました」です。help + ed = helpedです。",
       "hint": "過去形",
       "wordCount": 4
     },
@@ -327,7 +327,7 @@
       ],
       "correctAnswer": "I used this pen yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「私は昨日このペンを使いました」。use + d = used。",
+      "explanation": "「私は昨日このペンを使いました」です。use + d = usedです。",
       "hint": "e→d",
       "wordCount": 5
     },
@@ -343,7 +343,7 @@
       ],
       "correctAnswer": "She asked a question.",
       "difficulty": "intermediate",
-      "explanation": "「彼女は質問をしました」。ask + ed = asked。",
+      "explanation": "「彼女は質問をしました」です。ask + ed = askedです。",
       "hint": "過去形",
       "wordCount": 4
     },
@@ -359,7 +359,7 @@
       ],
       "correctAnswer": "They talked about sports.",
       "difficulty": "intermediate",
-      "explanation": "「彼らはスポーツについて話しました」。talk + ed = talked。",
+      "explanation": "「彼らはスポーツについて話しました」です。talk + ed = talkedです。",
       "hint": "talked about",
       "wordCount": 4
     },
@@ -375,7 +375,7 @@
       ],
       "correctAnswer": "We practiced piano yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「私たちは昨日ピアノを練習しました」。practice + d = practiced。",
+      "explanation": "「私たちは昨日ピアノを練習しました」です。practice + d = practicedです。",
       "hint": "e→d",
       "wordCount": 4
     },
@@ -392,7 +392,7 @@
       ],
       "correctAnswer": "He wanted a new bike.",
       "difficulty": "intermediate",
-      "explanation": "「彼は新しい自転車が欲しかった」。want + ed = wanted。",
+      "explanation": "「彼は新しい自転車が欲しかった」です。want + ed = wantedです。",
       "hint": "過去形",
       "wordCount": 5
     },
@@ -410,7 +410,7 @@
       ],
       "correctAnswer": "I brushed my teeth this morning.",
       "difficulty": "advanced",
-      "explanation": "「私は今朝歯を磨きました」。brush + ed = brushed。",
+      "explanation": "「私は今朝歯を磨きました」です。brush + ed = brushedです。",
       "hint": "brushed teeth",
       "wordCount": 6
     },
@@ -427,7 +427,7 @@
       ],
       "correctAnswer": "She arrived at school early.",
       "difficulty": "advanced",
-      "explanation": "「彼女は学校に早く着きました」。arrive + d = arrived。",
+      "explanation": "「彼女は学校に早く着きました」です。arrive + d = arrivedです。",
       "hint": "arrived at",
       "wordCount": 5
     },
@@ -443,7 +443,7 @@
       ],
       "correctAnswer": "They tried many times.",
       "difficulty": "advanced",
-      "explanation": "「彼らは何度も挑戦しました」。try → y を i に変えて ed = tried。",
+      "explanation": "「彼らは何度も挑戦しました」です。try → y を i に変えて ed = triedです。",
       "hint": "y→ied",
       "wordCount": 4
     },
@@ -460,7 +460,7 @@
       ],
       "correctAnswer": "We crossed the street carefully.",
       "difficulty": "advanced",
-      "explanation": "「私たちは注意深く通りを渡りました」。cross + ed = crossed。",
+      "explanation": "「私たちは注意深く通りを渡りました」です。cross + ed = crossedです。",
       "hint": "crossed",
       "wordCount": 5
     },
@@ -477,7 +477,7 @@
       ],
       "correctAnswer": "He noticed the mistake immediately.",
       "difficulty": "advanced",
-      "explanation": "「彼はすぐに間違いに気づきました」。notice + d = noticed。",
+      "explanation": "「彼はすぐに間違いに気づきました」です。notice + d = noticedです。",
       "hint": "noticed",
       "wordCount": 5
     },
@@ -494,7 +494,7 @@
       ],
       "correctAnswer": "I played soccer.",
       "difficulty": "beginner",
-      "explanation": "play → played。「私はサッカーをしました」。",
+      "explanation": "play → playedです。「私はサッカーをしました」です。",
       "hint": "played"
     },
     {
@@ -510,7 +510,7 @@
       ],
       "correctAnswer": "She watched TV.",
       "difficulty": "beginner",
-      "explanation": "watches → watched。「彼女はテレビを見ました」。",
+      "explanation": "watches → watchedです。「彼女はテレビを見ました」です。",
       "hint": "watched"
     },
     {
@@ -526,7 +526,7 @@
       ],
       "correctAnswer": "They studied hard.",
       "difficulty": "beginner",
-      "explanation": "study → studied。「彼らは一生懸命勉強しました」。",
+      "explanation": "study → studiedです。「彼らは一生懸命勉強しました」です。",
       "hint": "y→ied"
     },
     {
@@ -542,7 +542,7 @@
       ],
       "correctAnswer": "We walked to school.",
       "difficulty": "beginner",
-      "explanation": "walk → walked。「私たちは学校へ歩きました」。",
+      "explanation": "walk → walkedです。「私たちは学校へ歩きました」です。",
       "hint": "walked"
     },
     {
@@ -558,7 +558,7 @@
       ],
       "correctAnswer": "He cleaned his room.",
       "difficulty": "beginner",
-      "explanation": "cleans → cleaned。「彼は部屋を掃除しました」。",
+      "explanation": "cleans → cleanedです。「彼は部屋を掃除しました」です。",
       "hint": "cleaned"
     },
     {
@@ -574,7 +574,7 @@
       ],
       "correctAnswer": "I visit my friend.",
       "difficulty": "intermediate",
-      "explanation": "visited → visit。yesterdayを取る。「私は友達を訪ねます」。",
+      "explanation": "visited → visitです。yesterdayを取ります。「私は友達を訪ねます」です。",
       "hint": "visit"
     },
     {
@@ -590,7 +590,7 @@
       ],
       "correctAnswer": "She cooks dinner.",
       "difficulty": "intermediate",
-      "explanation": "cooked → cooks（三人称単数）。「彼女は夕食を料理します」。",
+      "explanation": "cooked → cooks（三人称単数）です。「彼女は夕食を料理します」です。",
       "hint": "cooks"
     },
     {
@@ -606,7 +606,7 @@
       ],
       "correctAnswer": "Did you play tennis yesterday?",
       "difficulty": "intermediate",
-      "explanation": "Did + 主語 + 原形。「あなたは昨日テニスをしましたか」。",
+      "explanation": "Did + 主語 + 原形です。「あなたは昨日テニスをしましたか」です。",
       "hint": "Did"
     },
     {
@@ -622,7 +622,7 @@
       ],
       "correctAnswer": "I didn't watch TV last night.",
       "difficulty": "intermediate",
-      "explanation": "didn't + 原形。「私は昨晩テレビを見ませんでした」。",
+      "explanation": "didn't + 原形です。「私は昨晩テレビを見ませんでした」です。",
       "hint": "didn't"
     },
     {
@@ -638,7 +638,7 @@
       ],
       "correctAnswer": "She didn't study English yesterday.",
       "difficulty": "intermediate",
-      "explanation": "didn't + 原形。「彼女は昨日英語を勉強しませんでした」。",
+      "explanation": "didn't + 原形です。「彼女は昨日英語を勉強しませんでした」です。",
       "hint": "didn't"
     },
     {
@@ -654,7 +654,7 @@
       ],
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
-      "explanation": "Did～?への答えはdidを使う。「はい、楽しみました」。",
+      "explanation": "Did～?への答えはdidを使います。「はい、楽しみました」です。",
       "hint": "Yes, I did"
     },
     {
@@ -670,7 +670,7 @@
       ],
       "correctAnswer": "No, he didn't.",
       "difficulty": "advanced",
-      "explanation": "Didへの否定の答えはdidn't。「いいえ、終えていません」。",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、終えていません」です。",
       "hint": "No, he didn't"
     },
     {
@@ -686,7 +686,7 @@
       ],
       "correctAnswer": "I played soccer yesterday.",
       "difficulty": "advanced",
-      "explanation": "every day → yesterday。played。「私は昨日サッカーをしました」。",
+      "explanation": "every day → yesterdayです。playedです。「私は昨日サッカーをしました」です。",
       "hint": "yesterday"
     },
     {
@@ -702,7 +702,7 @@
       ],
       "correctAnswer": "I was tired because I worked hard.",
       "difficulty": "advanced",
-      "explanation": "becauseで理由を続ける。「私は一生懸命働いたので疲れました」。",
+      "explanation": "becauseで理由を続けります。「私は一生懸命働いたので疲れました」です。",
       "hint": "because"
     },
     {
@@ -718,7 +718,7 @@
       ],
       "correctAnswer": "What did you play?",
       "difficulty": "advanced",
-      "explanation": "What did + 主語 + 原形。「あなたは何をしましたか」。",
+      "explanation": "What did + 主語 + 原形です。「あなたは何をしましたか」です。",
       "hint": "What did"
     },
     {
@@ -734,7 +734,7 @@
       ],
       "correctAnswer": "watched",
       "difficulty": "beginner",
-      "explanation": "yesterdayは過去。watch + ed = watched。",
+      "explanation": "yesterdayは過去です。watch + ed = watchedです。",
       "hint": "過去形"
     },
     {
@@ -750,7 +750,7 @@
       ],
       "correctAnswer": "studied",
       "difficulty": "beginner",
-      "explanation": "last weekは過去。study → studied（y→ied）。",
+      "explanation": "last weekは過去です。study → studied（y→ied）です。",
       "hint": "y→ied"
     },
     {
@@ -766,7 +766,7 @@
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
-      "explanation": "yesterdayは過去。play + ed = played。",
+      "explanation": "yesterdayは過去です。play + ed = playedです。",
       "hint": "過去形"
     },
     {
@@ -782,7 +782,7 @@
       ],
       "correctAnswer": "visited",
       "difficulty": "beginner",
-      "explanation": "last Sundayは過去。visit + ed = visited。",
+      "explanation": "last Sundayは過去です。visit + ed = visitedです。",
       "hint": "過去形"
     },
     {
@@ -798,7 +798,7 @@
       ],
       "correctAnswer": "practiced",
       "difficulty": "intermediate",
-      "explanation": "yesterdayは過去。practice + d = practiced（eで終わる→d）。",
+      "explanation": "yesterdayは過去です。practice + d = practiced（eで終わる→d）です。",
       "hint": "e→d"
     },
     {
@@ -814,7 +814,7 @@
       ],
       "correctAnswer": "enjoyed",
       "difficulty": "intermediate",
-      "explanation": "last nightは過去。enjoy + ed = enjoyed。",
+      "explanation": "last nightは過去です。enjoy + ed = enjoyedです。",
       "hint": "過去形"
     },
     {
@@ -830,7 +830,7 @@
       ],
       "correctAnswer": "helped",
       "difficulty": "intermediate",
-      "explanation": "yesterdayは過去。help + ed = helped。",
+      "explanation": "yesterdayは過去です。help + ed = helpedです。",
       "hint": "過去形"
     },
     {
@@ -846,7 +846,7 @@
       ],
       "correctAnswer": "finished",
       "difficulty": "advanced",
-      "explanation": "last monthは過去。finish + ed = finished。",
+      "explanation": "last monthは過去です。finish + ed = finishedです。",
       "hint": "過去形"
     },
     {
@@ -862,7 +862,7 @@
       ],
       "correctAnswer": "arrived",
       "difficulty": "advanced",
-      "explanation": "this morningは過去。arrive + d = arrived（eで終わる→d）。",
+      "explanation": "this morningは過去です。arrive + d = arrived（eで終わる→d）です。",
       "hint": "e→d"
     },
     {
@@ -878,7 +878,7 @@
       ],
       "correctAnswer": "remembered",
       "difficulty": "advanced",
-      "explanation": "yesterdayは過去。remember + ed = remembered。",
+      "explanation": "yesterdayは過去です。remember + ed = rememberedです。",
       "hint": "過去形"
     },
     {
@@ -903,7 +903,7 @@
       ],
       "correctAnswer": "played",
       "difficulty": "beginner",
-      "explanation": "Didで聞かれたら過去形で答える。「私はサッカーをしました」。",
+      "explanation": "Didで聞かれたら過去形で答えります。「私はサッカーをしました」です。",
       "hint": "過去形"
     },
     {
@@ -928,7 +928,7 @@
       ],
       "correctAnswer": "did",
       "difficulty": "beginner",
-      "explanation": "Did～?への答えはdidを使う。「はい、勉強しました」。",
+      "explanation": "Did～?への答えはdidを使います。「はい、勉強しました」です。",
       "hint": "did"
     },
     {
@@ -953,7 +953,7 @@
       ],
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
-      "explanation": "Didへの否定の答えはdidn't。「いいえ、見ませんでした」。",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。",
       "hint": "didn't"
     },
     {
@@ -978,7 +978,7 @@
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "週末は過去なのでhad。「素晴らしい時間を過ごしました」。",
+      "explanation": "週末は過去なのでhadです。「素晴らしい時間を過ごしました」です。",
       "hint": "had"
     },
     {
@@ -1003,7 +1003,7 @@
       ],
       "correctAnswer": "study",
       "difficulty": "advanced",
-      "explanation": "did の後ろは原形。「あなたはどこで勉強しましたか」。",
+      "explanation": "did の後ろは原形です。「あなたはどこで勉強しましたか」です。",
       "hint": "原形"
     }
   ]
