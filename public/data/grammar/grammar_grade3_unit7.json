@@ -1,6 +1,4 @@
 {
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data in sentenceOrdering questions 6-20",
   "unit": "Unit 7",
   "title": "仮定法",
   "grammar": "If I were/If I had",
@@ -12,1079 +10,684 @@
   },
   "questions": [
     {
-      "id": "vf-g3-u7-001",
+      "id": "g3-u7-vf-001",
+      "type": "verbForm",
       "japanese": "もし私が鳥なら、世界中を飛び回るのに。",
       "sentence": "If I ____ a bird, I would fly around the world.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "verb": "be",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去: If I wereです。",
-      "hint": "If I were",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、主語がIでもwereを使います。「もし~なら(実際は違う)」という非現実の仮定を表します。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "vf-g3-u7-002",
+      "id": "g3-u7-vf-002",
+      "type": "verbForm",
       "japanese": "もしお金持ちなら、大きな家を買うのに。",
       "sentence": "If I ____ rich, I would buy a big house.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "verb": "be",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I were",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、be動詞は主語に関係なくwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "vf-g3-u7-003",
-      "japanese": "もし彼女が社長なら、会社を変えるでしょう。",
+      "id": "g3-u7-vf-003",
+      "type": "verbForm",
+      "japanese": "もし彼女が社長なら、会社を改革するでしょう。",
       "sentence": "If she ____ the president, she would change the company.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "verb": "be",
+      "choices": ["were", "is", "was"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If she were",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、主語がsheでもwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "vf-g3-u7-004",
-      "japanese": "もし私があなたなら、そうしないでしょう。",
-      "sentence": "If I ____ you, I wouldn't do that.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I were you",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u7-005",
+      "id": "g3-u7-vf-004",
+      "type": "verbForm",
       "japanese": "もし時間があれば、旅行に行くのに。",
       "sentence": "If I ____ time, I would travel.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "verb": "have",
+      "choices": ["had", "have", "has"],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、一般動詞は過去形を使います。haveはhadになります。",
+      "hint": "過去形を使う"
     },
     {
-      "id": "vf-g3-u7-006",
-      "japanese": "もし車を持っていたら、ドライブに行くのに。",
-      "sentence": "If I ____ a car, I would go for a drive.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u7-007",
-      "japanese": "もし彼が才能を持っていたら、成功するでしょう。",
-      "sentence": "If he ____ talent, he would succeed.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If he had",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u7-008",
-      "japanese": "もし私が魔法使いなら、世界を変えるのに。",
-      "sentence": "If I ____ a wizard, I would change the world.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "id": "g3-u7-vf-005",
+      "type": "verbForm",
+      "japanese": "もし彼が学生なら、私たちと勉強できるのに。",
+      "sentence": "If he ____ a student, he could study with us.",
+      "verb": "be",
+      "choices": ["were", "is", "was"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I were",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、主語がheでもwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "vf-g3-u7-009",
-      "japanese": "もし彼女が歌手なら、有名になるでしょう。",
-      "sentence": "If she ____ a singer, she would be famous.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "id": "g3-u7-vf-006",
+      "type": "verbForm",
+      "japanese": "もしもっとお金を持っていたら、新しい車を買うのに。",
+      "sentence": "If I ____ more money, I would buy a new car.",
+      "verb": "have",
+      "choices": ["had", "have", "has"],
+      "correctAnswer": "had",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-vf-007",
+      "type": "verbForm",
+      "japanese": "もし彼女が日本語を話せたら、私たちと話せるのに。",
+      "sentence": "If she ____ Japanese, she could talk with us.",
+      "verb": "speak",
+      "choices": ["spoke", "speaks", "speak"],
+      "correctAnswer": "spoke",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、一般動詞の過去形を使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-vf-008",
+      "type": "verbForm",
+      "japanese": "もし私が彼なら、そうしないでしょう。",
+      "sentence": "If I ____ him, I wouldn't do that.",
+      "verb": "be",
+      "choices": ["were", "am", "was"],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "「もし私が彼なら」という仮定法過去の典型的な表現です。",
+      "hint": "If I were"
+    },
+    {
+      "id": "g3-u7-vf-009",
+      "type": "verbForm",
+      "japanese": "もし天気が良ければ、ピクニックに行くのに。",
+      "sentence": "If the weather ____ nice, we would go on a picnic.",
+      "verb": "be",
+      "choices": ["were", "is", "was"],
+      "correctAnswer": "were",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、the weatherが主語でもwereを使います。",
+      "hint": "仮定法ではwere"
+    },
+    {
+      "id": "g3-u7-vf-010",
+      "type": "verbForm",
+      "japanese": "もし彼が東京に住んでいたら、毎日会えるのに。",
+      "sentence": "If he ____ in Tokyo, I could see him every day.",
+      "verb": "live",
+      "choices": ["lived", "lives", "live"],
+      "correctAnswer": "lived",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、一般動詞の過去形livedを使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-vf-011",
+      "type": "verbForm",
+      "japanese": "もし私が先生なら、もっと優しくするでしょう。",
+      "sentence": "If I ____ a teacher, I would be kinder.",
+      "verb": "be",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If she were",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "If I were"
     },
     {
-      "id": "vf-g3-u7-010",
-      "japanese": "もし兄弟がいたら、もっと楽しいのに。",
-      "sentence": "If I ____ a sibling, it would be more fun.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "id": "g3-u7-vf-012",
+      "type": "verbForm",
+      "japanese": "もし彼女がもっと時間があれば、手伝えるのに。",
+      "sentence": "If she ____ more time, she could help.",
+      "verb": "have",
+      "choices": ["had", "has", "have"],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "vf-g3-u7-011",
-      "japanese": "もし彼が親切なら、みんなが好きになるでしょう。",
-      "sentence": "If he ____ kind, everyone would like him.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
-      "correctAnswer": "were",
+      "id": "g3-u7-vf-013",
+      "type": "verbForm",
+      "japanese": "もし彼らが近くに住んでいたら、よく会えるのに。",
+      "sentence": "If they ____ nearby, we could meet often.",
+      "verb": "live",
+      "choices": ["lived", "live", "lives"],
+      "correctAnswer": "lived",
       "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If he were",
-      "type": "verbForm"
+      "explanation": "仮定法過去では、一般動詞の過去形を使います。",
+      "hint": "過去形"
     },
     {
-      "id": "vf-g3-u7-012",
-      "japanese": "もし私が猫なら、一日中寝るのに。",
+      "id": "g3-u7-vf-014",
+      "type": "verbForm",
+      "japanese": "もし私が猫なら、一日中寝るでしょう。",
       "sentence": "If I ____ a cat, I would sleep all day.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "verb": "be",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I were",
-      "type": "verbForm"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "vf-g3-u7-013",
-      "japanese": "もしスーパーパワーがあれば、人々を助けるのに。",
-      "sentence": "If I ____ superpowers, I would help people.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "id": "g3-u7-vf-015",
+      "type": "verbForm",
+      "japanese": "もし彼が車を持っていたら、私たちを送ってくれるのに。",
+      "sentence": "If he ____ a car, he could drive us.",
+      "verb": "have",
+      "choices": ["had", "has", "have"],
       "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "vf-g3-u7-014",
-      "japanese": "もし彼女が先生なら、良い授業をするでしょう。",
-      "sentence": "If she ____ a teacher, she would teach well.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "id": "g3-u7-vf-016",
+      "type": "verbForm",
+      "japanese": "もし私が彼女の立場なら、同じことをするでしょう。",
+      "sentence": "If I ____ in her position, I would do the same.",
+      "verb": "be",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If she were",
-      "type": "verbForm"
+      "difficulty": "advanced",
+      "explanation": "「もし私が~の立場なら」という仮定法過去の表現です。",
+      "hint": "If I were"
     },
     {
-      "id": "vf-g3-u7-015",
-      "japanese": "もし知識があれば、問題を解けるのに。",
-      "sentence": "If I ____ knowledge, I could solve the problem.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
+      "id": "g3-u7-vf-017",
+      "type": "verbForm",
+      "japanese": "もし彼女がピアノを弾けたら、バンドに参加できるのに。",
+      "sentence": "If she ____ the piano, she could join the band.",
+      "verb": "play",
+      "choices": ["played", "plays", "play"],
+      "correctAnswer": "played",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、一般動詞の過去形を使います。",
+      "hint": "過去形"
     },
     {
-      "id": "vf-g3-u7-016",
-      "japanese": "もし私が王様なら、平和な国を作るのに。",
-      "sentence": "If I ____ a king, I would create a peaceful country.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "id": "g3-u7-vf-018",
+      "type": "verbForm",
+      "japanese": "もし今日が日曜日なら、出かけられるのに。",
+      "sentence": "If today ____ Sunday, I could go out.",
+      "verb": "be",
+      "choices": ["were", "is", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I were",
-      "type": "verbForm"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がtodayでもwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "vf-g3-u7-017",
-      "japanese": "もし勇気があれば、挑戦するのに。",
-      "sentence": "If I ____ courage, I would try.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
+      "id": "g3-u7-vf-019",
+      "type": "verbForm",
+      "japanese": "もし彼が真実を知っていたら、怒るでしょう。",
+      "sentence": "If he ____ the truth, he would be angry.",
+      "verb": "know",
+      "choices": ["knew", "knows", "know"],
+      "correctAnswer": "knew",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、一般動詞の過去形knewを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "vf-g3-u7-018",
-      "japanese": "もし彼が医者なら、多くの人を救うでしょう。",
-      "sentence": "If he ____ a doctor, he would save many people.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "id": "g3-u7-vf-020",
+      "type": "verbForm",
+      "japanese": "もし私が若ければ、もっと勉強するのに。",
+      "sentence": "If I ____ young, I would study more.",
+      "verb": "be",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If he were",
-      "type": "verbForm"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "If I were"
     },
     {
-      "id": "vf-g3-u7-019",
-      "japanese": "もし翼があれば、空を飛ぶのに。",
-      "sentence": "If I ____ wings, I would fly in the sky.",
-      "verb": "subjunctive",
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If I had",
-      "type": "verbForm"
-    },
-    {
-      "id": "vf-g3-u7-020",
-      "japanese": "もし彼女が大統領なら、良い政策を作るでしょう。",
-      "sentence": "If she ____ the president, she would make good policies.",
-      "verb": "subjunctive",
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "explanation": "仮定法過去です。",
-      "hint": "If she were",
-      "type": "verbForm"
-    },
-    {
-      "id": "fb-g3-u7-001",
-      "japanese": "もし私が鳥なら、世界中を飛び回るのに。",
-      "sentence": "If I ____ a bird, I would fly around the world.",
-      "wordCount": 11,
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If I were",
+      "id": "g3-u7-fib-001",
       "type": "fillInBlank",
-      "explanation": "もし私が鳥なら、世界中を飛び回るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-002",
-      "japanese": "もしお金持ちなら、大きな家を買うのに。",
-      "sentence": "If I ____ rich, I would buy a big house.",
-      "wordCount": 10,
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "japanese": "もし私が鳥なら、空を飛べるのに。",
+      "sentence": "If I ____ a bird, I could fly in the sky.",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If I were",
-      "type": "fillInBlank",
-      "explanation": "もしお金持ちなら、大きな家を買うのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。現実とは異なる仮定を表します。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "fb-g3-u7-003",
-      "japanese": "もし彼女が社長なら、会社を変えるでしょう。",
-      "sentence": "If she ____ the president, she would change the company.",
-      "wordCount": 10,
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "id": "g3-u7-fib-002",
+      "type": "fillInBlank",
+      "japanese": "もし時間があれば、あなたを助けられるのに。",
+      "sentence": "If I ____ time, I could help you.",
+      "choices": ["had", "have", "has"],
+      "correctAnswer": "had",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-fib-003",
+      "type": "fillInBlank",
+      "japanese": "もし彼が学生なら、学割が使えるのに。",
+      "sentence": "If he ____ a student, he could get a discount.",
+      "choices": ["were", "is", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If she were",
-      "type": "fillInBlank",
-      "explanation": "もし彼女が社長なら、会社を変えるでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、主語がheでもwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "fb-g3-u7-004",
-      "japanese": "もし私があなたなら、そうしないでしょう。",
+      "id": "g3-u7-fib-004",
+      "type": "fillInBlank",
+      "japanese": "もし彼女が日本語を話せたら、仕事を見つけやすいのに。",
+      "sentence": "If she ____ Japanese, she could find a job easily.",
+      "choices": ["spoke", "speaks", "speak"],
+      "correctAnswer": "spoke",
+      "difficulty": "beginner",
+      "explanation": "仮定法過去では、一般動詞の過去形を使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-fib-005",
+      "type": "fillInBlank",
+      "japanese": "もし私があなただったら、そうしないでしょう。",
       "sentence": "If I ____ you, I wouldn't do that.",
-      "wordCount": 8,
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
       "difficulty": "intermediate",
-      "hint": "If I were you",
-      "type": "fillInBlank",
-      "explanation": "もし私があなたなら、そうしないでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "If I were you は「もし私があなただったら」という意味の慣用表現です。",
+      "hint": "If I were you"
     },
     {
-      "id": "fb-g3-u7-005",
-      "japanese": "もし時間があれば、旅行に行くのに。",
-      "sentence": "If I ____ time, I would travel.",
-      "wordCount": 7,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "id": "g3-u7-fib-006",
+      "type": "fillInBlank",
+      "japanese": "もっとお金があれば、新しいコンピューターを買うのに。",
+      "sentence": "If I ____ more money, I would buy a new computer.",
+      "choices": ["had", "have", "has"],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "hint": "If I had",
-      "type": "fillInBlank",
-      "explanation": "もし時間があれば、旅行に行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "fb-g3-u7-006",
-      "japanese": "もし車を持っていたら、ドライブに行くのに。",
-      "sentence": "If I ____ a car, I would go for a drive.",
-      "wordCount": 11,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "id": "g3-u7-fib-007",
+      "type": "fillInBlank",
+      "japanese": "もし天気が良ければ、海に行けるのに。",
+      "sentence": "If the weather ____ nice, we could go to the beach.",
+      "choices": ["were", "is", "was"],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去では、主語がthe weatherでもwereを使います。",
+      "hint": "仮定法ではwere"
+    },
+    {
+      "id": "g3-u7-fib-008",
+      "type": "fillInBlank",
+      "japanese": "もし彼が東京に住んでいたら、もっと頻繁に会えるのに。",
+      "sentence": "If he ____ in Tokyo, we could meet more often.",
+      "choices": ["lived", "lives", "live"],
+      "correctAnswer": "lived",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去では、一般動詞の過去形livedを使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-fib-009",
+      "type": "fillInBlank",
+      "japanese": "もし私が医者なら、人々を助けられるのに。",
+      "sentence": "If I ____ a doctor, I could help people.",
+      "choices": ["were", "am", "was"],
+      "correctAnswer": "were",
+      "difficulty": "intermediate",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "If I were"
+    },
+    {
+      "id": "g3-u7-fib-010",
+      "type": "fillInBlank",
+      "japanese": "もし彼女がもっと時間があれば、趣味を楽しめるのに。",
+      "sentence": "If she ____ more time, she could enjoy her hobbies.",
+      "choices": ["had", "has", "have"],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "hint": "If I had",
-      "type": "fillInBlank",
-      "explanation": "もし車を持っていたら、ドライブに行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "fb-g3-u7-007",
-      "japanese": "もし彼が才能を持っていたら、成功するでしょう。",
-      "sentence": "If he ____ talent, he would succeed.",
-      "wordCount": 7,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
+      "id": "g3-u7-fib-011",
+      "type": "fillInBlank",
+      "japanese": "もし彼らが近くに住んでいたら、一緒に遊べるのに。",
+      "sentence": "If they ____ nearby, we could play together.",
+      "choices": ["lived", "live", "lives"],
+      "correctAnswer": "lived",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、一般動詞の過去形を使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-fib-012",
+      "type": "fillInBlank",
+      "japanese": "もし私が猫なら、一日中寝られるのに。",
+      "sentence": "If I ____ a cat, I could sleep all day.",
+      "choices": ["were", "am", "was"],
+      "correctAnswer": "were",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "仮定法ではwere"
+    },
+    {
+      "id": "g3-u7-fib-013",
+      "type": "fillInBlank",
+      "japanese": "もし彼が車を持っていたら、ドライブに行けるのに。",
+      "sentence": "If he ____ a car, we could go for a drive.",
+      "choices": ["had", "has", "have"],
       "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "hint": "If he had",
-      "type": "fillInBlank",
-      "explanation": "もし彼が才能を持っていたら、成功するでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "fb-g3-u7-008",
-      "japanese": "もし私が魔法使いなら、世界を変えるのに。",
-      "sentence": "If I ____ a wizard, I would change the world.",
-      "wordCount": 10,
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "id": "g3-u7-fib-014",
+      "type": "fillInBlank",
+      "japanese": "もし私が彼女の立場なら、違うことをするでしょう。",
+      "sentence": "If I ____ in her position, I would do differently.",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If I were",
-      "type": "fillInBlank",
-      "explanation": "もし私が魔法使いなら、世界を変えるのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "If I were"
     },
     {
-      "id": "fb-g3-u7-009",
-      "japanese": "もし彼女が歌手なら、有名になるでしょう。",
-      "sentence": "If she ____ a singer, she would be famous.",
-      "wordCount": 9,
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "id": "g3-u7-fib-015",
+      "type": "fillInBlank",
+      "japanese": "もし彼女がギターを弾けたら、バンドに入れるのに。",
+      "sentence": "If she ____ the guitar, she could join a band.",
+      "choices": ["played", "plays", "play"],
+      "correctAnswer": "played",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、一般動詞の過去形playedを使います。",
+      "hint": "過去形"
+    },
+    {
+      "id": "g3-u7-fib-016",
+      "type": "fillInBlank",
+      "japanese": "もし今日が休日なら、出かけられるのに。",
+      "sentence": "If today ____ a holiday, I could go out.",
+      "choices": ["were", "is", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If she were",
-      "type": "fillInBlank",
-      "explanation": "もし彼女が歌手なら、有名になるでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がtodayでもwereを使います。",
+      "hint": "仮定法ではwere"
     },
     {
-      "id": "fb-g3-u7-010",
-      "japanese": "もし兄弟がいたら、もっと楽しいのに。",
-      "sentence": "If I ____ a sibling, it would be more fun.",
-      "wordCount": 10,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "hint": "If I had",
+      "id": "g3-u7-fib-017",
       "type": "fillInBlank",
-      "explanation": "もし兄弟がいたら、もっと楽しいのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼が答えを知っていたら、教えてくれるのに。",
+      "sentence": "If he ____ the answer, he would tell us.",
+      "choices": ["knew", "knows", "know"],
+      "correctAnswer": "knew",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、一般動詞の過去形knewを使います。",
+      "hint": "過去形"
     },
     {
-      "id": "fb-g3-u7-011",
-      "japanese": "もし彼が親切なら、みんなが好きになるでしょう。",
-      "sentence": "If he ____ kind, everyone would like him.",
-      "wordCount": 8,
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
+      "id": "g3-u7-fib-018",
+      "type": "fillInBlank",
+      "japanese": "もし私が背が高ければ、バスケットボール選手になれるのに。",
+      "sentence": "If I ____ tall, I could be a basketball player.",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If he were",
-      "type": "fillInBlank",
-      "explanation": "もし彼が親切なら、みんなが好きになるでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "If I were"
     },
     {
-      "id": "fb-g3-u7-012",
-      "japanese": "もし私が猫なら、一日中寝るのに。",
-      "sentence": "If I ____ a cat, I would sleep all day.",
-      "wordCount": 10,
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
+      "id": "g3-u7-fib-019",
+      "type": "fillInBlank",
+      "japanese": "もし彼女が料理ができたら、レストランを開けるのに。",
+      "sentence": "If she ____ cook well, she could open a restaurant.",
+      "choices": ["could", "can", "cans"],
+      "correctAnswer": "could",
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、canの過去形couldを使います。",
+      "hint": "canの過去形"
+    },
+    {
+      "id": "g3-u7-fib-020",
+      "type": "fillInBlank",
+      "japanese": "もし私が若ければ、世界中を旅行するのに。",
+      "sentence": "If I ____ young, I would travel around the world.",
+      "choices": ["were", "am", "was"],
       "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If I were",
-      "type": "fillInBlank",
-      "explanation": "もし私が猫なら、一日中寝るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "difficulty": "advanced",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。",
+      "hint": "If I were"
     },
     {
-      "id": "fb-g3-u7-013",
-      "japanese": "もしスーパーパワーがあれば、人々を助けるのに。",
-      "sentence": "If I ____ superpowers, I would help people.",
-      "wordCount": 8,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "hint": "If I had",
-      "type": "fillInBlank",
-      "explanation": "もしスーパーパワーがあれば、人々を助けるのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-014",
-      "japanese": "もし彼女が先生なら、良い授業をするでしょう。",
-      "sentence": "If she ____ a teacher, she would teach well.",
-      "wordCount": 9,
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If she were",
-      "type": "fillInBlank",
-      "explanation": "もし彼女が先生なら、良い授業をするでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-015",
-      "japanese": "もし知識があれば、問題を解けるのに。",
-      "sentence": "If I ____ knowledge, I could solve the problem.",
-      "wordCount": 9,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "hint": "If I had",
-      "type": "fillInBlank",
-      "explanation": "もし知識があれば、問題を解けるのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-016",
-      "japanese": "もし私が王様なら、平和な国を作るのに。",
-      "sentence": "If I ____ a king, I would create a peaceful country.",
-      "wordCount": 11,
-      "choices": [
-        "were",
-        "am",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If I were",
-      "type": "fillInBlank",
-      "explanation": "もし私が王様なら、平和な国を作るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-017",
-      "japanese": "もし勇気があれば、挑戦するのに。",
-      "sentence": "If I ____ courage, I would try.",
-      "wordCount": 7,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "hint": "If I had",
-      "type": "fillInBlank",
-      "explanation": "もし勇気があれば、挑戦するのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-018",
-      "japanese": "もし彼が医者なら、多くの人を救うでしょう。",
-      "sentence": "If he ____ a doctor, he would save many people.",
-      "wordCount": 10,
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If he were",
-      "type": "fillInBlank",
-      "explanation": "もし彼が医者なら、多くの人を救うでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-019",
-      "japanese": "もし翼があれば、空を飛ぶのに。",
-      "sentence": "If I ____ wings, I would fly in the sky.",
-      "wordCount": 10,
-      "choices": [
-        "had",
-        "have",
-        "has"
-      ],
-      "correctAnswer": "had",
-      "difficulty": "intermediate",
-      "hint": "If I had",
-      "type": "fillInBlank",
-      "explanation": "もし翼があれば、空を飛ぶのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "fb-g3-u7-020",
-      "japanese": "もし彼女が大統領なら、良い政策を作るでしょう。",
-      "sentence": "If she ____ the president, she would make good policies.",
-      "wordCount": 10,
-      "choices": [
-        "were",
-        "is",
-        "was"
-      ],
-      "correctAnswer": "were",
-      "difficulty": "intermediate",
-      "hint": "If she were",
-      "type": "fillInBlank",
-      "explanation": "もし彼女が大統領なら、良い政策を作るでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "so-g3-u7-001",
-      "japanese": "もし私が鳥なら、世界中を飛び回るのに。",
-      "sentence": "If I were a bird I would fly around the world.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "a",
-        "bird",
-        "I",
-        "would",
-        "fly",
-        "around",
-        "the",
-        "world"
-      ],
-      "correctAnswer": "If I were a bird I would fly around the world",
-      "wordCount": 11,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-001",
       "type": "sentenceOrdering",
-      "explanation": "もし私が鳥なら、世界中を飛び回るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "so-g3-u7-002",
-      "japanese": "もしお金持ちなら、大きな家を買うのに。",
-      "sentence": "If I were rich I would buy a big house.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "rich",
-        "I",
-        "would",
-        "buy",
-        "a",
-        "big",
-        "house"
-      ],
-      "correctAnswer": "If I were rich I would buy a big house",
-      "wordCount": 10,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
+      "japanese": "もし私が鳥なら、飛べるのに。",
+      "words": ["if", "I", "were", "a", "bird,", "I", "could", "fly"],
+      "correctAnswer": "If I were a bird, I could fly.",
+      "difficulty": "beginner",
+      "grammarPoint": "仮定法過去",
       "hint": "If I were",
-      "type": "sentenceOrdering",
-      "explanation": "もしお金持ちなら、大きな家を買うのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "仮定法過去の語順: If + 主語 + 過去形, 主語 + would/could + 動詞の原形"
     },
     {
-      "id": "so-g3-u7-003",
+      "id": "g3-u7-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "もし時間があれば、手伝えるのに。",
+      "words": ["if", "I", "had", "time,", "I", "could", "help"],
+      "correctAnswer": "If I had time, I could help.",
+      "difficulty": "beginner",
+      "grammarPoint": "仮定法過去",
+      "hint": "If I had",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。"
+    },
+    {
+      "id": "g3-u7-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "もし彼が学生なら、学割が使えるのに。",
+      "words": ["if", "he", "were", "a", "student,", "he", "could", "get", "a", "discount"],
+      "correctAnswer": "If he were a student, he could get a discount.",
+      "difficulty": "beginner",
+      "grammarPoint": "仮定法過去",
+      "hint": "If he were",
+      "explanation": "仮定法過去では、主語がheでもwereを使います。"
+    },
+    {
+      "id": "g3-u7-so-004",
+      "type": "sentenceOrdering",
       "japanese": "もし私があなたなら、そうしないでしょう。",
-      "sentence": "If I were you I wouldn't do that.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "you",
-        "I",
-        "wouldn't",
-        "do",
-        "that"
-      ],
-      "correctAnswer": "If I were you I wouldn't do that",
-      "wordCount": 8,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
+      "words": ["if", "I", "were", "you,", "I", "wouldn't", "do", "that"],
+      "correctAnswer": "If I were you, I wouldn't do that.",
+      "difficulty": "beginner",
+      "grammarPoint": "仮定法過去",
       "hint": "If I were you",
-      "type": "sentenceOrdering",
-      "explanation": "もし私があなたなら、そうしないでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "If I were youは「もし私があなたなら」という意味の慣用表現です。"
     },
     {
-      "id": "so-g3-u7-004",
-      "japanese": "もし時間があれば、旅行に行くのに。",
-      "sentence": "If I had time I would travel.",
-      "words": [
-        "If",
-        "I",
-        "had",
-        "time",
-        "I",
-        "would",
-        "travel"
-      ],
-      "correctAnswer": "If I had time I would travel",
-      "wordCount": 7,
+      "id": "g3-u7-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "もしもっとお金があれば、新しい車を買うのに。",
+      "words": ["if", "I", "had", "more", "money,", "I", "would", "buy", "a", "new", "car"],
+      "correctAnswer": "If I had more money, I would buy a new car.",
       "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
+      "grammarPoint": "仮定法過去",
       "hint": "If I had",
-      "type": "sentenceOrdering",
-      "explanation": "もし時間があれば、旅行に行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "仮定法過去では、haveの過去形hadを使います。"
     },
     {
-      "id": "so-g3-u7-005",
-      "japanese": "もし車を持っていたら、ドライブに行くのに。",
-      "sentence": "If I had a car I would go for a drive.",
-      "words": [
-        "If",
-        "I",
-        "had",
-        "a",
-        "car",
-        "I",
-        "would",
-        "go",
-        "for",
-        "a",
-        "drive"
-      ],
-      "correctAnswer": "If I had a car I would go for a drive",
-      "wordCount": 11,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I had",
+      "id": "g3-u7-so-006",
       "type": "sentenceOrdering",
-      "explanation": "もし車を持っていたら、ドライブに行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし天気が良ければ、ピクニックに行くのに。",
+      "words": ["if", "the", "weather", "were", "nice,", "we", "would", "go", "on", "a", "picnic"],
+      "correctAnswer": "If the weather were nice, we would go on a picnic.",
+      "difficulty": "intermediate",
+      "grammarPoint": "仮定法過去",
+      "hint": "If the weather were",
+      "explanation": "仮定法過去では、主語がthe weatherでもwereを使います。"
     },
     {
-      "id": "so-g3-u7-006",
-      "japanese": "仮定法の例文6。",
-      "sentence": "If I were example6 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example6",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example6 I would succeed",
-      "wordCount": 7,
+      "id": "g3-u7-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "もし彼が東京に住んでいたら、毎日会えるのに。",
+      "words": ["if", "he", "lived", "in", "Tokyo,", "I", "could", "see", "him", "every", "day"],
+      "correctAnswer": "If he lived in Tokyo, I could see him every day.",
       "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
+      "grammarPoint": "仮定法過去",
+      "hint": "If he lived",
+      "explanation": "仮定法過去では、一般動詞の過去形livedを使います。"
+    },
+    {
+      "id": "g3-u7-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "もし私が医者なら、人々を助けられるのに。",
+      "words": ["if", "I", "were", "a", "doctor,", "I", "could", "help", "people"],
+      "correctAnswer": "If I were a doctor, I could help people.",
+      "difficulty": "intermediate",
+      "grammarPoint": "仮定法過去",
       "hint": "If I were",
-      "type": "sentenceOrdering",
-      "explanation": "仮定法の例文6。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "explanation": "仮定法過去では、主語がIでもwereを使います。"
     },
     {
-      "id": "so-g3-u7-007",
-      "japanese": "仮定法の例文7。",
-      "sentence": "If I were example7 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example7",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example7 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-009",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文7。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼女が日本語を話せたら、仕事を見つけやすいのに。",
+      "words": ["if", "she", "spoke", "Japanese,", "she", "could", "find", "a", "job", "easily"],
+      "correctAnswer": "If she spoke Japanese, she could find a job easily.",
+      "difficulty": "intermediate",
+      "grammarPoint": "仮定法過去",
+      "hint": "If she spoke",
+      "explanation": "仮定法過去では、一般動詞の過去形spokeを使います。"
     },
     {
-      "id": "so-g3-u7-008",
-      "japanese": "仮定法の例文8。",
-      "sentence": "If I were example8 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example8",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example8 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-010",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文8。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼らが近くに住んでいたら、よく会えるのに。",
+      "words": ["if", "they", "lived", "nearby,", "we", "could", "meet", "often"],
+      "correctAnswer": "If they lived nearby, we could meet often.",
+      "difficulty": "intermediate",
+      "grammarPoint": "仮定法過去",
+      "hint": "If they lived",
+      "explanation": "仮定法過去では、一般動詞の過去形を使います。"
     },
     {
-      "id": "so-g3-u7-009",
-      "japanese": "仮定法の例文9。",
-      "sentence": "If I were example9 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example9",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example9 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-011",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文9。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし私が猫なら、一日中寝るでしょう。",
+      "words": ["if", "I", "were", "a", "cat,", "I", "would", "sleep", "all", "day"],
+      "correctAnswer": "If I were a cat, I would sleep all day.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If I were",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。"
     },
     {
-      "id": "so-g3-u7-010",
-      "japanese": "仮定法の例文10。",
-      "sentence": "If I were example10 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example10",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example10 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-012",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文10。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼が車を持っていたら、私たちを送ってくれるのに。",
+      "words": ["if", "he", "had", "a", "car,", "he", "could", "drive", "us"],
+      "correctAnswer": "If he had a car, he could drive us.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If he had",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。"
     },
     {
-      "id": "so-g3-u7-011",
-      "japanese": "仮定法の例文11。",
-      "sentence": "If I were example11 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example11",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example11 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-013",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文11。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし私が彼女の立場なら、同じことをするでしょう。",
+      "words": ["if", "I", "were", "in", "her", "position,", "I", "would", "do", "the", "same"],
+      "correctAnswer": "If I were in her position, I would do the same.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If I were",
+      "explanation": "「もし私が~の立場なら」という仮定法過去の表現です。"
     },
     {
-      "id": "so-g3-u7-012",
-      "japanese": "仮定法の例文12。",
-      "sentence": "If I were example12 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example12",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example12 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-014",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文12。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼女がピアノを弾けたら、バンドに参加できるのに。",
+      "words": ["if", "she", "played", "the", "piano,", "she", "could", "join", "the", "band"],
+      "correctAnswer": "If she played the piano, she could join the band.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If she played",
+      "explanation": "仮定法過去では、一般動詞の過去形playedを使います。"
     },
     {
-      "id": "so-g3-u7-013",
-      "japanese": "仮定法の例文13。",
-      "sentence": "If I were example13 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example13",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example13 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-015",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文13。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし今日が日曜日なら、出かけられるのに。",
+      "words": ["if", "today", "were", "Sunday,", "I", "could", "go", "out"],
+      "correctAnswer": "If today were Sunday, I could go out.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If today were",
+      "explanation": "仮定法過去では、主語がtodayでもwereを使います。"
     },
     {
-      "id": "so-g3-u7-014",
-      "japanese": "仮定法の例文14。",
-      "sentence": "If I were example14 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example14",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example14 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-016",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文14。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼が真実を知っていたら、怒るでしょう。",
+      "words": ["if", "he", "knew", "the", "truth,", "he", "would", "be", "angry"],
+      "correctAnswer": "If he knew the truth, he would be angry.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If he knew",
+      "explanation": "仮定法過去では、一般動詞の過去形knewを使います。"
     },
     {
-      "id": "so-g3-u7-015",
-      "japanese": "仮定法の例文15。",
-      "sentence": "If I were example15 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example15",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example15 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-017",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文15。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし私が若ければ、もっと勉強するのに。",
+      "words": ["if", "I", "were", "young,", "I", "would", "study", "more"],
+      "correctAnswer": "If I were young, I would study more.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If I were",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。"
     },
     {
-      "id": "so-g3-u7-016",
-      "japanese": "仮定法の例文16。",
-      "sentence": "If I were example16 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example16",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example16 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-018",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文16。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼女がもっと時間があれば、趣味を楽しめるのに。",
+      "words": ["if", "she", "had", "more", "time,", "she", "could", "enjoy", "her", "hobbies"],
+      "correctAnswer": "If she had more time, she could enjoy her hobbies.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If she had",
+      "explanation": "仮定法過去では、haveの過去形hadを使います。"
     },
     {
-      "id": "so-g3-u7-017",
-      "japanese": "仮定法の例文17。",
-      "sentence": "If I were example17 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example17",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example17 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-019",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文17。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし私が背が高ければ、バスケットボール選手になれるのに。",
+      "words": ["if", "I", "were", "tall,", "I", "could", "be", "a", "basketball", "player"],
+      "correctAnswer": "If I were tall, I could be a basketball player.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If I were",
+      "explanation": "仮定法過去では、主語がIでもwereを使います。"
     },
     {
-      "id": "so-g3-u7-018",
-      "japanese": "仮定法の例文18。",
-      "sentence": "If I were example18 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example18",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example18 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
+      "id": "g3-u7-so-020",
       "type": "sentenceOrdering",
-      "explanation": "仮定法の例文18。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "so-g3-u7-019",
-      "japanese": "仮定法の例文19。",
-      "sentence": "If I were example19 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example19",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example19 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
-      "type": "sentenceOrdering",
-      "explanation": "仮定法の例文19。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
-    },
-    {
-      "id": "so-g3-u7-020",
-      "japanese": "仮定法の例文20。",
-      "sentence": "If I were example20 I would succeed.",
-      "words": [
-        "If",
-        "I",
-        "were",
-        "example20",
-        "I",
-        "would",
-        "succeed"
-      ],
-      "correctAnswer": "If I were example20 I would succeed",
-      "wordCount": 7,
-      "difficulty": "intermediate",
-      "grammarPoint": "仮定法",
-      "hint": "If I were",
-      "type": "sentenceOrdering",
-      "explanation": "仮定法の例文20。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
+      "japanese": "もし彼が答えを知っていたら、教えてくれるでしょう。",
+      "words": ["if", "he", "knew", "the", "answer,", "he", "would", "tell", "me"],
+      "correctAnswer": "If he knew the answer, he would tell me.",
+      "difficulty": "advanced",
+      "grammarPoint": "仮定法過去",
+      "hint": "If he knew",
+      "explanation": "仮定法過去では、一般動詞の過去形knewを使います。"
     }
-  ],
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
-  "disabledDate": "2025-12-09T05:38:25.097089"
+  ]
 }
