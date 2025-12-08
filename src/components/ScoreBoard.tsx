@@ -84,8 +84,7 @@ function ScoreBoard({
 
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
-    if (!onAnswerTime) return; // 初回マウント時はスキップ
-    
+    // onAnswerTimeが0の場合は初期状態なのでスキップしない（暗記タブ対応）
     const { retentionRate, appearedCount } = getRetentionRateWithAI();
     setRetentionData({ retentionRate, appearedCount });
     setDetailedStatsData(getDetailedRetentionStats());
