@@ -795,3 +795,78 @@
 .word-stat-divider {
   color: var(--gray-400);
 }
+
+/* ============================================
+   設定タブスタイル
+   ============================================ */
+.settings-tab-container {
+  padding: 20px;
+  min-height: 120px;
+}
+
+.settings-section {
+  margin-bottom: 24px;
+}
+
+.settings-section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-mode .settings-section-title {
+  color: var(--white);
+}
+
+.settings-item {
+  margin-bottom: 16px;
+}
+
+.settings-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.settings-checkbox-label:hover {
+  background: var(--gray-100);
+}
+
+.dark-mode .settings-checkbox-label:hover {
+  background: var(--gray-800);
+}
+
+.settings-checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.settings-checkbox-label span {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.dark-mode .settings-checkbox-label span {
+  color: var(--gray-200);
+}
+
+.settings-help-text {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  margin-top: 8px;
+  margin-left: 32px;
+}
+
+.dark-mode .settings-help-text {
+  color: var(--gray-400);
+}
