@@ -46,7 +46,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [readingDictionary, setReadingDictionary] = useState<Map<string, Record<string, string>>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
   const [showSettings, setShowSettings] = useState(false);
-  const [readingStarted, setReadingStarted] = useState(false);
+  const [readingStarted, setReadingStarted] = useState(true);
   const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isFullTextSpeaking, setIsFullTextSpeaking] = useState(false);
@@ -914,7 +914,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         </div>
       )}
 
-      {/* 4タブ構造 + 操作ボタン（読解開始後に表示） */}
+      {/* 6タブ構造（読解開始後に表示） */}
       {readingStarted && (
         <div className="reading-sub-tabs grid grid-cols-6 gap-2">
           <button
@@ -947,13 +947,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           >
             📝 全訳
           </button>
-          <button
-            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-            onClick={handleBackToSettings}
-            title="設定"
-          >
-            ⚙️ 学習設定
-          </button>
           <button 
             onClick={handleSaveUnknownWords}
             className="px-4 py-2 text-sm font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
@@ -968,6 +961,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             title="リセット"
           >
             🔄 リセット
+          </button>
+          <button
+            className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            onClick={handleBackToSettings}
+            title="設定"
+          >
+            ⚙️ 学習設定
           </button>
         </div>
       )}

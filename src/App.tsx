@@ -181,10 +181,15 @@ function App() {
   // データ読み込み完了フラグ
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   
-  // データ読み込み完了後、和訳タブで自動的にクイズ開始
+  // データ読み込み完了後、和訳タブまたはスペルタブで自動的にクイズ開始
   const hasAutoStarted = useRef(false);
   useEffect(() => {
-    if (isDataLoaded && activeTab === 'translation' && !hasAutoStarted.current && quizState.questions.length === 0) {
+    // タブ切り替え時にフラグをリセット
+    hasAutoStarted.current = false;
+  }, [activeTab]);
+  
+  useEffect(() => {
+    if (isDataLoaded && (activeTab === 'translation' || activeTab === 'spelling') && !hasAutoStarted.current && quizState.questions.length === 0) {
       hasAutoStarted.current = true;
       handleStartQuiz();
     }
