@@ -63,7 +63,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
   });
   
   // 回答時刻（ScoreBoard更新用）
-  const [lastAnswerTime, setLastAnswerTime] = useState<number>(0);
+  const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
   
   // 滞在時間計測
   const cardDisplayTimeRef = useRef<number>(0);
