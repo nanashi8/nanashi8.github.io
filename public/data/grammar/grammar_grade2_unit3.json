@@ -1,6 +1,4 @@
 {
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 3",
   "title": "助動詞must/have to",
   "grammar": "義務・必要性の表現",
@@ -16,980 +14,797 @@
     {
       "id": "g2-u3-fib-001",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め1。",
-      "sentence": "Example sentence 1 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私は毎日宿題をしなければなりません。",
+      "sentence": "I ____ do my homework every day.",
+      "choices": ["must", "can", "may"],
+      "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の説明1です。",
-      "hint": "ヒント"
+      "explanation": "義務を表すにはmustを使います。「~しなければならない」という強い義務を表します。",
+      "hint": "義務を表す助動詞"
     },
     {
       "id": "g2-u3-fib-002",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め2。",
-      "sentence": "Example sentence 2 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "あなたは早く起きなければなりません。",
+      "sentence": "You ____ get up early.",
+      "choices": ["have to", "want to", "like to"],
+      "correctAnswer": "have to",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の説明2です。",
-      "hint": "ヒント"
+      "explanation": "have toは外的な義務を表します。「~しなければならない」という意味です。",
+      "hint": "義務を表す表現"
     },
     {
       "id": "g2-u3-fib-003",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め3。",
-      "sentence": "Example sentence 3 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼は今日働かなければなりません。",
+      "sentence": "He ____ work today.",
+      "choices": ["must", "can", "will"],
+      "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の説明3です。",
-      "hint": "ヒント"
+      "explanation": "mustは話し手の強い義務感を表します。",
+      "hint": "強い義務"
     },
     {
       "id": "g2-u3-fib-004",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め4。",
-      "sentence": "Example sentence 4 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の説明4です。",
-      "hint": "ヒント"
+      "japanese": "私たちは図書館で静かにしなければなりません。",
+      "sentence": "We ____ be quiet in the library.",
+      "choices": ["must", "should", "would"],
+      "correctAnswer": "must",
+      "difficulty": "intermediate",
+      "explanation": "規則や決まりごとを表すときにmustを使います。",
+      "hint": "規則"
     },
     {
       "id": "g2-u3-fib-005",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め5。",
-      "sentence": "Example sentence 5 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼女は薬を飲まなければなりません。",
+      "sentence": "She ____ take medicine.",
+      "choices": ["has to", "wants to", "needs"],
+      "correctAnswer": "has to",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の説明5です。",
-      "hint": "ヒント"
+      "explanation": "三人称単数(she)の場合、have toはhas toになります。",
+      "hint": "三人称単数"
     },
     {
       "id": "g2-u3-fib-006",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め6。",
-      "sentence": "Example sentence 6 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私は明日早く学校に行かなければなりません。",
+      "sentence": "I ____ go to school early tomorrow.",
+      "choices": ["have to", "want to", "can"],
+      "correctAnswer": "have to",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の説明6です。",
-      "hint": "ヒント"
+      "explanation": "外的な必要性や義務にはhave toを使います。",
+      "hint": "外的な義務"
     },
     {
       "id": "g2-u3-fib-007",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め7。",
-      "sentence": "Example sentence 7 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の説明7です。",
-      "hint": "ヒント"
+      "japanese": "あなたたちは規則に従わなければなりません。",
+      "sentence": "You ____ follow the rules.",
+      "choices": ["must", "may", "can"],
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "規則や法律などの義務を表すときはmustを使います。",
+      "hint": "規則への従順"
     },
     {
       "id": "g2-u3-fib-008",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め8。",
-      "sentence": "Example sentence 8 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼は毎朝運動しなければなりません。",
+      "sentence": "He ____ exercise every morning.",
+      "choices": ["has to", "wants to", "likes to"],
+      "correctAnswer": "has to",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の説明8です。",
-      "hint": "ヒント"
+      "explanation": "主語がheなので、have toはhas toになります。",
+      "hint": "三人称単数の形"
     },
     {
       "id": "g2-u3-fib-009",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め9。",
-      "sentence": "Example sentence 9 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の説明9です。",
-      "hint": "ヒント"
+      "japanese": "私たちは時間を守らなければなりません。",
+      "sentence": "We ____ be on time.",
+      "choices": ["must", "should", "could"],
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "強い義務や必要性を表すにはmustを使います。",
+      "hint": "強い義務"
     },
     {
       "id": "g2-u3-fib-010",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め10。",
-      "sentence": "Example sentence 10 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼女は今日病院に行かなければなりません。",
+      "sentence": "She ____ go to the hospital today.",
+      "choices": ["has to", "can", "may"],
+      "correctAnswer": "has to",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の説明10です。",
-      "hint": "ヒント"
+      "explanation": "外的な必要性を表すhas toを使います。主語がsheなので三人称単数形です。",
+      "hint": "必要性"
     },
     {
       "id": "g2-u3-fib-011",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め11。",
-      "sentence": "Example sentence 11 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の説明11です。",
-      "hint": "ヒント"
+      "japanese": "私は試験勉強をしなければなりません。",
+      "sentence": "I ____ study for the exam.",
+      "choices": ["must", "can", "will"],
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "自分自身に課す義務や決意を表すときはmustを使います。",
+      "hint": "自分への義務"
     },
     {
       "id": "g2-u3-fib-012",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め12。",
-      "sentence": "Example sentence 12 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の説明12です。",
-      "hint": "ヒント"
+      "japanese": "あなたは宿題を提出しなければなりません。",
+      "sentence": "You ____ submit your homework.",
+      "choices": ["have to", "want to", "try to"],
+      "correctAnswer": "have to",
+      "difficulty": "intermediate",
+      "explanation": "外的な義務(学校の規則など)にはhave toを使います。",
+      "hint": "外的な義務"
     },
     {
       "id": "g2-u3-fib-013",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め13。",
-      "sentence": "Example sentence 13 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の説明13です。",
-      "hint": "ヒント"
+      "japanese": "彼は英語を勉強しなければなりません。",
+      "sentence": "He ____ study English.",
+      "choices": ["must", "may", "can"],
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "強い義務や必要性を表すmustを使います。",
+      "hint": "義務"
     },
     {
       "id": "g2-u3-fib-014",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め14。",
-      "sentence": "Example sentence 14 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の説明14です。",
-      "hint": "ヒント"
+      "japanese": "私たちは健康に気をつけなければなりません。",
+      "sentence": "We ____ take care of our health.",
+      "choices": ["must", "should", "would"],
+      "correctAnswer": "must",
+      "difficulty": "intermediate",
+      "explanation": "強い義務や重要性を強調するときはmustを使います。",
+      "hint": "重要性の強調"
     },
     {
       "id": "g2-u3-fib-015",
       "type": "fillInBlank",
-      "japanese": "助動詞must/have to穴埋め15。",
-      "sentence": "Example sentence 15 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の説明15です。",
-      "hint": "ヒント"
+      "japanese": "彼女は毎日練習しなければなりません。",
+      "sentence": "She ____ practice every day.",
+      "choices": ["has to", "wants to", "tries to"],
+      "correctAnswer": "has to",
+      "difficulty": "intermediate",
+      "explanation": "外的な必要性を表すhas toを使います。主語がsheなので三人称単数形です。",
+      "hint": "外的な必要性"
     },
     {
       "id": "g2-u3-so-001",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え1。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "私は毎日宿題をしなければなりません。",
+      "words": ["I", "must", "do", "my", "homework", "every", "day"],
+      "correctAnswer": "I must do my homework every day.",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の文1です。",
-      "hint": "順序",
-      "wordCount": 3
+      "grammarPoint": "must + 動詞の原形",
+      "hint": "mustの語順",
+      "explanation": "mustは助動詞で、主語の後に置き、その後に動詞の原形を続けます。"
     },
     {
       "id": "g2-u3-so-002",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え2。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の文2です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "あなたは早く起きなければなりません。",
+      "words": ["you", "have", "to", "get", "up", "early"],
+      "correctAnswer": "You have to get up early.",
+      "difficulty": "intermediate",
+      "grammarPoint": "have to + 動詞の原形",
+      "hint": "have toの語順",
+      "explanation": "have toの後は動詞の原形を続けます。"
     },
     {
       "id": "g2-u3-so-003",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え3。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "彼は今日働かなければなりません。",
+      "words": ["he", "must", "work", "today"],
+      "correctAnswer": "He must work today.",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の文3です。",
-      "hint": "順序",
-      "wordCount": 3
+      "grammarPoint": "must + 動詞の原形",
+      "hint": "mustの後",
+      "explanation": "mustの後は必ず動詞の原形を使います。"
     },
     {
       "id": "g2-u3-so-004",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え4。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の文4です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私たちは図書館で静かにしなければなりません。",
+      "words": ["we", "must", "be", "quiet", "in", "the", "library"],
+      "correctAnswer": "We must be quiet in the library.",
+      "difficulty": "intermediate",
+      "grammarPoint": "must be + 形容詞",
+      "hint": "must beの語順",
+      "explanation": "must beの後に形容詞quietを続けます。"
     },
     {
       "id": "g2-u3-so-005",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え5。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の文5です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼女は薬を飲まなければなりません。",
+      "words": ["she", "has", "to", "take", "medicine"],
+      "correctAnswer": "She has to take medicine.",
+      "difficulty": "intermediate",
+      "grammarPoint": "has to + 動詞の原形",
+      "hint": "三人称単数",
+      "explanation": "主語がsheなので、have toはhas toになります。"
     },
     {
       "id": "g2-u3-so-006",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え6。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の文6です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私は明日早く学校に行かなければなりません。",
+      "words": ["I", "have", "to", "go", "to", "school", "early", "tomorrow"],
+      "correctAnswer": "I have to go to school early tomorrow.",
+      "difficulty": "beginner",
+      "grammarPoint": "have to + 動詞の原形",
+      "hint": "have toの語順",
+      "explanation": "have toの後に動詞の原形goを続けます。"
     },
     {
       "id": "g2-u3-so-007",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え7。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の文7です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "あなたたちは規則に従わなければなりません。",
+      "words": ["you", "must", "follow", "the", "rules"],
+      "correctAnswer": "You must follow the rules.",
+      "difficulty": "beginner",
+      "grammarPoint": "must + 動詞の原形",
+      "hint": "mustの語順",
+      "explanation": "mustの後は動詞の原形followを使います。"
     },
     {
       "id": "g2-u3-so-008",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え8。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "彼は毎朝運動しなければなりません。",
+      "words": ["he", "has", "to", "exercise", "every", "morning"],
+      "correctAnswer": "He has to exercise every morning.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の文8です。",
-      "hint": "順序",
-      "wordCount": 3
+      "grammarPoint": "has to + 動詞の原形",
+      "hint": "三人称単数",
+      "explanation": "主語がheなので、have toはhas toになります。"
     },
     {
       "id": "g2-u3-so-009",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え9。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の文9です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私たちは時間を守らなければなりません。",
+      "words": ["we", "must", "be", "on", "time"],
+      "correctAnswer": "We must be on time.",
+      "difficulty": "beginner",
+      "grammarPoint": "must be",
+      "hint": "be on time",
+      "explanation": "be on timeで「時間を守る」という意味です。"
     },
     {
       "id": "g2-u3-so-010",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え10。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "彼女は今日病院に行かなければなりません。",
+      "words": ["she", "has", "to", "go", "to", "the", "hospital", "today"],
+      "correctAnswer": "She has to go to the hospital today.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の文10です。",
-      "hint": "順序",
-      "wordCount": 3
+      "grammarPoint": "has to + 動詞の原形",
+      "hint": "has toの語順",
+      "explanation": "主語がsheなのでhas toを使います。"
     },
     {
       "id": "g2-u3-so-011",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え11。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の文11です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私は試験勉強をしなければなりません。",
+      "words": ["I", "must", "study", "for", "the", "exam"],
+      "correctAnswer": "I must study for the exam.",
+      "difficulty": "beginner",
+      "grammarPoint": "must + 動詞の原形",
+      "hint": "study for",
+      "explanation": "study forで「~のために勉強する」という意味です。"
     },
     {
       "id": "g2-u3-so-012",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え12。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の文12です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "あなたは宿題を提出しなければなりません。",
+      "words": ["you", "have", "to", "submit", "your", "homework"],
+      "correctAnswer": "You have to submit your homework.",
+      "difficulty": "intermediate",
+      "grammarPoint": "have to + 動詞の原形",
+      "hint": "have toの語順",
+      "explanation": "submitは「提出する」という意味の動詞です。"
     },
     {
       "id": "g2-u3-so-013",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え13。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の文13です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼は英語を勉強しなければなりません。",
+      "words": ["he", "must", "study", "English"],
+      "correctAnswer": "He must study English.",
+      "difficulty": "beginner",
+      "grammarPoint": "must + 動詞の原形",
+      "hint": "mustの語順",
+      "explanation": "シンプルな義務の文です。"
     },
     {
       "id": "g2-u3-so-014",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え14。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の文14です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私たちは健康に気をつけなければなりません。",
+      "words": ["we", "must", "take", "care", "of", "our", "health"],
+      "correctAnswer": "We must take care of our health.",
+      "difficulty": "intermediate",
+      "grammarPoint": "must + 動詞の原形",
+      "hint": "take care of",
+      "explanation": "take care ofで「~の世話をする、~に気をつける」という意味です。"
     },
     {
       "id": "g2-u3-so-015",
       "type": "sentenceOrdering",
-      "japanese": "助動詞must/have to並べ替え15。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の文15です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼女は毎日練習しなければなりません。",
+      "words": ["she", "has", "to", "practice", "every", "day"],
+      "correctAnswer": "She has to practice every day.",
+      "difficulty": "intermediate",
+      "grammarPoint": "has to + 動詞の原形",
+      "hint": "三人称単数",
+      "explanation": "主語がsheなのでhas toを使います。"
     },
     {
       "id": "g2-u3-para-001",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え1。",
-      "originalSentence": "Original sentence 1.",
-      "question": "書き換えなさい",
+      "japanese": "私は宿題をしなければなりません。",
+      "originalSentence": "I must do my homework.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "I have to do my homework.",
+        "I has to do my homework.",
+        "I having to do my homework."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "I have to do my homework.",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の変換1です。",
-      "hint": "変換"
+      "explanation": "mustをhave toに書き換えることができます。意味はほぼ同じです。",
+      "hint": "have toで書き換え"
     },
     {
       "id": "g2-u3-para-002",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え2。",
-      "originalSentence": "Original sentence 2.",
-      "question": "書き換えなさい",
+      "japanese": "彼女は早く起きなければなりません。",
+      "originalSentence": "She has to get up early.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "She must get up early.",
+        "She musts get up early.",
+        "She must gets up early."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "She must get up early.",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の変換2です。",
-      "hint": "変換"
+      "explanation": "have toをmustに書き換えます。mustには三人称単数のsは付きません。",
+      "hint": "mustで書き換え"
     },
     {
       "id": "g2-u3-para-003",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え3。",
-      "originalSentence": "Original sentence 3.",
-      "question": "書き換えなさい",
+      "japanese": "私たちは静かにしなければなりません。",
+      "originalSentence": "We must be quiet.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "We have to be quiet.",
+        "We has to be quiet.",
+        "We must to be quiet."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "We have to be quiet.",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の変換3です。",
-      "hint": "変換"
+      "explanation": "mustをhave toに書き換えます。主語がweなのでhave toです。",
+      "hint": "主語に注意"
     },
     {
       "id": "g2-u3-para-004",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え4。",
-      "originalSentence": "Original sentence 4.",
-      "question": "書き換えなさい",
+      "japanese": "彼は働かなければなりません。",
+      "originalSentence": "He has to work.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "He must work.",
+        "He musts work.",
+        "He must to work."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "He must work.",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の変換4です。",
-      "hint": "変換"
+      "explanation": "has toをmustに書き換えます。mustの後はtoは不要です。",
+      "hint": "toは不要"
     },
     {
       "id": "g2-u3-para-005",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え5。",
-      "originalSentence": "Original sentence 5.",
-      "question": "書き換えなさい",
+      "japanese": "私は薬を飲まなければなりません。",
+      "originalSentence": "I must take medicine.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "I have to take medicine.",
+        "I has to take medicine.",
+        "I must to take medicine."
       ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の変換5です。",
-      "hint": "変換"
+      "correctAnswer": "I have to take medicine.",
+      "difficulty": "intermediate",
+      "explanation": "mustをhave toに書き換えます。主語がIなのでhave toです。",
+      "hint": "have toで書き換え"
     },
     {
       "id": "g2-u3-para-006",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え6。",
-      "originalSentence": "Original sentence 6.",
-      "question": "書き換えなさい",
+      "japanese": "あなたは規則に従わなければなりません。",
+      "originalSentence": "You have to follow the rules.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "You must follow the rules.",
+        "You musts follow the rules.",
+        "You must to follow the rules."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "You must follow the rules.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の変換6です。",
-      "hint": "変換"
+      "explanation": "have toをmustに書き換えます。mustの後は動詞の原形です。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-para-007",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え7。",
-      "originalSentence": "Original sentence 7.",
-      "question": "書き換えなさい",
+      "japanese": "彼女は練習しなければなりません。",
+      "originalSentence": "She must practice.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "She has to practice.",
+        "She have to practice.",
+        "She must to practice."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "She has to practice.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の変換7です。",
-      "hint": "変換"
+      "explanation": "mustをhas toに書き換えます。主語がsheなので三人称単数形です。",
+      "hint": "三人称単数"
     },
     {
       "id": "g2-u3-para-008",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え8。",
-      "originalSentence": "Original sentence 8.",
-      "question": "書き換えなさい",
+      "japanese": "私たちは時間を守らなければなりません。",
+      "originalSentence": "We have to be on time.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "We must be on time.",
+        "We musts be on time.",
+        "We must to be on time."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "We must be on time.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の変換8です。",
-      "hint": "変換"
+      "explanation": "have toをmustに書き換えます。",
+      "hint": "mustで書き換え"
     },
     {
       "id": "g2-u3-para-009",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え9。",
-      "originalSentence": "Original sentence 9.",
-      "question": "書き換えなさい",
+      "japanese": "彼は勉強しなければなりません。",
+      "originalSentence": "He must study.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "He has to study.",
+        "He have to study.",
+        "He must to study."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "He has to study.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の変換9です。",
-      "hint": "変換"
+      "explanation": "mustをhas toに書き換えます。主語がheなので三人称単数形です。",
+      "hint": "三人称単数"
     },
     {
       "id": "g2-u3-para-010",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え10。",
-      "originalSentence": "Original sentence 10.",
-      "question": "書き換えなさい",
+      "japanese": "私は宿題を提出しなければなりません。",
+      "originalSentence": "I have to submit my homework.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "I must submit my homework.",
+        "I musts submit my homework.",
+        "I must to submit my homework."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "I must submit my homework.",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の変換10です。",
-      "hint": "変換"
+      "explanation": "have toをmustに書き換えます。",
+      "hint": "mustで書き換え"
     },
     {
       "id": "g2-u3-para-011",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え11。",
-      "originalSentence": "Original sentence 11.",
-      "question": "書き換えなさい",
+      "japanese": "彼女は病院に行かなければなりません。",
+      "originalSentence": "She must go to the hospital.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "She has to go to the hospital.",
+        "She have to go to the hospital.",
+        "She must to go to the hospital."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "She has to go to the hospital.",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の変換11です。",
-      "hint": "変換"
+      "explanation": "mustをhas toに書き換えます。主語がsheなので三人称単数形です。",
+      "hint": "三人称単数"
     },
     {
       "id": "g2-u3-para-012",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え12。",
-      "originalSentence": "Original sentence 12.",
-      "question": "書き換えなさい",
+      "japanese": "私たちは健康に気をつけなければなりません。",
+      "originalSentence": "We have to take care of our health.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "We must take care of our health.",
+        "We musts take care of our health.",
+        "We must to take care of our health."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "We must take care of our health.",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の変換12です。",
-      "hint": "変換"
+      "explanation": "have toをmustに書き換えます。",
+      "hint": "mustで書き換え"
     },
     {
       "id": "g2-u3-para-013",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え13。",
-      "originalSentence": "Original sentence 13.",
-      "question": "書き換えなさい",
+      "japanese": "彼は毎朝運動しなければなりません。",
+      "originalSentence": "He must exercise every morning.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "He has to exercise every morning.",
+        "He have to exercise every morning.",
+        "He must to exercise every morning."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "He has to exercise every morning.",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の変換13です。",
-      "hint": "変換"
+      "explanation": "mustをhas toに書き換えます。主語がheなので三人称単数形です。",
+      "hint": "三人称単数"
     },
     {
       "id": "g2-u3-para-014",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え14。",
-      "originalSentence": "Original sentence 14.",
-      "question": "書き換えなさい",
+      "japanese": "私は早く学校に行かなければなりません。",
+      "originalSentence": "I have to go to school early.",
+      "question": "mustを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "I must go to school early.",
+        "I musts go to school early.",
+        "I must to go to school early."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "I must go to school early.",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の変換14です。",
-      "hint": "変換"
+      "explanation": "have toをmustに書き換えます。",
+      "hint": "mustで書き換え"
     },
     {
       "id": "g2-u3-para-015",
       "type": "paraphrase",
-      "japanese": "助動詞must/have to言い換え15。",
-      "originalSentence": "Original sentence 15.",
-      "question": "書き換えなさい",
+      "japanese": "彼女は英語を勉強しなければなりません。",
+      "originalSentence": "She must study English.",
+      "question": "have toを使って書き換えなさい。",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "She has to study English.",
+        "She have to study English.",
+        "She must to study English."
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "She has to study English.",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の変換15です。",
-      "hint": "変換"
+      "explanation": "mustをhas toに書き換えます。主語がsheなので三人称単数形です。",
+      "hint": "三人称単数"
     },
     {
       "id": "g2-u3-vf-001",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化1。",
-      "sentence": "Sentence 1 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "私は宿題をしなければなりません。",
+      "sentence": "I must ____ my homework.",
+      "verb": "do",
+      "choices": ["do", "does", "did"],
+      "correctAnswer": "do",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の動詞1です。",
-      "hint": "動詞"
+      "explanation": "mustの後は必ず動詞の原形を使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-002",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化2。",
-      "sentence": "Sentence 2 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "彼女は早く起きなければなりません。",
+      "sentence": "She has to ____ up early.",
+      "verb": "get",
+      "choices": ["get", "gets", "got"],
+      "correctAnswer": "get",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の動詞2です。",
-      "hint": "動詞"
+      "explanation": "have toの後も動詞の原形を使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-003",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化3。",
-      "sentence": "Sentence 3 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "私たちは静かにしなければなりません。",
+      "sentence": "We must ____ quiet.",
+      "verb": "be",
+      "choices": ["be", "are", "is"],
+      "correctAnswer": "be",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の動詞3です。",
-      "hint": "動詞"
+      "explanation": "mustの後はbe動詞も原形beを使います。",
+      "hint": "be動詞の原形"
     },
     {
       "id": "g2-u3-vf-004",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化4。",
-      "sentence": "Sentence 4 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "彼は働かなければなりません。",
+      "sentence": "He has to ____.",
+      "verb": "work",
+      "choices": ["work", "works", "worked"],
+      "correctAnswer": "work",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の動詞4です。",
-      "hint": "動詞"
+      "explanation": "has toの後は動詞の原形workを使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-005",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化5。",
-      "sentence": "Sentence 5 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "私は薬を飲まなければなりません。",
+      "sentence": "I must ____ medicine.",
+      "verb": "take",
+      "choices": ["take", "takes", "took"],
+      "correctAnswer": "take",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の動詞5です。",
-      "hint": "動詞"
+      "explanation": "mustの後は動詞の原形takeを使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-006",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化6。",
-      "sentence": "Sentence 6 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "あなたは規則に従わなければなりません。",
+      "sentence": "You have to ____ the rules.",
+      "verb": "follow",
+      "choices": ["follow", "follows", "followed"],
+      "correctAnswer": "follow",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の動詞6です。",
-      "hint": "動詞"
+      "explanation": "have toの後は動詞の原形followを使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-007",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化7。",
-      "sentence": "Sentence 7 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "彼女は練習しなければなりません。",
+      "sentence": "She must ____.",
+      "verb": "practice",
+      "choices": ["practice", "practices", "practiced"],
+      "correctAnswer": "practice",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の動詞7です。",
-      "hint": "動詞"
+      "explanation": "mustの後は動詞の原形practiceを使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-008",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化8。",
-      "sentence": "Sentence 8 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "私たちは時間を守らなければなりません。",
+      "sentence": "We must ____ on time.",
+      "verb": "be",
+      "choices": ["be", "are", "is"],
+      "correctAnswer": "be",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の動詞8です。",
-      "hint": "動詞"
+      "explanation": "mustの後はbe動詞も原形beを使います。",
+      "hint": "be動詞の原形"
     },
     {
       "id": "g2-u3-vf-009",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化9。",
-      "sentence": "Sentence 9 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "彼は勉強しなければなりません。",
+      "sentence": "He has to ____.",
+      "verb": "study",
+      "choices": ["study", "studies", "studied"],
+      "correctAnswer": "study",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の動詞9です。",
-      "hint": "動詞"
+      "explanation": "has toの後は動詞の原形studyを使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-vf-010",
       "type": "verbForm",
-      "japanese": "助動詞must/have to動詞変化10。",
-      "sentence": "Sentence 10 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "私は宿題を提出しなければなりません。",
+      "sentence": "I must ____ my homework.",
+      "verb": "submit",
+      "choices": ["submit", "submits", "submitted"],
+      "correctAnswer": "submit",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の動詞10です。",
-      "hint": "動詞"
+      "explanation": "mustの後は動詞の原形submitを使います。",
+      "hint": "動詞の原形"
     },
     {
       "id": "g2-u3-conv-001",
       "type": "conversation",
-      "japanese": "助動詞must/have to会話1。",
-      "situation": "状況1",
+      "japanese": "学校の規則について話しています。",
+      "situation": "先生との会話",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Question 1?"
+          "text": "Do I have to wear a uniform?"
         },
         {
           "speaker": "B",
-          "text": "Answer ____."
+          "text": "Yes, you ____."
         }
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["must", "can", "may"],
+      "correctAnswer": "must",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の会話1です。",
-      "hint": "会話"
+      "explanation": "have toの疑問文には、mustまたはhave toで答えることができます。ここではmustが適切です。",
+      "hint": "義務を表す"
     },
     {
       "id": "g2-u3-conv-002",
       "type": "conversation",
-      "japanese": "助動詞must/have to会話2。",
-      "situation": "状況2",
+      "japanese": "宿題について話しています。",
+      "situation": "友達との会話",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Question 2?"
+          "text": "When do you have to finish your homework?"
         },
         {
           "speaker": "B",
-          "text": "Answer ____."
+          "text": "I ____ finish it by tomorrow."
         }
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["have to", "can", "want to"],
+      "correctAnswer": "have to",
       "difficulty": "beginner",
-      "explanation": "義務・必要性の表現の会話2です。",
-      "hint": "会話"
+      "explanation": "締め切りなどの外的な義務を表すときはhave toを使います。",
+      "hint": "外的な義務"
     },
     {
       "id": "g2-u3-conv-003",
       "type": "conversation",
-      "japanese": "助動詞must/have to会話3。",
-      "situation": "状況3",
+      "japanese": "病院の予約について話しています。",
+      "situation": "医師との会話",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Question 3?"
+          "text": "How often must I take this medicine?"
         },
         {
           "speaker": "B",
-          "text": "Answer ____."
+          "text": "You ____ take it three times a day."
         }
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["must", "can", "may"],
+      "correctAnswer": "must",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の会話3です。",
-      "hint": "会話"
+      "explanation": "医師の指示など、強い義務を表すときはmustを使います。",
+      "hint": "強い義務"
     },
     {
       "id": "g2-u3-conv-004",
       "type": "conversation",
-      "japanese": "助動詞must/have to会話4。",
-      "situation": "状況4",
+      "japanese": "図書館の規則について話しています。",
+      "situation": "司書との会話",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Question 4?"
+          "text": "What are the library rules?"
         },
         {
           "speaker": "B",
-          "text": "Answer ____."
+          "text": "You ____ be quiet and ____ return books on time."
         }
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["must / must", "can / can", "may / may"],
+      "correctAnswer": "must / must",
       "difficulty": "intermediate",
-      "explanation": "義務・必要性の表現の会話4です。",
-      "hint": "会話"
+      "explanation": "図書館の規則という義務を表すためmustを2回使います。",
+      "hint": "規則"
     },
     {
       "id": "g2-u3-conv-005",
       "type": "conversation",
-      "japanese": "助動詞must/have to会話5。",
-      "situation": "状況5",
+      "japanese": "試験について話しています。",
+      "situation": "先生との会話",
       "dialogue": [
         {
           "speaker": "A",
-          "text": "Question 5?"
+          "text": "Do we have to study all chapters?"
         },
         {
           "speaker": "B",
-          "text": "Answer ____."
+          "text": "Yes, you ____ study all of them."
         }
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["must", "can", "should"],
+      "correctAnswer": "must",
       "difficulty": "advanced",
-      "explanation": "義務・必要性の表現の会話5です。",
-      "hint": "会話"
+      "explanation": "have toの疑問文にmustで答えています。試験範囲という義務を表します。",
+      "hint": "義務"
     }
-  ],
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
-  "disabledDate": "2025-12-09T05:38:25.077513"
+  ]
 }
