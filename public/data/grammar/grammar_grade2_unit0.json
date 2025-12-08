@@ -482,7 +482,7 @@
     {
       "id": "g2-u0-para-001",
       "type": "paraphrase",
-      "japanese": "現在→過去。",
+      "japanese": "私は忙しかった。",
       "originalSentence": "I am busy.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -498,7 +498,7 @@
     {
       "id": "g2-u0-para-002",
       "type": "paraphrase",
-      "japanese": "現在→過去。",
+      "japanese": "彼らは幸せでした。",
       "originalSentence": "They are happy.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -514,7 +514,7 @@
     {
       "id": "g2-u0-para-003",
       "type": "paraphrase",
-      "japanese": "現在→過去。",
+      "japanese": "彼は疲れていました。",
       "originalSentence": "He is tired.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -530,7 +530,7 @@
     {
       "id": "g2-u0-para-004",
       "type": "paraphrase",
-      "japanese": "肯定→否定。",
+      "japanese": "私は家にいませんでした。",
       "originalSentence": "I was at home.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -546,7 +546,7 @@
     {
       "id": "g2-u0-para-005",
       "type": "paraphrase",
-      "japanese": "肯定→否定。",
+      "japanese": "彼らは先生ではありませんでした。",
       "originalSentence": "They were teachers.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -562,7 +562,7 @@
     {
       "id": "g2-u0-para-006",
       "type": "paraphrase",
-      "japanese": "肯定→疑問。",
+      "japanese": "彼女は幸せでしたか。",
       "originalSentence": "She was happy.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -578,7 +578,7 @@
     {
       "id": "g2-u0-para-007",
       "type": "paraphrase",
-      "japanese": "肯定→疑問。",
+      "japanese": "あなたは忙しかったですか。",
       "originalSentence": "You were busy.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -594,7 +594,7 @@
     {
       "id": "g2-u0-para-008",
       "type": "paraphrase",
-      "japanese": "過去→現在。",
+      "japanese": "彼は先生です。",
       "originalSentence": "He was a teacher.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -610,7 +610,7 @@
     {
       "id": "g2-u0-para-009",
       "type": "paraphrase",
-      "japanese": "過去→現在。",
+      "japanese": "私たちは友達です。",
       "originalSentence": "We were friends.",
       "question": "現在形に書き換えなさい",
       "choices": [

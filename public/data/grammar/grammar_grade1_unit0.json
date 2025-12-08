@@ -501,7 +501,7 @@
     {
       "id": "g1-u0-para-002",
       "type": "paraphrase",
-      "japanese": "be動詞 + not。",
+      "japanese": "彼は先生ではありません。",
       "originalSentence": "He is a teacher.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -985,7 +985,7 @@
     {
       "id": "g1-u0-conv-005",
       "type": "conversation",
-      "japanese": "物の所有を尋ねる会話。",
+      "japanese": "はい、そうです。",
       "situation": "持ち物を確認する場面",
       "dialogue": [
         {
