@@ -14,7 +14,7 @@
     {
       "id": "g1-u0-fib-001",
       "type": "fillInBlank",
-      "japanese": "私は学生です",
+      "japanese": "私は学生です。",
       "sentence": "I ____ a student.",
       "choices": [
         "am",
@@ -29,7 +29,7 @@
     {
       "id": "g1-u0-fib-002",
       "type": "fillInBlank",
-      "japanese": "彼は私の兄です",
+      "japanese": "彼は私の兄です。",
       "sentence": "He ____ my brother.",
       "choices": [
         "is",
@@ -44,7 +44,7 @@
     {
       "id": "g1-u0-fib-003",
       "type": "fillInBlank",
-      "japanese": "あなたは学生です",
+      "japanese": "あなたは学生です。",
       "sentence": "You ____ a student.",
       "choices": [
         "are",
@@ -59,7 +59,7 @@
     {
       "id": "g1-u0-fib-004",
       "type": "fillInBlank",
-      "japanese": "私たちは日本人です",
+      "japanese": "私たちは日本人です。",
       "sentence": "We ____ Japanese.",
       "choices": [
         "are",
@@ -74,7 +74,7 @@
     {
       "id": "g1-u0-fib-005",
       "type": "fillInBlank",
-      "japanese": "彼女は先生です",
+      "japanese": "彼女は先生です。",
       "sentence": "She ____ a teacher.",
       "choices": [
         "is",
@@ -89,7 +89,7 @@
     {
       "id": "g1-u0-fib-006",
       "type": "fillInBlank",
-      "japanese": "彼らは友達です",
+      "japanese": "彼らは友達です。",
       "sentence": "They ____ friends.",
       "choices": [
         "are",
@@ -104,7 +104,7 @@
     {
       "id": "g1-u0-fib-007",
       "type": "fillInBlank",
-      "japanese": "これは私の本です",
+      "japanese": "これは私の本です。",
       "sentence": "This ____ my book.",
       "choices": [
         "is",
@@ -119,7 +119,7 @@
     {
       "id": "g1-u0-fib-008",
       "type": "fillInBlank",
-      "japanese": "私は13歳です",
+      "japanese": "私は13歳です。",
       "sentence": "I ____ thirteen years old.",
       "choices": [
         "am",
@@ -134,7 +134,7 @@
     {
       "id": "g1-u0-fib-009",
       "type": "fillInBlank",
-      "japanese": "私は日本出身です",
+      "japanese": "私は日本出身です。",
       "sentence": "I ____ from Japan.",
       "choices": [
         "am",
@@ -149,7 +149,7 @@
     {
       "id": "g1-u0-fib-010",
       "type": "fillInBlank",
-      "japanese": "彼は今家にいます",
+      "japanese": "彼は今家にいます。",
       "sentence": "He ____ at home now.",
       "choices": [
         "is",
@@ -164,7 +164,7 @@
     {
       "id": "g1-u0-fib-011",
       "type": "fillInBlank",
-      "japanese": "私たちは同じクラスです",
+      "japanese": "私たちは同じクラスです。",
       "sentence": "We ____ in the same class.",
       "choices": [
         "are",
@@ -179,7 +179,7 @@
     {
       "id": "g1-u0-fib-012",
       "type": "fillInBlank",
-      "japanese": "あなたは正しいです",
+      "japanese": "あなたは正しいです。",
       "sentence": "You ____ right.",
       "choices": [
         "are",
@@ -194,7 +194,7 @@
     {
       "id": "g1-u0-fib-013",
       "type": "fillInBlank",
-      "japanese": "彼は数学が得意です",
+      "japanese": "彼は数学が得意です。",
       "sentence": "He ____ good at math.",
       "choices": [
         "is",
@@ -209,7 +209,7 @@
     {
       "id": "g1-u0-fib-014",
       "type": "fillInBlank",
-      "japanese": "私は英語に興味があります",
+      "japanese": "私は英語に興味があります。",
       "sentence": "I ____ interested in English.",
       "choices": [
         "am",
@@ -224,7 +224,7 @@
     {
       "id": "g1-u0-fib-015",
       "type": "fillInBlank",
-      "japanese": "彼女は有名な歌手です",
+      "japanese": "彼女は有名な歌手です。",
       "sentence": "She ____ a famous singer.",
       "choices": [
         "is",
@@ -239,7 +239,7 @@
     {
       "id": "g1-u0-so-001",
       "type": "sentenceOrdering",
-      "japanese": "私は学生です",
+      "japanese": "私は学生です。",
       "words": [
         "student",
         "I",
@@ -255,7 +255,7 @@
     {
       "id": "g1-u0-so-002",
       "type": "sentenceOrdering",
-      "japanese": "彼は親切です",
+      "japanese": "彼は親切です。",
       "words": [
         "kind",
         "is",
@@ -270,7 +270,7 @@
     {
       "id": "g1-u0-so-003",
       "type": "sentenceOrdering",
-      "japanese": "あなたたちは友達です",
+      "japanese": "あなたたちは友達です。",
       "words": [
         "friends",
         "are",
@@ -285,7 +285,7 @@
     {
       "id": "g1-u0-so-004",
       "type": "sentenceOrdering",
-      "japanese": "これは私のペンです",
+      "japanese": "これは私のペンです。",
       "words": [
         "pen",
         "my",
@@ -301,7 +301,7 @@
     {
       "id": "g1-u0-so-005",
       "type": "sentenceOrdering",
-      "japanese": "私たちは日本人です",
+      "japanese": "私たちは日本人です。",
       "words": [
         "Japanese",
         "are",
@@ -316,7 +316,7 @@
     {
       "id": "g1-u0-so-006",
       "type": "sentenceOrdering",
-      "japanese": "彼女は先生です",
+      "japanese": "彼女は先生です。",
       "words": [
         "teacher",
         "a",
@@ -332,7 +332,7 @@
     {
       "id": "g1-u0-so-007",
       "type": "sentenceOrdering",
-      "japanese": "彼らは学生です",
+      "japanese": "彼らは学生です。",
       "words": [
         "students",
         "are",
@@ -347,7 +347,7 @@
     {
       "id": "g1-u0-so-008",
       "type": "sentenceOrdering",
-      "japanese": "私は13歳です",
+      "japanese": "私は13歳です。",
       "words": [
         "old",
         "thirteen",
@@ -364,7 +364,7 @@
     {
       "id": "g1-u0-so-009",
       "type": "sentenceOrdering",
-      "japanese": "彼は東京出身です",
+      "japanese": "彼は東京出身です。",
       "words": [
         "Tokyo",
         "from",
@@ -380,7 +380,7 @@
     {
       "id": "g1-u0-so-010",
       "type": "sentenceOrdering",
-      "japanese": "私は今学校にいます",
+      "japanese": "私は今学校にいます。",
       "words": [
         "school",
         "at",
@@ -397,7 +397,7 @@
     {
       "id": "g1-u0-so-011",
       "type": "sentenceOrdering",
-      "japanese": "これらは私の本です",
+      "japanese": "これらは私の本です。",
       "words": [
         "books",
         "my",
@@ -413,7 +413,7 @@
     {
       "id": "g1-u0-so-012",
       "type": "sentenceOrdering",
-      "japanese": "私たちは同じクラスです",
+      "japanese": "私たちは同じクラスです。",
       "words": [
         "class",
         "same",
@@ -431,7 +431,7 @@
     {
       "id": "g1-u0-so-013",
       "type": "sentenceOrdering",
-      "japanese": "彼は数学が得意です",
+      "japanese": "彼は数学が得意です。",
       "words": [
         "math",
         "at",
@@ -448,7 +448,7 @@
     {
       "id": "g1-u0-so-014",
       "type": "sentenceOrdering",
-      "japanese": "私は野球部員です",
+      "japanese": "私は野球部員です。",
       "words": [
         "team",
         "baseball",
@@ -468,7 +468,7 @@
     {
       "id": "g1-u0-so-015",
       "type": "sentenceOrdering",
-      "japanese": "彼女は英語に興味があります",
+      "japanese": "彼女は英語に興味があります。",
       "words": [
         "English",
         "in",
@@ -485,7 +485,7 @@
     {
       "id": "g1-u0-para-001",
       "type": "paraphrase",
-      "japanese": "You are a student.（疑問文に）",
+      "japanese": "You are a student.（疑問文に）。",
       "originalSentence": "You are a student.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -501,7 +501,7 @@
     {
       "id": "g1-u0-para-002",
       "type": "paraphrase",
-      "japanese": "be動詞 + not",
+      "japanese": "be動詞 + not。",
       "originalSentence": "He is a teacher.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -517,7 +517,7 @@
     {
       "id": "g1-u0-para-003",
       "type": "paraphrase",
-      "japanese": "これは本です（this→it）",
+      "japanese": "これは本です（this→it）。",
       "originalSentence": "This is a book.",
       "question": "Thisの代わりにItを使って書き換えなさい",
       "choices": [
@@ -533,7 +533,7 @@
     {
       "id": "g1-u0-para-004",
       "type": "paraphrase",
-      "japanese": "私は日本人です（短縮形）",
+      "japanese": "私は日本人です（短縮形）。",
       "originalSentence": "I am Japanese.",
       "question": "短縮形に書き換えなさい",
       "choices": [
@@ -549,7 +549,7 @@
     {
       "id": "g1-u0-para-005",
       "type": "paraphrase",
-      "japanese": "彼らは学生です（疑問文）",
+      "japanese": "彼らは学生です（疑問文）。",
       "originalSentence": "They are students.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -565,7 +565,7 @@
     {
       "id": "g1-u0-para-006",
       "type": "paraphrase",
-      "japanese": "私は忙しいです（短縮否定形）",
+      "japanese": "私は忙しいです（短縮否定形）。",
       "originalSentence": "I am busy.",
       "question": "短縮形の否定文に書き換えなさい",
       "choices": [
@@ -581,7 +581,7 @@
     {
       "id": "g1-u0-para-007",
       "type": "paraphrase",
-      "japanese": "彼女は親切です（否定疑問文）",
+      "japanese": "彼女は親切です（否定疑問文）。",
       "originalSentence": "She is kind.",
       "question": "否定疑問文「彼女は親切ではないのですか」に書き換えなさい",
       "choices": [
@@ -597,7 +597,7 @@
     {
       "id": "g1-u0-para-008",
       "type": "paraphrase",
-      "japanese": "あなたは正しい（You→He）",
+      "japanese": "あなたは正しい（You→He）。",
       "originalSentence": "You are right.",
       "question": "主語をHeに変えて書き換えなさい",
       "choices": [
@@ -613,7 +613,7 @@
     {
       "id": "g1-u0-para-009",
       "type": "paraphrase",
-      "japanese": "私たちは友達です（短縮形）",
+      "japanese": "私たちは友達です（短縮形）。",
       "originalSentence": "We are friends.",
       "question": "短縮形に書き換えなさい",
       "choices": [
@@ -629,7 +629,7 @@
     {
       "id": "g1-u0-para-010",
       "type": "paraphrase",
-      "japanese": "年齢表現の言い換え",
+      "japanese": "年齢表現の言い換え。",
       "originalSentence": "I have thirteen years.",
       "question": "正しい英語に直しなさい",
       "choices": [
@@ -645,7 +645,7 @@
     {
       "id": "g1-u0-para-011",
       "type": "paraphrase",
-      "japanese": "これらは本です（These→They）",
+      "japanese": "これらは本です（These→They）。",
       "originalSentence": "These are books.",
       "question": "Theseの代わりにTheyを使って書き換えなさい",
       "choices": [
@@ -661,7 +661,7 @@
     {
       "id": "g1-u0-para-012",
       "type": "paraphrase",
-      "japanese": "彼は医者です（Yes/No疑問文とその答え）",
+      "japanese": "彼は医者です（Yes/No疑問文とその答え）。",
       "originalSentence": "He is a doctor.",
       "question": "疑問文とYesの答えを作りなさい（疑問文のみ選択）",
       "choices": [
@@ -677,7 +677,7 @@
     {
       "id": "g1-u0-para-013",
       "type": "paraphrase",
-      "japanese": "likeとbe interested inの言い換え",
+      "japanese": "likeとbe interested inの言い換え。",
       "originalSentence": "I like music.",
       "question": "be interested inを使って同じ意味に書き換えなさい",
       "choices": [
@@ -693,7 +693,7 @@
     {
       "id": "g1-u0-para-014",
       "type": "paraphrase",
-      "japanese": "be good atを使った言い換え",
+      "japanese": "be good atを使った言い換え。",
       "originalSentence": "She plays tennis well.",
       "question": "be good atを使って同じ意味に書き換えなさい",
       "choices": [
@@ -709,7 +709,7 @@
     {
       "id": "g1-u0-para-015",
       "type": "paraphrase",
-      "japanese": "場所の前置詞の使い分け",
+      "japanese": "場所の前置詞の使い分け。",
       "originalSentence": "He is in the library.",
       "question": "「彼は図書館の中にいる」を強調する表現はどれ？",
       "choices": [
@@ -725,7 +725,7 @@
     {
       "id": "g1-u0-vf-001",
       "type": "verbForm",
-      "japanese": "私は学生です",
+      "japanese": "私は学生です。",
       "sentence": "I ____ a student.",
       "verb": "be",
       "choices": [
@@ -741,7 +741,7 @@
     {
       "id": "g1-u0-vf-002",
       "type": "verbForm",
-      "japanese": "彼は親切です",
+      "japanese": "彼は親切です。",
       "sentence": "He ____ kind.",
       "verb": "be",
       "choices": [
@@ -757,7 +757,7 @@
     {
       "id": "g1-u0-vf-003",
       "type": "verbForm",
-      "japanese": "あなたたちは学生です",
+      "japanese": "あなたたちは学生です。",
       "sentence": "You ____ students.",
       "verb": "be",
       "choices": [
@@ -773,7 +773,7 @@
     {
       "id": "g1-u0-vf-004",
       "type": "verbForm",
-      "japanese": "私たちは友達です",
+      "japanese": "私たちは友達です。",
       "sentence": "We ____ friends.",
       "verb": "be",
       "choices": [
@@ -789,7 +789,7 @@
     {
       "id": "g1-u0-vf-005",
       "type": "verbForm",
-      "japanese": "彼女は先生です",
+      "japanese": "彼女は先生です。",
       "sentence": "She ____ a teacher.",
       "verb": "be",
       "choices": [
@@ -805,7 +805,7 @@
     {
       "id": "g1-u0-vf-006",
       "type": "verbForm",
-      "japanese": "あなたは学生ですか",
+      "japanese": "あなたは学生ですか。",
       "sentence": "____ you a student?",
       "verb": "be",
       "choices": [
@@ -821,7 +821,7 @@
     {
       "id": "g1-u0-vf-007",
       "type": "verbForm",
-      "japanese": "彼は先生ですか",
+      "japanese": "彼は先生ですか。",
       "sentence": "____ he a teacher?",
       "verb": "be",
       "choices": [
@@ -837,7 +837,7 @@
     {
       "id": "g1-u0-vf-008",
       "type": "verbForm",
-      "japanese": "彼らは学生ですか",
+      "japanese": "彼らは学生ですか。",
       "sentence": "____ they students?",
       "verb": "be",
       "choices": [
@@ -853,7 +853,7 @@
     {
       "id": "g1-u0-vf-009",
       "type": "verbForm",
-      "japanese": "私は学生ではありません",
+      "japanese": "私は学生ではありません。",
       "sentence": "I ____ not a student.",
       "verb": "be",
       "choices": [
@@ -869,7 +869,7 @@
     {
       "id": "g1-u0-vf-010",
       "type": "verbForm",
-      "japanese": "彼は忙しくありません",
+      "japanese": "彼は忙しくありません。",
       "sentence": "He ____ not busy.",
       "verb": "be",
       "choices": [
@@ -885,7 +885,7 @@
     {
       "id": "g1-u0-conv-001",
       "type": "conversation",
-      "japanese": "初対面の挨拶",
+      "japanese": "初対面の挨拶。",
       "situation": "初めて会った人との会話",
       "dialogue": [
         {
@@ -910,7 +910,7 @@
     {
       "id": "g1-u0-conv-002",
       "type": "conversation",
-      "japanese": "疑問文への応答",
+      "japanese": "疑問文への応答。",
       "situation": "相手の質問に答える場面",
       "dialogue": [
         {
@@ -935,7 +935,7 @@
     {
       "id": "g1-u0-conv-003",
       "type": "conversation",
-      "japanese": "出身地を尋ねる会話",
+      "japanese": "出身地を尋ねる会話。",
       "situation": "出身地について話す場面",
       "dialogue": [
         {
@@ -960,7 +960,7 @@
     {
       "id": "g1-u0-conv-004",
       "type": "conversation",
-      "japanese": "準備確認の会話",
+      "japanese": "準備確認の会話。",
       "situation": "出発前の確認場面",
       "dialogue": [
         {
@@ -985,7 +985,7 @@
     {
       "id": "g1-u0-conv-005",
       "type": "conversation",
-      "japanese": "物の所有を尋ねる会話",
+      "japanese": "物の所有を尋ねる会話。",
       "situation": "持ち物を確認する場面",
       "dialogue": [
         {

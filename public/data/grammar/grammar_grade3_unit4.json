@@ -13,7 +13,7 @@
   "questions": [
     {
       "id": "vf-g3-u4-001",
-      "japanese": "ピアノを弾くことは難しいです",
+      "japanese": "ピアノを弾くことは難しいです。",
       "sentence": "To ____ the piano is difficult.",
       "verb": "infinitive",
       "choices": [
@@ -29,7 +29,7 @@
     },
     {
       "id": "vf-g3-u4-002",
-      "japanese": "嘘をつくことは悪いことです",
+      "japanese": "嘘をつくことは悪いことです。",
       "sentence": "To ____ a lie is bad.",
       "verb": "infinitive",
       "choices": [
@@ -45,7 +45,7 @@
     },
     {
       "id": "vf-g3-u4-003",
-      "japanese": "外国語を学ぶことは楽しいです",
+      "japanese": "外国語を学ぶことは楽しいです。",
       "sentence": "To ____ a foreign language is fun.",
       "verb": "infinitive",
       "choices": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "vf-g3-u4-004",
-      "japanese": "毎日練習することが大切です",
+      "japanese": "毎日練習することが大切です。",
       "sentence": "To ____ every day is important.",
       "verb": "infinitive",
       "choices": [
@@ -77,7 +77,7 @@
     },
     {
       "id": "vf-g3-u4-005",
-      "japanese": "私は医者になりたいです",
+      "japanese": "私は医者になりたいです。",
       "sentence": "I want to ____ a doctor.",
       "verb": "infinitive",
       "choices": [
@@ -93,7 +93,7 @@
     },
     {
       "id": "vf-g3-u4-006",
-      "japanese": "彼女は歌手になることを決めました",
+      "japanese": "彼女は歌手になることを決めました。",
       "sentence": "She decided to ____ a singer.",
       "verb": "infinitive",
       "choices": [
@@ -109,7 +109,7 @@
     },
     {
       "id": "vf-g3-u4-007",
-      "japanese": "私たちは明日出発する予定です",
+      "japanese": "私たちは明日出発する予定です。",
       "sentence": "We plan to ____ tomorrow.",
       "verb": "infinitive",
       "choices": [
@@ -125,7 +125,7 @@
     },
     {
       "id": "vf-g3-u4-008",
-      "japanese": "彼は新しい車を買うことを望んでいます",
+      "japanese": "彼は新しい車を買うことを望んでいます。",
       "sentence": "He hopes to ____ a new car.",
       "verb": "infinitive",
       "choices": [
@@ -141,7 +141,7 @@
     },
     {
       "id": "vf-g3-u4-009",
-      "japanese": "何か飲むものが欲しいです",
+      "japanese": "何か飲むものが欲しいです。",
       "sentence": "I want something to ____.",
       "verb": "infinitive",
       "choices": [
@@ -157,7 +157,7 @@
     },
     {
       "id": "vf-g3-u4-010",
-      "japanese": "これは解くべき問題です",
+      "japanese": "これは解くべき問題です。",
       "sentence": "This is a problem to ____.",
       "verb": "infinitive",
       "choices": [
@@ -173,7 +173,7 @@
     },
     {
       "id": "vf-g3-u4-011",
-      "japanese": "私には遊ぶ時間がありません",
+      "japanese": "私には遊ぶ時間がありません。",
       "sentence": "I have no time to ____.",
       "verb": "infinitive",
       "choices": [
@@ -189,7 +189,7 @@
     },
     {
       "id": "vf-g3-u4-012",
-      "japanese": "書くための紙が必要です",
+      "japanese": "書くための紙が必要です。",
       "sentence": "I need paper to ____ on.",
       "verb": "infinitive",
       "choices": [
@@ -205,7 +205,7 @@
     },
     {
       "id": "vf-g3-u4-013",
-      "japanese": "私は友達に会うために駅に行きました",
+      "japanese": "私は友達に会うために駅に行きました。",
       "sentence": "I went to the station to ____ my friend.",
       "verb": "infinitive",
       "choices": [
@@ -221,7 +221,7 @@
     },
     {
       "id": "vf-g3-u4-014",
-      "japanese": "彼女はお金を稼ぐためにアルバイトをします",
+      "japanese": "彼女はお金を稼ぐためにアルバイトをします。",
       "sentence": "She works part-time to ____ money.",
       "verb": "infinitive",
       "choices": [
@@ -237,7 +237,7 @@
     },
     {
       "id": "vf-g3-u4-015",
-      "japanese": "私は写真を撮るためにカメラを買いました",
+      "japanese": "私は写真を撮るためにカメラを買いました。",
       "sentence": "I bought a camera to ____ pictures.",
       "verb": "infinitive",
       "choices": [
@@ -253,7 +253,7 @@
     },
     {
       "id": "vf-g3-u4-016",
-      "japanese": "彼は健康でいるために毎日走ります",
+      "japanese": "彼は健康でいるために毎日走ります。",
       "sentence": "He runs every day to ____ healthy.",
       "verb": "infinitive",
       "choices": [
@@ -269,7 +269,7 @@
     },
     {
       "id": "vf-g3-u4-017",
-      "japanese": "私はあなたに会えて嬉しいです",
+      "japanese": "私はあなたに会えて嬉しいです。",
       "sentence": "I am glad to ____ you.",
       "verb": "infinitive",
       "choices": [
@@ -285,7 +285,7 @@
     },
     {
       "id": "vf-g3-u4-018",
-      "japanese": "彼女は試験に合格して興奮しました",
+      "japanese": "彼女は試験に合格して興奮しました。",
       "sentence": "She was excited to ____ the exam.",
       "verb": "infinitive",
       "choices": [
@@ -301,7 +301,7 @@
     },
     {
       "id": "vf-g3-u4-019",
-      "japanese": "私たちはあなたの成功を知って誇りに思います",
+      "japanese": "私たちはあなたの成功を知って誇りに思います。",
       "sentence": "We are proud to ____ your success.",
       "verb": "infinitive",
       "choices": [
@@ -317,7 +317,7 @@
     },
     {
       "id": "vf-g3-u4-020",
-      "japanese": "彼は招待されて光栄に思いました",
+      "japanese": "彼は招待されて光栄に思いました。",
       "sentence": "He was honored to ____ invited.",
       "verb": "infinitive",
       "choices": [
@@ -333,7 +333,7 @@
     },
     {
       "id": "fb-g3-u4-001",
-      "japanese": "ピアノを弾くことは難しいです",
+      "japanese": "ピアノを弾くことは難しいです。",
       "sentence": "To ____ the piano is difficult.",
       "verb": "infinitive",
       "choices": [
@@ -350,7 +350,7 @@
     },
     {
       "id": "fb-g3-u4-002",
-      "japanese": "嘘をつくことは悪いことです",
+      "japanese": "嘘をつくことは悪いことです。",
       "sentence": "To ____ a lie is bad.",
       "verb": "infinitive",
       "choices": [
@@ -367,7 +367,7 @@
     },
     {
       "id": "fb-g3-u4-003",
-      "japanese": "外国語を学ぶことは楽しいです",
+      "japanese": "外国語を学ぶことは楽しいです。",
       "sentence": "To ____ a foreign language is fun.",
       "verb": "infinitive",
       "choices": [
@@ -384,7 +384,7 @@
     },
     {
       "id": "fb-g3-u4-004",
-      "japanese": "毎日練習することが大切です",
+      "japanese": "毎日練習することが大切です。",
       "sentence": "To ____ every day is important.",
       "verb": "infinitive",
       "choices": [
@@ -401,7 +401,7 @@
     },
     {
       "id": "fb-g3-u4-005",
-      "japanese": "私は医者になりたいです",
+      "japanese": "私は医者になりたいです。",
       "sentence": "I want to ____ a doctor.",
       "verb": "infinitive",
       "choices": [
@@ -418,7 +418,7 @@
     },
     {
       "id": "fb-g3-u4-006",
-      "japanese": "彼女は歌手になることを決めました",
+      "japanese": "彼女は歌手になることを決めました。",
       "sentence": "She decided to ____ a singer.",
       "verb": "infinitive",
       "choices": [
@@ -435,7 +435,7 @@
     },
     {
       "id": "fb-g3-u4-007",
-      "japanese": "私たちは明日出発する予定です",
+      "japanese": "私たちは明日出発する予定です。",
       "sentence": "We plan to ____ tomorrow.",
       "verb": "infinitive",
       "choices": [
@@ -452,7 +452,7 @@
     },
     {
       "id": "fb-g3-u4-008",
-      "japanese": "彼は新しい車を買うことを望んでいます",
+      "japanese": "彼は新しい車を買うことを望んでいます。",
       "sentence": "He hopes to ____ a new car.",
       "verb": "infinitive",
       "choices": [
@@ -469,7 +469,7 @@
     },
     {
       "id": "fb-g3-u4-009",
-      "japanese": "何か飲むものが欲しいです",
+      "japanese": "何か飲むものが欲しいです。",
       "sentence": "I want something to ____.",
       "verb": "infinitive",
       "choices": [
@@ -486,7 +486,7 @@
     },
     {
       "id": "fb-g3-u4-010",
-      "japanese": "これは解くべき問題です",
+      "japanese": "これは解くべき問題です。",
       "sentence": "This is a problem to ____.",
       "verb": "infinitive",
       "choices": [
@@ -503,7 +503,7 @@
     },
     {
       "id": "fb-g3-u4-011",
-      "japanese": "私には遊ぶ時間がありません",
+      "japanese": "私には遊ぶ時間がありません。",
       "sentence": "I have no time to ____.",
       "verb": "infinitive",
       "choices": [
@@ -520,7 +520,7 @@
     },
     {
       "id": "fb-g3-u4-012",
-      "japanese": "書くための紙が必要です",
+      "japanese": "書くための紙が必要です。",
       "sentence": "I need paper to ____ on.",
       "verb": "infinitive",
       "choices": [
@@ -537,7 +537,7 @@
     },
     {
       "id": "fb-g3-u4-013",
-      "japanese": "私は友達に会うために駅に行きました",
+      "japanese": "私は友達に会うために駅に行きました。",
       "sentence": "I went to the station to ____ my friend.",
       "verb": "infinitive",
       "choices": [
@@ -554,7 +554,7 @@
     },
     {
       "id": "fb-g3-u4-014",
-      "japanese": "彼女はお金を稼ぐためにアルバイトをします",
+      "japanese": "彼女はお金を稼ぐためにアルバイトをします。",
       "sentence": "She works part-time to ____ money.",
       "verb": "infinitive",
       "choices": [
@@ -571,7 +571,7 @@
     },
     {
       "id": "fb-g3-u4-015",
-      "japanese": "私は写真を撮るためにカメラを買いました",
+      "japanese": "私は写真を撮るためにカメラを買いました。",
       "sentence": "I bought a camera to ____ pictures.",
       "verb": "infinitive",
       "choices": [
@@ -588,7 +588,7 @@
     },
     {
       "id": "fb-g3-u4-016",
-      "japanese": "彼は健康でいるために毎日走ります",
+      "japanese": "彼は健康でいるために毎日走ります。",
       "sentence": "He runs every day to ____ healthy.",
       "verb": "infinitive",
       "choices": [
@@ -605,7 +605,7 @@
     },
     {
       "id": "fb-g3-u4-017",
-      "japanese": "私はあなたに会えて嬉しいです",
+      "japanese": "私はあなたに会えて嬉しいです。",
       "sentence": "I am glad to ____ you.",
       "verb": "infinitive",
       "choices": [
@@ -622,7 +622,7 @@
     },
     {
       "id": "fb-g3-u4-018",
-      "japanese": "彼女は試験に合格して興奮しました",
+      "japanese": "彼女は試験に合格して興奮しました。",
       "sentence": "She was excited to ____ the exam.",
       "verb": "infinitive",
       "choices": [
@@ -639,7 +639,7 @@
     },
     {
       "id": "fb-g3-u4-019",
-      "japanese": "私たちはあなたの成功を知って誇りに思います",
+      "japanese": "私たちはあなたの成功を知って誇りに思います。",
       "sentence": "We are proud to ____ your success.",
       "verb": "infinitive",
       "choices": [
@@ -656,7 +656,7 @@
     },
     {
       "id": "fb-g3-u4-020",
-      "japanese": "彼は招待されて光栄に思いました",
+      "japanese": "彼は招待されて光栄に思いました。",
       "sentence": "He was honored to ____ invited.",
       "verb": "infinitive",
       "choices": [
@@ -673,7 +673,7 @@
     },
     {
       "id": "so-g3-u4-001",
-      "japanese": "ピアノを弾くことは難しいです",
+      "japanese": "ピアノを弾くことは難しいです。",
       "sentence": "To play the piano is difficult.",
       "words": [
         "To",
@@ -693,7 +693,7 @@
     },
     {
       "id": "so-g3-u4-002",
-      "japanese": "嘘をつくことは悪いことです",
+      "japanese": "嘘をつくことは悪いことです。",
       "sentence": "To tell a lie is bad.",
       "words": [
         "To",
@@ -713,7 +713,7 @@
     },
     {
       "id": "so-g3-u4-003",
-      "japanese": "外国語を学ぶことは楽しいです",
+      "japanese": "外国語を学ぶことは楽しいです。",
       "sentence": "To learn a foreign language is fun.",
       "words": [
         "To",
@@ -734,7 +734,7 @@
     },
     {
       "id": "so-g3-u4-004",
-      "japanese": "毎日練習することが大切です",
+      "japanese": "毎日練習することが大切です。",
       "sentence": "To practice every day is important.",
       "words": [
         "To",
@@ -754,7 +754,7 @@
     },
     {
       "id": "so-g3-u4-005",
-      "japanese": "私は医者になりたいです",
+      "japanese": "私は医者になりたいです。",
       "sentence": "I want to be a doctor.",
       "words": [
         "I",
@@ -774,7 +774,7 @@
     },
     {
       "id": "so-g3-u4-006",
-      "japanese": "彼女は歌手になることを決めました",
+      "japanese": "彼女は歌手になることを決めました。",
       "sentence": "She decided to become a singer.",
       "words": [
         "She",
@@ -794,7 +794,7 @@
     },
     {
       "id": "so-g3-u4-007",
-      "japanese": "私たちは明日出発する予定です",
+      "japanese": "私たちは明日出発する予定です。",
       "sentence": "We plan to leave tomorrow.",
       "words": [
         "We",
@@ -813,7 +813,7 @@
     },
     {
       "id": "so-g3-u4-008",
-      "japanese": "彼は新しい車を買うことを望んでいます",
+      "japanese": "彼は新しい車を買うことを望んでいます。",
       "sentence": "He hopes to buy a new car.",
       "words": [
         "He",
@@ -834,7 +834,7 @@
     },
     {
       "id": "so-g3-u4-009",
-      "japanese": "何か飲むものが欲しいです",
+      "japanese": "何か飲むものが欲しいです。",
       "sentence": "I want something to drink.",
       "words": [
         "I",
@@ -853,7 +853,7 @@
     },
     {
       "id": "so-g3-u4-010",
-      "japanese": "これは解くべき問題です",
+      "japanese": "これは解くべき問題です。",
       "sentence": "This is a problem to solve.",
       "words": [
         "This",
@@ -873,7 +873,7 @@
     },
     {
       "id": "so-g3-u4-011",
-      "japanese": "私には遊ぶ時間がありません",
+      "japanese": "私には遊ぶ時間がありません。",
       "sentence": "I have no time to play.",
       "words": [
         "I",
@@ -893,7 +893,7 @@
     },
     {
       "id": "so-g3-u4-012",
-      "japanese": "書くための紙が必要です",
+      "japanese": "書くための紙が必要です。",
       "sentence": "I need paper to write on.",
       "words": [
         "I",
@@ -913,7 +913,7 @@
     },
     {
       "id": "so-g3-u4-013",
-      "japanese": "私は友達に会うために駅に行きました",
+      "japanese": "私は友達に会うために駅に行きました。",
       "sentence": "I went to the station to meet my friend.",
       "words": [
         "I",
@@ -936,7 +936,7 @@
     },
     {
       "id": "so-g3-u4-014",
-      "japanese": "彼女はお金を稼ぐためにアルバイトをします",
+      "japanese": "彼女はお金を稼ぐためにアルバイトをします。",
       "sentence": "She works part-time to earn money.",
       "words": [
         "She",
@@ -956,7 +956,7 @@
     },
     {
       "id": "so-g3-u4-015",
-      "japanese": "私は写真を撮るためにカメラを買いました",
+      "japanese": "私は写真を撮るためにカメラを買いました。",
       "sentence": "I bought a camera to take pictures.",
       "words": [
         "I",
@@ -977,7 +977,7 @@
     },
     {
       "id": "so-g3-u4-016",
-      "japanese": "彼は健康でいるために毎日走ります",
+      "japanese": "彼は健康でいるために毎日走ります。",
       "sentence": "He runs every day to stay healthy.",
       "words": [
         "He",
@@ -998,7 +998,7 @@
     },
     {
       "id": "so-g3-u4-017",
-      "japanese": "私はあなたに会えて嬉しいです",
+      "japanese": "私はあなたに会えて嬉しいです。",
       "sentence": "I am glad to see you.",
       "words": [
         "I",
@@ -1018,7 +1018,7 @@
     },
     {
       "id": "so-g3-u4-018",
-      "japanese": "彼女は試験に合格して興奮しました",
+      "japanese": "彼女は試験に合格して興奮しました。",
       "sentence": "She was excited to pass the exam.",
       "words": [
         "She",
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "so-g3-u4-019",
-      "japanese": "私たちはあなたの成功を知って誇りに思います",
+      "japanese": "私たちはあなたの成功を知って誇りに思います。",
       "sentence": "We are proud to know your success.",
       "words": [
         "We",
@@ -1060,7 +1060,7 @@
     },
     {
       "id": "so-g3-u4-020",
-      "japanese": "彼は招待されて光栄に思いました",
+      "japanese": "彼は招待されて光栄に思いました。",
       "sentence": "He was honored to be invited.",
       "words": [
         "He",
@@ -1081,7 +1081,7 @@
     {
       "id": "g3-u4-tooto-001",
       "type": "fillInBlank",
-      "japanese": "この問題は難しすぎて解けません",
+      "japanese": "この問題は難しすぎて解けません。",
       "sentence": "This problem is too difficult ____ solve.",
       "choices": [
         "to",
@@ -1096,7 +1096,7 @@
     {
       "id": "g3-u4-tooto-002",
       "type": "sentenceOrdering",
-      "japanese": "彼は若すぎて運転できません",
+      "japanese": "彼は若すぎて運転できません。",
       "words": [
         "he",
         "is",
@@ -1114,7 +1114,7 @@
     {
       "id": "g3-u4-tooto-003",
       "type": "fillInBlank",
-      "japanese": "このかばんは重すぎて持てません",
+      "japanese": "このかばんは重すぎて持てません。",
       "sentence": "This bag is ____ heavy to carry.",
       "choices": [
         "too",
@@ -1129,7 +1129,7 @@
     {
       "id": "g3-u4-tooto-004",
       "type": "paraphrase",
-      "japanese": "とても暑かったので外出できませんでした（hot, go out）",
+      "japanese": "とても暑かったので外出できませんでした（hot, go out）。",
       "originalSentence": "It was so hot that I couldn't go out.",
       "question": "It was too hot ____.",
       "correctAnswer": "to go out",
@@ -1139,7 +1139,7 @@
     {
       "id": "g3-u4-tooto-005",
       "type": "fillInBlank",
-      "japanese": "彼女は疲れすぎて歩けませんでした",
+      "japanese": "彼女は疲れすぎて歩けませんでした。",
       "sentence": "She was too tired ____ walk.",
       "choices": [
         "to",
@@ -1154,7 +1154,7 @@
     {
       "id": "g3-u4-tooto-006",
       "type": "sentenceOrdering",
-      "japanese": "この本は難しすぎて私には読めません",
+      "japanese": "この本は難しすぎて私には読めません。",
       "words": [
         "this",
         "book",
@@ -1175,7 +1175,7 @@
     {
       "id": "g3-u4-tooto-007",
       "type": "fillInBlank",
-      "japanese": "彼は忙しすぎて私に会えませんでした",
+      "japanese": "彼は忙しすぎて私に会えませんでした。",
       "sentence": "He was ____ busy to see me.",
       "choices": [
         "too",
@@ -1190,7 +1190,7 @@
     {
       "id": "g3-u4-tooto-008",
       "type": "conversation",
-      "japanese": "速すぎて追いつけません",
+      "japanese": "速すぎて追いつけません。",
       "situation": "走っている人について",
       "dialogue": [
         {
@@ -1215,7 +1215,7 @@
     {
       "id": "g3-u4-tooto-009",
       "type": "fillInBlank",
-      "japanese": "その映画は怖すぎて見られませんでした",
+      "japanese": "その映画は怖すぎて見られませんでした。",
       "sentence": "The movie was too scary ____ watch.",
       "choices": [
         "to",
@@ -1230,7 +1230,7 @@
     {
       "id": "g3-u4-tooto-010",
       "type": "sentenceOrdering",
-      "japanese": "この質問は難しすぎて答えられません",
+      "japanese": "この質問は難しすぎて答えられません。",
       "words": [
         "this",
         "question",
@@ -1249,7 +1249,7 @@
     {
       "id": "g3-u4-enough-001",
       "type": "fillInBlank",
-      "japanese": "彼は十分年上なので運転できます",
+      "japanese": "彼は十分年上なので運転できます。",
       "sentence": "He is old ____ to drive.",
       "choices": [
         "enough",
@@ -1264,7 +1264,7 @@
     {
       "id": "g3-u4-enough-002",
       "type": "sentenceOrdering",
-      "japanese": "この部屋は私たちには十分広い",
+      "japanese": "この部屋は私たちには十分広い。",
       "words": [
         "this",
         "room",
@@ -1283,7 +1283,7 @@
     {
       "id": "g3-u4-enough-003",
       "type": "fillInBlank",
-      "japanese": "彼女は親切にも私を助けてくれました",
+      "japanese": "彼女は親切にも私を助けてくれました。",
       "sentence": "She was kind ____ to help me.",
       "choices": [
         "enough",
@@ -1298,7 +1298,7 @@
     {
       "id": "g3-u4-enough-004",
       "type": "fillInBlank",
-      "japanese": "彼は速く走れるので勝てます",
+      "japanese": "彼は速く走れるので勝てます。",
       "sentence": "He can run fast ____ to win.",
       "choices": [
         "enough",
@@ -1313,7 +1313,7 @@
     {
       "id": "g3-u4-enough-005",
       "type": "paraphrase",
-      "japanese": "とても親切だったので教えてくれました（kind, show）",
+      "japanese": "とても親切だったので教えてくれました（kind, show）。",
       "originalSentence": "He was so kind that he showed me the way.",
       "question": "He was kind enough ____.",
       "correctAnswer": "to show me the way",
@@ -1323,7 +1323,7 @@
     {
       "id": "g3-u4-enough-006",
       "type": "sentenceOrdering",
-      "japanese": "彼女は賢いので問題が解けます",
+      "japanese": "彼女は賢いので問題が解けます。",
       "words": [
         "she",
         "is",
@@ -1343,7 +1343,7 @@
     {
       "id": "g3-u4-enough-007",
       "type": "fillInBlank",
-      "japanese": "この箱は軽いので持てます",
+      "japanese": "この箱は軽いので持てます。",
       "sentence": "This box is light ____ to carry.",
       "choices": [
         "enough",
@@ -1358,7 +1358,7 @@
     {
       "id": "g3-u4-enough-008",
       "type": "conversation",
-      "japanese": "十分暖かいので泳げます",
+      "japanese": "十分暖かいので泳げます。",
       "situation": "天気について",
       "dialogue": [
         {
@@ -1383,7 +1383,7 @@
     {
       "id": "g3-u4-enough-009",
       "type": "fillInBlank",
-      "japanese": "彼は強いのでドアを開けられます",
+      "japanese": "彼は強いのでドアを開けられます。",
       "sentence": "He is strong ____ to open the door.",
       "choices": [
         "enough",
@@ -1398,7 +1398,7 @@
     {
       "id": "g3-u4-enough-010",
       "type": "sentenceOrdering",
-      "japanese": "このコーヒーは十分熱くて飲めません",
+      "japanese": "このコーヒーは十分熱くて飲めません。",
       "words": [
         "this",
         "coffee",
@@ -1417,7 +1417,7 @@
     {
       "id": "g3-u4-forto-001",
       "type": "fillInBlank",
-      "japanese": "私が英語を勉強することは重要です",
+      "japanese": "私が英語を勉強することは重要です。",
       "sentence": "It is important ____ me to study English.",
       "choices": [
         "for",
@@ -1432,7 +1432,7 @@
     {
       "id": "g3-u4-forto-002",
       "type": "sentenceOrdering",
-      "japanese": "彼が早起きすることは難しい",
+      "japanese": "彼が早起きすることは難しい。",
       "words": [
         "it",
         "is",
@@ -1453,7 +1453,7 @@
     {
       "id": "g3-u4-forto-003",
       "type": "fillInBlank",
-      "japanese": "私たちが環境を守ることは大切です",
+      "japanese": "私たちが環境を守ることは大切です。",
       "sentence": "It is important for us ____ protect the environment.",
       "choices": [
         "to",
@@ -1468,7 +1468,7 @@
     {
       "id": "g3-u4-forto-004",
       "type": "fillInBlank",
-      "japanese": "彼女がこの本を読むことは簡単です",
+      "japanese": "彼女がこの本を読むことは簡単です。",
       "sentence": "It is easy ____ her to read this book.",
       "choices": [
         "for",
@@ -1483,7 +1483,7 @@
     {
       "id": "g3-u4-forto-005",
       "type": "paraphrase",
-      "japanese": "私が日本語を話すことは難しくありません（speak Japanese）",
+      "japanese": "私が日本語を話すことは難しくありません（speak Japanese）。",
       "originalSentence": "I can speak Japanese easily.",
       "question": "It is not difficult for me ____.",
       "correctAnswer": "to speak Japanese",
@@ -1493,7 +1493,7 @@
     {
       "id": "g3-u4-forto-006",
       "type": "sentenceOrdering",
-      "japanese": "子供たちが外で遊ぶことは楽しい",
+      "japanese": "子供たちが外で遊ぶことは楽しい。",
       "words": [
         "it",
         "is",
@@ -1513,7 +1513,7 @@
     {
       "id": "g3-u4-forto-007",
       "type": "fillInBlank",
-      "japanese": "彼がこの問題を解くことは不可能です",
+      "japanese": "彼がこの問題を解くことは不可能です。",
       "sentence": "It is impossible for him ____ solve this problem.",
       "choices": [
         "to",
@@ -1529,7 +1529,7 @@
       "id": "g3-u4-forto-008",
       "type": "conversation",
       "situation": "健康について",
-      "japanese": "私たちが運動することは大切です",
+      "japanese": "私たちが運動することは大切です。",
       "dialogue": [
         {
           "speaker": "A",
@@ -1553,7 +1553,7 @@
     {
       "id": "g3-u4-forto-009",
       "type": "fillInBlank",
-      "japanese": "私が時間通りに着くことは必要です",
+      "japanese": "私が時間通りに着くことは必要です。",
       "sentence": "It is necessary ____ me to arrive on time.",
       "choices": [
         "for",
@@ -1568,7 +1568,7 @@
     {
       "id": "g3-u4-forto-010",
       "type": "sentenceOrdering",
-      "japanese": "彼らが成功することは可能です",
+      "japanese": "彼らが成功することは可能です。",
       "words": [
         "it",
         "is",

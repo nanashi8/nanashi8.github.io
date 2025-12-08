@@ -483,7 +483,7 @@
     {
       "id": "g1-u6-para-001",
       "type": "paraphrase",
-      "japanese": "勉強していますか",
+      "japanese": "勉強していますか。",
       "originalSentence": "You are studying.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -499,7 +499,7 @@
     {
       "id": "g1-u6-para-002",
       "type": "paraphrase",
-      "japanese": "歌っていません",
+      "japanese": "歌っていません。",
       "originalSentence": "She is singing.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -515,7 +515,7 @@
     {
       "id": "g1-u6-para-003",
       "type": "paraphrase",
-      "japanese": "テレビを見ています",
+      "japanese": "テレビを見ています。",
       "originalSentence": "I am not watching TV.",
       "question": "肯定文に書き換えなさい",
       "choices": [
@@ -531,7 +531,7 @@
     {
       "id": "g1-u6-para-004",
       "type": "paraphrase",
-      "japanese": "走っています",
+      "japanese": "走っています。",
       "originalSentence": "Is he running?",
       "question": "平叙文に書き換えなさい",
       "choices": [
@@ -547,7 +547,7 @@
     {
       "id": "g1-u6-para-005",
       "type": "paraphrase",
-      "japanese": "サッカーをしていません",
+      "japanese": "サッカーをしていません。",
       "originalSentence": "Are they playing soccer?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -563,7 +563,7 @@
     {
       "id": "g1-u6-para-006",
       "type": "paraphrase",
-      "japanese": "英語を勉強しています",
+      "japanese": "英語を勉強しています。",
       "originalSentence": "I study English.",
       "question": "現在進行形に書き換えなさい",
       "choices": [
@@ -579,7 +579,7 @@
     {
       "id": "g1-u6-para-007",
       "type": "paraphrase",
-      "japanese": "彼は食べています",
+      "japanese": "彼は食べています。",
       "originalSentence": "I am eating.",
       "question": "主語を「彼」に変えて書き換えなさい",
       "choices": [
@@ -595,7 +595,7 @@
     {
       "id": "g1-u6-para-008",
       "type": "paraphrase",
-      "japanese": "彼女は泳いでいます",
+      "japanese": "彼女は泳いでいます。",
       "originalSentence": "They are swimming.",
       "question": "主語を「彼女」に変えて書き換えなさい",
       "choices": [
@@ -611,7 +611,7 @@
     {
       "id": "g1-u6-para-009",
       "type": "paraphrase",
-      "japanese": "走っていません",
+      "japanese": "走っていません。",
       "originalSentence": "I am not running.",
       "question": "短縮形に書き換えなさい",
       "choices": [
@@ -627,7 +627,7 @@
     {
       "id": "g1-u6-para-010",
       "type": "paraphrase",
-      "japanese": "何を読んでいますか",
+      "japanese": "何を読んでいますか。",
       "originalSentence": "He is reading a book.",
       "question": "「何を読んでいますか」という疑問文に書き換えなさい",
       "choices": [
@@ -643,7 +643,7 @@
     {
       "id": "g1-u6-para-011",
       "type": "paraphrase",
-      "japanese": "どこで遊んでいますか",
+      "japanese": "どこで遊んでいますか。",
       "originalSentence": "They are playing in the park.",
       "question": "「どこで遊んでいますか」という疑問文に書き換えなさい",
       "choices": [
@@ -659,7 +659,7 @@
     {
       "id": "g1-u6-para-012",
       "type": "paraphrase",
-      "japanese": "図書館で本を読んでいます",
+      "japanese": "図書館で本を読んでいます。",
       "originalSentence": "She is in the library.",
       "question": "「本を読んでいる」を追加して書き換えなさい",
       "choices": [
@@ -675,7 +675,7 @@
     {
       "id": "g1-u6-para-013",
       "type": "paraphrase",
-      "japanese": "今テレビを見ています",
+      "japanese": "今テレビを見ています。",
       "originalSentence": "I watch TV every day.",
       "question": "「今テレビを見ています」という意味に書き換えなさい",
       "choices": [
@@ -691,7 +691,7 @@
     {
       "id": "g1-u6-para-014",
       "type": "paraphrase",
-      "japanese": "isn't → is not",
+      "japanese": "isn't → is not。",
       "originalSentence": "He isn't sleeping.",
       "question": "短縮形を元に戻しなさい",
       "choices": [
@@ -707,7 +707,7 @@
     {
       "id": "g1-u6-para-015",
       "type": "paraphrase",
-      "japanese": "一生懸命勉強しています",
+      "japanese": "一生懸命勉強しています。",
       "originalSentence": "We are studying.",
       "question": "「一生懸命」を追加して書き換えなさい",
       "choices": [
@@ -723,7 +723,7 @@
     {
       "id": "g1-u6-vf-001",
       "type": "verbForm",
-      "japanese": "-ing形の選択",
+      "japanese": "-ing形の選択。",
       "sentence": "I am ____ a book.",
       "verb": "read",
       "choices": [
@@ -739,7 +739,7 @@
     {
       "id": "g1-u6-vf-002",
       "type": "verbForm",
-      "japanese": "-ing形の選択",
+      "japanese": "-ing形の選択。",
       "sentence": "She is ____ TV.",
       "verb": "watch",
       "choices": [
@@ -755,7 +755,7 @@
     {
       "id": "g1-u6-vf-003",
       "type": "verbForm",
-      "japanese": "eを取る-ing",
+      "japanese": "eを取る-ing。",
       "sentence": "He is ____ a letter.",
       "verb": "write",
       "choices": [
@@ -771,7 +771,7 @@
     {
       "id": "g1-u6-vf-004",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing",
+      "japanese": "子音を重ねる-ing。",
       "sentence": "They are ____.",
       "verb": "run",
       "choices": [
@@ -787,7 +787,7 @@
     {
       "id": "g1-u6-vf-005",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing",
+      "japanese": "子音を重ねる-ing。",
       "sentence": "We are ____.",
       "verb": "swim",
       "choices": [
@@ -803,7 +803,7 @@
     {
       "id": "g1-u6-vf-006",
       "type": "verbForm",
-      "japanese": "eを取る-ing",
+      "japanese": "eを取る-ing。",
       "sentence": "I am ____ lunch.",
       "verb": "have",
       "choices": [
@@ -819,7 +819,7 @@
     {
       "id": "g1-u6-vf-007",
       "type": "verbForm",
-      "japanese": "ieをyに変える-ing",
+      "japanese": "ieをyに変える-ing。",
       "sentence": "He is ____ down.",
       "verb": "lie",
       "choices": [
@@ -835,7 +835,7 @@
     {
       "id": "g1-u6-vf-008",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing",
+      "japanese": "子音を重ねる-ing。",
       "sentence": "She is ____ in the store.",
       "verb": "shop",
       "choices": [
@@ -851,7 +851,7 @@
     {
       "id": "g1-u6-vf-009",
       "type": "verbForm",
-      "japanese": "eを取る-ing",
+      "japanese": "eを取る-ing。",
       "sentence": "They are ____ a cake.",
       "verb": "make",
       "choices": [
@@ -867,7 +867,7 @@
     {
       "id": "g1-u6-vf-010",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing",
+      "japanese": "子音を重ねる-ing。",
       "sentence": "We are ____ on the bench.",
       "verb": "sit",
       "choices": [
@@ -883,7 +883,7 @@
     {
       "id": "g1-u6-conv-001",
       "type": "conversation",
-      "japanese": "今していることを答える",
+      "japanese": "今していることを答える。",
       "situation": "電話での会話",
       "dialogue": [
         {
@@ -908,7 +908,7 @@
     {
       "id": "g1-u6-conv-002",
       "type": "conversation",
-      "japanese": "進行形の否定応答",
+      "japanese": "進行形の否定応答。",
       "situation": "誘いを断る場面",
       "dialogue": [
         {
@@ -933,7 +933,7 @@
     {
       "id": "g1-u6-conv-003",
       "type": "conversation",
-      "japanese": "第三者について答える",
+      "japanese": "第三者について答える。",
       "situation": "友達について話す場面",
       "dialogue": [
         {
@@ -958,7 +958,7 @@
     {
       "id": "g1-u6-conv-004",
       "type": "conversation",
-      "japanese": "場所を説明する",
+      "japanese": "場所を説明する。",
       "situation": "今どこにいるか尋ねる場面",
       "dialogue": [
         {
@@ -983,7 +983,7 @@
     {
       "id": "g1-u6-conv-005",
       "type": "conversation",
-      "japanese": "複数について答える",
+      "japanese": "複数について答える。",
       "situation": "友達について話す場面",
       "dialogue": [
         {

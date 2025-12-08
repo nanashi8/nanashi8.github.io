@@ -14,7 +14,7 @@
     {
       "id": "g1-u5-fib-001",
       "type": "fillInBlank",
-      "japanese": "私は泳げます",
+      "japanese": "私は泳げます。",
       "sentence": "I ____ swim.",
       "choices": [
         "can",
@@ -29,7 +29,7 @@
     {
       "id": "g1-u5-fib-002",
       "type": "fillInBlank",
-      "japanese": "彼女はピアノを弾けます",
+      "japanese": "彼女はピアノを弾けます。",
       "sentence": "She ____ play the piano.",
       "choices": [
         "can",
@@ -44,7 +44,7 @@
     {
       "id": "g1-u5-fib-003",
       "type": "fillInBlank",
-      "japanese": "私は英語を話せません",
+      "japanese": "私は英語を話せません。",
       "sentence": "I ____ speak English.",
       "choices": [
         "cannot",
@@ -59,7 +59,7 @@
     {
       "id": "g1-u5-fib-004",
       "type": "fillInBlank",
-      "japanese": "あなたは走れますか",
+      "japanese": "あなたは走れますか。",
       "sentence": "____ you run fast?",
       "choices": [
         "Can",
@@ -74,7 +74,7 @@
     {
       "id": "g1-u5-fib-005",
       "type": "fillInBlank",
-      "japanese": "彼は料理できます",
+      "japanese": "彼は料理できます。",
       "sentence": "He can ____.",
       "choices": [
         "cook",
@@ -89,7 +89,7 @@
     {
       "id": "g1-u5-fib-006",
       "type": "fillInBlank",
-      "japanese": "私たちはサッカーができます",
+      "japanese": "私たちはサッカーができます。",
       "sentence": "We ____ play soccer.",
       "choices": [
         "can",
@@ -104,7 +104,7 @@
     {
       "id": "g1-u5-fib-007",
       "type": "fillInBlank",
-      "japanese": "彼女は歌えますか",
+      "japanese": "彼女は歌えますか。",
       "sentence": "____ she sing well?",
       "choices": [
         "Can",
@@ -119,7 +119,7 @@
     {
       "id": "g1-u5-fib-008",
       "type": "fillInBlank",
-      "japanese": "彼らは日本語を読めません",
+      "japanese": "彼らは日本語を読めません。",
       "sentence": "They ____ read Japanese.",
       "choices": [
         "cannot",
@@ -134,7 +134,7 @@
     {
       "id": "g1-u5-fib-009",
       "type": "fillInBlank",
-      "japanese": "彼は速く走れます",
+      "japanese": "彼は速く走れます。",
       "sentence": "He can ____ fast.",
       "choices": [
         "run",
@@ -149,7 +149,7 @@
     {
       "id": "g1-u5-fib-010",
       "type": "fillInBlank",
-      "japanese": "私は中国語を話せません",
+      "japanese": "私は中国語を話せません。",
       "sentence": "I can't ____ Chinese.",
       "choices": [
         "speak",
@@ -164,7 +164,7 @@
     {
       "id": "g1-u5-fib-011",
       "type": "fillInBlank",
-      "japanese": "あなたは自転車に乗れますか",
+      "japanese": "あなたは自転車に乗れますか。",
       "sentence": "Can you ____ a bike?",
       "choices": [
         "ride",
@@ -179,7 +179,7 @@
     {
       "id": "g1-u5-fib-012",
       "type": "fillInBlank",
-      "japanese": "彼女はギターを弾けますか",
+      "japanese": "彼女はギターを弾けますか。",
       "sentence": "____ she play the guitar?",
       "choices": [
         "Can",
@@ -194,7 +194,7 @@
     {
       "id": "g1-u5-fib-013",
       "type": "fillInBlank",
-      "japanese": "私たちはこの問題を解けません",
+      "japanese": "私たちはこの問題を解けません。",
       "sentence": "We ____ solve this problem.",
       "choices": [
         "cannot",
@@ -209,7 +209,7 @@
     {
       "id": "g1-u5-fib-014",
       "type": "fillInBlank",
-      "japanese": "彼は上手にスケートできます",
+      "japanese": "彼は上手にスケートできます。",
       "sentence": "He can ____ very well.",
       "choices": [
         "skate",
@@ -224,7 +224,7 @@
     {
       "id": "g1-u5-fib-015",
       "type": "fillInBlank",
-      "japanese": "あなたは何ができますか",
+      "japanese": "あなたは何ができますか。",
       "sentence": "What ____ you do?",
       "choices": [
         "can",
@@ -239,7 +239,7 @@
     {
       "id": "g1-u5-so-001",
       "type": "sentenceOrdering",
-      "japanese": "私は泳げます",
+      "japanese": "私は泳げます。",
       "words": [
         "swim",
         "I",
@@ -254,7 +254,7 @@
     {
       "id": "g1-u5-so-002",
       "type": "sentenceOrdering",
-      "japanese": "彼女はピアノを弾けます",
+      "japanese": "彼女はピアノを弾けます。",
       "words": [
         "the",
         "piano",
@@ -271,7 +271,7 @@
     {
       "id": "g1-u5-so-003",
       "type": "sentenceOrdering",
-      "japanese": "私は英語を話せません",
+      "japanese": "私は英語を話せません。",
       "words": [
         "English",
         "speak",
@@ -287,7 +287,7 @@
     {
       "id": "g1-u5-so-004",
       "type": "sentenceOrdering",
-      "japanese": "あなたは走れますか",
+      "japanese": "あなたは走れますか。",
       "words": [
         "fast",
         "you",
@@ -304,7 +304,7 @@
     {
       "id": "g1-u5-so-005",
       "type": "sentenceOrdering",
-      "japanese": "彼は料理できます",
+      "japanese": "彼は料理できます。",
       "words": [
         "cook",
         "he",
@@ -319,7 +319,7 @@
     {
       "id": "g1-u5-so-006",
       "type": "sentenceOrdering",
-      "japanese": "彼女は歌えますか",
+      "japanese": "彼女は歌えますか。",
       "words": [
         "well",
         "she",
@@ -336,7 +336,7 @@
     {
       "id": "g1-u5-so-007",
       "type": "sentenceOrdering",
-      "japanese": "私たちはサッカーができます",
+      "japanese": "私たちはサッカーができます。",
       "words": [
         "soccer",
         "play",
@@ -352,7 +352,7 @@
     {
       "id": "g1-u5-so-008",
       "type": "sentenceOrdering",
-      "japanese": "彼らは日本語を読めません",
+      "japanese": "彼らは日本語を読めません。",
       "words": [
         "Japanese",
         "read",
@@ -368,7 +368,7 @@
     {
       "id": "g1-u5-so-009",
       "type": "sentenceOrdering",
-      "japanese": "彼は速く走れます",
+      "japanese": "彼は速く走れます。",
       "words": [
         "fast",
         "run",
@@ -384,7 +384,7 @@
     {
       "id": "g1-u5-so-010",
       "type": "sentenceOrdering",
-      "japanese": "あなたは自転車に乗れますか",
+      "japanese": "あなたは自転車に乗れますか。",
       "words": [
         "bike",
         "a",
@@ -402,7 +402,7 @@
     {
       "id": "g1-u5-so-011",
       "type": "sentenceOrdering",
-      "japanese": "彼女はギターを弾けますか",
+      "japanese": "彼女はギターを弾けますか。",
       "words": [
         "the",
         "guitar",
@@ -420,7 +420,7 @@
     {
       "id": "g1-u5-so-012",
       "type": "sentenceOrdering",
-      "japanese": "私は中国語を話せません",
+      "japanese": "私は中国語を話せません。",
       "words": [
         "Chinese",
         "speak",
@@ -436,7 +436,7 @@
     {
       "id": "g1-u5-so-013",
       "type": "sentenceOrdering",
-      "japanese": "彼は上手にスケートできます",
+      "japanese": "彼は上手にスケートできます。",
       "words": [
         "well",
         "very",
@@ -453,7 +453,7 @@
     {
       "id": "g1-u5-so-014",
       "type": "sentenceOrdering",
-      "japanese": "私たちはこの問題を解けません",
+      "japanese": "私たちはこの問題を解けません。",
       "words": [
         "problem",
         "this",
@@ -470,7 +470,7 @@
     {
       "id": "g1-u5-so-015",
       "type": "sentenceOrdering",
-      "japanese": "あなたは何ができますか",
+      "japanese": "あなたは何ができますか。",
       "words": [
         "do",
         "you",
@@ -487,7 +487,7 @@
     {
       "id": "g1-u5-para-001",
       "type": "paraphrase",
-      "japanese": "泳げますか",
+      "japanese": "泳げますか。",
       "originalSentence": "You can swim.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -503,7 +503,7 @@
     {
       "id": "g1-u5-para-002",
       "type": "paraphrase",
-      "japanese": "彼女はテニスができません",
+      "japanese": "彼女はテニスができません。",
       "originalSentence": "She can play tennis.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -519,7 +519,7 @@
     {
       "id": "g1-u5-para-003",
       "type": "paraphrase",
-      "japanese": "フランス語を話せます",
+      "japanese": "フランス語を話せます。",
       "originalSentence": "I cannot speak French.",
       "question": "肯定文に書き換えなさい",
       "choices": [
@@ -535,7 +535,7 @@
     {
       "id": "g1-u5-para-004",
       "type": "paraphrase",
-      "japanese": "彼は料理できます",
+      "japanese": "彼は料理できます。",
       "originalSentence": "Can he cook?",
       "question": "肯定文に書き換えなさい",
       "choices": [
@@ -551,7 +551,7 @@
     {
       "id": "g1-u5-para-005",
       "type": "paraphrase",
-      "japanese": "高く跳べません",
+      "japanese": "高く跳べません。",
       "originalSentence": "Can you jump high?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -567,7 +567,7 @@
     {
       "id": "g1-u5-para-006",
       "type": "paraphrase",
-      "japanese": "ピアノを弾けます",
+      "japanese": "ピアノを弾けます。",
       "originalSentence": "I play the piano.",
       "question": "「ピアノを弾けます」という意味に書き換えなさい",
       "choices": [
@@ -583,7 +583,7 @@
     {
       "id": "g1-u5-para-007",
       "type": "paraphrase",
-      "japanese": "彼は踊れます",
+      "japanese": "彼は踊れます。",
       "originalSentence": "I can dance.",
       "question": "主語を「彼」に変えて書き換えなさい",
       "choices": [
@@ -599,7 +599,7 @@
     {
       "id": "g1-u5-para-008",
       "type": "paraphrase",
-      "japanese": "can't → cannot",
+      "japanese": "can't → cannot。",
       "originalSentence": "She can't speak English.",
       "question": "can'tをcannotに書き換えなさい",
       "choices": [
@@ -615,7 +615,7 @@
     {
       "id": "g1-u5-para-009",
       "type": "paraphrase",
-      "japanese": "彼はサッカーができますか",
+      "japanese": "彼はサッカーができますか。",
       "originalSentence": "He can play soccer.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -631,7 +631,7 @@
     {
       "id": "g1-u5-para-010",
       "type": "paraphrase",
-      "japanese": "中国語を書けますか",
+      "japanese": "中国語を書けますか。",
       "originalSentence": "They cannot write Chinese.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -647,7 +647,7 @@
     {
       "id": "g1-u5-para-011",
       "type": "paraphrase",
-      "japanese": "何を～できますか",
+      "japanese": "何を～できますか。",
       "originalSentence": "I can play the guitar.",
       "question": "「何ができますか」という疑問文に書き換えなさい",
       "choices": [
@@ -663,7 +663,7 @@
     {
       "id": "g1-u5-para-012",
       "type": "paraphrase",
-      "japanese": "私は英語を話せます",
+      "japanese": "私は英語を話せます。",
       "originalSentence": "We can speak English.",
       "question": "主語を「私」に変えて書き換えなさい",
       "choices": [
@@ -679,7 +679,7 @@
     {
       "id": "g1-u5-para-013",
       "type": "paraphrase",
-      "japanese": "彼女は歌えます",
+      "japanese": "彼女は歌えます。",
       "originalSentence": "She can.",
       "question": "「歌う」を追加して完成させなさい",
       "choices": [
@@ -695,7 +695,7 @@
     {
       "id": "g1-u5-para-014",
       "type": "paraphrase",
-      "japanese": "彼は速く走れます",
+      "japanese": "彼は速く走れます。",
       "originalSentence": "He can run.",
       "question": "「速く」を追加して書き換えなさい",
       "choices": [
@@ -711,7 +711,7 @@
     {
       "id": "g1-u5-para-015",
       "type": "paraphrase",
-      "japanese": "ピアノを弾く",
+      "japanese": "ピアノを弾く。",
       "originalSentence": "I can play.",
       "question": "「ピアノ」を追加して完成させなさい",
       "choices": [
@@ -727,7 +727,7 @@
     {
       "id": "g1-u5-vf-001",
       "type": "verbForm",
-      "japanese": "canの後ろの形",
+      "japanese": "canの後ろの形。",
       "sentence": "I can ____ English.",
       "verb": "speak",
       "choices": [
@@ -743,7 +743,7 @@
     {
       "id": "g1-u5-vf-002",
       "type": "verbForm",
-      "japanese": "canの後ろの形（三人称）",
+      "japanese": "canの後ろの形（三人称）。",
       "sentence": "She can ____ the piano.",
       "verb": "play",
       "choices": [
@@ -759,7 +759,7 @@
     {
       "id": "g1-u5-vf-003",
       "type": "verbForm",
-      "japanese": "can'tの後ろの形",
+      "japanese": "can'tの後ろの形。",
       "sentence": "I can't ____ fast.",
       "verb": "run",
       "choices": [
@@ -775,7 +775,7 @@
     {
       "id": "g1-u5-vf-004",
       "type": "verbForm",
-      "japanese": "Canの後ろの形（疑問文）",
+      "japanese": "Canの後ろの形（疑問文）。",
       "sentence": "Can you ____ a car?",
       "verb": "drive",
       "choices": [
@@ -791,7 +791,7 @@
     {
       "id": "g1-u5-vf-005",
       "type": "verbForm",
-      "japanese": "cannotの後ろの形",
+      "japanese": "cannotの後ろの形。",
       "sentence": "He cannot ____ Japanese.",
       "verb": "read",
       "choices": [
@@ -807,7 +807,7 @@
     {
       "id": "g1-u5-vf-006",
       "type": "verbForm",
-      "japanese": "canの後ろの形（複数主語）",
+      "japanese": "canの後ろの形（複数主語）。",
       "sentence": "They can ____ soccer.",
       "verb": "play",
       "choices": [
@@ -823,7 +823,7 @@
     {
       "id": "g1-u5-vf-007",
       "type": "verbForm",
-      "japanese": "Canの後ろの形（三人称疑問文）",
+      "japanese": "Canの後ろの形（三人称疑問文）。",
       "sentence": "Can she ____ well?",
       "verb": "sing",
       "choices": [
@@ -839,7 +839,7 @@
     {
       "id": "g1-u5-vf-008",
       "type": "verbForm",
-      "japanese": "can'tの後ろの形（三人称）",
+      "japanese": "can'tの後ろの形（三人称）。",
       "sentence": "He can't ____ Chinese.",
       "verb": "speak",
       "choices": [
@@ -855,7 +855,7 @@
     {
       "id": "g1-u5-vf-009",
       "type": "verbForm",
-      "japanese": "canの後ろの形（スケート）",
+      "japanese": "canの後ろの形（スケート）。",
       "sentence": "We can ____ very well.",
       "verb": "skate",
       "choices": [
@@ -871,7 +871,7 @@
     {
       "id": "g1-u5-vf-010",
       "type": "verbForm",
-      "japanese": "Canの後ろの形（What疑問文）",
+      "japanese": "Canの後ろの形（What疑問文）。",
       "sentence": "Where can you ____?",
       "verb": "go",
       "choices": [
@@ -887,7 +887,7 @@
     {
       "id": "g1-u5-conv-001",
       "type": "conversation",
-      "japanese": "できることを答える",
+      "japanese": "できることを答える。",
       "situation": "できることについて話す場面",
       "dialogue": [
         {
@@ -912,7 +912,7 @@
     {
       "id": "g1-u5-conv-002",
       "type": "conversation",
-      "japanese": "できないことを答える",
+      "japanese": "できないことを答える。",
       "situation": "できないことについて話す場面",
       "dialogue": [
         {
@@ -937,7 +937,7 @@
     {
       "id": "g1-u5-conv-003",
       "type": "conversation",
-      "japanese": "他人について尋ねる",
+      "japanese": "他人について尋ねる。",
       "situation": "他の人のことを尋ねる場面",
       "dialogue": [
         {
@@ -962,7 +962,7 @@
     {
       "id": "g1-u5-conv-004",
       "type": "conversation",
-      "japanese": "能力を説明する",
+      "japanese": "能力を説明する。",
       "situation": "楽器について尋ねる場面",
       "dialogue": [
         {
@@ -987,7 +987,7 @@
     {
       "id": "g1-u5-conv-005",
       "type": "conversation",
-      "japanese": "複数の人について答える",
+      "japanese": "複数の人について答える。",
       "situation": "複数の人について答える場面",
       "dialogue": [
         {
@@ -1012,7 +1012,7 @@
     {
       "id": "g1-u5-freq-001",
       "type": "fillInBlank",
-      "japanese": "私はいつも朝食を食べます",
+      "japanese": "私はいつも朝食を食べます。",
       "sentence": "I ____ eat breakfast.",
       "choices": [
         "always",
@@ -1027,7 +1027,7 @@
     {
       "id": "g1-u5-freq-002",
       "type": "fillInBlank",
-      "japanese": "彼は普通7時に起きます",
+      "japanese": "彼は普通7時に起きます。",
       "sentence": "He ____ gets up at 7.",
       "choices": [
         "usually",
@@ -1042,7 +1042,7 @@
     {
       "id": "g1-u5-freq-003",
       "type": "sentenceOrdering",
-      "japanese": "私はよく音楽を聞きます",
+      "japanese": "私はよく音楽を聞きます。",
       "words": [
         "I",
         "often",
@@ -1059,7 +1059,7 @@
     {
       "id": "g1-u5-freq-004",
       "type": "fillInBlank",
-      "japanese": "彼女は時々映画を見ます",
+      "japanese": "彼女は時々映画を見ます。",
       "sentence": "She ____ watches movies.",
       "choices": [
         "sometimes",
@@ -1074,7 +1074,7 @@
     {
       "id": "g1-u5-freq-005",
       "type": "fillInBlank",
-      "japanese": "私は決して嘘をつきません",
+      "japanese": "私は決して嘘をつきません。",
       "sentence": "I ____ tell a lie.",
       "choices": [
         "never",
@@ -1089,7 +1089,7 @@
     {
       "id": "g1-u5-freq-006",
       "type": "conversation",
-      "japanese": "いつも学校に遅刻します",
+      "japanese": "いつも学校に遅刻します。",
       "situation": "習慣について",
       "dialogue": [
         {
@@ -1114,7 +1114,7 @@
     {
       "id": "g1-u5-freq-007",
       "type": "sentenceOrdering",
-      "japanese": "彼は決して宿題を忘れません",
+      "japanese": "彼は決して宿題を忘れません。",
       "words": [
         "he",
         "never",
@@ -1131,7 +1131,7 @@
     {
       "id": "g1-u5-freq-008",
       "type": "fillInBlank",
-      "japanese": "彼女はいつも親切です",
+      "japanese": "彼女はいつも親切です。",
       "sentence": "She is ____ kind.",
       "choices": [
         "always",
@@ -1146,7 +1146,7 @@
     {
       "id": "g1-u5-freq-009",
       "type": "sentenceOrdering",
-      "japanese": "私は普通バスで学校に行きます",
+      "japanese": "私は普通バスで学校に行きます。",
       "words": [
         "I",
         "usually",
@@ -1165,7 +1165,7 @@
     {
       "id": "g1-u5-freq-010",
       "type": "fillInBlank",
-      "japanese": "彼らはよくサッカーをします",
+      "japanese": "彼らはよくサッカーをします。",
       "sentence": "They ____ play soccer.",
       "choices": [
         "often",

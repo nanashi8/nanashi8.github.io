@@ -13,7 +13,7 @@
   "questions": [
     {
       "id": "vf-g3-u1-001",
-      "japanese": "私は彼に会ったことがあります",
+      "japanese": "私は彼に会ったことがあります。",
       "sentence": "I ____ met him.",
       "verb": "present-perfect",
       "choices": [
@@ -29,7 +29,7 @@
     },
     {
       "id": "vf-g3-u1-002",
-      "japanese": "彼女は東京に行ったことがあります",
+      "japanese": "彼女は東京に行ったことがあります。",
       "sentence": "She ____ been to Tokyo.",
       "verb": "present-perfect",
       "choices": [
@@ -45,7 +45,7 @@
     },
     {
       "id": "vf-g3-u1-003",
-      "japanese": "私たちはその映画を見たことがあります",
+      "japanese": "私たちはその映画を見たことがあります。",
       "sentence": "We ____ seen that movie.",
       "verb": "present-perfect",
       "choices": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "vf-g3-u1-004",
-      "japanese": "彼は宿題を終えました",
+      "japanese": "彼は宿題を終えました。",
       "sentence": "He ____ finished his homework.",
       "verb": "present-perfect",
       "choices": [
@@ -77,7 +77,7 @@
     },
     {
       "id": "vf-g3-u1-005",
-      "japanese": "彼らはもう昼食を食べました",
+      "japanese": "彼らはもう昼食を食べました。",
       "sentence": "They ____ already eaten lunch.",
       "verb": "present-perfect",
       "choices": [
@@ -93,7 +93,7 @@
     },
     {
       "id": "vf-g3-u1-006",
-      "japanese": "私はこの本を読んだことがありません",
+      "japanese": "私はこの本を読んだことがありません。",
       "sentence": "I ____ never read this book.",
       "verb": "present-perfect",
       "choices": [
@@ -109,7 +109,7 @@
     },
     {
       "id": "vf-g3-u1-007",
-      "japanese": "彼女はまだ来ていません",
+      "japanese": "彼女はまだ来ていません。",
       "sentence": "She ____ not come yet.",
       "verb": "present-perfect",
       "choices": [
@@ -125,7 +125,7 @@
     },
     {
       "id": "vf-g3-u1-008",
-      "japanese": "あなたは日本に行ったことがありますか",
+      "japanese": "あなたは日本に行ったことがありますか。",
       "sentence": "____ you been to Japan?",
       "verb": "present-perfect",
       "choices": [
@@ -141,7 +141,7 @@
     },
     {
       "id": "vf-g3-u1-009",
-      "japanese": "彼はその知らせを聞きましたか",
+      "japanese": "彼はその知らせを聞きましたか。",
       "sentence": "____ he heard the news?",
       "verb": "present-perfect",
       "choices": [
@@ -157,7 +157,7 @@
     },
     {
       "id": "vf-g3-u1-010",
-      "japanese": "私は3年間英語を勉強しています",
+      "japanese": "私は3年間英語を勉強しています。",
       "sentence": "I ____ studied English for three years.",
       "verb": "present-perfect",
       "choices": [
@@ -173,7 +173,7 @@
     },
     {
       "id": "vf-g3-u1-011",
-      "japanese": "彼女は2時間待っています",
+      "japanese": "彼女は2時間待っています。",
       "sentence": "She ____ waited for two hours.",
       "verb": "present-perfect",
       "choices": [
@@ -189,7 +189,7 @@
     },
     {
       "id": "vf-g3-u1-012",
-      "japanese": "私たちはちょうど到着しました",
+      "japanese": "私たちはちょうど到着しました。",
       "sentence": "We ____ just arrived.",
       "verb": "present-perfect",
       "choices": [
@@ -205,7 +205,7 @@
     },
     {
       "id": "vf-g3-u1-013",
-      "japanese": "彼はすでに出発しました",
+      "japanese": "彼はすでに出発しました。",
       "sentence": "He ____ already left.",
       "verb": "present-perfect",
       "choices": [
@@ -221,7 +221,7 @@
     },
     {
       "id": "vf-g3-u1-014",
-      "japanese": "彼らは京都を訪れたことがあります",
+      "japanese": "彼らは京都を訪れたことがあります。",
       "sentence": "They ____ visited Kyoto.",
       "verb": "present-perfect",
       "choices": [
@@ -237,7 +237,7 @@
     },
     {
       "id": "vf-g3-u1-015",
-      "japanese": "私は彼女に会ったことがありません",
+      "japanese": "私は彼女に会ったことがありません。",
       "sentence": "I ____ never met her.",
       "verb": "present-perfect",
       "choices": [
@@ -253,7 +253,7 @@
     },
     {
       "id": "vf-g3-u1-016",
-      "japanese": "あなたは昼食を食べましたか",
+      "japanese": "あなたは昼食を食べましたか。",
       "sentence": "____ you eaten lunch?",
       "verb": "present-perfect",
       "choices": [
@@ -269,7 +269,7 @@
     },
     {
       "id": "vf-g3-u1-017",
-      "japanese": "彼女は手紙を書き終えました",
+      "japanese": "彼女は手紙を書き終えました。",
       "sentence": "She ____ finished writing the letter.",
       "verb": "present-perfect",
       "choices": [
@@ -285,7 +285,7 @@
     },
     {
       "id": "vf-g3-u1-018",
-      "japanese": "私たちは長い間ここに住んでいます",
+      "japanese": "私たちは長い間ここに住んでいます。",
       "sentence": "We ____ lived here for a long time.",
       "verb": "present-perfect",
       "choices": [
@@ -301,7 +301,7 @@
     },
     {
       "id": "vf-g3-u1-019",
-      "japanese": "彼は何度も失敗しました",
+      "japanese": "彼は何度も失敗しました。",
       "sentence": "He ____ failed many times.",
       "verb": "present-perfect",
       "choices": [
@@ -317,7 +317,7 @@
     },
     {
       "id": "vf-g3-u1-020",
-      "japanese": "彼らはまだ決めていません",
+      "japanese": "彼らはまだ決めていません。",
       "sentence": "They ____ not decided yet.",
       "verb": "present-perfect",
       "choices": [
@@ -333,7 +333,7 @@
     },
     {
       "id": "fb-g3-u1-001",
-      "japanese": "私は彼に会ったことがあります",
+      "japanese": "私は彼に会ったことがあります。",
       "sentence": "I have ____ him.",
       "choices": [
         "met",
@@ -348,7 +348,7 @@
     },
     {
       "id": "fb-g3-u1-002",
-      "japanese": "彼女は東京に行ったことがあります",
+      "japanese": "彼女は東京に行ったことがあります。",
       "sentence": "She has ____ to Tokyo.",
       "choices": [
         "been",
@@ -363,7 +363,7 @@
     },
     {
       "id": "fb-g3-u1-003",
-      "japanese": "私たちはその映画を見たことがあります",
+      "japanese": "私たちはその映画を見たことがあります。",
       "sentence": "We have ____ that movie.",
       "choices": [
         "seen",
@@ -378,7 +378,7 @@
     },
     {
       "id": "fb-g3-u1-004",
-      "japanese": "彼は宿題を終えました",
+      "japanese": "彼は宿題を終えました。",
       "sentence": "He has ____ his homework.",
       "choices": [
         "finished",
@@ -393,7 +393,7 @@
     },
     {
       "id": "fb-g3-u1-005",
-      "japanese": "彼らはもう昼食を食べました",
+      "japanese": "彼らはもう昼食を食べました。",
       "sentence": "They have already ____ lunch.",
       "choices": [
         "eaten",
@@ -408,7 +408,7 @@
     },
     {
       "id": "fb-g3-u1-006",
-      "japanese": "私はこの本を読んだことがありません",
+      "japanese": "私はこの本を読んだことがありません。",
       "sentence": "I have never ____ this book.",
       "choices": [
         "read",
@@ -423,7 +423,7 @@
     },
     {
       "id": "fb-g3-u1-007",
-      "japanese": "あなたは日本に行ったことがありますか",
+      "japanese": "あなたは日本に行ったことがありますか。",
       "sentence": "Have you ____ to Japan?",
       "choices": [
         "been",
@@ -438,7 +438,7 @@
     },
     {
       "id": "fb-g3-u1-008",
-      "japanese": "彼はその知らせを聞きましたか",
+      "japanese": "彼はその知らせを聞きましたか。",
       "sentence": "Has he ____ the news?",
       "choices": [
         "heard",
@@ -453,7 +453,7 @@
     },
     {
       "id": "fb-g3-u1-009",
-      "japanese": "私は3年間英語を勉強しています",
+      "japanese": "私は3年間英語を勉強しています。",
       "sentence": "I have ____ English for three years.",
       "choices": [
         "studied",
@@ -468,7 +468,7 @@
     },
     {
       "id": "fb-g3-u1-010",
-      "japanese": "彼女は2時間待っています",
+      "japanese": "彼女は2時間待っています。",
       "sentence": "She has ____ for two hours.",
       "choices": [
         "waited",
@@ -483,7 +483,7 @@
     },
     {
       "id": "fb-g3-u1-011",
-      "japanese": "私たちはちょうど到着しました",
+      "japanese": "私たちはちょうど到着しました。",
       "sentence": "We have just ____.",
       "choices": [
         "arrived",
@@ -498,7 +498,7 @@
     },
     {
       "id": "fb-g3-u1-012",
-      "japanese": "彼はすでに出発しました",
+      "japanese": "彼はすでに出発しました。",
       "sentence": "He has already ____.",
       "choices": [
         "left",
@@ -513,7 +513,7 @@
     },
     {
       "id": "fb-g3-u1-013",
-      "japanese": "彼らは京都を訪れたことがあります",
+      "japanese": "彼らは京都を訪れたことがあります。",
       "sentence": "They have ____ Kyoto.",
       "choices": [
         "visited",
@@ -528,7 +528,7 @@
     },
     {
       "id": "fb-g3-u1-014",
-      "japanese": "私は彼女に会ったことがありません",
+      "japanese": "私は彼女に会ったことがありません。",
       "sentence": "I have never ____ her.",
       "choices": [
         "met",
@@ -543,7 +543,7 @@
     },
     {
       "id": "fb-g3-u1-015",
-      "japanese": "あなたは昼食を食べましたか",
+      "japanese": "あなたは昼食を食べましたか。",
       "sentence": "Have you ____ lunch?",
       "choices": [
         "eaten",
@@ -558,7 +558,7 @@
     },
     {
       "id": "fb-g3-u1-016",
-      "japanese": "彼女は手紙を書き終えました",
+      "japanese": "彼女は手紙を書き終えました。",
       "sentence": "She has finished ____ the letter.",
       "choices": [
         "writing",
@@ -573,7 +573,7 @@
     },
     {
       "id": "fb-g3-u1-017",
-      "japanese": "私たちは長い間ここに住んでいます",
+      "japanese": "私たちは長い間ここに住んでいます。",
       "sentence": "We have ____ here for a long time.",
       "choices": [
         "lived",
@@ -588,7 +588,7 @@
     },
     {
       "id": "fb-g3-u1-018",
-      "japanese": "彼は何度も失敗しました",
+      "japanese": "彼は何度も失敗しました。",
       "sentence": "He has ____ many times.",
       "choices": [
         "failed",
@@ -603,7 +603,7 @@
     },
     {
       "id": "fb-g3-u1-019",
-      "japanese": "私は彼の名前を忘れました",
+      "japanese": "私は彼の名前を忘れました。",
       "sentence": "I have ____ his name.",
       "choices": [
         "forgotten",
@@ -618,7 +618,7 @@
     },
     {
       "id": "fb-g3-u1-020",
-      "japanese": "彼女はその鍵を失くしました",
+      "japanese": "彼女はその鍵を失くしました。",
       "sentence": "She has ____ the key.",
       "choices": [
         "lost",
@@ -633,7 +633,7 @@
     },
     {
       "id": "so-g3-u1-001",
-      "japanese": "私は彼に会ったことがあります",
+      "japanese": "私は彼に会ったことがあります。",
       "words": [
         "I",
         "have",
@@ -651,7 +651,7 @@
     },
     {
       "id": "so-g3-u1-002",
-      "japanese": "彼女は東京に行ったことがあります",
+      "japanese": "彼女は東京に行ったことがあります。",
       "words": [
         "She",
         "has",
@@ -670,7 +670,7 @@
     },
     {
       "id": "so-g3-u1-003",
-      "japanese": "私たちはその映画を見たことがあります",
+      "japanese": "私たちはその映画を見たことがあります。",
       "words": [
         "We",
         "have",
@@ -689,7 +689,7 @@
     },
     {
       "id": "so-g3-u1-004",
-      "japanese": "彼は宿題を終えました",
+      "japanese": "彼は宿題を終えました。",
       "words": [
         "He",
         "has",
@@ -708,7 +708,7 @@
     },
     {
       "id": "so-g3-u1-005",
-      "japanese": "彼らはもう昼食を食べました",
+      "japanese": "彼らはもう昼食を食べました。",
       "words": [
         "They",
         "have",
@@ -727,7 +727,7 @@
     },
     {
       "id": "so-g3-u1-006",
-      "japanese": "私はこの本を読んだことがありません",
+      "japanese": "私はこの本を読んだことがありません。",
       "words": [
         "I",
         "have",
@@ -747,7 +747,7 @@
     },
     {
       "id": "so-g3-u1-007",
-      "japanese": "彼女はまだ来ていません",
+      "japanese": "彼女はまだ来ていません。",
       "words": [
         "She",
         "has",
@@ -766,7 +766,7 @@
     },
     {
       "id": "so-g3-u1-008",
-      "japanese": "あなたは日本に行ったことがありますか",
+      "japanese": "あなたは日本に行ったことがありますか。",
       "words": [
         "Have",
         "you",
@@ -785,7 +785,7 @@
     },
     {
       "id": "so-g3-u1-009",
-      "japanese": "彼はその知らせを聞きましたか",
+      "japanese": "彼はその知らせを聞きましたか。",
       "words": [
         "Has",
         "he",
@@ -804,7 +804,7 @@
     },
     {
       "id": "so-g3-u1-010",
-      "japanese": "私は3年間英語を勉強しています",
+      "japanese": "私は3年間英語を勉強しています。",
       "words": [
         "I",
         "have",
@@ -825,7 +825,7 @@
     },
     {
       "id": "so-g3-u1-011",
-      "japanese": "彼女は2時間待っています",
+      "japanese": "彼女は2時間待っています。",
       "words": [
         "She",
         "has",
@@ -845,7 +845,7 @@
     },
     {
       "id": "so-g3-u1-012",
-      "japanese": "私たちはちょうど到着しました",
+      "japanese": "私たちはちょうど到着しました。",
       "words": [
         "We",
         "have",
@@ -863,7 +863,7 @@
     },
     {
       "id": "so-g3-u1-013",
-      "japanese": "彼はすでに出発しました",
+      "japanese": "彼はすでに出発しました。",
       "words": [
         "He",
         "has",
@@ -881,7 +881,7 @@
     },
     {
       "id": "so-g3-u1-014",
-      "japanese": "彼らは京都を訪れたことがあります",
+      "japanese": "彼らは京都を訪れたことがあります。",
       "words": [
         "They",
         "have",
@@ -899,7 +899,7 @@
     },
     {
       "id": "so-g3-u1-015",
-      "japanese": "私は彼女に会ったことがありません",
+      "japanese": "私は彼女に会ったことがありません。",
       "words": [
         "I",
         "have",
@@ -918,7 +918,7 @@
     },
     {
       "id": "so-g3-u1-016",
-      "japanese": "あなたは昼食を食べましたか",
+      "japanese": "あなたは昼食を食べましたか。",
       "words": [
         "Have",
         "you",
@@ -936,7 +936,7 @@
     },
     {
       "id": "so-g3-u1-017",
-      "japanese": "彼女は手紙を書き終えました",
+      "japanese": "彼女は手紙を書き終えました。",
       "words": [
         "She",
         "has",
@@ -956,7 +956,7 @@
     },
     {
       "id": "so-g3-u1-018",
-      "japanese": "私たちは長い間ここに住んでいます",
+      "japanese": "私たちは長い間ここに住んでいます。",
       "words": [
         "We",
         "have",
@@ -978,7 +978,7 @@
     },
     {
       "id": "so-g3-u1-019",
-      "japanese": "彼は何度も失敗しました",
+      "japanese": "彼は何度も失敗しました。",
       "words": [
         "He",
         "has",
@@ -997,7 +997,7 @@
     },
     {
       "id": "so-g3-u1-020",
-      "japanese": "彼らはまだ決めていません",
+      "japanese": "彼らはまだ決めていません。",
       "words": [
         "They",
         "have",
@@ -1017,7 +1017,7 @@
     {
       "id": "g3-u1-howlong-001",
       "type": "fillInBlank",
-      "japanese": "あなたはどのくらいの間東京に住んでいますか",
+      "japanese": "あなたはどのくらいの間東京に住んでいますか。",
       "sentence": "____ ____ have you lived in Tokyo?",
       "choices": [
         "How long",
@@ -1032,7 +1032,7 @@
     {
       "id": "g3-u1-howlong-002",
       "type": "sentenceOrdering",
-      "japanese": "あなたはどのくらいの間英語を勉強していますか",
+      "japanese": "あなたはどのくらいの間英語を勉強していますか。",
       "words": [
         "how",
         "long",
@@ -1050,7 +1050,7 @@
     {
       "id": "g3-u1-howlong-003",
       "type": "fillInBlank",
-      "japanese": "彼はどのくらいの間ここで働いていますか",
+      "japanese": "彼はどのくらいの間ここで働いていますか。",
       "sentence": "How long ____ he worked here?",
       "choices": [
         "has",
@@ -1065,7 +1065,7 @@
     {
       "id": "g3-u1-howlong-004",
       "type": "conversation",
-      "japanese": "どのくらいの間彼女を知っていますか",
+      "japanese": "どのくらいの間彼女を知っていますか。",
       "situation": "友人について",
       "dialogue": [
         {
@@ -1090,7 +1090,7 @@
     {
       "id": "g3-u1-howlong-005",
       "type": "sentenceOrdering",
-      "japanese": "あなたのお父さんはどのくらいの間この会社で働いていますか",
+      "japanese": "あなたのお父さんはどのくらいの間この会社で働いていますか。",
       "words": [
         "how",
         "long",
@@ -1111,7 +1111,7 @@
     {
       "id": "g3-u1-howlong-006",
       "type": "fillInBlank",
-      "japanese": "彼らはどのくらいの間結婚していますか",
+      "japanese": "彼らはどのくらいの間結婚していますか。",
       "sentence": "How long have they ____ married?",
       "choices": [
         "been",
@@ -1126,7 +1126,7 @@
     {
       "id": "g3-u1-howlong-007",
       "type": "fillInBlank",
-      "japanese": "あなたはどのくらいの間ここにいますか",
+      "japanese": "あなたはどのくらいの間ここにいますか。",
       "sentence": "____ ____ have you been here?",
       "choices": [
         "How long",
@@ -1141,7 +1141,7 @@
     {
       "id": "g3-u1-howlong-008",
       "type": "paraphrase",
-      "japanese": "3年間日本に住んでいます（live in Japan, three years）",
+      "japanese": "3年間日本に住んでいます（live in Japan, three years）。",
       "originalSentence": "I came to Japan three years ago and I still live here.",
       "question": "How long ____?",
       "correctAnswer": "have you lived in Japan",
@@ -1151,7 +1151,7 @@
     {
       "id": "g3-u1-howlong-009",
       "type": "sentenceOrdering",
-      "japanese": "彼女はどのくらいの間病気ですか",
+      "japanese": "彼女はどのくらいの間病気ですか。",
       "words": [
         "how",
         "long",
@@ -1169,7 +1169,7 @@
     {
       "id": "g3-u1-howlong-010",
       "type": "fillInBlank",
-      "japanese": "どのくらいの間雨が降っていますか",
+      "japanese": "どのくらいの間雨が降っていますか。",
       "sentence": "How long ____ it been raining?",
       "choices": [
         "has",
