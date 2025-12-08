@@ -2,13 +2,13 @@
   "unit": "Unit 7",
   "title": "比較級・最上級",
   "grammar": "-er/-est、more/most",
-  "totalQuestions": 60,
+  "totalQuestions": 85,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
-    "paraphrase": 15,
+    "fillInBlank": 27,
+    "sentenceOrdering": 22,
+    "paraphrase": 18,
     "verbForm": 10,
-    "conversation": 5
+    "conversation": 8
   },
   "questions": [
     {
@@ -985,6 +985,422 @@
       "difficulty": "advanced",
       "explanation": "-er/-est、more/mostの会話5。",
       "hint": "会話"
+    },
+    {
+      "id": "g2-u7-asas-001",
+      "type": "fillInBlank",
+      "japanese": "彼は私と同じくらい背が高い",
+      "sentence": "He is ____ tall ____ I am.",
+      "choices": [
+        "as...as",
+        "so...as",
+        "more...than"
+      ],
+      "correctAnswer": "as...as",
+      "difficulty": "beginner",
+      "explanation": "as + 形容詞/副詞 + as で「...と同じくらい~」という同等比較の構文として覚えること。He is as tall as I am.「彼は私と同じくらい背が高い」。",
+      "hint": "同じくらい"
+    },
+    {
+      "id": "g2-u7-asas-002",
+      "type": "sentenceOrdering",
+      "japanese": "この本はあの本と同じくらい面白い",
+      "words": [
+        "this",
+        "book",
+        "is",
+        "as",
+        "interesting",
+        "as",
+        "that",
+        "one"
+      ],
+      "correctAnswer": "This book is as interesting as that one.",
+      "difficulty": "beginner",
+      "explanation": "as + 形容詞 + as という同等比較の構文として覚えること。「この本はあの本と同じくらい面白い」。",
+      "hint": "as interesting as",
+      "wordCount": 8
+    },
+    {
+      "id": "g2-u7-asas-003",
+      "type": "fillInBlank",
+      "japanese": "彼女は私と同じくらい速く走れます",
+      "sentence": "She can run as ____ as me.",
+      "choices": [
+        "fast",
+        "faster",
+        "fastest"
+      ],
+      "correctAnswer": "fast",
+      "difficulty": "beginner",
+      "explanation": "as + 副詞の原級 + as で同等比較。fastは副詞の原級を使う。She can run as fast as me.「彼女は私と同じくらい速く走れる」。",
+      "hint": "原級を使う"
+    },
+    {
+      "id": "g2-u7-asas-004",
+      "type": "fillInBlank",
+      "japanese": "東京は大阪と同じくらい大きい",
+      "sentence": "Tokyo is ____ large ____ Osaka.",
+      "choices": [
+        "as...as",
+        "more...than",
+        "so...that"
+      ],
+      "correctAnswer": "as...as",
+      "difficulty": "beginner",
+      "explanation": "as + 形容詞 + as で同等比較の構文として覚えること。Tokyo is as large as Osaka.「東京は大阪と同じくらい大きい」。",
+      "hint": "同じくらい"
+    },
+    {
+      "id": "g2-u7-notas-001",
+      "type": "fillInBlank",
+      "japanese": "この映画はあの映画ほど面白くない",
+      "sentence": "This movie is not as interesting ____ that one.",
+      "choices": [
+        "as",
+        "than",
+        "to"
+      ],
+      "correctAnswer": "as",
+      "difficulty": "intermediate",
+      "explanation": "not as + 形容詞 + as で「...ほど~でない」という劣等比較の構文として覚えること。This movie is not as interesting as that one.「この映画はあの映画ほど面白くない」。",
+      "hint": "not as ~ as"
+    },
+    {
+      "id": "g2-u7-notas-002",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼ほど背が高くありません",
+      "words": [
+        "I",
+        "am",
+        "not",
+        "as",
+        "tall",
+        "as",
+        "he",
+        "is"
+      ],
+      "correctAnswer": "I am not as tall as he is.",
+      "difficulty": "intermediate",
+      "explanation": "not as + 形容詞 + as という劣等比較の構文として覚えること。「私は彼ほど背が高くない」。",
+      "hint": "not as tall as",
+      "wordCount": 8
+    },
+    {
+      "id": "g2-u7-asas-005",
+      "type": "paraphrase",
+      "japanese": "彼は私と同じ年齢です（old）",
+      "originalSentence": "He and I are the same age.",
+      "question": "He is as ____ as I am.",
+      "correctAnswer": "old",
+      "difficulty": "intermediate",
+      "explanation": "as + 形容詞 + as で同等比較を表す構文。He is as old as I am.「彼は私と同じくらいの年齢だ」と書き換える。"
+    },
+    {
+      "id": "g2-u7-asas-006",
+      "type": "fillInBlank",
+      "japanese": "彼女は私と同じくらい一生懸命勉強します",
+      "sentence": "She studies as ____ as I do.",
+      "choices": [
+        "hard",
+        "harder",
+        "hardest"
+      ],
+      "correctAnswer": "hard",
+      "difficulty": "intermediate",
+      "explanation": "as + 副詞の原級 + as で同等比較の構文として覚えること。She studies as hard as I do.「彼女は私と同じくらい一生懸命勉強する」。",
+      "hint": "原級"
+    },
+    {
+      "id": "g2-u7-asas-007",
+      "type": "conversation",
+      "japanese": "英語と同じくらい難しい",
+      "situation": "科目について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Is math difficult?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, it's as ____ as English."
+        }
+      ],
+      "choices": [
+        "difficult",
+        "more difficult",
+        "most difficult"
+      ],
+      "correctAnswer": "difficult",
+      "difficulty": "beginner",
+      "explanation": "as + 形容詞の原級 + as で同等比較の構文として覚えること。it's as difficult as English.「英語と同じくらい難しい」。",
+      "hint": "原級を使う"
+    },
+    {
+      "id": "g2-u7-asas-008",
+      "type": "sentenceOrdering",
+      "japanese": "犬は猫と同じくらい人気があります",
+      "words": [
+        "dogs",
+        "are",
+        "as",
+        "popular",
+        "as",
+        "cats"
+      ],
+      "correctAnswer": "Dogs are as popular as cats.",
+      "difficulty": "beginner",
+      "explanation": "as + 形容詞 + as という同等比較の構文として覚えること。「犬は猫と同じくらい人気がある」。",
+      "hint": "as popular as",
+      "wordCount": 6
+    },
+    {
+      "id": "g2-u7-comp-001",
+      "type": "fillInBlank",
+      "japanese": "日がどんどん長くなっています",
+      "sentence": "The days are getting longer and ____.",
+      "choices": [
+        "longer",
+        "long",
+        "longest"
+      ],
+      "correctAnswer": "longer",
+      "difficulty": "intermediate",
+      "explanation": "比較級 + and + 比較級で「ますます~」という構文として覚えること。longer and longer「ますます長く」。The days are getting longer and longer.で「日がどんどん長くなっている」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼はますます背が高くなっています",
+      "words": [
+        "he",
+        "is",
+        "getting",
+        "taller",
+        "and",
+        "taller"
+      ],
+      "correctAnswer": "He is getting taller and taller.",
+      "difficulty": "intermediate",
+      "explanation": "比較級 + and + 比較級という構文として覚えること。taller and taller「ますます背が高く」。",
+      "hint": "taller and taller",
+      "wordCount": 6
+    },
+    {
+      "id": "g2-u7-comp-003",
+      "type": "fillInBlank",
+      "japanese": "天気がますます寒くなっています",
+      "sentence": "It's getting colder and ____.",
+      "choices": [
+        "colder",
+        "cold",
+        "coldest"
+      ],
+      "correctAnswer": "colder",
+      "difficulty": "intermediate",
+      "explanation": "比較級 + and + 比較級で「ますます~」という構文として覚えること。colder and colder「ますます寒く」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-004",
+      "type": "conversation",
+      "japanese": "英語がますます難しくなっています",
+      "situation": "勉強",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How is English?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's getting more and more ____."
+        }
+      ],
+      "choices": [
+        "difficult",
+        "difficulter",
+        "most difficult"
+      ],
+      "correctAnswer": "difficult",
+      "difficulty": "intermediate",
+      "explanation": "長い形容詞の場合はmore and more + 形容詞で「ますます~」という構文として覚えること。more and more difficult「ますます難しく」。",
+      "hint": "more and more"
+    },
+    {
+      "id": "g2-u7-comp-005",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はますます美しくなっています",
+      "words": [
+        "she",
+        "is",
+        "getting",
+        "more",
+        "and",
+        "more",
+        "beautiful"
+      ],
+      "correctAnswer": "She is getting more and more beautiful.",
+      "difficulty": "intermediate",
+      "explanation": "長い形容詞の場合はmore and more + 形容詞という構文として覚えること。",
+      "hint": "more and more",
+      "wordCount": 7
+    },
+    {
+      "id": "g2-u7-comp-006",
+      "type": "fillInBlank",
+      "japanese": "問題がますます複雑になっています",
+      "sentence": "The problem is getting more and more ____.",
+      "choices": [
+        "complicated",
+        "complicateder",
+        "most complicated"
+      ],
+      "correctAnswer": "complicated",
+      "difficulty": "advanced",
+      "explanation": "長い形容詞の場合はmore and more + 形容詞で「ますます~」という構文として覚えること。",
+      "hint": "more and more"
+    },
+    {
+      "id": "g2-u7-comp-007",
+      "type": "paraphrase",
+      "japanese": "彼女の英語は日に日に上達しています（better）",
+      "originalSentence": "Her English improves day by day.",
+      "question": "Her English is getting better and ____.",
+      "correctAnswer": "better",
+      "difficulty": "intermediate",
+      "explanation": "比較級 + and + 比較級に書き換える。better and better「ますます良く」となる。"
+    },
+    {
+      "id": "g2-u7-comp-008",
+      "type": "fillInBlank",
+      "japanese": "彼はますます速く走れるようになっています",
+      "sentence": "He can run faster and ____.",
+      "choices": [
+        "faster",
+        "fast",
+        "fastest"
+      ],
+      "correctAnswer": "faster",
+      "difficulty": "intermediate",
+      "explanation": "比較級 + and + 比較級で「ますます~」という構文として覚えること。faster and faster「ますます速く」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-009",
+      "type": "fillInBlank",
+      "japanese": "高ければ高いほど良い",
+      "sentence": "The higher, the ____.",
+      "choices": [
+        "better",
+        "good",
+        "best"
+      ],
+      "correctAnswer": "better",
+      "difficulty": "intermediate",
+      "explanation": "the + 比較級, the + 比較級で「~すればするほど...」という構文として覚えること。The higher, the better.「高ければ高いほど良い」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-010",
+      "type": "sentenceOrdering",
+      "japanese": "速ければ速いほど良い",
+      "words": [
+        "the",
+        "faster",
+        "the",
+        "better"
+      ],
+      "correctAnswer": "The faster, the better.",
+      "difficulty": "intermediate",
+      "explanation": "the + 比較級, the + 比較級という構文として覚えること。The faster, the better.は決まった表現。",
+      "hint": "the 比較級",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u7-comp-011",
+      "type": "fillInBlank",
+      "japanese": "練習すればするほど上手になります",
+      "sentence": "The more you practice, the ____ you become.",
+      "choices": [
+        "better",
+        "good",
+        "best"
+      ],
+      "correctAnswer": "better",
+      "difficulty": "intermediate",
+      "explanation": "the + 比較級, the + 比較級で「~すればするほど...」という構文として覚えること。The more you practice, the better you become.で「練習すればするほど上手になる」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-012",
+      "type": "conversation",
+      "japanese": "早ければ早いほど良い",
+      "situation": "時間",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "When should we start?"
+        },
+        {
+          "speaker": "B",
+          "text": "The ____, the better."
+        }
+      ],
+      "choices": [
+        "earlier",
+        "early",
+        "earliest"
+      ],
+      "correctAnswer": "earlier",
+      "difficulty": "intermediate",
+      "explanation": "the + 比較級, the + 比較級という構文として覚えること。The earlier, the better.で「早ければ早いほど良い」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-013",
+      "type": "sentenceOrdering",
+      "japanese": "勉強すればするほど賢くなります",
+      "words": [
+        "the",
+        "more",
+        "you",
+        "study",
+        "the",
+        "smarter",
+        "you",
+        "become"
+      ],
+      "correctAnswer": "The more you study, the smarter you become.",
+      "difficulty": "advanced",
+      "explanation": "the + 比較級, the + 比較級という構文として覚えること。",
+      "hint": "the more, the smarter",
+      "wordCount": 8
+    },
+    {
+      "id": "g2-u7-comp-014",
+      "type": "fillInBlank",
+      "japanese": "読めば読むほど知識が増えます",
+      "sentence": "The more you read, the ____ knowledge you get.",
+      "choices": [
+        "more",
+        "much",
+        "most"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "the + 比較級, the + 比較級で「~すればするほど...」という構文として覚えること。the more knowledge「より多くの知識」。",
+      "hint": "比較級"
+    },
+    {
+      "id": "g2-u7-comp-015",
+      "type": "paraphrase",
+      "japanese": "忙しいほど幸せです（busy, happy）",
+      "originalSentence": "If I am busier, I am happier.",
+      "question": "The ____, the ____.",
+      "correctAnswer": "busier happier",
+      "difficulty": "advanced",
+      "explanation": "if構文をthe + 比較級, the + 比較級に書き換える。The busier, the happier.となる。"
     }
   ]
 }

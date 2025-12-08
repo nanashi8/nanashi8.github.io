@@ -342,7 +342,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If I were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし私が鳥なら、世界中を飛び回るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-002",
@@ -357,7 +358,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If I were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もしお金持ちなら、大きな家を買うのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-003",
@@ -372,7 +374,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If she were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼女が社長なら、会社を変えるでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-004",
@@ -387,7 +390,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If I were you",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし私があなたなら、そうしないでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-005",
@@ -402,7 +406,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし時間があれば、旅行に行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-006",
@@ -417,7 +422,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし車を持っていたら、ドライブに行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-007",
@@ -432,7 +438,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If he had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼が才能を持っていたら、成功するでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-008",
@@ -447,7 +454,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If I were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし私が魔法使いなら、世界を変えるのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-009",
@@ -462,7 +470,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If she were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼女が歌手なら、有名になるでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-010",
@@ -477,7 +486,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし兄弟がいたら、もっと楽しいのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-011",
@@ -492,7 +502,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If he were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼が親切なら、みんなが好きになるでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-012",
@@ -507,7 +518,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If I were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし私が猫なら、一日中寝るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-013",
@@ -522,7 +534,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もしスーパーパワーがあれば、人々を助けるのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-014",
@@ -537,7 +550,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If she were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼女が先生なら、良い授業をするでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-015",
@@ -552,7 +566,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし知識があれば、問題を解けるのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-016",
@@ -567,7 +582,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If I were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし私が王様なら、平和な国を作るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-017",
@@ -582,7 +598,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし勇気があれば、挑戦するのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-018",
@@ -597,7 +614,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If he were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼が医者なら、多くの人を救うでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-019",
@@ -612,7 +630,8 @@
       "correctAnswer": "had",
       "difficulty": "intermediate",
       "hint": "If I had",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし翼があれば、空を飛ぶのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "fb-g3-u7-020",
@@ -627,7 +646,8 @@
       "correctAnswer": "were",
       "difficulty": "intermediate",
       "hint": "If she were",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "もし彼女が大統領なら、良い政策を作るでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-001",
@@ -651,7 +671,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "もし私が鳥なら、世界中を飛び回るのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-002",
@@ -674,7 +695,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "もしお金持ちなら、大きな家を買うのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-003",
@@ -695,7 +717,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were you",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "もし私があなたなら、そうしないでしょう。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-004",
@@ -715,7 +738,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I had",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "もし時間があれば、旅行に行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-005",
@@ -739,7 +763,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I had",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "もし車を持っていたら、ドライブに行くのに。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-006",
@@ -759,7 +784,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文6。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-007",
@@ -779,7 +805,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文7。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-008",
@@ -799,7 +826,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文8。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-009",
@@ -819,7 +847,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文9。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-010",
@@ -839,7 +868,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文10。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-011",
@@ -859,7 +889,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文11。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-012",
@@ -879,7 +910,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文12。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-013",
@@ -899,7 +931,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文13。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-014",
@@ -919,7 +952,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文14。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-015",
@@ -939,7 +973,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文15。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-016",
@@ -959,7 +994,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文16。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-017",
@@ -979,7 +1015,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文17。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-018",
@@ -999,7 +1036,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文18。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-019",
@@ -1019,7 +1057,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文19。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     },
     {
       "id": "so-g3-u7-020",
@@ -1039,7 +1078,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "仮定法",
       "hint": "If I were",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "仮定法の例文20。受動態は「be動詞 + 過去分詞」の形で「～される」という意味を表します。"
     }
   ]
 }

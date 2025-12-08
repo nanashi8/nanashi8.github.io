@@ -2,13 +2,13 @@
   "unit": "Unit 3",
   "title": "代名詞と複数形",
   "grammar": "this/that/these/those, 複数形の作り方",
-  "totalQuestions": 60,
+  "totalQuestions": 65,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
+    "fillInBlank": 17,
+    "sentenceOrdering": 17,
     "paraphrase": 15,
     "verbForm": 10,
-    "conversation": 5
+    "conversation": 6
   },
   "questions": [
     {
@@ -542,7 +542,7 @@
     {
       "id": "g1-u3-para-005",
       "type": "paraphrase",
-      "japanese": "疑問文作成（複数）",
+      "japanese": "これらは何ですか",
       "originalSentence": "These are dogs.",
       "question": "「これらは何ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -558,7 +558,7 @@
     {
       "id": "g1-u3-para-006",
       "type": "paraphrase",
-      "japanese": "疑問文作成（複数）",
+      "japanese": "あれらは何ですか",
       "originalSentence": "Those are books.",
       "question": "「あれらは何ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -574,7 +574,7 @@
     {
       "id": "g1-u3-para-007",
       "type": "paraphrase",
-      "japanese": "所有格の追加",
+      "japanese": "これらは私のペンです",
       "originalSentence": "These are pens.",
       "question": "「私の」を加えて書き換えなさい",
       "choices": [
@@ -590,7 +590,7 @@
     {
       "id": "g1-u3-para-008",
       "type": "paraphrase",
-      "japanese": "数の追加",
+      "japanese": "私は3冊の本を持っています",
       "originalSentence": "I have books.",
       "question": "「3冊の」を加えて書き換えなさい",
       "choices": [
@@ -670,7 +670,7 @@
     {
       "id": "g1-u3-para-013",
       "type": "paraphrase",
-      "japanese": "many の使用",
+      "japanese": "私はたくさんの友達がいます",
       "originalSentence": "I have friends.",
       "question": "「たくさんの」を加えて書き換えなさい",
       "choices": [
@@ -999,6 +999,99 @@
       "difficulty": "advanced",
       "explanation": "child（子供）の複数形はchildren（不規則）。twoは複数形と使う。",
       "hint": "child → children"
+    },
+    {
+      "id": "g1-u3-howmany-001",
+      "type": "fillInBlank",
+      "japanese": "あなたは何冊の本を持っていますか",
+      "sentence": "____ ____ books do you have?",
+      "choices": [
+        "How many",
+        "How much",
+        "What"
+      ],
+      "correctAnswer": "How many",
+      "difficulty": "beginner",
+      "explanation": "How many + 複数名詞で「いくつの~」と数を尋ねる疑問文として覚えること。可算名詞の数を聞く時に使う。",
+      "hint": "数を尋ねる"
+    },
+    {
+      "id": "g1-u3-howmany-002",
+      "type": "sentenceOrdering",
+      "japanese": "あなたには何人の兄弟がいますか",
+      "words": [
+        "how",
+        "many",
+        "brothers",
+        "do",
+        "you",
+        "have"
+      ],
+      "correctAnswer": "How many brothers do you have?",
+      "difficulty": "beginner",
+      "explanation": "How many + 複数名詞という疑問文の語順として覚えること。「何人の兄弟」。",
+      "hint": "How many brothers",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u3-howmany-003",
+      "type": "fillInBlank",
+      "japanese": "教室には何人の生徒がいますか",
+      "sentence": "How many ____ are there in the classroom?",
+      "choices": [
+        "students",
+        "student",
+        "a student"
+      ],
+      "correctAnswer": "students",
+      "difficulty": "beginner",
+      "explanation": "How manyの後は必ず複数形の名詞を使うことを覚えること。studentsが正解。",
+      "hint": "複数形"
+    },
+    {
+      "id": "g1-u3-howmany-004",
+      "type": "conversation",
+      "japanese": "何個のりんごが欲しいですか",
+      "situation": "買い物で",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "____ ____ apples do you want?"
+        },
+        {
+          "speaker": "B",
+          "text": "I want three apples."
+        }
+      ],
+      "choices": [
+        "How many",
+        "How much",
+        "What"
+      ],
+      "correctAnswer": "How many",
+      "difficulty": "beginner",
+      "explanation": "How many + 複数名詞で数を尋ねる疑問文として覚えること。",
+      "hint": "数を尋ねる"
+    },
+    {
+      "id": "g1-u3-howmany-005",
+      "type": "sentenceOrdering",
+      "japanese": "テーブルの上に何本のペンがありますか",
+      "words": [
+        "how",
+        "many",
+        "pens",
+        "are",
+        "there",
+        "on",
+        "the",
+        "table"
+      ],
+      "correctAnswer": "How many pens are there on the table?",
+      "difficulty": "intermediate",
+      "explanation": "How many + 複数名詞 + are there で「~がいくつありますか」という疑問文として覚えること。",
+      "hint": "How many pens are there",
+      "wordCount": 8
     }
   ]
 }

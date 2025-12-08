@@ -379,10 +379,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     }
     
     // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
+    // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
     (async () => {
       const { updateWordProgress } = await import('../progressStorage');
+      const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question}`;
       await updateWordProgress(
-        currentQuestion.question,
+        questionId,
         isCorrect,
         responseTime,
         undefined,
@@ -440,10 +442,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             }
             
             // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
+            // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
             (async () => {
               const { updateWordProgress } = await import('../progressStorage');
+              const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.words.join('_')}`;
               await updateWordProgress(
-                currentQuestion.words.join(' '),
+                questionId,
                 isCorrect,
                 responseTime,
                 undefined,

@@ -239,7 +239,7 @@
     {
       "id": "g1-u9-so-001",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "私は昨日家に帰りました",
       "words": [
         "I",
         "went",
@@ -255,7 +255,7 @@
     {
       "id": "g1-u9-so-002",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼女は日本に来ました",
       "words": [
         "she",
         "came",
@@ -271,7 +271,7 @@
     {
       "id": "g1-u9-so-003",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "私たちは昨日彼に会いました",
       "words": [
         "we",
         "saw",
@@ -287,7 +287,7 @@
     {
       "id": "g1-u9-so-004",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼は昨日昼食を食べました",
       "words": [
         "he",
         "had",
@@ -303,7 +303,7 @@
     {
       "id": "g1-u9-so-005",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼らは昨日クッキーを作りました",
       "words": [
         "they",
         "made",
@@ -319,7 +319,7 @@
     {
       "id": "g1-u9-so-006",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "私は昨日この写真を撮りました",
       "words": [
         "I",
         "took",
@@ -336,7 +336,7 @@
     {
       "id": "g1-u9-so-007",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼女は本を買いました",
       "words": [
         "she",
         "bought",
@@ -352,7 +352,7 @@
     {
       "id": "g1-u9-so-008",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "私たちは昨晩ピザを食べました",
       "words": [
         "we",
         "ate",
@@ -369,7 +369,7 @@
     {
       "id": "g1-u9-so-009",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼は昨日早く起きました",
       "words": [
         "he",
         "got",
@@ -386,7 +386,7 @@
     {
       "id": "g1-u9-so-010",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼らは昨日その物語を読みました",
       "words": [
         "they",
         "read",
@@ -403,7 +403,7 @@
     {
       "id": "g1-u9-so-011",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "私は今朝メールを書きました",
       "words": [
         "I",
         "wrote",
@@ -421,7 +421,7 @@
     {
       "id": "g1-u9-so-012",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼女は私にプレゼントをくれました",
       "words": [
         "she",
         "gave",
@@ -438,7 +438,7 @@
     {
       "id": "g1-u9-so-013",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "私たちは昨日公園で走りました",
       "words": [
         "we",
         "ran",
@@ -456,7 +456,7 @@
     {
       "id": "g1-u9-so-014",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼は昨日真実を知っていました",
       "words": [
         "he",
         "knew",
@@ -473,7 +473,7 @@
     {
       "id": "g1-u9-so-015",
       "type": "sentenceOrdering",
-      "japanese": "不規則動詞の文",
+      "japanese": "彼らは昨日宝物を見つけました",
       "words": [
         "they",
         "found",
@@ -490,7 +490,7 @@
     {
       "id": "g1-u9-para-001",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "私は学校へ行きました",
       "originalSentence": "I go to school.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -506,7 +506,7 @@
     {
       "id": "g1-u9-para-002",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "彼女は家に帰りました",
       "originalSentence": "She comes home.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -522,7 +522,7 @@
     {
       "id": "g1-u9-para-003",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "彼らは猫を見ました",
       "originalSentence": "They see the cat.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -538,7 +538,7 @@
     {
       "id": "g1-u9-para-004",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "私たちは夕食を食べました",
       "originalSentence": "We eat dinner.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -554,7 +554,7 @@
     {
       "id": "g1-u9-para-005",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "彼は計画を立てました",
       "originalSentence": "He makes a plan.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -570,7 +570,7 @@
     {
       "id": "g1-u9-para-006",
       "type": "paraphrase",
-      "japanese": "過去形→現在形",
+      "japanese": "私はペンを買います",
       "originalSentence": "I bought a pen yesterday.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -586,7 +586,7 @@
     {
       "id": "g1-u9-para-007",
       "type": "paraphrase",
-      "japanese": "過去形→現在形",
+      "japanese": "彼女は犬を飼っています",
       "originalSentence": "She had a dog last year.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -602,7 +602,7 @@
     {
       "id": "g1-u9-para-008",
       "type": "paraphrase",
-      "japanese": "過去形の疑問文",
+      "japanese": "あなたは昨日東京へ行きましたか",
       "originalSentence": "You went to Tokyo yesterday.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -618,7 +618,7 @@
     {
       "id": "g1-u9-para-009",
       "type": "paraphrase",
-      "japanese": "過去形の否定文",
+      "japanese": "私は先週その映画を見ませんでした",
       "originalSentence": "I saw the movie last week.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -634,7 +634,7 @@
     {
       "id": "g1-u9-para-010",
       "type": "paraphrase",
-      "japanese": "肯定文→否定文",
+      "japanese": "彼女は昨日ここに来ませんでした",
       "originalSentence": "She came here yesterday.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -650,7 +650,7 @@
     {
       "id": "g1-u9-para-011",
       "type": "paraphrase",
-      "japanese": "疑問文への応答",
+      "japanese": "はい、食べました",
       "originalSentence": "Did you have breakfast?",
       "question": "肯定で答えなさい",
       "choices": [
@@ -666,7 +666,7 @@
     {
       "id": "g1-u9-para-012",
       "type": "paraphrase",
-      "japanese": "疑問文への応答",
+      "japanese": "いいえ、行きませんでした",
       "originalSentence": "Did she go there?",
       "question": "否定で答えなさい",
       "choices": [
@@ -682,7 +682,7 @@
     {
       "id": "g1-u9-para-013",
       "type": "paraphrase",
-      "japanese": "時制の一致",
+      "japanese": "私は昨日学校で昼食を食べました",
       "originalSentence": "I have lunch at school.",
       "question": "「昨日」の文に書き換えなさい",
       "choices": [
@@ -698,7 +698,7 @@
     {
       "id": "g1-u9-para-014",
       "type": "paraphrase",
-      "japanese": "Wh疑問文過去形",
+      "japanese": "あなたは何を買いましたか",
       "originalSentence": "You bought a book.",
       "question": "Whatを使って疑問文に",
       "choices": [
@@ -714,7 +714,7 @@
     {
       "id": "g1-u9-para-015",
       "type": "paraphrase",
-      "japanese": "Wh疑問文過去形",
+      "japanese": "彼女はどこへ行きましたか",
       "originalSentence": "She went to the park.",
       "question": "Whereを使って疑問文に",
       "choices": [
