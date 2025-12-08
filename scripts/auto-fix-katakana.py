@@ -94,31 +94,42 @@ def fix_katakana_english_mixed(csv_file_path: Path, output_path: Path = None):
     return fixed_count
 
 def main():
-    # all-words.csv を修正
-    csv_file = Path('public/data/vocabulary/all-words.csv')
+    # 4つのCSVファイルを修正
+    base_dir = Path('public/data/vocabulary')
+    csv_files = [
+        base_dir / 'high-school-entrance-words.csv',
+        base_dir / 'high-school-entrance-phrases.csv',
+        base_dir / 'high-school-intermediate-words.csv',
+        base_dir / 'high-school-intermediate-phrases.csv'
+    ]
     
-    if not csv_file.exists():
-        print(f"エラー: {csv_file} が見つかりません")
-        return
-    
-    print(f"修正対象: {csv_file}")
-    print("=" * 60)
-    
-    # バックアップ作成
-    backup_file = csv_file.with_suffix('.csv.backup')
     import shutil
-    shutil.copy2(csv_file, backup_file)
-    print(f"バックアップ作成: {backup_file}")
-    print()
+    total_fixed = 0
     
-    # 修正実行
-    fixed = fix_katakana_english_mixed(csv_file)
+    for csv_file in csv_files:
+        if not csv_file.exists():
+            print(f"⚠️ ファイル未検出: {csv_file}")
+            continue
+        
+        print(f"\n修正対象: {csv_file}")
+        print("=" * 60)
+        
+        # バックアップ作成
+        backup_file = csv_file.with_suffix('.csv.backup-katakana')
+        shutil.copy2(csv_file, backup_file)
+        print(f"バックアップ作成: {backup_file}")
+        print()
+        
+        # 修正実行
+        fixed = fix_katakana_english_mixed(csv_file)
+        total_fixed += fixed
+        
+        if fixed > 0:
+            print(f"✅ {csv_file.name}: {fixed}件のエラーを修正")
+        else:
+            print(f"修正対象のエラーなし: {csv_file.name}")
     
-    if fixed > 0:
-        print(f"\n✅ {fixed}件のエラーを修正しました")
-        print(f"バックアップ: {backup_file}")
-    else:
-        print("\n修正対象のエラーが見つかりませんでした")
+    print(f"\n📊 合計: {total_fixed}件のエラーを修正しました")
 
 if __name__ == '__main__':
     main()

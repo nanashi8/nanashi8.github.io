@@ -130,11 +130,10 @@ def main():
     vocab_dir = base_dir / 'public' / 'data' / 'vocabulary'
     
     csv_files = [
-        'all-words.csv',
         'high-school-entrance-words.csv',
         'high-school-entrance-phrases.csv',
         'high-school-intermediate-words.csv',
-        'high-school-intermediate-phrases.csv',
+        'high-school-intermediate-phrases.csv'
     ]
     
     total_fixed = 0
