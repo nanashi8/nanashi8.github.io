@@ -81,6 +81,9 @@ function ScoreBoard({
   });
   
   const [detailedStatsData, setDetailedStatsData] = useState(() => getDetailedRetentionStats());
+  
+  // 履歴タブ用の単語データ
+  const [currentWordData, setCurrentWordData] = useState<ReturnType<typeof getWordDetailedData>>(null);
 
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
@@ -89,6 +92,15 @@ function ScoreBoard({
     setRetentionData({ retentionRate, appearedCount });
     setDetailedStatsData(getDetailedRetentionStats());
   }, [onAnswerTime]); // 回答時のみ更新
+  
+  // 履歴タブ用: 現在の単語データを更新
+  useEffect(() => {
+    if (currentWord) {
+      setCurrentWordData(getWordDetailedData(currentWord));
+    } else {
+      setCurrentWordData(null);
+    }
+  }, [currentWord, onAnswerTime]); // currentWordまたはonAnswerTimeが変わったら更新
 
   // Update progress bar widths using CSS variables
   useEffect(() => {
@@ -443,41 +455,33 @@ function ScoreBoard({
       {activeTab === 'history' && (mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
         <div className="score-board-content">
           <div className="history-compact">
-            {currentWord ? (
-              (() => {
-                const wordData = getWordDetailedData(currentWord);
-                if (!wordData) {
-                  return (
-                    <div className="word-detail-empty">
-                      <p>この単語のデータがまだありません</p>
-                    </div>
-                  );
-                }
-                return (
-                  <div className="word-detail-container">
-                    <div className="word-detail-title">
-                      📊 {currentWord} の学習データ
-                      <span className="word-status-badge">
-                        {wordData.statusIcon} {wordData.statusLabel}
-                      </span>
-                    </div>
-                    <div className="word-detail-stats">
-                      <span className="word-stat-label">正解:</span>
-                      <strong className="word-stat-value">{wordData.correctCount}/{wordData.totalCount}回</strong>
+            {currentWord && currentWordData ? (
+              <div className="word-detail-container">
+                <div className="word-detail-title">
+                  📊 {currentWord} の学習データ
+                  <span className="word-status-badge">
+                    {currentWordData.statusIcon} {currentWordData.statusLabel}
+                  </span>
+                </div>
+                <div className="word-detail-stats">
+                  <span className="word-stat-label">正解:</span>
+                  <strong className="word-stat-value">{currentWordData.correctCount}/{currentWordData.totalCount}回</strong>
+                  <span className="word-stat-divider">｜</span>
+                  {currentWordData.accuracyHistory && currentWordData.accuracyHistory.length > 0 && (
+                    <>
+                      <span className="word-stat-label">履歴:</span>
+                      <span className="word-history-icons">{currentWordData.accuracyHistory}</span>
                       <span className="word-stat-divider">｜</span>
-                      {wordData.accuracyHistory && wordData.accuracyHistory.length > 0 && (
-                        <>
-                          <span className="word-stat-label">履歴:</span>
-                          <span className="word-history-icons">{wordData.accuracyHistory}</span>
-                          <span className="word-stat-divider">｜</span>
-                        </>
-                      )}
-                      <span className="word-stat-label">定着率:</span>
-                      <strong className="word-stat-value word-retention-rate">{wordData.retentionRate}%</strong>
-                    </div>
-                  </div>
-                );
-              })()
+                    </>
+                  )}
+                  <span className="word-stat-label">定着率:</span>
+                  <strong className="word-stat-value word-retention-rate">{currentWordData.retentionRate}%</strong>
+                </div>
+              </div>
+            ) : currentWord && !currentWordData ? (
+              <div className="word-detail-empty">
+                <p>この単語のデータがまだありません</p>
+              </div>
             ) : (
               <div className="word-detail-empty">
                 <p>問題を開始すると、現在の単語のデータが表示されます</p>
