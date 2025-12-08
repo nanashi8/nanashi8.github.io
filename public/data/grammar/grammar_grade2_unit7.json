@@ -1,6 +1,5 @@
 {
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "enabled": true,
   "unit": "Unit 7",
   "title": "比較級・最上級",
   "grammar": "-er/-est、more/most",
@@ -16,1396 +15,1547 @@
     {
       "id": "g2-u7-fib-001",
       "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め1。",
-      "sentence": "Example sentence 1 with ____ blank.",
+      "japanese": "彼は私より背が高いです。",
+      "sentence": "He is ____ than me.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "taller",
+        "tall",
+        "tallest"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "taller",
       "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの説明1です。",
-      "hint": "ヒント"
+      "explanation": "比較級: tall → taller。thanがあるので比較級を使います。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
       "id": "g2-u7-fib-002",
       "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め2。",
-      "sentence": "Example sentence 2 with ____ blank.",
+      "japanese": "これはあれより大きいです。",
+      "sentence": "This is ____ than that.",
       "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
+        "bigger",
+        "big",
+        "biggest"
       ],
-      "correctAnswer": "choice1",
+      "correctAnswer": "bigger",
       "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの説明2です。",
-      "hint": "ヒント"
+      "explanation": "比較級: big → bigger。短い形容詞はerをつけます。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
       "id": "g2-u7-fib-003",
       "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め3。",
-      "sentence": "Example sentence 3 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの説明3です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-004",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め4。",
-      "sentence": "Example sentence 4 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの説明4です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-005",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め5。",
-      "sentence": "Example sentence 5 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの説明5です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-006",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め6。",
-      "sentence": "Example sentence 6 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの説明6です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-007",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め7。",
-      "sentence": "Example sentence 7 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの説明7です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-008",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め8。",
-      "sentence": "Example sentence 8 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの説明8です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-009",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め9。",
-      "sentence": "Example sentence 9 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの説明9です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-010",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め10。",
-      "sentence": "Example sentence 10 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの説明10です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-011",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め11。",
-      "sentence": "Example sentence 11 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの説明11です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-012",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め12。",
-      "sentence": "Example sentence 12 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの説明12です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-013",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め13。",
-      "sentence": "Example sentence 13 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの説明13です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-014",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め14。",
-      "sentence": "Example sentence 14 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの説明14です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-fib-015",
-      "type": "fillInBlank",
-      "japanese": "比較級・最上級穴埋め15。",
-      "sentence": "Example sentence 15 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの説明15です。",
-      "hint": "ヒント"
-    },
-    {
-      "id": "g2-u7-so-001",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え1。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの文1です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-002",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え2。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの文2です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-003",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え3。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの文3です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-004",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え4。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの文4です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-005",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え5。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの文5です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-006",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え6。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの文6です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-007",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え7。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの文7です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-008",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え8。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの文8です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-009",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え9。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの文9です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-010",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え10。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの文10です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-011",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え11。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの文11です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-012",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え12。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの文12です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-013",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え13。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの文13です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-014",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え14。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの文14です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-so-015",
-      "type": "sentenceOrdering",
-      "japanese": "比較級・最上級並べ替え15。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの文15です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u7-para-001",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え1。",
-      "originalSentence": "Original sentence 1.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの変換1です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-002",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え2。",
-      "originalSentence": "Original sentence 2.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの変換2です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-003",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え3。",
-      "originalSentence": "Original sentence 3.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの変換3です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-004",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え4。",
-      "originalSentence": "Original sentence 4.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの変換4です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-005",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え5。",
-      "originalSentence": "Original sentence 5.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの変換5です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-006",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え6。",
-      "originalSentence": "Original sentence 6.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの変換6です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-007",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え7。",
-      "originalSentence": "Original sentence 7.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの変換7です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-008",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え8。",
-      "originalSentence": "Original sentence 8.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの変換8です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-009",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え9。",
-      "originalSentence": "Original sentence 9.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの変換9です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-010",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え10。",
-      "originalSentence": "Original sentence 10.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの変換10です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-011",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え11。",
-      "originalSentence": "Original sentence 11.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの変換11です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-012",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え12。",
-      "originalSentence": "Original sentence 12.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの変換12です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-013",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え13。",
-      "originalSentence": "Original sentence 13.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの変換13です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-014",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え14。",
-      "originalSentence": "Original sentence 14.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの変換14です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-para-015",
-      "type": "paraphrase",
-      "japanese": "比較級・最上級言い換え15。",
-      "originalSentence": "Original sentence 15.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの変換15です。",
-      "hint": "変換"
-    },
-    {
-      "id": "g2-u7-vf-001",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化1。",
-      "sentence": "Sentence 1 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの動詞1です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-002",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化2。",
-      "sentence": "Sentence 2 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの動詞2です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-003",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化3。",
-      "sentence": "Sentence 3 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの動詞3です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-004",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化4。",
-      "sentence": "Sentence 4 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの動詞4です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-005",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化5。",
-      "sentence": "Sentence 5 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの動詞5です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-006",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化6。",
-      "sentence": "Sentence 6 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの動詞6です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-007",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化7。",
-      "sentence": "Sentence 7 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの動詞7です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-008",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化8。",
-      "sentence": "Sentence 8 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの動詞8です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-009",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化9。",
-      "sentence": "Sentence 9 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの動詞9です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-vf-010",
-      "type": "verbForm",
-      "japanese": "比較級・最上級動詞変化10。",
-      "sentence": "Sentence 10 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの動詞10です。",
-      "hint": "動詞"
-    },
-    {
-      "id": "g2-u7-conv-001",
-      "type": "conversation",
-      "japanese": "比較級・最上級会話1。",
-      "situation": "状況1",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 1?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
-      ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの会話1です。",
-      "hint": "会話"
-    },
-    {
-      "id": "g2-u7-conv-002",
-      "type": "conversation",
-      "japanese": "比較級・最上級会話2。",
-      "situation": "状況2",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 2?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
-      ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "beginner",
-      "explanation": "-er/-est、more/mostの会話2です。",
-      "hint": "会話"
-    },
-    {
-      "id": "g2-u7-conv-003",
-      "type": "conversation",
-      "japanese": "比較級・最上級会話3。",
-      "situation": "状況3",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 3?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
-      ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの会話3です。",
-      "hint": "会話"
-    },
-    {
-      "id": "g2-u7-conv-004",
-      "type": "conversation",
-      "japanese": "比較級・最上級会話4。",
-      "situation": "状況4",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 4?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
-      ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "-er/-est、more/mostの会話4です。",
-      "hint": "会話"
-    },
-    {
-      "id": "g2-u7-conv-005",
-      "type": "conversation",
-      "japanese": "比較級・最上級会話5。",
-      "situation": "状況5",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 5?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
-      ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "-er/-est、more/mostの会話5です。",
-      "hint": "会話"
-    },
-    {
-      "id": "g2-u7-asas-001",
-      "type": "fillInBlank",
-      "japanese": "彼は私と同じくらい背が高い。",
-      "sentence": "He is ____ tall ____ I am.",
-      "choices": [
-        "as...as",
-        "so...as",
-        "more...than"
-      ],
-      "correctAnswer": "as...as",
-      "difficulty": "beginner",
-      "explanation": "as + 形容詞/副詞 + as で「...と同じくらい~」という同等比較の構文として覚えてください。He is as tall as I am.「彼は私と同じくらい背が高い」です。",
-      "hint": "同じくらい"
-    },
-    {
-      "id": "g2-u7-asas-002",
-      "type": "sentenceOrdering",
-      "japanese": "この本はあの本と同じくらい面白い。",
-      "words": [
-        "this",
-        "book",
-        "is",
-        "as",
-        "interesting",
-        "as",
-        "that",
-        "one"
-      ],
-      "correctAnswer": "This book is as interesting as that one.",
-      "difficulty": "beginner",
-      "explanation": "as + 形容詞 + as という同等比較の構文として覚えてください。「この本はあの本と同じくらい面白い」です。",
-      "hint": "as interesting as",
-      "wordCount": 8
-    },
-    {
-      "id": "g2-u7-asas-003",
-      "type": "fillInBlank",
-      "japanese": "彼女は私と同じくらい速く走れます。",
-      "sentence": "She can run as ____ as me.",
-      "choices": [
-        "fast",
-        "faster",
-        "fastest"
-      ],
-      "correctAnswer": "fast",
-      "difficulty": "beginner",
-      "explanation": "as + 副詞の原級 + as で同等比較です。fastは副詞の原級を使います。She can run as fast as me.「彼女は私と同じくらい速く走れる」です。",
-      "hint": "原級を使う"
-    },
-    {
-      "id": "g2-u7-asas-004",
-      "type": "fillInBlank",
-      "japanese": "東京は大阪と同じくらい大きい。",
-      "sentence": "Tokyo is ____ large ____ Osaka.",
-      "choices": [
-        "as...as",
-        "more...than",
-        "so...that"
-      ],
-      "correctAnswer": "as...as",
-      "difficulty": "beginner",
-      "explanation": "as + 形容詞 + as で同等比較の構文として覚えてください。Tokyo is as large as Osaka.「東京は大阪と同じくらい大きい」です。",
-      "hint": "同じくらい"
-    },
-    {
-      "id": "g2-u7-notas-001",
-      "type": "fillInBlank",
-      "japanese": "この映画はあの映画ほど面白くない。",
-      "sentence": "This movie is not as interesting ____ that one.",
-      "choices": [
-        "as",
-        "than",
-        "to"
-      ],
-      "correctAnswer": "as",
-      "difficulty": "intermediate",
-      "explanation": "not as + 形容詞 + as で「...ほど~でない」という劣等比較の構文として覚えてください。This movie is not as interesting as that one.「この映画はあの映画ほど面白くない」です。",
-      "hint": "not as ~ as"
-    },
-    {
-      "id": "g2-u7-notas-002",
-      "type": "sentenceOrdering",
-      "japanese": "私は彼ほど背が高くありません。",
-      "words": [
-        "I",
-        "am",
-        "not",
-        "as",
-        "tall",
-        "as",
-        "he",
-        "is"
-      ],
-      "correctAnswer": "I am not as tall as he is.",
-      "difficulty": "intermediate",
-      "explanation": "not as + 形容詞 + as という劣等比較の構文として覚えてください。「私は彼ほど背が高くない」です。",
-      "hint": "not as tall as",
-      "wordCount": 8
-    },
-    {
-      "id": "g2-u7-asas-005",
-      "type": "paraphrase",
-      "japanese": "彼は私と同じ年齢です（old）。",
-      "originalSentence": "He and I are the same age.",
-      "question": "He is as ____ as I am.",
-      "correctAnswer": "old",
-      "difficulty": "intermediate",
-      "explanation": "as + 形容詞 + as で同等比較を表す構文です。He is as old as I am.「彼は私と同じくらいの年齢だ」と書き換えます。"
-    },
-    {
-      "id": "g2-u7-asas-006",
-      "type": "fillInBlank",
-      "japanese": "彼女は私と同じくらい一生懸命勉強します。",
-      "sentence": "She studies as ____ as I do.",
-      "choices": [
-        "hard",
-        "harder",
-        "hardest"
-      ],
-      "correctAnswer": "hard",
-      "difficulty": "intermediate",
-      "explanation": "as + 副詞の原級 + as で同等比較の構文として覚えてください。She studies as hard as I do.「彼女は私と同じくらい一生懸命勉強する」です。",
-      "hint": "原級"
-    },
-    {
-      "id": "g2-u7-asas-007",
-      "type": "conversation",
-      "japanese": "英語と同じくらい難しい。",
-      "situation": "科目について",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Is math difficult?"
-        },
-        {
-          "speaker": "B",
-          "text": "Yes, it's as ____ as English."
-        }
-      ],
-      "choices": [
-        "difficult",
-        "more difficult",
-        "most difficult"
-      ],
-      "correctAnswer": "difficult",
-      "difficulty": "beginner",
-      "explanation": "as + 形容詞の原級 + as で同等比較の構文として覚えてください。it's as difficult as English.「英語と同じくらい難しい」です。",
-      "hint": "原級を使う"
-    },
-    {
-      "id": "g2-u7-asas-008",
-      "type": "sentenceOrdering",
-      "japanese": "犬は猫と同じくらい人気があります。",
-      "words": [
-        "dogs",
-        "are",
-        "as",
-        "popular",
-        "as",
-        "cats"
-      ],
-      "correctAnswer": "Dogs are as popular as cats.",
-      "difficulty": "beginner",
-      "explanation": "as + 形容詞 + as という同等比較の構文として覚えてください。「犬は猫と同じくらい人気がある」です。",
-      "hint": "as popular as",
-      "wordCount": 6
-    },
-    {
-      "id": "g2-u7-comp-001",
-      "type": "fillInBlank",
-      "japanese": "日がどんどん長くなっています。",
-      "sentence": "The days are getting longer and ____.",
-      "choices": [
-        "longer",
-        "long",
-        "longest"
-      ],
-      "correctAnswer": "longer",
-      "difficulty": "intermediate",
-      "explanation": "比較級 + and + 比較級で「ます~」という構文として覚えてください。longer and longer「ます長く」です。The days are getting longer and longer.で「日がどんどん長くなっている」です。",
-      "hint": "比較級"
-    },
-    {
-      "id": "g2-u7-comp-002",
-      "type": "sentenceOrdering",
-      "japanese": "彼はますます背が高くなっています。",
-      "words": [
-        "he",
-        "is",
-        "getting",
-        "taller",
-        "and",
-        "taller"
-      ],
-      "correctAnswer": "He is getting taller and taller.",
-      "difficulty": "intermediate",
-      "explanation": "比較級 + and + 比較級という構文として覚えてください。taller and taller「ます背が高く」です。",
-      "hint": "taller and taller",
-      "wordCount": 6
-    },
-    {
-      "id": "g2-u7-comp-003",
-      "type": "fillInBlank",
-      "japanese": "天気がますます寒くなっています。",
-      "sentence": "It's getting colder and ____.",
-      "choices": [
-        "colder",
-        "cold",
-        "coldest"
-      ],
-      "correctAnswer": "colder",
-      "difficulty": "intermediate",
-      "explanation": "比較級 + and + 比較級で「ます~」という構文として覚えてください。colder and colder「ます寒く」です。",
-      "hint": "比較級"
-    },
-    {
-      "id": "g2-u7-comp-004",
-      "type": "conversation",
-      "japanese": "英語がますます難しくなっています。",
-      "situation": "勉強",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "How is English?"
-        },
-        {
-          "speaker": "B",
-          "text": "It's getting more and more ____."
-        }
-      ],
-      "choices": [
-        "difficult",
-        "difficulter",
-        "most difficult"
-      ],
-      "correctAnswer": "difficult",
-      "difficulty": "intermediate",
-      "explanation": "長い形容詞の場合はmore and more + 形容詞で「ます~」という構文として覚えてください。more and more difficult「ます難しく」です。",
-      "hint": "more and more"
-    },
-    {
-      "id": "g2-u7-comp-005",
-      "type": "sentenceOrdering",
-      "japanese": "彼女はますます美しくなっています。",
-      "words": [
-        "she",
-        "is",
-        "getting",
-        "more",
-        "and",
-        "more",
-        "beautiful"
-      ],
-      "correctAnswer": "She is getting more and more beautiful.",
-      "difficulty": "intermediate",
-      "explanation": "長い形容詞の場合はmore and more + 形容詞という構文として覚えてください。",
-      "hint": "more and more",
-      "wordCount": 7
-    },
-    {
-      "id": "g2-u7-comp-006",
-      "type": "fillInBlank",
-      "japanese": "問題がますます複雑になっています。",
-      "sentence": "The problem is getting more and more ____.",
-      "choices": [
-        "complicated",
-        "complicateder",
-        "most complicated"
-      ],
-      "correctAnswer": "complicated",
-      "difficulty": "advanced",
-      "explanation": "長い形容詞の場合はmore and more + 形容詞で「ます~」という構文として覚えてください。",
-      "hint": "more and more"
-    },
-    {
-      "id": "g2-u7-comp-007",
-      "type": "paraphrase",
-      "japanese": "彼女の英語は日に日に上達しています（better）。",
-      "originalSentence": "Her English improves day by day.",
-      "question": "Her English is getting better and ____.",
-      "correctAnswer": "better",
-      "difficulty": "intermediate",
-      "explanation": "比較級 + and + 比較級に書き換えます。better and better「ます良く」となります。"
-    },
-    {
-      "id": "g2-u7-comp-008",
-      "type": "fillInBlank",
-      "japanese": "彼はますます速く走れるようになっています。",
-      "sentence": "He can run faster and ____.",
+      "japanese": "彼女は私より速く走ります。",
+      "sentence": "She runs ____ than me.",
       "choices": [
         "faster",
         "fast",
         "fastest"
       ],
       "correctAnswer": "faster",
-      "difficulty": "intermediate",
-      "explanation": "比較級 + and + 比較級で「ます~」という構文として覚えてください。faster and faster「ます速く」です。",
-      "hint": "比較級"
+      "difficulty": "beginner",
+      "explanation": "比較級: fast → faster",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u7-comp-009",
+      "id": "g2-u7-fib-004",
       "type": "fillInBlank",
-      "japanese": "高ければ高いほど良い。",
-      "sentence": "The higher, the ____.",
-      "choices": [
-        "better",
-        "good",
-        "best"
-      ],
-      "correctAnswer": "better",
-      "difficulty": "intermediate",
-      "explanation": "the + 比較級, the + 比較級で「~すればするほど...」という構文として覚えてください。The higher, the better.「高ければ高いほど良い」です。",
-      "hint": "比較級"
-    },
-    {
-      "id": "g2-u7-comp-010",
-      "type": "sentenceOrdering",
-      "japanese": "速ければ速いほど良い。",
-      "words": [
-        "the",
-        "faster",
-        "the",
-        "better"
-      ],
-      "correctAnswer": "The faster, the better.",
-      "difficulty": "intermediate",
-      "explanation": "the + 比較級, the + 比較級という構文として覚えてください。The faster, the better.は決まった表現です。",
-      "hint": "the 比較級",
-      "wordCount": 4
-    },
-    {
-      "id": "g2-u7-comp-011",
-      "type": "fillInBlank",
-      "japanese": "練習すればするほど上手になります。",
-      "sentence": "The more you practice, the ____ you become.",
-      "choices": [
-        "better",
-        "good",
-        "best"
-      ],
-      "correctAnswer": "better",
-      "difficulty": "intermediate",
-      "explanation": "the + 比較級, the + 比較級で「~すればするほど...」という構文として覚えてください。The more you practice, the better you become.で「練習すればするほど上手になる」です。",
-      "hint": "比較級"
-    },
-    {
-      "id": "g2-u7-comp-012",
-      "type": "conversation",
-      "japanese": "早ければ早いほど良い。",
-      "situation": "時間",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "When should we start?"
-        },
-        {
-          "speaker": "B",
-          "text": "The ____, the better."
-        }
-      ],
-      "choices": [
-        "earlier",
-        "early",
-        "earliest"
-      ],
-      "correctAnswer": "earlier",
-      "difficulty": "intermediate",
-      "explanation": "the + 比較級, the + 比較級という構文として覚えてください。The earlier, the better.で「早ければ早いほど良い」です。",
-      "hint": "比較級"
-    },
-    {
-      "id": "g2-u7-comp-013",
-      "type": "sentenceOrdering",
-      "japanese": "勉強すればするほど賢くなります。",
-      "words": [
-        "the",
-        "more",
-        "you",
-        "study",
-        "the",
-        "smarter",
-        "you",
-        "become"
-      ],
-      "correctAnswer": "The more you study, the smarter you become.",
-      "difficulty": "advanced",
-      "explanation": "the + 比較級, the + 比較級という構文として覚えてください。",
-      "hint": "the more, the smarter",
-      "wordCount": 8
-    },
-    {
-      "id": "g2-u7-comp-014",
-      "type": "fillInBlank",
-      "japanese": "読めば読むほど知識が増えます。",
-      "sentence": "The more you read, the ____ knowledge you get.",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "sentence": "This book is ____ interesting than that one.",
       "choices": [
         "more",
-        "much",
-        "most"
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "長い形容詞にはmoreを使います。more interesting",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-005",
+      "type": "fillInBlank",
+      "japanese": "これはクラスで最も大きいです。",
+      "sentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "beginner",
+      "explanation": "最上級: big → biggest。theとinがあるので最上級です。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-006",
+      "type": "fillInBlank",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "sentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "beginner",
+      "explanation": "最上級: tall → tallest。of the threeなので最上級を使います。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-007",
+      "type": "fillInBlank",
+      "japanese": "これは最もおもしろい本です。",
+      "sentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "長い形容詞の最上級にはmostを使います。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-008",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より若いです。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "beginner",
+      "explanation": "比較級: young → younger",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-009",
+      "type": "fillInBlank",
+      "japanese": "これはあれより安いです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "beginner",
+      "explanation": "比較級: cheap → cheaper",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-010",
+      "type": "fillInBlank",
+      "japanese": "彼は最も速く走ります。",
+      "sentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "beginner",
+      "explanation": "最上級: fast → fastest",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-011",
+      "type": "fillInBlank",
+      "japanese": "この問題はあれより難しいです。",
+      "sentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "difficultは長い形容詞なのでmoreを使います。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-012",
+      "type": "fillInBlank",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "sentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "popularは長い形容詞なので最上級はmostです。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-013",
+      "type": "fillInBlank",
+      "japanese": "私は彼より年上です。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "beginner",
+      "explanation": "比較級: old → older",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-014",
+      "type": "fillInBlank",
+      "japanese": "これは最も高価な車です。",
+      "sentence": "This is the ____ expensive car.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "beginner",
+      "explanation": "expensiveは長い形容詞なので最上級はmostです。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-015",
+      "type": "fillInBlank",
+      "japanese": "彼は私より強いです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "stronger",
+        "strong",
+        "strongest"
+      ],
+      "correctAnswer": "stronger",
+      "difficulty": "beginner",
+      "explanation": "比較級: strong → stronger",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-016",
+      "type": "fillInBlank",
+      "japanese": "これは最も小さい箱です。",
+      "sentence": "This is the ____ box.",
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: small → smallest",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-017",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より親切です。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "kinder",
+        "kind",
+        "kindest"
+      ],
+      "correctAnswer": "kinder",
+      "difficulty": "intermediate",
+      "explanation": "比較級: kind → kinder",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-018",
+      "type": "fillInBlank",
+      "japanese": "これはより美しい花です。",
+      "sentence": "This is a ____ beautiful flower.",
+      "choices": [
+        "more",
+        "most",
+        "much"
       ],
       "correctAnswer": "more",
       "difficulty": "intermediate",
-      "explanation": "the + 比較級, the + 比較級で「~すればするほど...」という構文として覚えてください。the more knowledge「より多くの知識」です。",
-      "hint": "比較級"
+      "explanation": "beautifulは長い形容詞なのでmoreを使います。",
+      "hint": "比較級か最上級かを判断しましょう"
     },
     {
-      "id": "g2-u7-comp-015",
+      "id": "g2-u7-fib-019",
+      "type": "fillInBlank",
+      "japanese": "彼は最も賢い生徒です。",
+      "sentence": "He is the ____ student.",
+      "choices": [
+        "smartest",
+        "smart",
+        "smarter"
+      ],
+      "correctAnswer": "smartest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: smart → smartest",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-020",
+      "type": "fillInBlank",
+      "japanese": "これはあれより新しいです。",
+      "sentence": "This is ____ than that.",
+      "choices": [
+        "newer",
+        "new",
+        "newest"
+      ],
+      "correctAnswer": "newer",
+      "difficulty": "intermediate",
+      "explanation": "比較級: new → newer",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-021",
+      "type": "fillInBlank",
+      "japanese": "彼女は最も美しいです。",
+      "sentence": "She is the ____ beautiful.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "beautifulの最上級はmostを使います。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-022",
+      "type": "fillInBlank",
+      "japanese": "私は彼より忙しいです。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "busier",
+        "busy",
+        "busiest"
+      ],
+      "correctAnswer": "busier",
+      "difficulty": "intermediate",
+      "explanation": "比較級: busy → busier (yをiに変えてer)",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-023",
+      "type": "fillInBlank",
+      "japanese": "これは最も重要な問題です。",
+      "sentence": "This is the ____ important problem.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "importantは長い形容詞なので最上級はmostです。",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-024",
+      "type": "fillInBlank",
+      "japanese": "彼は私より幸せです。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "happier",
+        "happy",
+        "happiest"
+      ],
+      "correctAnswer": "happier",
+      "difficulty": "intermediate",
+      "explanation": "比較級: happy → happier (yをiに変えてer)",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-025",
+      "type": "fillInBlank",
+      "japanese": "これは最も簡単な方法です。",
+      "sentence": "This is the ____ easy way.",
+      "choices": [
+        "easiest",
+        "easy",
+        "easier"
+      ],
+      "correctAnswer": "easiest",
+      "difficulty": "intermediate",
+      "explanation": "最上級: easy → easiest (yをiに変えてest)",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-026",
+      "type": "fillInBlank",
+      "japanese": "彼女は私より上手に歌います。",
+      "sentence": "She sings ____ than me.",
+      "choices": [
+        "better",
+        "good",
+        "best"
+      ],
+      "correctAnswer": "better",
+      "difficulty": "intermediate",
+      "explanation": "不規則変化: good → better → best",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-fib-027",
+      "type": "fillInBlank",
+      "japanese": "これは最も良い選択です。",
+      "sentence": "This is the ____ choice.",
+      "choices": [
+        "best",
+        "good",
+        "better"
+      ],
+      "correctAnswer": "best",
+      "difficulty": "intermediate",
+      "explanation": "不規則変化の最上級: good → best",
+      "hint": "比較級か最上級かを判断しましょう"
+    },
+    {
+      "id": "g2-u7-so-001",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私より背が高いです。",
+      "words": [
+        "He",
+        "is",
+        "taller",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "taller",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級tallerとthanを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-002",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより大きいです。",
+      "words": [
+        "This",
+        "is",
+        "bigger",
+        "than",
+        "that",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "bigger",
+        "than",
+        "that",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級biggerとthanです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より速く走ります。",
+      "words": [
+        "She",
+        "runs",
+        "faster",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "runs",
+        "faster",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級fasterを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-004",
+      "type": "sentenceOrdering",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "words": [
+        "This",
+        "book",
+        "is",
+        "more",
+        "interesting",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "book",
+        "is",
+        "more",
+        "interesting",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "more interesting thanの語順です。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-005",
+      "type": "sentenceOrdering",
+      "japanese": "これはクラスで最も大きいです。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "biggest",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "biggest",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the biggestとin the classです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "words": [
+        "He",
+        "is",
+        "the",
+        "tallest",
+        "of",
+        "the",
+        "three",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "the",
+        "tallest",
+        "of",
+        "the",
+        "three",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the tallestとof the threeです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-007",
+      "type": "sentenceOrdering",
+      "japanese": "これは最もおもしろい本です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "interesting",
+        "book",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "interesting",
+        "book",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the most interestingです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より若いです。",
+      "words": [
+        "She",
+        "is",
+        "younger",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "younger",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級youngerとthanを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-009",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより安いです。",
+      "words": [
+        "This",
+        "is",
+        "cheaper",
+        "than",
+        "that",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "cheaper",
+        "than",
+        "that",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "比較級cheaperです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼は最も速く走ります。",
+      "words": [
+        "He",
+        "runs",
+        "the",
+        "fastest",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "runs",
+        "the",
+        "fastest",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the fastestを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-011",
+      "type": "sentenceOrdering",
+      "japanese": "この問題はあれより難しいです。",
+      "words": [
+        "This",
+        "problem",
+        "is",
+        "more",
+        "difficult",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "problem",
+        "is",
+        "more",
+        "difficult",
+        "than",
+        "that",
+        "one",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "more difficult thanの語順です。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-012",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "words": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "popular",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "popular",
+        "in",
+        "the",
+        "class",
+        "."
+      ],
+      "difficulty": "beginner",
+      "explanation": "最上級the most popularです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-013",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼より年上です。",
+      "words": [
+        "I",
+        "am",
+        "older",
+        "than",
+        "him",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "am",
+        "older",
+        "than",
+        "him",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級olderとthanです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-014",
+      "type": "sentenceOrdering",
+      "japanese": "これは最も高価な車です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "expensive",
+        "car",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "most",
+        "expensive",
+        "car",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the most expensiveです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-015",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私より強いです。",
+      "words": [
+        "He",
+        "is",
+        "stronger",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "stronger",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級strongerを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-016",
+      "type": "sentenceOrdering",
+      "japanese": "これは最も小さい箱です。",
+      "words": [
+        "This",
+        "is",
+        "the",
+        "smallest",
+        "box",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "the",
+        "smallest",
+        "box",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the smallestです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-017",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私より親切です。",
+      "words": [
+        "She",
+        "is",
+        "kinder",
+        "than",
+        "me",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "kinder",
+        "than",
+        "me",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級kinderとthanです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-018",
+      "type": "sentenceOrdering",
+      "japanese": "これはより美しい花です。",
+      "words": [
+        "This",
+        "is",
+        "a",
+        "more",
+        "beautiful",
+        "flower",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "a",
+        "more",
+        "beautiful",
+        "flower",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "more beautifulの語順です。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-019",
+      "type": "sentenceOrdering",
+      "japanese": "彼は最も賢い生徒です。",
+      "words": [
+        "He",
+        "is",
+        "the",
+        "smartest",
+        "student",
+        "."
+      ],
+      "correctOrder": [
+        "He",
+        "is",
+        "the",
+        "smartest",
+        "student",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the smartestを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-020",
+      "type": "sentenceOrdering",
+      "japanese": "これはあれより新しいです。",
+      "words": [
+        "This",
+        "is",
+        "newer",
+        "than",
+        "that",
+        "."
+      ],
+      "correctOrder": [
+        "This",
+        "is",
+        "newer",
+        "than",
+        "that",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級newerとthanです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-021",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は最も美しいです。",
+      "words": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "beautiful",
+        "."
+      ],
+      "correctOrder": [
+        "She",
+        "is",
+        "the",
+        "most",
+        "beautiful",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "最上級the most beautifulです。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-so-022",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼より忙しいです。",
+      "words": [
+        "I",
+        "am",
+        "busier",
+        "than",
+        "him",
+        "."
+      ],
+      "correctOrder": [
+        "I",
+        "am",
+        "busier",
+        "than",
+        "him",
+        "."
+      ],
+      "difficulty": "intermediate",
+      "explanation": "比較級busierを使います。",
+      "hint": "比較級・最上級の語順に注意"
+    },
+    {
+      "id": "g2-u7-pp-001",
       "type": "paraphrase",
-      "japanese": "忙しいほど幸せです（busy, happy）。",
-      "originalSentence": "If I am busier, I am happier.",
-      "question": "The ____, the ____.",
-      "correctAnswer": "busier happier",
-      "difficulty": "advanced",
-      "explanation": "if構文をthe + 比較級, the + 比較級に書き換えます。The busier, the happier.となります。"
+      "japanese": "彼は私より背が高いです。",
+      "sentence": "He has more height than me.",
+      "targetSentence": "He is ____ than me.",
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "intermediate",
+      "explanation": "比較級tallerで言い換えます。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-002",
+      "type": "paraphrase",
+      "japanese": "これはあれより大きいです。",
+      "sentence": "This has more size than that.",
+      "targetSentence": "This is ____ than that.",
+      "choices": [
+        "bigger",
+        "big",
+        "biggest"
+      ],
+      "correctAnswer": "bigger",
+      "difficulty": "intermediate",
+      "explanation": "比較級biggerで表現します。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-003",
+      "type": "paraphrase",
+      "japanese": "この本はあの本よりおもしろいです。",
+      "sentence": "This book has more interest than that one.",
+      "targetSentence": "This book is ____ interesting than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more interestingで言い換えます。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-004",
+      "type": "paraphrase",
+      "japanese": "これはクラスで最も大きいです。",
+      "sentence": "This has the most size in the class.",
+      "targetSentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "intermediate",
+      "explanation": "最上級biggestで表現します。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-005",
+      "type": "paraphrase",
+      "japanese": "彼は3人の中で最も背が高いです。",
+      "sentence": "He has the most height of the three.",
+      "targetSentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級tallestです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-006",
+      "type": "paraphrase",
+      "japanese": "これは最もおもしろい本です。",
+      "sentence": "This book has the most interest.",
+      "targetSentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most interestingです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-007",
+      "type": "paraphrase",
+      "japanese": "彼女は私より若いです。",
+      "sentence": "She has less age than me.",
+      "targetSentence": "She is ____ than me.",
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "intermediate",
+      "explanation": "比較級youngerで言い換えます。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-008",
+      "type": "paraphrase",
+      "japanese": "これはあれより安いです。",
+      "sentence": "This has a lower price than that.",
+      "targetSentence": "This is ____ than that.",
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "intermediate",
+      "explanation": "比較級cheaperです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-009",
+      "type": "paraphrase",
+      "japanese": "彼は最も速く走ります。",
+      "sentence": "He has the highest speed.",
+      "targetSentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "intermediate",
+      "explanation": "最上級fastestで表現します。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-010",
+      "type": "paraphrase",
+      "japanese": "この問題はあれより難しいです。",
+      "sentence": "This problem has more difficulty than that one.",
+      "targetSentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more difficultで言い換えます。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-011",
+      "type": "paraphrase",
+      "japanese": "彼女はクラスで最も人気があります。",
+      "sentence": "She has the most popularity in the class.",
+      "targetSentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most popularです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-012",
+      "type": "paraphrase",
+      "japanese": "私は彼より年上です。",
+      "sentence": "I have more age than him.",
+      "targetSentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "intermediate",
+      "explanation": "比較級olderで表現します。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-013",
+      "type": "paraphrase",
+      "japanese": "これは最も高価な車です。",
+      "sentence": "This car has the highest price.",
+      "targetSentence": "This is the ____ expensive car.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "最上級most expensiveです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-014",
+      "type": "paraphrase",
+      "japanese": "彼は私より強いです。",
+      "sentence": "He has more strength than me.",
+      "targetSentence": "He is ____ than me.",
+      "choices": [
+        "stronger",
+        "strong",
+        "strongest"
+      ],
+      "correctAnswer": "stronger",
+      "difficulty": "intermediate",
+      "explanation": "比較級strongerです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-015",
+      "type": "paraphrase",
+      "japanese": "これは最も小さい箱です。",
+      "sentence": "This box has the least size.",
+      "targetSentence": "This is the ____ box.",
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級smallestで言い換えます。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-016",
+      "type": "paraphrase",
+      "japanese": "彼女は私より親切です。",
+      "sentence": "She has more kindness than me.",
+      "targetSentence": "She is ____ than me.",
+      "choices": [
+        "kinder",
+        "kind",
+        "kindest"
+      ],
+      "correctAnswer": "kinder",
+      "difficulty": "intermediate",
+      "explanation": "比較級kinderです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-017",
+      "type": "paraphrase",
+      "japanese": "これはより美しい花です。",
+      "sentence": "This flower has more beauty.",
+      "targetSentence": "This is a ____ beautiful flower.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "more beautifulで表現します。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-pp-018",
+      "type": "paraphrase",
+      "japanese": "彼は最も賢い生徒です。",
+      "sentence": "He has the most intelligence.",
+      "targetSentence": "He is the ____ student.",
+      "choices": [
+        "smartest",
+        "smart",
+        "smarter"
+      ],
+      "correctAnswer": "smartest",
+      "difficulty": "intermediate",
+      "explanation": "最上級smartestです。",
+      "hint": "比較級・最上級で言い換え"
+    },
+    {
+      "id": "g2-u7-vf-001",
+      "type": "verbForm",
+      "japanese": "彼は私より背が____です。",
+      "sentence": "He is ____ than me.",
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級tallerが必要です。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-002",
+      "type": "verbForm",
+      "japanese": "これはクラスで最も大き____です。",
+      "sentence": "This is the ____ in the class.",
+      "choices": [
+        "biggest",
+        "big",
+        "bigger"
+      ],
+      "correctAnswer": "biggest",
+      "difficulty": "intermediate",
+      "explanation": "theとinがあるので最上級biggestです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-003",
+      "type": "verbForm",
+      "japanese": "この本はあの本よりおもしろ____です。",
+      "sentence": "This book is ____ interesting than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級moreです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-004",
+      "type": "verbForm",
+      "japanese": "彼は3人の中で最も背が高____です。",
+      "sentence": "He is the ____ of the three.",
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "intermediate",
+      "explanation": "of the threeなので最上級tallestです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-005",
+      "type": "verbForm",
+      "japanese": "これは最もおもしろ____本です。",
+      "sentence": "This is the ____ interesting book.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "theがあるので最上級mostです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-006",
+      "type": "verbForm",
+      "japanese": "彼女は私より若____です。",
+      "sentence": "She is ____ than me.",
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "intermediate",
+      "explanation": "比較級youngerが必要です。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-007",
+      "type": "verbForm",
+      "japanese": "彼は最も速く走り____。",
+      "sentence": "He runs the ____.",
+      "choices": [
+        "fastest",
+        "fast",
+        "faster"
+      ],
+      "correctAnswer": "fastest",
+      "difficulty": "intermediate",
+      "explanation": "theがあるので最上級fastestです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-008",
+      "type": "verbForm",
+      "japanese": "この問題はあれより難し____です。",
+      "sentence": "This problem is ____ difficult than that one.",
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級moreです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-009",
+      "type": "verbForm",
+      "japanese": "彼女はクラスで最も人気が____ます。",
+      "sentence": "She is the ____ popular in the class.",
+      "choices": [
+        "most",
+        "more",
+        "much"
+      ],
+      "correctAnswer": "most",
+      "difficulty": "intermediate",
+      "explanation": "theとin the classがあるので最上級mostです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-vf-010",
+      "type": "verbForm",
+      "japanese": "私は彼より年____です。",
+      "sentence": "I am ____ than him.",
+      "choices": [
+        "older",
+        "old",
+        "oldest"
+      ],
+      "correctAnswer": "older",
+      "difficulty": "intermediate",
+      "explanation": "thanがあるので比較級olderです。",
+      "hint": "文脈から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-001",
+      "type": "conversation",
+      "japanese": "A: 彼とあなたはどちらが背が高いですか? B: 彼の方が背が高いです。",
+      "conversation": [
+        "A: Who is taller, he or you?",
+        "B: He is ____ than me."
+      ],
+      "choices": [
+        "taller",
+        "tall",
+        "tallest"
+      ],
+      "correctAnswer": "taller",
+      "difficulty": "beginner",
+      "explanation": "比較級tallerを使います。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-002",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらが大きいですか? B: これの方が大きいです。",
+      "conversation": [
+        "A: Which is bigger, this or that?",
+        "B: This is ____ than that."
+      ],
+      "choices": [
+        "bigger",
+        "big",
+        "biggest"
+      ],
+      "correctAnswer": "bigger",
+      "difficulty": "beginner",
+      "explanation": "比較級biggerです。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-003",
+      "type": "conversation",
+      "japanese": "A: クラスで誰が最も背が高いですか? B: 田中君が最も背が高いです。",
+      "conversation": [
+        "A: Who is the tallest in the class?",
+        "B: Tanaka is the ____."
+      ],
+      "choices": [
+        "tallest",
+        "tall",
+        "taller"
+      ],
+      "correctAnswer": "tallest",
+      "difficulty": "beginner",
+      "explanation": "最上級tallestを使います。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-004",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらがおもしろいですか? B: これの方がおもしろいです。",
+      "conversation": [
+        "A: Which is more interesting, this or that?",
+        "B: This is ____ interesting than that."
+      ],
+      "choices": [
+        "more",
+        "most",
+        "much"
+      ],
+      "correctAnswer": "more",
+      "difficulty": "beginner",
+      "explanation": "比較級moreを使います。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-005",
+      "type": "conversation",
+      "japanese": "A: 3つの中でどれが最も小さいですか? B: これが最も小さいです。",
+      "conversation": [
+        "A: Which is the smallest of the three?",
+        "B: This is the ____."
+      ],
+      "choices": [
+        "smallest",
+        "small",
+        "smaller"
+      ],
+      "correctAnswer": "smallest",
+      "difficulty": "intermediate",
+      "explanation": "最上級smallestです。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-006",
+      "type": "conversation",
+      "japanese": "A: 彼女とあなたはどちらが若いですか? B: 彼女の方が若いです。",
+      "conversation": [
+        "A: Who is younger, she or you?",
+        "B: She is ____ than me."
+      ],
+      "choices": [
+        "younger",
+        "young",
+        "youngest"
+      ],
+      "correctAnswer": "younger",
+      "difficulty": "intermediate",
+      "explanation": "比較級youngerを使います。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-007",
+      "type": "conversation",
+      "japanese": "A: 世界で最も高い山は何ですか? B: エベレストが最も高いです。",
+      "conversation": [
+        "A: What is the highest mountain in the world?",
+        "B: Mt. Everest is the ____."
+      ],
+      "choices": [
+        "highest",
+        "high",
+        "higher"
+      ],
+      "correctAnswer": "highest",
+      "difficulty": "intermediate",
+      "explanation": "最上級highestです。",
+      "hint": "質問から比較級か最上級かを判断"
+    },
+    {
+      "id": "g2-u7-conv-008",
+      "type": "conversation",
+      "japanese": "A: これとあれはどちらが安いですか? B: あれの方が安いです。",
+      "conversation": [
+        "A: Which is cheaper, this or that?",
+        "B: That is ____ than this."
+      ],
+      "choices": [
+        "cheaper",
+        "cheap",
+        "cheapest"
+      ],
+      "correctAnswer": "cheaper",
+      "difficulty": "intermediate",
+      "explanation": "比較級cheaperを使います。",
+      "hint": "質問から比較級か最上級かを判断"
     }
-  ],
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
-  "disabledDate": "2025-12-09T05:38:25.085902"
+  ]
 }
