@@ -659,7 +659,7 @@ function App() {
     if (reviewFocusMode) {
       const todayIncorrect = getTodayIncorrectWords();
       filteredQuestions = filteredQuestions.filter(q => 
-        todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
+        todayIncorrect.some(word => word && q.word && word.toLowerCase() === q.word.toLowerCase())
       );
       
       if (filteredQuestions.length === 0) {
@@ -736,7 +736,7 @@ function App() {
     let reviewQuestions: Question[] = [];
     if (todayIncorrect.length > 0) {
       const incorrectQuestions = filteredQuestions.filter(q => 
-        todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
+        todayIncorrect.some(word => word && q.word && word.toLowerCase() === q.word.toLowerCase())
       );
       
       // 要復習上限を適用（0の場合は復習問題なし）
@@ -745,7 +745,7 @@ function App() {
         : [];
       
       const correctQuestions = filteredQuestions.filter(q => 
-        !todayIncorrect.some(word => word.toLowerCase() === q.word.toLowerCase())
+        !todayIncorrect.some(word => word && q.word && word.toLowerCase() === q.word.toLowerCase())
       );
       
       // 誤答問題を前に、正解済み問題を後ろに配置
@@ -759,12 +759,12 @@ function App() {
     // 混同された単語を優先的に出題（出題範囲内に含まれている場合）
     if (confusedWords.length > 0) {
       const confusedQuestions = filteredQuestions.filter(q =>
-        confusedWords.some(word => word.toLowerCase() === q.word.toLowerCase())
+        confusedWords.some(word => word && q.word && word.toLowerCase() === q.word.toLowerCase())
       );
       
       if (confusedQuestions.length > 0) {
         const nonConfusedQuestions = filteredQuestions.filter(q =>
-          !confusedWords.some(word => word.toLowerCase() === q.word.toLowerCase())
+          !confusedWords.some(word => word && q.word && word.toLowerCase() === q.word.toLowerCase())
         );
         
         // 混同された単語を優先的に配置（要復習の次）
