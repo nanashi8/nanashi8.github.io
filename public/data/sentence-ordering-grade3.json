@@ -17065,18 +17065,17 @@
         {
           "id": "so-g3-u4-002",
           "japanese": "嘘をつくことは悪いことです",
-          "sentence": "To to tell a lie is bad.",
+          "sentence": "To tell a lie is bad.",
           "words": [
             "To",
-            "to",
             "tell",
             "a",
             "lie",
             "is",
             "bad."
           ],
-          "correctAnswer": "To to tell a lie is bad.",
-          "wordCount": 7,
+          "correctAnswer": "To tell a lie is bad.",
+          "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
