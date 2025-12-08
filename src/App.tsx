@@ -1476,13 +1476,59 @@ function App() {
               // 分からない単語を問題集として保存
               if (words.length === 0) return;
               
-              // デフォルトの問題集名を生成（日時付き）
-              const now = new Date();
-              const dateStr = `${now.getMonth() + 1}/${now.getDate()}`;
-              const defaultName = `長文単語集 (${dateStr})`;
+              // 既存のカスタム問題集を取得
+              const customSets = questionSets.filter(set => !set.isBuiltIn && set.source === '長文読解');
               
-              const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, defaultName);
-              if (setName) {
+              // 保存方法を選択
+              let saveMode: 'new' | 'append' | null = null;
+              let targetSetId: string | null = null;
+              
+              if (customSets.length > 0) {
+                const choice = confirm(
+                  `${words.length}個の単語が選択されています。\n\n` +
+                  `OK: 新しい問題集として保存\n` +
+                  `キャンセル: 既存の問題集に追加`
+                );
+                
+                if (choice) {
+                  saveMode = 'new';
+                } else {
+                  // 既存問題集の選択
+                  const setList = customSets.map((set, idx) => 
+                    `${idx + 1}. ${set.name} (${set.questions.length}語)`
+                  ).join('\n');
+                  
+                  const selection = prompt(
+                    `追加先の問題集を選択してください（番号を入力）:\n\n${setList}\n\n0: 新しい問題集として保存`,
+                    '0'
+                  );
+                  
+                  if (selection === null) return; // キャンセル
+                  
+                  const selectionNum = parseInt(selection);
+                  if (selectionNum === 0) {
+                    saveMode = 'new';
+                  } else if (selectionNum > 0 && selectionNum <= customSets.length) {
+                    saveMode = 'append';
+                    targetSetId = customSets[selectionNum - 1].id;
+                  } else {
+                    alert('無効な選択です');
+                    return;
+                  }
+                }
+              } else {
+                saveMode = 'new';
+              }
+              
+              if (saveMode === 'new') {
+                // 新しい問題集として保存
+                const now = new Date();
+                const dateStr = `${now.getMonth() + 1}/${now.getDate()}`;
+                const defaultName = `長文単語集 (${dateStr})`;
+                
+                const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, defaultName);
+                if (!setName) return;
+                
                 // 1. 従来のQuestionSet形式で保存（後方互換性）
                 const newSet: QuestionSet = {
                   id: generateId(),
@@ -1509,10 +1555,51 @@ function App() {
                 const customSet = await createReadingQuestionSet(setName, newSet.questions);
                 await saveCustomQuestionSet(customSet);
                 
-                // 問題セット一覧を再読み込み
-                await reloadQuestionSets();
+                alert(`✅ 問題集「${setName}」を作成しました（${words.length}語）`);
+              } else if (saveMode === 'append' && targetSetId) {
+                // 既存問題集に追加
+                const targetSet = questionSets.find(set => set.id === targetSetId);
+                if (!targetSet) {
+                  alert('問題集が見つかりませんでした');
+                  return;
+                }
                 
-                alert(`問題集「${setName}」を保存しました！\n和訳・暗記・スペルタブで利用できます。`);
+                // 重複チェック
+                const existingWords = new Set(targetSet.questions.map(q => q.word.toLowerCase()));
+                const newWords = words.filter(w => !existingWords.has(w.word.toLowerCase()));
+                
+                if (newWords.length === 0) {
+                  alert('すべての単語が既に問題集に含まれています');
+                  return;
+                }
+                
+                // 問題集を更新
+                const updatedSet: QuestionSet = {
+                  ...targetSet,
+                  questions: [...targetSet.questions, ...newWords.map(w => ({
+                    word: w.word,
+                    reading: w.reading || '',
+                    meaning: w.meaning,
+                    etymology: w.etymology || '',
+                    relatedWords: w.relatedWords || '',
+                    relatedFields: w.relatedFields || '',
+                    difficulty: w.difficulty || 'intermediate'
+                  }))]
+                };
+                
+                const updatedSets = questionSets.map(set => 
+                  set.id === targetSetId ? updatedSet : set
+                );
+                setQuestionSets(updatedSets);
+                saveQuestionSets(updatedSets);
+                
+                // カスタム問題セットも更新
+                const { createReadingQuestionSet, saveCustomQuestionSet } = await import('./progressStorage');
+                const customSet = await createReadingQuestionSet(targetSet.name, updatedSet.questions);
+                customSet.id = targetSetId; // IDを保持
+                await saveCustomQuestionSet(customSet);
+                
+                alert(`✅ 問題集「${targetSet.name}」に${newWords.length}語を追加しました（重複除外: ${words.length - newWords.length}語）`);
               }
             }}
           />
