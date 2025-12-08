@@ -61,7 +61,38 @@ applyTo: 'public/data/grammar/**/*.json,public/data/*-questions-grade*.json,publ
 {"choices": ["was", "were", "am"], "correctAnswer": "was"}
 ```
 
-### 5. 重複パターンの禁止
+### 5. 選択肢の品質保証
+
+**最重要ルール**: 正解が1つなら、他の選択肢は明確に誤りでなければなりません。
+
+```json
+// ❌ NG: 説明で「thatでもwhichでも良い」と言いながら選択肢に両方ある
+{
+  "choices": ["that", "which", "who"],
+  "correctAnswer": "that",
+  "explanation": "物を指す関係代名詞。thatでもwhichでも良い。"
+}
+
+// ✅ OK: 正解が1つで、他は明確に誤り
+{
+  "choices": ["that", "who", "where"],
+  "correctAnswer": "that",
+  "explanation": "物を指す関係代名詞はthat。whoは人、whereは場所。"
+}
+
+// ✅ OK: 複数正解を認めるなら選択肢から除外
+{
+  "choices": ["that", "who", "where"],
+  "correctAnswer": "that",
+  "explanation": "物を指す関係代名詞。"
+}
+```
+
+**禁止パターン**:
+- 説明で「どちらでも良い」「両方正しい」と言いながら、その両方を選択肢に含める
+- 選択肢に文法的に正しい複数の答えがある状態
+
+### 6. 重複パターンの禁止
 
 ```json
 // ❌ NG: "To to"は重複エラー
@@ -74,10 +105,11 @@ applyTo: 'public/data/grammar/**/*.json,public/data/*-questions-grade*.json,publ
 ## 作成時の必須フロー
 
 1. 問題を作成
-2. 自己チェック（上記ルール1-5を確認）
-3. 検証スクリプト実行: `python3 scripts/validate_grammar_questions.py`
-4. エラーがなくなるまで修正とリトライ
-5. すべてのチェックを通過してからコミット
+2. **選択肢の品質確認**（問題・選択肢・正解をセットで確認）
+3. 自己チェック（上記ルール1-6を確認）
+4. 検証スクリプト実行: `python3 scripts/validate_grammar_advanced.py`
+5. エラーがなくなるまで修正とリトライ
+6. すべてのチェックを通過してからコミット
 
 ## 検証の自動化
 
@@ -98,3 +130,6 @@ applyTo: 'public/data/grammar/**/*.json,public/data/*-questions-grade*.json,publ
 - ✗ 文法用語を日本語訳として使用
 - ✗ 主語とbe動詞の不一致
 - ✗ 不定詞問題での"to"の重複
+- ✗ 選択肢の品質を確認せずに作成
+- ✗ 「どちらでも良い」と言いながら両方を選択肢に含める
+- ✗ 問題・選択肢・正解をセットで確認しない
