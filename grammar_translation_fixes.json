@@ -1,0 +1,284 @@
+{
+  "grammar_grade1_unit0.json": {
+    "g1-u0-para-002": {
+      "current": "be動詞 + not。",
+      "new": "彼は先生ではありません。",
+      "type": "paraphrase",
+      "correctAnswer": "He is not a teacher.",
+      "context": "否定文に書き換える問題"
+    },
+    "g1-u0-conv-005": {
+      "current": "疑問文への応答。",
+      "new": "はい、そうです。",
+      "type": "conversation",
+      "correctAnswer": "am",
+      "context": "Are you a student? への応答 - Yes, I am."
+    }
+  },
+  "grammar_grade1_unit1.json": {
+    "g1-u1-para-009": {
+      "current": "同義表現(like→love)。",
+      "new": "私はサッカーが大好きです。",
+      "type": "paraphrase",
+      "correctAnswer": "I love soccer.",
+      "context": "loveを使って同じような意味に書き換える"
+    }
+  },
+  "grammar_grade1_unit3.json": {
+    "g1-u3-para-001": {
+      "current": "単数→複数。",
+      "new": "これらは本です。",
+      "type": "paraphrase",
+      "correctAnswer": "These are books.",
+      "context": "This is a book. を複数形に"
+    },
+    "g1-u3-para-002": {
+      "current": "単数→複数。",
+      "new": "あれらは車です。",
+      "type": "paraphrase",
+      "correctAnswer": "Those are cars.",
+      "context": "That is a car. を複数形に"
+    },
+    "g1-u3-para-003": {
+      "current": "複数→単数。",
+      "new": "これはペンです。",
+      "type": "paraphrase",
+      "correctAnswer": "This is a pen.",
+      "context": "These are pens. を単数形に"
+    },
+    "g1-u3-para-004": {
+      "current": "near→far(単数)。",
+      "new": "あれは私のバッグです。",
+      "type": "paraphrase",
+      "correctAnswer": "That is my bag.",
+      "context": "This is my bag. の「これは」を「あれは」に"
+    },
+    "g1-u3-para-009": {
+      "current": "near→far(複数)。",
+      "new": "あれらは私の友達です。",
+      "type": "paraphrase",
+      "correctAnswer": "Those are my friends.",
+      "context": "These are my friends. の「これらは」を「あれらは」に"
+    }
+  },
+  "grammar_grade1_unit5.json": {
+    "g1-u5-para-008": {
+      "current": "can't → cannot。",
+      "new": "彼女は英語を話せません。",
+      "type": "paraphrase",
+      "correctAnswer": "She cannot speak English.",
+      "context": "can'tをcannotに書き換える"
+    }
+  },
+  "grammar_grade1_unit6.json": {
+    "g1-u6-para-014": {
+      "current": "isn't → is not。",
+      "new": "彼は寝ていません。",
+      "type": "paraphrase",
+      "correctAnswer": "He is not sleeping.",
+      "context": "短縮形を元に戻す"
+    }
+  },
+  "grammar_grade1_unit7.json": {
+    "g1-u7-para-001": {
+      "current": "平叙文→命令文。",
+      "new": "ドアを開けなさい。",
+      "type": "paraphrase",
+      "correctAnswer": "Open the door.",
+      "context": "You open the door. を命令文に"
+    },
+    "g1-u7-para-002": {
+      "current": "命令文→否定命令文。",
+      "new": "走らないでください。",
+      "type": "paraphrase",
+      "correctAnswer": "Don't run.",
+      "context": "Run. を否定の命令文に"
+    },
+    "g1-u7-para-003": {
+      "current": "否定命令文→肯定命令文。",
+      "new": "寝なさい。",
+      "type": "paraphrase",
+      "correctAnswer": "Sleep.",
+      "context": "Don't sleep. を肯定の命令文に"
+    },
+    "g1-u7-para-004": {
+      "current": "命令文→Let's。",
+      "new": "一緒にサッカーをしましょう。",
+      "type": "paraphrase",
+      "correctAnswer": "Let's play soccer.",
+      "context": "Play soccer. をLet'sの形に"
+    },
+    "g1-u7-para-006": {
+      "current": "平叙文→否定命令文。",
+      "new": "ここに座らないでください。",
+      "type": "paraphrase",
+      "correctAnswer": "Don't sit here.",
+      "context": "You sit here. を否定の命令文に"
+    },
+    "g1-u7-para-007": {
+      "current": "命令文→丁寧な依頼。",
+      "new": "窓を閉めてください。",
+      "type": "paraphrase",
+      "correctAnswer": "Please close the window.",
+      "context": "Close the window. にpleaseを付ける"
+    },
+    "g1-u7-para-008": {
+      "current": "Let's→Shall we。",
+      "new": "バスケをしましょうか。",
+      "type": "paraphrase",
+      "correctAnswer": "Shall we play basketball?",
+      "context": "Let's play basketball. をShall weの形に"
+    },
+    "g1-u7-para-010": {
+      "current": "一般動詞→be動詞の命令。",
+      "new": "注意しなさい。",
+      "type": "paraphrase",
+      "correctAnswer": "Be careful.",
+      "context": "You are careful. を命令文に"
+    },
+    "g1-u7-para-012": {
+      "current": "命令文→否定＋be動詞。",
+      "new": "うるさくしないでください。",
+      "type": "paraphrase",
+      "correctAnswer": "Don't be noisy.",
+      "context": "Be noisy. を否定の命令文に"
+    },
+    "g1-u7-para-015": {
+      "current": "命令文→Why don't you。",
+      "new": "休んだらどうですか。",
+      "type": "paraphrase",
+      "correctAnswer": "Why don't you take a rest?",
+      "context": "Take a rest. をWhy don't youの形に"
+    }
+  },
+  "grammar_grade2_unit0.json": {
+    "g2-u0-para-001": {
+      "current": "現在→過去。",
+      "new": "私は忙しかった。",
+      "type": "paraphrase",
+      "correctAnswer": "I was busy.",
+      "context": "I am busy. を過去形に"
+    },
+    "g2-u0-para-002": {
+      "current": "現在→過去。",
+      "new": "彼らは幸せでした。",
+      "type": "paraphrase",
+      "correctAnswer": "They were happy.",
+      "context": "They are happy. を過去形に"
+    },
+    "g2-u0-para-003": {
+      "current": "現在→過去。",
+      "new": "彼は疲れていました。",
+      "type": "paraphrase",
+      "correctAnswer": "He was tired.",
+      "context": "He is tired. を過去形に"
+    },
+    "g2-u0-para-004": {
+      "current": "肯定→否定。",
+      "new": "私は家にいませんでした。",
+      "type": "paraphrase",
+      "correctAnswer": "I wasn't at home.",
+      "context": "I was at home. を否定文に"
+    },
+    "g2-u0-para-005": {
+      "current": "肯定→否定。",
+      "new": "彼らは先生ではありませんでした。",
+      "type": "paraphrase",
+      "correctAnswer": "They weren't teachers.",
+      "context": "They were teachers. を否定文に"
+    },
+    "g2-u0-para-006": {
+      "current": "肯定→疑問。",
+      "new": "彼女は幸せでしたか。",
+      "type": "paraphrase",
+      "correctAnswer": "Was she happy?",
+      "context": "She was happy. を疑問文に"
+    },
+    "g2-u0-para-007": {
+      "current": "肯定→疑問。",
+      "new": "あなたは忙しかったですか。",
+      "type": "paraphrase",
+      "correctAnswer": "Were you busy?",
+      "context": "You were busy. を疑問文に"
+    },
+    "g2-u0-para-008": {
+      "current": "過去→現在。",
+      "new": "彼は先生です。",
+      "type": "paraphrase",
+      "correctAnswer": "He is a teacher.",
+      "context": "He was a teacher. を現在形に"
+    },
+    "g2-u0-para-009": {
+      "current": "過去→現在。",
+      "new": "私たちは友達です。",
+      "type": "paraphrase",
+      "correctAnswer": "We are friends.",
+      "context": "We were friends. を現在形に"
+    }
+  },
+  "grammar_grade2_unit1.json": {
+    "g2-u1-para-001": {
+      "current": "現在進行形→過去進行形。",
+      "new": "私は勉強していました。",
+      "type": "paraphrase",
+      "correctAnswer": "I was studying.",
+      "context": "I am studying. を過去進行形に"
+    },
+    "g2-u1-para-002": {
+      "current": "現在進行形→過去進行形。",
+      "new": "彼らは遊んでいました。",
+      "type": "paraphrase",
+      "correctAnswer": "They were playing.",
+      "context": "They are playing. を過去進行形に"
+    },
+    "g2-u1-para-003": {
+      "current": "現在進行形→過去進行形。",
+      "new": "彼女は読んでいました。",
+      "type": "paraphrase",
+      "correctAnswer": "She was reading.",
+      "context": "She is reading. を過去進行形に"
+    },
+    "g2-u1-para-004": {
+      "current": "肯定→否定。",
+      "new": "私はテレビを見ていませんでした。",
+      "type": "paraphrase",
+      "correctAnswer": "I wasn't watching TV.",
+      "context": "I was watching TV. を否定文に"
+    },
+    "g2-u1-para-005": {
+      "current": "肯定→否定。",
+      "new": "彼らは走っていませんでした。",
+      "type": "paraphrase",
+      "correctAnswer": "They weren't running.",
+      "context": "They were running. を否定文に"
+    },
+    "g2-u1-para-006": {
+      "current": "肯定→疑問。",
+      "new": "彼女は歌っていましたか。",
+      "type": "paraphrase",
+      "correctAnswer": "Was she singing?",
+      "context": "She was singing. を疑問文に"
+    },
+    "g2-u1-para-007": {
+      "current": "肯定→疑問。",
+      "new": "あなたは寝ていましたか。",
+      "type": "paraphrase",
+      "correctAnswer": "Were you sleeping?",
+      "context": "You were sleeping. を疑問文に"
+    },
+    "g2-u1-para-008": {
+      "current": "過去進行形→過去形。",
+      "new": "私は昼食を食べました。",
+      "type": "paraphrase",
+      "correctAnswer": "I ate lunch.",
+      "context": "I was eating lunch. を過去形に"
+    },
+    "g2-u1-para-009": {
+      "current": "過去形→過去進行形。",
+      "new": "彼女はテニスをしていました。",
+      "type": "paraphrase",
+      "correctAnswer": "She was playing tennis.",
+      "context": "She played tennis. を過去進行形に"
+    }
+  }
+}

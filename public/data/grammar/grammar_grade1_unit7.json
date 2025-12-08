@@ -458,7 +458,7 @@
     {
       "id": "g1-u7-para-001",
       "type": "paraphrase",
-      "japanese": "平叙文→命令文。",
+      "japanese": "ドアを開けなさい。",
       "originalSentence": "You open the door.",
       "question": "命令文に書き換えなさい",
       "choices": [
@@ -474,7 +474,7 @@
     {
       "id": "g1-u7-para-002",
       "type": "paraphrase",
-      "japanese": "命令文→否定命令文。",
+      "japanese": "走らないでください。",
       "originalSentence": "Run.",
       "question": "否定の命令文に書き換えなさい",
       "choices": [
@@ -490,7 +490,7 @@
     {
       "id": "g1-u7-para-003",
       "type": "paraphrase",
-      "japanese": "否定命令文→肯定命令文。",
+      "japanese": "寝なさい。",
       "originalSentence": "Don't sleep.",
       "question": "肯定の命令文に書き換えなさい",
       "choices": [
@@ -506,7 +506,7 @@
     {
       "id": "g1-u7-para-004",
       "type": "paraphrase",
-      "japanese": "命令文→Let's。",
+      "japanese": "一緒にサッカーをしましょう。",
       "originalSentence": "Play soccer.",
       "question": "「一緒にサッカーをしましょう」に書き換えなさい",
       "choices": [
@@ -522,7 +522,7 @@
     {
       "id": "g1-u7-para-005",
       "type": "paraphrase",
-      "japanese": "be動詞の命令文。",
+      "japanese": "幸せでいなさい。",
       "originalSentence": "You are happy.",
       "question": "命令文に書き換えなさい",
       "choices": [
@@ -538,7 +538,7 @@
     {
       "id": "g1-u7-para-006",
       "type": "paraphrase",
-      "japanese": "平叙文→否定命令文。",
+      "japanese": "ここに座らないでください。",
       "originalSentence": "You sit here.",
       "question": "否定の命令文に書き換えなさい",
       "choices": [
@@ -554,7 +554,7 @@
     {
       "id": "g1-u7-para-007",
       "type": "paraphrase",
-      "japanese": "命令文→丁寧な依頼。",
+      "japanese": "窓を閉めてください。",
       "originalSentence": "Close the window.",
       "question": "pleaseを使って丁寧な依頼に書き換えなさい",
       "choices": [
@@ -570,7 +570,7 @@
     {
       "id": "g1-u7-para-008",
       "type": "paraphrase",
-      "japanese": "Let's→Shall we。",
+      "japanese": "バスケをしましょうか。",
       "originalSentence": "Let's play basketball.",
       "question": "Shall weを使って書き換えなさい",
       "choices": [
@@ -602,7 +602,7 @@
     {
       "id": "g1-u7-para-010",
       "type": "paraphrase",
-      "japanese": "一般動詞→be動詞の命令。",
+      "japanese": "注意しなさい。",
       "originalSentence": "You are careful.",
       "question": "命令文に書き換えなさい",
       "choices": [
@@ -634,7 +634,7 @@
     {
       "id": "g1-u7-para-012",
       "type": "paraphrase",
-      "japanese": "命令文→否定＋be動詞。",
+      "japanese": "うるさくしないでください。",
       "originalSentence": "Be noisy.",
       "question": "否定の命令文に書き換えなさい",
       "choices": [
@@ -682,7 +682,7 @@
     {
       "id": "g1-u7-para-015",
       "type": "paraphrase",
-      "japanese": "命令文→Why don't you。",
+      "japanese": "休んだらどうですか。",
       "originalSentence": "Take a rest.",
       "question": "Why don't youを使って提案の形に",
       "choices": [
@@ -698,7 +698,7 @@
     {
       "id": "g1-u7-vf-001",
       "type": "verbForm",
-      "japanese": "命令文の動詞。",
+      "japanese": "窓を開けなさい。",
       "sentence": "____ the window.",
       "verb": "open",
       "choices": [
@@ -714,7 +714,7 @@
     {
       "id": "g1-u7-vf-002",
       "type": "verbForm",
-      "japanese": "命令文の動詞。",
+      "japanese": "英語を話しなさい。",
       "sentence": "____ English.",
       "verb": "speak",
       "choices": [
@@ -730,7 +730,7 @@
     {
       "id": "g1-u7-vf-003",
       "type": "verbForm",
-      "japanese": "be動詞の命令形。",
+      "japanese": "親切にしなさい。",
       "sentence": "____ kind.",
       "verb": "be",
       "choices": [
@@ -746,7 +746,7 @@
     {
       "id": "g1-u7-vf-004",
       "type": "verbForm",
-      "japanese": "否定命令文の動詞。",
+      "japanese": "ここに座らないで。",
       "sentence": "Don't ____ here.",
       "verb": "sit",
       "choices": [
@@ -762,7 +762,7 @@
     {
       "id": "g1-u7-vf-005",
       "type": "verbForm",
-      "japanese": "Let'sの後ろ。",
+      "japanese": "サッカーをしましょう。",
       "sentence": "Let's ____ soccer.",
       "verb": "play",
       "choices": [
@@ -778,7 +778,7 @@
     {
       "id": "g1-u7-vf-006",
       "type": "verbForm",
-      "japanese": "命令文の動詞。",
+      "japanese": "宿題をしなさい。",
       "sentence": "____ your homework.",
       "verb": "do",
       "choices": [
@@ -810,7 +810,7 @@
     {
       "id": "g1-u7-vf-008",
       "type": "verbForm",
-      "japanese": "命令文の動詞。",
+      "japanese": "遅く起きなさい。",
       "sentence": "____ up late.",
       "verb": "get",
       "choices": [
@@ -826,7 +826,7 @@
     {
       "id": "g1-u7-vf-009",
       "type": "verbForm",
-      "japanese": "Let'sの後ろ。",
+      "japanese": "学校へ行きましょう。",
       "sentence": "Let's ____ to school.",
       "verb": "go",
       "choices": [
@@ -842,7 +842,7 @@
     {
       "id": "g1-u7-vf-010",
       "type": "verbForm",
-      "japanese": "否定命令文の動詞。",
+      "japanese": "座らないで。",
       "sentence": "Don't ____ down.",
       "verb": "sit",
       "choices": [
