@@ -23,7 +23,7 @@
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
-      "explanation": "goの過去形はwent。「私は昨日東京へ行きました」。",
+      "explanation": "goの過去形はwentです。「私は昨日東京へ行きました」です。",
       "hint": "went"
     },
     {
@@ -38,7 +38,7 @@
       ],
       "correctAnswer": "came",
       "difficulty": "beginner",
-      "explanation": "comeの過去形はcame。「彼女は先週ここに来ました」。",
+      "explanation": "comeの過去形はcameです。「彼女は先週ここに来ました」です。",
       "hint": "came"
     },
     {
@@ -53,7 +53,7 @@
       ],
       "correctAnswer": "saw",
       "difficulty": "beginner",
-      "explanation": "seeの過去形はsaw。「私たちは昨日映画を見ました」。",
+      "explanation": "seeの過去形はsawです。「私たちは昨日映画を見ました」です。",
       "hint": "saw"
     },
     {
@@ -68,7 +68,7 @@
       ],
       "correctAnswer": "ate",
       "difficulty": "beginner",
-      "explanation": "eatの過去形はate。「彼は今朝朝食を食べました」。",
+      "explanation": "eatの過去形はateです。「彼は今朝朝食を食べました」です。",
       "hint": "ate"
     },
     {
@@ -83,7 +83,7 @@
       ],
       "correctAnswer": "made",
       "difficulty": "beginner",
-      "explanation": "makeの過去形はmade。「彼らは昨日ケーキを作りました」。",
+      "explanation": "makeの過去形はmadeです。「彼らは昨日ケーキを作りました」です。",
       "hint": "made"
     },
     {
@@ -98,7 +98,7 @@
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "haveの過去形はhad。「私は昨晩楽しい時間を過ごしました」。",
+      "explanation": "haveの過去形はhadです。「私は昨晩楽しい時間を過ごしました」です。",
       "hint": "had"
     },
     {
@@ -113,7 +113,7 @@
       ],
       "correctAnswer": "got",
       "difficulty": "intermediate",
-      "explanation": "getの過去形はgot。「彼女は昨日プレゼントをもらいました」。",
+      "explanation": "getの過去形はgotです。「彼女は昨日プレゼントをもらいました」です。",
       "hint": "got"
     },
     {
@@ -128,7 +128,7 @@
       ],
       "correctAnswer": "took",
       "difficulty": "intermediate",
-      "explanation": "takeの過去形はtook。「私たちは先週の日曜日に写真を撮りました」。",
+      "explanation": "takeの過去形はtookです。「私たちは先週の日曜日に写真を撮りました」です。",
       "hint": "took"
     },
     {
@@ -143,7 +143,7 @@
       ],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
-      "explanation": "buyの過去形はbought。「彼は昨日新しいパソコンを買いました」。",
+      "explanation": "buyの過去形はboughtです。「彼は昨日新しいパソコンを買いました」です。",
       "hint": "bought"
     },
     {
@@ -158,7 +158,7 @@
       ],
       "correctAnswer": "read",
       "difficulty": "intermediate",
-      "explanation": "readの過去形はread（発音が違う）。「彼らは先月その本を読みました」。",
+      "explanation": "readの過去形はread（発音が違う）です。「彼らは先月その本を読みました」です。",
       "hint": "read"
     },
     {
@@ -173,7 +173,7 @@
       ],
       "correctAnswer": "wrote",
       "difficulty": "intermediate",
-      "explanation": "writeの過去形はwrote。「私は昨日手紙を書きました」。",
+      "explanation": "writeの過去形はwroteです。「私は昨日手紙を書きました」です。",
       "hint": "wrote"
     },
     {
@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "knew",
       "difficulty": "advanced",
-      "explanation": "knowの過去形はknew。「彼女は昨日答えを知っていました」。",
+      "explanation": "knowの過去形はknewです。「彼女は昨日答えを知っていました」です。",
       "hint": "knew"
     },
     {
@@ -203,7 +203,7 @@
       ],
       "correctAnswer": "gave",
       "difficulty": "advanced",
-      "explanation": "giveの過去形はgave。「私たちは先週彼に贈り物をあげました」。",
+      "explanation": "giveの過去形はgaveです。「私たちは先週彼に贈り物をあげました」です。",
       "hint": "gave"
     },
     {
@@ -218,7 +218,7 @@
       ],
       "correctAnswer": "ran",
       "difficulty": "advanced",
-      "explanation": "runの過去形はran。「彼は昨日の朝公園で走りました」。",
+      "explanation": "runの過去形はranです。「彼は昨日の朝公園で走りました」です。",
       "hint": "ran"
     },
     {
@@ -233,7 +233,7 @@
       ],
       "correctAnswer": "found",
       "difficulty": "advanced",
-      "explanation": "findの過去形はfound。「彼らは昨晩鍵を見つけました」。",
+      "explanation": "findの過去形はfoundです。「彼らは昨晩鍵を見つけました」です。",
       "hint": "found"
     },
     {
@@ -248,7 +248,7 @@
       ],
       "correctAnswer": "I went home yesterday.",
       "difficulty": "beginner",
-      "explanation": "「私は昨日家に帰りました」。go → went。",
+      "explanation": "「私は昨日家に帰りました」です。go → wentです。",
       "hint": "went",
       "wordCount": 4
     },
@@ -264,7 +264,7 @@
       ],
       "correctAnswer": "She came to Japan.",
       "difficulty": "beginner",
-      "explanation": "「彼女は日本に来ました」。come → came。",
+      "explanation": "「彼女は日本に来ました」です。come → cameです。",
       "hint": "came",
       "wordCount": 4
     },
@@ -280,7 +280,7 @@
       ],
       "correctAnswer": "We saw him yesterday.",
       "difficulty": "beginner",
-      "explanation": "「私たちは昨日彼に会いました」。see → saw。",
+      "explanation": "「私たちは昨日彼に会いました」です。see → sawです。",
       "hint": "saw",
       "wordCount": 4
     },
@@ -296,7 +296,7 @@
       ],
       "correctAnswer": "He had lunch yesterday.",
       "difficulty": "beginner",
-      "explanation": "「彼は昨日昼食を食べました」。have → had。",
+      "explanation": "「彼は昨日昼食を食べました」です。have → hadです。",
       "hint": "had",
       "wordCount": 4
     },
@@ -312,7 +312,7 @@
       ],
       "correctAnswer": "They made cookies yesterday.",
       "difficulty": "beginner",
-      "explanation": "「彼らは昨日クッキーを作りました」。make → made。",
+      "explanation": "「彼らは昨日クッキーを作りました」です。make → madeです。",
       "hint": "made",
       "wordCount": 4
     },
@@ -329,7 +329,7 @@
       ],
       "correctAnswer": "I took this picture yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「私は昨日この写真を撮りました」。take → took。",
+      "explanation": "「私は昨日この写真を撮りました」です。take → tookです。",
       "hint": "took",
       "wordCount": 5
     },
@@ -345,7 +345,7 @@
       ],
       "correctAnswer": "She bought a book.",
       "difficulty": "intermediate",
-      "explanation": "「彼女は本を買いました」。buy → bought。",
+      "explanation": "「彼女は本を買いました」です。buy → boughtです。",
       "hint": "bought",
       "wordCount": 4
     },
@@ -362,7 +362,7 @@
       ],
       "correctAnswer": "We ate pizza last night.",
       "difficulty": "intermediate",
-      "explanation": "「私たちは昨晩ピザを食べました」。eat → ate。",
+      "explanation": "「私たちは昨晩ピザを食べました」です。eat → ateです。",
       "hint": "ate",
       "wordCount": 5
     },
@@ -379,7 +379,7 @@
       ],
       "correctAnswer": "He got up early yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「彼は昨日早く起きました」。get → got。",
+      "explanation": "「彼は昨日早く起きました」です。get → gotです。",
       "hint": "got up",
       "wordCount": 5
     },
@@ -396,7 +396,7 @@
       ],
       "correctAnswer": "They read the story yesterday.",
       "difficulty": "intermediate",
-      "explanation": "「彼らは昨日その物語を読みました」。read → read。",
+      "explanation": "「彼らは昨日その物語を読みました」です。read → readです。",
       "hint": "read",
       "wordCount": 5
     },
@@ -414,7 +414,7 @@
       ],
       "correctAnswer": "I wrote an email this morning.",
       "difficulty": "advanced",
-      "explanation": "「私は今朝メールを書きました」。write → wrote。",
+      "explanation": "「私は今朝メールを書きました」です。write → wroteです。",
       "hint": "wrote",
       "wordCount": 6
     },
@@ -431,7 +431,7 @@
       ],
       "correctAnswer": "She gave me a present.",
       "difficulty": "advanced",
-      "explanation": "「彼女は私にプレゼントをくれました」。give → gave。",
+      "explanation": "「彼女は私にプレゼントをくれました」です。give → gaveです。",
       "hint": "gave",
       "wordCount": 5
     },
@@ -449,7 +449,7 @@
       ],
       "correctAnswer": "We ran in the park yesterday.",
       "difficulty": "advanced",
-      "explanation": "「私たちは昨日公園で走りました」。run → ran。",
+      "explanation": "「私たちは昨日公園で走りました」です。run → ranです。",
       "hint": "ran",
       "wordCount": 6
     },
@@ -466,7 +466,7 @@
       ],
       "correctAnswer": "He knew the truth yesterday.",
       "difficulty": "advanced",
-      "explanation": "「彼は昨日真実を知っていました」。know → knew。",
+      "explanation": "「彼は昨日真実を知っていました」です。know → knewです。",
       "hint": "knew",
       "wordCount": 5
     },
@@ -483,7 +483,7 @@
       ],
       "correctAnswer": "They found a treasure yesterday.",
       "difficulty": "advanced",
-      "explanation": "「彼らは昨日宝物を見つけました」。find → found。",
+      "explanation": "「彼らは昨日宝物を見つけました」です。find → foundです。",
       "hint": "found",
       "wordCount": 5
     },
@@ -500,7 +500,7 @@
       ],
       "correctAnswer": "I went to school.",
       "difficulty": "beginner",
-      "explanation": "go → went。「私は学校へ行きました」。",
+      "explanation": "go → wentです。「私は学校へ行きました」です。",
       "hint": "went"
     },
     {
@@ -516,7 +516,7 @@
       ],
       "correctAnswer": "She came home.",
       "difficulty": "beginner",
-      "explanation": "come → came。「彼女は家に帰りました」。",
+      "explanation": "come → cameです。「彼女は家に帰りました」です。",
       "hint": "came"
     },
     {
@@ -532,7 +532,7 @@
       ],
       "correctAnswer": "They saw the cat.",
       "difficulty": "beginner",
-      "explanation": "see → saw。「彼らは猫を見ました」。",
+      "explanation": "see → sawです。「彼らは猫を見ました」です。",
       "hint": "saw"
     },
     {
@@ -548,7 +548,7 @@
       ],
       "correctAnswer": "We ate dinner.",
       "difficulty": "beginner",
-      "explanation": "eat → ate。「私たちは夕食を食べました」。",
+      "explanation": "eat → ateです。「私たちは夕食を食べました」です。",
       "hint": "ate"
     },
     {
@@ -564,7 +564,7 @@
       ],
       "correctAnswer": "He made a plan.",
       "difficulty": "beginner",
-      "explanation": "make → made。「彼は計画を立てました」。",
+      "explanation": "make → madeです。「彼は計画を立てました」です。",
       "hint": "made"
     },
     {
@@ -580,7 +580,7 @@
       ],
       "correctAnswer": "I buy a pen.",
       "difficulty": "intermediate",
-      "explanation": "bought → buy。yesterdayを取る。「私はペンを買います」。",
+      "explanation": "bought → buyです。yesterdayを取ります。「私はペンを買います」です。",
       "hint": "buy"
     },
     {
@@ -596,7 +596,7 @@
       ],
       "correctAnswer": "She has a dog.",
       "difficulty": "intermediate",
-      "explanation": "had → has（三人称単数）。「彼女は犬を飼っています」。",
+      "explanation": "had → has（三人称単数）です。「彼女は犬を飼っています」です。",
       "hint": "has"
     },
     {
@@ -612,7 +612,7 @@
       ],
       "correctAnswer": "Did you go to Tokyo yesterday?",
       "difficulty": "intermediate",
-      "explanation": "Did + 主語 + 原形。「あなたは昨日東京へ行きましたか」。",
+      "explanation": "Did + 主語 + 原形です。「あなたは昨日東京へ行きましたか」です。",
       "hint": "Did"
     },
     {
@@ -628,7 +628,7 @@
       ],
       "correctAnswer": "I didn't see the movie last week.",
       "difficulty": "intermediate",
-      "explanation": "didn't + 原形。「私は先週その映画を見ませんでした」。",
+      "explanation": "didn't + 原形です。「私は先週その映画を見ませんでした」です。",
       "hint": "didn't"
     },
     {
@@ -644,7 +644,7 @@
       ],
       "correctAnswer": "She didn't come here yesterday.",
       "difficulty": "intermediate",
-      "explanation": "didn't + 原形。「彼女は昨日ここに来ませんでした」。",
+      "explanation": "didn't + 原形です。「彼女は昨日ここに来ませんでした」です。",
       "hint": "didn't"
     },
     {
@@ -660,7 +660,7 @@
       ],
       "correctAnswer": "Yes, I did.",
       "difficulty": "advanced",
-      "explanation": "Did～?への答えはdidを使う。「はい、食べました」。",
+      "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。",
       "hint": "Yes, I did"
     },
     {
@@ -676,7 +676,7 @@
       ],
       "correctAnswer": "No, she didn't.",
       "difficulty": "advanced",
-      "explanation": "Didへの否定の答えはdidn't。「いいえ、行きませんでした」。",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、行きませんでした」です。",
       "hint": "No, she didn't"
     },
     {
@@ -692,7 +692,7 @@
       ],
       "correctAnswer": "I had lunch at school yesterday.",
       "difficulty": "advanced",
-      "explanation": "have → had。yesterdayを追加。「私は昨日学校で昼食を食べました」。",
+      "explanation": "have → hadです。yesterdayを追加です。「私は昨日学校で昼食を食べました」です。",
       "hint": "yesterday"
     },
     {
@@ -708,7 +708,7 @@
       ],
       "correctAnswer": "What did you buy?",
       "difficulty": "advanced",
-      "explanation": "What did + 主語 + 原形。「あなたは何を買いましたか」。",
+      "explanation": "What did + 主語 + 原形です。「あなたは何を買いましたか」です。",
       "hint": "What did"
     },
     {
@@ -724,7 +724,7 @@
       ],
       "correctAnswer": "Where did she go?",
       "difficulty": "advanced",
-      "explanation": "Where did + 主語 + 原形。「彼女はどこへ行きましたか」。",
+      "explanation": "Where did + 主語 + 原形です。「彼女はどこへ行きましたか」です。",
       "hint": "Where did"
     },
     {
@@ -740,7 +740,7 @@
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
-      "explanation": "goの過去形はwent。「私は昨日大阪へ行きました」。",
+      "explanation": "goの過去形はwentです。「私は昨日大阪へ行きました」です。",
       "hint": "went"
     },
     {
@@ -756,7 +756,7 @@
       ],
       "correctAnswer": "came",
       "difficulty": "beginner",
-      "explanation": "comeの過去形はcame。「彼女は先週私の家に来ました」。",
+      "explanation": "comeの過去形はcameです。「彼女は先週私の家に来ました」です。",
       "hint": "came"
     },
     {
@@ -772,7 +772,7 @@
       ],
       "correctAnswer": "saw",
       "difficulty": "beginner",
-      "explanation": "seeの過去形はsaw。「彼らは昨日鳥を見ました」。",
+      "explanation": "seeの過去形はsawです。「彼らは昨日鳥を見ました」です。",
       "hint": "saw"
     },
     {
@@ -788,7 +788,7 @@
       ],
       "correctAnswer": "ate",
       "difficulty": "beginner",
-      "explanation": "eatの過去形はate。「私たちは昨晩寿司を食べました」。",
+      "explanation": "eatの過去形はateです。「私たちは昨晩寿司を食べました」です。",
       "hint": "ate"
     },
     {
@@ -804,7 +804,7 @@
       ],
       "correctAnswer": "made",
       "difficulty": "intermediate",
-      "explanation": "makeの過去形はmade。「彼は昨日ロボットを作りました」。",
+      "explanation": "makeの過去形はmadeです。「彼は昨日ロボットを作りました」です。",
       "hint": "made"
     },
     {
@@ -820,7 +820,7 @@
       ],
       "correctAnswer": "had",
       "difficulty": "intermediate",
-      "explanation": "haveの過去形はhad。「私は昨晩夢を見ました」。",
+      "explanation": "haveの過去形はhadです。「私は昨晩夢を見ました」です。",
       "hint": "had"
     },
     {
@@ -836,7 +836,7 @@
       ],
       "correctAnswer": "took",
       "difficulty": "intermediate",
-      "explanation": "takeの過去形はtook。「彼女は昨日写真を撮りました」。",
+      "explanation": "takeの過去形はtookです。「彼女は昨日写真を撮りました」です。",
       "hint": "took"
     },
     {
@@ -852,7 +852,7 @@
       ],
       "correctAnswer": "bought",
       "difficulty": "advanced",
-      "explanation": "buyの過去形はbought。「彼らは昨日新しい靴を買いました」。",
+      "explanation": "buyの過去形はboughtです。「彼らは昨日新しい靴を買いました」です。",
       "hint": "bought"
     },
     {
@@ -868,7 +868,7 @@
       ],
       "correctAnswer": "read",
       "difficulty": "advanced",
-      "explanation": "readの過去形はread（発音違い）。「私たちは昨日物語を読みました」。",
+      "explanation": "readの過去形はread（発音違い）です。「私たちは昨日物語を読みました」です。",
       "hint": "read"
     },
     {
@@ -884,7 +884,7 @@
       ],
       "correctAnswer": "wrote",
       "difficulty": "advanced",
-      "explanation": "writeの過去形はwrote。「彼は昨日歌を書きました」。",
+      "explanation": "writeの過去形はwroteです。「彼は昨日歌を書きました」です。",
       "hint": "wrote"
     },
     {
@@ -909,7 +909,7 @@
       ],
       "correctAnswer": "went",
       "difficulty": "beginner",
-      "explanation": "Didで聞かれたら過去形で答える。「図書館へ行きました」。",
+      "explanation": "Didで聞かれたら過去形で答えります。「図書館へ行きました」です。",
       "hint": "went"
     },
     {
@@ -934,7 +934,7 @@
       ],
       "correctAnswer": "did",
       "difficulty": "beginner",
-      "explanation": "Did～?への答えはdidを使う。「はい、食べました」。",
+      "explanation": "Did～?への答えはdidを使います。「はい、食べました」です。",
       "hint": "did"
     },
     {
@@ -959,7 +959,7 @@
       ],
       "correctAnswer": "didn't",
       "difficulty": "intermediate",
-      "explanation": "Didへの否定の答えはdidn't。「いいえ、見ませんでした」。",
+      "explanation": "Didへの否定の答えはdidn'tです。「いいえ、見ませんでした」です。",
       "hint": "didn't"
     },
     {
@@ -984,7 +984,7 @@
       ],
       "correctAnswer": "bought",
       "difficulty": "intermediate",
-      "explanation": "Didで聞かれたら過去形で答える。「新しいバッグを買いました」。",
+      "explanation": "Didで聞かれたら過去形で答えります。「新しいバッグを買いました」です。",
       "hint": "bought"
     },
     {
@@ -1009,7 +1009,7 @@
       ],
       "correctAnswer": "go",
       "difficulty": "advanced",
-      "explanation": "didの後ろは原形。「あなたはどこへ行きましたか」。",
+      "explanation": "didの後ろは原形です。「あなたはどこへ行きましたか」です。",
       "hint": "原形"
     }
   ]
