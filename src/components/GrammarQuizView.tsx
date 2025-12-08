@@ -95,6 +95,13 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     const saved = localStorage.getItem('autoNextDelay-grammar');
     return saved ? parseInt(saved, 10) : 1500;
   });
+  
+  // 回答時自動読み上げ設定
+  const [autoReadAloud, setAutoReadAloud] = useState<boolean>(() => {
+    const saved = localStorage.getItem('autoReadAloud-grammar');
+    return saved === 'true';
+  });
+  
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
   const [_loading, setLoading] = useState<boolean>(false);
   
@@ -340,6 +347,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     const isCorrect = answer === currentQuestion.correctAnswer;
     const isDontKnow = answer === '分からない';
     
+    // 自動読み上げが有効な場合、問題と正解の英文を読み上げ
+    if (autoReadAloud && currentQuestion.sentence) {
+      setTimeout(() => {
+        const utterance = new SpeechSynthesisUtterance(currentQuestion.sentence);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+      }, 300);
+    }
+    
     setTotalAnswered(prev => prev + 1);
     
     // 応答時間を計算
@@ -398,6 +415,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             
             // 応答時間を計算
             const responseTime = Date.now() - questionStartTimeRef.current;
+            
+            // 自動読み上げが有効な場合、正解の英文を読み上げ
+            if (autoReadAloud) {
+              setTimeout(() => {
+                const utterance = new SpeechSynthesisUtterance(correctAnswer);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+              }, 300);
+            }
             
             if (isCorrect) {
               setScore(prevScore => prevScore + 1);
@@ -509,6 +536,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
             difficulty=""
             wordPhraseFilter="all"
+            autoReadAloud={autoReadAloud}
+            onAutoReadAloudChange={(enabled) => {
+              setAutoReadAloud(enabled);
+              localStorage.setItem('autoReadAloud-grammar', enabled.toString());
+            }}
           />
 
           {/* 文法クイズ中の学習設定パネル */}
