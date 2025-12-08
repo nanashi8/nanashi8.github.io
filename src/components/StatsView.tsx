@@ -81,7 +81,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     // 苦手単語に詳細情報を追加
     const weakWordsBase = getCurrentWeakWords(10);
     const weakWordsWithDetails = weakWordsBase.map(w => {
-      const questionData = allQuestions.find(q => q.word.toLowerCase() === w.word.toLowerCase());
+      const questionData = allQuestions.find(q => q.word && w.word && q.word.toLowerCase() === w.word.toLowerCase());
       return {
         ...w,
         etymology: questionData?.etymology,
