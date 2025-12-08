@@ -14,7 +14,7 @@
     {
       "id": "g1-u3-fib-001",
       "type": "fillInBlank",
-      "japanese": "これは私のペンです",
+      "japanese": "これは私のペンです。",
       "sentence": "____ is my pen.",
       "choices": [
         "This",
@@ -29,7 +29,7 @@
     {
       "id": "g1-u3-fib-002",
       "type": "fillInBlank",
-      "japanese": "あれは学校です",
+      "japanese": "あれは学校です。",
       "sentence": "____ is a school.",
       "choices": [
         "That",
@@ -44,7 +44,7 @@
     {
       "id": "g1-u3-fib-003",
       "type": "fillInBlank",
-      "japanese": "これらは本です",
+      "japanese": "これらは本です。",
       "sentence": "____ are books.",
       "choices": [
         "These",
@@ -59,7 +59,7 @@
     {
       "id": "g1-u3-fib-004",
       "type": "fillInBlank",
-      "japanese": "あれらは車です",
+      "japanese": "あれらは車です。",
       "sentence": "____ are cars.",
       "choices": [
         "Those",
@@ -74,7 +74,7 @@
     {
       "id": "g1-u3-fib-005",
       "type": "fillInBlank",
-      "japanese": "私は3冊の本を持っています",
+      "japanese": "私は3冊の本を持っています。",
       "sentence": "I have three ____.",
       "choices": [
         "books",
@@ -89,7 +89,7 @@
     {
       "id": "g1-u3-fib-006",
       "type": "fillInBlank",
-      "japanese": "これは何ですか",
+      "japanese": "これは何ですか。",
       "sentence": "What ____ this?",
       "choices": [
         "is",
@@ -104,7 +104,7 @@
     {
       "id": "g1-u3-fib-007",
       "type": "fillInBlank",
-      "japanese": "彼女は2人の兄弟がいます",
+      "japanese": "彼女は2人の兄弟がいます。",
       "sentence": "She has two ____.",
       "choices": [
         "brothers",
@@ -119,7 +119,7 @@
     {
       "id": "g1-u3-fib-008",
       "type": "fillInBlank",
-      "japanese": "あれらは何ですか",
+      "japanese": "あれらは何ですか。",
       "sentence": "What are ____?",
       "choices": [
         "those",
@@ -134,7 +134,7 @@
     {
       "id": "g1-u3-fib-009",
       "type": "fillInBlank",
-      "japanese": "私は多くの友達がいます",
+      "japanese": "私は多くの友達がいます。",
       "sentence": "I have many ____.",
       "choices": [
         "friends",
@@ -149,7 +149,7 @@
     {
       "id": "g1-u3-fib-010",
       "type": "fillInBlank",
-      "japanese": "彼は3匹の犬を飼っています",
+      "japanese": "彼は3匹の犬を飼っています。",
       "sentence": "He has three ____.",
       "choices": [
         "dogs",
@@ -164,7 +164,7 @@
     {
       "id": "g1-u3-fib-011",
       "type": "fillInBlank",
-      "japanese": "これらはトマトです",
+      "japanese": "これらはトマトです。",
       "sentence": "These are ____.",
       "choices": [
         "tomatoes",
@@ -179,7 +179,7 @@
     {
       "id": "g1-u3-fib-012",
       "type": "fillInBlank",
-      "japanese": "彼女は多くの時計を持っています",
+      "japanese": "彼女は多くの時計を持っています。",
       "sentence": "She has many ____.",
       "choices": [
         "watches",
@@ -194,7 +194,7 @@
     {
       "id": "g1-u3-fib-013",
       "type": "fillInBlank",
-      "japanese": "私は2つの箱を持っています",
+      "japanese": "私は2つの箱を持っています。",
       "sentence": "I have two ____.",
       "choices": [
         "boxes",
@@ -209,7 +209,7 @@
     {
       "id": "g1-u3-fib-014",
       "type": "fillInBlank",
-      "japanese": "彼は4人の子供がいます",
+      "japanese": "彼は4人の子供がいます。",
       "sentence": "He has four ____.",
       "choices": [
         "children",
@@ -224,7 +224,7 @@
     {
       "id": "g1-u3-fib-015",
       "type": "fillInBlank",
-      "japanese": "あれらは私の写真です",
+      "japanese": "あれらは私の写真です。",
       "sentence": "Those are my ____.",
       "choices": [
         "photos",
@@ -239,7 +239,7 @@
     {
       "id": "g1-u3-so-001",
       "type": "sentenceOrdering",
-      "japanese": "これは私のペンです",
+      "japanese": "これは私のペンです。",
       "words": [
         "my",
         "pen",
@@ -255,7 +255,7 @@
     {
       "id": "g1-u3-so-002",
       "type": "sentenceOrdering",
-      "japanese": "あれは学校です",
+      "japanese": "あれは学校です。",
       "words": [
         "school",
         "a",
@@ -271,7 +271,7 @@
     {
       "id": "g1-u3-so-003",
       "type": "sentenceOrdering",
-      "japanese": "これらは私の本です",
+      "japanese": "これらは私の本です。",
       "words": [
         "books",
         "my",
@@ -287,7 +287,7 @@
     {
       "id": "g1-u3-so-004",
       "type": "sentenceOrdering",
-      "japanese": "あれらは新しい車です",
+      "japanese": "あれらは新しい車です。",
       "words": [
         "new",
         "cars",
@@ -303,7 +303,7 @@
     {
       "id": "g1-u3-so-005",
       "type": "sentenceOrdering",
-      "japanese": "これは何ですか",
+      "japanese": "これは何ですか。",
       "words": [
         "this",
         "what",
@@ -319,7 +319,7 @@
     {
       "id": "g1-u3-so-006",
       "type": "sentenceOrdering",
-      "japanese": "私は4本のペンを持っています",
+      "japanese": "私は4本のペンを持っています。",
       "words": [
         "pens",
         "four",
@@ -335,7 +335,7 @@
     {
       "id": "g1-u3-so-007",
       "type": "sentenceOrdering",
-      "japanese": "これらは何ですか",
+      "japanese": "これらは何ですか。",
       "words": [
         "are",
         "what",
@@ -351,7 +351,7 @@
     {
       "id": "g1-u3-so-008",
       "type": "sentenceOrdering",
-      "japanese": "彼女は2人の兄弟がいます",
+      "japanese": "彼女は2人の兄弟がいます。",
       "words": [
         "brothers",
         "two",
@@ -367,7 +367,7 @@
     {
       "id": "g1-u3-so-009",
       "type": "sentenceOrdering",
-      "japanese": "これらはりんごです",
+      "japanese": "これらはりんごです。",
       "words": [
         "apples",
         "are",
@@ -382,7 +382,7 @@
     {
       "id": "g1-u3-so-010",
       "type": "sentenceOrdering",
-      "japanese": "彼女は多くの友達がいます",
+      "japanese": "彼女は多くの友達がいます。",
       "words": [
         "friends",
         "many",
@@ -398,7 +398,7 @@
     {
       "id": "g1-u3-so-011",
       "type": "sentenceOrdering",
-      "japanese": "あれは私の学校です",
+      "japanese": "あれは私の学校です。",
       "words": [
         "my",
         "school",
@@ -414,7 +414,7 @@
     {
       "id": "g1-u3-so-012",
       "type": "sentenceOrdering",
-      "japanese": "これらは赤いトマトです",
+      "japanese": "これらは赤いトマトです。",
       "words": [
         "red",
         "tomatoes",
@@ -430,7 +430,7 @@
     {
       "id": "g1-u3-so-013",
       "type": "sentenceOrdering",
-      "japanese": "彼は2人の子供がいます",
+      "japanese": "彼は2人の子供がいます。",
       "words": [
         "children",
         "two",
@@ -446,7 +446,7 @@
     {
       "id": "g1-u3-so-014",
       "type": "sentenceOrdering",
-      "japanese": "彼女は3つの箱を持っています",
+      "japanese": "彼女は3つの箱を持っています。",
       "words": [
         "boxes",
         "three",
@@ -462,7 +462,7 @@
     {
       "id": "g1-u3-so-015",
       "type": "sentenceOrdering",
-      "japanese": "あれらは彼女の時計です",
+      "japanese": "あれらは彼女の時計です。",
       "words": [
         "her",
         "watches",
@@ -478,7 +478,7 @@
     {
       "id": "g1-u3-para-001",
       "type": "paraphrase",
-      "japanese": "単数→複数",
+      "japanese": "単数→複数。",
       "originalSentence": "This is a book.",
       "question": "複数形に書き換えなさい",
       "choices": [
@@ -494,7 +494,7 @@
     {
       "id": "g1-u3-para-002",
       "type": "paraphrase",
-      "japanese": "単数→複数",
+      "japanese": "単数→複数。",
       "originalSentence": "That is a car.",
       "question": "複数形に書き換えなさい",
       "choices": [
@@ -510,7 +510,7 @@
     {
       "id": "g1-u3-para-003",
       "type": "paraphrase",
-      "japanese": "複数→単数",
+      "japanese": "複数→単数。",
       "originalSentence": "These are pens.",
       "question": "単数形に書き換えなさい",
       "choices": [
@@ -526,7 +526,7 @@
     {
       "id": "g1-u3-para-004",
       "type": "paraphrase",
-      "japanese": "near→far（単数）",
+      "japanese": "near→far（単数）。",
       "originalSentence": "This is my bag.",
       "question": "「あれは」に変えて書き換えなさい",
       "choices": [
@@ -542,7 +542,7 @@
     {
       "id": "g1-u3-para-005",
       "type": "paraphrase",
-      "japanese": "これらは何ですか",
+      "japanese": "これらは何ですか。",
       "originalSentence": "These are dogs.",
       "question": "「これらは何ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -558,7 +558,7 @@
     {
       "id": "g1-u3-para-006",
       "type": "paraphrase",
-      "japanese": "あれらは何ですか",
+      "japanese": "あれらは何ですか。",
       "originalSentence": "Those are books.",
       "question": "「あれらは何ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -574,7 +574,7 @@
     {
       "id": "g1-u3-para-007",
       "type": "paraphrase",
-      "japanese": "これらは私のペンです",
+      "japanese": "これらは私のペンです。",
       "originalSentence": "These are pens.",
       "question": "「私の」を加えて書き換えなさい",
       "choices": [
@@ -590,7 +590,7 @@
     {
       "id": "g1-u3-para-008",
       "type": "paraphrase",
-      "japanese": "私は3冊の本を持っています",
+      "japanese": "私は3冊の本を持っています。",
       "originalSentence": "I have books.",
       "question": "「3冊の」を加えて書き換えなさい",
       "choices": [
@@ -606,7 +606,7 @@
     {
       "id": "g1-u3-para-009",
       "type": "paraphrase",
-      "japanese": "near→far（複数）",
+      "japanese": "near→far（複数）。",
       "originalSentence": "These are my friends.",
       "question": "「あれらは」に変えて書き換えなさい",
       "choices": [
@@ -622,7 +622,7 @@
     {
       "id": "g1-u3-para-010",
       "type": "paraphrase",
-      "japanese": "複数形の変化（-es）",
+      "japanese": "複数形の変化（-es）。",
       "originalSentence": "I have a box.",
       "question": "「2つの」を加えて書き換えなさい",
       "choices": [
@@ -638,7 +638,7 @@
     {
       "id": "g1-u3-para-011",
       "type": "paraphrase",
-      "japanese": "不規則複数形",
+      "japanese": "不規則複数形。",
       "originalSentence": "He has a child.",
       "question": "「3人の」を加えて書き換えなさい",
       "choices": [
@@ -654,7 +654,7 @@
     {
       "id": "g1-u3-para-012",
       "type": "paraphrase",
-      "japanese": "複数形の変化（-o→-es）",
+      "japanese": "複数形の変化（-o→-es）。",
       "originalSentence": "This is a tomato.",
       "question": "複数形に書き換えなさい",
       "choices": [
@@ -670,7 +670,7 @@
     {
       "id": "g1-u3-para-013",
       "type": "paraphrase",
-      "japanese": "私はたくさんの友達がいます",
+      "japanese": "私はたくさんの友達がいます。",
       "originalSentence": "I have friends.",
       "question": "「たくさんの」を加えて書き換えなさい",
       "choices": [
@@ -686,7 +686,7 @@
     {
       "id": "g1-u3-para-014",
       "type": "paraphrase",
-      "japanese": "複数形の変化（-ch→-es）",
+      "japanese": "複数形の変化（-ch→-es）。",
       "originalSentence": "She has a watch.",
       "question": "「2つの」を加えて書き換えなさい",
       "choices": [
@@ -702,7 +702,7 @@
     {
       "id": "g1-u3-para-015",
       "type": "paraphrase",
-      "japanese": "例外の複数形",
+      "japanese": "例外の複数形。",
       "originalSentence": "I have a piano.",
       "question": "「2つの」を加えて書き換えなさい",
       "choices": [
@@ -718,7 +718,7 @@
     {
       "id": "g1-u3-vf-001",
       "type": "verbForm",
-      "japanese": "bookの複数形（We版）",
+      "japanese": "bookの複数形（We版）。",
       "sentence": "We have three ____.",
       "verb": "book",
       "choices": [
@@ -734,7 +734,7 @@
     {
       "id": "g1-u3-vf-002",
       "type": "verbForm",
-      "japanese": "carの複数形（Those版）",
+      "japanese": "carの複数形（Those版）。",
       "sentence": "Those are ____.",
       "verb": "car",
       "choices": [
@@ -750,7 +750,7 @@
     {
       "id": "g1-u3-vf-003",
       "type": "verbForm",
-      "japanese": "boxの複数形（They版）",
+      "japanese": "boxの複数形（They版）。",
       "sentence": "They have two ____.",
       "verb": "box",
       "choices": [
@@ -766,7 +766,7 @@
     {
       "id": "g1-u3-vf-004",
       "type": "verbForm",
-      "japanese": "watchの複数形",
+      "japanese": "watchの複数形。",
       "sentence": "He has many ____.",
       "verb": "watch",
       "choices": [
@@ -782,7 +782,7 @@
     {
       "id": "g1-u3-vf-005",
       "type": "verbForm",
-      "japanese": "tomatoの複数形",
+      "japanese": "tomatoの複数形。",
       "sentence": "I like ____.",
       "verb": "tomato",
       "choices": [
@@ -798,7 +798,7 @@
     {
       "id": "g1-u3-vf-006",
       "type": "verbForm",
-      "japanese": "cityの複数形",
+      "japanese": "cityの複数形。",
       "sentence": "I visited two ____.",
       "verb": "city",
       "choices": [
@@ -814,7 +814,7 @@
     {
       "id": "g1-u3-vf-007",
       "type": "verbForm",
-      "japanese": "childの複数形",
+      "japanese": "childの複数形。",
       "sentence": "They have three ____.",
       "verb": "child",
       "choices": [
@@ -830,7 +830,7 @@
     {
       "id": "g1-u3-vf-008",
       "type": "verbForm",
-      "japanese": "pianoの複数形",
+      "japanese": "pianoの複数形。",
       "sentence": "We have two ____.",
       "verb": "piano",
       "choices": [
@@ -846,7 +846,7 @@
     {
       "id": "g1-u3-vf-009",
       "type": "verbForm",
-      "japanese": "dishの複数形",
+      "japanese": "dishの複数形。",
       "sentence": "She washes the ____.",
       "verb": "dish",
       "choices": [
@@ -862,7 +862,7 @@
     {
       "id": "g1-u3-vf-010",
       "type": "verbForm",
-      "japanese": "leafの複数形",
+      "japanese": "leafの複数形。",
       "sentence": "The tree has many ____.",
       "verb": "leaf",
       "choices": [
@@ -878,7 +878,7 @@
     {
       "id": "g1-u3-conv-001",
       "type": "conversation",
-      "japanese": "近くのものを指す",
+      "japanese": "近くのものを指す。",
       "situation": "目の前のものについて話す場面",
       "dialogue": [
         {
@@ -903,7 +903,7 @@
     {
       "id": "g1-u3-conv-002",
       "type": "conversation",
-      "japanese": "遠くのものを尋ねる",
+      "japanese": "遠くのものを尋ねる。",
       "situation": "遠くのものについて尋ねる場面",
       "dialogue": [
         {
@@ -928,7 +928,7 @@
     {
       "id": "g1-u3-conv-003",
       "type": "conversation",
-      "japanese": "数を答える",
+      "japanese": "数を答える。",
       "situation": "持っているものの数を答える場面",
       "dialogue": [
         {
@@ -953,7 +953,7 @@
     {
       "id": "g1-u3-conv-004",
       "type": "conversation",
-      "japanese": "複数のものについて話す",
+      "japanese": "複数のものについて話す。",
       "situation": "複数のものを見せる場面",
       "dialogue": [
         {
@@ -978,7 +978,7 @@
     {
       "id": "g1-u3-conv-005",
       "type": "conversation",
-      "japanese": "不規則複数形を使う",
+      "japanese": "不規則複数形を使う。",
       "situation": "家族について話す場面",
       "dialogue": [
         {
@@ -1003,7 +1003,7 @@
     {
       "id": "g1-u3-howmany-001",
       "type": "fillInBlank",
-      "japanese": "あなたは何冊の本を持っていますか",
+      "japanese": "あなたは何冊の本を持っていますか。",
       "sentence": "____ ____ books do you have?",
       "choices": [
         "How many",
@@ -1018,7 +1018,7 @@
     {
       "id": "g1-u3-howmany-002",
       "type": "sentenceOrdering",
-      "japanese": "あなたには何人の兄弟がいますか",
+      "japanese": "あなたには何人の兄弟がいますか。",
       "words": [
         "how",
         "many",
@@ -1036,7 +1036,7 @@
     {
       "id": "g1-u3-howmany-003",
       "type": "fillInBlank",
-      "japanese": "教室には何人の生徒がいますか",
+      "japanese": "教室には何人の生徒がいますか。",
       "sentence": "How many ____ are there in the classroom?",
       "choices": [
         "students",
@@ -1051,7 +1051,7 @@
     {
       "id": "g1-u3-howmany-004",
       "type": "conversation",
-      "japanese": "何個のりんごが欲しいですか",
+      "japanese": "何個のりんごが欲しいですか。",
       "situation": "買い物で",
       "dialogue": [
         {
@@ -1076,7 +1076,7 @@
     {
       "id": "g1-u3-howmany-005",
       "type": "sentenceOrdering",
-      "japanese": "テーブルの上に何本のペンがありますか",
+      "japanese": "テーブルの上に何本のペンがありますか。",
       "words": [
         "how",
         "many",

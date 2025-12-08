@@ -14,7 +14,7 @@
     {
       "id": "g2-u4-fib-001",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め1",
+      "japanese": "不定詞穴埋め1。",
       "sentence": "Example sentence 1 with ____ blank.",
       "choices": [
         "choice1",
@@ -29,7 +29,7 @@
     {
       "id": "g2-u4-fib-002",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め2",
+      "japanese": "不定詞穴埋め2。",
       "sentence": "Example sentence 2 with ____ blank.",
       "choices": [
         "choice1",
@@ -44,7 +44,7 @@
     {
       "id": "g2-u4-fib-003",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め3",
+      "japanese": "不定詞穴埋め3。",
       "sentence": "Example sentence 3 with ____ blank.",
       "choices": [
         "choice1",
@@ -59,7 +59,7 @@
     {
       "id": "g2-u4-fib-004",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め4",
+      "japanese": "不定詞穴埋め4。",
       "sentence": "Example sentence 4 with ____ blank.",
       "choices": [
         "choice1",
@@ -74,7 +74,7 @@
     {
       "id": "g2-u4-fib-005",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め5",
+      "japanese": "不定詞穴埋め5。",
       "sentence": "Example sentence 5 with ____ blank.",
       "choices": [
         "choice1",
@@ -89,7 +89,7 @@
     {
       "id": "g2-u4-fib-006",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め6",
+      "japanese": "不定詞穴埋め6。",
       "sentence": "Example sentence 6 with ____ blank.",
       "choices": [
         "choice1",
@@ -104,7 +104,7 @@
     {
       "id": "g2-u4-fib-007",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め7",
+      "japanese": "不定詞穴埋め7。",
       "sentence": "Example sentence 7 with ____ blank.",
       "choices": [
         "choice1",
@@ -119,7 +119,7 @@
     {
       "id": "g2-u4-fib-008",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め8",
+      "japanese": "不定詞穴埋め8。",
       "sentence": "Example sentence 8 with ____ blank.",
       "choices": [
         "choice1",
@@ -134,7 +134,7 @@
     {
       "id": "g2-u4-fib-009",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め9",
+      "japanese": "不定詞穴埋め9。",
       "sentence": "Example sentence 9 with ____ blank.",
       "choices": [
         "choice1",
@@ -149,7 +149,7 @@
     {
       "id": "g2-u4-fib-010",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め10",
+      "japanese": "不定詞穴埋め10。",
       "sentence": "Example sentence 10 with ____ blank.",
       "choices": [
         "choice1",
@@ -164,7 +164,7 @@
     {
       "id": "g2-u4-fib-011",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め11",
+      "japanese": "不定詞穴埋め11。",
       "sentence": "Example sentence 11 with ____ blank.",
       "choices": [
         "choice1",
@@ -179,7 +179,7 @@
     {
       "id": "g2-u4-fib-012",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め12",
+      "japanese": "不定詞穴埋め12。",
       "sentence": "Example sentence 12 with ____ blank.",
       "choices": [
         "choice1",
@@ -194,7 +194,7 @@
     {
       "id": "g2-u4-fib-013",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め13",
+      "japanese": "不定詞穴埋め13。",
       "sentence": "Example sentence 13 with ____ blank.",
       "choices": [
         "choice1",
@@ -209,7 +209,7 @@
     {
       "id": "g2-u4-fib-014",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め14",
+      "japanese": "不定詞穴埋め14。",
       "sentence": "Example sentence 14 with ____ blank.",
       "choices": [
         "choice1",
@@ -224,7 +224,7 @@
     {
       "id": "g2-u4-fib-015",
       "type": "fillInBlank",
-      "japanese": "不定詞穴埋め15",
+      "japanese": "不定詞穴埋め15。",
       "sentence": "Example sentence 15 with ____ blank.",
       "choices": [
         "choice1",
@@ -239,7 +239,7 @@
     {
       "id": "g2-u4-so-001",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え1",
+      "japanese": "不定詞並べ替え1。",
       "words": [
         "word1",
         "word2",
@@ -254,7 +254,7 @@
     {
       "id": "g2-u4-so-002",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え2",
+      "japanese": "不定詞並べ替え2。",
       "words": [
         "word1",
         "word2",
@@ -269,7 +269,7 @@
     {
       "id": "g2-u4-so-003",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え3",
+      "japanese": "不定詞並べ替え3。",
       "words": [
         "word1",
         "word2",
@@ -284,7 +284,7 @@
     {
       "id": "g2-u4-so-004",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え4",
+      "japanese": "不定詞並べ替え4。",
       "words": [
         "word1",
         "word2",
@@ -299,7 +299,7 @@
     {
       "id": "g2-u4-so-005",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え5",
+      "japanese": "不定詞並べ替え5。",
       "words": [
         "word1",
         "word2",
@@ -314,7 +314,7 @@
     {
       "id": "g2-u4-so-006",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え6",
+      "japanese": "不定詞並べ替え6。",
       "words": [
         "word1",
         "word2",
@@ -329,7 +329,7 @@
     {
       "id": "g2-u4-so-007",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え7",
+      "japanese": "不定詞並べ替え7。",
       "words": [
         "word1",
         "word2",
@@ -344,7 +344,7 @@
     {
       "id": "g2-u4-so-008",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え8",
+      "japanese": "不定詞並べ替え8。",
       "words": [
         "word1",
         "word2",
@@ -359,7 +359,7 @@
     {
       "id": "g2-u4-so-009",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え9",
+      "japanese": "不定詞並べ替え9。",
       "words": [
         "word1",
         "word2",
@@ -374,7 +374,7 @@
     {
       "id": "g2-u4-so-010",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え10",
+      "japanese": "不定詞並べ替え10。",
       "words": [
         "word1",
         "word2",
@@ -389,7 +389,7 @@
     {
       "id": "g2-u4-so-011",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え11",
+      "japanese": "不定詞並べ替え11。",
       "words": [
         "word1",
         "word2",
@@ -404,7 +404,7 @@
     {
       "id": "g2-u4-so-012",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え12",
+      "japanese": "不定詞並べ替え12。",
       "words": [
         "word1",
         "word2",
@@ -419,7 +419,7 @@
     {
       "id": "g2-u4-so-013",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え13",
+      "japanese": "不定詞並べ替え13。",
       "words": [
         "word1",
         "word2",
@@ -434,7 +434,7 @@
     {
       "id": "g2-u4-so-014",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え14",
+      "japanese": "不定詞並べ替え14。",
       "words": [
         "word1",
         "word2",
@@ -449,7 +449,7 @@
     {
       "id": "g2-u4-so-015",
       "type": "sentenceOrdering",
-      "japanese": "不定詞並べ替え15",
+      "japanese": "不定詞並べ替え15。",
       "words": [
         "word1",
         "word2",
@@ -464,7 +464,7 @@
     {
       "id": "g2-u4-para-001",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え1",
+      "japanese": "不定詞言い換え1。",
       "originalSentence": "Original sentence 1.",
       "question": "書き換えなさい",
       "choices": [
@@ -480,7 +480,7 @@
     {
       "id": "g2-u4-para-002",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え2",
+      "japanese": "不定詞言い換え2。",
       "originalSentence": "Original sentence 2.",
       "question": "書き換えなさい",
       "choices": [
@@ -496,7 +496,7 @@
     {
       "id": "g2-u4-para-003",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え3",
+      "japanese": "不定詞言い換え3。",
       "originalSentence": "Original sentence 3.",
       "question": "書き換えなさい",
       "choices": [
@@ -512,7 +512,7 @@
     {
       "id": "g2-u4-para-004",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え4",
+      "japanese": "不定詞言い換え4。",
       "originalSentence": "Original sentence 4.",
       "question": "書き換えなさい",
       "choices": [
@@ -528,7 +528,7 @@
     {
       "id": "g2-u4-para-005",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え5",
+      "japanese": "不定詞言い換え5。",
       "originalSentence": "Original sentence 5.",
       "question": "書き換えなさい",
       "choices": [
@@ -544,7 +544,7 @@
     {
       "id": "g2-u4-para-006",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え6",
+      "japanese": "不定詞言い換え6。",
       "originalSentence": "Original sentence 6.",
       "question": "書き換えなさい",
       "choices": [
@@ -560,7 +560,7 @@
     {
       "id": "g2-u4-para-007",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え7",
+      "japanese": "不定詞言い換え7。",
       "originalSentence": "Original sentence 7.",
       "question": "書き換えなさい",
       "choices": [
@@ -576,7 +576,7 @@
     {
       "id": "g2-u4-para-008",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え8",
+      "japanese": "不定詞言い換え8。",
       "originalSentence": "Original sentence 8.",
       "question": "書き換えなさい",
       "choices": [
@@ -592,7 +592,7 @@
     {
       "id": "g2-u4-para-009",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え9",
+      "japanese": "不定詞言い換え9。",
       "originalSentence": "Original sentence 9.",
       "question": "書き換えなさい",
       "choices": [
@@ -608,7 +608,7 @@
     {
       "id": "g2-u4-para-010",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え10",
+      "japanese": "不定詞言い換え10。",
       "originalSentence": "Original sentence 10.",
       "question": "書き換えなさい",
       "choices": [
@@ -624,7 +624,7 @@
     {
       "id": "g2-u4-para-011",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え11",
+      "japanese": "不定詞言い換え11。",
       "originalSentence": "Original sentence 11.",
       "question": "書き換えなさい",
       "choices": [
@@ -640,7 +640,7 @@
     {
       "id": "g2-u4-para-012",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え12",
+      "japanese": "不定詞言い換え12。",
       "originalSentence": "Original sentence 12.",
       "question": "書き換えなさい",
       "choices": [
@@ -656,7 +656,7 @@
     {
       "id": "g2-u4-para-013",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え13",
+      "japanese": "不定詞言い換え13。",
       "originalSentence": "Original sentence 13.",
       "question": "書き換えなさい",
       "choices": [
@@ -672,7 +672,7 @@
     {
       "id": "g2-u4-para-014",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え14",
+      "japanese": "不定詞言い換え14。",
       "originalSentence": "Original sentence 14.",
       "question": "書き換えなさい",
       "choices": [
@@ -688,7 +688,7 @@
     {
       "id": "g2-u4-para-015",
       "type": "paraphrase",
-      "japanese": "不定詞言い換え15",
+      "japanese": "不定詞言い換え15。",
       "originalSentence": "Original sentence 15.",
       "question": "書き換えなさい",
       "choices": [
@@ -704,7 +704,7 @@
     {
       "id": "g2-u4-conv-001",
       "type": "conversation",
-      "japanese": "不定詞会話1",
+      "japanese": "不定詞会話1。",
       "situation": "状況1",
       "dialogue": [
         {
@@ -729,7 +729,7 @@
     {
       "id": "g2-u4-conv-002",
       "type": "conversation",
-      "japanese": "不定詞会話2",
+      "japanese": "不定詞会話2。",
       "situation": "状況2",
       "dialogue": [
         {
@@ -754,7 +754,7 @@
     {
       "id": "g2-u4-conv-003",
       "type": "conversation",
-      "japanese": "不定詞会話3",
+      "japanese": "不定詞会話3。",
       "situation": "状況3",
       "dialogue": [
         {
@@ -779,7 +779,7 @@
     {
       "id": "g2-u4-conv-004",
       "type": "conversation",
-      "japanese": "不定詞会話4",
+      "japanese": "不定詞会話4。",
       "situation": "状況4",
       "dialogue": [
         {
@@ -804,7 +804,7 @@
     {
       "id": "g2-u4-conv-005",
       "type": "conversation",
-      "japanese": "不定詞会話5",
+      "japanese": "不定詞会話5。",
       "situation": "状況5",
       "dialogue": [
         {
@@ -829,7 +829,7 @@
     {
       "id": "g2-u4-ask-001",
       "type": "fillInBlank",
-      "japanese": "彼は私に手伝ってくれるよう頼みました",
+      "japanese": "彼は私に手伝ってくれるよう頼みました。",
       "sentence": "He ____ me to help him.",
       "choices": [
         "asked",
@@ -844,7 +844,7 @@
     {
       "id": "g2-u4-ask-002",
       "type": "sentenceOrdering",
-      "japanese": "私は彼女に窓を開けてくれるよう頼みました",
+      "japanese": "私は彼女に窓を開けてくれるよう頼みました。",
       "words": [
         "I",
         "asked",
@@ -863,7 +863,7 @@
     {
       "id": "g2-u4-ask-003",
       "type": "fillInBlank",
-      "japanese": "先生は私たちに宿題を終えるよう頼みました",
+      "japanese": "先生は私たちに宿題を終えるよう頼みました。",
       "sentence": "The teacher asked us ____ finish our homework.",
       "choices": [
         "to",
@@ -878,7 +878,7 @@
     {
       "id": "g2-u4-ask-004",
       "type": "paraphrase",
-      "japanese": "彼女は私に静かにするよう頼みました（be quiet）",
+      "japanese": "彼女は私に静かにするよう頼みました（be quiet）。",
       "originalSentence": "She said to me, 'Please be quiet.'",
       "question": "She asked me ____.",
       "correctAnswer": "to be quiet",
@@ -888,7 +888,7 @@
     {
       "id": "g2-u4-ask-005",
       "type": "fillInBlank",
-      "japanese": "私は彼に質問に答えてくれるよう頼みました",
+      "japanese": "私は彼に質問に答えてくれるよう頼みました。",
       "sentence": "I ____ him to answer my question.",
       "choices": [
         "asked",
@@ -903,7 +903,7 @@
     {
       "id": "g2-u4-tell-001",
       "type": "fillInBlank",
-      "japanese": "母は私に部屋を掃除するよう言いました",
+      "japanese": "母は私に部屋を掃除するよう言いました。",
       "sentence": "My mother ____ me to clean my room.",
       "choices": [
         "told",
@@ -918,7 +918,7 @@
     {
       "id": "g2-u4-tell-002",
       "type": "sentenceOrdering",
-      "japanese": "父は私に早く寝るよう言いました",
+      "japanese": "父は私に早く寝るよう言いました。",
       "words": [
         "my",
         "father",
@@ -939,7 +939,7 @@
     {
       "id": "g2-u4-tell-003",
       "type": "fillInBlank",
-      "japanese": "彼は私に真実を話すよう言いました",
+      "japanese": "彼は私に真実を話すよう言いました。",
       "sentence": "He told me ____ tell the truth.",
       "choices": [
         "to",
@@ -954,7 +954,7 @@
     {
       "id": "g2-u4-tell-004",
       "type": "paraphrase",
-      "japanese": "先生は私たちに静かにするよう言いました（be quiet）",
+      "japanese": "先生は私たちに静かにするよう言いました（be quiet）。",
       "originalSentence": "The teacher said to us, 'Be quiet.'",
       "question": "The teacher told us ____.",
       "correctAnswer": "to be quiet",
@@ -964,7 +964,7 @@
     {
       "id": "g2-u4-tell-005",
       "type": "fillInBlank",
-      "japanese": "医者は彼に薬を飲むよう言いました",
+      "japanese": "医者は彼に薬を飲むよう言いました。",
       "sentence": "The doctor ____ him to take the medicine.",
       "choices": [
         "told",
@@ -979,7 +979,7 @@
     {
       "id": "g2-u4-want-001",
       "type": "fillInBlank",
-      "japanese": "私は彼に来てほしい",
+      "japanese": "私は彼に来てほしい。",
       "sentence": "I ____ him to come.",
       "choices": [
         "want",
@@ -994,7 +994,7 @@
     {
       "id": "g2-u4-want-002",
       "type": "sentenceOrdering",
-      "japanese": "彼女は私に手紙を書いてほしい",
+      "japanese": "彼女は私に手紙を書いてほしい。",
       "words": [
         "she",
         "wants",
@@ -1013,7 +1013,7 @@
     {
       "id": "g2-u4-want-003",
       "type": "fillInBlank",
-      "japanese": "私は彼女に幸せになってほしい",
+      "japanese": "私は彼女に幸せになってほしい。",
       "sentence": "I want her ____ be happy.",
       "choices": [
         "to",
@@ -1028,7 +1028,7 @@
     {
       "id": "g2-u4-want-004",
       "type": "paraphrase",
-      "japanese": "彼は私に一緒に行ってほしい（go with him）",
+      "japanese": "彼は私に一緒に行ってほしい（go with him）。",
       "originalSentence": "He hopes I will go with him.",
       "question": "He wants me ____.",
       "correctAnswer": "to go with him",
@@ -1038,7 +1038,7 @@
     {
       "id": "g2-u4-want-005",
       "type": "conversation",
-      "japanese": "あなたに英語を勉強してほしい",
+      "japanese": "あなたに英語を勉強してほしい。",
       "situation": "親が子供に",
       "dialogue": [
         {
@@ -1063,7 +1063,7 @@
     {
       "id": "g2-u4-takes-001",
       "type": "fillInBlank",
-      "japanese": "学校まで30分かかります",
+      "japanese": "学校まで30分かかります。",
       "sentence": "It ____ me 30 minutes to get to school.",
       "choices": [
         "takes",
@@ -1078,7 +1078,7 @@
     {
       "id": "g2-u4-takes-002",
       "type": "sentenceOrdering",
-      "japanese": "その仕事をするのに2時間かかりました",
+      "japanese": "その仕事をするのに2時間かかりました。",
       "words": [
         "it",
         "took",
@@ -1099,7 +1099,7 @@
     {
       "id": "g2-u4-takes-003",
       "type": "fillInBlank",
-      "japanese": "東京まで行くのに3時間かかります",
+      "japanese": "東京まで行くのに3時間かかります。",
       "sentence": "It takes three hours ____ get to Tokyo.",
       "choices": [
         "to",
@@ -1114,7 +1114,7 @@
     {
       "id": "g2-u4-takes-004",
       "type": "conversation",
-      "japanese": "宿題をするのにどれくらいかかりますか",
+      "japanese": "宿題をするのにどれくらいかかりますか。",
       "situation": "時間について",
       "dialogue": [
         {
@@ -1139,7 +1139,7 @@
     {
       "id": "g2-u4-takes-005",
       "type": "paraphrase",
-      "japanese": "私は学校まで20分かかります（20 minutes, get）",
+      "japanese": "私は学校まで20分かかります（20 minutes, get）。",
       "originalSentence": "I need 20 minutes to get to school.",
       "question": "It ____ me ____ to get to school.",
       "correctAnswer": "takes 20 minutes",
@@ -1149,7 +1149,7 @@
     {
       "id": "g2-u4-takes-006",
       "type": "fillInBlank",
-      "japanese": "この本を読むのに1週間かかりました",
+      "japanese": "この本を読むのに1週間かかりました。",
       "sentence": "It ____ me a week to read this book.",
       "choices": [
         "took",
@@ -1164,7 +1164,7 @@
     {
       "id": "g2-u4-takes-007",
       "type": "sentenceOrdering",
-      "japanese": "駅まで歩いて10分かかります",
+      "japanese": "駅まで歩いて10分かかります。",
       "words": [
         "it",
         "takes",
@@ -1185,7 +1185,7 @@
     {
       "id": "g2-u4-takes-008",
       "type": "fillInBlank",
-      "japanese": "料理を作るのにどれくらいかかりましたか",
+      "japanese": "料理を作るのにどれくらいかかりましたか。",
       "sentence": "How long did it ____ to cook the meal?",
       "choices": [
         "take",
@@ -1200,7 +1200,7 @@
     {
       "id": "g2-u4-takes-009",
       "type": "sentenceOrdering",
-      "japanese": "彼女は準備するのに30分かかります",
+      "japanese": "彼女は準備するのに30分かかります。",
       "words": [
         "it",
         "takes",
@@ -1220,7 +1220,7 @@
     {
       "id": "g2-u4-takes-010",
       "type": "fillInBlank",
-      "japanese": "英語を習得するのに何年もかかります",
+      "japanese": "英語を習得するのに何年もかかります。",
       "sentence": "It ____ many years to learn English.",
       "choices": [
         "takes",
@@ -1235,7 +1235,7 @@
     {
       "id": "g2-u4-takes-011",
       "type": "conversation",
-      "japanese": "空港まで車で1時間かかります",
+      "japanese": "空港まで車で1時間かかります。",
       "situation": "移動時間",
       "dialogue": [
         {
@@ -1260,7 +1260,7 @@
     {
       "id": "g2-u4-takes-012",
       "type": "fillInBlank",
-      "japanese": "試験に合格するのに長い時間がかかりました",
+      "japanese": "試験に合格するのに長い時間がかかりました。",
       "sentence": "It took a long time ____ pass the exam.",
       "choices": [
         "to",
@@ -1275,7 +1275,7 @@
     {
       "id": "g2-u4-spend-001",
       "type": "fillInBlank",
-      "japanese": "私は宿題に2時間を費やしました",
+      "japanese": "私は宿題に2時間を費やしました。",
       "sentence": "I spent two hours ____ my homework.",
       "choices": [
         "on",
@@ -1290,7 +1290,7 @@
     {
       "id": "g2-u4-spend-002",
       "type": "fillInBlank",
-      "japanese": "彼女は本を読むのに1時間を費やしました",
+      "japanese": "彼女は本を読むのに1時間を費やしました。",
       "sentence": "She spent an hour ____ a book.",
       "choices": [
         "reading",
@@ -1305,7 +1305,7 @@
     {
       "id": "g2-u4-spend-003",
       "type": "sentenceOrdering",
-      "japanese": "私は買い物に100ドル使いました",
+      "japanese": "私は買い物に100ドル使いました。",
       "words": [
         "I",
         "spent",
@@ -1323,7 +1323,7 @@
     {
       "id": "g2-u4-spend-004",
       "type": "paraphrase",
-      "japanese": "私は勉強に3時間かかりました（studying）",
+      "japanese": "私は勉強に3時間かかりました（studying）。",
       "originalSentence": "It took me three hours to study.",
       "question": "I spent three hours ____.",
       "correctAnswer": "studying",
@@ -1333,7 +1333,7 @@
     {
       "id": "g2-u4-spend-005",
       "type": "fillInBlank",
-      "japanese": "彼はゲームに多くの時間を使います",
+      "japanese": "彼はゲームに多くの時間を使います。",
       "sentence": "He spends a lot of time ____ games.",
       "choices": [
         "playing",
@@ -1348,7 +1348,7 @@
     {
       "id": "g2-u4-spend-006",
       "type": "sentenceOrdering",
-      "japanese": "彼女は新しい服に50ドル使いました",
+      "japanese": "彼女は新しい服に50ドル使いました。",
       "words": [
         "she",
         "spent",
@@ -1367,7 +1367,7 @@
     {
       "id": "g2-u4-spend-007",
       "type": "fillInBlank",
-      "japanese": "私たちは公園で午後を過ごしました",
+      "japanese": "私たちは公園で午後を過ごしました。",
       "sentence": "We spent the afternoon ____ in the park.",
       "choices": [
         "walking",
@@ -1382,7 +1382,7 @@
     {
       "id": "g2-u4-spend-008",
       "type": "conversation",
-      "japanese": "絵を描くのに2時間使いました",
+      "japanese": "絵を描くのに2時間使いました。",
       "situation": "時間の使い方",
       "dialogue": [
         {
@@ -1407,7 +1407,7 @@
     {
       "id": "g2-u4-spend-009",
       "type": "fillInBlank",
-      "japanese": "彼は旅行に多くのお金を使いました",
+      "japanese": "彼は旅行に多くのお金を使いました。",
       "sentence": "He spent much money ____ the trip.",
       "choices": [
         "on",
@@ -1422,7 +1422,7 @@
     {
       "id": "g2-u4-cost-001",
       "type": "fillInBlank",
-      "japanese": "この本は私に10ドルかかりました",
+      "japanese": "この本は私に10ドルかかりました。",
       "sentence": "This book ____ me 10 dollars.",
       "choices": [
         "cost",
@@ -1437,7 +1437,7 @@
     {
       "id": "g2-u4-cost-002",
       "type": "sentenceOrdering",
-      "japanese": "そのコンピュータは彼に1000ドルかかりました",
+      "japanese": "そのコンピュータは彼に1000ドルかかりました。",
       "words": [
         "the",
         "computer",
@@ -1455,7 +1455,7 @@
     {
       "id": "g2-u4-cost-003",
       "type": "fillInBlank",
-      "japanese": "この車はいくらかかりますか",
+      "japanese": "この車はいくらかかりますか。",
       "sentence": "How much does this car ____?",
       "choices": [
         "cost",
@@ -1470,7 +1470,7 @@
     {
       "id": "g2-u4-cost-004",
       "type": "paraphrase",
-      "japanese": "私はこの時計に50ドル払いました（watch, cost）",
+      "japanese": "私はこの時計に50ドル払いました（watch, cost）。",
       "originalSentence": "I paid 50 dollars for this watch.",
       "question": "This watch ____ me ____.",
       "correctAnswer": "cost 50 dollars",
@@ -1480,7 +1480,7 @@
     {
       "id": "g2-u4-cost-005",
       "type": "fillInBlank",
-      "japanese": "その旅行は彼女に多くのお金がかかりました",
+      "japanese": "その旅行は彼女に多くのお金がかかりました。",
       "sentence": "The trip ____ her a lot of money.",
       "choices": [
         "cost",
@@ -1495,7 +1495,7 @@
     {
       "id": "g2-u4-cost-006",
       "type": "sentenceOrdering",
-      "japanese": "この服は彼に80ドルかかりました",
+      "japanese": "この服は彼に80ドルかかりました。",
       "words": [
         "these",
         "clothes",
@@ -1513,7 +1513,7 @@
     {
       "id": "g2-u4-cost-007",
       "type": "fillInBlank",
-      "japanese": "新しい自転車は私に200ドルかかりました",
+      "japanese": "新しい自転車は私に200ドルかかりました。",
       "sentence": "A new bike ____ me 200 dollars.",
       "choices": [
         "cost",
@@ -1528,7 +1528,7 @@
     {
       "id": "g2-u4-cost-008",
       "type": "conversation",
-      "japanese": "その電話はいくらかかりましたか",
+      "japanese": "その電話はいくらかかりましたか。",
       "situation": "値段について",
       "dialogue": [
         {
@@ -1553,7 +1553,7 @@
     {
       "id": "g2-u4-cost-009",
       "type": "fillInBlank",
-      "japanese": "その修理は私に多額の費用がかかりました",
+      "japanese": "その修理は私に多額の費用がかかりました。",
       "sentence": "The repair ____ me a lot.",
       "choices": [
         "cost",
@@ -1568,7 +1568,7 @@
     {
       "id": "g2-u4-takes-001",
       "type": "fillInBlank",
-      "japanese": "学校まで30分かかります",
+      "japanese": "学校まで30分かかります。",
       "sentence": "It ____ me 30 minutes to get to school.",
       "choices": [
         "takes",
@@ -1583,7 +1583,7 @@
     {
       "id": "g2-u4-takes-002",
       "type": "sentenceOrdering",
-      "japanese": "その仕事をするのに2時間かかりました",
+      "japanese": "その仕事をするのに2時間かかりました。",
       "words": [
         "it",
         "took",
@@ -1604,7 +1604,7 @@
     {
       "id": "g2-u4-takes-003",
       "type": "fillInBlank",
-      "japanese": "東京まで行くのに3時間かかります",
+      "japanese": "東京まで行くのに3時間かかります。",
       "sentence": "It takes three hours ____ get to Tokyo.",
       "choices": [
         "to",
@@ -1619,7 +1619,7 @@
     {
       "id": "g2-u4-takes-004",
       "type": "conversation",
-      "japanese": "宿題をするのにどれくらいかかりますか",
+      "japanese": "宿題をするのにどれくらいかかりますか。",
       "situation": "時間について",
       "dialogue": [
         {
@@ -1644,7 +1644,7 @@
     {
       "id": "g2-u4-takes-005",
       "type": "paraphrase",
-      "japanese": "私は学校まで20分かかります（20 minutes, get）",
+      "japanese": "私は学校まで20分かかります（20 minutes, get）。",
       "originalSentence": "I need 20 minutes to get to school.",
       "question": "It ____ me ____ to get to school.",
       "correctAnswer": "takes 20 minutes",
@@ -1654,7 +1654,7 @@
     {
       "id": "g2-u4-takes-006",
       "type": "fillInBlank",
-      "japanese": "この本を読むのに1週間かかりました",
+      "japanese": "この本を読むのに1週間かかりました。",
       "sentence": "It ____ me a week to read this book.",
       "choices": [
         "took",
@@ -1669,7 +1669,7 @@
     {
       "id": "g2-u4-takes-007",
       "type": "sentenceOrdering",
-      "japanese": "駅まで歩いて10分かかります",
+      "japanese": "駅まで歩いて10分かかります。",
       "words": [
         "it",
         "takes",
@@ -1690,7 +1690,7 @@
     {
       "id": "g2-u4-takes-008",
       "type": "fillInBlank",
-      "japanese": "料理を作るのにどれくらいかかりましたか",
+      "japanese": "料理を作るのにどれくらいかかりましたか。",
       "sentence": "How long did it ____ to cook the meal?",
       "choices": [
         "take",
@@ -1705,7 +1705,7 @@
     {
       "id": "g2-u4-takes-009",
       "type": "sentenceOrdering",
-      "japanese": "彼女は準備するのに30分かかります",
+      "japanese": "彼女は準備するのに30分かかります。",
       "words": [
         "it",
         "takes",
@@ -1725,7 +1725,7 @@
     {
       "id": "g2-u4-takes-010",
       "type": "fillInBlank",
-      "japanese": "英語を習得するのに何年もかかります",
+      "japanese": "英語を習得するのに何年もかかります。",
       "sentence": "It ____ many years to learn English.",
       "choices": [
         "takes",
@@ -1740,7 +1740,7 @@
     {
       "id": "g2-u4-takes-011",
       "type": "conversation",
-      "japanese": "空港まで車で1時間かかります",
+      "japanese": "空港まで車で1時間かかります。",
       "situation": "移動時間",
       "dialogue": [
         {
@@ -1765,7 +1765,7 @@
     {
       "id": "g2-u4-takes-012",
       "type": "fillInBlank",
-      "japanese": "試験に合格するのに長い時間がかかりました",
+      "japanese": "試験に合格するのに長い時間がかかりました。",
       "sentence": "It took a long time ____ pass the exam.",
       "choices": [
         "to",
@@ -1780,7 +1780,7 @@
     {
       "id": "g2-u4-spend-001",
       "type": "fillInBlank",
-      "japanese": "私は宿題に2時間を費やしました",
+      "japanese": "私は宿題に2時間を費やしました。",
       "sentence": "I spent two hours ____ my homework.",
       "choices": [
         "on",
@@ -1795,7 +1795,7 @@
     {
       "id": "g2-u4-spend-002",
       "type": "fillInBlank",
-      "japanese": "彼女は本を読むのに1時間を費やしました",
+      "japanese": "彼女は本を読むのに1時間を費やしました。",
       "sentence": "She spent an hour ____ a book.",
       "choices": [
         "reading",
@@ -1810,7 +1810,7 @@
     {
       "id": "g2-u4-spend-003",
       "type": "sentenceOrdering",
-      "japanese": "私は買い物に100ドル使いました",
+      "japanese": "私は買い物に100ドル使いました。",
       "words": [
         "I",
         "spent",
@@ -1828,7 +1828,7 @@
     {
       "id": "g2-u4-spend-004",
       "type": "paraphrase",
-      "japanese": "私は勉強に3時間かかりました（studying）",
+      "japanese": "私は勉強に3時間かかりました（studying）。",
       "originalSentence": "It took me three hours to study.",
       "question": "I spent three hours ____.",
       "correctAnswer": "studying",
@@ -1838,7 +1838,7 @@
     {
       "id": "g2-u4-spend-005",
       "type": "fillInBlank",
-      "japanese": "彼はゲームに多くの時間を使います",
+      "japanese": "彼はゲームに多くの時間を使います。",
       "sentence": "He spends a lot of time ____ games.",
       "choices": [
         "playing",
@@ -1853,7 +1853,7 @@
     {
       "id": "g2-u4-spend-006",
       "type": "sentenceOrdering",
-      "japanese": "彼女は新しい服に50ドル使いました",
+      "japanese": "彼女は新しい服に50ドル使いました。",
       "words": [
         "she",
         "spent",
@@ -1872,7 +1872,7 @@
     {
       "id": "g2-u4-spend-007",
       "type": "fillInBlank",
-      "japanese": "私たちは公園で午後を過ごしました",
+      "japanese": "私たちは公園で午後を過ごしました。",
       "sentence": "We spent the afternoon ____ in the park.",
       "choices": [
         "walking",
@@ -1887,7 +1887,7 @@
     {
       "id": "g2-u4-spend-008",
       "type": "conversation",
-      "japanese": "絵を描くのに2時間使いました",
+      "japanese": "絵を描くのに2時間使いました。",
       "situation": "時間の使い方",
       "dialogue": [
         {
@@ -1912,7 +1912,7 @@
     {
       "id": "g2-u4-spend-009",
       "type": "fillInBlank",
-      "japanese": "彼は旅行に多くのお金を使いました",
+      "japanese": "彼は旅行に多くのお金を使いました。",
       "sentence": "He spent much money ____ the trip.",
       "choices": [
         "on",
@@ -1927,7 +1927,7 @@
     {
       "id": "g2-u4-cost-001",
       "type": "fillInBlank",
-      "japanese": "この本は私に10ドルかかりました",
+      "japanese": "この本は私に10ドルかかりました。",
       "sentence": "This book ____ me 10 dollars.",
       "choices": [
         "cost",
@@ -1942,7 +1942,7 @@
     {
       "id": "g2-u4-cost-002",
       "type": "sentenceOrdering",
-      "japanese": "そのコンピュータは彼に1000ドルかかりました",
+      "japanese": "そのコンピュータは彼に1000ドルかかりました。",
       "words": [
         "the",
         "computer",
@@ -1960,7 +1960,7 @@
     {
       "id": "g2-u4-cost-003",
       "type": "fillInBlank",
-      "japanese": "この車はいくらかかりますか",
+      "japanese": "この車はいくらかかりますか。",
       "sentence": "How much does this car ____?",
       "choices": [
         "cost",
@@ -1975,7 +1975,7 @@
     {
       "id": "g2-u4-cost-004",
       "type": "paraphrase",
-      "japanese": "私はこの時計に50ドル払いました（watch, cost）",
+      "japanese": "私はこの時計に50ドル払いました（watch, cost）。",
       "originalSentence": "I paid 50 dollars for this watch.",
       "question": "This watch ____ me ____.",
       "correctAnswer": "cost 50 dollars",
@@ -1985,7 +1985,7 @@
     {
       "id": "g2-u4-cost-005",
       "type": "fillInBlank",
-      "japanese": "その旅行は彼女に多くのお金がかかりました",
+      "japanese": "その旅行は彼女に多くのお金がかかりました。",
       "sentence": "The trip ____ her a lot of money.",
       "choices": [
         "cost",
@@ -2000,7 +2000,7 @@
     {
       "id": "g2-u4-cost-006",
       "type": "sentenceOrdering",
-      "japanese": "この服は彼に80ドルかかりました",
+      "japanese": "この服は彼に80ドルかかりました。",
       "words": [
         "these",
         "clothes",
@@ -2018,7 +2018,7 @@
     {
       "id": "g2-u4-cost-007",
       "type": "fillInBlank",
-      "japanese": "新しい自転車は私に200ドルかかりました",
+      "japanese": "新しい自転車は私に200ドルかかりました。",
       "sentence": "A new bike ____ me 200 dollars.",
       "choices": [
         "cost",
@@ -2033,7 +2033,7 @@
     {
       "id": "g2-u4-cost-008",
       "type": "conversation",
-      "japanese": "その電話はいくらかかりましたか",
+      "japanese": "その電話はいくらかかりましたか。",
       "situation": "値段について",
       "dialogue": [
         {
@@ -2058,7 +2058,7 @@
     {
       "id": "g2-u4-cost-009",
       "type": "fillInBlank",
-      "japanese": "その修理は私に多額の費用がかかりました",
+      "japanese": "その修理は私に多額の費用がかかりました。",
       "sentence": "The repair ____ me a lot.",
       "choices": [
         "cost",

@@ -13,7 +13,7 @@
   "questions": [
     {
       "id": "vf-g3-u8-001",
-      "japanese": "私は彼がどこに住んでいるか知りません",
+      "japanese": "私は彼がどこに住んでいるか知りません。",
       "sentence": "I don't know where he ____.",
       "verb": "indirect",
       "choices": [
@@ -29,7 +29,7 @@
     },
     {
       "id": "vf-g3-u8-002",
-      "japanese": "彼女は何が起こったか知っています",
+      "japanese": "彼女は何が起こったか知っています。",
       "sentence": "She knows what ____.",
       "verb": "indirect",
       "choices": [
@@ -45,7 +45,7 @@
     },
     {
       "id": "vf-g3-u8-003",
-      "japanese": "私はいつ彼が来るか分かりません",
+      "japanese": "私はいつ彼が来るか分かりません。",
       "sentence": "I don't know when he will ____.",
       "verb": "indirect",
       "choices": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "vf-g3-u8-004",
-      "japanese": "彼はなぜ彼女が泣いているか知っています",
+      "japanese": "彼はなぜ彼女が泣いているか知っています。",
       "sentence": "He knows why she is ____.",
       "verb": "indirect",
       "choices": [
@@ -77,7 +77,7 @@
     },
     {
       "id": "vf-g3-u8-005",
-      "japanese": "私は誰がこれを作ったか知っています",
+      "japanese": "私は誰がこれを作ったか知っています。",
       "sentence": "I know who ____ this.",
       "verb": "indirect",
       "choices": [
@@ -93,7 +93,7 @@
     },
     {
       "id": "vf-g3-u8-006",
-      "japanese": "彼女はどうやってそこに行くか分かりません",
+      "japanese": "彼女はどうやってそこに行くか分かりません。",
       "sentence": "She doesn't know how to ____ there.",
       "verb": "indirect",
       "choices": [
@@ -109,7 +109,7 @@
     },
     {
       "id": "vf-g3-u8-007",
-      "japanese": "私はどの本が一番良いか分かりません",
+      "japanese": "私はどの本が一番良いか分かりません。",
       "sentence": "I don't know which book ____ the best.",
       "verb": "indirect",
       "choices": [
@@ -125,7 +125,7 @@
     },
     {
       "id": "vf-g3-u8-008",
-      "japanese": "彼は何時に店が開くか知っています",
+      "japanese": "彼は何時に店が開くか知っています。",
       "sentence": "He knows what time the store ____.",
       "verb": "indirect",
       "choices": [
@@ -141,7 +141,7 @@
     },
     {
       "id": "vf-g3-u8-009",
-      "japanese": "私たちはどこで彼女に会えるか知りません",
+      "japanese": "私たちはどこで彼女に会えるか知りません。",
       "sentence": "We don't know where we can ____ her.",
       "verb": "indirect",
       "choices": [
@@ -157,7 +157,7 @@
     },
     {
       "id": "vf-g3-u8-010",
-      "japanese": "彼女はなぜ彼が怒っているか理解しています",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています。",
       "sentence": "She understands why he is ____.",
       "verb": "indirect",
       "choices": [
@@ -173,7 +173,7 @@
     },
     {
       "id": "vf-g3-u8-011",
-      "japanese": "私はいつバスが出発するか知りたいです",
+      "japanese": "私はいつバスが出発するか知りたいです。",
       "sentence": "I want to know when the bus ____.",
       "verb": "indirect",
       "choices": [
@@ -189,7 +189,7 @@
     },
     {
       "id": "vf-g3-u8-012",
-      "japanese": "彼は誰が勝つか予測できます",
+      "japanese": "彼は誰が勝つか予測できます。",
       "sentence": "He can predict who will ____.",
       "verb": "indirect",
       "choices": [
@@ -205,7 +205,7 @@
     },
     {
       "id": "vf-g3-u8-013",
-      "japanese": "私たちはどうやって問題を解決するか話し合いました",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました。",
       "sentence": "We discussed how to ____ the problem.",
       "verb": "indirect",
       "choices": [
@@ -221,7 +221,7 @@
     },
     {
       "id": "vf-g3-u8-014",
-      "japanese": "彼女は何が必要か教えてくれました",
+      "japanese": "彼女は何が必要か教えてくれました。",
       "sentence": "She told me what I ____.",
       "verb": "indirect",
       "choices": [
@@ -237,7 +237,7 @@
     },
     {
       "id": "vf-g3-u8-015",
-      "japanese": "私はどこで鍵を置いたか忘れました",
+      "japanese": "私はどこで鍵を置いたか忘れました。",
       "sentence": "I forgot where I ____ the key.",
       "verb": "indirect",
       "choices": [
@@ -253,7 +253,7 @@
     },
     {
       "id": "vf-g3-u8-016",
-      "japanese": "彼はなぜそれが重要か説明しました",
+      "japanese": "彼はなぜそれが重要か説明しました。",
       "sentence": "He explained why it ____ important.",
       "verb": "indirect",
       "choices": [
@@ -269,7 +269,7 @@
     },
     {
       "id": "vf-g3-u8-017",
-      "japanese": "私たちはいつ会議が始まるか確認しました",
+      "japanese": "私たちはいつ会議が始まるか確認しました。",
       "sentence": "We checked when the meeting ____.",
       "verb": "indirect",
       "choices": [
@@ -285,7 +285,7 @@
     },
     {
       "id": "vf-g3-u8-018",
-      "japanese": "彼女はどの道が最短か知っています",
+      "japanese": "彼女はどの道が最短か知っています。",
       "sentence": "She knows which route ____ the shortest.",
       "verb": "indirect",
       "choices": [
@@ -301,7 +301,7 @@
     },
     {
       "id": "vf-g3-u8-019",
-      "japanese": "私は何が彼を幸せにするか知っています",
+      "japanese": "私は何が彼を幸せにするか知っています。",
       "sentence": "I know what ____ him happy.",
       "verb": "indirect",
       "choices": [
@@ -317,7 +317,7 @@
     },
     {
       "id": "vf-g3-u8-020",
-      "japanese": "彼はどうやって成功したか語りました",
+      "japanese": "彼はどうやって成功したか語りました。",
       "sentence": "He told us how he ____.",
       "verb": "indirect",
       "choices": [
@@ -333,7 +333,7 @@
     },
     {
       "id": "fb-g3-u8-001",
-      "japanese": "私は彼がどこに住んでいるか知りません",
+      "japanese": "私は彼がどこに住んでいるか知りません。",
       "sentence": "I don't know where he ____.",
       "wordCount": 6,
       "choices": [
@@ -349,7 +349,7 @@
     },
     {
       "id": "fb-g3-u8-002",
-      "japanese": "彼女は何が起こったか知っています",
+      "japanese": "彼女は何が起こったか知っています。",
       "sentence": "She knows what ____.",
       "wordCount": 4,
       "choices": [
@@ -365,7 +365,7 @@
     },
     {
       "id": "fb-g3-u8-003",
-      "japanese": "私はいつ彼が来るか分かりません",
+      "japanese": "私はいつ彼が来るか分かりません。",
       "sentence": "I don't know when he will ____.",
       "wordCount": 7,
       "choices": [
@@ -381,7 +381,7 @@
     },
     {
       "id": "fb-g3-u8-004",
-      "japanese": "彼はなぜ彼女が泣いているか知っています",
+      "japanese": "彼はなぜ彼女が泣いているか知っています。",
       "sentence": "He knows why she is ____.",
       "wordCount": 6,
       "choices": [
@@ -397,7 +397,7 @@
     },
     {
       "id": "fb-g3-u8-005",
-      "japanese": "私は誰がこれを作ったか知っています",
+      "japanese": "私は誰がこれを作ったか知っています。",
       "sentence": "I know who ____ this.",
       "wordCount": 5,
       "choices": [
@@ -413,7 +413,7 @@
     },
     {
       "id": "fb-g3-u8-006",
-      "japanese": "彼女はどうやってそこに行くか分かりません",
+      "japanese": "彼女はどうやってそこに行くか分かりません。",
       "sentence": "She doesn't know how to ____ there.",
       "wordCount": 7,
       "choices": [
@@ -429,7 +429,7 @@
     },
     {
       "id": "fb-g3-u8-007",
-      "japanese": "私はどの本が一番良いか分かりません",
+      "japanese": "私はどの本が一番良いか分かりません。",
       "sentence": "I don't know which book ____ the best.",
       "wordCount": 8,
       "choices": [
@@ -445,7 +445,7 @@
     },
     {
       "id": "fb-g3-u8-008",
-      "japanese": "彼は何時に店が開くか知っています",
+      "japanese": "彼は何時に店が開くか知っています。",
       "sentence": "He knows what time the store ____.",
       "wordCount": 7,
       "choices": [
@@ -461,7 +461,7 @@
     },
     {
       "id": "fb-g3-u8-009",
-      "japanese": "私たちはどこで彼女に会えるか知りません",
+      "japanese": "私たちはどこで彼女に会えるか知りません。",
       "sentence": "We don't know where we can ____ her.",
       "wordCount": 8,
       "choices": [
@@ -477,7 +477,7 @@
     },
     {
       "id": "fb-g3-u8-010",
-      "japanese": "彼女はなぜ彼が怒っているか理解しています",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています。",
       "sentence": "She understands why he is ____.",
       "wordCount": 6,
       "choices": [
@@ -493,7 +493,7 @@
     },
     {
       "id": "fb-g3-u8-011",
-      "japanese": "私はいつバスが出発するか知りたいです",
+      "japanese": "私はいつバスが出発するか知りたいです。",
       "sentence": "I want to know when the bus ____.",
       "wordCount": 8,
       "choices": [
@@ -509,7 +509,7 @@
     },
     {
       "id": "fb-g3-u8-012",
-      "japanese": "彼は誰が勝つか予測できます",
+      "japanese": "彼は誰が勝つか予測できます。",
       "sentence": "He can predict who will ____.",
       "wordCount": 6,
       "choices": [
@@ -525,7 +525,7 @@
     },
     {
       "id": "fb-g3-u8-013",
-      "japanese": "私たちはどうやって問題を解決するか話し合いました",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました。",
       "sentence": "We discussed how to ____ the problem.",
       "wordCount": 7,
       "choices": [
@@ -541,7 +541,7 @@
     },
     {
       "id": "fb-g3-u8-014",
-      "japanese": "彼女は何が必要か教えてくれました",
+      "japanese": "彼女は何が必要か教えてくれました。",
       "sentence": "She told me what I ____.",
       "wordCount": 6,
       "choices": [
@@ -557,7 +557,7 @@
     },
     {
       "id": "fb-g3-u8-015",
-      "japanese": "私はどこで鍵を置いたか忘れました",
+      "japanese": "私はどこで鍵を置いたか忘れました。",
       "sentence": "I forgot where I ____ the key.",
       "wordCount": 7,
       "choices": [
@@ -573,7 +573,7 @@
     },
     {
       "id": "fb-g3-u8-016",
-      "japanese": "彼はなぜそれが重要か説明しました",
+      "japanese": "彼はなぜそれが重要か説明しました。",
       "sentence": "He explained why it ____ important.",
       "wordCount": 6,
       "choices": [
@@ -589,7 +589,7 @@
     },
     {
       "id": "fb-g3-u8-017",
-      "japanese": "私たちはいつ会議が始まるか確認しました",
+      "japanese": "私たちはいつ会議が始まるか確認しました。",
       "sentence": "We checked when the meeting ____.",
       "wordCount": 6,
       "choices": [
@@ -605,7 +605,7 @@
     },
     {
       "id": "fb-g3-u8-018",
-      "japanese": "彼女はどの道が最短か知っています",
+      "japanese": "彼女はどの道が最短か知っています。",
       "sentence": "She knows which route ____ the shortest.",
       "wordCount": 7,
       "choices": [
@@ -621,7 +621,7 @@
     },
     {
       "id": "fb-g3-u8-019",
-      "japanese": "私は何が彼を幸せにするか知っています",
+      "japanese": "私は何が彼を幸せにするか知っています。",
       "sentence": "I know what ____ him happy.",
       "wordCount": 6,
       "choices": [
@@ -637,7 +637,7 @@
     },
     {
       "id": "fb-g3-u8-020",
-      "japanese": "彼はどうやって成功したか語りました",
+      "japanese": "彼はどうやって成功したか語りました。",
       "sentence": "He told us how he ____.",
       "wordCount": 6,
       "choices": [
@@ -653,7 +653,7 @@
     },
     {
       "id": "so-g3-u8-001",
-      "japanese": "私は彼がどこに住んでいるか知りません",
+      "japanese": "私は彼がどこに住んでいるか知りません。",
       "sentence": "I don't know where he lives.",
       "words": [
         "I",
@@ -673,7 +673,7 @@
     },
     {
       "id": "so-g3-u8-002",
-      "japanese": "彼女は何が起こったか知っています",
+      "japanese": "彼女は何が起こったか知っています。",
       "sentence": "She knows what happened.",
       "words": [
         "She",
@@ -691,7 +691,7 @@
     },
     {
       "id": "so-g3-u8-003",
-      "japanese": "私はいつ彼が来るか分かりません",
+      "japanese": "私はいつ彼が来るか分かりません。",
       "sentence": "I don't know when he will come.",
       "words": [
         "I",
@@ -712,7 +712,7 @@
     },
     {
       "id": "so-g3-u8-004",
-      "japanese": "彼はなぜ彼女が泣いているか知っています",
+      "japanese": "彼はなぜ彼女が泣いているか知っています。",
       "sentence": "He knows why she is crying.",
       "words": [
         "He",
@@ -732,7 +732,7 @@
     },
     {
       "id": "so-g3-u8-005",
-      "japanese": "私は誰がこれを作ったか知っています",
+      "japanese": "私は誰がこれを作ったか知っています。",
       "sentence": "I know who made this.",
       "words": [
         "I",
@@ -751,7 +751,7 @@
     },
     {
       "id": "so-g3-u8-006",
-      "japanese": "彼女はどうやってそこに行くか分かりません",
+      "japanese": "彼女はどうやってそこに行くか分かりません。",
       "sentence": "She doesn't know how to get there.",
       "words": [
         "She",
@@ -772,7 +772,7 @@
     },
     {
       "id": "so-g3-u8-007",
-      "japanese": "私はどの本が一番良いか分かりません",
+      "japanese": "私はどの本が一番良いか分かりません。",
       "sentence": "I don't know which book is the best.",
       "words": [
         "I",
@@ -794,7 +794,7 @@
     },
     {
       "id": "so-g3-u8-008",
-      "japanese": "彼は何時に店が開くか知っています",
+      "japanese": "彼は何時に店が開くか知っています。",
       "sentence": "He knows what time the store opens.",
       "words": [
         "He",
@@ -815,7 +815,7 @@
     },
     {
       "id": "so-g3-u8-009",
-      "japanese": "私たちはどこで彼女に会えるか知りません",
+      "japanese": "私たちはどこで彼女に会えるか知りません。",
       "sentence": "We don't know where we can meet her.",
       "words": [
         "We",
@@ -837,7 +837,7 @@
     },
     {
       "id": "so-g3-u8-010",
-      "japanese": "彼女はなぜ彼が怒っているか理解しています",
+      "japanese": "彼女はなぜ彼が怒っているか理解しています。",
       "sentence": "She understands why he is angry.",
       "words": [
         "She",
@@ -857,7 +857,7 @@
     },
     {
       "id": "so-g3-u8-011",
-      "japanese": "私はいつバスが出発するか知りたいです",
+      "japanese": "私はいつバスが出発するか知りたいです。",
       "sentence": "I want to know when the bus leaves.",
       "words": [
         "I",
@@ -879,7 +879,7 @@
     },
     {
       "id": "so-g3-u8-012",
-      "japanese": "彼は誰が勝つか予測できます",
+      "japanese": "彼は誰が勝つか予測できます。",
       "sentence": "He can predict who will win.",
       "words": [
         "He",
@@ -899,7 +899,7 @@
     },
     {
       "id": "so-g3-u8-013",
-      "japanese": "私たちはどうやって問題を解決するか話し合いました",
+      "japanese": "私たちはどうやって問題を解決するか話し合いました。",
       "sentence": "We discussed how to solve the problem.",
       "words": [
         "We",
@@ -920,7 +920,7 @@
     },
     {
       "id": "so-g3-u8-014",
-      "japanese": "彼女は何が必要か教えてくれました",
+      "japanese": "彼女は何が必要か教えてくれました。",
       "sentence": "She told me what I need.",
       "words": [
         "She",
@@ -940,7 +940,7 @@
     },
     {
       "id": "so-g3-u8-015",
-      "japanese": "私はどこで鍵を置いたか忘れました",
+      "japanese": "私はどこで鍵を置いたか忘れました。",
       "sentence": "I forgot where I put the key.",
       "words": [
         "I",
@@ -961,7 +961,7 @@
     },
     {
       "id": "so-g3-u8-016",
-      "japanese": "彼はなぜそれが重要か説明しました",
+      "japanese": "彼はなぜそれが重要か説明しました。",
       "sentence": "He explained why it is important.",
       "words": [
         "He",
@@ -981,7 +981,7 @@
     },
     {
       "id": "so-g3-u8-017",
-      "japanese": "私たちはいつ会議が始まるか確認しました",
+      "japanese": "私たちはいつ会議が始まるか確認しました。",
       "sentence": "We checked when the meeting starts.",
       "words": [
         "We",
@@ -1001,7 +1001,7 @@
     },
     {
       "id": "so-g3-u8-018",
-      "japanese": "彼女はどの道が最短か知っています",
+      "japanese": "彼女はどの道が最短か知っています。",
       "sentence": "She knows which route is the shortest.",
       "words": [
         "She",
@@ -1022,7 +1022,7 @@
     },
     {
       "id": "so-g3-u8-019",
-      "japanese": "私は何が彼を幸せにするか知っています",
+      "japanese": "私は何が彼を幸せにするか知っています。",
       "sentence": "I know what makes him happy.",
       "words": [
         "I",
@@ -1042,7 +1042,7 @@
     },
     {
       "id": "so-g3-u8-020",
-      "japanese": "彼はどうやって成功したか語りました",
+      "japanese": "彼はどうやって成功したか語りました。",
       "sentence": "He told us how he succeeded.",
       "words": [
         "He",
@@ -1063,7 +1063,7 @@
     {
       "id": "g3-u8-ifwhether-001",
       "type": "fillInBlank",
-      "japanese": "彼が来るかどうか分かりません",
+      "japanese": "彼が来るかどうか分かりません。",
       "sentence": "I don't know ____ he will come.",
       "choices": [
         "if",
@@ -1078,7 +1078,7 @@
     {
       "id": "g3-u8-ifwhether-002",
       "type": "sentenceOrdering",
-      "japanese": "彼女が忙しいかどうか聞いてください",
+      "japanese": "彼女が忙しいかどうか聞いてください。",
       "words": [
         "please",
         "ask",
@@ -1096,7 +1096,7 @@
     {
       "id": "g3-u8-ifwhether-003",
       "type": "fillInBlank",
-      "japanese": "彼女がそれを知っているかどうか分かりません",
+      "japanese": "彼女がそれを知っているかどうか分かりません。",
       "sentence": "I don't know ____ she knows it.",
       "choices": [
         "whether",
@@ -1111,7 +1111,7 @@
     {
       "id": "g3-u8-ifwhether-004",
       "type": "paraphrase",
-      "japanese": "彼は来ますか？（Does he come?）を間接疑問文に",
+      "japanese": "彼は来ますか？（Does he come?）を間接疑問文に。",
       "originalSentence": "Does he come to the party?",
       "question": "I don't know ____.",
       "correctAnswer": "if he comes to the party",
@@ -1121,7 +1121,7 @@
     {
       "id": "g3-u8-ifwhether-005",
       "type": "fillInBlank",
-      "japanese": "雨が降るかどうか確認しましょう",
+      "japanese": "雨が降るかどうか確認しましょう。",
       "sentence": "Let's check ____ it will rain.",
       "choices": [
         "if",
@@ -1136,7 +1136,7 @@
     {
       "id": "g3-u8-ifwhether-006",
       "type": "conversation",
-      "japanese": "彼が正しいかどうか分かりません",
+      "japanese": "彼が正しいかどうか分かりません。",
       "situation": "意見について",
       "dialogue": [
         {
@@ -1161,7 +1161,7 @@
     {
       "id": "g3-u8-ifwhether-007",
       "type": "sentenceOrdering",
-      "japanese": "彼女が来られるかどうか教えてください",
+      "japanese": "彼女が来られるかどうか教えてください。",
       "words": [
         "please",
         "tell",
@@ -1180,7 +1180,7 @@
     {
       "id": "g3-u8-ifwhether-008",
       "type": "fillInBlank",
-      "japanese": "それが本当かどうか分かりません",
+      "japanese": "それが本当かどうか分かりません。",
       "sentence": "I'm not sure ____ it is true.",
       "choices": [
         "if",
@@ -1195,7 +1195,7 @@
     {
       "id": "g3-u8-ifwhether-009",
       "type": "paraphrase",
-      "japanese": "彼女は幸せですか？（Is she happy?）を間接疑問文に",
+      "japanese": "彼女は幸せですか？（Is she happy?）を間接疑問文に。",
       "originalSentence": "Is she happy?",
       "question": "I wonder ____.",
       "correctAnswer": "if she is happy",
@@ -1205,7 +1205,7 @@
     {
       "id": "g3-u8-ifwhether-010",
       "type": "sentenceOrdering",
-      "japanese": "彼がそれを理解しているかどうか確認してください",
+      "japanese": "彼がそれを理解しているかどうか確認してください。",
       "words": [
         "please",
         "check",

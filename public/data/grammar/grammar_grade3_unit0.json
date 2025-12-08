@@ -11,7 +11,7 @@
   "questions": [
     {
       "id": "vf-g3-u0-001",
-      "japanese": "英語は世界中で話されています",
+      "japanese": "英語は世界中で話されています。",
       "sentence": "English ____ spoken around the world.",
       "verb": "passive",
       "choices": [
@@ -27,7 +27,7 @@
     },
     {
       "id": "vf-g3-u0-002",
-      "japanese": "この本は多くの人に読まれています",
+      "japanese": "この本は多くの人に読まれています。",
       "sentence": "This book ____ read by many people.",
       "verb": "passive",
       "choices": [
@@ -43,7 +43,7 @@
     },
     {
       "id": "vf-g3-u0-003",
-      "japanese": "その手紙は彼女によって書かれました",
+      "japanese": "その手紙は彼女によって書かれました。",
       "sentence": "The letter ____ written by her.",
       "verb": "passive",
       "choices": [
@@ -59,7 +59,7 @@
     },
     {
       "id": "vf-g3-u0-004",
-      "japanese": "この橋は1990年に建てられました",
+      "japanese": "この橋は1990年に建てられました。",
       "sentence": "This bridge ____ built in 1990.",
       "verb": "passive",
       "choices": [
@@ -75,7 +75,7 @@
     },
     {
       "id": "vf-g3-u0-005",
-      "japanese": "これらの車は日本で作られています",
+      "japanese": "これらの車は日本で作られています。",
       "sentence": "These cars ____ made in Japan.",
       "verb": "passive",
       "choices": [
@@ -91,7 +91,7 @@
     },
     {
       "id": "vf-g3-u0-006",
-      "japanese": "その問題は昨日解かれました",
+      "japanese": "その問題は昨日解かれました。",
       "sentence": "The problem ____ solved yesterday.",
       "verb": "passive",
       "choices": [
@@ -107,7 +107,7 @@
     },
     {
       "id": "vf-g3-u0-007",
-      "japanese": "この歌は若者に愛されています",
+      "japanese": "この歌は若者に愛されています。",
       "sentence": "This song ____ loved by young people.",
       "verb": "passive",
       "choices": [
@@ -123,7 +123,7 @@
     },
     {
       "id": "vf-g3-u0-008",
-      "japanese": "彼の名前はよく知られています",
+      "japanese": "彼の名前はよく知られています。",
       "sentence": "His name ____ well known.",
       "verb": "passive",
       "choices": [
@@ -139,7 +139,7 @@
     },
     {
       "id": "vf-g3-u0-009",
-      "japanese": "その窓は彼によって壊されました",
+      "japanese": "その窓は彼によって壊されました。",
       "sentence": "The window ____ broken by him.",
       "verb": "passive",
       "choices": [
@@ -155,7 +155,7 @@
     },
     {
       "id": "vf-g3-u0-010",
-      "japanese": "これらの写真は去年撮られました",
+      "japanese": "これらの写真は去年撮られました。",
       "sentence": "These photos ____ taken last year.",
       "verb": "passive",
       "choices": [
@@ -171,7 +171,7 @@
     },
     {
       "id": "vf-g3-u0-011",
-      "japanese": "その扉は開けられています",
+      "japanese": "その扉は開けられています。",
       "sentence": "The door ____ opened.",
       "verb": "passive",
       "choices": [
@@ -187,7 +187,7 @@
     },
     {
       "id": "vf-g3-u0-012",
-      "japanese": "このコンピューターは使われていません",
+      "japanese": "このコンピューターは使われていません。",
       "sentence": "This computer ____ not used.",
       "verb": "passive",
       "choices": [
@@ -203,7 +203,7 @@
     },
     {
       "id": "vf-g3-u0-013",
-      "japanese": "その建物は1950年に建てられました",
+      "japanese": "その建物は1950年に建てられました。",
       "sentence": "The building ____ constructed in 1950.",
       "verb": "passive",
       "choices": [
@@ -219,7 +219,7 @@
     },
     {
       "id": "vf-g3-u0-014",
-      "japanese": "多くの木が植えられました",
+      "japanese": "多くの木が植えられました。",
       "sentence": "Many trees ____ planted.",
       "verb": "passive",
       "choices": [
@@ -235,7 +235,7 @@
     },
     {
       "id": "vf-g3-u0-015",
-      "japanese": "その映画は世界中で見られています",
+      "japanese": "その映画は世界中で見られています。",
       "sentence": "The movie ____ watched worldwide.",
       "verb": "passive",
       "choices": [
@@ -251,7 +251,7 @@
     },
     {
       "id": "vf-g3-u0-016",
-      "japanese": "この部屋は毎日掃除されます",
+      "japanese": "この部屋は毎日掃除されます。",
       "sentence": "This room ____ cleaned every day.",
       "verb": "passive",
       "choices": [
@@ -267,7 +267,7 @@
     },
     {
       "id": "vf-g3-u0-017",
-      "japanese": "その手紙は英語で書かれました",
+      "japanese": "その手紙は英語で書かれました。",
       "sentence": "The letter ____ written in English.",
       "verb": "passive",
       "choices": [
@@ -283,7 +283,7 @@
     },
     {
       "id": "vf-g3-u0-018",
-      "japanese": "これらの製品は中国で製造されています",
+      "japanese": "これらの製品は中国で製造されています。",
       "sentence": "These products ____ manufactured in China.",
       "verb": "passive",
       "choices": [
@@ -299,7 +299,7 @@
     },
     {
       "id": "vf-g3-u0-019",
-      "japanese": "その絵は有名な画家によって描かれました",
+      "japanese": "その絵は有名な画家によって描かれました。",
       "sentence": "The painting ____ painted by a famous artist.",
       "verb": "passive",
       "choices": [
@@ -315,7 +315,7 @@
     },
     {
       "id": "vf-g3-u0-020",
-      "japanese": "この規則は守られるべきです",
+      "japanese": "この規則は守られるべきです。",
       "sentence": "This rule should ____ followed.",
       "verb": "passive",
       "choices": [
@@ -331,7 +331,7 @@
     },
     {
       "id": "fb-g3-u0-001",
-      "japanese": "英語は世界中で話されています",
+      "japanese": "英語は世界中で話されています。",
       "sentence": "English is ____ around the world.",
       "choices": [
         "spoken",
@@ -346,7 +346,7 @@
     },
     {
       "id": "fb-g3-u0-002",
-      "japanese": "この本は多くの人に読まれています",
+      "japanese": "この本は多くの人に読まれています。",
       "sentence": "This book is ____ by many people.",
       "choices": [
         "read",
@@ -361,7 +361,7 @@
     },
     {
       "id": "fb-g3-u0-003",
-      "japanese": "その手紙は彼女によって書かれました",
+      "japanese": "その手紙は彼女によって書かれました。",
       "sentence": "The letter was ____ by her.",
       "choices": [
         "written",
@@ -376,7 +376,7 @@
     },
     {
       "id": "fb-g3-u0-004",
-      "japanese": "この橋は1990年に建てられました",
+      "japanese": "この橋は1990年に建てられました。",
       "sentence": "This bridge was ____ in 1990.",
       "choices": [
         "built",
@@ -391,7 +391,7 @@
     },
     {
       "id": "fb-g3-u0-005",
-      "japanese": "これらの車は日本で作られています",
+      "japanese": "これらの車は日本で作られています。",
       "sentence": "These cars are ____ in Japan.",
       "choices": [
         "made",
@@ -406,7 +406,7 @@
     },
     {
       "id": "fb-g3-u0-006",
-      "japanese": "その問題は昨日解かれました",
+      "japanese": "その問題は昨日解かれました。",
       "sentence": "The problem was ____ yesterday.",
       "choices": [
         "solved",
@@ -421,7 +421,7 @@
     },
     {
       "id": "fb-g3-u0-007",
-      "japanese": "この歌は若者に愛されています",
+      "japanese": "この歌は若者に愛されています。",
       "sentence": "This song is ____ by young people.",
       "choices": [
         "loved",
@@ -436,7 +436,7 @@
     },
     {
       "id": "fb-g3-u0-008",
-      "japanese": "彼の名前はよく知られています",
+      "japanese": "彼の名前はよく知られています。",
       "sentence": "His name is well ____.",
       "choices": [
         "known",
@@ -451,7 +451,7 @@
     },
     {
       "id": "fb-g3-u0-009",
-      "japanese": "その窓は彼によって壊されました",
+      "japanese": "その窓は彼によって壊されました。",
       "sentence": "The window was ____ by him.",
       "choices": [
         "broken",
@@ -466,7 +466,7 @@
     },
     {
       "id": "fb-g3-u0-010",
-      "japanese": "これらの写真は去年撮られました",
+      "japanese": "これらの写真は去年撮られました。",
       "sentence": "These photos were ____ last year.",
       "choices": [
         "taken",
@@ -481,7 +481,7 @@
     },
     {
       "id": "fb-g3-u0-011",
-      "japanese": "その扉は開けられています",
+      "japanese": "その扉は開けられています。",
       "sentence": "The door is ____.",
       "choices": [
         "opened",
@@ -496,7 +496,7 @@
     },
     {
       "id": "fb-g3-u0-012",
-      "japanese": "このコンピューターは使われていません",
+      "japanese": "このコンピューターは使われていません。",
       "sentence": "This computer is not ____.",
       "choices": [
         "used",
@@ -511,7 +511,7 @@
     },
     {
       "id": "fb-g3-u0-013",
-      "japanese": "その建物は1950年に建てられました",
+      "japanese": "その建物は1950年に建てられました。",
       "sentence": "The building was ____ in 1950.",
       "choices": [
         "constructed",
@@ -526,7 +526,7 @@
     },
     {
       "id": "fb-g3-u0-014",
-      "japanese": "多くの木が植えられました",
+      "japanese": "多くの木が植えられました。",
       "sentence": "Many trees were ____.",
       "choices": [
         "planted",
@@ -541,7 +541,7 @@
     },
     {
       "id": "fb-g3-u0-015",
-      "japanese": "その映画は世界中で見られています",
+      "japanese": "その映画は世界中で見られています。",
       "sentence": "The movie is ____ worldwide.",
       "choices": [
         "watched",
@@ -556,7 +556,7 @@
     },
     {
       "id": "fb-g3-u0-016",
-      "japanese": "この部屋は毎日掃除されます",
+      "japanese": "この部屋は毎日掃除されます。",
       "sentence": "This room is ____ every day.",
       "choices": [
         "cleaned",
@@ -571,7 +571,7 @@
     },
     {
       "id": "fb-g3-u0-017",
-      "japanese": "その手紙は英語で書かれました",
+      "japanese": "その手紙は英語で書かれました。",
       "sentence": "The letter was ____ in English.",
       "choices": [
         "written",
@@ -586,7 +586,7 @@
     },
     {
       "id": "fb-g3-u0-018",
-      "japanese": "これらの製品は中国で製造されています",
+      "japanese": "これらの製品は中国で製造されています。",
       "sentence": "These products are ____ in China.",
       "choices": [
         "manufactured",
@@ -601,7 +601,7 @@
     },
     {
       "id": "fb-g3-u0-019",
-      "japanese": "その絵は有名な画家によって描かれました",
+      "japanese": "その絵は有名な画家によって描かれました。",
       "sentence": "The painting was ____ by a famous artist.",
       "choices": [
         "painted",
@@ -616,7 +616,7 @@
     },
     {
       "id": "fb-g3-u0-020",
-      "japanese": "この本は1999年に出版されました",
+      "japanese": "この本は1999年に出版されました。",
       "sentence": "This book was ____ in 1999.",
       "choices": [
         "published",
@@ -631,7 +631,7 @@
     },
     {
       "id": "so-g3-u0-001",
-      "japanese": "英語は世界中で話されています",
+      "japanese": "英語は世界中で話されています。",
       "words": [
         "English",
         "is",
@@ -651,7 +651,7 @@
     },
     {
       "id": "so-g3-u0-002",
-      "japanese": "この本は多くの人に読まれています",
+      "japanese": "この本は多くの人に読まれています。",
       "words": [
         "This",
         "book",
@@ -672,7 +672,7 @@
     },
     {
       "id": "so-g3-u0-003",
-      "japanese": "その手紙は彼女によって書かれました",
+      "japanese": "その手紙は彼女によって書かれました。",
       "words": [
         "The",
         "letter",
@@ -692,7 +692,7 @@
     },
     {
       "id": "so-g3-u0-004",
-      "japanese": "この橋は1990年に建てられました",
+      "japanese": "この橋は1990年に建てられました。",
       "words": [
         "This",
         "bridge",
@@ -712,7 +712,7 @@
     },
     {
       "id": "so-g3-u0-005",
-      "japanese": "これらの車は日本で作られています",
+      "japanese": "これらの車は日本で作られています。",
       "words": [
         "These",
         "cars",
@@ -732,7 +732,7 @@
     },
     {
       "id": "so-g3-u0-006",
-      "japanese": "その問題は昨日解かれました",
+      "japanese": "その問題は昨日解かれました。",
       "words": [
         "The",
         "problem",
@@ -751,7 +751,7 @@
     },
     {
       "id": "so-g3-u0-007",
-      "japanese": "この歌は若者に愛されています",
+      "japanese": "この歌は若者に愛されています。",
       "words": [
         "This",
         "song",
@@ -772,7 +772,7 @@
     },
     {
       "id": "so-g3-u0-008",
-      "japanese": "彼の名前はよく知られています",
+      "japanese": "彼の名前はよく知られています。",
       "words": [
         "His",
         "name",
@@ -791,7 +791,7 @@
     },
     {
       "id": "so-g3-u0-009",
-      "japanese": "その窓は彼によって壊されました",
+      "japanese": "その窓は彼によって壊されました。",
       "words": [
         "The",
         "window",
@@ -811,7 +811,7 @@
     },
     {
       "id": "so-g3-u0-010",
-      "japanese": "これらの写真は去年撮られました",
+      "japanese": "これらの写真は去年撮られました。",
       "words": [
         "These",
         "photos",
@@ -831,7 +831,7 @@
     },
     {
       "id": "so-g3-u0-011",
-      "japanese": "その扉は開けられています",
+      "japanese": "その扉は開けられています。",
       "words": [
         "The",
         "door",
@@ -849,7 +849,7 @@
     },
     {
       "id": "so-g3-u0-012",
-      "japanese": "このコンピューターは使われていません",
+      "japanese": "このコンピューターは使われていません。",
       "words": [
         "This",
         "computer",
@@ -868,7 +868,7 @@
     },
     {
       "id": "so-g3-u0-013",
-      "japanese": "その建物は1950年に建てられました",
+      "japanese": "その建物は1950年に建てられました。",
       "words": [
         "The",
         "building",
@@ -888,7 +888,7 @@
     },
     {
       "id": "so-g3-u0-014",
-      "japanese": "多くの木が植えられました",
+      "japanese": "多くの木が植えられました。",
       "words": [
         "Many",
         "trees",
@@ -906,7 +906,7 @@
     },
     {
       "id": "so-g3-u0-015",
-      "japanese": "その映画は世界中で見られています",
+      "japanese": "その映画は世界中で見られています。",
       "words": [
         "The",
         "movie",
@@ -925,7 +925,7 @@
     },
     {
       "id": "so-g3-u0-016",
-      "japanese": "この部屋は毎日掃除されます",
+      "japanese": "この部屋は毎日掃除されます。",
       "words": [
         "This",
         "room",
@@ -945,7 +945,7 @@
     },
     {
       "id": "so-g3-u0-017",
-      "japanese": "その手紙は英語で書かれました",
+      "japanese": "その手紙は英語で書かれました。",
       "words": [
         "The",
         "letter",
@@ -965,7 +965,7 @@
     },
     {
       "id": "so-g3-u0-018",
-      "japanese": "これらの製品は中国で製造されています",
+      "japanese": "これらの製品は中国で製造されています。",
       "words": [
         "These",
         "products",
@@ -985,7 +985,7 @@
     },
     {
       "id": "so-g3-u0-019",
-      "japanese": "その絵は有名な画家によって描かれました",
+      "japanese": "その絵は有名な画家によって描かれました。",
       "words": [
         "The",
         "painting",
@@ -1007,7 +1007,7 @@
     },
     {
       "id": "so-g3-u0-020",
-      "japanese": "この本は1999年に出版されました",
+      "japanese": "この本は1999年に出版されました。",
       "words": [
         "This",
         "book",
