@@ -599,7 +599,7 @@
     {
       "id": "g1-u5-para-008",
       "type": "paraphrase",
-      "japanese": "can't → cannot。",
+      "japanese": "彼女は英語を話せません。",
       "originalSentence": "She can't speak English.",
       "question": "can'tをcannotに書き換えなさい",
       "choices": [
@@ -727,7 +727,7 @@
     {
       "id": "g1-u5-vf-001",
       "type": "verbForm",
-      "japanese": "canの後ろの形。",
+      "japanese": "私は英語を話せます。",
       "sentence": "I can ____ English.",
       "verb": "speak",
       "choices": [
@@ -743,7 +743,7 @@
     {
       "id": "g1-u5-vf-002",
       "type": "verbForm",
-      "japanese": "canの後ろの形（三人称）。",
+      "japanese": "彼女はピアノを弾けます。",
       "sentence": "She can ____ the piano.",
       "verb": "play",
       "choices": [
@@ -759,7 +759,7 @@
     {
       "id": "g1-u5-vf-003",
       "type": "verbForm",
-      "japanese": "can'tの後ろの形。",
+      "japanese": "私は速く走れません。",
       "sentence": "I can't ____ fast.",
       "verb": "run",
       "choices": [
@@ -775,7 +775,7 @@
     {
       "id": "g1-u5-vf-004",
       "type": "verbForm",
-      "japanese": "Canの後ろの形（疑問文）。",
+      "japanese": "あなたは車を運転できますか。",
       "sentence": "Can you ____ a car?",
       "verb": "drive",
       "choices": [
@@ -791,7 +791,7 @@
     {
       "id": "g1-u5-vf-005",
       "type": "verbForm",
-      "japanese": "cannotの後ろの形。",
+      "japanese": "彼は日本語を読めません。",
       "sentence": "He cannot ____ Japanese.",
       "verb": "read",
       "choices": [
@@ -807,7 +807,7 @@
     {
       "id": "g1-u5-vf-006",
       "type": "verbForm",
-      "japanese": "canの後ろの形（複数主語）。",
+      "japanese": "彼らはサッカーをできます。",
       "sentence": "They can ____ soccer.",
       "verb": "play",
       "choices": [
@@ -823,7 +823,7 @@
     {
       "id": "g1-u5-vf-007",
       "type": "verbForm",
-      "japanese": "Canの後ろの形（三人称疑問文）。",
+      "japanese": "彼女は上手に歌えますか。",
       "sentence": "Can she ____ well?",
       "verb": "sing",
       "choices": [
@@ -839,7 +839,7 @@
     {
       "id": "g1-u5-vf-008",
       "type": "verbForm",
-      "japanese": "can'tの後ろの形（三人称）。",
+      "japanese": "彼は中国語を話せません。",
       "sentence": "He can't ____ Chinese.",
       "verb": "speak",
       "choices": [
@@ -855,7 +855,7 @@
     {
       "id": "g1-u5-vf-009",
       "type": "verbForm",
-      "japanese": "canの後ろの形（スケート）。",
+      "japanese": "私たちは上手にスケートできます。",
       "sentence": "We can ____ very well.",
       "verb": "skate",
       "choices": [
@@ -871,7 +871,7 @@
     {
       "id": "g1-u5-vf-010",
       "type": "verbForm",
-      "japanese": "Canの後ろの形（What疑問文）。",
+      "japanese": "あなたはどこへ行けますか。",
       "sentence": "Where can you ____?",
       "verb": "go",
       "choices": [

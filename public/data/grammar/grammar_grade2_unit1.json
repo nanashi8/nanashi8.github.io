@@ -486,7 +486,7 @@
     {
       "id": "g2-u1-para-001",
       "type": "paraphrase",
-      "japanese": "現在進行形→過去進行形。",
+      "japanese": "私は勉強していました。",
       "originalSentence": "I am studying.",
       "question": "過去進行形に書き換えなさい",
       "choices": [
@@ -502,7 +502,7 @@
     {
       "id": "g2-u1-para-002",
       "type": "paraphrase",
-      "japanese": "現在進行形→過去進行形。",
+      "japanese": "彼らは遊んでいました。",
       "originalSentence": "They are playing.",
       "question": "過去進行形に書き換えなさい",
       "choices": [
@@ -518,7 +518,7 @@
     {
       "id": "g2-u1-para-003",
       "type": "paraphrase",
-      "japanese": "現在進行形→過去進行形。",
+      "japanese": "彼女は読んでいました。",
       "originalSentence": "She is reading.",
       "question": "過去進行形に書き換えなさい",
       "choices": [
@@ -534,7 +534,7 @@
     {
       "id": "g2-u1-para-004",
       "type": "paraphrase",
-      "japanese": "肯定→否定。",
+      "japanese": "私はテレビを見ていませんでした。",
       "originalSentence": "I was watching TV.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -550,7 +550,7 @@
     {
       "id": "g2-u1-para-005",
       "type": "paraphrase",
-      "japanese": "肯定→否定。",
+      "japanese": "彼らは走っていませんでした。",
       "originalSentence": "They were running.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -566,7 +566,7 @@
     {
       "id": "g2-u1-para-006",
       "type": "paraphrase",
-      "japanese": "肯定→疑問。",
+      "japanese": "彼女は歌っていましたか。",
       "originalSentence": "She was singing.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -582,7 +582,7 @@
     {
       "id": "g2-u1-para-007",
       "type": "paraphrase",
-      "japanese": "肯定→疑問。",
+      "japanese": "あなたは寝ていましたか。",
       "originalSentence": "You were sleeping.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -598,7 +598,7 @@
     {
       "id": "g2-u1-para-008",
       "type": "paraphrase",
-      "japanese": "過去進行形→過去形。",
+      "japanese": "私は昼食を食べました。",
       "originalSentence": "I was eating lunch.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -614,7 +614,7 @@
     {
       "id": "g2-u1-para-009",
       "type": "paraphrase",
-      "japanese": "過去形→過去進行形。",
+      "japanese": "彼女はテニスをしていました。",
       "originalSentence": "She played tennis.",
       "question": "過去進行形に書き換えなさい",
       "choices": [
