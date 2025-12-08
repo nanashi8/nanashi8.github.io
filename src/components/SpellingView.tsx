@@ -259,12 +259,12 @@ function SpellingView({
     // 応答時間を計算
     const responseTime = Date.now() - questionStartTimeRef.current;
 
-    // 回答時刻を更新（ScoreBoard更新用）- 回答直後に更新
-    setLastAnswerTime(Date.now());
-
     // 単語進捗を更新
     if (currentQuestion) {
       updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'spelling');
+      
+      // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの後に更新
+      setLastAnswerTime(Date.now());
       
       // AI学習アシスタント: スキップした単語の検証
       const progress = await loadProgress();
@@ -349,9 +349,6 @@ function SpellingView({
     }));
     // 次の問題の開始時刻を記録
     questionStartTimeRef.current = Date.now();
-    
-    // 回答時刻を更新（ScoreBoard更新用）
-    setLastAnswerTime(Date.now());
   };
 
   const handleSkip = () => {
@@ -370,6 +367,9 @@ function SpellingView({
     // 単語進捗を更新（正解として記録）
     updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'spelling');
     
+    // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの後に更新
+    setLastAnswerTime(Date.now());
+    
     // スコアに反映（正解扱い）
     // 選択シーケンスをクリアして、正解を表示できるようにする
     setSelectedSequence([]);
@@ -381,9 +381,6 @@ function SpellingView({
       score: prev.score + 1, // スキップは正解扱い
       answered: true,
     }));
-    
-    // 回答時刻を更新（ScoreBoard更新用）
-    setLastAnswerTime(Date.now());
 
     // セッション統計を更新（正解扱い）
     setSessionStats((prev) => ({
