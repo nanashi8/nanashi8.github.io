@@ -715,13 +715,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 </button>
               </div>
 
-              {/* 文法ポイント */}
-              {currentQuestion.grammarPoint && (
-                <div className="grammar-point">
-                  <span className="tag">文法ポイント</span> {currentQuestion.grammarPoint}
-                </div>
-              )}
-              
               {/* ヒント表示 */}
               {showHint && !answered && (
                 <div className="hint-box">
