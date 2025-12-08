@@ -131,11 +131,11 @@
       "choices": [
         "who",
         "which",
-        "that"
+        "whom"
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使う。「日本語を話す」男性を説明している。",
+      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使う。whomは目的格なので不可。whichは物・動物用。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -459,7 +459,7 @@
       "choices": [
         "who",
         "which",
-        "that"
+        "whom"
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
