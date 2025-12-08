@@ -235,14 +235,14 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       await recordMemorizationBehavior(behavior);
       setConsecutiveViews(prev => prev + 1);
       
-      // 進捗データにも記録（ScoreBoard用）
+      // 暗記タブ専用の進捗データを記録（和訳・スペルとは分離）
       const { updateWordProgress } = await import('../progressStorage');
       await updateWordProgress(
         currentQuestion.word,
         isCorrect,
         viewDuration * 1000, // ミリ秒に変換
         undefined,
-        'translation' // 暗記タブも翻訳モードとして記録
+        'memorization' // 暗記タブは独立したモードとして記録
       );
     }
     
