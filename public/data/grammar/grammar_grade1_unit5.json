@@ -2,13 +2,13 @@
   "unit": "Unit 5",
   "title": "助動詞can",
   "grammar": "can + 原形、疑問文・否定文",
-  "totalQuestions": 60,
+  "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
+    "fillInBlank": 21,
+    "sentenceOrdering": 18,
     "paraphrase": 15,
     "verbForm": 10,
-    "conversation": 5
+    "conversation": 6
   },
   "questions": [
     {
@@ -487,7 +487,7 @@
     {
       "id": "g1-u5-para-001",
       "type": "paraphrase",
-      "japanese": "肯定文→疑問文",
+      "japanese": "泳げますか",
       "originalSentence": "You can swim.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -503,7 +503,7 @@
     {
       "id": "g1-u5-para-002",
       "type": "paraphrase",
-      "japanese": "肯定文→否定文",
+      "japanese": "彼女はテニスができません",
       "originalSentence": "She can play tennis.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -519,7 +519,7 @@
     {
       "id": "g1-u5-para-003",
       "type": "paraphrase",
-      "japanese": "否定文→肯定文",
+      "japanese": "フランス語を話せます",
       "originalSentence": "I cannot speak French.",
       "question": "肯定文に書き換えなさい",
       "choices": [
@@ -535,7 +535,7 @@
     {
       "id": "g1-u5-para-004",
       "type": "paraphrase",
-      "japanese": "疑問文→肯定文",
+      "japanese": "彼は料理できます",
       "originalSentence": "Can he cook?",
       "question": "肯定文に書き換えなさい",
       "choices": [
@@ -551,7 +551,7 @@
     {
       "id": "g1-u5-para-005",
       "type": "paraphrase",
-      "japanese": "疑問文→否定文",
+      "japanese": "高く跳べません",
       "originalSentence": "Can you jump high?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -567,7 +567,7 @@
     {
       "id": "g1-u5-para-006",
       "type": "paraphrase",
-      "japanese": "一般動詞→can",
+      "japanese": "ピアノを弾けます",
       "originalSentence": "I play the piano.",
       "question": "「ピアノを弾けます」という意味に書き換えなさい",
       "choices": [
@@ -583,7 +583,7 @@
     {
       "id": "g1-u5-para-007",
       "type": "paraphrase",
-      "japanese": "主語の変更",
+      "japanese": "彼は踊れます",
       "originalSentence": "I can dance.",
       "question": "主語を「彼」に変えて書き換えなさい",
       "choices": [
@@ -615,7 +615,7 @@
     {
       "id": "g1-u5-para-009",
       "type": "paraphrase",
-      "japanese": "肯定文→疑問文（三人称）",
+      "japanese": "彼はサッカーができますか",
       "originalSentence": "He can play soccer.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -631,7 +631,7 @@
     {
       "id": "g1-u5-para-010",
       "type": "paraphrase",
-      "japanese": "否定文→疑問文",
+      "japanese": "中国語を書けますか",
       "originalSentence": "They cannot write Chinese.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -647,7 +647,7 @@
     {
       "id": "g1-u5-para-011",
       "type": "paraphrase",
-      "japanese": "What疑問文作成",
+      "japanese": "何を～できますか",
       "originalSentence": "I can play the guitar.",
       "question": "「何ができますか」という疑問文に書き換えなさい",
       "choices": [
@@ -663,7 +663,7 @@
     {
       "id": "g1-u5-para-012",
       "type": "paraphrase",
-      "japanese": "複数→単数",
+      "japanese": "私は英語を話せます",
       "originalSentence": "We can speak English.",
       "question": "主語を「私」に変えて書き換えなさい",
       "choices": [
@@ -679,7 +679,7 @@
     {
       "id": "g1-u5-para-013",
       "type": "paraphrase",
-      "japanese": "動詞の追加",
+      "japanese": "彼女は歌えます",
       "originalSentence": "She can.",
       "question": "「歌う」を追加して完成させなさい",
       "choices": [
@@ -695,7 +695,7 @@
     {
       "id": "g1-u5-para-014",
       "type": "paraphrase",
-      "japanese": "副詞の追加",
+      "japanese": "彼は速く走れます",
       "originalSentence": "He can run.",
       "question": "「速く」を追加して書き換えなさい",
       "choices": [
@@ -711,7 +711,7 @@
     {
       "id": "g1-u5-para-015",
       "type": "paraphrase",
-      "japanese": "楽器の追加",
+      "japanese": "ピアノを弾く",
       "originalSentence": "I can play.",
       "question": "「ピアノ」を追加して完成させなさい",
       "choices": [
@@ -1008,6 +1008,174 @@
       "difficulty": "advanced",
       "explanation": "Can they～?の答えはYes, they can.。主語はtheyを使う。",
       "hint": "Yes, they can"
+    },
+    {
+      "id": "g1-u5-freq-001",
+      "type": "fillInBlank",
+      "japanese": "私はいつも朝食を食べます",
+      "sentence": "I ____ eat breakfast.",
+      "choices": [
+        "always",
+        "never",
+        "sometimes"
+      ],
+      "correctAnswer": "always",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞alwaysは「いつも(100%)」という意味。一般動詞の前に置く語順として覚えること。I always eat breakfast.",
+      "hint": "100%の頻度"
+    },
+    {
+      "id": "g1-u5-freq-002",
+      "type": "fillInBlank",
+      "japanese": "彼は普通7時に起きます",
+      "sentence": "He ____ gets up at 7.",
+      "choices": [
+        "usually",
+        "never",
+        "always"
+      ],
+      "correctAnswer": "usually",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞usuallyは「普通は、たいてい(80%)」という意味。一般動詞の前に置く語順として覚えること。",
+      "hint": "80%程度"
+    },
+    {
+      "id": "g1-u5-freq-003",
+      "type": "sentenceOrdering",
+      "japanese": "私はよく音楽を聞きます",
+      "words": [
+        "I",
+        "often",
+        "listen",
+        "to",
+        "music"
+      ],
+      "correctAnswer": "I often listen to music.",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞oftenは「よく、しばしば(60%)」という意味。主語 + 頻度副詞 + 一般動詞という語順として覚えること。",
+      "hint": "I often",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-freq-004",
+      "type": "fillInBlank",
+      "japanese": "彼女は時々映画を見ます",
+      "sentence": "She ____ watches movies.",
+      "choices": [
+        "sometimes",
+        "always",
+        "never"
+      ],
+      "correctAnswer": "sometimes",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞sometimesは「時々(40%)」という意味。一般動詞の前に置く語順として覚えること。",
+      "hint": "40%程度"
+    },
+    {
+      "id": "g1-u5-freq-005",
+      "type": "fillInBlank",
+      "japanese": "私は決して嘘をつきません",
+      "sentence": "I ____ tell a lie.",
+      "choices": [
+        "never",
+        "always",
+        "usually"
+      ],
+      "correctAnswer": "never",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞neverは「決して~ない(0%)」という意味。一般動詞の前に置く。I never tell a lie.で否定文になる。",
+      "hint": "0%"
+    },
+    {
+      "id": "g1-u5-freq-006",
+      "type": "conversation",
+      "japanese": "いつも学校に遅刻します",
+      "situation": "習慣について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are you late for school?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I'm ____ late."
+        }
+      ],
+      "choices": [
+        "always",
+        "never",
+        "sometimes"
+      ],
+      "correctAnswer": "always",
+      "difficulty": "intermediate",
+      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えること。I'm always late.「いつも遅刻する」。",
+      "hint": "be動詞の後"
+    },
+    {
+      "id": "g1-u5-freq-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼は決して宿題を忘れません",
+      "words": [
+        "he",
+        "never",
+        "forgets",
+        "his",
+        "homework"
+      ],
+      "correctAnswer": "He never forgets his homework.",
+      "difficulty": "intermediate",
+      "explanation": "頻度副詞neverは一般動詞の前に置く。He never forgets.でそれ自体が否定文になることを覚えること。",
+      "hint": "never forgets",
+      "wordCount": 5
+    },
+    {
+      "id": "g1-u5-freq-008",
+      "type": "fillInBlank",
+      "japanese": "彼女はいつも親切です",
+      "sentence": "She is ____ kind.",
+      "choices": [
+        "always",
+        "never",
+        "often"
+      ],
+      "correctAnswer": "always",
+      "difficulty": "beginner",
+      "explanation": "be動詞の文では、頻度副詞はbe動詞の後に置く語順として覚えること。She is always kind.",
+      "hint": "be動詞の後"
+    },
+    {
+      "id": "g1-u5-freq-009",
+      "type": "sentenceOrdering",
+      "japanese": "私は普通バスで学校に行きます",
+      "words": [
+        "I",
+        "usually",
+        "go",
+        "to",
+        "school",
+        "by",
+        "bus"
+      ],
+      "correctAnswer": "I usually go to school by bus.",
+      "difficulty": "intermediate",
+      "explanation": "頻度副詞usuallyは一般動詞の前に置く。主語 + usually + 動詞という語順として覚えること。",
+      "hint": "I usually go",
+      "wordCount": 7
+    },
+    {
+      "id": "g1-u5-freq-010",
+      "type": "fillInBlank",
+      "japanese": "彼らはよくサッカーをします",
+      "sentence": "They ____ play soccer.",
+      "choices": [
+        "often",
+        "never",
+        "always"
+      ],
+      "correctAnswer": "often",
+      "difficulty": "beginner",
+      "explanation": "頻度副詞oftenは「よく」という意味で、一般動詞の前に置く語順として覚えること。",
+      "hint": "60%程度"
     }
   ]
 }

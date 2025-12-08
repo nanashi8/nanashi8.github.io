@@ -14,7 +14,7 @@
     {
       "id": "g2-u1-fib-001",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "私はその時本を読んでいました",
       "sentence": "I ____ listening to music then.",
       "choices": [
         "was",
@@ -29,7 +29,7 @@
     {
       "id": "g2-u1-fib-002",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "彼らは昨日サッカーをしていました",
       "sentence": "They ____ playing soccer yesterday.",
       "choices": [
         "were",
@@ -44,7 +44,7 @@
     {
       "id": "g2-u1-fib-003",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "彼女はその時テレビを見ていました",
       "sentence": "She ____ watching TV then.",
       "choices": [
         "was",
@@ -59,7 +59,7 @@
     {
       "id": "g2-u1-fib-004",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "私たちは英語を勉強していました",
       "sentence": "We ____ studying English.",
       "choices": [
         "were",
@@ -74,7 +74,7 @@
     {
       "id": "g2-u1-fib-005",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "彼はその時寝ていました",
       "sentence": "He ____ sleeping at that time.",
       "choices": [
         "was",
@@ -179,7 +179,7 @@
     {
       "id": "g2-u1-fib-012",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "激しく雨が降っていました",
       "sentence": "It was ____ heavily.",
       "choices": [
         "raining",
@@ -194,7 +194,7 @@
     {
       "id": "g2-u1-fib-013",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "子供たちは公園で走っていました",
       "sentence": "The children were ____ in the park.",
       "choices": [
         "running",
@@ -209,7 +209,7 @@
     {
       "id": "g2-u1-fib-014",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "母は朝食を作っていました",
       "sentence": "My mother was ____ breakfast.",
       "choices": [
         "making",
@@ -224,7 +224,7 @@
     {
       "id": "g2-u1-fib-015",
       "type": "fillInBlank",
-      "japanese": "過去進行形",
+      "japanese": "彼らはバスを待っていました",
       "sentence": "They were ____ for the bus.",
       "choices": [
         "waiting",
@@ -239,7 +239,7 @@
     {
       "id": "g2-u1-so-001",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形",
+      "japanese": "私はその時読んでいました",
       "words": [
         "I",
         "was",
@@ -255,7 +255,7 @@
     {
       "id": "g2-u1-so-002",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形",
+      "japanese": "彼らはサッカーをしていました",
       "words": [
         "they",
         "were",
@@ -271,7 +271,7 @@
     {
       "id": "g2-u1-so-003",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形",
+      "japanese": "彼女は夕食を作っていました",
       "words": [
         "she",
         "was",
@@ -287,7 +287,7 @@
     {
       "id": "g2-u1-so-004",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形",
+      "japanese": "私たちは英語を勉強していました",
       "words": [
         "we",
         "were",
@@ -303,7 +303,7 @@
     {
       "id": "g2-u1-so-005",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形",
+      "japanese": "彼は速く走っていました",
       "words": [
         "he",
         "was",
@@ -319,7 +319,7 @@
     {
       "id": "g2-u1-so-006",
       "type": "sentenceOrdering",
-      "japanese": "否定文",
+      "japanese": "私はその時寝ていませんでした",
       "words": [
         "I",
         "wasn't",
@@ -335,7 +335,7 @@
     {
       "id": "g2-u1-so-007",
       "type": "sentenceOrdering",
-      "japanese": "否定文",
+      "japanese": "彼らはテレビを見ていませんでした",
       "words": [
         "they",
         "weren't",
@@ -351,7 +351,7 @@
     {
       "id": "g2-u1-so-008",
       "type": "sentenceOrdering",
-      "japanese": "疑問文",
+      "japanese": "彼女はその時話していましたか",
       "words": [
         "was",
         "she",
@@ -367,7 +367,7 @@
     {
       "id": "g2-u1-so-009",
       "type": "sentenceOrdering",
-      "japanese": "疑問文",
+      "japanese": "あなたは音楽を聴いていましたか",
       "words": [
         "were",
         "you",
@@ -384,7 +384,7 @@
     {
       "id": "g2-u1-so-010",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形",
+      "japanese": "昨日は雨が降っていました",
       "words": [
         "it",
         "was",
@@ -435,7 +435,7 @@
     {
       "id": "g2-u1-so-013",
       "type": "sentenceOrdering",
-      "japanese": "疑問文長文",
+      "japanese": "彼は宿題をしていましたか",
       "words": [
         "was",
         "he",
@@ -452,7 +452,7 @@
     {
       "id": "g2-u1-so-014",
       "type": "sentenceOrdering",
-      "japanese": "否定文長文",
+      "japanese": "私たちはその時外で遊んでいませんでした",
       "words": [
         "we",
         "weren't",
@@ -469,7 +469,7 @@
     {
       "id": "g2-u1-so-015",
       "type": "sentenceOrdering",
-      "japanese": "疑問文長文",
+      "japanese": "生徒たちはノートを取っていましたか",
       "words": [
         "were",
         "the",
@@ -886,7 +886,7 @@
     {
       "id": "g2-u1-conv-001",
       "type": "conversation",
-      "japanese": "過去進行形",
+      "japanese": "テレビを見ていました",
       "situation": "その時の行動",
       "dialogue": [
         {

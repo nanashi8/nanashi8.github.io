@@ -2,13 +2,13 @@
   "unit": "Unit 8",
   "title": "There is/are",
   "grammar": "存在を表す構文",
-  "totalQuestions": 60,
+  "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
-    "paraphrase": 15,
+    "fillInBlank": 20,
+    "sentenceOrdering": 17,
+    "paraphrase": 17,
     "verbForm": 10,
-    "conversation": 5
+    "conversation": 6
   },
   "questions": [
     {
@@ -985,6 +985,161 @@
       "difficulty": "advanced",
       "explanation": "存在を表す構文の会話5。",
       "hint": "会話"
+    },
+    {
+      "id": "g2-u8-must-001",
+      "type": "fillInBlank",
+      "japanese": "あなたは宿題をしなければなりません",
+      "sentence": "You ____ do your homework.",
+      "choices": [
+        "must",
+        "can",
+        "may"
+      ],
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "mustは「~しなければならない」という強い義務を表す助動詞として覚えること。主観的な義務や強制を示す。",
+      "hint": "義務"
+    },
+    {
+      "id": "g2-u8-must-002",
+      "type": "fillInBlank",
+      "japanese": "私は7時に起きなければなりません",
+      "sentence": "I ____ to get up at 7.",
+      "choices": [
+        "have",
+        "must",
+        "can"
+      ],
+      "correctAnswer": "have",
+      "difficulty": "intermediate",
+      "explanation": "have to は「~しなければならない」という客観的な義務を表す表現として覚えること。mustより客観的。I have to get up.",
+      "hint": "客観的義務"
+    },
+    {
+      "id": "g2-u8-must-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼は薬を飲まなければなりません",
+      "words": [
+        "he",
+        "must",
+        "take",
+        "medicine"
+      ],
+      "correctAnswer": "He must take medicine.",
+      "difficulty": "beginner",
+      "explanation": "mustは主語 + must + 動詞の原形という語順として覚えること。「~しなければならない」。",
+      "hint": "must + 動詞原形",
+      "wordCount": 4
+    },
+    {
+      "id": "g2-u8-must-004",
+      "type": "fillInBlank",
+      "japanese": "彼女は毎日練習しなければなりません",
+      "sentence": "She ____ to practice every day.",
+      "choices": [
+        "has",
+        "must",
+        "have"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "have toの三人称単数形はhas toとなることを覚えること。She has to practice.「彼女は練習しなければならない」。",
+      "hint": "三人称単数"
+    },
+    {
+      "id": "g2-u8-must-005",
+      "type": "paraphrase",
+      "japanese": "早く寝なければなりません（go to bed early）をhave toで",
+      "originalSentence": "You must go to bed early.",
+      "question": "You ____ go to bed early.",
+      "correctAnswer": "have to",
+      "difficulty": "intermediate",
+      "explanation": "mustとhave toは基本的に同じ意味。mustは主観的、have toは客観的義務を表す。"
+    },
+    {
+      "id": "g2-u8-must-006",
+      "type": "conversation",
+      "japanese": "今すぐ出発しなければなりません",
+      "situation": "急いでいる",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you stay longer?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I ____ leave now."
+        }
+      ],
+      "choices": [
+        "must",
+        "can",
+        "may"
+      ],
+      "correctAnswer": "must",
+      "difficulty": "intermediate",
+      "explanation": "mustで強い必要性「~しなければならない」を表す。I must leave now.「今すぐ出発しなければ」。",
+      "hint": "強い必要性"
+    },
+    {
+      "id": "g2-u8-must-007",
+      "type": "fillInBlank",
+      "japanese": "私たちは規則に従わなければなりません",
+      "sentence": "We ____ follow the rules.",
+      "choices": [
+        "must",
+        "can",
+        "may"
+      ],
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "mustは「~しなければならない」という義務を表す助動詞として覚えること。We must follow.「従わなければならない」。",
+      "hint": "義務"
+    },
+    {
+      "id": "g2-u8-must-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼は明日早く起きなければなりません",
+      "words": [
+        "he",
+        "has",
+        "to",
+        "get",
+        "up",
+        "early",
+        "tomorrow"
+      ],
+      "correctAnswer": "He has to get up early tomorrow.",
+      "difficulty": "intermediate",
+      "explanation": "have toは主語 + have/has + to + 動詞の原形という語順として覚えること。",
+      "hint": "has to get",
+      "wordCount": 7
+    },
+    {
+      "id": "g2-u8-must-009",
+      "type": "fillInBlank",
+      "japanese": "あなたはもっと注意深くならなければなりません",
+      "sentence": "You ____ be more careful.",
+      "choices": [
+        "must",
+        "can",
+        "may"
+      ],
+      "correctAnswer": "must",
+      "difficulty": "intermediate",
+      "explanation": "mustの後はbe動詞の原形beを使うことを覚えること。You must be careful.「注意深くならなければ」。",
+      "hint": "must be"
+    },
+    {
+      "id": "g2-u8-must-010",
+      "type": "paraphrase",
+      "japanese": "学校に行かなければなりません（go to school）をmustで",
+      "originalSentence": "I have to go to school.",
+      "question": "I ____ go to school.",
+      "correctAnswer": "must",
+      "difficulty": "beginner",
+      "explanation": "have toとmustは基本的に同じ意味。両方とも「~しなければならない」を表す。"
     }
   ]
 }

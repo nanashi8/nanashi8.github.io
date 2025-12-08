@@ -5,6 +5,8 @@ import {
   getTotalMasteredWordsCount,
   getRetentionRateWithAI,
   getDetailedRetentionStats,
+  getGrammarRetentionRateWithAI,
+  getGrammarDetailedRetentionStats,
   getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData
 } from '../progressStorage';
@@ -81,11 +83,18 @@ function ScoreBoard({
 
   // 定着率と統計データをstateで管理
   const [retentionData, setRetentionData] = useState(() => {
-    const { retentionRate, appearedCount } = getRetentionRateWithAI();
-    return { retentionRate, appearedCount };
+    if (mode === 'grammar') {
+      const { retentionRate, appearedCount } = getGrammarRetentionRateWithAI();
+      return { retentionRate, appearedCount };
+    } else {
+      const { retentionRate, appearedCount } = getRetentionRateWithAI();
+      return { retentionRate, appearedCount };
+    }
   });
   
-  const [detailedStatsData, setDetailedStatsData] = useState(() => getDetailedRetentionStats());
+  const [detailedStatsData, setDetailedStatsData] = useState(() => 
+    mode === 'grammar' ? getGrammarDetailedRetentionStats() : getDetailedRetentionStats()
+  );
   
   // 履歴タブ用の単語データ
   const [currentWordData, setCurrentWordData] = useState<ReturnType<typeof getWordDetailedData>>(null);
@@ -93,10 +102,16 @@ function ScoreBoard({
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
     // onAnswerTimeが0の場合は初期状態なのでスキップしない（暗記タブ対応）
-    const { retentionRate, appearedCount } = getRetentionRateWithAI();
-    setRetentionData({ retentionRate, appearedCount });
-    setDetailedStatsData(getDetailedRetentionStats());
-  }, [onAnswerTime]); // 回答時のみ更新
+    if (mode === 'grammar') {
+      const { retentionRate, appearedCount } = getGrammarRetentionRateWithAI();
+      setRetentionData({ retentionRate, appearedCount });
+      setDetailedStatsData(getGrammarDetailedRetentionStats());
+    } else {
+      const { retentionRate, appearedCount } = getRetentionRateWithAI();
+      setRetentionData({ retentionRate, appearedCount });
+      setDetailedStatsData(getDetailedRetentionStats());
+    }
+  }, [onAnswerTime, mode]); // 回答時のみ更新
   
   // 履歴タブ用: 現在の単語データを更新
   useEffect(() => {
@@ -336,8 +351,8 @@ function ScoreBoard({
         </div>
       )}
       
-      {/* 学習状況タブ（詳細な定着率の内訳） - 和訳・スペルのみ */}
-      {activeTab === 'breakdown' && (mode === 'translation' || mode === 'spelling' || mode === 'memorization') && (
+      {/* 学習状況タブ（詳細な定着率の内訳） */}
+      {activeTab === 'breakdown' && (
         <div className="score-board-content">
           <div className="retention-breakdown-container">
             <div className="retention-breakdown-header">
@@ -349,6 +364,13 @@ function ScoreBoard({
                       {detailedStats.appearedWords}語確認：
                       🟢覚えた {detailedStats.masteredCount}語 
                       🟡覚えていない {detailedStats.learningCount + detailedStats.strugglingCount}語
+                    </>
+                  ) : mode === 'grammar' ? (
+                    <>
+                      {detailedStats.appearedWords}問出題：
+                      🟢定着 {detailedStats.masteredCount}問 
+                      🟡学習中 {detailedStats.learningCount}問 
+                      🔴要復習 {detailedStats.strugglingCount}問
                     </>
                   ) : (
                     <>

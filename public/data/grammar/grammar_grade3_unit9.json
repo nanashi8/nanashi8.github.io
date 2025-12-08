@@ -2,11 +2,13 @@
   "unit": "Unit 9",
   "title": "比較級・最上級",
   "grammar": "-er/-est, more/most",
-  "totalQuestions": 60,
+  "totalQuestions": 135,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 58,
+    "sentenceOrdering": 42,
+    "paraphrase": 7,
+    "verbForm": 20,
+    "conversation": 8
   },
   "questions": [
     {
@@ -342,7 +344,8 @@
       "correctAnswer": "taller",
       "difficulty": "intermediate",
       "hint": "taller than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼は私より背が高いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-002",
@@ -357,7 +360,8 @@
       "correctAnswer": "more interesting",
       "difficulty": "intermediate",
       "hint": "more interesting",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "この本はあの本より面白いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-003",
@@ -372,7 +376,8 @@
       "correctAnswer": "smartest",
       "difficulty": "intermediate",
       "hint": "the smartest",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女はクラスで最も賢いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-004",
@@ -387,7 +392,8 @@
       "correctAnswer": "most beautiful",
       "difficulty": "intermediate",
       "hint": "the most beautiful",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "これは世界で最も美しい場所です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-005",
@@ -402,7 +408,8 @@
       "correctAnswer": "hotter",
       "difficulty": "intermediate",
       "hint": "hotter than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "夏は冬より暑いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-006",
@@ -417,7 +424,8 @@
       "correctAnswer": "youngest",
       "difficulty": "intermediate",
       "hint": "the youngest",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼は家族の中で最も若いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-007",
@@ -432,7 +440,8 @@
       "correctAnswer": "easier",
       "difficulty": "intermediate",
       "hint": "easier than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "この問題はあれより簡単です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-008",
@@ -447,7 +456,8 @@
       "correctAnswer": "most popular",
       "difficulty": "intermediate",
       "hint": "the most popular",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は学校で最も人気があります。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-009",
@@ -462,7 +472,8 @@
       "correctAnswer": "colder",
       "difficulty": "intermediate",
       "hint": "colder than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "今日は昨日より寒いです。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-010",
@@ -477,7 +488,8 @@
       "correctAnswer": "best",
       "difficulty": "intermediate",
       "hint": "the best",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "これは私が見た中で最も良い映画です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-011",
@@ -492,7 +504,8 @@
       "correctAnswer": "faster",
       "difficulty": "intermediate",
       "hint": "faster than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼の車は私のより速いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-012",
@@ -507,7 +520,8 @@
       "correctAnswer": "kindest",
       "difficulty": "intermediate",
       "hint": "the kindest",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は三人の中で最も親切です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-013",
@@ -522,7 +536,8 @@
       "correctAnswer": "larger",
       "difficulty": "intermediate",
       "hint": "larger than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "この部屋はあの部屋より広いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-014",
@@ -537,7 +552,8 @@
       "correctAnswer": "highest",
       "difficulty": "intermediate",
       "hint": "the highest",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "富士山は日本で最も高い山です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-015",
@@ -552,7 +568,8 @@
       "correctAnswer": "better",
       "difficulty": "intermediate",
       "hint": "better than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は私より上手に歌います。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-016",
@@ -567,7 +584,8 @@
       "correctAnswer": "cheapest",
       "difficulty": "intermediate",
       "hint": "the cheapest",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "これは店で最も安い商品です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-017",
@@ -582,7 +600,8 @@
       "correctAnswer": "stronger",
       "difficulty": "intermediate",
       "hint": "stronger than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼は兄より強いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-018",
@@ -597,7 +616,8 @@
       "correctAnswer": "most important",
       "difficulty": "intermediate",
       "hint": "the most important",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "これは今年最も重要な試験です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-019",
@@ -612,7 +632,8 @@
       "correctAnswer": "farther",
       "difficulty": "intermediate",
       "hint": "farther than",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼の家は私の家より遠いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "fb-g3-u9-020",
@@ -627,7 +648,8 @@
       "correctAnswer": "happiest",
       "difficulty": "intermediate",
       "hint": "the happiest",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は私が知っている中で最も幸せな人です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-001",
@@ -645,7 +667,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は私より背が高いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-002",
@@ -666,7 +689,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "この本はあの本より面白いです。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-003",
@@ -686,7 +710,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女はクラスで最も賢いです。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-004",
@@ -708,7 +733,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "これは世界で最も美しい場所です。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-005",
@@ -726,7 +752,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "夏は冬より暑いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-006",
@@ -746,7 +773,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は家族の中で最も若いです。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-007",
@@ -766,7 +794,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "この問題はあれより簡単です。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-008",
@@ -787,7 +816,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は学校で最も人気があります。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-009",
@@ -805,7 +835,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "今日は昨日より寒いです。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-010",
@@ -826,7 +857,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "これは私が見た中で最も良い映画です。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-011",
@@ -845,7 +877,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼の車は私のより速いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-012",
@@ -865,7 +898,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は三人の中で最も親切です。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-013",
@@ -885,7 +919,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "この部屋はあの部屋より広いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-014",
@@ -906,7 +941,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "富士山は日本で最も高い山です。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-015",
@@ -925,7 +961,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は私より上手に歌います。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-016",
@@ -946,7 +983,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "これは店で最も安い商品です。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-017",
@@ -965,7 +1003,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は兄より強いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-018",
@@ -986,7 +1025,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "これは今年最も重要な試験です。最上級は「the + 最上級」で「最も～」という意味を表します。"
     },
     {
       "id": "so-g3-u9-019",
@@ -1005,7 +1045,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "比較級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼の家は私の家より遠いです。比較級は「比較級 + than」で「～より...」という意味を表します。"
     },
     {
       "id": "so-g3-u9-020",
@@ -1025,7 +1066,1230 @@
       "difficulty": "intermediate",
       "grammarPoint": "比較級・最上級",
       "hint": "最上級",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は私が知っている中で最も幸せな人です。最上級は「the + 最上級」で「最も～」という意味を表します。"
+    },
+    {
+      "id": "g3-u9-make-001",
+      "type": "fillInBlank",
+      "japanese": "母は私に部屋を掃除させました",
+      "sentence": "My mother made me ____ my room.",
+      "choices": [
+        "clean",
+        "to clean",
+        "cleaning"
+      ],
+      "correctAnswer": "clean",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形で「人に~させる(強制)」という使役動詞の構文として覚えること。My mother made me clean.「母は私に掃除させた」。toは不要。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-make-002",
+      "type": "sentenceOrdering",
+      "japanese": "先生は私たちに宿題をやらせました",
+      "words": [
+        "the",
+        "teacher",
+        "made",
+        "us",
+        "do",
+        "homework"
+      ],
+      "correctAnswer": "The teacher made us do homework.",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形という使役動詞の構文として覚えること。「人に~させる(強制的)」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "made us do",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-make-003",
+      "type": "fillInBlank",
+      "japanese": "その映画は私を泣かせました",
+      "sentence": "The movie made me ____.",
+      "choices": [
+        "cry",
+        "to cry",
+        "crying"
+      ],
+      "correctAnswer": "cry",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形で「人を~させる」という使役動詞の構文として覚えること。made me cry「私を泣かせた」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-make-004",
+      "type": "conversation",
+      "japanese": "彼を待たせました",
+      "situation": "遅刻について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did he wait?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I made him ____."
+        }
+      ],
+      "choices": [
+        "wait",
+        "to wait",
+        "waiting"
+      ],
+      "correctAnswer": "wait",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形という使役動詞の構文として覚えること。made him wait「彼を待たせた」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-make-005",
+      "type": "sentenceOrdering",
+      "japanese": "父は私に皿を洗わせました",
+      "words": [
+        "my",
+        "father",
+        "made",
+        "me",
+        "wash",
+        "the",
+        "dishes"
+      ],
+      "correctAnswer": "My father made me wash the dishes.",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形で「人に~させる」という使役動詞の構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "made me wash",
+      "wordCount": 7
+    },
+    {
+      "id": "g3-u9-make-006",
+      "type": "fillInBlank",
+      "japanese": "その知らせは彼女を悲しませました",
+      "sentence": "The news made her ____.",
+      "choices": [
+        "sad",
+        "sadly",
+        "sadness"
+      ],
+      "correctAnswer": "sad",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞で「人を~にする」という使役動詞の構文として覚えること。made her sad「彼女を悲しくさせた」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-make-007",
+      "type": "paraphrase",
+      "japanese": "彼は私を笑わせました（laugh）",
+      "originalSentence": "I laughed because of him.",
+      "question": "He made me ____.",
+      "correctAnswer": "laugh",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形で書き換える。He made me laugh.「彼は私を笑わせた」となる。 類似:leave, keepなどもSVOC構文を作る。"
+    },
+    {
+      "id": "g3-u9-make-008",
+      "type": "fillInBlank",
+      "japanese": "この本は私を幸せにしました",
+      "sentence": "This book made me ____.",
+      "choices": [
+        "happy",
+        "happily",
+        "happiness"
+      ],
+      "correctAnswer": "happy",
+      "difficulty": "beginner",
+      "explanation": "make + 人 + 形容詞で「人を~にする」という使役動詞の構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-make-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は私に真実を話させました",
+      "words": [
+        "she",
+        "made",
+        "me",
+        "tell",
+        "the",
+        "truth"
+      ],
+      "correctAnswer": "She made me tell the truth.",
+      "difficulty": "advanced",
+      "explanation": "make + 人 + 動詞の原形という使役動詞の構文として覚えること。made me tell「私に話させた」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "made me tell",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-make-010",
+      "type": "fillInBlank",
+      "japanese": "彼は私を長時間待たせました",
+      "sentence": "He made me ____ for a long time.",
+      "choices": [
+        "wait",
+        "to wait",
+        "waiting"
+      ],
+      "correctAnswer": "wait",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 動詞の原形という使役動詞の構文として覚えること。made me wait「私を待たせた」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-let-001",
+      "type": "fillInBlank",
+      "japanese": "母は私を外で遊ばせてくれました",
+      "sentence": "My mother let me ____ outside.",
+      "choices": [
+        "play",
+        "to play",
+        "playing"
+      ],
+      "correctAnswer": "play",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形で「人に~させる(許可)」という使役動詞の構文として覚えること。makeは強制、letは許可の意味。let me play「私を遊ばせてくれた」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-let-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼は私に彼の車を使わせてくれました",
+      "words": [
+        "he",
+        "let",
+        "me",
+        "use",
+        "his",
+        "car"
+      ],
+      "correctAnswer": "He let me use his car.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形で「人に~させてくれる(許可)」という使役動詞の構文として覚えること。",
+      "hint": "let me use",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-let-003",
+      "type": "fillInBlank",
+      "japanese": "私を手伝わせてください",
+      "sentence": "Please let me ____ you.",
+      "choices": [
+        "help",
+        "to help",
+        "helping"
+      ],
+      "correctAnswer": "help",
+      "difficulty": "beginner",
+      "explanation": "let + 人 + 動詞の原形という使役動詞の構文として覚えること。Let me help you.「手伝わせてください」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-let-004",
+      "type": "conversation",
+      "japanese": "私に考えさせてください",
+      "situation": "決断について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What do you think?"
+        },
+        {
+          "speaker": "B",
+          "text": "Let me ____ about it."
+        }
+      ],
+      "choices": [
+        "think",
+        "to think",
+        "thinking"
+      ],
+      "correctAnswer": "think",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形という使役動詞の構文として覚えること。Let me think.「考えさせて」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-let-005",
+      "type": "sentenceOrdering",
+      "japanese": "父は私を一人で行かせてくれました",
+      "words": [
+        "my",
+        "father",
+        "let",
+        "me",
+        "go",
+        "alone"
+      ],
+      "correctAnswer": "My father let me go alone.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形で「人に~させてくれる」という使役動詞の構文として覚えること。",
+      "hint": "let me go",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-let-006",
+      "type": "fillInBlank",
+      "japanese": "私に説明させてください",
+      "sentence": "Let me ____ it to you.",
+      "choices": [
+        "explain",
+        "to explain",
+        "explaining"
+      ],
+      "correctAnswer": "explain",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形という使役動詞の構文として覚えること。Let me explain.「説明させて」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-let-007",
+      "type": "paraphrase",
+      "japanese": "彼女は私を行かせてくれました（go）",
+      "originalSentence": "She allowed me to go.",
+      "question": "She let me ____.",
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "allow + 人 + to不定詞をlet + 人 + 動詞の原形に書き換える。She let me go.となる。"
+    },
+    {
+      "id": "g3-u9-let-008",
+      "type": "sentenceOrdering",
+      "japanese": "彼らは私を参加させてくれました",
+      "words": [
+        "they",
+        "let",
+        "me",
+        "join",
+        "them"
+      ],
+      "correctAnswer": "They let me join them.",
+      "difficulty": "intermediate",
+      "explanation": "let + 人 + 動詞の原形で「人に~させてくれる(許可)」という使役動詞の構文として覚えること。",
+      "hint": "let me join",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u9-let-009",
+      "type": "fillInBlank",
+      "japanese": "彼女は私を一人にさせてくれました",
+      "sentence": "She let me ____ alone.",
+      "choices": [
+        "be",
+        "to be",
+        "being"
+      ],
+      "correctAnswer": "be",
+      "difficulty": "advanced",
+      "explanation": "let + 人 + be で「人を~にさせる」という使役動詞の構文として覚えること。let me be alone「一人にさせて」。",
+      "hint": "be動詞の原形"
+    },
+    {
+      "id": "g3-u9-let-010",
+      "type": "fillInBlank",
+      "japanese": "私にやらせてください",
+      "sentence": "Please let me ____ it.",
+      "choices": [
+        "do",
+        "to do",
+        "doing"
+      ],
+      "correctAnswer": "do",
+      "difficulty": "beginner",
+      "explanation": "let + 人 + 動詞の原形という使役動詞の構文として覚えること。Let me do it.「私にやらせて」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-have-001",
+      "type": "fillInBlank",
+      "japanese": "私は彼に車を修理してもらいました",
+      "sentence": "I had him ____ my car.",
+      "choices": [
+        "repair",
+        "to repair",
+        "repairing"
+      ],
+      "correctAnswer": "repair",
+      "difficulty": "advanced",
+      "explanation": "have + 人 + 動詞の原形で「人に~してもらう」という使役動詞の構文として覚えること。had him repair「彼に修理してもらった」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-have-002",
+      "type": "sentenceOrdering",
+      "japanese": "私は弟に宿題を手伝ってもらいました",
+      "words": [
+        "I",
+        "had",
+        "my",
+        "brother",
+        "help",
+        "me"
+      ],
+      "correctAnswer": "I had my brother help me.",
+      "difficulty": "advanced",
+      "explanation": "have + 人 + 動詞の原形で「人に~してもらう」という使役動詞の構文として覚えること。",
+      "hint": "had my brother help",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-have-003",
+      "type": "fillInBlank",
+      "japanese": "私は髪を切ってもらいました",
+      "sentence": "I had my hair ____.",
+      "choices": [
+        "cut",
+        "to cut",
+        "cutting"
+      ],
+      "correctAnswer": "cut",
+      "difficulty": "advanced",
+      "explanation": "have + 物 + 過去分詞で「~してもらう」という受け身的な使役の構文として覚えること。had my hair cut「髪を切ってもらった」。",
+      "hint": "過去分詞"
+    },
+    {
+      "id": "g3-u9-have-004",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼女に手紙を送ってもらいました",
+      "words": [
+        "I",
+        "had",
+        "her",
+        "send",
+        "the",
+        "letter"
+      ],
+      "correctAnswer": "I had her send the letter.",
+      "difficulty": "advanced",
+      "explanation": "have + 人 + 動詞の原形で「人に~してもらう」という使役動詞の構文として覚えること。",
+      "hint": "had her send",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-have-005",
+      "type": "fillInBlank",
+      "japanese": "私は彼に質問に答えてもらいました",
+      "sentence": "I had him ____ the question.",
+      "choices": [
+        "answer",
+        "to answer",
+        "answering"
+      ],
+      "correctAnswer": "answer",
+      "difficulty": "advanced",
+      "explanation": "have + 人 + 動詞の原形で「人に~してもらう」という使役動詞の構文として覚えること。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-see-001",
+      "type": "fillInBlank",
+      "japanese": "私は彼が通りを歩くのを見ました",
+      "sentence": "I saw him ____ down the street.",
+      "choices": [
+        "walk",
+        "to walk",
+        "walking"
+      ],
+      "correctAnswer": "walk",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + 動詞の原形で「人が~するのを見る(全過程)」という知覚動詞の構文として覚えること。saw him walk「彼が歩くのを見た」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-see-002",
+      "type": "fillInBlank",
+      "japanese": "私は彼女が歌っているのを見ました",
+      "sentence": "I saw her ____ a song.",
+      "choices": [
+        "singing",
+        "sing",
+        "to sing"
+      ],
+      "correctAnswer": "singing",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + ~ing で「人が~しているのを見る(進行中)」という知覚動詞の構文として覚えること。saw her singing「彼女が歌っているのを見た」。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-see-003",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼が部屋に入るのを見ました",
+      "words": [
+        "I",
+        "saw",
+        "him",
+        "enter",
+        "the",
+        "room"
+      ],
+      "correctAnswer": "I saw him enter the room.",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + 動詞の原形で「人が~するのを見る」という知覚動詞の構文として覚えること。",
+      "hint": "saw him enter",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-see-004",
+      "type": "fillInBlank",
+      "japanese": "私は子供たちが遊んでいるのを見ました",
+      "sentence": "I saw the children ____ in the park.",
+      "choices": [
+        "playing",
+        "play",
+        "to play"
+      ],
+      "correctAnswer": "playing",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + ~ing で「人が~しているのを見る(進行中の様子)」という知覚動詞の構文として覚えること。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-see-005",
+      "type": "conversation",
+      "japanese": "彼が走っているのを見ました",
+      "situation": "目撃したこと",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Did you see him?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, I saw him ____."
+        }
+      ],
+      "choices": [
+        "running",
+        "run",
+        "to run"
+      ],
+      "correctAnswer": "running",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + ~ing で「人が~しているのを見る」という知覚動詞の構文として覚えること。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-see-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼女がバスに乗るのを見ました",
+      "words": [
+        "I",
+        "saw",
+        "her",
+        "get",
+        "on",
+        "the",
+        "bus"
+      ],
+      "correctAnswer": "I saw her get on the bus.",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + 動詞の原形で「人が~するのを見る」という知覚動詞の構文として覚えること。",
+      "hint": "saw her get",
+      "wordCount": 7
+    },
+    {
+      "id": "g3-u9-see-007",
+      "type": "fillInBlank",
+      "japanese": "私は彼が階段を上るのを見ました",
+      "sentence": "I saw him ____ up the stairs.",
+      "choices": [
+        "go",
+        "going",
+        "to go"
+      ],
+      "correctAnswer": "go",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + 動詞の原形で「人が~するのを見る(全過程)」という知覚動詞の構文として覚えること。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-see-008",
+      "type": "paraphrase",
+      "japanese": "彼女が泣いているのを見ました（cry）",
+      "originalSentence": "She was crying and I saw her.",
+      "question": "I saw her ____.",
+      "correctAnswer": "crying",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + ~ing で「人が~しているのを見る」という知覚動詞の構文に書き換える。I saw her crying.となる。"
+    },
+    {
+      "id": "g3-u9-see-009",
+      "type": "fillInBlank",
+      "japanese": "私は鳥が飛んでいるのを見ました",
+      "sentence": "I saw a bird ____.",
+      "choices": [
+        "flying",
+        "fly",
+        "to fly"
+      ],
+      "correctAnswer": "flying",
+      "difficulty": "beginner",
+      "explanation": "see + 物 + ~ing で「~が...しているのを見る」という知覚動詞の構文として覚えること。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-see-010",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼が家を出るのを見ました",
+      "words": [
+        "I",
+        "saw",
+        "him",
+        "leave",
+        "the",
+        "house"
+      ],
+      "correctAnswer": "I saw him leave the house.",
+      "difficulty": "intermediate",
+      "explanation": "see + 人 + 動詞の原形で「人が~するのを見る」という知覚動詞の構文として覚えること。",
+      "hint": "saw him leave",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-hear-001",
+      "type": "fillInBlank",
+      "japanese": "私は誰かが叫ぶのを聞きました",
+      "sentence": "I heard someone ____.",
+      "choices": [
+        "shout",
+        "to shout",
+        "shouting"
+      ],
+      "correctAnswer": "shout",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + 動詞の原形で「人が~するのを聞く」という知覚動詞の構文として覚えること。heard someone shout「誰かが叫ぶのを聞いた」。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-hear-002",
+      "type": "fillInBlank",
+      "japanese": "私は彼女が歌っているのを聞きました",
+      "sentence": "I heard her ____ a song.",
+      "choices": [
+        "singing",
+        "sing",
+        "to sing"
+      ],
+      "correctAnswer": "singing",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + ~ing で「人が~しているのを聞く(進行中)」という知覚動詞の構文として覚えること。heard her singing「彼女が歌っているのを聞いた」。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-hear-003",
+      "type": "sentenceOrdering",
+      "japanese": "私は彼が私の名前を呼ぶのを聞きました",
+      "words": [
+        "I",
+        "heard",
+        "him",
+        "call",
+        "my",
+        "name"
+      ],
+      "correctAnswer": "I heard him call my name.",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + 動詞の原形で「人が~するのを聞く」という知覚動詞の構文として覚えること。",
+      "hint": "heard him call",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u9-hear-004",
+      "type": "fillInBlank",
+      "japanese": "私は赤ちゃんが泣いているのを聞きました",
+      "sentence": "I heard the baby ____.",
+      "choices": [
+        "crying",
+        "cry",
+        "to cry"
+      ],
+      "correctAnswer": "crying",
+      "difficulty": "beginner",
+      "explanation": "hear + 人 + ~ing で「人が~しているのを聞く(進行中)」という知覚動詞の構文として覚えること。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-hear-005",
+      "type": "conversation",
+      "japanese": "彼が話しているのを聞きました",
+      "situation": "聞こえたこと",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What did you hear?"
+        },
+        {
+          "speaker": "B",
+          "text": "I heard him ____."
+        }
+      ],
+      "choices": [
+        "talking",
+        "talk",
+        "to talk"
+      ],
+      "correctAnswer": "talking",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + ~ing で「人が~しているのを聞く」という知覚動詞の構文として覚えること。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-hear-006",
+      "type": "sentenceOrdering",
+      "japanese": "私は鳥が鳴くのを聞きました",
+      "words": [
+        "I",
+        "heard",
+        "birds",
+        "sing"
+      ],
+      "correctAnswer": "I heard birds sing.",
+      "difficulty": "beginner",
+      "explanation": "hear + 物 + 動詞の原形で「~が...するのを聞く」という知覚動詞の構文として覚えること。",
+      "hint": "heard birds sing",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u9-hear-007",
+      "type": "fillInBlank",
+      "japanese": "私は誰かがドアをノックするのを聞きました",
+      "sentence": "I heard someone ____ on the door.",
+      "choices": [
+        "knock",
+        "knocking",
+        "to knock"
+      ],
+      "correctAnswer": "knock",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + 動詞の原形で「人が~するのを聞く」という知覚動詞の構文として覚えること。",
+      "hint": "動詞の原形"
+    },
+    {
+      "id": "g3-u9-hear-008",
+      "type": "paraphrase",
+      "japanese": "彼が笑っているのを聞きました（laugh）",
+      "originalSentence": "He was laughing and I heard him.",
+      "question": "I heard him ____.",
+      "correctAnswer": "laughing",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + ~ing で「人が~しているのを聞く」という知覚動詞の構文に書き換える。I heard him laughing.となる。"
+    },
+    {
+      "id": "g3-u9-hear-009",
+      "type": "fillInBlank",
+      "japanese": "私は彼女がピアノを弾いているのを聞きました",
+      "sentence": "I heard her ____ the piano.",
+      "choices": [
+        "playing",
+        "play",
+        "to play"
+      ],
+      "correctAnswer": "playing",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + ~ing で「人が~しているのを聞く(進行中)」という知覚動詞の構文として覚えること。",
+      "hint": "~ing形"
+    },
+    {
+      "id": "g3-u9-hear-010",
+      "type": "sentenceOrdering",
+      "japanese": "私は誰かが叫んでいるのを聞きました",
+      "words": [
+        "I",
+        "heard",
+        "someone",
+        "shouting"
+      ],
+      "correctAnswer": "I heard someone shouting.",
+      "difficulty": "intermediate",
+      "explanation": "hear + 人 + ~ing で「人が~しているのを聞く」という知覚動詞の構文として覚えること。",
+      "hint": "heard someone shouting",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u9-call-001",
+      "type": "fillInBlank",
+      "japanese": "彼らは私をケンと呼びます",
+      "sentence": "They call me ____.",
+      "choices": [
+        "Ken",
+        "to Ken",
+        "calling Ken"
+      ],
+      "correctAnswer": "Ken",
+      "difficulty": "intermediate",
+      "explanation": "call + 人 + 名前で「人を~と呼ぶ」という第5文型SVOCの構文として覚えること。They call me Ken.で「彼らは私をケンと呼ぶ」。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "名前"
+    },
+    {
+      "id": "g3-u9-call-002",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは彼をボブと呼びます",
+      "words": [
+        "we",
+        "call",
+        "him",
+        "Bob"
+      ],
+      "correctAnswer": "We call him Bob.",
+      "difficulty": "intermediate",
+      "explanation": "call + 人 + 名前という第5文型SVOCの構文として覚えること。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "call him",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u9-call-003",
+      "type": "fillInBlank",
+      "japanese": "彼女は私を友達と呼んでくれます",
+      "sentence": "She calls me her ____.",
+      "choices": [
+        "friend",
+        "to friend",
+        "friendly"
+      ],
+      "correctAnswer": "friend",
+      "difficulty": "intermediate",
+      "explanation": "call + 人 + 名詞で「人を~と呼ぶ」という第5文型SVOCの構文として覚えること。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "名詞"
+    },
+    {
+      "id": "g3-u9-call-004",
+      "type": "paraphrase",
+      "japanese": "彼の名前はマイクです（call）",
+      "originalSentence": "His name is Mike.",
+      "question": "We call him ____.",
+      "correctAnswer": "Mike",
+      "difficulty": "intermediate",
+      "explanation": "call + 人 + 名前という第5文型SVOCに書き換える。We call him Mike.となる。 類似:name, considerなどもSVOC構文を作る。"
+    },
+    {
+      "id": "g3-u9-call-005",
+      "type": "conversation",
+      "japanese": "私はそれを奇跡と呼びます",
+      "situation": "説明",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "What do you call it?"
+        },
+        {
+          "speaker": "B",
+          "text": "I call it a ____."
+        }
+      ],
+      "choices": [
+        "miracle",
+        "to miracle",
+        "miraculous"
+      ],
+      "correctAnswer": "miracle",
+      "difficulty": "advanced",
+      "explanation": "call + 物 + 名詞で「~を...と呼ぶ」という第5文型SVOCの構文として覚えること。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "名詞"
+    },
+    {
+      "id": "g3-u9-call-006",
+      "type": "sentenceOrdering",
+      "japanese": "人々は彼をヒーローと呼びます",
+      "words": [
+        "people",
+        "call",
+        "him",
+        "a",
+        "hero"
+      ],
+      "correctAnswer": "People call him a hero.",
+      "difficulty": "intermediate",
+      "explanation": "call + 人 + 名詞という第5文型SVOCの構文として覚えること。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "call him",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u9-call-007",
+      "type": "fillInBlank",
+      "japanese": "私たちはこの犬をポチと呼びます",
+      "sentence": "We call this dog ____.",
+      "choices": [
+        "Pochi",
+        "to Pochi",
+        "calling Pochi"
+      ],
+      "correctAnswer": "Pochi",
+      "difficulty": "beginner",
+      "explanation": "call + 物 + 名前という第5文型SVOCの構文として覚えること。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "名前"
+    },
+    {
+      "id": "g3-u9-call-008",
+      "type": "fillInBlank",
+      "japanese": "彼らは彼女を天才と呼びます",
+      "sentence": "They call her a ____.",
+      "choices": [
+        "genius",
+        "to genius",
+        "geniuses"
+      ],
+      "correctAnswer": "genius",
+      "difficulty": "advanced",
+      "explanation": "call + 人 + 名詞で「人を~と呼ぶ」という第5文型SVOCの構文として覚えること。 類似:name, considerなどもSVOC構文を作る。",
+      "hint": "名詞"
+    },
+    {
+      "id": "g3-u9-make-svoc-001",
+      "type": "fillInBlank",
+      "japanese": "その知らせは私を幸せにしました",
+      "sentence": "The news made me ____.",
+      "choices": [
+        "happy",
+        "happily",
+        "happiness"
+      ],
+      "correctAnswer": "happy",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞で「人を~にする」という第5文型SVOCの構文として覚えること。made me happy「私を幸せにした」。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-make-svoc-002",
+      "type": "sentenceOrdering",
+      "japanese": "音楽は私を元気にします",
+      "words": [
+        "music",
+        "makes",
+        "me",
+        "energetic"
+      ],
+      "correctAnswer": "Music makes me energetic.",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞という第5文型SVOCの構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "makes me",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u9-make-svoc-003",
+      "type": "fillInBlank",
+      "japanese": "その映画は彼女を悲しくさせました",
+      "sentence": "The movie made her ____.",
+      "choices": [
+        "sad",
+        "sadly",
+        "sadness"
+      ],
+      "correctAnswer": "sad",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞で「人を~にする」という第5文型SVOCの構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-make-svoc-004",
+      "type": "paraphrase",
+      "japanese": "その本で私は興奮しました（excited）",
+      "originalSentence": "I was excited by the book.",
+      "question": "The book made me ____.",
+      "correctAnswer": "excited",
+      "difficulty": "intermediate",
+      "explanation": "受動態をmake + 人 + 形容詞という第5文型SVOCに書き換える。The book made me excited.となる。 類似:leave, keepなどもSVOC構文を作る。"
+    },
+    {
+      "id": "g3-u9-make-svoc-005",
+      "type": "fillInBlank",
+      "japanese": "運動は私を健康にします",
+      "sentence": "Exercise makes me ____.",
+      "choices": [
+        "healthy",
+        "healthily",
+        "health"
+      ],
+      "correctAnswer": "healthy",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞で「人を~にする」という第5文型SVOCの構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-make-svoc-006",
+      "type": "conversation",
+      "japanese": "その話は私を怒らせました",
+      "situation": "感情",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How did you feel?"
+        },
+        {
+          "speaker": "B",
+          "text": "The story made me ____."
+        }
+      ],
+      "choices": [
+        "angry",
+        "angrily",
+        "anger"
+      ],
+      "correctAnswer": "angry",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞という第5文型SVOCの構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-make-svoc-007",
+      "type": "sentenceOrdering",
+      "japanese": "その歌は私たちを幸せにしました",
+      "words": [
+        "the",
+        "song",
+        "made",
+        "us",
+        "happy"
+      ],
+      "correctAnswer": "The song made us happy.",
+      "difficulty": "beginner",
+      "explanation": "make + 人 + 形容詞という第5文型SVOCの構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "made us",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u9-make-svoc-008",
+      "type": "fillInBlank",
+      "japanese": "その経験は彼を強くしました",
+      "sentence": "The experience made him ____.",
+      "choices": [
+        "strong",
+        "strongly",
+        "strength"
+      ],
+      "correctAnswer": "strong",
+      "difficulty": "intermediate",
+      "explanation": "make + 人 + 形容詞で「人を~にする」という第5文型SVOCの構文として覚えること。 類似:leave, keepなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-keep-001",
+      "type": "fillInBlank",
+      "japanese": "彼は部屋をきれいに保ちます",
+      "sentence": "He keeps his room ____.",
+      "choices": [
+        "clean",
+        "cleanly",
+        "cleaning"
+      ],
+      "correctAnswer": "clean",
+      "difficulty": "intermediate",
+      "explanation": "keep + 物 + 形容詞で「~を...の状態に保つ」という第5文型SVOCの構文として覚えること。keeps his room clean「部屋をきれいに保つ」。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-keep-002",
+      "type": "sentenceOrdering",
+      "japanese": "私は窓を開けたままにしておきます",
+      "words": [
+        "I",
+        "keep",
+        "the",
+        "window",
+        "open"
+      ],
+      "correctAnswer": "I keep the window open.",
+      "difficulty": "intermediate",
+      "explanation": "keep + 物 + 形容詞で「~を...の状態に保つ」という第5文型SVOCの構文として覚えること。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "keep open",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u9-keep-003",
+      "type": "fillInBlank",
+      "japanese": "彼女は子供たちを静かにさせておきます",
+      "sentence": "She keeps the children ____.",
+      "choices": [
+        "quiet",
+        "quietly",
+        "quietness"
+      ],
+      "correctAnswer": "quiet",
+      "difficulty": "intermediate",
+      "explanation": "keep + 人 + 形容詞で「人を~の状態に保つ」という第5文型SVOCの構文として覚えること。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-keep-004",
+      "type": "fillInBlank",
+      "japanese": "私たちは食べ物を新鮮に保ちます",
+      "sentence": "We keep the food ____.",
+      "choices": [
+        "fresh",
+        "freshly",
+        "freshness"
+      ],
+      "correctAnswer": "fresh",
+      "difficulty": "intermediate",
+      "explanation": "keep + 物 + 形容詞で「~を...の状態に保つ」という第5文型SVOCの構文として覚えること。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-keep-005",
+      "type": "conversation",
+      "japanese": "私は部屋を暖かく保ちます",
+      "situation": "状態維持",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How do you stay comfortable?"
+        },
+        {
+          "speaker": "B",
+          "text": "I keep the room ____."
+        }
+      ],
+      "choices": [
+        "warm",
+        "warmly",
+        "warmth"
+      ],
+      "correctAnswer": "warm",
+      "difficulty": "intermediate",
+      "explanation": "keep + 物 + 形容詞という第5文型SVOCの構文として覚えること。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-keep-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼はドアを閉めたままにします",
+      "words": [
+        "he",
+        "keeps",
+        "the",
+        "door",
+        "closed"
+      ],
+      "correctAnswer": "He keeps the door closed.",
+      "difficulty": "intermediate",
+      "explanation": "keep + 物 + 過去分詞で「~を...の状態に保つ」という第5文型SVOCの構文として覚えること。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "keeps closed",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u9-keep-007",
+      "type": "fillInBlank",
+      "japanese": "彼女は髪を長く保っています",
+      "sentence": "She keeps her hair ____.",
+      "choices": [
+        "long",
+        "length",
+        "lengthy"
+      ],
+      "correctAnswer": "long",
+      "difficulty": "beginner",
+      "explanation": "keep + 物 + 形容詞で「~を...の状態に保つ」という第5文型SVOCの構文として覚えること。 類似:make, leaveなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-find-001",
+      "type": "fillInBlank",
+      "japanese": "私はその問題が難しいとわかりました",
+      "sentence": "I found the problem ____.",
+      "choices": [
+        "difficult",
+        "difficultly",
+        "difficulty"
+      ],
+      "correctAnswer": "difficult",
+      "difficulty": "intermediate",
+      "explanation": "find + 物 + 形容詞で「~が...だとわかる」という第5文型SVOCの構文として覚えること。found the problem difficult「その問題が難しいとわかった」。 類似:think, considerなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-find-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼はその本が面白いとわかりました",
+      "words": [
+        "he",
+        "found",
+        "the",
+        "book",
+        "interesting"
+      ],
+      "correctAnswer": "He found the book interesting.",
+      "difficulty": "intermediate",
+      "explanation": "find + 物 + 形容詞で「~が...だとわかる」という第5文型SVOCの構文として覚えること。 類似:think, considerなどもSVOC構文を作る。",
+      "hint": "found interesting",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u9-find-003",
+      "type": "fillInBlank",
+      "japanese": "彼女はそのテストが簡単だとわかりました",
+      "sentence": "She found the test ____.",
+      "choices": [
+        "easy",
+        "easily",
+        "easiness"
+      ],
+      "correctAnswer": "easy",
+      "difficulty": "intermediate",
+      "explanation": "find + 物 + 形容詞で「~が...だとわかる」という第5文型SVOCの構文として覚えること。 類似:think, considerなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-find-004",
+      "type": "paraphrase",
+      "japanese": "私はその映画がつまらないと思いました（boring）",
+      "originalSentence": "I thought the movie was boring.",
+      "question": "I found the movie ____.",
+      "correctAnswer": "boring",
+      "difficulty": "intermediate",
+      "explanation": "think構文をfind + 物 + 形容詞という第5文型SVOCに書き換える。I found the movie boring.となる。"
+    },
+    {
+      "id": "g3-u9-find-005",
+      "type": "fillInBlank",
+      "japanese": "私たちはその話が奇妙だとわかりました",
+      "sentence": "We found the story ____.",
+      "choices": [
+        "strange",
+        "strangely",
+        "strangeness"
+      ],
+      "correctAnswer": "strange",
+      "difficulty": "intermediate",
+      "explanation": "find + 物 + 形容詞で「~が...だとわかる」という第5文型SVOCの構文として覚えること。 類似:think, considerなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-find-006",
+      "type": "conversation",
+      "japanese": "私はその仕事が大変だとわかりました",
+      "situation": "発見",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was the job?"
+        },
+        {
+          "speaker": "B",
+          "text": "I found it ____."
+        }
+      ],
+      "choices": [
+        "hard",
+        "hardly",
+        "hardness"
+      ],
+      "correctAnswer": "hard",
+      "difficulty": "intermediate",
+      "explanation": "find + 物 + 形容詞という第5文型SVOCの構文として覚えること。 類似:think, considerなどもSVOC構文を作る。",
+      "hint": "形容詞"
+    },
+    {
+      "id": "g3-u9-find-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼は英語が役に立つとわかりました",
+      "words": [
+        "he",
+        "found",
+        "English",
+        "useful"
+      ],
+      "correctAnswer": "He found English useful.",
+      "difficulty": "intermediate",
+      "explanation": "find + 物 + 形容詞で「~が...だとわかる」という第5文型SVOCの構文として覚えること。 類似:think, considerなどもSVOC構文を作る。",
+      "hint": "found useful",
+      "wordCount": 4
     }
   ]
 }

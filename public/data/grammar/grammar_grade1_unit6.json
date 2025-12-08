@@ -483,7 +483,7 @@
     {
       "id": "g1-u6-para-001",
       "type": "paraphrase",
-      "japanese": "平叙文→疑問文",
+      "japanese": "勉強していますか",
       "originalSentence": "You are studying.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -499,7 +499,7 @@
     {
       "id": "g1-u6-para-002",
       "type": "paraphrase",
-      "japanese": "平叙文→否定文",
+      "japanese": "歌っていません",
       "originalSentence": "She is singing.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -515,7 +515,7 @@
     {
       "id": "g1-u6-para-003",
       "type": "paraphrase",
-      "japanese": "否定文→平叙文",
+      "japanese": "テレビを見ています",
       "originalSentence": "I am not watching TV.",
       "question": "肯定文に書き換えなさい",
       "choices": [
@@ -531,7 +531,7 @@
     {
       "id": "g1-u6-para-004",
       "type": "paraphrase",
-      "japanese": "疑問文→平叙文",
+      "japanese": "走っています",
       "originalSentence": "Is he running?",
       "question": "平叙文に書き換えなさい",
       "choices": [
@@ -547,7 +547,7 @@
     {
       "id": "g1-u6-para-005",
       "type": "paraphrase",
-      "japanese": "疑問文→否定文",
+      "japanese": "サッカーをしていません",
       "originalSentence": "Are they playing soccer?",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -563,7 +563,7 @@
     {
       "id": "g1-u6-para-006",
       "type": "paraphrase",
-      "japanese": "一般動詞→進行形",
+      "japanese": "英語を勉強しています",
       "originalSentence": "I study English.",
       "question": "現在進行形に書き換えなさい",
       "choices": [
@@ -579,7 +579,7 @@
     {
       "id": "g1-u6-para-007",
       "type": "paraphrase",
-      "japanese": "主語の変更",
+      "japanese": "彼は食べています",
       "originalSentence": "I am eating.",
       "question": "主語を「彼」に変えて書き換えなさい",
       "choices": [
@@ -595,7 +595,7 @@
     {
       "id": "g1-u6-para-008",
       "type": "paraphrase",
-      "japanese": "複数→単数",
+      "japanese": "彼女は泳いでいます",
       "originalSentence": "They are swimming.",
       "question": "主語を「彼女」に変えて書き換えなさい",
       "choices": [
@@ -611,7 +611,7 @@
     {
       "id": "g1-u6-para-009",
       "type": "paraphrase",
-      "japanese": "短縮形",
+      "japanese": "走っていません",
       "originalSentence": "I am not running.",
       "question": "短縮形に書き換えなさい",
       "choices": [
@@ -627,7 +627,7 @@
     {
       "id": "g1-u6-para-010",
       "type": "paraphrase",
-      "japanese": "What疑問文作成",
+      "japanese": "何を読んでいますか",
       "originalSentence": "He is reading a book.",
       "question": "「何を読んでいますか」という疑問文に書き換えなさい",
       "choices": [
@@ -643,7 +643,7 @@
     {
       "id": "g1-u6-para-011",
       "type": "paraphrase",
-      "japanese": "Where疑問文作成",
+      "japanese": "どこで遊んでいますか",
       "originalSentence": "They are playing in the park.",
       "question": "「どこで遊んでいますか」という疑問文に書き換えなさい",
       "choices": [
@@ -659,7 +659,7 @@
     {
       "id": "g1-u6-para-012",
       "type": "paraphrase",
-      "japanese": "動詞の追加",
+      "japanese": "図書館で本を読んでいます",
       "originalSentence": "She is in the library.",
       "question": "「本を読んでいる」を追加して書き換えなさい",
       "choices": [
@@ -675,7 +675,7 @@
     {
       "id": "g1-u6-para-013",
       "type": "paraphrase",
-      "japanese": "時制の変更",
+      "japanese": "今テレビを見ています",
       "originalSentence": "I watch TV every day.",
       "question": "「今テレビを見ています」という意味に書き換えなさい",
       "choices": [
@@ -707,7 +707,7 @@
     {
       "id": "g1-u6-para-015",
       "type": "paraphrase",
-      "japanese": "副詞の追加",
+      "japanese": "一生懸命勉強しています",
       "originalSentence": "We are studying.",
       "question": "「一生懸命」を追加して書き換えなさい",
       "choices": [

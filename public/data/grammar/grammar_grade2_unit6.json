@@ -2,13 +2,13 @@
   "unit": "Unit 6",
   "title": "接続詞",
   "grammar": "when/if/because/that",
-  "totalQuestions": 60,
+  "totalQuestions": 80,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
-    "paraphrase": 15,
+    "fillInBlank": 25,
+    "sentenceOrdering": 21,
+    "paraphrase": 17,
     "verbForm": 10,
-    "conversation": 5
+    "conversation": 7
   },
   "questions": [
     {
@@ -985,6 +985,347 @@
       "difficulty": "advanced",
       "explanation": "when/if/because/thatの会話5。",
       "hint": "会話"
+    },
+    {
+      "id": "g2-u6-sothat-001",
+      "type": "fillInBlank",
+      "japanese": "私はとても疲れていたので眠ってしまいました",
+      "sentence": "I was ____ tired ____ I fell asleep.",
+      "choices": [
+        "so...that",
+        "very...and",
+        "too...to"
+      ],
+      "correctAnswer": "so...that",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞/副詞 + that ... で「とても~なので...」という結果を表す構文として覚えること。I was so tired that I fell asleep.「私はとても疲れていたので眠ってしまった」。",
+      "hint": "結果を表す"
+    },
+    {
+      "id": "g2-u6-sothat-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はとても忙しかったので私に会えませんでした",
+      "words": [
+        "she",
+        "was",
+        "so",
+        "busy",
+        "that",
+        "she",
+        "couldn't",
+        "see",
+        "me"
+      ],
+      "correctAnswer": "She was so busy that she couldn't see me.",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞 + that ... という結果を表す構文として覚えること。「彼女はとても忙しかったので私に会えなかった」。",
+      "hint": "so busy that",
+      "wordCount": 9
+    },
+    {
+      "id": "g2-u6-sothat-003",
+      "type": "fillInBlank",
+      "japanese": "その問題はとても難しかったので私は解けませんでした",
+      "sentence": "The problem was so difficult ____ I couldn't solve it.",
+      "choices": [
+        "that",
+        "and",
+        "because"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "beginner",
+      "explanation": "so + 形容詞 + that ... で結果を表す構文として覚えること。The problem was so difficult that I couldn't solve it.「その問題はとても難しかったので解けなかった」。",
+      "hint": "so ~ that"
+    },
+    {
+      "id": "g2-u6-sothat-004",
+      "type": "fillInBlank",
+      "japanese": "彼はとても速く走ったので一位になりました",
+      "sentence": "He ran ____ fast that he won first place.",
+      "choices": [
+        "so",
+        "very",
+        "too"
+      ],
+      "correctAnswer": "so",
+      "difficulty": "intermediate",
+      "explanation": "so + 副詞 + that ... で結果を表す構文として覚えること。He ran so fast that he won first place.「彼はとても速く走ったので一位になった」。",
+      "hint": "結果を導く"
+    },
+    {
+      "id": "g2-u6-sothat-005",
+      "type": "sentenceOrdering",
+      "japanese": "その映画はとても面白かったので私は二回見ました",
+      "words": [
+        "the",
+        "movie",
+        "was",
+        "so",
+        "interesting",
+        "that",
+        "I",
+        "watched",
+        "it",
+        "twice"
+      ],
+      "correctAnswer": "The movie was so interesting that I watched it twice.",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞 + that ... という結果を表す構文として覚えること。「その映画はとても面白かったので二回見た」。",
+      "hint": "so interesting that",
+      "wordCount": 10
+    },
+    {
+      "id": "g2-u6-sothat-006",
+      "type": "paraphrase",
+      "japanese": "とても寒かったので外出できませんでした（cold）",
+      "originalSentence": "It was very cold. I couldn't go out.",
+      "question": "It was so ____ that I couldn't go out.",
+      "correctAnswer": "cold",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞 + that ... で2つの文を1つにまとめる構文。It was so cold that I couldn't go out.と書き換える。"
+    },
+    {
+      "id": "g2-u6-sothat-007",
+      "type": "fillInBlank",
+      "japanese": "彼女はとても親切だったので皆が彼女を好きでした",
+      "sentence": "She was so kind ____ everyone liked her.",
+      "choices": [
+        "that",
+        "and",
+        "because"
+      ],
+      "correctAnswer": "that",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞 + that ... で結果を表す構文として覚えること。She was so kind that everyone liked her.「彼女はとても親切だったので皆が好きだった」。",
+      "hint": "so ~ that"
+    },
+    {
+      "id": "g2-u6-sothat-008",
+      "type": "conversation",
+      "japanese": "とても難しかったので理解できませんでした",
+      "situation": "試験について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How was the test?"
+        },
+        {
+          "speaker": "B",
+          "text": "It was ____ difficult that I couldn't understand it."
+        }
+      ],
+      "choices": [
+        "so",
+        "very",
+        "too"
+      ],
+      "correctAnswer": "so",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞 + that ... で結果を表す構文として覚えること。It was so difficult that I couldn't understand it.「とても難しかったので理解できなかった」。",
+      "hint": "so ~ that"
+    },
+    {
+      "id": "g2-u6-sothat-009",
+      "type": "fillInBlank",
+      "japanese": "その本はとても面白かったので一晩で読み終えました",
+      "sentence": "The book was ____ interesting that I finished it in one night.",
+      "choices": [
+        "so",
+        "very",
+        "much"
+      ],
+      "correctAnswer": "so",
+      "difficulty": "intermediate",
+      "explanation": "so + 形容詞 + that ... で結果を表す構文として覚えること。The book was so interesting that I finished it in one night.「その本はとても面白かったので一晩で読み終えた」。",
+      "hint": "結果を表す構文"
+    },
+    {
+      "id": "g2-u6-sothat-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼はとても怒っていたので一言も話しませんでした",
+      "words": [
+        "he",
+        "was",
+        "so",
+        "angry",
+        "that",
+        "he",
+        "didn't",
+        "say",
+        "a",
+        "word"
+      ],
+      "correctAnswer": "He was so angry that he didn't say a word.",
+      "difficulty": "advanced",
+      "explanation": "so + 形容詞 + that ... という結果を表す構文として覚えること。「彼はとても怒っていたので一言も話さなかった」。",
+      "hint": "so angry that",
+      "wordCount": 10
+    },
+    {
+      "id": "g2-u6-whenwh-001",
+      "type": "fillInBlank",
+      "japanese": "私が家に着いたとき、雨が降っていました",
+      "sentence": "____ I got home, it was raining.",
+      "choices": [
+        "When",
+        "While",
+        "If"
+      ],
+      "correctAnswer": "When",
+      "difficulty": "intermediate",
+      "explanation": "whenは「~したとき」という意味で、瞬間的な動作を表す時に使う接続詞として覚えること。When I got home「私が家に着いたとき」。",
+      "hint": "瞬間的な動作"
+    },
+    {
+      "id": "g2-u6-whenwh-002",
+      "type": "fillInBlank",
+      "japanese": "彼女が料理をしている間、私はテレビを見ていました",
+      "sentence": "____ she was cooking, I was watching TV.",
+      "choices": [
+        "While",
+        "When",
+        "Because"
+      ],
+      "correctAnswer": "While",
+      "difficulty": "intermediate",
+      "explanation": "whileは「~している間」という意味で、継続的な動作を表す時に使う接続詞として覚えること。While she was cooking「彼女が料理をしている間」。",
+      "hint": "継続的な動作"
+    },
+    {
+      "id": "g2-u6-whenwh-003",
+      "type": "sentenceOrdering",
+      "japanese": "私が勉強していたとき、彼が来ました",
+      "words": [
+        "when",
+        "I",
+        "was",
+        "studying",
+        "he",
+        "came"
+      ],
+      "correctAnswer": "When I was studying, he came.",
+      "difficulty": "intermediate",
+      "explanation": "when節(継続) + 主節(瞬間)という構文として覚えること。「~していたとき、...した」。",
+      "hint": "When I was",
+      "wordCount": 6
+    },
+    {
+      "id": "g2-u6-whenwh-004",
+      "type": "sentenceOrdering",
+      "japanese": "彼が寝ている間、私は本を読んでいました",
+      "words": [
+        "while",
+        "he",
+        "was",
+        "sleeping",
+        "I",
+        "was",
+        "reading"
+      ],
+      "correctAnswer": "While he was sleeping, I was reading.",
+      "difficulty": "intermediate",
+      "explanation": "while節(継続) + 主節(継続)で「~している間、...していた」という両方進行形の構文として覚えること。",
+      "hint": "While he was",
+      "wordCount": 7
+    },
+    {
+      "id": "g2-u6-whenwh-005",
+      "type": "fillInBlank",
+      "japanese": "電話が鳴ったとき、私はシャワーを浴びていました",
+      "sentence": "I was taking a shower ____ the phone rang.",
+      "choices": [
+        "when",
+        "while",
+        "because"
+      ],
+      "correctAnswer": "when",
+      "difficulty": "intermediate",
+      "explanation": "主節(継続) + when節(瞬間)で「...していたとき~した」という構文として覚えること。when the phone rang「電話が鳴ったとき」。",
+      "hint": "瞬間的な出来事"
+    },
+    {
+      "id": "g2-u6-whenwh-006",
+      "type": "conversation",
+      "japanese": "運転している間、電話しないでください",
+      "situation": "運転中",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can I call you?"
+        },
+        {
+          "speaker": "B",
+          "text": "Don't call me ____ I'm driving."
+        }
+      ],
+      "choices": [
+        "while",
+        "when",
+        "if"
+      ],
+      "correctAnswer": "while",
+      "difficulty": "intermediate",
+      "explanation": "whileは継続的な動作「~している間」を表す接続詞として覚えること。while I'm driving「私が運転している間」。",
+      "hint": "継続中"
+    },
+    {
+      "id": "g2-u6-whenwh-007",
+      "type": "fillInBlank",
+      "japanese": "彼は若いとき、よくサッカーをしました",
+      "sentence": "____ he was young, he often played soccer.",
+      "choices": [
+        "When",
+        "While",
+        "If"
+      ],
+      "correctAnswer": "When",
+      "difficulty": "intermediate",
+      "explanation": "whenは「~のとき」という時を表す接続詞として覚えること。When he was young「彼が若いとき」。",
+      "hint": "過去の時期"
+    },
+    {
+      "id": "g2-u6-whenwh-008",
+      "type": "paraphrase",
+      "japanese": "歩いている間に彼に会いました（walk, meet him）",
+      "originalSentence": "I was walking and I met him.",
+      "question": "____ I was walking, I met him.",
+      "correctAnswer": "While",
+      "difficulty": "intermediate",
+      "explanation": "「歩いていて会った」をwhile節を使って表現。While I was walking, I met him.となる。"
+    },
+    {
+      "id": "g2-u6-whenwh-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が歌っている間、みんな聞いていました",
+      "words": [
+        "while",
+        "she",
+        "was",
+        "singing",
+        "everyone",
+        "was",
+        "listening"
+      ],
+      "correctAnswer": "While she was singing, everyone was listening.",
+      "difficulty": "advanced",
+      "explanation": "while節で両方が進行形の文として覚えること。「~している間、...していた」。",
+      "hint": "While she was",
+      "wordCount": 7
+    },
+    {
+      "id": "g2-u6-whenwh-010",
+      "type": "fillInBlank",
+      "japanese": "私が到着したとき、彼らはもう出発していました",
+      "sentence": "____ I arrived, they had already left.",
+      "choices": [
+        "When",
+        "While",
+        "Because"
+      ],
+      "correctAnswer": "When",
+      "difficulty": "advanced",
+      "explanation": "when節(瞬間) + 主節(過去完了)で「~したとき、すでに...していた」という構文として覚えること。",
+      "hint": "到着という瞬間"
     }
   ]
 }

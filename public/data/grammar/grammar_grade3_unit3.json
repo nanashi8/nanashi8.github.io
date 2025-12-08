@@ -2,11 +2,13 @@
   "unit": "Unit 3",
   "title": "関係代名詞",
   "grammar": "who/which/that",
-  "totalQuestions": 60,
+  "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 23,
+    "sentenceOrdering": 23,
+    "paraphrase": 3,
+    "verbForm": 20,
+    "conversation": 1
   },
   "questions": [
     {
@@ -21,7 +23,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使う。whoの後ろにlivesが続き、「東京に住んでいる」友人を説明している。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -37,7 +39,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使う。「I have a friend.」と「He/She lives in Kyoto.」をwhoでつなげた形。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -53,7 +55,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(brother)で、関係代名詞が主語の役割をするのでwhoを使う。whoの後ろにworks(3人称単数)が続く。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -69,7 +71,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使う。「I bought the book」をthatでつなげた形。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -85,7 +87,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(book)で、目的格の関係代名詞that/whichを使う。目的格の関係代名詞は省略できるが、ここでは明示している。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -101,7 +103,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(letter)で、関係代名詞がwroteの目的語になるのでthat/whichを使う。「he wrote the letter」をthatでつなげた形。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -117,7 +119,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(woman)で、主格の関係代名詞whoを使う。whoの後ろにspeaks(3人称単数)が続く。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -133,7 +135,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使う。「日本語を話す」男性を説明している。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -149,7 +151,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(teacher)で、主格の関係代名詞whoを使う。whoの後ろにspeaksが続く。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -165,7 +167,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(building)で、目的格の関係代名詞that/whichを使う。「everyone knows it」という関係になっている。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -198,7 +200,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(building)で、主格の関係代名詞that/whichを使う。「完成したばかりの」建物を説明している。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -214,7 +216,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(book)で、目的格の関係代名詞that/whichを使う。「I read the book」をthatでつなげた形。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -230,7 +232,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(movie)で、目的格の関係代名詞that/whichを使う。「she watched the movie」という関係。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -246,7 +248,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が場所(place)だが、関係代名詞がvisitedの目的語になるのでthat/whichを使う。whereではない点に注意。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -262,7 +264,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(teacher)で、主格の関係代名詞whoを使う。whoの後ろにteaches Englishが続く。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -278,7 +280,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(girl)で、主格の関係代名詞whoを使う。whoの後ろに進行形is playingが続く。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -294,7 +296,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が動物(dog)で、関係代名詞that/whichを使う。動物にはthatが一般的。主格として使用。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -310,7 +312,7 @@
       ],
       "correctAnswer": "that",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が物(book)で、主格の関係代名詞that/whichを使う。「机の上にある」本を説明している。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -326,7 +328,7 @@
       ],
       "correctAnswer": "who",
       "difficulty": "intermediate",
-      "explanation": "関係代名詞を使って2つの文をつなぎます。",
+      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使う。whoの後ろに進行形is standingが続く。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -344,7 +346,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使う。whoの後ろにはlivesが続き、「東京に住んでいる」友人を説明している。whichは物用なので×。"
     },
     {
       "id": "fb-g3-u3-002",
@@ -360,7 +363,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(friend)なので、主格の関係代名詞whoを使う。「I have a friend.」と「He/She lives in Kyoto.」をwhoでつなげた形。"
     },
     {
       "id": "fb-g3-u3-003",
@@ -376,7 +380,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(brother)で、関係代名詞が主語の役割をするのでwhoを使う。whoの後ろにworks(3人称単数)が続き、兄の行動を説明している。"
     },
     {
       "id": "fb-g3-u3-004",
@@ -392,7 +397,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使う。「I bought the book yesterday.」をthatでつなげた形。whoは人用なので×。"
     },
     {
       "id": "fb-g3-u3-005",
@@ -408,7 +414,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(book)で、関係代名詞が目的語(I bought it)の役割をするのでthat/whichを使う。目的格の関係代名詞は省略できるが、ここでは明示している。"
     },
     {
       "id": "fb-g3-u3-006",
@@ -424,7 +431,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(letter)で、関係代名詞がwroteの目的語(he wrote it)になるのでthat/whichを使う。「he wrote the letter」をthatでつなげた形。"
     },
     {
       "id": "fb-g3-u3-007",
@@ -440,7 +448,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(woman)で、関係代名詞が主語(she speaks)の役割をするのでwhoを使う。「She is a woman.」と「She speaks English.」をwhoでつなげた形。"
     },
     {
       "id": "fb-g3-u3-008",
@@ -456,7 +465,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使う。whoの後ろにspeaks(3人称単数)が続き、「日本語を話す」男性を説明している。"
     },
     {
       "id": "fb-g3-u3-009",
@@ -472,7 +482,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(teacher)で、関係代名詞が主語(he/she speaks)の役割をするのでwhoを使う。「I know a teacher.」と「He/She speaks French.」をwhoでつなげた形。"
     },
     {
       "id": "fb-g3-u3-010",
@@ -488,7 +499,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(building)で、関係代名詞がknowsの目的語(everyone knows it)になるのでthat/whichを使う。「Everyone knows the building.」をthatでつなげた形。"
     },
     {
       "id": "fb-g3-u3-011",
@@ -521,7 +533,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(building)で、主格の関係代名詞that/whichを使う。「That is a building.」と「It was just completed.」をthatでつなげた形。"
     },
     {
       "id": "fb-g3-u3-013",
@@ -537,7 +550,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(book)で、関係代名詞がreadの目的語(I read it)になるのでthat/whichを使う。「I read the book.」をthatでつなげた形。"
     },
     {
       "id": "fb-g3-u3-014",
@@ -553,7 +567,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(movie)で、関係代名詞がwatchedの目的語(she watched it)になるのでthat/whichを使う。「She watched the movie.」をthatでつなげた形。"
     },
     {
       "id": "fb-g3-u3-015",
@@ -569,7 +584,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が場所を表す名詞(place)だが、関係代名詞がvisitedの目的語(we visited it)になるのでthat/whichを使う。whereは使わない。"
     },
     {
       "id": "fb-g3-u3-016",
@@ -585,7 +601,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(teacher)で、主格の関係代名詞whoを使う。「The teacher teaches English.」を「先生は英語を教えている」と説明している。"
     },
     {
       "id": "fb-g3-u3-017",
@@ -601,7 +618,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(girl)で、主格の関係代名詞whoを使う。whoの後ろにis playingが続き、「ピアノを弾いている」少女を説明している。"
     },
     {
       "id": "fb-g3-u3-018",
@@ -617,7 +635,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が動物(dog)で、関係代名詞がthat/whichを使う。動物にはwhoも使えるがthatが一般的。主格として「走っている」犬を説明している。"
     },
     {
       "id": "fb-g3-u3-019",
@@ -633,7 +652,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が物(book)で、主格の関係代名詞that/whichを使う。「The book is on the desk.」を「机の上にある本」と説明している。"
     },
     {
       "id": "fb-g3-u3-020",
@@ -649,7 +669,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "先行詞が人(man)で、主格の関係代名詞whoを使う。whoの後ろにis standingが続き、「窓の近くに立っている」男性を説明している。"
     },
     {
       "id": "so-g3-u3-001",
@@ -670,7 +691,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「friend」と「lives in Tokyo」をつなぐ。先行詞が人なのでwhoを使う。"
     },
     {
       "id": "so-g3-u3-002",
@@ -691,7 +713,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「friend」と「lives in Kyoto」をつなぐ。主格のwhoの後ろに動詞livesが続く。"
     },
     {
       "id": "so-g3-u3-003",
@@ -712,7 +735,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「brother」と「works in Osaka」をつなぐ。先行詞が人なので主格のwhoを使う。"
     },
     {
       "id": "so-g3-u3-004",
@@ -733,7 +757,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「book」と「I bought yesterday」をつなぐ。先行詞が物なのでthat/whichを使う。"
     },
     {
       "id": "so-g3-u3-005",
@@ -755,7 +780,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「book」と「I bought last week」をつなぐ。目的格の関係代名詞として機能している。"
     },
     {
       "id": "so-g3-u3-006",
@@ -777,7 +803,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「letter」と「he wrote last month」をつなぐ。目的格のthat/whichを使う。"
     },
     {
       "id": "so-g3-u3-007",
@@ -797,7 +824,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「woman」と「speaks English」をつなぐ。先行詞が人で主格のwhoを使う。"
     },
     {
       "id": "so-g3-u3-008",
@@ -817,7 +845,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「man」と「speaks Japanese」をつなぐ。主格として「話す」男性を説明している。"
     },
     {
       "id": "so-g3-u3-009",
@@ -837,7 +866,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「teacher」と「speaks French」をつなぐ。先行詞が人で主格のwhoを使う。"
     },
     {
       "id": "so-g3-u3-010",
@@ -858,7 +888,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「building」と「everyone knows」をつなぐ。目的格として「みんなが知っている」建物を説明。"
     },
     {
       "id": "so-g3-u3-011",
@@ -882,7 +913,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whichを使って、「building」と「was built 100 years ago」をつなぐ。主格として建物を説明している。"
     },
     {
       "id": "so-g3-u3-012",
@@ -904,7 +936,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「building」と「was just completed」をつなぐ。主格のthat/whichを使う。"
     },
     {
       "id": "so-g3-u3-013",
@@ -925,7 +958,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「book」と「I read」をつなぐ。目的格の関係代名詞として機能している。"
     },
     {
       "id": "so-g3-u3-014",
@@ -945,7 +979,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「movie」と「she watched」をつなぐ。目的格として映画を説明している。"
     },
     {
       "id": "so-g3-u3-015",
@@ -965,7 +1000,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「place」と「we visited」をつなぐ。目的格のthat/whichを使う(whereではない)。"
     },
     {
       "id": "so-g3-u3-016",
@@ -985,7 +1021,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「teacher」と「teaches English」をつなぐ。主格として先生を説明している。"
     },
     {
       "id": "so-g3-u3-017",
@@ -1008,7 +1045,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「girl」と「is playing the piano」をつなぐ。進行形の主格として少女を説明している。"
     },
     {
       "id": "so-g3-u3-018",
@@ -1032,7 +1070,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「dog」と「is running in the park」をつなぐ。動物にはthatを使うのが一般的。"
     },
     {
       "id": "so-g3-u3-019",
@@ -1054,7 +1093,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞thatを使って、「book」と「is on the desk」をつなぐ。主格として本を説明している。"
     },
     {
       "id": "so-g3-u3-020",
@@ -1078,7 +1118,156 @@
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "関係代名詞whoを使って、「man」と「is standing near the window」をつなぐ。主格として男性を説明している。"
+    },
+    {
+      "id": "g3-u3-omit-001",
+      "type": "paraphrase",
+      "japanese": "私が昨日読んだ本（the book, read yesterday）",
+      "originalSentence": "The book which I read yesterday was interesting.",
+      "question": "The book ____ was interesting.",
+      "correctAnswer": "I read yesterday",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞が目的格の時は省略できる構文として覚えること。which I readをI readに省略可能。"
+    },
+    {
+      "id": "g3-u3-omit-002",
+      "type": "fillInBlank",
+      "japanese": "私が会った少年（省略形で）",
+      "sentence": "the boy ____ I met",
+      "choices": [
+        "(省略可)",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "(省略可)",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞が目的格の時は省略できる構文として覚えること。the boy (whom) I met = the boy I met",
+      "hint": "目的格は省略可"
+    },
+    {
+      "id": "g3-u3-omit-003",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が買った車（関係代名詞省略）",
+      "words": [
+        "the",
+        "car",
+        "she",
+        "bought"
+      ],
+      "correctAnswer": "the car she bought",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞の目的格(which/that)を省略した形として覚えること。the car (which) she bought",
+      "hint": "the car she",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u3-omit-004",
+      "type": "paraphrase",
+      "japanese": "私が探している本（the book, looking for）を省略形で",
+      "originalSentence": "This is the book which I am looking for.",
+      "question": "This is the book ____.",
+      "correctAnswer": "I am looking for",
+      "difficulty": "advanced",
+      "explanation": "関係代名詞が目的格の時は省略できる。This is the book I am looking for.となる。"
+    },
+    {
+      "id": "g3-u3-omit-005",
+      "type": "fillInBlank",
+      "japanese": "私が見た映画は面白かった（省略形）",
+      "sentence": "The movie ____ I saw was interesting.",
+      "choices": [
+        "(省略)",
+        "which",
+        "what"
+      ],
+      "correctAnswer": "(省略)",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞の目的格を省略した形として覚えること。The movie I saw = The movie which I saw",
+      "hint": "省略可能"
+    },
+    {
+      "id": "g3-u3-omit-006",
+      "type": "conversation",
+      "japanese": "あなたが話していた人（省略形）",
+      "situation": "人について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Who is that?"
+        },
+        {
+          "speaker": "B",
+          "text": "That's the person ____ you were talking about."
+        }
+      ],
+      "choices": [
+        "(省略可)",
+        "who",
+        "which"
+      ],
+      "correctAnswer": "(省略可)",
+      "difficulty": "advanced",
+      "explanation": "関係代名詞が目的格の時は省略できる。the person (whom) you were talking about",
+      "hint": "目的格省略"
+    },
+    {
+      "id": "g3-u3-omit-007",
+      "type": "sentenceOrdering",
+      "japanese": "私が作った料理（関係代名詞省略）",
+      "words": [
+        "the",
+        "food",
+        "I",
+        "cooked"
+      ],
+      "correctAnswer": "the food I cooked",
+      "difficulty": "beginner",
+      "explanation": "関係代名詞の目的格を省略した形。the food (which) I cooked",
+      "hint": "the food I",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u3-omit-008",
+      "type": "fillInBlank",
+      "japanese": "彼が訪れた都市（省略形）",
+      "sentence": "the city ____ he visited",
+      "choices": [
+        "(省略可)",
+        "which",
+        "where"
+      ],
+      "correctAnswer": "(省略可)",
+      "difficulty": "intermediate",
+      "explanation": "visitは他動詞なのでwhichが目的格となり省略可能。the city (which) he visited。whereは不可。",
+      "hint": "目的格省略"
+    },
+    {
+      "id": "g3-u3-omit-009",
+      "type": "paraphrase",
+      "japanese": "私が聞いた音楽（the music, listened to）を省略形で",
+      "originalSentence": "The music that I listened to was beautiful.",
+      "question": "The music ____ was beautiful.",
+      "correctAnswer": "I listened to",
+      "difficulty": "intermediate",
+      "explanation": "関係代名詞の目的格を省略した形。The music I listened to = The music that I listened to"
+    },
+    {
+      "id": "g3-u3-omit-010",
+      "type": "sentenceOrdering",
+      "japanese": "私が撮った写真（関係代名詞省略）",
+      "words": [
+        "the",
+        "picture",
+        "I",
+        "took"
+      ],
+      "correctAnswer": "the picture I took",
+      "difficulty": "beginner",
+      "explanation": "関係代名詞の目的格を省略した形として覚えること。the picture (which) I took",
+      "hint": "the picture I",
+      "wordCount": 4
     }
   ]
 }

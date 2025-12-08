@@ -2,11 +2,13 @@
   "unit": "Unit 6",
   "title": "分詞",
   "grammar": "現在分詞・過去分詞",
-  "totalQuestions": 60,
+  "totalQuestions": 80,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 31,
+    "sentenceOrdering": 24,
+    "paraphrase": 3,
+    "verbForm": 20,
+    "conversation": 2
   },
   "questions": [
     {
@@ -37,7 +39,7 @@
       ],
       "correctAnswer": "crying",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「泣いている赤ちゃんはお腹が空いています」という意味を表すために、進行中の動作を表す現在分詞'crying'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -53,7 +55,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「公園で遊んでいる子どもたちは元気です」という意味を表すために、進行中の動作を表す現在分詞'playing'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -69,7 +71,7 @@
       ],
       "correctAnswer": "playing",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「ピアノを弾いている女性は私の先生です」という意味を表すために、進行中の動作を表す現在分詞'playing'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -85,7 +87,7 @@
       ],
       "correctAnswer": "sitting",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「座っている男性は私の父です」という意味を表すために、進行中の動作を表す現在分詞'sitting'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -101,7 +103,7 @@
       ],
       "correctAnswer": "smiling",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「笑っている少女はとてもかわいいです」という意味を表すために、進行中の動作を表す現在分詞'smiling'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -117,7 +119,7 @@
       ],
       "correctAnswer": "singing",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「歌っている人々は幸せそうです」という意味を表すために、進行中の動作を表す現在分詞'singing'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -133,7 +135,7 @@
       ],
       "correctAnswer": "dancing",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「踊っている学生たちは楽しんでいます」という意味を表すために、進行中の動作を表す現在分詞'dancing'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -149,7 +151,7 @@
       ],
       "correctAnswer": "reading",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「読んでいる男の子は集中しています」という意味を表すために、進行中の動作を表す現在分詞'reading'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -165,7 +167,7 @@
       ],
       "correctAnswer": "talking",
       "difficulty": "intermediate",
-      "explanation": "現在分詞",
+      "explanation": "現在分詞(-ing形)を使って名詞を修飾します。「話している女性たちは友達です」という意味を表すために、進行中の動作を表す現在分詞'talking'を使います。",
       "hint": "-ing形",
       "type": "verbForm"
     },
@@ -197,7 +199,7 @@
       ],
       "correctAnswer": "baked",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「焼かれたパンは美味しいです」という意味を表すために、完了や受動の意味を持つ過去分詞'baked'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -213,7 +215,7 @@
       ],
       "correctAnswer": "stolen",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「盗まれた自転車は見つかりました」という意味を表すために、完了や受動の意味を持つ過去分詞'stolen'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -229,7 +231,7 @@
       ],
       "correctAnswer": "written",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「書かれた手紙は感動的でした」という意味を表すために、完了や受動の意味を持つ過去分詞'written'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -245,7 +247,7 @@
       ],
       "correctAnswer": "closed",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「閉められたドアは開きません」という意味を表すために、完了や受動の意味を持つ過去分詞'closed'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -261,7 +263,7 @@
       ],
       "correctAnswer": "lost",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「失われた時間は戻りません」という意味を表すために、完了や受動の意味を持つ過去分詞'lost'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -277,7 +279,7 @@
       ],
       "correctAnswer": "washed",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「洗われた服はきれいです」という意味を表すために、完了や受動の意味を持つ過去分詞'washed'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -293,7 +295,7 @@
       ],
       "correctAnswer": "chilled",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「冷やされた飲み物は美味しいです」という意味を表すために、完了や受動の意味を持つ過去分詞'chilled'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -309,7 +311,7 @@
       ],
       "correctAnswer": "taken",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「撮られた写真は美しいです」という意味を表すために、完了や受動の意味を持つ過去分詞'taken'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -325,7 +327,7 @@
       ],
       "correctAnswer": "used",
       "difficulty": "intermediate",
-      "explanation": "過去分詞",
+      "explanation": "過去分詞を使って名詞を修飾します。「使われた道具は古いです」という意味を表すために、完了や受動の意味を持つ過去分詞'used'を使います。",
       "hint": "p.p.形",
       "type": "verbForm"
     },
@@ -342,7 +344,8 @@
       "correctAnswer": "running",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "走っている少年は私の弟です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-002",
@@ -357,7 +360,8 @@
       "correctAnswer": "crying",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "泣いている赤ちゃんはお腹が空いています。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-003",
@@ -372,7 +376,8 @@
       "correctAnswer": "playing",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "遊んでいる子どもたちは元気です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-004",
@@ -387,7 +392,8 @@
       "correctAnswer": "playing",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "ピアノを弾いている女性は先生です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-005",
@@ -402,7 +408,8 @@
       "correctAnswer": "sitting",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "座っている男性は私の父です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-006",
@@ -417,7 +424,8 @@
       "correctAnswer": "smiling",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "笑っている少女はかわいいです。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-007",
@@ -432,7 +440,8 @@
       "correctAnswer": "singing",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "歌っている人々は幸せです。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-008",
@@ -447,7 +456,8 @@
       "correctAnswer": "dancing",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "踊っている学生たちは楽しんでいます。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-009",
@@ -462,7 +472,8 @@
       "correctAnswer": "reading",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "読んでいる男の子は集中しています。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-010",
@@ -477,7 +488,8 @@
       "correctAnswer": "talking",
       "difficulty": "intermediate",
       "hint": "-ing形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "話している女性たちは友達です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-011",
@@ -492,7 +504,8 @@
       "correctAnswer": "broken",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "壊れた窓はまだ修理されていません。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-012",
@@ -507,7 +520,8 @@
       "correctAnswer": "baked",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "焼かれたパンは美味しいです。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-013",
@@ -522,7 +536,8 @@
       "correctAnswer": "stolen",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "盗まれた自転車は見つかりました。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-014",
@@ -537,7 +552,8 @@
       "correctAnswer": "written",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "書かれた手紙は感動的でした。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-015",
@@ -552,7 +568,8 @@
       "correctAnswer": "closed",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "閉められたドアは開きません。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-016",
@@ -567,7 +584,8 @@
       "correctAnswer": "lost",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "失われた時間は戻りません。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-017",
@@ -582,7 +600,8 @@
       "correctAnswer": "washed",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "洗われた服はきれいです。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-018",
@@ -597,7 +616,8 @@
       "correctAnswer": "chilled",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "冷やされた飲み物は美味しいです。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-019",
@@ -612,7 +632,8 @@
       "correctAnswer": "taken",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "撮られた写真は美しいです。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "fb-g3-u6-020",
@@ -627,7 +648,8 @@
       "correctAnswer": "used",
       "difficulty": "intermediate",
       "hint": "p.p.形",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "使われた道具は古いです。過去分詞(p.p.形)を使って名詞を修飾します。「～された」という受動的・完了的な意味を表す。"
     },
     {
       "id": "so-g3-u6-001",
@@ -648,7 +670,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "走っている少年は私の弟です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-002",
@@ -666,7 +689,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "泣いている赤ちゃんはお腹が空いています。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-003",
@@ -687,7 +711,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "公園で遊んでいる子どもたちは元気です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-004",
@@ -708,7 +733,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "ピアノを弾いている女性は私の先生です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-005",
@@ -730,7 +756,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "座っている男性は私の父です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-006",
@@ -749,7 +776,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "笑っている少女はとてもかわいいです。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-007",
@@ -767,7 +795,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "歌っている人々は幸せそうです。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-008",
@@ -786,7 +815,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "踊っている学生たちは楽しんでいます。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-009",
@@ -806,7 +836,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "読んでいる男の子は集中しています。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-010",
@@ -824,7 +855,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "現在分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "話している女性たちは友達です。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-011",
@@ -845,7 +877,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "壊れた窓はまだ修理されていません。現在完了形は「have/has + 過去分詞」で表し、経験・継続・完了などを表現します。"
     },
     {
       "id": "so-g3-u6-012",
@@ -863,7 +896,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "焼かれたパンは美味しいです。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-013",
@@ -881,7 +915,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "盗まれた自転車は見つかりました。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-014",
@@ -899,7 +934,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "書かれた手紙は感動的でした。現在分詞(-ing形)を使って名詞を修飾します。「～している」という能動的・進行的な意味を表す。"
     },
     {
       "id": "so-g3-u6-015",
@@ -917,7 +953,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "閉められたドアは開きません。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-016",
@@ -936,7 +973,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "失われた時間は戻りません。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-017",
@@ -954,7 +992,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "洗われた服はきれいです。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-018",
@@ -972,7 +1011,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "冷やされた飲み物は美味しいです。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-019",
@@ -990,7 +1030,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "撮られた写真は美しいです。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
     },
     {
       "id": "so-g3-u6-020",
@@ -1008,7 +1049,321 @@
       "difficulty": "intermediate",
       "grammarPoint": "分詞",
       "hint": "過去分詞",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "使われた道具は古いです。分詞を使って名詞を修飾します。現在分詞は能動・進行、過去分詞は受動・完了を表す。"
+    },
+    {
+      "id": "g3-u6-emotion-001",
+      "type": "fillInBlank",
+      "japanese": "私はその知らせに興奮しました",
+      "sentence": "I was ____ at the news.",
+      "choices": [
+        "excited",
+        "exciting",
+        "excite"
+      ],
+      "correctAnswer": "excited",
+      "difficulty": "intermediate",
+      "explanation": "感情を表す分詞は人には-ed、物には-ingという使い分けを構文として覚えること。excited「興奮した(人)」、exciting「興奮させる(物)」。I was excited.で「私は興奮した」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-002",
+      "type": "fillInBlank",
+      "japanese": "そのゲームはとても興奮させるものでした",
+      "sentence": "The game was very ____.",
+      "choices": [
+        "exciting",
+        "excited",
+        "excite"
+      ],
+      "correctAnswer": "exciting",
+      "difficulty": "intermediate",
+      "explanation": "物事には-ingを使うという分詞の使い分けを構文として覚えること。The game was exciting.で「ゲームは興奮させるものだった」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ing(物)"
+    },
+    {
+      "id": "g3-u6-emotion-003",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは興奮した子供たちを見ました",
+      "words": [
+        "we",
+        "saw",
+        "the",
+        "excited",
+        "children"
+      ],
+      "correctAnswer": "We saw the excited children.",
+      "difficulty": "intermediate",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。excited children「興奮した子供たち」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "excited",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u6-emotion-004",
+      "type": "paraphrase",
+      "japanese": "その映画は私を興奮させました（exciting）",
+      "originalSentence": "The movie excited me.",
+      "question": "The movie was ____.",
+      "correctAnswer": "exciting",
+      "difficulty": "intermediate",
+      "explanation": "動詞を分詞に変えるとき、物には-ingを使う。The movie was exciting.「その映画は興奮させるものだった」となる。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。"
+    },
+    {
+      "id": "g3-u6-emotion-005",
+      "type": "conversation",
+      "japanese": "私は旅行に興奮しています",
+      "situation": "感情",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "How do you feel?"
+        },
+        {
+          "speaker": "B",
+          "text": "I'm ____ about the trip."
+        }
+      ],
+      "choices": [
+        "excited",
+        "exciting",
+        "excite"
+      ],
+      "correctAnswer": "excited",
+      "difficulty": "beginner",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。I'm excited.で「私は興奮している」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-006",
+      "type": "fillInBlank",
+      "japanese": "彼女は音楽に興味があります",
+      "sentence": "She is ____ in music.",
+      "choices": [
+        "interested",
+        "interesting",
+        "interest"
+      ],
+      "correctAnswer": "interested",
+      "difficulty": "intermediate",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。interested「興味がある(人)」、interesting「興味深い(物)」。be interested in~で「~に興味がある」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-007",
+      "type": "fillInBlank",
+      "japanese": "その本はとても興味深いです",
+      "sentence": "The book is very ____.",
+      "choices": [
+        "interesting",
+        "interested",
+        "interest"
+      ],
+      "correctAnswer": "interesting",
+      "difficulty": "intermediate",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。The book is interesting.で「本は興味深い」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ing(物)"
+    },
+    {
+      "id": "g3-u6-emotion-008",
+      "type": "sentenceOrdering",
+      "japanese": "私は興味深い話を聞きました",
+      "words": [
+        "I",
+        "heard",
+        "an",
+        "interesting",
+        "story"
+      ],
+      "correctAnswer": "I heard an interesting story.",
+      "difficulty": "intermediate",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。interesting story「興味深い話」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "interesting",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u6-emotion-009",
+      "type": "paraphrase",
+      "japanese": "彼は科学に興味があります（interested）",
+      "originalSentence": "He has interest in science.",
+      "question": "He is ____ in science.",
+      "correctAnswer": "interested",
+      "difficulty": "intermediate",
+      "explanation": "名詞を分詞に変えるとき、人には-edを使う。He is interested in science.となる。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。"
+    },
+    {
+      "id": "g3-u6-emotion-010",
+      "type": "fillInBlank",
+      "japanese": "それは興味深いニュースです",
+      "sentence": "It's ____ news.",
+      "choices": [
+        "interesting",
+        "interested",
+        "interest"
+      ],
+      "correctAnswer": "interesting",
+      "difficulty": "beginner",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。interesting news「興味深いニュース」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ing(物)"
+    },
+    {
+      "id": "g3-u6-emotion-011",
+      "type": "fillInBlank",
+      "japanese": "私はその授業に退屈しました",
+      "sentence": "I was ____ with the class.",
+      "choices": [
+        "bored",
+        "boring",
+        "bore"
+      ],
+      "correctAnswer": "bored",
+      "difficulty": "intermediate",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。bored「退屈した(人)」、boring「退屈させる(物)」。I was bored.で「私は退屈した」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-012",
+      "type": "fillInBlank",
+      "japanese": "その映画は退屈でした",
+      "sentence": "The movie was ____.",
+      "choices": [
+        "boring",
+        "bored",
+        "bore"
+      ],
+      "correctAnswer": "boring",
+      "difficulty": "intermediate",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。The movie was boring.で「映画は退屈だった」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ing(物)"
+    },
+    {
+      "id": "g3-u6-emotion-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼は退屈な仕事をしています",
+      "words": [
+        "he",
+        "has",
+        "a",
+        "boring",
+        "job"
+      ],
+      "correctAnswer": "He has a boring job.",
+      "difficulty": "intermediate",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。boring job「退屈な仕事」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "boring",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u6-emotion-014",
+      "type": "conversation",
+      "japanese": "私は退屈しています",
+      "situation": "状態",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Are you having fun?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, I'm ____."
+        }
+      ],
+      "choices": [
+        "bored",
+        "boring",
+        "bore"
+      ],
+      "correctAnswer": "bored",
+      "difficulty": "beginner",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。I'm bored.で「私は退屈している」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-015",
+      "type": "fillInBlank",
+      "japanese": "私はその結果に驚きました",
+      "sentence": "I was ____ at the result.",
+      "choices": [
+        "surprised",
+        "surprising",
+        "surprise"
+      ],
+      "correctAnswer": "surprised",
+      "difficulty": "intermediate",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。surprised「驚いた(人)」、surprising「驚くべき(物)」。I was surprised.で「私は驚いた」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-016",
+      "type": "fillInBlank",
+      "japanese": "それは驚くべきニュースでした",
+      "sentence": "It was ____ news.",
+      "choices": [
+        "surprising",
+        "surprised",
+        "surprise"
+      ],
+      "correctAnswer": "surprising",
+      "difficulty": "intermediate",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。surprising news「驚くべきニュース」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ing(物)"
+    },
+    {
+      "id": "g3-u6-emotion-017",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は驚いた顔をしました",
+      "words": [
+        "she",
+        "had",
+        "a",
+        "surprised",
+        "look"
+      ],
+      "correctAnswer": "She had a surprised look.",
+      "difficulty": "intermediate",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。surprised look「驚いた顔」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "surprised",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u6-emotion-018",
+      "type": "fillInBlank",
+      "japanese": "私は疲れています",
+      "sentence": "I am ____.",
+      "choices": [
+        "tired",
+        "tiring",
+        "tire"
+      ],
+      "correctAnswer": "tired",
+      "difficulty": "beginner",
+      "explanation": "人には-edという分詞の使い分けを構文として覚えること。tired「疲れた(人)」、tiring「疲れさせる(物)」。I am tired.で「私は疲れている」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ed(人)"
+    },
+    {
+      "id": "g3-u6-emotion-019",
+      "type": "fillInBlank",
+      "japanese": "それは疲れる仕事でした",
+      "sentence": "It was a ____ job.",
+      "choices": [
+        "tiring",
+        "tired",
+        "tire"
+      ],
+      "correctAnswer": "tiring",
+      "difficulty": "intermediate",
+      "explanation": "物には-ingという分詞の使い分けを構文として覚えること。tiring job「疲れさせる仕事」。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。",
+      "hint": "-ing(物)"
+    },
+    {
+      "id": "g3-u6-emotion-020",
+      "type": "paraphrase",
+      "japanese": "その旅は私を疲れさせました（tiring）",
+      "originalSentence": "The trip tired me.",
+      "question": "The trip was ____.",
+      "correctAnswer": "tiring",
+      "difficulty": "intermediate",
+      "explanation": "動詞を分詞に変えるとき、物には-ingを使う。The trip was tiring.「その旅は疲れさせるものだった」となる。 例:excited/exciting, interested/interesting, bored/boring, surprised/surprising, tired/tiring, amazed/amazing, disappointed/disappointing, confused/confusingなど。"
     }
   ]
 }

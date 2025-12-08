@@ -2,11 +2,13 @@
   "unit": "Unit 5",
   "title": "動名詞",
   "grammar": "動詞ing（名詞として）",
-  "totalQuestions": 60,
+  "totalQuestions": 80,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 30,
+    "sentenceOrdering": 26,
+    "paraphrase": 2,
+    "verbForm": 20,
+    "conversation": 2
   },
   "questions": [
     {
@@ -343,7 +345,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "泳ぐことは良い運動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-002",
@@ -359,7 +362,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "ランニングは健康に良いです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-003",
@@ -375,7 +379,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "ダンスは楽しい活動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-004",
@@ -391,7 +396,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "釣りは私の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-005",
@@ -407,7 +413,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私は歌うことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-006",
@@ -423,7 +430,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は絵を描くことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-007",
@@ -439,7 +447,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私たちは旅行することが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-008",
@@ -455,7 +464,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼は料理することを楽しんでいます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-009",
@@ -471,7 +481,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼はサッカーをすることが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-010",
@@ -487,7 +498,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女はピアノを弾くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-011",
@@ -503,7 +515,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私は早起きが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-012",
@@ -519,7 +532,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼らは問題を解くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-013",
@@ -535,7 +549,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "読書は知識を増やすのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-014",
@@ -551,7 +566,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "書くことは考えをまとめるのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-015",
@@ -567,7 +583,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "話すことはコミュニケーションに不可欠です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-016",
@@ -583,7 +600,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "聞くことは理解の第一歩です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-017",
@@ -599,7 +617,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "ショッピングは彼女の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-018",
@@ -615,7 +634,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "掃除は毎日の仕事です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-019",
@@ -631,7 +651,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "勉強することは成功への鍵です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "fb-g3-u5-020",
@@ -647,7 +668,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "働くことは生活の一部です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-001",
@@ -664,7 +686,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "泳ぐことは良い運動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-002",
@@ -682,7 +705,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "ランニングは健康に良いです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-003",
@@ -700,7 +724,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "ダンスは楽しい活動です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-004",
@@ -717,7 +742,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "釣りは私の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-005",
@@ -733,7 +759,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は歌うことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-006",
@@ -749,7 +776,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は絵を描くことが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-007",
@@ -765,7 +793,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私たちは旅行することが好きです。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-008",
@@ -781,7 +810,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は料理することを楽しんでいます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-009",
@@ -800,7 +830,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼はサッカーをすることが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-010",
@@ -820,7 +851,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女はピアノを弾くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-011",
@@ -840,7 +872,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は早起きが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-012",
@@ -859,7 +892,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼らは問題を解くことが得意です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-013",
@@ -876,7 +910,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "読書は知識を増やすのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-014",
@@ -893,7 +928,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "書くことは考えをまとめるのに役立ちます。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-015",
@@ -911,7 +947,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "話すことはコミュニケーションに不可欠です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-016",
@@ -931,7 +968,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "聞くことは理解の第一歩です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-017",
@@ -948,7 +986,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "ショッピングは彼女の趣味です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-018",
@@ -966,7 +1005,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "掃除は毎日の仕事です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-019",
@@ -985,7 +1025,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "勉強することは成功への鍵です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
     },
     {
       "id": "so-g3-u5-020",
@@ -1003,7 +1044,332 @@
       "difficulty": "intermediate",
       "grammarPoint": "動名詞",
       "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "働くことは生活の一部です。間接疑問文は「疑問詞 + 主語 + 動詞」の語順になります。通常の疑問文とは語順が異なることに注意。"
+    },
+    {
+      "id": "g3-u5-prep-001",
+      "type": "fillInBlank",
+      "japanese": "私は彼に会うのを楽しみにしています",
+      "sentence": "I'm looking forward to ____ him.",
+      "choices": [
+        "seeing",
+        "see",
+        "seen"
+      ],
+      "correctAnswer": "seeing",
+      "difficulty": "intermediate",
+      "explanation": "look forward to + doingで「~を楽しみにする」という熟語として覚えること。toの後は動名詞(~ing)を使う。I'm looking forward to seeing him.で「彼に会うのを楽しみにしている」。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-002",
+      "type": "sentenceOrdering",
+      "japanese": "私たちは旅行するのを楽しみにしています",
+      "words": [
+        "we",
+        "are",
+        "looking",
+        "forward",
+        "to",
+        "traveling"
+      ],
+      "correctAnswer": "We are looking forward to traveling.",
+      "difficulty": "intermediate",
+      "explanation": "look forward to + doingという熟語として覚えること。toの後は動名詞。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "to traveling",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u5-prep-003",
+      "type": "conversation",
+      "japanese": "私はあなたの返事を楽しみにしています",
+      "situation": "期待",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "I'll write back soon."
+        },
+        {
+          "speaker": "B",
+          "text": "I'm looking forward to ____ from you."
+        }
+      ],
+      "choices": [
+        "hearing",
+        "hear",
+        "heard"
+      ],
+      "correctAnswer": "hearing",
+      "difficulty": "intermediate",
+      "explanation": "look forward to + doingという熟語として覚えること。hear from~で「~から便りをもらう」。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-004",
+      "type": "fillInBlank",
+      "japanese": "彼女は試験に合格するのを楽しみにしています",
+      "sentence": "She is looking forward to ____ the exam.",
+      "choices": [
+        "passing",
+        "pass",
+        "passed"
+      ],
+      "correctAnswer": "passing",
+      "difficulty": "intermediate",
+      "explanation": "look forward to + doingという熟語として覚えること。toの後は動名詞。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-005",
+      "type": "fillInBlank",
+      "japanese": "私は早起きに慣れています",
+      "sentence": "I'm used to ____ up early.",
+      "choices": [
+        "getting",
+        "get",
+        "got"
+      ],
+      "correctAnswer": "getting",
+      "difficulty": "intermediate",
+      "explanation": "be used to + doingで「~に慣れている」という熟語として覚えること。toの後は動名詞。I'm used to getting up early.で「早起きに慣れている」。used to + 動詞原形(~したものだった)と区別すること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼は一人で暮らすのに慣れています",
+      "words": [
+        "he",
+        "is",
+        "used",
+        "to",
+        "living",
+        "alone"
+      ],
+      "correctAnswer": "He is used to living alone.",
+      "difficulty": "intermediate",
+      "explanation": "be used to + doingで「~に慣れている」という熟語として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "to living",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u5-prep-007",
+      "type": "paraphrase",
+      "japanese": "彼女は英語を話すことに慣れました（speaking）",
+      "originalSentence": "She got accustomed to speaking English.",
+      "question": "She got used to ____ English.",
+      "correctAnswer": "speaking",
+      "difficulty": "intermediate",
+      "explanation": "get used to + doingで「~に慣れる」という熟語として覚えること。get accustomed toと同じ意味。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。"
+    },
+    {
+      "id": "g3-u5-prep-008",
+      "type": "fillInBlank",
+      "japanese": "私たちは暑い天気に慣れています",
+      "sentence": "We are used to ____ hot weather.",
+      "choices": [
+        "having",
+        "have",
+        "had"
+      ],
+      "correctAnswer": "having",
+      "difficulty": "intermediate",
+      "explanation": "be used to + doingという熟語として覚えること。toの後は動名詞。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-009",
+      "type": "fillInBlank",
+      "japanese": "手伝ってくれてありがとう",
+      "sentence": "Thank you for ____ me.",
+      "choices": [
+        "helping",
+        "help",
+        "helped"
+      ],
+      "correctAnswer": "helping",
+      "difficulty": "beginner",
+      "explanation": "Thank you for + doingで「~してくれてありがとう」という熟語として覚えること。forの後は動名詞。Thank you for helping me.で「手伝ってくれてありがとう」。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-010",
+      "type": "sentenceOrdering",
+      "japanese": "来てくれてありがとう",
+      "words": [
+        "thank",
+        "you",
+        "for",
+        "coming"
+      ],
+      "correctAnswer": "Thank you for coming.",
+      "difficulty": "beginner",
+      "explanation": "Thank you for + doingという熟語として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "for coming",
+      "wordCount": 4
+    },
+    {
+      "id": "g3-u5-prep-011",
+      "type": "conversation",
+      "japanese": "教えてくれてありがとう",
+      "situation": "感謝",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Here's how to do it."
+        },
+        {
+          "speaker": "B",
+          "text": "Thank you for ____ me."
+        }
+      ],
+      "choices": [
+        "teaching",
+        "teach",
+        "taught"
+      ],
+      "correctAnswer": "teaching",
+      "difficulty": "beginner",
+      "explanation": "Thank you for + doingという熟語として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-012",
+      "type": "fillInBlank",
+      "japanese": "彼は何も言わずに出て行きました",
+      "sentence": "He left without ____ anything.",
+      "choices": [
+        "saying",
+        "say",
+        "said"
+      ],
+      "correctAnswer": "saying",
+      "difficulty": "intermediate",
+      "explanation": "without + doingで「~せずに」という構文として覚えること。withoutの後は動名詞。He left without saying anything.で「何も言わずに出て行った」。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-013",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は朝食を食べずに出かけました",
+      "words": [
+        "she",
+        "left",
+        "without",
+        "eating",
+        "breakfast"
+      ],
+      "correctAnswer": "She left without eating breakfast.",
+      "difficulty": "intermediate",
+      "explanation": "without + doingで「~せずに」という構文として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "without eating",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u5-prep-014",
+      "type": "fillInBlank",
+      "japanese": "休まずに働き続けました",
+      "sentence": "I kept working without ____.",
+      "choices": [
+        "resting",
+        "rest",
+        "rested"
+      ],
+      "correctAnswer": "resting",
+      "difficulty": "intermediate",
+      "explanation": "without + doingで「~せずに」という構文として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-015",
+      "type": "fillInBlank",
+      "japanese": "一生懸命勉強することで合格しました",
+      "sentence": "I passed the exam by ____ hard.",
+      "choices": [
+        "studying",
+        "study",
+        "studied"
+      ],
+      "correctAnswer": "studying",
+      "difficulty": "intermediate",
+      "explanation": "by + doingで「~することによって」という構文として覚えること。byの後は動名詞。I passed by studying hard.で「一生懸命勉強することで合格した」。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-016",
+      "type": "sentenceOrdering",
+      "japanese": "練習することで上達できます",
+      "sentence": "あなたは練習することで上達できます",
+      "words": [
+        "you",
+        "can",
+        "improve",
+        "by",
+        "practicing"
+      ],
+      "correctAnswer": "You can improve by practicing.",
+      "difficulty": "intermediate",
+      "explanation": "by + doingで「~することによって」という構文として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "by practicing",
+      "wordCount": 5
+    },
+    {
+      "id": "g3-u5-prep-017",
+      "type": "paraphrase",
+      "japanese": "彼は走ることで健康を保ちます（running）",
+      "originalSentence": "He stays healthy when he runs.",
+      "question": "He stays healthy by ____.",
+      "correctAnswer": "running",
+      "difficulty": "intermediate",
+      "explanation": "when構文をby + doingに書き換える。by running「走ることによって」となる。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。"
+    },
+    {
+      "id": "g3-u5-prep-018",
+      "type": "fillInBlank",
+      "japanese": "彼女は歌うのが得意です",
+      "sentence": "She is good at ____.",
+      "choices": [
+        "singing",
+        "sing",
+        "sung"
+      ],
+      "correctAnswer": "singing",
+      "difficulty": "beginner",
+      "explanation": "be good at + doingで「~が得意だ」という熟語として覚えること。atの後は動名詞。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-019",
+      "type": "fillInBlank",
+      "japanese": "私は失敗することを恐れています",
+      "sentence": "I'm afraid of ____.",
+      "choices": [
+        "failing",
+        "fail",
+        "failed"
+      ],
+      "correctAnswer": "failing",
+      "difficulty": "intermediate",
+      "explanation": "be afraid of + doingで「~することを恐れる」という熟語として覚えること。ofの後は動名詞。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "動名詞"
+    },
+    {
+      "id": "g3-u5-prep-020",
+      "type": "sentenceOrdering",
+      "japanese": "彼は遅刻したことを謝りました",
+      "words": [
+        "he",
+        "apologized",
+        "for",
+        "being",
+        "late"
+      ],
+      "correctAnswer": "He apologized for being late.",
+      "difficulty": "intermediate",
+      "explanation": "apologize for + doingで「~したことを謝る」という熟語として覚えること。 他の前置詞+動名詞:be good at doing, be afraid of doing, instead of doing, How about doing?, What about doing?など。",
+      "hint": "for being",
+      "wordCount": 5
     }
   ]
 }
