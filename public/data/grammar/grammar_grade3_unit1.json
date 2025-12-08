@@ -2,11 +2,13 @@
   "unit": "Unit 1",
   "title": "現在完了",
   "grammar": "have/has + 過去分詞",
-  "totalQuestions": 60,
+  "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 25,
+    "sentenceOrdering": 23,
+    "paraphrase": 1,
+    "verbForm": 20,
+    "conversation": 1
   },
   "questions": [
     {
@@ -644,7 +646,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have met him."
     },
     {
       "id": "so-g3-u1-002",
@@ -662,7 +665,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has been to Tokyo."
     },
     {
       "id": "so-g3-u1-003",
@@ -680,7 +684,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "We have seen that movie."
     },
     {
       "id": "so-g3-u1-004",
@@ -698,7 +703,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "He has finished his homework."
     },
     {
       "id": "so-g3-u1-005",
@@ -716,7 +722,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "They have already eaten lunch."
     },
     {
       "id": "so-g3-u1-006",
@@ -735,7 +742,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have never read this book."
     },
     {
       "id": "so-g3-u1-007",
@@ -753,7 +761,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has not come yet."
     },
     {
       "id": "so-g3-u1-008",
@@ -771,7 +780,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "Have you been to Japan?"
     },
     {
       "id": "so-g3-u1-009",
@@ -789,7 +799,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "Has he heard the news?"
     },
     {
       "id": "so-g3-u1-010",
@@ -809,7 +820,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 7,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have studied English for three years."
     },
     {
       "id": "so-g3-u1-011",
@@ -828,7 +840,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has waited for two hours."
     },
     {
       "id": "so-g3-u1-012",
@@ -845,7 +858,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "We have just arrived."
     },
     {
       "id": "so-g3-u1-013",
@@ -862,7 +876,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "He has already left."
     },
     {
       "id": "so-g3-u1-014",
@@ -879,7 +894,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "They have visited Kyoto."
     },
     {
       "id": "so-g3-u1-015",
@@ -897,7 +913,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "I have never met her."
     },
     {
       "id": "so-g3-u1-016",
@@ -914,7 +931,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "Have you eaten lunch?"
     },
     {
       "id": "so-g3-u1-017",
@@ -933,7 +951,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "She has finished writing the letter."
     },
     {
       "id": "so-g3-u1-018",
@@ -954,7 +973,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 8,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "We have lived here for a long time."
     },
     {
       "id": "so-g3-u1-019",
@@ -972,7 +992,8 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "He has failed many times."
     },
     {
       "id": "so-g3-u1-020",
@@ -990,7 +1011,175 @@
       "hint": "have/has + p.p.",
       "grammarPoint": "現在完了",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "They have not decided yet."
+    },
+    {
+      "id": "g3-u1-howlong-001",
+      "type": "fillInBlank",
+      "japanese": "あなたはどのくらいの間東京に住んでいますか",
+      "sentence": "____ ____ have you lived in Tokyo?",
+      "choices": [
+        "How long",
+        "How many",
+        "How much"
+      ],
+      "correctAnswer": "How long",
+      "difficulty": "intermediate",
+      "explanation": "How long + 現在完了形で「どのくらいの期間~していますか」と継続期間を尋ねる疑問文として覚えること。",
+      "hint": "期間を尋ねる"
+    },
+    {
+      "id": "g3-u1-howlong-002",
+      "type": "sentenceOrdering",
+      "japanese": "あなたはどのくらいの間英語を勉強していますか",
+      "words": [
+        "how",
+        "long",
+        "have",
+        "you",
+        "studied",
+        "English"
+      ],
+      "correctAnswer": "How long have you studied English?",
+      "difficulty": "intermediate",
+      "explanation": "How long + have/has + 過去分詞という疑問文として覚えること。継続期間を尋ねる。",
+      "hint": "How long have",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u1-howlong-003",
+      "type": "fillInBlank",
+      "japanese": "彼はどのくらいの間ここで働いていますか",
+      "sentence": "How long ____ he worked here?",
+      "choices": [
+        "has",
+        "have",
+        "is"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "intermediate",
+      "explanation": "How longの疑問文で三人称単数の主語の時はhasを使うこと。How long has he worked here?",
+      "hint": "三人称単数"
+    },
+    {
+      "id": "g3-u1-howlong-004",
+      "type": "conversation",
+      "japanese": "どのくらいの間彼女を知っていますか",
+      "situation": "友人について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "____ ____ have you known her?"
+        },
+        {
+          "speaker": "B",
+          "text": "For three years."
+        }
+      ],
+      "choices": [
+        "How long",
+        "How many",
+        "When"
+      ],
+      "correctAnswer": "How long",
+      "difficulty": "intermediate",
+      "explanation": "How long + 現在完了形で継続期間を尋ねる疑問文として覚えること。",
+      "hint": "期間を尋ねる"
+    },
+    {
+      "id": "g3-u1-howlong-005",
+      "type": "sentenceOrdering",
+      "japanese": "あなたのお父さんはどのくらいの間この会社で働いていますか",
+      "words": [
+        "how",
+        "long",
+        "has",
+        "your",
+        "father",
+        "worked",
+        "for",
+        "this",
+        "company"
+      ],
+      "correctAnswer": "How long has your father worked for this company?",
+      "difficulty": "advanced",
+      "explanation": "How long + has + 主語 + 過去分詞という疑問文として覚えること。",
+      "hint": "How long has",
+      "wordCount": 9
+    },
+    {
+      "id": "g3-u1-howlong-006",
+      "type": "fillInBlank",
+      "japanese": "彼らはどのくらいの間結婚していますか",
+      "sentence": "How long have they ____ married?",
+      "choices": [
+        "been",
+        "be",
+        "are"
+      ],
+      "correctAnswer": "been",
+      "difficulty": "intermediate",
+      "explanation": "How long + have/has + been で状態の継続を尋ねる疑問文として覚えること。",
+      "hint": "be動詞の過去分詞"
+    },
+    {
+      "id": "g3-u1-howlong-007",
+      "type": "fillInBlank",
+      "japanese": "あなたはどのくらいの間ここにいますか",
+      "sentence": "____ ____ have you been here?",
+      "choices": [
+        "How long",
+        "How many",
+        "How much"
+      ],
+      "correctAnswer": "How long",
+      "difficulty": "beginner",
+      "explanation": "How long + have been で「どのくらいの間~にいますか」という疑問文として覚えること。",
+      "hint": "期間を尋ねる"
+    },
+    {
+      "id": "g3-u1-howlong-008",
+      "type": "paraphrase",
+      "japanese": "3年間日本に住んでいます（live in Japan, three years）",
+      "originalSentence": "I came to Japan three years ago and I still live here.",
+      "question": "How long ____?",
+      "correctAnswer": "have you lived in Japan",
+      "difficulty": "advanced",
+      "explanation": "「3年前に来てまだ住んでいる」をHow long疑問文に書き換える。How long have you lived in Japan?となる。"
+    },
+    {
+      "id": "g3-u1-howlong-009",
+      "type": "sentenceOrdering",
+      "japanese": "彼女はどのくらいの間病気ですか",
+      "words": [
+        "how",
+        "long",
+        "has",
+        "she",
+        "been",
+        "sick"
+      ],
+      "correctAnswer": "How long has she been sick?",
+      "difficulty": "intermediate",
+      "explanation": "How long + has + been + 形容詞で状態の継続を尋ねる疑問文として覚えること。",
+      "hint": "How long has been",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u1-howlong-010",
+      "type": "fillInBlank",
+      "japanese": "どのくらいの間雨が降っていますか",
+      "sentence": "How long ____ it been raining?",
+      "choices": [
+        "has",
+        "have",
+        "is"
+      ],
+      "correctAnswer": "has",
+      "difficulty": "advanced",
+      "explanation": "How long + has + been + 動詞ing で動作の継続期間を尋ねる現在完了進行形の疑問文として覚えること。",
+      "hint": "現在完了進行形"
     }
   ]
 }

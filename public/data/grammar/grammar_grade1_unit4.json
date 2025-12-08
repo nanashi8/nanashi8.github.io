@@ -2,13 +2,13 @@
   "unit": "Unit 4",
   "title": "疑問詞",
   "grammar": "what/who/when/where/how, 疑問文の作り方",
-  "totalQuestions": 60,
+  "totalQuestions": 65,
   "questionTypes": {
-    "fillInBlank": 15,
-    "sentenceOrdering": 15,
+    "fillInBlank": 17,
+    "sentenceOrdering": 17,
     "paraphrase": 15,
     "verbForm": 10,
-    "conversation": 5
+    "conversation": 6
   },
   "questions": [
     {
@@ -505,7 +505,7 @@
     {
       "id": "g1-u4-para-001",
       "type": "paraphrase",
-      "japanese": "疑問詞への変換",
+      "japanese": "これは何ですか",
       "originalSentence": "This is a pen.",
       "question": "「これは何ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -521,7 +521,7 @@
     {
       "id": "g1-u4-para-002",
       "type": "paraphrase",
-      "japanese": "Whoへの変換",
+      "japanese": "彼女は誰ですか",
       "originalSentence": "She is my teacher.",
       "question": "「彼女は誰ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -537,7 +537,7 @@
     {
       "id": "g1-u4-para-003",
       "type": "paraphrase",
-      "japanese": "Whereへの変換",
+      "japanese": "彼はどこで～しますか",
       "originalSentence": "He lives in Tokyo.",
       "question": "「どこに住んでいますか」の疑問文に書き換えなさい",
       "choices": [
@@ -553,7 +553,7 @@
     {
       "id": "g1-u4-para-004",
       "type": "paraphrase",
-      "japanese": "Whenへの変換",
+      "japanese": "いつ～しますか",
       "originalSentence": "I study English every day.",
       "question": "「いつ英語を勉強しますか」の疑問文に書き換えなさい",
       "choices": [
@@ -569,7 +569,7 @@
     {
       "id": "g1-u4-para-005",
       "type": "paraphrase",
-      "japanese": "Howへの変換",
+      "japanese": "どうやって～しますか",
       "originalSentence": "I go to school by bus.",
       "question": "「どうやって学校に行きますか」の疑問文に書き換えなさい",
       "choices": [
@@ -601,7 +601,7 @@
     {
       "id": "g1-u4-para-007",
       "type": "paraphrase",
-      "japanese": "Whoseへの変換",
+      "japanese": "これは誰の～ですか",
       "originalSentence": "This is Tom's book.",
       "question": "「これは誰の本ですか」の疑問文に書き換えなさい",
       "choices": [
@@ -617,7 +617,7 @@
     {
       "id": "g1-u4-para-008",
       "type": "paraphrase",
-      "japanese": "Whichへの変換",
+      "japanese": "どちらが好きですか",
       "originalSentence": "I like the red one.",
       "question": "「どちらが好きですか」の疑問文に書き換えなさい",
       "choices": [
@@ -1026,6 +1026,96 @@
       "difficulty": "advanced",
       "explanation": "How much is～?（いくらですか）には値段で答える。500 yenで「500円」。",
       "hint": "数字のみ"
+    },
+    {
+      "id": "g1-u4-howadj-001",
+      "type": "fillInBlank",
+      "japanese": "あなたは何歳ですか",
+      "sentence": "____ ____ are you?",
+      "choices": [
+        "How old",
+        "What old",
+        "How age"
+      ],
+      "correctAnswer": "How old",
+      "difficulty": "beginner",
+      "explanation": "How + 形容詞で「どのくらい~」と程度を尋ねる疑問文として覚えること。How old = 「何歳」。",
+      "hint": "年齢を尋ねる"
+    },
+    {
+      "id": "g1-u4-howadj-002",
+      "type": "fillInBlank",
+      "japanese": "あなたの背はどのくらいですか",
+      "sentence": "____ ____ are you?",
+      "choices": [
+        "How tall",
+        "What tall",
+        "How height"
+      ],
+      "correctAnswer": "How tall",
+      "difficulty": "beginner",
+      "explanation": "How + 形容詞という疑問文の形として覚えること。How tall = 「身長はどのくらい」。",
+      "hint": "身長を尋ねる"
+    },
+    {
+      "id": "g1-u4-howadj-003",
+      "type": "sentenceOrdering",
+      "japanese": "東京までどのくらい遠いですか",
+      "words": [
+        "how",
+        "far",
+        "is",
+        "it",
+        "to",
+        "Tokyo"
+      ],
+      "correctAnswer": "How far is it to Tokyo?",
+      "difficulty": "intermediate",
+      "explanation": "How + 形容詞という疑問文として覚えること。How far = 「どのくらい遠い」で距離を尋ねる。",
+      "hint": "How far",
+      "wordCount": 6
+    },
+    {
+      "id": "g1-u4-howadj-004",
+      "type": "conversation",
+      "japanese": "この車はどのくらい速いですか",
+      "situation": "車について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "____ ____ is this car?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's very fast."
+        }
+      ],
+      "choices": [
+        "How fast",
+        "What fast",
+        "How speed"
+      ],
+      "correctAnswer": "How fast",
+      "difficulty": "intermediate",
+      "explanation": "How + 形容詞で程度を尋ねる疑問文として覚えること。How fast = 「どのくらい速い」。",
+      "hint": "速度を尋ねる"
+    },
+    {
+      "id": "g1-u4-howadj-005",
+      "type": "sentenceOrdering",
+      "japanese": "この建物はどのくらい高いですか",
+      "words": [
+        "how",
+        "high",
+        "is",
+        "this",
+        "building"
+      ],
+      "correctAnswer": "How high is this building?",
+      "difficulty": "intermediate",
+      "explanation": "How + 形容詞という疑問文として覚えること。How high = 「どのくらい高い」で高さを尋ねる。",
+      "hint": "How high",
+      "wordCount": 5
     }
   ]
 }

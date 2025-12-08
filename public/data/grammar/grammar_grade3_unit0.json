@@ -646,7 +646,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "English is spoken around the world."
     },
     {
       "id": "so-g3-u0-002",
@@ -666,7 +667,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 7,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "This book is read by many people."
     },
     {
       "id": "so-g3-u0-003",
@@ -685,7 +687,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The letter was written by her."
     },
     {
       "id": "so-g3-u0-004",
@@ -704,7 +707,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "This bridge was built in 1990."
     },
     {
       "id": "so-g3-u0-005",
@@ -723,7 +727,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "These cars are made in Japan."
     },
     {
       "id": "so-g3-u0-006",
@@ -741,7 +746,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The problem was solved yesterday."
     },
     {
       "id": "so-g3-u0-007",
@@ -761,7 +767,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 7,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "This song is loved by young people."
     },
     {
       "id": "so-g3-u0-008",
@@ -779,7 +786,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "His name is well known."
     },
     {
       "id": "so-g3-u0-009",
@@ -798,7 +806,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The window was broken by him."
     },
     {
       "id": "so-g3-u0-010",
@@ -817,7 +826,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "These photos were taken last year."
     },
     {
       "id": "so-g3-u0-011",
@@ -834,7 +844,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The door is opened."
     },
     {
       "id": "so-g3-u0-012",
@@ -852,7 +863,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "This computer is not used."
     },
     {
       "id": "so-g3-u0-013",
@@ -871,7 +883,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The building was constructed in 1950."
     },
     {
       "id": "so-g3-u0-014",
@@ -888,7 +901,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 4,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "Many trees were planted."
     },
     {
       "id": "so-g3-u0-015",
@@ -906,7 +920,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 5,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The movie is watched worldwide."
     },
     {
       "id": "so-g3-u0-016",
@@ -925,7 +940,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "This room is cleaned every day."
     },
     {
       "id": "so-g3-u0-017",
@@ -944,7 +960,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The letter was written in English."
     },
     {
       "id": "so-g3-u0-018",
@@ -963,7 +980,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "These products are manufactured in China."
     },
     {
       "id": "so-g3-u0-019",
@@ -984,7 +1002,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 8,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "The painting was painted by a famous artist."
     },
     {
       "id": "so-g3-u0-020",
@@ -1003,7 +1022,8 @@
       "hint": "be + p.p. + by ~",
       "grammarPoint": "受動態",
       "wordCount": 6,
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "correctAnswer": "This book was published in 1999."
     }
   ]
 }

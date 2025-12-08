@@ -2,11 +2,13 @@
   "unit": "Unit 8",
   "title": "間接疑問文",
   "grammar": "疑問詞 + 主語 + 動詞",
-  "totalQuestions": 60,
+  "totalQuestions": 70,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 24,
+    "sentenceOrdering": 23,
+    "paraphrase": 2,
+    "verbForm": 20,
+    "conversation": 1
   },
   "questions": [
     {
@@ -342,7 +344,8 @@
       "correctAnswer": "lives",
       "difficulty": "intermediate",
       "hint": "where he lives",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私は彼がどこに住んでいるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-002",
@@ -357,7 +360,8 @@
       "correctAnswer": "happened",
       "difficulty": "intermediate",
       "hint": "what happened",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は何が起こったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-003",
@@ -372,7 +376,8 @@
       "correctAnswer": "come",
       "difficulty": "intermediate",
       "hint": "when he will come",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私はいつ彼が来るか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-004",
@@ -387,7 +392,8 @@
       "correctAnswer": "crying",
       "difficulty": "intermediate",
       "hint": "why she is crying",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼はなぜ彼女が泣いているか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-005",
@@ -402,7 +408,8 @@
       "correctAnswer": "made",
       "difficulty": "intermediate",
       "hint": "who made",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私は誰がこれを作ったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-006",
@@ -417,7 +424,8 @@
       "correctAnswer": "get",
       "difficulty": "intermediate",
       "hint": "how to get",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女はどうやってそこに行くか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-007",
@@ -432,7 +440,8 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "hint": "which book is",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私はどの本が一番良いか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-008",
@@ -447,7 +456,8 @@
       "correctAnswer": "opens",
       "difficulty": "intermediate",
       "hint": "what time it opens",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼は何時に店が開くか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-009",
@@ -462,7 +472,8 @@
       "correctAnswer": "meet",
       "difficulty": "intermediate",
       "hint": "where we can meet",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私たちはどこで彼女に会えるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-010",
@@ -477,7 +488,8 @@
       "correctAnswer": "angry",
       "difficulty": "intermediate",
       "hint": "why he is angry",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女はなぜ彼が怒っているか理解しています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-011",
@@ -492,7 +504,8 @@
       "correctAnswer": "leaves",
       "difficulty": "intermediate",
       "hint": "when the bus leaves",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私はいつバスが出発するか知りたいです。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-012",
@@ -507,7 +520,8 @@
       "correctAnswer": "win",
       "difficulty": "intermediate",
       "hint": "who will win",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼は誰が勝つか予測できます。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-013",
@@ -522,7 +536,8 @@
       "correctAnswer": "solve",
       "difficulty": "intermediate",
       "hint": "how to solve",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私たちはどうやって問題を解決するか話し合いました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-014",
@@ -537,7 +552,8 @@
       "correctAnswer": "need",
       "difficulty": "intermediate",
       "hint": "what I need",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女は何が必要か教えてくれました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-015",
@@ -552,7 +568,8 @@
       "correctAnswer": "put",
       "difficulty": "intermediate",
       "hint": "where I put",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私はどこで鍵を置いたか忘れました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-016",
@@ -567,7 +584,8 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "hint": "why it is",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼はなぜそれが重要か説明しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-017",
@@ -582,7 +600,8 @@
       "correctAnswer": "starts",
       "difficulty": "intermediate",
       "hint": "when it starts",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私たちはいつ会議が始まるか確認しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-018",
@@ -597,7 +616,8 @@
       "correctAnswer": "is",
       "difficulty": "intermediate",
       "hint": "which route is",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼女はどの道が最短か知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-019",
@@ -612,7 +632,8 @@
       "correctAnswer": "makes",
       "difficulty": "intermediate",
       "hint": "what makes",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "私は何が彼を幸せにするか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "fb-g3-u8-020",
@@ -627,7 +648,8 @@
       "correctAnswer": "succeeded",
       "difficulty": "intermediate",
       "hint": "how he succeeded",
-      "type": "fillInBlank"
+      "type": "fillInBlank",
+      "explanation": "彼はどうやって成功したか語りました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-001",
@@ -646,7 +668,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "where he lives",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は彼がどこに住んでいるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-002",
@@ -663,7 +686,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "what happened",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は何が起こったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-003",
@@ -683,7 +707,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "when he will come",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私はいつ彼が来るか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-004",
@@ -702,7 +727,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "why she is crying",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼はなぜ彼女が泣いているか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-005",
@@ -720,7 +746,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "who made",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は誰がこれを作ったか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-006",
@@ -740,7 +767,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "how to get",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女はどうやってそこに行くか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-007",
@@ -761,7 +789,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "which book is",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私はどの本が一番良いか分かりません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-008",
@@ -781,7 +810,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "what time",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は何時に店が開くか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-009",
@@ -802,7 +832,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "where we can",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私たちはどこで彼女に会えるか知りません。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-010",
@@ -821,7 +852,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "why he is",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女はなぜ彼が怒っているか理解しています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-011",
@@ -842,7 +874,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "when the bus leaves",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私はいつバスが出発するか知りたいです。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-012",
@@ -861,7 +894,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "who will win",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は誰が勝つか予測できます。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-013",
@@ -881,7 +915,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "how to solve",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私たちはどうやって問題を解決するか話し合いました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-014",
@@ -900,7 +935,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "what I need",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は何が必要か教えてくれました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-015",
@@ -920,7 +956,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "where I put",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私はどこで鍵を置いたか忘れました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-016",
@@ -939,7 +976,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "why it is",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼はなぜそれが重要か説明しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-017",
@@ -958,7 +996,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "when it starts",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私たちはいつ会議が始まるか確認しました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-018",
@@ -978,7 +1017,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "which route is",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女はどの道が最短か知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-019",
@@ -997,7 +1037,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "what makes",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は何が彼を幸せにするか知っています。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
     },
     {
       "id": "so-g3-u8-020",
@@ -1016,7 +1057,168 @@
       "difficulty": "intermediate",
       "grammarPoint": "間接疑問文",
       "hint": "how he succeeded",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼はどうやって成功したか語りました。不定詞「to + 動詞の原形」は名詞的・形容詞的・副詞的な働きをします。"
+    },
+    {
+      "id": "g3-u8-ifwhether-001",
+      "type": "fillInBlank",
+      "japanese": "彼が来るかどうか分かりません",
+      "sentence": "I don't know ____ he will come.",
+      "choices": [
+        "if",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "if/whetherで「~かどうか」という間接疑問文として覚えること。I don't know if he will come.「彼が来るかどうか分からない」。",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が忙しいかどうか聞いてください",
+      "words": [
+        "please",
+        "ask",
+        "if",
+        "she",
+        "is",
+        "busy"
+      ],
+      "correctAnswer": "Please ask if she is busy.",
+      "difficulty": "intermediate",
+      "explanation": "if/whether + 主語 + 動詞という間接疑問文の語順として覚えること。「~かどうか」。",
+      "hint": "ask if",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u8-ifwhether-003",
+      "type": "fillInBlank",
+      "japanese": "彼女がそれを知っているかどうか分かりません",
+      "sentence": "I don't know ____ she knows it.",
+      "choices": [
+        "whether",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "whether",
+      "difficulty": "intermediate",
+      "explanation": "whether/ifで「~かどうか」という間接疑問文として覚えること。whetherはifと同じ意味だが、より formal。",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-004",
+      "type": "paraphrase",
+      "japanese": "彼は来ますか？（Does he come?）を間接疑問文に",
+      "originalSentence": "Does he come to the party?",
+      "question": "I don't know ____.",
+      "correctAnswer": "if he comes to the party",
+      "difficulty": "advanced",
+      "explanation": "直接疑問文を間接疑問文に変換。Does he come? → if he comes という語順になる。"
+    },
+    {
+      "id": "g3-u8-ifwhether-005",
+      "type": "fillInBlank",
+      "japanese": "雨が降るかどうか確認しましょう",
+      "sentence": "Let's check ____ it will rain.",
+      "choices": [
+        "if",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "ifで「~かどうか」という間接疑問文として覚えること。Let's check if it will rain.「雨が降るかどうか確認しよう」。",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-006",
+      "type": "conversation",
+      "japanese": "彼が正しいかどうか分かりません",
+      "situation": "意見について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Is he right?"
+        },
+        {
+          "speaker": "B",
+          "text": "I don't know ____ he is right."
+        }
+      ],
+      "choices": [
+        "if",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "intermediate",
+      "explanation": "if/whetherで「~かどうか」という間接疑問文として覚えること。",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-007",
+      "type": "sentenceOrdering",
+      "japanese": "彼女が来られるかどうか教えてください",
+      "words": [
+        "please",
+        "tell",
+        "me",
+        "whether",
+        "she",
+        "can",
+        "come"
+      ],
+      "correctAnswer": "Please tell me whether she can come.",
+      "difficulty": "intermediate",
+      "explanation": "whether + 主語 + 動詞という間接疑問文の語順として覚えること。",
+      "hint": "tell me whether",
+      "wordCount": 7
+    },
+    {
+      "id": "g3-u8-ifwhether-008",
+      "type": "fillInBlank",
+      "japanese": "それが本当かどうか分かりません",
+      "sentence": "I'm not sure ____ it is true.",
+      "choices": [
+        "if",
+        "that",
+        "what"
+      ],
+      "correctAnswer": "if",
+      "difficulty": "beginner",
+      "explanation": "ifで「~かどうか」という間接疑問文として覚えること。I'm not sure if it is true.「それが本当かどうか確信がない」。",
+      "hint": "~かどうか"
+    },
+    {
+      "id": "g3-u8-ifwhether-009",
+      "type": "paraphrase",
+      "japanese": "彼女は幸せですか？（Is she happy?）を間接疑問文に",
+      "originalSentence": "Is she happy?",
+      "question": "I wonder ____.",
+      "correctAnswer": "if she is happy",
+      "difficulty": "intermediate",
+      "explanation": "直接疑問文を間接疑問文に変換。Is she happy? → if she is happy という語順になる。"
+    },
+    {
+      "id": "g3-u8-ifwhether-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼がそれを理解しているかどうか確認してください",
+      "words": [
+        "please",
+        "check",
+        "if",
+        "he",
+        "understands",
+        "it"
+      ],
+      "correctAnswer": "Please check if he understands it.",
+      "difficulty": "intermediate",
+      "explanation": "if + 主語 + 動詞という間接疑問文の語順として覚えること。「~かどうか」。",
+      "hint": "check if",
+      "wordCount": 6
     }
   ]
 }

@@ -3212,3 +3212,134 @@ export async function updateAutoUpdateQuestionSets(allQuestions: import('./types
     logger.error('自動更新エラー:', error);
   }
 }
+
+/**
+ * 文法モード専用の詳細統計を計算
+ * 文法問題のIDは通常「grammar_g1_u0_q1」のような形式
+ */
+export function getGrammarDetailedRetentionStats(): DetailedRetentionStats {
+  const progress = loadProgressSync();
+  const allWords = Object.values(progress.wordProgress);
+  
+  // 文法問題のみフィルタリング（grammarAttemptsがあるもの、またはwordがgrammarで始まるもの）
+  const grammarQuestions = allWords.filter(wp => 
+    (wp.grammarAttempts && wp.grammarAttempts > 0) || 
+    wp.word.startsWith('grammar_') ||
+    wp.word.includes('_g') // grammar_g1_u0_q1 のようなパターン
+  );
+  
+  // 出題された文法問題のみ（grammarAttemptsまたはcorrectCount+incorrectCountが0より大きい）
+  const appearedQuestions = grammarQuestions.filter(wp => 
+    (wp.grammarAttempts && wp.grammarAttempts > 0) ||
+    (wp.correctCount + wp.incorrectCount) > 0
+  );
+  
+  let masteredCount = 0;
+  let learningCount = 0;
+  let strugglingCount = 0;
+  
+  appearedQuestions.forEach(wp => {
+    // 文法モード専用の統計を優先的に使用
+    const totalAttempts = wp.grammarAttempts || (wp.correctCount + wp.incorrectCount);
+    const correctCount = wp.grammarCorrect || wp.correctCount;
+    const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect;
+    
+    const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
+    
+    // 🟢 完全定着判定
+    const isDefinitelyMastered = 
+      (totalAttempts === 1 && correctCount === 1) || // 1発正解
+      consecutiveCorrect >= 3 || // 連続3回以上正解
+      (consecutiveCorrect >= 2 && accuracy >= 80); // 連続2回 + 正答率80%以上
+    
+    if (isDefinitelyMastered) {
+      masteredCount++;
+    }
+    // 🟡 学習中（正答率50%以上だがまだ定着していない）
+    else if (accuracy >= 50) {
+      learningCount++;
+    }
+    // 🔴 要復習（正答率50%未満）
+    else {
+      strugglingCount++;
+    }
+  });
+  
+  const total = appearedQuestions.length;
+  
+  // 加重スコア計算（完全定着=1.0, 学習中=0.5, 要復習=0.0）
+  const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
+  
+  return {
+    totalWords: grammarQuestions.length,
+    appearedWords: total,
+    
+    masteredCount,
+    learningCount,
+    strugglingCount,
+    
+    basicRetentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    weightedRetentionRate: total > 0 ? Math.round((weightedScore / total) * 100) : 0,
+    
+    masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
+    strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+  };
+}
+
+/**
+ * 文法モード専用の定着率を計算
+ */
+export function getGrammarRetentionRateWithAI(): {
+  retentionRate: number;
+  masteredCount: number;
+  appearedCount: number;
+} {
+  const progress = loadProgressSync();
+  const allWords = Object.values(progress.wordProgress);
+  
+  // 文法問題のみフィルタリング
+  const grammarQuestions = allWords.filter(wp => 
+    (wp.grammarAttempts && wp.grammarAttempts > 0) || 
+    wp.word.startsWith('grammar_') ||
+    wp.word.includes('_g')
+  );
+  
+  const appearedQuestions = grammarQuestions.filter(wp => 
+    (wp.grammarAttempts && wp.grammarAttempts > 0) ||
+    (wp.correctCount + wp.incorrectCount) > 0
+  );
+  
+  let masteredCount = 0;
+  
+  appearedQuestions.forEach(wp => {
+    const totalAttempts = wp.grammarAttempts || (wp.correctCount + wp.incorrectCount);
+    const correctCount = wp.grammarCorrect || wp.correctCount;
+    const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect;
+    const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
+    
+    // 定着の条件
+    const isMarkedAsMastered = wp.masteryLevel === 'mastered';
+    const isOneShot = totalAttempts === 1 && correctCount === 1;
+    const isStableAccuracy = totalAttempts >= 5 && accuracy >= 85;
+    const isHighAccuracy = totalAttempts >= 3 && accuracy >= 90;
+    const isStrongStreak = consecutiveCorrect >= 5;
+    const isLongTermLearning = totalAttempts >= 10 && accuracy >= 75;
+    
+    if (isMarkedAsMastered || isOneShot || isStableAccuracy || isHighAccuracy || isStrongStreak || isLongTermLearning) {
+      masteredCount++;
+    }
+  });
+  
+  const retentionRate = appearedQuestions.length > 0 
+    ? (masteredCount / appearedQuestions.length) * 100 
+    : 0;
+  
+  const normalizedRetentionRate = Math.min(100, Math.max(0, retentionRate));
+  
+  return {
+    retentionRate: Math.round(normalizedRetentionRate),
+    masteredCount,
+    appearedCount: appearedQuestions.length
+  };
+}

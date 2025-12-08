@@ -2,11 +2,13 @@
   "unit": "Unit 4",
   "title": "不定詞の応用",
   "grammar": "to不定詞の様々な用法",
-  "totalQuestions": 60,
+  "totalQuestions": 90,
   "questionTypes": {
-    "fillInBlank": 20,
-    "sentenceOrdering": 20,
-    "verbForm": 20
+    "fillInBlank": 35,
+    "sentenceOrdering": 29,
+    "paraphrase": 3,
+    "verbForm": 20,
+    "conversation": 3
   },
   "questions": [
     {
@@ -687,7 +689,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "ピアノを弾くことは難しいです。過去分詞(-ed形)を使って名詞を修飾します。「～されたto」という意味。"
     },
     {
       "id": "so-g3-u4-002",
@@ -707,7 +710,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "嘘をつくことは悪いことです。過去分詞(-ed形)を使って名詞を修飾します。「～されたto」という意味。"
     },
     {
       "id": "so-g3-u4-003",
@@ -728,7 +732,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "外国語を学ぶことは楽しいです。過去分詞(-ed形)を使って名詞を修飾します。「～されたto」という意味。"
     },
     {
       "id": "so-g3-u4-004",
@@ -748,7 +753,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "毎日練習することが大切です。過去分詞(-ed形)を使って名詞を修飾します。「～されたto」という意味。"
     },
     {
       "id": "so-g3-u4-005",
@@ -768,7 +774,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は医者になりたいです。過去分詞(-ed形)を使って名詞を修飾します。「～されたwant」という意味。"
     },
     {
       "id": "so-g3-u4-006",
@@ -788,7 +795,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は歌手になることを決めました。過去分詞(-ed形)を使って名詞を修飾します。「～されたdecided」という意味。"
     },
     {
       "id": "so-g3-u4-007",
@@ -807,7 +815,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私たちは明日出発する予定です。過去分詞(-ed形)を使って名詞を修飾します。「～されたplan」という意味。"
     },
     {
       "id": "so-g3-u4-008",
@@ -828,7 +837,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は新しい車を買うことを望んでいます。過去分詞(-ed形)を使って名詞を修飾します。「～されたhopes」という意味。"
     },
     {
       "id": "so-g3-u4-009",
@@ -847,7 +857,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "何か飲むものが欲しいです。過去分詞(-ed形)を使って名詞を修飾します。「～されたwant」という意味。"
     },
     {
       "id": "so-g3-u4-010",
@@ -867,7 +878,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "これは解くべき問題です。過去分詞(-ed形)を使って名詞を修飾します。「～されたis」という意味。"
     },
     {
       "id": "so-g3-u4-011",
@@ -887,7 +899,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私には遊ぶ時間がありません。過去分詞(-ed形)を使って名詞を修飾します。「～されたhave」という意味。"
     },
     {
       "id": "so-g3-u4-012",
@@ -907,7 +920,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "書くための紙が必要です。過去分詞(-ed形)を使って名詞を修飾します。「～されたneed」という意味。"
     },
     {
       "id": "so-g3-u4-013",
@@ -930,7 +944,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は友達に会うために駅に行きました。過去分詞(-ed形)を使って名詞を修飾します。「～されたwent」という意味。"
     },
     {
       "id": "so-g3-u4-014",
@@ -950,7 +965,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女はお金を稼ぐためにアルバイトをします。過去分詞(-ed形)を使って名詞を修飾します。「～されたworks」という意味。"
     },
     {
       "id": "so-g3-u4-015",
@@ -971,7 +987,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私は写真を撮るためにカメラを買いました。過去分詞(-ed形)を使って名詞を修飾します。「～されたbought」という意味。"
     },
     {
       "id": "so-g3-u4-016",
@@ -992,7 +1009,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は健康でいるために毎日走ります。過去分詞(-ed形)を使って名詞を修飾します。「～されたruns」という意味。"
     },
     {
       "id": "so-g3-u4-017",
@@ -1012,7 +1030,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私はあなたに会えて嬉しいです。過去分詞(-ed形)を使って名詞を修飾します。「～されたam」という意味。"
     },
     {
       "id": "so-g3-u4-018",
@@ -1033,7 +1052,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼女は試験に合格して興奮しました。過去分詞(-ed形)を使って名詞を修飾します。「～されたwas」という意味。"
     },
     {
       "id": "so-g3-u4-019",
@@ -1054,7 +1074,8 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "私たちはあなたの成功を知って誇りに思います。過去分詞(-ed形)を使って名詞を修飾します。「～されたare」という意味。"
     },
     {
       "id": "so-g3-u4-020",
@@ -1074,7 +1095,514 @@
       "difficulty": "intermediate",
       "grammarPoint": "不定詞",
       "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-      "type": "sentenceOrdering"
+      "type": "sentenceOrdering",
+      "explanation": "彼は招待されて光栄に思いました。過去分詞(-ed形)を使って名詞を修飾します。「～されたwas」という意味。"
+    },
+    {
+      "id": "g3-u4-tooto-001",
+      "type": "fillInBlank",
+      "japanese": "この問題は難しすぎて解けません",
+      "sentence": "This problem is too difficult ____ solve.",
+      "choices": [
+        "to",
+        "for",
+        "that"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "too + 形容詞/副詞 + to + 動詞の原形で「~すぎて...できない」という構文として覚えること。This problem is too difficult to solve.「この問題は難しすぎて解けない」。",
+      "hint": "~すぎて...できない"
+    },
+    {
+      "id": "g3-u4-tooto-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼は若すぎて運転できません",
+      "words": [
+        "he",
+        "is",
+        "too",
+        "young",
+        "to",
+        "drive"
+      ],
+      "correctAnswer": "He is too young to drive.",
+      "difficulty": "intermediate",
+      "explanation": "too + 形容詞 + to + 動詞の原形という構文として覚えること。「彼は若すぎて運転できない」。",
+      "hint": "too young to",
+      "wordCount": 6
+    },
+    {
+      "id": "g3-u4-tooto-003",
+      "type": "fillInBlank",
+      "japanese": "このかばんは重すぎて持てません",
+      "sentence": "This bag is ____ heavy to carry.",
+      "choices": [
+        "too",
+        "so",
+        "very"
+      ],
+      "correctAnswer": "too",
+      "difficulty": "beginner",
+      "explanation": "too + 形容詞 + to + 動詞の原形で「~すぎて...できない」という構文として覚えること。",
+      "hint": "~すぎて"
+    },
+    {
+      "id": "g3-u4-tooto-004",
+      "type": "paraphrase",
+      "japanese": "とても暑かったので外出できませんでした（hot, go out）",
+      "originalSentence": "It was so hot that I couldn't go out.",
+      "question": "It was too hot ____.",
+      "correctAnswer": "to go out",
+      "difficulty": "intermediate",
+      "explanation": "so ~ that ... can't を too ~ to に書き換える構文。It was too hot to go out.となる。"
+    },
+    {
+      "id": "g3-u4-tooto-005",
+      "type": "fillInBlank",
+      "japanese": "彼女は疲れすぎて歩けませんでした",
+      "sentence": "She was too tired ____ walk.",
+      "choices": [
+        "to",
+        "for",
+        "that"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "too + 形容詞 + to + 動詞の原形という構文として覚えること。She was too tired to walk.「彼女は疲れすぎて歩けなかった」。",
+      "hint": "to不定詞"
+    },
+    {
+      "id": "g3-u4-tooto-006",
+      "type": "sentenceOrdering",
+      "japanese": "この本は難しすぎて私には読めません",
+      "words": [
+        "this",
+        "book",
+        "is",
+        "too",
+        "difficult",
+        "for",
+        "me",
+        "to",
+        "read"
+      ],
+      "correctAnswer": "This book is too difficult for me to read.",
+      "difficulty": "advanced",
+      "explanation": "too + 形容詞 + for + 人 + to + 動詞の原形で「人にとって~すぎて...できない」という構文として覚えること。",
+      "hint": "too difficult for",
+      "wordCount": 9
+    },
+    {
+      "id": "g3-u4-tooto-007",
+      "type": "fillInBlank",
+      "japanese": "彼は忙しすぎて私に会えませんでした",
+      "sentence": "He was ____ busy to see me.",
+      "choices": [
+        "too",
+        "so",
+        "very"
+      ],
+      "correctAnswer": "too",
+      "difficulty": "intermediate",
+      "explanation": "too + 形容詞 + to + 動詞の原形で「~すぎて...できない」という構文として覚えること。",
+      "hint": "~すぎて"
+    },
+    {
+      "id": "g3-u4-tooto-008",
+      "type": "conversation",
+      "japanese": "速すぎて追いつけません",
+      "situation": "走っている人について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can you catch him?"
+        },
+        {
+          "speaker": "B",
+          "text": "No, he's running too ____ to catch."
+        }
+      ],
+      "choices": [
+        "fast",
+        "faster",
+        "fastest"
+      ],
+      "correctAnswer": "fast",
+      "difficulty": "intermediate",
+      "explanation": "too + 副詞 + to + 動詞の原形という構文として覚えること。too fast to catch「速すぎて追いつけない」。",
+      "hint": "原級を使う"
+    },
+    {
+      "id": "g3-u4-tooto-009",
+      "type": "fillInBlank",
+      "japanese": "その映画は怖すぎて見られませんでした",
+      "sentence": "The movie was too scary ____ watch.",
+      "choices": [
+        "to",
+        "for",
+        "that"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "too + 形容詞 + to + 動詞の原形という構文として覚えること。The movie was too scary to watch.「その映画は怖すぎて見られなかった」。",
+      "hint": "to不定詞"
+    },
+    {
+      "id": "g3-u4-tooto-010",
+      "type": "sentenceOrdering",
+      "japanese": "この質問は難しすぎて答えられません",
+      "words": [
+        "this",
+        "question",
+        "is",
+        "too",
+        "difficult",
+        "to",
+        "answer"
+      ],
+      "correctAnswer": "This question is too difficult to answer.",
+      "difficulty": "intermediate",
+      "explanation": "too + 形容詞 + to + 動詞の原形という構文として覚えること。「この質問は難しすぎて答えられない」。",
+      "hint": "too difficult to",
+      "wordCount": 7
+    },
+    {
+      "id": "g3-u4-enough-001",
+      "type": "fillInBlank",
+      "japanese": "彼は十分年上なので運転できます",
+      "sentence": "He is old ____ to drive.",
+      "choices": [
+        "enough",
+        "too",
+        "very"
+      ],
+      "correctAnswer": "enough",
+      "difficulty": "intermediate",
+      "explanation": "形容詞/副詞 + enough + to + 動詞の原形で「...するのに十分~」という構文として覚えること。He is old enough to drive.「彼は運転するのに十分な年齢だ」。",
+      "hint": "十分~"
+    },
+    {
+      "id": "g3-u4-enough-002",
+      "type": "sentenceOrdering",
+      "japanese": "この部屋は私たちには十分広い",
+      "words": [
+        "this",
+        "room",
+        "is",
+        "large",
+        "enough",
+        "for",
+        "us"
+      ],
+      "correctAnswer": "This room is large enough for us.",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + for + 人という構文として覚えること。「この部屋は私たちには十分広い」。",
+      "hint": "large enough",
+      "wordCount": 7
+    },
+    {
+      "id": "g3-u4-enough-003",
+      "type": "fillInBlank",
+      "japanese": "彼女は親切にも私を助けてくれました",
+      "sentence": "She was kind ____ to help me.",
+      "choices": [
+        "enough",
+        "too",
+        "so"
+      ],
+      "correctAnswer": "enough",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + to + 動詞の原形で「...するのに十分~」という構文として覚えること。She was kind enough to help me.「彼女は親切にも私を助けてくれた」。",
+      "hint": "enough to"
+    },
+    {
+      "id": "g3-u4-enough-004",
+      "type": "fillInBlank",
+      "japanese": "彼は速く走れるので勝てます",
+      "sentence": "He can run fast ____ to win.",
+      "choices": [
+        "enough",
+        "too",
+        "very"
+      ],
+      "correctAnswer": "enough",
+      "difficulty": "intermediate",
+      "explanation": "副詞 + enough + to + 動詞の原形で「...するのに十分~」という構文として覚えること。",
+      "hint": "十分~"
+    },
+    {
+      "id": "g3-u4-enough-005",
+      "type": "paraphrase",
+      "japanese": "とても親切だったので教えてくれました（kind, show）",
+      "originalSentence": "He was so kind that he showed me the way.",
+      "question": "He was kind enough ____.",
+      "correctAnswer": "to show me the way",
+      "difficulty": "advanced",
+      "explanation": "so ~ that を 形容詞 + enough + to に書き換える構文。He was kind enough to show me the way.となる。"
+    },
+    {
+      "id": "g3-u4-enough-006",
+      "type": "sentenceOrdering",
+      "japanese": "彼女は賢いので問題が解けます",
+      "words": [
+        "she",
+        "is",
+        "smart",
+        "enough",
+        "to",
+        "solve",
+        "the",
+        "problem"
+      ],
+      "correctAnswer": "She is smart enough to solve the problem.",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + to + 動詞の原形という構文として覚えること。「彼女は問題を解くのに十分賢い」。",
+      "hint": "smart enough to",
+      "wordCount": 8
+    },
+    {
+      "id": "g3-u4-enough-007",
+      "type": "fillInBlank",
+      "japanese": "この箱は軽いので持てます",
+      "sentence": "This box is light ____ to carry.",
+      "choices": [
+        "enough",
+        "too",
+        "very"
+      ],
+      "correctAnswer": "enough",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + to + 動詞の原形で「...するのに十分~」という構文として覚えること。",
+      "hint": "十分~"
+    },
+    {
+      "id": "g3-u4-enough-008",
+      "type": "conversation",
+      "japanese": "十分暖かいので泳げます",
+      "situation": "天気について",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Can we swim today?"
+        },
+        {
+          "speaker": "B",
+          "text": "Yes, it's warm ____ to swim."
+        }
+      ],
+      "choices": [
+        "enough",
+        "too",
+        "very"
+      ],
+      "correctAnswer": "enough",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + to + 動詞の原形という構文として覚えること。warm enough to swim「泳ぐのに十分暖かい」。",
+      "hint": "enough to"
+    },
+    {
+      "id": "g3-u4-enough-009",
+      "type": "fillInBlank",
+      "japanese": "彼は強いのでドアを開けられます",
+      "sentence": "He is strong ____ to open the door.",
+      "choices": [
+        "enough",
+        "too",
+        "so"
+      ],
+      "correctAnswer": "enough",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + to + 動詞の原形で「...するのに十分~」という構文として覚えること。",
+      "hint": "十分~"
+    },
+    {
+      "id": "g3-u4-enough-010",
+      "type": "sentenceOrdering",
+      "japanese": "このコーヒーは十分熱くて飲めません",
+      "words": [
+        "this",
+        "coffee",
+        "is",
+        "hot",
+        "enough",
+        "to",
+        "drink"
+      ],
+      "correctAnswer": "This coffee is hot enough to drink.",
+      "difficulty": "intermediate",
+      "explanation": "形容詞 + enough + to + 動詞の原形という構文として覚えること。「このコーヒーは飲むのに十分熱い」。",
+      "hint": "hot enough to",
+      "wordCount": 7
+    },
+    {
+      "id": "g3-u4-forto-001",
+      "type": "fillInBlank",
+      "japanese": "私が英語を勉強することは重要です",
+      "sentence": "It is important ____ me to study English.",
+      "choices": [
+        "for",
+        "to",
+        "of"
+      ],
+      "correctAnswer": "for",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形で「人が...するのは~だ」という構文として覚えること。It is important for me to study English.「私が英語を勉強することは重要だ」。",
+      "hint": "for + 人"
+    },
+    {
+      "id": "g3-u4-forto-002",
+      "type": "sentenceOrdering",
+      "japanese": "彼が早起きすることは難しい",
+      "words": [
+        "it",
+        "is",
+        "difficult",
+        "for",
+        "him",
+        "to",
+        "get",
+        "up",
+        "early"
+      ],
+      "correctAnswer": "It is difficult for him to get up early.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。「彼が早起きするのは難しい」。",
+      "hint": "It is difficult for",
+      "wordCount": 9
+    },
+    {
+      "id": "g3-u4-forto-003",
+      "type": "fillInBlank",
+      "japanese": "私たちが環境を守ることは大切です",
+      "sentence": "It is important for us ____ protect the environment.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "beginner",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文。toの後は必ず動詞の原形。",
+      "hint": "to不定詞"
+    },
+    {
+      "id": "g3-u4-forto-004",
+      "type": "fillInBlank",
+      "japanese": "彼女がこの本を読むことは簡単です",
+      "sentence": "It is easy ____ her to read this book.",
+      "choices": [
+        "for",
+        "to",
+        "of"
+      ],
+      "correctAnswer": "for",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。",
+      "hint": "for + 人"
+    },
+    {
+      "id": "g3-u4-forto-005",
+      "type": "paraphrase",
+      "japanese": "私が日本語を話すことは難しくありません（speak Japanese）",
+      "originalSentence": "I can speak Japanese easily.",
+      "question": "It is not difficult for me ____.",
+      "correctAnswer": "to speak Japanese",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文に書き換える。It is not difficult for me to speak Japanese.となる。"
+    },
+    {
+      "id": "g3-u4-forto-006",
+      "type": "sentenceOrdering",
+      "japanese": "子供たちが外で遊ぶことは楽しい",
+      "words": [
+        "it",
+        "is",
+        "fun",
+        "for",
+        "children",
+        "to",
+        "play",
+        "outside"
+      ],
+      "correctAnswer": "It is fun for children to play outside.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。「子供たちが外で遊ぶのは楽しい」。",
+      "hint": "It is fun for",
+      "wordCount": 8
+    },
+    {
+      "id": "g3-u4-forto-007",
+      "type": "fillInBlank",
+      "japanese": "彼がこの問題を解くことは不可能です",
+      "sentence": "It is impossible for him ____ solve this problem.",
+      "choices": [
+        "to",
+        "for",
+        "of"
+      ],
+      "correctAnswer": "to",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。",
+      "hint": "to不定詞"
+    },
+    {
+      "id": "g3-u4-forto-008",
+      "type": "conversation",
+      "situation": "健康について",
+      "japanese": "私たちが運動することは大切です",
+      "dialogue": [
+        {
+          "speaker": "A",
+          "text": "Why should we exercise?"
+        },
+        {
+          "speaker": "B",
+          "text": "It's important ____ us to exercise."
+        }
+      ],
+      "choices": [
+        "for",
+        "to",
+        "of"
+      ],
+      "correctAnswer": "for",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。",
+      "hint": "for + 人"
+    },
+    {
+      "id": "g3-u4-forto-009",
+      "type": "fillInBlank",
+      "japanese": "私が時間通りに着くことは必要です",
+      "sentence": "It is necessary ____ me to arrive on time.",
+      "choices": [
+        "for",
+        "to",
+        "of"
+      ],
+      "correctAnswer": "for",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。",
+      "hint": "for + 人"
+    },
+    {
+      "id": "g3-u4-forto-010",
+      "type": "sentenceOrdering",
+      "japanese": "彼らが成功することは可能です",
+      "words": [
+        "it",
+        "is",
+        "possible",
+        "for",
+        "them",
+        "to",
+        "succeed"
+      ],
+      "correctAnswer": "It is possible for them to succeed.",
+      "difficulty": "intermediate",
+      "explanation": "It is + 形容詞 + for + 人 + to + 動詞の原形という構文として覚えること。「彼らが成功するのは可能だ」。",
+      "hint": "It is possible for",
+      "wordCount": 7
     }
   ]
 }

@@ -188,7 +188,7 @@
       ],
       "correctAnswer": "are",
       "difficulty": "intermediate",
-      "explanation": "You are right.は「あなたは正しい」という頻出表現。反対はYou are wrong.（間違っている）。",
+      "explanation": "You are right.は「あなたは正しい」という構文として覚えること。反対はYou are wrong.（間違っている）。",
       "hint": "You are right"
     },
     {
@@ -485,7 +485,7 @@
     {
       "id": "g1-u0-para-001",
       "type": "paraphrase",
-      "japanese": "私は学生です（肯定文→疑問文）",
+      "japanese": "You are a student.（疑問文に）",
       "originalSentence": "You are a student.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -501,7 +501,7 @@
     {
       "id": "g1-u0-para-002",
       "type": "paraphrase",
-      "japanese": "彼は先生です（肯定文→否定文）",
+      "japanese": "be動詞 + not",
       "originalSentence": "He is a teacher.",
       "question": "否定文に書き換えなさい",
       "choices": [

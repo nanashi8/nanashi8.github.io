@@ -239,7 +239,7 @@
     {
       "id": "g1-u8-so-001",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "私は昨日歩きました",
       "words": [
         "I",
         "walked",
@@ -254,7 +254,7 @@
     {
       "id": "g1-u8-so-002",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼女は昨晩踊りました",
       "words": [
         "she",
         "danced",
@@ -270,7 +270,7 @@
     {
       "id": "g1-u8-so-003",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼らは昨日跳びました",
       "words": [
         "they",
         "jumped",
@@ -285,7 +285,7 @@
     {
       "id": "g1-u8-so-004",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "私たちは音楽を聴きました",
       "words": [
         "we",
         "listened",
@@ -301,7 +301,7 @@
     {
       "id": "g1-u8-so-005",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼は昨日私を助けました",
       "words": [
         "he",
         "helped",
@@ -317,7 +317,7 @@
     {
       "id": "g1-u8-so-006",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "私は昨日このペンを使いました",
       "words": [
         "I",
         "used",
@@ -334,7 +334,7 @@
     {
       "id": "g1-u8-so-007",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼女は質問をしました",
       "words": [
         "she",
         "asked",
@@ -350,7 +350,7 @@
     {
       "id": "g1-u8-so-008",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼らはスポーツについて話しました",
       "words": [
         "they",
         "talked",
@@ -366,7 +366,7 @@
     {
       "id": "g1-u8-so-009",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "私たちは昨日ピアノを練習しました",
       "words": [
         "we",
         "practiced",
@@ -382,7 +382,7 @@
     {
       "id": "g1-u8-so-010",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼は新しい自転車が欲しかった",
       "words": [
         "he",
         "wanted",
@@ -399,7 +399,7 @@
     {
       "id": "g1-u8-so-011",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "私は今朝歯を磨きました",
       "words": [
         "I",
         "brushed",
@@ -417,7 +417,7 @@
     {
       "id": "g1-u8-so-012",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼女は学校に早く着きました",
       "words": [
         "she",
         "arrived",
@@ -434,7 +434,7 @@
     {
       "id": "g1-u8-so-013",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼らは何度も挑戦しました",
       "words": [
         "they",
         "tried",
@@ -450,7 +450,7 @@
     {
       "id": "g1-u8-so-014",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "私たちは注意深く通りを渡りました",
       "words": [
         "we",
         "crossed",
@@ -467,7 +467,7 @@
     {
       "id": "g1-u8-so-015",
       "type": "sentenceOrdering",
-      "japanese": "過去形の文",
+      "japanese": "彼はすぐに間違いに気づきました",
       "words": [
         "he",
         "noticed",
@@ -484,7 +484,7 @@
     {
       "id": "g1-u8-para-001",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "私はサッカーをしました",
       "originalSentence": "I play soccer.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -500,7 +500,7 @@
     {
       "id": "g1-u8-para-002",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "彼女はテレビを見ました",
       "originalSentence": "She watches TV.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -516,7 +516,7 @@
     {
       "id": "g1-u8-para-003",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "彼らは一生懸命勉強しました",
       "originalSentence": "They study hard.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -532,7 +532,7 @@
     {
       "id": "g1-u8-para-004",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "私たちは学校へ歩きました",
       "originalSentence": "We walk to school.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -548,7 +548,7 @@
     {
       "id": "g1-u8-para-005",
       "type": "paraphrase",
-      "japanese": "現在形→過去形",
+      "japanese": "彼は部屋を掃除しました",
       "originalSentence": "He cleans his room.",
       "question": "過去形に書き換えなさい",
       "choices": [
@@ -564,7 +564,7 @@
     {
       "id": "g1-u8-para-006",
       "type": "paraphrase",
-      "japanese": "過去形→現在形",
+      "japanese": "私は友達を訪ねます",
       "originalSentence": "I visited my friend yesterday.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -580,7 +580,7 @@
     {
       "id": "g1-u8-para-007",
       "type": "paraphrase",
-      "japanese": "過去形→現在形",
+      "japanese": "彼女は夕食を料理します",
       "originalSentence": "She cooked dinner last night.",
       "question": "現在形に書き換えなさい",
       "choices": [
@@ -596,7 +596,7 @@
     {
       "id": "g1-u8-para-008",
       "type": "paraphrase",
-      "japanese": "過去形の疑問文",
+      "japanese": "あなたは昨日テニスをしましたか",
       "originalSentence": "You played tennis yesterday.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -612,7 +612,7 @@
     {
       "id": "g1-u8-para-009",
       "type": "paraphrase",
-      "japanese": "過去形の否定文",
+      "japanese": "私は昨晩テレビを見ませんでした",
       "originalSentence": "I watched TV last night.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -628,7 +628,7 @@
     {
       "id": "g1-u8-para-010",
       "type": "paraphrase",
-      "japanese": "肯定文→否定文",
+      "japanese": "彼女は昨日英語を勉強しませんでした",
       "originalSentence": "She studied English yesterday.",
       "question": "否定文に書き換えなさい",
       "choices": [
@@ -644,7 +644,7 @@
     {
       "id": "g1-u8-para-011",
       "type": "paraphrase",
-      "japanese": "疑問文への応答",
+      "japanese": "はい、楽しみました",
       "originalSentence": "Did you enjoy the party?",
       "question": "肯定で答えなさい",
       "choices": [
@@ -660,7 +660,7 @@
     {
       "id": "g1-u8-para-012",
       "type": "paraphrase",
-      "japanese": "疑問文への応答",
+      "japanese": "いいえ、終えていません",
       "originalSentence": "Did he finish his homework?",
       "question": "否定で答えなさい",
       "choices": [
@@ -676,7 +676,7 @@
     {
       "id": "g1-u8-para-013",
       "type": "paraphrase",
-      "japanese": "時制の一致",
+      "japanese": "私は昨日サッカーをしました",
       "originalSentence": "I play soccer every day.",
       "question": "「昨日」の文に書き換えなさい",
       "choices": [
@@ -692,7 +692,7 @@
     {
       "id": "g1-u8-para-014",
       "type": "paraphrase",
-      "japanese": "過去形+理由",
+      "japanese": "私は一生懸命働いたので疲れました",
       "originalSentence": "I was tired.",
       "question": "「一生懸命働いたので」を追加",
       "choices": [
@@ -708,7 +708,7 @@
     {
       "id": "g1-u8-para-015",
       "type": "paraphrase",
-      "japanese": "Wh疑問文過去形",
+      "japanese": "あなたは何をしましたか",
       "originalSentence": "You played tennis.",
       "question": "Whatを使って疑問文に",
       "choices": [
