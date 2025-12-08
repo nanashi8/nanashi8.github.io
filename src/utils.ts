@@ -487,10 +487,13 @@ export function selectAdaptiveQuestions(
   
   let selected: Question[] = [];
   
-  // 1. 復習単語を優先（難易度スコアが高い順）
+  // 1. 復習単語を優先（難易度スコアが高い順、暗記タブの「覚えた」を考慮）
   const learningWithScores = learningWords.map(q => {
     const progress = wordProgressMap.get(q.word.toLowerCase());
-    return { question: q, score: progress?.difficultyScore || 50 };
+    // 暗記タブで「覚えた」単語は出題係数を上げる（最大+20ポイント）
+    const memorizationBonus = Math.min((progress?.memorizationCorrect || 0) * 2, 20);
+    const adjustedScore = (progress?.difficultyScore || 50) + memorizationBonus;
+    return { question: q, score: adjustedScore };
   });
   learningWithScores.sort((a, b) => b.score - a.score);
   
@@ -499,9 +502,21 @@ export function selectAdaptiveQuestions(
     .map(item => item.question);
   selected.push(...selectedLearning);
   
-  // 2. 新規単語（ランダム）
-  const shuffledNew = shuffle(newWords);
-  const selectedNew = shuffledNew.slice(0, Math.min(newCount, shuffledNew.length));
+  // 2. 新規単語（暗記タブで「覚えた」単語を優先）
+  const newWordsWithMemorization = newWords.map(q => {
+    const progress = wordProgressMap.get(q.word.toLowerCase());
+    // 暗記タブでの「覚えた」回数を係数として使用
+    const memorizationBonus = (progress?.memorizationCorrect || 0) * 10;
+    return { question: q, priority: memorizationBonus };
+  });
+  // 暗記済み単語を優先してソート（同じ優先度ならランダム）
+  newWordsWithMemorization.sort((a, b) => {
+    if (b.priority !== a.priority) return b.priority - a.priority;
+    return Math.random() - 0.5; // 同じ優先度の場合はランダム
+  });
+  const selectedNew = newWordsWithMemorization
+    .slice(0, Math.min(newCount, newWordsWithMemorization.length))
+    .map(item => item.question);
   selected.push(...selectedNew);
   
   // 3. 定着済み単語（時々復習）
