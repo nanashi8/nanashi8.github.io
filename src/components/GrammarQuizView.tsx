@@ -503,8 +503,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             onAnswerTime={lastAnswerTime}
             dataSource={
               grade.startsWith('g') && grade.includes('-unit')
-                ? `📚 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
-                : `📚 ${grade === 'all' ? '全学年' : `${grade}年`}`
+                ? ` 文法問題集｜${grade.replace('g', '').replace('-unit', '-unit')}`
+                : ` ${grade === 'all' ? '全学年' : `${grade}年`}`
             }
             category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
             difficulty=""
