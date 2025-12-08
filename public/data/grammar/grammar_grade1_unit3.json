@@ -622,7 +622,7 @@
     {
       "id": "g1-u3-para-010",
       "type": "paraphrase",
-      "japanese": "複数形の変化（-es）。",
+      "japanese": "私は2つの箱を持っています。",
       "originalSentence": "I have a box.",
       "question": "「2つの」を加えて書き換えなさい",
       "choices": [
@@ -638,7 +638,7 @@
     {
       "id": "g1-u3-para-011",
       "type": "paraphrase",
-      "japanese": "不規則複数形。",
+      "japanese": "彼は3人の子供がいます。",
       "originalSentence": "He has a child.",
       "question": "「3人の」を加えて書き換えなさい",
       "choices": [
@@ -654,7 +654,7 @@
     {
       "id": "g1-u3-para-012",
       "type": "paraphrase",
-      "japanese": "複数形の変化（-o→-es）。",
+      "japanese": "これらはトマトです。",
       "originalSentence": "This is a tomato.",
       "question": "複数形に書き換えなさい",
       "choices": [
@@ -686,7 +686,7 @@
     {
       "id": "g1-u3-para-014",
       "type": "paraphrase",
-      "japanese": "複数形の変化（-ch→-es）。",
+      "japanese": "彼女は2つの腕時計を持っています。",
       "originalSentence": "She has a watch.",
       "question": "「2つの」を加えて書き換えなさい",
       "choices": [
@@ -702,7 +702,7 @@
     {
       "id": "g1-u3-para-015",
       "type": "paraphrase",
-      "japanese": "例外の複数形。",
+      "japanese": "私は2台のピアノを持っています。",
       "originalSentence": "I have a piano.",
       "question": "「2つの」を加えて書き換えなさい",
       "choices": [
@@ -718,7 +718,7 @@
     {
       "id": "g1-u3-vf-001",
       "type": "verbForm",
-      "japanese": "bookの複数形（We版）。",
+      "japanese": "私たちは3冊の本を持っています。",
       "sentence": "We have three ____.",
       "verb": "book",
       "choices": [
@@ -734,7 +734,7 @@
     {
       "id": "g1-u3-vf-002",
       "type": "verbForm",
-      "japanese": "carの複数形（Those版）。",
+      "japanese": "あれらは車です。",
       "sentence": "Those are ____.",
       "verb": "car",
       "choices": [
@@ -750,7 +750,7 @@
     {
       "id": "g1-u3-vf-003",
       "type": "verbForm",
-      "japanese": "boxの複数形（They版）。",
+      "japanese": "彼らは2つの箱を持っています。",
       "sentence": "They have two ____.",
       "verb": "box",
       "choices": [
@@ -766,7 +766,7 @@
     {
       "id": "g1-u3-vf-004",
       "type": "verbForm",
-      "japanese": "watchの複数形。",
+      "japanese": "彼はたくさんの腕時計を持っています。",
       "sentence": "He has many ____.",
       "verb": "watch",
       "choices": [
@@ -782,7 +782,7 @@
     {
       "id": "g1-u3-vf-005",
       "type": "verbForm",
-      "japanese": "tomatoの複数形。",
+      "japanese": "私はトマトが好きです。",
       "sentence": "I like ____.",
       "verb": "tomato",
       "choices": [
@@ -798,7 +798,7 @@
     {
       "id": "g1-u3-vf-006",
       "type": "verbForm",
-      "japanese": "cityの複数形。",
+      "japanese": "私は2つの都市を訪れました。",
       "sentence": "I visited two ____.",
       "verb": "city",
       "choices": [
@@ -814,7 +814,7 @@
     {
       "id": "g1-u3-vf-007",
       "type": "verbForm",
-      "japanese": "childの複数形。",
+      "japanese": "彼らは3人の子供がいます。",
       "sentence": "They have three ____.",
       "verb": "child",
       "choices": [
@@ -830,7 +830,7 @@
     {
       "id": "g1-u3-vf-008",
       "type": "verbForm",
-      "japanese": "pianoの複数形。",
+      "japanese": "私たちは2台のピアノを持っています。",
       "sentence": "We have two ____.",
       "verb": "piano",
       "choices": [
@@ -846,7 +846,7 @@
     {
       "id": "g1-u3-vf-009",
       "type": "verbForm",
-      "japanese": "dishの複数形。",
+      "japanese": "彼女は皿を洗います。",
       "sentence": "She washes the ____.",
       "verb": "dish",
       "choices": [
@@ -862,7 +862,7 @@
     {
       "id": "g1-u3-vf-010",
       "type": "verbForm",
-      "japanese": "leafの複数形。",
+      "japanese": "その木はたくさんの葉を持っています。",
       "sentence": "The tree has many ____.",
       "verb": "leaf",
       "choices": [
@@ -978,7 +978,7 @@
     {
       "id": "g1-u3-conv-005",
       "type": "conversation",
-      "japanese": "不規則複数形を使う。",
+      "japanese": "はい、私は2人の子供がいます。",
       "situation": "家族について話す場面",
       "dialogue": [
         {

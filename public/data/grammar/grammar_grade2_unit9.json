@@ -1,8 +1,10 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 9",
   "title": "受動態",
-  "grammar": "be + 過去分詞",
-  "totalQuestions": 60,
+  "grammar": "be動詞 + 過去分詞",
+  "totalQuestions": 65,
   "questionTypes": {
     "fillInBlank": 15,
     "sentenceOrdering": 15,
@@ -986,5 +988,8 @@
       "explanation": "be + 過去分詞の会話5です。",
       "hint": "会話"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.094029"
 }

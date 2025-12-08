@@ -2,6 +2,7 @@
 
 [![CSS品質チェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/css-lint.yml)
 [![ビルドチェック](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/build.yml)
+[![文法データ品質](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml/badge.svg)](https://github.com/nanashi8/nanashi8.github.io/actions/workflows/grammar-quality-check.yml)
 
 TypeScript + React で構築された、インタラクティブな英単語クイズアプリケーションです。
 
@@ -40,6 +41,13 @@ npm run health-check
 - [開発ガイドライン](.github/DEVELOPMENT_GUIDELINES.md) - **必読** 二重記録などの問題を防ぐための重要なガイド
 - [コントリビューションガイド](.github/CONTRIBUTING.md) - Pull Requestを送る前に確認
 - [進捗記録パターン](.aitk/instructions/progress-tracking-patterns.instructions.md) - 実装パターンのクイックリファレンス
+
+### データ品質ガイドライン
+
+- [文法データ品質ガイドライン](docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md) - 文法問題データの品質基準と検証手順
+  - 日本語フィールドは必ず英文の翻訳であること
+  - 文法用語（「過去形」「現在進行形」など）は使用禁止
+  - 自動検証ツールと品質メトリクス
 
 ## CSV形式
 

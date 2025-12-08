@@ -586,7 +586,7 @@
     {
       "id": "g1-u7-para-009",
       "type": "paraphrase",
-      "japanese": "否定命令文の短縮。",
+      "japanese": "ここで走ってはいけません。",
       "originalSentence": "Do not cry.",
       "question": "短縮形に書き換えなさい",
       "choices": [
@@ -618,7 +618,7 @@
     {
       "id": "g1-u7-para-011",
       "type": "paraphrase",
-      "japanese": "命令文に理由を追加。",
+      "japanese": "早く来てください、遅れていますよ。",
       "originalSentence": "Study hard.",
       "question": "「明日テストがあるので」という理由を追加",
       "choices": [
@@ -666,7 +666,7 @@
     {
       "id": "g1-u7-para-014",
       "type": "paraphrase",
-      "japanese": "命令文の強調。",
+      "japanese": "必ず静かにしてください。",
       "originalSentence": "Listen to me.",
       "question": "Pleaseを使って丁寧にし、文末にも付ける",
       "choices": [
@@ -794,7 +794,7 @@
     {
       "id": "g1-u7-vf-007",
       "type": "verbForm",
-      "japanese": "否定命令文のbe動詞。",
+      "japanese": "遅れないでください。",
       "sentence": "Don't ____ angry.",
       "verb": "be",
       "choices": [

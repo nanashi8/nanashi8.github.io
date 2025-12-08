@@ -1,7 +1,9 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 5",
   "title": "動名詞",
-  "grammar": "動詞-ing、主語・目的語",
+  "grammar": "動詞-ing形の名詞的用法",
   "totalQuestions": 60,
   "questionTypes": {
     "fillInBlank": 15,
@@ -986,5 +988,8 @@
       "explanation": "動詞-ing、主語・目的語の会話5です。",
       "hint": "会話"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.082350"
 }

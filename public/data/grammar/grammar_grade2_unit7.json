@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 7",
   "title": "比較級・最上級",
   "grammar": "-er/-est、more/most",
@@ -1402,5 +1404,8 @@
       "difficulty": "advanced",
       "explanation": "if構文をthe + 比較級, the + 比較級に書き換えます。The busier, the happier.となります。"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.085902"
 }

@@ -1111,7 +1111,7 @@
     {
       "id": "g3-u8-ifwhether-004",
       "type": "paraphrase",
-      "japanese": "彼は来ますか？（Does he come?）を間接疑問文に。",
+      "japanese": "私は彼が来るかどうか知りません。",
       "originalSentence": "Does he come to the party?",
       "question": "I don't know ____.",
       "correctAnswer": "if he comes to the party",
@@ -1195,7 +1195,7 @@
     {
       "id": "g3-u8-ifwhether-009",
       "type": "paraphrase",
-      "japanese": "彼女は幸せですか？（Is she happy?）を間接疑問文に。",
+      "japanese": "私は彼女が幸せかどうかわかりません。",
       "originalSentence": "Is she happy?",
       "question": "I wonder ____.",
       "correctAnswer": "if she is happy",

@@ -89,7 +89,7 @@
     {
       "id": "g2-u1-fib-006",
       "type": "fillInBlank",
-      "japanese": "過去進行形否定。",
+      "japanese": "私はその時テレビを見ていませんでした。",
       "sentence": "I ____ watching TV then.",
       "choices": [
         "wasn't",
@@ -104,7 +104,7 @@
     {
       "id": "g2-u1-fib-007",
       "type": "fillInBlank",
-      "japanese": "過去進行形否定。",
+      "japanese": "彼らはテニスをしていませんでした。",
       "sentence": "They ____ playing tennis.",
       "choices": [
         "weren't",
@@ -119,7 +119,7 @@
     {
       "id": "g2-u1-fib-008",
       "type": "fillInBlank",
-      "japanese": "過去進行形疑問。",
+      "japanese": "あなたはその時宿題をしていましたか。",
       "sentence": "____ you doing homework then?",
       "choices": [
         "Were",
@@ -134,7 +134,7 @@
     {
       "id": "g2-u1-fib-009",
       "type": "fillInBlank",
-      "japanese": "過去進行形疑問。",
+      "japanese": "彼女は夕食を作っていましたか。",
       "sentence": "____ she cooking dinner?",
       "choices": [
         "Was",
@@ -149,7 +149,7 @@
     {
       "id": "g2-u1-fib-010",
       "type": "fillInBlank",
-      "japanese": "-ing形。",
+      "japanese": "彼は手紙を書いていました。",
       "sentence": "He was ____ a letter.",
       "choices": [
         "writing",
@@ -164,7 +164,7 @@
     {
       "id": "g2-u1-fib-011",
       "type": "fillInBlank",
-      "japanese": "-ing形。",
+      "japanese": "私たちは音楽を聴いていました。",
       "sentence": "We were ____ music.",
       "choices": [
         "listening to",
@@ -400,7 +400,7 @@
     {
       "id": "g2-u1-so-011",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形長文。",
+      "japanese": "私はその時手紙を書いていました。",
       "words": [
         "I",
         "was",
@@ -418,7 +418,7 @@
     {
       "id": "g2-u1-so-012",
       "type": "sentenceOrdering",
-      "japanese": "過去進行形長文。",
+      "japanese": "彼らはテレビゲームをしていました。",
       "words": [
         "they",
         "were",
@@ -630,7 +630,7 @@
     {
       "id": "g2-u1-para-010",
       "type": "paraphrase",
-      "japanese": "疑問文応答。",
+      "japanese": "はい、私は読んでいました。",
       "originalSentence": "Was he reading?",
       "question": "肯定で答えなさい",
       "choices": [
@@ -646,7 +646,7 @@
     {
       "id": "g2-u1-para-011",
       "type": "paraphrase",
-      "japanese": "疑問文応答。",
+      "japanese": "いいえ、彼女は勉強していませんでした。",
       "originalSentence": "Were they studying?",
       "question": "否定で答えなさい",
       "choices": [
@@ -662,7 +662,7 @@
     {
       "id": "g2-u1-para-012",
       "type": "paraphrase",
-      "japanese": "Wh疑問文。",
+      "japanese": "あなたは何をしていましたか。",
       "originalSentence": "You were doing homework.",
       "question": "Whatを使って疑問文に",
       "choices": [
@@ -678,7 +678,7 @@
     {
       "id": "g2-u1-para-013",
       "type": "paraphrase",
-      "japanese": "Wh疑問文。",
+      "japanese": "彼はどこで遊んでいましたか。",
       "originalSentence": "She was reading a book.",
       "question": "Whatを使って疑問文に",
       "choices": [
@@ -726,7 +726,7 @@
     {
       "id": "g2-u1-vf-001",
       "type": "verbForm",
-      "japanese": "過去進行形I。",
+      "japanese": "私は新聞を読んでいました。",
       "sentence": "I was ____ the newspaper.",
       "verb": "read",
       "choices": [
@@ -742,7 +742,7 @@
     {
       "id": "g2-u1-vf-002",
       "type": "verbForm",
-      "japanese": "過去進行形they。",
+      "japanese": "彼らはサッカーをしていました。",
       "sentence": "They were ____ soccer.",
       "verb": "play",
       "choices": [
@@ -758,7 +758,7 @@
     {
       "id": "g2-u1-vf-003",
       "type": "verbForm",
-      "japanese": "過去進行形she。",
+      "japanese": "彼女はテレビを見ていました。",
       "sentence": "She was ____ TV.",
       "verb": "watch",
       "choices": [
@@ -774,7 +774,7 @@
     {
       "id": "g2-u1-vf-004",
       "type": "verbForm",
-      "japanese": "過去進行形we。",
+      "japanese": "私たちは英語を勉強していました。",
       "sentence": "We were ____ English.",
       "verb": "study",
       "choices": [
@@ -790,7 +790,7 @@
     {
       "id": "g2-u1-vf-005",
       "type": "verbForm",
-      "japanese": "過去進行形he。",
+      "japanese": "彼は速く走っていました。",
       "sentence": "He was ____ fast.",
       "verb": "run",
       "choices": [
@@ -806,7 +806,7 @@
     {
       "id": "g2-u1-vf-006",
       "type": "verbForm",
-      "japanese": "過去進行形I。",
+      "japanese": "私は手紙を書いていました。",
       "sentence": "I was ____ a letter.",
       "verb": "write",
       "choices": [
@@ -822,7 +822,7 @@
     {
       "id": "g2-u1-vf-007",
       "type": "verbForm",
-      "japanese": "過去進行形they。",
+      "japanese": "彼らは夕食を作っていました。",
       "sentence": "They were ____ dinner.",
       "verb": "make",
       "choices": [
@@ -838,7 +838,7 @@
     {
       "id": "g2-u1-vf-008",
       "type": "verbForm",
-      "japanese": "過去進行形it。",
+      "japanese": "雨が強く降っていました。",
       "sentence": "It was ____ heavily.",
       "verb": "rain",
       "choices": [
@@ -854,7 +854,7 @@
     {
       "id": "g2-u1-vf-009",
       "type": "verbForm",
-      "japanese": "過去進行形she。",
+      "japanese": "彼女は音楽を聴いていました。",
       "sentence": "She was ____ to music.",
       "verb": "listen",
       "choices": [
@@ -870,7 +870,7 @@
     {
       "id": "g2-u1-vf-010",
       "type": "verbForm",
-      "japanese": "過去進行形we。",
+      "japanese": "私たちはバスを待っていました。",
       "sentence": "We were ____ for the bus.",
       "verb": "wait",
       "choices": [
@@ -911,7 +911,7 @@
     {
       "id": "g2-u1-conv-002",
       "type": "conversation",
-      "japanese": "過去進行形確認。",
+      "japanese": "はい、私は読んでいました。",
       "situation": "その時の様子",
       "dialogue": [
         {
@@ -936,7 +936,7 @@
     {
       "id": "g2-u1-conv-003",
       "type": "conversation",
-      "japanese": "過去進行形否定。",
+      "japanese": "いいえ、私は勉強していませんでした。",
       "situation": "その時していなかったこと",
       "dialogue": [
         {
@@ -961,7 +961,7 @@
     {
       "id": "g2-u1-conv-004",
       "type": "conversation",
-      "japanese": "過去進行形複数。",
+      "japanese": "はい、彼らはサッカーをしていました。",
       "situation": "友達の様子",
       "dialogue": [
         {
@@ -986,7 +986,7 @@
     {
       "id": "g2-u1-conv-005",
       "type": "conversation",
-      "japanese": "過去進行形疑問。",
+      "japanese": "いいえ、彼女は寝ていませんでした。",
       "situation": "その時の天気",
       "dialogue": [
         {

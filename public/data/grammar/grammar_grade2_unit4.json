@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 4",
   "title": "不定詞",
   "grammar": "to + 動詞の原形、3用法",
@@ -2070,5 +2072,8 @@
       "explanation": "物 + cost + 人 + お金で「~にお金がかかる」という構文として覚えてください。a lotで「たくさん」の意味です。類似:It takes(形式主語), spend(人が主語)も時間・お金の構文を作ります。",
       "hint": "cost"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.079769"
 }

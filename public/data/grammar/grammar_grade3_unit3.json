@@ -1149,7 +1149,7 @@
     {
       "id": "g3-u3-omit-003",
       "type": "sentenceOrdering",
-      "japanese": "彼女が買った車（関係代名詞省略）。",
+      "japanese": "彼女が買った車。",
       "words": [
         "the",
         "car",
@@ -1215,7 +1215,7 @@
     {
       "id": "g3-u3-omit-007",
       "type": "sentenceOrdering",
-      "japanese": "私が作った料理（関係代名詞省略）。",
+      "japanese": "私が作った料理。",
       "words": [
         "the",
         "food",
@@ -1256,7 +1256,7 @@
     {
       "id": "g3-u3-omit-010",
       "type": "sentenceOrdering",
-      "japanese": "私が撮った写真（関係代名詞省略）。",
+      "japanese": "私が撮った写真。",
       "words": [
         "the",
         "picture",

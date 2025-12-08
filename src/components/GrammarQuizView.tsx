@@ -159,6 +159,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           const res = await fetch(`/data/grammar/grammar_grade${gradeNum}_unit${unitIdx}.json`);
           if (res.ok) {
             const data = await res.json();
+            
+            // enabledフラグをチェック (デフォルトはtrue)
+            if (data.enabled === false) {
+              continue; // 無効化されたユニットは一覧に表示しない
+            }
+            
             units.push({
               value: `g${gradeNum}-unit${unitIdx}`,
               label: `中${gradeNum}_${data.title}`
@@ -166,7 +172,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
           }
           // ファイルが存在しない場合は静かにスキップ
         } catch (_err) {
-          // ファイル読み込みエラーは無視（存在しないファイルは正常）
+          // ファイル読み込みエラーは無視(存在しないファイルは正常)
         }
       }
       
@@ -253,9 +259,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             const res = await fetch(`/data/grammar/grammar_grade${g}_unit${unitIdx}.json`);
             if (res.ok) {
               const data = await res.json();
+              
+              // enabledフラグをチェック (デフォルトはtrue)
+              if (data.enabled === false) {
+                logger.log(`grammar_grade${g}_unit${unitIdx}.json is disabled: ${data.disabledReason || 'No reason provided'}`);
+                continue; // 無効化されたユニットはスキップ
+              }
+              
               allGrammarFiles.push(data);
             } else {
-              // ファイルが見つからない場合（404など）はデバッグモードでのみログ出力
+              // ファイルが見つからない場合(404など)はデバッグモードでのみログ出力
               logger.log(`grammar_grade${g}_unit${unitIdx}.json returned status ${res.status}, skipping...`);
             }
           } catch (err) {
