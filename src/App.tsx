@@ -480,7 +480,7 @@ function App() {
             questions: allQuestions,
             createdAt: Date.now(),
             isBuiltIn: true,
-            source: 'high-school-entrance-words.csv + high-school-entrance-phrases.csv',
+            source: '高校受験2758語 + 高校受験標準1791語',
           };
           
           const advancedSet: QuestionSet = {
@@ -489,7 +489,7 @@ function App() {
             questions: allQuestions.filter(q => q.difficulty === 'advanced'),
             createdAt: Date.now(),
             isBuiltIn: true,
-            source: 'high-school-entrance-words.csv (advanced)',
+            source: 'high-school-entrance (単語2662 + 熟語96)',
           };
           
           const standardSet: QuestionSet = {
@@ -498,7 +498,7 @@ function App() {
             questions: allQuestions.filter(q => q.difficulty === 'intermediate' || q.difficulty === 'beginner'),
             createdAt: Date.now(),
             isBuiltIn: true,
-            source: 'high-school-entrance-words.csv (standard)',
+            source: 'high-school-intermediate (単語1579 + 熟語212)',
           };
           
           // カスタム問題セットを読み込み
