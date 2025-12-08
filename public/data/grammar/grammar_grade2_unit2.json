@@ -1,4 +1,6 @@
 {
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
   "unit": "Unit 2",
   "title": "未来表現",
   "grammar": "will/be going to",
@@ -986,5 +988,8 @@
       "explanation": "will/be going toの会話5です。",
       "hint": "会話"
     }
-  ]
+  ],
+  "enabled": false,
+  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "disabledDate": "2025-12-09T05:38:25.075983"
 }

@@ -745,7 +745,7 @@
     {
       "id": "g1-u4-vf-001",
       "type": "verbForm",
-      "japanese": "一般動詞の疑問文（What）。",
+      "japanese": "あなたは何が好きですか。",
       "sentence": "What ____ you like?",
       "verb": "do",
       "choices": [
@@ -761,7 +761,7 @@
     {
       "id": "g1-u4-vf-002",
       "type": "verbForm",
-      "japanese": "三人称の疑問文（Where）。",
+      "japanese": "彼女はどこに住んでいますか。",
       "sentence": "Where ____ she live?",
       "verb": "does",
       "choices": [
@@ -793,7 +793,7 @@
     {
       "id": "g1-u4-vf-004",
       "type": "verbForm",
-      "japanese": "複数の疑問文（What）。",
+      "japanese": "彼らは何を欲しがっていますか。",
       "sentence": "What ____ these?",
       "verb": "are",
       "choices": [
@@ -809,7 +809,7 @@
     {
       "id": "g1-u4-vf-005",
       "type": "verbForm",
-      "japanese": "三人称の疑問文（When）。",
+      "japanese": "彼はいつ起きますか。",
       "sentence": "When ____ he play soccer?",
       "verb": "does",
       "choices": [
@@ -825,7 +825,7 @@
     {
       "id": "g1-u4-vf-006",
       "type": "verbForm",
-      "japanese": "一般動詞の疑問文（How）。",
+      "japanese": "あなたはどうやって学校へ行きますか。",
       "sentence": "How ____ you go to school?",
       "verb": "do",
       "choices": [
@@ -841,7 +841,7 @@
     {
       "id": "g1-u4-vf-007",
       "type": "verbForm",
-      "japanese": "複数の疑問文（Where）。",
+      "japanese": "あなたの友達はどこ出身ですか。",
       "sentence": "Where ____ your friends from?",
       "verb": "are",
       "choices": [
@@ -857,7 +857,7 @@
     {
       "id": "g1-u4-vf-008",
       "type": "verbForm",
-      "japanese": "三人称の疑問文（What time）。",
+      "japanese": "彼女は何時に起きますか。",
       "sentence": "What time ____ she get up?",
       "verb": "does",
       "choices": [
@@ -873,7 +873,7 @@
     {
       "id": "g1-u4-vf-009",
       "type": "verbForm",
-      "japanese": "複数の疑問文（How many）。",
+      "japanese": "あなたは何冊の本を持っていますか。",
       "sentence": "How many ____ there in your family?",
       "verb": "are",
       "choices": [
@@ -889,7 +889,7 @@
     {
       "id": "g1-u4-vf-010",
       "type": "verbForm",
-      "japanese": "一般動詞の疑問文（Which）。",
+      "japanese": "あなたはどちらのスポーツが好きですか。",
       "sentence": "Which sport ____ you like?",
       "verb": "do",
       "choices": [

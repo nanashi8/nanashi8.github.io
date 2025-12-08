@@ -723,7 +723,7 @@
     {
       "id": "g1-u6-vf-001",
       "type": "verbForm",
-      "japanese": "-ing形の選択。",
+      "japanese": "私は本を読んでいます。",
       "sentence": "I am ____ a book.",
       "verb": "read",
       "choices": [
@@ -739,7 +739,7 @@
     {
       "id": "g1-u6-vf-002",
       "type": "verbForm",
-      "japanese": "-ing形の選択。",
+      "japanese": "彼女はテレビを見ています。",
       "sentence": "She is ____ TV.",
       "verb": "watch",
       "choices": [
@@ -755,7 +755,7 @@
     {
       "id": "g1-u6-vf-003",
       "type": "verbForm",
-      "japanese": "eを取る-ing。",
+      "japanese": "彼は手紙を書いています。",
       "sentence": "He is ____ a letter.",
       "verb": "write",
       "choices": [
@@ -771,7 +771,7 @@
     {
       "id": "g1-u6-vf-004",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing。",
+      "japanese": "彼らは走っています。",
       "sentence": "They are ____.",
       "verb": "run",
       "choices": [
@@ -787,7 +787,7 @@
     {
       "id": "g1-u6-vf-005",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing。",
+      "japanese": "私たちは泳いでいます。",
       "sentence": "We are ____.",
       "verb": "swim",
       "choices": [
@@ -803,7 +803,7 @@
     {
       "id": "g1-u6-vf-006",
       "type": "verbForm",
-      "japanese": "eを取る-ing。",
+      "japanese": "私は昨食を食べています。",
       "sentence": "I am ____ lunch.",
       "verb": "have",
       "choices": [
@@ -819,7 +819,7 @@
     {
       "id": "g1-u6-vf-007",
       "type": "verbForm",
-      "japanese": "ieをyに変える-ing。",
+      "japanese": "彼は横になっています。",
       "sentence": "He is ____ down.",
       "verb": "lie",
       "choices": [
@@ -835,7 +835,7 @@
     {
       "id": "g1-u6-vf-008",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing。",
+      "japanese": "彼女は店で買い物をしています。",
       "sentence": "She is ____ in the store.",
       "verb": "shop",
       "choices": [
@@ -851,7 +851,7 @@
     {
       "id": "g1-u6-vf-009",
       "type": "verbForm",
-      "japanese": "eを取る-ing。",
+      "japanese": "彼らはケーキを作っています。",
       "sentence": "They are ____ a cake.",
       "verb": "make",
       "choices": [
@@ -867,7 +867,7 @@
     {
       "id": "g1-u6-vf-010",
       "type": "verbForm",
-      "japanese": "子音を重ねる-ing。",
+      "japanese": "私たちはベンチに座っています。",
       "sentence": "We are ____ on the bench.",
       "verb": "sit",
       "choices": [

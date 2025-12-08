@@ -485,7 +485,7 @@
     {
       "id": "g1-u0-para-001",
       "type": "paraphrase",
-      "japanese": "You are a student.（疑問文に）。",
+      "japanese": "あなたは生徒ですか。",
       "originalSentence": "You are a student.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -549,7 +549,7 @@
     {
       "id": "g1-u0-para-005",
       "type": "paraphrase",
-      "japanese": "彼らは学生です（疑問文）。",
+      "japanese": "彼らは生徒ですか。",
       "originalSentence": "They are students.",
       "question": "疑問文に書き換えなさい",
       "choices": [
@@ -581,7 +581,7 @@
     {
       "id": "g1-u0-para-007",
       "type": "paraphrase",
-      "japanese": "彼女は親切です（否定疑問文）。",
+      "japanese": "彼女は親切ではないのですか。",
       "originalSentence": "She is kind.",
       "question": "否定疑問文「彼女は親切ではないのですか」に書き換えなさい",
       "choices": [
@@ -661,7 +661,7 @@
     {
       "id": "g1-u0-para-012",
       "type": "paraphrase",
-      "japanese": "彼は医者です（Yes/No疑問文とその答え）。",
+      "japanese": "彼は医者ですか。",
       "originalSentence": "He is a doctor.",
       "question": "疑問文とYesの答えを作りなさい（疑問文のみ選択）",
       "choices": [
@@ -677,7 +677,7 @@
     {
       "id": "g1-u0-para-013",
       "type": "paraphrase",
-      "japanese": "likeとbe interested inの言い換え。",
+      "japanese": "私は音楽に興味があります。",
       "originalSentence": "I like music.",
       "question": "be interested inを使って同じ意味に書き換えなさい",
       "choices": [
@@ -910,7 +910,7 @@
     {
       "id": "g1-u0-conv-002",
       "type": "conversation",
-      "japanese": "疑問文への応答。",
+      "japanese": "はい、私は学生です。",
       "situation": "相手の質問に答える場面",
       "dialogue": [
         {
