@@ -1,6 +1,5 @@
 {
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
+  "enabled": true,
   "unit": "Unit 5",
   "title": "動名詞",
   "grammar": "動詞-ing形の名詞的用法",
@@ -16,980 +15,677 @@
     {
       "id": "g2-u5-fib-001",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め1。",
-      "sentence": "Example sentence 1 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私は泳ぐことが好きです。",
+      "sentence": "I like ____.",
+      "choices": ["swimming", "swim", "to swim"],
+      "correctAnswer": "swimming",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の説明1です。",
-      "hint": "ヒント"
+      "explanation": "動名詞swimmingは「泳ぐこと」という意味の名詞として機能します。likeの目的語になります。",
+      "hint": "動詞-ing形で「~すること」"
     },
     {
       "id": "g2-u5-fib-002",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め2。",
-      "sentence": "Example sentence 2 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼女は歌うことが好きです。",
+      "sentence": "She enjoys ____.",
+      "choices": ["singing", "sing", "to sing"],
+      "correctAnswer": "singing",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の説明2です。",
-      "hint": "ヒント"
+      "explanation": "enjoyは動名詞を目的語に取る動詞です。「歌うこと」= singing",
+      "hint": "enjoyの後ろは-ing形"
     },
     {
       "id": "g2-u5-fib-003",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め3。",
-      "sentence": "Example sentence 3 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私は本を読むことが好きです。",
+      "sentence": "I enjoy ____ books.",
+      "choices": ["reading", "read", "to read"],
+      "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の説明3です。",
-      "hint": "ヒント"
+      "explanation": "reading booksで「本を読むこと」という動名詞句になります。",
+      "hint": "動名詞「~すること」"
     },
     {
       "id": "g2-u5-fib-004",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め4。",
-      "sentence": "Example sentence 4 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼は料理をすることが好きです。",
+      "sentence": "He likes ____.",
+      "choices": ["cooking", "cook", "to cook"],
+      "correctAnswer": "cooking",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の説明4です。",
-      "hint": "ヒント"
+      "explanation": "cookingは動名詞で「料理をすること」という意味です。",
+      "hint": "動詞-ing形で名詞化"
     },
     {
       "id": "g2-u5-fib-005",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め5。",
-      "sentence": "Example sentence 5 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私たちは踊ることが好きです。",
+      "sentence": "We enjoy ____.",
+      "choices": ["dancing", "dance", "to dance"],
+      "correctAnswer": "dancing",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の説明5です。",
-      "hint": "ヒント"
+      "explanation": "dancingは「踊ること」という意味の動名詞です。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
       "id": "g2-u5-fib-006",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め6。",
-      "sentence": "Example sentence 6 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の説明6です。",
-      "hint": "ヒント"
+      "japanese": "彼女は絵を描くことが好きです。",
+      "sentence": "She likes ____ pictures.",
+      "choices": ["drawing", "draw", "to draw"],
+      "correctAnswer": "drawing",
+      "difficulty": "beginner",
+      "explanation": "drawing picturesで「絵を描くこと」という動名詞句です。",
+      "hint": "動名詞「~すること」"
     },
     {
       "id": "g2-u5-fib-007",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め7。",
-      "sentence": "Example sentence 7 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の説明7です。",
-      "hint": "ヒント"
+      "japanese": "私は音楽を聴くことが好きです。",
+      "sentence": "I like ____ to music.",
+      "choices": ["listening", "listen", "to listen"],
+      "correctAnswer": "listening",
+      "difficulty": "beginner",
+      "explanation": "listening to musicで「音楽を聴くこと」です。",
+      "hint": "listen to ~「~を聴く」の-ing形"
     },
     {
       "id": "g2-u5-fib-008",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め8。",
-      "sentence": "Example sentence 8 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の説明8です。",
-      "hint": "ヒント"
+      "japanese": "彼は走ることが好きです。",
+      "sentence": "He enjoys ____.",
+      "choices": ["running", "run", "to run"],
+      "correctAnswer": "running",
+      "difficulty": "beginner",
+      "explanation": "runningは「走ること」という動名詞です。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-fib-009",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め9。",
-      "sentence": "Example sentence 9 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の説明9です。",
-      "hint": "ヒント"
+      "japanese": "私は写真を撮ることが好きです。",
+      "sentence": "I like ____ pictures.",
+      "choices": ["taking", "take", "to take"],
+      "correctAnswer": "taking",
+      "difficulty": "beginner",
+      "explanation": "taking picturesで「写真を撮ること」という動名詞句です。",
+      "hint": "動名詞「~すること」"
     },
     {
       "id": "g2-u5-fib-010",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め10。",
-      "sentence": "Example sentence 10 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の説明10です。",
-      "hint": "ヒント"
+      "japanese": "彼女は買い物をすることが好きです。",
+      "sentence": "She enjoys ____.",
+      "choices": ["shopping", "shop", "to shop"],
+      "correctAnswer": "shopping",
+      "difficulty": "beginner",
+      "explanation": "shoppingは「買い物をすること」という動名詞です。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
       "id": "g2-u5-fib-011",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め11。",
-      "sentence": "Example sentence 11 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の説明11です。",
-      "hint": "ヒント"
+      "japanese": "私は英語を勉強することが好きです。",
+      "sentence": "I like ____ English.",
+      "choices": ["studying", "study", "to study"],
+      "correctAnswer": "studying",
+      "difficulty": "beginner",
+      "explanation": "studying Englishで「英語を勉強すること」です。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-fib-012",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め12。",
-      "sentence": "Example sentence 12 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の説明12です。",
-      "hint": "ヒント"
+      "japanese": "彼はテレビを見ることが好きです。",
+      "sentence": "He enjoys ____ TV.",
+      "choices": ["watching", "watch", "to watch"],
+      "correctAnswer": "watching",
+      "difficulty": "beginner",
+      "explanation": "watching TVで「テレビを見ること」という動名詞句です。",
+      "hint": "動名詞「~すること」"
     },
     {
       "id": "g2-u5-fib-013",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め13。",
-      "sentence": "Example sentence 13 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の説明13です。",
-      "hint": "ヒント"
+      "japanese": "私はサッカーをすることが好きです。",
+      "sentence": "I like ____ soccer.",
+      "choices": ["playing", "play", "to play"],
+      "correctAnswer": "playing",
+      "difficulty": "beginner",
+      "explanation": "playing soccerで「サッカーをすること」です。",
+      "hint": "play soccerの-ing形"
     },
     {
       "id": "g2-u5-fib-014",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め14。",
-      "sentence": "Example sentence 14 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の説明14です。",
-      "hint": "ヒント"
+      "japanese": "彼女は旅行することが好きです。",
+      "sentence": "She enjoys ____.",
+      "choices": ["traveling", "travel", "to travel"],
+      "correctAnswer": "traveling",
+      "difficulty": "beginner",
+      "explanation": "travelingは「旅行すること」という動名詞です。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-fib-015",
       "type": "fillInBlank",
-      "japanese": "動名詞穴埋め15。",
-      "sentence": "Example sentence 15 with ____ blank.",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の説明15です。",
-      "hint": "ヒント"
+      "japanese": "私はギターを弾くことが好きです。",
+      "sentence": "I like ____ the guitar.",
+      "choices": ["playing", "play", "to play"],
+      "correctAnswer": "playing",
+      "difficulty": "beginner",
+      "explanation": "playing the guitarで「ギターを弾くこと」という動名詞句です。",
+      "hint": "動名詞「~すること」"
     },
     {
       "id": "g2-u5-so-001",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え1。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "泳ぐことは楽しいです。",
+      "words": ["Swimming", "is", "fun", "."],
+      "correctOrder": ["Swimming", "is", "fun", "."],
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の文1です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "動名詞Swimmingが文の主語になっています。「泳ぐこと」= Swimming",
+      "hint": "動名詞を主語に"
     },
     {
       "id": "g2-u5-so-002",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え2。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "本を読むことは重要です。",
+      "words": ["Reading", "books", "is", "important", "."],
+      "correctOrder": ["Reading", "books", "is", "important", "."],
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の文2です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "動名詞句Reading booksが主語です。",
+      "hint": "Reading books is ~"
     },
     {
       "id": "g2-u5-so-003",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え3。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "私は歌うことが好きです。",
+      "words": ["I", "like", "singing", "."],
+      "correctOrder": ["I", "like", "singing", "."],
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の文3です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "動名詞singingが目的語になっています。",
+      "hint": "I like ~ing"
     },
     {
       "id": "g2-u5-so-004",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え4。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "彼女は料理をすることが好きです。",
+      "words": ["She", "enjoys", "cooking", "."],
+      "correctOrder": ["She", "enjoys", "cooking", "."],
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の文4です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "enjoyは動名詞cookingを目的語に取ります。",
+      "hint": "She enjoys ~ing"
     },
     {
       "id": "g2-u5-so-005",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え5。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
+      "japanese": "私は音楽を聴くことが好きです。",
+      "words": ["I", "enjoy", "listening", "to", "music", "."],
+      "correctOrder": ["I", "enjoy", "listening", "to", "music", "."],
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の文5です。",
-      "hint": "順序",
-      "wordCount": 3
+      "explanation": "listening to musicで「音楽を聴くこと」という動名詞句です。",
+      "hint": "enjoy + 動名詞"
     },
     {
       "id": "g2-u5-so-006",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え6。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の文6です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼は走ることが好きです。",
+      "words": ["He", "likes", "running", "."],
+      "correctOrder": ["He", "likes", "running", "."],
+      "difficulty": "beginner",
+      "explanation": "動名詞runningが目的語です。",
+      "hint": "He likes ~ing"
     },
     {
       "id": "g2-u5-so-007",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え7。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の文7です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "踊ることは楽しいです。",
+      "words": ["Dancing", "is", "fun", "."],
+      "correctOrder": ["Dancing", "is", "fun", "."],
+      "difficulty": "beginner",
+      "explanation": "動名詞Dancingが主語になっています。",
+      "hint": "Dancing is ~"
     },
     {
       "id": "g2-u5-so-008",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え8。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の文8です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私は絵を描くことが好きです。",
+      "words": ["I", "like", "drawing", "pictures", "."],
+      "correctOrder": ["I", "like", "drawing", "pictures", "."],
+      "difficulty": "beginner",
+      "explanation": "drawing picturesで「絵を描くこと」という動名詞句です。",
+      "hint": "I like ~ing"
     },
     {
       "id": "g2-u5-so-009",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え9。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の文9です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼女は買い物をすることが好きです。",
+      "words": ["She", "enjoys", "shopping", "."],
+      "correctOrder": ["She", "enjoys", "shopping", "."],
+      "difficulty": "beginner",
+      "explanation": "動名詞shoppingがenjoyの目的語です。",
+      "hint": "She enjoys ~ing"
     },
     {
       "id": "g2-u5-so-010",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え10。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の文10です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私は英語を勉強することが好きです。",
+      "words": ["I", "like", "studying", "English", "."],
+      "correctOrder": ["I", "like", "studying", "English", "."],
+      "difficulty": "beginner",
+      "explanation": "studying Englishで「英語を勉強すること」です。",
+      "hint": "I like ~ing"
     },
     {
       "id": "g2-u5-so-011",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え11。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の文11です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼はテレビを見ることが好きです。",
+      "words": ["He", "enjoys", "watching", "TV", "."],
+      "correctOrder": ["He", "enjoys", "watching", "TV", "."],
+      "difficulty": "beginner",
+      "explanation": "watching TVで「テレビを見ること」という動名詞句です。",
+      "hint": "He enjoys ~ing"
     },
     {
       "id": "g2-u5-so-012",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え12。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の文12です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "写真を撮ることは楽しいです。",
+      "words": ["Taking", "pictures", "is", "fun", "."],
+      "correctOrder": ["Taking", "pictures", "is", "fun", "."],
+      "difficulty": "beginner",
+      "explanation": "動名詞句Taking picturesが主語です。",
+      "hint": "Taking pictures is ~"
     },
     {
       "id": "g2-u5-so-013",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え13。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の文13です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "私はサッカーをすることが好きです。",
+      "words": ["I", "like", "playing", "soccer", "."],
+      "correctOrder": ["I", "like", "playing", "soccer", "."],
+      "difficulty": "beginner",
+      "explanation": "playing soccerで「サッカーをすること」です。",
+      "hint": "I like ~ing"
     },
     {
       "id": "g2-u5-so-014",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え14。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の文14です。",
-      "hint": "順序",
-      "wordCount": 3
+      "japanese": "彼女は旅行することが好きです。",
+      "words": ["She", "enjoys", "traveling", "."],
+      "correctOrder": ["She", "enjoys", "traveling", "."],
+      "difficulty": "beginner",
+      "explanation": "動名詞travelingがenjoyの目的語です。",
+      "hint": "She enjoys ~ing"
     },
     {
       "id": "g2-u5-so-015",
       "type": "sentenceOrdering",
-      "japanese": "動名詞並べ替え15。",
-      "words": [
-        "word1",
-        "word2",
-        "word3"
-      ],
-      "correctAnswer": "Word1 word2 word3.",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の文15です。",
-      "hint": "順序",
-      "wordCount": 3
-    },
-    {
-      "id": "g2-u5-para-001",
-      "type": "paraphrase",
-      "japanese": "動名詞言い換え1。",
-      "originalSentence": "Original sentence 1.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "ギターを弾くことは楽しいです。",
+      "words": ["Playing", "the", "guitar", "is", "fun", "."],
+      "correctOrder": ["Playing", "the", "guitar", "is", "fun", "."],
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の変換1です。",
-      "hint": "変換"
+      "explanation": "動名詞句Playing the guitarが主語になっています。",
+      "hint": "Playing the guitar is ~"
     },
     {
-      "id": "g2-u5-para-002",
+      "id": "g2-u5-pp-001",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え2。",
-      "originalSentence": "Original sentence 2.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私は泳ぐことが好きです。",
+      "sentence": "I like to swim.",
+      "targetSentence": "I like ____.",
+      "choices": ["swimming", "swim", "swims"],
+      "correctAnswer": "swimming",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の変換2です。",
-      "hint": "変換"
+      "explanation": "不定詞to swimを動名詞swimmingで言い換えます。どちらも「泳ぐこと」という意味です。",
+      "hint": "動名詞で言い換え"
     },
     {
-      "id": "g2-u5-para-003",
+      "id": "g2-u5-pp-002",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え3。",
-      "originalSentence": "Original sentence 3.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼女は歌うことが好きです。",
+      "sentence": "She enjoys to sing.",
+      "targetSentence": "She enjoys ____.",
+      "choices": ["singing", "sing", "sings"],
+      "correctAnswer": "singing",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の変換3です。",
-      "hint": "変換"
+      "explanation": "enjoyの後ろは動名詞を取るのが正しいです。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
-      "id": "g2-u5-para-004",
+      "id": "g2-u5-pp-003",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え4。",
-      "originalSentence": "Original sentence 4.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "私は本を読むことが好きです。",
+      "sentence": "I like to read books.",
+      "targetSentence": "I enjoy ____ books.",
+      "choices": ["reading", "read", "to read"],
+      "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の変換4です。",
-      "hint": "変換"
+      "explanation": "不定詞to readを動名詞readingで言い換えます。",
+      "hint": "enjoyは動名詞を取る"
     },
     {
-      "id": "g2-u5-para-005",
+      "id": "g2-u5-pp-004",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え5。",
-      "originalSentence": "Original sentence 5.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "japanese": "彼は料理をすることが好きです。",
+      "sentence": "He likes to cook.",
+      "targetSentence": "He likes ____.",
+      "choices": ["cooking", "cook", "cooks"],
+      "correctAnswer": "cooking",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の変換5です。",
-      "hint": "変換"
+      "explanation": "to cookを動名詞cookingで言い換えます。",
+      "hint": "動名詞-ing形"
     },
     {
-      "id": "g2-u5-para-006",
+      "id": "g2-u5-pp-005",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え6。",
-      "originalSentence": "Original sentence 6.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の変換6です。",
-      "hint": "変換"
+      "japanese": "私たちは踊ることが好きです。",
+      "sentence": "We like to dance.",
+      "targetSentence": "We enjoy ____.",
+      "choices": ["dancing", "dance", "to dance"],
+      "correctAnswer": "dancing",
+      "difficulty": "beginner",
+      "explanation": "不定詞to danceを動名詞dancingで言い換えます。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
-      "id": "g2-u5-para-007",
+      "id": "g2-u5-pp-006",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え7。",
-      "originalSentence": "Original sentence 7.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の変換7です。",
-      "hint": "変換"
+      "japanese": "彼女は絵を描くことが好きです。",
+      "sentence": "She likes to draw pictures.",
+      "targetSentence": "She likes ____ pictures.",
+      "choices": ["drawing", "draw", "draws"],
+      "correctAnswer": "drawing",
+      "difficulty": "beginner",
+      "explanation": "to draw picturesを動名詞drawing picturesで言い換えます。",
+      "hint": "動名詞で言い換え"
     },
     {
-      "id": "g2-u5-para-008",
+      "id": "g2-u5-pp-007",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え8。",
-      "originalSentence": "Original sentence 8.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の変換8です。",
-      "hint": "変換"
+      "japanese": "私は音楽を聴くことが好きです。",
+      "sentence": "I like to listen to music.",
+      "targetSentence": "I like ____ to music.",
+      "choices": ["listening", "listen", "listens"],
+      "correctAnswer": "listening",
+      "difficulty": "beginner",
+      "explanation": "to listen to musicを動名詞listening to musicで言い換えます。",
+      "hint": "動名詞-ing形"
     },
     {
-      "id": "g2-u5-para-009",
+      "id": "g2-u5-pp-008",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え9。",
-      "originalSentence": "Original sentence 9.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の変換9です。",
-      "hint": "変換"
+      "japanese": "彼は走ることが好きです。",
+      "sentence": "He likes to run.",
+      "targetSentence": "He enjoys ____.",
+      "choices": ["running", "run", "to run"],
+      "correctAnswer": "running",
+      "difficulty": "beginner",
+      "explanation": "to runを動名詞runningで言い換えます。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
-      "id": "g2-u5-para-010",
+      "id": "g2-u5-pp-009",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え10。",
-      "originalSentence": "Original sentence 10.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の変換10です。",
-      "hint": "変換"
+      "japanese": "私は写真を撮ることが好きです。",
+      "sentence": "I like to take pictures.",
+      "targetSentence": "I like ____ pictures.",
+      "choices": ["taking", "take", "takes"],
+      "correctAnswer": "taking",
+      "difficulty": "beginner",
+      "explanation": "to take picturesを動名詞taking picturesで言い換えます。",
+      "hint": "動名詞で言い換え"
     },
     {
-      "id": "g2-u5-para-011",
+      "id": "g2-u5-pp-010",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え11。",
-      "originalSentence": "Original sentence 11.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の変換11です。",
-      "hint": "変換"
+      "japanese": "彼女は買い物をすることが好きです。",
+      "sentence": "She likes to shop.",
+      "targetSentence": "She enjoys ____.",
+      "choices": ["shopping", "shop", "to shop"],
+      "correctAnswer": "shopping",
+      "difficulty": "beginner",
+      "explanation": "to shopを動名詞shoppingで言い換えます。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
-      "id": "g2-u5-para-012",
+      "id": "g2-u5-pp-011",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え12。",
-      "originalSentence": "Original sentence 12.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の変換12です。",
-      "hint": "変換"
+      "japanese": "私は英語を勉強することが好きです。",
+      "sentence": "I like to study English.",
+      "targetSentence": "I like ____ English.",
+      "choices": ["studying", "study", "studies"],
+      "correctAnswer": "studying",
+      "difficulty": "beginner",
+      "explanation": "to study Englishを動名詞studying Englishで言い換えます。",
+      "hint": "動名詞-ing形"
     },
     {
-      "id": "g2-u5-para-013",
+      "id": "g2-u5-pp-012",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え13。",
-      "originalSentence": "Original sentence 13.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の変換13です。",
-      "hint": "変換"
+      "japanese": "彼はテレビを見ることが好きです。",
+      "sentence": "He likes to watch TV.",
+      "targetSentence": "He enjoys ____ TV.",
+      "choices": ["watching", "watch", "to watch"],
+      "correctAnswer": "watching",
+      "difficulty": "beginner",
+      "explanation": "to watch TVを動名詞watching TVで言い換えます。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
-      "id": "g2-u5-para-014",
+      "id": "g2-u5-pp-013",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え14。",
-      "originalSentence": "Original sentence 14.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の変換14です。",
-      "hint": "変換"
+      "japanese": "私はサッカーをすることが好きです。",
+      "sentence": "I like to play soccer.",
+      "targetSentence": "I like ____ soccer.",
+      "choices": ["playing", "play", "plays"],
+      "correctAnswer": "playing",
+      "difficulty": "beginner",
+      "explanation": "to play soccerを動名詞playing soccerで言い換えます。",
+      "hint": "動名詞で言い換え"
     },
     {
-      "id": "g2-u5-para-015",
+      "id": "g2-u5-pp-014",
       "type": "paraphrase",
-      "japanese": "動名詞言い換え15。",
-      "originalSentence": "Original sentence 15.",
-      "question": "書き換えなさい",
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の変換15です。",
-      "hint": "変換"
+      "japanese": "彼女は旅行することが好きです。",
+      "sentence": "She likes to travel.",
+      "targetSentence": "She enjoys ____.",
+      "choices": ["traveling", "travel", "to travel"],
+      "correctAnswer": "traveling",
+      "difficulty": "beginner",
+      "explanation": "to travelを動名詞travelingで言い換えます。",
+      "hint": "enjoyの後ろは-ing"
+    },
+    {
+      "id": "g2-u5-pp-015",
+      "type": "paraphrase",
+      "japanese": "私はギターを弾くことが好きです。",
+      "sentence": "I like to play the guitar.",
+      "targetSentence": "I like ____ the guitar.",
+      "choices": ["playing", "play", "plays"],
+      "correctAnswer": "playing",
+      "difficulty": "beginner",
+      "explanation": "to play the guitarを動名詞playing the guitarで言い換えます。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-vf-001",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化1。",
-      "sentence": "Sentence 1 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "泳ぐことは楽しいです。",
+      "sentence": "____ is fun.",
+      "choices": ["Swimming", "Swim", "To swim"],
+      "correctAnswer": "Swimming",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の動詞1です。",
-      "hint": "動詞"
+      "explanation": "動名詞Swimmingが主語になります。動詞の原形Swimは主語になれません。",
+      "hint": "主語には動名詞"
     },
     {
       "id": "g2-u5-vf-002",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化2。",
-      "sentence": "Sentence 2 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "本を読むことは重要です。",
+      "sentence": "____ books is important.",
+      "choices": ["Reading", "Read", "To read"],
+      "correctAnswer": "Reading",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の動詞2です。",
-      "hint": "動詞"
+      "explanation": "動名詞Reading booksが主語です。",
+      "hint": "動名詞を主語に"
     },
     {
       "id": "g2-u5-vf-003",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化3。",
-      "sentence": "Sentence 3 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "彼女は料理をすることが好きです。",
+      "sentence": "She enjoys ____.",
+      "choices": ["cooking", "cook", "to cook"],
+      "correctAnswer": "cooking",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の動詞3です。",
-      "hint": "動詞"
+      "explanation": "enjoyは動名詞cookingを目的語に取ります。不定詞は取りません。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
       "id": "g2-u5-vf-004",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化4。",
-      "sentence": "Sentence 4 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
+      "japanese": "私は音楽を聴くことが好きです。",
+      "sentence": "I enjoy ____ to music.",
+      "choices": ["listening", "listen", "to listen"],
+      "correctAnswer": "listening",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の動詞4です。",
-      "hint": "動詞"
+      "explanation": "enjoyの後ろは動名詞listeningです。",
+      "hint": "enjoyは動名詞を取る"
     },
     {
       "id": "g2-u5-vf-005",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化5。",
-      "sentence": "Sentence 5 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の動詞5です。",
-      "hint": "動詞"
+      "japanese": "彼は走ることが好きです。",
+      "sentence": "He likes ____.",
+      "choices": ["running", "run", "runs"],
+      "correctAnswer": "running",
+      "difficulty": "beginner",
+      "explanation": "動名詞runningが目的語です。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-vf-006",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化6。",
-      "sentence": "Sentence 6 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の動詞6です。",
-      "hint": "動詞"
+      "japanese": "踊ることは楽しいです。",
+      "sentence": "____ is fun.",
+      "choices": ["Dancing", "Dance", "To dance"],
+      "correctAnswer": "Dancing",
+      "difficulty": "beginner",
+      "explanation": "動名詞Dancingが主語になります。",
+      "hint": "主語には動名詞"
     },
     {
       "id": "g2-u5-vf-007",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化7。",
-      "sentence": "Sentence 7 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の動詞7です。",
-      "hint": "動詞"
+      "japanese": "私は絵を描くことが好きです。",
+      "sentence": "I like ____ pictures.",
+      "choices": ["drawing", "draw", "to draw"],
+      "correctAnswer": "drawing",
+      "difficulty": "beginner",
+      "explanation": "動名詞drawing picturesが目的語です。",
+      "hint": "動名詞で「~すること」"
     },
     {
       "id": "g2-u5-vf-008",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化8。",
-      "sentence": "Sentence 8 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の動詞8です。",
-      "hint": "動詞"
+      "japanese": "彼女は買い物をすることが好きです。",
+      "sentence": "She enjoys ____.",
+      "choices": ["shopping", "shop", "to shop"],
+      "correctAnswer": "shopping",
+      "difficulty": "beginner",
+      "explanation": "enjoyの後ろは動名詞shoppingです。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
       "id": "g2-u5-vf-009",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化9。",
-      "sentence": "Sentence 9 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の動詞9です。",
-      "hint": "動詞"
+      "japanese": "写真を撮ることは楽しいです。",
+      "sentence": "____ pictures is fun.",
+      "choices": ["Taking", "Take", "To take"],
+      "correctAnswer": "Taking",
+      "difficulty": "beginner",
+      "explanation": "動名詞Taking picturesが主語です。",
+      "hint": "主語には動名詞"
     },
     {
       "id": "g2-u5-vf-010",
       "type": "verbForm",
-      "japanese": "動名詞動詞変化10。",
-      "sentence": "Sentence 10 with ____.",
-      "verb": "verb",
-      "choices": [
-        "form1",
-        "form2",
-        "form3"
-      ],
-      "correctAnswer": "form1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の動詞10です。",
-      "hint": "動詞"
+      "japanese": "私はサッカーをすることが好きです。",
+      "sentence": "I like ____ soccer.",
+      "choices": ["playing", "play", "to play"],
+      "correctAnswer": "playing",
+      "difficulty": "beginner",
+      "explanation": "動名詞playing soccerが目的語です。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-conv-001",
       "type": "conversation",
-      "japanese": "動名詞会話1。",
-      "situation": "状況1",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 1?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 趣味は何ですか? B: 泳ぐことが好きです。",
+      "conversation": [
+        "A: What is your hobby?",
+        "B: I like ____."
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["swimming", "swim", "to swim"],
+      "correctAnswer": "swimming",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の会話1です。",
-      "hint": "会話"
+      "explanation": "動名詞swimmingで「泳ぐこと」を表します。",
+      "hint": "動名詞「~すること」"
     },
     {
       "id": "g2-u5-conv-002",
       "type": "conversation",
-      "japanese": "動名詞会話2。",
-      "situation": "状況2",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 2?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 何をするのが好きですか? B: 本を読むことが好きです。",
+      "conversation": [
+        "A: What do you like doing?",
+        "B: I enjoy ____ books."
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
+      "choices": ["reading", "read", "to read"],
+      "correctAnswer": "reading",
       "difficulty": "beginner",
-      "explanation": "動詞-ing、主語・目的語の会話2です。",
-      "hint": "会話"
+      "explanation": "enjoyの後ろは動名詞readingです。",
+      "hint": "enjoyの後ろは-ing"
     },
     {
       "id": "g2-u5-conv-003",
       "type": "conversation",
-      "japanese": "動名詞会話3。",
-      "situation": "状況3",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 3?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 彼女は何が好きですか? B: 彼女は料理をすることが好きです。",
+      "conversation": [
+        "A: What does she like?",
+        "B: She likes ____."
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の会話3です。",
-      "hint": "会話"
+      "choices": ["cooking", "cook", "to cook"],
+      "correctAnswer": "cooking",
+      "difficulty": "beginner",
+      "explanation": "動名詞cookingで「料理をすること」です。",
+      "hint": "動名詞-ing形"
     },
     {
       "id": "g2-u5-conv-004",
       "type": "conversation",
-      "japanese": "動名詞会話4。",
-      "situation": "状況4",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 4?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 自由時間には何をしますか? B: 音楽を聴くことが好きです。",
+      "conversation": [
+        "A: What do you do in your free time?",
+        "B: I enjoy ____ to music."
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "intermediate",
-      "explanation": "動詞-ing、主語・目的語の会話4です。",
-      "hint": "会話"
+      "choices": ["listening", "listen", "to listen"],
+      "correctAnswer": "listening",
+      "difficulty": "beginner",
+      "explanation": "enjoyの後ろは動名詞listeningです。",
+      "hint": "enjoyは動名詞を取る"
     },
     {
       "id": "g2-u5-conv-005",
       "type": "conversation",
-      "japanese": "動名詞会話5。",
-      "situation": "状況5",
-      "dialogue": [
-        {
-          "speaker": "A",
-          "text": "Question 5?"
-        },
-        {
-          "speaker": "B",
-          "text": "Answer ____."
-        }
+      "japanese": "A: 彼は何をするのが好きですか? B: 彼は走ることが好きです。",
+      "conversation": [
+        "A: What does he like doing?",
+        "B: He likes ____."
       ],
-      "choices": [
-        "choice1",
-        "choice2",
-        "choice3"
-      ],
-      "correctAnswer": "choice1",
-      "difficulty": "advanced",
-      "explanation": "動詞-ing、主語・目的語の会話5です。",
-      "hint": "会話"
+      "choices": ["running", "run", "to run"],
+      "correctAnswer": "running",
+      "difficulty": "beginner",
+      "explanation": "動名詞runningで「走ること」を表します。",
+      "hint": "動名詞-ing形"
     }
-  ],
-  "enabled": false,
-  "disabledReason": "Contains placeholder/template data - requires proper Japanese translations and English sentences",
-  "disabledDate": "2025-12-09T05:38:25.082350"
+  ]
 }
