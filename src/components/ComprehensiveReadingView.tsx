@@ -1575,6 +1575,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           color: #333;
           margin-bottom: 30px;
           font-size: 24px;
+          font-family: 'Times New Roman', Georgia, serif;
         }
 
         .dark-mode .passage-title {
@@ -1583,7 +1584,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
         .passage-body {
           line-height: 1.5;
-          font-family: 'Times New Roman', 'Noto Serif JP', 'Yu Mincho', '游明朝', YuMincho, serif;
+          font-family: 'Times New Roman', Georgia, serif;
           color: #333;
         }
 
@@ -1687,6 +1688,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           font-weight: 500;
           color: #333;
           text-align: center;
+          font-family: 'Times New Roman', Georgia, serif;
         }
 
         .dark-mode .word-card-word {
@@ -1696,6 +1698,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         .phrase-card .word-card-word {
           font-size: 15px;
           color: #2e7d32;
+          font-family: 'Times New Roman', Georgia, serif;
         }
 
         .dark-mode .phrase-card .word-card-word {
@@ -1725,6 +1728,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           cursor: pointer;
           border-radius: 3px;
           transition: all 0.2s;
+          font-family: 'Times New Roman', Georgia, serif;
         }
 
         .word-segment:hover {
