@@ -867,7 +867,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {passage.level}_{passage.actualWordCount}_{passage.title}
+                  {_getLevelLabel(passage.level || 'beginner')}_{passage.actualWordCount}語_{passage.title}
                 </option>
               ))}
             </select>
@@ -971,7 +971,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {passage.level}_{passage.actualWordCount}_{passage.title}
+                  {_getLevelLabel(passage.level || 'beginner')}_{passage.actualWordCount}語_{passage.title}
                 </option>
               ))}
             </select>
@@ -1260,22 +1260,36 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     );
                   } else {
                     // 通常の長文形式: フレーズから文章を構築
+                    // 最初のフレーズが見出しかチェック（句読点で終わらない短いフレーズ）
+                    const firstPhrase = currentPassage.phrases[0];
+                    const firstPhraseText = firstPhrase.segments.map(s => s.word).join(' ').trim();
+                    const isFirstPhraseTitle = firstPhraseText.length < 100 && !/[.!?]$/.test(firstPhraseText);
+                    
                     let fullText = '';
                     let lastWasPeriod = true;
                     
-                    currentPassage.phrases.forEach((phrase) => {
+                    currentPassage.phrases.forEach((phrase, phraseIdx) => {
+                      // 見出しの場合はスキップ（後で独立して表示）
+                      if (phraseIdx === 0 && isFirstPhraseTitle) {
+                        return;
+                      }
+                      
                       phrase.segments.forEach((seg) => {
                         let word = seg.word.trim();
                         if (word && word !== '-') {
                           if (/^[.,!?;:]$/.test(word)) {
                             fullText += word;
                             lastWasPeriod = /^[.!?]$/.test(word);
+                          } else if (word === '"' || word === "'") {
+                            // 引用符はスペースなしで追加
+                            fullText += word;
                           } else {
                             if (lastWasPeriod && word.length > 0) {
                               word = word.charAt(0).toUpperCase() + word.slice(1);
                               lastWasPeriod = false;
                             }
-                            if (fullText.length > 0 && !fullText.endsWith(' ')) {
+                            // 引用符の後ろにはスペースを入れない
+                            if (fullText.length > 0 && !fullText.endsWith(' ') && !fullText.endsWith('"') && !fullText.endsWith("'")) {
                               fullText += ' ';
                             }
                             fullText += word;
@@ -1283,6 +1297,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                         }
                       });
                     });
+
+                    // 引用符の前のスペースを削除
+                    fullText = fullText.replace(/\s+"/g, '"').replace(/\s+'/g, "'");
 
                     // 文を分割
                     const sentences = fullText.split(/([.!?])\s+/).filter(s => s.trim());
@@ -1330,11 +1347,26 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             </div>
           )}
 
-          {/* 全訳タブ: 日本語訳のみを段落形式で表示 */}
+          {/* 全訳タブ: 全訳ファイルの内容を表示 */}
           {readingSubTab === 'fullTranslation' && (
             <div className="full-translation-display">
               <div className="full-translation-content">
                 {(() => {
+                  // デバッグログ
+                  console.log('[全訳タブ] currentPassage.id:', currentPassage.id);
+                  console.log('[全訳タブ] currentPassage.translation exists:', !!currentPassage.translation);
+                  console.log('[全訳タブ] currentPassage.translation length:', currentPassage.translation?.length || 0);
+                  
+                  if (currentPassage.translation) {
+                    // 全訳ファイルが存在する場合、そのまま表示
+                    return (
+                      <div className="full-translation-text">
+                        {currentPassage.translation}
+                      </div>
+                    );
+                  }
+                  
+                  // 全訳ファイルがない場合はフレーズ訳を繋げる（フォールバック）
                   // パッセージのタイトルで判別: "Conversation"を含む場合は会話形式として処理
                   const isConversation = currentPassage.title.toLowerCase().includes('conversation');
                   
@@ -1976,6 +2008,11 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           font-size: 1.05em;
           line-height: 2;
           color: #333;
+        }
+
+        .full-translation-text {
+          white-space: pre-wrap;
+          line-height: 2;
         }
 
         .full-translation-content .paragraph-ja {
