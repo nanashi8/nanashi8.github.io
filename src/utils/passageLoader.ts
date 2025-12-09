@@ -116,12 +116,8 @@ export async function loadPassage(passageId: string): Promise<LoadedPassage | nu
     const content = await response.text();
     const sections = parsePassageContent(content);
     
-    // ファイルの1行目を実際のタイトルとして使用
-    const actualTitle = content.split('\n')[0]?.trim() || metadata.title;
-    
     return {
       ...metadata,
-      title: actualTitle,
       content,
       sections,
     };
