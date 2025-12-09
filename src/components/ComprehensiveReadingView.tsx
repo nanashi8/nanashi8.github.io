@@ -1017,7 +1017,9 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       {/* パッセージ本文 */}
       {readingStarted && currentPassage && currentPassage.phrases && currentPassage.phrases.length > 0 && (
         <div className="passage-content">
-          <h3 className="passage-title">{currentPassage.title}</h3>
+          <h3 className="passage-title">
+            {currentPassage.level}_{currentPassage.actualWordCount}_{currentPassage.title}
+          </h3>
           
           {/* 読解タブ: フレーズ単位で表示 */}
           {readingSubTab === 'reading' && (
