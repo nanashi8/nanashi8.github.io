@@ -27,7 +27,7 @@ export interface PassageSection {
 /**
  * ファイルパスからタイトルを抽出
  * 例: /data/passages-for-phrase-work/beginner_1200_Shopping-at-the-Supermarket.txt
- *     → "Shopping at the Supermarket"
+ *     → "Shopping-at-the-Supermarket"
  */
 function extractTitleFromPath(filePath: string): string {
   const fileName = filePath.split('/').pop() || '';
@@ -37,8 +37,8 @@ function extractTitleFromPath(filePath: string): string {
   if (parts.length >= 3) {
     // 難易度_語数_タイトル の形式
     const titlePart = parts.slice(2).join('_');
-    // ハイフンをスペースに変換
-    return titlePart.replace(/-/g, ' ');
+    // ファイル名と完全一致させるためハイフンはそのまま維持
+    return titlePart;
   }
   
   return fileName;
