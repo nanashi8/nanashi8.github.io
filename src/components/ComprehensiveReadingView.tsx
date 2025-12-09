@@ -4,7 +4,6 @@ import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 import { logger } from '../logger';
-import ScoreBoard from './ScoreBoard';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -852,15 +851,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
 
   return (
     <div className="comprehensive-reading-view">
-
-      {/* ScoreBoard - 読解開始後に表示 */}
-      {readingStarted && currentPassage && (
-        <ScoreBoard
-          mode="reading"
-          onShowSettings={() => setShowSettings(true)}
-          currentWord={currentPassage.title}
-        />
-      )}
 
       {!readingStarted && (
         <div className="quiz-controls">
