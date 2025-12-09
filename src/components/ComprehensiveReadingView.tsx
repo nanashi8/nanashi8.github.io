@@ -481,28 +481,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     }
   }, [passages]);
 
-  // 学習設定に戻る
-  // 読解開始
-  const handleStartReading = () => {
-    if (!selectedPassageId) {
-      alert('パッセージを選択してください');
-      return;
-    }
-    
-    // デバッグ: パッセージデータを確認
-    const passage = passages.find(p => p.id === selectedPassageId);
-    logger.log('Selected passage:', passage);
-    logger.log('Phrases count:', passage?.phrases?.length);
-    
-    if (!passage || !passage.phrases || passage.phrases.length === 0) {
-      alert('パッセージデータが正しく読み込まれていません。ページを再読み込みしてください。');
-      return;
-    }
-    
-    setReadingStarted(true);
-    setCurrentPhraseIndex(0); // 最初のフレーズから開始
-  };
-
   // フレーズナビゲーション
   const handlePreviousPhrase = () => {
     setCurrentPhraseIndex(prev => Math.max(0, prev - 1));
@@ -852,18 +830,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   return (
     <div className="comprehensive-reading-view">
 
-      {!readingStarted && (
-        <div className="quiz-controls">
-          <button 
-            onClick={handleStartReading}
-            className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={!selectedPassageId}
-          >
-            📖 読解開始
-          </button>
-        </div>
-      )}
-
       {/* 学習設定パネル - 読解開始前のみ表示 */}
       {!readingStarted && showSettings && (
         <div className="study-settings-panel">
@@ -1010,20 +976,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                 </option>
               ))}
             </select>
-          </div>
-
-          <div className="filter-group">
-            <button
-              className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 w-full"
-              onClick={() => {
-                setReadingStarted(false);
-                setCurrentPhraseIndex(0);
-                setReadingSubTab('reading');
-                setShowSettings(false);
-              }}
-            >
-              ◀️ パッセージ選択に戻る
-            </button>
           </div>
         </div>
       )}
