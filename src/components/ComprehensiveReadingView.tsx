@@ -22,7 +22,7 @@ interface WordPopup {
 }
 
 // 難易度を日本語に変換
-function getLevelLabel(level: string): string {
+function _getLevelLabel(level: string): string {
   const levelMap: Record<string, string> = {
     'beginner': '初級',
     'intermediate': '中級',
@@ -867,7 +867,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {getLevelLabel(passage.level || '')}_{passage.actualWordCount}語_{passage.title}
+                  {passage.level}_{passage.actualWordCount}_{passage.title}
                 </option>
               ))}
             </select>
@@ -971,7 +971,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             >
               {filteredPassages.map(passage => (
                 <option key={passage.id} value={passage.id}>
-                  {getLevelLabel(passage.level || '')}_{passage.actualWordCount}語_{passage.title}
+                  {passage.level}_{passage.actualWordCount}_{passage.title}
                 </option>
               ))}
             </select>
