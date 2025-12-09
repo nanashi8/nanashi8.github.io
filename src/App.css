@@ -965,3 +965,102 @@
 .dark-mode .settings-help-text {
   color: var(--gray-400);
 }
+
+/* ============================================
+   準備中画面のスタイル
+   ============================================ */
+.coming-soon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.coming-soon-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 3rem 2rem;
+  background: var(--background-secondary, var(--gray-50));
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+
+.dark-mode .coming-soon-content {
+  background: var(--gray-800);
+}
+
+.coming-soon-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.coming-soon-content > p {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+}
+
+.dark-mode .coming-soon-content > p {
+  color: var(--gray-400);
+}
+
+.feature-preview {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--background, white);
+  border-radius: 8px;
+  border: 2px solid var(--border-color, var(--gray-300));
+}
+
+.dark-mode .feature-preview {
+  background: var(--gray-900);
+  border-color: var(--gray-700);
+}
+
+.feature-preview h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.feature-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-preview li {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.update-info {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.dark-mode .update-info {
+  color: var(--gray-500);
+}
+
+.update-info code {
+  background: var(--gray-200);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+
+.dark-mode .update-info code {
+  background: var(--gray-700);
+  color: var(--gray-300);
+}
