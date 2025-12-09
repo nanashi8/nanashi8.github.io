@@ -54,7 +54,6 @@ import {
 } from './gamificationAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
-import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import GrammarQuizView from './components/GrammarQuizView';
 import MemorizationView from './components/MemorizationView';
 import DictionaryView from './components/DictionaryView';
@@ -1471,138 +1470,23 @@ function App() {
             isReviewFocusMode={reviewFocusMode}
           />
         ) : activeTab === 'reading' ? (
-          <ComprehensiveReadingView 
-            onSaveUnknownWords={async (words) => {
-              // 分からない単語を問題集として保存
-              if (words.length === 0) return;
-              
-              // 既存のカスタム問題集を取得
-              const customSets = questionSets.filter(set => !set.isBuiltIn && set.source === '長文読解');
-              
-              // 保存方法を選択
-              let saveMode: 'new' | 'append' | null = null;
-              let targetSetId: string | null = null;
-              
-              if (customSets.length > 0) {
-                const choice = confirm(
-                  `${words.length}個の単語が選択されています。\n\n` +
-                  `OK: 新しい問題集として保存\n` +
-                  `キャンセル: 既存の問題集に追加`
-                );
-                
-                if (choice) {
-                  saveMode = 'new';
-                } else {
-                  // 既存問題集の選択
-                  const setList = customSets.map((set, idx) => 
-                    `${idx + 1}. ${set.name} (${set.questions.length}語)`
-                  ).join('\n');
-                  
-                  const selection = prompt(
-                    `追加先の問題集を選択してください（番号を入力）:\n\n${setList}\n\n0: 新しい問題集として保存`,
-                    '0'
-                  );
-                  
-                  if (selection === null) return; // キャンセル
-                  
-                  const selectionNum = parseInt(selection);
-                  if (selectionNum === 0) {
-                    saveMode = 'new';
-                  } else if (selectionNum > 0 && selectionNum <= customSets.length) {
-                    saveMode = 'append';
-                    targetSetId = customSets[selectionNum - 1].id;
-                  } else {
-                    alert('無効な選択です');
-                    return;
-                  }
-                }
-              } else {
-                saveMode = 'new';
-              }
-              
-              if (saveMode === 'new') {
-                // 新しい問題集として保存
-                const now = new Date();
-                const dateStr = `${now.getMonth() + 1}/${now.getDate()}`;
-                const defaultName = `長文単語集 (${dateStr})`;
-                
-                const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, defaultName);
-                if (!setName) return;
-                
-                // 1. 従来のQuestionSet形式で保存（後方互換性）
-                const newSet: QuestionSet = {
-                  id: generateId(),
-                  name: setName,
-                  questions: words.map(w => ({
-                    word: w.word,
-                    reading: w.reading || '',
-                    meaning: w.meaning,
-                    etymology: w.etymology || '',
-                    relatedWords: w.relatedWords || '',
-                    relatedFields: w.relatedFields || '',
-                    difficulty: w.difficulty || 'intermediate'
-                  })),
-                  createdAt: Date.now(),
-                  isBuiltIn: false,
-                  source: '長文読解'
-                };
-                const updatedSets = [...questionSets, newSet];
-                setQuestionSets(updatedSets);
-                saveQuestionSets(updatedSets);
-                
-                // 2. 新しいカスタム問題セット形式でも保存
-                const { createReadingQuestionSet, saveCustomQuestionSet } = await import('./progressStorage');
-                const customSet = await createReadingQuestionSet(setName, newSet.questions);
-                await saveCustomQuestionSet(customSet);
-                
-                alert(`✅ 問題集「${setName}」を作成しました（${words.length}語）`);
-              } else if (saveMode === 'append' && targetSetId) {
-                // 既存問題集に追加
-                const targetSet = questionSets.find(set => set.id === targetSetId);
-                if (!targetSet) {
-                  alert('問題集が見つかりませんでした');
-                  return;
-                }
-                
-                // 重複チェック
-                const existingWords = new Set(targetSet.questions.map(q => q.word.toLowerCase()));
-                const newWords = words.filter(w => !existingWords.has(w.word.toLowerCase()));
-                
-                if (newWords.length === 0) {
-                  alert('すべての単語が既に問題集に含まれています');
-                  return;
-                }
-                
-                // 問題集を更新
-                const updatedSet: QuestionSet = {
-                  ...targetSet,
-                  questions: [...targetSet.questions, ...newWords.map(w => ({
-                    word: w.word,
-                    reading: w.reading || '',
-                    meaning: w.meaning,
-                    etymology: w.etymology || '',
-                    relatedWords: w.relatedWords || '',
-                    relatedFields: w.relatedFields || '',
-                    difficulty: w.difficulty || 'intermediate'
-                  }))]
-                };
-                
-                const updatedSets = questionSets.map(set => 
-                  set.id === targetSetId ? updatedSet : set
-                );
-                setQuestionSets(updatedSets);
-                saveQuestionSets(updatedSets);
-                
-                // カスタム問題セットも更新
-                const { createReadingQuestionSet, saveCustomQuestionSet } = await import('./progressStorage');
-                const customSet = await createReadingQuestionSet(targetSet.name, updatedSet.questions);
-                customSet.id = targetSetId; // IDを保持
-                await saveCustomQuestionSet(customSet);
-                
-                alert(`✅ 問題集「${targetSet.name}」に${newWords.length}語を追加しました（重複除外: ${words.length - newWords.length}語）`);
-              }
-            }}
-          />
+          <div className="coming-soon-container">
+            <div className="coming-soon-content">
+              <h2>🚧 長文読解機能は準備中です</h2>
+              <p>現在、より学習しやすい新しい長文読解システムを開発中です。</p>
+              <div className="feature-preview">
+                <h3>予定されている機能：</h3>
+                <ul>
+                  <li>📖 適切な長さのパッセージ（300-1000語）</li>
+                  <li>📊 図表・グラフ付き読解問題</li>
+                  <li>💬 会話、物語、ニュースなど多様な形式</li>
+                  <li>✅ 理解度チェックテスト</li>
+                  <li>📈 学習進捗の可視化</li>
+                </ul>
+              </div>
+              <p className="update-info">詳しくは <code>docs/roadmap/READING_PASSAGES_ROADMAP.md</code> をご覧ください</p>
+            </div>
+          </div>
         ) : activeTab === 'grammar' ? (
           <GrammarQuizView />
         ) : activeTab === 'dictionary' ? (

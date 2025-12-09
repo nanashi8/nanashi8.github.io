@@ -95,6 +95,65 @@ function splitLongSentence(sentence: string): string[] {
 }
 
 /**
+ * 全訳ファイルを読み込む
+ */
+async function loadFullTranslation(passageId: string): Promise<string> {
+  try {
+    // passageIdに対応する全訳ファイルパスを構築
+    // 例: advanced-environmental-issues -> /data/passages-translations/advanced-environmental-issues-ja.txt
+    const translationFilePath = `/data/passages-translations/${passageId}-ja.txt`;
+    
+    console.log(`[全訳] Attempting to load: ${translationFilePath} for passageId: ${passageId}`);
+    
+    const response = await fetch(translationFilePath);
+    if (!response.ok) {
+      console.log(`[全訳] File not found (${response.status}): ${translationFilePath}`);
+      return '';
+    }
+    
+    const content = await response.text();
+    console.log(`[全訳] Successfully loaded ${content.length} characters from ${translationFilePath}`);
+    return content;
+  } catch (error) {
+    console.error(`[全訳] Error loading full translation for ${passageId}:`, error);
+    return '';
+  }
+}
+
+/**
+ * 日本語フレーズファイルを読み込む
+ */
+async function loadJapanesePhrases(passageId: string): Promise<string[]> {
+  try {
+    // passageIdからファイルパスの一部を取得
+    const metadata = getPassageList().find(p => p.id === passageId);
+    if (!metadata) return [];
+    
+    // ファイルパスから日本語ファイルパスを生成
+    // 例: /data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket.txt
+    //  -> /data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket-ja-phrases.txt
+    const jaFilePath = metadata.filePath.replace(/\.txt$/, '-ja-phrases.txt');
+    
+    const response = await fetch(jaFilePath);
+    if (!response.ok) {
+      logger.log(`No Japanese phrases file found: ${jaFilePath}`);
+      return [];
+    }
+    
+    const content = await response.text();
+    const lines = content.split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0); // 空行を除外
+    
+    logger.log(`Loaded ${lines.length} Japanese phrases from ${jaFilePath}`);
+    return lines;
+  } catch (error) {
+    logger.error(`Error loading Japanese phrases for ${passageId}:`, error);
+    return [];
+  }
+}
+
+/**
  * .txt パッセージを ReadingPassage 型に変換
  */
 export async function convertPassageToReadingFormat(
@@ -103,6 +162,13 @@ export async function convertPassageToReadingFormat(
 ): Promise<ReadingPassage | null> {
   const loaded = await loadPassage(passageId);
   if (!loaded) return null;
+
+  // 日本語フレーズと全訳を並行して読み込む
+  const [japanesePhrases, fullTranslation] = await Promise.all([
+    loadJapanesePhrases(passageId),
+    loadFullTranslation(passageId)
+  ]);
+  let japaneseIndex = 0;
 
   // セクションごとにフレーズ（文単位）を生成
   const phrases: any[] = [];
@@ -222,93 +288,97 @@ export async function convertPassageToReadingFormat(
           }
         }).flat();
         
+        // 日本語訳を取得（行番号と対応）
+        const japanese = japanesePhrases[japaneseIndex] || '';
+        japaneseIndex++;
+        
         phrases.push({
           english: fullText,
-          japanese: '', // 翻訳は後で追加可能
+          japanese: japanese,
+          phraseMeaning: japanese, // phraseMeaningも設定
           words: words,
           segments: segments,
         });
       } else {
-        // 通常の文: .!?で区切る
-        const sentences = paragraph.match(/[^.!?]+[.!?]+/g) || [paragraph];
+        // passages-for-phrase-workのファイルは既に節・句で改行済み
+        // 各行をそのまま1フレーズとして扱う
+        const phraseText = paragraph.trim();
         
-        sentences.forEach((sentence) => {
-          // 長い文を接続詞で分割
-          const subPhrases = splitLongSentence(sentence);
+        // 単語に分割
+        const words = phraseText.split(/\s+/);
+        
+        // セグメントを生成
+        const segments: ReadingSegment[] = words.map(word => {
+          // 略語パターン（Ms., Mr., Dr.など）をチェック
+          const abbreviationPattern = /^(Ms|Mr|Mrs|Dr|Prof|St|Ave|Inc|Ltd|etc)\.$|^[A-Z]\.$|^vs\.$|^e\.g\.$|^i\.e\.$/;
+          if (abbreviationPattern.test(word)) {
+            // 略語は分割せずそのまま1単語として扱う
+            const lemma = getLemma(word.replace(/\.$/, '')); // ピリオドなしで辞書検索
+            const wordData = wordDictionary.get(lemma);
+            const meaning = wordData?.meaning || '';
+            return {
+              word: word,
+              meaning: meaning === '-' ? '' : meaning,
+              isUnknown: false,
+            };
+          }
           
-          subPhrases.forEach((subPhrase) => {
-            // 単語に分割
-            const words = subPhrase.trim().split(/\s+/);
+          // 句読点を検出
+          const punctuationMatch = word.match(/([.,!?;:—])$/);
+          
+          if (punctuationMatch) {
+            const cleanWord = word.replace(/[.,!?;:—]$/, '');
+            const punctuation = punctuationMatch[1];
             
-            // セグメントを生成
-            const segments: ReadingSegment[] = words.map(word => {
-              // 略語パターン（Ms., Mr., Dr.など）をチェック
-              const abbreviationPattern = /^(Ms|Mr|Mrs|Dr|Prof|St|Ave|Inc|Ltd|etc)\.$|^[A-Z]\.$|^vs\.$|^e\.g\.$|^i\.e\.$/;
-              if (abbreviationPattern.test(word)) {
-                // 略語は分割せずそのまま1単語として扱う
-                const lemma = getLemma(word.replace(/\.$/, '')); // ピリオドなしで辞書検索
-                const wordData = wordDictionary.get(lemma);
-                const meaning = wordData?.meaning || '';
-                return {
-                  word: word,
-                  meaning: meaning === '-' ? '' : meaning,
-                  isUnknown: false,
-                };
-              }
-              
-              // 句読点を検出
-              const punctuationMatch = word.match(/([.,!?;:—])$/);
-              
-              if (punctuationMatch) {
-                const cleanWord = word.replace(/[.,!?;:—]$/, '');
-                const punctuation = punctuationMatch[1];
-                
-                // 空の場合（句読点のみ）
-                if (!cleanWord) {
-                  return {
-                    word: punctuation,
-                    meaning: '',
-                    isUnknown: false,
-                  };
-                }
-                
-                const lemma = getLemma(cleanWord);
-                const wordData = wordDictionary.get(lemma);
-                const meaning = wordData?.meaning || '';
-                
-                return [
-                  {
-                    word: cleanWord,
-                    meaning: meaning === '-' ? '' : meaning,
-                    isUnknown: false,
-                  },
-                  {
-                    word: punctuation,
-                    meaning: '',
-                    isUnknown: false,
-                  }
-                ];
-              } else {
-                // 句読点なしの通常の単語
-                const lemma = getLemma(word);
-                const wordData = wordDictionary.get(lemma);
-                const meaning = wordData?.meaning || '';
-                
-                return {
-                  word: word,
-                  meaning: meaning === '-' ? '' : meaning,
-                  isUnknown: false,
-                };
-              }
-            }).flat();
+            // 空の場合（句読点のみ）
+            if (!cleanWord) {
+              return {
+                word: punctuation,
+                meaning: '',
+                isUnknown: false,
+              };
+            }
             
-            phrases.push({
-              english: subPhrase.trim(),
-              japanese: '', // 翻訳は後で追加可能
-              words: words,
-              segments: segments,
-            });
-          });
+            const lemma = getLemma(cleanWord);
+            const wordData = wordDictionary.get(lemma);
+            const meaning = wordData?.meaning || '';
+            
+            return [
+              {
+                word: cleanWord,
+                meaning: meaning === '-' ? '' : meaning,
+                isUnknown: false,
+              },
+              {
+                word: punctuation,
+                meaning: '',
+                isUnknown: false,
+              }
+            ];
+          } else {
+            // 句読点なしの通常の単語
+            const lemma = getLemma(word);
+            const wordData = wordDictionary.get(lemma);
+            const meaning = wordData?.meaning || '';
+            
+            return {
+              word: word,
+              meaning: meaning === '-' ? '' : meaning,
+              isUnknown: false,
+            };
+          }
+        }).flat();
+        
+        // 日本語訳を取得（行番号と対応）
+        const japanese = japanesePhrases[japaneseIndex] || '';
+        japaneseIndex++;
+        
+        phrases.push({
+          english: phraseText,
+          japanese: japanese,
+          phraseMeaning: japanese, // phraseMeaningも設定
+          words: words,
+          segments: segments,
         });
       }
     });
@@ -321,6 +391,7 @@ export async function convertPassageToReadingFormat(
     level: loaded.level,
     actualWordCount: loaded.wordCount,
     phrases: phrases,
+    translation: fullTranslation, // 全訳を設定
   };
 
   return readingPassage;
@@ -341,10 +412,14 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
     const data = await response.json();
     logger.log(`Loaded phrase learning JSON for ${passageId}, phrases: ${data.phrases?.length || 0}`);
     
+    // 全訳を並行して読み込む
+    const fullTranslation = await loadFullTranslation(passageId);
+    
     // JSONデータをそのまま返す（ReadingPassage型に準拠）
     const readingPassage: ReadingPassage = {
       ...data,
       phrases: data.phrases || [], // phrasesが存在しない場合は空配列
+      translation: fullTranslation, // 全訳を追加
     };
     
     return readingPassage;

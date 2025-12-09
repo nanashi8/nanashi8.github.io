@@ -50,7 +50,7 @@ function extractTitleFromPath(filePath: string): string {
 const PASSAGE_FILES_RAW = [
   // Beginner (5 passages)
   { id: 'beginner-supermarket-shopping', level: 'beginner', topic: 'daily-life', wordCount: 1910, filePath: '/data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket.txt' },
-  { id: 'beginner-cafe-menu', level: 'beginner', topic: 'food-culture', wordCount: 1380, filePath: '/data/passages-for-phrase-work/beginner_1380_A-Day-at-the-Cafe.txt' },
+  { id: 'beginner-cafe-day', level: 'beginner', topic: 'food-culture', wordCount: 1380, filePath: '/data/passages-for-phrase-work/beginner_1380_A-Day-at-the-Cafe.txt' },
   { id: 'beginner-conversation-daily', level: 'beginner', topic: 'communication', wordCount: 3018, filePath: '/data/passages-for-phrase-work/beginner_3018_Daily-Conversations.txt' },
   { id: 'beginner-weather-seasons', level: 'beginner', topic: 'nature', wordCount: 2111, filePath: '/data/passages-for-phrase-work/beginner_2111_Weather-and-Seasons.txt' },
   { id: 'beginner-wildlife-park-guide', level: 'beginner', topic: 'animals', wordCount: 2097, filePath: '/data/passages-for-phrase-work/beginner_2097_Wildlife-Park-Guide.txt' },
