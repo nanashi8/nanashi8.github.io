@@ -4,6 +4,7 @@ import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 import { logger } from '../logger';
+import ScoreBoard from './ScoreBoard';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -482,12 +483,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   }, [passages]);
 
   // 学習設定に戻る
-  const handleBackToSettings = () => {
-    setReadingStarted(false);
-    setCurrentPhraseIndex(0);
-    setReadingSubTab('reading');
-  };
-
   // 読解開始
   const handleStartReading = () => {
     if (!selectedPassageId) {
@@ -858,14 +853,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   return (
     <div className="comprehensive-reading-view">
 
+      {/* ScoreBoard - 読解開始後に表示 */}
+      {readingStarted && currentPassage && (
+        <ScoreBoard
+          mode="reading"
+          onShowSettings={() => setShowSettings(true)}
+          currentWord={currentPassage.title}
+        />
+      )}
+
       {!readingStarted && (
         <div className="quiz-controls">
-          <button 
-            onClick={() => setShowSettings(!showSettings)} 
-            className="w-64 px-8 py-4 text-lg font-bold bg-primary text-white border-2 border-blue-300 rounded-xl transition-all duration-300 hover:bg-primary-hover hover:shadow-xl dark:bg-secondary dark:text-white dark:hover:bg-secondary-hover dark:border-blue-600"
-          >
-            ⚙️ {showSettings ? '設定を閉じる' : '学習設定'}
-          </button>
           <button 
             onClick={handleStartReading}
             className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
@@ -876,10 +874,18 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         </div>
       )}
 
-      {/* 学習設定パネル */}
-      {!readingStarted && showSettings && (
+      {/* 学習設定パネル - 読解開始前と開始後の両方で表示可能 */}
+      {showSettings && (
         <div className="study-settings-panel">
-          <h3>📊 学習設定</h3>
+          <div className="settings-header">
+            <h3>📊 学習設定</h3>
+            <button 
+              onClick={() => setShowSettings(false)} 
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
+            >
+              ✕ 閉じる
+            </button>
+          </div>
           
           <div className="filter-group">
             <label htmlFor="difficulty-filter">⭐ 難易度:</label>
@@ -964,10 +970,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button
             className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-            onClick={handleBackToSettings}
-            title="設定"
+            onClick={() => {
+              setReadingStarted(false);
+              setCurrentPhraseIndex(0);
+              setReadingSubTab('reading');
+            }}
+            title="パッセージ選択に戻る"
           >
-            ⚙️ 学習設定
+            ◀️ 戻る
           </button>
         </div>
       )}
