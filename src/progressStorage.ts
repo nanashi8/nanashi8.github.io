@@ -65,7 +65,7 @@ const MAX_SESSION_HISTORY = 50;
 import { putToDB, queryByIndex, STORES, isIndexedDBSupported, deleteDatabase } from './indexedDBStorage';
 import { isMigrationCompleted } from './dataMigration';
 
-export async function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling'): Promise<void> {
+export async function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling' | 'grammar' | 'memorization'): Promise<void> {
   const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
   
   try {
@@ -97,7 +97,7 @@ export async function addSessionHistory(item: SessionHistoryItem, mode: 'transla
   }
 }
 
-export async function getSessionHistory(mode: 'translation' | 'spelling', limit: number = 20): Promise<SessionHistoryItem[]> {
+export async function getSessionHistory(mode: 'translation' | 'spelling' | 'grammar' | 'memorization', limit: number = 20): Promise<SessionHistoryItem[]> {
   const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
   
   try {
@@ -130,7 +130,7 @@ export async function getSessionHistory(mode: 'translation' | 'spelling', limit:
   }
 }
 
-export function clearSessionHistory(mode: 'translation' | 'spelling'): void {
+export function clearSessionHistory(mode: 'translation' | 'spelling' | 'grammar' | 'memorization'): void {
   try {
     const key = `${SESSION_HISTORY_KEY}-${mode}`;
     localStorage.removeItem(key);
@@ -3342,4 +3342,151 @@ export function getGrammarRetentionRateWithAI(): {
     masteredCount,
     appearedCount: appearedQuestions.length
   };
+}
+
+/**
+ * 文法問題の単元ごとの成績を集計
+ */
+export function getGrammarUnitStats(): Array<{
+  unit: string;
+  totalQuestions: number;
+  answeredQuestions: number;
+  correctCount: number;
+  incorrectCount: number;
+  masteredCount: number;
+  accuracy: number;
+  progress: number;
+}> {
+  const progress = loadProgressSync();
+  
+  // 文法問題のみフィルタリング（grammar_で始まる）
+  const grammarQuestions = Object.entries(progress.wordProgress)
+    .filter(([word, _]) => word.startsWith('grammar_'));
+  
+  // 単元ごとにグループ化
+  const unitMap = new Map<string, {
+    questions: Array<[string, WordProgress]>;
+    answered: Array<[string, WordProgress]>;
+    correct: number;
+    incorrect: number;
+    mastered: number;
+  }>();
+  
+  grammarQuestions.forEach(([word, wp]) => {
+    // grammar_g2-u6-fib-001 のような形式から単元を抽出
+    const match = word.match(/grammar_g(\d+)-u(\d+)/);
+    if (!match) return;
+    
+    const grade = match[1];
+    const unit = match[2];
+    const unitKey = `中${grade}_Unit${unit}`;
+    
+    if (!unitMap.has(unitKey)) {
+      unitMap.set(unitKey, {
+        questions: [],
+        answered: [],
+        correct: 0,
+        incorrect: 0,
+        mastered: 0
+      });
+    }
+    
+    const unitData = unitMap.get(unitKey)!;
+    unitData.questions.push([word, wp]);
+    
+    const totalAttempts = wp.grammarAttempts || (wp.correctCount + wp.incorrectCount);
+    if (totalAttempts > 0) {
+      unitData.answered.push([word, wp]);
+      const correctCount = wp.grammarCorrect || wp.correctCount;
+      const incorrectCount = totalAttempts - correctCount;
+      unitData.correct += correctCount;
+      unitData.incorrect += incorrectCount;
+      
+      // 定着判定
+      const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect;
+      const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
+      const isMarkedAsMastered = wp.masteryLevel === 'mastered';
+      const isOneShot = totalAttempts === 1 && correctCount === 1;
+      const isStableAccuracy = totalAttempts >= 3 && accuracy >= 85;
+      
+      if (isMarkedAsMastered || isOneShot || isStableAccuracy || consecutiveCorrect >= 3) {
+        unitData.mastered++;
+      }
+    }
+  });
+  
+  // 結果を配列に変換
+  const result = Array.from(unitMap.entries()).map(([unit, data]) => {
+    const totalAttempts = data.correct + data.incorrect;
+    const accuracy = totalAttempts > 0 ? (data.correct / totalAttempts) * 100 : 0;
+    const progress = data.questions.length > 0 ? (data.answered.length / data.questions.length) * 100 : 0;
+    
+    return {
+      unit,
+      totalQuestions: data.questions.length,
+      answeredQuestions: data.answered.length,
+      correctCount: data.correct,
+      incorrectCount: data.incorrect,
+      masteredCount: data.mastered,
+      accuracy: Math.round(accuracy),
+      progress: Math.round(progress)
+    };
+  });
+  
+  // 単元名でソート（中1_Unit1, 中1_Unit2, ... 中2_Unit1, ...）
+  result.sort((a, b) => a.unit.localeCompare(b.unit));
+  
+  return result;
+}
+
+// 文法単元別統計を単元タイトル付きで取得（出題されている単元のみ）
+export async function getGrammarUnitStatsWithTitles(): Promise<Array<{
+  unit: string;
+  title: string;
+  totalQuestions: number;
+  answeredQuestions: number;
+  correctCount: number;
+  incorrectCount: number;
+  masteredCount: number;
+  accuracy: number;
+  progress: number;
+}>> {
+  const baseStats = getGrammarUnitStats();
+  
+  // 各単元のタイトルを取得し、出題されている単元のみフィルター
+  const statsWithTitles = await Promise.all(
+    baseStats.map(async (stat) => {
+      // 中1_Unit1 → grade=1, unit=1
+      const match = stat.unit.match(/中(\d+)_Unit(\d+)/);
+      if (!match) {
+        return null;
+      }
+      
+      const grade = match[1];
+      const unitNum = match[2];
+      
+      try {
+        const res = await fetch(`/data/grammar/grammar_grade${grade}_unit${unitNum}.json`);
+        if (res.ok) {
+          const data = await res.json();
+          // enabled === false の単元は除外
+          if (data.enabled === false) {
+            return null;
+          }
+          return {
+            ...stat,
+            title: data.title || ''
+          };
+        }
+      } catch (_err) {
+        // fetch失敗時はnull
+        return null;
+      }
+      
+      return null;
+    })
+  );
+  
+  // nullを除外して返す
+  return statsWithTitles.filter((stat): stat is NonNullable<typeof stat> => stat !== null);
 }

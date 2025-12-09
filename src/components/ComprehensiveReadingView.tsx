@@ -1155,10 +1155,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                     className="flex-1 px-4 py-3 text-sm font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
                     onClick={() => handleShowPhraseTranslation(phraseIdx, 'forward')}
                   >
-                    {!wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && '単語の意味を表示 ▶'}
+                    {!wordMeaningsVisible[phraseIdx] && '単語の意味を表示 ▶'}
                     {wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && 'フレーズの意味を表示 ▶'}
-                    {wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && 'フレーズの意味を非表示 ▶'}
-                    {!wordMeaningsVisible[phraseIdx] && phraseTranslations[phraseIdx] && '単語の意味を非表示 ▶'}
                   </button>
                 </div>
               </div>

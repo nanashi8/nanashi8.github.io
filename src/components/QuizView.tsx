@@ -24,7 +24,7 @@ interface QuizViewProps {
   onDataSourceChange?: (source: DataSource) => void;
   questionSets?: QuestionSet[];
   onStartQuiz: () => void;
-  onAnswer: (answer: string, correct: string) => void;
+  onAnswer: (answer: string, correct: string) => void | Promise<void>;
   onNext: () => void;
   onPrevious: () => void;
   onSkip?: () => void | Promise<void>;
@@ -97,8 +97,9 @@ function QuizView({
   });
   
   // 回答処理をラップ（回答時刻更新用）
-  const handleAnswer = (answer: string, correct: string) => {
-    onAnswer(answer, correct);
+  const handleAnswer = async (answer: string, correct: string) => {
+    await onAnswer(answer, correct);
+    // 回答処理完了後にタイムスタンプを更新（履歴表示用）
     setLastAnswerTime(Date.now());
     
     // 正解した場合、自動次へが有効なら次の問題に進む
