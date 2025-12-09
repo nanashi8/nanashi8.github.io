@@ -970,10 +970,14 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button
             className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-            onClick={() => setShowSettings(true)}
-            title="学習設定を開く"
+            onClick={() => {
+              setReadingStarted(false);
+              setCurrentPhraseIndex(0);
+              setReadingSubTab('reading');
+            }}
+            title="パッセージ選択に戻る"
           >
-            ⚙️ 学習設定
+            ◀️ 戻る
           </button>
         </div>
       )}
