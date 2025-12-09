@@ -874,8 +874,8 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
         </div>
       )}
 
-      {/* 学習設定パネル - 読解開始前と開始後の両方で表示可能 */}
-      {showSettings && (
+      {/* 学習設定パネル - 読解開始前のみ表示 */}
+      {!readingStarted && showSettings && (
         <div className="study-settings-panel">
           <div className="settings-header">
             <h3>📊 学習設定</h3>
@@ -970,15 +970,71 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           </button>
           <button
             className="px-4 py-2 text-sm font-medium bg-gray-200 text-gray-700 border-2 border-transparent rounded-lg transition-all duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
-            onClick={() => {
-              setReadingStarted(false);
-              setCurrentPhraseIndex(0);
-              setReadingSubTab('reading');
-            }}
-            title="パッセージ選択に戻る"
+            onClick={() => setShowSettings(!showSettings)}
+            title="学習設定を開く"
           >
-            ◀️ 戻る
+            ⚙️ 学習設定
           </button>
+        </div>
+      )}
+
+      {/* 学習設定パネル - 6タブの下に表示 */}
+      {readingStarted && showSettings && (
+        <div className="study-settings-panel">
+          <div className="settings-header">
+            <h3>📊 学習設定</h3>
+            <button 
+              onClick={() => setShowSettings(false)} 
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
+            >
+              ✕ 閉じる
+            </button>
+          </div>
+          
+          <div className="filter-group">
+            <label htmlFor="difficulty-filter-reading">⭐ 難易度:</label>
+            <select
+              id="difficulty-filter-reading"
+              value={difficultyFilter}
+              onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
+              className="select-input"
+            >
+              <option value="all">全て</option>
+              <option value="初級">初級</option>
+              <option value="中級">中級</option>
+              <option value="上級">上級</option>
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label htmlFor="passage-select-reading">📖 パッセージ:</label>
+            <select
+              id="passage-select-reading"
+              value={selectedPassageId || ''}
+              onChange={(e) => handleSelectPassage(e.target.value)}
+              className="select-input"
+            >
+              {filteredPassages.map(passage => (
+                <option key={passage.id} value={passage.id}>
+                  {getLevelLabel(passage.level || '')}_{passage.actualWordCount}語_{passage.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <button
+              className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 w-full"
+              onClick={() => {
+                setReadingStarted(false);
+                setCurrentPhraseIndex(0);
+                setReadingSubTab('reading');
+                setShowSettings(false);
+              }}
+            >
+              ◀️ パッセージ選択に戻る
+            </button>
+          </div>
         </div>
       )}
 
