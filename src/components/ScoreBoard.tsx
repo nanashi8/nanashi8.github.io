@@ -7,6 +7,7 @@ import {
   getDetailedRetentionStats,
   getGrammarRetentionRateWithAI,
   getGrammarDetailedRetentionStats,
+  getGrammarUnitStatsWithTitles,
   getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData
 } from '../progressStorage';
@@ -33,6 +34,7 @@ interface ScoreBoardProps {
   // 文法モード用の設定
   autoReadAloud?: boolean; // 自動読み上げ設定
   onAutoReadAloudChange?: (enabled: boolean) => void; // 自動読み上げ変更コールバック
+  grammarUnit?: string; // 現在出題中の文法単元（例: "g1-unit0"）
 }
 
 function ScoreBoard({ 
@@ -49,7 +51,8 @@ function ScoreBoard({
   difficulty = '',
   wordPhraseFilter = '',
   autoReadAloud = false,
-  onAutoReadAloudChange
+  onAutoReadAloudChange,
+  grammarUnit
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'plan' | 'breakdown' | 'history' | 'settings'>('plan');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -98,6 +101,32 @@ function ScoreBoard({
   
   // 履歴タブ用の単語データ
   const [currentWordData, setCurrentWordData] = useState<ReturnType<typeof getWordDetailedData>>(null);
+  
+  // 文法モード用の単元別統計（タイトル付き）
+  const [grammarUnitStats, setGrammarUnitStats] = useState<Awaited<ReturnType<typeof getGrammarUnitStatsWithTitles>>>([]);
+
+  // 文法モード用の単元別統計をタイトル付きで読み込む
+  useEffect(() => {
+    if (mode === 'grammar') {
+      getGrammarUnitStatsWithTitles().then((stats) => {
+        // grammarUnitが指定されている場合、その単元のみをフィルタリング
+        if (grammarUnit) {
+          // grammarUnit: "g1-unit0" → 中1_Unit0 にマッチさせる
+          // パターン: g{数字}-unit{数字} または g{数字}-u{数字}
+          const match = grammarUnit.match(/g(\d+)-(?:unit|u)(\d+)/);
+          if (match) {
+            const targetUnit = `中${match[1]}_Unit${match[2]}`;
+            const filtered = stats.filter(stat => stat.unit === targetUnit);
+            setGrammarUnitStats(filtered);
+          } else {
+            setGrammarUnitStats(stats);
+          }
+        } else {
+          setGrammarUnitStats(stats);
+        }
+      });
+    }
+  }, [mode, onAnswerTime, grammarUnit]);
 
   // 定着率と詳細統計を更新（回答時のみ - onAnswerTimeが変化した時）
   useEffect(() => {
@@ -480,9 +509,59 @@ function ScoreBoard({
         <div className="score-board-content">
           <div className="history-compact">
             {mode === 'grammar' ? (
-              <div className="word-detail-empty">
-                <p>文法問題では単語別の履歴は表示されません</p>
-                <p className="stat-text-sub">学習状況タブで全体の進捗を確認できます</p>
+              <div className="word-detail-container">
+                {grammarUnitStats.length > 0 ? (
+                  <div className="grammar-units-list">
+                    {grammarUnitStats.map((stat) => {
+                      const totalAttempts = stat.correctCount + stat.incorrectCount;
+                      const retentionRate = stat.answeredQuestions > 0 ? Math.round((stat.masteredCount / stat.answeredQuestions) * 100) : 0;
+                      
+                      // 履歴アイコン生成（最近の10回分）
+                      const historyIcons = Array(Math.min(totalAttempts, 10)).fill('🟩').join('');
+                      
+                      // ステータス判定
+                      let statusIcon = '🟢';
+                      let statusLabel = '定着済';
+                      if (stat.masteredCount === 0 && stat.answeredQuestions > 0) {
+                        statusIcon = '🔴';
+                        statusLabel = '要復習';
+                      } else if (retentionRate < 80 && stat.answeredQuestions > 0) {
+                        statusIcon = '🟡';
+                        statusLabel = '学習中';
+                      }
+                      
+                      return (
+                        <div key={stat.unit} className="grammar-unit-card">
+                          <div className="word-detail-title">
+                            📊 {stat.unit}_{stat.title} の学習データ
+                            <span className="word-status-badge">
+                              {statusIcon} {statusLabel}
+                            </span>
+                          </div>
+                          <div className="word-detail-stats">
+                            <span className="word-stat-label">正解:</span>
+                            <strong className="word-stat-value">{stat.correctCount}/{totalAttempts}回</strong>
+                            <span className="word-stat-divider">｜</span>
+                            {historyIcons && (
+                              <>
+                                <span className="word-stat-label">履歴:</span>
+                                <span className="word-history-icons">{historyIcons}</span>
+                                <span className="word-stat-divider">｜</span>
+                              </>
+                            )}
+                            <span className="word-stat-label">定着率:</span>
+                            <strong className="word-stat-value word-retention-rate">{retentionRate}%</strong>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="word-detail-empty">
+                    <p>まだ文法問題の解答データがありません</p>
+                    <p className="stat-text-sub">問題を解くと単元ごとの成績が表示されます</p>
+                  </div>
+                )}
               </div>
             ) : currentWord && currentWordData ? (
               <div className="word-detail-container">

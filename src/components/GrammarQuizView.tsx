@@ -127,6 +127,16 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const currentQuestion = currentQuestions[currentQuestionIndex];
   const isSentenceOrdering = currentQuestion?.type === 'sentenceOrdering' || quizType === 'sentence-ordering';
 
+  // 現在の問題から単元を抽出（履歴表示用）
+  const currentGrammarUnit = currentQuestion?.id ? (() => {
+    // 問題IDの形式: g1-u0-fib-001 または g1-u1-so-002
+    const match = currentQuestion.id.match(/^g(\d+)-u(\d+)/);
+    if (match) {
+      return `g${match[1]}-unit${match[2]}`;
+    }
+    return undefined;
+  })() : undefined;
+
   // 設定をlocalStorageに保存
   useEffect(() => {
     localStorage.setItem('grammar-quiz-type', quizType);
@@ -217,6 +227,22 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     setAnswered(false);
     setShowHint(false);
   }, [currentQuestionIndex]);
+
+  // Enterキーでスキップ機能（未回答時のみ）
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // クイズ開始中かつ未回答時のみEnterキーでスキップ
+      if (quizStarted && !answered && event.key === 'Enter') {
+        event.preventDefault();
+        handleSkip();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [quizStarted, answered]);
 
   const handleStartQuiz = async () => {
     setLoading(true);
@@ -347,14 +373,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   };
 
   // 選択肢クリック時に即座に判定（和訳・スペルタブと同じ）
-  const handleAnswerSelect = (answer: string) => {
+  const handleAnswerSelect = async (answer: string) => {
     if (answered || isSentenceOrdering) return;
     
     setSelectedAnswer(answer);
     setAnswered(true);
-    
-    // 回答時刻を更新（ScoreBoard更新用）
-    setLastAnswerTime(Date.now());
     
     // 「分からない」は不正解として扱い、要復習にカウント
     const isCorrect = answer === currentQuestion.correctAnswer;
@@ -393,17 +416,37 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     
     // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
     // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
-    (async () => {
-      const { updateWordProgress } = await import('../progressStorage');
-      const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question}`;
-      await updateWordProgress(
-        questionId,
-        isCorrect,
-        responseTime,
-        undefined,
-        'grammar'
-      );
-    })();
+    const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
+    const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question}`;
+    await updateWordProgress(
+      questionId,
+      isCorrect,
+      responseTime,
+      undefined,
+      'grammar'
+    );
+    
+    // セッション履歴に追加
+    const progress = await loadProgress();
+    const wordProgress = progress.wordProgress?.[questionId];
+    let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';
+    
+    // 定着判定
+    if (wordProgress && wordProgress.masteryLevel === 'mastered') {
+      status = 'mastered';
+    } else if (!isCorrect && wordProgress && wordProgress.incorrectCount >= 2) {
+      // 2回以上間違えた場合は要復習
+      status = 'review';
+    }
+    
+    addSessionHistory({
+      status,
+      word: questionId,
+      timestamp: Date.now()
+    }, 'grammar');
+    
+    // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
+    setLastAnswerTime(Date.now());
   };
 
   const handleWordClick = (word: string, fromRemaining: boolean) => {
@@ -416,11 +459,8 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         
         // 全ての単語を選択したら自動で判定
         if (newWords.length === currentQuestion.words.length) {
-          setTimeout(() => {
+          setTimeout(async () => {
             setAnswered(true);
-            
-            // 回答時刻を更新（ScoreBoard更新用）
-            setLastAnswerTime(Date.now());
             
             const userAnswer = newWords.join(' ');
             const correctAnswer = currentQuestion.words.join(' ');
@@ -456,17 +496,37 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             
             // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
             // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
-            (async () => {
-              const { updateWordProgress } = await import('../progressStorage');
-              const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.words.join('_')}`;
-              await updateWordProgress(
-                questionId,
-                isCorrect,
-                responseTime,
-                undefined,
-                'grammar'
-              );
-            })();
+            const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
+            const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.words.join('_')}`;
+            await updateWordProgress(
+              questionId,
+              isCorrect,
+              responseTime,
+              undefined,
+              'grammar'
+            );
+            
+            // セッション履歴に追加
+            const progress = await loadProgress();
+            const wordProgress = progress.wordProgress?.[questionId];
+            let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';
+            
+            // 定着判定
+            if (wordProgress && wordProgress.masteryLevel === 'mastered') {
+              status = 'mastered';
+            } else if (!isCorrect && wordProgress && wordProgress.incorrectCount >= 2) {
+              // 2回以上間違えた場合は要復習
+              status = 'review';
+            }
+            
+            addSessionHistory({
+              status,
+              word: questionId,
+              timestamp: Date.now()
+            }, 'grammar');
+            
+            // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
+            setLastAnswerTime(Date.now());
           }, 100);
         }
         
@@ -490,6 +550,63 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setAnswered(false);
       setShowHint(false);
       questionStartTimeRef.current = Date.now(); // 次の問題の開始時刻を記録
+    }
+  };
+
+  const handleSkip = async () => {
+    if (!answered) {
+      // 未回答の場合はスキップとして記録（正解扱い・定着済み）
+      setAnswered(true);
+      
+      // スキップは正解として扱い、定着済みとしてカウント
+      setScore(prev => prev + 1);
+      setTotalAnswered(prev => prev + 1);
+      setSessionStats(prev => ({ 
+        ...prev, 
+        correct: prev.correct + 1,
+        mastered: prev.mastered + 1
+      }));
+      
+      // 進捗データに記録（正解として）
+      const responseTime = Date.now() - questionStartTimeRef.current;
+      const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
+      const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question || 'unknown'}`;
+      await updateWordProgress(
+        questionId,
+        true, // スキップは正解として記録
+        responseTime,
+        undefined,
+        'grammar'
+      );
+      
+      // セッション履歴に追加（スキップは定着済みとして）
+      const progress = await loadProgress();
+      const wordProgress = progress.wordProgress?.[questionId];
+      const status: 'correct' | 'incorrect' | 'review' | 'mastered' = 'mastered'; // スキップは定着済み
+      
+      addSessionHistory({
+        status,
+        word: questionId,
+        timestamp: Date.now()
+      }, 'grammar');
+      
+      // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
+      setLastAnswerTime(Date.now());
+      
+      // 状態をリセットしてから次の問題へ
+      setTimeout(() => {
+        if (currentQuestionIndex < currentQuestions.length - 1) {
+          setCurrentQuestionIndex(prev => prev + 1);
+          setSelectedAnswer(null);
+          setSelectedWords([]);
+          setAnswered(false);
+          setShowHint(false);
+          questionStartTimeRef.current = Date.now();
+        }
+      }, 500);
+    } else {
+      // 回答済みの場合は通常の次へ処理
+      handleNext();
     }
   };
 
@@ -558,6 +675,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               setAutoReadAloud(enabled);
               localStorage.setItem('autoReadAloud-grammar', enabled.toString());
             }}
+            grammarUnit={currentGrammarUnit}
           />
 
           {/* 文法クイズ中の学習設定パネル */}
@@ -720,9 +838,9 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                 </div>
                 <button 
                   className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500" 
-                  onClick={handleNext}
+                  onClick={handleSkip}
                   disabled={currentQuestionIndex >= currentQuestions.length - 1}
-                  title="次へ"
+                  title={answered ? "次へ" : "スキップ (Enter)"}
                 >
                   →
                 </button>

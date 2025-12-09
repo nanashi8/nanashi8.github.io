@@ -480,6 +480,13 @@
   min-height: 180px;
 }
 
+/* タブコンテンツの固定高さ（プラン表示時の高さに統一） */
+.score-board-content {
+  min-height: 160px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
 /* プランタブ */
 .plan-tab-compact {
   display: flex;
@@ -794,6 +801,94 @@
 
 .word-stat-divider {
   color: var(--gray-400);
+}
+
+/* 文法タブ - 単元別成績 */
+.grammar-unit-stats {
+  width: 100%;
+}
+
+.grammar-units-list {
+  margin-top: 0.75rem;
+}
+
+.grammar-unit-card {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--card-bg, #fff);
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #e0e0e0);
+}
+
+.dark-mode .grammar-unit-card {
+  background-color: var(--gray-700);
+  border-color: var(--gray-600);
+}
+
+.grammar-unit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.grammar-unit-name {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.dark-mode .grammar-unit-name {
+  color: var(--white);
+}
+
+.grammar-accuracy {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.grammar-accuracy.high {
+  color: var(--success-color, #10b981);
+}
+
+.grammar-accuracy.medium {
+  color: var(--warning-color, #f59e0b);
+}
+
+.grammar-accuracy.low {
+  color: var(--error-color, #ef4444);
+}
+
+.grammar-unit-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.grammar-unit-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.grammar-unit-stat .stat-label {
+  color: var(--text-secondary, #6b7280);
+}
+
+.dark-mode .grammar-unit-stat .stat-label {
+  color: var(--gray-400);
+}
+
+.grammar-unit-stat .stat-value {
+  margin-left: 0.25rem;
+}
+
+.grammar-unit-stat .correct-count {
+  color: var(--success-color, #10b981);
+}
+
+.grammar-unit-stat .mastered-count {
+  color: var(--primary-color, #3b82f6);
 }
 
 /* ============================================
