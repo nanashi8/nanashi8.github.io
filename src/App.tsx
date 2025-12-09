@@ -54,6 +54,7 @@ import {
 } from './gamificationAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
+import ComprehensiveReadingView from './components/ComprehensiveReadingView';
 import GrammarQuizView from './components/GrammarQuizView';
 import MemorizationView from './components/MemorizationView';
 import DictionaryView from './components/DictionaryView';
@@ -1418,6 +1419,7 @@ function App() {
 
       {/* コンテンツエリア */}
       <div className="p-4 md:p-6 bg-gray-50 dark:bg-black">
+        <div className="max-w-app mx-auto">
         {activeTab === 'memorization' ? (
           <MemorizationView
             allQuestions={allQuestions}
@@ -1470,23 +1472,41 @@ function App() {
             isReviewFocusMode={reviewFocusMode}
           />
         ) : activeTab === 'reading' ? (
-          <div className="coming-soon-container">
-            <div className="coming-soon-content">
-              <h2>🚧 長文読解機能は準備中です</h2>
-              <p>現在、より学習しやすい新しい長文読解システムを開発中です。</p>
-              <div className="feature-preview">
-                <h3>予定されている機能：</h3>
-                <ul>
-                  <li>📖 適切な長さのパッセージ（300-1000語）</li>
-                  <li>📊 図表・グラフ付き読解問題</li>
-                  <li>💬 会話、物語、ニュースなど多様な形式</li>
-                  <li>✅ 理解度チェックテスト</li>
-                  <li>📈 学習進捗の可視化</li>
-                </ul>
-              </div>
-              <p className="update-info">詳しくは <code>docs/roadmap/READING_PASSAGES_ROADMAP.md</code> をご覧ください</p>
-            </div>
-          </div>
+          <ComprehensiveReadingView 
+            onSaveUnknownWords={async (words) => {
+              // 分からない単語を問題集として保存
+              if (words.length === 0) return;
+              
+              const now = new Date();
+              const dateStr = `${now.getMonth() + 1}/${now.getDate()}`;
+              const defaultName = `長文単語集 (${dateStr})`;
+              
+              const setName = prompt(`${words.length}個の単語が選択されています。\n問題集の名前を入力してください:`, defaultName);
+              if (!setName) return;
+              
+              const newSet: QuestionSet = {
+                id: generateId(),
+                name: setName,
+                questions: words.map(w => ({
+                  word: w.word,
+                  reading: w.reading || '',
+                  meaning: w.meaning,
+                  etymology: w.etymology || '',
+                  relatedWords: w.relatedWords || '',
+                  relatedFields: w.relatedFields || '',
+                  difficulty: w.difficulty || 'intermediate'
+                })),
+                createdAt: Date.now(),
+                isBuiltIn: false,
+                source: '長文読解'
+              };
+              const updatedSets = [...questionSets, newSet];
+              setQuestionSets(updatedSets);
+              saveQuestionSets(updatedSets);
+              
+              alert(`✅ 問題集「${setName}」を作成しました（${words.length}語）`);
+            }}
+          />
         ) : activeTab === 'grammar' ? (
           <GrammarQuizView />
         ) : activeTab === 'dictionary' ? (
@@ -1521,6 +1541,7 @@ function App() {
             }}
           />
         )}
+        </div>
       </div>
     </div>
   );

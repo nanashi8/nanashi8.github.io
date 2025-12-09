@@ -324,9 +324,9 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
   }
   
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
+    <div className="min-h-screen">
       {/* スコアボード */}
-      <div className="max-w-6xl mx-auto mb-4">
+      <div className="mb-4">
         <ScoreBoard 
           mode="memorization"
           sessionCorrect={sessionStats.correct}
@@ -343,7 +343,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       
       {/* 学習設定パネル */}
       {showSettings && (
-        <div className="max-w-6xl mx-auto mb-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+        <div className="mb-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-bold">📊 学習設定</h3>
             <button 
@@ -495,7 +495,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       )}
       
       {/* 暗記カード */}
-      <div className="max-w-6xl mx-auto">
+      <div>
         <div ref={cardRef} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
           {/* 語句と左右ボタン */}
           <div className="flex items-center gap-4 mb-6">

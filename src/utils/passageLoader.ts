@@ -48,7 +48,8 @@ function extractTitleFromPath(filePath: string): string {
 // ファイル名形式: 難易度_語数_タイトル.txt
 // titleはファイルパスから自動抽出される
 const PASSAGE_FILES_RAW = [
-  // Beginner (5 passages)
+  // Beginner (6 passages)
+  { id: 'beginner-morning-routine', level: 'beginner', topic: 'daily-life', wordCount: 50, filePath: '/data/passages-for-phrase-work/beginner_50_Morning-Routine.txt' },
   { id: 'beginner-supermarket-shopping', level: 'beginner', topic: 'daily-life', wordCount: 1910, filePath: '/data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket.txt' },
   { id: 'beginner-cafe-day', level: 'beginner', topic: 'food-culture', wordCount: 1380, filePath: '/data/passages-for-phrase-work/beginner_1380_A-Day-at-the-Cafe.txt' },
   { id: 'beginner-conversation-daily', level: 'beginner', topic: 'communication', wordCount: 3018, filePath: '/data/passages-for-phrase-work/beginner_3018_Daily-Conversations.txt' },
@@ -95,6 +96,37 @@ export function getPassageList(): PassageMetadata[] {
  */
 export function getPassagesByLevel(level: 'beginner' | 'intermediate' | 'advanced'): PassageMetadata[] {
   return PASSAGE_FILES.filter(p => p.level === level);
+}
+
+/**
+ * passages-original から元のテキストファイルを読み込み（全文表示用）
+ */
+export async function loadOriginalPassage(passageId: string): Promise<string> {
+  try {
+    // ファイルパスを構築
+    // 例: beginner-morning-routine -> /data/passages-original/beginner_50_Morning-Routine.txt
+    const metadata = PASSAGE_FILES.find(p => p.id === passageId);
+    if (!metadata) {
+      logger.error(`Passage not found: ${passageId}`);
+      return '';
+    }
+    
+    // filePathからファイル名を抽出
+    const fileName = metadata.filePath.split('/').pop() || '';
+    const originalPath = `/data/passages-original/${fileName}`;
+    
+    const response = await fetch(originalPath);
+    if (!response.ok) {
+      logger.log(`Original file not found: ${originalPath}`);
+      return '';
+    }
+    
+    const content = await response.text();
+    return content;
+  } catch (error) {
+    logger.error(`Error loading original passage ${passageId}:`, error);
+    return '';
+  }
 }
 
 /**

@@ -85,6 +85,7 @@ export interface ReadingPassage {
   actualWordCount?: number; // 実際の語数
   phrases: ReadingPhrase[]; // 文節ごとのグループ
   translation?: string; // 全体の和訳（オプショナル）
+  originalText?: string; // 元の全文テキスト（passages-originalから読み込み、オプショナル）
 }
 
 export interface ReadingPhrase {

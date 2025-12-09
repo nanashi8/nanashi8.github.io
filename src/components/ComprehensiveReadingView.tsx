@@ -4,6 +4,7 @@ import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 import { logger } from '../logger';
+import { analyzeSentence, GrammarAnalysisResult, detectPhrasalExpressions, PhrasalExpression, detectGrammarPatterns, GrammarPattern } from '../utils/grammarAnalyzer';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
@@ -48,9 +49,17 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [showSettings, setShowSettings] = useState(false);
   const [readingStarted, _setReadingStarted] = useState(true);
   const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [_currentPhraseIndex, _setCurrentPhraseIndex] = useState(0);
   const [isFullTextSpeaking, setIsFullTextSpeaking] = useState(false);
   const [isFullTextPaused, setIsFullTextPaused] = useState(false);
+  const [selectedSentenceIndex, setSelectedSentenceIndex] = useState<number | null>(null);
+  const [selectedSentenceDetails, setSelectedSentenceDetails] = useState<{
+    text: string;
+    grammarAnalysis: GrammarAnalysisResult[];
+    showMeanings: boolean;
+  } | null>(null);
+  const [showGrammarLegend, setShowGrammarLegend] = useState(false);
+  const [showDetailedExplanation, setShowDetailedExplanation] = useState(false);
 
   // 分からない単語のマーク状態のみをLocalStorageに保存（軽量）
   useEffect(() => {
@@ -82,7 +91,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   };
 
   // セグメントをフレーズグループに変換する関数
-  const groupSegmentsByPhrases = (segments: ReadingSegment[]): PhraseGroup[] => {
+  const _groupSegmentsByPhrases = (segments: ReadingSegment[]): PhraseGroup[] => {
     const groups: PhraseGroup[] = [];
     let i = 0;
 
@@ -308,10 +317,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   }, [wordDictionary, readingDictionary]);
 
   // 単語の意味を辞書から取得（メモ化）
-  const getMeaning = useCallback((word: string, existingMeaning?: string): string => {
+  const getMeaning = useCallback((word: string, existingMeaning?: string | Record<string, unknown>): string => {
     // existingMeaningがあり、'-'でない場合はそれを使用
-    if (existingMeaning && existingMeaning.trim() && existingMeaning !== '-') {
+    if (existingMeaning && typeof existingMeaning === 'string' && existingMeaning.trim() && existingMeaning !== '-') {
       return existingMeaning;
+    }
+    
+    // existingMeaningがオブジェクトの場合、meaningプロパティを取得
+    if (existingMeaning && typeof existingMeaning === 'object' && 'meaning' in existingMeaning && typeof existingMeaning.meaning === 'string') {
+      return existingMeaning.meaning;
     }
     
     // 関係代名詞の特別処理
@@ -476,23 +490,23 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
     if (passage) {
       setPhraseTranslations(new Array(passage.phrases?.length || 0).fill(false));
       setWordMeaningsVisible(new Array(passage.phrases?.length || 0).fill(false));
-      setCurrentPhraseIndex(0); // フレーズインデックスをリセット
+      _setCurrentPhraseIndex(0); // フレーズインデックスをリセット
     }
   }, [passages]);
 
   // フレーズナビゲーション
-  const handlePreviousPhrase = () => {
-    setCurrentPhraseIndex(prev => Math.max(0, prev - 1));
+  const _handlePreviousPhrase = () => {
+    _setCurrentPhraseIndex((prev: number) => Math.max(0, prev - 1));
   };
 
-  const handleNextPhrase = () => {
+  const _handleNextPhrase = () => {
     if (currentPassage && currentPassage.phrases) {
-      setCurrentPhraseIndex(prev => Math.min(currentPassage.phrases.length - 1, prev + 1));
+      _setCurrentPhraseIndex((prev: number) => Math.min(currentPassage.phrases.length - 1, prev + 1));
     }
   };
 
   // フレーズ全体を発音する（メモ化）
-  const handlePhraseSpeak = useCallback((phraseIdx: number, event: React.MouseEvent) => {
+  const _handlePhraseSpeak = useCallback((phraseIdx: number, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
     
@@ -617,7 +631,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   };
 
   // 単語を「分からない」としてマーク
-  const handleMarkUnknown = (phraseIndex: number, segmentIndex: number, event: React.MouseEvent) => {
+  const _handleMarkUnknown = (phraseIndex: number, segmentIndex: number, event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation(); // ポップアップ表示を防ぐ
     if (!currentPassage) return;
@@ -646,7 +660,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   };
 
   // 個別フレーズの訳を表示（4段階トグル）
-  const handleShowPhraseTranslation = (phraseIndex: number, direction: 'forward' | 'backward' = 'forward') => {
+  const _handleShowPhraseTranslation = (phraseIndex: number, direction: 'forward' | 'backward' = 'forward') => {
     // 4段階の双方向トグル
     // 状態1: すべて非表示
     // 状態2: 単語の意味を表示
@@ -1021,157 +1035,513 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
             {currentPassage.title}
           </h3>
           
-          {/* 読解タブ: フレーズ単位で表示 */}
+          {/* 読解タブ: 全文表示 + 選択文の読解エリア */}
           {readingSubTab === 'reading' && (
           <>
-            {/* フレーズナビゲーション */}
-            <div className="phrase-navigation">
-              <button 
-                className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500"
-                onClick={handlePreviousPhrase}
-                disabled={currentPhraseIndex === 0}
-                title="前のフレーズ"
-              >
-                ←
-              </button>
-              {isSpeechSynthesisSupported() && (
-                <button
-                  className="phrase-speaker-btn-compact"
-                  onClick={(e) => handlePhraseSpeak(currentPhraseIndex, e)}
-                  title={`フレーズ全体を発音 (${currentPhraseIndex + 1}/${currentPassage.phrases.length})`}
-                >
-                  🔊
-                </button>
-              )}
-              <button 
-                className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500"
-                onClick={handleNextPhrase}
-                disabled={currentPhraseIndex === currentPassage.phrases.length - 1}
-                title="次のフレーズ"
-              >
-                →
-              </button>
+            {/* 全文表示エリア */}
+            <div className="reading-full-text-area">
+              <h4 className="text-lg font-semibold mb-3">📖 全文</h4>
+              <div className="full-text-content">
+                {(() => {
+                  // originalTextが存在する場合はそれを使用
+                  if (currentPassage.originalText) {
+                    // 文に分割
+                    const sentences = currentPassage.originalText.split(/([.!?])\s+/).filter(s => s.trim());
+                    const reconstructedSentences: string[] = [];
+                    for (let i = 0; i < sentences.length; i += 2) {
+                      const sentence = sentences[i];
+                      const punctuation = sentences[i + 1] || '';
+                      reconstructedSentences.push((sentence + punctuation).trim());
+                    }
+                    
+                    return (
+                      <div className="sentences-container">
+                        {reconstructedSentences.map((sentence, idx) => (
+                          <span
+                            key={idx}
+                            className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected-reading' : ''}`}
+                            onClick={() => {
+                              setSelectedSentenceIndex(idx);
+                              const grammarAnalysis = analyzeSentence(sentence);
+                              setSelectedSentenceDetails({
+                                text: sentence,
+                                grammarAnalysis,
+                                showMeanings: false
+                              });
+                            }}
+                          >
+                            {sentence}{' '}
+                          </span>
+                        ))}
+                      </div>
+                    );
+                  }
+                  
+                  // originalTextがない場合、フレーズから文章を構築
+                  const isConversation = currentPassage.title.toLowerCase().includes('conversation');
+                  
+                  if (isConversation) {
+                    // 会話形式: フレーズ単位で処理
+                    const lines: string[] = [];
+                    
+                    currentPassage.phrases.forEach((phrase) => {
+                      let lineText = phrase.segments.map(s => s.word).join(' ').trim();
+                      if (!lineText || lineText === '-') return;
+                      lineText = lineText.replace(/\s+([.,!?;:"])/g, '$1');
+                      lines.push(lineText);
+                    });
+                    
+                    return (
+                      <div className="sentences-container">
+                        {lines.map((line, idx) => (
+                          <span
+                            key={idx}
+                            className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected-reading' : ''}`}
+                            onClick={() => {
+                              setSelectedSentenceIndex(idx);
+                              const grammarAnalysis = analyzeSentence(line);
+                              setSelectedSentenceDetails({
+                                text: line,
+                                grammarAnalysis,
+                                showMeanings: false
+                              });
+                            }}
+                          >
+                            {line}{' '}
+                          </span>
+                        ))}
+                      </div>
+                    );
+                  } else {
+                    // 通常の長文形式
+                    let fullText = '';
+                    let lastWasPeriod = true;
+                    
+                    currentPassage.phrases.forEach((phrase) => {
+                      phrase.segments.forEach((seg) => {
+                        let word = seg.word.trim();
+                        if (word && word !== '-') {
+                          if (/^[.,!?;:]$/.test(word)) {
+                            fullText += word;
+                            lastWasPeriod = /^[.!?]$/.test(word);
+                          } else if (word === '"' || word === "'") {
+                            fullText += word;
+                          } else {
+                            if (lastWasPeriod && word.length > 0) {
+                              word = word.charAt(0).toUpperCase() + word.slice(1);
+                              lastWasPeriod = false;
+                            }
+                            if (fullText.length > 0 && !fullText.endsWith(' ') && !fullText.endsWith('"') && !fullText.endsWith("'")) {
+                              fullText += ' ';
+                            }
+                            fullText += word;
+                          }
+                        }
+                      });
+                    });
+
+                    fullText = fullText.replace(/\s+"/g, '"').replace(/\s+'/g, "'");
+
+                    const sentences = fullText.split(/([.!?])\s+/).filter(s => s.trim());
+                    const reconstructedSentences: string[] = [];
+                    for (let i = 0; i < sentences.length; i += 2) {
+                      const sentence = sentences[i];
+                      const punctuation = sentences[i + 1] || '';
+                      reconstructedSentences.push((sentence + punctuation).trim());
+                    }
+
+                    return (
+                      <div className="sentences-container">
+                        {reconstructedSentences.map((sentence, idx) => (
+                          <span
+                            key={idx}
+                            className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected-reading' : ''}`}
+                            onClick={() => {
+                              setSelectedSentenceIndex(idx);
+                              const grammarAnalysis = analyzeSentence(sentence);
+                              setSelectedSentenceDetails({
+                                text: sentence,
+                                grammarAnalysis,
+                                showMeanings: false
+                              });
+                            }}
+                          >
+                            {sentence}{' '}
+                          </span>
+                        ))}
+                      </div>
+                    );
+                  }
+                })()}
+              </div>
             </div>
 
-            <div className="passage-body">
-            {currentPassage.phrases.map((phrase, phraseIdx) => {
-              // 現在のフレーズのみ表示
-              if (phraseIdx !== currentPhraseIndex) return null;
-              
-              return (
-              <div key={phrase.id} className={`phrase-block ${phraseIdx === currentPhraseIndex ? 'current-phrase' : ''}`}>
-                {/* 英文 - 単語/フレーズをカード形式で表示（意味も含む） */}
-                <div className="phrase-english">
-                  {(() => {
-                    const groups = groupSegmentsByPhrases(phrase.segments || []);
-                    return groups.map((group, groupIdx) => {
-                      if (group.type === 'phrase') {
-                        // フレーズカード
-                        const phraseText = group.words.join(' ');
-                        const phraseMeanings = group.segments
-                          .map(seg => getMeaning(seg.word, seg.meaning))
-                          .filter(m => m && m !== '-'); // '-'も除外
-                        const combinedMeaning = phraseMeanings.join('・');
-
-                        return (
-                          <div
-                            key={`group-${groupIdx}`}
-                            className={`word-card phrase-card ${group.isUnknown ? 'unknown' : ''}`}
-                            onDoubleClick={(e) => handleWordDoubleClick(phraseText, e)}
-                            title="ダブルタップ: 詳細表示"
-                          >
-                            <div className="word-card-word phrase-word">
-                              {phraseText}
-                            </div>
-                            {wordMeaningsVisible[phraseIdx] && combinedMeaning && (
-                              <div className="word-card-meaning">{combinedMeaning}</div>
-                            )}
+            {/* 選択された文の読解エリア */}
+            {selectedSentenceIndex !== null && selectedSentenceDetails && (
+              <div className="selected-sentence-analysis mt-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h4 className="m-0 text-lg font-semibold">
+                    📝 選択した文の読解
+                  </h4>
+                  <div className="flex gap-2">
+                    <button
+                      className="px-3 py-1 text-sm bg-primary text-white rounded hover:bg-primary-hover"
+                      onClick={() => speakEnglish(selectedSentenceDetails.text)}
+                      title="この文を発音"
+                    >
+                      🔊 発音
+                    </button>
+                    <button
+                      className="px-3 py-1 text-sm bg-info text-white rounded hover:bg-info-hover"
+                      onClick={() => setSelectedSentenceDetails({
+                        ...selectedSentenceDetails,
+                        showMeanings: !selectedSentenceDetails.showMeanings
+                      })}
+                    >
+                      {selectedSentenceDetails.showMeanings ? '意味を隠す' : '意味を表示'}
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="selected-sentence-text mb-4">
+                  {selectedSentenceDetails.text}
+                </div>
+                
+                {/* 文法構造の表示 */}
+                <div className="grammar-structure mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <h5 className="text-sm font-semibold m-0">🔤 文法構造:</h5>
+                    <button
+                      className="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+                      onClick={() => setShowGrammarLegend(!showGrammarLegend)}
+                    >
+                      {showGrammarLegend ? '凡例を隠す' : '凡例を表示'}
+                    </button>
+                  </div>
+                  
+                  {/* 文法タグの凡例 */}
+                  {showGrammarLegend && (
+                    <div className="grammar-legend mb-3 p-3 bg-gray-50 dark:bg-gray-800 rounded">
+                      <div className="flex justify-between items-center mb-2">
+                        <h6 className="text-xs font-semibold m-0">📖 文法タグ一覧</h6>
+                        <button
+                          className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded hover:bg-blue-200 dark:hover:bg-blue-800"
+                          onClick={() => setShowDetailedExplanation(!showDetailedExplanation)}
+                        >
+                          {showDetailedExplanation ? '簡易表示' : '📚 さらに詳しく'}
+                        </button>
+                      </div>
+                      
+                      {!showDetailedExplanation ? (
+                        <div className="grid grid-cols-2 gap-2 text-xs">
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="S"><span className="grammar-tag-label" data-tag="S">[S]</span></span>
+                            <span>主語 (Subject)</span>
                           </div>
-                        );
-                      } else {
-                        // 単語カード
-                        const segment = group.segments[0];
-                        
-                        // 空の単語をスキップ
-                        if (!segment || !segment.word || segment.word.trim() === '') {
-                          return null;
-                        }
-                        
-                        const segIdx = phrase.segments.findIndex(s => s === segment);
-                        const isPunctuation = /^[.,!?;:]$/.test(segment.word);
-                        
-                        // 句読点の場合
-                        if (isPunctuation) {
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="V"><span className="grammar-tag-label" data-tag="V">[V]</span></span>
+                            <span>動詞 (Verb)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="O"><span className="grammar-tag-label" data-tag="O">[O]</span></span>
+                            <span>目的語 (Object)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="C"><span className="grammar-tag-label" data-tag="C">[C]</span></span>
+                            <span>補語 (Complement)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="M"><span className="grammar-tag-label" data-tag="M">[M]</span></span>
+                            <span>修飾語 (Modifier)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="Prep"><span className="grammar-tag-label" data-tag="Prep">[Prep]</span></span>
+                            <span>前置詞 (Preposition)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="Conj"><span className="grammar-tag-label" data-tag="Conj">[Conj]</span></span>
+                            <span>接続詞 (Conjunction)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="Det"><span className="grammar-tag-label" data-tag="Det">[Det]</span></span>
+                            <span>限定詞 (Determiner)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="Adj"><span className="grammar-tag-label" data-tag="Adj">[Adj]</span></span>
+                            <span>形容詞 (Adjective)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="Adv"><span className="grammar-tag-label" data-tag="Adv">[Adv]</span></span>
+                            <span>副詞 (Adverb)</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="grammar-tag" data-tag="Unknown"><span className="grammar-tag-label" data-tag="Unknown">[?]</span></span>
+                            <span>その他</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="detailed-grammar-explanation text-xs space-y-3">
+                          <div className="explanation-section">
+                            <h6 className="font-semibold text-sm mb-2">🎯 文の骨格 (必須要素)</h6>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="S"><span className="grammar-tag-label" data-tag="S">[S]</span></span>
+                                <strong>主語 (Subject)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>「誰が」「何が」</strong>を表す。文の主役。<br/>
+                                例: <em>I</em> study English. / <em>The cat</em> is cute.
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="V"><span className="grammar-tag-label" data-tag="V">[V]</span></span>
+                                <strong>動詞 (Verb)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>「〜する」「〜である」</strong>を表す。主語の動作や状態。<br/>
+                                例: I <em>study</em> English. / The cat <em>is</em> cute.
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="O"><span className="grammar-tag-label" data-tag="O">[O]</span></span>
+                                <strong>目的語 (Object)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>「何を」「誰を」</strong>を表す。動詞の対象。<br/>
+                                例: I study <em>English</em>. / I like <em>cats</em>.
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="C"><span className="grammar-tag-label" data-tag="C">[C]</span></span>
+                                <strong>補語 (Complement)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>「どうである」「何である」</strong>を表す。主語や目的語の状態・性質。<br/>
+                                例: The cat is <em>cute</em>. / I am <em>a student</em>.
+                              </p>
+                            </div>
+                          </div>
+                          
+                          <div className="explanation-section">
+                            <h6 className="font-semibold text-sm mb-2">✨ 文を詳しくする要素</h6>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="M"><span className="grammar-tag-label" data-tag="M">[M]</span></span>
+                                <strong>修飾語 (Modifier)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>「どんな」「どのように」「いつ」「どこで」</strong>を表す。文を豊かにする。<br/>
+                                例: I wake up at <em>seven</em>. / I read a <em>good</em> book.
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="Adj"><span className="grammar-tag-label" data-tag="Adj">[Adj]</span></span>
+                                <strong>形容詞 (Adjective)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>名詞を詳しく説明</strong>する語。<br/>
+                                例: a <em>beautiful</em> flower / <em>happy</em> students
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="Adv"><span className="grammar-tag-label" data-tag="Adv">[Adv]</span></span>
+                                <strong>副詞 (Adverb)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>動詞・形容詞・副詞を詳しく説明</strong>する語。<br/>
+                                例: run <em>quickly</em> / <em>very</em> happy / <em>always</em> study
+                              </p>
+                            </div>
+                          </div>
+                          
+                          <div className="explanation-section">
+                            <h6 className="font-semibold text-sm mb-2">🔗 つなぐ・限定する要素</h6>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="Prep"><span className="grammar-tag-label" data-tag="Prep">[Prep]</span></span>
+                                <strong>前置詞 (Preposition)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>名詞の前に置いて場所・時間・方法</strong>などを示す。<br/>
+                                例: <em>at</em> school / <em>in</em> the morning / <em>with</em> friends
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="Conj"><span className="grammar-tag-label" data-tag="Conj">[Conj]</span></span>
+                                <strong>接続詞 (Conjunction)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>語・句・文をつなぐ</strong>語。<br/>
+                                例: I <em>and</em> you / study <em>but</em> tired / <em>because</em> I like it
+                              </p>
+                            </div>
+                            
+                            <div className="explanation-item mb-2">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="grammar-tag" data-tag="Det"><span className="grammar-tag-label" data-tag="Det">[Det]</span></span>
+                                <strong>限定詞 (Determiner)</strong>
+                              </div>
+                              <p className="ml-6 text-gray-600 dark:text-gray-400">
+                                <strong>名詞の範囲・数量を限定</strong>する語。冠詞・指示詞・数量詞など。<br/>
+                                例: <em>the</em> book / <em>my</em> cat / <em>every</em> day / <em>some</em> water
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {selectedSentenceDetails.grammarAnalysis
+                      .filter(a => !/^[.,!?;:\-—–"'()]$/.test(a.word))
+                      .map((analysis, idx) => (
+                      <div
+                        key={idx}
+                        className="grammar-tag"
+                        data-tag={analysis.tag}
+                        title={analysis.description}
+                      >
+                        <span className="font-semibold">{analysis.word}</span>
+                        <span className="ml-1 text-xs grammar-tag-label" data-tag={analysis.tag}>
+                          [{analysis.tag}]
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* 句読点・記号の意味 */}
+                  {selectedSentenceDetails.grammarAnalysis.some(a => /^[.,!?;:\-—–"'()]$/.test(a.word)) && (
+                    <div className="mt-3">
+                      <h6 className="text-xs font-semibold mb-2 text-gray-600 dark:text-gray-400">📌 記号の意味:</h6>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedSentenceDetails.grammarAnalysis
+                          .filter(a => /^[.,!?;:\-—–"'()]$/.test(a.word))
+                          .map((analysis, idx) => (
+                            <div
+                              key={idx}
+                              className="punctuation-card"
+                              title={analysis.description}
+                            >
+                              <span className="font-bold text-lg">{analysis.word}</span>
+                              <span className="ml-2 text-xs text-gray-600 dark:text-gray-400">{analysis.description}</span>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* 句動詞・慣用表現 */}
+                {(() => {
+                  const words = selectedSentenceDetails.grammarAnalysis.map(a => a.word);
+                  const phrasalExpressions = detectPhrasalExpressions(words);
+                  
+                  if (phrasalExpressions.length === 0) return null;
+                  
+                  return (
+                    <div className="phrasal-expressions-section mt-4">
+                      <h5 className="text-sm font-semibold mb-2">🔗 熟語:</h5>
+                      <div className="space-y-2">
+                        {phrasalExpressions.map((expr: PhrasalExpression, idx: number) => (
+                          <div key={idx} className="phrasal-expression-card">
+                            <div className="phrasal-expression-words">
+                              {expr.words.map((word, widx) => {
+                                const meaning = getMeaning(word, undefined);
+                                return (
+                                  <div key={widx} className="phrasal-word-item">
+                                    <div className="phrasal-word">{word}</div>
+                                    <div className="phrasal-word-meaning">{meaning || '-'}</div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                            <div className="phrasal-expression-divider">
+                              <div className="phrasal-divider-line"></div>
+                              <div className="phrasal-type-label">熟語</div>
+                            </div>
+                            <div className="phrasal-expression-meaning">
+                              {expr.meaning}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
+                
+                {/* 構文パターン */}
+                {(() => {
+                  const patterns = detectGrammarPatterns(selectedSentenceDetails.text);
+                  
+                  if (patterns.length === 0) return null;
+                  
+                  return (
+                    <div className="grammar-patterns-section mt-4">
+                      <h5 className="text-sm font-semibold mb-2">📐 重要構文:</h5>
+                      <div className="space-y-2">
+                        {patterns.map((pattern: GrammarPattern, idx: number) => (
+                          <div key={idx} className="grammar-pattern-card">
+                            <div className="pattern-header">
+                              <div className="pattern-name">{pattern.name}</div>
+                              <div className="pattern-meaning">{pattern.meaning}</div>
+                            </div>
+                            <div className="pattern-sentence">
+                              {selectedSentenceDetails.text}
+                            </div>
+                            <div className="pattern-explanation">
+                              💡 {pattern.explanation}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
+                
+                {/* 単語カード形式の詳細表示 */}
+                {selectedSentenceDetails.showMeanings && (
+                  <div className="word-cards-container">
+                    <h5 className="text-sm font-semibold mb-2">📚 単語の意味:</h5>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedSentenceDetails.grammarAnalysis
+                        .filter(a => !/^[.,!?;:\-—–"'()]$/.test(a.word))
+                        .map((analysis, idx) => {
+                          const meaning = getMeaning(analysis.word, undefined);
                           return (
                             <div
-                              key={`group-${groupIdx}`}
-                              className="word-card punctuation-card"
+                              key={idx}
+                              className="word-card"
+                              onDoubleClick={(e) => handleWordDoubleClick(analysis.word, e)}
+                              title="ダブルタップ: 詳細表示"
                             >
-                              <div className="word-card-word">{segment.word}</div>
+                              <div className="word-card-word">{analysis.word}</div>
+                              {meaning && meaning !== '-' && (
+                                <div className="word-card-meaning text-xs">{meaning}</div>
+                              )}
                             </div>
                           );
-                        }
-                        
-                        // 通常の単語カード
-                        const meaning = getMeaning(segment.word, segment.meaning);
-
-                        return (
-                          <div
-                            key={`group-${groupIdx}`}
-                            className={`word-card ${segment.isUnknown ? 'unknown' : ''}`}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              handleMarkUnknown(phraseIdx, segIdx, e);
-                              return false;
-                            }}
-                            onDoubleClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              handleWordDoubleClick(segment.word, e);
-                              return false;
-                            }}
-                            title="タップ: 保存対象マーク / ダブルタップ: 詳細表示"
-                          >
-                            <div className="word-card-word">
-                              {segment.word}
-                            </div>
-                            {wordMeaningsVisible[phraseIdx] && meaning && meaning !== '-' && (
-                              <div className="word-card-meaning">{meaning}</div>
-                            )}
-                          </div>
-                        );
-                      }
-                    }).filter(Boolean);
-                  })()}
-                </div>
-
-                {/* 和訳（表示/非表示） */}
-                {phraseTranslations[phraseIdx] && (
-                  <div className="phrase-translation visible">
-                    <div className="translation-text">{phrase.phraseMeaning}</div>
+                        })}
+                    </div>
                   </div>
                 )}
-                
-                <div className="flex gap-2">
-                  <button
-                    className="flex-1 px-4 py-3 text-sm font-medium bg-gray-300 text-gray-700 border-2 border-gray-300 rounded-lg transition-all duration-200 hover:bg-gray-400 hover:shadow-md dark:bg-gray-600 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-500"
-                    onClick={() => handleShowPhraseTranslation(phraseIdx, 'backward')}
-                  >
-                    ◀ 戻る
-                  </button>
-                  <button
-                    className="flex-1 px-4 py-3 text-sm font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
-                    onClick={() => handleShowPhraseTranslation(phraseIdx, 'forward')}
-                  >
-                    {!wordMeaningsVisible[phraseIdx] && '単語の意味を表示 ▶'}
-                    {wordMeaningsVisible[phraseIdx] && !phraseTranslations[phraseIdx] && 'フレーズの意味を表示 ▶'}
-                  </button>
-                </div>
               </div>
-            );
-            })}
-          </div>
+            )}
           </>
           )}
 
@@ -1235,6 +1605,15 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
               </div>
               <div className="full-text-content">
                 {(() => {
+                  // originalTextが存在する場合はそれを使用
+                  if (currentPassage.originalText) {
+                    return (
+                      <div className="paragraph-en">
+                        {currentPassage.originalText}
+                      </div>
+                    );
+                  }
+                  
                   // パッセージのタイトルで判別: "Daily Conversation"を含む場合は会話形式として処理
                   const isConversation = currentPassage.title.toLowerCase().includes('conversation');
                   
@@ -1332,13 +1711,114 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                       paragraphs.push(currentParagraph.join(' '));
                     }
 
+                    // 文ごとにクリック可能にする
+                    const allSentences = reconstructedSentences;
+                    
+                    // 文をクリックしたときの処理
+                    const handleSentenceClick = (idx: number) => {
+                      setSelectedSentenceIndex(idx);
+                      const sentence = allSentences[idx];
+                      const grammarAnalysis = analyzeSentence(sentence);
+                      setSelectedSentenceDetails({
+                        text: sentence,
+                        grammarAnalysis,
+                        showMeanings: false
+                      });
+                    };
+                    
                     return (
                       <div>
-                        {paragraphs.map((para, idx) => (
-                          <p key={idx} className="paragraph-en">
-                            {para}
-                          </p>
-                        ))}
+                        <div className="sentences-container">
+                          {allSentences.map((sentence, idx) => (
+                            <span
+                              key={idx}
+                              className={`sentence-clickable ${selectedSentenceIndex === idx ? 'selected' : ''}`}
+                              onClick={() => handleSentenceClick(idx)}
+                            >
+                              {sentence}{' '}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        {/* 選択された文の読解エリア */}
+                        {selectedSentenceIndex !== null && selectedSentenceDetails && (
+                          <div className="selected-sentence-analysis">
+                            <div className="flex justify-between items-center mb-4">
+                              <h4 className="m-0">
+                                📖 選択した文の読解
+                              </h4>
+                              <div className="flex gap-2">
+                                <button
+                                  className="px-3 py-1 text-sm bg-primary text-white rounded hover:bg-primary-hover"
+                                  onClick={() => speakEnglish(selectedSentenceDetails.text)}
+                                  title="この文を発音"
+                                >
+                                  🔊 発音
+                                </button>
+                                <button
+                                  className="px-3 py-1 text-sm bg-info text-white rounded hover:bg-info-hover"
+                                  onClick={() => setSelectedSentenceDetails({
+                                    ...selectedSentenceDetails,
+                                    showMeanings: !selectedSentenceDetails.showMeanings
+                                  })}
+                                >
+                                  {selectedSentenceDetails.showMeanings ? '意味を隠す' : '意味を表示'}
+                                </button>
+                              </div>
+                            </div>
+                            
+                            <div className="selected-sentence-text">
+                              {selectedSentenceDetails.text}
+                            </div>
+                            
+                            {/* 文法構造の表示 */}
+                            <div className="grammar-structure mt-4">
+                              <h5 className="text-sm font-semibold mb-2">🔤 文法構造:</h5>
+                              <div className="flex flex-wrap gap-2">
+                                {selectedSentenceDetails.grammarAnalysis.map((analysis, idx) => (
+                                  <div
+                                    key={idx}
+                                    className="grammar-tag"
+                                    data-tag={analysis.tag}
+                                    title={analysis.description}
+                                  >
+                                    <span className="font-semibold">{analysis.word}</span>
+                                    <span className="ml-1 text-xs grammar-tag-label" data-tag={analysis.tag}>
+                                      [{analysis.tag}]
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                            
+                            {/* 単語カード形式の詳細表示 */}
+                            {selectedSentenceDetails.showMeanings && (
+                              <div className="word-cards-container mt-4">
+                                <h5 className="text-sm font-semibold mb-2">📚 単語の意味:</h5>
+                                <div className="flex flex-wrap gap-2">
+                                  {selectedSentenceDetails.grammarAnalysis
+                                    .filter(a => !/^[.,!?;:]$/.test(a.word))
+                                    .map((analysis, idx) => {
+                                      const meaning = getMeaning(analysis.word, undefined);
+                                      return (
+                                        <div
+                                          key={idx}
+                                          className="word-card"
+                                          onDoubleClick={(e) => handleWordDoubleClick(analysis.word, e)}
+                                          title="ダブルタップ: 詳細表示"
+                                        >
+                                          <div className="word-card-word">{analysis.word}</div>
+                                          {meaning && meaning !== '-' && (
+                                            <div className="word-card-meaning text-xs">{meaning}</div>
+                                          )}
+                                        </div>
+                                      );
+                                    })}
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     );
                   }
@@ -1454,6 +1934,13 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .comprehensive-reading-view {
+            padding: 15px;
+          }
         }
 
         .reading-header {
