@@ -49,31 +49,31 @@ function extractTitleFromPath(filePath: string): string {
 // titleはファイルパスから自動抽出される
 const PASSAGE_FILES_RAW = [
   // Beginner (5 passages)
-  { id: 'beginner-supermarket-shopping', level: 'beginner', topic: 'daily-life', wordCount: 1200, filePath: '/data/passages-for-phrase-work/beginner_1200_Shopping-at-the-Supermarket.txt' },
-  { id: 'beginner-cafe-menu', level: 'beginner', topic: 'food-culture', wordCount: 1150, filePath: '/data/passages-for-phrase-work/beginner_1150_A-Day-at-the-Cafe.txt' },
-  { id: 'beginner-conversation-daily', level: 'beginner', topic: 'communication', wordCount: 1100, filePath: '/data/passages-for-phrase-work/beginner_1100_Daily-Conversations.txt' },
-  { id: 'beginner-weather-seasons', level: 'beginner', topic: 'nature', wordCount: 1250, filePath: '/data/passages-for-phrase-work/beginner_1250_Weather-and-Seasons.txt' },
-  { id: 'beginner-wildlife-park-guide', level: 'beginner', topic: 'animals', wordCount: 1100, filePath: '/data/passages-for-phrase-work/beginner_1100_Wildlife-Park-Guide.txt' },
+  { id: 'beginner-supermarket-shopping', level: 'beginner', topic: 'daily-life', wordCount: 1910, filePath: '/data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket.txt' },
+  { id: 'beginner-cafe-menu', level: 'beginner', topic: 'food-culture', wordCount: 1380, filePath: '/data/passages-for-phrase-work/beginner_1380_A-Day-at-the-Cafe.txt' },
+  { id: 'beginner-conversation-daily', level: 'beginner', topic: 'communication', wordCount: 3018, filePath: '/data/passages-for-phrase-work/beginner_3018_Daily-Conversations.txt' },
+  { id: 'beginner-weather-seasons', level: 'beginner', topic: 'nature', wordCount: 2111, filePath: '/data/passages-for-phrase-work/beginner_2111_Weather-and-Seasons.txt' },
+  { id: 'beginner-wildlife-park-guide', level: 'beginner', topic: 'animals', wordCount: 2097, filePath: '/data/passages-for-phrase-work/beginner_2097_Wildlife-Park-Guide.txt' },
   
   // Intermediate (8 passages)
-  { id: 'intermediate-exchange-student-australia', level: 'intermediate', topic: 'culture-exchange', wordCount: 3238, filePath: '/data/passages-for-phrase-work/intermediate_3238_Exchange-Student-in-Australia.txt' },
-  { id: 'intermediate-homestay-america', level: 'intermediate', topic: 'culture-exchange', wordCount: 3228, filePath: '/data/passages-for-phrase-work/intermediate_3228_Homestay-in-America.txt' },
-  { id: 'intermediate-career-day', level: 'intermediate', topic: 'education-career', wordCount: 2953, filePath: '/data/passages-for-phrase-work/intermediate_2953_Career-Day-at-School.txt' },
-  { id: 'intermediate-hospital-visit', level: 'intermediate', topic: 'health', wordCount: 2809, filePath: '/data/passages-for-phrase-work/intermediate_2809_A-Visit-to-the-Hospital.txt' },
-  { id: 'intermediate-science-museum', level: 'intermediate', topic: 'science-education', wordCount: 3295, filePath: '/data/passages-for-phrase-work/intermediate_3295_Science-Museum-Experience.txt' },
-  { id: 'intermediate-community-events', level: 'intermediate', topic: 'community', wordCount: 2313, filePath: '/data/passages-for-phrase-work/intermediate_2313_Community-Events.txt' },
-  { id: 'intermediate-school-events-year', level: 'intermediate', topic: 'school-life', wordCount: 2601, filePath: '/data/passages-for-phrase-work/intermediate_2601_A-Year-of-School-Events.txt' },
-  { id: 'intermediate-school-news', level: 'intermediate', topic: 'school-life', wordCount: 2142, filePath: '/data/passages-for-phrase-work/intermediate_2142_School-News.txt' },
+  { id: 'intermediate-exchange-student-australia', level: 'intermediate', topic: 'culture-exchange', wordCount: 3199, filePath: '/data/passages-for-phrase-work/intermediate_3199_Exchange-Student-in-Australia.txt' },
+  { id: 'intermediate-homestay-america', level: 'intermediate', topic: 'culture-exchange', wordCount: 3148, filePath: '/data/passages-for-phrase-work/intermediate_3148_Homestay-in-America.txt' },
+  { id: 'intermediate-career-day', level: 'intermediate', topic: 'education-career', wordCount: 2895, filePath: '/data/passages-for-phrase-work/intermediate_2895_Career-Day-at-School.txt' },
+  { id: 'intermediate-hospital-visit', level: 'intermediate', topic: 'health', wordCount: 2721, filePath: '/data/passages-for-phrase-work/intermediate_2721_A-Visit-to-the-Hospital.txt' },
+  { id: 'intermediate-science-museum', level: 'intermediate', topic: 'science-education', wordCount: 3265, filePath: '/data/passages-for-phrase-work/intermediate_3265_Science-Museum-Experience.txt' },
+  { id: 'intermediate-community-events', level: 'intermediate', topic: 'community', wordCount: 2216, filePath: '/data/passages-for-phrase-work/intermediate_2216_Community-Events.txt' },
+  { id: 'intermediate-school-events-year', level: 'intermediate', topic: 'school-life', wordCount: 2558, filePath: '/data/passages-for-phrase-work/intermediate_2558_A-Year-of-School-Events.txt' },
+  { id: 'intermediate-school-news', level: 'intermediate', topic: 'school-life', wordCount: 1937, filePath: '/data/passages-for-phrase-work/intermediate_1937_School-News.txt' },
   
   // Advanced (8 passages)
-  { id: 'advanced-environmental-issues', level: 'advanced', topic: 'environment', wordCount: 4200, filePath: '/data/passages-for-phrase-work/advanced_4200_Environmental-Issues-and-Solutions.txt' },
-  { id: 'advanced-family-gathering', level: 'advanced', topic: 'culture-family', wordCount: 4400, filePath: '/data/passages-for-phrase-work/advanced_4400_Family-Gathering-Traditions.txt' },
-  { id: 'advanced-health-statistics', level: 'advanced', topic: 'health-data', wordCount: 3400, filePath: '/data/passages-for-phrase-work/advanced_3400_Health-Statistics-Analysis.txt' },
-  { id: 'advanced-historical-figures', level: 'advanced', topic: 'history', wordCount: 3150, filePath: '/data/passages-for-phrase-work/advanced_3150_Historical-Figures-Study.txt' },
-  { id: 'advanced-international-exchange', level: 'advanced', topic: 'culture-global', wordCount: 3500, filePath: '/data/passages-for-phrase-work/advanced_3500_Cultural-Exchange-Insights.txt' },
-  { id: 'advanced-school-festival', level: 'advanced', topic: 'school-events', wordCount: 3700, filePath: '/data/passages-for-phrase-work/advanced_3700_School-Festival-Planning.txt' },
-  { id: 'advanced-summer-vacation-stories', level: 'advanced', topic: 'personal-growth', wordCount: 3300, filePath: '/data/passages-for-phrase-work/advanced_3300_Summer-Vacation-Stories.txt' },
-  { id: 'advanced-technology-future', level: 'advanced', topic: 'technology-innovation', wordCount: 3800, filePath: '/data/passages-for-phrase-work/advanced_3800_Technology-and-Future.txt' },
+  { id: 'advanced-environmental-issues', level: 'advanced', topic: 'environment', wordCount: 4263, filePath: '/data/passages-for-phrase-work/advanced_4263_Environmental-Issues-and-Solutions.txt' },
+  { id: 'advanced-family-gathering', level: 'advanced', topic: 'culture-family', wordCount: 4493, filePath: '/data/passages-for-phrase-work/advanced_4493_Family-Gathering-Traditions.txt' },
+  { id: 'advanced-health-statistics', level: 'advanced', topic: 'health-data', wordCount: 3422, filePath: '/data/passages-for-phrase-work/advanced_3422_Health-Statistics-Analysis.txt' },
+  { id: 'advanced-historical-figures', level: 'advanced', topic: 'history', wordCount: 3115, filePath: '/data/passages-for-phrase-work/advanced_3115_Historical-Figures-Study.txt' },
+  { id: 'advanced-international-exchange', level: 'advanced', topic: 'culture-global', wordCount: 3813, filePath: '/data/passages-for-phrase-work/advanced_3813_Cultural-Exchange-Insights.txt' },
+  { id: 'advanced-school-festival', level: 'advanced', topic: 'school-events', wordCount: 4419, filePath: '/data/passages-for-phrase-work/advanced_4419_School-Festival-Planning.txt' },
+  { id: 'advanced-summer-vacation-stories', level: 'advanced', topic: 'personal-growth', wordCount: 3255, filePath: '/data/passages-for-phrase-work/advanced_3255_Summer-Vacation-Stories.txt' },
+  { id: 'advanced-technology-future', level: 'advanced', topic: 'technology-innovation', wordCount: 3161, filePath: '/data/passages-for-phrase-work/advanced_3161_Technology-and-Future.txt' },
 ] as const;
 
 // ファイルパスからtitleを自動生成
