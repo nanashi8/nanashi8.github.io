@@ -5,6 +5,7 @@
 @import './styles/components/choices.css';
 @import './styles/components/modals.css';
 @import './styles/components/quiz-common.css';
+@import './styles/components/spelling-view.css';
 
 /* レイアウト */
 @import './styles/layout/containers.css';
@@ -1063,4 +1064,606 @@
 .dark-mode .update-info code {
   background: var(--gray-700);
   color: var(--gray-300);
+}
+
+/* ============================================
+   全文読解 - 文選択スタイル
+   ============================================ */
+.sentences-container {
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+.sentence-clickable {
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.sentence-clickable:hover {
+  background-color: #f0f0f0;
+}
+
+.sentence-clickable.selected {
+  background-color: #e3f2fd;
+}
+
+.sentence-clickable.selected-reading {
+  background-color: #fff9c4;
+  font-weight: 500;
+}
+
+.dark-mode .sentence-clickable:hover {
+  background-color: var(--gray-700);
+}
+
+.dark-mode .sentence-clickable.selected {
+  background-color: #1565c0;
+  color: white;
+}
+
+.dark-mode .sentence-clickable.selected-reading {
+  background-color: #f57f17;
+  color: white;
+}
+
+.selected-sentence-analysis {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #2196f3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.dark-mode .selected-sentence-analysis {
+  background-color: var(--gray-800);
+  border-color: #1976d2;
+}
+
+.selected-sentence-analysis h4 {
+  margin-bottom: 15px;
+  color: #1976d2;
+}
+
+.dark-mode .selected-sentence-analysis h4 {
+  color: #64b5f6;
+}
+
+.selected-sentence-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.dark-mode .selected-sentence-text {
+  background-color: var(--gray-700);
+  color: var(--gray-100);
+}
+
+.selected-sentence-note {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+.dark-mode .selected-sentence-note {
+  color: var(--gray-400);
+}
+
+/* ============================================
+   文法構造表示スタイル
+   ============================================ */
+.grammar-structure {
+  margin-top: 0.5rem;
+}
+
+.grammar-tag {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border-left-width: 3px;
+  border-left-style: solid;
+}
+
+/* 文法タグの色設定 */
+.grammar-tag[data-tag="S"] { background-color: #3b82f620; border-left-color: #3b82f6; }
+.grammar-tag[data-tag="V"] { background-color: #ef444420; border-left-color: #ef4444; }
+.grammar-tag[data-tag="O"] { background-color: #10b98120; border-left-color: #10b981; }
+.grammar-tag[data-tag="C"] { background-color: #f59e0b20; border-left-color: #f59e0b; }
+.grammar-tag[data-tag="M"] { background-color: #8b5cf620; border-left-color: #8b5cf6; }
+.grammar-tag[data-tag="Prep"] { background-color: #6366f120; border-left-color: #6366f1; }
+.grammar-tag[data-tag="Conj"] { background-color: #ec489920; border-left-color: #ec4899; }
+.grammar-tag[data-tag="Det"] { background-color: #14b8a620; border-left-color: #14b8a6; }
+.grammar-tag[data-tag="Adj"] { background-color: #f9731620; border-left-color: #f97316; }
+.grammar-tag[data-tag="Adv"] { background-color: #a855f720; border-left-color: #a855f7; }
+.grammar-tag[data-tag="Unknown"] { background-color: #6b728020; border-left-color: #6b7280; }
+
+.grammar-tag-label[data-tag="S"] { color: #3b82f6; }
+.grammar-tag-label[data-tag="V"] { color: #ef4444; }
+.grammar-tag-label[data-tag="O"] { color: #10b981; }
+.grammar-tag-label[data-tag="C"] { color: #f59e0b; }
+.grammar-tag-label[data-tag="M"] { color: #8b5cf6; }
+.grammar-tag-label[data-tag="Prep"] { color: #6366f1; }
+.grammar-tag-label[data-tag="Conj"] { color: #ec4899; }
+.grammar-tag-label[data-tag="Det"] { color: #14b8a6; }
+.grammar-tag-label[data-tag="Adj"] { color: #f97316; }
+.grammar-tag-label[data-tag="Adv"] { color: #a855f7; }
+.grammar-tag-label[data-tag="Unknown"] { color: #6b7280; }
+
+.grammar-tag-label {
+  margin-left: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* 詳しい文法説明 */
+.detailed-grammar-explanation {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.explanation-section {
+  padding: 0.75rem;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.dark-mode .explanation-section {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.explanation-item p {
+  line-height: 1.6;
+}
+
+.explanation-item em {
+  font-weight: 600;
+  color: #1f2937;
+  font-style: normal;
+}
+
+.dark-mode .explanation-item em {
+  color: #f9fafb;
+}
+
+/* 単語カードコンテナ */
+.word-cards-container {
+  margin-top: 1rem;
+}
+
+.word-cards-container .word-card {
+  min-width: 80px;
+}
+
+/* 句読点カード */
+.punctuation-card {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  border-left: 3px solid #6b7280;
+}
+
+.dark-mode .punctuation-card {
+  background-color: #374151;
+}
+
+.punctuation-card .font-bold {
+  color: #1f2937;
+}
+
+.dark-mode .punctuation-card .font-bold {
+  color: #f9fafb;
+}
+
+/* 熟語カード */
+.phrasal-expressions-section {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+}
+
+.dark-mode .phrasal-expressions-section {
+  background-color: #451a03;
+  border-left-color: #f59e0b;
+}
+
+.phrasal-expression-card {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #fbbf24;
+}
+
+.dark-mode .phrasal-expression-card {
+  background-color: #78350f;
+  border-color: #92400e;
+}
+
+.phrasal-expression-words {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.phrasal-word-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: #fef3c7;
+  border-radius: 4px;
+}
+
+.dark-mode .phrasal-word-item {
+  background-color: #92400e;
+}
+
+.phrasal-word {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 0.15rem;
+}
+
+.dark-mode .phrasal-word {
+  color: #fef3c7;
+}
+
+.phrasal-word-meaning {
+  font-size: 0.7rem;
+  color: #78350f;
+}
+
+.dark-mode .phrasal-word-meaning {
+  color: #fde68a;
+}
+
+.phrasal-expression-divider {
+  position: relative;
+  margin: 0.4rem 0;
+  text-align: center;
+}
+
+.phrasal-divider-line {
+  border-top: 2px dashed #fbbf24;
+}
+
+.dark-mode .phrasal-divider-line {
+  border-top-color: #d97706;
+}
+
+.phrasal-type-label {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  background-color: #f59e0b;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: -0.5rem;
+}
+
+.phrasal-expression-meaning {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #92400e;
+  padding: 0.3rem;
+  background-color: #fffbeb;
+  border-radius: 4px;
+}
+
+.dark-mode .phrasal-expression-meaning {
+  color: #fef3c7;
+  background-color: #451a03;
+}
+
+/* 構文パターンカード */
+.grammar-patterns-section {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #dbeafe;
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+}
+
+.dark-mode .grammar-patterns-section {
+  background-color: #1e3a8a;
+  border-left-color: #60a5fa;
+}
+
+.grammar-pattern-card {
+  background-color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #93c5fd;
+}
+
+.dark-mode .grammar-pattern-card {
+  background-color: #1e40af;
+  border-color: #3b82f6;
+}
+
+.pattern-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #bfdbfe;
+}
+
+.dark-mode .pattern-header {
+  border-bottom-color: #3b82f6;
+}
+
+.pattern-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.dark-mode .pattern-name {
+  color: #bfdbfe;
+}
+
+.pattern-meaning {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3b82f6;
+  background-color: #eff6ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.dark-mode .pattern-meaning {
+  color: #dbeafe;
+  background-color: #1e3a8a;
+}
+
+.pattern-sentence {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1f2937;
+  padding: 0.5rem;
+  background-color: #f0f9ff;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.dark-mode .pattern-sentence {
+  color: #f3f4f6;
+  background-color: #1e3a8a;
+  border-left-color: #60a5fa;
+}
+
+.pattern-explanation {
+  font-size: 0.75rem;
+  color: #4b5563;
+  line-height: 1.5;
+  padding: 0.4rem;
+  background-color: #f9fafb;
+  border-radius: 4px;
+}
+
+.dark-mode .pattern-explanation {
+  color: #d1d5db;
+  background-color: #374151;
+}
+
+/* フレックスユーティリティ */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.dark-mode .text-gray-400 {
+  color: #9ca3af;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe;
+}
+
+.bg-blue-200:hover,
+.hover\:bg-blue-200:hover {
+  background-color: #bfdbfe;
+}
+
+.dark-mode .bg-blue-900 {
+  background-color: #1e3a8a;
+}
+
+.dark-mode .hover\:bg-blue-800:hover {
+  background-color: #1e40af;
+}
+
+.text-blue-700 {
+  color: #1d4ed8;
+}
+
+.dark-mode .text-blue-200 {
+  color: #bfdbfe;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+.bg-gray-200:hover,
+.hover\:bg-gray-300:hover {
+  background-color: #d1d5db;
+}
+
+.dark-mode .bg-gray-700 {
+  background-color: #374151;
+}
+
+.dark-mode .hover\:bg-gray-600:hover {
+  background-color: #4b5563;
+}
+
+.dark-mode .bg-gray-800 {
+  background-color: #1f2937;
+}
+
+/* ============================================
+   読解タブ - 全文表示エリア
+   ============================================ */
+.reading-full-text-area {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.dark-mode .reading-full-text-area {
+  background-color: var(--gray-800);
+}
+
+.reading-full-text-area h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.dark-mode .reading-full-text-area h4 {
+  color: #64b5f6;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
 }

@@ -1,0 +1,1219 @@
+{
+  "id": "beginner_50_Morning-Routine",
+  "title": "Title: My Morning Routine",
+  "level": "beginner",
+  "theme": "日常生活・朝のルーティン",
+  "actualWordCount": 59,
+  "phrases": [
+    {
+      "id": 1,
+      "english": "Title: My Morning Routine\nLevel: Beginner\nWord Count: 50",
+      "japanese": "私は起きます",
+      "phraseMeaning": "私は起きます",
+      "segments": [
+        {
+          "word": "Title",
+          "meaning": {
+            "word": "title",
+            "reading": "",
+            "meaning": "題名・称号",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "intermediate-csv",
+            "passages": [
+              "advanced-technology-future"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ":",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "My",
+          "meaning": {
+            "word": "my",
+            "reading": "マ́イ",
+            "meaning": "私の",
+            "etymology": "古英語 \"min\"。派生: mine(マ́イン): 私のもの",
+            "relatedWords": "I(ア́イ): 私は, me(ミー): 私を",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Morning",
+          "meaning": {
+            "word": "morning",
+            "reading": "モ́ーニング",
+            "meaning": "朝",
+            "etymology": "中英語 \"morwening\"。【形態素】語幹: morn + -ing（現在分詞・動名詞）。派生: good morning(グッドモ́ーニング): おはよう / morning sickness(モ́ーニングシックネス): つわり",
+            "relatedWords": "afternoon(アフタヌ́ーン): 午後, evening(イ́ーヴニング): 夕方",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Routine",
+          "meaning": {
+            "word": "routine",
+            "reading": "",
+            "meaning": "保証しました",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "auto",
+            "passages": [
+              "intermediate-career-day",
+              "beginner-conversation-daily",
+              "intermediate-homestay-america",
+              "advanced-technology-future",
+              "beginner-supermarket-shopping",
+              "intermediate-hospital-visit"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Level",
+          "meaning": {
+            "word": "level",
+            "reading": "レ́ベル",
+            "meaning": "水準・平らな",
+            "etymology": "ラテン語 \"libella\"(水準器)。派生: level off(レ́ベルオ́フ): 平らにする / sea level(スィ́ーレベル): 海面",
+            "relatedWords": "stage(ステ́イジ): 段階, standard(スタ́ンダード): 標準, (比較級)level(レ́ベル):水準・平らな(原級), more level(モアレベル):より水準(比較級), most level(モウストレベル):最も水準(最上級)",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-1",
+              "advanced-3.json"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ":",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "Beginner",
+          "meaning": {
+            "word": "beginner",
+            "reading": "",
+            "meaning": "初心者・初級者",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "intermediate-csv",
+            "passages": [
+              "intermediate-school-events-year"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Word",
+          "meaning": {
+            "word": "Word",
+            "reading": "-",
+            "meaning": "Word（固有名詞）",
+            "etymology": "【形態素】語幹: word",
+            "relatedWords": "",
+            "category": "その他",
+            "difficulty": "長文専用",
+            "passages": [
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "Count",
+          "meaning": {
+            "word": "count",
+            "reading": "カウント",
+            "meaning": "数える・数",
+            "etymology": "ラテン語 computare（計算する） ←  com-（共に）+ putare（考える）。【形態素】co-（共に） + 語幹: unt",
+            "relatedWords": [
+              "number",
+              "calculate",
+              "total",
+              "amount"
+            ],
+            "category": "動詞・名詞",
+            "difficulty": "初級",
+            "passages": [
+              "Mathematics"
+            ],
+            "source": "batch15"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ":",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "50",
+          "meaning": {
+            "word": "50",
+            "reading": "",
+            "meaning": "数字の50",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "auto",
+            "passages": [
+              "beginner-wildlife-park-guide"
+            ]
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "english": "I wake up",
+      "japanese": "毎朝7時に。",
+      "phraseMeaning": "毎朝7時に。",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "wake",
+          "meaning": {
+            "word": "wake",
+            "reading": "",
+            "meaning": "目覚める・起こす",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "intermediate-csv",
+            "passages": [
+              "intermediate-hospital-visit"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "up",
+          "meaning": {
+            "word": "up",
+            "reading": "アップ",
+            "meaning": "上へ、上に",
+            "etymology": "【副詞/前置詞】上方向を示す",
+            "relatedWords": "down(ダウン): 下へ, upward(アップワード): 上向きに",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "english": "at seven every morning.",
+      "japanese": "最初に、",
+      "phraseMeaning": "最初に、",
+      "segments": [
+        {
+          "word": "at",
+          "meaning": {
+            "word": "at",
+            "reading": "ア́ト",
+            "meaning": "〜で",
+            "etymology": "古英語の \"æt\" が語源(機能語)。派生: at least(ア́ットリースト): 少なくとも / at first(ア́ットファースト): 最初は",
+            "relatedWords": "in(イ́ン): 〜の中で, on(オ́ン): 〜の上で",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "seven",
+          "meaning": {
+            "word": "seven",
+            "reading": "セ́ヴン",
+            "meaning": "7",
+            "etymology": "古英語 \"seofon\"。【形態素】語根: ven（来る） + -en（動詞化（〜にする））。派生: seventh(セ́ヴンス): 7番目 / seventeen(セヴンティーン): 17",
+            "relatedWords": "six(シックス): 6, eight(エイト): 8, seventh(セヴンス): 7番目",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-3",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "every",
+          "meaning": {
+            "word": "every",
+            "reading": "エ́ヴリ",
+            "meaning": "すべての",
+            "etymology": "古英語 \"ǣfre ǣlc\" の縮約。【形態素】語根: ver（真実） + -y（形容詞化（性質））。派生: everybody(エ́ヴリバディ): みんな / everything(エ́ヴリシング): すべてのこと",
+            "relatedWords": "all(オ́ール): 全ての, each(イ́ーチ): 各々の",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "intermediate-4",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "morning",
+          "meaning": {
+            "word": "morning",
+            "reading": "モ́ーニング",
+            "meaning": "朝",
+            "etymology": "中英語 \"morwening\"。【形態素】語幹: morn + -ing（現在分詞・動名詞）。派生: good morning(グッドモ́ーニング): おはよう / morning sickness(モ́ーニングシックネス): つわり",
+            "relatedWords": "afternoon(アフタヌ́ーン): 午後, evening(イ́ーヴニング): 夕方",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "english": "First,",
+      "japanese": "歯を磨きます",
+      "phraseMeaning": "歯を磨きます",
+      "segments": [
+        {
+          "word": "First",
+          "meaning": {
+            "word": "first",
+            "reading": "フ́ァースト",
+            "meaning": "最初の",
+            "etymology": "古英語 \"fyrst\"。派生: firstly(フ́ァーストリ): 第一に / first aid(フ́ァーストエ́イド): 応急処置",
+            "relatedWords": "beginning(ビギ́ニング): 初め, primary(プライ́マリ): 第一の",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "english": "I brush my teeth",
+      "japanese": "そして顔を洗います。",
+      "phraseMeaning": "そして顔を洗います。",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "brush",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "my",
+          "meaning": {
+            "word": "my",
+            "reading": "マ́イ",
+            "meaning": "私の",
+            "etymology": "古英語 \"min\"。派生: mine(マ́イン): 私のもの",
+            "relatedWords": "I(ア́イ): 私は, me(ミー): 私を",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "teeth",
+          "meaning": {
+            "word": "teeth",
+            "reading": "ティース",
+            "meaning": "歯（toothの複数形）",
+            "etymology": "古英語 tēþ（toothの複数形）← ゲルマン祖語 *tanþiz",
+            "relatedWords": [
+              "tooth",
+              "dental",
+              "mouth",
+              "brush"
+            ],
+            "category": "名詞",
+            "difficulty": "初級",
+            "passages": [
+              "Health and Wellness"
+            ],
+            "source": "batch15"
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "english": "and wash my face.",
+      "japanese": "それから朝食を食べます",
+      "phraseMeaning": "それから朝食を食べます",
+      "segments": [
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "wash",
+          "meaning": {
+            "word": "wash",
+            "reading": "",
+            "meaning": "洗う",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "intermediate-csv",
+            "passages": [
+              "advanced-family-gathering",
+              "intermediate-school-news"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "my",
+          "meaning": {
+            "word": "my",
+            "reading": "マ́イ",
+            "meaning": "私の",
+            "etymology": "古英語 \"min\"。派生: mine(マ́イン): 私のもの",
+            "relatedWords": "I(ア́イ): 私は, me(ミー): 私を",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "face",
+          "meaning": {
+            "word": "face",
+            "reading": "フ́ェイス",
+            "meaning": "顔・向く",
+            "etymology": "ラテン語 \"facies\"。派生: facial(フ́ェイシャル): 顔の / surface(サ́ーフィス): 表面(同根)",
+            "relatedWords": "head(ヘ́ッド): 頭, front(フロ́ント): 前面, (動詞活用)face(フ́ェイス):顔・向く(原形), faced(フェイスト):顔た(過去形), faced(フェイスト):顔られた(過去分詞形), facing(フェイスイング):顔こと(現在分詞形), faces(フェイスス):顔(三単現)",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-4",
+              "intermediate-5",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "english": "Then I eat breakfast",
+      "japanese": "家族と一緒に。",
+      "phraseMeaning": "家族と一緒に。",
+      "segments": [
+        {
+          "word": "Then",
+          "meaning": {
+            "word": "then",
+            "reading": "ゼン",
+            "meaning": "それから、その時",
+            "etymology": "【副詞】時間的な順序を示す",
+            "relatedWords": "next(ネクスト): 次に, after(アフター): その後",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "eat",
+          "meaning": {
+            "word": "eat",
+            "reading": "イー́ト",
+            "meaning": "食べる",
+            "etymology": "古英語 \"etan\"。派生: eater(イー́ター): 食べる人 / eat out(イー́トア́ウト): 外食する",
+            "relatedWords": "drink(ドリ́ンク): 飲む, meal(ミ́ール): 食事, (動詞活用)eat(イー́ト):食べる(原形), ate(エイト):食べた(過去形), eaten(イートン):食べた(過去分詞形), eating(イーティング):食べること(現在分詞形), eats(イーツ):食べる(三単現)",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-1",
+              "intermediate-5",
+              "intermediate-4",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "breakfast",
+          "meaning": {
+            "word": "breakfast",
+            "reading": "ブレックファスト",
+            "meaning": "朝食",
+            "etymology": "break（破る）+ fast（断食）= 断食を破る",
+            "relatedWords": [
+              "lunch",
+              "dinner",
+              "meal"
+            ],
+            "category": "名詞",
+            "difficulty": "初級",
+            "passages": [
+              "phrase-passages"
+            ],
+            "source": "phrase-learning-2025"
+          },
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "english": "with my family.",
+      "japanese": "普段はトーストとジュースを食べます。",
+      "phraseMeaning": "普段はトーストとジュースを食べます。",
+      "segments": [
+        {
+          "word": "with",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "my",
+          "meaning": {
+            "word": "my",
+            "reading": "マ́イ",
+            "meaning": "私の",
+            "etymology": "古英語 \"min\"。派生: mine(マ́イン): 私のもの",
+            "relatedWords": "I(ア́イ): 私は, me(ミー): 私を",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "family",
+          "meaning": {
+            "word": "family",
+            "reading": "フ́ァミリー",
+            "meaning": "家族",
+            "etymology": "ラテン語 \"familia\"。【形態素】語幹: fami + -ly（副詞化（〜に・〜く））。派生: familiar(ファミ́リア): よく知られた / familiarise(ファミ́リアライズ): 慣れさせる",
+            "relatedWords": "relative(レ́ラティヴ): 親戚, home(ホ́ウム): 家, (比較級)family(フ́ァミリー):家族(原級), more family(モアファミリー):より家族(比較級), most family(モウストファミリー):最も家族(最上級)",
+            "category": "日常生活",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "beginner-2",
+              "intermediate-5",
+              "intermediate-4",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "english": "I usually have toast and juice.",
+      "japanese": "朝食の後、",
+      "phraseMeaning": "朝食の後、",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "usually",
+          "meaning": {
+            "word": "usually",
+            "reading": "ユ́ージュアリ",
+            "meaning": "たいてい・普通は",
+            "etymology": "usual(ユージュアル: 普通の)の副詞形。【形態素】語幹: usual + -ly（副詞化（〜に・〜く））。派生: usual(ユージュアル): いつもの",
+            "relatedWords": "often(オフン): しばしば, always(オールウェイズ): いつも, sometimes(サムタイムズ): 時々, (比較級)usually(ユ́ージュアリ):たいてい・普通は(原級), more usually(モアユージュアリ):よりたいてい(比較級), most usually(モウストユージュアリ):最もたいてい(最上級)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "have",
+          "meaning": {
+            "word": "have",
+            "reading": "ハ́ヴ",
+            "meaning": "持つ・〜がある",
+            "etymology": "古英語 \"habban\"。派生: have to(ハ́ヴトゥ): 〜しなければならない / have got(ハ́ヴガ́ット): 持っている(口語)",
+            "relatedWords": "own(オ́ウン): 所有する, possess(ポゼ́ス): 所有する, (動詞活用)have(ハヴ):持っている, had(ハド):持っていた, had(ハド):持っていた, has(ハズ):持っている(三単現)",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "toast",
+          "meaning": {
+            "word": "toast",
+            "reading": "",
+            "meaning": "あなたのため",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "auto",
+            "passages": [
+              "beginner-supermarket-shopping",
+              "beginner-conversation-daily"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "juice",
+          "meaning": {
+            "word": "juice",
+            "reading": "",
+            "meaning": "ジュース",
+            "etymology": "",
+            "relatedWords": "",
+            "category": "未分類",
+            "difficulty": "長文専用",
+            "source": "context-inference",
+            "passages": [
+              "beginner-supermarket-shopping",
+              "advanced-school-festival",
+              "intermediate-homestay-america",
+              "advanced-international-exchange"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "english": "After breakfast,",
+      "japanese": "カバンを準備します。",
+      "phraseMeaning": "カバンを準備します。",
+      "segments": [
+        {
+          "word": "After",
+          "meaning": {
+            "word": "after",
+            "reading": "ア́フター",
+            "meaning": "〜の後で",
+            "etymology": "古英語の \"æfter\" が語源。【形態素】語幹: aft + -er（人・もの（〜する人））。",
+            "relatedWords": "before(ビフォ́ー): 〜の前に, later(レ́イター): 後で",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-5",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "breakfast",
+          "meaning": {
+            "word": "breakfast",
+            "reading": "ブレックファスト",
+            "meaning": "朝食",
+            "etymology": "break（破る）+ fast（断食）= 断食を破る",
+            "relatedWords": [
+              "lunch",
+              "dinner",
+              "meal"
+            ],
+            "category": "名詞",
+            "difficulty": "初級",
+            "passages": [
+              "phrase-passages"
+            ],
+            "source": "phrase-learning-2025"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "english": "I get my bag ready.",
+      "japanese": "宿題を確認します",
+      "phraseMeaning": "宿題を確認します",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "get",
+          "meaning": {
+            "word": "get",
+            "reading": "ゲ́ット",
+            "meaning": "得る・着く",
+            "etymology": "古英語/古ノルド語。派生: get up(ゲ́ットアッ́プ): 起きる / get to(ゲ́ットトゥ): 到着する",
+            "relatedWords": "obtain(オブテ́イン): 得る, receive(レシ́ーヴ): 受け取る, (動詞活用)get(ゲット):得る・手に入れる, got(ガット):得た, gotten(ガトゥン):得たことがある, gets(ゲッツ):得る(三単現)",
+            "category": "日常生活",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-1",
+              "beginner-3",
+              "advanced-2.json",
+              "intermediate-5",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "my",
+          "meaning": {
+            "word": "my",
+            "reading": "マ́イ",
+            "meaning": "私の",
+            "etymology": "古英語 \"min\"。派生: mine(マ́イン): 私のもの",
+            "relatedWords": "I(ア́イ): 私は, me(ミー): 私を",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "beginner-1",
+              "beginner-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "bag",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "ready",
+          "meaning": {
+            "word": "ready",
+            "reading": "レ́ディ",
+            "meaning": "準備ができた",
+            "etymology": "古英語 \"rǣde\"(準備された)。【形態素】re-（再び・戻って） + 語幹: ady。派生: readiness(レ́ディネス): 用意 / get ready(ゲ́ットレディ): 準備する",
+            "relatedWords": "prepared(プリペ́アド): 準備した, willing(ウィ́リング): 進んで〜する",
+            "category": "自然・環境",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-5",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "english": "I check homework \n \n and put books inside.",
+      "japanese": "そして本を中に入れます。",
+      "phraseMeaning": "そして本を中に入れます。",
+      "segments": [
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "check",
+          "meaning": {
+            "word": "check",
+            "reading": "チェ́ック",
+            "meaning": "確認する・小切手",
+            "etymology": "古仏語 \"eschec\"(王手)が語源。派生: checklist(チェ́ックリスト): 確認表 / checkout(チェ́ックアウト): 会計",
+            "relatedWords": "verify(ヴェ́リファイ): 検証する, bill(ビ́ル): 請求書, (動詞活用)check(チェ́ック):確認する・小切手(原形), checked(チェックト):確認した(過去形), checked(チェックト):確認された(過去分詞形), checking(チェックイング):確認すること(現在分詞形), checks(チェックス):確認する(三単現)",
+            "category": "時間・数量",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-2.json",
+              "advanced-3.json",
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "homework",
+          "meaning": {
+            "word": "homework",
+            "reading": "ホ́ウムワーク",
+            "meaning": "宿題",
+            "etymology": "home+\"work\"。派生: do homework(ドゥーホウムワーク): 宿題をする",
+            "relatedWords": "assignment(アサインメント): 課題, task(タスク): 仕事",
+            "category": "学校・学習",
+            "difficulty": "中級",
+            "source": "main",
+            "passages": [
+              "intermediate-4"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "and",
+          "meaning": {
+            "word": "and",
+            "reading": "ア́ンド",
+            "meaning": "そして",
+            "etymology": "ゲルマン祖語の \"andi\" が語源。",
+            "relatedWords": "or(オ́ア): または, but(バ́ット): しかし",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "advanced-3.json",
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "beginner-2",
+              "advanced-2.json",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1",
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "put",
+          "meaning": {
+            "word": "put",
+            "reading": "プ́ット",
+            "meaning": "置く",
+            "etymology": "古英語 \"putian\"。派生: putting(プ́ッティング): 置くこと / put on(プ́ットオン): 着る",
+            "relatedWords": "place(プレ́イス): 置く, set(セ́ット): 置く, (動詞活用)put(プ́ット):置く(原形), putted(プットエド):置いた(過去形), putted(プットエド):置かれた(過去分詞形), putting(プットイング):置くこと(現在分詞形), puts(プットス):置く(三単現)",
+            "category": "運動・娯楽",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "beginner-2",
+              "intermediate-5",
+              "intermediate-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "books",
+          "meaning": {
+            "word": "books",
+            "reading": "(ブ́ックの派生)",
+            "meaning": "本（複数形）",
+            "etymology": "bookの派生形",
+            "relatedWords": "",
+            "category": "学校・学習",
+            "difficulty": "長文専用",
+            "passages": [
+              "beginner-1",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": "book"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "inside",
+          "meaning": {
+            "word": "inside",
+            "reading": "インサ́イド",
+            "meaning": "〜の内側に・中",
+            "etymology": "中英語 \"in\"+\"side\"。【形態素】in-（中へ・否定） + 語幹: side。派生: insider(インサ́イダー): 内部者 / inside out(インサ́イドア́ウト): 裏返しに",
+            "relatedWords": "within(ウィジ́ン): 〜の中に, outside(ア́ウトサイド): 外側",
+            "category": "食・健康",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-2"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "english": "Finally, \n \n I walk to school \n \n with friends.",
+      "japanese": "最後に、",
+      "phraseMeaning": "最後に、",
+      "segments": [
+        {
+          "word": "Finally",
+          "meaning": {
+            "word": "finally",
+            "reading": "ファイナリー",
+            "meaning": "ついに、最後に",
+            "etymology": "【副詞】final（最後の）+ -ly",
+            "relatedWords": "final(ファイナル): 最後の, finalize(ファイナライズ): 完成させる",
+            "category": "言語基本",
+            "difficulty": "中級",
+            "passages": [],
+            "source": "auto",
+            "baseWord": "final"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ",",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "I",
+          "meaning": "",
+          "isUnknown": false
+        },
+        {
+          "word": "walk",
+          "meaning": {
+            "word": "walk",
+            "reading": "ウォ́ーク",
+            "meaning": "歩く",
+            "etymology": "古英語 \"wealcan\"(転がる)。派生: walker(ウォーカー): 歩行者 / walking(ウォーキング): 歩行",
+            "relatedWords": "run(ラン): 走る, move(ムーヴ): 動く, step(ステップ): 歩む, (動詞活用)walk(ウォ́ーク):歩く(原形), walked(ウォークト):歩いた(過去形), walked(ウォークト):歩かれた(過去分詞形), walking(ウォークイング):歩くこと(現在分詞形), walks(ウォークス):歩く(三単現)",
+            "category": "場所・移動",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-3"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "to",
+          "meaning": {
+            "word": "to",
+            "reading": "トゥ",
+            "meaning": "〜へ、〜に",
+            "etymology": "【前置詞】方向・目的を示す",
+            "relatedWords": "into(イントゥ): 〜の中へ, onto(オントゥ): 〜の上へ",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "school",
+          "meaning": {
+            "word": "school",
+            "reading": "スクー́ル",
+            "meaning": "学校",
+            "etymology": "ギリシャ語 \"skhole\"(余暇)。派生: schooling(スクー́リング): 学校教育 / school year(スクー́ルイヤー): 学年",
+            "relatedWords": "education(エジュケ́イション): 教育, college(コ́リッジ): 大学",
+            "category": "学校・学習",
+            "difficulty": "初級",
+            "source": "main",
+            "passages": [
+              "intermediate-1",
+              "beginner-1",
+              "beginner-3",
+              "intermediate-4",
+              "intermediate-5",
+              "intermediate-3",
+              "advanced-1"
+            ]
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "with",
+          "meaning": {
+            "word": "with",
+            "reading": "ウィズ",
+            "meaning": "〜と一緒に、〜を持って",
+            "etymology": "【前置詞】同伴・付随を示す",
+            "relatedWords": "without(ウィザウト): 〜なしで, within(ウィズイン): 〜以内に",
+            "category": "言語基本",
+            "difficulty": "初級",
+            "passages": [],
+            "source": "auto",
+            "baseWord": null
+          },
+          "isUnknown": false
+        },
+        {
+          "word": "friends",
+          "meaning": {
+            "word": "friends",
+            "reading": "(フレ́ンドの派生)",
+            "meaning": "友達（複数形）",
+            "etymology": "friendの派生形",
+            "relatedWords": "",
+            "category": "人・社会",
+            "difficulty": "長文専用",
+            "passages": [
+              "advanced-3.json",
+              "beginner-1",
+              "beginner-3",
+              "intermediate-5",
+              "intermediate-3",
+              "intermediate-2"
+            ],
+            "source": "auto",
+            "baseWord": "friend"
+          },
+          "isUnknown": false
+        },
+        {
+          "word": ".",
+          "meaning": "",
+          "isUnknown": false
+        }
+      ]
+    }
+  ]
+}

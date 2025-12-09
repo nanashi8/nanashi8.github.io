@@ -4,7 +4,7 @@
  */
 
 import { ReadingPassage, ReadingSegment } from '../types';
-import { getPassageList, loadPassage } from './passageLoader';
+import { getPassageList, loadPassage, loadOriginalPassage } from './passageLoader';
 import { logger } from '../logger';
 
 // 補助関数: 単語の基本形を取得（簡易版）
@@ -100,12 +100,23 @@ function splitLongSentence(sentence: string): string[] {
 async function loadFullTranslation(passageId: string): Promise<string> {
   try {
     // passageIdに対応する全訳ファイルパスを構築
-    // 例: advanced-environmental-issues -> /data/passages-translations/advanced-environmental-issues-ja.txt
-    const translationFilePath = `/data/passages-translations/${passageId}-ja.txt`;
+    // 例: beginner-morning-routine -> /data/passages/passages-translations/beginner_50_Morning-Routine-ja.txt
+    // 旧形式: advanced-environmental-issues -> /data/passages-translations/advanced-environmental-issues-ja.txt
+    
+    // 新形式のパスを試す (passages/passages-translations/)
+    let translationFilePath = `/data/passages/passages-translations/${passageId}-ja.txt`;
     
     console.log(`[全訳] Attempting to load: ${translationFilePath} for passageId: ${passageId}`);
     
-    const response = await fetch(translationFilePath);
+    let response = await fetch(translationFilePath);
+    
+    // 新形式が見つからない場合は旧形式を試す
+    if (!response.ok) {
+      translationFilePath = `/data/passages-translations/${passageId}-ja.txt`;
+      console.log(`[全訳] Trying old path: ${translationFilePath}`);
+      response = await fetch(translationFilePath);
+    }
+    
     if (!response.ok) {
       console.log(`[全訳] File not found (${response.status}): ${translationFilePath}`);
       return '';
@@ -121,7 +132,9 @@ async function loadFullTranslation(passageId: string): Promise<string> {
 }
 
 /**
- * 日本語フレーズファイルを読み込む
+ * 日本語フレーズファイルを読み込む（passages-for-phrase-work-jaから）
+ * フレーズ訳: 全訳を尊重しつつ、フレーズごとに意味が通るように直訳されたもの
+ * passages-for-phrase-workの英文と行番号が一致
  */
 async function loadJapanesePhrases(passageId: string): Promise<string[]> {
   try {
@@ -129,14 +142,16 @@ async function loadJapanesePhrases(passageId: string): Promise<string[]> {
     const metadata = getPassageList().find(p => p.id === passageId);
     if (!metadata) return [];
     
-    // ファイルパスから日本語ファイルパスを生成
-    // 例: /data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket.txt
-    //  -> /data/passages-for-phrase-work/beginner_1910_Shopping-at-the-Supermarket-ja-phrases.txt
-    const jaFilePath = metadata.filePath.replace(/\.txt$/, '-ja-phrases.txt');
+    // ファイル名を取得
+    const fileName = metadata.filePath.split('/').pop() || '';
+    
+    // passages-for-phrase-work-jaのパスを構築
+    // 例: beginner_50_Morning-Routine.txt -> /data/passages-for-phrase-work-ja/beginner_50_Morning-Routine-ja.txt
+    const jaFilePath = `/data/passages-for-phrase-work-ja/${fileName.replace(/\.txt$/, '-ja.txt')}`;
     
     const response = await fetch(jaFilePath);
     if (!response.ok) {
-      logger.log(`No Japanese phrases file found: ${jaFilePath}`);
+      logger.log(`No Japanese phrase file found: ${jaFilePath}`);
       return [];
     }
     
@@ -163,10 +178,11 @@ export async function convertPassageToReadingFormat(
   const loaded = await loadPassage(passageId);
   if (!loaded) return null;
 
-  // 日本語フレーズと全訳を並行して読み込む
-  const [japanesePhrases, fullTranslation] = await Promise.all([
+  // 日本語フレーズ、全訳、元の全文を並行して読み込む
+  const [japanesePhrases, fullTranslation, originalText] = await Promise.all([
     loadJapanesePhrases(passageId),
-    loadFullTranslation(passageId)
+    loadFullTranslation(passageId),
+    loadOriginalPassage(passageId)
   ]);
   let japaneseIndex = 0;
 
@@ -392,6 +408,7 @@ export async function convertPassageToReadingFormat(
     actualWordCount: loaded.wordCount,
     phrases: phrases,
     translation: fullTranslation, // 全訳を設定
+    originalText: originalText, // 元の全文を設定
   };
 
   return readingPassage;
@@ -412,19 +429,28 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
     const data = await response.json();
     logger.log(`Loaded phrase learning JSON for ${passageId}, phrases: ${data.phrases?.length || 0}`);
     
-    // 全訳を並行して読み込む
-    const fullTranslation = await loadFullTranslation(passageId);
+    // 全訳と元の全文を並行して読み込む
+    const [fullTranslation, originalText] = await Promise.all([
+      loadFullTranslation(passageId),
+      loadOriginalPassage(passageId)
+    ]);
     
-    // JSONデータをそのまま返す（ReadingPassage型に準拠）
+    // JSONデータをそのまま返す(ReadingPassage型に準拠)
     const readingPassage: ReadingPassage = {
       ...data,
       phrases: data.phrases || [], // phrasesが存在しない場合は空配列
       translation: fullTranslation, // 全訳を追加
+      originalText: originalText, // 元の全文を追加
     };
     
     return readingPassage;
   } catch (error) {
-    logger.error(`Error loading phrase learning JSON for ${passageId}:`, error);
+    // oldフォルダに移動したファイルや存在しないファイルのエラーは表示しない
+    if (error instanceof SyntaxError || (error instanceof Error && error.message.includes('JSON'))) {
+      logger.log(`Skipping invalid or old phrase learning JSON for ${passageId}, will use .txt conversion`);
+    } else {
+      logger.error(`Error loading phrase learning JSON for ${passageId}:`, error);
+    }
     return null;
   }
 }

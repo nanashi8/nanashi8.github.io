@@ -163,7 +163,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
   return (
     <div className="stats-view">
       {/* 学習カレンダーヒートマップ */}
-      <div className="w-full max-w-5xl mx-auto mb-4 px-2">
+      <div className="w-full mb-4 px-2">
         <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
           📆 学習カレンダー
           <span className="text-sm font-normal text-gray-500 dark:text-gray-400">（過去12週間）</span>
@@ -172,7 +172,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       </div>
 
       {/* 苦手単語トップ10 */}
-      <div className="w-full max-w-5xl mx-auto mb-4 px-2">
+      <div className="w-full mb-4 px-2">
         <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
           😰 苦手単語トップ10
           <span className="text-sm font-normal text-gray-500 dark:text-gray-400">（要復習）</span>
@@ -309,7 +309,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       </div>
 
       {/* 全体リセット */}
-      <div className="w-full max-w-5xl mx-auto mb-4 px-2">
+      <div className="w-full mb-4 px-2">
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-red-200 dark:border-red-700 p-6">
           <div className="flex items-center justify-between">
             <div>
@@ -332,7 +332,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 
       {/* ストレージ情報 */}
       {storageInfo && (
-        <div className="w-full max-w-5xl mx-auto mb-4 px-2">
+        <div className="w-full mb-4 px-2">
           <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
             💾 ストレージ使用量
           </h3>
@@ -392,7 +392,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; accuracy: number }> }) {
   if (data.length === 0) {
     return (
-      <div className="w-full max-w-5xl mx-auto p-8 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 text-center">
+      <div className="w-full p-8 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 text-center">
         <p className="text-gray-500 dark:text-gray-400 text-lg">📊 データがありません</p>
         <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">学習を開始するとヒートマップが表示されます</p>
       </div>
@@ -450,7 +450,7 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
   const dayLabels = ['月', '火', '水', '木', '金', '土', '日'];
 
   return (
-    <div className="w-full max-w-5xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-blue-200 dark:border-gray-600">
+    <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-blue-200 dark:border-gray-600">
       {/* グリッドレイアウト */}
       <div className="overflow-x-auto">
         <div className="min-w-max mx-auto w-fit">

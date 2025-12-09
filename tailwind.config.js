@@ -7,6 +7,9 @@ export default {
   darkMode: 'class', // .dark クラスでダークモード切り替え
   theme: {
     extend: {
+      maxWidth: {
+        'app': '1200px', // アプリ全体の統一最大幅
+      },
       colors: {
         // 22色パレット準拠: 中学生向けシンプルデザイン
         white: '#fff',

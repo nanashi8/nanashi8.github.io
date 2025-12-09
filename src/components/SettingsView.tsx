@@ -52,7 +52,7 @@ function SettingsView({
 
   const [speechRate, setSpeechRate] = useState<number>(() => {
     const saved = localStorage.getItem('speechRate');
-    return saved ? parseFloat(saved) : 0.85;
+    return saved ? parseFloat(saved) : 0.9; // 高校入試リスニング速度
   });
 
   // 音声性別変更時にlocalStorageに保存
@@ -119,7 +119,7 @@ function SettingsView({
   const _estimatedDaysText = `約${estimatedDays}日間`;
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-6 space-y-6">
+    <div className="w-full px-4 py-6 space-y-6">
       {/* 学習プラン設定 */}
       <LearningPlanView
         allQuestions={allQuestions}
@@ -243,25 +243,73 @@ function SettingsView({
           <h4 className="text-base font-semibold text-text-color mb-3 flex items-center gap-2">
             <span>⏱️</span>
             <span>発音速度</span>
+            <span className="text-xs font-normal text-text-secondary">(WPM: Words Per Minute)</span>
           </h4>
-          <div className="bg-bg-secondary rounded-lg p-4">
-            <input
-              type="range"
-              min="0.5"
-              max="1.5"
-              step="0.05"
-              value={speechRate}
-              onChange={(e) => handleSpeechRateChange(parseFloat(e.target.value))}
-              className="w-full h-2 bg-border-color rounded-lg appearance-none cursor-pointer accent-primary"
-              aria-label="発音速度"
-            />
-            <div className="flex justify-between text-xs text-text-secondary mt-2">
-              <span>遅い (0.5x)</span>
-              <span className="font-bold text-primary text-base">{speechRate.toFixed(2)}x</span>
-              <span>速い (1.5x)</span>
+          <div className="bg-bg-secondary rounded-lg p-6">
+            {/* 現在の速度表示 */}
+            <div className="text-center mb-6">
+              <div className="font-bold text-primary text-4xl mb-1">{Math.round(speechRate * 150)}</div>
+              <div className="text-sm text-text-secondary">WPM</div>
+              <div className="text-xs text-text-secondary mt-2">
+                {speechRate < 0.75 ? '🐢 ゆっくりと発音' : speechRate >= 0.95 ? '🚀 ネイティブ並の速度' : '🎯 高校入試リスニング相当'}
+              </div>
             </div>
-            <div className="text-center text-sm text-text-secondary mt-3">
-              💡 {speechRate < 0.8 ? 'ゆっくりと発音します' : speechRate > 1.1 ? '速めに発音します' : '標準的な速度で発音します'}
+
+            {/* スライダー */}
+            <div className="relative mb-8">
+              <input
+                type="range"
+                min="0.6"
+                max="1.0"
+                step="0.05"
+                value={speechRate}
+                onChange={(e) => handleSpeechRateChange(parseFloat(e.target.value))}
+                className="w-full h-3 bg-border-color rounded-lg appearance-none cursor-pointer accent-primary"
+                aria-label="発音速度"
+              />
+              {/* 目安マーカー */}
+              <div className="absolute top-0 left-0 w-full h-3 pointer-events-none">
+                {/* 0.6 (90 WPM) - 最低速度 (0%) */}
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-0.5 h-5 bg-gray-400"></div>
+                {/* 0.75 (113 WPM) - 初学者向け (37.5%: (0.75-0.6)/(1.0-0.6) = 0.15/0.4 = 0.375) */}
+                <div className="absolute top-1/2 left-[37.5%] -translate-y-1/2 w-0.5 h-5 bg-blue-500"></div>
+                {/* 0.9 (135 WPM) - 高校入試 (75%: (0.9-0.6)/(1.0-0.6) = 0.3/0.4 = 0.75) */}
+                <div className="absolute top-1/2 left-[75%] -translate-y-1/2 w-0.5 h-5 bg-green-500"></div>
+                {/* 1.0 (150 WPM) - ネイティブ (100%) */}
+                <div className="absolute top-1/2 left-full -translate-y-1/2 -translate-x-0.5 w-0.5 h-5 bg-orange-500"></div>
+              </div>
+            </div>
+
+            {/* 目安ラベル */}
+            <div className="grid grid-cols-4 gap-2 text-center text-xs">
+              <button
+                onClick={() => handleSpeechRateChange(0.6)}
+                className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors cursor-pointer"
+              >
+                <div className="font-bold text-gray-600 dark:text-gray-400">90 WPM</div>
+                <div className="text-gray-500 dark:text-gray-400 mt-1">最低速度</div>
+              </button>
+              <button
+                onClick={() => handleSpeechRateChange(0.75)}
+                className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-200 dark:border-blue-700 hover:bg-blue-100 dark:hover:bg-blue-800/30 transition-colors cursor-pointer"
+              >
+                <div className="font-bold text-blue-600 dark:text-blue-400">113 WPM</div>
+                <div className="text-blue-500 dark:text-blue-300 mt-1">初学者向け</div>
+              </button>
+              <button
+                onClick={() => handleSpeechRateChange(0.9)}
+                className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 border border-green-200 dark:border-green-700 hover:bg-green-100 dark:hover:bg-green-800/30 transition-colors cursor-pointer"
+              >
+                <div className="font-bold text-green-600 dark:text-green-400">135 WPM</div>
+                <div className="text-green-500 dark:text-green-300 mt-1">高校入試</div>
+              </button>
+              <button
+                onClick={() => handleSpeechRateChange(1.0)}
+                className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-3 border border-orange-200 dark:border-orange-700 hover:bg-orange-100 dark:hover:bg-orange-800/30 transition-colors cursor-pointer"
+              >
+                <div className="font-bold text-orange-600 dark:text-orange-400">150 WPM</div>
+                <div className="text-orange-500 dark:text-orange-300 mt-1">ネイティブ</div>
+              </button>
             </div>
           </div>
         </div>

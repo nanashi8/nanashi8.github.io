@@ -6,7 +6,14 @@
 /* Spelling View Container */
 .spelling-view {
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .spelling-view {
+    padding: 15px;
+  }
 }
 
 /* Empty State */
