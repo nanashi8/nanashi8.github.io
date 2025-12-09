@@ -193,7 +193,7 @@ function ScoreBoard({
   const _tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = ['plan', 'breakdown', 'history', 'settings'];
 
   return (
-    <div className="score-board">
+    <div className="score-board-compact">
       {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
       {!isMobile && (
         <div className="score-board-tabs grid grid-cols-4 gap-2">
