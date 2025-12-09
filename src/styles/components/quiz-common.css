@@ -2,6 +2,19 @@
    クイズ共通スタイル - 中学生向けデザイン
    ============================================ */
 
+/* Quiz View Container */
+.quiz-view {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .quiz-view {
+    padding: 15px;
+  }
+}
+
 /* クイズコントロール（ボタングループ） */
 .quiz-controls {
   display: flex;

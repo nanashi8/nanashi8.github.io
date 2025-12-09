@@ -4,6 +4,13 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .linguistic-relations-view {
+    padding: 15px;
+  }
 }
 
 .linguistic-relations-view h2 {
