@@ -46,7 +46,7 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
   const [readingDictionary, setReadingDictionary] = useState<Map<string, Record<string, string>>>(new Map());
   const [wordPopup, setWordPopup] = useState<WordPopup | null>(null);
   const [showSettings, setShowSettings] = useState(false);
-  const [readingStarted, setReadingStarted] = useState(true);
+  const [readingStarted, _setReadingStarted] = useState(true);
   const [readingSubTab, setReadingSubTab] = useState<'reading' | 'fullText' | 'fullTranslation'>('reading');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isFullTextSpeaking, setIsFullTextSpeaking] = useState(false);
@@ -477,7 +477,6 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
       setPhraseTranslations(new Array(passage.phrases?.length || 0).fill(false));
       setWordMeaningsVisible(new Array(passage.phrases?.length || 0).fill(false));
       setCurrentPhraseIndex(0); // フレーズインデックスをリセット
-      setReadingStarted(false); // 読解状態をリセット
     }
   }, [passages]);
 
