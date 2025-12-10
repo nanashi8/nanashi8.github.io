@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Question, MemorizationCardState, MemorizationBehavior, QuestionSet } from '../types';
+import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { 
   getMemorizationCardSettings, 
   saveMemorizationCardSettings,
@@ -7,20 +8,31 @@ import {
   getMemorizationSettings,
   saveMemorizationSettings
 } from '../progressStorage';
-import { speakEnglish } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
 import { logger } from '../logger';
 import ScoreBoard from './ScoreBoard';
+import AddToCustomButton from './AddToCustomButton';
 
 interface MemorizationViewProps {
   allQuestions: Question[];
   questionSets: QuestionSet[];
+  customQuestionSets?: CustomQuestionSet[];
+  onAddWordToCustomSet?: (setId: string, word: CustomWord) => void;
+  onRemoveWordFromCustomSet?: (setId: string, word: CustomWord) => void;
+  onOpenCustomSetManagement?: () => void;
 }
 
-function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps) {
+function MemorizationView({ 
+  allQuestions, 
+  questionSets,
+  customQuestionSets = [],
+  onAddWordToCustomSet,
+  onRemoveWordFromCustomSet,
+  onOpenCustomSetManagement,
+}: MemorizationViewProps) {
   // 学習設定
   const [showSettings, setShowSettings] = useState(false);
   const [selectedDataSource, setSelectedDataSource] = useState<string>('all');
-  const [selectedQuestionSet, setSelectedQuestionSet] = useState<string>('main-set');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<string>('all');
@@ -116,20 +128,38 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
     if (isLoading) return;
     
     const selectQuestions = () => {
-      // 問題セットを選択
-      const selectedSet = questionSets.find(qs => qs.id === selectedQuestionSet);
-      const baseQuestions = selectedSet ? selectedSet.questions : allQuestions;
+      // データソースに基づいて問題を取得
+      const baseQuestions = allQuestions;
+      
+      // データソースフィルター（現在はsource プロパティが 'junior' しかないため、実質的なフィルタリングは行わない）
+      // 将来的にデータが増えた場合、ここでフィルタリングを実装
+      if (selectedDataSource !== 'all') {
+        // 現在は全て junior なので、フィルタリングなし
+        // 将来: standard/advanced/comprehensiveに対応
+      }
       
       if (baseQuestions.length === 0) return;
       
       // 学習設定に基づいてフィルタリング
       let filtered = baseQuestions;
       
+      // 難易度フィルター
+      if (selectedDifficulty !== 'all') {
+        filtered = filtered.filter(q => q.difficulty === selectedDifficulty);
+      }
+      
       // 関連分野フィルター
       if (selectedCategory !== 'all') {
         filtered = filtered.filter(q => 
           q.relatedFields && Array.isArray(q.relatedFields) && q.relatedFields.includes(selectedCategory)
         );
+      }
+      
+      // 単語・熟語フィルター
+      if (selectedWordPhraseFilter === 'words') {
+        filtered = filtered.filter(q => !q.word.includes(' ') || q.word.split(' ').length <= 2);
+      } else if (selectedWordPhraseFilter === 'phrases') {
+        filtered = filtered.filter(q => q.word.includes(' ') && q.word.split(' ').length > 2);
       }
       
       // 上限を撤廃：フィルター済みの全問題を使用
@@ -145,7 +175,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
     };
     
     selectQuestions();
-  }, [questionSets, selectedQuestionSet, allQuestions, learningLimit, reviewLimit, isLoading, selectedCategory]);
+  }, [questionSets, selectedDataSource, selectedDifficulty, selectedCategory, selectedWordPhraseFilter, allQuestions, learningLimit, reviewLimit, isLoading]);
   
   // 音声読み上げ（カード表示時）
   useEffect(() => {
@@ -356,23 +386,7 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="memorization-questionset" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📚 問題セット:</label>
-              <select 
-                id="memorization-questionset"
-                value={selectedQuestionSet} 
-                onChange={(e) => setSelectedQuestionSet(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-              >
-                {questionSets.map(qs => (
-                  <option key={qs.id} value={qs.id}>
-                    {qs.name} ({qs.questions.length}語)
-                  </option>
-                ))}
-              </select>
-            </div>
-            
-            <div>
-              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📖 データソース:</label>
+              <label htmlFor="memorization-datasource" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">📖 出題元:</label>
               <select 
                 id="memorization-datasource"
                 value={selectedDataSource} 
@@ -380,23 +394,9 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
                 className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               >
                 <option value="all">全問題集</option>
-                <option value="junior">高校受験</option>
                 <option value="standard">高校受験標準</option>
-              </select>
-            </div>
-            
-            <div>
-              <label htmlFor="memorization-category" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">🏷️ 関連分野:</label>
-              <select 
-                id="memorization-category"
-                value={selectedCategory} 
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
-              >
-                <option value="all">全分野</option>
-                {getAvailableCategories().map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
+                <option value="advanced">高校受験上級</option>
+                <option value="comprehensive">高校受験総合</option>
               </select>
             </div>
             
@@ -412,6 +412,21 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
                 <option value="beginner">初級</option>
                 <option value="intermediate">中級</option>
                 <option value="advanced">上級</option>
+              </select>
+            </div>
+            
+            <div>
+              <label htmlFor="memorization-category" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">🏷️ 関連分野:</label>
+              <select 
+                id="memorization-category"
+                value={selectedCategory} 
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+              >
+                <option value="all">全分野</option>
+                {getAvailableCategories().map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
               </select>
             </div>
             
@@ -496,9 +511,9 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
       
       {/* 暗記カード */}
       <div>
-        <div ref={cardRef} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+        <div ref={cardRef} className="question-card">
           {/* 語句と左右ボタン */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="question-nav-row">
             {/* 左ボタン - まだ覚えていない */}
             <button
               onClick={() => handleSwipe('left')}
@@ -510,9 +525,59 @@ function MemorizationView({ allQuestions, questionSets }: MemorizationViewProps)
             
             {/* 単語（常に表示）*/}
             <div className="flex-1 text-center">
-              <div className="text-4xl font-bold text-gray-900 dark:text-white">
-                {currentQuestion.word}
+              <div 
+                className={`clickable-pronunciation`}
+                onClick={(e) => {
+                  if (isSpeechSynthesisSupported()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    speakEnglish(currentQuestion.word, { rate: 0.85 });
+                  }
+                }}
+                onTouchEnd={(e) => {
+                  if (isSpeechSynthesisSupported()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    speakEnglish(currentQuestion.word, { rate: 0.85 });
+                  }
+                }}
+                title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
+              >
+                <div className={`text-4xl font-bold text-gray-900 dark:text-white ${currentQuestion.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}>
+                  {currentQuestion.word}
+                  {isSpeechSynthesisSupported() && (
+                    <span className="speaker-icon">🔊</span>
+                  )}
+                </div>
+                {currentQuestion.reading && (
+                  <div className="question-reading">【{currentQuestion.reading}】</div>
+                )}
+                {currentQuestion.difficulty && (
+                  <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                    {currentQuestion.difficulty === 'beginner' ? '初級' : 
+                     currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
+                  </div>
+                )}
               </div>
+              {/* カスタムセットに追加ボタン */}
+              {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                <div className="mt-3 flex justify-center">
+                  <AddToCustomButton
+                    word={{
+                      word: currentQuestion.word,
+                      meaning: currentQuestion.meaning,
+                      ipa: currentQuestion.reading,
+                      source: 'memorization',
+                    }}
+                    sets={customQuestionSets}
+                    onAddWord={onAddWordToCustomSet}
+                    onRemoveWord={onRemoveWordFromCustomSet}
+                    onOpenManagement={onOpenCustomSetManagement}
+                    size="medium"
+                    variant="both"
+                  />
+                </div>
+              )}
             </div>
             
             {/* 右ボタン - 覚えた */}

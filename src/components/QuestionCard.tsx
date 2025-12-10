@@ -1,4 +1,5 @@
 import { Question } from '../types';
+import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { ErrorPrediction } from '../errorPredictionAI';
 import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
@@ -8,6 +9,7 @@ import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns
 import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
 import { getRelevantMistakeTip } from '../englishTrivia';
 import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import AddToCustomButton from './AddToCustomButton';
 
 interface QuestionCardProps {
   question: Question;
@@ -21,6 +23,10 @@ interface QuestionCardProps {
   onPrevious: () => void;
   onDifficultyRate?: (rating: number) => void;
   errorPrediction?: ErrorPrediction;
+  customQuestionSets?: CustomQuestionSet[];
+  onAddWordToCustomSet?: (setId: string, word: CustomWord) => void;
+  onRemoveWordFromCustomSet?: (setId: string, word: CustomWord) => void;
+  onOpenCustomSetManagement?: () => void;
 }
 
 function QuestionCard({
@@ -33,6 +39,10 @@ function QuestionCard({
   onNext,
   onPrevious,
   onDifficultyRate,
+  customQuestionSets = [],
+  onAddWordToCustomSet,
+  onRemoveWordFromCustomSet,
+  onOpenCustomSetManagement,
 }: QuestionCardProps) {
   // 選択肢をuseMemoで固定（currentIndexが変わった時だけ再生成）
   const choicesWithQuestions = useMemo(
@@ -350,7 +360,7 @@ function QuestionCard({
     >
       <div className="question-nav-row">
         <button 
-          className="flex-shrink-0 w-11 h-11 rounded-full text-xl font-bold border-2 border-primary bg-secondary text-primary cursor-pointer transition-all duration-300 flex items-center justify-center p-0 hover:bg-primary hover:text-white hover:scale-110 hover:shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:border-border disabled:text-muted dark:bg-secondary dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-white" 
+          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
           onClick={onPrevious}
           disabled={currentIndex === 0}
           title="前へ"
@@ -376,7 +386,7 @@ function QuestionCard({
           title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
         >
           <div 
-            className={`question-text ${question.word.includes(' ') ? 'phrase-text text-2xl' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+            className={`text-4xl font-bold text-gray-900 dark:text-white ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
           >
             {question.word}
             {isSpeechSynthesisSupported() && (
@@ -392,9 +402,29 @@ function QuestionCard({
                question.difficulty === 'intermediate' ? '中級' : '上級'}
             </div>
           )}
+          
+          {/* カスタムセットに追加ボタン */}
+          {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && customQuestionSets && (
+            <div className="mt-3 flex justify-center">
+              <AddToCustomButton
+                word={{
+                  word: question.word,
+                  meaning: question.meaning,
+                  katakana: question.reading,
+                  source: 'translation',
+                }}
+                sets={customQuestionSets}
+                onAddWord={onAddWordToCustomSet}
+                onRemoveWord={onRemoveWordFromCustomSet}
+                onOpenManagement={onOpenCustomSetManagement}
+                size="medium"
+                variant="both"
+              />
+            </div>
+          )}
         </div>
         <button 
-          className="flex-shrink-0 w-11 h-11 rounded-full text-xl font-bold border-2 border-primary bg-primary text-white cursor-pointer transition-all duration-300 flex items-center justify-center p-0 hover:bg-primary-hover hover:scale-110 hover:shadow-lg disabled:opacity-30 disabled:cursor-not-allowed disabled:border-border disabled:text-muted dark:bg-primary dark:border-primary dark:hover:bg-primary-hover" 
+          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
           onClick={handleNextClick}
           title="次へ"
         >

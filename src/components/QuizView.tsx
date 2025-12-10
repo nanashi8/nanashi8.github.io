@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { QuizState, QuestionSet } from '../types';
+import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import { ErrorPrediction } from '../errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
+import AddToCustomButton from './AddToCustomButton';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
@@ -38,6 +40,10 @@ interface QuizViewProps {
   };
   isReviewFocusMode?: boolean;
   errorPrediction?: ErrorPrediction;
+  customQuestionSets?: CustomQuestionSet[];
+  onAddWordToCustomSet?: (setId: string, word: CustomWord) => void;
+  onRemoveWordFromCustomSet?: (setId: string, word: CustomWord) => void;
+  onOpenCustomSetManagement?: () => void;
 }
 
 function QuizView({
@@ -53,7 +59,7 @@ function QuizView({
   onPhraseTypeFilterChange,
   selectedDataSource = 'all',
   onDataSourceChange,
-  questionSets,
+  questionSets = [],
   onStartQuiz,
   onAnswer,
   onNext,
@@ -64,6 +70,10 @@ function QuizView({
   sessionStats,
   isReviewFocusMode = false,
   errorPrediction,
+  customQuestionSets = [],
+  onAddWordToCustomSet,
+  onRemoveWordFromCustomSet,
+  onOpenCustomSetManagement,
 }: QuizViewProps) {
   const { questions, currentIndex, answered, selectedAnswer } =
     quizState;
@@ -348,19 +358,25 @@ function QuizView({
           
           <div className="question-container">
             {currentQuestion && (
-              <QuestionCard
-                question={currentQuestion}
-                questionNumber={currentIndex + 1}
-                allQuestions={questions}
-                currentIndex={currentIndex}
-                answered={answered}
-                selectedAnswer={selectedAnswer}
-                onAnswer={handleAnswer}
-                onNext={onSkip ? (answered ? onNext : handleSkipWrapper) : onNext}
-                onPrevious={onPrevious}
-                onDifficultyRate={onDifficultyRate}
-                errorPrediction={errorPrediction}
-              />
+              <>
+                <QuestionCard
+                  question={currentQuestion}
+                  questionNumber={currentIndex + 1}
+                  allQuestions={questions}
+                  currentIndex={currentIndex}
+                  answered={answered}
+                  selectedAnswer={selectedAnswer}
+                  onAnswer={handleAnswer}
+                  onNext={onSkip ? (answered ? onNext : handleSkipWrapper) : onNext}
+                  onPrevious={onPrevious}
+                  onDifficultyRate={onDifficultyRate}
+                  errorPrediction={errorPrediction}
+                  customQuestionSets={customQuestionSets}
+                  onAddWordToCustomSet={onAddWordToCustomSet}
+                  onRemoveWordFromCustomSet={onRemoveWordFromCustomSet}
+                  onOpenCustomSetManagement={onOpenCustomSetManagement}
+                />
+              </>
             )}
           </div>
         </>
