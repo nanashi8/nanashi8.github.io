@@ -1,0 +1,20 @@
+# 自動アサイン設定
+addReviewers: true
+addAssignees: author
+
+# デフォルトのレビュワー
+reviewers:
+  - nanashi8
+
+# PRの種類ごとの自動ラベル
+labels:
+  - path: 'src/**'
+    labels: ['code']
+  - path: '**/*.md'
+    labels: ['documentation']
+  - path: '.github/**'
+    labels: ['ci/cd']
+  - path: 'public/data/**'
+    labels: ['data']
+  - path: '**/*.css'
+    labels: ['style']
