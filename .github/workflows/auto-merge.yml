@@ -1,0 +1,52 @@
+name: Auto-merge
+
+'on':
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  check_suite:
+    types:
+      - completed
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' || contains(github.event.pull_request.labels.*.name, 'auto-merge')
+    steps:
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  auto-merge:
+    needs: auto-approve
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]' || contains(github.event.pull_request.labels.*.name, 'auto-merge')
+    steps:
+      - name: Wait for checks
+        uses: lewagon/wait-on-check-action@v1.3.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          check-name: 'build'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+
+      - name: Auto merge
+        uses: pascalgn/automerge-action@v0.16.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_LABELS: "auto-merge,!work in progress"
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+          MERGE_FORKS: "false"
+          MERGE_RETRIES: "6"
+          MERGE_RETRY_SLEEP: "10000"
+          UPDATE_LABELS: ""
+          UPDATE_METHOD: "rebase"
