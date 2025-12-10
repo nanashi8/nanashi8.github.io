@@ -97,9 +97,9 @@ npm run check:grammar-quality
 
 **動作**:
 1. コミット対象に文法データファイル（`public/data/grammar/*.json`）が含まれるか確認
-2. 含まれる場合、`validate_grammar_advanced.py`を自動実行
-3. エラーがあればコミットを拒否
-4. エラーメッセージとガイドラインへのリンクを表示
+1. 含まれる場合、`validate_grammar_advanced.py`を自動実行
+1. エラーがあればコミットを拒否
+1. エラーメッセージとガイドラインへのリンクを表示
 
 **設定方法**:
 ```bash
@@ -118,10 +118,10 @@ git commit --no-verify
 
 **動作**:
 1. Push/PRで文法データファイルが変更された場合にトリガー
-2. `validate_grammar_advanced.py`を実行
-3. `analyze_grammar_data_quality.py`を実行
-4. 品質レポートをアーティファクトとして保存
-5. PRにコメントで結果を自動投稿
+1. `validate_grammar_advanced.py`を実行
+1. `analyze_grammar_data_quality.py`を実行
+1. 品質レポートをアーティファクトとして保存
+1. PRにコメントで結果を自動投稿
 
 **バッジ**:
 ```markdown
@@ -181,13 +181,13 @@ graph TD
 ### Pull Request作成時
 
 1. PRテンプレートに従ってチェックリストを確認
-2. 品質ガイドラインを確認
-3. ローカルで`npm run check:grammar-quality`を実行
-4. PRを作成
-5. GitHub Actions が自動的に検証を実行
-6. PR画面に品質レポートがコメントとして投稿される
-7. レビュアーが品質レポートを確認
-8. 全てのチェックが合格したらマージ
+1. 品質ガイドラインを確認
+1. ローカルで`npm run check:grammar-quality`を実行
+1. PRを作成
+1. GitHub Actions が自動的に検証を実行
+1. PR画面に品質レポートがコメントとして投稿される
+1. レビュアーが品質レポートを確認
+1. 全てのチェックが合格したらマージ
 
 ## 🛠️ トラブルシューティング
 
@@ -220,9 +220,9 @@ python3 scripts/validate_grammar_advanced.py
 ### GitHub Actions CIが失敗する
 
 1. Actions タブでエラーログを確認
-2. ローカルで同じコマンドを実行して再現
-3. エラーを修正
-4. コミット・Pushして再実行
+1. ローカルで同じコマンドを実行して再現
+1. エラーを修正
+1. コミット・Pushして再実行
 
 ## 📚 参考資料
 
@@ -322,8 +322,8 @@ git commit -m "fix: 文法データの品質向上"
 質問や問題がある場合は、以下を参照してください:
 
 1. [品質ガイドライン](../guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md)
-2. [GitHub Issues](https://github.com/nanashi8/nanashi8.github.io/issues)
-3. このドキュメントのトラブルシューティングセクション
+1. [GitHub Issues](https://github.com/nanashi8/nanashi8.github.io/issues)
+1. このドキュメントのトラブルシューティングセクション
 
 ---
 

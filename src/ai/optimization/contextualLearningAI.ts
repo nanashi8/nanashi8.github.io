@@ -13,8 +13,8 @@
  * 4. テーマ別学習: ストーリー性のある単語シーケンスを生成
  */
 
-import { Question } from './types';
-import { WordProgress } from './progressStorage';
+import { Question } from '@/types';
+import { WordProgress } from '@/storage/progress/progressStorage';
 
 /**
  * 意味的関連性のタイプ

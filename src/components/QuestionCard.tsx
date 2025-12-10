@@ -1,6 +1,6 @@
 import { Question } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
-import { ErrorPrediction } from '../errorPredictionAI';
+import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';

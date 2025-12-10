@@ -1,6 +1,6 @@
 // 適応型学習最適化システム
-import { Question, UserLearningProfile } from './types';
-import { WordProgress } from './progressStorage';
+import { Question, UserLearningProfile } from '@/types';
+import { WordProgress } from '@/storage/progress/progressStorage';
 
 // ユーザープロファイルの構築
 export function buildUserProfile(

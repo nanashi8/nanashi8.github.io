@@ -13,7 +13,7 @@
  * 4. 個別推奨: ユーザーに最適化された学習プランを提案
  */
 
-import { logger } from './logger';
+import { logger } from '@/logger';
 
 /**
  * セッション統計

@@ -1,9 +1,9 @@
 // ストレージ使用量情報を取得
 
-import { getStorageEstimate, getCount, STORES } from './indexedDBStorage';
-import { getMigrationInfo } from './dataMigration';
+import { getStorageEstimate, getCount, STORES } from '@/storage/indexedDB/indexedDBStorage';
+import { getMigrationInfo } from '@/storage/migration/dataMigration';
 import { formatBytes } from './dataExport';
-import { logger } from './logger';
+import { logger } from '@/logger';
 
 export interface StorageInfo {
   localStorage: {
