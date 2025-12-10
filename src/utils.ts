@@ -298,6 +298,24 @@ export function saveQuestionSets(sets: QuestionSet[]): void {
   }
 }
 
+// ========== 共通ユーティリティ（再発防止のための共通化） ==========
+
+/**
+ * ローカルタイムゾーンでYYYY-MM-DD文字列を生成
+ * UTCとのズレによる日付不一致を防ぐため、全ての日付キー生成で使用する
+ */
+export function formatLocalYYYYMMDD(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+/**
+ * クイズ結果が追加されたことを通知するイベント名（定数化して重複やtypoを防止）
+ */
+export const QUIZ_RESULT_EVENT = 'quiz-result-added';
+
 /**
  * 問題集リストを localStorage から読み込み
  */

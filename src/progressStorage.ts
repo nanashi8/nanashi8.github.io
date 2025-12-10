@@ -2,6 +2,7 @@
 
 import { saveProgressData, loadProgressData, saveSetting, loadSetting } from './storageManager';
 import { logger } from './logger';
+import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from './utils';
 
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
@@ -435,6 +436,7 @@ export function loadProgressSync(): UserProgress {
 // キャッシュを更新
 export function updateProgressCache(progress: UserProgress): void {
   progressCache = progress;
+  logger.log('🔄 progressCache更新 - results件数:', progress.results.length);
 }
 
 // 進捗データの保存（IndexedDB対応）
@@ -526,10 +528,30 @@ export async function addQuizResult(result: QuizResult): Promise<void> {
   const progress = await loadProgress();
   progress.results.push(result);
   
+  logger.log('✅ addQuizResult呼び出し:', {
+    mode: result.mode,
+    score: result.score,
+    total: result.total,
+    date: new Date(result.date).toISOString(),
+    resultsCount: progress.results.length
+  });
+  
   // 統計情報を更新
   updateStatistics(progress, result);
   
   await saveProgress(progress);
+  
+  logger.log('💾 saveProgress完了 - results件数:', progress.results.length);
+  
+  // 解答直後イベントを通知（StatsViewなどが購読）
+  try {
+    if (typeof window !== 'undefined') {
+      const evt = new CustomEvent(QUIZ_RESULT_EVENT, { detail: { result } });
+      window.dispatchEvent(evt);
+    }
+  } catch (_) {
+    // SSR等でwindowが無い場合は無視
+  }
 }
 
 // 統計情報の更新
@@ -1331,6 +1353,23 @@ export async function updateWordProgress(
   }
   
   await saveProgress(progress);
+  
+  // 解答直後イベントを通知（StatsViewなどが購読）
+  try {
+    if (typeof window !== 'undefined') {
+      const evt = new CustomEvent(QUIZ_RESULT_EVENT, {
+        detail: {
+          word,
+          isCorrect,
+          responseTime,
+          mode,
+        }
+      });
+      window.dispatchEvent(evt);
+    }
+  } catch (_) {
+    // SSR等でwindowが無い場合は無視
+  }
 }
 
 /**
@@ -2559,16 +2598,35 @@ export function getStudyCalendarData(days: number = 90): Array<{
   const now = new Date();
   const calendarData: Array<{ date: string; count: number; accuracy: number }> = [];
   
+  // 日付キーは共通ユーティリティを使用（UTCズレ対策）
+  
+  logger.log('📊 getStudyCalendarData呼び出し - progress.results件数:', progress.results.length);
+  
   // 過去N日分の日付を生成
   for (let i = days - 1; i >= 0; i--) {
     const date = new Date(now);
     date.setDate(date.getDate() - i);
-    const dateStr = date.toISOString().split('T')[0];
+    const dateStr = formatLocalYYYYMMDD(date);
     
     // その日の結果を集計
     const dayStart = new Date(date).setHours(0, 0, 0, 0);
     const dayEnd = new Date(date).setHours(23, 59, 59, 999);
     const dayResults = progress.results.filter(r => r.date >= dayStart && r.date <= dayEnd);
+    
+    if (i === 0) { // 今日のデータを詳しくログ
+      logger.log('📅 今日のデータ:', {
+        dateStr,
+        dayStart: new Date(dayStart).toISOString(),
+        dayEnd: new Date(dayEnd).toISOString(),
+        dayResults: dayResults.length,
+        sampleResults: dayResults.slice(0, 3).map(r => ({
+          mode: r.mode,
+          score: r.score,
+          total: r.total,
+          date: new Date(r.date).toISOString()
+        }))
+      });
+    }
     
     const totalAnswered = dayResults.reduce((sum, r) => sum + r.total, 0);
     const totalCorrect = dayResults.reduce((sum, r) => sum + r.score, 0);

@@ -1507,6 +1507,10 @@ function App() {
           <MemorizationView
             allQuestions={allQuestions}
             questionSets={questionSets}
+            customQuestionSets={customQuestionState.sets}
+            onAddWordToCustomSet={handleAddWordToCustomSet}
+            onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
+            onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
           />
         ) : activeTab === 'translation' ? (
           <QuizView
@@ -1535,6 +1539,10 @@ function App() {
             errorPrediction={quizState.questions.length > 0 && quizState.currentIndex < quizState.questions.length
               ? errorPredictionsRef.current.get(quizState.questions[quizState.currentIndex].word)
               : undefined}
+            customQuestionSets={customQuestionState.sets}
+            onAddWordToCustomSet={handleAddWordToCustomSet}
+            onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
+            onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
           />
         ) : activeTab === 'spelling' ? (
           <SpellingView
@@ -1553,6 +1561,10 @@ function App() {
             onStartQuiz={handleStartQuiz}
             onReviewFocus={handleSpellingReviewFocus}
             isReviewFocusMode={reviewFocusMode}
+            customQuestionSets={customQuestionState.sets}
+            onAddWordToCustomSet={handleAddWordToCustomSet}
+            onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
+            onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
           />
         ) : activeTab === 'reading' ? (
           <ComprehensiveReadingView 

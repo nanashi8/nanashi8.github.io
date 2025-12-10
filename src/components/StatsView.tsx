@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   getStatsByModeDifficulty as _getStatsByModeDifficulty,
   resetStatsByModeDifficulty,
@@ -19,6 +19,7 @@ import {
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
 import { logger } from '../logger';
+import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '../utils';
 
 interface StatsViewProps {
   questionSets: QuestionSet[];
@@ -28,20 +29,31 @@ interface StatsViewProps {
   onQuestionSetsUpdated?: () => Promise<void>;
 }
 
+interface WeakWord {
+  word: string;
+  meaning?: string;
+  reading?: string;
+  etymology?: string;
+  relatedWords?: string;
+  difficulty?: string;
+  mistakes: number;
+  recentAccuracy: number;
+}
+
 function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: StatsViewProps) {
-  const [autoRefresh, _setAutoRefresh] = useState<boolean>(true);
+  const [autoRefresh, _setAutoRefresh] = useState<boolean>(false);
   const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
   const [hasWeakWordsSet, setHasWeakWordsSet] = useState<boolean>(false);
   
   // 新しい統計データ
   const [calendarData, setCalendarData] = useState<Array<{ date: string; count: number; accuracy: number }>>([]);
-  const [_weeklyStats, setWeeklyStats] = useState<any>(null);
-  const [_monthlyStats, setMonthlyStats] = useState<any>(null);
-  const [_cumulativeData, setCumulativeData] = useState<any[]>([]);
-  const [_retentionTrend, setRetentionTrend] = useState<any>(null);
-  const [weakWords, setWeakWords] = useState<any[]>([]);
-  const [_overcomeWords, setOvercomeWords] = useState<any[]>([]);
-  const [_recentlyMastered, setRecentlyMastered] = useState<any[]>([]);
+  const [_weeklyStats, setWeeklyStats] = useState<Record<string, unknown> | null>(null);
+  const [_monthlyStats, setMonthlyStats] = useState<Record<string, unknown> | null>(null);
+  const [_cumulativeData, setCumulativeData] = useState<Record<string, unknown>[]>([]);
+  const [_retentionTrend, setRetentionTrend] = useState<Record<string, unknown> | null>(null);
+  const [weakWords, setWeakWords] = useState<WeakWord[]>([]);
+  const [_overcomeWords, setOvercomeWords] = useState<Record<string, unknown>[]>([]);
+  const [_recentlyMastered, setRecentlyMastered] = useState<Record<string, unknown>[]>([]);
   const [_streakDays, setStreakDays] = useState<number>(0);
 
   // LocalStorageサイズを取得
@@ -70,9 +82,10 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
   };
 
   // データ読み込み
-  const loadData = () => {
-    // 新しい統計データを読み込み
-    setCalendarData(getStudyCalendarData(90));
+  const loadData = useCallback(() => {
+    // 新しい統計データを読み込み（2週間分）
+    const calData = getStudyCalendarData(14);
+    setCalendarData(calData);
     setWeeklyStats(getWeeklyStats());
     setMonthlyStats(getMonthlyStats());
     setCumulativeData(getCumulativeProgressData(12));
@@ -98,7 +111,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     setStreakDays(progress.statistics.streakDays);
     
     getStorageSize();
-  };
+  }, [allQuestions]);
 
   // リアルタイム更新
   useEffect(() => {
@@ -112,14 +125,35 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     };
     checkWeakWordsSet();
     
+    // 解答直後イベントで即時更新
+    const onQuizResultAdded = () => {
+      loadData();
+      checkWeakWordsSet();
+    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener(QUIZ_RESULT_EVENT, onQuizResultAdded as EventListener);
+    }
+    
     if (autoRefresh) {
       const interval = setInterval(() => {
         loadData();
         checkWeakWordsSet();
-      }, 5000);
-      return () => clearInterval(interval);
+      }, 1000); // 1秒ごとに更新（リアルタイム表示）
+      return () => {
+        clearInterval(interval);
+        if (typeof window !== 'undefined') {
+          window.removeEventListener(QUIZ_RESULT_EVENT, onQuizResultAdded as EventListener);
+        }
+      };
     }
-  }, [autoRefresh]);
+    
+    // autoRefreshが無効の場合でもクリーンアップは必要
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener(QUIZ_RESULT_EVENT, onQuizResultAdded as EventListener);
+      }
+    };
+  }, [autoRefresh, loadData]);
 
   // 難易度別リセット
   const _handleResetByDifficulty = (mode: 'translation' | 'spelling', difficulty: string) => {
@@ -390,21 +424,25 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 
 // カレンダーヒートマップコンポーネント（過去2週間）
 function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; accuracy: number }> }) {
+  // 今日の日付を取得(YYYY-MM-DD形式)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayStr = formatLocalYYYYMMDD(today);
+  
+  // 今日のデータを取得
+  const todayData = data.find(d => d.date === todayStr);
+  
   if (data.length === 0) {
     return (
       <div className="w-full p-8 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 text-center">
         <p className="text-gray-500 dark:text-gray-400 text-lg">📊 データがありません</p>
         <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">学習を開始するとヒートマップが表示されます</p>
+        <p className="text-xs text-red-500 mt-4">DEBUG: 今日={todayStr}, データ件数={data.length}, 今日のデータ={todayData ? `${todayData.count}問` : 'なし'}</p>
       </div>
     );
   }
-
-  // 今日の日付を取得（YYYY-MM-DD形式）
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const todayStr = today.toISOString().split('T')[0];
   
-  // 過去2週間（14日間）の日付を生成
+  // 過去2週間(14日間)の日付を生成
   const twoWeeksAgo = new Date(today);
   twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 13); // 今日を含む14日間
   
@@ -412,27 +450,37 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
   const dataMap = new Map(data.map(d => [d.date, d]));
   
   // 2週間分のデータを曜日ごとに整理（月〜日の7列 × 2行）
-  const weeks: Array<Array<{ date: string; count: number; accuracy: number; mastered: number } | null>> = [[], []];
-  const currentDate = new Date(twoWeeksAgo);
+  const weeks: Array<Array<{ date: string; count: number; accuracy: number; correct: number } | null>> = [[], []];
   
-  // 最初の週の開始曜日を月曜日に調整
-  const startDayOfWeek = currentDate.getDay();
-  const diffToMonday = startDayOfWeek === 0 ? 6 : startDayOfWeek - 1;
-  currentDate.setDate(currentDate.getDate() - diffToMonday);
+  // 表示開始日を決定（先週の月曜日）→ 今週分に必ず今日を含める
+  const mondayThisWeek = new Date(today);
+  const dow = mondayThisWeek.getDay();
+  const diffToMonday2 = dow === 0 ? 6 : dow - 1; // 日曜(0)は6、他は月曜日までの差
+  mondayThisWeek.setDate(mondayThisWeek.getDate() - diffToMonday2);
+  // 2週表示のため開始日は「先週の月曜日」
+  const firstDate = new Date(mondayThisWeek);
+  firstDate.setDate(firstDate.getDate() - 7);
+  
+  const currentDate = new Date(firstDate);
   
   // 2週間分のデータを配置
   for (let week = 0; week < 2; week++) {
     for (let day = 0; day < 7; day++) {
-      const dateStr = currentDate.toISOString().split('T')[0];
+      const dateStr = formatLocalYYYYMMDD(currentDate);
       const dayData = dataMap.get(dateStr);
       
-      // 過去2週間の範囲外の日付はnullにする
-      if (currentDate < twoWeeksAgo || currentDate > today) {
+      // currentDateを正規化してから比較
+      const normalizedCurrentDate = new Date(currentDate);
+      normalizedCurrentDate.setHours(0, 0, 0, 0);
+      
+      // 今日より未来の日付はnullにする
+      if (normalizedCurrentDate.getTime() > today.getTime()) {
         weeks[week].push(null);
       } else {
-        // 定着済み数を計算（正解率80%以上を定着済みとする）
-        const mastered = dayData ? Math.round(dayData.count * dayData.accuracy / 100 * 0.8) : 0;
-        weeks[week].push(dayData ? { ...dayData, mastered } : { date: dateStr, count: 0, accuracy: 0, mastered: 0 });
+        // 正解数を計算(count * accuracy / 100)
+        const correct = dayData ? Math.round(dayData.count * dayData.accuracy / 100) : 0;
+        const cellData = dayData ? { ...dayData, correct } : { date: dateStr, count: 0, accuracy: 0, correct: 0 };
+        weeks[week].push(cellData);
       }
       currentDate.setDate(currentDate.getDate() + 1);
     }
@@ -491,10 +539,10 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
                       } ${
                         isToday ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white dark:ring-offset-gray-800 shadow-2xl border-yellow-400' : 'border-transparent'
                       }`}
-                      title={`${day.date} (${dayName})${isToday ? ' [今日]' : ''}: ${day.count}問 (正答率${day.accuracy.toFixed(0)}%)`}
+                      title={`${day.date} (${dayName})${isToday ? ' [今日]' : ''}: ${day.count}問 (正答率${day.accuracy.toFixed(0)}%, 正解${day.correct}問)`}
                     >
                       <div className="flex items-center gap-1">
-                        <span className="text-base">{day.mastered}</span>
+                        <span className="text-base">{day.correct}</span>
                         <span className="text-[10px] opacity-80">/</span>
                         <span className="text-sm">{day.count}</span>
                       </div>
@@ -519,7 +567,7 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
           <span className="text-xs">多</span>
         </div>
         <div className="text-center text-xs text-gray-500 dark:text-gray-400">
-          <span className="font-semibold">表示:</span> 定着済/出題数 | 
+          <span className="font-semibold">表示:</span> 正解数/出題数 | 
           <span className="ml-2 inline-block w-6 h-6 rounded bg-gray-200 dark:bg-gray-600 border-2 border-yellow-400 align-middle"></span>
           <span className="ml-1">= 今日</span>
         </div>

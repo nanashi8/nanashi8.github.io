@@ -445,12 +445,9 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
     
     return readingPassage;
   } catch (error) {
-    // oldフォルダに移動したファイルや存在しないファイルのエラーは表示しない
-    if (error instanceof SyntaxError || (error instanceof Error && error.message.includes('JSON'))) {
-      logger.log(`Skipping invalid or old phrase learning JSON for ${passageId}, will use .txt conversion`);
-    } else {
-      logger.error(`Error loading phrase learning JSON for ${passageId}:`, error);
-    }
+    // oldフォルダに移動したファイルや存在しないファイルのエラーは静かにスキップ
+    // SyntaxErrorは無効なJSONファイル、404は存在しないファイル
+    logger.log(`Skipping phrase learning JSON for ${passageId} (file may be old or moved), will use .txt conversion`);
     return null;
   }
 }
