@@ -7,6 +7,8 @@ import {
   selectAdaptiveQuestions,
   classifyPhraseType,
 } from './utils';
+import { useQuizSettings } from './hooks/useQuizSettings';
+import { useQuizFilters } from './hooks/useQuizFilters';
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './storage/progress/progressStorage';
 import type { CustomQuestionState, CustomWord } from './types/customQuestions';
 import {
@@ -170,26 +172,21 @@ function App() {
     }
   }, []);
   
-  // 関連分野リスト
-  const [categoryList, setCategoryList] = useState<string[]>([]);
-  
-  // 選択中の関連分野
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  
-  // 難易度フィルター
-  const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>('all');
-  
-  // 単語/熟語フィルター
-  const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<WordPhraseFilter>('all');
-  
-  // 熟語タイプフィルター
-  const [selectedPhraseTypeFilter, setSelectedPhraseTypeFilter] = useState<PhraseTypeFilter>('all');
-  
-  // データソース選択（問題セットID）
-  const [selectedDataSource, setSelectedDataSource] = useState<DataSource>(() => {
-    const saved = localStorage.getItem('selectedDataSource');
-    return (saved as DataSource) || 'all';
-  });
+  // フィルター状態管理（カスタムフック）
+  const {
+    categoryList,
+    setCategoryList,
+    selectedCategory,
+    setSelectedCategory,
+    selectedDifficulty,
+    setSelectedDifficulty,
+    selectedWordPhraseFilter,
+    setSelectedWordPhraseFilter,
+    selectedPhraseTypeFilter,
+    setSelectedPhraseTypeFilter,
+    selectedDataSource,
+    setSelectedDataSource,
+  } = useQuizFilters();
   
   // 選択中の問題セット名を取得
   const getSelectedQuestionSetName = () => {
@@ -267,16 +264,8 @@ function App() {
   // 言語学的関連性追跡用(最近学習した単語を記録)
   const recentlyStudiedWordsRef = useRef<string[]>([]);
   
-  // 設定
-  const [autoAdvance] = useState<boolean>(() => {
-    const saved = localStorage.getItem('quiz-auto-advance');
-    return saved ? JSON.parse(saved) : false;
-  });
-
-  const [autoAdvanceDelay] = useState<number>(() => {
-    const saved = localStorage.getItem('quiz-auto-advance-delay');
-    return saved ? JSON.parse(saved) : 1.0;
-  });
+  // クイズ設定（カスタムフック）
+  const { autoAdvance, autoAdvanceDelay } = useQuizSettings();
 
   // ダークモード初期化
   useEffect(() => {
@@ -588,15 +577,6 @@ function App() {
   //     saveQuestionSets(questionSets);
   //   }
   // }, [questionSets]);
-  
-  // 自動進行設定の保存
-  useEffect(() => {
-    localStorage.setItem('quiz-auto-advance', JSON.stringify(autoAdvance));
-  }, [autoAdvance]);
-
-  useEffect(() => {
-    localStorage.setItem('quiz-auto-advance-delay', JSON.stringify(autoAdvanceDelay));
-  }, [autoAdvanceDelay]);
   
   // 適応的学習モードの保存
   useEffect(() => {
