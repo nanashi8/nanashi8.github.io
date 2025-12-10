@@ -9,6 +9,7 @@ import {
 } from './utils';
 import { useQuizSettings } from './hooks/useQuizSettings';
 import { useQuizFilters } from './hooks/useQuizFilters';
+import { useQuizState } from './hooks/useQuizState';
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './storage/progress/progressStorage';
 import type { CustomQuestionState, CustomWord } from './types/customQuestions';
 import {
@@ -221,28 +222,19 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
   
-  // 要復習集中モード（補修モード）
-  const [reviewFocusMode, setReviewFocusMode] = useState<boolean>(false);
-  const [reviewQuestionPool, setReviewQuestionPool] = useState<Question[]>([]); // 補修モード用の問題プール
-  const [reviewCorrectStreak, setReviewCorrectStreak] = useState<Map<string, number>>(new Map()); // 補修モードの連続正解数
-  
-  // セッション統計（和訳タブ用）
-  const [sessionStats, setSessionStats] = useState({
-    correct: 0,
-    incorrect: 0,
-    review: 0,
-    mastered: 0,
-  });
-  
-  // 和訳タブ用のクイズ状態
-  const [quizState, setQuizState] = useState<QuizState>({
-    questions: [],
-    currentIndex: 0,
-    score: 0,
-    totalAnswered: 0,
-    answered: false,
-    selectedAnswer: null,
-  });
+  // クイズ状態管理（カスタムフック）
+  const {
+    sessionStats,
+    setSessionStats,
+    quizState,
+    setQuizState,
+    reviewFocusMode,
+    setReviewFocusMode,
+    reviewQuestionPool,
+    setReviewQuestionPool,
+    reviewCorrectStreak,
+    setReviewCorrectStreak,
+  } = useQuizState();
 
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
