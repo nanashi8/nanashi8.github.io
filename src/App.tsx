@@ -8,6 +8,16 @@ import {
   classifyPhraseType,
 } from './utils';
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './progressStorage';
+import type { CustomQuestionState, CustomWord } from './types/customQuestions';
+import {
+  loadCustomQuestionState,
+  saveCustomQuestionState,
+  createCustomQuestionSet,
+  addWordToSet,
+  removeWordFromSet,
+  deleteCustomQuestionSet,
+  updateCustomQuestionSet,
+} from './utils/customQuestionStorage';
 import { logger } from './logger';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
 import {
@@ -59,6 +69,7 @@ import GrammarQuizView from './components/GrammarQuizView';
 import MemorizationView from './components/MemorizationView';
 import GrammarGuideView from './components/GrammarGuideView';
 import DictionaryView from './components/DictionaryView';
+import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import './App.css';
@@ -132,6 +143,17 @@ function App() {
   
   // 全問題データ（high-school-entrance-words.csvから読み込み）
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
+
+  // カスタム問題セット管理
+  const [customQuestionState, setCustomQuestionState] = useState<CustomQuestionState>(() => {
+    return loadCustomQuestionState();
+  });
+  const [isFloatingPanelOpen, setIsFloatingPanelOpen] = useState(false);
+
+  // カスタム問題セットの状態をLocalStorageに自動保存
+  useEffect(() => {
+    saveCustomQuestionState(customQuestionState);
+  }, [customQuestionState]);
 
   // テスト用モジュール（開発環境のみ）
   useEffect(() => {
@@ -638,6 +660,38 @@ function App() {
     filtered = filterSkippedWords(filtered);
     
     return filtered;
+  };
+
+  // カスタム問題セット操作関数
+  const handleCreateCustomSet = (name: string, description?: string) => {
+    const newSet = createCustomQuestionSet(name, description);
+    setCustomQuestionState(prev => ({
+      ...prev,
+      sets: [...prev.sets, newSet],
+    }));
+    logger.log(`✅ カスタムセット「${name}」を作成しました`);
+  };
+
+  const handleDeleteCustomSet = (setId: string) => {
+    setCustomQuestionState(prev => deleteCustomQuestionSet(prev, setId));
+    logger.log(`🗑️ カスタムセットを削除しました`);
+  };
+
+  const handleEditCustomSet = (setId: string, name: string, description?: string) => {
+    setCustomQuestionState(prev => 
+      updateCustomQuestionSet(prev, setId, { name, description })
+    );
+    logger.log(`✏️ カスタムセット「${name}」を更新しました`);
+  };
+
+  const handleAddWordToCustomSet = (setId: string, word: CustomWord) => {
+    setCustomQuestionState(prev => addWordToSet(prev, setId, word));
+    logger.log(`➕ 「${word.word}」をセットに追加しました`);
+  };
+
+  const handleRemoveWordFromCustomSet = (setId: string, word: CustomWord) => {
+    setCustomQuestionState(prev => removeWordFromSet(prev, setId, word));
+    logger.log(`➖ 「${word.word}」をセットから削除しました`);
   };
 
   // クイズ開始ハンドラー
@@ -1426,7 +1480,25 @@ function App() {
         >
           ⚙️ 設定
         </button>
+        <button
+          className="py-4 px-4 text-base font-semibold transition-all duration-200 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-md"
+          onClick={() => setIsFloatingPanelOpen(true)}
+          title="カスタム問題セット管理"
+        >
+          📚 セット ({customQuestionState.sets.length})
+        </button>
       </div>
+
+      {/* カスタム問題セット管理パネル */}
+      <FloatingPanel
+        isOpen={isFloatingPanelOpen}
+        onClose={() => setIsFloatingPanelOpen(false)}
+        sets={customQuestionState.sets}
+        onCreateSet={handleCreateCustomSet}
+        onDeleteSet={handleDeleteCustomSet}
+        onEditSet={handleEditCustomSet}
+        onRemoveWord={handleRemoveWordFromCustomSet}
+      />
 
       {/* コンテンツエリア */}
       <div className="p-4 md:p-6 bg-gray-50 dark:bg-black">
@@ -1484,6 +1556,10 @@ function App() {
           />
         ) : activeTab === 'reading' ? (
           <ComprehensiveReadingView 
+            customQuestionSets={customQuestionState.sets}
+            onAddWordToCustomSet={handleAddWordToCustomSet}
+            onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
+            onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             onSaveUnknownWords={async (words) => {
               // 分からない単語を問題集として保存
               if (words.length === 0) return;

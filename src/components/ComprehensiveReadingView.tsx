@@ -1,15 +1,21 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
+import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 import { logger } from '../logger';
 import { analyzeSentence, GrammarAnalysisResult, detectPhrasalExpressions, PhrasalExpression, detectGrammarPatterns, GrammarPattern } from '../utils/grammarAnalyzer';
+import AddToCustomButton from './AddToCustomButton';
 
 type DifficultyFilter = 'all' | '初級' | '中級' | '上級';
 
 interface ComprehensiveReadingViewProps {
   onSaveUnknownWords?: (words: Question[]) => void | Promise<void>;
+  customQuestionSets?: CustomQuestionSet[];
+  onAddWordToCustomSet?: (setId: string, word: CustomWord) => void;
+  onRemoveWordFromCustomSet?: (setId: string, word: CustomWord) => void;
+  onOpenCustomSetManagement?: () => void;
 }
 
 interface WordPopup {
@@ -36,7 +42,13 @@ function _getLevelLabel(level: string): string {
   return levelMap[level] || level;
 }
 
-function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingViewProps) {
+function ComprehensiveReadingView({ 
+  onSaveUnknownWords,
+  customQuestionSets = [],
+  onAddWordToCustomSet,
+  onRemoveWordFromCustomSet,
+  onOpenCustomSetManagement,
+}: ComprehensiveReadingViewProps) {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
   const [selectedPassageId, setSelectedPassageId] = useState<string | null>(null);
   const [phraseTranslations, setPhraseTranslations] = useState<boolean[]>([]);
@@ -1459,7 +1471,25 @@ function ComprehensiveReadingView({ onSaveUnknownWords }: ComprehensiveReadingVi
                       <h5 className="text-sm font-semibold mb-2">🔗 熟語:</h5>
                       <div className="space-y-2">
                         {phrasalExpressions.map((expr: PhrasalExpression, idx: number) => (
-                          <div key={idx} className="phrasal-expression-card">
+                          <div key={idx} className="phrasal-expression-card relative">
+                            {/* カスタムセットに追加ボタン */}
+                            {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                              <div className="absolute top-2 right-2">
+                                <AddToCustomButton
+                                  word={{
+                                    word: expr.words.join(' '),
+                                    meaning: expr.meaning,
+                                    source: 'reading',
+                                    sourceDetail: currentPassage?.title,
+                                  }}
+                                  sets={customQuestionSets}
+                                  onAddWord={onAddWordToCustomSet}
+                                  onRemoveWord={onRemoveWordFromCustomSet}
+                                  onOpenManagement={onOpenCustomSetManagement}
+                                  size="small"
+                                />
+                              </div>
+                            )}
                             <div className="phrasal-expression-words">
                               {expr.words.map((word, widx) => {
                                 const meaning = getMeaning(word, undefined);
