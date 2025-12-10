@@ -1,13 +1,13 @@
 # プロジェクトリファクタリング実行計画
 
 **作成日**: 2025年12月6日  
-**最終更新**: 2025年12月10日  
+**最終更新**: 2025年12月11日  
 **対象**: 英語学習アプリ (nanashi8.github.io)  
 **目的**: フォルダ構成の最適化と段階的リファクタリング
 
 ---
 
-## ✅ 進捗状況 (2025年12月10日更新)
+## ✅ 進捗状況 (2025年12月11日更新)
 
 ### Phase 1: 基盤整備 ✓ **完了**
 
@@ -77,6 +77,81 @@ Phase 2に進む前に以下を推奨:
 1. E2Eテスト実行で機能デグレードがないことを確認
 1. 健康診断実行でコード品質を測定
 1. Phase 2の詳細計画を確認
+
+---
+
+### Phase 2: コンポーネント分割 🚧 **進行中**
+
+**開始日**: 2025年12月11日  
+**優先度**: 🟡 Medium
+
+#### 実施内容
+
+**カスタムフック作成（5個、485行）:**
+
+1. ✅ **useQuizSettings** (22行)
+   - 自動進行設定の管理（autoAdvance, autoAdvanceDelay）
+   - LocalStorageとの統合
+
+2. ✅ **useQuizFilters** (45行)
+   - 6つのフィルター状態管理
+   - category, difficulty, wordPhrase, phraseType, dataSource
+
+3. ✅ **useQuizState** (67行)
+   - クイズ状態・セッション統計
+   - 補修モード（reviewFocusMode）管理
+
+4. ✅ **useSpellingGame** (268行)
+   - スペリングゲームのコアロジック
+   - 文字シャッフル・選択シーケンス管理
+   - 熟語対応（複数単語の段階的入力）
+   - 正誤判定ロジック
+
+5. ✅ **useSessionStats** (58行)
+   - セッション統計の追跡
+   - correct/incorrect/review/masteredカウント
+
+**コンポーネント統合:**
+
+1. ✅ **App.tsx**
+   - useQuizSettings統合
+   - useQuizFilters統合
+   - useQuizState統合
+   - 1651行 → 1623行 (-28行, -1.7%)
+
+2. ✅ **SpellingView.tsx**
+   - useSpellingGame統合
+   - useSessionStats統合
+   - 890行 → 749行 (-141行, -15.8%)
+
+#### 改善結果
+
+| ファイル | 変更前 | 変更後 | 削減 | 削減率 |
+|---------|--------|--------|------|--------|
+| App.tsx | 1,651行 | 1,623行 | -28行 | -1.7% |
+| SpellingView.tsx | 890行 | 749行 | -141行 | -15.8% |
+| **合計** | **2,541行** | **2,372行** | **-169行** | **-6.7%** |
+
+**新規作成:**
+- hooks/ディレクトリ: 485行（5ファイル）
+
+#### コミット履歴
+```
+f948a73 - SpellingView統合 (890→749行, -15.8%)
+d224d14 - useSpellingGame + useSessionStats追加
+b381889 - useQuizState追加
+b29d210 - useQuizSettings + useQuizFilters統合
+```
+
+#### 次のステップ
+
+1. **ComprehensiveReadingView.tsx** (2564行) - 最優先
+   - 状態管理をカスタムフックへ抽出
+   - UIコンポーネントを分離
+   
+2. **App.tsx** (1623行 → 目標500行以下)
+   - さらなる状態管理の抽出
+   - ビジネスロジックの分離
 
 ---
 
