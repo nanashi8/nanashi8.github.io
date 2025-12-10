@@ -156,7 +156,7 @@ on one's way to,On One'S Way To (オン ワンズ ウェイ トゥ)
    # February,ˈfɛbruɛri (フェ́ブルアリー),2月
    ```
 
-2. **KATAKANA_ENGLISH_MIXED (436件)** の修正
+1. **KATAKANA_ENGLISH_MIXED (436件)** の修正
    ```bash
    # 対象: public/data/vocabulary/all-words.csv
    # August,ɔːˈɡʌst (August),8月
@@ -170,12 +170,12 @@ on one's way to,On One'S Way To (オン ワンズ ウェイ トゥ)
 
 ### フェーズ2: 中優先度エラー修正（推奨）
 
-3. **MISSING_REQUIRED_FIELD (150件)** の修正
+1. **MISSING_REQUIRED_FIELD (150件)** の修正
    - データ構造を確認
    - 空のエントリや不要な行を削除
    - 必要なフィールドを補完
 
-4. **IPA_INVALID_CHARS (76件)** の確認
+1. **IPA_INVALID_CHARS (76件)** の確認
    - 稀な記号が本当に必要かを検証
    - 必要ならチェッカーに追加
    - 不要なら標準記号に変更
@@ -184,9 +184,9 @@ on one's way to,On One'S Way To (オン ワンズ ウェイ トゥ)
 
 ### フェーズ3: 軽微な問題の修正（任意）
 
-5. **IPA_UPPERCASE (2件)** の修正
-6. **IPA_SAME_AS_WORD (15件)** の修正
-7. 警告の確認と必要に応じた修正
+1. **IPA_UPPERCASE (2件)** の修正
+1. **IPA_SAME_AS_WORD (15件)** の修正
+1. 警告の確認と必要に応じた修正
 
 ---
 
@@ -224,8 +224,8 @@ on one's way to,On One'S Way To (オン ワンズ ウェイ トゥ)
 
 ### 🎯 次のステップ
 1. **IPA_MISSING（336件）を修正** → 発音機能が完全動作
-2. **KATAKANA_ENGLISH_MIXED（436件）を修正** → カタカナ表示が正常化
-3. 継続的なデータ品質チェックをCI/CDに統合
+1. **KATAKANA_ENGLISH_MIXED（436件）を修正** → カタカナ表示が正常化
+1. 継続的なデータ品質チェックをCI/CDに統合
 
 ### 📌 重要な注意点
 - **データ形式を壊さない**: `IPA (カタカナ́)` 形式を厳守

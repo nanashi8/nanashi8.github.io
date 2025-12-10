@@ -8,8 +8,8 @@
  * 4. 定着ルートの最適化
  */
 
-import { Question } from './types';
-import { WordProgress } from './progressStorage';
+import { Question } from '@/types';
+import { WordProgress } from '@/storage/progress/progressStorage';
 
 /**
  * 記憶定着度（0-100%）

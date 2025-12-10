@@ -11,23 +11,23 @@
 
 #### 高優先度(中学必修)
 1. **It is ~ that ... (強調構文)** - Grade 3で必要
-2. **so ~ that ... (結果)** - Grade 3で必要
-3. **too ~ to ... (~すぎて...できない)** - Grade 3で必要  
-4. **~ enough to ... (十分~...できる)** - Grade 3で必要
-5. **ask/tell/want ~ to ... (人に...するよう頼む/言う/望む)** - Grade 2-3で必要
-6. **It is ~ for ... to ... (人が...するのは~だ)** - Grade 3で必要
+1. **so ~ that ... (結果)** - Grade 3で必要
+1. **too ~ to ... (~すぎて...できない)** - Grade 3で必要  
+1. **~ enough to ... (十分~...できる)** - Grade 3で必要
+1. **ask/tell/want ~ to ... (人に...するよう頼む/言う/望む)** - Grade 2-3で必要
+1. **It is ~ for ... to ... (人が...するのは~だ)** - Grade 3で必要
 
 #### 中優先度(頻出表現)
-7. **not only ~ but also ...** - Grade 3で推奨
-8. **both ~ and ...** - Grade 2-3で推奨
-9. **either ~ or ...** - Grade 2-3で推奨
-10. **neither ~ nor ...** - Grade 3で推奨
-11. **would like to ...** - Grade 2で推奨
-12. **used to ...** - Grade 3で推奨
+1. **not only ~ but also ...** - Grade 3で推奨
+1. **both ~ and ...** - Grade 2-3で推奨
+1. **either ~ or ...** - Grade 2-3で推奨
+1. **neither ~ nor ...** - Grade 3で推奨
+1. **would like to ...** - Grade 2で推奨
+1. **used to ...** - Grade 3で推奨
 
 #### 低優先度(発展)
-13. **make/let/have ~ do ... (使役)** - Grade 3発展
-14. **see/hear ~ do/doing ... (知覚動詞)** - Grade 3発展
+1. **make/let/have ~ do ... (使役)** - Grade 3発展
+1. **see/hear ~ do/doing ... (知覚動詞)** - Grade 3発展
 
 ## 実装方針
 
@@ -98,19 +98,19 @@
 
 ### 即時実施(Phase 1)
 1. Grade 2 Unit 4: ask/tell/want ~ to追加 (15問追加)
-2. Grade 3 Unit 4: It is for to/too to/enough to追加 (30問置き換え)
-3. Grade 2 Unit 6: so that/not only but also追加 (15問追加)
+1. Grade 3 Unit 4: It is for to/too to/enough to追加 (30問置き換え)
+1. Grade 2 Unit 6: so that/not only but also追加 (15問追加)
 
 **総追加問題数**: 約60問
 
 ### 第2フェーズ(1週間以内)
-4. Grade 2 Unit 7: both and/either or追加 (10問追加)
-5. Grade 3 Unit 7: neither nor/used to/would like追加 (20問追加)
+1. Grade 2 Unit 7: both and/either or追加 (10問追加)
+1. Grade 3 Unit 7: neither nor/used to/would like追加 (20問追加)
 
 **総追加問題数**: 約30問
 
 ### オプション(必要に応じて)
-6. Grade 3 Unit 10新規作成: 使役・知覚動詞 (60問新規)
+1. Grade 3 Unit 10新規作成: 使役・知覚動詞 (60問新規)
 
 ## 構文の説明方針
 
@@ -129,19 +129,19 @@
 
 ### 最優先(今すぐ)
 1. ✅ ask/tell/want ~ to (Grade 2 Unit 4)
-2. ✅ too ~ to / enough to (Grade 3 Unit 4)
-3. ✅ It is for to (Grade 3 Unit 4)
+1. ✅ too ~ to / enough to (Grade 3 Unit 4)
+1. ✅ It is for to (Grade 3 Unit 4)
 
 ### 高優先(今週中)
-4. ⏳ so ~ that (Grade 2 Unit 6)
-5. ⏳ not only but also (Grade 2 Unit 6)
+1. ⏳ so ~ that (Grade 2 Unit 6)
+1. ⏳ not only but also (Grade 2 Unit 6)
 
 ### 中優先(来週)
-6. ⏳ both and / either or (Grade 2 Unit 7)
-7. ⏳ used to / would like (Grade 3 Unit 7)
+1. ⏳ both and / either or (Grade 2 Unit 7)
+1. ⏳ used to / would like (Grade 3 Unit 7)
 
 ### 低優先(余裕があれば)
-8. ⬜ 使役・知覚動詞 (新規ユニット)
+1. ⬜ 使役・知覚動詞 (新規ユニット)
 
 ## 問題数の管理
 

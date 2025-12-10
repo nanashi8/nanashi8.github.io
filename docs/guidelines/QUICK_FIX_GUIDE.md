@@ -112,9 +112,9 @@ word,ipa (ワ́ード),meaning
 ## 💡 修正の優先順位
 
 1. **IPA_MISSING (336件)** - 最優先
-2. **KATAKANA_ENGLISH_MIXED (436件)** - 最優先
-3. MISSING_REQUIRED_FIELD (150件) - 中
-4. その他 (78件) - 低
+1. **KATAKANA_ENGLISH_MIXED (436件)** - 最優先
+1. MISSING_REQUIRED_FIELD (150件) - 中
+1. その他 (78件) - 低
 
 **目標**: 上位2つ（772件）を修正すれば、エラーが77%削減！
 
@@ -127,20 +127,20 @@ word,ipa (ワ́ード),meaning
    cp public/data/vocabulary/all-words.csv public/data/vocabulary/all-words.csv.backup
    ```
 
-2. **CSVエディタで開く**
+1. **CSVエディタで開く**
    - Excel, Google Sheets, VS Code等
 
-3. **検索・置換で一括修正**
+1. **検索・置換で一括修正**
    - 例: `(August)` → `(オーガ́スト)`
 
-4. **修正後チェック**
+1. **修正後チェック**
    ```bash
    npm run check:data-quality
    ```
 
-5. **エラーが減っていることを確認**
+1. **エラーが減っていることを確認**
 
-6. **コミット**
+1. **コミット**
    ```bash
    git add public/data/vocabulary/all-words.csv
    git commit -m "fix: IPA欠損とカタカナ英語混入を修正 (336+436件)"
@@ -173,14 +173,14 @@ Option + E → 母音（a, e, i, o, u）
 ### Q: IPA記号の入力方法は？
 A: 
 1. Wiktionaryから発音記号をコピー
-2. IPA Keyboard（ブラウザ拡張）を使用
-3. 既存の正しいデータからコピー
+1. IPA Keyboard（ブラウザ拡張）を使用
+1. 既存の正しいデータからコピー
 
 ### Q: 修正後もエラーが減らない
 A:
 1. ファイルを保存したか確認
-2. チェックコマンドを再実行
-3. レポートで具体的なエラー行を確認
+1. チェックコマンドを再実行
+1. レポートで具体的なエラー行を確認
 
 ---
 

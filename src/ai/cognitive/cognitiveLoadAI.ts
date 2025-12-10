@@ -8,9 +8,9 @@
  * 4. 休憩推奨アルゴリズム
  */
 
-import { logger } from './logger';
+import { logger } from '@/logger';
 
-import { QuestionPriority } from './learningCurveAI';
+import { QuestionPriority } from '@/ai/analysis/learningCurveAI';
 
 /**
  * 認知負荷モニター

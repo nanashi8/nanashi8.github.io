@@ -147,15 +147,15 @@ fix: IPA_INVALID_CHARSエラーをほぼ完全解決（74→1件）
    - 主に上級語彙のIPA発音が未登録
    - 手動での正確なIPA記号追加が必要
 
-2. **KATAKANA_ENGLISH_MIXED**: 188件（37.5%）
+1. **KATAKANA_ENGLISH_MIXED**: 188件（37.5%）
    - 単一文字（t, k, l等）がカタカナ部分に混入
    - IPA記号の一部である可能性が高い
    - 慎重な検証が必要
 
-3. **IPA_INVALID_CHARS**: 1件（0.2%）
+1. **IPA_INVALID_CHARS**: 1件（0.2%）
    - ほぼ解決済み
 
-4. **その他の警告**: 489件
+1. **その他の警告**: 489件
    - KATAKANA_INVALID_CHARS: 407件（IPA記号の混入）
    - MEANING_NO_JAPANESE: 69件（意味に日本語なし）
    - IPA_SAME_AS_WORD: 13件（IPA変換忘れ）
@@ -178,21 +178,21 @@ fix: IPA_INVALID_CHARSエラーをほぼ完全解決（74→1件）
 1. 残存するKATAKANA_ENGLISH_MIXEDの慎重な検証
    - 単一文字がIPA記号かカタカナの誤りかを判定
    
-2. IPA_MISSINGの段階的修正
+1. IPA_MISSINGの段階的修正
    - 頻出語彙から優先的にIPA追加
 
 ### 中期（継続的改善）
 1. 変換辞書の拡充
    - IPA欠損313件分のカタカナ→IPA辞書
    
-2. 自動修正スクリプトの統合
+1. 自動修正スクリプトの統合
    - 一つのCLIツールに統合
 
 ### 長期（品質維持）
 1. pre-commitフックの強化
    - 新規データ追加時の自動検証
    
-2. CI/CDパイプラインへの統合
+1. CI/CDパイプラインへの統合
    - GitHub Actions等での自動チェック
 
 ---

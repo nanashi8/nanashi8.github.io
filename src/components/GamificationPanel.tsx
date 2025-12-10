@@ -5,7 +5,7 @@ import {
   getNextMilestone,
   getBadgeCompletionRate,
   BADGE_DEFINITIONS,
-} from '../gamificationAI';
+} from '@/ai/engagement/gamificationAI';
 import './GamificationPanel.css';
 
 interface GamificationPanelProps {

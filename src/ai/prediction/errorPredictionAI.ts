@@ -13,7 +13,7 @@
  * 4. 混同単語検出: よく間違える単語ペアを特定
  */
 
-import { WordProgress } from './progressStorage';
+import { WordProgress } from '@/storage/progress/progressStorage';
 
 /**
  * 誤答パターンの種類
