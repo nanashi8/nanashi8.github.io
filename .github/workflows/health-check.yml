@@ -29,7 +29,7 @@ jobs:
       continue-on-error: true
       
     - name: 診断結果をアーティファクトとして保存
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: health-check-report
         path: health-report.txt

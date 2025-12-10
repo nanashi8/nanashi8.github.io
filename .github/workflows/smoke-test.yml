@@ -40,7 +40,7 @@ jobs:
       # 6. テスト失敗時のアーティファクト保存
       - name: テスト失敗時のスクリーンショット保存
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: smoke-test-results
           path: |
