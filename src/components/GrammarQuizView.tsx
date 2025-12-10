@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
@@ -38,13 +38,13 @@ interface SentenceOrderingQuestion {
   hint: string;
 }
 
-interface Category {
+interface _Category {
   category: string;
   grammarPoint: string;
   questions: VerbFormQuestion[] | FillInBlankQuestion[];
 }
 
-interface Unit {
+interface _Unit {
   unit: string;
   title: string;
   sentenceOrdering?: SentenceOrderingQuestion[];
@@ -53,18 +53,32 @@ interface Unit {
   questions?: SentenceOrderingQuestion[]; // 後方互換性のため一時的に保持
 }
 
-interface QuizData {
-  grade: number;
-  totalQuestions: number;
-  categories?: Category[];
-  units?: Unit[];
-}
-
 type QuizType = 'all' | 'random' | 'verb-form' | 'fill-in-blank' | 'sentence-ordering';
 type Grade = 'all' | '1' | '2' | '3' | '1-all' | '2-all' | '3-all' | string; // 'g1-u0', 'g1-u1' など
 
+// 全ての型のプロパティを含む包括的な型定義
+interface GrammarQuestion {
+  id: string;
+  japanese: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  hint: string;
+  // VerbFormQuestion / FillInBlankQuestion固有
+  sentence?: string;
+  verb?: string;
+  choices?: string[];
+  correctAnswer?: string;
+  explanation?: string;
+  // SentenceOrderingQuestion固有
+  words?: string[];
+  grammarPoint?: string;
+  wordCount?: number;
+  // その他
+  type?: string;
+  question?: string;
+}
+
 interface GrammarQuizViewProps {
-  onSaveProgress?: (data: any) => void;
+  onSaveProgress?: (data: Record<string, unknown>) => void;
 }
 
 function GrammarQuizView(_props: GrammarQuizViewProps) {
@@ -105,7 +119,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
   const [_loading, setLoading] = useState<boolean>(false);
   
-  const [currentQuestions, setCurrentQuestions] = useState<any[]>([]);
+  const [currentQuestions, setCurrentQuestions] = useState<GrammarQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
@@ -136,6 +150,205 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     }
     return undefined;
   })() : undefined;
+
+  // Refs（useEffect前に定義）
+  const prevSettingsRef = useRef({ quizType, grade, difficulty });
+  const questionStartTimeRef = useRef<number>(Date.now());
+
+  // ハンドラー関数（useEffect前に定義）
+  const handleNext = useCallback(() => {
+    if (currentQuestionIndex < currentQuestions.length - 1) {
+      setCurrentQuestionIndex(prev => prev + 1);
+      setSelectedAnswer(null);
+      setSelectedWords([]);
+      setAnswered(false);
+      setShowHint(false);
+      questionStartTimeRef.current = Date.now(); // 次の問題の開始時刻を記録
+    }
+  }, [currentQuestionIndex, currentQuestions.length]);
+
+  const handleStartQuiz = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      // 学年フィルターの解析
+      let gradesToLoad: string[] = [];
+      let selectedUnitIndex: number | null = null;
+      
+      if (grade === 'all') {
+        gradesToLoad = ['1', '2', '3'];
+      } else if (grade.match(/^[123]$/)) {
+        // '1', '2', '3' の場合
+        gradesToLoad = [grade];
+      } else if (grade.endsWith('-all')) {
+        // '1-all', '2-all', '3-all' の場合
+        gradesToLoad = [grade.charAt(0)];
+      } else if (grade.match(/^g\d+-unit\d+$/)) {
+        // 'g1-unit0' のような特定のUnit
+        const gradeNum = grade.match(/^g(\d+)-unit(\d+)$/)?.[1];
+        const unitNum = grade.match(/^g(\d+)-unit(\d+)$/)?.[2];
+        if (gradeNum && unitNum !== undefined) {
+          gradesToLoad = [gradeNum];
+          selectedUnitIndex = parseInt(unitNum);
+        }
+      }
+      
+      const allGrammarFiles: Array<{ enabled?: boolean; disabledReason?: string; questions?: GrammarQuestion[] }> = [];
+      
+      // 新しいgrammar_grade{N}_unit{X}.json形式のファイルを読み込む
+      for (const g of gradesToLoad) {
+        for (let unitIdx = 0; unitIdx < 10; unitIdx++) {
+          // 特定のunitが選択されている場合はそれだけを読み込む
+          if (selectedUnitIndex !== null && unitIdx !== selectedUnitIndex) {
+            continue;
+          }
+          
+          try {
+            const res = await fetch(`/data/grammar/grammar_grade${g}_unit${unitIdx}.json`);
+            if (res.ok) {
+              const data = await res.json();
+              
+              // enabledフラグをチェック (デフォルトはtrue)
+              if (data.enabled === false) {
+                logger.log(`grammar_grade${g}_unit${unitIdx}.json is disabled: ${data.disabledReason || 'No reason provided'}`);
+                continue; // 無効化されたユニットはスキップ
+              }
+              
+              allGrammarFiles.push(data);
+            } else {
+              // ファイルが見つからない場合(404など)はデバッグモードでのみログ出力
+              logger.log(`grammar_grade${g}_unit${unitIdx}.json returned status ${res.status}, skipping...`);
+            }
+          } catch (err) {
+            // ネットワークエラーなど、fetch自体が失敗した場合
+            logger.log(`Failed to fetch grammar_grade${g}_unit${unitIdx}.json:`, err);
+          }
+        }
+      }
+      
+      if (allGrammarFiles.length === 0) {
+        throw new Error(`問題データが見つかりません（学年: ${grade}, 形式: ${quizType}, 難易度: ${difficulty}）`);
+      }
+      
+      // 全ての問題を収集
+      let questions: GrammarQuestion[] = [];
+      
+      // 新しいgrammar形式から問題を収集
+      allGrammarFiles.forEach(grammarFile => {
+        const allQuestions = grammarFile.questions || [];
+        
+        // quizTypeをデータのtype形式に変換
+        const typeMapping: { [key: string]: string } = {
+          'verb-form': 'verbForm',
+          'fill-in-blank': 'fillInBlank',
+          'sentence-ordering': 'sentenceOrdering'
+        };
+        
+        // 問題形式でフィルタリング
+        if (quizType === 'all' || quizType === 'random') {
+          // 全形式を含める
+          questions.push(...allQuestions);
+        } else {
+          // 特定の形式のみ (quizTypeをデータ形式に変換)
+          const targetType = typeMapping[quizType] || quizType;
+          const filtered = allQuestions.filter((q: GrammarQuestion) => q.type === targetType);
+          questions.push(...filtered);
+        }
+      });
+      
+      if (questions.length === 0) {
+        throw new Error('選択された条件に該当する問題がありません');
+      }
+      
+      logger.log(`Total questions before difficulty filter: ${questions.length}`);
+      
+      // 難易度フィルタリング
+      if (difficulty !== 'all') {
+        questions = questions.filter(q => q.difficulty === difficulty);
+        logger.log(`Questions after difficulty filter (${difficulty}): ${questions.length}`);
+      }
+      
+      if (questions.length === 0) {
+        throw new Error(`選択された難易度（${difficulty}）に該当する問題がありません`);
+      }
+      
+      // シャッフル
+      questions = questions.sort(() => Math.random() - 0.5);
+      
+      setCurrentQuestions(questions);
+      setCurrentQuestionIndex(0);
+      setSelectedAnswer(null);
+      setSelectedWords([]);
+      setRemainingWords([]);
+      setAnswered(false);
+      setShowHint(false);
+      setScore(0);
+      setTotalAnswered(0);
+      setSessionStats({ correct: 0, incorrect: 0, review: 0, mastered: 0 });
+      setQuizStarted(true);
+      setLoading(false);
+    } catch (err) {
+      logger.error('データ読み込みエラー:', err);
+      setError(err instanceof Error ? err.message : String(err));
+      setLoading(false);
+    }
+  }, [quizType, grade, difficulty]);
+
+  const handleSkip = useCallback(async () => {
+    if (!answered) {
+      // 未回答の場合はスキップとして記録（正解扱い・定着済み）
+      setAnswered(true);
+      
+      // スキップは正解として扱い、定着済みとしてカウント
+      setScore(prev => prev + 1);
+      setTotalAnswered(prev => prev + 1);
+      setSessionStats(prev => ({ 
+        ...prev, 
+        correct: prev.correct + 1,
+        mastered: prev.mastered + 1
+      }));
+      
+      // 進捗データに記録（正解として）
+      const responseTime = Date.now() - questionStartTimeRef.current;
+      const { updateWordProgress, addSessionHistory } = await import('../progressStorage');
+      const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question || 'unknown'}`;
+      await updateWordProgress(
+        questionId,
+        true, // スキップは正解として記録
+        responseTime,
+        undefined,
+        'grammar'
+      );
+      
+      // セッション履歴に追加（スキップは定着済みとして）
+      const status: 'correct' | 'incorrect' | 'review' | 'mastered' = 'mastered'; // スキップは定着済み
+      
+      addSessionHistory({
+        status,
+        word: questionId,
+        timestamp: Date.now()
+      }, 'grammar');
+      
+      // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
+      setLastAnswerTime(Date.now());
+      
+      // 状態をリセットしてから次の問題へ
+      setTimeout(() => {
+        if (currentQuestionIndex < currentQuestions.length - 1) {
+          setCurrentQuestionIndex(prev => prev + 1);
+          setSelectedAnswer(null);
+          setSelectedWords([]);
+          setAnswered(false);
+          setShowHint(false);
+          questionStartTimeRef.current = Date.now();
+        }
+      }, 500);
+    } else {
+      // 回答済みの場合は通常の次へ処理
+      handleNext();
+    }
+  }, [answered, currentQuestionIndex, currentQuestions.length, currentQuestion, handleNext]);
 
   // 設定をlocalStorageに保存
   useEffect(() => {
@@ -193,8 +406,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   }, [grade, quizType]);
 
   // 設定が変更されたらクイズをリロード（クイズ開始中のみ）
-  const prevSettingsRef = useRef({ quizType, grade, difficulty });
-  const questionStartTimeRef = useRef<number>(Date.now());
   useEffect(() => {
     const prevSettings = prevSettingsRef.current;
     const settingsChanged = 
@@ -208,7 +419,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     }
     
     prevSettingsRef.current = { quizType, grade, difficulty };
-  }, [quizType, grade, difficulty]);
+  }, [quizType, grade, difficulty, handleStartQuiz, quizStarted]);
 
   // 問題が変わるたびに並べ替え用の単語をシャッフル
   useEffect(() => {
@@ -219,7 +430,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       setAnswered(false);
       setShowHint(false);
     }
-  }, [currentQuestionIndex, currentQuestions, isSentenceOrdering]);
+  }, [currentQuestionIndex, currentQuestions, isSentenceOrdering, currentQuestion]);
 
   // 問題が変わるたびにリセット
   useEffect(() => {
@@ -242,135 +453,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [quizStarted, answered]);
-
-  const handleStartQuiz = async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      // 学年フィルターの解析
-      let gradesToLoad: string[] = [];
-      let selectedUnitIndex: number | null = null;
-      
-      if (grade === 'all') {
-        gradesToLoad = ['1', '2', '3'];
-      } else if (grade.match(/^[123]$/)) {
-        // '1', '2', '3' の場合
-        gradesToLoad = [grade];
-      } else if (grade.endsWith('-all')) {
-        // '1-all', '2-all', '3-all' の場合
-        gradesToLoad = [grade.charAt(0)];
-      } else if (grade.match(/^g\d+-unit\d+$/)) {
-        // 'g1-unit0' のような特定のUnit
-        const gradeNum = grade.match(/^g(\d+)-unit(\d+)$/)?.[1];
-        const unitNum = grade.match(/^g(\d+)-unit(\d+)$/)?.[2];
-        if (gradeNum && unitNum !== undefined) {
-          gradesToLoad = [gradeNum];
-          selectedUnitIndex = parseInt(unitNum);
-        }
-      }
-      
-      const allGrammarFiles: any[] = [];
-      
-      // 新しいgrammar_grade{N}_unit{X}.json形式のファイルを読み込む
-      for (const g of gradesToLoad) {
-        for (let unitIdx = 0; unitIdx < 10; unitIdx++) {
-          // 特定のunitが選択されている場合はそれだけを読み込む
-          if (selectedUnitIndex !== null && unitIdx !== selectedUnitIndex) {
-            continue;
-          }
-          
-          try {
-            const res = await fetch(`/data/grammar/grammar_grade${g}_unit${unitIdx}.json`);
-            if (res.ok) {
-              const data = await res.json();
-              
-              // enabledフラグをチェック (デフォルトはtrue)
-              if (data.enabled === false) {
-                logger.log(`grammar_grade${g}_unit${unitIdx}.json is disabled: ${data.disabledReason || 'No reason provided'}`);
-                continue; // 無効化されたユニットはスキップ
-              }
-              
-              allGrammarFiles.push(data);
-            } else {
-              // ファイルが見つからない場合(404など)はデバッグモードでのみログ出力
-              logger.log(`grammar_grade${g}_unit${unitIdx}.json returned status ${res.status}, skipping...`);
-            }
-          } catch (err) {
-            // ネットワークエラーなど、fetch自体が失敗した場合
-            logger.log(`Failed to fetch grammar_grade${g}_unit${unitIdx}.json:`, err);
-          }
-        }
-      }
-      
-      if (allGrammarFiles.length === 0) {
-        throw new Error(`問題データが見つかりません（学年: ${grade}, 形式: ${quizType}, 難易度: ${difficulty}）`);
-      }
-      
-      // 全ての問題を収集
-      let questions: any[] = [];
-      
-      // 新しいgrammar形式から問題を収集
-      allGrammarFiles.forEach(grammarFile => {
-        const allQuestions = grammarFile.questions || [];
-        
-        // quizTypeをデータのtype形式に変換
-        const typeMapping: { [key: string]: string } = {
-          'verb-form': 'verbForm',
-          'fill-in-blank': 'fillInBlank',
-          'sentence-ordering': 'sentenceOrdering'
-        };
-        
-        // 問題形式でフィルタリング
-        if (quizType === 'all' || quizType === 'random') {
-          // 全形式を含める
-          questions.push(...allQuestions);
-        } else {
-          // 特定の形式のみ (quizTypeをデータ形式に変換)
-          const targetType = typeMapping[quizType] || quizType;
-          const filtered = allQuestions.filter((q: any) => q.type === targetType);
-          questions.push(...filtered);
-        }
-      });
-      
-      if (questions.length === 0) {
-        throw new Error('選択された条件に該当する問題がありません');
-      }
-      
-      logger.log(`Total questions before difficulty filter: ${questions.length}`);
-      
-      // 難易度フィルタリング
-      if (difficulty !== 'all') {
-        questions = questions.filter(q => q.difficulty === difficulty);
-        logger.log(`Questions after difficulty filter (${difficulty}): ${questions.length}`);
-      }
-      
-      if (questions.length === 0) {
-        throw new Error(`選択された難易度（${difficulty}）に該当する問題がありません`);
-      }
-      
-      // シャッフル
-      questions = questions.sort(() => Math.random() - 0.5);
-      
-      setCurrentQuestions(questions);
-      setCurrentQuestionIndex(0);
-      setSelectedAnswer(null);
-      setSelectedWords([]);
-      setRemainingWords([]);
-      setAnswered(false);
-      setShowHint(false);
-      setScore(0);
-      setTotalAnswered(0);
-      setSessionStats({ correct: 0, incorrect: 0, review: 0, mastered: 0 });
-      setQuizStarted(true);
-      setLoading(false);
-    } catch (err: any) {
-      logger.error('データ読み込みエラー:', err);
-      setError(err.message);
-      setLoading(false);
-    }
-  };
+  }, [quizStarted, answered, handleSkip]);
 
   // 選択肢クリック時に即座に判定（和訳・スペルタブと同じ）
   const handleAnswerSelect = async (answer: string) => {
@@ -416,8 +499,26 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     
     // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
     // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
-    const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
+    const { updateWordProgress, loadProgress, addSessionHistory, addQuizResult } = await import('../progressStorage');
     const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question}`;
+    
+    // 学習カレンダー用に回答を記録
+    const { generateId } = await import('../utils');
+    await addQuizResult({
+      id: generateId(),
+      questionSetId: 'grammar-set',
+      questionSetName: '文法問題',
+      score: isCorrect ? 1 : 0,
+      total: 1,
+      percentage: isCorrect ? 100 : 0,
+      date: Date.now(),
+      timeSpent: Math.floor(responseTime / 1000),
+      incorrectWords: isCorrect ? [] : [questionId],
+      mode: 'grammar',
+      category: undefined,
+      difficulty: currentQuestion.difficulty,
+    });
+    
     await updateWordProgress(
       questionId,
       isCorrect,
@@ -458,12 +559,12 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
         const newWords = [...prev, word];
         
         // 全ての単語を選択したら自動で判定
-        if (newWords.length === currentQuestion.words.length) {
+        if (newWords.length === currentQuestion.words?.length) {
           setTimeout(async () => {
             setAnswered(true);
             
             const userAnswer = newWords.join(' ');
-            const correctAnswer = currentQuestion.words.join(' ');
+            const correctAnswer = currentQuestion.words?.join(' ') || '';
             const isCorrect = userAnswer === correctAnswer;
             
             setTotalAnswered(prevTotal => prevTotal + 1);
@@ -497,7 +598,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
             // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
             const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
-            const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.words.join('_')}`;
+            const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.words?.join('_') || 'unknown'}`;
             await updateWordProgress(
               questionId,
               isCorrect,
@@ -542,74 +643,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     setShowHint(!showHint);
   };
 
-  const handleNext = () => {
-    if (currentQuestionIndex < currentQuestions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
-      setSelectedAnswer(null);
-      setSelectedWords([]);
-      setAnswered(false);
-      setShowHint(false);
-      questionStartTimeRef.current = Date.now(); // 次の問題の開始時刻を記録
-    }
-  };
-
-  const handleSkip = async () => {
-    if (!answered) {
-      // 未回答の場合はスキップとして記録（正解扱い・定着済み）
-      setAnswered(true);
-      
-      // スキップは正解として扱い、定着済みとしてカウント
-      setScore(prev => prev + 1);
-      setTotalAnswered(prev => prev + 1);
-      setSessionStats(prev => ({ 
-        ...prev, 
-        correct: prev.correct + 1,
-        mastered: prev.mastered + 1
-      }));
-      
-      // 進捗データに記録（正解として）
-      const responseTime = Date.now() - questionStartTimeRef.current;
-      const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
-      const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question || 'unknown'}`;
-      await updateWordProgress(
-        questionId,
-        true, // スキップは正解として記録
-        responseTime,
-        undefined,
-        'grammar'
-      );
-      
-      // セッション履歴に追加（スキップは定着済みとして）
-      const progress = await loadProgress();
-      const wordProgress = progress.wordProgress?.[questionId];
-      const status: 'correct' | 'incorrect' | 'review' | 'mastered' = 'mastered'; // スキップは定着済み
-      
-      addSessionHistory({
-        status,
-        word: questionId,
-        timestamp: Date.now()
-      }, 'grammar');
-      
-      // 進捗データ更新完了後に回答時刻を更新（ScoreBoard更新用）
-      setLastAnswerTime(Date.now());
-      
-      // 状態をリセットしてから次の問題へ
-      setTimeout(() => {
-        if (currentQuestionIndex < currentQuestions.length - 1) {
-          setCurrentQuestionIndex(prev => prev + 1);
-          setSelectedAnswer(null);
-          setSelectedWords([]);
-          setAnswered(false);
-          setShowHint(false);
-          questionStartTimeRef.current = Date.now();
-        }
-      }, 500);
-    } else {
-      // 回答済みの場合は通常の次へ処理
-      handleNext();
-    }
-  };
-
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(prev => prev - 1);
@@ -624,7 +657,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
   const isCorrect = () => {
     if (!currentQuestion || !answered) return false;
     if (isSentenceOrdering) {
-      return selectedWords.join(' ') === currentQuestion.words.join(' ');
+      return selectedWords.join(' ') === currentQuestion.words?.join(' ');
     }
     return selectedAnswer === currentQuestion.correctAnswer;
   };
@@ -634,7 +667,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     if (!quizStarted) {
       handleStartQuiz();
     }
-  }, [quizType, grade, difficulty]); // 設定変更時に再開始
+  }, [quizType, grade, difficulty, handleStartQuiz, quizStarted]); // 設定変更時に再開始
   
   return (
     <div className="quiz-view">
@@ -670,11 +703,6 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             category={`出題形式: ${quizType === 'all' ? '全種類' : quizType === 'verb-form' ? '動詞変化' : quizType === 'fill-in-blank' ? '穴埋め' : quizType === 'sentence-ordering' ? '並び替え' : '全種類'}`}
             difficulty=""
             wordPhraseFilter="all"
-            autoReadAloud={autoReadAloud}
-            onAutoReadAloudChange={(enabled) => {
-              setAutoReadAloud(enabled);
-              localStorage.setItem('autoReadAloud-grammar', enabled.toString());
-            }}
             grammarUnit={currentGrammarUnit}
           />
 
@@ -760,8 +788,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
 
               {/* 自動次へ設定 */}
               <div className="filter-group">
-                <label htmlFor="auto-next-toggle-grammar-quiz">✅ 正解時自動次へ:</label>
-                <div className="auto-next-controls">
+                <div className="checkbox-row">
                   <input
                     type="checkbox"
                     id="auto-next-toggle-grammar-quiz"
@@ -772,32 +799,51 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                     }}
                   />
                   <label htmlFor="auto-next-toggle-grammar-quiz" className="checkbox-label">
-                    {autoNext ? '有効' : '無効'}
+                    正解時自動で次へ：{autoNext ? '有効' : '無効'}
                   </label>
                 </div>
               </div>
 
               {autoNext && (
                 <div className="filter-group">
-                  <label htmlFor="auto-next-delay-grammar-quiz">⏱️ 次への遅延時間:</label>
-                  <select
-                    id="auto-next-delay-grammar-quiz"
-                    value={autoNextDelay}
-                    onChange={(e) => {
-                      const delay = parseInt(e.target.value);
-                      setAutoNextDelay(delay);
-                      localStorage.setItem('autoNextDelay-grammar', delay.toString());
-                    }}
-                    className="select-input"
-                  >
-                    <option value="500">0.5秒</option>
-                    <option value="1000">1秒</option>
-                    <option value="1500">1.5秒</option>
-                    <option value="2000">2秒</option>
-                    <option value="3000">3秒</option>
-                  </select>
+                  <label htmlFor="auto-next-delay-grammar-quiz">⏱️ 次への遅延時間：</label>
+                  <div className="slider-row">
+                    <input
+                      type="range"
+                      id="auto-next-delay-grammar-quiz"
+                      min="500"
+                      max="3000"
+                      step="100"
+                      value={autoNextDelay}
+                      onChange={(e) => {
+                        const delay = parseInt(e.target.value, 10);
+                        setAutoNextDelay(delay);
+                        localStorage.setItem('autoNextDelay-grammar', delay.toString());
+                      }}
+                      className="slider-input"
+                    />
+                    <span className="slider-value">{(autoNextDelay / 1000).toFixed(1)}秒</span>
+                  </div>
                 </div>
               )}
+
+              {/* 自動読み上げ設定 */}
+              <div className="filter-group">
+                <div className="checkbox-row">
+                  <input
+                    type="checkbox"
+                    id="auto-read-aloud-toggle-grammar-quiz"
+                    checked={autoReadAloud}
+                    onChange={(e) => {
+                      setAutoReadAloud(e.target.checked);
+                      localStorage.setItem('autoReadAloud-grammar', e.target.checked.toString());
+                    }}
+                  />
+                  <label htmlFor="auto-read-aloud-toggle-grammar-quiz" className="checkbox-label">
+                    回答時自動で読み上げ：{autoReadAloud ? '有効' : '無効'}
+                  </label>
+                </div>
+              </div>
             </div>
           )}
 
@@ -811,7 +857,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               {/* インラインナビゲーション */}
               <div className="question-nav-row">
                 <button 
-                  className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500" 
+                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
                   onClick={handlePrevious}
                   disabled={currentQuestionIndex === 0}
                   title="前へ"
@@ -837,7 +883,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                   )}
                 </div>
                 <button 
-                  className="w-12 h-12 flex items-center justify-center text-xl font-bold bg-gray-100 text-gray-700 border-2 border-gray-300 rounded-full transition-all duration-200 hover:bg-gray-200 hover:border-gray-400 hover:shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-gray-100 disabled:hover:border-gray-300 disabled:hover:shadow-none dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-500" 
+                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
                   onClick={handleSkip}
                   disabled={currentQuestionIndex >= currentQuestions.length - 1}
                   title={answered ? "次へ" : "スキップ (Enter)"}
@@ -904,7 +950,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                   </div>
                   <div className="choices-grid">
                     {/* 3択 + 分からない */}
-                    {currentQuestion.choices.map((choice: string, index: number) => {
+                    {currentQuestion.choices?.map((choice: string, index: number) => {
                       const isSelected = selectedAnswer === choice;
                       const isCorrectChoice = choice === currentQuestion.correctAnswer;
                       const showCorrect = answered && isCorrectChoice;
@@ -953,7 +999,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                           {!isCorrect() && (
                             <div className="correct-answer">
                               <strong>正解:</strong><br />
-                              {currentQuestion.words.join(' ')}
+                              {currentQuestion.words?.join(' ')}
                             </div>
                           )}
                         </div>

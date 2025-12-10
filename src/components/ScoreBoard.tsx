@@ -32,8 +32,6 @@ interface ScoreBoardProps {
   difficulty?: string; // 難易度
   wordPhraseFilter?: string; // 単語・熟語フィルター
   // 文法モード用の設定
-  autoReadAloud?: boolean; // 自動読み上げ設定
-  onAutoReadAloudChange?: (enabled: boolean) => void; // 自動読み上げ変更コールバック
   grammarUnit?: string; // 現在出題中の文法単元（例: "g1-unit0"）
 }
 
@@ -50,8 +48,6 @@ function ScoreBoard({
   category = '',
   difficulty = '',
   wordPhraseFilter = '',
-  autoReadAloud = false,
-  onAutoReadAloudChange,
   grammarUnit
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'plan' | 'breakdown' | 'history' | 'settings'>('plan');
@@ -234,10 +230,10 @@ function ScoreBoard({
                 : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => {
-              if (mode === 'grammar') {
-                setActiveTab('settings');
-              } else if (onShowSettings) {
+              if (onShowSettings) {
                 onShowSettings();
+              } else {
+                setActiveTab('settings');
               }
             }}
           >
@@ -292,10 +288,10 @@ function ScoreBoard({
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
             onClick={() => {
-              if (mode === 'grammar') {
-                setActiveTab('settings');
-              } else if (onShowSettings) {
+              if (onShowSettings) {
                 onShowSettings();
+              } else {
+                setActiveTab('settings');
               }
             }}
             title="学習設定"
@@ -603,32 +599,9 @@ function ScoreBoard({
       {activeTab === 'settings' && (
         <div className="score-board-content">
           <div className="settings-tab-container">
-            {mode === 'grammar' ? (
-              <div className="settings-section">
-                <h4 className="settings-section-title">🔊 読み上げ設定</h4>
-                <div className="settings-item">
-                  <label className="settings-checkbox-label">
-                    <input
-                      type="checkbox"
-                      checked={autoReadAloud}
-                      onChange={(e) => {
-                        if (onAutoReadAloudChange) {
-                          onAutoReadAloudChange(e.target.checked);
-                        }
-                      }}
-                    />
-                    <span>回答時に問題と答えの英文を自動読み上げ</span>
-                  </label>
-                  <p className="settings-help-text">
-                    正解・不正解に関わらず、回答後に問題文の英文を読み上げます
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <div className="word-detail-empty">
-                <p>このタブの設定は学習設定パネルから行えます</p>
-              </div>
-            )}
+            <div className="word-detail-empty">
+              <p>このタブの設定は学習設定パネルから行えます</p>
+            </div>
           </div>
         </div>
       )}

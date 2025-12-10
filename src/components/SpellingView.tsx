@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
+import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import ScoreBoard from './ScoreBoard';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
+import AddToCustomButton from './AddToCustomButton';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
@@ -27,6 +29,10 @@ interface SpellingViewProps {
   onStartQuiz: () => void;
   onReviewFocus?: () => void;
   isReviewFocusMode?: boolean;
+  customQuestionSets?: CustomQuestionSet[];
+  onAddWordToCustomSet?: (setId: string, word: CustomWord) => void;
+  onRemoveWordFromCustomSet?: (setId: string, word: CustomWord) => void;
+  onOpenCustomSetManagement?: () => void;
 }
 
 function SpellingView({ 
@@ -44,7 +50,11 @@ function SpellingView({
   onDataSourceChange,
   onStartQuiz,
   onReviewFocus,
-  isReviewFocusMode = false
+  isReviewFocusMode = false,
+  customQuestionSets = [],
+  onAddWordToCustomSet,
+  onRemoveWordFromCustomSet,
+  onOpenCustomSetManagement,
 }: SpellingViewProps) {
   const [spellingState, setSpellingState] = useState<SpellingState>({
     questions: [],
@@ -433,15 +443,19 @@ function SpellingView({
     }
   };
 
-  const currentQuestion =
-    spellingState.questions.length > 0
-      ? spellingState.questions[spellingState.currentIndex]
-      : null;
-
   const hasQuestions = spellingState.questions.length > 0;
+  const currentQuestion = hasQuestions ? spellingState.questions[spellingState.currentIndex] : null;
   
   // ユーザーが選択した単語
   const userWord = selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
+
+  // カスタムセット用のCustomWordオブジェクトを生成
+  const customWord: CustomWord | null = currentQuestion ? {
+    word: currentQuestion.word,
+    meaning: currentQuestion.meaning,
+    katakana: currentQuestion.reading,
+    source: 'spelling' as const,
+  } : null;
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -634,7 +648,7 @@ function SpellingView({
               {/* 意味表示とナビゲーションボタンの行 */}
               <div className="question-nav-row meaning-row">
                 <button 
-                  className="inline-nav-btn prev-inline-btn" 
+                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
                   onClick={handlePrevious}
                   disabled={spellingState.currentIndex === 0}
                   title="前へ"
@@ -643,9 +657,29 @@ function SpellingView({
                 </button>
                 <div className="meaning-display">
                   <div className="meaning-line">
-                    <span className="meaning-label">意味:</span>
-                    <span className="meaning-text">{currentQuestion.meaning}</span>
+                    <span className="text-xl text-gray-600 dark:text-gray-300">意味:</span>
+                    <span className="text-4xl font-bold text-gray-900 dark:text-white ml-2">{currentQuestion.meaning}</span>
                   </div>
+                  
+                  {/* カスタムセットに追加ボタン */}
+                  {customWord && 
+                   onAddWordToCustomSet && 
+                   onRemoveWordFromCustomSet && 
+                   onOpenCustomSetManagement && 
+                   customQuestionSets && (
+                    <div className="mt-3 flex justify-center">
+                      <AddToCustomButton
+                        word={customWord}
+                        sets={customQuestionSets}
+                        onAddWord={onAddWordToCustomSet}
+                        onRemoveWord={onRemoveWordFromCustomSet}
+                        onOpenManagement={onOpenCustomSetManagement}
+                        size="medium"
+                        variant="both"
+                      />
+                    </div>
+                  )}
+                  
                   <div className="meaning-meta">
                     {currentQuestion.difficulty && (
                       <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
@@ -666,7 +700,7 @@ function SpellingView({
                   </div>
                 </div>
                 <button 
-                  className="inline-nav-btn next-inline-btn" 
+                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
                   onClick={handleNext}
                   disabled={spellingState.currentIndex >= spellingState.questions.length - 1}
                   title="次へ"
