@@ -5,9 +5,9 @@ import {
   getFromDB,
   putToDB,
   STORES
-} from './indexedDBStorage';
-import { isMigrationCompleted } from './dataMigration';
-import { logger } from './logger';
+} from '@/storage/indexedDB/indexedDBStorage';
+import { isMigrationCompleted } from '@/storage/migration/dataMigration';
+import { logger } from '@/logger';
 
 // ストレージ戦略の決定
 let useIndexedDB = false;

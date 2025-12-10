@@ -390,18 +390,18 @@ npm run validate:grammar
    - プレースホルダー文字列: 0件
    - 文法用語: 0件
 
-2. ✅ **品質検証に合格**
+1. ✅ **品質検証に合格**
    ```bash
    npm run validate:grammar  # エラー0件
    npm run check:grammar-quality  # スコア100%
    ```
 
-3. ✅ **人間による動作確認**
+1. ✅ **人間による動作確認**
    - ブラウザで全問題タイプを表示
    - 正解判定が正しく動作
    - 説明が分かりやすい
 
-4. ✅ **enabled フラグを削除**
+1. ✅ **enabled フラグを削除**
    - `"enabled": false` の行を削除
    - ユニット選択肢に表示される
 

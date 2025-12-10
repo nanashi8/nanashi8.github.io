@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { QuizState, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
-import { ErrorPrediction } from '../errorPredictionAI';
+import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import AddToCustomButton from './AddToCustomButton';

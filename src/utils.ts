@@ -460,7 +460,7 @@ export function downloadQuestionSetCSV(set: QuestionSet): void {
 
 // ========== 適応的出題アルゴリズム ==========
 
-import { getAllWordProgress, getWordProgress } from './progressStorage';
+import { getAllWordProgress, getWordProgress } from './storage/progress/progressStorage';
 
 /**
  * 適応的に出題する問題を選択

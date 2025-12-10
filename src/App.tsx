@@ -7,7 +7,7 @@ import {
   selectAdaptiveQuestions,
   classifyPhraseType,
 } from './utils';
-import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './progressStorage';
+import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './storage/progress/progressStorage';
 import type { CustomQuestionState, CustomWord } from './types/customQuestions';
 import {
   loadCustomQuestionState,
@@ -19,37 +19,37 @@ import {
   updateCustomQuestionSet,
 } from './utils/customQuestionStorage';
 import { logger } from './logger';
-import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './learningAssistant';
+import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './features/learning/learningAssistant';
 import {
   analyzeRadarChart,
   prioritizeWeakCategoryQuestions,
   saveImprovementProgress,
   updateImprovementProgress,
   getImprovementProgress
-} from './radarChartAI';
+} from './ai/analysis/radarChartAI';
 import {
   analyzeLearningHistory,
   calculateQuestionPriorities,
   planConsolidationSequence,
   WordLearningHistory,
   LearningAttempt
-} from './learningCurveAI';
+} from './ai/analysis/learningCurveAI';
 import {
   calculateCognitiveLoad,
   adjustDifficultyByCognitiveLoad,
   generateFatigueMessage,
   CognitiveLoadMonitor,
   SessionResponse
-} from './cognitiveLoadAI';
+} from './ai/cognitive/cognitiveLoadAI';
 import {
   analyzeErrorPatterns,
   batchPredictErrors,
   ErrorPrediction,
   ErrorAnalysis
-} from './errorPredictionAI';
+} from './ai/prediction/errorPredictionAI';
 import {
   generateContextualSequence
-} from './contextualLearningAI';
+} from './ai/optimization/contextualLearningAI';
 import {
   recordSessionStats,
   saveSessionToHistory,
@@ -57,11 +57,11 @@ import {
   generateLearningStyleProfile,
   generateRecommendationMessage,
   getTimeOfDay as getTimeOfDayStyle
-} from './learningStyleAI';
+} from './ai/adaptation/learningStyleAI';
 import {
   processSessionEnd,
   getMotivationalMessage
-} from './gamificationAI';
+} from './ai/engagement/gamificationAI';
 import QuizView from './components/QuizView';
 import SpellingView from './components/SpellingView';
 import ComprehensiveReadingView from './components/ComprehensiveReadingView';
@@ -75,8 +75,8 @@ import SettingsView from './components/SettingsView';
 import './App.css';
 
 // IndexedDB移行関連
-import { migrateToIndexedDB } from './dataMigration';
-import { initStorageStrategy } from './storageManager';
+import { migrateToIndexedDB } from './storage/migration/dataMigration';
+import { initStorageStrategy } from './storage/manager/storageManager';
 
 type Tab = 'memorization' | 'translation' | 'spelling' | 'grammar' | 'reading' | 'grammar-guide' | 'dictionary' | 'stats' | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
@@ -525,7 +525,7 @@ function App() {
           };
           
           // カスタム問題セットを読み込み
-          const { getCustomQuestionSets } = await import('./progressStorage');
+          const { getCustomQuestionSets } = await import('./storage/progress/progressStorage');
           const customSets = await getCustomQuestionSets();
           
           // カスタム問題セットをQuestionSet形式に変換して追加（日付付き名前）
@@ -561,7 +561,7 @@ function App() {
   // カスタム問題セットを再読み込みする関数
   const reloadQuestionSets = async () => {
     try {
-      const { getCustomQuestionSets } = await import('./progressStorage');
+      const { getCustomQuestionSets } = await import('./storage/progress/progressStorage');
       const customSets = await getCustomQuestionSets();
       
       const mainSet = questionSets.find(qs => qs.isBuiltIn);

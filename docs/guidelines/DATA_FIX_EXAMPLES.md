@@ -68,10 +68,10 @@ get up,ɡet (ゲット) ʌp (アップ),起きる,...
    - 例: https://en.wiktionary.org/wiki/February
    - `/ˈfɛb.ɹu.ɛɹ.i/` などと表示される
 
-2. **Cambridge Dictionary** - https://dictionary.cambridge.org/
+1. **Cambridge Dictionary** - https://dictionary.cambridge.org/
    - 英米両方の発音が確認できる
 
-3. **既存データから探す**
+1. **既存データから探す**
    ```bash
    grep "August" public/data/vocabulary/*.csv
    ```
@@ -81,7 +81,7 @@ get up,ɡet (ゲット) ʌp (アップ),起きる,...
    - August → オーガスト
    - アクセント位置に ́ を付ける → オーガ́スト
 
-2. **既存の正しいパターンを参考**
+1. **既存の正しいパターンを参考**
    ```bash
    grep "America" public/data/vocabulary/all-words.csv
    # America,əˈmɛɹɪkə (アメ́リカ),アメリカ,...
@@ -93,16 +93,16 @@ get up,ɡet (ゲット) ʌp (アップ),起きる,...
 
 ### VS Codeでの検索・置換
 1. `Cmd+Shift+F` で全体検索
-2. 正規表現モードON
-3. 検索: `,(August),`
-4. 置換: `,(オーガ́スト),`
+1. 正規表現モードON
+1. 検索: `,(August),`
+1. 置換: `,(オーガ́スト),`
 
 ### Excel/Google Sheetsでの修正
 1. CSVをインポート
-2. 「読み」列でフィルター
-3. 英語が含まれる行を抽出
-4. 一括置換
-5. CSV形式で保存（UTF-8）
+1. 「読み」列でフィルター
+1. 英語が含まれる行を抽出
+1. 一括置換
+1. CSV形式で保存（UTF-8）
 
 ---
 

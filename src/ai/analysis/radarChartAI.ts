@@ -8,8 +8,8 @@
  * 4. 改善目標の自動設定
  */
 
-import { Question } from './types';
-import { loadProgressSync } from './progressStorage';
+import { Question } from '@/types';
+import { loadProgressSync } from '@/storage/progress/progressStorage';
 
 /**
  * レーダーチャート分析結果

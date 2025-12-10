@@ -8,8 +8,8 @@
  * 4. 定着転換を目指した戦略的出題
  */
 
-import { Question } from './types';
-import { WordProgress } from './progressStorage';
+import { Question } from '@/types';
+import { WordProgress } from '@/storage/progress/progressStorage';
 
 /**
  * 単語の学習履歴（時系列）

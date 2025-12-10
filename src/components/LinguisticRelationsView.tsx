@@ -10,7 +10,7 @@ import {
   LinguisticFeatures,
   RelatedWordCluster,
   LinguisticRelationType 
-} from '../linguisticRelationsAI';
+} from '@/ai/analysis/linguisticRelationsAI';
 import { logger } from '../logger';
 import './LinguisticRelationsView.css';
 
