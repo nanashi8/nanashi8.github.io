@@ -98,6 +98,48 @@ vocabulary_lists/
 # Archive and tools
 tools/archive-scripts/
 tools/archive-reports/
+
+# ========================================
+# ⚠️ SimpleWord iOS Project Exclusion ⚠️
+# ========================================
+# SimpleWordはこのリポジトリに含めない
+# Webアプリ専用リポジトリとして管理
+SimpleWord/
+SimpleWord.xcodeproj/
+SimpleWord 2.xcodeproj/
+SimpleWordTests/
+SimpleWordUITests/
+*.xcworkspace/
+*.xcuserstate
+*.xcscheme
+DerivedData/
+
+# iOS build artifacts
+*.app
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Backup directories (created by safety hooks)
+backup/before-*/
+backup/emergency-*/
 tools/deploy.log
 # Keep archive-github for documentation
 !tools/archive-github/
