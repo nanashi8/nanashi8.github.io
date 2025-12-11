@@ -51,7 +51,6 @@ function ScoreBoard({
   grammarUnit
 }: ScoreBoardProps) {
   const [activeTab, setActiveTab] = useState<'plan' | 'breakdown' | 'history' | 'settings'>('plan');
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   
   // Progress bar refs
   const masteredRef = useRef<HTMLDivElement>(null);
@@ -70,15 +69,6 @@ function ScoreBoard({
   });
   
   const [showPlanSettings, setShowPlanSettings] = useState(false);
-
-  // ウィンドウサイズ変更を監視
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   // 定着率と統計データをstateで管理
   const [retentionData, setRetentionData] = useState(() => {
@@ -190,117 +180,63 @@ function ScoreBoard({
 
   return (
     <div className="score-board-compact">
-      {/* タブナビゲーション: デスクトップ版（全タブ表示） */}
-      {!isMobile && (
-        <div className="score-board-tabs grid grid-cols-4 gap-2">
-          <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-              activeTab === 'plan' 
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => setActiveTab('plan')}
-          >
-            📋 プラン
-          </button>
-          <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-              activeTab === 'breakdown' 
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => setActiveTab('breakdown')}
-          >
-            📈 学習状況
-          </button>
-          <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-              activeTab === 'history' 
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => setActiveTab('history')}
-          >
-            📜 履歴
-          </button>
-          <button 
-            className={`px-4 py-2 font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
-              activeTab === 'settings' 
-                ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
-                : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => {
-              if (onShowSettings) {
-                onShowSettings();
-              } else {
-                setActiveTab('settings');
-              }
-            }}
-          >
-            ⚙️ 学習設定
-          </button>
-        </div>
-      )}
-
-      {/* タブナビゲーション: モバイル版（アイコンのみコンパクト表示） */}
-      {isMobile && (
-        <div className={`score-board-tabs score-board-tabs-mobile ${(mode === 'translation' || mode === 'spelling') ? 'grid grid-cols-4 gap-1' : 'grid grid-cols-3 gap-1'}`}>
-          <button 
-            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
-              activeTab === 'plan' 
-                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => setActiveTab('plan')}
-            title="プラン"
-          >
-            <span className="text-base">📋</span>
-            <span className="leading-tight">プラン</span>
-          </button>
-          <button 
-            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
-              activeTab === 'breakdown' 
-                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => setActiveTab('breakdown')}
-            title="学習状況"
-          >
-            <span className="text-base">📈</span>
-            <span className="leading-tight">学習状況</span>
-          </button>
-          <button 
-            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
-              activeTab === 'history' 
-                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => setActiveTab('history')}
-            title="履歴"
-          >
-            <span className="text-base">📜</span>
-            <span className="leading-tight">履歴</span>
-          </button>
-          <button 
-            className={`flex flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-[10px] font-medium transition-all duration-200 rounded-lg ${
-              activeTab === 'settings' 
-                ? 'bg-primary text-white dark:bg-primary dark:text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-            }`}
-            onClick={() => {
-              if (onShowSettings) {
-                onShowSettings();
-              } else {
-                setActiveTab('settings');
-              }
-            }}
-            title="学習設定"
-          >
-            <span className="text-base">⚙️</span>
-            <span className="leading-tight">学習設定</span>
-          </button>
-        </div>
-      )}
+      {/* タブナビゲーション: Tailwind レスポンシブで自動最適化 */}
+      <div className="score-board-tabs grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2">
+        <button 
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            activeTab === 'plan' 
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+          }`}
+          onClick={() => setActiveTab('plan')}
+          title="プラン"
+        >
+          <span className="hidden sm:inline">📋 プラン</span>
+          <span className="sm:hidden">📋</span>
+        </button>
+        <button 
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            activeTab === 'breakdown' 
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+          }`}
+          onClick={() => setActiveTab('breakdown')}
+          title="学習状況"
+        >
+          <span className="hidden sm:inline">📈 学習状況</span>
+          <span className="sm:hidden">📈</span>
+        </button>
+        <button 
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            activeTab === 'history' 
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+          }`}
+          onClick={() => setActiveTab('history')}
+          title="履歴"
+        >
+          <span className="hidden sm:inline">📜 履歴</span>
+          <span className="sm:hidden">📜</span>
+        </button>
+        <button 
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            activeTab === 'settings' 
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+          }`}
+          onClick={() => {
+            if (onShowSettings) {
+              onShowSettings();
+            } else {
+              setActiveTab('settings');
+            }
+          }}
+          title="学習設定"
+        >
+          <span className="hidden sm:inline">⚙️ 学習設定</span>
+          <span className="sm:hidden">⚙️</span>
+        </button>
+      </div>
 
       {/* 学習プランタブ */}
       {activeTab === 'plan' && (

@@ -317,8 +317,8 @@ function QuestionCard({
   }, [answered, choicesWithQuestions, question, onAnswer, attemptCount]);
 
   const getButtonClass = (choice: string) => {
-    // Tailwindクラスによるスタイリング
-    const baseClasses = 'w-full min-h-[56px] p-4 text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
+    // Tailwindクラスによるスタイリング（レスポンシブで自動最適化）
+    const baseClasses = 'w-full min-h-11 sm:min-h-14 p-2 sm:p-4 text-sm sm:text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
     const hoverClasses = 'hover:border-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
     const activeClasses = 'active:bg-gray-200 dark:active:bg-gray-700 active:translate-y-0';
     
