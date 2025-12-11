@@ -37,3 +37,91 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+/* ============================================
+   レスポンシブ対応 - ホバー効果の制御
+   ============================================ */
+
+/* マウスがあるデバイス（デスクトップ）: ホバー効果を有効 */
+@media (hover: hover) {
+  button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.15);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .clickable-row:hover {
+    background-color: var(--bg-tertiary);
+    transition: background-color 0.2s ease;
+  }
+
+  .interactive-element:hover {
+    opacity: 0.9;
+  }
+}
+
+/* タッチデバイス（モバイル）: ホバーを無効、アクティブ状態を強化 */
+@media (hover: none) {
+  button:active:not(:disabled) {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.2);
+  }
+
+  /* タップ後のホバー状態を防止 */
+  button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  button {
+    /* タッチ時のデフォルトハイライトを削除 */
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ============================================
+   モバイルファースト - テキストサイズ最適化
+   ============================================ */
+
+/* デフォルト（モバイル: 320px～767px） */
+:root {
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 24px;
+  --text-4xl: 28px;
+  --button-height: 44px;
+  --button-padding: 12px;
+}
+
+/* タブレット: 768px～1023px */
+@media (min-width: 768px) {
+  :root {
+    --text-base: 14px;
+    --text-lg: 16px;
+    --text-xl: 18px;
+    --text-2xl: 20px;
+    --text-3xl: 26px;
+    --text-4xl: 32px;
+    --button-height: 48px;
+    --button-padding: 16px;
+  }
+}
+
+/* デスクトップ: 1024px～ */
+@media (min-width: 1024px) {
+  :root {
+    --text-base: 14px;
+    --text-lg: 16px;
+    --text-xl: 18px;
+    --text-2xl: 20px;
+    --text-3xl: 28px;
+    --text-4xl: 36px;
+    --button-height: 48px;
+    --button-padding: 16px;
+  }
+}
