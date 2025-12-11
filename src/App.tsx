@@ -1422,8 +1422,8 @@ function App() {
             setActiveTab('grammar');
             // 読み込み中を表示
             setIsLoadingTab(true);
-            // 500ms後に自動で消す（準備完了が最速でも500ms以上かかるため）
-            setTimeout(() => setIsLoadingTab(false), 500);
+            // 1.5秒後に自動で消す（最小限のUI反応時間）
+            setTimeout(() => setIsLoadingTab(false), 1500);
             // バックグラウンドでプリロード
             _preloadHeavyComponents();
           }}
@@ -1440,8 +1440,8 @@ function App() {
             setActiveTab('reading');
             // 読み込み中を表示
             setIsLoadingTab(true);
-            // 500ms後に自動で消す（準備完了が最速でも500ms以上かかるため）
-            setTimeout(() => setIsLoadingTab(false), 500);
+            // 1.5秒後に自動で消す（最小限のUI反応時間）
+            setTimeout(() => setIsLoadingTab(false), 1500);
             // バックグラウンドでプリロード
             _preloadHeavyComponents();
           }}
