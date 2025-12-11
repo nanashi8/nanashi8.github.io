@@ -147,3 +147,4 @@ site/
 *_RECOVERED.md
 *_V2.md
 *.backup.*
+node_modules/
