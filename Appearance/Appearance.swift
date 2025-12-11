@@ -1,4 +1,4 @@
-// filepath: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Appearance.swift
+// filepath: /path/to/project/SimpleWord/SimpleWord/Appearance.swift
 //
 //  Appearance.swift
 //  SimpleWord

@@ -75,7 +75,7 @@ func main() {
     print(divider)
     print()
     
-    let basePath = "/Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources"
+    let basePath = "/path/to/project/SimpleWord/SimpleWord/Resources"
     let csvFiles = [
         "\(basePath)/中学歴史.csv",
         "\(basePath)/中学古典単語.csv",

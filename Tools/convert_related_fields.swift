@@ -1,7 +1,7 @@
 import Foundation
 
 let fm = FileManager.default
-let basePath = "/Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Resources"
+let basePath = "/path/to/project/SimpleWord/SimpleWord/Resources"
 
 let inputs = ["高校単語.csv": "高校単語.csv",
               "サンプル単語.csv": "サンプル単語.csv"]

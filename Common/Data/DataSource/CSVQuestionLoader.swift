@@ -1,4 +1,4 @@
-// filepath: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Services/CSVQuestionLoader.swift
+// filepath: /path/to/project/SimpleWord/SimpleWord/Services/CSVQuestionLoader.swift
 // CSVQuestionLoader.swift
 // Bundle 内の CSV ファイルを読み込み、QuestionItem 配列を生成するユーティリティ
 // - 何を: 選択された CSV 名に対応するリソースを読み込み、CSV をパースして QuestionItem に変換

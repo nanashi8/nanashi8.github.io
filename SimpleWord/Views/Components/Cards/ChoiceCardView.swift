@@ -1,4 +1,4 @@
-// filepath: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/ChoiceCardView.swift
+// filepath: /path/to/project/SimpleWord/SimpleWord/ChoiceCardView.swift
 //
 //  ChoiceCardView.swift
 //  SimpleWord

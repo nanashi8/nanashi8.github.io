@@ -1,6 +1,6 @@
 #if false
 
-// filepath: /Users/yuichinakamura/Documents/20251006_002/SimpleWord/SimpleWord/Stores/QuizSettingsStore.swift
+// filepath: /path/to/project/SimpleWord/SimpleWord/Stores/QuizSettingsStore.swift
 // QuizSettingsStore.swift
 // 出題設定の保存/読み込み（UserDefaults）
 // 旧: このファイルは廃止されたが、プロジェクトに組み込まれているため
