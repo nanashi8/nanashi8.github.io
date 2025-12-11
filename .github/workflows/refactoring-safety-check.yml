@@ -1,0 +1,197 @@
+name: Refactoring Safety Check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'vite.config.ts'
+      - 'tsconfig.json'
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+
+jobs:
+  safety-check:
+    runs-on: ubuntu-latest
+    name: Validate code structure and integrity
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for comparison
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check src/ directory integrity
+        id: check-src
+        run: |
+          SRC_COUNT=$(find src -type f 2>/dev/null | wc -l | tr -d ' ')
+          echo "src_files=$SRC_COUNT" >> $GITHUB_OUTPUT
+          
+          if [ "$SRC_COUNT" -lt 100 ]; then
+            echo "::error::⚠️ Only $SRC_COUNT files in src/ directory (expected: 100+)"
+            echo "::error::This might indicate accidental file loss during refactoring"
+            exit 1
+          fi
+          
+          echo "✅ src/ integrity check passed: $SRC_COUNT files"
+
+      - name: Check for critical files
+        run: |
+          CRITICAL_FILES=(
+            "src/App.tsx"
+            "src/main.tsx"
+            "index.html"
+            "package.json"
+            "vite.config.ts"
+          )
+          
+          MISSING_FILES=()
+          for file in "${CRITICAL_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              MISSING_FILES+=("$file")
+            fi
+          done
+          
+          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
+            echo "::error::❌ Critical files missing:"
+            printf '%s\n' "${MISSING_FILES[@]}"
+            exit 1
+          fi
+          
+          echo "✅ All critical files present"
+
+      - name: Check for SimpleWord contamination
+        run: |
+          if git ls-files | grep -E '^SimpleWord/|\.xcodeproj|\.xcworkspace|\.swift$' | head -1; then
+            echo "::error::❌ SimpleWord iOS project files detected in git tracking"
+            echo "::error::These files should not be in the web app repository"
+            echo "::error::Please remove and add to .gitignore"
+            exit 1
+          fi
+          
+          echo "✅ No SimpleWord contamination detected"
+
+      - name: Verify TypeScript compilation
+        run: npm run typecheck
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build project
+        run: npm run build
+
+      - name: Check build output
+        run: |
+          if [ ! -d "dist" ]; then
+            echo "::error::❌ Build output directory 'dist' not found"
+            exit 1
+          fi
+          
+          DIST_SIZE=$(du -sh dist | cut -f1)
+          echo "✅ Build successful: $DIST_SIZE"
+
+      - name: Analyze file changes (PR only)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "📊 Analyzing changes in this PR..."
+          
+          # Get base branch file count
+          git checkout ${{ github.event.pull_request.base.sha }}
+          BASE_COUNT=$(find src -type f 2>/dev/null | wc -l | tr -d ' ')
+          
+          # Get current file count
+          git checkout ${{ github.event.pull_request.head.sha }}
+          HEAD_COUNT=$(find src -type f 2>/dev/null | wc -l | tr -d ' ')
+          
+          DIFF=$((HEAD_COUNT - BASE_COUNT))
+          
+          echo "Base branch: $BASE_COUNT files"
+          echo "This PR: $HEAD_COUNT files"
+          echo "Difference: $DIFF files"
+          
+          # Check for large file deletions
+          DELETED_COUNT=$(git diff --diff-filter=D --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep "^src/" | wc -l | tr -d ' ')
+          
+          if [ "$DELETED_COUNT" -gt 10 ]; then
+            echo "::warning::⚠️ Large number of files deleted: $DELETED_COUNT"
+            echo "::warning::Please verify this is intentional refactoring"
+            echo ""
+            echo "Deleted files:"
+            git diff --diff-filter=D --name-only ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep "^src/" | head -20
+          fi
+          
+          if [ "$DIFF" -lt -20 ]; then
+            echo "::warning::⚠️ Significant file count decrease: $DIFF"
+            echo "::warning::Ensure this is intentional consolidation, not accidental deletion"
+          fi
+
+      - name: Report status
+        if: success()
+        run: |
+          echo "✅ All safety checks passed"
+          echo ""
+          echo "Summary:"
+          echo "- src/ files: ${{ steps.check-src.outputs.src_files }}"
+          echo "- Critical files: Present"
+          echo "- SimpleWord: Clean"
+          echo "- TypeScript: Compiled"
+          echo "- Linter: Passed"
+          echo "- Build: Success"
+
+  checkpoint-reminder:
+    runs-on: ubuntu-latest
+    name: Remind about checkpoints
+    if: github.event_name == 'pull_request'
+    
+    steps:
+      - name: Check PR description for checkpoint
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            
+            // Check if PR mentions checkpoint
+            const hasCheckpoint = /checkpoint|チェックポイント/i.test(body);
+            
+            if (!hasCheckpoint && pr.changed_files > 5) {
+              const message = [
+                '## 🔒 リファクタリング安全性チェック',
+                '',
+                `この PR は ${pr.changed_files} ファイルを変更しています。`,
+                '',
+                '### チェックポイント確認',
+                'リファクタリング作業前にチェックポイントを作成しましたか？',
+                '',
+                '```bash',
+                './scripts/refactor-checkpoint.sh save phase2-[作業名]',
+                '```',
+                '',
+                '### 推奨される確認項目',
+                '- [ ] チェックポイント作成済み',
+                '- [ ] ローカルでビルド成功',
+                '- [ ] 段階的にコミット（1機能 = 1コミット）',
+                '- [ ] `docs/REFACTORING_SAFETY.md` の手順を確認',
+                '',
+                '詳細: [REFACTORING_SAFETY.md](../blob/main/docs/REFACTORING_SAFETY.md)'
+              ].join('\n');
+              
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: message
+              });
+            }

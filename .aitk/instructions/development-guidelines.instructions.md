@@ -10,6 +10,20 @@ AI開発アシスタント（GitHub Copilot等）が開発支援する際の必�
 
 ---
 
+## ⚠️ 最優先: リファクタリング安全ガイドライン
+
+**リファクタリング作業を行う際は、必ず `.aitk/instructions/refactoring-safety.instructions.md` を参照してください。**
+
+2025年12月11日に発生した重大事故（src/ディレクトリ完全消失）を防ぐため、以下を徹底:
+- チェックポイント作成必須
+- 段階的実装（1機能 = 1コミット）
+- ビルド確認後にコミット
+- 大量ファイル操作の禁止（10ファイル以上は分割）
+
+詳細: [refactoring-safety.instructions.md](./.aitk/instructions/refactoring-safety.instructions.md)
+
+---
+
 ## 📁 プロジェクト概要
 
 - **技術スタック**: React 18 + TypeScript 5 + Vite 5
