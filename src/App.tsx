@@ -83,6 +83,7 @@ import DictionaryView from './components/DictionaryView';
 import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
+import LoadingIndicator from './components/LoadingIndicator';
 import { UpdateNotification } from './components/UpdateNotification';
 import './App.css';
 
@@ -155,6 +156,7 @@ function checkLocalStorageSize() {
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('translation');
+  const [isLoadingTab, setIsLoadingTab] = useState(false);
   
   // 全問題データ（high-school-entrance-words.csvから読み込み）
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
@@ -1372,6 +1374,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black">
+      {/* 読み込み中インジケータ */}
+      <LoadingIndicator 
+        isVisible={isLoadingTab} 
+        message="読み込み中..." 
+      />
+
       {/* タブメニュー - 中学生向け親しみやすいデザイン */}
       <div className="flex gap-0 bg-gray-100 dark:bg-gray-900 shadow-md py-2">
         <button
@@ -1412,6 +1420,10 @@ function App() {
           }`}
           onClick={() => {
             setActiveTab('grammar');
+            // 読み込み中を表示
+            setIsLoadingTab(true);
+            // 500ms後に自動で消す（準備完了が最速でも500ms以上かかるため）
+            setTimeout(() => setIsLoadingTab(false), 500);
             // バックグラウンドでプリロード
             _preloadHeavyComponents();
           }}
@@ -1426,6 +1438,10 @@ function App() {
           }`}
           onClick={() => {
             setActiveTab('reading');
+            // 読み込み中を表示
+            setIsLoadingTab(true);
+            // 500ms後に自動で消す（準備完了が最速でも500ms以上かかるため）
+            setTimeout(() => setIsLoadingTab(false), 500);
             // バックグラウンドでプリロード
             _preloadHeavyComponents();
           }}
