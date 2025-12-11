@@ -1,0 +1,110 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # 毎週日曜日 0:00 (UTC) に実行
+    - cron: '0 0 * * 0'
+
+jobs:
+  npm-audit:
+    name: NPM セキュリティ監査
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 依存関係インストール
+        run: npm ci
+
+      - name: NPM Audit実行
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+
+      - name: 監査レポート生成
+        if: always()
+        run: |
+          npm audit --json > npm-audit.json || true
+          echo "### 📊 NPM Audit結果" >> $GITHUB_STEP_SUMMARY
+          if [ -f npm-audit.json ]; then
+            VULNERABILITIES=$(cat npm-audit.json | jq '.metadata.vulnerabilities // empty')
+            if [ -n "$VULNERABILITIES" ]; then
+              echo "\`\`\`json" >> $GITHUB_STEP_SUMMARY
+              echo "$VULNERABILITIES" >> $GITHUB_STEP_SUMMARY
+              echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "✅ 脆弱性は検出されませんでした" >> $GITHUB_STEP_SUMMARY
+            fi
+          fi
+
+      - name: 監査結果をアップロード
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit-report
+          path: npm-audit.json
+          retention-days: 30
+
+  codeql:
+    name: CodeQL セキュリティ分析
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: CodeQL 初期化
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+
+      - name: 自動ビルド
+        uses: github/codeql-action/autobuild@v3
+
+      - name: CodeQL 分析実行
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:javascript-typescript"
+
+  secret-scanning:
+    name: シークレットスキャン
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --debug --only-verified
+
+  dependency-review:
+    name: 依存関係レビュー
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 依存関係レビュー
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: moderate
+          comment-summary-in-pr: always

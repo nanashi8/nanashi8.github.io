@@ -1,0 +1,52 @@
+version: 2
+updates:
+  # npm依存関係の自動更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    open-pull-requests-limit: 5
+    
+    # セキュリティアップデートをグループ化
+    groups:
+      security-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "security"
+    
+    # ラベル設定
+    labels:
+      - "dependencies"
+      - "npm"
+    
+    # コミットメッセージ設定
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    
+    # レビュアー設定
+    reviewers:
+      - "nanashi8"
+    
+    # マイナー・パッチのみ自動更新
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  # GitHub Actions の自動更新
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"
