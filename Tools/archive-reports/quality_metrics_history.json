@@ -1,0 +1,62 @@
+[
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 74.6,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-29T07:08:31.621744"
+  },
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 74.6,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-29T07:10:01.355593"
+  },
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 74.6,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-29T07:10:17.990487"
+  },
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 92.0,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-29T07:56:26.600899"
+  },
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 98.5,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-29T11:42:01.700727"
+  },
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 98.5,
+    "grammar_translation_quality": 100.0,
+    "ui_specification_compliance": 0.0,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-30T19:55:26.075586"
+  },
+  {
+    "grammar_quality": 100.0,
+    "vocabulary_quality": 100.0,
+    "passage_title_quality": 100.0,
+    "passage_content_quality": 98.5,
+    "grammar_translation_quality": 100.0,
+    "ui_specification_compliance": 100.0,
+    "overall_quality": 100.0,
+    "timestamp": "2025-11-30T20:18:38.879272"
+  }
+]
