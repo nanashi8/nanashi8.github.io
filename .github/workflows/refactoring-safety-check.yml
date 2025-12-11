@@ -89,6 +89,72 @@ jobs:
       - name: Run linter
         run: npm run lint
 
+      - name: Security audit - npm dependencies
+        id: npm-audit
+        run: |
+          echo "🔍 Running npm audit for security vulnerabilities..."
+          
+          # Run npm audit with JSON output
+          npm audit --json > npm-audit.json 2>&1 || true
+          
+          # Parse results
+          CRITICAL=$(jq '.metadata.vulnerabilities.critical // 0' npm-audit.json)
+          HIGH=$(jq '.metadata.vulnerabilities.high // 0' npm-audit.json)
+          MODERATE=$(jq '.metadata.vulnerabilities.moderate // 0' npm-audit.json)
+          LOW=$(jq '.metadata.vulnerabilities.low // 0' npm-audit.json)
+          
+          echo "critical=$CRITICAL" >> $GITHUB_OUTPUT
+          echo "high=$HIGH" >> $GITHUB_OUTPUT
+          echo "moderate=$MODERATE" >> $GITHUB_OUTPUT
+          echo "low=$LOW" >> $GITHUB_OUTPUT
+          
+          echo "📊 Security Audit Results:"
+          echo "  🔴 CRITICAL: $CRITICAL"
+          echo "  🟠 HIGH: $HIGH"
+          echo "  🟡 MODERATE: $MODERATE"
+          echo "  🔵 LOW: $LOW"
+          
+          # Check for critical vulnerabilities
+          if [ "$CRITICAL" -gt 0 ]; then
+            echo "::error::❌ CRITICAL security vulnerabilities found: $CRITICAL"
+            exit 1
+          fi
+          
+          if [ "$HIGH" -gt 0 ]; then
+            echo "::warning::⚠️ HIGH severity vulnerabilities found: $HIGH"
+            echo "::warning::These should be fixed before production deployment"
+          fi
+
+      - name: Check for secret leaks (TruffleHog)
+        id: secret-check
+        run: |
+          echo "🔐 Scanning for exposed secrets..."
+          
+          # Check for common secret patterns
+          PATTERNS=(
+            'api[_-]?key'
+            'api[_-]?secret'
+            'password'
+            'token'
+            'secret'
+            'sentry[_-]?dsn'
+          )
+          
+          FOUND=0
+          for PATTERN in "${PATTERNS[@]}"; do
+            if git log --all -p | grep -i "\"$PATTERN\".*:.*\"" | grep -v "\.example\|\.template" | head -1; then
+              FOUND=1
+            fi
+          done
+          
+          if [ "$FOUND" -eq 1 ]; then
+            echo "::warning::⚠️ Potential secret pattern detected in commit history"
+            echo "::warning::Please verify no actual secrets are exposed"
+            echo "::warning::See: https://docs.github.com/en/code-security/secret-scanning"
+          else
+            echo "✅ No obvious secret patterns detected"
+          fi
+
       - name: Build project
         run: npm run build
 
@@ -146,6 +212,8 @@ jobs:
           echo "- src/ files: ${{ steps.check-src.outputs.src_files }}"
           echo "- Critical files: Present"
           echo "- SimpleWord: Clean"
+          echo "- Security - CRITICAL: ${{ steps.npm-audit.outputs.critical }}"
+          echo "- Security - HIGH: ${{ steps.npm-audit.outputs.high }}"
           echo "- TypeScript: Compiled"
           echo "- Linter: Passed"
           echo "- Build: Success"
