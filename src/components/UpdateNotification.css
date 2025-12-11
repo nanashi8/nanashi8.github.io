@@ -11,7 +11,7 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   padding: 1rem;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -4px 12px rgb(0, 0, 0, 0.15);
   animation: slideUp 0.3s ease-out;
   z-index: 9999;
 }
@@ -82,12 +82,12 @@
 }
 
 .update-notification__button--later {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255, 0.2);
   color: white;
 }
 
 .update-notification__button--later:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(255, 255, 255, 0.3);
 }
 
 .update-notification__button--now {
@@ -96,8 +96,8 @@
 }
 
 .update-notification__button--now:hover {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgb(0, 0, 0, 0.2);
 }
 
 /* モバイル対応 */

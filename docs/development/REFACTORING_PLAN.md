@@ -93,21 +93,21 @@ Phase 2に進む前に以下を推奨:
    - 自動進行設定の管理（autoAdvance, autoAdvanceDelay）
    - LocalStorageとの統合
 
-2. ✅ **useQuizFilters** (45行)
+1. ✅ **useQuizFilters** (45行)
    - 6つのフィルター状態管理
    - category, difficulty, wordPhrase, phraseType, dataSource
 
-3. ✅ **useQuizState** (67行)
+1. ✅ **useQuizState** (67行)
    - クイズ状態・セッション統計
    - 補修モード（reviewFocusMode）管理
 
-4. ✅ **useSpellingGame** (268行)
+1. ✅ **useSpellingGame** (268行)
    - スペリングゲームのコアロジック
    - 文字シャッフル・選択シーケンス管理
    - 熟語対応（複数単語の段階的入力）
    - 正誤判定ロジック
 
-5. ✅ **useSessionStats** (58行)
+1. ✅ **useSessionStats** (58行)
    - セッション統計の追跡
    - correct/incorrect/review/masteredカウント
 
@@ -119,7 +119,7 @@ Phase 2に進む前に以下を推奨:
    - useQuizState統合
    - 1651行 → 1623行 (-28行, -1.7%)
 
-2. ✅ **SpellingView.tsx**
+1. ✅ **SpellingView.tsx**
    - useSpellingGame統合
    - useSessionStats統合
    - 890行 → 749行 (-141行, -15.8%)
@@ -149,7 +149,7 @@ b29d210 - useQuizSettings + useQuizFilters統合
    - 状態管理をカスタムフックへ抽出
    - UIコンポーネントを分離
    
-2. **App.tsx** (1623行 → 目標500行以下)
+1. **App.tsx** (1623行 → 目標500行以下)
    - さらなる状態管理の抽出
    - ビジネスロジックの分離
 

@@ -10,6 +10,14 @@ import {
 import { useQuizSettings } from './hooks/useQuizSettings';
 import { useQuizFilters } from './hooks/useQuizFilters';
 import { useQuizState } from './hooks/useQuizState';
+
+// セッション管理用
+interface SessionSnapshot {
+  tab: string;
+  timestamp: number;
+  scrollPos: number;
+  state?: Record<string, unknown>;
+}
 import { addQuizResult, updateWordProgress, filterSkippedWords, getTodayIncorrectWords, loadProgress, addSessionHistory, getStudySettings, recordWordSkip, updateProgressCache, recordConfusion, getConfusedWords } from './storage/progress/progressStorage';
 import type { CustomQuestionState, CustomWord } from './types/customQuestions';
 import {
@@ -75,6 +83,7 @@ import DictionaryView from './components/DictionaryView';
 import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
+import { UpdateNotification } from './components/UpdateNotification';
 import './App.css';
 
 // IndexedDB移行関連

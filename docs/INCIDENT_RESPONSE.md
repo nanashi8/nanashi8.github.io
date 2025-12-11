@@ -8,10 +8,10 @@
 ## 📋 目次
 
 1. [緊急対応フロー](#緊急対応フロー)
-2. [Scenario 別対応](#scenario-別対応)
-3. [ロールバック手順](#ロールバック手順)
-4. [事後対応](#事後対応)
-5. [連絡先・エスカレーション](#連絡先エスカレーション)
+1. [Scenario 別対応](#scenario-別対応)
+1. [ロールバック手順](#ロールバック手順)
+1. [事後対応](#事後対応)
+1. [連絡先・エスカレーション](#連絡先エスカレーション)
 
 ---
 
@@ -87,8 +87,8 @@ Action: Immediate patching required
 git push origin security/fix-vuln-YYYYMMDD
 ```
 
-5. GitHub で PR 作成 → マージ
-6. `safe-deployment.yml` が自動実行 → 本番デプロイ
+1. GitHub で PR 作成 → マージ
+1. `safe-deployment.yml` が自動実行 → 本番デプロイ
 
 **確認**:
 
