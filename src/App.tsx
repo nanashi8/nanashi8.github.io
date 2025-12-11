@@ -90,6 +90,9 @@ import './App.css';
 import { migrateToIndexedDB } from './storage/migration/dataMigration';
 import { initStorageStrategy } from './storage/manager/storageManager';
 
+// プリロード用
+import { preloadHeavyComponents as _preloadHeavyComponents } from './utils/lazyLoader';
+
 type Tab = 'memorization' | 'translation' | 'spelling' | 'grammar' | 'reading' | 'grammar-guide' | 'dictionary' | 'stats' | 'settings';
 export type DifficultyLevel = 'all' | 'beginner' | 'intermediate' | 'advanced';
 export type WordPhraseFilter = 'all' | 'words-only' | 'phrases-only';
@@ -1407,7 +1410,11 @@ function App() {
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
           }`}
-          onClick={() => setActiveTab('grammar')}
+          onClick={() => {
+            setActiveTab('grammar');
+            // バックグラウンドでプリロード
+            _preloadHeavyComponents();
+          }}
         >
           📚 文法
         </button>
@@ -1417,7 +1424,11 @@ function App() {
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
           }`}
-          onClick={() => setActiveTab('reading')}
+          onClick={() => {
+            setActiveTab('reading');
+            // バックグラウンドでプリロード
+            _preloadHeavyComponents();
+          }}
         >
           📖 長文
         </button>
