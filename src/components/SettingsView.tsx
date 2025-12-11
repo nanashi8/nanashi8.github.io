@@ -151,53 +151,20 @@ function SettingsView({
         </div>
       </div>
 
-      {/* ダークモード切り替え */}
-      <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
-        <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
-          <span>🌙</span>
-          <span>表示モード</span>
-        </h3>
-        <div className="grid grid-cols-3 gap-3 mb-4">
-          <button
-            className={`flex flex-col items-center gap-2 px-4 py-4 rounded-lg border-2 transition-all duration-200 ${
-              darkMode === 'light'
-                ? 'bg-primary border-primary text-white shadow-lg scale-105'
-                : 'bg-bg-secondary border-border-color text-text-color hover:border-primary hover:shadow-md'
-            }`}
-            onClick={() => handleDarkModeChange('light')}
-          >
-            <div className="text-3xl">☀️</div>
-            <div className="text-sm font-semibold">ライト</div>
-          </button>
-          <button
-            className={`flex flex-col items-center gap-2 px-4 py-4 rounded-lg border-2 transition-all duration-200 ${
-              darkMode === 'dark'
-                ? 'bg-primary border-primary text-white shadow-lg scale-105'
-                : 'bg-bg-secondary border-border-color text-text-color hover:border-primary hover:shadow-md'
-            }`}
-            onClick={() => handleDarkModeChange('dark')}
-          >
-            <div className="text-3xl">🌙</div>
-            <div className="text-sm font-semibold">ダーク</div>
-          </button>
-          <button
-            className={`flex flex-col items-center gap-2 px-4 py-4 rounded-lg border-2 transition-all duration-200 ${
-              darkMode === 'system'
-                ? 'bg-primary border-primary text-white shadow-lg scale-105'
-                : 'bg-bg-secondary border-border-color text-text-color hover:border-primary hover:shadow-md'
-            }`}
-            onClick={() => handleDarkModeChange('system')}
-          >
-            <div className="text-3xl">💻</div>
-            <div className="text-sm font-semibold">システム</div>
-          </button>
-        </div>
-        <div className="text-center text-sm text-text-secondary bg-bg-secondary px-4 py-3 rounded-lg">
-          {darkMode === 'system' && '💡 デバイスの設定に自動的に合わせます'}
-          {darkMode === 'light' && '☀️ 明るい表示モード'}
-          {darkMode === 'dark' && '🌙 目に優しい暗い表示モード'}
-        </div>
-      </div>
+      {/* 
+        ダークモード切り替え - 将来実装予定
+        ---
+        ダークモード機能は完璧な実装が完成するまで非表示にしています。
+        ロジック（darkMode state, applyDarkMode, handleDarkModeChange）は
+        src/components/SettingsView.tsx に残されており、将来の完全実装時に
+        このセクションを復活させるだけで使用できます。
+        
+        関連コード:
+        - SettingsView.tsx (L71-115): darkMode state & logic
+        - App.tsx (L273-287): applyDarkMode logic
+        - main.tsx (L8-36): initialization logic
+        - src/styles/themes/dark.css: CSS variables (will be used)
+      */}
 
       {/* 音声設定 */}
       <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
