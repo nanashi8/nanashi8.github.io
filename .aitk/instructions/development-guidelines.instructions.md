@@ -20,7 +20,7 @@ AI開発アシスタント（GitHub Copilot等）が開発支援する際の必�
 - ビルド確認後にコミット
 - 大量ファイル操作の禁止（10ファイル以上は分割）
 
-詳細: [refactoring-safety.instructions.md](./.aitk/instructions/refactoring-safety.instructions.md)
+詳細: `refactoring-safety.instructions.md`
 
 ---
 
