@@ -277,31 +277,31 @@ dist/
    - GitHub Secrets で環境変数管理
    - PR ごとに自動セキュリティチェック
 
-2. **脆弱性対応: 迅速化**
+1. **脆弱性対応: 迅速化**
    - npm audit で自動検出
    - CRITICAL は自動マージブロック
    - 修正版の高速デプロイ
 
 ### 品質面
 
-3. **リファクタリング事故: 防止**
+1. **リファクタリング事故: 防止**
    - 事前チェックポイント確認
    - GitHub Actions で事後検証
    - 多層的なバックアップ
 
-4. **本番品質: 確保**
+1. **本番品質: 確保**
    - ステージング環境での検証
    - Health check の自動実行
    - 手動承認ゲート
 
 ### 生徒体験面
 
-5. **学習継続性: 保証**
+1. **学習継続性: 保証**
    - セッション自動保存
    - キャッシュ戦略で高速ロード
    - 非侵襲的なアップデート通知
 
-6. **信頼性: 向上**
+1. **信頼性: 向上**
    - オフライン対応
    - ロールバック能力（3-5分）
    - 透明性のある運用ガイド
@@ -336,9 +336,9 @@ dist/
 ### 質問・疑問がある場合
 
 1. **開発者向け**: `REFACTORING_SAFETY.md` → `DEPLOYMENT_OPERATIONS.md`
-2. **運用者向け**: `INCIDENT_RESPONSE.md`
-3. **生徒向け**: `STUDENT_DEPLOYMENT_GUIDE.md`
-4. **AI アシスタント向け**: `.aitk/instructions/security-best-practices.instructions.md`
+1. **運用者向け**: `INCIDENT_RESPONSE.md`
+1. **生徒向け**: `STUDENT_DEPLOYMENT_GUIDE.md`
+1. **AI アシスタント向け**: `.aitk/instructions/security-best-practices.instructions.md`
 
 ### エスカレーション
 

@@ -1,0 +1,20 @@
+# .gitignore に追加すべき個人情報パターン
+
+# ユーザー名を含むパス（例）
+/Users/*/
+C:/Users/*/
+
+# バックアップディレクトリ
+*-backup-*/
+backup-*/
+*.backup/
+
+# ローカル設定ファイル
+.vscode/settings.json
+.idea/
+*.local
+
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+desktop.ini
