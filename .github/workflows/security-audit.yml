@@ -24,7 +24,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
 
@@ -37,23 +37,23 @@ jobs:
         run: |
           echo "## 🔒 セキュリティ監査結果" > audit-report.md
           echo "" >> audit-report.md
-          
+
           # npm audit を実行（JSONフォーマット）
           npm audit --json > audit.json || true
-          
+
           # 深刻度を集計
           HIGH=$(jq '.metadata.vulnerabilities.high // 0' audit.json)
           MODERATE=$(jq '.metadata.vulnerabilities.moderate // 0' audit.json)
           LOW=$(jq '.metadata.vulnerabilities.low // 0' audit.json)
           CRITICAL=$(jq '.metadata.vulnerabilities.critical // 0' audit.json)
-          
+
           echo "**深刻度別の脆弱性数**:" >> audit-report.md
           echo "- 🔴 Critical: $CRITICAL" >> audit-report.md
           echo "- 🟠 High: $HIGH" >> audit-report.md
           echo "- 🟡 Moderate: $MODERATE" >> audit-report.md
           echo "- 🟢 Low: $LOW" >> audit-report.md
           echo "" >> audit-report.md
-          
+
           # 詳細を追加
           echo "<details><summary>詳細レポート</summary>" >> audit-report.md
           echo "" >> audit-report.md
@@ -61,7 +61,7 @@ jobs:
           npm audit >> audit-report.md || true
           echo '```' >> audit-report.md
           echo "</details>" >> audit-report.md
-          
+
           # 環境変数にセット
           echo "critical=$CRITICAL" >> $GITHUB_OUTPUT
           echo "high=$HIGH" >> $GITHUB_OUTPUT
@@ -95,7 +95,7 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('audit-report.md', 'utf8');
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -111,7 +111,7 @@ jobs:
             const fs = require('fs');
             const report = fs.readFileSync('audit-report.md', 'utf8');
             const total = ${{ steps.audit.outputs.total }};
-            
+
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -128,7 +128,7 @@ jobs:
           echo "- High: ${{ steps.audit.outputs.high }}" >> $GITHUB_STEP_SUMMARY
           echo "- Moderate: ${{ steps.audit.outputs.moderate }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          
+
           if [ "${{ steps.audit.outputs.total }}" -eq "0" ]; then
             echo "✅ 脆弱性は検出されませんでした" >> $GITHUB_STEP_SUMMARY
           else

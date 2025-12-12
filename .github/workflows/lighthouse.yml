@@ -11,7 +11,7 @@ permissions:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
 
@@ -47,7 +47,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            
+
             let comment = '## 🔦 Lighthouse CI Results\n\n';
             comment += '各カテゴリのスコア（目標90%以上）:\n\n';
             comment += '- ⚡ **Performance**: パフォーマンス\n';
@@ -55,7 +55,7 @@ jobs:
             comment += '- ✅ **Best Practices**: ベストプラクティス\n';
             comment += '- 🔍 **SEO**: SEO対策\n\n';
             comment += '詳細レポートはアーティファクトからダウンロードできます。\n';
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,

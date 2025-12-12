@@ -46,11 +46,11 @@ npm run typecheck || {
 # 4. データ品質チェック（CSVファイルが変更されている場合）
 if git diff --cached --name-only | grep -E 'public/data/.*\.(csv|json)$' > /dev/null; then
   echo "📊 データ品質チェック実行中..."
-  
+
   # データ品質チェックを実行
   npm run check:data-quality > /tmp/data-quality-check.log 2>&1
   CHECK_STATUS=$?
-  
+
   # エラー数を抽出（0より大きければコミット拒否）
   ERROR_COUNT=$(grep "🔴 エラー:" /tmp/data-quality-check.log | grep -oE '[0-9]+' | head -1)
   if [ ! -z "$ERROR_COUNT" ] && [ "$ERROR_COUNT" -gt 0 ]; then
@@ -67,7 +67,7 @@ if git diff --cached --name-only | grep -E 'public/data/.*\.(csv|json)$' > /dev/
     echo "詳細レポート: scripts/output/data-quality-report.txt"
     exit 1
   fi
-  
+
   # 警告数を抽出（警告がある場合は通知のみ）
   WARNING_COUNT=$(grep "🟡 警告:" /tmp/data-quality-check.log | grep -oE '[0-9]+' | head -1)
   if [ ! -z "$WARNING_COUNT" ] && [ "$WARNING_COUNT" -gt 0 ]; then
@@ -79,7 +79,7 @@ if git diff --cached --name-only | grep -E 'public/data/.*\.(csv|json)$' > /dev/
     echo "💡 それでもコミットする場合: git commit --no-verify"
     # 警告は許可する（exit 0）が、ユーザーに通知
   fi
-  
+
   echo "✅ データ品質チェック完了"
 fi
 
@@ -100,14 +100,14 @@ if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css)$' > /dev/null; the
   echo "🏗️  ビルドチェック実行中..."
   BUILD_OUTPUT=$(npm run build 2>&1)
   BUILD_STATUS=$?
-  
+
   if [ $BUILD_STATUS -ne 0 ]; then
     echo ""
     echo "❌ ビルドに失敗しました"
     echo "$BUILD_OUTPUT"
     exit 1
   fi
-  
+
   # ビルド警告もチェック（通知のみ、コミットは許可）
   if echo "$BUILD_OUTPUT" | grep -i "warning" > /dev/null; then
     echo ""
@@ -115,7 +115,7 @@ if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css)$' > /dev/null; the
     echo "$BUILD_OUTPUT" | grep -i "warning" | head -3
     echo "💡 時間があるときに修正することを推奨します"
   fi
-  
+
   echo "✅ ビルド成功"
 fi
 
