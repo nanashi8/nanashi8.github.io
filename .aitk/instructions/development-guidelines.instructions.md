@@ -236,11 +236,12 @@ npm run typecheck && npm run lint && npm run lint:css && npm run build
    - 状態管理（useState, useReducer）
    - カスタムフック
 
-1. **品質管理パイプライン** (`docs/QUALITY_PIPELINE.md`)
+1. **品質管理パイプライン** (`docs/quality/QUALITY_SYSTEM.md`)
    - Git Hooks
    - CI/CD
    - テスト戦略
    - 品質基準
+   - データ品質検証
 
 ---
 

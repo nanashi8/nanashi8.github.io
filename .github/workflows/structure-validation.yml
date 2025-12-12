@@ -1,0 +1,47 @@
+name: Project Structure Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-structure:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Validate project structure
+      run: |
+        echo "🔍 プロジェクト構造を検証中..."
+        python3 scripts/validate_project_structure.py
+    
+    - name: Check for forbidden patterns
+      run: |
+        echo "🚫 禁止パターン（'2'ファイル等）をチェック中..."
+        if find . -name "*2.md" -o -name "*-v2.md" -o -name "*_2.md" | grep -v "archive\|node_modules\|.git\|grade2\|unit2" | grep -q .; then
+          echo "❌ 禁止パターンが検出されました"
+          find . -name "*2.md" -o -name "*-v2.md" -o -name "*_2.md" | grep -v "archive\|node_modules\|.git\|grade2\|unit2"
+          exit 1
+        else
+          echo "✅ 禁止パターンなし"
+        fi
+    
+    - name: Validate documentation links
+      run: |
+        echo "🔗 ドキュメントリンクを検証中..."
+        # 古い参照をチェック
+        if grep -r "docs/CONTINUOUS_IMPROVEMENT_PIPELINE\|README_QUALITY_PIPELINE" . --include="*.md" --exclude-dir={node_modules,.git,archive} 2>/dev/null; then
+          echo "❌ 古いドキュメント参照が見つかりました"
+          exit 1
+        else
+          echo "✅ ドキュメント参照は最新"
+        fi

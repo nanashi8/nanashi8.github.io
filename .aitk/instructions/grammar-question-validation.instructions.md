@@ -107,7 +107,7 @@ applyTo: 'public/data/grammar/**/*.json,public/data/*-questions-grade*.json,publ
 1. 問題を作成
 2. **選択肢の品質確認**（問題・選択肢・正解をセットで確認）
 3. 自己チェック（上記ルール1-6を確認）
-4. 検証スクリプト実行: `python3 scripts/validate_grammar_advanced.py`
+4. 検証スクリプト実行: `cd nanashi8.github.io && python3 scripts/validate_all_content.py --type grammar`
 5. エラーがなくなるまで修正とリトライ
 6. すべてのチェックを通過してからコミット
 
@@ -115,13 +115,14 @@ applyTo: 'public/data/grammar/**/*.json,public/data/*-questions-grade*.json,publ
 
 - **pre-commit**: コミット時に自動検証
 - **GitHub Actions**: PR時とpush時に自動検証
-- **手動実行**: `python3 scripts/validate_grammar_questions.py`
+- **手動実行**: `python3 scripts/validate_all_content.py --type grammar`
 
 ## 関連ドキュメント
 
 - 詳細ガイド: `docs/guidelines/GRAMMAR_QUESTION_VALIDATION.md`
 - AI作成指示: `docs/guidelines/AI_GRAMMAR_QUESTION_CREATION.md`
-- 検証スクリプト: `scripts/validate_grammar_questions.py`
+- 品質システム: `docs/quality/QUALITY_SYSTEM.md`
+- 検証スクリプト: `scripts/validate_all_content.py`
 
 ## 禁止事項
 
