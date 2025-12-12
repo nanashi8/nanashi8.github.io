@@ -11,57 +11,57 @@ import { Question } from '@/types';
  */
 export const CONFUSION_PAIRS: { [key: string]: string[] } = {
   // スペルが似ている
-  'accept': ['except'],
-  'except': ['accept'],
-  'affect': ['effect'],
-  'effect': ['affect'],
-  'dessert': ['desert'],
-  'desert': ['dessert'],
-  'quiet': ['quite'],
-  'quite': ['quiet'],
-  'lose': ['loose'],
-  'loose': ['lose'],
-  'advice': ['advise'],
-  'advise': ['advice'],
-  'breath': ['breathe'],
-  'breathe': ['breath'],
-  'cloth': ['clothe', 'clothes'],
-  'clothe': ['cloth', 'clothes'],
-  'clothes': ['cloth', 'clothe'],
-  
+  accept: ['except'],
+  except: ['accept'],
+  affect: ['effect'],
+  effect: ['affect'],
+  dessert: ['desert'],
+  desert: ['dessert'],
+  quiet: ['quite'],
+  quite: ['quiet'],
+  lose: ['loose'],
+  loose: ['lose'],
+  advice: ['advise'],
+  advise: ['advice'],
+  breath: ['breathe'],
+  breathe: ['breath'],
+  cloth: ['clothe', 'clothes'],
+  clothe: ['cloth', 'clothes'],
+  clothes: ['cloth', 'clothe'],
+
   // 意味が似ている
-  'borrow': ['lend'],
-  'lend': ['borrow'],
-  'teach': ['learn'],
-  'learn': ['teach'],
-  'speak': ['talk', 'say', 'tell'],
-  'talk': ['speak', 'say', 'tell'],
-  'say': ['speak', 'talk', 'tell'],
-  'tell': ['speak', 'talk', 'say'],
-  'see': ['look', 'watch'],
-  'look': ['see', 'watch'],
-  'watch': ['see', 'look'],
-  'hear': ['listen'],
-  'listen': ['hear'],
-  'bring': ['take'],
-  'take': ['bring'],
-  'come': ['go'],
-  'go': ['come'],
-  
+  borrow: ['lend'],
+  lend: ['borrow'],
+  teach: ['learn'],
+  learn: ['teach'],
+  speak: ['talk', 'say', 'tell'],
+  talk: ['speak', 'say', 'tell'],
+  say: ['speak', 'talk', 'tell'],
+  tell: ['speak', 'talk', 'say'],
+  see: ['look', 'watch'],
+  look: ['see', 'watch'],
+  watch: ['see', 'look'],
+  hear: ['listen'],
+  listen: ['hear'],
+  bring: ['take'],
+  take: ['bring'],
+  come: ['go'],
+  go: ['come'],
+
   // 前置詞
-  'in': ['on', 'at'],
-  'on': ['in', 'at'],
-  'at': ['in', 'on'],
-  'for': ['to', 'of'],
-  'to': ['for', 'of'],
-  'of': ['for', 'to'],
-  
+  in: ['on', 'at'],
+  on: ['in', 'at'],
+  at: ['in', 'on'],
+  for: ['to', 'of'],
+  to: ['for', 'of'],
+  of: ['for', 'to'],
+
   // その他よく混同される単語
-  'already': ['all ready'],
+  already: ['all ready'],
   'all ready': ['already'],
-  'altogether': ['all together'],
+  altogether: ['all together'],
   'all together': ['altogether'],
-  'everyday': ['every day'],
+  everyday: ['every day'],
   'every day': ['everyday'],
 };
 
@@ -101,7 +101,7 @@ export function analyzeConfusionPatterns(): ConfusionGroup[] {
     if (partners.length === 0) return;
 
     // グループを作成
-    const groupWords = [word, ...partners].map(w => w.toLowerCase());
+    const groupWords = [word, ...partners].map((w) => w.toLowerCase());
     const uniqueWords = Array.from(new Set(groupWords));
 
     // グループ内の単語の進捗を集計
@@ -109,7 +109,7 @@ export function analyzeConfusionPatterns(): ConfusionGroup[] {
     let totalAttempts = 0;
     const wordProgresses: WordProgress[] = [];
 
-    uniqueWords.forEach(w => {
+    uniqueWords.forEach((w) => {
       const wordProgress = progress.wordProgress[w];
       if (wordProgress) {
         totalErrors += wordProgress.incorrectCount;
@@ -119,7 +119,7 @@ export function analyzeConfusionPatterns(): ConfusionGroup[] {
     });
 
     // 混同スコアを計算（エラー率 × 学習回数の重み）
-    const errorRate = totalAttempts > 0 ? (totalErrors / totalAttempts) : 0;
+    const errorRate = totalAttempts > 0 ? totalErrors / totalAttempts : 0;
     const confusionScore = Math.min(100, errorRate * 100 * Math.log1p(totalAttempts));
 
     // タイプを判定
@@ -136,16 +136,16 @@ export function analyzeConfusionPatterns(): ConfusionGroup[] {
       description: getConfusionDescription(uniqueWords, type),
       confusionScore: Math.round(confusionScore),
       totalErrors,
-      needsReview: confusionScore > 30 || errorRate > 0.3
+      needsReview: confusionScore > 30 || errorRate > 0.3,
     });
 
     // 処理済みとしてマーク
-    uniqueWords.forEach(w => processedWords.add(w));
+    uniqueWords.forEach((w) => processedWords.add(w));
   });
 
   // スコアが高い順にソート
   return groups
-    .filter(g => g.totalErrors > 0) // エラーがあるもののみ
+    .filter((g) => g.totalErrors > 0) // エラーがあるもののみ
     .sort((a, b) => b.confusionScore - a.confusionScore);
 }
 
@@ -174,20 +174,18 @@ export function prioritizeConfusedWords(
 
   // 混同スコアが高いグループから単語を追加
   confusionGroups
-    .filter(g => g.needsReview)
+    .filter((g) => g.needsReview)
     .slice(0, 3) // 上位3グループ
-    .forEach(group => {
-      group.words.forEach(word => priorityWords.add(word));
+    .forEach((group) => {
+      group.words.forEach((word) => priorityWords.add(word));
     });
 
   // 優先単語を最初に配置
-  const priorityQuestions = questions.filter(q => 
-    priorityWords.has(q.word.toLowerCase())
-  ).slice(0, maxConfusedWords);
+  const priorityQuestions = questions
+    .filter((q) => priorityWords.has(q.word.toLowerCase()))
+    .slice(0, maxConfusedWords);
 
-  const otherQuestions = questions.filter(q => 
-    !priorityWords.has(q.word.toLowerCase())
-  );
+  const otherQuestions = questions.filter((q) => !priorityWords.has(q.word.toLowerCase()));
 
   return [...priorityQuestions, ...otherQuestions];
 }
@@ -204,32 +202,30 @@ export function calculateGroupRetention(group: ConfusionGroup): {
   const individualRetentions: { [word: string]: number } = {};
   const retentions: number[] = [];
 
-  group.words.forEach(word => {
+  group.words.forEach((word) => {
     const wp = progress.wordProgress[word];
     if (wp) {
       const totalAttempts = wp.correctCount + wp.incorrectCount;
-      const retention = totalAttempts > 0 
-        ? (wp.correctCount / totalAttempts) * 100 
-        : 0;
+      const retention = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
       individualRetentions[word] = retention;
       retentions.push(retention);
     }
   });
 
   // グループ全体の平均定着度
-  const groupRetention = retentions.length > 0
-    ? retentions.reduce((sum, r) => sum + r, 0) / retentions.length
-    : 0;
+  const groupRetention =
+    retentions.length > 0 ? retentions.reduce((sum, r) => sum + r, 0) / retentions.length : 0;
 
   // 分散（ばらつき）を計算
-  const variance = retentions.length > 0
-    ? retentions.reduce((sum, r) => sum + Math.pow(r - groupRetention, 2), 0) / retentions.length
-    : 0;
+  const variance =
+    retentions.length > 0
+      ? retentions.reduce((sum, r) => sum + Math.pow(r - groupRetention, 2), 0) / retentions.length
+      : 0;
 
   return {
     groupRetention: Math.round(groupRetention),
     individualRetentions,
-    variance: Math.round(variance)
+    variance: Math.round(variance),
   };
 }
 
@@ -238,7 +234,7 @@ export function calculateGroupRetention(group: ConfusionGroup): {
  */
 export function generateConfusionAdvice(group: ConfusionGroup): string {
   const retention = calculateGroupRetention(group);
-  
+
   if (retention.groupRetention < 50) {
     return `⚠️ ${group.words.join(', ')} の区別が曖昧です。集中的に復習しましょう。`;
   } else if (retention.variance > 500) {

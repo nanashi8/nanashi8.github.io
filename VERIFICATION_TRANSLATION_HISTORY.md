@@ -1,12 +1,15 @@
 # 和訳タブ履歴表示の検証手順
 
 ## 問題の説明
+
 和訳タブで解答直後にスコアボードの履歴タブに単語の学習データが表示されない問題
 
 ## 実施した修正
 
 ### 1. QuizView.tsx の修正
+
 **変更前:**
+
 ```typescript
 const handleAnswer = (answer: string, correct: string) => {
   onAnswer(answer, correct);
@@ -16,6 +19,7 @@ const handleAnswer = (answer: string, correct: string) => {
 ```
 
 **変更後:**
+
 ```typescript
 const handleAnswer = async (answer: string, correct: string) => {
   await onAnswer(answer, correct); // awaitを追加
@@ -24,30 +28,37 @@ const handleAnswer = async (answer: string, correct: string) => {
 };
 ```
 
-**理由:** 
+**理由:**
+
 - `onAnswer`（App.tsxの`handleAnswer`）は非同期処理を含む
 - `updateWordProgress`や`loadProgress`が完了する前に`setLastAnswerTime`が実行されていた
 - ScoreBoardが古いデータで再レンダリングされていた
 
 ### 2. 型定義の修正
+
 **変更前:**
+
 ```typescript
 onAnswer: (answer: string, correct: string) => void;
 ```
 
 **変更後:**
+
 ```typescript
 onAnswer: (answer: string, correct: string) => void | Promise<void>;
 ```
 
-**理由:** 
+**理由:**
+
 - TypeScriptの型エラーを防ぐため
 - `await onAnswer(...)`を許可するため
 
 ## 検証手順
 
 ### 準備
+
 1. 開発サーバーを起動
+
    ```bash
    cd /Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io
    npm run dev
@@ -56,6 +67,7 @@ onAnswer: (answer: string, correct: string) => void | Promise<void>;
 1. ブラウザで http://localhost:5173 を開く
 
 ### テストシナリオ 1: 初回回答での履歴表示
+
 1. 和訳タブを開く
 1. まだ解答したことのない単語の問題を開始
 1. 正解を選択して回答
@@ -67,6 +79,7 @@ onAnswer: (answer: string, correct: string) => void | Promise<void>;
    - 「定着率: 90%」（または適切な値）
 
 ### テストシナリオ 2: 連続回答での履歴更新
+
 1. 1問目を回答
 1. 履歴タブで1問目の単語データを確認
 1. 次の問題に進む（2問目）
@@ -75,28 +88,31 @@ onAnswer: (answer: string, correct: string) => void | Promise<void>;
 1. **期待結果:** 2問目の単語データが表示される（1問目ではなく）
 
 ### テストシナリオ 3: 不正解時の履歴表示
+
 1. 問題を開始
 1. 故意に不正解を選択
 1. 履歴タブを確認
-1. **期待結果:** 
+1. **期待結果:**
    - 単語データが表示される
    - 「正解: 0/1回」
    - ステータスが「🔴 要復習」または「🟡 学習中」
 
 ### テストシナリオ 4: 既存単語の再回答
+
 1. 以前に回答した単語の問題を開く
 1. 回答する
 1. 履歴タブを確認
-1. **期待結果:** 
+1. **期待結果:**
    - 回答履歴が増えている（例: 2/3回）
    - 履歴アイコンが更新されている（🟩🟩 など）
    - 定着率が更新されている
 
 ### テストシナリオ 5: スキップ後の履歴表示
+
 1. 問題を開く
 1. スキップボタンをクリック
 1. 履歴タブを確認
-1. **期待結果:** 
+1. **期待結果:**
    - スキップした単語のデータが表示される
    - スキップは正解扱いで記録される
 
@@ -113,12 +129,14 @@ onAnswer: (answer: string, correct: string) => void | Promise<void>;
 ## 問題が解決しない場合の追加デバッグ
 
 ### ブラウザコンソールで確認
+
 ```javascript
 // 回答後に実行
-localStorage.getItem('word-progress')
+localStorage.getItem('word-progress');
 ```
 
 ### React DevTools で確認
+
 1. ScoreBoard コンポーネントを選択
 1. Props を確認:
    - `currentWord`: 現在の単語が正しく渡されているか
@@ -127,7 +145,9 @@ localStorage.getItem('word-progress')
    - `currentWordData`: 単語データが取得できているか
 
 ### 追加のconsole.log
+
 QuizView.tsx の handleAnswer に追加:
+
 ```typescript
 const handleAnswer = async (answer: string, correct: string) => {
   console.log('Before onAnswer:', currentQuestion?.word);
@@ -139,6 +159,7 @@ const handleAnswer = async (answer: string, correct: string) => {
 ```
 
 ## 成功基準
+
 ✅ 全てのテストシナリオで履歴が即座に表示される
 ✅ 表示される情報が正確（回答数、正解率、履歴アイコンなど）
 ✅ コンソールにエラーがない

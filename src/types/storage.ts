@@ -1,6 +1,6 @@
 /**
  * ストレージ型定義
- * 
+ *
  * 目的: storageManager.ts, dataExport.ts, progressStorage.ts の
  * any 型を置換し、型安全性を確保する
  */
@@ -34,7 +34,7 @@ export interface ProgressData {
   lastUpdated: number;
   totalAnswered: Record<string, number>;
   totalMastered: Record<string, number>;
-  
+
   // UserProgress互換フィールド（Phase 3で統合予定）
   results?: QuizResult[];
   statistics?: {
@@ -116,8 +116,8 @@ export interface ExportData {
 // ローカルストレージ値型
 // ============================================
 
-export type StorageValue = 
-  | ProgressData 
+export type StorageValue =
+  | ProgressData
   | SessionHistory
   | AppSettings
   | string
@@ -151,16 +151,16 @@ export interface Passage {
 // Reading データ型 (progressStorage.ts用)
 // ============================================
 // 注: reading.tsと重複のため、型エイリアスとして再エクスポート
-import type { 
-  ReadingSegment as ReadingSegmentBase, 
-  ReadingPhrase as ReadingPhraseBase, 
-  ReadingPassage as ReadingPassageBase 
+import type {
+  ReadingSegment as ReadingSegmentBase,
+  ReadingPhrase as ReadingPhraseBase,
+  ReadingPassage as ReadingPassageBase,
 } from './reading';
 
-export type { 
-  ReadingSegmentBase as ReadingSegment, 
-  ReadingPhraseBase as ReadingPhrase, 
-  ReadingPassageBase as ReadingPassage 
+export type {
+  ReadingSegmentBase as ReadingSegment,
+  ReadingPhraseBase as ReadingPhrase,
+  ReadingPassageBase as ReadingPassage,
 };
 
 // ============================================

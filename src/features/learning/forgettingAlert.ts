@@ -28,15 +28,15 @@ export interface ForgettingAlert {
  */
 export function getAllForgettingAlerts(): ForgettingAlert[] {
   const alerts: ForgettingAlert[] = [];
-  
+
   // 単語別アラート
   const wordAlerts = getWordForgettingAlerts();
   alerts.push(...wordAlerts);
-  
+
   // グループ別アラート
   const groupAlerts = getGroupForgettingAlerts();
   alerts.push(...groupAlerts);
-  
+
   // 緊急度順にソート
   return alerts.sort((a, b) => {
     const urgencyOrder = { critical: 0, high: 1, medium: 2, low: 3 };
@@ -58,13 +58,13 @@ function getWordForgettingAlerts(): ForgettingAlert[] {
 
     // 記憶定着度を計算
     const retention = calculateMemoryRetention(word, wp, now);
-    
+
     // 24時間後の予測
     const retention24h = predictRetentionAfterDays(wp, 1);
-    
+
     // 7日後の予測
     const retention7d = predictRetentionAfterDays(wp, 7);
-    
+
     // 定着度50%を下回るまでの日数
     const daysUntilCritical = calculateDaysUntilCritical(wp, retention.retentionScore);
 
@@ -101,7 +101,7 @@ function getWordForgettingAlerts(): ForgettingAlert[] {
         urgency,
         message,
         recommendedAction,
-        daysUntilCritical
+        daysUntilCritical,
       });
     }
   });
@@ -118,17 +118,17 @@ function getGroupForgettingAlerts(): ForgettingAlert[] {
   const progress = loadProgressSync();
 
   confusionGroups
-    .filter(g => g.needsReview)
+    .filter((g) => g.needsReview)
     .slice(0, 5) // 上位5グループのみ
-    .forEach(group => {
+    .forEach((group) => {
       // グループ内の単語の平均定着度を計算
       let totalRetention = 0;
       let count = 0;
       let minRetention = 100;
 
-      group.words.forEach(word => {
+      group.words.forEach((word) => {
         const wp = progress.wordProgress[word];
-        if (wp && (wp.correctCount + wp.incorrectCount) > 0) {
+        if (wp && wp.correctCount + wp.incorrectCount > 0) {
           const retention = calculateMemoryRetention(word, wp);
           totalRetention += retention.retentionScore;
           minRetention = Math.min(minRetention, retention.retentionScore);
@@ -139,7 +139,7 @@ function getGroupForgettingAlerts(): ForgettingAlert[] {
       if (count === 0) return;
 
       const avgRetention = totalRetention / count;
-      
+
       // グループの緊急度を判定
       let urgency: 'critical' | 'high' | 'medium' | 'low';
       if (minRetention < 50 || avgRetention < 55) {
@@ -164,7 +164,7 @@ function getGroupForgettingAlerts(): ForgettingAlert[] {
         urgency,
         message,
         recommendedAction,
-        daysUntilCritical: Math.max(1, Math.floor((avgRetention - 50) / 5))
+        daysUntilCritical: Math.max(1, Math.floor((avgRetention - 50) / 5)),
       });
     });
 
@@ -180,17 +180,17 @@ function predictRetentionAfterDays(wp: WordProgress, days: number): number {
 
   const accuracy = wp.correctCount / totalAttempts;
   const initialStrength = accuracy * 100;
-  
+
   // 忘却率を推定
   const errorRate = wp.incorrectCount / totalAttempts;
-  const decayRate = 0.3 + (errorRate * 0.4);
-  
+  const decayRate = 0.3 + errorRate * 0.4;
+
   // 強化効果
   const reinforcementFactor = 1 + Math.log1p(wp.correctCount);
-  
+
   // エビングハウスの忘却曲線
-  const predictedRetention = initialStrength * Math.exp(-days * decayRate / reinforcementFactor);
-  
+  const predictedRetention = initialStrength * Math.exp((-days * decayRate) / reinforcementFactor);
+
   return Math.max(0, Math.min(100, predictedRetention));
 }
 
@@ -204,12 +204,12 @@ function calculateDaysUntilCritical(wp: WordProgress, currentRetention: number):
   if (totalAttempts === 0) return 999;
 
   const errorRate = wp.incorrectCount / totalAttempts;
-  const decayRate = 0.3 + (errorRate * 0.4);
+  const decayRate = 0.3 + errorRate * 0.4;
   const reinforcementFactor = 1 + Math.log1p(wp.correctCount);
 
   // currentRetention * e^(-days * decayRate / reinforcementFactor) = 50
   // days = log(currentRetention / 50) * reinforcementFactor / decayRate
-  const days = Math.log(currentRetention / 50) * reinforcementFactor / decayRate;
+  const days = (Math.log(currentRetention / 50) * reinforcementFactor) / decayRate;
 
   return Math.max(1, Math.ceil(days));
 }
@@ -217,8 +217,10 @@ function calculateDaysUntilCritical(wp: WordProgress, currentRetention: number):
 /**
  * 緊急度別にアラートを取得
  */
-export function getAlertsByUrgency(urgency: 'critical' | 'high' | 'medium' | 'low'): ForgettingAlert[] {
-  return getAllForgettingAlerts().filter(alert => alert.urgency === urgency);
+export function getAlertsByUrgency(
+  urgency: 'critical' | 'high' | 'medium' | 'low'
+): ForgettingAlert[] {
+  return getAllForgettingAlerts().filter((alert) => alert.urgency === urgency);
 }
 
 /**
@@ -227,17 +229,17 @@ export function getAlertsByUrgency(urgency: 'critical' | 'high' | 'medium' | 'lo
 export function getTodayReviewWords(): string[] {
   const criticalAlerts = getAlertsByUrgency('critical');
   const highAlerts = getAlertsByUrgency('high');
-  
+
   const words = new Set<string>();
-  
-  [...criticalAlerts, ...highAlerts].forEach(alert => {
+
+  [...criticalAlerts, ...highAlerts].forEach((alert) => {
     if (alert.type === 'word' && alert.word) {
       words.add(alert.word);
     } else if (alert.type === 'group' && alert.group) {
-      alert.group.words.forEach(w => words.add(w));
+      alert.group.words.forEach((w) => words.add(w));
     }
   });
-  
+
   return Array.from(words);
 }
 
@@ -253,14 +255,14 @@ export function getAlertSummary(): {
   todayReviewCount: number;
 } {
   const alerts = getAllForgettingAlerts();
-  
+
   return {
     total: alerts.length,
-    critical: alerts.filter(a => a.urgency === 'critical').length,
-    high: alerts.filter(a => a.urgency === 'high').length,
-    medium: alerts.filter(a => a.urgency === 'medium').length,
-    low: alerts.filter(a => a.urgency === 'low').length,
-    todayReviewCount: getTodayReviewWords().length
+    critical: alerts.filter((a) => a.urgency === 'critical').length,
+    high: alerts.filter((a) => a.urgency === 'high').length,
+    medium: alerts.filter((a) => a.urgency === 'medium').length,
+    low: alerts.filter((a) => a.urgency === 'low').length,
+    todayReviewCount: getTodayReviewWords().length,
   };
 }
 
@@ -269,16 +271,16 @@ export function getAlertSummary(): {
  */
 export function getRandomAlertMessage(): string | null {
   const alerts = getAllForgettingAlerts();
-  
+
   if (alerts.length === 0) {
     return null;
   }
-  
+
   // 緊急度が高いものを優先
-  const criticalAndHigh = alerts.filter(a => a.urgency === 'critical' || a.urgency === 'high');
+  const criticalAndHigh = alerts.filter((a) => a.urgency === 'critical' || a.urgency === 'high');
   const targetAlerts = criticalAndHigh.length > 0 ? criticalAndHigh : alerts;
-  
+
   const randomAlert = targetAlerts[Math.floor(Math.random() * targetAlerts.length)];
-  
+
   return `⏰ ${randomAlert.message} ${randomAlert.recommendedAction}`;
 }

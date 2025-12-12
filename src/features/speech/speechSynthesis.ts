@@ -14,21 +14,21 @@ export function cleanDialogueText(text: string): string {
   // 会話形式のパターンをチェック: "話者名: "..." の形式
   // パターン1: Speaker: "text" → text
   // パターン2: Speaker: text → text
-  
+
   // ": "..." 形式の場合
   const quotedPattern = /^[^:]+:\s*[""](.+?)[""]$/;
   const quotedMatch = text.match(quotedPattern);
   if (quotedMatch) {
     return quotedMatch[1].trim();
   }
-  
+
   // ": text 形式の場合（引用符なし）
   const unquotedPattern = /^[^:]+:\s*(.+)$/;
   const unquotedMatch = text.match(unquotedPattern);
   if (unquotedMatch) {
     return unquotedMatch[1].trim();
   }
-  
+
   // パターンに一致しない場合はそのまま返す
   return text;
 }
@@ -41,10 +41,10 @@ export function cleanDialogueText(text: string): string {
 export function speakEnglish(
   text: string,
   options: {
-    rate?: number;      // 速度 (0.1 - 10, デフォルト: 1)
-    pitch?: number;     // ピッチ (0 - 2, デフォルト: 1)
-    volume?: number;    // 音量 (0 - 1, デフォルト: 1)
-    lang?: string;      // 言語 (デフォルト: 'en-US')
+    rate?: number; // 速度 (0.1 - 10, デフォルト: 1)
+    pitch?: number; // ピッチ (0 - 2, デフォルト: 1)
+    volume?: number; // 音量 (0 - 1, デフォルト: 1)
+    lang?: string; // 言語 (デフォルト: 'en-US')
   } = {}
 ): void {
   // Web Speech API のサポート確認
@@ -61,11 +61,11 @@ export function speakEnglish(
 
   // 発話オブジェクトを作成
   const utterance = new SpeechSynthesisUtterance(cleanedText);
-  
+
   // localStorageから設定を読み込み
   const savedRate = localStorage.getItem('speechRate');
   const savedGender = localStorage.getItem('voiceGender');
-  
+
   // オプションを設定
   utterance.lang = options.lang || 'en-US';
   utterance.rate = options.rate || (savedRate ? parseFloat(savedRate) : 0.85);
@@ -75,22 +75,24 @@ export function speakEnglish(
   // 声の種類を設定
   if (savedGender) {
     const voices = window.speechSynthesis.getVoices();
-    const englishVoices = voices.filter(voice => voice.lang.startsWith('en-'));
-    
+    const englishVoices = voices.filter((voice) => voice.lang.startsWith('en-'));
+
     if (savedGender === 'female') {
-      const femaleVoice = englishVoices.find(v => 
-        v.name.toLowerCase().includes('female') || 
-        v.name.toLowerCase().includes('woman') ||
-        v.name.toLowerCase().includes('zira') ||
-        v.name.toLowerCase().includes('samantha')
+      const femaleVoice = englishVoices.find(
+        (v) =>
+          v.name.toLowerCase().includes('female') ||
+          v.name.toLowerCase().includes('woman') ||
+          v.name.toLowerCase().includes('zira') ||
+          v.name.toLowerCase().includes('samantha')
       );
       if (femaleVoice) utterance.voice = femaleVoice;
     } else if (savedGender === 'male') {
-      const maleVoice = englishVoices.find(v => 
-        v.name.toLowerCase().includes('male') || 
-        v.name.toLowerCase().includes('man') ||
-        v.name.toLowerCase().includes('david') ||
-        v.name.toLowerCase().includes('alex')
+      const maleVoice = englishVoices.find(
+        (v) =>
+          v.name.toLowerCase().includes('male') ||
+          v.name.toLowerCase().includes('man') ||
+          v.name.toLowerCase().includes('david') ||
+          v.name.toLowerCase().includes('alex')
       );
       if (maleVoice) utterance.voice = maleVoice;
     }
@@ -162,7 +164,7 @@ export function getEnglishVoices(): SpeechSynthesisVoice[] {
   }
 
   const voices = window.speechSynthesis.getVoices();
-  return voices.filter(voice => voice.lang.startsWith('en-'));
+  return voices.filter((voice) => voice.lang.startsWith('en-'));
 }
 
 /**
@@ -170,17 +172,14 @@ export function getEnglishVoices(): SpeechSynthesisVoice[] {
  * @param text 発音するテキスト
  * @param element クリックされた要素（アニメーション用）
  */
-export function speakWordWithFeedback(
-  text: string,
-  element?: HTMLElement
-): void {
+export function speakWordWithFeedback(text: string, element?: HTMLElement): void {
   // 発音
   speakEnglish(text);
 
   // ビジュアルフィードバック
   if (element) {
     element.classList.add('speaking');
-    
+
     // アニメーション終了後にクラスを削除
     setTimeout(() => {
       element.classList.remove('speaking');

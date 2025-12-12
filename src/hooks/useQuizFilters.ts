@@ -16,7 +16,7 @@ export function useQuizFilters() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>('all');
   const [selectedWordPhraseFilter, setSelectedWordPhraseFilter] = useState<WordPhraseFilter>('all');
   const [selectedPhraseTypeFilter, setSelectedPhraseTypeFilter] = useState<PhraseTypeFilter>('all');
-  
+
   const [selectedDataSource, setSelectedDataSource] = useState<DataSource>(() => {
     const saved = localStorage.getItem('selectedDataSource');
     if (saved) {

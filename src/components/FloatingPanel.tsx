@@ -187,7 +187,9 @@ const FloatingPanel: React.FC<FloatingPanelProps> = ({
                               ✏️
                             </button>
                             <button
-                              onClick={() => setExpandedSetId(expandedSetId === set.id ? null : set.id)}
+                              onClick={() =>
+                                setExpandedSetId(expandedSetId === set.id ? null : set.id)
+                              }
                               className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-sm"
                               aria-label={expandedSetId === set.id ? '折りたたむ' : '展開'}
                             >

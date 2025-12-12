@@ -11,14 +11,14 @@ export { OFFICIAL_CATEGORIES, DIFFICULTY_LEVELS };
 export type { CategoryType, DifficultyType };
 
 export interface Question {
-  word: string;        // 語句（単語 or 熟語、熟語の場合スペース含む）
-  reading: string;     // 読み（国際基準アクセント記号をカタカナで正確に）
-  meaning: string;     // 意味（正解）
-  etymology: string;   // 語源等解説（小中学生向け派生語習得支援）
+  word: string; // 語句（単語 or 熟語、熟語の場合スペース含む）
+  reading: string; // 読み（国際基準アクセント記号をカタカナで正確に）
+  meaning: string; // 意味（正解）
+  etymology: string; // 語源等解説（小中学生向け派生語習得支援）
   relatedWords: string; // 関連語（熟語・派生語と読みと意味）
   relatedFields: string; // 関連分野（表示用・CSVから読み込み）
-  category?: string;   // 関連分野（フィルター用・内部処理）
-  difficulty: string;  // 難易度（CSVから読み込み）
+  category?: string; // 関連分野（フィルター用・内部処理）
+  difficulty: string; // 難易度（CSVから読み込み）
   source?: 'junior' | 'intermediate'; // データソース（高校受験 or 中級1800）
   type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）

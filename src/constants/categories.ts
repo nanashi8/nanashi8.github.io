@@ -17,8 +17,8 @@ export const OFFICIAL_CATEGORIES = [
   '科学・技術',
 ] as const;
 
-export type CategoryType = typeof OFFICIAL_CATEGORIES[number];
+export type CategoryType = (typeof OFFICIAL_CATEGORIES)[number];
 
 // 難易度レベル
 export const DIFFICULTY_LEVELS = ['beginner', 'intermediate', 'advanced'] as const;
-export type DifficultyType = typeof DIFFICULTY_LEVELS[number];
+export type DifficultyType = (typeof DIFFICULTY_LEVELS)[number];

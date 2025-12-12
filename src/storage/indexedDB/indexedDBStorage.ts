@@ -10,7 +10,7 @@ export const STORES = {
   PROGRESS: 'progress',
   SESSION_HISTORY: 'sessionHistory',
   DAILY_STATS: 'dailyStats',
-  SETTINGS: 'settings'
+  SETTINGS: 'settings',
 } as const;
 
 // IndexedDB対応チェック
@@ -25,7 +25,7 @@ export function isIndexedDBSupported(): boolean {
 // プライベートモード検出（IndexedDB制限がある場合）
 export async function isPrivateMode(): Promise<boolean> {
   if (!isIndexedDBSupported()) return true;
-  
+
   try {
     const testDB = indexedDB.open('test');
     return new Promise((resolve) => {
@@ -81,7 +81,7 @@ export function initDB(): Promise<IDBDatabase> {
       if (!db.objectStoreNames.contains(STORES.SESSION_HISTORY)) {
         const historyStore = db.createObjectStore(STORES.SESSION_HISTORY, {
           keyPath: 'id',
-          autoIncrement: true
+          autoIncrement: true,
         });
         historyStore.createIndex('mode', 'mode', { unique: false });
         historyStore.createIndex('timestamp', 'timestamp', { unique: false });
@@ -235,7 +235,7 @@ export async function getStorageEstimate(): Promise<{ usage: number; quota: numb
       const estimate = await navigator.storage.estimate();
       return {
         usage: estimate.usage || 0,
-        quota: estimate.quota || 0
+        quota: estimate.quota || 0,
       };
     } catch (error) {
       logger.error('Storage estimate error:', error);
@@ -269,7 +269,7 @@ export async function deleteDatabase(): Promise<boolean> {
       dbInstance.close();
       dbInstance = null;
     }
-    
+
     const request = indexedDB.deleteDatabase(DB_NAME);
     request.onsuccess = () => {
       logger.log('🗑️ Database deleted');

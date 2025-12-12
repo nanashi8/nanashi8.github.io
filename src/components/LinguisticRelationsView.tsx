@@ -4,12 +4,12 @@
 
 import { useState } from 'react';
 import { Question } from '../types';
-import { 
-  extractLinguisticFeatures, 
+import {
+  extractLinguisticFeatures,
   generateRelatedWordClusters,
   LinguisticFeatures,
   RelatedWordCluster,
-  LinguisticRelationType 
+  LinguisticRelationType,
 } from '@/ai/analysis/linguisticRelationsAI';
 import { logger } from '@/utils/logger';
 import './LinguisticRelationsView.css';
@@ -28,7 +28,7 @@ const relationTypeLabels: Record<LinguisticRelationType, string> = {
   grammatical: '文法関連',
   phonetic: '音韻類似',
   compound: '複合語',
-  phrasal_verb: '句動詞'
+  phrasal_verb: '句動詞',
 };
 
 export default function LinguisticRelationsView({ allQuestions }: LinguisticRelationsViewProps) {
@@ -39,25 +39,25 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
 
   // 単語検索
   const filteredWords = allQuestions
-    .filter(q => 
-      q.word.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.meaning.includes(searchQuery)
+    .filter(
+      (q) =>
+        q.word.toLowerCase().includes(searchQuery.toLowerCase()) || q.meaning.includes(searchQuery)
     )
     .slice(0, 50); // 表示は最大50件
 
   const handleWordSelect = (word: string) => {
     setSelectedWord(word);
-    const question = allQuestions.find(q => q.word === word);
-    
+    const question = allQuestions.find((q) => q.word === word);
+
     if (question) {
       // 言語学的特徴を抽出
       const linguisticFeatures = extractLinguisticFeatures(question);
       setFeatures(linguisticFeatures);
-      
+
       // 関連単語クラスターを生成
       const wordClusters = generateRelatedWordClusters(allQuestions, word);
       setClusters(wordClusters);
-      
+
       logger.log('📚 言語学的特徴:', linguisticFeatures);
       logger.log('🔗 関連単語クラスター:', wordClusters);
     }
@@ -66,7 +66,7 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
   return (
     <div className="linguistic-relations-view">
       <h2>🧬 言語学的関連性分析</h2>
-      
+
       <div className="word-search">
         <input
           type="text"
@@ -75,7 +75,7 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
           onChange={(e) => setSearchQuery(e.target.value)}
           className="search-input"
         />
-        
+
         <div className="word-list">
           {filteredWords.map((q, idx) => (
             <button
@@ -92,7 +92,7 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
       {selectedWord && features && (
         <div className="analysis-results">
           <h3>📖 {selectedWord} の言語学的分析</h3>
-          
+
           {/* 形態素分析 */}
           <div className="feature-section">
             <h4>形態素分析</h4>
@@ -159,8 +159,8 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
                 <span className="label">抽象度:</span>
                 <span className="value">
                   <div className="progress-bar">
-                    <div 
-                      className="progress-fill" 
+                    <div
+                      className="progress-fill"
                       data-width={features.semanticCategory.abstractness * 100}
                     />
                   </div>
@@ -208,16 +208,19 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
                 <div className="feature-item">
                   <span className="label">極性:</span>
                   <span className={`badge badge-${features.sentiment.polarity}`}>
-                    {features.sentiment.polarity === 'positive' ? 'ポジティブ' : 
-                     features.sentiment.polarity === 'negative' ? 'ネガティブ' : '中立'}
+                    {features.sentiment.polarity === 'positive'
+                      ? 'ポジティブ'
+                      : features.sentiment.polarity === 'negative'
+                        ? 'ネガティブ'
+                        : '中立'}
                   </span>
                 </div>
                 <div className="feature-item">
                   <span className="label">強度:</span>
                   <span className="value">
                     <div className="progress-bar">
-                      <div 
-                        className="progress-fill" 
+                      <div
+                        className="progress-fill"
                         data-width={features.sentiment.intensity * 100}
                       />
                     </div>
@@ -240,11 +243,11 @@ export default function LinguisticRelationsView({ allQuestions }: LinguisticRela
                       優先度: {(cluster.studyPriority * 100).toFixed(0)}%
                     </span>
                   </div>
-                  
+
                   <div className="related-words">
                     {cluster.relatedWords.map((rw, rwIdx) => (
-                      <div 
-                        key={rwIdx} 
+                      <div
+                        key={rwIdx}
                         className={`related-word ${rw.shouldStudyTogether ? 'high-priority' : ''}`}
                       >
                         <button

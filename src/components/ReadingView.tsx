@@ -31,7 +31,7 @@ function ReadingView() {
 
   // 単語クリック（分からない単語マーク）
   const handleWordClick = (phraseIndex: number, wordIndex: number) => {
-    const anyTranslationShown = phraseTranslations.some(shown => shown);
+    const anyTranslationShown = phraseTranslations.some((shown) => shown);
     if (anyTranslationShown || !currentPassage) return;
 
     setPassages((prev) =>
@@ -57,7 +57,7 @@ function ReadingView() {
 
   // フレーズごとの和訳表示
   const handleShowPhraseTranslation = (phraseIndex: number) => {
-    setPhraseTranslations(prev => {
+    setPhraseTranslations((prev) => {
       const newState = [...prev];
       newState[phraseIndex] = true;
       return newState;
@@ -117,31 +117,34 @@ function ReadingView() {
   // フレーズの音声再生
   const handleSpeakPhrase = (phraseIndex: number) => {
     if (!currentPassage) return;
-    
+
     const phrase = currentPassage.phrases[phraseIndex];
-    const phraseText = phrase.segments.map(seg => seg.word).join(' ');
-    
+    const phraseText = phrase.segments.map((seg) => seg.word).join(' ');
+
     // 既に再生中の場合は停止
     if (speakingPhraseIndex === phraseIndex) {
       stopSpeaking();
       setSpeakingPhraseIndex(null);
       return;
     }
-    
+
     // 新しいフレーズを再生
     stopSpeaking();
     setSpeakingPhraseIndex(phraseIndex);
-    
+
     speakEnglish(phraseText, {
       rate: 0.85,
       pitch: 1.0,
-      volume: 1.0
+      volume: 1.0,
     });
-    
+
     // 再生終了後にstateをリセット
-    setTimeout(() => {
-      setSpeakingPhraseIndex(null);
-    }, phraseText.split(' ').length * 600); // 概算の再生時間
+    setTimeout(
+      () => {
+        setSpeakingPhraseIndex(null);
+      },
+      phraseText.split(' ').length * 600
+    ); // 概算の再生時間
   };
 
   // リセット
@@ -192,7 +195,7 @@ function ReadingView() {
           onChange={(e) => {
             const newPassageId = e.target.value;
             setSelectedPassageId(newPassageId);
-            const newPassage = passages.find(p => p.id === newPassageId);
+            const newPassage = passages.find((p) => p.id === newPassageId);
             if (newPassage) {
               setPhraseTranslations(new Array(newPassage.phrases.length).fill(false));
             }
@@ -213,7 +216,7 @@ function ReadingView() {
         <div className="reading-content">
           <h3 className="passage-title">{currentPassage.title}</h3>
 
-          {!phraseTranslations.some(shown => shown) && (
+          {!phraseTranslations.some((shown) => shown) && (
             <div className="passage-instructions">
               <p>💡 分からない単語をタップして赤くマークしてください</p>
               <p className="hint-text">🔊 各フレーズの発音ボタンで英語を聞けます</p>
@@ -234,7 +237,7 @@ function ReadingView() {
                 >
                   🔊 {speakingPhraseIndex === phraseIdx ? '停止' : '発音'}
                 </button>
-                
+
                 {/* 英文の単語を横並びで表示 */}
                 <div className="phrase-words-row">
                   {phrase.segments.map((segment, segIdx) => (
@@ -247,16 +250,18 @@ function ReadingView() {
                       disabled={phraseTranslations[phraseIdx]}
                     >
                       <span className="word-text">{segment.word}</span>
-                      {phraseTranslations[phraseIdx] && segment.meaning && segment.meaning !== '-' && (
-                        <span className="word-meaning-inline">{segment.meaning}</span>
-                      )}
+                      {phraseTranslations[phraseIdx] &&
+                        segment.meaning &&
+                        segment.meaning !== '-' && (
+                          <span className="word-meaning-inline">{segment.meaning}</span>
+                        )}
                     </button>
                   ))}
                 </div>
 
                 {/* 和訳ボタンと和訳表示 */}
                 {!phraseTranslations[phraseIdx] ? (
-                  <button 
+                  <button
                     className="phrase-translation-btn"
                     onClick={() => handleShowPhraseTranslation(phraseIdx)}
                   >
@@ -275,7 +280,7 @@ function ReadingView() {
           </div>
 
           {/* 全文の日本語訳（全フレーズの和訳表示時） */}
-          {phraseTranslations.every(shown => shown) && (
+          {phraseTranslations.every((shown) => shown) && (
             <div className="full-translation">
               <h4>📝 全文の日本語訳</h4>
               <p className="translation-text">{currentPassage.translation}</p>
@@ -284,7 +289,7 @@ function ReadingView() {
 
           {/* アクションボタン */}
           <div className="reading-actions">
-            {!phraseTranslations.some(shown => shown) ? (
+            {!phraseTranslations.some((shown) => shown) ? (
               <button className="btn-primary" onClick={handleShowAllTranslations}>
                 ✅ すべて和訳を見る
               </button>

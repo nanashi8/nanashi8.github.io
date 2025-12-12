@@ -5,7 +5,11 @@ import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 import { calculateGoalProgress } from '../goalSimulator';
-import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '@/features/analysis/confusionPairs';
+import {
+  getConfusionPartners,
+  generateConfusionAdvice,
+  analyzeConfusionPatterns,
+} from '@/features/analysis/confusionPairs';
 import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
 import { getRelevantMistakeTip } from '../englishTrivia';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
@@ -49,7 +53,7 @@ function QuestionCard({
     () => generateChoicesWithQuestions(question, allQuestions, currentIndex),
     [question.word, allQuestions, currentIndex]
   );
-  
+
   const [_userRating, setUserRating] = useState<number | null>(null);
   const [expandedChoices, setExpandedChoices] = useState<Set<number>>(new Set());
   const [_aiComment, setAiComment] = useState<string>('');
@@ -58,13 +62,13 @@ function QuestionCard({
     const saved = sessionStorage.getItem('currentCorrectStreak');
     return saved ? parseInt(saved, 10) : 0;
   });
-  
+
   // スワイプジェスチャー用
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
   const cardRef = useRef<HTMLDivElement>(null);
   const isTouchingRef = useRef<boolean>(false);
-  
+
   // 問題が変わった時にステートをリセット
   useEffect(() => {
     setUserRating(null);
@@ -72,9 +76,9 @@ function QuestionCard({
     setAiComment('');
     setAttemptCount(0);
   }, [currentIndex]);
-  
+
   const toggleChoiceDetails = (index: number) => {
-    setExpandedChoices(prev => {
+    setExpandedChoices((prev) => {
       const newSet = new Set(prev);
       // 回答後は、1つの選択肢をタップすると全ての選択肢の詳細をトグル
       if (answered) {
@@ -110,10 +114,10 @@ function QuestionCard({
     if (answered && selectedAnswer) {
       const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as any;
       const isCorrect = selectedAnswer === question.meaning;
-      
+
       // 現在の連続正解数を取得
       const currentStreak = parseInt(sessionStorage.getItem('currentCorrectStreak') || '0', 10);
-      
+
       // 基本のAIコメント
       let comment = generateAIComment(personality, {
         isCorrect,
@@ -134,10 +138,10 @@ function QuestionCard({
         planProgress: 0,
         timeOfDay: getTimeOfDay(),
       });
-      
+
       // 追加情報を付加
       const additionalComments: string[] = [];
-      
+
       // 1. 目標達成情報（正解時のみ、10%の確率で表示）
       if (isCorrect && Math.random() < 0.1) {
         const goalProgress = calculateGoalProgress();
@@ -145,36 +149,40 @@ function QuestionCard({
           if (goalProgress.overallProgress >= 90) {
             additionalComments.push(`🎯 ${goalProgress.goal.name}まであと少し！`);
           } else if (goalProgress.overallProgress >= 75) {
-            additionalComments.push(`📈 このペースなら${goalProgress.estimatedDaysToAchieve}日で${goalProgress.goal.name}達成です！`);
+            additionalComments.push(
+              `📈 このペースなら${goalProgress.estimatedDaysToAchieve}日で${goalProgress.goal.name}達成です！`
+            );
           }
         }
       }
-      
+
       // 2. 混同単語の警告（不正解時のみ、混同ペアが存在する場合）
       if (!isCorrect) {
         const confusionPartners = getConfusionPartners(question.word);
         if (confusionPartners.length > 0) {
-          additionalComments.push(`💡 「${question.word}」と「${confusionPartners.join(', ')}」を混同しやすいので注意！`);
+          additionalComments.push(
+            `💡 「${question.word}」と「${confusionPartners.join(', ')}」を混同しやすいので注意！`
+          );
         }
       }
-      
+
       // 3. 混同グループのアドバイス（不正解時のみ、5%の確率で表示）
       if (!isCorrect && Math.random() < 0.05) {
         const confusionGroups = analyzeConfusionPatterns();
-        const relevantGroup = confusionGroups.find(g => 
-          g.words.includes(question.word.toLowerCase()) && g.needsReview
+        const relevantGroup = confusionGroups.find(
+          (g) => g.words.includes(question.word.toLowerCase()) && g.needsReview
         );
         if (relevantGroup) {
           additionalComments.push(generateConfusionAdvice(relevantGroup));
         }
       }
-      
+
       // 4. 教師間のやりとり（正解・不正解両方で10%の確率で表示）
       const interaction = generateTeacherInteraction(personality, isCorrect, currentStreak);
       if (interaction) {
         additionalComments.push(interaction.message);
       }
-      
+
       // 5. 連続正解時の特別リアクション（正解時のみ、特定の連続数で発火）
       if (isCorrect) {
         const streakReaction = getTeacherReactionToStreak(currentStreak + 1); // 次の連続数で判定
@@ -182,13 +190,13 @@ function QuestionCard({
           additionalComments.push(streakReaction);
         }
       }
-      
+
       // 6. 英語あるある・豆知識（正解・不正解両方で8%の確率で表示）
       const trivia = getRelevantMistakeTip(isCorrect);
       if (trivia) {
         additionalComments.push(trivia);
       }
-      
+
       // 連続正解数を更新（リアクション取得後に更新）
       if (isCorrect) {
         const newStreak = currentStreak + 1;
@@ -198,47 +206,51 @@ function QuestionCard({
         setCorrectStreak(0);
         sessionStorage.setItem('currentCorrectStreak', '0');
       }
-      
+
       // コメントを結合
       if (additionalComments.length > 0) {
         comment = `${comment} ${additionalComments[0]}`; // 最初の1つだけ表示
       }
-      
+
       setAiComment(comment);
     } else {
       setAiComment('');
     }
   }, [answered, selectedAnswer, question, attemptCount]);
-  
+
   // スワイプジェスチャーのハンドラー
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
       // 選択肢ボタンや詳細トグルボタン、question-text上でのタッチは無視
       const target = e.target as HTMLElement;
-      if (target.closest('.choice-btn') || target.closest('.toggle-details-btn') || 
-          target.closest('.rating-btn') || target.closest('.inline-nav-btn') ||
-          target.closest('.question-text')) {
+      if (
+        target.closest('.choice-btn') ||
+        target.closest('.toggle-details-btn') ||
+        target.closest('.rating-btn') ||
+        target.closest('.inline-nav-btn') ||
+        target.closest('.question-text')
+      ) {
         return;
       }
       touchStartX.current = e.touches[0].clientX;
       isTouchingRef.current = true;
     };
-    
+
     const handleTouchMove = (e: TouchEvent) => {
       if (touchStartX.current === 0) return; // タッチ開始が記録されていない場合は無視
       touchEndX.current = e.touches[0].clientX;
     };
-    
+
     const handleTouchEnd = () => {
       if (touchStartX.current === 0) {
         // タッチ開始が記録されていない場合は何もしない
         isTouchingRef.current = false;
         return;
       }
-      
+
       const swipeDistance = touchStartX.current - touchEndX.current;
       const minSwipeDistance = 80; // iOSブラウザジェスチャーとの競合回避のため増加
-      
+
       if (Math.abs(swipeDistance) > minSwipeDistance) {
         if (swipeDistance > 0) {
           // 左スワイプ → 次へ
@@ -255,20 +267,20 @@ function QuestionCard({
           }
         }
       }
-      
+
       touchStartX.current = 0;
       touchEndX.current = 0;
       setTimeout(() => {
         isTouchingRef.current = false;
       }, 300);
     };
-    
+
     const card = cardRef.current;
     if (card) {
       card.addEventListener('touchstart', handleTouchStart, { passive: true });
       card.addEventListener('touchmove', handleTouchMove, { passive: true });
       card.addEventListener('touchend', handleTouchEnd);
-      
+
       return () => {
         card.removeEventListener('touchstart', handleTouchStart);
         card.removeEventListener('touchmove', handleTouchMove);
@@ -289,7 +301,7 @@ function QuestionCard({
           const choiceQuestion = choicesWithQuestions[index].question;
           const isCorrect = choice === question.meaning;
           if (!isCorrect) {
-            setAttemptCount(prev => prev + 1);
+            setAttemptCount((prev) => prev + 1);
           }
           onAnswer(choice, question.meaning, choiceQuestion);
         }
@@ -318,10 +330,12 @@ function QuestionCard({
 
   const getButtonClass = (choice: string) => {
     // Tailwindクラスによるスタイリング（レスポンシブで自動最適化）
-    const baseClasses = 'w-full min-h-11 sm:min-h-14 p-2 sm:p-4 text-sm sm:text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
-    const hoverClasses = 'hover:border-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
+    const baseClasses =
+      'w-full min-h-11 sm:min-h-14 p-2 sm:p-4 text-sm sm:text-base rounded-xl border-2 cursor-pointer transition-all duration-300 flex flex-col items-center text-center touch-manipulation select-none shadow-sm';
+    const hoverClasses =
+      'hover:border-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg';
     const activeClasses = 'active:bg-gray-200 dark:active:bg-gray-700 active:translate-y-0';
-    
+
     // 「分からない」選択肢は特別なスタイル
     if (choice === '分からない') {
       if (!answered) {
@@ -333,11 +347,11 @@ function QuestionCard({
       }
       return `${baseClasses} bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border-gray-400 dark:border-gray-500`;
     }
-    
+
     if (!answered) {
       return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 ${hoverClasses} ${activeClasses}`;
     }
-    
+
     if (choice === question.meaning) {
       return `${baseClasses} bg-green-600 border-green-600 text-white`;
     }
@@ -346,7 +360,7 @@ function QuestionCard({
     }
     return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600`;
   };
-  
+
   const handleNextClick = () => {
     setExpandedChoices(new Set()); // 開閉状態をリセット
     setAttemptCount(0); // 試行回数をリセット
@@ -354,20 +368,17 @@ function QuestionCard({
   };
 
   return (
-    <div 
-      className="question-card"
-      ref={cardRef}
-    >
+    <div className="question-card" ref={cardRef}>
       <div className="question-nav-row">
-        <button 
-          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
+        <button
+          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed"
           onClick={onPrevious}
           disabled={currentIndex === 0}
           title="前へ"
         >
           ←
         </button>
-        <div 
+        <div
           className={`question-content-inline ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
           onClick={(e) => {
             if (isSpeechSynthesisSupported()) {
@@ -385,46 +396,52 @@ function QuestionCard({
           }}
           title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
         >
-          <div 
+          <div
             className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white break-words ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
           >
             {question.word}
-            {isSpeechSynthesisSupported() && (
-              <span className="speaker-icon">🔊</span>
-            )}
+            {isSpeechSynthesisSupported() && <span className="speaker-icon">🔊</span>}
           </div>
           {question.reading && (
-            <div className="question-reading text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">【{question.reading}】</div>
+            <div className="question-reading text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">
+              【{question.reading}】
+            </div>
           )}
           {question.difficulty && (
             <div className={`difficulty-badge ${question.difficulty}`}>
-              {question.difficulty === 'beginner' ? '初級' : 
-               question.difficulty === 'intermediate' ? '中級' : '上級'}
+              {question.difficulty === 'beginner'
+                ? '初級'
+                : question.difficulty === 'intermediate'
+                  ? '中級'
+                  : '上級'}
             </div>
           )}
-          
+
           {/* カスタムセットに追加ボタン */}
-          {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && customQuestionSets && (
-            <div className="mt-3 flex justify-center">
-              <AddToCustomButton
-                word={{
-                  word: question.word,
-                  meaning: question.meaning,
-                  katakana: question.reading,
-                  source: 'translation',
-                }}
-                sets={customQuestionSets}
-                onAddWord={onAddWordToCustomSet}
-                onRemoveWord={onRemoveWordFromCustomSet}
-                onOpenManagement={onOpenCustomSetManagement}
-                size="medium"
-                variant="both"
-              />
-            </div>
-          )}
+          {onAddWordToCustomSet &&
+            onRemoveWordFromCustomSet &&
+            onOpenCustomSetManagement &&
+            customQuestionSets && (
+              <div className="mt-3 flex justify-center">
+                <AddToCustomButton
+                  word={{
+                    word: question.word,
+                    meaning: question.meaning,
+                    katakana: question.reading,
+                    source: 'translation',
+                  }}
+                  sets={customQuestionSets}
+                  onAddWord={onAddWordToCustomSet}
+                  onRemoveWord={onRemoveWordFromCustomSet}
+                  onOpenManagement={onOpenCustomSetManagement}
+                  size="medium"
+                  variant="both"
+                />
+              </div>
+            )}
         </div>
-        <button 
-          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
+        <button
+          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed"
           onClick={handleNextClick}
           title="次へ"
         >
@@ -436,7 +453,7 @@ function QuestionCard({
         {choicesWithQuestions.map((choice, idx) => {
           const isExpanded = expandedChoices.has(idx);
           const choiceQuestion = choice.question;
-          
+
           return (
             <div key={idx} className="choice-wrapper">
               <button
@@ -451,10 +468,10 @@ function QuestionCard({
                     }
                     return;
                   }
-                  
+
                   const isCorrect = choice.text === question.meaning;
                   if (!isCorrect) {
-                    setAttemptCount(prev => prev + 1);
+                    setAttemptCount((prev) => prev + 1);
                   }
                   onAnswer(choice.text, question.meaning, choiceQuestion);
                 }}

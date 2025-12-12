@@ -142,17 +142,39 @@
 }
 
 /* data-width属性に基づいて幅を設定 */
-.progress-fill[data-width="0"] { width: 0%; }
-.progress-fill[data-width="10"] { width: 10%; }
-.progress-fill[data-width="20"] { width: 20%; }
-.progress-fill[data-width="30"] { width: 30%; }
-.progress-fill[data-width="40"] { width: 40%; }
-.progress-fill[data-width="50"] { width: 50%; }
-.progress-fill[data-width="60"] { width: 60%; }
-.progress-fill[data-width="70"] { width: 70%; }
-.progress-fill[data-width="80"] { width: 80%; }
-.progress-fill[data-width="90"] { width: 90%; }
-.progress-fill[data-width="100"] { width: 100%; }
+.progress-fill[data-width='0'] {
+  width: 0%;
+}
+.progress-fill[data-width='10'] {
+  width: 10%;
+}
+.progress-fill[data-width='20'] {
+  width: 20%;
+}
+.progress-fill[data-width='30'] {
+  width: 30%;
+}
+.progress-fill[data-width='40'] {
+  width: 40%;
+}
+.progress-fill[data-width='50'] {
+  width: 50%;
+}
+.progress-fill[data-width='60'] {
+  width: 60%;
+}
+.progress-fill[data-width='70'] {
+  width: 70%;
+}
+.progress-fill[data-width='80'] {
+  width: 80%;
+}
+.progress-fill[data-width='90'] {
+  width: 90%;
+}
+.progress-fill[data-width='100'] {
+  width: 100%;
+}
 
 .badge {
   display: inline-block;
@@ -189,7 +211,7 @@
 }
 
 .badge-neutral {
-  background-color: #9E9E9E;
+  background-color: #9e9e9e;
   color: var(--text-color-light);
 }
 
@@ -447,19 +469,19 @@
   .feature-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cluster-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
-  
+
   .related-word {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
-  
+
   .relation-info {
     width: 100%;
   }

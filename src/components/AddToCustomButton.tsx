@@ -33,9 +33,7 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
   const [showMenu, setShowMenu] = useState(false);
 
   // この単語が既に追加されているセットを検索
-  const containingSets = sets.filter((set) =>
-    set.words.some((w) => w.word === word.word)
-  );
+  const containingSets = sets.filter((set) => set.words.some((w) => w.word === word.word));
 
   const isInAnySet = containingSets.length > 0;
 
@@ -54,7 +52,7 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
 
   const handleToggle = (e: React.MouseEvent) => {
     e.stopPropagation();
-    
+
     if (sets.length === 0) {
       // セットがない場合は管理画面を開く
       onOpenManagement();
@@ -97,32 +95,19 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
           rounded-md font-medium transition-colors duration-200
           flex items-center gap-1
         `}
-        title={
-          isInAnySet
-            ? `${containingSets.length}個のセットに追加済み`
-            : 'カスタムセットに追加'
-        }
+        title={isInAnySet ? `${containingSets.length}個のセットに追加済み` : 'カスタムセットに追加'}
       >
-        <span className={iconSizeClasses[size]}>
-          {isInAnySet ? '✓' : '+'}
-        </span>
-        {variant !== 'icon' && (
-          <span>{isInAnySet ? '追加済み' : '追加'}</span>
-        )}
+        <span className={iconSizeClasses[size]}>{isInAnySet ? '✓' : '+'}</span>
+        {variant !== 'icon' && <span>{isInAnySet ? '追加済み' : '追加'}</span>}
       </button>
 
       {/* セット選択メニュー */}
       {showMenu && (
         <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setShowMenu(false)}
-          />
+          <div className="fixed inset-0 z-40" onClick={() => setShowMenu(false)} />
           <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 z-50 max-h-80 overflow-y-auto">
             <div className="p-2 border-b border-gray-200 dark:border-gray-700">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                セットを選択
-              </p>
+              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">セットを選択</p>
             </div>
             <div className="p-2">
               {sets.map((set) => {
@@ -153,9 +138,7 @@ const AddToCustomButton: React.FC<AddToCustomButtonProps> = ({
                         </p>
                       </div>
                     </div>
-                    <span className="text-lg ml-2">
-                      {isInThisSet ? '✓' : '+'}
-                    </span>
+                    <span className="text-lg ml-2">{isInThisSet ? '✓' : '+'}</span>
                   </button>
                 );
               })}

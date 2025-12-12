@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { logger } from '@/utils/logger';
 import type { LearningSchedule, DailyStudyPlan, Question } from '../types';
-import { 
+import {
   generateLearningPlan,
-  generateDailyPlan, 
+  generateDailyPlan,
   calculateProgress,
-  calculateWeeklyAchievement 
+  calculateWeeklyAchievement,
 } from '../utils';
 
 interface LearningPlanViewProps {
@@ -23,24 +23,24 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
     averageAccuracy: 0,
     estimatedCompletion: 90,
   });
-  
+
   useEffect(() => {
     // ローカルストレージからプランを読み込み
     const saved = localStorage.getItem('learning-schedule-90days');
     if (saved) {
       try {
         const parsed = JSON.parse(saved) as LearningSchedule;
-        
+
         // 日数を更新
         const daysPassed = Math.floor((Date.now() - parsed.startDate) / (1000 * 60 * 60 * 24));
         const totalDays = parsed.totalDays;
         parsed.currentDay = Math.min(daysPassed + 1, totalDays);
-        
+
         // フェーズを動的に計算
         const phase1End = Math.floor(totalDays / 3);
-        const phase2End = Math.floor(totalDays * 2 / 3);
+        const phase2End = Math.floor((totalDays * 2) / 3);
         parsed.phase = parsed.currentDay <= phase1End ? 1 : parsed.currentDay <= phase2End ? 2 : 3;
-        
+
         setSchedule(parsed);
         setDailyPlan(generateDailyPlan(parsed, allQuestions));
       } catch (error) {
@@ -48,11 +48,11 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
       }
     }
   }, [allQuestions]);
-  
+
   useEffect(() => {
     if (schedule) {
       setProgress(calculateProgress(schedule));
-      
+
       // プログレスバーのwidthを設定
       const progressBar = document.querySelector('.progress-bar') as HTMLElement;
       if (progressBar) {
@@ -63,29 +63,38 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
       }
     }
   }, [schedule]);
-  
+
   const handleResetPlan = () => {
-    const monthsLabel = schedule?.planDurationMonths === 1 ? '1ヶ月' : 
-                       schedule?.planDurationMonths === 2 ? '2ヶ月' :
-                       schedule?.planDurationMonths === 6 ? '6ヶ月' : '3ヶ月';
-    if (confirm(`${monthsLabel}プランをリセットしますか？これまでの進捗は保持されますが、プランは最初からになります。`)) {
+    const monthsLabel =
+      schedule?.planDurationMonths === 1
+        ? '1ヶ月'
+        : schedule?.planDurationMonths === 2
+          ? '2ヶ月'
+          : schedule?.planDurationMonths === 6
+            ? '6ヶ月'
+            : '3ヶ月';
+    if (
+      confirm(
+        `${monthsLabel}プランをリセットしますか？これまでの進捗は保持されますが、プランは最初からになります。`
+      )
+    ) {
       localStorage.removeItem('learning-schedule-90days');
       setSchedule(null);
       setDailyPlan(null);
     }
   };
-  
+
   if (!schedule) {
     return null; // 学習プラン作成UIを非表示にする
   }
-  
+
   const phaseNames = ['基礎固め期', '応用拡大期', '完成・定着期'];
   const phase = schedule.phase;
   const dayNumber = schedule.currentDay;
   const totalDays = schedule.totalDays;
   const progressPercent = (dayNumber / totalDays) * 100;
   const weeklyAchievement = calculateWeeklyAchievement(schedule);
-  
+
   return (
     <div className="learning-plan-dashboard">
       {/* プログレスヘッダー */}
@@ -94,20 +103,18 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
           <span className="day-number">{dayNumber}</span>
           <span className="day-label">/ {totalDays}日目</span>
         </div>
-        
+
         <div className="phase-indicator">
-          <span className={`phase-badge phase-${phase}`}>
-            Phase {phase}
-          </span>
+          <span className={`phase-badge phase-${phase}`}>Phase {phase}</span>
           <span className="phase-name">{phaseNames[phase - 1]}</span>
         </div>
-        
+
         <div className="progress-bar-container">
           <div className={`progress-bar phase-${phase}`} />
           <span className="progress-label">{progressPercent.toFixed(1)}%</span>
         </div>
       </div>
-      
+
       {/* 統計サマリー */}
       <div className="stats-summary">
         <div className="stat-card">
@@ -115,31 +122,33 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
           <div className="stat-value">{progress.totalLearned}</div>
           <div className="stat-label">学習済み単語</div>
         </div>
-        
+
         <div className="stat-card">
           <div className="stat-icon">✅</div>
           <div className="stat-value">{progress.averageAccuracy.toFixed(1)}%</div>
           <div className="stat-label">平均正答率</div>
         </div>
-        
+
         <div className="stat-card">
           <div className="stat-icon">🎯</div>
-          <div className="stat-value">{weeklyAchievement > 0 ? weeklyAchievement.toFixed(0) : 0}%</div>
+          <div className="stat-value">
+            {weeklyAchievement > 0 ? weeklyAchievement.toFixed(0) : 0}%
+          </div>
           <div className="stat-label">今週の達成率</div>
         </div>
-        
+
         <div className="stat-card">
           <div className="stat-icon">⏱️</div>
           <div className="stat-value">{progress.estimatedCompletion}</div>
           <div className="stat-label">完了まで（日）</div>
         </div>
       </div>
-      
+
       {/* 今日の学習プラン */}
       {dailyPlan && (
         <div className="today-plan">
           <h2>📖 今日の学習プラン（Day {dayNumber}）</h2>
-          
+
           <div className="session-cards">
             {/* 朝セッション */}
             <div className="session-card morning">
@@ -150,7 +159,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                   <p>{dailyPlan.morning.newWords.length}語 · 20分</p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => onStartSession('morning', dailyPlan.morning.newWords)}
                 className="btn-start-session"
                 disabled={dailyPlan.morning.newWords.length === 0}
@@ -158,7 +167,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                 {dailyPlan.morning.newWords.length === 0 ? '単語なし' : '開始する'}
               </button>
             </div>
-            
+
             {/* 昼セッション */}
             <div className="session-card afternoon">
               <div className="session-header">
@@ -168,7 +177,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                   <p>{dailyPlan.afternoon.reviewWords.length}語 · 15分</p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => onStartSession('afternoon', dailyPlan.afternoon.reviewWords)}
                 className="btn-start-session"
                 disabled={dailyPlan.afternoon.reviewWords.length === 0}
@@ -176,7 +185,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                 {dailyPlan.afternoon.reviewWords.length === 0 ? '単語なし' : '開始する'}
               </button>
             </div>
-            
+
             {/* 夜セッション */}
             <div className="session-card evening">
               <div className="session-header">
@@ -186,7 +195,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
                   <p>{dailyPlan.evening.mixedWords.length}語 · 20分</p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => onStartSession('evening', dailyPlan.evening.mixedWords)}
                 className="btn-start-session"
                 disabled={dailyPlan.evening.mixedWords.length === 0}
@@ -197,7 +206,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
           </div>
         </div>
       )}
-      
+
       {/* マイルストーン */}
       <div className="milestones">
         <h2>🏆 マイルストーン</h2>
@@ -206,9 +215,9 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
             const isPassed = dayNumber > milestone.day;
             const isCurrent = dayNumber === milestone.day;
             const isAchieved = progress.totalLearned >= milestone.wordsTarget;
-            
+
             return (
-              <div 
+              <div
                 key={index}
                 className={`milestone-item ${isAchieved ? 'achieved' : ''} ${isCurrent ? 'current' : ''} ${isPassed ? 'passed' : ''}`}
               >
@@ -221,7 +230,6 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
           })}
         </div>
       </div>
-      
     </div>
   );
 }

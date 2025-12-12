@@ -48,7 +48,7 @@ export interface WordProgress {
   verificationReason?: string; // AI学習アシスタント: 検証が必要な理由
   meaning?: string; // 意味（苦手語句表示用）
   reading?: string; // 読み（苦手語句表示用）
-  
+
   // モード別統計（難易度別リセット用）
   totalAttempts?: number; // 総試行回数
   translationAttempts?: number; // 和訳モードの試行回数
@@ -63,7 +63,7 @@ export interface WordProgress {
   memorizationAttempts?: number; // 暗記モードの試行回数
   memorizationCorrect?: number; // 暗記モードの正解回数
   memorizationStreak?: number; // 暗記モードの連続正解数
-  
+
   // 学習曲線AI用の詳細履歴
   learningHistory?: Array<{
     timestamp: number;
@@ -72,7 +72,7 @@ export interface WordProgress {
     userAnswer?: string;
     sessionIndex?: number;
   }>;
-  
+
   // 混同履歴（この単語を誤答として選んだ履歴）
   confusedWith?: Array<{
     word: string; // 実際に出題された単語
@@ -80,7 +80,7 @@ export interface WordProgress {
   }>;
   confusionCount?: number; // 混同された合計回数
   lastConfused?: number; // 最終混同日時
-  
+
   // 定着済み単語の復習管理
   nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
 }
@@ -178,13 +178,15 @@ export interface MasteryPrediction {
 
 export interface DailyPlanInfo {
   date?: string;
-  reviewWords?: Array<{
-    word: string;
-    meaning: string;
-    reading: string;
-    lastStudied: number;
-    masteryLevel: string;
-  }> | string[];
+  reviewWords?:
+    | Array<{
+        word: string;
+        meaning: string;
+        reading: string;
+        lastStudied: number;
+        masteryLevel: string;
+      }>
+    | string[];
   newWords?: Array<{
     word: string;
     meaning: string;

@@ -1,6 +1,6 @@
 /**
  * ゲーミフィケーションAI - 学習のモチベーション向上システム
- * 
+ *
  * 機能:
  * 1. バッジ・実績システム: 条件達成時の報酬
  * 2. レベル・経験値システム: 学習進捗の可視化
@@ -19,32 +19,32 @@
  */
 export enum BadgeType {
   // 学習量系
-  FIRST_SESSION = 'first_session',              // 初めての学習
-  STREAK_3_DAYS = 'streak_3_days',             // 3日連続学習
-  STREAK_7_DAYS = 'streak_7_days',             // 1週間連続学習
-  STREAK_30_DAYS = 'streak_30_days',           // 1ヶ月連続学習
-  TOTAL_100_WORDS = 'total_100_words',         // 累計100単語学習
-  TOTAL_500_WORDS = 'total_500_words',         // 累計500単語学習
-  TOTAL_1000_WORDS = 'total_1000_words',       // 累計1000単語学習
-  
+  FIRST_SESSION = 'first_session', // 初めての学習
+  STREAK_3_DAYS = 'streak_3_days', // 3日連続学習
+  STREAK_7_DAYS = 'streak_7_days', // 1週間連続学習
+  STREAK_30_DAYS = 'streak_30_days', // 1ヶ月連続学習
+  TOTAL_100_WORDS = 'total_100_words', // 累計100単語学習
+  TOTAL_500_WORDS = 'total_500_words', // 累計500単語学習
+  TOTAL_1000_WORDS = 'total_1000_words', // 累計1000単語学習
+
   // 精度系
-  PERFECT_SESSION = 'perfect_session',         // 全問正解
-  ACCURACY_90 = 'accuracy_90',                 // 正答率90%以上を10回
-  ACCURACY_95 = 'accuracy_95',                 // 正答率95%以上を10回
-  
+  PERFECT_SESSION = 'perfect_session', // 全問正解
+  ACCURACY_90 = 'accuracy_90', // 正答率90%以上を10回
+  ACCURACY_95 = 'accuracy_95', // 正答率95%以上を10回
+
   // 時間系
-  EARLY_BIRD = 'early_bird',                   // 朝学習5回
-  NIGHT_OWL = 'night_owl',                     // 夜学習5回
-  SPEED_MASTER = 'speed_master',               // 平均応答時間2秒以下
-  
+  EARLY_BIRD = 'early_bird', // 朝学習5回
+  NIGHT_OWL = 'night_owl', // 夜学習5回
+  SPEED_MASTER = 'speed_master', // 平均応答時間2秒以下
+
   // 復習系
-  REVIEW_CHAMPION = 'review_champion',         // 要復習単語50個クリア
-  MASTER_100 = 'master_100',                   // 100単語マスター
-  
+  REVIEW_CHAMPION = 'review_champion', // 要復習単語50個クリア
+  MASTER_100 = 'master_100', // 100単語マスター
+
   // 特殊系
-  COMEBACK = 'comeback',                       // 1週間以上の中断後に再開
-  MARATHON = 'marathon',                       // 1時間以上の学習セッション
-  FOCUSED = 'focused',                         // 集中力高い学習10回
+  COMEBACK = 'comeback', // 1週間以上の中断後に再開
+  MARATHON = 'marathon', // 1時間以上の学習セッション
+  FOCUSED = 'focused', // 集中力高い学習10回
 }
 
 /**
@@ -287,14 +287,14 @@ export const XP_PER_LEVEL = (level: number): number => {
  * 行動ごとの経験値
  */
 export const XP_REWARDS = {
-  CORRECT_ANSWER: 10,           // 正解
-  PERFECT_SESSION: 100,         // 全問正解
-  FIRST_TRY_CORRECT: 15,        // 初見正解
-  REVIEW_CORRECT: 20,           // 復習で正解
-  STREAK_BONUS_PER_DAY: 5,      // 連続学習ボーナス（1日あたり）
-  SESSION_COMPLETION: 50,       // セッション完了
-  BADGE_EARNED: 200,            // バッジ獲得
-  CHALLENGE_COMPLETED: 500,     // チャレンジ完了
+  CORRECT_ANSWER: 10, // 正解
+  PERFECT_SESSION: 100, // 全問正解
+  FIRST_TRY_CORRECT: 15, // 初見正解
+  REVIEW_CORRECT: 20, // 復習で正解
+  STREAK_BONUS_PER_DAY: 5, // 連続学習ボーナス（1日あたり）
+  SESSION_COMPLETION: 50, // セッション完了
+  BADGE_EARNED: 200, // バッジ獲得
+  CHALLENGE_COMPLETED: 500, // チャレンジ完了
 };
 
 // ============================================================================
@@ -517,7 +517,7 @@ export const checkAndAwardBadges = (
 
   // 精度系
   if (sessionData.perfectScore) awardBadge(BadgeType.PERFECT_SESSION);
-  
+
   // 正答率90%以上を10回
   const highAccuracySessions = stats.totalSessions; // 簡略化: 実際は履歴から計算
   if (sessionData.accuracy >= 90 && highAccuracySessions >= 10) {
@@ -655,7 +655,7 @@ export const processSessionEnd = (
   // 経験値計算
   const accuracy = (correctAnswers / totalQuestions) * 100;
   const perfectScore = correctAnswers === totalQuestions;
-  
+
   totalXP += correctAnswers * XP_REWARDS.CORRECT_ANSWER;
   totalXP += XP_REWARDS.SESSION_COMPLETION;
   if (perfectScore) {
@@ -801,7 +801,7 @@ export const getNextMilestone = (): Milestone | null => {
   const stats = loadGamificationStats();
   const incomplete = stats.milestones.filter((m) => !m.completed);
   if (incomplete.length === 0) return null;
-  
+
   // 進捗率が最も高いものを返す
   return incomplete.reduce((closest, current) => {
     const closestProgress = closest.current / closest.target;

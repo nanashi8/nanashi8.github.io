@@ -9,11 +9,11 @@ interface FileSelectorProps {
   onDifficultyChange: (level: DifficultyLevel) => void;
 }
 
-function FileSelector({ 
-  onLoadCSV, 
+function FileSelector({
+  onLoadCSV,
   onLoadLocalFile,
   selectedDifficulty,
-  onDifficultyChange 
+  onDifficultyChange,
 }: FileSelectorProps) {
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const filePath = e.target.value;
@@ -38,23 +38,29 @@ function FileSelector({
       <div className="file-select-group">
         {/* 問題集選択 */}
         <div className="selector-item">
-          <label htmlFor="file-selector-dropdown" className="selector-label">📚 問題集</label>
-          <select 
+          <label htmlFor="file-selector-dropdown" className="selector-label">
+            📚 問題集
+          </label>
+          <select
             id="file-selector-dropdown"
-            onChange={handleSelectChange} 
+            onChange={handleSelectChange}
             defaultValue=""
             className="selector-dropdown"
             aria-label="問題集を選択"
           >
             <option value="">問題集を選択...</option>
-            <option value="/data/high-school-entrance-words.csv">中学生・高校受験英単語 (3,600語)</option>
+            <option value="/data/high-school-entrance-words.csv">
+              中学生・高校受験英単語 (3,600語)
+            </option>
           </select>
         </div>
 
         {/* 難易度レベル選択 */}
         <div className="selector-item">
-          <label htmlFor="difficulty-selector-dropdown" className="selector-label">🎯 難易度レベル</label>
-          <select 
+          <label htmlFor="difficulty-selector-dropdown" className="selector-label">
+            🎯 難易度レベル
+          </label>
+          <select
             id="difficulty-selector-dropdown"
             value={selectedDifficulty}
             onChange={handleDifficultyChange}

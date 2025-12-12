@@ -3,13 +3,13 @@ import React from 'react';
 /**
  * タッチとクリックの両方に対応するイベントハンドラーを返す
  * モバイルでのホバー状態の残存を自動的に防止
- * 
+ *
  * @param callback - クリック/タッチ時に実行される関数
  * @param onLongPress - 長押し検出時に実行される関数（任意）
  * @param longPressDuration - 長押し判定の時間（ミリ秒、デフォルト: 500ms）
- * 
+ *
  * @returns React イベントハンドラーオブジェクト
- * 
+ *
  * @example
  * const buttonProps = useResponsiveClick(() => handleAnswer(choice));
  * <button {...buttonProps}>選択肢</button>
@@ -19,10 +19,7 @@ interface UseResponsiveClickOptions {
   longPressDuration?: number;
 }
 
-export const useResponsiveClick = (
-  callback: () => void,
-  options?: UseResponsiveClickOptions
-) => {
+export const useResponsiveClick = (callback: () => void, options?: UseResponsiveClickOptions) => {
   const { onLongPress, longPressDuration = 500 } = options || {};
 
   const touchStartTimeRef = React.useRef<number>(0);
@@ -72,7 +69,7 @@ export const useResponsiveClick = (
 /**
  * ボタンの active/disabled 状態をスマートに制御
  * モバイルではタップ時に視覚的フィードバック、デスクトップではホバー効果
- * 
+ *
  * @example
  * const [isActive, setIsActive] = useState(false);
  * const { className: buttonClass } = useResponsiveButton(isActive);
@@ -91,7 +88,7 @@ export const useResponsiveButton = (isActive: boolean = false) => {
 /**
  * マルチタッチジェスチャーを簡単に検出
  * ピンチズーム、2本指タップなど
- * 
+ *
  * @example
  * const { initialDistance } = useMultiTouch({
  *   onPinch: (delta) => console.log('Pinch:', delta),

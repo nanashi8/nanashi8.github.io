@@ -8,7 +8,7 @@ export {
   adjustDifficultyByCognitiveLoad,
   generateFatigueMessage,
   type CognitiveLoadMonitor,
-  type SessionResponse
+  type SessionResponse,
 } from './cognitive/cognitiveLoadAI';
 
 // エラー予測AI
@@ -16,7 +16,7 @@ export {
   analyzeErrorPatterns,
   batchPredictErrors,
   type ErrorPrediction,
-  type ErrorAnalysis
+  type ErrorAnalysis,
 } from './prediction/errorPredictionAI';
 
 // 適応学習AI
@@ -24,14 +24,14 @@ export type {
   MemoryRetention,
   ReviewEvent,
   SpacedRepetitionSchedule,
-  UserLearningCharacteristics
+  UserLearningCharacteristics,
 } from './adaptation/adaptiveLearningAI';
 export {
   calculateMemoryRetention,
   generateSpacedRepetitionSchedule,
   selectNextQuestions,
   buildUserLearningCharacteristics,
-  calculateRetentionRate
+  calculateRetentionRate,
 } from './adaptation/adaptiveLearningAI';
 
 export {
@@ -40,7 +40,7 @@ export {
   loadSessionHistory,
   generateLearningStyleProfile,
   generateRecommendationMessage,
-  getTimeOfDay as getTimeOfDayStyle
+  getTimeOfDay as getTimeOfDayStyle,
 } from './adaptation/learningStyleAI';
 
 // 分析AI
@@ -49,7 +49,7 @@ export {
   prioritizeWeakCategoryQuestions,
   saveImprovementProgress,
   updateImprovementProgress,
-  getImprovementProgress
+  getImprovementProgress,
 } from './analysis/radarChartAI';
 
 export {
@@ -58,7 +58,7 @@ export {
   planConsolidationSequence,
   type WordLearningHistory,
   type LearningAttempt,
-  type QuestionPriority
+  type QuestionPriority,
 } from './analysis/learningCurveAI';
 
 export * from './analysis/linguisticRelationsAI';
@@ -71,5 +71,5 @@ export { generateContextualSequence } from './optimization/contextualLearningAI'
 export {
   processSessionEnd,
   getMotivationalMessage,
-  type GamificationStats
+  type GamificationStats,
 } from './engagement/gamificationAI';

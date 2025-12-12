@@ -10,7 +10,7 @@ import { formatLocalYYYYMMDD } from '../utils';
     today.setHours(0, 0, 0, 0);
     const todayStr = formatLocalYYYYMMDD(today);
 
-    const hasToday = data.some(d => d.date === todayStr);
+    const hasToday = data.some((d) => d.date === todayStr);
     if (!hasToday) {
       console.error(`[TEST] 今日(${todayStr})が学習カレンダーに含まれていません`, { data });
     } else {

@@ -6,18 +6,11 @@ import {
   Filler,
   Tooltip,
   Legend,
-  ChartOptions
+  ChartOptions,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 
-ChartJS.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-);
+ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 interface ReadingRadarChartProps {
   labels: string[];
@@ -26,7 +19,12 @@ interface ReadingRadarChartProps {
   title?: string;
 }
 
-function ReadingRadarChart({ labels, savedWordsData, totalWordsData, title }: ReadingRadarChartProps) {
+function ReadingRadarChart({
+  labels,
+  savedWordsData,
+  totalWordsData,
+  title,
+}: ReadingRadarChartProps) {
   const data = {
     labels,
     datasets: [
@@ -81,7 +79,7 @@ function ReadingRadarChart({ labels, savedWordsData, totalWordsData, title }: Re
       },
       tooltip: {
         callbacks: {
-          label: function(context) {
+          label: function (context) {
             const label = context.dataset.label || '';
             const value = context.parsed.r;
             return `${label}: ${value}`;

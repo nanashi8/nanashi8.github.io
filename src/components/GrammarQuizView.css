@@ -94,8 +94,15 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.1); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
 }
 
 .difficulty-badge {
@@ -655,22 +662,22 @@
   .choices-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .submit-area {
     flex-direction: column;
   }
-  
+
   .submit-button,
   .reset-button {
     width: 100%;
     max-width: unset;
   }
-  
+
   .word-button {
     font-size: 14px;
     padding: 6px 12px;
   }
-  
+
   .sentence-display {
     font-size: 16px;
     padding: 15px;
@@ -1127,11 +1134,11 @@
   .choices-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .action-buttons {
     flex-direction: column;
   }
-  
+
   .previous-button,
   .submit-button,
   .next-button,
@@ -1139,12 +1146,12 @@
     width: 100%;
     min-width: unset;
   }
-  
+
   .word-button {
     font-size: 14px;
     padding: 6px 12px;
   }
-  
+
   .sentence-display {
     font-size: 16px;
     padding: 15px;

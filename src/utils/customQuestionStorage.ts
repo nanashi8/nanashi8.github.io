@@ -19,7 +19,7 @@ export function loadCustomQuestionState(): CustomQuestionState {
   } catch (error) {
     console.error('Failed to load custom question state:', error);
   }
-  
+
   return {
     sets: [],
     activeSetId: null,
@@ -70,19 +70,19 @@ export function addWordToSet(
 ): CustomQuestionState {
   const sets = state.sets.map((set) => {
     if (set.id !== setId) return set;
-    
+
     // 既に存在する場合は追加しない
     if (set.words.some((w) => w.word === word.word)) {
       return set;
     }
-    
+
     return {
       ...set,
       words: [...set.words, { ...word, addedAt: new Date().toISOString() }],
       updatedAt: new Date().toISOString(),
     };
   });
-  
+
   return {
     ...state,
     sets,
@@ -100,14 +100,14 @@ export function removeWordFromSet(
 ): CustomQuestionState {
   const sets = state.sets.map((set) => {
     if (set.id !== setId) return set;
-    
+
     return {
       ...set,
       words: set.words.filter((w) => w.word !== word.word),
       updatedAt: new Date().toISOString(),
     };
   });
-  
+
   return { ...state, sets };
 }
 
@@ -136,14 +136,14 @@ export function updateCustomQuestionSet(
 ): CustomQuestionState {
   const sets = state.sets.map((set) => {
     if (set.id !== setId) return set;
-    
+
     return {
       ...set,
       ...updates,
       updatedAt: new Date().toISOString(),
     };
   });
-  
+
   return { ...state, sets };
 }
 
@@ -173,14 +173,20 @@ export function isWordInAnySets(sets: CustomQuestionSet[], word: string): boolea
 /**
  * 単語を含むすべてのセットを取得
  */
-export function getSetsContainingWord(sets: CustomQuestionSet[], word: string): CustomQuestionSet[] {
+export function getSetsContainingWord(
+  sets: CustomQuestionSet[],
+  word: string
+): CustomQuestionSet[] {
   return sets.filter((set) => isWordInSet(set, word));
 }
 
 /**
  * セットIDでセットを取得
  */
-export function getSetById(sets: CustomQuestionSet[], setId: string): CustomQuestionSet | undefined {
+export function getSetById(
+  sets: CustomQuestionSet[],
+  setId: string
+): CustomQuestionSet | undefined {
   return sets.find((set) => set.id === setId);
 }
 
@@ -189,7 +195,7 @@ export function getSetById(sets: CustomQuestionSet[], setId: string): CustomQues
  */
 export function getAllUniqueWords(sets: CustomQuestionSet[]): CustomWord[] {
   const wordMap = new Map<string, CustomWord>();
-  
+
   sets.forEach((set) => {
     set.words.forEach((word) => {
       if (!wordMap.has(word.word)) {
@@ -197,7 +203,7 @@ export function getAllUniqueWords(sets: CustomQuestionSet[]): CustomWord[] {
       }
     });
   });
-  
+
   return Array.from(wordMap.values());
 }
 
@@ -206,19 +212,25 @@ export function getAllUniqueWords(sets: CustomQuestionSet[]): CustomWord[] {
  */
 export function getSetStatistics(set: CustomQuestionSet) {
   const totalWords = set.words.length;
-  const sources = set.words.reduce((acc, word) => {
-    const source = word.source || 'unknown';
-    acc[source] = (acc[source] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
-  
-  const tags = set.words.reduce((acc, word) => {
-    (word.tags || []).forEach((tag) => {
-      acc[tag] = (acc[tag] || 0) + 1;
-    });
-    return acc;
-  }, {} as Record<string, number>);
-  
+  const sources = set.words.reduce(
+    (acc, word) => {
+      const source = word.source || 'unknown';
+      acc[source] = (acc[source] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>
+  );
+
+  const tags = set.words.reduce(
+    (acc, word) => {
+      (word.tags || []).forEach((tag) => {
+        acc[tag] = (acc[tag] || 0) + 1;
+      });
+      return acc;
+    },
+    {} as Record<string, number>
+  );
+
   return {
     totalWords,
     sources,

@@ -33,7 +33,7 @@ export interface StorageInfo {
 // LocalStorageの使用量を計算
 function getLocalStorageSize(): number {
   let total = 0;
-  
+
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
@@ -48,24 +48,24 @@ function getLocalStorageSize(): number {
   } catch (error) {
     logger.error('LocalStorageサイズ計算エラー:', error);
   }
-  
+
   return total;
 }
 
 // ストレージ情報を取得
 export async function getStorageInfo(): Promise<StorageInfo> {
   const migrationInfo = getMigrationInfo();
-  
+
   // LocalStorage情報
   const localStorageUsed = getLocalStorageSize();
   const localStorageLimit = 5 * 1024 * 1024; // 一般的に5MB
-  
+
   // IndexedDB情報
   const estimate = await getStorageEstimate();
   let progressCount = 0;
   let sessionHistoryCount = 0;
   let dailyStatsCount = 0;
-  
+
   if (migrationInfo.completed) {
     try {
       progressCount = await getCount(STORES.PROGRESS);
@@ -75,14 +75,14 @@ export async function getStorageInfo(): Promise<StorageInfo> {
       logger.error('IndexedDB件数取得エラー:', error);
     }
   }
-  
+
   return {
     localStorage: {
       used: localStorageUsed,
       usedFormatted: formatBytes(localStorageUsed),
       limit: localStorageLimit,
       limitFormatted: formatBytes(localStorageLimit),
-      percentage: (localStorageUsed / localStorageLimit) * 100
+      percentage: (localStorageUsed / localStorageLimit) * 100,
     },
     indexedDB: {
       enabled: migrationInfo.completed,
@@ -93,12 +93,12 @@ export async function getStorageInfo(): Promise<StorageInfo> {
       totalEstimateFormatted: formatBytes(estimate.usage),
       quota: estimate.quota,
       quotaFormatted: formatBytes(estimate.quota),
-      percentage: estimate.quota > 0 ? (estimate.usage / estimate.quota) * 100 : 0
+      percentage: estimate.quota > 0 ? (estimate.usage / estimate.quota) * 100 : 0,
     },
     migration: {
       completed: migrationInfo.completed,
-      version: migrationInfo.version
-    }
+      version: migrationInfo.version,
+    },
   };
 }
 
@@ -110,40 +110,40 @@ export async function checkStorageHealth(): Promise<{
 }> {
   const info = await getStorageInfo();
   const suggestions: string[] = [];
-  
+
   // LocalStorageが80%以上使用されている
   if (info.localStorage.percentage > 80) {
     suggestions.push('LocalStorageの使用量が多いため、古いデータを削除してください');
   }
-  
+
   // IndexedDBが90%以上使用されている
   if (info.indexedDB.enabled && info.indexedDB.percentage > 90) {
     suggestions.push('IndexedDBの使用量が多いため、データのクリーンアップを推奨します');
   }
-  
+
   // セッション履歴が1000件以上
   if (info.indexedDB.sessionHistoryCount > 1000) {
     suggestions.push('セッション履歴が多すぎます。古い履歴を削除できます');
   }
-  
+
   // 判定
   if (info.localStorage.percentage > 90 || info.indexedDB.percentage > 95) {
     return {
       status: 'critical',
       message: 'ストレージ容量が不足しています',
-      suggestions
+      suggestions,
     };
   } else if (info.localStorage.percentage > 70 || info.indexedDB.percentage > 80) {
     return {
       status: 'warning',
       message: 'ストレージ使用量が多くなっています',
-      suggestions
+      suggestions,
     };
   } else {
     return {
       status: 'healthy',
       message: 'ストレージは正常です',
-      suggestions: []
+      suggestions: [],
     };
   }
 }

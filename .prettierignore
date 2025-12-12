@@ -1,0 +1,25 @@
+# Build outputs
+dist
+dist-beta
+node_modules
+
+# Test results
+playwright-report
+test-results
+coverage
+
+# Archives
+nanashi8.github.io-archive-*
+*.bfg-report
+
+# Data files (CSV/JSON with specific formatting)
+public/data/*.csv
+public/data/*.json
+
+# Generated files
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Markdown with special formatting
+CHANGELOG.md

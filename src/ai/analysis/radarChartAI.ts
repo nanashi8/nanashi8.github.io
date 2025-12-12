@@ -1,6 +1,6 @@
 /**
  * レーダーチャートAI - 弱点分野を自動検出して改善をサポート
- * 
+ *
  * このモジュールは以下の機能を提供します：
  * 1. レーダーチャートから弱点分野を自動検出
  * 2. 弱点分野の問題を優先的に出題
@@ -59,30 +59,30 @@ export interface Milestone {
 /**
  * レーダーチャートを分析して弱点を検出
  */
-export function analyzeRadarChart(
-  allQuestions: Question[],
-  categoryList: string[]
-): RadarAnalysis {
+export function analyzeRadarChart(allQuestions: Question[], categoryList: string[]): RadarAnalysis {
   const progress = loadProgressSync();
-  const categoryStats = new Map<string, {
-    correct: number;
-    total: number;
-    mastered: number;
-    wordCount: number;
-  }>();
+  const categoryStats = new Map<
+    string,
+    {
+      correct: number;
+      total: number;
+      mastered: number;
+      wordCount: number;
+    }
+  >();
 
   // 分野別の統計を集計
-  categoryList.forEach(category => {
+  categoryList.forEach((category) => {
     categoryStats.set(category, {
       correct: 0,
       total: 0,
       mastered: 0,
-      wordCount: 0
+      wordCount: 0,
     });
   });
 
   // 結果から統計を計算
-  progress.results.forEach(result => {
+  progress.results.forEach((result) => {
     if (result.category && categoryStats.has(result.category)) {
       const stats = categoryStats.get(result.category)!;
       stats.correct += result.score;
@@ -91,26 +91,26 @@ export function analyzeRadarChart(
   });
 
   // 単語進捗から定着数とカテゴリー単語数を計算
-  allQuestions.forEach(q => {
+  allQuestions.forEach((q) => {
     const category = q.category;
     if (!category || !categoryStats.has(category)) return;
-    
+
     const stats = categoryStats.get(category)!;
     stats.wordCount++;
-    
+
     const wordProgress = progress.wordProgress[q.word];
     if (wordProgress) {
       const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
-      const isDefinitelyMastered = 
+      const isDefinitelyMastered =
         (totalAttempts === 1 && wordProgress.correctCount === 1) ||
         wordProgress.consecutiveCorrect >= 3 ||
         (wordProgress.skippedCount && wordProgress.skippedCount > 0);
-      
-      const isLikelyMastered = 
-        totalAttempts >= 3 && 
-        (wordProgress.correctCount / totalAttempts) >= 0.8 && 
+
+      const isLikelyMastered =
+        totalAttempts >= 3 &&
+        wordProgress.correctCount / totalAttempts >= 0.8 &&
         wordProgress.consecutiveCorrect >= 2;
-      
+
       if (isDefinitelyMastered || isLikelyMastered) {
         stats.mastered++;
       }
@@ -123,10 +123,10 @@ export function analyzeRadarChart(
 
   categoryStats.forEach((stats, category) => {
     if (stats.total === 0 && stats.wordCount === 0) return; // データなし
-    
+
     const accuracy = stats.total > 0 ? (stats.correct / stats.total) * 100 : 0;
     const masteryRate = stats.wordCount > 0 ? (stats.mastered / stats.wordCount) * 100 : 0;
-    
+
     // 総合スコア（正答率60% + 定着率40%）
     const overallScore = accuracy * 0.6 + masteryRate * 0.4;
 
@@ -163,7 +163,7 @@ export function analyzeRadarChart(
         totalWords: stats.wordCount,
         weaknessLevel,
         priorityScore,
-        estimatedImprovementDays: estimatedDays
+        estimatedImprovementDays: estimatedDays,
       });
     } else if (overallScore >= 75) {
       // 強み分野
@@ -182,7 +182,7 @@ export function analyzeRadarChart(
         totalAttempts: stats.total,
         masteredWords: stats.mastered,
         totalWords: stats.wordCount,
-        strengthLevel
+        strengthLevel,
       });
     }
   });
@@ -198,14 +198,18 @@ export function analyzeRadarChart(
   const improvementPlan = generateImprovementPlan(weakCategories);
 
   // AI推奨事項を生成
-  const aiRecommendations = generateAIRecommendations(weakCategories, strongCategories, balanceScore);
+  const aiRecommendations = generateAIRecommendations(
+    weakCategories,
+    strongCategories,
+    balanceScore
+  );
 
   return {
     weakCategories,
     strongCategories,
     balanceScore,
     improvementPlan,
-    aiRecommendations
+    aiRecommendations,
   };
 }
 
@@ -213,11 +217,14 @@ export function analyzeRadarChart(
  * バランススコアを計算（全分野の均等度）
  */
 function calculateBalanceScore(
-  categoryStats: Map<string, { correct: number; total: number; mastered: number; wordCount: number }>
+  categoryStats: Map<
+    string,
+    { correct: number; total: number; mastered: number; wordCount: number }
+  >
 ): number {
   const accuracies: number[] = [];
-  
-  categoryStats.forEach(stats => {
+
+  categoryStats.forEach((stats) => {
     if (stats.total > 0) {
       const accuracy = (stats.correct / stats.total) * 100;
       accuracies.push(accuracy);
@@ -228,7 +235,8 @@ function calculateBalanceScore(
 
   // 標準偏差を計算（低いほどバランスが良い）
   const mean = accuracies.reduce((sum, val) => sum + val, 0) / accuracies.length;
-  const variance = accuracies.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / accuracies.length;
+  const variance =
+    accuracies.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / accuracies.length;
   const stdDev = Math.sqrt(variance);
 
   // 標準偏差を0-100のスコアに変換（低いほど高スコア）
@@ -240,19 +248,17 @@ function calculateBalanceScore(
 /**
  * 改善プランを生成
  */
-function generateImprovementPlan(
-  weakCategories: CategoryWeakness[]
-): ImprovementPlan {
+function generateImprovementPlan(weakCategories: CategoryWeakness[]): ImprovementPlan {
   const targetCategories: string[] = [];
   const dailyQuestions: { [category: string]: number } = {};
   const milestones: Milestone[] = [];
 
   // 上位3つの弱点分野を重点的に学習
   const topWeak = weakCategories.slice(0, 3);
-  
+
   topWeak.forEach((weak) => {
     targetCategories.push(weak.category);
-    
+
     // 弱点レベルに応じて問題数を決定
     let questionsPerDay: number;
     if (weak.weaknessLevel === 'critical') {
@@ -262,7 +268,7 @@ function generateImprovementPlan(
     } else {
       questionsPerDay = 5;
     }
-    
+
     dailyQuestions[weak.category] = questionsPerDay;
 
     // マイルストーンを設定
@@ -270,21 +276,20 @@ function generateImprovementPlan(
       day: Math.ceil(weak.estimatedImprovementDays / 2),
       category: weak.category,
       targetAccuracy: Math.min(weak.accuracy + 20, 80),
-      description: `${weak.category}の正答率を${Math.round(weak.accuracy)}%から${Math.min(weak.accuracy + 20, 80)}%に改善`
+      description: `${weak.category}の正答率を${Math.round(weak.accuracy)}%から${Math.min(weak.accuracy + 20, 80)}%に改善`,
     };
     milestones.push(milestone);
   });
 
   // 完了までの推定日数
-  const estimatedCompletionDays = topWeak.length > 0 
-    ? Math.max(...topWeak.map(w => w.estimatedImprovementDays))
-    : 0;
+  const estimatedCompletionDays =
+    topWeak.length > 0 ? Math.max(...topWeak.map((w) => w.estimatedImprovementDays)) : 0;
 
   return {
     targetCategories,
     dailyQuestions,
     estimatedCompletionDays,
-    milestones
+    milestones,
   };
 }
 
@@ -340,17 +345,16 @@ function generateAIRecommendations(
 
   // 具体的な学習戦略
   if (weakCategories.length > 0) {
-    recommendations.push(
-      `🧠 AI学習システムが弱点分野の問題を自動的に優先出題します`
-    );
+    recommendations.push(`🧠 AI学習システムが弱点分野の問題を自動的に優先出題します`);
   }
 
   // データが少ない場合
-  const totalAttempts = [...weakCategories, ...strongCategories].reduce((sum, cat) => sum + cat.totalAttempts, 0);
+  const totalAttempts = [...weakCategories, ...strongCategories].reduce(
+    (sum, cat) => sum + cat.totalAttempts,
+    0
+  );
   if (totalAttempts < 50) {
-    recommendations.push(
-      `📈 まだ学習データが少ないです。50問以上解くとより正確な分析ができます`
-    );
+    recommendations.push(`📈 まだ学習データが少ないです。50問以上解くとより正確な分析ができます`);
   }
 
   return recommendations;
@@ -374,20 +378,20 @@ export function prioritizeWeakCategoryQuestions(
 
   // 弱点分野ごとの出題数を計算（優先度に応じて配分）
   const totalPriority = weakCategories.slice(0, 3).reduce((sum, cat) => sum + cat.priorityScore, 0);
-  
-  weakCategories.slice(0, 3).forEach(weak => {
+
+  weakCategories.slice(0, 3).forEach((weak) => {
     const quota = Math.ceil((weak.priorityScore / totalPriority) * targetCount * 0.7); // 70%を弱点分野に
     categoryQuotas.set(weak.category, quota);
   });
 
   // 弱点分野から問題を選択
-  weakCategories.slice(0, 3).forEach(weak => {
+  weakCategories.slice(0, 3).forEach((weak) => {
     const quota = categoryQuotas.get(weak.category) || 0;
-    const categoryQuestions = questions.filter(q => q.category === weak.category);
-    
+    const categoryQuestions = questions.filter((q) => q.category === weak.category);
+
     // ランダムに選択（既に定着している単語は除外）
     const progress = loadProgressSync();
-    const unmastered = categoryQuestions.filter(q => {
+    const unmastered = categoryQuestions.filter((q) => {
       const wp = progress.wordProgress[q.word];
       if (!wp) return true; // 未学習
       return wp.consecutiveCorrect < 3; // 定着していない
@@ -399,12 +403,12 @@ export function prioritizeWeakCategoryQuestions(
 
   // 残りは他の分野からバランスよく選択
   const remainingCount = targetCount - prioritized.length;
-  const weakCategorySet = new Set(weakCategories.slice(0, 3).map(w => w.category));
-  const otherQuestions = questions.filter(q => !weakCategorySet.has(q.category || ''));
-  
-  const selectedWords = new Set(prioritized.map(q => q.word));
-  const remaining = otherQuestions.filter(q => !selectedWords.has(q.word));
-  
+  const weakCategorySet = new Set(weakCategories.slice(0, 3).map((w) => w.category));
+  const otherQuestions = questions.filter((q) => !weakCategorySet.has(q.category || ''));
+
+  const selectedWords = new Set(prioritized.map((q) => q.word));
+  const remaining = otherQuestions.filter((q) => !selectedWords.has(q.word));
+
   prioritized.push(...shuffleArray(remaining).slice(0, remainingCount));
 
   return shuffleArray(prioritized);
@@ -448,10 +452,10 @@ export function saveImprovementProgress(analysis: RadarAnalysis): void {
     currentAccuracies: {},
     improvements: {},
     overallProgress: 0,
-    isCompleted: false
+    isCompleted: false,
   };
 
-  analysis.weakCategories.forEach(weak => {
+  analysis.weakCategories.forEach((weak) => {
     if (analysis.improvementPlan.targetCategories.includes(weak.category)) {
       progress.initialAccuracies[weak.category] = weak.accuracy;
       progress.currentAccuracies[weak.category] = weak.accuracy;
@@ -468,7 +472,7 @@ export function saveImprovementProgress(analysis: RadarAnalysis): void {
 export function getImprovementProgress(): RadarImprovementProgress | null {
   const stored = localStorage.getItem('radar-improvement-progress');
   if (!stored) return null;
-  
+
   try {
     return JSON.parse(stored) as RadarImprovementProgress;
   } catch {
@@ -489,16 +493,16 @@ export function updateImprovementProgress(currentAnalysis: RadarAnalysis): void 
   let totalImprovement = 0;
   let completedCount = 0;
 
-  progress.targetCategories.forEach(category => {
-    const weak = currentAnalysis.weakCategories.find(w => w.category === category);
+  progress.targetCategories.forEach((category) => {
+    const weak = currentAnalysis.weakCategories.find((w) => w.category === category);
     const current = weak?.accuracy || 80; // 弱点リストから外れていれば80%と仮定
-    
+
     progress.currentAccuracies[category] = current;
     const improvement = current - progress.initialAccuracies[category];
     progress.improvements[category] = improvement;
-    
+
     totalImprovement += improvement;
-    
+
     // 目標達成（80%以上）
     if (current >= 80) {
       completedCount++;

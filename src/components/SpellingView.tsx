@@ -1,12 +1,30 @@
 import { useState, useEffect, useRef } from 'react';
 import { Question, SpellingState } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
-import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
+import {
+  DifficultyLevel,
+  WordPhraseFilter,
+  PhraseTypeFilter,
+  OFFICIAL_CATEGORIES,
+  DataSource,
+} from '../App';
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
 import AddToCustomButton from './AddToCustomButton';
-import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
-import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
+import {
+  addQuizResult,
+  updateWordProgress,
+  recordWordSkip,
+  loadProgress,
+  addSessionHistory,
+  getStudySettings,
+  updateStudySettings,
+} from '../progressStorage';
+import {
+  addToSkipGroup,
+  handleSkippedWordIncorrect,
+  handleSkippedWordCorrect,
+} from '../learningAssistant';
 import { generateId } from '../utils';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '@/utils/logger';
@@ -36,8 +54,8 @@ interface SpellingViewProps {
   onOpenCustomSetManagement?: () => void;
 }
 
-function SpellingView({ 
-  questions, 
+function SpellingView({
+  questions,
   _categoryList,
   selectedCategory,
   onCategoryChange,
@@ -76,29 +94,30 @@ function SpellingView({
 
   // セッション統計（カスタムフック）
   const { sessionStats, resetStats, updateStats } = useSessionStats();
-  
+
   const [showSettings, setShowSettings] = useState<boolean>(false);
-  
+
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
-  
+
   // 学習中・要復習の上限設定（カスタムフック使用）
-  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } = useLearningLimits('spelling');
-  
+  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
+    useLearningLimits('spelling');
+
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
     const saved = localStorage.getItem('autoNext');
     return saved === 'true';
   });
-  
+
   const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
     const saved = localStorage.getItem('autoNextDelay');
     return saved ? parseInt(saved, 10) : 1500;
   });
-  
+
   // letter-cardsのrefを追加
   const letterCardsRef = useRef<HTMLDivElement>(null);
-  
+
   // 進捗追跡用
   const quizStartTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0); // 各問題の開始時刻
@@ -110,7 +129,7 @@ function SpellingView({
       // クイズ開始時刻を記録
       quizStartTimeRef.current = Date.now();
       incorrectWordsRef.current = [];
-      
+
       // セッション統計をリセット
       resetStats();
     }
@@ -129,7 +148,7 @@ function SpellingView({
   // カードをタップして選択（カスタムフックのロジックを使用）
   const handleLetterClick = (_letter: string, index: number) => {
     const result = handleLetterClickCore(index);
-    
+
     // 全てのカードが選択されたら自動で答え合わせ
     if (result && result.length === shuffledLetters.length) {
       setTimeout(() => handleCheckAnswer(result), 300);
@@ -139,14 +158,14 @@ function SpellingView({
   // 答え合わせ処理（カスタムフックのcheckAnswerを使用）
   const handleCheckAnswer = async (sequence: string[]) => {
     const result = checkAnswer(sequence);
-    
+
     if (!result) return;
-    
+
     // 部分的に正解で、まだ続きがある場合は次の単語へ
     if (result.isPartialCorrect && !result.isComplete) {
       return; // useSpellingGameが次の単語を自動セットアップ
     }
-    
+
     // 完了した場合は進捗処理
     if (result.isComplete) {
       await processAnswer(result.userWord, result.isCorrect || false, result.responseTime);
@@ -159,18 +178,26 @@ function SpellingView({
 
     // 単語進捗を更新
     if (currentQuestion) {
-      await updateWordProgress(currentQuestion.word, isCorrect, responseTime, undefined, 'spelling');
-      
+      await updateWordProgress(
+        currentQuestion.word,
+        isCorrect,
+        responseTime,
+        undefined,
+        'spelling'
+      );
+
       // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの完了後に更新
       setLastAnswerTime(Date.now());
-      
+
       // AI学習アシスタント: スキップした単語の検証
       const progress = await loadProgress();
       const wordProgress = progress.wordProgress?.[currentQuestion.word];
-      
+
       // セッション履歴に追加
-      let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect ? 'correct' : 'incorrect';
-      
+      let status: 'correct' | 'incorrect' | 'review' | 'mastered' = isCorrect
+        ? 'correct'
+        : 'incorrect';
+
       // 定着判定
       if (wordProgress && wordProgress.masteryLevel === 'mastered') {
         status = 'mastered';
@@ -178,16 +205,19 @@ function SpellingView({
         // 2回以上間違えた場合は要復習
         status = 'review';
       }
-      
+
       // セッション統計を更新（カスタムフック使用）
       updateStats(status);
-      
-      addSessionHistory({
-        status,
-        word: currentQuestion.word,
-        timestamp: Date.now()
-      }, 'spelling');
-      
+
+      addSessionHistory(
+        {
+          status,
+          word: currentQuestion.word,
+          timestamp: Date.now(),
+        },
+        'spelling'
+      );
+
       if (wordProgress && wordProgress.skippedCount && wordProgress.skippedCount > 0) {
         if (isCorrect) {
           handleSkippedWordCorrect(currentQuestion.word);
@@ -236,16 +266,16 @@ function SpellingView({
 
     // スキップ処理（30日間除外、AI学習アシスタントが後日検証）
     recordWordSkip(currentQuestion.word, 30);
-    
+
     // AI学習アシスタント: スキップグループに追加
     addToSkipGroup(currentQuestion.word);
-    
+
     // 単語進捗を更新（正解として記録）
     await updateWordProgress(currentQuestion.word, true, responseTime, undefined, 'spelling');
-    
+
     // 回答時刻を更新（ScoreBoard更新用）- updateWordProgressの完了後に更新
     setLastAnswerTime(Date.now());
-    
+
     // スコアに反映（正解扱い）
     // 選択シーケンスをクリアして、正解を表示できるようにする
     setSelectedSequence([]);
@@ -258,13 +288,16 @@ function SpellingView({
 
     // セッション統計を更新（正解扱い）
     updateStats('correct');
-    
+
     // セッション履歴に記録（正解として）
-    addSessionHistory({
-      status: 'correct',
-      word: currentQuestion.word,
-      timestamp: Date.now()
-    }, 'spelling');
+    addSessionHistory(
+      {
+        status: 'correct',
+        word: currentQuestion.word,
+        timestamp: Date.now(),
+      },
+      'spelling'
+    );
 
     // スコアボードのために回答を記録（正解として）
     addQuizResult({
@@ -303,17 +336,19 @@ function SpellingView({
 
   const hasQuestions = spellingState.questions.length > 0;
   const currentQuestion = hasQuestions ? spellingState.questions[spellingState.currentIndex] : null;
-  
+
   // ユーザーが選択した単語
   const userWord = selectedSequence.map((idx) => shuffledLetters[parseInt(idx)]).join('');
 
   // カスタムセット用のCustomWordオブジェクトを生成
-  const customWord: CustomWord | null = currentQuestion ? {
-    word: currentQuestion.word,
-    meaning: currentQuestion.meaning,
-    katakana: currentQuestion.reading,
-    source: 'spelling' as const,
-  } : null;
+  const customWord: CustomWord | null = currentQuestion
+    ? {
+        word: currentQuestion.word,
+        meaning: currentQuestion.meaning,
+        katakana: currentQuestion.reading,
+        source: 'spelling' as const,
+      }
+    : null;
 
   // 学習プランの状態をチェック
   const learningPlan = localStorage.getItem('learning-schedule-90days');
@@ -346,17 +381,18 @@ function SpellingView({
             <div className="plan-progress-info">
               <div className="plan-progress-title">学習プラン進行中</div>
               <div className="plan-progress-detail">
-                {planStatus.currentDay}日目 / {planStatus.totalDays}日 (Phase {planStatus.phase}) - {planStatus.progressPercent}%完了
+                {planStatus.currentDay}日目 / {planStatus.totalDays}日 (Phase {planStatus.phase}) -{' '}
+                {planStatus.progressPercent}%完了
               </div>
             </div>
           </div>
         </div>
       )}
-      
+
       {!hasQuestions && (
         <div className="quiz-controls">
-          <button 
-            onClick={onStartQuiz} 
+          <button
+            onClick={onStartQuiz}
             className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-xl dark:bg-primary dark:hover:bg-primary-hover"
           >
             🎯 クイズ開始
@@ -383,7 +419,13 @@ function SpellingView({
             onShowSettings={() => setShowSettings(true)}
             currentWord={spellingState.questions[spellingState.currentIndex]?.word}
             onAnswerTime={lastAnswerTime}
-            dataSource={selectedDataSource === 'all' ? '全問題集' : selectedDataSource === 'junior' ? '高校受験' : '高校受験標準'}
+            dataSource={
+              selectedDataSource === 'all'
+                ? '全問題集'
+                : selectedDataSource === 'junior'
+                  ? '高校受験'
+                  : '高校受験標準'
+            }
             category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
             difficulty={selectedDifficulty}
             wordPhraseFilter={selectedWordPhraseFilter}
@@ -394,14 +436,14 @@ function SpellingView({
             <div className="study-settings-panel">
               <div className="settings-header">
                 <h3>📊 学習設定</h3>
-                <button 
-                  onClick={() => setShowSettings(false)} 
+                <button
+                  onClick={() => setShowSettings(false)}
                   className="px-4 py-2 bg-gray-100 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-200 hover:border-gray-400 transition-all duration-200 text-sm shadow-sm dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:border-gray-500"
                 >
                   ✕ 閉じる
                 </button>
               </div>
-              
+
               <div className="filter-group">
                 <label htmlFor="category-select-spelling">📚 関連分野:</label>
                 <select
@@ -502,8 +544,8 @@ function SpellingView({
             <div className="question-card">
               {/* 意味表示とナビゲーションボタンの行 */}
               <div className="question-nav-row meaning-row">
-                <button 
-                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
+                <button
+                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed"
                   onClick={handlePrevious}
                   disabled={spellingState.currentIndex === 0}
                   title="前へ"
@@ -513,33 +555,38 @@ function SpellingView({
                 <div className="meaning-display">
                   <div className="meaning-line">
                     <span className="text-xl text-gray-600 dark:text-gray-300">意味:</span>
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white ml-2">{currentQuestion.meaning}</span>
+                    <span className="text-4xl font-bold text-gray-900 dark:text-white ml-2">
+                      {currentQuestion.meaning}
+                    </span>
                   </div>
-                  
+
                   {/* カスタムセットに追加ボタン */}
-                  {customWord && 
-                   onAddWordToCustomSet && 
-                   onRemoveWordFromCustomSet && 
-                   onOpenCustomSetManagement && 
-                   customQuestionSets && (
-                    <div className="mt-3 flex justify-center">
-                      <AddToCustomButton
-                        word={customWord}
-                        sets={customQuestionSets}
-                        onAddWord={onAddWordToCustomSet}
-                        onRemoveWord={onRemoveWordFromCustomSet}
-                        onOpenManagement={onOpenCustomSetManagement}
-                        size="medium"
-                        variant="both"
-                      />
-                    </div>
-                  )}
-                  
+                  {customWord &&
+                    onAddWordToCustomSet &&
+                    onRemoveWordFromCustomSet &&
+                    onOpenCustomSetManagement &&
+                    customQuestionSets && (
+                      <div className="mt-3 flex justify-center">
+                        <AddToCustomButton
+                          word={customWord}
+                          sets={customQuestionSets}
+                          onAddWord={onAddWordToCustomSet}
+                          onRemoveWord={onRemoveWordFromCustomSet}
+                          onOpenManagement={onOpenCustomSetManagement}
+                          size="medium"
+                          variant="both"
+                        />
+                      </div>
+                    )}
+
                   <div className="meaning-meta">
                     {currentQuestion.difficulty && (
                       <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
-                        {currentQuestion.difficulty === 'beginner' ? '初級' : 
-                         currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
+                        {currentQuestion.difficulty === 'beginner'
+                          ? '初級'
+                          : currentQuestion.difficulty === 'intermediate'
+                            ? '中級'
+                            : '上級'}
                       </div>
                     )}
                     {currentQuestion.word.includes(' ') && (
@@ -547,15 +594,16 @@ function SpellingView({
                         💡 熟語({phraseWords.length}語): 単語ごとに入力してください
                         {completedWords.length > 0 && (
                           <span className="phrase-progress">
-                            {' '}(完成: {completedWords.join(' ')})
+                            {' '}
+                            (完成: {completedWords.join(' ')})
                           </span>
                         )}
                       </div>
                     )}
                   </div>
                 </div>
-                <button 
-                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
+                <button
+                  className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed"
                   onClick={handleNext}
                   disabled={spellingState.currentIndex >= spellingState.questions.length - 1}
                   title="次へ"
@@ -583,7 +631,7 @@ function SpellingView({
               </div>
 
               {/* シャッフルされたアルファベットカード（常に表示） */}
-              <div 
+              <div
                 className="letter-cards"
                 ref={letterCardsRef}
                 tabIndex={0}
@@ -594,8 +642,8 @@ function SpellingView({
                     if (key.length === 1 && key >= 'a' && key <= 'z') {
                       e.preventDefault();
                       // 該当する未選択のカードを探す
-                      const availableIndex = shuffledLetters.findIndex((letter, idx) => 
-                        letter === key && !selectedSequence.includes(`${idx}`)
+                      const availableIndex = shuffledLetters.findIndex(
+                        (letter, idx) => letter === key && !selectedSequence.includes(`${idx}`)
                       );
                       if (availableIndex !== -1) {
                         handleLetterClick(key, availableIndex);
@@ -606,8 +654,8 @@ function SpellingView({
                     } else if (e.key === ' ') {
                       // スペースキー: 分からない（スキップ）
                       e.preventDefault();
-                        // スキップのみ実行、次へは自動遷移しない
-                        handleSkip();
+                      // スキップのみ実行、次へは自動遷移しない
+                      handleSkip();
                     } else if (e.key === 'Enter') {
                       // Enterキー: スキップ（正解扱い・定着済）
                       e.preventDefault();
@@ -623,11 +671,13 @@ function SpellingView({
                 {shuffledLetters.map((letter, index) => {
                   const isSelected = selectedSequence.includes(`${index}`);
                   const selectionOrder = selectedSequence.indexOf(`${index}`) + 1;
-                  
+
                   // 回答後の正解・不正解クラスを追加
                   let answerClass = '';
                   if (spellingState.answered && isSelected) {
-                    const userWord = selectedSequence.map(i => shuffledLetters[parseInt(i)]).join('');
+                    const userWord = selectedSequence
+                      .map((i) => shuffledLetters[parseInt(i)])
+                      .join('');
                     const isCorrect = userWord === spellingState.correctWord;
                     answerClass = isCorrect ? 'correct' : 'incorrect';
                   }
@@ -656,7 +706,7 @@ function SpellingView({
                     </button>
                   )}
                   <button className="btn-skip-word" onClick={handleSkip}>
-                      ⏭️ 分からない (スペースキー)
+                    ⏭️ 分からない (スペースキー)
                   </button>
                 </div>
               )}
@@ -664,13 +714,12 @@ function SpellingView({
               {spellingState.answered && (
                 <div className="result-display">
                   <div className="correct-answer">
-                    {userWord === spellingState.correctWord 
-                      ? '✅ 正解: ' 
-                      : userWord === '' 
+                    {userWord === spellingState.correctWord
+                      ? '✅ 正解: '
+                      : userWord === ''
                         ? '⏭️ スキップ - 正解: '
-                        : '❌ 不正解 - 正解: '
-                    }
-                    <strong 
+                        : '❌ 不正解 - 正解: '}
+                    <strong
                       className={isSpeechSynthesisSupported() ? 'clickable-word' : ''}
                       onClick={(e) => {
                         e.stopPropagation();
@@ -681,21 +730,24 @@ function SpellingView({
                       title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : undefined}
                     >
                       {currentQuestion?.word || spellingState.correctWord}
-                      {isSpeechSynthesisSupported() && (
-                        <span className="speaker-icon">🔊</span>
-                      )}
+                      {isSpeechSynthesisSupported() && <span className="speaker-icon">🔊</span>}
                       {currentQuestion?.reading && (
-                        <span className="pronunciation-hint">
-                          ({currentQuestion.reading})
-                        </span>
+                        <span className="pronunciation-hint">({currentQuestion.reading})</span>
                       )}
                     </strong>
                   </div>
-                  
+
                   {/* 詳細情報の表示（常に表示） */}
                   <div className="question-details-spelling">
                     {currentQuestion.reading && (
-                      <div className="detail-row clickable-row" onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">
+                      <div
+                        className="detail-row clickable-row"
+                        onClick={() =>
+                          isSpeechSynthesisSupported() &&
+                          speakEnglish(currentQuestion.word, { rate: 0.85 })
+                        }
+                        title="タップして発音 🔊"
+                      >
                         <span className="detail-label">読み:</span>
                         <span className="detail-content">{currentQuestion.reading}</span>
                       </div>
@@ -723,11 +775,21 @@ function SpellingView({
                       </div>
                     )}
                     {currentQuestion.difficulty && (
-                      <div className="detail-row clickable-row" onClick={() => isSpeechSynthesisSupported() && speakEnglish(currentQuestion.word, { rate: 0.85 })} title="タップして発音 🔊">
+                      <div
+                        className="detail-row clickable-row"
+                        onClick={() =>
+                          isSpeechSynthesisSupported() &&
+                          speakEnglish(currentQuestion.word, { rate: 0.85 })
+                        }
+                        title="タップして発音 🔊"
+                      >
                         <span className="detail-label">難易度:</span>
                         <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
-                          {currentQuestion.difficulty === 'beginner' ? '初級' : 
-                           currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
+                          {currentQuestion.difficulty === 'beginner'
+                            ? '初級'
+                            : currentQuestion.difficulty === 'intermediate'
+                              ? '中級'
+                              : '上級'}
                         </div>
                       </div>
                     )}

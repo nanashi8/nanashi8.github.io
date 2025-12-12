@@ -24,7 +24,7 @@ export function analyzeLearningPattern(): LearningPattern {
       strongCategories: [],
       weakCategories: [],
       recentImprovement: false,
-      consistencyScore: 0
+      consistencyScore: 0,
     };
   }
 
@@ -32,12 +32,14 @@ export function analyzeLearningPattern(): LearningPattern {
     const data = JSON.parse(progressData);
     const results = data.results || [];
     const recentResults = results.slice(-10); // 最新10セッション
-    
+
     // 平均正答率
-    const avgAccuracy = recentResults.length > 0
-      ? recentResults.reduce((sum: number, r: any) => sum + (r.score / r.total * 100), 0) / recentResults.length
-      : 0;
-    
+    const avgAccuracy =
+      recentResults.length > 0
+        ? recentResults.reduce((sum: number, r: any) => sum + (r.score / r.total) * 100, 0) /
+          recentResults.length
+        : 0;
+
     // カテゴリー別分析
     const categoryStats = new Map<string, { correct: number; total: number }>();
     results.forEach((r: any) => {
@@ -48,7 +50,7 @@ export function analyzeLearningPattern(): LearningPattern {
         categoryStats.set(r.category, stats);
       }
     });
-    
+
     const strongCategories: string[] = [];
     const weakCategories: string[] = [];
     categoryStats.forEach((stats, category) => {
@@ -56,29 +58,31 @@ export function analyzeLearningPattern(): LearningPattern {
       if (accuracy >= 80) strongCategories.push(category);
       if (accuracy < 60) weakCategories.push(category);
     });
-    
+
     // 最近の改善傾向
     const older = recentResults.slice(0, 5);
     const newer = recentResults.slice(-5);
-    const olderAvg = older.length > 0
-      ? older.reduce((sum: number, r: any) => sum + (r.score / r.total * 100), 0) / older.length
-      : 0;
-    const newerAvg = newer.length > 0
-      ? newer.reduce((sum: number, r: any) => sum + (r.score / r.total * 100), 0) / newer.length
-      : 0;
+    const olderAvg =
+      older.length > 0
+        ? older.reduce((sum: number, r: any) => sum + (r.score / r.total) * 100, 0) / older.length
+        : 0;
+    const newerAvg =
+      newer.length > 0
+        ? newer.reduce((sum: number, r: any) => sum + (r.score / r.total) * 100, 0) / newer.length
+        : 0;
     const recentImprovement = newerAvg > olderAvg + 5; // 5%以上の改善
-    
+
     // 一貫性スコア（過去の学習日数の連続性）
     const uniqueDates = new Set(results.map((r: any) => new Date(r.date).toDateString()));
     const consistencyScore = Math.min(100, uniqueDates.size * 5); // 最大20日で100
-    
+
     return {
       totalSessions: results.length,
       averageAccuracy: avgAccuracy,
       strongCategories,
       weakCategories,
       recentImprovement,
-      consistencyScore
+      consistencyScore,
     };
   } catch {
     return {
@@ -87,7 +91,7 @@ export function analyzeLearningPattern(): LearningPattern {
       strongCategories: [],
       weakCategories: [],
       recentImprovement: false,
-      consistencyScore: 0
+      consistencyScore: 0,
     };
   }
 }

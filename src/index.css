@@ -30,7 +30,9 @@ body {
   overscroll-behavior: none;
   /* iOS Safari: 300ms タップ遅延を完全に削除 */
   touch-action: manipulation;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 #root {

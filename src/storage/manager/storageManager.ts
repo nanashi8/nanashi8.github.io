@@ -4,7 +4,7 @@ import {
   isIndexedDBSupported,
   getFromDB,
   putToDB,
-  STORES
+  STORES,
 } from '@/storage/indexedDB/indexedDBStorage';
 import { isMigrationCompleted } from '@/storage/migration/dataMigration';
 import { logger } from '@/utils/logger';
@@ -48,7 +48,7 @@ export async function loadProgressData(): Promise<any | null> {
       // IndexedDBから読み込み
       const data = await getFromDB(STORES.PROGRESS, 'main');
       if (data) return data;
-      
+
       // IndexedDBにない場合はLocalStorageから読み込み（移行前のデータ）
       const fallbackData = localStorage.getItem('progress-data');
       return fallbackData ? JSON.parse(fallbackData) : null;
@@ -90,7 +90,7 @@ export async function loadSetting(key: string): Promise<any | null> {
     if (useIndexedDB) {
       const data = await getFromDB(STORES.SETTINGS, key);
       if (data !== null) return data;
-      
+
       // IndexedDBにない場合はLocalStorageから読み込み
       const fallbackData = localStorage.getItem(key);
       return fallbackData || null;
@@ -128,7 +128,7 @@ export function loadFromLocalStorage(key: string): any | null {
 // ストレージ使用状況の取得
 export function getStorageUsage(): { localStorage: number; indexedDB: boolean } {
   let localStorageSize = 0;
-  
+
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
@@ -145,6 +145,6 @@ export function getStorageUsage(): { localStorage: number; indexedDB: boolean } 
 
   return {
     localStorage: localStorageSize,
-    indexedDB: useIndexedDB
+    indexedDB: useIndexedDB,
   };
 }

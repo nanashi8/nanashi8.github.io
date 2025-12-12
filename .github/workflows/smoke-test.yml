@@ -29,11 +29,23 @@ jobs:
       - name: 依存関係インストール
         run: npm ci
       
-      # 4. Playwrightブラウザをインストール
+      # 4. ユニットテスト（カバレッジ付き）
+      - name: ユニットテスト実行
+        run: npm run test:unit:coverage
+      
+      # 4.5. カバレッジレポート保存
+      - name: カバレッジレポートアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 30
+      
+      # 5. Playwrightブラウザをインストール
       - name: Playwrightブラウザインストール
         run: npx playwright install --with-deps chromium
       
-      # 5. 煙テスト実行
+      # 6. 煙テスト実行
       - name: 煙テスト実行
         run: npm run test:smoke
       

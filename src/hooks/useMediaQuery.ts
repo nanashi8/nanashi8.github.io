@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 /**
  * メディアクエリをReactフックで扱う
  * 指定されたブレークポイント以下がモバイルと判定される
- * 
+ *
  * @param breakpoint - ブレークポイント（ピクセル）。デフォルト: 768px
  * @returns { isMobile: boolean, isTablet: boolean, isDesktop: boolean }
- * 
+ *
  * @example
  * const { isMobile, isTablet, isDesktop } = useMediaQuery();
- * 
+ *
  * if (isMobile) {
  *   // モバイル: 320px～767px
  * } else if (isTablet) {
@@ -54,7 +54,7 @@ export const useMediaQuery = (breakpoint: number = 768) => {
 /**
  * 指定されたブレークポイント以下がモバイルか判定
  * useMediaQuery()よりシンプル
- * 
+ *
  * @param breakpoint - ブレークポイント（ピクセル）。デフォルト: 768px
  * @returns boolean
  */
@@ -78,14 +78,17 @@ export const useIsMobile = (breakpoint: number = 768): boolean => {
 
 /**
  * デバイスサイズを取得（より詳細な制御が必要な場合）
- * 
+ *
  * @returns { width: number, height: number, orientation: 'portrait' | 'landscape' }
  */
 export const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
     width: typeof window !== 'undefined' ? window.innerWidth : 0,
     height: typeof window !== 'undefined' ? window.innerHeight : 0,
-    orientation: (typeof window !== 'undefined' && window.innerWidth < window.innerHeight) ? 'portrait' as const : 'landscape' as const,
+    orientation:
+      typeof window !== 'undefined' && window.innerWidth < window.innerHeight
+        ? ('portrait' as const)
+        : ('landscape' as const),
   });
 
   useEffect(() => {

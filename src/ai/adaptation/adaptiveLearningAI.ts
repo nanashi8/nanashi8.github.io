@@ -1,6 +1,6 @@
 /**
  * 適応型学習AI - ユーザーの脳の記憶パターンを完全に把握するシステム
- * 
+ *
  * このモジュールは以下の機能を提供します：
  * 1. 記憶定着度の0-100%判定
  * 2. 最適な復習間隔の自動計算（間隔反復アルゴリズム）
@@ -89,47 +89,51 @@ export function calculateMemoryRetention(
       forgettingCurveParams: {
         initialStrength: 0,
         decayRate: 0.5, // デフォルト値
-        reinforcementCount: 0
+        reinforcementCount: 0,
       },
       nextReviewTime: currentTime,
       reviewInterval: 0,
-      reviewHistory: []
+      reviewHistory: [],
     };
   }
 
   // 学習履歴から忘却曲線のパラメータを推定
   const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
   const accuracy = totalAttempts > 0 ? wordProgress.correctCount / totalAttempts : 0;
-  
+
   // 最終学習からの経過時間（日数）
   const daysSinceLastStudy = (currentTime - wordProgress.lastStudied) / (1000 * 60 * 60 * 24);
-  
+
   // 初期記憶強度（正答率と連続正解から算出）
-  const initialStrength = Math.min(100, 
-    accuracy * 100 * 0.6 + 
-    wordProgress.consecutiveCorrect * 10
+  const initialStrength = Math.min(
+    100,
+    accuracy * 100 * 0.6 + wordProgress.consecutiveCorrect * 10
   );
-  
+
   // 個人の忘却率を推定（応答時間と誤答パターンから）
   const avgResponseTime = wordProgress.averageResponseTime || 3000;
   const responseTimeFactor = Math.min(1, avgResponseTime / 5000); // 遅いほど忘却率高い
   const errorRate = totalAttempts > 0 ? wordProgress.incorrectCount / totalAttempts : 0.5;
-  const decayRate = 0.3 + (errorRate * 0.4) + (responseTimeFactor * 0.3);
-  
+  const decayRate = 0.3 + errorRate * 0.4 + responseTimeFactor * 0.3;
+
   // 強化回数（復習の効果）
   const reinforcementCount = wordProgress.correctCount;
-  
+
   // エビングハウスの忘却曲線を個人化
   // R(t) = R0 * e^(-t * k / (1 + reinforcement))
   // R0: 初期強度, t: 経過日数, k: 忘却率, reinforcement: 強化回数
   const reinforcementFactor = 1 + Math.log1p(reinforcementCount);
-  const retentionScore = Math.max(0, Math.min(100,
-    initialStrength * Math.exp(-daysSinceLastStudy * decayRate / reinforcementFactor)
-  ));
-  
+  const retentionScore = Math.max(
+    0,
+    Math.min(
+      100,
+      initialStrength * Math.exp((-daysSinceLastStudy * decayRate) / reinforcementFactor)
+    )
+  );
+
   // 信頼度（データ量に基づく）
   const confidence = Math.min(1, totalAttempts / 10);
-  
+
   // 次回復習の最適タイミングを計算
   const { nextReviewTime, reviewInterval } = calculateOptimalReviewTime(
     retentionScore,
@@ -137,7 +141,7 @@ export function calculateMemoryRetention(
     decayRate,
     currentTime
   );
-  
+
   return {
     word,
     retentionScore: Math.round(retentionScore * 10) / 10,
@@ -146,11 +150,11 @@ export function calculateMemoryRetention(
     forgettingCurveParams: {
       initialStrength,
       decayRate,
-      reinforcementCount
+      reinforcementCount,
     },
     nextReviewTime,
     reviewInterval,
-    reviewHistory: buildReviewHistory(wordProgress)
+    reviewHistory: buildReviewHistory(wordProgress),
   };
 }
 
@@ -165,28 +169,28 @@ function calculateOptimalReviewTime(
   currentTime: number
 ): { nextReviewTime: number; reviewInterval: number } {
   const targetRetention = 70; // 目標定着度
-  
+
   if (currentRetention < targetRetention) {
     // すでに目標を下回っている → 即座に復習
     return {
       nextReviewTime: currentTime,
-      reviewInterval: 0
+      reviewInterval: 0,
     };
   }
-  
+
   // 目標定着度に達するまでの日数を計算
   // targetRetention = currentRetention * e^(-days * decayRate / reinforcementFactor)
   const reinforcementFactor = 1 + Math.log1p(reinforcementCount);
-  const daysUntilTarget = Math.log(currentRetention / targetRetention) * 
-    reinforcementFactor / decayRate;
-  
+  const daysUntilTarget =
+    (Math.log(currentRetention / targetRetention) * reinforcementFactor) / decayRate;
+
   // 最小1時間、最大30日
   const intervalDays = Math.max(0.04, Math.min(30, daysUntilTarget));
   const intervalMs = intervalDays * 24 * 60 * 60 * 1000;
-  
+
   return {
     nextReviewTime: currentTime + intervalMs,
-    reviewInterval: intervalMs
+    reviewInterval: intervalMs,
   };
 }
 
@@ -195,11 +199,11 @@ function calculateOptimalReviewTime(
  */
 function buildReviewHistory(wordProgress: WordProgress): ReviewEvent[] {
   const events: ReviewEvent[] = [];
-  
+
   // 簡易的な履歴構築（実際の詳細履歴がない場合）
   const totalAttempts = wordProgress.correctCount + wordProgress.incorrectCount;
   if (totalAttempts === 0) return events;
-  
+
   // 最後の学習イベントのみ記録
   const accuracy = wordProgress.correctCount / totalAttempts;
   events.push({
@@ -208,9 +212,9 @@ function buildReviewHistory(wordProgress: WordProgress): ReviewEvent[] {
     responseTime: wordProgress.averageResponseTime || 3000,
     confidence: accuracy > 0.8 ? 'high' : accuracy > 0.5 ? 'medium' : 'low',
     retentionScoreBefore: accuracy * 80,
-    retentionScoreAfter: accuracy * 100
+    retentionScoreAfter: accuracy * 100,
   });
-  
+
   return events;
 }
 
@@ -227,18 +231,14 @@ export function generateSpacedRepetitionSchedule(
 ): SpacedRepetitionSchedule[] {
   const schedule: SpacedRepetitionSchedule[] = [];
   const now = Date.now();
-  
+
   recentAnswers.forEach((answer) => {
-    const retention = calculateMemoryRetention(
-      answer.word,
-      wordProgressMap[answer.word],
-      now
-    );
-    
+    const retention = calculateMemoryRetention(answer.word, wordProgressMap[answer.word], now);
+
     let nextQuestionIndex: number;
     let priority: number;
     let reason: string;
-    
+
     if (!answer.wasCorrect) {
       // 誤答 → 2-3問後に再出題（短期記憶への刻印）
       nextQuestionIndex = currentQuestionIndex + 2 + Math.floor(Math.random() * 2);
@@ -268,21 +268,21 @@ export function generateSpacedRepetitionSchedule(
         reason = '弱い記憶の再強化';
       }
     }
-    
+
     // セッション内に収まるように調整
     if (nextQuestionIndex >= totalQuestionsInSession) {
       nextQuestionIndex = totalQuestionsInSession - 1;
     }
-    
+
     schedule.push({
       word: answer.word,
       priority,
       nextQuestionIndex,
       reason,
-      estimatedDifficulty: 1 - (retention.retentionScore / 100)
+      estimatedDifficulty: 1 - retention.retentionScore / 100,
     });
   });
-  
+
   return schedule;
 }
 
@@ -301,96 +301,98 @@ export function selectNextQuestions(
 ): Question[] {
   const now = Date.now();
   const selectedQuestions: Question[] = [];
-  
+
   // 1. 間隔反復スケジュールからの出題
   const dueForReview = spacedRepetitionSchedule
-    .filter(schedule => schedule.nextQuestionIndex === currentQuestionIndex)
+    .filter((schedule) => schedule.nextQuestionIndex === currentQuestionIndex)
     .sort((a, b) => b.priority - a.priority);
-  
-  dueForReview.forEach(schedule => {
-    const question = allQuestions.find(q => q.word === schedule.word);
+
+  dueForReview.forEach((schedule) => {
+    const question = allQuestions.find((q) => q.word === schedule.word);
     if (question && selectedQuestions.length < batchSize) {
       selectedQuestions.push(question);
     }
   });
-  
+
   // 2. 復習が必要な問題（次回復習時刻が過ぎている）
   if (selectedQuestions.length < batchSize) {
     const needsReview = allQuestions
-      .map(q => ({
+      .map((q) => ({
         question: q,
-        retention: calculateMemoryRetention(q.word, wordProgressMap[q.word], now)
+        retention: calculateMemoryRetention(q.word, wordProgressMap[q.word], now),
       }))
       .filter(({ retention }) => retention.nextReviewTime <= now)
       .sort((a, b) => a.retention.retentionScore - b.retention.retentionScore); // 定着度が低い順
-    
+
     needsReview.forEach(({ question }) => {
-      if (selectedQuestions.length < batchSize && 
-          !selectedQuestions.find(q => q.word === question.word)) {
+      if (
+        selectedQuestions.length < batchSize &&
+        !selectedQuestions.find((q) => q.word === question.word)
+      ) {
         selectedQuestions.push(question);
       }
     });
   }
-  
+
   // 3. 新規問題（まだ出題されていない）
   if (selectedQuestions.length < batchSize) {
     const newQuestions = allQuestions
-      .filter(q => !wordProgressMap[q.word])
+      .filter((q) => !wordProgressMap[q.word])
       .slice(0, batchSize - selectedQuestions.length);
-    
+
     selectedQuestions.push(...newQuestions);
   }
-  
+
   return selectedQuestions;
 }
 
 /**
  * ユーザーの学習特性プロファイルを構築
  */
-export function buildUserLearningCharacteristics(
-  wordProgressMap: { [word: string]: WordProgress }
-): UserLearningCharacteristics {
+export function buildUserLearningCharacteristics(wordProgressMap: {
+  [word: string]: WordProgress;
+}): UserLearningCharacteristics {
   const wordProgresses = Object.values(wordProgressMap);
-  
+
   if (wordProgresses.length === 0) {
     return {
       avgForgettingRate: 0.5,
       avgReinforcementEffect: 1.2,
       optimalReviewIntervals: [
-        1000 * 60 * 60 * 24,      // 1日
-        1000 * 60 * 60 * 24 * 3,  // 3日
-        1000 * 60 * 60 * 24 * 7,  // 7日
+        1000 * 60 * 60 * 24, // 1日
+        1000 * 60 * 60 * 24 * 3, // 3日
+        1000 * 60 * 60 * 24 * 7, // 7日
         1000 * 60 * 60 * 24 * 14, // 14日
-        1000 * 60 * 60 * 24 * 30  // 30日
+        1000 * 60 * 60 * 24 * 30, // 30日
       ],
       categorySpecificRates: {},
       timeOfDayEfficiency: {},
       learningVelocity: 20,
-      memoryCapacity: 7 // マジックナンバー7±2
+      memoryCapacity: 7, // マジックナンバー7±2
     };
   }
-  
+
   // 忘却率の平均を計算
   let totalDecayRate = 0;
   let count = 0;
-  
-  wordProgresses.forEach(wp => {
+
+  wordProgresses.forEach((wp) => {
     const totalAttempts = wp.correctCount + wp.incorrectCount;
     if (totalAttempts > 0) {
       const errorRate = wp.incorrectCount / totalAttempts;
       const responseTimeFactor = Math.min(1, (wp.averageResponseTime || 3000) / 5000);
-      const decayRate = 0.3 + (errorRate * 0.4) + (responseTimeFactor * 0.3);
+      const decayRate = 0.3 + errorRate * 0.4 + responseTimeFactor * 0.3;
       totalDecayRate += decayRate;
       count++;
     }
   });
-  
+
   const avgForgettingRate = count > 0 ? totalDecayRate / count : 0.5;
-  
+
   // カテゴリー別忘却率
   const categoryRates: { [category: string]: { sum: number; count: number } } = {};
-  
-  wordProgresses.forEach(wp => {
+
+  wordProgresses.forEach((wp) => {
     if (wp.category) {
       if (!categoryRates[wp.category]) {
         categoryRates[wp.category] = { sum: 0, count: 0 };
@@ -403,24 +405,24 @@ export function buildUserLearningCharacteristics(
       }
     }
   });
-  
+
   const categorySpecificRates: { [category: string]: number } = {};
   Object.entries(categoryRates).forEach(([category, data]) => {
     categorySpecificRates[category] = data.count > 0 ? data.sum / data.count : 0.5;
   });
-  
+
   // 学習速度（過去7日間の平均）
   const now = Date.now();
-  const sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
-  const recentWords = wordProgresses.filter(wp => wp.lastStudied >= sevenDaysAgo);
+  const sevenDaysAgo = now - 7 * 24 * 60 * 60 * 1000;
+  const recentWords = wordProgresses.filter((wp) => wp.lastStudied >= sevenDaysAgo);
   const learningVelocity = recentWords.length / 7;
-  
+
   // 最適な復習間隔（忘却率に基づいて調整）
   const baseIntervals = [1, 3, 7, 14, 30]; // 日数
-  const optimalReviewIntervals = baseIntervals.map(days => 
-    days * 24 * 60 * 60 * 1000 * (1 / avgForgettingRate)
+  const optimalReviewIntervals = baseIntervals.map(
+    (days) => days * 24 * 60 * 60 * 1000 * (1 / avgForgettingRate)
   );
-  
+
   return {
     avgForgettingRate,
     avgReinforcementEffect: 1.2,
@@ -428,7 +430,7 @@ export function buildUserLearningCharacteristics(
     categorySpecificRates,
     timeOfDayEfficiency: {},
     learningVelocity,
-    memoryCapacity: 7
+    memoryCapacity: 7,
   };
 }
 
@@ -436,34 +438,32 @@ export function buildUserLearningCharacteristics(
  * 定着率を計算（全体統計用）
  * 定着 = retentionScore >= 80%
  */
-export function calculateRetentionRate(
-  wordProgressMap: { [word: string]: WordProgress }
-): { retentionRate: number; masteredCount: number; appearedCount: number } {
+export function calculateRetentionRate(wordProgressMap: { [word: string]: WordProgress }): {
+  retentionRate: number;
+  masteredCount: number;
+  appearedCount: number;
+} {
   const wordProgresses = Object.values(wordProgressMap);
-  const appearedWords = wordProgresses.filter(wp => 
-    (wp.correctCount + wp.incorrectCount) > 0
-  );
-  
+  const appearedWords = wordProgresses.filter((wp) => wp.correctCount + wp.incorrectCount > 0);
+
   let masteredCount = 0;
   const now = Date.now();
-  
-  appearedWords.forEach(wp => {
+
+  appearedWords.forEach((wp) => {
     const retention = calculateMemoryRetention(wp.word, wp, now);
     if (retention.retentionScore >= 80) {
       masteredCount++;
     }
   });
-  
-  const retentionRate = appearedWords.length > 0 
-    ? (masteredCount / appearedWords.length) * 100 
-    : 0;
-  
+
+  const retentionRate = appearedWords.length > 0 ? (masteredCount / appearedWords.length) * 100 : 0;
+
   // 定着率は0-100%の範囲に制限
   const normalizedRetentionRate = Math.min(100, Math.max(0, retentionRate));
-  
+
   return {
     retentionRate: Math.round(normalizedRetentionRate),
     masteredCount,
-    appearedCount: appearedWords.length
+    appearedCount: appearedWords.length,
   };
 }

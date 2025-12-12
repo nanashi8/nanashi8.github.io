@@ -16,21 +16,21 @@ export const OFFICIAL_CATEGORIES = [
   '科学・技術',
 ] as const;
 
-export type CategoryType = typeof OFFICIAL_CATEGORIES[number];
+export type CategoryType = (typeof OFFICIAL_CATEGORIES)[number];
 
 // 難易度の型定義
 export const DIFFICULTY_LEVELS = ['beginner', 'intermediate', 'advanced'] as const;
-export type DifficultyType = typeof DIFFICULTY_LEVELS[number];
+export type DifficultyType = (typeof DIFFICULTY_LEVELS)[number];
 
 export interface Question {
-  word: string;        // 語句（単語 or 熟語、熟語の場合スペース含む）
-  reading: string;     // 読み（国際基準アクセント記号をカタカナで正確に）
-  meaning: string;     // 意味（正解）
-  etymology: string;   // 語源等解説（小中学生向け派生語習得支援）
+  word: string; // 語句（単語 or 熟語、熟語の場合スペース含む）
+  reading: string; // 読み（国際基準アクセント記号をカタカナで正確に）
+  meaning: string; // 意味（正解）
+  etymology: string; // 語源等解説（小中学生向け派生語習得支援）
   relatedWords: string; // 関連語（熟語・派生語と読みと意味）
   relatedFields: string; // 関連分野（表示用・CSVから読み込み）
-  category?: string;   // 関連分野（フィルター用・内部処理）
-  difficulty: string;  // 難易度（CSVから読み込み）
+  category?: string; // 関連分野（フィルター用・内部処理）
+  difficulty: string; // 難易度（CSVから読み込み）
   source?: 'junior' | 'intermediate'; // データソース（高校受験 or 中級1800）
   type?: 'word' | 'phrase'; // 単語か熟語か（オプショナル、将来の拡張用）
   isPhraseOnly?: boolean; // 複数単語から成る熟語かどうか（スペース含む場合true）
@@ -100,7 +100,7 @@ export interface ReadingSegment {
   word: string; // 単語（表示形：変化形のまま）
   meaning: string; // 意味
   isUnknown: boolean; // 分からない単語としてマークされているか
-  
+
   // Question型互換フィールド（単語帳保存用）
   lemma?: string; // 原形（辞書形）- gatheredならgather
   reading?: string; // カタカナ読み（例: ギャザー）
@@ -128,13 +128,13 @@ export interface LearningSchedule {
   totalDays: number; // 30, 60, 90, 180など
   planDurationMonths: number; // 1, 2, 3, 6ヶ月など
   phase: 1 | 2 | 3;
-  
+
   dailyGoals: {
     newWords: number;
     reviewWords: number;
     timeMinutes: number;
   };
-  
+
   weeklyProgress: {
     week: number;
     wordsLearned: number;
@@ -142,7 +142,7 @@ export interface LearningSchedule {
     averageAccuracy: number;
     completionRate: number;
   }[];
-  
+
   milestones: {
     day: number;
     title: string;
@@ -155,36 +155,36 @@ export interface DailyStudyPlan {
   date: number;
   dayNumber: number;
   phase: 1 | 2 | 3;
-  
+
   morning: {
     newWords: Question[];
     duration: number;
     mode: 'discovery';
   };
-  
+
   afternoon: {
     reviewWords: Question[];
     duration: number;
     mode: 'weakness';
   };
-  
+
   evening: {
     mixedWords: Question[];
     duration: number;
     mode: 'mixed';
   };
-  
+
   completed: boolean;
   actualAccuracy: number;
 }
 
 // AI人格システムの型定義
-export type AIPersonality = 
-  | 'drill-sergeant'    // 鬼軍曹
-  | 'kind-teacher'      // 優しい先生
-  | 'analyst'           // 冷静な分析官
+export type AIPersonality =
+  | 'drill-sergeant' // 鬼軍曹
+  | 'kind-teacher' // 優しい先生
+  | 'analyst' // 冷静な分析官
   | 'enthusiastic-coach' // 熱血コーチ
-  | 'wise-sage';        // 賢者
+  | 'wise-sage'; // 賢者
 
 // AIコメント生成用のコンテキスト
 export interface CommentContext {
@@ -192,28 +192,28 @@ export interface CommentContext {
   isCorrect: boolean;
   attemptCount: number;
   responseTime: number; // ミリ秒
-  
+
   // ストリーク
   correctStreak: number;
   incorrectStreak: number;
-  
+
   // 単語情報
   word: string;
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   category: string;
-  
+
   // ユーザーの状態
   userAccuracy: number; // 全体正答率(0-100)
   categoryAccuracy: number; // カテゴリー正答率(0-100)
   isWeakCategory: boolean;
   hasSeenBefore: boolean;
   previousAttempts: number; // この単語の過去試行回数
-  
+
   // 進捗情報
   todayQuestions: number;
   todayAccuracy: number;
   planProgress: number; // プランとの進捗率(0-100)
-  
+
   // 時間帯
   timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
 }
@@ -222,59 +222,59 @@ export interface CommentContext {
 export interface UserLearningProfile {
   // 難易度別の基礎能力
   difficultyMastery: {
-    beginner: number;    // 初級の平均正答率 (0-100)
+    beginner: number; // 初級の平均正答率 (0-100)
     intermediate: number; // 中級の平均正答率
-    advanced: number;     // 上級の平均正答率
+    advanced: number; // 上級の平均正答率
   };
-  
+
   // カテゴリー別の得意度
   categoryStrength: {
     [category: string]: {
-      accuracyRate: number;      // 正答率(0-100)
-      learningSpeed: number;     // 習得速度(問題数/単語)
-      retentionRate: number;     // 定着率(0-100)
+      accuracyRate: number; // 正答率(0-100)
+      learningSpeed: number; // 習得速度(問題数/単語)
+      retentionRate: number; // 定着率(0-100)
       confidence: 'high' | 'medium' | 'low'; // 得意度判定
-      totalStudied: number;      // 学習した単語数
-      totalMastered: number;     // 習得済み単語数
+      totalStudied: number; // 学習した単語数
+      totalMastered: number; // 習得済み単語数
     };
   };
-  
+
   // 動的閾値
   dynamicThresholds: {
-    masteryThreshold: number;    // 習得判定の閾値(60-90%)
-    reviewThreshold: number;     // 復習判定の閾値(40-70%)
-    priorityThreshold: number;   // 優先出題の閾値(50-80%)
+    masteryThreshold: number; // 習得判定の閾値(60-90%)
+    reviewThreshold: number; // 復習判定の閾値(40-70%)
+    priorityThreshold: number; // 優先出題の閾値(50-80%)
   };
-  
+
   // 学習ペース
   learningPace: {
-    dailyAverage: number;        // 1日平均問題数
-    preferredBatchSize: number;  // 好みのバッチサイズ
+    dailyAverage: number; // 1日平均問題数
+    preferredBatchSize: number; // 好みのバッチサイズ
     studyPattern: 'fast' | 'steady' | 'slow'; // 学習パターン
   };
-  
+
   // 最終更新日時
   lastUpdated: number;
 }
 
 // 暗記タブ用の型定義
 export interface MemorizationCardState {
-  showWord: boolean;           // 単語（常に表示）
-  showMeaning: boolean;        // 意味（初期: 表示）
-  showPronunciation: boolean;  // 読み（タップで切り替え）
-  showExample: boolean;        // 例文（タップで切り替え）
-  showEtymology: boolean;      // 語源（タップで切り替え）
-  showRelated: boolean;        // 関連語（タップで切り替え）
+  showWord: boolean; // 単語（常に表示）
+  showMeaning: boolean; // 意味（初期: 表示）
+  showPronunciation: boolean; // 読み（タップで切り替え）
+  showExample: boolean; // 例文（タップで切り替え）
+  showEtymology: boolean; // 語源（タップで切り替え）
+  showRelated: boolean; // 関連語（タップで切り替え）
 }
 
 // 暗記行動の記録
 export interface MemorizationBehavior {
   word: string;
   timestamp: number;
-  viewDuration: number;        // 滞在秒数
+  viewDuration: number; // 滞在秒数
   swipeDirection: 'left' | 'right'; // スワイプ方向
   sessionId: string;
-  consecutiveViews: number;    // このセッション内での連続表示回数
+  consecutiveViews: number; // このセッション内での連続表示回数
 }
 
 // 学習曲線の予測データ
@@ -284,42 +284,42 @@ export interface MemorizationCurve {
     timestamp: number;
     viewDuration: number;
     swipeDirection: 'left' | 'right';
-    confidence: number;        // 0-1: AIが推定する定着度
+    confidence: number; // 0-1: AIが推定する定着度
   }>;
-  predictedMastery: number;    // 0-1: 次回右スワイプする確率
-  optimalNextReview: number;   // 最適な次回復習時刻
-  learningVelocity: number;    // 学習速度（曲線の勾配）
+  predictedMastery: number; // 0-1: 次回右スワイプする確率
+  optimalNextReview: number; // 最適な次回復習時刻
+  learningVelocity: number; // 学習速度（曲線の勾配）
 }
 
 // 個人別学習パラメータ
 export interface PersonalizedLearningProfile {
   userId: string;
-  
+
   // 学習速度プロファイル
   learningSpeed: 'fast' | 'medium' | 'slow';
-  
+
   // 最適な復習間隔（個人差）
   optimalReviewIntervals: {
-    firstReview: number;   // 初回復習（分）
-    secondReview: number;  // 2回目（時間）
-    thirdReview: number;   // 3回目（日）
+    firstReview: number; // 初回復習（分）
+    secondReview: number; // 2回目（時間）
+    thirdReview: number; // 3回目（日）
   };
-  
+
   // 滞在時間の閾値（統計から算出）
   viewDurationThresholds: {
-    quick: number;      // さっと見た
-    normal: number;     // 通常
+    quick: number; // さっと見た
+    normal: number; // 通常
     struggling: number; // 苦戦中
   };
-  
+
   // 予測モデルの信頼度
   modelConfidence: number; // 0-1
-  
+
   // 較正データ
   calibrationData: {
     totalPredictions: number;
     correctPredictions: number;
-    overestimations: number;  // 過大評価した回数
+    overestimations: number; // 過大評価した回数
     underestimations: number; // 過小評価した回数
   };
 }
@@ -327,15 +327,15 @@ export interface PersonalizedLearningProfile {
 // 暗記タブの学習設定
 export interface MemorizationSettings {
   // 音声読み上げ
-  autoVoice: boolean;          // 自動音声読み上げ
-  voiceWord: boolean;          // 語句を読み上げ
-  voiceMeaning: boolean;       // 意味も読み上げ
-  voiceDelay?: number;         // 語句と意味の間の待機時間（秒）
-  voiceWithMeaning?: boolean;  // 後方互換性のため残す（非推奨）
-  
+  autoVoice: boolean; // 自動音声読み上げ
+  voiceWord: boolean; // 語句を読み上げ
+  voiceMeaning: boolean; // 意味も読み上げ
+  voiceDelay?: number; // 語句と意味の間の待機時間（秒）
+  voiceWithMeaning?: boolean; // 後方互換性のため残す（非推奨）
+
   // インターリービング（異なる分野を混ぜる）
   interleavingMode: 'off' | 'medium' | 'high';
-  
+
   // カード表示設定（永続化）
   cardDisplaySettings: MemorizationCardState;
 }

@@ -1,11 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { QuestionSet } from '../types';
-import {
-  saveQuestionSets,
-  deleteQuestionSet,
-  generateId,
-  parseCSV,
-} from '../utils';
+import { saveQuestionSets, deleteQuestionSet, generateId, parseCSV } from '../utils';
 
 interface QuestionEditorViewProps {
   questionSets: QuestionSet[];
@@ -114,9 +109,7 @@ function QuestionEditorView({
     const newName = prompt('新しい名前を入力:', set.name);
     if (!newName) return;
 
-    onQuestionSetsChange(
-      questionSets.map((s) => (s.id === id ? { ...s, name: newName } : s))
-    );
+    onQuestionSetsChange(questionSets.map((s) => (s.id === id ? { ...s, name: newName } : s)));
   };
 
   // CSV インポート
@@ -169,7 +162,7 @@ function QuestionEditorView({
 apple,アップル,りんご,ラテン語の malus から,fruit,食べ物,初級
 cat,キャット,ねこ,古英語の catt から,animal,動物,初級
 book,ブック,本,古英語の bōc から,reading,学習,初級`;
-    
+
     const blob = new Blob([sampleCSV], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
@@ -211,9 +204,11 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
               </label>
             </div>
           )}
-          <p className="setting-hint">オンにすると、正解時に選択した時間後に自動で次の問題へ進みます</p>
+          <p className="setting-hint">
+            オンにすると、正解時に選択した時間後に自動で次の問題へ進みます
+          </p>
         </div>
-        
+
         {onAdaptiveModeChange && (
           <div className="setting-item">
             <label className="setting-label">
@@ -317,11 +312,7 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
               <div className="editor-toolbar">
                 <div className="toolbar-left">
                   <h3>{currentSet.name}</h3>
-                  {stats && (
-                    <span className="stats-badge">
-                      {stats.total}問
-                    </span>
-                  )}
+                  {stats && <span className="stats-badge">{stats.total}問</span>}
                 </div>
               </div>
 
@@ -358,7 +349,8 @@ book,ブック,本,古英語の bōc から,reading,学習,初級`;
                     </div>
                   </div>
                   <p className="stats-note">
-                    💡 問題の編集が必要な場合は、CSVファイルをエクスポートして編集後、再度インポートしてください。
+                    💡
+                    問題の編集が必要な場合は、CSVファイルをエクスポートして編集後、再度インポートしてください。
                   </p>
                 </div>
               )}

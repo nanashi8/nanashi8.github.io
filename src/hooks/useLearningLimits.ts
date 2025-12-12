@@ -23,17 +23,23 @@ export function useLearningLimits(mode: 'translation' | 'spelling' | 'grammar'):
     return saved ? parseInt(saved) : 10; // デフォルト: 10
   });
 
-  const setLearningLimit = useCallback((value: number) => {
-    const validValue = Math.max(0, value) || 30;
-    setLearningLimitState(validValue);
-    localStorage.setItem(`learning-limit-${mode}`, validValue.toString());
-  }, [mode]);
+  const setLearningLimit = useCallback(
+    (value: number) => {
+      const validValue = Math.max(0, value) || 30;
+      setLearningLimitState(validValue);
+      localStorage.setItem(`learning-limit-${mode}`, validValue.toString());
+    },
+    [mode]
+  );
 
-  const setReviewLimit = useCallback((value: number) => {
-    const validValue = Math.max(0, value) || 10;
-    setReviewLimitState(validValue);
-    localStorage.setItem(`review-limit-${mode}`, validValue.toString());
-  }, [mode]);
+  const setReviewLimit = useCallback(
+    (value: number) => {
+      const validValue = Math.max(0, value) || 10;
+      setReviewLimitState(validValue);
+      localStorage.setItem(`review-limit-${mode}`, validValue.toString());
+    },
+    [mode]
+  );
 
   return {
     learningLimit,
