@@ -5,10 +5,10 @@ import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
 import { calculateGoalProgress } from '../goalSimulator';
-import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '../confusionPairs';
+import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '@/features/analysis/confusionPairs';
 import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
 import { getRelevantMistakeTip } from '../englishTrivia';
-import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import AddToCustomButton from './AddToCustomButton';
 
 interface QuestionCardProps {

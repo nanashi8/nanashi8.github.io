@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { logger } from '@/utils/logger';
 import { ReadingPassage, Question } from '../types';
 import { saveQuestionSet, generateId } from '../utils';
-import { speakEnglish, stopSpeaking } from '../speechSynthesis';
+import { speakEnglish, stopSpeaking } from '@/features/speech/speechSynthesis';
 
 function ReadingView() {
   const [passages, setPassages] = useState<ReadingPassage[]>([]);
