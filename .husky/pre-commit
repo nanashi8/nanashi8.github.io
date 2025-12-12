@@ -136,3 +136,6 @@ fi
 echo ""
 echo "✨ すべてのチェックが完了しました！"
 echo "📊 VS Code問題パネルで0エラー・0警告を確認してください"
+
+# 7. テスト戦略ガイド（情報提供のみ、ブロックしない）
+bash scripts/test-strategy-guide.sh
