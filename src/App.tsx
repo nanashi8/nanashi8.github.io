@@ -1490,13 +1490,6 @@ function App() {
         >
           ⚙️ 設定
         </button>
-        <button
-          className="py-3 sm:py-4 px-3 sm:px-4 text-sm sm:text-base font-semibold transition-all duration-200 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-md"
-          onClick={() => setIsFloatingPanelOpen(true)}
-          title="カスタム問題セット管理"
-        >
-          📚 セット ({customQuestionState.sets.length})
-        </button>
       </div>
 
       {/* カスタム問題セット管理パネル */}
@@ -1635,6 +1628,8 @@ function App() {
             allQuestions={allQuestions}
             _selectedDataSource={selectedDataSource}
             _onDataSourceChange={setSelectedDataSource}
+            customQuestionSets={customQuestionState.sets}
+            onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             onStartSession={(_mode, questions) => {
               // セッションの単語でクイズを開始
               setQuizState({

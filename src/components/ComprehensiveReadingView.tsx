@@ -1234,7 +1234,7 @@ function ComprehensiveReadingView({
                   {/* 文法タグの凡例 */}
                   {showGrammarLegend && (
                     <div className="grammar-legend mb-3 p-3 bg-gray-50 dark:bg-gray-800 rounded">
-                      <div className="flex justify-between items-center mb-2">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-center mb-2">
                         <h6 className="text-xs font-semibold m-0">📖 文法タグ一覧</h6>
                         <button
                           className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded hover:bg-blue-200 dark:hover:bg-blue-800"
@@ -1245,54 +1245,54 @@ function ComprehensiveReadingView({
                       </div>
                       
                       {!showDetailedExplanation ? (
-                        <div className="grid grid-cols-2 gap-2 text-xs">
-                          <div className="flex items-center gap-2">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="S"><span className="grammar-tag-label" data-tag="S">[S]</span></span>
-                            <span>主語 (Subject)</span>
+                            <span className="flex-1 min-w-0 break-words">主語 (Subject)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="V"><span className="grammar-tag-label" data-tag="V">[V]</span></span>
-                            <span>動詞 (Verb)</span>
+                            <span className="flex-1 min-w-0 break-words">動詞 (Verb)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="O"><span className="grammar-tag-label" data-tag="O">[O]</span></span>
-                            <span>目的語 (Object)</span>
+                            <span className="flex-1 min-w-0 break-words">目的語 (Object)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="C"><span className="grammar-tag-label" data-tag="C">[C]</span></span>
-                            <span>補語 (Complement)</span>
+                            <span className="flex-1 min-w-0 break-words">補語 (Complement)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="M"><span className="grammar-tag-label" data-tag="M">[M]</span></span>
-                            <span>修飾語 (Modifier)</span>
+                            <span className="flex-1 min-w-0 break-words">修飾語 (Modifier)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="Prep"><span className="grammar-tag-label" data-tag="Prep">[Prep]</span></span>
-                            <span>前置詞 (Preposition)</span>
+                            <span className="flex-1 min-w-0 break-words">前置詞 (Preposition)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="Conj"><span className="grammar-tag-label" data-tag="Conj">[Conj]</span></span>
-                            <span>接続詞 (Conjunction)</span>
+                            <span className="flex-1 min-w-0 break-words">接続詞 (Conjunction)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="Det"><span className="grammar-tag-label" data-tag="Det">[Det]</span></span>
-                            <span>限定詞 (Determiner)</span>
+                            <span className="flex-1 min-w-0 break-words">限定詞 (Determiner)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="Adj"><span className="grammar-tag-label" data-tag="Adj">[Adj]</span></span>
-                            <span>形容詞 (Adjective)</span>
+                            <span className="flex-1 min-w-0 break-words">形容詞 (Adjective)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="Adv"><span className="grammar-tag-label" data-tag="Adv">[Adv]</span></span>
-                            <span>副詞 (Adverb)</span>
+                            <span className="flex-1 min-w-0 break-words">副詞 (Adverb)</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 min-w-0">
                             <span className="grammar-tag" data-tag="Unknown"><span className="grammar-tag-label" data-tag="Unknown">[?]</span></span>
-                            <span>その他</span>
+                            <span className="flex-1 min-w-0 break-words">その他</span>
                           </div>
                         </div>
                       ) : (
-                        <div className="detailed-grammar-explanation text-xs space-y-3">
+                        <div className="detailed-grammar-explanation text-xs space-y-3 break-words">
                           <div className="explanation-section">
                             <h6 className="font-semibold text-sm mb-2">🎯 文の骨格 (必須要素)</h6>
                             
@@ -1471,25 +1471,7 @@ function ComprehensiveReadingView({
                       <h5 className="text-sm font-semibold mb-2">🔗 熟語:</h5>
                       <div className="space-y-2">
                         {phrasalExpressions.map((expr: PhrasalExpression, idx: number) => (
-                          <div key={idx} className="phrasal-expression-card relative">
-                            {/* カスタムセットに追加ボタン */}
-                            {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
-                              <div className="absolute top-2 right-2">
-                                <AddToCustomButton
-                                  word={{
-                                    word: expr.words.join(' '),
-                                    meaning: expr.meaning,
-                                    source: 'reading',
-                                    sourceDetail: currentPassage?.title,
-                                  }}
-                                  sets={customQuestionSets}
-                                  onAddWord={onAddWordToCustomSet}
-                                  onRemoveWord={onRemoveWordFromCustomSet}
-                                  onOpenManagement={onOpenCustomSetManagement}
-                                  size="small"
-                                />
-                              </div>
-                            )}
+                          <div key={idx} className="phrasal-expression-card">
                             <div className="phrasal-expression-words">
                               {expr.words.map((word, widx) => {
                                 const meaning = getMeaning(word, undefined);
@@ -1503,7 +1485,25 @@ function ComprehensiveReadingView({
                             </div>
                             <div className="phrasal-expression-divider">
                               <div className="phrasal-divider-line"></div>
-                              <div className="phrasal-type-label">熟語</div>
+                              <div className="flex items-center gap-2">
+                                <div className="phrasal-type-label">熟語</div>
+                                {/* カスタムセットに追加ボタン */}
+                                {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
+                                  <AddToCustomButton
+                                    word={{
+                                      word: expr.words.join(' '),
+                                      meaning: expr.meaning,
+                                      source: 'reading',
+                                      sourceDetail: currentPassage?.title,
+                                    }}
+                                    sets={customQuestionSets}
+                                    onAddWord={onAddWordToCustomSet}
+                                    onRemoveWord={onRemoveWordFromCustomSet}
+                                    onOpenManagement={onOpenCustomSetManagement}
+                                    size="small"
+                                  />
+                                )}
+                              </div>
                             </div>
                             <div className="phrasal-expression-meaning">
                               {expr.meaning}
@@ -1969,7 +1969,9 @@ function ComprehensiveReadingView({
 
         @media (max-width: 768px) {
           .comprehensive-reading-view {
-            padding: 15px;
+            max-width: 100%;
+            margin: 0;
+            padding: 8px;
           }
         }
 

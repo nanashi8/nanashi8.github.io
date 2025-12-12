@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Question, AIPersonality } from '../types';
 import type { DataSource } from '../App';
+import type { CustomQuestionSet } from '../types/customQuestions';
 import LearningPlanView from './LearningPlanView';
 import { PERSONALITY_INFO } from '../aiCommentGenerator';
 
@@ -9,6 +10,8 @@ interface SettingsViewProps {
   onStartSession: (mode: 'morning' | 'afternoon' | 'evening', questions: Question[]) => void;
   _selectedDataSource?: DataSource;
   _onDataSourceChange?: (source: DataSource) => void;
+  customQuestionSets: CustomQuestionSet[];
+  onOpenCustomSetManagement: () => void;
 }
 
 function SettingsView({
@@ -16,6 +19,8 @@ function SettingsView({
   onStartSession,
   _selectedDataSource = 'all',
   _onDataSourceChange,
+  customQuestionSets,
+  onOpenCustomSetManagement,
 }: SettingsViewProps) {
   // localStorageからバッチサイズを読み込み
   const [batchSize, setBatchSize] = useState<number>(() => {
@@ -120,6 +125,27 @@ function SettingsView({
 
   return (
     <div className="w-full px-4 py-6 space-y-6">
+      {/* カスタム問題セット管理 */}
+      <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
+        <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
+          <span>📚</span>
+          <span>カスタム問題セット</span>
+          <span className="text-sm font-normal text-text-secondary">({customQuestionSets.length}個)</span>
+        </h3>
+        <div className="space-y-3">
+          <button
+            onClick={onOpenCustomSetManagement}
+            className="w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-md flex items-center justify-center gap-2"
+          >
+            <span>📚</span>
+            <span>カスタムセットを管理</span>
+          </button>
+          <p className="text-sm text-text-secondary bg-bg-secondary px-4 py-3 rounded-lg">
+            💡 自分だけのオリジナル問題セットを作成・管理できます。学習したい単語を自由に追加して、効率的に復習しましょう。
+          </p>
+        </div>
+      </div>
+
       {/* 学習プラン設定 */}
       <LearningPlanView
         allQuestions={allQuestions}

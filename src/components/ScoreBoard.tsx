@@ -12,6 +12,10 @@ import {
   getWordDetailedData
 } from '../progressStorage';
 import { useState, useEffect, useMemo, useRef } from 'react';
+import { AIPersonality } from '../types';
+import { generateTimeBasedGreeting, getConsecutiveDays, getTodayStudyStats } from '../timeBasedGreeting';
+import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractions';
+import { getBreatherTrivia } from '../englishTrivia';
 
 interface ScoreBoardProps {
   mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'; // クイズモードを追加
@@ -50,7 +54,38 @@ function ScoreBoard({
   wordPhraseFilter = '',
   grammarUnit
 }: ScoreBoardProps) {
-  const [activeTab, setActiveTab] = useState<'plan' | 'breakdown' | 'history' | 'settings'>('plan');
+  const [activeTab, setActiveTab] = useState<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'>('ai');
+  
+  // AIコメント用のstate
+  const [aiComment, setAiComment] = useState<string>('');
+  
+  useEffect(() => {
+    // AIコメントを生成
+    const generateComment = () => {
+      // 3%の確率で英語豆知識を表示
+      if (Math.random() < 0.03) {
+        return getBreatherTrivia();
+      }
+      
+      // 特別な日の会話をチェック
+      const specialChat = getSpecialDayChat();
+      if (specialChat) {
+        return specialChat;
+      }
+      
+      // 時間帯別の教師の会話をチェック
+      const teacherChat = getTimeBasedTeacherChat();
+      if (teacherChat) {
+        return teacherChat;
+      }
+      
+      // 挨拶メッセージを生成
+      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
+      return generateTimeBasedGreeting(personality) || 'こんにちは！一緒に学習しましょう。';
+    };
+    
+    setAiComment(generateComment());
+  }, []);
   
   // Progress bar refs
   const masteredRef = useRef<HTMLDivElement>(null);
@@ -175,13 +210,25 @@ function ScoreBoard({
     [currentScore, totalAnswered]
   );
 
-  // タブの配列（学習プラン、学習状況、履歴、設定）- 全モード共通
-  const _tabs: Array<'plan' | 'breakdown' | 'history' | 'settings'> = ['plan', 'breakdown', 'history', 'settings'];
+  // タブの配列（AI、学習プラン、学習状況、履歴、学習設定）- 全モード共通
+  const _tabs: Array<'ai' | 'plan' | 'breakdown' | 'history' | 'settings'> = ['ai', 'plan', 'breakdown', 'history', 'settings'];
 
   return (
     <div className="score-board-compact">
       {/* タブナビゲーション: Tailwind レスポンシブで自動最適化 */}
-      <div className="score-board-tabs grid grid-cols-2 sm:grid-cols-4 gap-1 sm:gap-2">
+      <div className="score-board-tabs grid grid-cols-3 sm:grid-cols-5 gap-1 sm:gap-2">
+        <button 
+          className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
+            activeTab === 'ai' 
+              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary' 
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+          }`}
+          onClick={() => setActiveTab('ai')}
+          title="AIコメント"
+        >
+          <span className="hidden sm:inline">🤖 AI</span>
+          <span className="sm:hidden">🤖</span>
+        </button>
         <button 
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'plan' 
@@ -237,6 +284,52 @@ function ScoreBoard({
           <span className="sm:hidden">⚙️</span>
         </button>
       </div>
+
+      {/* AIタブ */}
+      {activeTab === 'ai' && (
+        <div className="score-board-content">
+          <div className="ai-comment-container bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-lg p-4 sm:p-6 shadow-md">
+            <div className="flex items-start gap-3">
+              <div className="text-3xl sm:text-4xl flex-shrink-0">
+                {(() => {
+                  const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
+                  const avatars = {
+                    'kind-teacher': '😃',
+                    'drill-sergeant': '😈',
+                    'enthusiastic-coach': '😼',
+                    'analyst': '🤖',
+                    'wise-sage': '🧙'
+                  };
+                  return avatars[personality] || '😃';
+                })()}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-sm sm:text-base text-gray-800 dark:text-gray-200 leading-relaxed break-words">
+                  {aiComment}
+                </div>
+                <div className="mt-4 pt-3 border-t border-gray-300 dark:border-gray-600">
+                  <div className="flex flex-wrap gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex items-center gap-1">
+                      <span>🔥</span>
+                      <span>連続{getConsecutiveDays()}日</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span>📊</span>
+                      <span>今日{getTodayStudyStats().count}問</span>
+                    </div>
+                    {getTodayStudyStats().count > 0 && (
+                      <div className="flex items-center gap-1">
+                        <span>🎯</span>
+                        <span>正答率{Math.round(getTodayStudyStats().accuracy)}%</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 学習プランタブ */}
       {activeTab === 'plan' && (
@@ -462,14 +555,19 @@ function ScoreBoard({
                         statusLabel = '学習中';
                       }
                       
-                      // unit表示を「中1_Unit0」から「1年」に変換
+                      // unit表示を「中1_Unit0_〜」から「1年_Unit0_〜」に変換
                       const gradeMatch = stat.unit.match(/中(\d+)/);
                       const gradeDisplay = gradeMatch ? `${gradeMatch[1]}年` : stat.unit;
+                      const unitMatch = stat.unit.match(/Unit(\d+)/);
+                      const unitDisplay = unitMatch ? `Unit${unitMatch[1]}` : '';
+                      const planDisplay = unitDisplay
+                        ? `${gradeDisplay}_${unitDisplay}_${stat.title}`
+                        : `${gradeDisplay}_${stat.title}`;
                       
                       return (
                         <div key={stat.unit} className="grammar-unit-card">
                           <div className="word-detail-title">
-                            📊 {gradeDisplay}_{stat.title} の学習データ
+                            📊 {planDisplay} の学習データ
                             <span className="word-status-badge">
                               {statusIcon} {statusLabel}
                             </span>

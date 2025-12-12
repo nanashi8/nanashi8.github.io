@@ -302,6 +302,18 @@
     font-size: 14px;
   }
 
+  /* 読解タブ: 文法凡例が横にはみ出ないようにする */
+  .grammar-legend {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .grammar-legend,
+  .grammar-legend * {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   /* 読解タブ内部横幅統一 */
   .passage-content,
   .passage-body,
