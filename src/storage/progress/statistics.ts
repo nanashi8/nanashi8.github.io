@@ -3,8 +3,8 @@
  * 進捗データの統計分析・集計機能
  */
 
-import { loadProgressSync } from './progressStorage';
-import type { QuizResult } from './types';
+import { loadProgressSync, checkFlexibleMastery } from './progressStorage';
+import type { QuizResult, DetailedRetentionStats, MasteryPrediction } from './types';
 
 // モードごとの統計を取得
 export function getStatsByMode(mode: 'translation' | 'spelling' | 'reading'): {
@@ -278,5 +278,128 @@ export function getMonthlyStats(): {
     totalAnswered,
     accuracy,
     newMastered,
+  };
+}
+
+// 詳細な定着統計を取得
+export function getDetailedRetentionStats(): DetailedRetentionStats {
+  const progress = loadProgressSync();
+  const allWords = Object.values(progress.wordProgress);
+  const appearedWords = allWords.filter(wp => 
+    (wp.correctCount + wp.incorrectCount) > 0
+  );
+  
+  let masteredCount = 0;
+  let learningCount = 0;
+  let strugglingCount = 0;
+  
+  appearedWords.forEach(wp => {
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    const accuracy = totalAttempts > 0 ? (wp.correctCount / totalAttempts) * 100 : 0;
+    
+    // 🟢 完全定着判定
+    const isDefinitelyMastered = 
+      (totalAttempts === 1 && wp.correctCount === 1) || // 1発正解
+      wp.consecutiveCorrect >= 3 || // 連続3回以上正解
+      (wp.consecutiveCorrect >= 2 && accuracy >= 80); // 連続2回 + 正答率80%以上
+    
+    if (isDefinitelyMastered) {
+      masteredCount++;
+    }
+    // 🟡 学習中（正答率50%以上だがまだ定着していない）
+    else if (accuracy >= 50) {
+      learningCount++;
+    }
+    // 🔴 要復習（正答率50%未満）
+    else {
+      strugglingCount++;
+    }
+  });
+  
+  const total = appearedWords.length;
+  
+  // 加重スコア計算（完全定着=1.0, 学習中=0.5, 要復習=0.0）
+  const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
+  
+  return {
+    totalWords: allWords.length,
+    appearedWords: total,
+    
+    masteredCount,
+    learningCount,
+    strugglingCount,
+    
+    basicRetentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    weightedRetentionRate: total > 0 ? Math.round((weightedScore / total) * 100) : 0,
+    
+    masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
+    strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+    
+    // エイリアス（互換性のため）
+    masteredWords: masteredCount,
+    learningWords: learningCount,
+    newWords: allWords.length - total,
+    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    averageAttempts: 0,
+    categoryBreakdown: {},
+    difficultyBreakdown: {},
+  };
+}
+
+// 定着が近い単語の統計を取得
+export function getNearMasteryStats(): {
+  nearMasteryCount: number;
+  learningCount: number;
+  averageRemainingAnswers: number;
+  longTermMemoryCount: number;
+  superMemoryCount: number;
+} {
+  const progress = loadProgressSync();
+  let nearMasteryCount = 0;
+  let learningCount = 0;
+  let totalRemaining = 0;
+  let longTermMemoryCount = 0;
+  let superMemoryCount = 0;
+  
+  Object.values(progress.wordProgress).forEach(wp => {
+    const totalAttempts = wp.correctCount + wp.incorrectCount;
+    if (totalAttempts === 0) return;
+    
+    const masteryResult = checkFlexibleMastery(wp, true);
+    if (masteryResult.isMastered) {
+      // 長期記憶のカウント
+      if (wp.consecutiveCorrect >= 7) {
+        superMemoryCount++;
+      } else if (wp.consecutiveCorrect >= 5) {
+        longTermMemoryCount++;
+      }
+      return;
+    }
+    
+    learningCount++;
+    
+    // あと1回で定着する条件をチェック
+    const { consecutiveCorrect } = wp;
+    const accuracy = wp.correctCount / totalAttempts;
+    
+    if (
+      consecutiveCorrect === 2 || // 連続2回正解
+      (accuracy >= 0.9 && consecutiveCorrect === 1 && totalAttempts >= 2) || // 高精度安定型
+      (totalAttempts >= 4 && accuracy >= 0.75) // 高回数安定型
+    ) {
+      nearMasteryCount++;
+      totalRemaining += 1;
+    } else {
+      totalRemaining += Math.max(1, 3 - consecutiveCorrect);
+    }
+  });
+  
+  return {
+    nearMasteryCount,
+    learningCount,
+    averageRemainingAnswers: learningCount > 0 ? Math.round(totalRemaining / learningCount * 10) / 10 : 0,
+    longTermMemoryCount,
+    superMemoryCount
   };
 }
