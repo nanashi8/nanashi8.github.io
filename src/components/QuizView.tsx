@@ -9,7 +9,7 @@ import AddToCustomButton from './AddToCustomButton';
 import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 
 interface QuizViewProps {
   quizState: QuizState;

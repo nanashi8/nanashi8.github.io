@@ -1,5 +1,5 @@
 // AI学習アシスタント - スキップした単語の検証と復習管理
-import { logger } from '../../logger';
+import { logger } from '@/utils/logger';
 
 import { loadProgressSync, saveProgress } from '../../storage/progress/progressStorage';
 

@@ -9,7 +9,7 @@
  * 5. 動作・状態・性質による分類
  */
 
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 import { Question } from '@/types';
 // 言語学的関連性のみを扱うため、progressStorageのインポートは不要
 

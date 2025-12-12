@@ -8,7 +8,7 @@
  * 4. 休憩推奨アルゴリズム
  */
 
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 import { QuestionPriority } from '@/ai/analysis/learningCurveAI';
 

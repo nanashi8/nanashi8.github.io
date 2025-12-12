@@ -3,7 +3,7 @@
 import { loadProgress, saveProgress } from '@/storage/progress/progressStorage';
 import { getAllFromDB, STORES } from '@/storage/indexedDB/indexedDBStorage';
 import { getMigrationInfo } from '@/storage/migration/dataMigration';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 // エクスポートデータの型
 export interface ExportData {

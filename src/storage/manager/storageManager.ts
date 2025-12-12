@@ -7,7 +7,7 @@ import {
   STORES
 } from '@/storage/indexedDB/indexedDBStorage';
 import { isMigrationCompleted } from '@/storage/migration/dataMigration';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 // ストレージ戦略の決定
 let useIndexedDB = false;

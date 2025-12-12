@@ -18,7 +18,7 @@ import {
   getCustomQuestionSets,
 } from '../progressStorage';
 import { QuestionSet, Question } from '../types';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '../utils';
 
 interface StatsViewProps {

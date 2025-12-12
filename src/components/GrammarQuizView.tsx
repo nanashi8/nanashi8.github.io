@@ -3,7 +3,7 @@ import './GrammarQuizView.css';
 import ScoreBoard from './ScoreBoard';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 
 interface VerbFormQuestion {
   id: string;

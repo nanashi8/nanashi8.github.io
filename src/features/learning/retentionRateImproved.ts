@@ -2,7 +2,7 @@
  * 改善版：シンプルで分かりやすい定着率計算
  */
 
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 interface WordProgress {
   word: string;

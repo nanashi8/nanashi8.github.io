@@ -11,7 +11,7 @@ import {
   RelatedWordCluster,
   LinguisticRelationType 
 } from '@/ai/analysis/linguisticRelationsAI';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 import './LinguisticRelationsView.css';
 
 interface LinguisticRelationsViewProps {
