@@ -3,9 +3,83 @@ import { AIPersonality } from '@/types';
 
 export interface EnglishTrivia {
   type: 'fun-fact' | 'common-mistake' | 'cultural' | 'etymology' | 'pronunciation' | 'grammar-tip';
-  message: string;
-  teacher?: AIPersonality;
+  content?: string; // 豆知識の内容（AI人格に依存しない）
+  messages?: {
+    [key in AIPersonality]: string; // 各AI人格の言い方
+  };
+  teacher?: AIPersonality; // 廃止予定（後方互換性のため残す）
+  message?: string; // 廃止予定（後方互換性のため残す）
 }
+
+// 全AI人格対応の豆知識（新形式）
+const ENGLISH_TRIVIA_NEW: EnglishTrivia[] = [
+  {
+    type: 'common-mistake',
+    content: 'I\'m exciting と I\'m excited の違い',
+    messages: {
+      'drill-sergeant': '😈「"I\'m exciting"は間違いだ！自分がワクワクしてる時は"I\'m excited"だ！excitingは「興奮させる」、excitedは「興奮している」だぞ！」',
+      'kind-teacher': '😃「"I\'m exciting"って言ってませんか？正しくは"I\'m excited"ですよ。自分がワクワクしてる時はed形、人を興奮させるものはing形です！」',
+      'analyst': '🤖「感情動詞の分析："I\'m excited"（興奮状態）、"It\'s exciting"（興奮させる性質）。人の感情はed形、原因や性質はing形です。」',
+      'enthusiastic-coach': '😼「"I\'m excited"だぞ！自分の気持ちはed形だ！覚えろ！excitingは「ワクワクさせるもの」に使うんだ！」',
+      'wise-sage': '🧙「"excited"と"exciting"の違いじゃな。人の感情状態にはed形、物事の性質にはing形を使うのじゃ。」'
+    }
+  },
+  {
+    type: 'common-mistake',
+    content: 'I\'m boring と I\'m bored の違い',
+    messages: {
+      'drill-sergeant': '😈「"I\'m boring"は「私は退屈な人間だ」という意味だぞ！退屈してる時は"I\'m bored"が正解だ！間違えるな！」',
+      'kind-teacher': '😃「"I\'m boring"だと「私は退屈な人だ」になってしまいます。退屈してる時は"I\'m bored"ですよ！」',
+      'analyst': '🤖「boring=退屈させる性質、bored=退屈している状態。主語が人で状態を表す場合はed形を選択します。」',
+      'enthusiastic-coach': '😼「"I\'m bored"だ！退屈してる時はed形だぞ！boringは「退屈な人・物」に使うんだ！混同するな！」',
+      'wise-sage': '🧙「boringは「退屈させる」性質、boredは「退屈している」状態じゃ。自分の気持ちならed形じゃぞ。」'
+    }
+  },
+  {
+    type: 'common-mistake',
+    content: 'funnyとfunの違い',
+    messages: {
+      'drill-sergeant': '😈「"funny"と"fun"は違うぞ！funnyは「面白い（笑える）」、funは「楽しい」だ！混同するな！」',
+      'kind-teacher': '😃「"funny"は「面白い・笑える」、"fun"は「楽しい」という違いがありますよ。使い分けに注意しましょう！」',
+      'analyst': '🤖「funny=humor（笑い）を伴う面白さ、fun=enjoyment（楽しさ）。意味の違いを正確に理解してください。」',
+      'enthusiastic-coach': '😼「funnyは「笑える」、funは「楽しい」だ！ニュアンスが全然違うぞ！使い分けろ！」',
+      'wise-sage': '🧙「funnyは笑いを誘う面白さ、funは心から楽しむことじゃ。状況に応じて使い分けるのじゃぞ。」'
+    }
+  },
+  {
+    type: 'common-mistake',
+    content: 'adviceは数えられない名詞',
+    messages: {
+      'drill-sergeant': '😈「"an advice"は間違いだ！adviceは数えられない名詞だ！"a piece of advice"または"some advice"と言え！」',
+      'kind-teacher': '😃「"advice"は数えられない名詞なので、"an advice"とは言えません。"a piece of advice"や"some advice"と言いましょう！」',
+      'analyst': '🤖「advice=不可算名詞。数える場合は"a piece of advice"、"two pieces of advice"のように単位をつけます。」',
+      'enthusiastic-coach': '😼「adviceは数えられないぞ！"a piece of advice"って言うんだ！この形を覚えろ！」',
+      'wise-sage': '🧙「adviceは不可算名詞じゃ。一つのアドバイスは"a piece of advice"と表現するのじゃぞ。」'
+    }
+  },
+  {
+    type: 'fun-fact',
+    content: '接頭辞re-は「再び」の意味',
+    messages: {
+      'drill-sergeant': '😈「接頭辞"re-"は「再び」だ！return（戻る）、review（復習）、repeat（繰り返す）、全部「再び」の意味が入ってるぞ！」',
+      'kind-teacher': '😃「接頭辞"re-"は「再び」という意味なんですよ。return（戻る）、review（復習）、repeat（繰り返す）など、覚えやすいですね！」',
+      'analyst': '🤖「接頭辞"re-"の意味分析：「再び・戻って」。return、review、repeat、rebuild等、共通の意味パターンを認識してください。」',
+      'enthusiastic-coach': '😼「"re-"は「もう一回！」って意味だ！return（戻る）、review（見直す）、repeat（繰り返す）！覚えやすいだろ！」',
+      'wise-sage': '🧙「接頭辞"re-"は「再び」を意味するのじゃ。return（再び来る）、review（再び見る）のように理解すると良いぞ。」'
+    }
+  },
+  {
+    type: 'fun-fact',
+    content: '長文読解のコツ：最初と最後の段落を読む',
+    messages: {
+      'drill-sergeant': '😈「長文は最初と最後の段落を読め！そして各段落の最初の文をチェックだ！全体の流れが一瞬で掴めるぞ！」',
+      'kind-teacher': '😃「長文読解のコツです！最初と最後の段落、そして各段落の最初の文を読むと、全体の流れがつかめますよ！」',
+      'analyst': '🤖「長文読解の効率的手法：導入段落と結論段落、各段落のトピックセンテンスを読むことで論旨を把握できます。」',
+      'enthusiastic-coach': '😼「長文は最初と最後が大事だ！あと各段落の出だしをチェックしろ！これで全体像が見えてくるぞ！」',
+      'wise-sage': '🧙「長文の知恵じゃが、最初と最後の段落、各段落の冒頭文を読めば全体の流れが見えてくるぞ。」'
+    }
+  }
+];
 
 // 英語あるあるネタ
 const ENGLISH_COMMON_MISTAKES: EnglishTrivia[] = [
@@ -277,7 +351,9 @@ const GRAMMAR_TIPS: EnglishTrivia[] = [
 ];
 
 // 全ての豆知識をまとめる
+// 全ての豆知識をまとめる（新形式を優先）
 const ALL_TRIVIA: EnglishTrivia[] = [
+  ...ENGLISH_TRIVIA_NEW, // 新形式（全AI人格対応）を優先
   ...ENGLISH_COMMON_MISTAKES,
   ...ENGLISH_FUN_FACTS,
   ...PRONUNCIATION_TIPS,
@@ -287,53 +363,133 @@ const ALL_TRIVIA: EnglishTrivia[] = [
 ];
 
 // ランダムに豆知識を取得（5%の確率）
-export function getRandomEnglishTrivia(): EnglishTrivia | null {
+// 現在のAI人格に応じてメッセージを変換
+export function getRandomEnglishTrivia(personality?: AIPersonality): EnglishTrivia | null {
   if (Math.random() > 0.05) {
     return null;
   }
   
-  return ALL_TRIVIA[Math.floor(Math.random() * ALL_TRIVIA.length)];
+  const trivia = ALL_TRIVIA[Math.floor(Math.random() * ALL_TRIVIA.length)];
+  
+  // 新形式（messagesプロパティを持つ）の場合、現在のAI人格に応じたメッセージを返す
+  if (personality && trivia.messages && trivia.messages[personality]) {
+    return {
+      ...trivia,
+      message: trivia.messages[personality]
+    };
+  }
+  
+  return trivia;
 }
 
 // 特定の種類の豆知識を取得
-export function getTriviaByType(type: EnglishTrivia['type']): EnglishTrivia | null {
+export function getTriviaByType(type: EnglishTrivia['type'], personality?: AIPersonality): EnglishTrivia | null {
   const filtered = ALL_TRIVIA.filter(t => t.type === type);
   if (filtered.length === 0) return null;
   
-  return filtered[Math.floor(Math.random() * filtered.length)];
+  const trivia = filtered[Math.floor(Math.random() * filtered.length)];
+  
+  // 新形式の場合、現在のAI人格に応じたメッセージを返す
+  if (personality && trivia.messages && trivia.messages[personality]) {
+    return {
+      ...trivia,
+      message: trivia.messages[personality]
+    };
+  }
+  
+  return trivia;
 }
 
 // 間違いやすい英語あるある（正解・不正解に応じて）
-export function getRelevantMistakeTip(isCorrect: boolean): string | null {
+export function getRelevantMistakeTip(isCorrect: boolean, personality?: AIPersonality): string | null {
   if (Math.random() > 0.08) return null; // 8%の確率
   
   if (isCorrect) {
     // 正解時は面白い豆知識や語源
     const tips = [...ENGLISH_FUN_FACTS, ...ETYMOLOGY_TIPS, ...CULTURAL_TIPS];
     const tip = tips[Math.floor(Math.random() * tips.length)];
-    return tip.message;
+    
+    // 新形式の場合、AI人格に応じたメッセージを返す
+    if (personality && tip.messages && tip.messages[personality]) {
+      return tip.messages[personality];
+    }
+    return tip.message || '';
   } else {
     // 不正解時は間違いやすいポイントや文法のコツ
     const tips = [...ENGLISH_COMMON_MISTAKES, ...GRAMMAR_TIPS];
     const tip = tips[Math.floor(Math.random() * tips.length)];
-    return tip.message;
+    
+    // 新形式の場合、AI人格に応じたメッセージを返す
+    if (personality && tip.messages && tip.messages[personality]) {
+      return tip.messages[personality];
+    }
+    return tip.message || '';
   }
 }
 
-// 学習中の息抜き知識（受験に役立つ内容）
-export function getBreatherTrivia(): string {
-  const breathers = [
-    '😃💡 受験テク！同じ単語の繰り返しを避けるため、代名詞（it, they, this）や同義語に注目すると読解が楽になりますよ。',
-    '😼💡 覚え方！動詞+前置詞の熟語は、イメージで覚えるといいぞ！look up（上を見る→調べる）、give up（上げる→諦める）だ！',
-    '🧙💡 長文のコツ：設問を先に読んでから本文を読むと、何を探せばいいか分かって効率的じゃ。',
-    '🤖💡 統計データ：初級は約1,077語、中級は約1,616語、上級は約885語です。計画的に語彙を増やしましょう。',
-    '😈💡 時制の一致！主節が過去形なら従属節も過去形だ！"He said that he was tired"だぞ！',
-    '😃💡 整序問題のコツ！まず主語と動詞を見つけて、修飾語を後から付け足すと解きやすいですよ。',
-    '🧙💡 冠詞の使い分け："a/an"は初めて出る・特定できないもの、"the"は既出・特定できるものじゃ。',
-    '😼💡 リスニング対策！消去法が有効だ！明らかに違う選択肢を消していくと正解率が上がるぞ！',
-    '🤖💡 効率的学習法：単語は文脈の中で覚えると定着率が3倍以上高まります。例文ごと覚えましょう。',
-    '😃💡 比較表現："as...as"（同等）、"-er than"（比較級）、"the -est"（最上級）の3パターンをマスターしましょう！'
+// 学習中の息抜き知識（受験に役立つ内容）- AI人格対応版
+export function getBreatherTrivia(personality?: AIPersonality): string {
+  // 全AI人格対応の豆知識データ
+  const triviaData = [
+    {
+      content: '受験テク！同じ単語の繰り返しを避けるため、代名詞や同義語に注目すると読解が楽になる',
+      messages: {
+        'drill-sergeant': '😈💡 受験テク！同じ単語の繰り返しを避けろ！代名詞（it, they, this）や同義語をチェックだ！読解が一気に楽になるぞ！',
+        'kind-teacher': '😃💡 受験テクです！同じ単語の繰り返しを避けるため、代名詞（it, they, this）や同義語に注目すると読解が楽になりますよ。',
+        'analyst': '🤖💡 読解効率化：代名詞（it, they, this）や同義語の参照関係を追うことで、論理構造を高速把握できます。',
+        'enthusiastic-coach': '😼💡 受験の裏ワザだ！同じ単語の繰り返しをチェックしろ！代名詞や同義語を見つければ読解が超楽になるぞ！',
+        'wise-sage': '🧙💡 読解の知恵じゃが、代名詞（it, they, this）や同義語の参照先を意識すると、文章の流れが見えてくるぞ。'
+      }
+    },
+    {
+      content: '動詞+前置詞の熟語は、イメージで覚える',
+      messages: {
+        'drill-sergeant': '😈💡 熟語の覚え方だ！動詞+前置詞はイメージで叩き込め！look up（上を見る→調べる）、give up（上げる→諦める）だぞ！',
+        'kind-teacher': '😃💡 覚え方のコツ！動詞+前置詞の熟語は、イメージで覚えると忘れにくいですよ。look up（調べる）、give up（諦める）のように！',
+        'analyst': '🤖💡 記憶定着法：動詞+前置詞熟語は視覚的イメージと結びつけることで長期記憶化率が向上します。',
+        'enthusiastic-coach': '😼💡 熟語暗記のコツだ！動詞+前置詞はイメージで覚えろ！look up（上見る→調べる）、give up（上げる→諦める）だ！',
+        'wise-sage': '🧙💡 熟語の知恵じゃが、動詞+前置詞はイメージで理解すると良いぞ。look up（調べる）は「上を見る」から来ておるのじゃ。'
+      }
+    },
+    {
+      content: '長文のコツ：設問を先に読む',
+      messages: {
+        'drill-sergeant': '😈💡 長文攻略法だ！設問を先に読め！何を探すべきか分かってから本文を読むんだ！時間短縮できるぞ！',
+        'kind-teacher': '😃💡 長文のコツです！設問を先に読んでから本文を読むと、何を探せばいいか分かって効率的ですよ。',
+        'analyst': '🤖💡 長文読解の最適化：設問を事前に確認することで、必要情報の選択的取得が可能になり、処理速度が向上します。',
+        'enthusiastic-coach': '😼💡 長文は設問が先だ！何を探すか分かってから読めば、無駄な時間をかけずに済むぞ！',
+        'wise-sage': '🧙💡 長文の知恵じゃが、設問を先に読んでから本文に臨むと、探すべき答えが見えてきて効率的じゃぞ。'
+      }
+    },
+    {
+      content: '統計データ：各難易度の単語数',
+      messages: {
+        'drill-sergeant': '😈💡 データを叩き込め！初級1,077語、中級1,616語、上級885語だ！計画的に語彙を増やせ！',
+        'kind-teacher': '😃💡 統計データです！初級は約1,077語、中級は約1,616語、上級は約885語ですよ。計画的に語彙を増やしましょう。',
+        'analyst': '🤖💡 統計データ：初級1,077語、中級1,616語、上級885語。合計3,578語を体系的に習得することが目標です。',
+        'enthusiastic-coach': '😼💡 データで見るぞ！初級1,077語、中級1,616語、上級885語だ！全部マスターすれば最強だぞ！',
+        'wise-sage': '🧙💡 数値で見ると、初級1,077語、中級1,616語、上級885語じゃ。焦らず一歩ずつ覚えていくのじゃぞ。'
+      }
+    },
+    {
+      content: '時制の一致の基本',
+      messages: {
+        'drill-sergeant': '😈💡 時制の一致だ！主節が過去形なら従属節も過去形だ！"He said that he was tired"だぞ！基本中の基本だ！',
+        'kind-teacher': '😃💡 時制の一致です！主節が過去形なら従属節も過去形にしましょう。"He said that he was tired"のようにね。',
+        'analyst': '🤖💡 時制の一致規則：主節＝過去形 → 従属節＝過去形。例："He said that he was tired"。文法の基礎です。',
+        'enthusiastic-coach': '😼💡 時制の一致を覚えろ！主節が過去なら従属節も過去だ！"He said that he was tired"って感じだ！',
+        'wise-sage': '🧙💡 時制の一致じゃが、主節が過去形なら従属節も過去形にするのが原則じゃ。"He said that he was tired"じゃな。'
+      }
+    }
   ];
   
-  return breathers[Math.floor(Math.random() * breathers.length)];
+  const selected = triviaData[Math.floor(Math.random() * triviaData.length)];
+  
+  // AI人格が指定されている場合は対応するメッセージを返す
+  if (personality && selected.messages[personality]) {
+    return selected.messages[personality];
+  }
+  
+  // デフォルト（優しい先生）
+  return selected.messages['kind-teacher'];
 }
