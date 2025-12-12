@@ -390,7 +390,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             
             units.push({
               value: `g${gradeNum}-unit${unitIdx}`,
-              label: `中${gradeNum}_${data.title}`
+              label: `中${gradeNum}_Unit${unitIdx}_${data.title}`
             });
           }
           // ファイルが存在しない場合は静かにスキップ
