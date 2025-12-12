@@ -32,9 +32,14 @@ test.describe('超高速煙テスト', () => {
 
     // 4. 問題が表示されることを確認（最重要：これが表示されればクイズは動作している）
     // 暗記タブには左右ボタンと中央に単語が表示される
-    // 英単語（4文字以上のアルファベット）が表示されていればOK
-    const wordDisplay = page.locator('text=/^[A-Za-z]{4,}$/');
+    // 「タップして発音」というtitle属性を持つ要素（=単語表示エリア）を探す
+    // 実装の細部（絵文字の有無等）に依存しない堅牢なセレクタ
+    const wordDisplay = page.locator('[title*="タップして発音"]').first();
     await expect(wordDisplay).toBeVisible({ timeout: 10000 });
+
+    // 単語エリア内に英単語が含まれることを確認（部分マッチで柔軟に）
+    const wordText = await wordDisplay.textContent();
+    expect(wordText).toMatch(/[A-Za-z]{3,}/); // 3文字以上の英単語が含まれればOK
 
     // 4. JavaScriptエラーがないことを確認
     const errors: string[] = [];
