@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 import type { LearningSchedule, DailyStudyPlan, Question } from '../types';
 import { 
   generateLearningPlan,

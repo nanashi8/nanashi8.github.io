@@ -8,7 +8,7 @@ import {
 } from '@/storage/indexedDB/indexedDBStorage';
 import type { ProgressData, StorageValue } from '@/types/storage';
 import { isMigrationCompleted } from '@/storage/migration/dataMigration';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 // ストレージ戦略の決定
 let useIndexedDB = false;

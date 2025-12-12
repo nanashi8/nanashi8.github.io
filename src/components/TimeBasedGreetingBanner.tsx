@@ -7,7 +7,7 @@ import {
   getTodayStudyStats as _getTodayStudyStats 
 } from '@/features/interaction/timeBasedGreeting';
 import { getTimeBasedTeacherChat, getSpecialDayChat } from '@/features/interaction/teacherInteractions';
-import { getBreatherTrivia } from '../englishTrivia';
+import { getBreatherTrivia } from '@/features/interaction/englishTrivia';
 
 interface TimeBasedGreetingBannerProps {
   onDismiss?: () => void;

@@ -10,7 +10,7 @@ import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSes
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '@/features/learning/learningAssistant';
 import { generateId } from '../utils';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { useSpellingGame } from '../hooks/useSpellingGame';
 import { useSessionStats } from '../hooks/useSessionStats';

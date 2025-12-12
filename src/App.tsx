@@ -29,7 +29,7 @@ import {
   deleteCustomQuestionSet,
   updateCustomQuestionSet,
 } from './utils/customQuestionStorage';
-import { logger } from './logger';
+import { logger } from '@/utils/logger';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './features/learning/learningAssistant';
 import {
   analyzeRadarChart,
@@ -1576,10 +1576,6 @@ function App() {
           />
         ) : activeTab === 'reading' ? (
           <ComprehensiveReadingView 
-            customQuestionSets={customQuestionState.sets}
-            onAddWordToCustomSet={handleAddWordToCustomSet}
-            onRemoveWordFromCustomSet={handleRemoveWordFromCustomSet}
-            onOpenCustomSetManagement={() => setIsFloatingPanelOpen(true)}
             onSaveUnknownWords={async (words) => {
               // 分からない単語を問題集として保存
               if (words.length === 0) return;

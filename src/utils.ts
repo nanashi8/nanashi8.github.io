@@ -1,5 +1,5 @@
 import { Question, isValidCategory, OFFICIAL_CATEGORIES } from './types';
-import { logger } from './logger';
+import { logger } from '@/utils/logger';
 
 /**
  * CSVテキストをパースして問題配列に変換

@@ -3,7 +3,7 @@
 import { getStorageEstimate, getCount, STORES } from '@/storage/indexedDB/indexedDBStorage';
 import { getMigrationInfo } from '@/storage/migration/dataMigration';
 import { formatBytes } from './dataExport';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 export interface StorageInfo {
   localStorage: {

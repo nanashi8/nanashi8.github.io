@@ -7,7 +7,7 @@ import { generateAIComment, getTimeOfDay } from '@/features/interaction/aiCommen
 import { calculateGoalProgress } from '@/features/learning/goalSimulator';
 import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '@/features/analysis/confusionPairs';
 import { generateTeacherInteraction, getTeacherReactionToStreak } from '@/features/interaction/teacherInteractions';
-import { getRelevantMistakeTip } from '../englishTrivia';
+import { getRelevantMistakeTip } from '@/features/interaction/englishTrivia';
 import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import AddToCustomButton from './AddToCustomButton';
 

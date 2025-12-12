@@ -1,7 +1,7 @@
 // 進捗・成績管理用のストレージモジュール（IndexedDB/LocalStorage統合）
 
 import { saveProgressData, loadProgressData, saveSetting, loadSetting } from '@/storage/manager/storageManager';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 
