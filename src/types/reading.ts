@@ -29,7 +29,7 @@ export interface ReadingSegment {
   word: string; // 単語（表示形：変化形のまま）
   meaning: string; // 意味
   isUnknown: boolean; // 分からない単語としてマークされているか
-  
+
   // Question型互換フィールド（単語帳保存用）
   lemma?: string; // 原形（辞書形）- gatheredならgather
   reading?: string; // カタカナ読み（例: ギャザー）

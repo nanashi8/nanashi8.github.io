@@ -53,6 +53,7 @@ npm run health-check
 ## CSV形式
 
 quiz-app互換の7列形式（**10カテゴリシステム**）:
+
 ```csv
 語句,読み,意味,語源等解説,関連語,関連分野,難易度
 apple,アˊップル,りんご,古英語の "æppel" が語源。,"fruit(フルート): 果物, pear(ペˊア): 洋なし",食・健康,初級
@@ -76,6 +77,7 @@ apple,アˊップル,りんご,古英語の "æppel" が語源。,"fruit(フル�
 ## デプロイ
 
 GitHub Pagesへのデプロイ:
+
 ```bash
 npm run build
 # distフォルダの内容をGitHub Pagesにデプロイ
@@ -117,6 +119,7 @@ npm run health-check
 ```
 
 **診断項目:**
+
 - localStorage キーの一貫性
 - 重複コンポーネント/関数の検出
 - useEffect 依存配列の警告
@@ -130,6 +133,7 @@ npm run health-check
 詳細レポート: [docs/quality/HEALTH_CHECK_REPORT.md](docs/quality/HEALTH_CHECK_REPORT.md)
 
 **推奨サイクル:**
+
 - 毎週: 軽量診断実行
 - 毎月: 詳細レポート作成
 - 四半期: リファクタリング実施

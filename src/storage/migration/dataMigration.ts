@@ -5,7 +5,7 @@ import {
   isIndexedDBSupported,
   putToDB,
   getFromDB,
-  STORES
+  STORES,
 } from '@/storage/indexedDB/indexedDBStorage';
 import { logger } from '@/utils/logger';
 
@@ -37,12 +37,17 @@ function getLocalStorageData(key: string): any {
   try {
     const data = localStorage.getItem(key);
     if (!data) return null;
-    
+
     // 文字列データは直接返す（JSONパースしない）
-    if (key.includes('lastLogin') || key.includes('Date') || key.includes('daily-plan') || key.includes('score-board')) {
+    if (
+      key.includes('lastLogin') ||
+      key.includes('Date') ||
+      key.includes('daily-plan') ||
+      key.includes('score-board')
+    ) {
       return null; // これらは別の方法で処理
     }
-    
+
     return JSON.parse(data);
   } catch (_error) {
     // JSONパースエラーは警告のみ（文字列データの可能性）
@@ -88,12 +93,16 @@ async function migrateProgressData(): Promise<boolean> {
       if (!progressData.questionSetStats) {
         progressData.questionSetStats = {};
       }
-      
+
       await putToDB(STORES.PROGRESS, progressData, 'main');
-      logger.log('📦 Progress data migrated:', Object.keys(progressData.wordProgress || {}).length, 'words');
+      logger.log(
+        '📦 Progress data migrated:',
+        Object.keys(progressData.wordProgress || {}).length,
+        'words'
+      );
       return true;
     }
-    
+
     // LocalStorageにデータがない場合は初期データを作成
     logger.log('ℹ️ No progress data to migrate, creating initial data');
     const initialData = {
@@ -128,7 +137,7 @@ async function migrateSessionHistory(): Promise<boolean> {
     for (const mode of modes) {
       const key = `session-history-${mode}`;
       const history = getLocalStorageData(key);
-      
+
       if (history && Array.isArray(history)) {
         // 各履歴アイテムをIndexedDBに保存
         for (const item of history) {
@@ -136,7 +145,7 @@ async function migrateSessionHistory(): Promise<boolean> {
             mode,
             status: item.status,
             word: item.word,
-            timestamp: item.timestamp
+            timestamp: item.timestamp,
           });
           totalMigrated++;
         }
@@ -201,17 +210,17 @@ async function migrateSettings(): Promise<boolean> {
       'user-goal-level',
       'loginStreak',
       'radar-improvement-progress',
-      'skip-exclude-groups'
+      'skip-exclude-groups',
     ];
 
     // 文字列形式のデータ（JSON.parseしない）
     const rawSettingsKeys = [
       'lastLoginDate',
-      'lastLoginData' // typo対策
+      'lastLoginData', // typo対策
     ];
 
     let migratedCount = 0;
-    
+
     // JSON形式の設定を移行（文字列データは除外）
     for (const key of jsonSettingsKeys) {
       try {
@@ -220,7 +229,7 @@ async function migrateSettings(): Promise<boolean> {
           logger.warn(`Skipping ${key} from JSON migration`);
           continue;
         }
-        
+
         const value = getLocalStorageData(key);
         if (value !== null) {
           await putToDB(STORES.SETTINGS, value, key);
@@ -230,7 +239,7 @@ async function migrateSettings(): Promise<boolean> {
         logger.warn(`Failed to migrate ${key}:`, error);
       }
     }
-    
+
     // 文字列形式の設定を移行
     for (const key of rawSettingsKeys) {
       try {
@@ -249,7 +258,7 @@ async function migrateSettings(): Promise<boolean> {
     for (const mode of modes) {
       const planKey = `daily-plan-target-${mode}`;
       const goalKey = `score-board-goal-${mode}`;
-      
+
       try {
         const planValue = localStorage.getItem(planKey);
         if (planValue) {
@@ -259,7 +268,7 @@ async function migrateSettings(): Promise<boolean> {
       } catch (error) {
         logger.warn(`Failed to migrate ${planKey}:`, error);
       }
-      
+
       try {
         const goalValue = localStorage.getItem(goalKey);
         if (goalValue) {
@@ -285,13 +294,13 @@ async function migrateSettings(): Promise<boolean> {
 async function verifyMigration(): Promise<boolean> {
   try {
     // 主要なデータが移行されたか確認
-    const progressData = await getFromDB(STORES.PROGRESS, 'main') as any;
-    
+    const progressData = (await getFromDB(STORES.PROGRESS, 'main')) as any;
+
     if (!progressData) {
       logger.warn('⚠️ Progress data verification failed - no data found');
       return false;
     }
-    
+
     // wordProgressが存在し、オブジェクトであることを確認
     if (!progressData.wordProgress || typeof progressData.wordProgress !== 'object') {
       logger.warn('⚠️ Progress data verification failed - invalid wordProgress');
@@ -331,7 +340,7 @@ export async function migrateToIndexedDB(): Promise<boolean> {
       migrateProgressData(),
       migrateSessionHistory(),
       migrateDailyStats(),
-      migrateSettings()
+      migrateSettings(),
     ]);
 
     // 結果をログ出力
@@ -344,11 +353,11 @@ export async function migrateToIndexedDB(): Promise<boolean> {
 
     // 最低限の移行が成功していればOK（全てが必須ではない）
     const criticalSuccess = results[0]; // Progress dataが最重要
-    
-    if (criticalSuccess || results.some(r => r)) {
+
+    if (criticalSuccess || results.some((r) => r)) {
       // データ検証
       const verified = await verifyMigration();
-      
+
       if (verified) {
         // 移行完了フラグを設定
         setMigrationCompleted();
@@ -389,6 +398,6 @@ export function getMigrationInfo(): {
   return {
     completed: isMigrationCompleted(),
     indexedDBSupported: isIndexedDBSupported(),
-    version: MIGRATION_VERSION
+    version: MIGRATION_VERSION,
   };
 }

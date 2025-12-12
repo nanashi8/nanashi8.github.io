@@ -42,11 +42,16 @@ interface WeakWord {
 
 function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: StatsViewProps) {
   const [autoRefresh, _setAutoRefresh] = useState<boolean>(false);
-  const [storageInfo, setStorageInfo] = useState<{ totalMB: number; details: { key: string; sizeMB: number }[] } | null>(null);
+  const [storageInfo, setStorageInfo] = useState<{
+    totalMB: number;
+    details: { key: string; sizeMB: number }[];
+  } | null>(null);
   const [hasWeakWordsSet, setHasWeakWordsSet] = useState<boolean>(false);
-  
+
   // 新しい統計データ
-  const [calendarData, setCalendarData] = useState<Array<{ date: string; count: number; accuracy: number }>>([]);
+  const [calendarData, setCalendarData] = useState<
+    Array<{ date: string; count: number; accuracy: number }>
+  >([]);
   const [_weeklyStats, setWeeklyStats] = useState<Record<string, unknown> | null>(null);
   const [_monthlyStats, setMonthlyStats] = useState<Record<string, unknown> | null>(null);
   const [_cumulativeData, setCumulativeData] = useState<Record<string, unknown>[]>([]);
@@ -61,7 +66,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     try {
       let totalSize = 0;
       const details: { key: string; sizeMB: number }[] = [];
-      
+
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key) {
@@ -73,7 +78,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
           }
         }
       }
-      
+
       details.sort((a, b) => b.sizeMB - a.sizeMB);
       setStorageInfo({ totalMB: totalSize / (1024 * 1024), details: details.slice(0, 5) });
     } catch (error) {
@@ -90,11 +95,13 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     setMonthlyStats(getMonthlyStats());
     setCumulativeData(getCumulativeProgressData(12));
     setRetentionTrend(getRetentionTrend());
-    
+
     // 苦手単語に詳細情報を追加
     const weakWordsBase = getCurrentWeakWords(10);
-    const weakWordsWithDetails = weakWordsBase.map(w => {
-      const questionData = allQuestions.find(q => q.word && w.word && q.word.toLowerCase() === w.word.toLowerCase());
+    const weakWordsWithDetails = weakWordsBase.map((w) => {
+      const questionData = allQuestions.find(
+        (q) => q.word && w.word && q.word.toLowerCase() === w.word.toLowerCase()
+      );
       return {
         ...w,
         etymology: questionData?.etymology,
@@ -103,28 +110,28 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       };
     });
     setWeakWords(weakWordsWithDetails);
-    
+
     setOvercomeWords(getOvercomeWeakWords(10));
     setRecentlyMastered(getRecentlyMasteredWords(7, 5));
-    
+
     const progress = loadProgressSync();
     setStreakDays(progress.statistics.streakDays);
-    
+
     getStorageSize();
   }, [allQuestions]);
 
   // リアルタイム更新
   useEffect(() => {
     loadData();
-    
+
     // 苦手単語セットが存在するかチェック
     const checkWeakWordsSet = async () => {
       const sets = await getCustomQuestionSets();
-      const hasSet = sets.some(s => s.source === 'weak-words');
+      const hasSet = sets.some((s) => s.source === 'weak-words');
       setHasWeakWordsSet(hasSet);
     };
     checkWeakWordsSet();
-    
+
     // 解答直後イベントで即時更新
     const onQuizResultAdded = () => {
       loadData();
@@ -133,7 +140,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     if (typeof window !== 'undefined') {
       window.addEventListener(QUIZ_RESULT_EVENT, onQuizResultAdded as EventListener);
     }
-    
+
     if (autoRefresh) {
       const interval = setInterval(() => {
         loadData();
@@ -146,7 +153,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
         }
       };
     }
-    
+
     // autoRefreshが無効の場合でもクリーンアップは必要
     return () => {
       if (typeof window !== 'undefined') {
@@ -158,9 +165,12 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
   // 難易度別リセット
   const _handleResetByDifficulty = (mode: 'translation' | 'spelling', difficulty: string) => {
     const modeName = mode === 'translation' ? '和訳タブ' : 'スペルタブ';
-    const difficultyName = difficulty === 'beginner' ? '初級' : difficulty === 'intermediate' ? '中級' : '上級';
-    
-    if (confirm(`${modeName}の${difficultyName}の成績をリセットしますか？この操作は元に戻せません。`)) {
+    const difficultyName =
+      difficulty === 'beginner' ? '初級' : difficulty === 'intermediate' ? '中級' : '上級';
+
+    if (
+      confirm(`${modeName}の${difficultyName}の成績をリセットしますか？この操作は元に戻せません。`)
+    ) {
       resetStatsByModeDifficulty(mode, difficulty);
       alert('成績をリセットしました');
       loadData();
@@ -172,7 +182,7 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
     if (confirm('本当にすべての学習記録を削除しますか？この操作は元に戻せません。')) {
       // resetAllProgressを使用して完全リセット
       resetAllProgress();
-      
+
       // UIを即座に更新
       setCalendarData([]);
       setWeeklyStats(null);
@@ -183,10 +193,10 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       setOvercomeWords([]);
       setRecentlyMastered([]);
       setStreakDays(0);
-      
+
       alert('学習記録をリセットしました');
       loadData(); // データを再読み込み
-      
+
       // 成績タブを表示
       if (onResetComplete) {
         onResetComplete();
@@ -200,7 +210,9 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
       <div className="w-full mb-4 px-2">
         <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center gap-2">
           📆 学習カレンダー
-          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">（過去12週間）</span>
+          <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
+            （過去12週間）
+          </span>
         </h3>
         <CalendarHeatmap data={calendarData} />
       </div>
@@ -215,8 +227,8 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-orange-200 dark:border-orange-700 p-6">
             <ul className="space-y-3">
               {weakWords.map((w, idx) => (
-                <li 
-                  key={idx} 
+                <li
+                  key={idx}
                   className="p-4 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/30 dark:to-red-900/30 rounded-lg border border-orange-200 dark:border-orange-700 hover:shadow-md hover:scale-[1.02] transition-all duration-200"
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -278,13 +290,15 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                     );
                     await saveCustomQuestionSet(questionSet);
                     setHasWeakWordsSet(true);
-                    
+
                     // 問題セット一覧を再読み込み
                     if (onQuestionSetsUpdated) {
                       await onQuestionSetsUpdated();
                     }
-                    
-                    alert(`✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`);
+
+                    alert(
+                      `✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`
+                    );
                   } catch (error) {
                     logger.error('問題セット作成エラー:', error);
                     alert('❌ 問題セットの作成に失敗しました');
@@ -299,13 +313,13 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                 onClick={async () => {
                   const limit = prompt('取得する苦手語句の数を入力してください（1-100）', '30');
                   if (!limit) return;
-                  
+
                   const numLimit = parseInt(limit);
                   if (isNaN(numLimit) || numLimit < 1 || numLimit > 100) {
                     alert('1から100までの数値を入力してください');
                     return;
                   }
-                  
+
                   try {
                     const questionSet = await createWeakWordsQuestionSet(
                       `苦手語句集 ${new Date().toLocaleDateString('ja-JP')} (${numLimit}語)`,
@@ -316,13 +330,15 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                     );
                     await saveCustomQuestionSet(questionSet);
                     setHasWeakWordsSet(true);
-                    
+
                     // 問題セット一覧を再読み込み
                     if (onQuestionSetsUpdated) {
                       await onQuestionSetsUpdated();
                     }
-                    
-                    alert(`✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`);
+
+                    alert(
+                      `✅ 問題セット「${questionSet.name}」を${hasWeakWordsSet ? '更新' : '作成'}しました！\n和訳・暗記・スペルタブで利用できます。`
+                    );
                   } catch (error) {
                     logger.error('問題セット作成エラー:', error);
                     alert('❌ 問題セットの作成に失敗しました');
@@ -336,8 +352,12 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
           </div>
         ) : (
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl border-2 border-dashed border-green-300 dark:border-green-700 p-8 text-center">
-            <p className="text-xl font-semibold text-green-700 dark:text-green-300">苦手な単語はありません！🎉</p>
-            <p className="text-sm text-green-600 dark:text-green-400 mt-2">順調に学習が進んでいます</p>
+            <p className="text-xl font-semibold text-green-700 dark:text-green-300">
+              苦手な単語はありません！🎉
+            </p>
+            <p className="text-sm text-green-600 dark:text-green-400 mt-2">
+              順調に学習が進んでいます
+            </p>
           </div>
         )}
       </div>
@@ -354,8 +374,8 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                 すべての学習記録を削除します。この操作は元に戻せません。
               </p>
             </div>
-            <button 
-              onClick={handleResetAll} 
+            <button
+              onClick={handleResetAll}
               className="px-8 py-3 bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800 text-white font-bold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
             >
               🗑️ リセット実行
@@ -376,16 +396,23 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
                 <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">
                   合計使用量
                 </span>
-                <span className={`text-xl font-bold ${storageInfo.totalMB > 4 ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400'}`}>
-                  {storageInfo.totalMB.toFixed(2)} MB <span className="text-sm font-normal text-gray-500 dark:text-gray-400">/ 約 5-10 MB</span>
+                <span
+                  className={`text-xl font-bold ${storageInfo.totalMB > 4 ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400'}`}
+                >
+                  {storageInfo.totalMB.toFixed(2)} MB{' '}
+                  <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
+                    / 約 5-10 MB
+                  </span>
                 </span>
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative">
-                <div 
+                <div
                   className={`h-full rounded-full transition-all duration-500 absolute left-0 top-0 ${
-                    storageInfo.totalMB > 8 ? 'bg-red-600 w-full' :
-                    storageInfo.totalMB > 4 ? 'bg-yellow-500' :
-                    'bg-green-500'
+                    storageInfo.totalMB > 8
+                      ? 'bg-red-600 w-full'
+                      : storageInfo.totalMB > 4
+                        ? 'bg-yellow-500'
+                        : 'bg-green-500'
                   }`}
                   data-progress={Math.min((storageInfo.totalMB / 10) * 100, 100)}
                 />
@@ -402,16 +429,25 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
               </summary>
               <ul className="mt-4 space-y-2">
                 {storageInfo.details.map((item, idx) => (
-                  <li key={idx} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <code className="text-sm text-gray-700 dark:text-gray-300 font-mono">{item.key}</code>
-                    <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{item.sizeMB.toFixed(2)} MB</span>
+                  <li
+                    key={idx}
+                    className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg"
+                  >
+                    <code className="text-sm text-gray-700 dark:text-gray-300 font-mono">
+                      {item.key}
+                    </code>
+                    <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                      {item.sizeMB.toFixed(2)} MB
+                    </span>
                   </li>
                 ))}
               </ul>
               <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
                 <p className="text-sm text-blue-700 dark:text-blue-300 flex items-start gap-2">
                   <span className="text-lg">💡</span>
-                  <span>ヒント: データが大きくなりすぎた場合は、古い成績を削除すると容量を節約できます。</span>
+                  <span>
+                    ヒント: データが大きくなりすぎた場合は、古い成績を削除すると容量を節約できます。
+                  </span>
                 </p>
               </div>
             </details>
@@ -423,35 +459,46 @@ function StatsView({ onResetComplete, allQuestions, onQuestionSetsUpdated }: Sta
 }
 
 // カレンダーヒートマップコンポーネント（過去2週間）
-function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; accuracy: number }> }) {
+function CalendarHeatmap({
+  data,
+}: {
+  data: Array<{ date: string; count: number; accuracy: number }>;
+}) {
   // 今日の日付を取得(YYYY-MM-DD形式)
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const todayStr = formatLocalYYYYMMDD(today);
-  
+
   // 今日のデータを取得
-  const todayData = data.find(d => d.date === todayStr);
-  
+  const todayData = data.find((d) => d.date === todayStr);
+
   if (data.length === 0) {
     return (
       <div className="w-full p-8 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 text-center">
         <p className="text-gray-500 dark:text-gray-400 text-lg">📊 データがありません</p>
-        <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">学習を開始するとヒートマップが表示されます</p>
-        <p className="text-xs text-red-500 mt-4">DEBUG: 今日={todayStr}, データ件数={data.length}, 今日のデータ={todayData ? `${todayData.count}問` : 'なし'}</p>
+        <p className="text-gray-400 dark:text-gray-500 text-sm mt-2">
+          学習を開始するとヒートマップが表示されます
+        </p>
+        <p className="text-xs text-red-500 mt-4">
+          DEBUG: 今日={todayStr}, データ件数={data.length}, 今日のデータ=
+          {todayData ? `${todayData.count}問` : 'なし'}
+        </p>
       </div>
     );
   }
-  
+
   // 過去2週間(14日間)の日付を生成
   const twoWeeksAgo = new Date(today);
   twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 13); // 今日を含む14日間
-  
+
   // データをマップに変換（日付がキー）
-  const dataMap = new Map(data.map(d => [d.date, d]));
-  
+  const dataMap = new Map(data.map((d) => [d.date, d]));
+
   // 2週間分のデータを曜日ごとに整理（月〜日の7列 × 2行）
-  const weeks: Array<Array<{ date: string; count: number; accuracy: number; correct: number } | null>> = [[], []];
-  
+  const weeks: Array<
+    Array<{ date: string; count: number; accuracy: number; correct: number } | null>
+  > = [[], []];
+
   // 表示開始日を決定（先週の月曜日）→ 今週分に必ず今日を含める
   const mondayThisWeek = new Date(today);
   const dow = mondayThisWeek.getDay();
@@ -460,32 +507,34 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
   // 2週表示のため開始日は「先週の月曜日」
   const firstDate = new Date(mondayThisWeek);
   firstDate.setDate(firstDate.getDate() - 7);
-  
+
   const currentDate = new Date(firstDate);
-  
+
   // 2週間分のデータを配置
   for (let week = 0; week < 2; week++) {
     for (let day = 0; day < 7; day++) {
       const dateStr = formatLocalYYYYMMDD(currentDate);
       const dayData = dataMap.get(dateStr);
-      
+
       // currentDateを正規化してから比較
       const normalizedCurrentDate = new Date(currentDate);
       normalizedCurrentDate.setHours(0, 0, 0, 0);
-      
+
       // 今日より未来の日付はnullにする
       if (normalizedCurrentDate.getTime() > today.getTime()) {
         weeks[week].push(null);
       } else {
         // 正解数を計算(count * accuracy / 100)
-        const correct = dayData ? Math.round(dayData.count * dayData.accuracy / 100) : 0;
-        const cellData = dayData ? { ...dayData, correct } : { date: dateStr, count: 0, accuracy: 0, correct: 0 };
+        const correct = dayData ? Math.round((dayData.count * dayData.accuracy) / 100) : 0;
+        const cellData = dayData
+          ? { ...dayData, correct }
+          : { date: dateStr, count: 0, accuracy: 0, correct: 0 };
         weeks[week].push(cellData);
       }
       currentDate.setDate(currentDate.getDate() + 1);
     }
   }
-  
+
   // 色の濃さを決定
   const getColorClass = (count: number) => {
     if (count === 0) return 'calendar-color-0';
@@ -505,39 +554,51 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
           {/* 曜日ラベル */}
           <div className="flex gap-2 mb-2">
             {dayLabels.map((label, idx) => (
-              <div key={idx} className="w-20 h-8 flex items-center justify-center text-sm font-bold text-gray-700 dark:text-gray-200">
+              <div
+                key={idx}
+                className="w-20 h-8 flex items-center justify-center text-sm font-bold text-gray-700 dark:text-gray-200"
+              >
                 {label}
               </div>
             ))}
           </div>
-          
+
           {/* カレンダーグリッド - 2週間 */}
           <div className="flex flex-col gap-2">
             {weeks.map((week, weekIdx) => (
               <div key={weekIdx} className="flex gap-2">
                 {week.map((day, dayIdx) => {
                   if (!day) {
-                    return <div key={dayIdx} className="w-20 h-20 rounded bg-gray-100 dark:bg-gray-700 border border-dashed border-gray-300 dark:border-gray-600"></div>;
+                    return (
+                      <div
+                        key={dayIdx}
+                        className="w-20 h-20 rounded bg-gray-100 dark:bg-gray-700 border border-dashed border-gray-300 dark:border-gray-600"
+                      ></div>
+                    );
                   }
-                  
+
                   const date = new Date(day.date);
                   const dayName = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
                   const isToday = day.date === todayStr;
                   const colorClasses = {
-                    'calendar-color-0': 'bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400',
-                    'calendar-color-1': 'bg-blue-300 dark:bg-blue-800 text-blue-900 dark:text-blue-100',
+                    'calendar-color-0':
+                      'bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400',
+                    'calendar-color-1':
+                      'bg-blue-300 dark:bg-blue-800 text-blue-900 dark:text-blue-100',
                     'calendar-color-2': 'bg-blue-400 dark:bg-blue-700 text-white',
                     'calendar-color-3': 'bg-blue-500 dark:bg-blue-600 text-white',
                     'calendar-color-4': 'bg-blue-600 dark:bg-blue-500 text-white',
                   };
-                  
+
                   return (
                     <div
                       key={dayIdx}
                       className={`w-20 h-20 rounded-lg flex items-center justify-center text-xs font-bold transition-all duration-200 hover:scale-105 hover:shadow-xl cursor-pointer border-2 ${
                         colorClasses[getColorClass(day.count) as keyof typeof colorClasses]
                       } ${
-                        isToday ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white dark:ring-offset-gray-800 shadow-2xl border-yellow-400' : 'border-transparent'
+                        isToday
+                          ? 'ring-4 ring-yellow-400 ring-offset-2 ring-offset-white dark:ring-offset-gray-800 shadow-2xl border-yellow-400'
+                          : 'border-transparent'
                       }`}
                       title={`${day.date} (${dayName})${isToday ? ' [今日]' : ''}: ${day.count}問 (正答率${day.accuracy.toFixed(0)}%, 正解${day.correct}問)`}
                     >
@@ -554,7 +615,7 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
           </div>
         </div>
       </div>
-      
+
       {/* 凡例 */}
       <div className="flex flex-col gap-2 mt-6 text-sm">
         <div className="flex items-center justify-center gap-3 text-gray-600 dark:text-gray-300">
@@ -567,7 +628,7 @@ function CalendarHeatmap({ data }: { data: Array<{ date: string; count: number; 
           <span className="text-xs">多</span>
         </div>
         <div className="text-center text-xs text-gray-500 dark:text-gray-400">
-          <span className="font-semibold">表示:</span> 正解数/出題数 | 
+          <span className="font-semibold">表示:</span> 正解数/出題数 |
           <span className="ml-2 inline-block w-6 h-6 rounded bg-gray-200 dark:bg-gray-600 border-2 border-yellow-400 align-middle"></span>
           <span className="ml-1">= 今日</span>
         </div>

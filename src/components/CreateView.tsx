@@ -13,14 +13,16 @@ function CreateView() {
     difficulty: '2',
   });
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.word.trim() || !formData.meaning.trim()) {
       alert('語句と意味は必須項目です');
       return;
@@ -59,7 +61,7 @@ function CreateView() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     const timestamp = new Date().toISOString().slice(0, 10);
-    
+
     link.setAttribute('href', url);
     link.setAttribute('download', `quiz-${timestamp}.csv`);
     link.style.visibility = 'hidden';
@@ -76,7 +78,7 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
     const blob = new Blob([templateContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    
+
     link.setAttribute('href', url);
     link.setAttribute('download', 'template.csv');
     link.style.visibility = 'hidden';
@@ -170,7 +172,10 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
           </select>
         </div>
 
-        <button type="submit" className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary">
+        <button
+          type="submit"
+          className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary"
+        >
           ➕ 問題を追加
         </button>
       </form>
@@ -186,7 +191,10 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
             >
               📥 CSVダウンロード
             </button>
-            <button className="px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover" onClick={handleDownloadTemplate}>
+            <button
+              className="px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
+              onClick={handleDownloadTemplate}
+            >
               📄 テンプレート
             </button>
           </div>

@@ -213,7 +213,10 @@ const GamificationPanel: React.FC<GamificationPanelProps> = ({ onClose }) => {
                 <div className="milestone-progress-bar">
                   <div
                     className="milestone-progress-fill"
-                    data-width={Math.min(Math.round((milestone.current / milestone.target) * 100), 100)}
+                    data-width={Math.min(
+                      Math.round((milestone.current / milestone.target) * 100),
+                      100
+                    )}
                   />
                 </div>
                 <div className="milestone-progress-text">

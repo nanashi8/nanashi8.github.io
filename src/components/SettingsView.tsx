@@ -52,7 +52,7 @@ function SettingsView({
   // 音声設定の読み込み
   const [voiceGender, setVoiceGender] = useState<'female' | 'male'>(() => {
     const saved = localStorage.getItem('voiceGender');
-    return (saved === 'female' || saved === 'male') ? saved : 'female'; // 初期値を女性に設定
+    return saved === 'female' || saved === 'male' ? saved : 'female'; // 初期値を女性に設定
   });
 
   const [speechRate, setSpeechRate] = useState<number>(() => {
@@ -107,7 +107,7 @@ function SettingsView({
   useEffect(() => {
     // main.tsxで初期化済みだが、ユーザーが設定変更した場合は再適用
     applyDarkMode(darkMode);
-    
+
     // システム設定の変更を監視（systemモードの場合のみ）
     if (darkMode === 'system') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -130,7 +130,9 @@ function SettingsView({
         <h3 className="text-xl font-bold text-text-color mb-4 flex items-center gap-2">
           <span>📚</span>
           <span>カスタム問題セット</span>
-          <span className="text-sm font-normal text-text-secondary">({customQuestionSets.length}個)</span>
+          <span className="text-sm font-normal text-text-secondary">
+            ({customQuestionSets.length}個)
+          </span>
         </h3>
         <div className="space-y-3">
           <button
@@ -141,16 +143,14 @@ function SettingsView({
             <span>カスタムセットを管理</span>
           </button>
           <p className="text-sm text-text-secondary bg-bg-secondary px-4 py-3 rounded-lg">
-            💡 自分だけのオリジナル問題セットを作成・管理できます。学習したい単語を自由に追加して、効率的に復習しましょう。
+            💡
+            自分だけのオリジナル問題セットを作成・管理できます。学習したい単語を自由に追加して、効率的に復習しましょう。
           </p>
         </div>
       </div>
 
       {/* 学習プラン設定 */}
-      <LearningPlanView
-        allQuestions={allQuestions}
-        onStartSession={onStartSession}
-      />
+      <LearningPlanView allQuestions={allQuestions} onStartSession={onStartSession} />
 
       {/* AI人格選択 */}
       <div className="bg-card-bg rounded-xl p-6 shadow-md border-2 border-card-border">
@@ -159,7 +159,12 @@ function SettingsView({
           <span>AIの人格</span>
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {(Object.entries(PERSONALITY_INFO) as [AIPersonality, typeof PERSONALITY_INFO[AIPersonality]][]).map(([key, info]) => (
+          {(
+            Object.entries(PERSONALITY_INFO) as [
+              AIPersonality,
+              (typeof PERSONALITY_INFO)[AIPersonality],
+            ][]
+          ).map(([key, info]) => (
             <button
               key={key}
               className={`flex flex-col items-center gap-2 p-4 rounded-lg border-2 transition-all duration-200 ${
@@ -198,7 +203,7 @@ function SettingsView({
           <span>🔊</span>
           <span>音声設定</span>
         </h3>
-        
+
         {/* 声の種類 */}
         <div className="mb-6">
           <h4 className="text-base font-semibold text-text-color mb-3 flex items-center gap-2">
@@ -241,10 +246,16 @@ function SettingsView({
           <div className="bg-bg-secondary rounded-lg p-6">
             {/* 現在の速度表示 */}
             <div className="text-center mb-6">
-              <div className="font-bold text-primary text-4xl mb-1">{Math.round(speechRate * 150)}</div>
+              <div className="font-bold text-primary text-4xl mb-1">
+                {Math.round(speechRate * 150)}
+              </div>
               <div className="text-sm text-text-secondary">WPM</div>
               <div className="text-xs text-text-secondary mt-2">
-                {speechRate < 0.75 ? '🐢 ゆっくりと発音' : speechRate >= 0.95 ? '🚀 ネイティブ並の速度' : '🎯 高校入試リスニング相当'}
+                {speechRate < 0.75
+                  ? '🐢 ゆっくりと発音'
+                  : speechRate >= 0.95
+                    ? '🚀 ネイティブ並の速度'
+                    : '🎯 高校入試リスニング相当'}
               </div>
             </div>
 

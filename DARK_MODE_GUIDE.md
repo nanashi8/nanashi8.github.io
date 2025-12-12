@@ -51,11 +51,13 @@ npm run check:dark-mode
 ## 推奨される色パレット
 
 ### ライトモード
+
 - 背景: `bg-white`, `bg-gray-50`, `bg-gray-100`, `bg-blue-50`
 - テキスト: `text-gray-700`, `text-gray-800`, `text-gray-900`
 - 枠線: `border-gray-200`, `border-gray-300`
 
 ### ダークモード
+
 - 背景: `dark:bg-gray-800`, `dark:bg-gray-900`, `dark:bg-black`
 - テキスト: `dark:text-gray-100`, `dark:text-gray-200`, `dark:text-gray-300`
 - 枠線: `dark:border-gray-600`, `dark:border-gray-700`

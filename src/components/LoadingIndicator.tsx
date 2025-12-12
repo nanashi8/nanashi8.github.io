@@ -8,9 +8,9 @@ interface LoadingIndicatorProps {
   message?: string;
 }
 
-export const LoadingIndicator: React.FC<LoadingIndicatorProps> = ({ 
-  isVisible, 
-  message = '読み込み中...' 
+export const LoadingIndicator: React.FC<LoadingIndicatorProps> = ({
+  isVisible,
+  message = '読み込み中...',
 }) => {
   if (!isVisible) return null;
 
@@ -22,13 +22,11 @@ export const LoadingIndicator: React.FC<LoadingIndicatorProps> = ({
           <div className="absolute inset-0 rounded-full border-4 border-gray-200 dark:border-gray-700"></div>
           <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-600 dark:border-t-blue-400 animate-spin"></div>
         </div>
-        
+
         {/* メッセージ */}
         <div className="text-center">
           <p className="text-gray-800 dark:text-gray-100 font-semibold text-lg">{message}</p>
-          <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
-            準備中です...
-          </p>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">準備中です...</p>
         </div>
       </div>
     </div>

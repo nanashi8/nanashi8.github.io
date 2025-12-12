@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import { QuizState, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
-import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
+import {
+  DifficultyLevel,
+  WordPhraseFilter,
+  PhraseTypeFilter,
+  OFFICIAL_CATEGORIES,
+  DataSource,
+} from '../App';
 import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
@@ -74,43 +80,43 @@ function QuizView({
   onRemoveWordFromCustomSet,
   onOpenCustomSetManagement,
 }: QuizViewProps) {
-  const { questions, currentIndex, answered, selectedAnswer } =
-    quizState;
+  const { questions, currentIndex, answered, selectedAnswer } = quizState;
 
   const hasQuestions = questions.length > 0;
   const currentQuestion = hasQuestions ? questions[currentIndex] : null;
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
-  
+
   // 回答時刻を記録（ScoreBoard更新用）
   const [lastAnswerTime, setLastAnswerTime] = useState<number>(Date.now());
-  
+
   // 学習中・要復習の上限設定（カスタムフック使用）
-  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } = useLearningLimits('translation');
-  
+  const { learningLimit, reviewLimit, setLearningLimit, setReviewLimit } =
+    useLearningLimits('translation');
+
   // 自動次への設定
   const [autoNext, setAutoNext] = useState<boolean>(() => {
     const saved = localStorage.getItem('autoNext');
     return saved === 'true';
   });
-  
+
   const [autoNextDelay, setAutoNextDelay] = useState<number>(() => {
     const saved = localStorage.getItem('autoNextDelay');
     return saved ? parseInt(saved, 10) : 1500;
   });
-  
+
   // 不正解時詳細自動表示の設定
   const [autoShowDetails, setAutoShowDetails] = useState<boolean>(() => {
     const saved = localStorage.getItem('autoShowDetails');
     return saved !== 'false'; // デフォルトはtrue
   });
-  
+
   // 回答処理をラップ（回答時刻更新用）
   const handleAnswer = async (answer: string, correct: string) => {
     await onAnswer(answer, correct);
     // 回答処理完了後にタイムスタンプを更新（履歴表示用）
     setLastAnswerTime(Date.now());
-    
+
     // 正解した場合、自動次へが有効なら次の問題に進む
     if (autoNext && answer === correct) {
       setTimeout(() => {
@@ -118,7 +124,7 @@ function QuizView({
       }, autoNextDelay);
     }
   };
-  
+
   // スキップ処理をラップ（回答時刻更新用）
   const handleSkipWrapper = async () => {
     if (onSkip) {
@@ -158,13 +164,14 @@ function QuizView({
             <div className="plan-progress-info">
               <div className="plan-progress-title">学習プラン進行中</div>
               <div className="plan-progress-detail">
-                {planStatus.currentDay}日目 / {planStatus.totalDays}日 (Phase {planStatus.phase}) - {planStatus.progressPercent}%完了
+                {planStatus.currentDay}日目 / {planStatus.totalDays}日 (Phase {planStatus.phase}) -{' '}
+                {planStatus.progressPercent}%完了
               </div>
             </div>
           </div>
         </div>
       )}
-      
+
       {hasQuestions && (
         <>
           <ScoreBoard
@@ -180,25 +187,27 @@ function QuizView({
             onShowSettings={() => setShowSettings(true)}
             currentWord={currentQuestion?.word}
             onAnswerTime={lastAnswerTime}
-            dataSource={questionSets?.find(qs => qs.id === selectedDataSource)?.name || '全問題集'}
+            dataSource={
+              questionSets?.find((qs) => qs.id === selectedDataSource)?.name || '全問題集'
+            }
             category={selectedCategory === '全分野' ? '全分野' : selectedCategory}
             difficulty={selectedDifficulty}
             wordPhraseFilter={selectedWordPhraseFilter}
           />
-          
+
           {/* クイズ中の学習設定パネル */}
           {showSettings && (
             <div className="study-settings-panel">
               <div className="settings-header">
                 <h3>📊 学習設定</h3>
-                <button 
-                  onClick={() => setShowSettings(false)} 
+                <button
+                  onClick={() => setShowSettings(false)}
                   className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
                 >
                   ✕ 閉じる
                 </button>
               </div>
-              
+
               <div className="filter-group">
                 <label htmlFor="category-select-quiz">📚 関連分野:</label>
                 <select
@@ -290,7 +299,7 @@ function QuizView({
                 onReviewLimitChange={setReviewLimit}
                 idPrefix="quiz-"
               />
-              
+
               {/* 自動次へ設定 */}
               <div className="filter-group">
                 <div className="checkbox-row">
@@ -308,7 +317,7 @@ function QuizView({
                   </label>
                 </div>
               </div>
-              
+
               {autoNext && (
                 <div className="filter-group">
                   <label htmlFor="auto-next-delay">⏱️ 次への遅延時間：</label>
@@ -351,7 +360,7 @@ function QuizView({
               </div>
             </div>
           )}
-          
+
           <div className="question-container">
             {currentQuestion && (
               <>

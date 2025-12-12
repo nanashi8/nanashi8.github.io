@@ -19,7 +19,7 @@ export function ErrorLogPanel({ onClose }: ErrorLogPanelProps) {
     return () => clearInterval(interval);
   }, []);
 
-  const errors = logs.filter(log => log.type === 'error');
+  const errors = logs.filter((log) => log.type === 'error');
 
   return (
     <div className="error-log-panel">
@@ -44,34 +44,29 @@ export function ErrorLogPanel({ onClose }: ErrorLogPanelProps) {
           </button>
         </div>
       </div>
-      
+
       <div className="error-log-content">
-        {errors.slice(-10).reverse().map((log, index) => {
-          const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
-          return (
-            <div key={index} className="error-log-item">
-              <div className="error-log-time">
-                {time}
+        {errors
+          .slice(-10)
+          .reverse()
+          .map((log, index) => {
+            const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
+            return (
+              <div key={index} className="error-log-item">
+                <div className="error-log-time">{time}</div>
+                <div className="error-log-message">{log.message}</div>
+                {log.stack && (
+                  <details className="error-log-stack-details">
+                    <summary className="error-log-stack-summary">スタックトレース</summary>
+                    <pre className="error-log-stack-pre">{log.stack}</pre>
+                  </details>
+                )}
               </div>
-              <div className="error-log-message">
-                {log.message}
-              </div>
-              {log.stack && (
-                <details className="error-log-stack-details">
-                  <summary className="error-log-stack-summary">スタックトレース</summary>
-                  <pre className="error-log-stack-pre">
-                    {log.stack}
-                  </pre>
-                </details>
-              )}
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
-      
-      <div className="error-log-footer">
-        このログをコピーして開発者に送信してください
-      </div>
+
+      <div className="error-log-footer">このログをコピーして開発者に送信してください</div>
     </div>
   );
 }
@@ -86,7 +81,7 @@ export function ErrorBadge() {
     if (import.meta.env.PROD) {
       return;
     }
-    
+
     const interval = setInterval(() => {
       const errors = errorLogger.getRecentErrors();
       setErrorCount(errors.length);
@@ -112,10 +107,7 @@ export function ErrorBadge() {
     <>
       {showPanel && <ErrorLogPanel onClose={() => setShowPanel(false)} />}
       {!showPanel && (
-        <button
-          onClick={() => setShowPanel(true)}
-          className="error-badge"
-        >
+        <button onClick={() => setShowPanel(true)} className="error-badge">
           <span>🐛</span>
           <span className="error-badge-count">{errorCount}</span>
         </button>

@@ -45,7 +45,7 @@
   .dark {
     @apply bg-gray-900 text-white;
   }
-  
+
   /* ライトモード時の背景 */
   body:not(.dark) {
     @apply bg-white text-gray-900;

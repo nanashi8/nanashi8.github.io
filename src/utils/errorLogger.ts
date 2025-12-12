@@ -15,12 +15,7 @@ class ErrorLogger {
   private originalConsoleError: typeof console.error;
   private originalConsoleWarn: typeof console.warn;
   private originalConsoleLog: typeof console.log;
-  private ignorePatterns = [
-    'Sentry接続テスト',
-    'Sentryテスト',
-    '🎯 Sentry',
-    'ResizeObserver'
-  ];
+  private ignorePatterns = ['Sentry接続テスト', 'Sentryテスト', '🎯 Sentry', 'ResizeObserver'];
 
   constructor() {
     this.originalConsoleError = console.error.bind(console);
@@ -44,7 +39,12 @@ class ErrorLogger {
     const originalLog = console.log.bind(console);
     console.log = (...args: any[]) => {
       const message = args.join(' ');
-      if (message.includes('❌') || message.includes('⚠️') || message.includes('🔄') || message.includes('Migration')) {
+      if (
+        message.includes('❌') ||
+        message.includes('⚠️') ||
+        message.includes('🔄') ||
+        message.includes('Migration')
+      ) {
         this.addLog('info', args);
       }
       originalLog(...args);
@@ -52,29 +52,34 @@ class ErrorLogger {
   }
 
   private addLog(type: 'error' | 'warn' | 'info', args: any[]): void {
-    const message = args.map(arg => {
-      if (arg instanceof Error) {
-        return arg.message;
-      }
-      if (typeof arg === 'object') {
-        try {
-          return JSON.stringify(arg);
-        } catch {
-          return String(arg);
+    const message = args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          return arg.message;
         }
-      }
-      return String(arg);
-    }).join(' ');
+        if (typeof arg === 'object') {
+          try {
+            return JSON.stringify(arg);
+          } catch {
+            return String(arg);
+          }
+        }
+        return String(arg);
+      })
+      .join(' ');
 
     // 除外パターンのメッセージは無視
-    if (this.ignorePatterns.some(p => message.includes(p))) {
+    if (this.ignorePatterns.some((p) => message.includes(p))) {
       return;
     }
 
     // エラーウィンドウ自身に起因するものは無視（スタック/引数にコンポーネント名が含まれる場合）
-    const stackStr = args.find(arg => arg instanceof Error)?.stack || '';
-    if ((stackStr && (stackStr.includes('ErrorLogPanel') || stackStr.includes('ErrorBadge'))) ||
-        message.includes('ErrorLogPanel') || message.includes('ErrorBadge')) {
+    const stackStr = args.find((arg) => arg instanceof Error)?.stack || '';
+    if (
+      (stackStr && (stackStr.includes('ErrorLogPanel') || stackStr.includes('ErrorBadge'))) ||
+      message.includes('ErrorLogPanel') ||
+      message.includes('ErrorBadge')
+    ) {
       return;
     }
 
@@ -82,11 +87,11 @@ class ErrorLogger {
       timestamp: Date.now(),
       message,
       type,
-      stack: args.find(arg => arg instanceof Error)?.stack
+      stack: args.find((arg) => arg instanceof Error)?.stack,
     };
 
     this.logs.push(log);
-    
+
     // 最大数を超えたら古いログを削除
     if (this.logs.length > this.maxLogs) {
       this.logs.shift();
@@ -104,21 +109,18 @@ class ErrorLogger {
   captureGlobalErrors(): void {
     window.addEventListener('error', (event) => {
       const msg = `${event.message}`;
-      if (this.ignorePatterns.some(p => msg.includes(p))) return;
+      if (this.ignorePatterns.some((p) => msg.includes(p))) return;
       this.addLog('error', [
         `Uncaught Error: ${event.message}`,
         `at ${event.filename}:${event.lineno}:${event.colno}`,
-        event.error
+        event.error,
       ]);
     });
 
     window.addEventListener('unhandledrejection', (event) => {
       const reasonStr = `${(event as any).reason || ''}`;
-      if (this.ignorePatterns.some(p => reasonStr.includes(p))) return;
-      this.addLog('error', [
-        'Unhandled Promise Rejection:',
-        event.reason
-      ]);
+      if (this.ignorePatterns.some((p) => reasonStr.includes(p))) return;
+      this.addLog('error', ['Unhandled Promise Rejection:', event.reason]);
     });
   }
 
@@ -127,15 +129,17 @@ class ErrorLogger {
   }
 
   getRecentErrors(): ErrorLog[] {
-    return this.logs.filter(log => log.type === 'error').slice(-10);
+    return this.logs.filter((log) => log.type === 'error').slice(-10);
   }
 
   getFormattedLogs(): string {
-    return this.logs.map(log => {
-      const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
-      const icon = log.type === 'error' ? '❌' : log.type === 'warn' ? '⚠️' : 'ℹ️';
-      return `${icon} [${time}] ${log.message}`;
-    }).join('\n');
+    return this.logs
+      .map((log) => {
+        const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
+        const icon = log.type === 'error' ? '❌' : log.type === 'warn' ? '⚠️' : 'ℹ️';
+        return `${icon} [${time}] ${log.message}`;
+      })
+      .join('\n');
   }
 
   clearLogs(): void {
@@ -149,9 +153,9 @@ class ErrorLogger {
 
   // エラーレポートを生成
   generateReport(): string {
-    const errors = this.logs.filter(log => log.type === 'error');
-    const warnings = this.logs.filter(log => log.type === 'warn');
-    
+    const errors = this.logs.filter((log) => log.type === 'error');
+    const warnings = this.logs.filter((log) => log.type === 'warn');
+
     return `
 === エラーレポート ===
 生成日時: ${new Date().toLocaleString('ja-JP')}
@@ -159,16 +163,22 @@ class ErrorLogger {
 警告数: ${warnings.length}
 
 --- 最近のエラー ---
-${errors.slice(-5).map(log => {
-  const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
-  return `[${time}] ${log.message}${log.stack ? '\n' + log.stack : ''}`;
-}).join('\n\n')}
+${errors
+  .slice(-5)
+  .map((log) => {
+    const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
+    return `[${time}] ${log.message}${log.stack ? '\n' + log.stack : ''}`;
+  })
+  .join('\n\n')}
 
 --- 最近の警告 ---
-${warnings.slice(-5).map(log => {
-  const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
-  return `[${time}] ${log.message}`;
-}).join('\n\n')}
+${warnings
+  .slice(-5)
+  .map((log) => {
+    const time = new Date(log.timestamp).toLocaleTimeString('ja-JP');
+    return `[${time}] ${log.message}`;
+  })
+  .join('\n\n')}
 
 --- 全ログ ---
 ${this.getFormattedLogs()}

@@ -12,7 +12,7 @@ export interface SessionStats {
 
 /**
  * セッション統計を管理するフック
- * 
+ *
  * 正解・不正解・要復習・定着済みのカウントを追跡
  */
 export function useSessionStats() {

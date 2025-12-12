@@ -6,18 +6,11 @@ import {
   Filler,
   Tooltip,
   Legend,
-  ChartOptions
+  ChartOptions,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 
-ChartJS.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-);
+ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 interface ScoreRadarChartProps {
   labels: string[];
@@ -81,7 +74,7 @@ function ScoreRadarChart({ labels, answeredData, correctData, title }: ScoreRada
       },
       tooltip: {
         callbacks: {
-          label: function(context) {
+          label: function (context) {
             const label = context.dataset.label || '';
             const value = context.parsed.r;
             return `${label}: ${value}`;

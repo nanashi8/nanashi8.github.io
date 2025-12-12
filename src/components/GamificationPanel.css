@@ -329,7 +329,9 @@
   background: var(--bg-secondary, var(--gray-lighter));
   border-radius: 10px;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   border: 2px solid transparent;
 }
 

@@ -29,7 +29,7 @@ export default function LearningLimitsInput({
           onChange={(e) => onLearningLimitChange(parseInt(e.target.value))}
           className="select-input"
         >
-          {LIMIT_OPTIONS.map(option => (
+          {LIMIT_OPTIONS.map((option) => (
             <option key={option} value={option}>
               {option === 0 ? '設定無し' : option}
             </option>
@@ -45,7 +45,7 @@ export default function LearningLimitsInput({
           onChange={(e) => onReviewLimitChange(parseInt(e.target.value))}
           className="select-input"
         >
-          {LIMIT_OPTIONS.map(option => (
+          {LIMIT_OPTIONS.map((option) => (
             <option key={option} value={option}>
               {option === 0 ? '設定無し' : option}
             </option>

@@ -5,7 +5,9 @@ import { sessionManager } from '../utils/sessionManager';
  * アップデート通知コンポーネント
  * 生徒が学習中のアップデートを非侵襲的に知らせる
  */
-export const UpdateNotification: React.FC<{ isLearningActive: boolean }> = ({ isLearningActive }) => {
+export const UpdateNotification: React.FC<{ isLearningActive: boolean }> = ({
+  isLearningActive,
+}) => {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [updateTime, setUpdateTime] = useState<string | null>(null);
 
@@ -14,7 +16,7 @@ export const UpdateNotification: React.FC<{ isLearningActive: boolean }> = ({ is
     sessionManager.onUpdateAvailable((timestamp) => {
       setUpdateAvailable(true);
       setUpdateTime(timestamp);
-      
+
       // 学習中でない場合は自動更新（3秒後）
       if (!isLearningActive) {
         setTimeout(() => {
@@ -34,11 +36,7 @@ export const UpdateNotification: React.FC<{ isLearningActive: boolean }> = ({ is
           <p className="update-notification__title">
             {isLearningActive ? '新しい更新が利用可能です' : '更新をインストール中...'}
           </p>
-          {updateTime && (
-            <p className="update-notification__time">
-              {updateTime} 検出
-            </p>
-          )}
+          {updateTime && <p className="update-notification__time">{updateTime} 検出</p>}
         </div>
         {isLearningActive && (
           <div className="update-notification__actions">

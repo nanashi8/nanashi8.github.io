@@ -24,20 +24,24 @@ function QuestionSetSelector({
   onWordPhraseFilterChange,
   label = '問題集を選択',
 }: QuestionSetSelectorProps) {
-  const selectedSet = questionSets.find(set => set.id === selectedSetId);
-  
+  const selectedSet = questionSets.find((set) => set.id === selectedSetId);
+
   // 選択された問題集の難易度別単語数を計算
-  const difficultyCount = selectedSet ? {
-    beginner: selectedSet.questions.filter(q => q.difficulty === '初級').length,
-    intermediate: selectedSet.questions.filter(q => q.difficulty === '中級').length,
-    advanced: selectedSet.questions.filter(q => q.difficulty === '上級').length,
-  } : null;
-  
+  const difficultyCount = selectedSet
+    ? {
+        beginner: selectedSet.questions.filter((q) => q.difficulty === '初級').length,
+        intermediate: selectedSet.questions.filter((q) => q.difficulty === '中級').length,
+        advanced: selectedSet.questions.filter((q) => q.difficulty === '上級').length,
+      }
+    : null;
+
   // 単語/熟語の数をカウント
-  const wordPhraseCount = selectedSet ? {
-    words: selectedSet.questions.filter(q => !q.word.includes(' ')).length,
-    phrases: selectedSet.questions.filter(q => q.word.includes(' ')).length,
-  } : null;
+  const wordPhraseCount = selectedSet
+    ? {
+        words: selectedSet.questions.filter((q) => !q.word.includes(' ')).length,
+        phrases: selectedSet.questions.filter((q) => q.word.includes(' ')).length,
+      }
+    : null;
 
   return (
     <div className="question-set-selector">

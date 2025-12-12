@@ -7,6 +7,18 @@ echo ""
 # 1. ステージされたファイルのみをチェック
 echo "📝 変更ファイルを確認中..."
 
+# 1.5. Prettierチェック（コード整形）
+if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css|json|md)$' > /dev/null; then
+  echo "✨ Prettierコード整形チェック中..."
+  npm run format:check || {
+    echo ""
+    echo "⚠️  コード整形が必要なファイルがあります"
+    echo "💡 自動修正: npm run format"
+    echo "💡 手動確認後にコミットしてください"
+    exit 1
+  }
+fi
+
 # 2. ESLintチェック（TypeScript/TSXファイルのみ、エラーのみ）
 if git diff --cached --name-only | grep -E '\.(tsx?|jsx?)$' > /dev/null; then
   echo "🔎 ESLintチェック実行中（エラーのみ）..."

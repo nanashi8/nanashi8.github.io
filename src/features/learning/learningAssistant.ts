@@ -41,13 +41,12 @@ function saveSkipGroups(groups: SkipGroup[]): void {
 export function addToSkipGroup(word: string): void {
   const groups = loadSkipGroups();
   const now = Date.now();
-  
+
   // 直近のグループを探す（5分以内）
-  let currentGroup = groups.find(g => 
-    g.verificationStatus === 'pending' && 
-    now - g.timestamp < SKIP_GROUP_TIME_WINDOW
+  let currentGroup = groups.find(
+    (g) => g.verificationStatus === 'pending' && now - g.timestamp < SKIP_GROUP_TIME_WINDOW
   );
-  
+
   if (currentGroup) {
     // 既存のグループに追加
     if (!currentGroup.words.includes(word)) {
@@ -59,10 +58,10 @@ export function addToSkipGroup(word: string): void {
       timestamp: now,
       words: [word],
       verificationStatus: 'pending',
-      suspiciousWords: []
+      suspiciousWords: [],
     });
   }
-  
+
   saveSkipGroups(groups);
 }
 
@@ -73,39 +72,41 @@ export function addToSkipGroup(word: string): void {
 export function handleSkippedWordIncorrect(word: string): void {
   const groups = loadSkipGroups();
   const progress = loadProgressSync();
-  
+
   // この単語が含まれるグループを探す
-  const group = groups.find(g => g.words.includes(word));
-  
+  const group = groups.find((g) => g.words.includes(word));
+
   if (group && group.verificationStatus === 'pending') {
     // グループを疑わしいとマーク
     group.verificationStatus = 'suspicious';
-    
+
     // 同じグループの他の単語をsuspiciousWordsに追加
-    group.suspiciousWords = group.words.filter(w => w !== word);
-    
+    group.suspiciousWords = group.words.filter((w) => w !== word);
+
     // 疑わしい単語のskipExcludeUntilをクリアして出題対象に
-    group.suspiciousWords.forEach(suspiciousWord => {
+    group.suspiciousWords.forEach((suspiciousWord) => {
       if (progress.wordProgress[suspiciousWord]) {
         const wordProgress = progress.wordProgress[suspiciousWord];
-        
+
         // 除外期間をクリア
         delete wordProgress.skipExcludeUntil;
-        
+
         // 定着レベルを下げる
         wordProgress.masteryLevel = 'learning';
         wordProgress.consecutiveCorrect = 0;
-        
+
         // 検証が必要とマーク
         wordProgress.needsVerification = true;
         wordProgress.verificationReason = `同時期にスキップした「${word}」が不正解だったため`;
       }
     });
-    
+
     saveProgress(progress);
     saveSkipGroups(groups);
-    
-    logger.log(`AI学習アシスタント: 「${word}」が不正解でした。同時期にスキップした${group.suspiciousWords.length}個の単語を再出題対象にします。`);
+
+    logger.log(
+      `AI学習アシスタント: 「${word}」が不正解でした。同時期にスキップした${group.suspiciousWords.length}個の単語を再出題対象にします。`
+    );
   }
 }
 
@@ -115,30 +116,30 @@ export function handleSkippedWordIncorrect(word: string): void {
 export function handleSkippedWordCorrect(word: string): void {
   const groups = loadSkipGroups();
   const progress = loadProgressSync();
-  
+
   // この単語が含まれるグループを探す
-  const group = groups.find(g => g.words.includes(word));
-  
+  const group = groups.find((g) => g.words.includes(word));
+
   if (group) {
     // 疑わしいリストから削除
-    group.suspiciousWords = group.suspiciousWords.filter(w => w !== word);
-    
+    group.suspiciousWords = group.suspiciousWords.filter((w) => w !== word);
+
     // グループ内の全単語が検証済みかチェック
-    const allVerified = group.words.every(w => {
+    const allVerified = group.words.every((w) => {
       const wp = progress.wordProgress[w];
       return wp && (wp.correctCount > 0 || wp.incorrectCount > 0);
     });
-    
+
     if (allVerified && group.suspiciousWords.length === 0) {
       group.verificationStatus = 'verified';
     }
-    
+
     // 検証フラグをクリア
     if (progress.wordProgress[word]) {
       delete progress.wordProgress[word].needsVerification;
       delete progress.wordProgress[word].verificationReason;
     }
-    
+
     saveProgress(progress);
     saveSkipGroups(groups);
   }
@@ -150,8 +151,8 @@ export function handleSkippedWordCorrect(word: string): void {
 export function getWordsNeedingVerification(): string[] {
   const progress = loadProgressSync();
   return Object.values(progress.wordProgress)
-    .filter(wp => wp.needsVerification)
-    .map(wp => wp.word);
+    .filter((wp) => wp.needsVerification)
+    .map((wp) => wp.word);
 }
 
 /**
@@ -162,21 +163,19 @@ export function prioritizeVerificationWords<T extends { word: string }>(
   maxVerificationWords: number = 5
 ): T[] {
   const verificationWords = getWordsNeedingVerification();
-  
+
   if (verificationWords.length === 0) {
     return questions;
   }
-  
+
   // 検証が必要な単語を優先的に追加
-  const verificationQuestions = questions.filter(q => 
-    verificationWords.includes(q.word)
-  ).slice(0, maxVerificationWords);
-  
+  const verificationQuestions = questions
+    .filter((q) => verificationWords.includes(q.word))
+    .slice(0, maxVerificationWords);
+
   // 残りの問題
-  const otherQuestions = questions.filter(q => 
-    !verificationWords.includes(q.word)
-  );
-  
+  const otherQuestions = questions.filter((q) => !verificationWords.includes(q.word));
+
   // 検証問題を最初に配置
   return [...verificationQuestions, ...otherQuestions];
 }
@@ -187,11 +186,11 @@ export function prioritizeVerificationWords<T extends { word: string }>(
 export function generateAssistantMessage(word: string): string | null {
   const progress = loadProgressSync();
   const wordProgress = progress.wordProgress[word];
-  
+
   if (!wordProgress || !wordProgress.needsVerification) {
     return null;
   }
-  
+
   return `💡 学習アシスタント: この単語は以前スキップされましたが、${wordProgress.verificationReason}。本当に定着しているか確認させてください。`;
 }
 
@@ -207,12 +206,12 @@ export function getSkipGroupStats(): {
 } {
   const groups = loadSkipGroups();
   const verificationWords = getWordsNeedingVerification();
-  
+
   return {
     totalGroups: groups.length,
-    pendingGroups: groups.filter(g => g.verificationStatus === 'pending').length,
-    suspiciousGroups: groups.filter(g => g.verificationStatus === 'suspicious').length,
-    verifiedGroups: groups.filter(g => g.verificationStatus === 'verified').length,
-    wordsNeedingVerification: verificationWords.length
+    pendingGroups: groups.filter((g) => g.verificationStatus === 'pending').length,
+    suspiciousGroups: groups.filter((g) => g.verificationStatus === 'suspicious').length,
+    verifiedGroups: groups.filter((g) => g.verificationStatus === 'verified').length,
+    wordsNeedingVerification: verificationWords.length,
   };
 }

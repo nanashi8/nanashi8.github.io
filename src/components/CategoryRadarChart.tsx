@@ -6,18 +6,11 @@ import {
   Filler,
   Tooltip,
   Legend,
-  ChartOptions
+  ChartOptions,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 
-ChartJS.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-);
+ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 interface CategoryRadarChartProps {
   labels: string[];
@@ -27,15 +20,15 @@ interface CategoryRadarChartProps {
   chartType: 'accuracy' | 'progress';
 }
 
-function CategoryRadarChart({ 
-  labels, 
-  accuracyData, 
-  progressData, 
-  title, 
-  chartType 
+function CategoryRadarChart({
+  labels,
+  accuracyData,
+  progressData,
+  title,
+  chartType,
 }: CategoryRadarChartProps) {
   const dataToUse = chartType === 'accuracy' ? accuracyData : progressData;
-  
+
   const data = {
     labels,
     datasets: [
@@ -102,7 +95,7 @@ function CategoryRadarChart({
       },
       tooltip: {
         callbacks: {
-          label: function(context) {
+          label: function (context) {
             const label = context.dataset.label || '';
             const value = context.parsed.r.toFixed(1);
             return `${label}: ${value}%`;
