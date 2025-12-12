@@ -39,7 +39,7 @@ jobs:
           wait-interval: 10
 
       - name: Auto merge
-        uses: pascalgn/automerge-action@v0.16.2
+        uses: pascalgn/automerge-action@v0.16.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_LABELS: "auto-merge,!work in progress"
