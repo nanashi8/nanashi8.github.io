@@ -1,7 +1,7 @@
 // エラーログ表示パネル
 
 import { useState, useEffect } from 'react';
-import { errorLogger, ErrorLog } from '../errorLogger';
+import { errorLogger, ErrorLog } from '@/utils/errorLogger';
 
 interface ErrorLogPanelProps {
   onClose: () => void;
