@@ -103,3 +103,54 @@ export function getTodayIncorrectWords(): string[] {
   
   return Array.from(incorrectWords);
 }
+
+// 日別の学習時間を取得
+export function getDailyStudyTime(days: number = 7): Array<{ date: string; timeSpent: number }> {
+  const progress = loadProgressSync();
+  const now = Date.now();
+  const startDate = now - (days * 24 * 60 * 60 * 1000);
+  
+  const dailyTime = new Map<string, number>();
+  
+  progress.results
+    .filter(r => r.date >= startDate)
+    .forEach(result => {
+      const dateStr = new Date(result.date).toLocaleDateString('ja-JP');
+      dailyTime.set(dateStr, (dailyTime.get(dateStr) || 0) + result.timeSpent);
+    });
+  
+  return Array.from(dailyTime.entries())
+    .map(([date, timeSpent]) => ({ date, timeSpent }))
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+}
+
+// 当日の統計を取得
+export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'): {
+  todayCorrectCount: number;
+  todayTotalAnswered: number;
+  todayAccuracy: number;
+} {
+  const progress = loadProgressSync();
+  const today = new Date().setHours(0, 0, 0, 0);
+  const tomorrow = today + 24 * 60 * 60 * 1000;
+  
+  // 本日の結果をフィルタ
+  let todayResults = progress.results.filter(r => r.date >= today && r.date < tomorrow);
+  
+  // モード指定がある場合はフィルタ
+  if (mode) {
+    todayResults = todayResults.filter(r => r.mode === mode);
+  }
+  
+  const todayCorrectCount = todayResults.reduce((sum, r) => sum + r.score, 0);
+  const todayTotalAnswered = todayResults.reduce((sum, r) => sum + r.total, 0);
+  const todayAccuracy = todayTotalAnswered > 0 
+    ? Math.round((todayCorrectCount / todayTotalAnswered) * 100) 
+    : 0;
+  
+  return {
+    todayCorrectCount,
+    todayTotalAnswered,
+    todayAccuracy,
+  };
+}

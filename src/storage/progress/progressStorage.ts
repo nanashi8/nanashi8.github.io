@@ -609,25 +609,7 @@ export function getCurrentWeakWords(limit: number = 10): Array<{
     .slice(0, limit);
 }
 
-// 日別の学習時間を取得
-export function getDailyStudyTime(days: number = 7): Array<{ date: string; timeSpent: number }> {
-  const progress = loadProgressSync();
-  const now = Date.now();
-  const startDate = now - (days * 24 * 60 * 60 * 1000);
-  
-  const dailyTime = new Map<string, number>();
-  
-  progress.results
-    .filter(r => r.date >= startDate)
-    .forEach(result => {
-      const dateStr = new Date(result.date).toLocaleDateString('ja-JP');
-      dailyTime.set(dateStr, (dailyTime.get(dateStr) || 0) + result.timeSpent);
-    });
-  
-  return Array.from(dailyTime.entries())
-    .map(([date, timeSpent]) => ({ date, timeSpent }))
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-}
+// getDailyStudyTime, getTodayStats等はstatistics.tsに移動済み
 
 // ========== 単語レベルの進捗管理 ==========
 
@@ -1370,38 +1352,8 @@ export function getMasteredWords(words: string[]): string[] {
 }
 
 /**
- * 本日の統計を取得（本日正答率、本日回答数）
- * @param mode クイズモード（translation, spelling, reading, grammar）
+ * 本日の統計を取得 - statistics.tsに移動済み
  */
-export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization'): {
-  todayCorrectCount: number;
-  todayTotalAnswered: number;
-  todayAccuracy: number;
-} {
-  const progress = loadProgressSync();
-  const today = new Date().setHours(0, 0, 0, 0);
-  const tomorrow = today + 24 * 60 * 60 * 1000;
-  
-  // 本日の結果をフィルタ
-  let todayResults = progress.results.filter(r => r.date >= today && r.date < tomorrow);
-  
-  // モード指定がある場合はフィルタ
-  if (mode) {
-    todayResults = todayResults.filter(r => r.mode === mode);
-  }
-  
-  const todayCorrectCount = todayResults.reduce((sum, r) => sum + r.score, 0);
-  const todayTotalAnswered = todayResults.reduce((sum, r) => sum + r.total, 0);
-  const todayAccuracy = todayTotalAnswered > 0 
-    ? Math.round((todayCorrectCount / todayTotalAnswered) * 100) 
-    : 0;
-  
-  return {
-    todayCorrectCount,
-    todayTotalAnswered,
-    todayAccuracy,
-  };
-}
 
 /**
  * 累計回答数を取得
@@ -3252,5 +3204,7 @@ export {
   getRecentResults,
   getStatsByCategory,
   getStatsByDifficulty,
-  getTodayIncorrectWords
+  getTodayIncorrectWords,
+  getDailyStudyTime,
+  getTodayStats
 } from './statistics';
