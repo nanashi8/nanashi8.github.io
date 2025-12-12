@@ -467,6 +467,9 @@ git push
 
 - [プロジェクト構造](./project-structure.instructions.md)
 - [開発ガイドライン](./development-guidelines.instructions.md)
+- [品質システム統合ガイド](../../docs/quality/QUALITY_SYSTEM.md)
+- [品質自動化ガイド](../../docs/quality/QUALITY_AUTOMATION_GUIDE.md)
+- [統合品質パイプライン](../../docs/quality/INTEGRATED_QUALITY_PIPELINE.md)
 - [健康診断レポート](../../docs/quality/HEALTH_CHECK_REPORT.md)
 
 ---

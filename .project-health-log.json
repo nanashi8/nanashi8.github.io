@@ -1,0 +1,21 @@
+[
+  {
+    "timestamp": "2025-12-13T03:25:29.423038",
+    "health_score": 95,
+    "metrics": {
+      "file_count": {
+        "docs/quality": 13,
+        "scripts": 18,
+        "instructions": 10
+      },
+      "pattern_violations": [],
+      "reference_errors": [
+        {
+          "file": "docs/development/DOCUMENTATION_REVISION_PLAN.md",
+          "old_ref": "CONTINUOUS_IMPROVEMENT_PIPELINE"
+        }
+      ],
+      "size_anomalies": []
+    }
+  }
+]

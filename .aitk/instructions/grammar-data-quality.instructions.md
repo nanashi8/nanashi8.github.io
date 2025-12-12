@@ -77,11 +77,9 @@ cat docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md
 
 ### 2. 現在の品質状態の確認
 ```bash
-# 品質分析を実行
-python scripts/analyze_grammar_data_quality.py
-
-# 高度検証を実行
-python scripts/validate_grammar_advanced.py
+# 文法データ検証を実行
+cd nanashi8.github.io
+python3 scripts/validate_all_content.py --type grammarlidate_all_content.py --type grammar
 ```
 
 ### 3. 編集対象ファイルの確認
@@ -96,19 +94,17 @@ grep -l '"enabled": false' public/data/grammar/*.json
 
 ### 1. 自動検証の実行
 ```bash
-# 高度検証を実行（文法用語検出を含む）
-python scripts/validate_grammar_advanced.py
+# 文法データ検証を実行
+cd nanashi8.github.io
+python3 scripts/validate_all_content.py --type grammar
 
 # エラーがある場合は必ず修正すること
 ```
 
 ### 2. 品質レポートの確認
 ```bash
-# 品質分析を再実行
-python scripts/analyze_grammar_data_quality.py
-
 # レポートを確認
-cat docs/quality/grammar_quality_report_*.md
+cat docs/quality/grammar_quality_report.md
 ```
 
 ### 3. Git commitの実行
@@ -191,7 +187,7 @@ cat docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md
 # エディタで public/data/grammar/XXX.json を編集
 
 # 4. 検証実行
-python scripts/validate_grammar_advanced.py
+cd nanashi8.github.io && python3 scripts/validate_all_content.py --type grammar
 
 # 5. エラーがあれば修正して再検証（4に戻る）
 
@@ -205,7 +201,7 @@ git commit -m "fix: 文法データの品質向上"
 ## 🎓 学習リソース
 
 - **詳細ガイドライン**: [docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md](../../docs/guidelines/GRAMMAR_DATA_QUALITY_GUIDELINES.md)
-- **検証スクリプト**: `scripts/validate_grammar_advanced.py`
+- **検証スクリプト**: `scripts/validate_all_content.py`
 - **分析スクリプト**: `scripts/analyze_grammar_data_quality.py`
 - **Pre-commit hook**: `.git/hooks/pre-commit`
 

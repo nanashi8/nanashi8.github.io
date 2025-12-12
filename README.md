@@ -94,7 +94,7 @@ npm run build
 
 - **[CSS開発ガイドライン](docs/CSS_DEVELOPMENT_GUIDELINES.md)** - BEM命名規約、CSS変数使用、重複禁止ルール
 - **[TypeScript/React開発ガイドライン](docs/TYPESCRIPT_DEVELOPMENT_GUIDELINES.md)** - コンポーネント設計、型定義、状態管理
-- **[品質管理パイプライン](docs/QUALITY_PIPELINE.md)** - テスト戦略、Git Hooks、CI/CD、品質基準
+- **[品質保証システム](docs/quality/QUALITY_SYSTEM.md)** - テスト戦略、Git Hooks、CI/CD、品質基準、データ品質検証
 
 ### その他ドキュメント
 

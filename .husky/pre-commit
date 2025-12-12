@@ -107,7 +107,20 @@ if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css)$' > /dev/null; the
   echo "✅ ビルド成功"
 fi
 
-# 6. 最終確認
+# 6. プロジェクト構造検証（軽量）
+echo "🏗️  プロジェクト構造検証中..."
+if command -v python3 &> /dev/null; then
+  python3 scripts/validate_project_structure.py || {
+    echo ""
+    echo "❌ プロジェクト構造に問題があります"
+    echo "💡 詳細: python3 scripts/validate_project_structure.py"
+    exit 1
+  }
+else
+  echo "⚠️  Python3が見つかりません（スキップ）"
+fi
+
+# 7. 最終確認
 echo ""
 echo "✨ すべてのチェックが完了しました！"
 echo "📊 VS Code問題パネルで0エラー・0警告を確認してください"
