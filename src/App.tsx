@@ -343,6 +343,8 @@ function App() {
               studyDates: [],
             },
             questionSetStats: {},
+            categoryStats: {},
+            difficultyStats: {},
             wordProgress: {},
           };
           updateProgressCache(initialProgress);

@@ -5,6 +5,29 @@ import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 
+// 型定義をインポート＆re-export
+import type { 
+  SessionHistoryItem, 
+  StudySettings, 
+  QuizResult, 
+  WordProgress, 
+  UserProgress,
+  DetailedRetentionStats,
+  MasteryPrediction,
+  DailyPlanInfo
+} from './types';
+
+export type { 
+  SessionHistoryItem, 
+  StudySettings, 
+  QuizResult, 
+  WordProgress, 
+  UserProgress,
+  DetailedRetentionStats,
+  MasteryPrediction,
+  DailyPlanInfo
+};
+
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
 const MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数
@@ -54,11 +77,6 @@ function cleanupOldResults(): void {
 }
 
 // セッション履歴インジケーター用のデータ型
-export type SessionHistoryItem = {
-  status: 'correct' | 'incorrect' | 'review' | 'mastered';
-  word: string;
-  timestamp: number;
-};
 
 // セッション履歴をストレージに保存（IndexedDB/LocalStorage統合）
 const SESSION_HISTORY_KEY = 'session-history';
@@ -142,9 +160,6 @@ export function clearSessionHistory(mode: 'translation' | 'spelling' | 'grammar'
 }
 
 // 学習設定の型定義
-export interface StudySettings {
-  maxReviewCount: number; // 要復習上限（デフォルト: 10）
-}
 
 // デフォルト設定
 const DEFAULT_STUDY_SETTINGS: StudySettings = {
@@ -185,106 +200,6 @@ export function updateStudySettings(partialSettings: Partial<StudySettings>): bo
   return saveStudySettings(newSettings);
 }
 
-export interface QuizResult {
-  id: string;
-  questionSetId: string;
-  questionSetName: string;
-  score: number;
-  total: number;
-  percentage: number;
-  date: number;
-  timeSpent: number; // 秒
-  incorrectWords: string[];
-  mode: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization';
-  category?: string; // 関連分野
-  difficulty?: string; // 難易度レベル
-}
-
-// 単語ごとの学習進捗
-export interface WordProgress {
-  word: string; // 単語
-  correctCount: number; // 正解回数
-  incorrectCount: number; // 不正解回数
-  consecutiveCorrect: number; // 連続正解回数
-  consecutiveIncorrect: number; // 連続不正解回数
-  lastStudied: number; // 最終学習日時（タイムスタンプ）
-  totalResponseTime: number; // 累計応答時間（ミリ秒）
-  averageResponseTime: number; // 平均応答時間（ミリ秒）
-  difficultyScore: number; // 難易度スコア（0-100、高いほど苦手）
-  userDifficultyRating?: number; // ユーザーの主観的難易度評価（1-3: 簡単/普通/難しい）
-  masteryLevel: 'new' | 'learning' | 'mastered'; // 習熟レベル
-  responseTimes: number[]; // 応答時間の履歴（最新10件）
-  category?: string; // カテゴリー
-  difficulty?: string; // 難易度レベル
-  skippedCount?: number; // スキップ回数
-  lastSkipped?: number; // 最終スキップ日時（タイムスタンプ）
-  skipExcludeUntil?: number; // この日時まで出題除外（タイムスタンプ）
-  needsVerification?: boolean; // AI学習アシスタント: 検証が必要
-  verificationReason?: string; // AI学習アシスタント: 検証が必要な理由
-  meaning?: string; // 意味（苦手語句表示用）
-  reading?: string; // 読み（苦手語句表示用）
-  
-  // モード別統計（難易度別リセット用）
-  totalAttempts?: number; // 総試行回数
-  translationAttempts?: number; // 和訳モードの試行回数
-  translationCorrect?: number; // 和訳モードの正解回数
-  translationStreak?: number; // 和訳モードの連続正解数
-  spellingAttempts?: number; // スペルモードの試行回数
-  spellingCorrect?: number; // スペルモードの正解回数
-  spellingStreak?: number; // スペルモードの連続正解数
-  grammarAttempts?: number; // 文法モードの試行回数
-  grammarCorrect?: number; // 文法モードの正解回数
-  grammarStreak?: number; // 文法モードの連続正解数
-  memorizationAttempts?: number; // 暗記モードの試行回数
-  memorizationCorrect?: number; // 暗記モードの正解回数
-  memorizationStreak?: number; // 暗記モードの連続正解数
-  
-  // 学習曲線AI用の詳細履歴
-  learningHistory?: Array<{
-    timestamp: number;
-    wasCorrect: boolean;
-    responseTime: number;
-    userAnswer?: string;
-    sessionIndex?: number;
-  }>;
-  
-  // 混同履歴（この単語を誤答として選んだ履歴）
-  confusedWith?: Array<{
-    word: string; // 実際に出題された単語
-    timestamp: number; // 混同した日時
-  }>;
-  confusionCount?: number; // 混同された合計回数
-  lastConfused?: number; // 最終混同日時
-  
-  // 定着済み単語の復習管理
-  nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
-}
-
-export interface UserProgress {
-  results: QuizResult[];
-  statistics: {
-    totalQuizzes: number;
-    totalQuestions: number;
-    totalCorrect: number;
-    averageScore: number;
-    bestScore: number;
-    streakDays: number;
-    lastStudyDate: number;
-    studyDates: number[]; // 学習した日付のタイムスタンプ配列
-  };
-  questionSetStats: {
-    [setId: string]: {
-      attempts: number;
-      bestScore: number;
-      averageScore: number;
-      lastAttempt: number;
-      totalTimeSpent: number;
-    };
-  };
-  wordProgress: {
-    [word: string]: WordProgress; // 単語ごとの進捗データ
-  };
-}
 
 const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
@@ -306,6 +221,8 @@ function initializeProgress(): UserProgress {
       studyDates: [],
     },
     questionSetStats: {},
+    categoryStats: {},
+    difficultyStats: {},
     wordProgress: {},
   };
 }
@@ -336,6 +253,8 @@ export async function loadProgress(): Promise<UserProgress> {
         studyDates: [],
       },
       questionSetStats: data.questionSetStats || {},
+      categoryStats: {},
+      difficultyStats: {},
       wordProgress: (data.wordProgress || {}) as unknown as { [word: string]: WordProgress },
     };
     
@@ -1862,29 +1781,6 @@ export function getRetentionRateWithAI(): {
 }
 
 /**
- * 詳細な定着率統計（3段階分類）
- */
-export interface DetailedRetentionStats {
-  // 基本統計
-  totalWords: number;
-  appearedWords: number;
-  
-  // 段階別カウント
-  masteredCount: number;      // 🟢 完全定着
-  learningCount: number;       // 🟡 学習中
-  strugglingCount: number;     // 🔴 要復習
-  
-  // 定着率（複数の指標）
-  basicRetentionRate: number;      // 基本定着率: 定着数/出題数 (0-100%)
-  weightedRetentionRate: number;   // 加重定着率: 学習中を0.5倍 (0-100%)
-  
-  // パーセンテージ（表示用）
-  masteredPercentage: number;
-  learningPercentage: number;
-  strugglingPercentage: number;
-}
-
-/**
  * 詳細な定着率統計を計算
  */
 export function getDetailedRetentionStats(): DetailedRetentionStats {
@@ -1940,6 +1836,15 @@ export function getDetailedRetentionStats(): DetailedRetentionStats {
     masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
     learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
     strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+    
+    // エイリアス（互換性のため）
+    masteredWords: masteredCount,
+    learningWords: learningCount,
+    newWords: allWords.length - total,
+    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    averageAttempts: 0,
+    categoryBreakdown: {},
+    difficultyBreakdown: {},
   };
 }
 
@@ -1947,15 +1852,6 @@ export function getDetailedRetentionStats(): DetailedRetentionStats {
  * 学習中の単語の定着予測を取得
  * 各単語があと何回正解すれば定着するかを計算
  */
-export interface MasteryPrediction {
-  word: string;
-  currentStatus: string; // 現在の状態
-  remainingCorrectAnswers: number; // あと何回正解が必要か
-  confidence: number; // 予測の信頼度（0-100%）
-  nextMilestone: string; // 次のマイルストーン
-  estimatedDays: number; // 推定残り日数
-}
-
 export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
   const progress = loadProgressSync();
   const predictions: MasteryPrediction[] = [];
@@ -2046,8 +1942,10 @@ export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
   // 定着が近い順にソート（残り回答数 → 信頼度）
   return predictions
     .sort((a, b) => {
-      if (a.remainingCorrectAnswers !== b.remainingCorrectAnswers) {
-        return a.remainingCorrectAnswers - b.remainingCorrectAnswers;
+      const aRemaining = a.remainingCorrectAnswers ?? 999;
+      const bRemaining = b.remainingCorrectAnswers ?? 999;
+      if (aRemaining !== bRemaining) {
+        return aRemaining - bRemaining;
       }
       return b.confidence - a.confidence;
     })
@@ -2117,14 +2015,6 @@ export function getNearMasteryStats(): {
  * 今日の学習計画情報を取得
  * 要復習単語と確認予定単語を計算
  */
-export interface DailyPlanInfo {
-  reviewWordsCount: number; // 要復習単語数（忘却曲線で復習が必要）
-  scheduledWordsCount: number; // 確認予定単語数（skipExcludeUntilが今日まで）
-  totalPlannedCount: number; // 合計学習予定数
-  reviewWords: string[]; // 要復習単語リスト
-  scheduledWords: string[]; // 確認予定単語リスト
-}
-
 export function getDailyPlanInfo(): DailyPlanInfo {
   const progress = loadProgressSync();
   const now = Date.now();
@@ -3399,6 +3289,15 @@ export function getGrammarDetailedRetentionStats(): DetailedRetentionStats {
     masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
     learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
     strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+    
+    // エイリアス（互換性のため）
+    masteredWords: masteredCount,
+    learningWords: learningCount,
+    newWords: grammarQuestions.length - total,
+    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    averageAttempts: 0,
+    categoryBreakdown: {},
+    difficultyBreakdown: {},
   };
 }
 
