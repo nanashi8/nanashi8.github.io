@@ -4,6 +4,7 @@ import { saveProgressData, loadProgressData, saveSetting, loadSetting } from '@/
 import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
 import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
+import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
 
 // 型定義をインポート＆re-export
 import type { 
@@ -31,138 +32,12 @@ export type {
 // 学習設定関連をre-export
 export { getStudySettings, saveStudySettings, updateStudySettings } from './settings';
 
+// セッション履歴関連をre-export
+export { addSessionHistory, getSessionHistory, clearSessionHistory } from './sessionHistory';
+
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
 const MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数
-
-// SafeなLocalStorage操作
-function _safeSetItem(key: string, value: string): boolean {
-  try {
-    localStorage.setItem(key, value);
-    return true;
-  } catch (e) {
-    if (e instanceof DOMException && e.name === 'QuotaExceededError') {
-      logger.warn('LocalStorage容量超過。古いデータを削除します。');
-      // 古い結果データを削除
-      cleanupOldResults();
-      try {
-        localStorage.setItem(key, value);
-        return true;
-      } catch (e2) {
-        logger.error('データ削除後も保存失敗:', e2);
-        return false;
-      }
-    }
-    logger.error('LocalStorage保存エラー:', e);
-    return false;
-  }
-}
-
-// 古い結果データを削除
-function cleanupOldResults(): void {
-  const data = loadProgressSync();
-  if (data.results.length > MAX_RESULTS_PER_MODE * 3) {
-    // モード別に最新N件のみ保持
-    const resultsByMode = {
-      translation: data.results.filter(r => r.mode === 'translation'),
-      spelling: data.results.filter(r => r.mode === 'spelling'),
-      reading: data.results.filter(r => r.mode === 'reading'),
-    };
-    
-    data.results = [
-      ...resultsByMode.translation.slice(-MAX_RESULTS_PER_MODE),
-      ...resultsByMode.spelling.slice(-MAX_RESULTS_PER_MODE),
-      ...resultsByMode.reading.slice(-MAX_RESULTS_PER_MODE),
-    ].sort((a, b) => a.date - b.date);
-    
-    logger.log(`古い結果を削除: ${resultsByMode.translation.length + resultsByMode.spelling.length + resultsByMode.reading.length}件 → ${data.results.length}件`);
-  }
-}
-
-// セッション履歴インジケーター用のデータ型
-
-// セッション履歴をストレージに保存（IndexedDB/LocalStorage統合）
-const SESSION_HISTORY_KEY = 'session-history';
-const MAX_SESSION_HISTORY = 50;
-
-import { putToDB, queryByIndex, STORES, isIndexedDBSupported, deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
-import { isMigrationCompleted } from '@/storage/migration/dataMigration';
-
-export async function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling' | 'grammar' | 'memorization'): Promise<void> {
-  const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
-  
-  try {
-    if (useIndexedDB) {
-      // IndexedDBに保存
-      await putToDB(STORES.SESSION_HISTORY, {
-        mode,
-        status: item.status,
-        word: item.word,
-        timestamp: item.timestamp
-      });
-    } else {
-      // LocalStorageにフォールバック
-      const key = `${SESSION_HISTORY_KEY}-${mode}`;
-      const stored = localStorage.getItem(key);
-      const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
-      
-      history.push(item);
-      
-      // 最新50件のみ保持
-      if (history.length > MAX_SESSION_HISTORY) {
-        history.shift();
-      }
-      
-      localStorage.setItem(key, JSON.stringify(history));
-    }
-  } catch (e) {
-    logger.error('セッション履歴の保存エラー:', e);
-  }
-}
-
-export async function getSessionHistory(mode: 'translation' | 'spelling' | 'grammar' | 'memorization', limit: number = 20): Promise<SessionHistoryItem[]> {
-  const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
-  
-  try {
-    if (useIndexedDB) {
-      // IndexedDBから検索
-      const results = await queryByIndex<any>(
-        STORES.SESSION_HISTORY,
-        'mode',
-        mode,
-        limit
-      );
-      
-      return results.map(r => ({
-        status: r.status,
-        word: r.word,
-        timestamp: r.timestamp
-      }));
-    } else {
-      // LocalStorageから読み込み
-      const key = `${SESSION_HISTORY_KEY}-${mode}`;
-      const stored = localStorage.getItem(key);
-      const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
-      
-      // 最新limit件を返す
-      return history.slice(-limit);
-    }
-  } catch (e) {
-    logger.error('セッション履歴の取得エラー:', e);
-    return [];
-  }
-}
-
-export function clearSessionHistory(mode: 'translation' | 'spelling' | 'grammar' | 'memorization'): void {
-  try {
-    const key = `${SESSION_HISTORY_KEY}-${mode}`;
-    localStorage.removeItem(key);
-  } catch (e) {
-    logger.error('セッション履歴のクリアエラー:', e);
-  }
-}
-
-
 const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
 const MAX_WORD_PROGRESS = 2000; // 単語進捗の最大保存数
