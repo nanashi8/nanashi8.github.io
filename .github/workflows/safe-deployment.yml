@@ -99,7 +99,7 @@ jobs:
           # curl -f https://staging.nanashi8.github.io/index.html || exit 1
 
       - name: Create staging deployment
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const deployment = await github.rest.repos.createDeployment({
@@ -120,7 +120,7 @@ jobs:
     if: success()
     steps:
       - name: Create deployment for approval
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const pr = context.payload.pull_request;
@@ -176,7 +176,7 @@ jobs:
           echo "RELEASE_TAG=$TAG_NAME" >> $GITHUB_ENV
 
       - name: Tag release
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const tag = process.env.RELEASE_TAG;
@@ -208,7 +208,7 @@ jobs:
           echo "  - Rollback available: Yes"
 
       - name: Create deployment status
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             await github.rest.repos.createDeploymentStatus({
