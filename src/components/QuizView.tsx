@@ -6,7 +6,6 @@ import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
 import AddToCustomButton from './AddToCustomButton';
-import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
@@ -151,9 +150,6 @@ function QuizView({
 
   return (
     <div className="quiz-view">
-      {/* 時間帯別AI挨拶 */}
-      <TimeBasedGreetingBanner />
-      
       {/* 学習プラン進行状況表示 */}
       {hasPlan && planStatus && (
         <div className="plan-progress-banner">

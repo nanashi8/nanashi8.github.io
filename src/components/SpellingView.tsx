@@ -3,7 +3,6 @@ import { Question, SpellingState } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { DifficultyLevel, WordPhraseFilter, PhraseTypeFilter, OFFICIAL_CATEGORIES, DataSource } from '../App';
 import ScoreBoard from './ScoreBoard';
-import TimeBasedGreetingBanner from './TimeBasedGreetingBanner';
 import LearningLimitsInput from './LearningLimitsInput';
 import AddToCustomButton from './AddToCustomButton';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
@@ -339,9 +338,6 @@ function SpellingView({
 
   return (
     <div className="spelling-view">
-      {/* 時間帯別AI挨拶 */}
-      <TimeBasedGreetingBanner />
-      
       {/* 学習プラン進行状況表示 */}
       {hasPlan && planStatus && (
         <div className="plan-progress-banner">
