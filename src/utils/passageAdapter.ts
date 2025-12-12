@@ -5,7 +5,7 @@
 
 import { ReadingPassage, ReadingSegment } from '../types';
 import { getPassageList, loadPassage, loadOriginalPassage } from './passageLoader';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 
 // 補助関数: 単語の基本形を取得（簡易版）
 function getLemma(word: string): string {

@@ -3,7 +3,7 @@
  * PASSAGE_CREATION_GUIDELINES.md の仕様に基づく
  */
 
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 
 export interface PassageMetadata {
   id: string;

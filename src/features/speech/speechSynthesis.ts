@@ -2,7 +2,7 @@
  * Web Speech API を使用した音声合成ユーティリティ
  */
 
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 /**
  * 会話形式のテキストから話者名と記号を除去

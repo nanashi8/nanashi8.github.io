@@ -4,7 +4,7 @@ import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
 import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
-import { logger } from '../logger';
+import { logger } from '@/utils/logger';
 import { analyzeSentence, GrammarAnalysisResult, detectPhrasalExpressions, PhrasalExpression, detectGrammarPatterns, GrammarPattern } from '../utils/grammarAnalyzer';
 import AddToCustomButton from './AddToCustomButton';
 

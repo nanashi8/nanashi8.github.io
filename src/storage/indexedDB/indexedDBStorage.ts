@@ -1,6 +1,6 @@
 // IndexedDBラッパーモジュール - ストレージの抽象化レイヤー
 
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 const DB_NAME = 'QuizAppDB';
 const DB_VERSION = 1;

@@ -29,7 +29,7 @@ import {
   deleteCustomQuestionSet,
   updateCustomQuestionSet,
 } from './utils/customQuestionStorage';
-import { logger } from './logger';
+import { logger } from '@/utils/logger';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from './features/learning/learningAssistant';
 import {
   analyzeRadarChart,

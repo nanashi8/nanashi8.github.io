@@ -7,7 +7,7 @@ import {
   getFromDB,
   STORES
 } from '@/storage/indexedDB/indexedDBStorage';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 
 const MIGRATION_FLAG_KEY = 'indexeddb-migration-completed';
 const MIGRATION_VERSION = '1.1'; // バージョンアップしてエラー修正版で再移行

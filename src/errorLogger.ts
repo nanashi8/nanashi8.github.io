@@ -1,5 +1,5 @@
 // エラーログ収集システム
-import { logger } from './logger';
+import { logger } from '@/utils/logger';
 
 export interface ErrorLog {
   timestamp: number;
