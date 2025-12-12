@@ -8,7 +8,7 @@ import {
   getMemorizationSettings,
   saveMemorizationSettings
 } from '../progressStorage';
-import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '@/utils/logger';
 import ScoreBoard from './ScoreBoard';
 import AddToCustomButton from './AddToCustomButton';

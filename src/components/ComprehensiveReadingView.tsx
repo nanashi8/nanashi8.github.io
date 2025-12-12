@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { ReadingPassage, Question, ReadingSegment } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { twoWordPhrases, commonPhrases } from '../utils/phrases';
-import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported, stopSpeaking, pauseSpeaking, resumeSpeaking, isSpeaking, isPaused } from '@/features/speech/speechSynthesis';
 import { loadAllPassagesAsReadingFormat } from '../utils/passageAdapter';
 import { logger } from '@/utils/logger';
 import { analyzeSentence, GrammarAnalysisResult, detectPhrasalExpressions, PhrasalExpression, detectGrammarPatterns, GrammarPattern } from '../utils/grammarAnalyzer';

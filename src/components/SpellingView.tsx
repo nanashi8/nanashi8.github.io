@@ -9,7 +9,7 @@ import AddToCustomButton from './AddToCustomButton';
 import { addQuizResult, updateWordProgress, recordWordSkip, loadProgress, addSessionHistory, getStudySettings, updateStudySettings } from '../progressStorage';
 import { addToSkipGroup, handleSkippedWordIncorrect, handleSkippedWordCorrect } from '../learningAssistant';
 import { generateId } from '../utils';
-import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '@/utils/logger';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { useSpellingGame } from '../hooks/useSpellingGame';
