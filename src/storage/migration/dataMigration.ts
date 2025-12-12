@@ -32,8 +32,8 @@ function setMigrationCompleted(): void {
   }
 }
 
-// LocalStorageからデータを取得（JSON用）
-function getLocalStorageData(key: string): any {
+// LocalStorageからデータを取得(JSON用)
+function getLocalStorageData(key: string): unknown {
   try {
     const data = localStorage.getItem(key);
     if (!data) return null;
@@ -64,7 +64,7 @@ function getLocalStorageRawData(key: string): string | null {
 // progress-dataの移行
 async function migrateProgressData(): Promise<boolean> {
   try {
-    const progressData = getLocalStorageData('progress-data');
+    const progressData = getLocalStorageData('progress-data') as import('@/types/storage').ProgressData | null;
     if (progressData) {
       // データ検証と補完
       if (!progressData.wordProgress) {
@@ -96,7 +96,11 @@ async function migrateProgressData(): Promise<boolean> {
     
     // LocalStorageにデータがない場合は初期データを作成
     logger.log('ℹ️ No progress data to migrate, creating initial data');
-    const initialData = {
+    const initialData: import('@/types/storage').ProgressData = {
+      quizzes: {},
+      lastUpdated: Date.now(),
+      totalAnswered: {},
+      totalMastered: {},
       wordProgress: {},
       results: [],
       statistics: {
@@ -285,7 +289,7 @@ async function migrateSettings(): Promise<boolean> {
 async function verifyMigration(): Promise<boolean> {
   try {
     // 主要なデータが移行されたか確認
-    const progressData = await getFromDB(STORES.PROGRESS, 'main') as any;
+    const progressData = await getFromDB(STORES.PROGRESS, 'main') as import('@/types/storage').ProgressData | null;
     
     if (!progressData) {
       logger.warn('⚠️ Progress data verification failed - no data found');

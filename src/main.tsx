@@ -64,7 +64,7 @@ if (import.meta.env.PROD) {
       // エラーログUI（ErrorLogPanel/ErrorBadge）に起因するエラーは無視
       const frames = event.exception?.values?.[0]?.stacktrace?.frames || [];
       if (Array.isArray(frames)) {
-        const uiError = frames.some((f: any) => {
+        const uiError = frames.some((f: { function?: string; filename?: string }) => {
           const fn = `${f.function || ''}`;
           const file = `${f.filename || ''}`;
           return fn.includes('ErrorLogPanel') || fn.includes('ErrorBadge') || file.includes('ErrorLogPanel') || file.includes('ErrorBadge');

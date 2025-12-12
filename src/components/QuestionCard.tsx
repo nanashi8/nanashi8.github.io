@@ -3,12 +3,12 @@ import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import { generateChoicesWithQuestions } from '../utils';
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { generateAIComment, getTimeOfDay } from '../aiCommentGenerator';
-import { calculateGoalProgress } from '../goalSimulator';
-import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '../confusionPairs';
-import { generateTeacherInteraction, getTeacherReactionToStreak } from '../teacherInteractions';
+import { generateAIComment, getTimeOfDay } from '@/features/interaction/aiCommentGenerator';
+import { calculateGoalProgress } from '@/features/learning/goalSimulator';
+import { getConfusionPartners, generateConfusionAdvice, analyzeConfusionPatterns } from '@/features/analysis/confusionPairs';
+import { generateTeacherInteraction, getTeacherReactionToStreak } from '@/features/interaction/teacherInteractions';
 import { getRelevantMistakeTip } from '../englishTrivia';
-import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import AddToCustomButton from './AddToCustomButton';
 
 interface QuestionCardProps {
@@ -108,7 +108,7 @@ function QuestionCard({
   // 回答時にAIコメントを生成
   useEffect(() => {
     if (answered && selectedAnswer) {
-      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as any;
+      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as import('@/types/ai').AIPersonality;
       const isCorrect = selectedAnswer === question.meaning;
       
       // 現在の連続正解数を取得

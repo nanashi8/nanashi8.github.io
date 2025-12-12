@@ -7,8 +7,8 @@ import {
   recordMemorizationBehavior,
   getMemorizationSettings,
   saveMemorizationSettings
-} from '../progressStorage';
-import { speakEnglish, isSpeechSynthesisSupported } from '../speechSynthesis';
+} from '@/storage/progress/progressStorage';
+import { speakEnglish, isSpeechSynthesisSupported } from '@/features/speech/speechSynthesis';
 import { logger } from '../logger';
 import ScoreBoard from './ScoreBoard';
 import AddToCustomButton from './AddToCustomButton';
@@ -266,7 +266,7 @@ function MemorizationView({
       setConsecutiveViews(prev => prev + 1);
       
       // 暗記タブ専用の進捗データを記録（和訳・スペルとは分離）
-      const { updateWordProgress } = await import('../progressStorage');
+      const { updateWordProgress } = await import('@/storage/progress/progressStorage');
       await updateWordProgress(
         currentQuestion.word,
         isCorrect,

@@ -10,7 +10,7 @@ import {
   getGrammarUnitStatsWithTitles,
   getDailyPlanInfo as _getDailyPlanInfo,
   getWordDetailedData
-} from '../progressStorage';
+} from '@/storage/progress/progressStorage';
 import { useState, useEffect, useMemo, useRef } from 'react';
 
 interface ScoreBoardProps {

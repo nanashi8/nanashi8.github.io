@@ -66,15 +66,15 @@
    - 新しいディレクトリ構造の説明（types/, constants/, ai/, storage/, features/, hooks/）
    - パスエイリアス `@/*` の説明
 
-2. **開発セクション更新**
+1. **開発セクション更新**
    - カスタムフック使用例の追加
    - 型定義の参照方法（`@/types`から）
 
-3. **ドキュメント参照の整理**
+1. **ドキュメント参照の整理**
    - 現行ドキュメントと廃止ドキュメントの明確化
    - クイックスタートガイドへのリンク追加
 
-4. **バッジ更新**
+1. **バッジ更新**
    - リファクタリング完了バッジ追加（任意）
 
 #### 実装タスク
@@ -104,17 +104,17 @@
    - `CSS_LEARNING_PATH.md` → アーカイブ化（学習パスは参考情報）
    - `CSS_MAINTENANCE_COST_ANALYSIS.md` → アーカイブ化（分析完了）
 
-2. **TypeScript関連（2個→1個）**
+1. **TypeScript関連（2個→1個）**
    - `TYPESCRIPT_DEVELOPMENT_GUIDELINES.md` + `TYPESCRIPT_DEVELOPMENT_GUIDELINES 2.md` → 1つに統合
 
-3. **文法データ品質（4個→1個）**
+1. **文法データ品質（4個→1個）**
    - `GRAMMAR_DATA_QUALITY_GUIDELINES.md`（docs/guidelines/）
    - `grammar-data-quality.instructions.md`（.aitk/instructions/）
    - `GRAMMAR_QUALITY_ASSURANCE.md`（docs/quality/）
    - `GRAMMAR_QUALITY_SYSTEM.md`（docs/quality/）
    - → 1つの統合ガイドライン + 1つのinstructionsファイル
 
-4. **品質パイプライン（6個→1個）**
+1. **品質パイプライン（6個→1個）**
    - `QUALITY_PIPELINE.md`
    - `QUALITY_AUTOMATION_GUIDE.md`
    - `CONTINUOUS_IMPROVEMENT_PIPELINE.md`
@@ -194,22 +194,22 @@ docs/
    - 新規開発者が最初に読むドキュメント
    - 環境構築→初回起動→初めてのコード変更→テスト実行
 
-2. **docs/REFACTORING_COMPLETE.md**（新規）
+1. **docs/REFACTORING_COMPLETE.md**（新規）
    - Phase 1-2の完了報告書
    - Before/After比較
    - 得られた知見・ベストプラクティス
 
-3. **docs/development/architecture/PROJECT_STRUCTURE.md**（新規）
+1. **docs/development/architecture/PROJECT_STRUCTURE.md**（新規）
    - ディレクトリツリーと説明
    - 各フォルダの責務
    - ファイル配置ルール
 
-4. **docs/development/architecture/HOOKS_GUIDE.md**（新規）
+1. **docs/development/architecture/HOOKS_GUIDE.md**（新規）
    - 6個のカスタムフックの使用方法
    - 新しいフックの作成ガイドライン
    - ベストプラクティス
 
-5. **docs/references/API_REFERENCE.md**（新規）
+1. **docs/references/API_REFERENCE.md**（新規）
    - 主要関数・フックのAPI仕様
    - 型定義リファレンス
    - サンプルコード
@@ -234,10 +234,10 @@ docs/
 **場所**: `.aitk/instructions/`
 
 1. `development-guidelines.instructions.md`
-2. `error-zero-policy.instructions.md`
-3. `grammar-data-quality.instructions.md`
-4. `grammar-question-validation.instructions.md`
-5. `progress-tracking-patterns.instructions.md`
+1. `error-zero-policy.instructions.md`
+1. `grammar-data-quality.instructions.md`
+1. `grammar-question-validation.instructions.md`
+1. `progress-tracking-patterns.instructions.md`
 
 **その他の場所**:
 - `.copilot-instructions.md`
@@ -252,12 +252,12 @@ docs/
    - `.copilot-instructions.md` と `.aitk/instructions/development-guidelines.instructions.md` が類似
    - `.github/DEVELOPMENT_GUIDELINES.md` との内容重複
 
-2. **構造情報の陳腐化**
+1. **構造情報の陳腐化**
    - instructionsファイルがPhase 1のディレクトリ再編を反映していない
    - パスエイリアスの使用ルールが記載されていない
    - 新しいhooksの使用方法が記載されていない
 
-3. **分散による発見性の低下**
+1. **分散による発見性の低下**
    - 複数の場所に分散しているため、どれを読むべきか不明確
 
 #### 3.3 改訂方針
@@ -560,7 +560,7 @@ echo "=== フック品質チェック完了 ==="
     ./scripts/check-hooks-quality.sh
 ```
 
-2. **新規ワークフロー: structure-quality.yml**
+1. **新規ワークフロー: structure-quality.yml**
 ```yaml
 name: Structure Quality Check
 
@@ -711,12 +711,12 @@ jobs:
    - [ ] QUICKSTART.mdに従って開発環境構築ができる
    - [ ] instructionsファイルでコーディング規約が理解できる
 
-2. **ドキュメント発見性**
+1. **ドキュメント発見性**
    - [ ] 必要な情報が3クリック以内で見つかる
    - [ ] 古い情報と新しい情報が明確に区別できる
    - [ ] 関連ドキュメント間のリンクが適切
 
-3. **品質自動化**
+1. **品質自動化**
    - [ ] CI/CDで構造品質がチェックされる
    - [ ] フック品質が自動検証される
    - [ ] 健康診断で新しい指標が測定される
@@ -743,14 +743,14 @@ jobs:
    # 各フェーズ完了後にPR作成
    ```
 
-2. **バックアップ**
+1. **バックアップ**
    ```bash
    # 統合・削除前にバックアップブランチ作成
    git checkout -b backup/docs-before-revision
    git push origin backup/docs-before-revision
    ```
 
-3. **段階的デプロイ**
+1. **段階的デプロイ**
    - Phase 1（README.md + instructions）→ レビュー → マージ
    - Phase 2（docs統合）→ レビュー → マージ
    - Phase 3（パイプライン）→ レビュー → マージ
@@ -765,12 +765,12 @@ jobs:
    - 最終更新日が3ヶ月以上前のドキュメントを洗い出し
    - 内容が陳腐化していないか確認
 
-2. **リンク健全性チェック**
+1. **リンク健全性チェック**
    ```bash
    npx markdown-link-check **/*.md
    ```
 
-3. **アーカイブ判断**
+1. **アーカイブ判断**
    - 6ヶ月以上参照されていないドキュメントをアーカイブ候補とする
 
 ### 継続的改善
@@ -779,12 +779,12 @@ jobs:
    - 新規開発者からのドキュメント改善提案
    - 分かりにくかった点の記録
 
-2. **指標モニタリング**
+1. **指標モニタリング**
    - ドキュメント数の推移
    - CI/CD品質チェックの結果推移
    - リファクタリング指標（srcルートファイル数等）
 
-3. **四半期レビュー**
+1. **四半期レビュー**
    - ドキュメント構造の見直し
    - instructionsファイルの更新
    - 品質基準の見直し

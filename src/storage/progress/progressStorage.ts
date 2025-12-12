@@ -3,6 +3,7 @@
 import { saveProgressData, loadProgressData, saveSetting, loadSetting } from '@/storage/manager/storageManager';
 import { logger } from '@/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
+import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
 
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
@@ -321,7 +322,22 @@ export async function loadProgress(): Promise<UserProgress> {
       return initialized;
     }
     
-    const progress = data as UserProgress;
+    // ProgressDataからUserProgressへの変換（Phase 3で型統合予定）
+    const progress: UserProgress = {
+      results: (data.results || []) as unknown as QuizResult[],
+      statistics: data.statistics || {
+        totalQuizzes: 0,
+        totalQuestions: 0,
+        totalCorrect: 0,
+        averageScore: 0,
+        bestScore: 0,
+        streakDays: 0,
+        lastStudyDate: 0,
+        studyDates: [],
+      },
+      questionSetStats: data.questionSetStats || {},
+      wordProgress: (data.wordProgress || {}) as unknown as { [word: string]: WordProgress },
+    };
     
     // データ構造の完全性チェック
     if (!progress.statistics) {
@@ -455,8 +471,20 @@ export async function saveProgress(progress: UserProgress): Promise<void> {
       logger.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
     }
     
+    // UserProgressをProgressDataに変換して保存
+    const progressData: import('@/types/storage').ProgressData = {
+      quizzes: {},
+      lastUpdated: Date.now(),
+      totalAnswered: {},
+      totalMastered: {},
+      results: progress.results as unknown as import('@/types/storage').QuizResult[],
+      statistics: progress.statistics,
+      questionSetStats: progress.questionSetStats,
+      wordProgress: progress.wordProgress as unknown as { [word: string]: import('@/types/storage').WordProgress },
+    };
+    
     // ストレージマネージャーで保存
-    const saved = await saveProgressData(progress);
+    const saved = await saveProgressData(progressData);
     
     if (!saved) {
       logger.error('データの保存に失敗しました');
@@ -1383,15 +1411,15 @@ function removeFromReadingUnknownWords(word: string): void {
   if (!storedData) return;
   
   try {
-    const passages = JSON.parse(storedData);
+    const passages: ReadingPassage[] = JSON.parse(storedData);
     let modified = false;
     
     // 全パッセージの全フレーズの全セグメントをチェック
-    passages.forEach((passage: any) => {
+    passages.forEach((passage: ReadingPassage) => {
       if (passage.phrases) {
-        passage.phrases.forEach((phrase: any) => {
+        passage.phrases.forEach((phrase: ReadingPhrase) => {
           if (phrase.segments) {
-            phrase.segments.forEach((segment: any) => {
+            phrase.segments.forEach((segment: ReadingSegment) => {
               if (segment.word.toLowerCase() === word.toLowerCase() && segment.isUnknown) {
                 segment.isUnknown = false;
                 modified = true;
@@ -3018,7 +3046,15 @@ export async function saveMemorizationCardSettings(settings: import('@/types').M
 export async function getMemorizationCardSettings(): Promise<import('@/types').MemorizationCardState | null> {
   try {
     const settings = await loadSetting('memorization-card-settings');
-    return settings ? (typeof settings === 'string' ? JSON.parse(settings) : settings) : null;
+    if (!settings) return null;
+    if (typeof settings === 'string') {
+      return JSON.parse(settings) as import('@/types').MemorizationCardState;
+    }
+    // ProgressData, SessionHistory, AppSettingsなどStorageValueのサブタイプを除外
+    if (typeof settings === 'object' && 'showFurigana' in settings) {
+      return settings as unknown as import('@/types').MemorizationCardState;
+    }
+    return null;
   } catch (error) {
     logger.error('カード表示設定の読み込みエラー:', error);
     // フォールバック: localStorage
@@ -3041,7 +3077,14 @@ export async function saveMemorizationSettings(settings: import('@/types').Memor
 export async function getMemorizationSettings(): Promise<import('@/types').MemorizationSettings | null> {
   try {
     const settings = await loadSetting('memorization-settings');
-    return settings ? (typeof settings === 'string' ? JSON.parse(settings) : settings) : null;
+    if (!settings) return null;
+    if (typeof settings === 'string') {
+      return JSON.parse(settings) as import('@/types').MemorizationSettings;
+    }
+    if (typeof settings === 'object' && 'shuffleOrder' in settings) {
+      return settings as unknown as import('@/types').MemorizationSettings;
+    }
+    return null;
   } catch (error) {
     logger.error('暗記設定の読み込みエラー:', error);
     const stored = localStorage.getItem('memorization-settings');
@@ -3098,7 +3141,14 @@ export async function getMemorizationCurve(word: string): Promise<import('@/type
   try {
     const key = `memorization-curve-${word}`;
     const curveData = await loadSetting(key);
-    return curveData ? (typeof curveData === 'string' ? JSON.parse(curveData) : curveData) : null;
+    if (!curveData) return null;
+    if (typeof curveData === 'string') {
+      return JSON.parse(curveData) as import('@/types').MemorizationCurve;
+    }
+    if (typeof curveData === 'object' && 'correctHistory' in curveData) {
+      return curveData as unknown as import('@/types').MemorizationCurve;
+    }
+    return null;
   } catch (error) {
     logger.error('学習曲線データの取得エラー:', error);
     return null;
@@ -3115,7 +3165,14 @@ const CUSTOM_QUESTION_SETS_KEY = 'custom-question-sets';
 export async function getCustomQuestionSets(): Promise<import('@/types').CustomQuestionSet[]> {
   try {
     const data = await loadSetting(CUSTOM_QUESTION_SETS_KEY);
-    return data ? (typeof data === 'string' ? JSON.parse(data) : data) : [];
+    if (!data) return [];
+    if (typeof data === 'string') {
+      return JSON.parse(data) as import('@/types').CustomQuestionSet[];
+    }
+    if (Array.isArray(data)) {
+      return data as import('@/types').CustomQuestionSet[];
+    }
+    return [];
   } catch (error) {
     logger.error('カスタム問題セット取得エラー:', error);
     return [];

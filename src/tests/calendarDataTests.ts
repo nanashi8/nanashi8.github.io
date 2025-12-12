@@ -1,4 +1,4 @@
-import { getStudyCalendarData } from '../progressStorage';
+import { getStudyCalendarData } from '@/storage/progress/progressStorage';
 import { formatLocalYYYYMMDD } from '../utils';
 
 // 簡易テスト: 学習カレンダーデータの日付キーがローカルYYYY-MM-DDで今日を含むこと

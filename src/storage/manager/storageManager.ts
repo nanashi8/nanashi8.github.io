@@ -6,6 +6,7 @@ import {
   putToDB,
   STORES
 } from '@/storage/indexedDB/indexedDBStorage';
+import type { ProgressData, StorageValue } from '@/types/storage';
 import { isMigrationCompleted } from '@/storage/migration/dataMigration';
 import { logger } from '@/logger';
 
@@ -17,8 +18,8 @@ export function initStorageStrategy(): void {
   logger.log(`📦 Storage strategy: ${useIndexedDB ? 'IndexedDB' : 'localStorage'}`);
 }
 
-// 進捗データの保存（統合インターフェース）
-export async function saveProgressData(data: any): Promise<boolean> {
+// 進捗データの保存(統合インターフェース)
+export async function saveProgressData(data: ProgressData): Promise<boolean> {
   try {
     if (useIndexedDB) {
       // IndexedDBに保存
@@ -41,21 +42,21 @@ export async function saveProgressData(data: any): Promise<boolean> {
   }
 }
 
-// 進捗データの読み込み（統合インターフェース）
-export async function loadProgressData(): Promise<any | null> {
+// 進捗データの読み込み(統合インターフェース)
+export async function loadProgressData(): Promise<ProgressData | null> {
   try {
     if (useIndexedDB) {
       // IndexedDBから読み込み
-      const data = await getFromDB(STORES.PROGRESS, 'main');
+      const data = await getFromDB(STORES.PROGRESS, 'main') as ProgressData | null;
       if (data) return data;
       
       // IndexedDBにない場合はLocalStorageから読み込み（移行前のデータ）
       const fallbackData = localStorage.getItem('progress-data');
-      return fallbackData ? JSON.parse(fallbackData) : null;
+      return fallbackData ? JSON.parse(fallbackData) as ProgressData : null;
     } else {
       // LocalStorageから読み込み
       const data = localStorage.getItem('progress-data');
-      return data ? JSON.parse(data) : null;
+      return data ? JSON.parse(data) as ProgressData : null;
     }
   } catch (error) {
     logger.error('loadProgressData error:', error);
@@ -64,7 +65,7 @@ export async function loadProgressData(): Promise<any | null> {
 }
 
 // 設定値の保存（統合インターフェース）
-export async function saveSetting(key: string, value: any): Promise<boolean> {
+export async function saveSetting(key: string, value: StorageValue): Promise<boolean> {
   try {
     if (useIndexedDB) {
       return await putToDB(STORES.SETTINGS, value, key);
@@ -85,11 +86,11 @@ export async function saveSetting(key: string, value: any): Promise<boolean> {
 }
 
 // 設定値の読み込み（統合インターフェース）
-export async function loadSetting(key: string): Promise<any | null> {
+export async function loadSetting(key: string): Promise<StorageValue | null> {
   try {
     if (useIndexedDB) {
       const data = await getFromDB(STORES.SETTINGS, key);
-      if (data !== null) return data;
+      if (data !== null && data !== undefined) return data as StorageValue;
       
       // IndexedDBにない場合はLocalStorageから読み込み
       const fallbackData = localStorage.getItem(key);
@@ -105,7 +106,7 @@ export async function loadSetting(key: string): Promise<any | null> {
 }
 
 // LocalStorageへの同期保存（後方互換性のため）
-export function saveToLocalStorage(key: string, value: any): boolean {
+export function saveToLocalStorage(key: string, value: StorageValue): boolean {
   try {
     localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
     return true;
@@ -116,7 +117,7 @@ export function saveToLocalStorage(key: string, value: any): boolean {
 }
 
 // LocalStorageからの読み込み（後方互換性のため）
-export function loadFromLocalStorage(key: string): any | null {
+export function loadFromLocalStorage(key: string): StorageValue | null {
   try {
     return localStorage.getItem(key);
   } catch (error) {

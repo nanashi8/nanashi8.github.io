@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getDailyPlanInfo, DailyPlanInfo } from '../progressStorage';
+import { getDailyPlanInfo, DailyPlanInfo } from '@/storage/progress/progressStorage';
 
 interface DailyPlanBannerProps {
   mode: 'translation' | 'spelling' | 'reading';

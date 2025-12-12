@@ -311,7 +311,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
       
       // 進捗データに記録（正解として）
       const responseTime = Date.now() - questionStartTimeRef.current;
-      const { updateWordProgress, addSessionHistory } = await import('../progressStorage');
+      const { updateWordProgress, addSessionHistory } = await import('@/storage/progress/progressStorage');
       const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question || 'unknown'}`;
       await updateWordProgress(
         questionId,
@@ -499,7 +499,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
     
     // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
     // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
-    const { updateWordProgress, loadProgress, addSessionHistory, addQuizResult } = await import('../progressStorage');
+    const { updateWordProgress, loadProgress, addSessionHistory, addQuizResult } = await import('@/storage/progress/progressStorage');
     const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.question}`;
     
     // 学習カレンダー用に回答を記録
@@ -597,7 +597,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
             
             // 進捗データに記録（ScoreBoard統計用）- updateWordProgressを使用
             // 問題IDを使用して文法問題の進捗を記録（単語と区別するためgrammar_プレフィックスを追加）
-            const { updateWordProgress, loadProgress, addSessionHistory } = await import('../progressStorage');
+            const { updateWordProgress, loadProgress, addSessionHistory } = await import('@/storage/progress/progressStorage');
             const questionId = currentQuestion.id ? `grammar_${currentQuestion.id}` : `grammar_${currentQuestion.words?.join('_') || 'unknown'}`;
             await updateWordProgress(
               questionId,

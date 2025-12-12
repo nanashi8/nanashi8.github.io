@@ -173,7 +173,7 @@ async function loadJapanesePhrases(passageId: string): Promise<string[]> {
  */
 export async function convertPassageToReadingFormat(
   passageId: string,
-  wordDictionary: Map<string, any>
+  wordDictionary: Map<string, import('@/types/storage').WordDictionaryEntry>
 ): Promise<ReadingPassage | null> {
   const loaded = await loadPassage(passageId);
   if (!loaded) return null;
@@ -186,8 +186,8 @@ export async function convertPassageToReadingFormat(
   ]);
   let japaneseIndex = 0;
 
-  // セクションごとにフレーズ（文単位）を生成
-  const phrases: any[] = [];
+  // セクションごとにフレーズ(文単位)を生成
+  const phrases: import('@/types').ReadingPhrase[] = [];
   
   loaded.sections.forEach((section) => {
     section.paragraphs.forEach((paragraph) => {
@@ -309,8 +309,6 @@ export async function convertPassageToReadingFormat(
         japaneseIndex++;
         
         phrases.push({
-          english: fullText,
-          japanese: japanese,
           phraseMeaning: japanese, // phraseMeaningも設定
           words: words,
           segments: segments,
@@ -390,8 +388,6 @@ export async function convertPassageToReadingFormat(
         japaneseIndex++;
         
         phrases.push({
-          english: phraseText,
-          japanese: japanese,
           phraseMeaning: japanese, // phraseMeaningも設定
           words: words,
           segments: segments,
@@ -457,7 +453,7 @@ export async function loadPhraseLearningJSON(passageId: string): Promise<Reading
  * 優先順位: 1) フレーズ学習JSON, 2) .txtファイル
  */
 export async function loadAllPassagesAsReadingFormat(
-  wordDictionary: Map<string, any>
+  wordDictionary: Map<string, import('@/types/storage').WordDictionaryEntry>
 ): Promise<ReadingPassage[]> {
   const metadata = getPassageList();
   const passages: ReadingPassage[] = [];

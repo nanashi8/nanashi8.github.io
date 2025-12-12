@@ -1,5 +1,7 @@
 // AI コメント生成ヘルパー関数
 
+import type { QuizResultWithCategory, CategoryStats } from '@/types/storage';
+
 // ランダム選択ヘルパー
 export function randomChoice<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -30,17 +32,17 @@ export function analyzeLearningPattern(): LearningPattern {
 
   try {
     const data = JSON.parse(progressData);
-    const results = data.results || [];
+    const results: QuizResultWithCategory[] = data.results || [];
     const recentResults = results.slice(-10); // 最新10セッション
     
     // 平均正答率
     const avgAccuracy = recentResults.length > 0
-      ? recentResults.reduce((sum: number, r: any) => sum + (r.score / r.total * 100), 0) / recentResults.length
+      ? recentResults.reduce((sum: number, r: QuizResultWithCategory) => sum + (r.score / r.total * 100), 0) / recentResults.length
       : 0;
     
     // カテゴリー別分析
-    const categoryStats = new Map<string, { correct: number; total: number }>();
-    results.forEach((r: any) => {
+    const categoryStats = new Map<string, CategoryStats>();
+    results.forEach((r: QuizResultWithCategory) => {
       if (r.category) {
         const stats = categoryStats.get(r.category) || { correct: 0, total: 0 };
         stats.correct += r.score;
@@ -61,15 +63,15 @@ export function analyzeLearningPattern(): LearningPattern {
     const older = recentResults.slice(0, 5);
     const newer = recentResults.slice(-5);
     const olderAvg = older.length > 0
-      ? older.reduce((sum: number, r: any) => sum + (r.score / r.total * 100), 0) / older.length
+      ? older.reduce((sum: number, r: QuizResultWithCategory) => sum + (r.score / r.total * 100), 0) / older.length
       : 0;
     const newerAvg = newer.length > 0
-      ? newer.reduce((sum: number, r: any) => sum + (r.score / r.total * 100), 0) / newer.length
+      ? newer.reduce((sum: number, r: QuizResultWithCategory) => sum + (r.score / r.total * 100), 0) / newer.length
       : 0;
     const recentImprovement = newerAvg > olderAvg + 5; // 5%以上の改善
     
     // 一貫性スコア（過去の学習日数の連続性）
-    const uniqueDates = new Set(results.map((r: any) => new Date(r.date).toDateString()));
+    const uniqueDates = new Set(results.map((r: QuizResultWithCategory) => new Date(r.date).toDateString()));
     const consistencyScore = Math.min(100, uniqueDates.size * 5); // 最大20日で100
     
     return {

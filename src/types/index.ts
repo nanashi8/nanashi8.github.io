@@ -10,7 +10,8 @@ export * from './domain';
 export * from './ui';
 
 // 読解型
-export * from './reading';
+// 注: src/types.tsと重複のため、reading.tsからのエクスポートは無効化
+// export * from './reading';
 
 // AI型
 export * from './ai';

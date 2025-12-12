@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import type { Question, AIPersonality } from '../types';
 import type { DataSource } from '../App';
 import LearningPlanView from './LearningPlanView';
-import { PERSONALITY_INFO } from '../aiCommentGenerator';
+import { PERSONALITY_INFO } from '@/features/interaction/aiCommentGenerator';
 
 interface SettingsViewProps {
   allQuestions: Question[];

@@ -5,8 +5,8 @@ import {
   generateTimeBasedGreeting, 
   updateConsecutiveDays,
   getTodayStudyStats as _getTodayStudyStats 
-} from '../timeBasedGreeting';
-import { getTimeBasedTeacherChat, getSpecialDayChat } from '../teacherInteractions';
+} from '@/features/interaction/timeBasedGreeting';
+import { getTimeBasedTeacherChat, getSpecialDayChat } from '@/features/interaction/teacherInteractions';
 import { getBreatherTrivia } from '../englishTrivia';
 
 interface TimeBasedGreetingBannerProps {

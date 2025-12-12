@@ -16,7 +16,7 @@ import {
   createWeakWordsQuestionSet,
   saveCustomQuestionSet,
   getCustomQuestionSets,
-} from '../progressStorage';
+} from '@/storage/progress/progressStorage';
 import { QuestionSet, Question } from '../types';
 import { logger } from '../logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '../utils';

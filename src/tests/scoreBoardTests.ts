@@ -17,15 +17,15 @@ import {
   getRetentionRateWithAI,
   getDetailedRetentionStats,
   getNearMasteryStats
-} from '../progressStorage';
-import { calculateGoalProgress, generateGoalMessage } from '../goalSimulator';
-import { getAlertSummary } from '../forgettingAlert';
+} from '@/storage/progress/progressStorage';
+import { calculateGoalProgress, generateGoalMessage } from '@/features/learning/goalSimulator';
+import { getAlertSummary } from '@/features/learning/forgettingAlert';
 
 type TestResult = {
   name: string;
   passed: boolean;
   message: string;
-  data?: any;
+  data?: unknown;
 };
 
 /**

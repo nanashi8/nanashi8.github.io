@@ -4,15 +4,22 @@ import { loadProgress, saveProgress } from '@/storage/progress/progressStorage';
 import { getAllFromDB, STORES } from '@/storage/indexedDB/indexedDBStorage';
 import { getMigrationInfo } from '@/storage/migration/dataMigration';
 import { logger } from '@/logger';
+import type { 
+  ProgressData, 
+  SessionRecord, 
+  DailyStat, 
+  AppSettings 
+} from '@/types/storage';
 
 // エクスポートデータの型
 export interface ExportData {
   version: string;
-  exportDate: number;
-  progress: any;
-  sessionHistory: any[];
-  dailyStats: any[];
-  settings: any;
+  exportedAt: number;
+  exportDate?: number; // 後方互換性のため
+  progress: import('@/storage/progress/progressStorage').UserProgress | ProgressData | null;
+  sessionHistory: SessionRecord[];
+  dailyStats: DailyStat[];
+  settings: Partial<AppSettings> & Record<string, unknown>;
 }
 
 // 全データをエクスポート
@@ -23,7 +30,7 @@ export async function exportAllData(): Promise<string> {
     
     const exportData: ExportData = {
       version: '1.0',
-      exportDate: Date.now(),
+      exportedAt: Date.now(),
       progress,
       sessionHistory: [],
       dailyStats: [],
@@ -33,8 +40,8 @@ export async function exportAllData(): Promise<string> {
     // IndexedDBを使用している場合
     if (migrationInfo.completed && migrationInfo.indexedDBSupported) {
       try {
-        exportData.sessionHistory = await getAllFromDB(STORES.SESSION_HISTORY);
-        exportData.dailyStats = await getAllFromDB(STORES.DAILY_STATS);
+        exportData.sessionHistory = (await getAllFromDB(STORES.SESSION_HISTORY)) as SessionRecord[];
+        exportData.dailyStats = (await getAllFromDB(STORES.DAILY_STATS)) as DailyStat[];
         
         // 設定データも取得
         const settingsKeys = [
@@ -48,7 +55,7 @@ export async function exportAllData(): Promise<string> {
         for (const key of settingsKeys) {
           const value = localStorage.getItem(key);
           if (value) {
-            exportData.settings[key] = value;
+            (exportData.settings as Record<string, string>)[key] = value;
           }
         }
       } catch (error) {
@@ -72,7 +79,7 @@ export async function exportAllData(): Promise<string> {
       for (const key of settingsKeys) {
         const value = localStorage.getItem(key);
         if (value) {
-          exportData.settings[key] = value;
+          (exportData.settings as Record<string, string>)[key] = value;
         }
       }
     }
@@ -121,7 +128,7 @@ export async function importData(jsonString: string): Promise<boolean> {
     // 確認ダイアログ
     const confirmed = confirm(
       `バックアップデータを復元しますか？\n\n` +
-      `エクスポート日時: ${new Date(data.exportDate).toLocaleString()}\n` +
+      `エクスポート日時: ${new Date(data.exportedAt || data.exportDate || 0).toLocaleString()}\n` +
       `現在のデータは上書きされます。\n\n` +
       `復元前に現在のデータをバックアップすることを推奨します。`
     );
@@ -131,7 +138,9 @@ export async function importData(jsonString: string): Promise<boolean> {
     }
 
     // 進捗データを復元
-    await saveProgress(data.progress);
+    if (data.progress) {
+      await saveProgress(data.progress as import('@/storage/progress/progressStorage').UserProgress);
+    }
 
     // 設定データを復元
     if (data.settings) {
