@@ -37,7 +37,7 @@ jobs:
         
     - name: 問題が検出された場合はイシューを作成
       if: steps.health_check.outputs.failed == 'true'
-      uses: actions/github-script@v7
+      uses: actions/github-script@v8
       with:
         script: |
           const fs = require('fs');
