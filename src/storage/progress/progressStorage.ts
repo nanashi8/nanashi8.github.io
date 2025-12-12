@@ -1,290 +1,43 @@
 // 進捗・成績管理用のストレージモジュール（IndexedDB/LocalStorage統合）
 
 import { saveProgressData, loadProgressData, saveSetting, loadSetting } from '@/storage/manager/storageManager';
-import { logger } from '@/logger';
+import { logger } from '@/utils/logger';
 import { formatLocalYYYYMMDD, QUIZ_RESULT_EVENT } from '@/utils';
+import type { ReadingPassage, ReadingPhrase, ReadingSegment } from '@/types/storage';
+import { deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
+
+// 型定義をインポート＆re-export
+import type { 
+  SessionHistoryItem, 
+  StudySettings, 
+  QuizResult, 
+  WordProgress, 
+  UserProgress,
+  DetailedRetentionStats,
+  MasteryPrediction,
+  DailyPlanInfo
+} from './types';
+
+export type { 
+  SessionHistoryItem, 
+  StudySettings, 
+  QuizResult, 
+  WordProgress, 
+  UserProgress,
+  DetailedRetentionStats,
+  MasteryPrediction,
+  DailyPlanInfo
+};
+
+// 学習設定関連をre-export
+export { getStudySettings, saveStudySettings, updateStudySettings } from './settings';
+
+// セッション履歴関連をre-export
+export { addSessionHistory, getSessionHistory, clearSessionHistory } from './sessionHistory';
 
 // LocalStorage容量制限対策
 const STORAGE_KEY = 'progress-data';
 const MAX_RESULTS_PER_MODE = 50; // モードごとの最大保存数
-
-// SafeなLocalStorage操作
-function _safeSetItem(key: string, value: string): boolean {
-  try {
-    localStorage.setItem(key, value);
-    return true;
-  } catch (e) {
-    if (e instanceof DOMException && e.name === 'QuotaExceededError') {
-      logger.warn('LocalStorage容量超過。古いデータを削除します。');
-      // 古い結果データを削除
-      cleanupOldResults();
-      try {
-        localStorage.setItem(key, value);
-        return true;
-      } catch (e2) {
-        logger.error('データ削除後も保存失敗:', e2);
-        return false;
-      }
-    }
-    logger.error('LocalStorage保存エラー:', e);
-    return false;
-  }
-}
-
-// 古い結果データを削除
-function cleanupOldResults(): void {
-  const data = loadProgressSync();
-  if (data.results.length > MAX_RESULTS_PER_MODE * 3) {
-    // モード別に最新N件のみ保持
-    const resultsByMode = {
-      translation: data.results.filter(r => r.mode === 'translation'),
-      spelling: data.results.filter(r => r.mode === 'spelling'),
-      reading: data.results.filter(r => r.mode === 'reading'),
-    };
-    
-    data.results = [
-      ...resultsByMode.translation.slice(-MAX_RESULTS_PER_MODE),
-      ...resultsByMode.spelling.slice(-MAX_RESULTS_PER_MODE),
-      ...resultsByMode.reading.slice(-MAX_RESULTS_PER_MODE),
-    ].sort((a, b) => a.date - b.date);
-    
-    logger.log(`古い結果を削除: ${resultsByMode.translation.length + resultsByMode.spelling.length + resultsByMode.reading.length}件 → ${data.results.length}件`);
-  }
-}
-
-// セッション履歴インジケーター用のデータ型
-export type SessionHistoryItem = {
-  status: 'correct' | 'incorrect' | 'review' | 'mastered';
-  word: string;
-  timestamp: number;
-};
-
-// セッション履歴をストレージに保存（IndexedDB/LocalStorage統合）
-const SESSION_HISTORY_KEY = 'session-history';
-const MAX_SESSION_HISTORY = 50;
-
-import { putToDB, queryByIndex, STORES, isIndexedDBSupported, deleteDatabase } from '@/storage/indexedDB/indexedDBStorage';
-import { isMigrationCompleted } from '@/storage/migration/dataMigration';
-
-export async function addSessionHistory(item: SessionHistoryItem, mode: 'translation' | 'spelling' | 'grammar' | 'memorization'): Promise<void> {
-  const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
-  
-  try {
-    if (useIndexedDB) {
-      // IndexedDBに保存
-      await putToDB(STORES.SESSION_HISTORY, {
-        mode,
-        status: item.status,
-        word: item.word,
-        timestamp: item.timestamp
-      });
-    } else {
-      // LocalStorageにフォールバック
-      const key = `${SESSION_HISTORY_KEY}-${mode}`;
-      const stored = localStorage.getItem(key);
-      const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
-      
-      history.push(item);
-      
-      // 最新50件のみ保持
-      if (history.length > MAX_SESSION_HISTORY) {
-        history.shift();
-      }
-      
-      localStorage.setItem(key, JSON.stringify(history));
-    }
-  } catch (e) {
-    logger.error('セッション履歴の保存エラー:', e);
-  }
-}
-
-export async function getSessionHistory(mode: 'translation' | 'spelling' | 'grammar' | 'memorization', limit: number = 20): Promise<SessionHistoryItem[]> {
-  const useIndexedDB = isIndexedDBSupported() && isMigrationCompleted();
-  
-  try {
-    if (useIndexedDB) {
-      // IndexedDBから検索
-      const results = await queryByIndex<any>(
-        STORES.SESSION_HISTORY,
-        'mode',
-        mode,
-        limit
-      );
-      
-      return results.map(r => ({
-        status: r.status,
-        word: r.word,
-        timestamp: r.timestamp
-      }));
-    } else {
-      // LocalStorageから読み込み
-      const key = `${SESSION_HISTORY_KEY}-${mode}`;
-      const stored = localStorage.getItem(key);
-      const history: SessionHistoryItem[] = stored ? JSON.parse(stored) : [];
-      
-      // 最新limit件を返す
-      return history.slice(-limit);
-    }
-  } catch (e) {
-    logger.error('セッション履歴の取得エラー:', e);
-    return [];
-  }
-}
-
-export function clearSessionHistory(mode: 'translation' | 'spelling' | 'grammar' | 'memorization'): void {
-  try {
-    const key = `${SESSION_HISTORY_KEY}-${mode}`;
-    localStorage.removeItem(key);
-  } catch (e) {
-    logger.error('セッション履歴のクリアエラー:', e);
-  }
-}
-
-// 学習設定の型定義
-export interface StudySettings {
-  maxReviewCount: number; // 要復習上限（デフォルト: 10）
-}
-
-// デフォルト設定
-const DEFAULT_STUDY_SETTINGS: StudySettings = {
-  maxReviewCount: 10,
-};
-
-// 学習設定を取得
-export function getStudySettings(): StudySettings {
-  try {
-    const stored = localStorage.getItem('study-settings');
-    if (stored) {
-      const settings = JSON.parse(stored);
-      return {
-        maxReviewCount: settings.maxReviewCount ?? DEFAULT_STUDY_SETTINGS.maxReviewCount,
-      };
-    }
-  } catch (e) {
-    logger.error('学習設定の取得エラー:', e);
-  }
-  return { ...DEFAULT_STUDY_SETTINGS };
-}
-
-// 学習設定を保存
-export function saveStudySettings(settings: StudySettings): boolean {
-  try {
-    localStorage.setItem('study-settings', JSON.stringify(settings));
-    return true;
-  } catch (e) {
-    logger.error('学習設定の保存エラー:', e);
-    return false;
-  }
-}
-
-// 学習設定を更新（部分更新対応）
-export function updateStudySettings(partialSettings: Partial<StudySettings>): boolean {
-  const currentSettings = getStudySettings();
-  const newSettings = { ...currentSettings, ...partialSettings };
-  return saveStudySettings(newSettings);
-}
-
-export interface QuizResult {
-  id: string;
-  questionSetId: string;
-  questionSetName: string;
-  score: number;
-  total: number;
-  percentage: number;
-  date: number;
-  timeSpent: number; // 秒
-  incorrectWords: string[];
-  mode: 'translation' | 'spelling' | 'reading' | 'grammar' | 'memorization';
-  category?: string; // 関連分野
-  difficulty?: string; // 難易度レベル
-}
-
-// 単語ごとの学習進捗
-export interface WordProgress {
-  word: string; // 単語
-  correctCount: number; // 正解回数
-  incorrectCount: number; // 不正解回数
-  consecutiveCorrect: number; // 連続正解回数
-  consecutiveIncorrect: number; // 連続不正解回数
-  lastStudied: number; // 最終学習日時（タイムスタンプ）
-  totalResponseTime: number; // 累計応答時間（ミリ秒）
-  averageResponseTime: number; // 平均応答時間（ミリ秒）
-  difficultyScore: number; // 難易度スコア（0-100、高いほど苦手）
-  userDifficultyRating?: number; // ユーザーの主観的難易度評価（1-3: 簡単/普通/難しい）
-  masteryLevel: 'new' | 'learning' | 'mastered'; // 習熟レベル
-  responseTimes: number[]; // 応答時間の履歴（最新10件）
-  category?: string; // カテゴリー
-  difficulty?: string; // 難易度レベル
-  skippedCount?: number; // スキップ回数
-  lastSkipped?: number; // 最終スキップ日時（タイムスタンプ）
-  skipExcludeUntil?: number; // この日時まで出題除外（タイムスタンプ）
-  needsVerification?: boolean; // AI学習アシスタント: 検証が必要
-  verificationReason?: string; // AI学習アシスタント: 検証が必要な理由
-  meaning?: string; // 意味（苦手語句表示用）
-  reading?: string; // 読み（苦手語句表示用）
-  
-  // モード別統計（難易度別リセット用）
-  totalAttempts?: number; // 総試行回数
-  translationAttempts?: number; // 和訳モードの試行回数
-  translationCorrect?: number; // 和訳モードの正解回数
-  translationStreak?: number; // 和訳モードの連続正解数
-  spellingAttempts?: number; // スペルモードの試行回数
-  spellingCorrect?: number; // スペルモードの正解回数
-  spellingStreak?: number; // スペルモードの連続正解数
-  grammarAttempts?: number; // 文法モードの試行回数
-  grammarCorrect?: number; // 文法モードの正解回数
-  grammarStreak?: number; // 文法モードの連続正解数
-  memorizationAttempts?: number; // 暗記モードの試行回数
-  memorizationCorrect?: number; // 暗記モードの正解回数
-  memorizationStreak?: number; // 暗記モードの連続正解数
-  
-  // 学習曲線AI用の詳細履歴
-  learningHistory?: Array<{
-    timestamp: number;
-    wasCorrect: boolean;
-    responseTime: number;
-    userAnswer?: string;
-    sessionIndex?: number;
-  }>;
-  
-  // 混同履歴（この単語を誤答として選んだ履歴）
-  confusedWith?: Array<{
-    word: string; // 実際に出題された単語
-    timestamp: number; // 混同した日時
-  }>;
-  confusionCount?: number; // 混同された合計回数
-  lastConfused?: number; // 最終混同日時
-  
-  // 定着済み単語の復習管理
-  nextReviewDate?: number; // 次回復習予定日時（タイムスタンプ）
-}
-
-export interface UserProgress {
-  results: QuizResult[];
-  statistics: {
-    totalQuizzes: number;
-    totalQuestions: number;
-    totalCorrect: number;
-    averageScore: number;
-    bestScore: number;
-    streakDays: number;
-    lastStudyDate: number;
-    studyDates: number[]; // 学習した日付のタイムスタンプ配列
-  };
-  questionSetStats: {
-    [setId: string]: {
-      attempts: number;
-      bestScore: number;
-      averageScore: number;
-      lastAttempt: number;
-      totalTimeSpent: number;
-    };
-  };
-  wordProgress: {
-    [word: string]: WordProgress; // 単語ごとの進捗データ
-  };
-}
-
 const PROGRESS_KEY = 'quiz-app-user-progress';
 const MAX_RESULTS = 300; // 保存する最大結果数（容量削減）
 const MAX_WORD_PROGRESS = 2000; // 単語進捗の最大保存数
@@ -305,6 +58,8 @@ function initializeProgress(): UserProgress {
       studyDates: [],
     },
     questionSetStats: {},
+    categoryStats: {},
+    difficultyStats: {},
     wordProgress: {},
   };
 }
@@ -321,7 +76,24 @@ export async function loadProgress(): Promise<UserProgress> {
       return initialized;
     }
     
-    const progress = data as UserProgress;
+    // ProgressDataからUserProgressへの変換（Phase 3で型統合予定）
+    const progress: UserProgress = {
+      results: (data.results || []) as unknown as QuizResult[],
+      statistics: data.statistics || {
+        totalQuizzes: 0,
+        totalQuestions: 0,
+        totalCorrect: 0,
+        averageScore: 0,
+        bestScore: 0,
+        streakDays: 0,
+        lastStudyDate: 0,
+        studyDates: [],
+      },
+      questionSetStats: data.questionSetStats || {},
+      categoryStats: {},
+      difficultyStats: {},
+      wordProgress: (data.wordProgress || {}) as unknown as { [word: string]: WordProgress },
+    };
     
     // データ構造の完全性チェック
     if (!progress.statistics) {
@@ -455,8 +227,20 @@ export async function saveProgress(progress: UserProgress): Promise<void> {
       logger.warn('LocalStorage保存失敗（容量不足の可能性）:', e);
     }
     
+    // UserProgressをProgressDataに変換して保存
+    const progressData: import('@/types/storage').ProgressData = {
+      quizzes: {},
+      lastUpdated: Date.now(),
+      totalAnswered: {},
+      totalMastered: {},
+      results: progress.results as unknown as import('@/types/storage').QuizResult[],
+      statistics: progress.statistics,
+      questionSetStats: progress.questionSetStats,
+      wordProgress: progress.wordProgress as unknown as { [word: string]: import('@/types/storage').WordProgress },
+    };
+    
     // ストレージマネージャーで保存
-    const saved = await saveProgressData(progress);
+    const saved = await saveProgressData(progressData);
     
     if (!saved) {
       logger.error('データの保存に失敗しました');
@@ -1383,15 +1167,15 @@ function removeFromReadingUnknownWords(word: string): void {
   if (!storedData) return;
   
   try {
-    const passages = JSON.parse(storedData);
+    const passages: ReadingPassage[] = JSON.parse(storedData);
     let modified = false;
     
     // 全パッセージの全フレーズの全セグメントをチェック
-    passages.forEach((passage: any) => {
+    passages.forEach((passage: ReadingPassage) => {
       if (passage.phrases) {
-        passage.phrases.forEach((phrase: any) => {
+        passage.phrases.forEach((phrase: ReadingPhrase) => {
           if (phrase.segments) {
-            phrase.segments.forEach((segment: any) => {
+            phrase.segments.forEach((segment: ReadingSegment) => {
               if (segment.word.toLowerCase() === word.toLowerCase() && segment.isUnknown) {
                 segment.isUnknown = false;
                 modified = true;
@@ -1834,29 +1618,6 @@ export function getRetentionRateWithAI(): {
 }
 
 /**
- * 詳細な定着率統計（3段階分類）
- */
-export interface DetailedRetentionStats {
-  // 基本統計
-  totalWords: number;
-  appearedWords: number;
-  
-  // 段階別カウント
-  masteredCount: number;      // 🟢 完全定着
-  learningCount: number;       // 🟡 学習中
-  strugglingCount: number;     // 🔴 要復習
-  
-  // 定着率（複数の指標）
-  basicRetentionRate: number;      // 基本定着率: 定着数/出題数 (0-100%)
-  weightedRetentionRate: number;   // 加重定着率: 学習中を0.5倍 (0-100%)
-  
-  // パーセンテージ（表示用）
-  masteredPercentage: number;
-  learningPercentage: number;
-  strugglingPercentage: number;
-}
-
-/**
  * 詳細な定着率統計を計算
  */
 export function getDetailedRetentionStats(): DetailedRetentionStats {
@@ -1912,6 +1673,15 @@ export function getDetailedRetentionStats(): DetailedRetentionStats {
     masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
     learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
     strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+    
+    // エイリアス（互換性のため）
+    masteredWords: masteredCount,
+    learningWords: learningCount,
+    newWords: allWords.length - total,
+    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    averageAttempts: 0,
+    categoryBreakdown: {},
+    difficultyBreakdown: {},
   };
 }
 
@@ -1919,15 +1689,6 @@ export function getDetailedRetentionStats(): DetailedRetentionStats {
  * 学習中の単語の定着予測を取得
  * 各単語があと何回正解すれば定着するかを計算
  */
-export interface MasteryPrediction {
-  word: string;
-  currentStatus: string; // 現在の状態
-  remainingCorrectAnswers: number; // あと何回正解が必要か
-  confidence: number; // 予測の信頼度（0-100%）
-  nextMilestone: string; // 次のマイルストーン
-  estimatedDays: number; // 推定残り日数
-}
-
 export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
   const progress = loadProgressSync();
   const predictions: MasteryPrediction[] = [];
@@ -2018,8 +1779,10 @@ export function getMasteryPredictions(limit: number = 10): MasteryPrediction[] {
   // 定着が近い順にソート（残り回答数 → 信頼度）
   return predictions
     .sort((a, b) => {
-      if (a.remainingCorrectAnswers !== b.remainingCorrectAnswers) {
-        return a.remainingCorrectAnswers - b.remainingCorrectAnswers;
+      const aRemaining = a.remainingCorrectAnswers ?? 999;
+      const bRemaining = b.remainingCorrectAnswers ?? 999;
+      if (aRemaining !== bRemaining) {
+        return aRemaining - bRemaining;
       }
       return b.confidence - a.confidence;
     })
@@ -2089,14 +1852,6 @@ export function getNearMasteryStats(): {
  * 今日の学習計画情報を取得
  * 要復習単語と確認予定単語を計算
  */
-export interface DailyPlanInfo {
-  reviewWordsCount: number; // 要復習単語数（忘却曲線で復習が必要）
-  scheduledWordsCount: number; // 確認予定単語数（skipExcludeUntilが今日まで）
-  totalPlannedCount: number; // 合計学習予定数
-  reviewWords: string[]; // 要復習単語リスト
-  scheduledWords: string[]; // 確認予定単語リスト
-}
-
 export function getDailyPlanInfo(): DailyPlanInfo {
   const progress = loadProgressSync();
   const now = Date.now();
@@ -3018,7 +2773,15 @@ export async function saveMemorizationCardSettings(settings: import('@/types').M
 export async function getMemorizationCardSettings(): Promise<import('@/types').MemorizationCardState | null> {
   try {
     const settings = await loadSetting('memorization-card-settings');
-    return settings ? (typeof settings === 'string' ? JSON.parse(settings) : settings) : null;
+    if (!settings) return null;
+    if (typeof settings === 'string') {
+      return JSON.parse(settings) as import('@/types').MemorizationCardState;
+    }
+    // ProgressData, SessionHistory, AppSettingsなどStorageValueのサブタイプを除外
+    if (typeof settings === 'object' && 'showFurigana' in settings) {
+      return settings as unknown as import('@/types').MemorizationCardState;
+    }
+    return null;
   } catch (error) {
     logger.error('カード表示設定の読み込みエラー:', error);
     // フォールバック: localStorage
@@ -3041,7 +2804,14 @@ export async function saveMemorizationSettings(settings: import('@/types').Memor
 export async function getMemorizationSettings(): Promise<import('@/types').MemorizationSettings | null> {
   try {
     const settings = await loadSetting('memorization-settings');
-    return settings ? (typeof settings === 'string' ? JSON.parse(settings) : settings) : null;
+    if (!settings) return null;
+    if (typeof settings === 'string') {
+      return JSON.parse(settings) as import('@/types').MemorizationSettings;
+    }
+    if (typeof settings === 'object' && 'shuffleOrder' in settings) {
+      return settings as unknown as import('@/types').MemorizationSettings;
+    }
+    return null;
   } catch (error) {
     logger.error('暗記設定の読み込みエラー:', error);
     const stored = localStorage.getItem('memorization-settings');
@@ -3098,7 +2868,14 @@ export async function getMemorizationCurve(word: string): Promise<import('@/type
   try {
     const key = `memorization-curve-${word}`;
     const curveData = await loadSetting(key);
-    return curveData ? (typeof curveData === 'string' ? JSON.parse(curveData) : curveData) : null;
+    if (!curveData) return null;
+    if (typeof curveData === 'string') {
+      return JSON.parse(curveData) as import('@/types').MemorizationCurve;
+    }
+    if (typeof curveData === 'object' && 'correctHistory' in curveData) {
+      return curveData as unknown as import('@/types').MemorizationCurve;
+    }
+    return null;
   } catch (error) {
     logger.error('学習曲線データの取得エラー:', error);
     return null;
@@ -3115,7 +2892,14 @@ const CUSTOM_QUESTION_SETS_KEY = 'custom-question-sets';
 export async function getCustomQuestionSets(): Promise<import('@/types').CustomQuestionSet[]> {
   try {
     const data = await loadSetting(CUSTOM_QUESTION_SETS_KEY);
-    return data ? (typeof data === 'string' ? JSON.parse(data) : data) : [];
+    if (!data) return [];
+    if (typeof data === 'string') {
+      return JSON.parse(data) as import('@/types').CustomQuestionSet[];
+    }
+    if (Array.isArray(data)) {
+      return data as import('@/types').CustomQuestionSet[];
+    }
+    return [];
   } catch (error) {
     logger.error('カスタム問題セット取得エラー:', error);
     return [];
@@ -3342,6 +3126,15 @@ export function getGrammarDetailedRetentionStats(): DetailedRetentionStats {
     masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
     learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
     strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
+    
+    // エイリアス（互換性のため）
+    masteredWords: masteredCount,
+    learningWords: learningCount,
+    newWords: grammarQuestions.length - total,
+    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
+    averageAttempts: 0,
+    categoryBreakdown: {},
+    difficultyBreakdown: {},
   };
 }
 
