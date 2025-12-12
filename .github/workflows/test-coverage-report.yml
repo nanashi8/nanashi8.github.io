@@ -13,7 +13,7 @@ permissions:
 jobs:
   coverage:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
 
@@ -34,21 +34,21 @@ jobs:
         run: |
           echo "## 📊 テストカバレッジレポート" > coverage-report.md
           echo "" >> coverage-report.md
-          
+
           # カバレッジファイルが存在する場合
           if [ -f coverage/coverage-summary.json ]; then
             LINES=$(jq '.total.lines.pct' coverage/coverage-summary.json)
             FUNCS=$(jq '.total.functions.pct' coverage/coverage-summary.json)
             BRANCHES=$(jq '.total.branches.pct' coverage/coverage-summary.json)
             STMTS=$(jq '.total.statements.pct' coverage/coverage-summary.json)
-            
+
             echo "### 現在のカバレッジ" >> coverage-report.md
             echo "- 📝 Lines: ${LINES}% (目標: 70%)" >> coverage-report.md
             echo "- 🔧 Functions: ${FUNCS}% (目標: 70%)" >> coverage-report.md
             echo "- 🌿 Branches: ${BRANCHES}% (目標: 70%)" >> coverage-report.md
             echo "- 📊 Statements: ${STMTS}% (目標: 70%)" >> coverage-report.md
             echo "" >> coverage-report.md
-            
+
             # 推奨テスト戦略
             echo "### 💡 推奨テスト戦略" >> coverage-report.md
             echo "" >> coverage-report.md
@@ -58,25 +58,25 @@ jobs:
             echo "- \`src/features/*/\` - コアロジック（目標90%）" >> coverage-report.md
             echo "- \`src/ai/*/\` - AI関連アルゴリズム（目標90%）" >> coverage-report.md
             echo "" >> coverage-report.md
-            
+
             echo "#### ⚡ 優先度MEDIUM（テスト推奨）" >> coverage-report.md
             echo "- \`src/hooks/*\` - React Hooks（目標80%）" >> coverage-report.md
             echo "- \`src/storage/*\` - データ永続化（目標80%）" >> coverage-report.md
             echo "" >> coverage-report.md
-            
+
             echo "#### 📦 優先度LOW（E2Eで十分）" >> coverage-report.md
             echo "- \`src/components/*\` - UIコンポーネント（目標60%）" >> coverage-report.md
             echo "  - Playwrightによる統合テストで十分" >> coverage-report.md
             echo "  - 複雑なロジックのみユニットテスト" >> coverage-report.md
             echo "" >> coverage-report.md
-            
+
             echo "### 🐛 バグ修正の必須ルール" >> coverage-report.md
             echo "バグ修正時は**必ず**以下の手順を守ってください:" >> coverage-report.md
             echo "1. バグを再現するテストを書く（失敗を確認）" >> coverage-report.md
             echo "2. コードを修正" >> coverage-report.md
             echo "3. テストが通ることを確認" >> coverage-report.md
             echo "4. リグレッション防止完了✅" >> coverage-report.md
-            
+
             echo "lines=$LINES" >> $GITHUB_OUTPUT
           else
             echo "⚠️ カバレッジファイルが見つかりません" >> coverage-report.md
@@ -97,19 +97,19 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('coverage-report.md', 'utf8');
-            
+
             // 既存のコメントを検索
             const comments = await github.rest.issues.listComments({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
-            
-            const botComment = comments.data.find(comment => 
-              comment.user.type === 'Bot' && 
+
+            const botComment = comments.data.find(comment =>
+              comment.user.type === 'Bot' &&
               comment.body.includes('テストカバレッジレポート')
             );
-            
+
             if (botComment) {
               await github.rest.issues.updateComment({
                 comment_id: botComment.id,

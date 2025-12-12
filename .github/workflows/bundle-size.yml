@@ -11,7 +11,7 @@ permissions:
 jobs:
   check-size:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -58,15 +58,15 @@ jobs:
         run: |
           echo "## 📊 Bundle Size 比較" > size-report.md
           echo "" >> size-report.md
-          
+
           echo "### 現在のPR" >> size-report.md
           cat size-current.txt >> size-report.md
           echo "" >> size-report.md
-          
+
           echo "### mainブランチ" >> size-report.md
           cat size-main.txt >> size-report.md
           echo "" >> size-report.md
-          
+
           echo "### 推奨事項" >> size-report.md
           echo "- バンドルサイズは小さいほど良い" >> size-report.md
           echo "- Main Bundle: 500 KB以下が目標" >> size-report.md
@@ -79,19 +79,19 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('size-report.md', 'utf8');
-            
+
             // 既存のコメントを検索
             const comments = await github.rest.issues.listComments({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
-            
-            const botComment = comments.data.find(comment => 
-              comment.user.type === 'Bot' && 
+
+            const botComment = comments.data.find(comment =>
+              comment.user.type === 'Bot' &&
               comment.body.includes('Bundle Size 比較')
             );
-            
+
             if (botComment) {
               // 既存コメントを更新
               await github.rest.issues.updateComment({
