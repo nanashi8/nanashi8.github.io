@@ -11,7 +11,16 @@
 
 @media (max-width: 768px) {
   .quiz-view {
-    padding: 15px;
+    padding: 8px;
+  }
+
+  .question-card {
+    padding: 12px;
+  }
+
+  .question-nav-row {
+    gap: 0.5rem;
+    padding: 0.5rem;
   }
 }
 
@@ -157,7 +166,7 @@
   background: var(--white);
   border: 2px solid var(--gray-300);
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgb(0, 0, 0, 0.05);
 }

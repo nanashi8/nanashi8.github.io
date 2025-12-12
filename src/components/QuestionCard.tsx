@@ -360,7 +360,7 @@ function QuestionCard({
     >
       <div className="question-nav-row">
         <button 
-          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
+          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
           onClick={onPrevious}
           disabled={currentIndex === 0}
           title="前へ"
@@ -386,7 +386,7 @@ function QuestionCard({
           title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
         >
           <div 
-            className={`text-4xl font-bold text-gray-900 dark:text-white ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
+            className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white break-words ${question.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}
           >
             {question.word}
             {isSpeechSynthesisSupported() && (
@@ -394,7 +394,7 @@ function QuestionCard({
             )}
           </div>
           {question.reading && (
-            <div className="question-reading">【{question.reading}】</div>
+            <div className="question-reading text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">【{question.reading}】</div>
           )}
           {question.difficulty && (
             <div className={`difficulty-badge ${question.difficulty}`}>
@@ -424,7 +424,7 @@ function QuestionCard({
           )}
         </div>
         <button 
-          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
+          className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl disabled:opacity-30 disabled:cursor-not-allowed" 
           onClick={handleNextClick}
           title="次へ"
         >

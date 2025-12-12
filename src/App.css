@@ -330,7 +330,7 @@
   }
 
   .reading-header {
-    padding: 10px;
+    padding: 8px;
   }
 
   .reading-header h2 {
@@ -340,8 +340,8 @@
 
   .reading-selectors {
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 8px;
+    margin-bottom: 8px;
   }
 
   .reading-selectors .filter-controls,

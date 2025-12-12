@@ -517,48 +517,46 @@ function MemorizationView({
             {/* 左ボタン - まだ覚えていない */}
             <button
               onClick={() => handleSwipe('left')}
-              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl"
+              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl"
               aria-label="まだ覚えていない"
             >
               ←
             </button>
             
             {/* 単語（常に表示）*/}
-            <div className="flex-1 text-center">
-              <div 
-                className={`clickable-pronunciation`}
-                onClick={(e) => {
-                  if (isSpeechSynthesisSupported()) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    speakEnglish(currentQuestion.word, { rate: 0.85 });
-                  }
-                }}
-                onTouchEnd={(e) => {
-                  if (isSpeechSynthesisSupported()) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    speakEnglish(currentQuestion.word, { rate: 0.85 });
-                  }
-                }}
-                title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
-              >
-                <div className={`text-4xl font-bold text-gray-900 dark:text-white ${currentQuestion.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}>
-                  {currentQuestion.word}
-                  {isSpeechSynthesisSupported() && (
-                    <span className="speaker-icon">🔊</span>
-                  )}
-                </div>
-                {currentQuestion.reading && (
-                  <div className="question-reading">【{currentQuestion.reading}】</div>
-                )}
-                {currentQuestion.difficulty && (
-                  <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
-                    {currentQuestion.difficulty === 'beginner' ? '初級' : 
-                     currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
-                  </div>
+            <div 
+              className={`question-content-inline ${isSpeechSynthesisSupported() ? 'clickable-pronunciation' : ''}`}
+              onClick={(e) => {
+                if (isSpeechSynthesisSupported()) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  speakEnglish(currentQuestion.word, { rate: 0.85 });
+                }
+              }}
+              onTouchEnd={(e) => {
+                if (isSpeechSynthesisSupported()) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  speakEnglish(currentQuestion.word, { rate: 0.85 });
+                }
+              }}
+              title={isSpeechSynthesisSupported() ? 'タップして発音を聞く 🔊' : ''}
+            >
+              <div className={`text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white break-words ${currentQuestion.word.includes(' ') ? 'phrase-text' : ''} ${isSpeechSynthesisSupported() ? 'clickable-word' : ''}`}>
+                {currentQuestion.word}
+                {isSpeechSynthesisSupported() && (
+                  <span className="speaker-icon">🔊</span>
                 )}
               </div>
+              {currentQuestion.reading && (
+                <div className="question-reading text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">【{currentQuestion.reading}】</div>
+              )}
+              {currentQuestion.difficulty && (
+                <div className={`difficulty-badge ${currentQuestion.difficulty}`}>
+                  {currentQuestion.difficulty === 'beginner' ? '初級' : 
+                   currentQuestion.difficulty === 'intermediate' ? '中級' : '上級'}
+                </div>
+              )}
               {/* カスタムセットに追加ボタン */}
               {onAddWordToCustomSet && onRemoveWordFromCustomSet && onOpenCustomSetManagement && (
                 <div className="mt-3 flex justify-center">
@@ -583,7 +581,7 @@ function MemorizationView({
             {/* 右ボタン - 覚えた */}
             <button
               onClick={() => handleSwipe('right')}
-              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-2xl"
+              className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition flex items-center justify-center text-xl sm:text-2xl"
               aria-label="覚えた"
             >
               →
@@ -597,13 +595,15 @@ function MemorizationView({
               onClick={() => toggleCardField('showMeaning')}
               className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
             >
-              <div className="flex items-center gap-4">
-                <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">意味</span>
-                <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                  {cardState.showMeaning ? '▼' : '▶'}
-                </span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <div className="flex items-center gap-2 sm:gap-4">
+                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">意味</span>
+                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                    {cardState.showMeaning ? '▼' : '▶'}
+                  </span>
+                </div>
                 {cardState.showMeaning && (
-                  <div className="flex-1 text-lg text-gray-900 dark:text-white">
+                  <div className="flex-1 text-base sm:text-lg text-gray-900 dark:text-white break-words">
                     {currentQuestion.meaning}
                   </div>
                 )}
@@ -615,13 +615,15 @@ function MemorizationView({
               onClick={() => toggleCardField('showPronunciation')}
               className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
             >
-              <div className="flex items-center gap-4">
-                <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">読み</span>
-                <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                  {cardState.showPronunciation ? '▼' : '▶'}
-                </span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                <div className="flex items-center gap-2 sm:gap-4">
+                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">読み</span>
+                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                    {cardState.showPronunciation ? '▼' : '▶'}
+                  </span>
+                </div>
                 {cardState.showPronunciation && (
-                  <div className="flex-1 text-base text-gray-700 dark:text-gray-300">
+                  <div className="flex-1 text-sm sm:text-base text-gray-700 dark:text-gray-300 break-words">
                     {currentQuestion.reading}
                   </div>
                 )}
@@ -636,13 +638,15 @@ function MemorizationView({
                 onClick={() => toggleCardField('showEtymology')}
                 className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
               >
-                <div className="flex items-center gap-4">
-                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">語源・解説</span>
-                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                    {cardState.showEtymology ? '▼' : '▶'}
-                  </span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <span className="font-semibold text-gray-700 dark:text-gray-300 w-20 sm:w-24 flex-shrink-0 text-sm sm:text-base">語源・解説</span>
+                    <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                      {cardState.showEtymology ? '▼' : '▶'}
+                    </span>
+                  </div>
                   {cardState.showEtymology && (
-                    <div className="flex-1 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
                       {currentQuestion.etymology}
                     </div>
                   )}
@@ -657,13 +661,15 @@ function MemorizationView({
                 onClick={() => toggleCardField('showRelated')}
                 className="w-full text-left p-4 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition"
               >
-                <div className="flex items-center gap-4">
-                  <span className="font-semibold text-gray-700 dark:text-gray-300 w-24 flex-shrink-0">関連語</span>
-                  <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
-                    {cardState.showRelated ? '▼' : '▶'}
-                  </span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                  <div className="flex items-center gap-2 sm:gap-4">
+                    <span className="font-semibold text-gray-700 dark:text-gray-300 w-16 sm:w-24 flex-shrink-0">関連語</span>
+                    <span className="text-gray-500 dark:text-gray-400 flex-shrink-0">
+                      {cardState.showRelated ? '▼' : '▶'}
+                    </span>
+                  </div>
                   {cardState.showRelated && (
-                    <div className="flex-1 text-sm text-gray-600 dark:text-gray-400">
+                    <div className="flex-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400 break-words">
                       {currentQuestion.relatedWords}
                     </div>
                   )}
