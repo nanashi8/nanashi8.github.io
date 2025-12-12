@@ -62,9 +62,12 @@ function ScoreBoard({
   useEffect(() => {
     // AIコメントを生成
     const generateComment = () => {
-      // 3%の確率で英語豆知識を表示
+      // 現在のAI人格を取得
+      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
+      
+      // 3%の確率で英語豆知識を表示（AI人格に応じたメッセージ）
       if (Math.random() < 0.03) {
-        return getBreatherTrivia();
+        return getBreatherTrivia(personality);
       }
       
       // 特別な日の会話をチェック
@@ -80,7 +83,6 @@ function ScoreBoard({
       }
       
       // 挨拶メッセージを生成
-      const personality = (localStorage.getItem('aiPersonality') || 'kind-teacher') as AIPersonality;
       return generateTimeBasedGreeting(personality) || 'こんにちは！一緒に学習しましょう。';
     };
     

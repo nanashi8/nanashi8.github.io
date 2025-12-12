@@ -321,7 +321,7 @@ export function getRelevantMistakeTip(isCorrect: boolean): string | null {
 }
 
 // 学習中の息抜き知識（受験に役立つ内容）
-export function getBreatherTrivia(): string {
+export function getBreatherTrivia(_personality?: unknown): string {
   const breathers = [
     '😃💡 受験テク！同じ単語の繰り返しを避けるため、代名詞（it, they, this）や同義語に注目すると読解が楽になりますよ。',
     '😼💡 覚え方！動詞+前置詞の熟語は、イメージで覚えるといいぞ！look up（上を見る→調べる）、give up（上げる→諦める）だ！',
