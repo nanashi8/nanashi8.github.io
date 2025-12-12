@@ -12,7 +12,7 @@
 
 @media (max-width: 768px) {
   .spelling-view {
-    padding: 15px;
+    padding: 8px;
   }
 }
 
@@ -689,6 +689,11 @@
     padding: 0.5rem 0.75rem;
     font-size: 1rem;
     min-width: 40px;
+  }
+
+  .difficulty-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
   }
 }
 

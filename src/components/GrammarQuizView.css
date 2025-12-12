@@ -639,7 +639,7 @@
 /* レスポンシブ対応 */
 @media (width <= 768px) {
   .question-nav-row {
-    padding: 8px;
+    padding: 6px;
   }
 
   .inline-nav-btn {

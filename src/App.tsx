@@ -1383,9 +1383,9 @@ function App() {
       />
 
       {/* タブメニュー - 中学生向け親しみやすいデザイン */}
-      <div className="flex gap-0 bg-gray-100 dark:bg-gray-900 shadow-md py-2">
+      <div className="flex gap-0 bg-gray-100 dark:bg-gray-900 shadow-md py-1 sm:py-2">
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'memorization'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1395,7 +1395,7 @@ function App() {
           💡 暗記
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'translation'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1405,7 +1405,7 @@ function App() {
           📝 和訳
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'spelling'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1415,7 +1415,7 @@ function App() {
           ✏️ スペル
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'grammar'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1433,7 +1433,7 @@ function App() {
           📚 文法
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'reading'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1451,7 +1451,7 @@ function App() {
           📖 長文
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'grammar-guide'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1461,7 +1461,7 @@ function App() {
           🔖 参考
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'dictionary'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1471,7 +1471,7 @@ function App() {
           📕 辞書
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'stats'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1481,7 +1481,7 @@ function App() {
           📊 成績
         </button>
         <button
-          className={`flex-1 py-4 px-3 text-base font-semibold transition-all duration-200 border-b-4 ${
+          className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'settings'
               ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
               : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
@@ -1491,7 +1491,7 @@ function App() {
           ⚙️ 設定
         </button>
         <button
-          className="py-4 px-4 text-base font-semibold transition-all duration-200 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-md"
+          className="py-3 sm:py-4 px-3 sm:px-4 text-sm sm:text-base font-semibold transition-all duration-200 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-md"
           onClick={() => setIsFloatingPanelOpen(true)}
           title="カスタム問題セット管理"
         >
@@ -1511,7 +1511,7 @@ function App() {
       />
 
       {/* コンテンツエリア */}
-      <div className="p-4 md:p-6 bg-gray-50 dark:bg-black">
+      <div className="p-2 md:p-6 bg-gray-50 dark:bg-black">
         <div className="max-w-app mx-auto">
         {activeTab === 'memorization' ? (
           <MemorizationView

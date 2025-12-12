@@ -462,10 +462,14 @@ function ScoreBoard({
                         statusLabel = '学習中';
                       }
                       
+                      // unit表示を「中1_Unit0」から「1年」に変換
+                      const gradeMatch = stat.unit.match(/中(\d+)/);
+                      const gradeDisplay = gradeMatch ? `${gradeMatch[1]}年` : stat.unit;
+                      
                       return (
                         <div key={stat.unit} className="grammar-unit-card">
                           <div className="word-detail-title">
-                            📊 {stat.unit}_{stat.title} の学習データ
+                            📊 {gradeDisplay}_{stat.title} の学習データ
                             <span className="word-status-badge">
                               {statusIcon} {statusLabel}
                             </span>
