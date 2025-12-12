@@ -2403,89 +2403,6 @@ export async function updateAutoUpdateQuestionSets(allQuestions: import('@/types
 }
 
 /**
- * 文法モード専用の詳細統計を計算
- * 文法問題のIDは通常「grammar_g1_u0_q1」のような形式
- */
-export function getGrammarDetailedRetentionStats(): DetailedRetentionStats {
-  const progress = loadProgressSync();
-  const allWords = Object.values(progress.wordProgress);
-  
-  // 文法問題のみフィルタリング（grammarAttemptsがあるもの、またはwordがgrammarで始まるもの）
-  const grammarQuestions = allWords.filter(wp => 
-    (wp.grammarAttempts && wp.grammarAttempts > 0) || 
-    wp.word.startsWith('grammar_') ||
-    wp.word.includes('_g') // grammar_g1_u0_q1 のようなパターン
-  );
-  
-  // 出題された文法問題のみ（grammarAttemptsまたはcorrectCount+incorrectCountが0より大きい）
-  const appearedQuestions = grammarQuestions.filter(wp => 
-    (wp.grammarAttempts && wp.grammarAttempts > 0) ||
-    (wp.correctCount + wp.incorrectCount) > 0
-  );
-  
-  let masteredCount = 0;
-  let learningCount = 0;
-  let strugglingCount = 0;
-  
-  appearedQuestions.forEach(wp => {
-    // 文法モード専用の統計を優先的に使用
-    const totalAttempts = wp.grammarAttempts || (wp.correctCount + wp.incorrectCount);
-    const correctCount = wp.grammarCorrect || wp.correctCount;
-    const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect;
-    
-    const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
-    
-    // 🟢 完全定着判定
-    const isDefinitelyMastered = 
-      (totalAttempts === 1 && correctCount === 1) || // 1発正解
-      consecutiveCorrect >= 3 || // 連続3回以上正解
-      (consecutiveCorrect >= 2 && accuracy >= 80); // 連続2回 + 正答率80%以上
-    
-    if (isDefinitelyMastered) {
-      masteredCount++;
-    }
-    // 🟡 学習中（正答率50%以上だがまだ定着していない）
-    else if (accuracy >= 50) {
-      learningCount++;
-    }
-    // 🔴 要復習（正答率50%未満）
-    else {
-      strugglingCount++;
-    }
-  });
-  
-  const total = appearedQuestions.length;
-  
-  // 加重スコア計算（完全定着=1.0, 学習中=0.5, 要復習=0.0）
-  const weightedScore = masteredCount * 1.0 + learningCount * 0.5;
-  
-  return {
-    totalWords: grammarQuestions.length,
-    appearedWords: total,
-    
-    masteredCount,
-    learningCount,
-    strugglingCount,
-    
-    basicRetentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
-    weightedRetentionRate: total > 0 ? Math.round((weightedScore / total) * 100) : 0,
-    
-    masteredPercentage: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
-    learningPercentage: total > 0 ? Math.round((learningCount / total) * 100) : 0,
-    strugglingPercentage: total > 0 ? Math.round((strugglingCount / total) * 100) : 0,
-    
-    // エイリアス（互換性のため）
-    masteredWords: masteredCount,
-    learningWords: learningCount,
-    newWords: grammarQuestions.length - total,
-    retentionRate: total > 0 ? Math.round((masteredCount / total) * 100) : 0,
-    averageAttempts: 0,
-    categoryBreakdown: {},
-    difficultyBreakdown: {},
-  };
-}
-
-/**
  * 文法モード専用の定着率を計算
  */
 export function getGrammarRetentionRateWithAI(): {
@@ -2542,101 +2459,6 @@ export function getGrammarRetentionRateWithAI(): {
   };
 }
 
-/**
- * 文法問題の単元ごとの成績を集計
- */
-export function getGrammarUnitStats(): Array<{
-  unit: string;
-  totalQuestions: number;
-  answeredQuestions: number;
-  correctCount: number;
-  incorrectCount: number;
-  masteredCount: number;
-  accuracy: number;
-  progress: number;
-}> {
-  const progress = loadProgressSync();
-  
-  // 文法問題のみフィルタリング（grammar_で始まる）
-  const grammarQuestions = Object.entries(progress.wordProgress)
-    .filter(([word, _]) => word.startsWith('grammar_'));
-  
-  // 単元ごとにグループ化
-  const unitMap = new Map<string, {
-    questions: Array<[string, WordProgress]>;
-    answered: Array<[string, WordProgress]>;
-    correct: number;
-    incorrect: number;
-    mastered: number;
-  }>();
-  
-  grammarQuestions.forEach(([word, wp]) => {
-    // grammar_g2-u6-fib-001 のような形式から単元を抽出
-    const match = word.match(/grammar_g(\d+)-u(\d+)/);
-    if (!match) return;
-    
-    const grade = match[1];
-    const unit = match[2];
-    const unitKey = `中${grade}_Unit${unit}`;
-    
-    if (!unitMap.has(unitKey)) {
-      unitMap.set(unitKey, {
-        questions: [],
-        answered: [],
-        correct: 0,
-        incorrect: 0,
-        mastered: 0
-      });
-    }
-    
-    const unitData = unitMap.get(unitKey)!;
-    unitData.questions.push([word, wp]);
-    
-    const totalAttempts = wp.grammarAttempts || (wp.correctCount + wp.incorrectCount);
-    if (totalAttempts > 0) {
-      unitData.answered.push([word, wp]);
-      const correctCount = wp.grammarCorrect || wp.correctCount;
-      const incorrectCount = totalAttempts - correctCount;
-      unitData.correct += correctCount;
-      unitData.incorrect += incorrectCount;
-      
-      // 定着判定
-      const consecutiveCorrect = wp.grammarStreak || wp.consecutiveCorrect;
-      const accuracy = totalAttempts > 0 ? (correctCount / totalAttempts) * 100 : 0;
-      const isMarkedAsMastered = wp.masteryLevel === 'mastered';
-      const isOneShot = totalAttempts === 1 && correctCount === 1;
-      const isStableAccuracy = totalAttempts >= 3 && accuracy >= 85;
-      
-      if (isMarkedAsMastered || isOneShot || isStableAccuracy || consecutiveCorrect >= 3) {
-        unitData.mastered++;
-      }
-    }
-  });
-  
-  // 結果を配列に変換
-  const result = Array.from(unitMap.entries()).map(([unit, data]) => {
-    const totalAttempts = data.correct + data.incorrect;
-    const accuracy = totalAttempts > 0 ? (data.correct / totalAttempts) * 100 : 0;
-    const progress = data.questions.length > 0 ? (data.answered.length / data.questions.length) * 100 : 0;
-    
-    return {
-      unit,
-      totalQuestions: data.questions.length,
-      answeredQuestions: data.answered.length,
-      correctCount: data.correct,
-      incorrectCount: data.incorrect,
-      masteredCount: data.mastered,
-      accuracy: Math.round(accuracy),
-      progress: Math.round(progress)
-    };
-  });
-  
-  // 単元名でソート（中1_Unit1, 中1_Unit2, ... 中2_Unit1, ...）
-  result.sort((a, b) => a.unit.localeCompare(b.unit));
-  
-  return result;
-}
-
 // 文法単元別統計を単元タイトル付きで取得（出題されている単元のみ）
 export async function getGrammarUnitStatsWithTitles(): Promise<Array<{
   unit: string;
@@ -2653,7 +2475,16 @@ export async function getGrammarUnitStatsWithTitles(): Promise<Array<{
   
   // 各単元のタイトルを取得し、出題されている単元のみフィルター
   const statsWithTitles = await Promise.all(
-    baseStats.map(async (stat) => {
+    baseStats.map(async (stat: {
+      unit: string;
+      totalQuestions: number;
+      answeredQuestions: number;
+      correctCount: number;
+      incorrectCount: number;
+      masteredCount: number;
+      accuracy: number;
+      progress: number;
+    }) => {
       // 中1_Unit1 → grade=1, unit=1
       const match = stat.unit.match(/中(\d+)_Unit(\d+)/);
       if (!match) {
@@ -2705,5 +2536,10 @@ export {
   getDifficultyStatsForRadar,
   getRecentlyMasteredWords,
   getCategoryDifficultyStats,
-  getStatsByModeDifficulty
+  getStatsByModeDifficulty,
+  getGrammarDetailedRetentionStats,
+  getGrammarUnitStats
 } from './statistics';
+
+// getGrammarUnitStatsで使用するため、再importが必要
+import { getGrammarUnitStats } from './statistics';
