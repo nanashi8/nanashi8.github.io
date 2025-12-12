@@ -470,6 +470,22 @@
     padding: 12px;
   }
 
+  /* 全訳の段落字下げ */
+  .full-translation-text,
+  .full-translation-content {
+    line-height: 1.8;
+  }
+
+  .full-translation-content .paragraph-ja {
+    text-indent: 1em;
+    margin-bottom: 0.8em;
+  }
+
+  .full-translation-content .conversation-line {
+    text-indent: 0;
+    margin-bottom: 0.5em;
+  }
+
   .word-popup {
     max-width: 90vw;
     padding: 12px;
