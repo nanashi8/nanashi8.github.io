@@ -154,3 +154,129 @@ export function getTodayStats(mode?: 'translation' | 'spelling' | 'reading' | 'g
     todayAccuracy,
   };
 }
+
+// 週次統計を取得
+export function getWeeklyStats(): {
+  studyDays: number;
+  totalDays: number;
+  totalAnswered: number;
+  accuracy: number;
+  newMastered: number;
+  previousWeekAccuracy: number;
+} {
+  const progress = loadProgressSync();
+  const now = new Date();
+  
+  // 今週の開始日（月曜日）を計算
+  const currentDay = now.getDay();
+  const mondayOffset = currentDay === 0 ? -6 : 1 - currentDay;
+  const weekStart = new Date(now);
+  weekStart.setDate(now.getDate() + mondayOffset);
+  weekStart.setHours(0, 0, 0, 0);
+  
+  const weekEnd = new Date(weekStart);
+  weekEnd.setDate(weekStart.getDate() + 7);
+  
+  // 先週の範囲
+  const lastWeekStart = new Date(weekStart);
+  lastWeekStart.setDate(weekStart.getDate() - 7);
+  const lastWeekEnd = new Date(weekStart);
+  
+  // 今週の結果
+  const thisWeekResults = progress.results.filter(r => 
+    r.date >= weekStart.getTime() && r.date < weekEnd.getTime()
+  );
+  
+  // 先週の結果
+  const lastWeekResults = progress.results.filter(r => 
+    r.date >= lastWeekStart.getTime() && r.date < lastWeekEnd.getTime()
+  );
+  
+  // 今週の学習日数
+  const studyDatesThisWeek = new Set<string>();
+  thisWeekResults.forEach(r => {
+    const date = new Date(r.date).toISOString().split('T')[0];
+    studyDatesThisWeek.add(date);
+  });
+  
+  // 今週の統計
+  const totalAnswered = thisWeekResults.reduce((sum, r) => sum + r.total, 0);
+  const totalCorrect = thisWeekResults.reduce((sum, r) => sum + r.score, 0);
+  const accuracy = totalAnswered > 0 ? (totalCorrect / totalAnswered) * 100 : 0;
+  
+  // 先週の統計
+  const lastWeekTotalAnswered = lastWeekResults.reduce((sum, r) => sum + r.total, 0);
+  const lastWeekTotalCorrect = lastWeekResults.reduce((sum, r) => sum + r.score, 0);
+  const previousWeekAccuracy = lastWeekTotalAnswered > 0 ? (lastWeekTotalCorrect / lastWeekTotalAnswered) * 100 : 0;
+  
+  // 今週新規定着した単語数
+  let newMastered = 0;
+  Object.values(progress.wordProgress).forEach(wp => {
+    if (wp.masteryLevel === 'mastered' && wp.lastStudied >= weekStart.getTime()) {
+      newMastered++;
+    }
+  });
+  
+  return {
+    studyDays: studyDatesThisWeek.size,
+    totalDays: 7,
+    totalAnswered,
+    accuracy,
+    newMastered,
+    previousWeekAccuracy,
+  };
+}
+
+// 月次統計を取得
+export function getMonthlyStats(): {
+  studyDays: number;
+  totalDays: number;
+  totalAnswered: number;
+  accuracy: number;
+  newMastered: number;
+} {
+  const progress = loadProgressSync();
+  const now = new Date();
+  
+  // 今月の開始日
+  const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+  monthStart.setHours(0, 0, 0, 0);
+  
+  const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+  monthEnd.setHours(23, 59, 59, 999);
+  
+  // 今月の結果
+  const thisMonthResults = progress.results.filter(r => 
+    r.date >= monthStart.getTime() && r.date <= monthEnd.getTime()
+  );
+  
+  // 今月の学習日数
+  const studyDatesThisMonth = new Set<string>();
+  thisMonthResults.forEach(r => {
+    const date = new Date(r.date).toISOString().split('T')[0];
+    studyDatesThisMonth.add(date);
+  });
+  
+  // 今月の統計
+  const totalAnswered = thisMonthResults.reduce((sum, r) => sum + r.total, 0);
+  const totalCorrect = thisMonthResults.reduce((sum, r) => sum + r.score, 0);
+  const accuracy = totalAnswered > 0 ? (totalCorrect / totalAnswered) * 100 : 0;
+  
+  // 今月新規定着した単語数
+  let newMastered = 0;
+  Object.values(progress.wordProgress).forEach(wp => {
+    if (wp.masteryLevel === 'mastered' && wp.lastStudied >= monthStart.getTime()) {
+      newMastered++;
+    }
+  });
+  
+  const totalDays = monthEnd.getDate();
+  
+  return {
+    studyDays: studyDatesThisMonth.size,
+    totalDays,
+    totalAnswered,
+    accuracy,
+    newMastered,
+  };
+}
