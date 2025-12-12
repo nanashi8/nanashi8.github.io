@@ -1622,57 +1622,6 @@ export function getDailyPlanInfo(): DailyPlanInfo {
 }
 
 /**
- * 難易度別の統計を取得（レーダーチャート用）
- * @param mode クイズモード
- */
-export function getDifficultyStatsForRadar(mode: 'translation' | 'spelling' | 'reading'): {
-  labels: string[];
-  answeredData: number[];
-  correctData: number[];
-} {
-  const progress = loadProgressSync();
-  const difficultyMap = new Map<string, { answered: number; correct: number }>();
-  
-  // モードでフィルタして集計
-  progress.results
-    .filter(r => r.mode === mode && r.difficulty)
-    .forEach(result => {
-      const difficulty = result.difficulty!;
-      const existing = difficultyMap.get(difficulty) || { answered: 0, correct: 0 };
-      difficultyMap.set(difficulty, {
-        answered: existing.answered + result.total,
-        correct: existing.correct + result.score
-      });
-    });
-  
-  // ソート順: 初級 → 中級 → 上級
-  const difficultyOrder = ['初級', '中級', '上級'];
-  const labels: string[] = [];
-  const answeredData: number[] = [];
-  const correctData: number[] = [];
-  
-  difficultyOrder.forEach(difficulty => {
-    const stats = difficultyMap.get(difficulty);
-    if (stats) {
-      labels.push(difficulty);
-      answeredData.push(stats.answered);
-      correctData.push(stats.correct);
-    }
-  });
-  
-  // データがない場合は初期値を返す
-  if (labels.length === 0) {
-    return {
-      labels: ['初級', '中級', '上級'],
-      answeredData: [0, 0, 0],
-      correctData: [0, 0, 0]
-    };
-  }
-  
-  return { labels, answeredData, correctData };
-}
-
-/**
  * 分野別・難易度別の統計を取得（レーダーチャート用）
  * @param mode クイズモード
  */
@@ -2247,27 +2196,6 @@ export function getRetentionTrend(): {
 /**
  * 克服した単語（最近定着した単語）を取得
  */
-export function getRecentlyMasteredWords(days: number = 7, limit: number = 10): Array<{
-  word: string;
-  masteredDate: number;
-  totalAttempts: number;
-}> {
-  const progress = loadProgressSync();
-  const cutoff = Date.now() - (days * 24 * 60 * 60 * 1000);
-  
-  const words = Object.entries(progress.wordProgress)
-    .filter(([_, wp]) => wp.masteryLevel === 'mastered' && wp.lastStudied >= cutoff)
-    .map(([word, wp]) => ({
-      word,
-      masteredDate: wp.lastStudied,
-      totalAttempts: wp.correctCount + wp.incorrectCount,
-    }))
-    .sort((a, b) => b.masteredDate - a.masteredDate)
-    .slice(0, limit);
-  
-  return words;
-}
-
 /**
  * 単語の詳細データを取得（履歴タブ用）
  */
@@ -2953,5 +2881,7 @@ export {
   getWeeklyStats,
   getMonthlyStats,
   getDetailedRetentionStats,
-  getNearMasteryStats
+  getNearMasteryStats,
+  getDifficultyStatsForRadar,
+  getRecentlyMasteredWords
 } from './statistics';
