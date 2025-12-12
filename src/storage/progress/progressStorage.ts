@@ -1622,125 +1622,10 @@ export function getDailyPlanInfo(): DailyPlanInfo {
 }
 
 /**
- * 分野別・難易度別の統計を取得（レーダーチャート用）
- * @param mode クイズモード
- */
-export function getCategoryDifficultyStats(mode: 'translation' | 'spelling'): {
-  labels: string[];
-  accuracyData: { beginner: number[]; intermediate: number[]; advanced: number[] };
-  progressData: { beginner: number[]; intermediate: number[]; advanced: number[] };
-} {
-  const progress = loadProgressSync();
-  
-  // 分野別・難易度別の統計マップ
-  const statsMap = new Map<string, {
-    beginner: { correct: number; total: number; mastered: number; totalWords: number };
-    intermediate: { correct: number; total: number; mastered: number; totalWords: number };
-    advanced: { correct: number; total: number; mastered: number; totalWords: number };
-  }>();
-
-  // 結果から分野別・難易度別に集計
-  progress.results
-    .filter(r => r.mode === mode && r.category && r.difficulty)
-    .forEach(result => {
-      const category = result.category!;
-      const difficulty = result.difficulty!;
-      
-      if (!statsMap.has(category)) {
-        statsMap.set(category, {
-          beginner: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
-          intermediate: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
-          advanced: { correct: 0, total: 0, mastered: 0, totalWords: 0 }
-        });
-      }
-      
-      const stats = statsMap.get(category)!;
-      const difficultyKey = difficulty === '初級' ? 'beginner' : difficulty === '中級' ? 'intermediate' : 'advanced';
-      
-      stats[difficultyKey].correct += result.score;
-      stats[difficultyKey].total += result.total;
-    });
-
-  // wordProgressから定着数を計算
-  Object.entries(progress.wordProgress).forEach(([word, wordProg]) => {
-    if (!wordProg.category || !wordProg.difficulty) return;
-    
-    const category = wordProg.category;
-    const difficulty = wordProg.difficulty;
-    
-    if (!statsMap.has(category)) {
-      statsMap.set(category, {
-        beginner: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
-        intermediate: { correct: 0, total: 0, mastered: 0, totalWords: 0 },
-        advanced: { correct: 0, total: 0, mastered: 0, totalWords: 0 }
-      });
-    }
-    
-    const stats = statsMap.get(category)!;
-    const difficultyKey = difficulty === '初級' ? 'beginner' : difficulty === '中級' ? 'intermediate' : 'advanced';
-    
-    stats[difficultyKey].totalWords += 1;
-    
-    // 定着判定
-    const totalAttempts = wordProg.correctCount + wordProg.incorrectCount;
-    const isFirstTimeCorrect = totalAttempts === 1 && wordProg.correctCount === 1;
-    const isConsecutivelyCorrect = wordProg.consecutiveCorrect >= 3;
-    const isSkipped = wordProg.skippedCount && wordProg.skippedCount > 0;
-    
-    if (isFirstTimeCorrect || isConsecutivelyCorrect || isSkipped) {
-      stats[difficultyKey].mastered += 1;
-    }
-  });
-
-  // ソート順で分野を並べる
-  const categoryOrder = ['動物', '植物', '自然', '天気', '時間', '場所', '学校', '家族', '食べ物', '身体', 
-    '感情', '行動', '状態', '数字', '色', '形', '方向', '位置', 'その他'];
-  
-  const labels: string[] = [];
-  const accuracyBeginner: number[] = [];
-  const accuracyIntermediate: number[] = [];
-  const accuracyAdvanced: number[] = [];
-  const progressBeginner: number[] = [];
-  const progressIntermediate: number[] = [];
-  const progressAdvanced: number[] = [];
-
-  categoryOrder.forEach(category => {
-    const stats = statsMap.get(category);
-    if (stats && (stats.beginner.total > 0 || stats.intermediate.total > 0 || stats.advanced.total > 0)) {
-      labels.push(category);
-      
-      // 正答率（%）
-      accuracyBeginner.push(stats.beginner.total > 0 ? (stats.beginner.correct / stats.beginner.total) * 100 : 0);
-      accuracyIntermediate.push(stats.intermediate.total > 0 ? (stats.intermediate.correct / stats.intermediate.total) * 100 : 0);
-      accuracyAdvanced.push(stats.advanced.total > 0 ? (stats.advanced.correct / stats.advanced.total) * 100 : 0);
-      
-      // 進捗率（定着数/総単語数 %）
-      progressBeginner.push(stats.beginner.totalWords > 0 ? (stats.beginner.mastered / stats.beginner.totalWords) * 100 : 0);
-      progressIntermediate.push(stats.intermediate.totalWords > 0 ? (stats.intermediate.mastered / stats.intermediate.totalWords) * 100 : 0);
-      progressAdvanced.push(stats.advanced.totalWords > 0 ? (stats.advanced.mastered / stats.advanced.totalWords) * 100 : 0);
-    }
-  });
-
-  return {
-    labels,
-    accuracyData: {
-      beginner: accuracyBeginner,
-      intermediate: accuracyIntermediate,
-      advanced: accuracyAdvanced
-    },
-    progressData: {
-      beginner: progressBeginner,
-      intermediate: progressIntermediate,
-      advanced: progressAdvanced
-    }
-  };
-}
-
-/**
  * 単語の難易度を自動判定する
  * 基準: 語長、学習回数、正答率から総合的に判定
  */
-function autoDetectWordDifficulty(word: string, stats: WordProgress): 'beginner' | 'intermediate' | 'advanced' {
+export function autoDetectWordDifficulty(word: string, stats: WordProgress): 'beginner' | 'intermediate' | 'advanced' {
   // 1. 明示的な難易度設定があればそれを使用
   if (stats.difficulty) {
     return stats.difficulty as 'beginner' | 'intermediate' | 'advanced';
@@ -1770,71 +1655,6 @@ function autoDetectWordDifficulty(word: string, stats: WordProgress): 'beginner'
   if (baseScore === 1) return 'beginner';
   if (baseScore === 2) return 'intermediate';
   return 'advanced';
-}
-
-/**
- * モード別・難易度別の統計を取得
- * 改善版: フィルタリング無しで単語を自動的に難易度別に分類
- */
-export function getStatsByModeDifficulty(mode: 'translation' | 'spelling'): {
-  labels: string[];
-  accuracyData: number[];
-  retentionData: number[];
-} {
-  const progress = loadProgressSync();
-  const difficulties = ['beginner', 'intermediate', 'advanced'];
-  const labels = ['初級', '中級', '上級'];
-  const accuracyData: number[] = [];
-  const retentionData: number[] = [];
-
-  // モードに関連する結果を取得
-  const modeResults = progress.results.filter(r => r.mode === mode);
-
-  difficulties.forEach(difficulty => {
-    // この難易度の単語を自動分類
-    const difficultyWords = new Set<string>();
-    const masteredWords = new Set<string>();
-    let totalCorrect = 0;
-    let totalQuestions = 0;
-    
-    // 単語レベルで難易度を判定して分類
-    Object.entries(progress.wordProgress).forEach(([word, stats]) => {
-      const wordDifficulty = autoDetectWordDifficulty(word, stats);
-      const totalAttempts = stats.correctCount + stats.incorrectCount;
-      
-      // この難易度に該当し、かつこのモードで学習済みの単語
-      if (wordDifficulty === difficulty && totalAttempts > 0) {
-        difficultyWords.add(word);
-        
-        // 正答率計算
-        totalCorrect += stats.correctCount;
-        totalQuestions += totalAttempts;
-        
-        // 定着判定 (85%以上かつ3回以上)
-        const accuracy = totalAttempts > 0 ? (stats.correctCount / totalAttempts) * 100 : 0;
-        if (accuracy >= 85 && totalAttempts >= 3) {
-          masteredWords.add(word);
-        }
-      }
-    });
-    
-    // 明示的な難易度設定がある結果も追加考慮
-    const explicitResults = modeResults.filter(r => r.difficulty === difficulty);
-    if (explicitResults.length > 0) {
-      totalCorrect += explicitResults.reduce((sum, r) => sum + r.score, 0);
-      totalQuestions += explicitResults.reduce((sum, r) => sum + r.total, 0);
-    }
-
-    // 正答率
-    const accuracy = totalQuestions > 0 ? (totalCorrect / totalQuestions) * 100 : 0;
-    accuracyData.push(accuracy);
-
-    // 定着率
-    const retention = difficultyWords.size > 0 ? (masteredWords.size / difficultyWords.size) * 100 : 0;
-    retentionData.push(Math.min(100, Math.max(0, retention)));
-  });
-
-  return { labels, accuracyData, retentionData };
 }
 
 /**
@@ -2883,5 +2703,7 @@ export {
   getDetailedRetentionStats,
   getNearMasteryStats,
   getDifficultyStatsForRadar,
-  getRecentlyMasteredWords
+  getRecentlyMasteredWords,
+  getCategoryDifficultyStats,
+  getStatsByModeDifficulty
 } from './statistics';
