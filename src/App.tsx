@@ -344,6 +344,8 @@ function App() {
             },
             questionSetStats: {},
             wordProgress: {},
+            categoryStats: {},
+            difficultyStats: {},
           };
           updateProgressCache(initialProgress);
           // LocalStorageにも保存
