@@ -1,0 +1,111 @@
+name: Bundle Size Check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-size:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build current branch
+        run: npm run build
+
+      - name: Check bundle size (current)
+        id: current
+        run: |
+          echo "### 📦 現在のブランチ" > size-current.txt
+          npm run size >> size-current.txt || true
+          cat size-current.txt
+
+      - name: Checkout main branch
+        run: |
+          git fetch origin main
+          git checkout origin/main
+
+      - name: Install dependencies (main)
+        run: npm ci
+
+      - name: Build main branch
+        run: npm run build
+
+      - name: Check bundle size (main)
+        id: main
+        run: |
+          echo "### 📦 mainブランチ" > size-main.txt
+          npm run size >> size-main.txt || true
+          cat size-main.txt
+
+      - name: Compare sizes
+        id: compare
+        run: |
+          echo "## 📊 Bundle Size 比較" > size-report.md
+          echo "" >> size-report.md
+          
+          echo "### 現在のPR" >> size-report.md
+          cat size-current.txt >> size-report.md
+          echo "" >> size-report.md
+          
+          echo "### mainブランチ" >> size-report.md
+          cat size-main.txt >> size-report.md
+          echo "" >> size-report.md
+          
+          echo "### 推奨事項" >> size-report.md
+          echo "- バンドルサイズは小さいほど良い" >> size-report.md
+          echo "- Main Bundle: 500 KB以下が目標" >> size-report.md
+          echo "- React Vendor: 200 KB以下が目標" >> size-report.md
+          echo "- CSS Bundle: 100 KB以下が目標" >> size-report.md
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('size-report.md', 'utf8');
+            
+            // 既存のコメントを検索
+            const comments = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('Bundle Size 比較')
+            );
+            
+            if (botComment) {
+              // 既存コメントを更新
+              await github.rest.issues.updateComment({
+                comment_id: botComment.id,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: report
+              });
+            } else {
+              // 新規コメント作成
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: report
+              });
+            }

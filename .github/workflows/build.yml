@@ -42,7 +42,12 @@ jobs:
       - name: ビルド確認
         run: npm run build
       
-      # 6. ビルド成果物の検証
+      # 6.5. Bundle Sizeチェック
+      - name: Bundle Sizeチェック
+        run: npm run size
+        continue-on-error: true
+      
+      # 7. ビルド成果物の検証
       - name: ビルド成果物確認
         run: |
           if [ ! -d "dist" ]; then
