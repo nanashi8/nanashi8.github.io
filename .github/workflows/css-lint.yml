@@ -23,7 +23,7 @@ jobs:
     steps:
       # 1. コードをダウンロード
       - name: コードをチェックアウト
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       
       # 2. Node.jsをセットアップ
       - name: Node.js セットアップ

@@ -18,7 +18,7 @@ jobs:
     
     steps:
     - name: チェックアウト
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       
     - name: システム健康診断を実行
       id: health_check
