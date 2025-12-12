@@ -1868,10 +1868,19 @@ function ComprehensiveReadingView({
                   console.log('[全訳タブ] currentPassage.translation length:', currentPassage.translation?.length || 0);
                   
                   if (currentPassage.translation) {
-                    // 全訳ファイルが存在する場合、そのまま表示
+                    // 全訳ファイルが存在する場合、段落ごとに分割して表示
+                    const paragraphs = currentPassage.translation
+                      .split(/\n+/)
+                      .map(p => p.trim())
+                      .filter(p => p.length > 0);
+                    
                     return (
                       <div className="full-translation-text">
-                        {currentPassage.translation}
+                        {paragraphs.map((para, idx) => (
+                          <p key={idx} className="paragraph-ja">
+                            {para}
+                          </p>
+                        ))}
                       </div>
                     );
                   }
