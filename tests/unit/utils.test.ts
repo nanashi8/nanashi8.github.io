@@ -139,7 +139,7 @@ describe('Utils - generateSpellingPuzzle', () => {
     expect(result.letterChoices.length).toBeGreaterThan(0);
 
     // 正解の文字がletterChoicesに含まれる
-    result.missingIndices.forEach((idx) => {
+    result.missingIndices.forEach((idx: number) => {
       const correctLetter = 'APPLE'[idx];
       expect(result.letterChoices).toContain(correctLetter);
     });
@@ -176,8 +176,8 @@ describe('Utils - selectAdaptiveQuestions', () => {
     const result2 = selectAdaptiveQuestions(questions, 5);
 
     // 2回の呼び出しで同じ順序になる可能性は低い
-    const words1 = result1.map((q) => q.word).join(',');
-    const words2 = result2.map((q) => q.word).join(',');
+    const words1 = result1.map((q: any) => q.word).join(',');
+    const words2 = result2.map((q: any) => q.word).join(',');
 
     // 完全一致しない確率が高い（稀に一致する可能性もあるが）
     expect(words1 === words2).toBe(false);

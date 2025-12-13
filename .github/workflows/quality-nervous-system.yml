@@ -14,25 +14,25 @@ jobs:
   quality-nervous-system:
     name: 品質神経系統チェック
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      
+
       - name: 🧠 品質神経系統 起動
         run: |
           echo "🧠 品質神経系統を起動します"
           echo "目的: 問題作成プロセスの異常を即座に検知"
           echo "原則: 下請けの手抜きを許さない"
           echo ""
-          
+
           python3 scripts/quality_nervous_system.py
-      
+
       - name: 結果通知
         if: failure()
         run: |

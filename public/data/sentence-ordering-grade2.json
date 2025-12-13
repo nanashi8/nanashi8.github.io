@@ -45,7 +45,9 @@
           "choices": [
             "You were busy last week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were busy last week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were busy last week.」です。",
+          "passage": "My family is planning a trip to Okinawa. We will stay there for a week. Everyone is excited about swimming in the ocean. You were busy last week.",
+          "passageJapanese": "家族で沖縄旅行を計画しています。1週間滞在します。みんな海で泳ぐのを楽しみにしています。あなたは先週忙しかったです"
         },
         {
           "id": "so-g2-u0-003",
@@ -65,7 +67,9 @@
           "choices": [
             "He was sick yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He was sick yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He was sick yesterday.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He was sick yesterday.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は昨日病気でした"
         },
         {
           "id": "so-g2-u0-004",
@@ -189,7 +193,9 @@
           "choices": [
             "Mary was happy last week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary was happy last week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary was happy last week.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. Mary was happy last week.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。メアリーは先週幸せでした"
         },
         {
           "id": "so-g2-u0-010",
@@ -210,7 +216,9 @@
           "choices": [
             "My parents were busy yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My parents were busy yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My parents were busy yesterday.」です。",
+          "passage": "My family is planning a trip to Okinawa. We will stay there for a week. Everyone is excited about swimming in the ocean. My parents were busy yesterday.",
+          "passageJapanese": "家族で沖縄旅行を計画しています。1週間滞在します。みんな海で泳ぐのを楽しみにしています。私の両親は昨日忙しかったです"
         },
         {
           "id": "so-g2-u0-011",
@@ -273,7 +281,9 @@
           "choices": [
             "I was at school yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was at school yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I was at school yesterday.」です。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. I was at school yesterday.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。私は昨日学校にいました"
         },
         {
           "id": "so-g2-u0-014",
@@ -294,7 +304,9 @@
           "choices": [
             "You were ready last week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were ready last week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were ready last week.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. You were ready last week.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。あなたは先週準備ができていました"
         },
         {
           "id": "so-g2-u0-015",
@@ -335,7 +347,9 @@
           "choices": [
             "She was sad last week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was sad last week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was sad last week.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. She was sad last week.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼女は先週悲しかったです"
         },
         {
           "id": "so-g2-u0-017",
@@ -357,7 +371,9 @@
           "choices": [
             "We were in the park yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were in the park yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were in the park yesterday.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We were in the park yesterday.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは昨日公園にいました"
         },
         {
           "id": "so-g2-u0-018",
@@ -401,7 +417,9 @@
           "choices": [
             "The book was on the desk yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The book was on the desk yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The book was on the desk yesterday.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. The book was on the desk yesterday.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。その本は昨日机の上にありました"
         },
         {
           "id": "so-g2-u0-020",
@@ -555,7 +573,9 @@
           "choices": [
             "They were running yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were running yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were running yesterday.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. They were running yesterday.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼らは昨日走っていました"
         },
         {
           "id": "so-g2-u1-007",
@@ -637,7 +657,9 @@
           "choices": [
             "You were dancing then."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were dancing then.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You were dancing then.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. You were dancing then.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。あなたたちはその時踊っていました"
         },
         {
           "id": "so-g2-u1-011",
@@ -679,7 +701,9 @@
           "choices": [
             "She was listening to music then."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was listening to music then.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She was listening to music then.」です。",
+          "passage": "Soccer is the most popular sport in our town. We have a soccer field near the school. Many kids play there on weekends. She was listening to music then.",
+          "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにサッカー場があります。週末には多くの子供たちがそこで遊びます。彼女はその時音楽を聴いていました"
         },
         {
           "id": "so-g2-u1-013",
@@ -699,7 +723,9 @@
           "choices": [
             "We were shopping yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were shopping yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We were shopping yesterday.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We were shopping yesterday.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは昨日買い物していました"
         },
         {
           "id": "so-g2-u1-014",
@@ -763,7 +789,9 @@
           "choices": [
             "My brothers were playing then."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My brothers were playing then.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My brothers were playing then.」です。",
+          "passage": "Soccer is the most popular sport in our town. We have a soccer field near the school. Many kids play there on weekends. My brothers were playing then.",
+          "passageJapanese": "サッカーは私たちの町で最も人気のあるスポーツです。学校の近くにサッカー場があります。週末には多くの子供たちがそこで遊びます。私の兄弟たちはその時遊んでいました"
         },
         {
           "id": "so-g2-u1-017",
@@ -805,7 +833,9 @@
           "choices": [
             "The birds were flying then."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The birds were flying then.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The birds were flying then.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. The birds were flying then.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。鳥たちはその時飛んでいました"
         },
         {
           "id": "so-g2-u1-019",
@@ -846,7 +876,9 @@
           "choices": [
             "They were laughing yesterday."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were laughing yesterday.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They were laughing yesterday.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. They were laughing yesterday.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼らは昨日笑っていました"
         }
       ]
     },
@@ -917,7 +949,9 @@
           "choices": [
             "He will finish homework tonight."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He will finish homework tonight.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He will finish homework tonight.」です。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. He will finish homework tonight.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。彼は今夜宿題を終えるでしょう"
         },
         {
           "id": "so-g2-u2-004",
@@ -960,7 +994,9 @@
           "choices": [
             "We will visit Tokyo next week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We will visit Tokyo next week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We will visit Tokyo next week.」です。",
+          "passage": "Last summer, I visited Kyoto. The city has many historical temples. I learned a lot about Japanese culture. We will visit Tokyo next week.",
+          "passageJapanese": "去年の夏、京都を訪れました。その都市には多くの歴史的な寺院があります。日本文化についてたくさん学びました。私たちは来週東京を訪れるでしょう"
         },
         {
           "id": "so-g2-u2-006",
@@ -1134,7 +1170,9 @@
           "choices": [
             "She will cook tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She will cook tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She will cook tomorrow.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. She will cook tomorrow.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼女は明日料理するでしょう"
         },
         {
           "id": "so-g2-u2-014",
@@ -1175,7 +1213,9 @@
           "choices": [
             "They will swim tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will swim tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will swim tomorrow.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. They will swim tomorrow.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼らは明日泳ぐでしょう"
         },
         {
           "id": "so-g2-u2-016",
@@ -1281,7 +1321,9 @@
           "choices": [
             "They will study tonight."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will study tonight.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They will study tonight.」です。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. They will study tonight.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼らは今夜勉強するでしょう"
         }
       ]
     },
@@ -1311,7 +1353,9 @@
           "choices": [
             "I am going to watch a movie tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I am going to watch a movie tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I am going to watch a movie tomorrow.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. I am going to watch a movie tomorrow.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。私は明日映画を見る予定です"
         },
         {
           "id": "so-g2-u3-002",
@@ -1333,7 +1377,9 @@
           "choices": [
             "You are going to study tonight."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You are going to study tonight.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You are going to study tonight.」です。",
+          "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. You are going to study tonight.",
+          "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。あなたは今夜勉強する予定です"
         },
         {
           "id": "so-g2-u3-003",
@@ -1356,7 +1402,9 @@
           "choices": [
             "He is going to travel next week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is going to travel next week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is going to travel next week.」です。",
+          "passage": "Traveling by train is convenient in Japan. The trains are always on time. You can see beautiful scenery from the window. He is going to travel next week.",
+          "passageJapanese": "日本では電車での旅行が便利です。電車はいつも時間通りです。窓から美しい景色が見えます。彼は来週旅行する予定です"
         },
         {
           "id": "so-g2-u3-004",
@@ -1426,7 +1474,9 @@
           "choices": [
             "They are going to play soccer tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They are going to play soccer tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They are going to play soccer tomorrow.」です。",
+          "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. They are going to play soccer tomorrow.",
+          "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。彼らは明日サッカーをする予定です"
         },
         {
           "id": "so-g2-u3-007",
@@ -1470,7 +1520,9 @@
           "choices": [
             "Tom is going to meet her tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom is going to meet her tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom is going to meet her tomorrow.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. Tom is going to meet her tomorrow.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。トムは明日彼女に会う予定です"
         },
         {
           "id": "so-g2-u3-009",
@@ -1539,7 +1591,9 @@
           "choices": [
             "You are going to swim tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You are going to swim tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You are going to swim tomorrow.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. You are going to swim tomorrow.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。あなたは明日泳ぐ予定です"
         },
         {
           "id": "so-g2-u3-012",
@@ -1562,7 +1616,9 @@
           "choices": [
             "He is going to move next month."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is going to move next month.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He is going to move next month.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He is going to move next month.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は来月引っ越す予定です"
         },
         {
           "id": "so-g2-u3-013",
@@ -1607,7 +1663,9 @@
           "choices": [
             "We are going to camp next week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We are going to camp next week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We are going to camp next week.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. We are going to camp next week.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私たちは来週キャンプする予定です"
         },
         {
           "id": "so-g2-u3-015",
@@ -1697,7 +1755,9 @@
           "choices": [
             "My friends are going to visit next week."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My friends are going to visit next week.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「My friends are going to visit next week.」です。",
+          "passage": "My family is planning a trip to Okinawa. We will stay there for a week. Everyone is excited about swimming in the ocean. My friends are going to visit next week.",
+          "passageJapanese": "家族で沖縄旅行を計画しています。1週間滞在します。みんな海で泳ぐのを楽しみにしています。私の友達は来週訪れる予定です"
         },
         {
           "id": "so-g2-u3-019",
@@ -1720,7 +1780,9 @@
           "choices": [
             "The dog is going to run tomorrow."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog is going to run tomorrow.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The dog is going to run tomorrow.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. The dog is going to run tomorrow.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。犬は明日走る予定です"
         },
         {
           "id": "so-g2-u3-020",
@@ -1812,7 +1874,9 @@
           "choices": [
             "He has to study."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to study.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to study.」です。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. He has to study.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。彼は勉強しなければなりません"
         },
         {
           "id": "so-g2-u4-004",
@@ -1832,7 +1896,9 @@
           "choices": [
             "She has to work."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has to work.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has to work.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She has to work.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は働かなければなりません"
         },
         {
           "id": "so-g2-u4-005",
@@ -1852,7 +1918,9 @@
           "choices": [
             "We have to go."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to go.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to go.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. We have to go.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私たちは行かなければなりません"
         },
         {
           "id": "so-g2-u4-006",
@@ -1892,7 +1960,9 @@
           "choices": [
             "Tom has to practice."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom has to practice.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Tom has to practice.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Tom has to practice.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。トムは練習しなければなりません"
         },
         {
           "id": "so-g2-u4-008",
@@ -1912,7 +1982,9 @@
           "choices": [
             "Mary has to help."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary has to help.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary has to help.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. Mary has to help.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。メアリーは手伝わなければなりません"
         },
         {
           "id": "so-g2-u4-009",
@@ -1932,7 +2004,9 @@
           "choices": [
             "I have to clean."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have to clean.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have to clean.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. I have to clean.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。私は掃除しなければなりません"
         },
         {
           "id": "so-g2-u4-010",
@@ -1952,7 +2026,9 @@
           "choices": [
             "You have to cook."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have to cook.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have to cook.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. You have to cook.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。あなたは料理しなければなりません"
         },
         {
           "id": "so-g2-u4-011",
@@ -2012,7 +2088,9 @@
           "choices": [
             "We have to read."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to read.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We have to read.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. We have to read.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私たちは読まなければなりません"
         },
         {
           "id": "so-g2-u4-014",
@@ -2113,7 +2191,9 @@
           "choices": [
             "He has to watch."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to watch.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has to watch.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He has to watch.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は見なければなりません"
         },
         {
           "id": "so-g2-u4-019",
@@ -2204,7 +2284,9 @@
           "choices": [
             "This book is more interesting than that one."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This book is more interesting than that one.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This book is more interesting than that one.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. This book is more interesting than that one.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。この本はあの本より面白いです"
         },
         {
           "id": "so-g2-u5-003",
@@ -2227,7 +2309,9 @@
           "choices": [
             "She is the smartest in the class."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is the smartest in the class.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She is the smartest in the class.」です。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. She is the smartest in the class.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。彼女はクラスで最も賢いです"
         },
         {
           "id": "so-g2-u5-004",
@@ -2248,7 +2332,9 @@
           "choices": [
             "This flower is more beautiful."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This flower is more beautiful.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This flower is more beautiful.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. This flower is more beautiful.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。この花はより美しいです"
         },
         {
           "id": "so-g2-u5-005",
@@ -2290,7 +2376,9 @@
           "choices": [
             "He looks younger than before."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He looks younger than before.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He looks younger than before.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He looks younger than before.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は以前より若く見えます"
         },
         {
           "id": "so-g2-u5-007",
@@ -2351,7 +2439,9 @@
           "choices": [
             "Winter is colder than summer."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Winter is colder than summer.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Winter is colder than summer.」です。",
+          "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. Winter is colder than summer.",
+          "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。冬は夏より寒いです"
         },
         {
           "id": "so-g2-u5-010",
@@ -2371,7 +2461,9 @@
           "choices": [
             "This is the best."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is the best.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is the best.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. This is the best.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。これは最も良いです"
         },
         {
           "id": "so-g2-u5-011",
@@ -2672,7 +2764,9 @@
           "choices": [
             "When he came, I was studying."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When he came, I was studying.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When he came, I was studying.」です。",
+          "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. When he came, I was studying.",
+          "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。彼が来た時、私は勉強していました"
         },
         {
           "id": "so-g2-u6-005",
@@ -2829,7 +2923,9 @@
           "choices": [
             "If you're free, please come with me."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If you're free, please come with me.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「If you're free, please come with me.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. If you're free, please come with me.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。もし暇なら、一緒に来てください"
         },
         {
           "id": "so-g2-u6-012",
@@ -2917,7 +3013,9 @@
           "choices": [
             "I'll eat because I'm hungry."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I'll eat because I'm hungry.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I'll eat because I'm hungry.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I'll eat because I'm hungry.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。お腹が空いているので、食べます"
         },
         {
           "id": "so-g2-u6-016",
@@ -3007,7 +3105,9 @@
           "choices": [
             "When she laughed, everyone laughed."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When she laughed, everyone laughed.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「When she laughed, everyone laughed.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. When she laughed, everyone laughed.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼女が笑った時、みんな笑いました"
         },
         {
           "id": "so-g2-u6-020",
@@ -3158,7 +3258,9 @@
           "choices": [
             "They plan to leave."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They plan to leave.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They plan to leave.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. They plan to leave.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼らは出発する予定です"
         },
         {
           "id": "so-g2-u7-007",
@@ -3201,7 +3303,9 @@
           "choices": [
             "I have a book to read."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have a book to read.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have a book to read.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I have a book to read.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。読むべき本があります"
         },
         {
           "id": "so-g2-u7-009",
@@ -3246,7 +3350,9 @@
           "choices": [
             "She went to the library to study."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She went to the library to study.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She went to the library to study.」です。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. She went to the library to study.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼女は勉強するために図書館に行きました"
         },
         {
           "id": "so-g2-u7-011",
@@ -3306,7 +3412,9 @@
           "choices": [
             "We enjoyed to play."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We enjoyed to play.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「We enjoyed to play.」です。",
+          "passage": "My brother loves cooking. He watches cooking shows on TV. Sometimes he makes dinner for our family. We enjoyed to play.",
+          "passageJapanese": "兄は料理が大好きです。テレビで料理番組を見ます。時々家族のために夕食を作ります。私たちは遊ぶことを楽しみました"
         },
         {
           "id": "so-g2-u7-014",
@@ -3348,7 +3456,9 @@
           "choices": [
             "I can to play the piano."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I can to play the piano.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I can to play the piano.」です。",
+          "passage": "I enjoy playing the piano. I practice every evening. My mother taught me when I was young. I can to play the piano.",
+          "passageJapanese": "ピアノを弾くのが好きです。毎晩練習します。幼い頃、母が教えてくれました。私はピアノを弾くことができます"
         },
         {
           "id": "so-g2-u7-016",
@@ -3392,7 +3502,9 @@
           "choices": [
             "Do you have anything to eat?"
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Do you have anything to eat?」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Do you have anything to eat?」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. Do you have anything to eat?",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。何か食べるものはありますか"
         },
         {
           "id": "so-g2-u7-018",
@@ -3415,7 +3527,9 @@
           "choices": [
             "This is a pen to write with."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is a pen to write with.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This is a pen to write with.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This is a pen to write with.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これは書くためのペンです"
         },
         {
           "id": "so-g2-u7-019",
@@ -3506,7 +3620,9 @@
           "choices": [
             "This book is read by many people."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This book is read by many people.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This book is read by many people.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. This book is read by many people.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。この本は多くの人に読まれています"
         },
         {
           "id": "so-g2-u8-003",
@@ -3528,7 +3644,9 @@
           "choices": [
             "The building was built last year."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The building was built last year.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The building was built last year.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The building was built last year.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その建物は昨年建てられました"
         },
         {
           "id": "so-g2-u8-004",
@@ -3594,7 +3712,9 @@
           "choices": [
             "These pictures were taken by him."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These pictures were taken by him.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These pictures were taken by him.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. These pictures were taken by him.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これらの写真は彼によって撮られました"
         },
         {
           "id": "so-g2-u8-007",
@@ -3638,7 +3758,9 @@
           "choices": [
             "The window was closed by me."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The window was closed by me.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The window was closed by me.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. The window was closed by me.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。窓は私によって閉められました"
         },
         {
           "id": "so-g2-u8-009",
@@ -3728,7 +3850,9 @@
           "choices": [
             "The movie was watched by many people."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The movie was watched by many people.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「The movie was watched by many people.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. The movie was watched by many people.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。その映画は多くの人に見られました"
         },
         {
           "id": "so-g2-u8-013",
@@ -3844,7 +3968,9 @@
           "choices": [
             "This picture was painted by a famous artist."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This picture was painted by a famous artist.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「This picture was painted by a famous artist.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. This picture was painted by a famous artist.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。この絵は有名な画家によって描かれました"
         },
         {
           "id": "so-g2-u8-018",
@@ -3889,7 +4015,9 @@
           "choices": [
             "These products are made in Japan."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These products are made in Japan.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「These products are made in Japan.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. These products are made in Japan.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これらの製品は日本で作られています"
         },
         {
           "id": "so-g2-u8-020",
@@ -3940,7 +4068,9 @@
           "choices": [
             "I have studied English for three years."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have studied English for three years.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「I have studied English for three years.」です。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I have studied English for three years.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は3年間英語を勉強しています"
         },
         {
           "id": "so-g2-u9-002",
@@ -3983,7 +4113,9 @@
           "choices": [
             "She has just finished her homework."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has just finished her homework.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has just finished her homework.」です。",
+          "passage": "Math class starts at 9:00. Mr. Brown is our math teacher. He explains everything clearly. She has just finished her homework.",
+          "passageJapanese": "数学の授業は9時に始まります。ブラウン先生が数学の先生です。すべてをわかりやすく説明してくれます。彼女はちょうど宿題を終えました"
         },
         {
           "id": "so-g2-u9-004",
@@ -4069,7 +4201,9 @@
           "choices": [
             "Mary has seen the movie."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary has seen the movie.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「Mary has seen the movie.」です。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. Mary has seen the movie.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。メアリーはその映画を見たことがあります"
         },
         {
           "id": "so-g2-u9-008",
@@ -4111,7 +4245,9 @@
           "choices": [
             "You have read the book."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have read the book.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「You have read the book.」です。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. You have read the book.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。あなたはその本を読みましたか"
         },
         {
           "id": "so-g2-u9-010",
@@ -4243,7 +4379,9 @@
           "choices": [
             "He has not finished his homework yet."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has not finished his homework yet.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「He has not finished his homework yet.」です。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. He has not finished his homework yet.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼は宿題をまだ終えていません"
         },
         {
           "id": "so-g2-u9-016",
@@ -4265,7 +4403,9 @@
           "choices": [
             "She has lived here since 2012."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has lived here since 2012.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「She has lived here since 2012.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. She has lived here since 2012.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼女は2012年からここに住んでいます"
         },
         {
           "id": "so-g2-u9-017",
@@ -4310,7 +4450,9 @@
           "choices": [
             "They have bought a new house."
           ],
-          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have bought a new house.」です。"
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。 正しい語順は「They have bought a new house.」です。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. They have bought a new house.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼らは新しい家を買いました"
         },
         {
           "id": "so-g2-u9-019",

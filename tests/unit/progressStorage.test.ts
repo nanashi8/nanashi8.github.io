@@ -505,8 +505,8 @@ describe('progressStorage', () => {
       const allProgress = getAllWordProgress();
 
       expect(allProgress).toHaveLength(2);
-      expect(allProgress.map((p) => p.word)).toContain('cat');
-      expect(allProgress.map((p) => p.word)).toContain('dog');
+      expect(allProgress.map((p: any) => p.word)).toContain('cat');
+      expect(allProgress.map((p: any) => p.word)).toContain('dog');
     });
   });
 

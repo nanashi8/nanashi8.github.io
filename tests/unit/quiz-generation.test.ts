@@ -59,7 +59,7 @@ describe('Utils - generateChoices', () => {
     const choices = generateChoices('りんご', sampleQuestions, 0);
 
     // 正解と「分からない」以外は問題リストから
-    const otherChoices = choices.filter((c) => c !== 'りんご' && c !== '分からない');
+    const otherChoices = choices.filter((c: string) => c !== 'りんご' && c !== '分からない');
     expect(otherChoices.length).toBe(2);
   });
 });
@@ -83,7 +83,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const correctQuestion = sampleQuestions[0];
     const choices = generateChoicesWithQuestions(correctQuestion, sampleQuestions, 0);
 
-    const hasCorrect = choices.some((c) => c.text === correctQuestion.meaning);
+    const hasCorrect = choices.some((c: any) => c.text === correctQuestion.meaning);
     expect(hasCorrect).toBe(true);
   });
   it('「分からない」が最後に含まれる', () => {
@@ -95,7 +95,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
 
   it('選択肢textに重複がない', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
-    const uniqueTexts = [...new Set(choices.map((c) => c.text))];
+    const uniqueTexts = [...new Set(choices.map((c: any) => c.text))];
 
     expect(choices.length).toBe(uniqueTexts.length);
   });
@@ -105,13 +105,13 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const choices = generateChoicesWithQuestions(fewQuestions[0], fewQuestions, 0);
 
     expect(choices.length).toBe(4);
-    expect(choices.some((c) => c.text === fewQuestions[0].meaning)).toBe(true);
+    expect(choices.some((c: any) => c.text === fewQuestions[0].meaning)).toBe(true);
   });
 
   it('各選択肢がtext と questionプロパティを持つ', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
-    choices.forEach((choice) => {
+    choices.forEach((choice: any) => {
       expect(choice).toHaveProperty('text');
       expect(choice).toHaveProperty('question');
       expect(typeof choice.text).toBe('string');
@@ -122,9 +122,9 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
     // 「分からない」以外の選択肢
-    const nonDontKnow = choices.filter((c) => c.text !== '分からない');
+    const nonDontKnow = choices.filter((c: any) => c.text !== '分からない');
 
-    nonDontKnow.forEach((choice) => {
+    nonDontKnow.forEach((choice: any) => {
       if (choice.question) {
         expect(choice.question).toHaveProperty('word');
         expect(choice.question).toHaveProperty('meaning');

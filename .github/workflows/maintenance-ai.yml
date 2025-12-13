@@ -1,0 +1,139 @@
+name: 定期メンテナンスAI
+
+on:
+  # 毎日午前3時に実行（JST）
+  schedule:
+    - cron: '0 18 * * *'  # UTC 18:00 = JST 03:00
+
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      auto_fix:
+        description: '自動修正を適用する'
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Dry runモード（修正を実際には適用しない）'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: チェックアウト
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存関係インストール
+        run: |
+          npm ci
+          pip install -r requirements.txt || echo "requirements.txtなし"
+
+      - name: 定期メンテナンスAI実行
+        id: maintenance
+        run: |
+          python3 scripts/maintenance_ai.py \
+            --verbose \
+            ${{ github.event.inputs.auto_fix == 'true' && '--auto-fix' || '' }} \
+            ${{ github.event.inputs.dry_run == 'false' && '--no-dry-run' || '' }}
+        continue-on-error: true
+
+      - name: レポートをArtifactにアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: maintenance-report-${{ github.run_number }}
+          path: maintenance_report.json
+          retention-days: 30
+
+      - name: Issue作成（CRITICAL問題がある場合）
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('maintenance_report.json', 'utf8'));
+
+            if (report.critical_issues > 0) {
+              const criticalIssues = report.issues
+                .filter(i => i.severity === 'CRITICAL')
+                .map(i => `- **${i.category}**: ${i.description}`)
+                .join('\n');
+
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🚨 定期メンテナンスAI: CRITICAL問題を検出`,
+                body: `## メンテナンスレポート
+
+            実行時刻: ${report.timestamp}
+
+            ### 📊 サマリー
+            - 総問題数: ${report.total_issues}
+            - **CRITICAL**: ${report.critical_issues}
+            - WARNING: ${report.warning_issues}
+            - INFO: ${report.info_issues}
+
+            ### ❌ CRITICAL問題
+
+            ${criticalIssues}
+
+            ### 🔧 対処方法
+
+            1. ローカルで \`python3 scripts/maintenance_ai.py --verbose\` を実行
+            2. 問題を確認・修正
+            3. 自動修正が可能な場合: \`python3 scripts/maintenance_ai.py --auto-fix --no-dry-run\`
+
+            詳細は [Artifact](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) を参照してください。
+            `,
+                labels: ['maintenance', 'critical', 'automated']
+              });
+            }
+
+      - name: Slackに通知（オプション）
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            REPORT=$(cat maintenance_report.json)
+            CRITICAL=$(echo $REPORT | jq -r '.critical_issues')
+            WARNING=$(echo $REPORT | jq -r '.warning_issues')
+
+            if [ "$CRITICAL" -gt 0 ]; then
+              ICON=":rotating_light:"
+              COLOR="danger"
+            elif [ "$WARNING" -gt 0 ]; then
+              ICON=":warning:"
+              COLOR="warning"
+            else
+              ICON=":white_check_mark:"
+              COLOR="good"
+            fi
+
+            curl -X POST "$SLACK_WEBHOOK_URL" \
+              -H 'Content-Type: application/json' \
+              -d "{
+                \"attachments\": [{
+                  \"color\": \"$COLOR\",
+                  \"title\": \"$ICON 定期メンテナンスAI完了\",
+                  \"text\": \"CRITICAL: $CRITICAL, WARNING: $WARNING\",
+                  \"footer\": \"GitHub Actions\"
+                }]
+              }"
+          fi

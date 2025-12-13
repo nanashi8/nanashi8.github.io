@@ -402,12 +402,12 @@ describe('statistics', () => {
 
       // 日付でソートされている
       const todayEntry = dailyTime.find(
-        (d) => d.date === new Date(today).toLocaleDateString('ja-JP')
+        (d: any) => d.date === new Date(today).toLocaleDateString('ja-JP')
       );
       expect(todayEntry?.timeSpent).toBe(900); // 300 + 600
 
       const yesterdayEntry = dailyTime.find(
-        (d) => d.date === new Date(yesterday).toLocaleDateString('ja-JP')
+        (d: any) => d.date === new Date(yesterday).toLocaleDateString('ja-JP')
       );
       expect(yesterdayEntry?.timeSpent).toBe(1200);
     });

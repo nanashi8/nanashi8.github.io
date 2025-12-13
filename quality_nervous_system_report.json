@@ -1,0 +1,845 @@
+{
+  "timestamp": "2025-12-13T22:47:39.543373",
+  "health_status": "CRITICAL",
+  "total_issues": 28,
+  "critical_issues": 19,
+  "warning_issues": 9,
+  "issues": [
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "6.82%",
+        "threshold": "80.00%",
+        "unique_words": 166,
+        "total_words": 2434,
+        "most_common": [
+          [
+            "this",
+            1009
+          ],
+          [
+            "pen",
+            1002
+          ],
+          [
+            "she",
+            32
+          ],
+          [
+            "they",
+            25
+          ],
+          [
+            "you",
+            22
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543327"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "consecutive_patterns",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "description": "同じ主語が101問連続しています",
+      "details": {
+        "subject": "This",
+        "consecutive_count": 101,
+        "threshold": 3,
+        "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
+      },
+      "timestamp": "2025-12-13T22:47:39.543343"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "choice_appropriateness",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "description": "選択肢に問題があります",
+      "details": {
+        "appropriate_rate": "54.55%",
+        "threshold": "85.00%",
+        "inappropriate_count": 1000,
+        "examples": [
+          {
+            "id": "so-g1-u0-001",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g1-u0-002",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g1-u0-003",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          }
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543344"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade2.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "40.88%",
+        "threshold": "80.00%",
+        "unique_words": 280,
+        "total_words": 685,
+        "most_common": [
+          [
+            "the",
+            42
+          ],
+          [
+            "yesterday",
+            26
+          ],
+          [
+            "she",
+            24
+          ],
+          [
+            "tomorrow",
+            20
+          ],
+          [
+            "going",
+            20
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543345"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "12.19%",
+        "threshold": "80.00%",
+        "unique_words": 343,
+        "total_words": 2813,
+        "most_common": [
+          [
+            "this",
+            1023
+          ],
+          [
+            "pen",
+            1000
+          ],
+          [
+            "the",
+            86
+          ],
+          [
+            "she",
+            35
+          ],
+          [
+            "been",
+            23
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543347"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "consecutive_patterns",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "description": "同じ主語が101問連続しています",
+      "details": {
+        "subject": "This",
+        "consecutive_count": 101,
+        "threshold": 3,
+        "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
+      },
+      "timestamp": "2025-12-13T22:47:39.543348"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "choice_appropriateness",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "description": "選択肢に問題があります",
+      "details": {
+        "appropriate_rate": "54.55%",
+        "threshold": "85.00%",
+        "inappropriate_count": 1000,
+        "examples": [
+          {
+            "id": "so-g3-u0-001",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g3-u0-002",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g3-u0-003",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          }
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543349"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "5.11%",
+        "threshold": "80.00%",
+        "unique_words": 193,
+        "total_words": 3777,
+        "most_common": [
+          [
+            "you",
+            203
+          ],
+          [
+            "now",
+            197
+          ],
+          [
+            "tom",
+            161
+          ],
+          [
+            "mary",
+            160
+          ],
+          [
+            "and",
+            154
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543350"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "consecutive_patterns",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "description": "同じ主語が11問連続しています",
+      "details": {
+        "subject": "This",
+        "consecutive_count": 11,
+        "threshold": 3,
+        "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
+      },
+      "timestamp": "2025-12-13T22:47:39.543351"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "choice_appropriateness",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "description": "選択肢に問題があります",
+      "details": {
+        "appropriate_rate": "54.55%",
+        "threshold": "85.00%",
+        "inappropriate_count": 1000,
+        "examples": [
+          {
+            "id": "so-g1-u0-001",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g1-u0-002",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g1-u0-003",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          }
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543352"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade2.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "40.88%",
+        "threshold": "80.00%",
+        "unique_words": 280,
+        "total_words": 685,
+        "most_common": [
+          [
+            "the",
+            42
+          ],
+          [
+            "yesterday",
+            26
+          ],
+          [
+            "she",
+            24
+          ],
+          [
+            "tomorrow",
+            20
+          ],
+          [
+            "going",
+            20
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543353"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "7.83%",
+        "threshold": "80.00%",
+        "unique_words": 324,
+        "total_words": 4139,
+        "most_common": [
+          [
+            "now",
+            196
+          ],
+          [
+            "you",
+            193
+          ],
+          [
+            "tom",
+            159
+          ],
+          [
+            "mary",
+            158
+          ],
+          [
+            "and",
+            153
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543354"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "consecutive_patterns",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "description": "同じ主語が20問連続しています",
+      "details": {
+        "subject": "The",
+        "consecutive_count": 20,
+        "threshold": 3,
+        "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
+      },
+      "timestamp": "2025-12-13T22:47:39.543355"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "choice_appropriateness",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "description": "選択肢に問題があります",
+      "details": {
+        "appropriate_rate": "54.55%",
+        "threshold": "85.00%",
+        "inappropriate_count": 1000,
+        "examples": [
+          {
+            "id": "so-g3-u0-001",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g3-u0-002",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          },
+          {
+            "id": "so-g3-u0-003",
+            "issue": "正答が選択肢に含まれていない",
+            "correct": "",
+            "choices": []
+          }
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543356"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade1.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "1.87%",
+        "threshold": "80.00%",
+        "unique_words": 101,
+        "total_words": 5406,
+        "most_common": [
+          [
+            "this",
+            1017
+          ],
+          [
+            "pen",
+            1015
+          ],
+          [
+            "now",
+            196
+          ],
+          [
+            "you",
+            192
+          ],
+          [
+            "tom",
+            159
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543358"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "consecutive_patterns",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade1.json",
+      "description": "同じ主語が106問連続しています",
+      "details": {
+        "subject": "This",
+        "consecutive_count": 106,
+        "threshold": 3,
+        "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
+      },
+      "timestamp": "2025-12-13T22:47:39.543359"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade2.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "36.34%",
+        "threshold": "80.00%",
+        "unique_words": 306,
+        "total_words": 842,
+        "most_common": [
+          [
+            "was",
+            42
+          ],
+          [
+            "the",
+            42
+          ],
+          [
+            "have",
+            27
+          ],
+          [
+            "yesterday",
+            26
+          ],
+          [
+            "she",
+            24
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543360"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "vocabulary_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade3.json",
+      "description": "語彙の多様性が不足しています",
+      "details": {
+        "diversity_rate": "6.00%",
+        "threshold": "80.00%",
+        "unique_words": 361,
+        "total_words": 6012,
+        "most_common": [
+          [
+            "this",
+            1025
+          ],
+          [
+            "pen",
+            1015
+          ],
+          [
+            "now",
+            196
+          ],
+          [
+            "you",
+            191
+          ],
+          [
+            "tom",
+            159
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543361"
+    },
+    {
+      "severity": "CRITICAL",
+      "category": "consecutive_patterns",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade3.json",
+      "description": "同じ主語が100問連続しています",
+      "details": {
+        "subject": "This",
+        "consecutive_count": 100,
+        "threshold": 3,
+        "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
+      },
+      "timestamp": "2025-12-13T22:47:39.543362"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "1.00%",
+        "threshold": "60.00%",
+        "unique_subjects": 22,
+        "total_questions": 1200,
+        "most_common": [
+          [
+            "This",
+            1007
+          ],
+          [
+            "She",
+            28
+          ],
+          [
+            "I",
+            27
+          ],
+          [
+            "He",
+            27
+          ],
+          [
+            "____",
+            26
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543363"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade2.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "10.50%",
+        "threshold": "60.00%",
+        "unique_subjects": 21,
+        "total_questions": 200,
+        "most_common": [
+          [
+            "I",
+            27
+          ],
+          [
+            "He",
+            22
+          ],
+          [
+            "She",
+            22
+          ],
+          [
+            "The",
+            19
+          ],
+          [
+            "They",
+            17
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543364"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "0.95%",
+        "threshold": "60.00%",
+        "unique_subjects": 21,
+        "total_questions": 1200,
+        "most_common": [
+          [
+            "This",
+            1018
+          ],
+          [
+            "The",
+            36
+          ],
+          [
+            "I",
+            26
+          ],
+          [
+            "She",
+            25
+          ],
+          [
+            "He",
+            21
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543365"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "1.59%",
+        "threshold": "60.00%",
+        "unique_subjects": 35,
+        "total_questions": 1200,
+        "most_common": [
+          [
+            "I",
+            215
+          ],
+          [
+            "You",
+            194
+          ],
+          [
+            "Tom",
+            161
+          ],
+          [
+            "Our",
+            147
+          ],
+          [
+            "My",
+            138
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543366"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade2.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "10.50%",
+        "threshold": "60.00%",
+        "unique_subjects": 21,
+        "total_questions": 200,
+        "most_common": [
+          [
+            "I",
+            27
+          ],
+          [
+            "He",
+            22
+          ],
+          [
+            "She",
+            22
+          ],
+          [
+            "The",
+            19
+          ],
+          [
+            "They",
+            17
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543367"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "1.45%",
+        "threshold": "60.00%",
+        "unique_subjects": 32,
+        "total_questions": 1200,
+        "most_common": [
+          [
+            "I",
+            217
+          ],
+          [
+            "You",
+            189
+          ],
+          [
+            "Tom",
+            159
+          ],
+          [
+            "Our",
+            147
+          ],
+          [
+            "My",
+            138
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543369"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade1.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "0.91%",
+        "threshold": "60.00%",
+        "unique_subjects": 20,
+        "total_questions": 2023,
+        "most_common": [
+          [
+            "This",
+            1017
+          ],
+          [
+            "I",
+            193
+          ],
+          [
+            "You",
+            191
+          ],
+          [
+            "Tom",
+            159
+          ],
+          [
+            "Our",
+            147
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543370"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade2.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "11.00%",
+        "threshold": "60.00%",
+        "unique_subjects": 22,
+        "total_questions": 200,
+        "most_common": [
+          [
+            "I",
+            27
+          ],
+          [
+            "He",
+            22
+          ],
+          [
+            "She",
+            22
+          ],
+          [
+            "The",
+            19
+          ],
+          [
+            "They",
+            17
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543371"
+    },
+    {
+      "severity": "WARNING",
+      "category": "subject_diversity",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade3.json",
+      "description": "主語の多様性が不足しています",
+      "details": {
+        "diversity_rate": "1.73%",
+        "threshold": "60.00%",
+        "unique_subjects": 38,
+        "total_questions": 2140,
+        "most_common": [
+          [
+            "This",
+            1023
+          ],
+          [
+            "I",
+            208
+          ],
+          [
+            "You",
+            189
+          ],
+          [
+            "Tom",
+            159
+          ],
+          [
+            "Our",
+            147
+          ]
+        ]
+      },
+      "timestamp": "2025-12-13T22:47:39.543372"
+    }
+  ]
+}

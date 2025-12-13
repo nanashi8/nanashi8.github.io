@@ -16,7 +16,7 @@ export interface CustomWord {
   /** カタカナ発音 (オプション) */
   katakana?: string;
   /** 出典 (どのタブから追加されたか) */
-  source?: 'reading' | 'memorization' | 'translation' | 'spelling' | 'dictionary';
+  source?: 'reading' | 'memorization' | 'translation' | 'spelling' | 'dictionary' | 'manual';
   /** 出典の詳細情報 (例: パッセージID、問題番号など) */
   sourceDetail?: string;
   /** 追加日時 */

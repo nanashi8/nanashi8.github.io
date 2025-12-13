@@ -23,6 +23,7 @@
       "@/hooks/*": ["src/hooks/*"],
       "@/types/*": ["src/types/*"],
       "@/utils/*": ["src/utils/*"],
+      "@/storage/*": ["src/storage/*"],
       "@/constants/*": ["src/constants/*"]
     },
 
@@ -33,6 +34,6 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
+  "include": ["src", "tests"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
