@@ -1,6 +1,6 @@
 /**
  * 発音・アクセント問題の品質検証テスト
- * 
+ *
  * 4つの専門家の視点から包括的な品質保証を実施:
  * 1. 音声学者の視点: IPA表記、発音記号の正確性
  * 2. 日本語翻訳者の視点: 日本語説明の明確性
@@ -225,11 +225,11 @@ describe('発音・アクセント問題品質検証 - 日本語翻訳者の視�
     it('explanationに正答のポイントが含まれている', () => {
       allQuestions.forEach(q => {
         // explanationに正答の単語またはパターンが含まれているか
-        const hasRelevantContent = 
+        const hasRelevantContent =
           q.explanation.includes(q.correctAnswer) ||
           q.explanation.includes(q.word) ||
           q.explanation.length > 20; // 最低限の説明の長さ
-        
+
         expect(
           hasRelevantContent,
           `${q.id}: explanationに十分な説明が含まれていません`
@@ -270,7 +270,7 @@ describe('発音・アクセント問題品質検証 - 教育専門家の視点'
           q.hint.length,
           `${q.id}: hintが短すぎます（最低5文字）`
         ).toBeGreaterThanOrEqual(5);
-        
+
         // hintが答えをそのまま言っていないか（ある程度の長さがあること）
         expect(
           q.hint.length,
@@ -390,7 +390,7 @@ describe('発音・アクセント問題品質検証 - データ品質専門家�
 
     it('すべての必須フィールドが存在する', () => {
       const requiredFields = ['id', 'japanese', 'word', 'choices', 'correctAnswer', 'difficulty', 'explanation', 'hint'];
-      
+
       allQuestions.forEach(q => {
         requiredFields.forEach(field => {
           expect(
@@ -412,7 +412,7 @@ describe('発音・アクセント問題品質検証 - データ品質専門家�
 
     it('各フィールドが空文字列でない', () => {
       const stringFields = ['id', 'japanese', 'word', 'correctAnswer', 'difficulty', 'explanation', 'hint'];
-      
+
       allQuestions.forEach(q => {
         stringFields.forEach(field => {
           const value = (q as any)[field];
