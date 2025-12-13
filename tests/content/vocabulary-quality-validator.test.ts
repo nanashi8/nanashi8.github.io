@@ -326,7 +326,7 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
         const entries = parseCSV(filePath);
         const invalidRelated = entries.filter((e) => {
           if (!e.related || !e.related.trim()) return false;
-          
+
           // 関連語は "word(IPA): meaning" の形式を期待
           // または "word(IPA): meaning, word2(IPA2): meaning2" の形式
           const hasProperFormat = e.related.includes('(') && e.related.includes(')');
@@ -451,7 +451,7 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
 
       if (crossFileDuplicates.length > 0) {
         console.log(`\n📊 ファイル間重複: ${crossFileDuplicates.length}語`);
-        console.log(`  例: ${crossFileDuplicates.slice(0, 3).map(([word, files]) => 
+        console.log(`  例: ${crossFileDuplicates.slice(0, 3).map(([word, files]) =>
           `${word} (${files.join(', ')})`).join('; ')}`);
       }
 
@@ -509,7 +509,7 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
           // 期待される形式: IPA記号 (カタカナ)
           // カタカナには長音記号、濁点、結合アクセント記号(U+0300-036F)なども含む
           const hasValidFormat = /\([\u30A0-\u30FF\u3099-\u309C\uFF70\u30FC\u0300-\u036F]+\)/.test(e.ipa);
-          
+
           if (!hasValidFormat) {
             invalidFormat++;
           }
