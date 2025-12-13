@@ -143,3 +143,7 @@ backup/emergency-*/
 tools/deploy.log
 # Keep archive-github for documentation
 !tools/archive-github/
+
+# Test coverage
+coverage/
+.coverage
