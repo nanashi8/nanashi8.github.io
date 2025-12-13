@@ -1,6 +1,6 @@
 {
   "grade": 3,
-  "totalQuestions": 200,
+  "totalQuestions": 2200,
   "units": [
     {
       "unit": "Unit 0",
@@ -1620,7 +1620,7 @@
           ],
           "correctAnswer": "spoken",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はspokenです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1629,13 +1629,13 @@
           "sentence": "This book is ____ by many people.",
           "choices": [
             "read",
-            "read",
             "reads",
-            "reading"
+            "reading",
+            "readed"
           ],
           "correctAnswer": "read",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はreadです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1650,7 +1650,7 @@
           ],
           "correctAnswer": "written",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はwrittenです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1665,7 +1665,7 @@
           ],
           "correctAnswer": "built",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はbuiltです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1680,7 +1680,7 @@
           ],
           "correctAnswer": "made",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はmadeです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1695,7 +1695,7 @@
           ],
           "correctAnswer": "solved",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はsolvedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1710,7 +1710,7 @@
           ],
           "correctAnswer": "loved",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はlovedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1725,7 +1725,7 @@
           ],
           "correctAnswer": "known",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はknownです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1740,7 +1740,7 @@
           ],
           "correctAnswer": "broken",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はbrokenです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1755,7 +1755,7 @@
           ],
           "correctAnswer": "taken",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はtakenです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1770,7 +1770,7 @@
           ],
           "correctAnswer": "opened",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はopenedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1785,7 +1785,7 @@
           ],
           "correctAnswer": "used",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はusedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1800,7 +1800,7 @@
           ],
           "correctAnswer": "constructed",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はconstructedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1815,7 +1815,7 @@
           ],
           "correctAnswer": "planted",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はplantedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1830,7 +1830,7 @@
           ],
           "correctAnswer": "watched",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はwatchedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1845,7 +1845,7 @@
           ],
           "correctAnswer": "cleaned",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はcleanedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1860,7 +1860,7 @@
           ],
           "correctAnswer": "written",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はwrittenです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1875,7 +1875,7 @@
           ],
           "correctAnswer": "manufactured",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はmanufacturedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1890,7 +1890,7 @@
           ],
           "correctAnswer": "painted",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はpaintedです。",
           "hint": "be動詞の後は過去分詞"
         },
         {
@@ -1905,7 +1905,7 @@
           ],
           "correctAnswer": "published",
           "difficulty": "intermediate",
-          "explanation": "受動態では過去分詞を使う。",
+          "explanation": "受動態では過去分詞を使う。 正答はpublishedです。",
           "hint": "be動詞の後は過去分詞"
         }
       ],
@@ -5130,7 +5130,7 @@
           ],
           "correctAnswer": "met",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はmetです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5145,7 +5145,7 @@
           ],
           "correctAnswer": "been",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はbeenです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5160,7 +5160,7 @@
           ],
           "correctAnswer": "seen",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はseenです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5175,7 +5175,7 @@
           ],
           "correctAnswer": "finished",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はfinishedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5190,7 +5190,7 @@
           ],
           "correctAnswer": "eaten",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はeatenです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5199,13 +5199,13 @@
           "sentence": "I have never ____ this book.",
           "choices": [
             "read",
-            "read",
             "reads",
-            "reading"
+            "reading",
+            "readed"
           ],
           "correctAnswer": "read",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はreadです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5220,7 +5220,7 @@
           ],
           "correctAnswer": "been",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はbeenです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5235,7 +5235,7 @@
           ],
           "correctAnswer": "heard",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はheardです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5250,7 +5250,7 @@
           ],
           "correctAnswer": "studied",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はstudiedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5265,7 +5265,7 @@
           ],
           "correctAnswer": "waited",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はwaitedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5280,7 +5280,7 @@
           ],
           "correctAnswer": "arrived",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はarrivedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5295,7 +5295,7 @@
           ],
           "correctAnswer": "left",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はleftです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5310,7 +5310,7 @@
           ],
           "correctAnswer": "visited",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はvisitedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5325,7 +5325,7 @@
           ],
           "correctAnswer": "met",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はmetです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5340,7 +5340,7 @@
           ],
           "correctAnswer": "eaten",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はeatenです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5348,14 +5348,14 @@
           "japanese": "彼女は手紙を書き終えました",
           "sentence": "She has finished ____ the letter.",
           "choices": [
+            "write",
+            "writes",
             "writing",
-            "writing",
-            "writings",
-            "writinging"
+            "writed"
           ],
           "correctAnswer": "writing",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はwritingです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5370,7 +5370,7 @@
           ],
           "correctAnswer": "lived",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はlivedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5385,7 +5385,7 @@
           ],
           "correctAnswer": "failed",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はfailedです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5400,7 +5400,7 @@
           ],
           "correctAnswer": "forgotten",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はforgottenです。",
           "hint": "have/has + 過去分詞"
         },
         {
@@ -5415,7 +5415,7 @@
           ],
           "correctAnswer": "lost",
           "difficulty": "intermediate",
-          "explanation": "現在完了では過去分詞を使う。",
+          "explanation": "現在完了では過去分詞を使う。 正答はlostです。",
           "hint": "have/has + 過去分詞"
         }
       ],
@@ -8640,7 +8640,7 @@
           ],
           "correctAnswer": "studying",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はstudyingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8655,7 +8655,7 @@
           ],
           "correctAnswer": "working",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はworkingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8670,7 +8670,7 @@
           ],
           "correctAnswer": "waiting",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はwaitingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8685,7 +8685,7 @@
           ],
           "correctAnswer": "living",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はlivingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8700,7 +8700,7 @@
           ],
           "correctAnswer": "talking",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はtalkingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8715,7 +8715,7 @@
           ],
           "correctAnswer": "sleeping",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はsleepingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8730,7 +8730,7 @@
           ],
           "correctAnswer": "cooking",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はcookingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8745,7 +8745,7 @@
           ],
           "correctAnswer": "looking",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はlookingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8760,7 +8760,7 @@
           ],
           "correctAnswer": "traveling",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はtravelingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8775,7 +8775,7 @@
           ],
           "correctAnswer": "studying",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はstudyingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8790,7 +8790,7 @@
           ],
           "correctAnswer": "running",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はrunningです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8805,7 +8805,7 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はplayingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8820,7 +8820,7 @@
           ],
           "correctAnswer": "teaching",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はteachingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8835,7 +8835,7 @@
           ],
           "correctAnswer": "talking",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はtalkingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8850,7 +8850,7 @@
           ],
           "correctAnswer": "preparing",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はpreparingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8865,7 +8865,7 @@
           ],
           "correctAnswer": "singing",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はsingingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8880,7 +8880,7 @@
           ],
           "correctAnswer": "waiting",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はwaitingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8895,7 +8895,7 @@
           ],
           "correctAnswer": "reading",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はreadingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8910,7 +8910,7 @@
           ],
           "correctAnswer": "swimming",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はswimmingです。",
           "hint": "been + 動詞ing"
         },
         {
@@ -8925,7 +8925,7 @@
           ],
           "correctAnswer": "drawing",
           "difficulty": "intermediate",
-          "explanation": "現在完了進行形では動詞のing形を使う。",
+          "explanation": "現在完了進行形では動詞のing形を使う。 正答はdrawingです。",
           "hint": "been + 動詞ing"
         }
       ],
@@ -12152,7 +12152,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-002",
@@ -12168,7 +12169,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-003",
@@ -12184,7 +12186,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-004",
@@ -12200,7 +12203,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-005",
@@ -12216,7 +12220,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-006",
@@ -12232,7 +12237,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-007",
@@ -12248,7 +12254,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-008",
@@ -12264,7 +12271,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-009",
@@ -12280,7 +12288,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-010",
@@ -12296,7 +12305,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-011",
@@ -12312,7 +12322,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-012",
@@ -12328,7 +12339,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-013",
@@ -12344,7 +12356,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-014",
@@ -12360,7 +12373,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-015",
@@ -12376,7 +12390,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-016",
@@ -12392,7 +12407,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-017",
@@ -12408,7 +12424,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         },
         {
           "id": "fb-g3-u3-018",
@@ -12424,7 +12441,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-019",
@@ -12440,7 +12458,8 @@
           "correctAnswer": "that",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「that」が入ります。"
         },
         {
           "id": "fb-g3-u3-020",
@@ -12456,7 +12475,8 @@
           "correctAnswer": "who",
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "explanation": "空欄には「who」が入ります。"
         }
       ],
       "sentenceOrdering": [
@@ -15681,9 +15701,10 @@
           ],
           "correctAnswer": "to play",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto playです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-002",
@@ -15698,9 +15719,10 @@
           ],
           "correctAnswer": "tell",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はtellです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-003",
@@ -15715,9 +15737,10 @@
           ],
           "correctAnswer": "to learn",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto learnです。",
           "grammarPoint": "不定詞",
-          "wordCount": 7
+          "wordCount": 7,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-004",
@@ -15732,9 +15755,10 @@
           ],
           "correctAnswer": "to practice",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto practiceです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-005",
@@ -15749,9 +15773,10 @@
           ],
           "correctAnswer": "to be",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto beです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-006",
@@ -15766,9 +15791,10 @@
           ],
           "correctAnswer": "to become",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto becomeです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-007",
@@ -15783,9 +15809,10 @@
           ],
           "correctAnswer": "to leave",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto leaveです。",
           "grammarPoint": "不定詞",
-          "wordCount": 5
+          "wordCount": 5,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-008",
@@ -15800,9 +15827,10 @@
           ],
           "correctAnswer": "to buy",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto buyです。",
           "grammarPoint": "不定詞",
-          "wordCount": 7
+          "wordCount": 7,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-009",
@@ -15817,9 +15845,10 @@
           ],
           "correctAnswer": "to drink",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto drinkです。",
           "grammarPoint": "不定詞",
-          "wordCount": 5
+          "wordCount": 5,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-010",
@@ -15834,9 +15863,10 @@
           ],
           "correctAnswer": "to solve",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto solveです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-011",
@@ -15851,9 +15881,10 @@
           ],
           "correctAnswer": "to play",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto playです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-012",
@@ -15868,9 +15899,10 @@
           ],
           "correctAnswer": "to write",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto writeです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-013",
@@ -15885,9 +15917,10 @@
           ],
           "correctAnswer": "to meet",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto meetです。",
           "grammarPoint": "不定詞",
-          "wordCount": 9
+          "wordCount": 9,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-014",
@@ -15902,9 +15935,10 @@
           ],
           "correctAnswer": "to earn",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto earnです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-015",
@@ -15919,9 +15953,10 @@
           ],
           "correctAnswer": "to take",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto takeです。",
           "grammarPoint": "不定詞",
-          "wordCount": 7
+          "wordCount": 7,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-016",
@@ -15936,9 +15971,10 @@
           ],
           "correctAnswer": "to stay",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto stayです。",
           "grammarPoint": "不定詞",
-          "wordCount": 7
+          "wordCount": 7,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-017",
@@ -15953,9 +15989,10 @@
           ],
           "correctAnswer": "to see",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto seeです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-018",
@@ -15970,9 +16007,10 @@
           ],
           "correctAnswer": "to pass",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto passです。",
           "grammarPoint": "不定詞",
-          "wordCount": 7
+          "wordCount": 7,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-019",
@@ -15987,9 +16025,10 @@
           ],
           "correctAnswer": "to know",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto knowです。",
           "grammarPoint": "不定詞",
-          "wordCount": 7
+          "wordCount": 7,
+          "hint": "文脈から適切な語を選びましょう"
         },
         {
           "id": "fb-g3-u4-020",
@@ -16004,9 +16043,10 @@
           ],
           "correctAnswer": "to be",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto beです。",
           "grammarPoint": "不定詞",
-          "wordCount": 6
+          "wordCount": 6,
+          "hint": "文脈から適切な語を選びましょう"
         }
       ],
       "sentenceOrdering": [
@@ -19232,7 +19272,8 @@
           "correctAnswer": "Swimming",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Swimming」が入ります。"
         },
         {
           "id": "fb-g3-u5-002",
@@ -19248,7 +19289,8 @@
           "correctAnswer": "Running",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Running」が入ります。"
         },
         {
           "id": "fb-g3-u5-003",
@@ -19264,7 +19306,8 @@
           "correctAnswer": "Dancing",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Dancing」が入ります。"
         },
         {
           "id": "fb-g3-u5-004",
@@ -19280,7 +19323,8 @@
           "correctAnswer": "Fishing",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Fishing」が入ります。"
         },
         {
           "id": "fb-g3-u5-005",
@@ -19296,7 +19340,8 @@
           "correctAnswer": "singing",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「singing」が入ります。"
         },
         {
           "id": "fb-g3-u5-006",
@@ -19312,7 +19357,8 @@
           "correctAnswer": "painting",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「painting」が入ります。"
         },
         {
           "id": "fb-g3-u5-007",
@@ -19328,7 +19374,8 @@
           "correctAnswer": "traveling",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「traveling」が入ります。"
         },
         {
           "id": "fb-g3-u5-008",
@@ -19344,7 +19391,8 @@
           "correctAnswer": "cooking",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「cooking」が入ります。"
         },
         {
           "id": "fb-g3-u5-009",
@@ -19360,7 +19408,8 @@
           "correctAnswer": "playing",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「playing」が入ります。"
         },
         {
           "id": "fb-g3-u5-010",
@@ -19376,7 +19425,8 @@
           "correctAnswer": "playing",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「playing」が入ります。"
         },
         {
           "id": "fb-g3-u5-011",
@@ -19392,7 +19442,8 @@
           "correctAnswer": "getting",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「getting」が入ります。"
         },
         {
           "id": "fb-g3-u5-012",
@@ -19408,7 +19459,8 @@
           "correctAnswer": "solving",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「solving」が入ります。"
         },
         {
           "id": "fb-g3-u5-013",
@@ -19424,7 +19476,8 @@
           "correctAnswer": "Reading",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Reading」が入ります。"
         },
         {
           "id": "fb-g3-u5-014",
@@ -19440,7 +19493,8 @@
           "correctAnswer": "Writing",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Writing」が入ります。"
         },
         {
           "id": "fb-g3-u5-015",
@@ -19456,7 +19510,8 @@
           "correctAnswer": "Speaking",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Speaking」が入ります。"
         },
         {
           "id": "fb-g3-u5-016",
@@ -19472,7 +19527,8 @@
           "correctAnswer": "Listening",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Listening」が入ります。"
         },
         {
           "id": "fb-g3-u5-017",
@@ -19488,7 +19544,8 @@
           "correctAnswer": "Shopping",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Shopping」が入ります。"
         },
         {
           "id": "fb-g3-u5-018",
@@ -19504,7 +19561,8 @@
           "correctAnswer": "Cleaning",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Cleaning」が入ります。"
         },
         {
           "id": "fb-g3-u5-019",
@@ -19520,7 +19578,8 @@
           "correctAnswer": "Studying",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Studying」が入ります。"
         },
         {
           "id": "fb-g3-u5-020",
@@ -19536,7 +19595,8 @@
           "correctAnswer": "Working",
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "explanation": "空欄には「Working」が入ります。"
         }
       ],
       "sentenceOrdering": [
@@ -22761,7 +22821,8 @@
           ],
           "correctAnswer": "running",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「running」が入ります。"
         },
         {
           "id": "fb-g3-u6-002",
@@ -22776,7 +22837,8 @@
           ],
           "correctAnswer": "crying",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「crying」が入ります。"
         },
         {
           "id": "fb-g3-u6-003",
@@ -22791,7 +22853,8 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「playing」が入ります。"
         },
         {
           "id": "fb-g3-u6-004",
@@ -22806,7 +22869,8 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「playing」が入ります。"
         },
         {
           "id": "fb-g3-u6-005",
@@ -22821,7 +22885,8 @@
           ],
           "correctAnswer": "sitting",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「sitting」が入ります。"
         },
         {
           "id": "fb-g3-u6-006",
@@ -22836,7 +22901,8 @@
           ],
           "correctAnswer": "smiling",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「smiling」が入ります。"
         },
         {
           "id": "fb-g3-u6-007",
@@ -22851,7 +22917,8 @@
           ],
           "correctAnswer": "singing",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「singing」が入ります。"
         },
         {
           "id": "fb-g3-u6-008",
@@ -22866,7 +22933,8 @@
           ],
           "correctAnswer": "dancing",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「dancing」が入ります。"
         },
         {
           "id": "fb-g3-u6-009",
@@ -22881,7 +22949,8 @@
           ],
           "correctAnswer": "reading",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「reading」が入ります。"
         },
         {
           "id": "fb-g3-u6-010",
@@ -22896,7 +22965,8 @@
           ],
           "correctAnswer": "talking",
           "difficulty": "intermediate",
-          "hint": "-ing形"
+          "hint": "-ing形",
+          "explanation": "空欄には「talking」が入ります。"
         },
         {
           "id": "fb-g3-u6-011",
@@ -22911,7 +22981,8 @@
           ],
           "correctAnswer": "broken",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「broken」が入ります。"
         },
         {
           "id": "fb-g3-u6-012",
@@ -22926,7 +22997,8 @@
           ],
           "correctAnswer": "baked",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「baked」が入ります。"
         },
         {
           "id": "fb-g3-u6-013",
@@ -22941,7 +23013,8 @@
           ],
           "correctAnswer": "stolen",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「stolen」が入ります。"
         },
         {
           "id": "fb-g3-u6-014",
@@ -22956,7 +23029,8 @@
           ],
           "correctAnswer": "written",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「written」が入ります。"
         },
         {
           "id": "fb-g3-u6-015",
@@ -22971,7 +23045,8 @@
           ],
           "correctAnswer": "closed",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「closed」が入ります。"
         },
         {
           "id": "fb-g3-u6-016",
@@ -22986,7 +23061,8 @@
           ],
           "correctAnswer": "lost",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「lost」が入ります。"
         },
         {
           "id": "fb-g3-u6-017",
@@ -23001,7 +23077,8 @@
           ],
           "correctAnswer": "washed",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「washed」が入ります。"
         },
         {
           "id": "fb-g3-u6-018",
@@ -23016,7 +23093,8 @@
           ],
           "correctAnswer": "chilled",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「chilled」が入ります。"
         },
         {
           "id": "fb-g3-u6-019",
@@ -23031,7 +23109,8 @@
           ],
           "correctAnswer": "taken",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「taken」が入ります。"
         },
         {
           "id": "fb-g3-u6-020",
@@ -23046,7 +23125,8 @@
           ],
           "correctAnswer": "used",
           "difficulty": "intermediate",
-          "hint": "p.p.形"
+          "hint": "p.p.形",
+          "explanation": "空欄には「used」が入ります。"
         }
       ],
       "sentenceOrdering": [
@@ -26271,7 +26351,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-002",
@@ -26286,7 +26367,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-003",
@@ -26301,7 +26383,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If she were"
+          "hint": "If she were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-004",
@@ -26316,7 +26399,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were you"
+          "hint": "If I were you",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-005",
@@ -26331,7 +26415,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-006",
@@ -26346,7 +26431,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-007",
@@ -26361,7 +26447,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If he had"
+          "hint": "If he had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-008",
@@ -26376,7 +26463,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-009",
@@ -26391,7 +26479,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If she were"
+          "hint": "If she were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-010",
@@ -26406,7 +26495,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-011",
@@ -26421,7 +26511,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If he were"
+          "hint": "If he were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-012",
@@ -26436,7 +26527,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-013",
@@ -26451,7 +26543,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-014",
@@ -26466,7 +26559,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If she were"
+          "hint": "If she were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-015",
@@ -26481,7 +26575,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-016",
@@ -26496,7 +26591,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If I were"
+          "hint": "If I were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-017",
@@ -26511,7 +26607,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-018",
@@ -26526,7 +26623,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If he were"
+          "hint": "If he were",
+          "explanation": "空欄には「were」が入ります。"
         },
         {
           "id": "fb-g3-u7-019",
@@ -26541,7 +26639,8 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "hint": "If I had"
+          "hint": "If I had",
+          "explanation": "空欄には「had」が入ります。"
         },
         {
           "id": "fb-g3-u7-020",
@@ -26556,7 +26655,8 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "hint": "If she were"
+          "hint": "If she were",
+          "explanation": "空欄には「were」が入ります。"
         }
       ],
       "sentenceOrdering": [
@@ -29781,7 +29881,8 @@
           ],
           "correctAnswer": "lives",
           "difficulty": "intermediate",
-          "hint": "where he lives"
+          "hint": "where he lives",
+          "explanation": "空欄には「lives」が入ります。"
         },
         {
           "id": "fb-g3-u8-002",
@@ -29796,7 +29897,8 @@
           ],
           "correctAnswer": "happened",
           "difficulty": "intermediate",
-          "hint": "what happened"
+          "hint": "what happened",
+          "explanation": "空欄には「happened」が入ります。"
         },
         {
           "id": "fb-g3-u8-003",
@@ -29811,7 +29913,8 @@
           ],
           "correctAnswer": "come",
           "difficulty": "intermediate",
-          "hint": "when he will come"
+          "hint": "when he will come",
+          "explanation": "空欄には「come」が入ります。"
         },
         {
           "id": "fb-g3-u8-004",
@@ -29826,7 +29929,8 @@
           ],
           "correctAnswer": "crying",
           "difficulty": "intermediate",
-          "hint": "why she is crying"
+          "hint": "why she is crying",
+          "explanation": "空欄には「crying」が入ります。"
         },
         {
           "id": "fb-g3-u8-005",
@@ -29841,7 +29945,8 @@
           ],
           "correctAnswer": "made",
           "difficulty": "intermediate",
-          "hint": "who made"
+          "hint": "who made",
+          "explanation": "空欄には「made」が入ります。"
         },
         {
           "id": "fb-g3-u8-006",
@@ -29856,7 +29961,8 @@
           ],
           "correctAnswer": "get",
           "difficulty": "intermediate",
-          "hint": "how to get"
+          "hint": "how to get",
+          "explanation": "空欄には「get」が入ります。"
         },
         {
           "id": "fb-g3-u8-007",
@@ -29871,7 +29977,8 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "hint": "which book is"
+          "hint": "which book is",
+          "explanation": "空欄には「is」が入ります。"
         },
         {
           "id": "fb-g3-u8-008",
@@ -29886,7 +29993,8 @@
           ],
           "correctAnswer": "opens",
           "difficulty": "intermediate",
-          "hint": "what time it opens"
+          "hint": "what time it opens",
+          "explanation": "空欄には「opens」が入ります。"
         },
         {
           "id": "fb-g3-u8-009",
@@ -29901,7 +30009,8 @@
           ],
           "correctAnswer": "meet",
           "difficulty": "intermediate",
-          "hint": "where we can meet"
+          "hint": "where we can meet",
+          "explanation": "空欄には「meet」が入ります。"
         },
         {
           "id": "fb-g3-u8-010",
@@ -29916,7 +30025,8 @@
           ],
           "correctAnswer": "angry",
           "difficulty": "intermediate",
-          "hint": "why he is angry"
+          "hint": "why he is angry",
+          "explanation": "空欄には「angry」が入ります。"
         },
         {
           "id": "fb-g3-u8-011",
@@ -29931,7 +30041,8 @@
           ],
           "correctAnswer": "leaves",
           "difficulty": "intermediate",
-          "hint": "when the bus leaves"
+          "hint": "when the bus leaves",
+          "explanation": "空欄には「leaves」が入ります。"
         },
         {
           "id": "fb-g3-u8-012",
@@ -29946,7 +30057,8 @@
           ],
           "correctAnswer": "win",
           "difficulty": "intermediate",
-          "hint": "who will win"
+          "hint": "who will win",
+          "explanation": "空欄には「win」が入ります。"
         },
         {
           "id": "fb-g3-u8-013",
@@ -29961,7 +30073,8 @@
           ],
           "correctAnswer": "solve",
           "difficulty": "intermediate",
-          "hint": "how to solve"
+          "hint": "how to solve",
+          "explanation": "空欄には「solve」が入ります。"
         },
         {
           "id": "fb-g3-u8-014",
@@ -29976,7 +30089,8 @@
           ],
           "correctAnswer": "need",
           "difficulty": "intermediate",
-          "hint": "what I need"
+          "hint": "what I need",
+          "explanation": "空欄には「need」が入ります。"
         },
         {
           "id": "fb-g3-u8-015",
@@ -29991,7 +30105,8 @@
           ],
           "correctAnswer": "put",
           "difficulty": "intermediate",
-          "hint": "where I put"
+          "hint": "where I put",
+          "explanation": "空欄には「put」が入ります。"
         },
         {
           "id": "fb-g3-u8-016",
@@ -30006,7 +30121,8 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "hint": "why it is"
+          "hint": "why it is",
+          "explanation": "空欄には「is」が入ります。"
         },
         {
           "id": "fb-g3-u8-017",
@@ -30021,7 +30137,8 @@
           ],
           "correctAnswer": "starts",
           "difficulty": "intermediate",
-          "hint": "when it starts"
+          "hint": "when it starts",
+          "explanation": "空欄には「starts」が入ります。"
         },
         {
           "id": "fb-g3-u8-018",
@@ -30036,7 +30153,8 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "hint": "which route is"
+          "hint": "which route is",
+          "explanation": "空欄には「is」が入ります。"
         },
         {
           "id": "fb-g3-u8-019",
@@ -30051,7 +30169,8 @@
           ],
           "correctAnswer": "makes",
           "difficulty": "intermediate",
-          "hint": "what makes"
+          "hint": "what makes",
+          "explanation": "空欄には「makes」が入ります。"
         },
         {
           "id": "fb-g3-u8-020",
@@ -30066,7 +30185,8 @@
           ],
           "correctAnswer": "succeeded",
           "difficulty": "intermediate",
-          "hint": "how he succeeded"
+          "hint": "how he succeeded",
+          "explanation": "空欄には「succeeded」が入ります。"
         }
       ],
       "sentenceOrdering": [
@@ -33291,7 +33411,8 @@
           ],
           "correctAnswer": "taller",
           "difficulty": "intermediate",
-          "hint": "taller than"
+          "hint": "taller than",
+          "explanation": "空欄には「taller」が入ります。"
         },
         {
           "id": "fb-g3-u9-002",
@@ -33306,7 +33427,8 @@
           ],
           "correctAnswer": "more interesting",
           "difficulty": "intermediate",
-          "hint": "more interesting"
+          "hint": "more interesting",
+          "explanation": "空欄には「more interesting」が入ります。"
         },
         {
           "id": "fb-g3-u9-003",
@@ -33321,7 +33443,8 @@
           ],
           "correctAnswer": "smartest",
           "difficulty": "intermediate",
-          "hint": "the smartest"
+          "hint": "the smartest",
+          "explanation": "空欄には「smartest」が入ります。"
         },
         {
           "id": "fb-g3-u9-004",
@@ -33336,7 +33459,8 @@
           ],
           "correctAnswer": "most beautiful",
           "difficulty": "intermediate",
-          "hint": "the most beautiful"
+          "hint": "the most beautiful",
+          "explanation": "空欄には「most beautiful」が入ります。"
         },
         {
           "id": "fb-g3-u9-005",
@@ -33351,7 +33475,8 @@
           ],
           "correctAnswer": "hotter",
           "difficulty": "intermediate",
-          "hint": "hotter than"
+          "hint": "hotter than",
+          "explanation": "空欄には「hotter」が入ります。"
         },
         {
           "id": "fb-g3-u9-006",
@@ -33366,7 +33491,8 @@
           ],
           "correctAnswer": "youngest",
           "difficulty": "intermediate",
-          "hint": "the youngest"
+          "hint": "the youngest",
+          "explanation": "空欄には「youngest」が入ります。"
         },
         {
           "id": "fb-g3-u9-007",
@@ -33381,7 +33507,8 @@
           ],
           "correctAnswer": "easier",
           "difficulty": "intermediate",
-          "hint": "easier than"
+          "hint": "easier than",
+          "explanation": "空欄には「easier」が入ります。"
         },
         {
           "id": "fb-g3-u9-008",
@@ -33396,7 +33523,8 @@
           ],
           "correctAnswer": "most popular",
           "difficulty": "intermediate",
-          "hint": "the most popular"
+          "hint": "the most popular",
+          "explanation": "空欄には「most popular」が入ります。"
         },
         {
           "id": "fb-g3-u9-009",
@@ -33411,7 +33539,8 @@
           ],
           "correctAnswer": "colder",
           "difficulty": "intermediate",
-          "hint": "colder than"
+          "hint": "colder than",
+          "explanation": "空欄には「colder」が入ります。"
         },
         {
           "id": "fb-g3-u9-010",
@@ -33426,7 +33555,8 @@
           ],
           "correctAnswer": "best",
           "difficulty": "intermediate",
-          "hint": "the best"
+          "hint": "the best",
+          "explanation": "空欄には「best」が入ります。"
         },
         {
           "id": "fb-g3-u9-011",
@@ -33441,7 +33571,8 @@
           ],
           "correctAnswer": "faster",
           "difficulty": "intermediate",
-          "hint": "faster than"
+          "hint": "faster than",
+          "explanation": "空欄には「faster」が入ります。"
         },
         {
           "id": "fb-g3-u9-012",
@@ -33456,7 +33587,8 @@
           ],
           "correctAnswer": "kindest",
           "difficulty": "intermediate",
-          "hint": "the kindest"
+          "hint": "the kindest",
+          "explanation": "空欄には「kindest」が入ります。"
         },
         {
           "id": "fb-g3-u9-013",
@@ -33471,7 +33603,8 @@
           ],
           "correctAnswer": "larger",
           "difficulty": "intermediate",
-          "hint": "larger than"
+          "hint": "larger than",
+          "explanation": "空欄には「larger」が入ります。"
         },
         {
           "id": "fb-g3-u9-014",
@@ -33486,7 +33619,8 @@
           ],
           "correctAnswer": "highest",
           "difficulty": "intermediate",
-          "hint": "the highest"
+          "hint": "the highest",
+          "explanation": "空欄には「highest」が入ります。"
         },
         {
           "id": "fb-g3-u9-015",
@@ -33501,7 +33635,8 @@
           ],
           "correctAnswer": "better",
           "difficulty": "intermediate",
-          "hint": "better than"
+          "hint": "better than",
+          "explanation": "空欄には「better」が入ります。"
         },
         {
           "id": "fb-g3-u9-016",
@@ -33516,7 +33651,8 @@
           ],
           "correctAnswer": "cheapest",
           "difficulty": "intermediate",
-          "hint": "the cheapest"
+          "hint": "the cheapest",
+          "explanation": "空欄には「cheapest」が入ります。"
         },
         {
           "id": "fb-g3-u9-017",
@@ -33531,7 +33667,8 @@
           ],
           "correctAnswer": "stronger",
           "difficulty": "intermediate",
-          "hint": "stronger than"
+          "hint": "stronger than",
+          "explanation": "空欄には「stronger」が入ります。"
         },
         {
           "id": "fb-g3-u9-018",
@@ -33546,7 +33683,8 @@
           ],
           "correctAnswer": "most important",
           "difficulty": "intermediate",
-          "hint": "the most important"
+          "hint": "the most important",
+          "explanation": "空欄には「most important」が入ります。"
         },
         {
           "id": "fb-g3-u9-019",
@@ -33561,7 +33699,8 @@
           ],
           "correctAnswer": "farther",
           "difficulty": "intermediate",
-          "hint": "farther than"
+          "hint": "farther than",
+          "explanation": "空欄には「farther」が入ります。"
         },
         {
           "id": "fb-g3-u9-020",
@@ -33576,7 +33715,8 @@
           ],
           "correctAnswer": "happiest",
           "difficulty": "intermediate",
-          "hint": "the happiest"
+          "hint": "the happiest",
+          "explanation": "空欄には「happiest」が入ります。"
         }
       ],
       "sentenceOrdering": [

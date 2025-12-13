@@ -1,6 +1,6 @@
 {
   "grade": 3,
-  "totalQuestions": 200,
+  "totalQuestions": 2200,
   "units": [
     {
       "unit": "Unit 0",
@@ -19,7 +19,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -35,7 +35,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -51,7 +51,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -67,7 +67,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -83,7 +83,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はareです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -99,7 +99,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -115,7 +115,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -131,7 +131,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -147,7 +147,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -163,7 +163,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwereです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -179,7 +179,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -195,7 +195,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -211,7 +211,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -227,7 +227,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwereです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -243,7 +243,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -259,7 +259,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はisです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -275,7 +275,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -291,7 +291,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はareです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -307,7 +307,7 @@
           ],
           "correctAnswer": "was",
           "difficulty": "intermediate",
-          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。",
+          "explanation": "受動態: be動詞 + 過去分詞。時制と主語の数に応じてbe動詞を選ぶ。 passiveの正答はwasです。",
           "hint": "受動態: be + p.p."
         },
         {
@@ -3561,7 +3561,7 @@
           ],
           "correctAnswer": "Have",
           "difficulty": "intermediate",
-          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。 present-perfectの正答はHaveです。",
           "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
@@ -3577,7 +3577,7 @@
           ],
           "correctAnswer": "Has",
           "difficulty": "intermediate",
-          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。 present-perfectの正答はHasです。",
           "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
@@ -3689,7 +3689,7 @@
           ],
           "correctAnswer": "Have",
           "difficulty": "intermediate",
-          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。",
+          "explanation": "現在完了: have/has + 過去分詞。経験・完了・継続を表す。 present-perfectの正答はHaveです。",
           "hint": "I/you/we/they→have, he/she/it→has"
         },
         {
@@ -10309,8 +10309,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-002",
@@ -10325,8 +10326,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-003",
@@ -10341,8 +10343,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-004",
@@ -10357,8 +10360,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-005",
@@ -10373,8 +10377,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-006",
@@ -10389,8 +10394,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-007",
@@ -10405,8 +10411,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-008",
@@ -10421,8 +10428,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-009",
@@ -10437,8 +10445,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-010",
@@ -10453,8 +10462,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-011",
@@ -10469,8 +10479,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-012",
@@ -10485,8 +10496,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-013",
@@ -10501,8 +10513,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-014",
@@ -10517,8 +10530,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-015",
@@ -10533,8 +10547,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-016",
@@ -10549,8 +10564,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-017",
@@ -10565,8 +10581,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-018",
@@ -10581,8 +10598,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-019",
@@ -10597,8 +10615,9 @@
           ],
           "correctAnswer": "that",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u3-020",
@@ -10613,8 +10632,9 @@
           ],
           "correctAnswer": "who",
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。",
-          "grammarPoint": "関係代名詞"
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 人を指すときは関係代名詞whoを使います。",
+          "grammarPoint": "関係代名詞",
+          "hint": "動詞の形に注目しましょう"
         }
       ],
       "fillInBlank": [
@@ -13739,8 +13759,9 @@
           ],
           "correctAnswer": "to play",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto playです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-002",
@@ -13755,8 +13776,9 @@
           ],
           "correctAnswer": "tell",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はtellです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-003",
@@ -13771,8 +13793,9 @@
           ],
           "correctAnswer": "to learn",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto learnです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-004",
@@ -13787,8 +13810,9 @@
           ],
           "correctAnswer": "to practice",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto practiceです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-005",
@@ -13803,8 +13827,9 @@
           ],
           "correctAnswer": "to be",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto beです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-006",
@@ -13819,8 +13844,9 @@
           ],
           "correctAnswer": "to become",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto becomeです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-007",
@@ -13835,8 +13861,9 @@
           ],
           "correctAnswer": "to leave",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto leaveです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-008",
@@ -13851,8 +13878,9 @@
           ],
           "correctAnswer": "to buy",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto buyです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-009",
@@ -13867,8 +13895,9 @@
           ],
           "correctAnswer": "to drink",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto drinkです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-010",
@@ -13883,8 +13912,9 @@
           ],
           "correctAnswer": "to solve",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto solveです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-011",
@@ -13899,8 +13929,9 @@
           ],
           "correctAnswer": "to play",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto playです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-012",
@@ -13915,8 +13946,9 @@
           ],
           "correctAnswer": "to write",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto writeです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-013",
@@ -13931,8 +13963,9 @@
           ],
           "correctAnswer": "to meet",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto meetです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-014",
@@ -13947,8 +13980,9 @@
           ],
           "correctAnswer": "to earn",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto earnです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-015",
@@ -13963,8 +13997,9 @@
           ],
           "correctAnswer": "to take",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto takeです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-016",
@@ -13979,8 +14014,9 @@
           ],
           "correctAnswer": "to stay",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto stayです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-017",
@@ -13995,8 +14031,9 @@
           ],
           "correctAnswer": "to see",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto seeです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-018",
@@ -14011,8 +14048,9 @@
           ],
           "correctAnswer": "to pass",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto passです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-019",
@@ -14027,8 +14065,9 @@
           ],
           "correctAnswer": "to know",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto knowです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u4-020",
@@ -14043,8 +14082,9 @@
           ],
           "correctAnswer": "to be",
           "difficulty": "intermediate",
-          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
-          "grammarPoint": "不定詞"
+          "explanation": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。 infinitiveの正答はto beです。",
+          "grammarPoint": "不定詞",
+          "hint": "動詞の形に注目しましょう"
         }
       ],
       "fillInBlank": [
@@ -17169,8 +17209,9 @@
           ],
           "correctAnswer": "Swimming",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はSwimmingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-002",
@@ -17185,8 +17226,9 @@
           ],
           "correctAnswer": "Running",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はRunningです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-003",
@@ -17201,8 +17243,9 @@
           ],
           "correctAnswer": "Dancing",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はDancingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-004",
@@ -17217,8 +17260,9 @@
           ],
           "correctAnswer": "Fishing",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はFishingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-005",
@@ -17233,8 +17277,9 @@
           ],
           "correctAnswer": "singing",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はsingingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-006",
@@ -17249,8 +17294,9 @@
           ],
           "correctAnswer": "painting",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はpaintingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-007",
@@ -17265,8 +17311,9 @@
           ],
           "correctAnswer": "traveling",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はtravelingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-008",
@@ -17281,8 +17328,9 @@
           ],
           "correctAnswer": "cooking",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はcookingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-009",
@@ -17297,8 +17345,9 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はplayingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-010",
@@ -17313,8 +17362,9 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はplayingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-011",
@@ -17329,8 +17379,9 @@
           ],
           "correctAnswer": "getting",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はgettingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-012",
@@ -17345,8 +17396,9 @@
           ],
           "correctAnswer": "solving",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はsolvingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-013",
@@ -17361,8 +17413,9 @@
           ],
           "correctAnswer": "Reading",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はReadingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-014",
@@ -17377,8 +17430,9 @@
           ],
           "correctAnswer": "Writing",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はWritingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-015",
@@ -17393,8 +17447,9 @@
           ],
           "correctAnswer": "Speaking",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はSpeakingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-016",
@@ -17409,8 +17464,9 @@
           ],
           "correctAnswer": "Listening",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はListeningです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-017",
@@ -17425,8 +17481,9 @@
           ],
           "correctAnswer": "Shopping",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はShoppingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-018",
@@ -17441,8 +17498,9 @@
           ],
           "correctAnswer": "Cleaning",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はCleaningです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-019",
@@ -17457,8 +17515,9 @@
           ],
           "correctAnswer": "Studying",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はStudyingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         },
         {
           "id": "vf-g3-u5-020",
@@ -17473,8 +17532,9 @@
           ],
           "correctAnswer": "Working",
           "difficulty": "intermediate",
-          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。",
-          "grammarPoint": "動名詞"
+          "explanation": "動名詞は動詞のing形で、主語や目的語として使います。 正答はWorkingです。",
+          "grammarPoint": "動名詞",
+          "hint": "動詞の形に注目しましょう"
         }
       ],
       "fillInBlank": [
@@ -20599,7 +20659,7 @@
           ],
           "correctAnswer": "running",
           "difficulty": "intermediate",
-          "explanation": "現在分詞で名詞を修飾",
+          "explanation": "現在分詞で名詞を修飾。正答はrunningです。",
           "hint": "-ing形"
         },
         {
@@ -20615,7 +20675,7 @@
           ],
           "correctAnswer": "crying",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はcryingです。",
           "hint": "-ing形"
         },
         {
@@ -20631,7 +20691,7 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はplayingです。",
           "hint": "-ing形"
         },
         {
@@ -20647,7 +20707,7 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はplayingです。",
           "hint": "-ing形"
         },
         {
@@ -20663,7 +20723,7 @@
           ],
           "correctAnswer": "sitting",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はsittingです。",
           "hint": "-ing形"
         },
         {
@@ -20679,7 +20739,7 @@
           ],
           "correctAnswer": "smiling",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はsmilingです。",
           "hint": "-ing形"
         },
         {
@@ -20695,7 +20755,7 @@
           ],
           "correctAnswer": "singing",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はsingingです。",
           "hint": "-ing形"
         },
         {
@@ -20711,7 +20771,7 @@
           ],
           "correctAnswer": "dancing",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はdancingです。",
           "hint": "-ing形"
         },
         {
@@ -20723,11 +20783,11 @@
             "reading",
             "read",
             "reads",
-            "reading"
+            "readinged"
           ],
           "correctAnswer": "reading",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はreadingです。",
           "hint": "-ing形"
         },
         {
@@ -20743,7 +20803,7 @@
           ],
           "correctAnswer": "talking",
           "difficulty": "intermediate",
-          "explanation": "現在分詞",
+          "explanation": "現在分詞。正答はtalkingです。",
           "hint": "-ing形"
         },
         {
@@ -20759,7 +20819,7 @@
           ],
           "correctAnswer": "broken",
           "difficulty": "intermediate",
-          "explanation": "過去分詞で名詞を修飾",
+          "explanation": "過去分詞で名詞を修飾 participleの正答はbrokenです。",
           "hint": "p.p.形"
         },
         {
@@ -20775,7 +20835,7 @@
           ],
           "correctAnswer": "baked",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はbakedです。",
           "hint": "p.p.形"
         },
         {
@@ -20791,7 +20851,7 @@
           ],
           "correctAnswer": "stolen",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はstolenです。",
           "hint": "p.p.形"
         },
         {
@@ -20807,7 +20867,7 @@
           ],
           "correctAnswer": "written",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はwrittenです。",
           "hint": "p.p.形"
         },
         {
@@ -20823,7 +20883,7 @@
           ],
           "correctAnswer": "closed",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はclosedです。",
           "hint": "p.p.形"
         },
         {
@@ -20839,7 +20899,7 @@
           ],
           "correctAnswer": "lost",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はlostです。",
           "hint": "p.p.形"
         },
         {
@@ -20855,7 +20915,7 @@
           ],
           "correctAnswer": "washed",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はwashedです。",
           "hint": "p.p.形"
         },
         {
@@ -20871,7 +20931,7 @@
           ],
           "correctAnswer": "chilled",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はchilledです。",
           "hint": "p.p.形"
         },
         {
@@ -20887,7 +20947,7 @@
           ],
           "correctAnswer": "taken",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はtakenです。",
           "hint": "p.p.形"
         },
         {
@@ -20903,7 +20963,7 @@
           ],
           "correctAnswer": "used",
           "difficulty": "intermediate",
-          "explanation": "過去分詞",
+          "explanation": "過去分詞 participleの正答はusedです。",
           "hint": "p.p.形"
         }
       ],
@@ -24045,7 +24105,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If I were"
         },
         {
@@ -24061,7 +24121,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If she were"
         },
         {
@@ -24077,7 +24137,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If I were you"
         },
         {
@@ -24093,7 +24153,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24109,7 +24169,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24125,7 +24185,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If he had"
         },
         {
@@ -24141,7 +24201,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If I were"
         },
         {
@@ -24157,7 +24217,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If she were"
         },
         {
@@ -24173,7 +24233,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24189,7 +24249,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If he were"
         },
         {
@@ -24205,7 +24265,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If I were"
         },
         {
@@ -24221,7 +24281,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24237,7 +24297,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If she were"
         },
         {
@@ -24253,7 +24313,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24269,7 +24329,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If I were"
         },
         {
@@ -24285,7 +24345,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24301,7 +24361,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If he were"
         },
         {
@@ -24317,7 +24377,7 @@
           ],
           "correctAnswer": "had",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はhadです。",
           "hint": "If I had"
         },
         {
@@ -24333,7 +24393,7 @@
           ],
           "correctAnswer": "were",
           "difficulty": "intermediate",
-          "explanation": "仮定法過去",
+          "explanation": "仮定法過去。正答はwereです。",
           "hint": "If she were"
         }
       ],
@@ -27459,7 +27519,7 @@
           ],
           "correctAnswer": "lives",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: where + S + V",
+          "explanation": "間接疑問文: where + S + V。正答はlivesです。",
           "hint": "where he lives"
         },
         {
@@ -27475,7 +27535,7 @@
           ],
           "correctAnswer": "happened",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: what + V",
+          "explanation": "間接疑問文: what + V。正答はhappenedです。",
           "hint": "what happened"
         },
         {
@@ -27491,7 +27551,7 @@
           ],
           "correctAnswer": "come",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: when + S + V",
+          "explanation": "間接疑問文: when + S + V。正答はcomeです。",
           "hint": "when he will come"
         },
         {
@@ -27507,7 +27567,7 @@
           ],
           "correctAnswer": "crying",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: why + S + V",
+          "explanation": "間接疑問文: why + S + V。正答はcryingです。",
           "hint": "why she is crying"
         },
         {
@@ -27523,7 +27583,7 @@
           ],
           "correctAnswer": "made",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: who + V",
+          "explanation": "間接疑問文: who + V。正答はmadeです。",
           "hint": "who made"
         },
         {
@@ -27539,7 +27599,7 @@
           ],
           "correctAnswer": "get",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: how to + V",
+          "explanation": "間接疑問文: how to + V。正答はgetです。",
           "hint": "how to get"
         },
         {
@@ -27555,7 +27615,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: which + N + V",
+          "explanation": "間接疑問文: which + N + V。正答はisです。",
           "hint": "which book is"
         },
         {
@@ -27571,7 +27631,7 @@
           ],
           "correctAnswer": "opens",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: what time + S + V",
+          "explanation": "間接疑問文: what time + S + V。正答はopensです。",
           "hint": "what time it opens"
         },
         {
@@ -27587,7 +27647,7 @@
           ],
           "correctAnswer": "meet",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: where + S + V",
+          "explanation": "間接疑問文: where + S + V。正答はmeetです。",
           "hint": "where we can meet"
         },
         {
@@ -27603,7 +27663,7 @@
           ],
           "correctAnswer": "angry",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: why + S + be",
+          "explanation": "間接疑問文: why + S + be。正答はangryです。",
           "hint": "why he is angry"
         },
         {
@@ -27619,7 +27679,7 @@
           ],
           "correctAnswer": "leaves",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: when + S + V",
+          "explanation": "間接疑問文: when + S + V。正答はleavesです。",
           "hint": "when the bus leaves"
         },
         {
@@ -27635,7 +27695,7 @@
           ],
           "correctAnswer": "win",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: who + V",
+          "explanation": "間接疑問文: who + V。正答はwinです。",
           "hint": "who will win"
         },
         {
@@ -27651,7 +27711,7 @@
           ],
           "correctAnswer": "solve",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: how to + V",
+          "explanation": "間接疑問文: how to + V。正答はsolveです。",
           "hint": "how to solve"
         },
         {
@@ -27667,7 +27727,7 @@
           ],
           "correctAnswer": "need",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: what + S + V",
+          "explanation": "間接疑問文: what + S + V。正答はneedです。",
           "hint": "what I need"
         },
         {
@@ -27683,7 +27743,7 @@
           ],
           "correctAnswer": "put",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: where + S + V",
+          "explanation": "間接疑問文: where + S + V。正答はputです。",
           "hint": "where I put"
         },
         {
@@ -27699,7 +27759,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: why + S + V",
+          "explanation": "間接疑問文: why + S + V。正答はisです。",
           "hint": "why it is"
         },
         {
@@ -27715,7 +27775,7 @@
           ],
           "correctAnswer": "starts",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: when + S + V",
+          "explanation": "間接疑問文: when + S + V。正答はstartsです。",
           "hint": "when it starts"
         },
         {
@@ -27731,7 +27791,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: which + N + V",
+          "explanation": "間接疑問文: which + N + V。正答はisです。",
           "hint": "which route is"
         },
         {
@@ -27747,7 +27807,7 @@
           ],
           "correctAnswer": "makes",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: what + V",
+          "explanation": "間接疑問文: what + V。正答はmakesです。",
           "hint": "what makes"
         },
         {
@@ -27763,7 +27823,7 @@
           ],
           "correctAnswer": "succeeded",
           "difficulty": "intermediate",
-          "explanation": "間接疑問文: how + S + V",
+          "explanation": "間接疑問文: how + S + V。正答はsucceededです。",
           "hint": "how he succeeded"
         }
       ],
@@ -30889,7 +30949,7 @@
           ],
           "correctAnswer": "taller",
           "difficulty": "intermediate",
-          "explanation": "比較級: -er",
+          "explanation": "比較級: -er 正答はtallerです。",
           "hint": "taller than"
         },
         {
@@ -30905,7 +30965,7 @@
           ],
           "correctAnswer": "more interesting",
           "difficulty": "intermediate",
-          "explanation": "比較級: more + 形容詞",
+          "explanation": "比較級: more + 形容詞 この問題ではmore interestingが正答です。",
           "hint": "more interesting"
         },
         {
@@ -30921,7 +30981,7 @@
           ],
           "correctAnswer": "smartest",
           "difficulty": "intermediate",
-          "explanation": "最上級: the -est",
+          "explanation": "最上級: the -est 正答はsmartestです。",
           "hint": "the smartest"
         },
         {
@@ -30937,7 +30997,7 @@
           ],
           "correctAnswer": "most beautiful",
           "difficulty": "intermediate",
-          "explanation": "最上級: the most + 形容詞",
+          "explanation": "最上級: the most + 形容詞 この問題ではmost beautifulが正答です。",
           "hint": "the most beautiful"
         },
         {
@@ -30953,7 +31013,7 @@
           ],
           "correctAnswer": "hotter",
           "difficulty": "intermediate",
-          "explanation": "比較級: -er (子音字重複)",
+          "explanation": "比較級: -er (子音字重複) 正答はhotterです。",
           "hint": "hotter than"
         },
         {
@@ -30969,7 +31029,7 @@
           ],
           "correctAnswer": "youngest",
           "difficulty": "intermediate",
-          "explanation": "最上級: the -est",
+          "explanation": "最上級: the -est 正答はyoungestです。",
           "hint": "the youngest"
         },
         {
@@ -30985,7 +31045,7 @@
           ],
           "correctAnswer": "easier",
           "difficulty": "intermediate",
-          "explanation": "比較級: -ier (y→i)",
+          "explanation": "比較級: -ier (y→i) 正答はeasierです。",
           "hint": "easier than"
         },
         {
@@ -31001,7 +31061,7 @@
           ],
           "correctAnswer": "most popular",
           "difficulty": "intermediate",
-          "explanation": "最上級: the most + 形容詞",
+          "explanation": "最上級: the most + 形容詞 この問題ではmost popularが正答です。",
           "hint": "the most popular"
         },
         {
@@ -31017,7 +31077,7 @@
           ],
           "correctAnswer": "colder",
           "difficulty": "intermediate",
-          "explanation": "比較級: -er",
+          "explanation": "比較級: -er 正答はcolderです。",
           "hint": "colder than"
         },
         {
@@ -31049,7 +31109,7 @@
           ],
           "correctAnswer": "faster",
           "difficulty": "intermediate",
-          "explanation": "比較級: -er",
+          "explanation": "比較級: -er 正答はfasterです。",
           "hint": "faster than"
         },
         {
@@ -31065,7 +31125,7 @@
           ],
           "correctAnswer": "kindest",
           "difficulty": "intermediate",
-          "explanation": "最上級: the -est",
+          "explanation": "最上級: the -est 正答はkindestです。",
           "hint": "the kindest"
         },
         {
@@ -31081,7 +31141,7 @@
           ],
           "correctAnswer": "larger",
           "difficulty": "intermediate",
-          "explanation": "比較級: -er",
+          "explanation": "比較級: -er 正答はlargerです。",
           "hint": "larger than"
         },
         {
@@ -31097,7 +31157,7 @@
           ],
           "correctAnswer": "highest",
           "difficulty": "intermediate",
-          "explanation": "最上級: the -est",
+          "explanation": "最上級: the -est 正答はhighestです。",
           "hint": "the highest"
         },
         {
@@ -31129,7 +31189,7 @@
           ],
           "correctAnswer": "cheapest",
           "difficulty": "intermediate",
-          "explanation": "最上級: the -est",
+          "explanation": "最上級: the -est 正答はcheapestです。",
           "hint": "the cheapest"
         },
         {
@@ -31145,7 +31205,7 @@
           ],
           "correctAnswer": "stronger",
           "difficulty": "intermediate",
-          "explanation": "比較級: -er",
+          "explanation": "比較級: -er 正答はstrongerです。",
           "hint": "stronger than"
         },
         {
@@ -31161,7 +31221,7 @@
           ],
           "correctAnswer": "most important",
           "difficulty": "intermediate",
-          "explanation": "最上級: the most + 形容詞",
+          "explanation": "最上級: the most + 形容詞 この問題ではmost importantが正答です。",
           "hint": "the most important"
         },
         {
@@ -31193,7 +31253,7 @@
           ],
           "correctAnswer": "happiest",
           "difficulty": "intermediate",
-          "explanation": "最上級: the -iest (y→i)",
+          "explanation": "最上級: the -iest (y→i) 正答はhappiestです。",
           "hint": "the happiest"
         }
       ],

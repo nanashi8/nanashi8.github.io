@@ -1,6 +1,6 @@
 {
   "grade": 3,
-  "totalQuestions": 200,
+  "totalQuestions": 2200,
   "units": [
     {
       "unit": "Unit 0",
@@ -13542,7 +13542,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "I have a friend who lives in Tokyo."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-002",
@@ -13562,7 +13566,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "I have a friend who lives in Kyoto."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-003",
@@ -13582,7 +13590,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "She has a brother who works in Osaka."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-004",
@@ -13602,7 +13614,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "This is the book that I bought yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-005",
@@ -13623,7 +13639,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "This is the book that I bought last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-006",
@@ -13644,7 +13664,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "That is the letter that he wrote last month."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-007",
@@ -13663,7 +13687,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "She is a woman who speaks English."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-008",
@@ -13682,7 +13710,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "He is a man who speaks Japanese."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-009",
@@ -13701,7 +13733,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "I know a teacher who speaks French."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-010",
@@ -13721,7 +13757,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "This is a famous building that everyone knows."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-011",
@@ -13744,7 +13784,11 @@
           "wordCount": 11,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "This is an old building that was built 100 years ago."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-012",
@@ -13765,7 +13809,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "That is a new building that was just completed."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-013",
@@ -13785,7 +13833,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The book that I read was very interesting."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-014",
@@ -13804,7 +13856,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The movie that she watched was touching."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-015",
@@ -13823,7 +13879,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The place that we visited was beautiful."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-016",
@@ -13842,7 +13902,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The teacher who teaches English is kind."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-017",
@@ -13864,7 +13928,11 @@
           "wordCount": 10,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The girl who is playing the piano is my sister."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-018",
@@ -13887,7 +13955,11 @@
           "wordCount": 11,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The dog that is running in the park is my pet."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-019",
@@ -13908,7 +13980,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The book that is on the desk is mine."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u3-020",
@@ -13931,7 +14007,11 @@
           "wordCount": 11,
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
-          "hint": "関係代名詞を使って2つの文をつなぎます。"
+          "hint": "関係代名詞を使って2つの文をつなぎます。",
+          "choices": [
+            "The man who is standing near the window is my father."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -17060,7 +17140,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "To to play the piano is difficult."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-002",
@@ -17078,7 +17162,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "To tell a lie is bad."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-003",
@@ -17098,7 +17186,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "To to learn a foreign language is fun."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-004",
@@ -17117,7 +17209,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "To to practice every day is important."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-005",
@@ -17136,7 +17232,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I want to to be a doctor."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-006",
@@ -17155,7 +17255,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "She decided to to become a singer."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-007",
@@ -17173,7 +17277,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "We plan to to leave tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-008",
@@ -17193,7 +17301,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "He hopes to to buy a new car."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-009",
@@ -17211,7 +17323,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I want something to to drink."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-010",
@@ -17230,7 +17346,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "This is a problem to to solve."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-011",
@@ -17249,7 +17369,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I have no time to to play."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-012",
@@ -17268,7 +17392,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I need paper to to write on."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-013",
@@ -17290,7 +17418,11 @@
           "wordCount": 10,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I went to the station to to meet my friend."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-014",
@@ -17309,7 +17441,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "She works part-time to to earn money."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-015",
@@ -17329,7 +17465,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I bought a camera to to take pictures."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-016",
@@ -17349,7 +17489,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "He runs every day to to stay healthy."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-017",
@@ -17368,7 +17512,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "I am glad to to see you."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-018",
@@ -17388,7 +17536,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "She was excited to to pass the exam."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-019",
@@ -17408,7 +17560,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "We are proud to to know your success."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u4-020",
@@ -17427,7 +17583,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。"
+          "hint": "不定詞は to + 動詞原形で、名詞的・形容詞的・副詞的用法があります。",
+          "choices": [
+            "He was honored to to be invited."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -20553,7 +20713,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Swimming is good exercise."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-002",
@@ -20570,7 +20734,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Running is good for health."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-003",
@@ -20587,7 +20755,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Dancing is an enjoyable activity."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-004",
@@ -20603,7 +20775,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Fishing is my hobby."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-005",
@@ -20618,7 +20794,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "I like singing."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-006",
@@ -20633,7 +20813,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "She likes painting."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-007",
@@ -20648,7 +20832,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "We like traveling."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-008",
@@ -20663,7 +20851,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "He enjoys cooking."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-009",
@@ -20681,7 +20873,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "He is good at playing soccer."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-010",
@@ -20700,7 +20896,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "She is good at playing the piano."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-011",
@@ -20719,7 +20919,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "I am good at getting up early."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-012",
@@ -20737,7 +20941,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "They are good at solving problems."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-013",
@@ -20753,7 +20961,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Reading helps increase knowledge."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-014",
@@ -20769,7 +20981,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Writing helps organize thoughts."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-015",
@@ -20786,7 +21002,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Speaking is essential for communication."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-016",
@@ -20805,7 +21025,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Listening is the first step to understanding."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-017",
@@ -20821,7 +21045,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Shopping is her hobby."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-018",
@@ -20838,7 +21066,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Cleaning is a daily task."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-019",
@@ -20856,7 +21088,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Studying is the key to success."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u5-020",
@@ -20873,7 +21109,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "動名詞",
-          "hint": "動名詞は動詞のing形で、主語や目的語として使います。"
+          "hint": "動名詞は動詞のing形で、主語や目的語として使います。",
+          "choices": [
+            "Working is part of life."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -24003,7 +24243,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The boy running over there is my brother"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-002",
@@ -24020,7 +24264,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The baby crying is hungry"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-003",
@@ -24040,7 +24288,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The children playing in the park are energetic"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-004",
@@ -24060,7 +24312,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The woman playing the piano is my teacher"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-005",
@@ -24081,7 +24337,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The man sitting on the chair is my father"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-006",
@@ -24099,7 +24359,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The girl smiling is very cute"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-007",
@@ -24116,7 +24380,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The people singing look happy"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-008",
@@ -24134,7 +24402,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The students dancing are enjoying themselves"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-009",
@@ -24153,7 +24425,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The boy reading a book is concentrating"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-010",
@@ -24170,7 +24446,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "現在分詞"
+          "hint": "現在分詞",
+          "choices": [
+            "The women talking are friends"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-011",
@@ -24190,7 +24470,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The broken window has not been repaired yet"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-012",
@@ -24207,7 +24491,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The baked bread is delicious"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-013",
@@ -24224,7 +24512,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The stolen bicycle was found"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-014",
@@ -24241,7 +24533,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The written letter was touching"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-015",
@@ -24258,7 +24554,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The closed door won't open"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-016",
@@ -24276,7 +24576,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The lost time will not return"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-017",
@@ -24293,7 +24597,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The washed clothes are clean"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-018",
@@ -24310,7 +24618,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The chilled drink is tasty"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-019",
@@ -24327,7 +24639,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The taken photo is beautiful"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u6-020",
@@ -24344,7 +24660,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "分詞",
-          "hint": "過去分詞"
+          "hint": "過去分詞",
+          "choices": [
+            "The used tools are old"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -27477,7 +27797,11 @@
           "wordCount": 11,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were a bird I would fly around the world"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-002",
@@ -27499,7 +27823,11 @@
           "wordCount": 10,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were rich I would buy a big house"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-003",
@@ -27519,7 +27847,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were you"
+          "hint": "If I were you",
+          "choices": [
+            "If I were you I wouldn't do that"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-004",
@@ -27538,7 +27870,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I had"
+          "hint": "If I had",
+          "choices": [
+            "If I had time I would travel"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-005",
@@ -27561,7 +27897,11 @@
           "wordCount": 11,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I had"
+          "hint": "If I had",
+          "choices": [
+            "If I had a car I would go for a drive"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-006",
@@ -27580,7 +27920,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example6 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-007",
@@ -27599,7 +27943,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example7 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-008",
@@ -27618,7 +27966,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example8 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-009",
@@ -27637,7 +27989,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example9 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-010",
@@ -27656,7 +28012,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example10 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-011",
@@ -27675,7 +28035,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example11 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-012",
@@ -27694,7 +28058,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example12 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-013",
@@ -27713,7 +28081,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example13 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-014",
@@ -27732,7 +28104,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example14 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-015",
@@ -27751,7 +28127,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example15 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-016",
@@ -27770,7 +28150,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example16 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-017",
@@ -27789,7 +28173,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example17 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-018",
@@ -27808,7 +28196,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example18 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-019",
@@ -27827,7 +28219,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example19 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u7-020",
@@ -27846,7 +28242,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "仮定法",
-          "hint": "If I were"
+          "hint": "If I were",
+          "choices": [
+            "If I were example20 I would succeed"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -30974,7 +31374,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "where he lives"
+          "hint": "where he lives",
+          "choices": [
+            "I don't know where he lives"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-002",
@@ -30990,7 +31394,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "what happened"
+          "hint": "what happened",
+          "choices": [
+            "She knows what happened"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-003",
@@ -31009,7 +31417,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "when he will come"
+          "hint": "when he will come",
+          "choices": [
+            "I don't know when he will come"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-004",
@@ -31027,7 +31439,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "why she is crying"
+          "hint": "why she is crying",
+          "choices": [
+            "He knows why she is crying"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-005",
@@ -31044,7 +31460,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "who made"
+          "hint": "who made",
+          "choices": [
+            "I know who made this"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-006",
@@ -31063,7 +31483,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "how to get"
+          "hint": "how to get",
+          "choices": [
+            "She doesn't know how to get there"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-007",
@@ -31083,7 +31507,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "which book is"
+          "hint": "which book is",
+          "choices": [
+            "I don't know which book is the best"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-008",
@@ -31102,7 +31530,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "what time"
+          "hint": "what time",
+          "choices": [
+            "He knows what time the store opens"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-009",
@@ -31122,7 +31554,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "where we can"
+          "hint": "where we can",
+          "choices": [
+            "We don't know where we can meet her"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-010",
@@ -31140,7 +31576,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "why he is"
+          "hint": "why he is",
+          "choices": [
+            "She understands why he is angry"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-011",
@@ -31160,7 +31600,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "when the bus leaves"
+          "hint": "when the bus leaves",
+          "choices": [
+            "I want to know when the bus leaves"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-012",
@@ -31178,7 +31622,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "who will win"
+          "hint": "who will win",
+          "choices": [
+            "He can predict who will win"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-013",
@@ -31197,7 +31645,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "how to solve"
+          "hint": "how to solve",
+          "choices": [
+            "We discussed how to solve the problem"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-014",
@@ -31215,7 +31667,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "what I need"
+          "hint": "what I need",
+          "choices": [
+            "She told me what I need"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-015",
@@ -31234,7 +31690,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "where I put"
+          "hint": "where I put",
+          "choices": [
+            "I forgot where I put the key"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-016",
@@ -31252,7 +31712,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "why it is"
+          "hint": "why it is",
+          "choices": [
+            "He explained why it is important"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-017",
@@ -31270,7 +31734,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "when it starts"
+          "hint": "when it starts",
+          "choices": [
+            "We checked when the meeting starts"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-018",
@@ -31289,7 +31757,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "which route is"
+          "hint": "which route is",
+          "choices": [
+            "She knows which route is the shortest"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-019",
@@ -31307,7 +31779,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "what makes"
+          "hint": "what makes",
+          "choices": [
+            "I know what makes him happy"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u8-020",
@@ -31325,7 +31801,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "間接疑問文",
-          "hint": "how he succeeded"
+          "hint": "how he succeeded",
+          "choices": [
+            "He told us how he succeeded"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -34452,7 +34932,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "He is taller than me"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-002",
@@ -34472,7 +34956,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "This book is more interesting than that one"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-003",
@@ -34491,7 +34979,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "She is the smartest in the class"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-004",
@@ -34512,7 +35004,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "This is the most beautiful place in the world"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-005",
@@ -34529,7 +35025,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "Summer is hotter than winter"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-006",
@@ -34548,7 +35048,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "He is the youngest in his family"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-007",
@@ -34567,7 +35071,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "This problem is easier than that one"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-008",
@@ -34587,7 +35095,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "She is the most popular in the school"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-009",
@@ -34604,7 +35116,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "Today is colder than yesterday"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-010",
@@ -34624,7 +35140,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "This is the best movie I've ever seen"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-011",
@@ -34642,7 +35162,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "His car is faster than mine"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-012",
@@ -34661,7 +35185,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "She is the kindest of the three"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-013",
@@ -34680,7 +35208,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "This room is larger than that one"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-014",
@@ -34700,7 +35232,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "Mt Fuji is the highest mountain in Japan"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-015",
@@ -34718,7 +35254,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "She sings better than I do"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-016",
@@ -34738,7 +35278,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "This is the cheapest item in the store"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-017",
@@ -34756,7 +35300,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "He is stronger than his brother"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-018",
@@ -34776,7 +35324,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "This is the most important exam this year"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-019",
@@ -34794,7 +35346,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級"
+          "hint": "比較級",
+          "choices": [
+            "His house is farther than mine"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g3-u9-020",
@@ -34813,7 +35369,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "最上級"
+          "hint": "最上級",
+          "choices": [
+            "She is the happiest person I know"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     }
