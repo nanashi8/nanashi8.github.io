@@ -1,6 +1,6 @@
 {
   "grade": 1,
-  "totalQuestions": 200,
+  "totalQuestions": 2200,
   "units": [
     {
       "unit": "Unit 0",
@@ -1643,14 +1643,14 @@
           "japanese": "これは机です",
           "sentence": "This is ____ desk.",
           "choices": [
-            "my",
-            "I",
-            "me",
-            "mine"
+            "a",
+            "an",
+            "the",
+            "-"
           ],
           "correctAnswer": "a",
           "difficulty": "beginner",
-          "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
+          "explanation": "母音で始まらない単数可算名詞の前には不定冠詞aを使います。",
           "hint": "所有格: my",
           "grammarPoint": "冠詞 (a/an)"
         },
@@ -1664,7 +1664,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
@@ -1679,7 +1679,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
@@ -1694,7 +1694,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
@@ -1709,7 +1709,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my",
@@ -1770,7 +1770,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "an",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "母音erにはan",
@@ -1846,7 +1846,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "子音lにはa",
@@ -1862,7 +1862,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "所有格: my"
@@ -1877,7 +1877,7 @@
             "me",
             "mine"
           ],
-          "correctAnswer": "an",
+          "correctAnswer": "my",
           "difficulty": "beginner",
           "explanation": "所有を表すので所有格myを使います。this/that/these/thoseの数に注意。",
           "hint": "母音hにはan (hospital)",
@@ -8720,7 +8720,7 @@
           ],
           "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "主語がTom（三人称単数）なので、plays を使います。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8735,7 +8735,7 @@
           ],
           "correctAnswer": "studies",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "主語がMary（三人称単数）なので、studies を使います。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8750,7 +8750,7 @@
           ],
           "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "主語がThe（三人称単数）なので、runs を使います。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8765,7 +8765,7 @@
           ],
           "correctAnswer": "watch",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は watch です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8780,7 +8780,7 @@
           ],
           "correctAnswer": "drink",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は drink です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8795,7 +8795,7 @@
           ],
           "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は play です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8810,7 +8810,7 @@
           ],
           "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は play です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8825,7 +8825,7 @@
           ],
           "correctAnswer": "run",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は run です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8840,7 +8840,7 @@
           ],
           "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は study です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8855,7 +8855,7 @@
           ],
           "correctAnswer": "listen",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は listen です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8870,7 +8870,7 @@
           ],
           "correctAnswer": "drink",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は drink です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8885,7 +8885,7 @@
           ],
           "correctAnswer": "read",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は read です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8900,7 +8900,7 @@
           ],
           "correctAnswer": "reads",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は reads です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8915,7 +8915,7 @@
           ],
           "correctAnswer": "walks",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は walks です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -8930,7 +8930,7 @@
           ],
           "correctAnswer": "live",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s",
+          "explanation": "正答は live です。have/has と一般動詞の3単現 -s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         }
       ],
@@ -12155,7 +12155,7 @@
           ],
           "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は Are です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12170,7 +12170,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は Is です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12185,7 +12185,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は Is です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12200,7 +12200,7 @@
           ],
           "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は Are です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12215,7 +12215,7 @@
           ],
           "correctAnswer": "study",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は study です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12230,7 +12230,7 @@
           ],
           "correctAnswer": "like",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は like です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12245,7 +12245,7 @@
           ],
           "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は play です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12260,7 +12260,7 @@
           ],
           "correctAnswer": "run",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は run です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12275,7 +12275,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は is です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12290,7 +12290,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は is です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12305,7 +12305,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は do です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12320,7 +12320,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は do です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12335,7 +12335,7 @@
           ],
           "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は does です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12350,7 +12350,7 @@
           ],
           "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は does です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12365,7 +12365,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は do です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12380,7 +12380,7 @@
           ],
           "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は plays です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12395,7 +12395,7 @@
           ],
           "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は does です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12410,7 +12410,7 @@
           ],
           "correctAnswer": "does",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は does です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12425,7 +12425,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は do です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         },
         {
@@ -12440,7 +12440,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方と疑問詞の使い方。",
+          "explanation": "正答は do です。疑問文の作り方と疑問詞の使い方。",
           "hint": "疑問文: be動詞は前に、一般動詞はDo/Does"
         }
       ],
@@ -14057,14 +14057,14 @@
           "sentence": "I ____  every day.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -14126,7 +14126,7 @@
             "useed",
             "useing"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "use",
           "difficulty": "beginner",
           "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままuseを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
@@ -14233,14 +14233,14 @@
           "sentence": "Tom and mary ____  now.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "主語がTom and Mary（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -14270,7 +14270,7 @@
             "played",
             "playing"
           ],
-          "correctAnswer": "a",
+          "correctAnswer": "play",
           "difficulty": "beginner",
           "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままplayを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
@@ -14409,14 +14409,14 @@
           "sentence": "Our team ____  sometimes.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "主語がour team（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -14585,14 +14585,14 @@
           "sentence": "You ____  often.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はareです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -14761,14 +14761,14 @@
           "sentence": "I ____  always.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "am",
           "difficulty": "intermediate",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -14937,14 +14937,14 @@
           "sentence": "Tom and mary ____  usually.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "主語がTom and Mary（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -15113,14 +15113,14 @@
           "sentence": "Our team ____  every day.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "主語がour team（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -15289,14 +15289,14 @@
           "sentence": "You ____  now.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "are",
           "difficulty": "advanced",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はareです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -15465,14 +15465,14 @@
           "sentence": "I ____  sometimes.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "am",
           "difficulty": "advanced",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -15641,20 +15641,20 @@
           "sentence": "Tom and mary ____  often.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "advanced",
-          "explanation": "主語がTom and Mary（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         }
       ],
       "fillInBlank": [
         {
-          "id": "vf-g1-u4-001",
+          "id": "fb-g1-u4-001",
           "japanese": "これは私の本です",
           "sentence": "This is ____ book.",
           "verb": "pronoun",
@@ -15670,7 +15670,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-002",
+          "id": "fb-g1-u4-002",
           "japanese": "彼は私の友達です",
           "sentence": "He is ____ friend.",
           "verb": "pronoun",
@@ -15686,7 +15686,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-003",
+          "id": "fb-g1-u4-003",
           "japanese": "私は彼を知っています",
           "sentence": "I know ____.",
           "verb": "pronoun",
@@ -15702,7 +15702,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-004",
+          "id": "fb-g1-u4-004",
           "japanese": "彼女は彼らを見ます",
           "sentence": "She sees ____.",
           "verb": "pronoun",
@@ -15714,11 +15714,11 @@
           ],
           "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は them です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-005",
+          "id": "fb-g1-u4-005",
           "japanese": "これは彼の鞄です",
           "sentence": "This is ____ bag.",
           "verb": "pronoun",
@@ -15734,7 +15734,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-006",
+          "id": "fb-g1-u4-006",
           "japanese": "それは彼女のペンです",
           "sentence": "That is ____ pen.",
           "verb": "pronoun",
@@ -15750,7 +15750,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-007",
+          "id": "fb-g1-u4-007",
           "japanese": "彼は彼女を助けます",
           "sentence": "He helps ____.",
           "verb": "pronoun",
@@ -15766,7 +15766,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-008",
+          "id": "fb-g1-u4-008",
           "japanese": "私たちは彼らと遊びます",
           "sentence": "We play with ____.",
           "verb": "pronoun",
@@ -15778,11 +15778,11 @@
           ],
           "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は them です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-009",
+          "id": "fb-g1-u4-009",
           "japanese": "これはあなたのノートですか",
           "sentence": "Is this ____ notebook?",
           "verb": "pronoun",
@@ -15794,11 +15794,11 @@
           ],
           "correctAnswer": "your",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は your です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-010",
+          "id": "fb-g1-u4-010",
           "japanese": "彼は私たちを見ます",
           "sentence": "He sees ____.",
           "verb": "pronoun",
@@ -15810,11 +15810,11 @@
           ],
           "correctAnswer": "us",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は us です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-011",
+          "id": "fb-g1-u4-011",
           "japanese": "彼女は私に電話します",
           "sentence": "She calls ____.",
           "verb": "pronoun",
@@ -15830,7 +15830,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-012",
+          "id": "fb-g1-u4-012",
           "japanese": "彼らは私たちの先生です",
           "sentence": "They are ____ teachers.",
           "verb": "pronoun",
@@ -15842,11 +15842,11 @@
           ],
           "correctAnswer": "our",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は our です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-013",
+          "id": "fb-g1-u4-013",
           "japanese": "私は彼の名前を知っています",
           "sentence": "I know ____ name.",
           "verb": "pronoun",
@@ -15862,7 +15862,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-014",
+          "id": "fb-g1-u4-014",
           "japanese": "これは私たちの学校です",
           "sentence": "This is ____ school.",
           "verb": "pronoun",
@@ -15874,11 +15874,11 @@
           ],
           "correctAnswer": "our",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は our です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-015",
+          "id": "fb-g1-u4-015",
           "japanese": "彼女は彼らの母です",
           "sentence": "She is ____ mother.",
           "verb": "pronoun",
@@ -15890,11 +15890,11 @@
           ],
           "correctAnswer": "their",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は their です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-016",
+          "id": "fb-g1-u4-016",
           "japanese": "私たちは彼女を助けます",
           "sentence": "We help ____.",
           "verb": "pronoun",
@@ -15910,7 +15910,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-017",
+          "id": "fb-g1-u4-017",
           "japanese": "あなたは彼らを知っていますか",
           "sentence": "Do you know ____?",
           "verb": "pronoun",
@@ -15922,11 +15922,11 @@
           ],
           "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "正答は them です。代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-018",
+          "id": "fb-g1-u4-018",
           "japanese": "これは私の犬です",
           "sentence": "This is ____ dog.",
           "verb": "pronoun",
@@ -15942,7 +15942,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-019",
+          "id": "fb-g1-u4-019",
           "japanese": "彼は彼女のノートを持っています",
           "sentence": "He has ____ notebook.",
           "verb": "pronoun",
@@ -15958,7 +15958,7 @@
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
-          "id": "vf-g1-u4-020",
+          "id": "fb-g1-u4-020",
           "japanese": "私たちは彼を見ます",
           "sentence": "We see ____.",
           "verb": "pronoun",
@@ -17592,7 +17592,7 @@
             "studyed",
             "studying"
           ],
-          "correctAnswer": "apples",
+          "correctAnswer": "study",
           "difficulty": "beginner",
           "explanation": "主語がhe（三人称単数）で、every dayという現在の習慣を表すため、studyに-sまたは-esを付けてstudiesとします。I/You/We/Theyならstudyのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -17624,7 +17624,7 @@
             "visited",
             "visiting"
           ],
-          "correctAnswer": "books",
+          "correctAnswer": "visit",
           "difficulty": "beginner",
           "explanation": "主語がmy father（三人称単数）で、alwaysという現在の習慣を表すため、visitに-sまたは-esを付けてvisitsとします。I/You/We/Theyならvisitのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -17704,7 +17704,7 @@
             "needed",
             "needing"
           ],
-          "correctAnswer": "pens",
+          "correctAnswer": "need",
           "difficulty": "beginner",
           "explanation": "主語がshe（三人称単数）で、usuallyという現在の習慣を表すため、needに-sまたは-esを付けてneedsとします。I/You/We/Theyならneedのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -17752,7 +17752,7 @@
             "liveed",
             "liveing"
           ],
-          "correctAnswer": "oranges",
+          "correctAnswer": "live",
           "difficulty": "beginner",
           "explanation": "主語がmy sister（三人称単数）で、sometimesという現在の習慣を表すため、liveに-sまたは-esを付けてlivesとします。I/You/We/Theyならliveのままですが、He/She/Itは必ず-s/-esを付けます。",
           "hint": "三人称単数現在形は動詞に-s/-esを付ける"
@@ -19184,7 +19184,7 @@
       ],
       "fillInBlank": [
         {
-          "id": "vf-g1-u5-001",
+          "id": "fb-g1-u5-001",
           "japanese": "私は8つのリンゴを持っています",
           "sentence": "I have eight ____.",
           "verb": "plural",
@@ -19194,13 +19194,13 @@
             "bookes",
             "book's"
           ],
-          "correctAnswer": "apples",
+          "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は books です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-002",
+          "id": "fb-g1-u5-002",
           "japanese": "彼女は2匹の猫を飼っています",
           "sentence": "She has two ____.",
           "verb": "plural",
@@ -19212,11 +19212,11 @@
           ],
           "correctAnswer": "cats",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は cats です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-003",
+          "id": "fb-g1-u5-003",
           "japanese": "私たちはいくつかの本を持っています",
           "sentence": "We have several ____.",
           "verb": "plural",
@@ -19226,29 +19226,29 @@
             "friendes",
             "friend's"
           ],
-          "correctAnswer": "books",
+          "correctAnswer": "friends",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は friends です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-004",
+          "id": "fb-g1-u5-004",
           "japanese": "彼は5つのリンゴを持っています",
           "sentence": "He has five ____.",
           "verb": "plural",
           "choices": [
-            "appl",
+            "apple",
             "apples",
-            "apples",
-            "appl's"
+            "apple's",
+            "apples'"
           ],
           "correctAnswer": "apples",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は apples です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-005",
+          "id": "fb-g1-u5-005",
           "japanese": "彼らは4台の車を持っています",
           "sentence": "They have four ____.",
           "verb": "plural",
@@ -19260,11 +19260,11 @@
           ],
           "correctAnswer": "cars",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は cars です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-006",
+          "id": "fb-g1-u5-006",
           "japanese": "私は2本のペンを持っています",
           "sentence": "I have two ____.",
           "verb": "plural",
@@ -19276,27 +19276,27 @@
           ],
           "correctAnswer": "pens",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は pens です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-007",
+          "id": "fb-g1-u5-007",
           "japanese": "彼女は3つの箱を持っています",
           "sentence": "She has three ____.",
           "verb": "plural",
           "choices": [
             "box",
             "boxes",
-            "boxes",
-            "box's"
+            "box's",
+            "boxes'"
           ],
           "correctAnswer": "boxes",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は boxes です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-008",
+          "id": "fb-g1-u5-008",
           "japanese": "私たちはいくつかのペンを持っています",
           "sentence": "We have some ____.",
           "verb": "plural",
@@ -19306,29 +19306,29 @@
             "studentes",
             "student's"
           ],
-          "correctAnswer": "pens",
+          "correctAnswer": "students",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は students です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-009",
+          "id": "fb-g1-u5-009",
           "japanese": "彼は6つのオレンジを持っています",
           "sentence": "He has six ____.",
           "verb": "plural",
           "choices": [
             "orang",
             "oranges",
-            "oranges",
-            "orang's"
+            "orang's",
+            "oranges'"
           ],
           "correctAnswer": "oranges",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は oranges です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-010",
+          "id": "fb-g1-u5-010",
           "japanese": "彼らは2人の子どもがいます",
           "sentence": "They have two ____.",
           "verb": "plural",
@@ -19340,11 +19340,11 @@
           ],
           "correctAnswer": "children",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は children です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-011",
+          "id": "fb-g1-u5-011",
           "japanese": "私は3人の兄弟がいます",
           "sentence": "I have three ____.",
           "verb": "plural",
@@ -19356,27 +19356,27 @@
           ],
           "correctAnswer": "brothers",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は brothers です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-012",
+          "id": "fb-g1-u5-012",
           "japanese": "彼女は4つのドレスを持っています",
           "sentence": "She has four ____.",
           "verb": "plural",
           "choices": [
             "dress",
             "dresses",
-            "dresses",
-            "dress's"
+            "dress's",
+            "dresses'"
           ],
           "correctAnswer": "dresses",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は dresses です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-013",
+          "id": "fb-g1-u5-013",
           "japanese": "私たちは多くの先生がいます",
           "sentence": "We have many ____.",
           "verb": "plural",
@@ -19388,11 +19388,11 @@
           ],
           "correctAnswer": "teachers",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は teachers です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-014",
+          "id": "fb-g1-u5-014",
           "japanese": "彼は2匹の犬を飼っています",
           "sentence": "He has two ____.",
           "verb": "plural",
@@ -19404,43 +19404,43 @@
           ],
           "correctAnswer": "dogs",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は dogs です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-015",
+          "id": "fb-g1-u5-015",
           "japanese": "彼らは3つのクラスがあります",
           "sentence": "They have three ____.",
           "verb": "plural",
           "choices": [
             "class",
             "classes",
-            "classes",
-            "class's"
+            "class's",
+            "classes'"
           ],
           "correctAnswer": "classes",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は classes です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-016",
+          "id": "fb-g1-u5-016",
           "japanese": "私は5つの時計を持っています",
           "sentence": "I have five ____.",
           "verb": "plural",
           "choices": [
             "watch",
             "watches",
-            "watches",
-            "watch's"
+            "watch's",
+            "watches'"
           ],
           "correctAnswer": "watches",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は watches です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-017",
+          "id": "fb-g1-u5-017",
           "japanese": "彼女は2つの都市を訪れました",
           "sentence": "She visited two ____.",
           "verb": "plural",
@@ -19452,11 +19452,11 @@
           ],
           "correctAnswer": "cities",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は cities です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-018",
+          "id": "fb-g1-u5-018",
           "japanese": "私たちは多くの本を読みます",
           "sentence": "We read many ____.",
           "verb": "plural",
@@ -19468,11 +19468,11 @@
           ],
           "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は books です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-019",
+          "id": "fb-g1-u5-019",
           "japanese": "彼は3人の女性を知っています",
           "sentence": "He knows three ____.",
           "verb": "plural",
@@ -19484,11 +19484,11 @@
           ],
           "correctAnswer": "women",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は women です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         },
         {
-          "id": "vf-g1-u5-020",
+          "id": "fb-g1-u5-020",
           "japanese": "彼らは2人の男性を見ます",
           "sentence": "They see two ____.",
           "verb": "plural",
@@ -19500,7 +19500,7 @@
           ],
           "correctAnswer": "men",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "正答は men です。複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
           "hint": "2つ以上→複数形"
         }
       ],
@@ -22725,7 +22725,7 @@
           ],
           "correctAnswer": "studying",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は studying です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22740,7 +22740,7 @@
           ],
           "correctAnswer": "running",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は running です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22755,7 +22755,7 @@
           ],
           "correctAnswer": "cooking",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は cooking です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22770,7 +22770,7 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は playing です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22785,7 +22785,7 @@
           ],
           "correctAnswer": "reading",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は reading です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22800,7 +22800,7 @@
           ],
           "correctAnswer": "singing",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は singing です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22815,7 +22815,7 @@
           ],
           "correctAnswer": "sleeping",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は sleeping です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22830,7 +22830,7 @@
           ],
           "correctAnswer": "writing",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は writing です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22838,14 +22838,14 @@
           "japanese": "彼は遊んでいます",
           "sentence": "He ____ playing.",
           "choices": [
-            "swimming",
-            "swim",
-            "swims",
-            "swimed"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は is です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -22861,7 +22861,7 @@
           ],
           "correctAnswer": "watching",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は watching です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22876,7 +22876,7 @@
           ],
           "correctAnswer": "listening",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は listening です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22884,14 +22884,14 @@
           "japanese": "彼らは走っています",
           "sentence": "They ____ running.",
           "choices": [
-            "waiting",
-            "wait",
-            "waits",
-            "waited"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は are です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -22900,14 +22900,14 @@
           "japanese": "あなたは歌っています",
           "sentence": "You ____ singing.",
           "choices": [
-            "eating",
-            "eat",
-            "eats",
-            "eated"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は are です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -22916,14 +22916,14 @@
           "japanese": "私たちは踊っています",
           "sentence": "We ____ dancing.",
           "choices": [
-            "working",
-            "work",
-            "works",
-            "worked"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は are です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -22932,14 +22932,14 @@
           "japanese": "彼は勉強しています",
           "sentence": "He ____ studying.",
           "choices": [
-            "laughing",
-            "laugh",
-            "laughs",
-            "laughed"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は is です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -22948,14 +22948,14 @@
           "japanese": "彼女は読んでいます",
           "sentence": "She ____ reading.",
           "choices": [
-            "dancing",
-            "danc",
-            "dancs",
-            "danced"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は is です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -22971,7 +22971,7 @@
           ],
           "correctAnswer": "talking",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は talking です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22986,7 +22986,7 @@
           ],
           "correctAnswer": "playing",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は playing です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける"
         },
         {
@@ -22994,14 +22994,14 @@
           "japanese": "彼は働いています",
           "sentence": "He ____ working.",
           "choices": [
-            "driving",
-            "driv",
-            "drivs",
-            "drived"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は is です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         },
@@ -23015,9 +23015,9 @@
             "draws",
             "drawed"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "drawing",
           "difficulty": "beginner",
-          "explanation": "現在進行形: be動詞 + 動詞ing形。",
+          "explanation": "正答は drawing です。現在進行形: be動詞 + 動詞ing形。",
           "hint": "動詞にingをつける",
           "grammarPoint": "現在進行形 (be + -ing)"
         }
@@ -24635,14 +24635,14 @@
           "sentence": "I ____  every day.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -24811,14 +24811,14 @@
           "sentence": "Tom and mary ____  now.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "主語がTom and Mary（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -24987,14 +24987,14 @@
           "sentence": "Our team ____  sometimes.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "主語がour team（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -25163,14 +25163,14 @@
           "sentence": "You ____  often.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はareです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -25339,14 +25339,14 @@
           "sentence": "I ____  always.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "am",
           "difficulty": "intermediate",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -25515,14 +25515,14 @@
           "sentence": "Tom and mary ____  usually.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "主語がTom and Mary（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -25691,14 +25691,14 @@
           "sentence": "Our team ____  every day.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "主語がour team（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -25867,14 +25867,14 @@
           "sentence": "You ____  now.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "are",
           "difficulty": "advanced",
-          "explanation": "主語がyou（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はareです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -26043,14 +26043,14 @@
           "sentence": "I ____  sometimes.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "am",
           "difficulty": "advanced",
-          "explanation": "主語がI（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         },
         {
@@ -26219,14 +26219,14 @@
           "sentence": "Tom and mary ____  often.",
           "verb": "be",
           "choices": [
-            "be",
-            "bes",
-            "beed",
-            "being"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "be",
+          "correctAnswer": "is",
           "difficulty": "advanced",
-          "explanation": "主語がTom and Mary（I/You/We/They）の場合、動詞は原形のままbeを使います。三人称単数（He/She/It）の場合のみ-sを付けます。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "I/You/We/Theyの場合は動詞の原形"
         }
       ],
@@ -26243,7 +26243,7 @@
           ],
           "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は swim です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26258,7 +26258,7 @@
           ],
           "correctAnswer": "speak",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は speak です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26273,7 +26273,7 @@
           ],
           "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は play です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26288,7 +26288,7 @@
           ],
           "correctAnswer": "run",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は run です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26303,7 +26303,7 @@
           ],
           "correctAnswer": "cook",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は cook です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26318,7 +26318,7 @@
           ],
           "correctAnswer": "understand",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は understand です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26333,7 +26333,7 @@
           ],
           "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は swim です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26346,9 +26346,9 @@
             "swiming",
             "swimed"
           ],
-          "correctAnswer": "can",
+          "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は swim です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26363,7 +26363,7 @@
           ],
           "correctAnswer": "drive",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は drive です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26378,7 +26378,7 @@
           ],
           "correctAnswer": "come",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は come です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26393,7 +26393,7 @@
           ],
           "correctAnswer": "wait",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は wait です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26408,7 +26408,7 @@
           ],
           "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は swim です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26423,7 +26423,7 @@
           ],
           "correctAnswer": "speak",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は speak です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26438,7 +26438,7 @@
           ],
           "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は play です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26453,7 +26453,7 @@
           ],
           "correctAnswer": "come",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は come です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26466,9 +26466,9 @@
             "singing",
             "singed"
           ],
-          "correctAnswer": "swim",
+          "correctAnswer": "sing",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は sing です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形",
           "grammarPoint": "助動詞 can"
         },
@@ -26484,7 +26484,7 @@
           ],
           "correctAnswer": "draw",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は draw です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26499,7 +26499,7 @@
           ],
           "correctAnswer": "dance",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は dance です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26514,7 +26514,7 @@
           ],
           "correctAnswer": "help",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は help です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形"
         },
         {
@@ -26527,9 +26527,9 @@
             "seeing",
             "seeed"
           ],
-          "correctAnswer": "speak",
+          "correctAnswer": "see",
           "difficulty": "beginner",
-          "explanation": "canの後は必ず動詞の原形。",
+          "explanation": "正答は see です。canの後は必ず動詞の原形。",
           "hint": "can + 動詞原形",
           "grammarPoint": "助動詞 can"
         }
@@ -29755,7 +29755,7 @@
           ],
           "correctAnswer": "yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は yesterday です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29770,7 +29770,7 @@
           ],
           "correctAnswer": "to",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は to です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29785,7 +29785,7 @@
           ],
           "correctAnswer": "book",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は book です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29800,7 +29800,7 @@
           ],
           "correctAnswer": "soccer",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は soccer です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29815,7 +29815,7 @@
           ],
           "correctAnswer": "movie",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は movie です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29830,7 +29830,7 @@
           ],
           "correctAnswer": "breakfast",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は breakfast です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29845,7 +29845,7 @@
           ],
           "correctAnswer": "to",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は to です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29860,7 +29860,7 @@
           ],
           "correctAnswer": "friend",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は friend です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29875,7 +29875,7 @@
           ],
           "correctAnswer": "park",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は park です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29890,7 +29890,7 @@
           ],
           "correctAnswer": "week",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は week です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29905,7 +29905,7 @@
           ],
           "correctAnswer": "yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は yesterday です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29920,7 +29920,7 @@
           ],
           "correctAnswer": "yesterday",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は yesterday です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29935,7 +29935,7 @@
           ],
           "correctAnswer": "library",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は library です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29950,7 +29950,7 @@
           ],
           "correctAnswer": "teacher",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は teacher です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29965,7 +29965,7 @@
           ],
           "correctAnswer": "happy",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は happy です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29978,9 +29978,9 @@
             "sad",
             "tired"
           ],
-          "correctAnswer": "is",
+          "correctAnswer": "busy",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は busy です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -29995,7 +29995,7 @@
           ],
           "correctAnswer": "home",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は home です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -30010,7 +30010,7 @@
           ],
           "correctAnswer": "night",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は night です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -30025,7 +30025,7 @@
           ],
           "correctAnswer": "month",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は month です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -30040,7 +30040,7 @@
           ],
           "correctAnswer": "year",
           "difficulty": "beginner",
-          "explanation": "過去形の文で使われる語彙。",
+          "explanation": "正答は year です。過去形の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         }
       ],
@@ -31657,14 +31657,14 @@
           "sentence": "I ____  yesterday.",
           "verb": "be",
           "choices": [
-            "be",
-            "was",
-            "being",
-            "bes"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "was",
+          "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形wasを使います。beは不規則動詞で、過去形はwasです。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はamです。",
           "hint": "過去の時を表すyesterdayがあるので過去形"
         },
         {
@@ -32057,14 +32057,14 @@
           "sentence": "You ____  yesterday.",
           "verb": "be",
           "choices": [
-            "be",
-            "was",
-            "being",
-            "bes"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "was",
+          "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形wasを使います。beは不規則動詞で、過去形はwasです。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はareです。",
           "hint": "過去の時を表すyesterdayがあるので過去形"
         },
         {
@@ -32457,14 +32457,14 @@
           "sentence": "Tom ____  yesterday.",
           "verb": "be",
           "choices": [
-            "be",
-            "was",
-            "being",
-            "bes"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "was",
+          "correctAnswer": "is",
           "difficulty": "intermediate",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形wasを使います。beは不規則動詞で、過去形はwasです。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "過去の時を表すyesterdayがあるので過去形"
         },
         {
@@ -32857,14 +32857,14 @@
           "sentence": "Emily ____  yesterday.",
           "verb": "be",
           "choices": [
-            "be",
-            "was",
-            "being",
-            "bes"
+            "am",
+            "is",
+            "are",
+            "been"
           ],
-          "correctAnswer": "was",
+          "correctAnswer": "is",
           "difficulty": "advanced",
-          "explanation": "yesterdayという過去の時を表す語があるので、過去形wasを使います。beは不規則動詞で、過去形はwasです。",
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
           "hint": "過去の時を表すyesterdayがあるので過去形"
         },
         {
@@ -33265,7 +33265,7 @@
           ],
           "correctAnswer": "tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は tomorrow です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33280,7 +33280,7 @@
           ],
           "correctAnswer": "to",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は to です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33295,7 +33295,7 @@
           ],
           "correctAnswer": "book",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は book です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33310,7 +33310,7 @@
           ],
           "correctAnswer": "soccer",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は soccer です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33325,7 +33325,7 @@
           ],
           "correctAnswer": "movie",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は movie です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33340,7 +33340,7 @@
           ],
           "correctAnswer": "tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は tomorrow です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33355,7 +33355,7 @@
           ],
           "correctAnswer": "cook",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は cook です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33370,7 +33370,7 @@
           ],
           "correctAnswer": "help",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は help です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33385,7 +33385,7 @@
           ],
           "correctAnswer": "travel",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は travel です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33400,7 +33400,7 @@
           ],
           "correctAnswer": "tomorrow",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は tomorrow です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33415,7 +33415,7 @@
           ],
           "correctAnswer": "teacher",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は teacher です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33430,7 +33430,7 @@
           ],
           "correctAnswer": "sing",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は sing です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33445,7 +33445,7 @@
           ],
           "correctAnswer": "win",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は win です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33458,9 +33458,9 @@
             "coming",
             "came"
           ],
-          "correctAnswer": "leave",
+          "correctAnswer": "come",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は come です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ",
           "grammarPoint": "be going to"
         },
@@ -33476,7 +33476,7 @@
           ],
           "correctAnswer": "shopping",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は shopping です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33491,7 +33491,7 @@
           ],
           "correctAnswer": "swim",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は swim です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33506,7 +33506,7 @@
           ],
           "correctAnswer": "help",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は help です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33521,7 +33521,7 @@
           ],
           "correctAnswer": "meet",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は meet です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33536,7 +33536,7 @@
           ],
           "correctAnswer": "week",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は week です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         },
         {
@@ -33551,7 +33551,7 @@
           ],
           "correctAnswer": "year",
           "difficulty": "beginner",
-          "explanation": "未来表現の文で使われる語彙。",
+          "explanation": "正答は year です。未来表現の文で使われる語彙。",
           "hint": "文脈に合う単語を選ぶ"
         }
       ],

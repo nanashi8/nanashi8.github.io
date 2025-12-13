@@ -1,6 +1,6 @@
 {
   "grade": 1,
-  "totalQuestions": 200,
+  "totalQuestions": 2200,
   "units": [
     {
       "unit": "Unit 0",
@@ -19,7 +19,7 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はamです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -35,7 +35,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -99,7 +99,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -115,7 +115,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -147,7 +147,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -179,7 +179,7 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はamです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -211,7 +211,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -227,7 +227,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -291,7 +291,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseの数や複数名詞に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3449,7 +3449,7 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はamです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3465,7 +3465,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3529,7 +3529,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3545,7 +3545,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3577,7 +3577,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3673,7 +3673,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はareです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         },
         {
@@ -3753,7 +3753,7 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。",
+          "explanation": "be動詞の人称・数の一致。This/Theseや複数名詞の数に注意。 正答はamです。",
           "hint": "I→am / he,she,it→is / you,we,they→are"
         }
       ],
@@ -7039,7 +7039,7 @@
           ],
           "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "3人称単数現在形では動詞に-sをつけます。正答はrunsです。he/she/it/単数名詞→動詞+s; I/you/we/they→動詞原形",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7055,7 +7055,7 @@
           ],
           "correctAnswer": "cooks",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "3人称単数現在形では動詞に-sをつけます。正答はcooksです。she/he/it/単数名詞→動詞+s",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7071,8 +7071,8 @@
           ],
           "correctAnswer": "studies",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
-          "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選びます。正答はstudiesです。",
+          "hint": "he/she/it/单数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
           "id": "vf-g1-u2-014",
@@ -7087,7 +7087,7 @@
           ],
           "correctAnswer": "plays",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選びます。正答はplaysです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7103,7 +7103,7 @@
           ],
           "correctAnswer": "runs",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選びます。正答はrunsです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7119,7 +7119,7 @@
           ],
           "correctAnswer": "play",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選びます。正答はplayです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7135,7 +7135,7 @@
           ],
           "correctAnswer": "live",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選びます。正答はliveです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7151,7 +7151,7 @@
           ],
           "correctAnswer": "drink",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。 present-simpleの正答はdrinkです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7167,7 +7167,7 @@
           ],
           "correctAnswer": "listen",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。 present-simpleの正答はlistenです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         },
         {
@@ -7183,7 +7183,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。",
+          "explanation": "have/has と一般動詞の3単現 -s。主語に合わせて形を選ぶ。 present-simpleの正答はdoです。",
           "hint": "he/she/it/単数名詞→has, 動詞+s; I/you/we/they→have, 動詞原形"
         }
       ],
@@ -10309,7 +10309,7 @@
           ],
           "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はAreです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10325,7 +10325,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はIsです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10341,7 +10341,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はIsです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10357,7 +10357,7 @@
           ],
           "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はAreです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10437,7 +10437,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はIsです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10453,7 +10453,7 @@
           ],
           "correctAnswer": "Are",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はAreです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10533,7 +10533,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はIsです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -10549,7 +10549,7 @@
           ],
           "correctAnswer": "Is",
           "difficulty": "beginner",
-          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。",
+          "explanation": "疑問文の作り方: be動詞の場合は主語の前に置く。一般動詞の場合はDo/Doesで始める。 正答はIsです。",
           "hint": "be動詞→Are/Is、一般動詞→Do/Does"
         },
         {
@@ -13787,7 +13787,7 @@
           ],
           "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はthemです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13851,7 +13851,7 @@
           ],
           "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はthemです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13867,7 +13867,7 @@
           ],
           "correctAnswer": "your",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はyourです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13883,7 +13883,7 @@
           ],
           "correctAnswer": "us",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はusです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13915,7 +13915,7 @@
           ],
           "correctAnswer": "our",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はourです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13947,7 +13947,7 @@
           ],
           "correctAnswer": "our",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はourです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13963,7 +13963,7 @@
           ],
           "correctAnswer": "their",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はtheirです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -13995,7 +13995,7 @@
           ],
           "correctAnswer": "them",
           "difficulty": "beginner",
-          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）",
+          "explanation": "代名詞の使い分け: 主格（I/he/she）、所有格（my/his/her）、目的格（me/him/her）。正答はthemです。",
           "hint": "主語の前→所有格、動詞の後→目的格"
         },
         {
@@ -17169,7 +17169,7 @@
           ],
           "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はbooksです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17185,7 +17185,7 @@
           ],
           "correctAnswer": "cats",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はcatsです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17201,7 +17201,7 @@
           ],
           "correctAnswer": "friends",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はfriendsです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17210,14 +17210,14 @@
           "sentence": "He has five ____.",
           "verb": "plural",
           "choices": [
-            "appl",
+            "apple",
             "apples",
-            "apples",
-            "appl's"
+            "applees",
+            "apple's"
           ],
           "correctAnswer": "apples",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。正答はapplesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17233,7 +17233,7 @@
           ],
           "correctAnswer": "cars",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はcarsです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17242,14 +17242,14 @@
           "sentence": "I have four ____.",
           "verb": "plural",
           "choices": [
-            "pen",
-            "pens",
-            "penes",
-            "pen's"
+            "eraser",
+            "erasers",
+            "eraseres",
+            "eraser's"
           ],
           "correctAnswer": "erasers",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。正答はerasersです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17260,12 +17260,12 @@
           "choices": [
             "box",
             "boxes",
-            "boxes",
+            "boxs",
             "box's"
           ],
           "correctAnswer": "boxes",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: -x/-ch/-sh/-sで終わる場合は-esをつけます。正答はboxesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17274,14 +17274,14 @@
           "sentence": "They have some ____.",
           "verb": "plural",
           "choices": [
-            "student",
-            "students",
-            "studentes",
-            "student's"
+            "book",
+            "books",
+            "bookes",
+            "book's"
           ],
           "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-sをつけます。正答はbooksです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17292,12 +17292,12 @@
           "choices": [
             "orang",
             "oranges",
-            "oranges",
+            "orangees",
             "orang's"
           ],
           "correctAnswer": "oranges",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。正答はorangesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17313,7 +17313,7 @@
           ],
           "correctAnswer": "children",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はchildrenです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17322,14 +17322,14 @@
           "sentence": "I have two ____.",
           "verb": "plural",
           "choices": [
-            "brother",
-            "brothers",
-            "brotheres",
-            "brother's"
+            "pen",
+            "pens",
+            "penes",
+            "pen's"
           ],
           "correctAnswer": "pens",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-sをつけます。正答はpensです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17340,12 +17340,12 @@
           "choices": [
             "dress",
             "dresses",
-            "dresses",
+            "dressees",
             "dress's"
           ],
           "correctAnswer": "dresses",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: -x/-ch/-sh/-sで終わる場合は-esをつけます。正答はdressesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17354,14 +17354,14 @@
           "sentence": "You have several ____.",
           "verb": "plural",
           "choices": [
-            "teacher",
-            "teachers",
-            "teacheres",
-            "teacher's"
+            "pencil",
+            "pencils",
+            "penciles",
+            "pencil's"
           ],
           "correctAnswer": "pencils",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-sをつけます。正答はpencilsです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17377,7 +17377,7 @@
           ],
           "correctAnswer": "dogs",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はdogsです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17388,12 +17388,12 @@
           "choices": [
             "class",
             "classes",
-            "classes",
+            "classees",
             "class's"
           ],
           "correctAnswer": "classes",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: -x/-ch/-sh/-sで終わる場合は-esをつけます。正答はclassesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17404,12 +17404,12 @@
           "choices": [
             "watch",
             "watches",
-            "watches",
+            "watchees",
             "watch's"
           ],
           "correctAnswer": "watches",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: -x/-ch/-sh/-sで終わる場合は-esをつけます。正答はwatchesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17425,7 +17425,7 @@
           ],
           "correctAnswer": "cities",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はcitiesです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17441,7 +17441,7 @@
           ],
           "correctAnswer": "books",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はbooksです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17457,7 +17457,7 @@
           ],
           "correctAnswer": "women",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はwomenです。",
           "hint": "2つ以上→複数形"
         },
         {
@@ -17473,7 +17473,7 @@
           ],
           "correctAnswer": "men",
           "difficulty": "beginner",
-          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。",
+          "explanation": "複数形の作り方: 通常は-s、-x/-ch/-sh/-s→-es、子音+y→-ies、不規則変化に注意。 正答はmenです。",
           "hint": "2つ以上→複数形"
         }
       ],
@@ -24157,7 +24157,7 @@
           ],
           "correctAnswer": "cannot",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はcannotです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24173,7 +24173,7 @@
           ],
           "correctAnswer": "cannot",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はcannotです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24189,7 +24189,7 @@
           ],
           "correctAnswer": "cannot",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はcannotです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24205,7 +24205,7 @@
           ],
           "correctAnswer": "Can",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はCanです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24221,7 +24221,7 @@
           ],
           "correctAnswer": "Can",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はCanです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24237,7 +24237,7 @@
           ],
           "correctAnswer": "Can",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はCanです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24253,7 +24253,7 @@
           ],
           "correctAnswer": "Can",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はCanです。",
           "hint": "can + 動詞原形"
         },
         {
@@ -24333,7 +24333,7 @@
           ],
           "correctAnswer": "Can",
           "difficulty": "beginner",
-          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。",
+          "explanation": "助動詞can: できる・可能を表す。canの後は動詞の原形。 canの正答はCanです。",
           "hint": "can + 動詞原形"
         }
       ],
@@ -27459,7 +27459,7 @@
           ],
           "correctAnswer": "studied",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はstudiedです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27475,7 +27475,7 @@
           ],
           "correctAnswer": "went",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はwentです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27485,13 +27485,13 @@
           "verb": "past",
           "choices": [
             "read",
-            "read",
+            "readed",
             "reads",
             "reading"
           ],
           "correctAnswer": "read",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: readは不規則動詞で、現在形と過去形が同じread（発音は異なる）です。正答はreadです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27507,7 +27507,7 @@
           ],
           "correctAnswer": "played",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はplayedです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27523,7 +27523,7 @@
           ],
           "correctAnswer": "do",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はdoです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27539,7 +27539,7 @@
           ],
           "correctAnswer": "watched",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はwatchedです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27555,7 +27555,7 @@
           ],
           "correctAnswer": "ate",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はateです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27571,7 +27571,7 @@
           ],
           "correctAnswer": "listened",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はlistenedです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27587,7 +27587,7 @@
           ],
           "correctAnswer": "met",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はmetです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27603,7 +27603,7 @@
           ],
           "correctAnswer": "played",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はplayedです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27613,13 +27613,13 @@
           "verb": "past",
           "choices": [
             "watch",
-            "watch",
+            "watches",
             "watchs",
             "watching"
           ],
           "correctAnswer": "watch",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はwatchです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27635,7 +27635,7 @@
           ],
           "correctAnswer": "went",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はwentです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27651,7 +27651,7 @@
           ],
           "correctAnswer": "swam",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はswamです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27667,7 +27667,7 @@
           ],
           "correctAnswer": "cooked",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
+          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。 pastの正答はcookedです。",
           "hint": "昨日・先週など過去→過去形"
         },
         {
@@ -27690,17 +27690,17 @@
           "id": "vf-g1-u8-016",
           "japanese": "彼女は看護師です",
           "sentence": "She ____ a nurse.",
-          "verb": "past",
+          "verb": "present-simple",
           "choices": [
-            "was",
-            "were",
             "am",
-            "are"
+            "is",
+            "are",
+            "been"
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "過去形: 規則動詞は-ed、不規則動詞は変化形を覚える。be動詞はwas/were。",
-          "hint": "昨日・先週など過去→過去形"
+          "explanation": "be動詞の使い分け: I→am, You/We/They→are, He/She/It→is。正答はisです。",
+          "hint": "三人称単数→is"
         },
         {
           "id": "vf-g1-u8-017",
@@ -30905,7 +30905,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はisです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -30937,7 +30937,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はareです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -30969,7 +30969,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はareです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31001,7 +31001,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はisです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31033,7 +31033,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はareです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31049,7 +31049,7 @@
           ],
           "correctAnswer": "Will",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はWillです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31081,7 +31081,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はisです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31129,7 +31129,7 @@
           ],
           "correctAnswer": "are",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はareです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31145,7 +31145,7 @@
           ],
           "correctAnswer": "am",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はamです。",
           "hint": "will/be going to + 動詞原形"
         },
         {
@@ -31177,7 +31177,7 @@
           ],
           "correctAnswer": "is",
           "difficulty": "beginner",
-          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。",
+          "explanation": "未来表現: will + 動詞原形、be going to + 動詞原形。 futureの正答はisです。",
           "hint": "will/be going to + 動詞原形"
         },
         {

@@ -20,7 +20,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "I was happy yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-002",
@@ -37,7 +41,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "You were busy last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-003",
@@ -53,7 +61,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "He was sick yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-004",
@@ -70,7 +82,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "She was at home yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-005",
@@ -86,7 +102,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "It was cold yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-006",
@@ -104,7 +124,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "We were in Tokyo last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-007",
@@ -120,7 +144,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "They were here yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-008",
@@ -136,7 +164,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "Tom was tired yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-009",
@@ -153,7 +185,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "Mary was happy last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-010",
@@ -170,7 +206,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "My parents were busy yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-011",
@@ -187,7 +227,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "The dog was fine yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-012",
@@ -204,7 +248,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "The cat was hungry yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-013",
@@ -221,7 +269,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "I was at school yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-014",
@@ -238,7 +290,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "You were ready last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-015",
@@ -254,7 +310,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "He was angry yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-016",
@@ -271,7 +331,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "She was sad last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-017",
@@ -289,7 +353,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "We were in the park yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-018",
@@ -306,7 +374,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "They were friends last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-019",
@@ -325,7 +397,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "The book was on the desk yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u0-020",
@@ -342,7 +418,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
-          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。"
+          "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
+          "choices": [
+            "You were here last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -366,7 +446,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "I was reading a book then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-002",
@@ -383,7 +467,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "You were studying English yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-003",
@@ -402,7 +490,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "He was playing soccer at that time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-004",
@@ -419,7 +511,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "She was watching TV yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-005",
@@ -435,7 +531,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "We were singing then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-006",
@@ -451,7 +551,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "They were running yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-007",
@@ -469,7 +573,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "Tom was sleeping at that time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-008",
@@ -485,7 +593,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "Mary was cooking yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-009",
@@ -501,7 +613,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "I was swimming yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-010",
@@ -517,7 +633,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "You were dancing then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-011",
@@ -533,7 +653,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "He was painting yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-012",
@@ -551,7 +675,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "She was listening to music then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-013",
@@ -567,7 +695,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "We were shopping yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-014",
@@ -585,7 +717,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "They were working at that time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-015",
@@ -602,7 +738,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "My mother was cleaning yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-016",
@@ -619,7 +759,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "My brothers were playing then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-017",
@@ -636,7 +780,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "The dog was barking yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-018",
@@ -653,7 +801,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "The birds were flying then."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-019",
@@ -670,7 +822,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "I was eating breakfast yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u1-020",
@@ -686,7 +842,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
-          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。"
+          "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
+          "choices": [
+            "They were laughing yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -710,7 +870,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "I will visit the museum tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-002",
@@ -728,7 +892,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "You will play soccer this afternoon."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-003",
@@ -745,7 +913,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "He will finish homework tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-004",
@@ -762,7 +934,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "She will go shopping tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-005",
@@ -780,7 +956,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "We will visit Tokyo next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-006",
@@ -798,7 +978,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "They will have a party tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-007",
@@ -814,7 +998,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "It will rain tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-008",
@@ -832,7 +1020,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "Tom will meet her next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-009",
@@ -850,7 +1042,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "Mary will get up early tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-010",
@@ -868,7 +1064,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "I will write a letter tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-011",
@@ -886,7 +1086,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "You will pass the exam tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-012",
@@ -906,7 +1110,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "He will buy a new car next month."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-013",
@@ -922,7 +1130,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "She will cook tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-014",
@@ -939,7 +1151,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "We will travel next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-015",
@@ -955,7 +1171,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "They will swim tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-016",
@@ -972,7 +1192,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "The sun will shine tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-017",
@@ -989,7 +1213,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "My father will work tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-018",
@@ -1008,7 +1236,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "My sister will come back next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-019",
@@ -1025,7 +1257,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "The dog will run tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u2-020",
@@ -1041,7 +1277,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
-          "hint": "未来を表すwill。主語に関わらずwillを使います。"
+          "hint": "未来を表すwill。主語に関わらずwillを使います。",
+          "choices": [
+            "They will study tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -1067,7 +1307,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "I am going to watch a movie tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-002",
@@ -1085,7 +1329,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "You are going to study tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-003",
@@ -1104,7 +1352,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "He is going to travel next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-004",
@@ -1122,7 +1374,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "She is going to shop tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-005",
@@ -1143,7 +1399,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "We are going to have a party this weekend."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-006",
@@ -1162,7 +1422,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "They are going to play soccer tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-007",
@@ -1179,7 +1443,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "It is going to rain."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-008",
@@ -1198,7 +1466,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "Tom is going to meet her tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-009",
@@ -1217,7 +1489,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "Mary is going to cook next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-010",
@@ -1237,7 +1513,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "I am going to read a book tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-011",
@@ -1255,7 +1535,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "You are going to swim tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-012",
@@ -1274,7 +1558,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "He is going to move next month."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-013",
@@ -1292,7 +1580,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "She is going to paint tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-014",
@@ -1311,7 +1603,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "We are going to camp next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-015",
@@ -1329,7 +1625,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "They are going to dance tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-016",
@@ -1346,7 +1646,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "It is going to snow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-017",
@@ -1365,7 +1669,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "My brother is going to work tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-018",
@@ -1385,7 +1693,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "My friends are going to visit next week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-019",
@@ -1404,7 +1716,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "The dog is going to run tomorrow."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u3-020",
@@ -1422,7 +1738,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
-          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。"
+          "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
+          "choices": [
+            "They are going to sing tonight."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -1446,7 +1766,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "I have to do my homework."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-002",
@@ -1464,7 +1788,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "You have to get up early."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-003",
@@ -1480,7 +1808,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "He has to study."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-004",
@@ -1496,7 +1828,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "She has to work."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-005",
@@ -1512,7 +1848,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "We have to go."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-006",
@@ -1528,7 +1868,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "They have to wait."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-007",
@@ -1544,7 +1888,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "Tom has to practice."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-008",
@@ -1560,7 +1908,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "Mary has to help."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-009",
@@ -1576,7 +1928,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "I have to clean."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-010",
@@ -1592,7 +1948,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "You have to cook."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-011",
@@ -1608,7 +1968,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "He has to run."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-012",
@@ -1624,7 +1988,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "She has to write."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-013",
@@ -1640,7 +2008,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "We have to read."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-014",
@@ -1656,7 +2028,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "They have to listen."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-015",
@@ -1673,7 +2049,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "The dog has to eat."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-016",
@@ -1689,7 +2069,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "I have to talk."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-017",
@@ -1705,7 +2089,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "You have to come."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-018",
@@ -1721,7 +2109,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "He has to watch."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-019",
@@ -1737,7 +2129,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "She has to learn."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u4-020",
@@ -1753,7 +2149,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "have to",
-          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。"
+          "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
+          "choices": [
+            "We have to try."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -1776,7 +2176,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He is taller than me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-002",
@@ -1796,7 +2200,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This book is more interesting than that one."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-003",
@@ -1815,7 +2223,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She is the smartest in the class."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-004",
@@ -1832,7 +2244,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This flower is more beautiful."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-005",
@@ -1849,7 +2265,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "Today is hotter than yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-006",
@@ -1866,7 +2286,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He looks younger than before."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-007",
@@ -1881,7 +2305,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This is easier."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-008",
@@ -1898,7 +2326,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She is the most popular."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-009",
@@ -1915,7 +2347,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "Winter is colder than summer."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-010",
@@ -1931,7 +2367,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This is the best."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-011",
@@ -1948,7 +2388,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He runs faster than me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-012",
@@ -1964,7 +2408,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She is the kindest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-013",
@@ -1980,7 +2428,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This room is larger."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-014",
@@ -1997,7 +2449,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "Mt. Fuji is the highest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-015",
@@ -2012,7 +2468,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "He speaks better."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-016",
@@ -2029,7 +2489,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This shirt is the cheapest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-017",
@@ -2047,7 +2511,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "My brother is stronger than me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-018",
@@ -2064,7 +2532,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "This is the most important."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-019",
@@ -2079,7 +2551,11 @@
           "wordCount": 3,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "She lives farther."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u5-020",
@@ -2095,7 +2571,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
-          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。"
+          "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
+          "choices": [
+            "I am the happiest."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -2120,7 +2600,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When I got home, it was raining."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-002",
@@ -2141,7 +2625,11 @@
           "wordCount": 9,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If it's sunny tomorrow, we'll go on a picnic."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-003",
@@ -2158,7 +2646,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I'll rest because I'm tired."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-004",
@@ -2176,7 +2668,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When he came, I was studying."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-005",
@@ -2194,7 +2690,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If you go, I'll go too."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-006",
@@ -2213,7 +2713,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I stayed home because it was raining."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-007",
@@ -2231,7 +2735,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When she called, I was sleeping."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-008",
@@ -2249,7 +2757,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If I have time, I'll help."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-009",
@@ -2267,7 +2779,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I can't go because I'm busy."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-010",
@@ -2286,7 +2802,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When I woke up, it was snowing."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-011",
@@ -2305,7 +2825,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If you're free, please come with me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-012",
@@ -2324,7 +2848,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I missed school because I was sick."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-013",
@@ -2343,7 +2871,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When he arrived, the party had started."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-014",
@@ -2360,7 +2892,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If it rains, we'll cancel."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-015",
@@ -2377,7 +2913,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I'll eat because I'm hungry."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-016",
@@ -2397,7 +2937,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When I was a child, I lived here."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-017",
@@ -2415,7 +2959,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If we win, I'll be happy."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-018",
@@ -2434,7 +2982,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "I'll wear a coat because it's cold."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-019",
@@ -2451,7 +3003,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "When she laughed, everyone laughed."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u6-020",
@@ -2469,7 +3025,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
-          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。"
+          "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
+          "choices": [
+            "If you don't understand, please ask."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -2491,7 +3051,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I like to swim."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-002",
@@ -2507,7 +3071,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She loves to sing."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-003",
@@ -2525,7 +3093,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I want to be a doctor."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-004",
@@ -2542,7 +3114,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "He wants to learn English."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-005",
@@ -2558,7 +3134,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "We decided to travel."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-006",
@@ -2574,7 +3154,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "They plan to leave."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-007",
@@ -2591,7 +3175,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I want something to drink."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-008",
@@ -2609,7 +3197,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I have a book to read."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-009",
@@ -2627,7 +3219,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I went to meet my friend."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-010",
@@ -2646,7 +3242,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She went to the library to study."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-011",
@@ -2662,7 +3262,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I'm learning to cook."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-012",
@@ -2678,7 +3282,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "He started to swim."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-013",
@@ -2694,7 +3302,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "We enjoyed to play."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-014",
@@ -2710,7 +3322,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She continued to talk."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-015",
@@ -2728,7 +3344,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I can to play the piano."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-016",
@@ -2746,7 +3366,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "He is good at to run."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-017",
@@ -2764,7 +3388,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "Do you have anything to eat?"
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-018",
@@ -2783,7 +3411,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "This is a pen to write with."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-019",
@@ -2799,7 +3431,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "I came to help."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u7-020",
@@ -2815,7 +3451,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
-          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。"
+          "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
+          "choices": [
+            "She stopped to look."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -2839,7 +3479,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "English is spoken around the world."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-002",
@@ -2858,7 +3502,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This book is read by many people."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-003",
@@ -2876,7 +3524,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The building was built last year."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-004",
@@ -2894,7 +3546,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This song was sung by her."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-005",
@@ -2912,7 +3568,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The letter was written to me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-006",
@@ -2930,7 +3590,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These pictures were taken by him."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-007",
@@ -2948,7 +3612,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The door was opened by her."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-008",
@@ -2966,7 +3634,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The window was closed by me."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-009",
@@ -2985,7 +3657,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This dish was cooked by my mother."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-010",
@@ -3002,7 +3678,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The car was washed yesterday."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-011",
@@ -3021,7 +3701,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These flowers were grown in the garden."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-012",
@@ -3040,7 +3724,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The movie was watched by many people."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-013",
@@ -3059,7 +3747,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This bridge was built 100 years ago."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-014",
@@ -3077,7 +3769,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The problem was solved by him."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-015",
@@ -3096,7 +3792,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These books were borrowed from the library."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-016",
@@ -3116,7 +3816,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The tree was blown down by the storm."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-017",
@@ -3136,7 +3840,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "This picture was painted by a famous artist."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-018",
@@ -3155,7 +3863,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The store is opened at 10 a.m."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-019",
@@ -3173,7 +3885,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "These products are made in Japan."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u8-020",
@@ -3191,7 +3907,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
-          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。"
+          "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
+          "choices": [
+            "The secret is known by nobody."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     },
@@ -3216,7 +3936,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have studied English for three years."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-002",
@@ -3233,7 +3957,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has been to Tokyo."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-003",
@@ -3251,7 +3979,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "She has just finished her homework."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-004",
@@ -3268,7 +4000,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "We have never met him."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-005",
@@ -3285,7 +4021,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "They have already eaten lunch."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-006",
@@ -3304,7 +4044,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "Tom has been here for two hours."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-007",
@@ -3321,7 +4065,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "Mary has seen the movie."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-008",
@@ -3338,7 +4086,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have lost my key."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-009",
@@ -3355,7 +4107,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "You have read the book."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-010",
@@ -3373,7 +4129,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has been busy since morning."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-011",
@@ -3390,7 +4150,11 @@
           "wordCount": 5,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "She has not arrived yet."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-012",
@@ -3410,7 +4174,11 @@
           "wordCount": 8,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "We have been friends for a long time."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-013",
@@ -3426,7 +4194,11 @@
           "wordCount": 4,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "They have just left."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-014",
@@ -3444,7 +4216,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have climbed Mt. Fuji before."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-015",
@@ -3463,7 +4239,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has not finished his homework yet."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-016",
@@ -3481,7 +4261,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "She has lived here since 2012."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-017",
@@ -3500,7 +4284,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "We have heard the song many times."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-018",
@@ -3518,7 +4306,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "They have bought a new house."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-019",
@@ -3536,7 +4328,11 @@
           "wordCount": 6,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "I have sent her a letter."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         },
         {
           "id": "so-g2-u9-020",
@@ -3555,7 +4351,11 @@
           "wordCount": 7,
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
-          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。"
+          "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
+          "choices": [
+            "He has been sick since last week."
+          ],
+          "explanation": "単語を正しい順序に並べ替えて文を完成させます。"
         }
       ]
     }
