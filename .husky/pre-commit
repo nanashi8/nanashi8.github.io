@@ -4,6 +4,31 @@ echo "🔍 Pre-commit チェック開始..."
 echo "⚠️  【重要】すべてのエラー・警告を完全に解消する必要があります"
 echo ""
 
+# 0. テスト実装ガード（テストファイルが変更されている場合）
+if git diff --cached --name-only | grep -E 'tests/.*\.test\.(ts|tsx)$' > /dev/null; then
+  echo "🛡️  テスト実装ガード実行中..."
+
+  # 各変更されたテストファイルに対してガードを実行
+  git diff --cached --name-only | grep -E 'tests/.*\.test\.(ts|tsx)$' | while read TEST_FILE; do
+    if [ -f "$TEST_FILE" ]; then
+      bash scripts/test-implementation-guard.sh "$TEST_FILE" || {
+        echo ""
+        echo "❌ テスト実装ガードにより中断されました"
+        echo "📚 必須手順:"
+        echo "  1. .aitk/instructions/testing-guidelines.instructions.md を読む"
+        echo "  2. 実際のデータファイルを確認する"
+        echo "  3. 既存実装（src/配下のパーサー）を確認する"
+        echo ""
+        echo "💡 確認後に再度コミットしてください"
+        exit 1
+      }
+    fi
+  done
+
+  echo "✅ テスト実装ガード完了"
+  echo ""
+fi
+
 # 1. ステージされたファイルのみをチェック
 echo "📝 変更ファイルを確認中..."
 
