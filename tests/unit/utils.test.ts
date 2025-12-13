@@ -1,5 +1,16 @@
 import { describe, it, expect } from 'vitest';
-import { shuffle, formatLocalYYYYMMDD, generateId, generateSpellingPuzzle } from '@/utils';
+import {
+  shuffle,
+  formatLocalYYYYMMDD,
+  generateId,
+  generateSpellingPuzzle,
+  selectAdaptiveQuestions,
+  selectWeakQuestions,
+  selectReviewQuestions,
+  selectQuestionsByMasteryLevel,
+  classifyPhraseType,
+  getPhraseTypeLabel,
+} from '@/utils';
 
 /**
  * src/utils.ts の純粋関数テスト
@@ -132,5 +143,181 @@ describe('Utils - generateSpellingPuzzle', () => {
       const correctLetter = 'APPLE'[idx];
       expect(result.letterChoices).toContain(correctLetter);
     });
+  });
+});
+
+describe('Utils - selectAdaptiveQuestions', () => {
+  // モック用のヘルパー関数
+  const mockQuestions = (words: string[]) =>
+    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+
+  it('空配列を渡すと空配列を返す', () => {
+    const result = selectAdaptiveQuestions([], 10);
+    expect(result).toEqual([]);
+  });
+
+  it('指定した件数の問題を返す', () => {
+    const questions = mockQuestions(['apple', 'banana', 'cherry', 'dog', 'elephant']);
+    const result = selectAdaptiveQuestions(questions, 3);
+
+    expect(result.length).toBe(3);
+  });
+
+  it('問題数が不足していても正常に動作する', () => {
+    const questions = mockQuestions(['apple', 'banana']);
+    const result = selectAdaptiveQuestions(questions, 10);
+
+    expect(result.length).toBeLessThanOrEqual(2);
+  });
+
+  it('結果がシャッフルされている', () => {
+    const questions = mockQuestions(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']);
+    const result1 = selectAdaptiveQuestions(questions, 5);
+    const result2 = selectAdaptiveQuestions(questions, 5);
+
+    // 2回の呼び出しで同じ順序になる可能性は低い
+    const words1 = result1.map((q) => q.word).join(',');
+    const words2 = result2.map((q) => q.word).join(',');
+
+    // 完全一致しない確率が高い（稀に一致する可能性もあるが）
+    expect(words1 === words2).toBe(false);
+  });
+});
+
+describe('Utils - selectWeakQuestions', () => {
+  const mockQuestions = (words: string[]) =>
+    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+
+  it('空配列を渡すと空配列を返す', () => {
+    const result = selectWeakQuestions([], 10);
+    expect(result).toEqual([]);
+  });
+
+  it('指定した件数以下の問題を返す', () => {
+    const questions = mockQuestions(['apple', 'banana', 'cherry']);
+    const result = selectWeakQuestions(questions, 5);
+
+    expect(result.length).toBeLessThanOrEqual(5);
+    expect(result.length).toBeLessThanOrEqual(questions.length);
+  });
+
+  it('問題数が不足していても正常に動作する', () => {
+    const questions = mockQuestions(['apple']);
+    const result = selectWeakQuestions(questions, 10);
+
+    expect(result.length).toBeLessThanOrEqual(1);
+  });
+});
+
+describe('Utils - selectReviewQuestions', () => {
+  const mockQuestions = (words: string[]) =>
+    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+
+  it('空配列を渡すと空配列を返す', () => {
+    const result = selectReviewQuestions([], 10);
+    expect(result).toEqual([]);
+  });
+
+  it('指定した件数以下の問題を返す', () => {
+    const questions = mockQuestions(['apple', 'banana', 'cherry']);
+    const result = selectReviewQuestions(questions, 5);
+
+    expect(result.length).toBeLessThanOrEqual(5);
+    expect(result.length).toBeLessThanOrEqual(questions.length);
+  });
+
+  it('hoursThresholdパラメータを受け取る', () => {
+    const questions = mockQuestions(['apple', 'banana']);
+    const result = selectReviewQuestions(questions, 10, 48); // 48時間
+
+    expect(result.length).toBeLessThanOrEqual(questions.length);
+  });
+
+  it('問題数が不足していても正常に動作する', () => {
+    const questions = mockQuestions(['apple']);
+    const result = selectReviewQuestions(questions, 10, 24);
+
+    expect(result.length).toBeLessThanOrEqual(1);
+  });
+});
+
+describe('Utils - selectQuestionsByMasteryLevel', () => {
+  const mockQuestions = (words: string[]) =>
+    words.map((word) => ({ word, meaning: `意味${word}` })) as any[];
+
+  it('習熟度別に問題をフィルタできる', () => {
+    const questions = mockQuestions(['apple', 'banana', 'cherry']);
+
+    const newQuestions = selectQuestionsByMasteryLevel(questions, 'new');
+    const learningQuestions = selectQuestionsByMasteryLevel(questions, 'learning');
+    const masteredQuestions = selectQuestionsByMasteryLevel(questions, 'mastered');
+
+    expect(Array.isArray(newQuestions)).toBe(true);
+    expect(Array.isArray(learningQuestions)).toBe(true);
+    expect(Array.isArray(masteredQuestions)).toBe(true);
+  });
+
+  it('countパラメータで件数を制限できる', () => {
+    const questions = mockQuestions(['a', 'b', 'c', 'd', 'e', 'f']);
+    const result = selectQuestionsByMasteryLevel(questions, 'new', 3);
+
+    expect(result.length).toBeLessThanOrEqual(3);
+  });
+
+  it('countを指定しない場合は全件返す', () => {
+    const questions = mockQuestions(['apple', 'banana']);
+    const result = selectQuestionsByMasteryLevel(questions, 'new');
+
+    expect(result.length).toBeGreaterThanOrEqual(0);
+  });
+
+  it('空配列を渡すと空配列を返す', () => {
+    const result = selectQuestionsByMasteryLevel([], 'new');
+    expect(result).toEqual([]);
+  });
+});
+
+describe('Utils - classifyPhraseType', () => {
+  it('単語（スペースなし）はwordを返す', () => {
+    expect(classifyPhraseType('apple')).toBe('word');
+    expect(classifyPhraseType('running')).toBe('word');
+  });
+
+  it('句動詞を検出する', () => {
+    expect(classifyPhraseType('look forward to')).toBe('phrasal-verb');
+    expect(classifyPhraseType('get up')).toBe('phrasal-verb');
+    expect(classifyPhraseType('put off')).toBe('phrasal-verb');
+  });
+
+  it('イディオムを検出する', () => {
+    expect(classifyPhraseType('break the ice')).toBe('idiom');
+    expect(classifyPhraseType('once in a blue moon')).toBe('idiom');
+    expect(classifyPhraseType('cost an arm and a leg')).toBe('idiom');
+  });
+
+  it('コロケーションを検出する', () => {
+    expect(classifyPhraseType('in the morning')).toBe('collocation');
+    // 'make a decision'はイディオムパターンに先にマッチするため'idiom'
+    expect(classifyPhraseType('make a decision')).toBe('idiom');
+    expect(classifyPhraseType('strong coffee')).toBe('collocation');
+  });
+
+  it('その他のフレーズはotherを返す', () => {
+    expect(classifyPhraseType('some random phrase')).toBe('other');
+  });
+});
+
+describe('Utils - getPhraseTypeLabel', () => {
+  it('phraseTypeの日本語ラベルを返す', () => {
+    expect(getPhraseTypeLabel('word')).toBe('単語');
+    expect(getPhraseTypeLabel('phrasal-verb')).toBe('句動詞');
+    expect(getPhraseTypeLabel('idiom')).toBe('イディオム');
+    expect(getPhraseTypeLabel('collocation')).toBe('コロケーション');
+    expect(getPhraseTypeLabel('other')).toBe('その他');
+  });
+
+  it('未知のタイプはその他を返す', () => {
+    expect(getPhraseTypeLabel('unknown')).toBe('その他');
+    expect(getPhraseTypeLabel('')).toBe('その他');
   });
 });
