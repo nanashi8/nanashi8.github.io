@@ -4,7 +4,37 @@ echo "🔍 Pre-commit チェック開始..."
 echo "⚠️  【重要】すべてのエラー・警告を完全に解消する必要があります"
 echo ""
 
-# 0. テスト実装ガード（テストファイルが変更されている場合）
+# 0. 品質神経系統チェック（Grammar問題ファイルが変更されている場合）
+if git diff --cached --name-only | grep -E 'public/data/.*(verb-form|fill-in-blank|sentence-ordering).*\.json$' > /dev/null; then
+  echo "🧠 品質神経系統 起動中..."
+  
+  # 変更されたGrammar問題ファイルをチェック
+  CHANGED_FILES=$(git diff --cached --name-only | grep -E 'public/data/.*(verb-form|fill-in-blank|sentence-ordering).*\.json$')
+  
+  for FILE in $CHANGED_FILES; do
+    python3 scripts/quality_nervous_system.py "$FILE" || {
+      echo ""
+      echo "🚨 品質神経系統が異常を検知しました"
+      echo "📋 検出された問題:"
+      echo "   - 語彙の多様性不足"
+      echo "   - 主語の連続使用"
+      echo "   - 選択肢の不適切さ"
+      echo ""
+      echo "💡 対応手順:"
+      echo "  1. docs/guidelines/grammar/GRAMMAR_GENERATION_GUIDELINES.md を確認"
+      echo "  2. 問題を修正"
+      echo "  3. 再度コミット"
+      echo ""
+      echo "⛔ --no-verify でのバイパスは禁止されています"
+      exit 1
+    }
+  done
+  
+  echo "✅ 品質神経系統チェック完了"
+  echo ""
+fi
+
+# 0.1. テスト実装ガード（テストファイルが変更されている場合）
 if git diff --cached --name-only | grep -E 'tests/.*\.test\.(ts|tsx)$' > /dev/null; then
   echo "🛡️  テスト実装ガード実行中..."
 

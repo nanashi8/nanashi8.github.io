@@ -60,33 +60,39 @@ npm run health-check
 #### 品質改善実績
 
 **Phase 1 完了** ✅ - [完了レポート](docs/quality/PHASE_1_COMPLETION_REPORT.md)
+
 - verbForm/fillInBlank: **367問**改善
 - カバレッジ: 5% → 13% (+160%)
 - テスト: 26/26 (100% パス)
 
 **Phase 2 Step 1 完了** ✅ - [完了レポート](docs/quality/PHASE_2_STEP1_COMPLETION_REPORT.md)
+
 - sentenceOrdering: **4,600問**改善
 - カバレッジ: 13% → 18%+ (+38%)
 - 実装時間: 0.5時間 (Phase 1の1/7)
 
 **Phase 2 Step 2 完了** ✅ - [完了レポート](docs/quality/PHASE_2_STEP2_COMPLETION_REPORT.md)
+
 - Pronunciation/Accent: **120問**検証
 - 新規テスト: **30項目**作成
 - データ正規化: **29問**
 - 実装時間: 0.5時間
 
 **Phase 2 Step 3 完了** ✅ - [完了レポート](docs/quality/PHASE_2_STEP3_COMPLETION_REPORT.md)
+
 - Vocabulary: **4,549エントリー**高度検証
 - 新規テスト: **21項目**追加
 - 語源・関連語・IPA: 包括的品質チェック
 - 実装時間: 1.0時間
 
 **Phase 2 完了** 🎉
+
 - 総期間: 2時間
 - テスト項目: 26 → 77 (+196%)
 - カバレッジ: 13% → 19.5% (+50%)
 
 **累積効果** 🚀
+
 - 総改善/検証: **5,087問 + 4,549エントリー**
 - テスト項目: **77項目** (Phase 1比 +353%)
 - カバレッジ: 5% → 19.5% (+290%)
@@ -107,12 +113,14 @@ npx vitest run tests/content/translation-api-validator.test.ts
 ```
 
 **Phase 1成果 (2025-12-13)**:
+
 - ✅ **100% テストパス** (26/26 tests) - 品質妥協なし
 - ✅ **367問の品質改善** - explanationに正答を明示
 - ✅ **カバレッジ向上** - 5% → 13% (+160%)
 - 🛠️ **自動改善ツール** - `scripts/improve-explanation-quality.py`
 
 **テスト実装時の注意**:
+
 - テストファイルをコミットする前に、ガードスクリプトが実データサンプルを表示
 - 仕様書の確認、データ構造の理解、既存実装の確認が必須
 - "カタカナ混入"等の誤検出パターンを自動警告

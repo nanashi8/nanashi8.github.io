@@ -104,15 +104,39 @@ function getAllQuestionsIncludingSO(data: GrammarData, fileName?: string): VerbF
 
 describe('文法問題品質検証 - 英文法学者の視点', () => {
   const allData = [
-    { data: grammarQuestionsGrade1, grade: grammarQuestionsGrade1.grade, name: 'fill-in-blank-grade1' },
-    { data: grammarQuestionsGrade2, grade: grammarQuestionsGrade2.grade, name: 'fill-in-blank-grade2' },
-    { data: grammarQuestionsGrade3, grade: grammarQuestionsGrade3.grade, name: 'fill-in-blank-grade3' },
+    {
+      data: grammarQuestionsGrade1,
+      grade: grammarQuestionsGrade1.grade,
+      name: 'fill-in-blank-grade1',
+    },
+    {
+      data: grammarQuestionsGrade2,
+      grade: grammarQuestionsGrade2.grade,
+      name: 'fill-in-blank-grade2',
+    },
+    {
+      data: grammarQuestionsGrade3,
+      grade: grammarQuestionsGrade3.grade,
+      name: 'fill-in-blank-grade3',
+    },
     { data: verbFormGrade1, grade: verbFormGrade1.grade, name: 'verb-form-grade1' },
     { data: verbFormGrade2, grade: verbFormGrade2.grade, name: 'verb-form-grade2' },
     { data: verbFormGrade3, grade: verbFormGrade3.grade, name: 'verb-form-grade3' },
-    { data: sentenceOrderingGrade1, grade: sentenceOrderingGrade1.grade, name: 'sentence-ordering-grade1' },
-    { data: sentenceOrderingGrade2, grade: sentenceOrderingGrade2.grade, name: 'sentence-ordering-grade2' },
-    { data: sentenceOrderingGrade3, grade: sentenceOrderingGrade3.grade, name: 'sentence-ordering-grade3' },
+    {
+      data: sentenceOrderingGrade1,
+      grade: sentenceOrderingGrade1.grade,
+      name: 'sentence-ordering-grade1',
+    },
+    {
+      data: sentenceOrderingGrade2,
+      grade: sentenceOrderingGrade2.grade,
+      name: 'sentence-ordering-grade2',
+    },
+    {
+      data: sentenceOrderingGrade3,
+      grade: sentenceOrderingGrade3.grade,
+      name: 'sentence-ordering-grade3',
+    },
   ];
 
   describe('正答の一意性検証', () => {
@@ -189,9 +213,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
             const wrongChoices = q.choices.filter((c) => c !== q.correctAnswer);
 
             // 誤答が存在することを確認（正答以外の選択肢）
-            expect(wrongChoices.length, `問題 ${q.id}: 誤答選択肢が存在しない`).toBeGreaterThan(
-              0
-            );
+            expect(wrongChoices.length, `問題 ${q.id}: 誤答選択肢が存在しない`).toBeGreaterThan(0);
 
             // be動詞の選択肢が標準形式（am/is/are/be等）であることを確認
             const validBeForms = ['am', 'is', 'are', 'was', 'were', 'be', 'been', 'being'];
@@ -340,15 +362,39 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
 
 describe('文法問題品質検証 - 日本語翻訳者の視点', () => {
   const allData = [
-    { data: grammarQuestionsGrade1, grade: grammarQuestionsGrade1.grade, name: 'fill-in-blank-grade1' },
-    { data: grammarQuestionsGrade2, grade: grammarQuestionsGrade2.grade, name: 'fill-in-blank-grade2' },
-    { data: grammarQuestionsGrade3, grade: grammarQuestionsGrade3.grade, name: 'fill-in-blank-grade3' },
+    {
+      data: grammarQuestionsGrade1,
+      grade: grammarQuestionsGrade1.grade,
+      name: 'fill-in-blank-grade1',
+    },
+    {
+      data: grammarQuestionsGrade2,
+      grade: grammarQuestionsGrade2.grade,
+      name: 'fill-in-blank-grade2',
+    },
+    {
+      data: grammarQuestionsGrade3,
+      grade: grammarQuestionsGrade3.grade,
+      name: 'fill-in-blank-grade3',
+    },
     { data: verbFormGrade1, grade: verbFormGrade1.grade, name: 'verb-form-grade1' },
     { data: verbFormGrade2, grade: verbFormGrade2.grade, name: 'verb-form-grade2' },
     { data: verbFormGrade3, grade: verbFormGrade3.grade, name: 'verb-form-grade3' },
-    { data: sentenceOrderingGrade1, grade: sentenceOrderingGrade1.grade, name: 'sentence-ordering-grade1' },
-    { data: sentenceOrderingGrade2, grade: sentenceOrderingGrade2.grade, name: 'sentence-ordering-grade2' },
-    { data: sentenceOrderingGrade3, grade: sentenceOrderingGrade3.grade, name: 'sentence-ordering-grade3' },
+    {
+      data: sentenceOrderingGrade1,
+      grade: sentenceOrderingGrade1.grade,
+      name: 'sentence-ordering-grade1',
+    },
+    {
+      data: sentenceOrderingGrade2,
+      grade: sentenceOrderingGrade2.grade,
+      name: 'sentence-ordering-grade2',
+    },
+    {
+      data: sentenceOrderingGrade3,
+      grade: sentenceOrderingGrade3.grade,
+      name: 'sentence-ordering-grade3',
+    },
   ];
 
   describe('日本語訳の品質検証', () => {
@@ -433,15 +479,39 @@ describe('文法問題品質検証 - 日本語翻訳者の視点', () => {
 
 describe('文法問題品質検証 - 教育専門家の視点', () => {
   const allData = [
-    { data: grammarQuestionsGrade1, grade: grammarQuestionsGrade1.grade, name: 'fill-in-blank-grade1' },
-    { data: grammarQuestionsGrade2, grade: grammarQuestionsGrade2.grade, name: 'fill-in-blank-grade2' },
-    { data: grammarQuestionsGrade3, grade: grammarQuestionsGrade3.grade, name: 'fill-in-blank-grade3' },
+    {
+      data: grammarQuestionsGrade1,
+      grade: grammarQuestionsGrade1.grade,
+      name: 'fill-in-blank-grade1',
+    },
+    {
+      data: grammarQuestionsGrade2,
+      grade: grammarQuestionsGrade2.grade,
+      name: 'fill-in-blank-grade2',
+    },
+    {
+      data: grammarQuestionsGrade3,
+      grade: grammarQuestionsGrade3.grade,
+      name: 'fill-in-blank-grade3',
+    },
     { data: verbFormGrade1, grade: verbFormGrade1.grade, name: 'verb-form-grade1' },
     { data: verbFormGrade2, grade: verbFormGrade2.grade, name: 'verb-form-grade2' },
     { data: verbFormGrade3, grade: verbFormGrade3.grade, name: 'verb-form-grade3' },
-    { data: sentenceOrderingGrade1, grade: sentenceOrderingGrade1.grade, name: 'sentence-ordering-grade1' },
-    { data: sentenceOrderingGrade2, grade: sentenceOrderingGrade2.grade, name: 'sentence-ordering-grade2' },
-    { data: sentenceOrderingGrade3, grade: sentenceOrderingGrade3.grade, name: 'sentence-ordering-grade3' },
+    {
+      data: sentenceOrderingGrade1,
+      grade: sentenceOrderingGrade1.grade,
+      name: 'sentence-ordering-grade1',
+    },
+    {
+      data: sentenceOrderingGrade2,
+      grade: sentenceOrderingGrade2.grade,
+      name: 'sentence-ordering-grade2',
+    },
+    {
+      data: sentenceOrderingGrade3,
+      grade: sentenceOrderingGrade3.grade,
+      name: 'sentence-ordering-grade3',
+    },
   ];
 
   describe('難易度と学年の整合性検証', () => {
@@ -534,7 +604,10 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     it('各Unitに問題が存在する', () => {
       allData.forEach(({ data, name }) => {
         data.units.forEach((unit) => {
-          const unitQuestions = (unit.verbForm?.length || 0) + (unit.fillInBlank?.length || 0) + (unit.sentenceOrdering?.length || 0);
+          const unitQuestions =
+            (unit.verbForm?.length || 0) +
+            (unit.fillInBlank?.length || 0) +
+            (unit.sentenceOrdering?.length || 0);
           expect(unitQuestions, `${unit.unit}: 問題が存在しない`).toBeGreaterThan(0);
         });
       });

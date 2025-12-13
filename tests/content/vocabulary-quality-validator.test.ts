@@ -293,7 +293,9 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
         const etymologyRate = withEtymology.length / entries.length;
 
         console.log(`\n📖 ${fileName} 語源解説充実度:`);
-        console.log(`  充実した解説: ${withEtymology.length}/${entries.length} (${(etymologyRate * 100).toFixed(1)}%)`);
+        console.log(
+          `  充実した解説: ${withEtymology.length}/${entries.length} (${(etymologyRate * 100).toFixed(1)}%)`
+        );
 
         // 50%以上のエントリーに充実した語源解説があることを期待
         expect(etymologyRate).toBeGreaterThan(0.5);
@@ -312,7 +314,9 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
         const relatedRate = withRelated.length / entries.length;
 
         console.log(`\n🔗 ${fileName} 関連語設定率:`);
-        console.log(`  関連語あり: ${withRelated.length}/${entries.length} (${(relatedRate * 100).toFixed(1)}%)`);
+        console.log(
+          `  関連語あり: ${withRelated.length}/${entries.length} (${(relatedRate * 100).toFixed(1)}%)`
+        );
 
         // phrasesは30%以上、wordsは50%以上のエントリーに関連語があることを期待
         const threshold = fileName.includes('phrases') ? 0.3 : 0.5;
@@ -335,11 +339,17 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
 
         if (invalidRelated.length > 0) {
           console.log(`\n⚠️  ${fileName} 形式が不適切な関連語: ${invalidRelated.length}件`);
-          console.log(`  例: ${invalidRelated.slice(0, 3).map(e => `${e.word}: ${e.related}`).join('; ')}`);
+          console.log(
+            `  例: ${invalidRelated
+              .slice(0, 3)
+              .map((e) => `${e.word}: ${e.related}`)
+              .join('; ')}`
+          );
         }
 
         // 95%以上が適切な形式であることを期待
-        const validRate = 1 - (invalidRelated.length / entries.filter(e => e.related.trim()).length);
+        const validRate =
+          1 - invalidRelated.length / entries.filter((e) => e.related.trim()).length;
         expect(validRate).toBeGreaterThan(0.95);
       });
     });
@@ -420,7 +430,12 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
 
         if (duplicates.length > 0) {
           console.log(`\n⚠️  ${fileName} 重複単語: ${duplicates.length}件`);
-          console.log(`  例: ${duplicates.slice(0, 5).map(([word, count]) => `${word} (${count}回)`).join(', ')}`);
+          console.log(
+            `  例: ${duplicates
+              .slice(0, 5)
+              .map(([word, count]) => `${word} (${count}回)`)
+              .join(', ')}`
+          );
         }
 
         // 重複は0であることを期待
@@ -451,8 +466,12 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
 
       if (crossFileDuplicates.length > 0) {
         console.log(`\n📊 ファイル間重複: ${crossFileDuplicates.length}語`);
-        console.log(`  例: ${crossFileDuplicates.slice(0, 3).map(([word, files]) =>
-          `${word} (${files.join(', ')})`).join('; ')}`);
+        console.log(
+          `  例: ${crossFileDuplicates
+            .slice(0, 3)
+            .map(([word, files]) => `${word} (${files.join(', ')})`)
+            .join('; ')}`
+        );
       }
 
       // ファイル間重複は許容される（レベル別に分かれているため）
@@ -483,7 +502,9 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
       });
 
       const katakanaRate = totalWithKatakana / totalEntries;
-      console.log(`\n🗣️  カタカナ読み付きIPA: ${totalWithKatakana}/${totalEntries} (${(katakanaRate * 100).toFixed(1)}%)`);
+      console.log(
+        `\n🗣️  カタカナ読み付きIPA: ${totalWithKatakana}/${totalEntries} (${(katakanaRate * 100).toFixed(1)}%)`
+      );
 
       // 94%以上がカタカナ読み付きであることを期待（実データは94.8%）
       expect(katakanaRate).toBeGreaterThan(0.94);
@@ -508,7 +529,9 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
 
           // 期待される形式: IPA記号 (カタカナ)
           // カタカナには長音記号、濁点、結合アクセント記号(U+0300-036F)なども含む
-          const hasValidFormat = /\([\u30A0-\u30FF\u3099-\u309C\uFF70\u30FC\u0300-\u036F]+\)/.test(e.ipa);
+          const hasValidFormat = /\([\u30A0-\u30FF\u3099-\u309C\uFF70\u30FC\u0300-\u036F]+\)/.test(
+            e.ipa
+          );
 
           if (!hasValidFormat) {
             invalidFormat++;
@@ -516,8 +539,8 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
         });
       });
 
-      const validRate = 1 - (invalidFormat / totalEntries);
-      console.log(`\n✓ IPA形式の整合性: ${((validRate) * 100).toFixed(1)}%`);
+      const validRate = 1 - invalidFormat / totalEntries;
+      console.log(`\n✓ IPA形式の整合性: ${(validRate * 100).toFixed(1)}%`);
 
       // 94%以上が適切な形式であることを期待（実データは94.8%）
       expect(validRate).toBeGreaterThan(0.94);
