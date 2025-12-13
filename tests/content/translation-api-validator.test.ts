@@ -10,7 +10,12 @@ import verbFormGrade1 from '../../public/data/verb-form-questions-grade1.json';
  * - TextGears API (文法・スペルチェック、無料枠: 100リクエスト/日)
  *
  * Note: API制限に達した場合はスキップされます
+ *
+ * SKIP_API_TESTS=true 環境変数でスキップ可能 (高速テスト実行時)
  */
+
+// 環境変数でスキップ制御
+const SKIP_API_TESTS = process.env.SKIP_API_TESTS === 'true';
 
 type VerbFormQuestion = {
   id: string;
@@ -121,7 +126,7 @@ function calculateSimilarity(str1: string, str2: string): number {
   return union.size > 0 ? intersection.size / union.size : 0;
 }
 
-describe('翻訳API連携テスト - MyMemory (無料1000req/日)', () => {
+describe.skipIf(SKIP_API_TESTS)('翻訳API連携テスト - MyMemory (無料1000req/日)', () => {
   const sampleQuestions = verbFormGrade1.units[0].verbForm.slice(0, 5); // 最初の5問でテスト
 
   beforeAll(() => {
@@ -186,7 +191,7 @@ describe('翻訳API連携テスト - MyMemory (無料1000req/日)', () => {
   }, 10000);
 });
 
-describe('文法チェックAPI連携テスト - LanguageTool (無料枠)', () => {
+describe.skipIf(SKIP_API_TESTS)('文法チェックAPI連携テスト - LanguageTool (無料枠)', () => {
   const sampleQuestions = verbFormGrade1.units[0].verbForm.slice(0, 3); // 最初の3問
 
   beforeAll(() => {
@@ -251,7 +256,7 @@ describe('文法チェックAPI連携テスト - LanguageTool (無料枠)', () =
   }, 10000);
 });
 
-describe('統合品質スコア算出', () => {
+describe.skipIf(SKIP_API_TESTS)('統合品質スコア算出', () => {
   it('翻訳品質・文法正確性を総合評価してスコア化', async () => {
     const question = verbFormGrade1.units[0].verbForm[0];
     const completeSentence = question.sentence.replace(/____/g, question.correctAnswer);
@@ -306,7 +311,7 @@ describe('統合品質スコア算出', () => {
   }, 20000);
 });
 
-describe('API使用状況レポート', () => {
+describe.skipIf(SKIP_API_TESTS)('API使用状況レポート', () => {
   it('セッション中のAPI呼び出し回数を表示', () => {
     console.log('\n📊 API使用状況レポート:');
     console.log(`  MyMemory Translation: ${apiCallCount.myMemory}/${API_LIMITS.myMemory}回`);

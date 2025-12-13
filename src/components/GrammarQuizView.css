@@ -899,6 +899,52 @@
   font-weight: 500;
 }
 
+/* パッセージ表示 (Grade 2/3) */
+.passage-context {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.passage-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.passage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passage-english {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-color);
+  padding: 12px;
+  background: var(--background);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.passage-japanese {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  padding: 12px;
+  background: var(--overlay-light);
+  border-radius: 8px;
+  font-style: italic;
+}
+
 /* 結果表示ボックス */
 .result-box {
   margin: 20px 0;

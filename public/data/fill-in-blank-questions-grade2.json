@@ -38,7 +38,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「were」が入ります。"
+          "explanation": "空欄には「were」が入ります。",
+          "passage": "Traveling by train is convenient in Japan. The trains are always on time. You can see beautiful scenery from the window. You ____ busy last week.",
+          "passageJapanese": "日本では電車での旅行が便利です。電車はいつも時間通りです。窓から美しい景色が見えます。あなたは先週忙しかったです"
         },
         {
           "id": "fb-g2-u0-003",
@@ -55,7 +57,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He ____ sick yesterday.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は昨日病気でした"
         },
         {
           "id": "fb-g2-u0-004",
@@ -89,7 +93,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. It ____ cold yesterday.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。それは昨日寒かったです"
         },
         {
           "id": "fb-g2-u0-006",
@@ -140,7 +146,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. Tom ____ tired yesterday.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。トムは昨日疲れていました"
         },
         {
           "id": "fb-g2-u0-009",
@@ -191,7 +199,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. The dog ____ fine yesterday.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。その犬は昨日元気でした"
         },
         {
           "id": "fb-g2-u0-012",
@@ -225,7 +235,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. I ____ at school yesterday.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。私は昨日学校にいました"
         },
         {
           "id": "fb-g2-u0-014",
@@ -242,7 +254,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「were」が入ります。"
+          "explanation": "空欄には「were」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. You ____ ready last week.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。あなたは先週準備ができていました"
         },
         {
           "id": "fb-g2-u0-015",
@@ -276,7 +290,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. She ____ sad last week.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼女は先週悲しかったです"
         },
         {
           "id": "fb-g2-u0-017",
@@ -327,7 +343,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be動詞の過去形",
           "hint": "be動詞の過去形。I/He/She/It/単数→was、You/We/They/複数→were。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The book ____ on the desk yesterday.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その本は昨日机の上にありました"
         },
         {
           "id": "fb-g2-u0-020",
@@ -384,7 +402,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
           "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
-          "explanation": "空欄には「were」が入ります。"
+          "explanation": "空欄には「were」が入ります。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. You ____ studying English yesterday.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。あなたは昨日英語を勉強していました"
         },
         {
           "id": "fb-g2-u1-003",
@@ -435,7 +455,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
           "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
-          "explanation": "空欄には「were」が入ります。"
+          "explanation": "空欄には「were」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. We ____ singing then.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私たちはその時歌っていました"
         },
         {
           "id": "fb-g2-u1-006",
@@ -486,7 +508,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
           "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. Mary ____ cooking yesterday.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。メアリーは昨日料理していました"
         },
         {
           "id": "fb-g2-u1-009",
@@ -503,7 +527,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
           "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. I ____ swimming yesterday.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。私は昨日泳いでいました"
         },
         {
           "id": "fb-g2-u1-010",
@@ -588,7 +614,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "過去進行形",
           "hint": "過去進行形 (was/were + 動詞-ing)。主語に応じてwas/wereを選びます。",
-          "explanation": "空欄には「were」が入ります。"
+          "explanation": "空欄には「were」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. They ____ working at that time.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼らはその時働いていました"
         },
         {
           "id": "fb-g2-u1-015",
@@ -730,7 +758,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "Photography is my hobby. I take pictures of nature. Last month, I went to the mountains. You ____ play soccer this afternoon.",
+          "passageJapanese": "写真撮影が趣味です。自然の写真を撮ります。先月、山に行きました。あなたは今日の午後サッカーをするでしょう"
         },
         {
           "id": "fb-g2-u2-003",
@@ -798,7 +828,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. They ____ have a party tomorrow.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼らは明日パーティーを開くでしょう"
         },
         {
           "id": "fb-g2-u2-007",
@@ -883,7 +915,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. You ____ pass the exam tomorrow.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。あなたは明日試験に合格するでしょう"
         },
         {
           "id": "fb-g2-u2-012",
@@ -917,7 +951,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She ____ cook tomorrow.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は明日料理するでしょう"
         },
         {
           "id": "fb-g2-u2-014",
@@ -951,7 +987,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. They ____ swim tomorrow.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼らは明日泳ぐでしょう"
         },
         {
           "id": "fb-g2-u2-016",
@@ -968,7 +1006,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. The sun ____ shine tomorrow.",
+          "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。太陽が明日輝くでしょう"
         },
         {
           "id": "fb-g2-u2-017",
@@ -985,7 +1025,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. My father ____ work tomorrow.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。私の父は明日働くでしょう"
         },
         {
           "id": "fb-g2-u2-018",
@@ -1019,7 +1061,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "未来形 (will)",
           "hint": "未来を表すwill。主語に関わらずwillを使います。",
-          "explanation": "空欄には「will」が入ります。"
+          "explanation": "空欄には「will」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. The dog ____ run tomorrow.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。犬は明日走るでしょう"
         },
         {
           "id": "fb-g2-u2-020",
@@ -1059,7 +1103,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「am」が入ります。"
+          "explanation": "空欄には「am」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I ____ going to watch a movie tomorrow.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。私は明日映画を見る予定です"
         },
         {
           "id": "fb-g2-u3-002",
@@ -1110,7 +1156,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「is」が入ります。"
+          "explanation": "空欄には「is」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. She ____ going to shop tomorrow.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼女は明日買い物する予定です"
         },
         {
           "id": "fb-g2-u3-005",
@@ -1127,7 +1175,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「are」が入ります。"
+          "explanation": "空欄には「are」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. We ____ going to have a party this weekend.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。私たちは今週末パーティーをする予定です"
         },
         {
           "id": "fb-g2-u3-006",
@@ -1144,7 +1194,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「are」が入ります。"
+          "explanation": "空欄には「are」が入ります。",
+          "passage": "My brother loves cooking. He watches cooking shows on TV. Sometimes he makes dinner for our family. They ____ going to play soccer tomorrow.",
+          "passageJapanese": "兄は料理が大好きです。テレビで料理番組を見ます。時々家族のために夕食を作ります。彼らは明日サッカーをする予定です"
         },
         {
           "id": "fb-g2-u3-007",
@@ -1161,7 +1213,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「is」が入ります。"
+          "explanation": "空欄には「is」が入ります。",
+          "passage": "Mount Fuji is Japan's highest mountain. Many people climb it every year. The view from the top is amazing. It ____ going to rain.",
+          "passageJapanese": "富士山は日本で最も高い山です。毎年多くの人が登ります。頂上からの景色は素晴らしいです。雨が降る予定です"
         },
         {
           "id": "fb-g2-u3-008",
@@ -1178,7 +1232,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「is」が入ります。"
+          "explanation": "空欄には「is」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. Tom ____ going to meet her tomorrow.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。トムは明日彼女に会う予定です"
         },
         {
           "id": "fb-g2-u3-009",
@@ -1229,7 +1285,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「are」が入ります。"
+          "explanation": "空欄には「are」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. You ____ going to swim tomorrow.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。あなたは明日泳ぐ予定です"
         },
         {
           "id": "fb-g2-u3-012",
@@ -1246,7 +1304,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「is」が入ります。"
+          "explanation": "空欄には「is」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He ____ going to move next month.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は来月引っ越す予定です"
         },
         {
           "id": "fb-g2-u3-013",
@@ -1263,7 +1323,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「is」が入ります。"
+          "explanation": "空欄には「is」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. She ____ going to paint tomorrow.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼女は明日絵を描く予定です"
         },
         {
           "id": "fb-g2-u3-014",
@@ -1297,7 +1359,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「are」が入ります。"
+          "explanation": "空欄には「are」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. They ____ going to dance tonight.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼らは今夜踊る予定です"
         },
         {
           "id": "fb-g2-u3-016",
@@ -1348,7 +1412,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "be going to",
           "hint": "be going toで未来を表す。主語に応じてam/is/areを選びます。",
-          "explanation": "空欄には「are」が入ります。"
+          "explanation": "空欄には「are」が入ります。",
+          "passage": "My family is planning a trip to Okinawa. We will stay there for a week. Everyone is excited about swimming in the ocean. My friends ____ going to visit next week.",
+          "passageJapanese": "家族で沖縄旅行を計画しています。1週間滞在します。みんな海で泳ぐのを楽しみにしています。私の友達は来週訪れる予定です"
         },
         {
           "id": "fb-g2-u3-019",
@@ -1405,7 +1471,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "Last week, we had a science test. I studied hard for it. My friend helped me prepare. I ____ to do my homework.",
+          "passageJapanese": "先週、理科のテストがありました。一生懸命勉強しました。友達が準備を手伝ってくれました。私は宿題をしなければなりません"
         },
         {
           "id": "fb-g2-u4-002",
@@ -1439,7 +1507,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. He ____ to study.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼は勉強しなければなりません"
         },
         {
           "id": "fb-g2-u4-004",
@@ -1507,7 +1577,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. Tom ____ to practice.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。トムは練習しなければなりません"
         },
         {
           "id": "fb-g2-u4-008",
@@ -1524,7 +1596,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. Mary ____ to help.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。メアリーは手伝わなければなりません"
         },
         {
           "id": "fb-g2-u4-009",
@@ -1626,7 +1700,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. They ____ to listen.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼らは聞かなければなりません"
         },
         {
           "id": "fb-g2-u4-015",
@@ -1711,7 +1787,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. She ____ to learn.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼女は学ばなければなりません"
         },
         {
           "id": "fb-g2-u4-020",
@@ -1728,7 +1806,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "have to",
           "hint": "have toで義務を表す。三人称単数はhas to、それ以外はhave to。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. We ____ to try.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。私たちは試さなければなりません"
         }
       ]
     },
@@ -1768,7 +1848,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
           "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
-          "explanation": "空欄には「interesting」が入ります。"
+          "explanation": "空欄には「interesting」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. This book is more ____ than that one.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。この本はあの本より面白いです"
         },
         {
           "id": "fb-g2-u5-003",
@@ -1785,7 +1867,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
           "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
-          "explanation": "空欄には「smartest」が入ります。"
+          "explanation": "空欄には「smartest」が入ります。",
+          "passage": "Our school has many clubs. Students can join different activities. The music club is very popular. She is the ____ in the class.",
+          "passageJapanese": "私たちの学校にはたくさんのクラブがあります。生徒はさまざまな活動に参加できます。音楽クラブはとても人気があります。彼女はクラスで最も賢いです"
         },
         {
           "id": "fb-g2-u5-004",
@@ -1802,7 +1886,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
           "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
-          "explanation": "空欄には「beautiful」が入ります。"
+          "explanation": "空欄には「beautiful」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This flower is more ____.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この花はより美しいです"
         },
         {
           "id": "fb-g2-u5-005",
@@ -1955,7 +2041,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
           "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
-          "explanation": "空欄には「larger」が入ります。"
+          "explanation": "空欄には「larger」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This room is ____.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。この部屋はより大きいです"
         },
         {
           "id": "fb-g2-u5-014",
@@ -2040,7 +2128,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
           "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
-          "explanation": "空欄には「important」が入ります。"
+          "explanation": "空欄には「important」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This is the most ____.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。これは最も重要です"
         },
         {
           "id": "fb-g2-u5-019",
@@ -2057,7 +2147,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "比較級・最上級",
           "hint": "比較級・最上級。短い語は-er/-est、長い語はmore/most。",
-          "explanation": "空欄には「farther」が入ります。"
+          "explanation": "空欄には「farther」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. She lives ____.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼女はより遠くに住んでいます"
         },
         {
           "id": "fb-g2-u5-020",
@@ -2097,7 +2189,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
           "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
-          "explanation": "空欄には「When」が入ります。"
+          "explanation": "空欄には「When」が入ります。",
+          "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. ____ I got home, it was raining.",
+          "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。私が家に帰った時、雨が降っていました"
         },
         {
           "id": "fb-g2-u6-002",
@@ -2352,7 +2446,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
           "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
-          "explanation": "空欄には「When」が入ります。"
+          "explanation": "空欄には「When」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. ____ I was a child, I lived here.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。私が子供の時、ここに住んでいました"
         },
         {
           "id": "fb-g2-u6-017",
@@ -2386,7 +2482,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
           "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
-          "explanation": "空欄には「because」が入ります。"
+          "explanation": "空欄には「because」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I'll wear a coat ____ it's cold.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。寒いので、コートを着ます"
         },
         {
           "id": "fb-g2-u6-019",
@@ -2420,7 +2518,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "接続詞",
           "hint": "接続詞。when(時)、if(もし)、because(なぜなら)を使い分ける。",
-          "explanation": "空欄には「If」が入ります。"
+          "explanation": "空欄には「If」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. ____ you don't understand, please ask.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。もし分からなければ、聞いてください"
         }
       ]
     },
@@ -2460,7 +2560,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. She loves ____ sing.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼女は歌うことが好きです"
         },
         {
           "id": "fb-g2-u7-003",
@@ -2477,7 +2579,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I want ____ be a doctor.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は医者になりたいです"
         },
         {
           "id": "fb-g2-u7-004",
@@ -2494,7 +2598,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. He wants ____ learn English.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼は英語を学びたいです"
         },
         {
           "id": "fb-g2-u7-005",
@@ -2528,7 +2634,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. They plan ____ leave.",
+          "passageJapanese": "サラは高校生です。本を読むのが好きです。放課後、図書館に行きます。彼らは出発する予定です"
         },
         {
           "id": "fb-g2-u7-007",
@@ -2545,7 +2653,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I want something ____ drink.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。何か飲むものが欲しいです"
         },
         {
           "id": "fb-g2-u7-008",
@@ -2562,7 +2672,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. I have a book ____ read.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。読むべき本があります"
         },
         {
           "id": "fb-g2-u7-009",
@@ -2596,7 +2708,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. She went to the library ____ study.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼女は勉強するために図書館に行きました"
         },
         {
           "id": "fb-g2-u7-011",
@@ -2664,7 +2778,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. She continued ____ talk.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼女は話すことを続けました"
         },
         {
           "id": "fb-g2-u7-015",
@@ -2715,7 +2831,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "不定詞",
           "hint": "不定詞 (to + 動詞原形)。名詞的・形容詞的・副詞的用法がある。",
-          "explanation": "空欄には「to」が入ります。"
+          "explanation": "空欄には「to」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. Do you have anything ____ eat?",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。何か食べるものはありますか"
         },
         {
           "id": "fb-g2-u7-018",
@@ -2840,7 +2958,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
           "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Yesterday, it rained heavily all day. The streets were wet. People carried umbrellas. This song ____ sung by her.",
+          "passageJapanese": "昨日、一日中激しく雨が降りました。通りは濡れていました。人々は傘を持っていました。この歌は彼女によって歌われました"
         },
         {
           "id": "fb-g2-u8-005",
@@ -2857,7 +2977,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
           "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The letter ____ written to me.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その手紙は私に書かれました"
         },
         {
           "id": "fb-g2-u8-006",
@@ -2874,7 +2996,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
           "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
-          "explanation": "空欄には「were」が入ります。"
+          "explanation": "空欄には「were」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. These pictures ____ taken by him.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。これらの写真は彼によって撮られました"
         },
         {
           "id": "fb-g2-u8-007",
@@ -3061,7 +3185,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
           "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
-          "explanation": "空欄には「was」が入ります。"
+          "explanation": "空欄には「was」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. This picture ____ painted by a famous artist.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。この絵は有名な画家によって描かれました"
         },
         {
           "id": "fb-g2-u8-018",
@@ -3078,7 +3204,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
           "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
-          "explanation": "空欄には「is」が入ります。"
+          "explanation": "空欄には「is」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. The store ____ opened at 10 a.m.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。その店は午前10時に開けられます"
         },
         {
           "id": "fb-g2-u8-019",
@@ -3095,7 +3223,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "受動態",
           "hint": "受動態 (be動詞 + 過去分詞)。主語の数と時制に注意。",
-          "explanation": "空欄には「are」が入ります。"
+          "explanation": "空欄には「are」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. These products ____ made in Japan.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。これらの製品は日本で作られています"
         },
         {
           "id": "fb-g2-u8-020",
@@ -3135,7 +3265,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. I ____ studied English for three years.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。私は3年間英語を勉強しています"
         },
         {
           "id": "fb-g2-u9-002",
@@ -3152,7 +3284,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "Mike has a dog named Max. Max is very friendly. They play together every day. He ____ been to Tokyo.",
+          "passageJapanese": "マイクはマックスという名前の犬を飼っています。マックスはとても人懐っこいです。毎日一緒に遊びます。彼は東京に行ったことがあります"
         },
         {
           "id": "fb-g2-u9-003",
@@ -3169,7 +3303,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. She ____ just finished her homework.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼女はちょうど宿題を終えました"
         },
         {
           "id": "fb-g2-u9-004",
@@ -3186,7 +3322,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. We ____ never met him.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私たちは彼に会ったことがありません"
         },
         {
           "id": "fb-g2-u9-005",
@@ -3237,7 +3375,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. Mary ____ seen the movie.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。メアリーはその映画を見たことがあります"
         },
         {
           "id": "fb-g2-u9-008",
@@ -3254,7 +3394,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. I ____ lost my key.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。私は鍵を失くしました"
         },
         {
           "id": "fb-g2-u9-009",
@@ -3339,7 +3481,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. They ____ just left.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼らはちょうど出発しました"
         },
         {
           "id": "fb-g2-u9-014",
@@ -3373,7 +3517,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "During lunch break, students eat in the cafeteria. The food is delicious. Many students enjoy talking with friends. He ____ not finished his homework yet.",
+          "passageJapanese": "昼休み、生徒は食堂で食事をします。料理はおいしいです。多くの生徒が友達とおしゃべりを楽しみます。彼は宿題をまだ終えていません"
         },
         {
           "id": "fb-g2-u9-016",
@@ -3424,7 +3570,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「have」が入ります。"
+          "explanation": "空欄には「have」が入ります。",
+          "passage": "Last Sunday, my family went to the park. The weather was perfect. We had a picnic there. They ____ bought a new house.",
+          "passageJapanese": "先週の日曜日、家族で公園に行きました。天気は完璧でした。そこでピクニックをしました。彼らは新しい家を買いました"
         },
         {
           "id": "fb-g2-u9-019",
@@ -3458,7 +3606,9 @@
           "difficulty": "intermediate",
           "grammarPoint": "現在完了",
           "hint": "現在完了 (have/has + 過去分詞)。三人称単数はhas、それ以外はhave。",
-          "explanation": "空欄には「has」が入ります。"
+          "explanation": "空欄には「has」が入ります。",
+          "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. He ____ been sick since last week.",
+          "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。彼は先週から病気です"
         }
       ]
     }

@@ -15,6 +15,9 @@ interface VerbFormQuestion {
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   explanation: string;
   hint: string;
+  // パッセージ対応 (Grade 2/3)
+  passage?: string; // 問題の文脈となる短いパッセージ
+  passageJapanese?: string; // パッセージの日本語訳
 }
 
 interface FillInBlankQuestion {
@@ -26,6 +29,9 @@ interface FillInBlankQuestion {
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   explanation: string;
   hint: string;
+  // パッセージ対応 (Grade 2/3)
+  passage?: string; // 問題の文脈となる短いパッセージ
+  passageJapanese?: string; // パッセージの日本語訳
 }
 
 interface SentenceOrderingQuestion {
@@ -36,6 +42,9 @@ interface SentenceOrderingQuestion {
   grammarPoint: string;
   wordCount: number;
   hint: string;
+  // パッセージ対応 (Grade 2/3)
+  passage?: string; // 問題の文脈となる短いパッセージ
+  passageJapanese?: string; // パッセージの日本語訳
 }
 
 interface _Category {
@@ -72,6 +81,9 @@ interface GrammarQuestion {
   words?: string[];
   grammarPoint?: string;
   wordCount?: number;
+  // パッセージ対応 (Grade 2/3)
+  passage?: string; // 問題の文脈となる短いパッセージ
+  passageJapanese?: string; // パッセージの日本語訳
   // その他
   type?: string;
   question?: string;
@@ -932,10 +944,23 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
               {/* ヒント表示 */}
               {showHint && !answered && <div className="hint-box">{currentQuestion.hint}</div>}
 
+              {/* パッセージ表示 (Grade 2/3) */}
+              {currentQuestion.passage && (
+                <div className="passage-context">
+                  <div className="passage-label">📖 文脈</div>
+                  <div className="passage-content">
+                    <div className="passage-english">{currentQuestion.passage}</div>
+                    {currentQuestion.passageJapanese && (
+                      <div className="passage-japanese">{currentQuestion.passageJapanese}</div>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {isSentenceOrdering ? (
                 <div className="word-area">
                   {/* 日本語訳を表示 */}
-                  {currentQuestion.japanese && (
+                  {currentQuestion.japanese && !currentQuestion.passage && (
                     <div className="japanese-meaning">
                       <span className="meaning-label">意味:</span>
                       <span className="meaning-text">{currentQuestion.japanese}</span>

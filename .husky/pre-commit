@@ -7,10 +7,10 @@ echo ""
 # 0. 品質神経系統チェック（Grammar問題ファイルが変更されている場合）
 if git diff --cached --name-only | grep -E 'public/data/.*(verb-form|fill-in-blank|sentence-ordering).*\.json$' > /dev/null; then
   echo "🧠 品質神経系統 起動中..."
-  
+
   # 変更されたGrammar問題ファイルをチェック
   CHANGED_FILES=$(git diff --cached --name-only | grep -E 'public/data/.*(verb-form|fill-in-blank|sentence-ordering).*\.json$')
-  
+
   for FILE in $CHANGED_FILES; do
     python3 scripts/quality_nervous_system.py "$FILE" || {
       echo ""
@@ -29,7 +29,7 @@ if git diff --cached --name-only | grep -E 'public/data/.*(verb-form|fill-in-bla
       exit 1
     }
   done
-  
+
   echo "✅ 品質神経系統チェック完了"
   echo ""
 fi

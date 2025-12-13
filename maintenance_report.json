@@ -1,0 +1,275 @@
+{
+  "timestamp": "2025-12-13T22:48:12.879628",
+  "total_issues": 33,
+  "critical_issues": 19,
+  "warning_issues": 12,
+  "info_issues": 2,
+  "auto_fixable": 0,
+  "issues": [
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade1.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549196"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade1.json: 同じ主語が101問連続しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549241"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade1.json: 選択肢に問題があります",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549252"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade2.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade2.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549263"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade3.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549273"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade3.json: 同じ主語が101問連続しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549285"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "verb-form-questions-grade3.json: 選択肢に問題があります",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549294"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade1.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549302"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade1.json: 同じ主語が11問連続しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549312"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade1.json: 選択肢に問題があります",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549320"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade2.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade2.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549328"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade3.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549336"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade3.json: 同じ主語が20問連続しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549344"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "fill-in-blank-questions-grade3.json: 選択肢に問題があります",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549351"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "sentence-ordering-grade1.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549359"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "sentence-ordering-grade1.json: 同じ主語が106問連続しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549367"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "sentence-ordering-grade2.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade2.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549375"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "sentence-ordering-grade3.json: 語彙の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549384"
+    },
+    {
+      "category": "data_quality",
+      "severity": "CRITICAL",
+      "description": "sentence-ordering-grade3.json: 同じ主語が100問連続しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549391"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "verb-form-questions-grade1.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549399"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "verb-form-questions-grade2.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade2.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549407"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "verb-form-questions-grade3.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/verb-form-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549415"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "fill-in-blank-questions-grade1.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549422"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "fill-in-blank-questions-grade2.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade2.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549430"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "fill-in-blank-questions-grade3.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/fill-in-blank-questions-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549438"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "sentence-ordering-grade1.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade1.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549446"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "sentence-ordering-grade2.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade2.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549458"
+    },
+    {
+      "category": "data_quality",
+      "severity": "WARNING",
+      "description": "sentence-ordering-grade3.json: 主語の多様性が不足しています",
+      "file_path": "/Users/yuichinakamura/Documents/nanashi8-github-io-git/nanashi8.github.io/public/data/sentence-ordering-grade3.json",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:47:39.549466"
+    },
+    {
+      "category": "test_coverage",
+      "severity": "WARNING",
+      "description": "テストカバレッジが低い: 40.0% (目標: 50%以上)",
+      "file_path": null,
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:48:06.666208"
+    },
+    {
+      "category": "documentation",
+      "severity": "WARNING",
+      "description": "必須ドキュメントが見つかりません: docs/INTEGRATED_QUALITY_PIPELINE.md",
+      "file_path": "docs/INTEGRATED_QUALITY_PIPELINE.md",
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:48:08.616300"
+    },
+    {
+      "category": "performance",
+      "severity": "WARNING",
+      "description": "ビルドサイズが大きい: 106.8MB（目標: <10MB）",
+      "file_path": null,
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:48:11.473357"
+    },
+    {
+      "category": "git",
+      "severity": "INFO",
+      "description": "未コミットの変更: 53ファイル",
+      "file_path": null,
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:48:12.868406"
+    },
+    {
+      "category": "git",
+      "severity": "INFO",
+      "description": "ローカルが9コミット進んでいます（push推奨）",
+      "file_path": null,
+      "auto_fix": false,
+      "timestamp": "2025-12-13T22:48:12.879544"
+    }
+  ],
+  "auto_fixes_available": []
+}

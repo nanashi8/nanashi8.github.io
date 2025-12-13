@@ -103,13 +103,23 @@ npm run health-check
 - **仕様検証ガード**: テスト実装時の必須確認プロセスを強制
 
 ```bash
-# コンテンツ品質テスト実行
-npx vitest run tests/content/
+# 🚀 高速テスト実行 (推奨 - 開発中)
+npm run test:all:fast           # Python + 統合テスト: ~1.7秒
+
+# 完全テスト実行 (コミット前)
+npm run test:all:full            # 全テスト: ~4秒
+
+# Python単体テスト
+npm run test:python              # 80 tests: ~0.1秒
+
+# TypeScript単体テスト
+npm run test:unit:fast           # API除外: ~3秒
+npm run test:unit:coverage       # カバレッジ付き
 
 # 特定テストのみ
 npx vitest run tests/content/vocabulary-quality-validator.test.ts
 npx vitest run tests/content/grammar-questions-quality.test.ts  # ✅ 26/26 tests passing
-npx vitest run tests/content/translation-api-validator.test.ts
+SKIP_API_TESTS=true npx vitest run tests/content/translation-api-validator.test.ts
 ```
 
 **Phase 1成果 (2025-12-13)**:
