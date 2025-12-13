@@ -43,7 +43,7 @@ export function addToSkipGroup(word: string): void {
   const now = Date.now();
 
   // 直近のグループを探す（5分以内）
-  let currentGroup = groups.find(
+  const currentGroup = groups.find(
     (g) => g.verificationStatus === 'pending' && now - g.timestamp < SKIP_GROUP_TIME_WINDOW
   );
 

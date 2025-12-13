@@ -504,7 +504,7 @@ export function selectAdaptiveQuestions(allQuestions: Question[], count: number 
   const learningCount = Math.ceil(count * 0.5);
   const masteredCount = Math.floor(count * 0.2);
 
-  let selected: Question[] = [];
+  const selected: Question[] = [];
 
   // 1. 復習単語を優先（難易度スコアが高い順、暗記タブの「覚えた」を考慮）
   const learningWithScores = learningWords.map((q) => {
