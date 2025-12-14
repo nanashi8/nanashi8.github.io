@@ -26,6 +26,19 @@ fi
 echo "✅ ダークモードクラスは検出されませんでした"
 echo ""
 
+# -0.5. 仕様書遵守チェック（調整済み設定値の変更を検出）
+echo "🛡️  仕様書遵守チェック実行中..."
+if git diff --cached --name-only | grep -E '\.(tsx?|jsx?|css)$' > /dev/null; then
+  node scripts/check-specification-compliance.mjs || {
+    echo ""
+    echo "❌ 仕様違反が検出されました"
+    echo ""
+    echo "⛔ --no-verify でのバイパスは推奨されません"
+    exit 1
+  }
+fi
+echo ""
+
 # 0. 品質神経系統チェック（Grammar問題ファイルが変更されている場合）
 if git diff --cached --name-only | grep -E 'public/data/.*(verb-form|fill-in-blank|sentence-ordering).*\.json$' > /dev/null; then
   echo "🧠 品質神経系統 起動中..."
