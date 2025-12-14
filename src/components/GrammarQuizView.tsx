@@ -986,14 +986,17 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                   <div className="selected-words-area">
                     <div className="area-label-with-reset">
                       <span className="area-label">選択した単語 ({selectedWords.length}語)</span>
-                      {selectedWords.length > 0 && !answered && (
+                      {!answered && (
                         <button
-                          className="reset-ordering-button"
+                          className={`reset-ordering-button ${selectedWords.length === 0 ? 'disabled' : ''}`}
                           onClick={() => {
-                            setRemainingWords(currentQuestion.words || []);
-                            setSelectedWords([]);
+                            if (selectedWords.length > 0) {
+                              setRemainingWords(currentQuestion.words || []);
+                              setSelectedWords([]);
+                            }
                           }}
-                          title="並び替えをやり直す"
+                          disabled={selectedWords.length === 0}
+                          title={selectedWords.length === 0 ? "単語を選択してください" : "並び替えをやり直す"}
                         >
                           🔄 やり直し
                         </button>
