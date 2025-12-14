@@ -126,7 +126,7 @@ describe('sessionHistory', () => {
       const items: SessionHistoryItem[] = [
         { status: 'correct', word: 'correct1', timestamp: Date.now() },
         { status: 'incorrect', word: 'incorrect1', timestamp: Date.now() },
-        { status: 'skipped', word: 'skipped1', timestamp: Date.now() },
+        { status: 'review', word: 'review1', timestamp: Date.now() },
       ];
 
       for (const item of items) {

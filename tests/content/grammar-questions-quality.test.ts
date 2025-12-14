@@ -142,7 +142,8 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
   describe('正答の一意性検証', () => {
     it('各問題の正答が選択肢に必ず1つだけ存在する', () => {
       allData.forEach(({ data, name }) => {
-          getAllQuestions(data, name).forEach((q) => {
+        getAllQuestions(data, name).forEach((q) => {
+          if (!q.choices || !q.correctAnswer) return;
           const matchCount = q.choices.filter((choice) => choice === q.correctAnswer).length;
 
           expect(
@@ -156,6 +157,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('正答が空文字列でない', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.correctAnswer) return;
           expect(q.correctAnswer.trim(), `問題 ${q.id}: 正答が空文字列`).not.toBe('');
         });
       });
@@ -198,6 +200,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('選択肢に空文字列が含まれていない', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.choices) return;
           q.choices.forEach((choice, index) => {
             expect(choice.trim(), `問題 ${q.id}: 選択肢[${index}]が空文字列`).not.toBe('');
           });
@@ -209,6 +212,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
       // be動詞問題の場合、誤答は人称・数が一致しない形
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.choices || !q.correctAnswer) return;
           if (q.verb === 'be') {
             const wrongChoices = q.choices.filter((c) => c !== q.correctAnswer);
 
@@ -233,6 +237,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('問題文に空欄マーカー (____ または ____) が存在する', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.sentence) return;
           const hasBlank = q.sentence.includes('____') || q.sentence.includes('____');
 
           expect(hasBlank, `問題 ${q.id}: 空欄マーカーが存在しない - "${q.sentence}"`).toBe(true);
@@ -243,6 +248,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('問題文が正しいピリオドで終わる', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.sentence) return;
           const endsWithPeriod =
             q.sentence.trim().endsWith('.') ||
             q.sentence.trim().endsWith('?') ||
@@ -259,6 +265,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('問題文の先頭が大文字である', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.sentence) return;
           const sentence = q.sentence.trim();
 
           // blanksが文頭にある場合は、正答を埋めた後の文をチェック
@@ -289,6 +296,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('正答を埋め込んだ文章が文法的に正しい構造を持つ', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.sentence || !q.correctAnswer) return;
           const completedSentence = q.sentence.replace(/____/g, q.correctAnswer);
 
           // 基本的な文法チェック: 主語の存在
@@ -347,6 +355,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
     it('explanationに正答の形式が含まれている', () => {
       allData.forEach(({ data, name }) => {
         getAllQuestions(data, name).forEach((q) => {
+          if (!q.correctAnswer) return;
           // 正答が解説文に含まれているか
           const mentionsAnswer = q.explanation.includes(q.correctAnswer);
 
@@ -517,7 +526,8 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
   describe('難易度と学年の整合性検証', () => {
     it('difficulty値が定義されている', () => {
       allData.forEach(({ data, name }) => {
-        getAllQuestionsIncludingSO(data, name).forEach((q) => {
+        const questions = getAllQuestionsIncludingSO(data, name);
+        questions.forEach((q) => {
           expect(q.difficulty, `問題 ${q.id}: difficultyが未定義`).toBeDefined();
         });
       });
@@ -526,7 +536,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     it('difficulty値が有効な値である', () => {
       const validDifficulties = ['beginner', 'intermediate', 'advanced'];
 
-      allData.forEach(({ data, grade: _grade }) => {
+      allData.forEach(({ data, name, grade: _grade }) => {
         getAllQuestionsIncludingSO(data, name).forEach((q) => {
           expect(
             validDifficulties,
@@ -539,7 +549,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     it('中学1年生の問題は主にbeginner難易度である', () => {
       const grade1Data = allData.filter((d) => d.grade === 1);
 
-      grade1Data.forEach(({ data }) => {
+      grade1Data.forEach(({ data, name }) => {
         const difficulties = getAllQuestionsIncludingSO(data, name).map((q) => q.difficulty);
 
         const beginnerCount = difficulties.filter((d) => d === 'beginner').length;

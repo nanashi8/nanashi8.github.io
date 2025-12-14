@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { generateChoices, generateChoicesWithQuestions } from '@/utils';
-import type { Question, Choice } from '@/types';
+import type { Question } from '@/types';
 
 /**
  * クイズ生成関数のテスト
@@ -14,11 +14,51 @@ import type { Question, Choice } from '@/types';
 
 describe('Utils - generateChoices', () => {
   const sampleQuestions: Question[] = [
-    { word: 'apple', meaning: 'りんご', reading: '' },
-    { word: 'banana', meaning: 'バナナ', reading: '' },
-    { word: 'carrot', meaning: 'にんじん', reading: '' },
-    { word: 'dog', meaning: '犬', reading: '' },
-    { word: 'elephant', meaning: '象', reading: '' },
+    {
+      word: 'apple',
+      meaning: 'りんご',
+      reading: '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'banana',
+      meaning: 'バナナ',
+      reading: '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'carrot',
+      meaning: 'にんじん',
+      reading: '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'dog',
+      meaning: '犬',
+      reading: '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'elephant',
+      meaning: '象',
+      reading: '',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
   ];
 
   it('4つの選択肢を生成する（正解+誤答2+分からない）', () => {
@@ -66,11 +106,51 @@ describe('Utils - generateChoices', () => {
 
 describe('Utils - generateChoicesWithQuestions', () => {
   const sampleQuestions: Question[] = [
-    { word: 'apple', meaning: 'りんご', reading: 'アップル' },
-    { word: 'banana', meaning: 'バナナ', reading: 'バナナ' },
-    { word: 'carrot', meaning: 'にんじん', reading: 'キャロット' },
-    { word: 'dog', meaning: '犬', reading: 'ドッグ' },
-    { word: 'elephant', meaning: '象', reading: 'エレファント' },
+    {
+      word: 'apple',
+      meaning: 'りんご',
+      reading: 'アップル',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'banana',
+      meaning: 'バナナ',
+      reading: 'バナナ',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'carrot',
+      meaning: 'にんじん',
+      reading: 'キャロット',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'dog',
+      meaning: '犬',
+      reading: 'ドッグ',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
+    {
+      word: 'elephant',
+      meaning: '象',
+      reading: 'エレファント',
+      etymology: '',
+      relatedWords: '',
+      relatedFields: '',
+      difficulty: '',
+    },
   ];
 
   it('4つの選択肢を生成する', () => {
@@ -83,7 +163,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const correctQuestion = sampleQuestions[0];
     const choices = generateChoicesWithQuestions(correctQuestion, sampleQuestions, 0);
 
-    const hasCorrect = choices.some((c: Choice) => c.text === correctQuestion.meaning);
+    const hasCorrect = choices.some((c: string) => c === correctQuestion.meaning);
     expect(hasCorrect).toBe(true);
   });
   it('「分からない」が最後に含まれる', () => {
@@ -95,7 +175,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
 
   it('選択肅textに重複がない', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
-    const uniqueTexts = [...new Set(choices.map((c: Choice) => c.text))];
+    const uniqueTexts = [...new Set(choices)];
 
     expect(choices.length).toBe(uniqueTexts.length);
   });
@@ -105,7 +185,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const choices = generateChoicesWithQuestions(fewQuestions[0], fewQuestions, 0);
 
     expect(choices.length).toBe(4);
-    expect(choices.some((c: Choice) => c.text === fewQuestions[0].meaning)).toBe(true);
+    expect(choices.some((c: string) => c === fewQuestions[0].meaning)).toBe(true);
   });
 
   it('各選択肅がtext と questionプロパティを持つ', () => {
@@ -122,9 +202,9 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
     // 「分からない」以外の選択肅
-    const nonDontKnow = choices.filter((c: Choice) => c.text !== '分からない');
+    const nonDontKnow = choices.filter((c: string) => c !== '分からない');
 
-    nonDontKnow.forEach((choice: Choice) => {
+    nonDontKnow.forEach((choice: string) => {
       if (choice.question) {
         expect(choice.question).toHaveProperty('word');
         expect(choice.question).toHaveProperty('meaning');
