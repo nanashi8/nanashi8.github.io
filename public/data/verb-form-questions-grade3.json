@@ -10824,9 +10824,9 @@
             "that",
             "where"
           ],
-          "correctAnswer": "that",
+          "correctAnswer": ["that", "which"],
           "difficulty": "intermediate",
-          "explanation": "関係代名詞を使って2つの文をつなぎます。 人・物両方に使える関係代名詞thatを使います。",
+          "explanation": "関係代名詞を使って2つの文をつなぎます。 先行詞が物の場合、thatまたはwhichを使います。",
           "grammarPoint": "関係代名詞",
           "hint": "動詞の形に注目しましょう",
           "passage": "Sarah is a high school student. She loves reading books. After school, she goes to the library. This is the book ____ I bought yesterday.",

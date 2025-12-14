@@ -228,6 +228,34 @@
 }
 
 /* 会話形式の英文表示 */
+/* 会話形式の日本語表示 */
+.japanese-conversation {
+  font-size: 16px;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+  color: #495057;
+  line-height: 1.8;
+}
+
+.conversation-speaker {
+  font-weight: bold;
+  color: #0056b3;
+  margin-right: 6px;
+}
+
+.conversation-text {
+  color: #495057;
+  margin-left: 24px;
+  margin-bottom: 8px;
+}
+
+.conversation-text:last-child {
+  margin-bottom: 0;
+}
+
 .conversation-display {
   font-size: 18px;
   margin: 20px 0;
@@ -274,6 +302,19 @@
   margin: 20px 0;
 }
 
+/* 言い換え問題の日本語の意味 */
+.paraphrase-meaning {
+  font-size: 15px;
+  margin: 0 0 15px 0;
+  padding: 12px 15px;
+  background: #fff3cd;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
 .paraphrase-label {
   font-size: 14px;
   font-weight: 600;
@@ -310,6 +351,27 @@
 
 /* モバイル対応 */
 @media (max-width: 768px) {
+  .japanese-conversation {
+    font-size: 14px;
+    padding: 12px;
+    margin: 12px 0;
+  }
+
+  .conversation-speaker {
+    font-size: 14px;
+  }
+
+  .conversation-text {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  .paraphrase-meaning {
+    font-size: 14px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+
   .paraphrase-label {
     font-size: 13px;
   }

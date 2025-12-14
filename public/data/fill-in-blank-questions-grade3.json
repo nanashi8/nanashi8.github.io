@@ -12844,11 +12844,11 @@
             "that",
             "where"
           ],
-          "correctAnswer": "that",
+          "correctAnswer": ["that", "which"],
           "difficulty": "intermediate",
           "grammarPoint": "関係代名詞",
           "hint": "関係代名詞を使って2つの文をつなぎます。",
-          "explanation": "空欄には「that」が入ります。",
+          "explanation": "空欄には「that」または「which」が入ります。",
           "passage": "My name is Tom. I live in Tokyo with my family. Every morning, I wake up at 7:00. This is the book ____ I bought yesterday.",
           "passageJapanese": "私の名前はトムです。家族と東京に住んでいます。毎朝7時に起きます。これは私が昨日買った本です"
         },

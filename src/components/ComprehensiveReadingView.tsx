@@ -91,6 +91,7 @@ function ComprehensiveReadingView({
   } | null>(null);
   const [showGrammarLegend, setShowGrammarLegend] = useState(false);
   const [showDetailedExplanation, setShowDetailedExplanation] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // 分からない単語のマーク状態のみをLocalStorageに保存（軽量）
   useEffect(() => {
@@ -448,6 +449,7 @@ function ComprehensiveReadingView({
     }
 
     // フレーズ学習用JSONから直接読み込む
+    setIsLoading(true);
     loadAllPassagesAsReadingFormat(wordDictionary)
       .then((loadedPassages) => {
         if (loadedPassages && loadedPassages.length > 0) {
@@ -499,14 +501,17 @@ function ComprehensiveReadingView({
             setWordMeaningsVisible(new Array(sortedData[0].phrases?.length || 0).fill(false));
             logger.log(`[長文] 初期パッセージを選択: ${sortedData[0].id}`);
           }
+          setIsLoading(false);
         } else {
           logger.error('[長文] loadAllPassagesAsReadingFormatが空の配列を返しました');
           setError('パッセージデータの読み込みに失敗しました（データが空です）');
+          setIsLoading(false);
         }
       })
       .catch((err) => {
         logger.error('[長文] Error loading passages:', err);
         setError('パッセージの読み込みに失敗しました: ' + err.message);
+        setIsLoading(false);
       });
   }, [wordDictionary]); // 辞書が読み込まれたら再実行
 
@@ -879,6 +884,10 @@ function ComprehensiveReadingView({
 
   if (error) {
     return <div className="error-message">{error}</div>;
+  }
+
+  if (isLoading) {
+    return <div className="empty-container">読み込み中...</div>;
   }
 
   if (passages.length === 0) {

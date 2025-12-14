@@ -69,9 +69,9 @@
         "who",
         "which"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": ["that", "which"],
       "difficulty": "intermediate",
-      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使います。「I bought the book」をthatでつなげた形です。",
+      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使います。「I bought the book」をthatまたはwhichでつなげた形です。",
       "grammarPoint": "関係代名詞",
       "type": "verbForm"
     },
@@ -393,12 +393,12 @@
         "who",
         "which"
       ],
-      "correctAnswer": "that",
+      "correctAnswer": ["that", "which"],
       "difficulty": "intermediate",
       "grammarPoint": "関係代名詞",
       "hint": "関係代名詞を使って2つの文をつなぎます。",
       "type": "fillInBlank",
-      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使います。「I bought the book yesterday.」をthatでつなげた形です。whoは人用なので×。"
+      "explanation": "先行詞が物(book)で、関係代名詞が目的語の役割をするのでthatまたはwhichを使います。「I bought the book yesterday.」をthatまたはwhichでつなげた形です。whoは人用なので×。"
     },
     {
       "id": "fb-g3-u3-005",
