@@ -269,6 +269,63 @@
   }
 }
 
+/* 言い換え問題（paraphrase）表示 */
+.paraphrase-display {
+  margin: 20px 0;
+}
+
+.paraphrase-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 12px 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.paraphrase-arrow {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 12px 0;
+  padding: 8px;
+  background: linear-gradient(to bottom, transparent 45%, var(--blue-100) 45%, var(--blue-100) 55%, transparent 55%);
+}
+
+.sentence-display.original {
+  background: var(--blue-50);
+  border: 2px solid var(--border-color);
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.sentence-display.target {
+  background: var(--blue-100);
+  border: 2px solid var(--primary-color);
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .paraphrase-label {
+    font-size: 13px;
+  }
+
+  .paraphrase-arrow {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .sentence-display.original,
+  .sentence-display.target {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
 /* 穴埋め問題の下線部 */
 .fill-in-blank-space {
   display: inline-block;
