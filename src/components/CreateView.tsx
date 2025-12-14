@@ -174,7 +174,7 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
 
         <button
           type="submit"
-          className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl dark:bg-primary dark:hover:bg-primary-hover dark:border-primary"
+          className="w-64 px-8 py-4 text-lg font-bold bg-blue-600 text-white border-2 border-blue-600 rounded-xl transition-all duration-300 hover:bg-blue-700 hover:shadow-xl:bg-primary-hover"
         >
           ➕ 問題を追加
         </button>
@@ -185,14 +185,14 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
           <h3>作成した問題 ({questions.length}問)</h3>
           <div className="list-actions">
             <button
-              className="px-6 py-3 text-base font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed dark:bg-success dark:hover:bg-success-hover"
+              className="px-6 py-3 text-base font-medium bg-success text-white border-2 border-success rounded-lg transition-all duration-200 hover:bg-success-hover hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed:bg-success-hover"
               onClick={handleDownload}
               disabled={questions.length === 0}
             >
               📥 CSVダウンロード
             </button>
             <button
-              className="px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md dark:bg-info dark:hover:bg-info-hover"
+              className="px-6 py-3 text-base font-medium bg-info text-white border-2 border-info rounded-lg transition-all duration-200 hover:bg-info-hover hover:shadow-md:bg-info-hover"
               onClick={handleDownloadTemplate}
             >
               📄 テンプレート
@@ -217,7 +217,7 @@ cat,キャット,猫,動物,dog;pet,動物,1`;
                   </div>
                 </div>
                 <button
-                  className="px-4 py-2 text-sm font-medium bg-error text-white border-2 border-error rounded-lg transition-all duration-200 hover:bg-error-hover hover:shadow-md dark:bg-error dark:hover:bg-error-hover"
+                  className="px-4 py-2 text-sm font-medium bg-error text-white border-2 border-error rounded-lg transition-all duration-200 hover:bg-error-hover hover:shadow-md:bg-error-hover"
                   onClick={() => handleDelete(index)}
                 >
                   削除

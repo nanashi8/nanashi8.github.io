@@ -58,13 +58,13 @@
 // ❌ 修正前
 /*
 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col">
+  <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col">
 */
 
 // ✅ 修正後
 /*
 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 sm:p-4">
-  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-w-2xl sm:max-w-4xl w-full mx-auto max-h-[90vh] flex flex-col">
+  <div className="bg-white rounded-lg shadow-2xl max-w-2xl sm:max-w-4xl w-full mx-auto max-h-[90vh] flex flex-col">
 */
 
 // ============================================
@@ -98,7 +98,7 @@ const QuestionButton = ({ choice, isCorrect, isSelected, onAnswer }) => {
         transition-all duration-300 
         flex flex-col items-center text-center
         touch-manipulation select-none
-        ${!isSelected && !isCorrect ? 'hover:border-blue-600 hover:bg-gray-100 active:bg-gray-200 dark:active:bg-gray-700' : ''}
+        ${!isSelected && !isCorrect ? 'hover:border-blue-600 hover:bg-gray-100 active:bg-gray-200:bg-gray-700' : ''}
         ${isSelected && !isCorrect ? 'border-red-600 bg-red-50' : ''}
         ${isCorrect ? 'border-green-600 bg-green-50' : ''}
       `}

@@ -250,8 +250,8 @@ function ScoreBoard({
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'ai'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
           onClick={() => setActiveTab('ai')}
           title="AIコメント"
@@ -262,8 +262,8 @@ function ScoreBoard({
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'plan'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
           onClick={() => setActiveTab('plan')}
           title="プラン"
@@ -274,8 +274,8 @@ function ScoreBoard({
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'breakdown'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
           onClick={() => setActiveTab('breakdown')}
           title="学習状況"
@@ -286,8 +286,8 @@ function ScoreBoard({
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'history'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
           onClick={() => setActiveTab('history')}
           title="履歴"
@@ -298,8 +298,8 @@ function ScoreBoard({
         <button
           className={`px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-base font-medium transition-all duration-200 rounded-t-lg border-b-2 ${
             activeTab === 'settings'
-              ? 'bg-primary text-white border-primary dark:bg-primary dark:text-white dark:border-primary'
-              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+              ? 'bg-primary text-white border-primary'
+              : 'bg-gray-200 text-gray-700 border-transparent hover:bg-gray-300'
           }`}
           onClick={() => {
             if (onShowSettings) {
@@ -318,7 +318,7 @@ function ScoreBoard({
       {/* AIタブ */}
       {activeTab === 'ai' && (
         <div className="score-board-content">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="ai-comment-container">
               <div className="flex items-center gap-2 w-full">
                 <div className="text-2xl flex-shrink-0">
@@ -336,7 +336,7 @@ function ScoreBoard({
                   })()}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm text-gray-700 dark:text-gray-300 leading-snug break-words">
+                  <div className="text-sm text-gray-700 leading-snug break-words">
                     {aiComment
                       .replace(/^[😃😈😼🤖🧙]「|」$/gu, '')
                       .replace(/^[😃😈😼🤖🧙]|」$/gu, '')}
@@ -348,7 +348,7 @@ function ScoreBoard({
             {/* 学習統計カード（暗記タブ専用） */}
             {mode === 'memorization' && totalAnswered > 0 && (
               <div className="mt-4">
-                <div className="flex flex-wrap gap-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                <div className="flex flex-wrap gap-4 text-sm sm:text-base text-gray-700">
                   <div className="flex items-center gap-2">
                     <span className="text-xl">🟢</span>
                     <span>覚えてる {sessionCorrect}語</span>
@@ -371,7 +371,7 @@ function ScoreBoard({
       {/* 学習プランタブ */}
       {activeTab === 'plan' && (
         <div className="score-board-content">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             {/* 全モード共通のプラン詳細表示 */}
             <div className="plan-text-line">
               <span className="stat-text-label">📚 {dataSource || '全問題集'}</span>
@@ -463,7 +463,7 @@ function ScoreBoard({
       {/* 学習状況タブ（詳細な定着率の内訳） */}
       {activeTab === 'breakdown' && (
         <div className="score-board-content">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="retention-breakdown-container">
               <div className="retention-breakdown-header">
                 <div className="retention-title">📊 学習状況の内訳</div>
@@ -601,7 +601,7 @@ function ScoreBoard({
       {/* 履歴タブ */}
       {activeTab === 'history' && (
         <div className="score-board-content">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="history-compact">
               {mode === 'grammar' ? (
                 <div className="word-detail-container">
@@ -721,7 +721,7 @@ function ScoreBoard({
       {/* 学習設定タブ */}
       {activeTab === 'settings' && (
         <div className="score-board-content">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md border border-gray-200 dark:border-gray-700">
+          <div className="bg-white rounded-lg p-3 shadow-md border border-gray-200">
             <div className="settings-tab-container">
               <div className="word-detail-empty">
                 <p>このタブの設定は学習設定パネルから行えます</p>

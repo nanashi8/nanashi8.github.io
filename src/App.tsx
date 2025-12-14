@@ -1489,17 +1489,17 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black">
+    <div className="min-h-screen bg-gray-50">
       {/* 読み込み中インジケータ */}
       <LoadingIndicator isVisible={isLoadingTab} message="読み込み中..." />
 
       {/* タブメニュー - 中学生向け親しみやすいデザイン */}
-      <div className="flex gap-0 bg-gray-100 dark:bg-gray-900 shadow-md py-1 sm:py-2">
+      <div className="flex gap-0 bg-gray-100 shadow-md py-1 sm:py-2">
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'memorization'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('memorization')}
         >
@@ -1508,8 +1508,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'translation'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('translation')}
         >
@@ -1518,8 +1518,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'spelling'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('spelling')}
         >
@@ -1528,8 +1528,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'grammar'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => {
             setActiveTab('grammar');
@@ -1546,8 +1546,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'reading'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => {
             setActiveTab('reading');
@@ -1564,8 +1564,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'grammar-guide'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('grammar-guide')}
         >
@@ -1574,8 +1574,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'dictionary'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('dictionary')}
         >
@@ -1584,8 +1584,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'stats'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('stats')}
         >
@@ -1594,8 +1594,8 @@ function App() {
         <button
           className={`flex-1 py-3 sm:py-4 px-2 sm:px-3 text-sm sm:text-base font-semibold transition-all duration-200 border-b-4 ${
             activeTab === 'settings'
-              ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400'
-              : 'bg-blue-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-transparent hover:bg-blue-100 dark:hover:bg-gray-800'
+              ? 'bg-white text-blue-600 border-blue-600'
+              : 'bg-blue-50 text-gray-700 border-transparent hover:bg-blue-100:bg-gray-800'
           }`}
           onClick={() => setActiveTab('settings')}
         >
@@ -1615,7 +1615,7 @@ function App() {
       />
 
       {/* コンテンツエリア */}
-      <div className="p-2 md:p-6 bg-gray-50 dark:bg-black">
+      <div className="p-2 md:p-6 bg-gray-50">
         <div className="max-w-app mx-auto">
           {activeTab === 'memorization' ? (
             <MemorizationView

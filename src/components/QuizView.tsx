@@ -162,12 +162,12 @@ function QuizView({
   // 全画面モード時はクイズカードのみ表示
   if (isFullscreen && hasQuestions && currentQuestion) {
     return (
-      <div className="fixed inset-0 z-50 bg-gray-50 dark:bg-black overflow-y-auto">
+      <div className="fixed inset-0 z-50 bg-gray-50 overflow-y-auto">
         <div className="min-h-screen flex items-center justify-center py-8">
           {/* 全画面終了ボタン */}
           <button
             onClick={toggleFullscreen}
-            className="fixed top-4 right-4 z-50 p-3 bg-gray-800 dark:bg-gray-700 text-white rounded-full shadow-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition"
+            className="fixed top-4 right-4 z-50 p-3 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700:bg-gray-600 transition"
             aria-label="全画面終了"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,7 +253,7 @@ function QuizView({
                 <h3>📊 学習設定</h3>
                 <button
                   onClick={() => setShowSettings(false)}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm dark:bg-gray-700 dark:hover:bg-gray-600"
+                  className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm shadow-sm:bg-gray-600"
                 >
                   ✕ 閉じる
                 </button>

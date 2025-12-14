@@ -396,67 +396,6 @@
 }
 
 /* ダークモード対応 */
-.dark-mode .gamification-panel {
-  background: var(--background);
-  color: var(--text-color);
-}
-
-.dark-mode .streak-card,
-.dark-mode .stat-item,
-.dark-mode .milestone-card,
-.dark-mode .badge-item,
-.dark-mode .badge-completion,
-.dark-mode .badge-card {
-  background: var(--bg-secondary);
-  border-color: var(--border-color);
-}
-
-.dark-mode .close-button {
-  color: var(--text-secondary);
-}
-
-.dark-mode .close-button:hover {
-  color: var(--btn-primary-text);
-}
-
-.dark-mode .stat-label,
-.dark-mode .streak-label,
-.dark-mode .milestone-description,
-.dark-mode .milestone-progress-text,
-.dark-mode .badge-earned,
-.dark-mode .badge-card-description {
-  color: var(--text-secondary);
-}
-
-.dark-mode .stat-value,
-.dark-mode .streak-value,
-.dark-mode .milestone-title,
-.dark-mode .badge-item-name,
-.dark-mode .badge-card-name {
-  color: var(--text-color);
-}
-
-.dark-mode .milestone-progress-bar,
-.dark-mode .xp-bar {
-  background: var(--overlay-light);
-}
-
-.dark-mode .tabs-container button {
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
-  border-color: var(--border-color);
-}
-
-.dark-mode .tabs-container button.active {
-  background: var(--btn-primary-bg);
-  color: var(--text-color-light);
-  border-color: var(--btn-primary-bg);
-}
-
-.dark-mode .tabs-container button:hover:not(.active) {
-  background: var(--bg-tertiary);
-  color: var(--text-color);
-}
 
 /* レスポンシブ対応 */
 @media (width <= 768px) {
