@@ -64,18 +64,12 @@ describe('メンテナンスAI統合', () => {
 
   describe('品質保証システムの完全性', () => {
     it('緊急品質レポートが存在する', () => {
-      const reportPath = join(
-        baseDir,
-        'docs/quality/EMERGENCY_QUALITY_NERVOUS_SYSTEM_REPORT.md'
-      );
+      const reportPath = join(baseDir, 'docs/quality/EMERGENCY_QUALITY_NERVOUS_SYSTEM_REPORT.md');
       expect(existsSync(reportPath), `${reportPath} が見つかりません`).toBe(true);
     });
 
     it('テストガイドラインが存在する', () => {
-      const guidelinePath = join(
-        baseDir,
-        '.aitk/instructions/testing-guidelines.instructions.md'
-      );
+      const guidelinePath = join(baseDir, '.aitk/instructions/testing-guidelines.instructions.md');
       expect(existsSync(guidelinePath), `${guidelinePath} が見つかりません`).toBe(true);
     });
 
@@ -103,8 +97,8 @@ describe('メンテナンスAI統合', () => {
 });
 
 describe('品質神経系統との統合', () => {
-  it('メンテナンスAIは品質神経系統を呼び出す', () => {
-    const { readFileSync } = require('fs');
+  it('メンテナンスAIは品質神経系統を呼び出す', async () => {
+    const { readFileSync } = await import('fs');
     const scriptPath = join(__dirname, '../../scripts/maintenance_ai.py');
     const content = readFileSync(scriptPath, 'utf-8');
 
@@ -112,8 +106,8 @@ describe('品質神経系統との統合', () => {
     expect(content).toContain('check_data_quality');
   });
 
-  it('品質神経系統の閾値が定義されている', () => {
-    const { readFileSync } = require('fs');
+  it('品質神経系統の閾値が定義されている', async () => {
+    const { readFileSync } = await import('fs');
     const qnsPath = join(__dirname, '../../scripts/quality_nervous_system.py');
     const content = readFileSync(qnsPath, 'utf-8');
 
@@ -126,8 +120,8 @@ describe('品質神経系統との統合', () => {
 });
 
 describe('CI/CDパイプライン統合', () => {
-  it('GitHub Actionsでメンテナンスが自動実行される', () => {
-    const { readFileSync } = require('fs');
+  it('GitHub Actionsでメンテナンスが自動実行される', async () => {
+    const { readFileSync } = await import('fs');
     const workflowPath = join(__dirname, '../../.github/workflows/maintenance-ai.yml');
     const content = readFileSync(workflowPath, 'utf-8');
 
@@ -142,8 +136,8 @@ describe('CI/CDパイプライン統合', () => {
     expect(content).toContain('maintenance_ai.py');
   });
 
-  it('CRITICAL問題でIssueが自動作成される', () => {
-    const { readFileSync } = require('fs');
+  it('CRITICAL問題でIssueが自動作成される', async () => {
+    const { readFileSync } = await import('fs');
     const workflowPath = join(__dirname, '../../.github/workflows/maintenance-ai.yml');
     const content = readFileSync(workflowPath, 'utf-8');
 

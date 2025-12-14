@@ -27,7 +27,7 @@ function setMigrationCompleted(): void {
   try {
     localStorage.setItem(MIGRATION_FLAG_KEY, MIGRATION_VERSION);
     logger.log('✅ Migration flag set');
-  } catch (error) {
+  } catch {
     logger.error('Failed to set migration flag:', error);
   }
 }
@@ -49,7 +49,7 @@ function getLocalStorageData(key: string): any {
     }
 
     return JSON.parse(data);
-  } catch (_error) {
+  } catch {
     // JSONパースエラーは警告のみ（文字列データの可能性）
     logger.warn(`${key} is not valid JSON (skipping)`);
     return null;

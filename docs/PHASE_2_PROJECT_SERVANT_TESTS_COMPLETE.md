@@ -440,11 +440,11 @@ def test_analyze_task_types(self, servant, description, expected_type):
    pytest --cov=scripts.project_ai_servant --cov-report=html
    ```
 
-2. **パラメタライズドテストの導入**
+1. **パラメタライズドテストの導入**
    - タスクタイプ分析のテストケースを統合
    - コード量削減
 
-3. **エッジケーステストの追加**
+1. **エッジケーステストの追加**
    - 非常に長いタスク説明
    - 特殊文字を含むタスク
    - 空文字列や None の処理
@@ -496,10 +496,10 @@ Grand Total:           405/405 passing ✅
 
 **テストカテゴリ**:
 1. パフォーマンスメトリクス検証 (5 tests)
-2. JSONレポート生成 (4 tests)
-3. 品質統合チェック (3 tests)
-4. CLI引数処理 (3 tests)
-5. エラーハンドリング (2-3 tests)
+1. JSONレポート生成 (4 tests)
+1. 品質統合チェック (3 tests)
+1. CLI引数処理 (3 tests)
+1. エラーハンドリング (2-3 tests)
 
 **目標カバレッジ**: 70-75%
 

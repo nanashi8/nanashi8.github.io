@@ -213,7 +213,6 @@ function MemorizationView({
 
     speakCard();
     // voiceWord, voiceMeaning, voiceDelayを依存配列から除外（設定変更時の音声再生を防ぐ）
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentQuestion, autoVoice]);
 
   // カード表示設定の切り替え（永続化）

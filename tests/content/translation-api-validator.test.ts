@@ -17,7 +17,7 @@ import verbFormGrade1 from '../../public/data/verb-form-questions-grade1.json';
 // 環境変数でスキップ制御
 const SKIP_API_TESTS = process.env.SKIP_API_TESTS === 'true';
 
-type VerbFormQuestion = {
+type _VerbFormQuestion = {
   id: string;
   japanese: string;
   sentence: string;
@@ -34,7 +34,7 @@ const LANGUAGE_TOOL_API = 'https://api.languagetool.org/v2/check';
 const MYMEMORY_API = 'https://api.mymemory.translated.net/get'; // 完全無料、1000req/日
 
 // レート制限管理
-let apiCallCount = {
+const apiCallCount = {
   myMemory: 0,
   languageTool: 0,
 };

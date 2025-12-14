@@ -42,7 +42,7 @@ function QuestionCard({
   onAnswer,
   onNext,
   onPrevious,
-  onDifficultyRate,
+  onDifficultyRate: _onDifficultyRate,
   customQuestionSets = [],
   onAddWordToCustomSet,
   onRemoveWordFromCustomSet,
@@ -218,6 +218,12 @@ function QuestionCard({
     }
   }, [answered, selectedAnswer, question, attemptCount]);
 
+  const handleNextClick = () => {
+    setExpandedChoices(new Set());
+    setAttemptCount(0);
+    onNext();
+  };
+
   // スワイプジェスチャーのハンドラー
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
@@ -287,7 +293,7 @@ function QuestionCard({
         card.removeEventListener('touchend', handleTouchEnd);
       };
     }
-  }, [answered, currentIndex, onNext, onPrevious]); // handleNextClickを依存配列に追加
+  }, [answered, currentIndex, onNext, onPrevious]);
 
   // キーボード入力ハンドラー
   useEffect(() => {
@@ -361,11 +367,7 @@ function QuestionCard({
     return `${baseClasses} bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600`;
   };
 
-  const handleNextClick = () => {
-    setExpandedChoices(new Set()); // 開閉状態をリセット
-    setAttemptCount(0); // 試行回数をリセット
-    onNext();
-  };
+  
 
   return (
     <div className="question-card" ref={cardRef}>

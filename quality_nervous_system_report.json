@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-12-14T00:55:49.701291",
+  "timestamp": "2025-12-14T06:03:51.031144",
   "health_status": "CRITICAL",
   "total_issues": 28,
   "critical_issues": 19,
@@ -23,7 +23,7 @@
           ["you", 22]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701248"
+      "timestamp": "2025-12-14T06:03:51.030919"
     },
     {
       "severity": "CRITICAL",
@@ -36,7 +36,7 @@
         "threshold": 3,
         "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
       },
-      "timestamp": "2025-12-14T00:55:49.701262"
+      "timestamp": "2025-12-14T06:03:51.030937"
     },
     {
       "severity": "CRITICAL",
@@ -68,7 +68,7 @@
           }
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701263"
+      "timestamp": "2025-12-14T06:03:51.030941"
     },
     {
       "severity": "CRITICAL",
@@ -88,7 +88,7 @@
           ["going", 20]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701265"
+      "timestamp": "2025-12-14T06:03:51.030944"
     },
     {
       "severity": "CRITICAL",
@@ -108,7 +108,7 @@
           ["been", 23]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701266"
+      "timestamp": "2025-12-14T06:03:51.030948"
     },
     {
       "severity": "CRITICAL",
@@ -121,7 +121,7 @@
         "threshold": 3,
         "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
       },
-      "timestamp": "2025-12-14T00:55:49.701267"
+      "timestamp": "2025-12-14T06:03:51.030951"
     },
     {
       "severity": "CRITICAL",
@@ -153,7 +153,7 @@
           }
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701268"
+      "timestamp": "2025-12-14T06:03:51.030954"
     },
     {
       "severity": "CRITICAL",
@@ -173,7 +173,7 @@
           ["and", 154]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701269"
+      "timestamp": "2025-12-14T06:03:51.030957"
     },
     {
       "severity": "CRITICAL",
@@ -186,7 +186,7 @@
         "threshold": 3,
         "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
       },
-      "timestamp": "2025-12-14T00:55:49.701270"
+      "timestamp": "2025-12-14T06:03:51.030960"
     },
     {
       "severity": "CRITICAL",
@@ -218,7 +218,7 @@
           }
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701271"
+      "timestamp": "2025-12-14T06:03:51.030963"
     },
     {
       "severity": "CRITICAL",
@@ -238,7 +238,7 @@
           ["going", 20]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701272"
+      "timestamp": "2025-12-14T06:03:51.030966"
     },
     {
       "severity": "CRITICAL",
@@ -258,7 +258,7 @@
           ["and", 153]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701273"
+      "timestamp": "2025-12-14T06:03:51.030969"
     },
     {
       "severity": "CRITICAL",
@@ -271,7 +271,7 @@
         "threshold": 3,
         "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
       },
-      "timestamp": "2025-12-14T00:55:49.701274"
+      "timestamp": "2025-12-14T06:03:51.030973"
     },
     {
       "severity": "CRITICAL",
@@ -303,7 +303,7 @@
           }
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701275"
+      "timestamp": "2025-12-14T06:03:51.030976"
     },
     {
       "severity": "CRITICAL",
@@ -323,7 +323,7 @@
           ["tom", 159]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701276"
+      "timestamp": "2025-12-14T06:03:51.030979"
     },
     {
       "severity": "CRITICAL",
@@ -336,7 +336,7 @@
         "threshold": 3,
         "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
       },
-      "timestamp": "2025-12-14T00:55:49.701277"
+      "timestamp": "2025-12-14T06:03:51.030982"
     },
     {
       "severity": "CRITICAL",
@@ -356,7 +356,7 @@
           ["she", 24]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701278"
+      "timestamp": "2025-12-14T06:03:51.030985"
     },
     {
       "severity": "CRITICAL",
@@ -376,7 +376,7 @@
           ["tom", 159]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701279"
+      "timestamp": "2025-12-14T06:03:51.030988"
     },
     {
       "severity": "CRITICAL",
@@ -389,7 +389,7 @@
         "threshold": 3,
         "recommendation": "主語を多様化してください (I/You/He/She/We/They)"
       },
-      "timestamp": "2025-12-14T00:55:49.701280"
+      "timestamp": "2025-12-14T06:03:51.030991"
     },
     {
       "severity": "WARNING",
@@ -409,7 +409,7 @@
           ["____", 26]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701281"
+      "timestamp": "2025-12-14T06:03:51.030994"
     },
     {
       "severity": "WARNING",
@@ -429,7 +429,7 @@
           ["They", 17]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701282"
+      "timestamp": "2025-12-14T06:03:51.030997"
     },
     {
       "severity": "WARNING",
@@ -449,7 +449,7 @@
           ["He", 21]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701283"
+      "timestamp": "2025-12-14T06:03:51.031000"
     },
     {
       "severity": "WARNING",
@@ -469,7 +469,7 @@
           ["My", 138]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701285"
+      "timestamp": "2025-12-14T06:03:51.031133"
     },
     {
       "severity": "WARNING",
@@ -489,7 +489,7 @@
           ["They", 17]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701286"
+      "timestamp": "2025-12-14T06:03:51.031137"
     },
     {
       "severity": "WARNING",
@@ -509,7 +509,7 @@
           ["My", 138]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701287"
+      "timestamp": "2025-12-14T06:03:51.031139"
     },
     {
       "severity": "WARNING",
@@ -529,7 +529,7 @@
           ["Our", 147]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701288"
+      "timestamp": "2025-12-14T06:03:51.031140"
     },
     {
       "severity": "WARNING",
@@ -549,7 +549,7 @@
           ["They", 17]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701289"
+      "timestamp": "2025-12-14T06:03:51.031142"
     },
     {
       "severity": "WARNING",
@@ -569,7 +569,7 @@
           ["Our", 147]
         ]
       },
-      "timestamp": "2025-12-14T00:55:49.701290"
+      "timestamp": "2025-12-14T06:03:51.031143"
     }
   ]
 }

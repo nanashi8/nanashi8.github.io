@@ -209,6 +209,7 @@ describe('Vocabulary品質検証 - IPA発音記号の妥当性', () => {
     const entries = parseCSV(filePath).slice(0, 50); // 最初の50件をサンプル
 
     // 正しいフォーマット: "IPA記号 (カタカナ読み)"
+    // eslint-disable-next-line no-misleading-character-class
     const validFormat = /^[a-zɑɔəɛɪʊæʌɜːˈˌ.ː()ɹŋθðʃʒ\s]+\s*\([ァ-ヴー́̀̃]+\)$/i;
 
     const invalidIPA = entries.filter((e) => {
@@ -495,6 +496,7 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
         const withKatakana = entries.filter((e) => {
           if (!e.ipa) return false;
           // カタカナ読みは () 内に含まれる（カタカナには長音記号、濁点、アクセント記号なども含む）
+          // eslint-disable-next-line no-misleading-character-class
           return /\([\u30A0-\u30FF\u3099-\u309C\uFF70\u30FC\u0300-\u036F]+\)/.test(e.ipa);
         });
 
@@ -529,6 +531,7 @@ describe('Vocabulary品質検証 - 高度な品質チェック (Phase 2 Step 3)'
 
           // 期待される形式: IPA記号 (カタカナ)
           // カタカナには長音記号、濁点、結合アクセント記号(U+0300-036F)なども含む
+          // eslint-disable-next-line no-misleading-character-class
           const hasValidFormat = /\([\u30A0-\u30FF\u3099-\u309C\uFF70\u30FC\u0300-\u036F]+\)/.test(
             e.ipa
           );

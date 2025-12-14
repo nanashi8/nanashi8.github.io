@@ -142,7 +142,7 @@ describe('文法問題品質検証 - 英文法学者の視点', () => {
   describe('正答の一意性検証', () => {
     it('各問題の正答が選択肢に必ず1つだけ存在する', () => {
       allData.forEach(({ data, name }) => {
-        getAllQuestions(data, name).forEach((q) => {
+          getAllQuestions(data, name).forEach((q) => {
           const matchCount = q.choices.filter((choice) => choice === q.correctAnswer).length;
 
           expect(
@@ -526,7 +526,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     it('difficulty値が有効な値である', () => {
       const validDifficulties = ['beginner', 'intermediate', 'advanced'];
 
-      allData.forEach(({ data, grade }) => {
+      allData.forEach(({ data, grade: _grade }) => {
         getAllQuestionsIncludingSO(data, name).forEach((q) => {
           expect(
             validDifficulties,
@@ -572,7 +572,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     });
 
     it('IDが命名規則に従っている（例: vf-g1-u0-001）', () => {
-      allData.forEach(({ data, grade }) => {
+      allData.forEach(({ data, grade: _grade }) => {
         getAllQuestions(data, name).forEach((q) => {
           // パターン: {type}-g{grade}-u{unit}-{number}
           const idPattern = /^[a-z]+-g\d+-u\d+-\d{3,}$/;
@@ -585,7 +585,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
 
   describe('問題数の整合性検証', () => {
     it('totalQuestionsが実際の問題数と一致する', () => {
-      allData.forEach(({ data, name }) => {
+      allData.forEach(({ data, name: _name }) => {
         // totalQuestionsはファイル内の全セクションの合計を表すべき
         const actualCount = data.units.reduce((sum, unit) => {
           const vfCount = unit.verbForm?.length || 0;
@@ -602,7 +602,7 @@ describe('文法問題品質検証 - 教育専門家の視点', () => {
     });
 
     it('各Unitに問題が存在する', () => {
-      allData.forEach(({ data, name }) => {
+      allData.forEach(({ data, name: _name }) => {
         data.units.forEach((unit) => {
           const unitQuestions =
             (unit.verbForm?.length || 0) +

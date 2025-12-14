@@ -431,7 +431,7 @@ function ComprehensiveReadingView({
     // 古いLocalStorageデータをクリア（容量節約）
     try {
       localStorage.removeItem('reading-passages-data');
-    } catch (_e) {
+    } catch {
       // エラーは無視
     }
 
@@ -443,7 +443,7 @@ function ComprehensiveReadingView({
       if (stored) {
         savedProgress = JSON.parse(stored);
       }
-    } catch (e) {
+    } catch {
       logger.warn('[長文] 保存済み進捗の読み込みに失敗:', e);
     }
 

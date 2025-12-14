@@ -2,7 +2,8 @@
  * 長文読解関連型定義
  */
 
-import type { Question } from './domain';
+// removed unused import to satisfy lint
+// import type { Question } from './domain';
 
 // 長文読解用の型
 export interface ReadingPassage {

@@ -16,12 +16,12 @@
    - `scripts/validate_all_content.py`
    - `.aitk/instructions/*.instructions.md`
 
-2. 🚫 **禁止ファイルの検出**
+1. 🚫 **禁止ファイルの検出**
    - スペース+2 (`file 2.md`)
    - v2サフィックス (`file-v2.md`)
    - アーカイブ済みファイルの復活
 
-3. 🔗 **ドキュメント参照の整合性**
+1. 🔗 **ドキュメント参照の整合性**
    - instructions → ガイドラインへの正しい参照
    - 古いパス（`docs/` → `docs/quality/`）の検出
 

@@ -490,7 +490,7 @@ export function updateImprovementProgress(currentAnalysis: RadarAnalysis): void 
   const daysSinceStart = Math.floor((Date.now() - progress.startDate) / (1000 * 60 * 60 * 24));
   progress.currentDay = daysSinceStart + 1;
 
-  let totalImprovement = 0;
+    const _totalImprovement = 0;
   let completedCount = 0;
 
   progress.targetCategories.forEach((category) => {

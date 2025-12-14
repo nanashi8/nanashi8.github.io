@@ -5,7 +5,7 @@ import { WordProgress } from '@/storage/progress/progressStorage';
 // ユーザープロファイルの構築
 export function buildUserProfile(
   wordProgressMap: { [word: string]: WordProgress },
-  allQuestions: Question[]
+  _allQuestions: Question[]
 ): UserLearningProfile {
   const wordProgresses = Object.values(wordProgressMap);
 

@@ -13,7 +13,7 @@ import {
   getWordsSortedByDifficulty,
   type UserProgress,
   type QuizResult,
-  type WordProgress,
+    // type WordProgress,
 } from '@/storage/progress/progressStorage';
 
 describe('progressStorage', () => {

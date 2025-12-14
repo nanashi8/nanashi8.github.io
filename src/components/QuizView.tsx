@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { QuizState, QuestionSet } from '../types';
 import type { CustomWord, CustomQuestionSet } from '../types/customQuestions';
 import {
@@ -11,7 +11,6 @@ import {
 import { ErrorPrediction } from '@/ai/prediction/errorPredictionAI';
 import ScoreBoard from './ScoreBoard';
 import QuestionCard from './QuestionCard';
-import AddToCustomButton from './AddToCustomButton';
 import LearningLimitsInput from './LearningLimitsInput';
 import { useLearningLimits } from '../hooks/useLearningLimits';
 import { logger } from '@/utils/logger';
@@ -65,7 +64,7 @@ function QuizView({
   selectedDataSource = 'all',
   onDataSourceChange,
   questionSets = [],
-  onStartQuiz,
+  onStartQuiz: _onStartQuiz,
   onAnswer,
   onNext,
   onPrevious,

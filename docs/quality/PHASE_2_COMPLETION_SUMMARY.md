@@ -263,11 +263,11 @@ expect(rateWithKatakana).toBeGreaterThan(0.94);
 ### ✅ 完了項目
 
 1. **sentenceOrdering品質改善**: 4,600問 (100%)
-2. **Pronunciation/Accent検証**: 120問 + 30テスト
-3. **Vocabulary高度検証**: 4,549エントリー + 21テスト
-4. **技術的発見**: Unicode結合文字 U+0300-036F
-5. **テストパターン確立**: 4専門家視点
-6. **品質哲学の実践**: エビデンスベース基準
+1. **Pronunciation/Accent検証**: 120問 + 30テスト
+1. **Vocabulary高度検証**: 4,549エントリー + 21テスト
+1. **技術的発見**: Unicode結合文字 U+0300-036F
+1. **テストパターン確立**: 4専門家視点
+1. **品質哲学の実践**: エビデンスベース基準
 
 ### 📈 品質向上指標
 
@@ -288,18 +288,18 @@ expect(rateWithKatakana).toBeGreaterThan(0.94);
    - 難易度と文章長の整合性
    - 目標: 90パッセージ + 450質問検証
 
-2. **Listening Comprehension品質検証**
+1. **Listening Comprehension品質検証**
    - 音声品質チェック
    - トランスクリプト精度
    - 聞き取り難易度の妥当性
 
 ### Priority Medium
 
-3. **Writing Exercise品質基準**
+1. **Writing Exercise品質基準**
    - 模範解答の品質
    - 評価基準の明確化
 
-4. **Speaking Practice品質指標**
+1. **Speaking Practice品質指標**
    - 発音評価基準
    - フィードバック品質
 
@@ -319,15 +319,15 @@ expect(rateWithKatakana).toBeGreaterThan(0.94);
    - 2時間で51テスト作成 → 永続的な品質保証
    - 急がず、確実に、1つずつ
 
-2. **エビデンスベースの重要性**
+1. **エビデンスベースの重要性**
    - 実データに基づく基準設定
    - 恣意的な完璧主義の回避
 
-3. **技術的発見の価値**
+1. **技術的発見の価値**
    - Unicode結合文字の発見 → 94.8%検出率達成
    - 深い調査が品質向上につながる
 
-4. **テストパターンの再利用**
+1. **テストパターンの再利用**
    - 4専門家視点 → 他コンテンツにも適用可能
    - 一度確立すれば、展開は速い
 

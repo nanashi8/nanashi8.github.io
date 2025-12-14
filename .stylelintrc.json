@@ -40,5 +40,11 @@
     "declaration-block-single-line-max-declarations": null,
     "declaration-property-value-no-unknown": null
   },
-  "ignoreFiles": ["node_modules/**", "dist/**", "build/**"]
+  "ignoreFiles": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "coverage/**",
+    "playwright-report/**"
+  ]
 }

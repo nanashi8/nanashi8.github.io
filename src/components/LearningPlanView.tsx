@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react';
 import { logger } from '@/utils/logger';
 import type { LearningSchedule, DailyStudyPlan, Question } from '../types';
-import {
-  generateLearningPlan,
-  generateDailyPlan,
-  calculateProgress,
-  calculateWeeklyAchievement,
-} from '../utils';
+import { generateDailyPlan, calculateProgress, calculateWeeklyAchievement } from '../utils';
 
 interface LearningPlanViewProps {
   allQuestions: Question[];
@@ -16,7 +11,7 @@ interface LearningPlanViewProps {
 function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProps) {
   const [schedule, setSchedule] = useState<LearningSchedule | null>(null);
   const [dailyPlan, setDailyPlan] = useState<DailyStudyPlan | null>(null);
-  const [selectedMonths] = useState<number>(3);
+  const [_selectedMonths] = useState<number>(3);
   const [progress, setProgress] = useState({
     totalLearned: 0,
     totalReviewed: 0,
@@ -64,7 +59,7 @@ function LearningPlanView({ allQuestions, onStartSession }: LearningPlanViewProp
     }
   }, [schedule]);
 
-  const handleResetPlan = () => {
+  const _handleResetPlan = () => {
     const monthsLabel =
       schedule?.planDurationMonths === 1
         ? '1ヶ月'

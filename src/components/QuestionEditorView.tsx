@@ -147,7 +147,7 @@ function QuestionEditorView({
           onQuestionSetsChange([...questionSets, newSet]);
           setSelectedSetId(newSet.id);
           alert(`${questions.length}個の問題をインポートしました`);
-        } catch (_error) {
+        } catch {
           alert('CSVの読み込みに失敗しました');
         }
       };

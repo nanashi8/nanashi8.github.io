@@ -1,10 +1,9 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { QuizState, QuestionSet, Question } from './types';
+import { useState, useEffect, useRef } from 'react';
+import { QuestionSet, Question } from './types';
 import {
   parseCSV,
   saveQuestionSets,
   generateId,
-  selectAdaptiveQuestions,
   classifyPhraseType,
 } from './utils';
 import { useQuizSettings } from './hooks/useQuizSettings';
@@ -12,12 +11,6 @@ import { useQuizFilters } from './hooks/useQuizFilters';
 import { useQuizState } from './hooks/useQuizState';
 
 // セッション管理用
-interface SessionSnapshot {
-  tab: string;
-  timestamp: number;
-  scrollPos: number;
-  state?: Record<string, unknown>;
-}
 import {
   addQuizResult,
   updateWordProgress,
@@ -95,7 +88,6 @@ import FloatingPanel from './components/FloatingPanel';
 import StatsView from './components/StatsView';
 import SettingsView from './components/SettingsView';
 import LoadingIndicator from './components/LoadingIndicator';
-import { UpdateNotification } from './components/UpdateNotification';
 import './App.css';
 
 // IndexedDB移行関連
@@ -226,7 +218,7 @@ function App() {
   } = useQuizFilters();
 
   // 選択中の問題セット名を取得
-  const getSelectedQuestionSetName = () => {
+  const _getSelectedQuestionSetName = () => {
     if (selectedDataSource === 'all') return '全問題集';
     const set = questionSets.find((qs) => qs.id === selectedDataSource);
     return set ? set.name : '全問題集';
@@ -255,7 +247,7 @@ function App() {
       hasAutoStarted.current = true;
       handleStartQuiz();
     }
-  }, [isDataLoaded, activeTab]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isDataLoaded, activeTab]);
 
   // 適応的学習モード
   const [adaptiveMode] = useState<boolean>(() => {
@@ -300,7 +292,7 @@ function App() {
   const recentlyStudiedWordsRef = useRef<string[]>([]);
 
   // クイズ設定（カスタムフック）
-  const { autoAdvance, autoAdvanceDelay } = useQuizSettings();
+  const { autoAdvance: _autoAdvance, autoAdvanceDelay: _autoAdvanceDelay } = useQuizSettings();
 
   // ダークモード初期化
   useEffect(() => {
@@ -671,7 +663,6 @@ function App() {
       // クイズ開始済みの場合のみ再開始
       handleStartQuiz();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     selectedDataSource,
     selectedCategory,
