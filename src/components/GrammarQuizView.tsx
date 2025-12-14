@@ -996,7 +996,11 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                             }
                           }}
                           disabled={selectedWords.length === 0}
-                          title={selectedWords.length === 0 ? "単語を選択してください" : "並び替えをやり直す"}
+                          title={
+                            selectedWords.length === 0
+                              ? '単語を選択してください'
+                              : '並び替えをやり直す'
+                          }
                         >
                           🔄 やり直し
                         </button>
@@ -1091,9 +1095,7 @@ function GrammarQuizView(_props: GrammarQuizViewProps) {
                         </div>
                       )}
                       <div className="paraphrase-label">📝 元の文:</div>
-                      <div className="sentence-display original">
-                        {currentQuestion.sentence}
-                      </div>
+                      <div className="sentence-display original">{currentQuestion.sentence}</div>
                       <div className="paraphrase-arrow">↓ 言い換え</div>
                       <div className="paraphrase-label">✏️ 書き換え後:</div>
                       <div className="sentence-display target">

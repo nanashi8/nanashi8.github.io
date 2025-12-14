@@ -36,10 +36,11 @@ const initializeDarkMode = () => {
 initializeDarkMode();
 
 // Sentry初期化（エラー監視）
-// 本番環境のみ有効化
-if (import.meta.env.PROD) {
+// 本番環境のみ有効化（有効なDSNが設定されている場合のみ）
+const sentryDsn = import.meta.env.VITE_SENTRY_DSN || '';
+if (import.meta.env.PROD && sentryDsn && sentryDsn !== 'your-sentry-dsn-here') {
   Sentry.init({
-    dsn: import.meta.env.VITE_SENTRY_DSN || '',
+    dsn: sentryDsn,
     environment: import.meta.env.MODE,
 
     // パフォーマンス計測（10%サンプリング）
@@ -84,6 +85,16 @@ if (import.meta.env.PROD) {
 
       // ResizeObserverエラーは無視（ブラウザの既知のバグ）
       if (event.message?.includes('ResizeObserver')) {
+        return null;
+      }
+
+      // Service Workerエラーは無視（開発中によくある非クリティカルエラー）
+      const errorMsg = event.exception?.values?.[0]?.value || '';
+      if (
+        errorMsg.includes('newestWorker') ||
+        errorMsg.includes('serviceWorker') ||
+        errorMsg.includes('InvalidStateError')
+      ) {
         return null;
       }
 
