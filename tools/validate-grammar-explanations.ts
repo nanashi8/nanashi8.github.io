@@ -1,3 +1,4 @@
+/// <reference types="node" />
 /**
  * 文法問題の解説品質チェックツール
  *
@@ -14,6 +15,10 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 interface GrammarQuestion {
   id: string;
@@ -181,7 +186,7 @@ function validateGrammarFile(filePath: string): ValidationError[] {
 
 function main() {
   const grammarDir = path.join(__dirname, '../public/data/grammar');
-  const files = fs.readdirSync(grammarDir).filter(f => f.endsWith('.json'));
+  const files = fs.readdirSync(grammarDir).filter((f: string) => f.endsWith('.json'));
 
   let totalErrors = 0;
   const errorsByFile: Record<string, ValidationError[]> = {};

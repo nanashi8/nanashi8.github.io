@@ -163,7 +163,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const correctQuestion = sampleQuestions[0];
     const choices = generateChoicesWithQuestions(correctQuestion, sampleQuestions, 0);
 
-    const hasCorrect = choices.some((c: string) => c === correctQuestion.meaning);
+    const hasCorrect = choices.some((c) => c.text === correctQuestion.meaning);
     expect(hasCorrect).toBe(true);
   });
   it('「分からない」が最後に含まれる', () => {
@@ -175,7 +175,7 @@ describe('Utils - generateChoicesWithQuestions', () => {
 
   it('選択肅textに重複がない', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
-    const uniqueTexts = [...new Set(choices)];
+    const uniqueTexts = [...new Set(choices.map((c) => c.text))];
 
     expect(choices.length).toBe(uniqueTexts.length);
   });
@@ -185,13 +185,13 @@ describe('Utils - generateChoicesWithQuestions', () => {
     const choices = generateChoicesWithQuestions(fewQuestions[0], fewQuestions, 0);
 
     expect(choices.length).toBe(4);
-    expect(choices.some((c: string) => c === fewQuestions[0].meaning)).toBe(true);
+    expect(choices.some((c) => c.text === fewQuestions[0].meaning)).toBe(true);
   });
 
   it('各選択肅がtext と questionプロパティを持つ', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
-    choices.forEach((choice: Choice) => {
+    choices.forEach((choice) => {
       expect(choice).toHaveProperty('text');
       expect(choice).toHaveProperty('question');
       expect(typeof choice.text).toBe('string');
@@ -201,10 +201,10 @@ describe('Utils - generateChoicesWithQuestions', () => {
   it('正解以外の選択肅にQuestionオブジェクトが関連付けられている', () => {
     const choices = generateChoicesWithQuestions(sampleQuestions[0], sampleQuestions, 0);
 
-    // 「分からない」以外の選択肅
-    const nonDontKnow = choices.filter((c: string) => c !== '分からない');
+    // 「分からない」以外の選択肖
+    const nonDontKnow = choices.filter((c) => c.text !== '分からない');
 
-    nonDontKnow.forEach((choice: string) => {
+    nonDontKnow.forEach((choice) => {
       if (choice.question) {
         expect(choice.question).toHaveProperty('word');
         expect(choice.question).toHaveProperty('meaning');
